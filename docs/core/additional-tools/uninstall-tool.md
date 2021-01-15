@@ -3,134 +3,134 @@ title: Aracı kaldır
 description: .NET Core SDK 'Ları ve çalışma zamanlarını denetimli temizleme işlemini sağlayan kılavuzlu bir araç olan .NET Core kaldırma aracına genel bakış.
 author: sfoslund
 ms.date: 05/27/2020
-ms.openlocfilehash: dcfa12a3ec5fe0e8a29c5897ee4c71bfc7352eda
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ed43b4ec8437ae0ccaf5f1234758dda9f16bd51e
+ms.sourcegitcommit: 4f5f1855849cb02c3b610c7006ac21d7429f3348
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84590805"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98235358"
 ---
-# <a name="net-core-uninstall-tool"></a><span data-ttu-id="723fa-103">.NET Core Kaldırma Aracı</span><span class="sxs-lookup"><span data-stu-id="723fa-103">.NET Core Uninstall Tool</span></span>
+# <a name="net-core-uninstall-tool"></a><span data-ttu-id="99888-103">.NET Core Kaldırma Aracı</span><span class="sxs-lookup"><span data-stu-id="99888-103">.NET Core Uninstall Tool</span></span>
 
-<span data-ttu-id="723fa-104">[.NET Core kaldırma aracı](https://aka.ms/dotnet-core-uninstall-tool) ( `dotnet-core-uninstall` ), bir sistemden .NET Core SDK 'Larını ve çalışma zamanlarını kaldırmanıza imkan sağlar.</span><span class="sxs-lookup"><span data-stu-id="723fa-104">The [.NET Core Uninstall Tool](https://aka.ms/dotnet-core-uninstall-tool) (`dotnet-core-uninstall`) lets you remove .NET Core SDKs and Runtimes from a system.</span></span> <span data-ttu-id="723fa-105">Kaldırmak istediğiniz sürümleri belirlemek için bir seçenek koleksiyonu kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="723fa-105">A collection of options is available to specify which versions you want to uninstall.</span></span>
+<span data-ttu-id="99888-104">[.NET Core kaldırma aracı](https://aka.ms/dotnet-core-uninstall-tool) ( `dotnet-core-uninstall` ), bir sistemden .NET Core SDK 'Larını ve çalışma zamanlarını kaldırmanıza imkan sağlar.</span><span class="sxs-lookup"><span data-stu-id="99888-104">The [.NET Core Uninstall Tool](https://aka.ms/dotnet-core-uninstall-tool) (`dotnet-core-uninstall`) lets you remove .NET Core SDKs and Runtimes from a system.</span></span> <span data-ttu-id="99888-105">Kaldırmak istediğiniz sürümleri belirlemek için bir seçenek koleksiyonu kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="99888-105">A collection of options is available to specify which versions you want to uninstall.</span></span>
 
-<span data-ttu-id="723fa-106">Araç Windows ve macOS 'yi destekler.</span><span class="sxs-lookup"><span data-stu-id="723fa-106">The tool supports Windows and macOS.</span></span> <span data-ttu-id="723fa-107">Linux Şu anda desteklenmiyor.</span><span class="sxs-lookup"><span data-stu-id="723fa-107">Linux is currently not supported.</span></span>
+<span data-ttu-id="99888-106">Araç Windows ve macOS 'yi destekler.</span><span class="sxs-lookup"><span data-stu-id="99888-106">The tool supports Windows and macOS.</span></span> <span data-ttu-id="99888-107">Linux Şu anda desteklenmiyor.</span><span class="sxs-lookup"><span data-stu-id="99888-107">Linux is currently not supported.</span></span>
 
-<span data-ttu-id="723fa-108">Bu araç, Windows 'ta yalnızca aşağıdaki yükleyicilerden biri kullanılarak yüklenen SDK 'Ları ve çalışma zamanlarını kaldırabilir:</span><span class="sxs-lookup"><span data-stu-id="723fa-108">On Windows, the tool can only uninstall SDKs and Runtimes that were installed using one of the following installers:</span></span>
+<span data-ttu-id="99888-108">Bu araç, Windows 'ta yalnızca aşağıdaki yükleyicilerden biri kullanılarak yüklenen SDK 'Ları ve çalışma zamanlarını kaldırabilir:</span><span class="sxs-lookup"><span data-stu-id="99888-108">On Windows, the tool can only uninstall SDKs and Runtimes that were installed using one of the following installers:</span></span>
 
-- <span data-ttu-id="723fa-109">.NET Core SDK ve çalışma zamanı yükleyicisi.</span><span class="sxs-lookup"><span data-stu-id="723fa-109">The .NET Core SDK and runtime installer.</span></span>
-- <span data-ttu-id="723fa-110">Visual Studio 2019 sürüm 16,3 ' den önceki sürümlerde Visual Studio yükleyicisi.</span><span class="sxs-lookup"><span data-stu-id="723fa-110">The Visual Studio installer in versions earlier than Visual Studio 2019 version 16.3.</span></span>
+- <span data-ttu-id="99888-109">.NET Core SDK ve çalışma zamanı yükleyicisi.</span><span class="sxs-lookup"><span data-stu-id="99888-109">The .NET Core SDK and runtime installer.</span></span>
+- <span data-ttu-id="99888-110">Visual Studio 2019 sürüm 16,3 ' den önceki sürümlerde Visual Studio yükleyicisi.</span><span class="sxs-lookup"><span data-stu-id="99888-110">The Visual Studio installer in versions earlier than Visual Studio 2019 version 16.3.</span></span>
 
-<span data-ttu-id="723fa-111">MacOS 'ta, araç yalnızca */usr/local/share/DotNet* klasöründe bulunan SDK 'ları ve çalışma zamanlarını kaldırabilir.</span><span class="sxs-lookup"><span data-stu-id="723fa-111">On macOS, the tool can only uninstall SDKs and runtimes located in the */usr/local/share/dotnet* folder.</span></span>
+<span data-ttu-id="99888-111">MacOS 'ta, araç yalnızca */usr/local/share/DotNet* klasöründe bulunan SDK 'ları ve çalışma zamanlarını kaldırabilir.</span><span class="sxs-lookup"><span data-stu-id="99888-111">On macOS, the tool can only uninstall SDKs and runtimes located in the */usr/local/share/dotnet* folder.</span></span>
 
-<span data-ttu-id="723fa-112">Bu sınırlamalar nedeniyle araç, makinenizde tüm .NET Core SDK 'larını ve çalışma zamanlarını kaldıramayabilir.</span><span class="sxs-lookup"><span data-stu-id="723fa-112">Because of these limitations, the tool may not be able to uninstall all of the .NET Core SDKs and runtimes on your machine.</span></span> <span data-ttu-id="723fa-113">`dotnet --info`Bu aracın kaldırakaldıramıyorum SDK 'lar ve çalışma zamanları dahil tüm .NET Core SDK 'larını ve çalışma zamanlarını bulmak için komutunu kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="723fa-113">You can use the `dotnet --info` command to find all of the .NET Core SDKs and runtimes installed, including those SDKs and runtimes that this tool can't remove.</span></span> <span data-ttu-id="723fa-114">`dotnet-core-uninstall list`Komut, araçla hangi SDK 'ların kaldırılabileceği görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="723fa-114">The `dotnet-core-uninstall list` command displays which SDKs can be uninstalled with the tool.</span></span>
+<span data-ttu-id="99888-112">Bu sınırlamalar nedeniyle araç, makinenizde tüm .NET Core SDK 'larını ve çalışma zamanlarını kaldıramayabilir.</span><span class="sxs-lookup"><span data-stu-id="99888-112">Because of these limitations, the tool may not be able to uninstall all of the .NET Core SDKs and runtimes on your machine.</span></span> <span data-ttu-id="99888-113">`dotnet --info`Bu aracın kaldırakaldıramıyorum SDK 'lar ve çalışma zamanları dahil tüm .NET Core SDK 'larını ve çalışma zamanlarını bulmak için komutunu kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="99888-113">You can use the `dotnet --info` command to find all of the .NET Core SDKs and runtimes installed, including those SDKs and runtimes that this tool can't remove.</span></span> <span data-ttu-id="99888-114">`dotnet-core-uninstall list`Komut, araçla hangi SDK 'ların kaldırılabileceği görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="99888-114">The `dotnet-core-uninstall list` command displays which SDKs can be uninstalled with the tool.</span></span> <span data-ttu-id="99888-115">1,2 ve üzeri sürümleri, SDK ve çalışma zamanlarını sürüm 5,0 veya daha önceki bir sürümü ile kaldırabilir ve aracın önceki sürümleri 3,1 ve önceki sürümlerini kaldırabilir.</span><span class="sxs-lookup"><span data-stu-id="99888-115">Versions 1.2 and later can uninstall SDKs and runtimes with version 5.0 or earlier, and previous versions of the tool can uninstall 3.1 and earlier.</span></span>
 
-## <a name="install-the-tool"></a><span data-ttu-id="723fa-115">Aracı 'nı yükler</span><span class="sxs-lookup"><span data-stu-id="723fa-115">Install the tool</span></span>
+## <a name="install-the-tool"></a><span data-ttu-id="99888-116">Aracı 'nı yükler</span><span class="sxs-lookup"><span data-stu-id="99888-116">Install the tool</span></span>
 
-<span data-ttu-id="723fa-116">.NET Core kaldırma aracını [aracın yayınlar sayfasından](https://aka.ms/dotnet-core-uninstall-tool) indirebilir ve [DotNet/CLI-Lab](https://github.com/dotnet/cli-lab) GitHub deposunda kaynak kodu bulabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="723fa-116">You can download the .NET Core Uninstall Tool from [the tool's releases page](https://aka.ms/dotnet-core-uninstall-tool) and find the source code at the [dotnet/cli-lab](https://github.com/dotnet/cli-lab) GitHub repository.</span></span>
-
-> [!NOTE]
-> <span data-ttu-id="723fa-117">Aracın .NET Core SDK 'larını ve çalışma zamanlarını kaldırması için yükseltme gerekiyor.</span><span class="sxs-lookup"><span data-stu-id="723fa-117">The tool requires elevation to uninstall .NET Core SDKs and runtimes.</span></span> <span data-ttu-id="723fa-118">Bu nedenle, Windows üzerinde *C:\Program Files* veya MacOS 'ta */usr/local/bin* gibi bir yazma korumalı dizine yüklenmelidir.</span><span class="sxs-lookup"><span data-stu-id="723fa-118">Therefore, it should be installed in a write-protected directory such as *C:\Program Files* on Windows or */usr/local/bin* on macOS.</span></span> <span data-ttu-id="723fa-119">Ayrıca bkz. [DotNet komutları Için yükseltilmiş erişim](../tools/elevated-access.md).</span><span class="sxs-lookup"><span data-stu-id="723fa-119">See also [Elevated access for dotnet commands](../tools/elevated-access.md).</span></span> <span data-ttu-id="723fa-120">Daha fazla bilgi için bkz. [ayrıntılı yükleme yönergeleri](https://aka.ms/dotnet-core-uninstall-tool).</span><span class="sxs-lookup"><span data-stu-id="723fa-120">For more information, see the [detailed installation instructions](https://aka.ms/dotnet-core-uninstall-tool).</span></span>
-
-## <a name="run-the-tool"></a><span data-ttu-id="723fa-121">Aracı çalıştırma</span><span class="sxs-lookup"><span data-stu-id="723fa-121">Run the tool</span></span>
-
-<span data-ttu-id="723fa-122">Aşağıdaki adımlarda, kaldırma aracını çalıştırmak için önerilen yaklaşım gösterilmektedir:</span><span class="sxs-lookup"><span data-stu-id="723fa-122">The following steps show the recommended approach for running the uninstall tool:</span></span>
-
-- [<span data-ttu-id="723fa-123">1. adım-yüklü .NET Core SDK 'larını ve çalışma zamanlarını görüntüleme</span><span class="sxs-lookup"><span data-stu-id="723fa-123">Step 1 - Display installed .NET Core SDKs and runtimes</span></span>](#step-1---display-installed-net-core-sdks-and-runtimes)
-- [<span data-ttu-id="723fa-124">2. adım-bir kuru çalıştırma</span><span class="sxs-lookup"><span data-stu-id="723fa-124">Step 2 - Do a dry run</span></span>](#step-2---do-a-dry-run)
-- [<span data-ttu-id="723fa-125">3. adım-.NET Core SDK 'larını ve çalışma zamanlarını kaldırma</span><span class="sxs-lookup"><span data-stu-id="723fa-125">Step 3 - Uninstall .NET Core SDKs and Runtimes</span></span>](#step-3---uninstall-net-core-sdks-and-runtimes)
-- [<span data-ttu-id="723fa-126">4. adım-NuGet geri dönüş klasörünü silme (isteğe bağlı)</span><span class="sxs-lookup"><span data-stu-id="723fa-126">Step 4 - Delete the NuGet fallback folder (optional)</span></span>](#step-4---delete-the-nuget-fallback-folder-optional)
-
-### <a name="step-1---display-installed-net-core-sdks-and-runtimes"></a><span data-ttu-id="723fa-127">1. adım-yüklü .NET Core SDK 'larını ve çalışma zamanlarını görüntüleme</span><span class="sxs-lookup"><span data-stu-id="723fa-127">Step 1 - Display installed .NET Core SDKs and runtimes</span></span>
-
-<span data-ttu-id="723fa-128">`dotnet-core-uninstall list`Komutu, bu araçla kaldırılamayan yüklü .NET Core SDK 'larını ve çalışma zamanlarını listeler.</span><span class="sxs-lookup"><span data-stu-id="723fa-128">The `dotnet-core-uninstall list` command lists the installed .NET Core SDKs and runtimes that can be removed with this tool.</span></span> <span data-ttu-id="723fa-129">Bazı SDK 'lar ve çalışma zamanları Visual Studio için gerekli olabilir ve bunların kaldırılması önerilmez.</span><span class="sxs-lookup"><span data-stu-id="723fa-129">Some SDKs and runtimes may be required by Visual Studio and they're displayed with a note of why it isn't recommended to uninstall them.</span></span>
+<span data-ttu-id="99888-117">.NET Core kaldırma aracını [aracın yayınlar sayfasından](https://aka.ms/dotnet-core-uninstall-tool) indirebilir ve [DotNet/CLI-Lab](https://github.com/dotnet/cli-lab) GitHub deposunda kaynak kodu bulabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="99888-117">You can download the .NET Core Uninstall Tool from [the tool's releases page](https://aka.ms/dotnet-core-uninstall-tool) and find the source code at the [dotnet/cli-lab](https://github.com/dotnet/cli-lab) GitHub repository.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="723fa-130">Komutun çıktısı, `dotnet-core-uninstall list` çoğu durumda çıkış içindeki yüklü sürümlerin listesiyle eşleşmez `dotnet --info` .</span><span class="sxs-lookup"><span data-stu-id="723fa-130">The output of the `dotnet-core-uninstall list` command will not match the list of installed versions in the output of `dotnet --info` in most cases.</span></span> <span data-ttu-id="723fa-131">Özellikle, bu araç ZIP dosyaları tarafından yüklenen veya Visual Studio tarafından yönetilen sürümleri (Visual Studio 2019 16,3 veya üzeri sürümleriyle yüklenmiş herhangi bir sürüm) görüntüleyemez.</span><span class="sxs-lookup"><span data-stu-id="723fa-131">Specifically, this tool will not display versions installed by zip files or managed by Visual Studio (any version installed with Visual Studio 2019 16.3 or later).</span></span> <span data-ttu-id="723fa-132">Bir sürümün Visual Studio tarafından yönetilip yönetilmediğini kontrol etmenin bir yolu `Add or Remove Programs` , Visual Studio tarafından yönetilen sürümlerin görüntüleme adlarında gösterildiği gibi işaretlendiğine göz atın.</span><span class="sxs-lookup"><span data-stu-id="723fa-132">One way to check if a version is managed by Visual Studio is to view it in `Add or Remove Programs`, where Visual Studio managed versions are marked as such in their display names.</span></span>
+> <span data-ttu-id="99888-118">Aracın .NET Core SDK 'larını ve çalışma zamanlarını kaldırması için yükseltme gerekiyor.</span><span class="sxs-lookup"><span data-stu-id="99888-118">The tool requires elevation to uninstall .NET Core SDKs and runtimes.</span></span> <span data-ttu-id="99888-119">Bu nedenle, Windows üzerinde *C:\Program Files* veya MacOS 'ta */usr/local/bin* gibi bir yazma korumalı dizine yüklenmelidir.</span><span class="sxs-lookup"><span data-stu-id="99888-119">Therefore, it should be installed in a write-protected directory such as *C:\Program Files* on Windows or */usr/local/bin* on macOS.</span></span> <span data-ttu-id="99888-120">Ayrıca bkz. [DotNet komutları Için yükseltilmiş erişim](../tools/elevated-access.md).</span><span class="sxs-lookup"><span data-stu-id="99888-120">See also [Elevated access for dotnet commands](../tools/elevated-access.md).</span></span> <span data-ttu-id="99888-121">Daha fazla bilgi için bkz. [ayrıntılı yükleme yönergeleri](https://aka.ms/dotnet-core-uninstall-tool).</span><span class="sxs-lookup"><span data-stu-id="99888-121">For more information, see the [detailed installation instructions](https://aka.ms/dotnet-core-uninstall-tool).</span></span>
 
-<span data-ttu-id="723fa-133">**DotNet-çekirdek-kaldırma listesi**</span><span class="sxs-lookup"><span data-stu-id="723fa-133">**dotnet-core-uninstall list**</span></span>
+## <a name="run-the-tool"></a><span data-ttu-id="99888-122">Aracı çalıştırma</span><span class="sxs-lookup"><span data-stu-id="99888-122">Run the tool</span></span>
 
-#### <a name="synopsis"></a><span data-ttu-id="723fa-134">Özeti</span><span class="sxs-lookup"><span data-stu-id="723fa-134">Synopsis</span></span>
+<span data-ttu-id="99888-123">Aşağıdaki adımlarda, kaldırma aracını çalıştırmak için önerilen yaklaşım gösterilmektedir:</span><span class="sxs-lookup"><span data-stu-id="99888-123">The following steps show the recommended approach for running the uninstall tool:</span></span>
+
+- [<span data-ttu-id="99888-124">1. adım-yüklü .NET Core SDK 'larını ve çalışma zamanlarını görüntüleme</span><span class="sxs-lookup"><span data-stu-id="99888-124">Step 1 - Display installed .NET Core SDKs and runtimes</span></span>](#step-1---display-installed-net-core-sdks-and-runtimes)
+- [<span data-ttu-id="99888-125">2. adım-bir kuru çalıştırma</span><span class="sxs-lookup"><span data-stu-id="99888-125">Step 2 - Do a dry run</span></span>](#step-2---do-a-dry-run)
+- [<span data-ttu-id="99888-126">3. adım-.NET Core SDK 'larını ve çalışma zamanlarını kaldırma</span><span class="sxs-lookup"><span data-stu-id="99888-126">Step 3 - Uninstall .NET Core SDKs and Runtimes</span></span>](#step-3---uninstall-net-core-sdks-and-runtimes)
+- [<span data-ttu-id="99888-127">4. adım-NuGet geri dönüş klasörünü silme (isteğe bağlı)</span><span class="sxs-lookup"><span data-stu-id="99888-127">Step 4 - Delete the NuGet fallback folder (optional)</span></span>](#step-4---delete-the-nuget-fallback-folder-optional)
+
+### <a name="step-1---display-installed-net-core-sdks-and-runtimes"></a><span data-ttu-id="99888-128">1. adım-yüklü .NET Core SDK 'larını ve çalışma zamanlarını görüntüleme</span><span class="sxs-lookup"><span data-stu-id="99888-128">Step 1 - Display installed .NET Core SDKs and runtimes</span></span>
+
+<span data-ttu-id="99888-129">`dotnet-core-uninstall list`Komutu, bu araçla kaldırılamayan yüklü .NET Core SDK 'larını ve çalışma zamanlarını listeler.</span><span class="sxs-lookup"><span data-stu-id="99888-129">The `dotnet-core-uninstall list` command lists the installed .NET Core SDKs and runtimes that can be removed with this tool.</span></span> <span data-ttu-id="99888-130">Bazı SDK 'lar ve çalışma zamanları Visual Studio için gerekli olabilir ve bunların kaldırılması önerilmez.</span><span class="sxs-lookup"><span data-stu-id="99888-130">Some SDKs and runtimes may be required by Visual Studio and they're displayed with a note of why it isn't recommended to uninstall them.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="99888-131">Komutun çıktısı, `dotnet-core-uninstall list` çoğu durumda çıkış içindeki yüklü sürümlerin listesiyle eşleşmez `dotnet --info` .</span><span class="sxs-lookup"><span data-stu-id="99888-131">The output of the `dotnet-core-uninstall list` command will not match the list of installed versions in the output of `dotnet --info` in most cases.</span></span> <span data-ttu-id="99888-132">Özellikle, bu araç ZIP dosyaları tarafından yüklenen veya Visual Studio tarafından yönetilen sürümleri (Visual Studio 2019 16,3 veya üzeri sürümleriyle yüklenmiş herhangi bir sürüm) görüntüleyemez.</span><span class="sxs-lookup"><span data-stu-id="99888-132">Specifically, this tool will not display versions installed by zip files or managed by Visual Studio (any version installed with Visual Studio 2019 16.3 or later).</span></span> <span data-ttu-id="99888-133">Bir sürümün Visual Studio tarafından yönetilip yönetilmediğini kontrol etmenin bir yolu `Add or Remove Programs` , Visual Studio tarafından yönetilen sürümlerin görüntüleme adlarında gösterildiği gibi işaretlendiğine göz atın.</span><span class="sxs-lookup"><span data-stu-id="99888-133">One way to check if a version is managed by Visual Studio is to view it in `Add or Remove Programs`, where Visual Studio managed versions are marked as such in their display names.</span></span>
+
+<span data-ttu-id="99888-134">**DotNet-çekirdek-kaldırma listesi**</span><span class="sxs-lookup"><span data-stu-id="99888-134">**dotnet-core-uninstall list**</span></span>
+
+#### <a name="synopsis"></a><span data-ttu-id="99888-135">Özeti</span><span class="sxs-lookup"><span data-stu-id="99888-135">Synopsis</span></span>
 
 ```console
 dotnet-core-uninstall list [options]
 ```
 
-#### <a name="options"></a><span data-ttu-id="723fa-135">Seçenekler</span><span class="sxs-lookup"><span data-stu-id="723fa-135">Options</span></span>
+#### <a name="options"></a><span data-ttu-id="99888-136">Seçenekler</span><span class="sxs-lookup"><span data-stu-id="99888-136">Options</span></span>
 
-## <a name="windows"></a>[<span data-ttu-id="723fa-136">Windows</span><span class="sxs-lookup"><span data-stu-id="723fa-136">Windows</span></span>](#tab/windows)
+## <a name="windows"></a>[<span data-ttu-id="99888-137">Windows</span><span class="sxs-lookup"><span data-stu-id="99888-137">Windows</span></span>](#tab/windows)
 
 * **`--aspnet-runtime`**
 
-  <span data-ttu-id="723fa-137">Bu araçla kaldırılabilecek tüm ASP.NET Core çalışma zamanlarını listeler.</span><span class="sxs-lookup"><span data-stu-id="723fa-137">Lists all the ASP.NET Core runtimes that can be uninstalled with this tool.</span></span>
+  <span data-ttu-id="99888-138">Bu araçla kaldırılabilecek tüm ASP.NET Core çalışma zamanlarını listeler.</span><span class="sxs-lookup"><span data-stu-id="99888-138">Lists all the ASP.NET Core runtimes that can be uninstalled with this tool.</span></span>
 
 * **`--hosting-bundle`**
 
-  <span data-ttu-id="723fa-138">Bu araçla kaldırılabilecek tüm .NET Core barındırma paketlerini listeler.</span><span class="sxs-lookup"><span data-stu-id="723fa-138">Lists all the .NET Core hosting bundles that can be uninstalled with this tool.</span></span>
+  <span data-ttu-id="99888-139">Bu araçla kaldırılabilecek tüm .NET Core barındırma paketlerini listeler.</span><span class="sxs-lookup"><span data-stu-id="99888-139">Lists all the .NET Core hosting bundles that can be uninstalled with this tool.</span></span>
 
 * **`--runtime`**
 
-  <span data-ttu-id="723fa-139">Bu araçla kaldırılabilecek tüm .NET Core çalışma zamanlarını listeler.</span><span class="sxs-lookup"><span data-stu-id="723fa-139">Lists all .NET Core runtimes that can be uninstalled with this tool.</span></span>
+  <span data-ttu-id="99888-140">Bu araçla kaldırılabilecek tüm .NET Core çalışma zamanlarını listeler.</span><span class="sxs-lookup"><span data-stu-id="99888-140">Lists all .NET Core runtimes that can be uninstalled with this tool.</span></span>
 
 * **`--sdk`**
 
-  <span data-ttu-id="723fa-140">Bu araçla kaldırılabilecek tüm .NET Core SDK 'larını listeler.</span><span class="sxs-lookup"><span data-stu-id="723fa-140">Lists all .NET Core SDKs that can be uninstalled with this tool.</span></span>
+  <span data-ttu-id="99888-141">Bu araçla kaldırılabilecek tüm .NET Core SDK 'larını listeler.</span><span class="sxs-lookup"><span data-stu-id="99888-141">Lists all .NET Core SDKs that can be uninstalled with this tool.</span></span>
 
 * **`-v, --verbosity <LEVEL>`**
 
-  <span data-ttu-id="723fa-141">Ayrıntı düzeyini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="723fa-141">Sets the verbosity level.</span></span> <span data-ttu-id="723fa-142">İzin verilen değerler,,, `q[uiet]` `m[inimal]` `n[ormal]` `d[etailed]` ve `diag[nostic]` .</span><span class="sxs-lookup"><span data-stu-id="723fa-142">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span> <span data-ttu-id="723fa-143">Varsayılan değer: `normal`.</span><span class="sxs-lookup"><span data-stu-id="723fa-143">The default value is `normal`.</span></span>
+  <span data-ttu-id="99888-142">Ayrıntı düzeyini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="99888-142">Sets the verbosity level.</span></span> <span data-ttu-id="99888-143">İzin verilen değerler,,, `q[uiet]` `m[inimal]` `n[ormal]` `d[etailed]` ve `diag[nostic]` .</span><span class="sxs-lookup"><span data-stu-id="99888-143">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span> <span data-ttu-id="99888-144">`normal` varsayılan değerdir.</span><span class="sxs-lookup"><span data-stu-id="99888-144">The default value is `normal`.</span></span>
 
 * **`--x64`**
 
-  <span data-ttu-id="723fa-144">Bu araçla kaldırılabilecek tüm x64 .NET Core SDK 'larını ve çalışma zamanlarını listeler.</span><span class="sxs-lookup"><span data-stu-id="723fa-144">Lists all x64 .NET Core SDKs and runtimes that can be uninstalled with this tool.</span></span>
+  <span data-ttu-id="99888-145">Bu araçla kaldırılabilecek tüm x64 .NET Core SDK 'larını ve çalışma zamanlarını listeler.</span><span class="sxs-lookup"><span data-stu-id="99888-145">Lists all x64 .NET Core SDKs and runtimes that can be uninstalled with this tool.</span></span>
 
 * **`--x86`**
 
-  <span data-ttu-id="723fa-145">Bu araçla kaldırılabilecek tüm x86 .NET Core SDK 'larını ve çalışma zamanlarını listeler.</span><span class="sxs-lookup"><span data-stu-id="723fa-145">Lists all x86 .NET Core SDKs and runtimes that can be uninstalled with this tool.</span></span>
+  <span data-ttu-id="99888-146">Bu araçla kaldırılabilecek tüm x86 .NET Core SDK 'larını ve çalışma zamanlarını listeler.</span><span class="sxs-lookup"><span data-stu-id="99888-146">Lists all x86 .NET Core SDKs and runtimes that can be uninstalled with this tool.</span></span>
 
-## <a name="macos"></a>[<span data-ttu-id="723fa-146">macOS</span><span class="sxs-lookup"><span data-stu-id="723fa-146">macOS</span></span>](#tab/macos)
+## <a name="macos"></a>[<span data-ttu-id="99888-147">macOS</span><span class="sxs-lookup"><span data-stu-id="99888-147">macOS</span></span>](#tab/macos)
 
 * **`--runtime`**
 
-  <span data-ttu-id="723fa-147">Bu araçla kaldırılabilecek tüm .NET Core çalışma zamanlarını listeler.</span><span class="sxs-lookup"><span data-stu-id="723fa-147">Lists all .NET Core runtimes that can be uninstalled with this tool.</span></span>
+  <span data-ttu-id="99888-148">Bu araçla kaldırılabilecek tüm .NET Core çalışma zamanlarını listeler.</span><span class="sxs-lookup"><span data-stu-id="99888-148">Lists all .NET Core runtimes that can be uninstalled with this tool.</span></span>
 
 * **`--sdk`**
 
-  <span data-ttu-id="723fa-148">Bu araçla kaldırılabilecek tüm .NET Core SDK 'larını listeler.</span><span class="sxs-lookup"><span data-stu-id="723fa-148">Lists all .NET Core SDKs that can be uninstalled with this tool.</span></span>
+  <span data-ttu-id="99888-149">Bu araçla kaldırılabilecek tüm .NET Core SDK 'larını listeler.</span><span class="sxs-lookup"><span data-stu-id="99888-149">Lists all .NET Core SDKs that can be uninstalled with this tool.</span></span>
 
 * **`-v, --verbosity <LEVEL>`**
 
-  <span data-ttu-id="723fa-149">Ayrıntı düzeyini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="723fa-149">Sets the verbosity level.</span></span> <span data-ttu-id="723fa-150">İzin verilen değerler,,, `q[uiet]` `m[inimal]` `n[ormal]` `d[etailed]` ve `diag[nostic]` .</span><span class="sxs-lookup"><span data-stu-id="723fa-150">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span> <span data-ttu-id="723fa-151">Varsayılan değer: `normal`.</span><span class="sxs-lookup"><span data-stu-id="723fa-151">The default value is `normal`.</span></span>
+  <span data-ttu-id="99888-150">Ayrıntı düzeyini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="99888-150">Sets the verbosity level.</span></span> <span data-ttu-id="99888-151">İzin verilen değerler,,, `q[uiet]` `m[inimal]` `n[ormal]` `d[etailed]` ve `diag[nostic]` .</span><span class="sxs-lookup"><span data-stu-id="99888-151">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span> <span data-ttu-id="99888-152">`normal` varsayılan değerdir.</span><span class="sxs-lookup"><span data-stu-id="99888-152">The default value is `normal`.</span></span>
   
 ---
 
-#### <a name="examples"></a><span data-ttu-id="723fa-152">Örnekler</span><span class="sxs-lookup"><span data-stu-id="723fa-152">Examples</span></span>
+#### <a name="examples"></a><span data-ttu-id="99888-153">Örnekler</span><span class="sxs-lookup"><span data-stu-id="99888-153">Examples</span></span>
 
-* <span data-ttu-id="723fa-153">Bu araçla kaldırılabileceği tüm .NET Core SDK 'larını ve çalışma zamanlarını listeleyin:</span><span class="sxs-lookup"><span data-stu-id="723fa-153">List all .NET Core SDKs and runtimes that can be removed with this tool:</span></span>
+* <span data-ttu-id="99888-154">Bu araçla kaldırılabileceği tüm .NET Core SDK 'larını ve çalışma zamanlarını listeleyin:</span><span class="sxs-lookup"><span data-stu-id="99888-154">List all .NET Core SDKs and runtimes that can be removed with this tool:</span></span>
 
   ```console
   dotnet-core-uninstall list
   ```
 
-* <span data-ttu-id="723fa-154">Tüm x64 .NET Core SDK 'larını ve çalışma zamanlarını listeleyin:</span><span class="sxs-lookup"><span data-stu-id="723fa-154">List all x64 .NET Core SDKs and runtimes:</span></span>
+* <span data-ttu-id="99888-155">Tüm x64 .NET Core SDK 'larını ve çalışma zamanlarını listeleyin:</span><span class="sxs-lookup"><span data-stu-id="99888-155">List all x64 .NET Core SDKs and runtimes:</span></span>
 
   ```console
   dotnet-core-uninstall list --x64
   ```
 
-* <span data-ttu-id="723fa-155">Tüm x86 .NET Core SDK 'larını listeleyin:</span><span class="sxs-lookup"><span data-stu-id="723fa-155">List all x86 .NET Core SDKs:</span></span>
+* <span data-ttu-id="99888-156">Tüm x86 .NET Core SDK 'larını listeleyin:</span><span class="sxs-lookup"><span data-stu-id="99888-156">List all x86 .NET Core SDKs:</span></span>
 
   ```console
   dotnet-core-uninstall list --sdk --x86
   ```
 
-### <a name="step-2---do-a-dry-run"></a><span data-ttu-id="723fa-156">2. adım-bir kuru çalıştırma</span><span class="sxs-lookup"><span data-stu-id="723fa-156">Step 2 - Do a dry run</span></span>
+### <a name="step-2---do-a-dry-run"></a><span data-ttu-id="99888-157">2. adım-bir kuru çalıştırma</span><span class="sxs-lookup"><span data-stu-id="99888-157">Step 2 - Do a dry run</span></span>
 
-<span data-ttu-id="723fa-157">`dotnet-core-uninstall dry-run`Ve `dotnet-core-uninstall whatif` komutları, kaldırma işlemi yapılmadan belirtilen seçeneklere bağlı olarak kaldırılacak .NET Core SDK 'larını ve çalışma zamanlarını görüntüler.</span><span class="sxs-lookup"><span data-stu-id="723fa-157">The `dotnet-core-uninstall dry-run` and `dotnet-core-uninstall whatif` commands display the .NET Core SDKs and runtimes that will be removed based on the options provided without performing the uninstall.</span></span> <span data-ttu-id="723fa-158">Bu komutlar eş anlamlılardır.</span><span class="sxs-lookup"><span data-stu-id="723fa-158">These commands are synonyms.</span></span>
+<span data-ttu-id="99888-158">`dotnet-core-uninstall dry-run`Ve `dotnet-core-uninstall whatif` komutları, kaldırma işlemi yapılmadan belirtilen seçeneklere bağlı olarak kaldırılacak .NET Core SDK 'larını ve çalışma zamanlarını görüntüler.</span><span class="sxs-lookup"><span data-stu-id="99888-158">The `dotnet-core-uninstall dry-run` and `dotnet-core-uninstall whatif` commands display the .NET Core SDKs and runtimes that will be removed based on the options provided without performing the uninstall.</span></span> <span data-ttu-id="99888-159">Bu komutlar eş anlamlılardır.</span><span class="sxs-lookup"><span data-stu-id="99888-159">These commands are synonyms.</span></span>
 
-<span data-ttu-id="723fa-159">**DotNet-çekirdek-kaldırma kuru çalıştırma ve DotNet-çekirdek-kaldırma whatIf**</span><span class="sxs-lookup"><span data-stu-id="723fa-159">**dotnet-core-uninstall dry-run and dotnet-core-uninstall whatif**</span></span>
+<span data-ttu-id="99888-160">**DotNet-çekirdek-kaldırma kuru çalıştırma ve DotNet-çekirdek-kaldırma whatIf**</span><span class="sxs-lookup"><span data-stu-id="99888-160">**dotnet-core-uninstall dry-run and dotnet-core-uninstall whatif**</span></span>
 
-#### <a name="synopsis"></a><span data-ttu-id="723fa-160">Özeti</span><span class="sxs-lookup"><span data-stu-id="723fa-160">Synopsis</span></span>
+#### <a name="synopsis"></a><span data-ttu-id="99888-161">Özeti</span><span class="sxs-lookup"><span data-stu-id="99888-161">Synopsis</span></span>
 
 ```console
 dotnet-core-uninstall dry-run [options] [<VERSION>...]
@@ -138,390 +138,390 @@ dotnet-core-uninstall dry-run [options] [<VERSION>...]
 dotnet-core-uninstall whatif [options] [<VERSION>...]
 ```
 
-#### <a name="arguments"></a><span data-ttu-id="723fa-161">Arguments</span><span class="sxs-lookup"><span data-stu-id="723fa-161">Arguments</span></span>
+#### <a name="arguments"></a><span data-ttu-id="99888-162">Bağımsız değişkenler</span><span class="sxs-lookup"><span data-stu-id="99888-162">Arguments</span></span>
 
 * **`VERSION`**
 
-  <span data-ttu-id="723fa-162">Kaldırılacak belirtilen sürüm.</span><span class="sxs-lookup"><span data-stu-id="723fa-162">The specified version to uninstall.</span></span> <span data-ttu-id="723fa-163">Birden çok sürümü, boşluklarla ayırarak, birbirinden daha sonra listeleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="723fa-163">You may list several versions one after the other, separated by spaces.</span></span> <span data-ttu-id="723fa-164">Yanıt dosyaları da desteklenir.</span><span class="sxs-lookup"><span data-stu-id="723fa-164">Response files are also supported.</span></span>
+  <span data-ttu-id="99888-163">Kaldırılacak belirtilen sürüm.</span><span class="sxs-lookup"><span data-stu-id="99888-163">The specified version to uninstall.</span></span> <span data-ttu-id="99888-164">Birden çok sürümü, boşluklarla ayırarak, birbirinden daha sonra listeleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="99888-164">You may list several versions one after the other, separated by spaces.</span></span> <span data-ttu-id="99888-165">Yanıt dosyaları da desteklenir.</span><span class="sxs-lookup"><span data-stu-id="99888-165">Response files are also supported.</span></span>
 
   > [!TIP]
-  > <span data-ttu-id="723fa-165">Yanıt dosyaları, tüm sürümlerin komut satırına yerleştirilmesi için bir alternatiftir.</span><span class="sxs-lookup"><span data-stu-id="723fa-165">Response files are an alternative to placing all the versions on the command line.</span></span>
-  > <span data-ttu-id="723fa-166">Bunlar genellikle \* . rsp uzantılı metin dosyalarıdır ve her sürüm ayrı bir satırda listelenir.</span><span class="sxs-lookup"><span data-stu-id="723fa-166">They're text files, typically with a \*.rsp extension, and each version is listed on a separate line.</span></span>
-  > <span data-ttu-id="723fa-167">Bağımsız değişken için bir yanıt dosyası belirtmek için `VERSION` , \@ hemen arkasından yanıt dosyası adı gelen karakteri kullanın.</span><span class="sxs-lookup"><span data-stu-id="723fa-167">To specify a response file for the `VERSION` argument, use the \@ character immediately followed by the response file name.</span></span>
+  > <span data-ttu-id="99888-166">Yanıt dosyaları, tüm sürümlerin komut satırına yerleştirilmesi için bir alternatiftir.</span><span class="sxs-lookup"><span data-stu-id="99888-166">Response files are an alternative to placing all the versions on the command line.</span></span>
+  > <span data-ttu-id="99888-167">Bunlar genellikle \* . rsp uzantılı metin dosyalarıdır ve her sürüm ayrı bir satırda listelenir.</span><span class="sxs-lookup"><span data-stu-id="99888-167">They're text files, typically with a \*.rsp extension, and each version is listed on a separate line.</span></span>
+  > <span data-ttu-id="99888-168">Bağımsız değişken için bir yanıt dosyası belirtmek için `VERSION` , \@ hemen arkasından yanıt dosyası adı gelen karakteri kullanın.</span><span class="sxs-lookup"><span data-stu-id="99888-168">To specify a response file for the `VERSION` argument, use the \@ character immediately followed by the response file name.</span></span>
 
-#### <a name="options"></a><span data-ttu-id="723fa-168">Seçenekler</span><span class="sxs-lookup"><span data-stu-id="723fa-168">Options</span></span>
+#### <a name="options"></a><span data-ttu-id="99888-169">Seçenekler</span><span class="sxs-lookup"><span data-stu-id="99888-169">Options</span></span>
 
-## <a name="windows"></a>[<span data-ttu-id="723fa-169">Windows</span><span class="sxs-lookup"><span data-stu-id="723fa-169">Windows</span></span>](#tab/windows)
+## <a name="windows"></a>[<span data-ttu-id="99888-170">Windows</span><span class="sxs-lookup"><span data-stu-id="99888-170">Windows</span></span>](#tab/windows)
 
 * **`--all`**
 
-  <span data-ttu-id="723fa-170">Tüm .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-170">Removes all .NET Core SDKs and runtimes.</span></span>
+  <span data-ttu-id="99888-171">Tüm .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-171">Removes all .NET Core SDKs and runtimes.</span></span>
 
 * **`--all-below <VERSION>[ <VERSION>...]`**
 
-  <span data-ttu-id="723fa-171">Yalnızca .NET Core SDK 'larını ve çalışma zamanlarını belirtilen sürümden daha küçük bir sürüme kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-171">Removes only the .NET Core SDKs and runtimes with a version smaller than the specified version.</span></span> <span data-ttu-id="723fa-172">Belirtilen sürüm yüklü durumda kalır.</span><span class="sxs-lookup"><span data-stu-id="723fa-172">The specified version remains installed.</span></span>
+  <span data-ttu-id="99888-172">Yalnızca .NET Core SDK 'larını ve çalışma zamanlarını belirtilen sürümden daha küçük bir sürüme kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-172">Removes only the .NET Core SDKs and runtimes with a version smaller than the specified version.</span></span> <span data-ttu-id="99888-173">Belirtilen sürüm yüklü durumda kalır.</span><span class="sxs-lookup"><span data-stu-id="99888-173">The specified version remains installed.</span></span>
 
 * **`--all-but <VERSIONS>[ <VERSION>...]`**
 
-  <span data-ttu-id="723fa-173">Belirtilen sürümler hariç tüm .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-173">Removes all .NET Core SDKs and runtimes, except those versions specified.</span></span>
+  <span data-ttu-id="99888-174">Belirtilen sürümler hariç tüm .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-174">Removes all .NET Core SDKs and runtimes, except those versions specified.</span></span>
 
 * **`--all-but-latest`**
 
-  <span data-ttu-id="723fa-174">En yüksek sürüm dışında .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-174">Removes .NET Core SDKs and runtimes, except the one highest version.</span></span>
+  <span data-ttu-id="99888-175">En yüksek sürüm dışında .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-175">Removes .NET Core SDKs and runtimes, except the one highest version.</span></span>
 
 * **`--all-lower-patches`**
 
-  <span data-ttu-id="723fa-175">Daha yüksek düzeltme eklerinin yerine geçen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-175">Removes .NET Core SDKs and runtimes superseded by higher patches.</span></span> <span data-ttu-id="723fa-176">Bu seçenek Global. JSON korumasını korur.</span><span class="sxs-lookup"><span data-stu-id="723fa-176">This option protects global.json.</span></span>
+  <span data-ttu-id="99888-176">Daha yüksek düzeltme eklerinin yerine geçen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-176">Removes .NET Core SDKs and runtimes superseded by higher patches.</span></span> <span data-ttu-id="99888-177">Bu seçenek global.jskorur.</span><span class="sxs-lookup"><span data-stu-id="99888-177">This option protects global.json.</span></span>
 
 * **`--all-previews`**
 
-  <span data-ttu-id="723fa-177">Önizleme olarak işaretlenen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-177">Removes .NET Core SDKs and runtimes marked as previews.</span></span>
+  <span data-ttu-id="99888-178">Önizleme olarak işaretlenen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-178">Removes .NET Core SDKs and runtimes marked as previews.</span></span>
 
 * **`--all-previews-but-latest`**
 
-  <span data-ttu-id="723fa-178">En yüksek önizleme dışında, önizleme olarak işaretlenen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-178">Removes .NET Core SDKs and runtimes marked as previews except the one highest preview.</span></span>
+  <span data-ttu-id="99888-179">En yüksek önizleme dışında, önizleme olarak işaretlenen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-179">Removes .NET Core SDKs and runtimes marked as previews except the one highest preview.</span></span>
 
 * **`--aspnet-runtime`**
 
-  <span data-ttu-id="723fa-179">Yalnızca ASP.NET Core çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-179">Removes ASP.NET Core runtimes only.</span></span>
+  <span data-ttu-id="99888-180">Yalnızca ASP.NET Core çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-180">Removes ASP.NET Core runtimes only.</span></span>
 
 * **`--hosting-bundle`**
 
-  <span data-ttu-id="723fa-180">Yalnızca .NET Core çalışma zamanı ve barındırma paketleri kaldırılır.</span><span class="sxs-lookup"><span data-stu-id="723fa-180">Removes .NET Core runtime and hosting bundles only.</span></span>
+  <span data-ttu-id="99888-181">Yalnızca .NET Core çalışma zamanı ve barındırma paketleri kaldırılır.</span><span class="sxs-lookup"><span data-stu-id="99888-181">Removes .NET Core runtime and hosting bundles only.</span></span>
 
 * **`--major-minor <MAJOR_MINOR>`**
 
-  <span data-ttu-id="723fa-181">Belirtilen sürümle eşleşen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır `major.minor` .</span><span class="sxs-lookup"><span data-stu-id="723fa-181">Removes .NET Core SDKs and runtimes that match the specified `major.minor` version.</span></span>
+  <span data-ttu-id="99888-182">Belirtilen sürümle eşleşen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır `major.minor` .</span><span class="sxs-lookup"><span data-stu-id="99888-182">Removes .NET Core SDKs and runtimes that match the specified `major.minor` version.</span></span>
 
 * **`--runtime`**
 
-  <span data-ttu-id="723fa-182">Yalnızca .NET Core çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-182">Removes .NET Core runtimes only.</span></span>
+  <span data-ttu-id="99888-183">Yalnızca .NET Core çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-183">Removes .NET Core runtimes only.</span></span>
 
 * **`--sdk`**
 
-  <span data-ttu-id="723fa-183">Yalnızca .NET Core SDK 'larını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-183">Removes .NET Core SDKs only.</span></span>
+  <span data-ttu-id="99888-184">Yalnızca .NET Core SDK 'larını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-184">Removes .NET Core SDKs only.</span></span>
 
 * **`-v, --verbosity <LEVEL>`**
 
-  <span data-ttu-id="723fa-184">Ayrıntı düzeyini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="723fa-184">Sets the verbosity level.</span></span> <span data-ttu-id="723fa-185">İzin verilen değerler,,, `q[uiet]` `m[inimal]` `n[ormal]` `d[etailed]` ve `diag[nostic]` .</span><span class="sxs-lookup"><span data-stu-id="723fa-185">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span> <span data-ttu-id="723fa-186">Varsayılan değer: `normal`.</span><span class="sxs-lookup"><span data-stu-id="723fa-186">The default value is `normal`.</span></span>
+  <span data-ttu-id="99888-185">Ayrıntı düzeyini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="99888-185">Sets the verbosity level.</span></span> <span data-ttu-id="99888-186">İzin verilen değerler,,, `q[uiet]` `m[inimal]` `n[ormal]` `d[etailed]` ve `diag[nostic]` .</span><span class="sxs-lookup"><span data-stu-id="99888-186">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span> <span data-ttu-id="99888-187">`normal` varsayılan değerdir.</span><span class="sxs-lookup"><span data-stu-id="99888-187">The default value is `normal`.</span></span>
 
 * **`--x64`**
 
-  <span data-ttu-id="723fa-187">`--sdk` `--runtime` `--aspnet-runtime` X64 SDK 'larını veya çalışma zamanlarını kaldırmak için, ve ile birlikte kullanılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="723fa-187">Must be used with `--sdk`, `--runtime`, and `--aspnet-runtime` to remove x64 SDKs or runtimes.</span></span>
+  <span data-ttu-id="99888-188">`--sdk` `--runtime` `--aspnet-runtime` X64 SDK 'larını veya çalışma zamanlarını kaldırmak için, ve ile birlikte kullanılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="99888-188">Must be used with `--sdk`, `--runtime`, and `--aspnet-runtime` to remove x64 SDKs or runtimes.</span></span>
 
 * **`--x86`**
 
-  <span data-ttu-id="723fa-188">`--sdk` `--runtime` `--aspnet-runtime` X86 SDK 'larını veya çalışma zamanlarını kaldırmak için ve ile birlikte kullanılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="723fa-188">Must be used with `--sdk`, `--runtime`, and `--aspnet-runtime` to remove x86 SDKs or runtimes.</span></span>
+  <span data-ttu-id="99888-189">`--sdk` `--runtime` `--aspnet-runtime` X86 SDK 'larını veya çalışma zamanlarını kaldırmak için ve ile birlikte kullanılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="99888-189">Must be used with `--sdk`, `--runtime`, and `--aspnet-runtime` to remove x86 SDKs or runtimes.</span></span>
 
-* <span data-ttu-id="723fa-189">**`--force`** Visual Studio tarafından kullanılabilecek sürümlerin kaldırılmasını zorlar.</span><span class="sxs-lookup"><span data-stu-id="723fa-189">**`--force`** Forces removal of versions that might be used by Visual Studio.</span></span>
+* <span data-ttu-id="99888-190">**`--force`** Visual Studio tarafından kullanılabilecek sürümlerin kaldırılmasını zorlar.</span><span class="sxs-lookup"><span data-stu-id="99888-190">**`--force`** Forces removal of versions that might be used by Visual Studio.</span></span>
 
-<span data-ttu-id="723fa-190">Notlar:</span><span class="sxs-lookup"><span data-stu-id="723fa-190">Notes:</span></span>
+<span data-ttu-id="99888-191">Notlar:</span><span class="sxs-lookup"><span data-stu-id="99888-191">Notes:</span></span>
 
-1. <span data-ttu-id="723fa-191">,, Ve yalnızca biri `--sdk` `--runtime` `--aspnet-runtime` `--hosting-bundle` gereklidir.</span><span class="sxs-lookup"><span data-stu-id="723fa-191">Exactly one of `--sdk`, `--runtime`, `--aspnet-runtime`, and `--hosting-bundle` is required.</span></span>
-2. <span data-ttu-id="723fa-192">`--all`,,,,, `--all-below` `--all-but` `--all-but-latest` `--all-lower-patches` `--all-previews` , `--all-previews-but-latest` , `--major-minor` ve `[<VERSION>...]` dışlamalı.</span><span class="sxs-lookup"><span data-stu-id="723fa-192">`--all`, `--all-below`, `--all-but`, `--all-but-latest`, `--all-lower-patches`, `--all-previews`, `--all-previews-but-latest`, `--major-minor`, and `[<VERSION>...]` are exclusive.</span></span>
-3. <span data-ttu-id="723fa-193">`--x64`Veya `--x86` belirtilmemişse, hem x64 hem de x86 kaldırılır.</span><span class="sxs-lookup"><span data-stu-id="723fa-193">If `--x64` or `--x86` aren't specified, then both x64 and x86 will be removed.</span></span>
+1. <span data-ttu-id="99888-192">,, Ve yalnızca biri `--sdk` `--runtime` `--aspnet-runtime` `--hosting-bundle` gereklidir.</span><span class="sxs-lookup"><span data-stu-id="99888-192">Exactly one of `--sdk`, `--runtime`, `--aspnet-runtime`, and `--hosting-bundle` is required.</span></span>
+2. <span data-ttu-id="99888-193">`--all`,,,,, `--all-below` `--all-but` `--all-but-latest` `--all-lower-patches` `--all-previews` , `--all-previews-but-latest` , `--major-minor` ve `[<VERSION>...]` dışlamalı.</span><span class="sxs-lookup"><span data-stu-id="99888-193">`--all`, `--all-below`, `--all-but`, `--all-but-latest`, `--all-lower-patches`, `--all-previews`, `--all-previews-but-latest`, `--major-minor`, and `[<VERSION>...]` are exclusive.</span></span>
+3. <span data-ttu-id="99888-194">`--x64`Veya `--x86` belirtilmemişse, hem x64 hem de x86 kaldırılır.</span><span class="sxs-lookup"><span data-stu-id="99888-194">If `--x64` or `--x86` aren't specified, then both x64 and x86 will be removed.</span></span>
 
-## <a name="macos"></a>[<span data-ttu-id="723fa-194">macOS</span><span class="sxs-lookup"><span data-stu-id="723fa-194">macOS</span></span>](#tab/macos)
+## <a name="macos"></a>[<span data-ttu-id="99888-195">macOS</span><span class="sxs-lookup"><span data-stu-id="99888-195">macOS</span></span>](#tab/macos)
 
 * **`--all`**
 
-  <span data-ttu-id="723fa-195">Tüm .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-195">Removes all .NET Core SDKs and runtimes.</span></span>
+  <span data-ttu-id="99888-196">Tüm .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-196">Removes all .NET Core SDKs and runtimes.</span></span>
 
 * **`--all-below <VERSION>[ <VERSION>...]`**
 
-  <span data-ttu-id="723fa-196">Belirtilen sürümün altındaki .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-196">Removes .NET Core SDKs and runtimes below the specified version.</span></span> <span data-ttu-id="723fa-197">Belirtilen sürüm kalacak.</span><span class="sxs-lookup"><span data-stu-id="723fa-197">The specified version will remain.</span></span>
+  <span data-ttu-id="99888-197">Belirtilen sürümün altındaki .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-197">Removes .NET Core SDKs and runtimes below the specified version.</span></span> <span data-ttu-id="99888-198">Belirtilen sürüm kalacak.</span><span class="sxs-lookup"><span data-stu-id="99888-198">The specified version will remain.</span></span>
 
 * **`--all-but <VERSIONS>[ <VERSION>...]`**
 
-  <span data-ttu-id="723fa-198">Bu sürümler dışında .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-198">Removes .NET Core SDKs and runtimes, except those versions specified.</span></span>
+  <span data-ttu-id="99888-199">Bu sürümler dışında .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-199">Removes .NET Core SDKs and runtimes, except those versions specified.</span></span>
 
 * **`--all-but-latest`**
 
-  <span data-ttu-id="723fa-199">En yüksek sürüm dışında .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-199">Removes .NET Core SDKs and runtimes, except the one highest version.</span></span>
+  <span data-ttu-id="99888-200">En yüksek sürüm dışında .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-200">Removes .NET Core SDKs and runtimes, except the one highest version.</span></span>
 
 * **`--all-lower-patches`**
 
-  <span data-ttu-id="723fa-200">Daha yüksek düzeltme eklerinin yerine geçen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-200">Removes .NET Core SDKs and runtimes superseded by higher patches.</span></span> <span data-ttu-id="723fa-201">Bu seçenek Global. JSON korumasını korur.</span><span class="sxs-lookup"><span data-stu-id="723fa-201">This option protects global.json.</span></span>
+  <span data-ttu-id="99888-201">Daha yüksek düzeltme eklerinin yerine geçen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-201">Removes .NET Core SDKs and runtimes superseded by higher patches.</span></span> <span data-ttu-id="99888-202">Bu seçenek global.jskorur.</span><span class="sxs-lookup"><span data-stu-id="99888-202">This option protects global.json.</span></span>
 
 * **`--all-previews`**
 
-  <span data-ttu-id="723fa-202">Önizleme olarak işaretlenen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-202">Removes .NET Core SDKs and runtimes marked as previews.</span></span>
+  <span data-ttu-id="99888-203">Önizleme olarak işaretlenen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-203">Removes .NET Core SDKs and runtimes marked as previews.</span></span>
 
 * **`--all-previews-but-latest`**
 
-  <span data-ttu-id="723fa-203">En yüksek önizleme dışında, önizleme olarak işaretlenen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-203">Removes .NET Core SDKs and runtimes marked as previews except the one highest preview.</span></span>
+  <span data-ttu-id="99888-204">En yüksek önizleme dışında, önizleme olarak işaretlenen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-204">Removes .NET Core SDKs and runtimes marked as previews except the one highest preview.</span></span>
 
 * **`--major-minor <MAJOR_MINOR>`**
 
-  <span data-ttu-id="723fa-204">Belirtilen sürümle eşleşen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır `major.minor` .</span><span class="sxs-lookup"><span data-stu-id="723fa-204">Removes .NET Core SDKs and runtimes that match the specified `major.minor` version.</span></span>
+  <span data-ttu-id="99888-205">Belirtilen sürümle eşleşen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır `major.minor` .</span><span class="sxs-lookup"><span data-stu-id="99888-205">Removes .NET Core SDKs and runtimes that match the specified `major.minor` version.</span></span>
 
 * **`--runtime`**
 
-  <span data-ttu-id="723fa-205">Yalnızca .NET Core çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-205">Removes .NET Core runtimes only.</span></span>
+  <span data-ttu-id="99888-206">Yalnızca .NET Core çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-206">Removes .NET Core runtimes only.</span></span>
 
 * **`--sdk`**
 
-  <span data-ttu-id="723fa-206">Yalnızca .NET Core SDK 'larını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-206">Removes .NET Core SDKs only.</span></span>
+  <span data-ttu-id="99888-207">Yalnızca .NET Core SDK 'larını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-207">Removes .NET Core SDKs only.</span></span>
 
 * **`-v, --verbosity <LEVEL>`**
 
-  <span data-ttu-id="723fa-207">Ayrıntı düzeyini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="723fa-207">Sets the verbosity level.</span></span> <span data-ttu-id="723fa-208">İzin verilen değerler,,, `q[uiet]` `m[inimal]` `n[ormal]` `d[etailed]` ve `diag[nostic]` .</span><span class="sxs-lookup"><span data-stu-id="723fa-208">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span> <span data-ttu-id="723fa-209">Varsayılan değer: `normal`.</span><span class="sxs-lookup"><span data-stu-id="723fa-209">The default value is `normal`.</span></span>
+  <span data-ttu-id="99888-208">Ayrıntı düzeyini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="99888-208">Sets the verbosity level.</span></span> <span data-ttu-id="99888-209">İzin verilen değerler,,, `q[uiet]` `m[inimal]` `n[ormal]` `d[etailed]` ve `diag[nostic]` .</span><span class="sxs-lookup"><span data-stu-id="99888-209">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span> <span data-ttu-id="99888-210">`normal` varsayılan değerdir.</span><span class="sxs-lookup"><span data-stu-id="99888-210">The default value is `normal`.</span></span>
   
-* <span data-ttu-id="723fa-210">**`--force`** Visual Studio veya SDK 'lar tarafından kullanılan sürümlerin kaldırılmasını zorlar.</span><span class="sxs-lookup"><span data-stu-id="723fa-210">**`--force`** Forces removal of versions that might be used by Visual Studio or SDKs.</span></span>
+* <span data-ttu-id="99888-211">**`--force`** Visual Studio veya SDK 'lar tarafından kullanılan sürümlerin kaldırılmasını zorlar.</span><span class="sxs-lookup"><span data-stu-id="99888-211">**`--force`** Forces removal of versions that might be used by Visual Studio or SDKs.</span></span>
 
-<span data-ttu-id="723fa-211">Notlar:</span><span class="sxs-lookup"><span data-stu-id="723fa-211">Notes:</span></span>
+<span data-ttu-id="99888-212">Notlar:</span><span class="sxs-lookup"><span data-stu-id="99888-212">Notes:</span></span>
 
-1. <span data-ttu-id="723fa-212">Ve bunlardan yalnızca `--sdk` biri `--runtime` gereklidir.</span><span class="sxs-lookup"><span data-stu-id="723fa-212">Exactly one of `--sdk` and `--runtime` is required.</span></span>
-2. <span data-ttu-id="723fa-213">`--all`,,,,, `--all-below` `--all-but` `--all-but-latest` `--all-lower-patches` `--all-previews` , `--all-previews-but-latest` , `--major-minor` ve `[<VERSION>...]` dışlamalı.</span><span class="sxs-lookup"><span data-stu-id="723fa-213">`--all`, `--all-below`, `--all-but`, `--all-but-latest`, `--all-lower-patches`, `--all-previews`, `--all-previews-but-latest`, `--major-minor`, and `[<VERSION>...]` are exclusive.</span></span>
+1. <span data-ttu-id="99888-213">Ve bunlardan yalnızca `--sdk` biri `--runtime` gereklidir.</span><span class="sxs-lookup"><span data-stu-id="99888-213">Exactly one of `--sdk` and `--runtime` is required.</span></span>
+2. <span data-ttu-id="99888-214">`--all`,,,,, `--all-below` `--all-but` `--all-but-latest` `--all-lower-patches` `--all-previews` , `--all-previews-but-latest` , `--major-minor` ve `[<VERSION>...]` dışlamalı.</span><span class="sxs-lookup"><span data-stu-id="99888-214">`--all`, `--all-below`, `--all-but`, `--all-but-latest`, `--all-lower-patches`, `--all-previews`, `--all-previews-but-latest`, `--major-minor`, and `[<VERSION>...]` are exclusive.</span></span>
 
 ---
 
-#### <a name="examples"></a><span data-ttu-id="723fa-214">Örnekler</span><span class="sxs-lookup"><span data-stu-id="723fa-214">Examples</span></span>
+#### <a name="examples"></a><span data-ttu-id="99888-215">Örnekler</span><span class="sxs-lookup"><span data-stu-id="99888-215">Examples</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="723fa-215">Varsayılan olarak, Visual Studio veya diğer SDK 'lar için gerekli olabilecek .NET Core SDK 'Ları ve çalışma zamanları çıkışa dahil edilmez `dotnet-core-uninstall dry-run` .</span><span class="sxs-lookup"><span data-stu-id="723fa-215">By default, .NET Core SDKs and runtimes that may be required by Visual Studio or other SDKs are not included in `dotnet-core-uninstall dry-run` output.</span></span> <span data-ttu-id="723fa-216">Aşağıdaki örneklerde, makinenin durumuna bağlı olarak belirtilen SDK ve çalışma zamanlarının bazıları çıkışa dahil edilmeyebilir.</span><span class="sxs-lookup"><span data-stu-id="723fa-216">In the following examples, some of the specified SDKs and runtimes may not be included in the output, depending on the state of the machine.</span></span> <span data-ttu-id="723fa-217">Tüm SDK 'Ları ve çalışma zamanlarını dahil etmek için bunları açık bağımsız değişken olarak listeleyin veya `--force` seçeneğini kullanın.</span><span class="sxs-lookup"><span data-stu-id="723fa-217">To include all SDKs and runtimes, list them explicitly as arguments or use the `--force` option.</span></span>
+> <span data-ttu-id="99888-216">Varsayılan olarak, Visual Studio veya diğer SDK 'lar için gerekli olabilecek .NET Core SDK 'Ları ve çalışma zamanları çıkışa dahil edilmez `dotnet-core-uninstall dry-run` .</span><span class="sxs-lookup"><span data-stu-id="99888-216">By default, .NET Core SDKs and runtimes that may be required by Visual Studio or other SDKs are not included in `dotnet-core-uninstall dry-run` output.</span></span> <span data-ttu-id="99888-217">Aşağıdaki örneklerde, makinenin durumuna bağlı olarak belirtilen SDK ve çalışma zamanlarının bazıları çıkışa dahil edilmeyebilir.</span><span class="sxs-lookup"><span data-stu-id="99888-217">In the following examples, some of the specified SDKs and runtimes may not be included in the output, depending on the state of the machine.</span></span> <span data-ttu-id="99888-218">Tüm SDK 'Ları ve çalışma zamanlarını dahil etmek için bunları açık bağımsız değişken olarak listeleyin veya `--force` seçeneğini kullanın.</span><span class="sxs-lookup"><span data-stu-id="99888-218">To include all SDKs and runtimes, list them explicitly as arguments or use the `--force` option.</span></span>
 
-* <span data-ttu-id="723fa-218">Daha yüksek düzeltme eklerinin yerini aldığı tüm .NET Core çalışma zamanlarını kaldırma kuru:</span><span class="sxs-lookup"><span data-stu-id="723fa-218">Dry run of removing all .NET Core runtimes that have been superseded by higher patches:</span></span>
+* <span data-ttu-id="99888-219">Daha yüksek düzeltme eklerinin yerini aldığı tüm .NET Core çalışma zamanlarını kaldırma kuru:</span><span class="sxs-lookup"><span data-stu-id="99888-219">Dry run of removing all .NET Core runtimes that have been superseded by higher patches:</span></span>
 
   ```console
   dotnet-core-uninstall dry-run --all-lower-patches --runtime
   ```
 
-* <span data-ttu-id="723fa-219">Sürümün altındaki tüm .NET Core SDK 'larını kaldırma konusunda Kuru çalıştırın `2.2.301` :</span><span class="sxs-lookup"><span data-stu-id="723fa-219">Dry run of removing all .NET Core SDKs below the version `2.2.301`:</span></span>
+* <span data-ttu-id="99888-220">Sürümün altındaki tüm .NET Core SDK 'larını kaldırma konusunda Kuru çalıştırın `2.2.301` :</span><span class="sxs-lookup"><span data-stu-id="99888-220">Dry run of removing all .NET Core SDKs below the version `2.2.301`:</span></span>
 
   ```console
   dotnet-core-uninstall whatif --all-below 2.2.301 --sdk
   ```
 
-### <a name="step-3---uninstall-net-core-sdks-and-runtimes"></a><span data-ttu-id="723fa-220">3. adım-.NET Core SDK 'larını ve çalışma zamanlarını kaldırma</span><span class="sxs-lookup"><span data-stu-id="723fa-220">Step 3 - Uninstall .NET Core SDKs and Runtimes</span></span>
+### <a name="step-3---uninstall-net-core-sdks-and-runtimes"></a><span data-ttu-id="99888-221">3. adım-.NET Core SDK 'larını ve çalışma zamanlarını kaldırma</span><span class="sxs-lookup"><span data-stu-id="99888-221">Step 3 - Uninstall .NET Core SDKs and Runtimes</span></span>
 
-<span data-ttu-id="723fa-221">`dotnet-core-uninstall remove`bir seçenek koleksiyonuyla belirtilen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-221">`dotnet-core-uninstall remove` uninstalls .NET Core SDKs and Runtimes that are specified by a collection of options.</span></span> <span data-ttu-id="723fa-222">Araç, sürüm 5,0 veya üzeri olan SDK 'Ları ve çalışma zamanlarını kaldırmak için kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="723fa-222">The tool can't be used to uninstall SDKs and Runtimes with version 5.0 or above.</span></span>
+<span data-ttu-id="99888-222">`dotnet-core-uninstall remove` bir seçenek koleksiyonuyla belirtilen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-222">`dotnet-core-uninstall remove` uninstalls .NET Core SDKs and Runtimes that are specified by a collection of options.</span></span> <span data-ttu-id="99888-223">1,2 ve üzeri sürümleri, SDK ve çalışma zamanlarını sürüm 5,0 veya daha önceki bir sürümü ile kaldırabilir ve aracın önceki sürümleri 3,1 ve önceki sürümlerini kaldırabilir.</span><span class="sxs-lookup"><span data-stu-id="99888-223">Versions 1.2 and later can uninstall SDKs and runtimes with version 5.0 or earlier, and previous versions of the tool can uninstall 3.1 and earlier.</span></span>
 
-<span data-ttu-id="723fa-223">Bu aracın bozucu bir davranışı olduğundan, Kaldır komutunu çalıştırmadan önce bir kuru çalıştırma yapmanız **önemle** önerilir.</span><span class="sxs-lookup"><span data-stu-id="723fa-223">Since this tool has a destructive behavior, it's **highly** recommended that you do a dry run before running the remove command.</span></span> <span data-ttu-id="723fa-224">Kuru çalıştırma, komutu kullandığınızda hangi .NET Core SDK 'larının ve çalışma zamanlarının kaldırılacağını gösterir `remove` .</span><span class="sxs-lookup"><span data-stu-id="723fa-224">The dry run will show you what .NET Core SDKs and runtimes will be removed when you use the `remove` command.</span></span> <span data-ttu-id="723fa-225">Hangi SDK 'ların ve çalışma zamanlarının kaldırılacağını öğrenmek için bkz. [bir sürümü kaldırmalıyım?](../install/remove-runtime-sdk-versions.md#should-i-remove-a-version) .</span><span class="sxs-lookup"><span data-stu-id="723fa-225">Refer to [Should I remove a version?](../install/remove-runtime-sdk-versions.md#should-i-remove-a-version) to learn which SDKs and runtimes are safe to remove.</span></span>
+<span data-ttu-id="99888-224">Bu aracın bozucu bir davranışı olduğundan, Kaldır komutunu çalıştırmadan önce bir kuru çalıştırma yapmanız **önemle** önerilir.</span><span class="sxs-lookup"><span data-stu-id="99888-224">Since this tool has a destructive behavior, it's **highly** recommended that you do a dry run before running the remove command.</span></span> <span data-ttu-id="99888-225">Kuru çalıştırma, komutu kullandığınızda hangi .NET Core SDK 'larının ve çalışma zamanlarının kaldırılacağını gösterir `remove` .</span><span class="sxs-lookup"><span data-stu-id="99888-225">The dry run will show you what .NET Core SDKs and runtimes will be removed when you use the `remove` command.</span></span> <span data-ttu-id="99888-226">Hangi SDK 'ların ve çalışma zamanlarının kaldırılacağını öğrenmek için bkz. [bir sürümü kaldırmalıyım?](../install/remove-runtime-sdk-versions.md#should-i-remove-a-version) .</span><span class="sxs-lookup"><span data-stu-id="99888-226">Refer to [Should I remove a version?](../install/remove-runtime-sdk-versions.md#should-i-remove-a-version) to learn which SDKs and runtimes are safe to remove.</span></span>
 
 > [!CAUTION]
-> <span data-ttu-id="723fa-226">Aşağıdaki uyarıları aklınızda bulundurun:</span><span class="sxs-lookup"><span data-stu-id="723fa-226">Keep in mind the following caveats:</span></span>
+> <span data-ttu-id="99888-227">Aşağıdaki uyarıları aklınızda bulundurun:</span><span class="sxs-lookup"><span data-stu-id="99888-227">Keep in mind the following caveats:</span></span>
 >
->- <span data-ttu-id="723fa-227">Bu araç, makinenizde bulunan dosyalar için gereken .NET Core SDK sürümlerini kaldırabilir `global.json` .</span><span class="sxs-lookup"><span data-stu-id="723fa-227">This tool can uninstall versions of the .NET Core SDK that are required by `global.json` files on your machine.</span></span> <span data-ttu-id="723fa-228">.NET Core SDK 'larını [indirme .NET Core](https://dotnet.microsoft.com/download/dotnet-core) sayfasından yeniden yükleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="723fa-228">You can reinstall .NET Core SDKs from the [Download .NET Core](https://dotnet.microsoft.com/download/dotnet-core) page.</span></span>
->- <span data-ttu-id="723fa-229">Bu araç, makinenizde bağımlı uygulamalar için gerekli olan .NET Core çalışma zamanının sürümlerini kaldırabilir.</span><span class="sxs-lookup"><span data-stu-id="723fa-229">This tool can uninstall versions of the .NET Core runtime that are required by framework dependent applications on your machine.</span></span> <span data-ttu-id="723fa-230">.NET Core çalışma zamanları 'nı [indirme .NET Core](https://dotnet.microsoft.com/download/dotnet-core) sayfasından yeniden yükleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="723fa-230">You can reinstall .NET Core runtimes from the [Download .NET Core](https://dotnet.microsoft.com/download/dotnet-core) page.</span></span>
->- <span data-ttu-id="723fa-231">Bu araç, Visual Studio 'nun bağımlı olduğu .NET Core SDK ve çalışma zamanının sürümlerini kaldırabilir.</span><span class="sxs-lookup"><span data-stu-id="723fa-231">This tool can uninstall versions of the .NET Core SDK and runtime that Visual Studio relies on.</span></span> <span data-ttu-id="723fa-232">Visual Studio yüklemenizi ayırırsanız, çalışma durumuna geri dönmek için Visual Studio yükleyicisindeki "Onar" ı çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="723fa-232">If you break your Visual Studio installation, run "Repair" in the Visual Studio installer to get back to a working state.</span></span>
+>- <span data-ttu-id="99888-228">Bu araç, makinenizde bulunan dosyalar için gereken .NET Core SDK sürümlerini kaldırabilir `global.json` .</span><span class="sxs-lookup"><span data-stu-id="99888-228">This tool can uninstall versions of the .NET Core SDK that are required by `global.json` files on your machine.</span></span> <span data-ttu-id="99888-229">.NET Core SDK 'larını [indirme .NET Core](https://dotnet.microsoft.com/download/dotnet-core) sayfasından yeniden yükleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="99888-229">You can reinstall .NET Core SDKs from the [Download .NET Core](https://dotnet.microsoft.com/download/dotnet-core) page.</span></span>
+>- <span data-ttu-id="99888-230">Bu araç, makinenizde bağımlı uygulamalar için gerekli olan .NET Core çalışma zamanının sürümlerini kaldırabilir.</span><span class="sxs-lookup"><span data-stu-id="99888-230">This tool can uninstall versions of the .NET Core runtime that are required by framework dependent applications on your machine.</span></span> <span data-ttu-id="99888-231">.NET Core çalışma zamanları 'nı [indirme .NET Core](https://dotnet.microsoft.com/download/dotnet-core) sayfasından yeniden yükleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="99888-231">You can reinstall .NET Core runtimes from the [Download .NET Core](https://dotnet.microsoft.com/download/dotnet-core) page.</span></span>
+>- <span data-ttu-id="99888-232">Bu araç, Visual Studio 'nun bağımlı olduğu .NET Core SDK ve çalışma zamanının sürümlerini kaldırabilir.</span><span class="sxs-lookup"><span data-stu-id="99888-232">This tool can uninstall versions of the .NET Core SDK and runtime that Visual Studio relies on.</span></span> <span data-ttu-id="99888-233">Visual Studio yüklemenizi ayırırsanız, çalışma durumuna geri dönmek için Visual Studio yükleyicisindeki "Onar" ı çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="99888-233">If you break your Visual Studio installation, run "Repair" in the Visual Studio installer to get back to a working state.</span></span>
 
-<span data-ttu-id="723fa-233">Varsayılan olarak, tüm komutlar, Visual Studio veya diğer SDK 'lar için gerekli olabilecek .NET Core SDK 'larını ve çalışma zamanlarını saklar.</span><span class="sxs-lookup"><span data-stu-id="723fa-233">By default, all commands keep the .NET Core SDKs and runtimes that may be required by Visual Studio or other SDKs.</span></span> <span data-ttu-id="723fa-234">Bu SDK 'lar ve çalışma zamanları, açıkça bağımsız değişken olarak listelenerek veya seçeneği kullanılarak kaldırılabilir `--force` .</span><span class="sxs-lookup"><span data-stu-id="723fa-234">These SDKs and runtimes can be uninstalled by listing them explicitly as arguments or by using the `--force` option.</span></span>
+<span data-ttu-id="99888-234">Varsayılan olarak, tüm komutlar, Visual Studio veya diğer SDK 'lar için gerekli olabilecek .NET Core SDK 'larını ve çalışma zamanlarını saklar.</span><span class="sxs-lookup"><span data-stu-id="99888-234">By default, all commands keep the .NET Core SDKs and runtimes that may be required by Visual Studio or other SDKs.</span></span> <span data-ttu-id="99888-235">Bu SDK 'lar ve çalışma zamanları, açıkça bağımsız değişken olarak listelenerek veya seçeneği kullanılarak kaldırılabilir `--force` .</span><span class="sxs-lookup"><span data-stu-id="99888-235">These SDKs and runtimes can be uninstalled by listing them explicitly as arguments or by using the `--force` option.</span></span>
 
-<span data-ttu-id="723fa-235">Aracın .NET Core SDK 'larını ve çalışma zamanlarını kaldırması için yükseltme gerekiyor.</span><span class="sxs-lookup"><span data-stu-id="723fa-235">The tool requires elevation to uninstall .NET Core SDKs and runtimes.</span></span> <span data-ttu-id="723fa-236">Aracı, Windows 'da ve macOS 'ta bulunan bir yönetici komut isteminde çalıştırın `sudo` .</span><span class="sxs-lookup"><span data-stu-id="723fa-236">Run the tool in an Administrator command prompt on Windows and with `sudo` on macOS.</span></span> <span data-ttu-id="723fa-237">`dry-run`Ve `whatif` komutları yükseltme gerektirmez.</span><span class="sxs-lookup"><span data-stu-id="723fa-237">The `dry-run` and `whatif` commands don't require elevation.</span></span>
+<span data-ttu-id="99888-236">Aracın .NET Core SDK 'larını ve çalışma zamanlarını kaldırması için yükseltme gerekiyor.</span><span class="sxs-lookup"><span data-stu-id="99888-236">The tool requires elevation to uninstall .NET Core SDKs and runtimes.</span></span> <span data-ttu-id="99888-237">Aracı, Windows 'da ve macOS 'ta bulunan bir yönetici komut isteminde çalıştırın `sudo` .</span><span class="sxs-lookup"><span data-stu-id="99888-237">Run the tool in an Administrator command prompt on Windows and with `sudo` on macOS.</span></span> <span data-ttu-id="99888-238">`dry-run`Ve `whatif` komutları yükseltme gerektirmez.</span><span class="sxs-lookup"><span data-stu-id="99888-238">The `dry-run` and `whatif` commands don't require elevation.</span></span>
 
-<span data-ttu-id="723fa-238">**DotNet-çekirdek-kaldırma kaldırma**</span><span class="sxs-lookup"><span data-stu-id="723fa-238">**dotnet-core-uninstall remove**</span></span>
+<span data-ttu-id="99888-239">**DotNet-çekirdek-kaldırma kaldırma**</span><span class="sxs-lookup"><span data-stu-id="99888-239">**dotnet-core-uninstall remove**</span></span>
 
-#### <a name="synopsis"></a><span data-ttu-id="723fa-239">Özeti</span><span class="sxs-lookup"><span data-stu-id="723fa-239">Synopsis</span></span>
+#### <a name="synopsis"></a><span data-ttu-id="99888-240">Özeti</span><span class="sxs-lookup"><span data-stu-id="99888-240">Synopsis</span></span>
 
 ```console
 dotnet-core-uninstall remove [options] [<VERSION>...]
 ```
 
-#### <a name="arguments"></a><span data-ttu-id="723fa-240">Arguments</span><span class="sxs-lookup"><span data-stu-id="723fa-240">Arguments</span></span>
+#### <a name="arguments"></a><span data-ttu-id="99888-241">Bağımsız değişkenler</span><span class="sxs-lookup"><span data-stu-id="99888-241">Arguments</span></span>
 
 * **`VERSION`**
 
-  <span data-ttu-id="723fa-241">Kaldırılacak belirtilen sürüm.</span><span class="sxs-lookup"><span data-stu-id="723fa-241">The specified version to uninstall.</span></span> <span data-ttu-id="723fa-242">Birden çok sürümü, boşluklarla ayırarak, birbirinden daha sonra listeleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="723fa-242">You may list several versions one after the other, separated by spaces.</span></span> <span data-ttu-id="723fa-243">Yanıt dosyaları da desteklenir.</span><span class="sxs-lookup"><span data-stu-id="723fa-243">Response files are also supported.</span></span>
+  <span data-ttu-id="99888-242">Kaldırılacak belirtilen sürüm.</span><span class="sxs-lookup"><span data-stu-id="99888-242">The specified version to uninstall.</span></span> <span data-ttu-id="99888-243">Birden çok sürümü, boşluklarla ayırarak, birbirinden daha sonra listeleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="99888-243">You may list several versions one after the other, separated by spaces.</span></span> <span data-ttu-id="99888-244">Yanıt dosyaları da desteklenir.</span><span class="sxs-lookup"><span data-stu-id="99888-244">Response files are also supported.</span></span>
 
   > [!TIP]
-  > <span data-ttu-id="723fa-244">Yanıt dosyaları, tüm sürümlerin komut satırına yerleştirilmesi için bir alternatiftir.</span><span class="sxs-lookup"><span data-stu-id="723fa-244">Response files are an alternative to placing all the versions on the command line.</span></span>
-  > <span data-ttu-id="723fa-245">Bunlar genellikle \* . rsp uzantılı metin dosyalarıdır ve her sürüm ayrı bir satırda listelenir.</span><span class="sxs-lookup"><span data-stu-id="723fa-245">They're text files, typically with a \*.rsp extension, and each version is listed on a separate line.</span></span>
-  > <span data-ttu-id="723fa-246">Bağımsız değişken için bir yanıt dosyası belirtmek için `VERSION` , \@ hemen arkasından yanıt dosyası adı gelen karakteri kullanın.</span><span class="sxs-lookup"><span data-stu-id="723fa-246">To specify a response file for the `VERSION` argument, use the \@ character immediately followed by the response file name.</span></span>
+  > <span data-ttu-id="99888-245">Yanıt dosyaları, tüm sürümlerin komut satırına yerleştirilmesi için bir alternatiftir.</span><span class="sxs-lookup"><span data-stu-id="99888-245">Response files are an alternative to placing all the versions on the command line.</span></span>
+  > <span data-ttu-id="99888-246">Bunlar genellikle \* . rsp uzantılı metin dosyalarıdır ve her sürüm ayrı bir satırda listelenir.</span><span class="sxs-lookup"><span data-stu-id="99888-246">They're text files, typically with a \*.rsp extension, and each version is listed on a separate line.</span></span>
+  > <span data-ttu-id="99888-247">Bağımsız değişken için bir yanıt dosyası belirtmek için `VERSION` , \@ hemen arkasından yanıt dosyası adı gelen karakteri kullanın.</span><span class="sxs-lookup"><span data-stu-id="99888-247">To specify a response file for the `VERSION` argument, use the \@ character immediately followed by the response file name.</span></span>
 
-#### <a name="options"></a><span data-ttu-id="723fa-247">Seçenekler</span><span class="sxs-lookup"><span data-stu-id="723fa-247">Options</span></span>
+#### <a name="options"></a><span data-ttu-id="99888-248">Seçenekler</span><span class="sxs-lookup"><span data-stu-id="99888-248">Options</span></span>
 
-## <a name="windows"></a>[<span data-ttu-id="723fa-248">Windows</span><span class="sxs-lookup"><span data-stu-id="723fa-248">Windows</span></span>](#tab/windows)
+## <a name="windows"></a>[<span data-ttu-id="99888-249">Windows</span><span class="sxs-lookup"><span data-stu-id="99888-249">Windows</span></span>](#tab/windows)
 
 * **`--all`**
 
-  <span data-ttu-id="723fa-249">Tüm .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-249">Removes all .NET Core SDKs and runtimes.</span></span>
+  <span data-ttu-id="99888-250">Tüm .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-250">Removes all .NET Core SDKs and runtimes.</span></span>
 
 * **`--all-below <VERSION>[ <VERSION>...]`**
 
-  <span data-ttu-id="723fa-250">Yalnızca .NET Core SDK 'larını ve çalışma zamanlarını belirtilen sürümden daha küçük bir sürüme kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-250">Removes only the .NET Core SDKs and runtimes with a version smaller than the specified version.</span></span> <span data-ttu-id="723fa-251">Belirtilen sürüm yüklü durumda kalır.</span><span class="sxs-lookup"><span data-stu-id="723fa-251">The specified version remains installed.</span></span>
+  <span data-ttu-id="99888-251">Yalnızca .NET Core SDK 'larını ve çalışma zamanlarını belirtilen sürümden daha küçük bir sürüme kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-251">Removes only the .NET Core SDKs and runtimes with a version smaller than the specified version.</span></span> <span data-ttu-id="99888-252">Belirtilen sürüm yüklü durumda kalır.</span><span class="sxs-lookup"><span data-stu-id="99888-252">The specified version remains installed.</span></span>
 
 * **`--all-but <VERSIONS>[ <VERSION>...]`**
 
-  <span data-ttu-id="723fa-252">Belirtilen sürümler hariç tüm .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-252">Removes all .NET Core SDKs and runtimes, except those versions specified.</span></span>
+  <span data-ttu-id="99888-253">Belirtilen sürümler hariç tüm .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-253">Removes all .NET Core SDKs and runtimes, except those versions specified.</span></span>
 
 * **`--all-but-latest`**
 
-  <span data-ttu-id="723fa-253">En yüksek sürüm dışında .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-253">Removes .NET Core SDKs and runtimes, except the one highest version.</span></span>
+  <span data-ttu-id="99888-254">En yüksek sürüm dışında .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-254">Removes .NET Core SDKs and runtimes, except the one highest version.</span></span>
 
 * **`--all-lower-patches`**
 
-  <span data-ttu-id="723fa-254">Daha yüksek düzeltme eklerinin yerine geçen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-254">Removes .NET Core SDKs and runtimes superseded by higher patches.</span></span> <span data-ttu-id="723fa-255">Bu seçenek Global. JSON korumasını korur.</span><span class="sxs-lookup"><span data-stu-id="723fa-255">This option protects global.json.</span></span>
+  <span data-ttu-id="99888-255">Daha yüksek düzeltme eklerinin yerine geçen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-255">Removes .NET Core SDKs and runtimes superseded by higher patches.</span></span> <span data-ttu-id="99888-256">Bu seçenek global.jskorur.</span><span class="sxs-lookup"><span data-stu-id="99888-256">This option protects global.json.</span></span>
 
 * **`--all-previews`**
 
-  <span data-ttu-id="723fa-256">Önizleme olarak işaretlenen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-256">Removes .NET Core SDKs and runtimes marked as previews.</span></span>
+  <span data-ttu-id="99888-257">Önizleme olarak işaretlenen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-257">Removes .NET Core SDKs and runtimes marked as previews.</span></span>
 
 * **`--all-previews-but-latest`**
 
-  <span data-ttu-id="723fa-257">En yüksek önizleme dışında, önizleme olarak işaretlenen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-257">Removes .NET Core SDKs and runtimes marked as previews except the one highest preview.</span></span>
+  <span data-ttu-id="99888-258">En yüksek önizleme dışında, önizleme olarak işaretlenen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-258">Removes .NET Core SDKs and runtimes marked as previews except the one highest preview.</span></span>
 
 * **`--aspnet-runtime`**
 
-  <span data-ttu-id="723fa-258">Yalnızca ASP.NET Core çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-258">Removes ASP.NET Core runtimes only.</span></span>
+  <span data-ttu-id="99888-259">Yalnızca ASP.NET Core çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-259">Removes ASP.NET Core runtimes only.</span></span>
 
 * **`--hosting-bundle`**
 
-  <span data-ttu-id="723fa-259">Yalnızca .NET Core barındırma paketlerini kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-259">Removes .NET Core hosting bundles only.</span></span>
+  <span data-ttu-id="99888-260">Yalnızca .NET Core barındırma paketlerini kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-260">Removes .NET Core hosting bundles only.</span></span>
 
 * **`--major-minor <MAJOR_MINOR>`**
 
-  <span data-ttu-id="723fa-260">Belirtilen sürümle eşleşen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır `major.minor` .</span><span class="sxs-lookup"><span data-stu-id="723fa-260">Removes .NET Core SDKs and runtimes that match the specified `major.minor` version.</span></span>
+  <span data-ttu-id="99888-261">Belirtilen sürümle eşleşen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır `major.minor` .</span><span class="sxs-lookup"><span data-stu-id="99888-261">Removes .NET Core SDKs and runtimes that match the specified `major.minor` version.</span></span>
 
 * **`--runtime`**
 
-  <span data-ttu-id="723fa-261">Yalnızca .NET Core çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-261">Removes .NET Core runtimes only.</span></span>
+  <span data-ttu-id="99888-262">Yalnızca .NET Core çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-262">Removes .NET Core runtimes only.</span></span>
 
 * **`--sdk`**
 
-  <span data-ttu-id="723fa-262">Yalnızca .NET Core SDK 'larını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-262">Removes .NET Core SDKs only.</span></span>
+  <span data-ttu-id="99888-263">Yalnızca .NET Core SDK 'larını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-263">Removes .NET Core SDKs only.</span></span>
 
 * **`-v, --verbosity <LEVEL>`**
 
-  <span data-ttu-id="723fa-263">Ayrıntı düzeyini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="723fa-263">Sets the verbosity level.</span></span> <span data-ttu-id="723fa-264">İzin verilen değerler,,, `q[uiet]` `m[inimal]` `n[ormal]` `d[etailed]` ve `diag[nostic]` .</span><span class="sxs-lookup"><span data-stu-id="723fa-264">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span> <span data-ttu-id="723fa-265">Varsayılan değer: `normal`.</span><span class="sxs-lookup"><span data-stu-id="723fa-265">The default value is `normal`.</span></span>
+  <span data-ttu-id="99888-264">Ayrıntı düzeyini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="99888-264">Sets the verbosity level.</span></span> <span data-ttu-id="99888-265">İzin verilen değerler,,, `q[uiet]` `m[inimal]` `n[ormal]` `d[etailed]` ve `diag[nostic]` .</span><span class="sxs-lookup"><span data-stu-id="99888-265">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span> <span data-ttu-id="99888-266">`normal` varsayılan değerdir.</span><span class="sxs-lookup"><span data-stu-id="99888-266">The default value is `normal`.</span></span>
 
 * **`--x64`**
 
-  <span data-ttu-id="723fa-266">`--sdk` `--runtime` `--aspnet-runtime` X64 SDK 'larını veya çalışma zamanlarını kaldırmak için, ve ile birlikte kullanılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="723fa-266">Must be used with `--sdk`, `--runtime`, and `--aspnet-runtime` to remove x64 SDKs or runtimes.</span></span>
+  <span data-ttu-id="99888-267">`--sdk` `--runtime` `--aspnet-runtime` X64 SDK 'larını veya çalışma zamanlarını kaldırmak için, ve ile birlikte kullanılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="99888-267">Must be used with `--sdk`, `--runtime`, and `--aspnet-runtime` to remove x64 SDKs or runtimes.</span></span>
 
 * **`--x86`**
 
-  <span data-ttu-id="723fa-267">`--sdk` `--runtime` `--aspnet-runtime` X86 SDK 'larını veya çalışma zamanlarını kaldırmak için ve ile birlikte kullanılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="723fa-267">Must be used with `--sdk`, `--runtime`, and `--aspnet-runtime` to remove x86 SDKs or runtimes.</span></span>
+  <span data-ttu-id="99888-268">`--sdk` `--runtime` `--aspnet-runtime` X86 SDK 'larını veya çalışma zamanlarını kaldırmak için ve ile birlikte kullanılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="99888-268">Must be used with `--sdk`, `--runtime`, and `--aspnet-runtime` to remove x86 SDKs or runtimes.</span></span>
 
-* <span data-ttu-id="723fa-268">**`-y, --yes`** Komutu Evet veya onay olmadan yürütür.</span><span class="sxs-lookup"><span data-stu-id="723fa-268">**`-y, --yes`** Executes the command without requiring a yes or no confirmation.</span></span>
+* <span data-ttu-id="99888-269">**`-y, --yes`** Komutu Evet veya onay olmadan yürütür.</span><span class="sxs-lookup"><span data-stu-id="99888-269">**`-y, --yes`** Executes the command without requiring a yes or no confirmation.</span></span>
 
-* <span data-ttu-id="723fa-269">**`--force`** Visual Studio tarafından kullanılabilecek sürümlerin kaldırılmasını zorlar.</span><span class="sxs-lookup"><span data-stu-id="723fa-269">**`--force`** Forces removal of versions that might be used by Visual Studio.</span></span>
+* <span data-ttu-id="99888-270">**`--force`** Visual Studio tarafından kullanılabilecek sürümlerin kaldırılmasını zorlar.</span><span class="sxs-lookup"><span data-stu-id="99888-270">**`--force`** Forces removal of versions that might be used by Visual Studio.</span></span>
 
-<span data-ttu-id="723fa-270">Notlar:</span><span class="sxs-lookup"><span data-stu-id="723fa-270">Notes:</span></span>
+<span data-ttu-id="99888-271">Notlar:</span><span class="sxs-lookup"><span data-stu-id="99888-271">Notes:</span></span>
 
-1. <span data-ttu-id="723fa-271">,, Ve yalnızca biri `--sdk` `--runtime` `--aspnet-runtime` `--hosting-bundle` gereklidir.</span><span class="sxs-lookup"><span data-stu-id="723fa-271">Exactly one of `--sdk`, `--runtime`, `--aspnet-runtime`, and `--hosting-bundle` is required.</span></span>
-2. <span data-ttu-id="723fa-272">`--all`,,,,, `--all-below` `--all-but` `--all-but-latest` `--all-lower-patches` `--all-previews` , `--all-previews-but-latest` , `--major-minor` ve `[<VERSION>...]` dışlamalı.</span><span class="sxs-lookup"><span data-stu-id="723fa-272">`--all`, `--all-below`, `--all-but`, `--all-but-latest`, `--all-lower-patches`, `--all-previews`, `--all-previews-but-latest`, `--major-minor`, and `[<VERSION>...]` are exclusive.</span></span>
-3. <span data-ttu-id="723fa-273">`--x64`Veya `--x86` belirtilmemişse, hem x64 hem de x86 kaldırılır.</span><span class="sxs-lookup"><span data-stu-id="723fa-273">If `--x64` or `--x86` aren't specified, then both x64 and x86 will be removed.</span></span>
+1. <span data-ttu-id="99888-272">,, Ve yalnızca biri `--sdk` `--runtime` `--aspnet-runtime` `--hosting-bundle` gereklidir.</span><span class="sxs-lookup"><span data-stu-id="99888-272">Exactly one of `--sdk`, `--runtime`, `--aspnet-runtime`, and `--hosting-bundle` is required.</span></span>
+2. <span data-ttu-id="99888-273">`--all`,,,,, `--all-below` `--all-but` `--all-but-latest` `--all-lower-patches` `--all-previews` , `--all-previews-but-latest` , `--major-minor` ve `[<VERSION>...]` dışlamalı.</span><span class="sxs-lookup"><span data-stu-id="99888-273">`--all`, `--all-below`, `--all-but`, `--all-but-latest`, `--all-lower-patches`, `--all-previews`, `--all-previews-but-latest`, `--major-minor`, and `[<VERSION>...]` are exclusive.</span></span>
+3. <span data-ttu-id="99888-274">`--x64`Veya `--x86` belirtilmemişse, hem x64 hem de x86 kaldırılır.</span><span class="sxs-lookup"><span data-stu-id="99888-274">If `--x64` or `--x86` aren't specified, then both x64 and x86 will be removed.</span></span>
 
-## <a name="macos"></a>[<span data-ttu-id="723fa-274">macOS</span><span class="sxs-lookup"><span data-stu-id="723fa-274">macOS</span></span>](#tab/macos)
+## <a name="macos"></a>[<span data-ttu-id="99888-275">macOS</span><span class="sxs-lookup"><span data-stu-id="99888-275">macOS</span></span>](#tab/macos)
 
 * **`--all`**
 
-  <span data-ttu-id="723fa-275">Tüm .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-275">Removes all .NET Core SDKs and runtimes.</span></span>
+  <span data-ttu-id="99888-276">Tüm .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-276">Removes all .NET Core SDKs and runtimes.</span></span>
 
 * **`--all-below <VERSION>[ <VERSION>...]`**
 
-  <span data-ttu-id="723fa-276">Belirtilen sürümün altındaki .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-276">Removes .NET Core SDKs and runtimes below the specified version.</span></span> <span data-ttu-id="723fa-277">Belirtilen sürüm kalacak.</span><span class="sxs-lookup"><span data-stu-id="723fa-277">The specified version will remain.</span></span>
+  <span data-ttu-id="99888-277">Belirtilen sürümün altındaki .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-277">Removes .NET Core SDKs and runtimes below the specified version.</span></span> <span data-ttu-id="99888-278">Belirtilen sürüm kalacak.</span><span class="sxs-lookup"><span data-stu-id="99888-278">The specified version will remain.</span></span>
 
 * **`--all-but <VERSIONS>[ <VERSION>...]`**
 
-  <span data-ttu-id="723fa-278">Bu sürümler dışında .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-278">Removes .NET Core SDKs and runtimes, except those versions specified.</span></span>
+  <span data-ttu-id="99888-279">Bu sürümler dışında .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-279">Removes .NET Core SDKs and runtimes, except those versions specified.</span></span>
 
 * **`--all-but-latest`**
 
-  <span data-ttu-id="723fa-279">En yüksek sürüm dışında .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-279">Removes .NET Core SDKs and runtimes, except the one highest version.</span></span>
+  <span data-ttu-id="99888-280">En yüksek sürüm dışında .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-280">Removes .NET Core SDKs and runtimes, except the one highest version.</span></span>
 
 * **`--all-lower-patches`**
 
-  <span data-ttu-id="723fa-280">Daha yüksek düzeltme eklerinin yerine geçen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-280">Removes .NET Core SDKs and runtimes superseded by higher patches.</span></span> <span data-ttu-id="723fa-281">Bu seçenek Global. JSON korumasını korur.</span><span class="sxs-lookup"><span data-stu-id="723fa-281">This option protects global.json.</span></span>
+  <span data-ttu-id="99888-281">Daha yüksek düzeltme eklerinin yerine geçen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-281">Removes .NET Core SDKs and runtimes superseded by higher patches.</span></span> <span data-ttu-id="99888-282">Bu seçenek global.jskorur.</span><span class="sxs-lookup"><span data-stu-id="99888-282">This option protects global.json.</span></span>
 
 * **`--all-previews`**
 
-  <span data-ttu-id="723fa-282">Önizleme olarak işaretlenen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-282">Removes .NET Core SDKs and runtimes marked as previews.</span></span>
+  <span data-ttu-id="99888-283">Önizleme olarak işaretlenen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-283">Removes .NET Core SDKs and runtimes marked as previews.</span></span>
 
 * **`--all-previews-but-latest`**
 
-  <span data-ttu-id="723fa-283">En yüksek önizleme dışında, önizleme olarak işaretlenen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-283">Removes .NET Core SDKs and runtimes marked as previews except the one highest preview.</span></span>
+  <span data-ttu-id="99888-284">En yüksek önizleme dışında, önizleme olarak işaretlenen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-284">Removes .NET Core SDKs and runtimes marked as previews except the one highest preview.</span></span>
 
 * **`--major-minor <MAJOR_MINOR>`**
 
-  <span data-ttu-id="723fa-284">Belirtilen sürümle eşleşen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır `major.minor` .</span><span class="sxs-lookup"><span data-stu-id="723fa-284">Removes .NET Core SDKs and runtimes that match the specified `major.minor` version.</span></span>
+  <span data-ttu-id="99888-285">Belirtilen sürümle eşleşen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır `major.minor` .</span><span class="sxs-lookup"><span data-stu-id="99888-285">Removes .NET Core SDKs and runtimes that match the specified `major.minor` version.</span></span>
 
 * **`--runtime`**
 
-  <span data-ttu-id="723fa-285">Yalnızca .NET Core çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-285">Removes .NET Core runtimes only.</span></span>
+  <span data-ttu-id="99888-286">Yalnızca .NET Core çalışma zamanlarını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-286">Removes .NET Core runtimes only.</span></span>
 
 * **`--sdk`**
 
-  <span data-ttu-id="723fa-286">Yalnızca .NET Core SDK 'larını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="723fa-286">Removes .NET Core SDKs only.</span></span>
+  <span data-ttu-id="99888-287">Yalnızca .NET Core SDK 'larını kaldırır.</span><span class="sxs-lookup"><span data-stu-id="99888-287">Removes .NET Core SDKs only.</span></span>
 
 * **`-v, --verbosity <LEVEL>`**
 
-  <span data-ttu-id="723fa-287">Ayrıntı düzeyini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="723fa-287">Sets the verbosity level.</span></span> <span data-ttu-id="723fa-288">İzin verilen değerler,,, `q[uiet]` `m[inimal]` `n[ormal]` `d[etailed]` ve `diag[nostic]` .</span><span class="sxs-lookup"><span data-stu-id="723fa-288">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span> <span data-ttu-id="723fa-289">Varsayılan değer: `normal`.</span><span class="sxs-lookup"><span data-stu-id="723fa-289">The default value is `normal`.</span></span>
+  <span data-ttu-id="99888-288">Ayrıntı düzeyini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="99888-288">Sets the verbosity level.</span></span> <span data-ttu-id="99888-289">İzin verilen değerler,,, `q[uiet]` `m[inimal]` `n[ormal]` `d[etailed]` ve `diag[nostic]` .</span><span class="sxs-lookup"><span data-stu-id="99888-289">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span> <span data-ttu-id="99888-290">`normal` varsayılan değerdir.</span><span class="sxs-lookup"><span data-stu-id="99888-290">The default value is `normal`.</span></span>
 
-* <span data-ttu-id="723fa-290">**`-y, --yes`** Komutu Y/N onayına gerek kalmadan yürütür.</span><span class="sxs-lookup"><span data-stu-id="723fa-290">**`-y, --yes`** Executes the command without requiring Y/N confirmation.</span></span>
+* <span data-ttu-id="99888-291">**`-y, --yes`** Komutu Y/N onayına gerek kalmadan yürütür.</span><span class="sxs-lookup"><span data-stu-id="99888-291">**`-y, --yes`** Executes the command without requiring Y/N confirmation.</span></span>
   
-* <span data-ttu-id="723fa-291">**`--force`** Visual Studio veya SDK 'lar tarafından kullanılan sürümlerin kaldırılmasını zorlar.</span><span class="sxs-lookup"><span data-stu-id="723fa-291">**`--force`** Forces removal of versions that might be used by Visual Studio or SDKs.</span></span>
+* <span data-ttu-id="99888-292">**`--force`** Visual Studio veya SDK 'lar tarafından kullanılan sürümlerin kaldırılmasını zorlar.</span><span class="sxs-lookup"><span data-stu-id="99888-292">**`--force`** Forces removal of versions that might be used by Visual Studio or SDKs.</span></span>
 
-<span data-ttu-id="723fa-292">Notlar:</span><span class="sxs-lookup"><span data-stu-id="723fa-292">Notes:</span></span>
+<span data-ttu-id="99888-293">Notlar:</span><span class="sxs-lookup"><span data-stu-id="99888-293">Notes:</span></span>
 
-1. <span data-ttu-id="723fa-293">Ve bunlardan yalnızca `--sdk` biri `--runtime` gereklidir.</span><span class="sxs-lookup"><span data-stu-id="723fa-293">Exactly one of `--sdk` and `--runtime` is required.</span></span>
-2. <span data-ttu-id="723fa-294">`--all`,,,,, `--all-below` `--all-but` `--all-but-latest` `--all-lower-patches` `--all-previews` , `--all-previews-but-latest` , `--major-minor` ve `[<VERSION>...]` dışlamalı.</span><span class="sxs-lookup"><span data-stu-id="723fa-294">`--all`, `--all-below`, `--all-but`, `--all-but-latest`, `--all-lower-patches`, `--all-previews`, `--all-previews-but-latest`, `--major-minor`, and `[<VERSION>...]` are exclusive.</span></span>
+1. <span data-ttu-id="99888-294">Ve bunlardan yalnızca `--sdk` biri `--runtime` gereklidir.</span><span class="sxs-lookup"><span data-stu-id="99888-294">Exactly one of `--sdk` and `--runtime` is required.</span></span>
+2. <span data-ttu-id="99888-295">`--all`,,,,, `--all-below` `--all-but` `--all-but-latest` `--all-lower-patches` `--all-previews` , `--all-previews-but-latest` , `--major-minor` ve `[<VERSION>...]` dışlamalı.</span><span class="sxs-lookup"><span data-stu-id="99888-295">`--all`, `--all-below`, `--all-but`, `--all-but-latest`, `--all-lower-patches`, `--all-previews`, `--all-previews-but-latest`, `--major-minor`, and `[<VERSION>...]` are exclusive.</span></span>
 
 ---
 
-#### <a name="examples"></a><span data-ttu-id="723fa-295">Örnekler</span><span class="sxs-lookup"><span data-stu-id="723fa-295">Examples</span></span>
+#### <a name="examples"></a><span data-ttu-id="99888-296">Örnekler</span><span class="sxs-lookup"><span data-stu-id="99888-296">Examples</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="723fa-296">Varsayılan olarak, Visual Studio veya diğer SDK 'lar için gerekli olabilecek .NET Core SDK 'Ları ve çalışma zamanları tutulur.</span><span class="sxs-lookup"><span data-stu-id="723fa-296">By default, .NET Core SDKs and runtimes that may be required by Visual Studio or other SDKs are kept.</span></span> <span data-ttu-id="723fa-297">Aşağıdaki örneklerde, belirtilen SDK ve çalışma zamanlarının bazıları makinenin durumuna bağlı olarak kalabilir.</span><span class="sxs-lookup"><span data-stu-id="723fa-297">In the following examples, some of the specified SDKs and runtimes may remain, depending on the state of the machine.</span></span> <span data-ttu-id="723fa-298">Tüm SDK 'Ları ve çalışma zamanlarını kaldırmak için bunları açık bağımsız değişken olarak listeleyin veya `--force` seçeneğini kullanın.</span><span class="sxs-lookup"><span data-stu-id="723fa-298">To remove all SDKs and runtimes, list them explicitly as arguments or use the `--force` option.</span></span>
+> <span data-ttu-id="99888-297">Varsayılan olarak, Visual Studio veya diğer SDK 'lar için gerekli olabilecek .NET Core SDK 'Ları ve çalışma zamanları tutulur.</span><span class="sxs-lookup"><span data-stu-id="99888-297">By default, .NET Core SDKs and runtimes that may be required by Visual Studio or other SDKs are kept.</span></span> <span data-ttu-id="99888-298">Aşağıdaki örneklerde, belirtilen SDK ve çalışma zamanlarının bazıları makinenin durumuna bağlı olarak kalabilir.</span><span class="sxs-lookup"><span data-stu-id="99888-298">In the following examples, some of the specified SDKs and runtimes may remain, depending on the state of the machine.</span></span> <span data-ttu-id="99888-299">Tüm SDK 'Ları ve çalışma zamanlarını kaldırmak için bunları açık bağımsız değişken olarak listeleyin veya `--force` seçeneğini kullanın.</span><span class="sxs-lookup"><span data-stu-id="99888-299">To remove all SDKs and runtimes, list them explicitly as arguments or use the `--force` option.</span></span>
 
-* <span data-ttu-id="723fa-299">Y/N onayı gerekmeden sürüm dışındaki tüm .NET Core çalışma zamanlarını kaldırın `3.0.0-preview6-27804-01` :</span><span class="sxs-lookup"><span data-stu-id="723fa-299">Remove all .NET Core runtimes except the version `3.0.0-preview6-27804-01` without requiring Y/N confirmation:</span></span>
+* <span data-ttu-id="99888-300">Y/N onayı gerekmeden sürüm dışındaki tüm .NET Core çalışma zamanlarını kaldırın `3.0.0-preview6-27804-01` :</span><span class="sxs-lookup"><span data-stu-id="99888-300">Remove all .NET Core runtimes except the version `3.0.0-preview6-27804-01` without requiring Y/N confirmation:</span></span>
 
   ```console
   dotnet-core-uninstall remove --all-but 3.0.0-preview6-27804-01 --runtime --yes
   ```
 
-* <span data-ttu-id="723fa-300">Y/n onayı gerekmeden tüm .NET Core 1,1 SDK 'larını kaldırın:</span><span class="sxs-lookup"><span data-stu-id="723fa-300">Remove all .NET Core 1.1 SDKs without requiring Y/n confirmation:</span></span>
+* <span data-ttu-id="99888-301">Y/n onayı gerekmeden tüm .NET Core 1,1 SDK 'larını kaldırın:</span><span class="sxs-lookup"><span data-stu-id="99888-301">Remove all .NET Core 1.1 SDKs without requiring Y/n confirmation:</span></span>
 
   ```console
   dotnet-core-uninstall remove --sdk --major-minor 1.1 -y
   ```
 
-* <span data-ttu-id="723fa-301">Konsol çıktısı olmadan .NET Core 1.1.11 SDK 'sını kaldırın:</span><span class="sxs-lookup"><span data-stu-id="723fa-301">Remove the .NET Core 1.1.11 SDK with no console output:</span></span>
+* <span data-ttu-id="99888-302">Konsol çıktısı olmadan .NET Core 1.1.11 SDK 'sını kaldırın:</span><span class="sxs-lookup"><span data-stu-id="99888-302">Remove the .NET Core 1.1.11 SDK with no console output:</span></span>
 
   ```console
   dotnet-core-uninstall remove 1.1.11 --sdk --yes --verbosity q
   ```
 
-* <span data-ttu-id="723fa-302">Bu araç tarafından güvenli bir şekilde kaldırılabileceği tüm .NET Core SDK 'larını kaldırın:</span><span class="sxs-lookup"><span data-stu-id="723fa-302">Remove all .NET Core SDKs that can safely be removed by this tool:</span></span>
+* <span data-ttu-id="99888-303">Bu araç tarafından güvenli bir şekilde kaldırılabileceği tüm .NET Core SDK 'larını kaldırın:</span><span class="sxs-lookup"><span data-stu-id="99888-303">Remove all .NET Core SDKs that can safely be removed by this tool:</span></span>
 
   ```console
   dotnet-core-uninstall remove --all --sdk
   ```
 
-* <span data-ttu-id="723fa-303">Bu araç tarafından kaldırılabileceği tüm .NET Core SDK 'larını, Visual Studio tarafından gerekebilecek SDK 'lar da dahil olmak üzere kaldırın (önerilmez):</span><span class="sxs-lookup"><span data-stu-id="723fa-303">Remove all .NET Core SDKs that can be removed by this tool, including those SDKs that may be required by Visual Studio (not recommended):</span></span>
+* <span data-ttu-id="99888-304">Bu araç tarafından kaldırılabileceği tüm .NET Core SDK 'larını, Visual Studio tarafından gerekebilecek SDK 'lar da dahil olmak üzere kaldırın (önerilmez):</span><span class="sxs-lookup"><span data-stu-id="99888-304">Remove all .NET Core SDKs that can be removed by this tool, including those SDKs that may be required by Visual Studio (not recommended):</span></span>
 
   ```console
   dotnet-core-uninstall remove --all --sdk --force
   ```
 
-* <span data-ttu-id="723fa-304">Yanıt dosyasında belirtilen tüm .NET Core SDK 'larını kaldırın`versions.rsp`</span><span class="sxs-lookup"><span data-stu-id="723fa-304">Remove all .NET Core SDKs that are specified in the response file `versions.rsp`</span></span>
+* <span data-ttu-id="99888-305">Yanıt dosyasında belirtilen tüm .NET Core SDK 'larını kaldırın `versions.rsp`</span><span class="sxs-lookup"><span data-stu-id="99888-305">Remove all .NET Core SDKs that are specified in the response file `versions.rsp`</span></span>
 
   ```console
   dotnet-core-uninstall remove --sdk @versions.rsp
   ```
 
-  <span data-ttu-id="723fa-305">*Versions. rsp* içeriği aşağıdaki gibidir:</span><span class="sxs-lookup"><span data-stu-id="723fa-305">The content of *versions.rsp* is as follows:</span></span>
+  <span data-ttu-id="99888-306">*Versions. rsp* içeriği aşağıdaki gibidir:</span><span class="sxs-lookup"><span data-stu-id="99888-306">The content of *versions.rsp* is as follows:</span></span>
   
   ```text
   2.2.300
   2.1.700
   ```
 
-### <a name="step-4---delete-the-nuget-fallback-folder-optional"></a><span data-ttu-id="723fa-306">4. adım-NuGet geri dönüş klasörünü silme (isteğe bağlı)</span><span class="sxs-lookup"><span data-stu-id="723fa-306">Step 4 - Delete the NuGet fallback folder (optional)</span></span>
+### <a name="step-4---delete-the-nuget-fallback-folder-optional"></a><span data-ttu-id="99888-307">4. adım-NuGet geri dönüş klasörünü silme (isteğe bağlı)</span><span class="sxs-lookup"><span data-stu-id="99888-307">Step 4 - Delete the NuGet fallback folder (optional)</span></span>
 
-<span data-ttu-id="723fa-307">Bazı durumlarda, artık gerekli değildir `NuGetFallbackFolder` ve silmek isteyebilir.</span><span class="sxs-lookup"><span data-stu-id="723fa-307">In some cases, you no longer need the `NuGetFallbackFolder` and may wish to delete it.</span></span> <span data-ttu-id="723fa-308">Bu klasörü silme hakkında daha fazla bilgi için bkz. [NuGetFallbackFolder 'ı kaldırma](../install/remove-runtime-sdk-versions.md#remove-the-nuget-fallback-folder).</span><span class="sxs-lookup"><span data-stu-id="723fa-308">For more information about deleting this folder, see [Remove the NuGetFallbackFolder](../install/remove-runtime-sdk-versions.md#remove-the-nuget-fallback-folder).</span></span>
+<span data-ttu-id="99888-308">Bazı durumlarda, artık gerekli değildir `NuGetFallbackFolder` ve silmek isteyebilir.</span><span class="sxs-lookup"><span data-stu-id="99888-308">In some cases, you no longer need the `NuGetFallbackFolder` and may wish to delete it.</span></span> <span data-ttu-id="99888-309">Bu klasörü silme hakkında daha fazla bilgi için bkz. [NuGetFallbackFolder 'ı kaldırma](../install/remove-runtime-sdk-versions.md#remove-the-nuget-fallback-folder).</span><span class="sxs-lookup"><span data-stu-id="99888-309">For more information about deleting this folder, see [Remove the NuGetFallbackFolder](../install/remove-runtime-sdk-versions.md#remove-the-nuget-fallback-folder).</span></span>
 
-## <a name="uninstall-the-tool"></a><span data-ttu-id="723fa-309">Aracı kaldır</span><span class="sxs-lookup"><span data-stu-id="723fa-309">Uninstall the tool</span></span>
+## <a name="uninstall-the-tool"></a><span data-ttu-id="99888-310">Aracı kaldır</span><span class="sxs-lookup"><span data-stu-id="99888-310">Uninstall the tool</span></span>
 
-## <a name="windows"></a>[<span data-ttu-id="723fa-310">Windows</span><span class="sxs-lookup"><span data-stu-id="723fa-310">Windows</span></span>](#tab/windows)
+## <a name="windows"></a>[<span data-ttu-id="99888-311">Windows</span><span class="sxs-lookup"><span data-stu-id="99888-311">Windows</span></span>](#tab/windows)
 
-1. <span data-ttu-id="723fa-311">**Program Ekle veya Kaldır**'ı açın.</span><span class="sxs-lookup"><span data-stu-id="723fa-311">Open **Add or Remove Programs**.</span></span>
-2. <span data-ttu-id="723fa-312">`Microsoft .NET Core SDK Uninstall Tool` arayın.</span><span class="sxs-lookup"><span data-stu-id="723fa-312">Search for `Microsoft .NET Core SDK Uninstall Tool`.</span></span>
-3. <span data-ttu-id="723fa-313">**Kaldır**'ı seçin.</span><span class="sxs-lookup"><span data-stu-id="723fa-313">Select **Uninstall**.</span></span>
+1. <span data-ttu-id="99888-312">**Program Ekle veya Kaldır**'ı açın.</span><span class="sxs-lookup"><span data-stu-id="99888-312">Open **Add or Remove Programs**.</span></span>
+2. <span data-ttu-id="99888-313">`Microsoft .NET Core SDK Uninstall Tool` arayın.</span><span class="sxs-lookup"><span data-stu-id="99888-313">Search for `Microsoft .NET Core SDK Uninstall Tool`.</span></span>
+3. <span data-ttu-id="99888-314">**Kaldır**'ı seçin.</span><span class="sxs-lookup"><span data-stu-id="99888-314">Select **Uninstall**.</span></span>
 
-## <a name="macos"></a>[<span data-ttu-id="723fa-314">macOS</span><span class="sxs-lookup"><span data-stu-id="723fa-314">macOS</span></span>](#tab/macos)
+## <a name="macos"></a>[<span data-ttu-id="99888-315">macOS</span><span class="sxs-lookup"><span data-stu-id="99888-315">macOS</span></span>](#tab/macos)
 
-<span data-ttu-id="723fa-315">İndirilen *DotNet-Core-Uninstall. tar. gz* dosyasını yüklendiği dizinden silin.</span><span class="sxs-lookup"><span data-stu-id="723fa-315">Delete the downloaded *dotnet-core-uninstall.tar.gz* file from the directory where it was installed.</span></span> <span data-ttu-id="723fa-316">Bu dosyanın içeriğini başka bir dizine sıkıştırdıysanız, bu içeriği de sildiğinizden emin olun.</span><span class="sxs-lookup"><span data-stu-id="723fa-316">If you unzipped the contents of this file into another directory, be sure to delete that content as well.</span></span>
+<span data-ttu-id="99888-316">İndirilen *DotNet-Core-Uninstall. tar. gz* dosyasını yüklendiği dizinden silin.</span><span class="sxs-lookup"><span data-stu-id="99888-316">Delete the downloaded *dotnet-core-uninstall.tar.gz* file from the directory where it was installed.</span></span> <span data-ttu-id="99888-317">Bu dosyanın içeriğini başka bir dizine sıkıştırdıysanız, bu içeriği de sildiğinizden emin olun.</span><span class="sxs-lookup"><span data-stu-id="99888-317">If you unzipped the contents of this file into another directory, be sure to delete that content as well.</span></span>
 
 ---
