@@ -1,7 +1,8 @@
 ---
 description: C# başvurusu
 title: C# başvurusu
-ms.date: 02/14/2017
+ms.date: 01/13/2021
+ms.custom: updateeachrelease
 f1_keywords:
 - _CSharpKeyword
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: 317f375c46eee3bb9c719afb68993cd4720e54fe
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 663d08921b1fb6c5013ce8dddb044ba12ead8409
+ms.sourcegitcommit: 4f5f1855849cb02c3b610c7006ac21d7429f3348
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89127197"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98235241"
 ---
 # <a name="c-reference"></a>C# başvurusu
 
@@ -61,7 +62,10 @@ Bu bölümde C# anahtar kelimeleri, işleçler, özel karakterler, Önişlemci y
   
  [C# 8,0 belirtim teklifleri](../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md)  
  C# 8,0, .NET Core 3,0 ile kullanılabilir. Özellikler, null yapılabilir başvuru türleri, özyinelemeli model eşleştirme, varsayılan arabirim yöntemleri, zaman uyumsuz akışlar, aralıklar ve dizinler, using bildirimleri kullanarak ve using bildirimlerini, null birleştirme atamasını ve salt okunur örnek üyelerini içerir.
-  
+
+ [C# 9,0 belirtim teklifleri](../../../_csharplang/proposals/csharp-9.0/records.md)  
+ C# 9,0, .NET 5,0 ile kullanılabilir. Özellikler, kayıtları içerir, en üst düzey deyimler, model eşleştirme geliştirmeleri, yalnızca init ayarlayıcıları, hedef türü belirtilmiş yeni ifadeler, modül başlatıcıları, kısmi yöntemleri genişletme, statik anonim işlevler, hedef türü belirtilmiş Koşullu ifadeler, covaryant dönüş türleri, Foreach döngüleri, lambda atma parametreleri, yerel işlevlerde bulunan öznitelikler, yerel boyutlu tamsayılar, işlev işaretçileri, yayma localsinit bayrağı ve kısıtlanmış tür parametresi ek açıklamaları.
+
 ## <a name="related-sections"></a>İlgili bölümler  
 
  [C# için Visual Studio Geliştirme Ortamını Kullanma](/visualstudio/get-started/csharp)  

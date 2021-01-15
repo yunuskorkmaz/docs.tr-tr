@@ -3,12 +3,12 @@ title: Aracı kaldır
 description: .NET Core SDK 'Ları ve çalışma zamanlarını denetimli temizleme işlemini sağlayan kılavuzlu bir araç olan .NET Core kaldırma aracına genel bakış.
 author: sfoslund
 ms.date: 05/27/2020
-ms.openlocfilehash: dcfa12a3ec5fe0e8a29c5897ee4c71bfc7352eda
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ed43b4ec8437ae0ccaf5f1234758dda9f16bd51e
+ms.sourcegitcommit: 4f5f1855849cb02c3b610c7006ac21d7429f3348
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84590805"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98235358"
 ---
 # <a name="net-core-uninstall-tool"></a>.NET Core Kaldırma Aracı
 
@@ -23,7 +23,7 @@ Bu araç, Windows 'ta yalnızca aşağıdaki yükleyicilerden biri kullanılarak
 
 MacOS 'ta, araç yalnızca */usr/local/share/DotNet* klasöründe bulunan SDK 'ları ve çalışma zamanlarını kaldırabilir.
 
-Bu sınırlamalar nedeniyle araç, makinenizde tüm .NET Core SDK 'larını ve çalışma zamanlarını kaldıramayabilir. `dotnet --info`Bu aracın kaldırakaldıramıyorum SDK 'lar ve çalışma zamanları dahil tüm .NET Core SDK 'larını ve çalışma zamanlarını bulmak için komutunu kullanabilirsiniz. `dotnet-core-uninstall list`Komut, araçla hangi SDK 'ların kaldırılabileceği görüntülenir.
+Bu sınırlamalar nedeniyle araç, makinenizde tüm .NET Core SDK 'larını ve çalışma zamanlarını kaldıramayabilir. `dotnet --info`Bu aracın kaldırakaldıramıyorum SDK 'lar ve çalışma zamanları dahil tüm .NET Core SDK 'larını ve çalışma zamanlarını bulmak için komutunu kullanabilirsiniz. `dotnet-core-uninstall list`Komut, araçla hangi SDK 'ların kaldırılabileceği görüntülenir. 1,2 ve üzeri sürümleri, SDK ve çalışma zamanlarını sürüm 5,0 veya daha önceki bir sürümü ile kaldırabilir ve aracın önceki sürümleri 3,1 ve önceki sürümlerini kaldırabilir.
 
 ## <a name="install-the-tool"></a>Aracı 'nı yükler
 
@@ -78,7 +78,7 @@ dotnet-core-uninstall list [options]
 
 * **`-v, --verbosity <LEVEL>`**
 
-  Ayrıntı düzeyini ayarlar. İzin verilen değerler,,, `q[uiet]` `m[inimal]` `n[ormal]` `d[etailed]` ve `diag[nostic]` . Varsayılan değer: `normal`.
+  Ayrıntı düzeyini ayarlar. İzin verilen değerler,,, `q[uiet]` `m[inimal]` `n[ormal]` `d[etailed]` ve `diag[nostic]` . `normal` varsayılan değerdir.
 
 * **`--x64`**
 
@@ -100,7 +100,7 @@ dotnet-core-uninstall list [options]
 
 * **`-v, --verbosity <LEVEL>`**
 
-  Ayrıntı düzeyini ayarlar. İzin verilen değerler,,, `q[uiet]` `m[inimal]` `n[ormal]` `d[etailed]` ve `diag[nostic]` . Varsayılan değer: `normal`.
+  Ayrıntı düzeyini ayarlar. İzin verilen değerler,,, `q[uiet]` `m[inimal]` `n[ormal]` `d[etailed]` ve `diag[nostic]` . `normal` varsayılan değerdir.
   
 ---
 
@@ -138,7 +138,7 @@ dotnet-core-uninstall dry-run [options] [<VERSION>...]
 dotnet-core-uninstall whatif [options] [<VERSION>...]
 ```
 
-#### <a name="arguments"></a>Arguments
+#### <a name="arguments"></a>Bağımsız değişkenler
 
 * **`VERSION`**
 
@@ -171,7 +171,7 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
 * **`--all-lower-patches`**
 
-  Daha yüksek düzeltme eklerinin yerine geçen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır. Bu seçenek Global. JSON korumasını korur.
+  Daha yüksek düzeltme eklerinin yerine geçen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır. Bu seçenek global.jskorur.
 
 * **`--all-previews`**
 
@@ -203,7 +203,7 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
 * **`-v, --verbosity <LEVEL>`**
 
-  Ayrıntı düzeyini ayarlar. İzin verilen değerler,,, `q[uiet]` `m[inimal]` `n[ormal]` `d[etailed]` ve `diag[nostic]` . Varsayılan değer: `normal`.
+  Ayrıntı düzeyini ayarlar. İzin verilen değerler,,, `q[uiet]` `m[inimal]` `n[ormal]` `d[etailed]` ve `diag[nostic]` . `normal` varsayılan değerdir.
 
 * **`--x64`**
 
@@ -241,7 +241,7 @@ Notlar:
 
 * **`--all-lower-patches`**
 
-  Daha yüksek düzeltme eklerinin yerine geçen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır. Bu seçenek Global. JSON korumasını korur.
+  Daha yüksek düzeltme eklerinin yerine geçen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır. Bu seçenek global.jskorur.
 
 * **`--all-previews`**
 
@@ -265,7 +265,7 @@ Notlar:
 
 * **`-v, --verbosity <LEVEL>`**
 
-  Ayrıntı düzeyini ayarlar. İzin verilen değerler,,, `q[uiet]` `m[inimal]` `n[ormal]` `d[etailed]` ve `diag[nostic]` . Varsayılan değer: `normal`.
+  Ayrıntı düzeyini ayarlar. İzin verilen değerler,,, `q[uiet]` `m[inimal]` `n[ormal]` `d[etailed]` ve `diag[nostic]` . `normal` varsayılan değerdir.
   
 * **`--force`** Visual Studio veya SDK 'lar tarafından kullanılan sürümlerin kaldırılmasını zorlar.
 
@@ -295,7 +295,7 @@ Notlar:
 
 ### <a name="step-3---uninstall-net-core-sdks-and-runtimes"></a>3. adım-.NET Core SDK 'larını ve çalışma zamanlarını kaldırma
 
-`dotnet-core-uninstall remove`bir seçenek koleksiyonuyla belirtilen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır. Araç, sürüm 5,0 veya üzeri olan SDK 'Ları ve çalışma zamanlarını kaldırmak için kullanılamaz.
+`dotnet-core-uninstall remove` bir seçenek koleksiyonuyla belirtilen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır. 1,2 ve üzeri sürümleri, SDK ve çalışma zamanlarını sürüm 5,0 veya daha önceki bir sürümü ile kaldırabilir ve aracın önceki sürümleri 3,1 ve önceki sürümlerini kaldırabilir.
 
 Bu aracın bozucu bir davranışı olduğundan, Kaldır komutunu çalıştırmadan önce bir kuru çalıştırma yapmanız **önemle** önerilir. Kuru çalıştırma, komutu kullandığınızda hangi .NET Core SDK 'larının ve çalışma zamanlarının kaldırılacağını gösterir `remove` . Hangi SDK 'ların ve çalışma zamanlarının kaldırılacağını öğrenmek için bkz. [bir sürümü kaldırmalıyım?](../install/remove-runtime-sdk-versions.md#should-i-remove-a-version) .
 
@@ -318,7 +318,7 @@ Aracın .NET Core SDK 'larını ve çalışma zamanlarını kaldırması için y
 dotnet-core-uninstall remove [options] [<VERSION>...]
 ```
 
-#### <a name="arguments"></a>Arguments
+#### <a name="arguments"></a>Bağımsız değişkenler
 
 * **`VERSION`**
 
@@ -351,7 +351,7 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 * **`--all-lower-patches`**
 
-  Daha yüksek düzeltme eklerinin yerine geçen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır. Bu seçenek Global. JSON korumasını korur.
+  Daha yüksek düzeltme eklerinin yerine geçen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır. Bu seçenek global.jskorur.
 
 * **`--all-previews`**
 
@@ -383,7 +383,7 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 * **`-v, --verbosity <LEVEL>`**
 
-  Ayrıntı düzeyini ayarlar. İzin verilen değerler,,, `q[uiet]` `m[inimal]` `n[ormal]` `d[etailed]` ve `diag[nostic]` . Varsayılan değer: `normal`.
+  Ayrıntı düzeyini ayarlar. İzin verilen değerler,,, `q[uiet]` `m[inimal]` `n[ormal]` `d[etailed]` ve `diag[nostic]` . `normal` varsayılan değerdir.
 
 * **`--x64`**
 
@@ -423,7 +423,7 @@ Notlar:
 
 * **`--all-lower-patches`**
 
-  Daha yüksek düzeltme eklerinin yerine geçen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır. Bu seçenek Global. JSON korumasını korur.
+  Daha yüksek düzeltme eklerinin yerine geçen .NET Core SDK 'larını ve çalışma zamanlarını kaldırır. Bu seçenek global.jskorur.
 
 * **`--all-previews`**
 
@@ -447,7 +447,7 @@ Notlar:
 
 * **`-v, --verbosity <LEVEL>`**
 
-  Ayrıntı düzeyini ayarlar. İzin verilen değerler,,, `q[uiet]` `m[inimal]` `n[ormal]` `d[etailed]` ve `diag[nostic]` . Varsayılan değer: `normal`.
+  Ayrıntı düzeyini ayarlar. İzin verilen değerler,,, `q[uiet]` `m[inimal]` `n[ormal]` `d[etailed]` ve `diag[nostic]` . `normal` varsayılan değerdir.
 
 * **`-y, --yes`** Komutu Y/N onayına gerek kalmadan yürütür.
   
@@ -495,7 +495,7 @@ Notlar:
   dotnet-core-uninstall remove --all --sdk --force
   ```
 
-* Yanıt dosyasında belirtilen tüm .NET Core SDK 'larını kaldırın`versions.rsp`
+* Yanıt dosyasında belirtilen tüm .NET Core SDK 'larını kaldırın `versions.rsp`
 
   ```console
   dotnet-core-uninstall remove --sdk @versions.rsp

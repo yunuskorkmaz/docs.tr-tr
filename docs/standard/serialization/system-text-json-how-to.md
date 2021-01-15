@@ -1,7 +1,7 @@
 ---
 title: C#-.NET kullanarak JSON serileştirmek ve serisini kaldırma
 description: System.Text.Json.Net 'TEKI JSON 'a seri hale getirmek ve seri durumdan çıkarmak için ad alanını nasıl kullanacağınızı öğrenin. Örnek kod içerir.
-ms.date: 01/04/2021
+ms.date: 01/12/2021
 ms.custom: contperf-fy21q2
 no-loc:
 - System.Text.Json
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: fd92c067fc76bea6bede1e5370e7ac168856fa9b
-ms.sourcegitcommit: 0273f8845eb1ea8de64086bef2271b4f22182c91
+ms.openlocfilehash: 6e7c9d9c87eb8407489939ec77ba4fbe9b20cc82
+ms.sourcegitcommit: 4f5f1855849cb02c3b610c7006ac21d7429f3348
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2021
-ms.locfileid: "98058109"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98235306"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>.NET içinde JSON ve seri hale getirme (sıralama ve kaldırma)
 
@@ -32,9 +32,14 @@ Kod örnekleri, aşağıdaki sınıfa ve türevlerini ifade eder:
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WF":::
 
 > [!NOTE]
-> System.Text.Json Visual Basic tarafından desteklenmeyen [başvuru yapıları](../../csharp/language-reference/builtin-types/struct.md#ref-struct)kullanır. System.Text.JsonAPI 'leri Visual Basic kullanmaya çalışırsanız, BC40000 derleme hataları alırsınız. Hata iletisi, sorunun eski bir API olduğunu gösterir, ancak gerçek sorun `ref struct` derleyicide desteklenmeyen destek olmamasıdır.
+> System.Text.JsonVisual Basic tarafından desteklenmeyen [ref yapıları](../../csharp/language-reference/builtin-types/struct.md#ref-struct)kullanma bölümleri. System.Text.JsonVisual Basic ile ref struct API 'leri kullanmayı denerseniz, BC40000 derleyici hataları alırsınız. Hata iletisi, sorunun eski bir API olduğunu gösterir ancak gerçek sorun, derleyicide başvuru yapısı desteğinin olmamasından kaynaklanır. Aşağıdaki bölümleri System.Text.Json Visual Basic kullanılamaz:
+>
+> * <xref:System.Text.Json.Utf8JsonReader>Sınıfı.
+> * Bir tür içeren diğer API 'lerin aşırı yüklemeleri <xref:System.Memory%601.Span> . Çoğu yöntem yerine kullanan aşırı yüklemeleri içerir `String` `Span` .
+>
+> Başvuru yapıları, yalnızca "verileri üzerinden geçirme" sırasında bile dil desteği olmadan güvenli şekilde kullanılamadığından bu kısıtlamalar uygulanır. Bu hatanın gerçekleştirilmesi, belleği bozmaya ve yapılmamalıdır Visual Basic koda neden olur.
 
-## <a name="namespaces"></a>Ad Alanları
+## <a name="namespaces"></a>Ad alanları
 
 <xref:System.Text.Json>Ad alanı tüm giriş noktalarını ve ana türleri içerir. <xref:System.Text.Json.Serialization>Ad alanı, serileştirme ve seri durumdan çıkarma ile ilgili gelişmiş senaryolar ve özelleştirme için öznitelikler ve API 'leri içerir. Bu makalede gösterilen kod örnekleri, `using` Bu ad alanlarından biri veya her ikisi için yönergeler gerektirir:
 
