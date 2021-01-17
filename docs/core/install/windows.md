@@ -4,12 +4,12 @@ description: Hangi Windows sürümlerini .NET yükleyebileceğinizi öğrenin.
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: d8ca3eed3786a728002d8ffe80b774a0018eee82
-ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
+ms.openlocfilehash: 57cebc562949627be70aabe24e75ad4567d072fd
+ms.sourcegitcommit: 3a8f1979a98c6c19217a1930e0af5908988eb8ba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98025459"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98536131"
 ---
 # <a name="install-net-on-windows"></a>Windows 'a .NET yükler
 
@@ -182,7 +182,7 @@ Aşağıdaki Windows sürümleri .NET Core 2,1 ile desteklenir:
 
 Aşağıdaki Windows sürümlerine .NET SDK veya çalışma zamanı yüklüyorsanız daha fazla bağımlılık gerekir:
 
-| Operating System         | Önkoşullar                                                                    |
+| Operating System         | Ön koşullar                                                                    |
 |--------------------------|----------------------------------------------------------------------------------|
 | Windows 7 SP1 [ESU][esu] | -Microsoft Visual C++ 2015-2019 yeniden dağıtılabilir [64-bit][vcc64]  /  [32-bit][vcc32] <br> -KB3063858 [64-bit][kb64]  /  [32-bit][kb32] <br> - [MicrosoftRootCertificateAuthority2011. cer](https://go.microsoft.com/fwlink/?linkid=747875&clcid=0x409) (yalnızca .net Core 2,1) |
 | Windows Vista SP 2       | Microsoft Visual C++ 2015-2019 yeniden dağıtılabilir [64-bit][vcc64]  /  [32-bit][vcc32] |
@@ -260,11 +260,31 @@ Visual Studio Code, Visual Studio gibi otomatikleştirilmiş bir .NET Core yükl
 
 .NET için [karşıdan yükleme sayfası](https://dotnet.microsoft.com/download/dotnet-core) Windows ınstaller yürütülebilir dosyaları sağlar.
 
-.NET< yüklemek için MSI dosyalarını kullandığınızda, ve parametrelerini ayarlayarak yükleme yolunu özelleştirebilirsiniz `DOTNETHOME_X64` `DOTNETHOME_X86` :
+.NET yüklemek için Windows yükleyicilerini kullandığınızda, ve parametrelerini ayarlayarak yükleme yolunu özelleştirebilirsiniz `DOTNETHOME_X64` `DOTNETHOME_X86` :
 
 ```console
 dotnet-sdk-3.1.301-win-x64.exe DOTNETHOME_X64="F:\dotnet\x64" DOTNETHOME_X86="F:\dotnet\x86"
 ```
+
+.NET 'i bir üretim ortamında veya sürekli tümleştirmeyi destekleyecek şekilde sessizce yüklemek istiyorsanız aşağıdaki anahtarları kullanın:
+
+- `/install`\
+.NET 'i yükleme.
+
+- `/quiet`\
+Tüm UI ve istemlerin görüntülenmesini önler.
+
+- `norestart`\
+Yeniden başlatma girişimlerini engeller.
+
+```console
+dotnet-sdk-3.1.301-win-x64.exe /install /quiet /norestart
+```
+
+Daha fazla bilgi için bkz. [Standart yükleyici Command-Line seçenekleri](/windows/win32/msi/standard-installer-command-line-options).
+
+> [!TIP]
+> Yükleyici, başarılı için 0 çıkış kodu ve bir yeniden başlatmanın gerekli olduğunu göstermek için 3010 çıkış kodu döndürür. Diğer herhangi bir değer genellikle bir hata kodudur.
 
 ## <a name="download-and-manually-install"></a>İndirme ve el ile yükleme
 
