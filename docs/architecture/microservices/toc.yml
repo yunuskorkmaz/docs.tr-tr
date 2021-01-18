@@ -10,12 +10,12 @@
           href: container-docker-introduction/docker-terminology.md
         - name: 'Docker kapsayıcıları, görüntüleri ve kayıt defterleri'
           href: container-docker-introduction/docker-containers-images-registries.md
-    - name: Docker Kapsayıcıları için NET Core ile NET Framework Arasında Seçim Yapma
+    - name: Docker Kapsayıcıları için NET 5 ile NET Framework Arasında Seçim Yapma
       href: net-core-net-framework-containers/index.md
       items:
-        - name: Genel rehber
+        - name: Genel kılavuz
           href: net-core-net-framework-containers/general-guidance.md
-        - name: Docker kapsayıcıları için ne zaman .NET Core seçilmelidir?
+        - name: Docker kapsayıcıları için ne zaman .NET seçilmelidir?
           href: net-core-net-framework-containers/net-core-container-scenarios.md
         - name: Docker kapsayıcıları için ne zaman .NET Framework seçilmelidir?
           href: net-core-net-framework-containers/net-framework-container-scenarios.md
@@ -101,7 +101,7 @@
           href: microservice-ddd-cqrs-patterns/ddd-oriented-microservice.md
         - name: Mikro hizmet etki alan modeli tasarlama
           href: microservice-ddd-cqrs-patterns/microservice-domain-model.md
-        - name: .NET Core ile bir mikro hizmet etki alanı modeli uygulama
+        - name: .NET ile bir mikro hizmet etki alanı modeli uygulama
           href: microservice-ddd-cqrs-patterns/net-core-microservice-domain-model.md
         - name: Seedwork (etki alanı modeliniz için yeniden kullanılabilir kök sınıflar ve arabirimler)
           href: microservice-ddd-cqrs-patterns/seedwork-domain-model-base-classes-interfaces.md

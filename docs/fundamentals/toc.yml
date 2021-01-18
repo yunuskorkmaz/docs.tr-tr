@@ -342,8 +342,6 @@ items:
                     href: /aspnet/core/razor-pages/sdk?toc=/dotnet/fundamentals/toc.json&bc=/dotnet/breadcrumb/toc.json
           - name: Hedef çerçeveler
             href: ../standard/frameworks.md
-          - name: Csproj biçimine eklenenler
-            href: ../core/tools/csproj.md
           - name: Bağımlılık yönetimi
             href: ../core/tools/dependencies.md
       - name: Genel ve yerel araçlar
@@ -397,8 +395,6 @@ items:
               - name: Genel Bakış
                 displayName: dumps
                 href: ../core/diagnostics/dumps.md
-              - name: StackOverflow hata ayıklama
-                href: ../core/diagnostics/debug-stackoverflow.md
               - name: Linux dökümleri
                 href: ../core/diagnostics/debug-linux-dumps.md
               - name: SOS gata ayıklayıcı genişletilebilirliği
@@ -467,6 +463,8 @@ items:
                 href: ../core/diagnostics/debug-highcpu.md
               - name: Çıkmaz hatasını ayıklama
                 href: ../core/diagnostics/debug-deadlock.md
+              - name: StackOverflow hata ayıklama
+                href: ../core/diagnostics/debug-stackoverflow.md
       - name: Kod analizi
         items:
           - name: Genel Bakış
@@ -2281,6 +2279,8 @@ items:
             href: ../core/migration/index.md
           - name: Project.json ile csproj arasında eşleme
             href: ../core/tools/project-json-to-csproj.md
+          - name: AssemblyInfo özniteliklerini özelliklerle eşleme
+            href: ../core/migration/assembly-info.md
           - name: CLI’daki değişikliklere genel bakış
             href: ../core/tools/cli-msbuild-architecture.md
           - name: DNX’ten geçiş
