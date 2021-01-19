@@ -1,13 +1,13 @@
 ---
 title: 'Son değişiklik: WinForms yöntemleri şimdi ArgumentException oluşturur'
-description: SWindows Forms yöntemlerinin artık geçersiz bağımsız değişkenler için bir ArgumentException oluşturması durumunda .NET 5,0 'deki önemli değişiklik hakkında bilgi edinin.
+description: Bazı Windows Forms yöntemlerinin artık geçersiz bağımsız değişkenler için bir ArgumentException oluşturması durumunda .NET 5,0 ' deki Son değişiklik hakkında bilgi edinin.
 ms.date: 07/18/2020
-ms.openlocfilehash: 46fe3f3b1208a5cd676e1b7546507bed36a850f2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 892f4d16b80f3e42187480a7fcfb24e81868d07c
+ms.sourcegitcommit: f8cd3ef517ee177c99feed944824c27d208cc0d1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761717"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98570222"
 ---
 # <a name="winforms-methods-now-throw-argumentexception"></a>WinForms yöntemleri artık ArgumentException oluşturur
 
@@ -21,7 +21,7 @@ Daha önce, beklenmeyen veya yanlış bir türün bağımsız değişkenlerini b
 
 ## <a name="version-introduced"></a>Sunulan sürüm
 
-.NET 5,0
+.NET 5.0
 
 ## <a name="recommended-action"></a>Önerilen eylem
 
