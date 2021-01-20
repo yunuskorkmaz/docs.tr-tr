@@ -18,6 +18,14 @@
     - name: Sürüme göre hataya neden olan değişiklikler
       expanded: true
       items:
+        - name: .NET 6.0
+          items:
+            - name: Genel Bakış
+              href: 6.0.md
+            - name: Windows Forms
+              items:
+                - name: TableLayoutSettings özellikleri InvalidEnumArgumentException oluşturuyor
+                  href: windows-forms/6.0/tablelayoutsettings-apis-throw-invalidenumargumentexception.md
         - name: .NET 5.0
           items:
             - name: Genel Bakış
@@ -551,6 +559,10 @@
               href: visualbasic.md
         - name: Windows Forms
           items:
+            - name: .NET 6.0
+              items:
+                - name: TableLayoutSettings özellikleri InvalidEnumArgumentException oluşturuyor
+                  href: windows-forms/6.0/tablelayoutsettings-apis-throw-invalidenumargumentexception.md
             - name: .NET 5.0
               items:
                 - name: OutputType WinExe olarak ayarlandı
