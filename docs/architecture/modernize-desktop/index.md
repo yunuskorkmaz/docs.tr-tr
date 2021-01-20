@@ -1,17 +1,21 @@
 ---
-title: .NET Core 3,1 ile Windows 10 ' da masaüstü uygulamaları modernize etme
-description: .NET Core 3,1 ile mevcut masaüstü uygulamalarını nasıl modernleştirin öğrenin
-ms.date: 05/12/2020
-ms.openlocfilehash: 5861f806a9158ef761c47bc23e51327d4e2d0480
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+title: .NET 5 ile Windows 10 ' da masaüstü uygulamaları modernize etme
+description: .NET 5 ile mevcut masaüstü uygulamalarını nasıl modernleştirin öğrenin
+ms.date: 01/06/2021
+ms.openlocfilehash: de8a451b0598b5eabd99028d377c161dace61623
+ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83423238"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98615716"
 ---
-# <a name="modernizing-desktop-apps-on-windows-10-with-net-core-31"></a>.NET Core 3,1 ile Windows 10 ' da masaüstü uygulamaları modernize etme
+# <a name="modernizing-desktop-apps-on-windows-10-with-net-5"></a>.NET 5 ile Windows 10 ' da masaüstü uygulamaları modernize etme
 
 ![Modernleştirin masaüstü uygulamaları e-kitap kapağını gösteren ekran görüntüsü.](./media/modernizing-existing-desktop-apps-ebook-cover.png)
+
+**Sürüm v 1.0.1** -.NET 5 ' e güncelleştirildi
+
+Kitap güncelleştirmeleri ve topluluk katkılarına yönelik [changelog](https://aka.ms/desktop-ebook-changelog) 'u inceleyin.
 
 YAYIMLAYAN
 
@@ -23,11 +27,11 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Telif hakkı © 2020 Microsoft Corporation
+Telif hakkı © 2021 Microsoft Corporation
 
-Tüm hakları saklıdır. Bu kitabın içeriğinin herhangi bir bölümü herhangi bir biçimde veya herhangi bir şekilde veya başka bir şekilde herhangi bir şekilde çoğaltılamaz veya herhangi bir şekilde gönderilebilir.
+All rights reserved. Bu kitabın içeriğinin herhangi bir bölümü herhangi bir biçimde veya herhangi bir şekilde veya başka bir şekilde herhangi bir şekilde çoğaltılamaz veya herhangi bir şekilde gönderilebilir.
 
-Bu kitap, "olduğu gibi" verilmiştir ve yazarın görünümlerini ve opnons 'yi ifade eder. Bu kitapta ifade edilen görünümler, eklentiler ve bilgiler, URL ve diğer Internet Web sitesi başvuruları da dahil olmak üzere bildirimde bulunmaksızın değiştirilebilir.
+Bu kitap, "olduğu gibi" verilmiştir ve yazarın görünümlerini ve opnons 'yi ifade eder. URL ve diğer Internet Web sitesi başvuruları dahil olmak üzere bu kitapta ifade edilen görünümler, eklentiler ve bilgiler bildirimde bulunmadan değiştirilebilir.
 
 Burada tarif edilen bazı örnekler yalnızca açıklama için sağlanmıştır ve kurgusaldır. Gerçek bir ilişki veya bağlantı amaçlanmamıştır veya böyle bir bağlantı olduğu sonucuna varılmamalıdır.
 
@@ -75,13 +79,13 @@ Microsoft 'un mevcut uygulamaları modernleştirmeye yönelik yaklaşımı, kend
 
 ## <a name="who-should-use-the-book"></a>Kitabı kimler kullanmalıdır?
 
-.NET Core ve Windows 10 ' un avantajlarından yararlanmak için mevcut Windows Forms ve WPF masaüstü uygulamalarını modernleştirin isteyen geliştiriciler ve çözüm mimarları için bu kitabı yazdık.
+.NET ve Windows 10 ' un avantajlarından yararlanmak için mevcut Windows Forms ve WPF masaüstü uygulamalarını modernleştirin isteyen geliştiriciler ve çözüm mimarları için bu kitap.
 
 Bu kitabı, kurumsal mimarde veya mevcut masaüstü uygulamalarını güncelleştirme avantajlarına genel bakış isteyen bir geliştirme lideri veya Direktörü gibi teknik bir karar veren bir yardım için de bulabilirsiniz.
 
 ## <a name="how-to-use-the-book"></a>Kitabı kullanma
 
-Bu kitapta, "Neden", mevcut uygulamalarınızı nasıl modernleştirin isteyebileceğiniz ve NET Core 3,1 ve MSIX kullanarak masaüstü uygulamalarınızı modernleştirin 'e alacağınız belirli avantajlar ele alınmaktadır. Kitabın içeriği, genel bakış isteyen, ancak uygulama ve teknik, adım adım ayrıntılara odaklanmayı gerektirmeyen mimarlar ve teknik karar mekanizmaları için tasarlanmıştır.
+Bu kitapta, "Neden", mevcut uygulamalarınızı nasıl modernleştirin isteyebileceğiniz ve NET ve MSIX kullanarak masaüstü uygulamalarınızı modernleştirin 'e alacağınız belirli avantajlar ele alınmaktadır. Kitabın içeriği, genel bakış isteyen, ancak uygulama ve teknik, adım adım ayrıntılara odaklanmayı gerektirmeyen mimarlar ve teknik karar mekanizmaları için tasarlanmıştır.
 
 Örnek uygulama kod parçacıkları ve ekran görüntüleri boyunca, örnek uygulamalar için tüm geçiş sürecini göstermek üzere Bölüm 5 ' le birlikte örnek uygulama kodu parçacıkları ve ekran görüntüleri sağlanır.
 
@@ -89,11 +93,11 @@ Bu kitapta, "Neden", mevcut uygulamalarınızı nasıl modernleştirin isteyebil
 
 Bu kitap, kaldırma ve kaydırma senaryolarına odaklanan belirli senaryolar alt kümesini kapsamakta ve kodu yeniden yazma çabalarına gerek kalmadan modernize almanın avantajlarından yararlanmanızı sağlar.
 
-Bu kitapta, .NET Core ile modern uygulamalar geliştirilirken veya Windows Forms ve WPF ile çalışmaya başlama hakkında bilgi verilmez. Masaüstü geliştirme için en son teknolojilerle mevcut masaüstü uygulamalarını nasıl güncelleştirekullanabileceğinizi ele alınmaktadır.
+Bu kitap, .NET ile modern uygulamalar geliştirmekten veya Windows Forms ve WPF ile çalışmaya başlama konusunda değildir. Masaüstü geliştirme için en son teknolojilerle mevcut masaüstü uygulamalarını nasıl güncelleştirekullanabileceğinizi ele alınmaktadır.
 
 ## <a name="samples-used-in-this-book"></a>Bu kitapta kullanılan örnekler
 
-Bir modernleştirmeyi gerçekleştirmek için gerekli adımları vurgulamak için adlı örnek bir uygulama kullanacağız `eShopModernizing` . Bu uygulamanın iki özelliği, Windows Forms ve WPF vardır ve her ikisinde de her ikisi de .NET Core 'a nasıl gerçekleştirileceği konusunda adım adım bir işlem göstereceğiz.
+Bir modernleştirmeyi gerçekleştirmek için gerekli adımları vurgulamak için adlı örnek bir uygulama kullanacağız `eShopModernizing` . Bu uygulamanın iki özelliği, Windows Forms ve WPF vardır ve her ikisinde de her ikisi de .NET 'e kadar modernleştirmeyi gerçekleştirme hakkında adım adım bir işlem göstereceğiz.
 
 Ayrıca, bu kitabın GitHub deposunda, adım adım öğreticiyi izlemeye karar verirseniz, ile ilgili bir işlem sonuçları bulacaksınız.
 

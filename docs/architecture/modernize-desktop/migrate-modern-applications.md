@@ -1,21 +1,21 @@
 ---
 title: Modern masaüstü uygulamalarını geçirme
 description: Modern masaüstü uygulamalarına yönelik geçiş süreci hakkında bilmeniz gereken her şey.
-ms.date: 05/12/2020
-ms.openlocfilehash: f7862d6379eeeb737c386b5ffeaab938d258b046
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/19/2021
+ms.openlocfilehash: b5bea6e601dc040adfd8ed410320a3416cb3372e
+ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173334"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98615769"
 ---
 # <a name="migrating-modern-desktop-applications"></a>Modern masaüstü uygulamalarını geçirme
 
-Bu bölümde, var olan bir uygulamayı .NET Framework .NET Core 'a geçirirken en yaygın sorunları ve sorunları araştırıyoruz.
+Bu bölümde, var olan bir uygulamayı .NET Framework .NET 'e geçirirken en yaygın sorunları ve sorunları araştırıyoruz.
 
 Karmaşık bir masaüstü uygulaması yalıtımta çalışmaz ve yerel makinede veya uzak bir sunucuda bulunabilecek alt sistemler ile ilgili bir tür etkileşime ihtiyaç duyuyor. Büyük olasılıkla yerel olarak veya uzaktan bir kalıcılık depolaması olarak bağlanmak için bir tür veritabanına ihtiyacı olacaktır. Internet ve hizmet odaklı mimarilerin yaptığı gibi, uygulamanızın uzak bir sunucuda veya bulutta bulunan bir hizmet sıralaması ile bağlantılı olması yaygındır. Bazı işlevleri uygulamak için makine dosya sistemine erişmeniz gerekebilir. Alternatif olarak, uygulamanızın dışında bir COM nesnesi içinde bulunan bir işlev parçası kullanıyor olabilirsiniz, örneğin, kuruluşunuzda Office derlemelerini Tümleştirdiğiniz durumlarda yaygın bir senaryo olur.
 
-Bunun yanı sıra, API yüzeyinde .NET Framework ve .NET Core tarafından sunulan farklar vardır ve .NET Framework sunulan bazı özellikler .NET Core 'da kullanılamaz. Bu nedenle, bir geçiş planlarken bunları bilmeniz ve dikkate almanız önemlidir.
+Bunun yanı sıra, API yüzeyinde .NET Framework ve .NET tarafından sunulan farklar vardır ve .NET Framework sunulan bazı özellikler .NET üzerinde kullanılamaz. Bu nedenle, bir geçiş planlarken bunları bilmeniz ve dikkate almanız önemlidir.
 
 ## <a name="configuration-files"></a>Yapılandırma dosyaları
 
@@ -27,9 +27,9 @@ Yapılandırma dosyaları, çalışma zamanında okunan özellik kümelerini dep
 
 .NET Framework altyapısı içinde, üst öğelerinden özellikleri devralan yapılandırma dosyalarının bir hiyerarşisi vardır. Herhangi bir alt yapılandırma dosyasında kullanılabilecek veya geçersiz kılınabilen birçok özellik ve yapılandırma bölümünü tanımlayan bir *machine.config* dosyası bulabilirsiniz.
 
-### <a name="configuration-on-net-core"></a>.NET Core üzerinde yapılandırma
+### <a name="configuration-on-net"></a>.NET üzerinde yapılandırma
 
-.NET Core dünyasında *machine.config* dosyası yoktur. Eski tip ad alanını kullanmaya devam edebilse de <xref:System.Configuration> , <xref:Microsoft.Extensions.Configuration> iyi sayıda geliştirme sunan modern 'e geçmeyi düşünebilirsiniz.
+.NET dünyasında *machine.config* dosyası yoktur. Eski tip ad alanını kullanmaya devam edebilse de <xref:System.Configuration> , <xref:Microsoft.Extensions.Configuration> iyi sayıda geliştirme sunan modern 'e geçmeyi düşünebilirsiniz.
 
 Yapılandırma API 'SI yapılandırma sağlayıcısı kavramını destekler, bu da yapılandırmayı yüklemek için kullanılacak veri kaynağını tanımlar. Farklı türlerde yerleşik sağlayıcılar vardır, örneğin:
 
@@ -49,13 +49,13 @@ Yeni yapılandırma, çok düzeyli bir hiyerarşide gruplandırılabilen ad-değ
 
 ### <a name="migrating-configuration-files"></a>Yapılandırma dosyalarını geçirme
 
-Mevcut app.config XML dosyanızı kullanmaya devam edebilirsiniz. Bununla birlikte, yapılandırmanızı .NET Core 'da yapılan çeşitli geliştirmelerden yararlanmak için geçirebilirsiniz.
+Mevcut app.config XML dosyanızı kullanmaya devam edebilirsiniz. Ancak, bu fırsatı .NET ' te yapılan çeşitli geliştirmelerden yararlanmak üzere geçirebilirsiniz.
 
 Eski stil *app.config* yeni bir yapılandırma dosyasına geçirmek için, bir XML BIÇIMI ve JSON biçimi arasında seçim yapmanız gerekir.
 
-XML seçerseniz, dönüştürme basittir. İçerik aynı olduğundan, *app.config* dosyasını XML uzantılı bir dosya olarak yeniden adlandırmanız yeterlidir. Daha sonra, sınıfını kullanmak için AppSettings 'e başvuran kodu değiştirin `ConfigurationBuilder` . Bu değişiklik kolay olmalıdır.
+XML seçerseniz, dönüştürme basittir. İçerik aynı olduğundan, *app.config* dosyasını XML ile tür olarak kaydetmelisiniz. Daha sonra, sınıfını kullanmak için AppSettings 'e başvuran kodu değiştirin `ConfigurationBuilder` . Bu değişiklik kolay olmalıdır.
 
-Bir JSON biçimi kullanmak istiyorsanız ve el ile geçiş yapmak istemiyorsanız, .NET Core 'da *app.config* BIR dosyayı JSON yapılandırma dosyasına dönüştürebilen [DotNet-config2json](https://www.nuget.org/packages/dotnet-config2json/) adlı bir araç mevcuttur.
+Bir JSON biçimi kullanmak istiyorsanız ve el ile geçiş yapmak istemiyorsanız, .NET 'te bir *app.config* dosyasını JSON yapılandırma dosyasına dönüştürebilen [DotNet-config2json](https://www.nuget.org/packages/dotnet-config2json/) adlı bir araç bulunmaktadır.
 
 Ayrıca, *machine.config* dosyasında tanımlı yapılandırma bölümlerini kullanırken bazı sorunlarla karşılaşabilirsiniz. Örneğin, aşağıdaki yapılandırmayı göz önünde bulundurun:
 
@@ -78,9 +78,9 @@ Ayrıca, *machine.config* dosyasında tanımlı yapılandırma bölümlerini kul
 </configuration>
 ```
 
-Bu yapılandırmayı bir .NET Core 'a alırsanız, bir özel durum alırsınız:
+Bu yapılandırmayı bir .NET 'e alırsanız, bir özel durum alırsınız:
 
-Tanınmayan yapılandırma bölümü System. Diagnostics
+> Tanınmayan yapılandırma bölümü System. Diagnostics
 
 Bu özel durum, bu bölüm ve bu bölümün işlenmesinden sorumlu olan derleme *machine.config* dosyasında tanımlandığından, artık mevcut olmayan bir durumdur.
 
@@ -104,15 +104,15 @@ Windows masaüstü uygulaması hakkında konuşurken bulabileceğiniz en yaygın
 
 ### <a name="odbc"></a>ODBC
 
-Microsoft `System.Data.Odbc` kitaplığı .NET Standard 2,0 ile uyumlu olduğundan, .NET Core ÜZERINDE ODBC kullanmaya devam edebilirsiniz.
+Microsoft `System.Data.Odbc` kitaplığı .NET Standard 2,0 ile uyumlu olduğundan, .net ÜZERINDE ODBC kullanmaya devam edebilirsiniz.
 
 ### <a name="ole-db"></a>OLE DB
 
-[OLE DB](/previous-versions/windows/desktop/ms722784(v=vs.85))   , çeşitli veri kaynaklarına tek bir şekilde erişmenin harika bir yoludur. Ancak bu, yalnızca Windows teknolojisi olan ve .NET Core gibi platformlar arası bir teknolojinin en iyi şekilde uyum sağlayan COM 'a dayalıdır. Ayrıca, 2014 ve üzeri sürümlerde SQL Server de desteklenmez. Bu nedenlerden dolayı OLE DB .NET Core tarafından desteklenmez.
+[OLE DB](/previous-versions/windows/desktop/ms722784(v=vs.85)) , çeşitli veri kaynaklarına tek bir şekilde erişmenin harika bir yoludur. Ancak bu, yalnızca Windows teknolojisi olan ve .NET gibi platformlar arası bir teknolojinin en iyi şekilde uyum sağlayan COM 'a dayalıdır. Ayrıca, 2014 ve üzeri sürümlerde SQL Server de desteklenmez. Bu nedenlerden dolayı, OLE DB .NET tarafından desteklenmez.
 
 ### <a name="adonet"></a>ADO.NET
 
-.NET Core 'da mevcut masaüstü kodunuzla ADO.NET kullanmaya devam edebilirsiniz. Yalnızca bazı NuGet paketlerini güncelleştirmeniz gerekir.
+ADO.NET kullanmaya devam edebilirsiniz. Yalnızca bazı NuGet paketlerini güncelleştirmeniz gerekir.
 
 ### <a name="ef-core-vs-ef6"></a>EF Core vs. EF6
 
@@ -120,9 +120,9 @@ Entity Framework (EF), Entity Framework 6 (EF6) ve EF Core desteklenen iki sür�
 
 .NET Framework dünyanın bir parçası olarak yayınlanan en son teknoloji, en son sürüm olan 6,4 ile Entity Framework. Microsoft, .NET Core 'u başlatarak Entity Framework göre yeni bir veri erişim yığını da yayımladı ve Entity Framework Core çağırılır.
 
-Hem .NET Framework hem de .NET Core EF Core EF 6,4 ve kullanabilirsiniz. Bu nedenle, iki arasında karar vermeye yardımcı olacak karar etmenleri nelerdir?
+Hem .NET Framework hem de .NET EF Core EF 6,4 ve kullanabilirsiniz. Bu nedenle, iki arasında karar vermeye yardımcı olacak karar etmenleri nelerdir?
 
-EF 6,3, .NET Core üzerinde çalışabilen ve platformlar arası iş üzerinde çalışan ilk EF6 sürümüdür. Aslında, bu yayının ana amacı, EF6 kullanan mevcut uygulamaları .NET Core 'a geçirmeyi daha kolay hale sağlamaktır.
+EF 6,3, .NET ve iş arası platformlar üzerinde çalışabilen ilk EF6 sürümüdür. Aslında, bu yayının ana amacı, EF6 kullanan mevcut uygulamaları .NET 'a geçirmeyi daha kolay hale sağlamaktır.
 
 EF Core, EF6 benzer bir geliştirici deneyimi sağlamak için tasarlanmıştır. En üst düzey API 'lerin çoğu aynı kalır, bu nedenle EF Core, EF6 kullanan geliştiricilere tanıdık gelecektir.
 
@@ -131,7 +131,7 @@ Daha fazla bilgi için bkz. [Compare EF Core & EF6](/ef/efcore-and-ef6/).
 
 Şu durumlarda EF Core kullanımı önerilir:
 
-* Uygulamanın .NET Core 'un özelliklerine ihtiyacı vardır.
+* Uygulama .NET özelliklerine ihtiyaç duyuyor.
 * EF Core, uygulamanın gerektirdiği tüm özellikleri destekler.
 
 Aşağıdaki koşulların her ikisi de doğruysa EF6 kullanmayı düşünün:
@@ -145,7 +145,7 @@ Aşağıdaki koşulların her ikisi de doğruysa EF6 kullanmayı düşünün:
 
 SQL Server, masaüstü için birkaç yıl önce geliştirildiğinizi tercih ettiğiniz veritabanlarından biridir. .NET Framework kullanımı ile <xref:System.Data.SqlClient> , veritabanına özgü protokolleri kapsülleyen SQL Server sürümlerine erişebilirsiniz.
 
-.NET Core 'da, `SqlClient` .NET Framework var olan, ancak kitaplıkta bulunan yeni bir sınıf bulabilirsiniz <xref:Microsoft.Data.SqlClient> . Yalnızca [Microsoft. Data. SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/) NuGet paketine bir başvuru eklemeniz ve ad alanları için birkaç yeniden adlandırma yapmanız ve her şeyin beklendiği gibi çalışması gerekir.
+.NET ' te, `SqlClient` .NET Framework var olan, ancak kitaplıkta bulunan yeni bir sınıf bulabilirsiniz <xref:Microsoft.Data.SqlClient> . Yalnızca [Microsoft. Data. SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/) NuGet paketine bir başvuru eklemeniz ve ad alanları için birkaç yeniden adlandırma yapmanız ve her şeyin beklendiği gibi çalışması gerekir.
 
 #### <a name="microsoft-access"></a>Microsoft Access
 
@@ -155,19 +155,19 @@ Microsoft Access, gelişmiş ve daha ölçeklenebilir SQL Server gerekmeyen yıl
 
 Hizmet odaklı mimarilerin yerine, masaüstü uygulamaları, bir istemci-sunucu modelinden üç katmanlı yaklaşıma gelişmeye başlamıştır. İstemci-sunucu yaklaşımında, genellikle tek bir EXE dosyasının içinde iş mantığını tutan istemciden doğrudan bir veritabanı bağlantısı oluşturulur. Öte yandan, üç katmanlı yaklaşım, daha iyi güvenlik, ölçeklenebilirlik ve yeniden kullanılabilirlik sağlayan iş mantığı ve veritabanı erişimi uygulayan bir ara hizmet katmanı oluşturur. Veri veri kümeleri ile doğrudan çalışmak yerine, katman yaklaşımı, sözleşmeleri uygulayan bir dizi hizmete dayanır ve veri aktarımını uygulamak için bir yöntem olarak nesneleri ayarlar.
 
-WCF hizmetini kullanan bir masaüstü uygulamanız varsa ve bunu .NET Core 'a geçirmek istiyorsanız göz önünde bulundurmanız gereken bazı noktalar vardır.
+WCF hizmetini kullanan bir masaüstü uygulamanız varsa ve bunu .NET 'e geçirmek istiyorsanız göz önünde bulundurmanız gereken bazı noktalar vardır.
 
-İlk şey, hizmete erişmek için yapılandırmanın çözümlenme yöntemi olur. Yapılandırma .NET Core üzerinde farklı olduğundan, yapılandırma dosyanızda bazı güncelleştirmeler yapmanız gerekir.
+İlk şey, hizmete erişmek için yapılandırmanın çözümlenme yöntemi olur. Yapılandırma .NET üzerinde farklı olduğundan, yapılandırma dosyanızda bazı güncelleştirmeler yapmanız gerekir.
 
 İkinci olarak, hizmet istemcisini Visual Studio 2019 ' de bulunan yeni araçlarla yeniden oluşturmanız gerekir. Bu adımda, istemciyi mevcut kodunuzla uyumlu hale getirmek için zaman uyumlu işlemlerin oluşturulmasını etkinleştirmeyi düşünmelisiniz.
 
-Geçişten sonra, .NET Core 'da mevcut olmayan kitaplıkların olduğunu fark ederseniz, [Microsoft. Windows. Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility) NuGet paketine bir başvuru ekleyebilir ve eksik işlevlerin orada olup olmadığını görebilirsiniz.
+Geçişten sonra, .NET üzerinde mevcut olmayan kitaplıkların olduğunu fark ederseniz, [Microsoft. Windows. Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility) NuGet paketine bir başvuru ekleyebilir ve eksik işlevlerin orada olup olmadığını görebilirsiniz.
 
-<xref:System.Net.WebRequest>Web hizmeti çağrılarını gerçekleştirmek için sınıfını kullanıyorsanız, .NET Core ile ilgili bazı farklılıklar bulabilirsiniz. Bunun yerine System .net. http. HttpClient kullanılması önerilir.
+<xref:System.Net.WebRequest>Web hizmeti çağrılarını gerçekleştirmek için sınıfını kullanıyorsanız, .NET ile ilgili bazı farklılıklar bulabilirsiniz. Bunun yerine System .net. http. HttpClient kullanılması önerilir.
 
 ## <a name="consuming-a-com-object"></a>COM nesnesi kullanma
 
-Şu anda, .NET Core ile kullanmak üzere Visual Studio 2019 ' den bir COM nesnesine başvuru eklemenin bir yolu yoktur. Bu nedenle, proje dosyasını el ile değiştirmeniz gerekir.
+Şu anda, .NET ile kullanmak üzere Visual Studio 2019 ' den bir COM nesnesine başvuru eklemenin bir yolu yoktur. Bu nedenle, proje dosyasını el ile değiştirmeniz gerekir.
 
 `COMReference`Proje dosyasının içine aşağıdaki örnekteki gibi bir yapı ekleyin:
 
@@ -186,7 +186,7 @@ Geçişten sonra, .NET Core 'da mevcut olmayan kitaplıkların olduğunu fark ed
 
 ## <a name="more-things-to-consider"></a>Dikkate alınması gereken şeyler
 
-.NET Framework kitaplıkları için kullanılabilen çeşitli teknolojiler .NET Core için kullanılamaz. Kodunuz Bu teknolojilerden bazılarını kullanıyorsa, bu bölümde özetlenen alternatif yaklaşımları göz önünde bulundurun.
+.NET Framework kitaplıkları için kullanılabilen çeşitli teknolojiler .NET Core veya .NET 5 için kullanılamaz. Kodunuz Bu teknolojilerden bazılarını kullanıyorsa, bu bölümde özetlenen alternatif yaklaşımları göz önünde bulundurun.
 
 [Windows Uyumluluk Paketi](../../core/porting/windows-compat-pack.md) , daha önce yalnızca .NET Framework için kullanılabilir olan API 'lere erişim sağlar. .NET Core ve .NET Standard projelerinde kullanılabilir.
 
@@ -194,13 +194,13 @@ API uyumluluğu hakkında daha fazla bilgi için, konumundaki son değişiklikle
 
 ### <a name="appdomains"></a>Uygulama
 
-Uygulama etki alanları (AppDomain), uygulamaları birbirinden ayırır. AppDomain, çalışma zamanı desteği gerektirir ve pahalıdır. Ek uygulama etki alanlarının oluşturulması desteklenmez. Kod yalıtımı için, farklı süreçler veya kapsayıcılar kullanmanın alternatif olarak kullanılması önerilir. Derlemelerin dinamik yüklemesi için yeni  <xref:System.Runtime.Loader.AssemblyLoadContext> sınıfı öneririz.
+Uygulama etki alanları (AppDomain), uygulamaları birbirinden ayırır. AppDomain, çalışma zamanı desteği gerektirir ve pahalıdır. Ek uygulama etki alanlarının oluşturulması desteklenmez. Kod yalıtımı için, farklı süreçler veya kapsayıcılar kullanmanın alternatif olarak kullanılması önerilir. Derlemelerin dinamik yüklemesi için yeni <xref:System.Runtime.Loader.AssemblyLoadContext> sınıfı öneririz.
 
-Kod .NET Framework geçişini daha kolay hale getirmek için .NET Core, AppDomain API yüzeyini bir kısmını ortaya çıkarır. API 'lerden bazıları normal olarak çalışır (örneğin,  <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType> ), bazı Üyeler hiçbir şey yapmaz (örneğin,)  <xref:System.AppDomain.SetCachePath%2A> ve bazıları <xref:System.PlatformNotSupportedException> (örneğin,  <xref:System.AppDomain.CreateDomain%2A> ).
+Kod geçişinin .NET Framework daha kolay hale getirmek için .NET, bazı `AppDomain` API yüzeyini kullanıma sunar. API 'lerden bazıları normal olarak çalışır (örneğin, <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType> ), bazı Üyeler hiçbir şey yapmaz (örneğin,) <xref:System.AppDomain.SetCachePath%2A> ve bazıları <xref:System.PlatformNotSupportedException> (örneğin, <xref:System.AppDomain.CreateDomain%2A> ).
 
 ### <a name="remoting"></a>Uzaktan iletişim
 
-.NET Remoting, artık desteklenmeyen geçici AppDomain iletişimi için kullanıldı. Ayrıca, uzaktan Iletişim için, bakım açısından pahalı olan çalışma zamanı desteği gerekir. Bu nedenlerle .NET Core üzerinde .NET uzaktan Iletişim desteklenmez.
+.NET Remoting, artık desteklenmeyen geçici AppDomain iletişimi için kullanıldı. Ayrıca, uzaktan Iletişim için, bakım açısından pahalı olan çalışma zamanı desteği gerekir. Bu nedenlerden dolayı .NET Remoting .net üzerinde desteklenmez.
 
 İşlemler arasında iletişim için, veya sınıfı gibi uzaktan iletişim (IPC) mekanizmalarını bir alternatif olarak düşünmeniz gerekir <xref:System.IO.Pipes?displayProperty=nameWithType> <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> .
 
@@ -208,7 +208,7 @@ Makineler arasında, alternatif olarak ağ tabanlı bir çözüm kullanın. Terc
 
 ### <a name="code-access-security-cas"></a>Kod Erişimi Güvenliği (CAS)
 
-Yönetilen bir uygulamanın veya kitaplığın hangi kaynakları kullanacağını veya çalıştığını kısıtlamak için çalışma zamanına veya çerçeveye dayanan korumalı alana alma, .NET Core üzerinde desteklenmez.
+Yönetilen bir uygulamanın veya kitaplığın hangi kaynakları kullandığını veya çalıştığını kısıtlamak için çalışma zamanına veya çerçeveye dayanan korumalı alana alma, .NET üzerinde desteklenmez.
 
 İşletim sistemi tarafından sunulan sanallaştırma, kapsayıcılar veya en düşük ayrıcalık kümesi ile işlem çalıştırmak için Kullanıcı hesapları gibi güvenlik sınırlarını kullanın.
 
@@ -219,5 +219,5 @@ CA 'lara benzer şekilde, güvenlik saydamlığı, korumalı kodu bildirimle gü
 İşletim sistemi tarafından sunulan sanallaştırma, kapsayıcılar veya en az ayrıcalık kümesiyle işlem çalıştırmak için Kullanıcı hesapları gibi güvenlik sınırlarını kullanın.
 
 >[!div class="step-by-step"]
->[Önceki](whats-new-dotnet-core.md ) 
+>[Önceki](whats-new-dotnet.md ) 
 > [Sonraki](windows-migration.md)

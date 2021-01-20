@@ -2,12 +2,12 @@
 title: Modern Masaüstü Uygulamalarını Dağıtma
 description: Modern masaüstü uygulamaları dağıtma hakkında bilmeniz gereken her şey.
 ms.date: 05/12/2020
-ms.openlocfilehash: 4a4d93caf1c2f8f58d48ee3199bbe6983fa939f4
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: ba47f09b27adf270734bbfff285fe44dd4175d29
+ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83423259"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98615860"
 ---
 # <a name="deploying-modern-desktop-applications"></a>Modern Masaüstü Uygulamalarını Dağıtma
 
@@ -113,9 +113,9 @@ MALTıYA ilişkin en az şeylerden biri, xCopy dağıtımı, ClickOnce veya mağ
 
 ### <a name="tools"></a>Araçlar
 
-#### <a name="windows-application-packaging-project"></a>Windows Uygulaması Paketleme Projesi
+#### <a name="windows-application-packaging-project"></a> Windows Uygulaması Paketleme Projesi
 
- **Windows Application Packaging Project**   Masaüstü uygulamanız için bir paket oluşturmak üzere Visual Studio 'Da Windows uygulama paketleme proje projesini kullanabilirsiniz. Ardından, bu paketi Microsoft Store yayımlayabilir veya bir veya daha fazla bilgisayara yükleyebilirsiniz.
+Masaüstü uygulamanız için bir paket oluşturmak üzere Visual Studio 'da **Windows uygulama paketleme proje** projesini kullanabilirsiniz. Ardından, bu paketi Microsoft Store yayımlayabilir veya bir veya daha fazla bilgisayara yükleyebilirsiniz.
 
 #### <a name="msix-packaging-tool"></a>MSIX paketleme aracı
 
@@ -139,7 +139,7 @@ Başlamak için çözümünüze yeni bir proje ekleyin, Windows uygulama paketle
 
 ![Yeni Windows uygulaması paketleme projesi ekleniyor](./media/deploy-modern-applications/add-packaging-project.png)
 
-Paketleme projesinin yapısını görebilir ve *uygulamalar*adlı özel bir klasör görürsünüz. Bu klasörün içinde, pakete dahil etmek istediğiniz uygulamaları belirtebilirsiniz. Birden fazla olabilir.
+Paketleme projesinin yapısını görebilir ve *uygulamalar* adlı özel bir klasör görürsünüz. Bu klasörün içinde, pakete dahil etmek istediğiniz uygulamaları belirtebilirsiniz. Birden fazla olabilir.
 
 ![Paketleme projesinin yapısı](./media/deploy-modern-applications/packaging-project.png)
 
@@ -205,7 +205,7 @@ Güncellemelerinizi kullanıcıyla iki farklı şekilde etkileşimde bulunmak ü
 
 Ayrıca, uygulama ne zaman veya düzenli olarak başlatıldığında güncelleştirmeler gerçekleştirmek istediğinizi de yapılandırabilirsiniz. Dışarıdan yükleme özellikleri sayesinde, uygulama çalışırken bu güncelleştirmeleri de alabilirsiniz.
 
-Bu tür bir dağıtım kullandığınızda *. AppInstaller*adlı özel bir dosya oluşturulur. Bu basit dosya aşağıdaki bölümleri içerir:
+Bu tür bir dağıtım kullandığınızda *. AppInstaller* adlı özel bir dosya oluşturulur. Bu basit dosya aşağıdaki bölümleri içerir:
 
 - *. AppInstaller* dosyasının konumu
 - Uygulamanın ana MDıSIX paketi özellikleri
@@ -226,4 +226,4 @@ MSIX, paketin bazı özelliklerini otomatik olarak göstermek için bir kullanı
 Yeni MSIX paketini oluşturduktan ve dağıtım sunucusuna taşındıktan sonra, bu değişiklikleri yansıtmak için *. AppInstaller* dosyasını düzenlemeniz gerekir, bu da genellikle yeni msix dosyasının sürümü ve yoludur. Kullanıcı uygulamayı bir sonraki başlattığında, sistem değişikliği algılayacak ve yeni sürüm için dosyaları arka planda indirirler. Bu işlem tamamlandığında, yükleme, kullanıcılarınız için şeffaf yeni uygulama başlatıldığında yürütülür.
 
 >[!div class="step-by-step"]
->[Önceki](example-migration-core.md)
+>[Önceki](example-migration.md)

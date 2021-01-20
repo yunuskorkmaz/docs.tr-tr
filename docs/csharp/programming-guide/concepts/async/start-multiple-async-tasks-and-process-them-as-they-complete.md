@@ -3,12 +3,12 @@ title: Zaman uyumsuz görevleri tamamlandıkları anda işleme
 description: Bu örnek, birden çok görevi başlatmak ve sonuçlarını tamamlandığında işlem sırasında işlemek yerine sonuçları işlemek Için C# ' de Task. WhenAny 'ın nasıl kullanılacağını gösterir.
 ms.date: 08/19/2020
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: 860e94a9c3973ce56e7321741a1136f752aa3d18
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 4cdd35af900863895911ea5c2c9772af362951ec
+ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91805245"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98615977"
 ---
 # <a name="process-asynchronous-tasks-as-they-complete-c"></a>Zaman uyumsuz görevleri tamamlarlar işleme (C#)
 
@@ -128,13 +128,13 @@ List<Task<int>> downloadTasks = downloadTasksQuery.ToList();
 1. , `WhenAny` Koleksiyondaki ilk görevi tanımlamak için bir çağrısı bekler.
 
     ```csharp
-    Task<int> firstFinishedTask = await Task.WhenAny(downloadTasks);
+    Task<int> finishedTask = await Task.WhenAny(downloadTasks);
     ```
 
 1. Bu görevi koleksiyondan kaldırır.
 
     ```csharp
-    downloadTasks.Remove(firstFinishedTask);
+    downloadTasks.Remove(finishedTask);
     ```
 
 1. `finishedTask`Bir çağrısıyla döndürülen await `ProcessUrlAsync` . `finishedTask`Değişkeni bir <xref:System.Threading.Tasks.Task%601> WHERE `TResult` tamsayıdır. Görev zaten tamamlanmış, ancak aşağıdaki örnekte gösterildiği gibi, indirilen Web sitesinin uzunluğunu almak için bu işlemi beklediniz. Görev hata verdiyse, `await` `AggregateException` özelliğini okumaktan farklı olarak içinde depolanan ilk alt özel durumu oluşturur <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> `AggregateException` .

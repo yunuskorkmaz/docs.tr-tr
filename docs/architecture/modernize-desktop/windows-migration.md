@@ -1,13 +1,13 @@
 ---
 title: Windows 10 geçişi
 description: Paketleme ve XAML Adaları gibi Windows 10 özelliklerinde derinlemesine bakış.
-ms.date: 09/16/2019
-ms.openlocfilehash: cd17088b086a32fd3bb37e617d3a1047acedde0e
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.date: 12/29/2020
+ms.openlocfilehash: 139a8f2354803dafeb0178b4dbfb57a95c4ddb34
+ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83423210"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98615951"
 ---
 # <a name="windows-10-migration"></a>Windows 10 geçişi
 
@@ -19,9 +19,9 @@ Microsoft, Windows 10 ' un piyasaya çıkmasıyla tabletler ve dokunmatik cihazl
 - Otomatik olarak tanınan ve dijitalleştirilmiş bir metin çizmek ya da yazmak için bir kalem kullanın.
 - Wınml kullanarak bulutta oluşturulmuş yerel olarak özelleştirilmiş AI modellerini çalıştırın.
 
-Bu özelliklerin tümü Windows Çalışma Zamanı (WinRT) kitaplıkları aracılığıyla Windows geliştiricileri için etkinleştirilmiştir. Kitaplıklar hem .NET Framework hem de .NET Core 'a sunulduğundan, mevcut masaüstü uygulamalarınızda bu özelliklerden yararlanabilirsiniz. Kullanıcı arabiriminizi XAML Adaları kullanımıyla bile modernleştirin ve uygulamalarınızın görsellerini ve davranışlarını saatlere göre geliştirebilirsiniz.
+Bu özelliklerin tümü Windows Çalışma Zamanı (WinRT) kitaplıkları aracılığıyla Windows geliştiricileri için etkinleştirilmiştir. Kitaplıklar hem .NET Framework hem de .NET ' e sunulduğundan, mevcut masaüstü uygulamalarınızda bu özelliklerden yararlanabilirsiniz. Kullanıcı arabiriminizi XAML Adaları kullanımıyla bile modernleştirin ve uygulamalarınızın görsellerini ve davranışlarını saatlere göre geliştirebilirsiniz.
 
-Burada dikkat etmeniz gereken önemli bir şey, bu modernleştirme yolunu izlemek için .NET Framework teknolojiden vazgerek kalmaz. .NET Core 'a geçiş yapmak zorunda kalmadan, burada güvenle ve Windows 10 ' un tüm avantajlarına sahip olabilirsiniz. Bu nedenle, modernleştirme yolunu seçmek için hem güç hem de esneklik elde edersiniz.
+Burada dikkat etmeniz gereken önemli bir şey, bu modernleştirme yolunu izlemek için .NET Framework teknolojiden vazgerek kalmaz. .NET 'e geçiş yapmak zorunda kalmadan, burada güvenle ve Windows 10 ' un tüm avantajlarına sahip olabilirsiniz. Bu nedenle, modernleştirme yolunu seçmek için hem güç hem de esneklik elde edersiniz.
 
 ## <a name="winrt-apis"></a>WinRT API 'Leri
 
@@ -40,19 +40,19 @@ UWP uygulamaları, IŞLETIM sisteminin uygulamayı yüklemeyi ve kaldırmayı y�
 
 Bazı WinRT API 'Leri, bu paket kimliğinin beklenen şekilde çalışmasını gerektirir. Ancak, yerel C++ veya .NET uygulamaları gibi klasik masaüstü uygulamaları, paket kimliği gerektirmeyen farklı dağıtım sistemleri kullanır. Bu WinRT API 'Lerini masaüstü uygulamanızda kullanmak istiyorsanız, bunları bir paket kimliği sağlamanız gerekir.
 
-Devam etmenin bir yolu ek paketleme projesi oluşturmak. Paketleme projesi içinde orijinal kaynak kodu projesini işaret ettikten sonra sağlamak istediğiniz kimlik bilgilerini belirtirsiniz.Paketi yükler ve yüklü uygulamayı çalıştırırsanız, kimlik gerektiren tüm WinRT API 'Lerini çağırmak için kodunuzun etkinleştirilmesi için otomatik olarak bir tanımlama alır.
+Devam etmenin bir yolu ek paketleme projesi oluşturmak. Paketleme projesi içinde orijinal kaynak kodu projesini işaret ettikten sonra sağlamak istediğiniz kimlik bilgilerini belirtirsiniz. Paketi yükler ve yüklü uygulamayı çalıştırırsanız, kimlik gerektiren tüm WinRT API 'Lerini çağırmak için kodunuzun etkinleştirilmesi için otomatik olarak bir tanımlama alır.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
-         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10">
-    <Identity Name="YOUR-APP-GUID "
-              Publisher="CN=YOUR COMPANY"
-              Version="1.x.x.x" />
+         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10">
+    <Identity Name="YOUR-APP-GUID "
+              Publisher="CN=YOUR COMPANY"
+              Version="1.x.x.x" />
 </Package>
 ```
 
-API 'YI içeren türün [Dualapipartition](xref:Windows.Foundation.Metadata.DualApiPartitionAttribute) özniteliğiyle işaretlenip işaretlenmediğini inceleyerek, hangi API 'lerin paketlenmiş uygulama kimliğine ihtiyacı olduğunu kontrol edebilirsiniz.Varsa, paketlenmemiş bir geleneksel masaüstü uygulamasından öğesini çağırabilirsiniz. Aksi halde, bir paketleme projesinin yardımıyla klasik masaüstü uygulamanızı UWP 'e dönüştürmeniz gerekir.
+API 'YI içeren türün [Dualapipartition](xref:Windows.Foundation.Metadata.DualApiPartitionAttribute) özniteliğiyle işaretlenip işaretlenmediğini inceleyerek, hangi API 'lerin paketlenmiş uygulama kimliğine ihtiyacı olduğunu kontrol edebilirsiniz. Varsa, paketlenmemiş bir geleneksel masaüstü uygulamasından öğesini çağırabilirsiniz. Aksi halde, bir paketleme projesinin yardımıyla klasik masaüstü uygulamanızı UWP 'e dönüştürmeniz gerekir.
 
 <https://docs.microsoft.com/windows/desktop/apiindex/uwp-apis-callable-from-a-classic-desktop-app>
 
@@ -78,7 +78,7 @@ Masaüstü uygulamanız için oluşturduğunuz paketler, ve ' a yazma işlemleri
 
 ##### <a name="installation"></a>Yükleme
 
-Uygulama paketleri, başlıklı yürütülebilir dosya ile *% ProgramFiles% \\ WindowsApps \\ package_name*altına yüklenir  `app_name.exe` . Her paket klasörü `AppxManifest.xml` , paketlenmiş uygulamalar için özel BIR XML ad alanı içeren bir bildirim (adlandırılmış) içerir. Bu bildirim dosyasının içinde  `<EntryPoint>`   tam güven uygulamasına başvuran bir öğedir. Bu uygulama başlatıldığında, bir uygulama kapsayıcısı içinde çalışmaz, ancak bunun yerine normalde Kullanıcı olarak çalışır.
+Uygulama paketleri, başlıklı yürütülebilir dosya ile *% ProgramFiles% \\ WindowsApps \\ package_name* altına yüklenir `app_name.exe` . Her paket klasörü `AppxManifest.xml` , paketlenmiş uygulamalar için özel BIR XML ad alanı içeren bir bildirim (adlandırılmış) içerir. Bu bildirim dosyasının içinde `<EntryPoint>` tam güven uygulamasına başvuran bir öğedir. Bu uygulama başlatıldığında, bir uygulama kapsayıcısı içinde çalışmaz, ancak bunun yerine normalde Kullanıcı olarak çalışır.
 
 Dağıtımdan sonra, paket dosyaları salt okunurdur ve işletim sistemi tarafından yoğun olarak kilitlenir. Windows, bu dosyalar ile oynanmışsa uygulamaların başlatılmasını önler.
 
@@ -90,13 +90,13 @@ Kullanıcının *AppData* klasörüne erişmeye çalışırken, sistem arka plan
 
 ##### <a name="registry"></a>Kayıt Defteri
 
-Uygulama paketleri,  `HKLM\Software` gerçek kayıt defterindeki mantıksal eşdeğeri görevi gören bir Registry. dat dosyası içerir   . Çalışma zamanında, bu sanal kayıt defteri Bu Hive içeriğini yerel sistem kovanına birleştirir ve her ikisinin de tekil bir görünümünü sağlar.
+Uygulama paketleri, gerçek kayıt defterindeki mantıksal eşdeğeri görevi gören bir Registry. dat dosyası içerir `HKLM\Software` . Çalışma zamanında, bu sanal kayıt defteri Bu Hive içeriğini yerel sistem kovanına birleştirir ve her ikisinin de tekil bir görünümünü sağlar.
 
 Tüm yazma işlemleri, paket yükseltme sırasında tutulur ve yalnızca uygulama kaldırıldığında silinir.
 
 ##### <a name="uninstallation"></a>Kaldırma
 
-Kullanıcı bir paketi kaldırdığında, altında bulunan tüm dosya ve klasörlerin  `C:\Program Files\WindowsApps\package_name` yanı sıra, AppData veya işlem sırasında yakalanan kayıt defteri için yeniden yönlendirilen yazma işlemleri kaldırılır.
+Kullanıcı bir paketi kaldırdığında, altında bulunan tüm dosya ve klasörlerin `C:\Program Files\WindowsApps\package_name` yanı sıra, AppData veya işlem sırasında yakalanan kayıt defteri için yeniden yönlendirilen yazma işlemleri kaldırılır.
 
 Paketlenmiş bir uygulamanın yükleme, dosya erişimi, kayıt defteri ve kaldırma işlemlerinin nasıl ele aldığı hakkında ayrıntılar için bkz <https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-behind-the-scenes> ..
 
@@ -118,7 +118,7 @@ Dosyaları okuyan ve ekrandaki içeriğini gösteren mevcut bir WPF örnek uygul
 
 ![Microsoft belgelerindeki bildirim sınıfı](./media/windows-migration/notification-class-documentation.png)
 
-WinRT API 'sine erişmek için, NuGet paketine bir başvuru ekleyin `Microsoft.Windows.SDK.Contracts`   ve bu paket arka planda Magic 'i (bkz. Ayrıntılara bakın <https://blogs.windows.com/windowsdeveloper/2019/04/30/calling-windows-10-apis-from-a-desktop-application-just-got-easier/> ) oluşturur.
+WinRT API 'sine erişmek için, NuGet paketine bir başvuru ekleyin `Microsoft.Windows.SDK.Contracts` ve bu paket arka planda Magic 'i (bkz. Ayrıntılara bakın <https://blogs.windows.com/windowsdeveloper/2019/04/30/calling-windows-10-apis-from-a-desktop-application-just-got-easier/> ) oluşturur.
 
 Artık kod eklemeye başlamak için hazır olursunuz.
 
@@ -177,7 +177,7 @@ XAML Adaları, Windows Masaüstü geliştiricilerinin Windows Forms ve WPF dahil
 
 ![XAML Adaları yapısı](./media/windows-migration/xaml-islands.png)
 
-Win32 uygulamanızı standart denetimleriniz ile ve bunlar arasında, modern dünyanın denetimleri içeren UWP Kullanıcı arabiriminin "Adası" olarak görüntüleyebilirsiniz. Kavram, bir Web sayfasının içindeki içeriği gösteren bir iFrame 'e sahip olmaya benzer`different page.`
+Win32 uygulamanızı standart denetimleriniz ile ve bunlar arasında, modern dünyanın denetimleri içeren UWP Kullanıcı arabiriminin "Adası" olarak görüntüleyebilirsiniz. Kavram, bir Web sayfasının içindeki içeriği gösteren bir iFrame 'e sahip olmaya benzer `different page.`
 
 Windows 10 API 'Lerinden işlevsellik eklemenin yanı sıra, XAML Adaları kullanarak uygulamanızın içine UWP XAML parçaları ekleyebilirsiniz.
 
@@ -193,11 +193,11 @@ Derleme 2018 ' de, Microsoft, geliştiricilerin uygulamalarını UWP 'e tamamen 
 
 ### <a name="how-it-works"></a>Nasıl çalışır?
 
-Windows 10 1903 güncelleştirmesi çeşitli XAML barındırma API 'Leri sunar. Bunlardan ikisi `WindowsXamlManager`   ve  `DesktopWindowXamlSource` .
+Windows 10 1903 güncelleştirmesi çeşitli XAML barındırma API 'Leri sunar. Bunlardan ikisi `WindowsXamlManager` ve `DesktopWindowXamlSource` .
 
- `WindowsXamlManager`   Sınıfı UWP xaml çerçevesini işler. Yöntemi,, `InitializeForCurrentThread` Win32 uygulamasının geçerli iş parçacığının IÇINE UWP xaml çerçevesini yükler.
+`WindowsXamlManager`Sınıfı UWP xaml çerçevesini işler. Yöntemi,, `InitializeForCurrentThread` Win32 uygulamasının geçerli iş parçacığının IÇINE UWP xaml çerçevesini yükler.
 
-,  `DesktopWindowXamlSource`   Xaml Adası içeriğinizin örneğidir. `Content`Örneği oluşturma ve ayarlamaktan sorumlu olan özelliği vardır. , `DesktopWindowXamlSource`   Bir HWND 'nin girdisini işler ve alır. Bu, XAML Adası 'nin hangi HWND 'ye iliştirilecektir ve üst öğenin HWND 'sini boyutlandırmaktan ve konumlandırmadan sorumludur.
+, `DesktopWindowXamlSource` Xaml Adası içeriğinizin örneğidir. `Content`Örneği oluşturma ve ayarlamaktan sorumlu olan özelliği vardır. , `DesktopWindowXamlSource` BIR HWND 'nin girdisini işler ve alır. Bu, XAML Adası 'nin hangi HWND 'ye iliştirilecektir ve üst öğenin HWND 'sini boyutlandırmaktan ve konumlandırmadan sorumludur.
 
 WPF veya Windows Forms geliştiricileri genellikle kendi kodunun içinde HWND ile ilgilenmemekte olduğundan, HWND işaretçilerini ve temel alınan kablolama işlerini kullanarak Win32 ve UWP Worlds ile iletişim kurma zor olabilir.
 
@@ -223,12 +223,12 @@ Bu Sarmalanan denetimler bazı UWP denetimlerini Windows Forms veya WPF denetiml
         ...
         xmlns:uwpControls="clr-namespace:Microsoft.Toolkit.Wpf.UI.Controls;assembly=Microsoft.Toolkit.Wpf.UI.Controls">
 <Grid>
-    <Grid.RowDefinitions>
-        <RowDefinition Height="Auto"/>
-        <RowDefinition Height="\*"/>
-    </Grid.RowDefinitions>
-    <uwpControls:InkToolbar TargetInkCanvas="{x:Reference Name=inkCanvas}"/>
-    <uwpControls:InkCanvas Grid.Row="1" x:Name="inkCanvas" />
+    <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="\*"/>
+    </Grid.RowDefinitions>
+    <uwpControls:InkToolbar TargetInkCanvas="{x:Reference Name=inkCanvas}"/>
+    <uwpControls:InkCanvas Grid.Row="1" x:Name="inkCanvas" />
 </Grid>
 ```
 
@@ -263,7 +263,7 @@ XAML Adaları kullanımı hakkında bir anlatım görmek için bkz.:
 
 XAML özel denetimi siz veya üçüncü taraflar tarafından oluşturulan bir denetimdir (veya kullanıcı denetimidir) (WinUI 2. x denetimleri dahil). Bir Windows Forms veya WPF uygulamasında özel bir UWP denetimi barındırmak için şunlar gerekir:
 
-- `WindowsXamlHost`.NET Core 3. x uygulamanızda UWP denetimini kullanmak için.
+- `WindowsXamlHost`.Net uygulamanızda UWP denetimini kullanmak için.
 - Bir nesneyi tanımlayan UWP uygulama projesi oluşturmak için `XamlApplication` .
 
 WPF veya Windows Forms projenizin `Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication` , Windows topluluk araç seti tarafından sunulan bir sınıfın örneğine erişimi olmalıdır. Bu nesne, uygulamanızın geçerli dizinindeki derlemelerdeki özel UWP XAML türleri için meta verileri yüklemek üzere bir kök meta veri sağlayıcısı işlevi görür. Bunu yapmanın önerilen yolu, WPF veya Windows Forms projeniz ile aynı çözüme bir boş uygulama (Evrensel Windows) projesi eklemek ve bu projedeki varsayılan uygulama sınıfını düzeltmenin bir yoludur.
@@ -280,13 +280,13 @@ Aynı UWP XAML ekibi, işletim sistemi ile birlikte gelen gelen kutusu Windows 1
 
 WinUI 2 açık kaynaktır ve bilgi edinebilirsiniz <https://github.com/microsoft/microsoft-ui-xaml> .
 
-Aşağıdaki makalede, WinUI 2 kitaplığından UWP XAML denetimini barındırma gösterilmektedir:<https://docs.microsoft.com/windows/apps/desktop/modernize/host-custom-control-with-xaml-islands>
+Aşağıdaki makalede, WinUI 2 kitaplığından UWP XAML denetimini barındırma gösterilmektedir: <https://docs.microsoft.com/windows/apps/desktop/modernize/host-custom-control-with-xaml-islands>
 
 ### <a name="do-you-need-xaml-islands"></a>XAML Adaları gerekiyor
 
-XAML Adaları, uygulamanın tam yeniden yazma olmadan yeni UWP denetimleri ve davranışları kullanarak kendi kullanıcı deneyimlerini geliştirmek isteyen mevcut Win32 uygulamalarına yöneliktir.  [Windows 10 API 'lerinden](/windows/uwp/porting/desktop-to-uwp-enhance)zaten faydalanabilirsiniz, ancak xaml Adaları 'e kadar, yalnızca kullanıcı arabirimi Ile Ilgili API 'leri kullanabilirsiniz.
+XAML Adaları, uygulamanın tam yeniden yazma olmadan yeni UWP denetimleri ve davranışları kullanarak kendi kullanıcı deneyimlerini geliştirmek isteyen mevcut Win32 uygulamalarına yöneliktir. [Windows 10 API 'lerinden](/windows/uwp/porting/desktop-to-uwp-enhance)zaten faydalanabilirsiniz, ancak xaml Adaları 'e kadar, yalnızca kullanıcı arabirimi Ile Ilgili API 'leri kullanabilirsiniz.
 
-Yeni bir Windows uygulaması geliştiriyorsanız, bir [UWP uygulaması](/windows/uwp/get-started/universal-application-platform-guide)   muhtemelen doğru yaklaşımda.
+Yeni bir Windows uygulaması geliştiriyorsanız, bir [UWP uygulaması](/windows/uwp/get-started/universal-application-platform-guide) muhtemelen doğru yaklaşımda.
 
 ### <a name="the-road-ahead-xaml-islands-winui-30"></a>Yol ileri XAML Adaları: WinUI 3,0
 
@@ -300,7 +300,7 @@ WinUI 3, etkin geliştirme aşamasındadır ve tam UI platformunu dahil etmek i�
 
 ![WinUI 3,0 yapısı](./media/windows-migration/winui3.png)
 
-XAML çerçevesi artık GitHub 'da geliştirilir ve NuGet paketleri olarak bant dışına sevk edilir [NuGet](/nuget/what-is-nuget)   .
+XAML çerçevesi artık GitHub 'da geliştirilir ve [NuGet](/nuget/what-is-nuget) paketleri olarak bant dışına sevk edilir.
 
 İşletim sisteminin bir parçası olarak gönderilen mevcut UWP XAML API 'Leri artık yeni özellik güncelleştirmeleri almaz. Windows 10 destek yaşam döngüsüne göre güvenlik güncelleştirmeleri ve kritik düzeltmeler almaya devam eder.
 
@@ -308,14 +308,14 @@ Evrensel Windows Platformu, yalnızca XAML çerçevesini (örneğin, uygulama ve
 
 #### <a name="winui-3-in-desktop-app-and-winui-xaml-islands"></a>Masaüstü uygulamasında WinUI 3 ve WinUI XAML Adaları
 
-Gördüğünüz gibi, WinUI 3, UWP XAML 'in gelişmidir ve UWP uygulama modeli ve tüm gereksinimleri (MSIX paketlenmiş KIMLIĞI, korumalı alan, CoreWindow vb.) içinde doğal olarak çalışmaktadır. Yalnızca WinUI 3 ' ü bir Win32 uygulama modelinde kullanmak için WinUI içeriği, **WINUı xaml Adaları**kullanılarak başka bir kullanıcı arabirimi çerçevesi (WINDOWS Forms, WPF vb.) tarafından barındırılmalıdır. Uygulamanızı geliştirmek ve teknolojileri karıştırmak istiyorsanız bu doğru yoldur. Ancak, tüm eski Kullanıcı arabirimini WinUI için değiştirmek istiyorsanız, uygulamanızın kullanıcı arabirimi çerçevelerini yalnızca WinUI barındırması için yüklemesi gerekmez.
+Gördüğünüz gibi, WinUI 3, UWP XAML 'in gelişmidir ve UWP uygulama modeli ve tüm gereksinimleri (MSIX paketlenmiş KIMLIĞI, korumalı alan, CoreWindow vb.) içinde doğal olarak çalışmaktadır. Yalnızca WinUI 3 ' ü bir Win32 uygulama modelinde kullanmak için WinUI içeriği, **WINUı xaml Adaları** kullanılarak başka bir kullanıcı arabirimi çerçevesi (WINDOWS Forms, WPF vb.) tarafından barındırılmalıdır. Uygulamanızı geliştirmek ve teknolojileri karıştırmak istiyorsanız bu doğru yoldur. Ancak, tüm eski Kullanıcı arabirimini WinUI için değiştirmek istiyorsanız, uygulamanızın kullanıcı arabirimi çerçevelerini yalnızca WinUI barındırması için yüklemesi gerekmez.
 
-WinUI 3, **masaüstü uygulamalarında WinUI**ekleyen bu kritik geri bildirimi ele alacak. Bu, Win32 uygulamalarının tek başına UI çerçevesi olarak WinUI 3 ' ü kullanmasına izin verir; Windows Forms veya WPF yüklemeye gerek yoktur.
+WinUI 3, **masaüstü uygulamalarında WinUI** ekleyen bu kritik geri bildirimi ele alacak. Bu, Win32 uygulamalarının tek başına UI çerçevesi olarak WinUI 3 ' ü kullanmasına izin verir; Windows Forms veya WPF yüklemeye gerek yoktur.
 
 Bu toplamada, WinUI 3, geliştiricilerin doğru birleşimini kolayca karıştırabilmesini ve eşleşmesini sağlar:
 
 * Uygulama modeli: UWP, Win32
-* Platform: .NET Core veya native
+* Platform: .NET veya native
 * Dil: .NET (C \# , Visual Basic), standart C++
 * Paketleme: MSIX, Microsoft Store için AppX, paketlenmiş değil
 * Birlikte çalışma: WinUI XAML Adaları kullanarak mevcut WPF, WinForms ve MFC uygulamalarını genişletmek için WinUI 3 kullanın.
@@ -324,4 +324,4 @@ Daha fazla bilgi edinmek istiyorsanız, Microsoft bu yol haritasını ' de payla
 
 >[!div class="step-by-step"]
 >[Önceki](migrate-modern-applications.md) 
-> [Sonraki](example-migration-core.md)
+> [Sonraki](example-migration.md)

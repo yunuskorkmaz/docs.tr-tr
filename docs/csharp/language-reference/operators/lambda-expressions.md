@@ -9,16 +9,16 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 51bf44af5ec3478f2b2557b047df270c0c22990d
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 2ae63396c0b1bb0bf1fe5c33b1103f69f6dcf664
+ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94556848"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98615885"
 ---
 # <a name="lambda-expressions-c-reference"></a>Lambda ifadeleri (C# Başvurusu)
 
-*Lambda ifadesi* aşağıdaki iki formdan herhangi birinin bir ifadesidir:
+Anonim bir işlev oluşturmak için bir *lambda ifadesi* kullanın. Lambda parametre listesini gövdesinden ayırmak için [lambda bildirimi işlecini `=>` ](lambda-operator.md) kullanın. Bir lambda ifadesi aşağıdaki iki formdan herhangi biri olabilir:
 
 - Gövdesi olarak bir ifadeye sahip olan [ifade lambda](#expression-lambdas) :
 
@@ -32,7 +32,7 @@ ms.locfileid: "94556848"
   (input-parameters) => { <sequence-of-statements> }
   ```
 
-Lambda parametre listesini gövdesinden ayırmak için [lambda bildirimi işlecini `=>` ](lambda-operator.md) kullanın. Lambda ifadesi oluşturmak için, lambda işlecinin sol tarafında (varsa) giriş parametrelerini ve diğer tarafta bir ifade ya da deyim bloğunu belirtirsiniz.
+Lambda ifadesi oluşturmak için, lambda işlecinin sol tarafında (varsa) giriş parametrelerini ve diğer tarafta bir ifade ya da deyim bloğunu belirtirsiniz.
 
 Herhangi bir lambda ifadesi, bir [temsilci](../builtin-types/reference-types.md#the-delegate-type) türüne dönüştürülebilir. Lambda ifadesinin dönüştürülebileceği temsilci türü, parametrelerinin ve dönüş değerinin türlerine göre tanımlanır. Lambda ifadesi bir değer döndürmezse, `Action` temsilci türlerinden birine dönüştürülebilir; Aksi takdirde, `Func` temsilci türlerinden birine dönüştürülebilir. Örneğin, iki parametresi olan ve değer döndüren bir lambda ifadesi bir <xref:System.Action%602> temsilciye dönüştürülemez. Bir parametreye sahip olan ve bir değer döndüren bir lambda ifadesi, bir <xref:System.Func%602> temsilciye dönüştürülebilir. Aşağıdaki örnekte, `x => x * x` adlı ve kare değeri döndüren bir parametreyi belirten lambda ifadesi, `x` `x` bir temsilci türü değişkenine atanır:
 

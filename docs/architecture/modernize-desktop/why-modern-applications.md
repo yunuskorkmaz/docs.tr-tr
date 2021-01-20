@@ -1,13 +1,13 @@
 ---
 title: Neden modern masaüstü uygulamalarını seçmelisiniz?
 description: Modern dünyada Windows Forms, WPF ve UWP gibi masaüstü teknolojileri hakkında bilgi edinin.
-ms.date: 09/16/2019
-ms.openlocfilehash: f8b70ba9e0ee97a6e0938e3219ecd0d2324248ae
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.date: 12/29/2020
+ms.openlocfilehash: 8489e41c973bb472a23bca38e9374c36e4cdd366
+ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83423280"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98615899"
 ---
 # <a name="why-modern-desktop-applications"></a>Neden modern masaüstü uygulamalarını seçmelisiniz?
 
@@ -15,7 +15,7 @@ ms.locfileid: "83423280"
 
 ### <a name="a-story-of-one-company"></a>Bir şirketin öyküsü
 
-İlk 2000s 'ye geri döndüğünüzde, çok uluslu bir şirket, şirketin farklı dalları arasında bilgi alışverişi yapmak ve merkezi birimlerde iyileştirilmiş işlemleri yürütmek üzere dağıtılmış bir masaüstü çözümü geliştirmeye başlamıştır. Uygulama geliştirme için Windows Forms (WinForms olarak da bilinir) adlı yepyeni bir çerçeve seçti. Yıl boyunca, proje, yüzlerce binlerce satır içeren bir yetişkin, iyi test ve zaman kanıtlanmış uygulama halinde geliştirilmiştir. Geçen süre ve .NET Framework 2,0 artık etkin yeni teknoloji değildir. Bu uygulama üzerinde çalışan geliştiriciler bir dilimon ma kadar kullanıma sunulacak. Geliştirme sırasında en son teknoloji yığınını kullanmak ve uygulamalarının modern ve "hisye" de görünmesini sağlamak ister. Aynı zamanda, 15 yılı aşkın bir ürünün oluşturduğu harika ürünü oluşturmak ve tüm uygulamayı sıfırdan yeniden yazmak istemler.
+İlk olarak, çok uluslu bir şirket, şirketin farklı dalları arasında bilgi alışverişi yapmak ve merkezi birimlerde iyileştirilmiş işlemleri yürütmek üzere dağıtılmış bir masaüstü çözümü geliştirmeye başlamıştır. Uygulama geliştirme için Windows Forms (WinForms olarak da bilinir) adlı yepyeni bir çerçeve seçti. Yıl boyunca, proje, yüzlerce binlerce satır içeren bir yetişkin, iyi test ve zaman kanıtlanmış uygulama halinde geliştirilmiştir. Geçen süre ve .NET Framework 2,0 artık etkin yeni teknoloji değildir. Bu uygulama üzerinde çalışan geliştiriciler bir dilimon ma kadar kullanıma sunulacak. Geliştirme sırasında en son teknoloji yığınını kullanmak ve uygulamalarının modern ve "hisye" de görünmesini sağlamak ister. Aynı zamanda, 15 yılı aşkın bir ürünün oluşturduğu harika ürünü oluşturmak ve tüm uygulamayı sıfırdan yeniden yazmak istemler.
 
 ### <a name="your-story"></a>Hikayenizi
 
@@ -25,19 +25,19 @@ Kendinizi, yıl boyunca güvenilirliğini karşılayan Windows Forms veya Window
 
 Internet 'in yerine, masaüstü uygulamaları, yazılım sistemleri oluşturmaya yönelik ana yaklaşımdır. Geliştiriciler COBOL, FORTRAN, VB6 veya C++ gibi herhangi bir programlama dilini seçebilirler. Ancak, küçük araçlar veya karmaşık dağıtılmış mimariler geliştirdikleri durumlar, tüm masaüstü uygulamalarıdır.
 
-Daha sonra, Internet Teknolojileri, geliştirme dünyasına sahiptir ve kolay dağıtım ve Basitleştirilmiş dağıtım süreçlerine benzer avantajlar sayesinde daha fazla ve daha fazla mühendisde yararlanır. Bir Web uygulamasının üretime dağıtılmasının bir olgusu, otomatik güncelleştirmeler içeren tüm kullanıcılar yazılım çevikliği üzerinde büyük bir etkiye sahiptir.
+Daha sonra, Internet Teknolojileri, geliştirme dünyasına sahiptir ve kolay dağıtım ve Basitleştirilmiş dağıtım süreçlerine benzer avantajlar sağlar. Bir Web uygulamasının üretime dağıtılmasının bir olgusu, otomatik güncelleştirmeler içeren tüm kullanıcılar yazılım çevikliği üzerinde büyük bir etkiye sahiptir.
 
-Ancak, Internet altyapısı, temel alınan protokoller ve HTTP ve HTML gibi standartlar karmaşık uygulamalar oluşturmak için tasarlanmamıştır. Aslında, önemli geliştirme çabasında yalnızca bir hedef vardır: daha hızlı veri girişi ve durum yönetimi gibi masaüstü uygulamalarının sahip olduğu aynı yeteneklere sahip Web uygulamalarına izin vermek için.
+Ancak, Internet altyapısı, temel alınan protokoller ve HTTP ve HTML gibi standartlar karmaşık uygulamalar oluşturmak için tasarlanmamıştır. Aslında, önemli geliştirme çabasında yalnızca bir hedef vardır: Web uygulamalarına, hızlı veri girişi ve durum yönetimi gibi masaüstü uygulamalarının sahip olduğu aynı özellikleri vermek için.
 
 Web uygulamaları ve mobil uygulamalar inanılmaz bir hızda büyümekle birlikte, bazı görevler için masaüstü uygulamalarında verimlilik ve performans bakımından bir yerde olması gerekir. Bu, projelerini WPF ve WinForms ile oluşturan milyonlarca geliştirici olduğunu ve bu uygulamaların miktarının sürekli büyüdüğünü açıklar.
 
 Geliştirmede masaüstü uygulamaları seçmenin bazı nedenleri aşağıda verilmiştir:
 
-- Masaüstü uygulamalarının Kullanıcı BILGISAYARıNA daha iyi etkileşim vardır.
+- Masaüstü uygulamaları, kullanıcının BILGISAYARıNA daha iyi etkileşime sahiptir.
 - Karmaşık hesaplamalar için masaüstü uygulamalarının performansı, Web uygulamalarının performansından çok daha yüksektir.
 - İstemci tarafında özel mantık çalıştırmak mümkündür, ancak bir Web uygulamasıyla çok daha zordur.
 - Çoklu iş parçacığı kullanımı, masaüstü uygulamasında daha kolay ve daha verimlidir.
-- Kullanıcı arabirimlerini (Usıs) tasarlamak için öğrenme eğrisi, steep değildir. Ayrıca, WinForms için Windows Forms tasarımcısının sürükle ve bırak deneyimiyle tamamen sezgisel hale gelir.
+- Kullanıcı arabirimlerini (Usıs) tasarlamak için öğrenme eğrisi, steep değildir. Ayrıca, WinForms için Windows Forms tasarımcısının sürükle ve bırak deneyimiyle sezgisel hale gelir.
 - Bir sunucu altyapısı ayarlama veya bağlantı sorunları, güvenlik duvarları ve tarayıcı uyumluluğu hakkında bilgi almak zorunda kalmadan algoritmalarınızı kodlamaya ve test etmeye başlamak kolaydır.
 - Hata ayıklama, Web hata ayıklaması ile karşılaştırıldığında güçlü bir şekilde yapılır.
 - Kamera, Bluetooth veya kart okuyucuları gibi donanım cihazlarına erişim kolaydır.
@@ -102,7 +102,7 @@ UWP, WPF gibi XAML tabanlı bir sunum çerçevesi içerir, ancak şöyle bazı �
 
 ## <a name="a-tale-of-two-platforms"></a>İki platformdan oluşan bir Tale
 
-Son 20 yılda, Kullanıcı arabirimi masaüstü teknolojileri arttı ve Windows Forms ' den UWP 'ye kadar olan yolu takip ederken, donanım, yüksek DPı izleyicilerine ve dokunmatik ve mürekkep gibi farklı veri girişi tekniklerine sahip hafif tabletler ve telefonlara sahip ağır PC birimlerinden de gelişiyor. Bu değişiklikler iki farklı kavram oluşturulmasına neden oldu: bir masaüstü uygulaması ve modern bir uygulama. Modern bir uygulama, farklı cihaz formu faktörlerini, çeşitli giriş ve çıkış yöntemlerini göz önünde bulundurur ve korumalı bir yürütme modelinde çalışırken modern masaüstü özelliklerinden yararlanır. Diğer yandan (Geleneksel) masaüstü uygulaması, bir fare ve klavye ile en iyi şekilde yürütülen denetimlerin yüksek yoğunluklu bir kullanıcı arabirimi gerektiren bir uygulamadır.
+Son 20 yılda, Kullanıcı arabirimi masaüstü teknolojileri arttı ve Windows Forms ' den UWP 'ye kadar olan yolu takip ederken, donanım, yüksek DPı izleyicilerine ve dokunmatik ve mürekkep gibi farklı veri girişi tekniklerine sahip hafif tabletler ve telefonlara sahip ağır PC birimlerinden de gelişiyor. Bu değişiklikler iki farklı kavram oluşturulmasına neden oldu: bir masaüstü uygulaması ve modern bir uygulama. Modern bir uygulama, farklı cihaz formu faktörlerini, çeşitli giriş ve çıkış yöntemlerini göz önünde bulundurur ve korumalı bir yürütme modelinde çalışırken modern masaüstü özelliklerinden yararlanır. Diğer yandan (Geleneksel) masaüstü uygulaması, bir fare ve klavye ile en iyi şekilde yürütülen denetimlerin yüksek yoğunluklu bir kullanıcı arabirimine ihtiyaç duyan bir uygulamadır.
 
 Aşağıdaki tabloda iki kavram arasındaki farklar açıklanmaktadır:
 
@@ -143,14 +143,14 @@ Bu yol, modern masaüstü özelliklerinden mevcut masaüstü geliştirmede nası
 
 Modern geliştirme döngüleri, uygulamaların yeni sürümlerinin her bir kullanıcıya nasıl dağıtıldığına ilişkin çevikliği sağlamak üzere kullanıma hazır. Windows Forms ve WPF uygulamaları, makinede bulunması gereken .NET Framework belirli bir sürümünü temel aldığı için, BT insanların aynı makinede çalışan diğer uygulamalar için yan etkileri olma riski olmadan yeni .NET Framework sürüm özelliklerinden faydalanamazlar. Geliştiricilere, .NET Framework güncel olmayan sürümlerde kalmalarına zorlamak için yenilik hızını sınırlandırmıştır.
 
-.NET Core 3,0 ' nin başlatılmasından itibaren, .NET Core 'un birden çok sürümünü dağıtmaya ve her uygulamanın hangi .NET Core sürümünü hedefleyecek şekilde yeni bir yaklaşımdan yararlanabilirsiniz. Bu şekilde, bir uygulamada en yeni özellikleri kullanarak, herhangi bir uygulamayı bozmadığından emin olabilirsiniz.
+.NET Core 3,0 ' nin başlatılmasından itibaren, .NET tarafında birden çok sürümü dağıtmaya ve her bir uygulamanın hangi .NET sürümünün hedeflemesini belirten yeni bir yaklaşıma sahip olabilirsiniz. Bu şekilde, bir uygulamadaki en yeni özellikleri kullanarak, diğer uygulamaları bozma
 
 ### <a name="installation"></a>Yükleme
 
-Masaüstü uygulamaları, kullanıcının bunları kullanmaya başlayabilmesi için her zaman bir tür yükleme işlemini kullanır. Bu olgu, MSI ve ClickOnce 'tan özel yükleyicilere veya hatta XCOPY dağıtımına kadar bir teknoloji kümesi oyuna getirildi. Uygulamaların makinede paylaşılan kaynaklara erişmesi için bir yol olması gerektiğinden, bu yöntemlerin herhangi biri sorunları ortaya çıkarmıştır. Bazen yükleme, bazı durumlarda ana uygulama tarafından başvurulan paylaşılan DLL 'Leri güncelleştirmek üzere yeni anahtar değerleri eklemek veya güncelleştirmek için kayıt defterine erişmesi gerekir. Bu, kullanıcılar için sürekli bir zahmetli oluşturulmasına neden olur, bu durum, bir uygulamayı yükledikten sonra, daha sonra kaldırsanız bile Bilgisayarınız hiçbir şekilde aynı olmayacaktır.
+Masaüstü uygulamaları, kullanıcının bunları kullanmaya başlayabilmesi için her zaman bir tür yükleme işlemini kullanır. Bu olgu, MSI ve ClickOnce 'tan özel yükleyicilere veya hatta XCOPY dağıtımına kadar bir teknoloji kümesi oyuna getirildi. Uygulamaların makinede paylaşılan kaynaklara erişmesi için bir yol olması gerektiğinden, bu yöntemlerin herhangi biri sorunları ortaya çıkarmıştır. Bazen yükleme, bazı durumlarda ana uygulama tarafından başvurulan paylaşılan DLL 'Leri güncelleştirmek üzere yeni anahtar değerleri eklemek veya güncelleştirmek için kayıt defterine erişmesi gerekir. Bu davranış, kullanıcılar için sürekli bir zahmetli oluşturulmasına neden olur, bu durum, bir uygulamayı yükledikten sonra, daha sonra kaldırsanız bile Bilgisayarınız hiçbir şekilde aynı olmayacaktır.
 
-Bu kitapta, daha önce açıklanan sorunu çözen MALTıYLA uygulamalar yüklemenin yeni bir yolunu sunuyoruz. Uygulamanıza yönelik paketleme, yükleme ve güncelleştirmeleri kolayca nasıl ayarlayabileceğinizi öğreneceksiniz.
+Bu kitapta, daha önce açıklanan sorunu çözen MALTıYLA uygulamalar yüklemenin yeni bir yolunu sunuyoruz. Uygulamanıza yönelik paketleme, yükleme ve güncelleştirmeleri nasıl kolayca ayarlayabileceğinizi öğreneceksiniz.
 
 >[!div class="step-by-step"]
 >[Önceki](index.md) 
-> [Sonraki](whats-new-dotnet-core.md)
+> [Sonraki](whats-new-dotnet.md)
