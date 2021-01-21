@@ -13,12 +13,12 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-ms.openlocfilehash: b1d7fbbe98aaad16454fdd71c161f2a17a2f4f2e
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: e55b86e5b028fb871f309d80217477cfd164c106
+ms.sourcegitcommit: f0eb7eeedf3ceec726499fa678786d03083214ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "91173262"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98629260"
 ---
 # <a name="-doc-c-compiler-options"></a>-Doc (C# derleyici seçenekleri)
 
@@ -54,15 +54,19 @@ ms.locfileid: "91173262"
   
  Kodunuzda açıklamalardan belge oluşturma yolları için bkz. [belge açıklamaları Için önerilen Etiketler](../../programming-guide/xmldoc/recommended-tags-for-documentation-comments.md) .  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
-  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-2019-development-environment"></a>Visual Studio 2019 geliştirme ortamında bu derleyici seçeneğini ayarlamak için  
+
 1. Projenin **Özellikler** sayfasını açın.  
+2. **Derleme** sekmesine tıklayın.
+3. **XML belge dosyası** özelliğini değiştirin.
   
-2. **Derleme** sekmesine tıklayın.  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-for-mac-development-environment"></a>Mac için Visual Studio geliştirme ortamında bu derleyici seçeneğini ayarlamak için  
   
-3. **XML belge dosyası** özelliğini değiştirin.  
-  
- Bu derleyici seçeneğini program aracılığıyla ayarlama hakkında daha fazla bilgi için bkz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A> ..  
+1. Projenin **Seçenekler** sayfasını açın.
+2. **Derleyici** sekmesini seçin.
+3. **XML belgesi oluştur** ' u seçin ve metin kutusuna dosya adını girin.
+
+Bu derleyici seçeneğini program aracılığıyla ayarlama hakkında daha fazla bilgi için bkz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A> ..  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
