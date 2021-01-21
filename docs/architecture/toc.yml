@@ -15,7 +15,7 @@
       href: containerized-lifecycle/
     - name: Azure bulutu ve Windows Kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme
       href: modernize-with-azure-containers/
-    - name: .NET Core 3.1 ile Windows 10 üzerinde masaüstü uygulamalarını modernleştirme
+    - name: .NET 5 ile Windows 10 üzerinde masaüstü uygulamalarını modernleştirme
       href: modernize-desktop/
     - name: '.NET Mikro Hizmetleri: Kapsayıcılı .NET uygulamaları mimarisi'
       href: microservices/
