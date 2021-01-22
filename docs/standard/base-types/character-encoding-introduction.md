@@ -2,6 +2,7 @@
 title: char.Net ' te acter kodlamaya giriş
 description: char.Net 'te acter kodlama ve kod çözme hakkında bilgi edinin.
 ms.date: 03/09/2020
+ms.topic: conceptual
 no-loc:
 - Rune
 - char
@@ -10,12 +11,12 @@ dev_langs:
 - csharp
 helpviewer_keywords:
 - encoding, understanding
-ms.openlocfilehash: 572fcd289eea720873d94e7fc71f3b4a030d1d70
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 92710e2d223d1d765efc7e877cb16546ef372907
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282315"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98693143"
 ---
 # <a name="character-encoding-in-net"></a>.NET içinde karakter kodlaması
 
@@ -46,7 +47,7 @@ s[3] = 'l' ('\u006c')
 s[4] = 'o' ('\u006f')
 ```
 
-Her char bir acter tek bir değer ile temsil edilir `char` . Bu kalıp, dünyanın çoğu dili için geçerli bir değer içerir. Örneğin, char *nǐ hǎo* ve " *Hello* " gibi sesli iki Çince acters çıkışı aşağıda verilmiştir:
+Her char bir acter tek bir değer ile temsil edilir `char` . Bu kalıp, dünyanın çoğu dili için geçerli bir değer içerir. Örneğin, char *nǐ hǎo* ve " *Hello*" gibi sesli iki Çince acters çıkışı aşağıda verilmiştir:
 
 ```csharp
 PrintChars("你好");
@@ -107,7 +108,7 @@ Unicode standart 1.100.000 ' den fazla [kod noktasını](https://www.unicode.org
 
 Aşağıda göründükleri Unicode TS bağlantıları ile kod noktası atamalarının bazı örnekleri verilmiştir char :
 
-|Ondalık|Onaltılık       |Örnek|Açıklama|
+|Ondalık|Onaltılık       |Örnek|Description|
 |------:|----------|-------|-----------|
 |10     | `U+000A` |Yok| [SATıR BESLEME](https://www.unicode.org/charts/PDF/U0000.pdf) |
 |97     | `U+0061` | a | [LATIN KÜÇÜK HARF A](https://www.unicode.org/charts/PDF/U0000.pdf) |
@@ -128,13 +129,13 @@ Aşağıdaki diyagramda, BMP ve ek kod noktaları arasındaki ilişki gösterilm
 
 ## <a name="utf-16-code-units"></a>UTF-16 kod birimleri
 
-16 bit Unicode dönüştürme biçimi ( [UTF-16](https://www.unicode.org/faq/utf_bom.html#UTF16)), char Unicode kod noktalarını temsil etmek için 16 bit *kod birimi* kullanan bir acter kodlama sistemidir. .NET, içindeki metni kodlamak için UTF-16 kullanır `string` . `char`Örnek, 16 bit kod birimini temsil eder.
+16 bit Unicode dönüştürme biçimi ([UTF-16](https://www.unicode.org/faq/utf_bom.html#UTF16)), char Unicode kod noktalarını temsil etmek için 16 bit *kod birimi* kullanan bir acter kodlama sistemidir. .NET, içindeki metni kodlamak için UTF-16 kullanır `string` . `char`Örnek, 16 bit kod birimini temsil eder.
 
 Tek bir 16 bit kod birimi, temel çok dilli düzlemin 16 bit aralığında herhangi bir kod noktasını temsil edebilir. Ancak, tamamlayıcı aralıktaki bir kod noktası için iki `char` örnek gereklidir.
 
 ## <a name="surrogate-pairs"></a>Vekil çiftleri
 
-2 16 bitlik değerlerin tek 21 bitlik bir değere çevrilmesi, ' den *surrogate code points* `U+D800` `U+DFFF` (Decimal 55.296-57.343), dahil olmak üzere, vekil kod noktaları adlı özel bir Aralık tarafından kolaylaştırılacaktır.
+2 16 bitlik değerlerin tek 21 bitlik bir değere çevrilmesi, ' den  `U+D800` `U+DFFF` (Decimal 55.296-57.343), dahil olmak üzere, vekil kod noktaları adlı özel bir Aralık tarafından kolaylaştırılacaktır.
 
 Aşağıdaki diyagramda, BMP ve vekil kod noktaları arasındaki ilişki gösterilmektedir.
 

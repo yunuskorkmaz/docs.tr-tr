@@ -2,6 +2,7 @@
 title: .NET normal Ifadelerinde karakter kaçışları
 description: .NET normal ifadelerinde özel karakterler ve kaçış karakterleri hakkında bilgi edinin.
 ms.date: 03/30/2017
+ms.topic: conceptual
 dev_langs:
 - csharp
 - vb
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - .NET regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-ms.openlocfilehash: 820e6cd7fa4a60fa6adfcaf0f0ff4d25fdda0f21
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 44c297b7cc897ee08d3434dfcb18df0024b44e6f
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734393"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98693104"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Normal İfadelerdeki Karakter Çıkışları
 
@@ -36,11 +37,11 @@ Normal ifadede ters eğik çizgi ( \\ ) aşağıdakilerden birini belirtir:
 
  Aşağıdaki tabloda, .NET 'teki normal ifadeler tarafından desteklenen karakter çıkışları listelenmektedir.  
   
-|Karakter veya sıra|Açıklama|  
+|Karakter veya sıra|Description|  
 |---------------------------|-----------------|  
 |Aşağıdakiler hariç tüm karakterler:<br /><br /> . $ ^ {[(&#124;) * +? \ |**Karakter veya dizi** sütununda listelenenler dışındaki karakterlerin normal ifadelerde özel bir anlamı yoktur; Bunlar kendileriyle eşleşir.<br /><br /> **Karakter veya dizi** sütununa dahil edilen karakterler özel normal ifade dili öğeleridir. Bunları düzenli bir ifadede eşleştirmek için, bu, kaçış veya [pozitif bir karakter grubuna](character-classes-in-regular-expressions.md)dahil edilmeleri gerekir. Örneğin, normal ifade `\$\d+` veya `[$]\d+` "$1200" ile eşleşir.|  
 |`\a`|Bir Bell (alarm) karakteriyle eşleşir `\u0007` .|  
-|`\b`|Character_group bir `[` *character_group* `]` karakter sınıfında, geri al ile eşleşir `\u0008` .  (Bkz. [karakter sınıfları](character-classes-in-regular-expressions.md).) Bir karakter sınıfı dışında, bir `\b` sözcük sınırı ile eşleşen bir bağlantıdır. (Bkz. [Tutturucuların](anchors-in-regular-expressions.md).)|  
+|`\b`|Character_group bir `[`  `]` karakter sınıfında, geri al ile eşleşir `\u0008` .  (Bkz. [karakter sınıfları](character-classes-in-regular-expressions.md).) Bir karakter sınıfı dışında, bir `\b` sözcük sınırı ile eşleşen bir bağlantıdır. (Bkz. [Tutturucuların](anchors-in-regular-expressions.md).)|  
 |`\t`|Bir sekmeden eşleşir, `\u0009` .|  
 |`\r`|Bir satır dönüşüyle eşleşir, `\u000D` . `\r`Yeni satır karakteri ile eşdeğer olmadığına unutmayın `\n` .|  
 |`\v`|Dikey bir sekme ile eşleşir `\u000B` .|  
@@ -62,7 +63,7 @@ Normal ifadede ters eğik çizgi ( \\ ) aşağıdakilerden birini belirtir:
   
  Normal ifade `\G(.+)[\t\u007c](.+)\r?\n` Aşağıdaki tabloda gösterildiği gibi yorumlanır.  
   
-|Desen|Açıklama|  
+|Desen|Description|  
 |-------------|-----------------|  
 |`\G`|En son eşleşmenin sona erdiği eşleşmeyi Başlat.|  
 |`(.+)`|Karakterleri bir veya daha fazla kez eşleştirin. Bu ilk yakalama grubudur.|  

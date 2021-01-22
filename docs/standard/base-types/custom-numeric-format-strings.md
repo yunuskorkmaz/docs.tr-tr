@@ -2,6 +2,7 @@
 title: Özel sayısal biçim dizeleri
 description: .NET 'teki sayısal verileri biçimlendirmek için özel bir sayısal biçim dizesi oluşturmayı öğrenin. Özel bir sayısal biçim dizesinin bir veya daha fazla özel sayısal tanımlayıcısı vardır.
 ms.date: 06/25/2018
+ms.topic: reference
 dev_langs:
 - csharp
 - vb
@@ -16,18 +17,18 @@ helpviewer_keywords:
 - formatting numbers [.NET]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-ms.openlocfilehash: 7665c0980d631069728bcce8178763eb934e054b
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 52cdf8a28a43239d5c218b7154d67a1d0b3c210d
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824395"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98693013"
 ---
 # <a name="custom-numeric-format-strings"></a>Özel sayısal biçim dizeleri
 
 Sayısal verinin nasıl biçimlendirileceğini tanımlamak için bir veya daha fazla özel sayısal tanımlayıcıdan oluşan özel bir sayısal biçim dizesi oluşturabilirsiniz. Özel bir sayısal biçim dizesi, [Standart sayısal biçim dizesi](standard-numeric-format-strings.md)olmayan herhangi bir biçim dizesidir.
 
-Özel sayısal biçim dizeleri, `ToString` tüm sayısal türdeki metodun bazı aşırı yüklemeleri tarafından desteklenir. Örneğin, <xref:System.Int32.ToString%28System.String%29> türünün ve yöntemlerine bir sayısal biçim dizesi sağlayabilirsiniz <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> <xref:System.Int32> . Özel sayısal biçim dizeleri, [composite formatting feature](composite-formatting.md) `Write` ve sınıflarının bazı ve `WriteLine` yöntemleri <xref:System.Console> <xref:System.IO.StreamWriter> , yöntemi ve <xref:System.String.Format%2A?displayProperty=nameWithType> <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> yöntemi tarafından kullanılan .net Composite biçimlendirme özelliği tarafından da desteklenir. [Dize ilişkilendirme](../../csharp/language-reference/tokens/interpolated.md) özelliği de özel sayısal biçim dizelerini destekler.
+Özel sayısal biçim dizeleri, `ToString` tüm sayısal türdeki metodun bazı aşırı yüklemeleri tarafından desteklenir. Örneğin, <xref:System.Int32.ToString%28System.String%29> türünün ve yöntemlerine bir sayısal biçim dizesi sağlayabilirsiniz <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> <xref:System.Int32> . Özel sayısal biçim dizeleri, [](composite-formatting.md) `Write` ve sınıflarının bazı ve `WriteLine` yöntemleri <xref:System.Console> <xref:System.IO.StreamWriter> , yöntemi ve <xref:System.String.Format%2A?displayProperty=nameWithType> <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> yöntemi tarafından kullanılan .net Composite biçimlendirme özelliği tarafından da desteklenir. [Dize ilişkilendirme](../../csharp/language-reference/tokens/interpolated.md) özelliği de özel sayısal biçim dizelerini destekler.
 
 > [!TIP]
 > Sayısal veya tarih ve saat değerlerine biçim dizeleri uygulamanızı sağlayan ve sonuç dizesini görüntüleyen bir .NET Core Windows Forms uygulaması olan **biçimlendirme yardımcı programını** indirebilirsiniz. Kaynak kodu [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) ve [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb)için kullanılabilir.
@@ -205,7 +206,7 @@ Aşağıdaki örnek, biçimlendirme işleminin "#", "0" ve " \\ " karakterlerini
 
 Noktalı virgül (;), sayının değerinin pozitif, negatif veya sıfır olma durumuna göre farklı biçimlendirme işlemi uygulayan bir koşullu biçim tanımlayıcısıdır. Bu davranışı oluşturmak için, bir özel biçim dizesi noktalı virgüllerle ayrılan en çok üç bölüm içerebilir. Bu bölümler aşağıdaki tabloda açıklanır.
 
-|Bölüm sayısı|Açıklama|
+|Bölüm sayısı|Description|
 |------------------------|-----------------|
 |Bir bölüm|Biçim dizesi tüm değerlere uygulanır.|
 |İki bölüm|İlk bölüm pozitif değerlere ve sıfırlara, ikinci bölüm de negatif değerlere uygulanır.<br /><br /> Eğer biçimlendirilen değer negatif ise, ama ikinci bölümdeki biçimlendirmeden sonra yuvarlama ile sıfır olursa, sonuçtaki sıfır ilk bölüme göre biçimlendirilir.|

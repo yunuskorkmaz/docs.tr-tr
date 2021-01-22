@@ -1,6 +1,7 @@
 ---
 title: Normal İfadelerdeki Çeşitli Yapılar
 ms.date: 03/30/2017
+ms.topic: conceptual
 dev_langs:
 - csharp
 - vb
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - .NET regular expressions, miscellaneous constructs
 - regular expressions, miscellaneous constructs
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
-ms.openlocfilehash: ef8f126559b51aa9b918f04e27f5599fba519b43
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b37244ec218c4bfee9c14f4504ab1018cb12d35b
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95683803"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98692961"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Normal İfadelerdeki Çeşitli Yapılar
 
@@ -48,7 +49,7 @@ ms.locfileid: "95683803"
   
  Örnek iki normal ifade tanımlar. Birincisi, `\b(D\w+)\s(d\w+)\b` büyük bir "d" ve küçük harf "d" ile başlayan iki ardışık sözcükten eşleşir. İkinci normal ifade, `\b(D\w+)(?ixn) \s (d\w+) \b` Aşağıdaki tabloda açıklandığı gibi, bu kalıbı değiştirmek için satır içi seçenekleri kullanır. Sonuçların karşılaştırması yapının etkisini onaylar `(?ixn)` .  
   
-|Desen|Açıklama|  
+|Desen|Description|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında başla.|  
 |`(D\w+)`|Büyük bir "D" ve ardından bir veya daha fazla sözcük karakteri Eşleştir. Bu ilk yakalama grubudur.|  
@@ -63,7 +64,7 @@ ms.locfileid: "95683803"
   
  Aşağıdaki örnek, önceki bölümdeki örnekteki ilk normal ifade deseninin yinelenir. Karşılaştırmayı, büyük/küçük harfe duyarlı olup olmadığını belirtmek için normal ifadeye iki satır içi açıklama ekler. Normal ifade deseninin `\b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comparison)d\w+)\b` aşağıdaki şekilde tanımlanması gerekir.  
   
-|Desen|Açıklama|  
+|Desen|Description|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında başla.|  
 |`(?# case-sensitive comparison)`|Bir yorum. Desenler ile eşleşen davranışı etkilemez.|  
@@ -85,7 +86,7 @@ ms.locfileid: "95683803"
   
  `\{\d+(,-*\d+)*(\:\w{1,4}?)*\}(?x) # Looks for a composite format item.`  
   
-|Desen|Açıklama|  
+|Desen|Description|  
 |-------------|-----------------|  
 |`\{`|Bir açma ayracı eşleştirin.|  
 |`\d+`|Bir veya daha fazla ondalık basamağı eşleştirin.|  

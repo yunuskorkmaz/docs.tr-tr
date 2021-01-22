@@ -3,13 +3,14 @@ title: Anonim ve demet türleri arasında seçim yapma
 description: Anonim türler ve demet türü arasında seçim yapmak için uygun olduğunda bilgi edinin.
 author: IEvangelist
 ms.author: dapine
+ms.topic: conceptual
 ms.date: 07/01/2020
-ms.openlocfilehash: f8465b2f22ecfafd739355ddd35635e2eee49232
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 1f171851c383862828600f6f43ce1e3fc1b3a168
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823205"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98693091"
 ---
 # <a name="choosing-between-anonymous-and-tuple-types"></a>Anonim ve demet türleri arasında seçim yapma
 
@@ -99,7 +100,7 @@ Her zaman <xref:System.ValueTuple> <xref:System.Tuple> ve anonim türleri kullan
 
 ### <a name="key-differences"></a>Temel farklılıklar
 
-| Ad                     | Erişim değiştiricisi | Tür     | Özel üye adı | Oluşturmayı kaldırma desteği | İfade ağacı desteği |
+| Name                     | Erişim değiştiricisi | Tür     | Özel üye adı | Oluşturmayı kaldırma desteği | İfade ağacı desteği |
 |--------------------------|-----------------|----------|----------------------|------------------------|-------------------------|
 | Anonim türler          | `internal`      | `class`  | ✔️                   | ❌                     | ✔️                     |
 | <xref:System.Tuple>      | `public`        | `class`  | ❌                   | ❌                     | ✔️                     |

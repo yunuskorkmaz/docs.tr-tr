@@ -2,6 +2,7 @@
 title: Bileşik biçimlendirme
 description: Bir nesne listesi ve Birleşik biçim dizesi olarak alan ve dizinli yer tutucuları olan sabit metin içeren .NET bileşik biçimlendirmesi hakkında bilgi edinin.
 ms.date: 10/26/2018
+ms.topic: conceptual
 dev_langs:
 - csharp
 - vb
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-ms.openlocfilehash: a0252d013ee6cf7cba7f953fc8a1e2c66c510ca7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3c5c1233ebdfc3ad624b2e4f2a8231969657eef1
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95683959"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98693052"
 ---
 # <a name="composite-formatting"></a>Bileşik biçimlendirme
 
@@ -127,7 +128,7 @@ Bileşik biçimlendirme özelliği aşağıdaki gibi yöntemler tarafından dest
   
 1. Biçimlendirilecek değer ise `null` , boş bir dize <xref:System.String.Empty?displayProperty=nameWithType> döndürülür.  
   
-2. Bir <xref:System.ICustomFormatter> uygulama kullanılabiliyorsa, çalışma zamanı <xref:System.ICustomFormatter.Format%2A> yöntemini çağırır. Yöntemi, varsa veya *formatString* `null` uygulama ile birlikte, varsa, biçim öğesinin FormatString değerini geçirir <xref:System.IFormatProvider> . <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType>Yöntem çağrısı döndürürse `null` , yürütme sonraki adıma geçer; Aksi takdirde, <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> çağrının sonucu döndürülür.
+2. Bir <xref:System.ICustomFormatter> uygulama kullanılabiliyorsa, çalışma zamanı <xref:System.ICustomFormatter.Format%2A> yöntemini çağırır. Yöntemi, varsa veya  `null` uygulama ile birlikte, varsa, biçim öğesinin FormatString değerini geçirir <xref:System.IFormatProvider> . <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType>Yöntem çağrısı döndürürse `null` , yürütme sonraki adıma geçer; Aksi takdirde, <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> çağrının sonucu döndürülür.
   
 3. Değer, arabirimini uyguluyorsa <xref:System.IFormattable> , arabirimin <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> yöntemi çağırılır. Yöntemi, biçim öğesinde varsa veya yoksa, *FormatString* değeri geçirilir `null` . <xref:System.IFormatProvider>Bağımsız değişkeni şöyle belirlenir:  
   

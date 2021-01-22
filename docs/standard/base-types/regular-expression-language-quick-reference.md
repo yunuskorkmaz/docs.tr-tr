@@ -2,6 +2,7 @@
 title: Normal İfade Dili - Hızlı Başvuru
 description: Bu hızlı başvuru bölümünde, giriş metnini eşleştirmek için normal ifade desenleri kullanmayı öğrenin. Bir düzende bir veya daha fazla karakter sabit değeri, işleç veya yapı bulunur.
 ms.date: 03/30/2017
+ms.topic: reference
 f1_keywords:
 - VS.RegularExpressionBuilder
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - cheat sheet
 - .NET regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-ms.openlocfilehash: 1b261211997837e8664ea60e9210a7f0517f7a9f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f34d52bc2413aaf666c07ff511f3c1beb14519d4
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818810"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98692831"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Normal İfade Dili - Hızlı Başvuru
 
@@ -36,7 +37,7 @@ Ayrıca, bu bilgileri kolay başvuru için indirebileceğiniz ve yazdırabilece�
 
 Bir normal ifadede ters eğik çizgi karakteri ( \\ ), kendisini izleyen karakterin özel bir karakter olduğunu (aşağıdaki tabloda gösterildiği gibi) veya tam olarak yorumlanması gerektiğini gösterir. Daha fazla bilgi için bkz. [karakter kaçışları](character-escapes-in-regular-expressions.md).
 
-|Kaçan karakter|Açıklama|Desen|Eşleşmeler|
+|Kaçan karakter|Description|Desen|Eşleşmeler|
 |-----------------------|-----------------|-------------|-------------|
 |`\a`|Bir bell karakterle eşleşir, \u0007.|`\a`|`"Error!" + '\u0007'` içinde `"\u0007"`|
 |`\b`|Bir karakter sınıfında, geri al tuşuyla eşleşir, \u0008.|`[\b]{3,}`|`"\b\b\b\b"` içinde `"\b\b\b\b"`|
@@ -56,7 +57,7 @@ Bir normal ifadede ters eğik çizgi karakteri ( \\ ), kendisini izleyen karakte
 
 Bir karakter sınıfı, karakter kümelerinden herhangi biriyle eşleşir. Karakter sınıfları aşağıdaki tabloda listelenen dil öğelerini içerir: Daha fazla bilgi için bkz. [karakter sınıfları](character-classes-in-regular-expressions.md).
 
-|Karakter sınıfı|Açıklama|Desen|Eşleşmeler|
+|Karakter sınıfı|Description|Desen|Eşleşmeler|
 |---------------------|-----------------|-------------|-------------|
 |`[`*character_group*`]`|*Character_group* bir tek karakterle eşleşir. Varsayılan olarak, eşleşme büyük/küçük harf duyarlıdır.|`[ae]`|`"gray"` içinde `"a"`<br /><br /> `"a"``"e"`içinde,`"lane"`|
 |`[^`*character_group*`]`|Değilleme: *character_group* olmayan herhangi bir tek karakterle eşleşir. Varsayılan olarak, *character_group* karakterler büyük/küçük harfe duyarlıdır.|`[^aei]`|`"r"`, `"g"` , `"n"` içinde `"reign"`|
@@ -75,7 +76,7 @@ Bir karakter sınıfı, karakter kümelerinden herhangi biriyle eşleşir. Karak
 
 Yer işaretleri veya atomik sıfır genişlik onayları, dizedeki geçerli konuma bağlı olarak eşleşmenin başarılı veya başarısız olmasına neden olurlar, ancak altyapının dize boyunca ilerlemesine veya karakterleri tüketmesine neden olmazlar. Aşağıdaki tabloda listelenen meta karakterler tutturuculardır. Daha fazla bilgi için bkz. [Tutturucular](anchors-in-regular-expressions.md).
 
-|Onaylama işlemi|Açıklama|Desen|Eşleşmeler|
+|Onaylama işlemi|Description|Desen|Eşleşmeler|
 |---------------|-----------------|-------------|-------------|
 |`^`|Varsayılan olarak, eşleşme dizenin başlangıcında başlatılmalıdır; çok satırlı modda, satırın başlangıcında başlamalıdır.|`^\d{3}`|`"901-333-"` içinde `"901"`|
 |`$`|Varsayılan olarak, eşleşme dizenin sonunda veya dizenin sonundan önce gerçekleşmelidir `\n` ; çok satırlı modda, satırın sonundan önce veya satırın sonundaki öncesinde gerçekleşmelidir `\n` .|`-\d{3}$`|`"-901-333"` içinde `"-333"`|
@@ -90,7 +91,7 @@ Yer işaretleri veya atomik sıfır genişlik onayları, dizedeki geçerli konum
 
 Yapıları gruplandırma, normal bir ifadenin alt ifadelerini açıklar ve tipik olarak bir giriş dizesinin alt dizelerini yakalar. Yapıları gruplandırma aşağıdaki tabloda listelenen dil öğelerini içerir. Daha fazla bilgi için bkz. [yapıları gruplandırma](grouping-constructs-in-regular-expressions.md).
 
-|Yapıyı gruplandırma|Açıklama|Desen|Eşleşmeler|
+|Yapıyı gruplandırma|Description|Desen|Eşleşmeler|
 |------------------------|-----------------|-------------|-------------|
 |`(`alt *ifade*`)`|Eşleşen alt ifadeyi yakalar ve buna bir tabanlı bir sıra numarası atar.|`(\w)\1`|`"deep"` içinde `"ee"`|
 |`(?<`*ad* `>` alt *ifade*`)`<br /> veya <br />`(?'`*ad* `'` alt *ifade*`)`|Eşleşen alt ifadeyi adlandırılmış bir gruba yakalar.|`(?<double>\w)\k<double>`|`"deep"` içinde `"ee"`|
@@ -107,7 +108,7 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini açıklar ve tipik
 
 Niceleyici, önceki öğenin (karakter, grup veya karakter sınıfı olabilir) kaç örneğinin oluşacak eşleme için giriş dizesinde mevcut olması gerektiğini belirtir. Miktar niceleyiciler aşağıdaki tabloda listelenen dil öğelerini içerir. Daha fazla bilgi için bkz. [nicelik belirteçleri](quantifiers-in-regular-expressions.md).
 
-|Miktar Niceleyici|Açıklama|Desen|Eşleşmeler|
+|Miktar Niceleyici|Description|Desen|Eşleşmeler|
 |----------------|-----------------|-------------|-------------|
 |`*`|Önceki öğeyle sıfır kez veya daha fazla eşleşir.|`\d*\.\d`|`".0"`, `"19.9"`, `"219.9"`|
 |`+`|Önceki öğeyle bir kez veya daha fazla eşleşir.|`"be+"`|`"bee"` içinde `"been"` , `"be"` içinde `"bent"`|
@@ -126,7 +127,7 @@ Niceleyici, önceki öğenin (karakter, grup veya karakter sınıfı olabilir) k
 
 Yeniden başvuru, aynı normal ifadede daha sonra tanımlanabilecek alt ifadeyle daha önce eşleşmesine olanak sağlar. Aşağıdaki tabloda, .NET 'teki normal ifadeler tarafından desteklenen geri başvuru yapıları listelenmektedir. Daha fazla bilgi için bkz. [Backreference yapıları](backreference-constructs-in-regular-expressions.md).
 
-|Yeniden başvuru yapısı|Açıklama|Desen|Eşleşmeler|
+|Yeniden başvuru yapısı|Description|Desen|Eşleşmeler|
 |-----------------------------|-----------------|-------------|-------------|
 |`\`*sayı*|Yeniden başvuru. Numaralandırılmış ifadenin değeriyle eşleşir.|`(\w)\1`|`"seek"` içinde `"ee"`|
 |`\k<`*ad*`>`|Adlandırılan yeniden başvuru. Adlandırılmış ifadenin değeriyle eşleşir.|`(?<char>\w)\k<char>`|`"seek"` içinde `"ee"`|
@@ -135,7 +136,7 @@ Yeniden başvuru, aynı normal ifadede daha sonra tanımlanabilecek alt ifadeyle
 
 Değişim yapıları, ve/veya eşleştirmeyi etkinleştirmek üzere bir normal ifadeyi değiştirir. Bu yapılar aşağıdaki tabloda listelenen dil öğelerini içerir. Daha fazla bilgi için bkz. [değişim yapıları](alternation-constructs-in-regular-expressions.md).
 
-|Değişim yapısı|Açıklama|Desen|Eşleşmeler|
+|Değişim yapısı|Description|Desen|Eşleşmeler|
 |---------------------------|-----------------|-------------|-------------|
 |<code>&#124;</code>|Dikey çubuk () karakteriyle ayrılmış herhangi bir öğeyle eşleşir <code>&#124;</code> .|<code>th(e&#124;is&#124;at)</code>|`"the"``"this"`içinde,`"this is the day."`|
 |`(?(`*ifade* `)` *Evet* <code>&#124;</code> *Hayır*`)`|*Expression* ile belirlenen normal ifade deseninin eşleşiyorsa *Evet* ile eşleşir; Aksi takdirde, isteğe bağlı *hiçbir* bölüm ile eşleşir. *ifade* sıfır genişlikli bir onaylama olarak yorumlanır.|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|`"A10"``"910"`içinde,`"A10 C103 910"`|
@@ -162,8 +163,8 @@ Normal ifade sisteminin normal ifade modellerini nasıl denetleyeceğiyle ilgili
 
 Satır içi seçeneği iki şekilde belirtebilirsiniz:
 
-- Bir [miscellaneous construct](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)` seçenek veya seçenek kümesinden önce gelen eksi işareti (-), bu seçenekleri devre dışı bırakır. Örneğin, `(?i-mn)` büyük/küçük harf duyarsız eşleştirmeyi ( `i` ) açar, çok satırlı modu ( `m` ) kapatır ve adsız grup yakalamalarını ( `n` ) kapatır. Seçenek, seçeneğin tanımlandığı noktadan itibaren normal ifade deseni için geçerlidir ve desenin sonuna kadar ya da bir başka yapının seçeneği tersine çevirdiği noktaya kadar etkilidir.
-- [Gruplandırma yapısı](grouping-constructs-in-regular-expressions.md)alt ifadesini kullanarak `(?imnsx-imnsx:` *subexpression* `)` , yalnızca belirtilen grup için seçenekleri tanımlar.
+- Bir [](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)` seçenek veya seçenek kümesinden önce gelen eksi işareti (-), bu seçenekleri devre dışı bırakır. Örneğin, `(?i-mn)` büyük/küçük harf duyarsız eşleştirmeyi ( `i` ) açar, çok satırlı modu ( `m` ) kapatır ve adsız grup yakalamalarını ( `n` ) kapatır. Seçenek, seçeneğin tanımlandığı noktadan itibaren normal ifade deseni için geçerlidir ve desenin sonuna kadar ya da bir başka yapının seçeneği tersine çevirdiği noktaya kadar etkilidir.
+- [Gruplandırma yapısı](grouping-constructs-in-regular-expressions.md)alt ifadesini kullanarak `(?imnsx-imnsx:`  `)` , yalnızca belirtilen grup için seçenekleri tanımlar.
 
 .NET normal ifade motoru aşağıdaki satır içi seçenekleri destekler:
 

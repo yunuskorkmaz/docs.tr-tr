@@ -1,6 +1,7 @@
 ---
 title: Normal Ifade davranışı
 ms.date: 03/30/2017
+ms.topic: conceptual
 dev_langs:
 - csharp
 - vb
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-ms.openlocfilehash: 1e5d2d40f52220a8fff40eb19a24d8b2efd3cab5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4007813f2c40c78e3b5e426bed39ac6b6f3747bf
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829706"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98692987"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Normal ifade davranışının ayrıntıları
 
@@ -45,7 +46,7 @@ ms.locfileid: "94829706"
 
      Bu normal ifadenin doyumsuz ve geç sürümleri, aşağıdaki tabloda gösterildiği gibi tanımlanmıştır:
 
-    |Desen|Açıklama|
+    |Desen|Description|
     |-------------|-----------------|
     |`.+` (Greedy nicelik belirteci)|Herhangi bir karakterin en az bir oluşumunu eşleştirin. Bu, normal ifade altyapısının tüm dizeyi eşleştirmesine ve ardından düzenin geri kalanını eşleştirmek için gerektiğinde geri izlemesine neden olur.|
     |`.+?` (yavaş nicelik belirteci)|Herhangi bir karakterin en az bir oluşumunu eşleştirin, ancak mümkün olduğunca az eşleşir.|
@@ -61,7 +62,7 @@ ms.locfileid: "94829706"
 
      Normal ifade `\b[A-Z]+\b(?=\P{P})` Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.
 
-    |Desen|Açıklama|
+    |Desen|Description|
     |-------------|-----------------|
     |`\b`|Bir sözcük sınırında eşleşmeye başla.|
     |`[A-Z]+`|Herhangi bir alfabetik karakterle bir veya daha fazla kez eşleştirin. <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>Yöntemi seçeneğiyle çağrıldığı için <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> karşılaştırma büyük/küçük harfe duyarlıdır.|
@@ -77,7 +78,7 @@ ms.locfileid: "94829706"
 
      Normal ifade deseninin, `\b(?!non)\w+\b` Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.
 
-    |Desen|Açıklama|
+    |Desen|Description|
     |-------------|-----------------|
     |`\b`|Bir sözcük sınırında eşleşmeye başla.|
     |`(?!non)`|Geçerli dizenin "olmayan" ile başlamadığından emin olmak için öne bakın. Varsa, eşleşme başarısız olur.|
@@ -93,7 +94,7 @@ ms.locfileid: "94829706"
 
      Normal ifade deseninin, aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.
 
-    |Desen|Açıklama|
+    |Desen|Description|
     |-------------|-----------------|
     |`^`|Bir satırın başlangıcında eşleşmeyi başlatın.|
     |`(?<Pvt>\<PRIVATE\>\s)?`|Dizenin sıfır veya bir oluşumunu, `<PRIVATE>` ardından bir boşluk karakteri ile eşleştirin. Eşleşmeyi adlı bir yakalama grubuyla atayın `Pvt` .|
@@ -124,14 +125,14 @@ ms.locfileid: "94829706"
 
      Sağdan sola eşleştirme hakkında daha fazla bilgi için bkz. [normal Ifade seçenekleri](regular-expression-options.md).
 
-- Pozitif ve negatif geriye yönelik: `(?<=` *subexpression* `)` pozitif geriye yönelik alt ifade ve negatif geri `(?<!` *subexpression* `)` gerin alt ifadesi. Bu özellik, bu konuda daha önce bahsedilen ileri yönlü olarak benzerdir. Normal ifade altyapısı tam sağdan sola eşleştirmeye izin verdiğinden, normal ifadeler sınırsız lookbehinds izin verir. İç içe geçmiş alt ifade bir dış ifadenin üst kümesi olduğunda, nicelik sayısını aşmamak için pozitif ve negatif geriye yönelik Ayrıca kullanılabilir. İç içe geçmiş nicelik belirteçleri olan normal ifadeler genellikle düşük performans sunar. Örneğin, aşağıdaki örnek bir dizenin bir alfasayısal karakterle başladığını ve bittiğini doğrular ve dizedeki diğer tüm karakterler daha büyük bir alt kümeyle biridir. E-posta adreslerini doğrulamak için kullanılan normal ifadenin bir bölümünü oluşturur; daha fazla bilgi için bkz. [nasıl yapılır: dizelerin geçerli e-posta biçiminde olduğunu doğrulama](how-to-verify-that-strings-are-in-valid-email-format.md).
+- Pozitif ve negatif geriye yönelik: `(?<=`  `)` pozitif geriye yönelik alt ifade ve negatif geri `(?<!`  `)` gerin alt ifadesi. Bu özellik, bu konuda daha önce bahsedilen ileri yönlü olarak benzerdir. Normal ifade altyapısı tam sağdan sola eşleştirmeye izin verdiğinden, normal ifadeler sınırsız lookbehinds izin verir. İç içe geçmiş alt ifade bir dış ifadenin üst kümesi olduğunda, nicelik sayısını aşmamak için pozitif ve negatif geriye yönelik Ayrıca kullanılabilir. İç içe geçmiş nicelik belirteçleri olan normal ifadeler genellikle düşük performans sunar. Örneğin, aşağıdaki örnek bir dizenin bir alfasayısal karakterle başladığını ve bittiğini doğrular ve dizedeki diğer tüm karakterler daha büyük bir alt kümeyle biridir. E-posta adreslerini doğrulamak için kullanılan normal ifadenin bir bölümünü oluşturur; daha fazla bilgi için bkz. [nasıl yapılır: dizelerin geçerli e-posta biçiminde olduğunu doğrulama](how-to-verify-that-strings-are-in-valid-email-format.md).
 
      [!code-csharp[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookbehind1.cs#5)]
      [!code-vb[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookbehind1.vb#5)]
 
      Normal ifade ``^[A-Z0-9]([-!#$%&'.*+/=?^`{}|~\w])*(?<=[A-Z0-9])$`` Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.
 
-    |Desen|Açıklama|
+    |Desen|Description|
     |-------------|-----------------|
     |`^`|Dizenin başlangıcında eşleşmeyi başlatın.|
     |`[A-Z0-9]`|Herhangi bir sayısal veya alfasayısal karakter eşleştirin. (Karşılaştırma büyük/küçük harfe duyarlıdır.)|

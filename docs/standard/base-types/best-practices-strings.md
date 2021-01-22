@@ -2,6 +2,7 @@
 title: .NET 'teki dizeleri karşılaştırmak için en iyi yöntemler
 description: .NET uygulamalarında dizelerin etkin bir şekilde nasıl karşılaştırılacağını öğrenin.
 ms.date: 05/01/2019
+ms.topic: conceptual
 dev_langs:
 - csharp
 - vb
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: 840e5b0e6a523ac8e3f24586d4980958cd58f613
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: 7e495edbf3cdfe5886a2dfbf06eee04d4f6a7567
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970895"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98693117"
 ---
 # <a name="best-practices-for-comparing-strings-in-net"></a>.NET 'teki dizeleri karşılaştırmak için en iyi yöntemler
 
@@ -54,7 +55,7 @@ Dizeleri karşılaştırdığınızda aşağıdaki uygulamalardan kaçının:
 
 .NET 'teki dize düzenleme yöntemlerinin çoğu aşırı yüklenmiştir. Genellikle bir veya daha fazla aşırı yükleme varsayılan ayarları kabul ederken diğerleri varsayılanları kabul etmez ve bunun yerine dizelerin tam olarak nasıl karşılaştırılacağını veya değiştirileceğini tanımlar. Varsayılan değerleri kullanmayan yöntemlerin çoğu, dize karşılaştırma kurallarını kültür ve büyük/küçük harfe göre açıkça belirten bir numaralandırma olan <xref:System.StringComparison> türü bir parametre içerir. Aşağıdaki tablo, <xref:System.StringComparison> numaralandırma üyelerini açıklar.
 
-|StringComparison üyesi|Açıklama|
+|StringComparison üyesi|Description|
 |-----------------------------|-----------------|
 |<xref:System.StringComparison.CurrentCulture>|Geçerli kültürü kullanarak büyük/küçük harfe duyarlı bir karşılaştırma gerçekleştirir.|
 |<xref:System.StringComparison.CurrentCultureIgnoreCase>|Geçerli kültürü kullanarak büyük/küçük harfe duyarsız bir karşılaştırma gerçekleştirir.|
