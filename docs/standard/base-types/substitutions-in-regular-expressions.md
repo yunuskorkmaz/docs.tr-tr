@@ -1,6 +1,7 @@
 ---
 title: Normal İfadelerdeki Değişimler
 description: .NET 'teki normal ifadeler kullanılarak eşleşen metni değiştirmek için değişimler yapın. Değiştirmeler yalnızca değiştirme desenlerinde tanınan dil öğeleridir.
+ms.topic: conceptual
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-ms.openlocfilehash: f1cab01e7a6ee48bd01f65d4cc8a8a540fbabc61
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: aa889f449f2e020b8a7d90a50eb7a9a14d70f4e6
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734211"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98692662"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Normal İfadelerdeki Değişimler
 
@@ -26,7 +27,7 @@ Değiştirmeler yalnızca değiştirme desenlerinde tanınan dil öğeleridir. G
   
  .NET, aşağıdaki tabloda listelenen değiştirme öğelerini tanımlar.  
   
-|Değiştirme|Açıklama|  
+|Değiştirme|Description|  
 |------------------|-----------------|  
 |$ *sayısından*|*Sayı* ile tanımlanan yakalama grubuyla eşleşen son alt dizeyi içerir; burada *sayı* , değiştirme dizesinde bir ondalık değerdir. Daha fazla bilgi için bkz. [numaralandırılmış bir grubu değiştirme](#substituting-a-numbered-group).|  
 |$ { *Name* }|`(?<`Değiştirme dizesinde *ada* göre belirlenen adlandırılmış grupla eşleşen son alt dizeyi içerir `> )` . Daha fazla bilgi için bkz. [adlandırılmış bir grubu değiştirme](#substituting-a-named-group).|  
@@ -48,11 +49,11 @@ Değiştirmeler yalnızca değiştirme desenlerinde tanınan dil öğeleridir. G
 
 ## <a name="substituting-a-numbered-group"></a>Numaralandırılmış Bir Grubu Değiştirme  
 
- `$` *Sayı* dili öğesi, değiştirme dizesindeki yakalama grubuyla eşleşen son alt *number* dizeyi içerir; burada *sayı* yakalama grubunun dizinidir. Örneğin, değiştirme deseninin eşleşen alt `$1` dizenin ilk yakalanan grupla değiştirileceğini gösterir. Numaralandırılmış yakalama grupları hakkında daha fazla bilgi için bkz. [gruplandırma yapıları](grouping-constructs-in-regular-expressions.md).  
+ `$` *Sayı* dili öğesi, değiştirme dizesindeki yakalama grubuyla eşleşen son alt  dizeyi içerir; burada *sayı* yakalama grubunun dizinidir. Örneğin, değiştirme deseninin eşleşen alt `$1` dizenin ilk yakalanan grupla değiştirileceğini gösterir. Numaralandırılmış yakalama grupları hakkında daha fazla bilgi için bkz. [gruplandırma yapıları](grouping-constructs-in-regular-expressions.md).  
   
  İzleyen tüm basamaklar `$` , *sayı* grubuna ait olarak yorumlanır. Amacınız bu değilse, onun yerine adlandırılmış bir grup kullanabilirsiniz. Örneğin, yerine konacak dizeyi, `${1}1` `$11` İlk yakalanan grubun değeri olarak "1" numarasıyla birlikte tanımlamak için kullanın. Daha fazla bilgi için bkz. [adlandırılmış bir grubu değiştirme](#substituting-a-named-group).  
   
- Ad sözdizimini kullanarak açıkça atanan adlara sahip olan yakalama grupları `(?<` *name* `>)` , soldan sağa doğru bir şekilde numaralandırılır. Adlandırılmış gruplar da, son adlandırılmamış grubun dizininin bir büyüğünden başlanarak, soldan sağa doğru numaralandırılır. Örneğin, normal ifadede `(\w)(?<digit>\d)` , `digit` adlandırılmış grubun dizini 2 ' dir.  
+ Ad sözdizimini kullanarak açıkça atanan adlara sahip olan yakalama grupları `(?<`  `>)` , soldan sağa doğru bir şekilde numaralandırılır. Adlandırılmış gruplar da, son adlandırılmamış grubun dizininin bir büyüğünden başlanarak, soldan sağa doğru numaralandırılır. Örneğin, normal ifadede `(\w)(?<digit>\d)` , `digit` adlandırılmış grubun dizini 2 ' dir.  
   
  *Sayı* , normal ifade düzeninde tanımlı geçerli bir yakalama grubu belirtmezse, `$` *sayı* her eşleşmeyi değiştirmek için kullanılan bir sabit karakter dizisi olarak yorumlanır.  
   
@@ -63,7 +64,7 @@ Değiştirmeler yalnızca değiştirme desenlerinde tanınan dil öğeleridir. G
   
  Normal ifade deseninin, `\p{Sc}*(\s?\d+[.,]?\d*)\p{Sc}*` Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Açıklama|  
+|Desen|Description|  
 |-------------|-----------------|  
 |`\p{Sc}*`|Sıfır veya daha fazla para birimi simgesi karakterini eşleştirin.|  
 |`\s?`|Sıfır veya bir beyaz boşluk karakterini eşleştirin.|  
@@ -74,20 +75,20 @@ Değiştirmeler yalnızca değiştirme desenlerinde tanınan dil öğeleridir. G
 
 ## <a name="substituting-a-named-group"></a>Adlandırılmış Bir Grubu Değiştirme  
 
- Ad `${` *name* `}` Language öğesi, ad yakalama grubuyla eşleşen son alt dizenin *name* yerini alır; burada *ad* , ad `(?<` *name* dili öğesi tarafından tanımlanan yakalama grubunun adıdır `>)` . Adlandırılmış yakalama grupları hakkında daha fazla bilgi için bkz. [gruplandırma yapıları](grouping-constructs-in-regular-expressions.md).  
+ Ad `${`  `}` Language öğesi, ad yakalama grubuyla eşleşen son alt dizenin  yerini alır; burada *ad* , ad `(?<`  dili öğesi tarafından tanımlanan yakalama grubunun adıdır `>)` . Adlandırılmış yakalama grupları hakkında daha fazla bilgi için bkz. [gruplandırma yapıları](grouping-constructs-in-regular-expressions.md).  
   
  *Ad* , normal ifade modelinde tanımlanmış, ancak rakamlardan oluşan bir adlandırılmış yakalama grubu belirtmezse, `${` *ad* `}` numaralandırılmış bir grup olarak yorumlanır.  
   
  *Ad* , geçerli bir adlandırılmış yakalama grubu veya normal ifade düzeninde tanımlı geçerli bir Numaralandırılmış yakalama grubu belirtiyorsa, `${` *ad* `}` her eşleşmeyi değiştirmek için kullanılan bir sabit karakter dizisi olarak yorumlanır.  
   
- Aşağıdaki örnek, `${` *name* `}` bir ondalık değerden para birimi sembolünü atamak için ad değiştirme 'yi kullanır. Bir parasal değerin başında ve sonunda bulunan para birimi simgesini kaldırır ve en yaygın iki ondalık ayırıcıyı ("." ve ",") tanır.  
+ Aşağıdaki örnek, `${`  `}` bir ondalık değerden para birimi sembolünü atamak için ad değiştirme 'yi kullanır. Bir parasal değerin başında ve sonunda bulunan para birimi simgesini kaldırır ve en yaygın iki ondalık ayırıcıyı ("." ve ",") tanır.  
   
  [!code-csharp[Conceptual.RegEx.Language.Substitutions#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.substitutions/cs/namedgroup1.cs#2)]
  [!code-vb[Conceptual.RegEx.Language.Substitutions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.substitutions/vb/namedgroup1.vb#2)]  
   
  Normal ifade deseninin, `\p{Sc}*(?<amount>\s?\d[.,]?\d*)\p{Sc}*` Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Açıklama|  
+|Desen|Description|  
 |-------------|-----------------|  
 |`\p{Sc}*`|Sıfır veya daha fazla para birimi simgesi karakterini eşleştirin.|  
 |`\s?`|Sıfır veya bir beyaz boşluk karakterini eşleştirin.|  
@@ -107,7 +108,7 @@ Değiştirmeler yalnızca değiştirme desenlerinde tanınan dil öğeleridir. G
   
  Normal ifade deseninin, `\b(\d+)(\.(\d+))?` Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Açıklama|  
+|Desen|Description|  
 |-------------|-----------------|  
 |`\b`|Eşleştirmeyi bir sözcük sınırının başlangıcında başlatın.|  
 |`(\d+)`|Bir veya daha fazla ondalık basamağı eşleştirin. Bu ilk yakalama grubudur.|  
@@ -126,7 +127,7 @@ Değiştirmeler yalnızca değiştirme desenlerinde tanınan dil öğeleridir. G
   
  Normal ifade deseninin, `^(\w+\s?)+$` Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Açıklama|  
+|Desen|Description|  
 |-------------|-----------------|  
 |`^`|Eşlemeyi giriş dizesinin başından başlatın.|  
 |`(\w+\s?)+`|Bir veya birden çok sözcük karakteri desenini, ardından sıfır veya bir beyaz alan karakteri bir veya birden çok kez gelecek şekilde eşleştirin.|  
@@ -183,7 +184,7 @@ Değiştirmeler yalnızca değiştirme desenlerinde tanınan dil öğeleridir. G
   
  Normal ifade deseninin, `\b(\w+)\s\1\b` Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Açıklama|  
+|Desen|Description|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında eşleşmeye başla.|  
 |`(\w+)`|Bir veya daha fazla sözcük karakteri eşleştir. Bu ilk yakalama grubudur.|  

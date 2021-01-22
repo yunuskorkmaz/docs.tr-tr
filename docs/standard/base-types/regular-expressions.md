@@ -1,6 +1,7 @@
 ---
 title: .NET normal Ifadeleri
 description: Belirli karakter düzenlerini bulmak, metni doğrulamak, metin alt dizeleriyle çalışmak & ayıklanan dizeleri .NET içindeki bir koleksiyona eklemek için normal ifadeleri kullanın.
+ms.topic: conceptual
 ms.date: 06/30/2020
 dev_langs:
 - csharp
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - .NET regular expressions
 - strings [.NET], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-ms.openlocfilehash: 6fa791005aa9fa9956a3169f8f9ddecfa201bcda
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ea6b16909b79236245b35238ad43d778eec3051a
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831344"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98692779"
 ---
 # <a name="net-regular-expressions"></a>.NET normal ifadeleri
 
@@ -91,7 +92,7 @@ Normal ifade dili hakkında daha fazla bilgi için bkz. [normal Ifade dili-hızl
  Normal ifade deseninin `\b(\w+?)\s\1\b` Şu şekilde yorumlanması için:  
   
 > [!div class="mx-tdCol2BreakAll"]
-> |Desen|Yorumlama|  
+> |Desen|Yorum|  
 > |-|-|
 > |`\b`|Bir sözcük sınırında başla.|  
 > |`(\w+?)`|Bir veya daha fazla sözcük karakterini ve mümkün olduğunca az karakter eşleştirin. Birlikte, olarak başvurulabilen bir grup oluşturur `\1` .|  
@@ -113,7 +114,7 @@ Normal ifade dili hakkında daha fazla bilgi için bkz. [normal Ifade dili-hızl
  Geçerli kültürü Ingilizce-Birleşik Devletler (en-US) olan bir bilgisayarda, örnek dinamik ifadeyi dinamik olarak oluşturur `\$\s*[-+]?([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)` . Bu normal ifade deseni aşağıdaki şekilde yorumlanabilir:  
 
 > [!div class="mx-tdCol2BreakAll"]
-> |Desen|Yorumlama|  
+> |Desen|Yorum|  
 > |-|-|  
 > |`\$`|Giriş dizesinde dolar simgesinin () tek bir oluşumunu arayın `$` . Normal ifade deseni dizesi, dolar simgesinin bir normal ifade yer işareti yerine sabit değer olarak yorumlanmasını sağlamak için bir ters eğik çizgi içerir. ( `$` Tek başına simge, normal ifade altyapısının bir dizenin sonunda eşleşme başlatmaya başlaması gerektiğini gösterir.) Geçerli kültürün para birimi simgesinin bir normal ifade simgesi olarak yanlış yorumlanmadığından emin olmak için örnek, <xref:System.Text.RegularExpressions.Regex.Escape%2A?displayProperty=nameWithType> karakteri kaçış yöntemini çağırır.|  
 > |`\s*`|Bir boşluk karakterin sıfır veya daha fazla oluşumunu arayın.|  
