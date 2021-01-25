@@ -3,12 +3,12 @@ title: .NET SDK telemetrisi
 description: Analiz için kullanım bilgilerini toplayan .NET SDK telemetrisi özelliklerini, hangi verilerin toplandığı ve devre dışı bırakılacağını bulun.
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: 4f137822c61e1a04eccd28ebd0cd56c04f4a85e2
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 137b703dc9369f09fb535af40edf057e4e02117a
+ms.sourcegitcommit: 2b878d7011306b215dbf3d5dc9c1e78355a6dcd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94633887"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98757843"
 ---
 # <a name="net-sdk-telemetry"></a>.NET SDK telemetrisi
 
@@ -18,7 +18,7 @@ Toplanan veriler, [Creative Commons Attribution Lisansı](https://creativecommon
 
 ## <a name="scope"></a>Kapsam
 
-`dotnet` iki işleve sahiptir: uygulamaları çalıştırmak ve CLı komutlarını yürütmek için. *isn't collected* `dotnet` Aşağıdaki biçimde bir uygulamayı başlatmak için kullanılırken telemetri toplanmaz:
+`dotnet` iki işleve sahiptir: uygulamaları çalıştırmak ve CLı komutlarını yürütmek için.  `dotnet` Aşağıdaki biçimde bir uygulamayı başlatmak için kullanılırken telemetri toplanmaz:
 
 - `dotnet [path-to-app].dll`
 
@@ -33,6 +33,9 @@ Telemetri, [.net CLI komutlarının](index.md)herhangi biri kullanılırken *top
 .NET SDK telemetri özelliği varsayılan olarak etkindir. Telemetri özelliğini devre dışı bırakmak için, `DOTNET_CLI_TELEMETRY_OPTOUT` ortam değişkenini veya olarak ayarlayın `1` `true` .
 
 Başarılı bir yükleme gerçekleştiğinde .NET SDK yükleyicisi tarafından tek bir telemetri girişi de gönderilir. Devre dışı bırakmak için `DOTNET_CLI_TELEMETRY_OPTOUT` .NET SDK 'yı yüklemeden önce ortam değişkenini ayarlayın.
+
+> [!IMPORTANT]
+> Yükleyiciyi başlattıktan sonra devre dışı bırakmak için: yükleyiciyi kapatın, ortam değişkenini ayarlayın ve ardından yükleyiciyi bu değer kümesiyle yeniden çalıştırın.
 
 ## <a name="disclosure"></a>Savunmasız
 

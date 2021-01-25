@@ -2,18 +2,18 @@
 title: DotNet test komutu
 description: DotNet test komutu, belirli bir projedeki birim testlerini yürütmek için kullanılır.
 ms.date: 04/29/2020
-ms.openlocfilehash: 4834da766bd052f44127a72635b65866eb7e3352
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 2671cbe6f610cfa8aa98e63e67f3240a1650cd6b
+ms.sourcegitcommit: 2b878d7011306b215dbf3d5dc9c1e78355a6dcd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189160"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98757882"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri
 
-## <a name="name"></a>Ad
+## <a name="name"></a>Name
 
 `dotnet test` -Birim testlerini yürütmek için kullanılan .NET test sürücüsü.
 
@@ -38,7 +38,7 @@ dotnet test [<PROJECT> | <SOLUTION> | <DIRECTORY> | <DLL>]
 dotnet test -h|--help
 ```
 
-## <a name="description"></a>Description
+## <a name="description"></a>Açıklama
 
 `dotnet test`Komut, belirli bir çözümde birim testlerini yürütmek için kullanılır. `dotnet test`Komut çözümü oluşturur ve çözümdeki her test projesi için bir test ana bilgisayarı uygulaması çalıştırır. Test ana bilgisayarı, test çerçevesini (örneğin, MSTest, NUnit veya xUnit) kullanarak belirtilen projedeki testleri yürütür ve her testin başarısını veya başarısızlığını bildirir. Tüm testler başarılı olursa, Test Çalıştırıcısı çıkış kodu olarak 0 döndürür; Aksi takdirde, herhangi bir test başarısız olursa, 1 döndürür.
 
@@ -249,9 +249,9 @@ Test projeleri, `<PackageReference>` Aşağıdaki örnek proje dosyasında gör�
 
 | Test çerçevesi | Desteklenen özellikler                                                                                      |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
-| MSTest         | <ul><li>FullyQualifiedName</li><li>Ad</li><li>Sınıf</li><li>Öncelik</li><li>TestCategory</li></ul> |
-| xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>Lerdir</li></ul>                                   |
-| NUnit          | <ul><li>FullyQualifiedName</li><li>Ad</li><li>TestCategory</li><li>Öncelik</li></ul>                                   |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>Name</li><li>Sınıf</li><li>Öncelik</li><li>TestCategory</li></ul> |
+| xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>Kategori</li></ul>                                 |
+| NUnit          | <ul><li>FullyQualifiedName</li><li>Name</li><li>TestCategory</li><li>Öncelik</li></ul>                                   |
 
 , `<operator>` Özelliği ve değeri arasındaki ilişkiyi açıklar:
 

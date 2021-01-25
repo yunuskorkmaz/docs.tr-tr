@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 11c04441dcec260f0bfb90f6ed2b919b1545b382
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 27c6353f8f71254a505b434921f4b1e61e64cdda
+ms.sourcegitcommit: 2b878d7011306b215dbf3d5dc9c1e78355a6dcd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83721300"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98758170"
 ---
 ### <a name="modernization-of-the-folderbrowserdialog"></a>FolderBrowserDialog 'u modernleştirme
 
@@ -16,7 +16,7 @@ ms.locfileid: "83721300"
 
 ![.NET Framework FolderBrowserDialogControl](~/docs/images/core-changes/windowsforms/modernized-folderbrowserdialog/folderdlg-framework.png)
 
-.NET Core 3,0 ' de, kullanıcılara Windows Vista 'da tanıtılan daha yeni bir COM tabanlı denetim Windows Forms:
+.NET Core 3,0 ' de Windows Forms, Windows Vista 'da tanıtılan daha yeni bir COM tabanlı denetim kullanır:
 
 ![.NET Core 'da FolderBrowserDialogControl](~/docs/images/core-changes/windowsforms/modernized-folderbrowserdialog/folderdlg-core.png)
 

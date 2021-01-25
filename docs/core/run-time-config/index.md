@@ -2,12 +2,12 @@
 title: Çalışma zamanı yapılandırma seçenekleri
 description: Çalışma zamanı yapılandırma ayarlarını kullanarak .NET Core uygulamalarını nasıl yapılandıracağınızı öğrenin.
 ms.date: 01/21/2020
-ms.openlocfilehash: 21673a221d0f21202febf4730b955da66132d5f7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 5e9f292476cf953c3e63bb8e89268f7cc06b3bfc
+ms.sourcegitcommit: 2b878d7011306b215dbf3d5dc9c1e78355a6dcd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538204"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98757856"
 ---
 # <a name="net-core-run-time-configuration-settings"></a>.NET Core çalışma zamanı yapılandırma ayarları
 
@@ -37,7 +37,7 @@ Belgelerin bu bölümündeki makaleler, bir kategoriye göre düzenlenir, örne�
 
 ## <a name="runtimeconfigjson"></a>Üzerinde runtimeconfig.js
 
-Bir proje [oluşturulduğunda, çıkış](../tools/dotnet-build.md)dizininde bir *[AppName] .runtimeconfig.js* dosyası oluşturulur. Dosyadaki bir *runtimeconfig.template.js* proje dosyası ile aynı klasörde mevcutsa, içerdiği tüm yapılandırma seçenekleri dosyada *[AppName] .runtimeconfig.js* birleştirilir. Uygulamayı kendiniz oluşturuyorsanız, dosyadaki *runtimeconfig.template.js* yapılandırma seçeneklerini yerleştirin. Uygulamayı yalnızca çalıştırıyorsanız, dosyayı doğrudan *[AppName] .runtimeconfig.js* dosyasına ekleyin.
+Bir proje [oluşturulduğunda, çıkış](../tools/dotnet-build.md)dizininde bir *[AppName] .runtimeconfig.js* dosyası oluşturulur. Dosyadaki bir *runtimeconfig.template.js* proje dosyası ile aynı klasörde mevcutsa, içerdiği tüm yapılandırma seçenekleri *[AppName] .runtimeconfig.js* dosyasına eklenir. Uygulamayı kendiniz oluşturuyorsanız, dosyadaki *runtimeconfig.template.js* yapılandırma seçeneklerini yerleştirin. Uygulamayı yalnızca çalıştırıyorsanız, dosyayı doğrudan *[AppName] .runtimeconfig.js* dosyasına ekleyin.
 
 > [!NOTE]
 > Dosyadaki *[AppName] .runtimeconfig.js* , sonraki derlemelerde üzerine yazılır.
@@ -88,7 +88,7 @@ Seçenekleri şablon JSON dosyasına yerleştiriyorsanız, `runtimeOptions` öze
 
 ## <a name="msbuild-properties"></a>MSBuild özellikleri
 
-Bazı çalışma zamanı yapılandırma seçenekleri, SDK stili .NET Core projelerinin *. csproj* veya *. vbproj* dosyasındaki MSBuild özellikleri kullanılarak ayarlanabilir. MSBuild özellikleri dosyadaki *runtimeconfig.template.js* ayarlanan seçeneklere göre önceliklidir. Ayrıca, derleme zamanında dosyadaki *[AppName] .runtimeconfig.js* ayarladığınız seçeneklerin üzerine yazar.
+Bazı çalışma zamanı yapılandırma seçenekleri, SDK stili .NET Core projelerinin *. csproj* veya *. vbproj* dosyasındaki MSBuild özellikleri kullanılarak ayarlanabilir. MSBuild özellikleri dosyadaki *runtimeconfig.template.js* ayarlanan seçeneklere göre önceliklidir.
 
 Aşağıda, çalışma zamanı davranışını yapılandırmak için MSBuild özelliklerine sahip örnek bir SDK stili proje dosyası verilmiştir:
 

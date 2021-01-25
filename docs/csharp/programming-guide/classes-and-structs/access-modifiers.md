@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: 557f5d9f302b08d32896b462e86ce1d96710ff36
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: d800116137e088a54edb221fb4f81ecd47b0278f
+ms.sourcegitcommit: 2b878d7011306b215dbf3d5dc9c1e78355a6dcd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474533"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98757869"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Erişim Değiştiricileri (C# Programlama Kılavuzu)
 
@@ -32,7 +32,7 @@ Tüm erişim değiştiricileri tüm bağlamlardaki tüm türler veya Üyeler iç
 
 ## <a name="class-and-struct-accessibility"></a>Sınıf ve yapı erişilebilirliği  
 
-Bir ad alanı içinde doğrudan tanımlanmış sınıflar ve yapılar (diğer bir deyişle, diğer sınıfların veya yapıların içinde iç içe olmayan diğer bir deyişle) ya da olabilir `public` `internal` . `Internal`, hiçbir erişim değiştiricisi belirtilmemişse varsayılandır.  
+Bir ad alanı içinde doğrudan tanımlanmış sınıflar ve yapılar (diğer bir deyişle, diğer sınıfların veya yapıların içinde iç içe olmayan diğer bir deyişle) ya da olabilir `public` `internal` . `internal` , hiçbir erişim değiştiricisi belirtilmemişse varsayılandır.
 
 İç içe sınıflar ve yapılar dahil yapı üyeleri, veya olarak bildirilemez `public` `internal` `private` . İç içe sınıflar ve yapılar dahil olmak üzere sınıf üyeleri,,,, `public` `protected internal` veya olabilir `protected` `internal` `private protected` `private` . İç içe sınıflar ve yapılar dahil olmak üzere sınıf ve yapı üyelerinin `private` Varsayılan olarak erişimi vardır. Özel iç içe türler, kapsayan tür dışından erişilebilir değildir.
 
@@ -71,14 +71,14 @@ Temsilciler sınıflar ve yapılar gibi davranır. Varsayılan olarak, `internal
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
-- [Sınıflar ve yapılar](./index.md)
+- [Sınıflar ve Yapılar](./index.md)
 - [Arabirimler](../interfaces/index.md)
-- [private](../../language-reference/keywords/private.md)
+- [özelleştirme](../../language-reference/keywords/private.md)
 - [genel](../../language-reference/keywords/public.md)
 - [internal](../../language-reference/keywords/internal.md)
 - [protected](../../language-reference/keywords/protected.md)
 - [protected internal](../../language-reference/keywords/protected-internal.md)
 - [private protected](../../language-reference/keywords/private-protected.md)
-- [sınıfı](../../language-reference/keywords/class.md)
+- [sınıf](../../language-reference/keywords/class.md)
 - [sýný](../../language-reference/builtin-types/struct.md)
 - [arayüz](../../language-reference/keywords/interface.md)
