@@ -2,18 +2,18 @@
 title: DotNet aracı geri yükleme komutu
 description: DotNet aracı geri yükleme komutu, makinenizde geçerli dizin için kapsamdaki .NET yerel araçları 'nı yükler.
 ms.date: 02/14/2020
-ms.openlocfilehash: 3425bc6b78fd53f578c209013f83b006305dbb81
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 87bdfb77cda361b800f107c565cbbed6ad75ec78
+ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96242935"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98794854"
 ---
 # <a name="dotnet-tool-restore"></a>dotnet tool restore
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .net Core 3,0 SDK ve sonraki sürümleri
 
-## <a name="name"></a>Adı
+## <a name="name"></a>Name
 
 `dotnet tool restore` -Geçerli dizin için kapsamdaki .NET yerel araçlarını yükleme.
 
@@ -22,14 +22,14 @@ ms.locfileid: "96242935"
 ```dotnetcli
 dotnet tool restore
     [--configfile <FILE>] [--add-source <SOURCE>]
-    [tool-manifest <PATH_TO_MANIFEST_FILE>] [--disable-parallel]
+    [--tool-manifest <PATH_TO_MANIFEST_FILE>] [--disable-parallel]
     [--ignore-failed-sources] [--no-cache] [--interactive]
     [-v|--verbosity <LEVEL>]
 
 dotnet tool restore -h|--help
 ```
 
-## <a name="description"></a>Açıklama
+## <a name="description"></a>Description
 
 `dotnet tool restore`Komutu, geçerli dizinin kapsamındaki araç bildirim dosyasını bulur ve içinde listelenen araçları kurar. Bildirim dosyaları hakkında daha fazla bilgi için bkz. [yerel araç yükleyip](global-tools.md#install-a-local-tool) [yerel bir araç çağırma](global-tools.md#invoke-a-local-tool).
 

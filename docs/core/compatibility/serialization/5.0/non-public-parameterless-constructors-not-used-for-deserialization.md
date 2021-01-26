@@ -2,12 +2,12 @@
 title: 'Son değişiklik: genel olmayan, parametresiz oluşturucular seri durumundan çıkarma için kullanılmaz'
 description: Genel olmayan ve parametresiz oluşturucuların artık JsonSerializer ile serisini kaldırma için kullanılmadığından, .NET 5,0 ' deki Son değişiklik hakkında bilgi edinin.
 ms.date: 10/18/2020
-ms.openlocfilehash: 6bdcc92c61008aa4ee27370bbac4dbf4ee3ef7c8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a2ea54b6a76692dae7d6e01b06b11218d66b1cd7
+ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761649"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98794698"
 ---
 # <a name="non-public-parameterless-constructors-not-used-for-deserialization"></a>Seri durumdan çıkarma için ortak olmayan, parametresiz oluşturucular kullanılmıyor
 
@@ -37,7 +37,7 @@ Bu oluşturuculardan hiçbiri kullanılabilir değilse, <xref:System.NotSupporte
 ## <a name="recommended-action"></a>Önerilen eylem
 
 - Türü sahibiyseniz ve mümkünse, parametresiz oluşturucuyu herkese açık hale getirin.
-- Aksi takdirde, `JsonConverter<T>` türü için bir uygulayın ve serisini kaldırma davranışını denetleyin.
+- Aksi takdirde, <xref:System.Text.Json.Serialization.JsonConverter%601> türü için bir uygulayın ve serisini kaldırma davranışını denetleyin. <xref:System.Text.Json.Serialization.JsonConverter%601>Söz konusu senaryoya yönelik C# erişilebilirlik kuralları buna izin verirseniz, bir uygulamadan ortak olmayan bir Oluşturucu çağırabilirsiniz.
 
 ## <a name="affected-apis"></a>Etkilenen API’ler
 

@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: e395122e59f17ed66bbd9d83b01610993f663ce1
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: a3a27c1baaab135108ef475d77c35d607c45fa82
+ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94915951"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98794798"
 ---
 # <a name="tutorial-create-a-net-console-application-using-visual-studio"></a>Öğretici: Visual Studio kullanarak bir .NET konsol uygulaması oluşturma
 
@@ -89,7 +89,7 @@ Kullanmak istediğiniz dil gösterilmiyorsa sayfanın en üstündeki dil seçici
 
 ## <a name="run-the-app"></a>Uygulamayı çalıştırma
 
-1. <kbd>Ctrl</kbd> + Programı hata ayıklamadan çalıştırmak için CTRL<kbd>F5</kbd> tuşuna basın.
+1. <kbd></kbd> + Programı hata ayıklamadan çalıştırmak için CTRL<kbd>F5</kbd> tuşuna basın.
 
    Bir konsol penceresi "Merhaba Dünya!" metniyle açılıyor ekranda yazdırılır.
 
@@ -108,11 +108,11 @@ Kullanıcıya adını istemek ve Tarih ve saat ile birlikte göstermek için uyg
 
    Bu kod, konsol penceresinde bir istem görüntüler ve ardından <kbd>ENTER</kbd> tuşuna basarak Kullanıcı bir dize girene kadar bekler. Bu dizeyi adlı bir değişkende depolar `name` . Ayrıca <xref:System.DateTime.Now?displayProperty=nameWithType> , geçerli yerel saati içeren özelliğinin değerini alır ve bunu adlı bir değişkene `date` ( `currentDate` Visual Basic) atar. Bu değerleri konsol penceresinde görüntüler. Son olarak, konsol penceresinde bir istem görüntüler ve <xref:System.Console.ReadKey(System.Boolean)?displayProperty=nameWithType> Kullanıcı girişini beklemek için yöntemini çağırır.
 
-   `\n`( `vbCrLf` Visual Basic), bir yeni satır karakterini temsil eder.
+   `\n`(Veya `vbCrLf` Visual Basic kodundaki) bir yeni satır karakterini temsil eder.
 
    `$`Bir dizenin önünde dolar işareti (), değişken adları gibi ifadeleri dizedeki küme ayraçları içine koymanıza imkan tanır. İfade değeri, ifadenin yerine dizeye eklenir. Bu söz dizimi, [enterpolasyonlu dizeler](../../csharp/language-reference/tokens/interpolated.md)olarak adlandırılır.
 
-1. <kbd>Ctrl</kbd> + Programı hata ayıklamadan çalıştırmak için CTRL<kbd>F5</kbd> tuşuna basın.
+1. <kbd></kbd> + Programı hata ayıklamadan çalıştırmak için CTRL<kbd>F5</kbd> tuşuna basın.
 
 1. Bir ad girip <kbd>ENTER</kbd> tuşuna basarak istemi yanıtlayın.
 

@@ -3,12 +3,12 @@ title: LINQ Sorgusu için Veri Kaynağı Etkinleştirme
 description: C# ' de LINQ 'ı genişletmeyi, istemcilerin bir veri kaynağını sorgulamasını kolaylaştıran LINQ düzeninde sorgulanmasını sağlamak Için nasıl genişlettireceğinizi öğrenin.
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-ms.openlocfilehash: d7d751c0584072e740b4e5292071e400a5020f82
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 84769e27e3f8b8d7ee30b79c219b180333337af9
+ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91202623"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98794835"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>LINQ Sorgusu için Veri Kaynağı Etkinleştirme
 
@@ -32,7 +32,7 @@ LINQ deseninin herhangi bir veri kaynağının sorgulanmasını sağlamak için 
   
 ### <a name="remote-data"></a>Uzak Veriler  
 
- Uzak bir veri kaynağının LINQ sorgulama özelliğinin etkinleştirilmesi için en iyi seçenek, <xref:System.Linq.IQueryable%601> arabirimini uygulamaktır. Ancak, bu, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] bir veri kaynağı için gibi bir sağlayıcının genişlemesiyle farklılık gösterir. Visual Studio 2008 ' de, gibi var olan LINQ teknolojilerini genişletmek için herhangi bir sağlayıcı modeli ve [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] diğer veri kaynağı türlerine ulaşılabilir.
+ Uzak bir veri kaynağının LINQ sorgulama özelliğinin etkinleştirilmesi için en iyi seçenek, <xref:System.Linq.IQueryable%601> arabirimini uygulamaktır. Ancak, bu, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] bir veri kaynağı için gibi bir sağlayıcının genişlemesiyle farklılık gösterir.
   
 ## <a name="iqueryable-linq-providers"></a>IQueryable LINQ Sağlayıcıları  
 

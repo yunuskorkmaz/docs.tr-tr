@@ -4,12 +4,12 @@ description: Bu gelişmiş öğreticide, ayrı olarak oluşturulan verileri ve a
 ms.date: 10/06/2020
 ms.technology: csharp-whats-new
 ms.custom: contperf-fy21q1
-ms.openlocfilehash: 730098bf599dfc855676c86ab7a6e7f3ef7658f1
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: be1c330973859df62cd4706e5f6f9ca4326fb221
+ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97513230"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98794817"
 ---
 # <a name="tutorial-use-pattern-matching-to-build-type-driven-and-data-driven-algorithms"></a>Öğretici: tür odaklı ve veri odaklı algoritmalar oluşturmak için model eşleştirmeyi kullanın.
 
@@ -152,7 +152,7 @@ Desenlerin kodun ve verilerin ayrı olduğu algoritmalar oluşturmanıza nasıl 
 - %50 ' den küçük veri yolları, fazladan $2,00 oranında ödeyin.
 - %90 ' den fazla tam veri yolları $1,00 indirimi elde edin.
 
-Bu kurallar, aynı anahtar ifadesinde **özellik düzeniyle** kullanılarak uygulanabilir. Özellik deseninin türü belirlendikten sonra nesnenin özellikleri incelenir. Bir için tek durum `Car` dört farklı durumda genişler:
+Bu kurallar, aynı anahtar ifadesinde **özellik düzeniyle** kullanılarak uygulanabilir. Özellik deseninin bir `when` özellik değerini sabit bir değerle karşılaştıran bir yan tümce vardır. Özellik deseninin türü belirlendikten sonra nesnenin özellikleri incelenir. Bir için tek durum `Car` dört farklı durumda genişler:
 
 ```csharp
 vehicle switch

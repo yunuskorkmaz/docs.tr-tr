@@ -1,13 +1,13 @@
 ---
 title: Sürüm oluşturma ve .NET kitaplıkları
 description: .NET kitaplıklarını sürüm oluşturma için en iyi yöntem önerileri.
-ms.date: 12/10/2018
-ms.openlocfilehash: ab15d56e40abedd842b681496b9e5ee737c8b1cd
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.date: 01/26/2021
+ms.openlocfilehash: 1f3a14a7c32091621dda30a2d86724915d629564
+ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290129"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98794724"
 ---
 # <a name="versioning"></a>Sürüm Oluşturma
 
@@ -61,7 +61,7 @@ Bütünleştirilmiş kod sürümüyle birlikte tanımlayıcı adlandırma [katı
 
 > AssemblyVersion, kullanıcıya görüntülenen bazı bilgilendirici iletilere, örneğin, özel durum iletilerinde derleme adı ve derleme nitelikli tür adlarına dahildir. Sürümler arasındaki ilişkinin saklanması, geliştiriciler tarafından hangi sürümü kullandıkları hakkında daha fazla bilgi sağlar.
 
-❌Sabit bir AssemblyVersion yok.
+❌ Sabit bir AssemblyVersion yok.
 
 > Bir AssemblyVersion, bağlama yeniden yönlendirmeleri gereksinimini ortadan kaldırdıkça, derlemenin yalnızca tek bir sürümünün genel derleme önbelleği 'ne (GAC) yüklenebileceği anlamına gelir. Ayrıca, GAC 'de derlemeye başvuruda bulunan uygulamalar, başka bir uygulama GAC derlemesini bozan değişikliklerle güncelleştirmiş olursa kesilir.
 
@@ -88,13 +88,13 @@ Derleme dosyası sürümü, Windows 'ta bir dosya sürümünü göstermek için 
 Derleme bilgilendirici sürümü, ek sürüm bilgilerini kaydetmek için kullanılır ve çalışma zamanı davranışına hiçbir etkiye sahip değildir. Bu sürümün ayarlanması isteğe bağlıdır. Kaynak bağlantısı kullanıyorsanız, bu sürüm NuGet paketi sürümü ve kaynak denetimi sürümü ile derleme üzerinde ayarlanır. Örneğin, `1.0.0-beta1+204ff0a` derlemenin oluşturulduğu kaynak kodun COMMIT karmasını içerir. Daha fazla bilgi için bkz. [kaynak bağlantısı](./sourcelink.md).
 
 ```xml
-<AssemblyInformationalVersion>The quick brown fox jumped over the lazy dog.</AssemblyInformationalVersion>
+<InformationalVersion>The quick brown fox jumped over the lazy dog.</InformationalVersion>
 ```
 
 > [!NOTE]
 > Visual Studio 'nun eski sürümleri, bu sürüm biçimini izmazsa derleme uyarısı oluşturur `Major.Minor.Build.Revision` . Uyarı güvenle yoksayılabilir.
 
-❌Derleme bilgilendirici sürümünü kendiniz ayarlamaktan KAÇıNıN.
+❌ Derleme bilgilendirici sürümünü kendiniz ayarlamaktan KAÇıNıN.
 
 > SourceLink 'in NuGet ve kaynak denetimi meta verilerini içeren sürümü otomatik olarak oluşturmasına izin verin.
 

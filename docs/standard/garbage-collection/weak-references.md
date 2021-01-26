@@ -8,12 +8,12 @@ helpviewer_keywords:
 - weak references, long
 - garbage collection, weak references
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
-ms.openlocfilehash: 1eb5e57f5cc1065f1b8510e4fb0a980a85abca29
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a364435a5b0a480b0f6f70315e2d5465f61e6b5a
+ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95714217"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98794658"
 ---
 # <a name="weak-references"></a>Zayıf Başvurular
 
@@ -27,7 +27,7 @@ ms.locfileid: "95714217"
   
  Kullanıcı uygulamanın başka bir kısmına geçtiğinde, <xref:System.WeakReference> ağaca bir zayıf başvuru oluşturmak ve tüm güçlü başvuruları yok etmek için sınıfını kullanabilirsiniz. Kullanıcı ağaca geri geçtiğinde, uygulama ağaca güçlü bir başvuru edinmeye çalışır ve başarılı olursa ağacın yeniden çözümlenmesini önler.  
   
- Bir nesneyle zayıf bir başvuru oluşturmak için, <xref:System.WeakReference> izlenecek nesnenin örneğini kullanarak oluşturursunuz. Sonra <xref:System.WeakReference.Target%2A> Bu nesneye özelliği ayarlarsınız ve nesnesine özgün başvuruyu olarak ayarlarsınız `null` . Kod örneği için bkz <xref:System.WeakReference> . sınıf kitaplığı 'nda.  
+ Bir nesneyle zayıf bir başvuru oluşturmak için, <xref:System.WeakReference> izlenecek nesnenin örneğini kullanarak oluşturursunuz. Kod örneği için bkz <xref:System.WeakReference> . sınıf kitaplığı 'nda.  
   
 ## <a name="short-and-long-weak-references"></a>Kısa ve uzun zayıf başvurular  
 

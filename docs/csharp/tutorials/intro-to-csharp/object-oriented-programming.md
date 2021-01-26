@@ -2,12 +2,12 @@
 title: Object-Oriented programlama (C#)
 description: C#; soyutlama, kapsülleme, devralma ve çok biçimlilik dahil olmak üzere nesne odaklı programlama için tam destek sağlar.
 ms.date: 09/30/2020
-ms.openlocfilehash: 4ae31e18fcd88870f511e77bb0c555f35394fd1b
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: b778b7c42bbfb1f20bdd2d83b9cb10512ea3f41b
+ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688000"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98794845"
 ---
 # <a name="object-oriented-programming-c"></a>Object-Oriented programlama (C#)
 
@@ -99,7 +99,16 @@ Geçersiz kılma, oluşturucuda aylık depozito kümesini uygular. `Main`Ve içi
 
 Sonuçları doğrulayın. Şimdi, için benzer bir test kodu kümesi ekleyin `LineOfCreditAccount` :
 
-:::code language="csharp" source="./snippets/object-oriented-programming/Program.cs" ID="TestLineOfCredit":::
+```
+    var lineOfCredit = new LineOfCreditAccount("line of credit", 0);
+    // How much is too much to borrow?
+    lineOfCredit.MakeWithdrawal(1000m, DateTime.Now, "Take out monthly advance");
+    lineOfCredit.MakeDeposit(50m, DateTime.Now, "Pay back small amount");
+    lineOfCredit.MakeWithdrawal(5000m, DateTime.Now, "Emergency funds for repairs");
+    lineOfCredit.MakeDeposit(150m, DateTime.Now, "Partial restoration on repairs");
+    lineOfCredit.PerformMonthEndTransactions();
+    Console.WriteLine(lineOfCredit.GetAccountHistory());
+ ```
 
 Yukarıdaki kodu eklediğinizde ve programı çalıştırdığınızda aşağıdaki hata gibi bir şey görürsünüz:
 
@@ -181,6 +190,6 @@ Bu öğretici Object-Oriented programlamada kullanılan birçok tekniği göster
 - Her sınıfta çok sayıda ayrıntı sakladığınızda *soyutlama* kullandınız `private` .
 - Farklı hesap türlerinin her biri için sınıflar tanımladığınızda *kapsülleme* kullandınız. Bu sınıflar, bu hesap türünün davranışını açıklandı.
 - Kodu kaydetmek için sınıfında önceden oluşturulmuş uygulamayı yararlanılabilir kullandığınızda *devralmayı* kullandınız `BankAccount` .
-- *Polymorphism* `virtual` Türetilmiş sınıfların bu hesap türü için belirli davranışlar oluşturmak üzere geçersiz kılabileceği Yöntemler oluşturduğunuzda çok biçimlilik kullandınız.
+-  `virtual` Türetilmiş sınıfların bu hesap türü için belirli davranışlar oluşturmak üzere geçersiz kılabileceği Yöntemler oluşturduğunuzda çok biçimlilik kullandınız.
 
 Tebrikler, C# öğreticilerine giriş yaptığımızı tamamladınız. Daha fazla bilgi edinmek için [öğreticilerimizi](../index.md)deneyin.
