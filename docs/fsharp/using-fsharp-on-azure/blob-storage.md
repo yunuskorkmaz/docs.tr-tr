@@ -1,25 +1,25 @@
 ---
-title: F# kullanarak Azure Blob depolama kullanmaya başlama
+title: 'F kullanarak Azure Blob depolama ile çalışmaya başlama #'
 description: Azure Blob depolama ile yapılandırılmamış verileri bulutta depolayın.
 author: sylvanc
 ms.date: 09/20/2016
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: 91aec8fc2b57c71ce4ba47d62619912af6c71e59
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 58c120c26a1e99481b49ae3a0fb096a2188f359e
+ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756253"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98794805"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>F kullanarak Azure Blob depolama ile çalışmaya başlama\#
 
-Azure Blob Storage, bulutta nesne/blob olarak yapılandırılmamış veri depolayan bir hizmettir. Blob Storage belge, medya dosyası veya uygulama yükleyici gibi her tür metin veya ikili veri depolayabilir. Blob Storage aynı zamanda nesne depolama olarak adlandırılır.
+Azure Blob depolama, bulutta nesne/blob olarak yapılandırılmamış verileri depolayan bir hizmettir. Blob Storage belge, medya dosyası veya uygulama yükleyici gibi her tür metin veya ikili veri depolayabilir. Blob Storage aynı zamanda nesne depolama olarak adlandırılır.
 
 Bu makalede, blob depolamayı kullanarak genel görevlerin nasıl gerçekleştirileceği gösterilir. Örnekler, .NET için Azure Storage Istemci kitaplığı kullanılarak F # kullanılarak yazılır. Kapsanan görevler, Blobları karşıya yükleme, listeleme, indirme ve silme işlemleri içerir.
 
 Blob depolamaya kavramsal bir genel bakış için bkz. [BLOB depolama için .net Kılavuzu](/azure/storage/blobs/storage-quickstart-blobs-dotnet).
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu kılavuzu kullanmak için önce [bir Azure depolama hesabı oluşturmanız](/azure/storage/common/storage-account-create)gerekir. Bu hesap için depolama erişim anahtarınıza de ihtiyacınız vardır.
 
@@ -27,7 +27,7 @@ Bu kılavuzu kullanmak için önce [bir Azure depolama hesabı oluşturmanız](/
 
 Bu makaledeki örnekler bir F # uygulamasında veya F # betiğinde kullanılabilir. F # betiği oluşturmak için, `.fsx` Örneğin `blobs.fsx` f # geliştirme ortamınızda uzantılı bir dosya oluşturun.
 
-Ardından, [NuGet](https://www.nuget.org/) [Paket](https://fsprojects.github.io/Paket/) [package manager](package-management.md) `WindowsAzure.Storage` `Microsoft.WindowsAzure.ConfigurationManager` `WindowsAzure.Storage.dll` `Microsoft.WindowsAzure.Configuration.dll` bir yönergesi kullanarak ve paketlerini ve başvurusunu `#r` yüklemek için paket veya NuGet gibi bir paket Yöneticisi kullanın.
+Ardından, [](https://www.nuget.org/) [](https://fsprojects.github.io/Paket/) [](package-management.md) `WindowsAzure.Storage` `Microsoft.WindowsAzure.ConfigurationManager` `WindowsAzure.Storage.dll` `Microsoft.WindowsAzure.Configuration.dll` bir yönergesi kullanarak ve paketlerini ve başvurusunu `#r` yüklemek için paket veya NuGet gibi bir paket Yöneticisi kullanın.
 
 ### <a name="add-namespace-declarations"></a>Ad alanı bildirimleri ekleme
 
@@ -73,7 +73,7 @@ Başlamadan önce, betiğimizin dizininde bazı sözde yerel veriler oluşturun.
 
 Artık Blob Storage’da n veri okuyan ve bu depolamaya veri yazan kodu yazmaya hazırsınız.
 
-## <a name="create-a-container"></a>Bir kapsayıcı oluşturma
+## <a name="create-a-container"></a>Kapsayıcı oluşturma
 
 Bu örnek, zaten yoksa, nasıl bir kapsayıcı oluşturulacağını gösterir:
 
@@ -185,7 +185,7 @@ Aşağıdaki örnek, yeni bir ekleme blobu oluşturur ve basit bir günlüğe ka
 
 ## <a name="concurrent-access"></a>Eşzamanlı erişim
 
-Birden fazla istemciden veya birden çok işlem örneğiyle bir Blobun eşzamanlı erişimini desteklemek için **ETags** veya **kiralamalar**kullanabilirsiniz.
+Birden fazla istemciden veya birden çok işlem örneğiyle bir Blobun eşzamanlı erişimini desteklemek için **ETags** veya **kiralamalar** kullanabilirsiniz.
 
 - **ETag** -Blobun veya kapsayıcının başka bir işlem tarafından değiştirildiğini algılamaya yönelik bir yol sağlar
 
