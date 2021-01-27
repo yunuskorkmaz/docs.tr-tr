@@ -3,20 +3,19 @@ title: .NET Core ve .NET 5 + üzerinde .NET Framework teknolojileri kullanılam�
 titleSuffix: ''
 description: .NET Core ve .NET 5,0 ve sonraki sürümlerde kullanılamayan .NET Framework teknolojileri hakkında bilgi edinin.
 author: cartermp
-ms.date: 10/13/2020
-ms.openlocfilehash: 492aace9db3dc3acef18e995f10b7b5fbe251558
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.date: 01/26/2021
+ms.openlocfilehash: d5926d2c0cfe6d2073ac6ad74046ca48b9cb18f1
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92161042"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98898781"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core-and-net-5"></a>.NET Core ve .NET 5 + üzerinde .NET Framework teknolojileri kullanılamıyor
 
-.NET Framework kitaplıkları için kullanılabilen çeşitli teknolojiler, uygulama etki alanları, uzaktan iletişim, kod erişim güvenliği (CAS) ve güvenlik saydamlığı gibi .NET Core ve .NET 5,0 ve sonraki sürümlerle birlikte kullanılamaz <xref:System.EnterpriseServices?displayProperty=fullName> . Kitaplıklarınız Bu teknolojilerden birini veya birkaçını kullanıyorsa, burada özetlenen diğer yaklaşımları göz önünde bulundurun. API uyumluluğu hakkında daha fazla bilgi için bkz. [.net 'Teki son değişiklikler](../compatibility/breaking-changes.md).
+.NET Framework kitaplıkları için kullanılabilen çeşitli teknolojiler .NET Core ve .NET 5,0 ve sonraki sürümlerde (uygulama etki alanları, uzaktan iletişim ve kod erişim güvenliği (CAS) gibi) kullanılamaz. Kitaplıklarınız bu sayfada listelenen teknolojilerden birini veya birkaçını kullanıyorsa, bahsedilen alternatif yaklaşımları göz önünde bulundurun.
 
-> [!TIP]
-> Bir API veya teknoloji şu anda uygulanmadığından, kasıtlı olarak desteklenmeyen anlamına gelmez. Karşılaştığınız belirli bir sorunun tasarım ile olup olmadığını görmek için .NET GitHub depolarında arama yapın. Böyle bir gösterge bulamazsanız, belirli API 'Ler ve teknolojiler istemek için [DotNet/Runtime deposunda](https://github.com/dotnet/runtime/issues) bir sorun verin.
+API uyumluluğu hakkında daha fazla bilgi için bkz. [.net 'Teki son değişiklikler](../compatibility/breaking-changes.md).
 
 ## <a name="application-domains"></a>Uygulama etki alanları
 
@@ -47,6 +46,10 @@ En az ayrıcalık kümesine sahip süreçler çalıştırmak için sanallaştır
 ## <a name="systementerpriseservices"></a>System. EnterpriseServices
 
 <xref:System.EnterpriseServices?displayProperty=fullName> (COM+), .NET Core ve .NET 5 + tarafından desteklenmez.
+
+## <a name="workflow-foundation-and-wcf"></a>Workflow Foundation ve WCF
+
+Windows Workflow Foundation (WF) ve Windows Communication Foundation (WCF) .NET 5 + ' de (.NET Core dahil) desteklenmez. Alternatifler için bkz. [Corewf](https://github.com/UiPath/corewf) ve [corewcf](https://github.com/CoreWCF/CoreWCF).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

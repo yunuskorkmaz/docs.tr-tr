@@ -6,14 +6,18 @@ helpviewer_keywords:
 - Astoria
 - WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-ms.openlocfilehash: c36967236c40efbf432d554c3f551aea22cfb148
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2d3da2ca9cd958fc70d3b91362dde71d68dc9d8a
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90549685"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98898768"
 ---
 # <a name="wcf-data-services-45"></a>WCF Veri Hizmetleri 4.5
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
+
+## <a name="overview"></a>Genel Bakış
 
 WCF Veri Hizmetleri (eskiden "ADO.NET Data Services" olarak bilinirdi), [temsili durum aktarımı (REST)](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)semantiğini kullanarak Web veya intranet üzerinden veri sunmak ve kullanmak Için açık veri Protokolü 'Nü (OData) kullanan hizmetler oluşturmanızı sağlayan bir .NET Framework bileşenidir. OData, verileri URI 'Ler tarafından adreslenebilir kaynaklar olarak kullanıma sunar. Al, koy, POST ve DELETE için standart HTTP fiilleri kullanılarak verilere erişilir ve değiştirilir. OData, kaynakları ilişkilendirmeler ile ilgili varlık kümeleri olarak göstermek için [varlık veri modeli](../adonet/entity-data-model.md) varlık ilişkisi kurallarını kullanır.
 
@@ -62,7 +66,7 @@ Visual Studio ile nasıl tümleştirilir?
 
 Bununla ne yapabilirim?
 
-- [Genel bakış](wcf-data-services-overview.md)
+- [Genel Bakış](wcf-data-services-overview.md)
 
 - [Uygulama senaryoları](application-scenarios-wcf-data-services.md)
 
@@ -82,7 +86,7 @@ Hala daha fazla bilgi gerekiyor...
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
-[Genel bakış](wcf-data-services-overview.md)
+[Genel Bakış](wcf-data-services-overview.md)
 
 WCF Veri Hizmetleri ' de kullanılabilen özellikler ve işlevlere genel bir bakış sağlar.
 
