@@ -9,12 +9,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: cbfe4b63dc27cf0a0b6aad87c4f011151bacd4e5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 31de2a7d58d610213bfa4fc0377e1ab7283e111e
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91199022"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899015"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Statik Sınıflar ve Statik Sınıf Üyeleri (C# Programlama Kılavuzu)
 
@@ -61,7 +61,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 
  Aşağıda, sıcaklığın Fahrenhayt 'e ve Fahrenhayt 'e kadar olan iki yöntem içeren bir statik sınıfa örnek verilmiştir:  
   
- [!code-csharp[csProgGuideObjects#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#31)]  
+ [!code-csharp[TemperatureConverter#1](snippets/static-classes-and-static-class-members/Program.cs#1)]  
   
 ## <a name="static-members"></a>Statik Üyeler  
 
@@ -77,11 +77,11 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
  `static`Aşağıdaki örnekte gösterildiği gibi, üyenin dönüş türünden önce anahtar sözcüğünü kullanarak statik sınıf üyeleri bildirirsiniz:  
   
- [!code-csharp[csProgGuideObjects#29](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#29)]  
+ [!code-csharp[AutomobileExample#2](snippets/static-classes-and-static-class-members/Program.cs#2)]  
   
  Statik üyeler, statik üyeye ilk kez erişilmeden ve statik oluşturucu bir tane varsa, önce başlatılır. Statik sınıf üyesine erişmek için, aşağıdaki örnekte gösterildiği gibi, üyenin konumunu belirtmek için değişken adı yerine sınıfın adını kullanın:  
   
- [!code-csharp[csProgGuideObjects#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#30)]  
+ [!code-csharp[AccessingStaticMembers#3](snippets/static-classes-and-static-class-members/Program.cs#3)]  
   
  Sınıfınız statik alanlar içeriyorsa, sınıfı yüklendiğinde bunları başlatan bir statik Oluşturucu sağlayın.  
   

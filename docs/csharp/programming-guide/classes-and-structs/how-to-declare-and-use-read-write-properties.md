@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.topic: how-to
 ms.custom: contperf-fy21q2
 ms.assetid: a4962fef-af7e-4c4b-a929-4ae4d646ab8a
-ms.openlocfilehash: 824ce8a8cd8f0ef94495a85726331cd6cd024891
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: 75f3b4d6fa8595734cf1310c08281c26c829fd84
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97513022"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899028"
 ---
 # <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>Okuma yazma özelliklerini bildirme ve kullanma (C# Programlama Kılavuzu)
 
@@ -26,27 +26,27 @@ ms.locfileid: "97513022"
   
 ## <a name="example"></a>Örnek  
 
- [!code-csharp[csProgGuideObjects#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#33)]  
+ [!code-csharp[properties#1](snippets/how-to-declare-and-use-read-write-properties/Program.cs#1)]
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
 
  Önceki örnekte, `Name` ve `Age` özellikleri [geneldir](../../language-reference/keywords/public.md) ve hem hem de `get` erişimcisi içerir `set` . Bu, herhangi bir nesnenin bu özellikleri okumasına ve yazmasına izin verir. Ancak erişimcilerinin birini dışlamak bazen tercih edilir. Erişimci atlanırsa `set` , örneğin, özelliği salt okunurdur:  
   
- [!code-csharp[csProgGuideObjects#87](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#87)]  
+ [!code-csharp[properties#2](snippets/how-to-declare-and-use-read-write-properties/Program.cs#2)]
   
  Alternatif olarak, bir erişimciye genel kullanıma sunabilirsiniz, ancak diğerini özel veya korumalı hale getirebilirsiniz. Daha fazla bilgi için bkz. [asimetrik erişimci erişilebilirliği](./restricting-accessor-accessibility.md).  
   
  Özellikler doğrulandıktan sonra, sınıfının alanları gibi kullanılabilirler. Bu, aşağıdaki deyimlerde olduğu gibi bir özelliğin değerini alırken ve ayarlarken çok doğal bir sözdizimi sağlar:  
   
- [!code-csharp[csProgGuideObjects#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#35)]  
+ [!code-csharp[properties#3](snippets/how-to-declare-and-use-read-write-properties/Program.cs#3)]
   
  Bir özellik `set` yönteminde özel bir değişken bulunduğunu unutmayın `value` . Bu değişken, kullanıcının belirttiği değeri içerir, örneğin:  
   
- [!code-csharp[csProgGuideObjects#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#36)]  
+ [!code-csharp[properties#4](snippets/how-to-declare-and-use-read-write-properties/Program.cs#4)]
   
  `Age`Bir nesne üzerindeki özelliği arttırmadan ilgili Temizleme sözdizimine dikkat edin `Person` :  
   
- [!code-csharp[csProgGuideObjects#37](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#37)]  
+ [!code-csharp[properties#5](snippets/how-to-declare-and-use-read-write-properties/Program.cs#5)]
   
  `set` `get` Özellikleri modellemek için ayrı ve Yöntemler kullanılmışsa, eşdeğer kod şöyle görünebilir:  
   
@@ -56,7 +56,7 @@ person.SetAge(person.GetAge() + 1);
   
  `ToString`Yöntemi bu örnekte geçersiz kılınır:  
   
- [!code-csharp[csProgGuideObjects#38](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#38)]  
+ [!code-csharp[properties#6](snippets/how-to-declare-and-use-read-write-properties/Program.cs#6)]
   
  `ToString`Programda açıkça kullanılmadığına dikkat edin. Çağrılar tarafından varsayılan olarak çağrılır `WriteLine` .  
   

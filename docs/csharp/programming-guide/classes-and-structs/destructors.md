@@ -7,16 +7,16 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 61a00e766b0f975691b9f2a7c7561bb4f1d33c02
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a2f4f5f9342d5df1f9fa741c86cfe6f8b1d88bd1
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91174309"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899067"
 ---
 # <a name="finalizers-c-programming-guide"></a>Sonlandırıcılar (C# Programlama Kılavuzu)
 
-Sonlandırıcılar (yani **Yıkıcılar**olarak da bilinir), bir sınıf örneği çöp toplayıcısı tarafından toplandığında gerekli son temizleme işlemini gerçekleştirmek için kullanılır.  
+Sonlandırıcılar (yani **Yıkıcılar** olarak da bilinir), bir sınıf örneği çöp toplayıcısı tarafından toplandığında gerekli son temizleme işlemini gerçekleştirmek için kullanılır.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -32,7 +32,7 @@ Sonlandırıcılar (yani **Yıkıcılar**olarak da bilinir), bir sınıf örneğ
   
  Örneğin, aşağıdaki, sınıfı için sonlandırıcının bir bildirimidir `Car` .
   
- [!code-csharp[csProgGuideObjects#86](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#86)]  
+ [!code-csharp[csProgGuideObjects#86](snippets/destructors/Program.cs#2)]
 
 Bir Sonlandırıcı, aşağıdaki örnekte gösterildiği gibi bir ifade gövdesi tanımı olarak da uygulanabilir.
 
@@ -85,7 +85,7 @@ protected override void Finalize()
 
  Aşağıdaki örnek, bir devralım zinciri oluşturan üç sınıf oluşturur. Sınıfı `First` temel sınıftır, `Second` öğesinden türetilir `First` ve `Third` öğesinden türetilir `Second` . Tüm üçünün sonlandırıcıları vardır. `Main`' De, en çok türetilmiş sınıfın bir örneği oluşturulur. Program çalıştığında, üç sınıfa ait sonlandırıcılara otomatik olarak ve sırasıyla en az türetilmiş ' dan türetilmiş ' a göre çağrıldığını unutmayın.  
   
- [!code-csharp[csProgGuideObjects#85](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#85)]  
+ [!code-csharp[Destructors#1](snippets/destructors/Program.cs#1)]
   
 ## <a name="c-language-specification"></a>C# dili belirtimi  
 

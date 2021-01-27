@@ -4,12 +4,12 @@ description: Hangi Windows sürümlerini .NET yükleyebileceğinizi öğrenin.
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 57cebc562949627be70aabe24e75ad4567d072fd
-ms.sourcegitcommit: 3a8f1979a98c6c19217a1930e0af5908988eb8ba
+ms.openlocfilehash: 33492cc6fa6c64ec3a1d745a4fa0c6cc418f87bd
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98536131"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98898794"
 ---
 # <a name="install-net-on-windows"></a>Windows 'a .NET yükler
 
@@ -56,10 +56,10 @@ Windows 10 sürümleri hizmet son tarihleri sürüme göre bölündü. Aşağıd
 
 ## <a name="unsupported-releases"></a>Desteklenmeyen yayınlar
 
-Aşağıdaki .NET sürümleri ❌ artık desteklenmemektedir. Bunlara yönelik İndirilenler hala yayımlandı olarak kalmaya devam eder:
+Aşağıdaki .NET sürümleri ❌ artık desteklenmemektedir. Bu sürümlere yönelik İndirilenler hala yayımlandı olarak kalmaya devam eder:
 
-- 3,0
-- 2.2
+- 3.0
+- 2,2
 - 2.0
 
 ## <a name="runtime-information"></a>Çalışma zamanı bilgileri
@@ -174,6 +174,18 @@ Aşağıdaki Windows sürümleri .NET Core 2,1 ile desteklenir:
 
 .NET Core 2,1 desteklenen işletim sistemleri, dağıtımlar ve yaşam döngüsü ilkesi hakkında daha fazla bilgi için bkz. [.net core 2,1 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md).
 
+### <a name="offline-install-for-windows-7"></a>Windows 7 için çevrimdışı yüklemesi
+
+Windows 7 ' de .NET Core 2,1 için çevrimdışı yükleme yaparken öncelikle en son [Microsoft kök sertifika yetkilisi 2011](https://www.microsoft.com/pkiops/Docs/Repository.htm) ' nin hedef makinede yüklü olduğundan emin olmanız gerekir.
+
+_certmgr.exe_ aracı bir sertifikayı yüklemeyi otomatikleştirebilir ve Visual Studio 'dan veya Windows SDK elde edilebilir. Aşağıdaki komut, .NET Core 2,1 yükleyicisini çalıştırmadan önce sertifikayı yüklemek için kullanılır:
+
+```console
+certmgr.exe /add MicRooCerAut2011_2011_03_22.crt /s /r localMachine root
+```
+
+[Aşağıdaki Windows 7](#additional-deps)için gereken bağımlılıkları gözden geçirdiğinizden emin olun.
+
 ---
 
 <!-- markdownlint-disable MD001 -->
@@ -182,9 +194,9 @@ Aşağıdaki Windows sürümleri .NET Core 2,1 ile desteklenir:
 
 Aşağıdaki Windows sürümlerine .NET SDK veya çalışma zamanı yüklüyorsanız daha fazla bağımlılık gerekir:
 
-| Operating System         | Ön koşullar                                                                    |
+| Operating System         | Önkoşullar                                                                    |
 |--------------------------|----------------------------------------------------------------------------------|
-| Windows 7 SP1 [ESU][esu] | -Microsoft Visual C++ 2015-2019 yeniden dağıtılabilir [64-bit][vcc64]  /  [32-bit][vcc32] <br> -KB3063858 [64-bit][kb64]  /  [32-bit][kb32] <br> - [MicrosoftRootCertificateAuthority2011. cer](https://go.microsoft.com/fwlink/?linkid=747875&clcid=0x409) (yalnızca .net Core 2,1) |
+| Windows 7 SP1 [ESU][esu] | -Microsoft Visual C++ 2015-2019 yeniden dağıtılabilir [64-bit][vcc64]  /  [32-bit][vcc32] <br> -KB3063858 [64-bit][kb64]  /  [32-bit][kb32] <br> - [Microsoft kök sertifika yetkilisi 2011](https://www.microsoft.com/pkiops/Docs/Repository.htm) (yalnızca .net Core 2,1 çevrimdışı Yükleyici) |
 | Windows Vista SP 2       | Microsoft Visual C++ 2015-2019 yeniden dağıtılabilir [64-bit][vcc64]  /  [32-bit][vcc32] |
 | Windows 8.1              | Microsoft Visual C++ 2015-2019 yeniden dağıtılabilir [64-bit][vcc64]  /  [32-bit][vcc32] |
 | Windows Server 2008 R2   | Microsoft Visual C++ 2015-2019 yeniden dağıtılabilir [64-bit][vcc64]  /  [32-bit][vcc32] |
@@ -220,8 +232,8 @@ dotnet-install.ps1 -Channel Current
 | --------------------- | ------------------------------------------ |
 | 5.0                   | Visual Studio 2019 sürüm 16,8 veya üzeri. |
 | 3,1                   | Visual Studio 2019 sürüm 16,4 veya üzeri. |
-| 3,0                   | Visual Studio 2019 sürüm 16,3 veya üzeri. |
-| 2.2                   | Visual Studio 2017 sürüm 15,9 veya üzeri. |
+| 3.0                   | Visual Studio 2019 sürüm 16,3 veya üzeri. |
+| 2,2                   | Visual Studio 2017 sürüm 15,9 veya üzeri. |
 | 2.1                   | Visual Studio 2017 sürüm 15,7 veya üzeri. |
 
 Visual Studio zaten yüklüyse, aşağıdaki adımlarla sürümünüzü kontrol edebilirsiniz.
@@ -288,7 +300,7 @@ Daha fazla bilgi için bkz. [Standart yükleyici Command-Line seçenekleri](/win
 
 ## <a name="download-and-manually-install"></a>İndirme ve el ile yükleme
 
-.NET için Windows yükleyicilerine alternatif olarak SDK veya çalışma zamanını indirip el ile yükleyebilirsiniz. El ile yüklemeyi, genellikle sürekli tümleştirme testinin bir parçası olarak gerçekleştirilir. Bir geliştirici veya Kullanıcı için genellikle bir [Yükleyici](https://dotnet.microsoft.com/download/dotnet-core)kullanmak daha iyidir.
+.NET için Windows yükleyicilerine alternatif olarak SDK veya çalışma zamanını indirip el ile yükleyebilirsiniz. El ile yüklemeyi, genellikle sürekli tümleştirme testinin bir parçası olarak yapılır. Bir geliştirici veya Kullanıcı için genellikle bir [Yükleyici](https://dotnet.microsoft.com/download/dotnet-core)kullanmak daha iyidir.
 
 Hem .NET SDK hem de .NET çalışma zamanı indirildikten sonra el ile yüklenebilir. .NET SDK 'yı yüklerseniz, ilgili çalışma zamanını yüklemeniz gerekmez. İlk olarak, aşağıdaki sitelerden birinden SDK veya çalışma zamanı için ikili bir sürüm indirin:
 
@@ -331,5 +343,5 @@ Bir Docker kapsayıcısında .NET kullanımı hakkında daha fazla bilgi için b
 [esu]: /troubleshoot/windows-client/windows-7-eos-faq/windows-7-extended-security-updates-faq
 [vcc64]: https://aka.ms/vs/16/release/vc_redist.x64.exe
 [vcc32]: https://aka.ms/vs/16/release/vc_redist.x86.exe
-[kb64]: https://www.microsoft.com/en-us/download/details.aspx?id=47442
-[kb32]: https://www.microsoft.com/en-us/download/details.aspx?id=47409
+[kb64]: https://www.microsoft.com/download/details.aspx?id=47442
+[kb32]: https://www.microsoft.com/download/details.aspx?id=47409

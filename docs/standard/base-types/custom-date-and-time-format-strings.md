@@ -15,12 +15,12 @@ helpviewer_keywords:
 - formatting [.NET], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: 70e68de3ce736bc4935dea80e37cc805068b0bc5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 296c69e5238bca9a13aa28197926c67b6ac5c5ef
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722472"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98898900"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Özel tarih ve saat biçim dizeleri
 
@@ -45,7 +45,7 @@ Ayrıştırma işlemlerinde, özel tarih ve saat biçim dizeleri,,, <xref:System
 
 Aşağıdaki tabloda özel tarih ve saat biçimi belirteçleri açıklanır ve her biçim belirticisi tarafından üretilen bir sonuç dizesini görüntülenir. Varsayılan olarak, sonuç dizeleri en-US kültürünün, biçimlendirme kurallarını yansıtır. Belirli bir biçim belirticisi yerelleştirilmiş bir sonuç dizesi üretirse örnek aynı zamanda sonuç dizesinin uygulanacağı kültürü de not alır. Özel tarih ve saat biçimi dizelerini kullanma hakkında daha fazla bilgi için [Notlar](#notes) bölümüne bakın.
 
-| Biçim belirteci | Açıklama | Örnekler |
+| Biçim belirteci | Description | Örnekler |
 |--|--|--|
 | "d" | 1 İle 31 arasında ayın günü.<br /><br /> Daha fazla bilgi: ["d" Özel Biçim belirleyicisi](#dSpecifier). | 2009-06-01T13:45:30-> 1<br /><br /> 2009-06-15T13:45:30-> 15 |
 | "dd" | 01 İle 31 arasında ayın günü.<br /><br /> Daha fazla bilgi: ["gg" Özel Biçim belirleyicisi](#ddSpecifier). | 2009-06-01T13:45:30-> 01<br /><br /> 2009-06-15T13:45:30-> 15 |
@@ -221,7 +221,7 @@ Bir zaman değerinin ikinci bileşenlerinden oluşan on milüzde görüntülenme
 
 ### <a name="the-f-custom-format-specifier"></a><a name="F_Specifier"></a> "F" Özel Biçim belirleyicisi
 
-"F" özel biçim belirticisi saniye bölümünün en önemli basamağını temsil eder; diğer bir deyişle, tarih ve saat değerinde saniyenin onda birini temsil eder. Basamak sıfırsa hiçbir şey görüntülenmez.
+"F" özel biçim belirticisi saniye bölümünün en önemli basamağını temsil eder; diğer bir deyişle, tarih ve saat değerinde saniyenin onda birini temsil eder. Basamak sıfırsa hiçbir şey görüntülenmez ve saniye sayısını izleyen ondalık nokta de görüntülenmez.
 
 "F" biçim belirticisi diğer biçim belirticileri olmadan kullanıldığında, "F" standart tarih ve saat biçimi belirleyicisi olarak yorumlanır. Tek bir biçim belirticisi kullanma hakkında daha fazla bilgi için, bu makalede daha sonra [tek özel biçim belirticileri kullanma](#UsingSingleSpecifiers) bölümüne bakın.
 
@@ -236,7 +236,7 @@ Aşağıdaki örnek bir özel biçim dizesinde "F" özel biçim belirticisini i�
 
 ### <a name="the-ff-custom-format-specifier"></a><a name="FF_Specifier"></a> "FF" Özel Biçim belirleyicisi
 
-"FF" özel biçim belirticisi saniye bölümünün en önemli iki basamağını temsil eder; diğer bir deyişle, tarih ve saat değerinde saniyenin yüzde birini temsil eder. Ancak sondaki sıfırlar veya iki sıfır basamak görüntülenmez.
+"FF" özel biçim belirticisi saniye bölümünün en önemli iki basamağını temsil eder; diğer bir deyişle, tarih ve saat değerinde saniyenin yüzde birini temsil eder. Sondaki sıfırlar gösterilmez. İki önemli basamak sıfırsa hiçbir şey görüntülenmez ve bu durumda, saniye sayısını izleyen ondalık nokta de görüntülenmez.
 
 Aşağıdaki örnek bir özel biçim dizesinde "FF" özel biçim belirticisini içerir.
 
@@ -247,7 +247,7 @@ Aşağıdaki örnek bir özel biçim dizesinde "FF" özel biçim belirticisini i
 
 ### <a name="the-fff-custom-format-specifier"></a><a name="FFF_Specifier"></a> "FFF" Özel Biçim belirleyicisi
 
-"FFF" özel biçim belirticisi saniye bölümünün en önemli üç basamağını temsil eder; diğer bir deyişle, tarih ve saat değerinde saniyenin binde birini temsil eder. Ancak sondaki sıfırlar veya üç sıfır basamak görüntülenmez.
+"FFF" özel biçim belirticisi saniye bölümünün en önemli üç basamağını temsil eder; diğer bir deyişle, tarih ve saat değerinde saniyenin binde birini temsil eder. Sondaki sıfırlar gösterilmez. Üç önemli basamak sıfırsa hiçbir şey görüntülenmez ve bu durumda, saniye sayısını izleyen ondalık nokta de görüntülenmez.
 
 Aşağıdaki örnek bir özel biçim dizesinde "FFF" özel biçim belirticisini içerir.
 
@@ -258,7 +258,7 @@ Aşağıdaki örnek bir özel biçim dizesinde "FFF" özel biçim belirticisini 
 
 ### <a name="the-ffff-custom-format-specifier"></a><a name="FFFF_Specifier"></a> "FFFF" Özel Biçim belirleyicisi
 
-"FFFF" özel biçim belirticisi saniye bölümünün en önemli dört basamağını temsil eder; diğer bir deyişle, tarih ve saat değerinde saniyenin on binde birini temsil eder. Ancak sondaki sıfırlar veya dört sıfır basamak görüntülenmez.
+"FFFF" özel biçim belirticisi saniye bölümünün en önemli dört basamağını temsil eder; diğer bir deyişle, tarih ve saat değerinde saniyenin on binde birini temsil eder. Sondaki sıfırlar gösterilmez. Dört önemli basamak sıfırsa hiçbir şey görüntülenmez ve bu durumda, saniye sayısını izleyen ondalık nokta de görüntülenmez.
 
 Bir zaman değerinin ikinci bileşenlerinden on binde 'ı göstermek mümkün olsa da, bu değer anlamlı olmayabilir. Tarih ve saat değerlerinin duyarlığı, sistem saatinin çözünürlüğüne bağlıdır. Windows NT 3.5 (ve sonraki sürümler) ve Windows Vista işletim sistemlerinde, saatin çözünürlüğü yaklaşık 10-15 milisaniyedir.
 
@@ -266,7 +266,7 @@ Bir zaman değerinin ikinci bileşenlerinden on binde 'ı göstermek mümkün ol
 
 ### <a name="the-fffff-custom-format-specifier"></a><a name="FFFFF_Specifier"></a> "FFFFF" Özel Biçim belirleyicisi
 
-"FFFFF" özel biçim belirticisi saniye bölümünün en önemli beş basamağını temsil eder; diğer bir deyişle, tarih ve saat değerinde saniyenin yüz binde birini temsil eder. Ancak sondaki sıfırlar veya beş sıfır basamak görüntülenmez.
+"FFFFF" özel biçim belirticisi saniye bölümünün en önemli beş basamağını temsil eder; diğer bir deyişle, tarih ve saat değerinde saniyenin yüz binde birini temsil eder. Sondaki sıfırlar gösterilmez. Beş önemli basamak sıfırsa hiçbir şey görüntülenmez ve bu durumda, saniye sayısını izleyen ondalık nokta de görüntülenmez.
 
 Bir zaman değerinin ikinci bir bileşeninin yüz binde gösterilmesi mümkün olsa da, bu değer anlamlı olmayabilir. Tarih ve saat değerlerinin duyarlığı, sistem saatinin çözünürlüğüne bağlıdır. Windows NT 3.5 (ve sonraki sürümler) ve Windows Vista işletim sistemlerinde, saatin çözünürlüğü yaklaşık 10-15 milisaniyedir.
 
@@ -274,7 +274,7 @@ Bir zaman değerinin ikinci bir bileşeninin yüz binde gösterilmesi mümkün o
 
 ### <a name="the-ffffff-custom-format-specifier"></a><a name="FFFFFF_Specifier"></a> "FFFFFF" Özel Biçim belirleyicisi
 
-"FFFFFF" özel biçim belirticisi saniye bölümünün en önemli altı basamağını temsil eder; diğer bir deyişle, tarih ve saat değerinde saniyenin milyonda birini temsil eder. Ancak sondaki sıfırlar veya altı sıfır basamak görüntülenmez.
+"FFFFFF" özel biçim belirticisi saniye bölümünün en önemli altı basamağını temsil eder; diğer bir deyişle, tarih ve saat değerinde saniyenin milyonda birini temsil eder. Sondaki sıfırlar gösterilmez. Altı önemli basamak sıfırsa hiçbir şey görüntülenmez ve bu durumda, saniye sayısını izleyen ondalık nokta de görüntülenmez.
 
 Bir zaman değerinin ikinci bileşeninin milionkesini göstermek mümkün olsa da, bu değer anlamlı olmayabilir. Tarih ve saat değerlerinin duyarlığı, sistem saatinin çözünürlüğüne bağlıdır. Windows NT 3.5 (ve sonraki sürümler) ve Windows Vista işletim sistemlerinde, saatin çözünürlüğü yaklaşık 10-15 milisaniyedir.
 
@@ -282,7 +282,7 @@ Bir zaman değerinin ikinci bileşeninin milionkesini göstermek mümkün olsa d
 
 ### <a name="the-fffffff-custom-format-specifier"></a><a name="FFFFFFF_Specifier"></a> "FFFFFFF" Özel Biçim belirleyicisi
 
-"FFFFFFF" özel biçim belirticisi saniye bölümünün en önemli yedi basamağını temsil eder; diğer bir deyişle, tarih ve saat değerinde saniyenin on milyonda birini temsil eder. Ancak sondaki sıfırlar veya yedi sıfır basamak görüntülenmez.
+"FFFFFFF" özel biçim belirticisi saniye bölümünün en önemli yedi basamağını temsil eder; diğer bir deyişle, tarih ve saat değerinde saniyenin on milyonda birini temsil eder. Sondaki sıfırlar gösterilmez. Yedi önemli basamak sıfırsa hiçbir şey görüntülenmez ve bu durumda, saniye sayısını izleyen ondalık nokta de görüntülenmez.
 
 Bir zaman değerinin ikinci bileşenlerinden oluşan on milüzde görüntülenmek mümkün olsa da, bu değer anlamlı olmayabilir. Tarih ve saat değerlerinin duyarlığı, sistem saatinin çözünürlüğüne bağlıdır. Windows NT 3.5 (ve sonraki sürümler) ve Windows Vista işletim sistemlerinde, saatin çözünürlüğü yaklaşık 10-15 milisaniyedir.
 

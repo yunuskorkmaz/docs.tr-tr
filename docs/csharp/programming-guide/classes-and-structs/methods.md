@@ -6,12 +6,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 7b411283822360f3057b0d4f4e60ebade4fe45bc
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 879e57cfbce82f1aa77f8810e23d6a61a6ea5bc8
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810943"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899457"
 ---
 # <a name="methods-c-programming-guide"></a>Yöntemler (C# Programlama Kılavuzu)
 
@@ -22,44 +22,44 @@ Yöntemi, bir dizi deyim içeren bir kod bloğudur. Program, metodu çağırarak
 
 ## <a name="method-signatures"></a>Yöntem imzaları
 
-Yöntemler veya, [class](../../language-reference/keywords/class.md) [struct](../../language-reference/builtin-types/struct.md) [interface](../interfaces/index.md) `public` `private` `abstract` `sealed` dönüş değeri, yöntemin adı ve herhangi bir yöntem parametresi gibi erişim düzeyi belirtilerek, veya gibi isteğe bağlı değiştiriciler belirtilerek bir sınıf, yapı veya arabirim içinde bildirilmiştir. Bu parçalar, yönteminin imzasıdır.
+Yöntemler veya, [](../../language-reference/keywords/class.md) [](../../language-reference/builtin-types/struct.md) [](../interfaces/index.md) `public` `private` `abstract` `sealed` dönüş değeri, yöntemin adı ve herhangi bir yöntem parametresi gibi erişim düzeyi belirtilerek, veya gibi isteğe bağlı değiştiriciler belirtilerek bir sınıf, yapı veya arabirim içinde bildirilmiştir. Bu parçalar, yönteminin imzasıdır.
 
 > [!IMPORTANT]
 > Bir yöntemin dönüş türü, yöntem aşırı yüklemesi amaçları için yöntemin imzasının bir parçası değildir. Ancak, bir temsilci ve işaret ettiği yöntem arasındaki uyumluluğun belirlenmesi sırasında yönteminin imzasının bir parçasıdır.
 
 Yöntem parametreleri parantez içine alınır ve virgülle ayrılır. Boş parantezler, yöntemin hiçbir parametre gerektirmediğini belirtir. Bu sınıf dört yöntem içerir:
 
-[!code-csharp[csProgGuideObjects#40](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#40)]
+[!code-csharp[DifferentModifiersOnMethods#1](snippets/methods/Program.cs#1)]
 
 ## <a name="method-access"></a>Yöntem erişimi
 
 Bir nesne üzerinde bir yöntemi çağırmak, bir alana erişme gibidir. Nesne adından sonra bir nokta, yöntemin adı ve parantez ekleyin. Bağımsız değişkenler parantez içinde listelenir ve virgülle ayrılır. `Motorcycle`Bu nedenle, sınıfının yöntemleri aşağıdaki örnekte olduğu gibi çağrılabilir:
 
-[!code-csharp[csProgGuideObjects#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#41)]
+[!code-csharp[CallingMethods#2](snippets/methods/Program.cs#2)]
 
 ## <a name="method-parameters-vs-arguments"></a>Yöntem parametreleri ve bağımsız değişkenler
 
-Yöntem tanımı, gerekli parametrelerin adlarını ve türlerini belirtir. Kodu çağırırken yöntemi çağırdığında, her parametre için bağımsız değişkenler olarak adlandırılan somut değerler sağlar. Bağımsız değişkenlerin parametre türüyle uyumlu olması gerekir, ancak çağıran kodda kullanılan bağımsız değişken adı (varsa) yöntemde tanımlanan parametre ile aynı olmalıdır. Örnek:
+Yöntem tanımı, gerekli parametrelerin adlarını ve türlerini belirtir. Kodu çağırırken yöntemi çağırdığında, her parametre için bağımsız değişkenler olarak adlandırılan somut değerler sağlar. Bağımsız değişkenlerin parametre türüyle uyumlu olması gerekir, ancak çağıran kodda kullanılan bağımsız değişken adı (varsa) yöntemde tanımlanan parametre ile aynı olmalıdır. Örneğin:
 
-[!code-csharp[csProgGuideObjects#74](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#74)]
+[!code-csharp[MethodExamples#3](snippets/methods/Program.cs#3)]
 
 ## <a name="passing-by-reference-vs-passing-by-value"></a>Başvuruya göre geçirme-değere göre geçirme
 
-Varsayılan olarak, bir [değer türü](../../language-reference/builtin-types/value-types.md) örneği bir yönteme geçirildiğinde, kopyasının kendisi yerine geçirilir. Bu nedenle, bağımsız değişkende yapılan değişikliklerin, çağırma yönteminde orijinal örnek üzerinde hiçbir etkisi yoktur. Değer türü örneği başvuruya göre geçirmek için `ref` anahtar sözcüğünü kullanın. Daha fazla bilgi için bkz. [değer türü parametrelerini geçirme](./passing-value-type-parameters.md).
+Varsayılan olarak, bir [değer türü](../../language-reference/builtin-types/value-types.md) örneği bir yönteme geçirildiğinde, kopyasının kendisi yerine geçirilir. Bu nedenle, bağımsız değişkende yapılan değişikliklerin, çağırma yönteminde orijinal örnek üzerinde hiçbir etkisi yoktur. Değer türü örneği başvuruya göre geçirmek için `ref` anahtar sözcüğünü kullanın. Daha fazla bilgi için bkz. [Value-Type parametrelerini geçirme](./passing-value-type-parameters.md).
 
 Başvuru türündeki bir nesne yöntemine geçirildiğinde, nesnesine bir başvuru geçirilir. Diğer bir deyişle, yöntem nesnenin kendisini değil, nesnenin konumunu gösteren bir bağımsız değişken alır. Bu başvuruyu kullanarak nesnesinin bir üyesini değiştirirseniz, nesneyi değere göre iletseniz bile, değişiklik çağırma yöntemindeki bağımsız değişkende yansıtılır.
 
 `class`Aşağıdaki örnekte gösterildiği gibi anahtar sözcüğünü kullanarak bir başvuru türü oluşturursunuz:
 
-[!code-csharp[csProgGuideObjects#42](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#42)]
+[!code-csharp[SampleRefTypeClass#4](snippets/methods/Program.cs#4)]
 
 Artık, bu türü temel alan bir nesneyi bir yönteme geçirirseniz, nesnesine bir başvuru geçirilir. Aşağıdaki örnek, türünde bir nesnesini yöntemine geçirir `SampleRefType` `ModifyObject` :
 
-[!code-csharp[csProgGuideObjects#75](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#75)]
+[!code-csharp[PassingAReferenceType#5](snippets/methods/Program.cs#5)]
 
 Örnek temelde bir yönteme değere göre bir bağımsız değişken geçirdiğinden önceki örnekle aynı şeyi yapar. Ancak, bir başvuru türü kullanıldığından, sonuç farklıdır. Parametresinin alanı üzerinde yapılan değişiklik, `ModifyObject` `value` `obj` `value` yöntemi içindeki bağımsız değişkenin alanını da değiştirir `rt` `TestRefType` . `TestRefType`Yöntemi çıkış olarak 33 görüntüler.
 
-Başvuru türlerini başvuruya ve değere göre geçirme hakkında daha fazla bilgi için bkz. [başvuru türü parametrelerini](./passing-reference-type-parameters.md) ve [başvuru türlerini](../../language-reference/keywords/reference-types.md)geçirme.
+Başvuru türlerini başvuruya ve değere göre geçirme hakkında daha fazla bilgi için bkz. [Reference-Type parametrelerini](./passing-reference-type-parameters.md) ve [başvuru türlerini](../../language-reference/keywords/reference-types.md)geçirme.
 
 ## <a name="return-values"></a>Dönüş değerleri
 
@@ -76,13 +76,13 @@ public ref double GetEstimatedDistance()
 
 `return`Anahtar sözcüğü, yönteminin yürütülmesini de sonlandırır. Dönüş türü ise, `void` `return` değeri olmayan bir ifade, metodun yürütülmesini durdurmak için hala yararlıdır. `return`Anahtar sözcüğü olmadan Yöntem, kod bloğunun sonuna ulaştığında yürütmeyi durdurur. `return`Bir değer döndürmek için anahtar sözcüğünü kullanmak için void olmayan bir dönüş türüne sahip metotlar gereklidir. Örneğin, bu iki yöntem `return` tamsayılar döndürmek için anahtar sözcüğünü kullanır:
 
-[!code-csharp[csProgGuideObjects#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#44)]
+[!code-csharp[SimpleMathClass#6](snippets/methods/Program.cs#6)]
 
 Bir yöntemden döndürülen bir değer kullanmak için, çağırma yöntemi yöntemi tek bir değer olan her yerde, aynı türde bir değer yeterli olacak şekilde kullanabilir. Dönüş değerini bir değişkene de atayabilirsiniz. Örneğin, aşağıdaki iki kod örneği aynı hedefi yerine getirmektedir:
 
-[!code-csharp[csProgGuideObjects#45](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#45)]
+[!code-csharp[SquareANumberWithAddTwoNumbersUsingLocalVariable#7](snippets/methods/Program.cs#7)]
 
-[!code-csharp[csProgGuideObjects#46](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#46)]
+[!code-csharp[SquareANumberWithAddTwoNumbersInTheSameLine#8](snippets/methods/Program.cs#8)]
 
 Bu durumda, `result` bir değeri depolamak için yerel bir değişken kullanmak isteğe bağlıdır. Kodun okunabilirliğini yardımcı olabilir veya metodun tüm kapsamı için bağımsız değişkenin özgün değerini depolamanız gerekirse gerekli olabilir.
 
@@ -176,6 +176,6 @@ Daha fazla bilgi için bkz. [yineleyiciler](../concepts/iterators.md).
 - [Soyut ve Korumalı Sınıflar ve Sınıf Üyeleri](abstract-and-sealed-classes-and-class-members.md)
 - [params](../../language-reference/keywords/params.md)
 - [return](../../language-reference/keywords/return.md)
-- [dışı](../../language-reference/keywords/out.md)
+- [out](../../language-reference/keywords/out.md)
 - [ref](../../language-reference/keywords/ref.md)
-- [Parametreleri geçirme](passing-parameters.md)
+- [Parametreleri Geçirme](passing-parameters.md)

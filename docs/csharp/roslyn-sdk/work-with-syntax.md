@@ -3,16 +3,16 @@ title: .NET Compiler Platform SDK sözdizimi modelini kullanın
 description: Bu genel bakışta, söz dizimi düğümlerini anlamak ve işlemek için kullandığınız türlerin anlaşılması sağlanır.
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: fdb13095c2b91e54d58988a51a51b05652e57ea6
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 3666b0ec875b465954780c3c313ca87c9a4e6676
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83208401"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899145"
 ---
 # <a name="work-with-syntax"></a>Söz dizimi ile çalışma
 
-*Sözdizimi ağacı* , derleyici API 'leri tarafından kullanıma sunulan temel bir veri yapısıdır. Bu ağaçlar, kaynak kodunun sözlü ve sözdizimsel yapısını temsil eder. Bunlar iki önemli amaca hizmet eder:
+*Sözdizimi ağacı* , derleyici API 'leri tarafından kullanıma sunulan temel bir sabit veri yapısıdır. Bu ağaçlar, kaynak kodunun sözlü ve sözdizimsel yapısını temsil eder. Bunlar iki önemli amaca hizmet eder:
 
 - IDE, Eklentiler, kod analizi araçları ve yeniden düzenlemeler gibi araçlara izin vermek için, bir kullanıcının projesindeki kaynak kodun sözdizimsel yapısını görmek ve işlemek için.
 - Yeniden düzenlemeler ve IDE gibi araçları etkinleştirmek için-doğrudan metin düzenlemeleri kullanmak zorunda kalmadan, kaynak kodu doğal bir şekilde oluşturmak, değiştirmek ve yeniden düzenlemek için. Ağaçlar oluşturup düzenleyerek, araçlar kaynak kodu kolayca oluşturup yeniden düzenleyebilir.
@@ -21,11 +21,11 @@ ms.locfileid: "83208401"
 
 Sözdizimi ağaçları, derleme, kod analizi, bağlama, yeniden düzenleme, IDE özellikleri ve kod oluşturma için kullanılan birincil yapıdır. Birinci olarak bilinen yapısal dil öğelerinden birinde tanımlanmadan ve sınıflandırılmadan kaynak kodun hiçbir bölümü anlaşılmamıştır.
 
-Sözdizimi ağaçları üç anahtar özniteliğe sahiptir. İlk öznitelik, söz dizimi ağaçlarının tüm kaynak bilgilerini tam Aslına göre tutamadır. Tam doğruluk, sözdizimi ağacının kaynak metinde bulunan her bilgi parçasını, her dilbilgisi yapısını, her sözcük belirtecini ve diğer her şeyi (boşluk, açıklama ve Önişlemci yönergeleri dahil) içerdiği anlamına gelir. Örneğin, kaynakta bahsedilen her bir sabit değer tam olarak yazıldığı gibi gösterilir. Sözdizimi ağaçları Ayrıca, Atlanan veya eksik belirteçleri temsil ederek, program eksik veya hatalı biçimlendirilmiş olarak kaynak kodundaki hataları yakalar.
+Sözdizimi ağaçları üç anahtar özniteliğe sahiptir:
 
-Sözdizimi ağaçlarının ikinci özniteliği, ayrıştırıldıkları metnin tam olarak oluşturabilmesine neden olur. Herhangi bir söz dizimi düğümünden, bu düğümde kök alt ağacın metin temsilini almak mümkündür. Bu özellik, söz dizimi ağaçlarının kaynak metni oluşturmak ve düzenlemek için bir yol olarak kullanılabileceği anlamına gelir. Sahip olduğunuz bir ağaç oluşturarak, benzer bir metin oluşturup, bir sözdizimi ağacını düzenleyerek, yeni bir ağacı varolan bir ağaçtaki değişikliklerden sonra, metni etkin bir şekilde düzenlemiş olursunuz.
-
-Söz dizimi ağaçlarının üçüncü özniteliği, sabit ve iş parçacığı açısından güvenlidir. Bir ağaç alındıktan sonra, kodun geçerli durumunun anlık görüntüsü olur ve hiçbir şekilde değişiklik olmaz. Bu, birden çok kullanıcının kilitleme veya çoğaltma olmadan farklı iş parçacıklarında aynı söz dizimi ağacıyla etkileşime geçmesini sağlar. Ağaçlar sabittir ve hiçbir değişiklik doğrudan bir ağaca yapılamaz, ancak Fabrika yöntemleri ağacın ek anlık görüntülerini oluşturarak sözdizimi ağaçları oluşturma ve değiştirme konusunda yardımcı olur. Ağaçlar, temel düğümleri yeniden kullanma biçiminde etkilidir, bu nedenle yeni bir sürüm hızlı bir şekilde ve çok fazla bellekle yeniden oluşturulabilir.
+- Tüm kaynak bilgilerini tam uygunluk halinde tutar. Tam doğruluk, sözdizimi ağacının kaynak metinde bulunan her bilgi parçasını, her dilbilgisi yapısını, her sözcük belirtecini ve diğer her şeyi (boşluk, açıklama ve Önişlemci yönergeleri dahil) içerdiği anlamına gelir. Örneğin, kaynakta bahsedilen her bir sabit değer tam olarak yazıldığı gibi gösterilir. Sözdizimi ağaçları Ayrıca, Atlanan veya eksik belirteçleri temsil ederek, program eksik veya hatalı biçimlendirilmiş olarak kaynak kodundaki hataları yakalar.
+- Bunların ayrıştırıldıkları tam metni üretebilirler. Herhangi bir söz dizimi düğümünden, bu düğümde kök alt ağacın metin temsilini almak mümkündür. Bu özellik, söz dizimi ağaçlarının kaynak metni oluşturmak ve düzenlemek için bir yol olarak kullanılabileceği anlamına gelir. Sahip olduğunuz bir ağaç oluşturarak, benzer bir metin oluşturmuş ve mevcut bir ağaçtaki değişikliklerden yeni bir ağaç getirerek, metni etkin bir şekilde düzenlemiş olursunuz.
+- Bunlar sabit ve iş parçacığı açısından güvenlidir. Bir ağaç alındıktan sonra, kodun geçerli durumunun anlık görüntüsü olur ve hiçbir şekilde değişiklik olmaz. Bu, birden çok kullanıcının kilitleme veya çoğaltma olmadan farklı iş parçacıklarında aynı söz dizimi ağacıyla etkileşime geçmesini sağlar. Ağaçlar sabittir ve hiçbir değişiklik doğrudan bir ağaca yapılamaz, ancak Fabrika yöntemleri ağacın ek anlık görüntülerini oluşturarak sözdizimi ağaçları oluşturma ve değiştirme konusunda yardımcı olur. Ağaçlar, temel düğümleri yeniden kullanma biçiminde etkilidir, bu nedenle yeni bir sürüm hızlı bir şekilde ve çok fazla bellekle yeniden oluşturulabilir.
 
 Sözdizimi ağacı, Terminal olmayan yapısal öğelerin üst diğer öğelerinden oluşan bir ağaç veri yapısıdır. Her bir sözdizimi ağacı düğümlerin, belirteçlerin ve trivia oluşur.
 
@@ -90,6 +90,9 @@ Her düğüm, belirteç veya bilgi <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKi
 <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind>Özelliği, aynı node sınıfını paylaşan sözdizimi düğümü türlerinin kolay bir şekilde kesinleştirilmesine olanak sağlar. Belirteçler ve trivia için, bu özellik bir öğe türünü diğerinden ayırt etmenin tek yoludur.
 
 Örneğin, tek bir <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> sınıf <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left> , <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> , ve <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right> alt öğeleri içerir. <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind%2A>Özelliği <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.AddExpression> ,, <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SubtractExpression> veya tür bir sözdizimi düğümü olup olmadığını ayırt eder <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.MultiplyExpression> .
+
+> [!TIP]
+> <xref:Microsoft.CodeAnalysis.CSharpExtensions.IsKind%2A>(C# için) veya <xref:Microsoft.CodeAnalysis.VisualBasicExtensions.IsKind%2A> (vb için) uzantı yöntemleri kullanılarak türleri denetlemeniz önerilir.
 
 ## <a name="errors"></a>Hatalar
 

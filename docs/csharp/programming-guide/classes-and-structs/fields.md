@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: 9bd2e198cd623788a21d4da73e89851a6d77e3bb
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 58e60e1dc0b574ae922e6a27a22978b91aca4ec4
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474793"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899054"
 ---
 # <a name="fields-c-programming-guide"></a>Alanlar (C# Programlama Kılavuzu)
 
@@ -18,21 +18,21 @@ ms.locfileid: "86474793"
 
 Bir sınıf veya yapının örnek alanları, statik alanları veya her ikisi birden olabilir. Örnek alanları, bir türün örneğine özeldir. Örnek alanı F olan bir sınıf T 'si varsa, T türünde iki nesne oluşturabilir ve diğer nesnedeki değeri etkilemeden her bir nesnede F değerini değiştirebilirsiniz. Buna karşılık, statik bir alan sınıfa aittir ve bu sınıfın tüm örnekleri arasında paylaşılır. Statik alana yalnızca sınıf adını kullanarak erişebilirsiniz. Statik alana bir örnek adı ile eriştiğinizde, [CS0176](../../misc/cs0176.md) derleme zamanı hatası alırsınız.
 
-Genellikle, yalnızca özel veya korumalı erişilebilirliği olan değişkenler için alanları kullanmanız gerekir. Sınıfınızın istemci koduna sunduğu veriler [Yöntemler](./methods.md), [Özellikler](./properties.md)ve [Dizin oluşturucular](../indexers/index.md)aracılığıyla sağlanmalıdır. İç alanlara dolaylı erişim için bu yapıları kullanarak, geçersiz giriş değerlerine karşı koruma sağlayabilirsiniz. Ortak bir özellik tarafından açığa çıkarılan verileri depolayan özel bir alan, *yedekleme deposu* veya *yedekleme alanı*olarak adlandırılır.
+Genellikle, yalnızca özel veya korumalı erişilebilirliği olan değişkenler için alanları kullanmanız gerekir. Sınıfınızın istemci koduna sunduğu veriler [Yöntemler](./methods.md), [Özellikler](./properties.md)ve [Dizin oluşturucular](../indexers/index.md)aracılığıyla sağlanmalıdır. İç alanlara dolaylı erişim için bu yapıları kullanarak, geçersiz giriş değerlerine karşı koruma sağlayabilirsiniz. Ortak bir özellik tarafından açığa çıkarılan verileri depolayan özel bir alan, *yedekleme deposu* veya *yedekleme alanı* olarak adlandırılır.
 
 Alanlar genellikle birden fazla sınıf yöntemine erişilebilir olması gereken verileri depolar ve tek bir yöntemin yaşam süresinden daha uzun bir süre içinde depolanmalıdır. Örneğin, bir takvim tarihini temsil eden bir sınıf üç tamsayı alanına sahip olabilir: biri ayda, biri gün için ve diğeri yıl için. Tek bir yöntemin kapsamı dışında kullanılmayan değişkenler, Yöntem gövdesinin içinde *yerel değişkenler* olarak bildirilmelidir.
 
 Alanlar, alanın erişim düzeyini, ardından alanın türü ve ardından alanın adı tarafından belirtilen sınıf bloğunda belirtilir. Örneğin:
 
-[!code-csharp[csProgGuideObjects#61](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#61)]
+[!code-csharp[fields#1](snippets/fields/Program.cs#1)]
 
 Bir nesne içindeki bir alana erişmek için, nesne adından sonra, ' de olduğu gibi alanın adı ile bir nokta ekleyin `objectname.fieldname` . Örneğin:
 
-[!code-csharp[csProgGuideObjects#62](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#62)]
+[!code-csharp[fields#2](snippets/fields/Program.cs#2)]
 
 Alan bildirildiği zaman atama işleci kullanılarak bir alana ilk değer verilebilir. Alanı için otomatik olarak atamak için `day` `"Monday"` , örneğin, `day` Aşağıdaki örnekte olduğu gibi bildirimini yapmanız gerekir:
 
-[!code-csharp[csProgGuideObjects#63](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#63)]
+[!code-csharp[fields#3](snippets/fields/Program.cs#3)]
 
 Alanlar, nesne örneği Oluşturucusu çağrılmadan hemen önce başlatılır. Oluşturucu bir alanın değerini atadığında, alan bildirimi sırasında verilen değerin üzerine yazar. Daha fazla bilgi için bkz. [oluşturucular kullanma](./using-constructors.md).
 
@@ -52,7 +52,7 @@ Bir alan [ReadOnly](../../language-reference/keywords/readonly.md)olarak bildiri
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
-- [Sınıflar ve yapılar](./index.md)
+- [Sınıflar ve Yapılar](./index.md)
 - [Oluşturucular Kullanma](./using-constructors.md)
 - [Devralma](./inheritance.md)
 - [Erişim Değiştiricileri](./access-modifiers.md)

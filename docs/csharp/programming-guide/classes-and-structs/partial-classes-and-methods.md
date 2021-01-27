@@ -7,12 +7,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 792159786131654d6ee0363f7ab7b87ac50d32bb
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: cfda3b89bfd9dc046274dfa53d62a0789d4d597e
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864754"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899106"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Kısmi Sınıflar ve Yöntemler (C# Programlama Kılavuzu)
 
@@ -28,7 +28,7 @@ Bir sınıf tanımını bölmek istenen birkaç durum vardır:
 
 - Bir sınıf tanımını ayırmak için, burada gösterildiği gibi [kısmi](../../language-reference/keywords/partial-type.md) anahtar sözcük değiştiricisini kullanın:
 
-  [!code-csharp[csProgGuideObjects#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#26)]
+  [!code-csharp[EmployeeExample#1](snippets/partial-classes-and-methods/Program.cs#1)]
 
 `partial`Anahtar sözcüğü, sınıf, yapı veya arabirimin diğer bölümlerinin ad alanında tanımlanamayacağını gösterir. Tüm parçalar `partial` anahtar kelimesini kullanmalıdır. Son türü oluşturmak için tüm parçalar derleme zamanında kullanılabilir olmalıdır. Tüm parçalar, ve gibi aynı erişilebilirliği içermelidir `public` `private` .
 
@@ -41,15 +41,15 @@ Bir temel sınıf belirten tüm parçalar kabul etmelidir, ancak temel bir sın�
 
 Aşağıdaki örnek iç içe geçmiş türlerin kısmen, iç içe yerleştirilmiş olması durumunda bile kısmi bir tür olduğunu gösterir.
 
-[!code-csharp[csProgGuideObjects#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#25)]
+[!code-csharp[NestedPartialTypes#2](snippets/partial-classes-and-methods/Program.cs#2)]
 
 Derleme zamanında, kısmi tür tanımlarının öznitelikleri birleştirilir. Örneğin, aşağıdaki bildirimleri göz önünde bulundurun:
 
-[!code-csharp[csProgGuideObjects#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#23)]
+[!code-csharp[PartialMoonDeclarations#3](snippets/partial-classes-and-methods/Program.cs#3)]
 
 Bunlar aşağıdaki bildirimlerle eşdeğerdir:
 
-[!code-csharp[csProgGuideObjects#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#24)]
+[!code-csharp[SingleMoonDeclaration#4](snippets/partial-classes-and-methods/Program.cs#4)]
 
 Aşağıdakiler tüm kısmi tür tanımlarından birleştirilir:
 
@@ -65,11 +65,11 @@ Aşağıdakiler tüm kısmi tür tanımlarından birleştirilir:
 
 Örneğin, aşağıdaki bildirimleri göz önünde bulundurun:
 
-[!code-csharp[csProgGuideObjects#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#21)]
+[!code-csharp[PartialEarthDeclarations#5](snippets/partial-classes-and-methods/Program.cs#5)]
 
 Bunlar aşağıdaki bildirimlerle eşdeğerdir:
 
-[!code-csharp[csProgGuideObjects#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#22)]
+[!code-csharp[SingleEarthDeclaration#6](snippets/partial-classes-and-methods/Program.cs#6)]
 
 ### <a name="restrictions"></a>Kısıtlamalar
 
@@ -77,13 +77,13 @@ Kısmi sınıf tanımlarına çalışırken izlenecek birkaç kural vardır:
 
 - Aynı türdeki parçalar olması amaçlanan tüm kısmi tür tanımlarının ile değiştirilmesi gerekir `partial` . Örneğin, aşağıdaki sınıf bildirimleri bir hata oluşturur:
 
-  [!code-csharp[csProgGuideObjects#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#20)]
+  [!code-csharp[AllDefinitionsMustBePartials#7](snippets/partial-classes-and-methods/Program.cs#7)]
 
 - `partial`Değiştirici yalnızca, veya anahtar sözcüklerinden hemen önce `class` görünebilir `struct` `interface` .
 
 - İç içe geçmiş kısmi türlere, aşağıdaki örnekte gösterildiği gibi kısmi tür tanımlarında izin verilir:
 
-  [!code-csharp[csProgGuideObjects#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#19)]
+  [!code-csharp[NestedPartialTypes#8](snippets/partial-classes-and-methods/Program.cs#8)]
 
 - Aynı türde parçalar olması gereken tüm kısmi tür tanımlarının aynı derlemede ve aynı modülde (. exe veya. dll dosyası) tanımlanması gerekir. Kısmi tanımlar birden çok modüle yayılamaz.
 
@@ -93,7 +93,7 @@ Kısmi sınıf tanımlarına çalışırken izlenecek birkaç kural vardır:
 
   - [genel](../../language-reference/keywords/public.md)
 
-  - [private](../../language-reference/keywords/private.md)
+  - [özelleştirme](../../language-reference/keywords/private.md)
 
   - [protected](../../language-reference/keywords/protected.md)
 
@@ -113,23 +113,23 @@ Daha fazla bilgi için bkz. [tür parametrelerindeki kısıtlamalar](../generics
 
 ## <a name="example-1"></a>Örnek 1
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
 
 Aşağıdaki örnekte, sınıfının alanları ve Oluşturucusu, `Coords` bir kısmi sınıf tanımında ve üyesi `PrintCoords` başka bir kısmi sınıf tanımında bildirilmiştir.
 
 ### <a name="code"></a>Kod
 
-[!code-csharp[csProgGuideObjects#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#17)]
+[!code-csharp[CoordsExample#9](snippets/partial-classes-and-methods/Program.cs#9)]
 
 ## <a name="example-2"></a>Örnek 2
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
 
 Aşağıdaki örnek ayrıca kısmi yapılar ve arabirimler geliştirebileceğinizi gösterir.
 
 ### <a name="code"></a>Kod
 
-[!code-csharp[csProgGuideObjects#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#18)]
+[!code-csharp[PartialStructsAndInterfaces#10](snippets/partial-classes-and-methods/Program.cs#10)]
 
 ## <a name="partial-methods"></a>Kısmi Yöntemler
 

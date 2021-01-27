@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
-ms.openlocfilehash: 9eff44f3260f0f50fef956ba60b01e2497d7d2dd
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4783aff8e9424c90e46cb52692a3e645e995d914
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91199217"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899080"
 ---
 # <a name="constants-c-programming-guide"></a>Sabitler (C# Programlama Kılavuzu)
 
@@ -23,7 +23,7 @@ Sabitler, derleme zamanında bilinen ve programın ömrü boyunca değişmeyen s
   
  Sabitler, bildirildiği için başlatılmalıdır. Örneğin:  
   
- [!code-csharp[csProgGuideObjects#64](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#64)]  
+ [!code-csharp[Calendar#1](snippets/constants/Calendar.cs#1)]
   
  Bu örnekte, sabit `Months` her zaman 12 ' dir ve sınıfın kendisi tarafından bile değiştirilemez. Aslında, derleyici C# kaynak kodunda bir sabit tanımlayıcıyla karşılaştığında (örneğin, `Months` ), değişmez değer değerini doğrudan ürettiği ara dil (IL) koduna koyar. Çalışma zamanında bir sabitle ilişkili değişken adresi olmadığından, `const` alanlar başvuruya göre geçirilemez ve bir ifadede l değeri olarak görünemez.  
   
@@ -32,17 +32,17 @@ Sabitler, derleme zamanında bilinen ve programın ömrü boyunca değişmeyen s
   
  Aynı türden birden fazla sabit aynı anda bildirilebilecek, örneğin:  
   
- [!code-csharp[csProgGuideObjects#65](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#65)]  
+ [!code-csharp[Calendar#2](snippets/constants/Calendar.cs#2)]
   
  Bir sabiti başlatmak için kullanılan ifade, döngüsel başvuru oluşturmayan başka bir sabite başvurabilir. Örneğin:  
   
- [!code-csharp[csProgGuideObjects#66](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#66)]  
+ [!code-csharp[Calendar#3](snippets/constants/Calendar.cs#3)]
   
  Sabitler, [genel](../../language-reference/keywords/public.md), [özel](../../language-reference/keywords/private.md), [korumalı](../../language-reference/keywords/protected.md), [dahili](../../language-reference/keywords/internal.md), [korunan iç](../../language-reference/keywords/protected-internal.md) veya [özel korumalı](../../language-reference/keywords/private-protected.md)olarak işaretlenebilir. Bu erişim değiştiricileri, sınıfın kullanıcılarının sabitine nasıl erişekullanabileceğinizi tanımlar. Daha fazla bilgi için bkz. [erişim değiştiricileri](./access-modifiers.md).  
   
  Sabitlere [statik](../../language-reference/keywords/static.md) alanlar gibi erişilir çünkü sabit değeri, türün tüm örnekleri için aynı. `static`Bunları bildirmek için anahtar sözcüğünü kullanmayın. Sabiti tanımlayan sınıfta olmayan ifadeler, sabit erişim için sınıf adı, nokta ve sabitin adını kullanmalıdır. Örneğin:  
   
- [!code-csharp[csProgGuideObjects#67](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#67)]  
+ [!code-csharp[Calendar#4](snippets/constants/Calendar.cs#4)]
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
 
@@ -51,7 +51,7 @@ Sabitler, derleme zamanında bilinen ve programın ömrü boyunca değişmeyen s
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
-- [Sınıflar ve yapılar](./index.md)
+- [Sınıflar ve Yapılar](./index.md)
 - [Özellikler](./properties.md)
 - [Türler](../types/index.md)
 - [readonly](../../language-reference/keywords/readonly.md)

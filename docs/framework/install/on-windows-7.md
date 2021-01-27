@@ -2,12 +2,12 @@
 title: Windows 7 SP1 'e .NET Framework yüklemesi
 description: Windows 7 SP1 'e .NET Framework yüklemeyi öğrenin.
 ms.date: 04/18/2019
-ms.openlocfilehash: 3f94562f2a14c108a021343b89a8279e95215f30
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 900b38110626a93f37829045a8676ea87101d7e9
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558861"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899093"
 ---
 # <a name="install-the-net-framework-on-windows-7-sp1-and-windows-server-2008-r2"></a>Windows 7 SP1 ve Windows Server 2008 R2’de .NET Framework Yükleme
 
@@ -23,6 +23,16 @@ Bu yönergeler, ihtiyacınız olan .NET Framework sürümlerini yüklemenize yar
 > [.NET Framework 4.8'i İndirin](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
 [.NET Framework 4,8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) , .NET Framework 4,0 veya üzeri için oluşturulmuş uygulamaları çalıştırmak için kullanılabilir.
+
+### <a name="offline-installer"></a>Çevrimdışı yükleyici
+
+Windows 7 ' de .NET Framework için çevrimdışı yükleme yaparken öncelikle hedef makineye en son [Microsoft kök sertifika yetkilisi 2011](https://www.microsoft.com/pkiops/Docs/Repository.htm) ' nin yüklü olduğundan emin olmanız gerekir.
+
+_certmgr.exe_ aracı bir sertifikayı yüklemeyi otomatikleştirebilir ve Visual Studio 'dan veya Windows SDK elde edilebilir. Aşağıdaki komut, .NET Framework yükleyicisini çalıştırmadan önce sertifikayı yüklemek için kullanılır:
+
+```console
+certmgr.exe /add MicRooCerAut2011_2011_03_22.crt /s /r localMachine root
+```
 
 ## <a name="net-framework-35"></a>.NET Framework 3.5
 

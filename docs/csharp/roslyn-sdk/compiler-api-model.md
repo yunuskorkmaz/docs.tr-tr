@@ -3,12 +3,12 @@ title: SDK kavramlarını ve nesne modelini .NET Compiler Platform
 description: Bu genel bakış, .NET derleyici SDK 'Sı ile etkin şekilde çalışmanız için gereken arka planı sağlar. API katmanlarını, ilgili ana türleri ve genel nesne modelini öğreneceksiniz.
 ms.date: 07/13/2020
 ms.custom: mvc
-ms.openlocfilehash: a65d282dd3c58279bbfd635c0386d50ce3f30055
-ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.openlocfilehash: f4b2163c3bf8824b6ad93f0b144a6b02d870f50a
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86374474"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899171"
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>.NET Compiler Platform SDK modelini anlama
 
@@ -30,7 +30,7 @@ Bu aşamaların her birine karşılık gelen .NET Compiler Platform SDK, söz ko
 
 Her derleyici bu bileşenleri tek bir uçtan uca tam olarak birleştirir.
 
-Bu API 'Ler, Visual Studio tarafından kullanılan aynı olanlardır. Örneğin, kod ana hattı ve biçimlendirme özellikleri, sözdizimi ağaçlarını, **nesne tarayıcısı**ve gezinti özelliklerini kullanır, yeniden düzenlemeler ve **Açıklama ' ya git** , anlam modelini kullanır ve **Düzenle ve devam et** , yayma API 'si de dahil olmak üzere tümünü kullanır.
+Bu API 'Ler, Visual Studio tarafından kullanılan aynı olanlardır. Örneğin, kod ana hattı ve biçimlendirme özellikleri, sözdizimi ağaçlarını, **nesne tarayıcısı** ve gezinti özelliklerini kullanır, yeniden düzenlemeler ve **Açıklama ' ya git** , anlam modelini kullanır ve **Düzenle ve devam et** , yayma API 'si de dahil olmak üzere tümünü kullanır.
 
 ## <a name="api-layers"></a>API katmanları
 
@@ -42,7 +42,7 @@ Derleyici katmanı, derleyici ardışık düzeninin her aşamasında gösterilen
 
 ### <a name="diagnostic-apis"></a>Tanılama API 'Leri
 
-Analizinin bir parçası olarak, derleyici söz dizimi, anlam ve belirli atama hatalarından her şeyi kapsayan bir tanılama kümesi oluşturabilir ve çeşitli uyarılar ve bilgilendirici tanılamaları olabilir. Derleyici API katmanı, Kullanıcı tanımlı çözümleyiciler derleme sürecine takılmasına olanak sağlayan genişletilebilir bir API aracılığıyla tanılamayı kullanıma sunar. StyleCop veya FxCop gibi araçlarla üretilenler gibi Kullanıcı tanımlı tanılamaları, derleyici tanımlı tanılamalarıyla birlikte üretilede sağlar. Tanılamayı bu şekilde oluşturmak, MSBuild ve Visual Studio gibi araçlarla doğal olarak tümleştirmenin avantajına sahiptir. Bu, ilkeye dayalı bir derlemeyi durdurma ve düzenleyicide canlı dalgalı çizgiler gösterme ve kod düzeltmeleri önerme gibi deneyimlere bağlı olan bir deneyim tanımasına bağlıdır.
+Analizinin bir parçası olarak, derleyici söz dizimi, anlam ve belirli atama hatalarından her şeyi kapsayan bir tanılama kümesi oluşturabilir ve çeşitli uyarılar ve bilgilendirici tanılamaları olabilir. Derleyici API katmanı, Kullanıcı tanımlı çözümleyiciler derleme sürecine takılmasına olanak sağlayan genişletilebilir bir API aracılığıyla tanılamayı kullanıma sunar. StyleCop gibi araçlar tarafından üretilenler gibi Kullanıcı tanımlı tanılamaları, derleyici tanımlı tanılamalarıyla birlikte üretilede sağlar. Tanılamayı bu şekilde oluşturmak, MSBuild ve Visual Studio gibi araçlarla doğal olarak tümleştirmenin avantajına sahiptir. Bu, ilkeye dayalı bir derlemeyi durdurma ve düzenleyicide canlı dalgalı çizgiler gösterme ve kod düzeltmeleri önerme gibi deneyimlere bağlı olan bir deneyim tanımasına bağlıdır.
 
 ### <a name="scripting-apis"></a>Betik oluşturma API 'Leri
 
