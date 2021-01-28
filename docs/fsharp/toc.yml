@@ -282,13 +282,13 @@
 - name: Azure’da F# kullanma
   href: using-fsharp-on-azure/index.md
   items:
-    - name: F# kullanarak Azure Blob depolama kullanmaya başlama
+    - name: 'F kullanarak Azure Blob depolama ile çalışmaya başlama #'
       href: using-fsharp-on-azure/blob-storage.md
-    - name: F# kullanarak Azure Dosya depolama kullanmaya başlama
+    - name: 'F kullanarak Azure dosya depolama ile çalışmaya başlama #'
       href: using-fsharp-on-azure/file-storage.md
-    - name: F# kullanarak Azure Kuyruk depolama kullanmaya başlama
+    - name: 'F kullanarak Azure kuyruk depolama ile çalışmaya başlama #'
       href: using-fsharp-on-azure/queue-storage.md
-    - name: F# kullanarak Azure Tablo depolama kullanmaya başlama
+    - name: 'F kullanarak Azure Tablo depolama ile çalışmaya başlama #'
       href: using-fsharp-on-azure/table-storage.md
     - name: F# Azure Bağımlılıkları için Paket Yönetimi
       href: using-fsharp-on-azure/package-management.md
