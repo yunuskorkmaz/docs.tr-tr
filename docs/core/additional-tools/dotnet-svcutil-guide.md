@@ -1,14 +1,14 @@
 ---
 title: WCF Svcutil aracına genel bakış
 description: .NET Framework projelerine yönelik WCF Svcutil aracına benzer şekilde .NET Core ve ASP.NET Core projelerine yönelik işlevler ekleyen Microsoft WCF DotNet-Svcutil aracına genel bakış.
-author: mlacouture
+author: honggit
 ms.date: 02/22/2019
-ms.openlocfilehash: 403bcf78ccebd983d378cfdd7965c4ca5097ccc9
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 9468a881fe3850b53d48945340127ac2c2d4c6c8
+ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078261"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957929"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>.NET Core için WCF DotNet-Svcutil aracı
 
@@ -21,7 +21,7 @@ Windows Communication Foundation (WCF) **DotNet-Svcutil** Aracı, bir ağ konumu
 > [!IMPORTANT]
 > Yalnızca güvenilir bir kaynaktan hizmetlere başvurmanız gerekir. Güvenilmeyen bir kaynaktan başvuruları eklemek güvenliği tehlikeye atabilir.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 <!-- markdownlint-disable MD025 -->
 
@@ -37,7 +37,7 @@ Windows Communication Foundation (WCF) **DotNet-Svcutil** Aracı, bir ağ konumu
 
 ---
 
-## <a name="getting-started"></a>Başlarken
+## <a name="getting-started"></a>Kullanmaya başlama
 
 Aşağıdaki örnek, bir .NET Core Web projesine Web hizmeti başvurusu eklemek ve hizmeti çağırmak için gereken adımlarda size yol gösterir. *Merhaba Svcutil* adlı bir .NET Core Web uygulaması oluşturacak ve aşağıdaki sözleşmeyi uygulayan bir Web hizmetine başvuru ekleyeceğiz:
 
@@ -108,7 +108,7 @@ Bir Windows, macOS veya Linux komut penceresinde aşağıdaki adımları uygulay
 
     ---
 
-Oluşturulan dosya _Merhaba Svcutil/ServiceReference/Reference. cs_olarak kaydedilir. _DotNet-Svcutil_ aracı Ayrıca, proxy kodunun paket başvuruları olarak gerekli olan uygun WCF paketlerini projeye ekler.
+Oluşturulan dosya _Merhaba Svcutil/ServiceReference/Reference. cs_ olarak kaydedilir. _DotNet-Svcutil_ aracı Ayrıca, proxy kodunun paket başvuruları olarak gerekli olan uygun WCF paketlerini projeye ekler.
 
 ## <a name="using-the-service-reference"></a>Hizmet başvurusunu kullanma
 

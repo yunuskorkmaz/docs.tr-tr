@@ -2,12 +2,12 @@
 title: dotnet-install scripts
 description: .NET SDK ve paylaşılan çalışma zamanı yüklemek için DotNet-install betikleri hakkında bilgi edinin.
 ms.date: 09/22/2020
-ms.openlocfilehash: a1598a84aa31aeac970f0493d1481651164d733e
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 1904d0322774de25aeba7e7a53ab36ce135d685d
+ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634448"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957889"
 ---
 # <a name="dotnet-install-scripts-reference"></a>DotNet-betiklerin başvurusunu yüklemeyi
 
@@ -46,7 +46,7 @@ dotnet-install.sh --help
 
 Bash betiği Ayrıca PowerShell anahtarlarını okur, bu sayede PowerShell anahtarlarını Linux/macOS sistemlerinde betiği ile birlikte kullanabilirsiniz.
 
-## <a name="description"></a>Açıklama
+## <a name="description"></a>Description
 
 `dotnet-install`Betikler .NET SDK 'sının .net CLI ve paylaşılan çalışma zamanını içeren yönetici olmayan bir yüklemesini gerçekleştirir. İki komut dosyası vardır:
 
@@ -157,9 +157,15 @@ Install betikleri, Windows 'da kayıt defterini güncelleştirmez. Yalnızca dar
   - `aspnetcore` - `Microsoft.AspNetCore.App` paylaşılan çalışma zamanı.
   - `windowsdesktop` - `Microsoft.WindowsDesktop.App` paylaşılan çalışma zamanı.
 
-- **`--runtime-id <RID>`**
+- **`--runtime-id <RID>` Kullanım dışı**
 
-  Araçların yüklendiği [çalışma zamanı tanımlayıcısını](../rid-catalog.md) belirtir. `linux-x64`Taşınabilir Linux için kullanın. (Yalnızca Linux/macOS için geçerlidir.)
+  Araçların yüklendiği [çalışma zamanı tanımlayıcısını](../rid-catalog.md) belirtir. `linux-x64`Taşınabilir Linux için kullanın. (Yalnızca Linux/macOS için ve .NET Core 2,1 öncesi sürümler için geçerlidir.)
+
+  **`--os <OPERATING_SYSTEM>`**
+
+  Araçların yüklendiği işletim sistemini belirtir. Olası değerler şunlardır: `osx` , `linux` , `linux-musl` , `freebsd` , `rhel.6` . (.NET Core 2,1 ve üzeri için geçerlidir.)
+
+  Parametresi isteğe bağlıdır ve yalnızca komut dosyası tarafından algılanan işletim sistemini geçersiz kılmak gerektiğinde kullanılmalıdır.
 
 - **`-SharedRuntime|--shared-runtime`**
 

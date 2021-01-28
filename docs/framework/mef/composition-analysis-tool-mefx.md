@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MEF, Composition Analysis Tool
 - Mefx [MEF], Composition Analysis Tool
 ms.assetid: c48a7f93-83bb-4a06-aea0-d8e7bd1502ad
-ms.openlocfilehash: d3f3a282cfa9274a1939d312987dd58b24eab2af
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a7c76bfe169a23322a5a0cdfe0d2e2e5d82f0346
+ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96255799"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957890"
 ---
 # <a name="composition-analysis-tool-mefx"></a>Bileşim Analiz Aracı (Mefx)
 
@@ -130,7 +130,7 @@ from: ClassLibrary1.ChainOne from: AssemblyCatalog (Assembly="ClassLibrary1, Ver
   
 <a name="white_lists"></a>
 
-## <a name="white-lists"></a>Beyaz listeler  
+## <a name="allow-lists"></a>Listelere izin ver
 
  `/whitelist`Seçeneği, reddedilmesi beklenen bölümleri listeleyen bir metin dosyası belirtmenize olanak sağlar. Ardından, beklenmeyen ret ler işaretlenir. Bu, tamamlanmamış bir kitaplığı veya bazı bağımlılıkları eksik olan bir alt kitaplığı çözümlediğinizde yararlı olabilir. `/whitelist`Seçeneği `/rejected` veya `/causes` eylemlerine uygulanabilir.  
   

@@ -2,12 +2,12 @@
 title: .NET kapsayıcıları ile hangi işletim sistemi hedeflenmelidir?
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | .NET kapsayıcıları ile hedef işletim sistemi
 ms.date: 01/13/2021
-ms.openlocfilehash: 1b914d9afca9ade37f13e639f73001b91f338d26
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: b128a7b98d7f46034a56314bd8cc6b4f5731f121
+ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98187995"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957916"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>.NET kapsayıcıları ile hangi işletim sistemi hedeflenmelidir?
 
@@ -27,9 +27,6 @@ Eski .NET Framework uygulamalar dağıtıldığında, eski uygulamalarla ve IIS 
 
 Ayrıca, farklı bir Linux veya Microsoft tarafından sağlanmayan sürümlere sahip bir görüntü istediğiniz durumlarda kendi Docker görüntünüzü oluşturabilirsiniz. Örneğin, Docker için olmayan-yaygın bir senaryo olan geleneksel .NET Framework ve Windows Server Core üzerinde çalışan ASP.NET Core bir görüntü oluşturabilirsiniz.
 
-> [!IMPORTANT]
-> Windows Server çekirdek görüntülerini kullanırken, tam Windows görüntüleriyle karşılaştırıldığında bazı dll 'Lerin eksik olduğunu fark edebilirsiniz. Bu sorunu, bu [GitHub açıklamasında](https://github.com/microsoft/dotnet-framework-docker/issues/299#issuecomment-511537448)belirtildiği gibi, görüntü derleme zamanında eksik dosyaları ekleyerek özel bir sunucu çekirdeği görüntüsü oluşturarak çözebilirsiniz.
-
 Resim adını Dockerfile dosyanıza eklediğinizde, aşağıdaki örneklerde olduğu gibi, kullandığınız etikete bağlı olarak işletim sistemini ve sürümü seçebilirsiniz:
 
 | Görüntü | Yorumlar |
@@ -38,11 +35,6 @@ Resim adını Dockerfile dosyanıza eklediğinizde, aşağıdaki örneklerde old
 | mcr.microsoft.com/dotnet/aspnet:5.0 | ASP.NET Core 5,0 Multi-Architecture: Docker konağına bağlı olarak Linux ve Windows nano Server 'ı destekler. <br/> Aspnetcore görüntüsünün ASP.NET Core için birkaç iyileştirmesi vardır. |
 | mcr.microsoft.com/dotnet/aspnet:5.0-buster-slim | .NET 5 çalışma zamanı-yalnızca Linux 'ta Delinde |
 | mcr.microsoft.com/dotnet/aspnet:5.0-nanoserver-1809 | .NET 5 çalışma zamanı-yalnızca Windows nano Server 'da (Windows Server sürüm 1809) |
-
-## <a name="additional-resources"></a>Ek kaynaklar
-
-- **WindowsCodecsExt.dll eksik olması nedeniyle BitmapDecoder hata (GitHub sorunu)**  
-  <https://github.com/microsoft/dotnet-framework-docker/issues/299>
 
 > [!div class="step-by-step"]
 > [Önceki](container-framework-choice-factors.md) 

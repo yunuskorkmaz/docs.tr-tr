@@ -12,12 +12,12 @@ helpviewer_keywords:
 - language code style rules [EditorConfig]
 - language rules
 - EditorConfig language conventions
-ms.openlocfilehash: b77d9aa2a528a6cf540babd5e5acc148e48c489c
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 2aa2261534363f1da6a2109f092e08d210ebd915
+ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96590073"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957981"
 ---
 # <a name="language-rules"></a>Dil kuralları
 
@@ -31,10 +31,21 @@ Kod stili dil kuralları, .NET programlama dillerinin çeşitli yapılarının, 
 
 Dil kuralları seçenekleri aşağıdaki biçimde bir EditorConfig dosyasında belirtilebilir:
 
+`option_name = value` (Visual Studio 2019 sürüm 16,9 Preview 2 ve üzeri)
+
+veya
+
 `option_name = value:severity`
 
-- **Değer**: her dil kuralı için, stilin ne zaman tercih edilmesi gerektiğini tanımlayan bir değer belirtirsiniz. Birçok kural bir değeri kabul eder `true` (Bu stili tercih et) veya `false` (Bu stili tercih etme). Diğer kurallar veya gibi değerleri kabul `when_on_single_line` eder `never` .
-- **Önem derecesi**: kuralın ikinci bölümü, kuralın [önem derecesini](../configuration-options.md#severity-level) belirtir. Yukarıdaki seçenek sözdiziminin bir parçası olarak önem derecesi yalnızca Visual Studio gibi geliştirme IDEs 'in içinde yer verilir. Bu ayar C# veya VB derleyicileri tarafından anlaşılmaz, bu nedenle derleme sırasında dikkate verilmez. Bunun yerine, derleme üzerinde kod stili kuralları zorlamak için, çözümleyiciler için kural KIMLIĞI tabanlı önem derecesi yapılandırma söz dizimini kullanarak önem derecesini ayarlamanız gerekir. Sözdizimi, `dotnet_diagnostic.<rule ID>.severity = <severity>` Örneğin, biçimini alır `dotnet_diagnostic.IDE0040.severity = silent` . Daha fazla bilgi için bu [GitHub sorununa](https://github.com/dotnet/roslyn/issues/44201)bakın.
+- **Değer**
+
+  Her dil kuralı için, stilin ne zaman tercih edilmesi gerektiğini tanımlayan bir değer belirtirsiniz. Birçok kural bir değeri kabul eder `true` (Bu stili tercih et) veya `false` (Bu stili tercih etme). Diğer kurallar veya gibi değerleri kabul `when_on_single_line` eder `never` .
+
+- **Önem derecesi** (Visual Studio 2019 sürüm 16,9 Preview 2 ve sonraki sürümler için isteğe bağlı)
+
+  Kuralın ikinci bölümü, kuralın [önem derecesini](../configuration-options.md#severity-level) belirtir. Bu şekilde belirtildiğinde önem derecesi ayarı yalnızca Visual Studio gibi geliştirme IDEs 'in içinde olur. Derleme sırasında dikkate *verilmez* .
+
+  Derleme zamanında kod stili kuralları zorlamak için, bunun yerine çözümleyiciler için kural KIMLIĞI tabanlı önem derecesi yapılandırma sözdizimini kullanarak önem derecesini ayarlayın. Sözdizimi, `dotnet_diagnostic.<rule ID>.severity = <severity>` Örneğin, biçimini alır `dotnet_diagnostic.IDE0040.severity = silent` . Daha fazla bilgi için bkz. [önem düzeyi](../configuration-options.md#severity-level).
 
 > [!TIP]
 >

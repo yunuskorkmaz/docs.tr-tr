@@ -1,16 +1,16 @@
 ---
 title: Microsoft XML seri hale getirici Oluşturucusu
 description: Microsoft XML seri hale getirici oluşturucusuna genel bakış. Projenizde bulunan türler için bir XML serileştirme derlemesi oluşturmak üzere XML seri hale getirici oluşturucusunu kullanın.
-author: mlacouture
+author: honggit
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 8005a8a3e5202b0255ec482dfb7e3c284bc2e19b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4b408326bb9f1bc3b82acb92e8daabfd90be43f6
+ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538910"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957903"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>.NET Core 'da Microsoft XML serileştirici üreticisini kullanma
 
@@ -42,7 +42,7 @@ Aşağıdaki yönergelerde, bir .NET Core konsol uygulamasında XML serileştiri
 
 ### <a name="create-a-net-core-console-application"></a>.NET Core konsol uygulaması oluşturma
 
-Bir komut istemi açın ve *MyApp*adlı bir klasör oluşturun. Oluşturduğunuz klasöre gidin ve aşağıdaki komutu yazın:
+Bir komut istemi açın ve *MyApp* adlı bir klasör oluşturun. Oluşturduğunuz klasöre gidin ve aşağıdaki komutu yazın:
 
 ```dotnetcli
 dotnet new console
@@ -84,7 +84,7 @@ Komutu çalıştırdıktan sonra [`dotnet add package`](../tools/dotnet-add-pack
 
 ### <a name="add-a-class-in-the-application"></a>Uygulamaya bir sınıf ekleme
 
-Metin düzenleyicinizde *program.cs* öğesini açın. *Program.cs*içinde *MyClass* adlı sınıfı ekleyin.
+Metin düzenleyicinizde *program.cs* öğesini açın. *Program.cs* içinde *MyClass* adlı sınıfı ekleyin.
 
 ```csharp
 public class MyClass

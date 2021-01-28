@@ -4,12 +4,12 @@ description: IaaS, PaaS, kapsayıcılar ve sunucusuz arasında karşılaştırma
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 7e91412600e8e4e5a0dca2a454f1cb0680c881b2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 89a8e6a52331b563be334a867f563e9ded8d8cc4
+ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173347"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957968"
 ---
 # <a name="architecture-deployment-approaches"></a>Mimari dağıtım yaklaşımları
 
@@ -101,7 +101,7 @@ Docker Kapsayıcıları hakkında daha fazla bilgi için bkz. [Docker nedir?](..
 
 Her ana bilgisayar genelinde kapsayıcıları yönetmek için genellikle Kubernetes gibi bir düzenleme aracı gerekir. Orchestration çözümlerini yapılandırma ve yönetme, projelere ek yük ve karmaşıklık ekleyebilir. Neyse ki birçok bulut sağlayıcısı, kapsayıcıların yönetimini basitleştirmek için PaaS çözümleri aracılığıyla düzenleme hizmetleri sağlar.
 
-Aşağıdaki görüntüde örnek bir Kubernetes yüklemesi gösterilmektedir. Yükleme adresindeki düğümlerin ölçeği genişleme ve yük devretme. Ana sunucu tarafından yönetilen Docker kapsayıcı örneklerini çalıştırırlar. *Kubelet* , komutları Kubernetes 'Den Docker 'a aktaran istemcidir.
+Aşağıdaki görüntüde örnek bir Kubernetes yüklemesi gösterilmektedir. Yükleme adresindeki düğümlerin ölçeği genişleme ve yük devretme. Birincil sunucu tarafından yönetilen Docker kapsayıcı örneklerini çalıştırırlar. *Kubelet* , komutları Kubernetes 'Den Docker 'a aktaran istemcidir.
 
 ![Kubernetes](./media/kubernetes-example.png)
 
@@ -111,9 +111,9 @@ Hizmet olarak işlevler (FaaS) sunucusuz ile benzer özel bir kapsayıcı hizmet
 
 ## <a name="serverless"></a>Sunucusuz
 
-Sunucusuz bir mimari, kod ve barındırma ortamı arasında net bir ayrım sağlar. Kodu bir *tetikleyici*tarafından çağrılan bir *işlevde* uygulamalısınız. Bu işlev çıktıktan sonra, gereken tüm kaynaklar serbest bırakılmış olabilir. Tetikleyici el ile, süreli bir işlem, bir HTTP isteği veya karşıya dosya yükleme olabilir. Tetikleyicinin sonucu kodun yürütülmesinden kaynaklanır. Sunucusuz platformlar farklılık gösterebilse de, bir veritabanına yazma veya sonuçları sıraya alma gibi görevleri kolaylaştırmak için önceden tanımlanmış API 'lere ve bağlamalara erişim sağlar.
+Sunucusuz bir mimari, kod ve barındırma ortamı arasında net bir ayrım sağlar. Kodu bir *tetikleyici* tarafından çağrılan bir *işlevde* uygulamalısınız. Bu işlev çıktıktan sonra, gereken tüm kaynaklar serbest bırakılmış olabilir. Tetikleyici el ile, süreli bir işlem, bir HTTP isteği veya karşıya dosya yükleme olabilir. Tetikleyicinin sonucu kodun yürütülmesinden kaynaklanır. Sunucusuz platformlar farklılık gösterebilse de, bir veritabanına yazma veya sonuçları sıraya alma gibi görevleri kolaylaştırmak için önceden tanımlanmış API 'lere ve bağlamalara erişim sağlar.
 
-Sunucusuz, büyük ölçüde ana bilgisayar ortamının koda odaklanmak için soyutlanması gereken bir mimaridir. Bu, *daha az sunucu*olarak düşünülebilir.
+Sunucusuz, büyük ölçüde ana bilgisayar ortamının koda odaklanmak için soyutlanması gereken bir mimaridir. Bu, *daha az sunucu* olarak düşünülebilir.
 
 Kapsayıcı çözümleri, geliştiricilerin sunucusuz özellikli görüntülere kod yayımlaması için mevcut derleme betikleri sağlar. Diğer uygulamalar, ölçeklenebilir bir mimari sağlamak için mevcut PaaS çözümlerini kullanır.
 
