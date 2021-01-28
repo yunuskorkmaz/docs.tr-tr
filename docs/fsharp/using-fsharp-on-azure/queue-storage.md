@@ -1,19 +1,19 @@
 ---
-title: F# kullanarak Azure Kuyruk depolama kullanmaya başlama
+title: 'F kullanarak Azure kuyruk depolama ile çalışmaya başlama #'
 description: Azure Queues, uygulama bileşenleri arasında güvenilir ve zaman uyumsuz mesajlaşma sağlar. Bulut mesajlaşma özelliği uygulama bileşenlerinizin bağımsız olarak ölçeklendirilmesini sağlar.
 author: sylvanc
 ms.date: 09/20/2016
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: daa5372b7903f10c0d966c5c92e35c8bf9d362d8
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 0ab131647e37985d45073966ffc01b9a7f379e2f
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756227"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899301"
 ---
 # <a name="get-started-with-azure-queue-storage-using-f"></a>F kullanarak Azure kuyruk depolama ile çalışmaya başlama\#
 
-Azure Queue depolama birimi, uygulama bileşenleri arasında bulut mesajlaşma özelliği sağlar. Ölçeklendirmek üzere uygulama tasarlarken, uygulama bileşenleri birbirinden bağımsız şekilde ölçeklenebilmek için genellikle birbirinden ayrılır. Kuyruk depolama bulutta, masaüstünde, şirket içi sunucuda veya mobil bir cihazda çalışan uygulama bileşenleri arasındaki iletişim için zaman uyumsuz mesajlaşma sunar. Kuyruk depolama ayrıca zaman uyumsuz görevlerin yönetilmesini ve süreç iş akışlarının oluşturulmasını destekler.
+Azure kuyruk depolama, uygulama bileşenleri arasında bulut mesajlaşmasını sağlar. Ölçeklendirmek üzere uygulama tasarlarken, uygulama bileşenleri birbirinden bağımsız şekilde ölçeklenebilmek için genellikle birbirinden ayrılır. Kuyruk depolama bulutta, masaüstünde, şirket içi sunucuda veya mobil bir cihazda çalışan uygulama bileşenleri arasındaki iletişim için zaman uyumsuz mesajlaşma sunar. Kuyruk depolama ayrıca zaman uyumsuz görevlerin yönetilmesini ve süreç iş akışlarının oluşturulmasını destekler.
 
 ### <a name="about-this-tutorial"></a>Bu öğretici hakkında
 
@@ -21,7 +21,7 @@ Bu öğreticide, Azure kuyruk depolama kullanan bazı yaygın görevler için F 
 
 Kuyruk depolamaya kavramsal bir genel bakış için bkz. [kuyruk depolaması için .net Kılavuzu](/azure/storage/storage-dotnet-how-to-use-queues).
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu kılavuzu kullanmak için önce [bir Azure depolama hesabı oluşturmanız](/azure/storage/storage-create-storage-account)gerekir.
 Ayrıca, bu hesap için depolama erişim anahtarınız gerekecektir.
@@ -30,7 +30,7 @@ Ayrıca, bu hesap için depolama erişim anahtarınız gerekecektir.
 
 Bu makaledeki örnekler bir F # uygulamasında veya F # betiğinde kullanılabilir. F # betiği oluşturmak için, `.fsx` Örneğin `queues.fsx` f # geliştirme ortamınızda uzantılı bir dosya oluşturun.
 
-Daha sonra, [NuGet](https://www.nuget.org/) [Paket](https://fsprojects.github.io/Paket/) paketi [package manager](package-management.md) `WindowsAzure.Storage` ve `WindowsAzure.Storage.dll` bir yönerge kullanarak betiğe paket ve başvuru yüklemek için, paket veya NuGet gibi bir paket Yöneticisi kullanın `#r` .
+Daha sonra, [](https://www.nuget.org/) [](https://fsprojects.github.io/Paket/) paketi [](package-management.md) `WindowsAzure.Storage` ve `WindowsAzure.Storage.dll` bir yönerge kullanarak betiğe paket ve başvuru yüklemek için, paket veya NuGet gibi bir paket Yöneticisi kullanın `#r` .
 
 ### <a name="add-namespace-declarations"></a>Ad alanı bildirimleri ekleme
 

@@ -1,19 +1,19 @@
 ---
-title: F# kullanarak Azure Tablo depolama kullanmaya başlama
+title: 'F kullanarak Azure Tablo depolama ile çalışmaya başlama #'
 description: Yapılandırılmış verileri Azure Tablo depolama veya Azure Cosmos DB kullanarak bulutta depolayın.
 author: sylvanc
 ms.date: 03/26/2018
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: bf4f2e63c847e18d253fe5b6cf5dd7773c320fb7
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: bc8e111636013930f7c7d4f59d1ef0720298cb9f
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756214"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899288"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>F kullanarak Azure Tablo depolama ve Azure Cosmos DB Tablo API'si kullanmaya başlama\#
 
-Azure Table Storage, bulutta yapılandırılmış NoSQL verileri depolayan bir hizmettir. Table Storage, şemasız tasarım ile bir anahtar/öznitelik deposudur. Table Storage şemasız olduğu için uygulamanızın ihtiyaçları geliştikçe verilerinizi kolayca uyarlayabilirsiniz. Her türlü uygulama için verilere erişim hızlı ve uygun maliyetlidir. Table Storage, benzer hacimdeki veriler için geleneksel SQL’e oranla çok daha düşük maliyetlidir.
+Azure Tablo depolama, bulutta yapılandırılmış NoSQL verilerini depolayan bir hizmettir. Table Storage, şemasız tasarım ile bir anahtar/öznitelik deposudur. Table Storage şemasız olduğu için uygulamanızın ihtiyaçları geliştikçe verilerinizi kolayca uyarlayabilirsiniz. Her türlü uygulama için verilere erişim hızlı ve uygun maliyetlidir. Table Storage, benzer hacimdeki veriler için geleneksel SQL’e oranla çok daha düşük maliyetlidir.
 
 Web uygulamaları için kullanıcı verileri, adres defterleri, cihaz bilgileri ve hizmetiniz için gerekli olan tüm diğer meta veri türleri gibi esnek veri kümelerini depolamak üzere Table Storage’ı kullanabilirsiniz. Bir tabloda istediğiniz kadar varlık depolayabilirsiniz ve bir depolama hesabı kapasite limitini dolduracak kadar tablo içerebilir.
 
@@ -25,7 +25,7 @@ Azure Cosmos DB, Azure Tablo depolaması için yazılmış ve şu gibi Premium y
 - Garantili yüksek kullanılabilirlik.
 - Otomatik ikincil dizin oluşturma.
 
-Azure Tablo depolama için yazılmış uygulamalar herhangi bir kod değişikliği olmadan Tablo API'sini kullanarak Azure Cosmos DB'ye geçirilebilir ve üst düzey özelliklerden yararlanabilir. Tablo API’si, .NET, Java, Python ve Node.js ile kullanılabilecek istemci SDK’larına sahiptir.
+Azure Tablo depolaması için yazılmış uygulamalar, kod değişikliği olmadan Tablo API'si kullanarak Azure Cosmos DB ve Premium özelliklerden yararlanabilir. Tablo API’si, .NET, Java, Python ve Node.js ile kullanılabilecek istemci SDK’larına sahiptir.
 
 Daha fazla bilgi için bkz. [Azure Cosmos DB tablo API'si giriş](/azure/cosmos-db/table-introduction).
 
@@ -33,7 +33,7 @@ Daha fazla bilgi için bkz. [Azure Cosmos DB tablo API'si giriş](/azure/cosmos-
 
 Bu öğreticide, bir tablo oluşturma ve silme ve tablo verileri ekleme, güncelleştirme, silme ve sorgulama dahil olmak üzere Azure Tablo depolama alanı veya Azure Cosmos DB Tablo API'si kullanarak bazı yaygın görevleri yapmak için F # kodu yazma işlemi gösterilmektedir.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu kılavuzu kullanmak için, önce [bir Azure depolama hesabı](/azure/storage/storage-create-storage-account) veya [Azure Cosmos DB hesabı](https://azure.microsoft.com/try/cosmosdb/)oluşturmanız gerekir.
 
@@ -41,7 +41,7 @@ Bu kılavuzu kullanmak için, önce [bir Azure depolama hesabı](/azure/storage/
 
 Bu makaledeki örnekler bir F # uygulamasında veya F # betiğinde kullanılabilir. F # betiği oluşturmak için, `.fsx` Örneğin `tables.fsx` f # geliştirme ortamınızda uzantılı bir dosya oluşturun.
 
-Daha sonra, [NuGet](https://www.nuget.org/) [Paket](https://fsprojects.github.io/Paket/) paketi [package manager](package-management.md) `WindowsAzure.Storage` ve `WindowsAzure.Storage.dll` bir yönerge kullanarak betiğe paket ve başvuru yüklemek için, paket veya NuGet gibi bir paket Yöneticisi kullanın `#r` . `Microsoft.WindowsAzure.ConfigurationManager`Microsoft. Azure ad alanını almak için bunu yeniden yapın.
+Daha sonra, [](https://www.nuget.org/) [](https://fsprojects.github.io/Paket/) paketi [](package-management.md) `WindowsAzure.Storage` ve `WindowsAzure.Storage.dll` bir yönerge kullanarak betiğe paket ve başvuru yüklemek için, paket veya NuGet gibi bir paket Yöneticisi kullanın `#r` . `Microsoft.WindowsAzure.ConfigurationManager`Microsoft. Azure ad alanını almak için bunu yeniden yapın.
 
 ### <a name="add-namespace-declarations"></a>Ad alanı bildirimleri ekleme
 

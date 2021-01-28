@@ -1,23 +1,23 @@
 ---
-title: F# kullanarak Azure Dosya depolama kullanmaya başlama
-description: Azure File Storage ile verileri bulutta depolayın ve Azure Virtual Machine (VM) veya Windows çalıştıran şirket içi bir uygulamadan buluta bir dosya paylaşımı bağlayın.
+title: 'F kullanarak Azure dosya depolama ile çalışmaya başlama #'
+description: Dosya verilerini bulutta Azure dosya depolama ile depolayın ve bulut dosya paylaşımınızı bir Azure sanal makinesinden (VM) veya Windows çalıştıran şirket içi bir uygulamadan bağlayın.
 author: sylvanc
 ms.date: 09/20/2016
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: dd19b156e73774f4eca63afd3f4c10a4a7b8d46c
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: bcea58b4bf756fc9d696cd5a1010b0feffb127a7
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100132"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899431"
 ---
 # <a name="get-started-with-azure-file-storage-using-f"></a>F kullanarak Azure dosya depolama ile çalışmaya başlama\#
 
-Azure dosya depolama, standart [sunucu Ileti bloğu (SMB) protokolünü](/windows/win32/fileio/microsoft-smb-protocol-and-cifs-protocol-overview)kullanarak bulutta dosya paylaşımları sunan bir hizmettir. SMB 2.1 ve SMB 3.0 desteklenir. Azure File Storage, Azure’a dosya paylaşımı kullanan eski uygulamaları maliyetli yeniden yazdırmaya ihtiyaç duymadan ve hızla taşıyabilmenizi sağlar. Azure Virtual Machines’de, Cloud Services’da veya şirket içi istemcilerde çalışan uygulamalar, bir masaüstü uygulamanın tipik SMB paylaşımı bağladığı gibi buluta bir dosya paylaşımı bağlayabilir. Ardından herhangi sayıda uygulama bileşeni eş zamanlı olarak File Storage paylaşımını bağlayıp buna erişim sağlayabilir.
+Azure dosya depolama, standart [sunucu Ileti bloğu (SMB) protokolünü](/windows/win32/fileio/microsoft-smb-protocol-and-cifs-protocol-overview)kullanarak bulutta dosya paylaşımları sunan bir hizmettir. SMB 2.1 ve SMB 3.0 desteklenir. Azure dosya depolama ile, dosya paylaşımlarına bağlı eski uygulamaları, maliyetli yeniden yazar olmadan hızla ve Azure 'a geçirebilirsiniz. Azure Virtual Machines’de, Cloud Services’da veya şirket içi istemcilerde çalışan uygulamalar, bir masaüstü uygulamanın tipik SMB paylaşımı bağladığı gibi buluta bir dosya paylaşımı bağlayabilir. Ardından herhangi sayıda uygulama bileşeni eş zamanlı olarak File Storage paylaşımını bağlayıp buna erişim sağlayabilir.
 
 Dosya depolamaya kavramsal bir genel bakış için bkz. [dosya depolama için .net Kılavuzu](/azure/storage/storage-dotnet-how-to-use-files).
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu kılavuzu kullanmak için önce [bir Azure depolama hesabı oluşturmanız](/azure/storage/storage-create-storage-account)gerekir.
 Ayrıca, bu hesap için depolama erişim anahtarınız gerekecektir.
@@ -26,7 +26,7 @@ Ayrıca, bu hesap için depolama erişim anahtarınız gerekecektir.
 
 Bu makaledeki örnekler bir F # uygulamasında veya F # betiğinde kullanılabilir. F # betiği oluşturmak için, `.fsx` Örneğin `files.fsx` f # geliştirme ortamınızda uzantılı bir dosya oluşturun.
 
-Daha sonra, [NuGet](https://www.nuget.org/) [Paket](https://fsprojects.github.io/Paket/) paketi [package manager](package-management.md) `WindowsAzure.Storage` ve `WindowsAzure.Storage.dll` bir yönerge kullanarak betiğe paket ve başvuru yüklemek için, paket veya NuGet gibi bir paket Yöneticisi kullanın `#r` .
+Daha sonra, [](https://www.nuget.org/) [](https://fsprojects.github.io/Paket/) paketi [](package-management.md) `WindowsAzure.Storage` ve `WindowsAzure.Storage.dll` bir yönerge kullanarak betiğe paket ve başvuru yüklemek için, paket veya NuGet gibi bir paket Yöneticisi kullanın `#r` .
 
 ### <a name="add-namespace-declarations"></a>Ad alanı bildirimleri ekleme
 
@@ -154,7 +154,7 @@ Azure dosya depolama hakkında daha fazla bilgi için bu bağlantılara bakın.
 
 ### <a name="blog-posts"></a>Blog yazıları
 
-- [Azure Dosya Depolama genel kullanıma sunulmuştur](https://azure.microsoft.com/blog/azure-file-storage-now-generally-available/)
+- [Azure dosya depolama genel kullanıma sunuldu](https://azure.microsoft.com/blog/azure-file-storage-now-generally-available/)
 - [Azure dosya depolama alanı içinde](https://azure.microsoft.com/blog/inside-azure-file-storage/)
 - [Microsoft Azure Dosya Hizmeti’ne Giriş](/archive/blogs/windowsazurestorage/introducing-microsoft-azure-file-service)
 - [Microsoft Azure Dosyaları ile kalıcı bağlantılar](/archive/blogs/windowsazurestorage/persisting-connections-to-microsoft-azure-files)
