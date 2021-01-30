@@ -2,12 +2,12 @@
 title: Resmi .NET Docker görüntüleri
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Resmi .NET Docker görüntüleri
 ms.date: 01/13/2021
-ms.openlocfilehash: 3f4b58b2775c4e80b69cbd707396ebe98ccfe29c
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 072e565260bf81c123ee837ccca46fbdf7c67361
+ms.sourcegitcommit: 78eb25647b0c750cd80354ebd6ce83a60668e22c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188627"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99065128"
 ---
 # <a name="official-net-docker-images"></a>Resmi .NET Docker görüntüleri
 
@@ -48,7 +48,7 @@ Docker Hub 'ında .NET görüntü depoları araştırdığınızda, etiketlerle 
 | Görüntü | Yorumlar |
 |-------|----------|
 | mcr.microsoft.com/dotnet/aspnet:**5,0** | ASP.NET Core, yalnızca çalışma zamanı ve ASP.NET Core iyileştirmeleri, Linux ve Windows 'da (çoklu mimari) |
-| mcr.microsoft.com/dotnet/sdk:**5,01** | .NET 5, SDK 'lar dahil, Linux ve Windows üzerinde (çoklu mimari) |
+| mcr.microsoft.com/dotnet/sdk:**5,0** | .NET 5, SDK 'lar dahil, Linux ve Windows üzerinde (çoklu mimari) |
 
 > [!div class="step-by-step"]
 > [Önceki](net-container-os-targets.md) 

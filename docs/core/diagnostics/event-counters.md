@@ -2,12 +2,12 @@
 title: .NET Core 'da EventCounters
 description: Bu makalede, olaylarınızın ne olduğunu, nasıl uygulanacağını ve bunları nasıl kullanacağınızı öğreneceksiniz.
 ms.date: 08/07/2020
-ms.openlocfilehash: 08180b5580d2e7fe782fbd531a26872715825cdf
-ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
+ms.openlocfilehash: 843f1ec645bf7f52fd4f85e30d183e6e21fee5c6
+ms.sourcegitcommit: 78eb25647b0c750cd80354ebd6ce83a60668e22c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97678208"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99065070"
 ---
 # <a name="eventcounters-in-net-core"></a>.NET Core 'da EventCounters
 
@@ -195,11 +195,11 @@ Sayaç değerlerini API aracılığıyla kullanabilirsiniz <xref:System.Diagnost
 
 İlk olarak, <xref:System.Diagnostics.Tracing.EventSource> sayaç değerini üreten değerin etkinleştirilmesi gerekir. <xref:System.Diagnostics.Tracing.EventListener.OnEventSourceCreated%2A?displayProperty=nameWithType>Oluşturulduğunda bildirim almak için yöntemi geçersiz kılın <xref:System.Diagnostics.Tracing.EventSource> ve bu, <xref:System.Diagnostics.Tracing.EventSource> eventsayaçlarınız ile doğruysa, üzerinde arama yapabilirsiniz <xref:System.Diagnostics.Tracing.EventListener.EnableEvents%2A?displayProperty=nameWithType> . Örnek bir geçersiz kılma aşağıda verilmiştir:
 
-:::code language="csharp" source="snippets/EventCounters/SimpleEventListener.cs" range="16-27":::
+:::code language="csharp" source="snippets/EventCounters/SimpleEventListener.cs" range="11-22":::
 
 #### <a name="sample-code"></a>Örnek kod
 
-Burada <xref:System.Diagnostics.Tracing.EventListener> .NET çalışma zamanının tüm sayaç adlarını ve değerlerini, <xref:System.Diagnostics.Tracing.EventSource> iç sayaçlarını () yayımlamak için bir aralıkta yazdıran örnek bir sınıf verilmiştir `System.Runtime` .
+Burada, <xref:System.Diagnostics.Tracing.EventListener> <xref:System.Diagnostics.Tracing.EventSource> iç sayaçlarını () yayımlamak için .NET çalışma zamanının tüm sayaç adlarını ve değerlerini yazdıran örnek bir sınıf verilmiştir `System.Runtime` .
 
 :::code language="csharp" source="snippets/EventCounters/SimpleEventListener.cs":::
 

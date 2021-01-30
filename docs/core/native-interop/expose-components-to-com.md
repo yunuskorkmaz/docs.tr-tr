@@ -1,6 +1,6 @@
 ---
 title: .NET Core bileşenlerini COM 'a gösterme
-description: Bu öğreticide, .NET Core 'dan bir sınıfın COM 'a nasıl sunulebileceği gösterilmektedir. Kayıt defteri-ücretsiz COM için bir COM sunucusu ve yan yana sunucu bildirimi oluşturabilirsiniz.
+description: Bu öğreticide, .NET Core 'dan bir sınıfın COM 'a nasıl sunulebileceği gösterilmektedir. Registry-Free COM için bir COM sunucusu ve yan yana sunucu bildirimi oluşturabilirsiniz.
 ms.date: 07/12/2019
 helpviewer_keywords:
 - exposing .NET Core components to COM
@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 346776ebae3a6077fd39f26d5bd19d599d163db2
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 13c91e5cb6728c5669642d1b5f7bb461efdd44f8
+ms.sourcegitcommit: 78eb25647b0c750cd80354ebd6ce83a60668e22c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608339"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99065057"
 ---
 # <a name="exposing-net-core-components-to-com"></a>.NET Core bileşenlerini COM 'a gösterme
 
@@ -22,7 +22,7 @@ ms.locfileid: "88608339"
 
 - .NET Core 'dan COM 'a bir sınıf sunun.
 - .NET Core kitaplığınızı oluşturmanın bir parçası olarak bir COM sunucusu oluşturun.
-- Kayıt defteri ücretsiz COM için otomatik olarak yan yana sunucu bildirimi oluşturun.
+- Registry-Free COM için otomatik olarak yan yana sunucu bildirimi oluşturun.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
@@ -83,7 +83,7 @@ Yükseltilmiş bir komut istemi açın ve çalıştırın `regsvr32 ProjectName.
 1. `.csproj`Proje dosyasını açın ve `<EnableRegFreeCom>true</EnableRegFreeCom>` etiketinin içine ekleyin `<PropertyGroup></PropertyGroup>` .
 2. Projeyi derleyin.
 
-Sonuçta elde edilen çıkışın bir dosyası da olacaktır `ProjectName.X.manifest` . Bu dosya, kayıt defteri-ücretsiz COM ile kullanılmak üzere yan yana bildirimidir.
+Sonuçta elde edilen çıkışın bir dosyası da olacaktır `ProjectName.X.manifest` . Bu dosya, Registry-Free COM ile kullanım için yan yana bildirimidir.
 
 ## <a name="sample"></a>Örnek
 
@@ -92,6 +92,9 @@ GitHub 'daki DotNet/Samples deposunda tam işlevli bir [com sunucusu örneği](h
 ## <a name="additional-notes"></a>Ek notlar
 
 .NET Framework aksine bir .NET Core derlemesinden COM tür kitaplığı (TLB) oluşturmaya yönelik .NET Core desteği yoktur. Bu kılavuz, COM arabirimlerinin yerel bildirimleri için el ile bir IDL dosyası ya da C/C++ üst bilgisi yazmaktır.
+
+> [!IMPORTANT]
+> .NET Framework, "herhangi bir CPU" derlemesi, hem 32-bit hem de 64-bit istemciler tarafından tüketilebilir. Varsayılan olarak, .NET Core, .NET 5 ve sonraki sürümlerinde, "Any CPU" Derlemeleriyle birlikte 64 bit *\*.comhost.dll* vardır. Bu nedenle, yalnızca 64 bitlik istemciler tarafından tüketilebilir. Bu varsayılandır çünkü SDK 'nın gösterdiği şeydir. Bu davranış, "kendinden bağımsız" özelliğin Yayımlanma biçimi ile aynıdır: varsayılan olarak SDK 'nın sağladığı öğeleri kullanır. `NETCoreSdkRuntimeIdentifier`MSBuild özelliği *\*.comhost.dll* bit durumunu belirler. Yönetilen bölüm aslında beklenen şekilde bittik, ancak eşlik eden yerel varlık, hedeflenen SDK 'ya varsayılan olarak ayarlanır.
 
 COM bileşenlerinin [kendi kendine kapsanan dağıtımları](../deploying/index.md#publish-self-contained) desteklenmez. Yalnızca [çerçeveye BAĞıMLı](../deploying/index.md#publish-framework-dependent) com bileşenleri dağıtımları desteklenir.
 
