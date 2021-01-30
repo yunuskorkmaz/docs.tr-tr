@@ -1,13 +1,13 @@
 ---
 title: C#-ana dil alanlarının turu
-description: C# ' ta yeni misiniz? Dilin temel bilgilerini öğrenin.
+description: C# ' ta yeni misiniz? Dilin temel bilgilerini öğrenin. Bu makale, ana dil özelliklerinin bir anketini içerir.
 ms.date: 08/06/2020
-ms.openlocfilehash: a73399643ada05a4bfb17fadd17bf3267514e99d
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 943701b544dd3495fa2286e804e2566da146cb45
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "93400754"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216661"
 ---
 # <a name="major-language-areas"></a>Ana dil alanları
 
@@ -25,7 +25,7 @@ Aşağıdaki örnek, bir dizi öğe oluşturur `int` , diziyi başlatır ve dizi
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="ArraysSample":::
 
-Bu örnek, _*_tek boyutlu bir dizi_*_ üzerinde oluşturur ve çalışır. C#, _*_çok boyutlu dizileri_*_ de destekler. Dizi türünün _*_derecesi_*_ olarak da bilinen bir dizi türünün boyut sayısı, dizi türünün köşeli ayraçları arasına yazılan virgüllerin sayısıdır. Aşağıdaki örnek, sırasıyla tek boyutlu, iki boyutlu ve üç boyutlu bir diziyi ayırır.
+Bu örnek, _*_tek boyutlu bir dizi_*_ üzerinde oluşturur ve çalışır. C#, _*_çok boyutlu dizileri_*_ de destekler. Dizi türünün _*_sırası_*_ olarak da bilinen bir dizi türünün boyutlarının sayısı, dizi türünün köşeli ayraçları arasındaki virgüllerin sayısıdır. Aşağıdaki örnek, sırasıyla tek boyutlu, iki boyutlu ve üç boyutlu bir diziyi ayırır.
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="DeclareArrays":::
 
@@ -110,13 +110,13 @@ Tüm öznitelik sınıfları <xref:System.Attribute> , .NET kitaplığı tarafı
 
 Bu örnek sınıfına bir iliştirir `HelpAttribute` `Widget` . `HelpAttribute`Sınıfında yöntemine bir tane ekler `Display` . Öznitelik sınıfının ortak oluşturucuları, özniteliği bir program varlığına eklendiğinde sağlanması gereken bilgileri denetler. Öznitelik sınıfının genel okuma-yazma özelliklerine (daha önce özelliğine başvuru gibi) başvurarak ek bilgiler sunulabilir `Topic` .
 
-Öznitelikler tarafından tanımlanan meta veriler, yansıma kullanılarak çalışma zamanında okunabilir ve değiştirilebilir. Bu tekniği kullanarak belirli bir öznitelik istendiğinde, öznitelik sınıfı için Oluşturucu program kaynağında sağlanan bilgilerle çağrılır ve sonuçta elde edilen öznitelik örneği döndürülür. Özellikler aracılığıyla ek bilgiler sağlanmışsa, öznitelik örneği döndürülmeden önce bu özellikler verilen değerlere ayarlanır.
+Öznitelikler tarafından tanımlanan meta veriler, yansıma kullanılarak çalışma zamanında okunabilir ve değiştirilebilir. Bu tekniği kullanarak belirli bir öznitelik istendiğinde, öznitelik sınıfı için Oluşturucu program kaynağında belirtilen bilgilerle çağrılır. Elde edilen öznitelik örneği döndürülür. Özellikler aracılığıyla ek bilgiler sağlanmışsa, öznitelik örneği döndürülmeden önce bu özellikler verilen değerlere ayarlanır.
 
 Aşağıdaki kod örneği, `HelpAttribute` sınıfıyla ve yöntemiyle ilişkili örneklerin nasıl alınacağını gösterir `Widget` `Display` .
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="ReadAttributes":::
 
-## <a name="learn-more"></a>Daha fazla bilgi edinin
+## <a name="learn-more"></a>Daha fazlasını öğrenin
 
 [Öğreticilerimizden](../tutorials/index.md)birini deneyerek C# hakkında daha fazla bilgi bulabilirsiniz.
 

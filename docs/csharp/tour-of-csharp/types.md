@@ -2,14 +2,16 @@
 title: 'Türleri ve üyelerini tanımlama-C turu #'
 description: Programların yapı taşları türlerdir. C# ' de sınıflar, yapılar, arabirimler ve daha fazlasını oluşturma hakkında bilgi edinin.
 ms.date: 08/06/2020
-ms.openlocfilehash: efd353fe8c1e6a57952bcb2586a05ad38ecd52b9
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: b1ce24611fec6fdf01d5ecb8d6ae974e147c78c5
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88559121"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216609"
 ---
 # <a name="types-and-members"></a>Türler ve Üyeler
+
+C#, nesne yönelimli bir dil olarak kapsülleme, devralma ve çok biçimlilik kavramlarını destekler. Bir sınıf doğrudan bir üst sınıftan devralınabilir ve herhangi bir sayıda arabirim uygulayabilir. Bir üst sınıftaki sanal yöntemleri geçersiz kılan yöntemler, yanlışlıkla yeniden `override` tanımı önlemek için anahtar sözcüğünü gerektirir. C# ' de, bir struct basit bir sınıf gibidir; Bu, arabirimleri uygulayasağlayan ancak devralmayı desteklemeyen, yığın olarak ayrılmış bir türdür. C# Ayrıca, amacı Aslında veri değerlerini depolayan sınıf türleri olan kayıtlar da sağlar.
 
 ## <a name="classes-and-objects"></a>Sınıflar ve nesneler
 
@@ -32,7 +34,7 @@ Sınıf örnekleri `new` , yeni bir örnek için bellek ayıran işleç kullanı
 
 :::code language="csharp" source="./snippets/shared/Types.cs" ID="CreatePoints":::
 
-Nesne artık erişilebilir olmadığında bir nesnenin kapladığı bellek otomatik olarak geri kazanılır. C# ' ta nesneleri açıkça serbest bırakmak gerekli değildir veya mümkün değildir.
+Nesne artık erişilebilir olmadığında bir nesnenin kapladığı bellek otomatik olarak geri kazanılır. C# dilinde nesneleri açıkça serbest bırakmak gerekli değildir veya mümkün değildir.
 
 ### <a name="type-parameters"></a>Tür parametreleri
 

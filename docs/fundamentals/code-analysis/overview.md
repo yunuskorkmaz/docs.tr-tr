@@ -8,12 +8,12 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: 80815b5913ad72756de503209b52e8848dd708bf
-ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
+ms.openlocfilehash: efc440adb59da1ef9838ec5445d9c55544c14380
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98025087"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216479"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>.NET kaynak kodu çözümlemesine genel bakış
 
@@ -127,7 +127,7 @@ Derlemede kod stili analizini etkinleştirmek için şu adımları izleyin:
    dotnet_diagnostic.IDE0040.severity = warning
    ```
 
-   Alternatif olarak, varsayılan olarak "stil" kategorisinin tamamını bir uyarı veya hata olarak yapılandırabilir ve ardından derlemede çalıştırmak istemediğiniz kuralları seçmeli olarak kapatabilirsiniz. Örneğin:
+   Alternatif olarak, bir kategorinin tamamını bir uyarı veya hata olması için varsayılan olarak yapılandırabilir ve ardından bu kategoride, derlemede çalıştırmak istemediğiniz kuralları seçmeli olarak kapatabilirsiniz. Örneğin:
 
    ```ini
    [*.{cs,vb}]

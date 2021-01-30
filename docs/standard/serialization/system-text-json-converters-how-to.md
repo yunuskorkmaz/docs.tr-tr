@@ -1,7 +1,7 @@
 ---
 title: JSON serileştirme-.NET için özel dönüştürücüler yazma
 description: Ad alanında belirtilen JSON serileştirme sınıfları için özel dönüştürücüler oluşturmayı öğrenin System.Text.Json .
-ms.date: 12/14/2020
+ms.date: 01/22/2021
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: 390438e3dca7a5d40dd9957090f498b495996e05
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: 5406f862eeec83b619f660716e68b85f3d90b28f
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97513204"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216362"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>.NET 'teki JSON serileştirme (sıralama) için özel dönüştürücüler yazma
 
@@ -243,6 +243,18 @@ Tür çıkarımı gerektiren senaryolar için aşağıdaki kod, özellikler içi
 * Dizeler `string`
 * Diğer her şey `JsonElement`
 
+::: zone pivot="dotnet-5-0"
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/CustomConverterInferredTypesToObject.cs":::
+
+Örnekte, dönüştürücü kodu ve `WeatherForecast` özellikleri olan bir sınıf gösterilmektedir `object` . `Main`Yöntemi, `WeatherForecast` önce dönüştürücüyü kullanmadan, sonra dönüştürücüyü kullanarak bir JSON dizesini bir örneğe seri hale getirir. Konsol çıktısı, özelliği için çalışma zamanı türü olan dönüştürücü olmadan, `Date` `JsonElement` çalışma zamanı türünün olduğunu gösterir `DateTime` .
+
+Ad alanındaki [birim testleri klasörü](https://github.com/dotnet/runtime/tree/c72b54243ade2e1118ab24476220a2eba6057466/src/libraries/System.Text.Json/tests/Serialization/) , `System.Text.Json.Serialization` özellikleri seri durumdan çıkarmayı işleyen özel dönüştürücülerin daha fazla örneklerine sahiptir `object` .
+
+:::zone-end
+
+::: zone pivot="dotnet-core-3-1"
+
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/ObjectToInferredTypesConverter.cs":::
 
 Aşağıdaki kod dönüştürücüyü kaydeder:
@@ -266,6 +278,8 @@ Seri durumdan çıkarılacak aşağıdaki JSON örneği,, ve olarak seri durumda
 Özel dönüştürücü olmadan, seri durumdan çıkarma `JsonElement` her özelliğe bir koyar.
 
 Ad alanındaki [birim testleri klasörü](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/) , `System.Text.Json.Serialization` özellikleri seri durumdan çıkarmayı işleyen özel dönüştürücülerin daha fazla örneklerine sahiptir `object` .
+
+:::zone-end
 
 ::: zone pivot="dotnet-core-3-1"
 

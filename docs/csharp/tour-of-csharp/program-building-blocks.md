@@ -2,12 +2,12 @@
 title: C# programlarının yapı taşları "
 description: C# üyeleri, ifadeler ve deyimler hakkında bilgi edinin. Türler yazdığınız üyeleri içerir. Bu Üyeler deyimlerden ve ifadelerden oluşturulur.
 ms.date: 08/06/2020
-ms.openlocfilehash: e4350f2c2b6005fb59dd868f0f7f628bd07b0053
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 0ac45eee180b60062a328fca9ab5c63a1537debe
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "93342702"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216622"
 ---
 # <a name="program-building-blocks"></a>Program yapı taşları
 
@@ -189,7 +189,7 @@ Diğer üyelerin aksine, örnek oluşturucular devralınmaz. Bir sınıf, sını
 
 *Özellikler* , alanlar için doğal bir uzantıdır. Her ikisi de ilişkili türlerin bulunduğu isimlerdir ve alanlara ve özelliklere erişim için sözdizimi aynıdır. Ancak, alanların aksine, Özellikler depolama konumlarını göstermiyor. Bunun yerine, özellikler, değerleri okunmak veya yazıldığında yürütülen deyimleri belirten *erişimcileri* vardır.
 
-Bir özellik, bildirim bir get erişimcisi ile sona erene veya sınırlayıcılar arasında yazılmış bir set erişimcisi ya da bir `{` noktalı virgülle bitmesi dışında, bir alan gibi tanımlanır `}` . Hem get erişimcisine hem de bir set erişimcisine sahip olan bir özellik *okuma-yazma özelliğidir*, yalnızca bir get erişimcisine sahip olan bir özellik *salt okunurdur* ve yalnızca bir set erişimcisi olan bir özellik yalnızca bir salt *yazılır özelliktir*.
+Bir özellik, bildirim bir get erişimcisi ile sona erene veya sınırlayıcılar arasında yazılmış bir set erişimcisi ya da bir `{` noktalı virgülle bitmesi dışında, bir alan gibi tanımlanır `}` . Hem get erişimcisine hem de set erişimcisine sahip bir özellik *okuma-yazma özelliğidir*. Yalnızca bir get erişimcisine sahip bir özellik *salt okunurdur*. Yalnızca bir set erişimcisine sahip bir özellik *salt yazılır bir özelliktir*.
 
 Get erişimcisi, özellik türünün dönüş değeri olan parametresiz bir yönteme karşılık gelir. Bir set erişimcisi, value adlı tek parametreli ve dönüş türü olmayan bir yönteme karşılık gelir. Get erişimcisi özelliğin değerini hesaplar. Set erişimcisi, özelliği için yeni bir değer sağlar. Özellik bir atamanın hedefi ya da veya işleneni, `++` `--` set erişimcisi çağrılır. Özelliğin başvurduğu diğer durumlarda, get erişimcisi çağrılır.
 

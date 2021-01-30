@@ -1,23 +1,37 @@
 ---
 title: C#-C# Kılavuzu turu
-description: C# ' ta yeni misiniz? Dilin temel bilgilerini öğrenin.
-ms.date: 08/06/2020
-ms.openlocfilehash: 84775a436deb0958d3c05ec7d0207e76be28f27c
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+description: C# ' ta yeni misiniz? Dilin temel bilgilerini öğrenin. Bu genel bakış ile başlayın.
+ms.date: 01/28/2021
+ms.openlocfilehash: 016edf331d8cbdca2902cb033963b6aea11df513
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465009"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216648"
 ---
 # <a name="a-tour-of-the-c-language"></a>C# dilinin turu
 
-C# ("bkz. diyez") modern, nesne odaklı ve tür açısından güvenli bir programlama dilidir. C#, C ailesinin köklerine sahiptir ve C, C++, Java ve JavaScript programcıları için hemen tanıdık gelecektir. Bu tur, C# 8 ve önceki sürümlerde dilin önemli bileşenlerine genel bakış sunar. Etkileşimli örneklerle dili araştırmak istiyorsanız C# öğreticilerine [giriş](../tutorials/intro-to-csharp/index.md) ' i deneyin.
+C# ("bkz. diyez") modern, nesne odaklı ve tür açısından güvenli bir programlama dilidir. C#, geliştiricilerin .NET ekosisteminde çalışan çok sayıda güvenli ve güçlü uygulamalar oluşturmalarına olanak sağlar. C#, C ailesinin köklerine sahiptir ve C, C++, Java ve JavaScript programcıları için hemen tanıdık gelecektir. Bu tur, C# 8 ve önceki sürümlerde dilin önemli bileşenlerine genel bakış sunar. Etkileşimli örneklerle dili araştırmak istiyorsanız C# öğreticilerine [giriş](../tutorials/intro-to-csharp/index.md) ' i deneyin.
 
-C#, nesne odaklı, ***bileşen odaklı*** bir programlama dilidir. C#, bu kavramları doğrudan desteklemek için dil yapıları sağlar ve c#, yazılım bileşenlerinin oluşturulması ve kullanılması için doğal bir dil yapar. Başlangıç noktası nedeniyle, C# yeni iş yüklerini destekleyecek ve yazılım tasarımı uygulamalarını gelişren özellikler ekledi.
+C#, nesne odaklı, ***bileşene dayalı** bir _ programlama dilidir. C#, bu kavramları doğrudan desteklemek için dil yapıları sağlar ve c#, yazılım bileşenlerinin oluşturulması ve kullanılması için doğal bir dil yapar. Başlangıç noktası nedeniyle, C# yeni iş yüklerini destekleyecek ve yazılım tasarımı uygulamalarını gelişren özellikler ekledi.
 
-Birçok C# özelliği sağlam ve dayanıklı uygulamalar oluşturmaya yardımcı olur. [***Çöp toplama***](../../standard/garbage-collection/index.md) , erişilemeyen kullanılmayan nesneler tarafından kullanılan belleği otomatik olarak geri kazanır. [***Özel durum işleme***](../programming-guide/exceptions/index.md) , hata algılama ve kurtarmaya yönelik yapılandırılmış ve genişletilebilir bir yaklaşım sağlar. [***Lambda ifadeleri***](../language-reference/operators/lambda-expressions.md) fonksiyonel programlama tekniklerini destekler. [***Sorgu sözdizimi***](../linq/index.md) , herhangi bir kaynaktaki verilerle çalışmak için ortak bir model oluşturur. [***Zaman uyumsuz işlemler***](../programming-guide/concepts/async/index.md) için dil desteği, dağıtılmış sistemler oluşturmak için söz dizimi sağlar. [***Model eşleştirme***](..//pattern-matching.md) , modern dağıtılan sistemlerdeki algoritmalardan kolayca veri ayırmak için söz dizimi sağlar. C# Birleşik bir [***tür sistemine***](../programming-guide/types/index.md)sahiptir. Ve gibi temel türler dahil olmak üzere tüm C# `int` türleri `double` , tek bir kök türünden devralınır `object` . Tüm türler ortak işlemler kümesini paylaşır. Herhangi bir türdeki değerler tutarlı bir şekilde depolanabilir, taşınır ve çalıştırılabilir. Ayrıca, C# hem Kullanıcı tanımlı başvuru türlerini hem de değer türlerini destekler. C#, basit yapıların nesnelerin dinamik ayrılmasına ve satır içi depolamaya olanak tanır.
+Birçok C# özelliği sağlam ve dayanıklı uygulamalar oluşturmanıza yardımcı olur. [_*_Çöp toplama_*_](../../standard/garbage-collection/index.md) , erişilemeyen kullanılmayan nesneler tarafından kullanılan belleği otomatik olarak geri kazanır. [_*_Null yapılabilir türler_*_](../nullable-references.md) , ayrılmış nesnelere başvuramayan değişkenlere karşı koruma sağlar. [_*_Özel durum işleme_*_](../programming-guide/exceptions/index.md) , hata algılama ve kurtarmaya yönelik yapılandırılmış ve genişletilebilir bir yaklaşım sağlar. [_*_Lambda ifadeleri_*_](../language-reference/operators/lambda-expressions.md) fonksiyonel programlama tekniklerini destekler. [_*_Dil Ile tümleşik sorgu (LINQ)_*_](../linq/index.md) sözdizimi, herhangi bir kaynaktaki verilerle çalışmaya yönelik ortak bir model oluşturur. [_*_Zaman uyumsuz işlemler_*_](../programming-guide/concepts/async/index.md) için dil desteği, dağıtılmış sistemler oluşturmak için söz dizimi sağlar. C# Birleşik bir [_*_tür sistemine_*_](../programming-guide/types/index.md)sahiptir. Ve gibi temel türler dahil olmak üzere tüm C# `int` türleri `double` , tek bir kök türünden devralınır `object` . Tüm türler ortak işlemler kümesini paylaşır. Herhangi bir türdeki değerler tutarlı bir şekilde depolanabilir, taşınır ve çalıştırılabilir. Ayrıca, C# hem Kullanıcı tanımlı [başvuru türlerini](../language-reference/builtin-types/reference-types.md) hem de [değer türlerini](../language-reference/builtin-types/value-types.md)destekler. C#, basit yapıların nesnelerin dinamik ayrılmasına ve satır içi depolamaya olanak tanır. C#, Artırılmış tür güvenliği ve performans sağlayan genel yöntemleri ve türleri destekler. C#, istemci kodu için özel davranışlar tanımlamak üzere koleksiyon sınıflarının uygulayıcıları 'nı etkinleştiren yineleyiciler sağlar.
 
-C#, programları ve kitaplıkları zamanla uyumlu bir şekilde gelişebilmesini sağlamak için ***sürüm oluşturmayı*** vurgular. C# tasarımının sürüm oluşturma konuları tarafından doğrudan etkilenmiş olan yönleri `virtual` , ayrı ve `override` değiştiriciler, yöntem aşırı yükleme çözümlemesi kurallarını ve açık arabirim üyesi bildirimleri için desteği içerir.
+C#, programları ve kitaplıkları zamanla uyumlu bir şekilde gelişebilmesini sağlamak için _*_sürüm oluşturmayı_*_ vurgular. C# tasarımının sürüm oluşturma konuları tarafından doğrudan etkilenmiş olan yönleri `virtual` , ayrı ve `override` değiştiriciler, yöntem aşırı yükleme çözümlemesi kurallarını ve açık arabirim üyesi bildirimleri için desteği içerir.
+
+## <a name="net-architecture"></a>.NET mimarisi
+
+C# programları, ortak dil çalışma zamanı (CLR) ve bir dizi sınıf kitaplığı olarak adlandırılan bir sanal yürütme sistemi olan .NET üzerinde çalışır. CLR, uluslararası bir standart olan ortak dil altyapısının (CLı) Microsoft tarafından gerçekleştirilen uygulamasıdır. CLı, dillerin ve kitaplıkların sorunsuz şekilde çalıştığı yürütme ve geliştirme ortamları oluşturmanın temelini oluşturur.
+
+C# dilinde yazılan kaynak kodu, CLı belirtimine uyan bir [Ara dilde (IL)](../../standard/managed-code.md) derlenir. Il kodu ve bit eşlemler ve dizeler gibi kaynaklar, genellikle _.dll * uzantısıyla bir derlemede depolanır. Bütünleştirilmiş kod, derlemenin türleri, sürümü ve kültürü hakkında bilgi sağlayan bir bildirim içerir.
+
+C# programı yürütüldüğünde, derleme CLR 'ye yüklenir. CLR, Il kodunu yerel makine yönergelerine dönüştürmek için tam zamanında (JıT) derleme gerçekleştirir. CLR, otomatik atık toplama, özel durum işleme ve kaynak yönetimiyle ilgili diğer hizmetleri sağlar. CLR tarafından yürütülen kod bazen "yönetilen kod" olarak adlandırılır. buna karşılık, belirli bir platformu hedefleyen yerel makine dilinde derlenen "yönetilmeyen kod" olarak da adlandırılır.
+
+Dil birlikte çalışabilirliği, .NET 'in önemli bir özelliğidir. C# derleyicisi tarafından üretilen IL kodu ortak tür belirtimine (CTS) uygundur. C# ' den üretilen IL kodu, F #, Visual Basic, C++ veya 20 ' den fazla diğer CTS uyumlu dilin .NET sürümlerinden oluşturulan kodla etkileşime geçebilir. Tek bir derlemede, farklı .NET dillerinde yazılmış birden çok modül bulunabilir ve türler aynı dilde yazılmış gibi birbirlerine başvurabilir.
+
+.NET çalışma zamanı hizmetlerine ek olarak kapsamlı kitaplıklar da içerir. Bu kitaplıklar birçok farklı iş yükünü destekler. Dosya girişi ve çıktısından dize işlemeye kadar her şey için, Web uygulaması çerçevelerinden Windows Forms denetimlerine kadar çok çeşitli yararlı işlevler sunan ad alanları halinde düzenlenir. Tipik C# uygulaması, ortak "sıhhi tesisat" işlerini ele almak için .NET sınıf kitaplığını kapsamlı olarak kullanır.
+
+.NET hakkında daha fazla bilgi için bkz. [.net 'e genel bakış](../../core/introduction.md).
 
 ## <a name="hello-world"></a>Merhaba dünya
 
@@ -33,11 +47,11 @@ Programın çıktısı, `WriteLine` `Console` ad alanındaki sınıfının yönt
 
 ## <a name="types-and-variables"></a>Türler ve değişkenler
 
-C# ' de iki tür tür vardır: *değer türleri* ve *başvuru türleri*. Değer türlerinin değişkenleri doğrudan verilerini içerir, ancak başvuru türündeki değişkenler verilerine başvuruları depolar, ikincisi ise nesneler olarak bilinir. Başvuru türleriyle, iki değişkenin aynı nesneye başvurması ve diğer değişken tarafından başvurulan nesneyi etkilemek için bir değişkende işlemler için mümkün olması mümkündür. Değer türleriyle, her birinin kendi verilerinin bir kopyasına sahiptir ve bir üzerindeki işlemler, diğerini etkileme ( `ref` ve `out` parametre değişkenleri hariç) için kullanılamaz.
+C# ' de iki tür tür vardır: *değer türleri* ve *başvuru türleri*. Değer türlerinin değişkenleri doğrudan verilerini içerir. Başvuru türleri değişkenleri, verileri, ikinci olarak nesneler olarak bilinmekte olan başvurularına depolar. Başvuru türleriyle, iki değişkenin aynı nesneye başvurması ve diğer değişken tarafından başvurulan nesneyi etkilemek için bir değişkende işlemler için mümkün olması mümkündür. Değer türleriyle, her birinin kendi verilerinin bir kopyasına sahiptir ve bir üzerindeki işlemler, diğerini etkileme ( `ref` ve `out` parametre değişkenleri hariç) için kullanılamaz.
 
-***Tanımlayıcı*** bir değişken adıdır. Tanımlayıcı, bir boşluk olmadan Unicode karakterlerinden oluşan bir dizidir. Bir tanımlayıcı, öneki olan bir C# ayrılmış sözcüğü olabilir `@` . Diğer dillerle etkileşim kurarken faydalı olabilir.
+***Tanımlayıcısı** _ bir değişken adıdır. Tanımlayıcı, bir boşluk olmadan Unicode karakterlerinden oluşan bir dizidir. Bir tanımlayıcı, öğesinin önekli bir C# ayrılmış sözcüğü olabilir `@` . Ayrılmış bir sözcüğün tanımlayıcı olarak kullanılması, diğer dillerle etkileşim kurarken yararlı olabilir.
 
-C# ' nin değer türleri, *basit türlere*, *enum türlerine*, *yapı türlerine*, *null yapılabilir değer türlerine* ve *demet değer türlerine*daha fazla bölünmüştür. C# ' nin başvuru türleri, *Sınıf türlerine*, *arabirim türlerine*, *dizi türlerine*ve *temsilci türlerine*daha fazla bölünmüştür.
+C# ' nin değer türleri, _simple türlerine, *enum türlerine*, *yapı türlerine*, *null yapılabilir değer türlerine* ve *demet değer türlerine* daha fazla bölünmüştür. C# ' nin başvuru türleri, *Sınıf türlerine*, *arabirim türlerine*, *dizi türlerine* ve *temsilci türlerine* daha fazla bölünmüştür.
 
 Aşağıdaki ana hat C# tür sistemine genel bir bakış sağlar.
 
@@ -69,7 +83,7 @@ Aşağıdaki ana hat C# tür sistemine genel bir bakış sağlar.
   - [Temsilci türleri](../language-reference/builtin-types/reference-types.md#the-delegate-type)
     - Formun Kullanıcı tanımlı türleri `delegate int D(...)`
 
-C# programları yeni türler oluşturmak için *tür bildirimleri* kullanır. Tür bildiriminde yeni türün adı ve üyeleri belirtilir. C# ' nin tür kategorilerinin altısı, Kullanıcı tarafından tanımlanabilir: sınıf türleri, yapı türleri, arabirim türleri, sabit listesi türleri, temsilci türleri ve demet değer türleri.
+C# programları yeni türler oluşturmak için *tür bildirimleri* kullanır. Tür bildiriminde yeni türün adı ve üyeleri belirtilir. C# ' nin tür kategorilerinin altısı, Kullanıcı tanımlı: sınıf türleri, yapı türleri, arabirim türleri, sabit listesi türleri, temsilci türleri ve demet değer türleridir.
 
 - Bir `class` tür, veri üyeleri (alanlar) ve işlev üyeleri (Yöntemler, Özellikler ve diğerleri) içeren bir veri yapısını tanımlar. Sınıf türleri, tek devralma ve çok biçimlilik destekler, türetilmiş sınıfların temel sınıfları genişletebileceği ve özelleştireceği mekanizmalar.
 - Bir `struct` tür, veri üyeleri ve işlev üyeleri olan bir yapıyı temsil eden bir sınıf türüne benzerdir. Ancak, sınıfların aksine yapılar değer türlerdir ve genellikle yığın ayırmayı gerektirmez. Yapı türleri Kullanıcı tarafından belirtilen devralmayı desteklemez ve tüm yapı türleri örtülü olarak türünden devralınır `object` .
@@ -82,7 +96,7 @@ C#, herhangi bir türdeki tek boyutlu ve çok boyutlu dizileri destekler. Yukar�
 
 Null yapılabilir türler ayrı bir tanım gerektirmez. Null yapılamayan her tür için, `T` ek bir değer içerebilen, buna karşılık gelen null yapılabilir bir tür vardır `T?` `null` . Örneğin, `int?` herhangi bir 32 bit tamsayı veya değeri tutabilecek bir türdür `null` ve `string?` herhangi birini veya değeri tutabilecek bir türüdür `string` `null` .
 
-C# tür sistemi, herhangi bir türde bir değer olarak işlenemeyeceği şekilde birleştirilmiştir `object` . C# içindeki her tür doğrudan veya dolaylı olarak `object` sınıf türünden türetilir ve `object` tüm türlerin en son temel sınıfıdır. Başvuru türlerinin değerleri, yalnızca değerleri tür olarak görüntüleyerek nesne olarak değerlendirilir `object` . Değer türlerinin değerleri, *kutulama* ve *kutudan çıkarma işlemleri*gerçekleştirerek nesneler olarak değerlendirilir. Aşağıdaki örnekte, bir değeri öğesine `int` dönüştürülüp `object` öğesine yeniden döndürülür `int` .
+C# tür sistemi, herhangi bir türde bir değer olarak işlenemeyeceği şekilde birleştirilmiştir `object` . C# içindeki her tür doğrudan veya dolaylı olarak `object` sınıf türünden türetilir ve `object` tüm türlerin en son temel sınıfıdır. Başvuru türlerinin değerleri, yalnızca değerleri tür olarak görüntüleyerek nesne olarak değerlendirilir `object` . Değer türlerinin değerleri, *kutulama* ve *kutudan çıkarma işlemleri* gerçekleştirerek nesneler olarak değerlendirilir. Aşağıdaki örnekte, bir değeri öğesine `int` dönüştürülüp `object` öğesine yeniden döndürülür `int` .
 
 :::code language="csharp" source="./snippets/shared/Program.cs" ID="boxing" :::
 
@@ -109,13 +123,13 @@ C# ' de alanlar, dizi öğeleri, yerel değişkenler ve parametreler gibi çeşi
 
 ## <a name="program-structure"></a>Program yapısı
 
-C# ' deki temel kurumsal kavramlar [***Programlar***](../programming-guide/inside-a-program/index.md), [***ad alanları***](../programming-guide/namespaces/index.md), [***türler***](../programming-guide/types/index.md), [***Üyeler***](../programming-guide/classes-and-structs/members.md)ve [***derlemelerdir***](../../standard/assembly/index.md). Programlar, üyeleri içeren ve ad alanları halinde düzenlenebilen türleri bildirir. Sınıflar, yapılar ve arabirimler tür örnekleridir. Alanlar, Yöntemler, Özellikler ve olaylar üye örnekleridir. C# programları derlendiğinde, fiziksel olarak derlemeler halinde paketlenir. Derlemeler, `.exe` `.dll` sırasıyla ***uygulama*** veya ***kitaplık***uygulanıp uygulamadığına bağlı olarak, genellikle dosya uzantısına sahiptir.
+C# ' deki temel kurumsal kavramlar, [ * **Programlar** _](../programming-guide/inside-a-program/index.md), [_*_ad alanları_*_](../programming-guide/namespaces/index.md), [_*_türler_*_](../programming-guide/types/index.md), [_*_Üyeler_*_](../programming-guide/classes-and-structs/members.md)ve [_*_derlemelerdir_*_](../../standard/assembly/index.md). Programlar, üyeleri içeren ve ad alanları halinde düzenlenebilen türleri bildirir. Sınıflar, yapılar ve arabirimler tür örnekleridir. Alanlar, Yöntemler, Özellikler ve olaylar üye örnekleridir. C# programları derlendiğinde, fiziksel olarak derlemeler halinde paketlenir. Derlemeler, `.exe` `.dll` sırasıyla _*_uygulama_*_ veya _*_kitaplık_*_ uygulanıp uygulamadığına bağlı olarak, genellikle dosya uzantısına sahiptir.
 
 Küçük bir örnek olarak, aşağıdaki kodu içeren bir derlemeyi göz önünde bulundurun:
 
 :::code language="csharp" source="./snippets/shared/AcmeStack.cs":::
 
-Bu sınıfın tam adı `Acme.Collections.Stack` . Sınıf birçok üye içerir: adlı bir alan `top` , ve adlı iki yöntem `Push` `Pop` ve adlı bir iç içe sınıf `Entry` . `Entry`Sınıf daha fazla üç üye içerir: adlı alan `next` , adlı alan `data` ve Oluşturucu. , `Stack` *Genel* bir sınıftır. Bir tür parametresi vardır, `T` Bu, kullanıldığında somut bir türle değiştirilmiştir.
+Bu sınıfın tam adı `Acme.Collections.Stack` . Sınıf birçok üye içerir: adlı bir alan `top` , ve adlı iki yöntem `Push` `Pop` ve adlı bir iç içe sınıf `Entry` . `Entry`Sınıf daha fazla üç üye içerir: adlı alan `next` , adlı alan `data` ve Oluşturucu. , `Stack` Bir _generic * sınıfıdır. Bir tür parametresi vardır, `T` Bu, kullanıldığında somut bir türle değiştirilmiştir.
 
 > [!NOTE]
 > *Yığın* , "ilk son çıkar" (filo) koleksiyonudur. Yeni öğeler yığının üst kısmına eklenir. Bir öğe kaldırıldığında, yığının en üstünden kaldırılır.

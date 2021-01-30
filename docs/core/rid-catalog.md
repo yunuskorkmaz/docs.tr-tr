@@ -1,21 +1,21 @@
 ---
-title: .NET Core çalışma zamanı tanımlayıcısı (RID) kataloğu
-description: .NET Core 'da çalışma zamanı tanımlayıcısı (RID) ve RID 'Lerin nasıl kullanıldığı hakkında bilgi edinin.
-ms.date: 12/15/2020
-ms.openlocfilehash: 6b45c42d626de41c7d67c66aac7dc31c51c36a22
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+title: .NET çalışma zamanı tanımlayıcısı (RID) kataloğu
+description: Çalışma zamanı tanımlayıcısı (RID) ve RID 'Lerin .NET 'te nasıl kullanıldığını öğrenin.
+ms.date: 01/28/2021
+ms.openlocfilehash: e5e1c4712965211b25a02b14a7cf2c91d74d8306
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970674"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216011"
 ---
-# <a name="net-core-rid-catalog"></a>.NET Core RID kataloğu
+# <a name="net-rid-catalog"></a>.NET RID kataloğu
 
 *Çalışma zamanı tanımlayıcısı* için RID kısadır. RID değerleri, uygulamanın çalıştığı hedef platformları belirlemek için kullanılır.
 .NET paketleri tarafından, NuGet paketlerindeki platforma özgü varlıkları göstermek için kullanılırlar. Aşağıdaki değerler, rids örnekleri: `linux-x64` , `ubuntu.14.04-x64` , `win7-x64` veya `osx.10.12-x64` .
 Yerel bağımlılıklara sahip paketler için RID, paketin geri yüklenebileceği platformları belirler.
 
-Tek bir RID, `<RuntimeIdentifier>` proje dosyanızın öğesinde ayarlanabilir. Çoklu RID 'Ler, proje dosyasının öğesinde noktalı virgülle ayrılmış bir liste olarak tanımlanabilir `<RuntimeIdentifiers>` . Bunlar ayrıca, `--runtime` aşağıdaki [.NET Core CLI komutlarla](./tools/index.md)seçeneği aracılığıyla da kullanılır:
+Tek bir RID, `<RuntimeIdentifier>` proje dosyanızın öğesinde ayarlanabilir. Çoklu RID 'Ler, proje dosyasının öğesinde noktalı virgülle ayrılmış bir liste olarak tanımlanabilir `<RuntimeIdentifiers>` . Bunlar ayrıca, `--runtime` aşağıdaki [.net CLI komutlarıyla](./tools/index.md)seçeneği aracılığıyla da kullanılır:
 
 - [dotnet build](./tools/dotnet-build.md)
 - [dotnet clean](./tools/dotnet-clean.md)
@@ -82,7 +82,7 @@ RID 'Ler hakkında, bunlarla çalışırken göz önünde bulundurmanız gereken
 RID 'leri kullanabilmeniz için hangi RID 'Lerin mevcut olduğunu bilmeniz gerekir. Yeni değerler platforma düzenli olarak eklenir.
 En son ve tüm sürüm için depodaki [runtime.js](https://github.com/dotnet/runtime/blob/master/src/libraries/Microsoft.NETCore.Platforms/pkg/runtime.json) dosyasına bakın `dotnet/runtime` .
 
-.NET Core 2,0 SDK, taşınabilir RID kavramını tanıtır. Bunlar, belirli bir sürüme veya işletim sistemi dağıtımına bağlı olmayan RID grafiğine eklenen yeni değerlerdir ve .NET Core 2,0 ve üzeri kullanılırken tercih edilen seçenektir. Çoğu dağıtım merkezi taşınabilir RID 'lerle eşlendiğinden, bunlar özellikle birden çok Linux ile ilgilenirken yararlıdır.
+Taşınabilir RID 'Ler, belirli bir sürüme veya işletim sistemi dağıtımına bağlı olmayan RID grafiğine eklenen değerlerdir. Çoğu dağıtım merkezi taşınabilir RID 'lerle eşlendiğinden, özellikle birden çok Linux ile ilgilenirken tercih edilen seçenektir.
 
 Aşağıdaki liste, her bir işletim sistemi için kullanılan en yaygın RID 'lerin küçük bir alt kümesini gösterir.
 
@@ -90,7 +90,7 @@ Aşağıdaki liste, her bir işletim sistemi için kullanılan en yaygın RID 'l
 
 Yalnızca ortak değerler listelenir. En son ve tüm sürüm için depodaki [runtime.js](https://github.com/dotnet/runtime/blob/master/src/libraries/Microsoft.NETCore.Platforms/pkg/runtime.json) dosyasına bakın `dotnet/runtime` .
 
-- Taşınabilir (.NET Core 2,0 veya sonraki sürümler)
+- In
   - `win-x64`
   - `win-x86`
   - `win-arm`
@@ -108,7 +108,7 @@ Yalnızca ortak değerler listelenir. En son ve tüm sürüm için depodaki [run
   - `win10-arm`
   - `win10-arm64`
 
-Daha fazla bilgi için bkz. [.NET Core Dependencies ve gereksinimleri](./install/windows.md#dependencies).
+Daha fazla bilgi için bkz. [.net bağımlılıkları ve gereksinimleri](./install/windows.md#dependencies).
 
 ## <a name="linux-rids"></a>Linux RID 'leri
 
@@ -127,7 +127,7 @@ Yalnızca ortak değerler listelenir. En son ve tüm sürüm için depodaki [run
   - `tizen.4.0.0`
   - `tizen.5.0.0`
 
-Daha fazla bilgi için bkz. [.NET Core Dependencies ve gereksinimleri](./install/linux.md).
+Daha fazla bilgi için bkz. [.net bağımlılıkları ve gereksinimleri](./install/linux.md).
 
 ## <a name="macos-rids"></a>macOS RIDs
 
@@ -151,7 +151,7 @@ macOS 'Ler eski "OSX" markasını kullanır. Yalnızca ortak değerler listeleni
   - `osx.11.0-x64`
   - `osx.11.0-arm64`
 
-Daha fazla bilgi için bkz. [.NET Core Dependencies ve gereksinimleri](./install/macos.md#dependencies).
+Daha fazla bilgi için bkz. [.net bağımlılıkları ve gereksinimleri](./install/macos.md#dependencies).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

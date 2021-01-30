@@ -1,20 +1,20 @@
 ---
-title: .NET Core 'da bağımlılıkları yönetme
-description: Bir .NET Core uygulaması için proje bağımlılıklarının nasıl yönetileceğini açıklar.
+title: .NET 'teki bağımlılıkları yönetme
+description: Bir .NET uygulaması için proje bağımlılıklarının nasıl yönetileceğini açıklar.
 no-loc:
 - dotnet add package
 - dotnet remove package
 - dotnet list package
 ms.topic: how-to
-ms.date: 02/25/2020
-ms.openlocfilehash: 2aeedb56f774b51076764c2772eb02b2fa095d92
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.date: 01/28/2021
+ms.openlocfilehash: 9f5f814d0b4dc7aa3ff1a938c172475169a55bf2
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062866"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216134"
 ---
-# <a name="manage-dependencies-in-net-core-applications"></a>.NET Core uygulamalarında bağımlılıkları yönetme
+# <a name="manage-dependencies-in-net-applications"></a>.NET uygulamalarında bağımlılıkları yönetme
 
 Bu makalede, proje dosyasını düzenleyerek veya CLı kullanarak bağımlılık ekleme ve kaldırma işlemleri açıklanmaktadır.
 
@@ -37,7 +37,7 @@ Aşağıdaki örnekte gösterildiği gibi, yalnızca belirli bir hedefte kullan�
 <PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp2.1'" />
 ```
 
-Önceki örnekteki bağımlılık yalnızca derleme söz konusu hedef için varsa geçerli olacaktır. `$(TargetFramework)`Koşulunda, projede ayarlanmış bir MSBuild özelliği bulunur. En yaygın .NET Core uygulamaları için bunu yapmanız gerekmez.
+Önceki örnekteki bağımlılık yalnızca derleme söz konusu hedef için varsa geçerli olacaktır. `$(TargetFramework)`Koşulunda, projede ayarlanmış bir MSBuild özelliği bulunur. En yaygın .NET uygulamaları için bunu yapmanız gerekmez.
 
 ## <a name="add-a-dependency-by-editing-the-project-file"></a>Proje dosyasını düzenleyerek bir bağımlılık ekleyin
 
@@ -80,4 +80,4 @@ dotnet remove package Microsoft.EntityFrameworkCore
 ## <a name="see-also"></a>Ayrıca bkz.
 
 * [Proje dosyalarında paket başvuruları](../project-sdk/msbuild-props.md#reference-properties-and-items)
-* [dotnet list packagekomutundaki](dotnet-list-package.md)
+* [dotnet list package komutundaki](dotnet-list-package.md)

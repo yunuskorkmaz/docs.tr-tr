@@ -5,19 +5,19 @@ ms.date: 09/24/2020
 ms.topic: conceptual
 no-loc:
 - EditorConfig
-ms.openlocfilehash: 0d64df42ffb1763afed3e883c4f043755e158489
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: b98fdd48f2373bd23fcd3273834860a60c682969
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633994"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216388"
 ---
 # <a name="configuration-files-for-code-analysis-rules"></a>Kod analizi kuralları için yapılandırma dosyaları
 
 Kod analizi kuralları çeşitli [yapılandırma seçeneklerine](configuration-options.md)sahiptir. Bu seçenekleri aşağıdaki çözümleyici yapılandırma dosyalarından birinde anahtar-değer çiftleri olarak belirtirsiniz:
 
 - [EditorConfig](#editorconfig) Dosya: dosya tabanlı veya klasör tabanlı yapılandırma seçenekleri.
-- [Global analiz Zerconfig](#global-analyzerconfig) dosyası: proje düzeyi yapılandırma seçenekleri.
+- [Global analiz Zerconfig](#global-analyzerconfig) dosyası: proje düzeyi yapılandırma seçenekleri. Bazı proje dosyaları proje klasörü dışında olduğunda faydalıdır.
 
 ## EditorConfig
 
@@ -58,7 +58,7 @@ tab_width = 4
 #### .NET Coding Conventions ####
 
 # this. and Me. preferences
-dotnet_style_qualification_for_method = true:warning
+dotnet_style_qualification_for_method = true
 
 #### Diagnostic configuration ####
 
@@ -68,13 +68,13 @@ dotnet_diagnostic.CA1000.severity = warning
 
 ## <a name="global-analyzerconfig"></a>Küresel analiz Zerconfig
 
-.NET 5 SDK ile başlayarak (Visual Studio 2019 sürüm 16,8 ve sonraki sürümlerinde desteklenir), çözümleyici seçeneklerini genel _analiz Zeri yapılandırma_ dosyalarıyla de yapılandırabilirsiniz. Bu dosyalar, dosya adlarından veya dosya yollarından bağımsız olarak **bir projedeki tüm kaynak dosyalara uygulanan seçenekleri** sağlamak için kullanılır.
+.NET 5 SDK ile başlayarak (Visual Studio 2019 sürüm 16,8 ve üzeri sürümlerde desteklenir), çözümleyici seçeneklerini genel _analiz Zericonfig_ dosyaları ile de yapılandırabilirsiniz. Bu dosyalar, dosya adlarından veya dosya yollarından bağımsız olarak **bir projedeki tüm kaynak dosyalara uygulanan seçenekleri** sağlamak için kullanılır.
 
 [EditorConfig](#editorconfig)Dosyaların aksine, genel yapılandırma dosyaları, girinti boyutu ya da sondaki boşluğu kırpıp kırpılıp Kırpılanmayacağı gibi, IDEs için düzenleyici stil ayarlarını yapılandırmak için kullanılamaz. Bunun yerine, yalnızca proje düzeyi çözümleyici yapılandırma seçeneklerini belirtmek için tasarlanırlar.
 
 ### <a name="format"></a>Biçimlendir
 
-EditorConfigİlgili dosya ve klasörleri tanımlamak için gibi bölüm üst bilgileri olması gereken dosyaların aksine, `[*.cs]` genel analiz zerconfig dosyaları bölüm üst bilgilerine sahip değildir. Bunun yerine, `is_global = true` normal dosyalardan ayırt edilebilmesi için formun en üst düzey bir girişi gerekir EditorConfig . Bu, dosyadaki tüm seçeneklerin Projenin tamamına uygulanacağını gösterir. Örnek:
+EditorConfigİlgili dosya ve klasörleri tanımlamak için gibi bölüm üst bilgileri olması gereken dosyaların aksine, `[*.cs]` genel analiz zerconfig dosyaları bölüm üst bilgilerine sahip değildir. Bunun yerine, `is_global = true` normal dosyalardan ayırt edilebilmesi için formun en üst düzey bir girişi gerekir EditorConfig . Bu, dosyadaki tüm seçeneklerin Projenin tamamına uygulanacağını gösterir. Örneğin:
 
 ```ini
 is_global = true

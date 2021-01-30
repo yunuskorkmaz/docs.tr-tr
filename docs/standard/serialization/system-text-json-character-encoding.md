@@ -1,7 +1,7 @@
 ---
 title: İle karakter kodlamasını özelleştirme System.Text.Json
 description: .NET 'teki JSON 'a serileştirirken ve seri durumdan çıkarılırken karakter kodlamasını özelleştirmeyi öğrenin.
-ms.date: 11/30/2020
+ms.date: 01/22/2021
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: cfb83af0c58e0c9dfb73ecb8e2177d255e403fae
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 136a75ab73767fd79f99caa1d1387706ab655473
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009631"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99215985"
 ---
 # <a name="how-to-customize-character-encoding-with-no-locsystemtextjson"></a>İle karakter kodlamasını özelleştirme System.Text.Json
 
@@ -47,6 +47,8 @@ Bu kod, Kiril veya Yunan karakterlerinden kaçış yapmaz. `Summary`Özellik Kir
 }
 ```
 
+Kodlayıcı, varsayılan olarak <xref:System.Text.Unicode.UnicodeRanges.BasicLatin> aralığıyla başlatılır.
+
 Tüm dil kümelerini kaçış olmadan seri hale getirmek için kullanın <xref:System.Text.Unicode.UnicodeRanges.All?displayProperty=nameWithType> .
 
 ## <a name="serialize-specific-characters"></a>Belirli karakterleri serileştirme
@@ -66,6 +68,20 @@ Yukarıdaki kod tarafından üretilen JSON örneği aşağıda verilmiştir:
   "Summary": "жа\u0440\u043A\u043E"
 }
 ```
+
+## <a name="block-lists"></a>Engelleme listeleri
+
+Yukarıdaki bölümlerde, çıkış yapmak istemediğiniz kod noktalarının veya aralıklarının izin verilenler listelerinin nasıl belirtildiği gösterilmektedir. Ancak, izin verilenler listenizde belirli kod noktalarını geçersiz kılabilen genel ve kodlayıcılara özgü blok listeleri vardır. Bir blok listesindeki kod noktaları, izin verilenler listenize dahil edilse de her zaman kaçışlar.
+
+### <a name="global-block-list"></a>Genel engellenenler listesi
+
+Genel engellenenler listesi, özel kullanım karakterleri, denetim karakterleri, tanımsız kod noktaları ve [Space_Separator kategorisi](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5B:General_Category=Space_Separator:%5D)gibi bazı Unicode kategorilerini içerir `U+0020 SPACE` . Örneğin, `U+3000 IDEOGRAPHIC SPACE` izin verilenler listeniz olarak @ [sembolleri ve noktalama Işaretlerini (U +3000-U + 303f)](xref:System.Text.Unicode.UnicodeRanges.CjkSymbolsandPunctuation) belirtseniz bile kaçış olur.
+
+Genel engelleme listesi, .NET Core ve .NET 5 ' in her sürümünde değişen bir uygulama ayrıntıdır. Genel engelleme listesinin üyesi olan (veya üyesi olmayan) bir karakter üzerinde bağımlılık yapmayın.
+
+### <a name="encoder-specific-block-lists"></a>Kodlayıcıya özgü blok listeleri
+
+Kodlayıcılara özgü engellenen kod noktaları örnekleri `'<'` `'&'` , [HTML Kodlayıcısı](xref:System.Text.Encodings.Web.HtmlEncoder), `'\'` [JSON Kodlayıcısı](xref:System.Text.Encodings.Web.JavaScriptEncoder)ve `'%'` [URL Kodlayıcısı](xref:System.Text.Encodings.Web.UrlEncoder)için içerir. Örneğin, HTML Kodlayıcısı her zaman `'&'` ampersan () den çıkar, ancak `BasicLatin` ve tüm kodlayıcılar `BasicLatin` Varsayılan olarak ile başlatılır.
 
 ## <a name="serialize-all-characters"></a>Tüm karakterleri seri hale getirme
 

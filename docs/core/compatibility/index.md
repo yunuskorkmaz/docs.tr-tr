@@ -1,27 +1,27 @@
 ---
 title: Son değişiklik türleri
-description: .NET Core 'un .NET sürümlerindeki geliştiriciler için uyumluluk denemelerini ve ne tür bir değişikliğin Son değişiklik olduğunu öğrenin.
-ms.date: 06/10/2019
-ms.openlocfilehash: bc93316141ae99d8cfedc5e6d88a9e91216f9c6e
-ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
+description: .Net 'in .NET sürümlerindeki geliştiriciler için uyumluluk denemelerini ve ne tür bir değişikliğin Son değişiklik olarak kabul edileceğini öğrenin.
+ms.date: 01/28/2021
+ms.openlocfilehash: d539a82b21abc4df8d726673ef728020f36551bf
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415751"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216044"
 ---
 # <a name="changes-that-affect-compatibility"></a>Uyumluluğu etkileyen değişiklikler
 
-.NET, geçmişi boyunca sürümden sürüme ve .NET 'in özellikleri arasında yüksek düzeyde uyumluluk tutmaya çalıştı. Bu, .NET Core için doğru olmaya devam eder. .NET Core, .NET Framework bağımsız olan yeni bir teknoloji olarak düşünülebilir, ancak iki ana etken .NET Core 'un .NET Framework arasında sınırsız olmasına izin verebilir:
+.NET, geçmişi boyunca sürümden sürüme ve .NET uygulamalarına kadar yüksek düzeyde uyumluluk tutmaya çalıştı. .NET 5 (ve .NET Core) ve sonraki sürümler .NET Framework kıyasla yeni bir teknoloji olarak kabul edilebilir, ancak iki ana etken, bu .NET uygulamasının bu uygulama yeteneğini .NET Framework ile birbirinden ayırmak için sınırlar:
 
 - Asıl olarak çok sayıda geliştirici geliştirmiş veya .NET Framework uygulamaları geliştirmeye devam eder. .NET uygulamalarında tutarlı davranış beklentilerine sahip olurlar.
 
-- .NET Standard kitaplık projeleri, geliştiricilerin .NET Core ve .NET Framework tarafından paylaşılan ortak API 'Leri hedefleyen kitaplıklar oluşturmalarına olanak tanır. Geliştiriciler .NET Core uygulamasında kullanılan bir kitaplığın, .NET Framework uygulamasında kullanılan aynı kitaplıkla aynı şekilde davranmasını bekler.
+- .NET Standard kitaplık projeleri, geliştiricilerin .NET Framework ve .NET 5 (ve .NET Core) ve sonraki sürümler tarafından paylaşılan ortak API 'Leri hedefleyen kitaplıklar oluşturmalarına olanak tanır. Geliştiriciler, .NET 5 uygulamasında kullanılan bir kitaplığın .NET Framework uygulamasında kullanılan aynı kitaplıkla aynı şekilde davranmasını bekler.
 
-Geliştiriciler .NET uygulamaları genelinde uyumlulukla birlikte .NET Core sürümleri arasında yüksek düzeyde uyumluluk bekler. Özellikle .NET Core 'un önceki bir sürümü için yazılan kod, daha sonraki bir .NET Core sürümünde sorunsuz çalışmalıdır. Aslında birçok geliştirici, .NET Core 'un yeni yayımlanmış sürümlerinde bulunan yeni API 'Lerin, bu API 'Lerin tanıtıldıkları yayın öncesi sürümlerle de uyumlu olmasını bekler.
+Geliştiriciler .NET uygulamaları genelinde uyumlulukla birlikte, belirli bir .NET uygulamasının sürümleri arasında yüksek düzeyde uyumluluk bekler. Özellikle .NET Core 'un önceki bir sürümü için yazılan kod, .NET 5 veya sonraki bir sürümde sorunsuz çalışmalıdır. Aslında, birçok geliştirici, .NET 'in yeni yayımlanmış sürümlerinde bulunan yeni API 'Lerin Ayrıca bu API 'Lerin tanıtıldıkları yayın öncesi sürümlerle uyumlu olmasını bekler.
 
 Bu makalede, uyumluluğu etkileyen değişiklikler ve .NET ekibinin her tür değişikliği değerlendirme yöntemi özetlenmektedir. .NET ekibinin olası son değişikliklere nasıl yaklaşılacağını anlamak, [mevcut .NET API](https://github.com/dotnet/runtime)'lerinin davranışını değiştiren çekme isteklerini açan geliştiriciler için özellikle yararlıdır.
 
-Aşağıdaki bölümlerde, .NET Core API 'Lerinde yapılan değişikliklerin kategorileri ve bunların uygulama uyumluluğuyla ilgili bir etkisi açıklanır. Değişikliklere izin verilmez ✔️, izin verilmiyor ❌ veya karartan ve önceden tahmin edilebilir, belirgin ve tutarlı bir değerlendirme, önceki davranışın ❓.
+Aşağıdaki bölümlerde, .NET API 'Lerinde yapılan değişikliklerin kategorileri ve bunların uygulama uyumluluğuyla etkileri açıklanır. Değişikliklere izin verilmez ✔️, izin verilmiyor ❌ veya karartan ve önceden tahmin edilebilir, belirgin ve tutarlı bir değerlendirme, önceki davranışın ❓.
 
 > [!NOTE]
 >
@@ -90,7 +90,7 @@ Bu kategorideki değişiklikler bir türün genel yüzey alanını değiştirir.
 
 - ✔️ **Izin verildi: [sanal](../../csharp/language-reference/keywords/sealed.md) olmayan bir üyenin görünürlüğünü genişletme**
 
-- ✔️ **Izin verildi: bir soyut üyeyi, *erişilebilir* (genel veya korumalı) oluşturuculara sahip olmayan bir ortak türe ekleme veya tür [mühürlü](../../csharp/language-reference/keywords/sealed.md) **
+- ✔️ **Izin verildi: bir soyut üyeyi, *erişilebilir* (genel veya korumalı) oluşturuculara sahip olmayan bir ortak türe ekleme veya tür [mühürlü](../../csharp/language-reference/keywords/sealed.md)**
 
   Ancak, erişilebilir (genel veya korumalı) oluşturuculara sahip bir türe soyut üye eklenmesine `sealed` izin verilmez.
 
@@ -177,7 +177,7 @@ Bu kategorideki değişiklikler bir türün genel yüzey alanını değiştirir.
 
 - ❌**Izin verilmiyor: üyenin görünürlüğünü azaltma**
 
-   Bu, *erişilebilir* ( [protected](../../csharp/language-reference/keywords/protected.md) `public` veya `protected` ) oluşturucular olduğunda ve tür *not* [korumalı](../../csharp/language-reference/keywords/sealed.md)olmadığında korunan bir üyenin görünürlüğünü azaltmayı içerir. Bu durumda, korunan bir üyenin görünürlüğünü azaltmak için izin verilir.
+   Bu, *erişilebilir* ( [](../../csharp/language-reference/keywords/protected.md) `public` veya `protected` ) oluşturucular olduğunda ve tür  [korumalı](../../csharp/language-reference/keywords/sealed.md)olmadığında korunan bir üyenin görünürlüğünü azaltmayı içerir. Bu durumda, korunan bir üyenin görünürlüğünü azaltmak için izin verilir.
 
    Üyenin görünürlüğünü artırmak için izin verilir.
 
@@ -263,7 +263,7 @@ Bu kategorideki değişiklikler bir türün genel yüzey alanını değiştirir.
 
 - ✔️ **Izin verildi: observable *olmayan* bir özniteliğin değerini değiştirme**
 
-- ❌**Izin verilmiyor: observable olan bir özniteliğin değerini değiştirme *is* **
+- ❌**Izin verilmiyor: observable olan bir özniteliğin değerini değiştirme**
 
 - ❓, **Bir özniteliği kaldırmak IÇIN Yargıduyuyor**
 

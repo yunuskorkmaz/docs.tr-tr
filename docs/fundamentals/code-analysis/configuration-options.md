@@ -5,12 +5,12 @@ ms.date: 09/24/2020
 ms.topic: conceptual
 no-loc:
 - EditorConfig
-ms.openlocfilehash: 4f7b392a2b066023fec75c5295bd94651654d645
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: 0687bcb16cae6a0a2dde6c7864a1af1d0027e122
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851796"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216466"
 ---
 # <a name="configuration-options-for-code-analysis"></a>Kod analizi için yapılandırma seçenekleri
 
@@ -80,7 +80,7 @@ Tek bir kural için kural önem derecesini ayarlamak için aşağıdaki sözdizi
 dotnet_diagnostic.<rule ID>.severity = <severity value>
 ```
 
-Bir çözümleyici kuralları kategorisinin varsayılan kural önem derecesini ayarlamak için aşağıdaki sözdizimini kullanın.
+Bir çözümleyici kuralları kategorisinin varsayılan kural önem derecesini ayarlamak için aşağıdaki sözdizimini kullanın. Her kuralın kategorisi, tek kural başvuru sayfalarında sağlanır, örneğin, [CA1000](quality-rules/ca1000.md).
 
 ```ini
 dotnet_analyzer_diagnostic.category-<rule category>.severity = <severity value>
