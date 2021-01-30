@@ -338,16 +338,17 @@
         - name: UShort Veri Türü
           href: language-reference/data-types/ushort-data-type.md
     - name: Yönergeler
-      href: language-reference/directives/index.md
       items:
-        - name: '#Const Yönergesi'
+        - name: '#Sabit'
           href: language-reference/directives/const-directive.md
-        - name: '#ExternalSource Yönergesi'
+        - name: '#ExternalSource'
           href: language-reference/directives/externalsource-directive.md
-        - name: '#If...Then...#Else Yönergeleri'
+        - name: '#If... Sonra... #Else'
           href: language-reference/directives/if-then-else-directives.md
-        - name: '#Region Yönergesi'
+        - name: '#Bölge'
           href: language-reference/directives/region-directive.md
+        - name: '#Devre dışı bırak ve #Enable'
+          href: language-reference/directives/disable-enable.md
     - name: İşlevler
       href: language-reference/functions/index.md
       items:

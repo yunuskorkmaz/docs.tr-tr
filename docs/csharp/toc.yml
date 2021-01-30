@@ -1,21 +1,16 @@
 items:
   - name: C# belgeleri
     href: index.yml
-  - name: başlarken
+  - name: C# Turu
     items:
-      - name: C# diline ve .NET’e giriş
-        displayName: get started
-        href: getting-started/index.md
-      - name: C# Turu
-        items:
-          - name: Giriş
-            href: tour-of-csharp/index.md
-          - name: Türler
-            href: tour-of-csharp/types.md
-          - name: Program yapı taşları
-            href: tour-of-csharp/program-building-blocks.md
-          - name: Ana dil alanları
-            href: tour-of-csharp/features.md
+      - name: Giriş
+        href: tour-of-csharp/index.md
+      - name: Türler
+        href: tour-of-csharp/types.md
+      - name: Program yapı taşları
+        href: tour-of-csharp/program-building-blocks.md
+      - name: Ana dil alanları
+        href: tour-of-csharp/features.md
   - name: Öğreticiler
     items:
       - name: Genel Bakış
