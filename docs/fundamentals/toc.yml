@@ -197,7 +197,7 @@ items:
                 href: ../core/tools/sdk-errors/netsdk1079.md
               - name: NETSDK1145
                 href: ../core/tools/sdk-errors/netsdk1145.md
-      - name: .NET Core CLI
+      - name: .NET CLı
         items:
           - name: Genel Bakış
             displayName: '.net cli,command-line interface,cli,tool'
@@ -439,7 +439,7 @@ items:
                 href: ../fundamentals/diagnostics/runtime-type-events.md
           - name: Kapsayıcılarda tanılama toplama
             href: ../core/diagnostics/diagnostics-in-containers.md
-          - name: .NET Core CLI genel araçları
+          - name: .NET CLı genel araçları
             items:
               - name: dotnet-counters
                 href: ../core/diagnostics/dotnet-counters.md
@@ -453,7 +453,7 @@ items:
                 href: ../core/diagnostics/dotnet-symbol.md
               - name: dotnet-sos
                 href: ../core/diagnostics/dotnet-sos.md
-          - name: .NET Core tanılama öğreticileri
+          - name: .NET tanılama öğreticileri
             items:
               - name: PerfCollect ile Linux’ta performans izlemesi toplama
                 href: ../core/diagnostics/trace-perfcollect-lttng.md
@@ -478,6 +478,8 @@ items:
                 href: code-analysis/configuration-options.md
               - name: Yapılandırma dosyaları
                 href: code-analysis/configuration-files.md
+              - name: Uyarıları gösterme
+                href: code-analysis/suppress-warnings.md
               - name: Kod kalitesi kuralları
                 items:
                   - name: Kural seçenekleri
@@ -1296,15 +1298,15 @@ items:
                 href: ../core/dependency-loading/loading-unmanaged.md
           - name: Öğreticiler
             items:
-              - name: Eklentilerle .NET Core uygulaması oluşturma
+              - name: Eklentilerle bir .NET uygulaması oluşturma
                 href: ../core/tutorials/creating-app-with-plugin-support.md
-              - name: .NET Core’da kaldırabilme özelliğini kullanma ve hatalarını ayıklama
+              - name: .NET sürümünde derleme kaldırma ve hata ayıklama
                 href: ../core/../standard/assembly/unloadability.md
       - name: Sürüm Oluşturma
         items:
           - name: Genel Bakış
             href: ../core/versions/index.md
-          - name: .NET Core sürüm seçimi
+          - name: .NET sürüm seçimi
             href: ../core/versions/selection.md
       - name: Çalışma zamanı yapılandırması
         items:
@@ -1354,7 +1356,7 @@ items:
         items:
           - name: .NET ve Docker’a Giriş
             href: ../core/docker/introduction.md
-          - name: .NET Core uygulamasını kapsayıcılı hale getirme
+          - name: Bir .NET uygulamasını Kapsayıcılı hale getirme
             href: ../core/docker/build-container.md
           - name: Visual Studio’da kapsayıcı araçları
             href: /visualstudio/containers/overview
@@ -1836,6 +1838,8 @@ items:
             displayName: 'custom configuration,custom config,custom configuration provider,custom config provider'
           - name: Seçenekler deseni
             href: ../core/extensions/options.md
+          - name: Kitaplık yazarları için seçenek stili Kılavuzu
+            href: ../core/extensions/options-library-authors.md
       - name: Günlüğe Kaydetme
         items:
           - name: Genel Bakış
@@ -2054,7 +2058,7 @@ items:
         href: ../core/testing/unit-testing-code-coverage.md
       - name: Birim testi yayımlanmış çıktısı
         href: ../core/testing/unit-testing-published-output.md
-      - name: Visual Studio ile .NET Core projelerinde canlı birim testi
+      - name: Visual Studio ile canlı birim testi .NET projeleri
         href: /visualstudio/test/live-unit-testing-start
   - name: Güvenlik
     href: ../standard/security/
@@ -2133,9 +2137,9 @@ items:
             href: ../standard/native-interop/best-practices.md
           - name: Karakter kümesi ve hazırlama
             href: ../standard/native-interop/charset.md
-          - name: .NET Core bileşenlerini COM’da kullanıma sunma
+          - name: .NET bileşenlerini COM 'a sunun
             href: ../core/native-interop/expose-components-to-com.md
-          - name: Yerel koddan .NET Core barındırma
+          - name: Yerel koddan .NET 'i barındırın
             href: ../core/tutorials/netcore-hosting.md
           - name: COM birlikte çalışma
             items:
@@ -2157,7 +2161,7 @@ items:
             href: ../standard/native-interop/apply-interop-attributes.md
           - name: Özel Durumlar
             href: ../standard/native-interop/exceptions-interoperability.md
-      - name: .NET Core dağıtımı paketleme
+      - name: .NET dağıtım paketleme
         href: ../core/distribution-packaging.md
       - name: Genelleştirme ve yerelleştirme
         href: ../standard/globalization-localization/
@@ -2295,7 +2299,7 @@ items:
             href: ../core/porting/third-party-deps.md
           - name: Taşıma kitaplıkları
             href: ../core/porting/libraries.md
-          - name: .NET Core için projeleri düzenleme
+          - name: .NET için projeleri düzenleme
             href: ../core/porting/project-structure.md
           - name: Kullanılamayan teknolojiler
             href: ../core/porting/net-framework-tech-unavailable.md?toc=/dotnet/fundamentals/toc.json&bc=/dotnet/breadcrumb/toc.json

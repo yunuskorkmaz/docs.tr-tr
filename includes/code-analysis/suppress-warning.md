@@ -1,20 +1,11 @@
 ---
-ms.openlocfilehash: b26e346f7076a57aef8ae7587ab1222b4100a323
-ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
+ms.openlocfilehash: 8ce8b233169ec2854f6f92b166ff9a367f562553
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "98957942"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99217593"
 ---
 ## <a name="suppress-a-warning"></a>Bir uyarıyı gösterme
 
-Bir kural ihlalini gizlemek için, belirli bir kural KIMLIĞI için önem derecesi seçeneğini `none` bir EditorConfig dosyasında olarak ayarlayın. Örneğin:
-
-```ini
-[*.{cs,vb}]
-dotnet_diagnostic.CA1822.severity = none
-```
-
-Visual Studio, kod analizi kurallarından gelen uyarıları bastırmak için ek yollar sağlar. Daha fazla bilgi için bkz. [Ihlalleri gösterme](/visualstudio/code-quality/use-roslyn-analyzers#suppress-violations).
-
-Kural özellikleri hakkında daha fazla bilgi için bkz. [kural önem derecesini yapılandırma](~/docs/fundamentals/code-analysis/configuration-options.md#severity-level).
+Projenin kuralını devre dışı bırakmak, belirli bir kod satırında devre dışı bırakmak için bir ön işlemci yönergesi kullanmak veya özniteliği uygulayarak bir kod analizi uyarısını bastırmak için çeşitli yollar vardır <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> . Daha fazla bilgi için bkz. [Kod Analizi uyarılarını gösterme](../../docs/fundamentals/code-analysis/suppress-warnings.md).
