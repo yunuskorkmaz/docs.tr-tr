@@ -2,18 +2,18 @@
 title: 'Yinelemeli İşlevler: rec Anahtar Sözcüğü'
 description: "Bir özyinelemeli işlev tanımlamak için ' Let ' anahtar sözcüğüyle F # ' Rec ' anahtar sözcüğünün nasıl kullanıldığını öğrenin."
 ms.date: 08/12/2020
-ms.openlocfilehash: 1ab00ff9400129e531fd7320861b3d9625cad08c
-ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
+ms.openlocfilehash: 27f215f7b6f09646e847898c2618cfac10175e6e
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91438073"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99215718"
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>Yinelemeli İşlevler: rec Anahtar Sözcüğü
 
 `rec`Anahtar sözcüğü `let` özyinelemeli bir işlev tanımlamak için anahtar sözcüğüyle birlikte kullanılır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```fsharp
 // Recursive function:
@@ -38,7 +38,7 @@ Aşağıdaki örnek, matematik tanımını kullanarak *n*<sup>.</sup> fibonaccı
 ```fsharp
 let rec fib n =
     match n with
-    | 0 | 1 -> 1
+    | 0 | 1 -> n
     | n -> fib (n-1) + fib (n-2)
 ```
 
@@ -51,7 +51,7 @@ Yöntemler içinde tanımlandıkları tür içinde örtülü olarak özyinelemel
 type MyClass() =
     member this.Fib(n) =
         match n with
-        | 0 | 1 -> 1
+        | 0 | 1 -> n
         | n -> this.Fib(n-1) + this.Fib(n-2)
 ```
 
