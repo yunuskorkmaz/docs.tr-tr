@@ -1,20 +1,11 @@
 ---
-ms.openlocfilehash: b26e346f7076a57aef8ae7587ab1222b4100a323
-ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
+ms.openlocfilehash: 8ce8b233169ec2854f6f92b166ff9a367f562553
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "98957942"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99217593"
 ---
-## <a name="suppress-a-warning"></a><span data-ttu-id="6d0db-101">Bir uyarıyı gösterme</span><span class="sxs-lookup"><span data-stu-id="6d0db-101">Suppress a warning</span></span>
+## <a name="suppress-a-warning"></a><span data-ttu-id="af7a7-101">Bir uyarıyı gösterme</span><span class="sxs-lookup"><span data-stu-id="af7a7-101">Suppress a warning</span></span>
 
-<span data-ttu-id="6d0db-102">Bir kural ihlalini gizlemek için, belirli bir kural KIMLIĞI için önem derecesi seçeneğini `none` bir EditorConfig dosyasında olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="6d0db-102">To suppress a rule violation, set the severity option for the specific rule ID to `none` in an EditorConfig file.</span></span> <span data-ttu-id="6d0db-103">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="6d0db-103">For example:</span></span>
-
-```ini
-[*.{cs,vb}]
-dotnet_diagnostic.CA1822.severity = none
-```
-
-<span data-ttu-id="6d0db-104">Visual Studio, kod analizi kurallarından gelen uyarıları bastırmak için ek yollar sağlar.</span><span class="sxs-lookup"><span data-stu-id="6d0db-104">Visual Studio provides additional ways to suppress warnings from code analysis rules.</span></span> <span data-ttu-id="6d0db-105">Daha fazla bilgi için bkz. [Ihlalleri gösterme](/visualstudio/code-quality/use-roslyn-analyzers#suppress-violations).</span><span class="sxs-lookup"><span data-stu-id="6d0db-105">For more information, see [Suppress violations](/visualstudio/code-quality/use-roslyn-analyzers#suppress-violations).</span></span>
-
-<span data-ttu-id="6d0db-106">Kural özellikleri hakkında daha fazla bilgi için bkz. [kural önem derecesini yapılandırma](~/docs/fundamentals/code-analysis/configuration-options.md#severity-level).</span><span class="sxs-lookup"><span data-stu-id="6d0db-106">For more information about rule severities, see [Configure rule severity](~/docs/fundamentals/code-analysis/configuration-options.md#severity-level).</span></span>
+<span data-ttu-id="af7a7-102">Projenin kuralını devre dışı bırakmak, belirli bir kod satırında devre dışı bırakmak için bir ön işlemci yönergesi kullanmak veya özniteliği uygulayarak bir kod analizi uyarısını bastırmak için çeşitli yollar vardır <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> .</span><span class="sxs-lookup"><span data-stu-id="af7a7-102">There are various ways to suppress a code analysis warning, including disabling the rule for the project, using a preprocessor directive to disable it for a specific line of code, or by applying the <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> attribute.</span></span> <span data-ttu-id="af7a7-103">Daha fazla bilgi için bkz. [Kod Analizi uyarılarını gösterme](../../docs/fundamentals/code-analysis/suppress-warnings.md).</span><span class="sxs-lookup"><span data-stu-id="af7a7-103">For more information, see [How to suppress code analysis warnings](../../docs/fundamentals/code-analysis/suppress-warnings.md).</span></span>
