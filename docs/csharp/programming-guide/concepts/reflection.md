@@ -3,12 +3,12 @@ title: Yansıma (C#)
 description: Yansıma, C# içindeki derlemeleri, modülleri ve türleri tanımlayan nesneler sağlar. Kodunuz öznitelikleri içeriyorsa, yansıma bunlara erişmenizi sağlar.
 ms.date: 07/20/2015
 ms.assetid: f80a2362-953b-4e8e-9759-cd5f334190d4
-ms.openlocfilehash: 4d4f4c082dd2d58e212bae53524e5dd4fd06fb75
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 91d6d9bbd54199f3468f867d8804596f4a7546d9
+ms.sourcegitcommit: 38999dc0ec4f7c4404de5ce0951b64c55997d9ab
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302808"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99427067"
 ---
 # <a name="reflection-c"></a>Yansıma (C#)
 
@@ -39,7 +39,7 @@ Console.WriteLine(info);
 Çıktı: `System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e` .
 
 > [!NOTE]
-> C# anahtar sözcükleri `protected` ve `internal` Il 'de hiçbir anlamı yoktur ve yansıma API 'lerinde kullanılmaz. Il 'deki ilgili terimler *Aile* ve *derlemedir*. `internal`Yansıma kullanarak bir yöntemi tanımlamak için <xref:System.Reflection.MethodBase.IsAssembly%2A> özelliğini kullanın. Bir yöntemi tanımlamak için `protected internal` öğesini kullanın <xref:System.Reflection.MethodBase.IsFamilyOrAssembly%2A> .
+> C# anahtar sözcükleri `protected` ve `internal` Ara DIL (IL) içinde hiçbir anlamı yoktur ve yansıma API 'lerinde kullanılmaz. Il 'deki ilgili terimler *Aile* ve *derlemedir*. `internal`Yansıma kullanarak bir yöntemi tanımlamak için <xref:System.Reflection.MethodBase.IsAssembly%2A> özelliğini kullanın. Bir yöntemi tanımlamak için `protected internal` öğesini kullanın <xref:System.Reflection.MethodBase.IsFamilyOrAssembly%2A> .
 
 ## <a name="reflection-overview"></a>Yansımaya genel bakış
 

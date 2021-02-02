@@ -13,14 +13,14 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 8c2d4baa9b9a3b19b8f1bde09bea0ab718092e24
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: 3c9383aed97ed3b22f8fccdd55a9fa5664edef2d
+ms.sourcegitcommit: 38999dc0ec4f7c4404de5ce0951b64c55997d9ab
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97512651"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99426937"
 ---
-# <a name="how-to-migrate-from-no-locnewtonsoftjson-to-no-locsystemtextjson"></a>' Den ' a geçiş Newtonsoft.JsonSystem.Text.Json
+# <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>' Den ' a geçiş Newtonsoft.JsonSystem.Text.Json
 
 Bu makalede, ' den ' e nasıl geçiş yapılacağı gösterilmektedir [Newtonsoft.Json](https://www.newtonsoft.com/json) <xref:System.Text.Json> .
 
@@ -34,7 +34,7 @@ Bu makalede, ' den ' e nasıl geçiş yapılacağı gösterilmektedir [Newtonsof
 
 Bu makalenin çoğu, API 'yi kullanma ile <xref:System.Text.Json.JsonSerializer> ilgilidir, ancak aynı zamanda <xref:System.Text.Json.JsonDocument> (belge nesne MODELI veya DOM), <xref:System.Text.Json.Utf8JsonReader> ve türlerini temsil eder <xref:System.Text.Json.Utf8JsonWriter> .
 
-## <a name="table-of-differences-between-no-locnewtonsoftjson-and-no-locsystemtextjson"></a>Ve arasındaki farklar tablosu Newtonsoft.JsonSystem.Text.Json
+## <a name="table-of-differences-between-newtonsoftjson-and-systemtextjson"></a>Ve arasındaki farklar tablosu Newtonsoft.JsonSystem.Text.Json
 
 Aşağıdaki tabloda `Newtonsoft.Json` Özellikler ve eşdeğerleri listelenmektedir `System.Text.Json` . Eşdeğerleri aşağıdaki kategorilere ayrılır:
 
@@ -128,7 +128,7 @@ Aşağıdaki tabloda `Newtonsoft.Json` Özellikler ve eşdeğerleri listelenmekt
 
 Bu, özelliklerin kapsamlı bir listesi değildir `Newtonsoft.Json` . Listede, [GitHub sorunları](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json) veya [StackOverflow](https://stackoverflow.com/questions/tagged/system.text.json) gönderileri için istenen birçok senaryo bulunur. Burada listelenen senaryolardan biri için şu anda örnek kodu olmayan bir geçici çözüm uygularsanız ve çözümünüzü paylaşmak istiyorsanız, bu sayfanın altındaki **geri bildirim** bölümünde **Bu sayfayı** seçin. Bu, bu belgenin GitHub deposunda bir sorun oluşturur ve bu sayfadaki **geri bildirim** bölümünde de listeler.
 
-## <a name="differences-in-default-jsonserializer-behavior-compared-to-no-locnewtonsoftjson"></a>Varsayılan JsonSerializer davranışındaki farklılıklar Newtonsoft.Json
+## <a name="differences-in-default-jsonserializer-behavior-compared-to-newtonsoftjson"></a>Varsayılan JsonSerializer davranışındaki farklılıklar Newtonsoft.Json
 
 <xref:System.Text.Json> Varsayılan olarak katı olur ve arayan adına tahmin veya yorumlamayı önler, belirleyici davranışı vurgulayarak. Kitaplık, performans ve güvenlik için kasıtlı olarak bu şekilde tasarlanmıştır. `Newtonsoft.Json` Varsayılan olarak esnektir. Tasarımda bu temel fark, varsayılan davranıştaki aşağıdaki belirli farklılıklardan birçoğın arkasında bulunur.
 
@@ -388,7 +388,12 @@ Hem hem de `Newtonsoft.Json` `System.Text.Json` türündeki koleksiyonları dest
 <xref:System.Text.Json> , aşağıdaki türler için yerleşik destek sağlamaz:
 
 * <xref:System.Data.DataTable> ve ilgili türler
+::: zone pivot="dotnet-5-0"
+* [Ayırt edici birleşimler](../../fsharp/language-reference/discriminated-unions.md)gibi F # türleri. [Kayıt türleri](../../fsharp/language-reference/records.md) ve [anonim kayıt türleri](../../fsharp/language-reference/anonymous-records.md) , sabit bir Pocos olarak değerlendirilir ve bu nedenle desteklenir.
+::: zone-end
+::: zone pivot="dotnet-core-3-1"
 * [Ayırt edici birleşimler](../../fsharp/language-reference/discriminated-unions.md), [kayıt türleri](../../fsharp/language-reference/records.md)ve [anonim kayıt türleri](../../fsharp/language-reference/anonymous-records.md)gibi F # türleri.
+::: zone-end
 * <xref:System.Dynamic.ExpandoObject>
 * <xref:System.TimeZoneInfo>
 * <xref:System.Numerics.BigInteger>
@@ -631,7 +636,7 @@ public JsonElement LookAndLoad(JsonElement source)
 
 Yukarıdaki kod, bir özellik içeren bir için bekliyor `JsonElement` `fileName` . JSON dosyasını açar ve bir oluşturur `JsonDocument` . Yöntemi, çağıranın tüm belge ile çalışmak istediğini varsayar, bu yüzden öğesinin öğesini döndürür `Clone` `RootElement` .
 
-Bir alır ve bir `JsonElement` alt öğe döndürüyorsa, alt öğenin bir kısmını döndürmek gerekli değildir `Clone` . Çağıran, `JsonDocument` geçirilen ' ın ait olduğu canlı tutmanın sorumluluğundadır `JsonElement` . Örnek:
+Bir alır ve bir `JsonElement` alt öğe döndürüyorsa, alt öğenin bir kısmını döndürmek gerekli değildir `Clone` . Çağıran, `JsonDocument` geçirilen ' ın ait olduğu canlı tutmanın sorumluluğundadır `JsonElement` . Örneğin:
 
 ```csharp
 public JsonElement ReturnFileName(JsonElement source)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 61d79f5647fa05edade9aef90653544b08c20c83
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e49bfaf573c317523b739796c29d807e5369ada4
+ms.sourcegitcommit: 38999dc0ec4f7c4404de5ce0951b64c55997d9ab
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91181836"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99427080"
 ---
 # <a name="objects-c-programming-guide"></a>Nesneler (C# Programlama Kılavuzu)
 
@@ -24,7 +24,7 @@ Sınıf veya yapı tanımı, türün ne yapabileceğini belirten bir şema gibid
 
  Sınıflar başvuru türleri olduğundan, sınıf nesnesinin bir değişkeni yönetilen yığında nesnenin adresine bir başvuru içerir. Aynı türde ikinci bir nesne ilk nesnesine atanırsa, her iki değişken de o adresteki nesneye başvurur. Bu nokta, bu konunun ilerleyen kısımlarında daha ayrıntılı bir şekilde ele alınmıştır.  
   
- Sınıfların örnekleri, [New işleci](../../language-reference/operators/new-operator.md)kullanılarak oluşturulur. Aşağıdaki örnekte, `Person` türü ve, `person1` `person 2` Bu türün örnekleri veya nesneleri vardır.  
+ Sınıfların örnekleri, [New işleci](../../language-reference/operators/new-operator.md)kullanılarak oluşturulur. Aşağıdaki örnekte, `Person` türü ve, `person1` `person2` Bu türün örnekleri veya nesneleri vardır.  
   
  [!code-csharp[csProgGuideStatements#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#30)]  
   
@@ -41,7 +41,7 @@ Sınıf veya yapı tanımı, türün ne yapabileceğini belirten bir şema gibid
 
  İki nesneyi eşitlik için karşılaştırdığınızda, ilk olarak iki değişkenin bellekte aynı nesneyi temsil ettiğini veya bir ya da daha fazla alanının değerlerinin eşdeğer olup olmadığını ayırt etmeniz gerekir. Değerleri karşılaştırmak istiyorsanız, nesnelerin değer türleri (yapılar) veya başvuru türleri (sınıflar, temsilciler, diziler) örnekleri olup olmadığını göz önünde bulundurmanız gerekir.  
   
-- İki sınıf örneğinin bellekteki aynı konuma (aynı *kimliğe*sahip oldukları anlamına gelir) başvuruda bulunup bulunmadığını anlamak için statik <xref:System.Object.Equals%2A> yöntemi kullanın. ( <xref:System.Object?displayProperty=nameWithType> Kullanıcı tanımlı yapılar ve sınıflar da dahil olmak üzere tüm değer türleri ve başvuru türleri için örtülü temel sınıftır.)  
+- İki sınıf örneğinin bellekteki aynı konuma (aynı *kimliğe* sahip oldukları anlamına gelir) başvuruda bulunup bulunmadığını anlamak için statik <xref:System.Object.Equals%2A> yöntemi kullanın. ( <xref:System.Object?displayProperty=nameWithType> Kullanıcı tanımlı yapılar ve sınıflar da dahil olmak üzere tüm değer türleri ve başvuru türleri için örtülü temel sınıftır.)  
   
 - İki yapı örneğindeki örnek alanlarının aynı değerlere sahip olup olmadığını anlamak için <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> yöntemini kullanın. Tüm yapılar öğesinden örtük olarak devraldığı <xref:System.ValueType?displayProperty=nameWithType> için, aşağıdaki örnekte gösterildiği gibi yöntemi doğrudan nesneniz üzerinde çağırabilirsiniz:  
   
@@ -61,12 +61,12 @@ Sınıf veya yapı tanımı, türün ne yapabileceğini belirten bir şema gibid
   
 - [Sonlandırıcılar](./destructors.md)  
   
-- [Olaylar](../events/index.md)  
+- [Ekinlikler](../events/index.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
-- [object](../../language-reference/builtin-types/reference-types.md)
+- [nesne](../../language-reference/builtin-types/reference-types.md)
 - [Devralma](./inheritance.md)
 - [sınıfı](../../language-reference/keywords/class.md)
 - [Yapı türleri](../../language-reference/builtin-types/struct.md)

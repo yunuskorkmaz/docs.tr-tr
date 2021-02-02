@@ -12,12 +12,12 @@ helpviewer_keywords:
 - application development [.NET], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-ms.openlocfilehash: 055bdfa82ea0e1721a6125ba14d7b6340dc254b9
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 6ed1f6fa41b7a8b8ea8ecc89fa603836d72dfa8c
+ms.sourcegitcommit: 38999dc0ec4f7c4404de5ce0951b64c55997d9ab
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829875"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99426988"
 ---
 # <a name="globalization"></a>Genelleştirme
 
@@ -35,7 +35,7 @@ Her kültür veya bölge farklı karakterler ve karakter kümeleri kullandığı
 
 Varsayılan olarak, .NET Unicode dizelerini kullanır. Bir Unicode dize, <xref:System.Char> her biri BIR UTF-16 kod birimini temsil eden sıfır, bir veya daha fazla nesneden oluşur. Dünyanın tamamında kullanılan her karakter kümesinde neredeyse her karakter için bir Unicode temsili vardır.
 
-Windows işletim sistemi dahil olmak üzere birçok uygulama ve işletim sistemi, karakter kümelerini temsil etmek için kod sayfalarını da kullanabilir. Kod sayfaları tipik olarak 0x00 ile 0x7F arasındaki standart ASCII değerlerini içerir ve diğer karakterleri 0x80 ile 0xFF arasında kalan değerlere eşler. 0x80 ile 0xFF arasındaki değerlerin yorumu, belirli kod sayfasına bağlıdır. Bu nedenle, mümkünse Genelleştirilmiş uygulamasında kod sayfaları kullanmaktan kaçının.
+Windows işletim sistemi dahil birçok uygulama ve işletim sistemi, karakter kümelerini temsil etmek için kod sayfalarını da kullanabilir. Kod sayfaları tipik olarak 0x00 ile 0x7F arasındaki standart ASCII değerlerini içerir ve diğer karakterleri 0x80 ile 0xFF arasında kalan değerlere eşler. 0x80 ile 0xFF arasındaki değerlerin yorumu, belirli kod sayfasına bağlıdır. Bu nedenle, mümkünse Genelleştirilmiş uygulamasında kod sayfaları kullanmaktan kaçının.
 
 Aşağıdaki örnek, bir sistemdeki varsayılan kod sayfası, verilerin kaydedildiği kod sayfasından farklı olduğunda kod sayfası verilerini yorumlama tehlikeleri gösterilmektedir. (Bu senaryonun benzetimini yapmak için örnek açıkça farklı kod sayfaları belirtir.) İlk olarak, örnek Yunan alfabesinin büyük harfli karakterlerinden oluşan bir diziyi tanımlar. Kod sayfası 737 (MS-DOS Yunanca olarak da bilinir) kullanarak bir bayt dizisine kodlar ve bayt dizisini bir dosyaya kaydeder. Dosya alınırsa ve bayt dizisinin kodu kod sayfası 737 kullanılarak kodu çözülerek, özgün karakterler geri yüklenir. Ancak, dosya alınırsa ve bayt dizisinin kodu, kod sayfası 1252 (veya Latin alfabedeki karakterleri temsil eden Windows-1252) kullanılarak çözülerek, özgün karakterler kaybedilir.
 

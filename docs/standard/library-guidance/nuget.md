@@ -2,12 +2,12 @@
 title: NuGet ve .NET kitaplıkları
 description: .NET kitaplıkları için NuGet ile paketleme için en iyi yöntem önerileri.
 ms.date: 01/15/2019
-ms.openlocfilehash: d9f8d7cc4402a87e1429791b57a0306b318dfbe4
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 14d65ae29a09f98e99b2cabd5d69cfc889df7d5e
+ms.sourcegitcommit: 38999dc0ec4f7c4404de5ce0951b64c55997d9ab
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87382119"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99427054"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -44,14 +44,14 @@ NuGet paketi bağımlılıkları, [Bağımlılıklar](./dependencies.md) makales
 
 Bir NuGet paketi birçok [meta veri özelliğini](/nuget/reference/nuspec)destekler. Aşağıdaki tabloda, NuGet.org üzerindeki her paketin sağlaması gereken çekirdek meta veriler yer almaktadır:
 
-| MSBuild özellik adı              | Nuspec adı              | Description  |
+| MSBuild özellik adı              | Nuspec adı              | Açıklama  |
 | ---------------------------------- | ------------------------ | ------------ |
 | `PackageId`                        | `id`                       | Paket tanımlayıcısı. Tanımlayıcıdan bir önek, [ölçütlere](/nuget/reference/id-prefix-reservation)uyuyorsa ayrılabilir. |
 | `PackageVersion`                   | `version`                  | NuGet paket sürümü. Daha fazla bilgi için bkz. [NuGet paket sürümü](./versioning.md#nuget-package-version).             |
 | `Title`                            | `title`                    | Paketin insan dostu bir başlığı. Varsayılan olarak olur `PackageId` .             |
 | `Description`                      | `description`              | Kullanıcı arabiriminde görüntülenmekte olan paketin uzun açıklaması.             |
 | `Authors`                          | `authors`                  | Nuget.org üzerindeki profil adlarıyla eşleşen paket yazarları için virgülle ayrılmış bir liste.             |
-| `PackageTags`                      | `tags`                     | Paketi tanımlayan etiketlerin ve anahtar sözcüklerin boşlukla ayrılmış bir listesi. Etiketler, paketler aranırken kullanılır.             |
+| `PackageTags`                      | `tags`                     | Paketi tanımlayan bir boşluk veya noktalı virgülle ayrılmış etiket ve anahtar sözcük listesi. Etiketler, paketler aranırken kullanılır.             |
 | `PackageIcon`                   | `icon`                  | Paket simgesi olarak kullanılacak paketteki bir görüntünün yolu. [ `icon` Meta veriler](/nuget/reference/nuspec#icon)hakkında daha fazla bilgi edinin. |
 | `PackageProjectUrl`                | `projectUrl`               | Proje giriş sayfası veya Kaynak deposu için bir URL.             |
 | `PackageLicenseExpression`         | `license`                  | Proje lisansının [Spdx tanımlayıcısı](https://spdx.org/licenses/). Yalnızca OSı ve FSF onaylı lisanslar bir tanımlayıcı kullanabilir. Diğer lisansların kullanması gerekir `PackageLicenseFile` . [ `license` Meta veriler](/nuget/reference/nuspec#license)hakkında daha fazla bilgi edinin. |

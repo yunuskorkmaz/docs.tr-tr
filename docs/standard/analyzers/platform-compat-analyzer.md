@@ -3,12 +3,12 @@ title: Platform uyumluluk çözümleyicisi
 description: Platformlar arası uygulamalarda ve kitaplıklarda platform uyumluluk sorunlarını algılamaya yardımcı olabilecek bir Roslyn Çözümleyicisi.
 author: buyaa-n
 ms.date: 09/17/2020
-ms.openlocfilehash: 427a2d8ae61a82699e5cf0987fcd1c5a45152cac
-ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
+ms.openlocfilehash: 6ba521110e21e169955c54faf5c2a16c2838335b
+ms.sourcegitcommit: 38999dc0ec4f7c4404de5ce0951b64c55997d9ab
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97594923"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99427002"
 ---
 # <a name="platform-compatibility-analyzer"></a>Platform uyumluluk çözümleyicisi
 
@@ -24,7 +24,7 @@ Yeni API 'Ler şunları içerir:
 > [!TIP]
 > Platform uyumluluk Çözümleyicisi, [.NET API Çözümleyicisi](../../standard/analyzers/api-analyzer.md)'nin [platformlar arası sorunları keşfetmesini](../../standard/analyzers/api-analyzer.md#discover-cross-platform-issues) yükseltir ve değiştirir.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Platform uyumluluğu Çözümleyicisi, Roslyn kod kalitesi çözümleyicilerinin biridir. .NET 5.0’dan itibaren bu çözümleyiciler, [.NET SDK](../../fundamentals/code-analysis/overview.md)’ya dahildir. Platform uyumluluğu Çözümleyicisi, yalnızca `net5.0` veya sonraki bir sürümü hedefleyen projeler için varsayılan olarak etkindir. Ancak, diğer çerçeveleri hedefleyen projeler için [etkinleştirebilirsiniz](../../fundamentals/code-analysis/quality-rules/ca1416.md#configure-code-to-analyze) .
 
@@ -35,7 +35,7 @@ Platform uyumluluğu Çözümleyicisi, Roslyn kod kalitesi çözümleyicilerinin
   - Özniteliği **birden çok platform desteği** () göstermek için birden çok kez uygulanabilir `[SupportedOSPlatform("windows"), SupportedOSPlatform("Android6.0")]` .
   - Platforma özgü API 'Lere uygun bir **Platform bağlamı** olmadan başvuruluyorsa, çözümleyici bir **Uyarı** üretir:
     - Projenin desteklenen platformu hedeflediğini (örneğin, Windows 'a özgü bir API çağrısı ve proje hedefleri) yoksa **uyarır** `<TargetFramework>net5.0-ios14.0</TargetFramework>` .
-    - Projenin çoklu hedefli () olduğunu **uyarır** `<TargetFramework>net5.0</TargetFramework>` .
+    - Projenin çoklu hedefli olup olmadığını **uyarır** (örneğin, `<TargetFrameworks>net5.0;netstandard2.0</TargetFrameworks>` ).
     - Platforma özgü API 'ye, **belirtilen platformlardan** herhangi birini hedefleyen bir proje içinde başvuruluyorsa (örneğin, Windows 'a özgü bir API çağrısı ve proje hedefleri için), **uyarı vermez** `<TargetFramework>net5.0-windows</TargetFramework>` .
     - Platforma özgü API çağrısı karşılık gelen platform denetimi yöntemleriyle (örneğin,) korunmuş olursa, **uyarı vermez** `if(OperatingSystem.IsWindows())` .
     - Platforma özgü API 'ye, platforma özgü bir içerikten (aynı zamanda öğesine sahip olan **çağrı sitesi** ) başvuruluyorsa, **uyarı vermez** `[SupportedOSPlatform("platform")` .
