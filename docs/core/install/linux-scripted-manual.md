@@ -4,153 +4,148 @@ description: Linux üzerinde bir paket yöneticisi olmadan .NET SDK ve .NET çal
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 5879d4d66aba8bfa00caadbe3c33d6df0d7da59a
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: 14789587a58c7b9d5ef2c9251ed599ce18a48f24
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970975"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505582"
 ---
-# <a name="install-the-net-sdk-or-the-net-runtime-manually"></a><span data-ttu-id="0ede4-104">.NET SDK veya .NET çalışma zamanını el ile yükleyebilirsiniz</span><span class="sxs-lookup"><span data-stu-id="0ede4-104">Install the .NET SDK or the .NET Runtime manually</span></span>
+# <a name="install-the-net-sdk-or-the-net-runtime-manually"></a><span data-ttu-id="57180-104">.NET SDK veya .NET çalışma zamanını el ile yükleyebilirsiniz</span><span class="sxs-lookup"><span data-stu-id="57180-104">Install the .NET SDK or the .NET Runtime manually</span></span>
 
-<span data-ttu-id="0ede4-105">.NET, Linux üzerinde desteklenmektedir ve bu makalede, Install betiği kullanılarak veya ikili dosyaları ayıklanarak Linux 'ta .NET 'in nasıl yükleneceği açıklanır.</span><span class="sxs-lookup"><span data-stu-id="0ede4-105">.NET is supported on Linux and this article describes how to install .NET on Linux using the install script or by extracting the binaries.</span></span> <span data-ttu-id="0ede4-106">Yerleşik paket yöneticisini destekleyen dağıtımların bir listesi için bkz. [Linux 'ta .net 'ı Install](linux.md).</span><span class="sxs-lookup"><span data-stu-id="0ede4-106">For a list of distributions that support the built-in package manager, see [Install .NET on Linux](linux.md).</span></span>
+<span data-ttu-id="57180-105">.NET, Linux üzerinde desteklenmektedir ve bu makalede, Install betiği kullanılarak veya ikili dosyaları ayıklanarak Linux 'ta .NET 'in nasıl yükleneceği açıklanır.</span><span class="sxs-lookup"><span data-stu-id="57180-105">.NET is supported on Linux and this article describes how to install .NET on Linux using the install script or by extracting the binaries.</span></span> <span data-ttu-id="57180-106">Yerleşik paket yöneticisini destekleyen dağıtımların bir listesi için bkz. [Linux 'ta .net 'ı Install](linux.md).</span><span class="sxs-lookup"><span data-stu-id="57180-106">For a list of distributions that support the built-in package manager, see [Install .NET on Linux](linux.md).</span></span>
 
-<span data-ttu-id="0ede4-107">Ayrıca, yaslama ile .NET yükleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="0ede4-107">You can also install .NET with snap.</span></span> <span data-ttu-id="0ede4-108">Daha fazla bilgi için bkz. [.NET SDK 'yı veya .NET çalışma zamanını yaslama Ile yüklemeyi](linux-snap.md).</span><span class="sxs-lookup"><span data-stu-id="0ede4-108">For more information, see [Install the .NET SDK or the .NET Runtime with Snap](linux-snap.md).</span></span>
+<span data-ttu-id="57180-107">Ayrıca, yaslama ile .NET yükleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="57180-107">You can also install .NET with snap.</span></span> <span data-ttu-id="57180-108">Daha fazla bilgi için bkz. [.NET SDK 'yı veya .NET çalışma zamanını yaslama Ile yüklemeyi](linux-snap.md).</span><span class="sxs-lookup"><span data-stu-id="57180-108">For more information, see [Install the .NET SDK or the .NET Runtime with Snap](linux-snap.md).</span></span>
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
-## <a name="net-releases"></a><span data-ttu-id="0ede4-109">.NET yayınları</span><span class="sxs-lookup"><span data-stu-id="0ede4-109">.NET releases</span></span>
+## <a name="net-releases"></a><span data-ttu-id="57180-109">.NET yayınları</span><span class="sxs-lookup"><span data-stu-id="57180-109">.NET releases</span></span>
 
-<span data-ttu-id="0ede4-110">Aşağıdaki tabloda .NET (ve .NET Core) yayınları listelenmektedir:</span><span class="sxs-lookup"><span data-stu-id="0ede4-110">The following table lists the .NET (and .NET Core) releases:</span></span>
+<span data-ttu-id="57180-110">Aşağıdaki tabloda .NET (ve .NET Core) yayınları listelenmektedir:</span><span class="sxs-lookup"><span data-stu-id="57180-110">The following table lists the .NET (and .NET Core) releases:</span></span>
 
-| <span data-ttu-id="0ede4-111">✔️ destekleniyor</span><span class="sxs-lookup"><span data-stu-id="0ede4-111">✔️ Supported</span></span> | <span data-ttu-id="0ede4-112">❌ Desteklenen</span><span class="sxs-lookup"><span data-stu-id="0ede4-112">❌ Unsupported</span></span> |
+| <span data-ttu-id="57180-111">✔️ destekleniyor</span><span class="sxs-lookup"><span data-stu-id="57180-111">✔️ Supported</span></span> | <span data-ttu-id="57180-112">❌ Desteklenen</span><span class="sxs-lookup"><span data-stu-id="57180-112">❌ Unsupported</span></span> |
 |-------------|---------------|
-| <span data-ttu-id="0ede4-113">5.0</span><span class="sxs-lookup"><span data-stu-id="0ede4-113">5.0</span></span>         | <span data-ttu-id="0ede4-114">3,0</span><span class="sxs-lookup"><span data-stu-id="0ede4-114">3.0</span></span>           |
-| <span data-ttu-id="0ede4-115">3,1 (LTS)</span><span class="sxs-lookup"><span data-stu-id="0ede4-115">3.1 (LTS)</span></span>   | <span data-ttu-id="0ede4-116">2.2</span><span class="sxs-lookup"><span data-stu-id="0ede4-116">2.2</span></span>           |
-| <span data-ttu-id="0ede4-117">2,1 (LTS)</span><span class="sxs-lookup"><span data-stu-id="0ede4-117">2.1 (LTS)</span></span>   | <span data-ttu-id="0ede4-118">2.0</span><span class="sxs-lookup"><span data-stu-id="0ede4-118">2.0</span></span>           |
-|             | <span data-ttu-id="0ede4-119">1.1</span><span class="sxs-lookup"><span data-stu-id="0ede4-119">1.1</span></span>           |
-|             | <span data-ttu-id="0ede4-120">1,0</span><span class="sxs-lookup"><span data-stu-id="0ede4-120">1.0</span></span>           |
+| <span data-ttu-id="57180-113">5.0</span><span class="sxs-lookup"><span data-stu-id="57180-113">5.0</span></span>         | <span data-ttu-id="57180-114">3.0</span><span class="sxs-lookup"><span data-stu-id="57180-114">3.0</span></span>           |
+| <span data-ttu-id="57180-115">3,1 (LTS)</span><span class="sxs-lookup"><span data-stu-id="57180-115">3.1 (LTS)</span></span>   | <span data-ttu-id="57180-116">2,2</span><span class="sxs-lookup"><span data-stu-id="57180-116">2.2</span></span>           |
+| <span data-ttu-id="57180-117">2,1 (LTS)</span><span class="sxs-lookup"><span data-stu-id="57180-117">2.1 (LTS)</span></span>   | <span data-ttu-id="57180-118">2.0</span><span class="sxs-lookup"><span data-stu-id="57180-118">2.0</span></span>           |
+|             | <span data-ttu-id="57180-119">1.1</span><span class="sxs-lookup"><span data-stu-id="57180-119">1.1</span></span>           |
+|             | <span data-ttu-id="57180-120">1.0</span><span class="sxs-lookup"><span data-stu-id="57180-120">1.0</span></span>           |
 
-<span data-ttu-id="0ede4-121">.NET sürümlerinin yaşam döngüsü hakkında daha fazla bilgi için bkz. [.NET Core ve .NET 5 destek ilkesi](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).</span><span class="sxs-lookup"><span data-stu-id="0ede4-121">For more information about the life cycle of .NET releases, see [.NET Core and .NET 5 Support Policy](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).</span></span>
+<span data-ttu-id="57180-121">.NET sürümlerinin yaşam döngüsü hakkında daha fazla bilgi için bkz. [.NET Core ve .NET 5 destek ilkesi](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).</span><span class="sxs-lookup"><span data-stu-id="57180-121">For more information about the life cycle of .NET releases, see [.NET Core and .NET 5 Support Policy](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).</span></span>
 
-## <a name="dependencies"></a><span data-ttu-id="0ede4-122">Bağımlılıklar</span><span class="sxs-lookup"><span data-stu-id="0ede4-122">Dependencies</span></span>
+## <a name="dependencies"></a><span data-ttu-id="57180-122">Bağımlılıklar</span><span class="sxs-lookup"><span data-stu-id="57180-122">Dependencies</span></span>
 
-<span data-ttu-id="0ede4-123">.NET yüklediğinizde belirli bağımlılıklar yüklenemeyebilir, örneğin [el ile yüklenirken](#manual-install).</span><span class="sxs-lookup"><span data-stu-id="0ede4-123">It's possible that when you install .NET, specific dependencies may not be installed, such as when [manually installing](#manual-install).</span></span> <span data-ttu-id="0ede4-124">Aşağıdaki listede, Microsoft tarafından desteklenen ve yüklemeniz gerekebilecek bağımlılıklara sahip Linux dağıtımlarını ayrıntılarıyla bulabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="0ede4-124">The following list details Linux distributions that are supported by Microsoft and have dependencies you may need to install.</span></span> <span data-ttu-id="0ede4-125">Daha fazla bilgi için dağıtım sayfasına bakın:</span><span class="sxs-lookup"><span data-stu-id="0ede4-125">Check the distribution page for more information:</span></span>
+<span data-ttu-id="57180-123">.NET yüklediğinizde belirli bağımlılıklar yüklenemeyebilir, örneğin [el ile yüklenirken](#manual-install).</span><span class="sxs-lookup"><span data-stu-id="57180-123">It's possible that when you install .NET, specific dependencies may not be installed, such as when [manually installing](#manual-install).</span></span> <span data-ttu-id="57180-124">Aşağıdaki listede, Microsoft tarafından desteklenen ve yüklemeniz gerekebilecek bağımlılıklara sahip Linux dağıtımlarını ayrıntılarıyla bulabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="57180-124">The following list details Linux distributions that are supported by Microsoft and have dependencies you may need to install.</span></span> <span data-ttu-id="57180-125">Daha fazla bilgi için dağıtım sayfasına bakın:</span><span class="sxs-lookup"><span data-stu-id="57180-125">Check the distribution page for more information:</span></span>
 
-- [<span data-ttu-id="0ede4-126">Alpine</span><span class="sxs-lookup"><span data-stu-id="0ede4-126">Alpine</span></span>](linux-alpine.md#dependencies)
-- [<span data-ttu-id="0ede4-127">Debian</span><span class="sxs-lookup"><span data-stu-id="0ede4-127">Debian</span></span>](linux-debian.md#dependencies)
-- [<span data-ttu-id="0ede4-128">CentOS</span><span class="sxs-lookup"><span data-stu-id="0ede4-128">CentOS</span></span>](linux-centos.md#dependencies)
-- [<span data-ttu-id="0ede4-129">Fedora</span><span class="sxs-lookup"><span data-stu-id="0ede4-129">Fedora</span></span>](linux-fedora.md#dependencies)
-- [<span data-ttu-id="0ede4-130">RHEL</span><span class="sxs-lookup"><span data-stu-id="0ede4-130">RHEL</span></span>](linux-rhel.md#dependencies)
-- [<span data-ttu-id="0ede4-131">SLES</span><span class="sxs-lookup"><span data-stu-id="0ede4-131">SLES</span></span>](linux-sles.md#dependencies)
-- [<span data-ttu-id="0ede4-132">Ubuntu</span><span class="sxs-lookup"><span data-stu-id="0ede4-132">Ubuntu</span></span>](linux-ubuntu.md#dependencies)
+- [<span data-ttu-id="57180-126">Alpine</span><span class="sxs-lookup"><span data-stu-id="57180-126">Alpine</span></span>](linux-alpine.md#dependencies)
+- [<span data-ttu-id="57180-127">Debian</span><span class="sxs-lookup"><span data-stu-id="57180-127">Debian</span></span>](linux-debian.md#dependencies)
+- [<span data-ttu-id="57180-128">CentOS</span><span class="sxs-lookup"><span data-stu-id="57180-128">CentOS</span></span>](linux-centos.md#dependencies)
+- [<span data-ttu-id="57180-129">Fedora</span><span class="sxs-lookup"><span data-stu-id="57180-129">Fedora</span></span>](linux-fedora.md#dependencies)
+- [<span data-ttu-id="57180-130">RHEL</span><span class="sxs-lookup"><span data-stu-id="57180-130">RHEL</span></span>](linux-rhel.md#dependencies)
+- [<span data-ttu-id="57180-131">SLES</span><span class="sxs-lookup"><span data-stu-id="57180-131">SLES</span></span>](linux-sles.md#dependencies)
+- [<span data-ttu-id="57180-132">Ubuntu</span><span class="sxs-lookup"><span data-stu-id="57180-132">Ubuntu</span></span>](linux-ubuntu.md#dependencies)
 
-<span data-ttu-id="0ede4-133">Bağımlılıklar hakkında genel bilgi için bkz. [kendi kendine kapsanan Linux uygulamaları](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md).</span><span class="sxs-lookup"><span data-stu-id="0ede4-133">For generic information about the dependencies, see [Self-contained Linux apps](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md).</span></span>
+<span data-ttu-id="57180-133">Bağımlılıklar hakkında genel bilgi için bkz. [kendi kendine kapsanan Linux uygulamaları](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md).</span><span class="sxs-lookup"><span data-stu-id="57180-133">For generic information about the dependencies, see [Self-contained Linux apps](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md).</span></span>
 
-### <a name="rpm-dependencies"></a><span data-ttu-id="0ede4-134">RPM bağımlılıkları</span><span class="sxs-lookup"><span data-stu-id="0ede4-134">RPM dependencies</span></span>
+### <a name="rpm-dependencies"></a><span data-ttu-id="57180-134">RPM bağımlılıkları</span><span class="sxs-lookup"><span data-stu-id="57180-134">RPM dependencies</span></span>
 
-<span data-ttu-id="0ede4-135">Dağıtım daha önce listelenmediyse ve RPM tabanlı ise, Aşağıdaki bağımlılıklara ihtiyacınız olabilir:</span><span class="sxs-lookup"><span data-stu-id="0ede4-135">If your distribution wasn't previously listed, and is RPM-based, you may need the following dependencies:</span></span>
+<span data-ttu-id="57180-135">Dağıtım daha önce listelenmediyse ve RPM tabanlı ise, Aşağıdaki bağımlılıklara ihtiyacınız olabilir:</span><span class="sxs-lookup"><span data-stu-id="57180-135">If your distribution wasn't previously listed, and is RPM-based, you may need the following dependencies:</span></span>
 
-- <span data-ttu-id="0ede4-136">krb5-libs</span><span class="sxs-lookup"><span data-stu-id="0ede4-136">krb5-libs</span></span>
-- <span data-ttu-id="0ede4-137">libıu</span><span class="sxs-lookup"><span data-stu-id="0ede4-137">libicu</span></span>
-- <span data-ttu-id="0ede4-138">OpenSSL-libs</span><span class="sxs-lookup"><span data-stu-id="0ede4-138">openssl-libs</span></span>
+- <span data-ttu-id="57180-136">krb5-libs</span><span class="sxs-lookup"><span data-stu-id="57180-136">krb5-libs</span></span>
+- <span data-ttu-id="57180-137">libıu</span><span class="sxs-lookup"><span data-stu-id="57180-137">libicu</span></span>
+- <span data-ttu-id="57180-138">OpenSSL-libs</span><span class="sxs-lookup"><span data-stu-id="57180-138">openssl-libs</span></span>
 
-<span data-ttu-id="0ede4-139">Hedef çalışma zamanı ortamının OpenSSL sürümü 1,1 veya daha yeniyse, **COMPAT-openssl10** yüklemeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="0ede4-139">If the target runtime environment's OpenSSL version is 1.1 or newer, you'll need to install **compat-openssl10**.</span></span>
+<span data-ttu-id="57180-139">Hedef çalışma zamanı ortamının OpenSSL sürümü 1,1 veya daha yeniyse, **COMPAT-openssl10** yüklemeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="57180-139">If the target runtime environment's OpenSSL version is 1.1 or newer, you'll need to install **compat-openssl10**.</span></span>
 
-### <a name="deb-dependencies"></a><span data-ttu-id="0ede4-140">DEB bağımlılıkları</span><span class="sxs-lookup"><span data-stu-id="0ede4-140">DEB dependencies</span></span>
+### <a name="deb-dependencies"></a><span data-ttu-id="57180-140">DEB bağımlılıkları</span><span class="sxs-lookup"><span data-stu-id="57180-140">DEB dependencies</span></span>
 
-<span data-ttu-id="0ede4-141">Dağıtım daha önce listelenmediyse ve temel alıyorsa, Aşağıdaki bağımlılıklara ihtiyacınız olabilir:</span><span class="sxs-lookup"><span data-stu-id="0ede4-141">If your distribution wasn't previously listed, and is debian-based, you may need the following dependencies:</span></span>
+<span data-ttu-id="57180-141">Dağıtım daha önce listelenmediyse ve temel alıyorsa, Aşağıdaki bağımlılıklara ihtiyacınız olabilir:</span><span class="sxs-lookup"><span data-stu-id="57180-141">If your distribution wasn't previously listed, and is debian-based, you may need the following dependencies:</span></span>
 
-- <span data-ttu-id="0ede4-142">libc6</span><span class="sxs-lookup"><span data-stu-id="0ede4-142">libc6</span></span>
-- <span data-ttu-id="0ede4-143">libgcc1</span><span class="sxs-lookup"><span data-stu-id="0ede4-143">libgcc1</span></span>
-- <span data-ttu-id="0ede4-144">libgssapı-krb5-2</span><span class="sxs-lookup"><span data-stu-id="0ede4-144">libgssapi-krb5-2</span></span>
-- <span data-ttu-id="0ede4-145">libicu67</span><span class="sxs-lookup"><span data-stu-id="0ede4-145">libicu67</span></span>
-- <span data-ttu-id="0ede4-146">libssl 1.1</span><span class="sxs-lookup"><span data-stu-id="0ede4-146">libssl1.1</span></span>
-- <span data-ttu-id="0ede4-147">libstdc + + 6</span><span class="sxs-lookup"><span data-stu-id="0ede4-147">libstdc++6</span></span>
-- <span data-ttu-id="0ede4-148">zlib1g</span><span class="sxs-lookup"><span data-stu-id="0ede4-148">zlib1g</span></span>
+- <span data-ttu-id="57180-142">libc6</span><span class="sxs-lookup"><span data-stu-id="57180-142">libc6</span></span>
+- <span data-ttu-id="57180-143">libgcc1</span><span class="sxs-lookup"><span data-stu-id="57180-143">libgcc1</span></span>
+- <span data-ttu-id="57180-144">libgssapı-krb5-2</span><span class="sxs-lookup"><span data-stu-id="57180-144">libgssapi-krb5-2</span></span>
+- <span data-ttu-id="57180-145">libicu67</span><span class="sxs-lookup"><span data-stu-id="57180-145">libicu67</span></span>
+- <span data-ttu-id="57180-146">libssl 1.1</span><span class="sxs-lookup"><span data-stu-id="57180-146">libssl1.1</span></span>
+- <span data-ttu-id="57180-147">libstdc + + 6</span><span class="sxs-lookup"><span data-stu-id="57180-147">libstdc++6</span></span>
+- <span data-ttu-id="57180-148">zlib1g</span><span class="sxs-lookup"><span data-stu-id="57180-148">zlib1g</span></span>
 
-### <a name="common-dependencies"></a><span data-ttu-id="0ede4-149">Ortak bağımlılıklar</span><span class="sxs-lookup"><span data-stu-id="0ede4-149">Common dependencies</span></span>
+### <a name="common-dependencies"></a><span data-ttu-id="57180-149">Ortak bağımlılıklar</span><span class="sxs-lookup"><span data-stu-id="57180-149">Common dependencies</span></span>
 
-<span data-ttu-id="0ede4-150">*System. Drawing. Common* derlemesini kullanan .NET uygulamaları için aşağıdaki bağımlılığa de ihtiyacınız olacaktır:</span><span class="sxs-lookup"><span data-stu-id="0ede4-150">For .NET apps that use the *System.Drawing.Common* assembly, you'll also need the following dependency:</span></span>
+<span data-ttu-id="57180-150">*System. Drawing. Common* derlemesini kullanan .NET uygulamaları için aşağıdaki bağımlılığa de ihtiyacınız olacaktır:</span><span class="sxs-lookup"><span data-stu-id="57180-150">For .NET apps that use the *System.Drawing.Common* assembly, you'll also need the following dependency:</span></span>
 
-- [<span data-ttu-id="0ede4-151">libgdiplus (sürüm 6.0.1 veya üzeri)</span><span class="sxs-lookup"><span data-stu-id="0ede4-151">libgdiplus (version 6.0.1 or later)</span></span>](https://www.mono-project.com/docs/gui/libgdiplus/)
+- [<span data-ttu-id="57180-151">libgdiplus (sürüm 6.0.1 veya üzeri)</span><span class="sxs-lookup"><span data-stu-id="57180-151">libgdiplus (version 6.0.1 or later)</span></span>](https://www.mono-project.com/docs/gui/libgdiplus/)
 
   > [!WARNING]
-  > <span data-ttu-id="0ede4-152">En son bir *libgdiplus* sürümünü sisteminize mono deposunu ekleyerek yükleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="0ede4-152">You can install a recent version of *libgdiplus* by adding the Mono repository to your system.</span></span> <span data-ttu-id="0ede4-153">Daha fazla bilgi için bkz. <https://www.mono-project.com/download/stable/>.</span><span class="sxs-lookup"><span data-stu-id="0ede4-153">For more information, see <https://www.mono-project.com/download/stable/>.</span></span>
+  > <span data-ttu-id="57180-152">En son bir *libgdiplus* sürümünü sisteminize mono deposunu ekleyerek yükleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="57180-152">You can install a recent version of *libgdiplus* by adding the Mono repository to your system.</span></span> <span data-ttu-id="57180-153">Daha fazla bilgi için bkz. <https://www.mono-project.com/download/stable/>.</span><span class="sxs-lookup"><span data-stu-id="57180-153">For more information, see <https://www.mono-project.com/download/stable/>.</span></span>
 
-## <a name="scripted-install"></a><span data-ttu-id="0ede4-154">Komut dosyalı yüklemesi</span><span class="sxs-lookup"><span data-stu-id="0ede4-154">Scripted install</span></span>
+## <a name="scripted-install"></a><span data-ttu-id="57180-154">Komut dosyalı yüklemesi</span><span class="sxs-lookup"><span data-stu-id="57180-154">Scripted install</span></span>
 
-<span data-ttu-id="0ede4-155">[DotNet yükleme betikleri](../tools/dotnet-install-script.md) , **SDK** ve **çalışma zamanının** Otomasyon ve yönetici olmayan yüklemeleri için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="0ede4-155">The [dotnet-install scripts](../tools/dotnet-install-script.md) are used for automation and non-admin installs of the **SDK** and **Runtime**.</span></span> <span data-ttu-id="0ede4-156">Betiği konumundan indirebilirsiniz <https://dot.net/v1/dotnet-install.sh> .</span><span class="sxs-lookup"><span data-stu-id="0ede4-156">You can download the script from <https://dot.net/v1/dotnet-install.sh>.</span></span>
+<span data-ttu-id="57180-155">[DotNet yükleme betikleri](../tools/dotnet-install-script.md) , **SDK** ve **çalışma zamanının** Otomasyon ve yönetici olmayan yüklemeleri için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="57180-155">The [dotnet-install scripts](../tools/dotnet-install-script.md) are used for automation and non-admin installs of the **SDK** and **Runtime**.</span></span> <span data-ttu-id="57180-156">Betiği konumundan indirebilirsiniz <https://dot.net/v1/dotnet-install.sh> .</span><span class="sxs-lookup"><span data-stu-id="57180-156">You can download the script from <https://dot.net/v1/dotnet-install.sh>.</span></span>
 
-<span data-ttu-id="0ede4-157">Komut dosyası, .NET Core 3,1 olan en son SDK [uzun süreli destek (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sürümünü yüklemek için varsayılan olarak kullanılır.</span><span class="sxs-lookup"><span data-stu-id="0ede4-157">The script defaults to installing the latest SDK [long term support (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) version, which is .NET Core 3.1.</span></span> <span data-ttu-id="0ede4-158">(LTS) sürümü olmayan geçerli sürümü yüklemek için `-c Current` parametresini kullanın.</span><span class="sxs-lookup"><span data-stu-id="0ede4-158">To install the current release, which may not be an (LTS) version, use the `-c Current` parameter.</span></span>
+<span data-ttu-id="57180-157">Komut dosyası, .NET Core 3,1 olan en son SDK [uzun süreli destek (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sürümünü yüklemek için varsayılan olarak kullanılır.</span><span class="sxs-lookup"><span data-stu-id="57180-157">The script defaults to installing the latest SDK [long term support (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) version, which is .NET Core 3.1.</span></span> <span data-ttu-id="57180-158">(LTS) sürümü olmayan geçerli sürümü yüklemek için `-c Current` parametresini kullanın.</span><span class="sxs-lookup"><span data-stu-id="57180-158">To install the current release, which may not be an (LTS) version, use the `-c Current` parameter.</span></span>
 
 ```bash
 ./dotnet-install.sh -c Current
 ```
 
-<span data-ttu-id="0ede4-159">SDK yerine .NET Runtime yüklemek için `--runtime` parametresini kullanın.</span><span class="sxs-lookup"><span data-stu-id="0ede4-159">To install .NET Runtime instead of the SDK, use the `--runtime` parameter.</span></span>
+<span data-ttu-id="57180-159">SDK yerine .NET Runtime yüklemek için `--runtime` parametresini kullanın.</span><span class="sxs-lookup"><span data-stu-id="57180-159">To install .NET Runtime instead of the SDK, use the `--runtime` parameter.</span></span>
 
 ```bash
 ./dotnet-install.sh -c Current --runtime aspnetcore
 ```
 
-<span data-ttu-id="0ede4-160">Belirli sürümü göstermek için parametresini değiştirerek belirli bir sürümü yükleyebilirsiniz `-c` .</span><span class="sxs-lookup"><span data-stu-id="0ede4-160">You can install a specific version by altering the `-c` parameter to indicate the specific version.</span></span> <span data-ttu-id="0ede4-161">Aşağıdaki komut .NET SDK 5,0 'yi yüklüyor.</span><span class="sxs-lookup"><span data-stu-id="0ede4-161">The following command installs .NET SDK 5.0.</span></span>
+<span data-ttu-id="57180-160">Belirli sürümü göstermek için parametresini değiştirerek belirli bir sürümü yükleyebilirsiniz `-c` .</span><span class="sxs-lookup"><span data-stu-id="57180-160">You can install a specific version by altering the `-c` parameter to indicate the specific version.</span></span> <span data-ttu-id="57180-161">Aşağıdaki komut .NET SDK 5,0 'yi yüklüyor.</span><span class="sxs-lookup"><span data-stu-id="57180-161">The following command installs .NET SDK 5.0.</span></span>
 
 ```bash
 ./dotnet-install.sh -c 5.0
 ```
 
-<span data-ttu-id="0ede4-162">Daha fazla bilgi için bkz. [DotNet-Install betikler Reference](../tools/dotnet-install-script.md).</span><span class="sxs-lookup"><span data-stu-id="0ede4-162">For more information, see [dotnet-install scripts reference](../tools/dotnet-install-script.md).</span></span>
+<span data-ttu-id="57180-162">Daha fazla bilgi için bkz. [DotNet-Install betikler Reference](../tools/dotnet-install-script.md).</span><span class="sxs-lookup"><span data-stu-id="57180-162">For more information, see [dotnet-install scripts reference](../tools/dotnet-install-script.md).</span></span>
 
-## <a name="manual-install"></a><span data-ttu-id="0ede4-163">El ile yüklemesi</span><span class="sxs-lookup"><span data-stu-id="0ede4-163">Manual install</span></span>
+## <a name="manual-install"></a><span data-ttu-id="57180-163">El ile yüklemesi</span><span class="sxs-lookup"><span data-stu-id="57180-163">Manual install</span></span>
 
 <!-- Note, this content is copied in macos.md. Any fixes should be applied there too, though content may be different -->
 
-<span data-ttu-id="0ede4-164">Paket yöneticilerine alternatif olarak SDK ve çalışma zamanını indirip el ile yükleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="0ede4-164">As an alternative to the package managers, you can download and manually install the SDK and runtime.</span></span> <span data-ttu-id="0ede4-165">El ile yüklemesi, genellikle sürekli tümleştirme testinin parçası olarak veya desteklenmeyen bir Linux dağıtımında kullanılır.</span><span class="sxs-lookup"><span data-stu-id="0ede4-165">Manual install is commonly used as part of continuous integration testing or on an unsupported Linux distribution.</span></span> <span data-ttu-id="0ede4-166">Bir geliştirici veya Kullanıcı için bir paket yöneticisi kullanmak daha iyidir.</span><span class="sxs-lookup"><span data-stu-id="0ede4-166">For a developer or user, it's better to use a package manager.</span></span>
+<span data-ttu-id="57180-164">Paket yöneticilerine alternatif olarak SDK ve çalışma zamanını indirip el ile yükleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="57180-164">As an alternative to the package managers, you can download and manually install the SDK and runtime.</span></span> <span data-ttu-id="57180-165">El ile yüklemesi, genellikle sürekli tümleştirme testinin parçası olarak veya desteklenmeyen bir Linux dağıtımında kullanılır.</span><span class="sxs-lookup"><span data-stu-id="57180-165">Manual install is commonly used as part of continuous integration testing or on an unsupported Linux distribution.</span></span> <span data-ttu-id="57180-166">Bir geliştirici veya Kullanıcı için bir paket yöneticisi kullanmak daha iyidir.</span><span class="sxs-lookup"><span data-stu-id="57180-166">For a developer or user, it's better to use a package manager.</span></span>
 
-<span data-ttu-id="0ede4-167">.NET SDK 'yı yüklerseniz, ilgili çalışma zamanını yüklemeniz gerekmez.</span><span class="sxs-lookup"><span data-stu-id="0ede4-167">If you install .NET SDK, you don't need to install the corresponding runtime.</span></span> <span data-ttu-id="0ede4-168">İlk olarak, aşağıdaki sitelerden birinden SDK veya çalışma zamanı için **ikili** bir sürüm indirin:</span><span class="sxs-lookup"><span data-stu-id="0ede4-168">First, download a **binary** release for either the SDK or the runtime from one of the following sites:</span></span>
+<span data-ttu-id="57180-167">.NET SDK 'yı yüklerseniz, ilgili çalışma zamanını yüklemeniz gerekmez.</span><span class="sxs-lookup"><span data-stu-id="57180-167">If you install .NET SDK, you don't need to install the corresponding runtime.</span></span> <span data-ttu-id="57180-168">İlk olarak, aşağıdaki sitelerden birinden SDK veya çalışma zamanı için **ikili** bir sürüm indirin:</span><span class="sxs-lookup"><span data-stu-id="57180-168">First, download a **binary** release for either the SDK or the runtime from one of the following sites:</span></span>
 
-- <span data-ttu-id="0ede4-169">✔️ [.net 5,0 İndirmeleri](https://dotnet.microsoft.com/download/dotnet/5.0)</span><span class="sxs-lookup"><span data-stu-id="0ede4-169">✔️ [.NET 5.0 downloads](https://dotnet.microsoft.com/download/dotnet/5.0)</span></span>
-- <span data-ttu-id="0ede4-170">✔️ [.NET Core 3,1 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/3.1)</span><span class="sxs-lookup"><span data-stu-id="0ede4-170">✔️ [.NET Core 3.1 downloads](https://dotnet.microsoft.com/download/dotnet-core/3.1)</span></span>
-- <span data-ttu-id="0ede4-171">✔️ [.NET Core 2,1 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/2.1)</span><span class="sxs-lookup"><span data-stu-id="0ede4-171">✔️ [.NET Core 2.1 downloads](https://dotnet.microsoft.com/download/dotnet-core/2.1)</span></span>
-- [<span data-ttu-id="0ede4-172">Tüm .NET Core İndirmeleri</span><span class="sxs-lookup"><span data-stu-id="0ede4-172">All .NET Core downloads</span></span>](https://dotnet.microsoft.com/download/dotnet-core)
+- <span data-ttu-id="57180-169">✔️ [.net 5,0 İndirmeleri](https://dotnet.microsoft.com/download/dotnet/5.0)</span><span class="sxs-lookup"><span data-stu-id="57180-169">✔️ [.NET 5.0 downloads](https://dotnet.microsoft.com/download/dotnet/5.0)</span></span>
+- <span data-ttu-id="57180-170">✔️ [.NET Core 3,1 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/3.1)</span><span class="sxs-lookup"><span data-stu-id="57180-170">✔️ [.NET Core 3.1 downloads](https://dotnet.microsoft.com/download/dotnet-core/3.1)</span></span>
+- <span data-ttu-id="57180-171">✔️ [.NET Core 2,1 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/2.1)</span><span class="sxs-lookup"><span data-stu-id="57180-171">✔️ [.NET Core 2.1 downloads](https://dotnet.microsoft.com/download/dotnet-core/2.1)</span></span>
+- [<span data-ttu-id="57180-172">Tüm .NET Core İndirmeleri</span><span class="sxs-lookup"><span data-stu-id="57180-172">All .NET Core downloads</span></span>](https://dotnet.microsoft.com/download/dotnet-core)
 
-<span data-ttu-id="0ede4-173">Ardından, indirilen dosyayı ayıklayın ve `export` .NET tarafından kullanılan değişkenleri ayarlamak için komutunu kullanın ve ardından .net 'ın yol içinde olduğundan emin olun.</span><span class="sxs-lookup"><span data-stu-id="0ede4-173">Next, extract the downloaded file and use the `export` command to set variables used by .NET and then ensure .NET is in PATH.</span></span>
+<span data-ttu-id="57180-173">Ardından, indirilen dosyayı ayıklayın ve `export` .NET tarafından kullanılan değişkenleri ayarlamak için komutunu kullanın ve ardından .net 'ın yol içinde olduğundan emin olun.</span><span class="sxs-lookup"><span data-stu-id="57180-173">Next, extract the downloaded file and use the `export` command to set variables used by .NET and then ensure .NET is in PATH.</span></span>
 
-<span data-ttu-id="0ede4-174">Çalışma zamanını ayıklamak ve .NET CLı komutlarını terminalde kullanılabilir hale getirmek için önce bir .NET ikili sürümü indirin.</span><span class="sxs-lookup"><span data-stu-id="0ede4-174">To extract the runtime and make the .NET CLI commands available at the terminal, first download a .NET binary release.</span></span> <span data-ttu-id="0ede4-175">Ardından, bir Terminal açın ve dosyanın kaydedildiği dizinden aşağıdaki komutları çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="0ede4-175">Then, open a terminal and run the following commands from the directory where the file was saved.</span></span> <span data-ttu-id="0ede4-176">Arşiv dosyası adı, indirdiklerinize bağlı olarak farklı olabilir.</span><span class="sxs-lookup"><span data-stu-id="0ede4-176">The archive file name may be different depending on what you downloaded.</span></span>
+<span data-ttu-id="57180-174">Çalışma zamanını ayıklamak ve .NET CLı komutlarını terminalde kullanılabilir hale getirmek için önce bir .NET ikili sürümü indirin.</span><span class="sxs-lookup"><span data-stu-id="57180-174">To extract the runtime and make the .NET CLI commands available at the terminal, first download a .NET binary release.</span></span> <span data-ttu-id="57180-175">Ardından, bir Terminal açın ve dosyanın kaydedildiği dizinden aşağıdaki komutları çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="57180-175">Then, open a terminal and run the following commands from the directory where the file was saved.</span></span> <span data-ttu-id="57180-176">Arşiv dosyası adı, indirdiklerinize bağlı olarak farklı olabilir.</span><span class="sxs-lookup"><span data-stu-id="57180-176">The archive file name may be different depending on what you downloaded.</span></span>
 
-<span data-ttu-id="0ede4-177">**Çalışma zamanını ayıklamak için aşağıdaki komutu kullanın**:</span><span class="sxs-lookup"><span data-stu-id="0ede4-177">**Use the following command to extract the runtime**:</span></span>
-
-```bash
-mkdir -p "$HOME/dotnet" && tar zxf aspnetcore-runtime-5.0.0-linux-x64.tar.gz -C "$HOME/dotnet"
-export DOTNET_ROOT=$HOME/dotnet
-export PATH=$PATH:$HOME/dotnet
-```
-
-<span data-ttu-id="0ede4-178">**SDK 'yı ayıklamak için aşağıdaki komutu kullanın**:</span><span class="sxs-lookup"><span data-stu-id="0ede4-178">**Use the following command to extract the SDK**:</span></span>
+<span data-ttu-id="57180-177">**İndirdiğiniz çalışma zamanını veya SDK 'Yı ayıklamak için aşağıdaki komutları kullanın.**</span><span class="sxs-lookup"><span data-stu-id="57180-177">**Use the following commands to extract the runtime or SDK that you downloaded.**</span></span> <span data-ttu-id="57180-178">`DOTNET_FILE`Değeri dosya adınızla değiştirmeyi unutmayın:</span><span class="sxs-lookup"><span data-stu-id="57180-178">Remember to change the `DOTNET_FILE` value to your file name:</span></span>
 
 ```bash
-mkdir -p "$HOME/dotnet" && tar zxf dotnet-sdk-5.0.100-linux-x64.tar.gz -C "$HOME/dotnet"
+DOTNET_FILE=dotnet-sdk-5.0.102-linux-x64.tar.gz
 export DOTNET_ROOT=$HOME/dotnet
-export PATH=$PATH:$HOME/dotnet
+
+mkdir -p "$DOTNET_ROOT" && tar zxf "$DOTNET_FILE" -C "$DOTNET_ROOT"
+
+export PATH=$PATH:$DOTNET_ROOT
 ```
 
 > [!TIP]
-> <span data-ttu-id="0ede4-179">Yukarıdaki `export` Komutlar yalnızca .net CLI komutlarını çalıştırıldığı terminal oturumu için kullanılabilir hale getirir.</span><span class="sxs-lookup"><span data-stu-id="0ede4-179">The preceding `export` commands only make the .NET CLI commands available for the terminal session in which it was run.</span></span>
+> <span data-ttu-id="57180-179">Yukarıdaki `export` Komutlar yalnızca .net CLI komutlarını çalıştırıldığı terminal oturumu için kullanılabilir hale getirir.</span><span class="sxs-lookup"><span data-stu-id="57180-179">The preceding `export` commands only make the .NET CLI commands available for the terminal session in which it was run.</span></span>
 >
-> <span data-ttu-id="0ede4-180">Komutları kalıcı olarak eklemek için kabuk profilinizi düzenleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="0ede4-180">You can edit your shell profile to permanently add the commands.</span></span> <span data-ttu-id="0ede4-181">Linux için kullanılabilen birçok farklı kabuk vardır ve her birinin farklı bir profili vardır.</span><span class="sxs-lookup"><span data-stu-id="0ede4-181">There are a number of different shells available for Linux and each has a different profile.</span></span> <span data-ttu-id="0ede4-182">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="0ede4-182">For example:</span></span>
+> <span data-ttu-id="57180-180">Komutları kalıcı olarak eklemek için kabuk profilinizi düzenleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="57180-180">You can edit your shell profile to permanently add the commands.</span></span> <span data-ttu-id="57180-181">Linux için kullanılabilen birçok farklı kabuk vardır ve her birinin farklı bir profili vardır.</span><span class="sxs-lookup"><span data-stu-id="57180-181">There are a number of different shells available for Linux and each has a different profile.</span></span> <span data-ttu-id="57180-182">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="57180-182">For example:</span></span>
 >
-> - <span data-ttu-id="0ede4-183">**Bash kabuğu**: *~/.bash_profile*, *~/,bashrc*</span><span class="sxs-lookup"><span data-stu-id="0ede4-183">**Bash Shell**: *~/.bash_profile*, *~/.bashrc*</span></span>
-> - <span data-ttu-id="0ede4-184">**Korn kabuğu**: *~/,KSHRC* veya *. Profile*</span><span class="sxs-lookup"><span data-stu-id="0ede4-184">**Korn Shell**: *~/.kshrc* or *.profile*</span></span>
-> - <span data-ttu-id="0ede4-185">**Z kabuğu**: *~/,zshrc* veya *. zprofile*</span><span class="sxs-lookup"><span data-stu-id="0ede4-185">**Z Shell**: *~/.zshrc* or *.zprofile*</span></span>
+> - <span data-ttu-id="57180-183">**Bash kabuğu**: *~/.bash_profile*, *~/,bashrc*</span><span class="sxs-lookup"><span data-stu-id="57180-183">**Bash Shell**: *~/.bash_profile*, *~/.bashrc*</span></span>
+> - <span data-ttu-id="57180-184">**Korn kabuğu**: *~/,KSHRC* veya *. Profile*</span><span class="sxs-lookup"><span data-stu-id="57180-184">**Korn Shell**: *~/.kshrc* or *.profile*</span></span>
+> - <span data-ttu-id="57180-185">**Z kabuğu**: *~/,zshrc* veya *. zprofile*</span><span class="sxs-lookup"><span data-stu-id="57180-185">**Z Shell**: *~/.zshrc* or *.zprofile*</span></span>
 >
-> <span data-ttu-id="0ede4-186">Kabuğunuz için uygun kaynak dosyayı düzenleyin ve `:$HOME/dotnet` var olan deyimin sonuna ekleyin `PATH` .</span><span class="sxs-lookup"><span data-stu-id="0ede4-186">Edit the appropriate source file for your shell and add `:$HOME/dotnet` to the end of the existing `PATH` statement.</span></span> <span data-ttu-id="0ede4-187">Hiçbir `PATH` ifade dahil yoksa, ile yeni bir satır ekleyin `export PATH=$PATH:$HOME/dotnet` .</span><span class="sxs-lookup"><span data-stu-id="0ede4-187">If no `PATH` statement is included, add a new line with `export PATH=$PATH:$HOME/dotnet`.</span></span>
+> <span data-ttu-id="57180-186">Kabuğunuz için uygun kaynak dosyayı düzenleyin ve `:$HOME/dotnet` var olan deyimin sonuna ekleyin `PATH` .</span><span class="sxs-lookup"><span data-stu-id="57180-186">Edit the appropriate source file for your shell and add `:$HOME/dotnet` to the end of the existing `PATH` statement.</span></span> <span data-ttu-id="57180-187">Hiçbir `PATH` ifade dahil yoksa, ile yeni bir satır ekleyin `export PATH=$PATH:$HOME/dotnet` .</span><span class="sxs-lookup"><span data-stu-id="57180-187">If no `PATH` statement is included, add a new line with `export PATH=$PATH:$HOME/dotnet`.</span></span>
 >
-> <span data-ttu-id="0ede4-188">Ayrıca, `export DOTNET_ROOT=$HOME/dotnet` dosyanın sonuna ekleyin.</span><span class="sxs-lookup"><span data-stu-id="0ede4-188">Also, add `export DOTNET_ROOT=$HOME/dotnet` to the end of the file.</span></span>
+> <span data-ttu-id="57180-188">Ayrıca, `export DOTNET_ROOT=$HOME/dotnet` dosyanın sonuna ekleyin.</span><span class="sxs-lookup"><span data-stu-id="57180-188">Also, add `export DOTNET_ROOT=$HOME/dotnet` to the end of the file.</span></span>
 
-<span data-ttu-id="0ede4-189">Bu yaklaşım ayrı konumlara farklı sürümler yüklemenize ve hangi uygulamayı kullanmak üzere açık bir şekilde tercih etmenize olanak tanır.</span><span class="sxs-lookup"><span data-stu-id="0ede4-189">This approach lets you install different versions into separate locations and choose explicitly which one to use by which application.</span></span>
+<span data-ttu-id="57180-189">Bu yaklaşım ayrı konumlara farklı sürümler yüklemenize ve hangi uygulamayı kullanmak üzere açık bir şekilde tercih etmenize olanak tanır.</span><span class="sxs-lookup"><span data-stu-id="57180-189">This approach lets you install different versions into separate locations and choose explicitly which one to use by which application.</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="0ede4-190">Sonraki adımlar</span><span class="sxs-lookup"><span data-stu-id="0ede4-190">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="57180-190">Sonraki adımlar</span><span class="sxs-lookup"><span data-stu-id="57180-190">Next steps</span></span>
 
-- [<span data-ttu-id="0ede4-191">.NET CLı için sekme tamamlamayı etkinleştirme</span><span class="sxs-lookup"><span data-stu-id="0ede4-191">How to enable TAB completion for the .NET CLI</span></span>](../tools/enable-tab-autocomplete.md)
-- [<span data-ttu-id="0ede4-192">Öğretici: Visual Studio Code kullanarak .NET SDK ile bir konsol uygulaması oluşturma</span><span class="sxs-lookup"><span data-stu-id="0ede4-192">Tutorial: Create a console application with .NET SDK using Visual Studio Code</span></span>](../tutorials/with-visual-studio-code.md)
+- [<span data-ttu-id="57180-191">.NET CLı için sekme tamamlamayı etkinleştirme</span><span class="sxs-lookup"><span data-stu-id="57180-191">How to enable TAB completion for the .NET CLI</span></span>](../tools/enable-tab-autocomplete.md)
+- [<span data-ttu-id="57180-192">Öğretici: Visual Studio Code kullanarak .NET SDK ile bir konsol uygulaması oluşturma</span><span class="sxs-lookup"><span data-stu-id="57180-192">Tutorial: Create a console application with .NET SDK using Visual Studio Code</span></span>](../tutorials/with-visual-studio-code.md)
