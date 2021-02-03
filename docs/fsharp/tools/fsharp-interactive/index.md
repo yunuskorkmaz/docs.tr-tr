@@ -4,12 +4,12 @@ description: 'F # kodunu konsolda etkileşimli olarak çalıştırmak veya F # b
 ms.date: 11/29/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: fe8ee2ebb97f4a47e80f39d5be8d95ba5b72ddc7
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: fe48d4d7de92eea800a489b12342e3ae181e8cb1
+ms.sourcegitcommit: 38999dc0ec4f7c4404de5ce0951b64c55997d9ab
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739320"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99426989"
 ---
 # <a name="interactive-programming-with-f"></a>F ile etkileşimli programlama\#
 
@@ -91,7 +91,7 @@ F # Scripting, [Visual Studio](../../get-started/get-started-visual-studio.md), 
 ## <a name="referencing-packages-in-f-interactive"></a>F# Etkileşimli gelen paketlere başvurma
 
 > [!NOTE]
-> Paket yönetimi sistemi genişletilebilir, [diğer uzantılar hakkında](https://github.com/dotnet/fsharp/tree/main/src/fsharp/Microsoft.DotNet.DependencyManager)daha fazla bilgi edinin.
+> Paket yönetimi sistemi genişletilebilir, [diğer uzantılar hakkında](https://fsharp.github.io/FSharp.Compiler.Service/reference/Microsoft.DotNet.DependencyManager.html)daha fazla bilgi edinin.
 
 F# Etkileşimli, `#r "nuget:"` söz dizimi ve isteğe bağlı bir sürümle NuGet paketlerine başvurmayı destekler:
 
@@ -126,7 +126,7 @@ printfn $"{f (dsharp.tensor 1.2)}"
 Ayrıca, komutuyla bir paket kaynağı belirtebilirsiniz `#i` . Aşağıdaki örnek, uzak ve yerel bir kaynağı belirtir:
 
 ```fsharp
-#i "nuget:https://my-remote-package-source/index.json
+#i "nuget:https://my-remote-package-source/index.json"
 #i @"path-to-my-local-source"
 ```
 
@@ -168,7 +168,7 @@ Bir komut dosyasında istediğiniz sayıda derleme başvurusu belirtebilirsiniz.
 
 ## <a name="loading-other-scripts"></a>Diğer betikleri yükleme
 
-Komut dosyası oluştururken, farklı görevler için farklı betikler kullanılması genellikle faydalı olabilir. Bazen koddaki kodu başka bir kodla yeniden kullanmak isteyebilirsiniz. İçeriğini dosyanıza kopyalamak-yapıştırmak yerine, ile basit yükleme ve değerlendirme yapabilirsiniz `#load` .
+Komut dosyası oluştururken, farklı görevler için farklı betikler kullanılması genellikle faydalı olabilir. Bazen bir komut dosyasındaki kodu başka bir betikten yeniden kullanmak isteyebilirsiniz. İçeriğini dosyanıza kopyalamak-yapıştırmak yerine yalnızca ile yüklemeniz ve değerlendirmek için kullanabilirsiniz `#load` .
 
 Aşağıdakileri göz önünde bulundurun `Script1.fsx` :
 
@@ -240,7 +240,7 @@ F# Etkileşimli dosya veya yolları belirttiğinizde, bir dize sabit değeri bek
 
 ## <a name="interactive-and-compiled-preprocessor-directives"></a>Etkileşimli ve derlenmiş Önişlemci yönergeleri
 
-Etkileşimli olarak çalıştırdığınız veya bir betiği çalıştırdığınıza bakılmaksızın F# Etkileşimli kod derlerken **etkileşimli** sembol tanımlanmıştır. Derleyicide kod derlerken, **derlenen** sembol tanımlanmıştır. Bu nedenle, kodun derlenmiş ve etkileşimli modlarda farklı olması gerekiyorsa, bu ön işlemci yönergelerini koşullu derleme için kullanabilirsiniz. Örnek:
+Etkileşimli olarak çalıştırdığınız veya bir betiği çalıştırdığınıza bakılmaksızın F# Etkileşimli kod derlerken **etkileşimli** sembol tanımlanmıştır. Derleyicide kod derlerken, **derlenen** sembol tanımlanmıştır. Bu nedenle, kodun derlenmiş ve etkileşimli modlarda farklı olması gerekiyorsa, bu ön işlemci yönergelerini koşullu derleme için kullanabilirsiniz. Örneğin:
 
 ```fsharp
 #if INTERACTIVE
