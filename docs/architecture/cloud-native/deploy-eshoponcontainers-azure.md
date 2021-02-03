@@ -1,23 +1,23 @@
 ---
 title: eShopOnContainers'ı Azure'a dağıtma
 description: Azure Kubernetes hizmeti, helk ve DevSpaces kullanarak eShopOnContainers uygulamasını dağıtma.
-ms.date: 05/13/2020
-ms.openlocfilehash: b3871dae2b414709bfe24b6f7bdbf06de1689d12
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/19/2021
+ms.openlocfilehash: 8fc1343eac7f03c984c3a279d5a8c7908e37f0d1
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91160729"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505797"
 ---
 # <a name="deploying-eshoponcontainers-to-azure"></a>eShopOnContainers'ı Azure'a dağıtma
 
-EShopOnContainers uygulaması, çeşitli Azure platformlarına dağıtılabilir. Önerilen yaklaşım, uygulamayı Azure Kubernetes hizmetlerine (AKS) dağıtmaktır. Bir Kubernetes dağıtım aracı olan helk, dağıtım karmaşıklığını azaltmak için kullanılabilir. İsteğe bağlı olarak, geliştiriciler geliştirme sürecini kolaylaştırmak için Kubernetes için Azure Dev Spaces uygulayabilir.
+EShopOnContainers uygulaması çeşitli Azure platformlarına dağıtılabilir. Önerilen yaklaşım, uygulamayı Azure Kubernetes hizmetlerine (AKS) dağıtmaktır. Bir Kubernetes dağıtım aracı olan helk, dağıtım karmaşıklığını azaltmak için kullanılabilir. İsteğe bağlı olarak, geliştiriciler geliştirme sürecini kolaylaştırmak için Kubernetes için Azure Dev Spaces uygulayabilir.
 
 ## <a name="azure-kubernetes-service"></a>Azure Kubernetes Service
 
-AKS 'de eShop barındırmak için ilk adım bir AKS kümesi oluşturmaktır. Bunu yapmak için, gerekli adımlarda size yol gösterecek Azure portal kullanabilirsiniz. Ayrıca, rol tabanlı Access Control (RBAC) ve uygulama yönlendirmeyi etkinleştirmek için Azure CLı 'dan bir küme oluşturabilirsiniz. EShopOnContainers ' belgeleri kendi AKS kümenizi oluşturmak için gereken adımları ayrıntılı olarak oluşturur. Oluşturulduktan sonra, Kubernetes panosundan kümeye erişip yönetebilirsiniz.
+AKS 'de eShop barındırmak için ilk adım bir AKS kümesi oluşturmaktır. Bunu yapmak için, gerekli adımlarda size yol gösterecek Azure portal kullanabilirsiniz. Ayrıca, Azure CLı 'dan bir küme oluşturarak Role-Based Access Control (RBAC) ve uygulama yönlendirmeyi etkinleştirin. EShopOnContainers ' belgeleri kendi AKS kümenizi oluşturmak için gereken adımları ayrıntılı olarak oluşturur. Oluşturulduktan sonra, Kubernetes panosundan kümeye erişip yönetebilirsiniz.
 
-Artık eShop uygulamasını, Held ve Tiller kullanan kümeye dağıtabilirsiniz.
+Artık eShop uygulamasını, Held kullanarak kümeye dağıtabilirsiniz.
 
 ## <a name="deploying-to-azure-kubernetes-service-using-helm"></a>Held kullanarak Azure Kubernetes hizmetine dağıtma
 

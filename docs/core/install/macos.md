@@ -4,12 +4,12 @@ description: .NET yükleyebileceğiniz macOS sürümleri hakkında bilgi edinin.
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: b1434938a8e8e81da81e495a6b99e6c99467aae1
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 871263b820aaf4cc04e573dd4aa3022caa401857
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009364"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506311"
 ---
 # <a name="install-net-on-macos"></a>MacOS 'ta .NET 'i yükler
 
@@ -53,13 +53,13 @@ Aşağıdaki .NET sürümleri ❌ artık desteklenmemektedir. Bunlara yönelik �
 
 Çalışma zamanı .NET ile oluşturulan uygulamaları çalıştırmak için kullanılır. Uygulama yazarı bir uygulama yayımladığında, çalışma zamanını uygulamayla birlikte dahil edebilirler. Çalışma zamanını içermiyorsa, bu kullanıcı çalışma zamanını yüklemek için kullanıcıya ait olur.
 
-MacOS 'ta yükleyebileceğiniz üç farklı çalışma zamanı vardır:
+MacOS 'ta yükleyebileceğiniz iki farklı çalışma zamanı vardır:
 
-*ASP.NET Core çalışma zamanı*\
-ASP.NET Core uygulamalar çalıştırır. .NET çalışma zamanı içerir.
+- *ASP.NET Core çalışma zamanı*\
+  ASP.NET Core uygulamalar çalıştırır. .NET çalışma zamanı içerir.
 
-*.NET çalışma zamanı*\
-Bu çalışma zamanı, en basit çalışma zamanı ve başka bir çalışma zamanı içermez. .NET uygulamalarıyla en iyi uyumluluk için *ASP.NET Core çalışma zamanı* yüklemenizi kesinlikle öneririz.
+- *.NET çalışma zamanı*\
+  Bu çalışma zamanı, en basit çalışma zamanı ve başka bir çalışma zamanı içermez. .NET uygulamalarıyla en iyi uyumluluk için *ASP.NET Core çalışma zamanı* yüklemenizi kesinlikle öneririz.
 
 > [!div class="button"]
 > [.NET çalışma zamanını indirin](https://dotnet.microsoft.com/download/dotnet-core)
@@ -75,12 +75,12 @@ SDK, .NET uygulamaları ve kitaplıkları derlemek ve yayımlamak için kullanı
 > [!NOTE]
 > Bir `+` sembol en düşük sürümü temsil eder.
 
-| .NET Core sürümü | macOS                 | Mimariler | Daha fazla bilgi    |
+| .NET Core sürümü | Mac OS                 | Mimariler | Daha fazla bilgi    |
 | ----------------- | --------------------- | --------------| --- |
 | 5.0               | High Sierra (10.13 +)  | x64 | [Daha fazla bilgi](https://github.com/dotnet/core/blob/master/release-notes/5.0/5.0-supported-os.md) |
 | 3,1               | High Sierra (10.13 +)  | x64 | [Daha fazla bilgi](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md) |
-| 3,0               | High Sierra (10.13 +)  | x64 | [Daha fazla bilgi](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) |
-| 2.2               | Sierra (10.12 +)       | x64 | [Daha fazla bilgi](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) |
+| 3.0               | High Sierra (10.13 +)  | x64 | [Daha fazla bilgi](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) |
+| 2,2               | Sierra (10.12 +)       | x64 | [Daha fazla bilgi](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) |
 | 2.1               | Sierra (10.12 +)       | x64 | [Daha fazla bilgi](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) |
 
 MacOS Catalina (sürüm 10,15) ile başlayarak, geliştirici KIMLIĞIYLE dağıtılan 1 Haziran 2019 ' den sonra oluşturulan tüm yazılımlar, dikkat edilmiş olmalıdır. Bu gereksinim .NET çalışma zamanı, .NET SDK ve .NET ile oluşturulan yazılımlar için geçerlidir.
@@ -125,20 +125,15 @@ Ardından, indirilen dosyayı ayıklayın ve `export` .NET tarafından kullanıl
 
 Çalışma zamanını ayıklamak ve .NET CLı komutlarını terminalde kullanılabilir hale getirmek için önce bir .NET ikili sürümü indirin. Ardından, bir Terminal açın ve dosyanın kaydedildiği dizinden aşağıdaki komutları çalıştırın. Arşiv dosyası adı, indirdiklerinize bağlı olarak farklı olabilir.
 
-**Çalışma zamanını ayıklamak için aşağıdaki komutu kullanın**:
+**İndirdiğiniz çalışma zamanını veya SDK 'Yı ayıklamak için aşağıdaki komutları kullanın.** `DOTNET_FILE`Değeri dosya adınızla değiştirmeyi unutmayın:
 
 ```bash
-mkdir -p "$HOME/dotnet" && tar zxf aspnetcore-runtime-5.0.0-osx-x64.tar.gz -C "$HOME/dotnet"
+DOTNET_FILE=dotnet-sdk-5.0.102-linux-x64.tar.gz
 export DOTNET_ROOT=$HOME/dotnet
-export PATH=$PATH:$HOME/dotnet
-```
 
-**SDK 'yı ayıklamak için aşağıdaki komutu kullanın**:
+mkdir -p "$DOTNET_ROOT" && tar zxf "$DOTNET_FILE" -C "$DOTNET_ROOT"
 
-```bash
-mkdir -p "$HOME/dotnet" && tar zxf dotnet-sdk-5.0.100-osx-x64.tar.gz -C "$HOME/dotnet"
-export DOTNET_ROOT=$HOME/dotnet
-export PATH=$PATH:$HOME/dotnet
+export PATH=$PATH:$DOTNET_ROOT
 ```
 
 > [!TIP]

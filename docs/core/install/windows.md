@@ -4,12 +4,12 @@ description: Hangi Windows sürümlerini .NET yükleyebileceğinizi öğrenin.
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 33492cc6fa6c64ec3a1d745a4fa0c6cc418f87bd
-ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
+ms.openlocfilehash: 55746b29b579a6d3aacb7d11c5604dc601440ab5
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98898794"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506298"
 ---
 # <a name="install-net-on-windows"></a>Windows 'a .NET yükler
 
@@ -37,26 +37,24 @@ Windows 10 sürümleri hizmet son tarihleri sürüme göre bölündü. Aşağıd
 
 | Operating System            | .NET Core 2.1 | .NET Core 3.1 | .NET 5 |
 |-----------------------------|---------------|---------------|--------|
-| Windows 10, sürüm 20H2    | ✔️           | ✔️            | ✔️    |
-| Windows 10, sürüm 2004    | ✔️           | ✔️            | ✔️    |
-| Windows 10, sürüm 1909    | ✔️           | ✔️            | ✔️    |
-| Windows 10, sürüm 1903    | ✔️           | ✔️            | ✔️    |
+| Windows 10/Windows Server, sürüm 20H2    | ✔️           | ✔️            | ✔️    |
+| Windows 10/Windows Server, sürüm 2004    | ✔️           | ✔️            | ✔️    |
+| Windows 10/Windows Server, sürüm 1909    | ✔️           | ✔️            | ✔️    |
+| Windows 10/Windows Server, sürüm 1903    | ✔️           | ✔️            | ✔️    |
 | Windows 10, sürüm 1809    | ✔️           | ✔️            | ✔️    |
 | Windows 10, sürüm 1803    | ✔️           | ✔️            | ✔️    |
 | Windows 10, sürüm 1709    | ✔️           | ✔️            | ✔️    |
 | Windows 10, sürüm 1607    | ✔️           | ✔️            | ✔️    |
 | Windows 8.1                 | ✔️           | ✔️            | ✔️    |
 | Windows 7 SP1 [ESU][esu]    | ✔️           | ✔️            | ✔️    |
-| Windows 10, sürüm 1607    | ✔️           | ✔️            | ✔️    |
-| Windows 10, sürüm 1607    | ✔️           | ✔️            | ✔️    |
-| Windows Server 2012 R2      | ✔️           | ✔️            | ✔️    |
+| Windows Server 2019<br>Windows Server 2016<br>Windows Server 2012 R2<br>      | ✔️           | ✔️            | ✔️    |
 | Windows Server Core 2012 R2 | ✔️           | ✔️            | ✔️    |
 | Nano sunucu, sürüm 1809 +  | ✔️           | ✔️            | ✔️    |
 | Nano sunucu, sürüm 1803   | ✔️           | ✔️            | ❌    |
 
 ## <a name="unsupported-releases"></a>Desteklenmeyen yayınlar
 
-Aşağıdaki .NET sürümleri ❌ artık desteklenmemektedir. Bu sürümlere yönelik İndirilenler hala yayımlandı olarak kalmaya devam eder:
+Aşağıdaki .NET sürümleri ❌ artık desteklenmemektedir:
 
 - 3.0
 - 2,2
@@ -68,14 +66,14 @@ Aşağıdaki .NET sürümleri ❌ artık desteklenmemektedir. Bu sürümlere yö
 
 Windows 'a yükleyebileceğiniz üç farklı çalışma zamanı vardır:
 
-*ASP.NET Core çalışma zamanı*\
-ASP.NET Core uygulamalar çalıştırır. .NET çalışma zamanı içerir.
+- *ASP.NET Core çalışma zamanı*\
+  ASP.NET Core uygulamalar çalıştırır. .NET çalışma zamanı içerir.
 
-*Masaüstü çalışma zamanı*\
-.NET WPF ve Windows için masaüstü uygulamaları Windows Forms çalıştırır. .NET çalışma zamanı içerir.
+- *Masaüstü çalışma zamanı*\
+  .NET WPF ve Windows için masaüstü uygulamaları Windows Forms çalıştırır. .NET çalışma zamanı içerir.
 
-*.NET çalışma zamanı*\
-Bu çalışma zamanı, en basit çalışma zamanı ve başka bir çalışma zamanı içermez. .NET uygulamalarıyla en iyi uyumluluk için hem *ASP.NET Core çalışma zamanını* hem de *Masaüstü çalışma zamanını* yüklemenizi öneririz.
+- *.NET çalışma zamanı*\
+  Bu çalışma zamanı, en basit çalışma zamanı ve başka bir çalışma zamanı içermez. .NET uygulamalarıyla en iyi uyumluluk için hem *ASP.NET Core çalışma zamanını* hem de *Masaüstü çalışma zamanını* yüklemenizi öneririz.
 
 > [!div class="button"]
 > [.NET çalışma zamanını indirin](https://dotnet.microsoft.com/download/dotnet-core)

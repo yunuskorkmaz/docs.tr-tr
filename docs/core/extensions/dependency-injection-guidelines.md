@@ -5,12 +5,12 @@ author: IEvangelist
 ms.author: dapine
 ms.date: 10/29/2020
 ms.topic: guide
-ms.openlocfilehash: 6b12d0d607dc0aed8f281943cecf3afa69b0575a
-ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
+ms.openlocfilehash: 105536df873829dc79dcca1b86d080360e71303f
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97899442"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505406"
 ---
 # <a name="dependency-injection-guidelines"></a>Bağımlılık ekleme yönergeleri
 
@@ -176,7 +176,7 @@ Bu makaledeki yönergelere ek olarak, *kaçınması **gereken*** birkaç kenar d
 
 ### <a name="disposable-transient-services-captured-by-container"></a>Atılabilir kapsayıcı tarafından yakalanan geçici hizmetler
 
-Uygulayan *geçici* Hizmetleri kaydettiğinizde <xref:System.IDisposable> , varsayılan olarak dı kapsayıcısı bu başvurulara sahip olur ve uygulama durduruluncaya kadar bu referanslara göre değil <xref:System.IDisposable.Dispose> . Bu, düzey kapsayıcısından çözümlenirse bir bellek sızıntısını açabilir.
+' I uygulayan *geçici* Hizmetleri kaydettiğinizde, <xref:System.IDisposable> Varsayılan olarak dı kapsayıcısı bu referanslara sahip olur ve uygulama, kapsayıcıdan çözümlenmişse <xref:System.IDisposable.Dispose> veya kapsam bir kapsamdan çözümlendiklerinde atılana kadar bu başvuruları bırakır. Bu, kapsayıcı düzeyinden çözümlenirse bir bellek sızıntısını açabilir.
 
 :::code language="csharp" source="snippets/configuration/di-anti-patterns/Program.cs" range="18-30":::
 

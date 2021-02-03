@@ -2,13 +2,13 @@
 title: Hizmetten hizmete iletişim
 description: Arka uç bulutu yerel mikro hizmetlerinin diğer arka uç mikro hizmetleriyle nasıl iletişim kuracağını öğrenin.
 author: robvet
-ms.date: 05/13/2020
-ms.openlocfilehash: 9761b99cd9ad076eb82a23a00ec3099e8913168b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/19/2021
+ms.openlocfilehash: 63c80b38e2fa42dccebefc772c969266fa9d79ca
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166085"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506272"
 ---
 # <a name="service-to-service-communication"></a>Hizmetten hizmete iletişim
 
@@ -30,7 +30,7 @@ Mikro hizmet sistemleri, genellikle çapraz hizmet etkileşimi gerektiren işlem
 
 ## <a name="queries"></a>Sorgular
 
-Birçok kez, bir mikro hizmetin bir işlemi tamamlamaya yönelik acil bir yanıt gerektiren başka bir şekilde *sorgu* yapması gerekebilir. Bir alışveriş sepeti mikro hizmeti, ürün bilgileri ve sepetine bir öğe eklemek için bir fiyat gerekebilir. Sorgu işlemlerini uygulamak için birkaç yaklaşım vardır.
+Birçok kez, bir mikro hizmetin bir işlemi tamamlamaya yönelik acil bir yanıt gerektiren başka bir şekilde *sorgu* yapması gerekebilir. Bir alışveriş sepeti mikro hizmeti, ürün bilgileri ve sepetine bir öğe eklemek için bir fiyat gerekebilir. Sorgu işlemlerini uygulamak için birçok yaklaşım vardır.
 
 ### <a name="requestresponse-messaging"></a>İstek/yanıt Iletisi
 
@@ -88,7 +88,7 @@ Başka bir iletişim etkileşimi türü bir *komuttur*. Bir mikro hizmetin bir e
 
 İleti kuyruğu, bir üreticinin ve tüketicinin ileti iletgeçen bir ara yapısıdır. Kuyruklar, zaman uyumsuz, noktadan noktaya mesajlaşma düzenlerini uygular. Üretici bir komutun doğru bir şekilde gönderilmesi ve yönlendirilmesi gereken yerleri bilir. Sıra, bir iletinin, kanaldan okuyan tüketici örneklerinden tam olarak bir ileti ile işlenmesini güvence altına alır. Bu senaryoda, üretici veya tüketici hizmeti diğerini etkilemeden ölçeği değiştirebilir. Ayrıca, teknolojiler her bir tarafta farklı olabilir, yani bir [Golang](https://golang.org) mikro hizmeti çağıran bir Java mikro hizmeti olabilir.
 
-Bölüm 1 ' de, *yedekleme hizmetleri*hakkında konuşuyoruz. Yedekleme Hizmetleri, bulutta yerel sistemlerin bağımlı olduğu yardımcı kaynaklardır. İleti kuyrukları Hizmetleri yedekliyor. Azure bulutu, bulutta yerel sistemlerinizin komut iletilerini uygulamak için tüketebileceği iki tür ileti kuyruğu destekler: Azure depolama kuyrukları ve Azure Service Bus kuyrukları.
+Bölüm 1 ' de, *yedekleme hizmetleri* hakkında konuşuyoruz. Yedekleme Hizmetleri, bulutta yerel sistemlerin bağımlı olduğu yardımcı kaynaklardır. İleti kuyrukları Hizmetleri yedekliyor. Azure bulutu, bulutta yerel sistemlerinizin komut iletilerini uygulamak için tüketebileceği iki tür ileti kuyruğu destekler: Azure depolama kuyrukları ve Azure Service Bus kuyrukları.
 
 ### <a name="azure-storage-queues"></a>Azure Depolama Kuyrukları
 
@@ -122,7 +122,7 @@ Azure depolama kuyrukları, bulutta yerel uygulamalarınızda komut mesajlaşmas
 
 Daha karmaşık mesajlaşma gereksinimleri için Azure Service Bus kuyrukları göz önünde bulundurun.
 
-Güvenilir bir ileti altyapısı [Azure Service Bus](/azure/service-bus-messaging/service-bus-messaging-overview) , *aracılı bir mesajlaşma modelini*destekler. İletiler, tüketici tarafından alınana kadar güvenilir bir şekilde bir aracıda (kuyruk) depolanır. Kuyruk, iletilerin kuyruğa eklenme sırasını önceden belirleyen Ilk/Ilk çıkar (FıFO) ileti teslimini garanti eder.
+Güvenilir bir ileti altyapısı [Azure Service Bus](/azure/service-bus-messaging/service-bus-messaging-overview) , *aracılı bir mesajlaşma modelini* destekler. İletiler, tüketici tarafından alınana kadar güvenilir bir şekilde bir aracıda (kuyruk) depolanır. Kuyruk, iletilerin kuyruğa eklenme sırasını önceden belirleyen Ilk/Ilk çıkar (FıFO) ileti teslimini garanti eder.
 
 Bir iletinin boyutu, 256 KB 'a kadar çok daha büyük olabilir. İletiler kuyrukta sınırsız bir süre için kalıcıdır. Service Bus yalnızca HTTP tabanlı çağrıların değil, ayrıca [AMQP Protokolü](/azure/service-bus-messaging/service-bus-amqp-overview)için tam destek sağlar. AMQP, bir ikili Protokolü ve daha yüksek düzeyde güvenilirliği destekleyen satıcılar genelinde açık bir standarttır.
 
@@ -142,7 +142,7 @@ Ancak bazı önemli uyarılar vardır: Service Bus kuyruk boyutu 80 GB ile sın�
 
 Önceki şekilde, noktadan noktaya ilişkisini aklınızda yapın. Aynı sağlayıcının iki örneği iletileri tek bir Service Bus kuyruğuna sıraya ayırır. Her ileti, sağdaki üç tüketici örneğinin yalnızca biri tarafından kullanılır. Daha sonra, farklı tüketicilerin aynı iletiyle ilgilendiği mesajlaşmayı nasıl uygulayabileceğinizi anladık.
 
-## <a name="events"></a>Olaylar
+## <a name="events"></a>Ekinlikler
 
 Message Queuing, bir üreticinin zaman uyumsuz olarak bir tüketici ileti gönderebildiği iletişim uygulamak için etkili bir yoldur. Ancak, aynı iletiyle *birçok farklı tüketici* ilgilendiğinde ne olur? Her tüketiciye yönelik adanmış bir ileti kuyruğu iyi ölçeklendirilmez ve yönetimi zor hale gelir.
 
@@ -152,13 +152,13 @@ Olay iki adımlı bir işlemdir. Bir mikro hizmet, belirli bir durum değişikli
 
 Şekil 4-15 ' de, bir olay yayımlayan bir alışveriş sepeti mikro hizmeti, diğer iki mikro hizmetle abone olur.
 
-![Olay odaklı mesajlaşma](./media/event-driven-messaging.png)
+![Event-Driven mesajlaşma](./media/event-driven-messaging.png)
 
-**Şekil 4-15**. Olay odaklı mesajlaşma
+**Şekil 4-15**. Event-Driven mesajlaşma
 
 İletişim kanalının ortasında bulunan *olay veri yolu* bileşenini unutmayın. Bu, ileti Aracısı 'nı kapsülleyen ve temel alınan uygulamadan ayrışlayan özel bir sınıftır. Sıralama ve stok mikro hizmetleri, olayı birbirleriyle veya alışveriş sepeti mikro hizmeti olmadan bağımsız olarak çalışır. Kayıtlı olay, olay veri yoluna yayımlandığında, üzerinde işlem görür.
 
-Olay ile, sıraya alma teknolojisinden *konulara*geçiş yaptık. Bir [Konu](/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions) bir sıraya benzer, ancak bire çok mesajlaşma düzenlerini destekler. Bir mikro hizmet bir ileti yayımlar. Birden çok abone mikro hizmet, bu iletiyi almayı ve üzerinde işlem yapmak için seçim yapabilir. Şekil 4-16, bir konu mimarisini gösterir.
+Olay ile, sıraya alma teknolojisinden *konulara* geçiş yaptık. Bir [Konu](/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions) bir sıraya benzer, ancak bire çok mesajlaşma düzenlerini destekler. Bir mikro hizmet bir ileti yayımlar. Birden çok abone mikro hizmet, bu iletiyi almayı ve üzerinde işlem yapmak için seçim yapabilir. Şekil 4-16, bir konu mimarisini gösterir.
 
 ![Konu mimarisi](./media/topic-architecture.png)
 
@@ -184,7 +184,7 @@ Azure Service Bus, bir çift kurumsal özellikler kümesiyle test edilmiş bir m
 
 İlk bakışta Event Grid yalnızca başka bir konu tabanlı mesajlaşma sistemine benzeyebilir. Ancak, bu birçok şekilde farklıdır. Olay odaklı iş yüklerine odaklandığı için, gerçek zamanlı olay işleme, derin Azure tümleştirmesi ve bir açık platform olan, sunucusuz altyapıda daha az bir altyapı sunar. Modern bulutla yerel ve sunucusuz uygulamalar için tasarlanmıştır
 
-Merkezi bir *olay biriktirme düzeyi*veya kanal olarak Event Grid Azure kaynakları içindeki olaylara ve kendi hizmetlerinize yeniden işlem yapar.
+Merkezi bir *olay biriktirme düzeyi* veya kanal olarak Event Grid Azure kaynakları içindeki olaylara ve kendi hizmetlerinize yeniden işlem yapar.
 
 Olay bildirimleri, her olayı bir aboneliğe yönlendiren bir Event Grid konuya yayımlanır. Aboneler aboneliklerle eşlenir ve olayları tüketir. Service Bus gibi, Event Grid, bir aboneliğin alması istediği olaylar için kural ayarlayan *filtrelenmiş bir abone modelini* destekler. Event Grid, yaklaşık gerçek zamanlı teslimin en fazla Azure Service Bus oluşturabileceği kadar çok daha fazlasını sağlayan, saniyede 10.000.000 olay garantisi sağlar.
 
@@ -196,7 +196,7 @@ Azure kaynaklarından yerel olayları yayımlarken ve abone olurken, kodlama ger
 
 **Şekil 4-17**. Event Grid anatomi
 
-EventGrid ve Service Bus arasındaki önemli bir fark, temeldeki *ileti değişim*modelidir.
+EventGrid ve Service Bus arasındaki önemli bir fark, temeldeki *ileti değişim* modelidir.
 
 Service Bus, aşağı akış abonenin yeni iletiler için konu aboneliğini etkin bir şekilde yokladığı eski bir stil *çekme modeli* uygular. Bu yaklaşım, en sonunda aboneye iletileri işleyen hızda abone tam denetim sağlar. Bu, belirli bir zamanda ne zaman ve kaç mesaj işleyeceğini denetler. Okunmamış iletiler, işlenene kadar abonelikte kalır. Önemli bir Short, olayın oluşturulduğu zaman ve bu iletiyi işlenmek üzere abone 'e çeken yoklama işlemi arasındaki gecikmedir. Ayrıca, sonraki olay için sabit yoklamanın ek yükü kaynakları ve paradan tüketir.
 
@@ -206,7 +206,7 @@ Event Grid, tam olarak yönetilen bir sunucusuz bulut hizmetidir. Bu, trafiğini
 
 ### <a name="streaming-messages-in-the-azure-cloud"></a>Azure bulutu 'nda akış iletileri
 
-Azure Service Bus ve Event Grid, bir Cosmos DB eklenmiş yeni bir belge gibi tek ve ayrı olaylar sunan uygulamalar için harika destek sağlar. Ancak, bulutta yerel sisteminizin *ilgili olayların akışını*işlemesi gerekiyorsa ne olacak? [Olay akışları](/archive/msdn-magazine/2015/february/microsoft-azure-the-rise-of-event-stream-oriented-systems) daha karmaşıktır. Bunlar genellikle zaman içinde sıralanmıştır, birbirleriyle ilişkilidir ve bir grup olarak işlenmelidir.
+Azure Service Bus ve Event Grid, bir Cosmos DB eklenmiş yeni bir belge gibi tek ve ayrı olaylar sunan uygulamalar için harika destek sağlar. Ancak, bulutta yerel sisteminizin *ilgili olayların akışını* işlemesi gerekiyorsa ne olacak? [Olay akışları](/archive/msdn-magazine/2015/february/microsoft-azure-the-rise-of-event-stream-oriented-systems) daha karmaşıktır. Bunlar genellikle zaman içinde sıralanmıştır, birbirleriyle ilişkilidir ve bir grup olarak işlenmelidir.
 
 [Azure Olay Hub](https://azure.microsoft.com/services/event-hubs/) 'ı, olayları toplayan, dönüştüren ve depolayan bir veri akışı platformu ve olay alma hizmetidir. Bir telemetri bağlamından yayılan sürekli olay bildirimleri gibi akış verilerini yakalamak için ince ayar yapılır. Hizmet yüksek oranda ölçeklenebilir ve [saniye başına milyonlarca olayı depolayıp işleyebilir](/azure/event-hubs/event-hubs-about). Şekil 4-18 ' de gösterildiği gibi, genellikle olay işlem hattının bir ön kapıdır ve olay tüketimine ait alma akışını ayırır.
 
@@ -218,7 +218,7 @@ Olay Hub 'ı, düşük gecikme süresini ve yapılandırılabilir zaman bekletme
 
 Olay Hub 'ı, HTTPS ve AMQP dahil olmak üzere ortak olay yayımlama protokollerini destekler. Ayrıca Kafka 1,0 de desteklenir. Mevcut Kafka uygulamaları, büyük Kafka kümelerinin yönetilmesine alternatif sağlayan Kafka protokolünü kullanarak [Olay Hub 'ı ile iletişim](/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview) kurabilir. Birçok açık kaynaklı bulut Yerel sistemi emayraç Kafka.
 
-Event Hubs, her tüketicinin ileti akışının yalnızca belirli bir alt kümesini veya bölümünü okuduğu [bölümlenmiş bir tüketici modeli](/azure/event-hubs/event-hubs-features) aracılığıyla ileti akışı uygular. Bu düzende olay işleme için inanılmaz yatay ölçek etkinleştirilir ve sıralarda ve konularda kullanılamayan diğer akışa odaklanmış özellikler sağlanır. Bölüm bir olay hub'ında tutulan olayların sıralı dizisidir. Daha yeni olaylar geldikçe, bu sıranın sonuna eklenir.Şekil 4-19 bir olay hub 'ında Bölümlendirmeyi gösterir.
+Event Hubs, her tüketicinin ileti akışının yalnızca belirli bir alt kümesini veya bölümünü okuduğu [bölümlenmiş bir tüketici modeli](/azure/event-hubs/event-hubs-features) aracılığıyla ileti akışı uygular. Bu düzende olay işleme için inanılmaz yatay ölçek etkinleştirilir ve sıralarda ve konularda kullanılamayan diğer akışa odaklanmış özellikler sağlanır. Bölüm bir olay hub'ında tutulan olayların sıralı dizisidir. Daha yeni olaylar geldikçe, bu sıranın sonuna eklenir. Şekil 4-19 bir olay hub 'ında Bölümlendirmeyi gösterir.
 
 ![Olay Hub 'ı bölümlendirme](./media/event-hub-partitioning.png)
 

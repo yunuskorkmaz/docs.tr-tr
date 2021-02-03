@@ -1,13 +1,13 @@
 ---
 title: DevOps
 description: Bulutta yerel uygulamalar için DevOps konuları
-ms.date: 05/13/2020
-ms.openlocfilehash: 1a04f5178877f3fdde707753e94718ce0f0bb49d
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.date: 01/19/2021
+ms.openlocfilehash: 089f6ac82f3ce0613c7b8e0b9527f3fa9cf7b50c
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633721"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506207"
 ---
 # <a name="devops"></a>DevOps
 
@@ -47,7 +47,7 @@ Venerable Team Foundation Sürüm Denetimi (TFVC) ve sektör ile sık kullanıla
 
 **Azure boards** -kullanıcıların kendileri için en iyi şekilde çalışan iş akışlarını seçmesini sağlayan bir sorun ve iş öğesi izleme aracı sağlar. Bu, geliştirmede SCRUM ve Kanban stillerini desteklemeye yönelik bir dizi önceden yapılandırılmış şablon içerir.
 
-**Azure Pipelines** -Azure ile sıkı tümleştirmeyi destekleyen bir derleme ve sürüm yönetim sistemi. Derlemeler, Windows 'dan Linux 'a ve MacOS 'a kadar çeşitli platformlarda çalıştırılabilir. Derleme aracıları bulutta veya şirket içinde sağlanabilir.
+**Azure Pipelines** -Azure ile sıkı tümleştirmeyi destekleyen bir derleme ve sürüm yönetim sistemi. Derlemeler, Windows 'dan Linux 'a ve macOS 'a çeşitli platformlarda çalıştırılabilir. Derleme aracıları bulutta veya şirket içinde sağlanabilir.
 
 **Azure test Plans** -test Plans özelliği tarafından sunulan test yönetimi ve keşif testi desteğiyle soru-cevap yok.
 
@@ -79,7 +79,7 @@ Azure DevOps projesi içindeki mikro hizmetler için kod bölmek biraz daha zor 
 
 ### <a name="repository-per-microservice"></a>Mikro hizmet başına depo
 
-İlk bakışta, bu, mikro hizmetlere yönelik kaynak kodu bölmek için en mantıksal yaklaşım gibi görünüyor. Her depo, bir mikro hizmeti oluşturmak için gereken kodu içerebilir. Bu yaklaşımın avantajları kolayca görülebilir:
+İlk bakışta, bu yaklaşım mikro hizmetlere yönelik kaynak kodu bölmek için en mantıksal yaklaşım gibi görünüyor. Her depo, bir mikro hizmeti oluşturmak için gereken kodu içerebilir. Bu yaklaşımın avantajları kolayca görülebilir:
 
 1. Uygulamanın oluşturulması ve sürdürülmesi için yönergeler, her deponun kökündeki bir BENIOKU dosyasına eklenebilir. Depolarda geçiş yaparken, bu yönergeleri kolayca bulabilir ve geliştiriciler için dönüş süresini azaltır.
 2. Her hizmet mantıksal bir yerde bulunur ve hizmetin adı bilinerek kolayca bulunur.
@@ -100,19 +100,19 @@ Diğer bir dezavantajı ise kodu hizmetler arasında taşırken kendisini göste
 
 Son ve en önemli dezavantajı değişiklikleri koordine etme. Doğru bir mikro hizmet uygulamasında hizmetler arasında dağıtım bağımlılığı olmamalıdır. Hizmet bir, B ve C 'nin gevşek bir şekilde, her türlü sırada dağıtılması mümkün olmalıdır. Bununla birlikte, aynı anda birden çok depodan geçen bir değişikliği yapmak istenen durumlar da vardır. Bazı örnekler, bir güvenlik deliği kapatmak veya tüm hizmetler tarafından kullanılan bir iletişim protokolünü değiştirmek için bir kitaplığı güncelleştirmeyi içerir.
 
-Bir çapraz depo değişikliği yapmak için her bir depoya yönelik bir işlemenin art arda yapılması gerekir. Her depodaki her bir değişikliğin çekme isteğinde bulunulması ve ayrı olarak incelenmesi gerekir. Bu, koordine etmek zor olabilir.
+Bir çapraz depo değişikliği yapmak için her bir depoya yönelik bir işlemenin art arda yapılması gerekir. Her depodaki her bir değişikliğin çekme isteğinde bulunulması ve ayrı olarak incelenmesi gerekir. Bu etkinliğin koordine edilmesi zor olabilir.
 
 Birçok havuzun kullanılmasına alternatif olarak, tüm kaynak kodları bir Giant, tüm bil, tek depolarda birlikte koyulamıyor.
 
 ### <a name="single-repository"></a>Tek depo
 
-Bu yaklaşımda, bazen [monorepository](https://danluu.com/monorepo/)olarak anılan her hizmet için tüm kaynak kodları aynı depoya konur. İlk olarak, bu durum, kaynak kodu en iyi şekilde ilgilendirmesi muhtemel bir fikir gibi görünüyor. Ancak, bu şekilde çalışmanın bazı işaretlenmiş avantajları vardır.
+Bu yaklaşımda, bazen [monorepository](https://danluu.com/monorepo/)olarak anılan her hizmet için tüm kaynak kodları aynı depoya konur. İlk olarak, bu yaklaşım, kaynak kodu ve daha uygun bir fikir sahibi olma olasılığını taşıyan bir fikir gibi görünüyor. Ancak, bu şekilde çalışmanın bazı işaretlenmiş avantajları vardır.
 
 Birinci avantaj, projeler arasında bağımlılıkları yönetmenin daha kolay olması. Bazı dış yapıt akışına güvenmek yerine, projeler bir başkasına doğrudan içeri aktarabilir. Bu, güncelleştirmelerin anında olduğu ve çakışan sürümlerin geliştiricilerin iş istasyonundaki derleme zamanında bulunmasından kaynaklanıyor demektir. Aslında, bazı tümleştirme testlerini sola kaydırın.
 
 Projeler arasında kod taşırken, dosyalar yeniden yazılmaları yerine taşınmış olarak algılandıkları için geçmişi korumak artık daha kolay olur.
 
-Diğer bir avantajı da, çapraz hizmet sınırlarının tek bir yürütmede yapılabilmesi için bu geniş çaplı değişikliktir. Bu, tek yapmanız gereken düzinelerce değişikliklere sahip olma yükünü azaltır.
+Diğer bir avantajı da, çapraz hizmet sınırlarının tek bir yürütmede yapılabilmesi için bu geniş çaplı değişikliktir. Bu etkinlik, büyük olasılıkla tek tek gözden geçirilmek üzere değişikliklere sahip olma yükünü azaltır.
 
 Güvenli olmayan programlama uygulamalarını veya bu API 'lerin sorunlu kullanımını algılamak için kodun statik analizini gerçekleştirebilen birçok araç vardır. Birden çok depolu bir dünyada, her deponun, içindeki sorunları bulmak için tekrarlandırılır olması gerekir. Tek bir depo, çözümlemenin tümünü tek bir yerde çalıştırmaya izin verir.
 

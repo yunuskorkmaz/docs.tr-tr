@@ -2,17 +2,17 @@
 title: İlişkisel veriler ile NoSQL verilerinin karşılaştırması
 description: Bulutta yerel uygulamalarda ilişkisel ve NoSQL verileri hakkında bilgi edinin
 author: robvet
-ms.date: 05/17/2020
-ms.openlocfilehash: 11db5cdca06b9c2c8ce12598456c4b147ac379ba
-ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
+ms.date: 01/19/2021
+ms.openlocfilehash: 1148778b68c90586187d927eccd9b733403ede44
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92434867"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505517"
 ---
 # <a name="relational-vs-nosql-data"></a>İlişkisel veriler ile NoSQL verilerinin karşılaştırması
 
-İlişkisel ve NoSQL, bulutta yerel uygulamalarda yaygın olarak uygulanan iki tür veritabanı sistemidir. Bunlar farklı şekilde oluşturulmuştur, verileri farklı bir şekilde depolar ve farklı şekilde erişilirler. Bu bölümde, her ikisine de bakacağız. Bu bölümde daha sonra *Newsql*adlı yeni bir veritabanı teknolojisine bakacağız.
+İlişkisel ve NoSQL, bulutta yerel uygulamalarda yaygın olarak uygulanan iki tür veritabanı sistemidir. Bunlar farklı şekilde oluşturulmuştur, verileri farklı bir şekilde depolar ve farklı şekilde erişilirler. Bu bölümde, her ikisine de bakacağız. Bu bölümde daha sonra *Newsql* adlı yeni bir veritabanı teknolojisine bakacağız.
 
 *İlişkisel veritabanları* , Decades için yaygın olarak kullanılan bir teknolojidir. Bunlar, Yetişkin, kanıtlanmış ve yaygın olarak uygulanan bir uygulamalılar. Rekabet veritabanı ürünleri, araçları ve uzmanlığı ABO. İlişkisel veritabanları ilgili veri tablolarının bir deposunu sağlar. Bu tablolar sabit bir şemaya sahiptir, verileri yönetmek için SQL (Yapılandırılmış Sorgu Dili) kullanın ve ACID garantilerini destekler.
 
@@ -26,7 +26,7 @@ NoSQL veritabanları, her biri belirli kullanım örneklerine uygun olan veriler
 
 **Şekil 5-9**: NoSQL veritabanları için veri modelleri
 
-| Model | Özellikler |
+| Modelleme | Özellikler |
 | :-------- | :-------- |
 | Belge Deposu | Veriler ve meta veriler, veritabanının içindeki JSON tabanlı belgelerde hiyerarşik olarak depolanır. |
 | Anahtar değer deposu | NoSQL veritabanlarının en basit yolu, verileri anahtar-değer çiftleri koleksiyonu olarak temsil eder. |
@@ -173,7 +173,7 @@ Bulutta yerel uygulamalar genellikle küresel bir hedef kitleye sahiptir ve kür
 
 Cosmos veritabanlarını bölgeler arasında ya da dünyanın dört bir yanındaki dağıtabilir, kullanıcılarınıza veri yakınlarını, yanıt süresini geliştirir ve gecikmeyi azaltabilirsiniz. Hizmetlerinizi duraklatmadan veya yeniden dağıtmaya gerek kalmadan bir bölgeden veritabanı ekleyebilir veya kaldırabilirsiniz. Arka planda Cosmos DB, verileri, yapılandırılan bölgelerin her birine saydam olarak çoğaltır.
 
-Cosmos DB, genel düzeyde [etkin/etkin](https://kemptechnologies.com/white-papers/unfog-confusion-active-passive-activeactive-load-balancing/) kümelendirmeyi destekler, böylece her türlü veritabanı bölgelerinizin *her ikisini de yazmayı ve*okumayı destekleyecek şekilde yapılandırmanıza olanak tanır.
+Cosmos DB, genel düzeyde [etkin/etkin](https://kemptechnologies.com/white-papers/unfog-confusion-active-passive-activeactive-load-balancing/) kümelendirmeyi destekler, böylece her türlü veritabanı bölgelerinizin *her ikisini de yazmayı ve* okumayı destekleyecek şekilde yapılandırmanıza olanak tanır.
 
 [Çoklu ana](/azure/cosmos-db/multi-master-benefits) protokol, Cosmos DB aşağıdaki işlevleri sağlayan önemli bir özelliktir:
 
@@ -189,7 +189,7 @@ Cosmos DB çok girişli [API 'ler](/azure/cosmos-db/distribute-data-globally)say
 
 Tek parçalı uygulamalar buluta özgü bir mimariye yeniden geliştirmede, geliştirme ekiplerinin bazen açık kaynaklı, NoSQL veri depolarını geçirilmesi gerekir. Cosmos DB, bu NoSQL Veri depolarındaki yatırımınızı *çok modelli* veri platformuyla korumanıza yardımcı olabilir. Aşağıdaki tabloda, desteklenen NoSQL [Uyumluluk API 'leri](https://www.wikiwand.com/en/Cosmos_DB)gösterilmektedir.
 
-| Sağlayıcı | Description  |
+| Sağlayıcı | Açıklama  |
 | :-------- | :-------- |
 | SQL API | JSON belgelerini ve SQL tabanlı sorguları destekleyen özel API |
 | Mongo DB API | Mongo DB API 'Lerini ve JSON belgelerini destekler|
@@ -216,7 +216,7 @@ Azure Tablo Depolamayı kullanan mikro hizmetler Cosmos DB Tablo API'si kolayca 
 
 ### <a name="tunable-consistency"></a>Ayarlanabilir tutarlılık
 
-*İlişkisel ve NoSQL* bölümünde daha önce, *veri tutarlılığı*konusunu tartıştık. Veri tutarlılığı, verilerinizin *bütünlüğünü* ifade eder. Dağıtılmış veriler içeren bulut Yerel hizmetleri, çoğaltmayı kullanır ve okuma tutarlılığı, kullanılabilirliği ve gecikme süresi arasında temel bir zorunluluğunu getirir olmalıdır.
+*İlişkisel ve NoSQL* bölümünde daha önce, *veri tutarlılığı* konusunu tartıştık. Veri tutarlılığı, verilerinizin *bütünlüğünü* ifade eder. Dağıtılmış veriler içeren bulut Yerel hizmetleri, çoğaltmayı kullanır ve okuma tutarlılığı, kullanılabilirliği ve gecikme süresi arasında temel bir zorunluluğunu getirir olmalıdır.
 
 Çoğu dağıtılmış veritabanı, geliştiricilerin iki tutarlılık modeli arasından seçim yapmasına imkan tanır: güçlü tutarlılık ve nihai tutarlılık. *Güçlü tutarlılık* , veri programlamasına yönelik altın standarttır. Sistemin, bir güncelleştirmenin tüm veritabanı kopyalarında çoğaltılmasını bekleyen gecikme süresi olması beklense bile, bir sorgunun en güncel verileri her zaman döndürmesini güvence altına alır. *Nihai tutarlılık* için yapılandırılmış bir veritabanı, veri en güncel kopya olmasa bile, verileri hemen geri döndürmeyecektir. İkinci seçenek daha yüksek kullanılabilirlik, daha fazla ölçek ve daha fazla performans sunar.
 
@@ -228,7 +228,7 @@ Azure Cosmos DB Şekil 5-13 ' de gösterilen beş iyi tanımlanmış [tutarlıl�
 
  Bu seçenekler tutarlılık, kullanılabilirlik ve verilerinizin performansı için kesin seçenekler ve ayrıntılı bir denge yapmanızı sağlar. Düzeyler aşağıdaki tabloda sunulmuştur.
 
-| Tutarlılık Düzeyi | Description  |
+| Tutarlılık Düzeyi | Açıklama  |
 | :-------- | :-------- |
 | Nihai | Okuma için sıralama garantisi yok. Çoğaltmalar sonunda yakınsama olur. |
 | Sabit ön ek | Okumalar hala nihai, ancak veriler yazıldığı sıralamada döndürülür. |
@@ -269,7 +269,7 @@ Cloud Native Computing Foundation (CNCF), çeşitli NewSQL veritabanı projeleri
 | Yugabrivtedb | Açık kaynaklı, yüksek performanslı, dağıtılmış SQL veritabanı. Düşük sorgu gecikmesini, esnekliği ve hatalara karşı genel veri dağıtımını destekler. Yugabyıtedb PostgressSQL ile uyumludur ve genişleme RDBMS ve İnternet ölçeğinde OLTP iş yüklerini yönetir. Ürünle birlikte NoSQL de desteklenir ve Cassandra ile uyumludur. |
 |Vitess | Vitess, büyük MySQL örnekleri kümelerini dağıtmaya, ölçeklendirmeye ve yönetmeye yönelik bir veritabanı çözümüdür. Ortak veya özel bir bulut mimarisinde çalıştırılabilir. Vitess birçok önemli MySQL özelliğini ve dikey ve Yatay parçalama desteğini birleştirir ve genişletir. YouTube tarafından oluşturulan Vitess, 2011 tarihinden itibaren tüm YouTube veritabanı trafiğini görüyor. |
 
-Önceki şekildeki açık kaynaklı projeler, bulut Yerel Bilgi Işlem altyapısı 'nda bulunabilir. Tekliflerinden üçü, .NET Core desteği dahil olmak üzere tam veritabanı ürünlerdir. Diğer, Vitess, büyük MySQL örnekleri kümelerini yatay olarak ölçeklendirilen bir veritabanı kümeleme sistemidir.
+Önceki şekildeki açık kaynaklı projeler, bulut Yerel Bilgi Işlem altyapısı 'nda bulunabilir. Tekliflerinden üçü, .NET desteği dahil olmak üzere tam veritabanı ürünlerdir. Diğer, Vitess, büyük MySQL örnekleri kümelerini yatay olarak ölçeklendirilen bir veritabanı kümeleme sistemidir.
 
 NewSQL veritabanları için önemli bir tasarım hedefi, platformun dayanıklılık ve ölçeklenebilirlik avantajlarından yararlanarak Kubernetes 'te yerel olarak çalışacaktır.
 

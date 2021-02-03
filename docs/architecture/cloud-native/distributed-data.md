@@ -2,13 +2,13 @@
 title: Dağıtılmış veriler
 description: Tek parçalı ve bulutta yerel uygulamalardaki veri depolama alanını kontrast.
 author: robvet
-ms.date: 05/13/2020
-ms.openlocfilehash: b7c8c43b16f2f70f9009c4fe4a8d19c52fa7ea2a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/19/2021
+ms.openlocfilehash: c83ac5dc973ff4c7a4626746472a74cfc6bf54bb
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91163940"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505875"
 ---
 # <a name="distributed-data"></a>Dağıtılmış veriler
 
@@ -24,7 +24,7 @@ Deneyimli geliştiriciler, Şekil 5-1 ' nin sol tarafında bulunan mimariyi kola
 
 Birçok şekilde, tek bir veritabanı veri yönetimini basit tutar. Verileri birden çok tablo genelinde sorgulama basittir. Veri güncelleştirmesiyle birlikte yapılan değişiklikler veya hepsi geri alma. [ACID işlemleri](/windows/desktop/cossdk/acid-properties) güçlü ve anında tutarlılığı garanti eder.
 
-Bulutta yerel olarak tasarlamak için farklı bir yaklaşım sunuyoruz. Şekil 5-1 ' nin sağ tarafında, iş işlevselliğinin küçük, bağımsız mikro hizmetlere nasıl ayırt edici olduğunu göz önünde ayırın. Her mikro hizmet belirli bir iş özelliğini ve kendi verilerini kapsar. Tek parçalı veritabanı, her biri bir mikro hizmetle hizalanan çok daha küçük veritabanları ile dağıtılmış bir veri modeline sahiptir. Duman temizlediğinde, *mikro hizmet başına bir veritabanı*sunan tasarımla karşılaştık.
+Bulutta yerel olarak tasarlamak için farklı bir yaklaşım sunuyoruz. Şekil 5-1 ' nin sağ tarafında, iş işlevselliğinin küçük, bağımsız mikro hizmetlere nasıl ayırt edici olduğunu göz önünde ayırın. Her mikro hizmet belirli bir iş özelliğini ve kendi verilerini kapsar. Tek parçalı veritabanı, her biri bir mikro hizmetle hizalanan çok daha küçük veritabanları ile dağıtılmış bir veri modeline sahiptir. Duman temizlediğinde, *mikro hizmet başına bir veritabanı* sunan tasarımla karşılaştık.
 
 ## <a name="database-per-microservice-why"></a>Veritabanı başına mikro hizmet, neden?
 
@@ -61,7 +61,7 @@ Mikro hizmetler bağımsızdır ve Inventory, Shipping veya sıralaması gibi be
 
 **Şekil 5-3**. Mikro hizmetler genelinde sorgulama
 
-Yukarıdaki şekilde, bir kullanıcının alışveriş sepetine bir öğe ekleyen bir alışveriş sepeti mikro hizmeti görüyoruz. Bu mikro hizmet için veri deposu sepet ve satır öğesi verileri içerdiğinde, ürün veya fiyatlandırma verilerinin bakımını yapmaz. Bunun yerine, bu veri öğeleri kataloğa ve fiyatlandırma mikro hizmetlerine aittir. Bu bir sorunu gösterir. Alışveriş Sepeti mikro hizmeti, veritabanında ürün veya fiyatlandırma verileri yoksa kullanıcının alışveriş sepetine bir ürün ekleyebilir mi?
+Yukarıdaki şekilde, bir kullanıcının alışveriş sepetine bir öğe ekleyen bir alışveriş sepeti mikro hizmeti görüyoruz. Bu mikro hizmet için veri deposu sepet ve satır öğesi verileri içerdiğinde, ürün veya fiyatlandırma verilerinin bakımını yapmaz. Bunun yerine, bu veri öğeleri kataloğa ve fiyatlandırma mikro hizmetlerine aittir. Bu en boy bir sorun gösterir. Alışveriş Sepeti mikro hizmeti, veritabanında ürün veya fiyatlandırma verileri yoksa kullanıcının alışveriş sepetine bir ürün ekleyebilir mi?
 
 Bölüm 4 ' te açıklanan bir seçenek, alışveriş sepetinden kataloğa ve fiyatlandırma mikro hizmetlerine yönelik [doğrudan BIR http çağrıdır](service-to-service-communication.md#queries) . Ancak, Bölüm 4 ' te, zaman uyumlu HTTP her *iki* mikro hizmeti birlikte çağırıyor, bağımsız çalışma sınırı ve bunların mimari avantajlarını azalttık.
 
@@ -74,13 +74,13 @@ Bunun yerine, çapraz hizmet bağımlılıklarını kaldırmak için yaygın ola
 
 **Şekil 5-4**. Gerçekleştirilmiş Görünüm Düzeni
 
-Bu düzende, alışveriş sepeti hizmetine bir yerel veri tablosu ( *okuma modeli*olarak bilinir) yerleştirebilirsiniz. Bu tablo, ürün ve fiyatlandırma mikro hizmetlerinden gereken verilerin yoğun bir kopyasını içerir. Verileri doğrudan alışveriş sepeti mikro hizmetine kopyalamak, pahalı çapraz hizmet çağrıları gereksinimini ortadan kaldırır. Hizmetin yerel verileri ile hizmetin yanıt süresini ve güvenilirliğini artırırsınız. Ayrıca, kendi verilerinin kopyasına sahip olmak, alışveriş sepeti hizmetini daha dayanıklı hale getirir. Katalog hizmeti kullanılamaz hale gelirse, doğrudan alışveriş sepeti hizmetini etkilemez. Alışveriş sepeti, kendi mağazasındaki verilerle çalışmaya devam edebilir.
+Bu düzende, alışveriş sepeti hizmetine bir yerel veri tablosu ( *okuma modeli* olarak bilinir) yerleştirebilirsiniz. Bu tablo, ürün ve fiyatlandırma mikro hizmetlerinden gereken verilerin yoğun bir kopyasını içerir. Verileri doğrudan alışveriş sepeti mikro hizmetine kopyalamak, pahalı çapraz hizmet çağrıları gereksinimini ortadan kaldırır. Hizmetin yerel verileri ile hizmetin yanıt süresini ve güvenilirliğini artırırsınız. Ayrıca, kendi verilerinin kopyasına sahip olmak, alışveriş sepeti hizmetini daha dayanıklı hale getirir. Katalog hizmeti kullanılamaz hale gelirse, doğrudan alışveriş sepeti hizmetini etkilemez. Alışveriş sepeti, kendi mağazasındaki verilerle çalışmaya devam edebilir.
 
 Bu yaklaşım ile catch, artık sisteminizde Yinelenen veriler olmasını sağlamak. Ancak, bulutta yerel sistemlerdeki verileri *genel* olarak çoğaltmak, yerleşik bir uygulamadır ve bir kenar yumuşatma veya kötü uygulama olarak kabul edilmez. Bir *ve yalnızca bir hizmetin* bir veri kümesine sahip olabileceğini ve bu hizmetin üzerinde yetki sahibi olabileceğini göz önünde bulundurun. Kayıt sistemi güncelleştirilirken okuma modellerini eşitlemeniz gerekir. Eşitleme genellikle Şekil 5,4 ' de gösterildiği gibi, bir [Yayımlama/abonelik düzeniyle](service-to-service-communication.md#events)zaman uyumsuz mesajlaşma yoluyla uygulanır.
 
 ## <a name="distributed-transactions"></a>Dağıtılmış işlemler
 
-Mikro hizmetler genelinde verileri sorgularken çok sayıda mikro hizmette bir işlem uygulamak daha da karmaşıktır. Farklı mikro hizmetlerde bağımsız veri kaynakları arasında veri tutarlılığı sağlamanın devralınmış bir şekilde belirtilmedi. Bulutta yerel uygulamalarda dağıtılmış işlemlerin bulunmaması, dağıtılmış işlemleri programlı bir şekilde yönetmeniz anlamına gelir. *Anında tutarlılık* dünyasının *nihai tutarlılığa*kadar ilerinizden olursunuz.
+Mikro hizmetler genelinde verileri sorgularken çok sayıda mikro hizmette bir işlem uygulamak daha da karmaşıktır. Farklı mikro hizmetlerde bağımsız veri kaynakları arasında veri tutarlılığı sağlamanın devralınmış bir şekilde belirtilmedi. Bulutta yerel uygulamalarda dağıtılmış işlemlerin bulunmaması, dağıtılmış işlemleri programlı bir şekilde yönetmeniz anlamına gelir. *Anında tutarlılık* dünyasının *nihai tutarlılığa* kadar ilerinizden olursunuz.
 
 Şekil 5-5 sorunu gösterir.
 
@@ -90,7 +90,7 @@ Mikro hizmetler genelinde verileri sorgularken çok sayıda mikro hizmette bir i
 
 Yukarıdaki şekilde, beş bağımsız mikro hizmet sipariş oluşturan dağıtılmış bir işleme katılır. Her mikro hizmet kendi veri mağazasını tutar ve kendi deposu için yerel bir işlem uygular. Siparişi oluşturmak için, *her* bir mikro hizmetin yerel işleminin başarılı olması veya *tümünün* iptal edilmesi ve işlemi geri toplaması gerekir. Mikro hizmetlerin her birinde yerleşik işlem desteği kullanılabilir olsa da, verilerin tutarlı tutulması için beş hizmetin tamamına yayılabilen dağıtılmış bir işlem desteklenmez.
 
-Bunun yerine, bu dağıtılmış işlemi *programlı olarak*oluşturmanız gerekir.
+Bunun yerine, bu dağıtılmış işlemi *programlı olarak* oluşturmanız gerekir.
 
 Dağıtılmış işlem desteği eklemek için popüler bir düzende Saga deseninin olması önerilir. Yerel işlemler programlı bir şekilde gruplanarak ve her birini sırayla çağırarak uygulanır. Herhangi bir yerel işlem başarısız olursa, Saga işlemi iptal eder ve bir [dengeleyici](/azure/architecture/patterns/compensating-transaction)işlem kümesi çağırır. Telafi işlemleri, önceki yerel işlemler tarafından yapılan değişiklikleri geri alır ve veri tutarlılığını geri yükler. Şekil 5-6, Saga düzeniyle başarısız olan bir işlemi gösterir.
 
@@ -112,7 +112,7 @@ Büyük ölçekli bulutta yerel uygulamalar genellikle yüksek hacimli veri gere
 
 Normal senaryolarda, hem okuma hem *de* yazma işlemleri için aynı varlık modeli ve veri deposu nesnesi kullanılır.
 
-Ancak, yüksek hacimli bir veri senaryosu, okuma ve yazma işlemleri için ayrı modellerden ve veri tablolarından faydalanabilir. Performansı artırmak için okuma işlemi, pahalı yinelenen tablo birleştirmeleri ve tablo kilitlerinin önüne geçmek amacıyla verilerin yüksek oranda büyük bir gösterimine karşı sorgulayabilir. *Komut*olarak bilinen *yazma* işlemi, tutarlılığı güvence altına alan verilerin tamamen normalleştirilmiş bir gösterimine karşı güncelleştirilir. Daha sonra her iki gösterimi de eşitlenmiş halde tutmak için bir mekanizma uygulamanız gerekir. Genellikle, yazma tablosu değiştirildiğinde, değişikliği okuma tablosuna çoğaltan bir olay yayınlar.
+Ancak, yüksek hacimli bir veri senaryosu, okuma ve yazma işlemleri için ayrı modellerden ve veri tablolarından faydalanabilir. Performansı artırmak için okuma işlemi, pahalı yinelenen tablo birleştirmeleri ve tablo kilitlerinin önüne geçmek amacıyla verilerin yüksek oranda büyük bir gösterimine karşı sorgulayabilir. *Komut* olarak bilinen *yazma* işlemi, tutarlılığı güvence altına alan verilerin tamamen normalleştirilmiş bir gösterimine karşı güncelleştirilir. Daha sonra her iki gösterimi de eşitlenmiş halde tutmak için bir mekanizma uygulamanız gerekir. Genellikle, yazma tablosu değiştirildiğinde, değişikliği okuma tablosuna çoğaltan bir olay yayınlar.
 
 Şekil 5-7, CQRS deseninin bir uygulamasını gösterir.
 

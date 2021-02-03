@@ -5,12 +5,12 @@ ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.topic: overview
-ms.openlocfilehash: 34deb802183f20cc92449c21eb7e149cc002850f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2eaa01fad3913272dc90891592d0e35cd89ad2ab
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84284228"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506324"
 ---
 # <a name="dependency-loading-in-net-core"></a>.NET Core 'da bağımlılık yükleme
 
@@ -40,3 +40,7 @@ Yükleme algoritması ayrıntıları birkaç makalede kısaca ele alınmıştır
 ## <a name="how-to-use-and-debug-assembly-unloadability-in-net-core"></a>.NET Core’da kaldırabilme özelliğini kullanma ve hatalarını ayıklama
 
 [.NET Core makalesindeki derleme ve hata ayıklama bütünleştirilmiş kodu kullanımı](../../standard/assembly/unloadability.md) , adım adım öğreticidir. .NET Core uygulamasını yüklemeyi, çalıştırmayı ve sonra kaldırmayı gösterir. Makalede ayrıca hata ayıklama ipuçları sunulmaktadır.
+
+## <a name="collect-detailed-assembly-loading-information"></a>Ayrıntılı derleme yükleme bilgilerini topla
+
+[Ayrıntılı derleme yükleme bilgilerini topla](collect-details.md) makalesinde, çalışma zamanında yönetilen derleme yükleme hakkında ayrıntılı bilgilerin nasıl toplanacağı açıklanır. Çalışan bir işlemin izlemede derleme yükleyici olaylarını yakalamak için [DotNet-Trace](../diagnostics/dotnet-trace.md) aracını kullanır.

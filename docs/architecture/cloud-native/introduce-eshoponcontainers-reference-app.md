@@ -1,17 +1,17 @@
 ---
 title: EShopOnContainers başvuru uygulamasına giriş
 description: ASP.NET Core ve Azure için eShopOnContainers bulutu yerel mikro hizmetleri başvuru uygulamasına giriş.
-ms.date: 05/13/2020
-ms.openlocfilehash: a6f3defabec809eaf1cb143e2b521904248b74f2
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.date: 01/19/2021
+ms.openlocfilehash: 35aa92794d8488c3de60f42af52654c4c26aad82
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613973"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505680"
 ---
 # <a name="introducing-eshoponcontainers-reference-app"></a>EShopOnContainers başvuru uygulamasına giriş
 
-Microsoft, önde gelen topluluk uzmanlarıyla ortaklık altında, tam özellikli bir bulut Yerel mikro hizmetler başvuru uygulaması olan eShopOnContainers üretti. Bu uygulama, çevrimiçi bir storefront oluşturmak için .NET Core ve Docker ve isteğe bağlı olarak Azure, Kubernetes ve Visual Studio kullanılarak tanıtıma göre oluşturulmuştur.
+Microsoft, önde gelen topluluk uzmanlarıyla ortaklık altında, tam özellikli bir bulut Yerel mikro hizmetler başvuru uygulaması olan eShopOnContainers üretti. Bu uygulama, çevrimiçi bir storefront oluşturmak için .NET ve Docker ve isteğe bağlı olarak Azure, Kubernetes ve Visual Studio kullanılarak tanıtıma göre oluşturulmuştur.
 
 ![eShopOnContainers örnek uygulama ekran görüntüsü.](./media/eshoponcontainers-sample-app-screenshot.png)
 
@@ -30,7 +30,7 @@ Uygulamanın Özellikler ve gereksinimlerinin bir gözden geçirimiyle başlayal
 - Sepetten öğe düzenleme veya kaldırma
 - Kullanıma alma
 - Hesap kaydetme
-- Oturum aç
+- Oturum açın
 - Oturumu kapat
 - Siparişleri gözden geçirme
 
@@ -48,9 +48,9 @@ Uygulamanın aşağıdaki işlevsel olmayan gereksinimleri de vardır:
 
 EShopOnContainers uygulamasına, ASP.NET Core MVC sunucu uygulamasını ya da uygun bir API ağ geçidini hedefleyen HTTPS üzerinden uygulamaya erişen Web veya mobil istemcilerden erişilebilir. API ağ geçitleri, arka uç hizmetlerini ayrı ayrı ön uç istemcilerinden ayırma ve daha iyi güvenlik sağlama gibi çeşitli avantajlar sunar. Uygulama ayrıca her ön uç istemci için ayrı API ağ geçitleri oluşturulmasını öneren backends-for-Frontends (BFF) olarak bilinen ilgili bir model kullanır. Başvuru mimarisi, isteğin bir Web veya mobil istemciden geldiğini temel alarak API ağ geçitlerinin bölünmesini gösterir.
 
-Uygulamanın işlevselliği çeşitli farklı mikro hizmetlere ayrılmıştır. Kimlik doğrulama ve kimlikten sorumlu hizmetler, ürün kataloğundan öğe listeleme, kullanıcıların alışveriş sepetlerini yönetme ve sipariş yerleştirme hizmetleri bulunur. Bu ayrı hizmetlerin her biri kendi kalıcı depolamasına sahiptir. Tüm hizmetlerin etkileşimde bulunduğu tek bir ana veri deposu yoktur. Bunun yerine, hizmetler arasındaki koordinasyon ve iletişim, bir ileti veri yolu kullanımı ile gerekli bir şekilde yapılır.
+Uygulamanın işlevselliği birçok farklı mikro hizmete ayrılmıştır. Kimlik doğrulama ve kimlikten sorumlu hizmetler, ürün kataloğundan öğe listeleme, kullanıcıların alışveriş sepetlerini yönetme ve sipariş yerleştirme hizmetleri bulunur. Bu ayrı hizmetlerin her biri kendi kalıcı depolamasına sahiptir. Tüm hizmetlerin etkileşim kurduğu tek bir ana veri deposu yoktur. Bunun yerine, hizmetler arasındaki koordinasyon ve iletişim, gerekli bir şekilde ve bir ileti veri yolu kullanılarak yapılır.
 
-Farklı mikro hizmetlerin her biri, bireysel gereksinimlerine göre farklı şekilde tasarlanmıştır. Bu, .NET Core kullanılarak oluşturulmuştur ve bulut için tasarlansa da teknoloji yığınının farklı olabileceği anlamına gelir. Daha basit hizmetler temeldeki veri depolarına temel oluşturma-okuma-güncelleştirme-silme (CRUD) erişimi sağlar, ancak daha gelişmiş hizmetler iş karmaşıklığını yönetmek için etki alanı odaklı tasarım yaklaşımlarını ve desenlerini kullanır.
+Farklı mikro hizmetlerin her biri, bireysel gereksinimlerine göre farklı şekilde tasarlanmıştır. Bu en boy, teknoloji yığını farklı olabilir, ancak .NET kullanılarak oluşturulmuştur ve bulut için tasarlanırlar. Daha basit hizmetler, temel alınan veri depolarına temel oluşturma-okuma-güncelleştirme-silme (CRUD) erişimi sağlar, ancak daha gelişmiş hizmetler iş karmaşıklığını yönetmek için Tasarım yaklaşımlarını ve desenlerini Domain-Driven kullanır.
 
 ![Farklı mikro hizmet türleri](./media/different-kinds-of-microservices.png)
 
@@ -58,7 +58,7 @@ Farklı mikro hizmetlerin her biri, bireysel gereksinimlerine göre farklı şek
 
 ## <a name="overview-of-the-code"></a>Koda genel bakış
 
-Mikro hizmetlerden yararlandığından eShopOnContainers uygulaması, GitHub deposunda oldukça farklı projeler ve çözümler içerir. Ayrı çözümlerin ve yürütülebilir dosyaların yanı sıra çeşitli hizmetler, hem yerel geliştirme sırasında hem de üretimde çalışma zamanında kendi kapsayıcılarında çalışacak şekilde tasarlanmıştır. Şekil 2-4, çeşitli farklı projelerin düzenlendiği tam Visual Studio çözümünü gösterir.
+Mikro hizmetleri kullandığından eShopOnContainers uygulaması, GitHub deposunda oldukça farklı projeler ve çözümler içerir. Ayrı çözümlerin ve yürütülebilir dosyaların yanı sıra çeşitli hizmetler, hem yerel geliştirme sırasında hem de üretimde çalışma zamanında kendi kapsayıcılarında çalışacak şekilde tasarlanmıştır. Şekil 2-4, çeşitli farklı projelerin düzenlendiği tam Visual Studio çözümünü gösterir.
 
 ![Visual Studio çözümündeki projeler.](./media/projects-in-visual-studio-solution.png)
 

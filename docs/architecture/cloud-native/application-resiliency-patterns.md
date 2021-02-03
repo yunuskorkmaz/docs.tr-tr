@@ -2,19 +2,19 @@
 title: Uygulama dayanıklılığı desenleri
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Uygulama dayanıklılığı desenleri
 author: robvet
-ms.date: 05/13/2020
-ms.openlocfilehash: e81d6e1d6b95cf0053de3ba557068ff458a59dc9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/19/2021
+ms.openlocfilehash: 9a59a7d93b61b0dea11680f6caf0bd3b68a0f853
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91161158"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505927"
 ---
 # <a name="application-resiliency-patterns"></a>Uygulama dayanıklılığı desenleri
 
 İlk savunma hattı uygulama dayanıklılığı ' dır.
 
-Kendi dayanıklılık çatısını yazarken önemli ölçüde yatırım yapabilirsiniz, ancak bu tür ürünler zaten var. [Polly](http://www.thepollyproject.org/) , geliştiricilerin dayanıklılık ilkelerini akıcı ve iş parçacığı açısından güvenli bir şekilde ifade etmesine olanak tanıyan kapsamlı bir .net esnekliği ve geçici hata işleme kitaplığıdır. .NET Framework veya .NET Core ile oluşturulan uygulamaları Polly hedefler. Aşağıdaki tabloda `policies` , Polly kitaplığı 'nda bulunan olarak adlandırılan dayanıklılık özellikleri açıklanmaktadır. Bunlar ayrı ayrı uygulanabilir veya birlikte gruplandırılabilir.
+Kendi dayanıklılık çatısını yazarken önemli ölçüde yatırım yapabilirsiniz, ancak bu tür ürünler zaten var. [Polly](http://www.thepollyproject.org/) , geliştiricilerin dayanıklılık ilkelerini akıcı ve iş parçacığı açısından güvenli bir şekilde ifade etmesine olanak tanıyan kapsamlı bir .net esnekliği ve geçici hata işleme kitaplığıdır. .NET Framework veya .NET 5 ile oluşturulan uygulamaları Polly hedefler. Aşağıdaki tabloda `policies` , Polly kitaplığı 'nda bulunan olarak adlandırılan dayanıklılık özellikleri açıklanmaktadır. Bunlar ayrı ayrı uygulanabilir veya birlikte gruplandırılabilir.
 
 | İlke | Deneyim |
 | :-------- | :-------- |
@@ -38,7 +38,7 @@ Kendi dayanıklılık çatısını yazarken önemli ölçüde yatırım yapabili
 
 Soru: 403-Yasak HTTP durum kodunu yeniden denesin mi? Hayır. Burada, sistem düzgün şekilde çalışır, ancak çağrıyı yapana istenen işlemi gerçekleştirme yetkisine sahip olmadıkları konusunda bilgilendirilir. Yalnızca hatalardan kaynaklanan işlemleri yeniden denemek için dikkatli olunmalıdır.
 
-Bölüm 1 ' de önerildiği gibi, bulutta yerel uygulamalar oluştururken Microsoft geliştiricilerinin .NET Core platformunu hedeflemesi gerekir. Sürüm 2,1, URL tabanlı kaynaklarla etkileşim kurmak için HTTP Istemci örnekleri oluşturmak üzere [Httpclientfactory](https://www.stevejgordon.co.uk/introduction-to-httpclientfactory-aspnetcore) kitaplığı 'nı kullanıma sunmuştur. Özgün HTTPClient sınıfını yerine, Factory sınıfı birçok gelişmiş özelliği destekler, bunlardan biri de Polly dayanıklılık kitaplığıyla [sıkı bir şekilde tümleştirilmiştir](../microservices/implement-resilient-applications/implement-http-call-retries-exponential-backoff-polly.md) . Bununla birlikte, kısmi hataları ve bağlantı sorunlarını ele almak için uygulama başlangıç sınıfındaki dayanıklılık ilkelerini kolayca tanımlayabilirsiniz.
+Bölüm 1 ' de önerildiği gibi, bulutta yerel uygulamalar oluştururken Microsoft geliştiricileri .NET platformunu hedeflemelidir. Sürüm 2,1, URL tabanlı kaynaklarla etkileşim kurmak için HTTP Istemci örnekleri oluşturmak üzere [Httpclientfactory](https://www.stevejgordon.co.uk/introduction-to-httpclientfactory-aspnetcore) kitaplığı 'nı kullanıma sunmuştur. Özgün HTTPClient sınıfını yerine, Factory sınıfı birçok gelişmiş özelliği destekler, bunlardan biri de Polly dayanıklılık kitaplığıyla [sıkı bir şekilde tümleştirilmiştir](../microservices/implement-resilient-applications/implement-http-call-retries-exponential-backoff-polly.md) . Bununla birlikte, kısmi hataları ve bağlantı sorunlarını ele almak için uygulama başlangıç sınıfındaki dayanıklılık ilkelerini kolayca tanımlayabilirsiniz.
 
 Sonra, yeniden deneme ve devre kesici desenlerinde genişletelim.
 
@@ -82,7 +82,7 @@ Devre kesici deseninin amacını, yeniden deneme düzeninden *farklı* olduğunu
 
 ## <a name="testing-for-resiliency"></a>Dayanıklılığı test etme
 
-Dayanıklılık testi, uygulama işlevlerini test ettiğiniz şekilde (birim testlerini, tümleştirme testlerini vb.) her zaman yapılamaz. Bunun yerine, yalnızca zaman zaman ortaya çıkan hata koşulları altında uçtan uca iş yükünün ne performans göstereceğini test etmeniz gerekir. Örneğin: işlemlere kilitlenme, süre dolma sertifikaları, bağımlı hizmetleri kullanılamaz hale getirerek ekleme. [Chaos-maymun](https://github.com/Netflix/chaosmonkey) gibi çerçeveler, böyle bir Chaos testi için kullanılabilir.
+Dayanıklılık testi, uygulama işlevlerini test ettiğiniz şekilde (birim testlerini, tümleştirme testlerini vb.) her zaman yapılamaz. Bunun yerine, uçtan uca iş yükünün hata koşulları altında nasıl gerçekleştiğini test etmeniz gerekir. Bu, yalnızca zaman zaman meydana gelir. Örneğin: işlemlere kilitlenme, süre dolma sertifikaları, bağımlı hizmetleri kullanılamaz hale getirerek ekleme. [Chaos-maymun](https://github.com/Netflix/chaosmonkey) gibi çerçeveler, böyle bir Chaos testi için kullanılabilir.
 
 Uygulama dayanıklılığı, sorunlu istenen işlemleri işlemek için gereklidir. Ancak, hikayenin yalnızca yarısı vardır. Daha sonra, Azure bulutu 'nda bulunan dayanıklılık özelliklerini ele aldık.
 

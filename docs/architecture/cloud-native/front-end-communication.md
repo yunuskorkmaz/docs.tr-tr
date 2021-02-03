@@ -2,13 +2,13 @@
 title: Ön uç istemci iletişimi
 description: Ön uç istemcilerinin, bulutta yerel sistemlerle nasıl iletişim kuracağını öğrenin
 author: robvet
-ms.date: 05/13/2020
-ms.openlocfilehash: 147adb3d0375f8bf5dadf14e1237aa93e9e42908
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/19/2021
+ms.openlocfilehash: 089f55f8f6b9320fe552602eb40bb83be28f119b
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158116"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506246"
 ---
 # <a name="front-end-client-communication"></a>Ön uç istemci iletişimi
 
@@ -37,7 +37,7 @@ Bunun yerine, yaygın olarak kabul edilen bir bulut tasarım deseninin ön uç u
 
 **Şekil 4-3.** API ağ geçidi kalıbı
 
-Önceki şekilde, API ağ geçidi hizmetinin arka uç çekirdek mikro hizmetlerini nasıl soyutlamasını aklınızda bir yere göz önüne alın. Bir Web API 'SI olarak uygulanan, iç mikro hizmetlere gelen trafiği yönlendiren bir *ters proxy*işlevi görür.
+Önceki şekilde, API ağ geçidi hizmetinin arka uç çekirdek mikro hizmetlerini nasıl soyutlamasını aklınızda bir yere göz önüne alın. Bir Web API 'SI olarak uygulanan, iç mikro hizmetlere gelen trafiği yönlendiren bir *ters proxy* işlevi görür.
 
 Ağ Geçidi, iç hizmet bölümlendirme ve yeniden düzenleme işleminden istemciyi yalıtılmış olarak düzenler. Bir arka uç hizmetini değiştirirseniz, istemciyi bozmadan ağ geçidinde buna uyum sağlayabilirsiniz. Ayrıca, kimlik, önbelleğe alma, dayanıklılık, ölçüm ve azaltma gibi çapraz savunma sorunları için ilk savunma hattınızdır. Bu çapraz kesme sorunlarının birçoğu arka uç çekirdek hizmetlerinden ağ geçidine yüklenebilir ve arka uç hizmetleri basitleştirir.
 
@@ -55,7 +55,7 @@ Başlamak için kendi API Gateway hizmetinizi oluşturabilirsiniz. GitHub ' da h
 
 Basit .NET bulutu yerel uygulamaları için [Ocelot ağ geçidini](https://github.com/ThreeMammals/Ocelot)göz önünde bulundurmayabilirsiniz. Ocelot, sistemlerinde Birleşik bir giriş noktası gerektiren .NET mikro hizmetleri için oluşturulan açık kaynaklı bir API ağ geçididir. Hafif, hızlı, ölçeklenebilir.
 
-API ağ geçitlerine benzer şekilde, birincil işlevselliği gelen HTTP isteklerini aşağı akış hizmetlerine iletmektir. Ayrıca, bir .NET Core ara yazılım ardışık düzeninde yapılandırılabilir çok çeşitli özellikleri destekler. Özellik kümesi, aşağıdaki tabloda sunulmuştur.
+API ağ geçitlerine benzer şekilde, birincil işlevselliği gelen HTTP isteklerini aşağı akış hizmetlerine iletmektir. Ayrıca, bir .NET ara yazılım ardışık düzeninde yapılandırılabilir çok çeşitli özellikleri destekler. Özellik kümesi, aşağıdaki tabloda sunulmuştur.
 
 |Ocelot özellikleri  | |
 | :-------- | :-------- |
@@ -64,7 +64,7 @@ API ağ geçitlerine benzer şekilde, birincil işlevselliği gelen HTTP istekle
 | Hizmet bulma (Tüketil ve Eureka ile) | Azaltma |
 | YükDengeleme | Günlüğe kaydetme, Izleme |
 | Önbelleğe Alma | Üstbilgiler/sorgu dizesi dönüştürmesi |
-| Bağıntı geçişi | Özel ara yazılım |
+| Bağıntı Pass-Through | Özel ara yazılım |
 | Hizmet kalitesi | Yeniden deneme Ilkeleri |
 
 Her Ocelot Gateway, bir JSON yapılandırma dosyasında yukarı akış ve aşağı akış adreslerini ve yapılandırılabilir özellikleri belirtir. İstemci Ocelot ağ geçidine bir HTTP isteği gönderir. Bir kez alındıktan sonra, Ocelot, kendi işlem hattı aracılığıyla, kendi yapılandırması tarafından belirtilen duruma geçen HttpRequest nesnesini geçirir. İşlem hattının sonunda, Ocelot yeni bir HTTPResponseObject oluşturur ve bunu aşağı akış hizmetine geçirir. Yanıt için Ocelot, yanıtı istemciye geri göndererek işlem hattını tersine çevirir.
@@ -122,13 +122,13 @@ Azure API Management [dört farklı katmanda](https://azure.microsoft.com/pricin
 
 Geliştirici katmanı, üretim dışı iş yükleri ve değerlendirme için tasarlanmıştır. Diğer katmanlar, giderek daha fazla güç, özellik ve daha yüksek hizmet düzeyi sözleşmeleri (SLA 'Lar) sunar. Premium katmanı, [Azure sanal ağı](/azure/virtual-network/virtual-networks-overview) ve [çok bölgeli destek](/azure/api-management/api-management-howto-deploy-multi-region)sağlar. Tüm katmanların saat başına sabit bir fiyatı vardır.
 
-Azure bulutu Ayrıca Azure API Management için [sunucusuz bir katman](https://azure.microsoft.com/blog/announcing-azure-api-management-for-serverless-architectures/) sağlar. *Tüketim fiyatlandırma katmanı*olarak adlandırılan hizmet, sunucusuz bilgi işlem modeli etrafında tasarlanan API Management bir değişkendir. Daha önce gösterilen "önceden ayrılmış" fiyatlandırma katmanlarının aksine, tüketim katmanı hızlı sağlama ve eylem başına ödeme fiyatlandırması sağlar.
+Azure bulutu Ayrıca Azure API Management için [sunucusuz bir katman](https://azure.microsoft.com/blog/announcing-azure-api-management-for-serverless-architectures/) sağlar. *Tüketim fiyatlandırma katmanı* olarak adlandırılan hizmet, sunucusuz bilgi işlem modeli etrafında tasarlanan API Management bir değişkendir. Daha önce gösterilen "önceden ayrılmış" fiyatlandırma katmanlarının aksine, tüketim katmanı hızlı sağlama ve eylem başına ödeme fiyatlandırması sağlar.
 
 Aşağıdaki kullanım örnekleri için API Gateway özelliklerini sunar:
 
 - Mikro hizmetler, [Azure işlevleri](/azure/azure-functions/functions-overview) ve [Azure Logic Apps](https://azure.microsoft.com/services/logic-apps/)gibi sunucusuz teknolojiler kullanılarak uygulanır.
 - Azure yedekleme hizmeti kaynakları, Service Bus kuyrukları ve konuları, Azure depolama ve diğerleri.
-- Trafiğin zaman zaman büyük ani artışlar olduğu halde mikro hizmetler, sürenin büyük bölümü azalmış kalır.
+- Trafiğin zaman zaman büyük ani artışlar olduğu halde mikro hizmetler, en az bir süre sonra kalır.
 
 Tüketim katmanı, aynı temel hizmet API Management bileşenlerini kullanır, ancak dinamik olarak ayrılan kaynaklara göre tamamen farklı bir mimari kullanır. Sunucusuz bilgi işlem modeliyle mükemmel bir şekilde hizalanır:
 
@@ -148,7 +148,7 @@ Gerçek zamanlı sistemler genellikle yüksek frekanslı veri akışları ve ço
 
 [Azure SignalR hizmeti](https://azure.microsoft.com/services/signalr-service/) , bulutta yerel uygulamalarınızın gerçek zamanlı iletişimini kolaylaştıran, tam olarak yönetilen bir Azure hizmetidir. Kapasite sağlama, ölçekleme ve kalıcı bağlantılar gibi teknik uygulama ayrıntıları soyutlanmıştır. Bunlar sizin için 99,9% bir hizmet düzeyi sözleşmesi ile işlenirler. Altyapı sıhhi tesisat değil uygulama özelliklerine odaklanırsınız.
 
-Bulut tabanlı bir HTTP hizmeti etkinleştirildikten sonra, tarayıcı, mobil ve Masaüstü uygulamaları dahil olmak üzere doğrudan bağlı istemcilere içerik güncelleştirmeleri gönderebilir. İstemciler, sunucuyu yoklamaya gerek kalmadan güncelleştirilir. Azure SignalR, WebSockets, sunucu tarafı olayları ve uzun yoklama dahil gerçek zamanlı bağlantı oluşturan aktarım teknolojilerini soyutlar. Geliştiriciler bağlı istemcilerin tamamına veya belirli alt kümelerine ileti göndermeye odaklanmaktadır.
+Bulut tabanlı bir HTTP hizmeti etkinleştirildikten sonra, tarayıcı, mobil ve Masaüstü uygulamaları dahil olmak üzere doğrudan bağlı istemcilere içerik güncelleştirmeleri gönderebilir. İstemciler, sunucuyu yoklamaya gerek kalmadan güncelleştirilir. Azure SignalR, WebSockets, Server-Side olayları ve uzun yoklama dahil gerçek zamanlı bağlantı oluşturan aktarım teknolojilerini soyutlar. Geliştiriciler bağlı istemcilerin tamamına veya belirli alt kümelerine ileti göndermeye odaklanmaktadır.
 
 Şekil 4-7, Azure SignalR özellikli bir bulutta yerel uygulamaya bağlanan bir HTTP Istemcileri kümesini gösterir.
 

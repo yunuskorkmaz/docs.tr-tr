@@ -5,13 +5,13 @@ author: robvet
 no-loc:
 - Blazor
 - Blazor WebAssembly
-ms.date: 05/13/2020
-ms.openlocfilehash: 9ed6906bd388a1ddef7f97bbaac001b4274853f9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/19/2021
+ms.openlocfilehash: 8667f2d3a7a19aa6dffdd8ce8bef103eab5cc54f
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158090"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505706"
 ---
 # <a name="grpc"></a>gRPC
 
@@ -61,7 +61,7 @@ gRPC, .NET Core 3,0 SDK ve sonraki sürümleriyle tümleşiktir. Aşağıdaki ar
 - Visual Studio Code
 - DotNet CLı
 
-SDK, Endpoint Routing, yerleşik IOC ve günlüğe kaydetme için araç içerir. Açık kaynaklı Kestrel Web sunucusu HTTP/2 bağlantılarını destekler. Şekil 4-20, bir gRPC hizmeti için iskelet bir projeyi dolandırıcılara bağlayan bir Visual Studio 2019 şablonunu gösterir. .NET Core 'un Windows, Linux ve macOS 'ı tam olarak nasıl desteklediğini aklınızda yapın.
+SDK, Endpoint Routing, yerleşik IOC ve günlüğe kaydetme için araç içerir. Açık kaynaklı Kestrel Web sunucusu HTTP/2 bağlantılarını destekler. Şekil 4-20, bir gRPC hizmeti için iskelet bir projeyi dolandırıcılara bağlayan bir Visual Studio 2019 şablonunu gösterir. .NET 'in Windows, Linux ve macOS 'ı tam olarak nasıl desteklediğini aklınızda yapın.
 
 ![Visual Studio 2019 ' de gRPC desteği](./media/visual-studio-2019-grpc-template.png)
 
@@ -93,19 +93,19 @@ Bu yazma sırasında, gRPC öncelikle arka uç hizmetleriyle birlikte kullanıl�
 
 ## <a name="grpc-implementation"></a>gRPC uygulama
 
-Microsoft 'un [kapsayıcılarındaki](https://github.com/dotnet-architecture/eShopOnContainers)mikro hizmet başvuru mimarisi, .NET Core uygulamalarında GRPC hizmetlerinin nasıl uygulanacağını gösterir. Şekil 4-22 arka uç mimarisini gösterir.
+Microsoft 'un [kapsayıcılarındaki](https://github.com/dotnet-architecture/eShopOnContainers)mikro hizmet başvuru mimarisi, .NET uygulamalarında GRPC hizmetlerinin nasıl uygulanacağını gösterir. Şekil 4-22 arka uç mimarisini gösterir.
 
 ![Kapsayıcılarda eShop için arka uç mimarisi](./media/eshop-with-aggregators.png)
 
 **Şekil 4-22**. Kapsayıcılarda eShop için arka uç mimarisi
 
-Önceki şekilde, birden çok API ağ geçidini açığa çıkararak eShop 'nin ön uç (BFF) [Için arka](/azure/architecture/patterns/backends-for-frontends) ucunu nasıl atdığını aklınızda bir yere aklınızda Bu bölümün önceki kısımlarında BFF modelini tartıştık. Web-alışveriş API ağ geçidi ve arka uç alışverişi mikro hizmetleri arasında yer alan toplayıcı mikro hizmetine (gri) yakın bir ilgi ödeyin. Toplayıcı bir istemciden tek bir istek alır, bunu çeşitli mikro hizmetlere dağıtır, sonuçları toplar ve bunları istek istemcisine geri gönderir. Bu işlemler genellikle anında yanıt üretmek için zaman uyumlu iletişim gerektirir. EShop 'de, Şekil 4-23 ' de gösterildiği gibi, toplayıcıdan arka uç çağrıları gRPC kullanılarak gerçekleştirilir.
+Önceki şekilde, birden çok API ağ geçidini açığa çıkararak eShop 'nin ön uç (BFF) [Için arka](/azure/architecture/patterns/backends-for-frontends) ucunu nasıl atdığını aklınızda bir yere aklınızda Bu bölümün önceki kısımlarında BFF modelini tartıştık. Web-Shopping API ağ geçidi ve arka uç alışverişi mikro hizmetleri arasında yer alan toplayıcı mikro hizmetine (gri) yakın bir ilgi ödeyin. Toplayıcı bir istemciden tek bir istek alır, bunu çeşitli mikro hizmetlere dağıtır, sonuçları toplar ve bunları istek istemcisine geri gönderir. Bu işlemler genellikle anında yanıt üretmek için zaman uyumlu iletişim gerektirir. EShop 'de, Şekil 4-23 ' de gösterildiği gibi, toplayıcıdan arka uç çağrıları gRPC kullanılarak gerçekleştirilir.
 
 ![Kapsayıcılar üzerinde eShop içinde gRPC](./media/grpc-implementation.png)
 
 **Şekil 4-23**. Kapsayıcılar üzerinde eShop içinde gRPC
 
-gRPC iletişimi hem istemci hem de sunucu bileşenleri gerektirir. Önceki şekilde, alışveriş toplayıcısı 'nın gRPC istemcisini nasıl uyguladığı hakkında daha fazla. İstemci, her biri gRPC sunucusunu uygulayan, arka uç mikro hizmetleri için zaman uyumlu gRPC çağrıları (kırmızı) yapar. Hem istemci hem de sunucu, .NET Core SDK yerleşik gRPC tesisat özelliğinden faydalanır. İstemci tarafı *saplamaları* , uzak GRPC çağrılarını çağırma için bir sıhhi tesisat sağlar. Sunucu tarafı bileşenleri, özel hizmet sınıflarının devralması ve tükettiği gRPC sıhhi tesisat sağlar.
+gRPC iletişimi hem istemci hem de sunucu bileşenleri gerektirir. Önceki şekilde, alışveriş toplayıcısı 'nın gRPC istemcisini nasıl uyguladığı hakkında daha fazla. İstemci, her biri gRPC sunucusunu uygulayan, arka uç mikro hizmetleri için zaman uyumlu gRPC çağrıları (kırmızı) yapar. Hem istemci hem de sunucu, .NET SDK 'dan yerleşik gRPC tesisat özelliğinden yararlanır. İstemci tarafı *saplamaları* , uzak GRPC çağrılarını çağırma için bir sıhhi tesisat sağlar. Sunucu tarafı bileşenleri, özel hizmet sınıflarının devralması ve tükettiği gRPC sıhhi tesisat sağlar.
 
 Hem yeniden takip eden bir API 'yi hem de gRPC iletişimini sunan mikro hizmetler, trafiği yönetmek için birden çok uç nokta gerektirir. Yeniden yapılan çağrılar için HTTP trafiğini dinleyen bir uç nokta ve farklı gRPC çağrıları için bir tane açarsınız. GRPC uç noktasının, gRPC iletişimi için gerekli olan HTTP/2 Protokolü için yapılandırılması gerekir.
 

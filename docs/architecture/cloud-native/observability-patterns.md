@@ -1,17 +1,17 @@
 ---
 title: Gözlemlenebilirlik desenleri
 description: Bulutta yerel uygulamalar için Observability desenleri
-ms.date: 08/10/2020
-ms.openlocfilehash: 2a6ef0e58f1e20667167042614768b099f640858
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.date: 01/19/2021
+ms.openlocfilehash: acb1dc5c62787e9487c0e95c7e86a8f9a1967951
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539859"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506025"
 ---
 # <a name="observability-patterns"></a>Gözlemlenebilirlik desenleri
 
-Aynı şekilde, uygulamalarda kod düzeninde yardımcı olacak desenler geliştirildiği gibi, güvenilir bir şekilde işletim uygulamaları için desenler de vardır. Uygulamaları muhafaza etmek için üç kullanışlı düzen ortaya çıktı: **günlüğe kaydetme**, **izleme**ve **Uyarılar**.
+Aynı şekilde, uygulamalarda kod düzeninde yardımcı olacak desenler geliştirildiği gibi, güvenilir bir şekilde işletim uygulamaları için desenler de vardır. Uygulamaları muhafaza etmek için üç kullanışlı düzen ortaya çıktı: **günlüğe kaydetme**, **izleme** ve **Uyarılar**.
 
 ## <a name="when-to-use-logging"></a>Günlüğe kaydetme ne zaman kullanılır?
 
@@ -74,7 +74,7 @@ Düzgün şekilde uygulandığında, sorun ortaya çıkan koşulları, önemli K
 
 Bazı Merkezi günlük sistemleri,, saf günlüklerin dışında telemetri toplamanın ek bir rolünü alır. Veritabanı sorgusu çalıştırma zamanı, bir Web sunucusundan ortalama yanıt süresi ve hatta işletim sistemi tarafından bildirilen CPU yükü ortalamaları ve bellek baskısı gibi ölçümleri toplayabilirler. Bu sistemler, Günlükler ile birlikte sistemdeki ve uygulamadaki düğümlerin sistem durumunun bir bütün olarak bütünsel görünümünü sağlayabilir.
 
-İzleme araçlarının ölçüm toplama özellikleri, uygulamanın içinden el ile de dağıtılabilir. Yeni kullanıcılar için kaydolan ve yerleştirilmiş siparişler gibi belirli iş akışları, merkezi izleme sisteminde bir sayacı artırmaları gibi belgelenmiş olabilir. Bu, izleme araçlarının kilidini yalnızca uygulamanın sistem durumunu, ancak iş durumunu izlemek için kaldırır.
+İzleme araçlarının ölçüm toplama özellikleri, uygulamanın içinden el ile de dağıtılabilir. Yeni kullanıcılar için kaydolan ve yerleştirilmiş siparişler gibi belirli iş akışları, merkezi izleme sisteminde bir sayacı artırmaları gibi belgelenmiş olabilir. Bu boyut, yalnızca uygulamanın sistem durumunu, ancak iş durumunu izlemek için izleme araçlarının kilidini açar.
 
 Sorgular, özel panolar üzerinde grafik biçiminde görüntülenebilen belirli istatistikleri veya desenleri aramak için günlük toplama araçları ' nda oluşturulabilir. Genellikle takımlar, bir uygulamayla ilgili istatistikte geçen büyük, duvara takılan ekranlarda yatırım yapar. Bu şekilde, sorunları ortaya çıktığında görmek basittir.
 

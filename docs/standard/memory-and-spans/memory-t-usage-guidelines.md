@@ -5,18 +5,18 @@ ms.date: 10/01/2018
 helpviewer_keywords:
 - Memory&lt;T&gt; and Span&lt;T&gt; best practices
 - using Memory&lt;T&gt; and Span&lt;T&gt;
-ms.openlocfilehash: d9a50fa18e027b6df7415438e1a5584003f7a094
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 4a08148dc8a4736b40af45d11490200056bb6f83
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245602"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506362"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Memory\<T> ve Span\<T> kullanım yönergeleri
 
-.NET Core, belleğin rastgele bir bitişik bölgesini temsil eden bir dizi tür içerir. .NET Core 2,0 <xref:System.Span%601> <xref:System.ReadOnlySpan%601> , yönetilen veya yönetilmeyen bellekle desteklenen basit bellek arabellekleri olan ve tarafından kullanıma sunulmuştur. Bu türler yalnızca yığında depolanabileceğinden, zaman uyumsuz yöntem çağrıları dahil olmak üzere çok sayıda senaryo için uygun değildir. .NET Core 2,1,,, ve dahil olmak üzere çeşitli ek türler ekler <xref:System.Memory%601> <xref:System.ReadOnlyMemory%601> <xref:System.Buffers.IMemoryOwner%601> <xref:System.Buffers.MemoryPool%601> . Benzer <xref:System.Span%601> şekilde <xref:System.Memory%601> ve ilgili türleri hem yönetilen hem de yönetilmeyen bellekle desteklenir. Aksine <xref:System.Span%601> , <xref:System.Memory%601> yönetilen yığında depolanabilir.
+.NET Core, belleğin rastgele bir bitişik bölgesini temsil eden bir dizi tür içerir. .NET Core 2,0 <xref:System.Span%601> <xref:System.ReadOnlySpan%601> , başvuruları yönetilen veya yönetilmeyen belleğe sardığı basit bellek arabellekleri olan ve tarafından kullanıma sunulmuştur. Bu türler yalnızca yığında depolanabileceğinden, zaman uyumsuz yöntem çağrıları dahil olmak üzere çok sayıda senaryo için uygun değildir. .NET Core 2,1,,, ve dahil olmak üzere çeşitli ek türler ekler <xref:System.Memory%601> <xref:System.ReadOnlyMemory%601> <xref:System.Buffers.IMemoryOwner%601> <xref:System.Buffers.MemoryPool%601> . Benzer <xref:System.Span%601> şekilde <xref:System.Memory%601> ve ilgili türleri hem yönetilen hem de yönetilmeyen bellekle desteklenir. Aksine <xref:System.Span%601> , <xref:System.Memory%601> yönetilen yığında depolanabilir.
 
-Her ikisi de, işlem hatlarında <xref:System.Span%601> <xref:System.Memory%601> kullanılabilecek yapılandırılmış verilerin arabelleklerdir. Diğer bir deyişle, verilerin bazılarının veya tümünün işlem hattındaki bileşenlere etkin bir şekilde geçirilmesi için tasarlanmaları ve isteğe bağlı olarak arabelleği değiştirebilmeleri için tasarlanmıştır. <xref:System.Memory%601>Ve ilgili türlerine birden çok bileşen veya birden çok iş parçacığı tarafından erişilebildiğinden, geliştiricilerin sağlam kod üretmek için bazı standart kullanım yönergelerini izlemesi önemlidir.
+Her ikisi de, işlem hatlarında <xref:System.Span%601> <xref:System.Memory%601> kullanılabilecek yapılandırılmış veri arabelleklerinin üzerinde sarmalayıcılardır. Diğer bir deyişle, verilerin bazılarının veya tümünün işlem hattındaki bileşenlere etkin bir şekilde geçirilmesi için tasarlanmaları ve isteğe bağlı olarak arabelleği değiştirebilmeleri için tasarlanmıştır. <xref:System.Memory%601>Ve ilgili türlerine birden çok bileşen veya birden çok iş parçacığı tarafından erişilebildiğinden, geliştiricilerin sağlam kod üretmek için bazı standart kullanım yönergelerini izlemesi önemlidir.
 
 ## <a name="owners-consumers-and-lifetime-management"></a>Sahipler, tüketiciler ve ömür yönetimi
 
@@ -73,7 +73,7 @@ Yöntemi, `WriteInt32ToBuffer` yöntem çağrısının başlangıcı ve yöntemi
 
 - Sahiplik aktarımını destekleyen bir model. Bir arabelleğin sahipliği, özgün sahibinden (Oluşturucu) başka bir bileşene aktarılabilir ve bu da arabelleğin yaşam süresi yönetiminden sorumludur. Bu sahip, sahipliği başka bir bileşene aktarabilir ve bu şekilde devam eder.
 
-<xref:System.Buffers.IMemoryOwner%601?displayProperty=nameWithType>Bir arabelleğin sahipliğini açıkça yönetmek için arabirimini kullanırsınız. <xref:System.Buffers.IMemoryOwner%601>Her iki sahiplik modelini destekler. Bir başvurusuna sahip olan bileşen <xref:System.Buffers.IMemoryOwner%601> , arabelleğe aittir. Aşağıdaki örnek, <xref:System.Buffers.IMemoryOwner%601?> bir arabelleğin sahipliğini yansıtmak için bir örneği kullanır <xref:System.Memory%601> .
+<xref:System.Buffers.IMemoryOwner%601?displayProperty=nameWithType>Bir arabelleğin sahipliğini açıkça yönetmek için arabirimini kullanırsınız. <xref:System.Buffers.IMemoryOwner%601> Her iki sahiplik modelini destekler. Bir başvurusuna sahip olan bileşen <xref:System.Buffers.IMemoryOwner%601> , arabelleğe aittir. Aşağıdaki örnek, <xref:System.Buffers.IMemoryOwner%601?> bir arabelleğin sahipliğini yansıtmak için bir örneği kullanır <xref:System.Memory%601> .
 
 [!code-csharp[ownership](~/samples/snippets/standard/buffers/memory-t/owner/owner.cs)]
 
@@ -115,7 +115,7 @@ Aşağıdakiler ve ilgili türleri başarıyla kullanılarak önerimlerimiz aşa
 
 **Kural #1: zaman uyumlu bir API Için mümkünse, \<T> bellek yerine span kullanın \<T> .**
 
-<xref:System.Span%601>daha çok daha hızlıdır <xref:System.Memory%601> ve çok sayıda bitişik bellek arabelleğini temsil edebilir. <xref:System.Span%601>Ayrıca, daha iyi performans sunar <xref:System.Memory%601> . Son olarak, <xref:System.Memory%601.Span?displayProperty=nameWithType> özelliği bir örneği dönüştürmek için kullanabilirsiniz, ancak bu, noktadan <xref:System.Memory%601> <xref:System.Span%601> \<T> belleğe \<T> dönüştürme mümkün değildir. Bu nedenle, arayanların bir örneği varsa <xref:System.Memory%601> , yöntemlerinizi <xref:System.Span%601> yine de parametrelerle çağırabileceksiniz.
+<xref:System.Span%601> daha çok daha hızlıdır <xref:System.Memory%601> ve çok sayıda bitişik bellek arabelleğini temsil edebilir. <xref:System.Span%601> Ayrıca, daha iyi performans sunar <xref:System.Memory%601> . Son olarak, <xref:System.Memory%601.Span?displayProperty=nameWithType> özelliği bir örneği dönüştürmek için kullanabilirsiniz, ancak bu, noktadan <xref:System.Memory%601> <xref:System.Span%601> \<T> belleğe \<T> dönüştürme mümkün değildir. Bu nedenle, arayanların bir örneği varsa <xref:System.Memory%601> , yöntemlerinizi <xref:System.Span%601> yine de parametrelerle çağırabileceksiniz.
 
 Türü yerine türünde bir parametre kullanılması <xref:System.Span%601> <xref:System.Memory%601> , doğru bir tüketen Yöntem uygulamasını yazmanıza de yardımcı olur. Metodun kira süresinin ötesinde (daha sonra bu konuda daha fazla) arabelleğe erişmeye girişdiğinizden emin olmak için otomatik olarak derleme zamanı denetimleri alacaksınız.
 
@@ -169,7 +169,7 @@ Bu sorunu çözmek için birkaç yol vardır:
 
    [!code-csharp[task-returning](~/samples/snippets/standard/buffers/memory-t/task-returning2/task-returning2.cs#1)]
 
-- `Log`Bunun yerine, aşağıdaki gibi uygulanabilir:
+- `Log` Bunun yerine, aşağıdaki gibi uygulanabilir:
 
    [!code-csharp[defensive-copy](~/samples/snippets/standard/buffers/memory-t/task-returning/task-returning.cs#1)]
 

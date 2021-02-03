@@ -4,12 +4,12 @@ description: Tek bir dosya uygulamasının ne olduğunu ve neden bu uygulama da�
 author: lakshanf
 ms.author: lakshanf
 ms.date: 12/17/2020
-ms.openlocfilehash: 10ffc947f6a3adcf2889a03edd2616007ce236f3
-ms.sourcegitcommit: 3a8f1979a98c6c19217a1930e0af5908988eb8ba
+ms.openlocfilehash: fb768fa6fe390fbe8390e441f4eb71c3172ad395
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98536144"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505432"
 ---
 # <a name="single-file-deployment-and-executable"></a>Tek dosya dağıtımı ve yürütülebilir dosya
 
@@ -168,8 +168,8 @@ Visual Studio, uygulamanızın nasıl yayımlandığını denetleyen yeniden kul
 
 01. **Profil ayarları** iletişim kutusunda, aşağıdaki seçenekleri ayarlayın:
 
-    - **Dağıtım modunu** **kendi kendine dahil** olarak ayarlayın.
-    - **Hedef çalışma zamanını** , yayımlamak istediğiniz platforma ayarlayın.
+    - **Dağıtım modunu** **kendi içinde** veya **çerçeveye bağımlı** olarak ayarlayın.
+    - **Hedef çalışma zamanını** , yayımlamak istediğiniz platforma ayarlayın. ( **Taşınabilir** dışında bir öğe olmalıdır.)
     - **Tek bir dosya üret**' i seçin.
 
     Ayarları kaydetmek ve **Yayımla** iletişim kutusuna dönmek için **Kaydet** ' i seçin.

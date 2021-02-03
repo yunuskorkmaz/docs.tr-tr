@@ -2,13 +2,13 @@
 title: Bulutta yerel uygulamalara giriş
 description: Bulutta yerel bilgi işlem hakkında bilgi edinin
 author: robvet
-ms.date: 05/13/2020
-ms.openlocfilehash: 6ec02a1388d6e0f26cdaa1f728f23a22ba52d735
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.date: 01/19/2021
+ms.openlocfilehash: 852eed27d4cfcaefdfa89a73c54414a6306ed28d
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613947"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506103"
 ---
 # <a name="introduction-to-cloud-native-applications"></a>Bulutta yerel uygulamalara giriş
 
@@ -38,11 +38,11 @@ Hepsi kötü değildir. Tek tek avantajlar, bazı farklı avantajlar sunmaktadı
 
 - derleme
 - test
-- dağıtımı
+- deploy
 - troubleshoot
 - scale
 
-Günümüzde mevcut birçok başarılı uygulama tek bir şekilde oluşturulmuştur. Uygulama bir isabet ediyor ve gelişmeye devam ediyor, yineleme sonrasında yineleme, daha fazla işlevsellik ve daha fazla işlev ekliyor.
+Günümüzde mevcut birçok başarılı uygulama tek bir şekilde oluşturulmuştur. Uygulama bir isabet ediyor ve gelişmeye devam ediyor, yineleme sonrasında yineleme, daha fazla işlevsellik ekliyor.
 
 Ancak, bir noktada rahatsız duymaktan başlayabilirsiniz. Uygulamanın kayıp denetimini bulabilirsiniz. Zaman kaldığında, en yoğun hale gelir ve sonunda olarak bilinen bir durum girersiniz `Fear Cycle` .
 
@@ -58,7 +58,7 @@ Ancak, bir noktada rahatsız duymaktan başlayabilirsiniz. Uygulamanın kayıp d
 
 Birçok kuruluş, sistem oluşturmaya yönelik bulut Yerel yaklaşımını benimseerek tek parçalı korku döngüsünü ele alıyor. Şekil 1-2, bulutta yerel teknikler ve uygulamalar uygulayan aynı sistemi gösterir.
 
-![Bulutta yerel tasarım](./media/cloud-native-design.png)
+![Cloud-Native tasarımı](./media/cloud-native-design.png)
 
 **Şekil 1-2**. Bulutta yerel tasarım
 
@@ -66,7 +66,7 @@ Uygulamanın, küçük bir yalıtılmış mikro hizmetler kümesi üzerinde nas�
 
 ### <a name="cloud-native-computing"></a>Bulutta yerel bilgi işlem
 
-Hmm... Yalnızca _Cloud Native_terimini kullandık. İlk düşünce "Bu anlamı nedir?" olabilir. Daha fazla bilgi pazarlamak için yazılım satıcıları tarafından başka bir sektör Buzzword tarafından işbirliği yapılıyor mu? "
+Hmm... Yalnızca _Cloud Native_ terimini kullandık. İlk düşünce "Bu anlamı nedir?" olabilir. Daha fazla bilgi pazarlamak için yazılım satıcıları tarafından başka bir sektör Buzzword tarafından işbirliği yapılıyor mu? "
 
 Neyse ki, bu kitapta çok farklı ve bu kitabın sizi ikna etmeye yardımcı olacak.
 

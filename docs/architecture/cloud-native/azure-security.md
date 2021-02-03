@@ -1,13 +1,13 @@
 ---
 title: Bulutta yerel uygulamalar için Azure güvenliği
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Cloud Native uygulamalar için Azure güvenliği
-ms.date: 12/01/2020
-ms.openlocfilehash: 5e541606c762ea192ab8767e78e9b7346b3ec9c1
-ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
+ms.date: 01/19/2021
+ms.openlocfilehash: 1e2dce97a43479d49aecf220893efcc19bb00a8c
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96509825"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505888"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>Bulutta yerel uygulamalar için Azure güvenliği
 
@@ -72,7 +72,7 @@ Yapı işlemi, kaynak kodundaki sorunları üretime yapmadan önce saptamak içi
 
 ## <a name="built-in-security"></a>Yerleşik güvenlik
 
-Azure, kullanıcıların çoğunluğu için kullanılabilirliği ve güvenliği dengelemek üzere tasarlanmıştır. Farklı kullanıcılar farklı güvenlik gereksinimlerine sahip olacak ve bu nedenle bulut güvenliğine yaklaşımına ince ayar yapması gerekir. Microsoft [Güven Merkezi](https://azure.microsoft.com/support/trust-center/)'nde harika bir güvenlik bilgisi yayınlar. Bu kaynak, yerleşik saldırı risk azaltma teknolojilerinin nasıl çalıştığını anlamak isteyen bu profesyonellerin ilk durağı olmalıdır.
+Azure, çoğu kullanıcı için kullanılabilirliği ve güvenliği dengelemek üzere tasarlanmıştır. Farklı kullanıcılar farklı güvenlik gereksinimlerine sahip olacak ve bu nedenle bulut güvenliğine yaklaşımına ince ayar yapması gerekir. Microsoft [Güven Merkezi](https://azure.microsoft.com/support/trust-center/)'nde harika bir güvenlik bilgisi yayınlar. Bu kaynak, yerleşik saldırı risk azaltma teknolojilerinin nasıl çalıştığını anlamak isteyen bu profesyonellerin ilk durağı olmalıdır.
 
 [Azure danışmanı](https://azure.microsoft.com/services/advisor/) Azure Portal içinde, sürekli olarak bir ortamı tarayan ve öneriler getiren bir sistemdir. Bu önerilerin bazıları kullanıcıları paradan tasarruf etmek için tasarlanmıştır, ancak diğerleri, bir depolama kapsayıcısının dünya çapında açık olması ve bir sanal ağ tarafından korunmamasından dolayı, güvensiz olabilecek yapılandırmaların tanımlanması için tasarlanmıştır.
 
@@ -117,7 +117,7 @@ RBAC 'deki ilk bileşen bir güvenlik sorumlusidir. Bir güvenlik sorumlusu, bir
 - Hizmet sorumlusu-hizmetlerin veya uygulamaların çalıştırıldığı bir güvenlik kimliği.
 - Yönetilen kimlik-Azure tarafından yönetilen bir Azure Active Directory kimliği. Yönetilen kimlikler genellikle Azure hizmetlerinde kimlik doğrulaması için kimlik bilgilerini yöneten bulut uygulamaları geliştirilirken kullanılır.
 
-Güvenlik sorumlusu her bir kaynağa uygulanabilir. Bu, Azure Kubernetes içinde çalışan bir kapsayıcıya bir güvenlik sorumlusu atamak ve bunun Key Vault depolanan gizli dizilerle erişmesine izin vermek mümkün olduğu anlamına gelir. Azure Işlevi, çağıran bir kullanıcı için bir JWT doğrulamak üzere bir Active Directory örneğiyle iletişim kurmasına izin veren bir izni alabilir. Hizmet sorumlusu ile hizmetler etkinleştirildikten sonra, izinleri roller ve kapsamlar kullanılarak yönetilebilir.
+Güvenlik sorumlusu her bir kaynağa uygulanabilir. Bu şekilde, Azure Kubernetes içinde çalışan bir kapsayıcıya bir güvenlik sorumlusu atamak mümkün olduğu ve bu nedenle Key Vault depolanan gizli dizileri erişimine izin veriliyor. Azure Işlevi, çağıran bir kullanıcı için bir JWT doğrulamak üzere bir Active Directory örneğiyle iletişim kurmasına izin veren bir izni alabilir. Hizmet sorumlusu ile hizmetler etkinleştirildikten sonra, izinleri roller ve kapsamlar kullanılarak yönetilebilir.
 
 ## <a name="roles"></a>Roller
 

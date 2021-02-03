@@ -2,13 +2,13 @@
 title: Bulutta Yerel'i tanımlama
 description: Bulutta yerel sistemler için yatak odası sağlayan temel sütunlar hakkında bilgi edinin
 author: robvet
-ms.date: 05/13/2020
-ms.openlocfilehash: 1f0d842a2369ae04ffc1c634f9de60398a88e86f
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.date: 01/19/2021
+ms.openlocfilehash: 180b32d753fea5071174830be4ff3b8a81527a75
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654698"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506220"
 ---
 # <a name="defining-cloud-native"></a>Cloud Native 'i tanımlama
 
@@ -52,11 +52,11 @@ Bulut Yerel sistemleri, bulut hizmeti modelinin tam avantajlarından yararlanır
 
 Dinamik, sanallaştırılmış bir bulut ortamında Misyonumuz için tasarlanan bu sistemler, [hizmet olarak platform (PaaS)](https://azure.microsoft.com/overview/what-is-paas/) işlem altyapısı ve yönetilen hizmetler için kapsamlı bir kullanım sağlar. Temel altyapıyı dakikalar içinde *atılabilir* tarafından sağlanır ve yeniden boyutlandırılıp, ölçeklendirildiğinde veya isteğe bağlı olarak, Otomasyon aracılığıyla kabul edilir.
 
-[Pets ve Cattle](https://medium.com/@Joachim8675309/devops-concepts-pets-vs-cattle-2380b5aab313)'ın yaygın olarak kabul edilen DevOps kavramını göz önünde bulundurun. Geleneksel bir veri merkezinde sunucular, anlamlı bir ad verilen bir fiziksel *makine olan ve*için kalan olarak değerlendirilir. Aynı makineye daha fazla kaynak ekleyerek ölçeklendirebilirsiniz (ölçeği büyütme). Sunucu hasta olursa, sistem durumuna geri dönebilirsiniz. Sunucu kullanılamaz hale gelirse herkes bildirimler.
+[Pets ve Cattle](https://medium.com/@Joachim8675309/devops-concepts-pets-vs-cattle-2380b5aab313)'ın yaygın olarak kabul edilen DevOps kavramını göz önünde bulundurun. Geleneksel bir veri merkezinde sunucular, anlamlı bir ad verilen bir fiziksel *makine olan ve* için kalan olarak değerlendirilir. Aynı makineye daha fazla kaynak ekleyerek ölçeklendirebilirsiniz (ölçeği büyütme). Sunucu hasta olursa, sistem durumuna geri dönebilirsiniz. Sunucu kullanılamaz hale gelirse herkes bildirimler.
 
 *Cattle* hizmet modeli farklı. Her örneği bir sanal makine veya kapsayıcı olarak temin edersiniz. Bunlar aynıdır ve hizmet-01, hizmet-02 vb. gibi bir sistem tanımlayıcısı atanır. Daha fazlasını oluşturarak ölçeklendirebilirsiniz (ölçeği genişletme). Biri kullanılamaz duruma geldiğinde hiçbir zaman bildirim.
 
-Cattle modeli, *sabit altyapıyı*kaþken. Sunucular onarılamamakta veya değiştirilmez. Bir hata olursa veya güncelleştirme gerektiriyorsa, bu yok edilir ve yeni bir tane sağlanır; hepsi Otomasyon aracılığıyla yapılır.
+Cattle modeli, *sabit altyapıyı* kaþken. Sunucular onarılamamakta veya değiştirilmez. Bir hata olursa veya güncelleştirme gerektiriyorsa, bu yok edilir ve yeni bir tane sağlanır; hepsi Otomasyon aracılığıyla yapılır.
 
 Bulut Yerel sistemleri, cattle hizmet modelini benimseyin. Bunlar, çalıştırıldıkları makinelerle ilgili olmayan şekilde, altyapının ölçeklendirilirken veya çıkarken çalışmaya devam eder.
 
@@ -66,13 +66,13 @@ Azure bulut platformu, otomatik ölçeklendirme, kendiliğinden düzeltme ve izl
 
 Bulutta yerel bir uygulamayı nasıl tasarlıyorsunuz? Mimariniz nasıl görünür? Hangi ilkelere, desenlere ve en iyi uygulamalara uydunuz? Hangi altyapı ve işlemsel sorunlar önemli olacaktır?
 
-### <a name="the-twelve-factor-application"></a>On Iki öğeli uygulama
+### <a name="the-twelve-factor-application"></a>Twelve-Factor uygulaması
 
 Bulut tabanlı uygulamalar oluşturmak için yaygın olarak kabul edilen bir metodolojide, [on Iki öğeli uygulama](https://12factor.net/)vardır. Geliştiricilerin modern bulut ortamları için iyileştirilmiş uygulamalar oluşturmak üzere izlediği bir ilkeler ve uygulamalar kümesini açıklar. Ortamlar ve bildirim temelli Otomasyon genelinde taşınabilirliği için özel dikkat edilmelidir.
 
-Web tabanlı herhangi bir uygulama için geçerli olsa da birçok uygulama, bulutta yerel uygulamalar oluşturmaya yönelik katı bir temel olarak on Iki etmeni düşünmelidir. Bu kurallara göre oluşturulan sistemler hızla dağıtabilir ve ölçeklendirebilir ve Pazar değişikliklerine hızlı bir şekilde tepki vermek için özellikler ekleyebilir.
+Web tabanlı herhangi bir uygulama için geçerli olsa da birçok uygulama, bulutta yerel uygulamalar oluşturmaya yönelik sağlam bir temel olarak Twelve-Factor göz önünde bulundurlar. Bu kurallara göre oluşturulan sistemler hızla dağıtabilir ve ölçeklendirebilir ve Pazar değişikliklerine hızlı bir şekilde tepki vermek için özellikler ekleyebilir.
 
-Aşağıdaki tablo, on Iki öğeli yöntemi vurgular:
+Aşağıdaki tabloda Twelve-Factor yöntemi vurgulanmıştır:
 
 |    |  Faktör | Açıklama  |
 | :-------- | :-------- | :-------- |
@@ -89,7 +89,7 @@ Aşağıdaki tablo, on Iki öğeli yöntemi vurgular:
 | 11 | Günlüğe Kaydetme | Mikro hizmetler tarafından oluşturulan günlükleri olay akışları olarak değerlendirin. Bunları bir Olay Toplayıcısı ile işleyin ve verileri Azure Izleyici veya splunk gibi veri madenciliği/günlük yönetim araçlarına ve sonuçta uzun süreli arşivleme ' ye yayın. |
 | 12 | Yönetici süreçler | Yönetim/Yönetim görevlerini tek bir işlem olarak çalıştırın. Görevler, bir rapor için veri temizleme ve çekme analizlerini içerebilir. Bu görevleri yürüten araçlar, üretim ortamından, ancak uygulamadan ayrı olarak çağrılmalıdır. |
 
-Kitapta, [on Iki öğeli uygulamanın ötesinde](https://content.pivotal.io/blog/beyond-the-twelve-factor-app), ilk 12 faktörün (2011 ' de yazılmıştır) her biri Için Kevin Hoffman ayrıntılarına bakın. Ayrıca, günümüzün modern bulut uygulaması tasarımını yansıtan üç ek etken ele alınmaktadır.
+Kitapta, [Twelve-Factor uygulamasının ötesinde](https://content.pivotal.io/blog/beyond-the-twelve-factor-app), ilk 12 faktörün (2011 ' de yazılmıştır) her biri Için Kevin Hoffman bilgilerini yazın. Ayrıca, günümüzün modern bulut uygulaması tasarımını yansıtan üç ek etken ele alınmaktadır.
 
 |    |  Yeni faktör | Açıklama  |
 | :-------- | :-------- | :-------- |
@@ -109,25 +109,25 @@ On iki öğeli metodolojide sunulan yönergelerin ötesinde, dağıtılmış sis
 
 Arka uç Çekirdek Hizmetleri birbirleriyle nasıl iletişim kuracaktır? Bağlantısı yapılan ve performans ve çeviklik sağlayan doğrudan HTTP çağrılarına izin veriyor musunuz? Ya da kuyruk ve konu teknolojileri ile birlikte mesajlaşmayı düşünebileceğiniz bir durum var mı?
 
-İletişim, ayrıntılı Bölüm 4, *bulutta yerel Iletişim desenlerinde*ele alınmıştır.
+İletişim, ayrıntılı Bölüm 4, *bulutta yerel Iletişim desenlerinde* ele alınmıştır.
 
 *Dayanıklılık*
 
 Mikro hizmetler mimarisi, sisteminizi işlem içi ağ iletişimine taşıtan. Dağıtılmış bir mimaride, B hizmeti A hizmetinden bir ağ çağrısına yanıt vermediğinde ne olur? Ya da Service C geçici olarak kullanılamaz duruma geldiğinde ve çağıran diğer hizmetler engellenirse ne olur?
 
-Esneklik Bölüm 6, *bulutta yerel dayanıklılık*kapsamında ele alınmıştır.
+Esneklik Bölüm 6, *bulutta yerel dayanıklılık* kapsamında ele alınmıştır.
 
 *Dağıtılmış veriler*
 
 Tasarıma göre, her mikro hizmet kendi verilerini kapsüller ve bu işlem ortak arabirimi aracılığıyla işlemleri ortaya çıkarlar. Bu durumda, verileri nasıl sorgulayabilir veya birden çok hizmet arasında bir işlem nasıl uygulayabilirim?
 
-Dağıtılmış veriler ayrıntı bölümü 5, *bulutta yerel veri desenleri*kapsamında ele alınmıştır.
+Dağıtılmış veriler ayrıntı bölümü 5, *bulutta yerel veri desenleri* kapsamında ele alınmıştır.
 
 *Kimlik*
 
 Hizmetinize kimin eriştiğini ve sahip oldukları izinleri nasıl tanımlayacaksınız?
 
-Kimlik, ayrıntı Bölüm 8, *kimlik*kapsamında ele alınmıştır.
+Kimlik, ayrıntı Bölüm 8, *kimlik* kapsamında ele alınmıştır.
 
 ## <a name="microservices"></a>Mikro hizmetler
 
@@ -171,15 +171,15 @@ Mikro hizmetleri anlamak için harika bir başvuru kılavuzu [.net mikro hizmetl
 
 Mikro hizmetler, herhangi bir modern geliştirme platformunda oluşturulabilir.
 
-Microsoft .NET Core platformu harika bir seçimdir. Ücretsiz ve açık kaynak olmak üzere, mikro hizmet geliştirmeyi basitleştirmek için birçok yerleşik özelliği vardır. .NET Core platformlar arası bir platformdur. Uygulamalar Windows, macOS ve Linux 'un birçok özellikleri üzerinde oluşturulabilir ve çalıştırılabilir.
+Microsoft .NET Platform mükemmel bir seçimdir. Ücretsiz ve açık kaynak olmak üzere, mikro hizmet geliştirmeyi basitleştirmek için birçok yerleşik özelliği vardır. .NET platformlar arası bir platformdur. Uygulamalar Windows, macOS ve Linux 'un birçok özellikleri üzerinde oluşturulabilir ve çalıştırılabilir.
 
-.NET Core yüksek performans düzeyine sahiptir ve Node.js ve diğer rekabet platformları karşılaştırmayla iyi bir şekilde puanlanır. Interest, [Techempower](https://www.techempower.com/) birçok Web uygulaması platformu ve çerçevesinde çok sayıda [performans karşılaştırmalı olarak kıyaslamalarından](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=plaintext) oluşur. .NET Core, Node.js ve diğer rekabet platformlarındaki en iyi 10 ' un üzerinde puanlanır.
+.NET yüksek performansa sahiptir ve Node.js ve diğer rekabet platformlarına kıyasla iyi bir şekilde puanlanır. Interest, [Techempower](https://www.techempower.com/) birçok Web uygulaması platformu ve çerçevesinde çok sayıda [performans karşılaştırmalı olarak kıyaslamalarından](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=plaintext) oluşur. .NET, Node.js ve diğer rekabet platformlarındaki en iyi 10 iyi bir şekilde puanlanır.
 
-.NET Core, GitHub 'da Microsoft ve .NET Community tarafından korunur.
+.NET, GitHub 'da Microsoft ve .NET Community tarafından korunur.
 
 ## <a name="containers"></a>Kapsayıcılar
 
-Günümüzde, *bulut Native*ile ilgili herhangi bir konuşmada bahsedilen terim *kapsayıcısını* dinlemek doğal bir terimdir. Bu kitapta, [bulutta yerel desenler](https://www.manning.com/books/cloud-native-patterns), yazar Cornelia Davis, "kapsayıcı, bulutta yerel yazılımın harika bir etkinleştiricisidir." Cloud Native Bilgi Işlem altyapısı, mikro hizmet kapsayıcılarını, bulut Yerel ız yolculuğuna başlayan kuruluşlar için kendi [bulut Yerel izleme](https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png) kılavuzlarındaki ilk adım olarak koyar.
+Günümüzde, *bulut Native* ile ilgili herhangi bir konuşmada bahsedilen terim *kapsayıcısını* dinlemek doğal bir terimdir. Bu kitapta, [bulutta yerel desenler](https://www.manning.com/books/cloud-native-patterns), yazar Cornelia Davis, "kapsayıcı, bulutta yerel yazılımın harika bir etkinleştiricisidir." Cloud Native Bilgi Işlem altyapısı, mikro hizmet kapsayıcılarını, bulut Yerel ız yolculuğuna başlayan kuruluşlar için kendi [bulut Yerel izleme](https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png) kılavuzlarındaki ilk adım olarak koyar.
 
 Mikro hizmeti kapsayıcı basit ve basittir. Kod, bağımlılıkları ve çalışma zamanı, [kapsayıcı görüntüsü](https://docs.docker.com/glossary/?term=image)adlı bir ikiliye paketlenmiştir. Görüntüler, görüntüler için bir depo veya kitaplık görevi gören bir [kapsayıcı kayıt defterinde](https://caylent.com/container-registries/)saklanır. Kayıt defteri, geliştirme bilgisayarınızda, veri merkezinizde veya genel bir bulutta bulunabilir. Docker, [Docker Hub](https://hub.docker.com/)aracılığıyla ortak bir kayıt defteri tutar. Azure bulutu, kapsayıcı görüntülerinin depolandığı bir [kapsayıcı kayıt defterinin](https://azure.microsoft.com/services/container-registry/) özelliklerini çalıştıracak bulut uygulamalarına yakın bir şekilde depolar.
 
@@ -207,7 +207,7 @@ Kapsayıcılar, ortamlar genelinde taşınabilirlik ve tutarlılık sağlar. Her
 
 Aynı kapsayıcıyı Docker Runtime altyapısına sahip herhangi bir ortamda dağıtabilirsiniz. Kapsayıcılı iş yükleri, her ortamı çerçeveler, yazılım kitaplıkları ve çalışma zamanı altyapılarıyla önceden yapılandırma masrafına de ortadan kaldırır.
 
-Temel işletim sistemi ve konak kaynaklarını paylaşarak, kapsayıcıların tam bir sanal makineden çok daha küçük bir parmak izine sahip olması gerekir. Daha küçük boyut, belirli bir konağın aynı anda çalıştırılabir şekilde *yoğunluğu*veya mikro hizmet sayısını artırır.
+Temel işletim sistemi ve konak kaynaklarını paylaşarak, kapsayıcıların tam bir sanal makineden çok daha küçük bir parmak izine sahip olması gerekir. Daha küçük boyut, belirli bir konağın aynı anda çalıştırılabir şekilde *yoğunluğu* veya mikro hizmet sayısını artırır.
 
 ### <a name="container-orchestration"></a>Kapsayıcı düzenleme
 
@@ -225,7 +225,7 @@ Aşağıdaki tabloda, yaygın düzenleme görevleri açıklanmaktadır.
 | :-------- | :-------- |
 | Zamanlama | Kapsayıcı örneklerini otomatik olarak sağlayın.|
 | Benzeşim/benzeşim önleme | Kullanılabilirlik ve performansa yardımcı olmak için, birbirleriyle yakın veya uzak kapsayıcıları sağlayın. |
-| Sistem durumunu izleme | Sorunları otomatik olarak algıla ve düzelt.|
+| Sistem durumu izleme | Sorunları otomatik olarak algıla ve düzelt.|
 | Yük devretme | Başarısız örneği sağlıklı makinelere otomatik olarak yeniden sağlayın.|
 | Ölçeklendirme | Talebi karşılamak için kapsayıcı örneğini otomatik olarak ekleyin veya kaldırın.|
 | Ağ | Kapsayıcı iletişimi için bir ağ kaplamasını yönetin.|
@@ -242,7 +242,7 @@ Birçok kapsayıcı grubu mevcut olsa da, [Kubernetes](https://kubernetes.io/doc
 
 Kendi Kubernetes örneğinizi barındırabilmeniz, ancak kaynaklarını sağlamaktan ve yönetmekten siz sorumlusunuz ve bu karmaşık olabilir. Azure bulut özellikleri, Azure [Kubernetes hizmeti (AKS)](https://azure.microsoft.com/services/kubernetes-service/)ile yönetilen bir hizmet olarak Kubernetes. Yönetilen bir hizmet, özelliklerini yüklemenize ve sürdürmenize gerek kalmadan özelliklerinden tamamen yararlanmanızı sağlar.
 
-Azure Kubernetes Hizmetleri ayrıntılı Bölüm 2 ' de ele alınmıştır, *bulutta yerel uygulamaları ölçeklendirin*.
+Azure Kubernetes Hizmetleri, ayrıntılı Bölüm 2 ' de ele alınmıştır *Cloud-Native Uygulamaları ölçeklendirme*.
 
 ## <a name="backing-services"></a>Hizmetleri yedekleme
 
@@ -264,7 +264,7 @@ Bulut sağlayıcıları, *yönetilen destek hizmetleri* için zengin bir sınıf
 
 Bulutta yerel sistemler, yönetilen destek hizmetlerini bulut satıcılarından tercih etmek için. Zaman ve işçilik tasarrufları harika. Kendi kendinize ve sorun yaşamaya yönelik işlemsel risk pahalı bir hızlı olabilir.
 
-Bir yedekleme hizmetini, bir dış yapılandırmada depolanan bilgiler (URL ve kimlik bilgileri) ile bir mikro hizmete dinamik olarak bağlı bir *kaynak*olarak değerlendirmek en iyi uygulamadır. Bu kılavuz, bölümünde daha önce açıklanan [on Iki öğeli uygulamada](https://12factor.net/)yer alınmıştır.
+Bir yedekleme hizmetini, bir dış yapılandırmada depolanan bilgiler (URL ve kimlik bilgileri) ile bir mikro hizmete dinamik olarak bağlı bir *kaynak* olarak değerlendirmek en iyi uygulamadır. Bu kılavuz, bölümünde daha önce açıklanan [on Iki öğeli uygulamada](https://12factor.net/)yer alınmıştır.
 
 >*Faktör \# 4* ' te, bir adreslenebilir URL aracılığıyla "yedekleme hizmetleri" gösterilmelidir. Bunu yapmak, kaynağı uygulamadan ayırır ve bu sayede, bunu değiştirilebilir olarak etkinleştirir. "
 
@@ -274,7 +274,7 @@ Bu düzende, bir yedekleme hizmeti kod değişikliği yapılmadan iliştirilebil
 
 Bulut satıcıları, kendi özel destek hizmetleriyle iletişim kurması için API 'Ler sağlar. Bu kitaplıklar, sıhhi tesisat ve karmaşıklığı kapsüller. Doğrudan bu API 'lerle iletişim kurmak, kodunuzu Yedekleme hizmetine sıkı bir şekilde ister. Bu, satıcı API 'sinin uygulama ayrıntılarını tahmin etmek için daha iyi bir uygulamadır. Hizmet kodunuza genel işlemleri ortaya çıkaran bir intermediation katmanını veya ara API 'yi tanıtın. Bu gevşek bir geçiş, bir yedekleme hizmetini başka bir şekilde takabilmenizi veya ana hat hizmet kodunda değişiklik yapmanıza gerek kalmadan kodunuzu farklı bir genel buluta taşımanızı sağlar.
 
-Yedekleme Hizmetleri, ayrıntılı Bölüm 5, *bulutta yerel veri desenleri*ve Bölüm 4, *bulutta yerel iletişim desenlerinde*ele alınmıştır.
+Yedekleme Hizmetleri, ayrıntılı Bölüm 5, *bulutta yerel veri desenleri* ve Bölüm 4, *bulutta yerel iletişim desenlerinde* ele alınmıştır.
 
 ## <a name="automation"></a>Otomasyon
 

@@ -1,19 +1,19 @@
 ---
 title: Merkezi yapılandırma
 description: Azure Uygulama yapılandırması ve AzureKey kasasını kullanarak bulutta yerel uygulamalar için yapılandırmayı merkezileştirme.
-ms.date: 05/13/2020
-ms.openlocfilehash: 0d40c5b2d70f30beb17489dfd55900f7c5fc1a75
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/19/2021
+ms.openlocfilehash: 770c0c19a6de01250c59a586badb6a4afa2e9ae5
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91160885"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505719"
 ---
 # <a name="centralized-configuration"></a>Merkezi yapılandırma
 
-Her şeyin tek bir örnek içinde çalıştığı tek parçalı bir uygulamanın aksine, bulutta yerel bir uygulama, sanal makineler, kapsayıcılar ve coğrafi bölgeler arasında dağıtılan bağımsız hizmetlerden oluşur. Onlarca birbirine bağlı hizmetlerin yapılandırma ayarlarını yönetmek zor olabilir. Yapılandırma ayarlarının farklı konumlarda yinelenen kopyaları, yönetim açısından hataya açıktır ve zor olur. Merkezi yapılandırma, dağıtılmış bulutta yerel uygulamalar için kritik bir gereksinimdir.
+Her şeyin tek bir örnek içinde çalıştığı tek parçalı bir uygulamanın aksine, bulutta yerel bir uygulama, sanal makineler, kapsayıcılar ve coğrafi bölgeler arasında dağıtılan bağımsız hizmetlerden oluşur. Onlarca birbirine bağlı hizmetlerin yapılandırma ayarlarını yönetmek zor olabilir. Farklı konumlarda yapılandırma ayarlarının yinelenen kopyaları, yönetim açısından hataya açık ve zor bir hatadır. Merkezi yapılandırma, dağıtılmış bulutta yerel uygulamalar için kritik bir gereksinimdir.
 
-[Bölüm 1](introduction.md)' de anlatıldığı gibi, on Iki öğeli uygulama önerileri, kod ve yapılandırma arasında katı ayrım gerektirir. Yapılandırma, uygulamadan dışarıdan depolanmalıdır ve gerektiğinde okunabilir olmalıdır. Yapılandırma değerlerini sabitler veya kodda değişmez değer olarak depolamak bir ihladir. Aynı yapılandırma değerleri genellikle aynı uygulamadaki birçok hizmet tarafından kullanılır. Ayrıca, geliştirme, test ve üretim gibi birden çok ortamda aynı değerleri desteklememiz gerekir. En iyi uygulama, bunları merkezi bir yapılandırma deposunda saklar.
+[Bölüm 1](introduction.md)' de anlatıldığı gibi Twelve-Factor uygulama önerileri, kod ve yapılandırma arasında katı ayrım gerektirir. Yapılandırma, uygulamadan dışarıdan depolanmalıdır ve gerektiğinde okunabilir olmalıdır. Yapılandırma değerlerini sabitler veya kodda değişmez değer olarak depolamak bir ihladir. Aynı yapılandırma değerleri genellikle aynı uygulamadaki birçok hizmet tarafından kullanılır. Ayrıca, geliştirme, test ve üretim gibi birden çok ortamda aynı değerleri desteklememiz gerekir. En iyi uygulama, bunları merkezi bir yapılandırma deposunda saklar.
 
 Azure bulutu birçok harika seçenek sunar.
 

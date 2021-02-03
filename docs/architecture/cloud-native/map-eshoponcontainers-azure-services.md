@@ -1,17 +1,17 @@
 ---
 title: eShopOnContainers'ı Azure Hizmetlerine eşleme
 description: EShopOnContainers 'ı Azure Kubernetes hizmeti, API Gateway ve Azure Service Bus gibi Azure hizmetleriyle eşleme.
-ms.date: 05/13/2020
-ms.openlocfilehash: c4627a4b6d9d8b62737984b507e638019544ab67
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.date: 01/19/2021
+ms.openlocfilehash: aa0d5cc3bf6c0226627ce558606f974b0e7ec238
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400454"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506259"
 ---
 # <a name="mapping-eshoponcontainers-to-azure-services"></a>eShopOnContainers'ı Azure Hizmetlerine eşleme
 
-Gerekli olmasa da, proje bulutta yerel bir uygulama olarak oluşturulduğundan, Azure eShopOnContainers 'ı desteklemeye uygundur. Uygulama .NET Core ile oluşturulmuştur, bu nedenle Docker konağına bağlı olarak Linux veya Windows kapsayıcıları üzerinde çalışabilir. Uygulama, her biri kendi verileri olan birden çok otonom mikro hizmetten oluşur. Farklı mikro hizmetler, basit CRUD işlemlerinden daha karmaşık DDD ve CQRS desenlerine kadar farklı yaklaşımlar gösterimi. Mikro hizmetler, HTTP üzerinden ve ileti tabanlı iletişim aracılığıyla bir diğeri ile istemcilerle iletişim kurar. Uygulama, HTTP 'yi standart iletişim protokolü olarak benimsediğinden ve Android, iOS ve Windows platformlarında çalışan ASP.NET Core ve Xamarin mobil uygulamaları içerdiğinden, istemciler için birden çok platformu destekler.
+Gerekli olmasa da, proje bulutta yerel bir uygulama olarak oluşturulduğundan, Azure eShopOnContainers 'ı desteklemeye uygundur. Uygulama .NET ile oluşturulmuştur, bu nedenle Docker konağına bağlı olarak Linux veya Windows kapsayıcıları üzerinde çalışabilir. Uygulama, her biri kendi verileri olan birden çok otonom mikro hizmetten oluşur. Farklı mikro hizmetler, basit CRUD işlemlerinden daha karmaşık DDD ve CQRS desenlerine kadar farklı yaklaşımlar gösterimi. Mikro hizmetler, HTTP üzerinden ve ileti tabanlı iletişim aracılığıyla bir diğeri ile istemcilerle iletişim kurar. Uygulama, HTTP 'yi standart iletişim protokolü olarak benimsediğinden ve Android, iOS ve Windows platformlarında çalışan ASP.NET Core ve Xamarin mobil uygulamaları içerdiğinden, istemciler için birden çok platformu destekler.
 
 Uygulamanın mimarisi Şekil 2-5 ' de gösterilmiştir. Sol tarafta, mobil, geleneksel web ve Web tek sayfalı uygulama (SPA) türleri ile ayrılmış olan istemci uygulamalar vardır. Sağ tarafta, her biri Docker kapsayıcılarında ve Kubernetes kümelerinde barındırılabilen sistem oluşturan sunucu tarafı bileşenleridir. Geleneksel Web uygulaması, sarı renkle gösterilen ASP.NET Core MVC uygulaması tarafından desteklenir. Bu uygulama ve mobil ve Web SPA uygulamaları, tek tek mikro hizmetlerle bir veya daha fazla API ağ geçidi üzerinden iletişim kurar. API ağ geçitleri, her bir ağ geçidinin belirli bir ön uç istemcisini destekleyecek şekilde tasarlandığı anlamına gelen "ön uçlar için arka uçlar" (BFF) düzenine uyar. Tek tek mikro hizmetler, API ağ geçitlerinin sağında listelenir ve hem iş mantığını hem de bazı kalıcılık deposu türlerini içerir. Farklı hizmetler SQL Server veritabanları, Redsıs Cache örnekleri ve MongoDB/CosmosDB mağazalarını kullanır. En sağdaki, mikro hizmetler arasında iletişim kurmak için kullanılan sistemin olay veri yolu.
 
@@ -40,7 +40,7 @@ Geliştirici portalı, geliştiriciler için ana kaynak görevi görür. Gelişt
 
 APıM kullanarak uygulamalar, her biri belirli bir ön uç istemcisi için arka uç sağlayan birkaç farklı hizmet grubunu kullanıma sunabilir. Karmaşık senaryolar için APıM önerilir. Daha basit gereksinimler için, hafif API ağ geçidi Ocelot kullanılabilir. EShopOnContainers uygulaması, basitliği nedeniyle ve uygulamanın kendisi ile aynı uygulama ortamına dağıtılabileceği için Ocelot kullanır. [EShopOnContainers, APıM ve Ocelot hakkında daha fazla bilgi edinin.](../microservices/architect-microservice-container-applications/direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md#azure-api-management)
 
-Uygulamanız AKS kullanıyorsa diğer bir seçenek de, Azure Gateway giriş denetleyicisi 'ni AKS kümeniz içinde Pod olarak dağıtmaktır. Bu, kümenizin bir Azure Application Gateway ile tümleşmesini sağlayarak ağ geçidinin trafiği AKS pods 'ye yükünü dengelemeye olanak tanır. [AKS Için Azure Gateway giriş denetleyicisi hakkında daha fazla bilgi edinin](https://github.com/Azure/application-gateway-kubernetes-ingress).
+Uygulamanız AKS kullanıyorsa diğer bir seçenek de, Azure Gateway giriş denetleyicisi 'ni AKS kümeniz içinde Pod olarak dağıtmaktır. Bu yaklaşım, kümenizin bir Azure Application Gateway ile tümleşmesini sağlayarak ağ geçidinin trafikte trafik yükünü dengelemeye olanak tanır. [AKS Için Azure Gateway giriş denetleyicisi hakkında daha fazla bilgi edinin](https://github.com/Azure/application-gateway-kubernetes-ingress).
 
 ## <a name="data"></a>Veriler
 
@@ -48,7 +48,7 @@ EShopOnContainers tarafından kullanılan çeşitli arka uç Hizmetleri farklı 
 
 Azure SQL Server veritabanı desteği için, tek veritabanlarından gelen ve yüksek düzeyde ölçeklenebilir SQL veritabanı elastik havuzlarına kadar her şeye yönelik ürünleri vardır. Tek tek mikro hizmetler, kendi bireysel SQL Server veritabanlarıyla hızla ve kolayca iletişim kuracak şekilde yapılandırılabilir. Bu veritabanları, ihtiyaçlarına göre her ayrı mikro hizmeti desteklemek için gereken şekilde ölçeklendirilebilir.
 
-EShopOnContainers uygulaması, kullanıcının güncel alışveriş sepetini istekler arasında depolar. Bu, verileri Redsıs önbelleğinde depolayan sepet mikro hizmeti tarafından yönetilir. Geliştirme aşamasında, bu önbellek bir kapsayıcıda dağıtılabilir ve üretim sırasında Redsıs için Azure Cache kullanabilir. Redsıs için Azure önbelleği, Redsıs örnekleri veya kapsayıcılarını kendi kendinize dağıtmanıza ve yönetmeye gerek kalmadan yüksek performans ve güvenilirlik sunan tam olarak yönetilen bir hizmettir.
+EShopOnContainers uygulaması, kullanıcının güncel alışveriş sepetini istekler arasında depolar. Bu boyut, verileri Redsıs önbelleğinde depolayan sepet mikro hizmeti tarafından yönetilir. Geliştirme aşamasında, bu önbellek bir kapsayıcıda dağıtılabilir ve üretim sırasında Redsıs için Azure Cache kullanabilir. Redsıs için Azure önbelleği, Redsıs örnekleri veya kapsayıcılarını kendi kendinize dağıtmanıza ve yönetmeye gerek kalmadan yüksek performans ve güvenilirlik sunan tam olarak yönetilen bir hizmettir.
 
 Konumlar mikro hizmeti, sürekliliği için bir MongoDB NoSQL veritabanı kullanır. Geliştirme sırasında, veritabanı kendi kapsayıcısına dağıtılabilir ve üretimde, hizmet [Azure Cosmos DB MongoDB için API 'sini](/azure/cosmos-db/mongodb-introduction)kullanabilir. Azure Cosmos DB avantajlarından biri, bir SQL API 'SI ve MongoDB, Cassandra, Gremlin ve Azure Tablo depolama dahil yaygın NoSQL API 'Leri dahil olmak üzere birden çok farklı iletişim protokollerinden faydalanabilir. Azure Cosmos DB, kendisini kullanan hizmetlerin ihtiyaçlarını karşılamak üzere ölçeklenebilen bir hizmet olarak tam olarak yönetilen ve genel olarak dağıtılmış bir veritabanı sunmaktadır.
 
@@ -56,7 +56,7 @@ Bulutta yerel uygulamalardaki dağıtılmış veriler, [Bölüm 5](distributed-d
 
 ## <a name="event-bus"></a>Olay veri yolu
 
-Uygulama, farklı hizmetler arasındaki değişiklikleri iletmek için olayları kullanır. Bu işlevsellik çeşitli uygulamalarla uygulanabilir ve yerel olarak eShopOnContainers uygulaması [Kbbitmq](https://www.rabbitmq.com/)kullanır. Azure 'da barındırıldığı zaman, uygulama kendi mesajlaşmasından [Azure Service Bus](/azure/service-bus/) faydalanır. Azure Service Bus, uygulamaların ve hizmetlerin ayrılmış, güvenilir ve zaman uyumsuz bir şekilde birbirleriyle iletişim kurmasına olanak sağlayan, tam olarak yönetilen bir tümleştirme ileti aracısıdır. Azure Service Bus, Yayımcı-abone senaryolarını desteklemek üzere ayrı ayrı kuyrukları ve ayrı *konuları* destekler. EShopOnContainers uygulaması, bir mikro hizmetten gelen iletilerin belirli bir iletiye tepki vermek için gereken diğer mikro hizmetlere dağıtılmasını desteklemek üzere Azure Service Bus ile ilgili konuların faydalanır.
+Uygulama, farklı hizmetler arasındaki değişiklikleri iletmek için olayları kullanır. Bu işlev çeşitli uygulamalarla uygulanabilir ve yerel olarak eShopOnContainers uygulaması [Kbbitmq](https://www.rabbitmq.com/)kullanır. Azure 'da barındırıldığı zaman, uygulama kendi mesajlaşmasından [Azure Service Bus](/azure/service-bus/) faydalanır. Azure Service Bus, uygulamaların ve hizmetlerin ayrılmış, güvenilir ve zaman uyumsuz bir şekilde birbirleriyle iletişim kurmasına olanak sağlayan, tam olarak yönetilen bir tümleştirme ileti aracısıdır. Azure Service Bus, Yayımcı-abone senaryolarını desteklemek üzere ayrı ayrı kuyrukları ve ayrı *konuları* destekler. EShopOnContainers uygulaması, bir mikro hizmetten gelen iletilerin belirli bir iletiye tepki vermek için gereken diğer mikro hizmetlere dağıtılmasını desteklemek üzere Azure Service Bus ile ilgili konuların faydalanır.
 
 ## <a name="resiliency"></a>Dayanıklılık
 

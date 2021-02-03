@@ -4,12 +4,12 @@ description: Linux üzerinde bir paket yöneticisi olmadan .NET SDK ve .NET çal
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 5879d4d66aba8bfa00caadbe3c33d6df0d7da59a
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: 14789587a58c7b9d5ef2c9251ed599ce18a48f24
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970975"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505582"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-manually"></a>.NET SDK veya .NET çalışma zamanını el ile yükleyebilirsiniz
 
@@ -25,11 +25,11 @@ Aşağıdaki tabloda .NET (ve .NET Core) yayınları listelenmektedir:
 
 | ✔️ destekleniyor | ❌ Desteklenen |
 |-------------|---------------|
-| 5.0         | 3,0           |
-| 3,1 (LTS)   | 2.2           |
+| 5.0         | 3.0           |
+| 3,1 (LTS)   | 2,2           |
 | 2,1 (LTS)   | 2.0           |
 |             | 1.1           |
-|             | 1,0           |
+|             | 1.0           |
 
 .NET sürümlerinin yaşam döngüsü hakkında daha fazla bilgi için bkz. [.NET Core ve .NET 5 destek ilkesi](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).
 
@@ -119,20 +119,15 @@ Ardından, indirilen dosyayı ayıklayın ve `export` .NET tarafından kullanıl
 
 Çalışma zamanını ayıklamak ve .NET CLı komutlarını terminalde kullanılabilir hale getirmek için önce bir .NET ikili sürümü indirin. Ardından, bir Terminal açın ve dosyanın kaydedildiği dizinden aşağıdaki komutları çalıştırın. Arşiv dosyası adı, indirdiklerinize bağlı olarak farklı olabilir.
 
-**Çalışma zamanını ayıklamak için aşağıdaki komutu kullanın**:
+**İndirdiğiniz çalışma zamanını veya SDK 'Yı ayıklamak için aşağıdaki komutları kullanın.** `DOTNET_FILE`Değeri dosya adınızla değiştirmeyi unutmayın:
 
 ```bash
-mkdir -p "$HOME/dotnet" && tar zxf aspnetcore-runtime-5.0.0-linux-x64.tar.gz -C "$HOME/dotnet"
+DOTNET_FILE=dotnet-sdk-5.0.102-linux-x64.tar.gz
 export DOTNET_ROOT=$HOME/dotnet
-export PATH=$PATH:$HOME/dotnet
-```
 
-**SDK 'yı ayıklamak için aşağıdaki komutu kullanın**:
+mkdir -p "$DOTNET_ROOT" && tar zxf "$DOTNET_FILE" -C "$DOTNET_ROOT"
 
-```bash
-mkdir -p "$HOME/dotnet" && tar zxf dotnet-sdk-5.0.100-linux-x64.tar.gz -C "$HOME/dotnet"
-export DOTNET_ROOT=$HOME/dotnet
-export PATH=$PATH:$HOME/dotnet
+export PATH=$PATH:$DOTNET_ROOT
 ```
 
 > [!TIP]

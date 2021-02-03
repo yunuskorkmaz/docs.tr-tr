@@ -4,12 +4,12 @@ author: IEvangelist
 description: Microsoft. Extensions. Logging NuGet paketi tarafından sunulan günlüğe kaydetme çerçevesini nasıl kullanacağınızı öğrenin.
 ms.author: dapine
 ms.date: 09/30/2020
-ms.openlocfilehash: 73c16c80e7e000533b880e908b38109d2b1e88fd
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: 80695558cabb741bc25e7fe2650d4a99f9c25c1f
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851731"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505628"
 ---
 # <a name="logging-in-net"></a>.NET oturumu açma
 
@@ -64,7 +64,7 @@ En düşük günlük düzeyi şu şekilde belirtilebilir:
 - Belirli Kategoriler: Örneğin, `Logging:LogLevel:Microsoft:Warning`
 - Tüm sağlayıcılar ve tüm Kategoriler: `Logging:LogLevel:Default:Warning`
 
-Minimum düzeyin altındaki tüm Günlükler ***değil** _:
+Minimum düzeyin altındaki tüm Günlükler şu ***değildir***:
 
 - Sağlayıcıya geçirildi.
 - Günlüğe kaydedilir veya gösterilir.
@@ -73,7 +73,7 @@ Tüm günlükleri gizlemek için [LogLevel. None](xref:Microsoft.Extensions.Logg
 
 Bir sağlayıcı, [günlük kapsamlarını](#log-scopes)destekliyorsa, etkinleştirilip etkinleştirilmeyeceğini `IncludeScopes` belirtir. Daha fazla bilgi için bkz. [günlük kapsamları](#log-scopes)
 
-* File üzerinde aşağıdaki _appsettings.jsyerleşik sağlayıcıların tümü için ayarları içerir:
+Aşağıdaki *appsettings.js* dosyadaki tüm yerleşik sağlayıcıların ayarlarını içerir:
 
 :::code language="json" source="snippets/configuration/worker-service/appsettings.Production.json":::
 
@@ -169,7 +169,7 @@ namespace Example
 }
 ```
 
-`CreateLogger`Sabit bir adla çağırmak, olayların kategoriye göre düzenlenebilmesi için birden çok yöntemde kullanıldığında faydalı olabilir.
+`CreateLogger`Sabit bir adla çağırmak, olayların kategoriye göre düzenlenebilmesi için birden çok sınıfta/türde kullanıldığında yararlı olabilir.
 
 `ILogger<T>` , `CreateLogger` tam nitelikli tür adı ile çağırma ile eşdeğerdir `T` .
 
@@ -179,7 +179,7 @@ Aşağıdaki tabloda <xref:Microsoft.Extensions.Logging.LogLevel> değerler, kol
 
 | LogLevel | Değer | Yöntem | Açıklama |
 |--|--|--|--|
-| [İzleme](xref:Microsoft.Extensions.Logging.LogLevel) | 0 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogTrace%2A> | En ayrıntılı iletileri içerir. Bu iletilerde hassas uygulama verileri bulunabilir. Bu iletiler varsayılan olarak devre dışıdır ve üretimde ***Not** _ etkinleştirilmelidir. |
+| [İzleme](xref:Microsoft.Extensions.Logging.LogLevel) | 0 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogTrace%2A> | En ayrıntılı iletileri içerir. Bu iletilerde hassas uygulama verileri bulunabilir. Bu iletiler varsayılan olarak devre dışıdır ve üretimde ***etkinleştirilmemelidir.*** |
 | [Hata ayıklama](xref:Microsoft.Extensions.Logging.LogLevel) | 1 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogDebug%2A> | Hata ayıklama ve geliştirme için. Yüksek hacimden dolayı üretimde dikkatli olarak kullanın. |
 | [Bilgi](xref:Microsoft.Extensions.Logging.LogLevel) | 2 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogInformation%2A> | Uygulamanın genel akışını izler. Uzun süreli bir değere sahip olabilir. |
 | [Uyarı](xref:Microsoft.Extensions.Logging.LogLevel) | 3 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogWarning%2A> | Olağandışı veya beklenmeyen olaylar için. Genellikle, uygulamanın başarısız olmasına neden olmayan hataları veya koşulları içerir. |
@@ -222,7 +222,7 @@ public async Task<T> GetAsync<T>(string id)
 
 Yukarıdaki kodda, ilk `Log{LogLevel}` parametresi `AppLogEvents.Read` [günlük olay kimliğidir](#log-event-id). İkinci parametre, kalan Yöntem parametreleri tarafından belirtilen bağımsız değişken değerleri için yer tutucuları olan bir ileti şablonudur. Yöntem parametreleri bu makalenin ilerleyen kısımlarında bulunan [ileti şablonu](#log-message-template) bölümünde açıklanmaktadır.
 
-Uygun günlük düzeyini yapılandırın ve `Log{LogLevel}` belirli bir depolama ortamına ne kadar günlük çıkışının yazıldığını denetlemek için doğru yöntemleri çağırın. Örnek:
+Uygun günlük düzeyini yapılandırın ve `Log{LogLevel}` belirli bir depolama ortamına ne kadar günlük çıkışının yazıldığını denetlemek için doğru yöntemleri çağırın. Örneğin:
 
 - Üretimde:
   - Veya düzeylerinde günlüğe kaydetme, `Trace` `Information` yüksek hacimli ayrıntılı günlük iletileri oluşturur. Maliyetleri denetlemek ve veri depolama sınırlarını aşmamak için, `Trace` `Information` iletileri yüksek hacimli ve düşük maliyetli bir veri deposuna günlüğe kaydedin. `Trace`Belirli kategorileri ve sınırlamayı değerlendirin `Information` .
@@ -239,7 +239,7 @@ Aşağıdaki JSON kümeleri `Logging:Console:LogLevel:Microsoft:Information` :
 
 ## <a name="log-event-id"></a>Günlüğe olay KIMLIĞI
 
-Her günlük bir _event tanımlayıcı * belirtebilir, <xref:Microsoft.Extensions.Logging.EventId> `Id` ve isteğe bağlı bir `Name` salt okunur özellikleri olan bir yapıdır. Örnek kaynak kodu, `AppLogEvents` olay kimliklerini tanımlamak için sınıfını kullanır:
+Her günlük bir *olay tanımlayıcı* belirtebilir, <xref:Microsoft.Extensions.Logging.EventId> `Id` ve isteğe bağlı ReadOnly özellikleri olan bir yapıdır `Name` . Örnek kaynak kodu, `AppLogEvents` olay kimliklerini tanımlamak için sınıfını kullanır:
 
 ```csharp
 internal static class AppLogEvents

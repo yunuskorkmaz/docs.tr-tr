@@ -4,12 +4,12 @@ titleSuffix: ''
 description: .NET proje SDK 'Ları hakkında bilgi edinin.
 ms.date: 09/17/2020
 ms.topic: conceptual
-ms.openlocfilehash: 2adb0713fabda142d071425a2affe66cc9d4c172
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: d0eb4291f4def9263f37d2d09f09ef43d40dfbac
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189674"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506402"
 ---
 # <a name="net-project-sdks"></a>.NET projesi SDK 'Ları
 
@@ -19,7 +19,7 @@ ms.locfileid: "98189674"
 
 Aşağıdaki SDK 'lar kullanılabilir:
 
-| ID | Description | Depo|
+| ID | Açıklama | Depo|
 | - | - | - |
 | `Microsoft.NET.Sdk` | .NET SDK | <https://github.com/dotnet/sdk> |
 | `Microsoft.NET.Sdk.Web` | .NET [Web SDK 'sı](/aspnet/core/razor-pages/web-sdk) | <https://github.com/dotnet/sdk> |
@@ -79,7 +79,7 @@ Bu yollarla bir SDK 'ya başvurmak, .NET için proje dosyalarını büyük ölç
 
 SDK ve hedefleri komutu kullanılarak eklendikten sonra, tam genişletilmiş projeyi MSBuild olarak görebilirsiniz `dotnet msbuild -preprocess` . Komutun [ön işlem](/visualstudio/msbuild/msbuild-command-line-reference#preprocess) anahtarı [`dotnet msbuild`](../tools/dotnet-msbuild.md) hangi dosyaların içeri aktarılacağını, kaynaklarını ve derleme için gerçekten projeyi oluşturmadan yapıya katkılarını gösterir.
 
-Projede birden çok hedef çerçeve varsa, komutun sonuçlarını MSBuild özelliği olarak belirterek yalnızca bir çerçeveye odaklayın. Örnek:
+Projede birden çok hedef çerçeve varsa, komutun sonuçlarını MSBuild özelliği olarak belirterek yalnızca bir çerçeveye odaklayın. Örneğin:
 
 `dotnet msbuild -property:TargetFramework=netcoreapp2.0 -preprocess:output.xml`
 
@@ -131,6 +131,30 @@ Hataları gidermek için aşağıdakilerden birini yapın:
   ```
 
   Yalnızca genelleştirmeler 'yi devre dışı bırakırsanız `Compile` , Visual Studio 'daki Çözüm Gezgini, \* öğe olarak da dahil olmak üzere projenin bir parçası olarak. cs öğelerini gösterir `None` . Örtük glob 'yi devre dışı bırakmak için `None` , `EnableDefaultNoneItems` çok olarak ayarlayın `false` .
+
+## <a name="implicit-package-references"></a>Örtük paket başvuruları
+
+.NET Core 1,0-2,2 veya .NET Standard 1,0-2,0 hedeflenirken, .NET SDK belirli *metapaketlerine* örtük başvurular ekler. Metapackage, yalnızca diğer paketlerdeki bağımlılıklardan oluşan çerçeve tabanlı bir pakettir. Meta paketlere, proje dosyanızın [TargetFramework](msbuild-props.md#targetframework) veya [targetçerçeveler](msbuild-props.md#targetframeworks) özelliğinde belirtilen hedef Framework 'ler temelinde örtülü olarak başvurulur.
+
+```xml
+<PropertyGroup>
+  <TargetFramework>netcoreapp2.1</TargetFramework>
+</PropertyGroup>
+```
+
+```xml
+<PropertyGroup>
+  <TargetFrameworks>netcoreapp2.1;net462</TargetFrameworks>
+</PropertyGroup>
+```
+
+Gerekirse, [DisableImplicitFrameworkReferences](msbuild-props.md#disableimplicitframeworkreferences) özelliğini kullanarak örtük paket başvurularını devre dışı bırakabilir ve yalnızca ihtiyacınız olan çerçevelere veya paketlere açık başvurular ekleyebilirsiniz.
+
+Öneri
+
+- .NET Framework, .NET Core 1,0-2,2 veya .NET Standard 1,0-2,0 ' i hedeflerken, `Microsoft.NETCore.App` `NETStandard.Library` proje dosyanızdaki bir öğe aracılığıyla veya metapaketlerine açık bir başvuru eklemeyin `<PackageReference>` . .NET Core 1,0-2,2 ve .NET Standard 1,0-2,0 projeleri için, bu meta paketlere örtük olarak başvurulur. .NET Framework projeleri için, `NETStandard.Library` .NET Standard tabanlı bir NuGet paketi kullanılırken herhangi bir sürümü gerekiyorsa, NuGet bu sürümü otomatik olarak yüklenir.
+- .NET Core 1,0-2,2 ' i hedeflerken çalışma zamanının belirli bir sürümüne ihtiyacınız varsa, `<RuntimeFrameworkVersion>` metapackage 'e başvurmak yerine projenizdeki özelliği kullanın (örneğin, `1.0.4` ). Örneğin, [kendi içinde olan dağıtımlar](../deploying/index.md#publish-self-contained)kullanıyorsanız, 1.0.0 LTS çalışma zamanının belirli bir düzeltme eki sürümüne ihtiyacınız bulunabilir.
+- `NETStandard.Library`.NET Standard 1,0-2,0 ' i hedeflerken metapackage 'ın belirli bir sürümüne ihtiyacınız varsa, `<NetStandardImplicitPackageVersion>` özelliğini kullanabilir ve ihtiyacınız olan sürümü ayarlayabilirsiniz.
 
 ## <a name="build-events"></a>Derleme olayları
 

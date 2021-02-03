@@ -4,12 +4,12 @@ description: Linux 'ta .NET yükleme desteği olan Linux dağıtımları hakkın
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 3834bd7d977bb13e9543d511bee7170161a755ac
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: 27be7151d95810d8cc607564d5c0ce8dfe5b9ed8
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970739"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506285"
 ---
 # <a name="install-net-on-linux"></a>Linux 'ta .NET 'i yükler
 
@@ -29,11 +29,21 @@ En iyi uyumluluk için uzun süreli bir sürüm (LTS) sürümü seçin.
 
 Aşağıdaki .NET sürümleri ❌ artık desteklenmemektedir. Bunlara yönelik İndirilenler hala yayımlandı olarak kalmaya devam eder:
 
-- 3,0
-- 2.2
+- 3.0
+- 2,2
 - 2.0
 
 Bu desteklenmeyen sürümler aşağıdaki bölümlerde ayrıntılandırılmıştır ve bu sürümü yüklemeye çalışırsanız mesafmeniz farklılık gösterebilir.
+
+## <a name="manual-installation"></a>El ile yükleme
+
+Linux 'ta .NET yüklemek için bir paket yöneticisi kullanmak istemiyorsanız, .NET 'i aşağıdaki yollarla yükleyebilirsiniz:
+
+- [Yaslama paketi](linux-snap.md)
+- [_İnstall-DotNet.sh_ ile betikleştirilmiş install](linux-scripted-manual.md#scripted-install)
+- [El ile ikili ayıklama](linux-scripted-manual.md#manual-install)
+
+El ile yükleme yaptığınızda eksik olabilecek gerekli bağımlılıklar hakkında daha fazla bilgi için uygun dağıtım sayfasını kontrol ettiğinizden emin olun.
 
 ## <a name="alpine"></a>Alpine
 

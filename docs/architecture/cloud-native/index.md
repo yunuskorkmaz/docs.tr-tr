@@ -2,19 +2,19 @@
 title: Azure için Cloud Native .NET uygulamaları tasarlama
 description: Kapsayıcılardan, mikro hizmetlerden ve sunucusuz özelliklerden yararlanarak bulutta yerel uygulamalar oluşturmaya yönelik bir kılavuz.
 author: ardalis
-ms.date: 11/10/2020
-ms.openlocfilehash: 673bfef27c3767f68b1c30d4383cee010ba377f0
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.date: 01/19/2021
+ms.openlocfilehash: ad641517f9dc24aed9180cf6a092f4754739bceb
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506655"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506129"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Azure için Cloud Native .NET uygulamaları tasarlama
 
 ![kapak resmi](./media/cover.png)
 
-**SÜRÜM v 1.0**
+**SÜRÜM v 1.0.2**
 
 Kitap güncelleştirmeleri ve topluluk katkılarına yönelik [changelog](https://aka.ms/cn-ebook-changelog) 'u inceleyin.
 
@@ -28,7 +28,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Telif hakkı &copy; 2020 Microsoft Corporation
+Telif hakkı &copy; 2021 Microsoft Corporation
 
 All rights reserved. Bu kitabın içeriğinin herhangi bir bölümü herhangi bir biçimde veya herhangi bir şekilde veya başka bir şekilde herhangi bir şekilde çoğaltılamaz veya herhangi bir şekilde gönderilebilir.
 
@@ -46,27 +46,31 @@ Diğer tüm işaretler ve amblemler kendi sahiplerinin mülkiyetindedir.
 
 Düzenliyor
 
-> **Ramiz Vettor** , sorumlu bulut sistemi MIMARı/IP mimarı- [thinkingincloudnative.com](https://thinkingincloudnative.com/about/), Microsoft
+> **Ramiz Vettor**, sorumlu bulut sistemi MIMARı/IP mimarı- [thinkingincloudnative.com](https://thinkingincloudnative.com/about/), Microsoft
 >
-> **Steve "ardalış" Smith** , yazılım mimarı ve Trainer- [Ardalis.com](https://ardalis.com)
+> **Steve "ardalış" Smith**, yazılım mimarı ve Trainer- [Ardalis.com](https://ardalis.com)
 
 Katılımcılar ve gözden geçirenler:
 
-> **Cesar de La Torre** , sorumlu Program Yöneticisi, .NET ekibi, Microsoft
+> **Cesar de La Torre**, sorumlu Program Yöneticisi, .NET ekibi, Microsoft
 >
-> **Hayvan anıl** , üst düzey Program Yöneticisi, .NET ekibi, Microsoft
+> **Hayvan anıl**, üst düzey Program Yöneticisi, .NET ekibi, Microsoft
 >
-> **Jeremy Liksizlik** , üst düzey Program Yöneticisi, .NET ekibi, Microsoft
+> **Jeremy Liksizlik**, üst düzey Program Yöneticisi, .NET ekibi, Microsoft
 >
-> **Cecil Phillip** , üst düzey bulut Danışmanı, Microsoft
+> **Cecil Phillip**, üst düzey bulut Danışmanı, Microsoft
+>
+> **Sumit Ghosh**, sorumlu danışman Neudesic
 
 Edit
 
-> **Maira Wenzel** , program Yöneticisi, .NET ekibi, Microsoft
+> **Maira Wenzel**, program Yöneticisi, .NET ekibi, Microsoft
+
+> **David çam**, üst düzey içerik Geliştirici, .net belgeleri, Microsoft
 
 ## <a name="version"></a>Sürüm
 
-Bu kılavuz, .NET Core 3,1 sürümüyle aynı "Wave" teknolojileri (Azure ve ek üçüncü taraf teknolojileri) ile ilgili birçok ek güncelleştirme ile birlikte **.net core 3,1** sürümünü kapsayacak şekilde yazılmıştır.
+Bu kılavuz, .NET 5 sürümü ile aynı "Wave" teknolojileri (Azure ve ek üçüncü taraf teknolojileri) ile ilgili birçok ek güncelleştirme ile birlikte **.NET 5** sürümünü kapsayacak şekilde yazılmıştır.
 
 ## <a name="who-should-use-this-guide"></a>Bu kılavuzu kimler kullanmalıdır?
 

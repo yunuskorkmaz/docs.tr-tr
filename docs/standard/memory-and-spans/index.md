@@ -6,22 +6,22 @@ helpviewer_keywords:
 - Span<T>
 - buffers"
 - pipeline processing
-ms.openlocfilehash: 4b0464cc81cf0908a907f8305ea4e35b716c18fb
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b81531d77bae1dce9d6cf58fe1b5439bf79f9e9c
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830668"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506376"
 ---
 # <a name="memory--and-span-related-types"></a>Bellek ve yayılma ile ilgili türler
 
-.NET Core 2,1 ' den itibaren, .NET, rastgele bellek içeren, bitişik ve kesin olarak belirlenmiş bir bölgeyi temsil eden bir dizi ilişkili tür içerir. Bunlar:
+.NET Core 2,1 ' den itibaren, .NET, rastgele bellek içeren, bitişik ve kesin olarak belirlenmiş bir bölgeyi temsil eden bir dizi ilişkili tür içerir. Bu modüller şunlardır:
 
 - <xref:System.Span%601?displayProperty=nameWithType>, belleğin bitişik bir bölgesine erişmek için kullanılan bir tür. Bir <xref:System.Span%601> örnek türünde bir dizi, `T` <xref:System.String> ,, [stackalloc](../../csharp/language-reference/operators/stackalloc.md)ile ayrılmış bir arabellek veya yönetilmeyen bellek işaretçisi tarafından yönetilebilir. Yığına ayrılması gerektiğinden, bir dizi kısıtlamaya sahiptir. Örneğin, bir sınıftaki bir alan türünde olamaz <xref:System.Span%601> , ya da zaman uyumsuz işlemlerde dağıtılabilir.
 
 - <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, yapının sabit bir sürümüdür <xref:System.Span%601> .
 
-- <xref:System.Memory%601?displayProperty=nameWithType>, yığın yerine yönetilen yığında ayrılan belleğin bitişik bir bölgesi. Bir <xref:System.Memory%601> örnek, veya türünde bir dizi tarafından yönetilebilir `T` <xref:System.String> . Yönetilen yığında depolanabileceğinden, <xref:System.Memory%601> kısıtlamaları yoktur <xref:System.Span%601> .
+- <xref:System.Memory%601?displayProperty=nameWithType>, bitişik bellek bölgesi üzerinde bir sarmalayıcı. Bir <xref:System.Memory%601> örnek `T` , bir dizi türü veya bir <xref:System.String> veya bir bellek Yöneticisi tarafından yönetilebilir. Yönetilen yığında depolanabileceği <xref:System.Memory%601> için, kısıtlamaları yoktur <xref:System.Span%601> .
 
 - <xref:System.ReadOnlyMemory%601?displayProperty=nameWithType>, yapının sabit bir sürümüdür <xref:System.Memory%601> .
 
@@ -34,6 +34,8 @@ ms.locfileid: "94830668"
 - <xref:System.ArraySegment%601>, belirli bir dizinden başlayarak belirli sayıda dizi öğesi için sarmalayıcı.
 
 - <xref:System.MemoryExtensions?displayProperty=nameWithType>, dizeler, diziler ve dizi segmentlerini bloklara dönüştürmek için uzantı yöntemleri koleksiyonu <xref:System.Memory%601> .
+
+<xref:System.Span%601?displayProperty=nameWithType>, <xref:System.Memory%601?displayProperty=nameWithType> , ve salt okunur karşılıkları, bellek kopyalamayı veya yönetilen yığında gereken süreden daha fazlasını ayırmayı önlemek için bir algoritma oluşturulmasına olanak tanımak üzere tasarlanmıştır. Bunların oluşturulması (ya da `Slice` oluşturucuları aracılığıyla), temeldeki arabelleklerin yinelenmesiyle ilgili değildir: yalnızca Sarmalanan belleğin "görünümünü" temsil eden ilgili başvurular ve uzaklıklar güncelleştirilir.
 
 > [!NOTE]
 > Daha önceki çerçeveler için <xref:System.Span%601> ve <xref:System.Memory%601> [System. Memory NuGet paketinde](https://www.nuget.org/packages/System.Memory/)kullanılabilir.
