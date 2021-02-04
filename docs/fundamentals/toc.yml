@@ -1296,6 +1296,8 @@ items:
                 href: ../core/dependency-loading/loading-resources.md
               - name: Yönetilmeyen kitaplıkları yükleme
                 href: ../core/dependency-loading/loading-unmanaged.md
+              - name: Ayrıntılı derleme yükleme bilgilerini topla
+                href: ../core/dependency-loading/collect-details.md
           - name: Öğreticiler
             items:
               - name: Eklentilerle bir .NET uygulaması oluşturma
@@ -2133,6 +2135,8 @@ items:
             href: ../standard/native-interop/customize-struct-marshaling.md
           - name: Parametre hazırlamayı özelleştirme
             href: ../standard/native-interop/customize-parameter-marshaling.md
+          - name: Platformlar arası P/Invoke
+            href: ../standard/native-interop/cross-platform.md
           - name: Birlikte çalışma kılavuzu
             href: ../standard/native-interop/best-practices.md
           - name: Karakter kümesi ve hazırlama
