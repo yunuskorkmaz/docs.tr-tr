@@ -4,12 +4,12 @@ description: .NET CLı kullanarak .NET kitaplıkları oluşturmayı öğrenin. �
 author: cartermp
 ms.topic: how-to
 ms.date: 12/14/2020
-ms.openlocfilehash: 6f4c1feac7630a6a0250e4b0b39ef01152f5a400
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: 76d08007e191fe9090f3f14c906a40e84e37bd19
+ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633682"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99548415"
 ---
 # <a name="develop-libraries-with-the-net-cli"></a>.NET CLı ile Kitaplıklar geliştirme
 
@@ -17,11 +17,11 @@ Bu makalede .NET CLı kullanılarak .NET için kitaplıkların nasıl yazılaca�
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Makinenizde [.NET SDK ve CLI](https://dotnet.microsoft.com/download) yüklü olmalıdır.
+Makinenizde [.NET SDK](https://dotnet.microsoft.com/download) 'nın yüklü olması gerekir.
 
-Bu belgenin .NET Framework sürümleriyle ilgili bölümlerinde, bir Windows makinesine [.NET Framework](https://dotnet.microsoft.com) yüklenmesi gerekir.
+Bu belgenin .NET Framework sürümleriyle ilgili bölümlerinde, bir Windows makinesine [.NET Framework](https://dotnet.microsoft.com/download/dotnet-framework) yüklenmesi gerekir.
 
-Ayrıca, eski .NET Framework hedeflerini desteklemek istiyorsanız, [.net indirme arşivleri sayfasından](https://dotnet.microsoft.com/download/archives)hedefleme paketlerini veya geliştirici paketlerini yüklemeniz gerekir. Bu tabloya başvurun:
+Ayrıca, eski .NET Framework hedeflerini desteklemek istiyorsanız, [.NET Framework İndirmeleri sayfasından](https://dotnet.microsoft.com/download/dotnet-framework)hedefleme paketlerini veya geliştirici paketlerini yüklemeniz gerekir. Bu tabloya başvurun:
 
 | .NET Framework sürümü | İndirileceği                                       |
 | ---------------------- | ------------------------------------------------------ |

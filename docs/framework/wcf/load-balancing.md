@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-ms.openlocfilehash: ccafce51cadba588dc6c4e8fc8b476f3cd8ee699
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ccb915c33be217d2a8d00a54c5bd57384286140f
+ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96262716"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99548103"
 ---
 # <a name="load-balancing"></a>YükDengeleme
 
@@ -85,7 +85,9 @@ Windows Communication Foundation (WCF) uygulamalarının kapasitesini artırman�
 
  Hem <xref:System.ServiceModel.WSHttpBinding> hem de, <xref:System.ServiceModel.WSDualHttpBinding> varsayılan bağlama yapılandırmasında çeşitli değişiklikler YAPıLDıĞıNDAN, HTTP Yük Dengeleme teknikleri kullanılarak yük dengelemesi yapılabilir.  
   
-- Güvenlik bağlamı kurulumunu devre dışı bırak: Bu, üzerinde özelliği ayarı ile gerçekleştirilebilir <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> <xref:System.ServiceModel.WSHttpBinding> `false` . Alternatif olarak, güvenlik oturumları gerekliyse, [Güvenli Oturumlar](./feature-details/secure-sessions.md) konusunda açıklandığı gibi durum bilgisi olan güvenlik oturumları kullanmak mümkündür. Durum bilgisi olan güvenlik oturumları, güvenlik oturumunun tüm durumu koruma güvenlik belirtecinin bir parçası olarak her bir istekle birlikte aktarılcağından hizmetin durum bilgisiz kalmasına izin vermez. Durum bilgisi olan bir güvenlik oturumunu etkinleştirmek için, <xref:System.ServiceModel.Channels.CustomBinding> <xref:System.ServiceModel.Channels.Binding> gerekli yapılandırma ayarları açık <xref:System.ServiceModel.WSHttpBinding> ve <xref:System.ServiceModel.WSDualHttpBinding> sistem tarafından sağlanmış olarak, bir veya Kullanıcı tanımlı olarak kullanılması gerektiğini unutmayın.  
+- Güvenlik bağlamı kurulmasını devre dışı bırakma veya durum bilgisi olan güvenlik oturumlarını kullanma. Üzerinde özelliği olarak ayarlanarak güvenlik bağlamı kurulması kapatılabilir <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> <xref:System.ServiceModel.WSHttpBinding> `false` . Kullanıyorsanız <xref:System.ServiceModel.WSDualHttpBinding> veya güvenlik oturumları gerekliyse, [güvenli oturumlarda](./feature-details/secure-sessions.md)açıklandığı gibi durum bilgisi olan güvenlik oturumları kullanmak mümkündür. Durum bilgisi olan güvenlik oturumları, güvenlik oturumunun tüm durumu koruma güvenlik belirtecinin bir parçası olarak her bir istekle birlikte aktarılcağından hizmetin durum bilgisiz kalmasına imkan tanır. Durum bilgisi olan bir güvenlik oturumunu etkinleştirmek için, <xref:System.ServiceModel.Channels.CustomBinding> <xref:System.ServiceModel.Channels.Binding> gerekli yapılandırma ayarları sistem tarafından belirtilen ve üzerinde gösterilmediğinden, veya Kullanıcı tanımlı ' yı kullanmanız gerekir <xref:System.ServiceModel.WSHttpBinding> <xref:System.ServiceModel.WSDualHttpBinding> .
+
+- Güvenlik bağlamı 'nı devre dışı bırakırsanız, hizmet kimlik bilgisi anlaşmasını de kapatmanız gerekir. Devre dışı bırakmak için <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential> özelliğini <xref:System.ServiceModel.WSHttpBinding> olarak ayarlayın `false` . Hizmet kimlik bilgisi anlaşmasını devre dışı bırakmak için, istemci üzerinde uç nokta kimliğini açıkça belirtmeniz gerekebilir.
   
 - Güvenilir oturumlar kullanmayın. Bu özellik varsayılan olarak kapalıdır.  
   
