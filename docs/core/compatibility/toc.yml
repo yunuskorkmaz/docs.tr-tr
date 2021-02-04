@@ -28,6 +28,8 @@
                   href: windows-forms/6.0/notifyicon-text-max-text-length-increased.md
                 - name: TableLayoutSettings özellikleri InvalidEnumArgumentException oluşturuyor
                   href: windows-forms/6.0/tablelayoutsettings-apis-throw-invalidenumargumentexception.md
+                - name: 'TreeNodeCollection. Item, düğüm başka bir yere atanırsa özel durum oluşturur'
+                  href: windows-forms/6.0/treenodecollection-item-throws-argumentexception.md
         - name: .NET 5.0
           items:
             - name: Genel Bakış
@@ -260,6 +262,8 @@
                   href: serialization/5.0/options-honored-when-serializing-key-value-pairs.md
             - name: Windows Forms
               items:
+                - name: Yerel kod Windows Forms nesnelere erişemiyor
+                  href: windows-forms/5.0/winforms-objects-not-accessible-from-native-code.md
                 - name: OutputType WinExe olarak ayarlandı
                   href: windows-forms/5.0/automatically-infer-winexe-output-type.md
                 - name: DataGridView özel yazı tiplerini sıfırlamıyor
@@ -566,8 +570,12 @@
                   href: windows-forms/6.0/notifyicon-text-max-text-length-increased.md
                 - name: TableLayoutSettings özellikleri InvalidEnumArgumentException oluşturuyor
                   href: windows-forms/6.0/tablelayoutsettings-apis-throw-invalidenumargumentexception.md
+                - name: 'TreeNodeCollection. Item, düğüm başka bir yere atanırsa özel durum oluşturur'
+                  href: windows-forms/6.0/treenodecollection-item-throws-argumentexception.md
             - name: .NET 5.0
               items:
+                - name: Yerel kod Windows Forms nesnelere erişemiyor
+                  href: windows-forms/5.0/winforms-objects-not-accessible-from-native-code.md
                 - name: OutputType WinExe olarak ayarlandı
                   href: windows-forms/5.0/automatically-infer-winexe-output-type.md
                 - name: DataGridView özel yazı tiplerini sıfırlamıyor
