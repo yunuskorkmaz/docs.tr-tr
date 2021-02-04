@@ -3,12 +3,12 @@ title: Dayanıklı iletişim
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Esnek Iletişim
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 18b26223634efc5c05f680d0cbb7c8cbc2490a59
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 52f08c066767175c699f5a058267cb42d2b1d4aa
+ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166046"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99547700"
 ---
 # <a name="resilient-communications"></a>Dayanıklı iletişimler
 
@@ -30,7 +30,7 @@ Bu sorunları farklı kitaplıklar ve çerçevelerle ele alabilirsiniz, ancak uy
 
 ## <a name="service-mesh"></a>Hizmet ağı
 
-Daha iyi bir yaklaşım, *hizmet ağı*olan gelişen bir teknolojidir. [Hizmet ağı](https://www.nginx.com/blog/what-is-a-service-mesh/) , hizmet iletişimini ve yukarıda bahsedilen diğer zorlukları işlemek için yerleşik yeteneklere sahip yapılandırılabilir bir altyapı katmanıdır. Bu sorun, bir hizmet proxy 'sine taşıyarak bu kaygıları ayırır. Ara sunucu, iş kodu yalıtımı sağlamak için ayrı bir işleme ( [sepet](/azure/architecture/patterns/sidecar)olarak adlandırılır) dağıtılır. Ancak, sepet hizmeti ile birlikte oluşturulur ve yaşam döngüsünü paylaşır. Şekil 6-7, bu senaryoyu gösterir.
+Daha iyi bir yaklaşım, *hizmet ağı* olan gelişen bir teknolojidir. [Hizmet ağı](https://www.nginx.com/blog/what-is-a-service-mesh/) , hizmet iletişimini ve yukarıda bahsedilen diğer zorlukları işlemek için yerleşik yeteneklere sahip yapılandırılabilir bir altyapı katmanıdır. Bu sorun, bir hizmet proxy 'sine taşıyarak bu kaygıları ayırır. Ara sunucu, iş kodu yalıtımı sağlamak için ayrı bir işleme ( [sepet](/azure/architecture/patterns/sidecar)olarak adlandırılır) dağıtılır. Ancak, sepet hizmeti ile birlikte oluşturulur ve yaşam döngüsünü paylaşır. Şekil 6-7, bu senaryoyu gösterir.
 
 ![Yan otomobil ile hizmet ağı](./media/service-mesh-with-side-car.png)
 
@@ -79,7 +79,7 @@ Azure bulut, Azure Kubernetes Hizmetleri içinde bu şekilde çalışan ve doğr
 
 ### <a name="references"></a>Başvurular
 
-- [Polly](http://www.thepollyproject.org/)
+- [Polly](https://dotnetfoundation.org/projects/polly)
 
 - [Yeniden deneme biçimi](/azure/architecture/patterns/retry)
 
@@ -97,7 +97,7 @@ Azure bulut, Azure Kubernetes Hizmetleri içinde bu şekilde çalışan ve doğr
 
 - [Otomatik ölçeklendirme kılavuzu](/azure/architecture/best-practices/auto-scaling)
 
-- [İstio dili](https://istio.io/docs/concepts/what-is-istio/)
+- [Istio](https://istio.io/docs/concepts/what-is-istio/)
 
 - [Envoy proxy](https://www.envoyproxy.io/docs/envoy/latest/intro/what_is_envoy)
 

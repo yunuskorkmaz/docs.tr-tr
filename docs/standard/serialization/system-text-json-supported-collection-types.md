@@ -1,7 +1,7 @@
 ---
 title: İçinde desteklenen koleksiyon türleri System.Text.Json
 description: Ad alanındaki API 'Ler tarafından serileştirme için hangi koleksiyon türlerinin desteklendiğini öğrenin System.Text.Json .
-ms.date: 01/06/2021
+ms.date: 02/01/2021
 no-loc:
 - System.Text.Json
 ms.topic: reference
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 48033689e844dd29c999395255b5a1565fa2996e
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: 5a5016c70e86124510a4778aafb9fb14b1890add
+ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970995"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99547661"
 ---
-# <a name="supported-collection-types-in-no-locsystemtextjson"></a>İçinde desteklenen koleksiyon türleri System.Text.Json
+# <a name="supported-collection-types-in-systemtextjson"></a>İçinde desteklenen koleksiyon türleri System.Text.Json
 
 Bu makale serileştirme ve seri durumundan çıkarma için hangi koleksiyonların desteklendiği hakkında genel bakış sunar. <xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType> , serileştirme için bir koleksiyon türünü destekler:
 
@@ -30,6 +30,14 @@ Seri hale getirici <xref:System.Collections.IEnumerable.GetEnumerator> yöntemin
 Seri durumdan çıkarma daha karmaşıktır ve bazı koleksiyon türleri için desteklenmez.
 
 Aşağıdaki bölümler ad alanına göre düzenlenmiştir ve serileştirme ve seri durumdan çıkarma için hangi türlerin desteklendiğini gösterir.
+
+## <a name="systemarray-namespace"></a>System. Array ad alanı
+
+| Tür                                                                                            | Serileştirme | Seri |
+|-------------------------------------------------------------------------------------------------|---------------|-----------------|
+| [Tek boyutlu diziler](../../csharp/programming-guide/arrays/single-dimensional-arrays.md) | ✔️           | ✔️              |
+| [Çok boyutlu diziler](../../csharp/programming-guide/arrays/multidimensional-arrays.md)    | ❌           | ❌              |
+| [Sivri diziler](../../csharp/programming-guide/arrays/jagged-arrays.md)                         | ✔️           | ✔️              |
 
 ## <a name="systemcollections-namespace"></a>System. Collections ad alanı
 

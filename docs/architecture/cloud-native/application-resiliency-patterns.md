@@ -3,18 +3,18 @@ title: Uygulama dayanıklılığı desenleri
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Uygulama dayanıklılığı desenleri
 author: robvet
 ms.date: 01/19/2021
-ms.openlocfilehash: 9a59a7d93b61b0dea11680f6caf0bd3b68a0f853
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: 655df16ef58f1deb2d2f4d0487c47658499f2108
+ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99505927"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99547726"
 ---
 # <a name="application-resiliency-patterns"></a>Uygulama dayanıklılığı desenleri
 
 İlk savunma hattı uygulama dayanıklılığı ' dır.
 
-Kendi dayanıklılık çatısını yazarken önemli ölçüde yatırım yapabilirsiniz, ancak bu tür ürünler zaten var. [Polly](http://www.thepollyproject.org/) , geliştiricilerin dayanıklılık ilkelerini akıcı ve iş parçacığı açısından güvenli bir şekilde ifade etmesine olanak tanıyan kapsamlı bir .net esnekliği ve geçici hata işleme kitaplığıdır. .NET Framework veya .NET 5 ile oluşturulan uygulamaları Polly hedefler. Aşağıdaki tabloda `policies` , Polly kitaplığı 'nda bulunan olarak adlandırılan dayanıklılık özellikleri açıklanmaktadır. Bunlar ayrı ayrı uygulanabilir veya birlikte gruplandırılabilir.
+Kendi dayanıklılık çatısını yazarken önemli ölçüde yatırım yapabilirsiniz, ancak bu tür ürünler zaten var. [Polly](https://dotnetfoundation.org/projects/polly) , geliştiricilerin dayanıklılık ilkelerini akıcı ve iş parçacığı açısından güvenli bir şekilde ifade etmesine olanak tanıyan kapsamlı bir .net esnekliği ve geçici hata işleme kitaplığıdır. .NET Framework veya .NET 5 ile oluşturulan uygulamaları Polly hedefler. Aşağıdaki tabloda `policies` , Polly kitaplığı 'nda bulunan olarak adlandırılan dayanıklılık özellikleri açıklanmaktadır. Bunlar ayrı ayrı uygulanabilir veya birlikte gruplandırılabilir.
 
 | İlke | Deneyim |
 | :-------- | :-------- |
