@@ -1,7 +1,7 @@
 ---
 title: Kayan nokta sayısal türleri-C# başvurusu
 description: 'Yerleşik C# kayan nokta türleri hakkında bilgi edinin: float, Double ve Decimal'
-ms.date: 02/10/2020
+ms.date: 02/04/2021
 f1_keywords:
 - float
 - float_CSharpKeyword
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: a1142d1aa04003ae1942902672cfc7a05edc99c0
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: a086e8de60bbb63408c3f2cd557feb36c4baa0f8
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662673"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585760"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Kayan nokta sayısal türleri (C# Başvurusu)
 
@@ -48,7 +48,7 @@ System.Double b = 12.3;
 
 Her kayan nokta türünün varsayılan değeri sıfırdır `0` . Kayan nokta türlerinin her biri, `MinValue` `MaxValue` Bu türün minimum ve maksimum sonlu değerini sağlayan ve sabitleridir. `float`Ve `double` türleri ayrıca, sayı olmayan ve sonsuz değerleri temsil eden sabitleri de sağlar. Örneğin, `double` türü aşağıdaki sabitleri sağlar: <xref:System.Double.NaN?displayProperty=nameWithType> , <xref:System.Double.NegativeInfinity?displayProperty=nameWithType> ve <xref:System.Double.PositiveInfinity?displayProperty=nameWithType> .
 
-`decimal`Türün hem hem de daha küçük bir aralığı olduğundan `float` `double` , bu, mali ve parasal hesaplamalar için uygundur.
+`decimal`Gerekli duyarlık derecesi, ondalık noktanın sağ tarafındaki basamak sayısına göre belirleniyorsa, tür uygundur. Bu sayılar genellikle finansal uygulamalarda, para birimi miktarları (örneğin, $1,00), faiz oranları (örneğin,% 2,625) için kullanılır. Yalnızca bir ondalık basamak için kesin olan sayılar, tür tarafından daha doğru işlenir `decimal` : 0,1, örneğin, tam olarak 0,1 ' i `decimal` `double` temsil eden bir veya örnek olarak, bir örnek tarafından tam olarak temsil edilebilir `float` . Sayısal türlerde bu fark nedeniyle, `double` veya ondalık veriler için kullandığınızda aritmetik hesaplamalarda beklenmedik yuvarlama hataları oluşabilir `float` . `double` `decimal` Performansı en iyi duruma getirmeye kıyasla bunun yerine kullanabilirsiniz. Ancak, performansla ilgili herhangi bir farklılık, en fazla hesaplama yoğun uygulamalar tarafından açıklanabilecek. Kaçınmanın olası bir nedeni `decimal` , depolama gereksinimlerini en aza indirmektir. Örneğin, [ml.net](../../../machine-learning/how-does-mldotnet-work.md) , `float` 4 bayt ve 16 bayt arasındaki fark çok büyük veri kümeleri için eklediği için kullanılır. Daha fazla bilgi için bkz. <xref:System.Decimal?displayProperty=nameWithType>.
 
 Bir ifadede [integral](integral-numeric-types.md) türlerini ve `float` ve türlerini karıştırabilirsiniz `double` . Bu durumda, integral türler örtük olarak kayan nokta türlerinden birine dönüştürülür ve gerekirse `float` tür örtülü olarak dönüştürülür `double` . İfade, aşağıdaki gibi değerlendirilir:
 
@@ -72,9 +72,9 @@ Kayan noktalı bir değeri biçimlendirmek için [Standart sayısal biçim dizel
 
 Gerçek bir sabit değerin türü, soneki tarafından aşağıdaki şekilde belirlenir:
 
-- Sonek olmadan veya veya sonekine sahip sabit `d` değer `D` türü`double`
-- Veya sonekine sahip sabit `f` değer `F` tür`float`
-- Veya sonekine sahip sabit `m` değer `M` tür`decimal`
+- Sonek olmadan veya veya sonekine sahip sabit `d` değer `D` türü `double`
+- Veya sonekine sahip sabit `f` değer `F` tür `float`
+- Veya sonekine sahip sabit `m` değer `M` tür `decimal`
 
 Aşağıdaki kod, her birine bir örnek gösterir:
 
@@ -90,7 +90,7 @@ decimal myMoney = 3_000.5m;
 myMoney = 400.75M;
 ```
 
-Yukarıdaki örnek ayrıca `_` C# 7,0 ile başlayarak desteklenen bir *rakam ayırıcısı*olarak kullanımını gösterir. Rakam ayırıcısını her türlü sayısal sabit değer ile kullanabilirsiniz.
+Yukarıdaki örnek ayrıca `_` C# 7,0 ile başlayarak desteklenen bir *rakam ayırıcısı* olarak kullanımını gösterir. Rakam ayırıcısını her türlü sayısal sabit değer ile kullanabilirsiniz.
 
 Ayrıca, aşağıdaki örnekte gösterildiği gibi bilimsel gösterim kullanabilirsiniz, yani gerçek bir sabit değerin üs bir kısmını belirtebilirsiniz:
 

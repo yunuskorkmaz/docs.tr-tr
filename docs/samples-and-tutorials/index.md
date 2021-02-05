@@ -4,12 +4,12 @@ description: .NET Core, ASP.NET Core ve .NET hakkında bilgi edinmenize yardımc
 author: BillWagner
 ms.author: wiwagn
 ms.date: 02/01/2021
-ms.openlocfilehash: 3f54221f0b22b2ee24750c01885e39a6eec39e0e
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: c7bbb99eeb4e00771cd1e4a3ab33b7690620b194
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99506415"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585734"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET örnekleri ve öğreticiler
 
@@ -33,7 +33,7 @@ Bu öğreticide, Visual Studio Code ve .NET CLı kullanarak bir .NET konsol uygu
 
 Bu öğreticide, Visual Studio Code ve .NET CLı kullanarak .NET için kitaplıkların nasıl yazılacağı gösterilmektedir. Proje oluşturma, derleme ve çalıştırma gibi proje görevleri .NET CLı kullanılarak yapılır.
 
-Moree .NET öğreticileri için bkz. [.net ve .NET SDK araçları hakkında bilgi edinin](../core/tutorials/index.md)
+Daha fazla .NET öğreticilerinde bkz. [.net ve .NET SDK araçları hakkında bilgi edinin](../core/tutorials/index.md).
 
 ## <a name="aspnet-core"></a>ASP.NET Core
 

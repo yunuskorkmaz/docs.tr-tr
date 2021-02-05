@@ -3,22 +3,24 @@ title: Koleksiyonlarla çalışma-C# öğreticisine giriş
 description: Bu öğreticide liste koleksiyonunu inceleyerek C# öğrenin.
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: e2282df21420630634911e07f4fb3b94f34a792b
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 4ecd2cfebddf460d3766d708d2f6740bd1c6e29a
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414689"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585669"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>Genel liste türünü kullanarak veri koleksiyonlarını yönetmeyi öğrenin
 
 Bu giriş öğreticisi, C# diline ve sınıfının temel bilgilerine bir giriş sağlar <xref:System.Collections.Generic.List%601> .
 
-Bu öğreticide, geliştirme için kullanabileceğiniz bir makineniz olması beklenir. [10 dakika içinde Merhaba Dünya](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) .NET öğreticisi, Windows, Linux veya MacOS 'ta yerel geliştirme ortamınızı ayarlamaya yönelik yönergeler içerir. Kullanacağınız komutlara hızlı bir genel bakış, daha fazla ayrıntı bağlantılarıyla birlikte [geliştirme araçları hakkında bilgi sahibi](local-environment.md)olmak için kullanılır.
+## <a name="prerequisites"></a>Önkoşullar
+
+Öğretici, yerel geliştirme için ayarlanmış bir makineniz olmasını bekler. Windows, Linux veya macOS 'ta, uygulamaları oluşturmak, derlemek ve çalıştırmak için .NET CLı kullanabilirsiniz. Windows 'ta, Visual Studio 2019 ' i kullanabilirsiniz. Kurulum yönergeleri için bkz. [Yerel ortamınızı ayarlama](local-environment.md).
 
 ## <a name="a-basic-list-example"></a>Temel liste örneği
 
-*List-öğreticisi*adlı bir dizin oluşturun. Geçerli dizini oluşturun ve çalıştırın `dotnet new console` .
+*List-öğreticisi* adlı bir dizin oluşturun. Geçerli dizini oluşturun ve çalıştırın `dotnet new console` .
 
 En sevdiğiniz düzenleyicide *program.cs* açın ve mevcut kodu aşağıdaki kodla değiştirin:
 
@@ -201,7 +203,7 @@ Aşağıdakileri yeni yönteminizin altına ekleyin `Main` :
 var fibonacciNumbers = new List<int> {1, 1};
 ```
 
-Bu, tamsayıların bir listesini oluşturur ve ilk iki tamsayının değerini 1 değerine ayarlar. Bunlar bir *Fibonaccı sırasının*ilk iki değeri, bir dizi sayı. Her bir sonraki Fibonaccı numarası, önceki iki sayının toplamı alınarak bulunur. Şu kodu ekleyin:
+Bu, tamsayıların bir listesini oluşturur ve ilk iki tamsayının değerini 1 değerine ayarlar. Bunlar bir *Fibonaccı sırasının* ilk iki değeri, bir dizi sayı. Her bir sonraki Fibonaccı numarası, önceki iki sayının toplamı alınarak bulunur. Şu kodu ekleyin:
 
 ```csharp
 var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];

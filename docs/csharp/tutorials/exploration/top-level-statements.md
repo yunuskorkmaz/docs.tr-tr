@@ -2,12 +2,12 @@
 title: Üst düzey deyimler-C# öğreticisi
 description: Bu öğreticide, fikirlerinizi araştırırken en üst düzey deyimlerinizi deneyip kanıtlarken kavram kanıtlarını nasıl kullanabileceğiniz gösterilmektedir
 ms.date: 10/28/2020
-ms.openlocfilehash: 5e5dc6cec382baa69ac8cb4625684315bb2cd5e0
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: c56a40e7a9715ff0265a897c494b457a32e52df2
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282265"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585630"
 ---
 # <a name="tutorial-explore-ideas-using-top-level-statements-to-build-code-as-you-learn"></a>Öğretici: öğreniniz sırasında kod derlemek için en üst düzey deyimleri kullanarak fikirleri araştırma
 
@@ -84,7 +84,7 @@ System.String[]
 
 Soruyu konsola yazmak için, bağımsız değişkenleri numaralandırın ve bir boşluk ile ayırmanız gerekir. `WriteLine`Çağrıyı aşağıdaki kodla değiştirin:
 
-:::code language="csharp" source="snippets/top-level-statements/Program.cs" ID="EchoInput":::
+:::code language="csharp" source="snippets/top-level-statements/ProgramSnippets.cs" ID="EchoInput":::
 
 Artık programı çalıştırdığınızda, soruyu bir bağımsız değişken dizesi olarak doğru şekilde görüntüler.
 
@@ -92,11 +92,11 @@ Artık programı çalıştırdığınızda, soruyu bir bağımsız değişken di
 
 Soruyu yankıladıktan sonra rastgele yanıtı oluşturmak için kodu ekleyebilirsiniz. Olası bir yanıt dizisi ekleyerek başlayın:
 
-:::code language="csharp" source="snippets/top-level-statements/Program.cs" ID="Answers":::
+:::code language="csharp" source="snippets/top-level-statements/ProgramSnippets.cs" ID="Answers":::
 
 Bu dizide, komite olmayan ve altı negatif olan 12 yanıt vardır. Sonra, diziden rastgele bir yanıt oluşturmak ve bu yanıtı göstermek için aşağıdaki kodu ekleyin:
 
-:::code language="csharp" source="snippets/top-level-statements/Program.cs" ID="GenerateAnswer":::
+:::code language="csharp" source="snippets/top-level-statements/ProgramSnippets.cs" ID="GenerateAnswer":::
 
 Sonuçları görmek için uygulamayı yeniden çalıştırabilirsiniz. Aşağıdaki çıktıya benzer bir şey görmeniz gerekir:
 
@@ -212,7 +212,11 @@ Son olarak, bir yinelemeyi kaldırmak için animasyon kodunu temizleyebilirsiniz
 
 :::code language="csharp" source="snippets/top-level-statements/Utilities.cs" ID="Animation":::
 
-Artık bir uygulamanız vardır ve daha sonra kullanmak üzere yeniden kullanılabilir parçalar yeniden düzenlenmiş.
+Artık bir uygulamanız vardır ve daha sonra kullanmak üzere yeniden kullanılabilir parçalar yeniden düzenlenmiş. Ana programın tamamlanmış sürümünde aşağıda gösterildiği gibi en üst düzey deyimlerden yeni yardımcı program yöntemini çağırabilirsiniz:
+
+:::code language="csharp" source="snippets/top-level-statements/Program.cs":::
+
+Bu, çağrısını ekler `Utilities.ShowConsoleAnimation` ve ek bir `using` ifade ekler.
 
 ## <a name="summary"></a>Özet
 

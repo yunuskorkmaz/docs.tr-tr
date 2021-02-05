@@ -1,50 +1,58 @@
 ---
-title: C# ile giriş - geliştirme araçlarını tanıma
-description: Bu makalede, makinenizde C# ve .NET Uygulamaları geliştirmek için kullanacağınız araçlara temel bir giriş sağlanıyor.
-ms.date: 10/23/2018
-ms.openlocfilehash: 0b1df9e733eef92b1eeb0a7f3ba3ba49602f219d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+title: C# ' ye giriş-geliştirme araçları hakkında bilgi sahibi olun
+description: Bu makalede, makinenizde C# ve .NET uygulamaları geliştirmek için kullanacağınız araçlara temel bir giriş sunulmaktadır.
+ms.date: 02/02/2021
+ms.openlocfilehash: d5fbd23679fc11f4e4c207c59858a71ab753c038
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156577"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585331"
 ---
-# <a name="become-familiar-with-the-net-development-tools"></a>.NET geliştirme araçlarını tanıma
+# <a name="set-up-your-local-environment"></a>Yerel ortamınızı ayarlama
 
-Makinenizde bir öğretici çalıştırmanın ilk adımı bir geliştirme ortamı ayarlamaktır.
-.NET öğretici [Hello World 10 dakika içinde](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) Windows, Linux veya macOS'ta yerel geliştirme ortamınızı ayarlama talimatları na sahiptir.
+Makinenizde bir öğretici çalıştırmanın ilk adımı bir geliştirme ortamı kurmak. Aşağıdaki seçeneklerden birini belirleyin:
 
-Alternatif olarak, [.NET Core SDK](https://dotnet.microsoft.com/download) ve [Visual Studio Code](https://code.visualstudio.com/)yükleyebilirsiniz.
+* .NET CLı 'yı ve seçtiğiniz metin veya kod düzenleyicisini kullanmak için bkz. [10 dakika içinde](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro).net öğreticisi Merhaba dünya. Öğreticide, Windows, Linux veya macOS 'ta bir geliştirme ortamı ayarlamaya yönelik yönergeler bulunur.
+* .NET CLı ve Visual Studio Code kullanmak için [.NET SDK](https://dotnet.microsoft.com/download) ve [Visual Studio Code](https://code.visualstudio.com/)' yi yükleyip.
+* Windows üzerinde Visual Studio 2019 kullanmak için bkz. [öğretici: Visual Studio 'da basit bir C# konsol uygulaması oluşturma](/visualstudio/get-started/csharp/tutorial-console).
 
 ## <a name="basic-application-development-flow"></a>Temel uygulama geliştirme akışı
 
-[`dotnet new`](../../../core/tools/dotnet-new.md) Komutu kullanarak uygulamalar oluşturursunuz. Bu komut, uygulamanız için gerekli dosyaları ve varlıkları oluşturur. C# öğreticilerine giriş tüm `console` uygulama türünü kullanır. Temel bilgileri aldıktan sonra, diğer uygulama türlerine genişletebilirsiniz.
+Bu öğreticilerde yer alan yönergeler, uygulamaları oluşturmak, derlemek ve çalıştırmak için .NET CLı kullandığınızı varsayar. Aşağıdaki komutları kullanacaksınız:
 
-Kullanacağınız diğer komutlar, [`dotnet build`](../../../core/tools/dotnet-build.md) yürütülebilir oluşturmak ve [`dotnet run`](../../../core/tools/dotnet-run.md) yürütülebilir çalıştırmak için.
+* [`dotnet new`](../../../core/tools/dotnet-new.md) bir uygulama oluşturur. Bu komut, uygulamanız için gerekli olan dosyaları ve varlıkları oluşturur. C# öğreticilerine giriş, `console` uygulama türünü kullanır. Temel bilgileri aldıktan sonra diğer uygulama türlerine genişletebilirsiniz.
+* [`dotnet build`](../../../core/tools/dotnet-build.md) yürütülebilir dosyayı oluşturur.
+* [`dotnet run`](../../../core/tools/dotnet-run.md) yürütülebilir dosyayı çalıştırır.
+
+Bu öğreticiler için Visual Studio 2019 kullanıyorsanız, bir öğretici bu CLı komutlarından birini çalıştırmaya yönlendirirse bir Visual Studio menü seçimi seçersiniz:
+
+* **Dosya**  >  **Yeni**  >  **Proje** bir uygulama oluşturur.
+* **Derleme**  >   **Yapı çözümü** yürütülebilir dosyayı oluşturur.
+* **Hata Ayıkla**  >  **Hata ayıklama olmadan Başlat** yürütülebilir dosyayı çalıştırır.
 
 ## <a name="pick-your-tutorial"></a>Öğreticinizi seçin
 
-Aşağıdaki eğitimlerden herhangi biriyle başlayabilirsiniz:
+Aşağıdaki öğreticilerden herhangi biriyle başlayabilirsiniz:
 
-## <a name="numbers-in-c"></a>[C# numaraları](numbers-in-csharp-local.md)
+## <a name="numbers-in-c"></a>C 'deki sayılar\#
 
-[C#'daki Sayılar dersinde,](numbers-in-csharp-local.md) bilgisayarların sayıları nasıl depoladığını ve farklı sayısal türlerde hesaplamaları nasıl gerçekleştireceğinizi öğreneceksiniz. Yuvarlama nın temellerini ve C# kullanarak matematiksel hesaplamaları nasıl yapacağınızı öğreneceksiniz.
+C# öğreticisindeki [sayılarda](numbers-in-csharp-local.md) , bilgisayarların sayıları nasıl depolayacağınızı ve farklı sayısal türlerle hesaplamaların nasıl gerçekleştirileceğini öğreneceksiniz. Yuvarlama hakkında temel bilgileri ve C# kullanarak matematik hesaplamaları yapmayı öğreneceksiniz.
 
-Bu [öğretici, Merhaba dünya](hello-world.yml) dersini bitirdiğinizi varsayar.
+Bu öğreticide, [Hello World](hello-world.yml) ders 'i tamamladığınız varsayılmaktadır.
 
-## <a name="branches-and-loops"></a>[Dal ve döngüler](branches-and-loops-local.md)
+## <a name="branches-and-loops"></a>Dal ve döngüler
 
-[Dallar ve döngüler](branches-and-loops-local.md) öğretici değişkenlerde depolanan değerleri temel kod yürütme farklı yolları seçerek temellerini öğretir. Programların karar verme ve farklı eylemleri nasıl seçtiğinin temelini oluşturan denetim akışının temellerini öğreneceksiniz.
+[Dallar ve döngüler](branches-and-loops-local.md) öğreticisinde, değişkenlerde depolanan değerlere göre farklı kod yürütme yolları seçmenin temelleri öğretilir. Denetim akışının temel bilgilerini öğrenirsiniz. Bu, programların kararlar alma ve farklı eylemler seçme işlemlerinin temelini oluşturur.
 
-Bu öğretici, [C# derslerinde](numbers-in-csharp-local.md) [Hello dünyasını](hello-world.yml) ve Sayıları bitirdiğinizi varsayar.
+Bu öğreticide, [Hello World](hello-world.yml) ve C# dersleri Ile ilgili [sayıların](numbers-in-csharp-local.md) tamamlandığını varsayılmaktadır.
 
-## <a name="list-collection"></a>[Liste koleksiyonu](arrays-and-collections.md)
+## <a name="list-collection"></a>Liste koleksiyonu
 
-[Liste toplama](arrays-and-collections.md) dersi, veri dizilerini depolayan Liste koleksiyonu türünü gezmenizi sağlar. Öğeleri eklemeyi ve kaldırmayı, öğeleri aramayı ve listeleri sıralamayı öğreneceksiniz. Farklı listeler keşfedeceksiniz.
+[Liste koleksiyonu](arrays-and-collections.md) dersi, veri dizilerini depolayan liste koleksiyonu türünün bir turuna sahip olmanızı sağlar. Öğe ekleme ve kaldırma, öğe arama ve listeleri sıralama hakkında bilgi edineceksiniz. Farklı liste türleri keşfedebilirsiniz.
 
-Bu öğretici, yukarıda listelenen dersleri bitirdiğinizi varsayar.
+Bu öğreticide, yukarıda listelenen dersleri tamamladığınız varsayılmaktadır.
 
-## <a name="introduction-to-classes"></a>[Sınıflara giriş](introduction-to-classes.md)
+## <a name="introduction-to-classes"></a>Sınıflara giriş
 
-C# öğreticisine bu son giriş, yalnızca kendi yerel geliştirme ortamınızı ve .NET Core'unuzu kullanarak makinenizde çalıştırılabilmek için kullanılabilir.
-Bir konsol uygulaması oluşturacak ve C# dilinin bir parçası olan temel nesne yönelimli özellikleri göreceksiniz.
+[Sınıflara giriş](introduction-to-classes.md)bölümünde, bir konsol uygulaması oluşturup C# dilinin bir parçası olan temel nesne yönelimli özellikleri görürsünüz. Bu, C# öğreticisine son giriş niteliğindedir. Yalnızca kendi yerel geliştirme ortamınız ve .NET kullanılarak makinenizde çalıştırılabilir.

@@ -1,15 +1,15 @@
 ---
 title: Zaman uyumsuz görevleri bir süre sonra iptal etme (C#) "
 description: Bir süre içinde tamamlanmamış olan ilişkili görevlerin iptalinin nasıl planlanalınacağını öğrenin.
-ms.date: 08/19/2020
+ms.date: 02/03/2021
 ms.topic: tutorial
 ms.assetid: 194282c2-399f-46da-a7a6-96674e00b0b3
-ms.openlocfilehash: ad9064f8f45a737982ffc35ab4ea2395ddae9016
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 98c42a2df6153d668b99b6dec49ffe380293b205
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811424"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585383"
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-c"></a>Zaman uyumsuz görevleri bir süre sonra iptal etme (C#)
 
@@ -24,7 +24,7 @@ Bu öğreticinin içindekiler:
 > - Mevcut bir .NET konsol uygulamasını güncelleştirme
 > - İptal zamanlaması
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu öğretici için aşağıdakiler gereklidir:
 
@@ -52,12 +52,16 @@ static async Task Main()
     {
         Console.WriteLine("\nTasks cancelled: timed out.\n");
     }
+    finally
+    {
+        s_cts.Dispose();
+    }
 
     Console.WriteLine("Application ending.");
 }
 ```
 
-Updated `Main` yöntemi konsola birkaç eğitici ileti yazar. [Try catch](../../../language-reference/keywords/try-catch.md)içinde, bir <xref:System.Threading.CancellationTokenSource.CancelAfter(System.Int32)?displayProperty=nameWithType> iptal zamanlaması için çağrısı yapın. Bu, bir süre sonra iptali işaret eder.
+Updated `Main` yöntemi konsola birkaç eğitici ileti yazar. [Try catch](../../../language-reference/keywords/try-catch.md)içinde, <xref:System.Threading.CancellationTokenSource.CancelAfter(System.Int32)?displayProperty=nameWithType> bir iptal zamanlaması için bir çağrı. Bu, bir süre sonra iptali işaret eder.
 
 Sonra, `SumPageSizesAsync` yöntemi beklemiş olur. Tüm URL 'Lerin işlenmesi zamanlanan iptalden daha hızlı oluşursa, uygulama sonlanır. Ancak, zamanlanan iptal, tüm URL 'Leri işlenmeden önce tetiklenirse, bir <xref:System.Threading.Tasks.TaskCanceledException> oluşturulur.
 

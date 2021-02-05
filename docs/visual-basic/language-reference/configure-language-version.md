@@ -1,29 +1,29 @@
 ---
 title: Visual Basic dil sürümünü seçin
-description: Belirli bir derleyici sürümü kullanarak söz dizimi doğrulama gerçekleştirmek için derleyicinin yapılandırın.
+description: Derleyiciyi belirli bir derleyici sürümünü kullanarak sözdizimi doğrulaması gerçekleştirecek şekilde yapılandırın.
 ms.date: 05/24/2018
-ms.openlocfilehash: 4768d59a37d168b2883396f1dea4d0c1a0ff4ca7
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 09503db726f9d993bc986860c57aa98652b696d1
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268273"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585461"
 ---
 # <a name="select-the-visual-basic-language-version"></a>Visual Basic dil sürümünü seçin
 
-Visual Basic derleyici varsayılan olarak en son ana sürüm dilinin kullanıma sundu. Yeni noktası bir dil sürümünü kullanarak herhangi bir projeyi derlemek tercih edebilirsiniz. Daha yeni bir dil sürümü seçme sağlayan sağlamak için projenizi en son dil özelliklerini kullanabilirsiniz. Diğer senaryolarda, bir proje dili daha eski bir sürümünü kullanırken düzgün bir şekilde derlendiğinden doğrulamanız gerekebilir.
+Visual Basic derleyici varsayılan olarak yayınlanan dilin en son ana sürümüdür. Dilin yeni bir noktası sürümünü kullanarak herhangi bir projeyi derlemeyi seçebilirsiniz. Dilin daha yeni bir sürümünü seçmek, projenizin en son dil özelliklerini kullanmasını sağlar. Diğer senaryolarda, dilin eski bir sürümünü kullanırken bir projenin düzgün şekilde derlendiğini doğrulamanız gerekebilir.
 
-Bu özellik, bir projede yeni dil özellikleri eklemelerine kararı geliştirme ortamınızdan araçları ve SDK'sı yeni sürümlerini yüklemek için karar ayırır. En son SDK'sı ve araçları, yapı makinesinde yükleyebilirsiniz. Her proje, derleme için belirli bir dil sürümünü kullanmak için yapılandırılabilir.
+Bu özellik, bir projedeki yeni dil özelliklerini birleştirme kararı vermeden geliştirme ortamınızda SDK ve araçların yeni sürümlerini yüklemeye yönelik kararı ayırır. Yapı makinenize en son SDK ve araçları yükleyebilirsiniz. Her proje, derlemesi için dilin belirli bir sürümünü kullanacak şekilde yapılandırılabilir.
 
-Dil sürümünü ayarlamak için üç yolu vardır:
+Dil sürümünü ayarlamak için üç yol vardır:
 
-- El ile düzenlemeniz, [ **.vbproj** dosyası](#edit-the-vbproj-file)
-- Dil sürümünü ayarlama [bir alt dizinde birden çok proje için](#configure-multiple-projects)
-- Yapılandırma [ `-langversion` derleyici seçeneği](#set-the-langversion-compiler-option)
+- [ **. Vbproj** dosyanızı el ile düzenleme](#edit-the-vbproj-file)
+- [Alt dizindeki birden çok proje için](#configure-multiple-projects) dil sürümünü ayarlama
+- [ `-langversion` Derleyici seçeneğini](#set-the-langversion-compiler-option) yapılandırma
 
-## <a name="edit-the-vbproj-file"></a>Vbproj dosyayı Düzenle
+## <a name="edit-the-vbproj-file"></a>Vbproj dosyasını düzenleme
 
-Dil sürümü ayarlayabilirsiniz, **.vbproj** dosya. Aşağıdaki öğeyi ekleyin:
+**. Vbproj** dosyanızdaki dil sürümünü ayarlayabilirsiniz. Şu öğeyi ekleyin:
 
 ```xml
 <PropertyGroup>
@@ -31,27 +31,28 @@ Dil sürümü ayarlayabilirsiniz, **.vbproj** dosya. Aşağıdaki öğeyi ekleyi
 </PropertyGroup>
 ```
 
-Değer `latest` Visual Basic dili küçük en son sürümünü kullanır. Geçerli değerler şunlardır:
+Değer `latest` Visual Basic dilinin en son ikincil sürümünü kullanır. Geçerli değerler:
 
-|Değer|Açıklama|
+|Değer|Anlamı|
 |------------|-------------|
-|default|Derleyici, tüm geçerli dil sözdiziminden destekleyebileceği en son ana sürüm, kabul eder.|
-|9|Derleyici, Visual Basic 9.0 dahil veya daha düşük olan söz dizimini kabul eder.|
-|10|Derleyici, Visual Basic 10.0 dahil veya daha düşük olan söz dizimini kabul eder.|
-|11|Derleyici dahil Visual Basic 11.0 veya daha düşük olan söz dizimini kabul eder.|
-|12|Derleyici dahil Visual Basic 12.0 veya daha düşük olan söz dizimini kabul eder.|
-|14|Derleyici, Visual Basic 14.0 dahil veya daha düşük olan söz dizimini kabul eder.|
-|15|Derleyici, Visual Basic 15.0 dahil veya daha düşük olan söz dizimini kabul eder.|
-|15.3|Derleyici, Visual Basic 15.3 dahil veya daha düşük olan söz dizimini kabul eder.|
-|15.5|Derleyici, Visual Basic 15.5 dahil veya daha düşük olan söz dizimini kabul eder.|
-|15.8|Derleyici, Visual Basic 15,8 dahil veya daha düşük olan söz dizimini kabul eder.|
-|en son|Derleyici bunu destekleyen tüm geçerli dili söz dizimini kabul eder.|
+|default|Derleyici, destekleyebileceği en son ana sürümden tüm geçerli dil sözdizimini kabul eder.|
+|9|Derleyici yalnızca Visual Basic 9,0 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
+|10|Derleyici yalnızca Visual Basic 10,0 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
+|11|Derleyici yalnızca Visual Basic 11,0 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
+|12|Derleyici yalnızca Visual Basic 12,0 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
+|14|Derleyici yalnızca Visual Basic 14,0 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
+|15|Derleyici yalnızca Visual Basic 15,0 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
+|15.3|Derleyici yalnızca Visual Basic 15,3 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
+|15.5|Derleyici yalnızca Visual Basic 15,5 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
+|16|Derleyici yalnızca Visual Basic 16 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
+|16.9|Derleyici yalnızca Visual Basic 16,9 veya daha düşük bir sözdiziminde bulunan sözdizimini kabul eder.|
+|en son|Derleyici, destekleyebileceği tüm geçerli dil sözdizimini kabul eder.|
 
-Özel dizeler `default` ve `latest` sırasıyla yapı makinesinde yüklü en son büyük ve küçük dil sürümleri.
+Özel dizeler, `default` `latest` sırasıyla derleme makinesinde yüklü en son büyük ve küçük dil sürümlerine çözümlenir.
 
 ## <a name="configure-multiple-projects"></a>Birden çok proje yapılandırma
 
-Oluşturabileceğiniz bir **Directory.build.props** içeren dosya `<LangVersion>` birden çok dizini yapılandırma öğesi. Genellikle, çözüm dizininizde yaparsınız. Ekleyin bir **Directory.build.props** çözüm dizininizde dosya:
+Birden çok dizini yapılandırmak için öğesini içeren bir **Dizin. Build. props** dosyası oluşturabilirsiniz `<LangVersion>` . Bunu genellikle çözüm dizininizde yapabilirsiniz. Aşağıdakileri çözüm dizininizde bir **Dizin. Build. props** dosyasına ekleyin:
 
 ```xml
 <Project>
@@ -61,8 +62,8 @@ Oluşturabileceğiniz bir **Directory.build.props** içeren dosya `<LangVersion>
 </Project>
 ```
 
-Artık, her alt bu dosyayı içeren dizine yapılarında Visual Basic sürüm 15.5 sözdizimi kullanır. Daha fazla bilgi için makaleye bakın [derlemenizi özelleştirme](/visualstudio/msbuild/customize-your-build).
+Şimdi, bu dosyayı içeren dizinin her alt dizinindeki derlemeler Visual Basic sürüm 15,5 sözdizimini kullanacaktır. Daha fazla bilgi için, [yapınızı özelleştirme](/visualstudio/msbuild/customize-your-build)başlıklı makaleye bakın.
 
-## <a name="set-the-langversion-compiler-option"></a>Langversion derleyici seçeneği ayarlama
+## <a name="set-the-langversion-compiler-option"></a>Langversion derleyici seçeneğini ayarlayın
 
-Kullanabileceğiniz `-langversion` komut satırı seçeneği. Daha fazla bilgi için makaleye bakın [- langversion](../reference/command-line-compiler/langversion.md) derleyici seçeneği. Yazarak geçerli değerlerin bir listesini görebilirsiniz `vbc -langversion:?` .
+`-langversion`Komut satırı seçeneğini kullanabilirsiniz. Daha fazla bilgi için, [-langversion](../reference/command-line-compiler/langversion.md) derleyici seçeneğinde makalesine bakın. Yazarak geçerli değerlerin bir listesini görebilirsiniz  `vbc -langversion:?` .

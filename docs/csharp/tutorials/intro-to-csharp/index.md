@@ -1,14 +1,14 @@
 ---
 title: C# etkileşimli öğreticilerine giriş
 description: Tarayıcınızda C# öğrenin ve kendi geliştirme ortamınızı kullanmaya başlayın
-ms.date: 08/22/2019
+ms.date: 02/02/2021
 ms.custom: mvc
-ms.openlocfilehash: 6037862c52fd59ba540e1f65297d787f0a964762
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 62856206c30afac04346d150560c458c6795077d
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162160"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585656"
 ---
 # <a name="introduction-to-c"></a>C 'ye giriş\#
 
@@ -59,7 +59,7 @@ Bu öğreticide, çevrimiçi giriş öğreticilerini tamamladığınız ve [.NET
 
 ## <a name="object-oriented-programming"></a>[Nesne odaklı programlama](object-oriented-programming.md)
 
-Bu öğretici, nesne odaklı programlamada kullanılan kavramları öğretir. C# örnekleri kullanarak *soyutlama*, *kapsülleme*, *Devralma*ve çok *biçimlilik* kavramlarını öğreneceksiniz.
+Bu öğretici, nesne odaklı programlamada kullanılan kavramları öğretir. C# örnekleri kullanarak *soyutlama*, *kapsülleme*, *Devralma* ve çok *biçimlilik* kavramlarını öğreneceksiniz.
 
 Bu öğreticide, çevrimiçi giriş öğreticilerini tamamladığınız ve [.NET Core SDK](https://dotnet.microsoft.com/download) ve [Visual Studio Code](https://code.visualstudio.com/) ya da [Visual Studio 'yu](https://visualstudio.com) geliştirme makinenize yüklediğiniz varsayılmaktadır.
 

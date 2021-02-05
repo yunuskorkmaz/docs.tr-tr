@@ -3,18 +3,20 @@ title: Dallar ve döngüler-C# öğreticisine giriş
 description: Dallar ve döngüler hakkında bu öğreticide, ifadeleri sürekli olarak yürütmek için koşullu dalları ve döngüleri destekleyen dil sözdizimini araştırmak üzere C# kodu yazarsınız.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: d67cfe359634783bb542e9ac34df52a095b45c20
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 1c93c96217abf041b14b94aafcdfe85bb7018528
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396875"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585720"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Dal ve döngü deyimleri ile koşullu mantık öğrenin
 
 Bu öğretici, değişkenleri inceleyen ve bu değişkenlere göre yürütme yolunu değiştiren bir kod yazmayı öğretir. C# kodu yazar ve bunu derleyip çalıştırmanın sonuçlarını görürsünüz. Öğretici, C# ' de dallanma ve döngü yapılarını keşfetmenizi sağlayan bir dizi ders içerir. Bu dersler size C# dilinin temel özelliklerini öğretir.
 
-Bu öğreticide, geliştirme için kullanabileceğiniz bir makineniz olması beklenir. [10 dakika içinde Merhaba Dünya](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) .NET öğreticisi, Windows, Linux veya MacOS 'ta yerel geliştirme ortamınızı ayarlamaya yönelik yönergeler içerir. Kullanacağınız komutlara hızlı bir genel bakış, daha fazla ayrıntı için bağlantılarla birlikte [geliştirme araçları hakkında bilgi sahibi olmaya gelmiştir](local-environment.md) .
+## <a name="prerequisites"></a>Önkoşullar
+
+Öğretici, yerel geliştirme için ayarlanmış bir makineniz olmasını bekler. Windows, Linux veya macOS 'ta, uygulamaları oluşturmak, derlemek ve çalıştırmak için .NET CLı kullanabilirsiniz. Windows 'ta, Visual Studio 2019 ' i kullanabilirsiniz. Kurulum yönergeleri için bkz. [Yerel ortamınızı ayarlama](local-environment.md).
 
 ## <a name="make-decisions-using-the-if-statement"></a>İfadesini kullanarak kararlar alın `if`
 
@@ -24,7 +26,7 @@ Dallar adlı bir dizin oluşturun *-öğretici*. Geçerli dizini yapın ve şu k
 dotnet new console -n BranchesAndLoops -o .
 ```
 
-Bu komut geçerli dizinde yeni bir .NET Core konsol uygulaması oluşturur.
+Bu komut geçerli dizinde yeni bir .NET konsol uygulaması oluşturur.
 
 En sevdiğiniz düzenleyicide *program.cs* açın ve satırı `Console.WriteLine("Hello World!");` aşağıdaki kodla değiştirin:
 
@@ -106,7 +108,7 @@ else
 }
 ```
 
-`==` *Eşitlik*için simge testi. `==`' Yi kullanarak, ' de gördüğünüz şekilde testi, atamanın eşitliğine ayırır `a = 5` .
+`==` *Eşitlik* için simge testi. `==`' Yi kullanarak, ' de gördüğünüz şekilde testi, atamanın eşitliğine ayırır `a = 5` .
 
 `&&` "ve" sözcüğünü ifade eder. Bu, deyimi true dalında yürütmek için her iki koşulun da true olması gerektiği anlamına gelir.  Bu örnekler aynı zamanda, `{` ve `}` ayraçları içine alınmaları koşuluyla her koşullu dalda birden çok deyime sahip olabileceğinizi de gösterir.
 
@@ -248,7 +250,7 @@ Kendiniz deneyin. Aşağıdaki çeşitlemelerin her birini deneyin:
 
 İşiniz bittiğinde öğrendiklerinizi kullanmak için kendi kendinize kod yazma adımına geçelim.
 
-Bu öğreticide kapsanmayan başka bir döngü bildirisi vardır: `foreach` ifade. `foreach`İfade, öğe dizisindeki her öğe için kendi ifadesini yineler. En sık *koleksiyonlarla*birlikte kullanılır, bu nedenle sonraki öğreticide ele alınmıştır.
+Bu öğreticide kapsanmayan başka bir döngü bildirisi vardır: `foreach` ifade. `foreach`İfade, öğe dizisindeki her öğe için kendi ifadesini yineler. En sık *koleksiyonlarla* birlikte kullanılır, bu nedenle sonraki öğreticide ele alınmıştır.
 
 ## <a name="created-nested-loops"></a>İç içe geçmiş döngüler oluşturuldu
 

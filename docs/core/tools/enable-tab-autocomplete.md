@@ -1,24 +1,24 @@
 ---
 title: Sekme tamamlamayı etkinleştirme
-description: Bu makalede PowerShell, bash ve zsh için .NET CLı için sekme tamamlamayı nasıl etkinleştireceğinizi öğretilir.
+description: Bu makalede PowerShell, Bash, ZSH ve balık için .NET CLı için sekme tamamlamayı nasıl etkinleştireceğinizi öğretilir.
 author: adegeo
 ms.author: adegeo
 ms.topic: how-to
 ms.date: 11/03/2019
-ms.openlocfilehash: 31bf5e74644680fc30ca5b79972fbed6367363e1
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: b5b63166faa1762d9fa82a93aa70aebb33167630
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634018"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585565"
 ---
 # <a name="how-to-enable-tab-completion-for-the-net-cli"></a>.NET CLı için sekme tamamlamayı etkinleştirme
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri
 
-Bu makalede, üç kabuk, PowerShell, bash ve zsh için sekme tamamlamayı yapılandırma açıklanmaktadır. Diğer kabuklar için sekme tamamlamayı yapılandırma hakkında daha fazla bilgi için belgelerine bakın.
+Bu makalede dört kabuklar, PowerShell, Bash, ZSH ve balık için sekme tamamlamayı yapılandırma açıklanmaktadır. Diğer kabuklar için sekme tamamlamayı yapılandırma hakkında daha fazla bilgi için belgelerine bakın.
 
-Ayarladıktan sonra, .NET CLı için sekme tamamlama, `dotnet` kabuğa bir komut yazılarak ve ardından SEKME tuşuna basarak tetiklenir. Geçerli komut satırı `dotnet complete` komuta gönderilir ve sonuçlar kabuğunuz tarafından işlenir. Doğrudan komuta bir şey göndererek, sekme tamamlamayı etkinleştirmeden sonuçları test edebilirsiniz `dotnet complete` . Örnek:
+Ayarladıktan sonra, .NET CLı için sekme tamamlama, `dotnet` kabuğa bir komut yazılarak ve ardından SEKME tuşuna basarak tetiklenir. Geçerli komut satırı `dotnet complete` komuta gönderilir ve sonuçlar kabuğunuz tarafından işlenir. Doğrudan komuta bir şey göndererek, sekme tamamlamayı etkinleştirmeden sonuçları test edebilirsiniz `dotnet complete` . Örneğin:
 
 ```console
 > dotnet complete "dotnet a"
@@ -97,4 +97,12 @@ _dotnet_zsh_complete()
 }
 
 compctl -K _dotnet_zsh_complete dotnet
+```
+
+## <a name="fish"></a>ta
+
+.NET CLı için **balık** kabuğunuzun sekme tamamlamayı eklemek için, dosyanıza aşağıdaki kodu ekleyin `config.fish` :
+
+```fish
+complete -f -c dotnet -a "(dotnet complete)"
 ```

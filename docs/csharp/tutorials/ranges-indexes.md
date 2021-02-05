@@ -4,12 +4,12 @@ description: Bu gelişmiş öğreticide, sıralı veri kümesinin sürekli bir a
 ms.date: 09/11/2020
 ms.technology: csharp-fundamentals
 ms.custom: mvc
-ms.openlocfilehash: cf6c83484332ed517b2326b3fd9d7458f191227e
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: c0484a42233466e3a2a70a673aee81fce91fe31b
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "90738872"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585409"
 ---
 # <a name="indices-and-ranges"></a>Dizinler ve aralıklar
 
@@ -93,7 +93,7 @@ Bir **tür,** erişilebilir bir `Length` alıcı veya bir `Count` dönüş tür�
 
 Örneğin, aşağıdaki .NET türleri hem dizinleri hem de aralıkları destekler: <xref:System.String> , <xref:System.Span%601> ve <xref:System.ReadOnlySpan%601> . <xref:System.Collections.Generic.List%601>Dizinleri destekler ancak aralıkları desteklemez.
 
-<xref:System.Array> daha fazla anormal davranışa sahiptir. Tek boyutlu diziler hem dizinleri hem de aralıkları destekler. Çok boyutlu diziler değildir. Çok boyutlu bir dizinin dizin oluşturucusunun tek bir parametre değil birden çok parametresi vardır. Dizi dizileri olarak da adlandırılan pürüzlü Diziler, hem aralıkları hem de dizin oluşturucuyu destekler. Aşağıdaki örnek, pürüzlü bir dizinin dikdörtgen alt bölümünün nasıl yineyükleneceğini gösterir. İlk ve son üç satırı ve seçili her satırdaki ilk ve son iki sütunu dışlayarak ortadaki bölümü yineler:
+<xref:System.Array> daha fazla anormal davranışa sahiptir. Tek boyutlu diziler hem dizinleri hem de aralıkları destekler. Çok boyutlu diziler, Dizin oluşturucular veya aralıklar desteklemez. Çok boyutlu bir dizinin dizin oluşturucusunun tek bir parametre değil birden çok parametresi vardır. Dizi dizileri olarak da adlandırılan pürüzlü Diziler, hem aralıkları hem de dizin oluşturucuyu destekler. Aşağıdaki örnek, pürüzlü bir dizinin dikdörtgen alt bölümünün nasıl yineyükleneceğini gösterir. İlk ve son üç satırı ve seçili her satırdaki ilk ve son iki sütunu dışlayarak ortadaki bölümü yineler:
 
 [!code-csharp[JaggedArrays](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_JaggedArrays)]
 

@@ -4,12 +4,12 @@ description: Tanımlama gruplarını ve diğer türleri oluşturmayı öğrenin.
 ms.technology: csharp-fundamentals
 ms.date: 11/23/2017
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: 96168b729ae3ec11d7a38444b8c100bdbff4efbf
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 5aaf7157b87de4f67f6e4beba18794a6dd13b6d0
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439709"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585357"
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>Demetleri ve diğer türleri ayrıştırma
 
@@ -81,11 +81,7 @@ Aşağıdaki örnek, `Deconstruct` bir nesnesinin özelliklerinin çeşitli birl
 
 [!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class2.cs)]
 
-`Deconstruct`Bir nesneden yaygın olarak ayıklanan veri gruplarını yansıtmak için yöntemini aşırı yükleyebilir `Deconstruct` . bu şekilde, benzersiz ve belirsiz imzalara sahip Yöntemler tanımlamalısınız. `Deconstruct`Aynı sayıda parametreye sahip birden çok yöntem `out` veya farklı bir düzende aynı parametre sayısı ve türleri `out` karışıklığa neden olabilir.
-
-`Deconstruct`Aşağıdaki örnekteki aşırı yüklenmiş yöntem, olası bir karışıklık kaynağını göstermektedir. İlk aşırı yükleme, bir nesnenin ilk adını, orta adını, soyadını ve yaşını `Person` Bu sırada döndürür. İkinci aşırı yükleme yalnızca yıllık gelirle birlikte ad bilgilerini döndürür, ancak birinci, orta ve soyadı farklı bir sıralardır. Bu, bir örneği oluştururken bağımsız değişkenlerin sırasını karıştırmayı kolaylaştırır `Person` .
-
-[!code-csharp[Deconstruct-ambiguity](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-ambiguous.cs)]
+`Deconstruct`Aynı sayıda parametreye sahip birden çok yöntem belirsiz. `Deconstruct`Farklı sayıda parametreye veya "parametre sayısına" sahip yöntemleri tanımlamaya dikkat etmeniz gerekir. `Deconstruct` aynı sayıda parametreye sahip Yöntemler aşırı yükleme çözümlemesi sırasında ayırt edilemez.
 
 ## <a name="deconstructing-a-user-defined-type-with-discards"></a>Kullanıcı tanımlı bir türü atma ile kaldırma
 

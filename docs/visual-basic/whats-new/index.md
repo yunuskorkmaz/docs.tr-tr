@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: ada336ee5fce317315bb5f3974e0366f7bca3985
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 111430bf32debfcb80ea12aa9eb89c52f695d3cb
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557109"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585695"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic yenilikler
 
@@ -21,12 +21,15 @@ Bu konu, dilin en son sürümlerindeki yeni ve geliştirilmiş özelliklerin ayr
 
 ## <a name="current-version"></a>Geçerli sürüm
 
-Visual Basic 16,0/Visual Studio 2019 sürüm 16,0 \
-Yeni özellikler için bkz. [Visual Basic 16,0](#visual-basic-160).
+Visual Basic 16,9/Visual Studio 2019 sürüm 16,9 \
+Yeni özellikler için bkz. [Visual Basic 16,9](#visual-basic-169).
 
 [.Net İndirmeleri sayfasından](https://dotnet.microsoft.com/download)en son .NET SDK 'sını indirebilirsiniz.
 
 ## <a name="previous-versions"></a>Önceki sürümler
+
+Visual Basic 16,0/Visual Studio 2019 sürüm 16,0 \
+Yeni özellikler için bkz. [Visual Basic 16,0](#visual-basic-160).
 
 Visual Basic 15,8/Visual Studio 2017 sürüm 15,8 \
 Yeni özellikler için bkz. [Visual Basic 15,8](#visual-basic-158).
@@ -63,6 +66,10 @@ Bit kaydırma işleçleri, döngü değişkeni bildirimi
 
 Visual Basic/Visual Studio .NET 2002 \
 Visual Basic .NET ilk sürümü
+
+## <a name="visual-basic-169"></a>Visual Basic 16,9
+
+Visual Basic 16,9, salt init özelliklerinin tüketimine izin verebilir.
 
 ## <a name="visual-basic-160"></a>Visual Basic 16,0
 
@@ -294,4 +301,4 @@ Derleyici, en uygun çözümü seçmek için normal aşırı yükleme çözümle
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio 2017 ' deki yenilikler](/visualstudio/ide/whats-new-visual-studio-2017)
-- [Visual Studio 2019 ' deki yenilikler](/visualstudio/ide/whats-new-visual-studio-2019)
+- [Visual Studio 2019’daki Yenilikler](/visualstudio/ide/whats-new-visual-studio-2019)

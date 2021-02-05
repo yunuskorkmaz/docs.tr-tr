@@ -1,19 +1,19 @@
 ---
 title: dotnet publish komutu
 description: Dotnet publish komutu bir dizine .NET projesi veya çözümü yayımlar.
-ms.date: 11/11/2020
-ms.openlocfilehash: 3918c0708e207157ac33dd1a8fdefb993a1d6741
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.date: 02/03/2021
+ms.openlocfilehash: 5391e56a88f782294c3a71c523d0fc27a09e0dd8
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98190071"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585682"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri
 
-## <a name="name"></a>Ad
+## <a name="name"></a>Name
 
 `dotnet publish` -Uygulamayı ve bağımlılıklarını barındırma sistemine dağıtım için bir klasöre yayımlar.
 
@@ -53,7 +53,7 @@ dotnet publish -h|--help
 
 `dotnet publish`Komut, `-p` özellikleri ayarlama ve bir günlükçü tanımlama gibi MSBuild seçeneklerini kabul eder `-l` . Örneğin, şu biçimi kullanarak bir MSBuild özelliği ayarlayabilirsiniz: `-p:<NAME>=<VALUE>` .
 
-Ayrıca, bir *. pubxml* dosyasına (.net Core 3,1 SDK sürümünden itibaren kullanılabilir) başvurarak, yayınla ilgili özellikleri de ayarlayabilirsiniz. Örnek:
+Ayrıca, bir *. pubxml* dosyasına (.net Core 3,1 SDK sürümünden itibaren kullanılabilir) başvurarak, yayınla ilgili özellikleri de ayarlayabilirsiniz. Örneğin:
 
 ```dotnetcli
 dotnet publish -p:PublishProfile=FolderProfile
@@ -146,6 +146,8 @@ Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 - **`-p:PublishReadyToRun=true`**
 
   Uygulama derlemelerini ReadyToRun (R2R) biçimi olarak derler. R2R, bir süre öncesi (AOT) derleme biçimidir. Daha fazla bilgi için bkz. [Readytorun görüntüleri](../deploying/ready-to-run.md). .NET Core 3,0 SDK 'dan beri kullanılabilir.
+
+  Çalışma zamanı hatalarının oluşmasına neden olabilecek eksik bağımlılıklarla ilgili uyarıları görmek için kullanın `-p:PublishReadyToRunShowWarnings=true` .
 
   Bu seçeneği, komut satırı yerine bir yayımlama profilinde belirtmenizi öneririz. Daha fazla bilgi için bkz. [MSBuild](#msbuild).
 
