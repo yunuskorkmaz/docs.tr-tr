@@ -12,10 +12,10 @@ dev_langs:
 helpviewer_keywords:
 - encoding, understanding
 ms.openlocfilehash: 92710e2d223d1d765efc7e877cb16546ef372907
-ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
+ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/22/2021
+ms.lasthandoff: 02/05/2021
 ms.locfileid: "98693143"
 ---
 # <a name="character-encoding-in-net"></a>.NET içinde karakter kodlaması
@@ -24,7 +24,7 @@ Bu makalede char , .NET tarafından kullanılan kodlama sistemlerine yönelik bi
 
 *char Acter* terimi, *bir okuyucunun tek bir görüntüleme öğesi olarak beyin bir* genel anlamda burada kullanılır. Ortak örnekler, "a", "@" simgesi ve Emoji "" harftir 🐂 . Bazı durumlarda char , [grafem kümelerindeki](#grapheme-clusters) bölümünde açıklandığı gibi, bir acter aslında birden çok bağımsız görüntüleme öğelerinden oluşur.
 
-## <a name="the-no-locstring-and-no-locchar-types"></a>stringVe char türleri
+## <a name="the-string-and-char-types"></a>stringVe char türleri
 
 Sınıfının bir örneği [string](xref:System.String) bazı metinleri temsil eder. `string`, Her biri yapının bir örneği olan 16 bit değerlerden oluşan bir dizidir [char](xref:System.Char) . [ string . Length](xref:System.String.Length) özelliği `char` , örnekteki örneklerin sayısını döndürür `string` .
 
@@ -187,7 +187,7 @@ Aşağıdaki diyagramda skaler değer kod noktaları gösterilmektedir.
 
 :::image type="content" source="media/:::No-Loc (Char)::: acter-Encoding-introduction/scalar-values. SVG "alt-text =" skaler değerler ":::
 
-### <a name="the-no-locrune-type-as-a-scalar-value"></a>RuneSkalar değer olarak tür
+### <a name="the-rune-type-as-a-scalar-value"></a>RuneSkalar değer olarak tür
 
 .NET Core 3,0 ile başlayarak, <xref:System.Text.Rune?displayProperty=fullName> tür bir Unicode skaler değeri temsil eder. **`Rune` .NET Core 2. x veya .NET Framework 4. x sürümünde kullanılamaz.**
 
@@ -203,7 +203,7 @@ Aşağıdaki örnek bir özel durum oluşturur çünkü kod noktası, tamamlayı
 
 ::: Code Language = "CSharp" Source = "parçacıklar/ char acter-Encoding-giriş/CSharp/örnek oluştur Rune s.cs" id = "SnippetInvalidHigh":::
 
-### <a name="no-locrune-usage-example-changing-letter-case"></a>Rune Kullanım örneği: harf durumunu değiştirme
+### <a name="rune-usage-example-changing-letter-case"></a>Rune Kullanım örneği: harf durumunu değiştirme
 
 Bir ' a sahip olan `char` ve bir vekil çiftten ise, skaler bir değer olan bir kod noktasıyla çalıştığını varsayan BIR API `char` . Örneğin, her birinde ' de çağıran aşağıdaki yöntemi göz önünde bulundurun <xref:System.Char.ToUpperInvariant%2A?displayProperty=nameWithType> char string :
 
@@ -218,7 +218,7 @@ Doğru bir şekilde büyük harfe dönüştürmek için iki seçenek vardır str
 
   ::: Code Language = "CSharp" Source = "parçacıklar/ char acter-Encoding-tanıtımı/CSharp/ConvertToUpper. cs" ID = "SnippetGoodExample":::
 
-### <a name="other-no-locrune-apis"></a>Diğer Rune API 'ler
+### <a name="other-rune-apis"></a>Diğer Rune API 'ler
 
 `Rune`Tür, API 'lerin çoğunun analoglarından sunar `char` . Örneğin, aşağıdaki yöntemler tür üzerinde statik API 'Leri yansıtır `char` :
 
@@ -265,7 +265,7 @@ Bir char acter, birden çok kod noktasının birleşiminden kaynaklanabilir. bu 
 
 Bir a 'nın grafem kümelerini numaralandırmak için `string` <xref:System.Globalization.StringInfo> Aşağıdaki örnekte gösterildiği gibi sınıfını kullanın. Swift hakkında bilginiz varsa, .NET `StringInfo` türü [Swift 'ın `character` tipine](https://developer.apple.com/documentation/swift/character)benzer.
 
-### <a name="example-count-no-locchar-no-locrune-and-text-element-instances"></a>Örnek: Count char , Rune , ve metin öğesi örnekleri
+### <a name="example-count-char-rune-and-text-element-instances"></a>Örnek: Count char , Rune , ve metin öğesi örnekleri
 
 .NET API 'lerinde, bir grafem kümesine *metin öğesi* denir. Aşağıdaki yöntem `char` ,, `Rune` ve içindeki metin öğesi örnekleri arasındaki farkları göstermektedir `string` :
 
@@ -275,7 +275,7 @@ Bir a 'nın grafem kümelerini numaralandırmak için `string` <xref:System.Glob
 
 Bu kodu .NET Framework veya .NET Core 3,1 veya önceki sürümlerde çalıştırırsanız, emoji için metin öğesi sayısı gösterilir `4` . Bunun nedeni, `StringInfo` .NET 5 ' te düzeltilen sınıftaki bir hatadır.
 
-### <a name="example-splitting-no-locstring-instances"></a>Örnek: string örnekleri bölme
+### <a name="example-splitting-string-instances"></a>Örnek: string örnekleri bölme
 
 Örnekleri bölrken `string` , vekil çiftleri ve grafem kümelerini bölmemeye özen gösterin. Aşağıdaki hatalı kod örneğini göz önünde bulundurun: her 10 acters satır sonu eklemeyi amaçlayan char string
 
