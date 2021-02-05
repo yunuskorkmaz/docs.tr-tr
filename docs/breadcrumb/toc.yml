@@ -581,3 +581,6 @@ items:
           - name: .NET IoT Kitaplıkları
             tocHref: /dotnet/iot/
             topicHref: /dotnet/iot/index
+          - name: Yenilikler
+            tocHref: /dotnet/whats-new/
+            topicHref: /dotnet/whats-new/index
