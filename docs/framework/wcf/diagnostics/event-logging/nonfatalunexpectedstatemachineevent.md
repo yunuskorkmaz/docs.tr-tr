@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: NonFatalUnexpectedStateMachineEvent'
 title: NonFatalUnexpectedStateMachineEvent
 ms.date: 03/30/2017
 ms.assetid: bfa37c10-cf1b-4325-b756-6ef200606510
-ms.openlocfilehash: a7dee2ae310602b0284b77b07272b7633989002c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1d3140ea71b94bf1ecf4535eca331c13eef389c5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96278602"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99655948"
 ---
 # <a name="nonfatalunexpectedstatemachineevent"></a>NonFatalUnexpectedStateMachineEvent
 
@@ -17,7 +18,7 @@ Kimlik: 148
   
  Kategori: TransactionBridge  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bu olay bir durum makinesinin beklenmeyen bir olayı işlemeye çalıştı olduğunu gösterir. Olay önemli kabul edilmez. Olay işlem KIMLIĞI, durum makinesi, geçerli durum, geçmiş, olay adı, olay ayrıntıları, işlem adı ve işlem KIMLIĞI listeler.  
   

@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: TransportAuthenticationFailure'
 title: TransportAuthenticationFailure
 ms.date: 03/30/2017
 ms.assetid: adbdbda0-de52-448c-a938-cc9f5db2980e
-ms.openlocfilehash: 7022728292d242a88269f9cdf1c19f1cf2f19025
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8b6938881989a0aa0ea8fefe76cd8a375c7fabbd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96259401"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99655662"
 ---
 # <a name="transportauthenticationfailure"></a>TransportAuthenticationFailure
 
@@ -17,7 +18,7 @@ Kimlik: 174
   
  Kategori: Securityauıdıt  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bu olay, taşıma kimlik doğrulamasının başarısız olduğunu, istemci kimliğini listelemeyi ve etkinlik KIMLIĞINI gösterir.  
   

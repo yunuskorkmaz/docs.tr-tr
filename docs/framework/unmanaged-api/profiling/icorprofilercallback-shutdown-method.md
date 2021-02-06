@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerCallback:: kapanıyor yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerCallback::Shutdown Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1ea194f0-a331-4855-a2ce-37393b8e5f84
 topic_type:
 - apiref
-ms.openlocfilehash: 9761eb5085a77279c4d07d39946a5ad1453ecaaf
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7afc274579f248ee190e379160f2709b5cb9881a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95717288"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99657326"
 ---
 # <a name="icorprofilercallbackshutdown-method"></a>ICorProfilerCallback::Shutdown Yöntemi
 

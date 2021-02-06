@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerFunctionEnum:: Skip yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerFunctionEnum::Skip Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 051465b9-e479-494a-804b-c880323b4cbe
 topic_type:
 - apiref
-ms.openlocfilehash: da578e02db0744b1f64c1d392844aa020721e784
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6d176c51788135952127008f2f43545ead1e2369
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95669268"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99657066"
 ---
 # <a name="icorprofilerfunctionenumskip-method"></a>ICorProfilerFunctionEnum::Skip Yöntemi
 
 Belirlenen sayıda öğe atlanabilmesi için Numaralandırıcının imlecini geçerli konumundan ilerletir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT Skip([in] ULONG celt);  
@@ -41,7 +42,7 @@ HRESULT Skip([in] ULONG celt);
 
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`celt` öğeler atlandı.|  
 |S_FALSE|Daha az öğe olmadığını `celt` belirten öğe atlandı.|  

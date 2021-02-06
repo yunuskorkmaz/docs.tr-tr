@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: COR_PRF_MONITOR numaralandırması'
 title: COR_PRF_MONITOR Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9294d702-b4e5-441c-a930-e63d27b86bfd
 topic_type:
 - apiref
-ms.openlocfilehash: e5e850e2464c310697c1cd1797d2207958591907
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5b0bd17713e47e40982e88f33721bf7d6d27fd00
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95696875"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99657807"
 ---
 # <a name="cor_prf_monitor-enumeration"></a>COR_PRF_MONITOR Numaralandırması
 
@@ -116,7 +117,7 @@ typedef enum {
 
 ### <a name="no-flags-set"></a>Bayrak ayarlanmadı  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`COR_PRF_MONITOR_NONE`|Hiçbir bayrak ayarlanmadı.|  
   
@@ -124,7 +125,7 @@ typedef enum {
 
 ### <a name="callback-flags"></a>Geri çağırma bayrakları  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`COR_PRF_MONITOR_ALL`|Tüm geri çağırma olaylarını etkinleştirilir.|  
 |`COR_PRF_MONITOR_APPDOMAIN_LOADS`|`AppDomainCreation*` `AppDomainShutdown*` [ICorProfilerCallback](icorprofilercallback-interface.md) arabirimindeki ve geri çağırmaları denetler.|  
@@ -135,7 +136,7 @@ typedef enum {
 |`COR_PRF_MONITOR_CLR_EXCEPTIONS`|`ExceptionCLRCatcher*` [ICorProfilerCallback](icorprofilercallback-interface.md) arabirimindeki geri çağırmaları denetler.|  
 |`COR_PRF_MONITOR_CODE_TRANSITIONS`|[ICorProfilerCallback](icorprofilercallback-interface.md) arabirimindeki [UnmanagedToManagedTransition](icorprofilercallback-unmanagedtomanagedtransition-method.md) ve [ManagedToUnmanagedTransition](icorprofilercallback-managedtounmanagedtransition-method.md) geri çağırmaları denetler|  
 |`COR_PRF_MONITOR_ENTERLEAVE`|`FunctionEnter*`, `FunctionLeave*` Ve `FunctionTailCall*` [profil oluşturma genel statik işlevlerini](profiling-global-static-functions.md)denetler.|  
-|`COR_PRF_MONITOR_EXCEPTIONS`|[ExceptionThrown](icorprofilercallback-exceptionthrown-method.md) `ExceptionSearch*` `ExceptionOSHandler*` `ExceptionUnwind*` `ExceptionCatcher*` [ICorProfilerCallback](icorprofilercallback-interface.md) arabirimindeki exceptionatılan geri aramayı ve,, ve geri çağırmaları denetler.|  
+|`COR_PRF_MONITOR_EXCEPTIONS`|[](icorprofilercallback-exceptionthrown-method.md) `ExceptionSearch*` `ExceptionOSHandler*` `ExceptionUnwind*` `ExceptionCatcher*` [ICorProfilerCallback](icorprofilercallback-interface.md) arabirimindeki exceptionatılan geri aramayı ve,, ve geri çağırmaları denetler.|  
 |`COR_PRF_MONITOR_FUNCTION_UNLOADS`|[ICorProfilerCallback](icorprofilercallback-interface.md) arabirimindeki [FunctionUnloadStarted](icorprofilercallback-functionunloadstarted-method.md) geri çağrısını denetler.|  
 |`COR_PRF_MONITOR_GC`|Arabirimlerinizde, [GarbageCollectionStarted](icorprofilercallback2-garbagecollectionstarted-method.md),   [GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md),  [MovedReferences](icorprofilercallback-movedreferences-method.md), [MovedReferences2](icorprofilercallback4-movedreferences2-method.md),    [acil vınreferences](icorprofilercallback2-survivingreferences-method.md),  [SurvivingReferences2](icorprofilercallback4-survivingreferences2-method.md), [ObjectReferences](icorprofilercallback-objectreferences-method.md),   [ObjectsAllocatedByClass](icorprofilercallback-objectsallocatedbyclass-method.md),  [RootReferences](icorprofilercallback-rootreferences-method.md), [RootReferences2](icorprofilercallback2-rootreferences2-method.md), [HandleCreated](icorprofilercallback2-handlecreated-method.md),  [handleınalına](icorprofilercallback2-handledestroyed-method.md)ve [finalizeableobjectkuyruklanmış](icorprofilercallback2-finalizeableobjectqueued-method.md) geri çağırmaları kontrol eder `ICorProfilerCallback*` . `COR_PRF_MONITOR_GC`Ayrılan zaman, eşzamanlı atık toplama kapalıdır.|  
 |`COR_PRF_MONITOR_JIT_COMPILATION`|`JITCompilation*` [ICorProfilerCallback](icorprofilercallback-interface.md) arabirimindeki, [jıtfunction,](icorprofilercallback-jitfunctionpitched-method.md)ve [jınkıtıl](icorprofilercallback-jitinlining-method.md) geri çağırmaları denetler.|  
@@ -151,7 +152,7 @@ typedef enum {
 
 ### <a name="feature-enabling-flags"></a>Özellik etkinleştirme bayrakları  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`COR_PRF_ENABLE_FRAME_INFO`|, `ClassID` [Getfunctionınfo2](icorprofilerinfo2-getfunctioninfo2-method.md) yöntemini `COR_PRF_FRAME_INFO` [FunctionEnter2](functionenter2-function.md) geri çağırması tarafından döndürülen bir değerle çağırarak genel bir işlev için tam olarak alınmasını mümkün bir şekilde sunar.|  
 |`COR_PRF_ENABLE_FUNCTION_ARGS`|[FunctionEnter2](functionenter2-function.md) callback veya [FunctionEnter3WithInfo](functionenter3withinfo-function.md) geri çağırması ile [GetFunctionEnter3Info](icorprofilerinfo3-getfunctionenter3info-method.md) yöntemini kullanarak bağımsız değişken izlemeyi mümkün.|  
@@ -166,7 +167,7 @@ typedef enum {
 
 ### <a name="configuration-flags"></a>Yapılandırma bayrakları  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`COR_PRF_DISABLE_ALL_NGEN_IMAGES`|Tüm yerel görüntülerin (Profil Oluşturucu gelişmiş görüntüler dahil) yüklenmesini engeller.  Bu bayrak ve `COR_PRF_USE_PROFILE_IMAGES` bayrak her ikisi de belirtildiyse, `COR_PRF_DISABLE_ALL_NGEN_IMAGES` kullanılır.|  
 |`COR_PRF_DISABLE_INLINING`|Tüm satır dışı bırakır.|  
@@ -178,7 +179,7 @@ typedef enum {
 
 ### <a name="composite-flags"></a>Bileşik bayraklar  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`COR_PRF_ALL`|Tüm `COR_PRF_MONITOR` bayrak değerlerini temsil eder.|  
 |`COR_PRF_ALLOWABLE_AFTER_ATTACH`|`COR_PRF_MONITOR`Profil Oluşturucu çalışan bir uygulamaya eklendikten sonra ayarlanmayacak tüm bayrakları temsil eder. Söz dizimi bölümü, bu bit maskesi içinde bulunan bireysel bayrakları gösterir.|  

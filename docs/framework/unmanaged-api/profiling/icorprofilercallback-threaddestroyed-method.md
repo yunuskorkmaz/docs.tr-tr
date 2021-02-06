@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerCallback:: Threadyok etme yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerCallback::ThreadDestroyed Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 4c2b66fd-0595-40a3-8931-f9c4fff97ac8
 topic_type:
 - apiref
-ms.openlocfilehash: 0cef868861155d553aba42fe28c3f1f1b86763b0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 63c8c4c523cb398bd7c766fc41bc669a2d74045e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731975"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99657199"
 ---
 # <a name="icorprofilercallbackthreaddestroyed-method"></a>ICorProfilerCallback::ThreadDestroyed Yöntemi
 
 Profiler öğesine bir iş parçacığının yok edildiğini bildirir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT ThreadDestroyed(  

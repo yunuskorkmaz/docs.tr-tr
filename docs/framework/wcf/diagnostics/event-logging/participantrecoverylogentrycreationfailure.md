@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: ParticipantRecoveryLogEntryCreationFailure'
 title: ParticipantRecoveryLogEntryCreationFailure
 ms.date: 03/30/2017
 ms.assetid: 0bda0f08-7614-40f8-912a-06f5a99393e6
-ms.openlocfilehash: 37508a8511f44b59675989ee5982f9fe65a90101
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 2652704f004c26365f637f9e138f8b0a43826068
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96294449"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99655832"
 ---
 # <a name="participantrecoverylogentrycreationfailure"></a>ParticipantRecoveryLogEntryCreationFailure
 
@@ -17,7 +18,7 @@ Kimlik: 141
   
  Kategori: TransactionBridge  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bu olay, bir katılımcı kaydı için arecovery günlük girişinin oluşturulamadığını gösterir. İşlem durdurulacak. Olay Işlem KIMLIĞI, kayıt KIMLIĞI, özel durum, işlem adı ve işlem KIMLIĞI listeler.  
   

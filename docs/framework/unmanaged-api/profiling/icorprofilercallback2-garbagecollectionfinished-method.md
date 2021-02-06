@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: ICorProfilerCallback2:: GarbageCollectionFinished yöntemi'
 title: ICorProfilerCallback2::GarbageCollectionFinished Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1a5758ea-2354-43c0-92a3-32c9909d64e1
 topic_type:
 - apiref
-ms.openlocfilehash: 84a71853ba2ccc8b95e4a8936005f2790d09a2c4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9e41c5ced76af40866269fdff74fd302b937b70e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95717322"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99657120"
 ---
 # <a name="icorprofilercallback2garbagecollectionfinished-method"></a>ICorProfilerCallback2::GarbageCollectionFinished Yöntemi
 

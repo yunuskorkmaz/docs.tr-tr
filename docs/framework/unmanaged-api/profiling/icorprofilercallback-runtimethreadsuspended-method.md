@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerCallback:: Runtimethreadaskıya alındı yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerCallback::RuntimeThreadSuspended Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: de830a8b-6ee1-4900-ace3-4237108f6b12
 topic_type:
 - apiref
-ms.openlocfilehash: 33a39cf2781f49ff0e31989831c4c9829889ec3d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f7c2f5baf5a320375d9a2606ca05b13d522336be
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732009"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99657340"
 ---
 # <a name="icorprofilercallbackruntimethreadsuspended-method"></a>ICorProfilerCallback::RuntimeThreadSuspended Yöntemi
 
 Profil oluşturucuyu belirtilen iş parçacığının askıya alındığını veya askıya alınmayı bildirir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT RuntimeThreadSuspended(  

@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerCallback:: ThreadCreated yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerCallback::ThreadCreated Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: cca0f799-09b8-4689-a33c-6d6537943a9b
 topic_type:
 - apiref
-ms.openlocfilehash: 72b074d1794a6039060cbd84aabb0bc0155c154e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8b6208856b78298f643161cd6bb78773ac86bc3b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95717298"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99657209"
 ---
 # <a name="icorprofilercallbackthreadcreated-method"></a>ICorProfilerCallback::ThreadCreated Yöntemi
 
 Profil oluşturucuyu bir iş parçacığının oluşturulduğunu bildirir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT ThreadCreated(  

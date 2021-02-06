@@ -1,19 +1,20 @@
 ---
+description: 'Daha fazla bilgi edinin: örnekler'
 title: Örnekler
 ms.date: 03/30/2017
 ms.assetid: c8cf3460-0ca1-4411-8262-e9ecaf7f0a31
-ms.openlocfilehash: f4bf639e626945c7e753ac352dfecc7a79541bfd
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9cd602164816a419b481ff600a7537593d4f500e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96266083"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99655272"
 ---
 # <a name="instances"></a>Örnekler
 
 Sayaç adı: örnekler.  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Hizmetin Şu anda içerdiği örnek bağlamların sayısı.  
   

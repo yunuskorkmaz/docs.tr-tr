@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: WCF performans sayaçları'
 title: WCF Performans Sayaçları
 ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: a5b00980cb8c2b06b224630e766e49bafe343c76
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c6572ece289fb550dd4974a8f8e957f7d3ef51b5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96266109"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99655350"
 ---
 # <a name="wcf-performance-counters"></a>WCF Performans Sayaçları
 
