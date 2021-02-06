@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: Izlenecek yol: Ilişkiler genelinde sorgulama (Visual Basic)'
 title: 'İzlenecek yol: İlişkilerde Sorgulama (Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
-ms.openlocfilehash: ce5323b4ecd7bd0c4337d4632eff209e4d0ebd42
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 002ec53c5a56d988dcd71af658a546d199473425
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91163992"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99650592"
 ---
 # <a name="walkthrough-querying-across-relationships-visual-basic"></a>İzlenecek yol: İlişkilerde Sorgulama (Visual Basic)
 
@@ -19,7 +20,7 @@ Bu izlenecek yol, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md
   
  Bu izlenecek yol Visual Basic geliştirme ayarları kullanılarak yazılmıştır.  
   
-## <a name="prerequisites"></a>Ön koşullar  
+## <a name="prerequisites"></a>Önkoşullar  
 
  Gözden geçirmeyi tamamlamış olmanız gerekir [: basit nesne modeli ve sorgu (Visual Basic)](walkthrough-simple-object-model-and-query-visual-basic.md). Bu izlenecek yol, c:\linqtestiçindeki kuzeydoğu. mdf dosyasının varlığı da dahil olmak üzere bunun üzerine oluşturulur.  
   
@@ -53,7 +54,7 @@ Bu izlenecek yol, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md
   
      [!code-vb[DLinqWalk2VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#2)]  
   
-## <a name="creating-and-running-a-query-across-the-customer-order-relationship"></a>Müşteri siparişi Ilişkisi genelinde sorgu oluşturma ve çalıştırma  
+## <a name="creating-and-running-a-query-across-the-customer-order-relationship"></a>Customer-Order Ilişkisi genelinde sorgu oluşturma ve çalıştırma  
 
  Artık `Order` nesnelere doğrudan `Customer` nesnelerden veya ters sırada erişebilirsiniz. Müşteriler ve siparişler arasında açık bir *birleşime* gerek yoktur.  
   

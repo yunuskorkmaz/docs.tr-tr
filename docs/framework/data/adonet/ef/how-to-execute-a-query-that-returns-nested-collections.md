@@ -1,16 +1,17 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: nasıl yapılır: Iç Içe geçmiş Koleksiyonlar döndüren bir sorgu yürütme'
 title: 'Nasıl yapılır: İç İçe Geçmiş Koleksiyonlar Döndüren Bir Sorgu Yürütme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f7f385f3-ffcf-4f3b-af35-de8818938e5f
-ms.openlocfilehash: 3bf6e08e7842fbf235b519680b81f79fba4a7228
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 941b7471820c09224e6828fac6e17b92f70ff57e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198411"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99650631"
 ---
 # <a name="how-to-execute-a-query-that-returns-nested-collections"></a>Nasıl yapılır: İç İçe Geçmiş Koleksiyonlar Döndüren Bir Sorgu Yürütme
 

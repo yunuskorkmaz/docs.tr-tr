@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: RefType sonuçları döndüren bir sorgu yürütme'
 title: 'Nasıl yapılır: RefType Sonuçları Döndüren Bir Sorgu Yürütme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7dbbfbcd-93f5-4546-9dbf-e5fa290b69fa
-ms.openlocfilehash: 4d515fa63b62948bcc1b93aeb3a4bb07407b4169
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f62ea7ab3820ebbc63955c13e761726b58fad872
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198333"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99650590"
 ---
 # <a name="how-to-execute-a-query-that-returns-reftype-results"></a>Nasıl yapılır: RefType Sonuçları Döndüren Bir Sorgu Yürütme
 
