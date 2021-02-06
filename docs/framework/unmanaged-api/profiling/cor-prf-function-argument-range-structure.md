@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: COR_PRF_FUNCTION_ARGUMENT_RANGE yapısı'
 title: COR_PRF_FUNCTION_ARGUMENT_RANGE Yapısı
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 9f469eac-ac66-419b-8668-fe705bc1a51f
 topic_type:
 - apiref
-ms.openlocfilehash: 028395b1c8677d07d4a6481740ecdc7ebb48c180
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 65d762ba4513341b20426ea56d423a2066f6e714
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95718533"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99649032"
 ---
-# <a name="cor_prf_function_argument_range-structure"></a><span data-ttu-id="0ed4d-102">COR_PRF_FUNCTION_ARGUMENT_RANGE Yapısı</span><span class="sxs-lookup"><span data-stu-id="0ed4d-102">COR_PRF_FUNCTION_ARGUMENT_RANGE Structure</span></span>
+# <a name="cor_prf_function_argument_range-structure"></a><span data-ttu-id="8e0bf-103">COR_PRF_FUNCTION_ARGUMENT_RANGE Yapısı</span><span class="sxs-lookup"><span data-stu-id="8e0bf-103">COR_PRF_FUNCTION_ARGUMENT_RANGE Structure</span></span>
 
-<span data-ttu-id="0ed4d-103">Bitişik olarak depolanan bir işlev bağımsız değişkenlerinin bloğunu, bellekte soldan sağa doğru sırada olacak şekilde gösterir.</span><span class="sxs-lookup"><span data-stu-id="0ed4d-103">Represents a block of function arguments stored contiguously in left-to-right order in memory.</span></span>  
+<span data-ttu-id="8e0bf-104">Bitişik olarak depolanan bir işlev bağımsız değişkenlerinin bloğunu, bellekte soldan sağa doğru sırada olacak şekilde gösterir.</span><span class="sxs-lookup"><span data-stu-id="8e0bf-104">Represents a block of function arguments stored contiguously in left-to-right order in memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0ed4d-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="0ed4d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8e0bf-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="8e0bf-105">Syntax</span></span>  
   
 ```cpp  
 typedef struct _COR_PRF_FUNCTION_ARGUMENT_RANGE {  
@@ -34,23 +35,23 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_RANGE {
 } COR_PRF_FUNCTION_ARGUMENT_RANGE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="0ed4d-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="0ed4d-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="8e0bf-106">Üyeler</span><span class="sxs-lookup"><span data-stu-id="8e0bf-106">Members</span></span>  
   
-|<span data-ttu-id="0ed4d-106">Üyeler</span><span class="sxs-lookup"><span data-stu-id="0ed4d-106">Members</span></span>|<span data-ttu-id="0ed4d-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="0ed4d-107">Description</span></span>|  
+|<span data-ttu-id="8e0bf-107">Üyeler</span><span class="sxs-lookup"><span data-stu-id="8e0bf-107">Members</span></span>|<span data-ttu-id="8e0bf-108">Description</span><span class="sxs-lookup"><span data-stu-id="8e0bf-108">Description</span></span>|  
 |-------------|-----------------|  
-|`startAddress`|<span data-ttu-id="0ed4d-108">Bloğun başlangıç adresi.</span><span class="sxs-lookup"><span data-stu-id="0ed4d-108">The starting address of the block.</span></span>|  
-|`length`|<span data-ttu-id="0ed4d-109">Bitişik bloğun uzunluğu.</span><span class="sxs-lookup"><span data-stu-id="0ed4d-109">The length of the contiguous block.</span></span>|  
+|`startAddress`|<span data-ttu-id="8e0bf-109">Bloğun başlangıç adresi.</span><span class="sxs-lookup"><span data-stu-id="8e0bf-109">The starting address of the block.</span></span>|  
+|`length`|<span data-ttu-id="8e0bf-110">Bitişik bloğun uzunluğu.</span><span class="sxs-lookup"><span data-stu-id="8e0bf-110">The length of the contiguous block.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="0ed4d-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0ed4d-110">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8e0bf-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="8e0bf-111">Requirements</span></span>  
 
- <span data-ttu-id="0ed4d-111">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0ed4d-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="8e0bf-112">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8e0bf-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0ed4d-112">**Üst bilgi:** CorProf. IDL</span><span class="sxs-lookup"><span data-stu-id="0ed4d-112">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="8e0bf-113">**Üst bilgi:** CorProf. IDL</span><span class="sxs-lookup"><span data-stu-id="8e0bf-113">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="0ed4d-113">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="0ed4d-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8e0bf-114">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="8e0bf-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0ed4d-114">**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0ed4d-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8e0bf-115">**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8e0bf-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0ed4d-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0ed4d-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8e0bf-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8e0bf-116">See also</span></span>
 
-- [<span data-ttu-id="0ed4d-116">Profil Oluşturma Yapıları</span><span class="sxs-lookup"><span data-stu-id="0ed4d-116">Profiling Structures</span></span>](profiling-structures.md)
+- [<span data-ttu-id="8e0bf-117">Profil Oluşturma Yapıları</span><span class="sxs-lookup"><span data-stu-id="8e0bf-117">Profiling Structures</span></span>](profiling-structures.md)

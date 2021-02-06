@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugProcess:: ThreadForFiberCookie yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugProcess::ThreadForFiberCookie Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: afe4e97f-bffc-47e1-adad-d6e842487f35
 topic_type:
 - apiref
-ms.openlocfilehash: 74cad19d9fa681a6afb933f79ee7061590084509
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e3618d08f0b5212dbc8502194926c9ae0c97744b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95694678"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99650207"
 ---
-# <a name="icordebugprocessthreadforfibercookie-method"></a><span data-ttu-id="49ba2-102">ICorDebugProcess::ThreadForFiberCookie Yöntemi</span><span class="sxs-lookup"><span data-stu-id="49ba2-102">ICorDebugProcess::ThreadForFiberCookie Method</span></span>
+# <a name="icordebugprocessthreadforfibercookie-method"></a><span data-ttu-id="3ebae-103">ICorDebugProcess::ThreadForFiberCookie Yöntemi</span><span class="sxs-lookup"><span data-stu-id="3ebae-103">ICorDebugProcess::ThreadForFiberCookie Method</span></span>
 
-<span data-ttu-id="49ba2-103">Bu yöntem uygulanmadı.</span><span class="sxs-lookup"><span data-stu-id="49ba2-103">This method is not implemented.</span></span>  
+<span data-ttu-id="3ebae-104">Bu yöntem uygulanmadı.</span><span class="sxs-lookup"><span data-stu-id="3ebae-104">This method is not implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="49ba2-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="49ba2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3ebae-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="3ebae-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT ThreadForFiberCookie (  
@@ -35,12 +36,12 @@ HRESULT ThreadForFiberCookie (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="49ba2-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="49ba2-105">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3ebae-106">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="3ebae-106">Requirements</span></span>  
 
- <span data-ttu-id="49ba2-106">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="49ba2-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="3ebae-107">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3ebae-107">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="49ba2-107">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="49ba2-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="3ebae-108">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="3ebae-108">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="49ba2-108">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="49ba2-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3ebae-109">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="3ebae-109">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="49ba2-109">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="49ba2-109">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="3ebae-110">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3ebae-110">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
