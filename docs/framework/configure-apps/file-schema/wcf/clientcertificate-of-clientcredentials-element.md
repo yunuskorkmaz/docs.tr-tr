@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <clientCertificate> <clientCredentials> öğe'
 title: <clientCertificate><clientCredentials>öğesinin
 ms.date: 03/30/2017
 ms.assetid: 3b3fa000-3434-4142-a178-11903bdd2c5d
-ms.openlocfilehash: 74209c43dcafb1e27bb1d7943ee7832eaea0ef57
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4305b94e62c76436a6bce91251049b3eebd2db2c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204950"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99638840"
 ---
 # <a name="clientcertificate-of-clientcredentials-element"></a>\<clientCertificate>\<clientCredentials>öğesinin
 

@@ -1,4 +1,5 @@
 ---
+description: ': ICorConfiguration:: SetDebuggerThreadControl yöntemi hakkında daha fazla bilgi edinin'
 title: ICorConfiguration::SetDebuggerThreadControl Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 1ded7639-dacb-4db1-961c-d1ceaec01959
 topic_type:
 - apiref
-ms.openlocfilehash: 05df50d80c6b8962b3bdfe2708d5f9d30c58aaea
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9bf024f3feb6df44a94f8a5f1a626bb6e0c91d31
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723928"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99636669"
 ---
 # <a name="icorconfigurationsetdebuggerthreadcontrol-method"></a>ICorConfiguration::SetDebuggerThreadControl Yöntemi
 
 Hata ayıklama hizmetlerinin, ortak dil çalışma zamanı (CLR) iş parçacıklarının engellediği ve hata ayıklama için engellemesi kaldırıldığından, geri arama arabirimini ayarlar.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT SetDebuggerThreadControl (  

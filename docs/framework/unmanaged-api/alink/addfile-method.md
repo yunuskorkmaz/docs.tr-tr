@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: AddFile yöntemi'
 title: AddFile Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 9e707abb-f905-4568-9356-12aa21d1b11c
 topic_type:
 - apiref
-ms.openlocfilehash: 53ca4005f5681cfc5d550301d8aad1406aceb3a2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5e1253587298b2c1559c72dced43ec70dc169090
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95717207"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99638632"
 ---
 # <a name="addfile-method"></a>AddFile Metodu
 
 Derlemeye dosya ekler. , İlişkisiz modüller oluşturmak için de kullanılabilir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT AddFile(  

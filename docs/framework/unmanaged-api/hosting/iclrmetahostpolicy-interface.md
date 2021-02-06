@@ -1,4 +1,5 @@
 ---
+description: ': ICLRMetaHostPolicy Interface hakkında daha fazla bilgi edinin'
 title: ICLRMetaHostPolicy Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1bdeccb6-0698-4c97-ad69-eae2b69e59f1
 topic_type:
 - apiref
-ms.openlocfilehash: 515b73b019c683bd3e5aa3b895ee5623e75e4ad0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b14ad417617c32242f8a59844f7c1f1a8d05c78d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95707613"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637423"
 ---
 # <a name="iclrmetahostpolicy-interface"></a>ICLRMetaHostPolicy Arabirimi
 

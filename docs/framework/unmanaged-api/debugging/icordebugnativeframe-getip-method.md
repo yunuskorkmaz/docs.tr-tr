@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugNativeFrame:: GetIP Yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugNativeFrame::GetIP Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 99f693f3-d3b9-4fd8-9d09-b8efd03f7b67
 topic_type:
 - apiref
-ms.openlocfilehash: c9c0598f8e7b3e8654124f50663c912f3cd61659
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f36a14c38aa6c3754cf78eca8c657adc76469067
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95709316"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637858"
 ---
 # <a name="icordebugnativeframegetip-method"></a>ICorDebugNativeFrame::GetIP Metodu
 
 Yönerge işaretçisinin Şu anda ayarlandığı yerel kod konumu konumunu alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetIP (  

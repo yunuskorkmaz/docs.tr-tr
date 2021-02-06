@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: AssemblyAttributesGoHereM Class'
 title: AssemblyAttributesGoHereM sınıfı (System. Runtime. CompilerServices)
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: caaa8ba9-b4bb-4dd6-934d-57e436b2f3e5
 topic_type:
 - apiref
-ms.openlocfilehash: 15b9445aa3eabbd14541cfe5481bfb553c8c0347
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9afa72e5adbd539acaf8dfe45b446a61862df49e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446625"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99638580"
 ---
 # <a name="assemblyattributesgoherem-class"></a>AssemblyAttributesGoHereM sınıfı
 
 ALink tarafından özel öznitelikler hakkında bilgi depolamak için bir yer tutucu olarak kullanılır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```csharp
 internal sealed class AssemblyAttributesGoHereM

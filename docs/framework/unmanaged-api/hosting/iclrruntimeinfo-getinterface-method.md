@@ -1,4 +1,5 @@
 ---
+description: ': ICLRRuntimeInfo:: GetInterface yöntemi hakkında daha fazla bilgi edinin'
 title: ICLRRuntimeInfo::GetInterface Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cc7b0e5b-48c3-4509-8ebb-611ddb1f7ec2
 topic_type:
 - apiref
-ms.openlocfilehash: 192163ed8af680e39f7f3a03aee3f46546bc7450
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5a5c55823ff9954735a712423d8aaab1256c947d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732079"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637137"
 ---
 # <a name="iclrruntimeinfogetinterface-method"></a>ICLRRuntimeInfo::GetInterface Metodu
 
@@ -28,7 +29,7 @@ CLR 'yi geçerli işleme yükler ve [ICLRRuntimeHost](iclrruntimehost-interface.
   
  Bu yöntem, `CorBindTo` [KULLANıMDAN kaldırılan clr barındırma işlevleri](deprecated-clr-hosting-functions.md) bölümündeki tüm * işlevlerinin yerini alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetInterface(  
@@ -52,7 +53,7 @@ HRESULT GetInterface(
 
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
 |E_POINTER|`ppUnk` null.|  

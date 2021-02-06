@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: XPathNavigator kullanarak XPath deyimlerini değerlendirme'
 title: XPathNavigator Kullanarak XPath İfadelerini Değerlendirme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2913ccf3-f932-4363-8028-9e2d22ce6093
-ms.openlocfilehash: 19e3287a990bbfd793bce892b14f08f31c53faa2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 847f83eb9a41cdd28763c5b1516bee89c04517fb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95687209"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99629623"
 ---
 # <a name="evaluate-xpath-expressions-using-xpathnavigator"></a>XPathNavigator Kullanarak XPath İfadelerini Değerlendirme
 

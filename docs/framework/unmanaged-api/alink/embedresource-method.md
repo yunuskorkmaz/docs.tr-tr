@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: EmbedResource yöntemi'
 title: EmbedResource Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 667bd954-6dc6-4020-a3cb-0e8224179993
 topic_type:
 - apiref
-ms.openlocfilehash: 34439b7c01dee7d7789d989b58e8944c6282b71b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f7896172e7416048352788caf7e092096924b7af
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95676393"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99638359"
 ---
 # <a name="embedresource-method"></a>EmbedResource Yöntemi
 
 Gömülü bir kaynak bildirir. Bu yöntem, kaynağı aslında eklemez.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT EmbedResource(  

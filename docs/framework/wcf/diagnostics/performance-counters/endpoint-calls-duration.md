@@ -1,13 +1,14 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: uç nokta: çağrı süresi'
 title: 'Uç nokta: çağrı süresi'
 ms.date: 03/30/2017
 ms.assetid: 1aebe748-ad05-4ade-819c-d480379ccfb9
-ms.openlocfilehash: 967a2ef54bdde83a0cca842150abdbadb16175f0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c7dff82cf4c26e8ea0e7f2c0cf617cf64926f842
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96271310"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99635720"
 ---
 # <a name="endpoint-calls-duration"></a>Uç nokta: çağrı süresi
 

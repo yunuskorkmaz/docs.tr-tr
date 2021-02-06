@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerThreadEnum arabirimi hakkında daha fazla bilgi edinin'
 title: ICorProfilerThreadEnum Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1e35031b-e095-4c14-9644-8deeb3081e0b
 topic_type:
 - apiref
-ms.openlocfilehash: 147694431d2c378b856577ef5a60e8a8b4e9a7a7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 035296412aabf20503588a558c8e8ccc1338210e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721224"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99636399"
 ---
 # <a name="icorprofilerthreadenum-interface"></a>ICorProfilerThreadEnum Arabirimi
 

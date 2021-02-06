@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: StrongNameGetBlobFromImage Işlevi'
 title: StrongNameGetBlobFromImage İşlevi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1de658e6-da32-4d01-9097-6f43c92222e1
 topic_type:
 - apiref
-ms.openlocfilehash: 3a84221f94bad76d69f0dc67fe695ada3f3862f4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c68d6914d47fbb711c49c1e8432cae1bf33e771f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732248"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99636359"
 ---
 # <a name="strongnamegetblobfromimage-function"></a>StrongNameGetBlobFromImage İşlevi
 
@@ -27,7 +28,7 @@ Belirtilen bellek adresindeki derleme görüntüsünün ikili gösterimini alır
   
  Bu işlev kullanım dışı bırakıldı. Bunun yerine [ICLRStrongName:: StrongNameGetBlobFromImage](../hosting/iclrstrongname-strongnamegetblobfromimage-method.md) metodunu kullanın.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 BOOLEAN StrongNameGetBlobFromImage (  

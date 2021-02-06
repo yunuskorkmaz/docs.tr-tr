@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: normal ifade davranışının ayrıntıları'
 title: Normal Ifade davranışı
 ms.date: 03/30/2017
 ms.topic: conceptual
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-ms.openlocfilehash: 4007813f2c40c78e3b5e426bed39ac6b6f3747bf
-ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
+ms.openlocfilehash: a06d66da92ae711abfbcbb477fd08e1da036f439
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98692987"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99629831"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Normal ifade davranışının ayrıntıları
 

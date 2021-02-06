@@ -1,4 +1,5 @@
 ---
+description: ': ICLRRuntimeInfo:: GetProcAddress yöntemi hakkında daha fazla bilgi edinin'
 title: ICLRRuntimeInfo::GetProcAddress Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a7732bfc-689a-4926-88fd-4f81e6f9ed78
 topic_type:
 - apiref
-ms.openlocfilehash: 028cfd51a713d8598598566a5b1edcf3fc70ecfc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1e5d08ed118930418106b28541b4081d6acad927
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732066"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637150"
 ---
 # <a name="iclrruntimeinfogetprocaddress-method"></a>ICLRRuntimeInfo::GetProcAddress Metodu
 
@@ -28,7 +29,7 @@ Bu arabirimle ilişkili ortak dil çalışma zamanından (CLR) aktarılmış ola
   
  Bu yöntem [GetRealProcAddress](getrealprocaddress-function.md) işlevinin yerini alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetProcAddress(  
@@ -48,7 +49,7 @@ HRESULT GetProcAddress(
 
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
 |E_POINTER|`pszProcName` ya da `ppProc` null.|  

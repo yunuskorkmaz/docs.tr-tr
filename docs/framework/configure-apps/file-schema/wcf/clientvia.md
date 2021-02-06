@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <clientVia>'
 title: <clientVia>
 ms.date: 03/30/2017
 ms.assetid: c27ee94e-babd-459b-9574-2a6d67d11314
-ms.openlocfilehash: 5e62201a38dc4dc251996531a4af5f294dd2395f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 651af0c310504f7672ca172d7df609365c319506
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91151109"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99638781"
 ---
 # \<clientVia>
 
@@ -38,7 +39,7 @@ Taşıma kanalının oluşturulması gereken URI 'yi belirtir. Daha fazla bilgi 
   
 ### <a name="child-elements"></a>Alt Öğeler  
 
- Hiçbiri  
+ Yok  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   

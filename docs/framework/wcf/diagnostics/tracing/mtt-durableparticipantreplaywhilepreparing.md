@@ -1,19 +1,20 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Microsoft. Transactions. TransactionBridge. DurableParticipantReplayWhilePreparing'
 title: Microsoft.Transactions.TransactionBridge.DurableParticipantReplayWhilePreparing
 ms.date: 03/30/2017
 ms.assetid: 10ef3876-6f8e-4d4e-8444-f47847b64795
-ms.openlocfilehash: bfa279887339f025e4cb7c9c455fd25098684073
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: fcaa50dd4faa548cad8ff085f1c66f94c63bd010
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96236617"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99635668"
 ---
 # <a name="microsofttransactionstransactionbridgedurableparticipantreplaywhilepreparing"></a>Microsoft.Transactions.TransactionBridge.DurableParticipantReplayWhilePreparing
 
 WS-AT protokol hizmeti, hazırlama Işlemine yanıt vermeyen dayanıklı bir katılımcıdan bir yeniden yürütme iletisi aldı. Sonuç olarak, işlem iptal edildi.  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Dayanıklı bir katılımcı hazırlanırken bir yeniden yürütme iletisi alındığında izleniyor. Bu durum için geçersiz bir ileti ve işlem durdurulacak.  
   

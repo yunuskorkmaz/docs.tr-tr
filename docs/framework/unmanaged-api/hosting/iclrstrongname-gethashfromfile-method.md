@@ -1,4 +1,5 @@
 ---
+description: ': ICLRStrongName:: GetHashFromFile Yöntemi hakkında daha fazla bilgi'
 title: ICLRStrongName::GetHashFromFile Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 9e50480a-8ada-4044-b2a5-97bb14ed3525
 topic_type:
 - apiref
-ms.openlocfilehash: ff346d8f7ba321904a8d91079298b58039e6eb54
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e930f1c21e5b0be441fe44ad352b2ef2f43d0f67
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727620"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637059"
 ---
 # <a name="iclrstrongnamegethashfromfile-method"></a>ICLRStrongName::GetHashFromFile Yöntemi
 
 Belirtilen dosyanın içeriği üzerinde bir karma oluşturur.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetHashFromFile (  

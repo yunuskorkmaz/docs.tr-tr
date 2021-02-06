@@ -1,19 +1,20 @@
 ---
+description: ': System. IdentityModel. AuthorizationContextCreated hakkında daha fazla bilgi edinin'
 title: System.IdentityModel.AuthorizationContextCreated
 ms.date: 03/30/2017
 ms.assetid: 392b5964-fb51-4e7c-883a-62c929623706
-ms.openlocfilehash: b2e785b1f64752f0c5f08a458435fb46acd18252
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 114be3d808a9df4eb9c69288b85c0eecb5906ffc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96274419"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99635408"
 ---
 # <a name="systemidentitymodelauthorizationcontextcreated"></a>System.IdentityModel.AuthorizationContextCreated
 
 System.IdentityModel.AuthorizationContextCreated  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Belirtilen kimliğe sahip yetkilendirme bağlamı oluşturuldu.  
   

@@ -1,4 +1,5 @@
 ---
+description: ': ICLRRuntimeInfo:: BindAsLegacyV2Runtime Yöntemi hakkında daha fazla bilgi edinin'
 title: ICLRRuntimeInfo::BindAsLegacyV2Runtime Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 65fd55ac-4a24-4479-9384-a2e8013bfb2b
 topic_type:
 - apiref
-ms.openlocfilehash: f0a03ecce49bbc3c1c03d037c9be31a8e994259d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 77b340cba18ea86546e1a8f4a17933f09289b1de
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732105"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637189"
 ---
 # <a name="iclrruntimeinfobindaslegacyv2runtime-method"></a>ICLRRuntimeInfo::BindAsLegacyV2Runtime Yöntemi
 
@@ -36,7 +37,7 @@ HRESULT BindAsLegacyV2Runtime ();
 
  Bu yöntem, aşağıdaki belirli HRESULTs 'leri döndürür:  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|Bağlama başarılı ya da bu çalışma zamanı eski CLR sürüm 2 etkinleştirme ilkesi çalışma zamanı olarak zaten bağlandı.|  
 |CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|Farklı bir çalışma zamanı eski CLR sürüm 2 etkinleştirme ilkesine zaten bağlıydı.|  

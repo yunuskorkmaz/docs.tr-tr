@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: yayma'
 title: Yayma
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-ms.openlocfilehash: be010178d8f0face8f6c7e986107e4ea90d91953
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 43ecbf7b8db66f26accc058501730300a2891284
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96240140"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99635603"
 ---
 # <a name="propagation"></a>Yayma
 

@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi <certificate> edinin: <peer>'
 title: <certificate> / <peer>
 ms.date: 03/30/2017
 ms.assetid: 48b69142-c957-4305-a042-c9d0c9a55c0e
-ms.openlocfilehash: 8ec839df02af4a01d31192eebc96e4c5e58313e9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e48a96a3f1fa486b19289584ae0c059eb5b7048d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91151124"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639061"
 ---
 # <a name="certificate-of-peer"></a>\<certificate> / \<peer>
 

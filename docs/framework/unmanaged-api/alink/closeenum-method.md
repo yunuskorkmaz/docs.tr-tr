@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: CloseEnum Yöntemi'
 title: CloseEnum Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: aa4a091e-13fe-4264-91de-e12f1c767c87
 topic_type:
 - apiref
-ms.openlocfilehash: 59b1ec3f9ca382ef13680e3aad4d0c0c0e175f1c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 700c54de5af2e5c0be6940d4045019092655d46f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95716973"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99638385"
 ---
 # <a name="closeenum-method"></a>CloseEnum Yöntemi
 
 Belirtilen numaralandırmayı kapatır ve ilişkili kaynakları serbest bırakır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT CloseEnum(  

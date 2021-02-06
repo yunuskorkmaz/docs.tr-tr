@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: finally bloklarını kullanma'
 title: 'Nasıl yapılır: Finally Bloklarını Kullanma'
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - finally blocks
 - ArgumentOutOfRangeException class
 ms.assetid: 4b9c0137-04af-4468-91d1-b9014df8ddd2
-ms.openlocfilehash: 8bc36ce9a755762bb5159a27f9ef5699b2992f0e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 0c296e5cba8e3f4f50005a6178886a116f6e7bac
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828042"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99629610"
 ---
 # <a name="how-to-use-finally-blocks"></a>Finally bloklarını kullanma
 

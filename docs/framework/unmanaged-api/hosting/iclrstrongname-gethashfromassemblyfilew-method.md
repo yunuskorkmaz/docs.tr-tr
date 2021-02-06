@@ -1,4 +1,5 @@
 ---
+description: ': ICLRStrongName:: GetHashFromAssemblyFileW yöntemi hakkında daha fazla bilgi'
 title: ICLRStrongName::GetHashFromAssemblyFileW Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 5d0b44a2-5a14-44a2-9a0e-e8682fd4e106
 topic_type:
 - apiref
-ms.openlocfilehash: e94bfe6151ed42886355423a838f21e13748ec61
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 27123ed8217d49765fe3fd7c19efc92f4e770722
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95685779"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637085"
 ---
 # <a name="iclrstrongnamegethashfromassemblyfilew-method"></a>ICLRStrongName::GetHashFromAssemblyFileW Metodu
 
 Unicode dizesi tarafından belirtilen dosyanın içeriği üzerinde bir karma oluşturur.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetHashFromAssemblyFileW (  
