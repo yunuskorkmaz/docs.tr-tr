@@ -1,4 +1,5 @@
 ---
+description: ': My. Settings nesnesi hakkında daha fazla bilgi edinin'
 title: My.Settings Nesnesi
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
-ms.openlocfilehash: f3348e9eea5bdd7f4fd911150877c9aefdd66bcc
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 92323c5379d0c5a4dbf96cfdbe0becccc2bad7cd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867291"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640608"
 ---
 # <a name="mysettings-object"></a>My.Settings Nesnesi
 
@@ -24,15 +25,15 @@ Uygulamanın ayarlarına erişmek için özellikleri ve yöntemleri sağlar.
   
 ## <a name="properties"></a>Özellikler  
 
- `My.Settings`Nesnesinin özellikleri uygulamanızın ayarlarına erişim sağlar. Ayarları eklemek veya kaldırmak için, **Ayarlar tasarımcısını**kullanın.  
+ `My.Settings`Nesnesinin özellikleri uygulamanızın ayarlarına erişim sağlar. Ayarları eklemek veya kaldırmak için, **Ayarlar tasarımcısını** kullanın.  
   
- Her ayarın bir **adı**, **türü**, **kapsamı**ve **değeri**vardır ve bu ayarlar, her bir ayara erişme özelliğinin nesnede nasıl göründüğünü belirlenir `My.Settings` :  
+ Her ayarın bir **adı**, **türü**, **kapsamı** ve **değeri** vardır ve bu ayarlar, her bir ayara erişme özelliğinin nesnede nasıl göründüğünü belirlenir `My.Settings` :  
   
 - **Ad** , özelliğin adını belirler.  
   
 - **Tür** , özelliğin türünü belirler.  
   
-- **Kapsam** , özelliğin salt okunurdur olduğunu gösterir. Değer **uygulama**ise, özellik salt okunurdur; değer **Kullanıcı**ise, özelliği okuma-yazma olur.  
+- **Kapsam** , özelliğin salt okunurdur olduğunu gösterir. Değer **uygulama** ise, özellik salt okunurdur; değer **Kullanıcı** ise, özelliği okuma-yazma olur.  
   
 - **Değer** , özelliğin varsayılan değeridir.  
   

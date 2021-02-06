@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: Kanal güvenliği kimlik bilgilerini belirtme'
 title: 'Nasıl yapılır: Kanal Güvenliği Kimlik Bilgilerini Belirtme'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: 9236985ef461044e480847003d9d249b7e232783
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 18cbb1ea1113e5b31f5adb43556db03d91c618ba
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96266772"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643156"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Nasıl yapılır: Kanal Güvenliği Kimlik Bilgilerini Belirtme
 

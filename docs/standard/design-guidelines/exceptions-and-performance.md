@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: özel durumlar ve performans'
 title: Özel Durumlar ve Performans
 ms.date: 10/22/2008
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - exceptions, performance
 - throwing exceptions, performance
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
-ms.openlocfilehash: babe378e0d61357709006e08f71ff578492f116c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 72b35ccca5514e56dcc04fc0a07d1f9887c4a2f7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734757"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99642129"
 ---
 # <a name="exceptions-and-performance"></a>Özel Durumlar ve Performans
 

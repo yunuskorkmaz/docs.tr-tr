@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: nasıl yapılır: güvenilir oturumlarda Iletileri güvenli hale getirme'
 title: 'Nasıl yapılır: Güvenli Oturumlarla İletileri Güvenli Hale Getirme'
 ms.date: 03/30/2017
 ms.assetid: aee33e50-936f-4486-9ca8-c1520c19a62d
-ms.openlocfilehash: cec9356467886be022d05ead55d5cb6ccddcd838
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 73ca0d543edc2445dc72264e7eccf6c1eb616313
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558686"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643364"
 ---
 # <a name="how-to-secure-messages-within-reliable-sessions"></a>Nasıl yapılır: Güvenli Oturumlarla İletileri Güvenli Hale Getirme
 

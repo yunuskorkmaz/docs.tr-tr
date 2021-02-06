@@ -1,13 +1,14 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: nasıl yapılır: keşif proxy 'sini test etme"
 title: "Nasıl yapılır: Keşif Proxy'sini Test Etme"
 ms.date: 03/30/2017
 ms.assetid: d96e3fa2-3c42-4e5d-8244-2694081bdc32
-ms.openlocfilehash: b08e8561ceff9f0a427a9ea9acb2309772579853
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 32360fd1f3724f2a557182ce2e11d346ba5c959d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96294670"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643117"
 ---
 # <a name="how-to-test-the-discovery-proxy"></a>Nasıl yapılır: Keşif Proxy'sini Test Etme
 

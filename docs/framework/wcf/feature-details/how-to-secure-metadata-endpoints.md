@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: nasıl yapılır: güvenli meta veri uç noktaları'
 title: 'Nasıl yapılır: Meta Veri Uç Noktalarını Güvenli Hale Getirme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
-ms.openlocfilehash: c5efd921d3826ef814bf45d6895255981101d992
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bcce3fd0708049435c791cae5064f84133dfd612
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84592963"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643312"
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>Nasıl yapılır: Meta Veri Uç Noktalarını Güvenli Hale Getirme
 
@@ -22,7 +23,7 @@ Bu konu, bir Güvenli Yuva Katmanı (SSL) sertifikasıyla veya diğer bir deyiş
 
 ### <a name="to-create-a-secure-https-get-metadata-endpoint-in-code"></a>Kodda güvenli bir HTTPS GET meta veri uç noktası oluşturmak için
 
-1. Uygun bir X. 509.440 sertifikası ile bir bağlantı noktası yapılandırın. Sertifika, güvenilir bir yetkilinizden gelmiş olmalı ve "hizmet yetkilendirmesi" kullanımı amaçlanan bir şekilde olmalıdır. Sertifikayı bağlantı noktasına iliştirmek için HttpCfg. exe aracını kullanmanız gerekir. Bkz. [nasıl yapılır: SSL sertifikası Ile bağlantı noktası yapılandırma](how-to-configure-a-port-with-an-ssl-certificate.md).
+1. Uygun bir X. 509.440 sertifikası ile bir bağlantı noktası yapılandırın. Sertifika, güvenilir bir yetkilinizden gelmiş olmalı ve "hizmet yetkilendirmesi" kullanımı amaçlanan bir şekilde olmalıdır. Sertifikayı bağlantı noktasına eklemek için HttpCfg.exe aracını kullanmanız gerekir. Bkz. [nasıl yapılır: SSL sertifikası Ile bağlantı noktası yapılandırma](how-to-configure-a-port-with-an-ssl-certificate.md).
 
     > [!IMPORTANT]
     > Sertifikanın konusu veya etki alanı adı sistemi (DNS) bilgisayarın adıyla eşleşmelidir. Bu, HTTPS mekanizmanın gerçekleştirdiği ilk adımlardan biri, sertifikanın çağrıldığı adresle aynı Tekdüzen Kaynak tanımlayıcısına (URI) verildiğine emin olmak için gereklidir.
@@ -100,7 +101,7 @@ Kod örneği aşağıdaki ad alanlarını kullanır:
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>
-- [Nasıl Yapılır: SSL Sertifikası ile Bir Bağlantı Noktasını Yapılandırma](how-to-configure-a-port-with-an-ssl-certificate.md)
+- [Nasıl yapılır: SSL Sertifikası ile Bir Bağlantı Noktasını Yapılandırma](how-to-configure-a-port-with-an-ssl-certificate.md)
 - [Sertifikalarla Çalışma](working-with-certificates.md)
 - [Meta Veriler Hakkında Güvenlik Konuları](security-considerations-with-metadata.md)
 - [Hizmet ve İstemcileri Güvenli Hale Getirme](securing-services-and-clients.md)

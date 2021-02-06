@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: Imza onayı ayarlama'
 title: 'Nasıl yapılır: İmza Onayı Ayarlama'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - signature confirmation
 - WCF, security
 ms.assetid: 2424c137-c7c2-4aa9-8d5d-a066e12fefda
-ms.openlocfilehash: 9423922753efee7aac32e430f97307c715e43464
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 158ec2a5f74038f5c1ca1af847f57457a8881974
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586929"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643195"
 ---
 # <a name="how-to-set-up-a-signature-confirmation"></a>Nasıl yapılır: İmza Onayı Ayarlama
 
-*İmza onaylama* bir ileti başlatıcısının, gönderenin özgün iletisine yanıt olarak alınan bir yanıtın oluşturulduğundan emin olmak için bir mekanizmadır. İmza onayı WS-Security 1,1 belirtiminde tanımlanmıştır. Bir uç nokta WS-Security 1,0 ' i destekliyorsa, imza onayını kullanamazsınız.
+*İmza onaylama* bir ileti başlatıcısının, gönderenin özgün iletisine yanıt olarak alınan bir yanıtın oluşturulduğundan emin olmak için bir mekanizmadır. İmza onayı WS-Security 1,1 belirtiminde tanımlanmıştır. Bir uç nokta WS-Security 1,0 destekliyorsa, imza onayını kullanamazsınız.
 
 Aşağıdaki yordamlar, kullanarak imza onayını etkinleştirmeyi belirtir <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> . İle aynı yordamı kullanabilirsiniz <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> . Yordamı, [nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](how-to-create-a-custom-binding-using-the-securitybindingelement.md)bölümünde bulunan temel adımların üzerine oluşturulur.
 
@@ -25,7 +26,7 @@ Aşağıdaki yordamlar, kullanarak imza onayını etkinleştirmeyi belirtir <xre
 
 1. Öğesinin bir örneğini oluşturur <xref:System.ServiceModel.Channels.BindingElementCollection> sınıfı.
 
-2. Sınıfının bir örneğini oluşturun <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> .
+2. Sınıfının bir örneğini oluşturun  <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> .
 
 3. Öğesini <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A> olarak ayarlayın `true` .
 

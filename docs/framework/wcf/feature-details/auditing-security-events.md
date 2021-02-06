@@ -1,15 +1,16 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: güvenlik olaylarını denetleme'
 title: Güvenlik Etkinliklerini Denetleme
 ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: 985004313c7d9843f2e9960805a6c0623d43a41f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 84eebeec5ebeec047d840e9902d52b4ae409599f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96234823"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643728"
 ---
 # <a name="auditing-security-events"></a>Güvenlik Etkinliklerini Denetleme
 
@@ -92,7 +93,7 @@ Windows Communication Foundation (WCF) ile oluşturulan uygulamalar, denetim öz
 
  Aşağıdaki tablolar, uygulamada veya güvenlik olay günlüğünde oturum açıp kullanmayacağınızı seçmenize yardımcı olacak bilgiler sağlar.  
   
-#### <a name="operating-system"></a>İşletim Sistemi  
+#### <a name="operating-system"></a>Operating System  
   
 |Sistem|Uygulama günlüğü|Güvenlik günlüğü|  
 |------------|---------------------|------------------|  

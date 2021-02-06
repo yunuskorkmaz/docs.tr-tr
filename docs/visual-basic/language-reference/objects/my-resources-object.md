@@ -1,4 +1,5 @@
 ---
+description: ': My. Resources nesnesi hakkında daha fazla bilgi edinin'
 title: My.Resources Nesnesi
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
-ms.openlocfilehash: 3d12524706f680434d5b6d8da39c89042bea3281
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: ecd8e79aacea85080dc341ae36b362a595893034
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867340"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640634"
 ---
 # <a name="myresources-object"></a>My.Resources Nesnesi
 
@@ -29,9 +30,9 @@ Uygulamanın kaynaklarına erişmek için özellikler ve sınıflar sağlar.
   
 ## <a name="properties"></a>Özellikler  
 
- Nesnesinin özellikleri, `My.Resources` uygulamanızın kaynaklarına salt okuma erişimi sağlar. Kaynak eklemek veya kaldırmak için, **Proje tasarımcısını**kullanın. ResourceName kullanarak **Proje Tasarımcısı** aracılığıyla eklenen kaynaklara erişebilirsiniz `My.Resources.` *resourceName*.  
+ Nesnesinin özellikleri, `My.Resources` uygulamanızın kaynaklarına salt okuma erişimi sağlar. Kaynak eklemek veya kaldırmak için, **Proje tasarımcısını** kullanın. ResourceName kullanarak **Proje Tasarımcısı** aracılığıyla eklenen kaynaklara erişebilirsiniz `My.Resources.` .  
   
- Ayrıca, **Çözüm Gezgini** ' de projenizi seçip **Yeni öğe Ekle ' ye** tıklayarak veya **Proje** menüsünden **Varolan öğe** Ekle ' yi seçerek kaynak dosyalarını ekleyebilir veya kaldırabilirsiniz. `My.Resources.` *ResourceFileName* `.` *resourceName*kullanarak bu şekilde eklenen kaynaklara erişebilirsiniz.  
+ Ayrıca, **Çözüm Gezgini** ' de projenizi seçip **Yeni öğe Ekle ' ye** tıklayarak veya **Proje** menüsünden **Varolan öğe** Ekle ' yi seçerek kaynak dosyalarını ekleyebilir veya kaldırabilirsiniz. `My.Resources.` *ResourceFileName* `.` *resourceName* kullanarak bu şekilde eklenen kaynaklara erişebilirsiniz.  
   
  Her kaynağın bir adı, kategorisi ve değeri vardır ve bu kaynak ayarları, kaynağa erişme özelliğinin nesnede nasıl göründüğünü belirlenir `My.Resources` . **Proje Tasarımcısı**'nda eklenen kaynaklar için:  
   

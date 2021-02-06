@@ -1,4 +1,5 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: BC30941: Structure ' <structurename> ' en az bir örnek üye değişkeni veya en az bir örnek olay bildirimi içermelidir ' Custom"
 title: "'<structurename>' yapısı en az bir örnek üye değişkeni veya 'Custom' olarak işaretlenmemiş en az bir örnek olay bildirimi içermelidir"
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30941
 ms.assetid: 7054cc1e-bac3-4c3d-82f3-35772bd8dd3b
-ms.openlocfilehash: 4e7ef82659c43be08ee444eaf3f4df663f7aaa53
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 08596997decd9d739ac95ad3e4191cb126b3efb3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92159657"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99641453"
 ---
 # <a name="bc30941-structure-structurename-must-contain-at-least-one-instance-member-variable-or-at-least-one-instance-event-declaration-not-marked-custom"></a>BC30941: ' ' yapısı en \<structurename> az bir örnek üye değişkeni veya ' Custom ' olarak işaretlenmemiş en az bir örnek olay bildirimi içermelidir
 

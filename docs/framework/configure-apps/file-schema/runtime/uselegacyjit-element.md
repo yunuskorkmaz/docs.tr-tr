@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: <useLegacyJit> öğesi'
 title: <useLegacyJit> Öğesi
 ms.date: 04/26/2017
 ms.assetid: c2cf97f0-9262-4f1f-a754-5568b51110ad
-ms.openlocfilehash: a126b8c0050a8d1fd96a3d090f9b018a9faa07a7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a1449cbc69f0aa1b91cc427fbfc5b984bf605169
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73968850"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640010"
 ---
 # <a name="uselegacyjit-element"></a>\<useLegacyJit> Öğesi
 
@@ -17,7 +18,7 @@ Ortak dil çalışma zamanının, Just-In-Time derlemesi için eski 64-bit JıT 
 &nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<useLegacyJit>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml
 <useLegacyJit enabled=0|1 />
@@ -70,7 +71,7 @@ Yapılandırma dosyası ayarı kullanmak yerine, eski 64 bit JıT derleyicisini 
   COMPLUS_useLegacyJit=0|1  
   ```  
   
-  Ortam değişkeni *genel kapsama*sahiptir, yani makinede çalıştırılan tüm uygulamaları etkiler. Ayarlanırsa, uygulama yapılandırma dosyası ayarı tarafından geçersiz kılınabilir. Ortam değişkeni adı büyük/küçük harfe duyarlı değildir.
+  Ortam değişkeni *genel kapsama* sahiptir, yani makinede çalıştırılan tüm uygulamaları etkiler. Ayarlanırsa, uygulama yapılandırma dosyası ayarı tarafından geçersiz kılınabilir. Ortam değişkeni adı büyük/küçük harfe duyarlı değildir.
   
 - Kayıt defteri anahtarı ekleme
 
@@ -93,6 +94,6 @@ Aşağıdaki yapılandırma dosyası, derlemeyi yeni 64-bit JıT derleyicisi ile
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [\<runtime>Dosyalarında](runtime-element.md)
-- [\<configuration>Dosyalarında](../configuration-element.md)
+- [\<runtime> Dosyalarında](runtime-element.md)
+- [\<configuration> Dosyalarında](../configuration-element.md)
 - [Risk azaltma: yeni 64-bit JıT derleyicisi](../../../migration-guide/mitigation-new-64-bit-jit-compiler.md)

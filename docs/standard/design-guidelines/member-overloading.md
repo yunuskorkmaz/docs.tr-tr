@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: üye aşırı yüklemesi'
 title: Üye Aşırı Yüklemesi
 ms.date: 10/22/2008
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - overloaded members
 - signatures, members
 ms.assetid: 964ba19e-8b94-4b5b-b1e3-5a0b531a0bb1
-ms.openlocfilehash: fe8bf23a04e6684564d3d7e287c2a009e0817732
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d3a545bfec552686e55c9f713d58784497946819
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95706638"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99641960"
 ---
 # <a name="member-overloading"></a>Üye Aşırı Yüklemesi
 

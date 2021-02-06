@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: Işlemsel hizmet oluşturma'
 title: 'Nasıl yapılır: İşlemsel Hizmet Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 1bd2e4ed-a557-43f9-ba98-4c70cb75c154
-ms.openlocfilehash: c3d094dbd5822f6025e1cc6c90aab04b61459314
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 78ad922a7e1f174715be7bd1a8466572425411be
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96286298"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643442"
 ---
 # <a name="how-to-create-a-transactional-service"></a>Nasıl yapılır: İşlemsel Hizmet Oluşturma
 

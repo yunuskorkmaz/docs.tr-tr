@@ -1,4 +1,5 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: nasıl yapılır: bir URL 'den protokol ve bağlantı noktası numarası ayıklama"
 title: "Nasıl yapılır: Bir URL'den Protokol ve Bağlantı Noktası Numarası Çıkarma"
 ms.date: 06/30/2020
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - regular expressions [.NET], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: ab7f62b3-6d2c-4efb-8ac6-28600df5fd5c
-ms.openlocfilehash: ba512fbe4ebc7ec35ca590541fe5bf94d07c465d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5240719f26b092053f1f8efa56cb464f77ce0154
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734523"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99642792"
 ---
 # <a name="how-to-extract-a-protocol-and-port-number-from-a-url"></a>Nasıl yapılır: Bir URL'den Protokol ve Bağlantı Noktası Numarası Çıkarma
 
@@ -34,7 +35,7 @@ Aşağıdaki örnek bir URL 'den protokol ve bağlantı noktası numarası ayık
   
  Normal ifade deseninin `^(?<proto>\w+)://[^/]+?(?<port>:\d+)?/` Aşağıdaki tabloda gösterildiği gibi yorumlanması gösterilebilir.  
   
-|Desen|Açıklama|  
+|Desen|Description|  
 |-------------|-----------------|  
 |`^`|Dizenin başlangıcında eşleşmeyi başlatın.|  
 |`(?<proto>\w+)`|Bir veya daha fazla sözcük karakteri eşleştir. Bu grubu adlandırın `proto` .|  

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: <requiredRuntime> öğesi'
 title: <requiredRuntime> öğesi
 ms.date: 03/30/2017
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - <requiredRuntime> element
 - container tags, <requiredRuntime> element
 ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
-ms.openlocfilehash: 19fa1561ca3acd845918d952379c5227121465b4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e9d0a88a65f72ec03f3b2b124920d8265b8bf0c9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91174075"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639854"
 ---
 # <a name="requiredruntime-element"></a>\<requiredRuntime> öğesi
 

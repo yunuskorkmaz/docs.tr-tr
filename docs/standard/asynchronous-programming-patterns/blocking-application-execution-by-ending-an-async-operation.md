@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi: zaman uyumsuz bir Işlemi sonlandırarak uygulama yürütmeyi engelleme'
 title: Zaman Uyumsuz bir İşlemi Sonlandırarak Uygulama Yürütmesini Engelleme
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -10,12 +11,12 @@ ms.assetid: cc5e2834-a65b-4df8-b750-7bdb79997fee
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: d99c09c4ac087152407fa8dc12894c216f9f43dc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e726bad3c9fe78d8e4fafadc3d10975bb9c17750
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95716180"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99642818"
 ---
 # <a name="blocking-application-execution-by-ending-an-async-operation"></a>Zaman Uyumsuz bir İşlemi Sonlandırarak Uygulama Yürütmesini Engelleme
 

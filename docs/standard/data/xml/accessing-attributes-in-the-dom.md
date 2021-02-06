@@ -1,16 +1,17 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: DOM 'daki özniteliklere erişme"
 title: DOM Özniteliklerine Erişim
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ce2df341-a1a4-4e97-8e1b-cd45b8e3e71e
-ms.openlocfilehash: b7a1e64c8661e97966b8d0bb84e2d330c1e06b86
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 6bb8370b101001c46bf10bceb3b9a935d0647293
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822873"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99642714"
 ---
 # <a name="accessing-attributes-in-the-dom"></a>DOM Özniteliklerine Erişim
 

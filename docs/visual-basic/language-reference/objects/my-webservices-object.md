@@ -1,4 +1,5 @@
 ---
+description: ': My. WebServices nesnesi hakkında daha fazla bilgi edinin'
 title: My.WebServices Nesnesi
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.WebServices object
 ms.assetid: f188dc05-2c75-41b6-bb68-122d1c3110a2
-ms.openlocfilehash: 0b63b44c2cd9d55094fb83fed6c04e4de528a25c
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: e8d7ef8b349fef6d69b92d9df4a23222bd3c912e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867201"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640543"
 ---
 # <a name="mywebservices-object"></a>My.WebServices Nesnesi
 
@@ -22,7 +23,7 @@ Geçerli proje tarafından başvurulan her bir XML Web hizmetinin tek bir örne�
 
  `My.WebServices`Nesnesi, geçerli proje tarafından başvurulan her bir Web hizmetinin örneğini sağlar. Her örnek isteğe bağlı olarak oluşturulur. Bu Web hizmetlerine nesnenin özellikleri aracılığıyla erişebilirsiniz `My.WebServices` . Özelliğin adı, özelliğin eriştiği Web hizmetinin adıyla aynıdır. Öğesinden devralan tüm sınıflar <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> bir Web hizmetidir. Bir projeye Web Hizmetleri ekleme hakkında daha fazla bilgi için bkz. [uygulama Web Hizmetleri 'Ne erişme](../../developing-apps/programming/accessing-application-web-services.md).  
   
- `My.WebServices`Nesne yalnızca geçerli projeyle Ilişkili Web hizmetlerini kullanıma sunar. Başvurulan DLL 'lerde belirtilen Web hizmetlerine erişim sağlamaz. Bir DLL 'nin sağladığı bir Web hizmetine erişmek için, Web hizmeti 'nin adı *dlladı*biçiminde kullanmanız gerekir. *WebServiceName*. Daha fazla bilgi için bkz. [uygulama Web Hizmetleri 'Ne erişme](../../developing-apps/programming/accessing-application-web-services.md).  
+ `My.WebServices`Nesne yalnızca geçerli projeyle Ilişkili Web hizmetlerini kullanıma sunar. Başvurulan DLL 'lerde belirtilen Web hizmetlerine erişim sağlamaz. Bir DLL 'nin sağladığı bir Web hizmetine erişmek için, Web hizmeti 'nin adı *dlladı* biçiminde kullanmanız gerekir. *WebServiceName*. Daha fazla bilgi için bkz. [uygulama Web Hizmetleri 'Ne erişme](../../developing-apps/programming/accessing-application-web-services.md).  
   
  Nesne ve özellikleri Web uygulamaları için kullanılamaz.  
   
@@ -31,7 +32,7 @@ Geçerli proje tarafından başvurulan her bir XML Web hizmetinin tek bir örne�
  Nesnesinin her özelliği, `My.WebServices` geçerli proje tarafından başvurulan bir Web hizmeti örneğine erişim sağlar. Özelliğin adı, özelliğin eriştiği Web hizmeti adı ile aynıdır ve özellik türü, Web hizmetinin türüyle aynıdır.  
   
 > [!NOTE]
-> Ad çakışması varsa, bir Web hizmetine erişmek için özellik adı *RootNamespace*_*ad*alanı \_ *HizmetAdı*olur. Örneğin, adlı iki Web hizmeti göz önünde bulundurun `Service1` . Bu hizmetlerden biri kök ad alanında ve ad alanında ise `WindowsApplication1` `Namespace1` , kullanarak bu hizmete erişirsiniz `My.WebServices.WindowsApplication1_Namespace1_Service1` .  
+> Ad çakışması varsa, bir Web hizmetine erişmek için özellik adı *RootNamespace* _ *ad* alanı \_ *HizmetAdı* olur. Örneğin, adlı iki Web hizmeti göz önünde bulundurun `Service1` . Bu hizmetlerden biri kök ad alanında ve ad alanında ise `WindowsApplication1` `Namespace1` , kullanarak bu hizmete erişirsiniz `My.WebServices.WindowsApplication1_Namespace1_Service1` .  
   
  Nesnenin özelliklerinden birine ilk kez eriştiğinizde `My.WebServices` , Web hizmetinin yeni bir örneğini oluşturur ve depolar. Bu özelliğin sonraki erişimleri, Web hizmetinin bu örneğini döndürür.  
   
@@ -64,7 +65,7 @@ Geçerli proje tarafından başvurulan her bir XML Web hizmetinin tek bir örne�
 |Windows Denetim Kitaplığı|**Evet**|  
 |Web Denetim Kitaplığı|**Evet**|  
 |Windows Hizmeti|**Evet**|  
-|Web Sitesi|Hayır|  
+|Web Sitesi|No|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

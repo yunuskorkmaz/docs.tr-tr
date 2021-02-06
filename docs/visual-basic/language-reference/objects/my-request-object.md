@@ -1,4 +1,5 @@
 ---
+description: ': My. Request nesnesi hakkında daha fazla bilgi edinin'
 title: My.Request Nesnesi
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Request object
 ms.assetid: 93d5f0e2-6b60-4a2c-8652-d90216f6ad10
-ms.openlocfilehash: d0459506994fb69ebfaa4186ba137044b6fe9464
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 0b72252e261cd033bfc35c546de5c53a4f3cfe2c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90870073"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640660"
 ---
 # <a name="myrequest-object"></a>My.Request Nesnesi
 

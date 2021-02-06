@@ -1,4 +1,5 @@
 ---
+description: "Daha fazla bilgi: BC30982: ' ' türü, <variablename> döngü sınırları ve Step değişkeni aynı türe genişlemediğinden gösterilemiyor"
 title: Döngü sınırları ve step değişkeni aynı türe genişlemediğinden '<variablename>' türü çıkarılamıyor
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
-ms.openlocfilehash: 1330cbd6567b69df9bd811ced49c6df2e120a0b2
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 399e021500813127df6ecede2534783df09ac8dc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92161215"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99641167"
 ---
 # <a name="bc30982-type-of-variablename-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>BC30982: ' ' türü, \<variablename> döngü sınırları ve Step değişkeni aynı türe genişlemediğinden çıkarsanamıyor
 

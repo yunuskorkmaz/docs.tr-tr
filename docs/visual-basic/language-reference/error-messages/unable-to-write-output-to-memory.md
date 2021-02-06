@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: BC31020: çıkış belleğe yazılamıyor'
 title: Çıkış belleğe yazılamıyor
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31020
 ms.assetid: 23996dca-250f-4320-8211-1560e90172df
-ms.openlocfilehash: 22fd4f93b3b2e77ef8836b3074344285346c843d
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 54fe93a0fdcd05a585e0ca52dae54fafdfa01e58
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92161588"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640920"
 ---
 # <a name="bc31020-unable-to-write-output-to-memory"></a>BC31020: çıkış belleğe yazılamıyor
 

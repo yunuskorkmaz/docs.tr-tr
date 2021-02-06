@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: TextFieldParser nesnesi'
 title: TextFieldParser Nesnesi
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - TextFieldParser class, aboutTextFieldParser class
 - TextFieldParser class
 ms.assetid: d44bd2b0-7dfc-410b-a48b-534c1e97460b
-ms.openlocfilehash: b192bcaf6dcc709499bd54a0dee127843ad37b2f
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 96b9e2a2955049b0a471447e34d68197a6e0fed3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867188"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640504"
 ---
 # <a name="textfieldparser-object"></a>TextFieldParser Nesnesi
 
 Yapılandırılmış metin dosyalarını ayrıştırmak için yöntemler ve özellikler sağlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 Public Class TextFieldParser  

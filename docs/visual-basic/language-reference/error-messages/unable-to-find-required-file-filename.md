@@ -1,4 +1,5 @@
 ---
+description: "Şu konuda daha fazla bilgi edinin: BC30655: gerekli dosya bulunamıyor '<filename>"
 title: Gereken '<filename>' dosyası bulunamadı
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30655
 ms.assetid: 756db378-e758-48a9-88ff-496bc55bc0b6
-ms.openlocfilehash: 2892ea3173557602a998303a485a766585f5f885
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: d62fbd2a6e656f9c7ce7c5b2c6f72bc01d66326b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92161640"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640946"
 ---
 # <a name="bc30655-unable-to-find-required-file-filename"></a>BC30655: gerekli ' ' dosyası bulunamıyor \<filename>
 

@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <see> (Visual Basic)'
 title: <see>
 ms.date: 07/20/2015
 helpviewer_keywords:
 - see XML tag
 - <see> XML tag
 ms.assetid: 7e18f60b-ef4a-4678-a797-5eb918635ca9
-ms.openlocfilehash: 51eaaef2ddb88afbb52ab58b85ed1a58ba251c1e
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 46dd67710f83d6c4549ddfeb6b7bbc1503b7aa1e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866449"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640348"
 ---
 # <a name="see-visual-basic"></a>\<see> (Visual Basic)
 

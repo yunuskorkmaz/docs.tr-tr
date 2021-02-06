@@ -1,4 +1,5 @@
 ---
+description: "Daha fazla bilgi edinin: .NET 'te diğer dizeleri ayrıştırma"
 title: .NET 'teki diğer dizeleri ayrıştırma
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - parsing strings, other strings
 - Boolean data type, parsing strings
 ms.assetid: d139bc00-3c4e-4d78-ac9a-5c951b258d28
-ms.openlocfilehash: 352bd426c889996daa5f420ccc384947896dc118
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 10d8d9686c451334929471d06e4e3136fca80c68
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95683751"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99642727"
 ---
 # <a name="parsing-other-strings-in-net"></a>.NET 'teki diğer dizeleri ayrıştırma
 

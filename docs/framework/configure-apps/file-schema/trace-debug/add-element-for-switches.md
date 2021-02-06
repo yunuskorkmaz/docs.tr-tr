@@ -1,4 +1,5 @@
 ---
+description: 'İçin: öğesi hakkında daha fazla bilgi <add><switches>'
 title: <switches> için <add> Öğesi
 ms.date: 03/30/2017
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - <add> element for <switches>
 - add element for <switches>
 ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
-ms.openlocfilehash: 5be39425363cb6d2a0eca6a0fa3f4154ce857bb5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: fc47a8518aca1e4e6390d9d7eba97d5fb7a7664e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173945"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639724"
 ---
 # <a name="add-element-for-switches"></a>\<switches> için \<add> Öğesi
 
@@ -39,7 +40,7 @@ Bir izleme anahtarının ayarlandığı düzeyi belirtir.
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
 |**ada**|Gerekli öznitelik.<br /><br /> Anahtarın adını belirtir. Bu özniteliğin değeri, Switch yapıcısına geçirilen *DisplayName* parametresine karşılık gelir.|  
-|**deeri**|Gerekli öznitelik.<br /><br /> Anahtar düzeyini belirtir.|  
+|**değer**|Gerekli öznitelik.<br /><br /> Anahtar düzeyini belirtir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
 

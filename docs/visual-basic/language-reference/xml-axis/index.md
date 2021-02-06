@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: XML eksen özellikleri (Visual Basic)'
 title: XML Eksen Özellikleri
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 7e400e20-5d1e-4d22-a65c-9df79d5c1621
-ms.openlocfilehash: 5766d1f2a0b306374a33844e9e66d161badeb683
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 05919f7caeb293f5c9a4bc9ad12c5714da3025a9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866494"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640426"
 ---
 # <a name="xml-axis-properties-visual-basic"></a>XML Eksen Özellikleri (Visual Basic)
 
@@ -20,7 +21,7 @@ Bu bölümdeki konular Visual Basic XML ekseni özelliklerinin sözdizimini belg
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
-|Konu|Açıklama|  
+|Konu|Description|  
 |-----------|-----------------|  
 |[XML Özniteliği Axis Özelliği](xml-attribute-axis-property.md)|Bir nesnenin özniteliklerine nasıl erişebileceğinizi açıklar <xref:System.Xml.Linq.XElement> .|  
 |[XML Alt Axis Özelliği](xml-child-axis-property.md)|Bir nesnenin alt öğelerine nasıl erişebileceğinizi açıklar <xref:System.Xml.Linq.XElement> .|  

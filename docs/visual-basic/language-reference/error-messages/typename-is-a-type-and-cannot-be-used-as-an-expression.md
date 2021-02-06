@@ -1,4 +1,5 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: BC30108: ' <typename> ' bir tür ve ifade olarak kullanılamaz"
 title: "'<typename>' bir tür ve ifade olarak kullanılamaz"
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30108
 ms.assetid: 7931361d-78e2-40ca-ac69-e3374273b248
-ms.openlocfilehash: 09a547406f9d10058121f25d92675c37d3c76fbc
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 94d6e7c28c5e576114ed2d179bf58ed7bb28ff19
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92161823"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99641024"
 ---
 # <a name="bc30108-typename-is-a-type-and-cannot-be-used-as-an-expression"></a>BC30108: ' \<typename> ' bir tür ve ifade olarak kullanılamaz
 

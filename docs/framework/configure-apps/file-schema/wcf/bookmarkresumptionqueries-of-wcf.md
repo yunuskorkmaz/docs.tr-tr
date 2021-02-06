@@ -1,15 +1,16 @@
 ---
-title: <bookmarkResumptionQueries>WCF
+description: WCF hakkında daha fazla bilgi edinin <bookmarkResumptionQueries>
+title: <bookmarkResumptionQueries> WCF
 ms.date: 03/30/2017
 ms.assetid: ed086712-1dc7-4932-a592-d1116a0155f3
-ms.openlocfilehash: 94ff9f44f295b45c03e1bd8f52a85d6b7b0c6e3b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: dfe631865549915760255b1df22ee970b806e368
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850132"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639373"
 ---
-# <a name="bookmarkresumptionqueries-of-wcf"></a>\<bookmarkResumptionQueries>WCF
+# <a name="bookmarkresumptionqueries-of-wcf"></a>\<bookmarkResumptionQueries> WCF
   
 Bir iş akışı örneği içinde yer işaretinin sürdürme izlemek için kullanılan bir sorgu koleksiyonunu temsil eder. Sorgu, bir izleme katılımcısı için yer işareti sürdürme kayıtlarına abone olmak için gereklidir.  
   
@@ -23,7 +24,7 @@ Profil sorgularını izleme hakkında daha fazla bilgi için bkz. [Izleme profil
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<workflow>**](workflow-of-wcf.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<bookmarkResumptionQueries>**  
 
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <tracking>

@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: özel durum sınıfı ve özellikleri'
 title: Özel Durumu Sınıfı ve Özellikleri
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exceptions, Exception class
 - Exception class
 ms.assetid: e2e1f8c4-e7b4-467d-9a66-13c90861221d
-ms.openlocfilehash: 459dc15f136c98d4b889a420dbd863b16aca747c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: d45cc50dadf8f48be5cb0017065ea989ae7ae535
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828211"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99641661"
 ---
 # <a name="exception-class-and-properties"></a>Özel durum sınıfı ve özellikleri
 
@@ -23,7 +24,7 @@ ms.locfileid: "94828211"
 
 <xref:System.Exception>Sınıfı, bir özel durumun daha kolay anlaşılmasına yardımcı olan aşağıdaki özelliklere sahiptir.
 
-| Özellik Adı | Açıklama |
+| Özellik Adı | Description |
 | ------------- | ----------- |
 | <xref:System.Exception.Data> | <xref:System.Collections.IDictionary>Anahtar-değer çiftlerinde rastgele verileri tutan bir. |
 | <xref:System.Exception.HelpLink> | Bir özel durumun nedeni hakkında kapsamlı bilgiler sağlayan bir yardım dosyasına bir URL (veya URN) tutabilir. |

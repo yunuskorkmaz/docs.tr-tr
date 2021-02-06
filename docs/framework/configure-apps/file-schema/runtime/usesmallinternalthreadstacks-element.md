@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: <UseSmallInternalThreadStacks> öğesi'
 title: <UseSmallInternalThreadStacks> Öğesi
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UseSmallInternalThreadStacks element
 - <UseSmallInternalThreadStacks> element
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
-ms.openlocfilehash: 4917b47e9e8196eabe691f74531d12308ef80311
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: eeb253025b32f862926c7315004b1854b8eef928
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91174088"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639971"
 ---
 # <a name="usesmallinternalthreadstacks-element"></a>\<UseSmallInternalThreadStacks> Öğesi
 

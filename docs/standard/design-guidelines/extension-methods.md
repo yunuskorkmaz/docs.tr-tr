@@ -1,15 +1,16 @@
 ---
-title: Genişletme Yöntemleri
+description: 'Daha fazla bilgi edinin: uzantı yöntemleri'
+title: Uzantı Metotları
 ms.date: 10/22/2008
 ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
-ms.openlocfilehash: 02a421c9a4b73c779474a392e77104d4ccfbb109
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2f71ec86252045687558bd61337164ac3afbcd20
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734718"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99642064"
 ---
-# <a name="extension-methods"></a>Genişletme Yöntemleri
+# <a name="extension-methods"></a>Uzantı Metotları
 
 Uzantı yöntemleri, statik yöntemlerin örnek yöntemi çağırma sözdizimi kullanılarak çağrılmasına izin veren bir dil özelliğidir. Bu yöntemler, yöntemin üzerinde çalışacağı örneği temsil eden en az bir parametre almalıdır.
 

@@ -1,4 +1,5 @@
 ---
+description: "' ' Hakkında daha fazla bilgi edinin: BC30910: ' ', <typename> <type> <basetypename> temel erişimini <type> derleme dışına genişlettiğinden ' ' öğesinden devralma"
 title: "'<typename>', <type> temelinin erişimini derleme dışına genişlettiğinden <basetypename> '<type>' öğesinden devralamaz"
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30910
 ms.assetid: 68fc05c5-5d55-4742-9a3b-ea04312594f4
-ms.openlocfilehash: 5c019f9d74b11e48aa05a1480b9449fa28488b43
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 332bfcbe9345f03605d6e1d6ded4a3e931ed491f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92161848"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99641102"
 ---
 # <a name="bc30910-typename-cannot-inherit-from-type-basetypename-because-it-expands-the-access-of-the-base-type-outside-the-assembly"></a>BC30910: ' ', \<typename> \<type> \<basetypename> temel erişimini \<type> derleme dışına genişlettiğinden ' ' öğesinden devralma
 

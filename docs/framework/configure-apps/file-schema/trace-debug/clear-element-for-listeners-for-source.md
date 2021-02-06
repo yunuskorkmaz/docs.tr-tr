@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: için <clear> öğesi <listeners><source>'
 title: <clear>İçin için öğesi <listeners><source>
 ms.date: 03/30/2017
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - <clear> element for <listeners> for <source>
 - clear element for <listeners> for <source>
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
-ms.openlocfilehash: d3e76496c82b508feabf8a46cf7bce7e3d54e8cf
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 731c23c73b6d149bd37672e91eca1d70431b2789
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91149289"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639711"
 ---
 # <a name="clear-element-for-listeners-for-source"></a>\<clear>İçin için öğesi \<listeners>\<source>
 

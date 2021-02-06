@@ -1,4 +1,5 @@
 ---
+description: Hakkında daha fazla bilgi için bkz. WCF 'de güvenlik için En Iyi uygulamalar
 title: WCF'de Güvenlik için En İyi Uygulamalar
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
-ms.openlocfilehash: 530574f684a7747a0965e13345feaf4d51e605e9
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 67c3f3054011ea5727d5713c1eabf810a4c39b42
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96279356"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643650"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>WCF'de Güvenlik için En İyi Uygulamalar
 

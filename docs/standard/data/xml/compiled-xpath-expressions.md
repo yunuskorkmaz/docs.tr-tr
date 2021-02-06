@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: derlenmiş XPath Ifadeleri'
 title: Derlenmiş XPath İfadeleri
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
-ms.openlocfilehash: 99f06db3c6f1e634e9c4a677c01d1b0849afe43f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 77df46fd63a3337ced81c2910acd95d17c5c0f45
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95701516"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99642597"
 ---
 # <a name="compiled-xpath-expressions"></a>Derlenmiş XPath İfadeleri
 
@@ -36,7 +37,7 @@ ms.locfileid: "95701516"
   
  Aşağıdaki tabloda, W3C XPath dönüş türlerinin her biri, Microsoft .NET Framework equivalencies ve <xref:System.Xml.XPath.XPathExpression> nesnenin dönüş türüne göre hangi yöntemleri kullanılabileceği açıklanmaktadır.  
   
-|W3C XPath dönüş türü|.NET Framework eşdeğer tür|Açıklama|Yöntemler|  
+|W3C XPath dönüş türü|.NET Framework eşdeğer tür|Description|Yöntemler|  
 |---------------------------|------------------------------------|-----------------|-------------|  
 |`Node set`|<xref:System.Xml.XPath.XPathNodeIterator>|Belge düzeninde oluşturulan yinelemeler olmadan sıralanmamış bir düğüm koleksiyonu.|<xref:System.Xml.XPath.XPathNavigator.Select%2A> veya <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
 |`Boolean`|<xref:System.Boolean>|Bir `true` veya `false` değeri.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> veya<br /><br /> <xref:System.Xml.XPath.XPathNavigator.Matches%2A>|  

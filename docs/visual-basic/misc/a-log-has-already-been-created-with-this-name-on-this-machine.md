@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Bu makinede bu adla zaten bir günlük oluşturuldu'
 title: Bu makinede bu adla zaten bir günlük oluşturuldu
 ms.date: 07/20/2015
 ms.assetid: 3dd78d9f-890e-4409-bebb-048fdf34711b
-ms.openlocfilehash: 89d65f282fd4f6ded7cb71577eea625ee17589d4
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e7d93ba0d3138fc6661e8ff46e5aeb05017fe8b6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91083169"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640179"
 ---
 # <a name="a-log-has-already-been-created-with-this-name-on-this-machine"></a>Bu makinede bu adla zaten bir günlük oluşturuldu
 

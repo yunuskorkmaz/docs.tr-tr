@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: eş kanal uygulaması oluşturma'
 title: Eş Kanal Uygulaması Oluşturma
 ms.date: 03/30/2017
 ms.assetid: a69a1b8f-8e15-45c5-87b8-bdb71e1c7ab8
-ms.openlocfilehash: 4213f8049c5bd6a82ef814c3f152d52491fe2a8a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: dc55efab2e60db96589a8d014ce28b927ad39309
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96256878"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643559"
 ---
 # <a name="building-a-peer-channel-application"></a>Eş Kanal Uygulaması Oluşturma
 

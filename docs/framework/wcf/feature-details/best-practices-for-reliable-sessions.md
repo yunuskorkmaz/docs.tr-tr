@@ -1,73 +1,74 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: güvenilir oturumlar için En Iyi uygulamalar'
 title: Güvenli Oturumlar için En İyi Uygulamalar
 ms.date: 03/30/2017
 ms.assetid: b94f6e01-8070-40b6-aac7-a2cb7b4cb4f2
-ms.openlocfilehash: 1d9671e7e3124d535b66de8cd8468f76dcb32b10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b05dd914d2c5b8ec7941417b727bec1e5b43ba4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857993"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643676"
 ---
 # <a name="best-practices-for-reliable-sessions"></a>Güvenli Oturumlar için En İyi Uygulamalar
 
-Bu konu, güvenilir oturumlar için en iyi uygulamaları açıklar.
+Bu konu, güvenilir oturumlar için en iyi uygulamaları açıklamaktadır.
 
 ## <a name="setting-maxtransferwindowsize"></a>MaxTransferWindowSize ayarlama
 
-Güvenilir oturumlar Windows Communication Foundation (WCF) hizmet ve istemci iletileri tutmak için bir aktarım penceresi kullanın. Yapılandırılabilir özellik <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A> aktarımı pencerenin tutabilir ileti sayısını gösterir.
+Windows Communication Foundation (WCF) güvenilir oturumlar istemci ve hizmette iletileri tutmak için bir aktarım penceresi kullanır. Yapılandırılabilir özelliği, <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A> Aktarım penceresinin kaç ileti tutabileceğini gösterir.
 
-Gönderenin, bu onayları için beklenirken aktarımı pencerenin içerebilir ileti sayısını gösterir. bir alıcı ile hizmet için arabelleğe alınacak ileti sayısını gösterir.
+Gönderen üzerinde, bu, aktarım penceresinin, bildirimlerin beklediği sırada kaç ileti tutabileceğini belirtir; alıcıda, hizmet için arabelleğe eklenecek ileti sayısını gösterir.
 
-Doğru boyutta seçme, ağ verimliliğini ve en iyi kapasitesi etkiler. Aşağıdaki bölümlerde bu özellik ve değerin etkisi için bir değer seçerken dikkat etmeniz ayrıntılı olarak açıklanmaktadır.
+Doğru boyutun seçilmesi, ağın verimliliğini ve hizmetin en iyi kapasitesini etkiler. Aşağıdaki bölümler, bu özellik için bir değer seçerken göz önünde bulundurulması gereken ayrıntıları ve değerin etkisini ayrıntılandırır.
 
-Varsayılan aktarım pencere boyutu sekiz ileti ' dir.
+Varsayılan aktarım penceresi boyutu sekiz mesaj olur.
 
-### <a name="efficient-use-of-the-network"></a>Ağ verimli kullanımı
+### <a name="efficient-use-of-the-network"></a>Ağın verimli kullanımı
 
-Bu bağlamda terimi *ağ* bir istemci (gönderen) ve (alıcı) hizmeti arasındaki iletişimi temeli olarak kullanılan her şeye karşılık gelir. Bu aktarım bağlantılarının ve herhangi bir aracı veya köprüler arasındaki, SOAP yönlendiriciler veya HTTP proxy/güvenlik duvarlarının da içerir.
+Bu bağlamda, *ağ* terimi, bir istemci (Gönderen) ve hizmet (alıcı) arasındaki iletişimin temeli olarak kullanılan her şeye karşılık gelir. Bu, SOAP yönlendiricileri veya HTTP proxy 'leri/güvenlik duvarları dahil olmak üzere aktarım bağlantılarını ve arasındaki tüm ara veya köprüleri içerir.
 
-Ağ verimli kullanımı, ağ kapasitesi tam olarak kullanılmasını sağlar. Her iki saniye başına ağ üzerinden aktarılması veri miktarı (*veri hızı*) ve veri gönderenden alıcıya aktarım süresini (*gecikme*) nasıl etkili bir şekilde etkilemeden ağ kullanılmaktadır.
+Ağın verimli kullanımı, ağ kapasitesinin tam olarak kullanılmasını sağlar. Ağ üzerinden saniye başına aktarılabilen veri miktarı (*veri hızı*) ve gönderenin verileri göndericiden alıcıya aktarılması için geçen süre (*gecikme süresi*), ağın ne kadar verimli bir şekilde kullanıldığını etkiler.
 
-Gönderen, özelliğin üzerinde <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A> aktarma penceresi, katkıda bulunanlar için beklenirken tutabilir ileti sayısını gösterir. Varsa ağ gecikme süresi yüksek ve hızlı yanıt veren gönderen ve etkili ağ kullanımı sağlamak için Aktarım pencere boyutunu artırmanız gerekir.
+Gönderici üzerinde, özelliği, <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A> Aktarım penceresinin, bildirimlerin beklediği sırada kaç ileti tutabileceğini gösterir. Ağ gecikmesi yüksekse ve yanıt veren gönderici ve etkin ağ kullanımı sağlamak için aktarım penceresi boyutunu artırmanız gerekir.
 
-Örneğin veri oranı ile gönderen sürdürdüğünden bile, gecikme süresi gönderen ve alıcı arasında birkaç aracılar mevcut veya veri kayıplı aracı veya ağ geçmelidir yüksek olabilir. Bu nedenle, kablo göndermek için yeni iletileri kabul etmeden önce aktarım penceresi iletileri için onayları için beklenecek göndericisi vardır. Daha az etkili yüksek gecikme süresiyle daha küçük arabellek ağ kullanımı. Diğer taraftan, çok yüksek bir aktarım pencere boyutu hizmet yüksek oranda istemci tarafından gönderilen verileri yakalamak gerekebileceğinden hizmet etkileyebilir.
+Örneğin, gönderici veri hızına sahip olsa bile, gönderici ve alıcı arasında birden fazla aracı varsa veya veriler kayıplı bir ara veya ağ üzerinden geçmesi gerekiyorsa gecikme süresi yüksek olabilir. Bu nedenle, gönderenin, Tel bağlantı göndermek üzere yeni iletileri kabul etmeden önce aktarım penceresindeki iletiler için bekleyen bildirimleri beklemesi gerekir. Yüksek gecikme süresine sahip arabellek ne kadar küçükse, ağ kullanımı daha az etkin olur. Öte yandan, hizmetin istemci tarafından gönderilen yüksek hızda veri yakalayabilmesi gerekebileceğinden, aktarım penceresi boyutunun çok yüksek olması hizmeti etkileyebilir.
 
-### <a name="running-the-service-to-capacity"></a>Kapasiteye hizmet çalışıyor
+### <a name="running-the-service-to-capacity"></a>Hizmeti kapasiteye çalıştırma
 
-İdeal olarak ağ verimli bir şekilde kullanılan kadar de en uygun kapasitede çalıştırmak için hizmet istersiniz. Alıcı aktarımı penceresi boyut özelliği, alıcı ara belleğe alabilir ileti sayısını gösterir. Bu iletiyi arabelleğe yalnızca ağ akış denetimi yardımcı olur, ancak ayrıca tam kapasitede çalışmaya hizmet sağlar. Örneğin, bir ileti arabellek ise ve hizmetin bunları işleyebileceğinden daha hızlı iletiler geldiğinde ardından ağ iletileri bırakmak ve kapasitesini boşa veya potansiyelinden az kullanılmasına neden.
+Ağın etkili bir şekilde kullanıldığı kadar ideal olarak hizmetin en iyi kapasiteye göre çalıştırılmasını de istersiniz. Alıcının aktarım penceresi boyutu özelliği, alıcının arabelleğe aldığı ileti sayısını gösterir. Bu ileti arabelleğe alma, yalnızca ağ akışı denetiminin değil hizmetin tam kapasiteye çalışmasına de olanak sağlar. Örneğin, arabellek bir ileti ise ve iletiler hizmetin işleyebileceğinden daha hızlı ulaştığında, ağ iletileri bırakabilir ve kapasite harcanarak veya aşırı kullanılabilir.
 
-Eş zamanlı olarak alır ve daha önce alınan iletileri işlenirken bir ileti arabelleği gibi bir arabellek kullanarak hizmetinin kullanılabilirliğini artırır.
+Arabellek kullanmak, daha önce alınan iletileri işlerken aynı anda aldığı ve bir iletiyi arabelleğe aldığından hizmetin kullanılabilirliğini artırır.
 
-Aynı kullanmanız önerilir `MaxTransferWindowSize` gönderen ve alıcı.
+`MaxTransferWindowSize`Hem gönderenin hem de alıcının aynısını kullanmanızı öneririz.
 
-### <a name="enabling-flow-control"></a>Akış denetimi etkinleştirme
+### <a name="enabling-flow-control"></a>Akış denetimini etkinleştirme
 
-*Akış denetimi* sağlar gönderen ve alıcı birbiriyle uydurmanıza, diğer bir deyişle, iletiler tüketilen ve izlemede bir mekanizma, üretilen kadar hızlı. Hizmet ve istemci aktarımı pencere boyutunu gönderen ve alıcı eşitleme makul bir pencere içinde olmasını sağlar.
+*Akış denetimi* , gönderici ve alıcının birbirleriyle hızlımasını ve diğer bir deyişle, iletilerin üretildikleri kadar hızlı şekilde tüketilmesini ve bu şekilde işlem yapılmasını sağlayan bir mekanizmadır. İstemci ve hizmet üzerindeki aktarım penceresi boyutu, gönderenin ve alıcının makul bir eşitleme penceresi dahilinde olmasını sağlar.
 
-Özelliğin ayarlanıp önerilen <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled%2A> için `true` bir WCF istemcisi ve bir WCF hizmeti arasında bir güvenilir oturum kullanırken.
+<xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled%2A> `true` WCF ISTEMCISI ile WCF hizmeti arasında güvenilir bir oturum kullandığınızda özelliği olarak ayarlamanız önemle tavsiye ederiz.
 
-## <a name="setting-maxpendingchannels"></a>MaxPendingChannels ayarlama
+## <a name="setting-maxpendingchannels"></a>MaxPendingChannels ayarlanıyor
 
-Farklı istemcilerden güvenilir oturum bağlantısı sağlayan bir hizmet yazarken, birden çok istemci aynı anda güvenilir oturum hizmeti oluşturmak mümkündür. Bu gibi durumlarda hizmetinin yanıt bağımlı `MaxPendingChannels` özelliği.
+Farklı istemcilerden güvenilir oturum iletişimini sağlayan bir hizmet yazarken, birçok istemcinin aynı anda hizmette güvenilir bir oturum kurması mümkündür. Bu durumlarda hizmetin yanıtı özelliğe göre değişir `MaxPendingChannels` .
 
-Gönderenin alıcı bir güvenilir oturum kanalı oluşturduğunda, bunlar arasında bir el sıkışması güvenilir bir oturum oluşturur. Güvenilir oturum kurulduktan sonra kanal kabul bekleyen kanal sırada hizmet tarafından koyulur. `MaxPendingChannels` Özelliği gösterir kaç kanalları, bu durumda olabilir.
+Gönderen bir alıcıya güvenilir bir oturum kanalı oluşturduğunda, aralarındaki bir el sıkışma güvenilir bir oturum oluşturur. Güvenilir oturum kurulduktan sonra kanal, hizmet tarafından kabul edilmesi için bekleyen bir kanal kuyruğuna konur. `MaxPendingChannels`Özelliği, bu durumda kaç kanal kullanılabileceğini gösterir.
 
-Burada başka kanal kabul edemez bir durumda olması için hizmet mümkündür. Kuyruk dolu ise, bir güvenilir oturum kurma denemesi reddedilir ve istemciyi yeniden denemeniz gerekir.
+Hizmetin daha fazla kanal kabul edebildiği bir durumda olması mümkündür. Sıra doluysa, güvenilir bir oturum oluşturma girişimi reddedilir ve istemci yeniden denenmelidir.
 
-Kuyrukta bekleyen kanalları için uzun bir süre sırada kalır mümkündür. Bu arada, kanala hatalı bir duruma neden olan bir güvenilir oturum etkin olmama zaman aşımı oluşabilir.
+Kuyruktaki bekleyen kanalların daha uzun bir süre için kuyrukta kalması da mümkündür. Bu sırada, güvenilir oturumdaki etkin olmama zaman aşımı oluşabilir ve kanalın hatalı duruma geçmesine neden olabilir.
 
-Birden çok istemci aynı anda Hizmetleri hizmet yazarken, gereksinimlerinize uygun bir değere ayarlamanız gerekir. Çok yüksek bir değer için ayarlama `MaxPendingChannels` özelliği çalışma kümenizi etkiler.
+Aynı anda birden çok istemciye hizmet veren bir hizmet yazarken, gereksinimlerinize uygun bir değer ayarlamanız gerekir. Özellik için çok yüksek bir değer ayarlamak `MaxPendingChannels` çalışma ayarınızı etkiler.
 
-İçin varsayılan değer <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxPendingChannels%2A> dört kanallar.
+İçin varsayılan değer <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxPendingChannels%2A> dört kanaldır.
 
-## <a name="reliable-sessions-and-hosting"></a>Güvenilir oturumlar ve barındırma
+## <a name="reliable-sessions-and-hosting"></a>Güvenilir Oturumlar ve barındırma
 
-Güvenilir oturumlar kullanan bir hizmet barındırma, web, aşağıdaki önemli noktalara dikkat dikkat etmeniz:
+Web, güvenilir oturumlar kullanan bir hizmeti barındırdığında aşağıdaki önemli noktaları göz önünde bulundurmanız gerekir:
 
-- Durum bilgisi olan güvenilir oturumlar ve AppDomain içinde durumu korunur. Başka bir deyişle, bir güvenilir oturum parçası olan tüm iletiler aynı AppDomain içinde işlenmesi gerekir. Bu kısıtlama, Grup veya bahçesi boyutu tek bir düğüm büyük olduğu Web grupları ve web bahçelerinde garanti edemez.
+- Güvenilir oturumlar durum bilgisi durumundadır ve durum AppDomain içinde tutulur. Bu, güvenilir bir oturumun parçası olan tüm iletilerin aynı AppDomain 'de işlenmesi gerektiği anlamına gelir. Grup veya bahçe boyutunun bir düğümden daha büyük olduğu Web grupları ve Web bahçeleri bu kısıtlamayı garanti edemez.
 
-- İkili HTTP kanalları kullanarak güvenilir oturumlar (örneğin, kullanarak `WsDualHttpBinding`) en fazla iki HTTP bağlantıları her istemci varsayılan gerektirebilir. Başka bir deyişle, çift yönlü bir güvenilir oturum eş zamanlı uygulama ve protokol iletilerini her iki yöntemle herhangi bir zamanda aktarma çünkü her iki bağlantı gerektirebilir. Hizmetinin ileti değişim deseni bağlı olarak bazı koşullar altında bu ikili HTTP ve güvenilir oturumlar kullanarak web barındırılan hizmeti kilitlenme mümkün olduğunu gösterir. İstemci başına izin verilen HTTP bağlantı sayısını artırmak için ilgili yapılandırma dosyasına aşağıdakileri ekleyin (örneğin, *web.config* söz konusu hizmetin):
+- Çift HTTP kanalları (örneğin, kullanarak) kullanan güvenilir oturumlar `WsDualHttpBinding` , istemci başına ıkı http bağlantısının varsayılan değerinden fazlasını gerektirebilir. Bu, çift yönlü güvenilir bir oturumun her bir şekilde her zaman bir şekilde aktarılabileceğinden, her şekilde iki bağlantıya kadar bağlantı gerektirebileceği anlamına gelir. Hizmetin ileti değişimi düzenine bağlı olarak belirli koşullar altında, bu, çift HTTP ve güvenilir oturumları kullanarak Web 'de barındırılan bir hizmetin kilitlenmesi mümkün olduğu anlamına gelir. İstemci başına izin verilen HTTP bağlantısı sayısını artırmak için, ilgili yapılandırma dosyasına aşağıdakini ekleyin (örneğin, söz konusu hizmetin *web.config* ):
 
   ```xml
   <configuration>
@@ -79,4 +80,4 @@ Güvenilir oturumlar kullanan bir hizmet barındırma, web, aşağıdaki önemli
   </configuration>
   ```
 
-  Değerini `maxconnection` özniteliktir gereken bağlantı sayısı. En az dört bağlantıları bu durumda olması gerekir.
+  Özniteliğin değeri, `maxconnection` gereken bağlantı sayısıdır. Bu durumda en az dört bağlantı olmalıdır.

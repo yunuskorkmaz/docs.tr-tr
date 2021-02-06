@@ -1,4 +1,5 @@
 ---
+description: 'İçin: öğesi hakkında daha fazla bilgi <listeners><source>'
 title: <source> için <listeners> Öğesi
 ms.date: 03/30/2017
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - listeners element for <source>
 - <listeners> element for <source>
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
-ms.openlocfilehash: b7144b0a7004ba32b21cbc98513df574a5a9e1d9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6b857d4b114366d268eec1859afc7f33cc5b04a2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91195187"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639658"
 ---
 # <a name="listeners-element-for-source"></a>\<source> için \<listeners> Öğesi
 

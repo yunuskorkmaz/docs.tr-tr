@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: System.Xml kullanımı'
 title: System.Xml Kullanımı
 ms.date: 10/22/2008
 ms.assetid: 82302f0d-a621-4c6f-b57d-999bd61f21a6
-ms.openlocfilehash: 46282afa6548c731b04c40d8de91a1fed997c57c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 51886c07f0b68bb329c258daa93e809d94839341
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95677576"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99641856"
 ---
 # <a name="systemxml-usage"></a>System.Xml Kullanımı
 

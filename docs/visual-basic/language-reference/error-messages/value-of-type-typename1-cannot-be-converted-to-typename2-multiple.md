@@ -1,4 +1,5 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: BC30961: ' ' türünün değeri <typename1> ' ' olarak dönüştürülemez <typename2> (birden fazla dosya başvurusu)"
 title: "'<typename1>' türünün değeri '<typename2>' olarak dönüştürülemez (Birden fazla dosya başvurusu)"
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30961
 ms.assetid: 8be5aa0d-d236-4ac3-aa9c-5044f9f6562b
-ms.openlocfilehash: 23c051e57014d7479d1c1c522b1a8da1ead52c19
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 77f8f3c500f9f395d3998261a218175e49f0f52b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92161393"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640868"
 ---
 # <a name="bc30961-value-of-type-typename1-cannot-be-converted-to-typename2-multiple-file-references"></a>BC30961: ' ' türünün değeri \<typename1> ' ' olarak dönüştürülemez \<typename2> (birden fazla dosya başvurusu)
 

@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: için <add> öğesi <listeners><trace>'
 title: <add>İçin için öğesi <listeners><trace>
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <add> element for <listeners>
 - add element for <listeners>
 ms.assetid: 81e804a3-ef11-4d39-bbde-bfa012c179e2
-ms.openlocfilehash: da5c0ccae08a32c324a1633b5a7ff7592efa6e2d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ffc0823e0c0ce1dcd9d9f19853929496b3248177
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91174049"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639789"
 ---
 # <a name="add-element-for-listeners-for-trace"></a>\<add>İçin için öğesi \<listeners>\<trace>
 
@@ -69,7 +70,7 @@ ms.locfileid: "91174049"
 > [!NOTE]
 > Aynı türde ve aynı ada sahip birden fazla izleme dinleyicisi eklemek, bu tür ve koleksiyona eklenmekte olan adın yalnızca bir izleme dinleyicisine neden olur `Listeners` . Ancak, koleksiyona daha fazla özdeş dinleyici ekleyebilirsiniz `Listeners` .  
   
- **Initializedata** özniteliğinin değeri, oluşturduğunuz dinleyicinin türüne bağlıdır. Tüm izleme dinleyicileri **ınitializedata**belirtmenizi gerektirmez.  
+ **Initializedata** özniteliğinin değeri, oluşturduğunuz dinleyicinin türüne bağlıdır. Tüm izleme dinleyicileri **ınitializedata** belirtmenizi gerektirmez.  
   
 > [!NOTE]
 > `initializeData`Özniteliğini kullandığınızda, "ınitializedata" özniteliği bildirilmemiş "derleyici uyarısını alabilirsiniz." Bu uyarı, yapılandırma ayarları özniteliği tanımayan Özet taban sınıfına göre doğrulandığından oluşur <xref:System.Diagnostics.TraceListener> `initializeData` . Genellikle, bir parametresi alan Oluşturucusu olan izleme dinleyicisi uygulamaları için bu uyarıyı yoksayabilirsiniz.  

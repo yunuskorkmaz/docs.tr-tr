@@ -1,4 +1,5 @@
 ---
+description: ': My. Response nesnem hakkında daha fazla bilgi edinin'
 title: My.Response Nesnesi
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Response object
 ms.assetid: 626359bc-3165-40b4-bfaf-2c610e26eb5b
-ms.openlocfilehash: 53e8012e762c46e6efbd8e9d2191aa62d58aa42b
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 551528356040539994251cb66a905d0249f482da
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90870034"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640621"
 ---
 # <a name="myresponse-object"></a>My.Response Nesnesi
 

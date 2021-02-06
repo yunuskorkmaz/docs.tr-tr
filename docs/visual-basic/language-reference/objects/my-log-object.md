@@ -1,15 +1,16 @@
 ---
+description: ': My. log nesnesi hakkında daha fazla bilgi edinin'
 title: My.Log Nesnesi
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Log object
 ms.assetid: 309b14b4-8875-4b2f-9661-a734b8cbff07
-ms.openlocfilehash: d8e27ec4f2583f84eec4eb78e6775d9ec3b8599e
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: f1a3cf537133120d8aa02d88d4fb1d10347969c3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867366"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640673"
 ---
 # <a name="mylog-object"></a>My.Log Nesnesi
 

@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: kimlik doğrulaması için bir hizmetin kimliğini geçersiz kılma'
 title: Bir Hizmetin Kimliğini Kimlik Doğrulama için Geçersiz Kılma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-ms.openlocfilehash: a02e5a2f69ad1819e6ab98b0454dd64599382cd0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f83c10d75c4ea71170a76a7fd10efb33958f5b52
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96262793"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99644170"
 ---
 # <a name="override-the-identity-of-a-service-for-authentication"></a>Kimlik doğrulaması için bir hizmetin kimliğini geçersiz kılma
 
@@ -22,7 +23,7 @@ Genellikle, bir hizmetin kimliğini ayarlamanız gerekmez, çünkü bir istemci 
   
 ## <a name="kerberos-authentication-and-identity"></a>Kerberos kimlik doğrulaması ve kimliği  
 
- Varsayılan olarak, bir hizmet Windows kimlik bilgisi kullanacak şekilde yapılandırıldığında, [\<identity>](../../configure-apps/file-schema/wcf/identity.md) [\<userPrincipalName>](../../configure-apps/file-schema/wcf/userprincipalname.md) WSDL 'de veya öğesi içeren bir öğe [\<servicePrincipalName>](../../configure-apps/file-schema/wcf/serviceprincipalname.md) oluşturulur. Hizmet,, veya hesabı altında çalışıyorsa `LocalSystem` , `LocalService` `NetworkService` `host/` \<*hostname*> Bu hesapların bilgisayarın SPN verilerine erişimi olduğundan, varsayılan olarak BIR hizmet asıl adı (SPN) oluşturulur. Hizmet farklı bir hesap altında çalışıyorsa, Windows Communication Foundation (WCF) domainName biçiminde bir UPN oluşturur \<*username*> @< *domainName* `>` . Bu durum, Kerberos kimlik doğrulamasının hizmetin kimliğini doğrulamak için bir UPN veya SPN 'nin istemciye sağlanması gerektiğinden oluşur.  
+ Varsayılan olarak, bir hizmet Windows kimlik bilgisi kullanacak şekilde yapılandırıldığında, [\<identity>](../../configure-apps/file-schema/wcf/identity.md) [\<userPrincipalName>](../../configure-apps/file-schema/wcf/userprincipalname.md) WSDL 'de veya öğesi içeren bir öğe [\<servicePrincipalName>](../../configure-apps/file-schema/wcf/serviceprincipalname.md) oluşturulur. Hizmet,, veya hesabı altında çalışıyorsa `LocalSystem` , `LocalService` `NetworkService` `host/` \<*hostname*> Bu hesapların bilgisayarın SPN verilerine erişimi olduğundan, varsayılan olarak BIR hizmet asıl adı (SPN) oluşturulur. Hizmet farklı bir hesap altında çalışıyorsa, Windows Communication Foundation (WCF) domainName biçiminde bir UPN oluşturur \<*username*> @<  `>` . Bu durum, Kerberos kimlik doğrulamasının hizmetin kimliğini doğrulamak için bir UPN veya SPN 'nin istemciye sağlanması gerektiğinden oluşur.  
   
  [Setspn](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731241(v=ws.10)) aracını Ayrıca, bir etki alanındaki hizmet hesabına sahip ek bir SPN kaydetmek için de kullanabilirsiniz. Daha sonra SPN 'YI hizmetin kimliği olarak kullanabilirsiniz. Araç hakkında daha fazla bilgi için bkz. [Setspn Overview](/previous-versions/windows/it-pro/windows-server-2003/cc773257(v=ws.10)).  
   

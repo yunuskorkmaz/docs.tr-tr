@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: + = Işleci (Visual Basic)'
 title: += İşleci
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - += operator [Visual Basic], appending strings
 - compound assignment statements [Visual Basic]
 ms.assetid: d3e959f4-85d4-4e47-87c4-77b62335a5b3
-ms.openlocfilehash: a3a37798a3ddb480ac5322c4b2d3e9396e739aa6
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: e5a6b8fcc75e44c00ee18fec9cd57e68b1218de7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873482"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640478"
 ---
 # <a name="-operator-visual-basic"></a>+= İşleci (Visual Basic)
 
 Sayısal bir ifadenin değerini bir sayısal değişkenin veya özelliğin değerine ekler ve sonucu değişkenine veya özelliğe atar. , Bir `String` ifadeyi bir `String` değişkene veya özelliğe birleştirmek ve sonucu değişkene veya özelliğe atamak için de kullanılabilir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 variableorproperty += expression  
@@ -50,7 +51,7 @@ variableorproperty += expression
   
 ## <a name="overloading"></a>Aşırı Yükleme  
 
- `+`İşleç *aşırı*yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. İşleci aşırı yüklemek `+` işlecin davranışını etkiler `+=` . Kodunuzun `+=` bir sınıf veya yapı üzerinde kullanması durumunda `+` , yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../programming-guide/language-features/procedures/operator-procedures.md).  
+ `+`İşleç *aşırı* yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. İşleci aşırı yüklemek `+` işlecin davranışını etkiler `+=` . Kodunuzun `+=` bir sınıf veya yapı üzerinde kullanması durumunda `+` , yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
 

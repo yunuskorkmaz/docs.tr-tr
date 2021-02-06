@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: WCF Web HTTP Hizmetleri için önbelleğe alma desteği'
 title: WCF Web HTTP Hizmetleri için Önbelleğe Alma Desteği
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: 6ce3ceccde01879876960e0288cb600a3a20c204
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a1f7351566c06010ed70093a1cab3697ae0e9356
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96279343"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643494"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>WCF Web HTTP Hizmetleri için Önbelleğe Alma Desteği
 

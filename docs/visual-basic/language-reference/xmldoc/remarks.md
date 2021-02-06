@@ -1,16 +1,17 @@
 ---
+description: 'Aşağıdakiler hakkında daha fazla bilgi edinin: <remarks> (Visual Basic)'
 title: <remarks>
 ms.date: 07/20/2015
 helpviewer_keywords:
 - <remarks> XML tag
 - remarks XML tag
 ms.assetid: c6241773-a7ed-41c9-9a8b-9722a0c606a9
-ms.openlocfilehash: 70078752495240ab8c72fe1bbecdca554166fb22
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 4b0584abbe85a7ecc73e25dd1f6ec321962b88a0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866420"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640413"
 ---
 # <a name="remarks-visual-basic"></a>\<remarks> (Visual Basic)
 

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: XML şemaları oluşturma'
 title: XML Şemaları Derleme
 ms.date: 03/30/2017
 dev_langs:
@@ -6,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 8a5ea56c-0140-4b51-8997-875ae6a8e0cb
-ms.openlocfilehash: 177c52ea7217821735250b297974ac0ebaa1eb2e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a748560b128ff16ea3cceb9be37e427396ec9dfd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725384"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99642623"
 ---
 # <a name="building-xml-schemas"></a>XML Şemaları Derleme
 

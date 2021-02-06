@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: benimseyin Windows Communication Foundation'
 title: Windows Communication Foundation'ı Benimseme
 ms.date: 03/30/2017
 ms.assetid: 49ba71e2-9468-4082-84c5-cf8daf95e34a
-ms.openlocfilehash: 40a2eac1e282640f0df70a7eca16e3b2401c0764
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c8d5808b246e40b504d2d07dcdd6dc3fd622361d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546014"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643923"
 ---
 # <a name="adopt-windows-communication-foundation"></a>Windows Communication Foundation benimseyin
 

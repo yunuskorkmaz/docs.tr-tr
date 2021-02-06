@@ -8,12 +8,12 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: efc440adb59da1ef9838ec5445d9c55544c14380
-ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
+ms.openlocfilehash: 2cda5a23bbc90ca5dc2305b5d7023e8ea6120b79
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99216479"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643078"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>.NET kaynak kodu çözümlemesine genel bakış
 
@@ -144,15 +144,13 @@ Derlemede kod stili analizini etkinleştirmek için şu adımları izleyin:
 
 ## <a name="suppress-a-warning"></a>Bir uyarıyı gösterme
 
-Bir kural ihlalini gizlemek için, bu kural KIMLIĞI için önem derecesi seçeneğini `none` bir EditorConfig dosyasında olarak ayarlayın. Örneğin:
+Bir kural ihlalini bastırın bir yolu, bu kural KIMLIĞI için önem derecesi seçeneğini `none` bir EditorConfig dosyasında ayarlamaya yöneliktir. Örneğin:
 
 ```ini
 dotnet_diagnostic.CA1822.severity = none
 ```
 
-Visual Studio, kod analizi kurallarından gelen uyarıları bastırmak için ek yollar sağlar. Daha fazla bilgi için bkz. [Ihlalleri gösterme](/visualstudio/code-quality/use-roslyn-analyzers#suppress-violations).
-
-Kural özellikleri hakkında daha fazla bilgi için bkz. [kural önem derecesini yapılandırma](configuration-options.md#severity-level).
+Daha fazla bilgi ve uyarıları gizlemek için diğer yollar için bkz. [Kod Analizi uyarılarını gösterme](suppress-warnings.md).
 
 ## <a name="third-party-analyzers"></a>Üçüncü taraf çözümleyiciler
 

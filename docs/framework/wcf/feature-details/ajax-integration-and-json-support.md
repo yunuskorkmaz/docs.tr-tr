@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: AJAX Tümleştirme ve JSON desteği'
 title: AJAX Tümleştirme ve JSON Desteği
 ms.date: 03/30/2017
 helpviewer_keywords:
 - AJAX integration and JSON support [WCF]
 ms.assetid: 3851a8fc-d861-4ac1-873c-96af0343d3a7
-ms.openlocfilehash: c895a6dedc22a42adb7104927d39090ab6587f37
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 13e52a3013e9c04f57d6303caf18fd23a41ebf25
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96266031"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643897"
 ---
 # <a name="ajax-integration-and-json-support"></a>AJAX Tümleştirme ve JSON Desteği
 

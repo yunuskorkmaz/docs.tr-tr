@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: takvimlerle çalışma'
 title: Takvimlerle çalışma
 ms.date: 04/01/2019
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - international applications [.NET], calendars
 - culture, calendars
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
-ms.openlocfilehash: c30af36b3426c4abbdf9c55f6c9062a5d8fc8c23
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 978b084906573a18e19cca20db0740ba2a1276cc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824258"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99642480"
 ---
 # <a name="work-with-calendars"></a>Takvimlerle çalışma
 
