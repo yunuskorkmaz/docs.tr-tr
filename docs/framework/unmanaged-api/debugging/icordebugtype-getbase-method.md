@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugType:: GetBase yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugType::GetBase Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: f24e1af9-c220-4f79-ae62-4153ec17ea81
 topic_type:
 - apiref
-ms.openlocfilehash: 967f8f25e240f484ae86852c740be12cd3a6409e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 78cd540974b540b704e946f6c723214d72e89ab4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95681827"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99658392"
 ---
 # <a name="icordebugtypegetbase-method"></a>ICorDebugType::GetBase Yöntemi
 
 Bir ICorDebugType öğesine, varsa, bu tür tarafından temsil edilen türün temel türünü temsil eden bir arabirim işaretçisi alır `ICorDebugType` .  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetBase (  

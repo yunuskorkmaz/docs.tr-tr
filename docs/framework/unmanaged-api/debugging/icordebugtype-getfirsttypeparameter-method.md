@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugType:: GetFirstTypeParameter metodu hakkında daha fazla bilgi edinin'
 title: ICorDebugType::GetFirstTypeParameter Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 35bb594f-af6a-4349-83fe-e98702674e03
 topic_type:
 - apiref
-ms.openlocfilehash: be69636056d5510b72dbce39917f5e8d3b05cd87
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4c37217f34f80c916d618d88e4917eab794a1d90
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723980"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99658288"
 ---
 # <a name="icordebugtypegetfirsttypeparameter-method"></a>ICorDebugType::GetFirstTypeParameter Yöntemi
 
 <xref:System.Type>Bu tarafından temsil edilen türün ilk parametresini temsil eden bir ICorDebugType için bir arabirim işaretçisi alır `ICorDebugType` .  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetFirstTypeParameter (  

@@ -1,19 +1,20 @@
 ---
+description: ': ICorDebugSymbolProvider:: Getınstancefieldsymbols yöntemi hakkında daha fazla bilgi edinin'
 title: 'ICorDebugSymbolProvider:: Getınstancefieldsymbols yöntemi'
 ms.date: 03/30/2017
 ms.assetid: a29b9233-ee67-4b53-b8bc-c00b281e7edb
-ms.openlocfilehash: 1a74b355b695f65166d0fe63bbdd41d789db5cfe
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 379d943743bb1fe21edbcca2265b4d8613d4f4b8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730870"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99659900"
 ---
 # <a name="icordebugsymbolprovidergetinstancefieldsymbols-method"></a>ICorDebugSymbolProvider:: Getınstancefieldsymbols yöntemi
 
 TypeSpec imzasına karşılık gelen örnek alanı sembollerini alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetInstanceFieldSymbols(  

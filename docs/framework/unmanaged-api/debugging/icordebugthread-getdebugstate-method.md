@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugThread:: GetDebugState metodu hakkında daha fazla bilgi edinin'
 title: ICorDebugThread::GetDebugState Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 9be27b0c-1d99-4722-b0d4-40cf6753ce5c
 topic_type:
 - apiref
-ms.openlocfilehash: 746fef3629e6573d7dfe47d5a3fcf9ee9a1d4250
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 86534dded9b8e931fe2a7e44f1c95dc2ec7b6f0d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728049"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99659159"
 ---
 # <a name="icordebugthreadgetdebugstate-method"></a>ICorDebugThread::GetDebugState Yöntemi
 
 Bu ICorDebugThread nesnesinin geçerli hata ayıklama durumunu alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetDebugState (  

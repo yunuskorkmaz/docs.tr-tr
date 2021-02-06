@@ -1,19 +1,20 @@
 ---
+description: ': ICorDebugSymbolProvider:: GetMethodProps Yöntemi hakkında daha fazla bilgi edinin'
 title: 'ICorDebugSymbolProvider:: GetMethodProps Yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 8f836b80-b7a5-460b-bf76-5f0e45652aea
-ms.openlocfilehash: 5412b2f06445627c1240d6c8f4efb3ce6bbbec54
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 53a329426ecadfe5559c0e6a08ffbd250163e177
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730831"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99659731"
 ---
 # <a name="icordebugsymbolprovidergetmethodprops-method"></a>ICorDebugSymbolProvider:: GetMethodProps Yöntemi
 
 Yöntemin meta veri belirteci ve bu yöntemde göreli bir sanal adres (RVA) verilen genel parametreleriyle ilgili bilgiler gibi Yöntem özellikleriyle ilgili bilgileri döndürür.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetMethodProps(  

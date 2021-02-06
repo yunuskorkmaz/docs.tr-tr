@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugThread:: GetObject yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugThread::GetObject Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 1590febe-96c2-4046-97db-d81d81d67e01
 topic_type:
 - apiref
-ms.openlocfilehash: 2c13ead228296525b57245be8b3bdbcdf38ae173
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: db5760be0ef4230b2dccec9d1836ea0eee56f231
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728010"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99658964"
 ---
 # <a name="icordebugthreadgetobject-method"></a>ICorDebugThread::GetObject Yöntemi
 
 Ortak dil çalışma zamanı (CLR) iş parçacığına bir arabirim işaretçisi alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetObject (  

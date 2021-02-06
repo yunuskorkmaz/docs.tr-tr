@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugThread:: CreateEval yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugThread::CreateEval Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 36605067-33d3-4579-9c72-fb0e551ab0f1
 topic_type:
 - apiref
-ms.openlocfilehash: 1c0037530ae4f40be5bef4da8f398afe5f2bbb91
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a789840e099a14b584e5713bee12f5c4b0717fe7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95688295"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99659393"
 ---
 # <a name="icordebugthreadcreateeval-method"></a>ICorDebugThread::CreateEval Yöntemi
 
 Bu ICorDebugThread 'in işlevlerini toplayan ve sunan bir ıcordebugger Geval nesnesi oluşturur.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT CreateEval (  

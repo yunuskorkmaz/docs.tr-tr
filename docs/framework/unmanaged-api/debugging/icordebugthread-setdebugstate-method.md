@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugThread:: SetDebugState Yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugThread::SetDebugState Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 6382bdf6-d488-4952-b653-cb09b6e1c6c2
 topic_type:
 - apiref
-ms.openlocfilehash: e28d37e4477862ff2ebeeb05ea5f5386e157cd83
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 40339cbce8d30617738151c0a32466c2361e3a14
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95678749"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99658808"
 ---
 # <a name="icordebugthreadsetdebugstate-method"></a>ICorDebugThread::SetDebugState Yöntemi
 
 Bu ICorDebugThread 'in hata ayıklama durumunu tanımlayan bayrakları ayarlar.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT SetDebugState (  

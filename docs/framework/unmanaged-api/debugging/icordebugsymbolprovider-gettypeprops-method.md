@@ -1,19 +1,20 @@
 ---
+description: ': ICorDebugSymbolProvider:: GetTypeProps yöntemi hakkında daha fazla bilgi edinin'
 title: 'ICorDebugSymbolProvider:: GetTypeProps yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 35ac4140-91ea-4c77-b1c4-1daf41986ca5
-ms.openlocfilehash: 4738d35aabbc2197c796405e0657607f75ff685d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b6a4a5a68e1e377fa839940832dfc49574009641
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95694509"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99659666"
 ---
 # <a name="icordebugsymbolprovidergettypeprops-method"></a>ICorDebugSymbolProvider:: GetTypeProps yöntemi
 
 Bir vtable içindeki göreli bir sanal adres (RVA) verilen genel parametrelerinin imza sayısı gibi bir türün özellikleri hakkında bilgi döndürür.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetTypeProps(  
@@ -57,6 +58,6 @@ HRESULT GetTypeProps(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [GetMethodProps Metodu](icordebugsymbolprovider-getmethodprops-method.md)
+- [GetMethodProps Yöntemi](icordebugsymbolprovider-getmethodprops-method.md)
 - [ICorDebugSymbolProvider Arabirimi](icordebugsymbolprovider-interface.md)
 - [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

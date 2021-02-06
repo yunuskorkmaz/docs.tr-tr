@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugThread:: GetID Yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugThread::GetID Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: f1de4584-92df-42f3-9da4-fca03a1c6821
 topic_type:
 - apiref
-ms.openlocfilehash: 85cfd7ba648f21721f1a9689843eac232489cb42
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d089201527da67299b64cdf074bdd331f22375a1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728023"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99659094"
 ---
 # <a name="icordebugthreadgetid-method"></a>ICorDebugThread::GetID Yöntemi
 
 Bu ICorDebugThread 'in etkin bölümünün geçerli işletim sistemi tanımlayıcısını alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetID (  

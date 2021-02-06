@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugThread:: GetAppDomain Yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugThread::GetAppDomain Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 415b3d34-8b35-4b60-a318-140646cc83f8
 topic_type:
 - apiref
-ms.openlocfilehash: 882176f381a7c5bc4a0297021b89a96948a1cea8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 416ab80fa08786fb5e95776b164723317fa59ca6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728075"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99659211"
 ---
 # <a name="icordebugthreadgetappdomain-method"></a>ICorDebugThread::GetAppDomain Yöntemi
 
 Bu ICorDebugThread 'in Şu anda yürütüldüğü uygulama etki alanına bir arabirim işaretçisi alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetAppDomain (  

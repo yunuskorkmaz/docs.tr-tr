@@ -1,13 +1,14 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ICorDebugSymbolProvider2:: Getgenericdictionaryınfo yöntemi'
 title: 'ICorDebugSymbolProvider2:: Getgenericdictionaryınfo yöntemi'
 ms.date: 03/30/2017
 ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
-ms.openlocfilehash: a6c32b72c5924399aeb13d56ddf9242fe7990f35
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 3488cab9ee21ea027e16089f066369ab8c6c69d0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379316"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99659549"
 ---
 # <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>ICorDebugSymbolProvider2:: Getgenericdictionaryınfo yöntemi
 
@@ -45,9 +46,9 @@ Dizindeki her giriş, yığın içindeki bir uzaklığa başvurur; diğer bir de
 
 Genel sözlük eşlemesinin dizin bölümü aşağıdaki yapıya sahiptir:
 
-- İlk 4 bayt sözlük girişi sayısını (yani, Sözlükteki göreli sanal adreslerin sayısını) içerir. Bu değere *N*olarak başvuracağız. Yüksek bit ayarlandıysa, girişler göreli sanal adrese göre artan sırada sıralanır.
+- İlk 4 bayt sözlük girişi sayısını (yani, Sözlükteki göreli sanal adreslerin sayısını) içerir. Bu değere *N* olarak başvuracağız. Yüksek bit ayarlandıysa, girişler göreli sanal adrese göre artan sırada sıralanır.
 
-- *N* Dizin girdileri izler. Her giriş, iki 4 baytlık kesimde 8 bayttan oluşur:
+- *N* Dizin girdileri izler. Her giriş, 2 4 baytlık kesimlerde 8 bayttan oluşur:
 
   - Bayt 0-3: RVA; sözlüğün göreli sanal adresi.
 
