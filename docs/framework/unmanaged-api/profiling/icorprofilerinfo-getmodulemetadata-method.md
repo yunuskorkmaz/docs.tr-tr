@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerInfo:: GetModuleMetaData metodu hakkında daha fazla bilgi edinin'
 title: ICorProfilerInfo::GetModuleMetaData Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 7a439d92-348a-44dd-b60f-cad7cba56379
 topic_type:
 - apiref
-ms.openlocfilehash: 74df0fb412e7fb3d9f779391ec84f07a0379a2cc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ff0fb0563b041fcb3cf63438874724c8236d6081
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724123"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99647186"
 ---
 # <a name="icorprofilerinfogetmodulemetadata-method"></a>ICorProfilerInfo::GetModuleMetaData Metodu
 
 Belirtilen modülle eşlenen meta veri arabirimi örneğini alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetModuleMetaData(  

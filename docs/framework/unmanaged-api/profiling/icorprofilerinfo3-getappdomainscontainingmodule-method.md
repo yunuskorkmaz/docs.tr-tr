@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerInfo3:: GetAppDomainsContainingModule yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerInfo3::GetAppDomainsContainingModule Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 603b3881-ea94-4dca-95cd-91eebac873a0
 topic_type:
 - apiref
-ms.openlocfilehash: 5cc3436716bcfc2ed0f9fd7ff7982bac7a48de9a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0f0fea5b01b80b110d7ab041574dc195162cb508
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731208"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99646848"
 ---
 # <a name="icorprofilerinfo3getappdomainscontainingmodule-method"></a>ICorProfilerInfo3::GetAppDomainsContainingModule Metodu
 
 Verilen modülün yüklendiği uygulama etki alanlarının tanımlayıcılarını alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetAppDomainsContainingModule(  

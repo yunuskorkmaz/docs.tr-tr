@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: profil oluşturma ortamı ayarlama'
 title: Profil Oluşturma Ortamını Ayarlama
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - COR_ENABLE_PROFILING environment variable
 - profiling API [.NET Framework], enabling
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
-ms.openlocfilehash: 9c712c5efe8d6d79454b70d0bf4f3ca2fa83b637
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 88bfb50b02874bf79f03414213329c5dcc79a9fa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722485"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99646354"
 ---
 # <a name="setting-up-a-profiling-environment"></a>Profil Oluşturma Ortamını Ayarlama
 

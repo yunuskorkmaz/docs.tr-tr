@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerInfo:: GetFunctionInfo metodu hakkında daha fazla bilgi edinin'
 title: ICorProfilerInfo::GetFunctionInfo Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c42b5891-019d-46b3-b551-4606295b75b8
 topic_type:
 - apiref
-ms.openlocfilehash: 6aaa02d72dd10fe72d773246d55216143786dabb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e6ad1112f0e6938fc6de549d3a1d2f0901150025
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722553"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99647560"
 ---
 # <a name="icorprofilerinfogetfunctioninfo-method"></a>ICorProfilerInfo::GetFunctionInfo Metodu
 
 Belirtilen işlev için üst sınıfı ve meta veri belirtecini alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetFunctionInfo(  

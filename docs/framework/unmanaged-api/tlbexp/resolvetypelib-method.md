@@ -1,4 +1,5 @@
 ---
+description: Daha fazla bilgi için bkz. Resolvettypeınfo LIB yöntemi
 title: ResolveTypeLib Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 95d2aa0d-8eeb-4a9f-a216-5249f7e2c167
 topic_type:
 - apiref
-ms.openlocfilehash: 84eea78b9c2e73e24238a5ecbc9442f3d63dbd4e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ca7f94f630479d30bb9129497b38bcf04e759e5d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719794"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99646289"
 ---
 # <a name="resolvetypelib-method"></a>ResolveTypeLib Yöntemi
 
 Tam nitelikli yolunu döndürerek bir tür kitaplığının basit adını çözer.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT ResolveTypeLib(  

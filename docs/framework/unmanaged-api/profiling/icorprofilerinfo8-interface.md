@@ -1,14 +1,15 @@
 ---
+description: 'Daha fazla bilgi edinin: ICorProfilerInfo8 Interface'
 title: ICorProfilerInfo8 Arabirimi
 ms.date: 08/06/2019
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: eedd16006781de517587e5138543b9b9eca3ff90
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4538c9d314283c67ab0bfe6af3f3768062cffda4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733613"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99646549"
 ---
 # <a name="icorprofilerinfo8-interface"></a>ICorProfilerInfo8 Arabirimi
 
