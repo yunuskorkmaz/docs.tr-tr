@@ -1,4 +1,5 @@
 ---
+description: ': IMetaDataImport:: EnumInterfaceImpls Yöntemi hakkında daha fazla bilgi edinin'
 title: IMetaDataImport::EnumInterfaceImpls Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: ba6e178f-128b-4e47-a13c-b4be73eb106c
 topic_type:
 - apiref
-ms.openlocfilehash: 0b040a2741a44b9d361dabc38c26b8934659003b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5276d1edb3be0cae76b18a06241dc6b9952e1a72
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711526"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99649422"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>IMetaDataImport::EnumInterfaceImpls Yöntemi
 
 Belirtilen tarafından uygulanan tüm arabirimleri numaralandırır `TypeDef` .
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT EnumInterfaceImpls (  
@@ -57,7 +58,7 @@ HRESULT EnumInterfaceImpls (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |`S_OK`|`EnumInterfaceImpls` başarıyla döndürüldü.|  
 |`S_FALSE`|Numaralandırılacak bir MethodDef belirteci yok. Bu durumda, `pcImpls` sıfır olarak ayarlanır.|  

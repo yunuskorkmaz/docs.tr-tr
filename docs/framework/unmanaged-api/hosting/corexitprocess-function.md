@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: CorExitProcess Işlevi'
 title: CorExitProcess İşlevi
 ms.date: 03/30/2017
 api_name:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a5cab4c6-990e-47f3-8798-cf422b791015
 topic_type:
 - apiref
-ms.openlocfilehash: f6d8114732a3b7c15d0a0258a28a362d661b030a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 68d33dec76387e103a34e99c529a4e7aff7535b4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95673650"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99649591"
 ---
 # <a name="corexitprocess-function"></a>CorExitProcess İşlevi
 
@@ -31,7 +32,7 @@ Geçerli yönetilmeyen işlemi kapatır.
   
  Bu işlev .NET Framework 4 ' te kullanım dışıdır. Bunun yerine [ICLRMetaHost:: ExitProcess](iclrmetahost-exitprocess-method.md) metodunu kullanın.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 void STDMETHODCALLTYPE CorExitProcess (

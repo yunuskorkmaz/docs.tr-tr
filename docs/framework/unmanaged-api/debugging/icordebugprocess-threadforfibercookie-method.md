@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugProcess:: ThreadForFiberCookie yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugProcess::ThreadForFiberCookie Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: afe4e97f-bffc-47e1-adad-d6e842487f35
 topic_type:
 - apiref
-ms.openlocfilehash: 74cad19d9fa681a6afb933f79ee7061590084509
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e3618d08f0b5212dbc8502194926c9ae0c97744b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95694678"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99650207"
 ---
 # <a name="icordebugprocessthreadforfibercookie-method"></a>ICorDebugProcess::ThreadForFiberCookie Yöntemi
 

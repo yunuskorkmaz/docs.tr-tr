@@ -1,4 +1,5 @@
 ---
+description: ': ICLRDebugManager:: GetDacl Yöntemi hakkında daha fazla bilgi edinin'
 title: ICLRDebugManager::GetDacl Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 7115e920-aaff-440a-824e-39497139c6f6
 topic_type:
 - apiref
-ms.openlocfilehash: 8a7de5a900bc1af219924b6a83f83cf7e2ef6150
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8a1b747851d0c5104dbe18e5a66742d57b09aa22
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726151"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99649487"
 ---
 # <a name="iclrdebugmanagergetdacl-method"></a>ICLRDebugManager::GetDacl Metodu
 
 Bu yöntem uygulanmadı.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetDacl (  
@@ -41,7 +42,7 @@ HRESULT GetDacl (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |E_NOTIMPL|Yöntem uygulanmadı.|  
   

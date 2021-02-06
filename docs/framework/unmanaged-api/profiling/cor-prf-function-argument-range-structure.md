@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: COR_PRF_FUNCTION_ARGUMENT_RANGE yapısı'
 title: COR_PRF_FUNCTION_ARGUMENT_RANGE Yapısı
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f469eac-ac66-419b-8668-fe705bc1a51f
 topic_type:
 - apiref
-ms.openlocfilehash: 028395b1c8677d07d4a6481740ecdc7ebb48c180
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 65d762ba4513341b20426ea56d423a2066f6e714
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95718533"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99649032"
 ---
 # <a name="cor_prf_function_argument_range-structure"></a>COR_PRF_FUNCTION_ARGUMENT_RANGE Yapısı
 
@@ -36,7 +37,7 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_RANGE {
   
 ## <a name="members"></a>Üyeler  
   
-|Üyeler|Açıklama|  
+|Üyeler|Description|  
 |-------------|-----------------|  
 |`startAddress`|Bloğun başlangıç adresi.|  
 |`length`|Bitişik bloğun uzunluğu.|  

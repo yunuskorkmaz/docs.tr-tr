@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: COR_PRF_CODE_INFO yapısı'
 title: COR_PRF_CODE_INFO Yapısı
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cf30e27c-1f7e-43a2-ba1e-01e4137301db
 topic_type:
 - apiref
-ms.openlocfilehash: b64e58a79f3dbe0c91b0c0cefc4a9d918c700cf9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 11eae032424a039cac1136c08409b5b4712e6db1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95718637"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99649253"
 ---
 # <a name="cor_prf_code_info-structure"></a>COR_PRF_CODE_INFO Yapısı
 
@@ -36,7 +37,7 @@ typedef struct _COR_PRF_CODE_INFO {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`startAddress`|Ardışık kod bloğunun başlangıç adresi.|  
 |`size`|Bloğun boyutu.|  

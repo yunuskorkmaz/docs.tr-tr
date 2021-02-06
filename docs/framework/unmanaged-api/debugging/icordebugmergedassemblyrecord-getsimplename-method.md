@@ -1,19 +1,20 @@
 ---
+description: ': Icordebugmergedassemblyrecord:: GetSimpleName metodu hakkında daha fazla bilgi edinin'
 title: 'Icordebugmergedassemblyrecord:: GetSimpleName yöntemi'
 ms.date: 03/30/2017
 ms.assetid: bc3410f6-ebca-4bca-9b45-fc38c74fa9cb
-ms.openlocfilehash: 11e43846f7b119933fb53bdf21423e28bbb792ac
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e77a5cc7df009a5bc55a7eb952ead80e5f81f271
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95710551"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99650397"
 ---
 # <a name="icordebugmergedassemblyrecordgetsimplename-method"></a>Icordebugmergedassemblyrecord:: GetSimpleName yöntemi
 
 Derlemenin basit adını alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetSimpleName(  

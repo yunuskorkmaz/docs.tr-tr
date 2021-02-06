@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ICorDebugProcess3 Interface'
 title: ICorDebugProcess3 Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ced9c82e-d7b0-4806-a151-98b6611d3097
 topic_type:
 - apiref
-ms.openlocfilehash: ef8dbd5253c02355f85fba626fa7e68ed62df4bd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 28b588bb4718f841e78b89ce44821971800b1f6f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686463"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99649981"
 ---
 # <a name="icordebugprocess3-interface"></a>ICorDebugProcess3 Arabirimi
 

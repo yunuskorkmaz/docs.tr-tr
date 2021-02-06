@@ -1,4 +1,5 @@
 ---
+description: ': Icordebugstackizlenecek yol:: GetContext yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugStackWalk::GetContext Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 081d1c95-152b-4797-8552-18453eb7b14b
 topic_type:
 - apiref
-ms.openlocfilehash: 927f2077b4bb71177c24816774d06643ebdaa922
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 30beefaa1e0e2e4c5043cae7213658ac24e8a1b6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711968"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99649617"
 ---
 # <a name="icordebugstackwalkgetcontext-method"></a>ICorDebugStackWalk::GetContext Yöntemi
 
 [Icordebugstackyürüme](icordebugstackwalk-interface.md) nesnesindeki geçerli karenin bağlamını döndürür.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetContext([in]  ULONG32 contextFlags,  
@@ -53,14 +54,14 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
 
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|Geçerli çerçevenin bağlamı başarıyla döndürüldü.|  
 |E_FAIL|Bağlam döndürülemedi.|  
 |HRESULT_FROM_WIN32 (ERROR_INSUFFICIENT ARABELLEĞI)|Bağlam arabelleği çok küçük.|  
 |CORDBG_E_PAST_END_OF_STACK|Çerçeve işaretçisi zaten yığının sonunda. Bu nedenle, ek çerçevelere erişilemez.|  
   
-## <a name="exceptions"></a>Özel Durumlar  
+## <a name="exceptions"></a>Özel durumlar  
   
 ## <a name="remarks"></a>Açıklamalar  
 

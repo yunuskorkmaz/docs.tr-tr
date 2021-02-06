@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: FunctionEnter3 Işlevi'
 title: FunctionEnter3 İşlevi
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: ef782c53-dae7-4990-b4ad-fddb1e690d4e
 topic_type:
 - apiref
-ms.openlocfilehash: 98a821eabb393d8b5042647e6ef6ffce7ab10783
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 664b0ca5b40937eaa129e6843e55024802befbb7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722888"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99648681"
 ---
 # <a name="functionenter3-function"></a>FunctionEnter3 İşlevi
 
 Profil oluşturucuya denetimin bir işleve geçtiğini bildirir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);  
