@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Işlem performansı sayaçları'
 title: İşlem Performansı Sayaçları
 ms.date: 03/30/2017
 ms.assetid: 333a51e0-f56e-4e1a-b359-5c91ff390568
-ms.openlocfilehash: 01f3ed7b2722f7ff4bdbb50e352920bdc277330f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e0a503d4d8b178d5d3f4ef240bf84c4b02a581ea
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96295241"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99655207"
 ---
 # <a name="operation-performance-counters"></a>İşlem Performansı Sayaçları
 
