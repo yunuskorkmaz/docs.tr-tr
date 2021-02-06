@@ -1,19 +1,20 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: System. ServiceModel. Servicehosthatalı'
 title: System.ServiceModel.ServiceHostFaulted
 ms.date: 03/30/2017
 ms.assetid: 58cf2adc-a6ef-46d8-8e73-e127287b42a2
-ms.openlocfilehash: 9e96904e33b4532a289f60ee62a56e2c6e8eedc0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4dd8055470b943bebfda32f76f6dadf4500f0e80
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96273730"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99654141"
 ---
 # <a name="systemservicemodelservicehostfaulted"></a>System.ServiceModel.ServiceHostFaulted
 
 System.ServiceModel.ServiceHostFaulted  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  ServiceHost hata verdi.  
   

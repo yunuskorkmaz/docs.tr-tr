@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Select tümcesi (Visual Basic)'
 title: Select Yan Tümcesi
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - Select clause [Visual Basic]
 - queries [Visual Basic], Select
 ms.assetid: 27a3f61c-5960-4692-9b91-4d0c4b6178fe
-ms.openlocfilehash: d96423efbee075a7ad257df72471c71e38e09b63
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 029778ce8262a93eee9a69843579523e8434eb01
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875743"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99653582"
 ---
 # <a name="select-clause-visual-basic"></a>Select Tümcesi (Visual Basic)
 
 Bir sorgunun sonucunu tanımlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]  

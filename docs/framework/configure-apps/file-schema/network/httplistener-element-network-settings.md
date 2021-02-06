@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: <httpListener> öğesi (ağ ayarları)'
 title: <httpListener> Öğesi (Ağ Ayarları)
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
-ms.openlocfilehash: 78526559164939667eab8848bc5fd2af6749d474
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 18c139ad7767370ecd3a4116e352b7614914d199
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91195447"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652867"
 ---
 # <a name="httplistener-element-network-settings"></a>\<httpListener> Öğesi (Ağ Ayarları)
 
@@ -44,7 +45,7 @@ Sınıf tarafından kullanılan parametreleri özelleştirir <xref:System.Net.Ht
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
-|**Dosyalarında**|**Açıklama**|  
+|**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
 |[ayarlar](settings-element-network-settings.md)|Ad alanı için temel ağ seçeneklerini yapılandırır <xref:System.Net> .|  
   
@@ -86,7 +87,7 @@ Sınıf tarafından kullanılan parametreleri özelleştirir <xref:System.Net.Ht
   
  Bu nedenle `http.sys` , işlemi değiştirmek için iki kayıt defteri anahtarı sağlar:  
   
-|Kayıt Defteri Anahtarı|Varsayılan değer|Açıklama|  
+|Kayıt Defteri Anahtarı|Varsayılan değer|Description|  
 |------------------|-------------------|-----------------|  
 |EnableNonUTF8|1|Sıfır ise, `http.sys` yalnızca UTF-8 kodlu URL 'leri kabul eder.<br /><br /> Sıfır olmayan bir ise, `http.sys` isteklerde kodlanmış veya DBCS kodlu URL 'leri de kabul eder.|  
 |FavorUTF8|1|Sıfır olmayan, `http.sys` her zaman UTF-8 olarak BIR URL kodunu çözmeye çalışır; dönüştürme başarısız olursa ve EnableNonUTF8 sıfır değilse, Http.sys ANSI veya DBCS olarak kod çözmeye çalışır.<br /><br /> Sıfır (ve EnableNonUTF8 sıfır olmayan) ise `http.sys` ANSI veya DBCS olarak kod çözmeye çalışır; bu başarılı olmazsa UTF-8 dönüşümü çalışır.|  
@@ -111,7 +112,7 @@ Sınıf tarafından kullanılan parametreleri özelleştirir <xref:System.Net.Ht
   
  Bu, istek göndericisinin amacı değildir.  
   
- **UnescapeRequestUrl** özniteliği **false**olarak ayarlanırsa, <xref:System.Net.HttpListener> bir istek aldığında, `http.sys` özelliğe GIRIŞ olarak dönüştürülmüş URI yerine ham URI 'yi kullanır <xref:System.Net.HttpListenerRequest.Url%2A> .  
+ **UnescapeRequestUrl** özniteliği **false** olarak ayarlanırsa, <xref:System.Net.HttpListener> bir istek aldığında, `http.sys` özelliğe GIRIŞ olarak dönüştürülmüş URI yerine ham URI 'yi kullanır <xref:System.Net.HttpListenerRequest.Url%2A> .  
   
  **UnescapeRequestUrl** özniteliği için varsayılan değer **true**'dur.  
   

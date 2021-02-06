@@ -1,15 +1,15 @@
 ---
 title: Docker kapsayıcıları için ne zaman .NET 5 seçin
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Docker kapsayıcıları için ne zaman .NET seçme
-ms.date: 01/13/2021
-ms.openlocfilehash: 61909c91d795582af499456c65ae0d7b4f2911e2
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.date: 02/02/2021
+ms.openlocfilehash: d0480ac43c0090b72185bd23bbd11ac7e26001e6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189284"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99653426"
 ---
-# <a name="when-to-choose-net-for-docker-containers"></a>Docker kapsayıcıları için ne zaman .NET seçme
+# <a name="when-to-choose-net-for-docker-containers"></a>Docker kapsayıcıları için ne zaman .NET seçilmelidir?
 
 .NET 5 ' in modülerliği ve hafif doğası, kapsayıcılar için mükemmel hale getirir. Bir kapsayıcı dağıttığınızda ve başlattığınızda, görüntü .NET 5 ' ten .NET Framework göre çok daha küçüktür. Buna karşılık, bir kapsayıcı için .NET Framework kullanmak için görüntünüzü, .NET 5 için kullandığınız Windows nano Server veya Linux görüntülerinden çok daha ağır olan Windows Server Core görüntüsüne dayandırmanız gerekir.
 
@@ -33,7 +33,7 @@ Ides ve düzenleyicilere ek olarak, desteklenen tüm platformlar için [.net CLI
 
 ## <a name="using-containers-for-new-green-field-projects"></a>Yeni ("yeşil-alan") projeler için kapsayıcıları kullanma
 
-Kapsayıcılar genellikle bir mikro hizmet mimarisi ile birlikte kullanılır, ancak her türlü mimari kalıbı izleyen Web uygulamalarını veya hizmetlerini kapsayıtabilecek de kullanılabilirler. Windows kapsayıcılarında .NET Framework kullanabilirsiniz, ancak .NET 5 ' in modülerliği ve hafif doğası kapsayıcılar ve mikro hizmet mimarileri için mükemmel hale gelir. Bir kapsayıcı oluşturduğunuzda ve dağıttığınızda, bu görüntü .NET Core ile .NET Framework göre daha küçüktür.
+Kapsayıcılar genellikle bir mikro hizmet mimarisi ile birlikte kullanılır, ancak her türlü mimari kalıbı izleyen Web uygulamalarını veya hizmetlerini kapsayıtabilecek de kullanılabilirler. Windows kapsayıcılarında .NET Framework kullanabilirsiniz, ancak .NET 5 ' in modülerliği ve hafif doğası kapsayıcılar ve mikro hizmet mimarileri için mükemmel hale gelir. Bir kapsayıcı oluşturduğunuzda ve dağıttığınızda, bu görüntü .NET 5 ' ten .NET Framework göre çok daha küçüktür.
 
 ## <a name="create-and-deploy-microservices-on-containers"></a>Kapsayıcılar üzerinde mikro hizmetler oluşturma ve dağıtma
 

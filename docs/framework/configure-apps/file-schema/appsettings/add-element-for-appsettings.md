@@ -1,4 +1,5 @@
 ---
+description: 'İçin: öğesi hakkında daha fazla bilgi <add><appSettings>'
 title: <appSettings> için <add> öğesi
 ms.date: 05/01/2017
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - add Element
 - <add> Element
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
-ms.openlocfilehash: 5c7de79ec626966e71d461dd3865b294a8979db2
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f10ffe517b3b25543bc7baed0c7d2af13f48ab02
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "77214807"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652893"
 ---
 # <a name="add-element-for-appsettings"></a>\<appSettings> için \<add> öğesi
 
@@ -22,7 +23,7 @@ ms.locfileid: "77214807"
 &nbsp;&nbsp;[**\<appSettings>**](appsettings-element-for-configuration.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <appSettings>
@@ -32,20 +33,20 @@ ms.locfileid: "77214807"
 
 ## <a name="attributes"></a>Öznitelikler
 
-|           | Açıklama |
+|           | Description |
 | --------- | ----------- |
 | **anahtar**   | Gerekli öznitelik.<br><br>Eklenecek anahtarın adını belirtir. |
-| **deeri** | Gerekli öznitelik.<br><br>Eklenecek anahtarın değerini belirtir. |
+| **değer** | Gerekli öznitelik.<br><br>Eklenecek anahtarın değerini belirtir. |
 
 ## <a name="parent-element"></a>Üst öğe
 
-|     | Açıklama |
+|     | Description |
 | --- | ----------- |
 | [**\<appSettings>**](appsettings-element-for-configuration.md) | Dosya yolları, XML Web hizmeti URL 'Leri veya bir uygulama için başka özel yapılandırma bilgileri gibi özel uygulama ayarlarını içerir. |
 
 ## <a name="child-elements"></a>Alt öğeleri
 
-Yok
+Hiçbiri
 
 ## <a name="example"></a>Örnek
 

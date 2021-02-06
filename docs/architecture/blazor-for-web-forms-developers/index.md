@@ -6,15 +6,15 @@ ms.author: daroth
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 12/01/2020
-ms.openlocfilehash: 47f684e1b48ca95b8d999e6f1429840eb5f541de
-ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
+ms.date: 02/02/2021
+ms.openlocfilehash: 267f7222865c5a92d20faaae41b052da08c284a4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96509773"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99653478"
 ---
-# <a name="no-locblazor-for-aspnet-web-forms-developers"></a>Blazor ASP.NET Web Forms geliştiricileri için
+# <a name="blazor-for-aspnet-web-forms-developers"></a>Blazor ASP.NET Web Forms geliştiricileri için
 
 ![Sunucusuz uygulamalar e-kitap kapağını gösteren ekran görüntüsü.](./media/index/blazor-for-aspnet-web-forms-developers.png)
 
@@ -34,7 +34,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Telif hakkı © 2020 Microsoft Corporation
+Telif hakkı © 2021 Microsoft Corporation
 
 All rights reserved. Bu kitabın içeriğinin herhangi bir bölümü herhangi bir biçimde veya herhangi bir şekilde veya başka bir şekilde herhangi bir şekilde çoğaltılamaz veya herhangi bir şekilde gönderilebilir.
 
@@ -74,7 +74,7 @@ Bu kitap, Blazor mevcut bilgi ve becerileriyle ilgili bir giriş isteyen ASP.NET
 
 ## <a name="how-to-use-the-book"></a>Kitabı kullanma
 
-Bu kitabın ilk bölümünde ne olduğu ele alınmaktadır Blazor ve ASP.NET Web Forms ile Web uygulaması geliştirmeyle karşılaştırılmaktadır. Daha sonra kitap, Blazor bölüm tarafından sunulan çeşitli konuları ve her bir Blazor kavramı ASP.NET Web Forms ilgili kavramla ilişkilendirir veya tamamen tamamen yeni kavramların olduğunu anlatmaktadır. Kitap ayrıca, her iki ASP.NET Web Forms uygulanmış olan ve Blazor Blazor özellikleri göstermek ve ASP.NET Web Forms ' dan ' a geçiş için bir örnek olay incelemesi sağlamak üzere her ikisi de düzenli olarak bir örnek uygulamaya başvurur Blazor . GitHub üzerinde örnek uygulamanın (ASP.NET Web Forms ve sürümleri) her iki uygulamasını da bulabilirsiniz Blazor . [GitHub](https://github.com/dotnet-architecture/eshoponblazor)
+Bu kitabın ilk bölümünde ne olduğu ele alınmaktadır Blazor ve ASP.NET Web Forms ile Web uygulaması geliştirmeyle karşılaştırılmaktadır. Daha sonra kitap, Blazor bölüm tarafından sunulan çeşitli konuları ve her bir Blazor kavramı ASP.NET Web Forms ilgili kavramla ilişkilendirir veya tamamen tamamen yeni kavramların olduğunu anlatmaktadır. Kitap ayrıca, her iki ASP.NET Web Forms uygulanmış olan ve Blazor Blazor özellikleri göstermek ve ASP.NET Web Forms ' dan ' a geçiş için bir örnek olay incelemesi sağlamak üzere her ikisi de düzenli olarak bir örnek uygulamaya başvurur Blazor . GitHub üzerinde örnek uygulamanın (ASP.NET Web Forms ve sürümleri) her iki uygulamasını da bulabilirsiniz Blazor . [](https://github.com/dotnet-architecture/eshoponblazor)
 
 ## <a name="what-this-book-doesnt-cover"></a>Bu kitabın kapsamıyor
 

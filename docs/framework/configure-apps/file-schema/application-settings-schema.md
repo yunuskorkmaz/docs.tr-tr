@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: uygulama ayarları şeması'
 title: Uygulama ayarları şeması
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, application settings schema
 - configuration schema [.NET Framework], application settings
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
-ms.openlocfilehash: fc9cd8ac3819c6a02019c871e7bd45ceb4c2cef7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 24c5771e9d98d07bbdc8dab5fce0f1535bc9b582
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552316"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652906"
 ---
 # <a name="application-settings-schema"></a>Uygulama ayarları şeması
 

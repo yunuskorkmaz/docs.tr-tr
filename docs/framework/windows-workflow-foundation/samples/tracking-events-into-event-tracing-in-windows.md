@@ -1,13 +1,14 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: Windows 'ta olay Izleme ile olayları Izleme"
 title: Windows'ta Olay İzleme ile Olayları İzleme
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: 4350287aedae73a7ca9556de7ae3f597950e32ea
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 92ad4aaee100bb3ba7f4174bbbde1dc7eaed58de
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90549630"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99653751"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Windows'ta Olay İzleme ile Olayları İzleme
 
@@ -63,11 +64,11 @@ Aşağıdaki tabloda iş akışı çalışma zamanının yaydığı izleme kayı
 
     Hizmeti çağırmadan önce, **Başlat** menüsünden Olay Görüntüleyicisi başlatın, **Çalıştır** ' ı seçin ve yazın `eventvwr.exe` . Olay günlüğünün, iş akışı hizmetinden yayılan izleme olaylarını dinlediğinden emin olun.
 
-7. Olay Görüntüleyicisi ağaç görünümünde **Olay Görüntüleyicisi**, **uygulamalar ve hizmet günlükleri**ve **Microsoft**' a gidin. Analitik ve hata ayıklama günlüklerini etkinleştirmek için **Microsoft** 'a sağ tıklayın ve **Görünüm** ' ü seçin ve ardından **analitik ve hata ayıklama günlüklerini göster**
+7. Olay Görüntüleyicisi ağaç görünümünde **Olay Görüntüleyicisi**, **uygulamalar ve hizmet günlükleri** ve **Microsoft**' a gidin. Analitik ve hata ayıklama günlüklerini etkinleştirmek için **Microsoft** 'a sağ tıklayın ve **Görünüm** ' ü seçin ve ardından **analitik ve hata ayıklama günlüklerini göster**
 
     **Analitik ve hata ayıklama günlüklerini göster** seçeneğinin işaretli olduğundan emin olun.
 
-8. Olay Görüntüleyicisi 'daki ağaç görünümünde **Olay Görüntüleyicisi**, **uygulamalar ve hizmetler günlükleri**, **Microsoft**, **Windows**, **uygulama sunucusu-uygulamalar**' a gidin. Analitik günlüğü etkinleştirmek için analiz ' e **sağ tıklayın ve** **günlüğü etkinleştir** ' i seçin. **Analytic**
+8. Olay Görüntüleyicisi 'daki ağaç görünümünde **Olay Görüntüleyicisi**, **uygulamalar ve hizmetler günlükleri**, **Microsoft**, **Windows**, **uygulama sunucusu-uygulamalar**' a gidin. Analitik günlüğü etkinleştirmek için analiz ' e **sağ tıklayın ve** **günlüğü etkinleştir** ' i seçin. 
 
 9. Hizmeti çift tıklayarak WCF test istemcisini kullanarak test edin `GetData` .
 
@@ -138,7 +139,7 @@ Sistem durumu izleme izleme profili, iş akışı örneği kayıtları ve etkinl
 > [!NOTE]
 > Olay Görüntüleyicisi içinde, ETW olaylarının kodunu çözemediği bilinen bir sorun vardır. Aşağıdakine benzer bir hata iletisi görebilirsiniz.
 >
-> \<id>Microsoft-Windows-Application Server-Applications kaynağından olay kimliği açıklaması bulunamıyor. Bu olayı başlatan bileşen yerel bilgisayarınızda yüklü değil veya yükleme bozuk. Bileşeni yerel bilgisayara yükleyebilir veya onarabilirsiniz.
+> \<id>Kaynak Microsoft-Windows-uygulama Server-Applications ' den olay kimliği açıklaması bulunamıyor. Bu olayı başlatan bileşen yerel bilgisayarınızda yüklü değil veya yükleme bozuk. Bileşeni yerel bilgisayara yükleyebilir veya onarabilirsiniz.
 >
 > Bu hatayla karşılaşırsanız, Eylemler bölmesinde Yenile ' ye tıklayın. Olay artık düzgün şekilde kod çözmelidir.
 

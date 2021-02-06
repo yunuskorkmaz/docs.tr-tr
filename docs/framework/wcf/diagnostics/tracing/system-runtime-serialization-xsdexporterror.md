@@ -1,19 +1,20 @@
 ---
+description: ': System. Runtime. Serialization. XsdExportError hakkında daha fazla bilgi edinin'
 title: System.Runtime.Serialization.XsdExportError
 ms.date: 03/30/2017
 ms.assetid: 393fa3d0-a4bb-4c00-947d-84c5e860c681
-ms.openlocfilehash: 4ab3fec6e71b8a9721d318e38f699cc5eb9644fa
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1d012960e5aab3b96e526551187fe8028cb777f2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96242454"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99654570"
 ---
 # <a name="systemruntimeserializationxsdexporterror"></a>System.Runtime.Serialization.XsdExportError
 
 System.Runtime.Serialization.XsdExportError  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Şema dışarı aktarma hatası.  
   

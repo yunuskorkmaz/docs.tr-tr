@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: GCLOHThreshold öğesi'
 title: GCLOHThreshold öğesi
 ms.date: 11/20/2019
 helpviewer_keywords:
 - GCLOHThreshold element
 - <GCLOHThreshold> element
-ms.openlocfilehash: d72dc9d27984f60dfb6296217263ce8b176093c6
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5d4ef4e6aaf44642c2307dc27ac2e99e966d3ad0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74451222"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652815"
 ---
 # <a name="gclohthreshold-element"></a>GCLOHThreshold öğesi
 
@@ -19,7 +20,7 @@ ms.locfileid: "74451222"
 &nbsp;&nbsp;[\<runtime>](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;\<GCLOHThreshold>
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <GCLOHThreshold
