@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: satırları bulma'
 title: Satırları Bulma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5da300e2-74c0-4d13-9202-fc20ed8212d8
-ms.openlocfilehash: dc0661e29e6d3ee5aa3f54179e8abf265cd67d58
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: bf4752255945d5bbc0dd5551cd6e84c98fd78c3f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91186984"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652477"
 ---
 # <a name="finding-rows"></a>Satırları Bulma
 
@@ -18,7 +19,7 @@ Ve yöntemlerini kullanarak sıralama anahtarı değerlerine göre satırları a
   
  **Find** yöntemi, arama ölçütleriyle eşleşen öğesinin diziniyle bir tamsayı döndürür <xref:System.Data.DataRowView> . Arama ölçütleriyle eşleşen birden fazla satır varsa, yalnızca ilk eşleşen **DataRowView** 'ın dizini döndürülür. Eşleşme bulunmazsa, **bul** -1 döndürür.  
   
- Birden çok satırla eşleşen arama sonuçları döndürmek için **FindRows** yöntemini kullanın. **FindRows** , **Find** yöntemi gibi çalışarak, **DataView**Içindeki tüm eşleşen satırlara başvuran bir **DataRowView** dizisi döndürür. Hiçbir eşleşme bulunmazsa, **DataRowView** dizisi boş olur.  
+ Birden çok satırla eşleşen arama sonuçları döndürmek için **FindRows** yöntemini kullanın. **FindRows** , **Find** yöntemi gibi çalışarak, **DataView** Içindeki tüm eşleşen satırlara başvuran bir **DataRowView** dizisi döndürür. Hiçbir eşleşme bulunmazsa, **DataRowView** dizisi boş olur.  
   
  **Find** veya **FindRows** yöntemlerini kullanmak için, **ApplyDefaultSort** ' i **true** olarak ayarlayarak ya da **Sort** özelliğini kullanarak bir sıralama düzeni belirtmeniz gerekir. Sıralama düzeni belirtilmemişse, bir özel durum oluşturulur.  
   

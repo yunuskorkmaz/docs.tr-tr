@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: benzersiz XML şeması (XSD) kısıtlamalarını veri kümesi kısıtlamalarına eşleme'
 title: Benzersiz XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme
 ms.date: 03/30/2017
 ms.assetid: 56da90bf-21d3-4d1a-8bb8-de908866b78d
-ms.openlocfilehash: 3b2dad44176e52adcf32e2e3ccff3d82ba23f6ed
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 41a6e5424d67b092e57ac61d6e34a1f285fb8d0c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153241"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651931"
 ---
 # <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a>Benzersiz XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme
 
@@ -15,10 +16,10 @@ Bir XML şeması tanım dili (XSD) şemasında, **Unique** öğesi bir öğe vey
   
  Aşağıdaki tabloda, **benzersiz** öğesinde belirtebileceğiniz **msdata** öznitelikleri özetlenmektedir.  
   
-|Öznitelik adı|Açıklama|  
+|Öznitelik adı|Description|  
 |--------------------|-----------------|  
 |**msdata: ConstraintName**|Bu öznitelik belirtilmişse, değeri kısıtlama adı olarak kullanılır. Aksi takdirde, **Name** özniteliği kısıtlama adının değerini sağlar.|  
-|**msdata: PrimaryKey**|`PrimaryKey="true"` **Unique** öğesinde varsa, **IsPrimaryKey** özelliği **true**olarak ayarlanan bir Unique kısıtlaması oluşturulur.|  
+|**msdata: PrimaryKey**|`PrimaryKey="true"` **Unique** öğesinde varsa, **IsPrimaryKey** özelliği **true** olarak ayarlanan bir Unique kısıtlaması oluşturulur.|  
   
  Aşağıdaki örnek, bir benzersizlik kısıtlaması belirtmek için **benzersiz** öğe kullanan bir XML şeması gösterir.  
   
@@ -49,13 +50,13 @@ Bir XML şeması tanım dili (XSD) şemasında, **Unique** öğesi bir öğe vey
 </xs:schema>  
 ```  
   
- Şemadaki **benzersiz** öğe, bir belge örneğindeki tüm **müşteriler** öğeleri için, **MüşteriNo** alt öğesinin değerinin benzersiz olması gerektiğini belirtir. **Veri kümesini**oluştururken, eşleme işlemi bu şemayı okur ve aşağıdaki tabloyu oluşturur:  
+ Şemadaki **benzersiz** öğe, bir belge örneğindeki tüm **müşteriler** öğeleri için, **MüşteriNo** alt öğesinin değerinin benzersiz olması gerektiğini belirtir. **Veri kümesini** oluştururken, eşleme işlemi bu şemayı okur ve aşağıdaki tabloyu oluşturur:  
   
 ```text  
 Customers (CustomerID, CompanyName, Phone)  
 ```  
   
- Eşleme işlemi, aşağıdaki **veri kümesinde**gösterildiği gibi **MüşteriNo** sütununda de benzersiz bir kısıtlama oluşturur. (Kolaylık sağlaması için yalnızca ilgili özellikler gösterilir.)  
+ Eşleme işlemi, aşağıdaki **veri kümesinde** gösterildiği gibi **MüşteriNo** sütununda de benzersiz bir kısıtlama oluşturur. (Kolaylık sağlaması için yalnızca ilgili özellikler gösterilir.)  
   
 ```text  
       DataSetName: MyDataSet  
@@ -71,7 +72,7 @@ TableName: Customers
   
  Oluşturulan **veri kümesinde** , **IsPrimaryKey** özelliği, Unique kısıtlaması için **false** olarak ayarlanır. Sütunundaki **UNIQUE** özelliği, **MüşteriNo** sütun değerlerinin benzersiz olması gerektiğini belirtir (ancak sütunun **AllowDBNull** özelliği tarafından belirtilen şekilde null bir başvuru olabilir).  
   
- Şemayı değiştirir ve isteğe bağlı **msdata: PrimaryKey** öznitelik değerini **true**olarak ayarlarsanız, tabloda benzersiz kısıtlama oluşturulur. **AllowDBNull** Column özelliği **false**olarak ayarlanır ve kısıtlamanın **IsPrimaryKey** özelliği **true**olarak ayarlanır ve bu sayede **MüşteriNo** sütununu birincil anahtar sütunu yapar.  
+ Şemayı değiştirir ve isteğe bağlı **msdata: PrimaryKey** öznitelik değerini **true** olarak ayarlarsanız, tabloda benzersiz kısıtlama oluşturulur. **AllowDBNull** Column özelliği **false** olarak ayarlanır ve kısıtlamanın **IsPrimaryKey** özelliği **true** olarak ayarlanır ve bu sayede **MüşteriNo** sütununu birincil anahtar sütunu yapar.  
   
  XML şemasında öğelerin veya özniteliklerin birleşimi üzerinde benzersiz bir kısıtlama belirtebilirsiniz. Aşağıdaki örnek, bir **CustomerID** ve **CompanyName** değerlerinin birleşiminin, şemaya başka bir **xs: Field** öğesi ekleyerek herhangi bir örnekteki tüm **müşteriler** için benzersiz olması gerektiğini belirtir.  
   
@@ -85,7 +86,7 @@ TableName: Customers
 </xs:unique>  
 ```  
   
- Bu, sonuçta elde edilen **veri kümesinde**oluşturulan kısıtlamadır.  
+ Bu, sonuçta elde edilen **veri kümesinde** oluşturulan kısıtlamadır.  
   
 ```text  
 ConstraintName: SomeName  

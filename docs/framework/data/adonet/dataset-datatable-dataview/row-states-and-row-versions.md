@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: Satır durumları ve satır sürümleri'
 title: Satır Durumları ve Satır Sürümleri
 ms.date: 07/19/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2e6642c9-bfc6-425c-b3a7-e4912ffa6c1f
-ms.openlocfilehash: 1b80ae78fad22989f99fb1e992d4978a192e0c66
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 7d436ffcfcf59f5daa4fc6eaa9f9018b92e5c608
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204534"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651684"
 ---
 # <a name="row-states-and-row-versions"></a>Satır Durumları ve Satır Sürümleri
 
@@ -18,7 +19,7 @@ ADO.NET satır durumlarını ve sürümlerini kullanarak tablolardaki satırlar�
   
  Her <xref:System.Data.DataRow> nesnenin, <xref:System.Data.DataRow.RowState%2A> satırın geçerli durumunu belirleyebilmek için incelemenize olanak tanıyan bir özelliği vardır. Aşağıdaki tabloda her bir numaralandırma değerinin kısa bir açıklaması verilmiştir `RowState` .  
   
-|RowState değeri|Açıklama|  
+|RowState değeri|Description|  
 |--------------------|-----------------|  
 |<xref:System.Data.DataRowState.Unchanged>|`AcceptChanges`Satır oluşturulduğu veya bu yana yapılan son çağrıdan bu yana hiçbir değişiklik yapılmadı `DataAdapter.Fill` .|  
 |<xref:System.Data.DataRowState.Added>|Satır tabloya eklenmiş, ancak `AcceptChanges` çağrılmadı.|  
@@ -42,7 +43,7 @@ string custID = custRow["CustomerID", DataRowVersion.Original].ToString();
   
  Aşağıdaki tabloda her bir numaralandırma değerinin kısa bir açıklaması verilmiştir `DataRowVersion` .  
   
-|DataRowVersion değeri|Açıklama|  
+|DataRowVersion değeri|Description|  
 |--------------------------|-----------------|  
 |<xref:System.Data.DataRowVersion.Current>|Satır için geçerli değerler. Bu satır sürümü, içeren satırlar için mevcut değil `RowState` `Deleted` .|  
 |<xref:System.Data.DataRowVersion.Default>|Belirli bir satır için varsayılan satır sürümü. `Added`, `Modified` , Veya satırı için varsayılan satır sürümü `Deleted` `Current` . Bir satırın varsayılan satır sürümü `Detached` `Proposed` .|  

@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: nasıl yapılır: EntityCommand kullanarak parametreli Entity SQL sorgusu yürütme'
 title: 'Nasıl yapılır: EntityCommand Kullanarak Parametreli Entity SQL Sorgusu Yürütme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e93fea43-7e03-4d7d-9fee-2517b8b88cba
-ms.openlocfilehash: d66b77553e677c42ccedf7e66bf4f5763db92fa4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c3eb9fdfbad986d54104e94aa719a57edfa14b19
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91192236"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99650787"
 ---
 # <a name="how-to-execute-a-parameterized-entity-sql-query-using-entitycommand"></a>Nasıl yapılır: EntityCommand Kullanarak Parametreli Entity SQL Sorgusu Yürütme
 

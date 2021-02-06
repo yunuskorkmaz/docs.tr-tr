@@ -1,23 +1,24 @@
 ---
+description: 'Daha fazla bilgi edinin: XML şema kısıtlamaları ve Ilişkileri'
 title: XML Şema Kısıtlamaları ve İlişkileri
 ms.date: 03/30/2017
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
-ms.openlocfilehash: 5861386e42defa189aaa50a3af0bd95d7e9257fd
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c7847691537c4b754abcbacdeb367b1d92365ef3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173711"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651320"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>XML Şema Kısıtlamaları ve İlişkileri
 
 Bir XML şeması tanım dili (XSD) şemasında, kısıtlamalar (benzersiz, anahtar ve keyref kısıtlamaları) ve ilişkileri ( **msdata: Relationship** ek açıklaması kullanılarak) belirtebilirsiniz. Bu konuda bir XML şemasında belirtilen kısıtlamaların ve ilişkilerin, oluşturmak için nasıl yorumlanacağı açıklanmaktadır <xref:System.Data.DataSet> .  
   
- Genel olarak, bir XML şemasında, **veri kümesinde**yalnızca ilişkiler oluşturmak istiyorsanız **msdata: Relationship** ek açıklamasını belirtirsiniz. Daha fazla bilgi için bkz. [xml şemasından (xsd) veri kümesi Ilişkileri oluşturma](generating-dataset-relations-from-xml-schema-xsd.md). **Veri kümesinde**kısıtlamalar oluşturmak istiyorsanız kısıtlamalar (Unique, Key ve keyref) belirtirsiniz. Anahtar ve keyref kısıtlamalarının, bu konunun ilerleyen kısımlarında açıklandığı gibi ilişkiler oluşturmak için de kullanıldığını unutmayın.  
+ Genel olarak, bir XML şemasında, **veri kümesinde** yalnızca ilişkiler oluşturmak istiyorsanız **msdata: Relationship** ek açıklamasını belirtirsiniz. Daha fazla bilgi için bkz. [xml şemasından (xsd) veri kümesi Ilişkileri oluşturma](generating-dataset-relations-from-xml-schema-xsd.md). **Veri kümesinde** kısıtlamalar oluşturmak istiyorsanız kısıtlamalar (Unique, Key ve keyref) belirtirsiniz. Anahtar ve keyref kısıtlamalarının, bu konunun ilerleyen kısımlarında açıklandığı gibi ilişkiler oluşturmak için de kullanıldığını unutmayın.  
   
 ## <a name="generating-a-relationship-from-key-and-keyref-constraints"></a>Anahtar ve keyref kısıtlamalarından bir Ilişki oluşturma  
 
- **Msdata: ilişki** ek açıklamasını belirtmek yerıne, XML Şeması eşleme işlemi sırasında yalnızca kısıtlamaları değil, **veri kümesindeki**ilişkiyi değil, anahtar ve keyref kısıtlamalarını belirtebilirsiniz. Ancak, `msdata:ConstraintOnly="true"` **keyref** öğesinde belirtirseniz, **veri kümesi** yalnızca kısıtlamaları içerir ve ilişkiyi içermez.  
+ **Msdata: ilişki** ek açıklamasını belirtmek yerıne, XML Şeması eşleme işlemi sırasında yalnızca kısıtlamaları değil, **veri kümesindeki** ilişkiyi değil, anahtar ve keyref kısıtlamalarını belirtebilirsiniz. Ancak, `msdata:ConstraintOnly="true"` **keyref** öğesinde belirtirseniz, **veri kümesi** yalnızca kısıtlamaları içerir ve ilişkiyi içermez.  
   
  Aşağıdaki örnek, iç içe olmayan **Order** ve **OrderDetail** öğelerini içeren bir XML şemasını gösterir. Şema ayrıca Key ve keyref kısıtlamalarını da belirtir.  
   

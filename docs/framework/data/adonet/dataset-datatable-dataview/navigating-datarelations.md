@@ -1,20 +1,21 @@
 ---
+description: 'Daha fazla bilgi edinin: Datareımımlarını gezinme'
 title: DataRelations İçinde Gezinme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e5e673f4-9b44-45ae-aaea-c504d1cc5d3e
-ms.openlocfilehash: 5eb2ee16712be5ccd5e9aa0af4dde22dcaaeea09
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 72d5bbb282b3b43434e528390769e1203519e8e2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148392"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651814"
 ---
 # <a name="navigating-datarelations"></a>DataRelations İçinde Gezinme
 
-' A ait birincil işlevlerden biri <xref:System.Data.DataRelation> , bir ' ın içinde diğerine gezinmesine izin verdir <xref:System.Data.DataTable> <xref:System.Data.DataSet> . Bu, <xref:System.Data.DataRow> ilgili bir **DataTable**nesnesinden tek bir **DataRow** verildiğinde ilgili tüm nesneleri bir **DataTable** içinde almanıza olanak sağlar. Örneğin, bir müşteri tablosu ve sipariş tablosu arasında bir **DataRelation** oluşturduktan sonra, **GetChildRows**kullanarak belirli bir müşteri satırı için tüm sipariş satırlarını alabilirsiniz.  
+' A ait birincil işlevlerden biri <xref:System.Data.DataRelation> , bir ' ın içinde diğerine gezinmesine izin verdir <xref:System.Data.DataTable> <xref:System.Data.DataSet> . Bu, <xref:System.Data.DataRow> ilgili bir **DataTable** nesnesinden tek bir **DataRow** verildiğinde ilgili tüm nesneleri bir **DataTable** içinde almanıza olanak sağlar. Örneğin, bir müşteri tablosu ve sipariş tablosu arasında bir **DataRelation** oluşturduktan sonra, **GetChildRows** kullanarak belirli bir müşteri satırı için tüm sipariş satırlarını alabilirsiniz.  
   
  Aşağıdaki kod örneği, bir **veri kümesinin** **Customers** tablosu ve **Orders** tablosu arasında bir **DataRelation** oluşturur ve her müşteri için tüm siparişleri döndürür.  
   

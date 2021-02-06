@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: anahtar XML şeması (XSD) kısıtlamalarını veri kümesi kısıtlamalarına eşleme'
 title: Anahtar XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme
 ms.date: 03/30/2017
 ms.assetid: 22664196-f270-4ebc-a169-70e16a83dfa1
-ms.openlocfilehash: b55b232faa01bf36788276caaf8bc2e97dddf697
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0c07b53e06dc6b80395764b2bdd76045ee80bffd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172794"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651996"
 ---
 # <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a>Anahtar XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme
 
@@ -17,12 +18,12 @@ Bir şemada, **anahtar** öğesini kullanarak bir öğe veya öznitelik üzerind
   
  Aşağıdaki tabloda, **anahtar** öğesinde belirtebileceğiniz **msdata** öznitelikleri özetlenmektedir.  
   
-|Öznitelik adı|Açıklama|  
+|Öznitelik adı|Description|  
 |--------------------|-----------------|  
 |**msdata: ConstraintName**|Bu öznitelik belirtilmişse, değeri kısıtlama adı olarak kullanılır. Aksi takdirde, **Name** özniteliği kısıtlama adının değerini sağlar.|  
-|**msdata: PrimaryKey**|Varsa `PrimaryKey="true"` , **IsPrimaryKey** kısıtlama özelliği **true**olarak ayarlanır ve bu sayede birincil anahtar yapılır. **AllowDBNull** Column özelliği **false**olarak ayarlanır, çünkü birincil anahtarlar null değerlere sahip olamaz.|  
+|**msdata: PrimaryKey**|Varsa `PrimaryKey="true"` , **IsPrimaryKey** kısıtlama özelliği **true** olarak ayarlanır ve bu sayede birincil anahtar yapılır. **AllowDBNull** Column özelliği **false** olarak ayarlanır, çünkü birincil anahtarlar null değerlere sahip olamaz.|  
   
- Anahtar kısıtlamasının belirtildiği şemayı dönüştürürken, eşleme işlemi kısıtlamadaki her bir sütun için **AllowDBNull** Column özelliği **false** olarak ayarlanmış tabloda benzersiz bir kısıtlama oluşturur. Anahtar öğesinde belirtmediğiniz müddetçe, UNIQUE kısıtlamasının **IsPrimaryKey** özelliği de **false** olarak ayarlanır `msdata:PrimaryKey="true"` **key** . Bu, şemadaki şema içindeki benzersiz bir kısıtlama ile aynıdır `PrimaryKey="true"` .  
+ Anahtar kısıtlamasının belirtildiği şemayı dönüştürürken, eşleme işlemi kısıtlamadaki her bir sütun için **AllowDBNull** Column özelliği **false** olarak ayarlanmış tabloda benzersiz bir kısıtlama oluşturur. Anahtar öğesinde belirtmediğiniz müddetçe, UNIQUE kısıtlamasının **IsPrimaryKey** özelliği de **false** olarak ayarlanır `msdata:PrimaryKey="true"`  . Bu, şemadaki şema içindeki benzersiz bir kısıtlama ile aynıdır `PrimaryKey="true"` .  
   
  Aşağıdaki şema örneğinde, **anahtar** öğesi **MüşteriNo** öğesinde anahtar kısıtlamasını belirtir.  
   
@@ -75,7 +76,7 @@ TableName: customers
       IsPrimaryKey: True  
 ```  
   
- Oluşturulan **veri kümesinde** , şema anahtar öğesinde belirttiğinden **UniqueConstraint** 'in **IsPrimaryKey** özelliği **true** olarak ayarlanır `msdata:PrimaryKey="true"` . **key**  
+ Oluşturulan **veri kümesinde** , şema anahtar öğesinde belirttiğinden **UniqueConstraint** 'in **IsPrimaryKey** özelliği **true** olarak ayarlanır `msdata:PrimaryKey="true"` .   
   
  **Veri kümesindeki** **uniquekısıtlamasının** **ConstraintName** özelliğinin değeri, şemadaki **anahtar** öğesinde belirtilen **msdata: ConstraintName** özniteliğinin değeridir.  
   

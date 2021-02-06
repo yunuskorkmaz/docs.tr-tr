@@ -1,41 +1,42 @@
 ---
+description: 'Daha fazla bilgi edinin: DataView'
 title: DataViews
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
-ms.openlocfilehash: c5692fcfd1863642bcdf87cbd495d793bce0cbe4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: dfc57c2ff9108f71d4dfa75447afc5f0ee8b9e54
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203715"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652568"
 ---
 # <a name="dataviews"></a>DataViews
 
-<xref:System.Data.DataView> <xref:System.Data.DataTable> , Genellikle veri bağlama uygulamalarında kullanılan bir özellik olan, içinde depolanan verilerin farklı görünümlerini oluşturmanızı sağlar. Bir **DataView**kullanarak verileri farklı sıralama siparişleriyle bir tabloda kullanıma sunabilirsiniz ve verileri satır durumuna göre veya bir filtre ifadesine göre filtreleyebilirsiniz.
+<xref:System.Data.DataView> <xref:System.Data.DataTable> , Genellikle veri bağlama uygulamalarında kullanılan bir özellik olan, içinde depolanan verilerin farklı görünümlerini oluşturmanızı sağlar. Bir **DataView** kullanarak verileri farklı sıralama siparişleriyle bir tabloda kullanıma sunabilirsiniz ve verileri satır durumuna göre veya bir filtre ifadesine göre filtreleyebilirsiniz.
 
- Bir **DataView** , temel alınan **DataTable**'daki verilerin dinamik bir görünümünü sağlar: içerik, sıralama ve üyelik, gerçekleşen değişiklikleri yansıtır. Bu davranış, belirli bir **Select** **DataTable** <xref:System.Data.DataRow> filtre ve/veya sıralama düzeni temelinde bir tablodan dizi döndüren DataTable 'ın Select yönteminden farklıdır: Bu içerik temeldeki tablodaki değişiklikleri yansıtır, ancak üyeliği ve sıralaması statik kalır. **DataView** 'ın dinamik özellikleri, veri bağlama uygulamaları için ideal hale getirir.
+ Bir **DataView** , temel alınan **DataTable**'daki verilerin dinamik bir görünümünü sağlar: içerik, sıralama ve üyelik, gerçekleşen değişiklikleri yansıtır. Bu davranış, belirli bir   <xref:System.Data.DataRow> filtre ve/veya sıralama düzeni temelinde bir tablodan dizi döndüren DataTable 'ın Select yönteminden farklıdır: Bu içerik temeldeki tablodaki değişiklikleri yansıtır, ancak üyeliği ve sıralaması statik kalır. **DataView** 'ın dinamik özellikleri, veri bağlama uygulamaları için ideal hale getirir.
 
  Bir **DataView** size, farklı sıralama ve filtreleme ölçütleri uygulayabileceğiniz bir veritabanı görünümü gibi tek bir veri kümesinin dinamik görünümünü sağlar. Ancak, bir veritabanı görünümünün aksine, bir **DataView** tablo olarak kabul edilemez ve birleştirilmiş tabloların bir görünümünü sağlayamaz. Kaynak tabloda bulunan sütunları dışlayamazsınız veya kaynak tabloda mevcut olmayan sütunları hesaplama sütunları gibi ekleyebilirsiniz.
 
- Bir <xref:System.Data.DataView.DataViewManager%2A> **veri kümesindeki**tüm tablolar için görünüm ayarlarını yönetmek üzere bir kullanabilirsiniz. **DataViewManager** , her tablo için varsayılan görünüm ayarlarını yönetmenin kolay bir yolunu sağlar. Bir denetimi bir **veri kümesinin**birden fazla tablosuna bağlarken **DataViewManager** 'a bağlama ideal seçenektir.
+ Bir <xref:System.Data.DataView.DataViewManager%2A> **veri kümesindeki** tüm tablolar için görünüm ayarlarını yönetmek üzere bir kullanabilirsiniz. **DataViewManager** , her tablo için varsayılan görünüm ayarlarını yönetmenin kolay bir yolunu sağlar. Bir denetimi bir **veri kümesinin** birden fazla tablosuna bağlarken **DataViewManager** 'a bağlama ideal seçenektir.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
- [DataView oluşturma](creating-a-dataview.md) **DataTable**Için bir **DataView** oluşturmayı açıklar.
+ [DataView oluşturma](creating-a-dataview.md) **DataTable** Için bir **DataView** oluşturmayı açıklar.
 
  [Verileri sıralama ve filtreleme](sorting-and-filtering-data.md) Bir **DataView** özelliklerinin belirli filtre ölçütlerine uyan veri satırlarının alt kümelerini döndürme veya belirli bir sıralama düzeninde verileri döndürme için nasıl ayarlanacağını açıklar.
 
- [DataRow ve DataRowViews](datarows-and-datarowviews.md) **DataView**tarafından sunulan verilere nasıl erişebileceğinizi açıklar.
+ [DataRow ve DataRowViews](datarows-and-datarowviews.md) **DataView** tarafından sunulan verilere nasıl erişebileceğinizi açıklar.
 
- [Satırları bulma](finding-rows.md) **DataView**içinde belirli bir satırın nasıl bulunacağını açıklar.
+ [Satırları bulma](finding-rows.md) **DataView** içinde belirli bir satırın nasıl bulunacağını açıklar.
 
- [Childviews ve ilişkiler](childviews-and-relations.md) Bir **DataView**kullanarak üst-alt ilişkiden veri görünümlerinin nasıl oluşturulduğunu açıklar.
+ [Childviews ve ilişkiler](childviews-and-relations.md) Bir **DataView** kullanarak üst-alt ilişkiden veri görünümlerinin nasıl oluşturulduğunu açıklar.
 
- [DataView değiştirme](modifying-dataviews.md) Güncelleştirmeleri etkinleştirme veya devre dışı bırakma dahil olmak üzere **DataView**aracılığıyla temel alınan **DataTable** 'daki verilerin nasıl değiştirileceğini açıklar.
+ [DataView değiştirme](modifying-dataviews.md) Güncelleştirmeleri etkinleştirme veya devre dışı bırakma dahil olmak üzere **DataView** aracılığıyla temel alınan **DataTable** 'daki verilerin nasıl değiştirileceğini açıklar.
 
  [DataView olaylarını işleme](handling-dataview-events.md) Bir **DataView** içeriği veya sırası güncelleştirilirken bildirim almak Için **ListChanged** olayının nasıl kullanılacağını açıklar.
 
- [DataView yönetimi](managing-dataviews.md) Bir **veri kümesindeki**her tablo için **DataView** ayarlarını yönetmek üzere **DataViewManager** 'ın nasıl kullanılacağını açıklar.
+ [DataView yönetimi](managing-dataviews.md) Bir **veri kümesindeki** her tablo için **DataView** ayarlarını yönetmek üzere **DataViewManager** 'ın nasıl kullanılacağını açıklar.
 
 ## <a name="related-sections"></a>İlgili Bölümler
 
@@ -45,7 +46,7 @@ ms.locfileid: "91203715"
 
  [Veri kümeleri, DataTable ve DataView](index.md) **Veri kümesi** nesnesini ve uygulama verilerini yönetmek için nasıl kullanabileceğinizi açıklar.
 
- [DataTable](datatables.md) **DataTable** nesnesini ve uygulama verilerini kendi başına veya bir **veri kümesinin**parçası olarak yönetmek için nasıl kullanabileceğinizi açıklar.
+ [DataTable](datatables.md) **DataTable** nesnesini ve uygulama verilerini kendi başına veya bir **veri kümesinin** parçası olarak yönetmek için nasıl kullanabileceğinizi açıklar.
 
  [ADO.net](../index.md) ADO.NET mimarisini ve bileşenlerini ve var olan veri kaynaklarına erişmek ve uygulama verilerini yönetmek için ADO.NET 'in nasıl kullanılacağını açıklar.
 

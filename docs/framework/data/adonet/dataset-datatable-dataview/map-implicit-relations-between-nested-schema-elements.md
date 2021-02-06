@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Iç Içe geçmiş şema öğeleri arasında örtük Ilişkileri eşleme'
 title: İç İçe Geçmiş Şema Öğeleri Arasında Örtük İlişkileri Eşleme
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: 32f8bf67242143098717b47c3b7aa175317ba274
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 418dd1210674b2c592cf96c6d369bc43f8dcab9a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201323"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652022"
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>İç İçe Geçmiş Şema Öğeleri Arasında Örtük İlişkileri Eşleme
 
@@ -15,15 +16,15 @@ Bir XML şeması tanım dili (XSD) şeması, bir diğeri içinde iç içe geçmi
   
 - Karmaşık türlerin her biri için bir tablo (üst ve alt).  
   
-- Üst öğede benzersiz bir kısıtlama yoksa, *TableName adlı tablo*tanımı başına bir ek birincil anahtar sütunu _Id, *TableName* , üst tablonun adıdır.  
+- Üst öğede benzersiz bir kısıtlama yoksa, *TableName adlı tablo* tanımı başına bir ek birincil anahtar sütunu _Id, *TableName* , üst tablonun adıdır.  
   
-- Birincil anahtar olarak ek sütunu tanımlayan üst tabloda birincil anahtar kısıtlaması ( **IsPrimaryKey** özelliği **true**olarak ayarlanarak). Kısıtlama, \# \# 1, 2, 3 vb. olduğu kısıtlamadır. Örneğin, ilk kısıtlamanın varsayılan adı Constraint1 ' dir.  
+- Birincil anahtar olarak ek sütunu tanımlayan üst tabloda birincil anahtar kısıtlaması ( **IsPrimaryKey** özelliği **true** olarak ayarlanarak). Kısıtlama, \# \# 1, 2, 3 vb. olduğu kısıtlamadır. Örneğin, ilk kısıtlamanın varsayılan adı Constraint1 ' dir.  
   
 - Üst tablonun birincil anahtarına başvuran yabancı anahtar olarak ek sütunu tanımlayan alt tablodaki yabancı anahtar kısıtlaması. Kısıtlama *ParentTable_ChildTable* adlandırılır; burada *ParentTable* üst tablonun adı ve *ChildTable* ise alt tablonun adıdır.  
   
 - Üst ve alt tablolar arasındaki bir veri ilişkisi.  
   
- Aşağıdaki örnek, **OrderDetail** 'in **sıra**alt öğesi olduğu bir şemayı gösterir.  
+ Aşağıdaki örnek, **OrderDetail** 'in **sıra** alt öğesi olduğu bir şemayı gösterir.  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""
@@ -55,7 +56,7 @@ Bir XML şeması tanım dili (XSD) şeması, bir diğeri içinde iç içe geçmi
 </xs:schema>  
 ```  
   
- XML Şeması eşleme işlemi, **veri kümesinde**aşağıdakileri oluşturur:  
+ XML Şeması eşleme işlemi, **veri kümesinde** aşağıdakileri oluşturur:  
   
 - Bir **Order** ve **OrderDetail** tablosu.  
   
@@ -64,7 +65,7 @@ Bir XML şeması tanım dili (XSD) şeması, bir diğeri içinde iç içe geçmi
     OrderDetail(OrderNo, ItemNo, Order_Id)  
     ```  
   
-- **Order** tablosundaki benzersiz bir kısıtlama. **IsPrimaryKey** özelliğinin **true**olarak ayarlandığını unutmayın.  
+- **Order** tablosundaki benzersiz bir kısıtlama. **IsPrimaryKey** özelliğinin **true** olarak ayarlandığını unutmayın.  
   
     ```text  
     ConstraintName: Constraint1  

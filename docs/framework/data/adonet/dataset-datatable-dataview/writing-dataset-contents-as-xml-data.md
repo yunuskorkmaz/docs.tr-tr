@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: veri kümesi Içeriğini XML verileri olarak yazma'
 title: XML Verileri Olarak DataSet İçeriği Yazma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fd15f8a5-3b4c-46d0-a561-4559ab2a4705
-ms.openlocfilehash: c8a5c747e4ec60fcb97edf631aa3a0ae184ffec5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0ad232f744f69f822d09c0af6c4374b6e5f0147d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173724"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651372"
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>XML Verileri Olarak DataSet İçeriği Yazma
 
@@ -28,21 +29,21 @@ Dim xmlDS As String = custDS.GetXml()
 string xmlDS = custDS.GetXml();  
 ```  
   
- **GetXml** şema BILGILERININ olmayan XML gösterimini döndürür <xref:System.Data.DataSet> . Şema bilgilerini <xref:System.Data.DataSet> (XML şeması olarak) bir dizeye yazmak Için **GetXmlSchema**kullanın.  
+ **GetXml** şema BILGILERININ olmayan XML gösterimini döndürür <xref:System.Data.DataSet> . Şema bilgilerini <xref:System.Data.DataSet> (XML şeması olarak) bir dizeye yazmak Için **GetXmlSchema** kullanın.  
   
  Bir <xref:System.Data.DataSet> dosyaya, akışa veya **XmlWriter**'A yazmak için **WriteXml** yöntemini kullanın. **WriteXml** öğesine geçirdiğiniz ilk parametre, XML çıkışının hedefdir. Örneğin, bir dosya adı, bir **System. IO. TextWriter** nesnesi vb. içeren bir dize geçirin. XML çıkışının nasıl yazılacağını belirtmek için bir **XmlWriteMode** isteğe bağlı ikinci parametresini geçirebilirsiniz.  
   
- Aşağıdaki tabloda **XmlWriteMode**seçenekleri gösterilmektedir.  
+ Aşağıdaki tabloda **XmlWriteMode** seçenekleri gösterilmektedir.  
   
-|XmlWriteMode seçeneği|Açıklama|  
+|XmlWriteMode seçeneği|Description|  
 |-------------------------|-----------------|  
 |**IgnoreSchema**|XML <xref:System.Data.DataSet> şeması olmadan, XML verilerinin geçerli içeriğini yazar. Bu varsayılan seçenektir.|  
 |**WriteSchema seçeneğine ayarlayın**|<xref:System.Data.DataSet>XML verilerinin güncel içeriğini ilişkisel yapıda satır ıçı XML şeması olarak yazar.|  
 |**Içeriyor**|<xref:System.Data.DataSet>Özgün ve geçerli değerler dahil olmak üzere bir DiffGram olarak tümünü yazar. Daha fazla bilgi için bkz. [DiffGram](diffgrams.md).|  
   
- DataRelation nesneleri içeren bir XML temsili yazarken <xref:System.Data.DataSet> , sonuçta **DataRelation** elde edilen XML 'nin ilgili üst öğeleri içinde iç içe geçmiş her ilişkinin alt satırlarına sahip olmasını istersiniz. Bunu gerçekleştirmek için, **DataRelation** 'ı öğesine eklediğinizde **DataRelation** 'ın **Nested** özelliğini **true** olarak ayarlayın <xref:System.Data.DataSet> . Daha fazla bilgi için bkz. [DataRelation Ile Iç Içe geçme](nesting-datarelations.md).  
+ DataRelation nesneleri içeren bir XML temsili yazarken <xref:System.Data.DataSet> , sonuçta  elde edilen XML 'nin ilgili üst öğeleri içinde iç içe geçmiş her ilişkinin alt satırlarına sahip olmasını istersiniz. Bunu gerçekleştirmek için, **DataRelation** 'ı öğesine eklediğinizde **DataRelation** 'ın **Nested** özelliğini **true** olarak ayarlayın <xref:System.Data.DataSet> . Daha fazla bilgi için bkz. [DataRelation Ile Iç Içe geçme](nesting-datarelations.md).  
   
- Aşağıda bir dosyasına bir dosyasının XML gösteriminin nasıl yazılacağı hakkında iki örnek verilmiştir <xref:System.Data.DataSet> . İlk örnek, sonuçta elde edilen XML için dosya adını **WriteXml**öğesine bir dize olarak geçirir. İkinci örnek, bir **System. IO. StreamWriter** nesnesi geçirir.
+ Aşağıda bir dosyasına bir dosyasının XML gösteriminin nasıl yazılacağı hakkında iki örnek verilmiştir <xref:System.Data.DataSet> . İlk örnek, sonuçta elde edilen XML için dosya adını **WriteXml** öğesine bir dize olarak geçirir. İkinci örnek, bir **System. IO. StreamWriter** nesnesi geçirir.
   
 ```vb  
 custDS.WriteXml("Customers.xml", XmlWriteMode.WriteSchema)  
@@ -68,12 +69,12 @@ xmlSW.Close();
 
  **DataColumn** nesnesinin **ColumnMapping** özelliğini kullanarak bir tablo sütununun XML olarak nasıl temsil edileceğini belirtebilirsiniz. Aşağıdaki tablo, bir tablo sütununun **ColumnMapping** özelliği ve elde edilen XML Için farklı **MappingType** değerlerini gösterir.  
   
-|MappingType değeri|Açıklama|  
+|MappingType değeri|Description|  
 |-----------------------|-----------------|  
-|**Dosyalarında**|Bu varsayılan seçenektir. Sütun, ColumnName 'un öğenin adı olduğu ve sütunun içeriği öğenin metni olarak yazıldığı bir XML öğesi olarak yazılır. Örneğin:<br /><br /> `<ColumnName>Column Contents</ColumnName>`|  
+|**Öğe**|Bu varsayılan seçenektir. Sütun, ColumnName 'un öğenin adı olduğu ve sütunun içeriği öğenin metni olarak yazıldığı bir XML öğesi olarak yazılır. Örneğin:<br /><br /> `<ColumnName>Column Contents</ColumnName>`|  
 |**Öznitelik**|Sütun, ColumnName 'un özniteliğin adı olduğu ve sütunun içeriğinin öznitelik değeri olarak yazıldığı geçerli satır için XML öğesinin XML özniteliği olarak yazılır. Örneğin:<br /><br /> `<RowElement ColumnName="Column Contents" />`|  
 |**'Dir**|Sütunun içeriği, geçerli satırın XML öğesinde metin olarak yazılır. Örneğin:<br /><br /> `<RowElement>Column Contents</RowElement>`<br /><br /> **Öğe** sütunları veya iç içe ilişkiler içeren bir tablonun sütunu için **simpleContent** ayarlanamaz.|  
-|**Lene**|Sütun XML çıktısında yazılmadı.|  
+|**Gizli**|Sütun XML çıktısında yazılmadı.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

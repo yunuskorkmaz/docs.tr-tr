@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: bir veri kümesini XmlDataDocument ile eşitleme'
 title: DataSet’i bir XmlDataDocument ile Eşitleme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
-ms.openlocfilehash: 95f1d21805dde86cd4eb59147f2fd012279b6dc1
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5b5d95ef78746bb5b78146557a6ebd307895db13
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173750"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651554"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>DataSet’i bir XmlDataDocument ile Eşitleme
 
@@ -158,7 +159,7 @@ Bu bölümde, bir satın alma siparişinin işlenmesinde bir adım gösterilir v
 </xs:schema>  
 ```  
   
- Yalnızca özgün XML belgesinin **OrderDetails** ve **Products** öğelerinden alınan bilgilerin **veri kümesinin**şemasına dahil edildiğini fark edebilirsiniz. **Veri kümesini** bir **XmlDataDocument** Ile eşitlemek, **VERI kümesinde** yer alan öğelerin XML belgesiyle kalıcı olmasını sağlar.  
+ Yalnızca özgün XML belgesinin **OrderDetails** ve **Products** öğelerinden alınan bilgilerin **veri kümesinin** şemasına dahil edildiğini fark edebilirsiniz. **Veri kümesini** bir **XmlDataDocument** Ile eşitlemek, **VERI kümesinde** yer alan öğelerin XML belgesiyle kalıcı olmasını sağlar.  
   
  XML şemasından ( **Northwind. FillOrder**'ın ad alanı ile) oluşturulan türü kesin belirlenmiş **veri kümesi** ile, özgün XML belgesinin bir bölümü, **veri kümesi** kaynak XML belgesinden yüklenen **XmlDataDocument** ile eşitlenerek sunulabilir. Şemadan oluşturulan veri **kümesinin** yapı içerdiğini, ancak hiçbir veri olmadığını unutmayın. XML öğesini **XmlDataDocument**'e yüklediğinizde veriler doldurulur. Zaten veri içeren bir veri **kümesiyle** eşitlenmiş bir **XmlDataDocument** yüklemeye çalışırsanız, bir özel durum oluşturulur.  
   

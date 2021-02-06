@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: SQL Server Işlevler eşlemesi için kavramsal model kurallı'
 title: SQL Server İşlevleri ile Kurallı Kavramsal Model Eşlemesi
 ms.date: 03/30/2017
 ms.assetid: 1a2631bc-a426-4c0a-ba8d-26d9c80d39e2
-ms.openlocfilehash: 495a662cbab84c2686e4c31945c30d6f82d117cb
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 25e366a45e91db97693c42b3c8d2febd912320ab
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153124"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651073"
 ---
 # <a name="conceptual-model-canonical-to-sql-server-functions-mapping"></a>SQL Server İşlevleri ile Kurallı Kavramsal Model Eşlemesi
 
@@ -81,7 +82,7 @@ Bu konu başlığı altında, kavramsal model kurallı işlevlerinin karşılık
 |[Floor (değer)](./language-reference/math-canonical-functions.md)|`FLOOR(value)`|  
 |[Güç (değer)](./language-reference/math-canonical-functions.md)|`POWER(value, exponent)`|  
 |[Round (değer)](./language-reference/math-canonical-functions.md)|`ROUND(value, digits, 0)`|  
-|[Kesilemedi](./language-reference/math-canonical-functions.md)|`ROUND(value , digits, 1)`|  
+|[Truncate](./language-reference/math-canonical-functions.md)|`ROUND(value , digits, 1)`|  
   
 ## <a name="string-functions"></a>Dize İşlevleri  
 

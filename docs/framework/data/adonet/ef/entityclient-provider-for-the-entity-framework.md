@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Entity Framework için EntityClient sağlayıcı'
 title: Entity Framework için EntityClient Sağlayıcısı
 ms.date: 03/30/2017
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
-ms.openlocfilehash: 9b3194e4a85eda6f405a3ab85723ac2cb9d00090
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 96c060f3e0b21484e90fcbc2483693abd528dcfb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91181082"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99650878"
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>Entity Framework için EntityClient Sağlayıcısı
 

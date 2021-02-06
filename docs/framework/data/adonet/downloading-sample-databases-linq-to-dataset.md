@@ -1,21 +1,22 @@
 ---
-title: Örnek Veritabanlarını İndirme (LINQ'dan DataSet'e)
+description: 'Daha fazla bilgi edinin: örnek veritabanlarını Indirme (LINQ to DataSet)'
+title: Örnek veritabanları indiriliyor (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: eb42a7af-d410-4b7f-b4a8-13c72ce6fd09
-ms.openlocfilehash: 53f4457052df899a3f9582f6e850965d3112ecd2
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: da4020304b89f046bb9fcb88ea9916597e02ca27
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121569"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651099"
 ---
-# <a name="download-sample-databases-linq-to-dataset"></a>Örnek veritabanlarını indirin (LINQ'dan DataSet'e)
+# <a name="download-sample-databases-linq-to-dataset"></a>Örnek veritabanlarını indir (LINQ to DataSet)
 
-LINQ'dan DataSet belgelerine kadar olan örnekler ve gözden geçirmeler AdventureWorks örnek veritabanını kullanır. Bu örnek veritabanını ücretsiz olarak indirebilirsiniz. Veritabanını indirmek için [AdventureWorks örnek veritabanlarına](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) göz atın. Ardından, veritabanını eklemek veya geri eklemek için o sayfadaki yönergeleri izleyin.
+LINQ to DataSet belgelerindeki örnekler ve izlenecek yollar AdventureWorks örnek veritabanını kullanır. Bu örnek veritabanını ücretsiz olarak indirebilirsiniz. Veritabanını indirmek için [AdventureWorks örnek veritabanlarına](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) gidin. Ardından, bir veritabanını eklemek veya geri yüklemek için bu sayfadaki yönergeleri izleyin.
   
 ## <a name="sql-server-express"></a>SQL Server Express
 
-LINQ'dan DataSet bölümüne geçiş örnekleri ve izthroughleri, veri deposu olarak SQL Server 2005'i kullanır, ancak bunları [sql server express'i](https://go.microsoft.com/fwlink/?linkid=866658) kullanacak şekilde değiştirebilirsiniz. SQL Server Express ücretsizdir ve uygulamalarla yeniden dağıtabilirsiniz.
+LINQ to DataSet bölümündeki örnekler ve izlenecek yollar veri deposu olarak SQL Server 2005 ' i kullanır, ancak bunun yerine [SQL Server Express](https://go.microsoft.com/fwlink/?linkid=866658) kullanacak şekilde değiştirebilirsiniz. SQL Server Express ücretsizdir ve uygulamalar ile yeniden dağıtabilirsiniz.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

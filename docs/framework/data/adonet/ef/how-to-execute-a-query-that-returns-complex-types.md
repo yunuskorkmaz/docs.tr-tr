@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: karmaşık türler döndüren bir sorgu yürütme'
 title: 'Nasıl yapılır: Karmaşık Türler Döndüren Bir Sorgu Yürütme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c2209fdb-70ef-4dea-8bb8-097fe96f5563
-ms.openlocfilehash: e5358e3a1295b180356ed6c127111313b44de277
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9a7fb3ea695115529b69def9f95281bac7f33273
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198489"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99650683"
 ---
 # <a name="how-to-execute-a-query-that-returns-complex-types"></a>Nasıl yapılır: Karmaşık Türler Döndüren Bir Sorgu Yürütme
 
@@ -27,7 +28,7 @@ Bu konu [!INCLUDE[esql](../../../../../includes/esql-md.md)] , karmaşık bir t�
   
 3. Modeli Entity Desisgner [model tarayıcısı penceresinde](/previous-versions/dotnet/netframework-4.0/bb738483(v=vs.100)) göstermek için. edmx dosyasına çift tıklayın. Entity Desisgner yüzeyinde `Email` `Phone` varlık türünün ve özelliklerini seçin `Contact` , sonra sağ tıklayıp **Yeni karmaşık türde yeniden Düzenle**' yi seçin.  
   
-4. Model tarayıcıya seçili ve özelliklere sahip yeni bir karmaşık tür `Email` `Phone` eklenmiştir. **Model Browser** Karmaşık türe varsayılan ad verilir: Özellikler penceresinde türü olarak yeniden adlandırın `EmailPhone` . **Properties** Ayrıca, `ComplexProperty` varlık türüne yeni bir özellik eklenir `Contact` . Özelliği olarak yeniden adlandırın `EmailPhoneComplexType.`  
+4. Model tarayıcıya seçili ve özelliklere sahip yeni bir karmaşık tür `Email` `Phone` eklenmiştir.  Karmaşık türe varsayılan ad verilir: Özellikler penceresinde türü olarak yeniden adlandırın `EmailPhone` .  Ayrıca, `ComplexProperty` varlık türüne yeni bir özellik eklenir `Contact` . Özelliği olarak yeniden adlandırın `EmailPhoneComplexType.`  
   
      Varlık Veri Modeli Sihirbazı 'Nı kullanarak karmaşık türleri oluşturma ve değiştirme hakkında daha fazla bilgi için bkz. [nasıl yapılır: mevcut özellikleri karmaşık bir tür özelliğinde yeniden düzenleme](/previous-versions/dotnet/netframework-4.0/dd456814(v=vs.100)) ve [nasıl yapılır: karmaşık türleri oluşturma ve değiştirme](/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100)).  
   

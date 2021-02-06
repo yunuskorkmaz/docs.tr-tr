@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: dağıtılmış Işlemler'
 title: Dağıtılmış İşlemler
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-ms.openlocfilehash: b6553d50039ca0f4888f0610b187c6b419a462b5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 611fe4e2139e69e9501a3ea04a6aa62425e06728
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153205"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651125"
 ---
 # <a name="distributed-transactions"></a>Dağıtılmış İşlemler
 

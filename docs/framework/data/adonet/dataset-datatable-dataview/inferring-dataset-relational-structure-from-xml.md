@@ -1,19 +1,20 @@
 ---
+description: "Daha fazla bilgi edinin: XML 'den veri kümesi Ilişkisel yapısı"
 title: XML’den DataSet İlişkisel Yapısını Çıkarma
 ms.date: 03/30/2017
 ms.assetid: cd2f41c6-6785-420e-aa43-3ceb0bdccdce
-ms.openlocfilehash: fca50491120346dea3e09c82324225f2114380fc
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d89b6a42e7e1bc3d7514f180329e9c1d877a67ef
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177585"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652230"
 ---
 # <a name="inferring-dataset-relational-structure-from-xml"></a>XML’den DataSet İlişkisel Yapısını Çıkarma
 
 Öğesinin ilişkisel yapısı veya şeması <xref:System.Data.DataSet> tablo, sütun, kısıtlama ve ilişkilerinden oluşur. <xref:System.Data.DataSet>XML 'den yükleme yaparken, şema önceden tanımlanmış olabilir veya yüklenen XML 'den açık ya da çıkarım aracılığıyla oluşturulabilir. XML 'den bir öğesinin şemasını ve içeriğini yükleme hakkında daha fazla bilgi için <xref:System.Data.DataSet> , bkz. xml 'Den [veri kümesi yükleme](loading-a-dataset-from-xml.md) ve [XML 'Den veri kümesi şema bilgilerini yükleme](loading-dataset-schema-information-from-xml.md).  
   
- <xref:System.Data.DataSet>XML 'den bir şeması oluşturulduysa, tercih edilen yöntem, XML şeması tanım dili (xsd) kullanarak şemayı açıkça belirtmektir ( [XML ŞEMASıNDAN (xsd) veri kümesi Ilişkisel yapısını türetmede](deriving-dataset-relational-structure-from-xml-schema-xsd.md)açıklandığı gıbı) veya XML VERILERI azaltılmış (xdr). XML 'de XML şeması veya XDR şeması kullanılabilir değilse, öğesinin şeması <xref:System.Data.DataSet> XML öğelerinin ve özniteliklerin yapısından çıkarsanamıyor.  
+ <xref:System.Data.DataSet>XML 'den bir şeması oluşturulduysa, tercih edilen yöntem, XML şeması tanım dili (xsd) kullanarak şemayı açıkça belirtmektir ( [XML ŞEMASıNDAN (xsd) DataSet Ilişkisel yapısını türetmede](deriving-dataset-relational-structure-from-xml-schema-xsd.md)açıklandığı gibi) veya AZALTıLMıŞ XML-Data (xdr). XML 'de XML şeması veya XDR şeması kullanılabilir değilse, öğesinin şeması <xref:System.Data.DataSet> XML öğelerinin ve özniteliklerin yapısından çıkarsanamıyor.  
   
  Bu bölümde <xref:System.Data.DataSet> , XML öğelerini ve özniteliklerini ve bunların yapısını ve ortaya çıkarılan şemayı gösteren şema çıkarımı kuralları açıklanmaktadır <xref:System.Data.DataSet> .  
   

@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: kesin türü belirtilmiş veri kümeleri oluşturma'
 title: Kesin Türü Belirtilmiş DataSets Oluşturma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: 1c65389c8c5664f86f3f0c04829a2422908d72d1
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c69aecc5a0a541c868dac3037c9dd0dbc3fe8383
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91202298"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652438"
 ---
 # <a name="generating-strongly-typed-datasets"></a>Kesin Türü Belirtilmiş DataSets Oluşturma
 
@@ -24,7 +25,7 @@ XML şeması tanım dili (XSD) standardına uygun bir XML şeması verildiğinde
 xsd.exe /d /l:CS XSDSchemaFileName.xsd /eld /n:XSDSchema.Namespace  
 ```  
   
- Bu sözdiziminde, `/d` yönerge araca bir **veri kümesi**oluşturmasını söyler ve `/l:` araca hangi dilin kullanılacağını söyler (örneğin, C# veya Visual Basic .net). İsteğe bağlı `/eld` yönerge, oluşturulan **veri kümesinde** sorgulama yapmak için LINQ to DataSet kullanacağınızı belirtir. Seçenek de belirtildiğinde bu seçenek kullanılır `/d` . Daha fazla bilgi için bkz. [türü belirtilmiş veri kümelerini sorgulama](../querying-typed-datasets.md). İsteğe bağlı `/n:` yönerge, araca **XSDSchema. Namespace**adlı **veri kümesi** için de bir ad alanı oluşturmasını söyler. Komutun çıktısı, bir ADO.NET uygulamasında derlenebilecek ve kullanılabilecek olan XSDSchemaFileName.cs 'dir. Oluşturulan kod bir kitaplık veya modül olarak derlenebilir.  
+ Bu sözdiziminde, `/d` yönerge araca bir **veri kümesi** oluşturmasını söyler ve `/l:` araca hangi dilin kullanılacağını söyler (örneğin, C# veya Visual Basic .net). İsteğe bağlı `/eld` yönerge, oluşturulan **veri kümesinde** sorgulama yapmak için LINQ to DataSet kullanacağınızı belirtir. Seçenek de belirtildiğinde bu seçenek kullanılır `/d` . Daha fazla bilgi için bkz. [türü belirtilmiş veri kümelerini sorgulama](../querying-typed-datasets.md). İsteğe bağlı `/n:` yönerge, araca **XSDSchema. Namespace** adlı **veri kümesi** için de bir ad alanı oluşturmasını söyler. Komutun çıktısı, bir ADO.NET uygulamasında derlenebilecek ve kullanılabilecek olan XSDSchemaFileName.cs 'dir. Oluşturulan kod bir kitaplık veya modül olarak derlenebilir.  
   
  Aşağıdaki kod, oluşturulan kodu C# derleyicisini kullanarak bir kitaplık olarak derlemek için sözdizimini gösterir (csc.exe).  
   
@@ -44,7 +45,7 @@ Imports XSDSchema.Namespace
 using XSDSchema.Namespace;  
 ```  
   
- Aşağıdaki kod örneği, **Northwind** veritabanından müşterilerin bir listesini yüklemek Için **customerdataset** adlı bir türü belirtilmiş **veri kümesini** kullanır. **Fill** yöntemi kullanılarak veriler yüklendikten sonra örnek, yazılan **CustomersRow** (**DataRow**) nesnesini kullanarak **müşteriler** tablosundaki her bir müşteri için döngü gerçekleştirilir. Bu, **DataColumnCollection**yerine **MüşteriNo** sütununa doğrudan erişim sağlar.  
+ Aşağıdaki kod örneği, **Northwind** veritabanından müşterilerin bir listesini yüklemek Için **customerdataset** adlı bir türü belirtilmiş **veri kümesini** kullanır. **Fill** yöntemi kullanılarak veriler yüklendikten sonra örnek, yazılan **CustomersRow** (**DataRow**) nesnesini kullanarak **müşteriler** tablosundaki her bir müşteri için döngü gerçekleştirilir. Bu, **DataColumnCollection** yerine **MüşteriNo** sütununa doğrudan erişim sağlar.  
   
 ```vb  
 Dim customers As CustomerDataSet= New CustomerDataSet()  

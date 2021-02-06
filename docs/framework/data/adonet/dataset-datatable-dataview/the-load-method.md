@@ -1,29 +1,30 @@
 ---
+description: 'Daha fazla bilgi edinin: Load yöntemi'
 title: Load Yöntemi
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: e22e5812-89c6-41f0-9302-bb899a46dbff
-ms.openlocfilehash: ea437d1f8ed567934acafbd8db1f8dba8eb22bcc
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a14008597d88ad4af93c3646998244d94b5561d7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177546"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651528"
 ---
 # <a name="the-load-method"></a>Load Yöntemi
 
-Bir <xref:System.Data.DataTable.Load%2A> <xref:System.Data.DataTable> veri kaynağından satırları içeren bir ile yüklemek için yöntemini kullanabilirsiniz. Bu, en basit biçimiyle bir **DataReader**olan tek bir parametreyi kabul eden aşırı yüklenmiş bir yöntemdir. Bu formda, yalnızca **DataTable** 'ı satırları ile yükler. İsteğe bağlı olarak, verilerin **DataTable**'a nasıl eklendiğini denetlemek için **LoadOption** parametresini belirtebilirsiniz.  
+Bir <xref:System.Data.DataTable.Load%2A> <xref:System.Data.DataTable> veri kaynağından satırları içeren bir ile yüklemek için yöntemini kullanabilirsiniz. Bu, en basit biçimiyle bir **DataReader** olan tek bir parametreyi kabul eden aşırı yüklenmiş bir yöntemdir. Bu formda, yalnızca **DataTable** 'ı satırları ile yükler. İsteğe bağlı olarak, verilerin **DataTable**'a nasıl eklendiğini denetlemek için **LoadOption** parametresini belirtebilirsiniz.  
   
- **LoadOption** parametresi, veri kaynağından gelen verilerin tabloda zaten bulunan verilerle nasıl birleştirileceğini açıkladığı için **DataTable** 'ın zaten veri satırları içerdiği durumlarda faydalıdır. Örneğin, **PreserveCurrentValues** (varsayılan), bir satırın **DataTable**'a **eklenen** olarak işaretlendiği, **özgün** değerin veya her sütunun veri kaynağından eşleşen satırın içeriğine ayarlandığı durumlarda belirtir. **Geçerli** değer, satır eklendiğinde atanan değerleri korur ve satırın **RowState** değeri **değiştirildi**olarak ayarlanır.  
+ **LoadOption** parametresi, veri kaynağından gelen verilerin tabloda zaten bulunan verilerle nasıl birleştirileceğini açıkladığı için **DataTable** 'ın zaten veri satırları içerdiği durumlarda faydalıdır. Örneğin, **PreserveCurrentValues** (varsayılan), bir satırın **DataTable**'a **eklenen** olarak işaretlendiği, **özgün** değerin veya her sütunun veri kaynağından eşleşen satırın içeriğine ayarlandığı durumlarda belirtir. **Geçerli** değer, satır eklendiğinde atanan değerleri korur ve satırın **RowState** değeri **değiştirildi** olarak ayarlanır.  
   
  Aşağıdaki tabloda, numaralandırma değerlerinin kısa bir açıklaması verilmiştir <xref:System.Data.LoadOption> .  
   
-|LoadOption değeri|Açıklama|  
+|LoadOption değeri|Description|  
 |----------------------|-----------------|  
-|**OverwriteRow**|Gelen satırlarda zaten **DataTable**içinde olan bir satırla aynı **PrimaryKey** değeri varsa, her sütunun **özgün** ve **geçerli** değerleri gelen satırdaki değerlerle yerine, **RowState** özelliği de **Unchanged**olarak ayarlanır.<br /><br /> **DataTable** 'da zaten mevcut olmayan veri kaynağındaki satırlar, bir **RowState** değeri **değiştirilmeden**eklenir.<br /><br /> Bu seçenek, veri kaynağının içeriğiyle eşleşecek şekilde **DataTable** 'ın içeriğini yeniler.|  
-|**PreserveCurrentValues (varsayılan)**|Gelen satırlarda zaten **DataTable**içinde olan bir satır Ile aynı **PrimaryKey** değeri varsa, **özgün** değer gelen satırın içeriğine ayarlanır ve **geçerli** değer değiştirilmez.<br /><br /> **RowState** **eklendiğinde** veya **değiştirilirse**, **değiştirildi**olarak ayarlanır.<br /><br /> **RowState** **silinmişse** **silinen kalır.**<br /><br /> Veri kaynağından **DataTable** 'da zaten mevcut olmayan satırlar eklenir ve **RowState** , **Unchanged**olarak ayarlanır.|  
-|**UpdateCurrentValues**|Gelen satırlar zaten **DataTable**içinde olan satır Ile aynı **PrimaryKey** değerine sahip Ise, **geçerli** değer **özgün** değere kopyalanır ve **geçerli** değer, gelen satırın içeriğine ayarlanır.<br /><br /> **DataTable** Içindeki **RowState** **eklendiyse**, **RowState** **eklenmiş**olarak kalır. **Değiştirilmiş** veya **Silinmiş**olarak Işaretlenen satırlarda, **RowState** **değiştirilir**.<br /><br /> Veri kaynağından **DataTable** 'da zaten mevcut olmayan satırlar eklenir ve **RowState** , **eklendi**olarak ayarlanır.|  
+|**OverwriteRow**|Gelen satırlarda zaten **DataTable** içinde olan bir satırla aynı **PrimaryKey** değeri varsa, her sütunun **özgün** ve **geçerli** değerleri gelen satırdaki değerlerle yerine, **RowState** özelliği de **Unchanged** olarak ayarlanır.<br /><br /> **DataTable** 'da zaten mevcut olmayan veri kaynağındaki satırlar, bir **RowState** değeri **değiştirilmeden** eklenir.<br /><br /> Bu seçenek, veri kaynağının içeriğiyle eşleşecek şekilde **DataTable** 'ın içeriğini yeniler.|  
+|**PreserveCurrentValues (varsayılan)**|Gelen satırlarda zaten **DataTable** içinde olan bir satır Ile aynı **PrimaryKey** değeri varsa, **özgün** değer gelen satırın içeriğine ayarlanır ve **geçerli** değer değiştirilmez.<br /><br /> **RowState** **eklendiğinde** veya **değiştirilirse**, **değiştirildi** olarak ayarlanır.<br /><br /> **RowState** **silinmişse** **silinen kalır.**<br /><br /> Veri kaynağından **DataTable** 'da zaten mevcut olmayan satırlar eklenir ve **RowState** , **Unchanged** olarak ayarlanır.|  
+|**UpdateCurrentValues**|Gelen satırlar zaten **DataTable** içinde olan satır Ile aynı **PrimaryKey** değerine sahip Ise, **geçerli** değer **özgün** değere kopyalanır ve **geçerli** değer, gelen satırın içeriğine ayarlanır.<br /><br /> **DataTable** Içindeki **RowState** **eklendiyse**, **RowState** **eklenmiş** olarak kalır. **Değiştirilmiş** veya **Silinmiş** olarak Işaretlenen satırlarda, **RowState** **değiştirilir**.<br /><br /> Veri kaynağından **DataTable** 'da zaten mevcut olmayan satırlar eklenir ve **RowState** , **eklendi** olarak ayarlanır.|  
   
  Aşağıdaki örnek, **Northwind** veritabanındaki çalışanların Doğum günlerini listesini göstermek için **Load** yöntemini kullanır.  
   

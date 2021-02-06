@@ -1,20 +1,21 @@
 ---
+description: 'Daha fazla bilgi edinin: satır hatası bilgileri'
 title: Satır Hatası Bilgileri
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8b1f9070-d032-48c7-b030-bd8fbb2ca59a
-ms.openlocfilehash: 8673b7fbc2e4238f7047698376c53af991de9f1b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d3eb8b20893ad47720ebb03ad4ab61940f014bd3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91181173"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651697"
 ---
 # <a name="row-error-information"></a>Satır Hatası Bilgileri
 
-İçindeki değerleri düzenlenirken satır hatalarına yanıt vermekten kaçınmak için <xref:System.Data.DataTable> , daha sonra kullanmak üzere satıra hata bilgilerini ekleyebilirsiniz. <xref:System.Data.DataRow>Nesnesi <xref:System.Data.DataRow.RowError%2A> Bu amaçla her satırda bir özellik sağlar. Bir **DataRow** 'ın **RowError** özelliğine veri eklemek <xref:System.Data.DataRow.HasErrors%2A> , **DataRow** 'ın özelliğini **true**olarak ayarlar. **DataRow** bir **DataTable**'ın parçasıysa ve **DataRow. HasErrors** **true**ise, **DataTable. HasErrors** özelliği de **doğrudur**. Bu, **DataTable** 'ın ait olduğu **veri kümesine** de uygulanır. Hatalar için test edilirken **HasErrors** özelliğini denetleyerek herhangi bir satıra hata bilgilerinin eklenip eklenmediğine bakabilirsiniz. **HasErrors** **true**ise, <xref:System.Data.DataTable.GetErrors%2A> Aşağıdaki örnekte gösterildiği gibi, yalnızca hataları olan satırları döndürmek ve incelemek için **DataTable** 'ın yöntemini kullanabilirsiniz.  
+İçindeki değerleri düzenlenirken satır hatalarına yanıt vermekten kaçınmak için <xref:System.Data.DataTable> , daha sonra kullanmak üzere satıra hata bilgilerini ekleyebilirsiniz. <xref:System.Data.DataRow>Nesnesi <xref:System.Data.DataRow.RowError%2A> Bu amaçla her satırda bir özellik sağlar. Bir **DataRow** 'ın **RowError** özelliğine veri eklemek <xref:System.Data.DataRow.HasErrors%2A> , **DataRow** 'ın özelliğini **true** olarak ayarlar. **DataRow** bir **DataTable**'ın parçasıysa ve **DataRow. HasErrors** **true** ise, **DataTable. HasErrors** özelliği de **doğrudur**. Bu, **DataTable** 'ın ait olduğu **veri kümesine** de uygulanır. Hatalar için test edilirken **HasErrors** özelliğini denetleyerek herhangi bir satıra hata bilgilerinin eklenip eklenmediğine bakabilirsiniz. **HasErrors** **true** ise, <xref:System.Data.DataTable.GetErrors%2A> Aşağıdaki örnekte gösterildiği gibi, yalnızca hataları olan satırları döndürmek ve incelemek için **DataTable** 'ın yöntemini kullanabilirsiniz.  
   
 ```vb  
 Dim workTable As DataTable = New DataTable("Customers")  

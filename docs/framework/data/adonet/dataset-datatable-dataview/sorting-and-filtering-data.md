@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: verileri sıralama ve filtreleme'
 title: Verileri Sıralama ve Filtreleme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
-ms.openlocfilehash: 89e2fdf656fb06ee545ba936f033646ad86182d4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a8b74dc13e88f8d5e70bb27291e0e6e34817f0ef
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183383"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651619"
 ---
 # <a name="sorting-and-filtering-data"></a>Verileri Sıralama ve Filtreleme
 
@@ -24,19 +25,19 @@ ms.locfileid: "91183383"
   
      Verilerin bir alt kümesinin dinamik görünümünü sağlamanın aksine veriler üzerinde belirli bir sorgunun sonuçlarını döndürmek istiyorsanız, <xref:System.Data.DataView.Find%2A> <xref:System.Data.DataView.FindRows%2A> **RowFilter** özelliğini ayarlamak yerine en iyi performansı elde etmek için **DataView** 'ın veya yöntemlerini kullanın. **RowFilter** özelliğinin ayarlanması, verilerin dizinini yeniden oluşturur, uygulamanıza ek yük ekler ve performansı azaltır. **RowFilter** özelliği, bir bağlantılı denetimin filtrelenmiş sonuçları görüntülediği veriye dayalı bir uygulamada en iyi şekilde kullanılır. **Find** ve **FindRows** yöntemleri, dizinin yeniden oluşturulmasını gerektirmeden geçerli dizinden yararlanır. **Find** ve **FindRows** yöntemleri hakkında daha fazla bilgi Için bkz. [satırları bulma](finding-rows.md).  
   
-- <xref:System.Data.DataView.RowStateFilter%2A>Hangi satır sürümlerinin görüntüleneceği belirlemek için özelliğini kullanabilirsiniz. **DataView** , temel alınan satırın **RowState** öğesine bağlı olarak hangi satır sürümünün sergileceğini dolaylı olarak yönetir. Örneğin, **RowStateFilter** , **DataViewRowState. Deleted**olarak ayarlandıysa, **geçerli** satır sürümü bulunmadığından **DataView** , **silinen** tüm satırların **orijinal** satır sürümünü kullanıma sunar. **DataRowView**'ın **ROWVERSION** özelliğini kullanarak bir satırın hangi satır sürümünün gösterilmesini belirleyebilirsiniz.  
+- <xref:System.Data.DataView.RowStateFilter%2A>Hangi satır sürümlerinin görüntüleneceği belirlemek için özelliğini kullanabilirsiniz. **DataView** , temel alınan satırın **RowState** öğesine bağlı olarak hangi satır sürümünün sergileceğini dolaylı olarak yönetir. Örneğin, **RowStateFilter** , **DataViewRowState. Deleted** olarak ayarlandıysa, **geçerli** satır sürümü bulunmadığından **DataView** , **silinen** tüm satırların **orijinal** satır sürümünü kullanıma sunar. **DataRowView**'ın **ROWVERSION** özelliğini kullanarak bir satırın hangi satır sürümünün gösterilmesini belirleyebilirsiniz.  
   
-     Aşağıdaki tabloda, **DataViewRowState**seçenekleri gösterilmektedir.  
+     Aşağıdaki tabloda, **DataViewRowState** seçenekleri gösterilmektedir.  
   
-    |DataViewRowState seçenekleri|Açıklama|  
+    |DataViewRowState seçenekleri|Description|  
     |------------------------------|-----------------|  
-    |**CurrentRows**|Tüm **değişmemiş**, **eklenen**ve **değiştirilen** satırların **geçerli** satır sürümü. Bu varsayılan seçenektir.|  
+    |**CurrentRows**|Tüm **değişmemiş**, **eklenen** ve **değiştirilen** satırların **geçerli** satır sürümü. Bu varsayılan seçenektir.|  
     |**Eklenirse**|Tüm **eklenen** satırların **geçerli** satır sürümü.|  
     |**Silindi**|**Silinen** tüm satırların **orijinal** satır sürümü.|  
     |**ModifiedCurrent**|**Değiştirilen** tüm satırların **geçerli** satır sürümü.|  
     |**Modifiedorijinal**|**Değiştirilen** tüm satırların **orijinal** satır sürümü.|  
     |**Hiçbiri**|Satır yok.|  
-    |**OriginalRows**|Tüm **değişmemiş**, **değiştirilen**ve **silinen** satırların **orijinal** satır sürümü.|  
+    |**OriginalRows**|Tüm **değişmemiş**, **değiştirilen** ve **silinen** satırların **orijinal** satır sürümü.|  
     |**Değiştirilmediği**|**Değişmeyen** tüm satırların **geçerli** satır sürümü.|  
   
  Satır durumları ve satır sürümleri hakkında daha fazla bilgi için bkz. [Satır durumları ve satır sürümleri](row-states-and-row-versions.md).  

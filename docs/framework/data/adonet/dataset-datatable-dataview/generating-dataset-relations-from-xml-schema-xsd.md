@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: XML şemasından (XSD) veri kümesi Ilişkileri oluşturma'
 title: XML Şemasından (XSD) DataSet İlişkileri Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
-ms.openlocfilehash: 2673280ebb94dcc10c130f3969f3e3250d3706a2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e18ae451085f536e7fe35053fadab35e30dbc225
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198593"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652464"
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>XML Şemasından (XSD) DataSet İlişkileri Oluşturma
 
@@ -100,7 +101,7 @@ msdata:childkey="" />
  XML şeması tanım dili (XSD) şemasından oluşturulan bir **veri kümesinin** ilişkisel yapısını veya şemasını açıklar.  
   
  [XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- Bir **veri kümesinde**benzersiz ve yabancı anahtar kısıtlamaları oluşturmak IÇIN kullanılan xml şema öğelerini açıklar.  
+ Bir **veri kümesinde** benzersiz ve yabancı anahtar kısıtlamaları oluşturmak IÇIN kullanılan xml şema öğelerini açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

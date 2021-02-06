@@ -1,14 +1,15 @@
 ---
+description: Daha fazla bilgi için bkz. veri kümesi ve DataTable Güvenlik Kılavuzu
 title: Veri kümesi ve DataTable Güvenlik Kılavuzu
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: 8798c4542acc578c8f7f00c9b26cd01a0db20c42
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ec0130d5b5ad106cc3a0a26b45ebff34f73e31d9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726073"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651645"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>Veri kümesi ve DataTable Güvenlik Kılavuzu
 
@@ -174,7 +175,7 @@ Denetim modu, _App.config_ aracılığıyla etkinleştirilebilir:
 </configuration>
 ```
 
-Denetim modu etkinleştirildikten sonra, tercih ettiğiniz yerleşik _App.config_ `TraceListener` `DataSet` `TraceSource.` Izleme kaynağının adı _System. Data. DataSet_ olan yerleşik bir bağlantı kurmak içinApp.configkullanabilirsiniz. Aşağıdaki örnek, izleme olaylarını konsola _ve_ diskteki bir günlük dosyasına yazmayı gösterir.
+Denetim modu etkinleştirildikten sonra, tercih ettiğiniz yerleşik  `TraceListener` `DataSet` `TraceSource.` Izleme kaynağının adı _System. Data. DataSet_ olan yerleşik bir bağlantı kurmak içinApp.configkullanabilirsiniz. Aşağıdaki örnek, izleme olaylarını konsola _ve_ diskteki bir günlük dosyasına yazmayı gösterir.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -214,7 +215,7 @@ Bir uygulamanın tüm tür sınırlaması kısıtlamalarını ve ' den kaldırma
 * Kullanılabilir seçenekler, uygulamanın hedeflediği çerçeveye bağlıdır.
 
 > [!WARNING]
-> Tüm tür kısıtlamalarını kaldırmak, uygulamanın içinde bir güvenlik deliği ortaya çıkarabilir. Bu mekanizmayı kullanırken, uygulamanın **not** `DataSet` `DataTable` Güvenilmeyen girişi okuyabilmesi ya da okumadığından emin olun. Daha fazla bilgi için bkz. [CVE-2020-1147](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2020-1147) ve [güvenilir olmayan girişle ilgili olarak güvenlik](#swr)başlıklı aşağıdaki bölüm.
+> Tüm tür kısıtlamalarını kaldırmak, uygulamanın içinde bir güvenlik deliği ortaya çıkarabilir. Bu mekanizmayı kullanırken, uygulamanın  `DataSet` `DataTable` Güvenilmeyen girişi okuyabilmesi ya da okumadığından emin olun. Daha fazla bilgi için bkz. [CVE-2020-1147](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2020-1147) ve [güvenilir olmayan girişle ilgili olarak güvenlik](#swr)başlıklı aşağıdaki bölüm.
 
 #### <a name="through-appcontext-configuration-net-framework-46---48-net-core-21-and-later-net-50-and-later"></a>AppContext yapılandırması aracılığıyla (.NET Framework 4,6-4,8, .NET Core 2,1 ve üzeri, .NET 5,0 ve üzeri)
 
@@ -475,9 +476,9 @@ Güvenilmeyen bir `DataSet` `DataTable` JSON blobundan bu şekilde veya bu şeki
 
 ## <a name="deserialize-a-dataset-or-datatable-via-binaryformatter"></a>BinaryFormatter aracılığıyla DataSet veya DataTable serisini kaldırma
 
-Geliştiricilerin `BinaryFormatter` `NetDataContractSerializer` `SoapFormatter` Güvenilmeyen bir yükün bir veya örneğinin serisini kaldırmak için hiçbir şekilde,, veya ilgili ***unsafe** _ biçimlendiricileri tuşlarını `DataSet` kullanmaması gerekir `DataTable` :
+Geliştiricilerin `BinaryFormatter` `NetDataContractSerializer` `SoapFormatter` Güvenilmeyen bir yükün veya örneğinin serisini kaldırmak için hiçbir şekilde,, veya ilgili ***güvenli olmayan*** biçimleri kullanması gerekir `DataSet` `DataTable` :
 
-_ Bu, tam bir uzaktan kod yürütme saldırısından etkilenir.
+* Bu, tam bir uzaktan kod yürütme saldırısından etkilenir.
 * `SerializationBinder`Bu tür bir saldırıyı engellemek için özel kullanımı yeterli değildir.
 
 ## <a name="safe-replacements"></a>Güvenli değişiklikler

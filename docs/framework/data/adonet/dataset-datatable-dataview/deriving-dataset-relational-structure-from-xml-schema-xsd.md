@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: XML şemasından (XSD) veri kümesi Ilişkisel yapısı türetme'
 title: XML Şemasından (XSD) DataSet İlişkisel Yapısını Türetme
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: 878e39af575328fb0abba096c327d36203a52231
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c2d2dc8ab9c8a1cf77c79fbde38a06de6f120c82
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164811"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652529"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>XML Şemasından (XSD) DataSet İlişkisel Yapısını Türetme
 
@@ -51,7 +52,7 @@ Customers (CustomerID, CompanyName, Phone)
  Tablodaki her sütunun veri türü, karşılık gelen öğenin veya özniteliğin XML şema türünden türetilir.  
   
 > [!NOTE]
-> Öğesi tamsayı gibi `customers` Basit BIR XML şeması veri türünde ise hiçbir tablo oluşturulmaz **integer**. Tablolar yalnızca karmaşık türler olan en üst düzey öğeler için oluşturulur.  
+> Öğesi tamsayı gibi `customers` Basit BIR XML şeması veri türünde ise hiçbir tablo oluşturulmaz . Tablolar yalnızca karmaşık türler olan en üst düzey öğeler için oluşturulur.  
   
  Aşağıdaki XML şemasında, **şema** öğesi iki öğe alt öğesine sahiptir `InStateCustomers` ve `OutOfStateCustomers` .  
   

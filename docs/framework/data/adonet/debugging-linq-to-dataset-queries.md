@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: LINQ to DataSet sorgularda hata ayıklama'
 title: LINQ to DataSet Sorgularında Hata Ayıklama
 ms.date: 03/30/2017
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
-ms.openlocfilehash: 638198ef4c78b84dd12c3d39f83bf8a015e566c1
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f1293ba195c96d6868fdd5bfee50e8734f9cecc4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183201"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651229"
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>LINQ to DataSet Sorgularında Hata Ayıklama
 
@@ -15,7 +16,7 @@ Visual Studio LINQ to DataSet kodun hata ayıklamasını destekler. Ancak, hata 
   
 ## <a name="viewing-results"></a>Sonuçları görüntüleme  
 
- LINQ to DataSet deyimin sonucunu, DataTips, izleme penceresi ve QuickWatch iletişim kutusunu kullanarak görüntüleyebilirsiniz. Kaynak pencereyi kullanarak işaretçiyi kaynak penceresinde bir sorgu üzerinde duraklatabilir ve bir DataTip belirir. Bir LINQ to DataSet değişkenini kopyalayabilir ve izleme penceresi veya QuickWatch iletişim kutusuna yapıştırabilirsiniz. LINQ to DataSet, bir sorgu oluşturulduğunda veya bildirildiğinde, ancak yalnızca sorgu yürütüldüğünde değerlendirilmez. Bu, *ertelenmiş yürütme*olarak adlandırılır. Bu nedenle, sorgu değişkeni değerlendirilene kadar bir değere sahip değildir. Daha fazla bilgi için bkz. [LINQ to DataSet sorguları](queries-in-linq-to-dataset.md).  
+ LINQ to DataSet deyimin sonucunu, DataTips, izleme penceresi ve QuickWatch iletişim kutusunu kullanarak görüntüleyebilirsiniz. Kaynak pencereyi kullanarak işaretçiyi kaynak penceresinde bir sorgu üzerinde duraklatabilir ve bir DataTip belirir. Bir LINQ to DataSet değişkenini kopyalayabilir ve izleme penceresi veya QuickWatch iletişim kutusuna yapıştırabilirsiniz. LINQ to DataSet, bir sorgu oluşturulduğunda veya bildirildiğinde, ancak yalnızca sorgu yürütüldüğünde değerlendirilmez. Bu, *ertelenmiş yürütme* olarak adlandırılır. Bu nedenle, sorgu değişkeni değerlendirilene kadar bir değere sahip değildir. Daha fazla bilgi için bkz. [LINQ to DataSet sorguları](queries-in-linq-to-dataset.md).  
   
  Hata ayıklayıcı sorgu sonuçlarını göstermek için bir sorguyu değerlendirmelidir. Bu örtük değerlendirme hata ayıklayıcıda LINQ to DataSet bir sorgu sonucu görüntülediğinizde oluşur ve göz önünde bulundurmanız gereken bazı etkileri vardır. Sorgunun her değerlendirmesi zaman alır. Sonuçlar düğümünü genişletme zaman alır. Bazı sorgular için yinelenen değerlendirme, dikkat çekici bir performans cezasına neden olabilir. Bir sorguyu değerlendirmek, verilerin değerinde veya programınızın durumunda değişiklik gösteren yan etkilere neden olabilir. Tüm sorguların yan etkileri yoktur. Bir sorgunun yan etkileri olmadan güvenle değerlendirilemeyeceğini anlamak için sorguyu uygulayan kodu anlamanız gerekir. Daha fazla bilgi için bkz. [yan etkiler ve ifadeler](/previous-versions/visualstudio/visual-studio-2013/a7a250bs(v=vs.120)).  
   

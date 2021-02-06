@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: toplama Işlevleri (Entity Framework için SqlClient)'
 title: Toplama Işlevleri (Entity Framework için SqlClient)
 ms.date: 03/30/2017
 ms.assetid: 03303f01-b591-4efc-9875-f9c608edff0b
-ms.openlocfilehash: 1c32ccfe18c67c9baeb7df0f981c9129b3bbc8bb
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b9f1ff8c75fc09de7532b459090b0b5cd1d47262
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204521"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651086"
 ---
 # <a name="aggregate-functions-sqlclient-for-entity-framework"></a>Toplama Işlevleri (Entity Framework için SqlClient)
 
@@ -19,7 +20,7 @@ SQL Server (SqlClient) için .NET Framework Veri Sağlayıcısı toplama işlevl
 
 Bir koleksiyondaki değerlerin ortalamasını döndürür. Null değerler yok sayılır.
 
-**Arguments**
+**Bağımsız değişkenler**
 
 `Int32`,, `Int64` `Double` Ve `Decimal` .
 
@@ -35,7 +36,7 @@ Türü `expression` .
 
  Bir koleksiyondaki değerlerin sağlama toplamını döndürür. Null değerler yok sayılır.
 
- **Arguments**
+ **Bağımsız değişkenler**
 
  Bir koleksiyon ( `Int32` ).
 
@@ -51,7 +52,7 @@ Türü `expression` .
 
 Bir koleksiyondaki öğelerin sayısını bir olarak döndürür `Int32` .
 
-**Arguments**
+**Bağımsız değişkenler**
 
 Bir koleksiyon \<T> , T aşağıdaki türlerden biridir:
 
@@ -72,7 +73,7 @@ Bir `Int32` .
 
 Bir koleksiyondaki öğelerin sayısını bir olarak döndürür `bigint` .
 
- **Arguments**
+ **Bağımsız değişkenler**
 
  Bir koleksiyon (T), burada T aşağıdaki türlerden biridir:
 
@@ -93,7 +94,7 @@ Bir `Int64` .
 
 Koleksiyonun en büyük değerini döndürür.
 
-**Arguments**
+**Bağımsız değişkenler**
 
 Bir koleksiyon (T), burada T aşağıdaki türlerden biridir:
 
@@ -114,7 +115,7 @@ Türü `expression` .
 
 Bir koleksiyondaki en küçük değeri döndürür.
 
-**Arguments**
+**Bağımsız değişkenler**
 
 Bir koleksiyon (T), burada T aşağıdaki türlerden biridir:
 
@@ -135,7 +136,7 @@ Türü `expression` .
 
 Belirtilen ifadedeki tüm değerlerin istatistiksel standart sapmasını döndürür.
 
-**Arguments**
+**Bağımsız değişkenler**
 
 Bir koleksiyon ( `Double` ).
 
@@ -151,7 +152,7 @@ Bir `Double`.
 
 Belirtilen ifadedeki tüm değerler için popülasyonun istatistiksel standart sapmasını döndürür.
 
-**Arguments**
+**Bağımsız değişkenler**
 
 Bir koleksiyon ( `Double` ).
 
@@ -167,7 +168,7 @@ Bir `Double`.
 
 Koleksiyondaki tüm değerlerin toplamını döndürür.
 
-**Arguments**
+**Bağımsız değişkenler**
 
 T (T): `Int32` , `Int64` ,, `Double` `Decimal` .
 
@@ -183,7 +184,7 @@ Türü `expression` .
 
 Belirtilen ifadedeki tüm değerlerin istatistiksel varyansını döndürür.
 
-**Arguments**
+**Bağımsız değişkenler**
 
 Bir koleksiyon ( `Double` ).
 
@@ -199,7 +200,7 @@ Bir `Double`.
 
 Belirtilen ifadedeki tüm değerler için popülasyon için istatistiksel varyansı döndürür.
 
-**Arguments**
+**Bağımsız değişkenler**
 
 Bir koleksiyon ( `Double` ).
 
