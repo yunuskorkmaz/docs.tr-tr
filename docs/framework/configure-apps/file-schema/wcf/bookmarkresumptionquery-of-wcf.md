@@ -1,19 +1,20 @@
 ---
-title: <bookmarkResumptionQuery>WCF
+description: WCF hakkında daha fazla bilgi edinin <bookmarkResumptionQuery>
+title: <bookmarkResumptionQuery> WCF
 ms.date: 03/30/2017
 ms.assetid: 755a34f0-87c9-4a1e-ae4d-0fb8a6fbdc0e
-ms.openlocfilehash: 8cb254599a9742305ec958fd77174f4c4b8a57c2
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9dadab3e304a2507a404bf43c377df46d5b33dda
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "71833998"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639334"
 ---
-# <a name="bookmarkresumptionquery-of-wcf"></a><span data-ttu-id="9c6e1-102">\<bookmarkResumptionQuery>WCF</span><span class="sxs-lookup"><span data-stu-id="9c6e1-102">\<bookmarkResumptionQuery> of WCF</span></span>
+# <a name="bookmarkresumptionquery-of-wcf"></a><span data-ttu-id="c2935-103">\<bookmarkResumptionQuery> WCF</span><span class="sxs-lookup"><span data-stu-id="c2935-103">\<bookmarkResumptionQuery> of WCF</span></span>
 
-<span data-ttu-id="9c6e1-103">Bir iş akışı örneği içinde yer işaretinin sürdürme izlemek için kullanılan bir sorguyu temsil eder.</span><span class="sxs-lookup"><span data-stu-id="9c6e1-103">Represents a query that is used to track resumption of a bookmark within a workflow instance.</span></span> <span data-ttu-id="9c6e1-104">Sorgu, bir izleme katılımcısı için yer işareti sürdürme kayıtlarına abone olmak için gereklidir.</span><span class="sxs-lookup"><span data-stu-id="9c6e1-104">The query is necessary for a tracking participant to subscribe to bookmark resumption records.</span></span>  
+<span data-ttu-id="c2935-104">Bir iş akışı örneği içinde yer işaretinin sürdürme izlemek için kullanılan bir sorguyu temsil eder.</span><span class="sxs-lookup"><span data-stu-id="c2935-104">Represents a query that is used to track resumption of a bookmark within a workflow instance.</span></span> <span data-ttu-id="c2935-105">Sorgu, bir izleme katılımcısı için yer işareti sürdürme kayıtlarına abone olmak için gereklidir.</span><span class="sxs-lookup"><span data-stu-id="c2935-105">The query is necessary for a tracking participant to subscribe to bookmark resumption records.</span></span>  
   
-<span data-ttu-id="9c6e1-105">Profil sorgularını izleme hakkında daha fazla bilgi için bkz. [Izleme profilleri](../../../windows-workflow-foundation/tracking-profiles.md).</span><span class="sxs-lookup"><span data-stu-id="9c6e1-105">For more information on tracking profile queries, see [Tracking Profiles](../../../windows-workflow-foundation/tracking-profiles.md).</span></span>
+<span data-ttu-id="c2935-106">Profil sorgularını izleme hakkında daha fazla bilgi için bkz. [Izleme profilleri](../../../windows-workflow-foundation/tracking-profiles.md).</span><span class="sxs-lookup"><span data-stu-id="c2935-106">For more information on tracking profile queries, see [Tracking Profiles](../../../windows-workflow-foundation/tracking-profiles.md).</span></span>
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
@@ -24,7 +25,7 @@ ms.locfileid: "71833998"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<bookmarkResumptionQueries>**](bookmarkresumptionqueries-of-wcf.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<bookmarkResumptionQuery>**  
   
-## <a name="syntax"></a><span data-ttu-id="9c6e1-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="9c6e1-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c2935-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="c2935-107">Syntax</span></span>  
   
 ```xml  
 <tracking>
@@ -40,29 +41,29 @@ ms.locfileid: "71833998"
 </tracking>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="9c6e1-107">Öznitelikler ve öğeler</span><span class="sxs-lookup"><span data-stu-id="9c6e1-107">Attributes and elements</span></span>
+## <a name="attributes-and-elements"></a><span data-ttu-id="c2935-108">Öznitelikler ve öğeler</span><span class="sxs-lookup"><span data-stu-id="c2935-108">Attributes and elements</span></span>
 
-<span data-ttu-id="9c6e1-108">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="9c6e1-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+<span data-ttu-id="c2935-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="c2935-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="9c6e1-109">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="9c6e1-109">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="c2935-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="c2935-110">Attributes</span></span>  
   
-|<span data-ttu-id="9c6e1-110">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="9c6e1-110">Attribute</span></span>|<span data-ttu-id="9c6e1-111">Açıklama</span><span class="sxs-lookup"><span data-stu-id="9c6e1-111">Description</span></span>|  
+|<span data-ttu-id="c2935-111">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="c2935-111">Attribute</span></span>|<span data-ttu-id="c2935-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c2935-112">Description</span></span>|  
 |---------------|-----------------|  
-|`name`|<span data-ttu-id="9c6e1-112">Abone olunacak yer işareti kaydının adını belirten bir dize.</span><span class="sxs-lookup"><span data-stu-id="9c6e1-112">A string that specifies the name of the bookmark record to subscribe to.</span></span>|  
+|`name`|<span data-ttu-id="c2935-113">Abone olunacak yer işareti kaydının adını belirten bir dize.</span><span class="sxs-lookup"><span data-stu-id="c2935-113">A string that specifies the name of the bookmark record to subscribe to.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="9c6e1-113">Alt öğeleri</span><span class="sxs-lookup"><span data-stu-id="9c6e1-113">Child elements</span></span>
+### <a name="child-elements"></a><span data-ttu-id="c2935-114">Alt öğeleri</span><span class="sxs-lookup"><span data-stu-id="c2935-114">Child elements</span></span>
 
-<span data-ttu-id="9c6e1-114">Yok.</span><span class="sxs-lookup"><span data-stu-id="9c6e1-114">None.</span></span>
+<span data-ttu-id="c2935-115">Yok.</span><span class="sxs-lookup"><span data-stu-id="c2935-115">None.</span></span>
   
-### <a name="parent-elements"></a><span data-ttu-id="9c6e1-115">Üst öğeler</span><span class="sxs-lookup"><span data-stu-id="9c6e1-115">Parent elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="c2935-116">Üst öğeler</span><span class="sxs-lookup"><span data-stu-id="c2935-116">Parent elements</span></span>  
   
-|<span data-ttu-id="9c6e1-116">Öğe</span><span class="sxs-lookup"><span data-stu-id="9c6e1-116">Element</span></span>|<span data-ttu-id="9c6e1-117">Açıklama</span><span class="sxs-lookup"><span data-stu-id="9c6e1-117">Description</span></span>|  
+|<span data-ttu-id="c2935-117">Öğe</span><span class="sxs-lookup"><span data-stu-id="c2935-117">Element</span></span>|<span data-ttu-id="c2935-118">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c2935-118">Description</span></span>|  
 |-------------|-----------------|  
-|[\<bookmarkResumptionQueries>](bookmarkresumptionqueries-of-wcf.md)|<span data-ttu-id="9c6e1-118">Bir iş akışı örneği içinde yer işaretinin sürdürme izlemek için kullanılan bir sorgu koleksiyonunu temsil eder.</span><span class="sxs-lookup"><span data-stu-id="9c6e1-118">Represents a collection of queries that are used to track resumption of a bookmark within a workflow instance.</span></span>|  
+|[\<bookmarkResumptionQueries>](bookmarkresumptionqueries-of-wcf.md)|<span data-ttu-id="c2935-119">Bir iş akışı örneği içinde yer işaretinin sürdürme izlemek için kullanılan bir sorgu koleksiyonunu temsil eder.</span><span class="sxs-lookup"><span data-stu-id="c2935-119">Represents a collection of queries that are used to track resumption of a bookmark within a workflow instance.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="9c6e1-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9c6e1-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c2935-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c2935-120">See also</span></span>
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.BookmarkResumptionQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.BookmarkResumptionQuery?displayProperty=nameWithType>
-- [<span data-ttu-id="9c6e1-120">İş Akışı Takip ve İzleme</span><span class="sxs-lookup"><span data-stu-id="9c6e1-120">Workflow Tracking and Tracing</span></span>](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [<span data-ttu-id="9c6e1-121">İzleme Profilleri</span><span class="sxs-lookup"><span data-stu-id="9c6e1-121">Tracking Profiles</span></span>](../../../windows-workflow-foundation/tracking-profiles.md)
+- [<span data-ttu-id="c2935-121">İş Akışı Takip ve İzleme</span><span class="sxs-lookup"><span data-stu-id="c2935-121">Workflow Tracking and Tracing</span></span>](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [<span data-ttu-id="c2935-122">İzleme Profilleri</span><span class="sxs-lookup"><span data-stu-id="c2935-122">Tracking Profiles</span></span>](../../../windows-workflow-foundation/tracking-profiles.md)

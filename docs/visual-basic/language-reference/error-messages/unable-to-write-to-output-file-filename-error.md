@@ -1,4 +1,5 @@
 ---
+description: "Şu konuda daha fazla bilgi edinin: BC31019: ' ' çıkış dosyasına yazılamıyor <filename> : <error>"
 title: "'<filename>' çıkış dosyasına yazılamıyor: <error>"
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,57 +8,57 @@ f1_keywords:
 helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-ms.openlocfilehash: 5f4add95da7c996513ffb291a7794ea0e345ac94
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 4a1feff6429a5b82968d3a87e4c9c9ef80e6612a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92161549"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640907"
 ---
-# <a name="bc31019-unable-to-write-to-output-file-filename-error"></a><span data-ttu-id="75a1c-102">BC31019: ' ' çıkış dosyasına yazılamıyor \<filename> : \<error></span><span class="sxs-lookup"><span data-stu-id="75a1c-102">BC31019: Unable to write to output file '\<filename>': \<error></span></span>
+# <a name="bc31019-unable-to-write-to-output-file-filename-error"></a><span data-ttu-id="6c762-103">BC31019: ' ' çıkış dosyasına yazılamıyor \<filename> : \<error></span><span class="sxs-lookup"><span data-stu-id="6c762-103">BC31019: Unable to write to output file '\<filename>': \<error></span></span>
 
-<span data-ttu-id="75a1c-103">Dosya oluşturulurken bir sorun oluştu.</span><span class="sxs-lookup"><span data-stu-id="75a1c-103">There was a problem creating the file.</span></span>
+<span data-ttu-id="6c762-104">Dosya oluşturulurken bir sorun oluştu.</span><span class="sxs-lookup"><span data-stu-id="6c762-104">There was a problem creating the file.</span></span>
 
- <span data-ttu-id="75a1c-104">Çıkış dosyası yazma için açılamıyor.</span><span class="sxs-lookup"><span data-stu-id="75a1c-104">An output file cannot be opened for writing.</span></span> <span data-ttu-id="75a1c-105">Dosya (veya dosyayı içeren klasör), başka bir işlem tarafından özel kullanım için açılabilir veya salt okunurdur özniteliği ayarlanmış olabilir.</span><span class="sxs-lookup"><span data-stu-id="75a1c-105">The file (or the folder containing the file) may be opened for exclusive use by another process, or it may have its read-only attribute set.</span></span>
+ <span data-ttu-id="6c762-105">Çıkış dosyası yazma için açılamıyor.</span><span class="sxs-lookup"><span data-stu-id="6c762-105">An output file cannot be opened for writing.</span></span> <span data-ttu-id="6c762-106">Dosya (veya dosyayı içeren klasör), başka bir işlem tarafından özel kullanım için açılabilir veya salt okunurdur özniteliği ayarlanmış olabilir.</span><span class="sxs-lookup"><span data-stu-id="6c762-106">The file (or the folder containing the file) may be opened for exclusive use by another process, or it may have its read-only attribute set.</span></span>
 
- <span data-ttu-id="75a1c-106">Yalnızca bir dosyanın açıldığı yaygın durumlar şunlardır:</span><span class="sxs-lookup"><span data-stu-id="75a1c-106">Common situations where a file is opened exclusively are:</span></span>
+ <span data-ttu-id="6c762-107">Yalnızca bir dosyanın açıldığı yaygın durumlar şunlardır:</span><span class="sxs-lookup"><span data-stu-id="6c762-107">Common situations where a file is opened exclusively are:</span></span>
 
-- <span data-ttu-id="75a1c-107">Uygulama zaten çalışıyor ve dosyalarını kullanıyor.</span><span class="sxs-lookup"><span data-stu-id="75a1c-107">The application is already running and using its files.</span></span> <span data-ttu-id="75a1c-108">Bu sorunu çözmek için uygulamanın çalışmadığını denetleyin.</span><span class="sxs-lookup"><span data-stu-id="75a1c-108">To solve this problem, make sure that the application is not running.</span></span>
+- <span data-ttu-id="6c762-108">Uygulama zaten çalışıyor ve dosyalarını kullanıyor.</span><span class="sxs-lookup"><span data-stu-id="6c762-108">The application is already running and using its files.</span></span> <span data-ttu-id="6c762-109">Bu sorunu çözmek için uygulamanın çalışmadığını denetleyin.</span><span class="sxs-lookup"><span data-stu-id="6c762-109">To solve this problem, make sure that the application is not running.</span></span>
 
-- <span data-ttu-id="75a1c-109">Başka bir uygulama dosyayı açtı.</span><span class="sxs-lookup"><span data-stu-id="75a1c-109">Another application has opened the file.</span></span> <span data-ttu-id="75a1c-110">Bu sorunu çözmek için, dosyalara hiçbir uygulamanın erişemdiğinizden emin olun.</span><span class="sxs-lookup"><span data-stu-id="75a1c-110">To solve this problem, make sure that no other application is accessing the files.</span></span> <span data-ttu-id="75a1c-111">Dosyalarınıza hangi uygulamanın eriştiğini her zaman açık değildir; Bu durumda, bilgisayarı yeniden başlatmak uygulamayı sonlandırmak için en kolay yol olabilir.</span><span class="sxs-lookup"><span data-stu-id="75a1c-111">It is not always obvious which application is accessing your files; in that case, restarting the computer might be the easiest way to terminate the application.</span></span>
+- <span data-ttu-id="6c762-110">Başka bir uygulama dosyayı açtı.</span><span class="sxs-lookup"><span data-stu-id="6c762-110">Another application has opened the file.</span></span> <span data-ttu-id="6c762-111">Bu sorunu çözmek için, dosyalara hiçbir uygulamanın erişemdiğinizden emin olun.</span><span class="sxs-lookup"><span data-stu-id="6c762-111">To solve this problem, make sure that no other application is accessing the files.</span></span> <span data-ttu-id="6c762-112">Dosyalarınıza hangi uygulamanın eriştiğini her zaman açık değildir; Bu durumda, bilgisayarı yeniden başlatmak uygulamayı sonlandırmak için en kolay yol olabilir.</span><span class="sxs-lookup"><span data-stu-id="6c762-112">It is not always obvious which application is accessing your files; in that case, restarting the computer might be the easiest way to terminate the application.</span></span>
 
- <span data-ttu-id="75a1c-112">Proje çıkış dosyalarından biri bile salt okunurdur olarak işaretlenmişse, bu özel durum oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="75a1c-112">If even one of the project output files is marked as read-only, this exception will be thrown.</span></span>
+ <span data-ttu-id="6c762-113">Proje çıkış dosyalarından biri bile salt okunurdur olarak işaretlenmişse, bu özel durum oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="6c762-113">If even one of the project output files is marked as read-only, this exception will be thrown.</span></span>
 
- <span data-ttu-id="75a1c-113">**Hata kimliği:** BC31019</span><span class="sxs-lookup"><span data-stu-id="75a1c-113">**Error ID:** BC31019</span></span>
+ <span data-ttu-id="6c762-114">**Hata kimliği:** BC31019</span><span class="sxs-lookup"><span data-stu-id="6c762-114">**Error ID:** BC31019</span></span>
 
-## <a name="to-correct-this-error"></a><span data-ttu-id="75a1c-114">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="75a1c-114">To correct this error</span></span>
+## <a name="to-correct-this-error"></a><span data-ttu-id="6c762-115">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="6c762-115">To correct this error</span></span>
 
-1. <span data-ttu-id="75a1c-115">Hatanın yinelenip yinelenmeyeceğini görmek için programı yeniden derleyin.</span><span class="sxs-lookup"><span data-stu-id="75a1c-115">Compile the program again to see if the error recurs.</span></span>
+1. <span data-ttu-id="6c762-116">Hatanın yinelenip yinelenmeyeceğini görmek için programı yeniden derleyin.</span><span class="sxs-lookup"><span data-stu-id="6c762-116">Compile the program again to see if the error recurs.</span></span>
 
-2. <span data-ttu-id="75a1c-116">Hata devam ederse, çalışmanızı kaydedin ve Visual Studio 'Yu yeniden başlatın.</span><span class="sxs-lookup"><span data-stu-id="75a1c-116">If the error continues, save your work and restart Visual Studio.</span></span>
+2. <span data-ttu-id="6c762-117">Hata devam ederse, çalışmanızı kaydedin ve Visual Studio 'Yu yeniden başlatın.</span><span class="sxs-lookup"><span data-stu-id="6c762-117">If the error continues, save your work and restart Visual Studio.</span></span>
 
-3. <span data-ttu-id="75a1c-117">Hata devam ederse, bilgisayarı yeniden başlatın.</span><span class="sxs-lookup"><span data-stu-id="75a1c-117">If the error continues, restart the computer.</span></span>
+3. <span data-ttu-id="6c762-118">Hata devam ederse, bilgisayarı yeniden başlatın.</span><span class="sxs-lookup"><span data-stu-id="6c762-118">If the error continues, restart the computer.</span></span>
 
-4. <span data-ttu-id="75a1c-118">Hata yinelenirse Visual Basic yeniden yükleyin.</span><span class="sxs-lookup"><span data-stu-id="75a1c-118">If the error recurs, reinstall Visual Basic.</span></span>
+4. <span data-ttu-id="6c762-119">Hata yinelenirse Visual Basic yeniden yükleyin.</span><span class="sxs-lookup"><span data-stu-id="6c762-119">If the error recurs, reinstall Visual Basic.</span></span>
 
-5. <span data-ttu-id="75a1c-119">Yeniden yükleme sonrasında hata devam ederse, Microsoft Ürün Destek Hizmetleri 'ne bildirin.</span><span class="sxs-lookup"><span data-stu-id="75a1c-119">If the error persists after reinstallation, notify Microsoft Product Support Services.</span></span>
+5. <span data-ttu-id="6c762-120">Yeniden yükleme sonrasında hata devam ederse, Microsoft Ürün Destek Hizmetleri 'ne bildirin.</span><span class="sxs-lookup"><span data-stu-id="6c762-120">If the error persists after reinstallation, notify Microsoft Product Support Services.</span></span>
 
-### <a name="to-check-file-attributes-in-file-explorer"></a><span data-ttu-id="75a1c-120">Dosya Gezgini 'nde dosya özniteliklerini denetlemek için</span><span class="sxs-lookup"><span data-stu-id="75a1c-120">To check file attributes in File Explorer</span></span>
+### <a name="to-check-file-attributes-in-file-explorer"></a><span data-ttu-id="6c762-121">Dosya Gezgini 'nde dosya özniteliklerini denetlemek için</span><span class="sxs-lookup"><span data-stu-id="6c762-121">To check file attributes in File Explorer</span></span>
 
-1. <span data-ttu-id="75a1c-121">İlgilendiğiniz klasörü açın.</span><span class="sxs-lookup"><span data-stu-id="75a1c-121">Open the folder you are interested in.</span></span>
+1. <span data-ttu-id="6c762-122">İlgilendiğiniz klasörü açın.</span><span class="sxs-lookup"><span data-stu-id="6c762-122">Open the folder you are interested in.</span></span>
 
-2. <span data-ttu-id="75a1c-122">**Görünümler** simgesine tıklayın ve **Ayrıntılar**' ı seçin.</span><span class="sxs-lookup"><span data-stu-id="75a1c-122">Click the **Views** icon and choose **Details**.</span></span>
+2. <span data-ttu-id="6c762-123">**Görünümler** simgesine tıklayın ve **Ayrıntılar**' ı seçin.</span><span class="sxs-lookup"><span data-stu-id="6c762-123">Click the **Views** icon and choose **Details**.</span></span>
 
-3. <span data-ttu-id="75a1c-123">Sütun başlığına sağ tıklayın ve açılan listeden **öznitelikler** ' i seçin.</span><span class="sxs-lookup"><span data-stu-id="75a1c-123">Right-click the column header, and choose **Attributes** from the drop-down list.</span></span>
+3. <span data-ttu-id="6c762-124">Sütun başlığına sağ tıklayın ve açılan listeden **öznitelikler** ' i seçin.</span><span class="sxs-lookup"><span data-stu-id="6c762-124">Right-click the column header, and choose **Attributes** from the drop-down list.</span></span>
 
-### <a name="to-change-the-attributes-of-a-file-or-folder"></a><span data-ttu-id="75a1c-124">Bir dosya veya klasörün özniteliklerini değiştirmek için</span><span class="sxs-lookup"><span data-stu-id="75a1c-124">To change the attributes of a file or folder</span></span>
+### <a name="to-change-the-attributes-of-a-file-or-folder"></a><span data-ttu-id="6c762-125">Bir dosya veya klasörün özniteliklerini değiştirmek için</span><span class="sxs-lookup"><span data-stu-id="6c762-125">To change the attributes of a file or folder</span></span>
 
-1. <span data-ttu-id="75a1c-125">**Dosya Gezgini**'nde, dosya veya klasöre sağ tıklayın ve **Özellikler**' i seçin.</span><span class="sxs-lookup"><span data-stu-id="75a1c-125">In **File Explorer**, right-click the file or folder and choose **Properties**.</span></span>
+1. <span data-ttu-id="6c762-126">**Dosya Gezgini**'nde, dosya veya klasöre sağ tıklayın ve **Özellikler**' i seçin.</span><span class="sxs-lookup"><span data-stu-id="6c762-126">In **File Explorer**, right-click the file or folder and choose **Properties**.</span></span>
 
-2. <span data-ttu-id="75a1c-126">**Genel** sekmesinin **öznitelikler** bölümünde **salt okunurdur** kutusunu temizleyin.</span><span class="sxs-lookup"><span data-stu-id="75a1c-126">In the **Attributes** section of the **General** tab, clear the **Read-only** box.</span></span>
+2. <span data-ttu-id="6c762-127">**Genel** sekmesinin **öznitelikler** bölümünde **salt okunurdur** kutusunu temizleyin.</span><span class="sxs-lookup"><span data-stu-id="6c762-127">In the **Attributes** section of the **General** tab, clear the **Read-only** box.</span></span>
 
-3. <span data-ttu-id="75a1c-127">**Tamam**'a basın.</span><span class="sxs-lookup"><span data-stu-id="75a1c-127">Press **OK**.</span></span>
+3. <span data-ttu-id="6c762-128">**Tamam**'a basın.</span><span class="sxs-lookup"><span data-stu-id="6c762-128">Press **OK**.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="75a1c-128">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="75a1c-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6c762-129">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6c762-129">See also</span></span>
 
-- [<span data-ttu-id="75a1c-129">Bizimle iletişime geçin</span><span class="sxs-lookup"><span data-stu-id="75a1c-129">Talk to Us</span></span>](/visualstudio/ide/feedback-options)
+- [<span data-ttu-id="6c762-130">Bizimle iletişime geçin</span><span class="sxs-lookup"><span data-stu-id="6c762-130">Talk to Us</span></span>](/visualstudio/ide/feedback-options)
