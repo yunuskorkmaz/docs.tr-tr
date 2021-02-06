@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: .NET Framework 4,5 içinde externalized Policy etkinliği'
 title: .NET Framework 4.5’te Dış İlke Etkinliği
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 00b671f169696728610e8ee32f874b44fbff9e33
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 52dad208aacf2993acffa605b896c14c0a906d4e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556921"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99631235"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>.NET Framework 4.5’te Dış İlke Etkinliği
 
@@ -70,7 +71,7 @@ Bu örnek iki istemci uygulaması içerir: ImperativeCodeClientSample ve Designe
 
 2. **Çözüm Gezgini**' de, **ImperativeCodeClientSample** projesine sağ tıklayın ve ardından **Başlangıç projesi olarak ayarla**' yı seçin.
 
-3. Projeyi çalıştırmak için **CTRL** + **F5**tuşuna basın.
+3. Projeyi çalıştırmak için **CTRL** + **F5** tuşuna basın.
 
 ### <a name="run-the-designerclientsample-application"></a>DesignerClientSample uygulamasını çalıştırma
 
@@ -78,9 +79,9 @@ Bu örnek iki istemci uygulaması içerir: ImperativeCodeClientSample ve Designe
 
 2. **Çözüm Gezgini**, **DesignerClientSample** projesine sağ tıklayın ve ardından **Başlangıç projesi olarak ayarla**' yı seçin.
 
-3. **Ctrl** + **Shift** + Projeyi derlemek için CTRL SHIFT**B** tuşlarına basın.
+3.  +  + Projeyi derlemek için CTRL SHIFT **B** tuşlarına basın.
 
-4. **Ctrl** + Projeyi çalıştırmak için CTRL**F5** tuşuna basın.
+4.  + Projeyi çalıştırmak için CTRL **F5** tuşuna basın.
 
 > [!IMPORTANT]
 > Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.
