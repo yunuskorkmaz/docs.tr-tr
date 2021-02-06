@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: ClickOnce ile WCF uygulamaları dağıtma'
 title: ClickOnce ile WCF Uygulamaları Dağıtma
 ms.date: 03/30/2017
 ms.assetid: 1a11feee-2a47-4d3e-a28a-ad69d5ff93e0
-ms.openlocfilehash: ad4c603d07885aa16640b71d43038746d3702b05
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f0a78bab6bbe7ddfd431e8e12bfe1ca9c9143143
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96260867"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99646094"
 ---
 # <a name="deploying-wcf-applications-with-clickonce"></a>ClickOnce ile WCF Uygulamaları Dağıtma
 

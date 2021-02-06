@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 1436-Pendingiletiperchannelratio'
 title: 1436 - PendingMessagesPerChannelRatio
 ms.date: 03/30/2017
 ms.assetid: 1f5b779b-1ca1-4653-b79b-db31df8fbb8b
-ms.openlocfilehash: d77c6b99cf3e537cff1981afca2fb9ae58d1c13a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3b4581a2e253e46622ac8a1872e45d94de57c2a0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96271037"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99645340"
 ---
 # <a name="1436---pendingmessagesperchannelratio"></a>1436 - PendingMessagesPerChannelRatio
 
@@ -17,10 +18,10 @@ ms.locfileid: "96271037"
 |-|-|  
 |ID|1436|  
 |Anahtar sözcükler|Kota|  
-|Düzey|Ayrıntılı|  
+|Level|Ayrıntılı|  
 |Kanal|Microsoft-Windows-uygulama sunucusu-uygulamalar/analitik|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bu olay, kanal başına bekleyen ileti oranı bilgilerini sağlamak için tasarlanmıştır.  
   

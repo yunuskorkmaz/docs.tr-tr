@@ -1,19 +1,20 @@
 ---
+description: ': System. ServiceModel. AsyncCallbackThrewException hakkında daha fazla bilgi'
 title: System.ServiceModel.AsyncCallbackThrewException
 ms.date: 03/30/2017
 ms.assetid: dfc27ca7-b904-4f29-a5b6-dc702fa54a20
-ms.openlocfilehash: 3b9f1375f2d302bcf182743e94dd595a389d88ef
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 53ef853d22041099eb68fe79f7ef43bc24c55798
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96262989"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99644703"
 ---
 # <a name="systemservicemodelasynccallbackthrewexception"></a>System.ServiceModel.AsyncCallbackThrewException
 
 System.ServiceModel.AsyncCallbackThrewException  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Zaman uyumsuz bir geri çağırma özel durum oluşturdu.  
   

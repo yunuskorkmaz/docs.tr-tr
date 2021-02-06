@@ -1,13 +1,14 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: 3393-StreamedMessageReadByEncoder'
 title: 3393 - StreamedMessageReadByEncoder
 ms.date: 03/30/2017
 ms.assetid: 70ebde45-9e46-4adb-9020-c17e9c6786e4
-ms.openlocfilehash: 95307aea6c1a2387be1a380c29d8220d5debe374
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 95c9a9b6780be7d26e072191ba45d91cd787b3b8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96247622"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99644892"
 ---
 # <a name="3393---streamedmessagereadbyencoder"></a>3393 - StreamedMessageReadByEncoder
 
@@ -17,10 +18,10 @@ ms.locfileid: "96247622"
 |-|-|  
 |ID|3393|  
 |Anahtar sözcükler|Kanal|  
-|Düzey|Bilgi|  
+|Level|Bilgi|  
 |Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bu olay, akıtılan ileti Kodlayıcı tarafından okunarak yayınlanır.  
   

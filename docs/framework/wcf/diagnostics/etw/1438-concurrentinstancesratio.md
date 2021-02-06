@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 1438-Concurrentınstancesratio'
 title: 1438 - ConcurrentInstancesRatio
 ms.date: 03/30/2017
 ms.assetid: 3234f307-22c9-4961-97a8-88d7c77e9945
-ms.openlocfilehash: 8f1cd87fa7c08fc5946dcf1c4d1dccc9dd980dde
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3065fdc0e990233e170d51e2049520dae3159ab2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96241180"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99645288"
 ---
 # <a name="1438---concurrentinstancesratio"></a>1438 - ConcurrentInstancesRatio
 
@@ -17,10 +18,10 @@ ms.locfileid: "96241180"
 |-|-|  
 |ID|1438|  
 |Anahtar sözcükler|Kota|  
-|Düzey|Ayrıntılı|  
+|Level|Ayrıntılı|  
 |Kanal|Microsoft-Windows-uygulama sunucusu-uygulamalar/analitik|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bu olay, eşzamanlı örnek oranı bilgilerini sağlamak üzere yayınlanır.  
   

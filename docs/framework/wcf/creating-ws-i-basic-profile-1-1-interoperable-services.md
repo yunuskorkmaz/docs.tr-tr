@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: WS-ı temel profil 1,1 birlikte çalışabilen hizmetler oluşturma'
 title: WS-I Temel Profil 1.1 Birlikte Çalışabilir Hizmetler Oluşturma
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - configuration [WCF], interoperable services
 ms.assetid: 91b70a21-8f5c-4679-808c-2ed5fa6b2013
-ms.openlocfilehash: b5d262c3e0443503ccbf49a1a468c82843799a61
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 46e2d925dfe431957198b1d53b40d28adf6fb1c4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96255058"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99646185"
 ---
 # <a name="creating-ws-i-basic-profile-11-interoperable-services"></a>WS-I Temel Profil 1.1 Birlikte Çalışabilir Hizmetler Oluşturma
 
@@ -34,7 +35,7 @@ Bir WCF hizmetinin meta verilerini ASP.NET için kullanılabilir hale getirmek i
   
 ## <a name="example"></a>Örnek  
   
-### <a name="description"></a>Açıklama  
+### <a name="description"></a>Description  
 
  Aşağıdaki örnek kod, bir yapılandırma dosyasında, koddaki ASP.NET Web hizmeti istemcileriyle uyumlu bir WCF uç noktasının nasıl ekleneceğini gösterir.  
   

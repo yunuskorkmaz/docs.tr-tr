@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 1403-LeaseTimeout'
 title: 1403 - LeaseTimeout
 ms.date: 03/30/2017
 ms.assetid: 3908748b-f060-46a2-8043-49e09218d2e5
-ms.openlocfilehash: 912c948c01bab40520d5f446b55140cf515bce4d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 2decf2b0d08db533e90c353460d35428193da916
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96241415"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99645821"
 ---
 # <a name="1403---leasetimeout"></a>1403 - LeaseTimeout
 
@@ -17,10 +18,10 @@ ms.locfileid: "96241415"
 |-|-|  
 |ID|1403|  
 |Anahtar sözcükler|ServiceModel|  
-|Düzey|Bilgi|  
+|Level|Bilgi|  
 |Kanal|Microsoft-Windows-uygulama sunucusu-uygulamalar/analitik|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bu olay kira zaman aşımı üzerine yayınlanır.  
   
