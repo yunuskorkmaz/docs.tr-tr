@@ -1,4 +1,5 @@
 ---
+description: 'Bu konuda daha fazla bilgi edinin: ICorDebugHeapEnum arabirimi'
 title: ICorDebugHeapEnum Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 99cbc1eb-d539-4f76-a0d8-b93348112f14
 topic_type:
 - apiref
-ms.openlocfilehash: 312052fcd683acbccb9ca616992bd635490aa2a5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c8a2f46bf412e2c4b2fe43d3eb50169191f40445
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724370"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99660901"
 ---
 # <a name="icordebugheapenum-interface"></a>ICorDebugHeapEnum Arabirimi
 

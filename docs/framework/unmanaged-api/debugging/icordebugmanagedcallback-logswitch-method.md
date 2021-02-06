@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugManagedCallback:: LogSwitch yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugManagedCallback::LogSwitch Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 0ac59d27-783f-4a87-b7a8-baa3ccc54582
 topic_type:
 - apiref
-ms.openlocfilehash: db6ccd63bbeadd7dcff1c7f8491b59017d431d12
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 658b2afbe7074062910670c6748dc579973715f8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720704"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99660472"
 ---
 # <a name="icordebugmanagedcallbacklogswitch-method"></a>ICorDebugManagedCallback::LogSwitch Yöntemi
 
 Hata ayıklayıcıyı bir ortak dil çalışma zamanı (CLR) yönetilen iş parçacığının, <xref:System.Diagnostics.Switch> bir hata ayıklama/izleme anahtarı oluşturmak, değiştirmek veya silmek için sınıfında bir yöntemi çağırdığını bildirir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT LogSwitch (  

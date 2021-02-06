@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugModule arabirimi hakkında daha fazla bilgi edinin'
 title: ICorDebugModule Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 32e4d6fa-e5a3-413e-9166-d5e2871d3114
 topic_type:
 - apiref
-ms.openlocfilehash: 86e17b48bc491c45f8b46be23ab626dc1f2a6962
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f78023fe9975b609309c1c511380a3a394426283
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95709849"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99660121"
 ---
 # <a name="icordebugmodule-interface"></a>ICorDebugModule Arabirimi
 
@@ -34,10 +35,10 @@ Yürütülebilir bir dosya veya dinamik bağlantı kitaplığı (DLL) olan bir o
 |[EnableJITDebugging Yöntemi](icordebugmodule-enablejitdebugging-method.md)|Just-In-Time (JıT) derleyicisinin Bu modüldeki yöntemler için hata ayıklama bilgilerini koruyamayacağını belirler.|  
 |[GetAssembly Yöntemi](icordebugmodule-getassembly-method.md)|Bu modülün kapsayan derlemesini alır.|  
 |[GetBaseAddress Yöntemi](icordebugmodule-getbaseaddress-method.md)|Modülün temel adresini alır.|  
-|[GetClassFromToken Metodu](icordebugmodule-getclassfromtoken-method.md)|Meta verilerden ICorDebugClass alır.|  
+|[GetClassFromToken Yöntemi](icordebugmodule-getclassfromtoken-method.md)|Meta verilerden ICorDebugClass alır.|  
 |[GetEditAndContinueSnapshot Yöntemi](icordebugmodule-geteditandcontinuesnapshot-method.md)|Kullanım dışı.|  
 |[GetFunctionFromRVA Yöntemi](icordebugmodule-getfunctionfromrva-method.md)|Uygulanmaz.|  
-|[GetFunctionFromToken Metodu](icordebugmodule-getfunctionfromtoken-method.md)|Meta veri belirteci tarafından belirtilen işlevi alır.|  
+|[GetFunctionFromToken Yöntemi](icordebugmodule-getfunctionfromtoken-method.md)|Meta veri belirteci tarafından belirtilen işlevi alır.|  
 |[GetGlobalVariableValue Yöntemi](icordebugmodule-getglobalvariablevalue-method.md)|Belirtilen genel değişken için bir değer nesnesi alır.|  
 |[GetMetaDataInterface Yöntemi](icordebugmodule-getmetadatainterface-method.md)|Modülün meta verilerini incelemek için kullanılabilecek bir meta veri arabirim işaretçisi alır.|  
 |[GetName Yöntemi](icordebugmodule-getname-method.md)|Modülün dosya adını alır.|  

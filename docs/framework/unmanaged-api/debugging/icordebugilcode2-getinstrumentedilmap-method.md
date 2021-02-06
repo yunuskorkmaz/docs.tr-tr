@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ICorDebugILCode2:: GetInstrumentedILMap yöntemi'
 title: ICorDebugILCode2::GetInstrumentedILMap Yöntemi
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ api_type:
 ms.assetid: 7a4e3085-8f95-40ef-a4be-7d6146f47ce2
 topic_type:
 - apiref
-ms.openlocfilehash: 097502f4321531922d6c4385e2eccbf32f66f026
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6892b059e1774d7b0a61d7a8dd7df69bc2e8c569
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95688360"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99660576"
 ---
 # <a name="icordebugilcode2getinstrumentedilmap-method"></a>ICorDebugILCode2::GetInstrumentedILMap Yöntemi
 
@@ -25,7 +26,7 @@ ms.locfileid: "95688360"
   
  Bu örnek için profil oluşturucu tarafından işaretlenmiş ara dil (IL) uzaklıklarını orijinal Yöntem Il uzaklıklarından bir eşleme döndürür.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp
 HRESULT GetInstrumentedILMap(  

@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugModule:: GetName metodu hakkında daha fazla bilgi edinin'
 title: ICorDebugModule::GetName Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: db499637-7ba9-421e-b8b1-35856995e80b
 topic_type:
 - apiref
-ms.openlocfilehash: c2aecadf8688e763a69bd40ca877e44bc0ce5c29
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0f81271b2be283621027f4c835b6f220a383d771
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95710052"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99660219"
 ---
 # <a name="icordebugmodulegetname-method"></a>ICorDebugModule::GetName Metodu
 
 Modülün dosya adını alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp
 HRESULT GetName(  

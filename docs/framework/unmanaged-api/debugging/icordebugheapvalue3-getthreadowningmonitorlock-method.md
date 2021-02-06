@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugHeapValue3:: GetThreadOwningMonitorLock metodu hakkında daha fazla bilgi edinin'
 title: ICorDebugHeapValue3::GetThreadOwningMonitorLock Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: e06fc19d-2cf4-4cad-81a3-137a68af8969
 topic_type:
 - apiref
-ms.openlocfilehash: fef0902aedbcd8572d2dc67fae7927f754af4489
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9bd9e251c1e04bffd749c0569e4716d4c6fa89e5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723317"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99660706"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>ICorDebugHeapValue3::GetThreadOwningMonitorLock Metodu
 
 Bu nesne üzerinde izleyici kilidine sahip yönetilen iş parçacığını döndürür.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetThreadOwningMonitorLock (  
@@ -47,12 +48,12 @@ HRESULT GetThreadOwningMonitorLock (
 
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
 |S_FALSE|Bu nesnede izleyici kilidine sahip yönetilen iş parçacığı yok.|  
   
-## <a name="exceptions"></a>Özel Durumlar  
+## <a name="exceptions"></a>Özel durumlar  
   
 ## <a name="remarks"></a>Açıklamalar  
 

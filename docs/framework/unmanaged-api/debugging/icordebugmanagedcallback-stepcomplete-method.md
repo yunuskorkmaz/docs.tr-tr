@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugManagedCallback:: Steptamamlanmıştır yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugManagedCallback::StepComplete Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 5e1f2c47-81df-4530-826d-96489cd68719
 topic_type:
 - apiref
-ms.openlocfilehash: 8de0858abe7db9ae1225f449083e417e13507b3d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 653abee26f09ac8877be9fa4183763739845666a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95703063"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99660368"
 ---
 # <a name="icordebugmanagedcallbackstepcomplete-method"></a>ICorDebugManagedCallback::StepComplete Yöntemi
 
 Hata ayıklayıcıyı bir adımın tamamlandığını bildirir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT StepComplete (  
