@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 2578-TryCatch Exceptionfromcatch Orfinally'
 title: 2578 - TryCatchExceptionFromCatchOrFinally
 ms.date: 03/30/2017
 ms.assetid: 4803fee6-b8d8-4937-9907-d5c5fd5299db
-ms.openlocfilehash: 92503b13f59556fa21d058578982c3fa7b7a6b96
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7a159d096307d3354695d831db168990be18a236
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96271206"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99631508"
 ---
 # <a name="2578---trycatchexceptionfromcatchorfinally"></a>2578 - TryCatchExceptionFromCatchOrFinally
 
@@ -17,10 +18,10 @@ ms.locfileid: "96271206"
 |-|-|  
 |ID|2578|  
 |Anahtar sözcükler|WFActivities|  
-|Düzey|Uyarı|  
+|Level|Uyarı|  
 |Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bir catch veya finally etkinliğinin özel durum yaptığını gösterir.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96271206"
   
 ## <a name="details"></a>Ayrıntılar  
   
-|Veri öğesi adı|Veri öğesi türü|Açıklama|  
+|Veri öğesi adı|Veri öğesi türü|Description|  
 |--------------------|--------------------|-----------------|  
 |DisplayName|xs: String|Etkinliğin görünen adı.|  
 |AppDomain|xs: String|AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.|

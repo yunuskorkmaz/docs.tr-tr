@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 39458-Trackingrecordkesildi'
 title: 39458 - TrackingRecordTruncated
 ms.date: 03/30/2017
 ms.assetid: 5352f0eb-d571-454a-bab5-e2162888b218
-ms.openlocfilehash: f02a34673c51be6e0b127a64e4622131575d836f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: bb9a46dc5bd9bc4f4709a740dd0e7ec47ca826e3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275898"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99631287"
 ---
 # <a name="39458---trackingrecordtruncated"></a>39458 - TrackingRecordTruncated
 
@@ -17,10 +18,10 @@ ms.locfileid: "96275898"
 |-|-|  
 |ID|39458|  
 |Anahtar sözcükler|WFTracking|  
-|Düzey|Uyarı|  
+|Level|Uyarı|  
 |Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bir izleme kaydının kesildiğini gösterir. Değişkenler/ek açıklamalar/Kullanıcı verileri kaldırıldı.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96275898"
   
 ## <a name="details"></a>Ayrıntılar  
   
-|Veri öğesi adı|Veri öğesi türü|Açıklama|  
+|Veri öğesi adı|Veri öğesi türü|Description|  
 |--------------------|--------------------|-----------------|  
 |RecordNumber|xs: String|İzleme kayıt numarası.|  
 |Kimliği|xs: String|ETW sağlayıcı kimliği.|  

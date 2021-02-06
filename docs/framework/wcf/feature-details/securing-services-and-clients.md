@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: hizmet ve Istemcilerin güvenliğini sağlama'
 title: Hizmet ve İstemcileri Güvenli Hale Getirme
 ms.date: 03/30/2017
 helpviewer_keywords:
 - message security [WCF]
 ms.assetid: e681f3bd-0c09-4a58-b0e4-0ecbdf1aa6c7
-ms.openlocfilehash: 24e7cc3fd9b349aaba733a809a03be2454bd371d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ff947e8bf975fd3fb3c6513ee0bf49bb21a951dd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96288404"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632639"
 ---
 # <a name="securing-services-and-clients"></a>Hizmet ve İstemcileri Güvenli Hale Getirme
 

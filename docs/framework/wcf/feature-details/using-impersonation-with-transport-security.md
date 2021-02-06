@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: aktarım güvenliği ile kimliğe bürünme kullanma'
 title: Taşıma Güvenliği ile Kimliğe Bürünme Kullanma
 ms.date: 03/30/2017
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
-ms.openlocfilehash: 14914bc65d5033c54640e06b79713ea1871daf18
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 49b454369e6bf02c5c3f20661f4116f51c64c6eb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96289509"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632327"
 ---
 # <a name="using-impersonation-with-transport-security"></a>Taşıma Güvenliği ile Kimliğe Bürünme Kullanma
 

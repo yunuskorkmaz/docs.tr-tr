@@ -1,15 +1,16 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: meta veriler alma'
 title: Meta Verileri Alma
 ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF], retrieving
 ms.assetid: 18d8ba4c-af0f-4827-a50b-4202d767bacc
-ms.openlocfilehash: 212ea49418d5e33d79a1b6cf881e2828388c657e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 35068c9ad532b3a48eabda03274b0d53fcc94694
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96295515"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632821"
 ---
 # <a name="retrieving-metadata"></a>Meta Verileri Alma
 

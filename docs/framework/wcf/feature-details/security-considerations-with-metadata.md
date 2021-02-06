@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: meta verilerle ilgili güvenlik konuları'
 title: Meta Veriler Hakkında Güvenlik Konuları
 ms.date: 03/30/2017
 ms.assetid: e78ef8ab-4f63-4656-ab93-b1deab2666d5
-ms.openlocfilehash: c7a00d5abc9cc88b60208bd76fa8874f1fe00af9
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 219222c2a7b6032684e6368a7907c43ef112aa5c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96276002"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632470"
 ---
 # <a name="security-considerations-with-metadata"></a>Meta Veriler Hakkında Güvenlik Konuları
 

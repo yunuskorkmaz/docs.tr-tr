@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: nasıl yapılır: paralel görevlerle Ikili ağacı çapraz geçiş'
 title: 'Nasıl yapılır: Paralel Görevler İçeren Bir İkili Ağacı Gezme'
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to traverse a tree
 ms.assetid: 4265d169-6c69-4f36-b10d-b7ae7f72f4df
-ms.openlocfilehash: 6c8708f2879671573ab870bf7d9df520a6118c7a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f6b053bb9b480e85698dcd098a750d38d2ef403a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722407"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99629545"
 ---
 # <a name="how-to-traverse-a-binary-tree-with-parallel-tasks"></a>Nasıl yapılır: Paralel Görevler İçeren Bir İkili Ağacı Gezme
 

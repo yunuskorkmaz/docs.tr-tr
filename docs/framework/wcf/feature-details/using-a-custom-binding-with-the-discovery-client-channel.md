@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: bulma Istemci kanalı ile özel bağlama kullanma'
 title: Keşif İstemci Kanalıyla Özel Bağlama Kullanma
 ms.date: 03/30/2017
 ms.assetid: 36f95e75-04f7-44f3-a995-a0d623624d7f
-ms.openlocfilehash: d84739a0021262826c541ab3ff9df663adabf44a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a4dd823aed01785aab4127e4323cdc0a0a6d952a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96289665"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632379"
 ---
 # <a name="using-a-custom-binding-with-the-discovery-client-channel"></a>Keşif İstemci Kanalıyla Özel Bağlama Kullanma
 

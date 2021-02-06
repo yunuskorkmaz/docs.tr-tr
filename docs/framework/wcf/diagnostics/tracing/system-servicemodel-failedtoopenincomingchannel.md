@@ -1,19 +1,20 @@
 ---
+description: ': System. ServiceModel. Failedtoopenıncomingchannel hakkında daha fazla bilgi edinin'
 title: System.ServiceModel.FailedToOpenIncomingChannel
 ms.date: 03/30/2017
 ms.assetid: 7c6c6b1b-51b8-4f45-bf76-62d816a1fc0a
-ms.openlocfilehash: 1d720e85bedad792076c763084ba9d5e775e45bd
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 47e115bb8b21a67b44f928557be9539d8ae27ccc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96269372"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99633562"
 ---
 # <a name="systemservicemodelfailedtoopenincomingchannel"></a>System.ServiceModel.FailedToOpenIncomingChannel
 
 System.ServiceModel.FailedToOpenIncomingChannel  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bir gelen kanal, açılmaya çalışılırken bir hata oluştuğundan bırakıldı.  
   

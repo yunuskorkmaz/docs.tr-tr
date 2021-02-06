@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: dizileri ve listeleri Işlemek için genel Temsilciler'
 title: Dizi ve Listeleri Düzenlemek için Genel Temsilciler
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - lists [.NET], generic delegates
 - generics [.NET], delegates
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
-ms.openlocfilehash: 5356671b4f1c48c125e49c35a2f8ddc5ea1ca26b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6b87296162a5dfea6253003c5daa6999abde4d08
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728517"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99629584"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>Dizi ve Listeleri Düzenlemek için Genel Temsilciler
 
@@ -47,5 +48,5 @@ Bu konu, bir dizi veya koleksiyonun öğelerinde yapılacak dönüşümler, aram
 - <xref:System.Collections.ObjectModel?displayProperty=nameWithType>
 - [Genel Türler](index.md)
 - [.NET 'teki genel Koleksiyonlar](collections.md)
-- [Genel Arabirimler](interfaces.md)
+- [Genel arabirimler](interfaces.md)
 - [Kovaryans ve değişken sapması](covariance-and-contravariance.md)

@@ -1,19 +1,20 @@
 ---
+description: ': System. ServiceModel. Extensionelementalreadyvartsıncollection hakkında daha fazla bilgi edinin'
 title: System.ServiceModel.ExtensionElementAlreadyExistsInCollection
 ms.date: 03/30/2017
 ms.assetid: e6c0c5d4-889c-45fb-b90f-3720bb183aa4
-ms.openlocfilehash: 4d0c1d009205a3dcc0e2638f373384873276dd34
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3bee0c00d044aa2f06051b52784c46508ac11cc5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96269359"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99633640"
 ---
 # <a name="systemservicemodelextensionelementalreadyexistsincollection"></a>System.ServiceModel.ExtensionElementAlreadyExistsInCollection
 
 System.ServiceModel.ExtensionElementAlreadyExistsInCollection  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Uzantı öğesi koleksiyonda zaten var.  
   

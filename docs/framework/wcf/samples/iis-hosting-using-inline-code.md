@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: satır Içi kod kullanarak IIS barındırma'
 title: Satır İçi Kod Kullanarak IIS Barındırma
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Web hosted service
 - IIS Hosting Using Inline Code Sample [Windows Communication Foundation]
 ms.assetid: 56fe3687-a34b-4661-8e30-b33770f413fa
-ms.openlocfilehash: 41e19c318953d7e97eb5183c5a16a3780813f94c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 58c2e119ad49f56d015290747ab247bd45ff4d23
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559004"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99631872"
 ---
 # <a name="iis-hosting-using-inline-code"></a>Satır İçi Kod Kullanarak IIS Barındırma
 

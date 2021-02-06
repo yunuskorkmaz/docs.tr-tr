@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: kuyruklara genel bakış'
 title: Kuyruklar Genel Bakış
 ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-ms.openlocfilehash: 464b82c41fe1268d53d77f7bf3cb9463cf235072
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8414a8f9121c30a97f5fef5e1f26dfe57abc7956
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96244645"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99633035"
 ---
 # <a name="queues-overview"></a>Sıralara genel bakış
 

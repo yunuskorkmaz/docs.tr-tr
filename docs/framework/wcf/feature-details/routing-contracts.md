@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: yönlendirme sözleşmeleri'
 title: Sözleşmeleri Yönlendirme
 ms.date: 03/30/2017
 ms.assetid: 9ceea7ae-ea19-4cf9-ba4f-d071e236546d
-ms.openlocfilehash: 4c75034a8fdbf02bf568bc5392361113a37427be
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7ccdb281402bdf61d3ba27f97019fd3126bdf29b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96295502"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632795"
 ---
 # <a name="routing-contracts"></a>Sözleşmeleri Yönlendirme
 

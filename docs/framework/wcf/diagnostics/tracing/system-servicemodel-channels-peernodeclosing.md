@@ -1,19 +1,20 @@
 ---
+description: ': System. ServiceModel. Channels. PeerNodeClosing hakkında daha fazla bilgi edinin'
 title: System.ServiceModel.Channels.PeerNodeClosing
 ms.date: 03/30/2017
 ms.assetid: 47a008f0-04d7-4cf3-9099-c056f78c9bfa
-ms.openlocfilehash: 495e086590647e06ab69c6f6f2a916874fc20850
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 6a9e990afcf48b0d014ae87b52f584af590e453b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96292408"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99634901"
 ---
 # <a name="systemservicemodelchannelspeernodeclosing"></a>System.ServiceModel.Channels.PeerNodeClosing
 
 PeerNode kapatılmaya başladı.  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bu izleme, PeerNode üzerinde kapatma çalıştırmanın başlangıcında oluşur.  
   

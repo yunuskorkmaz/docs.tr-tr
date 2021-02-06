@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: güvenilir oturumlar'
 title: Güvenilir oturumlar
 ms.date: 03/30/2017
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - instances [WCF]
 - sessions [WCF]
 ms.assetid: 143951b3-3aa0-4540-b4b7-d33e77e874a1
-ms.openlocfilehash: 910ad952192243c6aa8a79417ad711d8c2a4ba2e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 86df4ccf9c1fd52d162ad7272ece5591f0ca7482
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84590546"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632886"
 ---
 # <a name="reliable-sessions"></a>Güvenilir oturumlar
 

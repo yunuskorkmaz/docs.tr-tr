@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: güvenilir oturumlara genel bakış'
 title: Güvenilir Oturumlar Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: a7fc4146-ee2c-444c-82d4-ef6faffccc2d
-ms.openlocfilehash: a85a34c5e2ec7928c01586e4b01cdf5e90e896a7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 51de6012245b4fc0a367069d02fe69ee031f2b30
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601094"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632899"
 ---
 # <a name="reliable-sessions-overview"></a>Güvenilir Oturumlar Genel Bakış
 
@@ -17,7 +18,7 @@ Bu konuda güvenilir oturumlar, nasıl ve ne zaman kullanılacağı ve bunların
 
 ## <a name="wcf-reliable-sessions"></a>WCF güvenilir oturumlar
 
-WCF güvenilir oturumlar, WS-ReliableMessaging protokolü tarafından tanımlanan SOAP Güvenilir Mesajlaşma 'nın bir uygulamasıdır.
+WCF güvenilir oturumları, WS-ReliableMessaging protokolü tarafından tanımlanan SOAP Güvenilir Mesajlaşma 'nın bir uygulamasıdır.
 
 WCF SOAP Güvenilir Mesajlaşma, mesajlaşma uç noktalarını ayıran aracıların sayısından veya türünden bağımsız olarak iki uç nokta arasında uçtan uca güvenilir bir oturum sağlar. Bu, uç noktalar arasında akışı yapılan iletiler için gereken SOAP (örneğin, SOAP tabanlı yönlendiriciler veya köprüler) kullanan tüm aktarım aracıları içerir. Güvenilir bir oturum kanalı, bu tür bir kanalla bağlanan hizmetlerin aynı anda ve Exchange ve iletileri düşük gecikme süresi (görece kısa bir süre içinde) altında işlemesini sağlayacak şekilde *etkileşimli* iletişimi destekler. Bu, bu bileşenlerin birlikte ilerlemesini veya birlikte başarısız olduğunu, bu nedenle aralarında yalıtımsız olduğunu gösterir.
 
@@ -47,17 +48,17 @@ Kullanan uç noktalarda güvenilir bir oturum kullanın:
 
 - HTTP tabanlı Aktarım standart bağlamaları:
 
-  - `WsHttpBinding`ve istek-yanıt veya tek yönlü sözleşmeleri kullanıma sunar.
+  - `WsHttpBinding` ve istek-yanıt veya tek yönlü sözleşmeleri kullanıma sunar.
 
   - İstek-yanıt veya basit tek yönlü hizmet sözleşmesi üzerinde güvenilir oturum kullanırken.
 
-  - `WsDualHttpBinding`ve çift yönlü, istek-yanıt veya tek yönlü sözleşmeleri kullanıma sunar.
+  - `WsDualHttpBinding` ve çift yönlü, istek-yanıt veya tek yönlü sözleşmeleri kullanıma sunar.
 
-  - `WsFederationHttpBinding`ve istek-yanıt veya tek yönlü sözleşmeleri kullanıma sunar.
+  - `WsFederationHttpBinding` ve istek-yanıt veya tek yönlü sözleşmeleri kullanıma sunar.
 
 - TCP tabanlı Aktarım standart bağlamaları:
 
-  - `NetTcpBinding`ve çift yönlü, istek yanıtı veya tek yönlü sözleşmeleri kullanıma sunar.
+  - `NetTcpBinding` ve çift yönlü, istek yanıtı veya tek yönlü sözleşmeleri kullanıma sunar.
 
 HTTPS gibi özel bir bağlama oluşturarak (sorunlar hakkında daha fazla bilgi için bkz. <a href="#reliable-sessions-and-security">Güvenilir Oturumlar ve güvenlik</a>) veya adlandırılmış bir kanal bağlamasında güvenilir bir oturum kullanın.
 

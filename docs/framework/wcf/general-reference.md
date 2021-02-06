@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Genel başvuru'
 title: Genel Başvuru
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, general reference
 - WCF, general reference
 ms.assetid: b1a21e93-4700-46e6-88ca-bd7a50e19a16
-ms.openlocfilehash: e7b6c2fb2f39c6ee322db2cf52b62a2cf7de87dc
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 92734b3ef546a987aff83336e9c920d5dc578439
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238319"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632210"
 ---
 # <a name="general-reference"></a>Genel Başvuru
 

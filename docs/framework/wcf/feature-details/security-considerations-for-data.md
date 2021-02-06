@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: veriler için güvenlik konuları'
 title: Veriler için Güvenlik Konuları
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: b9b033f779b083be8bcec195caf8e55607f14d31
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 6e0bf681ad8dd141ad030ef850c3e50c1d6e65c8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188321"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632626"
 ---
 # <a name="security-considerations-for-data"></a>Veriler için Güvenlik Konuları
 
@@ -175,7 +176,7 @@ Bu kota, bayt dizileri dahil olmak üzere XML okuyucunun döndürdüğü temel e
 
 İkili XML kodlaması WCF, bir *Sözlük dizeleri* özelliği içerir. Büyük bir dize yalnızca birkaç bayt kullanılarak kodlanmayabilir. Bu, önemli ölçüde performans artışı sağlar, ancak hafiflemesinin azaltılması gereken yeni hizmet reddi tehditleri sunar.
 
-İki tür sözlük vardır: *statik* ve *dinamik* . Statik sözlük, ikili kodlamada kısa bir kod kullanılarak gösterilebilen uzun dizelerin yerleşik bir listesidir. Bu dizeler listesi okuyucu oluşturulduğunda ve değiştirilemediği zaman sabittir. Statik sözlükte WCF 'nin varsayılan olarak kullandığı dizelerin hiçbiri, önemli bir hizmet reddi tehdidi oluşturma konusunda yeterince büyük değildir, ancak yine de sözlük genişletme saldırısında kullanılabilir. Kendi statik sözlüğünüzü sağladığınız Gelişmiş senaryolarda, büyük sözlük dizeleri oluştururken dikkatli olun.
+İki tür sözlük vardır: *statik* ve *dinamik*. Statik sözlük, ikili kodlamada kısa bir kod kullanılarak gösterilebilen uzun dizelerin yerleşik bir listesidir. Bu dizeler listesi okuyucu oluşturulduğunda ve değiştirilemediği zaman sabittir. Statik sözlükte WCF 'nin varsayılan olarak kullandığı dizelerin hiçbiri, önemli bir hizmet reddi tehdidi oluşturma konusunda yeterince büyük değildir, ancak yine de sözlük genişletme saldırısında kullanılabilir. Kendi statik sözlüğünüzü sağladığınız Gelişmiş senaryolarda, büyük sözlük dizeleri oluştururken dikkatli olun.
 
 Dinamik sözlükler özelliği, iletilerin kendi dizelerini tanımlamasına ve bunları kısa kodlarla ilişkilendirilmesine izin verir. Bu dizeden koda eşlemeler tüm iletişim oturumu sırasında bellekte tutulur, örneğin sonraki iletiler dizelerin yeniden gönderilmesini gerektirmez ve önceden tanımlanmış kodlardan yararlanabilir. Bu dizeler rastgele uzunlukta olabilir ve bu nedenle statik sözlükten daha ciddi bir tehdit oluşturabilir.
 

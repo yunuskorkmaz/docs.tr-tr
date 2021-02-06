@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: varsayılan hizmet davranışı'
 title: Varsayılan Hizmet Davranışı
 ms.date: 03/30/2017
 helpviewer_keywords:
 - service behaviors, defaults
 - Default Service Behavior Sample [Windows Communication Foundation]
 ms.assetid: 442d4f71-c64e-4c62-816a-a66c38e7d3ec
-ms.openlocfilehash: acdb4652c0f49b610b8e7cad2aa5c0074fe00511
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a0b83180c9ab758cb7a8db7f92a8bf0c081e4489
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96292759"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99631989"
 ---
 # <a name="default-service-behavior"></a>Varsayılan Hizmet Davranışı
 
@@ -48,7 +49,7 @@ public class CalculatorService : ICalculator
   
  Hizmet davranışları <xref:System.ServiceModel.ServiceBehaviorAttribute> özniteliğiyle belirtilir. Aşağıdaki tabloda bu davranışların bazıları açıklanmaktadır.  
   
-|Hizmet davranışı|Açıklama|  
+|Hizmet davranışı|Description|  
 |----------------------|-----------------|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.AutomaticSessionShutdown%2A>|İstemci isteğindeki bir oturumu otomatik olarak kapatır.|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>|Her hizmet örneği için eşzamanlılık modunu belirtir.|  
@@ -60,7 +61,7 @@ public class CalculatorService : ICalculator
   
  İşlem davranışları özniteliği kullanılarak belirtilir <xref:System.ServiceModel.OperationBehaviorAttribute> . Aşağıdaki tabloda bu davranışların bazıları açıklanmaktadır.  
   
-|İşlem davranışı|Açıklama|  
+|İşlem davranışı|Description|  
 |------------------------|-----------------|  
 |<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A>|Hizmet işleminin tamamlanmasının geçerli işlemi yürütmeyeceğini belirler.|  
 |<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A>|Hizmet işleminin istemci tarafından akışlı bir işlemde görüntülenip görüntülenmeyeceğini belirler.|  

@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: Güvenlik Kılavuzu ve En Iyi uygulamalar'
 title: Güvenlik Kılavuzu ve En İyi Uygulamalar
 ms.date: 03/30/2017
 helpviewer_keywords:
 - secure applications [WCF]
 ms.assetid: 79e4e6f7-0c00-4045-b0f0-e6a7c37c7788
-ms.openlocfilehash: 9eaa401f9ba7c62a684e912005a8f13fd443a900
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e121532708ca77e106fe1e731fe496af7efb725a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96276015"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632457"
 ---
 # <a name="security-guidance-and-best-practices"></a>Güvenlik Kılavuzu ve En İyi Uygulamalar
 
