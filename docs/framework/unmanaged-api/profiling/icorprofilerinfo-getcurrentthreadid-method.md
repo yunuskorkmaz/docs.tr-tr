@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerInfo:: GetCurrentThreadID yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerInfo::GetCurrentThreadID Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 39bbdb30-6a7a-4202-8da3-67ae9a0ab3a8
 topic_type:
 - apiref
-ms.openlocfilehash: 18298c4c726d7d850e67afbf82ca77b7511d8917
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 562c6cb61f13e9ab568d18c7d179872cbc7cdb06
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722602"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99647650"
 ---
 # <a name="icorprofilerinfogetcurrentthreadid-method"></a>ICorProfilerInfo::GetCurrentThreadID Metodu
 
 Yönetilen bir iş parçacığı ise, geçerli iş parçacığının KIMLIĞINI alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetCurrentThreadID(  

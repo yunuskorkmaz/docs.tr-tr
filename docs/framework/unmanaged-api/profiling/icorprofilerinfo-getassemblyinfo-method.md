@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerInfo:: GetAssemblyInfo yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerInfo::GetAssemblyInfo Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 7a3c97c3-1e31-47b1-bf23-386785c509c4
 topic_type:
 - apiref
-ms.openlocfilehash: ff81da15b17ab0a7fbe62b08e358f65eed3edb71
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 64e94031e0e4fc5f768e94b83e4e97c3a9a7cb61
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95680285"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99647875"
 ---
 # <a name="icorprofilerinfogetassemblyinfo-method"></a>ICorProfilerInfo::GetAssemblyInfo Metodu
 
 Bir derleme KIMLIĞI kabul eder ve derlemenin adını ve bildirim modülünün KIMLIĞINI döndürür.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetAssemblyInfo(  

@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerCallback:: AppDomainCreationStarted yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerCallback::AppDomainCreationStarted Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: b2a8240b-07fe-4859-bb2b-7d3adbfa0a9f
 topic_type:
 - apiref
-ms.openlocfilehash: 901546c80c3bee32afddfa8e8cffbd2b679bc43b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 00ebbe35f6f4446caeee5ebcd56b853d6e6dc80c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95685402"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99648265"
 ---
 # <a name="icorprofilercallbackappdomaincreationstarted-method"></a>ICorProfilerCallback::AppDomainCreationStarted Yöntemi
 
 Profil oluşturucuyu bir uygulama etki alanının oluşturulduğunu bildirir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT AppDomainCreationStarted(  

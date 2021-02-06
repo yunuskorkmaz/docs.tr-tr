@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerCallback:: ThreadAssignedToOSThread yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerCallback::ThreadAssignedToOSThread Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: f9671e5a-7b14-4f5b-8404-58136422c8b2
 topic_type:
 - apiref
-ms.openlocfilehash: 2d6f34d88dd79fe350f1c018e3afa55e5b180c46
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 04fba4cabb0ac58b3afeaae1fd579865335a9e14
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732014"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99647992"
 ---
 # <a name="icorprofilercallbackthreadassignedtoosthread-method"></a>ICorProfilerCallback::ThreadAssignedToOSThread Yöntemi
 
 Profil oluşturucuyu yönetilen bir iş parçacığının belirli bir işletim sistemi iş parçacığı kullanılarak uygulandığını bildirir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT ThreadAssignedToOSThread(  

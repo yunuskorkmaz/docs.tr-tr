@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerInfo:: GetClassIDInfo yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerInfo::GetClassIDInfo Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 9e93b99e-5aca-415c-8e37-7f33753b612d
 topic_type:
 - apiref
-ms.openlocfilehash: 7d19a43048da742e702636faaa46ecf1458556f5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 05937580bd8bd672da16875964548829d071f4bf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722600"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99647719"
 ---
 # <a name="icorprofilerinfogetclassidinfo-method"></a>ICorProfilerInfo::GetClassIDInfo Metodu
 
 Belirtilen sınıf için üst modülü ve meta veri belirtecini alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetClassIDInfo(  

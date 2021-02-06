@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerCallback:: AssemblyLoadFinished yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerCallback::AssemblyLoadFinished Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 86d98f39-52e6-4c61-a625-9760f695ff12
 topic_type:
 - apiref
-ms.openlocfilehash: fd41463af0acac1bbe1a3d4515350905b6784f79
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 19c0871808455e64ad8a4eb002806a87030f7882
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95685350"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99648044"
 ---
 # <a name="icorprofilercallbackassemblyloadfinished-method"></a>ICorProfilerCallback::AssemblyLoadFinished Yöntemi
 
 Profiler 'ın bir derlemenin yüklemeyi bitirmiş olduğunu bildirir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT AssemblyLoadFinished(  

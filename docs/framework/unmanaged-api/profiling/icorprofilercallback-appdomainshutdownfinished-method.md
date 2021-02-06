@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerCallback:: AppDomainShutdownFinished yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerCallback::AppDomainShutdownFinished Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 52794819-0a59-4bb1-a265-0f158cd5cd65
 topic_type:
 - apiref
-ms.openlocfilehash: ddb2d6eeb75a118a12f681b354f6feccd1231c64
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e08a4f7e03bfd18d9c6a2fdf56bfab8c68f9c379
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95685397"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99648262"
 ---
 # <a name="icorprofilercallbackappdomainshutdownfinished-method"></a>ICorProfilerCallback::AppDomainShutdownFinished Yöntemi
 
 Profil oluşturucuyu bir uygulama etki alanının bir işlemden kaldırılmış olduğunu bildirir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT AppDomainShutdownFinished(  

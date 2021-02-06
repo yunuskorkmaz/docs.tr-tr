@@ -1,4 +1,5 @@
 ---
+description: ': Iclrprofile:: AttachProfiler yöntemi hakkında daha fazla bilgi edinin'
 title: ICLRProfiling::AttachProfiler Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 535a6839-c443-405b-a6f4-e2af90725d5b
 topic_type:
 - apiref
-ms.openlocfilehash: 94495ca0ea75bd41996d430159474c707a3e68b2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 11b53b39d3332d1f72304352fad525e5881e05a6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95685428"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99648460"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>ICLRProfiling::AttachProfiler Yöntemi
 
 Belirtilen işlem oluşturucuyu belirtilen işleme iliştirir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT AttachProfiler(  
@@ -68,7 +69,7 @@ HRESULT AttachProfiler(
 
  Bu yöntem aşağıdaki HRESULTs 'leri döndürür.  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|Belirtilen profil oluşturucu hedef işleme başarıyla eklendi.|  
 |CORPROF_E_PROFILER_ALREADY_ACTIVE|Zaten bir profil oluşturucu etkin veya hedef işleme iliştiriliyor.|  
