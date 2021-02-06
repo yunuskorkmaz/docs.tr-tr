@@ -1,28 +1,29 @@
 ---
+description: ': System. ServiceModel. Channels. PeerNodeOpenFailed hakkında daha fazla bilgi edinin'
 title: System.ServiceModel.Channels.PeerNodeOpenFailed
 ms.date: 03/30/2017
 ms.assetid: fd908a42-30d1-4301-bc33-35b503896634
-ms.openlocfilehash: 56cb70743a0b2dfeebb18380300c63d9b506a053
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8d29e4386e84dd2e4064359830cbe28ef3db0c53
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96292356"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99634823"
 ---
-# <a name="systemservicemodelchannelspeernodeopenfailed"></a><span data-ttu-id="8a2f3-102">System.ServiceModel.Channels.PeerNodeOpenFailed</span><span class="sxs-lookup"><span data-stu-id="8a2f3-102">System.ServiceModel.Channels.PeerNodeOpenFailed</span></span>
+# <a name="systemservicemodelchannelspeernodeopenfailed"></a><span data-ttu-id="74b4d-103">System.ServiceModel.Channels.PeerNodeOpenFailed</span><span class="sxs-lookup"><span data-stu-id="74b4d-103">System.ServiceModel.Channels.PeerNodeOpenFailed</span></span>
 
-<span data-ttu-id="8a2f3-103">Bir komşu bağlantı açma girişimi başarısız oldu.</span><span class="sxs-lookup"><span data-stu-id="8a2f3-103">An attempt to open a neighbor connection failed.</span></span>  
+<span data-ttu-id="74b4d-104">Bir komşu bağlantı açma girişimi başarısız oldu.</span><span class="sxs-lookup"><span data-stu-id="74b4d-104">An attempt to open a neighbor connection failed.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="8a2f3-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="8a2f3-104">Description</span></span>  
+## <a name="description"></a><span data-ttu-id="74b4d-105">Description</span><span class="sxs-lookup"><span data-stu-id="74b4d-105">Description</span></span>  
 
- <span data-ttu-id="8a2f3-105">Bu izleme, bir komşu bağlantı kurma denemesinden sonra oluşur.</span><span class="sxs-lookup"><span data-stu-id="8a2f3-105">This trace occurs after the attempt to establish a neighbor connection.</span></span> <span data-ttu-id="8a2f3-106">Olası nedenler, yanıt vermeyen bir çözümleyici, yanlış bağlama ayarı veya geçici ağ arızalarına sahip olabilir.</span><span class="sxs-lookup"><span data-stu-id="8a2f3-106">Possible reasons may include an unresponsive resolver, an incorrect binding setting, or transient network failures.</span></span>  
+ <span data-ttu-id="74b4d-106">Bu izleme, bir komşu bağlantı kurma denemesinden sonra oluşur.</span><span class="sxs-lookup"><span data-stu-id="74b4d-106">This trace occurs after the attempt to establish a neighbor connection.</span></span> <span data-ttu-id="74b4d-107">Olası nedenler, yanıt vermeyen bir çözümleyici, yanlış bağlama ayarı veya geçici ağ arızalarına sahip olabilir.</span><span class="sxs-lookup"><span data-stu-id="74b4d-107">Possible reasons may include an unresponsive resolver, an incorrect binding setting, or transient network failures.</span></span>  
   
-## <a name="troubleshooting"></a><span data-ttu-id="8a2f3-107">Sorun giderme</span><span class="sxs-lookup"><span data-stu-id="8a2f3-107">Troubleshooting</span></span>  
+## <a name="troubleshooting"></a><span data-ttu-id="74b4d-108">Sorun giderme</span><span class="sxs-lookup"><span data-stu-id="74b4d-108">Troubleshooting</span></span>  
 
- <span data-ttu-id="8a2f3-108">Her iki düğümün de geçerli adreslere sahip olduğundan ve uygun şekilde yapılandırıldığından emin olun.</span><span class="sxs-lookup"><span data-stu-id="8a2f3-108">Ensure that both nodes have valid addresses and are configured appropriately.</span></span>  
+ <span data-ttu-id="74b4d-109">Her iki düğümün de geçerli adreslere sahip olduğundan ve uygun şekilde yapılandırıldığından emin olun.</span><span class="sxs-lookup"><span data-stu-id="74b4d-109">Ensure that both nodes have valid addresses and are configured appropriately.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8a2f3-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8a2f3-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="74b4d-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="74b4d-110">See also</span></span>
 
-- [<span data-ttu-id="8a2f3-110">İzleme</span><span class="sxs-lookup"><span data-stu-id="8a2f3-110">Tracing</span></span>](index.md)
-- [<span data-ttu-id="8a2f3-111">Uygulamanızda Sorun Giderme için İzleme Kullanma</span><span class="sxs-lookup"><span data-stu-id="8a2f3-111">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="8a2f3-112">Yönetim ve tanılama</span><span class="sxs-lookup"><span data-stu-id="8a2f3-112">Administration and Diagnostics</span></span>](../index.md)
+- [<span data-ttu-id="74b4d-111">İzleme</span><span class="sxs-lookup"><span data-stu-id="74b4d-111">Tracing</span></span>](index.md)
+- [<span data-ttu-id="74b4d-112">Uygulamanızda Sorun Giderme için İzleme Kullanma</span><span class="sxs-lookup"><span data-stu-id="74b4d-112">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="74b4d-113">Yönetim ve tanılama</span><span class="sxs-lookup"><span data-stu-id="74b4d-113">Administration and Diagnostics</span></span>](../index.md)

@@ -1,24 +1,25 @@
 ---
+description: ': System. ServiceModel. ComIntegration. Comıntegrationınstancecreationsuccess hakkında daha fazla bilgi edinin'
 title: System.ServiceModel.ComIntegration.ComIntegrationInstanceCreationSuccess
 ms.date: 03/30/2017
 ms.assetid: fac5288a-139b-4cb1-8931-d2a153a19971
-ms.openlocfilehash: 3f203651bc8a2f931b075010ea4511e639ef253c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 34f08997a089c391092efbbe1eb7e3658c371f79
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96242311"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99634095"
 ---
-# <a name="systemservicemodelcomintegrationcomintegrationinstancecreationsuccess"></a><span data-ttu-id="e9b4a-102">System.ServiceModel.ComIntegration.ComIntegrationInstanceCreationSuccess</span><span class="sxs-lookup"><span data-stu-id="e9b4a-102">System.ServiceModel.ComIntegration.ComIntegrationInstanceCreationSuccess</span></span>
+# <a name="systemservicemodelcomintegrationcomintegrationinstancecreationsuccess"></a><span data-ttu-id="39ff6-103">System.ServiceModel.ComIntegration.ComIntegrationInstanceCreationSuccess</span><span class="sxs-lookup"><span data-stu-id="39ff6-103">System.ServiceModel.ComIntegration.ComIntegrationInstanceCreationSuccess</span></span>
 
-<span data-ttu-id="e9b4a-103">System.ServiceModel.ComIntegration.ComIntegrationInstanceCreationSuccess</span><span class="sxs-lookup"><span data-stu-id="e9b4a-103">System.ServiceModel.ComIntegration.ComIntegrationInstanceCreationSuccess</span></span>  
+<span data-ttu-id="39ff6-104">System.ServiceModel.ComIntegration.ComIntegrationInstanceCreationSuccess</span><span class="sxs-lookup"><span data-stu-id="39ff6-104">System.ServiceModel.ComIntegration.ComIntegrationInstanceCreationSuccess</span></span>  
   
-## <a name="description"></a><span data-ttu-id="e9b4a-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="e9b4a-104">Description</span></span>  
+## <a name="description"></a><span data-ttu-id="39ff6-105">Description</span><span class="sxs-lookup"><span data-stu-id="39ff6-105">Description</span></span>  
 
- <span data-ttu-id="e9b4a-105">ComPlus: örnek oluşturuldu.</span><span class="sxs-lookup"><span data-stu-id="e9b4a-105">ComPlus: Created instance.</span></span>  
+ <span data-ttu-id="39ff6-106">ComPlus: örnek oluşturuldu.</span><span class="sxs-lookup"><span data-stu-id="39ff6-106">ComPlus: Created instance.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e9b4a-106">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e9b4a-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="39ff6-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="39ff6-107">See also</span></span>
 
-- [<span data-ttu-id="e9b4a-107">İzleme</span><span class="sxs-lookup"><span data-stu-id="e9b4a-107">Tracing</span></span>](index.md)
-- [<span data-ttu-id="e9b4a-108">Uygulamanızda Sorun Giderme için İzleme Kullanma</span><span class="sxs-lookup"><span data-stu-id="e9b4a-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="e9b4a-109">Yönetim ve tanılama</span><span class="sxs-lookup"><span data-stu-id="e9b4a-109">Administration and Diagnostics</span></span>](../index.md)
+- [<span data-ttu-id="39ff6-108">İzleme</span><span class="sxs-lookup"><span data-stu-id="39ff6-108">Tracing</span></span>](index.md)
+- [<span data-ttu-id="39ff6-109">Uygulamanızda Sorun Giderme için İzleme Kullanma</span><span class="sxs-lookup"><span data-stu-id="39ff6-109">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="39ff6-110">Yönetim ve tanılama</span><span class="sxs-lookup"><span data-stu-id="39ff6-110">Administration and Diagnostics</span></span>](../index.md)

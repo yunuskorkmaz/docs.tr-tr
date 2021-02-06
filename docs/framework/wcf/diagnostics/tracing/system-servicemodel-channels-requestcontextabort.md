@@ -1,24 +1,25 @@
 ---
+description: ': System. ServiceModel. Channels. RequestContextAbort hakkında daha fazla bilgi edinin'
 title: System.ServiceModel.Channels.RequestContextAbort
 ms.date: 03/30/2017
 ms.assetid: b41c78a2-c885-418d-831f-2db86fa3a52d
-ms.openlocfilehash: f469e496eb8684d4cd3109527a9193514fc01cb7
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8caefe8d1e8f3e253530b72fbd5f893fb3f41b7f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96292031"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99634667"
 ---
-# <a name="systemservicemodelchannelsrequestcontextabort"></a><span data-ttu-id="065a2-102">System.ServiceModel.Channels.RequestContextAbort</span><span class="sxs-lookup"><span data-stu-id="065a2-102">System.ServiceModel.Channels.RequestContextAbort</span></span>
+# <a name="systemservicemodelchannelsrequestcontextabort"></a><span data-ttu-id="f588a-103">System.ServiceModel.Channels.RequestContextAbort</span><span class="sxs-lookup"><span data-stu-id="f588a-103">System.ServiceModel.Channels.RequestContextAbort</span></span>
 
-<span data-ttu-id="065a2-103">System.ServiceModel.Channels.RequestContextAbort</span><span class="sxs-lookup"><span data-stu-id="065a2-103">System.ServiceModel.Channels.RequestContextAbort</span></span>  
+<span data-ttu-id="f588a-104">System.ServiceModel.Channels.RequestContextAbort</span><span class="sxs-lookup"><span data-stu-id="f588a-104">System.ServiceModel.Channels.RequestContextAbort</span></span>  
   
-## <a name="description"></a><span data-ttu-id="065a2-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="065a2-104">Description</span></span>  
+## <a name="description"></a><span data-ttu-id="f588a-105">Description</span><span class="sxs-lookup"><span data-stu-id="f588a-105">Description</span></span>  
 
- <span data-ttu-id="065a2-105">RequestContext iptal edildi.</span><span class="sxs-lookup"><span data-stu-id="065a2-105">RequestContext aborted.</span></span>  
+ <span data-ttu-id="f588a-106">RequestContext iptal edildi.</span><span class="sxs-lookup"><span data-stu-id="f588a-106">RequestContext aborted.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="065a2-106">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="065a2-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f588a-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f588a-107">See also</span></span>
 
-- [<span data-ttu-id="065a2-107">İzleme</span><span class="sxs-lookup"><span data-stu-id="065a2-107">Tracing</span></span>](index.md)
-- [<span data-ttu-id="065a2-108">Uygulamanızda Sorun Giderme için İzleme Kullanma</span><span class="sxs-lookup"><span data-stu-id="065a2-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="065a2-109">Yönetim ve tanılama</span><span class="sxs-lookup"><span data-stu-id="065a2-109">Administration and Diagnostics</span></span>](../index.md)
+- [<span data-ttu-id="f588a-108">İzleme</span><span class="sxs-lookup"><span data-stu-id="f588a-108">Tracing</span></span>](index.md)
+- [<span data-ttu-id="f588a-109">Uygulamanızda Sorun Giderme için İzleme Kullanma</span><span class="sxs-lookup"><span data-stu-id="f588a-109">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="f588a-110">Yönetim ve tanılama</span><span class="sxs-lookup"><span data-stu-id="f588a-110">Administration and Diagnostics</span></span>](../index.md)
