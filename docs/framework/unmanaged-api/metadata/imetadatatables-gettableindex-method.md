@@ -1,4 +1,5 @@
 ---
+description: ': IMetaDataTables:: GetTableIndex metodu hakkında daha fazla bilgi edinin'
 title: IMetaDataTables::GetTableIndex Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c6ec3800-e0d9-4387-afb8-ddc0b818114c
 topic_type:
 - apiref
-ms.openlocfilehash: 52d70a76bdf8380d320edb6e8188443070a36b1b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d42a42a1a19a67fada17bbe1016f7e324cd1c287
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95672567"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99687733"
 ---
 # <a name="imetadatatablesgettableindex-method"></a>IMetaDataTables::GetTableIndex Yöntemi
 
 Belirtilen belirteç tarafından başvurulan tablonun dizinini alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetTableIndex (  

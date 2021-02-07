@@ -1,4 +1,5 @@
 ---
+description: ': IMetaDataTables:: GetColumnInfo Yöntemi hakkında daha fazla bilgi edinin'
 title: IMetaDataTables::GetColumnInfo Yöntemi
 ms.date: 10/10/2019
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 68c160ea-ae7d-4750-985d-a038b2c8e7d9
 topic_type:
 - apiref
-ms.openlocfilehash: 227d9ab67ab3091508232be3018ca520a6b5dcc6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 21980567c5f9b364362f7e3ff02ee3a5e60b01ee
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711058"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99688240"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a>IMetaDataTables::GetColumnInfo Yöntemi
 
 Belirtilen tabloda belirtilen sütunla ilgili verileri alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetColumnInfo (
@@ -65,7 +66,7 @@ HRESULT GetColumnInfo (
 
 Döndürülen sütun türü bir değer aralığı içinde yer alıyorsa:
 
-| pType                    | Açıklama   | Yardımcı işlevi                   |
+| pType                    | Description   | Yardımcı işlevi                   |
 |--------------------------|---------------|-----------------------------------|
 | `0`..`iRidMax`<br>(0.. 63)   | Rid           | **Isrbıtype türü**<br>**IsRidOrToken** |
 | `iCodedToken`..`iCodedTokenMax`<br>(64.. 95) | Kodlanmış belirteç | **IsCodedTokenType** <br>**IsRidOrToken** |

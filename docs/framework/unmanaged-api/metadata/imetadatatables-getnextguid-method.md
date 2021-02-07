@@ -1,4 +1,5 @@
 ---
+description: ': IMetaDataTables:: GetNextGuid metodu hakkında daha fazla bilgi edinin'
 title: IMetaDataTables::GetNextGuid Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 68f6ea4d-9112-4d6b-93d9-e34f1e2f2496
 topic_type:
 - apiref
-ms.openlocfilehash: 71dce539941f78feff3d5f89028d654cade25feb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 86c248bf503410a07fc0b4cf622694c4da213c34
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727269"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99688110"
 ---
 # <a name="imetadatatablesgetnextguid-method"></a>IMetaDataTables::GetNextGuid Metodu
 
 Geçerli tablo sütunundaki sonraki GUID değerinin dizinini alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetNextGuid (  
