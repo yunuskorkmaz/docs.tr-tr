@@ -1,18 +1,21 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: bir ADO.NET Entity Framework veri kaynağı kullanarak veri hizmeti oluşturma (WCF Veri Hizmetleri)'
 title: 'Nasıl yapılır: bir ADO.NET Entity Framework veri kaynağı kullanarak veri hizmeti oluşturma (WCF Veri Hizmetleri)'
 ms.date: 08/24/2018
 helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: 1e559488a3260fafe6c211ff47226a258fc1289a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: aea96c3953ec990b5f70a9702961512332330c6e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557703"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766217"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Nasıl yapılır: bir ADO.NET Entity Framework veri kaynağı kullanarak veri hizmeti oluşturma (WCF Veri Hizmetleri)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Veri Hizmetleri, veri hizmeti olarak varlık verilerini gösterir. Veri kaynağı ilişkisel bir veritabanı olduğunda, bu varlık verileri ADO. NETEntity Framework tarafından sağlanır. Bu konu başlığı altında, var olan bir veritabanını temel alan Visual Studio Web uygulamasında Entity Framework tabanlı bir veri modeli oluşturma ve bu veri modelini kullanarak yeni bir veri hizmeti oluşturma işlemi gösterilmektedir.
 
@@ -20,7 +23,7 @@ Entity Framework Ayrıca, Visual Studio projesi dışında bir Entity Framework 
 
 ## <a name="to-add-an-entity-framework-model-that-is-based-on-an-existing-database-to-an-existing-web-application"></a>Var olan bir veritabanını varolan bir Web uygulamasına dayalı bir Entity Framework modeli eklemek için
 
-1. **Proje** menüsünde **Add**  >  **Yeni öğe**Ekle ' ye tıklayın.
+1. **Proje** menüsünde   >  **Yeni öğe** Ekle ' ye tıklayın.
 
 2. **Şablonlar** bölmesinde, **veri** kategorisine ve sonra **ADO.net varlık veri modeli**' yi seçin.
 
@@ -51,9 +54,9 @@ Entity Framework Ayrıca, Visual Studio projesi dışında bir Entity Framework 
 
 1. Visual Studio 'da, veri modelini temsil eden. edmx dosyasını açın.
 
-2. **Model tarayıcısında**modele sağ tıklayın, **Özellikler**' e tıklayın ve ardından varlık kapsayıcısının adını aklınızda edin.
+2. **Model tarayıcısında** modele sağ tıklayın, **Özellikler**' e tıklayın ve ardından varlık kapsayıcısının adını aklınızda edin.
 
-3. **Çözüm Gezgini**, ASP.net projenizin adına sağ tıklayın ve ardından **Add**  >  **Yeni öğe**Ekle ' ye tıklayın.
+3. **Çözüm Gezgini**, ASP.net projenizin adına sağ tıklayın ve ardından   >  **Yeni öğe** Ekle ' ye tıklayın.
 
 4. **Yeni öğe Ekle** iletişim kutusunda, **Web** kategorisindeki **WCF veri hizmeti** şablonunu seçin.
 

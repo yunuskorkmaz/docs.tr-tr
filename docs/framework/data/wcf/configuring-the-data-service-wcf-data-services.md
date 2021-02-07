@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: veri hizmetini yapılandırma (WCF Veri Hizmetleri)'
 title: Veri hizmetini yapılandırma (WCF Veri Hizmetleri)
 ms.date: 03/30/2017
 dev_langs:
@@ -7,14 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: a30a8c2c731e8c5cb2b22c8d7f34ec32d149803c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 72bd0de5319cc4b19fd831f4ee302e073106c74b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152799"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766204"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Veri hizmetini yapılandırma (WCF Veri Hizmetleri)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Veri Hizmetleri, açık veri Protokolü (OData) akışlarını kullanıma sunan veri hizmetleri oluşturabilirsiniz. Bu akışlardaki veriler, çeşitli veri kaynaklarından gelebilir. WCF Veri Hizmetleri, bu verileri OData akışı olarak göstermek için veri sağlayıcılarını kullanır. Bu sağlayıcılar bir Entity Framework sağlayıcısı, bir yansıma sağlayıcısı ve bir dizi özel veri hizmeti sağlayıcısı arabirimlerini içerir. Sağlayıcı uygulama, hizmet için veri modelini tanımlar. Daha fazla bilgi için bkz. [veri hizmetleri sağlayıcıları](data-services-providers-wcf-data-services.md).  
   

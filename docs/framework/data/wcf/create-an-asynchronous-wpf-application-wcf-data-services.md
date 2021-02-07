@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: zaman uyumsuz Windows Presentation Framework uygulaması oluşturma (WCF Veri Hizmetleri)'
 title: 'Nasıl yapılır: zaman uyumsuz bir Windows Presentation Framework uygulaması oluşturma (WCF Veri Hizmetleri)'
 ms.date: 03/30/2017
 dev_langs:
@@ -7,14 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, asynchronous operations
 ms.assetid: 834614df-1427-4839-b0be-90f68e5afffd
-ms.openlocfilehash: 67f6e27e4042e1cddbef8b99a2235e1a21d270d2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8bc8045854ed0b73c06276e2c81e7e03a0ecc8d6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152748"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766202"
 ---
 # <a name="how-to-create-an-asynchronous-windows-presentation-framework-application-wcf-data-services"></a>Nasıl yapılır: zaman uyumsuz bir Windows Presentation Framework uygulaması oluşturma (WCF Veri Hizmetleri)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Veri Hizmetleri, bir veri hizmetinden alınan verileri bir Windows Presentation Framework (WPF) uygulamasının UI öğesine bağlayabilirsiniz. Daha fazla bilgi için bkz. [verileri denetimlere bağlama](binding-data-to-controls-wcf-data-services.md). Ayrıca, bir veri hizmeti isteğine yanıt beklerken uygulamanın yanıt vermeye devam etmesine olanak tanıyan, veri hizmetine karşı işlemleri zaman uyumsuz bir şekilde yürütebilirsiniz. Veri hizmetine zaman uyumsuz olarak erişmek için Silverlight uygulamaları gerekir. Daha fazla bilgi için bkz. [zaman uyumsuz işlemler](asynchronous-operations-wcf-data-services.md).  
   
