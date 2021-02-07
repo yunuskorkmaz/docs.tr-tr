@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi <transport> edinin: <wsHttpBinding>'
 title: <transport> / <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 21e38acf-450a-4bda-82b6-de305e1f7cd8
-ms.openlocfilehash: 1afeed62fcbf3b083d69a7cedb7eb80b81f5c17b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7801148d76aaa9c074eeb7a83c1dd2fa152d871c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73732744"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749323"
 ---
 # <a name="transport-of-wshttpbinding"></a>\<transport> / \<wsHttpBinding>
 
@@ -21,7 +22,7 @@ HTTP taşıması için kimlik doğrulama ayarlarını tanımlar.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-wshttpbinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<transport>**  
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <wsHttpBinding>

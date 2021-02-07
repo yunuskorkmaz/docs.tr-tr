@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi <add> edinin: <serviceActivations>'
 title: <add> / <serviceActivations>
 ms.date: 03/30/2017
 ms.assetid: e5b01fc8-ee84-48b7-95fd-95ab54fa871f
-ms.openlocfilehash: a0f68717f765482f53e675458fae63d1a374d6fb
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 53c89321c8cde1966a04870c62fa0777610ff547
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850322"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99750149"
 ---
 # <a name="add-of-serviceactivations"></a>\<add> / \<serviceActivations>
 
@@ -19,7 +20,7 @@ Windows Communication Foundation (WCF) hizmet türlerine eşlenen sanal hizmet e
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceActivations>**](serviceactivations.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <serviceHostingEnvironment>
@@ -54,7 +55,7 @@ Yok.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Aşağıdaki örnek, Web. config dosyanızda etkinleştirme ayarlarının nasıl yapılandırılacağını gösterir.
+Aşağıdaki örnek, web.config dosyanızda etkinleştirme ayarlarının nasıl yapılandırılacağını gösterir.
 
 ```xml
 <configuration>

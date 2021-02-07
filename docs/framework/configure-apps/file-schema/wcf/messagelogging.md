@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <messageLogging>'
 title: <messageLogging>
 ms.date: 03/30/2017
 ms.assetid: 1d06a7e6-9633-4a12-8c5d-123adbbc19c5
-ms.openlocfilehash: fd4d678b1e861a47762d8a64f85dcc052a30fe2b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e26a616bb7974a8fbad9a7f920a28e06422e09c1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204807"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749291"
 ---
 # \<messageLogging>
 

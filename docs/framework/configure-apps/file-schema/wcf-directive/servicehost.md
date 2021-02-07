@@ -1,12 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: @ServiceHost'
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: cb425d9f4dadd97e93946a2b4cd9d059ea8504ce
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: d16fda68bdc753121f02f6332dabedf236fac257
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051369"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99750318"
 ---
 # <a name="servicehost"></a>\@ServiceHost
 
@@ -36,7 +38,7 @@ Hizmet ana bilgisayarının örneğini oluşturmak için kullanılan hizmet ana 
 
 ### <a name="debug"></a>Hata ayıklama
 
-Windows Communication Foundation (WCF) hizmetinin hata ayıklama sembolleriyle derlenmesi gerekip gerekmediğini belirtir. `true`WCF hizmeti hata ayıklama sembolleri ile derlenmelidir; Aksi takdirde, `false` .
+Windows Communication Foundation (WCF) hizmetinin hata ayıklama sembolleriyle derlenmesi gerekip gerekmediğini belirtir. `true` WCF hizmeti hata ayıklama sembolleri ile derlenmelidir; Aksi takdirde, `false` .
 
 ### <a name="language"></a>Dil
 

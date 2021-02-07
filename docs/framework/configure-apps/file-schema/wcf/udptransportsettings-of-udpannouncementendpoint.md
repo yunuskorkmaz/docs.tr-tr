@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi <udpTransportSettings> edinin: <udpAnnouncementEndpoint>'
 title: <udpTransportSettings> / <udpAnnouncementEndpoint>
 ms.date: 03/30/2017
 ms.assetid: a7ddff1a-5eed-4bbc-8580-b95ef8890e1f
-ms.openlocfilehash: 9b2efe706777550f300f5b88710874342c51c5cc
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2997004e162728b20daa4f137e1edf132cd33d52
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148861"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749213"
 ---
 # <a name="udptransportsettings-of-udpannouncementendpoint"></a>\<udpTransportSettings> / \<udpAnnouncementEndpoint>
 
@@ -55,7 +56,7 @@ Bu yapılandırma öğesi için UDP taşıma ayarlarını gösterir [\<udpAnnoun
 |maxPendingMessageCount|Tek bir kanal örneği için InputQueue öğesinden alınmış ancak henüz kaldırılmayan en fazla ileti sayısını belirten bir tamsayı.  InputQueue, bekleyen ileti sayısı sınırına ulaşmışsa ileti bırakılır.<br /><br /> Varsayılan değer 32 ' dir.|  
 |Değerini|Bağlama tarafından işlenebilecek bir iletinin en büyük boyutunu belirten bir tamsayı.<br /><br /> Varsayılan değer 65507 ' dir.|  
 |maxUnicastRetransmitCount|İletinin en fazla kaç kez yeniden gönderilmesi gerektiğini belirten bir tamsayı (ilk gönderme 'ya ek olarak).  İleti bir tek noktaya yayın adresine gönderilirse ve karşılık gelen bir RelatesTo üstbilgisiyle yanıt iletisi alındığında, yeniden iletim erken sonlandırılabilir (yapılandırılan sayıda yeniden gönderilmeden önce).<br /><br /> Varsayılan değer 1’dir.|  
-|multicastInterfaceId|Çoklu bilgisayarlı makinelerde çok noktaya yayın trafiği gönderirken ve alırken kullanılması gereken ağ bağdaştırıcısını benzersiz şekilde tanımlayan bir dize. Çalışma zamanında, aktarım bu öznitelik değerini, daha sonra `IP_MULTICAST_IF` ve yuva seçeneklerini ayarlamak için kullanılan arabirim dizinini aramak için kullanır `IPV6_MULTICAST_IF` .  Varsa, çok noktaya yayın grubuna katılırken de aynı arabirim dizini kullanılacaktır.<br /><br /> Varsayılan değer: `null`.|  
+|multicastInterfaceId|Çoklu bilgisayarlı makinelerde çok noktaya yayın trafiği gönderirken ve alırken kullanılması gereken ağ bağdaştırıcısını benzersiz şekilde tanımlayan bir dize. Çalışma zamanında, aktarım bu öznitelik değerini, daha sonra `IP_MULTICAST_IF` ve yuva seçeneklerini ayarlamak için kullanılan arabirim dizinini aramak için kullanır `IPV6_MULTICAST_IF` .  Varsa, çok noktaya yayın grubuna katılırken de aynı arabirim dizini kullanılacaktır.<br /><br /> `null` varsayılan değerdir.|  
 |socketReceiveBufferSize|Temeldeki WinSock yuvasında Alım arabelleği boyutunu belirten bir tamsayı.<br /><br /> Alma kanalının bir kullanıcısı, verileri alırken sistemin nasıl davranacağını denetlemek için bağlama üzerinde bu özniteliği kullanabilir.  Örneğin, bu öznitelik için daha yüksek bir değere sahip gelen WCF iletilerini kullanan bir uygulama, iletilerin, uygulamanın onları işlemesini beklerken WinSock arabelleğine yığmasını sağlar.  Aynı durumda daha düşük bir değer kullanılması, iletilerin bırakılmasına neden olur. Bu öznitelik, temeldeki WinSock `SO_RCVBUF` yuva seçeneğini gösterir. Bu öznitelik değeri en az boyut olmalıdır `maxReceivedMessageSize` .   Değerinden küçük bir değere ayarlanması `maxReceivedMessageSize` çalışma zamanı özel durumuna neden olur.<br /><br /> Varsayılan değer 65536 ' dir.|  
 |timeToLive|Çok noktaya yayın paketinin geçebileceğine yönelik ağ segmenti atlamalarının sayısını belirten bir tamsayı.  Bu öznitelik, `IP_MULTICAST_TTL` ve yuva seçenekleriyle ilişkili işlevselliği gösterir `IP_TTL` .<br /><br /> Varsayılan değer 1’dir.|  
   

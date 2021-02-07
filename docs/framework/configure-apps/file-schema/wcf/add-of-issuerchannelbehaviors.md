@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi <add> edinin: <issuerChannelBehaviors>'
 title: <add> / <issuerChannelBehaviors>
 ms.date: 03/30/2017
 ms.assetid: 50710506-e28f-45dd-ab7e-bff6f44173db
-ms.openlocfilehash: cf7ac2691ad1c641352a8047373ced538b19e983
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ccd8ba015b7a6837c74ce2c051a794d36ce8ceaa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398327"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99750305"
 ---
 # <a name="add-of-issuerchannelbehaviors"></a>\<add> / \<issuerChannelBehaviors>
 
@@ -26,7 +27,7 @@ STS ile iletişim kurulurken kullanılacak bir uç nokta davranışı ekler.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<issuerChannelBehaviors>**](issuerchannelbehaviors-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <add issuerAddress="string"
@@ -56,7 +57,7 @@ Yok.
 
 ## <a name="remarks"></a>Açıklamalar
 
-`issuerAddress`istemcinin iletişim kurmak istediği güvenlik belirteci hizmetinin URI 'sini içerir. `behaviorConfiguration`uygulamanın, güvenlik belirteci hizmetlerinden verilen belirteçleri almak için Windows Communication Foundation (WCF) tarafından oluşturulan kanallarda kullandığı bir uç nokta davranışına işaret eder.
+`issuerAddress` istemcinin iletişim kurmak istediği güvenlik belirteci hizmetinin URI 'sini içerir. `behaviorConfiguration` uygulamanın, güvenlik belirteci hizmetlerinden verilen belirteçleri almak için Windows Communication Foundation (WCF) tarafından oluşturulan kanallarda kullandığı bir uç nokta davranışına işaret eder.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

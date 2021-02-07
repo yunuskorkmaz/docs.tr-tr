@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: <additionalRequestParameters> öğesi'
 title: <additionalRequestParameters> öğesi
 ms.date: 03/30/2017
 ms.assetid: da8109fb-581c-48f4-b718-3bbda1edc47d
-ms.openlocfilehash: e175e2b68610ea91f78a04d2c9a4ed202c1f2605
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d27a8f25f4b45509989e4a348a0aeed0c2c22f15
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172924"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99750006"
 ---
 # <a name="additionalrequestparameters-element"></a>\<additionalRequestParameters> öğesi
 

@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi <message> edinin: <netHttpBinding>'
 title: <message> / <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9def5a35-475d-40d6-b716-ccdbd93863c7
-ms.openlocfilehash: b37d6b1bd8f5372c230acbc2ada299415b2e40b3
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 508e58e58dbb298081a075588ddda87289c1a3d1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204859"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749629"
 ---
 # <a name="message-of-nethttpbinding"></a>\<message> / \<netHttpBinding>
 
@@ -36,7 +37,7 @@ ms.locfileid: "91204859"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|algorithmSuite|İleti şifrelemesini ve anahtar sarması algoritmalarını ayarlar. Bu öznitelik, <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> algoritmaları ve anahtar boyutlarını belirten türüdür. Bu algoritmalar güvenlik Ilkesi dili (WS-SecurityPolicy) belirtiminde belirtilen olanlarla eşlenir.<br /><br /> Varsayılan değer: `Basic256`.|  
+|algorithmSuite|İleti şifrelemesini ve anahtar sarması algoritmalarını ayarlar. Bu öznitelik, <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> algoritmaları ve anahtar boyutlarını belirten türüdür. Bu algoritmalar güvenlik Ilkesi dili (WS-SecurityPolicy) belirtiminde belirtilen olanlarla eşlenir.<br /><br /> `Basic256` varsayılan değerdir.|  
 |clientCredentialType|İleti tabanlı güvenlik kullanarak istemci kimlik doğrulaması gerçekleştirirken kullanılacak kimlik bilgisinin türünü belirtir. Varsayılan değer: `UserName`.|  
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType özniteliği  

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: <trace> öğesi'
 title: <trace> Öğesi
 ms.date: 03/30/2017
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - trace element
 - trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
-ms.openlocfilehash: 617b42a0be2be272a78b33be997cce632d1c6dcb
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 470bc300911656a9c9951e52e3883ba5c8b01c59
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198931"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99750331"
 ---
 # <a name="trace-element"></a>\<trace> Öğesi
 

@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <baseAddressPrefixFilters>'
 title: <baseAddressPrefixFilters>
 ms.date: 03/30/2017
 ms.assetid: 8cab2a9a-c51f-4283-bb60-2ad0c274fd46
-ms.openlocfilehash: ce224a2a1d6d96f2bc72e9291e7256d264d86d50
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9212838393ead04bdcd475b314bb2707e6f899ce
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91149033"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749681"
 ---
 # \<baseAddressPrefixFilters>
 

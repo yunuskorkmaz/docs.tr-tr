@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <authorizationPolicies>'
 title: <authorizationPolicies>
 ms.date: 03/30/2017
 ms.assetid: 5b367489-54d7-408b-8f56-cb157dd68eaf
-ms.openlocfilehash: 7d8eb27b8a569b1ca6b65a7c8c70c6fb82f701a4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4b0f341a1bb6ebb4918a5d71aba82270c31ba863
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201583"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749837"
 ---
 # \<authorizationPolicies>
 

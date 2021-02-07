@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi <message> edinin: <ws2007HttpBinding>'
 title: <message> / <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9ffd8db6-84a8-4b38-a9fe-2cb1a87a1c97
-ms.openlocfilehash: 0979bd1c74061bb13a240bb46e1a37cd7ea1129c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f36e4447debe6fc55740a77a5fd1057378c6afc6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204846"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749577"
 ---
 # <a name="message-of-ws2007httpbinding"></a>\<message> / \<ws2007HttpBinding>
 
@@ -51,7 +52,7 @@ ms.locfileid: "91204846"
 |---------------|-----------------|  
 |`algorithmSuite`|İleti şifrelemesini ve anahtar sarması algoritmalarını ayarlar. Algoritmalar ve anahtar boyutları sınıfına göre belirlenir <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> . Bu algoritmalar güvenlik Ilkesi dili (WS-SecurityPolicy) belirtiminde belirtilen olanlarla eşlenir.<br /><br /> Varsayılan değer Basic256 ' dir.|  
 |`clientCredentialType`|İsteğe bağlı. Güvenlik modunu kullanarak istemci kimlik doğrulaması gerçekleştirirken kullanılacak kimlik bilgisinin türünü belirtir `Message` `TransportWithMessageCredentials` . Aşağıdaki tablodaki numaralandırma değerlerine bakın. Varsayılan olarak Windows.<br /><br /> Bu öznitelik türü <xref:System.ServiceModel.MessageCredentialType> .|  
-|`establishSecurityContext`|Güvenlik kanalının güvenli bir oturum kurup kurmadığını belirleyen bir değer. Güvenli bir oturum, uygulama iletilerini değiş tokuş etmeden önce bir güvenlik bağlamı belirteci (SCT) oluşturur. SCT oluşturulduğunda güvenlik kanalı, <xref:System.ServiceModel.Channels.ISession> üst kanallara yönelik bir arabirim sunar. Güvenli oturumları kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: güvenli oturum oluşturma](../../../wcf/feature-details/how-to-create-a-secure-session.md).<br /><br /> Varsayılan değer: `true`.|  
+|`establishSecurityContext`|Güvenlik kanalının güvenli bir oturum kurup kurmadığını belirleyen bir değer. Güvenli bir oturum, uygulama iletilerini değiş tokuş etmeden önce bir güvenlik bağlamı belirteci (SCT) oluşturur. SCT oluşturulduğunda güvenlik kanalı, <xref:System.ServiceModel.Channels.ISession> üst kanallara yönelik bir arabirim sunar. Güvenli oturumları kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: güvenli oturum oluşturma](../../../wcf/feature-details/how-to-create-a-secure-session.md).<br /><br /> `true` varsayılan değerdir.|  
 |`negotiateServiceCredential`|İsteğe bağlı. Hizmet kimlik bilgisinin istemcide bant dışı olarak sağlandığını veya bir anlaşma sürecinde hizmetten istemciye elde edilip edilmeyeceğini belirten bir değer. Bu tür bir anlaşma, olağan ileti alışverişi için bir precurslı ' dır.<br /><br /> `clientCredentialType`Öznitelik None, username veya Certificate değerine eşitse, bu özniteliği, `false` hizmet sertifikasının bant dışı olarak ayarlanması ve istemcinin hizmet davranışındaki hizmet sertifikasını (kullanarak) belirtmesi gerektiğini gösterir [\<serviceCertificate>](servicecertificate-of-servicecredentials.md) [\<serviceCredentials>](servicecredentials.md) . Bu mod, WS-Trust ve WS-SecureConversation uygulayan SOAP yığınları ile birlikte çalışabilir.<br /><br /> `ClientCredentialType`Özniteliği olarak ayarlandıysa `Windows` , bu özniteliği `false` Kerberos tabanlı kimlik doğrulamasını belirtir. Bu, istemci ve hizmetin aynı Kerberos etki alanının parçası olması gerektiği anlamına gelir. Bu mod, Kerberos belirteç profilini (OASSıS WSS TC ' de tanımlandığı şekilde) ve WS-Trust ve WS-SecureConversation ' i uygulayan SOAP yığınları ile birlikte çalışabilir.<br /><br /> Bu öznitelik olduğunda `true` , <xref:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenTypes.Spnego%2A> SOAP iletileri üzerinden Exchange 'i tünelle BIR .NET SOAP anlaşmasına neden olur.<br /><br /> Varsayılan değer: `true`.|  
   
 ## <a name="algorithmsuite-attribute"></a>algorithmSuite özniteliği  

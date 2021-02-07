@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: WCF Yönerge sözdizimi'
 title: WCF Yönerge Söz Dizimi
 ms.date: 03/30/2017
 ms.assetid: e471b042-d5e3-491c-bc81-758655016a3a
-ms.openlocfilehash: 217fd67029c654a813494776800b4008480c0569
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ee059fefae9fad51d58f324ea857c9ed9e799f04
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91149263"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99750344"
 ---
 # <a name="wcf-directive-syntax"></a>WCF Yönerge Söz Dizimi
 

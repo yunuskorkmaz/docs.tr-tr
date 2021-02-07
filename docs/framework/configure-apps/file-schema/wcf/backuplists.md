@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <backupLists>'
 title: <backupLists>
 ms.date: 03/30/2017
 ms.assetid: 593b3390-f65b-4684-ad40-0596b62f0954
-ms.openlocfilehash: 940bf28958251e7257b2cc19a9c5ff0059411bcd
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9647c507f85eba6bfd001b34dbf617bc881d3f2e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201557"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749707"
 ---
 # \<backupLists>
 
