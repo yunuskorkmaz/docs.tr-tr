@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ICorDebugCode2:: GetCompilerFlags yöntemi'
 title: ICorDebugCode2::GetCompilerFlags Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 532e9dfd-d114-4c75-b952-1accce102643
 topic_type:
 - apiref
-ms.openlocfilehash: 734a05d96aed309541708d4e6f80ed61cab85637
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 820b6d2392b2b91bbfc8a85b165c4d73a2546859
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82893495"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99711130"
 ---
-# <a name="icordebugcode2getcompilerflags-method"></a><span data-ttu-id="28f26-102">ICorDebugCode2::GetCompilerFlags Metodu</span><span class="sxs-lookup"><span data-stu-id="28f26-102">ICorDebugCode2::GetCompilerFlags Method</span></span>
+# <a name="icordebugcode2getcompilerflags-method"></a><span data-ttu-id="b53e5-103">ICorDebugCode2::GetCompilerFlags Metodu</span><span class="sxs-lookup"><span data-stu-id="b53e5-103">ICorDebugCode2::GetCompilerFlags Method</span></span>
 
-<span data-ttu-id="28f26-103">Bu kod nesnesinin yerel görüntü Oluşturucu (Ngen. exe) kullanılarak derlenen veya oluşturulan koşulları belirten bayrakları alır.</span><span class="sxs-lookup"><span data-stu-id="28f26-103">Gets the flags that specify the conditions under which this code object was either just-in-time (JIT) compiled or generated using the native image generator (Ngen.exe).</span></span>
+<span data-ttu-id="b53e5-104">Bu kod nesnesinin, yerel görüntü Oluşturucu (Ngen.exe) kullanılarak derlenen ya da oluşturulan ya da oluşturulduğu koşulları belirten bayrakları alır.</span><span class="sxs-lookup"><span data-stu-id="b53e5-104">Gets the flags that specify the conditions under which this code object was either just-in-time (JIT) compiled or generated using the native image generator (Ngen.exe).</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="28f26-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="28f26-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="b53e5-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b53e5-105">Syntax</span></span>
 
 ```cpp
 HRESULT GetCompilerFlags (
@@ -34,17 +35,17 @@ HRESULT GetCompilerFlags (
 );
 ```
 
-## <a name="parameters"></a><span data-ttu-id="28f26-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="28f26-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="b53e5-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b53e5-106">Parameters</span></span>
 
 `pdwFlags`  
-<span data-ttu-id="28f26-106">dışı JıT derleyicisinin veya yerel görüntü oluşturucunun davranışını belirten [CorDebugJITCompilerFlags](cordebugjitcompilerflags-enumeration.md) numaralandırması değerine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="28f26-106">[out] A pointer to a value of the [CorDebugJITCompilerFlags](cordebugjitcompilerflags-enumeration.md) enumeration that specifies the behavior of the JIT compiler or the native image generator.</span></span>
+<span data-ttu-id="b53e5-107">dışı JıT derleyicisinin veya yerel görüntü oluşturucunun davranışını belirten [CorDebugJITCompilerFlags](cordebugjitcompilerflags-enumeration.md) numaralandırması değerine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="b53e5-107">[out] A pointer to a value of the [CorDebugJITCompilerFlags](cordebugjitcompilerflags-enumeration.md) enumeration that specifies the behavior of the JIT compiler or the native image generator.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="28f26-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="28f26-107">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="b53e5-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b53e5-108">Requirements</span></span>
 
-<span data-ttu-id="28f26-108">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="28f26-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>
+<span data-ttu-id="b53e5-109">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b53e5-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>
 
-<span data-ttu-id="28f26-109">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="28f26-109">**Header:** CorDebug.idl, CorDebug.h</span></span>
+<span data-ttu-id="b53e5-110">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="b53e5-110">**Header:** CorDebug.idl, CorDebug.h</span></span>
 
-<span data-ttu-id="28f26-110">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="28f26-110">**Library:** CorGuids.lib</span></span>
+<span data-ttu-id="b53e5-111">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="b53e5-111">**Library:** CorGuids.lib</span></span>
 
-<span data-ttu-id="28f26-111">**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="28f26-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+<span data-ttu-id="b53e5-112">**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b53e5-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

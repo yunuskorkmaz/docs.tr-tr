@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugController:: CanCommitChanges yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugController::CanCommitChanges Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 7050e94b-f197-4ffd-88fa-ed2ecdf19663
 topic_type:
 - apiref
-ms.openlocfilehash: 3219ec752d74a6fb999e494716acd167bdb21a13
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fd28f065a842b8002f67a73bf1e293990868d342
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125458"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99710770"
 ---
-# <a name="icordebugcontrollercancommitchanges-method"></a><span data-ttu-id="13bc3-102">ICorDebugController::CanCommitChanges Yöntemi</span><span class="sxs-lookup"><span data-stu-id="13bc3-102">ICorDebugController::CanCommitChanges Method</span></span>
+# <a name="icordebugcontrollercancommitchanges-method"></a><span data-ttu-id="d1fe8-103">ICorDebugController::CanCommitChanges Yöntemi</span><span class="sxs-lookup"><span data-stu-id="d1fe8-103">ICorDebugController::CanCommitChanges Method</span></span>
 
-<span data-ttu-id="13bc3-103">`CanCommitChanges` artık kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="13bc3-103">`CanCommitChanges` is obsolete.</span></span> <span data-ttu-id="13bc3-104">Bu yöntemi çağırmayın.</span><span class="sxs-lookup"><span data-stu-id="13bc3-104">Do not call this method.</span></span>
+<span data-ttu-id="d1fe8-104">`CanCommitChanges` artık kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="d1fe8-104">`CanCommitChanges` is obsolete.</span></span> <span data-ttu-id="d1fe8-105">Bu yöntemi çağırmayın.</span><span class="sxs-lookup"><span data-stu-id="d1fe8-105">Do not call this method.</span></span>

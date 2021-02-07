@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ırivmunmanageddocument:: HasEmbeddedSource Yöntemi'
 title: ISymUnmanagedDocument::HasEmbeddedSource Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,33 +16,33 @@ helpviewer_keywords:
 ms.assetid: 385fc4d3-365c-4645-b7b0-6c4c5344b79f
 topic_type:
 - apiref
-ms.openlocfilehash: 09bc0f87cd35f12a15566fb525c2ce42990ac69b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fcab83fea65d9a9e483bff9d2d75714c233718eb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95688204"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99710133"
 ---
-# <a name="isymunmanageddocumenthasembeddedsource-method"></a><span data-ttu-id="e104c-102">ISymUnmanagedDocument::HasEmbeddedSource Yöntemi</span><span class="sxs-lookup"><span data-stu-id="e104c-102">ISymUnmanagedDocument::HasEmbeddedSource Method</span></span>
+# <a name="isymunmanageddocumenthasembeddedsource-method"></a><span data-ttu-id="8e7ff-103">ISymUnmanagedDocument::HasEmbeddedSource Yöntemi</span><span class="sxs-lookup"><span data-stu-id="8e7ff-103">ISymUnmanagedDocument::HasEmbeddedSource Method</span></span>
 
-<span data-ttu-id="e104c-103">`true`Belgenin hata ayıklama sembollerine katıştırılmış kaynak olup olmadığını döndürür; Aksi takdirde, döndürür `false` .</span><span class="sxs-lookup"><span data-stu-id="e104c-103">Returns `true` if the document has source embedded in the debugging symbols; otherwise, returns `false`.</span></span>  
+<span data-ttu-id="8e7ff-104">`true`Belgenin hata ayıklama sembollerine katıştırılmış kaynak olup olmadığını döndürür; Aksi takdirde, döndürür `false` .</span><span class="sxs-lookup"><span data-stu-id="8e7ff-104">Returns `true` if the document has source embedded in the debugging symbols; otherwise, returns `false`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e104c-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="e104c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8e7ff-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8e7ff-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT HasEmbeddedSource(  
    [out, retval]  BOOL  *pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e104c-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="e104c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8e7ff-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="8e7ff-106">Parameters</span></span>  
 
  `pRetVal`  
- <span data-ttu-id="e104c-106">dışı Belgenin hata ayıklama sembollerine gömülü kaynak olup olmadığını gösteren bir değişkene yönelik işaretçi.</span><span class="sxs-lookup"><span data-stu-id="e104c-106">[out] A pointer to a variable that indicates whether the document has source embedded in the debugging symbols.</span></span>  
+ <span data-ttu-id="8e7ff-107">dışı Belgenin hata ayıklama sembollerine gömülü kaynak olup olmadığını gösteren bir değişkene yönelik işaretçi.</span><span class="sxs-lookup"><span data-stu-id="8e7ff-107">[out] A pointer to a variable that indicates whether the document has source embedded in the debugging symbols.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e104c-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="e104c-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="8e7ff-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="8e7ff-108">Return Value</span></span>  
 
- <span data-ttu-id="e104c-108">Yöntem başarılı olursa S_OK.</span><span class="sxs-lookup"><span data-stu-id="e104c-108">S_OK if the method succeeds.</span></span>  
+ <span data-ttu-id="8e7ff-109">Yöntem başarılı olursa S_OK.</span><span class="sxs-lookup"><span data-stu-id="8e7ff-109">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e104c-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e104c-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8e7ff-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8e7ff-110">See also</span></span>
 
-- [<span data-ttu-id="e104c-110">ISymUnmanagedDocument Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e104c-110">ISymUnmanagedDocument Interface</span></span>](isymunmanageddocument-interface.md)
+- [<span data-ttu-id="8e7ff-111">ISymUnmanagedDocument Arabirimi</span><span class="sxs-lookup"><span data-stu-id="8e7ff-111">ISymUnmanagedDocument Interface</span></span>](isymunmanageddocument-interface.md)
