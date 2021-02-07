@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerInfo:: SetEventMask yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerInfo::SetEventMask Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 44bc0f56-32fa-491e-a62d-52fc96d48125
 topic_type:
 - apiref
-ms.openlocfilehash: 9d319b6523b2c2a1bcc5cb6ea7a28efa67d898e8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e389d25abfecfc9a5dec8834e412fe618324e311
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720956"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99687200"
 ---
 # <a name="icorprofilerinfoseteventmask-method"></a>ICorProfilerInfo::SetEventMask Yöntemi
 
 Profil oluşturucunun ortak dil çalışma zamanından (CLR) bildirim almak istediği olay türlerini belirten bir değer ayarlar.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT SetEventMask(  

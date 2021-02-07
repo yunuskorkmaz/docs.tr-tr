@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ICorProfilerInfo3:: RequestProfilerDetach yöntemi'
 title: ICorProfilerInfo3::RequestProfilerDetach Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: ea102e62-0454-4477-bcf3-126773acd184
 topic_type:
 - apiref
-ms.openlocfilehash: 2ea39c94a5a0f3d24d4123d6405115ac75105e26
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6d37c6df823aaebe4209e45cd459a8815a39852f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721588"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99687044"
 ---
 # <a name="icorprofilerinfo3requestprofilerdetach-method"></a>ICorProfilerInfo3::RequestProfilerDetach Yöntemi
 
 Çalışma zamanına profil oluşturucuyu ayırmasını söyler.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT RequestProfilerDetach(  
@@ -42,7 +43,7 @@ HRESULT RequestProfilerDetach(
 
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|Ayırma isteği geçerli ve ayırma yordamı artık başka bir iş parçacığında devam ediyor. Ayırma tam olarak tamamlandığında bir `ProfilerDetachSucceeded` olay verilir.|  
 |E_CORPROF_E_CALLBACK3_REQUIRED|Profil Oluşturucu, ayırma işlemini desteklemek için uygulanması gereken [ICorProfilerCallback3](icorprofilercallback3-interface.md) arabirimi için [IUnknown:: QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) girişimi başarısız oldu. Ayırma denenmedi.|  

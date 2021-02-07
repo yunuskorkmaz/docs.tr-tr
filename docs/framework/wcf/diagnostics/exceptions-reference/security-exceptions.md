@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: güvenlik özel durumları'
 title: Güvenlik Özel Durumları
 ms.date: 03/30/2017
 ms.assetid: 76d5e5cd-e4f4-404f-9a5a-ec3522494ad8
-ms.openlocfilehash: e96c317862867b9e461eb2d13dce6ede5b30cf13
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: efa3b7e132f3f3fdc8f2cb5b7dc09614ce584fdb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348238"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99686238"
 ---
 # <a name="security-exceptions"></a>Güvenlik özel durumları
 
@@ -29,7 +30,7 @@ Bu konu, tüm güvenlik özel durumlarını listeler.
 |Bindingınotsupportwindowsıdenityforımpersonation|Belirtilen sözleşme işlemi otomatik kimliğe bürünme için Windows kimliği gerektirir. Çağrıyı temsil eden bir Windows kimliği belirtilen sözleşme için belirtilen bağlama tarafından sağlanmadı.|
 |Cachednegotiationstatequotareatiz|Belirtilen kapasiteye ulaşıldığından hizmet, anlaşma durumunu önbelleğe alamaz. İsteği yeniden deneyin.|
 |Önbellekeşitlenmiş|Öğe eklenemiyor. En büyük önbellek boyutu belirtilir.|
-|CannotDetermineSPNBasedOnAddress|İstemci, SspiNegotiation/Kerberos amacıyla belirtilen hedef adresteki kimliğe göre hizmet asıl adını belirleyemiyor. Hedef adres kimliği, bir UPN kimliği (acmedomain\\\gamze) veya SPN kimliği (konak/bobs-Machine gibi) olmalıdır.|
+|CannotDetermineSPNBasedOnAddress|İstemci, SspiNegotiation/Kerberos amacıyla belirtilen hedef adresteki kimliğe göre hizmet asıl adını belirleyemiyor. Hedef adres kimliği, bir UPN kimliği (acmedomain \\ \gamze gibi) veya SPN kimliği (konak/bobs-Machine gibi) olmalıdır.|
 |CannotFindCert|Belirtilen arama ölçütleri kullanılarak X. 509.952 sertifikası bulunamıyor: StoreName, StoreLocation, FindType, FindValue.|
 |CannotFindCertForTarget|Belirtilen hedef için belirtilen arama ölçütleri kullanılarak X. 509.952 sertifikası bulunamıyor: StoreName, StoreLocation, FindType, FindValue.|
 |CannotFindCorrelationStateForApplyingSecurity|Yanıtlayanın yanıt vermesi için güvenlik uygulama bağıntı durumu bulunamıyor.|

@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerInfo:: IsArrayClass yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerInfo::IsArrayClass Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 7f230961-23a6-4d56-ad2d-7a876d65705f
 topic_type:
 - apiref
-ms.openlocfilehash: 2608f91a7c5baa935e48fbe58ad4d14aaaad1f0d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1eee0b834c63c3cfe15bd08776214ca8b2ba3f69
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722511"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99687239"
 ---
 # <a name="icorprofilerinfoisarrayclass-method"></a>ICorProfilerInfo::IsArrayClass Yöntemi
 
 Belirtilen sınıfın bir dizi sınıfı olup olmadığını belirler.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT IsArrayClass(  

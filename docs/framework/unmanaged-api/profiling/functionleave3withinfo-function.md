@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Functionleave3withınfo Işlevi'
 title: FunctionLeave3WithInfo İşlevi
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 5fa68a67-ced6-41c6-a2c0-467060fd0692
 topic_type:
 - apiref
-ms.openlocfilehash: 69ee0ea78e0c7edbb61999ef8fba1791e6f682bc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6a861f455e827258368764b80547c3b3e9c986cd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722251"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99687421"
 ---
 # <a name="functionleave3withinfo-function"></a>FunctionLeave3WithInfo İşlevi
 
 Denetim oluşturucuyu bir işlevden döndürülmekte olduğunu bildirir ve yığın çerçevesini ve dönüş değerini almak için [ICorProfilerInfo3:: GetFunctionLeave3Info yöntemine](icorprofilerinfo3-getfunctionleave3info-method.md) geçirilebilecek bir tanıtıcı sağlar.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 void __stdcall FunctionLeave3WithInfo(  

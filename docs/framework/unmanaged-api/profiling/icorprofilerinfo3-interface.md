@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ICorProfilerInfo3 Interface'
 title: ICorProfilerInfo3 Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 044a262f-0fa7-485d-b0c1-64cdc359c654
 topic_type:
 - apiref
-ms.openlocfilehash: 9944234da1677608aec10066b61bfc6a6cb72bcb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 52b4c699a122c302e47cffb11d01e7829009e219
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95697863"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99687187"
 ---
 # <a name="icorprofilerinfo3-interface"></a>ICorProfilerInfo3 Arabirimi
 

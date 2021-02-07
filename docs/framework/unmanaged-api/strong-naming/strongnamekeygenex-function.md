@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: StrongNameKeyGenEx Işlevi'
 title: StrongNameKeyGenEx İşlevi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 36bd10b9-9857-45f3-8d3b-0da091d6169e
 topic_type:
 - apiref
-ms.openlocfilehash: f28ee5767997240018d182b8303e4f65be81c702
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b6c103d16cac1b4668e4b478a0947970b5b44a0b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95708549"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99686836"
 ---
 # <a name="strongnamekeygenex-function"></a>StrongNameKeyGenEx İşlevi
 
@@ -27,7 +28,7 @@ Tanımlayıcı ad kullanımı için belirtilen anahtar boyutuyla yeni bir ortak/
   
  Bu işlev kullanım dışı bırakıldı. Bunun yerine [ICLRStrongName:: StrongNameKeyGenEx](../hosting/iclrstrongname-strongnamekeygenex-method.md) metodunu kullanın.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 BOOLEAN StrongNameKeyGenEx (  

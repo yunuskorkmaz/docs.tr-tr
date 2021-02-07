@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ICorProfilerInfo3:: Setfunctionıdmapper2 yöntemi'
 title: ICorProfilerInfo3::SetFunctionIDMapper2 Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 8cdb1188-952a-4ba8-9f05-bfebc18cdd29
 topic_type:
 - apiref
-ms.openlocfilehash: 26c26cf204f1a2743f46cfcfdfadbf2c3e3df38e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4847d3bd7b8bf6142da0f32c3558016b2c758087
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721575"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99686992"
 ---
 # <a name="icorprofilerinfo3setfunctionidmapper2-method"></a>ICorProfilerInfo3::SetFunctionIDMapper2 Yöntemi
 
 `FunctionID`Profil oluşturucunun işlev girişine/çıkış kancalarına geçirilen değerleri alternatif değerlerle eşlemek için çağrılacak Profil Oluşturucu uygulanmış işlevi belirtir. Bu yöntem, [ICorProfilerInfo:: SetFunctionIDMapper](icorprofilerinfo-setfunctionidmapper-method.md) yöntemini ek bir veri parametresiyle genişletir. Bu, profil oluşturucular çalışma zamanları arasında belirsizliği ortadan kaldırmak için kullanabilir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT SetFunctionIDMapper2(  

@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerInfo:: GetAppDomainInfo yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerInfo::GetAppDomainInfo Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: a6bf5a04-e03e-44f0-917a-96f6a6d3cc96
 topic_type:
 - apiref
-ms.openlocfilehash: 62055a98197f5f8bd4cfc02e99891b83ef6341e9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 981577320bdf04a2bf119115f066811d3c11b68f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95680306"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99687291"
 ---
 # <a name="icorprofilerinfogetappdomaininfo-method"></a>ICorProfilerInfo::GetAppDomainInfo Yöntemi
 
 Bir uygulama etki alanı KIMLIĞINI kabul eder. Bir uygulama etki alanı adı ve onu içeren işlemin KIMLIĞINI döndürür.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetAppDomainInfo(  
