@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: ORDER BY (Entity SQL)'
 title: SıRALAMA ölçütü (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c0b61572-ecee-41eb-9d7f-74132ec8a26c
-ms.openlocfilehash: 5e1c418a7f2bd40a42b259fb3784794b13098d7f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 092850e864ae95d50b615839265041a7e32b39a9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173685"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99696327"
 ---
 # <a name="order-by-entity-sql"></a>SıRALAMA ölçütü (Entity SQL)
 

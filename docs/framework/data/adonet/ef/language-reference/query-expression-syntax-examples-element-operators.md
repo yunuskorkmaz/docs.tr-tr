@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: sorgu Ifadesi sözdizimi örnekleri: öğe Işleçleri'
 title: 'Sorgu İfadesi Söz Dizimi Örnekleri: Öğe İşleçleri'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 32268fe2-de18-4065-8060-f250def83837
-ms.openlocfilehash: 8cd550120e949f247a17ca6c7dafca06607a4e7e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0dc6d49959abba712cef572eaa549138af646bd5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152994"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99696249"
 ---
 # <a name="query-expression-syntax-examples-element-operators"></a>Sorgu İfadesi Söz Dizimi Örnekleri: Öğe İşleçleri
 

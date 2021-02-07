@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: SQL Server veritabanı yansıtma'
 title: SQL Server’da Veritabanı Yansıtması
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: 7e2c1c8ea1cbc1bb22452b9ef9d1f250c96118ea
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 663f0a2a016a3f6c449c1d2694bc6c2d77eb6157
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173542"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695898"
 ---
 # <a name="database-mirroring-in-sql-server"></a>SQL Server’da Veritabanı Yansıtması
 
@@ -55,7 +56,7 @@ string activeServer = connection.DataSource;
   
 ## <a name="sqlclient-mirroring-behavior"></a>SqlClient yansıtma davranışı  
 
- İstemci her zaman geçerli asıl sunucuya bağlanmayı dener. Başarısız olursa, yük devretme ortağını dener. Yansıtma veritabanı zaten ortak sunucusunda sorumlu rolüne geçdiyse, bağlantı başarılı olur ve yeni asıl yansıtma eşlemesi istemciye gönderilir ve çağırmanın ömrü boyunca önbelleğe alınır <xref:System.AppDomain> . Kalıcı depolamada depolanmaz ve farklı bir **AppDomain** veya işlemdeki sonraki bağlantılarda kullanılamaz. Ancak, aynı **AppDomain**içindeki sonraki bağlantılar için de kullanılabilir. Aynı ya da farklı bir bilgisayar üzerinde çalışan başka bir **AppDomain** veya işlemin her zaman bağlantı havuzu olduğunu ve bu bağlantıların sıfırlanmadığını unutmayın. Bu durumda, birincil veritabanı kapalıysa, her işlem veya **AppDomain** bir kez başarısız olur ve havuz otomatik olarak temizlenir.  
+ İstemci her zaman geçerli asıl sunucuya bağlanmayı dener. Başarısız olursa, yük devretme ortağını dener. Yansıtma veritabanı zaten ortak sunucusunda sorumlu rolüne geçdiyse, bağlantı başarılı olur ve yeni asıl yansıtma eşlemesi istemciye gönderilir ve çağırmanın ömrü boyunca önbelleğe alınır <xref:System.AppDomain> . Kalıcı depolamada depolanmaz ve farklı bir **AppDomain** veya işlemdeki sonraki bağlantılarda kullanılamaz. Ancak, aynı **AppDomain** içindeki sonraki bağlantılar için de kullanılabilir. Aynı ya da farklı bir bilgisayar üzerinde çalışan başka bir **AppDomain** veya işlemin her zaman bağlantı havuzu olduğunu ve bu bağlantıların sıfırlanmadığını unutmayın. Bu durumda, birincil veritabanı kapalıysa, her işlem veya **AppDomain** bir kez başarısız olur ve havuz otomatik olarak temizlenir.  
   
 > [!NOTE]
 > Sunucuda yansıtma desteği, veritabanı başına temelinde yapılandırılır. Veri işleme işlemleri sorumlu/yansıtma kümesine dahil olmayan diğer veritabanlarına karşı yürütülürse, çok parçalı adlar kullanarak veya geçerli veritabanını değiştirerek, diğer veritabanlarında yapılan değişiklikler hata durumunda yayılmaz. Yansıtılmış olmayan bir veritabanında veri değiştirildiğinde hiçbir hata oluşturulmaz. Geliştirici, bu işlemlerin olası etkisini değerlendirmelidir.  

@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Method-Based sorgu söz dizimi örnekleri: bölümleme'
 title: 'Metot Tabanlı Sorgu Söz Dizimi Örnekleri: Bölümleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b7b64874-c3c8-4bdb-862c-89a168d07827
-ms.openlocfilehash: 659c05f261b854b1f2bb9bc3bce7c2889650571f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 914dacb5b82b9ce452d4d1d7a97262de5803a9fa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91191898"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99696691"
 ---
 # <a name="method-based-query-syntax-examples-partitioning"></a>Metot Tabanlı Sorgu Söz Dizimi Örnekleri: Bölümleme
 

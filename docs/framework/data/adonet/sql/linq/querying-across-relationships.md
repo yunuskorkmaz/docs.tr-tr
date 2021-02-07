@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Ilişkiler arasında sorgulama'
 title: İlişkilerde Sorgulama
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 297878d0-685b-4c01-b2e0-9d731b7322bc
-ms.openlocfilehash: 24ab13a1d67eac39c7b3d7be8cb1c16ec7265d5e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a29a24b21cc486f59ae7535db0e5f97831249ee0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91184891"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695261"
 ---
 # <a name="querying-across-relationships"></a>İlişkilerde Sorgulama
 
@@ -21,7 +22,7 @@ Sınıf tanımlarınızdaki diğer nesne veya diğer nesne koleksiyonları için
  [!code-csharp[DLinqQueryConcepts#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#3)]
  [!code-vb[DLinqQueryConcepts#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#3)]  
   
- İlişki özellikleri yoksa, aşağıdaki kodda olduğu gibi bunları SQL sorgusunda yaptığınız gibi, *birleşim*olarak el ile yazmanız gerekir:  
+ İlişki özellikleri yoksa, aşağıdaki kodda olduğu gibi bunları SQL sorgusunda yaptığınız gibi, *birleşim* olarak el ile yazmanız gerekir:  
   
  [!code-csharp[DLinqQueryConcepts#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#4)]
  [!code-vb[DLinqQueryConcepts#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#4)]  
@@ -32,7 +33,7 @@ Sınıf tanımlarınızdaki diğer nesne veya diğer nesne koleksiyonları için
   
  Artık ilişkilerimize sahip olduğunuza göre, sınıflarınızda tanımlanan ilişki özelliklerine başvurarak sorgu yazabilirsiniz. Bu ilişki başvuruları, veritabanındaki yabancı anahtar ilişkilerine karşılık gelir. Bu ilişkileri kullanan işlemler, eşdeğer SQL 'de daha karmaşık birleştirmeler için çeviri yapar. Bir ilişki tanımladığınız sürece ( <xref:System.Data.Linq.Mapping.AssociationAttribute> özniteliğini kullanarak), içinde açık bir katılmayı kodlamamalısınız [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] .  
   
- Bu yanılsaın korunmasını sağlamak için [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *ertelenmiş yükleme*adlı bir teknik uygular. Daha fazla bilgi için bkz. [ertelenmiş ve hemen yükleme](deferred-versus-immediate-loading.md).  
+ Bu yanılsaın korunmasını sağlamak için [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *ertelenmiş yükleme* adlı bir teknik uygular. Daha fazla bilgi için bkz. [ertelenmiş ve hemen yükleme](deferred-versus-immediate-loading.md).  
   
  Çiftler listesini proje için aşağıdaki SQL sorgusunu göz önünde bulundurun `CustomerID` - `OrderID` :  
   

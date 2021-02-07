@@ -1,24 +1,25 @@
 ---
+description: 'Daha fazla bilgi edinin: Iyimser eşzamanlılık: genel bakış'
 title: 'İyimser Eşzamanlılık: Genel Bakış'
 ms.date: 03/30/2017
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
-ms.openlocfilehash: 7a1bc23d9f012b2f3541c1411a25b7527e696873
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: fbf6714851dbb31982a110749c55e5fad7aa2206
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169407"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695430"
 ---
 # <a name="optimistic-concurrency-overview"></a>İyimser Eşzamanlılık: Genel Bakış
 
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] iyimser eşzamanlılık denetimini destekler. Aşağıdaki tabloda, belgelerde iyimser eşzamanlılık için uygulanan terimler açıklanmaktadır [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] :  
   
-|Terimler|Açıklama|  
+|Terimler|Description|  
 |-----------|-----------------|  
 |eşzamanlılık|Aynı anda iki veya daha fazla kullanıcının aynı veritabanı satırını güncelleştirmeye çalıştığı durum.|  
 |eşzamanlılık çakışması|Aynı anda iki veya daha fazla kullanıcının bir satırdaki bir veya daha fazla sütuna çakışan değerleri göndermeye çalıştığı durum.|  
 |eşzamanlılık denetimi|Eşzamanlılık çakışmalarını çözmek için kullanılan teknik.|  
-|iyimser eşzamanlılık denetimi|İlk araştırır, diğer işlemlerin, bir satırdaki değerleri, gönderilecek değişikliklere izin vermeden önce değiştirmediğini belirten tekniktir.<br /><br /> Eşzamanlılık çakışmalarını önlemek için kaydı kilitleyen, *Kötümser eşzamanlılık denetimiyle*karşıtlık.<br /><br /> *İyimser* denetim, başka bir işlemin çok az olması beklenmez bir işlem olma olasılığını düşünür.|  
+|iyimser eşzamanlılık denetimi|İlk araştırır, diğer işlemlerin, bir satırdaki değerleri, gönderilecek değişikliklere izin vermeden önce değiştirmediğini belirten tekniktir.<br /><br /> Eşzamanlılık çakışmalarını önlemek için kaydı kilitleyen, *Kötümser eşzamanlılık denetimiyle* karşıtlık.<br /><br /> *İyimser* denetim, başka bir işlemin çok az olması beklenmez bir işlem olma olasılığını düşünür.|  
 |çakışma çözümleme|Veritabanını yeniden sorgulayarak ve ardından farkları mutabık tutarak çakışan bir öğeyi yenileme işlemi.<br /><br /> Bir nesne yenilendiğinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] değişiklik İzleyici aşağıdaki verileri tutar:<br /><br /> -Başlangıçta veritabanından alınan ve güncelleştirme denetimi için kullanılan değerler.<br />-Sonraki sorgudaki yeni veritabanı değerleri.<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ardından nesnenin çakışma durumunda olup olmadığını (yani, bir veya daha fazla üye değerinin değişip değişmediğini) belirler. Nesne çakışırsa, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bir sonraki, üyelerinden hangilerinin çakışma olduğunu belirler.<br /><br /> Bulduğu herhangi bir üye çakışması [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bir çakışma listesine eklenir.|  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Nesne modelinde, aşağıdaki koşullardan her ikisi de doğru olduğunda *iyimser eşzamanlılık çakışması* oluşur:  

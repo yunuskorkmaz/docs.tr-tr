@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: HAVING (Entity SQL)'
 title: HAVING (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: b5d52d97-8372-4335-beac-2d0b79dc3707
-ms.openlocfilehash: a117f377b3f03b6a1a12e39426a24f3141aa40ff
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 70ace20d67e93aa051873d2b32a49f560902e63d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204469"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99696886"
 ---
 # <a name="having-entity-sql"></a>HAVING (Entity SQL)
 

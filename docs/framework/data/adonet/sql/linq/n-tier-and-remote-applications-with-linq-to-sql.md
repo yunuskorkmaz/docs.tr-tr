@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: LINQ to SQL ile N katmanlı ve uzak uygulamalar'
 title: LINQ to SQL ile N Katmanı ve Uzak Uygulamalar
 ms.date: 03/30/2017
 ms.assetid: 854a1cdd-53cb-45f5-83ca-63962a9b3598
-ms.openlocfilehash: 70f6a6ee91761196b62b34f6dde73d11dbe6b39d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6abaeed8d4953a9b810db32418a4ebd3e78683fc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91200608"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695612"
 ---
 # <a name="n-tier-and-remote-applications-with-linq-to-sql"></a>LINQ to SQL ile N Katmanı ve Uzak Uygulamalar
 

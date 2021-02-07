@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: diğer kurallı Işlevler'
 title: Diğer Kurallı İşlevler
 ms.date: 03/30/2017
 ms.assetid: 729bd47b-8e41-494c-a9a9-dcabf8b74312
-ms.openlocfilehash: 49fa52a74cd49bb7811c544fa411e11d18da86ff
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 239a82064c1547a7b539022344ca8570f2673094
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91161756"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99696301"
 ---
 # <a name="other-canonical-functions"></a>Diğer Kurallı İşlevler
 

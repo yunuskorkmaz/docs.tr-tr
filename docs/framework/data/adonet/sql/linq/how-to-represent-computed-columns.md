@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: hesaplanan sütunları temsil etme'
 title: 'Nasıl yapılır: Hesaplanan Sütunları Temsil Etme'
 ms.date: 03/30/2017
 ms.assetid: 4025f1fd-9dfa-46c0-b04f-34e8bc7957a2
-ms.openlocfilehash: d952a6c22cd96bbc89aeebfa4b13e9727a363c73
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5f3b4898cd29c148665c6696b0b3abab42bd071c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166332"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695625"
 ---
 # <a name="how-to-represent-computed-columns"></a>Nasıl yapılır: Hesaplanan Sütunları Temsil Etme
 

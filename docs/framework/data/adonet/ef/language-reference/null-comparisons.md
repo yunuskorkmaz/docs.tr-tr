@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: null karşılaştırmaları'
 title: Null Karşılaştırmalar
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: 71b7c4d86debe8cf267b1b65e3d176cbc4704e6d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3f2165cae56b6987330612cd2c9e21dfe8606fb2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91185112"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99696366"
 ---
 # <a name="null-comparisons"></a>Null Karşılaştırmalar
 

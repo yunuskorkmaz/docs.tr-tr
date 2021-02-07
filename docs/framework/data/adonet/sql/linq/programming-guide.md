@@ -1,19 +1,20 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Programlama Kılavuzu'
 title: Programlama Kılavuzu
 ms.date: 03/30/2017
 ms.assetid: ed1012d4-3ff2-4877-af27-93125c4180ea
-ms.openlocfilehash: 50c4370e23faf8400eb23f1e8c0cc74cd4dce80e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 37f3974864e9bfc11bff762617bab27e25a44007
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203572"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695248"
 ---
 # <a name="programming-guide"></a>Programlama Kılavuzu
 
 Bu bölüm, nesne modelinizi oluşturma ve kullanma hakkında bilgi içerir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] . Visual Studio kullanıyorsanız, aynı görevlerin birçoğunu gerçekleştirmek için Nesne İlişkisel Tasarımcısı de kullanabilirsiniz.  
   
- Ayrıca, belirli sorunlar için Microsoft Docs arayabilir ve uzmanlarla ayrıntılı olarak daha karmaşık konular tartışabilirsiniz [LINQ forumuna](https://social.msdn.microsoft.com/forums/home?forum=linqtosql)katılabilirsiniz. Son olarak, [LINQ to SQL: Ilişkisel veri teknik incelemesi için .NET dil tümleşik sorgusu](/previous-versions/dotnet/articles/bb425822(v=msdn.10)) [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , Visual Basic ve C# kod örnekleriyle birlikte tamamlanır.  
+ Ayrıca, belirli sorunlar için Microsoft Docs arayabilir ve uzmanlarla ayrıntılı olarak daha karmaşık konular tartışabilirsiniz [LINQ forumuna](https://social.msdn.microsoft.com/forums/home?forum=linqtosql)katılabilirsiniz. Son olarak, [Ilişkisel veri teknik incelemesi için LINQ to SQL: .net Language-Integrated sorgusu](/previous-versions/dotnet/articles/bb425822(v=msdn.10)) [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , Visual Basic ve C# kod örnekleri ile birlikte tamamlanmıştır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
 

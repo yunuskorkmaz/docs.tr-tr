@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Entity SQL Transact-SQL öğesinden farklı'
 title: Entity SQL ile Transact-SQL Arasındaki Farklar
 ms.date: 03/30/2017
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
-ms.openlocfilehash: 9433e7a7ffdc3a7e32900981dca95eefde32f290
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 349dd64cc0e548ab0dc8d0e66e8bb14b58912d09
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204443"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99696873"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Entity SQL Transact-SQL ' den farklı
 
@@ -17,7 +18,7 @@ Bu makalede Entity SQL ve Transact-SQL arasındaki farklar açıklanmaktadır.
 
  Entity SQL doğrudan kavramsal varlık şemalarıyla çalışarak, devralma ve ilişkiler gibi kavramsal model özelliklerini destekler.  
   
- Devralmayla çalışırken, genellikle bir üst tür alt türünün örneklerini seçmek yararlıdır. Entity SQL [oftype](oftype-entity-sql.md) ( `oftype` C# dizilerinde olduğu gibi) OfType işleci bu yeteneği sağlar.  
+ Devralmayla çalışırken, genellikle bir üst tür alt türünün örneklerini seçmek yararlıdır. Entity SQL [](oftype-entity-sql.md) ( `oftype` C# dizilerinde olduğu gibi) OfType işleci bu yeteneği sağlar.  
   
 ## <a name="support-for-collections"></a>Koleksiyonlar için destek  
 
@@ -146,7 +147,7 @@ FROM T
 GROUP BY b + c
 ```  
   
-## <a name="collection-based-aggregates"></a>Koleksiyon tabanlı toplamalar  
+## <a name="collection-based-aggregates"></a>Collection-Based toplamaları  
 
  Entity SQL iki tür toplamaları destekler.  
   
@@ -207,7 +208,7 @@ SELECT C2.FirstName, C2.LastName
  Yerleşik Işlevler, Işleçler  
  Entity SQL, Transact-SQL ' in yerleşik işlevlerinin ve işleçlerinin bir alt kümesini destekler. Bu işleçler ve işlevler büyük olasılıkla ana mağaza sağlayıcıları tarafından desteklenmektedir. Entity SQL, bir sağlayıcı bildiriminde belirtilen mağazaya özgü işlevleri kullanır. Ayrıca Entity Framework, Entity SQL kullanılmak üzere yerleşik ve Kullanıcı tanımlı mevcut depolama işlevlerini bildirmenize olanak tanır.  
   
- Yapılandıracak  
+ İpuçları  
  Entity SQL sorgu ipuçları için mekanizmalar sağlamıyor.  
   
  Sorgu sonuçlarını toplu işleme  
