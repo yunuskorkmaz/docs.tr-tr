@@ -1,5 +1,6 @@
 ---
-title: Dönüştürme işlevleri
+description: 'Daha fazla bilgi edinin: dönüştürme işlevleri (Visual Basic)'
+title: Dönüşüm işlevleri
 ms.date: 07/20/2015
 helpviewer_keywords:
 - conversions [Visual Basic], conversion functions
@@ -12,43 +13,43 @@ helpviewer_keywords:
 - functions [Visual Basic], conversion
 - dates [Visual Basic], converting
 ms.assetid: 8a8fb553-a8ac-424e-8103-26eea25eaa71
-ms.openlocfilehash: c25ede7c86d11c108981acc4103ce6334803393a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3a022d120fbccd833e942405bfa9c370f94875ae
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406449"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99701293"
 ---
-# <a name="conversion-functions-visual-basic"></a><span data-ttu-id="1c73b-102">Dönüştürme işlevleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1c73b-102">Conversion functions (Visual Basic)</span></span>
+# <a name="conversion-functions-visual-basic"></a><span data-ttu-id="970eb-103">Dönüştürme işlevleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="970eb-103">Conversion functions (Visual Basic)</span></span>
 
 - <xref:Microsoft.VisualBasic.Strings.Asc%2A>
 - <xref:Microsoft.VisualBasic.Strings.AscW%2A>
-- [<span data-ttu-id="1c73b-103">CBool Işlevi</span><span class="sxs-lookup"><span data-stu-id="1c73b-103">CBool Function</span></span>](type-conversion-functions.md)
-- [<span data-ttu-id="1c73b-104">CByte Işlevi</span><span class="sxs-lookup"><span data-stu-id="1c73b-104">CByte Function</span></span>](type-conversion-functions.md)
-- [<span data-ttu-id="1c73b-105">CChar Işlevi</span><span class="sxs-lookup"><span data-stu-id="1c73b-105">CChar Function</span></span>](type-conversion-functions.md)
-- [<span data-ttu-id="1c73b-106">CDate Işlevi</span><span class="sxs-lookup"><span data-stu-id="1c73b-106">CDate Function</span></span>](type-conversion-functions.md)
-- [<span data-ttu-id="1c73b-107">CDbl Işlevi</span><span class="sxs-lookup"><span data-stu-id="1c73b-107">CDbl Function</span></span>](type-conversion-functions.md)
-- [<span data-ttu-id="1c73b-108">CDec Işlevi</span><span class="sxs-lookup"><span data-stu-id="1c73b-108">CDec Function</span></span>](type-conversion-functions.md)
+- [<span data-ttu-id="970eb-104">CBool Işlevi</span><span class="sxs-lookup"><span data-stu-id="970eb-104">CBool Function</span></span>](type-conversion-functions.md)
+- [<span data-ttu-id="970eb-105">CByte Işlevi</span><span class="sxs-lookup"><span data-stu-id="970eb-105">CByte Function</span></span>](type-conversion-functions.md)
+- [<span data-ttu-id="970eb-106">CChar Işlevi</span><span class="sxs-lookup"><span data-stu-id="970eb-106">CChar Function</span></span>](type-conversion-functions.md)
+- [<span data-ttu-id="970eb-107">CDate Işlevi</span><span class="sxs-lookup"><span data-stu-id="970eb-107">CDate Function</span></span>](type-conversion-functions.md)
+- [<span data-ttu-id="970eb-108">CDbl Işlevi</span><span class="sxs-lookup"><span data-stu-id="970eb-108">CDbl Function</span></span>](type-conversion-functions.md)
+- [<span data-ttu-id="970eb-109">CDec Işlevi</span><span class="sxs-lookup"><span data-stu-id="970eb-109">CDec Function</span></span>](type-conversion-functions.md)
 - <xref:Microsoft.VisualBasic.Strings.Chr%2A>
 - <xref:Microsoft.VisualBasic.Strings.ChrW%2A>
-- [<span data-ttu-id="1c73b-109">CInt Işlevi</span><span class="sxs-lookup"><span data-stu-id="1c73b-109">CInt Function</span></span>](type-conversion-functions.md)
-- [<span data-ttu-id="1c73b-110">CLng Işlevi</span><span class="sxs-lookup"><span data-stu-id="1c73b-110">CLng Function</span></span>](type-conversion-functions.md)
-- [<span data-ttu-id="1c73b-111">CObj Işlevi</span><span class="sxs-lookup"><span data-stu-id="1c73b-111">CObj Function</span></span>](type-conversion-functions.md)
-- [<span data-ttu-id="1c73b-112">CSByte Işlevi</span><span class="sxs-lookup"><span data-stu-id="1c73b-112">CSByte Function</span></span>](type-conversion-functions.md)
-- [<span data-ttu-id="1c73b-113">CShort Işlevi</span><span class="sxs-lookup"><span data-stu-id="1c73b-113">CShort Function</span></span>](type-conversion-functions.md)
-- [<span data-ttu-id="1c73b-114">CSng Işlevi</span><span class="sxs-lookup"><span data-stu-id="1c73b-114">CSng Function</span></span>](type-conversion-functions.md)
-- [<span data-ttu-id="1c73b-115">CStr Işlevi</span><span class="sxs-lookup"><span data-stu-id="1c73b-115">CStr Function</span></span>](type-conversion-functions.md)
-- [<span data-ttu-id="1c73b-116">CType İşlevi</span><span class="sxs-lookup"><span data-stu-id="1c73b-116">CType Function</span></span>](ctype-function.md)
-- [<span data-ttu-id="1c73b-117">CUInt Işlevi</span><span class="sxs-lookup"><span data-stu-id="1c73b-117">CUInt Function</span></span>](type-conversion-functions.md)
-- [<span data-ttu-id="1c73b-118">Külng Işlevi</span><span class="sxs-lookup"><span data-stu-id="1c73b-118">CULng Function</span></span>](type-conversion-functions.md)
-- [<span data-ttu-id="1c73b-119">CUShort Işlevi</span><span class="sxs-lookup"><span data-stu-id="1c73b-119">CUShort Function</span></span>](type-conversion-functions.md)
+- [<span data-ttu-id="970eb-110">CInt Işlevi</span><span class="sxs-lookup"><span data-stu-id="970eb-110">CInt Function</span></span>](type-conversion-functions.md)
+- [<span data-ttu-id="970eb-111">CLng Işlevi</span><span class="sxs-lookup"><span data-stu-id="970eb-111">CLng Function</span></span>](type-conversion-functions.md)
+- [<span data-ttu-id="970eb-112">CObj Işlevi</span><span class="sxs-lookup"><span data-stu-id="970eb-112">CObj Function</span></span>](type-conversion-functions.md)
+- [<span data-ttu-id="970eb-113">CSByte Işlevi</span><span class="sxs-lookup"><span data-stu-id="970eb-113">CSByte Function</span></span>](type-conversion-functions.md)
+- [<span data-ttu-id="970eb-114">CShort Işlevi</span><span class="sxs-lookup"><span data-stu-id="970eb-114">CShort Function</span></span>](type-conversion-functions.md)
+- [<span data-ttu-id="970eb-115">CSng Işlevi</span><span class="sxs-lookup"><span data-stu-id="970eb-115">CSng Function</span></span>](type-conversion-functions.md)
+- [<span data-ttu-id="970eb-116">CStr Işlevi</span><span class="sxs-lookup"><span data-stu-id="970eb-116">CStr Function</span></span>](type-conversion-functions.md)
+- [<span data-ttu-id="970eb-117">CType İşlevi</span><span class="sxs-lookup"><span data-stu-id="970eb-117">CType Function</span></span>](ctype-function.md)
+- [<span data-ttu-id="970eb-118">CUInt Işlevi</span><span class="sxs-lookup"><span data-stu-id="970eb-118">CUInt Function</span></span>](type-conversion-functions.md)
+- [<span data-ttu-id="970eb-119">Külng Işlevi</span><span class="sxs-lookup"><span data-stu-id="970eb-119">CULng Function</span></span>](type-conversion-functions.md)
+- [<span data-ttu-id="970eb-120">CUShort Işlevi</span><span class="sxs-lookup"><span data-stu-id="970eb-120">CUShort Function</span></span>](type-conversion-functions.md)
 - <xref:Microsoft.VisualBasic.Strings.Format%2A>
 - <xref:Microsoft.VisualBasic.Conversion.Hex%2A>
 - <xref:Microsoft.VisualBasic.Conversion.Oct%2A>
 - <xref:Microsoft.VisualBasic.Conversion.Str%2A>
 - <xref:Microsoft.VisualBasic.Conversion.Val%2A>
 
-## <a name="see-also"></a><span data-ttu-id="1c73b-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1c73b-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="970eb-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="970eb-121">See also</span></span>
 
-- [<span data-ttu-id="1c73b-121">Tür Dönüştürme İşlevleri</span><span class="sxs-lookup"><span data-stu-id="1c73b-121">Type Conversion Functions</span></span>](type-conversion-functions.md)
-- [<span data-ttu-id="1c73b-122">Veri Türlerini Dönüştürme</span><span class="sxs-lookup"><span data-stu-id="1c73b-122">Converting Data Types</span></span>](../../programming-guide/concepts/linq/converting-data-types.md)
+- [<span data-ttu-id="970eb-122">Tür Dönüştürme İşlevleri</span><span class="sxs-lookup"><span data-stu-id="970eb-122">Type Conversion Functions</span></span>](type-conversion-functions.md)
+- [<span data-ttu-id="970eb-123">Veri Türlerini Dönüştürme</span><span class="sxs-lookup"><span data-stu-id="970eb-123">Converting Data Types</span></span>](../../programming-guide/concepts/linq/converting-data-types.md)
