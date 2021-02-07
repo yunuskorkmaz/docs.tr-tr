@@ -1,4 +1,5 @@
 ---
+description: "Daha fazla bilgi edinin: TypeNameFactory coclass 'ı"
 title: TypeNameFactory Coclass’ı
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c853bb58-c9c5-476b-8e80-608aa53ea18d
 topic_type:
 - apiref
-ms.openlocfilehash: 257761d32ff37782e01167bbbc9b12664a9d586d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 937f34f5b8dd78df87efae3ab30d8e6f34f66ac3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732881"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679257"
 ---
 # <a name="typenamefactory-coclass"></a>TypeNameFactory Coclass’ı
 
@@ -35,7 +36,7 @@ coclass TypeNameFactory {
   
 ## <a name="interfaces"></a>Arabirimler  
   
-|Arabirim|Açıklama|  
+|Arabirim|Description|  
 |---------------|-----------------|  
 |[ITypeNameFactory Arabirimi](itypenamefactory-interface.md)|Bu arabirim .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.|  
   

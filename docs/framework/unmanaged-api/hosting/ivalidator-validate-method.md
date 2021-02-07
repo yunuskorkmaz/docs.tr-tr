@@ -1,4 +1,5 @@
 ---
+description: ': IValidator:: Validate yöntemi hakkında daha fazla bilgi'
 title: IValidator::Validate Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 7d68666a-fb73-4455-bebd-908d49a16abc
 topic_type:
 - apiref
-ms.openlocfilehash: 3c59114f78af1aa8705318af093e47d4f03a82ce
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6df70274a788b949686fe2509b525c5a8b04089c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95699150"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99680024"
 ---
 # <a name="ivalidatorvalidate-method"></a>IValidator::Validate Yöntemi
 
 Belirtilen Taşınabilir çalıştırılabilir (PE) veya Microsoft ara dili (MSIL) dosyasını doğrular.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT Validate (  

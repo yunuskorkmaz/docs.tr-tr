@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: WAITORTIMERCALLBACK Işlev Işaretçisi'
 title: WAITORTIMERCALLBACK İşlev İşaretçisi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1fec4aef-0a06-4df0-bae7-d31a9ef9603d
 topic_type:
 - apiref
-ms.openlocfilehash: 74256f35804ff59f04952a1ac20ac7866e8f5683
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6fd9e7eab56e48086eefcb26fc48cbf5f45d4a0e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732820"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679062"
 ---
 # <a name="waitortimercallback-function-pointer"></a>WAITORTIMERCALLBACK İşlev İşaretçisi
 
@@ -27,7 +28,7 @@ Ana bilgisayarı bir bekleme tutamacının ( <xref:System.Threading.WaitHandle> 
   
  Bu işlev işaretçisi .NET Framework 4 ' te kullanım dışı bırakıldı.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 typedef VOID (__stdcall *WAITORTIMERCALLBACK) (  

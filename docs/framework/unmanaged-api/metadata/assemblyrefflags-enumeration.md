@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: AssemblyRefFlags numaralandırması'
 title: AssemblyRefFlags Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: decd4f46-f3b2-466f-9501-e74f2b86b846
 topic_type:
 - apiref
-ms.openlocfilehash: 0a99d2f79645bdc46ff4db86d7280614eeb1faf5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1b33faf816194c8b386f34a63d885ba37c4329a4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732768"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99678918"
 ---
 # <a name="assemblyrefflags-enumeration"></a>AssemblyRefFlags Numaralandırması
 
@@ -35,7 +36,7 @@ typedef enum {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`arfFullOriginator`|Derleme başvurusunun, derlemenin yayımcısı hakkında tam, karma olmayan bilgiler içerdiğini belirtir.|  
   

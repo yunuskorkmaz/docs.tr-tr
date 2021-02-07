@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: COR_FIELD_OFFSET yapısı'
 title: COR_FIELD_OFFSET Yapısı
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cced5298-277f-4a5a-8ecf-a0050c1096ea
 topic_type:
 - apiref
-ms.openlocfilehash: 1a8ab5aa5909af60089d5e4cc8092e15bc75e8cc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7976e79a5484fa467d7ac887a4e1a7fa324abf69
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724188"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99678646"
 ---
 # <a name="cor_field_offset-structure"></a>COR_FIELD_OFFSET Yapısı
 
@@ -36,7 +37,7 @@ typedef struct COR_FIELD_OFFSET {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`ridOfField`|`mdFieldDef`Alanı temsil eden bir meta veri belirteci.|  
 |`ulOffset`|Alanın sınıfının içindeki boşluğu.|  

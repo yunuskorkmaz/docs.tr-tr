@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: StackOverflowType numaralandırması'
 title: StackOverflowType Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dab648ad-972b-479c-b129-b4c1dcbd932e
 topic_type:
 - apiref
-ms.openlocfilehash: bbdc68721378e6bbb09f5e4eade08e2e6e03b097
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d39ccd99331a3e839236f1ede21254edb92b2dfb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729921"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679374"
 ---
 # <a name="stackoverflowtype-enumeration"></a>StackOverflowType Numaralandırması
 
@@ -37,7 +38,7 @@ typedef enum {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`SO_ClrEngine`|Yığın taşması yürütme altyapısından kaynaklandı.|  
 |`SO_Managed`|Yönetilen koddan oluşan yığın taşmasına neden oldu.|  

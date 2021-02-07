@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: LoadStringRCEx Işlevi'
 title: LoadStringRCEx İşlevi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bc789636-ca14-4f07-8f77-9305874d7495
 topic_type:
 - apiref
-ms.openlocfilehash: 1aa5c9f5dd7dd63e69c2eed1f6dd8ad6f007f01f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d3fe4b97014e5093dd8d209a5e27bac4ed7b879f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727542"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679928"
 ---
 # <a name="loadstringrcex-function"></a>LoadStringRCEx İşlevi
 
@@ -27,7 +28,7 @@ Belirtilen kültür için bir HRESULT değerini uygun bir hata iletisine çeviri
   
  Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT LoadStringRCEx (  
@@ -64,7 +65,7 @@ HRESULT LoadStringRCEx (
 
  Bu yöntem, aşağıdaki değerlere ek olarak, WinError. h içinde tanımlanan standart COM hata kodlarını döndürür.  
   
-|Dönüş kodu|Açıklama|  
+|Dönüş kodu|Description|  
 |-----------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
 |E_INVALIDARG|`szBuffer` null veya `iMax` sıfır (0).|  

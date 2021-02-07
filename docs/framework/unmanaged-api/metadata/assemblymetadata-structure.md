@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ASSEMBLYMETADATA yapısı'
 title: ASSEMBLYMETADATA Yapısı
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1af98e57-9145-4d35-bb78-77d1da7c91a5
 topic_type:
 - apiref
-ms.openlocfilehash: 8071c3f43775975de37e3255582b6fc8f13f7de3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6fc9c03bea3b1413cd3a8421746137e37d43bd90
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732794"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99678945"
 ---
 # <a name="assemblymetadata-structure"></a>ASSEMBLYMETADATA Yapısı
 
@@ -44,7 +45,7 @@ typedef struct {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`usMajorVersion`|Başvurulan derlemenin ana sürüm numarası. Bu değer sıfır olamaz. Tüm bitleri `usMajorVersion` ayarlandıysa, ana sürüm belirtilmez.|  
 |`usMinorVersion`|Başvurulan derlemenin ikincil sürüm numarası. Bu değer sıfır olamaz. Tüm bitleri `usMinorVersion` ayarlandıysa, ikincil sürüm belirtilmez.|  

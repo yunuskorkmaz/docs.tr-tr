@@ -1,4 +1,5 @@
 ---
+description: ': LockClrVersion Işlevi hakkında daha fazla bilgi'
 title: LockClrVersion İşlevi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1318ee37-c43b-40eb-bbe8-88fc46453d74
 topic_type:
 - apiref
-ms.openlocfilehash: 2ff08ec8f194ccc9e968b3a7ee017afe788f4b03
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 268c08cdd24a826ba92cc8865dfd036f544febcd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95704948"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679933"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion İşlevi
 
@@ -28,7 +29,7 @@ Konağın, CLR 'yi açıkça başlatmadan önce işlem içinde ortak dil çalı�
   
  Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT LockClrVersion (  
@@ -53,7 +54,7 @@ HRESULT LockClrVersion (
 
  Bu yöntem, aşağıdaki değerlere ek olarak, WinError. h içinde tanımlanan standart COM hata kodlarını döndürür.  
   
-|Dönüş kodu|Açıklama|  
+|Dönüş kodu|Description|  
 |-----------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
 |E_INVALIDARG|Bağımsız değişkenlerden biri veya birkaçı null.|  

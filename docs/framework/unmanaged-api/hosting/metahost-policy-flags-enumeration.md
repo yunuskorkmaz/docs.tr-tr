@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: METAHOST_POLICY_FLAGS numaralandırması'
 title: METAHOST_POLICY_FLAGS Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3bb4b526-0118-42e2-ba59-c95648528ce9
 topic_type:
 - apiref
-ms.openlocfilehash: 16fb112cf5b209091001872567c95bb0b3a8ab61
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3a3ebe602c8f048b7f9fc907f5d4741722bd0ed3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729999"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679629"
 ---
 # <a name="metahost_policy_flags-enumeration"></a>METAHOST_POLICY_FLAGS Numaralandırması
 
@@ -42,7 +43,7 @@ typedef enum {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`METAHOST_POLICY_HIGHCOMPAT`|Geçerli işleme yüklenmiş ortak dil çalışma zamanını (CLR) düşünmez olan yüksek uyumluluk ilkesini tanımlar. Bunun yerine, yalnızca yüklü CLRs 'leri ve bileşen tercihlerini, derleme dosyasının kendisinden türetildikleri gibi, derlenen yerleşik sürümü veya yapılandırma dosyası olarak değerlendirir.|  
 |`METAHOST_POLICY_APPLY_UPGRADE_POLICY`|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoftiçeriğine göre tam eşleşme bulunamadığında, sürüm bağlama sonucuna yükseltme ilkesi uygular \\ . Netframework\ilkeupgrades. Bu, [RUNTIME_INFO_UPGRADE_VERSION](runtime-info-flags-enumeration.md)ile aynı etkiye sahiptir.|  

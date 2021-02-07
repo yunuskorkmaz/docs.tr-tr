@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ModuleBindInfo yapısı'
 title: ModuleBindInfo Yapısı
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 632d4adc-dbc9-4ce8-9397-abc3285c1c69
 topic_type:
 - apiref
-ms.openlocfilehash: 505015877985492edab4b761b379f33f1e5c6660
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0969c0ecc459414336800e8e7da5817ac0c1a8ce
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729986"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679634"
 ---
 # <a name="modulebindinfo-structure"></a>ModuleBindInfo Yapısı
 
@@ -37,7 +38,7 @@ typedef struct _ModuleBindInfo {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`dwAppDomainId`|`IStream`Başvurulan modülün yükleneceği [IHostAssemblyStore::P rovidemodule](ihostassemblystore-providemodule-method.md) yöntemine yapılan bir çağrı tarafından döndürülen benzersiz bir tanımlayıcı.|  
 |`lpAssemblyIdentity`|Başvurulan modülü içeren derleme için benzersiz bir tanımlayıcı.|  

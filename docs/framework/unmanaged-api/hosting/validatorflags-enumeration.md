@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ValidatorFlags numaralandırması'
 title: ValidatorFlags Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a3f5c266-3fcc-4ad1-aaf5-4cdbe26304ad
 topic_type:
 - apiref
-ms.openlocfilehash: 92c430cdb8b46cf75dde9a8395ce713116dc05a5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 473b0eef2851126256e1ea6b6d2b82be32e03e1c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732875"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679127"
 ---
 # <a name="validatorflags-enumeration"></a>ValidatorFlags Numaralandırması
 
@@ -39,7 +40,7 @@ enum ValidatorFlags {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`VALIDATOR_CHECK_ILONLY`|Yürütülebilir dosyadaki yalnızca Microsoft ara dili 'nin (MSIL) doğrulanması gerektiğini belirtir.|  
 |`VALIDATOR_CHECK_PEFORMAT_ONLY`|Yalnızca yürütülebilir dosyanın biçiminin doğrulanması gerektiğini belirtir.|  

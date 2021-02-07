@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Mdadınfo yapısı'
 title: MDAInfo Yapısı
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fb8c14f7-d461-43d1-8b47-adb6723b9b93
 topic_type:
 - apiref
-ms.openlocfilehash: 8e88d90e3291d21888fae7aa162f84b6377658c5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5c42537a68d38e6cff3d70dcb796cd733ce64a1e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730025"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679764"
 ---
 # <a name="mdainfo-structure"></a>MDAInfo Yapısı
 
@@ -36,7 +37,7 @@ typedef struct _MDAInfo {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`lpMDACaption`|Geçerli MDA 'ın başlığı. Başlık, olayı tetikleyen hata türünü açıklar `Event_MDAFired` .|  
 |`lpMDAMessage`|Geçerli MDA tarafından sunulan çıkış iletisi.|  

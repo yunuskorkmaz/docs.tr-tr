@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: yönetilmeyen API başvurusu'
 title: Yönetilmeyen API Başvurusu
 ms.date: 11/06/2017
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - native API reference [.NET Framework]
 - unmanaged API reference [.NET Framework]
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
-ms.openlocfilehash: 16b18f4fede11e776e5656843ed9a408dff370eb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3c9c485d8dced9641d0d1af850de190318902aa9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732755"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99678997"
 ---
 # <a name="unmanaged-api-reference"></a>Yönetilmeyen API Başvurusu
 
@@ -47,7 +48,7 @@ Bu bölüm, çalışma zamanı Konakları, derleyiciler, kod çözücüler, gizl
  [Hosting](./hosting/index.md)  
  Yönetilmeyen ana bilgisayarların CLR 'yi uygulamalarıyla tümleştirmesini sağlayan barındırma API 'sini açıklar.  
   
- [Veriyi](./metadata/index.md)  
+ [Meta veri](./metadata/index.md)  
  Bir derleyicinin, CLR tarafından yüklenen türler olmadan bir bileşenin meta verilerini oluşturmasına veya erişmesine olanak tanıyan meta veri API 'sini açıklar.  
   
  [Profil Oluşturma](./profiling/index.md)  

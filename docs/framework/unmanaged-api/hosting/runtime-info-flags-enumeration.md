@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: RUNTIME_INFO_FLAGS numaralandırması'
 title: RUNTIME_INFO_FLAGS Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: adba37be-f775-4cdb-8919-5746ce694f33
 topic_type:
 - apiref
-ms.openlocfilehash: 6f4fbb40053628d60ba7f094fcb5d50a94d63e1a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 54ff62cdee6e940ae9ea8a2ce8ceff99f923d3f4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729947"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679452"
 ---
 # <a name="runtime_info_flags-enumeration"></a>RUNTIME_INFO_FLAGS Numaralandırması
 
@@ -44,7 +45,7 @@ typedef enum {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|Dizin bilgilerinin içerilmeyeceğini belirtir.|  
 |`RUNTIME_INFO_DONT_RETURN_VERSION`|Sürüm bilgisinin dahil edilmemelidir.|  

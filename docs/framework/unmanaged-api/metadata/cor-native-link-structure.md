@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: COR_NATIVE_LINK yapısı'
 title: COR_NATIVE_LINK Yapısı
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6ef78d3c-1c69-4141-b687-dcb065b7a74d
 topic_type:
 - apiref
-ms.openlocfilehash: 15f573ebc07bcf08a1ab8f5a5bbb88e940c5c8dc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 09c715af698a0614fd4a9a17679df6908a1497a6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724175"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99678581"
 ---
 # <a name="cor_native_link-structure"></a>COR_NATIVE_LINK Yapısı
 
@@ -38,7 +39,7 @@ typedef struct
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`m_linkType`|Yerel koda bağlanacak tür. Bu değer, [Cornativelınktype](cornativelinktype-enumeration.md) değerlerinden biridir.|  
 |`m_flags`|Yerel kod bağlanırken bağlayıcı tarafından kullanılan bayraklar. Bu değer, [Cornativelınkflags](cornativelinkflags-enumeration.md) değerlerinden biridir.|  

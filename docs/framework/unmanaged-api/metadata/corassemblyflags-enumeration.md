@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: CorAssemblyFlags sabit listesi'
 title: CorAssemblyFlags Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bb8db3b6-d81d-49fc-b74c-dbc908a9eab9
 topic_type:
 - apiref
-ms.openlocfilehash: 615c4ac95ab777e8081e630cafb6671e64dea78a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: bd74534b1f607eea15f1d8615f66723428ddae3f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719014"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99678496"
 ---
 # <a name="corassemblyflags-enumeration"></a>CorAssemblyFlags Numaralandırması
 
@@ -56,7 +57,7 @@ typedef enum CorAssemblyFlags {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`afPublicKey`|Derleme başvurusunun tam, karma olmayan ortak anahtarı tuttuğunda olduğunu gösterir.|  
 |`afPA_None`|İşlemci mimarisinin belirtilmemiş olduğunu gösterir.|  

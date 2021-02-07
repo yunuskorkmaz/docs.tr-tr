@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: CorAttributeTargets numaralandırması'
 title: CorAttributeTargets Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 694c0fa0-7011-41a9-9dfd-f0e16ea574b5
 topic_type:
 - apiref
-ms.openlocfilehash: fbe721bad56ec2be434039f00e741ad9a177815f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6f80df31b9da8591fac3d979ede1e9bf0f8ecfc4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95718976"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99678504"
 ---
 # <a name="corattributetargets-enumeration"></a>CorAttributeTargets Numaralandırması
 
@@ -61,7 +62,7 @@ typedef enum CorAttributeTargets
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`catAssembly`|Öznitelik, bir derlemeye uygulanabilir.|  
 |`catModule`|Öznitelik, taşınabilir bir çalıştırılabilir (. dll veya. exe) modülüne uygulanabilir.|  

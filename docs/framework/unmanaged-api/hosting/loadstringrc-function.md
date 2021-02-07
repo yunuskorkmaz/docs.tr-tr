@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: LoadStringRC Işlevi'
 title: LoadStringRC İşlevi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 752e49b4-987c-4c28-a118-1a0c1ed510c5
 topic_type:
 - apiref
-ms.openlocfilehash: 16f95f8fce20f2cf46d4cda214e4494bd288bf60
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 188597f9dc21b6a67fb84e91cd66b50ba5a514f3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727555"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679931"
 ---
 # <a name="loadstringrc-function"></a>LoadStringRC İşlevi
 
@@ -27,7 +28,7 @@ Geçerli iş parçacığının varsayılan kültürünü kullanarak bir HRESULT 
   
  Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT LoadStringRC (  
@@ -56,7 +57,7 @@ HRESULT LoadStringRC (
 
  Bu yöntem, aşağıdaki değerlere ek olarak, WinError. h içinde tanımlanan standart bileşen nesne modeli (COM) hata kodlarını döndürür.  
   
-|Dönüş kodu|Açıklama|  
+|Dönüş kodu|Description|  
 |-----------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
 |E_INVALIDARG|`szBuffer` null veya `iMax` sıfır (0).|  
