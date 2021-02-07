@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: SQL Server uygulama güvenliği senaryoları'
 title: SQL Server'da Uygulama Güvenliği Senaryoları
 ms.date: 03/30/2017
 ms.assetid: 0164f3a4-406e-4693-bec3-03c8e18b46d7
-ms.openlocfilehash: 2d0e65f61939312bf29111e87c49366cd9e389be
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8a0e055c3afa1590a74516505d513992bca8b952
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197657"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718661"
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>SQL Server'da Uygulama Güvenliği Senaryoları
 

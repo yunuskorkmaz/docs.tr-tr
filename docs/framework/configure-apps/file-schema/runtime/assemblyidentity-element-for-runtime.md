@@ -1,4 +1,5 @@
 ---
+description: 'İçin: öğesi hakkında daha fazla bilgi <assemblyIdentity><runtime>'
 title: <runtime> için <assemblyIdentity> Öğesi
 ms.date: 03/30/2017
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - container tags, <assemblyIdentity> element
 - assemblyIdentity element
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
-ms.openlocfilehash: f3e74b05ac0fd7c57963f2aad047ba3f2d63a10a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d53c4f7f5207fbcf9ad4a8f82667eacc1f57f5e2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91170187"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719194"
 ---
 # <a name="assemblyidentity-element-for-runtime"></a>\<runtime> için \<assemblyIdentity> Öğesi
 

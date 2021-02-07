@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: güvenli Istemci uygulamaları'
 title: Güvenli İstemci Uygulamaları
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
-ms.openlocfilehash: 96b43d28d3e22df66cb7f7010916b5c7f7a86b77
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a40a6444c2e317b03f03688ca46de157ded6f0ac
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91189012"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718960"
 ---
 # <a name="secure-client-applications"></a>Güvenli İstemci Uygulamaları
 
@@ -74,6 +75,6 @@ Uygulamalar genellikle, veri kaybına neden olabilecek veya sistemin güvenliği
 
 - [ADO.NET Uygulamalarının Güvenliğini Sağlama](securing-ado-net-applications.md)
 - [Veri erişimi stratejileri için öneriler](/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
-- [Uygulamalarının Güvenliğini Sağlama](/visualstudio/ide/securing-applications)
+- [Uygulamaların güvenliğini sağlama](/visualstudio/ide/securing-applications)
 - [Bağlantı Bilgilerini Koruma](protecting-connection-information.md)
 - [ADO.NET’e Genel Bakış](ado-net-overview.md)

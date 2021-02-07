@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: <AppContextSwitchOverrides> öğesi'
 title: AppContextSwitchOverrides öğesi
 ms.date: 04/18/2019
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-ms.openlocfilehash: ab74886edcc86c900c56017867a3b81c9cb7886e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1c2e4ceaec83ee23990c2146960f602eb12361a6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91176155"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719337"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides> öğesi
 
@@ -63,7 +64,7 @@ ms.locfileid: "91176155"
 
 .NET Framework aşağıdaki anahtarları destekler:
 
-|Anahtar adı|Açıklama|Dağıtıla|
+|Anahtar adı|Description|Sunulan özellikler|
 |-----------------|-----------------|----------------|
 |`Switch.MS.Internal.`<br/>`DoNotApplyLayoutRoundingToMarginsAndBorderThickness`|Windows Presentation Foundation denetim düzeni için eski bir algoritmayı kullanıp kullanmadığını denetler. Daha fazla bilgi için bkz. [azaltma: WPF düzeni](../../../migration-guide/mitigation-wpf-layout.md).|.NET Framework 4.6|
 |`Switch.MS.Internal.`<br/>`UseSha1AsDefaultHashAlgorithmForDigitalSignatures`|PackageDigitalSignatureManager tarafından bir paketin parçalarını imzalamak için kullanılan varsayılan algoritmanın SHA1 veya SHA256 olup olmadığını denetler.<br>SHA1 ile ilgili çakışma sorunları nedeniyle Microsoft SHA256 önerir.|.NET Framework 4.7.1|

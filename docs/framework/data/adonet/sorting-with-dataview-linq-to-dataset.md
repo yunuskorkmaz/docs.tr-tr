@@ -1,20 +1,21 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: DataView ile sıralama (LINQ to DataSet)'
 title: DataView ile sıralama (LINQ to DataSet)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
-ms.openlocfilehash: d80c00a4b06a31f61a521e7206c204c02106748a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ac07e5bc2c74a5724a4497d630d7352694ac9a7a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91175284"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718687"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>DataView ile sıralama (LINQ to DataSet)
 
-Verileri belirli ölçütlere göre sıralama ve sonra verileri bir kullanıcı arabirimi denetimi aracılığıyla bir istemciye sunma özelliği, veri bağlamanın önemli bir yönüdür. <xref:System.Data.DataView> verileri sıralamak ve belirli sıralama ölçütlerine göre sıralanmış veri satırlarını döndürmek için çeşitli yollar sağlar. Dize tabanlı sıralama yeteneklerine ek olarak, <xref:System.Data.DataView> Sıralama ölçütleri Için dil Ile tümleşik sorgu (LINQ) ifadelerini de kullanmanıza imkan sağlar. LINQ ifadeleri, dize tabanlı sıralamaya kıyasla çok daha karmaşık ve güçlü sıralama işlemlerine izin verir. Bu konuda, kullanarak sıralama için her iki yaklaşım da açıklanmaktadır <xref:System.Data.DataView> .  
+Verileri belirli ölçütlere göre sıralama ve sonra verileri bir kullanıcı arabirimi denetimi aracılığıyla bir istemciye sunma özelliği, veri bağlamanın önemli bir yönüdür. <xref:System.Data.DataView> verileri sıralamak ve belirli sıralama ölçütlerine göre sıralanmış veri satırlarını döndürmek için çeşitli yollar sağlar. Dize tabanlı sıralama yeteneklerine ek olarak, <xref:System.Data.DataView> Sıralama ölçütleri için Language-Integrated Query (LINQ) ifadelerini de kullanmanıza imkan sağlar. LINQ ifadeleri, dize tabanlı sıralamaya kıyasla çok daha karmaşık ve güçlü sıralama işlemlerine izin verir. Bu konuda, kullanarak sıralama için her iki yaklaşım da açıklanmaktadır <xref:System.Data.DataView> .  
   
 ## <a name="creating-dataview-from-a-query-with-sorting-information"></a>Sıralama bilgileriyle bir sorgudan DataView oluşturma  
 
@@ -48,7 +49,7 @@ Verileri belirli ölçütlere göre sıralama ve sonra verileri bir kullanıcı 
  [!code-csharp[DP DataView Samples#CreateLDVFromQueryOrderByThenBy](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromqueryorderbythenby)]
  [!code-vb[DP DataView Samples#CreateLDVFromQueryOrderByThenBy](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromqueryorderbythenby)]  
   
-## <a name="using-the-string-based-sort-property"></a>Dize tabanlı sıralama özelliğini kullanma  
+## <a name="using-the-string-based-sort-property"></a>String-Based Sort özelliğini kullanma  
 
  Dize tabanlı sıralama işlevselliği <xref:System.Data.DataView> LINQ to DataSet ile hala işe yarar. Bir LINQ to DataSet sorgusundan oluşturulduktan sonra, <xref:System.Data.DataView> <xref:System.Data.DataView.Sort%2A> üzerinde sıralamayı ayarlamak için özelliğini kullanabilirsiniz <xref:System.Data.DataView> .  
   

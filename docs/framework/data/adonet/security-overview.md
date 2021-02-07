@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: güvenliğe genel bakış'
 title: Güvenliğe genel bakış
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: ede9b24828da74c043bed103595073c4607c51f2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3aa6e5cbe444e9cfc417d79defce7e89a2034f71
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91188999"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718830"
 ---
 # <a name="security-overview"></a>Güvenliğe genel bakış
 
@@ -21,7 +22,7 @@ Uygulamanın güvenliğini sağlamak, devam eden bir işlemdir. Bir geliştirici
 
 ### <a name="threat-modeling"></a>Tehdit modelleme
 
- Kullanıma sunulan tüm olası saldırıları anlamadığınız takdirde bir sistemi saldırılara karşı koruyamazsınız. *Tehdit modelleme*olarak adlandırılan güvenlik tehditlerini değerlendirme işlemi, ADO.net uygulamanızda güvenlik ihlallerinin oluşma olasılığını ve kollerini belirlemede gereklidir.
+ Kullanıma sunulan tüm olası saldırıları anlamadığınız takdirde bir sistemi saldırılara karşı koruyamazsınız. *Tehdit modelleme* olarak adlandırılan güvenlik tehditlerini değerlendirme işlemi, ADO.net uygulamanızda güvenlik ihlallerinin oluşma olasılığını ve kollerini belirlemede gereklidir.
 
  Tehdit modelleme üç üst düzey adımdan oluşur: duyuru görünümünü anlama, sistemin güvenliğini belirleme ve tehditleri belirleme.
 
@@ -45,7 +46,7 @@ Uygulamalarınızın güvenliğini sağlama hakkında daha fazla bilgi için aş
 
 |Kaynak|Açıklama|
 |--------------|-----------------|
-|[Uygulamalarının Güvenliğini Sağlama](/visualstudio/ide/securing-applications)|Genel güvenlik konularına bağlantılar içerir. Ayrıca dağıtılmış uygulamalar, Web uygulamaları, mobil uygulamalar ve masaüstü uygulamalarının güvenliğini sağlamaya yönelik konulara bağlantılar içerir.|
+|[Uygulamaların güvenliğini sağlama](/visualstudio/ide/securing-applications)|Genel güvenlik konularına bağlantılar içerir. Ayrıca dağıtılmış uygulamalar, Web uygulamaları, mobil uygulamalar ve masaüstü uygulamalarının güvenliğini sağlamaya yönelik konulara bağlantılar içerir.|
 
 ## <a name="code-access-security-cas"></a>Kod Erişimi Güvenliği (CAS)
 

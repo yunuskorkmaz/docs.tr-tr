@@ -1,20 +1,21 @@
 ---
-title: Tek tablo sorguları (LINQ to DataSet)
+description: 'Hakkında daha fazla bilgi edinin: Single-Table sorguları (LINQ to DataSet)'
+title: Single-Table sorguları (LINQ to DataSet)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-ms.openlocfilehash: 17a2fcf54cae64d9443b0cc0e8a37e1002bbd394
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a4b6ce2a60eeafc9221d838d1b86c9964774df60
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91175362"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718765"
 ---
-# <a name="single-table-queries-linq-to-dataset"></a>Tek tablo sorguları (LINQ to DataSet)
+# <a name="single-table-queries-linq-to-dataset"></a>Single-Table sorguları (LINQ to DataSet)
 
-Dil ile tümleşik sorgu (LINQ) sorguları, arabirimini veya arabirimini uygulayan veri kaynakları üzerinde çalışır <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Linq.IQueryable%601> . <xref:System.Data.DataTable>Sınıf her iki arabirimi de uygulamıyor, bu nedenle <xref:System.Data.DataTableExtensions.AsEnumerable%2A> <xref:System.Data.DataTable> `From` bir LINQ sorgusunun yan tümcesinde kaynak olarak kullanmak istiyorsanız yöntemini çağırmanız gerekir.  
+Language-Integrated Query (LINQ) sorguları arabirimini veya arabirimi uygulayan veri kaynakları üzerinde çalışır <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Linq.IQueryable%601> . <xref:System.Data.DataTable>Sınıf her iki arabirimi de uygulamıyor, bu nedenle <xref:System.Data.DataTableExtensions.AsEnumerable%2A> <xref:System.Data.DataTable> `From` bir LINQ sorgusunun yan tümcesinde kaynak olarak kullanmak istiyorsanız yöntemini çağırmanız gerekir.  
   
  Aşağıdaki örnek, SalesOrderHeader tablosundan gelen tüm çevrimiçi siparişleri alır ve sipariş KIMLIĞINI, sipariş tarihini ve sipariş numarasını konsola verir.  
   

@@ -1,13 +1,13 @@
 ---
 title: Docker tabanlı uygulamalar için geliştirme süreci
 description: Docker tabanlı uygulamalar geliştirmeye yönelik seçeneklere yönelik üst düzey bir genel bakış alın. Çoklu platform desteği (Windows, macOS ve Linux) için Windows, Mac için Visual Studio veya Visual Studio Code için istediğiniz Visual Studio 'Yu kullanma.
-ms.date: 01/13/2021
-ms.openlocfilehash: 3a4f4078e745c52e8eca46473668e3319917bfd2
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.date: 02/02/2021
+ms.openlocfilehash: e979fcd5277fb07f3b614b79fa8a384d61e08c47
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188302"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719662"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Docker tabanlı uygulamalar için geliştirme süreci
 
@@ -19,7 +19,7 @@ ms.locfileid: "98188302"
 
 Tam ve güçlü bir IDE veya hafif ve çevik bir düzenleyiciyi tercih etmeksizin, Microsoft, Docker uygulamaları geliştirmek için kullanabileceğiniz araçlara sahiptir.
 
-**Visual Studio (Windows için).** Visual Studio ile Docker tabanlı .NET 5 uygulama geliştirme, Visual Studio 2019 sürüm 16,4 veya üstünü gerektirir. Visual Studio 2019, zaten yerleşik olarak bulunan Docker Araçları ile birlikte gelir. Docker Araçları, uygulamalarınızı doğrudan hedef Docker ortamında geliştirmenize, çalıştırmanıza ve doğrulamanıza olanak sağlar. F5 tuşuna basarak uygulamanızı (tek bir kapsayıcı veya birden çok kapsayıcı) doğrudan bir Docker konağına kaydedebilir ve hata ayıklamanızı sağlar veya kapsayıcıyı yeniden oluşturmak zorunda kalmadan uygulamanızı düzenlemek ve yenilemek için CTRL + F5 ' e basabilirsiniz. Bu IDE, Docker tabanlı uygulamalar için en güçlü geliştirme seçimdir.
+**Visual Studio (Windows için).** Visual Studio ile Docker tabanlı .NET 5 uygulama geliştirme, Visual Studio 2019 sürüm 16,8 veya üstünü gerektirir. Visual Studio 2019, zaten yerleşik olarak bulunan Docker Araçları ile birlikte gelir. Docker Araçları, uygulamalarınızı doğrudan hedef Docker ortamında geliştirmenize, çalıştırmanıza ve doğrulamanıza olanak sağlar. F5 tuşuna basarak uygulamanızı (tek bir kapsayıcı veya birden çok kapsayıcı) doğrudan bir Docker konağına kaydedebilir ve hata ayıklamanızı sağlar veya kapsayıcıyı yeniden oluşturmak zorunda kalmadan uygulamanızı düzenlemek ve yenilemek için CTRL + F5 ' e basabilirsiniz. Bu IDE, Docker tabanlı uygulamalar için en güçlü geliştirme seçimdir.
 
 **Mac için Visual Studio.** MacOS 'ta çalışan Xamarin Studio bir IDE, evmidir. .NET 5 geliştirme için sürüm 8,4 veya üzerini gerektirir. Bu araç, güçlü bir IDE kullanmak isteyen macOS makinelerinde çalışan geliştiriciler için tercih edilen seçim olmalıdır.
 

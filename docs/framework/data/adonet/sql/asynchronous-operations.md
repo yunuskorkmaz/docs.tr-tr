@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: zaman uyumsuz Işlemler'
 title: Zaman Uyumsuz İşlemler
 ms.date: 03/30/2017
 ms.assetid: e7d32c3c-bf78-4bfc-a357-c9e82e4a4b3c
-ms.openlocfilehash: f94a33b1ff06b5433f61687b8e28096ea37b412a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 415da1c8a9891bcca13ad26cbbc4c09bfd8909f1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197592"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718570"
 ---
 # <a name="asynchronous-operations"></a>Zaman Uyumsuz İşlemler
 

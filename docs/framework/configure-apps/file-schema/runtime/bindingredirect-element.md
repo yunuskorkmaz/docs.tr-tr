@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: <bindingRedirect> öğesi'
 title: <bindingRedirect> Öğesi
 ms.date: 03/30/2017
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - container tags, <bindingRedirect> element
 - bindingRedirect element
 ms.assetid: 67784ecd-9663-434e-bd6a-26975e447ac0
-ms.openlocfilehash: 7667f78d2c341990585526fd153c0b230658a2ee
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 833ee73fa11d179ac855f3ac4d2bca8d7a2226ac
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91167255"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719181"
 ---
 # <a name="bindingredirect-element"></a>\<bindingRedirect> Öğesi
 

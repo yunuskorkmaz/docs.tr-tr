@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: şema kısıtlamaları'
 title: Şema Kısıtlamaları
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
-ms.openlocfilehash: c0a3cafef45341cd95fa0a4f65c818129e120e44
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 74ddfe5b8aaf9b8193e0c0b2a929ccde333eac26
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91147830"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719051"
 ---
 # <a name="schema-restrictions"></a>Şema Kısıtlamaları
 
@@ -147,7 +148,7 @@ class Program
   
 |Kısıtlama adı|Parametre Adı|Kısıtlama varsayılanı|Kısıtlama numarası|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Ad|@Name|Ad|1|  
+|Name|@Name|Name|1|  
   
 ### <a name="tables"></a>Tablolar  
   
@@ -199,7 +200,7 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Katalog|@Catalog|SPECIFIC_CATALOG|1|  
 |Sahip|@Owner|SPECIFIC_SCHEMA|2|  
-|Ad|@Name|SPECIFIC_NAME|3|  
+|Name|@Name|SPECIFIC_NAME|3|  
 |Parametre|@Parameter|PARAMETER_NAME|4|  
   
 ### <a name="procedures"></a>Yordamlar  
@@ -208,7 +209,7 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Katalog|@Catalog|SPECIFIC_CATALOG|1|  
 |Sahip|@Owner|SPECIFIC_SCHEMA|2|  
-|Ad|@Name|SPECIFIC_NAME|3|  
+|Name|@Name|SPECIFIC_NAME|3|  
 |Tür|@Type|ROUTINE_TYPE|4|  
   
 ### <a name="indexcolumns"></a>IndexColumns  
@@ -234,7 +235,7 @@ class Program
 |Kısıtlama adı|Parametre Adı|Kısıtlama varsayılanı|Kısıtlama numarası|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |assembly_name|@AssemblyName|assemblies.name|1|  
-|udt_name|@UDTName|türler. assembly_class|2|  
+|udt_name|@UDTName|types.assembly_class|2|  
   
 ### <a name="foreignkeys"></a>Yabancıanahtarlar  
   
@@ -243,7 +244,7 @@ class Program
 |Katalog|@Catalog|CONSTRAINT_CATALOG|1|  
 |Sahip|@Owner|CONSTRAINT_SCHEMA|2|  
 |Tablo|@Table|TABLE_NAME|3|  
-|Ad|@Name|CONSTRAINT_NAME|4|  
+|Name|@Name|CONSTRAINT_NAME|4|  
   
 ## <a name="sql-server-2008-schema-restrictions"></a>SQL Server 2008 şema kısıtlamaları  
 

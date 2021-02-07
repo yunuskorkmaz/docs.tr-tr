@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: wait tutamaçları kullanarak ASP.NET uygulamaları'
 title: Bekleme Tanıtıcıları Kullanan ASP.NET Uygulamaları
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f588597a-49de-4206-8463-4ef377e112ff
-ms.openlocfilehash: b590b504d1d497e35612b9d7ea047fe12c43c386
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5f1f9475a041aa3cc2b3f31a8a77ce54b4e0e1e8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197605"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718648"
 ---
 # <a name="aspnet-applications-using-wait-handles"></a>Bekleme Tanıtıcıları Kullanan ASP.NET Uygulamaları
 

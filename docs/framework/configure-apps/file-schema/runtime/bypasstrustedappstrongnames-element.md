@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: <bypassTrustedAppStrongNames> öğesi'
 title: <bypassTrustedAppStrongNames> Öğesi
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - strong-named assemblies, loading into trusted application domains
 - <bypassTrustedAppStrongNames> element
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
-ms.openlocfilehash: 96361a6742d1d2f76cb237344189d3277d7c8069
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: d23b9efa19481027480f2a1c7dab22bc97a05e13
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73739089"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719168"
 ---
 # <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames> Öğesi
 
@@ -22,7 +23,7 @@ Tam güvenle yüklenmiş olan tam güven derlemelerindeki tanımlayıcı adları
 &nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<bypassTrustedAppStrongNames>**
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <bypassTrustedAppStrongNames
@@ -43,7 +44,7 @@ Tam güvenle yüklenmiş olan tam güven derlemelerindeki tanımlayıcı adları
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|`true`|Derlemeler tam güvenle yüklendiğinde, tam güven derlemelerindeki tanımlayıcı ad imzaları doğrulanmaz <xref:System.AppDomain> . Bu varsayılandır.|
+|`true`|Derlemeler tam güvenle yüklendiğinde, tam güven derlemelerindeki tanımlayıcı ad imzaları doğrulanmaz <xref:System.AppDomain> . Bu varsayılan seçenektir.|
 |`false`|Tam güven derlemelerindeki tanımlayıcı ad imzaları, derlemeler tam güvenle yüklendiğinde onaylanır <xref:System.AppDomain> . Tanımlayıcı ad imzası yalnızca imza doğruluğu için denetlenir; bir eşleşme için başka bir tanımlayıcı adla karşılaştırılmaz.|
 
 ### <a name="child-elements"></a>Alt Öğeler
@@ -72,7 +73,7 @@ Atlama özelliği, bir tanımlayıcı ad ile imzalanmış ve aşağıdaki özell
 - Gecikmeli imza değildir.
 
 > [!NOTE]
-> Bir kayıt defteri anahtarı kullanılarak bilgisayardaki tüm uygulamalar için atlama özelliği kapatılmışsa, bu yapılandırma dosyası ayarının etkisi yoktur. Daha fazla bilgi için bkz. [nasıl yapılır: güçlü adı atlama özelliğini devre dışı bırakma](../../../../standard/assembly/disable-strong-name-bypass-feature.md).
+> Bir kayıt defteri anahtarı kullanılarak bilgisayardaki tüm uygulamalar için atlama özelliği kapatılmışsa, bu yapılandırma dosyası ayarının etkisi yoktur. Daha fazla bilgi için bkz. [nasıl yapılır: Strong-Name atlama özelliğini devre dışı bırakma](../../../../standard/assembly/disable-strong-name-bypass-feature.md).
 
 ## <a name="example"></a>Örnek
 

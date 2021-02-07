@@ -1,13 +1,14 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: ADO.NET 'de yan yana yürütme"
 title: Yan Yana Yürütme
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: 609fc7b7cefd92e38ecfff54e5ac1651e855e4b7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ab55430382f49c40a577d5cac8501c0136c9f0a4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91188944"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718778"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>ADO.NET’te Yan Yana Yürütme
 
@@ -25,9 +26,9 @@ ms.locfileid: "91188944"
 
  Sürüm 1,1 ' den başlayarak, ODBC () için .NET Framework Veri Sağlayıcısı, <xref:System.Data.Odbc> .NET Framework bir parçası olarak dahil edilmiştir.
   
- Veri kaynağınıza bağlanmak için ODBC veri sağlayıcıyı kullanan .NET Framework sürüm 1,0 için geliştirilmiş bir uygulamanız varsa ve bu uygulamayı, .NET Framework 1,1 veya sonraki bir sürümde çalıştırmak istiyorsanız, ODBC veri sağlayıcısı için ad alanını **System. Data. ODBC**olarak güncelleştirmeniz gerekir. Daha sonra .NET Framework yeni sürümü için yeniden derlemeniz gerekir.  
+ Veri kaynağınıza bağlanmak için ODBC veri sağlayıcıyı kullanan .NET Framework sürüm 1,0 için geliştirilmiş bir uygulamanız varsa ve bu uygulamayı, .NET Framework 1,1 veya sonraki bir sürümde çalıştırmak istiyorsanız, ODBC veri sağlayıcısı için ad alanını **System. Data. ODBC** olarak güncelleştirmeniz gerekir. Daha sonra .NET Framework yeni sürümü için yeniden derlemeniz gerekir.  
   
- Veri kaynağınıza bağlanmak için ODBC veri sağlayıcısını kullanan .NET Framework sürüm 2,0 veya üzeri için geliştirilmiş bir uygulamanız varsa ve bu uygulamayı 1,0 .NET Framework sürümünde çalıştırmak istiyorsanız, ODBC veri sağlayıcısını indirmeniz ve .NET Framework sürüm 1,0 sistemine kurmanız gerekir. Daha sonra ODBC veri sağlayıcısı için ad alanını **Microsoft. Data. ODBC**olarak değiştirmeniz ve uygulamayı .NET Framework sürüm 1,0 için yeniden derlemeniz gerekir.  
+ Veri kaynağınıza bağlanmak için ODBC veri sağlayıcısını kullanan .NET Framework sürüm 2,0 veya üzeri için geliştirilmiş bir uygulamanız varsa ve bu uygulamayı 1,0 .NET Framework sürümünde çalıştırmak istiyorsanız, ODBC veri sağlayıcısını indirmeniz ve .NET Framework sürüm 1,0 sistemine kurmanız gerekir. Daha sonra ODBC veri sağlayıcısı için ad alanını **Microsoft. Data. ODBC** olarak değiştirmeniz ve uygulamayı .NET Framework sürüm 1,0 için yeniden derlemeniz gerekir.  
   
 ## <a name="the-net-framework-data-provider-for-oracle"></a>Oracle için .NET Framework Veri Sağlayıcısı  
 
