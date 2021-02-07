@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugAssembly arabirimi hakkında daha fazla bilgi edinin'
 title: ICorDebugAssembly Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9d657a28-6984-4c5e-8a54-89d20080baff
 topic_type:
 - apiref
-ms.openlocfilehash: 821eae8ea5b4147408e9fe60d1e5b70c7936959e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 746b5f4b2f26550788708d93bf0dd50f5f495041
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95696251"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99711953"
 ---
 # <a name="icordebugassembly-interface"></a>ICorDebugAssembly Arabirimi
 

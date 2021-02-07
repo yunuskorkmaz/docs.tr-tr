@@ -1,4 +1,5 @@
 ---
+description: ': Icorerrorgeditanddevam ErrorInfo:: GetString metodu hakkında daha fazla bilgi edinin'
 title: ICorDebugEditAndContinueErrorInfo::GetString Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 85e2108b-ff03-4a15-ac5c-1eb5d84f38ca
 topic_type:
 - apiref
-ms.openlocfilehash: 3251aa3b2bbb15e9a9da8c54745184a28c8e60ec
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: be4c97ca18adf684335a5f8a6fe131bad54d1763
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721432"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99710380"
 ---
 # <a name="icordebugeditandcontinueerrorinfogetstring-method"></a>ICorDebugEditAndContinueErrorInfo::GetString Metodu
 

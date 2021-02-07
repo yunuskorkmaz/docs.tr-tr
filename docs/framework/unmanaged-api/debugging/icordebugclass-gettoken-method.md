@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugClass:: GetToken metodu hakkında daha fazla bilgi edinin'
 title: ICorDebugClass::GetToken Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: ee5c848a-eac4-4462-b07a-07ccd76a75df
 topic_type:
 - apiref
-ms.openlocfilehash: 59f450117d1a52ce7b900d9d67330fc98281afa0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f87b71800410fc3a95790e6d35cf4bd10a5ce747
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728426"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99711545"
 ---
 # <a name="icordebugclassgettoken-method"></a>ICorDebugClass::GetToken Metodu
 
 `TypeDef`Bu sınıfın tanımına başvuran meta veri belirtecini alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetToken (  

@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugCode:: GetSize yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugCode::GetSize Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 115bc6de-f5e2-4e8e-bb38-c7cf54045434
 topic_type:
 - apiref
-ms.openlocfilehash: 2370ff5d99078ceb1ae0509e660c046dd7a1537e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5a244d649cdcf027aea22ab36ff5d39a77a05e1c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125614"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99711186"
 ---
 # <a name="icordebugcodegetsize-method"></a>ICorDebugCode::GetSize Metodu
 
@@ -37,7 +38,7 @@ HRESULT GetSize (
 ## <a name="parameters"></a>Parametreler
 
 `pcBytes`  
-dışı Bu `ICorDebugCode` nesnenin temsil ettiği ikili kodun bayt cinsinden boyutu için bir işaretçi.
+dışı Bu nesnenin temsil ettiği ikili kodun bayt cinsinden boyutu için bir işaretçi `ICorDebugCode` .
 
 ## <a name="requirements"></a>Gereksinimler
 
@@ -47,4 +48,4 @@ dışı Bu `ICorDebugCode` nesnenin temsil ettiği ikili kodun bayt cinsinden bo
 
 **Kitaplık:** Corguid. lib
 
-**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

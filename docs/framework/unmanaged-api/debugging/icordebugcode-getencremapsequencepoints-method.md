@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugCode:: GetEnCRemapSequencePoints metodu hakkında daha fazla bilgi edinin'
 title: ICorDebugCode::GetEnCRemapSequencePoints Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 8463a98a-de4a-418e-beb0-9611885ae6b0
 topic_type:
 - apiref
-ms.openlocfilehash: 83801f7133df6ffb4bdf4a816142849f40baeb53
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e9785460490aa602a49dff3ab972b409dde48cdc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125658"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99711173"
 ---
 # <a name="icordebugcodegetencremapsequencepoints-method"></a>ICorDebugCode::GetEnCRemapSequencePoints Yöntemi
 
 Bu yöntem .NET Framework geçerli sürümünde uygulanmıyor.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 HRESULT GetEnCRemapSequencePoints(

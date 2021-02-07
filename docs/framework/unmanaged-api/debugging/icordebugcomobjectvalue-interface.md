@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugComObjectValue arabirimi hakkında daha fazla bilgi edinin'
 title: ICorDebugComObjectValue Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 505a7f6c-d92b-42b4-b539-433f5102ea9b
 topic_type:
 - apiref
-ms.openlocfilehash: 40df1416e68c86efe6d404119cb37277fe21ac56
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3c071c371ae6e330431630cfb1934b538d62efe6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95677550"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99710822"
 ---
 # <a name="icordebugcomobjectvalue-interface"></a>ICorDebugComObjectValue Arabirimi
 

@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugCode:: ısıl yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugCode::IsIL Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 132ef8cc-d938-43f3-b8f2-e3b97c0ceb33
 topic_type:
 - apiref
-ms.openlocfilehash: 77e55c4c3644ac4bd76f5c92152f4ee86cf5fa9a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: db41f9ebaa6a6403b21e10d1daa0e8b167c7cb96
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125558"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99711134"
 ---
 # <a name="icordebugcodeisil-method"></a>ICorDebugCode::IsIL Yöntemi
 
@@ -37,7 +38,7 @@ HRESULT IsIL (
 ## <a name="parameters"></a>Parametreler
 
 `pbIL`  
-[out] Bu `ICorDebugCode` MSIL 'de derlenen kodu temsil ediyorsa `true`. Aksi takdirde, `false`.
+[out] `true` Bu `ICorDebugCode` , MSIL 'de derlenen kodu temsil ediyorsa, tersi durumda `false` .
 
 ## <a name="requirements"></a>Gereksinimler
 
@@ -47,4 +48,4 @@ HRESULT IsIL (
 
 **Kitaplık:** Corguid. lib
 
-**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

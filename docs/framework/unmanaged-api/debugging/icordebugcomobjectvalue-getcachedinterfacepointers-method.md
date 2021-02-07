@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugComObjectValue:: Getcachedınterfaceişaretçiler yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugComObjectValue::GetCachedInterfacePointers Metodu
 ms.date: 03/30/2017
 api_name:
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 08dbd558-bd39-4263-94c2-71e70687aaf0
 topic_type:
 - apiref
-ms.openlocfilehash: c3120a0dd859f581e6356fc260043cb83250ae9e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 737d71f6aa903a3dfa97f583b47a322ec074147f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724838"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99710861"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacepointers-method"></a>ICorDebugComObjectValue::GetCachedInterfacePointers Metodu
 
 Geçerli çalışma zamanında çağrılabilir sarmalayıcı (RCW) üzerinde önbelleğe alınmış ham arabirim işaretçilerini alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetCachedInterfacePointers(  

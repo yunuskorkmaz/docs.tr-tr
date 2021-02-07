@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugClass arabirimi hakkında daha fazla bilgi edinin'
 title: ICorDebugClass Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 03a6facb-f12f-49be-9839-e73b9c791cd5
 topic_type:
 - apiref
-ms.openlocfilehash: 4f488741f4233f06c128e0a262ce798ef27af3ff
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5ded26a8b3a98bd273bbfe1bfa9efd1bb70d5595
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95699644"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99711511"
 ---
 # <a name="icordebugclass-interface"></a>ICorDebugClass Arabirimi
 

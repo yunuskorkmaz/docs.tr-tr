@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ICorDebugCode3:: Getreturnvaluelivesapmasını yöntemi'
 title: ICorDebugCode3::GetReturnValueLiveOffset Metodu
 ms.date: 03/30/2017
 dev_langs:
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 8c2ff5d8-8c04-4423-b1e1-e1c8764b36d3
 topic_type:
 - apiref
-ms.openlocfilehash: 6153ebf24ae939a50d71cad2d4323090aa905851
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6ec9a342805c047d7331c3ce2af2a4ffba596a26
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720821"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99711017"
 ---
 # <a name="icordebugcode3getreturnvalueliveoffset-method"></a>ICorDebugCode3::GetReturnValueLiveOffset Metodu
 
 Belirtilen bir Il ofseti için, hata ayıklayıcının bir işlevden dönüş değeri alabileceği şekilde, bir kesme noktasının yerleştirilmesi gereken yerel uzaklıkları alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp
 HRESULT GetReturnValueLiveOffset(  
@@ -62,7 +63,7 @@ HRESULT GetReturnValueLiveOffset(
   
  İşlevi, `HRESULT` Aşağıdaki tabloda gösterilen değerleri döndürür.  
   
-|`HRESULT` deeri|Açıklama|  
+|`HRESULT` deeri|Description|  
 |---------------------|-----------------|  
 |`S_OK`|Başarılı.|  
 |`CORDBG_E_INVALID_OPCODE`|Verilen Il konum sitesi bir çağrı yönergesi değil veya işlev döndürüyor `void` .|  

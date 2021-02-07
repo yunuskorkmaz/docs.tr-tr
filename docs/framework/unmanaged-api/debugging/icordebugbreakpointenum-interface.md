@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugBreakpointEnum arabirimi hakkında daha fazla bilgi edinin'
 title: ICorDebugBreakpointEnum Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4c6f4f6e-52cc-402e-881b-7b8526544c90
 topic_type:
 - apiref
-ms.openlocfilehash: 97e06a2f20dcc2bb3815b98ba29ff230e37ff29d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 71bd69c4fabba4a7d06f3b4cee5c0cf859d3c92b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730168"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99711732"
 ---
 # <a name="icordebugbreakpointenum-interface"></a>ICorDebugBreakpointEnum Arabirimi
 

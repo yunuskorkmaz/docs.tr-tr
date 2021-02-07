@@ -1,19 +1,20 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ICorDebugDataTarget2:: EnumerateThreadIDs yöntemi'
 title: ICorDebugDataTarget2::EnumerateThreadIDs Yöntemi
 ms.date: 03/30/2017
 ms.assetid: af02460f-2a45-496e-bc4e-a1ac4f80fe11
-ms.openlocfilehash: 31a839076b34901ae1a8f3b43021f64f77629fc0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5bbda67e6c6de81e9de566a68f772f324d79b92f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95713853"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99710562"
 ---
 # <a name="icordebugdatatarget2enumeratethreadids-method"></a>ICorDebugDataTarget2::EnumerateThreadIDs Yöntemi
 
 Etkin iş parçacığı kimliklerinin bir listesini döndürür.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT EnumerateThreadIDs(  

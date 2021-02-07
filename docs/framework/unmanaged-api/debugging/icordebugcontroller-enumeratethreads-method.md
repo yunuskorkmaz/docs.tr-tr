@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugController:: EnumerateThreads yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugController::EnumerateThreads Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 73f536f6-4668-4a4a-b3e4-ac7df862d5be
 topic_type:
 - apiref
-ms.openlocfilehash: f98118f9206d9ccd7dc9dc9a943500c7b4cd676a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b53425de36be5a435ef0dac538c5165f41db63f2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732664"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99710783"
 ---
 # <a name="icordebugcontrollerenumeratethreads-method"></a>ICorDebugController::EnumerateThreads Yöntemi
 
 İşlemdeki etkin yönetilen iş parçacıkları için bir Numaralandırıcı alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT EnumerateThreads (  

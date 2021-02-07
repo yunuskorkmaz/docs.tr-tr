@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugCode:: GetFunction Yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugCode::GetFunction Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c568b737-fdb2-4816-accd-051f5ab760f1
 topic_type:
 - apiref
-ms.openlocfilehash: 99972c5840645c95b7b349daf2d8ea7173d0cc03
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c90635bf1821d70d6d056d5cbd495ddfa2d2a2ff
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95674735"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99711212"
 ---
 # <a name="icordebugcodegetfunction-method"></a>ICorDebugCode::GetFunction Yöntemi
 
 Bu "ICorDebugCode" ile ilişkili "ICorDebugFunction" öğesini alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetFunction (  

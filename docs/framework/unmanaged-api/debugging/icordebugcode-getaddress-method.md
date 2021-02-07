@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugCode:: GetAddress yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugCode::GetAddress Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: cc507cb0-df2e-49c2-b32e-0c3271a8df9a
 topic_type:
 - apiref
-ms.openlocfilehash: c796e3782a498c798c9b47f028ef05c2de00f54d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4c074a407d8153703fd92aeddb53e9fa05b0ef01
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95717675"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99711342"
 ---
 # <a name="icordebugcodegetaddress-method"></a>ICorDebugCode::GetAddress Yöntemi
 
 Bu "ICorDebugCode" arabiriminin gösterdiği kod kesiminin göreli sanal adresini (RVA) alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetAddress (  
