@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: özel etkinlik şablonu oluşturma'
 title: 'Nasıl yapılır: Özel Etkinlik Şablonu Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 6760a5cc-6eb8-465f-b4fa-f89b39539429
-ms.openlocfilehash: 90a54806833ff66797fb7beaa6ac8a912665bddc
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 06fda953110e36e46a91fda8697aadbcd6e6bf59
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96280123"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99742114"
 ---
 # <a name="how-to-create-a-custom-activity-template"></a>Nasıl yapılır: Özel Etkinlik Şablonu Oluşturma
 

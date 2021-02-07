@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Option Strict ekstresi'
 title: Option Strict Deyimi
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: ab1094961e2bc3aed0e975e40369a5f5c1ba93eb
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: a128aca1bdaa6ce8bd4c4cd8e63e05348f00e4d4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873139"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741438"
 ---
 # <a name="option-strict-statement"></a>Option Strict Deyimi
 
 Örtük veri türü dönüşümlerini yalnızca genişletme dönüştürmelerine kısıtlar, geç bağlamaya izin vermez ve bir tür ile sonuçlanan örtülü yazmaya izin vermez `Object` .  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 Option Strict { On | Off }  
@@ -30,7 +31,7 @@ Option Strict { On | Off }
   
 ## <a name="parts"></a>Bölümler  
   
-|Terim|Tanım|  
+|Süre|Tanım|  
 |---|---|  
 |`On`|İsteğe bağlı. Denetlemeye izin vermez `Option Strict` .|  
 |`Off`|İsteğe bağlı. Denetlemeyi devre dışı bırakır `Option Strict` .|  
@@ -117,7 +118,7 @@ Option Strict { On | Off }
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-1. **Çözüm Gezgini**bir proje seçin. **Proje** menüsünde **Özellikler**' e tıklayın.  
+1. **Çözüm Gezgini** bir proje seçin. **Proje** menüsünde **Özellikler**' e tıklayın.  
   
 2. **Derle** sekmesinde, **katı kutu seçeneğini** belirleyin.  
   
@@ -131,9 +132,9 @@ Option Strict { On | Off }
   
 - **Örtük tür; nesne varsayıldı**  
   
- **Option Strict** **on on**olarak ayarlandığında, bu uyarı yapılandırma ayarlarının üçü de **hata**olarak ayarlanır. **Option Strict** ' i **off**olarak ayarlarsanız, üç ayar **hiçbiri None**olarak ayarlanır.  
+ **Option Strict** **on on** olarak ayarlandığında, bu uyarı yapılandırma ayarlarının üçü de **hata** olarak ayarlanır. **Option Strict** ' i **off** olarak ayarlarsanız, üç ayar **hiçbiri None** olarak ayarlanır.  
   
- Her uyarı yapılandırma ayarını **hiçbiri**, **Uyarı**veya **hata**olarak tek tek değiştirebilirsiniz. Üç uyarı yapılandırma ayarı **hata**olarak ayarlanırsa, `On` `Option strict` kutusunda görünür. Üçü de **hiçbiri**olarak ayarlandıysa, `Off` Bu kutuda görüntülenir. Bu ayarların diğer birleşimleri için **(özel)** görüntülenir.  
+ Her uyarı yapılandırma ayarını **hiçbiri**, **Uyarı** veya **hata** olarak tek tek değiştirebilirsiniz. Üç uyarı yapılandırma ayarı **hata** olarak ayarlanırsa, `On` `Option strict` kutusunda görünür. Üçü de **hiçbiri** olarak ayarlandıysa, `Off` Bu kutuda görüntülenir. Bu ayarların diğer birleşimleri için **(özel)** görüntülenir.  
   
 ### <a name="to-set-the-option-strict-default-setting-for-new-projects"></a>Yeni projeler için katı varsayılan ayar seçeneğini ayarlamak için  
 

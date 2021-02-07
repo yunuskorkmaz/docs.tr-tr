@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: özel Izleme kayıtları'
 title: Özel İzleme Kayıtları
 ms.date: 03/30/2017
 ms.assetid: 24284565-c68b-40bf-b7f1-e148d151a6fc
-ms.openlocfilehash: e0bbb9d57290b072d834f0b8bc0815dfe265e72a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9d6988465fa3afca4302c86e0c2cad2778f2beae
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543907"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99742699"
 ---
 # <a name="custom-tracking-records"></a>Özel İzleme Kayıtları
 

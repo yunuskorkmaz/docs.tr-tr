@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Select... Case ekstresi (Visual Basic)'
 title: Select...Case Deyimi
 ms.date: 07/20/2015
 f1_keywords:
@@ -21,18 +22,18 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Select Case statements
 - Case statement [Visual Basic], Select...Case
 ms.assetid: 68877b65-5419-4bf0-a465-20cd0e4c7d44
-ms.openlocfilehash: 750e765390ad223976b000fe64e656fa2d62a34b
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 4f8edecd0a0b1afd59e182a372e308c3829a9b93
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90871781"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741139"
 ---
 # <a name="selectcase-statement-visual-basic"></a>Select...Case Deyimi (Visual Basic)
 
 Bir ifadenin değerine bağlı olarak çeşitli deyim gruplarından birini çalıştırır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 Select [ Case ] testexpression  
@@ -45,10 +46,10 @@ End Select
   
 ## <a name="parts"></a>Bölümler  
   
-|Terim|Tanım|  
+|Süre|Tanım|  
 |---|---|  
 |`testexpression`|Gereklidir. İfadesini. Tek bir veri türü ( `Boolean` , `Byte` ,,,, `Char` `Date` `Double` `Decimal` , `Integer` , `Long` , `Object` , `SByte` , `Short` , `Single` , `String` , `UInteger` , `ULong` , ve `UShort` ) olarak değerlendirilmelidir|  
-|`expressionlist`|Bir bildirimde gereklidir `Case` . İçin eşleşme değerlerini temsil eden ifade yan tümceleri listesi `testexpression` . Birden çok ifade yan tümceleri virgüller ile ayrılmıştır. Her yan tümce aşağıdaki formlardan birini alabilir:<br /><br /> -   *İfade1* `To` *İfade2*<br />-[ `Is` ] *ComparisonOperator* *ifadesi*<br />-   *ifadesini*<br /><br /> `To`İçin bir eşleşme değerleri aralığının sınırlarını belirtmek için anahtar sözcüğünü kullanın `testexpression` . Değeri değerine `expression1` eşit veya ondan küçük olmalıdır `expression2` .<br /><br /> `Is` `=` `<>` `<` `<=` `>` `>=` Eşleştirme değerlerinde bir kısıtlama belirtmek için bir karşılaştırma işleci (,,,,, veya) ile anahtar sözcüğünü kullanın `testexpression` . `Is`Anahtar sözcüğü sağlanmazsa, *ComparisonOperator*öğesinden önce otomatik olarak eklenir.<br /><br /> Yalnızca belirten form, `expression` `Is` *ComparisonOperator* 'in eşittir işareti () olduğu formun özel durumu olarak değerlendirilir `=` . Bu form olarak değerlendirilir `testexpression`  =  `expression` .<br /><br /> İçindeki ifadeler `expressionlist` herhangi bir veri türünde olabilir, bu, türüne örtülü olarak dönüştürülebilir `testexpression` ve uygun olan `comparisonoperator` iki tür için geçerlidir.|  
+|`expressionlist`|Bir bildirimde gereklidir `Case` . İçin eşleşme değerlerini temsil eden ifade yan tümceleri listesi `testexpression` . Birden çok ifade yan tümceleri virgüller ile ayrılmıştır. Her yan tümce aşağıdaki formlardan birini alabilir:<br /><br /> -   *İfade1* `To` *İfade2*<br />-[ `Is` ] *ComparisonOperator* *ifadesi*<br />-   *ifadesini*<br /><br /> `To`İçin bir eşleşme değerleri aralığının sınırlarını belirtmek için anahtar sözcüğünü kullanın `testexpression` . Değeri değerine `expression1` eşit veya ondan küçük olmalıdır `expression2` .<br /><br /> `Is` `=` `<>` `<` `<=` `>` `>=` Eşleştirme değerlerinde bir kısıtlama belirtmek için bir karşılaştırma işleci (,,,,, veya) ile anahtar sözcüğünü kullanın `testexpression` . `Is`Anahtar sözcüğü sağlanmazsa, *ComparisonOperator* öğesinden önce otomatik olarak eklenir.<br /><br /> Yalnızca belirten form, `expression` `Is` *ComparisonOperator* 'in eşittir işareti () olduğu formun özel durumu olarak değerlendirilir `=` . Bu form olarak değerlendirilir `testexpression`  =  `expression` .<br /><br /> İçindeki ifadeler `expressionlist` herhangi bir veri türünde olabilir, bu, türüne örtülü olarak dönüştürülebilir `testexpression` ve uygun olan `comparisonoperator` iki tür için geçerlidir.|  
 |`statements`|İsteğe bağlı. `Case` `testexpression` ' Deki herhangi bir yan tümcesiyle eşleşiyorsa, çalıştıran bir veya daha fazla deyim `expressionlist` .|  
 |`elsestatements`|İsteğe bağlı. Bir veya daha fazla deyimi, hiçbir `Case Else` `testexpression` deyimin içindeki herhangi bir yan tümce ile eşleşmezse çalışır `expressionlist` `Case` .|  
 |`End Select`|`Select`... Oluşturma tanımını sonlandırır `Case` .|  
@@ -73,7 +74,7 @@ End Select
  Ayarı, `Option Compare` dize karşılaştırmaları etkileyebilir. Altında `Option Compare Text` , "elmalar" ve "elmalar" dizeleri eşit olarak karşılaştırılır, ancak altında `Option Compare Binary` değildir.  
   
 > [!NOTE]
-> `Case`Birden çok yan tümcesini içeren bir ifade, kısa devre *dışı*olarak bilinen davranışları ortaya kaydedebilir. Visual Basic yan tümceleri soldan sağa değerlendirir ve biri ile eşleşme üretiyorsa `testexpression` , kalan yan tümceler değerlendirilmez. Kısa devre, performansı iyileştirebilir, ancak içindeki her ifadenin değerlendirilmesi bekleniyorsa beklenmeyen sonuçlar üretebilir `expressionlist` . Kısa devre dışı hakkında daha fazla bilgi için bkz. [Boolean ifadeleri](../../programming-guide/language-features/operators-and-expressions/boolean-expressions.md).  
+> `Case`Birden çok yan tümcesini içeren bir ifade, kısa devre *dışı* olarak bilinen davranışları ortaya kaydedebilir. Visual Basic yan tümceleri soldan sağa değerlendirir ve biri ile eşleşme üretiyorsa `testexpression` , kalan yan tümceler değerlendirilmez. Kısa devre, performansı iyileştirebilir, ancak içindeki her ifadenin değerlendirilmesi bekleniyorsa beklenmeyen sonuçlar üretebilir `expressionlist` . Kısa devre dışı hakkında daha fazla bilgi için bkz. [Boolean ifadeleri](../../programming-guide/language-features/operators-and-expressions/boolean-expressions.md).  
   
  Bir `Case` veya `Case Else` deyim bloğundaki kodun bloğunda daha fazla deyim çalıştırması gerekmiyorsa, deyimi kullanılarak bloğundan çıkabilir `Exit Select` . Bu, denetimi izleyen deyime hemen aktarır `End Select` .  
   

@@ -1,5 +1,6 @@
 ---
-title: XmlReader.CreateSqlReader Yöntemi (System.Xml)
+description: 'Şu konuda daha fazla bilgi edinin: XmlReader. CreateSqlReader yöntemi'
+title: XmlReader. CreateSqlReader yöntemi (System.Xml)
 ms.date: 10/17/2019
 topic_type:
 - apiref
@@ -9,16 +10,16 @@ api_location:
 - system.xml.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 7bd2ef5158516acede47f73f9937d06159bc16c9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 61d594c0438c86863ce4052387439f5483d8a34c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155745"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740443"
 ---
 # <a name="xmlreadercreatesqlreader-method"></a>XmlReader.CreateSqlReader Metodu
 
-Ayrıştırma <xref:System.Xml.XmlReader> için belirtilen akış, ayarlar ve bağlam bilgilerini kullanarak yeni bir örnek oluşturur.
+<xref:System.Xml.XmlReader>Belirtilen akışı, ayarları ve ayrıştırma için bağlam bilgilerini kullanarak yeni bir örnek oluşturur.
 
 ```csharp
 internal static XmlReader CreateSqlReader(Stream input,
@@ -31,12 +32,12 @@ internal static XmlReader CreateSqlReader(Stream input,
   XML verilerini içeren akış.
 
 - `settings` <xref:System.Xml.XmlReaderSettings>  
-  Yeni <xref:System.Xml.XmlReader> örneğin ayarları. Bu değer `null`.
+  Yeni örnek için ayarlar <xref:System.Xml.XmlReader> . Bu değer olabilir `null` .
 
 - `inputContext` <xref:System.Xml.XmlParserContext>  
-  XML parçasını ayrışdırmak için gereken bağlam bilgileri. Bu değer `null`.
+  XML parçasını ayrıştırmak için gereken bağlam bilgileri. Bu değer olabilir `null` .
 
-## <a name="returns"></a>Döndürür
+## <a name="returns"></a>Döndürülenler
 
 <xref:System.Xml.XmlReader>  
 Akıştaki XML verilerini okumak için kullanılan bir nesne.
@@ -44,14 +45,14 @@ Akıştaki XML verilerini okumak için kullanılan bir nesne.
 ## <a name="remarks"></a>Açıklamalar
 
 > [!WARNING]
-> Yöntem `XmlReader.CreateSqlReader` dahilidir ve doğrudan kodunuzda kullanılmak üzere değildir.
+> `XmlReader.CreateSqlReader`Yöntemi iç yöntemidir ve doğrudan kodunuzda kullanılması amaçlıyordu.
 >
-> Microsoft, bu yöntemin hiçbir koşulda bir üretim uygulamasında kullanılmasını desteklemez.
+> Microsoft, bu yöntemin herhangi bir koşulda bir üretim uygulamasında kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
 **Ad alanı:**<xref:System.Xml>
 
-**Montaj:** System.xml.dll
+**Bütünleştirilmiş kod:** System.Xml.dll
 
-**.NET Framework sürümleri:** 2.0'dan beri mevcuttur.
+**.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.

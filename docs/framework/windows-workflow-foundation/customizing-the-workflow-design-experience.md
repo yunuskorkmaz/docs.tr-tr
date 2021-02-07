@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: Iş akışı tasarım deneyimini özelleştirme'
 title: İş Akışı Tasarım Deneyimini Özelleştirme
 ms.date: 03/30/2017
 helpviewer_keywords:
 - extending [WF], Workflow Designer
 ms.assetid: 98135077-0f5d-4d16-9337-01094e843537
-ms.openlocfilehash: 27be398d874747b65ae051224070d3f40f1fbbb0
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 02049f8b42de3de6e4dfdfe8a4151be1500bcca9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715131"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99742660"
 ---
 # <a name="customizing-the-workflow-design-experience"></a>İş Akışı Tasarım Deneyimini Özelleştirme
 
@@ -38,4 +39,4 @@ ms.locfileid: "74715131"
 - [Windows Workflow Foundation’ı Genişletme](extend.md)
 - [Tasarımcı](./samples/designer.md)
 - [Özel Etkinlik Tasarımcıları](./samples/custom-activity-designers.md)
-- [Tasarımcıyı Yeniden Barındırma](./samples/designer-rehosting.md)
+- [Tasarımcı yeniden barındırma](./samples/designer-rehosting.md)

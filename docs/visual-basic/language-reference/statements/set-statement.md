@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: set deyimleri (Visual Basic)'
 title: Set Deyimi
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - write-only properties
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
-ms.openlocfilehash: b3524769567a56a87184bf916a3e5ccb1fd4fa1c
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 5ee27b35a4639bc20d5b6634de8332c6ede9bf12
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90871753"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741126"
 ---
 # <a name="set-statement-visual-basic"></a>Set Deyimi (Visual Basic)
 
 `Set`Bir özelliğe değer atamak için kullanılan bir özellik yordamı bildirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 [ <attributelist> ] [ accessmodifier ] Set (ByVal value [ As datatype ])  
@@ -41,7 +42,7 @@ End Set
   
 - [Arkadaş](../modifiers/friend.md)  
   
-- [Özelleştirme](../modifiers/private.md)  
+- [Özel](../modifiers/private.md)  
   
 - `Protected Friend`  
   
@@ -67,7 +68,7 @@ End Set
   
  Visual Basic, `Set` özellik atamaları sırasında yordama bir parametre geçirir. İçin bir parametre belirtmezseniz `Set` , tümleşik geliştirme ortamı (IDE) adlı örtülü bir parametre kullanır `value` . Parametresi, özelliğine atanacak değeri tutar. Genellikle bu değeri özel bir yerel değişkende depoluyordu ve yordam her çağrıldığında döndürülür `Get` .  
   
- Özellik bildiriminin gövdesi, yalnızca Property Ifadesiyle ve ifadesiyle olan özellik `Get` ve yordamları içerebilir `Set` [Property Statement](property-statement.md) `End Property` . Bu yordamlar dışında bir şey depolayamazsınız. Özellikle, özelliğin geçerli değerini depolayaamaz. Özellik yordamlarından birinde depolursa, diğer özellik yordamının bu değeri, özelliğin dışında depolamanız gerekir. Her zamanki yaklaşım, değeri özelliği ile aynı düzeyde belirtilen [özel](../modifiers/private.md) bir değişkende depokullanmaktır. `Set`Uygulandığı özelliğin içinde bir yordam tanımlamanız gerekir.  
+ Özellik bildiriminin gövdesi, yalnızca Property Ifadesiyle ve ifadesiyle olan özellik `Get` ve yordamları içerebilir `Set` [](property-statement.md) `End Property` . Bu yordamlar dışında bir şey depolayamazsınız. Özellikle, özelliğin geçerli değerini depolayaamaz. Özellik yordamlarından birinde depolursa, diğer özellik yordamının bu değeri, özelliğin dışında depolamanız gerekir. Her zamanki yaklaşım, değeri özelliği ile aynı düzeyde belirtilen [özel](../modifiers/private.md) bir değişkende depokullanmaktır. `Set`Uygulandığı özelliğin içinde bir yordam tanımlamanız gerekir.  
   
  `Set`Yöntemi, bildiriminde kullanmadığınız müddetçe, kendisini kapsayan özelliğin erişim düzeyi olur `accessmodifier` `Set` .  
   

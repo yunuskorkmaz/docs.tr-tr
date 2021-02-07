@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: REM ekstresi (Visual Basic)'
 title: REM Deyimi
 ms.date: 07/20/2015
 f1_keywords:
@@ -13,18 +14,18 @@ helpviewer_keywords:
 - Visual Basic code, comments
 - "' comment marker character [Visual Basic]"
 ms.assetid: 34126d7f-e0f9-476d-91e6-b31b398615dc
-ms.openlocfilehash: 6161a9f7e589988882b5f76477bc069afd2b9b41
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: c82621db98dc66060ae098ee6537ee58b24046a0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90871956"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741321"
 ---
 # <a name="rem-statement-visual-basic"></a>REM Deyimi (Visual Basic)
 
 Bir programın kaynak kodunda açıklayıcı açıklamalar eklemek için kullanılır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 REM comment  

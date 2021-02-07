@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: SQL izleme'
 title: SQL İzleme
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: 916c04b03dee296b7e6f5c792f0c4e50fb4203c0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2b336839b9c63c0b7bde8b6451add00cb353fec6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559356"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741750"
 ---
 # <a name="sql-tracking"></a>SQL izleme
 
@@ -24,7 +25,7 @@ Bu örnek, izleme kayıtlarını bir SQL veritabanına yazan özel bir SQL izlem
 
 3. Visual Studio 2010 ' de SqlTrackingSample. sln dosyasını açın.
 
-4. **Ctrl** + **Shift** + Çözümü derlemek için CTRL SHIFT**B** tuşlarına basın.
+4.  +  + Çözümü derlemek için CTRL SHIFT **B** tuşlarına basın.
 
 5. Uygulamayı çalıştırmak için **F5**'e basın.
 
@@ -36,7 +37,7 @@ Bu örnek, izleme kayıtlarını bir SQL veritabanına yazan özel bir SQL izlem
 
    Yerel hizmet WSDL adresi örneği `http://localhost:65193/StockPriceService.xamlx?wsdl` .
 
-8. Dosya Gezgini 'ni kullanarak WCF test istemcisini (WcfTestClient.exe) çalıştırın. *Microsoft Visual Studio 10.0 \ Common7\IDE dizininde*bulunur.
+8. Dosya Gezgini 'ni kullanarak WCF test istemcisini (WcfTestClient.exe) çalıştırın. *Microsoft Visual Studio 10.0 \ Common7\IDE dizininde* bulunur.
 
 9. WCF test istemcisinde **Dosya** menüsüne tıklayın ve **Hizmet Ekle**' yi seçin. Yerel hizmet adresini metin kutusuna yapıştırın. İletişim kutusunu kapatmak için **Tamam** ' ı tıklatın.
 

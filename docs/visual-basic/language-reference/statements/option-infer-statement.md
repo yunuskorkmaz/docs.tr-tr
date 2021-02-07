@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Option Infer deyimleri'
 title: Option Infer Deyimi
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: 977e492c1c8ec5040c22169d91268c9c2241f6c4
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d0c3de7bdafb7e9b361da7a8538046e3d76b5ce7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404362"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741594"
 ---
 # <a name="option-infer-statement"></a>Option Infer Deyimi
 
 Değişkenleri bildirirken yerel tür çıkarımı kullanımını mümkün.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```vb
 Option Infer { On | Off }
@@ -30,7 +31,7 @@ Option Infer { On | Off }
 
 ## <a name="parts"></a>Bölümler
 
-|Terim|Tanım|
+|Süre|Tanım|
 |---|---|
 |`On`|İsteğe bağlı. Yerel tür çıkarımı etkinleştirilir.|
 |`Off`|İsteğe bağlı. Yerel tür çıkarımını devre dışı bırakır.|
@@ -66,7 +67,7 @@ Kaynak kodu bir `Option Infer` ifade içermiyorsa, derleme sayfasındaki **seçe
 
 #### <a name="to-set-option-infer-in-the-ide"></a>IDE 'de seçenek çıkarımı ayarlamak için
 
-1. **Çözüm Gezgini**bir proje seçin. **Proje** menüsünde **Özellikler**' e tıklayın.
+1. **Çözüm Gezgini** bir proje seçin. **Proje** menüsünde **Özellikler**' e tıklayın.
 
 2. **Derle** sekmesine tıklayın.
 
@@ -85,8 +86,8 @@ Aşağıdaki tabloda, bir deyimindeki veri türünü ve başlatıcıyı belirtme
 |Veri türü belirtildi mi?|Başlatıcı belirtildi mi?|Örnek|Sonuç|
 |---|---|---|---|
 |Hayır|Hayır|`Dim qty`|`Option Strict`Kapalıysa (varsayılan), değişkeni olarak ayarlanır `Nothing` .<br /><br /> `Option Strict`Açık ise, bir derleme zamanı hatası oluşur.|
-|No|Evet|`Dim qty = 5`|`Option Infer`Açık ise (varsayılan), değişkeni başlatıcının veri türünü alır. Bkz. [Yerel tür çıkarımı](../../programming-guide/language-features/variables/local-type-inference.md).<br /><br /> `Option Infer`Kapalıysa ve `Option Strict` kapalıysa, değişken veri türünü alır `Object` .<br /><br /> `Option Infer`Kapalıysa ve açık ise `Option Strict` , bir derleme zamanı hatası oluşur.|
-|Yes|No|`Dim qty As Integer`|Değişken, veri türü için varsayılan değer olarak başlatılır. Daha fazla bilgi için bkz. [Dim deyimleri](dim-statement.md).|
+|Hayır|Yes|`Dim qty = 5`|`Option Infer`Açık ise (varsayılan), değişkeni başlatıcının veri türünü alır. Bkz. [Yerel tür çıkarımı](../../programming-guide/language-features/variables/local-type-inference.md).<br /><br /> `Option Infer`Kapalıysa ve `Option Strict` kapalıysa, değişken veri türünü alır `Object` .<br /><br /> `Option Infer`Kapalıysa ve açık ise `Option Strict` , bir derleme zamanı hatası oluşur.|
+|Yes|Hayır|`Dim qty As Integer`|Değişken, veri türü için varsayılan değer olarak başlatılır. Daha fazla bilgi için bkz. [Dim deyimleri](dim-statement.md).|
 |Yes|Yes|`Dim qty  As Integer = 5`|Başlatıcının veri türü belirtilen veri türüne dönüştürülebilir değilse, bir derleme zamanı hatası oluşur.|
 
 ## <a name="example"></a>Örnek

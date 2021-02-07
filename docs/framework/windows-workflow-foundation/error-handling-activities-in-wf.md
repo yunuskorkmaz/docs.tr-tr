@@ -1,13 +1,14 @@
 ---
+description: "Daha fazla bilgi edinin: WF 'de hata Işleme etkinlikleri"
 title: WF 'de etkinlikler Işlenirken hata oluştu
 ms.date: 03/30/2017
 ms.assetid: 24b68bd3-cef5-4413-ab82-2e2625f209aa
-ms.openlocfilehash: 332e16b4c399341151761a4bce2d47198779ad64
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ef26c47d8d99f2d2186ef02820f9bebe691c2ff8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96280318"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99742460"
 ---
 # <a name="error-handling-activities-in-wf"></a>WF 'de etkinlikler Işlenirken hata oluştu
 

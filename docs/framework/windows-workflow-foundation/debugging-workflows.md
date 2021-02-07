@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Iş akışlarında hata ayıklama'
 title: İş Akışlarında Hata Ayıklama
 ms.date: 03/30/2017
 ms.assetid: b23b4814-ebb1-4c51-b7a9-469f4da7a96d
-ms.openlocfilehash: 31c688f5f45b41f337176108486ec2074e1915a7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9de65e580d47395a9528f4672014ceb491b09230
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543842"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99742569"
 ---
 # <a name="debugging-workflows"></a>İş Akışlarında Hata Ayıklama
 
@@ -34,7 +35,7 @@ Bir kesme noktası ayarlamak için, kod bölmesinin sol kenar boşluğuna tıkla
 Windows Workflow Foundation (WF) uzaktan hata ayıklama işlevleri, diğer Visual Studio bileşenleri için uzaktan hata ayıklama ile aynı şekilde çalışır. Uzaktan hata ayıklamayı kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: uzaktan hata ayıklamayı etkinleştirme](/previous-versions/visualstudio/visual-studio-2010/febz73k0(v=vs.100)).
 
 > [!NOTE]
-> İş akışı uygulaması x86 mimarisini hedefliyorsa ve 64 bitlik bir işletim sistemi çalıştıran bir bilgisayarda barındırılıyorsa, uzak bilgisayarda Visual Studio yüklü değilse veya iş akışı uygulamasının hedefi **herhangi BIR CPU**olarak değiştirilmediği takdirde uzaktan hata ayıklama çalışmaz.
+> İş akışı uygulaması x86 mimarisini hedefliyorsa ve 64 bitlik bir işletim sistemi çalıştıran bir bilgisayarda barındırılıyorsa, uzak bilgisayarda Visual Studio yüklü değilse veya iş akışı uygulamasının hedefi **herhangi BIR CPU** olarak değiştirilmediği takdirde uzaktan hata ayıklama çalışmaz.
 
 ## <a name="extending-the-workflow-debugging-service"></a>Iş akışı hata ayıklama hizmetini genişletme
 

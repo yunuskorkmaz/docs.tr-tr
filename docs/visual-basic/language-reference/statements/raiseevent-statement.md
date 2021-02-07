@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: RaiseEvent ekstresi'
 title: RaiseEvent Deyimi
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - RaiseEvent statement [Visual Basic]
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
-ms.openlocfilehash: 13d86aad8b68391f7effe2f6637adc68d8a3b59a
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 9549eb64ef32147ed49ae8f805d01db8610b336e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90872011"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741347"
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent Deyimi
 
 Sınıf, form veya belge içinde modül düzeyinde belirtilen bir olayı tetikler.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 RaiseEvent eventname[( argumentlist )]  
@@ -75,7 +76,7 @@ RaiseEvent eventname[( argumentlist )]
   
  [!code-vb[VbVbalrEvents#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#15)]  
   
- Yukarıdaki örneği çalıştırmak için F5 tuşuna basın ve **Başlat**etiketli düğmeye tıklayın. İlk metin kutusu, saniyeyi saymaya başlar. Tam süre (10 saniye) geçtiğinde, ilk metin kutusunda "bitti" görüntülenir.  
+ Yukarıdaki örneği çalıştırmak için F5 tuşuna basın ve **Başlat** etiketli düğmeye tıklayın. İlk metin kutusu, saniyeyi saymaya başlar. Tam süre (10 saniye) geçtiğinde, ilk metin kutusunda "bitti" görüntülenir.  
   
 > [!NOTE]
 > `My.Application.DoEvents`Yöntemi, olayları yalnızca formla aynı şekilde işlemez. Formun olayları doğrudan işlemesine izin vermek için çoklu iş parçacığı kullanımı ' nı kullanabilirsiniz. Daha fazla bilgi için bkz. [yönetilen Iş parçacığı](../../../standard/threading/index.md).  

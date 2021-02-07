@@ -1,15 +1,16 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: barındırma Iş akışları'
 title: İş Akışları Barındırma
 ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], hosting workflows
 ms.assetid: a99a5990-b53b-419b-9538-b1c3d1ba5db3
-ms.openlocfilehash: 6a8cea05965a0960f8b5f5948e621edb1ea1c032
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: d9bec7d32559d4b9ce94a477857cac7053ed308e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96268163"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99742179"
 ---
 # <a name="hosting-workflows"></a>İş Akışları Barındırma
 

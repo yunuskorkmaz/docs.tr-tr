@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: parametre listesi (Visual Basic)'
 title: Parametre Listesi
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - arguments [Visual Basic], Visual Basic
 - procedures [Visual Basic], parameter lists
 ms.assetid: 5d737319-0c34-4df9-a23d-188fc840becd
-ms.openlocfilehash: 706fc2414806db5608cce410bf4156839ec2d83e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f69063fac82887ba4da3119d8ec4fcac11b7f4c9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404323"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741412"
 ---
 # <a name="parameter-list-visual-basic"></a>Parametre Listesi (Visual Basic)
 
 Bir yordamın çağrıldığında beklediği parametreleri belirtir. Birden çok parametre virgülle ayrılır. Bir parametre için sözdizimi aşağıda verilmiştir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```vb
 [ <attributelist> ] [ Optional ] [{ ByVal | ByRef }] [ ParamArray ]

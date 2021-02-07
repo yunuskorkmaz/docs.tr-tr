@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: WCF hizmetlerine One-Way ve Request-Reply sözleşmeleri ile erişme'
 title: 'Nasıl yapılır: Tek Yönlü ve İstek-Yanıt Sözleşmeleriyle WCF Hizmetlerine Erişme'
 ms.date: 03/30/2017
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
-ms.openlocfilehash: 2d415b8f901e0a0e35690c015656620fe5ce13d0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: b8dc63b8f3e12b4322bae97f202a8c59a29637f1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257710"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99742767"
 ---
 # <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>Nasıl yapılır: Tek Yönlü ve İstek-Yanıt Sözleşmeleriyle WCF Hizmetlerine Erişme
 

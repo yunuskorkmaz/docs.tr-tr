@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: RemoveHandler ekstresi'
 title: RemoveHandler Deyimi
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - RemoveHandler keyword [Visual Basic]
 - RemoveHandler statement [Visual Basic]
 ms.assetid: 647cd825-e877-4910-b4f1-8d168beebe6a
-ms.openlocfilehash: a815241f20be12b3b7b4f2b87d50a8965021bbf0
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 699db9edfc029b4149246e8b654645040ae6d89e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90871933"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741308"
 ---
 # <a name="removehandler-statement"></a>RemoveHandler Deyimi
 
 Bir olay ve olay işleyicisi arasındaki ilişkiyi kaldırır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 RemoveHandler event, AddressOf eventhandler  
@@ -28,7 +29,7 @@ RemoveHandler event, AddressOf eventhandler
   
 ## <a name="parts"></a>Bölümler  
   
-|Terim|Tanım|  
+|Süre|Tanım|  
 |---|---|  
 |`event`|İşlenmekte olan olayın adı.|  
 |`eventhandler`|Şu anda olayı işleyen yordamın adı.|  

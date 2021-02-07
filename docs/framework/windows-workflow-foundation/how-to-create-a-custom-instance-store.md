@@ -1,29 +1,30 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: özel örnek deposu oluşturma'
 title: 'Nasıl yapılır: Özel Örnek Deposu Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 593c4e9d-8a49-4e12-8257-cee5e6b4c075
-ms.openlocfilehash: cacee7d95a543525ba031de0cc0636d05fc72fc8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a1a511e6a97dffe510c839aceec8c9d91a77ec1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945645"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99742140"
 ---
 # <a name="how-to-create-a-custom-instance-store"></a>Nasıl yapılır: Özel Örnek Deposu Oluşturma
 
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] içeren <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, iş akışı verileri kalıcı hale getirmek için SQL Server kullanan bir örnek deposu. Uygulamanız farklı bir veritabanı veya bir dosya sistemi gibi başka bir orta iş akışı verileri kalıcı hale getirmek için gerekli ise bir özel örnek deposu uygulayabilirsiniz. Özet genişleterek bir özel örnek deposu oluşturulan <xref:System.Runtime.DurableInstancing.InstanceStore> sınıfı ve uygulama için gereken yöntemleri uygulamak. Bir özel örnek deposu tam bir uygulama için bkz: [şirket satın alma işlemi](./samples/corporate-purchase-process.md) örnek.
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, iş akışı verilerini kalıcı hale getirmek için SQL Server kullanan bir örnek deposu içerir. Uygulamanızın iş akışı verilerinin başka bir ortama (örneğin, farklı bir veritabanı veya dosya sistemi gibi) kalıcı hale getirilmesi gerekiyorsa, özel bir örnek deposu uygulayabilirsiniz. Özel bir örnek deposu, soyut <xref:System.Runtime.DurableInstancing.InstanceStore> sınıfı genişleterek ve uygulama için gerekli yöntemler uygulanmasıyla oluşturulur. Özel bir örnek deposunun tamamen uygulanması için bkz. [Kurumsal satın alma işlemi](./samples/corporate-purchase-process.md) örneği.
 
-## <a name="implementing-the-begintrycommand-method"></a>BeginTryCommand yöntemi uygulama
+## <a name="implementing-the-begintrycommand-method"></a>BeginTryCommand yöntemini uygulama
 
-<xref:System.Runtime.DurableInstancing.InstanceStore.BeginTryCommand%2A> Örnek deposuna Kalıcılık altyapısı tarafından gönderilir. Türünü `command` parametresi hangi komutun yürütülmesini gösterir; Bu parametre aşağıdaki türlerde olabilir:
+, <xref:System.Runtime.DurableInstancing.InstanceStore.BeginTryCommand%2A> Kalıcılık altyapısı tarafından örnek deposuna gönderilir. `command`Parametrenin türü hangi komutun yürütüldüğünü gösterir; Bu parametre aşağıdaki türlerde olabilir:
 
-- <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>: Bu komutu kullanırken bir iş akışı kalıcı depolama ortamı için Kalıcılık altyapısı örnek deposuna gönderir. İş akışı kalıcılığı verileri yöntemine sağlanan <xref:System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceData%2A> üyesi `command` parametresi.
+- <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>: Kalıcılık altyapısı, bir iş akışı depolama ortamına kalıcı hale geldiğinde bu komutu örnek deposuna gönderir. İş akışı kalıcılığı verileri, <xref:System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceData%2A> parametresinin üyesinde yöntemine sağlanır `command` .
 
-- <xref:System.Activities.DurableInstancing.LoadWorkflowCommand>: Depolama ortamından yüklenecek bir iş akışı olduğunda Kalıcılık altyapısı bu komut örnek depoya gönderir. Yüklenecek iş akışı örnek kimliği yöntemine sağlanan `instanceId` parametresinin <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.InstanceView%2A> özelliği `context` parametresi.
+- <xref:System.Activities.DurableInstancing.LoadWorkflowCommand>: Kalıcılık altyapısı, depolama ortamında bir iş akışı yüklendiğinde bu komutu örnek deposuna gönderir. Yüklenecek iş akışının örnek KIMLIĞI, `instanceId` parametresinin özelliğinin parametresindeki yöntemine sağlanır <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.InstanceView%2A> `context` .
 
-- <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand>: Bu komut örneğine depolamak Kalıcılık altyapısı gönderen bir <xref:System.ServiceModel.Activities.WorkflowServiceHost> kilit sahibi olarak kaydedilmesi gerekir. Örnek kimliği geçerli iş akışı örneği kullanarak mağaza sağlanmalıdır <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.BindInstanceOwner%2A> yöntemi `context` parametresi.
+- <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand>: Kalıcılık altyapısı, bir <xref:System.ServiceModel.Activities.WorkflowServiceHost> kilit sahibi olarak kaydedilmesi gerektiğinde bu komutu örnek deposuna gönderir. Geçerli iş akışının örnek KIMLIĞI, parametresinin yöntemi kullanılarak örnek deposuna sağlanmalıdır <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.BindInstanceOwner%2A> `context` .
 
-     Aşağıdaki kod parçacığı bir özel kilit sahibi atamak için CreateWorkflowOwner komutu uygulamak nasıl gösterir.
+     Aşağıdaki kod parçacığı, açık bir kilit sahibini atamak için CreateWorkflowOwner komutunun nasıl uygulanacağını gösterir.
 
     ```csharp
     XName WFInstanceScopeName = XName.Get(scopeName, "<namespace>");
@@ -43,9 +44,9 @@ ms.locfileid: "61945645"
     childInstance.AddInitialInstanceValues(new Dictionary<XName, object>() { { WorkflowHostTypeName, WFInstanceScopeName } });
     ```
 
-- <xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand>: Örnek deposundan bir kilit sahibi örnek kimliği kaldırılabilir zaman Kalıcılık altyapısı bu komut örnek depoya gönderir. Olduğu gibi <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand>, uygulama tarafından kilit sahibi kimliği sağlanmalıdır.
+- <xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand>: Bir kilit sahibinin örnek KIMLIĞI örnek deposundan kaldırılabileceği için kalıcılık altyapısı bu komutu örnek deposuna gönderir. İle olduğu gibi <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand> , kilit SAHIBININ kimliği uygulama tarafından sağlanmalıdır.
 
-     Aşağıdaki kod parçacığını kullanarak bir kilidi serbest bırakma gösterir <xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand>.
+     Aşağıdaki kod parçacığı kullanarak bir kilidin nasıl yayınlanacağını göstermektedir <xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand> .
 
     ```csharp
     static void FreeHandleAndDeleteOwner(InstanceStore store, InstanceHandle handle)
@@ -70,7 +71,7 @@ ms.locfileid: "61945645"
     }
     ```
 
-     Bir alt örneği çalıştırdığınızda bir Try/Catch bloğu içinde yukarıdaki yöntemi çağrılmalıdır.
+     Bir alt örnek çalıştırıldığında, Yukarıdaki yöntem bir try/catch bloğunda çağrılmalıdır.
 
     ```csharp
     try
@@ -87,11 +88,11 @@ ms.locfileid: "61945645"
     }
     ```
 
-- <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand>: İş akışı örneği anahtarı kullanılarak yüklenmesi için bir iş akışı örneği olduğunda Kalıcılık altyapısı bu komut örnek depoya gönderir. Örnek anahtarı kimliği kullanarak belirlenebilir <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand.LookupInstanceKey%2A> komut parametresi.
+- <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand>: Kalıcılık altyapısı, bir iş akışı örneği iş akışının örnek anahtarı kullanılarak yüklenecek şekilde bu komutu örnek deposuna gönderir. Örnek anahtarın KIMLIĞI, <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand.LookupInstanceKey%2A> komutunun parametresi kullanılarak belirlenebilir.
 
-- <xref:System.Activities.DurableInstancing.QueryActivatableWorkflowsCommand>: Kalıcılık altyapısı, örnek deposuna sonra iş akışları yükleyebilir ve bir iş akışı ana bilgisayar oluşturmak için kalıcı iş akışları için etkinleştirme parametresi almak için bu komutu gönderir. Bu komut, örnek deposu oluşturma yanıt altyapısı tarafından gönderilen <xref:System.Activities.DurableInstancing.HasActivatableWorkflowEvent> etkinleştirilebilir bir örneği bulduğunda konağa. Etkinleştirilebilmesi için iş akışlarını olup olmadığını belirlemek için örnek deposuna sorgulanmak.
+- <xref:System.Activities.DurableInstancing.QueryActivatableWorkflowsCommand>: Kalıcılık altyapısı, iş akışlarını yükleyebilen bir iş akışı konağı oluşturmak için kalıcı iş akışlarının etkinleştirme parametrelerini almak üzere bu komutu örnek deposuna gönderir. Bu komut, <xref:System.Activities.DurableInstancing.HasActivatableWorkflowEvent> etkinleştirilecektir bir örnek bulduktan sonra, öğesini konağa veren örnek deposuna yanıt olarak altyapı tarafından gönderilir. Örnek deposu, etkinleştirilabilecek iş akışlarının olup olmadığını belirlemektir.
 
-- <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand>: Kalıcılık altyapısı, örnek deposuna çalıştırılabilir iş akışı örnekleri yüklemek için bu komutu gönderir. Bu komut, örnek deposu oluşturma yanıt altyapısı tarafından gönderilen <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> çalıştırılabilir bir örneği bulduğunda konağa. Örnek deposuna çalıştırılabilir iş akışları için yoklama. Aşağıdaki kod parçacığını bir örnek deposuna çalıştıran veya etkinleştirilen iş akışları için yoklama gösterir.
+- <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand>: Kalıcılık altyapısı, çalıştırılabilir iş akışı örneklerini yüklemek için bu komutu örnek deposuna gönderir. Bu komut, <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> çalıştırılabilir bir örnek bulduktan sonra, öğesini konağa veren örnek deposuna yanıt olarak altyapı tarafından gönderilir. Örnek deposu çalıştırılabilen iş akışlarını yoklamalıdır. Aşağıdaki kod parçacığı, çalıştırılabilen veya etkinleştirilabilecek iş akışları için bir örnek deposunun yoklanması gerektiğini gösterir.
 
     ```csharp
     public void PollForEvents()
@@ -131,7 +132,7 @@ ms.locfileid: "61945645"
     }
     ```
 
-     Yukarıdaki kod parçacığında, örnek deposuna olay yok sorgular ve her biri olup olmadığını belirlemek için inceler bir <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> olay. Bulunması durumunda <xref:System.Runtime.DurableInstancing.InstanceStore.SignalEvent%2A> örnek deposuna bir komut göndermek için ana sinyal için çağrılır. Aşağıdaki kod parçacığı bir işleyici bu komut için uygulanışı gösterilmektedir.
+     Yukarıdaki kod parçacığında, örnek deposu kullanılabilir olayları sorgular ve bir olay olup olmadığını anlamak için her birini inceler <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> . Bir tane bulunursa, <xref:System.Runtime.DurableInstancing.InstanceStore.SignalEvent%2A> örnek deposuna komut göndermek için ana bilgisayarı bildirmek üzere çağırılır. Aşağıdaki kod parçacığı, bu komut için bir işleyicinin uygulamasını gösterir.
 
     ```csharp
     If (command is TryLoadRunnableWorkflowCommand)
@@ -222,15 +223,15 @@ ms.locfileid: "61945645"
     }
     ```
 
-    Yukarıdaki kod parçacığında, çalıştırılabilir örnekleri için örnek deposuna arar. Bir örnek bulunursa, yürütme bağlamına bağlı ve yüklenir.
+    Yukarıdaki kod parçacığında örnek deposu, çalıştırılabilir örnekleri arar. Bir örnek bulunursa, yürütme bağlamına bağlanır ve yüklenir.
 
-## <a name="using-a-custom-instance-store"></a>Bir özel örnek deposu kullanma
+## <a name="using-a-custom-instance-store"></a>Özel örnek deposu kullanma
 
-Bir özel örnek deposu uygulamak için örnek deposuna örneği atamak <xref:System.Activities.WorkflowApplication.InstanceStore%2A>ve uygulama <xref:System.Activities.WorkflowApplication.PersistableIdle%2A> yöntemi. Bkz: [nasıl yapılır: Oluşturma ve uzun çalışan iş akışı çalıştırma](how-to-create-and-run-a-long-running-workflow.md) özellikleri için öğretici.
+Özel bir örnek deposu uygulamak için, örneğine örnek deposunun bir örneğini atayın <xref:System.Activities.WorkflowApplication.InstanceStore%2A> ve <xref:System.Activities.WorkflowApplication.PersistableIdle%2A> yöntemini uygulayın. Ayrıntılar için bkz. [nasıl yapılır: uzun süre çalışan Iş akışı öğreticisi oluşturma ve çalıştırma](how-to-create-and-run-a-long-running-workflow.md) .
 
-## <a name="a-sample-instance-store"></a>Bir örnek örnek deposu
+## <a name="a-sample-instance-store"></a>Örnek bir örnek deposu
 
-Aşağıdaki kod örneği alındığı bir tam örnek deposu uygulaması olan [şirket satın alma işlemi](./samples/corporate-purchase-process.md) örnek. Bu örnek depo, iş akışı verileri XML kullanarak bir dosyaya devam ettirir.
+Aşağıdaki kod örneği, [Kurumsal satın alma işlemi](./samples/corporate-purchase-process.md) örneğinden alınan bir bütün örnek depolama uygulamasıdır. Bu örnek depo, iş akışı verilerinin XML kullanarak bir dosyaya devam ettirir.
 
 ```csharp
 using System;

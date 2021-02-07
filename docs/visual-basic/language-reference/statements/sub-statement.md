@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: alt Ifade (Visual Basic)'
 title: Sub Deyimi
 ms.date: 05/12/2018
 f1_keywords:
@@ -29,18 +30,18 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-ms.openlocfilehash: e50b79c31c92ac116d6c82bcececba3340894d74
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9be40c8284c677a151e4b1665f0b49e5f852bf00
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404180"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740996"
 ---
 # <a name="sub-statement-visual-basic"></a>Sub Deyimi (Visual Basic)
 
 Bir yordamı tanımlayan adı, parametreleri ve kodu bildirir `Sub` .
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```vb
 [ <attributelist> ] [ Partial ] [ accessmodifier ] [ proceduremodifiers ] [ Shared ] [ Shadows ] [ Async ]
@@ -65,13 +66,13 @@ End Sub
 
   İsteğe bağlı. Aşağıdakilerden biri olabilir:
 
-  - [Geneldir](../modifiers/public.md)
+  - [Genel](../modifiers/public.md)
 
   - [Korunamadı](../modifiers/protected.md)
 
-  - [Dost](../modifiers/friend.md)
+  - [Arkadaş](../modifiers/friend.md)
 
-  - [Özelleştirme](../modifiers/private.md)
+  - [Özel](../modifiers/private.md)
 
   - [Protected Friend](../modifiers/protected-friend.md)
 
@@ -175,7 +176,7 @@ Tüm yürütülebilir kodların bir yordamın içinde olması gerekir. `Sub`Ça�
 
 Bir `Sub` yordamı yalnızca modül düzeyinde tanımlayabilirsiniz. Bir alt yordamın bildirim bağlamı, bu nedenle bir sınıf, yapı, modül veya arabirim olmalıdır ve kaynak dosya, bir ad alanı, yordam veya bir blok olamaz. Daha fazla bilgi için bkz. [bildirim bağlamları ve varsayılan erişim düzeyleri](declaration-contexts-and-default-access-levels.md).
 
-`Sub`yordamlar, genel erişim için varsayılan olarak. Erişim değiştiricilerini kullanarak erişim düzeylerini ayarlayabilirsiniz.
+`Sub` yordamlar, genel erişim için varsayılan olarak. Erişim değiştiricilerini kullanarak erişim düzeylerini ayarlayabilirsiniz.
 
 Yordam `Implements` anahtar sözcüğünü kullanıyorsa, kapsayan sınıf veya yapının, `Implements` veya ifadesiyle hemen sonraki bir deyime sahip olması gerekir `Class` `Structure` . `Implements`İfadesinin içinde belirtilen her arabirimi içermesi gerekir `implementslist` . Ancak, bir arabirimin `Sub` (içinde) tanımladığı adın `definedname` Bu yordamın adıyla eşleşmesi gerekmez (içinde `name` ).
 
@@ -228,7 +229,7 @@ Aşağıdaki örnek, `Sub` bir yordamın gövdesini oluşturan adı, parametrele
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte, `DelayAsync` `Async` `Function` öğesinin dönüş türü olan bir <xref:System.Threading.Tasks.Task%601> . `DelayAsync`, `Return` bir tamsayı döndüren bir ifadeye sahiptir. Bu nedenle, öğesinin işlev bildirimi `DelayAsync` bir dönüş türüne sahip olmalıdır `Task(Of Integer)` . Dönüş türü olduğu için `Task(Of Integer)` , `Await` içindeki ifadesinin değerlendirmesi `DoSomethingAsync` bir tamsayı oluşturur, çünkü aşağıdaki deyim şunu gösterir: `Dim result As Integer = Await delayTask` .
+Aşağıdaki örnekte, `DelayAsync` `Async` `Function` öğesinin dönüş türü olan bir <xref:System.Threading.Tasks.Task%601> . `DelayAsync` , `Return` bir tamsayı döndüren bir ifadeye sahiptir. Bu nedenle, öğesinin işlev bildirimi `DelayAsync` bir dönüş türüne sahip olmalıdır `Task(Of Integer)` . Dönüş türü olduğu için `Task(Of Integer)` , `Await` içindeki ifadesinin değerlendirmesi `DoSomethingAsync` bir tamsayı oluşturur, çünkü aşağıdaki deyim şunu gösterir: `Dim result As Integer = Await delayTask` .
 
 `startButton_Click`Yordam bir `Async Sub` yordam örneğidir. `DoSomethingAsync`Bir işlev olduğundan `Async` , `DoSomethingAsync` Aşağıdaki ifadede gösterildiği gibi çağrının görevi beklenmelidir: `Await DoSomethingAsync()` . `startButton_Click` `Sub` Bir ifadesi içerdiğinden yordamın değiştirici ile tanımlanması gerekir `Async` `Await` .
 

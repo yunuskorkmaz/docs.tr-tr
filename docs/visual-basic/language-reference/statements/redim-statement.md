@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ReDim ekstresi (Visual Basic)'
 title: ReDim Deyimi
 ms.date: 07/20/2015
 f1_keywords:
@@ -26,18 +27,18 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: 17bc806f2e92c61f1dd7425de40b1a68f926a583
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 8f7525064c8b32748cf5ebb2df7d4a5dfc76f794
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90872028"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741334"
 ---
 # <a name="redim-statement-visual-basic"></a>ReDim Deyimi (Visual Basic)
 
 , Bir dizi değişkeni için depolama alanını yeniden konumlandırır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]  
@@ -45,7 +46,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 ## <a name="parts"></a>Bölümler  
   
-|Terim|Tanım|  
+|Süre|Tanım|  
 |----------|----------------|  
 |`Preserve`|İsteğe bağlı. Yalnızca son boyutun boyutunu değiştirirken mevcut dizideki verileri korumak için kullanılan değiştirici.|  
 |`name`|Gereklidir. Dizi değişkeninin adı. Bkz. [tanımlanmış öğe adları](../../programming-guide/language-features/declared-elements/declared-element-names.md).|  
@@ -109,5 +110,5 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
 - [Const Deyimi](const-statement.md)
 - [Dim Deyimi](dim-statement.md)
 - [Erase Deyimi](erase-statement.md)
-- [Yapma](../nothing.md)
+- [Nothing](../nothing.md)
 - [Diziler](../../programming-guide/language-features/arrays/index.md)

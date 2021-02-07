@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: nasıl yapılır: yetkilendirirken meta veri Isteklerine Izin verme'
 title: 'Nasıl yapılır: Yetkilendirirken Meta Veri İsteklerine İzin Verme'
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - allowing metadata requests while authorizing [WCF]
 ms.assetid: 90cec34f-b619-452b-a056-8b1c0de49d05
-ms.openlocfilehash: 9acc007ea7837f7b8e6c958fa81547fe4fa5b2c0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a9f5ab7db73aaa8a2a420a60c3172f1b1a738fb2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257619"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99742751"
 ---
 # <a name="how-to-allow-metadata-requests-while-authorizing"></a>Nasıl yapılır: Yetkilendirirken Meta Veri İsteklerine İzin Verme
 

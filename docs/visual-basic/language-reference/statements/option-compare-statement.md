@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Option Compare deyimleri'
 title: Option Compare Deyimi
 ms.date: 07/20/2015
 f1_keywords:
@@ -18,18 +19,18 @@ helpviewer_keywords:
 - Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-ms.openlocfilehash: 396770a2fc6996475d408cf8023a4eafdf6d3011
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: fba8b207c0077f95540485d79311b47f1b8c209c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869645"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741672"
 ---
 # <a name="option-compare-statement"></a>Option Compare Deyimi
 
 Dize verilerini karşılaştırırken kullanılacak varsayılan karşılaştırma yöntemini bildirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 Option Compare { Binary | Text }  
@@ -37,7 +38,7 @@ Option Compare { Binary | Text }
   
 ## <a name="parts"></a>Bölümler  
   
-|Terim|Tanım|  
+|Süre|Tanım|  
 |---|---|  
 |`Binary`|İsteğe bağlı. Karakterlerin iç ikili gösterimlerine göre türetilmiş bir sıralama düzenini temel alan dize karşılaştırmalarına neden olur.<br /><br /> Bu tür karşılaştırma, özellikle dizeler metin olarak yorumlanmaması gereken karakterler içeriyorsa yararlıdır. Bu durumda, büyük/küçük harf duyarlı gibi alfabetik denklikleri karşılaştırma yapmak istemezsiniz.|  
 |`Text`|İsteğe bağlı. Sisteminizin yerel ayarı tarafından belirlenen büyük/küçük harf duyarsız metin sıralama düzeni temelinde dize karşılaştırmaları sonucu oluşur.<br /><br /> Bu tür bir karşılaştırma, Dizeleriniz tüm metin karakterlerini içeriyorsa ve büyük/küçük harf duyarlı ve yakından ilgili mektuplar gibi hesap alfabetik denklikleri, bunları karşılaştırmak istiyorsanız yararlıdır. Örneğin, ve ' nin daha önce ve olmak üzere göz önüne alınması `A` ve `a` eşit olması gerekebilir `Ä` `ä` `B` `b` .|  
@@ -68,7 +69,7 @@ Option Compare { Binary | Text }
   
 #### <a name="to-set-option-compare-in-the-ide"></a>IDE 'de seçenek karşılaştırması ayarlamak için  
   
-1. **Çözüm Gezgini**bir proje seçin. **Proje** menüsünde **Özellikler**' e tıklayın.  
+1. **Çözüm Gezgini** bir proje seçin. **Proje** menüsünde **Özellikler**' e tıklayın.  
   
 2. **Derle** sekmesine tıklayın.  
   
@@ -103,6 +104,6 @@ Option Compare { Binary | Text }
 - [Karşılaştırma Işleçleri](../operators/comparison-operators.md)
 - [Visual Basic'de Karşılaştırma İşleçleri](../../programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [Like İşleci](../operators/like-operator.md)
-- [Dize İşlevleri](../functions/string-functions.md)
+- [Dize Işlevleri](../functions/string-functions.md)
 - [Option Explicit Deyimi](option-explicit-statement.md)
 - [Option Strict Deyimi](option-strict-statement.md)

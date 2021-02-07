@@ -4,12 +4,12 @@ description: Bu öğreticide, Docker ile bir .NET Core uygulamasını kapsayıya
 ms.date: 04/27/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 32ac736daa4d6cdebb6d4bdeccf3f8ba954a5721
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: c92f5823f56f74941afdd28638d30e759b2c51c9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99505419"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740762"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Öğretici: bir .NET Core uygulamasını Kapsayıize edin
 
@@ -144,16 +144,16 @@ Uygulama için komut satırına bir sayı geçirirseniz, bu miktarı yalnızca b
 dotnet publish -c Release
 ```
 
-Bu komut, uygulamanızı *Yayımla* klasörüne derler. Çalışma klasöründeki *Yayımla* klasörünün yolu `.\App\bin\Release\netcoreapp5.0\publish\`
+Bu komut, uygulamanızı *Yayımla* klasörüne derler. Çalışma klasöründeki *Yayımla* klasörünün yolu `.\App\bin\Release\net5.0\publish\`
 
 #### <a name="windows"></a>[Windows](#tab/windows)
 
 *Uygulama* klasöründen, *NetCore.Docker.dll* dosyasının oluşturulduğunu doğrulamak için Yayımla klasörünün bir dizin listesini alın.
 
 ```powershell
-dir .\bin\Release\netcoreapp5.0\publish\
+dir .\bin\Release\net5.0\publish\
 
-    Directory: C:\Users\dapine\App\bin\Release\netcoreapp5.0\publish
+    Directory: C:\Users\dapine\App\bin\Release\net5.0\publish
 
 Mode                LastWriteTime         Length Name
 ----                -------------         ------ ----
@@ -169,7 +169,7 @@ Mode                LastWriteTime         Length Name
 `ls`Bir dizin listesi almak için komutunu kullanın ve *NetCore.Docker.dll* dosyasının oluşturulduğunu doğrulayın.
 
 ```bash
-me@DESKTOP:/docker-working/app$ ls bin/Release/netcoreapp5.0/publish
+me@DESKTOP:/docker-working/app$ ls bin/Release/net5.0/publish
 NetCore.Docker.deps.json  NetCore.Docker.dll  NetCore.Docker.pdb  NetCore.Docker.runtimeconfig.json
 ```
 
@@ -200,7 +200,7 @@ docker-working
         ├──Program.cs
         ├──bin
         │   └──Release
-        │       └──netcoreapp5.0
+        │       └──net5.0
         │           └──publish
         │               ├──NetCore.Docker.deps.json
         │               ├──NetCore.Docker.exe
@@ -229,7 +229,7 @@ mcr.microsoft.com/dotnet/aspnet         5.0                 e6780479db63        
 İki görüntünün aynı **görüntü kimliği** değerini paylaştığından emin olun. *Dockerfile* 'daki tek komut yeni görüntünün varolan bir görüntüye dayandırdığı için, her iki görüntü arasında değer aynıdır. *Dockerfile dosyasına* üç komut ekleyelim. Her komut, için **Sayaç-görüntü** deposu giriş noktalarını temsil eden son komutla yeni bir görüntü katmanı oluşturur.
 
 ```dockerfile
-COPY bin/Release/netcoreapp5.0/publish/ App/
+COPY bin/Release/net5.0/publish/ App/
 WORKDIR /App
 ENTRYPOINT ["dotnet", "NetCore.Docker.dll"]
 ```
@@ -247,7 +247,7 @@ docker build -t counter-image -f Dockerfile .
 Sending build context to Docker daemon  1.117MB
 Step 1/4 : FROM mcr.microsoft.com/dotnet/aspnet:5.0
  ---> e6780479db63
-Step 2/4 : COPY bin/Release/netcoreapp5.0/publish/ App/
+Step 2/4 : COPY bin/Release/net5.0/publish/ App/
  ---> d1732740eed2
 Step 3/4 : WORKDIR /App
  ---> Running in b1701a42f3ff

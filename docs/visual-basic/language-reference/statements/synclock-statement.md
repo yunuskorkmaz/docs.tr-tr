@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: SyncLock ekstresi'
 title: SyncLock Deyimi
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - SyncLock statement [Visual Basic]
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
-ms.openlocfilehash: cc8706b95e0785459e36abe27ce915b5bab8711a
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 206c10c8bca85a496345576d0d5f9ff260db82e3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875203"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740983"
 ---
 # <a name="synclock-statement"></a>SyncLock Deyimi
 
 Bloğu yürütmeden önce bir ifade bloğu için özel bir kilit elde edin.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 SyncLock lockobject  
@@ -45,7 +46,7 @@ End SyncLock
   
  En yaygın kullanımı, `SyncLock` verilerin birden fazla iş parçacığı tarafından aynı anda güncelleştirilmesini sağlar. Verileri işleyen deyimlerin kesinti olmadan tamamlanmasına gitmesi gerekiyorsa, bunları bir blok içine koyun `SyncLock` .  
   
- Özel bir kilit tarafından korunan bir ifade bloğu bazen *kritik bir bölüm*olarak adlandırılır.  
+ Özel bir kilit tarafından korunan bir ifade bloğu bazen *kritik bir bölüm* olarak adlandırılır.  
   
 ## <a name="rules"></a>Kurallar  
   
@@ -89,7 +90,7 @@ End SyncLock
 
  [!code-vb[VbVbalrThreading#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrThreading/VB/Class1.vb#1)]  
   
-### <a name="description"></a>Açıklama  
+### <a name="description"></a>Description  
 
  Aşağıdaki örnek, ve iş parçacıklarını kullanır `SyncLock` . Deyimin bulunduğu sürece `SyncLock` , ifade bloğu kritik bir bölümdür ve `balance` hiçbir zaman negatif bir sayı değildir. `SyncLock` `End SyncLock` Anahtar sözcüğünü bırakma etkisini görmek için ve deyimlerini açıklama ekleyebilirsiniz `SyncLock` .  
   

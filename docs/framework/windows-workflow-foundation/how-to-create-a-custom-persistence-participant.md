@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: özel bir Kalıcılık Katılımcısı oluşturma'
 title: 'Nasıl yapılır: Özel Kalıcılık Katılımcısı Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 1d9cc47a-8966-4286-94d5-4221403d9c06
-ms.openlocfilehash: 633961ac12eed593613eba75862cbc81f2fa68c6
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a0bdd8407bf409e7e485f4f32a0dd3f61e6f82b0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275820"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99742101"
 ---
 # <a name="how-to-create-a-custom-persistence-participant"></a>Nasıl yapılır: Özel Kalıcılık Katılımcısı Oluşturma
 

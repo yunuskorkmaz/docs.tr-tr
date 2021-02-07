@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: tür listesi (Visual Basic)'
 title: Tür Listesi
 ms.date: 07/20/2015
 f1_keywords:
@@ -24,18 +25,18 @@ helpviewer_keywords:
 - type parameters
 - constraints, Class keyword
 ms.assetid: 56db947a-2ae8-40f2-a70a-960764e9d0db
-ms.openlocfilehash: 7e22ad6e32ec13f081391e1d47a80df8b1e65063
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d4c8bcab4a39af0ac0747d6be0d04408edd98a55
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84412994"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740905"
 ---
 # <a name="type-list-visual-basic"></a>Tür Listesi (Visual Basic)
 
 *Genel* programlama öğesi için *tür parametrelerini* belirtir. Birden çok parametre virgülle ayrılır. Bir tür parametresi için sözdizimi aşağıda verilmiştir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```vb
 [genericmodifier] typename [ As constraintlist ]
@@ -43,7 +44,7 @@ ms.locfileid: "84412994"
 
 ## <a name="parts"></a>Bölümler
 
-|Terim|Tanım|
+|Süre|Tanım|
 |---|---|
 |`genericmodifier`|İsteğe bağlı. Yalnızca Genel arabirimlerde ve temsilcilerde kullanılabilir. [In](../modifiers/in-generic-modifier.md) anahtar sözcüğünü kullanarak [Out](../modifiers/out-generic-modifier.md) anahtar sözcüğünü veya değişken varyantını kullanarak bir tür covaryant bildirebilirsiniz. Bkz. [Kovaryans ve değişken varyansı](../../programming-guide/concepts/covariance-contravariance/index.md).|
 |`typename`|Gereklidir. Tür parametresinin adı. Bu, karşılık gelen tür bağımsız değişkeni tarafından sağlanan tanımlı bir türle değiştirilmesini sağlamak için bir yer tutucudur.|
@@ -65,7 +66,7 @@ Genel bir türün ne zaman tanımlanacağı hakkında daha fazla bilgi için, bk
 
   - En fazla bir sınıf. Sağlanan tür bu sınıftan devralması gerekir.
 
-  - `New`Anahtar sözcüğü. Sağlanan tür, genel türünün erişebileceği parametresiz bir Oluşturucu kullanıma sunmalıdır. Bir tür parametresini bir veya daha fazla arabirim ile sınırlandırdıysanız, bu faydalıdır. Arabirimleri uygulayan bir tür bir oluşturucuyu kullanıma sunmayabilir ve bir oluşturucunun erişim düzeyine bağlı olarak, genel türdeki kod buna erişemeyebilir.
+  - `New` anahtar sözcüğü. Sağlanan tür, genel türünün erişebileceği parametresiz bir Oluşturucu kullanıma sunmalıdır. Bir tür parametresini bir veya daha fazla arabirim ile sınırlandırdıysanız, bu faydalıdır. Arabirimleri uygulayan bir tür bir oluşturucuyu kullanıma sunmayabilir ve bir oluşturucunun erişim düzeyine bağlı olarak, genel türdeki kod buna erişemeyebilir.
 
   - `Class`Anahtar sözcüğü ya da `Structure` anahtar sözcüğü. `Class`Anahtar sözcüğü, geçirilen her tür bağımsız değişkenin bir başvuru türü olmasını gerektirmek için bir genel tür parametresi kısıtlar, örneğin bir String, array veya Delegate veya bir sınıftan oluşturulmuş bir nesne. `Structure`Anahtar sözcüğü, geçirilen her tür bağımsız değişkenin bir değer türü olmasını gerektirmek için bir genel tür parametresi kısıtlar, örneğin bir yapı, numaralandırma veya Öğesel veri türü. Hem hem de `Class` aynı olamaz `Structure` `constraintlist` .
 

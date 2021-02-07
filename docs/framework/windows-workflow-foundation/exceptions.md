@@ -1,15 +1,16 @@
 ---
-title: Özel Durumlar
+description: 'Daha fazla bilgi edinin: özel durumlar'
+title: Özel durumlar
 ms.date: 03/30/2017
 ms.assetid: 065205cc-52dd-4f30-9578-b17d8d113136
-ms.openlocfilehash: 53cc8e3e27e131c5c2a9f8271851a0d8d7e0cbd7
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 71cf6a4ac23f7979d0c9137d88f36a45f71783a3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96280214"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99742465"
 ---
-# <a name="exceptions"></a>Özel Durumlar
+# <a name="exceptions"></a>Özel durumlar
 
 İş akışları, <xref:System.Activities.Statements.TryCatch> bir iş akışının yürütülmesi sırasında oluşturulan özel durumları işlemek için etkinliğini kullanabilir. Bu özel durumlar işlenebilir veya etkinlik kullanılarak yeniden oluşturulabilir <xref:System.Activities.Statements.Rethrow> . Bölümündeki etkinlikler <xref:System.Activities.Statements.TryCatch.Finally%2A> , <xref:System.Activities.Statements.TryCatch.Try%2A> bölüm ya da <xref:System.Activities.Statements.TryCatch.Catches%2A> bölüm tamamlandığında yürütülür. Bir örnek tarafından barındırılan iş akışları <xref:System.Activities.WorkflowApplication> , <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> bir etkinlik tarafından işlenmeyen özel durumları işlemek için de olay işleyicisini de kullanabilir <xref:System.Activities.Statements.TryCatch> .  
   

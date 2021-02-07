@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: SendMail özel etkinliği'
 title: SendMail Özel Etkinliği
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: f518beebe336080853e4dec3bca6f8539bbec304
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 853e28d26c41338670d377593d5a3536b011d112
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96267604"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741764"
 ---
 # <a name="sendmail-custom-activity"></a>SendMail Özel Etkinliği
 
@@ -15,7 +16,7 @@ Bu örnek, <xref:System.Activities.AsyncCodeActivity> bir iş akışı uygulamas
   
  Aşağıdaki tabloda etkinliğin bağımsız değişkenlerinin ayrıntıları verilmiştir `SendMail` .  
   
-|Ad|Tür|Açıklama|  
+|Ad|Tür|Description|  
 |-|-|-|  
 |Ana bilgisayar|Dize|SMTP sunucusu konağının adresi.|  
 |Bağlantı noktası|Dize|Konaktaki SMTP hizmetinin bağlantı noktası.|  
