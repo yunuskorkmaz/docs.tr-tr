@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: gecikme modları'
 title: Gecikme Modları
 ms.date: 03/30/2017
 helpviewer_keywords:
 - garbage collection, intrusiveness
 - garbage collection, latency modes
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
-ms.openlocfilehash: 2e7b30a50e2513c567abf2116ab5495e717a8e22
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f709fa023870939dc6bfd7f2bf6145ee7f7d8e40
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831201"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99713253"
 ---
 # <a name="latency-modes"></a>Gecikme modları
 

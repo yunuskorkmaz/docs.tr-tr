@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: COR_HEAPINFO yapısı'
 title: COR_HEAPINFO Yapısı
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bfb2cd39-3e0b-4d51-ba0c-f009755c1456
 topic_type:
 - apiref
-ms.openlocfilehash: 5400350e1c489ec4c2ff3cddf83a4f1a8a0c7947
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0841739172b3eaf807813af28e0b20fbb54608b2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726606"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99712321"
 ---
 # <a name="cor_heapinfo-structure"></a>COR_HEAPINFO Yapısı
 
@@ -39,7 +40,7 @@ typedef struct _COR_HEAPINFO {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`areGCStructuresValid`|`true` çöp toplama yapıları geçerliyse ve yığın Numaralandırılabilir. Aksi takdirde, `false` .|  
 |`pointerSize`|Hedef mimarideki işaretçilerin bayt cinsinden boyutu.|  

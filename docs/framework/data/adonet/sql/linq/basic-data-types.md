@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: temel veri türleri'
 title: Temel Veri Türleri
 ms.date: 03/30/2017
 ms.assetid: eca2c472-9548-4800-bd31-5d8d9f11752b
-ms.openlocfilehash: ae561bad3315977ba12dd0e12abda1da163ca456
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d0236bc315c884d9e70c3c4a75755c3b66b1f2e4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91156024"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99712616"
 ---
 # <a name="basic-data-types"></a>Temel Veri Türleri
 

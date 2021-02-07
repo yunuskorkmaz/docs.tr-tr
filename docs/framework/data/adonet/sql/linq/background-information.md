@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: arka plan bilgileri'
 title: Arka Plan Bilgileri
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-ms.openlocfilehash: 56ba323aee3b559fbb8afd506be4c23595df6d2d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8e2027319145a5e88049c66fb2b8935128115e43
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91156101"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99712668"
 ---
 # <a name="background-information"></a>Arka Plan Bilgileri
 
@@ -19,7 +20,7 @@ Bu bölümdeki konular, kullanmayla ilgili temel bilgilerin ötesine genişleyen
   
 - Uzmanlarla ilgili daha karmaşık konuları tartışabilirsiniz [LINQ forumuna](https://social.msdn.microsoft.com/forums/home?forum=linqtosql)katılın.  
   
-- Ayrıntılar teknolojisinin teknik incelemesini [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , Visual Basic ve C# kod örnekleri ile tamamlandığını inceleyin. Daha fazla bilgi için bkz. [LINQ to SQL: .NET dil Ile tümleşik sorgulama verileri](/previous-versions/dotnet/articles/bb425822(v=msdn.10)).  
+- Ayrıntılar teknolojisinin teknik incelemesini [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , Visual Basic ve C# kod örnekleri ile tamamlandığını inceleyin. Daha fazla bilgi için, bkz. [LINQ to SQL: .net Language-Integrated Ilişkisel veriler Için sorgu](/previous-versions/dotnet/articles/bb425822(v=msdn.10)).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
 

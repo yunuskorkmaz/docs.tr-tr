@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: CodeChunkInfo yapısı'
 title: CodeChunkInfo Yapısı
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0f482454-8517-48de-ba7a-d7aedab13bb5
 topic_type:
 - apiref
-ms.openlocfilehash: 11197246662a93f6a8b57c6e61e49505a9999d00
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 017a9ee8c608d4efae98eb0a342a3371ef8ec310
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727438"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99712356"
 ---
 # <a name="codechunkinfo-structure"></a>CodeChunkInfo Yapısı
 
@@ -36,7 +37,7 @@ typedef struct _CodeChunkInfo {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`startAddr`|`CORDB_ADDRESS`Öbekin başlangıç adresini belirten bir değer.|  
 |`length`|Öbekin bayt cinsinden boyutu.|  

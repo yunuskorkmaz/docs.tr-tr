@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: <settings> öğesi (ağ ayarları)'
 title: <settings> Öğesi (Ağ Ayarları)
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - settings element
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
-ms.openlocfilehash: c5fe0b9eccd1c429c0041fcfab06b0cc20a20aa2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e6ed242e68ac9a9e2c20067d66681bbcd51fcc50
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91167281"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99712980"
 ---
 # <a name="settings-element-network-settings"></a>\<settings> Öğesi (Ağ Ayarları)
 

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: <remove> webRequestModules için öğesi (ağ ayarları)'
 title: webRequestModules için <remove> Öğesi (Ağ Ayarları)
 ms.date: 03/30/2017
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - <remove> element, webRequestModules
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-ms.openlocfilehash: 65e8b1f2088015b86d4f981f07875d236a11a617
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: db65c91417af2538e27b65e0ae28d06a6bfcde0a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91176194"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99713006"
 ---
 # <a name="remove-element-for-webrequestmodules-network-settings"></a>webRequestModules için \<remove> Öğesi (Ağ Ayarları)
 
@@ -50,7 +51,7 @@ Uygulamadan özel bir Web istek modülünü kaldırır.
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
-|**Dosyalarında**|**Açıklama**|  
+|**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
 |[webRequestModules](webrequestmodules-element-network-settings.md)|Ağ konaklarından bilgi istemek için kullanılacak modülleri belirtir.|  
   

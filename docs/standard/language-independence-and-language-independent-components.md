@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Dil bağımsızlığı ve Language-Independent bileşenleri'
 title: Dil Bağımsızlığı ve Dilden Bağımsız Bileşenler
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-ms.openlocfilehash: aeaf58276537fab72fdcde81b0465acbbdb23140
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2208f515bcab5f423b32fabc5364e02ed7230919
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831162"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99713214"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Dil Bağımsızlığı ve Dilden Bağımsız Bileşenler
 
@@ -56,7 +57,7 @@ Bu makalede:
 
   - [Özellikler](#properties)
 
-  - [Olaylar](#events)
+  - [Ekinlikler](#events)
 
   - [Aşırı Yüklemeler](#overloads)
 
@@ -115,11 +116,11 @@ CLS uyumluluğu kuralları aşağıdaki tabloda listelenmiştir. Kuralların met
 |Listelemeler|[Listelemeler](#enums)|Bir numaralandırmanın temel alınan türü yerleşik bir CLS tamsayı türü olacaktır, alanın adı "value__" ve bu alan işaretlenir `RTSpecialName` .|7|
 |Listelemeler|[Listelemeler](#enums)|<xref:System.FlagsAttribute?displayProperty=nameWithType>(Bkz. PARTITION IV Library) özel özniteliğinin varlığı veya yokluğu ile belirtilen iki farklı tür numaralandırmalar vardır. Biri adlandırılmış tamsayı değerlerini temsil eder; diğeri adlandırılmamış bir değer oluşturmak için birleştirilebilen adlandırılmış bit bayraklarını temsil eder. Öğesinin değeri `enum` belirtilen değerlerle sınırlı değil.|8|
 |Listelemeler|[Listelemeler](#enums)|Sabit listesinin değişmez statik alanları, sabit listesinin kendi türüne sahip olacaktır.|9|
-|Olaylar|[Olaylar](#events)|Bir olayı uygulayan yöntemler `SpecialName` meta verilerde işaretlenir.|29|
-|Olaylar|[Olaylar](#events)|Bir olayın ve erişimcilerinin erişilebilirliği aynı olacaktır.|30|
-|Olaylar|[Olaylar](#events)|`add` `remove` Bir olay için ve yöntemlerinin her ikisi de mevcut ya da yok olacaktır.|31|
-|Olaylar|[Olaylar](#events)|`add` `remove` Bir olay için ve yöntemlerinin her biri, türü olay türünü tanımlayan ve öğesinden türetilebilecek bir parametre alır <xref:System.Delegate?displayProperty=nameWithType> .|32|
-|Olaylar|[Olaylar](#events)|Olaylar belirli bir adlandırma düzenine bağlı olacaktır. `SpecialName`CLS kuralı 29 ' da başvuruda bulunulan öznitelik, uygun ad karşılaştırmaları içinde yok sayılacak ve tanımlayıcı kurallarına uymalecektir.|33|
+|Ekinlikler|[Ekinlikler](#events)|Bir olayı uygulayan yöntemler `SpecialName` meta verilerde işaretlenir.|29|
+|Ekinlikler|[Ekinlikler](#events)|Bir olayın ve erişimcilerinin erişilebilirliği aynı olacaktır.|30|
+|Ekinlikler|[Ekinlikler](#events)|`add` `remove` Bir olay için ve yöntemlerinin her ikisi de mevcut ya da yok olacaktır.|31|
+|Ekinlikler|[Ekinlikler](#events)|`add` `remove` Bir olay için ve yöntemlerinin her biri, türü olay türünü tanımlayan ve öğesinden türetilebilecek bir parametre alır <xref:System.Delegate?displayProperty=nameWithType> .|32|
+|Ekinlikler|[Ekinlikler](#events)|Olaylar belirli bir adlandırma düzenine bağlı olacaktır. `SpecialName`CLS kuralı 29 ' da başvuruda bulunulan öznitelik, uygun ad karşılaştırmaları içinde yok sayılacak ve tanımlayıcı kurallarına uymalecektir.|33|
 |Özel durumlar|[Özel durumlar](#exceptions)|Oluşturulan nesneler türünden <xref:System.Exception?displayProperty=nameWithType> veya devralan bir türden olacaktır. Nonetheless, diğer özel durum türlerinin yayılmasını engellemek için CLS uyumlu yöntemler gerekli değildir.|40|
 |Genel|[CLS uyumluluğu: kurallar](#Rules)|CLS kuralları yalnızca, tanımlayıcı derlemenin dışında erişilebilen veya görülebilen bir türün bölümleri için geçerlidir.|1|
 |Genel|[CLS uyumluluğu: kurallar](#Rules)|CLS olmayan uyumlu türlerin üyeleri CLS uyumlu olarak işaretlenmemelidir.|2|
@@ -171,7 +172,7 @@ Bir yöntemin dönüş türü veya özellik türü de dahil olmak üzere üye im
 
 .NET [ortak tür sistemi](base-types/common-type-system.md) , doğrudan ortak dil çalışma zamanı tarafından desteklenen ve bir derlemenin meta verilerinde özel olarak kodlanmış bir dizi yerleşik tür içerir. Bu iç türlerin, aşağıdaki tabloda listelenen türler CLS uyumludur.
 
-|CLS uyumlu tür|Açıklama|
+|CLS uyumlu tür|Description|
 |-------------------------|-----------------|
 |<xref:System.Byte>|8 bit işaretsiz tamsayı|
 |<xref:System.Int16>|16 bit işaretli tamsayı|
@@ -187,7 +188,7 @@ Bir yöntemin dönüş türü veya özellik türü de dahil olmak üzere üye im
 
 Aşağıdaki tabloda listelenen iç türler CLS uyumlu değildir.
 
-|Uyumlu olmayan tür|Açıklama|CLS uyumlu alternatif|
+|Uyumlu olmayan tür|Description|CLS uyumlu alternatif|
 |-------------------------|-----------------|--------------------------------|
 |<xref:System.SByte>|8 bit işaretli tamsayı veri türü|<xref:System.Int16>|
 |<xref:System.TypedReference>|Bir nesne ve onun çalışma zamanı türü işaretçisi|Yok|
@@ -433,15 +434,15 @@ CLS uyumlu türlerdeki özellikler aşağıdaki kurallara uymalıdır:
 
 <a name="events"></a>
 
-### <a name="events"></a>Olaylar
+### <a name="events"></a>Ekinlikler
 
 Bir olay, adı ve türü ile tanımlanır. Olay türü, olayı göstermek için kullanılan bir temsilcisidir. Örneğin, <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olay türündedir <xref:System.ResolveEventHandler> . Olayın kendisinin yanı sıra, olay adına göre adlara sahip üç yöntem olayın uygulamasını sağlar ve `SpecialName` derlemenin meta verilerinde olarak işaretlenir:
 
-- EventName adlı bir olay işleyicisi ekleme yöntemi `add_` *EventName*. Örneğin, olay için olay aboneliği yöntemi <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> adlandırılır `add_AssemblyResolve` .
+- EventName adlı bir olay işleyicisi ekleme yöntemi `add_` . Örneğin, olay için olay aboneliği yöntemi <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> adlandırılır `add_AssemblyResolve` .
 
-- EventName adlı bir olay işleyicisini kaldırma yöntemi `remove_` *EventName*. Örneğin, olay için kaldırma yöntemi <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olarak adlandırılır `remove_AssemblyResolve` .
+- EventName adlı bir olay işleyicisini kaldırma yöntemi `remove_` . Örneğin, olay için kaldırma yöntemi <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olarak adlandırılır `remove_AssemblyResolve` .
 
-- EventName adlı olayın oluştuğunu belirten bir yöntem `raise_` *EventName*.
+- EventName adlı olayın oluştuğunu belirten bir yöntem `raise_` .
 
 > [!NOTE]
 > Ortak dil belirtiminin olayları ile ilgili kuralları, dil derleyicileri tarafından uygulanır ve bileşen geliştiricileri için saydamdır.

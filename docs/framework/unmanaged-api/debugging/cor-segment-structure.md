@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: COR_SEGMENT Yapısı'
 title: COR_SEGMENT Yapısı
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 93aeecb9-7fef-4545-8daf-f566dfc47084
 topic_type:
 - apiref
-ms.openlocfilehash: 738e29fa15340c76b055b608140f3c3bfbd29611
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9bbc452b2c2036d019175ac1be8b9917ffa07b6a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726359"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99712200"
 ---
 # <a name="cor_segment-structure"></a>COR_SEGMENT Yapısı
 
@@ -38,7 +39,7 @@ typedef struct _COR_SEGMENT {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`start`|Bellek bölgesinin başlangıç adresi.|  
 |`end`|Bellek bölgesinin bitiş adresi.|  

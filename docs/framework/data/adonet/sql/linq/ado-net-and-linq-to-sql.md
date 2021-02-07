@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: ADO.NET ve LINQ to SQL'
 title: ADO.NET ve LINQ to SQL
 titleSuffix: ''
 ms.date: 03/30/2017
@@ -6,12 +7,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49ac6da0-f2e1-46fa-963e-1b6dcb63fef7
-ms.openlocfilehash: 5dc1796b7fb7036f68c2435325c6a29d381c59f1
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1f3f4a50c13af857ecd9f3195c7f431dd46ed3ee
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91161587"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99712967"
 ---
 # <a name="adonet-and-linq-to-sql"></a>ADO.NET ve LINQ to SQL
 

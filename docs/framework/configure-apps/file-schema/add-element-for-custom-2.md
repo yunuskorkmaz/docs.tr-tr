@@ -1,5 +1,6 @@
 ---
-title: <add>NameValueSectionHandler ve DictionarySectionHandler için öğesi
+description: 'Hakkında daha fazla bilgi edinin: <add> NameValueSectionHandler ve DictionarySectionHandler için öğesi'
+title: <add> NameValueSectionHandler ve DictionarySectionHandler için öğesi
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/add
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - add Element
 - <add> Element
 ms.assetid: 0d4ddb53-eb2b-49c0-9c33-a8dec5c39b46
-ms.openlocfilehash: 57722f3518fad12cb8e6e35d68f40bb8465bdd86
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5a8cf22b21370e60086408f792f8137386d07aa3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "77215433"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99713058"
 ---
-# <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<add>NameValueSectionHandler ve DictionarySectionHandler için öğesi
+# <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<add> NameValueSectionHandler ve DictionarySectionHandler için öğesi
 
 Özel uygulama ayarları ekler. Her **\<add>** etiket bir anahtar/değer çifti içerir.
 
@@ -22,7 +23,7 @@ ms.locfileid: "77215433"
 &nbsp;&nbsp;[**\<sectionName>**](custom-element-2.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <add key="key" value="value" />
@@ -33,7 +34,7 @@ ms.locfileid: "77215433"
 | Öznitelik | Açıklama |
 | --------- | ----------- |
 | **anahtar**   | Gerekli öznitelik.<br><br>Ayarın adını belirtir. |
-| **deeri** | Gerekli öznitelik.<br><br>Ayarın değerini belirtir. |
+| **değer** | Gerekli öznitelik.<br><br>Ayarın değerini belirtir. |
 
 ## <a name="parent-element"></a>Üst öğe
 
@@ -43,7 +44,7 @@ ms.locfileid: "77215433"
 
 ## <a name="child-elements"></a>Alt öğeleri
 
-Yok
+Hiçbiri
 
 ## <a name="example"></a>Örnek
 
@@ -62,7 +63,7 @@ Aşağıdaki örnek, bir özel yapılandırma bölümünün nasıl tanımlanaca�
 
 ## <a name="configuration-file"></a>Yapılandırma dosyası
 
-Bu öğe uygulama yapılandırma dosyasında, makine yapılandırma dosyasında (*Machine. config*) ve uygulama dizini düzeyinde olmayan *Web. config* dosyalarında kullanılabilir.
+Bu öğe, uygulama yapılandırma dosyasında, makine yapılandırma dosyasında (*Machine.config*) ve uygulama dizini düzeyinde olmayan *Web.config* dosyalarda kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

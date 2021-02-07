@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: LINQ to SQL kaynak kodu analiz etme'
 title: LINQ to SQL Kaynak Kodunu Analiz Etme
 ms.date: 03/30/2017
 ms.assetid: cba3eef8-e108-4478-b588-ad59580e133e
-ms.openlocfilehash: e39b1686269442044beb73bb7e572738832bec27
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: acf80b10c3bb817cf3fd87876da75a47e2fe271c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164590"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99712798"
 ---
 # <a name="analyzing-linq-to-sql-source-code"></a>LINQ to SQL Kaynak Kodunu Analiz Etme
 

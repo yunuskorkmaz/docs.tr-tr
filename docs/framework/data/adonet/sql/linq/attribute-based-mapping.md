@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Attribute-Based eşleme'
 title: Öznitelik Tabanlı Eşleme
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-ms.openlocfilehash: 986a5022ea9e70868689c898649067135eac944b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9dfe9fce10d7ba76281afd843385c734e86af245
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91156114"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99712733"
 ---
 # <a name="attribute-based-mapping"></a>Öznitelik Tabanlı Eşleme
 
@@ -26,7 +27,7 @@ ms.locfileid: "91156114"
 
  Bağlantı tarafından bir ad sağlanmadığında veritabanının varsayılan adını belirtmek için bu özniteliği kullanın. Bu öznitelik isteğe bağlıdır, ancak kullanıyorsanız, <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> Aşağıdaki tabloda açıklandığı gibi özelliğini uygulamanız gerekir.  
   
-|Özellik|Tür|Varsayılan|Açıklama|  
+|Özellik|Tür|Varsayılan|Description|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|Dize|Bkz. <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|Özelliği ile birlikte kullanıldığında <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> , veritabanının adını belirtir.|  
   
@@ -36,7 +37,7 @@ ms.locfileid: "91156114"
 
  Bir sınıfı bir veritabanı tablosu veya görünümüyle ilişkili bir varlık sınıfı olarak belirlemek için bu özniteliği kullanın. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Bu özniteliğe sahip sınıfları kalıcı sınıflar olarak değerlendirir. Aşağıdaki tabloda <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> özelliği açıklanmaktadır.  
   
-|Özellik|Tür|Varsayılan|Açıklama|  
+|Özellik|Tür|Varsayılan|Description|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.TableAttribute.Name%2A>|Dize|Sınıf adıyla aynı dize|Bir sınıfı bir veritabanı tablosuyla ilişkili bir varlık sınıfı olarak belirler.|  
   
@@ -50,7 +51,7 @@ ms.locfileid: "91156114"
   
  Aşağıdaki tabloda bu özniteliğin özellikleri açıklanmaktadır.  
   
-|Özellik|Tür|Varsayılan|Açıklama|  
+|Özellik|Tür|Varsayılan|Description|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A>|AutoSync|Asla|Bir ekleme veya güncelleştirme işleminden sonra değeri almak için ortak dil çalışma zamanı (CLR) verir.<br /><br /> Seçenekler: Always, hiçbir zaman, OnUpdate, OnInsert.|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>|Boole|`true`|Bir sütunun null değer içerebileceğini gösterir.|  
@@ -73,10 +74,10 @@ ms.locfileid: "91156114"
   
  Aşağıdaki tabloda bu özniteliğin özellikleri açıklanmaktadır.  
   
-|Özellik|Tür|Varsayılan|Açıklama|  
+|Özellik|Tür|Varsayılan|Description|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteOnNull%2A>|Boole|`false`|Yabancı anahtar üyeleri atanamayan bir ilişkiye yerleştirildiğinde, ilişkilendirme null olarak ayarlandığında nesneyi siler.|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteRule%2A>|Dize|Hiçbiri|Bir ilişkiye silme davranışı ekler.|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteRule%2A>|Dize|Yok|Bir ilişkiye silme davranışı ekler.|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.IsForeignKey%2A>|Boole|`false`|True ise, üyeyi bir veritabanı ilişkisini temsil eden bir ilişkilendirmede yabancı anahtar olarak belirler.|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.IsUnique%2A>|Boole|`false`|True ise yabancı anahtarda bir benzersizlik kısıtlamasını gösterir.|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.OtherKey%2A>|Dize|İlgili sınıfın KIMLIĞI|Hedef varlık sınıfının bir veya daha fazla üyesini, ilişkilendirmenin diğer tarafında anahtar değerler olarak belirler.|  
@@ -93,7 +94,7 @@ ms.locfileid: "91156114"
   
  Aşağıdaki tabloda bu özniteliğin özellikleri açıklanmaktadır.  
   
-|Özellik|Tür|Varsayılan|Açıklama|  
+|Özellik|Tür|Varsayılan|Description|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A>|Dize|Yok. Değer sağlanmalıdır.|Ayrıştırıcıyı ait kod değerini belirtir.|  
 |<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A>|Boole|`false`|True ise, depodaki hiçbir ayrıştırıcı değeri belirtilen değerlerden herhangi birini eşleştirirken, bu türden bir nesne oluşturur.|  
@@ -107,7 +108,7 @@ ms.locfileid: "91156114"
   
  Aşağıdaki tabloda bu özniteliğin özellikleri açıklanmaktadır.  
   
-|Özellik|Tür|Varsayılan|Açıklama|  
+|Özellik|Tür|Varsayılan|Description|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>|Boole|`false`|Yanlışsa, saklı yordama eşlemeyi gösterir. True ise, Kullanıcı tanımlı bir işleve eşlemeyi gösterir.|  
 |<xref:System.Data.Linq.Mapping.FunctionAttribute.Name%2A>|Dize|Veritabanında ad ile aynı dize|Saklı yordamın veya Kullanıcı tanımlı işlevin adını belirtir.|  
@@ -120,9 +121,9 @@ ms.locfileid: "91156114"
   
  Aşağıdaki tabloda bu özniteliğin özellikleri açıklanmaktadır.  
   
-|Özellik|Tür|Varsayılan|Açıklama|  
+|Özellik|Tür|Varsayılan|Description|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.ParameterAttribute.DbType%2A>|Dize|Hiçbiri|Veritabanı türünü belirtir.|  
+|<xref:System.Data.Linq.Mapping.ParameterAttribute.DbType%2A>|Dize|Yok|Veritabanı türünü belirtir.|  
 |<xref:System.Data.Linq.Mapping.ParameterAttribute.Name%2A>|Dize|Veritabanında parametre adıyla aynı dize|Parametre için bir ad belirtir.|  
   
  Daha fazla bilgi için bkz. <xref:System.Data.Linq.Mapping.ParameterAttribute>.  
@@ -145,7 +146,7 @@ ms.locfileid: "91156114"
   
  Aşağıdaki tabloda bu özniteliğin özellikleri açıklanmaktadır.  
   
-|Özellik|Tür|Varsayılan|Açıklama|  
+|Özellik|Tür|Varsayılan|Description|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.DataAttribute.Name%2A>|Dize|Veritabanındaki adla aynı|Tablo, sütun vb. adı belirtir.|  
 |<xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>|Dize|Ortak erişimciler|Temel alınan depolama alanının adını belirtir.|  

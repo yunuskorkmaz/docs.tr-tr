@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: CorDebugBlockingObject yapısı'
 title: CorDebugBlockingObject Yapısı
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5944edd1-0914-4efa-aba0-d5a277c38b1a
 topic_type:
 - apiref
-ms.openlocfilehash: b16feb1af0d4975411876e78940d21096750d2ae
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2b16af5eecb01067c2ee6811613f964af391f345
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726593"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99712226"
 ---
 # <a name="cordebugblockingobject-structure"></a>CorDebugBlockingObject Yapısı
 
@@ -38,7 +39,7 @@ CorDebugBlockingReason blockingReason;
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`pBlockingObject`|İş parçacığının engellediği nesne. Bu nesne yalnızca geçerli eşitlenmiş durumun süresi için geçerlidir. Aynı eşitlenmiş durum içindeki aynı nesnede iki iş parçacığı engellenirse, [ICorDebugValue:: GetAddress](icordebugvalue-getaddress-method.md) yönteminin aynı değeri döndürmesini beklemeniz gerekebilir. Ancak, arabirimler işaretçi eşdeğeri olabilir veya olmayabilir.|  
 |`dwTimeout`|Engelleme işlemi zaman aşımına geçmeden önce geçen milisaniye sayısı veya sonsuz değeri, zaman aşımına gerekmediğini gösterir. Zaman aşımı değeri, hala kalan süre değil, engelleyici işlem için geçen sürenin toplam uzunluğunu belirtir.|  

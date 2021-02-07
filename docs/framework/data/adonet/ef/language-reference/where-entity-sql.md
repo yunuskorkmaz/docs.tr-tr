@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: (Entity SQL)'
 title: Burada (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: a8e1061e-0028-4a6f-8f19-b9f48e96c4b8
-ms.openlocfilehash: 1907b8786622d3c8019c75916f997c830cc07cfb
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e094a93927f6ac77aef772654f1d8d4fcf999cbd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180965"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99712876"
 ---
 # <a name="where-entity-sql"></a>Burada (Entity SQL)
 

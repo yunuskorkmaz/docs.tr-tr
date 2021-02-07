@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Boolean veri türleri'
 title: Boole Veri Türleri
 ms.date: 03/30/2017
 ms.assetid: 57f7376b-4b11-4b35-98a9-780382053ceb
-ms.openlocfilehash: e2175afc24cfc7db38c1b8e1dbb11757f633960a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1adea2cefa94f4b58665c4cb9ac0a84bb66ba756
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91156075"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99712629"
 ---
 # <a name="boolean-data-types"></a>Boole Veri Türleri
 
