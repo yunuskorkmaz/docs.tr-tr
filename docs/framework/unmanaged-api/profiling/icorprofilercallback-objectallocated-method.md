@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerCallback:: Objectalkonumlandırılan yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerCallback::ObjectAllocated Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: eb412622-77cc-4abd-a2cd-c910fe8edd54
 topic_type:
 - apiref
-ms.openlocfilehash: fda234a6a280aeea1f497ad195d6d41efb6aa951
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 58b58aeb4bb88d0df32cebc32440317a4d23632d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95674352"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99745170"
 ---
 # <a name="icorprofilercallbackobjectallocated-method"></a>ICorProfilerCallback::ObjectAllocated Yöntemi
 
 Profil oluşturucuya, yığın içindeki belleğin bir nesne için ayrıldığını bildirir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT ObjectAllocated(  

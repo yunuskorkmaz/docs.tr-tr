@@ -1,4 +1,5 @@
 ---
+description: ': Imetadatayayma:: Merge yöntemi hakkında daha fazla bilgi edinin'
 title: IMetaDataEmit::Merge Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 7596220c-f699-4b6c-8ae7-c83220610650
 topic_type:
 - apiref
-ms.openlocfilehash: e64d644b511f7c3249c48b9642bfd3163142af3c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6b78dd20555acf1eaf610ed05d8a37ab6cdeee5c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722017"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99745950"
 ---
 # <a name="imetadataemitmerge-method"></a>IMetaDataEmit::Merge Yöntemi
 
 Belirtilen içeri aktarılan kapsamı birleştirilecek kapsamlar listesine ekler.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT Merge (

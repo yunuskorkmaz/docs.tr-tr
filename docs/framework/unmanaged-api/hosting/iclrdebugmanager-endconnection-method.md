@@ -1,4 +1,5 @@
 ---
+description: ': ICLRDebugManager:: EndConnection yöntemi hakkında daha fazla bilgi edinin'
 title: ICLRDebugManager::EndConnection Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 89dc7363-2f29-4eb2-8f23-fccdda6a76a6
 topic_type:
 - apiref
-ms.openlocfilehash: d6f22d6185f4063078463043a6ffd46e56289267
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 06dc9e20ec02c3e3040090babcc443a2ae59848b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719859"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99746060"
 ---
 # <a name="iclrdebugmanagerendconnection-method"></a>ICLRDebugManager::EndConnection Yöntemi
 
 Bir görev listesi ve tanımlayıcı ve kolay ad arasındaki ilişkiyi kaldırır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT EndConnection (  
@@ -41,7 +42,7 @@ HRESULT EndConnection (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`EndConnection` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  

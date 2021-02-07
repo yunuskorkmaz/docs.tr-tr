@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: ortak güvenlik senaryoları'
 title: Ortak Güvenlik Senaryoları
 ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], scenarios
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
-ms.openlocfilehash: 21c8279890d1d1cf746e98f875efb6b1ff869c73
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ad4e3964a4a018793653b5eb48b91ca566840abb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96295086"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99743518"
 ---
 # <a name="common-security-scenarios"></a>Ortak Güvenlik Senaryoları
 
