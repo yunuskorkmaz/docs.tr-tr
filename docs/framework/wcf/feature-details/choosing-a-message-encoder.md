@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Ileti Kodlayıcısı seçme'
 title: İleti Kodlayıcı Seçme
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: 8b53c17cccc74153e652494ec9753302cda8679b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 16f58dd0510584fa94363f63e1a2e56a9de83b52
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96295164"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99735003"
 ---
 # <a name="choose-a-message-encoder"></a>Ileti Kodlayıcısı seçin
 
@@ -33,7 +34,7 @@ Bu makalede, Windows Communication Foundation (WCF) ' de bulunan ileti kodlayıc
 
  Aşağıdaki tabloda bir ileti Kodlayıcısı seçmek için kullanılan yaygın faktörler açıklanmaktadır. Uygulamanız için önemli olan faktörleri önceliklendirin ve ardından bu faktörlerle en iyi şekilde çalışan ileti kodlayıcıları ' nı seçin. Bu tabloda listelenmeyen ek faktörleri ve uygulamanızda gerekebilecek tüm özel ileti kodlayıcıları göz önünde bulundurduğunuzdan emin olun.  
   
-|Faktör|Açıklama|Bu faktörü destekleyen kodlayıcılar|  
+|Faktör|Description|Bu faktörü destekleyen kodlayıcılar|  
 |------------|-----------------|---------------------------------------|  
 |Desteklenen karakter kümeleri|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> ve <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> yalnızca UTF8 ve UTF16 Unicode (*Big-endian* ve *little-endian*) kodlamalarını destekler. UTF7 veya ASCII gibi diğer kodlamalar gerekliyse, özel bir kodlayıcı kullanılmalıdır. Örnek özel bir kodlayıcı için bkz. [özel Ileti Kodlayıcısı](../samples/custom-message-encoder-custom-text-encoder.md).|Metin|  
 |İncelemesi|İnceleme, iletim sırasında iletileri incelemenize olanak sağlar. SOAP kullanımı olmadan veya kullanmadan metin kodlamaları, özel araçların kullanılması gerekmeden iletilerin birçok uygulama tarafından İncelenme ve çözümlenme izni verir. Aktarım güvenliği 'nin ileti veya Aktarım düzeyinde kullanımı, iletileri İnceleme yeteneğinizi etkiler. Gizlilik bir iletinin incelenmeden korunmasını sağlar ve bütünlüğü bir iletinin değiştirilmesini önler.|Metin|  

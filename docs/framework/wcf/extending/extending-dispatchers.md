@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: dispatchers genişletiliyor'
 title: Dağıtıcıları Genişletme
 ms.date: 03/30/2017
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-ms.openlocfilehash: fa9d5c40c2ae813493b3643048fa7eaba00c431d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 22be85c57439a88746e3e87625472d02ab412c1d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96273236"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99735289"
 ---
 # <a name="extending-dispatchers"></a>Dağıtıcıları Genişletme
 

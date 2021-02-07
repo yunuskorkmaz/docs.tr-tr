@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: PublicKeyBlob yapısı'
 title: PublicKeyBlob Yapısı
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b9240712-829c-4c8d-9a09-a6e7aa63f63a
 topic_type:
 - apiref
-ms.openlocfilehash: 42cd3cc22fbbb8eb3d5ac44544fce36650b6461f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 94c1ea3d5a41bbb8941658e87f97cd6d6336187a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705936"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99736506"
 ---
 # <a name="publickeyblob-structure"></a>PublicKeyBlob Yapısı
 
@@ -38,7 +39,7 @@ typedef struct {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`SigAlgId`|Ortak anahtarın imza algoritması için tanımlayıcı ( `ALG_ID` Örneğin, WinCrypt. h içinde tanımlanmıştır).|  
 |`HashAlgId`|Ortak anahtarın karma algoritmasının ( `ALG_ID` WinCrypt. h içinde tanımlanan türü) tanımlayıcı.|  

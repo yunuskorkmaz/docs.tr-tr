@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: StrongNameCompareAssemblies Işlevi'
 title: StrongNameCompareAssemblies İşlevi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 763f2375-efc6-4219-8806-a3b0567ef72b
 topic_type:
 - apiref
-ms.openlocfilehash: e7292635ea0344f1c77c8d44908a9a811e464ff9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e59bb96a89dc1e1cf8b809c3e0d538aaffe83b8e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732313"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99736569"
 ---
 # <a name="strongnamecompareassemblies-function"></a>StrongNameCompareAssemblies İşlevi
 
@@ -27,7 +28,7 @@ ms.locfileid: "95732313"
   
  Bu işlev kullanım dışı bırakıldı. Bunun yerine [ICLRStrongName:: StrongNameCompareAssemblies](../hosting/iclrstrongname-strongnamecompareassemblies-method.md) yöntemini kullanın.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 BOOLEAN StrongNameCompareAssemblies (  

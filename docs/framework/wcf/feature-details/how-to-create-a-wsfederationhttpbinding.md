@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: WSFederationHttpBinding oluşturma'
 title: 'Nasıl yapılır: WSFederationHttpBinding Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: e54897d7-aa6c-46ec-a278-b2430c8c2e10
-ms.openlocfilehash: ccc28c46e8be0b835cf08d372ef85b8a66e989ef
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f0b40cf074d5c3f2575c5a94baa2fdd4271f280f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595446"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734405"
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>Nasıl yapılır: WSFederationHttpBinding Oluşturma
 
@@ -24,7 +25,7 @@ Windows Communication Foundation (WCF) ' de, <xref:System.ServiceModel.WSFederat
 1. Bir güvenlik modu seçin. , <xref:System.ServiceModel.WSFederationHttpBinding> `Message` Birden fazla atlama arasında bile ileti düzeyinde uçtan uca güvenlik sağlayan, ve `TransportWithMessageCredential` ISTEMCISININ ve hizmetin https üzerinden doğrudan bağlantı yapabildiği durumlarda daha iyi performans sağlayan destekler.
 
     > [!NOTE]
-    > <xref:System.ServiceModel.WSFederationHttpBinding>Ayrıca `None` güvenlik modu olarak da desteklenir. Bu mod güvenli değildir ve yalnızca hata ayıklama amacıyla sağlanır. Bir hizmet uç noktası, <xref:System.ServiceModel.WSFederationHttpBinding> güvenlik modu olarak ayarlanmış ile bir ile dağıtılırsa `None` , elde edilen istemci bağlama ( [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)tarafından oluşturulan), <xref:System.ServiceModel.WSHttpBinding> güvenlik modudur `None` .
+    > <xref:System.ServiceModel.WSFederationHttpBinding>Ayrıca `None` güvenlik modu olarak da desteklenir. Bu mod güvenli değildir ve yalnızca hata ayıklama amacıyla sağlanır. Bir hizmet uç noktası, <xref:System.ServiceModel.WSFederationHttpBinding> güvenlik modu olarak ayarlanmış bir ile birlikte dağıtılmışsa `None` , sonuçta elde edilen istemci bağlama ( [ServiceModel meta veri yardımcı programı Aracı (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)tarafından oluşturulan), <xref:System.ServiceModel.WSHttpBinding> güvenlik modudur `None` .
 
      Sistem tarafından sağlanmış diğer bağlamalardan farklı olarak, kullanırken istemci kimlik bilgisi türü seçmek gerekli değildir `WSFederationHttpBinding` . Bunun nedeni, istemci kimlik bilgisi türünün her zaman verilen bir belirteç olmasından kaynaklanır. WCF, belirtilen bir verenin belirtecini alır ve istemcinin kimliğini doğrulamak için bu belirteci hizmete sunar.
 
@@ -32,7 +33,7 @@ Windows Communication Foundation (WCF) ' de, <xref:System.ServiceModel.WSFederat
 
 3. İsteğe bağlı. <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A>Özelliği bir belirteç türünün Tekdüzen Kaynak tanımlayıcısı (URI) olarak ayarlayın. Federasyon Hizmetleri 'nde hizmetin beklediği belirteç türünü belirtin. Federasyon istemcilerinde, güvenlik belirteci hizmeti 'nden istemci isteklerini belirten belirteç türünü belirtin.
 
-     Hiçbir belirteç türü belirtilmemişse, istemcileri belirteç türü URI 'SI olmayan WS-Trust Istek güvenlik belirteçleri (RSTs) oluşturur ve hizmetler varsayılan olarak güvenlik onayları biçimlendirme dili (SAML) 1,1 belirtecini kullanarak istemci kimlik doğrulaması bekler.
+     Hiçbir belirteç türü belirtilmemişse, istemciler belirteç türü URI 'SI olmayan WS-Trust Istek güvenlik belirteçleri (RSTs) oluşturur ve hizmetler varsayılan olarak bir güvenlik onaylama işlemi Işaretleme dili (SAML) 1,1 belirteci kullanarak istemci kimlik doğrulaması bekler.
 
      SAML 1,1 belirtecinin URI 'SI `http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1` .
 
@@ -110,4 +111,4 @@ Aşağıdaki kod örneği, bir imperatively ayarlamaya yönelik kodu gösterir `
 
 - [Federasyon](federation.md)
 - [Federasyon Örneği](../samples/federation-sample.md)
-- [Nasıl yapılır: WSFederationHttpBinding Güvenli Oturumlarını Devre Dışı Bırakma](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [Nasıl yapılır: WSFederationHttpBinding Gücenli Oturumlarını Devre Dışı Bırakma](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)

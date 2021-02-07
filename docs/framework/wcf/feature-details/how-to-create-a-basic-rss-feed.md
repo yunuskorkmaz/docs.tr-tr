@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: temel bir RSS akışı oluşturma'
 title: 'Nasıl yapılır: Temel Bir RSS Akışı Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 431879b8-a5f8-4947-ad1e-4768c726aca8
-ms.openlocfilehash: d322dd40fd024685d6f3236caed41ae5eec1f375
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 68c8c676a6630e9bafc03e2a367d8c9ee8493ed3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96256813"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734782"
 ---
 # <a name="how-to-create-a-basic-rss-feed"></a>Nasıl yapılır: Temel Bir RSS Akışı Oluşturma
 

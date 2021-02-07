@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: User-Defined bağlamaları oluşturma'
 title: Kullanıcı Tanımlı Bağlamalar Oluşturma
 ms.date: 03/30/2017
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-ms.openlocfilehash: ba40bcfd8a9e9fea1a422ed124b9a966819bf184
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9eabb1840f343439d8a8cc79fb0a9b1582b9126d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257860"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99735406"
 ---
 # <a name="creating-user-defined-bindings"></a>Kullanıcı Tanımlı Bağlamalar Oluşturma
 
@@ -37,12 +38,12 @@ Sistem tarafından sağlanmayan bağlamaları oluşturmanın birkaç yolu vardı
   
 |Katman|Seçenekler|Gerekli|  
 |-----------|-------------|--------------|  
-|İşlem akışı|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement?displayProperty=nameWithType>|Hayır|  
-|Güvenilirlik|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType>|Hayır|  
-|Güvenlik|<xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType>|Hayır|  
-|Bileşik çift yönlü|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement?displayProperty=nameWithType>|Hayır|  
-|Encoding|Metin, Ikili, MTOM, özel|Evet\*|  
-|Aktarım|TCP, adlandırılmış kanallar, HTTP, HTTPS, MSMQ, özel|Evet|  
+|İşlem akışı|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement?displayProperty=nameWithType>|No|  
+|Güvenilirlik|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType>|No|  
+|Güvenlik|<xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType>|No|  
+|Bileşik çift yönlü|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement?displayProperty=nameWithType>|No|  
+|Encoding|Metin, Ikili, MTOM, özel|Yes\*|  
+|Aktarım|TCP, adlandırılmış kanallar, HTTP, HTTPS, MSMQ, özel|Yes|  
   
 \*Her bağlama için bir kodlama gerektiğinden, bir kodlama belirtilmemişse, WCF sizin için varsayılan bir kodlama ekler. Varsayılan değer HTTP ve HTTPS aktarımları için Text/XML, aksi durumda binary.  
   

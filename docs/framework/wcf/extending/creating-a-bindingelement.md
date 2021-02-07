@@ -1,17 +1,18 @@
 ---
+description: 'Daha fazla bilgi edinin: BindingElement oluşturma'
 title: BindingElement Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
-ms.openlocfilehash: 285bed029cf8487b37757de6a56075abe448f3ce
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: de5ef045f2e83985cabd36c53652d46536889fa2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257873"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99735432"
 ---
 # <a name="creating-a-bindingelement"></a>BindingElement Oluşturma
 
-Bağlamalar ve bağlama öğeleri ( <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> ve sırasıyla genişleyen nesneler <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> ) WINDOWS COMMUNICATION FOUNDATION (WCF) uygulama modelinin kanal fabrikaları ve kanal dinleyicileri ile ilişkilendirildiği yerdir. Bağlama olmadan, özel kanallar kullanıldığında, [Service Channel-Level programlama](service-channel-level-programming.md) ve [istemci Channel-Level programlama](client-channel-level-programming.md)bölümünde açıklandığı gibi kanal düzeyinde programlama yapmanız gerekir. Bu konuda, kanalınızın WCF 'de kullanılması, <xref:System.ServiceModel.Channels.BindingElement> kanalınız için bir geliştirme ve uygulamanın adım 4 ' te açıklandığı şekilde uygulamadan kullanımı etkinleştirme için en düşük gereksinim ele alınmaktadır. [Developing Channels](developing-channels.md)  
+Bağlamalar ve bağlama öğeleri ( <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> ve sırasıyla genişleyen nesneler <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> ) WINDOWS COMMUNICATION FOUNDATION (WCF) uygulama modelinin kanal fabrikaları ve kanal dinleyicileri ile ilişkilendirildiği yerdir. Bağlama olmadan, özel kanallar kullanıldığında, [Service Channel-Level programlama](service-channel-level-programming.md) ve [istemci Channel-Level programlama](client-channel-level-programming.md)bölümünde açıklandığı gibi kanal düzeyinde programlama yapmanız gerekir. Bu konuda, kanalınızın WCF 'de kullanılması, <xref:System.ServiceModel.Channels.BindingElement> kanalınız için bir geliştirme ve uygulamanın adım 4 ' te açıklandığı şekilde uygulamadan kullanımı etkinleştirme için en düşük gereksinim ele alınmaktadır. [](developing-channels.md)  
   
 ## <a name="overview"></a>Genel Bakış  
 

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: GetHashFromBlob Işlevi'
 title: GetHashFromBlob İşlevi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b712d862-f2d0-4b55-87d4-65bbeadef982
 topic_type:
 - apiref
-ms.openlocfilehash: d1027aea1d800bda1654b223fec992aa70efd4b7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dc5039e44440afa7a000bc61167faec0e5b6cc84
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140717"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99736615"
 ---
 # <a name="gethashfromblob-function"></a>GetHashFromBlob İşlevi
 
@@ -55,10 +56,10 @@ HRESULT GetHashFromBlob (
 dışı Döndürülen karma arabelleği.
 
 `cchHash`\
-'ndaki İstenen en büyük boyut `pbHash`.
+'ndaki İstenen en büyük boyut `pbHash` .
 
 `pchHash`\
-dışı Döndürülen `pbHash`bayt cinsinden boyutu.
+dışı Döndürülen bayt cinsinden boyutu `pbHash` .
 
 ## <a name="requirements"></a>Gereksinimler
 
@@ -66,9 +67,9 @@ dışı Döndürülen `pbHash`bayt cinsinden boyutu.
 
 **Üst bilgi:** StrongName. h
 
-**Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir
+**Kitaplık:** MsCorEE.dll bir kaynak olarak eklendi
 
-**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: GetHashFromHandle Işlevi'
 title: GetHashFromHandle İşlevi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e00337f-b307-4602-9bc3-965a8dbf02cd
 topic_type:
 - apiref
-ms.openlocfilehash: 904dcb707e704cfec2dba4e6587f7e3acaf7b538
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5951a5befd9e66b13a3b3033398614fca1f1a9d8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732339"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99736576"
 ---
 # <a name="gethashfromhandle-function"></a>GetHashFromHandle İşlevi
 
@@ -27,7 +28,7 @@ Belirtilen karma algoritmasını kullanarak, belirtilen dosya tanıtıcısına s
   
  Bu işlev kullanım dışı bırakıldı. Bunun yerine [ICLRStrongName:: GetHashFromHandle](../hosting/iclrstrongname-gethashfromhandle-method.md) yöntemini kullanın.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetHashFromHandle (  

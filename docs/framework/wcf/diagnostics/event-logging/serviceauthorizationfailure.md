@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: ServiceAuthorizationFailure'
 title: ServiceAuthorizationFailure
 ms.date: 03/30/2017
 ms.assetid: a6a57896-41d5-4c05-a2fb-184d828e20c1
-ms.openlocfilehash: fbb54c6f67be6ed4f1abc1142fb3729115d7349c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1c3cd5c199906a0a19fcd6a4be579bca61c0ecce
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96263353"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99735978"
 ---
 # <a name="serviceauthorizationfailure"></a>ServiceAuthorizationFailure
 
@@ -17,7 +18,7 @@ Kimlik: 168
   
  Kategori: Securityauıdıt  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bu olay, hizmet yetkilendirmesinin başarısız olduğunu gösterir. Olay; Hizmeti, eylemi, istemci kimliğini, AuthorizationContext, etkinlik KIMLIĞI ve ServiceAuthorizationManager 'ı listeler.  
   

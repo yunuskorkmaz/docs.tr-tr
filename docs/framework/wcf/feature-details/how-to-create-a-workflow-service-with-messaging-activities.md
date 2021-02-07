@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: mesajlaşma etkinlikleriyle Iş akışı hizmeti oluşturma'
 title: 'Nasıl yapılır: Mesajlaşma Etkinlikleriyle İş Akışı Hizmeti Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-ms.openlocfilehash: 21d08d9c3c78cc8774d038018703ffb0c7ceb1fe
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c8f01574c2880e3a75a4db8edea949648d49426c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96286324"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734548"
 ---
 # <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Nasıl yapılır: Mesajlaşma Etkinlikleriyle İş Akışı Hizmeti Oluşturma
 
@@ -33,7 +34,7 @@ Bu konuda, mesajlaşma etkinlikleri kullanılarak basit bir iş akışı hizmeti
   
      ![Iletişim kutusu ile genişletilmiş Iletişim kutusu bölümü gösteren ekran görüntüsü.](./media/how-to-create-a-workflow-service-with-messaging-activities/toolbox-messaging-section.jpg)  
   
-2. Bir **ReceiveAndSendReply** şablonunu sürükleyip iş akışı tasarımcısına bırakın. Bu <xref:System.Activities.Statements.Sequence> **Receive** <xref:System.ServiceModel.Activities.SendReply> , aşağıdaki çizimde gösterildiği gibi, alma etkinliği ve sonrasında etkinlik gelen bir etkinlik oluşturur.  
+2. Bir **ReceiveAndSendReply** şablonunu sürükleyip iş akışı tasarımcısına bırakın. Bu <xref:System.Activities.Statements.Sequence>  <xref:System.ServiceModel.Activities.SendReply> , aşağıdaki çizimde gösterildiği gibi, alma etkinliği ve sonrasında etkinlik gelen bir etkinlik oluşturur.  
   
      ![ReceiveAndSendReply şablonunu gösteren ekran görüntüsü.](./media/how-to-create-a-workflow-service-with-messaging-activities/receiveandsendreply-template.jpg)  
   
@@ -53,13 +54,13 @@ Bu konuda, mesajlaşma etkinlikleri kullanılarak basit bir iş akışı hizmeti
   
      Değişkenler düzenleyicisini kapatmak için **değişkenler** düğmesine tekrar tıklayın.  
   
-6. **Tanımla** ' ya tıklayın. **Content** <xref:System.ServiceModel.Activities.Receive> **İçerik tanımı** Iletişim kutusunu göstermek için etkinliğin içerik metin kutusunda bağlantısını yapın. **Parametreler** radyo düğmesini seçin, **yeni parametre Ekle** bağlantısına tıklayın, `inMsg` **ad** metin kutusunu yazın, **tür** açılan liste kutusunda **dize** ' yi seçin ve `msg` Aşağıdaki çizimde gösterildiği gibi **ata** metin kutusuna yazın.  
+6. **Tanımla** ' ya tıklayın.  <xref:System.ServiceModel.Activities.Receive> **İçerik tanımı** Iletişim kutusunu göstermek için etkinliğin içerik metin kutusunda bağlantısını yapın. **Parametreler** radyo düğmesini seçin, **yeni parametre Ekle** bağlantısına tıklayın, `inMsg` **ad** metin kutusunu yazın, **tür** açılan liste kutusunda **dize** ' yi seçin ve `msg` Aşağıdaki çizimde gösterildiği gibi **ata** metin kutusuna yazın.  
   
      ![Parametre içeriği eklemeyi gösteren ekran görüntüsü.](./media/how-to-create-a-workflow-service-with-messaging-activities/adding-parameters-content.jpg)  
   
      Bu, alma etkinliğinin dize parametresini alacağını ve verilerin değişkene bağlandığını belirtir `msg` . **Içerik tanımı** iletişim kutusunu kapatmak için **Tamam** ' ı tıklatın.  
   
-7. Içerik tanımı iletişim kutusunu göstermek için etkinliğin **içerik** kutusunda **tanımla...** bağlantısına tıklayın <xref:System.ServiceModel.Activities.SendReply> . **Content Definition** **Parametreler** radyo düğmesini seçin, **yeni parametre Ekle** bağlantısına tıklayın, `outMsg` **ad** metin kutusunu yazın, **tür** açılan liste kutusunda **dize** ' yi seçin ve `msg` **değer** metin kutusunda aşağıdaki çizimde gösterildiği gibi yazın.  
+7. Içerik tanımı iletişim kutusunu göstermek için etkinliğin **içerik** kutusunda **tanımla...** bağlantısına tıklayın <xref:System.ServiceModel.Activities.SendReply> .  **Parametreler** radyo düğmesini seçin, **yeni parametre Ekle** bağlantısına tıklayın, `outMsg` **ad** metin kutusunu yazın, **tür** açılan liste kutusunda **dize** ' yi seçin ve `msg` **değer** metin kutusunda aşağıdaki çizimde gösterildiği gibi yazın.  
   
      ![OutMsg parametresinin nasıl ekleneceğini gösteren ekran görüntüsü.](./media/how-to-create-a-workflow-service-with-messaging-activities/outmsg-parameters-content.jpg)  
   

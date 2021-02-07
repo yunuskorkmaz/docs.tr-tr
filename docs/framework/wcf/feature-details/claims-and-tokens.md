@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: talepler ve belirteçler'
 title: Beyanlar ve Belirteçler
 ms.date: 03/30/2017
 helpviewer_keywords:
 - claims [WCF], and tokens
 ms.assetid: eff167f3-33f8-483d-a950-aa3e9f97a189
-ms.openlocfilehash: cbc97f2224bce640757e1cef88fe325db477cfd7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: d7d05fb63886ca7562ce478bcbcea73c3cbafcb8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587033"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734964"
 ---
 # <a name="claims-and-tokens"></a>Beyanlar ve Belirteçler
 
@@ -19,7 +20,7 @@ Ve sınıflarını kullanarak bir istemci kimlik bilgisinin taleplerini inceleye
 
 - <xref:System.IdentityModel.Claims.Claim.ClaimType%2A>Özelliği, yapılan talep türünü belirten bir Tekdüzen Kaynak tanımlayıcısı (URI) döndürür. Örneğin, bir talep türü bir sertifikanın parmak izi olabilir, bu durumda URI olur `http://schemas.microsoft.com/ws/20005/05/identity/claims/thumprint` .
 
-- <xref:System.IdentityModel.Claims.Claim.Right%2A>Özelliği, talebin sağına belirten BIR URI döndürür. Önceden tanımlanmış haklar <xref:System.IdentityModel.Claims.Rights> sınıfında ( <xref:System.IdentityModel.Claims.Rights.Identity%2A> , <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> ) bulunur.
+- <xref:System.IdentityModel.Claims.Claim.Right%2A>Özelliği, talebin sağına belirten BIR URI döndürür. Önceden tanımlanmış haklar <xref:System.IdentityModel.Claims.Rights> sınıfında ( <xref:System.IdentityModel.Claims.Rights.Identity%2A> ,  <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> ) bulunur.
 
 - <xref:System.IdentityModel.Claims.Claim.Resource%2A>Özelliği, talep ile ilişkili kaynağı döndürür.
 
@@ -77,4 +78,4 @@ Bir sertifika ile ilişkilendirilmemiş bir RSA anahtarı kullanıldığında, s
 - <xref:System.IdentityModel.Claims.Claim>
 - <xref:System.IdentityModel.Claims.Rights>
 - <xref:System.IdentityModel.Claims.ClaimTypes>
-- [Kimlik Modeliyle Talep ve Yetkilendirmeyi Yönetme](managing-claims-and-authorization-with-the-identity-model.md)
+- [Kimlik Modeliyle Beyanlar ve Yetkilendirmeyi Yönetme](managing-claims-and-authorization-with-the-identity-model.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: FailFast'
 title: FailFast
 ms.date: 03/30/2017
 ms.assetid: 4fc4e476-997b-4166-90af-8d164f775924
-ms.openlocfilehash: 3dfcd5a3eccb54f6c28ce8ac189a76abdec6fe93
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 98910dc97a8cf0c7c3b2357fbcfd0793f233ee02
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96284361"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99736264"
 ---
 # <a name="failfast"></a>FailFast
 
@@ -17,7 +18,7 @@ Kimlik: 102
   
  Kategori: Izleme  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  FailFast çağrıldı. Olay, ileti, yığın izi, işlem adı ve işlem KIMLIĞINI listeler.  
   

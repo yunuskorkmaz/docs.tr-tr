@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: GetHashFromFile Işlevi'
 title: GetHashFromFile İşlevi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b3c526a4-8fb4-4ad6-b6af-42ce9c06492e
 topic_type:
 - apiref
-ms.openlocfilehash: ee9f9cd9a9f35c6c54497ad382bb6f9817d186bd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f91bfe8a3988b6aae563b5a852997d6fd3c309d6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732378"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99736602"
 ---
 # <a name="gethashfromfile-function"></a>GetHashFromFile İşlevi
 
@@ -27,7 +28,7 @@ Belirtilen dosyanın içeriği üzerinde bir karma oluşturur.
   
  Bu işlev kullanım dışı bırakıldı. Bunun yerine [ICLRStrongName:: GetHashFromFile](../hosting/iclrstrongname-gethashfromfile-method.md) yöntemini kullanın.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetHashFromFile (  

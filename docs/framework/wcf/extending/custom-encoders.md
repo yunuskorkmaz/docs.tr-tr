@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: özel kodlayıcılar'
 title: Özel Kodlayıcılar
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-ms.openlocfilehash: c2ad0c947afd293d0923faa3e9d914b6911ce941
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 12c706daf025b6ab63bd5c4e2cbb426a2ea83af1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96254785"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99735302"
 ---
 # <a name="custom-encoders"></a>Özel Kodlayıcılar
 

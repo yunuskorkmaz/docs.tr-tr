@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: COM+ tümleştirme uygulaması dağıtma'
 title: 'Nasıl yapılır: COM+ Tümleştirme Uygulaması Dağıtma'
 ms.date: 03/30/2017
 ms.assetid: 2e5a0510-db3c-4988-a09c-696285836650
-ms.openlocfilehash: 5f2e64ed06b98db50259edf8ef307ce430b8be38
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4bf9e72a631c97f3b791ecd01abb5cb74365772d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96289795"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734392"
 ---
 # <a name="how-to-deploy-a-com-integration-application"></a>Nasıl yapılır: COM+ Tümleştirme Uygulaması Dağıtma
 

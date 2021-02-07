@@ -1,19 +1,20 @@
 ---
+description: 'Daha fazla bilgi: uç nokta: saniye başına bırakılan güvenilir mesajlaşma Iletileri'
 title: 'Uç Noktası: Saniyede Bırakılan Güvenli Mesajlaşma İletileri'
 ms.date: 03/30/2017
 ms.assetid: ea3c4fc0-1e0f-4863-8879-57bc6c113018
-ms.openlocfilehash: b8c0f91b2de5d023232756159a50236574308954
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 257ea74aeb23ef8962ce8910dee635b83f76d960
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96290848"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99735887"
 ---
 # <a name="endpoint-reliable-messaging-messages-dropped-per-second"></a>Uç Noktası: Saniyede Bırakılan Güvenli Mesajlaşma İletileri
 
 Sayaç adı: saniye başına bırakılan güvenilir mesajlaşma oturumları.  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bu uç noktada bir saniyede bırakılan Toplam güvenilir mesajlaşma iletisi sayısı.  
   
