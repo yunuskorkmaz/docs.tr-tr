@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Birleşik kurallı Işlevler'
 title: Toplu Kurallı İşlevler
 ms.date: 03/30/2017
 ms.assetid: 3bcff826-ca90-41b3-a791-04d6ff0e5085
-ms.openlocfilehash: 3f4bb84c45e503fc0018e7869f3b41ddab4581a6
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e26888ac15553a592f7d2cb9b1a0941161115615
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251350"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99697302"
 ---
 # <a name="aggregate-canonical-functions"></a>Toplu Kurallı İşlevler
 
@@ -21,13 +22,13 @@ Aşağıda, toplu Entity SQL kurallı işlevler verilmiştir.
 
 Null olmayan değerlerin ortalamasını döndürür.
 
-**Bağımsız Değişkenler**
+**Bağımsız değişkenler**
 
-`Int32` ,`Int64`, Ve .`Decimal` `Double`
+`Int32`,, `Int64` `Double` Ve `Decimal` .
 
-**Dönüş değeri**
+**Dönüş Değeri**
 
-Türü `expression` `null` veya `null` tüm giriş değerleri değer ise.
+Türü `expression` veya `null` tüm giriş değerleri `null` değer ise.
 
 **Örnek**
 
@@ -38,13 +39,13 @@ Türü `expression` `null` veya `null` tüm giriş değerleri değer ise.
 
 Null ve yinelenen değerler dahil olmak üzere toplamanın boyutunu döndürür.
 
-**Bağımsız Değişkenler**
+**Bağımsız değişkenler**
 
 Herhangi bir tür.
 
-**Dönüş değeri**
+**Dönüş Değeri**
 
-Bir `Int64`.
+Bir `Int64` .
 
 **Örnek**
 
@@ -55,13 +56,13 @@ Bir `Int64`.
 
 Null ve yinelenen değerler dahil olmak üzere toplamanın boyutunu döndürür.
 
-**Bağımsız Değişkenler**
+**Bağımsız değişkenler**
 
 Herhangi bir tür.
 
-**Dönüş değeri**
+**Dönüş Değeri**
 
-Bir `Int32`.
+Bir `Int32` .
 
 **Örnek**
 
@@ -72,13 +73,13 @@ Bir `Int32`.
 
 Null olmayan değerlerin en büyük değerini döndürür.
 
-**Bağımsız Değişkenler**
+**Bağımsız değişkenler**
 
-A `Byte`, `Int16`, ,`Int32` ,,`Single`, ,`Decimal`,,,, ,`String`. `Double` `DateTime` `DateTimeOffset` `Time` `Byte` `Int64` `Binary`
+A `Byte` , `Int16` , `Int32` , `Int64` , `Byte` , `Single` , `Double` , `Decimal` , `DateTime` , `DateTimeOffset` , `Time` , `String` , `Binary` .
 
-**Dönüş değeri**
+**Dönüş Değeri**
 
-Türü `expression` `null` veya `null` tüm giriş değerleri değer ise.
+Türü `expression` veya `null` tüm giriş değerleri `null` değer ise.
 
 **Örnek**
 
@@ -89,13 +90,13 @@ Türü `expression` `null` veya `null` tüm giriş değerleri değer ise.
 
 Null olmayan değerlerin en küçük değerini döndürür.
 
-**Bağımsız Değişkenler**
+**Bağımsız değişkenler**
 
-A `Byte`, `Int16`, ,`Int32` ,,`Single`, ,`Decimal`,,,, ,`String`. `Double` `DateTime` `DateTimeOffset` `Time` `Byte` `Int64` `Binary`
+A `Byte` , `Int16` , `Int32` , `Int64` , `Byte` , `Single` , `Double` , `Decimal` , `DateTime` , `DateTimeOffset` , `Time` , `String` , `Binary` .
 
-**Dönüş değeri**
+**Dönüş Değeri**
 
-Türü `expression` `null` veya `null` tüm giriş değerleri değer ise.
+Türü `expression` veya `null` tüm giriş değerleri `null` değer ise.
 
 **Örnek**
 
@@ -106,13 +107,13 @@ Türü `expression` `null` veya `null` tüm giriş değerleri değer ise.
 
 Null olmayan değerlerin standart sapmasını döndürür.
 
-**Bağımsız Değişkenler**
+**Bağımsız değişkenler**
 
-Bir `Int32` ,`Int64`, ,.`Double` `Decimal`
+Bir `Int32` , `Int64` , `Double` , `Decimal` .
 
-**Dönüş değeri**
+**Dönüş Değeri**
 
-A `Double`. `Null`Tüm giriş değerleri `null` değer ise.
+Bir `Double`. `Null`Tüm giriş değerleri `null` değer ise.
 
 **Örnek**
 
@@ -123,13 +124,13 @@ A `Double`. `Null`Tüm giriş değerleri `null` değer ise.
 
 Tüm değerlerin popülasyonu için standart sapmayı döndürür.
 
-**Bağımsız Değişkenler**
+**Bağımsız değişkenler**
 
-Bir `Int32` ,`Int64`, ,.`Double` `Decimal`
+Bir `Int32` , `Int64` , `Double` , `Decimal` .
 
-**Dönüş değeri**
+**Dönüş Değeri**
 
-`null` Ya `Double` datümgiriş`null` değerleri değer ise.
+`Double`Ya da `null` tüm giriş değerleri `null` değer ise.
 
 **Örnek**
 
@@ -140,13 +141,13 @@ Bir `Int32` ,`Int64`, ,.`Double` `Decimal`
 
 Null olmayan değerlerin toplamını döndürür.
 
-**Bağımsız Değişkenler**
+**Bağımsız değişkenler**
 
-Bir `Int32` ,`Int64`, ,.`Double` `Decimal`
+Bir `Int32` , `Int64` , `Double` , `Decimal` .
 
-**Dönüş değeri**
+**Dönüş Değeri**
 
-`null` Ya `Double` datümgiriş`null` değerleri değer ise.
+`Double`Ya da `null` tüm giriş değerleri `null` değer ise.
 
 **Örnek**
 
@@ -157,13 +158,13 @@ Bir `Int32` ,`Int64`, ,.`Double` `Decimal`
 
 Null olmayan tüm değerlerin varyansını döndürür.
 
-**Bağımsız Değişkenler**
+**Bağımsız değişkenler**
 
-Bir `Int32` ,`Int64`, ,.`Double` `Decimal`
+Bir `Int32` , `Int64` , `Double` , `Decimal` .
 
-**Dönüş değeri**
+**Dönüş Değeri**
 
-`null` Ya `Double` datümgiriş`null` değerleri değer ise.
+`Double`Ya da `null` tüm giriş değerleri `null` değer ise.
 
 **Örnek**
 
@@ -174,13 +175,13 @@ Bir `Int32` ,`Int64`, ,.`Double` `Decimal`
 
 Null olmayan tüm değerlerin popülasyon varyansını döndürür.
 
-**Bağımsız Değişkenler**
+**Bağımsız değişkenler**
 
-Bir `Int32` ,`Int64`, ,.`Double` `Decimal`
+Bir `Int32` , `Int64` , `Double` , `Decimal` .
 
-**Dönüş değeri**
+**Dönüş Değeri**
 
-`null` Ya `Double` datümgiriş`null` değerleri değer ise.
+`Double`Ya da `null` tüm giriş değerleri `null` değer ise.
 
 **Örnek**
 

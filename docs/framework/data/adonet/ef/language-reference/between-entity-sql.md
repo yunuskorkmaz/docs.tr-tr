@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: BETWEEN (Entity SQL)'
 title: BETWEEN (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4dcdd754-ae01-4e78-bf28-8a117fb2b73e
-ms.openlocfilehash: 17e3fe97942b34232640b0326eca2c5729e86989
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 35ac16e94f2e55f6a0f76591daf0f91f9708aa53
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201180"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99697120"
 ---
 # <a name="between-entity-sql"></a>BETWEEN (Entity SQL)
 

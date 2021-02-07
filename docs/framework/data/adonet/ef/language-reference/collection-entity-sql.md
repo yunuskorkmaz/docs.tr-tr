@@ -1,13 +1,14 @@
 ---
+description: KOLEKSIYON hakkında daha fazla bilgi edinin (Entity SQL)
 title: KOLEKSIYON (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 03228bfa-be3a-4ccc-82f8-eee429f85cf1
-ms.openlocfilehash: c960ee69f8188f6dd3184b6fb31f3432f8d58fee
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1269680b2a9009277e79337cfe4df154885b7c1e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197956"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99697055"
 ---
 # <a name="collection-entity-sql"></a>KOLEKSIYON (Entity SQL)
 

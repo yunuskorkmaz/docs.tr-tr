@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: ilişkilendirme kümesi'
 title: association set
 ms.date: 03/30/2017
 ms.assetid: a65247b6-ce59-44ea-974c-14ae20a7995f
-ms.openlocfilehash: 58d8794a21cc37ab84386c820b192fb29946095c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: aeddf3e898aecc2b283a941e844a6dbe810357f5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153436"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99697588"
 ---
 # <a name="association-set"></a>association set
 
@@ -45,4 +46,4 @@ ms.locfileid: "91153436"
 
 - [Varlık Veri Modeli Temel Kavramları](entity-data-model-key-concepts.md)
 - [Varlık Veri Modeli](entity-data-model.md)
-- [foreign key property](foreign-key-property.md)
+- [yabancı anahtar özelliği](foreign-key-property.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: ANYELEMENT (Entity SQL)'
 title: ANYELEMENT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 475a9ad6-8c8d-4f49-9970-af273e5360f1
-ms.openlocfilehash: e060956545ca924fa6fedb80b2f53ff312f307a2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3330c1b0bed69084bc83c5a689762ff529539d54
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201206"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99697159"
 ---
 # <a name="anyelement-entity-sql"></a>ANYELEMENT (Entity SQL)
 

@@ -1,13 +1,14 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: Entity Framework için SqlClient 'daki bilinen sorunlar"
 title: Entity Framework için SqlClient’ta Bilinen Sorunlar
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: 707c749e4dff5d1bbc8d372632aae502092db060
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c1a82657f1b43cddb858692d055df3bf2dca47ec
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198112"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99697341"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Entity Framework için SqlClient’ta Bilinen Sorunlar
 

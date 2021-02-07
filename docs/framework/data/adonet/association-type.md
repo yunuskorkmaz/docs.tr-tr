@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: ilişkilendirme türü'
 title: association type
 ms.date: 03/30/2017
 ms.assetid: 26c409f6-06e8-4441-ac78-1b1076a3c005
-ms.openlocfilehash: 6f6eb91d4f292c7e98b8c9a1d814ed6bf71b7370
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4df84d97c798e9f2d06e0f5dce442e05cb4c67b5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198762"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99697562"
 ---
 # <a name="association-type"></a>association type
 

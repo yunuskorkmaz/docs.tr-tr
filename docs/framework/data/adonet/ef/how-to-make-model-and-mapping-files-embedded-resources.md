@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: model oluşturma ve eşleme dosyaları gömülü kaynaklar'
 title: 'Nasıl yapılır: Model ve Eşleme Dosyalarını Gömülü Kaynak Yapma'
 ms.date: 03/30/2017
 ms.assetid: 20dfae4d-e95a-4264-9540-f5ad23b462d3
-ms.openlocfilehash: 8496dcad5422d1a45af52e58325efd360768da34
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 373dfc2c93adfc510341ec0ea0487ad8962aa3e7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198294"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99697523"
 ---
 # <a name="how-to-make-model-and-mapping-files-embedded-resources"></a>Nasıl yapılır: Model ve Eşleme Dosyalarını Gömülü Kaynak Yapma
 
@@ -20,7 +21,7 @@ Entity Framework, bir uygulamanın katıştırılmış kaynakları olarak model 
   
 1. **Çözüm Gezgini**, kavramsal (. csdl) dosyasını seçin.  
   
-2. **Özellikler** bölmesinde, **derleme eylemini** **katıştırılmış kaynak**olarak ayarlayın.  
+2. **Özellikler** bölmesinde, **derleme eylemini** **katıştırılmış kaynak** olarak ayarlayın.  
   
 3. Depolama (. ssdl) dosyası ve eşleme (. MSL) dosyası için 1 ve 2. adımları tekrarlayın.  
   
