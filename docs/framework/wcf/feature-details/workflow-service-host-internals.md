@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Iş akışı hizmeti konak Iç Işlevleri'
 title: İş Akışı Hizmeti Ana Bilgisayar Dahili Bileşenleri
 ms.date: 03/30/2017
 ms.assetid: af44596f-bf6a-4149-9f04-08d8e8f45250
-ms.openlocfilehash: 23ee0533d5386164dc95cb7fe2c61a626ea3f96e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: fb33e7d6f4e9f78c06459f3d7c8b5c44e2a44a7d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96295749"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704387"
 ---
 # <a name="workflow-service-host-internals"></a>İş Akışı Hizmeti Ana Bilgisayar Dahili Bileşenleri
 

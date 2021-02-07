@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerCallback:: ExceptionCLRCatcherFound yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerCallback::ExceptionCLRCatcherFound Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 73fe8b4b-8f9a-4ba5-a10c-b26521396a66
 topic_type:
 - apiref
-ms.openlocfilehash: 894084978f976bcee71138d35534a80b5f9cda5f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 37027a00e488eed5681b1d99ada6332d59e6a632
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95699982"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99706311"
 ---
 # <a name="icorprofilercallbackexceptionclrcatcherfound-method"></a>ICorProfilerCallback::ExceptionCLRCatcherFound Yöntemi
 

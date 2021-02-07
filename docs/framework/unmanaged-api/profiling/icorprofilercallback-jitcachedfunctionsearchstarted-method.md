@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerCallback:: JITCachedFunctionSearchStarted yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerCallback::JITCachedFunctionSearchStarted Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 5cba642c-0d80-48ee-889d-198c5044d821
 topic_type:
 - apiref
-ms.openlocfilehash: 938da4e3b7cc45c24dcac872ab504755116197a0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1faaf8fbc1e0fee9ce76850cfedcd4e8cf934371
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95684037"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99705778"
 ---
 # <a name="icorprofilercallbackjitcachedfunctionsearchstarted-method"></a>ICorProfilerCallback::JITCachedFunctionSearchStarted Yöntemi
 
 Profil oluşturucuyu, önceden yerel görüntü Oluşturucu (NGen.exe) kullanılarak derlenen bir işlev için bir aramanın başlatıldığını bildirir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT JITCachedFunctionSearchStarted(  

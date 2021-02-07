@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerCallback:: ExceptionSearchFunctionLeave yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerCallback::ExceptionSearchFunctionLeave Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 01de7ac6-0aad-42ef-bf93-50737667b0a4
 topic_type:
 - apiref
-ms.openlocfilehash: 064f87fe0cee8d0ad7efcba478e9cf1954a3f291
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1a30d7ef979f751596cdd723b76eefee3cc1db5a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95699774"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99706155"
 ---
 # <a name="icorprofilercallbackexceptionsearchfunctionleave-method"></a>ICorProfilerCallback::ExceptionSearchFunctionLeave Yöntemi
 

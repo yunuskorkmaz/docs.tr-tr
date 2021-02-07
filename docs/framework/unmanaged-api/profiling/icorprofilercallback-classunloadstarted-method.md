@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerCallback:: ClassUnloadStarted yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerCallback::ClassUnloadStarted Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: bc93bead-f3a9-415c-b919-ddd3ca80facc
 topic_type:
 - apiref
-ms.openlocfilehash: 1c154eee85811796321aea2647db1c8996997576
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3dae88d9cbe9ed2a2e234d02420a65c6a9ca003d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95700255"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99706379"
 ---
 # <a name="icorprofilercallbackclassunloadstarted-method"></a>ICorProfilerCallback::ClassUnloadStarted Yöntemi
 
 Profil oluşturucuyu bir sınıfın kaldırılmakta olduğunu bildirir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT ClassUnloadStarted(  

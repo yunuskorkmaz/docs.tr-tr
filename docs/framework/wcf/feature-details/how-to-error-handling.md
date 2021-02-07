@@ -1,17 +1,18 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: hata Işleme'
 title: 'Nasıl yapılır: Hata İşleme'
 ms.date: 03/30/2017
 ms.assetid: de566e39-9358-44ff-8244-780f6b799966
-ms.openlocfilehash: 3b8e48a74ff7671b942b5499fb3a0b5d0f389d61
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 1d385070e4cc0d55bc3327114baf4e4ff543171f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834709"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704660"
 ---
 # <a name="how-to-error-handling"></a>Nasıl yapılır: Hata İşleme
 
-Bu konuda, hata işleme kullanan bir yönlendirme yapılandırması oluşturmak için gereken temel adımlar özetlenmektedir. Bu örnekte, iletiler bir hedef uç noktaya yönlendirilir. Bir ileti ağ veya iletişimle ilgili bir başarısızlık (<xref:System.ServiceModel.CommunicationException>) nedeniyle iletilemez, ileti alternatif bir uç noktaya yeniden gönderilir.
+Bu konuda, hata işleme kullanan bir yönlendirme yapılandırması oluşturmak için gereken temel adımlar özetlenmektedir. Bu örnekte, iletiler bir hedef uç noktaya yönlendirilir. Bir ileti ağ veya iletişimle ilgili bir başarısızlık () nedeniyle iletilemez <xref:System.ServiceModel.CommunicationException> , ileti alternatif bir uç noktaya yeniden gönderilir.
 
 > [!NOTE]
 > Bir ağ hatasının benzetimini yapmak için, bu örnekte kullanılan hedef uç noktası yanlış bir adres içeriyor. Belirtilen adreste hiçbir hizmet dinlemede olmadığından, bu uç noktaya yönlendirilen iletiler başarısız olur.
@@ -69,7 +70,7 @@ Bu konuda, hata işleme kullanan bir yönlendirme yapılandırması oluşturmak 
 
 3. Bir iletinin bir ağ olayında gönderildiği bitiş noktalarını veya birincil hedef uç noktasına gönderilirken iletişim hatasını içeren yedekleme uç noktası listesini tanımlayın. Aşağıdaki örnek bir uç nokta içeren bir yedekleme listesi tanımlar; Ancak, bir yedekleme listesinde birden fazla uç nokta belirtilebilir.
 
-     Yedekleme listesi birden çok uç nokta içeriyorsa, bir ağ veya iletişim hatası oluştuğunda, ileti listedeki ilk uç noktaya gönderilmeye çalışır. Bu uç noktaya gönderilirken bir ağ veya iletişim hatası oluşursa, yönlendirme hizmeti iletiyi listede yer alan bir sonraki uç noktaya göndermeye çalışır. Hizmet, ileti başarıyla gönderilene kadar yedekleme uç noktası listesindeki her bir uç noktaya iletiyi göndermeye devam eder, tüm yedekleme uç noktaları ağ veya iletişimlerle ilgili bir hata döndürmüyor, ya da ileti gönderilir ve uç nokta ağ olmayan bir değer döndürür. iletişimlerle ilgili olmayan hata.
+     Yedekleme listesi birden çok uç nokta içeriyorsa, bir ağ veya iletişim hatası oluştuğunda, ileti listedeki ilk uç noktaya gönderilmeye çalışır. Bu uç noktaya gönderilirken bir ağ veya iletişim hatası oluşursa, yönlendirme hizmeti iletiyi listede yer alan bir sonraki uç noktaya göndermeye çalışır. Hizmet, ileti başarıyla gönderilene kadar yedekleme uç noktası listesindeki her bir uç noktaya iletiyi göndermeye devam eder, tüm yedekleme uç noktaları ağ veya iletişimlerle ilgili bir hata döndürür veya ileti gönderilir ve uç nokta, iletişim dışı, iletişimlerle ilgili olmayan bir hata döndürür.
 
     ```xml
     <backupLists>

@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: System-Provided birlikte çalışabilirlik bağlamaları tarafından desteklenen Web Hizmetleri protokolleri'
 title: Sistem Tarafından Sağlanan Birlikte Kullanılabilirlik Bağlamaları ile Desteklenen Web Hizmeti Protokolleri
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - Web services protocols
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
-ms.openlocfilehash: 0dbfca5d56fe588864a371f4a81bbefbdfeb284c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a970cdffe864861f4b6f0163d21a69648c777726
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238983"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704361"
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>Sistem Tarafından Sağlanan Birlikte Kullanılabilirlik Bağlamaları ile Desteklenen Web Hizmeti Protokolleri
 
@@ -30,11 +31,11 @@ Windows Communication Foundation (WCF), Web Hizmetleri belirtimleri olarak bilin
 |--------------|--------------|-----------------------------|  
 |Aktarım|HTTP 1,1|[HTTP 1,1](https://www.ietf.org/rfc/rfc2616.txt)<br /><br /> `BasicHttpBinding`, `WSHttpBinding` ve `WS2007HttpBinding` http ve https aktarımlarını kullanın.|  
 |Mesajlaşma|MTOM|[MTOM](https://www.w3.org/TR/soap12-mtom/)<br /><br /> `basicHttpBinding`, `wsHttpBinding` ve `ws2007HttpBinding` destek Ileti Iletimi iyileştirme MEKANIZMASı (MTOM). Varsayılan olarak kullanılmaz. MTOM 'yi kullanmak için `messageEncoding` özniteliğini olarak ayarlayın `"Mtom"` .<br /><br /> Örnek:<br /><br /> `<wsHttpBinding> <binding messageEncoding="Mtom"/> </wsHttpBinding>`|  
-|Meta Veriler|WSDL 1,1|[WSDL 1,1](https://www.w3.org/TR/wsdl/)<br /><br /> WCF, hizmetleri anlatmak için Web Hizmetleri Açıklama Dili (WSDL) kullanır.|  
-|Meta Veriler|WS-Policy|[WS Ilkesi](https://www.w3.org/Submission/WS-Policy/)<br /><br /> WCF, hizmet gereksinimlerini ve yeteneklerini anlatmak için WS-Policy belirtimini, etki alanına özgü onaylarla birlikte kullanır.|  
-|Meta Veriler|WS-Policy 1,5|[WS-Policy 1,5](https://www.w3.org/TR/2007/CR-ws-policy-20070605/)<br /><br /> WCF, hizmet gereksinimlerini ve yeteneklerini anlatmak için WS-Policy belirtimini, etki alanına özgü onaylarla birlikte kullanır.|  
-|Meta Veriler|WS-PolicyAttachment|[WS-PolicyAttachment](http://specs.xmlsoap.org/ws/2004/09/policy/ws-policyattachment.pdf)<br /><br /> WCF, Web Hizmetleri Açıklama Dili (WSDL) içindeki çeşitli kapsamlara ilke ifadeleri eklemek için WS-PolicyAttachment uygular.|  
-|Meta Veriler|WS-MetadataExchange|[WS-MetadataExchange](http://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)<br /><br /> WCF, XML şeması, WSDL ve WS Ilkesini almak için WS-MetadataExchange uygular.|  
+|Meta veri|WSDL 1,1|[WSDL 1,1](https://www.w3.org/TR/wsdl/)<br /><br /> WCF, hizmetleri anlatmak için Web Hizmetleri Açıklama Dili (WSDL) kullanır.|  
+|Meta veri|WS-Policy|[WS Ilkesi](https://www.w3.org/Submission/WS-Policy/)<br /><br /> WCF, hizmet gereksinimlerini ve yeteneklerini anlatmak için WS-Policy belirtimini, etki alanına özgü onaylarla birlikte kullanır.|  
+|Meta veri|WS-Policy 1,5|[WS-Policy 1,5](https://www.w3.org/TR/2007/CR-ws-policy-20070605/)<br /><br /> WCF, hizmet gereksinimlerini ve yeteneklerini anlatmak için WS-Policy belirtimini, etki alanına özgü onaylarla birlikte kullanır.|  
+|Meta veri|WS-PolicyAttachment|[WS-PolicyAttachment](http://specs.xmlsoap.org/ws/2004/09/policy/ws-policyattachment.pdf)<br /><br /> WCF, Web Hizmetleri Açıklama Dili (WSDL) içindeki çeşitli kapsamlara ilke ifadeleri eklemek için WS-PolicyAttachment uygular.|  
+|Meta veri|WS-MetadataExchange|[WS-MetadataExchange](http://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)<br /><br /> WCF, XML şeması, WSDL ve WS Ilkesini almak için WS-MetadataExchange uygular.|  
   
 ### <a name="basichttpbinding"></a>basicHttpBinding  
   
@@ -101,7 +102,7 @@ Windows Communication Foundation (WCF), Web Hizmetleri belirtimleri olarak bilin
 |Aktarım|HTTP 1,1|[HTTP 1,1](https://www.ietf.org/rfc/rfc2616.txt)|  
 |Mesajlaşma|SOAP 1,2|[Primer](https://www.w3.org/TR/soap12-part0/)<br /><br /> [Mesajlaşma çerçevesi](https://www.w3.org/TR/2007/REC-soap12-part1-20070427/)<br /><br /> [Adjuncts (HTTP bağlama dahil)](https://www.w3.org/TR/soap12-part2/)|  
 |Mesajlaşma|WS-Addressing 2005/08|[Web Hizmetleri adresleme 1,0-çekirdek](https://www.w3.org/TR/ws-addr-core/)<br /><br /> [Web Hizmetleri adresleme 1,0-SOAP](https://www.w3.org/TR/ws-addr-soap/)|  
-|Meta Veriler|WS-MetadataExchange|[WS-MetadataExchange](http://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)<br /><br /> WCF, XML şeması, WSDL ve WS Ilkesini almak için WS-MetadataExchange uygular.|  
+|Meta veri|WS-MetadataExchange|[WS-MetadataExchange](http://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)<br /><br /> WCF, XML şeması, WSDL ve WS Ilkesini almak için WS-MetadataExchange uygular.|  
   
 ### <a name="mexhttpsbinding"></a>mexHttpsBinding  
 
@@ -112,7 +113,7 @@ Windows Communication Foundation (WCF), Web Hizmetleri belirtimleri olarak bilin
 |Aktarım|HTTP 1,1|[HTTP 1,1](https://www.ietf.org/rfc/rfc2616.txt)<br /><br /> Taşıma güvenliği etkin.|  
 |Mesajlaşma|SOAP 1,2|[Primer](https://www.w3.org/TR/soap12-part0/)<br /><br /> [Mesajlaşma çerçevesi](https://www.w3.org/TR/2007/REC-soap12-part1-20070427/)<br /><br /> [Adjuncts (HTTP bağlama dahil)](https://www.w3.org/TR/soap12-part2/)|  
 |Mesajlaşma|WS-Addressing 2005/08|[Web Hizmetleri adresleme 1,0-çekirdek](https://www.w3.org/TR/ws-addr-core/)<br /><br /> [Web Hizmetleri adresleme 1,0-SOAP](https://www.w3.org/TR/ws-addr-soap/)|  
-|Meta Veriler|WS-MetadataExchange|[WS-MetadataExchange](http://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)<br /><br /> WCF, XML şeması, WSDL ve WS Ilkesini almak için WS-MetadataExchange uygular.|  
+|Meta veri|WS-MetadataExchange|[WS-MetadataExchange](http://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)<br /><br /> WCF, XML şeması, WSDL ve WS Ilkesini almak için WS-MetadataExchange uygular.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

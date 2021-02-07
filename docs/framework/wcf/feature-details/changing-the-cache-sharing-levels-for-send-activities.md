@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: gönderme etkinlikleri için önbellek paylaşımı düzeylerini değiştirme'
 title: Gönderme İşlemleri için Önbellek Paylaşımı Düzeylerini Değiştirme
 ms.date: 03/30/2017
 ms.assetid: 03926a64-753d-460e-ac06-2a4ff8e1bbf5
-ms.openlocfilehash: cbb937ac47c93307db922b28e3df0ea694a77960
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7ced6a8a18779a0c0d5914e63fde658b6d0130ac
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96262054"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99705219"
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>Gönderme İşlemleri için Önbellek Paylaşımı Düzeylerini Değiştirme
 

@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerCallback:: ClassLoadFinished yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerCallback::ClassLoadFinished Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 3dd80fbe-d62d-4d4d-acf8-5b7d0efe607e
 topic_type:
 - apiref
-ms.openlocfilehash: 3be00d278a92398ad282a071f3e313e5de0e65a6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ba0a6a643ab49a4e7a0ed10dda0dadff5741234d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95700294"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99706430"
 ---
 # <a name="icorprofilercallbackclassloadfinished-method"></a>ICorProfilerCallback::ClassLoadFinished Yöntemi
 
 Profil oluşturucuyu bir sınıfın yükleme tamamlandığını bildirir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT ClassLoadFinished(  

@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: özel filtreler'
 title: Özel Filtreler
 ms.date: 03/30/2017
 ms.assetid: 97cf247d-be0a-4057-bba9-3be5c45029d5
-ms.openlocfilehash: b5ec07c2e2a77c7de8b240d21b1eb54bf858b43b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 95a419823cf69575f951c0984e2136f9e7afca56
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96258432"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704985"
 ---
 # <a name="custom-filters"></a>Özel Filtreler
 

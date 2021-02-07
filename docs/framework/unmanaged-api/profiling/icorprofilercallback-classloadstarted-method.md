@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerCallback:: ClassLoadStarted yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerCallback::ClassLoadStarted Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 9f728de8-45c2-45a5-ac4a-45660bd36ecf
 topic_type:
 - apiref
-ms.openlocfilehash: fbdc9345c8364f33ac69da452dd91155fd5eede9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2474f8041b0858cbcb81d3f4042f1748cb99df3e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95700281"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99706480"
 ---
 # <a name="icorprofilercallbackclassloadstarted-method"></a>ICorProfilerCallback::ClassLoadStarted Yöntemi
 
 Profil oluşturucuyu bir sınıfın yüklenmekte olduğunu bildirir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT ClassLoadStarted(  

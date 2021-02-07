@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerCallback:: JITCachedFunctionSearchFinished yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerCallback::JITCachedFunctionSearchFinished Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 3c325c82-cddd-4b00-b3da-e450c36abf62
 topic_type:
 - apiref
-ms.openlocfilehash: fe07270989df897c3dbf689305784f9f0af65742
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b5025a7d33800047bb6244b82308ba2ab158cea7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95684050"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99705856"
 ---
 # <a name="icorprofilercallbackjitcachedfunctionsearchfinished-method"></a>ICorProfilerCallback::JITCachedFunctionSearchFinished Yöntemi
 
 Önceden yerel görüntü Oluşturucu (NGen.exe) kullanılarak derlenen bir işlev için bir aramanın tamamlandığını bir profil oluşturucuya bildirir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT JITCachedFunctionSearchFinished(  

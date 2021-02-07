@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: bağlama'
 title: WCF örnekleri bağlama
 ms.date: 03/30/2017
 ms.assetid: 324fa627-d012-465a-b266-95594a09dac2
-ms.openlocfilehash: 8e510c2ebfca4609821221a9bee4ef8b1ca13e52
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7a678cb3c89e370723a8965f29c526821a7a7977
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596675"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704166"
 ---
 # <a name="binding"></a>Bağlama
 

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi için: uç nokta adresleri'
 title: Uç Noktası Adresleri
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: 45f179e7f36bb9f1c4d3b12166bc2e9e8b24e9d8
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 009b34a3931bda3b16c9079316b97ea2f1680ffb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96251431"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704790"
 ---
 # <a name="endpoint-addresses"></a>Uç Noktası Adresleri
 

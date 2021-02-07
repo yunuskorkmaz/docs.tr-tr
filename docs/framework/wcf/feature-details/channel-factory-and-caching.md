@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Kanal fabrikası ve önbelleğe alma'
 title: Kanal Fabrikası ve Önbelleğe Alma
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
-ms.openlocfilehash: 5b8348a98b484ca08e3dbeba141dc49825c8c071
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6922191c2b99dea516d0e85aac9ed7bc12a67b81
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587371"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99705206"
 ---
 # <a name="channel-factory-and-caching"></a>Kanal Fabrikası ve Önbelleğe Alma
 
@@ -26,13 +27,13 @@ Bu ek yükü en aza indirmenize yardımcı olmak için WCF istemci ara sunucusu 
 > [!TIP]
 > Sınıfını doğrudan kullandığınızda kanal fabrikası oluşturma üzerinde doğrudan denetiminiz vardır <xref:System.ServiceModel.ChannelFactory%601> .
 
-[ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) Ile oluşturulan WCF istemci proxy 'leri, öğesinden türetilir <xref:System.ServiceModel.ClientBase%601> . <xref:System.ServiceModel.ClientBase%601><xref:System.ServiceModel.ClientBase%601.CacheSetting%2A>kanal fabrikası önbelleğe alma davranışını tanımlayan bir statik özelliği tanımlar. Belirli bir tür için önbellek ayarları yapılır. Örneğin, `ClientBase<ITest>.CacheSettings` aşağıda tanımlanan değerlerden birine ayarlandığında yalnızca türünün proxy/ClientBase değeri etkilenir `ITest` . <xref:System.ServiceModel.ClientBase%601>İlk proxy/ClientBase örneği oluşturulduktan hemen sonra, belirli bir için önbellek ayarı sabittir.
+[ServiceModel meta veri yardımcı aracı (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) Ile oluşturulan WCF istemci proxy 'leri, öğesinden türetilir <xref:System.ServiceModel.ClientBase%601> . <xref:System.ServiceModel.ClientBase%601><xref:System.ServiceModel.ClientBase%601.CacheSetting%2A>kanal fabrikası önbelleğe alma davranışını tanımlayan bir statik özelliği tanımlar. Belirli bir tür için önbellek ayarları yapılır. Örneğin,  `ClientBase<ITest>.CacheSettings` aşağıda tanımlanan değerlerden birine ayarlandığında yalnızca türünün proxy/ClientBase değeri etkilenir `ITest` . <xref:System.ServiceModel.ClientBase%601>İlk proxy/ClientBase örneği oluşturulduktan hemen sonra, belirli bir için önbellek ayarı sabittir.
 
 ## <a name="specifying-caching-behavior"></a>Önbelleğe alma davranışını belirtme
 
 Önbelleğe alma davranışı, <xref:System.ServiceModel.ClientBase%601.CacheSetting> özelliği aşağıdaki değerlerden birine ayarlanarak belirtilir.
 
-|Önbellek ayarı değeri|Açıklama|
+|Önbellek ayarı değeri|Description|
 |-------------------------|-----------------|
 |<xref:System.ServiceModel.CacheSetting.AlwaysOn>|<xref:System.ServiceModel.ClientBase%601>Uygulama etki alanı içindeki tüm örnekleri önbelleğe alma işlemine katılabilir. Geliştirici, önbelleğe alma işleminin olumsuz güvenlik etkilerine sahip olmadığını belirledi. "Güvenliğe duyarlı" özelliklere erişilmesi durumunda bile önbelleğe alma devre dışı bırakılır <xref:System.ServiceModel.ClientBase%601> . ' Nin "güvenlik duyarlı" özellikleri <xref:System.ServiceModel.ClientBase%601> <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> ve ' dir <xref:System.ServiceModel.ClientBase%601.Endpoint%2A> <xref:System.ServiceModel.ClientBase%601.ChannelFactory%2A> .|
 |<xref:System.ServiceModel.CacheSetting.Default>|Yalnızca <xref:System.ServiceModel.ClientBase%601> yapılandırma dosyalarında tanımlanan bitiş noktalarından oluşturulan örnekleri, uygulama etki alanı içinde önbelleğe almaya katılır. <xref:System.ServiceModel.ClientBase%601>Bu uygulama etki alanı içinde programlı olarak oluşturulan tüm örnekleri, önbelleğe alma işlemine katılmaz. Ayrıca, <xref:System.ServiceModel.ClientBase%601> "güvenliğe duyarlı" özelliklerden birine erişildiğinde bir örneği için önbelleğe alma devre dışı bırakılır.|

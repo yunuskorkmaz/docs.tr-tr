@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerCallback:: ModuleAttachedToAssembly yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerCallback::ModuleAttachedToAssembly Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: b595798a-5d40-4cac-ab4f-911c61d2c5d2
 topic_type:
 - apiref
-ms.openlocfilehash: bcf5c5c9044a30fc8259dbc54bad8f3141f0f926
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cc6a83188a8bdc4826232aa6ff6e416cbb8ae893
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733119"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99705607"
 ---
 # <a name="icorprofilercallbackmoduleattachedtoassembly-method"></a>ICorProfilerCallback::ModuleAttachedToAssembly Yöntemi
 
 Profil oluşturucuyu bir modülün üst derlemesine iliştirilmekte olduğunu bildirir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT ModuleAttachedToAssembly(  

@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: filtre seçme'
 title: Filtre Seçme
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-ms.openlocfilehash: f783b6416f2330d272c4c756a3ca0cd332f3c6e7
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7fa484775f0a08ccef28da358cd057465c49f390
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96276106"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99705284"
 ---
 # <a name="choosing-a-filter"></a>Filtre Seçme
 

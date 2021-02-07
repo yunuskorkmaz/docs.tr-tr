@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Ileti dağıtımını sınırlandırma'
 title: İleti Dağıtımını Sınırlandırma
 ms.date: 03/30/2017
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-ms.openlocfilehash: e736aba60d7d2b39d1b8eb958a8c72e6e8d55e13
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ea6123b64bf5bfae37dcd704e222e085c76e761c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555022"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704491"
 ---
 # <a name="limiting-message-distribution"></a>İleti Dağıtımını Sınırlandırma
 

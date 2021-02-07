@@ -1,4 +1,5 @@
 ---
+description: Daha fazla bilgi için bkz. IMapToken arabirimi
 title: IMapToken Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4c5c4df0-43f3-4830-a01b-8d029806f2c4
 topic_type:
 - apiref
-ms.openlocfilehash: 2ecd3a5660b0672185cd1b13f5a41261631713e4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 30f8e2cc73fcb932dae7d35dbb4e68d2b1115603
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95690648"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99706805"
 ---
 # <a name="imaptoken-interface"></a>IMapToken Arabirimi
 

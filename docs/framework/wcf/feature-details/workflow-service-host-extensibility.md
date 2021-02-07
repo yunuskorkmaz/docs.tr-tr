@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Iş akışı hizmeti konak genişletilebilirliği'
 title: İş Akışı Hizmeti Ana Bilgisayar Genişletilebilirliği
 ms.date: 03/30/2017
 ms.assetid: c0e8f7bb-cb13-49ec-852f-b85d7c23972f
-ms.openlocfilehash: 67a7830c564cabafb9441e86eb0d87164d854ee5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7454d894823a67b3621828afdd70a28cf2e7506c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96258458"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704348"
 ---
 # <a name="workflow-service-host-extensibility"></a>İş Akışı Hizmeti Ana Bilgisayar Genişletilebilirliği
 

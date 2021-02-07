@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Iş akışı denetim uç noktası'
 title: İş Akışı Denetim Uç Noktası
 ms.date: 03/30/2017
 ms.assetid: 1b883334-1590-4fbb-b0d6-65197efe0700
-ms.openlocfilehash: ecc0946833db578c524ce7e4579024bd4cd46fd0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 235d7ce3552bb3452fc3ace52249311a7605a519
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96266902"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704413"
 ---
 # <a name="workflow-control-endpoint"></a>İş Akışı Denetim Uç Noktası
 
@@ -35,7 +36,7 @@ ms.locfileid: "96266902"
 
  <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>Arabirim, zaman uyumlu ve zaman uyumsuz sürümlerle denetim işlemleri kümesi tanımlar. İşlem temelli sürümler için işlem kullanan bir bağlamanın kullanılması gerekir. Aşağıdaki tabloda desteklenen denetim işlemleri listelenmektedir.  
   
-|Denetim Işlemi|Açıklama|  
+|Denetim Işlemi|Description|  
 |-----------------------|-----------------|  
 |Durdurma|İş akışı örneğinin yürütülmesini zorla durdur.|  
 |İptal|Bir iş akışı örneğini etkin veya askıya alınmış durumdan tamamlandı durumuna geçirir.|  

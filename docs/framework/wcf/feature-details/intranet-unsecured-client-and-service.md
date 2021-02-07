@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: Intranet güvenli olmayan Istemci ve hizmet'
 title: Intranet Güvenli Olmayan Hizmet ve İstemci
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-ms.openlocfilehash: f9cd297b479a07f2330eabbaaf81605a3874ec25
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a03abc5b8eb0317c4d5d19347b3974d615570069
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257228"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704530"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>Intranet Güvenli Olmayan Hizmet ve İstemci
 
@@ -18,7 +19,7 @@ Aşağıdaki çizimde, bir WCF uygulamasına güvenli bir özel ağ hakkında bi
   
  ![Intranet güvenli olmayan istemci ve hizmet senaryosu.](./media/intranet-unsecured-client-and-service/unsecured-web-client-service.gif)  
   
-|Özellik|Açıklama|  
+|Özellik|Description|  
 |--------------------|-----------------|  
 |Güvenlik modu|Yok|  
 |Aktarım|TCP|  

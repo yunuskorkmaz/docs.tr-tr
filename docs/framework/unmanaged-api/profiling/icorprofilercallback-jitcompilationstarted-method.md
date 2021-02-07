@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerCallback:: JITCompilationStarted Yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerCallback::JITCompilationStarted Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 31782b36-d311-4518-8f45-25f65385af5b
 topic_type:
 - apiref
-ms.openlocfilehash: 7ce100a68a3e2b8963ed14bbf044fa9ba11d629f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 984c19e1601f83cc0f52145403ad85affc158050
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725527"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99705752"
 ---
 # <a name="icorprofilercallbackjitcompilationstarted-method"></a>ICorProfilerCallback::JITCompilationStarted Yöntemi
 
 Profil oluşturucuyu, Just-In-Time (JıT) derleyicisinin bir işlevi derlemek için başlatıldığını bildirir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT JITCompilationStarted(  

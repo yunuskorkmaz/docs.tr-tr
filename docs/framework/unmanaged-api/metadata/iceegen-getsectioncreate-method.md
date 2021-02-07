@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ICeeGen:: GetSectionCreate yöntemi'
 title: ICeeGen::GetSectionCreate Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 154b2460-59ce-4874-a9f2-1b3353486ac5
 topic_type:
 - apiref
-ms.openlocfilehash: 4ef3992d840f539ca07c411c2d740fa32b14edbc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2839d11c927dbf573f213d3ebaa9e6e6d8d5015d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722953"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99706870"
 ---
 # <a name="iceegengetsectioncreate-method"></a>ICeeGen::GetSectionCreate Yöntemi
 
@@ -28,7 +29,7 @@ Belirtilen ad ve bayrak değerlerini kullanarak bir kod bölümü üretir ve al�
   
  Bu yöntem kullanılmıyor ve kullanılmamalıdır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetSectionCreate (  

@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Iş akışı hizmetleri içine ve dışına akan Işlemler'
 title: İş Akışı Hizmetlerine İşlemlerin Giriş ve Çıkış Akışını Gerçekleştirme
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-ms.openlocfilehash: 8764f3c88fc978bc71ff993252b04fe58da4bbc9
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f39740c45dd70fbc06963b8e842f9a01a0393f7e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96290354"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704972"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>İş Akışı Hizmetlerine İşlemlerin Giriş ve Çıkış Akışını Gerçekleştirme
 
@@ -125,7 +126,7 @@ ms.locfileid: "96290354"
   
      ![WriteLine etkinlikleri eklendikten sonra sıra](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-writelines.jpg)  
   
-9. Etkinliğin `PrintTransactionInfo` gövdesinde bulunan ikinci etkinlikten sonra etkinliği sürükleyip bırakın <xref:System.Activities.Statements.WriteLine> **Body** <xref:System.ServiceModel.Activities.TransactedReceiveScope> .  
+9. Etkinliğin `PrintTransactionInfo` gövdesinde bulunan ikinci etkinlikten sonra etkinliği sürükleyip bırakın <xref:System.Activities.Statements.WriteLine>  <xref:System.ServiceModel.Activities.TransactedReceiveScope> .  
   
      ![PrintTransactionInfo eklendikten sonra sıra](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-printtransactioninfo.jpg )  
   

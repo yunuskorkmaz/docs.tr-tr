@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: ASP.NET AJAX için WCF Hizmetleri oluşturma'
 title: ASP.NET AJAX için WCF Hizmetleri Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 04c0402c-e617-4ba5-aedf-d17692234776
-ms.openlocfilehash: 8c82d4c61b32572fd1ad7d8f19e939273cc2280b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e4ab977db5632de0c9e825e03369506d4917709f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599314"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99705128"
 ---
 # <a name="creating-wcf-services-for-aspnet-ajax"></a>ASP.NET AJAX için WCF Hizmetleri Oluşturma
 
@@ -25,7 +26,7 @@ Visual Studio şablonlarını kullanmıyorsanız, ASP.NET AJAX uç noktası olu�
 
 - Yapılandırma kullanarak bir WCF hizmetine AJAX özellikli bir uç nokta ekleyin. Daha fazla bilgi için bkz. [nasıl yapılır: ASP.NET AJAX uç noktası eklemek Için yapılandırma kullanma](how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md).
 
-[WCF Web http programlama modeli genel bakış](wcf-web-http-programming-model-overview.md) bölümünde açıklanan Web programlama modeli, ASP.NET AJAX hizmetleriyle birlikte kullanılabilir. Daha ayrıntılı şekilde belirtmek gerekirse:
+[WCF Web http programlama modeli genel bakış](wcf-web-http-programming-model-overview.md) bölümünde açıklanan Web programlama modeli, ASP.NET AJAX hizmetleriyle birlikte kullanılabilir. Özellikle:
 
 - <xref:System.ServiceModel.Web.WebGetAttribute>Ve <xref:System.ServiceModel.Web.WebInvokeAttribute> ÖZNITELIKLERINI kullanarak http get ve http post fiilleri arasından seçim yapabilirsiniz. Doğru şekilde kullanılırsa, bu, uygulamanızın performansını önemli ölçüde iyileştirebilecek. Daha fazla bilgi için bkz. [nasıl yapılır: ASP.NET AJAX uç noktaları IÇIN http post ve http get istekleri arasında seçim yapma](http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md).
 
