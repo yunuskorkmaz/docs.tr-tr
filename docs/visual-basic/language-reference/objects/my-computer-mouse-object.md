@@ -1,15 +1,16 @@
 ---
+description: ': My. Computer. Mouse nesnesi hakkında daha fazla bilgi edinin'
 title: My.Computer.Mouse Nesnesi
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Mouse object
 ms.assetid: da473357-2120-47dd-bd42-c63d695157eb
-ms.openlocfilehash: 869352ae917d6095dce198bdaa9e9ef50fc318ea
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 27041987482f8f04bcd983f20ffa3e30c04f0e51
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867431"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99674330"
 ---
 # <a name="mycomputermouse-object"></a>My.Computer.Mouse Nesnesi
 
