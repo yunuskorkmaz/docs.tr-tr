@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ICorProfilerInfo2:: Getclassıdınfo2 yöntemi'
 title: ICorProfilerInfo2::GetClassIDInfo2 Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 0141d582-d066-4d49-8d1f-ae82129a1960
 topic_type:
 - apiref
-ms.openlocfilehash: 4b018a329396e0be684c999a33d4ef7c3518cb1c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 44ef38b5f50da0f0aea045bd755614e00dae8c22
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95703913"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760530"
 ---
-# <a name="icorprofilerinfo2getclassidinfo2-method"></a><span data-ttu-id="53878-102">ICorProfilerInfo2::GetClassIDInfo2 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="53878-102">ICorProfilerInfo2::GetClassIDInfo2 Method</span></span>
+# <a name="icorprofilerinfo2getclassidinfo2-method"></a><span data-ttu-id="37efd-103">ICorProfilerInfo2::GetClassIDInfo2 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="37efd-103">ICorProfilerInfo2::GetClassIDInfo2 Method</span></span>
 
-<span data-ttu-id="53878-103">Belirtilen sınıfın açık genel tanımının, `ClassID` üst sınıfının ve varsa `ClassID` sınıfının her tür bağımsız değişkeni için üst modülü ve meta veri belirtecini alır.</span><span class="sxs-lookup"><span data-stu-id="53878-103">Gets the parent module and metadata token for the open generic definition of the specified class, the `ClassID` of its parent class, and the `ClassID` for each type argument, if present, of the class.</span></span>  
+<span data-ttu-id="37efd-104">Belirtilen sınıfın açık genel tanımının, `ClassID` üst sınıfının ve varsa `ClassID` sınıfının her tür bağımsız değişkeni için üst modülü ve meta veri belirtecini alır.</span><span class="sxs-lookup"><span data-stu-id="37efd-104">Gets the parent module and metadata token for the open generic definition of the specified class, the `ClassID` of its parent class, and the `ClassID` for each type argument, if present, of the class.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="53878-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="53878-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="37efd-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="37efd-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetClassIDInfo2(  
@@ -39,52 +40,52 @@ HRESULT GetClassIDInfo2(
     [out] ClassID typeArgs[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="53878-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="53878-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="37efd-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="37efd-106">Parameters</span></span>  
 
  `classId`  
- <span data-ttu-id="53878-106">'ndaki Bilgilerin alınacağı sınıfın KIMLIĞI.</span><span class="sxs-lookup"><span data-stu-id="53878-106">[in] The ID of the class for which information will be retrieved.</span></span>  
+ <span data-ttu-id="37efd-107">'ndaki Bilgilerin alınacağı sınıfın KIMLIĞI.</span><span class="sxs-lookup"><span data-stu-id="37efd-107">[in] The ID of the class for which information will be retrieved.</span></span>  
   
  `pModuleId`  
- <span data-ttu-id="53878-107">dışı Belirtilen sınıfın açık genel tanımının üst modülünün KIMLIĞINE yönelik işaretçi.</span><span class="sxs-lookup"><span data-stu-id="53878-107">[out] Pointer to the ID of the parent module for the open generic definition of the specified class.</span></span>  
+ <span data-ttu-id="37efd-108">dışı Belirtilen sınıfın açık genel tanımının üst modülünün KIMLIĞINE yönelik işaretçi.</span><span class="sxs-lookup"><span data-stu-id="37efd-108">[out] Pointer to the ID of the parent module for the open generic definition of the specified class.</span></span>  
   
  `pTypeDefToken`  
- <span data-ttu-id="53878-108">dışı Belirtilen sınıfın açık genel tanımı için meta veri belirtecinin işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="53878-108">[out] Pointer to the metadata token for the open generic definition of the specified class.</span></span>  
+ <span data-ttu-id="37efd-109">dışı Belirtilen sınıfın açık genel tanımı için meta veri belirtecinin işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="37efd-109">[out] Pointer to the metadata token for the open generic definition of the specified class.</span></span>  
   
  `pParentClassId`  
- <span data-ttu-id="53878-109">dışı Üst sınıfın KIMLIĞINE yönelik işaretçi.</span><span class="sxs-lookup"><span data-stu-id="53878-109">[out] Pointer to the ID of the parent class.</span></span>  
+ <span data-ttu-id="37efd-110">dışı Üst sınıfın KIMLIĞINE yönelik işaretçi.</span><span class="sxs-lookup"><span data-stu-id="37efd-110">[out] Pointer to the ID of the parent class.</span></span>  
   
  `cNumTypeArgs`  
- <span data-ttu-id="53878-110">'ndaki `typeArgs` Dizinin boyutu.</span><span class="sxs-lookup"><span data-stu-id="53878-110">[in] The size of the `typeArgs` array.</span></span>  
+ <span data-ttu-id="37efd-111">'ndaki `typeArgs` Dizinin boyutu.</span><span class="sxs-lookup"><span data-stu-id="37efd-111">[in] The size of the `typeArgs` array.</span></span>  
   
  `pcNumTypeArgs`  
- <span data-ttu-id="53878-111">dışı Kullanılabilir öğelerin toplam sayısına yönelik işaretçi.</span><span class="sxs-lookup"><span data-stu-id="53878-111">[out] Pointer to the total number of available elements.</span></span>  
+ <span data-ttu-id="37efd-112">dışı Kullanılabilir öğelerin toplam sayısına yönelik işaretçi.</span><span class="sxs-lookup"><span data-stu-id="37efd-112">[out] Pointer to the total number of available elements.</span></span>  
   
  `typeArgs`  
- <span data-ttu-id="53878-112">dışı `ClassID` Her biri sınıfının bir tür bağımsız DEĞIŞKENININ kimliğini temsil eden bir değer dizisi.</span><span class="sxs-lookup"><span data-stu-id="53878-112">[out] An array of `ClassID` values, each of which represents the ID of a type argument of the class.</span></span> <span data-ttu-id="53878-113">Yöntemi döndüğünde, `typeArgs` kullanılabilir değerlerin bazılarını veya tümünü içerecektir `ClassID` .</span><span class="sxs-lookup"><span data-stu-id="53878-113">When the method returns, `typeArgs` will contain some or all the available `ClassID` values.</span></span>  
+ <span data-ttu-id="37efd-113">dışı `ClassID` Her biri sınıfının bir tür bağımsız DEĞIŞKENININ kimliğini temsil eden bir değer dizisi.</span><span class="sxs-lookup"><span data-stu-id="37efd-113">[out] An array of `ClassID` values, each of which represents the ID of a type argument of the class.</span></span> <span data-ttu-id="37efd-114">Yöntemi döndüğünde, `typeArgs` kullanılabilir değerlerin bazılarını veya tümünü içerecektir `ClassID` .</span><span class="sxs-lookup"><span data-stu-id="37efd-114">When the method returns, `typeArgs` will contain some or all the available `ClassID` values.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="53878-114">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="53878-114">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="37efd-115">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="37efd-115">Remarks</span></span>  
 
- <span data-ttu-id="53878-115">`GetClassIDInfo2`Yöntemi [ICorProfilerInfo:: GetClassIDInfo](icorprofilerinfo-getclassidinfo-method.md) yöntemine benzer, ancak `GetClassIDInfo2` genel bir tür hakkında ek bilgiler edinir.</span><span class="sxs-lookup"><span data-stu-id="53878-115">The `GetClassIDInfo2` method is similar to the [ICorProfilerInfo::GetClassIDInfo](icorprofilerinfo-getclassidinfo-method.md) method, but `GetClassIDInfo2` obtains additional information about a generic type.</span></span>  
+ <span data-ttu-id="37efd-116">`GetClassIDInfo2`Yöntemi [ICorProfilerInfo:: GetClassIDInfo](icorprofilerinfo-getclassidinfo-method.md) yöntemine benzer, ancak `GetClassIDInfo2` genel bir tür hakkında ek bilgiler edinir.</span><span class="sxs-lookup"><span data-stu-id="37efd-116">The `GetClassIDInfo2` method is similar to the [ICorProfilerInfo::GetClassIDInfo](icorprofilerinfo-getclassidinfo-method.md) method, but `GetClassIDInfo2` obtains additional information about a generic type.</span></span>  
   
- <span data-ttu-id="53878-116">Profil Oluşturucu kodu, belirli bir modül için [meta](../metadata/index.md) veri arabirimi elde etmek üzere [ICorProfilerInfo:: GetModuleMetaData öğesini](icorprofilerinfo-getmodulemetadata-method.md) çağırabilir.</span><span class="sxs-lookup"><span data-stu-id="53878-116">The profiler code can call [ICorProfilerInfo::GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) to obtain a [metadata](../metadata/index.md) interface for a given module.</span></span> <span data-ttu-id="53878-117">Tarafından başvurulan konuma döndürülen meta veri belirteci, `pTypeDefToken` daha sonra sınıfının meta verilerine erişmek için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="53878-117">The metadata token that is returned to the location referenced by `pTypeDefToken` can then be used to access the metadata for the class.</span></span>  
+ <span data-ttu-id="37efd-117">Profil Oluşturucu kodu, belirli bir modül için [meta](../metadata/index.md) veri arabirimi elde etmek üzere [ICorProfilerInfo:: GetModuleMetaData öğesini](icorprofilerinfo-getmodulemetadata-method.md) çağırabilir.</span><span class="sxs-lookup"><span data-stu-id="37efd-117">The profiler code can call [ICorProfilerInfo::GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) to obtain a [metadata](../metadata/index.md) interface for a given module.</span></span> <span data-ttu-id="37efd-118">Tarafından başvurulan konuma döndürülen meta veri belirteci, `pTypeDefToken` daha sonra sınıfının meta verilerine erişmek için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="37efd-118">The metadata token that is returned to the location referenced by `pTypeDefToken` can then be used to access the metadata for the class.</span></span>  
   
- <span data-ttu-id="53878-118">`GetClassIDInfo2`Geri döndüğünde, `typeArgs` arabelleğin tüm değerleri içerecek kadar büyük olduğunu doğrulamanız gerekir `ClassID` .</span><span class="sxs-lookup"><span data-stu-id="53878-118">After `GetClassIDInfo2` returns, you must verify that the `typeArgs` buffer was large enough to contain all the `ClassID` values.</span></span> <span data-ttu-id="53878-119">Bunu yapmak için, işaret eden değeri `pcNumTypeArgs` parametresinin değeriyle karşılaştırın `cNumTypeArgs` .</span><span class="sxs-lookup"><span data-stu-id="53878-119">To do this, compare the value that `pcNumTypeArgs` points to with the value of the `cNumTypeArgs` parameter.</span></span> <span data-ttu-id="53878-120">Daha `pcNumTypeArgs` büyük bir değere işaret ediyorsa `cNumTypeArgs` , daha büyük bir `typeArgs` arabellek ayırır, `cNumTypeArgs` Yeni, daha büyük boyutla güncelleştirin ve `GetClassIDInfo2` yeniden çağırın.</span><span class="sxs-lookup"><span data-stu-id="53878-120">If `pcNumTypeArgs` points to a value that is larger than `cNumTypeArgs`, allocate a larger `typeArgs` buffer, update `cNumTypeArgs` with the new, larger size, and call `GetClassIDInfo2` again.</span></span>  
+ <span data-ttu-id="37efd-119">`GetClassIDInfo2`Geri döndüğünde, `typeArgs` arabelleğin tüm değerleri içerecek kadar büyük olduğunu doğrulamanız gerekir `ClassID` .</span><span class="sxs-lookup"><span data-stu-id="37efd-119">After `GetClassIDInfo2` returns, you must verify that the `typeArgs` buffer was large enough to contain all the `ClassID` values.</span></span> <span data-ttu-id="37efd-120">Bunu yapmak için, işaret eden değeri `pcNumTypeArgs` parametresinin değeriyle karşılaştırın `cNumTypeArgs` .</span><span class="sxs-lookup"><span data-stu-id="37efd-120">To do this, compare the value that `pcNumTypeArgs` points to with the value of the `cNumTypeArgs` parameter.</span></span> <span data-ttu-id="37efd-121">Daha `pcNumTypeArgs` büyük bir değere işaret ediyorsa `cNumTypeArgs` , daha büyük bir `typeArgs` arabellek ayırır, `cNumTypeArgs` Yeni, daha büyük boyutla güncelleştirin ve `GetClassIDInfo2` yeniden çağırın.</span><span class="sxs-lookup"><span data-stu-id="37efd-121">If `pcNumTypeArgs` points to a value that is larger than `cNumTypeArgs`, allocate a larger `typeArgs` buffer, update `cNumTypeArgs` with the new, larger size, and call `GetClassIDInfo2` again.</span></span>  
   
- <span data-ttu-id="53878-121">Alternatif olarak, `GetClassIDInfo2` `typeArgs` doğru arabellek boyutunu elde etmek için ilk olarak sıfır uzunluklu bir arabellek ile çağrı yapabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="53878-121">Alternatively, you can first call `GetClassIDInfo2` with a zero-length `typeArgs` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="53878-122">Daha sonra `typeArgs` arabellek boyutunu içinde döndürülen değere ayarlayabilir `pcNumTypeArgs` ve `GetClassIDInfo2` yeniden çağırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="53878-122">You can then set the `typeArgs` buffer size to the value returned in `pcNumTypeArgs` and call `GetClassIDInfo2` again.</span></span>  
+ <span data-ttu-id="37efd-122">Alternatif olarak, `GetClassIDInfo2` `typeArgs` doğru arabellek boyutunu elde etmek için ilk olarak sıfır uzunluklu bir arabellek ile çağrı yapabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="37efd-122">Alternatively, you can first call `GetClassIDInfo2` with a zero-length `typeArgs` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="37efd-123">Daha sonra `typeArgs` arabellek boyutunu içinde döndürülen değere ayarlayabilir `pcNumTypeArgs` ve `GetClassIDInfo2` yeniden çağırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="37efd-123">You can then set the `typeArgs` buffer size to the value returned in `pcNumTypeArgs` and call `GetClassIDInfo2` again.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="53878-123">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="53878-123">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="37efd-124">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="37efd-124">Requirements</span></span>  
 
- <span data-ttu-id="53878-124">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="53878-124">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="37efd-125">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="37efd-125">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="53878-125">**Üst bilgi:** CorProf. IDL, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="53878-125">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="37efd-126">**Üst bilgi:** CorProf. IDL, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="37efd-126">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="53878-126">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="53878-126">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="37efd-127">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="37efd-127">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="53878-127">**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="53878-127">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="37efd-128">**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="37efd-128">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="53878-128">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="53878-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="37efd-129">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="37efd-129">See also</span></span>
 
-- [<span data-ttu-id="53878-129">ICorProfilerInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="53878-129">ICorProfilerInfo Interface</span></span>](icorprofilerinfo-interface.md)
-- [<span data-ttu-id="53878-130">ICorProfilerInfo2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="53878-130">ICorProfilerInfo2 Interface</span></span>](icorprofilerinfo2-interface.md)
-- [<span data-ttu-id="53878-131">Profil Oluşturma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="53878-131">Profiling Interfaces</span></span>](profiling-interfaces.md)
-- [<span data-ttu-id="53878-132">Profil Oluşturma</span><span class="sxs-lookup"><span data-stu-id="53878-132">Profiling</span></span>](index.md)
+- [<span data-ttu-id="37efd-130">ICorProfilerInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="37efd-130">ICorProfilerInfo Interface</span></span>](icorprofilerinfo-interface.md)
+- [<span data-ttu-id="37efd-131">ICorProfilerInfo2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="37efd-131">ICorProfilerInfo2 Interface</span></span>](icorprofilerinfo2-interface.md)
+- [<span data-ttu-id="37efd-132">Profil Oluşturma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="37efd-132">Profiling Interfaces</span></span>](profiling-interfaces.md)
+- [<span data-ttu-id="37efd-133">Profil Oluşturma</span><span class="sxs-lookup"><span data-stu-id="37efd-133">Profiling</span></span>](index.md)
