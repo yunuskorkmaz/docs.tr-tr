@@ -1,18 +1,19 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <claimType>'
 title: <claimType>
 ms.date: 03/30/2017
 ms.assetid: d17b5831-9a2c-45c4-b0d1-68f48e72e861
 author: BrucePerlerMS
-ms.openlocfilehash: 1b5427210142c70c31c5f736c9b5e281dca53f33
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 55fd32edc7fb810742c3cf678b434675aebba00e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91150875"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99664229"
 ---
 # \<claimType>
 
-<span data-ttu-id="10753-101">Gelen güvenlik belirteçleri için tek bir isteğe bağlı veya gerekli talebi belirtir.</span><span class="sxs-lookup"><span data-stu-id="10753-101">Specifies a single optional or required claim for incoming security tokens.</span></span>  
+<span data-ttu-id="54890-102">Gelen güvenlik belirteçleri için tek bir isteğe bağlı veya gerekli talebi belirtir.</span><span class="sxs-lookup"><span data-stu-id="54890-102">Specifies a single optional or required claim for incoming security tokens.</span></span>  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
@@ -20,7 +21,7 @@ ms.locfileid: "91150875"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<claimTypeRequired>**](claimtyperequired.md)\  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<claimType>**  
   
-## <a name="syntax"></a><span data-ttu-id="10753-102">Syntax</span><span class="sxs-lookup"><span data-stu-id="10753-102">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="54890-103">Syntax</span><span class="sxs-lookup"><span data-stu-id="54890-103">Syntax</span></span>  
   
 ```xml  
 <system.identityModel>  
@@ -33,23 +34,23 @@ ms.locfileid: "91150875"
 </system.identityModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="10753-103">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="10753-103">Attributes and Elements</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="54890-104">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="54890-104">Attributes and Elements</span></span>  
 
- <span data-ttu-id="10753-104">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="10753-104">The following sections describe attributes, child elements, and parent elements.</span></span>  
+ <span data-ttu-id="54890-105">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="54890-105">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="10753-105">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="10753-105">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="54890-106">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="54890-106">Attributes</span></span>  
   
-|<span data-ttu-id="10753-106">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="10753-106">Attribute</span></span>|<span data-ttu-id="10753-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="10753-107">Description</span></span>|  
+|<span data-ttu-id="54890-107">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="54890-107">Attribute</span></span>|<span data-ttu-id="54890-108">Açıklama</span><span class="sxs-lookup"><span data-stu-id="54890-108">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="10753-108">tür</span><span class="sxs-lookup"><span data-stu-id="10753-108">type</span></span>|<span data-ttu-id="10753-109">Talep türü.</span><span class="sxs-lookup"><span data-stu-id="10753-109">The claim type.</span></span> <span data-ttu-id="10753-110">Genellikle bir URI.</span><span class="sxs-lookup"><span data-stu-id="10753-110">Typically a URI.</span></span> <span data-ttu-id="10753-111">Gereklidir.</span><span class="sxs-lookup"><span data-stu-id="10753-111">Required.</span></span>|  
-|<span data-ttu-id="10753-112">isteğe bağlı</span><span class="sxs-lookup"><span data-stu-id="10753-112">optional</span></span>|<span data-ttu-id="10753-113">Talep türünün isteğe bağlı olup olmadığını belirten bir Boolean değer.</span><span class="sxs-lookup"><span data-stu-id="10753-113">A boolean value that specifies whether the claim type is optional.</span></span> <span data-ttu-id="10753-114">İsteğe bağlı.</span><span class="sxs-lookup"><span data-stu-id="10753-114">Optional.</span></span>|  
+|<span data-ttu-id="54890-109">tür</span><span class="sxs-lookup"><span data-stu-id="54890-109">type</span></span>|<span data-ttu-id="54890-110">Talep türü.</span><span class="sxs-lookup"><span data-stu-id="54890-110">The claim type.</span></span> <span data-ttu-id="54890-111">Genellikle bir URI.</span><span class="sxs-lookup"><span data-stu-id="54890-111">Typically a URI.</span></span> <span data-ttu-id="54890-112">Gereklidir.</span><span class="sxs-lookup"><span data-stu-id="54890-112">Required.</span></span>|  
+|<span data-ttu-id="54890-113">isteğe bağlı</span><span class="sxs-lookup"><span data-stu-id="54890-113">optional</span></span>|<span data-ttu-id="54890-114">Talep türünün isteğe bağlı olup olmadığını belirten bir Boolean değer.</span><span class="sxs-lookup"><span data-stu-id="54890-114">A boolean value that specifies whether the claim type is optional.</span></span> <span data-ttu-id="54890-115">İsteğe bağlı.</span><span class="sxs-lookup"><span data-stu-id="54890-115">Optional.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="10753-115">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="10753-115">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="54890-116">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="54890-116">Child Elements</span></span>  
 
- <span data-ttu-id="10753-116">Hiçbiri</span><span class="sxs-lookup"><span data-stu-id="10753-116">None</span></span>  
+ <span data-ttu-id="54890-117">Yok</span><span class="sxs-lookup"><span data-stu-id="54890-117">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="10753-117">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="10753-117">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="54890-118">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="54890-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="10753-118">Öğe</span><span class="sxs-lookup"><span data-stu-id="10753-118">Element</span></span>|<span data-ttu-id="10753-119">Açıklama</span><span class="sxs-lookup"><span data-stu-id="10753-119">Description</span></span>|  
+|<span data-ttu-id="54890-119">Öğe</span><span class="sxs-lookup"><span data-stu-id="54890-119">Element</span></span>|<span data-ttu-id="54890-120">Açıklama</span><span class="sxs-lookup"><span data-stu-id="54890-120">Description</span></span>|  
 |-------------|-----------------|  
-|[\<claimTypeRequired>](claimtyperequired.md)|<span data-ttu-id="10753-120">Gelen güvenlik belirteçleri için gerekli talepler kümesini belirtir.</span><span class="sxs-lookup"><span data-stu-id="10753-120">Specifies the set of required claims for incoming security tokens.</span></span>|
+|[\<claimTypeRequired>](claimtyperequired.md)|<span data-ttu-id="54890-121">Gelen güvenlik belirteçleri için gerekli talepler kümesini belirtir.</span><span class="sxs-lookup"><span data-stu-id="54890-121">Specifies the set of required claims for incoming security tokens.</span></span>|
