@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: .NET Native Windows mağazası uygulamanızı geçirme'
 title: Windows Mağazası Uygulamanızı .NET Yerel'e Taşıma
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: ee17e50590a80d8973197b46910d5e22296c265f
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 39f8427474b37c42d856366bf4e4d677ba77e7f1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440900"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738721"
 ---
 # <a name="migrate-your-windows-store-app-to-net-native"></a>Windows mağazası uygulamanızı .NET Native geçirin
 

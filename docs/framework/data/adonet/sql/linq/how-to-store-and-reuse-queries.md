@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: nasıl yapılır: sorguları depolama ve yeniden kullanma'
 title: 'Nasıl yapılır: Sorguları Depolama ve Yeniden Kullanma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a012bd79-1809-45e3-adea-0229532396cc
-ms.openlocfilehash: aae1cf3faf2ecb3d8e9511390cdaa1e004905bea
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a9c467cc9b2e39e6bd7616c6439d02c67f43d7c2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197098"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738825"
 ---
 # <a name="how-to-store-and-reuse-queries"></a>Nasıl yapılır: Sorguları Depolama ve Yeniden Kullanma
 
@@ -31,7 +32,7 @@ Yapısal olarak benzer sorguları birçok kez yürüten bir uygulamanız varsa, 
   
 ## <a name="example"></a>Örnek  
 
- Şu anda, türün genel bir bağımsız değişken olarak sağlanacak bir adı olmadığından, *anonim bir tür*döndüren sorgularda (statik değişkenler içinde) depolama alanı oluşturamazsınız. Aşağıdaki örnek, sonucu temsil eden bir tür oluşturarak ve sonra genel bir bağımsız değişken olarak kullanarak soruna geçici bir çözüm nasıl kullanabileceğinizi gösterir.  
+ Şu anda, türün genel bir bağımsız değişken olarak sağlanacak bir adı olmadığından, *anonim bir tür* döndüren sorgularda (statik değişkenler içinde) depolama alanı oluşturamazsınız. Aşağıdaki örnek, sonucu temsil eden bir tür oluşturarak ve sonra genel bir bağımsız değişken olarak kullanarak soruna geçici bir çözüm nasıl kullanabileceğinizi gösterir.  
   
  [!code-csharp[DLinqQuerying#8](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQuerying/cs/Program.cs#8)]
  [!code-vb[DLinqQuerying#8](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQuerying/vb/Module1.vb#8)]  

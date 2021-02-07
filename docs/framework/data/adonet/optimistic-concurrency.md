@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: Iyimser eşzamanlılık'
 title: İyimser Eşzamanlılık
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: 681044a9d905f052516ba240e25ffff84928e58e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1034720b2c57b863b87eef440424a7e2f4c2c6c9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166644"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739150"
 ---
 # <a name="optimistic-concurrency"></a>İyimser Eşzamanlılık
 
@@ -73,7 +74,7 @@ ms.locfileid: "91166644"
 SELECT Col1, Col2, Col3 FROM Table1  
 ```  
   
- **Table1**içinde bir satırı güncelleştirirken iyimser eşzamanlılık ihlalini sınamak IÇIN aşağıdaki güncelleştirme ifadesini verirsiniz:  
+ **Table1** içinde bir satırı güncelleştirirken iyimser eşzamanlılık ihlalini sınamak IÇIN aşağıdaki güncelleştirme ifadesini verirsiniz:  
   
 ```sql
 UPDATE Table1 Set Col1 = @NewCol1Value,  
@@ -99,9 +100,9 @@ UPDATE Table1 Set Col1 = @NewVal1
   
 ### <a name="the-dataadapterrowupdated-event"></a>DataAdapter. RowUpdated olayı  
 
- Nesnenin **RowUpdated** olayı, <xref:System.Data.Common.DataAdapter> daha önce açıklanan tekniklerle birlikte kullanılarak iyimser eşzamanlılık ihlallerinin uygulamanıza yönelik bildirim sağlar. **RowUpdated** , bir **veri kümesinden** **değiştirilen** bir satırı güncelleştirme denemesinden sonra oluşur. Bu, bir özel durum oluştuğunda işleme, özel hata bilgileri ekleme, yeniden deneme mantığı ekleme vb. gibi özel işleme kodu eklemenizi sağlar. <xref:System.Data.Common.RowUpdatedEventArgs>Nesnesi, bir tablodaki değiştirilmiş bir satır için belirli bir Update komutundan etkilenen satır sayısını içeren bir **recordsamısson** özelliği döndürür. Güncelleştirme komutunu iyimser eşzamanlılık için test edecek şekilde ayarlayarak, **Recordsaetkilenmeyen** özelliği, bir sonuç olarak bir iyimser eşzamanlılık ihlali meydana geldiğinde 0 değerini döndürür, çünkü hiçbir kayıt güncelleştirilmemiş. Bu durumda, bir özel durum oluşturulur. **RowUpdated** olayı, bu oluşumu idare etmenizi ve **UpdateStatus. SkipCurrentRow**gibi uygun bir **RowUpdatedEventArgs. Status** değeri ayarlayarak özel durumu önlemenize olanak sağlar. **RowUpdated** olayı hakkında daha fazla bilgi için bkz. [DataAdapter olaylarını işleme](handling-dataadapter-events.md).  
+ Nesnenin **RowUpdated** olayı, <xref:System.Data.Common.DataAdapter> daha önce açıklanan tekniklerle birlikte kullanılarak iyimser eşzamanlılık ihlallerinin uygulamanıza yönelik bildirim sağlar. **RowUpdated** , bir **veri kümesinden** **değiştirilen** bir satırı güncelleştirme denemesinden sonra oluşur. Bu, bir özel durum oluştuğunda işleme, özel hata bilgileri ekleme, yeniden deneme mantığı ekleme vb. gibi özel işleme kodu eklemenizi sağlar. <xref:System.Data.Common.RowUpdatedEventArgs>Nesnesi, bir tablodaki değiştirilmiş bir satır için belirli bir Update komutundan etkilenen satır sayısını içeren bir **recordsamısson** özelliği döndürür. Güncelleştirme komutunu iyimser eşzamanlılık için test edecek şekilde ayarlayarak, **Recordsaetkilenmeyen** özelliği, bir sonuç olarak bir iyimser eşzamanlılık ihlali meydana geldiğinde 0 değerini döndürür, çünkü hiçbir kayıt güncelleştirilmemiş. Bu durumda, bir özel durum oluşturulur. **RowUpdated** olayı, bu oluşumu idare etmenizi ve **UpdateStatus. SkipCurrentRow** gibi uygun bir **RowUpdatedEventArgs. Status** değeri ayarlayarak özel durumu önlemenize olanak sağlar. **RowUpdated** olayı hakkında daha fazla bilgi için bkz. [DataAdapter olaylarını işleme](handling-dataadapter-events.md).  
   
- İsteğe bağlı olarak, **Güncelleştir**' i çağırmadan önce **DataAdapter. devam updateıse** 'yi **true**olarak ayarlayabilir ve **güncelleştirme** tamamlandığında belirli bir satırın **RowError** özelliğinde depolanan hata bilgilerine yanıt verebilirsiniz. Daha fazla bilgi için bkz. [satır hata bilgileri](./dataset-datatable-dataview/row-error-information.md).  
+ İsteğe bağlı olarak, **Güncelleştir**' i çağırmadan önce **DataAdapter. devam updateıse** 'yi **true** olarak ayarlayabilir ve **güncelleştirme** tamamlandığında belirli bir satırın **RowError** özelliğinde depolanan hata bilgilerine yanıt verebilirsiniz. Daha fazla bilgi için bkz. [satır hata bilgileri](./dataset-datatable-dataview/row-error-information.md).  
   
 ## <a name="optimistic-concurrency-example"></a>İyimser eşzamanlılık örneği  
 

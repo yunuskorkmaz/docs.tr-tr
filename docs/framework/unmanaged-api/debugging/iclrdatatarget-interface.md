@@ -1,4 +1,5 @@
 ---
+description: 'Bu konuda daha fazla bilgi edinin: ICLRDataTarget arabirimi'
 title: ICLRDataTarget Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e2f05155-9bef-4e11-b703-7f05890665ca
 topic_type:
 - apiref
-ms.openlocfilehash: 0d3e6a95d8fd71a67b97923dac53c1f615dfe666
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f24760f638705a1bde7e055069cbc3a18a0896fd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95703427"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738227"
 ---
 # <a name="iclrdatatarget-interface"></a>ICLRDataTarget Arabirimi
 

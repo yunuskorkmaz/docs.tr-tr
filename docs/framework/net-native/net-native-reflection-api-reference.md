@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: .NET Native Reflection API başvurusu'
 title: .NET Native Yansıtma API'si Başvurusu
 ms.date: 03/30/2017
 ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
-ms.openlocfilehash: 4cded310397ffa4dea057899b6f008146d35a03b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 44786812b5bf8c7bd470a588730b7b03ee91f00c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96250885"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738526"
 ---
 # <a name="net-native-reflection-api-reference"></a>.NET Native Yansıtma API'si Başvurusu
 

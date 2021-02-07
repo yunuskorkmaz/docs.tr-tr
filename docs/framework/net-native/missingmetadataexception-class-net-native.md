@@ -1,13 +1,14 @@
 ---
+description: ': MissingMetadataException sınıfı (.NET Native) hakkında daha fazla bilgi'
 title: MissingMetadataException Sınıfı (.NET Yerel)
 ms.date: 03/30/2017
 ms.assetid: 408f25c4-6d60-475c-92b1-7b52b777c6db
-ms.openlocfilehash: d73d66529bc30358c946eb0a7072f0cb8910b19a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b5d93a8dc098a542791df303450d64e4abcc5de9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128285"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738656"
 ---
 # <a name="missingmetadataexception-class-net-native"></a>MissingMetadataException Sınıfı (.NET Yerel)
 
@@ -20,7 +21,7 @@ Mevcut olmayan meta verileri almak için yansıma kullanıldığında oluşturul
 > [!IMPORTANT]
 > `MissingMetadataException`Sınıfı yalnızca .NET Native araç zinciri tarafından dahili kullanıma yöneliktir. Üçüncü taraf kodda kullanılmak üzere değildir veya uygulama kodunuzda özel durumu işlemelisiniz. Bunun yerine, [çalışma zamanı yönergeleri dosyanıza](runtime-directives-rd-xml-configuration-file-reference.md)girdiler ekleyerek özel durumu ortadan kaldırabilirsiniz. Daha fazla bilgi için, açıklamalar bölümüne bakın.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 [!code-csharp[ProjectN#4](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missingmetadataexception_syntax1.cs#4)]
 
@@ -30,7 +31,7 @@ Mevcut olmayan meta verileri almak için yansıma kullanıldığında oluşturul
 
 ## <a name="constructors"></a>Oluşturucular
 
-|Oluşturucu|Açıklama|
+|Oluşturucu|Description|
 |-----------------|-----------------|
 |`public MissingMetadataException()`|`MissingMetadataException`Hatayı açıklayan sistem tarafından sağlanan bir ileti kullanarak sınıfının yeni bir örneğini başlatır.<br /><br /> Bu Oluşturucu yalnızca .NET Native araç zinciri tarafından iç kullanım içindir.|
 |`public MissingMetadataException(String message)`|Belirtilen bir hata iletisiyle sınıfın yeni bir örneğini başlatır `MissingMetadataException` .<br /><br /> Bu Oluşturucu yalnızca .NET Native araç zinciri tarafından iç kullanım içindir.|
@@ -62,9 +63,9 @@ Mevcut olmayan meta verileri almak için yansıma kullanıldığında oluşturul
 |`protected Object MemberwiseClone()`|Geçerli nesnenin basit bir kopyasını oluşturur. (Öğesinden devralındı <xref:System.Object> .)|
 |`public string ToString()`|Geçerli özel durumun dize gösterimini döndürür. (Öğesinden devralındı <xref:System.Exception?displayProperty=nameWithType> .)|
 
-## <a name="events"></a>Olaylar
+## <a name="events"></a>Ekinlikler
 
-|Olay|Açıklama|
+|Olay|Description|
 |-----------|-----------------|
 |`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|Özel durum hakkında serileştirilmiş veri içeren bir özel durum nesnesi oluşturmak için bir özel durum serileştirildiğinde gerçekleşir. (Öğesinden devralındı <xref:System.Exception?displayProperty=nameWithType> .)|
 
@@ -72,7 +73,7 @@ Mevcut olmayan meta verileri almak için yansıma kullanıldığında oluşturul
 
 `MissingMetadataException`Özel durum, bir derlemede kullanılamayan meta verilere erişmek için yansıma kullanıldığında oluşturulur.
 
-Çalışma zamanında bir uygulama için kullanılabilen meta veriler, çalışma zamanı yönergeleri (XML yapılandırma) dosyası, \* . RD. xml tarafından tanımlanır. Uygulamanızın bu özel durumu oluşturmasını engellemek için \* . RD. xml ' i, çalışma zamanında bulunması gereken meta verileri tanımlamak için değiştirmelisiniz. . RD. xml dosyasının biçimi hakkında daha fazla bilgi için \* bkz. [çalışma zamanı yönergeleri (RD. xml) yapılandırma dosyası başvurusu](runtime-directives-rd-xml-configuration-file-reference.md).
+Çalışma zamanında bir uygulama için kullanılabilen meta veriler,.rd.xml çalışma zamanı yönergeleri (XML yapılandırma) dosyası tarafından tanımlanır \* . Uygulamanızın bu özel durumu oluşturmasını engellemek için, \* çalışma zamanında bulunması gereken meta verileri tanımlamak üzere.rd.xml değiştirmelisiniz. .rd.xml dosyasının biçimi hakkında daha fazla bilgi için \* bkz. [Runtime yönergeleri (rd.xml) yapılandırma dosyası başvurusu](runtime-directives-rd-xml-configuration-file-reference.md).
 
 > [!IMPORTANT]
 > Bu özel durum, uygulamanız için gereken meta verilerin çalışma zamanında kullanılabilir olmadığını gösterdiği için, bu özel durumu bir blokta tutamamalısınız `try` / `catch` . Bunun yerine, özel durumun nedenini tanılamanıza ve bir çalışma zamanı yönergeleri dosyası kullanarak ortadan kaldırmanız gerekir. Özel durumu ortadan kaldıran çalışma zamanı yönergeleri dosyanıza ekleyebileceğiniz girişi almak için iki sorun gidericinin birini kullanabilirsiniz:

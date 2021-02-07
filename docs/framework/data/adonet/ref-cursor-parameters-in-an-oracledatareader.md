@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: bir OracleDataReader içindeki REF CURSOR parametreleri'
 title: OracleDataReader’da REF CURSOR Parametreleri
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 801dff0f-2508-45aa-9416-f45d6887740c
-ms.openlocfilehash: 0b9ded8c29dfa7d94b6f9b121a1004f2ad9ad6e0
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 94c4e1fe6eb6c065b8551e09c49b322b4728abeb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739509"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739163"
 ---
 # <a name="ref-cursor-parameters-in-an-oracledatareader"></a>OracleDataReader’da REF CURSOR Parametreleri
 

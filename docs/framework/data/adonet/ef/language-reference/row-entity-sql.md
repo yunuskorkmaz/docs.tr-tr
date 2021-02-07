@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: satır (Entity SQL)'
 title: SATıR (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 06da96e8-55d7-486c-991a-4e514d837ff9
-ms.openlocfilehash: 2ab91d0c6d3c3ed3f88a7f0ddbf3a6c2f36d8b04
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2d0bcf3c5be8ef3b67e170af5159ae7dd8744630
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91202272"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739280"
 ---
 # <a name="row-entity-sql"></a>SATıR (Entity SQL)
 

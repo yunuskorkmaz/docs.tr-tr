@@ -1,15 +1,16 @@
 ---
-title: Yöntem tabanlı sorgu örnekleri (LINQ to DataSet)
+description: 'Hakkında daha fazla bilgi edinin: Method-Based sorgu örnekleri (LINQ to DataSet)'
+title: Method-Based sorgu örnekleri (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: d340775c-7f39-4087-a290-5cbec6cfa68e
-ms.openlocfilehash: 1c1ef8f1b6c05415ac6f5ee59d9a415bfab2c410
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4597dee40bb3c75b6cbca946e0833672c8512c06
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91175388"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739176"
 ---
-# <a name="method-based-query-examples-linq-to-dataset"></a>Yöntem tabanlı sorgu örnekleri (LINQ to DataSet)
+# <a name="method-based-query-examples-linq-to-dataset"></a>Method-Based sorgu örnekleri (LINQ to DataSet)
 
 Bu bölümde, standart sorgu işleçlerini kullanan Yöntem tabanlı sorgu sözdiziminde LINQ to DataSet programlama örnekleri verilmiştir. <xref:System.Data.DataSet>Bu örneklerde kullanılan yöntemi kullanılarak doldurulur ve `FillDataSet` [veri kümesine veri yükleme](loading-data-into-a-dataset.md)sırasında belirtilir. Daha fazla bilgi için bkz. [Standart sorgu Işleçlerine genel bakış (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) veya [Standart sorgu işleçlerine genel bakış (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   

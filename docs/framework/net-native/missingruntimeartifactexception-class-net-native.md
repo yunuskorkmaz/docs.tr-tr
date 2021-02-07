@@ -1,13 +1,14 @@
 ---
+description: ': MissingRuntimeArtifactException sınıfı (.NET Native) hakkında daha fazla bilgi'
 title: MissingRuntimeArtifactException Sınıfı (.NET Yerel)
 ms.date: 03/30/2017
 ms.assetid: d5b3d13e-689f-4584-8ba6-44f5167a8590
-ms.openlocfilehash: 2618af8e122964d64126f945c337101cb5bbe5ae
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: fae0ae708ab8d87347f29571ddb00e53bf7f6931
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96250911"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738643"
 ---
 # <a name="missingruntimeartifactexception-class-net-native"></a>MissingRuntimeArtifactException Sınıfı (.NET Yerel)
 
@@ -30,7 +31,7 @@ ms.locfileid: "96250911"
   
 ## <a name="constructors"></a>Oluşturucular  
   
-|Oluşturucu|Açıklama|  
+|Oluşturucu|Description|  
 |-----------------|-----------------|  
 |`public MissingRuntimeArtifactException()`|`MissingRuntimeArtifactException`Hatayı açıklayan sistem tarafından sağlanan bir ileti kullanarak sınıfının yeni bir örneğini başlatır.<br /><br /> Bu Oluşturucu yalnızca .NET Native araç zinciri tarafından iç kullanım içindir.|  
 |`public MissingRuntimeArtifactException(String message)`|Belirtilen bir hata iletisiyle sınıfın yeni bir örneğini başlatır `MissingRuntimeArtifactException` .<br /><br /> Bu Oluşturucu yalnızca .NET Native araç zinciri tarafından iç kullanım içindir.|  
@@ -61,9 +62,9 @@ ms.locfileid: "96250911"
 |`protected Object MemberwiseClone()`|Geçerli nesnenin basit bir kopyasını oluşturur. (Öğesinden devralındı <xref:System.Object> .)|  
 |`public string ToString()`|Geçerli özel durumun dize gösterimini döndürür. (Öğesinden devralındı <xref:System.Exception?displayProperty=nameWithType> .)|  
   
-## <a name="events"></a>Olaylar  
+## <a name="events"></a>Ekinlikler  
   
-|Olay|Açıklama|  
+|Olay|Description|  
 |-----------|-----------------|  
 |`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|Özel durum hakkında serileştirilmiş veri içeren bir özel durum nesnesi oluşturmak için bir özel durum serileştirildiğinde gerçekleşir. (Öğesinden devralındı <xref:System.Exception?displayProperty=nameWithType> .)|  
   

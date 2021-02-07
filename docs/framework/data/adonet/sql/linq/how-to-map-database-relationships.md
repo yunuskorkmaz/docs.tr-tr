@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: veritabanı Ilişkilerini eşleme'
 title: 'Nasıl yapılır: Veritabanı İlişkilerini Eşleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
-ms.openlocfilehash: 2f612877f5e7da6442c242aa0d56d811c0aa7cf8
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: cbccf9ec33a76b6446549fe8031300174506bd00
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166462"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738851"
 ---
 # <a name="how-to-map-database-relationships"></a>Nasıl yapılır: Veritabanı İlişkilerini Eşleme
 
@@ -51,7 +52,7 @@ Varlık sınıfınızda, her zaman aynı olacak herhangi bir veri ilişkisi olar
  Ayrıca, durumu tersine çevirebilirsiniz. `Customer`Sınıfı, müşteriler ve siparişler arasındaki ilişkiyi betimleyen şekilde kullanmak yerine `Order` sınıfını kullanabilirsiniz. `Order`Sınıfı, <xref:System.Data.Linq.EntityRef%601> Aşağıdaki kod örneğinde olduğu gibi, ilişkiyi müşteriye geri açıklama için kullanır.  
   
 > [!NOTE]
-> <xref:System.Data.Linq.EntityRef%601>Sınıfı *ertelenmiş yüklemeyi*destekler. Daha fazla bilgi için *bkz* . [ertelenmiş ve hemen yükleme](deferred-versus-immediate-loading.md).  
+> <xref:System.Data.Linq.EntityRef%601>Sınıfı *ertelenmiş yüklemeyi* destekler. Daha fazla bilgi için *bkz* . [ertelenmiş ve hemen yükleme](deferred-versus-immediate-loading.md).  
   
  [!code-csharp[DLinqCustomize#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCustomize/cs/Program.cs#5)]
  [!code-vb[DLinqCustomize#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCustomize/vb/Module1.vb#5)]  

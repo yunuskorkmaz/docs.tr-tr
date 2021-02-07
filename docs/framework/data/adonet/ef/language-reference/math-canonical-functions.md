@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: matematik kurallı Işlevleri'
 title: Kurallı Matematik İşlevleri
 ms.date: 03/30/2017
 ms.assetid: 6f6cddc6-b561-4ebe-84b6-841ef5b4113b
-ms.openlocfilehash: 9417ff9836912017c9d88bb24a18849aaac2836a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 55072099f5766d48ea3067a2e9eaa187a8b3f111
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250302"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739371"
 ---
 # <a name="math-canonical-functions"></a>Kurallı Matematik İşlevleri
 
@@ -15,15 +16,15 @@ Entity SQL aşağıdaki matematik kurallı işlevlerini içerir:
   
 ## <a name="absvalue"></a>ABS (değer)
 
-Öğesinin `value`mutlak değerini döndürür.
+`value` öğesinin mutlak değerini döndürür.
 
-**Bağımsız Değişkenler**
+**Bağımsız değişkenler**
 
-`Int16` ,`Byte` ,,`Decimal`,, ,Ve.`Double` `Int32` `Int64` `Single`
+,,,,, `Int16` `Int32` `Int64` `Byte` `Single` `Double` , Ve `Decimal` .
 
-**Dönüş değeri**
+**Dönüş Değeri**
 
-Türü `value`.
+Türü `value` .
 
 **Örnek**
 
@@ -31,15 +32,15 @@ Türü `value`.
 
 ## <a name="ceilingvalue"></a>Tavan (değer)
 
-Küçüktür olan `value`en küçük tamsayıyı döndürür.
+Küçüktür olan en küçük tamsayıyı döndürür `value` .
 
-**Bağımsız Değişkenler**
+**Bağımsız değişkenler**
 
-`Single`, ,`Double`Ve .`Decimal`
+`Single`, `Double` , Ve `Decimal` .
 
-**Dönüş değeri**
+**Dönüş Değeri**
 
-Türü `value`.
+Türü `value` .
 
 **Örnek**
 
@@ -48,15 +49,15 @@ Türü `value`.
 
 ## <a name="floorvalue"></a>Floor (değer)
 
-Değerinden `value`büyük olmayan en büyük tamsayıyı döndürür.
+Değerinden büyük olmayan en büyük tamsayıyı döndürür `value` .
 
-**Bağımsız Değişkenler**
+**Bağımsız değişkenler**
 
-`Single`, ,`Double`Ve .`Decimal`
+`Single`, `Double` , Ve `Decimal` .
 
-**Dönüş değeri**
+**Dönüş Değeri**
 
-Türü `value`.
+Türü `value` .
 
 **Örnek**
 
@@ -65,18 +66,18 @@ Türü `value`.
 
 ## <a name="powervalue-exponent"></a>Güç (değer, üs)
 
-Belirtilen öğesinin `value` sonucunu belirtilen `exponent`şekilde döndürür.
+Belirtilen öğesinin sonucunu `value` belirtilen şekilde döndürür `exponent` .
 
-**Bağımsız Değişkenler**
+**Bağımsız değişkenler**
 
 |  |  |
 |--|--|
-|`value` | `Int32, Int64, Double`, Veya`Decimal`. |
-|`exponent` | Bir `Int64`, `Double`veya .`Decimal` |
+|`value` | `Int32, Int64, Double`, Veya `Decimal` . |
+|`exponent` | Bir `Int64` , `Double` veya `Decimal` . |
 
-**Dönüş değeri**
+**Dönüş Değeri**
 
-Türü `value`.
+Türü `value` .
 
 **Örnek**
 
@@ -84,15 +85,15 @@ Türü `value`.
 
 ## <a name="roundvalue"></a>Round (değer)
 
-Öğesinin `value`tamsayı bölümünü döndürür, en yakın tamsayıya yuvarlanır.
+Öğesinin tamsayı bölümünü döndürür `value` , en yakın tamsayıya yuvarlanır.
 
-**Bağımsız Değişkenler**
+**Bağımsız değişkenler**
 
-`Single`, ,`Double`Ve .`Decimal`
+`Single`, `Double` , Ve `Decimal` .
 
-**Dönüş değeri**
+**Dönüş Değeri**
 
-Türü `value`.
+Türü `value` .
 
 **Örnek**
 
@@ -100,18 +101,18 @@ Türü `value`.
 
 ## <a name="roundvalue-digits"></a>Round (değer, basamak)
 
-`value` Belirtilen`digits`en yakın değere yuvarlanır ve döndürür.
+`value`Belirtilen en yakın değere yuvarlanır ve döndürür `digits` .
 
-**Bağımsız Değişkenler**
+**Bağımsız değişkenler**
 
 |  |  |
 |--|--|
-|`value`|`Double`veya `Decimal`.|
-|`digits`|`Int16`veya `Int32`.|
+|`value`|`Double` veya `Decimal`.|
+|`digits`|`Int16` veya `Int32`.|
 
-**Dönüş değeri**
+**Dönüş Değeri**
 
-Türü `value`.
+Türü `value` .
 
 **Örnek**
 
@@ -119,24 +120,24 @@ Türü `value`.
 
 ## <a name="truncatevalue-digits"></a>Kes (değer, basamak)
 
-`value` Belirtilen`digits`en yakın değere kesilen öğesini döndürür.
+`value`Belirtilen en yakın değere kesilen öğesini döndürür `digits` .
 
-**Bağımsız Değişkenler**
+**Bağımsız değişkenler**
 
 |  |  |
 |--|--|
-|`value`|`Double`veya `Decimal`.|
-|`digits`|`Int16`veya `Int32`.|
+|`value`|`Double` veya `Decimal`.|
+|`digits`|`Int16` veya `Int32`.|
 
-**Dönüş değeri**
+**Dönüş Değeri**
 
-Türü `value`.
+Türü `value` .
 
 **Örnek**
 
 `Truncate(748.58,1)`  
   
- Bu işlevler, verilen `null` `null` giriş durumunda döndürülür.  
+ Bu işlevler, `null` verilen giriş durumunda döndürülür `null` .  
   
  Eşdeğer işlevsellik, Microsoft SQL Istemci tarafından yönetilen sağlayıcıda bulunur. Daha fazla bilgi için bkz. [Entity Framework işlevleri Için SqlClient](../sqlclient-for-ef-functions.md).  
   

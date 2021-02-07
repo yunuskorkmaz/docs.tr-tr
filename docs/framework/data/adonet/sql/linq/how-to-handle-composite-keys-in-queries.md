@@ -1,16 +1,17 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: nasıl yapılır: sorgularda bileşik anahtarları Işleme'
 title: 'Nasıl yapılır: Sorgularda Bileşik Anahtarlar İşleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ce2f14fd-1038-458a-91e3-a078c61f0d10
-ms.openlocfilehash: bc16dde89f67572b03102b1c091993ed163b443c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9d7c68495810bee6a383d98a75694e7cd24f1015
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203533"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738877"
 ---
 # <a name="how-to-handle-composite-keys-in-queries"></a>Nasıl yapılır: Sorgularda Bileşik Anahtarlar İşleme
 

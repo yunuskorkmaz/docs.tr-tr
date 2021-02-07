@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: <Property> öğesi (.NET Native)'
 title: <Property> Öğesi (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
-ms.openlocfilehash: a0bdf95a1d1cadf7423f8c6595add13eda4d0d9a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: cd3c033fd2ce21b69ff0d8563f0782838f39b09f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96250859"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738474"
 ---
 # <a name="property-element-net-native"></a>\<Property> Öğesi (.NET Native)
 
@@ -28,7 +29,7 @@ ms.locfileid: "96250859"
   
 ### <a name="attributes"></a>Öznitelikler  
   
-|Öznitelik|Öznitelik türü|Açıklama|  
+|Öznitelik|Öznitelik türü|Description|  
 |---------------|--------------------|-----------------|  
 |`Name`|Genel|Gerekli öznitelik. Özellik adını belirtir.|  
 |`Browse`|Yansıma|İsteğe bağlı öznitelik. Özelliği hakkında bilgi sorgulamayı denetler, ancak çalışma zamanında herhangi bir dinamik erişimi etkinleştirmez.|  

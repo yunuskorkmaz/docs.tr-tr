@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: <Namespace> öğesi (.NET Native)'
 title: <Namespace> Öğesi (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
-ms.openlocfilehash: 05de04685f8ba746f55bf040c74fd3831c5b63ca
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c24f78d8d9fd59258391e9dd5e59988675163b49
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96287897"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738617"
 ---
 # <a name="namespace-element-net-native"></a>\<Namespace> Öğesi (.NET Native)
 
@@ -35,7 +36,7 @@ ms.locfileid: "96287897"
   
 ### <a name="attributes"></a>Öznitelikler  
   
-|Öznitelik|Öznitelik türü|Açıklama|  
+|Öznitelik|Öznitelik türü|Description|  
 |---------------|--------------------|-----------------|  
 |`Name`|Genel|Gerekli öznitelik. Ad alanının adını belirtir.|  
 |`Activate`|Yansıma|İsteğe bağlı öznitelik. Örneklerin etkinleştirilmesini sağlamak için oluşturuculara çalışma zamanı erişimini denetler.|  

@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: geçiş konuları (Entity Framework)'
 title: Geçiş konuları (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: d5151f0215cde1c5e35cc87c3cd667e16a23a1df
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6824d28fecc743e17046c826b887900218c90f3c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91175479"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739254"
 ---
 # <a name="migration-considerations-entity-framework"></a>Geçiş konuları (Entity Framework)
 

@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: MissingInteropDataException class (.NET Native)'
 title: MissingInteropDataException Sınıfı (.NET Yerel)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: eab4bcf8-9f5f-4731-87d8-842748a6062a
-ms.openlocfilehash: bbbb484e5cb8060568b321a2a41474d60c9f87f6
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ee1544d6a0e1e6a3f0e4386650754ed84b49015b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96250924"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738708"
 ---
 # <a name="missinginteropdataexception-class-net-native"></a>MissingInteropDataException Sınıfı (.NET Yerel)
 
@@ -32,7 +33,7 @@ ms.locfileid: "96250924"
   
 ## <a name="constructors"></a>Oluşturucular  
   
-|Oluşturucu|Açıklama|  
+|Oluşturucu|Description|  
 |-----------------|-----------------|  
 |`public MissingInteropDataException(String resourceId, Type pertinentType)`|`MissingInteropDataException`Hatayı açıklayan ve verileri eksik olan türden bir sistem tarafından sağlanan ILETININ kimliğini kullanarak sınıfının yeni bir örneğini başlatır. Bu Oluşturucu yalnızca .NET Native araç zinciri tarafından iç kullanım içindir.|  
   
@@ -63,9 +64,9 @@ ms.locfileid: "96250924"
 |`protected Object MemberwiseClone()`|Geçerli nesnenin basit bir kopyasını oluşturur. (Öğesinden devralındı <xref:System.Object> .)|  
 |`public string ToString()`|Geçerli özel durumun dize gösterimini döndürür. (Öğesinden devralındı <xref:System.Exception?displayProperty=nameWithType> .)|  
   
-## <a name="events"></a>Olaylar  
+## <a name="events"></a>Ekinlikler  
   
-|Olay|Açıklama|  
+|Olay|Description|  
 |-----------|-----------------|  
 |`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|Özel durum hakkında serileştirilmiş veri içeren bir özel durum nesnesi oluşturmak için bir özel durum serileştirildiğinde gerçekleşir. (Öğesinden devralındı <xref:System.Exception?displayProperty=nameWithType> .)|  
   

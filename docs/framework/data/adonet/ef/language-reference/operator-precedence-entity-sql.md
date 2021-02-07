@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Işleç önceliği (Entity SQL)'
 title: İşleç önceliği (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: e92e4ca5-2889-4266-9625-47f0eb01a948
-ms.openlocfilehash: f8aa0f213a24d6431d8910af849571a67fbd9f57
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 72cfdecf7dfe4ce590d99e866429e771f9ede231
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91175648"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739332"
 ---
 # <a name="operator-precedence-entity-sql"></a>İşleç önceliği (Entity SQL)
 
@@ -15,7 +16,7 @@ Bir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorguda birden çok 
   
  İşleçler aşağıdaki tabloda gösterilen öncelik düzeylerine sahiptir. Daha yüksek düzeyi olan bir işleç, daha düşük düzeydeki bir işleçten önce değerlendirilir.  
   
-|Düzey|İşlem türü|İşleç|  
+|Level|İşlem türü|Operatör|  
 |-----------|--------------------|--------------|  
 |1|Birincil|`. , [] ()`|  
 |2|Birli|`! not`|  
