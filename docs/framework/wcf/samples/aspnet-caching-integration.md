@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: ASP.NET önbelleğe alma tümleştirmesi'
 title: ASP.NET Önbelleğe Alma Tümleştirmesi
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-ms.openlocfilehash: c541f3caad8a500b9fdb33d00b58706bac876e37
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c366efdc95cfa67f4fad9b8534edb047ad98ab32
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594757"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755960"
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET Önbelleğe Alma Tümleştirmesi
 
@@ -30,7 +31,7 @@ ASP.NET çıktı önbelleğiyle tümleştirme
 
 Örnek, <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> Windows Communication Foundation (WCF) hizmetiyle ASP.net çıktı önbelleği kullanmak için öğesini kullanır. , <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> Hizmet işlemlerine uygulanır ve belirli bir işlemden alınan yanıtlara uygulanması gereken bir yapılandırma dosyasında Önbellek profilinin adını sağlar.
 
-Örnek hizmet projesinin Service.cs dosyasında, `GetCustomer` ve `GetCustomers` Işlemleri <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> "CacheFor60Seconds" önbellek profili adını sağlayan ile işaretlenir. Hizmet projesinin Web. config dosyasında, "CacheFor60Seconds" önbellek profili `caching` < > < > öğesi altında sağlanır `system.web` . Bu önbellek profili için, `duration` öznitelik değeri "60" olur, bu nedenle bu profille ilişkili yanıtlar 60 saniye için ASP.net çıktı önbelleğinde önbelleğe alınır. Ayrıca, bu önbellek profili için `varmByParam` öznitelik "biçim" olarak ayarlanır, böylece sorgu dizesi parametresi için farklı değerlere sahip isteklerin `format` yanıtları ayrı olarak önbelleğe alınır. Son olarak, Önbellek profilinin `varyByHeader` özniteliği "kabul et" olarak ayarlanır; bu nedenle, farklı Accept üst bilgisi değerlerine sahip isteklerin yanıtları ayrı olarak önbelleğe alınır.
+Örnek hizmet projesinin Service.cs dosyasında, `GetCustomer` ve `GetCustomers` Işlemleri <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> "CacheFor60Seconds" önbellek profili adını sağlayan ile işaretlenir. Hizmet projesinin Web.config dosyasında, "CacheFor60Seconds" önbellek profili, `caching` <> <> öğesi altında sağlanır `system.web` . Bu önbellek profili için, `duration` öznitelik değeri "60" olur, bu nedenle bu profille ilişkili yanıtlar 60 saniye için ASP.net çıktı önbelleğinde önbelleğe alınır. Ayrıca, bu önbellek profili için `varmByParam` öznitelik "biçim" olarak ayarlanır, böylece sorgu dizesi parametresi için farklı değerlere sahip isteklerin `format` yanıtları ayrı olarak önbelleğe alınır. Son olarak, Önbellek profilinin `varyByHeader` özniteliği "kabul et" olarak ayarlanır; bu nedenle, farklı Accept üst bilgisi değerlerine sahip isteklerin yanıtları ayrı olarak önbelleğe alınır.
 
 Istemci projesindeki Program.cs, bu tür bir istemcinin kullanılarak nasıl yazılabilir olduğunu gösterir <xref:System.Net.HttpWebRequest> . Bu, bir WCF hizmetine erişmenin yalnızca bir yoludur. WCF kanal fabrikası ve gibi diğer .NET Framework sınıfları kullanılarak hizmete de erişebilirsiniz <xref:System.Net.WebClient> . SDK 'daki diğer örnekler ( [temel http hizmet](basic-http-service.md) örneği gibi), bu SıNıFLARıN bir WCF hizmeti ile iletişim kurmak için nasıl kullanılacağını gösterir.
 

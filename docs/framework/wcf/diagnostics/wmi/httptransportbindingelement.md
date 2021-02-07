@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: HttpTransportBindingElement'
 title: HttpTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 088a7bce-6bb2-4839-ad74-f68d4b1aa0f9
-ms.openlocfilehash: 2be32591c4844cc6d5d0f02916dd1563bb15dc2a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 6c516dd7124d52828145787d55421d12031c2d36
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96288794"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99757377"
 ---
 # <a name="httptransportbindingelement"></a>HttpTransportBindingElement
 

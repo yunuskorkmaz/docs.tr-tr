@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: AppDomainInfo'
 title: AppDomainInfo
 ms.date: 03/30/2017
 ms.assetid: 6610b7d8-81eb-4bec-a543-9b72ad7b6f73
-ms.openlocfilehash: c5c44f4d8f6d93443802d5e1950c4d850976c5b6
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1e527f2a25c48a3bf35d974e3ac192d937a8a86e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96291134"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99757975"
 ---
 # <a name="appdomaininfo"></a>AppDomainInfo
 
@@ -89,7 +90,7 @@ class AppDomainInfo
   
  System. WMI. MessageLogging izleme kaynağını dinleyen koleksiyon izleme dinleyicileri.  
   
-### <a name="name"></a>Adı  
+### <a name="name"></a>Name  
 
  Veri türü: dize  
   

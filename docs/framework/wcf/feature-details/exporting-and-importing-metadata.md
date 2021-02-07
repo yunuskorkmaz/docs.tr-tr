@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: meta verileri dışarı ve Içeri aktarma'
 title: Meta Verileri Dışarı ve İçeri Aktarma
 ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF], exporting and importing
 ms.assetid: 614a75bb-e0b0-4c95-b6d8-02cb5e5ddb38
-ms.openlocfilehash: 44a684ca7904cc059277d94f26b5c077794d75b9
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c4309e9ce48089fa0034f2b93128ac021dd08998
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96276652"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756298"
 ---
 # <a name="exporting-and-importing-metadata"></a>Meta Verileri Dışarı ve İçeri Aktarma
 

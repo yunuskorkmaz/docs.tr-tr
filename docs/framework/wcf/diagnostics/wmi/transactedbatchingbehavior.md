@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: TransactedBatchingBehavior'
 title: TransactedBatchingBehavior
 ms.date: 03/30/2017
 ms.assetid: 2d03e6ae-f06c-4ada-b279-e01838b2ecdc
-ms.openlocfilehash: 152886180842d3da301f74286b0d41a98c39da54
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e0a0a7291ae03e1922010b8aafffdc7d5dbdda5c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96239164"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99757169"
 ---
 # <a name="transactedbatchingbehavior"></a>TransactedBatchingBehavior
 

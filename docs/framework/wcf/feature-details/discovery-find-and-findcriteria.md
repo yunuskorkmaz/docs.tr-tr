@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: bulma bul ve FindCriteria'
 title: Keşif Bulma ve FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: 1d6a0e3fcca45c3fe57aab84b0f2b6b86fabb404
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3a4428a89ba4122f528d1c01e4b5a6b8ea8d2935
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599184"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756324"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Keşif Bulma ve FindCriteria
 
@@ -19,33 +20,33 @@ Sınıfı, bulma <xref:System.ServiceModel.Discovery.DiscoveryClient> işlemleri
 
 ## <a name="findcriteria"></a>FindCriteria
 
-<xref:System.ServiceModel.Discovery.FindCriteria>, aradığınız Hizmetleri belirten arama ölçütlerine göre gruplanabilir ve sonlandırma ölçütlerini (aramanın en son ne kadar süreyle) bulabilecekleri çeşitli özelliklere sahiptir. <xref:System.ServiceModel.Discovery.FindCriteria>, Birden çok arama ölçütü içerebilir. Varsayılan olarak, hizmetin kendisini eşleşen bir hizmeti düşünmediği, varsayılan olarak tüm bileşenlerle eşleşmesi gerekir. Yalnızca bazı ölçütlere uyan hizmetleri bulmak istiyorsanız, hizmette özel bulma mantığı uygulayabilir veya birden çok sorgu kullanabilirsiniz.
+<xref:System.ServiceModel.Discovery.FindCriteria> , aradığınız Hizmetleri belirten arama ölçütlerine göre gruplanabilir ve sonlandırma ölçütlerini (aramanın en son ne kadar süreyle) bulabilecekleri çeşitli özelliklere sahiptir. <xref:System.ServiceModel.Discovery.FindCriteria>, Birden çok arama ölçütü içerebilir. Varsayılan olarak, hizmetin kendisini eşleşen bir hizmeti düşünmediği, varsayılan olarak tüm bileşenlerle eşleşmesi gerekir. Yalnızca bazı ölçütlere uyan hizmetleri bulmak istiyorsanız, hizmette özel bulma mantığı uygulayabilir veya birden çok sorgu kullanabilirsiniz.
 
 Arama ölçütleri şunları içerir:
 
-- <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement>Seçim. Aranmakta olan hizmetin sözleşme adı ve genellikle bir hizmet aranırken kullanılan ölçütler. Birden fazla sözleşme adı belirtilmişse, yalnızca tüm sözleşmeleri eşleştiren hizmet uç noktaları yanıtlayabilir. WCF 'de bir uç noktanın yalnızca bir sözleşmeyi destekleyebileceğini unutmayın.
+- <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> Seçim. Aranmakta olan hizmetin sözleşme adı ve genellikle bir hizmet aranırken kullanılan ölçütler. Birden fazla sözleşme adı belirtilmişse, yalnızca tüm sözleşmeleri eşleştiren hizmet uç noktaları yanıtlayabilir. WCF 'de bir uç noktanın yalnızca bir sözleşmeyi destekleyebileceğini unutmayın.
 
-- <xref:System.ServiceModel.Discovery.Configuration.ScopeElement>Seçim. Kapsamlar, ayrı hizmet uç noktalarını sınıflandırmak için kullanılan mutlak URI 'Lerdir. Bu, birden çok uç noktanın aynı sözleşmeyi kullanıma sunduğundan ve uç noktaların bir alt kümesini aramak için bir yol olmasını istediğiniz senaryolarda kullanmak isteyebilirsiniz. Birden fazla kapsam belirtilmişse, yalnızca tüm kapsamlar ile eşleşen hizmet uç noktaları yanıt verebilir.
+- <xref:System.ServiceModel.Discovery.Configuration.ScopeElement> Seçim. Kapsamlar, ayrı hizmet uç noktalarını sınıflandırmak için kullanılan mutlak URI 'Lerdir. Bu, birden çok uç noktanın aynı sözleşmeyi kullanıma sunduğundan ve uç noktaların bir alt kümesini aramak için bir yol olmasını istediğiniz senaryolarda kullanmak isteyebilirsiniz. Birden fazla kapsam belirtilmişse, yalnızca tüm kapsamlar ile eşleşen hizmet uç noktaları yanıt verebilir.
 
-- <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchBy%2A>-Araştırma iletisindeki kapsamları uç noktayla eşleştirirken kullanılacak eşleşen algoritmayı belirtir. Desteklenen beş kapsam eşleştirme kuralı vardır:
+- <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchBy%2A> -Araştırma iletisindeki kapsamları uç noktayla eşleştirirken kullanılacak eşleşen algoritmayı belirtir. Desteklenen beş kapsam eşleştirme kuralı vardır:
 
-  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType>, temel büyük/küçük harfe duyarlı bir dize karşılaştırması yapar.
+  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> , temel büyük/küçük harfe duyarlı bir dize karşılaştırması yapar.
 
-  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType>"/" ile ayrılmış kesimlerle eşleşir. İçin arama `http://contoso/building1` , kapsama sahip bir hizmetle eşleşir `http://contoso/building/floor1` . Bu `http://contoso/building100` , son iki segment eşleşmediğinden eşleşmez.
+  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> "/" ile ayrılmış kesimlerle eşleşir. İçin arama `http://contoso/building1` , kapsama sahip bir hizmetle eşleşir `http://contoso/building/floor1` . Bu `http://contoso/building100` , son iki segment eşleşmediğinden eşleşmez.
 
-  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType>bir LDAP URL 'SI kullanarak kapsamları segmentlere göre eşler.
+  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType> bir LDAP URL 'SI kullanarak kapsamları segmentlere göre eşler.
 
-  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByUuid?displayProperty=nameWithType>kapsamları tam olarak bir UUID dizesi kullanarak eşleştirir.
+  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByUuid?displayProperty=nameWithType> kapsamları tam olarak bir UUID dizesi kullanarak eşleştirir.
 
-  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByNone?displayProperty=nameWithType>yalnızca bir kapsam belirtmeyen hizmetlerle eşleşir.
+  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByNone?displayProperty=nameWithType> yalnızca bir kapsam belirtmeyen hizmetlerle eşleşir.
 
   Kapsam eşleştirme kuralı belirtilmemişse, <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix> kullanılır.
 
 Sonlandırma ölçütleri şunları içerir:
 
-1. <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A>-Ağdaki hizmetlerden gelen yanıtlar için beklenecek en uzun süre. Varsayılan süre 20 saniyedir.
+1. <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> -Ağdaki hizmetlerden gelen yanıtlar için beklenecek en uzun süre. Varsayılan süre 20 saniyedir.
 
-2. <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A>-Beklenecek en fazla yanıt sayısı. <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A>Yanıtların <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> süresi geçtiğinde alındıktan sonra bulma işlemi sonlanır.
+2. <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> -Beklenecek en fazla yanıt sayısı. <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A>Yanıtların <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> süresi geçtiğinde alındıktan sonra bulma işlemi sonlanır.
 
 ## <a name="findresponse"></a>FindResponse
 

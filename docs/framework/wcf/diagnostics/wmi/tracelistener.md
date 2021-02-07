@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: TraceListener'
 title: TraceListener
 ms.date: 03/30/2017
 ms.assetid: c2c0b595-a384-4eb3-b94d-1b3be7cc7a5c
-ms.openlocfilehash: 68c58623c3d3861b1a1c5652712bfa79bfc9f042
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4c351e71740e132ac4127108d2be2d7c2866c755
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96239165"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99757325"
 ---
 # <a name="tracelistener"></a>TraceListener
 
@@ -31,7 +32,7 @@ class TraceListener
 
  TraceListener sınıfı aşağıdaki özelliklere sahiptir:  
   
-### <a name="name"></a>Adı  
+### <a name="name"></a>Name  
 
  Veri türü: dize  
   

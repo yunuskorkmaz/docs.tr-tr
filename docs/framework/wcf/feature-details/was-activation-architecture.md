@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: WAS etkinleştirme mimarisi'
 title: WAS Etkinleştirme Mimarisi
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: 46f9f9b0e951d363200cf41b5119b13ca921a3b5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 616b3b404258356bcd5600c68b6f70aaf096e978
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96281644"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756025"
 ---
 # <a name="was-activation-architecture"></a>WAS Etkinleştirme Mimarisi
 

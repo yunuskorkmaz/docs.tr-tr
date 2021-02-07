@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Ileti günlüklerini görüntüleme'
 title: İleti Günlüklerini Görüntüleme
 ms.date: 03/30/2017
 ms.assetid: 3012fa13-f650-45fb-aaea-c5cca8c7d372
-ms.openlocfilehash: c8313b14a45051b7828a1ab223a3da63b2e7a153
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c640b2c3793839be4a31123701865fa944eaebc8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96291160"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99758040"
 ---
 # <a name="viewing-message-logs"></a>İleti Günlüklerini Görüntüleme
 

@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Kanal sınıfı'
 title: Kanal sınıfı
 ms.date: 03/30/2017
 ms.assetid: d9fae2ca-209c-4341-a0f5-6b79d1a67776
-ms.openlocfilehash: a920636e7df9609b12834366b1488c80122f9fca
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: dcc92f78f09e9a73a24134c6c0685949f46f38dd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96274237"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99757728"
 ---
 # <a name="channel-class"></a>Kanal sınıfı
 

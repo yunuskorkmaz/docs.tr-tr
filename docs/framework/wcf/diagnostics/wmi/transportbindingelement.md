@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: TransportBindingElement'
 title: TransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 54ecfbee-53c0-410c-a7fa-a98f2e40c545
-ms.openlocfilehash: 45bfcd069391156bc85cc4c26f2b172770197a9e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: de08feaf8abec3a0dfee97e92d68d5223cd0de44
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96234849"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99757117"
 ---
 # <a name="transportbindingelement"></a>TransportBindingElement
 

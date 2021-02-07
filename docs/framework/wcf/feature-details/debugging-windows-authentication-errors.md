@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi: Windows kimlik doğrulama hatalarını ayıklama'
 title: Windows Kimlik Doğrulama Hatalarını Ayıklama
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: c8aa87bdbf9488bce8e1a62f6d1a3898f923d349
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: cfc8bf8ce9b9c5da3d9b25949321ed1ac2b62d98
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96291667"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756493"
 ---
 # <a name="debug-windows-authentication-errors"></a>Windows kimlik doğrulama hatalarını ayıklama
 

@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: HTTPS ile özel bir güvenilir oturum bağlama oluşturma'
 title: 'Nasıl yapılır: HTTPS ile Özel Bir Güvenilir Oturum Bağlama Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: fa772232-da1f-4c66-8c94-e36c0584b549
-ms.openlocfilehash: 70f8f4f33626ab0d1705e03750bfd9baa324e60a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 97e0386c3694552099a623a319f566fa4db2a39b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599002"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756181"
 ---
 # <a name="how-to-create-a-custom-reliable-session-binding-with-https"></a>Nasıl yapılır: HTTPS ile Özel Bir Güvenilir Oturum Bağlama Oluşturma
 
@@ -27,7 +28,7 @@ Bu örneğin kaynak kopyası için bkz. [https üzerinden özel bağlama güveni
 
    [!code-csharp[c_HowTo_CreateReliableSessionHTTPS#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/service.cs#1122)]
 
-1. Güvenli bir *Web.config* `CalculatorService` `reliableSessionOverHttps` oturum ve HTTPS taşıması kullanan adlı özel bir bağlama ile için bir uç nokta yapılandırmak üzere bir Web. config dosyası oluşturun.
+1. Güvenilir bir  `CalculatorService` `reliableSessionOverHttps` oturum ve HTTPS taşıması kullanan adlı özel bir bağlama ile için bir uç nokta yapılandırmak üzere birWeb.configdosyası oluşturun.
 
    [!code-xml[c_HowTo_CreateReliableSessionHTTPS#2111](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/web.config#2111)]
 
@@ -39,7 +40,7 @@ Bu örneğin kaynak kopyası için bkz. [https üzerinden özel bağlama güveni
 
 ### <a name="configure-the-client-with-a-custombinding-to-use-a-reliable-session-with-https"></a>HTTPS ile güvenilir bir oturum kullanmak için istemciyi bir CustomBinding ile yapılandırma
 
-1. Hizmet meta verilerinden kod oluşturmak için, komut satırından [ServiceModel meta veri yardımcı programı aracını (*Svcutil. exe*)](../servicemodel-metadata-utility-tool-svcutil-exe.md) kullanın.
+1. Hizmet meta verilerinden kod oluşturmak için, komut satırından [ServiceModel meta veri yardımcı programı aracını (*Svcutil.exe*)](../servicemodel-metadata-utility-tool-svcutil-exe.md) kullanın.
 
    ```console
    Svcutil.exe <Metadata Exchange (MEX) address or HTTP GET address>
@@ -65,8 +66,8 @@ Bu örneğin kaynak kopyası için bkz. [https üzerinden özel bağlama güveni
 
 ## <a name="net-framework-security"></a>.NET Framework güvenliği
 
-Bu örnekte kullanılan sertifika, *MakeCert. exe*ile oluşturulmuş bir test sertifikasıdır çünkü, tarayıcınızla, gıbı bir https adresine erişmeye çalıştığınızda bir güvenlik uyarısı görüntülenir `https://localhost/servicemodelsamples/service.svc` .
+Bu örnekte kullanılan sertifika *Makecert.exe* ile oluşturulmuş bir test sertifikası olduğundan, tarayıcınızla, gıbı bir https adresine erişmeye çalıştığınızda bir güvenlik uyarısı görünür `https://localhost/servicemodelsamples/service.svc` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Güvenilir Oturumlar](reliable-sessions.md)
+- [Güvenilir oturumlar](reliable-sessions.md)

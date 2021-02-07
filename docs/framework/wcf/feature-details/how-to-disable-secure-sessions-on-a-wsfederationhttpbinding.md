@@ -1,4 +1,5 @@
 ---
+description: "Daha fazla bilgi edinin: nasıl yapılır: WSFederationHttpBinding 'da güvenli oturumları devre dışı bırakma"
 title: 'Nasıl yapılır: WSFederationHttpBinding Gücenli Oturumlarını Devre Dışı Bırakma'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 675fa143-6a4e-4be3-8afc-673334ab55ec
-ms.openlocfilehash: df057d64feb89d1e43b938b36cb48f2f103b17d0
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 73fb25c55cb6f7be13a286cf8e16701095739827
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595394"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756129"
 ---
 # <a name="how-to-disable-secure-sessions-on-a-wsfederationhttpbinding"></a>Nasıl yapılır: WSFederationHttpBinding Gücenli Oturumlarını Devre Dışı Bırakma
 
@@ -42,7 +43,7 @@ Aşağıdaki örnek, güvenli oturum olmadan özel bir Federasyon bağlaması ol
 
 ## <a name="compiling-the-code"></a>Kod Derleniyor
 
-- Kod örneğini derlemek için, System. ServiceModel. dll derlemesine başvuran bir proje oluşturun.
+- Kod örneğini derlemek için System.ServiceModel.dll derlemesine başvuran bir proje oluşturun.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: geçici sıraya alınmış Iletişim'
 title: Geçici Kuyruğa Alınmış İletişim
 ms.date: 03/30/2017
 ms.assetid: 0d012f64-51c7-41d0-8e18-c756f658ee3d
-ms.openlocfilehash: a9f7e8a96fd293c7f87cc19846a42a42f28de288
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 8ced65dc28719416fb9b1059d2be8f29315013b7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602353"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755726"
 ---
 # <a name="volatile-queued-communication"></a>Geçici Kuyruğa Alınmış İletişim
 
@@ -49,7 +50,7 @@ public class StockTickerService : IStockTicker
 }
 ```
 
-Hizmet kendi kendine barındırılır. MSMQ aktarımını kullanırken kullanılan kuyruğun önceden oluşturulması gerekir. Bu, el ile veya kod aracılığıyla yapılabilir. Bu örnekte hizmet, sıranın varlığını denetlemek ve gerekirse oluşturmak için kod içerir. Sıra adı yapılandırma dosyasından okundu. Temel adres, [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) tarafından hizmete yönelik proxy oluşturmak için kullanılır.
+Hizmet kendi kendine barındırılır. MSMQ aktarımını kullanırken kullanılan kuyruğun önceden oluşturulması gerekir. Bu, el ile veya kod aracılığıyla yapılabilir. Bu örnekte hizmet, sıranın varlığını denetlemek ve gerekirse oluşturmak için kod içerir. Sıra adı yapılandırma dosyasından okundu. Temel adres, [ServiceModel meta veri yardımcı programı Aracı (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) tarafından hizmet için proxy oluşturmak için kullanılır.
 
 ```csharp
 // Host the service within this EXE console application.

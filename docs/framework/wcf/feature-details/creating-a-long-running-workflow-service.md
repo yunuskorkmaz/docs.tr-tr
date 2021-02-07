@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi: uzun süre çalışan bir Iş akışı hizmeti oluşturma'
 title: Uzun Süre Çalışan Bir İş Akışı Hizmeti Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: 4ae01201230bf848c045158424db60097d8dd767
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9d26e763e2515f9e9ec2b61201512f02eeaeb1bc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599353"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756909"
 ---
 # <a name="create-a-long-running-workflow-service"></a>Uzun süre çalışan bir Iş akışı hizmeti oluşturma
 
@@ -21,13 +22,13 @@ Bu yönergeyi kullanabilmeniz için aşağıdaki yazılımların yüklü olması
 
 2. Visual Studio 2012
 
-3. MICROSOFT[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
+3. MICROSOFT  [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
 
 4. WCF ve Visual Studio 2012 hakkında bilgi sahibisiniz ve proje/çözüm oluşturma hakkında bilgi sahibi olabilirsiniz.
 
 ## <a name="set-up-the-sql-database"></a>SQL veritabanını ayarlama
 
-1. İş akışı hizmeti örneklerinin kalıcı olabilmesi için Microsoft SQL Server yüklü olmalıdır ve kalıcı iş akışı örneklerini depolamak için bir veritabanı yapılandırmanız gerekir. **Başlat** düğmesine tıklayarak, **tüm programlar**, **Microsoft SQL Server 2008**ve **MICROSOFT sql Management Studio**' nı seçerek Microsoft SQL Management Studio 'yi çalıştırın.
+1. İş akışı hizmeti örneklerinin kalıcı olabilmesi için Microsoft SQL Server yüklü olmalıdır ve kalıcı iş akışı örneklerini depolamak için bir veritabanı yapılandırmanız gerekir. **Başlat** düğmesine tıklayarak, **tüm programlar**, **Microsoft SQL Server 2008** ve **MICROSOFT sql Management Studio**' nı seçerek Microsoft SQL Management Studio 'yi çalıştırın.
 
 2. SQL Server örneğine oturum açmak için **Bağlan** düğmesine tıklayın
 
@@ -93,7 +94,7 @@ Bu yönergeyi kullanabilmeniz için aşağıdaki yazılımların yüklü olması
 
         Bu, yeni bir sipariş KIMLIĞI oluşturur ve değeri OrderID değişkenine koyar.
 
-    6. **ReplyToStartOrder** etkinliğini seçin. Özellikler penceresinde, **Correlationbaşlatıcıları**için üç nokta düğmesine tıklayın. **Başlatıcı Ekle** bağlantısını seçin, `orderIdHandle` Başlatıcı metin kutusunda girin, bağıntı türü için sorgu bağıntı Başlatıcısı ' nı seçin ve XPath sorguları açılan kutusu altında p_orderId ' yi seçin. Bu ayarlar aşağıdaki çizimde gösterilmiştir. **Tamam**'a tıklayın.  Bu, istemci ile iş akışı hizmetinin bu örneği arasında bir bağıntı başlatır. Bu sipariş KIMLIĞINI içeren bir ileti alındığında, iş akışı hizmetinin bu örneğine yönlendirilir.
+    6. **ReplyToStartOrder** etkinliğini seçin. Özellikler penceresinde, **Correlationbaşlatıcıları** için üç nokta düğmesine tıklayın. **Başlatıcı Ekle** bağlantısını seçin, `orderIdHandle` Başlatıcı metin kutusunda girin, bağıntı türü için sorgu bağıntı Başlatıcısı ' nı seçin ve XPath sorguları açılan kutusu altında p_orderId ' yi seçin. Bu ayarlar aşağıdaki çizimde gösterilmiştir. **Tamam**'a tıklayın.  Bu, istemci ile iş akışı hizmetinin bu örneği arasında bir bağıntı başlatır. Bu sipariş KIMLIĞINI içeren bir ileti alındığında, iş akışı hizmetinin bu örneğine yönlendirilir.
 
         ![Bağıntı başlatıcısı ekleme](./media/creating-a-long-running-workflow-service/add-correlationinitializers.png "Bağıntı başlatıcısı ekleyin.")
 
@@ -116,7 +117,7 @@ Bu yönergeyi kullanabilmeniz için aşağıdaki yazılımların yüklü olması
 
         ![İkinci alım için parametreleri belirtme](./media/creating-a-long-running-workflow-service/add-receive-two-parameters.png "Alma etkinliğini iki parametre alacak şekilde yapılandırın.")
 
-    4. **CorrelateOn** üç nokta düğmesine tıklayın ve girin `orderIdHandle` . **XPath sorguları**altında aşağı açılan oka tıklayın ve öğesini seçin `p_orderId` . Bu, ikinci alma etkinliğinde bağıntıyı yapılandırır. Bağıntı hakkında daha fazla bilgi için bkz. [bağıntı](correlation.md).
+    4. **CorrelateOn** üç nokta düğmesine tıklayın ve girin `orderIdHandle` . **XPath sorguları** altında aşağı açılan oka tıklayın ve öğesini seçin `p_orderId` . Bu, ikinci alma etkinliğinde bağıntıyı yapılandırır. Bağıntı hakkında daha fazla bilgi için bkz. [bağıntı](correlation.md).
 
         ![CorrelatesOn özelliğini ayarlama](./media/creating-a-long-running-workflow-service/correlateson-setting.png "CorrelatesOn özelliğini ayarlayın.")
 
@@ -128,7 +129,7 @@ Bu yönergeyi kullanabilmeniz için aşağıdaki yazılımların yüklü olması
 
             ![Hizmet çağrısının sonucunu atama](./media/creating-a-long-running-workflow-service/assign-result-of-service-call.png "Hizmet çağrısının sonucunu atayın.")
 
-            Koşul ise, `true` bölüm yürütülür **Then** . Koşul `false` **Else** bölümü yürütülür.
+            Koşul ise, `true` bölüm yürütülür  . Koşul `false` **Else** bölümü yürütülür.
 
         3. **SendReplyToReceive** etkinliğini seçin ve aşağıdaki çizimde gösterilen **DisplayName** özelliğini ayarlayın.
 
@@ -138,7 +139,7 @@ Bu yönergeyi kullanabilmeniz için aşağıdaki yazılımların yüklü olması
 
             ![SendReply etkinliği için veri bağlamayı ayarlama](./media/creating-a-long-running-workflow-service/set-property-for-sendreplytoadditem.gif "Sendreplytoaddidıtem etkinliğinin özelliğini ayarlayın.")
 
-8. Web. config dosyasını açın ve \<behavior> iş akışı kalıcılığını etkinleştirmek için bölümüne aşağıdaki öğeleri ekleyin.
+8. web.config dosyasını açın ve \<behavior> iş akışı kalıcılığını etkinleştirmek için bölümüne aşağıdaki öğeleri ekleyin.
 
     ```xml
     <sqlWorkflowInstanceStore connectionString="Data Source=your-machine\SQLExpress;Initial Catalog=SQLPersistenceStore;Integrated Security=True;Asynchronous Processing=True" instanceEncodingOption="None" instanceCompletionAction="DeleteAll" instanceLockedExceptionAction="BasicRetry" hostLockRenewalPeriod="00:00:30" runnableInstancesDetectionPeriod="00:00:02" />
@@ -158,7 +159,7 @@ Bu yönergeyi kullanabilmeniz için aşağıdaki yazılımların yüklü olması
 
     1. System.ServiceModel.dll
 
-    2. System. ServiceModel. Activities. dll
+    2. System.ServiceModel.Activities.dll
 
 3. İş akışı hizmetine bir hizmet başvurusu ekleyin ve `OrderService` ad alanı olarak belirtin.
 

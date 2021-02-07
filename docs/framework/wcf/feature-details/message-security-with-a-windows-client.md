@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Windows Istemcisiyle Ileti güvenliği'
 title: Windows İstemcisi ile İleti Güvenliği
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
-ms.openlocfilehash: 1fe50f711c65871b811837a7f48cf6f45f4455b4
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 97d415f68b4374ab2b18360347d7753f6be51313
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275612"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756103"
 ---
 # <a name="message-security-with-a-windows-client"></a>Windows İstemcisi ile İleti Güvenliği
 
@@ -18,7 +19,7 @@ Bu senaryoda ileti güvenliği modu tarafından güvenli hale getirilmiş bir Wi
   
  ![Windows istemcisi ile ileti güvenliği](media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
   
-|Özellik|Açıklama|  
+|Özellik|Description|  
 |--------------------|-----------------|  
 |Güvenlik modu|İleti|  
 |Birlikte çalışabilirlik|Yalnızca WCF|  

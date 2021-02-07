@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: davranış sınıfı'
 title: Davranış Sınıfı
 ms.date: 03/30/2017
 ms.assetid: 75d117f5-87f9-40fb-84c6-9e2fef6da6af
-ms.openlocfilehash: 73edea45ccd1d1684604a571fbc0615da52f5686
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7d5f62fa51ebee5fbd4c53506208faf579af51ae
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96255708"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99757936"
 ---
 # <a name="behavior-class"></a>Davranış Sınıfı
 

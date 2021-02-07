@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: aktarma'
 title: Aktarma
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: da31dcb24234e750c88383b9f1bea4f088f4ee3d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ce88a71d87c7dd09f321ee58f603f7c4672a6df9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96293409"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99758066"
 ---
 # <a name="transfer"></a>Aktarma
 

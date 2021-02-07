@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: sanal dizin kurulum yönergeleri'
 title: Sanal Dizin Ayarlama Yönergeleri
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: dba6547888935ccf36ec0924fd3c95e8fbda5688
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4b1a68fb657a59e9858c6efa7931c5d106231605
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96243657"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755713"
 ---
 # <a name="virtual-directory-setup-instructions"></a>Sanal Dizin Ayarlama Yönergeleri
 
@@ -34,7 +35,7 @@ Windows Communication Foundation (WCF) örnekleri,%SystemDrive%\inetpub\wwwroot\
   
 6. Fiziksel yolu%SystemDrive%\inetpub\wwwroot\servicemodelsamples. olarak ayarla  WCF örneklerinin çoğu yapılandırıldığında bu konuma hizmet yürütülebilir dosyalarını kopyalar.  
   
-7. **Tamam** düğmesine tıklayın. Web uygulaması artık WCF örnekleri için oluşturulmuştur.  
+7. **Tamam**'a tıklayın. Web uygulaması artık WCF örnekleri için oluşturulmuştur.  
   
     > [!NOTE]
     > Tüm WCF örnekleri aynı servicemodelsamples Web uygulamasını kullandığından, bu görevin yalnızca bir kez gerçekleştirilmesi gerekir.  

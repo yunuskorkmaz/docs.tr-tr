@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Işlem uygulamalarını tanılama'
 title: İşlemsel Uygulamaları Tanılama
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
-ms.openlocfilehash: 696ebe7249a8388eaaf38a678581e28d472e821a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4b80dd5273781feaad0ef1c964c737a1cd470c75
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96290250"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756454"
 ---
 # <a name="diagnosing-transactional-applications"></a>İşlemsel Uygulamaları Tanılama
 
@@ -21,7 +22,7 @@ Bu konuda, bir işlem uygulamasının sorunlarını gidermek için Windows Commu
   
 ### <a name="service-performance-counters"></a>Hizmet Performansı Sayaçları  
   
-|Performans sayacı|Açıklama|  
+|Performans sayacı|Description|  
 |-------------------------|-----------------|  
 |Akışı Yapılan İşlemler|Bu hizmette işlemlere akan işlem sayısı. Bu sayaç, hizmete gönderilen iletide bir işlem olduğunda artırılır.|  
 |Saniyede Akışı Yapılan İşlem|Her saniye içinde bu hizmette işlemlere akan işlem sayısı. Bu sayaç, hizmete gönderilen iletide bir işlem olduğunda artırılır.|  
@@ -34,14 +35,14 @@ Bu konuda, bir işlem uygulamasının sorunlarını gidermek için Windows Commu
   
 ### <a name="endpoint-performance-counters"></a>Uç Noktası Performans Sayaçları  
   
-|Performans sayacı|Açıklama|  
+|Performans sayacı|Description|  
 |-------------------------|-----------------|  
 |Akışı Yapılan İşlemler|Bu uç noktada işlemlere akan işlem sayısı. Bu sayaç, uç noktaya gönderilen iletide bir işlem olduğunda artırılır.|  
 |Saniyede Akışı Yapılan İşlem|Her saniye içinde bu uç noktada işlemlere akan işlem sayısı. Bu sayaç, uç noktaya gönderilen iletide bir işlem olduğunda artırılır.|  
   
 ### <a name="operation-performance-counters"></a>İşlem Performansı Sayaçları  
   
-|Performans sayacı|Açıklama|  
+|Performans sayacı|Description|  
 |-------------------------|-----------------|  
 |Akışı Yapılan İşlemler|Bu uç noktada işlemlere akan işlem sayısı. Bu sayaç, uç noktaya gönderilen iletide bir işlem olduğunda artırılır.|  
 |Saniyede Akışı Yapılan İşlem|Her saniye içinde bu uç noktada işlemlere akan işlem sayısı. Bu sayaç, uç noktaya gönderilen iletide bir işlem olduğunda artırılır.|  
@@ -54,7 +55,7 @@ Bu konuda, bir işlem uygulamasının sorunlarını gidermek için Windows Commu
   
  Bir hizmette, `ServiceBehaviorAttribute` aşağıdaki özelliklere sahiptir.  
   
-|Ad|Tür|Açıklama|  
+|Ad|Tür|Description|  
 |----------|----------|-----------------|  
 |ReleaseServiceInstanceOnTransactionComplete|Boole|Geçerli işlem tamamlandığında hizmet nesnesinin geri dönüştürülüp dönüştürülmeyeceğini belirtir.|  
 |TransactionAutoCompleteOnSessionClose|Boole|Geçerli oturum kapandığında bekleyen işlemlerin tamamlanıp tamamlanmadığını belirtir.|  
@@ -63,27 +64,27 @@ Bu konuda, bir işlem uygulamasının sorunlarını gidermek için Windows Commu
   
  , `ServiceTimeoutsBehavior` Aşağıdaki özelliğe sahiptir.  
   
-|Ad|Tür|Açıklama|  
+|Ad|Tür|Description|  
 |----------|----------|-----------------|  
 |Işlem zaman aşımı|<xref:System.DateTime>|Bir işlemin tamamlaması gereken süreyi belirtir.|  
   
  Bir bağlamada `TransactionFlowBindingElement` aşağıdaki özellikler vardır.  
   
-|Ad|Tür|Açıklama|  
+|Ad|Tür|Description|  
 |----------|----------|-----------------|  
 |TransactionProtocol|Türün geçerli bir değerini içeren bir dize <xref:System.ServiceModel.TransactionProtocol> .|İşlem akışı sırasında kullanılacak işlem protokolünü belirtir.|  
 |TransactionFlow|Boole|Gelen işlem akışının etkinleştirilip etkinleştirilmeyeceğini belirtir.|  
   
  Bir işlemde, `OperationBehaviorAttribute` aşağıdaki özelliklere sahiptir:  
   
-|Ad|Tür|Açıklama|  
+|Ad|Tür|Description|  
 |----------|----------|-----------------|  
 |TransactionAutoComplete|Boole|İşlenmeyen özel durumlar oluşursa, geçerli işlemin otomatik olarak kaydedilip edilmeyeceğini belirtir.|  
 |TransactionScopeRequired|Boole|İşlemin bir işlem gerektirip gerektirmediğini belirtir.|  
   
  Bir işlemde, `TransactionFlowAttribute` aşağıdaki özelliklere sahiptir.  
   
-|Ad|Tür|Açıklama|  
+|Ad|Tür|Description|  
 |----------|----------|-----------------|  
 |TransactionFlowOption|Sabit listesinin geçerli bir değerini içeren bir dize <xref:System.ServiceModel.TransactionFlowOption> .|İşlem akışının gerekli olduğu kapsamı belirtir.|  
   

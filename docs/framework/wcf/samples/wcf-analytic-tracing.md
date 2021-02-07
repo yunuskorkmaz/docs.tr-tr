@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: WCF analitik Izleme'
 title: WCF Analiz İzleme
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 490c67c92407626a67ea8561a378ef3e70266fe2
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1f5ec26828bba99a127fea6a81f57fed717943a2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96243683"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755700"
 ---
 # <a name="wcf-analytic-tracing"></a>WCF Analiz İzleme
 
@@ -39,7 +40,7 @@ Bu örnek, ' de Windows Communication Foundation (WCF) tarafından ETW 'ye yazma
 
  WCF 'nin ETW olay sağlayıcısı bildirimi, WCF hizmeti yazarları tarafından hizmet kodu içinden yayınlanarak tasarlanan üç olay tanımlar. Aşağıdaki tabloda, üç olay dökümü gösterilmektedir.  
   
-|Olay|Açıklama|Olay Kimliği|  
+|Olay|Description|Olay Kimliği|  
 |-----------|-----------------|--------------|  
 |UserDefinedInformationEventOccurred|Bu olayı, hizmetinize bir sorun olmayan bir not oluştuğunda ortaya çıkar. Örneğin, bir veritabanına başarıyla çağrı yaptıktan sonra bir olay yayabilirsiniz.|301|  
 |Userdefinedwarninggerçekleşti|Bu olayı, gelecekte hata oluşmasına neden olabilecek bir sorun oluştuğunda göster. Örneğin, bir veritabanına yapılan çağrı başarısız olduğunda ancak gereksiz bir veri deposuna geri dönerek kurtarılamadığında bir uyarı olayı oluşturabilirsiniz.|302|  

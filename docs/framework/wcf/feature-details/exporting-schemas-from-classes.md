@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: sınıflardan şemaları dışarı aktarma'
 title: Sınıflardan Şemaları Dışa Aktarma
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
-ms.openlocfilehash: 8105ada41a2ec9dac962f5029ac89b66c69893ab
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f9ca33bb26237b3af9ff26b1ed693088c62e3b13
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96255565"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756285"
 ---
 # <a name="exporting-schemas-from-classes"></a>Sınıflardan Şemaları Dışa Aktarma
 
@@ -52,7 +53,7 @@ Veri anlaşması modelinde kullanılan sınıflardan XML şeması tanım dili (X
   
 ## <a name="helper-methods"></a>Yardımcı yöntemler  
 
- Şema dışa aktarma işleminin birincil rolüne ek olarak, `XsdDataContractExporter` türleri hakkında bilgi sağlayan çeşitli yararlı yardımcı yöntemler sağlar. Bunlar:  
+ Şema dışa aktarma işleminin birincil rolüne ek olarak, `XsdDataContractExporter` türleri hakkında bilgi sağlayan çeşitli yararlı yardımcı yöntemler sağlar. Bu modüller şunlardır:  
   
 - <xref:System.Runtime.Serialization.XsdDataContractExporter.GetRootElementName%2A> yöntemidir. Bu yöntem bir kullanır `Type` ve <xref:System.Xml.XmlQualifiedName> Bu tür kök nesne olarak seri hale getirilse kullanılacak kök öğe adı ve ad alanını temsil eden bir döndürür.  
   

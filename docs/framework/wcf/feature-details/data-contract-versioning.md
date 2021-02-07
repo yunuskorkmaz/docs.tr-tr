@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: veri sözleşmesi sürümü oluşturma'
 title: Veri Sözleşmesi Sürümü Oluşturma
 ms.date: 03/30/2017
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-ms.openlocfilehash: 6f8623c9d8e9e7ba1f7c762c929f986b523c2f90
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 89b99ccad1671d33383cfce8d25b241d71788670
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96285206"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756610"
 ---
 # <a name="data-contract-versioning"></a>Veri Sözleşmesi Sürümü Oluşturma
 

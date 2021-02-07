@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: uygulamanızın sorunlarını gidermek için Izlemeyi kullanma'
 title: Uygulamanızda Sorun Giderme için İzleme Kullanma
 ms.date: 03/30/2017
 ms.assetid: 7676b9bb-cbd1-41fd-9a93-cc615af6e2d0
-ms.openlocfilehash: 3b684bf2dc6b075906921f56c6aa07ee55ca7fd5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: bc81199450da5522caa92120f0b8c5153ccb9957
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96291251"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99758053"
 ---
 # <a name="using-tracing-to-troubleshoot-your-application"></a>Uygulamanızda Sorun Giderme için İzleme Kullanma
 

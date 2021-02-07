@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi: Internet Explorer ve WCF tarafından yapılan hizmet sertifikası doğrulaması arasındaki farklılıklar'
 title: Internet Explorer ve WCF Tarafından Yapılan Sertifika Doğrulama Arasındaki Farklar
 ms.date: 03/30/2017
 helpviewer_keywords:
 - service certificate validation [WCF]
 - certificates [WCF], service certificate validation
 ms.assetid: 9dffcab2-70a9-40f0-99fd-d3a0b296028f
-ms.openlocfilehash: 574a6fa5411bcb662514982923e5c51200f98ae2
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 2d635aec0949ec4e65cd965089206bbf6d6815a6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96272208"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756363"
 ---
 # <a name="differences-between-service-certificate-validation-done-by-internet-explorer-and-wcf"></a>Internet Explorer ve WCF Tarafından Yapılan Sertifika Doğrulama Arasındaki Farklar
 
