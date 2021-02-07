@@ -1,4 +1,5 @@
 ---
+description: ': Imetadatayayma:: SaveToMemory Yöntemi hakkında daha fazla bilgi edinin'
 title: IMetaDataEmit::SaveToMemory Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: d5237628-2675-45ed-a39e-65c0731b6a56
 topic_type:
 - apiref
-ms.openlocfilehash: 1cd5e34d6afefab2fda7e20d4bf73b373ad42787
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b5fbca2c3ce06398de72bf2690108077545fef9c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95688607"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99745807"
 ---
-# <a name="imetadataemitsavetomemory-method"></a><span data-ttu-id="2e244-102">IMetaDataEmit::SaveToMemory Yöntemi</span><span class="sxs-lookup"><span data-stu-id="2e244-102">IMetaDataEmit::SaveToMemory Method</span></span>
+# <a name="imetadataemitsavetomemory-method"></a><span data-ttu-id="7efd1-103">IMetaDataEmit::SaveToMemory Yöntemi</span><span class="sxs-lookup"><span data-stu-id="7efd1-103">IMetaDataEmit::SaveToMemory Method</span></span>
 
-<span data-ttu-id="2e244-103">Geçerli kapsamdaki tüm meta verileri belirtilen bellek alanına kaydeder.</span><span class="sxs-lookup"><span data-stu-id="2e244-103">Saves all metadata in the current scope to the specified area of memory.</span></span>  
+<span data-ttu-id="7efd1-104">Geçerli kapsamdaki tüm meta verileri belirtilen bellek alanına kaydeder.</span><span class="sxs-lookup"><span data-stu-id="7efd1-104">Saves all metadata in the current scope to the specified area of memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2e244-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="2e244-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7efd1-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="7efd1-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT SaveToMemory (
@@ -35,25 +36,25 @@ HRESULT SaveToMemory (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2e244-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="2e244-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7efd1-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="7efd1-106">Parameters</span></span>  
 
  `pbData`  
- <span data-ttu-id="2e244-106">dışı Meta veri yazmaya başlamak için kullanılacak adres.</span><span class="sxs-lookup"><span data-stu-id="2e244-106">[out] The address at which to begin writing metadata.</span></span>  
+ <span data-ttu-id="7efd1-107">dışı Meta veri yazmaya başlamak için kullanılacak adres.</span><span class="sxs-lookup"><span data-stu-id="7efd1-107">[out] The address at which to begin writing metadata.</span></span>  
   
  `cbData`  
- <span data-ttu-id="2e244-107">'ndaki Ayrılan belleğin bayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="2e244-107">[in] The size, in bytes, of the allocated memory.</span></span>  
+ <span data-ttu-id="7efd1-108">'ndaki Ayrılan belleğin bayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="7efd1-108">[in] The size, in bytes, of the allocated memory.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2e244-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="2e244-108">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7efd1-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="7efd1-109">Requirements</span></span>  
 
- <span data-ttu-id="2e244-109">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2e244-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="7efd1-110">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7efd1-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2e244-110">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="2e244-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="7efd1-111">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="7efd1-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="2e244-111">**Kitaplık:** MSCorEE.dll kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="2e244-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="7efd1-112">**Kitaplık:** MSCorEE.dll kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="7efd1-112">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="2e244-112">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2e244-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="7efd1-113">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7efd1-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2e244-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2e244-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7efd1-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7efd1-114">See also</span></span>
 
-- [<span data-ttu-id="2e244-114">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="2e244-114">IMetaDataEmit Interface</span></span>](imetadataemit-interface.md)
-- [<span data-ttu-id="2e244-115">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="2e244-115">IMetaDataEmit2 Interface</span></span>](imetadataemit2-interface.md)
+- [<span data-ttu-id="7efd1-115">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7efd1-115">IMetaDataEmit Interface</span></span>](imetadataemit-interface.md)
+- [<span data-ttu-id="7efd1-116">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7efd1-116">IMetaDataEmit2 Interface</span></span>](imetadataemit2-interface.md)
