@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Windows Forms yapılandırma bölümü'
 title: Windows Forms Yapılandırma Bölümü
 ms.date: 04/07/2017
 ms.assetid: 6eb142d5-fc98-40e2-9d90-84733f2a27ba
-ms.openlocfilehash: 2d518ec03602580f3c5d00ef2901ff7d7ac1d81b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f1eaf2d74c7645d6cf4580d75e23d8910628cce0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148509"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99697770"
 ---
 # <a name="windows-forms-configuration-section"></a>Windows Forms Yapılandırma Bölümü
 
