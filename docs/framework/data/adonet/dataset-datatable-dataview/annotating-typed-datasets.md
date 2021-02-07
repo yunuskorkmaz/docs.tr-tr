@@ -1,22 +1,23 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: yazılan veri kümelerine açıklama ekleme'
 title: Türü Belirtilmiş DataSets için Yorum Ekleme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: 79d3913827d5df6f0ac4e77bfdb8f37b553a86d2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6f5838e94d88fd6c9b3a1991d4c8023d5892b784
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203754"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739709"
 ---
 # <a name="annotating-typed-datasets"></a>Türü Belirtilmiş DataSets için Yorum Ekleme
 
 Ek açıklamalar, temeldeki şemayı değiştirmeden, yazdığınız öğelerin adlarını değiştirmenize olanak sağlar <xref:System.Data.DataSet> . Temel şemadaki öğelerin adlarını değiştirmek, yazılan veri **kümesinin** veri kaynağında mevcut olmayan nesnelere başvurmasına ve veri kaynağında var olan nesnelere yönelik bir başvuruyu kaybetmesine neden olur.  
   
- Ek açıklamaları kullanarak, yazılan **veri** kümenizdeki nesnelerin adlarını daha anlamlı adlarla özelleştirebilir, böylece kod daha okunabilir ve yazılan **Veri kümeniz** istemcilerin kullanması için daha kolay olur, temel şemayı bozulmadan bırakır. Örneğin, **Northwind** veritabanının **Customers** tablosu için aşağıdaki şema öğesi, **CustomersRow** ve adlandırılmış müşterilerin bir **DataRow** nesne adı ile sonuçlanır <xref:System.Data.DataRowCollection> **Customers**.  
+ Ek açıklamaları kullanarak, yazılan **veri** kümenizdeki nesnelerin adlarını daha anlamlı adlarla özelleştirebilir, böylece kod daha okunabilir ve yazılan **Veri kümeniz** istemcilerin kullanması için daha kolay olur, temel şemayı bozulmadan bırakır. Örneğin, **Northwind** veritabanının **Customers** tablosu için aşağıdaki şema öğesi, **CustomersRow** ve adlandırılmış müşterilerin bir **DataRow** nesne adı ile sonuçlanır <xref:System.Data.DataRowCollection> .  
   
 ```xml  
 <xs:element name="Customers">  
@@ -28,7 +29,7 @@ Ek açıklamalar, temeldeki şemayı değiştirmeden, yazdığınız öğelerin 
 </xs:element>  
 ```  
   
- Müşterilerin **DataRowCollection** adı istemci **Customers** kodunda anlamlıdır, ancak tek bir nesne olduğundan **CustomersRow** **DataRow** adı yanıltıcı olur. Ayrıca, yaygın senaryolarda nesne, **satır** tanımlayıcı olmadan, bunun yerine yalnızca bir **Müşteri** nesnesi olarak adlandırılır. Çözüm, şemaya açıklama eklemek ve **DataRow** ve **DataRowCollection** nesnelerinin yeni adlarını belirlemektir. Önceki şemanın açıklamalı sürümü aşağıda verilmiştir.  
+ Müşterilerin **DataRowCollection** adı istemci  kodunda anlamlıdır, ancak tek bir nesne olduğundan **CustomersRow** **DataRow** adı yanıltıcı olur. Ayrıca, yaygın senaryolarda nesne, **satır** tanımlayıcı olmadan, bunun yerine yalnızca bir **Müşteri** nesnesi olarak adlandırılır. Çözüm, şemaya açıklama eklemek ve **DataRow** ve **DataRowCollection** nesnelerinin yeni adlarını belirlemektir. Önceki şemanın açıklamalı sürümü aşağıda verilmiştir.  
   
 ```xml  
 <xs:element name="Customers" codegen:typedName="Customer" codegen:typedPlural="Customers">  
@@ -40,26 +41,26 @@ Ek açıklamalar, temeldeki şemayı değiştirmeden, yazdığınız öğelerin 
 </xs:element>  
 ```  
   
- **Müşterinin** **typedName** değerini belirtmek, bir **DataRow** nesnesinin **Müşteri**adına neden olur. **Müşteriler** Için **typedPlural** değeri belirtildiğinde **müşterilerin** **DataRowCollection** adı korunur.  
+ **Müşterinin** **typedName** değerini belirtmek, bir **DataRow** nesnesinin **Müşteri** adına neden olur. **Müşteriler** Için **typedPlural** değeri belirtildiğinde **müşterilerin** **DataRowCollection** adı korunur.  
   
  Aşağıdaki tabloda kullanıma sunulan ek açıklamalar gösterilmektedir.  
   
-|Ek Açıklama|Açıklama|  
+|Ek Açıklama|Description|  
 |----------------|-----------------|  
 |**typedName**|Nesnenin adı.|  
 |**typedPlural**|Bir nesne koleksiyonunun adı.|  
 |**typedParent**|Üst ilişkide başvurulduğu sırada nesnenin adı.|  
 |**typedChildren**|Bir alt ilişkiden nesneleri döndürmek için yöntemin adı.|  
-|**nullValue**|Temel değer **DBNull**ise değeri. **NullValue** ek açıklamaları için aşağıdaki tabloya bakın. Varsayılan değer **_throw**.|  
+|**nullValue**|Temel değer **DBNull** ise değeri. **NullValue** ek açıklamaları için aşağıdaki tabloya bakın. Varsayılan değer **_throw**.|  
   
  Aşağıdaki tabloda, **NullValue** ek açıklaması için belirtime değerleri gösterilmektedir.  
   
-|nullValue değeri|Açıklama|  
+|nullValue değeri|Description|  
 |---------------------|-----------------|  
 |*Değiştirme değeri*|Döndürülecek bir değer belirtin. Döndürülen değerin öğe türüyle eşleşmesi gerekir. Örneğin, `nullValue="0"` null tamsayı alanları için 0 döndürmek üzere kullanın.|  
 |**_throw**|Bir özel durum oluşturur. Bu varsayılan seçenektir.|  
 |**_null**|Bir temel tür ile karşılaşılırsa, null bir başvuru döndürün veya bir özel durum oluşturun.|  
-|**_empty**|Dizeler için, **String. Empty**döndürün, aksi halde boş bir oluşturucudan oluşturulan nesneyi döndürün. İlkel bir tür ile karşılaşılırsa bir özel durum oluşturun.|  
+|**_empty**|Dizeler için, **String. Empty** döndürün, aksi halde boş bir oluşturucudan oluşturulan nesneyi döndürün. İlkel bir tür ile karşılaşılırsa bir özel durum oluşturun.|  
   
  Aşağıdaki tabloda, türü belirtilmiş bir **veri kümesindeki** nesneler için varsayılan değerler ve kullanılabilir ek açıklamalar gösterilmektedir.  
   
@@ -135,7 +136,7 @@ codegen:typedParent="Customer" codegen:typedChildren="GetOrders">
 </xs:schema>  
 ```  
   
- Aşağıdaki kod örneği, örnek şemadan oluşturulan kesin türü belirtilmiş bir **veri kümesini** kullanır. Bir tane, müşteriler tablosunu doldurmak için bir tane kullanır <xref:System.Data.SqlClient.SqlDataAdapter> ve **Customers** <xref:System.Data.SqlClient.SqlDataAdapter> **Orders** tablosunu doldurmak için bir diğeri. Türü kesin belirlenmiş **veri kümesi** , **DataRelation**'ı tanımlar.  
+ Aşağıdaki kod örneği, örnek şemadan oluşturulan kesin türü belirtilmiş bir **veri kümesini** kullanır. Bir tane, müşteriler tablosunu doldurmak için bir tane kullanır <xref:System.Data.SqlClient.SqlDataAdapter> ve  <xref:System.Data.SqlClient.SqlDataAdapter> **Orders** tablosunu doldurmak için bir diğeri. Türü kesin belirlenmiş **veri kümesi** , **DataRelation**'ı tanımlar.  
   
 ```vb  
 ' Assumes a valid SqlConnection object named connection.  

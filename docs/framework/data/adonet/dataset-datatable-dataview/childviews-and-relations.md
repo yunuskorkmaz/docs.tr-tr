@@ -1,20 +1,21 @@
 ---
+description: 'Daha fazla bilgi edinin: ChildViews ve Relations'
 title: ChildViews ve İlişkileri
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
-ms.openlocfilehash: 74b2de7a9ee62ae42a932c94261cf425d6a94808
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f27526ef0ad5bee70b0c67542e2611ff85b156f8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203741"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739722"
 ---
 # <a name="childviews-and-relations"></a>ChildViews ve İlişkileri
 
-İçindeki tablolar arasında bir ilişki varsa <xref:System.Data.DataSet> , <xref:System.Data.DataView> <xref:System.Data.DataRowView.CreateChildView%2A> üst tablodaki satırların yöntemini kullanarak ilgili alt tablodan içeren bir satır oluşturabilirsiniz <xref:System.Data.DataRowView> . Örneğin, aşağıdaki kod **kategorileri** ve Ilgili **ürünlerini** **CategoryName** ve **ProductName**öğesine göre sıralanmış alfabetik sırada görüntüler.  
+İçindeki tablolar arasında bir ilişki varsa <xref:System.Data.DataSet> , <xref:System.Data.DataView> <xref:System.Data.DataRowView.CreateChildView%2A> üst tablodaki satırların yöntemini kullanarak ilgili alt tablodan içeren bir satır oluşturabilirsiniz <xref:System.Data.DataRowView> . Örneğin, aşağıdaki kod **kategorileri** ve Ilgili **ürünlerini** **CategoryName** ve **ProductName** öğesine göre sıralanmış alfabetik sırada görüntüler.  
   
 ```vb  
 Dim catTable As DataTable = catDS.Tables("Categories")  

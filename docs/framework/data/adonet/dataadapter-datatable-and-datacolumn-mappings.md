@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: DataAdapter DataTable ve DataColumn Mappings'
 title: DataAdapter DataTable ve DataColumn Eşlemeleri
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
-ms.openlocfilehash: b979431836b55b23ac9ba6ec4535f33765dce555
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 25007925afa57dd0cb6e75f808444f1bfaeea9b1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "91177741"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739747"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>DataAdapter DataTable ve DataColumn Eşlemeleri
 

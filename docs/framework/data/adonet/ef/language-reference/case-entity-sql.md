@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: CASE (Entity SQL)'
 title: Büyük/küçük harf (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
-ms.openlocfilehash: 65efedd36401db402a32748afaebff0f2af9f2a7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 58f51aa46f41c3b502bcd6d364e893a12624f4cf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91185229"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739501"
 ---
 # <a name="case-entity-sql"></a>Büyük/küçük harf (Entity SQL)
 

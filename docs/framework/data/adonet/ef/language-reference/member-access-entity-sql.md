@@ -1,13 +1,14 @@
 ---
+description: Hakkında daha fazla bilgi edinin:. (Üye erişimi) (Entity SQL)
 title: . (Üye erişimi) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4733e3b2-3efa-4b96-b591-ac31350e96ad
-ms.openlocfilehash: 82cd2f17b2b5ea484a8202b50619047b428fe94a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 94833d3525c7d17cadaef15065b3dcbdb43a6ded
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91192158"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739384"
 ---
 # <a name="-member-access-entity-sql"></a>. (Üye erişimi) (Entity SQL)
 

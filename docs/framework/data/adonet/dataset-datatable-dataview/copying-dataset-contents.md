@@ -1,28 +1,29 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: veri kümesi Içeriğini kopyalama'
 title: DataSet İçeriklerini Kopyalama
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: cb846617-2b1a-44ff-bd7f-5835f5ea37fa
-ms.openlocfilehash: 1cadcacab6084bbf3caaf61d98b78fe3067d92f7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4b49ad367c96dd7c99363c7c4282930a6e4da37d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91202376"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739696"
 ---
 # <a name="copying-dataset-contents"></a>DataSet İçeriklerini Kopyalama
 
-<xref:System.Data.DataSet>Özgün verileri etkilemeden verilerle çalışabilmeniz veya bir veri **kümesindeki**verilerin bir alt kümesiyle çalışmanız için bir kopyasını oluşturabilirsiniz. Bir **veri kümesini**kopyalarken şunları yapabilirsiniz:  
+<xref:System.Data.DataSet>Özgün verileri etkilemeden verilerle çalışabilmeniz veya bir veri **kümesindeki** verilerin bir alt kümesiyle çalışmanız için bir kopyasını oluşturabilirsiniz. Bir **veri kümesini** kopyalarken şunları yapabilirsiniz:  
   
-- Şema, veri, satır durum bilgileri ve satır sürümleri dahil olmak üzere **veri kümesinin**tam bir kopyasını oluşturun.  
+- Şema, veri, satır durum bilgileri ve satır sürümleri dahil olmak üzere **veri kümesinin** tam bir kopyasını oluşturun.  
   
-- Mevcut bir **veri kümesinin**şemasını Içeren bir **veri kümesi** oluşturun, ancak yalnızca değiştirilmiş olan satırları. Değiştirilen tüm satırları döndürebilir veya belirli bir **DataRowState**belirtebilirsiniz. Satır durumları hakkında daha fazla bilgi için bkz. [Satır durumları ve satır sürümleri](row-states-and-row-versions.md).  
+- Mevcut bir **veri kümesinin** şemasını Içeren bir **veri kümesi** oluşturun, ancak yalnızca değiştirilmiş olan satırları. Değiştirilen tüm satırları döndürebilir veya belirli bir **DataRowState** belirtebilirsiniz. Satır durumları hakkında daha fazla bilgi için bkz. [Satır durumları ve satır sürümleri](row-states-and-row-versions.md).  
   
 - Herhangi bir satırı kopyalamadan yalnızca **veri kümesinin** şemasını veya ilişkisel yapısını kopyalayın. Satırlar var olan bir using öğesine aktarılabilir <xref:System.Data.DataTable> <xref:System.Data.DataTable.ImportRow%2A> .  
   
- Hem şema hem de verileri içeren **veri kümesinin** tam bir kopyasını oluşturmak Için, <xref:System.Data.DataSet.Copy%2A> **veri kümesinin**yöntemini kullanın. Aşağıdaki kod örneği, **veri kümesinin**tam bir kopyasının nasıl oluşturulacağını gösterir.  
+ Hem şema hem de verileri içeren **veri kümesinin** tam bir kopyasını oluşturmak Için, <xref:System.Data.DataSet.Copy%2A> **veri kümesinin** yöntemini kullanın. Aşağıdaki kod örneği, **veri kümesinin** tam bir kopyasının nasıl oluşturulacağını gösterir.  
   
 ```vb  
 Dim copyDataSet As DataSet = customerDataSet.Copy()  
@@ -32,7 +33,7 @@ Dim copyDataSet As DataSet = customerDataSet.Copy()
 DataSet copyDataSet = customerDataSet.Copy();  
 ```  
   
- Şemayı ve yalnızca **eklenen**, **değiştirilen**veya **silinen** satırları temsil eden verileri içeren bir **veri kümesinin** kopyasını oluşturmak için, <xref:System.Data.DataSet.GetChanges%2A> **veri kümesinin**yöntemini kullanın. **GetChanges 'ı çağırırken yalnızca**belirtilen satır durumundaki satırları döndürmek için **GetChanges** 'ı da kullanabilirsiniz. **DataRowState** Aşağıdaki kod örneği, **GetChanges**çağrılırken **DataRowState** 'in nasıl geçirileceğini gösterir.  
+ Şemayı ve yalnızca **eklenen**, **değiştirilen** veya **silinen** satırları temsil eden verileri içeren bir **veri kümesinin** kopyasını oluşturmak için, <xref:System.Data.DataSet.GetChanges%2A> **veri kümesinin** yöntemini kullanın. **GetChanges 'ı çağırırken yalnızca** belirtilen satır durumundaki satırları döndürmek için **GetChanges** 'ı da kullanabilirsiniz.  Aşağıdaki kod örneği, **GetChanges** çağrılırken **DataRowState** 'in nasıl geçirileceğini gösterir.  
   
 ```vb  
 ' Copy all changes.  
@@ -49,7 +50,7 @@ DataSet changeDataSet = customerDataSet.GetChanges();
 DataSet addedDataSet= customerDataSet.GetChanges(DataRowState.Added);  
 ```  
   
- Yalnızca şemayı içeren bir **veri kümesinin** kopyasını oluşturmak Için <xref:System.Data.DataSet.Clone%2A> **veri kümesinin**yöntemini kullanın. Ayrıca, **DataTable**'ın **ImportRow** yöntemini kullanarak kopyalanan **veri kümesine** mevcut satırları ekleyebilirsiniz. **ImportRow** , belirtilen tabloya veri, satır durumu ve satır sürümü bilgilerini ekler. Sütun değerleri yalnızca sütun adının eşleştiği ve veri türünün uyumlu olduğu yerlerde eklenir.  
+ Yalnızca şemayı içeren bir **veri kümesinin** kopyasını oluşturmak Için <xref:System.Data.DataSet.Clone%2A> **veri kümesinin** yöntemini kullanın. Ayrıca, **DataTable**'ın **ImportRow** yöntemini kullanarak kopyalanan **veri kümesine** mevcut satırları ekleyebilirsiniz. **ImportRow** , belirtilen tabloya veri, satır durumu ve satır sürümü bilgilerini ekler. Sütun değerleri yalnızca sütun adının eşleştiği ve veri türünün uyumlu olduğu yerlerde eklenir.  
   
  Aşağıdaki kod örneği, bir **veri kümesinin** kopyasını oluşturur ve ardından orijinal **veri kümesindeki** satırları, **Ülke Bölgesi** sütununun "Almanya" değerine sahip olduğu müşteriler için **veri kümesi** kopyası içindeki **müşteriler** tablosuna ekler.  
   
