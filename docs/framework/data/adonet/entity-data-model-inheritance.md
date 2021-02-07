@@ -1,19 +1,20 @@
 ---
+description: 'Varlık Veri Modeli: devralma hakkında daha fazla bilgi edinin'
 title: 'Varlık Veri Modeli: Devralma'
 ms.date: 03/30/2017
 ms.assetid: 42c7ef24-710a-4af9-8493-cd41c399ecb0
-ms.openlocfilehash: 057040eee411988c46adc9c4cabcfe5f5a185e1b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 69d05800f397c122243fbaa497c67634fa78d4b7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91175466"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672861"
 ---
 # <a name="entity-data-model-inheritance"></a>Varlık Veri Modeli: Devralma
 
 Varlık Veri Modeli (EDM), [varlık türleri](entity-type.md)için devralmayı destekler. EDM 'da devralma, nesne odaklı programlama dillerinde sınıfların devralmasına benzerdir. Nesne odaklı dillerdeki sınıflar gibi, kavramsal bir modelde, başka bir varlık türünden ( *temel tür*) devralan bir varlık türü ( *türetilmiş bir tür*) tanımlayabilirsiniz. Ancak, nesne odaklı programlamada sınıfların aksine, kavramsal bir modelde türetilmiş tür her zaman temel türün tüm [özelliklerini](property.md) ve [gezinti özelliklerini](navigation-property.md) devralır. Türetilmiş bir türdeki devralınan özellikleri geçersiz kılamazsınız.  
   
- Kavramsal modelde, türetilmiş bir türün başka bir türetilmiş türden devraldığı devralma hiyerarşileri oluşturabilirsiniz. Hiyerarşinin en üstündeki tür (türetilmiş tür olmayan hiyerarşide bir tür) *kök türü*olarak adlandırılır. Devralma hiyerarşisinde, [varlık anahtarının](entity-key.md) kök türünde tanımlanması gerekir.  
+ Kavramsal modelde, türetilmiş bir türün başka bir türetilmiş türden devraldığı devralma hiyerarşileri oluşturabilirsiniz. Hiyerarşinin en üstündeki tür (türetilmiş tür olmayan hiyerarşide bir tür) *kök türü* olarak adlandırılır. Devralma hiyerarşisinde, [varlık anahtarının](entity-key.md) kök türünde tanımlanması gerekir.  
   
  Türetilmiş bir türün birden fazla türden devraldığı devralma hiyerarşileri derlenemez. Örneğin, varlık türü olan bir kavramsal modelde `Book` , türetilmiş türleri tanımlayabilir `FictionBook` ve bunların `NonFictionBook` her biri öğesinden devralınır `Book` . Ancak, ve türlerinden devralan bir tür tanımlayamazsınız `FictionBook` `NonFictionBook` .  
   

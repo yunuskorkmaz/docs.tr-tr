@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: LINQ to DataSet örnekleri'
 title: LINQ to DataSet Örnekleri
 ms.date: 03/30/2017
 ms.assetid: dfd91658-8d8a-45a4-a356-e327e809f21d
-ms.openlocfilehash: 48511dc7ae249e35b9bd76e0d6d3d9f1ef39dde0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 65977210fb160439231ea723134c94eb56ca8930
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169524"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672757"
 ---
 # <a name="linq-to-dataset-examples"></a>LINQ to DataSet Örnekleri
 
@@ -30,7 +31,7 @@ Bu bölümde, standart sorgu işleçlerini kullanan LINQ to DataSet programlama 
   
 - [Toplama İşleçleri](query-expression-syntax-examples-aggregate-operators.md)  
   
-- [Birleşim İşleçleri](query-expression-syntax-examples-join-operators.md)  
+- [JOIN Işleçleri](query-expression-syntax-examples-join-operators.md)  
   
  [Yöntem Tabanlı Sorgu Örnekleri](method-based-query-examples-linq-to-dataset.md)  
  Aşağıdaki örnekleri içerir:  

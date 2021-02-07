@@ -1,18 +1,19 @@
 ---
-title: 'Yöntem tabanlı sorgu söz dizimi örnekleri: öğe Işleçleri (LINQ to DataSet)'
+description: 'Hakkında daha fazla bilgi edinin: Method-Based sorgu söz dizimi örnekleri: öğe Işleçleri (LINQ to DataSet)'
+title: 'Method-Based sorgu söz dizimi örnekleri: öğe Işleçleri (LINQ to DataSet)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: eedf2fbd-f407-4f62-bb1a-c00eb001b1dd
-ms.openlocfilehash: 669c6a34d1179caf4ec40eb8db559bdfdc9fc7f5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b6e9832832198927f7913b0f93b1347ae353461b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91189285"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672731"
 ---
-# <a name="method-based-query-syntax-examples-element-operators-linq-to-dataset"></a>Yöntem tabanlı sorgu söz dizimi örnekleri: öğe Işleçleri (LINQ to DataSet)
+# <a name="method-based-query-syntax-examples-element-operators-linq-to-dataset"></a>Method-Based sorgu söz dizimi örnekleri: öğe Işleçleri (LINQ to DataSet)
 
 Bu konudaki örneklerde, <xref:System.Linq.Enumerable.First%2A> <xref:System.Linq.Enumerable.ElementAt%2A> <xref:System.Data.DataRow> <xref:System.Data.DataSet> sorgu ifadesi söz dizimini kullanarak bir öğesinden öğeleri almak için ve yöntemlerinin nasıl kullanılacağı gösterilmektedir.  
   

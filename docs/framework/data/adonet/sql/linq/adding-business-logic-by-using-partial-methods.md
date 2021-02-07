@@ -1,20 +1,21 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: kısmi yöntemler kullanarak Iş mantığı ekleme'
 title: Kısmi Yöntemler Kullanarak İş Mantığı Ekleme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3a73991e-fd4e-4610-93fb-7ced4dc6b7f9
-ms.openlocfilehash: 9ad3329c621b8bf8eaa0fd5f986ac7e8cff97d9e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c34d0d25fa9dba074f1c7ff2abe2e9e24c931a8e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91156166"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672276"
 ---
 # <a name="adding-business-logic-by-using-partial-methods"></a>Kısmi Yöntemler Kullanarak İş Mantığı Ekleme
 
-Uygulamanızda Visual Basic ve C# tarafından üretilen kodu, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *kısmi Yöntemler*kullanarak özelleştirebilirsiniz. Üreten kod, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] imzaları kısmi bir metodun bir parçası olarak tanımlar. Yöntemini uygulamak istiyorsanız, kendi kısmi yönteminizi ekleyebilirsiniz. Kendi uygulamanızı eklemeyin, derleyici kısmi Yöntemler imzasını atar ve içinde varsayılan yöntemleri çağırır [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] .  
+Uygulamanızda Visual Basic ve C# tarafından üretilen kodu, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *kısmi Yöntemler* kullanarak özelleştirebilirsiniz. Üreten kod, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] imzaları kısmi bir metodun bir parçası olarak tanımlar. Yöntemini uygulamak istiyorsanız, kendi kısmi yönteminizi ekleyebilirsiniz. Kendi uygulamanızı eklemeyin, derleyici kısmi Yöntemler imzasını atar ve içinde varsayılan yöntemleri çağırır [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] .  
   
 > [!NOTE]
 > Visual Studio kullanıyorsanız, varlık sınıflarına doğrulama ve diğer özelleştirmeler eklemek için Nesne İlişkisel Tasarımcısı kullanabilirsiniz.  
@@ -35,7 +36,7 @@ Uygulamanızda Visual Basic ve C# tarafından üretilen kodu, [!INCLUDE[vbtecdli
   
 ## <a name="example"></a>Örnek  
   
-### <a name="description"></a>Açıklama  
+### <a name="description"></a>Description  
 
  Aşağıdaki örnek, `ExampleClass` ilk olarak SQLMetal gibi kod oluşturma aracı tarafından tanımlandıkları ve sonra iki yöntemden yalnızca birini nasıl uygulayabileceğinizi gösterir.  
   
@@ -46,7 +47,7 @@ Uygulamanızda Visual Basic ve C# tarafından üretilen kodu, [!INCLUDE[vbtecdli
   
 ## <a name="example"></a>Örnek  
   
-### <a name="description"></a>Açıklama  
+### <a name="description"></a>Description  
 
  Aşağıdaki örnek ve varlıkları arasındaki ilişkiyi kullanır `Shipper` `Order` . Kısmi yöntemlerin ve yöntemleri arasında aklınızda yer `InsertShipper` `DeleteShipper` . Bu yöntemler, eşleme tarafından sağlanan varsayılan kısmi yöntemleri geçersiz kılar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] .  
   

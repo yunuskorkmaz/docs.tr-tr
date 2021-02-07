@@ -1,18 +1,19 @@
 ---
-title: 'Yöntem tabanlı sorgu söz dizimi örnekleri: sıralama (LINQ to DataSet)'
+description: 'Hakkında daha fazla bilgi edinin: Method-Based sorgu söz dizimi örnekleri: sıralama (LINQ to DataSet)'
+title: 'Method-Based sorgu söz dizimi örnekleri: sıralama (LINQ to DataSet)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8f9ce4fd-e84f-48c0-bb64-89e217236d3e
-ms.openlocfilehash: 635b7f6e498e27ef8ca2e133df639f1010184a93
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d655ff52fe30a9af15245a4c9989062107bb6842
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197878"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672666"
 ---
-# <a name="method-based-query-syntax-examples-ordering-linq-to-dataset"></a>Yöntem tabanlı sorgu söz dizimi örnekleri: sıralama (LINQ to DataSet)
+# <a name="method-based-query-syntax-examples-ordering-linq-to-dataset"></a>Method-Based sorgu söz dizimi örnekleri: sıralama (LINQ to DataSet)
 
 Bu konudaki örneklerde <xref:System.Linq.Enumerable.OrderBy%2A> ,,  <xref:System.Linq.Enumerable.Reverse%2A> ve <xref:System.Linq.Enumerable.ThenBy%2A> yöntemlerinin sorgu <xref:System.Data.DataSet> söz dizimini kullanarak sonuçları sıralamak için, ve yöntemlerinin nasıl kullanılacağı gösterilmektedir.  
   

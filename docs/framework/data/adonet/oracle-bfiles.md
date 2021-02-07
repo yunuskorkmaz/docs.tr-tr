@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Oracle BFILEs'
 title: Oracle BFILE
 ms.date: 03/30/2017
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
-ms.openlocfilehash: d43dfccd9735ce1ab822d7b14de2abaa0940c77b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e1fda4ad4acb225dc9a70c92b2c4f2b1d61ab1d7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166605"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672497"
 ---
 # <a name="oracle-bfiles"></a>Oracle BFILE
 
@@ -21,7 +22,7 @@ Oracle için .NET Framework Veri Sağlayıcısı, <xref:System.Data.OracleClient
   
 - Sunucu tarafı parçalama destekler.  
   
-- Başvuru kopyalama semantiğini kullanır. Örneğin, bir **bDosya**üzerinde kopyalama işlemi gerçekleştirirseniz, yalnızca **bDosya** Konumlandırıcı (dosyanın bir başvurusu) kopyalanır. Dosyadaki veriler kopyalanmaz.  
+- Başvuru kopyalama semantiğini kullanır. Örneğin, bir **bDosya** üzerinde kopyalama işlemi gerçekleştirirseniz, yalnızca **bDosya** Konumlandırıcı (dosyanın bir başvurusu) kopyalanır. Dosyadaki veriler kopyalanmaz.  
   
  **BDosya** veri türü,, boyutu büyük olan LOBs 'ye başvurmak için kullanılmalıdır ve bu nedenle veritabanında depolanması pratik değildir. **Lob** veri türü ile karşılaştırıldığında bir **bDosya** veri türü kullanılırken daha fazla istemci, sunucu ve iletişim yükü söz konusu olur. Yalnızca az miktarda veri edinmeniz gerekiyorsa, bir **bDosya** 'ya erişmek daha etkilidir. Nesnenin tamamını edinmeniz gerekiyorsa, veritabanına yerleşik lob 'Ları erişmek daha etkilidir.  
   

@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi: sayısal bir dizide en büyük değeri bulma'
 title: Sayısal Dizideki En Büyük Değeri Bulma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 70d7c058-0280-4815-a008-6f290093591a
-ms.openlocfilehash: b70b94338ca7bdbb600bac697d3a36ff117d757e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ab311f29d776c1ef4647967d391c7e4122ae7d38
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91156010"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672107"
 ---
 # <a name="find-the-maximum-value-in-a-numeric-sequence"></a>Sayısal Dizideki En Büyük Değeri Bulma
 

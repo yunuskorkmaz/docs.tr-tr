@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Programlama Kılavuzu (LINQ to DataSet)'
 title: Programlama Kılavuzu (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: 977aedd7-0084-46a0-b56f-345787a55da1
-ms.openlocfilehash: 720d9a90583a0dcf3453689a362f6043157a326c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b7f14d902b7a2df9d6add151b8783aa6fc0dcffd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91161565"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672328"
 ---
 # <a name="programming-guide-linq-to-dataset"></a>Programlama Kılavuzu (LINQ to DataSet)
 

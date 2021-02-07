@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: OLE DB, ODBC ve Oracle bağlantı havuzu'
 title: OLE DB, ODBC ve Oracle Bağlantı Havuzu
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: 0ff3cbd89482645ff8d52e3144f1a82fd05d8013
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: da30d70f88c8d109d50716347e7deaacdc65991a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91150693"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672653"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB, ODBC ve Oracle bağlantı havuzu
 
@@ -69,7 +70,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
 
  Aşağıdaki tabloda, <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A> bağlantı havuzu davranışlarını ayarlamak için kullanabileceğiniz değerler açıklanmaktadır.
 
-|Ad|Varsayılan|Açıklama|
+|Name|Varsayılan|Açıklama|
 |----------|-------------|-----------------|
 |`Connection Lifetime`|0|Havuza bir bağlantı döndürüldüğünde, oluşturma süresi geçerli zamandan karşılaştırılır ve bu zaman aralığı (saniye cinsinden) tarafından belirtilen değeri aşarsa bağlantı yok edilir `Connection Lifetime` . Bu, çalışan bir sunucu ve daha önce çevrimiçi hale getirilen bir sunucu arasında yük dengelemeyi zorlamak için kümelenmiş yapılandırmalarda yararlıdır.<br /><br /> Sıfır (0) değeri, havuza alınan bağlantıların en uzun zaman aşımı süresine sahip olmasına neden olur.|
 |`Enlist`|değeri|Ne zaman `true` , bir işlem bağlamı varsa, havuzlayıcı oluşturma iş parçacığının geçerli işlem bağlamındaki bağlantıyı otomatik olarak listeler.|
