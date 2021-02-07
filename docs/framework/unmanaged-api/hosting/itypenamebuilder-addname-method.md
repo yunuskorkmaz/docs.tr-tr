@@ -1,4 +1,5 @@
 ---
+description: ': Itypeenamebuilder:: AddName metodu hakkında daha fazla bilgi edinin'
 title: ITypeNameBuilder::AddName Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: be2f6e55-f46d-49aa-b477-80fd7e4515f7
 topic_type:
 - apiref
-ms.openlocfilehash: 6498a7d9c9c1666d4644ce8e865ae821b38459c6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9a55f1fd3d3f1e46292996767ed42f3266aef52c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727737"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99680791"
 ---
-# <a name="itypenamebuilderaddname-method"></a><span data-ttu-id="e7e73-102">ITypeNameBuilder::AddName Yöntemi</span><span class="sxs-lookup"><span data-stu-id="e7e73-102">ITypeNameBuilder::AddName Method</span></span>
+# <a name="itypenamebuilderaddname-method"></a><span data-ttu-id="ad171-103">ITypeNameBuilder::AddName Yöntemi</span><span class="sxs-lookup"><span data-stu-id="ad171-103">ITypeNameBuilder::AddName Method</span></span>
 
-<span data-ttu-id="e7e73-103">Bu yöntem .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.</span><span class="sxs-lookup"><span data-stu-id="e7e73-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+<span data-ttu-id="ad171-104">Bu yöntem .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.</span><span class="sxs-lookup"><span data-stu-id="ad171-104">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e7e73-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="e7e73-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ad171-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="ad171-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT AddName (  
@@ -34,16 +35,16 @@ HRESULT AddName (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="e7e73-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e7e73-105">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ad171-106">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ad171-106">Requirements</span></span>  
 
- <span data-ttu-id="e7e73-106">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e7e73-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="ad171-107">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ad171-107">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e7e73-107">**Üst bilgi:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="e7e73-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="ad171-108">**Üst bilgi:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="ad171-108">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="e7e73-108">**Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi</span><span class="sxs-lookup"><span data-stu-id="e7e73-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="ad171-109">**Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi</span><span class="sxs-lookup"><span data-stu-id="ad171-109">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="e7e73-109">**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e7e73-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="ad171-110">**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ad171-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e7e73-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e7e73-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ad171-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ad171-111">See also</span></span>
 
-- [<span data-ttu-id="e7e73-111">Barındırma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="e7e73-111">Hosting Interfaces</span></span>](hosting-interfaces.md)
+- [<span data-ttu-id="ad171-112">Barındırma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="ad171-112">Hosting Interfaces</span></span>](hosting-interfaces.md)
