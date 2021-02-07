@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: güvenilir alt sistem'
 title: Güvenilir Alt Sistem
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-ms.openlocfilehash: 93770c8f4d92a12dcfe29290c84708949d9a1d4a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 41c2943c7794206dba06ef8b5bbee762931ce0c0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96293396"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99733053"
 ---
 # <a name="trusted-subsystem"></a>Güvenilir Alt Sistem
 
@@ -30,14 +31,14 @@ ms.locfileid: "96293396"
   
 5. Güvenilen alt sistem yanıtı işler ve istemciye kendi yanıtını verir.  
   
-|Özellik|Açıklama|  
+|Özellik|Description|  
 |--------------------|-----------------|  
 |Güvenlik modu|İleti|  
 |Birlikte çalışabilirlik|Yalnızca Windows Communication Foundation (WCF).|  
 |Kimlik doğrulaması (hizmet)|Güvenlik belirteci hizmeti, istemcilerin kimliğini doğrular ve yetkilendirir.|  
 |Kimlik doğrulaması (istemci)|Güvenilen alt sistem istemcinin kimliğini doğrular ve kaynak, güvenilen alt sistem hizmetinin kimliğini doğrular.|  
-|Bütünlük|Evet|  
-|Gizlilik|Evet|  
+|Bütünlük|Yes|  
+|Gizlilik|Yes|  
 |Aktarım|İstemci ile güvenilen alt sistem hizmeti arasında HTTP.<br /><br /> NET. Güvenilen alt sistem hizmeti ve kaynak (arka uç hizmeti) arasında TCP.|  
 |Bağlama|<xref:System.ServiceModel.WSHttpBinding> ' <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   

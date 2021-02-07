@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: ASP.NET rol sağlayıcısını bir hizmetle kullanma'
 title: 'Nasıl yapılır: ASP.NET Rol Sağlayıcısını Bir Hizmetle Kullanma'
 ms.date: 03/30/2017
 ms.assetid: 88d33a81-8ac7-48de-978c-5c5b1257951e
-ms.openlocfilehash: 45eeda046e877b4379d7d0e5edd90fac305f5e44
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 24bf9ad72d3634baf1d7120e4e60ccde5a4078a9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595303"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734119"
 ---
 # <a name="how-to-use-the-aspnet-role-provider-with-a-service"></a>Nasıl yapılır: ASP.NET Rol Sağlayıcısını Bir Hizmetle Kullanma
 
@@ -19,7 +20,7 @@ Rol sağlayıcısı özelliği, Kullanıcı bilgilerini depolamak için bir SQL 
   
 ## <a name="configure-the-role-provider"></a>Rol sağlayıcısını yapılandırma  
   
-1. Web. config dosyasında, < `system.web` > öğesi altında, bir < `roleManager` > öğesi ekleyin ve `enabled` özniteliğini olarak ayarlayın `true` .  
+1. Web.config dosyasında, <> öğesinin altında, `system.web` bir <`roleManager`> öğesi ekleyin ve `enabled` özniteliğini olarak ayarlayın `true` .  
   
 2. `defaultProvider`Özniteliğini olarak ayarlayın `SqlRoleProvider` .  
   
@@ -42,7 +43,7 @@ Rol sağlayıcısı özelliği, Kullanıcı bilgilerini depolamak için bir SQL 
   
 ## <a name="configure-the-service-to-use-the-role-provider"></a>Rol sağlayıcısını kullanmak için hizmeti yapılandırma  
   
-1. Web. config dosyasında bir [\<system.serviceModel>](../../configure-apps/file-schema/wcf/system-servicemodel.md) öğesi ekleyin.  
+1. Web.config dosyasında bir [\<system.serviceModel>](../../configure-apps/file-schema/wcf/system-servicemodel.md) öğesi ekleyin.  
   
 2. [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md)<> öğesine bir öğe ekleyin `system.ServiceModel` .  
   

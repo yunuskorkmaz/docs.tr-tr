@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: yönlendirme hizmeti'
 title: Yönlendirme Hizmeti
 ms.date: 03/30/2017
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-ms.openlocfilehash: 833c824e17d70a982a2f7bb13fe388b9b2b0dec1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 29fec780e6bc9266a8fe17d779ff0998e13e5c68
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84590455"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99733261"
 ---
 # <a name="routing-service"></a>Yönlendirme Hizmeti
 
@@ -44,7 +45,7 @@ Yönlendirme hizmeti, WCF hizmeti ve kanal modelleriyle uyumlu genel, dinamik ol
 
 İçerik tabanlı yönlendirme, ileti içinde bulunan bir veya daha fazla değere göre bir iletiyi yönlendirmenize olanak tanır. Yönlendirme hizmeti her iletiyi inceler ve ileti içeriğine ve oluşturduğunuz yönlendirme mantığına göre hedef uç noktaya yönlendirir. İçerik tabanlı yönlendirme, hizmet toplama, hizmet sürümü oluşturma ve öncelik yönlendirmenin temelini sağlar.
 
-İçerik tabanlı yönlendirme uygulamak için yönlendirme hizmeti, <xref:System.ServiceModel.Dispatcher.MessageFilter> yönlendirilecek iletiler içindeki belirli değerleri eşleştirmek için kullanılan uygulamaları kullanır. Bir **MessageFilter** bir iletiyle eşleşiyorsa Ileti, **MessageFilter**ile ilişkili hedef uç noktaya yönlendirilir.  İleti filtreleri <xref:System.ServiceModel.Routing.Configuration.FilterTableCollection> karmaşık yönlendirme mantığı oluşturmak için filtre tablolarında () birlikte gruplandırılır. Örneğin, bir filtre tablosu, iletilerin yalnızca beş hedef uç noktasından yalnızca birine yönlendirilmesine neden olan beş karşılıklı dışlamalı ileti filtresi içerebilir.
+İçerik tabanlı yönlendirme uygulamak için yönlendirme hizmeti, <xref:System.ServiceModel.Dispatcher.MessageFilter> yönlendirilecek iletiler içindeki belirli değerleri eşleştirmek için kullanılan uygulamaları kullanır. Bir **MessageFilter** bir iletiyle eşleşiyorsa Ileti, **MessageFilter** ile ilişkili hedef uç noktaya yönlendirilir.  İleti filtreleri <xref:System.ServiceModel.Routing.Configuration.FilterTableCollection> karmaşık yönlendirme mantığı oluşturmak için filtre tablolarında () birlikte gruplandırılır. Örneğin, bir filtre tablosu, iletilerin yalnızca beş hedef uç noktasından yalnızca birine yönlendirilmesine neden olan beş karşılıklı dışlamalı ileti filtresi içerebilir.
 
 Yönlendirme hizmeti, içerik tabanlı yönlendirme gerçekleştirmek için kullanılan mantığı yapılandırmanıza ve aynı zamanda yönlendirme mantığını çalışma zamanında dinamik olarak güncelleyebilmesini sağlar.
 
@@ -119,5 +120,5 @@ Akışı desteklemek için bağlamayı ayarlarsanız yönlendirme hizmeti iletil
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yönlendirme Tanıtımı](routing-introduction.md)
-- [Anlaşmaları Yönlendirme](routing-contracts.md)
+- [Sözleşmeleri Yönlendirme](routing-contracts.md)
 - [İleti Filtreleri](message-filters.md)

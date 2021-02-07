@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Middle-Tier Istemci uygulamaları'
 title: Orta Katman İstemci Uygulamaları
 ms.date: 03/30/2017
 ms.assetid: f9714a64-d0ae-4a98-bca0-5d370fdbd631
-ms.openlocfilehash: 5019215567f4c9127f2e53fd4cdf0d4a67b84d17
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 90de03bb72e14f023db86e6f8226ae84f7461bee
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96248259"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99733820"
 ---
 # <a name="middle-tier-client-applications"></a>Orta Katman İstemci Uygulamaları
 

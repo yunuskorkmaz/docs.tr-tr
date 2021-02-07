@@ -1,13 +1,14 @@
 ---
+description: "Daha fazla bilgi edinin: WSE 3,0 Web hizmetlerini WCF 'ye geçirme"
 title: WSE 3.0 Web Hizmetlerini WCF'ye Taşıma
 ms.date: 03/30/2017
 ms.assetid: 7bc5fff7-a2b2-4dbc-86cc-ecf73653dcdc
-ms.openlocfilehash: 84d227a46c4d17291ccf35a759018ffbe6f48b82
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 92ba60410747399e7a58944c08a082d56fc524d2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96248168"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99733742"
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>WSE 3.0 Web Hizmetlerini WCF'ye Taşıma
 

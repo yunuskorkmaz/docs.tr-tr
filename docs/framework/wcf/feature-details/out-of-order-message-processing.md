@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: sıralı Ileti Işleme'
 title: Düzen Dışı İleti İşleme
 ms.date: 03/30/2017
 ms.assetid: 33fc62a5-5d59-461c-a37a-0e1b51ac763d
-ms.openlocfilehash: 7a5042e390231498de4f98abfc0e863cba199943
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4349b7d72c080dff579eda18ce51de99ab5e91fb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96248012"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99733612"
 ---
 # <a name="out-of-order-message-processing"></a>Düzen Dışı İleti İşleme
 

@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: oluşturulan Istemci kodunu anlama'
 title: Oluşturulmuş İstemci Kodlarını Anlama
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c3f6e4b0-1131-4c94-aa39-a197c5c2f2ca
-ms.openlocfilehash: 22cb7a7b4cd6712d509586cb2ae7699d233eff2a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c95f02a257cd9417b94190c82fe426a1550f1bf0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96281631"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99732962"
 ---
 # <a name="understanding-generated-client-code"></a>Oluşturulmuş İstemci Kodlarını Anlama
 

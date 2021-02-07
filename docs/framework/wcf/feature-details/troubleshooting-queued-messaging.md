@@ -1,13 +1,14 @@
 ---
+description: Daha fazla bilgi için bkz. sıraya alınan Mesajlaşma sorunlarını giderme
 title: Kuyruğa Alınan İletilerde Sorun Giderme
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: f695af3d2ad498e1f5975e1a396f1e7b05bf63bc
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e7cf2706e7c0853f14bad449b6ecaa8dd5983755
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595134"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99733092"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Kuyruğa Alınan İletilerde Sorun Giderme
 
@@ -55,11 +56,11 @@ Bu bölüm, en yaygın sorun giderme sorunlarının yanıtlarını içerir. Bili
 
 Y **:** Yapılandırmanızda ve kodunuzda sıra Tekdüzen Kaynak tanımlayıcısı 'nı (URI) denetleyin. URI 'de "$" karakterini kullanmayın. Örneğin, OrdersQueue adlı özel bir kuyruğu ele almak için URI 'yi olarak belirtin `net.msmq://localhost/private/ordersQueue` .
 
-**S:** `ServiceHost.Open()`Sıraya alınan uygulamamda çağırmak şu özel durumu oluşturur: `System.ArgumentException` : temel adres bir URI sorgu dizesi içeremez. Neden mi?
+**S:** `ServiceHost.Open()` Sıraya alınan uygulamamda çağırmak şu özel durumu oluşturur: `System.ArgumentException` : temel adres bir URI sorgu dizesi içeremez. Neden?
 
 Y **:** Yapılandırma dosyanızdaki ve kodunuzda sıra URI 'sini kontrol edin. MSMQ kuyrukları '? ' karakterinin kullanımını desteklese de URI 'Ler, bu karakteri bir dize sorgusunun başlangıcı olarak yorumlar. Bu sorunu önlemek için, '? ' karakterlerini içermeyen sıra adlarını kullanın.
 
-**S:** Gönderme başarılı ancak alıcıda hiçbir hizmet işlemi çağrılmayacak. Neden mi?
+**S:** Gönderme başarılı ancak alıcıda hiçbir hizmet işlemi çağrılmayacak. Neden?
 
 Y **:** Yanıtı öğrenmek için aşağıdaki onay listesinden çalışın:
 
@@ -87,7 +88,7 @@ Y **:** Asuriyler "tam olarak" ( <xref:System.ServiceModel.MsmqBindingBase.Exact
 
 Eğer asursları None ( <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A>  =  `false` ) ise, varsayılan, atılacak ileti sırası işlevselliği değildir.
 
-**S:** Hizmetim SvcHost üzerinde oluşturulur. "EndpointListener Requirements ListenerFactory tarafından karşılanamıyor" iletisiyle birlikte aç. Neden mi?
+**S:** Hizmetim SvcHost üzerinde oluşturulur. "EndpointListener Requirements ListenerFactory tarafından karşılanamıyor" iletisiyle birlikte aç. Neden?
 
 A. Hizmet sözleşmenizi denetleyin. Tüm hizmet işlemlerine "ıoneway =" koymak için unutulmuş olabilirsiniz `true` . Kuyruklar yalnızca tek yönlü hizmet işlemlerini destekler.
 
@@ -95,7 +96,7 @@ A. Hizmet sözleşmenizi denetleyin. Tüm hizmet işlemlerine "ıoneway =" koyma
 
 Y **:** Hizmet ana bilgisayarın hatalı olup olmadığını belirleme. İzlemeye veya uygulamaya bakarak kontrol edebilirsiniz `IErrorHandler` . Bir zarar iletisi algılanırsa, varsayılan olarak hizmet ana bilgisayar hataları.
 
-**S:** Kuyrukta iletiler var, ancak Web 'de barındırılan sıraya alınmış hizmetm etkinleştirilmiyor. Neden mi?
+**S:** Kuyrukta iletiler var, ancak Web 'de barındırılan sıraya alınmış hizmetm etkinleştirilmiyor. Neden?
 
 Y **:** En yaygın nedenler izinlerdir.
 
@@ -126,19 +127,19 @@ Bir uygulama aynı bilgisayardan hem sıraya alınmış oturum iletileri hem de 
 
 ### <a name="msmq-integration-specific-troubleshooting"></a>MSMQ tümleştirmesi: belirli sorun giderme
 
-**S:** Bir ileti gönderdiğimde veya hizmet ana bilgisayarını açtığımda, düzenin yanlış olduğunu belirten bir hata alıyorum. Neden mi?
+**S:** Bir ileti gönderdiğimde veya hizmet ana bilgisayarını açtığımda, düzenin yanlış olduğunu belirten bir hata alıyorum. Neden?
 
 Y **:** MSMQ tümleştirme bağlamasını kullandığınızda, MSMQ. formatname şemasını kullanmanız gerekir. Örneğin, MSMQ. FormatName: DIRECT = OS: .\Private $ \OrdersQueue. Ancak özel atılacak ileti sırasını belirttiğinizde net. MSMQ şemasını kullanmanız gerekir.
 
-**S:** Ortak veya özel biçim adı kullandığımda ve hizmet ana bilgisayarını Windows Vista 'da açtığınızda bir hata alıyorum. Neden mi?
+**S:** Ortak veya özel biçim adı kullandığımda ve hizmet ana bilgisayarını Windows Vista 'da açtığınızda bir hata alıyorum. Neden?
 
 Y **:** Windows Vista 'daki WCF tümleştirme kanalı, zarar iletilerini işlemek için ana uygulama kuyruğu için bir alt sıra açılıp açılmadığını denetler. Alt sıra adı, dinleyiciye geçirilen bir MSMQ. formatname URI 'sinden türetilir. MSMQ 'daki alt sıra adı yalnızca bir doğrudan biçim adı olabilir. Bu nedenle hatayı görürsünüz. Sıra URI 'sini doğrudan biçim adıyla değiştirin.
 
-**S:** MSMQ uygulamasından bir ileti alırken ileti kuyrukta bulunur ve alan WCF uygulaması tarafından okunamaz. Neden mi?
+**S:** MSMQ uygulamasından bir ileti alırken ileti kuyrukta bulunur ve alan WCF uygulaması tarafından okunamaz. Neden?
 
 Y **:** İletinin gövdeye sahip olup olmadığını denetleyin. İletinin gövdesi yoksa, MSMQ tümleştirme kanalı iletiyi yoksayar. `IErrorHandler`Özel durumlar hakkında bildirim almak ve izlemeleri denetlemek için uygulayın.
 
-### <a name="security-related-troubleshooting"></a>Güvenlikle Ilgili sorun giderme
+### <a name="security-related-troubleshooting"></a>Security-Related sorunlarını giderme
 
 **S:** Çalışma grubu modunda varsayılan bağlama kullanan örneği çalıştırdığımda, iletiler gönderildi ancak alıcı tarafından hiçbir zaman alınmaz.
 

@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: yetkilendirme Ilkesi'
 title: Yetkilendirme İlkesi
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: a789faae1f6224512f9a8a9ab084c8a82e4a2b87
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c096585803f07aff157726bce850c09e27c51df5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553668"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99732715"
 ---
 # <a name="authorization-policy"></a>Yetkilendirme İlkesi
 
@@ -466,7 +467,7 @@ Aşağıdakiler, uygun yapılandırmada çalışacak şekilde değiştirilebilec
 
 1. Hizmet bilgisayarında bir dizin oluşturun.
 
-2. Hizmet programı dosyalarını *\service\bin* konumundan hizmet bilgisayarındaki dizine kopyalayın. Ayrıca, Setup.bat, Cleanup.bat, GetComputerName. vbs ve ImportClientCert.bat dosyalarını da hizmet bilgisayarına kopyalayın.
+2. Hizmet programı dosyalarını *\service\bin* konumundan hizmet bilgisayarındaki dizine kopyalayın. Ayrıca, Setup.bat, Cleanup.bat, GetComputerName.vbs ve ImportClientCert.bat dosyalarını da hizmet bilgisayarına kopyalayın.
 
 3. İstemci bilgisayarda istemci ikilileri için bir dizin oluşturun.
 
@@ -474,7 +475,7 @@ Aşağıdakiler, uygun yapılandırmada çalışacak şekilde değiştirilebilec
 
 5. Sunucusunda, `setup.bat service` yönetici ayrıcalıklarıyla açılan Visual Studio için geliştirici komut istemi ' de çalıştırın.
 
-    `setup.bat`Bağımsız değişkeniyle birlikte çalıştırmak, `service` bilgisayarın tam etki alanı adına sahip bir hizmet sertifikası oluşturur ve hizmet sertifikasını *Service. cer*adlı bir dosyaya aktarır.
+    `setup.bat`Bağımsız değişkeniyle birlikte çalıştırmak, `service` bilgisayarın tam etki alanı adına sahip bir hizmet sertifikası oluşturur ve hizmet sertifikasını *Service. cer* adlı bir dosyaya aktarır.
 
 6. *Service.exe.config* `findValue` , [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) bilgisayarın tam etki alanı adıyla aynı olan yeni sertifika adını (içindeki özniteliğinde) yansıtacak şekilde düzenleyin. Ayrıca, öğesindeki **ComputerName** \<service> / \<baseAddresses> öğesini localhost 'dan hizmet bilgisayarınızın tam adıyla değiştirin.
 
@@ -482,7 +483,7 @@ Aşağıdakiler, uygun yapılandırmada çalışacak şekilde değiştirilebilec
 
 8. İstemcisinde, `setup.bat client` yönetici ayrıcalıklarıyla açılan Visual Studio için geliştirici komut istemi ' de çalıştırın.
 
-    `setup.bat`Bağımsız değişkeniyle birlikte çalıştırmak, `client` **test1** adlı bir istemci sertifikası oluşturur ve istemci sertifikasını *Client. cer*adlı bir dosyaya aktarır.
+    `setup.bat`Bağımsız değişkeniyle birlikte çalıştırmak, `client` **test1** adlı bir istemci sertifikası oluşturur ve istemci sertifikasını *Client. cer* adlı bir dosyaya aktarır.
 
 9. İstemci bilgisayardaki *Client.exe.config* dosyasında, uç noktanın adres değerini hizmetinizin yeni adresiyle eşleşecek şekilde değiştirin. **Localhost** 'u sunucunun tam etki alanı adıyla değiştirerek bunu yapın.
 

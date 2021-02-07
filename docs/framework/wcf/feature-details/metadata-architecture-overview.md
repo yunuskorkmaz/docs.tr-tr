@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: meta veri mimarisine genel bakış'
 title: Meta Veri Mimarisi Genel Bakış
 ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF], overview
 ms.assetid: 1d37645e-086d-4d68-a358-f3c5b6e8205e
-ms.openlocfilehash: db601a26eb7a7703403432590e359f51231e3ca1
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 63e513c340ea37914da5942ac2479af4be6b8519
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96248298"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99733937"
 ---
 # <a name="metadata-architecture-overview"></a>Meta Veri Mimarisi Genel Bakış
 

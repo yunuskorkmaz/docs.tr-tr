@@ -1,73 +1,74 @@
 ---
+description: 'Daha fazla bilgi edinin: kısmi güven En Iyi uygulamaları'
 title: Kısmi Güven En İyi Uygulamaları
 ms.date: 03/30/2017
 ms.assetid: 0d052bc0-5b98-4c50-8bb5-270cc8a8b145
-ms.openlocfilehash: 7d5bcc7f9f179553188b4ce90c724dc0bd839670
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: abdc0fbbb84581b302bca8d514a5f8f5cc2703e6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663029"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99733560"
 ---
 # <a name="partial-trust-best-practices"></a>Kısmi Güven En İyi Uygulamaları
 
-Bu konu, Windows Communication Foundation (WCF) bir kısmi güven ortamında çalışırken en iyi uygulamaları açıklar.
+Bu konuda kısmi güven ortamında Windows Communication Foundation (WCF) çalıştırılırken en iyi yöntemler açıklanmaktadır.
 
 ## <a name="serialization"></a>Serileştirme
 
-Aşağıdaki yöntemleri kullanılırken geçerli <xref:System.Runtime.Serialization.DataContractSerializer> kısmen güvenilen uygulamada.
+<xref:System.Runtime.Serialization.DataContractSerializer>' İ kısmen güvenilen bir uygulamada kullanırken aşağıdaki yöntemleri uygulayın.
 
-- Tüm serializable türler ile açıkça işaretlenmelidir `[DataContract]` özniteliği. Aşağıdaki tekniklerden bir kısmi güven ortamında desteklenmez:
+- Tüm serileştirilebilir türler açıkça `[DataContract]` özniteliğiyle işaretlenmelidir. Aşağıdaki teknikler kısmi güven ortamında desteklenmez:
 
-- İle serileştirilecek sınıflar işaretleme <xref:System.SerializableAttribute>.
+- Sınıfları ile serileştirilmesi için İşaretleme <xref:System.SerializableAttribute> .
 
-- Uygulama <xref:System.Runtime.Serialization.ISerializable> , seri hale getirme işlemini denetlemek bir sınıf izin vermek için arabirim.
+- <xref:System.Runtime.Serialization.ISerializable>Bir sınıfa serileştirme işlemini denetlemesine izin vermek için arabirimi uygulama.
 
-### <a name="using-datacontractserializer"></a>DataContractSerializer kullanarak
+### <a name="using-datacontractserializer"></a>DataContractSerializer kullanma
 
-- Tüm türleri ile işaretlenen `[DataContract]` özniteliği genel olmalıdır. Kısmi güven ortamında genel olmayan türler seri hale getirilemiyor.
+- Özniteliğiyle işaretlenen tüm türler `[DataContract]` ortak olmalıdır. Genel olmayan türler kısmi güven ortamında serileştirilemiyor.
 
-- Tüm `[DataContract]` seri hale getirilebilir bir üye `[DataContract]` türü ortak olmalıdır. Genel olmayan bir türle `[DataMember]` bir kısmi güven ortamında nelze serializovat.
+- `[DataContract]`Serileştirilebilir türdeki tüm Üyeler `[DataContract]` ortak olmalıdır. Genel olmayan bir tür `[DataMember]` kısmi güven ortamında serileştirilemiyor.
 
-- Serileştirme olayları işleyen yöntemler (gibi `OnSerializing`, `OnSerialized`, `OnDeserializing`, ve `OnDeserialized`) genel olarak bildirilmelidir. Ancak, açık ve örtük uygulamaları <xref:System.Runtime.Serialization.IDeserializationCallback.OnDeserialization%28System.Object%29> desteklenir.
+- Serileştirme olaylarını işleyen Yöntemler (örneğin,, `OnSerializing` `OnSerialized` `OnDeserializing` ve `OnDeserialized` ) ortak olarak bildirilmelidir. Ancak, hem açık hem de örtük uygulamaları <xref:System.Runtime.Serialization.IDeserializationCallback.OnDeserialization%28System.Object%29> desteklenir.
 
-- `[DataContract]` derlemelerde uygulanan türleri ile işaretlenen <xref:System.Security.AllowPartiallyTrustedCallersAttribute> Tür oluşturucu Eylemler ile ilgili olarak gerçekleştirmemelisiniz <xref:System.Runtime.Serialization.DataContractSerializer> oluşturucusu, yeni oluşturulan nesne seri durumundan çıkarma sırasında çağırmaz. Özellikle, aşağıdaki yaygın güvenlik teknikleri için kaçınılmalıdır `[DataContract]` türleri:
+- `[DataContract]` ile işaretlenen derlemelerde uygulanan türler, <xref:System.Security.AllowPartiallyTrustedCallersAttribute> <xref:System.Runtime.Serialization.DataContractSerializer> seri durumdan çıkarma sırasında yeni örneklendirilmiş nesnenin oluşturucusunu çağırmadığından tür oluşturucusunda güvenlikle ilgili eylemleri gerçekleştirmemelidir. Özellikle, aşağıdaki ortak güvenlik teknikleri türler için kaçınılmalıdır `[DataContract]` :
 
-- İç veya özel tür Oluşturucu yaparak kısmi güven erişimi kısıtlamak çalışıyor.
+- Türün oluşturucusunu iç veya özel hale getirerek kısmi güven erişimini kısıtlamaya çalışılıyor.
 
-- Türüne ekleyerek erişimini bir `[LinkDemand]` türün Oluşturucusu.
+- Türün oluşturucusuna bir ekleyerek türe erişimi sınırlandırma `[LinkDemand]` .
 
-- Nesne başarıyla örneği olduğundan, Oluşturucu tarafından zorlanan herhangi bir doğrulama denetimleri başarıyla başarılı olduğunu varsayarak.
+- Nesnesi başarıyla örneklendiği için, Oluşturucu tarafından zorlanan tüm doğrulama denetimleri başarıyla geçildi.
 
 ### <a name="using-ixmlserializable"></a>IXmlSerializable kullanma
 
-Uygulayan türler için aşağıdaki en iyi uygulama <xref:System.Xml.Serialization.IXmlSerializable> ve kullanılarak serileştirilmiş <xref:System.Runtime.Serialization.DataContractSerializer>:
+Aşağıdaki en iyi uygulamalar <xref:System.Xml.Serialization.IXmlSerializable> , uygulayan ve kullanılarak serileştirilmiş olan türler için geçerlidir <xref:System.Runtime.Serialization.DataContractSerializer> :
 
-- <xref:System.Xml.Serialization.IXmlSerializable.GetSchema%2A> Statik yöntem uygulamaları olmalıdır `public`.
+- <xref:System.Xml.Serialization.IXmlSerializable.GetSchema%2A>Statik yöntem uygulamaları olmalıdır `public` .
 
-- Uygulayan örnek yöntemler <xref:System.Xml.Serialization.IXmlSerializable> arabirimi olmalıdır `public`.
+- Arabirimi uygulayan örnek yöntemleri olmalıdır <xref:System.Xml.Serialization.IXmlSerializable> `public` .
 
-## <a name="using-wcf-from-fully-trusted-platform-code-that-allows-calls-from-partially-trusted-callers"></a>WCF çağrılarından kısmen sağlayan tam olarak güvenilen koddan kullanarak güvenilen Arayanların
+## <a name="using-wcf-from-fully-trusted-platform-code-that-allows-calls-from-partially-trusted-callers"></a>Kısmen güvenilen çağıranların çağrılarına Izin veren Fully-Trusted platform kodundan WCF kullanma
 
-WCF kısmi güven güvenliği modeli, herhangi bir WCF genel yöntem veya özellik çağıran kod erişim güvenliği (CAS) barındırma uygulama bağlamında çalıştığını varsayar. WCF ayrıca varsayar, yalnızca bir uygulama güvenlik bağlamı her biri için mevcut <xref:System.AppDomain>, ve bu bağlam, belirlenen <xref:System.AppDomain> oluşturma zamanı tarafından güvenilen bir konak (örneğin, bir çağrı tarafından <xref:System.AppDomain.CreateDomain%2A> veya ASP.NET Uygulama Yöneticisi tarafından).
+WCF kısmi güven güvenlik modeli, bir WCF genel yönteminin veya özelliğinin, barındırma uygulamasının kod erişim güvenliği (CAS) bağlamında çalıştığını varsayar. WCF Ayrıca her biri için yalnızca bir uygulama güvenlik bağlamının olduğunu <xref:System.AppDomain> ve bu bağlamın <xref:System.AppDomain> Güvenilen bir ana bilgisayar tarafından oluşturma zamanında (örneğin, ASP.NET uygulama Yöneticisi tarafından yapılan bir çağrıya göre) oluşturulduğunu varsayar <xref:System.AppDomain.CreateDomain%2A> .
 
-Bu güvenlik modeli Orta güven ASP.NET uygulama içinde çalışan kullanıcı kodu gibi ek CAS izinler assert olamaz, kullanıcı tarafından yazılan uygulamalar için geçerlidir. Ancak, tam olarak güvenilen kod (örneğin, genel derleme önbelleğinde yüklü ve kısmen güvenilen koddan çağrıları kabul eden bir üçüncü taraf derleme) açık WCF kısmen güvenilen bir uygulama adına çağırırken dikkatli gerekir uygulama düzeyinde güvenlik açıklarını oluşturmaktan kaçının.
+Bu güvenlik modeli, orta düzey güven ASP.NET uygulamasında çalışan Kullanıcı kodu gibi ek CA izinleri içermeyen Kullanıcı tarafından yazılmış uygulamalar için geçerlidir. Ancak, tam güvenilir platform kodu (örneğin, genel derleme önbelleğinde yüklü olan ve kısmen güvenilen koddan yapılan çağrıları kabul eden bir üçüncü taraf derleme), uygulama düzeyinde güvenlik açıklarına giriş yapmaktan kaçınmak için kısmen güvenilen bir uygulama adına WCF 'ye çağrı yaparken açık bir işlem olmalıdır.
 
-Tam güven kodu önlemek geçerli iş parçacığının CA izin kümesi değiştirme (çağırarak <xref:System.Security.PermissionSet.Assert%2A>, <xref:System.Security.PermissionSet.PermitOnly%2A>, veya <xref:System.Security.PermissionSet.Deny%2A>) kısmen güvenilen kod adına WCF API'larını çağırma önce. Sunduğundan, reddetme ya da aksi takdirde uygulama düzeyinde güvenlik bağlamı bağımsız bir iş parçacığına özgü izni bağlam oluşturma, beklenmeyen davranışlara neden olabilir. Uygulamaya bağlı olarak, bu davranış, uygulama düzeyinde güvenlik açıklarına neden olabilir.
+Tam güven kodu, <xref:System.Security.PermissionSet.Assert%2A> <xref:System.Security.PermissionSet.PermitOnly%2A> <xref:System.Security.PermissionSet.Deny%2A> WCF API 'lerini kısmen güvenilen kod adına çağrılmadan önce GEÇERLI iş parçacığının CAS izin kümesini (, veya çağırarak) değiştirmekten kaçınmalıdır. Uygulama düzeyi güvenlik içeriğinden bağımsız olan iş parçacığına özgü izin bağlamını ele almak, reddetmek veya başka bir şekilde oluşturmak beklenmedik davranışa neden olabilir. Uygulamaya bağlı olarak bu davranış, uygulama düzeyinde güvenlik açıklarına neden olabilir.
 
-Bir iş parçacığına özgü izni bağlamını kullanarak WCF çağırıyor kaynaklanabilecek aşağıdaki durumlarda işlemek için hazırlanması gerekir kodu:
+İş parçacığına özgü bir izin bağlamı kullanarak WCF 'ye çağıran kod, ortaya çıkabilecek aşağıdaki durumları işleyecek şekilde hazırlanmalıdır:
 
-- İş parçacığına özgü güvenlik bağlamı olası güvenlik özel durumlarıyla sonuçları işlemi süresince yönetilebilir değil.
+- İş parçacığına özgü güvenlik bağlamı işlemin süresi boyunca tutulmayabilir, bu da olası güvenlik özel durumlarına neden olur.
 
-- Hiçbir kullanıcı tarafından sağlanan geri çağırmaları yanı sıra iç WCF kodu farklı güvenlik bağlamı altında ilk çağrı başlatılan bir çalıştırabilirsiniz. Şu bağlamlarda şunlardır:
+- İç WCF kodu ve Kullanıcı tarafından sağlanmış geri çağrılar, çağrının ilk olarak başlatıldığı sunucudan farklı bir güvenlik bağlamında çalıştırılabilir. Bu bağlamlar şunlardır:
 
-  - Uygulama izni bağlamı.
+  - Uygulama izin bağlamı.
 
-  - Şu anda çalışan ömrü boyunca WCF çağırmak için kullanılan diğer kullanıcı iş parçacıkları tarafından daha önce oluşturduğunuz her bir iş parçacığına özgü izni bağlam <xref:System.AppDomain>.
+  - O sırada çalışmakta olan diğer Kullanıcı iş parçacıkları tarafından daha önce oluşturulan ve o anda çalışan kullanım ömrü boyunca WCF 'ye çağrı yapmak için kullanılan iş parçacığına özgü izin bağlamı <xref:System.AppDomain>
 
-WCF sürece bu izinleri WCF genel API'leri çağrılmadan önce tam olarak güvenilen bir bileşen tarafından onaylanan kısmen güvenilen kod tam güven izinleri alınamıyor garanti eder. Ancak, tam güven sunduğundan etkilerini belirli iş parçacığı, işlem veya bir kullanıcı eylemi yalıtılmış garantilemez.
+WCF genel API 'Lerine çağrılmadan önce, bu izinler tam güvenilir bir bileşen tarafından belirtilmemişse, kısmen güvenilen kodun tam güven izinleri edinemediğini garanti eder. Ancak, tam güveni ele almak için etkileri belirli bir iş parçacığı, işlem veya kullanıcı eylemine yalıtılmış olduğunu garanti etmez.
 
-En iyi uygulama, iş parçacığına özgü izni bağlam çağırarak oluşturmamaya özen gösterin <xref:System.Security.PermissionSet.Assert%2A>, <xref:System.Security.PermissionSet.PermitOnly%2A>, veya <xref:System.Security.PermissionSet.Deny%2A>. Bunun yerine, vermek ya da uygulamanın kendisini ayrıcalık reddetmek için hiçbir <xref:System.Security.PermissionSet.Assert%2A>, <xref:System.Security.PermissionSet.Deny%2A>, veya <xref:System.Security.PermissionSet.PermitOnly%2A> gereklidir.
+En iyi uygulama olarak,, veya çağırarak iş parçacığına özgü izin bağlamı oluşturmaktan <xref:System.Security.PermissionSet.Assert%2A> kaçının <xref:System.Security.PermissionSet.PermitOnly%2A> <xref:System.Security.PermissionSet.Deny%2A> . Bunun yerine,, veya gerekli olmaması için, uygulamanın kendisi için ayrıcalık verin veya <xref:System.Security.PermissionSet.Assert%2A> reddedin <xref:System.Security.PermissionSet.Deny%2A> <xref:System.Security.PermissionSet.PermitOnly%2A> .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

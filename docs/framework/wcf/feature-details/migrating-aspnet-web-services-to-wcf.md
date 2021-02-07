@@ -1,13 +1,14 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: ASP.NET Web Services 'ı WCF 'ye geçirme"
 title: ASP.NET Web Hizmetlerini WCF'ye Taşıma
 ms.date: 03/30/2017
 ms.assetid: 1adbb931-f0b1-47f3-9caf-169e4edc9907
-ms.openlocfilehash: 1471e9913f787a76b474e9d862a22b24d464be92
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c0d78f1086c72eb853bd80ab378b4d0e78362f60
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96281657"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99733781"
 ---
 # <a name="migrating-aspnet-web-services-to-wcf"></a>ASP.NET Web Hizmetlerini WCF'ye Taşıma
 
