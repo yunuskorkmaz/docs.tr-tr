@@ -1,38 +1,39 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 1036-RuntimeTransactionCompletionRequested'
 title: 1036 - RuntimeTransactionCompletionRequested
 ms.date: 03/30/2017
 ms.assetid: d36b9f44-7c0f-4083-9d3a-9034dd2b98de
-ms.openlocfilehash: 96ea253fd61652a3719eaf8b1a4d31aa88337eeb
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e07400902d5c3e08732385ab30e1be0d72d3e997
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96294267"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99667895"
 ---
-# <a name="1036---runtimetransactioncompletionrequested"></a><span data-ttu-id="becbd-102">1036 - RuntimeTransactionCompletionRequested</span><span class="sxs-lookup"><span data-stu-id="becbd-102">1036 - RuntimeTransactionCompletionRequested</span></span>
+# <a name="1036---runtimetransactioncompletionrequested"></a><span data-ttu-id="34567-103">1036 - RuntimeTransactionCompletionRequested</span><span class="sxs-lookup"><span data-stu-id="34567-103">1036 - RuntimeTransactionCompletionRequested</span></span>
 
-## <a name="properties"></a><span data-ttu-id="becbd-103">Özellikler</span><span class="sxs-lookup"><span data-stu-id="becbd-103">Properties</span></span>  
+## <a name="properties"></a><span data-ttu-id="34567-104">Özellikler</span><span class="sxs-lookup"><span data-stu-id="34567-104">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="becbd-104">ID</span><span class="sxs-lookup"><span data-stu-id="becbd-104">ID</span></span>|<span data-ttu-id="becbd-105">1036</span><span class="sxs-lookup"><span data-stu-id="becbd-105">1036</span></span>|  
-|<span data-ttu-id="becbd-106">Anahtar sözcükler</span><span class="sxs-lookup"><span data-stu-id="becbd-106">Keywords</span></span>|<span data-ttu-id="becbd-107">WFRuntime</span><span class="sxs-lookup"><span data-stu-id="becbd-107">WFRuntime</span></span>|  
-|<span data-ttu-id="becbd-108">Düzey</span><span class="sxs-lookup"><span data-stu-id="becbd-108">Level</span></span>|<span data-ttu-id="becbd-109">Ayrıntılı</span><span class="sxs-lookup"><span data-stu-id="becbd-109">Verbose</span></span>|  
-|<span data-ttu-id="becbd-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="becbd-110">Channel</span></span>|<span data-ttu-id="becbd-111">Microsoft-Windows-Application Server-uygulamalar/hata ayıkla</span><span class="sxs-lookup"><span data-stu-id="becbd-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="34567-105">ID</span><span class="sxs-lookup"><span data-stu-id="34567-105">ID</span></span>|<span data-ttu-id="34567-106">1036</span><span class="sxs-lookup"><span data-stu-id="34567-106">1036</span></span>|  
+|<span data-ttu-id="34567-107">Anahtar sözcükler</span><span class="sxs-lookup"><span data-stu-id="34567-107">Keywords</span></span>|<span data-ttu-id="34567-108">WFRuntime</span><span class="sxs-lookup"><span data-stu-id="34567-108">WFRuntime</span></span>|  
+|<span data-ttu-id="34567-109">Level</span><span class="sxs-lookup"><span data-stu-id="34567-109">Level</span></span>|<span data-ttu-id="34567-110">Ayrıntılı</span><span class="sxs-lookup"><span data-stu-id="34567-110">Verbose</span></span>|  
+|<span data-ttu-id="34567-111">Kanal</span><span class="sxs-lookup"><span data-stu-id="34567-111">Channel</span></span>|<span data-ttu-id="34567-112">Microsoft-Windows-Application Server-uygulamalar/hata ayıkla</span><span class="sxs-lookup"><span data-stu-id="34567-112">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="becbd-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="becbd-112">Description</span></span>  
+## <a name="description"></a><span data-ttu-id="34567-113">Description</span><span class="sxs-lookup"><span data-stu-id="34567-113">Description</span></span>  
 
- <span data-ttu-id="becbd-113">Bir etkinliğin çalışma zamanı işleminin tamamlandığını zamanladığı anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="becbd-113">Indicates an activity has scheduled the completion of the runtime transaction.</span></span>  
+ <span data-ttu-id="34567-114">Bir etkinliğin çalışma zamanı işleminin tamamlandığını zamanladığı anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="34567-114">Indicates an activity has scheduled the completion of the runtime transaction.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="becbd-114">İleti</span><span class="sxs-lookup"><span data-stu-id="becbd-114">Message</span></span>  
+## <a name="message"></a><span data-ttu-id="34567-115">İleti</span><span class="sxs-lookup"><span data-stu-id="34567-115">Message</span></span>  
 
- <span data-ttu-id="becbd-115">DisplayName: ' %2 ', InstanceId: ' %3 ' olan ' %1 ' Activity 'si çalışma zamanı işleminin tamamlanmasını zamanladı.</span><span class="sxs-lookup"><span data-stu-id="becbd-115">Activity '%1', DisplayName: '%2', InstanceId: '%3' has scheduled completion of the runtime transaction.</span></span>  
+ <span data-ttu-id="34567-116">DisplayName: ' %2 ', InstanceId: ' %3 ' olan ' %1 ' Activity 'si çalışma zamanı işleminin tamamlanmasını zamanladı.</span><span class="sxs-lookup"><span data-stu-id="34567-116">Activity '%1', DisplayName: '%2', InstanceId: '%3' has scheduled completion of the runtime transaction.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="becbd-116">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="becbd-116">Details</span></span>  
+## <a name="details"></a><span data-ttu-id="34567-117">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="34567-117">Details</span></span>  
   
-|<span data-ttu-id="becbd-117">Veri öğesi adı</span><span class="sxs-lookup"><span data-stu-id="becbd-117">Data Item Name</span></span>|<span data-ttu-id="becbd-118">Veri öğesi türü</span><span class="sxs-lookup"><span data-stu-id="becbd-118">Data Item Type</span></span>|<span data-ttu-id="becbd-119">Açıklama</span><span class="sxs-lookup"><span data-stu-id="becbd-119">Description</span></span>|  
+|<span data-ttu-id="34567-118">Veri öğesi adı</span><span class="sxs-lookup"><span data-stu-id="34567-118">Data Item Name</span></span>|<span data-ttu-id="34567-119">Veri öğesi türü</span><span class="sxs-lookup"><span data-stu-id="34567-119">Data Item Type</span></span>|<span data-ttu-id="34567-120">Description</span><span class="sxs-lookup"><span data-stu-id="34567-120">Description</span></span>|  
 |--------------------|--------------------|-----------------|  
-|<span data-ttu-id="becbd-120">Etkinlik</span><span class="sxs-lookup"><span data-stu-id="becbd-120">Activity</span></span>|<span data-ttu-id="becbd-121">xs: String</span><span class="sxs-lookup"><span data-stu-id="becbd-121">xs:string</span></span>|<span data-ttu-id="becbd-122">Etkinliğin tür adı.</span><span class="sxs-lookup"><span data-stu-id="becbd-122">The type name of the activity.</span></span>|  
-|<span data-ttu-id="becbd-123">DisplayName</span><span class="sxs-lookup"><span data-stu-id="becbd-123">DisplayName</span></span>|<span data-ttu-id="becbd-124">xs: String</span><span class="sxs-lookup"><span data-stu-id="becbd-124">xs:string</span></span>|<span data-ttu-id="becbd-125">Etkinliğin görünen adı.</span><span class="sxs-lookup"><span data-stu-id="becbd-125">The display name of the activity.</span></span>|  
-|<span data-ttu-id="becbd-126">InstanceId</span><span class="sxs-lookup"><span data-stu-id="becbd-126">InstanceId</span></span>|<span data-ttu-id="becbd-127">xs: String</span><span class="sxs-lookup"><span data-stu-id="becbd-127">xs:string</span></span>|<span data-ttu-id="becbd-128">Etkinliğin örnek kimliği.</span><span class="sxs-lookup"><span data-stu-id="becbd-128">The instance id of the activity.</span></span>|  
-|<span data-ttu-id="becbd-129">AppDomain</span><span class="sxs-lookup"><span data-stu-id="becbd-129">AppDomain</span></span>|<span data-ttu-id="becbd-130">xs: String</span><span class="sxs-lookup"><span data-stu-id="becbd-130">xs:string</span></span>|<span data-ttu-id="becbd-131">AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.</span><span class="sxs-lookup"><span data-stu-id="becbd-131">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|
+|<span data-ttu-id="34567-121">Etkinlik</span><span class="sxs-lookup"><span data-stu-id="34567-121">Activity</span></span>|<span data-ttu-id="34567-122">xs: String</span><span class="sxs-lookup"><span data-stu-id="34567-122">xs:string</span></span>|<span data-ttu-id="34567-123">Etkinliğin tür adı.</span><span class="sxs-lookup"><span data-stu-id="34567-123">The type name of the activity.</span></span>|  
+|<span data-ttu-id="34567-124">DisplayName</span><span class="sxs-lookup"><span data-stu-id="34567-124">DisplayName</span></span>|<span data-ttu-id="34567-125">xs: String</span><span class="sxs-lookup"><span data-stu-id="34567-125">xs:string</span></span>|<span data-ttu-id="34567-126">Etkinliğin görünen adı.</span><span class="sxs-lookup"><span data-stu-id="34567-126">The display name of the activity.</span></span>|  
+|<span data-ttu-id="34567-127">InstanceId</span><span class="sxs-lookup"><span data-stu-id="34567-127">InstanceId</span></span>|<span data-ttu-id="34567-128">xs: String</span><span class="sxs-lookup"><span data-stu-id="34567-128">xs:string</span></span>|<span data-ttu-id="34567-129">Etkinliğin örnek kimliği.</span><span class="sxs-lookup"><span data-stu-id="34567-129">The instance id of the activity.</span></span>|  
+|<span data-ttu-id="34567-130">AppDomain</span><span class="sxs-lookup"><span data-stu-id="34567-130">AppDomain</span></span>|<span data-ttu-id="34567-131">xs: String</span><span class="sxs-lookup"><span data-stu-id="34567-131">xs:string</span></span>|<span data-ttu-id="34567-132">AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.</span><span class="sxs-lookup"><span data-stu-id="34567-132">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

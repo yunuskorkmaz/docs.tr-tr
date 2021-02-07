@@ -1,40 +1,41 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: 1040-ınargumentbağlanmadı'
 title: 1040 - InArgumentBound
 ms.date: 03/30/2017
 ms.assetid: 7dfaad1b-36c0-4575-84c1-31d63b0eaf5d
-ms.openlocfilehash: 04a61892ea817d5168ccbfccf68c0b74ee43e983
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f604a2503bcaf407a9a690b5a681208815fd245a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238957"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99667804"
 ---
-# <a name="1040---inargumentbound"></a><span data-ttu-id="00a49-102">1040 - InArgumentBound</span><span class="sxs-lookup"><span data-stu-id="00a49-102">1040 - InArgumentBound</span></span>
+# <a name="1040---inargumentbound"></a><span data-ttu-id="974e4-103">1040 - InArgumentBound</span><span class="sxs-lookup"><span data-stu-id="974e4-103">1040 - InArgumentBound</span></span>
 
-## <a name="properties"></a><span data-ttu-id="00a49-103">Özellikler</span><span class="sxs-lookup"><span data-stu-id="00a49-103">Properties</span></span>  
+## <a name="properties"></a><span data-ttu-id="974e4-104">Özellikler</span><span class="sxs-lookup"><span data-stu-id="974e4-104">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="00a49-104">ID</span><span class="sxs-lookup"><span data-stu-id="00a49-104">ID</span></span>|<span data-ttu-id="00a49-105">1040</span><span class="sxs-lookup"><span data-stu-id="00a49-105">1040</span></span>|  
-|<span data-ttu-id="00a49-106">Anahtar sözcükler</span><span class="sxs-lookup"><span data-stu-id="00a49-106">Keywords</span></span>|<span data-ttu-id="00a49-107">WFActivities</span><span class="sxs-lookup"><span data-stu-id="00a49-107">WFActivities</span></span>|  
-|<span data-ttu-id="00a49-108">Düzey</span><span class="sxs-lookup"><span data-stu-id="00a49-108">Level</span></span>|<span data-ttu-id="00a49-109">Ayrıntılı</span><span class="sxs-lookup"><span data-stu-id="00a49-109">Verbose</span></span>|  
-|<span data-ttu-id="00a49-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="00a49-110">Channel</span></span>|<span data-ttu-id="00a49-111">Microsoft-Windows-Application Server-uygulamalar/hata ayıkla</span><span class="sxs-lookup"><span data-stu-id="00a49-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="974e4-105">ID</span><span class="sxs-lookup"><span data-stu-id="974e4-105">ID</span></span>|<span data-ttu-id="974e4-106">1040</span><span class="sxs-lookup"><span data-stu-id="974e4-106">1040</span></span>|  
+|<span data-ttu-id="974e4-107">Anahtar sözcükler</span><span class="sxs-lookup"><span data-stu-id="974e4-107">Keywords</span></span>|<span data-ttu-id="974e4-108">WFActivities</span><span class="sxs-lookup"><span data-stu-id="974e4-108">WFActivities</span></span>|  
+|<span data-ttu-id="974e4-109">Level</span><span class="sxs-lookup"><span data-stu-id="974e4-109">Level</span></span>|<span data-ttu-id="974e4-110">Ayrıntılı</span><span class="sxs-lookup"><span data-stu-id="974e4-110">Verbose</span></span>|  
+|<span data-ttu-id="974e4-111">Kanal</span><span class="sxs-lookup"><span data-stu-id="974e4-111">Channel</span></span>|<span data-ttu-id="974e4-112">Microsoft-Windows-Application Server-uygulamalar/hata ayıkla</span><span class="sxs-lookup"><span data-stu-id="974e4-112">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="00a49-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="00a49-112">Description</span></span>  
+## <a name="description"></a><span data-ttu-id="974e4-113">Description</span><span class="sxs-lookup"><span data-stu-id="974e4-113">Description</span></span>  
 
- <span data-ttu-id="00a49-113">Bir ın bağımsız değişkeninin bağlandığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="00a49-113">Indicates an In argument has been bound.</span></span>  
+ <span data-ttu-id="974e4-114">Bir ın bağımsız değişkeninin bağlandığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="974e4-114">Indicates an In argument has been bound.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="00a49-114">İleti</span><span class="sxs-lookup"><span data-stu-id="00a49-114">Message</span></span>  
+## <a name="message"></a><span data-ttu-id="974e4-115">İleti</span><span class="sxs-lookup"><span data-stu-id="974e4-115">Message</span></span>  
 
- <span data-ttu-id="00a49-115">DisplayName: ' %3 ', InstanceId: ' %4 ' olan ' %2 ' etkinliğindeki ' %1 ' bağımsız değişkeninde %5 değeri ile bağlı.</span><span class="sxs-lookup"><span data-stu-id="00a49-115">In argument '%1' on Activity '%2', DisplayName: '%3', InstanceId: '%4' has been bound with value: %5.</span></span>  
+ <span data-ttu-id="974e4-116">DisplayName: ' %3 ', InstanceId: ' %4 ' olan ' %2 ' etkinliğindeki ' %1 ' bağımsız değişkeninde %5 değeri ile bağlı.</span><span class="sxs-lookup"><span data-stu-id="974e4-116">In argument '%1' on Activity '%2', DisplayName: '%3', InstanceId: '%4' has been bound with value: %5.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="00a49-116">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="00a49-116">Details</span></span>  
+## <a name="details"></a><span data-ttu-id="974e4-117">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="974e4-117">Details</span></span>  
   
-|<span data-ttu-id="00a49-117">Veri öğesi adı</span><span class="sxs-lookup"><span data-stu-id="00a49-117">Data Item Name</span></span>|<span data-ttu-id="00a49-118">Veri öğesi türü</span><span class="sxs-lookup"><span data-stu-id="00a49-118">Data Item Type</span></span>|<span data-ttu-id="00a49-119">Açıklama</span><span class="sxs-lookup"><span data-stu-id="00a49-119">Description</span></span>|  
+|<span data-ttu-id="974e4-118">Veri öğesi adı</span><span class="sxs-lookup"><span data-stu-id="974e4-118">Data Item Name</span></span>|<span data-ttu-id="974e4-119">Veri öğesi türü</span><span class="sxs-lookup"><span data-stu-id="974e4-119">Data Item Type</span></span>|<span data-ttu-id="974e4-120">Description</span><span class="sxs-lookup"><span data-stu-id="974e4-120">Description</span></span>|  
 |--------------------|--------------------|-----------------|  
-|<span data-ttu-id="00a49-120">InArgument 'ı</span><span class="sxs-lookup"><span data-stu-id="00a49-120">InArgument</span></span>|<span data-ttu-id="00a49-121">xs: String</span><span class="sxs-lookup"><span data-stu-id="00a49-121">xs:string</span></span>|<span data-ttu-id="00a49-122">InArgument adı.</span><span class="sxs-lookup"><span data-stu-id="00a49-122">The name of the InArgument.</span></span>|  
-|<span data-ttu-id="00a49-123">Etkinlik</span><span class="sxs-lookup"><span data-stu-id="00a49-123">Activity</span></span>|<span data-ttu-id="00a49-124">xs: String</span><span class="sxs-lookup"><span data-stu-id="00a49-124">xs:string</span></span>|<span data-ttu-id="00a49-125">Etkinliğin tür adı.</span><span class="sxs-lookup"><span data-stu-id="00a49-125">The type name of the activity.</span></span>|  
-|<span data-ttu-id="00a49-126">DisplayName</span><span class="sxs-lookup"><span data-stu-id="00a49-126">DisplayName</span></span>|<span data-ttu-id="00a49-127">xs: String</span><span class="sxs-lookup"><span data-stu-id="00a49-127">xs:string</span></span>|<span data-ttu-id="00a49-128">Etkinliğin görünen adı.</span><span class="sxs-lookup"><span data-stu-id="00a49-128">The display name of the activity.</span></span>|  
-|<span data-ttu-id="00a49-129">InstanceId</span><span class="sxs-lookup"><span data-stu-id="00a49-129">InstanceId</span></span>|<span data-ttu-id="00a49-130">xs: String</span><span class="sxs-lookup"><span data-stu-id="00a49-130">xs:string</span></span>|<span data-ttu-id="00a49-131">Etkinliğin örnek kimliği.</span><span class="sxs-lookup"><span data-stu-id="00a49-131">The instance id of the activity.</span></span>|  
-|<span data-ttu-id="00a49-132">Değer</span><span class="sxs-lookup"><span data-stu-id="00a49-132">Value</span></span>|<span data-ttu-id="00a49-133">xs: String</span><span class="sxs-lookup"><span data-stu-id="00a49-133">xs:string</span></span>|<span data-ttu-id="00a49-134">Değer InArgument 'a bağlanır.</span><span class="sxs-lookup"><span data-stu-id="00a49-134">The value bound to the InArgument.</span></span>|  
-|<span data-ttu-id="00a49-135">AppDomain</span><span class="sxs-lookup"><span data-stu-id="00a49-135">AppDomain</span></span>|<span data-ttu-id="00a49-136">xs: String</span><span class="sxs-lookup"><span data-stu-id="00a49-136">xs:string</span></span>|<span data-ttu-id="00a49-137">AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.</span><span class="sxs-lookup"><span data-stu-id="00a49-137">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|
+|<span data-ttu-id="974e4-121">InArgument 'ı</span><span class="sxs-lookup"><span data-stu-id="974e4-121">InArgument</span></span>|<span data-ttu-id="974e4-122">xs: String</span><span class="sxs-lookup"><span data-stu-id="974e4-122">xs:string</span></span>|<span data-ttu-id="974e4-123">InArgument adı.</span><span class="sxs-lookup"><span data-stu-id="974e4-123">The name of the InArgument.</span></span>|  
+|<span data-ttu-id="974e4-124">Etkinlik</span><span class="sxs-lookup"><span data-stu-id="974e4-124">Activity</span></span>|<span data-ttu-id="974e4-125">xs: String</span><span class="sxs-lookup"><span data-stu-id="974e4-125">xs:string</span></span>|<span data-ttu-id="974e4-126">Etkinliğin tür adı.</span><span class="sxs-lookup"><span data-stu-id="974e4-126">The type name of the activity.</span></span>|  
+|<span data-ttu-id="974e4-127">DisplayName</span><span class="sxs-lookup"><span data-stu-id="974e4-127">DisplayName</span></span>|<span data-ttu-id="974e4-128">xs: String</span><span class="sxs-lookup"><span data-stu-id="974e4-128">xs:string</span></span>|<span data-ttu-id="974e4-129">Etkinliğin görünen adı.</span><span class="sxs-lookup"><span data-stu-id="974e4-129">The display name of the activity.</span></span>|  
+|<span data-ttu-id="974e4-130">InstanceId</span><span class="sxs-lookup"><span data-stu-id="974e4-130">InstanceId</span></span>|<span data-ttu-id="974e4-131">xs: String</span><span class="sxs-lookup"><span data-stu-id="974e4-131">xs:string</span></span>|<span data-ttu-id="974e4-132">Etkinliğin örnek kimliği.</span><span class="sxs-lookup"><span data-stu-id="974e4-132">The instance id of the activity.</span></span>|  
+|<span data-ttu-id="974e4-133">Değer</span><span class="sxs-lookup"><span data-stu-id="974e4-133">Value</span></span>|<span data-ttu-id="974e4-134">xs: String</span><span class="sxs-lookup"><span data-stu-id="974e4-134">xs:string</span></span>|<span data-ttu-id="974e4-135">Değer InArgument 'a bağlanır.</span><span class="sxs-lookup"><span data-stu-id="974e4-135">The value bound to the InArgument.</span></span>|  
+|<span data-ttu-id="974e4-136">AppDomain</span><span class="sxs-lookup"><span data-stu-id="974e4-136">AppDomain</span></span>|<span data-ttu-id="974e4-137">xs: String</span><span class="sxs-lookup"><span data-stu-id="974e4-137">xs:string</span></span>|<span data-ttu-id="974e4-138">AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.</span><span class="sxs-lookup"><span data-stu-id="974e4-138">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|
