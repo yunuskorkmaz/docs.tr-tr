@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: IMetaDataAssemblyImport:: EnumManifestResources yöntemi'
 title: IMetaDataAssemblyImport::EnumManifestResources Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 9543b111-5705-40c9-935c-a3ffc7a581aa
 topic_type:
 - apiref
-ms.openlocfilehash: c72e5b9544d1d8ae989405ac9bfdb22050b1aaaf
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ff819ebb575626af6049558656637e7fabcbc322
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731627"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99677989"
 ---
 # <a name="imetadataassemblyimportenummanifestresources-method"></a>IMetaDataAssemblyImport::EnumManifestResources Yöntemi
 
 Geçerli derleme bildiriminde başvurulan kaynaklar için bir Numaralandırıcı işaretçisi alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT EnumManifestResources (  
@@ -53,7 +54,7 @@ HRESULT EnumManifestResources (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |`S_OK`|`EnumManifestResources` başarıyla döndürüldü.|  
 |`S_FALSE`|Numaralandırılacak belirteç yok. Bu durumda, `pcTokens` sıfır olarak ayarlanır.|  

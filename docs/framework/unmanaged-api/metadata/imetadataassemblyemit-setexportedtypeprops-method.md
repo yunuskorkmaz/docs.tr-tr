@@ -1,4 +1,5 @@
 ---
+description: ': IMetaDataAssemblyEmit:: SetExportedTypeProps yöntemi hakkında daha fazla bilgi edinin'
 title: IMetaDataAssemblyEmit::SetExportedTypeProps Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 1c090153-fd5f-46c7-9cff-39a78d992c8f
 topic_type:
 - apiref
-ms.openlocfilehash: 076d027945dc27942e4b0989e14e86d829f76679
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 61032abd7b049af29c583e9aee126184af3c78f2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95713498"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99678126"
 ---
 # <a name="imetadataassemblyemitsetexportedtypeprops-method"></a>IMetaDataAssemblyEmit::SetExportedTypeProps Yöntemi
 
 Belirtilen `ExportedType` meta veri yapısını değiştirir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT SetExportedTypeProps (  

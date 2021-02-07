@@ -1,4 +1,5 @@
 ---
+description: ': IMetaDataFilter arabirimi hakkında daha fazla bilgi edinin'
 title: IMetaDataFilter Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ec0856ef-8c56-40ba-bf60-86e0ce8b337f
 topic_type:
 - apiref
-ms.openlocfilehash: 2c22e45ca3d33b0a81ff0ecd90bf7574c45676bd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c994574207ccb26a5cb317e1673145a41f0d837d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95701854"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99677932"
 ---
 # <a name="imetadatafilter-interface"></a>IMetaDataFilter Arabirimi
 

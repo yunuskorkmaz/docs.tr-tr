@@ -1,19 +1,20 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Microsoft. Transactions. TransactionBridge. VolatileOutcomeTimeout'
 title: Microsoft.Transactions.TransactionBridge.VolatileOutcomeTimeout
 ms.date: 03/30/2017
 ms.assetid: 2dbe34c5-57c7-4b64-9257-63021911d03c
-ms.openlocfilehash: bc2cdc2221ec522b44c36ef3320b77124d61850e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 5dd6ecce995d315581e1335e4dc83c425a6381b7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96236708"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99677242"
 ---
 # <a name="microsofttransactionstransactionbridgevolatileoutcometimeout"></a>Microsoft.Transactions.TransactionBridge.VolatileOutcomeTimeout
 
 WS-AT protokol hizmeti, geçici bir katılımcıdan bir sonuç iletisine yanıt beklerken zaman aşımına uğradı. Katılımcı geri dönerse, işlem sonucu şüpheli olabilir.  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Geçici katılımcı Işlemeye veya durdurmaya karar verdiğinde, ancak belirli bir süre içinde bir COMMIT veya Rollback isteğine yanıt vermediğini izlendi.  
   

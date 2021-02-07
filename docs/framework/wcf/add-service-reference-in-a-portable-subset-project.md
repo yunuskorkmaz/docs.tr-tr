@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: taşınabilir alt küme projesinde Hizmet Başvurusu Ekle'
 title: Taşınabilir Alt Küme Projesine Hizmet Başvurusu Ekle
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: f81a596c5573405bec9389347c45ff6cb6b30fc9
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 85c7c38c26481487b02c39917986c916ac31282f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96294865"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99677489"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Taşınabilir Alt Küme Projesine Hizmet Başvurusu Ekle
 

@@ -1,4 +1,5 @@
 ---
+description: ': IMetaDataImport:: CountEnum yöntemi hakkında daha fazla bilgi edinin'
 title: IMetaDataImport::CountEnum Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: d1de53ad-9435-4b5f-9df7-07f21210e5b5
 topic_type:
 - apiref
-ms.openlocfilehash: f2470cd7112adff35ef49c21a155072fcd4008be
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c579ef7ce440e3552ab28572fc6c96ad12d66400
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727295"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99677697"
 ---
 # <a name="imetadataimportcountenum-method"></a>IMetaDataImport::CountEnum Yöntemi
 
 Belirtilen Numaralandırıcı tarafından alınan Numaralandırmadaki öğe sayısını alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT CountEnum (  

@@ -1,4 +1,5 @@
 ---
+description: ': IMetaDataAssemblyEmit:: SetAssemblyProps Yöntemi hakkında daha fazla bilgi edinin'
 title: IMetaDataAssemblyEmit::SetAssemblyProps Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 91b633d7-9e75-43c3-a8d2-2144984e5f9e
 topic_type:
 - apiref
-ms.openlocfilehash: 3736e7279056e015b157758b1233cf6dc5aa6d8d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d5dfb5fa472bb83863c8e4909998deeb2b9fc53b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720210"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99678204"
 ---
 # <a name="imetadataassemblyemitsetassemblyprops-method"></a>IMetaDataAssemblyEmit::SetAssemblyProps Yöntemi
 
 Belirtilen `Assembly` meta veri yapısını değiştirir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT SetAssemblyProps (  
