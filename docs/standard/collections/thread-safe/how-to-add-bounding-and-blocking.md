@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: nasıl yapılır: koleksiyona sınırlama ve engelleme Işlevi ekleme'
 title: 'Nasıl yapılır: Koleksiyona Sınırlama ve Engelleme İşlevi Ekleme'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - thread-safe collections, custom blocking collections
 ms.assetid: 4c2492de-3876-4873-b5a1-000bb404d770
-ms.openlocfilehash: ba41176d87779fe673fa162d0bf04c10414cdd92
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c44febe0a7b2155c61b12c280d830ad7b028d326
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733483"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99676072"
 ---
 # <a name="how-to-add-bounding-and-blocking-functionality-to-a-collection"></a>Nasıl yapılır: Koleksiyona Sınırlama ve Engelleme İşlevi Ekleme
 

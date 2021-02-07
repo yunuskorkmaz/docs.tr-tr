@@ -1,4 +1,5 @@
 ---
+description: "Daha fazla bilgi edinin: .NET 'te konsol uygulamaları"
 title: .NET 'te konsol uygulamaları oluşturma
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - application development [.NET], console
 - console applications
 ms.assetid: c21fb997-9f0e-40a5-8741-f73bba376bd8
-ms.openlocfilehash: 8046b1b8cb50476860fee53654de93c924d23346
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9ebc0fbdc71cf0b6d30a07fc8a375899c5f55d52
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823985"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99676215"
 ---
 # <a name="console-apps-in-net"></a>.NET 'teki konsol uygulamaları
 

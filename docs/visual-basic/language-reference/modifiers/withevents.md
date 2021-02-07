@@ -1,4 +1,5 @@
 ---
+description: ': WithEvents (Visual Basic) hakkında daha fazla bilgi'
 title: WithEvents
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - WithEvents keyword [Visual Basic]
 ms.assetid: 19d461f5-d72f-4de9-8c1d-0a6650316990
-ms.openlocfilehash: c2dcb044d04099c51f57d82a8bc08f0932bf3542
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: b27f84fe54aaa10bc9b2359cd74fad3d3ace1ad5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875420"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99674772"
 ---
 # <a name="withevents-visual-basic"></a>WithEvents (Visual Basic)
 

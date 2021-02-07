@@ -1,16 +1,17 @@
 ---
+description: ': My. Computer. Clipboard nesnesi hakkında daha fazla bilgi edinin'
 title: My.Computer.Clipboard Nesnesi
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Clipboard
 - My.Computer.Clipboard object
 ms.assetid: 05d4ede9-1f9a-4495-87f0-77350b8d2e5d
-ms.openlocfilehash: 8a89494a622989ffb9efb502cf2f6597d10dfffe
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 4373b9e5bfc1016881a8c411dd1afedd2ed0a5f3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875348"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99674525"
 ---
 # <a name="mycomputerclipboard-object"></a>My.Computer.Clipboard Nesnesi
 

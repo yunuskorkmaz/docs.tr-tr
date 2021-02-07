@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Culture-Insensitive durum değişikliklerini gerçekleştirme'
 title: Kültüre Duyarsız Büyük/Küçük Değişikliklerini Gerçekleştirme
 ms.date: 03/30/2017
 dev_langs:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - String.ToUpper method
 - culture parameter
 ms.assetid: 822d551c-c69a-4191-82f4-183d82c9179c
-ms.openlocfilehash: d4e714e9b81ffc3e495f4ddaa8cf7eeedeb71261
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 293e221530c3aac64b708d909e3963baf039d02e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686000"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99675760"
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>Kültüre Duyarsız Büyük/Küçük Değişikliklerini Gerçekleştirme
 

@@ -1,4 +1,5 @@
 ---
+description: "Şu konuda daha fazla bilgi edinin: nasıl yapılır: bir BlockingCollection 'dan ayrı ayrı öğe ekleme ve alma"
 title: "Nasıl yapılır: Öğeleri Tek Tek Ekleme ve Bir BlockingCollection'dan ve Alma"
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - thread-safe collections, blocking dictionary
 ms.assetid: 38f2f3d8-15e5-4bf4-9c83-2b5b6f22bad1
-ms.openlocfilehash: de65dbdcc3239016a16bc12f9254bb99637e45b4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c601cf35633838a81271a6296b9e1fcb6e389fbb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733496"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99676085"
 ---
 # <a name="how-to-add-and-take-items-individually-from-a-blockingcollection"></a>Nasıl yapılır: Öğeleri Tek Tek Ekleme ve Bir BlockingCollection'dan ve Alma
 

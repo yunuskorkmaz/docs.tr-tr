@@ -1,27 +1,28 @@
 ---
+description: 'Daha fazla bilgi edinin: WS-AtomicTransaction Configuration MMC ek bileşeni'
 title: WS-AtomicTransaction Yapılandırması MMC Ek Bileşeni
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-ms.openlocfilehash: 0bcd08f9a3450c850ead941df6313526d076df2d
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 5f1ac32a98b93a3ec3edb9cfa31ae0ebf424aba8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921344"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99676306"
 ---
-# <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>WS-AtomicTransaction Yapılandırması MMC ek bileşeni
+# <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>WS-AtomicTransaction Configuration MMC ek bileşeni
 
-WS-AtomicTransaction Yapılandırması MMC ek bileşeni, hem yerel hem de uzak makinelerde WS-AtomicTransaction ayarlarının bir bölümünü yapılandırmak için kullanılır.
+WS-AtomicTransaction Configuration MMC ek bileşeni, hem yerel hem de uzak makinelerde WS-AtomicTransaction ayarlarının bir bölümünü yapılandırmak için kullanılır.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Windows XP veya Windows Server 2003 çalıştırıyorsanız, MMC ek bileşeni **Denetim Masası/Yönetim Araçları/Bileşen Hizmetleri/** , Bilgisayarım ' a sağ tıklayıp **Özellikler** **' i seçerek**bulunabilir. Bu, MSDTC 'yi yapılandırabileceğiniz konumdur. Yapılandırma için kullanılabilen seçenekler **ws-at** sekmesi altında gruplandırılır.
+Windows XP veya Windows Server 2003 çalıştırıyorsanız, MMC ek bileşeni **Denetim Masası/Yönetim Araçları/Bileşen Hizmetleri/**, Bilgisayarım ' a sağ tıklayıp **Özellikler** **' i seçerek** bulunabilir. Bu, MSDTC 'yi yapılandırabileceğiniz konumdur. Yapılandırma için kullanılabilen seçenekler **ws-at** sekmesi altında gruplandırılır.
 
- Windows Vista veya Windows Server 2008 çalıştırıyorsanız, MMC ek bileşeni **Başlat** düğmesine tıklayıp **arama** kutusuna `dcomcnfg.exe` yazarak bulunabilir. MMC açıldığında, **bilgisayar \ dağıtılmış işlem Koordinatlıklasör** düğümü ' ne gidin, sağ tıklayın ve **Özellikler**' i seçin. Yapılandırma için kullanılabilen seçenekler **ws-at** sekmesi altında gruplandırılır.
+ Windows Vista veya Windows Server 2008 çalıştırıyorsanız, MMC ek bileşeni **Başlat** düğmesine tıklayıp `dcomcnfg.exe` **arama** kutusuna yazarak bulabilirsiniz. MMC açıldığında, **bilgisayar \ dağıtılmış işlem Koordinatlıklasör** düğümü ' ne gidin, sağ tıklayın ve **Özellikler**' i seçin. Yapılandırma için kullanılabilen seçenekler **ws-at** sekmesi altında gruplandırılır.
 
  Önceki adımlar, yerel bir makineyi yapılandırmak için ek bileşeni başlatmak üzere kullanılır. Uzak bir makineyi yapılandırmak istiyorsanız, uzak makinenin adını **Denetim Masası/Yönetim Araçları/Bileşen Hizmetleri/** olarak bulmanız ve Windows XP veya windows Server 2003 çalıştırıyorsanız benzer adımları gerçekleştirmeniz gerekir. Windows Vista veya Windows Server 2008 çalıştırıyorsanız, Vista ve Windows Server 2008 için önceki adımları izleyin, ancak uzak bilgisayarın düğümü altındaki **Dağıtılmış işlem Koordinatı\local DTC** düğümünü kullanın.
 
- Araç tarafından sunulan kullanıcı arabirimini kullanmak için, aşağıdaki yolda bulunan WsatUI. dll dosyasını kaydetmeniz gerekir.
+ Araç tarafından sunulan kullanıcı arabirimini kullanmak için, aşağıdaki yolda bulunan WsatUI.dll dosyasını kaydetmeniz gerekir.
 
  **%PROGRAMFILES%\Microsoft SDKs\Windows\v6.0\Bin\WsatUI.dll**
 
@@ -31,15 +32,15 @@ Windows XP veya Windows Server 2003 çalıştırıyorsanız, MMC ek bileşeni **
 regasm.exe /codebase WsatUI.dll
 ```
 
- Temel WS-AtomicTransaction ayarlarını değiştirmek için bu aracı kullanabilirsiniz. Örneğin, WS-AtomicTransaction protokol desteğini etkinleştirebilir ve devre dışı bırakabilir, WS-AT için HTTP bağlantı noktalarını yapılandırabilir, HTTP bağlantı noktasına bir SSL sertifikası bağlayabilir, sertifika konu adlarını belirterek sertifikaları yapılandırabilir, Izleme modunu seçebilir ve ayarlayabilirsiniz Varsayılan ve en fazla zaman aşımları.
+ Temel WS-AtomicTransaction ayarlarını değiştirmek için bu aracı kullanabilirsiniz. Örneğin, WS-AtomicTransaction protokol desteğini etkinleştirebilir ve devre dışı bırakabilir, WS-AT için HTTP bağlantı noktalarını yapılandırabilir, HTTP bağlantı noktasına bir SSL sertifikası bağlayabilir, sertifika konu adlarını belirterek sertifikaları yapılandırabilir, Izleme modunu seçebilir ve varsayılan ve en fazla zaman aşımlarını ayarlayabilirsiniz.
 
- Yalnızca yerel makinede WS-AtomicTransaction desteğini yapılandırmanız gerekiyorsa, bu aracın komut satırı sürümünü kullanabilirsiniz. Komut satırı aracı hakkında daha fazla bilgi için, bkz. [WS-AtomicTransaction Yapılandırma yardımcı programı (wsatConfig. exe)](ws-atomictransaction-configuration-utility-wsatconfig-exe.md) konusu.
+ Yalnızca yerel makinede WS-AtomicTransaction desteğini yapılandırmanız gerekiyorsa, bu aracın komut satırı sürümünü kullanabilirsiniz. Komut satırı aracı hakkında daha fazla bilgi için, bkz. [WS-AtomicTransaction Yapılandırma yardımcı programı (wsatConfig.exe)](ws-atomictransaction-configuration-utility-wsatconfig-exe.md) konusu.
 
- Hem MMC ek bileşeni hem de komut satırı aracının tüm WS-AT ayarlarını yapılandırmayı desteklemediğini bilmelisiniz. Bu ayarlar yalnızca kayıt defteri doğrudan değiştirilerek düzenlenebilir. Bu kayıt defteri ayarları hakkında daha fazla bilgi için bkz. [WS Atomik Işlem desteğini yapılandırma](./feature-details/configuring-ws-atomic-transaction-support.md).
+ Hem MMC ek bileşeni hem de komut satırı aracının tüm WS-AT ayarlarını yapılandırmayı desteklemediğini bilmelisiniz. Bu ayarlar yalnızca kayıt defteri doğrudan değiştirilerek düzenlenebilir. Bu kayıt defteri ayarları hakkında daha fazla bilgi için bkz. [WS-Atomic Işlem desteğini yapılandırma](./feature-details/configuring-ws-atomic-transaction-support.md).
 
 ### <a name="user-interface-description"></a>Kullanıcı arabirimi açıklaması
 
-**WS Atomik Işlem ağı desteğini etkinleştir**:
+**WS-Atomic Işlemi ağ desteğini etkinleştir**:
 
  Bu onay kutusunun işaretlenmesi, bu ek bileşenin tüm GUI bileşenlerini sunar veya devre dışı bırakır.
 
@@ -67,15 +68,15 @@ HTTPS bağlantı noktasını ve ağ grubunda SSL şifrelemesi gibi ek güvenlik 
 
  **Yetkili hesaplar**
 
- **Seç** düğmesine tıkladığınızda Windows Access Control liste Düzenleyicisi çağrılır. buradan, **katıl** izin grubundaki **izin verme** veya **reddetme** kutusunu işaretleyerek WS Atomik işlemlere katılabilen kullanıcıyı veya grubu belirtebilirsiniz.
+ **Seç** düğmesine tıklamak, **katıl** izin grubundaki **izin verme** veya **reddetme** kutusunu işaretleyerek WS-Atomic işlemlere katılabilen kullanıcı veya grubu belirtebileceğiniz Windows Access Control liste düzenleyicisini çağırır.
 
  **Yetkili sertifikalar**
 
- **Seç** düğmesine tıkladığınızda, LocalMachine 'de Şu anda kullanılabilir olan sertifikaların bir listesi görüntülenir. Daha sonra, hangi sertifika kimliklerinin WS Atomik işlemlere katılmasına izin verileceğini seçebilirsiniz.
+ **Seç** düğmesine tıkladığınızda, LocalMachine 'de Şu anda kullanılabilir olan sertifikaların bir listesi görüntülenir. Daha sonra WS-Atomic işlemlerine hangi sertifika kimliklerinin katılmasına izin verileceğini seçebilirsiniz.
 
 #### <a name="timeout-group-box"></a>Zaman aşımı grup kutusu
 
-**Zaman aşımı** Grup kutusu, WS Atomik bir işlem için varsayılan ve en büyük zaman aşımını belirtmenize olanak tanır. Giden zaman aşımı için geçerli bir değer 1 ile 3600 arasındadır. Gelen zaman aşımı için geçerli bir değer 0 ile 3600 arasındadır.
+**Zaman aşımı** grubu kutusu, bir WS-Atomic işlemi için varsayılan ve en büyük zaman aşımını belirtmenize olanak tanır. Giden zaman aşımı için geçerli bir değer 1 ile 3600 arasındadır. Gelen zaman aşımı için geçerli bir değer 0 ile 3600 arasındadır.
 
 #### <a name="tracing-and-logging-group-box"></a>İzleme ve günlüğe kaydetme Grup kutusu
 
@@ -83,7 +84,7 @@ HTTPS bağlantı noktasını ve ağ grubunda SSL şifrelemesi gibi ek güvenlik 
 
  **Seçenekler** düğmesine tıkladığınızda, ek ayarları belirtebileceğiniz bir sayfa çağırılır.
 
- **Izleme düzeyi** birleşimi kutusu, <xref:System.Diagnostics.TraceLevel> numaralandırmanın geçerli bir değeri arasından seçim yapmanıza olanak tanır. Ayrıca, Etkinlik izlemeyi, etkinlik yaymayı gerçekleştirmek veya kişisel olarak tanımlanabilir bilgileri toplamak istediğinizi belirtmek için onay kutularını da kullanabilirsiniz.
+ **Izleme düzeyi** birleşimi kutusu, numaralandırmanın geçerli bir değeri arasından seçim yapmanıza olanak tanır <xref:System.Diagnostics.TraceLevel> . Ayrıca, Etkinlik izlemeyi, etkinlik yaymayı gerçekleştirmek veya kişisel olarak tanımlanabilir bilgileri toplamak istediğinizi belirtmek için onay kutularını da kullanabilirsiniz.
 
  Günlüğe kaydetme **oturum** grubu kutusunda günlük oturumlarını da belirtebilirsiniz.
 
@@ -96,4 +97,4 @@ HTTPS bağlantı noktasını ve ağ grubunda SSL şifrelemesi gibi ek güvenlik 
 
 - [WS-Atomic İşlem Desteğini Yapılandırma](./feature-details/configuring-ws-atomic-transaction-support.md)
 - [WS-AtomicTransaction Yapılandırma Yardımcı Programı (wsatConfig.exe)](ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
-- [Yönetim ve Tanılama](./diagnostics/index.md)
+- [Yönetim ve tanılama](./diagnostics/index.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: engeli'
 title: Engel
 ms.date: 09/14/2018
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - synchronization primitives, Barrier
 ms.assetid: 613a8bc7-6a28-4795-bd6c-1abd9050478f
-ms.openlocfilehash: 4eab74ef07ac56a4d3ff65e67bb9fbd45dbfc9bc
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7fca89e12ffe4575029e62ce042875dac286c81d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819948"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99675513"
 ---
 # <a name="barrier"></a>Engel
 

@@ -1,4 +1,5 @@
 ---
+description: "Daha fazla bilgi edinin: .NET 'te tür dönüştürme tabloları"
 title: .NET’te Tür Dönüştürme Tabloları
 ms.date: 03/30/2017
 ms.topic: reference
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - tables [.NET], type conversions
 - data types [.NET], converting
 ms.assetid: 0ea65c59-85eb-4a52-94ca-c36d3bd13058
-ms.openlocfilehash: ecfa0841ea6335ce1d7148d21b076af9dbe91a13
-ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
+ms.openlocfilehash: b3c6414c9222a3e2cdf50ca1d9ba6986636d465f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98693000"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99676228"
 ---
 # <a name="type-conversion-tables-in-net"></a>.NET’te Tür Dönüştürme Tabloları
 

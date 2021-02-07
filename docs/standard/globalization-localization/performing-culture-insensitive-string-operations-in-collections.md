@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Koleksiyonlar içinde Culture-Insensitive dize Işlemleri gerçekleştirme'
 title: Koleksiyonlarda Kültüre Duyarsız Dize İşlemlerini Gerçekleştirme
 ms.date: 03/30/2017
 dev_langs:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - SortedList class, culture-insensitive string operations
 - culture parameter
 ms.assetid: 5cdc9396-a64b-4615-a1cd-b605db4c5983
-ms.openlocfilehash: f0d932dcbb07253e3ea52238a81b416af148cf98
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 38628474a20359be84780c2d90ac2470a9a66730
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829784"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99675708"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-collections"></a>Koleksiyonlarda Kültüre Duyarsız Dize İşlemlerini Gerçekleştirme
 

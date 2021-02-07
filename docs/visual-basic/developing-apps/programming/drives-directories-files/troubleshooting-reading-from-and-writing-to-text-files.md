@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: sorun giderme: metin dosyalarını okuma ve yazma (Visual Basic)'
 title: 'Sorun giderme: metin dosyalarını okuma ve yazma'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - writing to files [Visual Basic], troubleshooting
 - reading text files [Visual Basic], troubleshooting
 ms.assetid: a8e9b44d-facb-4718-8c0f-466537171182
-ms.openlocfilehash: 8af4160d09f39f2622a007aef793173d614a8b44
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1c01f7673ef021759a9c1892f685aa90ef1acdf6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406631"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99675344"
 ---
 # <a name="troubleshooting-reading-from-and-writing-to-text-files-visual-basic"></a>Sorun giderme: metin dosyalarını okuma ve yazma (Visual Basic)
 

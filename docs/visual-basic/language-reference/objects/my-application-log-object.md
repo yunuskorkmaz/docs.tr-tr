@@ -1,15 +1,16 @@
 ---
+description: ': My. Application. log nesnesi hakkında daha fazla bilgi edinin'
 title: My.Application.Log Nesnesi
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Application.Log object
 ms.assetid: 296147f9-1109-4a55-9b5e-047f1ab9466c
-ms.openlocfilehash: 4ed61596889c5672f706f29abaa4b4a3bcd01bb5
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 3168574886919a5318701ac2f54335ac5aae339e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875389"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99674577"
 ---
 # <a name="myapplicationlog-object"></a>My.Application.Log Nesnesi
 

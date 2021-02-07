@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: BC30648: dize sabitleri çift tırnak işaretiyle bitmelidir'
 title: Dize sabitleri çift tırnak işaretiyle bitmelidir
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30648
 ms.assetid: eefb77a4-efbc-4000-8871-edce7ef7f2df
-ms.openlocfilehash: c7ec0b144e30463e168a5b103acdb1f94a4bb2cf
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 93a5dad00d12c9aa23f3c7f35243f4725028e956
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92159670"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99675071"
 ---
 # <a name="bc30648-string-constants-must-end-with-a-double-quote"></a>BC30648: dize sabitleri çift tırnak işaretiyle bitmelidir
 

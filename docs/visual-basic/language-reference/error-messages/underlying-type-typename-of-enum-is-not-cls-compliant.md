@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: BC40032: <typename> sabit listesinin temel alınan türü CLS uyumlu değil'
 title: Enum tarafından temel olarak kullanılan <typename> türü CLS uyumlu değil
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40032
 ms.assetid: 32bf1949-fd73-456c-a323-bf1ffe1320ed
-ms.openlocfilehash: 42c2398945b97d68161af6fb3c3b69909f4aaf39
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: aebee5a9e0cd7f2e780d0171ad59dcfd4fd1d940
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92161523"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99674798"
 ---
 # <a name="bc40032-underlying-type-typename-of-enum-is-not-cls-compliant"></a>BC40032: sabit listesinin temel alınan türü \<typename> CLS uyumlu değil
 

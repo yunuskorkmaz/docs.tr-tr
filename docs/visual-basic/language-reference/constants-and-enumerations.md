@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: sabitler ve numaralandırmalar (Visual Basic)'
 title: Sabitler ve Numaralandırmalar
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-ms.openlocfilehash: 60cd1ddac9bca685ddc5778e7d289710245a183e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4306b007fc5cc881cbe1342a5f4bdd7802c252f0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84374492"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99675149"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>Sabitler ve Numaralandırmalar (Visual Basic)
 
@@ -29,7 +30,7 @@ Visual Basic, geliştiriciler için bir dizi önceden tanımlanmış sabitler ve
 |`DEBUG`|`Boolean` **Proje özellikleri** iletişim kutusunda ayarlankullanılabilecek bir değer. Varsayılan olarak, bir projenin hata ayıklama yapılandırması tanımlar `DEBUG` . `DEBUG`Tanımlandığında, <xref:System.Diagnostics.Debug> sınıf yöntemleri **Çıkış** penceresinde çıkış oluşturur. Tanımlı olmadığında, <xref:System.Diagnostics.Debug> sınıf yöntemleri derlenmez ve hata ayıklama çıkışı oluşturulmaz.|  
 |`TARGET`|Proje için çıkış türünü temsil eden bir dize veya komut satırı **hedefi** seçeneğinin ayarı. Olası değerleri `TARGET` şunlardır:<br /><br /> -bir Windows uygulaması için "winexe".<br />-konsol uygulaması için-"exe".<br />-bir sınıf kitaplığı için "Library".<br />-bir modül için "Module".<br />- **Target** seçeneği Visual Studio tümleşik geliştirme ortamında ayarlanabilir. Daha fazla bilgi için bkz. [-target (Visual Basic)](../reference/command-line-compiler/target.md).|  
 |`TRACE`|`Boolean` **Proje özellikleri** iletişim kutusunda ayarlankullanılabilecek bir değer. Varsayılan olarak, bir proje için tüm yapılandırmalarda tanımlar `TRACE` . `TRACE`Tanımlandığında, <xref:System.Diagnostics.Trace> sınıf yöntemleri **Çıkış** penceresinde çıkış oluşturur. Tanımlı olmadığında, <xref:System.Diagnostics.Trace> sınıf yöntemleri derlenmez ve hiçbir `Trace` Çıkış oluşturulmaz.|  
-|`VBC_VER`|Visual Basic sürümünü *büyük*olarak temsil eden bir sayı. *küçük* biçim.|  
+|`VBC_VER`|Visual Basic sürümünü *büyük* olarak temsil eden bir sayı. *küçük* biçim.|  
   
 ### <a name="print-and-display-constants"></a>Yazdırma ve görüntüleme sabitleri  
 
@@ -43,13 +44,13 @@ Visual Basic, geliştiriciler için bir dizi önceden tanımlanmış sabitler ve
 |`vbNewLine`|Yeni satır karakteri.|  
 |`vbNullChar`|Null karakter.|  
 |`vbNullString`|Sıfır uzunluklu dize ("") ile aynı değil; Dış yordamları çağırmak için kullanılır.|  
-|`vbObjectError`|Hata numarası. Kullanıcı tanımlı hata numaraları bu değerden büyük olmalıdır. Örnek:<br /><br /> `Err.Raise(Number) = vbObjectError + 1000`|  
+|`vbObjectError`|Hata numarası. Kullanıcı tanımlı hata numaraları bu değerden büyük olmalıdır. Örneğin:<br /><br /> `Err.Raise(Number) = vbObjectError + 1000`|  
 |`vbTab`|Sekme karakteri.|  
 |`vbBack`|Geri al karakteri.|  
 |`vbFormFeed`|Microsoft Windows 'da kullanılmaz.|  
 |`vbVerticalTab`|Microsoft Windows 'da yararlı değildir.|  
   
-## <a name="enumerations"></a>Numaralandırmalar  
+## <a name="enumerations"></a>Listelemeler  
 
  Aşağıdaki tabloda Visual Basic tarafından sunulan numaralandırmalar listelenmektedir ve açıklanmaktadır.  
   

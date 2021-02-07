@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Windows Forms uygulama temelleri (Visual Basic)'
 title: Windows Forms Uygulaması Temelleri
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: ef02662a5492f117b252e464e92ec46e7484ef66
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 04f360a0262e08fa018f19577b0e950c15a7253a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282166"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99675331"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows Forms Uygulaması Temelleri (Visual Basic)
 
@@ -32,7 +33,7 @@ Windows Forms, .NET Framework ve .NET Core 'un (.NET Core 3,0 ' den beri) akıll
 
 Windows Forms, form, kullanıcıya bilgi görüntüleyen görsel bir yüzeydir. Genellikle form üzerinde denetimler yerleştirerek ve fare tıklamaları veya tuşa basma gibi kullanıcı eylemlerine yanıtlar geliştirirken Windows Forms uygulamalar oluşturabilirsiniz. *Denetim* , verileri görüntüleyen veya veri girişini kabul eden ayrı bir kullanıcı ARABIRIMI (UI) öğesidir.
 
-### <a name="events"></a>Olaylar
+### <a name="events"></a>Ekinlikler
 
 Bir Kullanıcı formunuza veya denetimlerinden birine bir şey yaparken bir olay oluşturur. Uygulamanız kodu kullanarak bu olaylara tepki verir ve olayları gerçekleştiğinde işler. Daha fazla bilgi için bkz. [Windows Forms olay Işleyicileri oluşturma](/dotnet/desktop/winforms/creating-event-handlers-in-windows-forms).
 

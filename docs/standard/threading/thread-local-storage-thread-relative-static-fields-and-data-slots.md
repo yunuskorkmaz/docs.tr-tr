@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Iş parçacığı yerel depolama: Thread-Relative statik alanlar ve veri yuvaları'
 title: 'İş Parçacığında Yerel Depolama: İş Parçacığı Göreli Statik Alanları ve Veri Yuvaları'
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - local thread storage
 - TLS
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
-ms.openlocfilehash: b45c83887d278589cc1704ec1398ec99e27550ad
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a7da615e805da6fdc54587829957cad61d17c7a3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727529"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99675448"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>İş Parçacığında Yerel Depolama: İş Parçacığı Göreli Statik Alanları ve Veri Yuvaları
 

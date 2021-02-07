@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Yerelleştirilebilirlik incelemesi'
 title: Yerelleştirilebilirlik İncelemesi
 ms.date: 03/30/2017
 dev_langs:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - global applications, localizability
 - localizing resources
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
-ms.openlocfilehash: ecfba7b6b5908a16bb23860704a35035f58e3ed4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5228cf7ff2615f14439dfeffd0d9b511be274dae
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686026"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99675773"
 ---
 # <a name="localizability-review"></a>Yerelleştirilebilirlik incelemesi
 
@@ -82,6 +83,6 @@ Uygulamanızı geliştirirken Genelleştirme önerilerini izlediyseniz, kültür
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Genelleştirme ve yerelleştirme](index.md)
-- [Localization (Yerelleştirme)](localization.md)
+- [Yerelleştirme](localization.md)
 - [Genelleştirme](globalization.md)
 - [Masaüstü uygulamalarındaki kaynaklar](../../framework/resources/index.md)

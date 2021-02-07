@@ -1,4 +1,5 @@
 ---
+description: "Daha fazla bilgi edinin: bir BlockingCollection 'daki öğeleri kaldırmak için foreach kullanma"
 title: Bir BlockingCollection içindeki öğeleri kaldırmak için foreach kullanma
 ms.date: 05/04/2020
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - thread-safe collections, how to enumerate blocking collection
 ms.assetid: 2096103c-22f7-420d-b631-f102bc33a6dd
-ms.openlocfilehash: 9346ead4bf0aef91a224e0ab11ffd30a7c205294
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 34909356a64192f14227927b2103ee35e4a44f44
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831006"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99676020"
 ---
 # <a name="use-foreach-to-remove-items-in-a-blockingcollection"></a>Bir BlockingCollection içindeki öğeleri kaldırmak için foreach kullanma
 

@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Iş parçacığı nesneleri ve özellikleri'
 title: İş parçacığı nesneleri ve özellikleri
 ms.date: 10/01/2018
 helpviewer_keywords:
 - threading [.NET], features
 - managed threading
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
-ms.openlocfilehash: 8a66904a6db3fa45d8a42dec4e1e42883c1c3e98
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7e8167c42780ccc70c37a10bbb3a65483efabb24
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826176"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99675422"
 ---
 # <a name="threading-objects-and-features"></a>İş parçacığı nesneleri ve özellikleri
 

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Hashtable ve Dictionary koleksiyon türleri'
 title: Karma Tablo ve Sözlük Koleksiyon Türleri
 ms.date: 03/30/2017
 '\helpviewer_keywords':
@@ -9,12 +10,12 @@ ms.date: 03/30/2017
 - hash function
 - collections [.NET], Hashtable collection type
 ms.assetid: bfc20837-3d02-4fc7-8a8f-c5215b6b7913
-ms.openlocfilehash: 56e8ceff05f8f9777af370301a96cd17d0286f44
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5ba4952ad8f820984a735685571eb76236cb0dae
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733535"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99676202"
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Karma Tablo ve Sözlük Koleksiyon Türleri
 

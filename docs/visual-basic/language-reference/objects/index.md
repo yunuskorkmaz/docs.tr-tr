@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: nesneler (Visual Basic)'
 title: Nesneler
 ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic]
 ms.assetid: 651c73e4-dca8-402b-9c6b-e3902b3a3f4b
-ms.openlocfilehash: 86852b8335c05f496ea7325ae3defd35c7532b38
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 2f725d938e6ba715b07f88154558336d47b544fc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875408"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99674629"
 ---
 # <a name="objects-visual-basic"></a>Nesneler (Visual Basic)
 

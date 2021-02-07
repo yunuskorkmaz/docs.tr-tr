@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: paralel programlama için veri yapıları'
 title: Paralel Programlama için Veri Yapıları
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data structures, multi-threading
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
-ms.openlocfilehash: 4e0214afe4dba7f838f420907374f1472d6d3911
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4ab1f551c18f093ee007a38b7186921468d70be3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95699020"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99675617"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Paralel Programlama için Veri Yapıları
 
@@ -21,7 +22,7 @@ ms.locfileid: "95699020"
   
  Aşağıdaki tabloda, eşzamanlı koleksiyon sınıfları listelenmektedir:  
   
-|Tür|Açıklama|  
+|Tür|Description|  
 |----------|-----------------|  
 |<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>|, Uygulayan iş parçacığı güvenli koleksiyonlar için engelleme ve sınırlayıcı yetenekler sağlar <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType> . Üretici iş parçacıkları, kullanılabilir yuva yoksa veya koleksiyon doluysa engellenir. Koleksiyon boşsa, tüketici iş parçacıkları engeller. Bu tür Ayrıca, tüketiciler ve üreticileri tarafından engellenmeyen erişimi de destekler. <xref:System.Collections.Concurrent.BlockingCollection%601> , tarafından desteklenen herhangi bir koleksiyon sınıfı için engelleme ve sınırlama sağlamak üzere bir temel sınıf veya yedekleme deposu olarak kullanılabilir <xref:System.Collections.Generic.IEnumerable%601> .|  
 |<xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>|Ölçeklenebilir ekleme ve Get işlemleri sağlayan iş parçacığı güvenli bir paket uygulamasıdır.|  
@@ -37,7 +38,7 @@ ms.locfileid: "95699020"
   
  Aşağıdaki tabloda eşitleme türleri listelenmektedir:  
   
-|Tür|Açıklama|  
+|Tür|Description|  
 |----------|-----------------|  
 |<xref:System.Threading.Barrier?displayProperty=nameWithType>|Birden çok iş parçacığının paralel bir algoritma üzerinde çalışmasını, her görevin gelişini işaret edip bir miktar veya tüm görevler gelene kadar engellemesini sağlar. Daha fazla bilgi için bkz. [engeli](../threading/barrier.md).|  
 |<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|Kolay bir buluşma mekanizması sağlayarak çatalını ve katılmayı basitleştirir. Daha fazla bilgi için bkz. [CountdownEvent](../threading/countdownevent.md).|  
@@ -58,7 +59,7 @@ ms.locfileid: "95699020"
   
  Aşağıdaki tabloda, yavaş başlatma türleri listelenmektedir:  
   
-|Tür|Açıklama|  
+|Tür|Description|  
 |----------|-----------------|  
 |<xref:System.Lazy%601?displayProperty=nameWithType>|Hafif, iş parçacığı açısından güvenli yavaş başlatma sağlar.|  
 |<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>|Her bir iş parçacığı geç-başlatma işlevini çağırarak, iş parçacığı başına temelinde geç tarafından başlatılan bir değer sağlar.|  

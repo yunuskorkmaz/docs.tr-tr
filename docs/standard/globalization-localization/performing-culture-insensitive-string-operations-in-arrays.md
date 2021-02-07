@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: diziler içinde Culture-Insensitive dize Işlemleri gerçekleştirme'
 title: Dizilerde Kültüre Duyarsız Dize İşlemlerini Gerçekleştirme
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - arrays [.NET], culture-insensitive string operations
 - comparer parameter
 ms.assetid: f12922e1-6234-4165-8896-63f0653ab478
-ms.openlocfilehash: ac8074c5d13209b6828b7afbc720921015e11bfd
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 35c9ceea3c8de45cc37ff14cf14704268c848a5f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829810"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99675734"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-arrays"></a>Dizilerde Kültüre Duyarsız Dize İşlemlerini Gerçekleştirme
 

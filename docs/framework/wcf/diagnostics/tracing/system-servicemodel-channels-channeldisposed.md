@@ -1,19 +1,20 @@
 ---
+description: ': System. ServiceModel. Channels. Channelatılmış hakkında daha fazla bilgi edinin'
 title: System.ServiceModel.Channels.ChannelDisposed
 ms.date: 03/30/2017
 ms.assetid: 172198d5-d6c3-48d6-b8ed-8cc9b7ba0204
-ms.openlocfilehash: 2f9458b6834153b58d92d064bc2413cbb6e0dc23
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4bf0430c155a48144ebd0ef2330ea96044c2cd25
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96278771"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99677164"
 ---
 # <a name="systemservicemodelchannelschanneldisposed"></a>System.ServiceModel.Channels.ChannelDisposed
 
 System.ServiceModel.Channels.ChannelDisposed  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Kanal atıldı.  
   

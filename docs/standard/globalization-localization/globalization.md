@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Genelleştirme'
 title: Genelleştirme
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - application development [.NET], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-ms.openlocfilehash: 6ed1f6fa41b7a8b8ea8ecc89fa603836d72dfa8c
-ms.sourcegitcommit: 38999dc0ec4f7c4404de5ce0951b64c55997d9ab
+ms.openlocfilehash: 3a95660624f116ca5600d71ee633ba0f14a72588
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99426988"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99675864"
 ---
 # <a name="globalization"></a>Genelleştirme
 

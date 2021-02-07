@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: XMLSerializer örneği'
 title: XMLSerializer Örneği
 ms.date: 03/30/2017
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
-ms.openlocfilehash: 47fdcfeda796d99740a49997ee85fc63fbb27b21
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 724eefd2b7d64b2495f1703fa62843dfbc50657b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96237579"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99676501"
 ---
 # <a name="xmlserializer-sample"></a>XMLSerializer Örneği
 

@@ -1,16 +1,17 @@
 ---
+description: ': My. Computer. FileSystem. Specialdizinler nesnesi hakkında daha fazla bilgi edinin'
 title: My.Computer.FileSystem.SpecialDirectories Nesnesi
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.FileSystem.SpecialDirectories object
 - SpecialDirectories object
 ms.assetid: d5f375c3-094b-4011-8438-17a31bc6df2b
-ms.openlocfilehash: bc93c7501a47da2c216553a770ad4759dbcfc6c5
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: b2e4e4a170522eb31099b79d02d3b1fde44e7cd8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867578"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99674426"
 ---
 # <a name="mycomputerfilesystemspecialdirectories-object"></a>My.Computer.FileSystem.SpecialDirectories Nesnesi
 
