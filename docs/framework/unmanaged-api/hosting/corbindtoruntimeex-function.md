@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: CorBindToRuntimeEx Işlevi'
 title: CorBindToRuntimeEx İşlevi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: aae9fb17-5d01-41da-9773-1b5b5b642d81
 topic_type:
 - apiref
-ms.openlocfilehash: 55fbf0c37861029940422a10bd62f5ecfebf2b9a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 64ea90619d13306d8dd78eb231f9f8dbc927913f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95673751"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99717244"
 ---
 # <a name="corbindtoruntimeex-function"></a>CorBindToRuntimeEx İşlevi
 
@@ -43,7 +44,7 @@ Yönetilmeyen ana bilgisayarların ortak dil çalışma zamanını (CLR) bir iş
   
 - Bir [ICorRuntimeHost](icorruntimehost-interface.md) için, başlamadan önce clr örneğini yapılandırmak için ek seçenekler ayarlamak üzere kullanılabilecek bir arabirim işaretçisi edinin.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT CorBindToRuntimeEx (  

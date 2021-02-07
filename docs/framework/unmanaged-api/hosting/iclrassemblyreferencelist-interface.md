@@ -1,4 +1,5 @@
 ---
+description: ': ICLRAssemblyReferenceList arabirimi hakkında daha fazla bilgi'
 title: ICLRAssemblyReferenceList Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5f890fdf-d22a-429e-a35f-135273d1a636
 topic_type:
 - apiref
-ms.openlocfilehash: a75235cd0ac0e55412f0ba58881796e3ebc801f1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f5ef4efd343ebc18c443482f4697a3d299c5aac1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95679247"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99716830"
 ---
 # <a name="iclrassemblyreferencelist-interface"></a>ICLRAssemblyReferenceList Arabirimi
 

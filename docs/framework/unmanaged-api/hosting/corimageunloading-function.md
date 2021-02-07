@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: _CorImageUnloading Işlevi'
 title: _CorImageUnloading İşlevi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b4367214-6dac-4280-aa11-fd487ff30bc4
 topic_type:
 - apiref
-ms.openlocfilehash: a8326f95286ef05dd370797a531417f81ed5c65b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fe10c97be66aab21793b1ad306aa5d90eaa1ade2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723161"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99716997"
 ---
 # <a name="_corimageunloading-function"></a>_CorImageUnloading İşlevi
 
@@ -27,7 +28,7 @@ Yönetilen modül görüntüleri kaldırıldığında yükleyiciyi bilgilendirir
   
  Bu işlev uygulanmadı. Çağrılırsa, E_NOTIMPL döndürür.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 STDAPI (VOID) _CorImageUnloading(

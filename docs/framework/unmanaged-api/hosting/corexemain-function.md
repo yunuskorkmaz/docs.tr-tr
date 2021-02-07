@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: _CorExeMain Işlevi'
 title: _CorExeMain İşlevi
 ms.date: 03/30/2017
 api_name:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 898f76e2-16f4-4a63-b7d9-dad2d3824d8a
 topic_type:
 - apiref
-ms.openlocfilehash: af1d0e2039024a51341e30bec497c581a0bcacb3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f94197598d01255c35712aa682f83ca9be1fb377
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95673676"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99717140"
 ---
 # <a name="_corexemain-function"></a>_CorExeMain İşlevi
 
