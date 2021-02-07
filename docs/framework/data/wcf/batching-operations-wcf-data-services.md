@@ -1,17 +1,20 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: toplu Işlem Işlemleri (WCF Veri Hizmetleri)'
 title: Toplu işleme Işlemleri (WCF Veri Hizmetleri)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: 962a49d1-cc11-4b96-bc7d-071dd6607d6c
-ms.openlocfilehash: 95524c1397172e645d682a6ef3f03b17bb3a639d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0f8f4043e35c872445f73483832311ed86989101
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166072"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766549"
 ---
 # <a name="batching-operations-wcf-data-services"></a>Toplu işleme Işlemleri (WCF Veri Hizmetleri)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 Açık Veri Protokolü (OData), isteklerin bir OData tabanlı hizmete toplu işlem işlemesini destekler. Daha fazla bilgi için bkz. [OData: Batch işleme](https://www.odata.org/documentation/odata-version-2-0/batch-processing/). WCF Veri Hizmetleri, bir sorgu yürütme veya değişiklikleri kaydetme gibi ' ı kullanan her işlem, <xref:System.Data.Services.Client.DataServiceContext> veri hizmetine ayrı bir istek gönderilmesine neden olur. İşlem kümelerine yönelik bir mantıksal kapsamı sürdürmek için, işlem toplu işlerini açık bir şekilde tanımlayabilirsiniz. Bu, toplu işlemdeki tüm işlemlerin tek bir HTTP isteğindeki veri hizmetine gönderilmesini, sunucunun işlemleri otomatik olarak işlemesini ve veri hizmetine gidiş dönüş sayısını azaltmasını sağlar.  
   

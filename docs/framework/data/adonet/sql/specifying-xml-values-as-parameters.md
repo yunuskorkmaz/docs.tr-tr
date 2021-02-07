@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: XML değerlerini parametre olarak belirtme'
 title: Parametre Olarak XML Değerleri Belirtme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-ms.openlocfilehash: 20a573da0221704451f10138cb854523d5a17f17
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9c5b81270eeaec1fc0b3992971c9285863c92466
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183058"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767459"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Parametre Olarak XML Değerleri Belirtme
 
@@ -18,7 +19,7 @@ Bir sorgu, değeri bir XML dizesi olan bir parametre gerektiriyorsa, geliştiric
   
 ## <a name="example"></a>Örnek  
 
- Aşağıdaki konsol uygulaması **AdventureWorks** veritabanında yeni bir tablo oluşturur. Yeni tablo **SalesId** adlı bir sütun ve **SALESıNFO**adlı bir xml sütunu içerir.  
+ Aşağıdaki konsol uygulaması **AdventureWorks** veritabanında yeni bir tablo oluşturur. Yeni tablo **SalesId** adlı bir sütun ve **SALESıNFO** adlı bir xml sütunu içerir.  
   
 > [!NOTE]
 > SQL Server yüklediğinizde **AdventureWorks** örnek veritabanı varsayılan olarak yüklenmez. SQL Server kurulumunu çalıştırarak yükleyebilirsiniz.  

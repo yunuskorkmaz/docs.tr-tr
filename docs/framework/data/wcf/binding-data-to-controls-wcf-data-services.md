@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: denetimlere veri bağlama (WCF Veri Hizmetleri)'
 title: Denetimlere veri bağlama (WCF Veri Hizmetleri)
 ms.date: 03/30/2017
 dev_langs:
@@ -9,14 +10,16 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-ms.openlocfilehash: 178d77c225144497982487afa00f4493e17d1744
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 01ef24c2723bb690a8f441a315085c4312307b03
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91805219"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766484"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>Denetimlere veri bağlama (WCF Veri Hizmetleri)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Veri Hizmetleri ile, `ComboBox` ve denetimleri gibi denetimleri `ListView` sınıfının bir örneğine bağlayabilirsiniz <xref:System.Data.Services.Client.DataServiceCollection%601> . Sınıfından devralan bu koleksiyon, <xref:System.Collections.ObjectModel.ObservableCollection%601> bir açık veri Protokolü (OData) akışından gelen verileri içerir. Bu sınıf, öğeler eklendiğinde veya kaldırıldığında bildirim sağlayan dinamik bir veri koleksiyonunu temsil eder. Veri bağlama için bir örneğini kullandığınızda <xref:System.Data.Services.Client.DataServiceCollection%601> , WCF veri Hizmetleri istemci kitaplıkları, tarafından izlenen nesnelerin, <xref:System.Data.Services.Client.DataServiceContext> ilişkili kullanıcı arabirimi öğesindeki verilerle eşitlendiğinden emin olmak için bu olayları işler.  
   

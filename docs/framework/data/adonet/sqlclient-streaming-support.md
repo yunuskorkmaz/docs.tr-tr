@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: SqlClient akış desteği'
 title: SqlClient Akış Desteği
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: 7ff7feafb0501d5d98a0e692545e6b243c096e10
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0f669f4a3c0b16a6b4a113c055a830c40fe3bdcf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95678876"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766848"
 ---
 # <a name="sqlclient-streaming-support"></a>SqlClient Akış Desteği
 

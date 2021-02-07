@@ -1,26 +1,27 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: veri kaynağındaki verileri güncelleştirme'
 title: Bir Veri Kaynağındaki Verileri Güncelleştirme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-ms.openlocfilehash: 6b0234337c85ace0797d75b72560ccb55635daae
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a55d6a53f4607908fa279474419803eac3963909
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177273"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766575"
 ---
 # <a name="updating-data-in-a-data-source"></a>Bir Veri Kaynağındaki Verileri Güncelleştirme
 
-Verileri değiştiren SQL deyimleri (INSERT, UPDATE veya DELETE gibi) satır döndürmez. Benzer şekilde, birçok saklı yordam bir eylem yapar ancak satır döndürmez. Satırları döndürmeyen komutları yürütmek için, gerekli **Parametreler**dahil olmak üzere uygun SQL komutuyla ve bir **bağlantıyla**birlikte bir **komut** nesnesi oluşturun. **Komut nesnesinin** **ExecuteNonQuery** yöntemiyle komutunu yürütün.  
+Verileri değiştiren SQL deyimleri (INSERT, UPDATE veya DELETE gibi) satır döndürmez. Benzer şekilde, birçok saklı yordam bir eylem yapar ancak satır döndürmez. Satırları döndürmeyen komutları yürütmek için, gerekli **Parametreler** dahil olmak üzere uygun SQL komutuyla ve bir **bağlantıyla** birlikte bir **komut** nesnesi oluşturun. **Komut nesnesinin** **ExecuteNonQuery** yöntemiyle komutunu yürütün.  
   
  **ExecuteNonQuery** yöntemi, yürütülen deyimin veya saklı yordamın etkilediği satır sayısını temsil eden bir tamsayı döndürür. Birden çok deyim yürütülürse, döndürülen değer yürütülen tüm deyimlerden etkilenen kayıtların toplamıdır.  
   
 ## <a name="example"></a>Örnek  
 
- Aşağıdaki kod örneği, **ExecuteNonQuery**kullanarak bir veritabanına kayıt eklemek IÇIN bir INSERT ifadesini yürütür.  
+ Aşağıdaki kod örneği, **ExecuteNonQuery** kullanarak bir veritabanına kayıt eklemek IÇIN bir INSERT ifadesini yürütür.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  

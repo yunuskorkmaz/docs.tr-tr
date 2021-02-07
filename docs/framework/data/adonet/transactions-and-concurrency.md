@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Işlemler ve eşzamanlılık'
 title: İşlemler ve Eşzamanlılık
 ms.date: 03/30/2017
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
-ms.openlocfilehash: 049e402345e1abbb46739e48c89101207a43bb27
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c77b9abc72ae662eec76fc40a9856ad73f000c27
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91191677"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766770"
 ---
 # <a name="transactions-and-concurrency"></a>İşlemler ve Eşzamanlılık
 
@@ -27,7 +28,7 @@ Bir işlem, paket olarak yürütülen tek bir komuttan veya bir komut grubundan 
  [Yerel İşlemler](local-transactions.md)  
  Bir veritabanına yönelik işlemlerin nasıl gerçekleştirileceğini gösterir.  
   
- [Dağıtılmış İşlemler](distributed-transactions.md)  
+ [Dağıtılmış Işlemler](distributed-transactions.md)  
  ADO.NET içinde dağıtılmış işlemlerin nasıl gerçekleştirileceğini açıklar.  
   
  [SQL Server ile System.Transactions Tümleştirmesi](system-transactions-integration-with-sql-server.md)  

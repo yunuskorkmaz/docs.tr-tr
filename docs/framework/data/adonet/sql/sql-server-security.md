@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: SQL Server güvenliği'
 title: SQL Server Güvenliği
 ms.date: 03/30/2017
 ms.assetid: 9053724d-a1fb-4f0f-b9dc-7f6dd893e8ff
-ms.openlocfilehash: 5db14e681b5a9445c034be60993661a61a038e08
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 73e5d72dfacb1f856056ba733c4ff06823ae08d7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177312"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767212"
 ---
 # <a name="sql-server-security"></a>SQL Server Güvenliği
 

@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: SQL Server ile System. Transactions tümleştirmesi'
 title: SQL Server ile System.Transactions Tümleştirmesi
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 5adf40f96854e08736cdef77300d69e452de5eea
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 977ff18600256613dabc0212c2f7aa1bc2650408
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91191690"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766783"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>SQL Server ile System.Transactions Tümleştirmesi
 
@@ -43,7 +44,7 @@ ms.locfileid: "91191690"
   
  Aşağıdaki tabloda olası değerler açıklanmaktadır.  
   
-|Sözcükle|Açıklama|  
+|Sözcükle|Description|  
 |-------------|-----------------|  
 |Örtük bağlantı kesme|Varsayılan. Bağlantı, sona erdiğinde işlemden ayrıldığında, tekrar tekrar yürütme moduna geçiş yapın.|  
 |Açık ciltten çıkarma|İşlem kapatılıncaya kadar bağlantı işleme bağlı kalır. İlişkili işlem etkin değilse veya eşleşmezse bağlantı başarısız olur <xref:System.Transactions.Transaction.Current%2A> .|  

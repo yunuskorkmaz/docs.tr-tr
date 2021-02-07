@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: SQL Server Express güvenliği'
 title: SQL Server Express Güvenliği
 ms.date: 03/30/2017
 ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
-ms.openlocfilehash: b34e0aff4b460be2dd33b1a5e73d001c79f48f1f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1e23c418c28fb2b463e54f9d645c2851b9896452
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203455"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767290"
 ---
 # <a name="sql-server-express-security"></a>SQL Server Express Güvenliği
 

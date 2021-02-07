@@ -1,37 +1,38 @@
 ---
+description: 'Daha fazla bilgi edinin: bir SqlNotificationRequest ile SqlCommand yürütme'
 title: Bir SqlNotificationRequest ile SqlCommand Yürütme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1776f48f-9bea-41f6-83a4-c990c7a2c991
-ms.openlocfilehash: 3115bfb80d4e5e61ed49da11e36eaa37bc24334f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d3e82022794aa67d4bd20223cac852097f2be9dc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791538"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767056"
 ---
 # <a name="sqlcommand-execution-with-a-sqlnotificationrequest"></a>Bir SqlNotificationRequest ile SqlCommand Yürütme
 
-Bir <xref:System.Data.SqlClient.SqlCommand> , sunucudan alındıktan sonra veriler değiştiğinde bildirim oluşturmak üzere yapılandırılabilir ve sorgu yeniden yürütülürse sonuç kümesi farklı olur. Bu, sunucuda özel bildirim kuyruklarını kullanmak istediğiniz veya canlı nesneleri sürdürmek istemediğiniz senaryolar için yararlıdır.
+Bir, <xref:System.Data.SqlClient.SqlCommand> sunucudan alındıktan sonra veriler değiştiğinde bildirim oluşturmak üzere yapılandırılabilir ve sorgu yeniden yürütülürse sonuç kümesi farklı olur. Bu, sunucuda özel bildirim kuyruklarını kullanmak istediğiniz veya canlı nesneleri sürdürmek istemediğiniz senaryolar için yararlıdır.
 
 ## <a name="creating-the-notification-request"></a>Bildirim Isteği oluşturuluyor
 
-Bir nesneyi bir `SqlCommand` nesnesine <xref:System.Data.Sql.SqlNotificationRequest> bağlayarak bildirim isteği oluşturmak için kullanabilirsiniz. İstek oluşturulduktan sonra `SqlNotificationRequest` nesneye artık gerek kalmaz. Kuyruğu herhangi bir bildirim için sorgulayabilir ve uygun şekilde yanıt verebilirsiniz. Uygulama kapatılsa ve daha sonra yeniden başlatıldığından bile bildirimler oluşabilir.
+Bir nesneyi <xref:System.Data.Sql.SqlNotificationRequest> bir nesnesine bağlayarak bildirim isteği oluşturmak için kullanabilirsiniz `SqlCommand` . İstek oluşturulduktan sonra nesneye artık gerek kalmaz `SqlNotificationRequest` . Kuyruğu herhangi bir bildirim için sorgulayabilir ve uygun şekilde yanıt verebilirsiniz. Uygulama kapatılsa ve daha sonra yeniden başlatıldığından bile bildirimler oluşabilir.
 
 İlişkili bildirime sahip komut yürütüldüğünde, özgün sonuç kümesinde yapılan değişiklikler bildirim isteğinde yapılandırılan SQL Server kuyruğuna bir ileti gönderir.
 
 SQL Server kuyruğunu yoklayın ve iletinin uygulamanıza özgü olduğunu nasıl yorumlayacağınız. Uygulamanın, sıranın yoklanması ve iletinin içeriğine göre yeniden davranmasından sorumludur.
 
 > [!NOTE]
-> İle <xref:System.Data.SqlClient.SqlDependency>SQL Server bildirim istekleri kullanırken, varsayılan hizmet adını kullanmak yerine kendi sıra adınızı oluşturun.
+> İle SQL Server bildirim istekleri kullanırken <xref:System.Data.SqlClient.SqlDependency> , varsayılan hizmet adını kullanmak yerine kendi sıra adınızı oluşturun.
 
-İçin <xref:System.Data.Sql.SqlNotificationRequest>yeni bir istemci tarafı güvenlik öğesi yok. Bu, öncelikli olarak bir sunucu özelliğidir ve sunucu, kullanıcıların bir bildirim istemesi için gereken özel ayrıcalıklar oluşturmuştur.
+İçin yeni bir istemci tarafı güvenlik öğesi yok <xref:System.Data.Sql.SqlNotificationRequest> . Bu, öncelikli olarak bir sunucu özelliğidir ve sunucu, kullanıcıların bir bildirim istemesi için gereken özel ayrıcalıklar oluşturmuştur.
 
 ### <a name="example"></a>Örnek
 
-Aşağıdaki kod parçası, oluşturma <xref:System.Data.Sql.SqlNotificationRequest> ve <xref:System.Data.SqlClient.SqlCommand>ile ilişkilendirme işlemlerinin nasıl yapılacağını gösterir.
+Aşağıdaki kod parçası, oluşturma ve ile ilişkilendirme işlemlerinin nasıl yapılacağını gösterir <xref:System.Data.Sql.SqlNotificationRequest> <xref:System.Data.SqlClient.SqlCommand> .
 
 ```vb
 ' Assume connection is an open SqlConnection.

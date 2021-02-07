@@ -1,45 +1,46 @@
 ---
-title: Oracle için .NET Framework Veri Sağlayıcısı için Sistem Gereksinimleri
+description: 'Hakkında daha fazla bilgi edinin: Oracle için .NET Framework Veri Sağlayıcısı için sistem gereksinimleri'
+title: Oracle için .NET Framework Veri Sağlayıcısı sistem gereksinimleri
 ms.date: 03/30/2017
 ms.assetid: 054f76b9-1737-43f0-8160-84a00a387217
-ms.openlocfilehash: dab3378d3022c01c674640201a67f3bdbb4f571f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6b48ab695fdb87b2f51f4fe29589305325329098
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174257"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766835"
 ---
-# <a name="system-requirements-for-the-net-framework-data-provider-for-oracle"></a>Oracle için .NET Framework Veri Sağlayıcısı için Sistem Gereksinimleri
+# <a name="system-requirements-for-the-net-framework-data-provider-for-oracle"></a>Oracle için .NET Framework Veri Sağlayıcısı sistem gereksinimleri
 
-Oracle için .NET Framework Veri Sağlayıcısı, Microsoft Veri Erişim Bileşenleri (MDAC) sürüm 2.6 veya daha sonra gerektirir. MDAC 2.8 SP1 önerilir.  
+Oracle için .NET Framework Veri Sağlayıcısı, Microsoft Data Access Components (MDAC) sürüm 2,6 veya üstünü gerektirir. MDAC 2,8 SP1 önerilir.  
   
- Ayrıca Oracle 8i Release 3 (8.1.7) Istemcisi veya daha sonra yüklü olmalıdır.  
+ Ayrıca Oracle 8i Release 3 (8.1.7) Istemcisi veya sonraki bir sürümü yüklü olmalıdır.  
   
- Oracle 9i sürümünden önceki Oracle Client yazılımı UTF16 veritabanlarına erişemez çünkü UTF16 Oracle 9i'de yeni bir özelliktir. Bu özelliği kullanmak için istemci yazılımınızı Oracle 9i veya daha sonrasına yükseltmeniz gerekir.  
+ Oracle 9i sürümünden önceki Oracle Istemci yazılımı, UTF16 veritabanlarına erişemiyor çünkü UTF16, Oracle 9i 'de yeni bir özelliktir. Bu özelliği kullanmak için, istemci yazılımınızı Oracle 9i veya sonraki bir sürüme yükseltmeniz gerekir.  
   
-## <a name="working-with-the-data-provider-for-oracle-and-unicode-data"></a>Oracle ve Unicode Data için Veri Sağlayıcısı ile çalışma  
+## <a name="working-with-the-data-provider-for-oracle-and-unicode-data"></a>Oracle ve Unicode verileri için Veri Sağlayıcısı çalışma  
 
-Aşağıda, Oracle ve Oracle istemci kitaplıkları için .NET Framework Data Provider ile çalışırken göz önünde bulundurmanız gereken Unicode ile ilgili sorunların bir listesi verilmelidir. Daha fazla bilgi için Oracle belgelerinize bakın.  
+Aşağıda, Oracle ve Oracle istemci kitaplıkları için .NET Framework Veri Sağlayıcısı çalışırken göz önünde bulundurmanız gereken Unicode ile ilgili sorunların bir listesi verilmiştir. Daha fazla bilgi için Oracle belgelerinize bakın.  
   
-### <a name="setting-the-unicode-value-in-a-connection-string-attribute"></a>Bağlantı Dize Özniteliğindeki Unicode Değerini Ayarlama  
+### <a name="setting-the-unicode-value-in-a-connection-string-attribute"></a>Bir bağlantı dizesi özniteliğinde Unicode değeri ayarlama  
 
-Oracle ile çalışırken bağlantı dizeöz özniteliğini kullanabilirsiniz  
+Oracle ile çalışırken, bağlantı dizesi özniteliğini kullanabilirsiniz  
   
 `Unicode=True`
   
-UTF-16 modundaOracle istemci kitaplıklarını başlatma. Bu, Oracle istemci kitaplıklarının çok bayt dizeleri yerine UTF-16'yı (UCS-2'ye çok benzer) kabul etmesini neden olur. Bu, Oracle için Veri Sağlayıcısının ek çeviri çalışması olmadan her zaman herhangi bir Oracle kod sayfasıyla çalışmasını sağlar. Bu yapılandırma yalnızca, AL16UTF16'nın alternatif karakter kümesiyle oracle 9i veritabanıyla iletişim kurmak için Oracle 9i istemcilerini kullanıyorsanız çalışır. Bir Oracle 9i istemcisi bir Oracle 9i sunucusuyla iletişim kurduğunda, Unicode **CommandText** değerlerini Oracle9i sunucusunun kullandığı uygun çok bayt karakter kümesine dönüştürmek için ek kaynaklar gerekir. Bağlantı dizenize ekleyerek `Unicode=True` güvenli yapılandırmaya sahip olduğunuzu bildiğinizde bu durum önlenebilir.  
+Oracle istemci kitaplıklarını UTF-16 modunda başlatmak için. Bu, Oracle istemci kitaplıklarının çok baytlık dizeler yerine UTF-16 (UCS-2 ' ye çok benzer) kabul etmesine neden olur. Bu, Oracle 'ın Veri Sağlayıcısı ek çeviri olmadan her zaman herhangi bir Oracle kod sayfasıyla çalışmasını sağlar. Bu yapılandırma yalnızca, AL16UTF16 alternatif karakter kümesiyle bir Oracle 9i veritabanı ile iletişim kurmak için Oracle 9i istemcileri kullanıyorsanız geçerlidir. Bir Oracle 9i istemcisi bir Oracle 9i sunucusuyla iletişim kurduğunda, Unicode **CommandText** değerlerini Oracle9i sunucusunun kullandığı uygun çok baytlı karakter kümesine dönüştürmek için ek kaynaklar gerekir. Bağlantı dizenizi ekleyerek güvenli yapılandırmaya sahip olduğunuzu bildiğiniz durumlarda bu kaçınılabilir `Unicode=True` .  
   
-### <a name="mixing-versions-of-oracle-client-and-oracle-server"></a>Oracle Client ve Oracle Server'ın Karıştırma Sürümleri  
+### <a name="mixing-versions-of-oracle-client-and-oracle-server"></a>Oracle Istemcisi ve Oracle Server sürümlerini karıştırma  
 
-Sunucunun ulusal karakter kümesi AL16UTF16 (Oracle 9i için varsayılan ayar) olarak belirtildiğinde Oracle 9i veritabanlarında Oracle 9i veritabanlarında Oracle 8i istemcileri **NCHAR**, **NVARCHAR2**veya **NCLOB** verilerine erişemez. UTF-16 karakter seti desteği Oracle 9i'ye kadar kullanılmadığından, Oracle 8i istemcileri bunu okuyamaz.  
+Oracle 8i istemcileri, sunucu Ulusal karakter kümesi AL16UTF16 olarak belirtildiğinde (Oracle 9i için varsayılan ayar) Oracle 9i veritabanlarında **nchar**, **NVARCHAR2** veya **NCLOB** verilerine erişemez. UTF-16 karakter kümesi desteği Oracle 9i 'ye kadar tanıtılmadığından, Oracle 8ı istemcileri bunu okuyamıyorum.  
   
-### <a name="working-with-utf-8-data"></a>UTF-8 Verileriyle Çalışma  
+### <a name="working-with-utf-8-data"></a>UTF-8 verileriyle çalışma  
 
-Alternatif karakter kümesini ayarlamak için, Kayıt Defteri AnahtarıHKEY_LOCAL_MACHINE\SOFTWARE\ORACLE\HOMEID\NLS_LANG'ı UTF8 olarak ayarlayın. Daha fazla bilgi için platformunuzdaki Oracle Yükleme notlarına bakın. Varsayılan ayar, Oracle Client yazılımını yüklediğiniz dilin birincil karakter kümesidir. Dilini bağlandığınız veritabanının ulusal dil karakter kümesiyle eşleşecek şekilde ayarlamamak, parametre ve sütun bağlamalarının ulusal karakter kümesine değil, birincil veritabanı karakter kümenizde veri göndermesine veya almasına neden olur.  
+Alternatif karakter kümesini ayarlamak için HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE\HOMEID\NLS_LANG kayıt defteri anahtarını UTF8 olarak ayarlayın. Daha fazla bilgi için bkz. platformunuza Oracle yükleme notları. Varsayılan ayar, Oracle Istemci yazılımını yüklemekte olduğunuz dilin birincil karakter kümesidir. Dili bağlanmakta olduğunuz veritabanının ulusal dil karakter kümesiyle eşleşecek şekilde ayarlamama, parametre ve sütun bağlamalarının Ulusal karakter kümesine değil, birincil veritabanı karakter kümesine veri göndermesini veya almasına neden olur.  
   
-### <a name="oraclelob-can-only-update-full-characters"></a>OracleLob Yalnızca Tam Karakterleri Güncelleyebilir.  
+### <a name="oraclelob-can-only-update-full-characters"></a>OracleLob yalnızca tam karakterleri güncelleştirebilir.  
 
-Kullanılabilirlik nedenleriyle <xref:System.Data.OracleClient.OracleLob> nesne .NET Framework Stream sınıfından devralır ve **ReadByte** ve **WriteByte** yöntemlerini sağlar. Ayrıca, Oracle **LOB** nesnelerinin bölümleri üzerinde çalışan **CopyTo** ve **Erase**gibi yöntemleri de uygular. Buna karşılık, Oracle istemci yazılımı karakter **LOB**s **(CLOB** ve **NCLOB)** ile çalışmak için API'ler bir dizi sağlar. Ancak, bu API'ler yalnızca tam karakterler üzerinde çalışır. Bu fark nedeniyle, Oracle için Veri Sağlayıcısı, UTF-16 verileriyle bayt açısından çalışmak için **Read** ve **ReadByte** desteği uygular. Ancak, **OracleLob** nesnesinin diğer yöntemleri yalnızca tam karakter işlemlerine izin verir.  
+Kullanılabilirlik nedenleriyle, <xref:System.Data.OracleClient.OracleLob> nesne .NET Framework Stream sınıfından devralır ve **ReadByte** ve **WriteByte** yöntemleri sağlar. Ayrıca, Oracle **lob** nesnelerinin bölümlerinde çalışan **CopyTo** ve **silme** gibi yöntemleri uygular. Buna karşılık, Oracle istemci yazılımı, **lob**'Lar (**CLOB** ve **NCLOB**) ile çalışmak için bir dizi API sağlar. Ancak, bu API 'Ler yalnızca tam karakterler üzerinde çalışır. Bu fark nedeniyle, Oracle 'ın Veri Sağlayıcısı, UTF-16 verileriyle bir bayt temelinde çalışacak şekilde **Read** ve **ReadByte** desteğini uygular. Ancak, **OracleLob** nesnesinin diğer yöntemleri yalnızca tam karakter işlemlerine izin verir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

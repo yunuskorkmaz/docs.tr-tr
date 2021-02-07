@@ -1,13 +1,14 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: ADO.NET 'de veri Işlemleri SQL Server"
 title: SQL Server veri Işlemleri
 ms.date: 03/30/2017
 ms.assetid: b864ebc9-ed8e-4059-85fd-36d9198f5521
-ms.openlocfilehash: 590b7942148b9db49817c13b102b82552e935fb2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 79eda39fe16a8c7bd7f9a77b1f7ff0739c4f8062
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203468"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767355"
 ---
 # <a name="sql-server-data-operations-in-adonet"></a>ADO.NET’te SQL Server Veri İşlemleri
 
@@ -24,7 +25,7 @@ Bu bölümde, SQL Server () için .NET Framework Veri Sağlayıcısı özgü öz
  [Zaman Uyumsuz İşlemler](asynchronous-operations.md)  
  .NET Framework tarafından kullanılan zaman uyumsuz modelden sonra Modellenen bir API kullanarak zaman uyumsuz veritabanı işlemlerinin nasıl gerçekleştirileceğini açıklar.  
   
- [Tablo Değerli Parametreler](table-valued-parameters.md)  
+ [Tablo değerli parametreler](table-valued-parameters.md)  
  SQL Server 2008 ' de tanıtılan tablo değerli parametrelerle nasıl çalışabileceğinizi açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

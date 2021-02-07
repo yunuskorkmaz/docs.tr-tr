@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: zaman uyumsuz Işlemler (WCF Veri Hizmetleri)'
 title: Zaman uyumsuz Işlemler (WCF Veri Hizmetleri)
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,14 +7,16 @@ helpviewer_keywords:
 - asynchronous operations [WCF Data Services]
 - WCF Data Services, client library
 ms.assetid: 679644c7-e3fc-422c-b14a-b44b683900d0
-ms.openlocfilehash: cf3a81914d78e8f08c06602600ce5dcef4f4d35b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ede69fef4e284f2f7a06f4e1e842f07380d77cbf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91191651"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766614"
 ---
 # <a name="asynchronous-operations-wcf-data-services"></a>Zaman uyumsuz Işlemler (WCF Veri Hizmetleri)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 Web uygulamaları, istemci ve sunucu arasında iç ağların içinde çalışan uygulamalardan daha yüksek gecikme süresine sahip olmalıdır. Uygulamanızın performans ve Kullanıcı deneyimini iyileştirmek için, <xref:System.Data.Services.Client.DataServiceContext> <xref:System.Data.Services.Client.DataServiceQuery%601> Web üzerinden WCF veri Hizmetleri sunucularına erişirken ve sınıflarının zaman uyumsuz yöntemlerini kullanmanızı öneririz.  
   

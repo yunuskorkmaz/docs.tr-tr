@@ -1,4 +1,5 @@
 ---
+description: "Şu konuda daha fazla bilgi edinin: nasıl yapılır: mevcut bir varlığı DataServiceContext 'e Iliştirme (WCF Veri Hizmetleri)"
 title: "Nasıl yapılır: DataServiceContext 'e mevcut bir varlık Iliştirme (WCF Veri Hizmetleri)"
 ms.date: 03/30/2017
 dev_langs:
@@ -7,14 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: e3f2d71d-434c-4e98-91c3-95adae4702b6
-ms.openlocfilehash: 69ca64f4ab3470c1a4f58c582b31c06aed9cadd5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 039225ec992a4ddd23fd9f7013e04562f6fe72a9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166137"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766601"
 ---
 # <a name="how-to-attach-an-existing-entity-to-the-dataservicecontext-wcf-data-services"></a>Nasıl yapılır: DataServiceContext 'e mevcut bir varlık Iliştirme (WCF Veri Hizmetleri)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 Bir varlık bir veri hizmetinde zaten mevcutsa, WCF Veri Hizmetleri istemci kitaplığı, <xref:System.Data.Services.Client.DataServiceContext> ilk olarak bir sorgu yürütmeden varlığı temsil eden bir nesneyi doğrudan öğesine eklemenize olanak sağlar. Daha fazla bilgi için bkz. [veri hizmetini güncelleştirme](updating-the-data-service-wcf-data-services.md).  
   

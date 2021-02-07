@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: veri hizmeti kaynaklarına erişme (WCF Veri Hizmetleri)'
 title: Veri hizmeti kaynaklarına erişme (WCF Veri Hizmetleri)
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -8,14 +9,16 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: 02e45f4e67a80d3afb600f44ea9fa6a5e175310c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b1b4d94b020dcbb942959dfbf3fb3fc26dcbf915
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91186685"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766653"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>Veri hizmeti kaynaklarına erişme (WCF Veri Hizmetleri)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Veri Hizmetleri, verilerinizi URI 'Ler tarafından adreslenebilir kaynaklarla bir akış olarak göstermek için açık veri Protokolü 'Nü (OData) destekler. Bu kaynaklar [varlık veri modeli](../adonet/entity-data-model.md)varlık ilişkisi kurallarına göre temsil edilir. Bu modelde, varlıklar, bir uygulama etki alanında bulunan, müşteriler, siparişler, öğeler ve ürünler gibi veri türleri olan işletimsel birimleri temsil eder. Varlık verilerine, temsili durum aktarımı (REST) semantiği kullanılarak erişilir ve değiştirilir, özellikle Al, koy, POST ve DELETE için standart HTTP fiilleri.  
   
@@ -61,7 +64,7 @@ WCF Veri Hizmetleri, verilerinizi URI 'Ler tarafından adreslenebilir kaynaklarl
   
  WCF Veri Hizmetleri, aşağıdaki OData sistem sorgu seçeneklerini destekler:  
   
-|Sorgu seçeneği|Açıklama|  
+|Sorgu seçeneği|Description|  
 |------------------|-----------------|  
 |`$orderby`|Döndürülen akıştaki varlıklar için varsayılan bir sıralama düzeni tanımlar. Aşağıdaki sorgu, verilen müşteriler akışını ilçe ve şehre göre sıralar:<br /><br /> `https://services.odata.org/Northwind/Northwind.svc/Customers?$orderby=Country,City>`|  
 |`$top`|Döndürülen akışa eklenecek varlıkların sayısını belirtir. Aşağıdaki örnek ilk 10 müşteriyi atlar ve sonraki 10 ' u döndürür:<br /><br /> `https://services.odata.org/Northwind/Northwind.svc/Customers?$skip=10&$top=10`|  

@@ -1,14 +1,15 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: SQL Server veri türleri ve ADO.NET'
 title: SQL Server Veri Türleri ve ADO.NET
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
-ms.openlocfilehash: db4618ac624ea8401cab682a8c21d8f23c253d05
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 841fa5864bf54b5e4fc4dc24dab64e6ac1435c7e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91155464"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767303"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server Veri Türleri ve ADO.NET
 
@@ -62,6 +63,6 @@ SQL Server ve .NET Framework, farklı tür sistemlerine dayalıdır, bu da olas�
 
 - [SQL Server Veri Türü Eşlemeleri](../sql-server-data-type-mappings.md)
 - [Parametreleri ve Parametre Veri Türlerini Yapılandırma](../configuring-parameters-and-parameter-data-types.md)
-- [Tablo Değerli Parametreler](table-valued-parameters.md)
+- [Tablo değerli parametreler](table-valued-parameters.md)
 - [SQL Server İkili ve Büyük Değerli Veriler](sql-server-binary-and-large-value-data.md)
 - [ADO.NET’e Genel Bakış](../ado-net-overview.md)
