@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Declare bildirimi'
 title: Declare Deyimi
 ms.date: 07/20/2015
 f1_keywords:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: 8a5802583db53bfd0444ec9df0de9a0b9346d424
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8ad8169515bbb2889c0adbed4df4e30a0215d47d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545525"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673849"
 ---
 # <a name="declare-statement"></a>Declare Deyimi
 
@@ -118,7 +119,7 @@ Dış başvurular varsayılan olarak [genel](../modifiers/public.md) erişime sa
 
   Bağımsız değişkenleri, bildiriminde tarafından belirtilen şekilde dış yordama geçirebilirsiniz `parameterlist` `Declare` . Parametrelerin dış dosyada ilk olarak nasıl bildirildiği dikkate alma. Benzer şekilde, bir dönüş değeri varsa, tam olarak ifadesinde belirtilen şekilde kullanın `returntype` `Declare` .
 
-- **Karakter kümeleri.** `charsetmodifier`Dış yordamı çağırdığında Visual Basic dizelerin nasıl sıralaması gerektiğini belirtebilirsiniz. `Ansi`Değiştirici, tüm DIZELERI ANSI değerlerine göre sıralamak için Visual Basic yönlendirir ve `Unicode` değiştirici onu tüm dizeleri Unicode değerlerine göre sıralamak için yönlendirir. `Auto`Değiştirici, dış başvuruya göre .NET Framework kurallarına göre veya belirtilmişse dizeleri sıralama Visual Basic yönlendirir `name` `aliasname` . Varsayılan değer: `Ansi`.
+- **Karakter kümeleri.** `charsetmodifier`Dış yordamı çağırdığında Visual Basic dizelerin nasıl sıralaması gerektiğini belirtebilirsiniz. `Ansi`Değiştirici, tüm DIZELERI ANSI değerlerine göre sıralamak için Visual Basic yönlendirir ve `Unicode` değiştirici onu tüm dizeleri Unicode değerlerine göre sıralamak için yönlendirir. `Auto`Değiştirici, dış başvuruya göre .NET Framework kurallarına göre veya belirtilmişse dizeleri sıralama Visual Basic yönlendirir `name` `aliasname` . `Ansi` varsayılan değerdir.
 
   `charsetmodifier` Ayrıca, Visual Basic dış yordamın dış dosyası içinde nasıl araması gerektiğini de belirtir. `Ansi``Unicode`Ayrıca, arama sırasında adını değiştirmeden bunu aramak için doğrudan Visual Basic. `Auto` çalışma zamanı platformunun temel karakter kümesini belirlemede Visual Basic yönlendirir ve büyük olasılıkla dış yordam adını şu şekilde değiştirebilir:
 

@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: güvenlik konuları (Entity Framework)'
 title: Güvenlik konuları (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 5a2d96679c43528b86d3b1d7301b4520a38289aa
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: fc09fa519d6f357e2f684fd5666b233081cd19fe
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91156686"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673277"
 ---
 # <a name="security-considerations-entity-framework"></a>Güvenlik konuları (Entity Framework)
 
@@ -129,7 +130,7 @@ Bu konuda Entity Framework uygulamaları geliştirmeye, dağıtmaya ve çalışt
   
 - İç içe [!INCLUDE[esql](../../../../../includes/esql-md.md)] sorgularda.  
   
- Kullanıcı girişini kabul ettiğinizde, girişin sonuç kümelerinin sistem tarafından işleyebileceğinden daha büyük olmasına neden olduğundan emin olmanız gerekir. <xref:System.Linq.Queryable.Take%2A> [LIMIT](./language-reference/limit-entity-sql.md) [!INCLUDE[esql](../../../../../includes/esql-md.md)] Sonuç kümesinin boyutunu sınırlamak için LINQ to Entities veya ' de LIMIT işleci içindeki yöntemi de kullanabilirsiniz.  
+ Kullanıcı girişini kabul ettiğinizde, girişin sonuç kümelerinin sistem tarafından işleyebileceğinden daha büyük olmasına neden olduğundan emin olmanız gerekir. <xref:System.Linq.Queryable.Take%2A> [](./language-reference/limit-entity-sql.md) [!INCLUDE[esql](../../../../../includes/esql-md.md)] Sonuç kümesinin boyutunu sınırlamak için LINQ to Entities veya ' de LIMIT işleci içindeki yöntemi de kullanabilirsiniz.  
   
 #### <a name="avoid-returning-iqueryable-results-when-exposing-methods-to-potentially-untrusted-callers"></a>Potansiyel olarak güvenilmeyen arayanlara Yöntemler oluştururken IQueryable sonuçlarının Döndürülmekten kaçının.  
 

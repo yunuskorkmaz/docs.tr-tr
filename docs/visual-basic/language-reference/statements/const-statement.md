@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: const ekstresi (Visual Basic)'
 title: Const Deyimi
 ms.date: 05/12/2018
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-ms.openlocfilehash: 3b05d4067ef99e03df07d2c316c982051180d961
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 61d898823c7697c91b207a502417b49cdeaf5eea
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84382113"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673862"
 ---
 # <a name="const-statement-visual-basic"></a>Const Deyimi (Visual Basic)
 
 Bir veya daha fazla sabiti bildirir ve tanımlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```vb
 [ <attributelist> ] [ accessmodifier ] [ Shadows ]

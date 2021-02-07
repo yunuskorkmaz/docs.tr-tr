@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: (Entity SQL)'
 title: SONRA (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 54222642-23c6-4f61-9861-67caca53ac5f
-ms.openlocfilehash: f038f242bc0873df3d72700aa05fca2f76f777ff
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e1f0657cfef3786832f489434fd8fc0342e8687b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91161678"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673472"
 ---
 # <a name="then-entity-sql"></a>SONRA (Entity SQL)
 

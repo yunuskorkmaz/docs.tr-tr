@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: temsilci ekstresi'
 title: Delegate Deyimi
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-ms.openlocfilehash: 29de4c174273c3c6c0d4f0cea1ee6dc254a1339b
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 3fbf3d7b47b465fd0850f01170e02b19b7b93b4e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866654"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673823"
 ---
 # <a name="delegate-statement"></a>Delegate Deyimi
 
 Bir temsilciyi bildirmek için kullanılır. Temsilci, `Shared` bir türün yöntemine veya bir nesnenin örnek metoduna başvuran bir başvuru türüdür. Bu temsilci sınıfının bir örneğini oluşturmak için eşleşen parametre ve dönüş türleri olan herhangi bir yordam kullanılabilir. Yordam daha sonra temsilci örneği aracılığıyla çağrılabilir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 [ <attrlist> ] [ accessmodifier ] _  
@@ -27,7 +28,7 @@ Bir temsilciyi bildirmek için kullanılır. Temsilci, `Shared` bir türün yön
   
 ## <a name="parts"></a>Bölümler  
   
-|Terim|Tanım|  
+|Süre|Tanım|  
 |---|---|  
 |`attrlist`|İsteğe bağlı. Bu temsilci için uygulanan özniteliklerin listesi. Birden çok öznitelik virgülle ayrılır. [Öznitelik listesini](attribute-list.md) açılı ayraçlar (" `<` " ve " `>` ") içine almalısınız.|  
 |`accessmodifier`|İsteğe bağlı. Temsilciye erişebilecek kodu belirtir. Aşağıdakilerden biri olabilir:<br /><br /> - [Genel](../modifiers/public.md). Temsilciyi bildiren öğeye erişebilen tüm kodlar buna erişebilir.<br />-   [Korunuyor](../modifiers/protected.md). Yalnızca temsilcinin sınıfı veya türetilmiş bir sınıf içindeki kodlar buna erişebilir.<br />-   [Arkadaş](../modifiers/friend.md). Temsilciye yalnızca aynı derleme içindeki kod erişebilir.<br />- [Özel](../modifiers/private.md). Yalnızca temsilciyi bildiren öğesi içindeki kod erişebilir.<br /><br /> - [Korumalı arkadaş](../modifiers/protected-friend.md) Yalnızca temsilcinin sınıfının, türetilmiş bir sınıfın veya aynı derlemenin içindeki kodların temsilciye erişimi olabilir. <br />- [Özel korumalı](../modifiers/private-protected.md) Yalnızca temsilcinin sınıfı içindeki veya aynı derlemede bulunan türetilmiş bir sınıftaki kod temsilciye erişebilir. |  

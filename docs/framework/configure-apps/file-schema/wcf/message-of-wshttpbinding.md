@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi <message> edinin: <wsHttpBinding>'
 title: <message> / <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 621abbde-590b-454d-90ac-68dc3c69c720
-ms.openlocfilehash: 7bd4caa31dcdcd2a4b104b9d4d5615a2ff800db4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b3a389f2cfd3442a0d05455f0519eaa19ef01e74
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204833"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673641"
 ---
 # <a name="message-of-wshttpbinding"></a>\<message> / \<wsHttpBinding>
 
@@ -42,9 +43,9 @@ ms.locfileid: "91204833"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|algorithmSuite|İleti şifrelemesini ve anahtar sarması algoritmalarını ayarlar. Algoritmalar ve anahtar boyutları sınıfına göre belirlenir <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> . Bu algoritmalar güvenlik Ilkesi dili (WS-SecurityPolicy) belirtiminde belirtilen olanlarla eşlenir.<br /><br /> Varsayılan değer: `Basic256`.|  
+|algorithmSuite|İleti şifrelemesini ve anahtar sarması algoritmalarını ayarlar. Algoritmalar ve anahtar boyutları sınıfına göre belirlenir <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> . Bu algoritmalar güvenlik Ilkesi dili (WS-SecurityPolicy) belirtiminde belirtilen olanlarla eşlenir.<br /><br /> `Basic256` varsayılan değerdir.|  
 |clientCredentialType|İsteğe bağlı. Güvenlik modunu kullanarak istemci kimlik doğrulaması gerçekleştirirken kullanılacak kimlik bilgisinin türünü belirtir `Message` `TransportWithMessageCredentials` . Aşağıdaki numaralandırma değerlerine bakın. Varsayılan değer: `Windows`.<br /><br /> Bu öznitelik türü <xref:System.ServiceModel.MessageCredentialType> .|  
-|establishSecurityContext|Güvenlik kanalının güvenli bir oturum kurup kurmadığını belirleyen bir Boole değeri. Güvenli bir oturum, uygulama iletilerini değiş tokuş etmeden önce bir güvenlik bağlamı belirteci (SCT) oluşturur. SCT oluşturulduğunda güvenlik kanalı, <xref:System.ServiceModel.Channels.ISession> üst kanallara yönelik bir arabirim sunar. Güvenli oturumları kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: güvenli oturum oluşturma](../../../wcf/feature-details/how-to-create-a-secure-session.md).<br /><br /> Varsayılan değer: `true`.|  
+|establishSecurityContext|Güvenlik kanalının güvenli bir oturum kurup kurmadığını belirleyen bir Boole değeri. Güvenli bir oturum, uygulama iletilerini değiş tokuş etmeden önce bir güvenlik bağlamı belirteci (SCT) oluşturur. SCT oluşturulduğunda güvenlik kanalı, <xref:System.ServiceModel.Channels.ISession> üst kanallara yönelik bir arabirim sunar. Güvenli oturumları kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: güvenli oturum oluşturma](../../../wcf/feature-details/how-to-create-a-secure-session.md).<br /><br /> `true` varsayılan değerdir.|  
 |negotiateServiceCredential|İsteğe bağlı. Hizmet kimlik bilgisinin istemci bant dışı olarak sağlanıp sağlanmadığını veya hizmetten istemciye bir anlaşma sürecinde elde edilip edilmeyeceğini belirten bir Boole değeri. Bu tür bir anlaşma, olağan ileti alışverişi için bir precurslı ' dır.<br /><br /> `clientCredentialType`Öznitelik None, username veya Certificate değerine eşitse, bu özniteliği ayarlamak `false` hizmet sertifikasının bant dışı ve istemcinin [\<serviceCertificate>](servicecertificate-of-servicecredentials.md) hizmet davranışındaki hizmet sertifikasını (kullanarak) belirtmesi gerektiğini gösterir [\<serviceCredentials>](servicecredentials.md) . Bu mod, WS-Trust ve WS-SecureConversation uygulayan SOAP yığınları ile birlikte çalışabilir.<br /><br /> `ClientCredentialType`Özniteliği olarak ayarlandıysa `Windows` , bu özniteliği `false` Kerberos tabanlı kimlik doğrulamasını belirtir. Bu, istemci ve hizmetin aynı Kerberos etki alanının parçası olması gerektiği anlamına gelir. Bu mod, Kerberos belirteç profilini (OASSıS WSS TC ' de tanımlandığı gibi) ve WS-Trust ve WS-SecureConversation ' i uygulayan SOAP yığınları ile birlikte çalışabilir.<br /><br /> Bu öznitelik olduğunda `true` , SOAP iletileri üzerinde SPNEGO Exchange tünelini sağlayan bir .NET SOAP anlaşmasına neden olur.<br /><br /> Varsayılan değer: `true`.|  
   
 ## <a name="algorithmsuite-attribute"></a>algorithmSuite özniteliği  
@@ -72,7 +73,7 @@ ms.locfileid: "91204833"
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Yok|Bu, hizmetin anonim istemcilerle etkileşime geçmesini sağlar. Hizmet tarafında bu, hizmetin hiçbir istemci kimlik bilgisi gerektirmediğini belirtir. İstemcide Bu, istemcinin hiçbir istemci kimlik bilgisi sunmadığını gösterir.|  
+|Hiçbiri|Bu, hizmetin anonim istemcilerle etkileşime geçmesini sağlar. Hizmet tarafında bu, hizmetin hiçbir istemci kimlik bilgisi gerektirmediğini belirtir. İstemcide Bu, istemcinin hiçbir istemci kimlik bilgisi sunmadığını gösterir.|  
 |Sertifika|Hizmetin, bir sertifika kullanarak istemcinin kimliğinin doğrulanmasını gerektirmesini sağlar. İleti güvenlik modu kullanılıyorsa ve `negotiateServiceCredential` özniteliği olarak ayarlandıysa `false` , istemcinin hizmet sertifikasıyla sağlanması gerekir.|  
 |IssuedToken|Genellikle bir güvenlik belirteci hizmeti tarafından verilen özel bir belirteci belirtir.|  
 |UserName|Hizmetin, istemcinin bir Kullanıcı adı kimlik bilgisi kullanarak kimlik doğrulaması yapmasını gerektirmesini sağlar. WCF parola özetinin gönderilmesini veya parola kullanarak anahtar türemesini veya ileti güvenliği için bu tuşları kullanmayı desteklemez. Bu nedenle, WCF, Kullanıcı adı kimlik bilgileri kullanılırken taşımanın güvenli olmasını zorunlu kılar. Bu kimlik bilgisi modu, özelliği temel alan, birlikte çalışabilen bir Exchange veya birlikte çalışabilen bir anlaşma ile sonuçlanır `negotiateServiceCredential` .|  

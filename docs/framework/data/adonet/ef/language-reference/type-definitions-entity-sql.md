@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: tür tanımları (Entity SQL)'
 title: Tür tanımları (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
-ms.openlocfilehash: 7e4e6f0e9f64816d10a69a8b0639728e4cd7af80
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e5a66ed9ea456733bab9c68d96ef5c176dad5651
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201024"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673420"
 ---
 # <a name="type-definitions-entity-sql"></a>Tür tanımları (Entity SQL)
 

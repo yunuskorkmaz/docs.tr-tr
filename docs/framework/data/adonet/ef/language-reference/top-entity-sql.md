@@ -1,25 +1,26 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: TOP (Entity SQL)'
 title: ÜST (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4a4a0954-82e2-4eae-bcaf-7c4552f3532d
-ms.openlocfilehash: 16be25336bac386c993eae7527c9377be1073d1e
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 51e4ce53cff4b47f6f57b6b856ccb09b38e639cf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319268"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673446"
 ---
 # <a name="top-entity-sql"></a>ÜST (Entity SQL)
 
 SELECT yan tümcesi isteğe bağlı ALL/DISTINCT değiştiricisinden sonra isteğe bağlı bir TOP Sub yan tümcesine sahip olabilir. TOP alt yan tümcesi, sorgu sonucundan yalnızca ilk satır kümesinin döndürüleceğini belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```sql
 [ TOP (n) ]
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız değişkenler
 
 `n` Döndürülecek satır sayısını belirten sayısal ifade. `n` tek bir sayısal sabit değer veya tek bir parametre olabilir.
 
@@ -43,18 +44,18 @@ Sorgu sıralanmadığı takdirde TOP belirleyici değildir. Belirleyici bir sonu
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgusu, sorgu sonucundan döndürülecek en üstteki bir satırı belirtmek için üst öğesini kullanır. Sorgu AdventureWorks Sales modelini temel alır. Bu sorguyu derlemek ve çalıştırmak için aşağıdaki adımları izleyin:
+Aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu, sorgu sonucundan döndürülecek en üstteki bir satırı belirtmek IÇIN üst öğesini kullanır. Sorgu AdventureWorks Sales modelini temel alır. Bu sorguyu derlemek ve çalıştırmak için aşağıdaki adımları izleyin:
 
 1. [Nasıl yapılır: StructuralType sonuçları döndüren bir sorgu yürütme](../how-to-execute-a-query-that-returns-structuraltype-results.md)bölümündeki yordamı izleyin.
 
-2. Aşağıdaki sorguyu `ExecuteStructuralTypeQuery` yöntemine bir bağımsız değişken olarak geçirin:
+2. Aşağıdaki sorguyu yöntemine bir bağımsız değişken olarak geçirin `ExecuteStructuralTypeQuery` :
 
     [!code-sql[DP EntityServices Concepts#TOP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#top)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [SELECT](select-entity-sql.md)
-- [SKIP](skip-entity-sql.md)
-- [LIMIT](limit-entity-sql.md)
+- [ŞIMDILIK](skip-entity-sql.md)
+- [SıNıRLı](limit-entity-sql.md)
 - [ORDER BY](order-by-entity-sql.md)
 - [Entity SQL Başvurusu](entity-sql-reference.md)

@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Method-Based sorgu söz dizimi örnekleri: toplama Işleçleri'
 title: 'Metot Tabanlı Sorgu Söz Dizimi Örnekleri: Toplu İşleçler'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0e306067-5720-4782-9719-2286570a7e47
-ms.openlocfilehash: f8754101e7ec55fe5f9836300de1d077e1db2478
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 26398af95398905f2e28c603ef90a04a4a2c56bb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91192132"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673623"
 ---
 # <a name="method-based-query-syntax-examples-aggregate-operators"></a>Metot Tabanlı Sorgu Söz Dizimi Örnekleri: Toplu İşleçler
 
@@ -136,7 +137,7 @@ Bu konudaki örneklerde,,,,, <xref:System.Linq.Enumerable.Aggregate%2A> <xref:Sy
  [!code-csharp[DP L2E Examples#MinElements_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#minelements_mq)]
  [!code-vb[DP L2E Examples#MinElements_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#minelements_mq)]  
   
-## <a name="sum"></a>Toplam  
+## <a name="sum"></a>Sum  
   
 ### <a name="example"></a>Örnek  
 

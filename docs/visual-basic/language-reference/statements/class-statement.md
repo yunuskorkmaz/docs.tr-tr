@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: sınıf ekstresi (Visual Basic)'
 title: Class Deyimi
 ms.date: 05/12/2018
 f1_keywords:
@@ -13,18 +14,18 @@ helpviewer_keywords:
 - classes [Visual Basic], data members
 - data members [Visual Basic], of classes
 ms.assetid: f2664f38-eb5a-4d4b-a374-1d041521fb6c
-ms.openlocfilehash: 3b64597fcd7453c20ed295fe263eeaa8783b20ae
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: de4541addc9f4755d973586c7d1b4410e4bf12ed
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866037"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673901"
 ---
 # <a name="class-statement-visual-basic"></a>Class Deyimi (Visual Basic)
 
 Bir sınıfın adını bildirir ve sınıfın içerdiği değişkenlerin, özelliklerin, olayların ve yordamların tanımını tanıtır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 [ <attributelist> ] [ accessmodifier ] [ Shadows ] [ MustInherit | NotInheritable ] [ Partial ] _  
@@ -37,7 +38,7 @@ End Class
   
 ## <a name="parts"></a>Bölümler  
   
-|Terim|Tanım|  
+|Süre|Tanım|  
 |---|---|  
 |`attributelist`|İsteğe bağlı. Bkz. [öznitelik listesi](attribute-list.md).|  
 |`accessmodifier`|İsteğe bağlı. Aşağıdakilerden biri olabilir:<br /><br /> -   [Geneldir](../modifiers/public.md)<br />-   [Korunamadı](../modifiers/protected.md)<br />-   [Dost](../modifiers/friend.md)<br />-   [Özelleştirme](../modifiers/private.md)<br />-   [Korumalı arkadaş](../modifiers/protected-friend.md)<br />- [Özel korumalı](../modifiers/private-protected.md)<br/><br/> [Visual Basic erişim düzeylerine](../../programming-guide/language-features/declared-elements/access-levels.md)bakın.|  
@@ -67,7 +68,7 @@ End Class
   
 ## <a name="rules"></a>Kurallar  
   
-- **İç içe geçme.** Bir sınıfı diğeri içinde tanımlayabilirsiniz. Dış sınıfa *kapsayan sınıf*denir ve iç sınıfa *iç içe sınıf*denir.  
+- **İç içe geçme.** Bir sınıfı diğeri içinde tanımlayabilirsiniz. Dış sınıfa *kapsayan sınıf* denir ve iç sınıfa *iç içe sınıf* denir.  
   
 - **Devralmayı.** Sınıf [Inherits ifadesini](inherits-statement.md)kullanıyorsa yalnızca bir temel sınıf veya arabirim belirtebilirsiniz. Bir sınıf birden fazla öğeden devralınabilir.  
   
@@ -77,7 +78,7 @@ End Class
   
 - **Paylaşır.** Sınıf [Implements ifadesini](implements-statement.md)kullanıyorsa, içinde belirttiğiniz her arabirim tarafından tanımlanan her üyeyi uygulamanız gerekir `interfacenames` . Bunun bir özel durumu, bir temel sınıf üyesinin yeniden uygulamasıdır. Daha fazla bilgi için, bkz. [uygulamadaki](implements-clause.md)"yeniden uygulama".  
   
-- **Varsayılan özellik.** Bir sınıf, en az bir özelliği *varsayılan özelliği*olarak belirtebilir. Daha fazla bilgi için bkz. [Default](../modifiers/default.md).  
+- **Varsayılan özellik.** Bir sınıf, en az bir özelliği *varsayılan özelliği* olarak belirtebilir. Daha fazla bilgi için bkz. [Default](../modifiers/default.md).  
   
 ## <a name="behavior"></a>Davranış  
   
@@ -99,7 +100,7 @@ End Class
 
  Bu öğelerin birçok benzerlikleri vardır ancak bazı önemli farklılıklar da vardır.  
   
-- **Terimler.** Önceki Visual Basic sürümleri iki tür modül tanır: *sınıf modülleri* (. CLS dosyaları) ve *Standart modüller* (. bas dosyaları). Geçerli sürüm, sırasıyla bu *sınıfları* ve *modülleri*çağırır.  
+- **Terimler.** Önceki Visual Basic sürümleri iki tür modül tanır: *sınıf modülleri* (. CLS dosyaları) ve *Standart modüller* (. bas dosyaları). Geçerli sürüm, sırasıyla bu *sınıfları* ve *modülleri* çağırır.  
   
 - **Paylaşılan Üyeler.** Bir sınıfın bir üyesinin paylaşılan bir veya örnek üye olup olmadığını kontrol edebilirsiniz.  
   

@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: UNION (Entity SQL)'
 title: BIRLEŞIM (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: df98a4db-b00d-4c8b-bd74-0d285f27e1df
-ms.openlocfilehash: 9c4106d26fb73219d7b5f0c6763736aaf9163d4b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f02b3d76d8c21848b7a1b7ef5e7bbf749aea5c0f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91200985"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673316"
 ---
 # <a name="union-entity-sql"></a>BIRLEŞIM (Entity SQL)
 

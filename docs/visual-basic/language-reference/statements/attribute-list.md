@@ -1,22 +1,23 @@
 ---
+description: 'Daha fazla bilgi edinin: öznitelik listesi (Visual Basic)'
 title: Öznitelik Listesi
 ms.date: 07/20/2015
 helpviewer_keywords:
 - attribute list
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
-ms.openlocfilehash: e566239c56efa8ca8e83bff92486fec4c434e92b
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: bde9387a48001a2696a6f69454edc311e7597bb6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874736"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99674044"
 ---
 # <a name="attribute-list-visual-basic"></a>Öznitelik Listesi (Visual Basic)
 
 Belirtilen bir programlama öğesine uygulanacak öznitelikleri belirtir. Birden çok öznitelik virgülle ayrılır. Bir özniteliğin sözdizimi aşağıda verilmiştir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 [ attributemodifier ] attributename [ ( attributearguments | attributeinitializer ) ]  
