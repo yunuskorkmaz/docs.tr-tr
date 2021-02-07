@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ıstreamunmanagedreadersymbolsearchınfo arabirimi'
 title: ISymUnmanagedReaderSymbolSearchInfo Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,28 +15,28 @@ helpviewer_keywords:
 ms.assetid: fde7e21d-1169-4bed-a34d-792e69652bf9
 topic_type:
 - apiref
-ms.openlocfilehash: af4124aed823a0a2475a181efe3fa68e1fae0bfe
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f5d13027709698df735af5fceac31f7b73741440
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95678395"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99763572"
 ---
-# <a name="isymunmanagedreadersymbolsearchinfo-interface"></a><span data-ttu-id="53872-102">ISymUnmanagedReaderSymbolSearchInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="53872-102">ISymUnmanagedReaderSymbolSearchInfo Interface</span></span>
+# <a name="isymunmanagedreadersymbolsearchinfo-interface"></a><span data-ttu-id="f22f6-103">ISymUnmanagedReaderSymbolSearchInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="f22f6-103">ISymUnmanagedReaderSymbolSearchInfo Interface</span></span>
 
-<span data-ttu-id="53872-103">Sembol arama bilgilerini alan yöntemler sağlar.</span><span class="sxs-lookup"><span data-stu-id="53872-103">Provides methods that get symbol search information.</span></span> <span data-ttu-id="53872-104">`QueryInterface` [Istreamunmanagedreader](isymunmanagedreader-interface.md) arabirimini uygulayan bir nesne çağırarak bu arabirimi elde edin.</span><span class="sxs-lookup"><span data-stu-id="53872-104">Obtain this interface by calling `QueryInterface` on an object that implements the [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.</span></span>  
+<span data-ttu-id="f22f6-104">Sembol arama bilgilerini alan yöntemler sağlar.</span><span class="sxs-lookup"><span data-stu-id="f22f6-104">Provides methods that get symbol search information.</span></span> <span data-ttu-id="f22f6-105">`QueryInterface` [Istreamunmanagedreader](isymunmanagedreader-interface.md) arabirimini uygulayan bir nesne çağırarak bu arabirimi elde edin.</span><span class="sxs-lookup"><span data-stu-id="f22f6-105">Obtain this interface by calling `QueryInterface` on an object that implements the [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="53872-105">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="53872-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="f22f6-106">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="f22f6-106">Methods</span></span>  
   
-|<span data-ttu-id="53872-106">Yöntem</span><span class="sxs-lookup"><span data-stu-id="53872-106">Method</span></span>|<span data-ttu-id="53872-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="53872-107">Description</span></span>|  
+|<span data-ttu-id="f22f6-107">Yöntem</span><span class="sxs-lookup"><span data-stu-id="f22f6-107">Method</span></span>|<span data-ttu-id="f22f6-108">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f22f6-108">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="53872-108">GetSymbolSearchInfo Yöntemi</span><span class="sxs-lookup"><span data-stu-id="53872-108">GetSymbolSearchInfo Method</span></span>](isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfo-method.md)|<span data-ttu-id="53872-109">Sembol arama bilgilerini alır.</span><span class="sxs-lookup"><span data-stu-id="53872-109">Gets symbol search information.</span></span>|  
-|[<span data-ttu-id="53872-110">GetSymbolSearchInfoCount Yöntemi</span><span class="sxs-lookup"><span data-stu-id="53872-110">GetSymbolSearchInfoCount Method</span></span>](isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfocount-method.md)|<span data-ttu-id="53872-111">Sembol arama bilgilerinin sayısını alır.</span><span class="sxs-lookup"><span data-stu-id="53872-111">Gets a count of symbol search information.</span></span>|  
+|[<span data-ttu-id="f22f6-109">GetSymbolSearchInfo Yöntemi</span><span class="sxs-lookup"><span data-stu-id="f22f6-109">GetSymbolSearchInfo Method</span></span>](isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfo-method.md)|<span data-ttu-id="f22f6-110">Sembol arama bilgilerini alır.</span><span class="sxs-lookup"><span data-stu-id="f22f6-110">Gets symbol search information.</span></span>|  
+|[<span data-ttu-id="f22f6-111">GetSymbolSearchInfoCount Yöntemi</span><span class="sxs-lookup"><span data-stu-id="f22f6-111">GetSymbolSearchInfoCount Method</span></span>](isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfocount-method.md)|<span data-ttu-id="f22f6-112">Sembol arama bilgilerinin sayısını alır.</span><span class="sxs-lookup"><span data-stu-id="f22f6-112">Gets a count of symbol search information.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="53872-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="53872-112">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f22f6-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f22f6-113">Requirements</span></span>  
 
- <span data-ttu-id="53872-113">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="53872-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+ <span data-ttu-id="f22f6-114">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="f22f6-114">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="53872-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="53872-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f22f6-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f22f6-115">See also</span></span>
 
-- [<span data-ttu-id="53872-115">Tanılama Sembol Deposu Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="53872-115">Diagnostics Symbol Store Interfaces</span></span>](diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="f22f6-116">Tanılama Sembol Deposu Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="f22f6-116">Diagnostics Symbol Store Interfaces</span></span>](diagnostics-symbol-store-interfaces.md)
