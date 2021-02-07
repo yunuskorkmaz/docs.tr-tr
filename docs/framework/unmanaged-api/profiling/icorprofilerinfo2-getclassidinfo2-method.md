@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ICorProfilerInfo2:: Getclassıdınfo2 yöntemi'
 title: ICorProfilerInfo2::GetClassIDInfo2 Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 0141d582-d066-4d49-8d1f-ae82129a1960
 topic_type:
 - apiref
-ms.openlocfilehash: 4b018a329396e0be684c999a33d4ef7c3518cb1c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 44ef38b5f50da0f0aea045bd755614e00dae8c22
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95703913"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760530"
 ---
 # <a name="icorprofilerinfo2getclassidinfo2-method"></a>ICorProfilerInfo2::GetClassIDInfo2 Yöntemi
 
 Belirtilen sınıfın açık genel tanımının, `ClassID` üst sınıfının ve varsa `ClassID` sınıfının her tür bağımsız değişkeni için üst modülü ve meta veri belirtecini alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetClassIDInfo2(  

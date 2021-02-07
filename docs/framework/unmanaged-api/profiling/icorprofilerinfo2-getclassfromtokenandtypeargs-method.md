@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerInfo2:: GetClassFromTokenAndTypeArgs yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerInfo2::GetClassFromTokenAndTypeArgs Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: b25c88f0-71b9-443b-8eea-1c94db0a44b9
 topic_type:
 - apiref
-ms.openlocfilehash: 62aad8339b34a4831211a45bd645906d73393d25
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 810445d2617beff55e00df6bb30130d81c740ba4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727152"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760513"
 ---
 # <a name="icorprofilerinfo2getclassfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetClassFromTokenAndTypeArgs Yöntemi
 
 `ClassID`Belirtilen meta veri belirtecini ve `ClassID` tür bağımsız değişkenlerinin değerlerini kullanarak bir türün türünü alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetClassFromTokenAndTypeArgs(  

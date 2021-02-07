@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: IDefinitionIdentity arabirimi'
 title: IDefinitionIdentity Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ce5ba888-5fbe-4efd-91cf-f0ff94d8428b
 topic_type:
 - apiref
-ms.openlocfilehash: 4f08fbbf9c8be16dff092327713e731c5aa14661
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3471879cc822b655b786dd9d8234950cb4b99c1d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732885"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760660"
 ---
 # <a name="idefinitionidentity-interface"></a>IDefinitionIdentity Arabirimi
 

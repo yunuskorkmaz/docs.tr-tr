@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerInfo:: GetThreadInfo yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerInfo::GetThreadInfo Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: fc994fef-65c9-432a-84cb-66c8141147e7
 topic_type:
 - apiref
-ms.openlocfilehash: 516a12b7a4457a0f67da24294ad96fb79d1aa5aa
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5514b1c4860067a07bf922e9d9a8bfab8c05e218
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95707522"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760556"
 ---
 # <a name="icorprofilerinfogetthreadinfo-method"></a>ICorProfilerInfo::GetThreadInfo Yöntemi
 
 Belirtilen iş parçacığı için geçerli Win32 iş parçacığı kimliğini alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetThreadInfo(  

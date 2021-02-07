@@ -1,4 +1,5 @@
 ---
+description: ': IAppDomainSetup arabirimi hakkında daha fazla bilgi edinin'
 title: IAppDomainSetup Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1844da85-c031-40bf-bea4-1a3d12a36c8c
 topic_type:
 - apiref
-ms.openlocfilehash: d504101747995557ba526c88de451ebab7b3c556
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8fd224308ea68f7b56ae174c7f71fc4f89630101
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95698565"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760590"
 ---
 # <a name="iappdomainsetup-interface"></a>IAppDomainSetup Arabirimi
 
