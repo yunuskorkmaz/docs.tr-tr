@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ımetadatayayma::D efineMemberRef yöntemi'
 title: IMetaDataEmit::DefineMemberRef Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 21b5bcb8-ea75-4962-8acc-ad17584061e5
 topic_type:
 - apiref
-ms.openlocfilehash: 597ba1884351ee6d8b7eb7e0f3f01ce3ad733304
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1d88294cea14369c8a8f16b6048f96472fbb9502
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95716661"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753425"
 ---
-# <a name="imetadataemitdefinememberref-method"></a><span data-ttu-id="c1ade-102">IMetaDataEmit::DefineMemberRef Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c1ade-102">IMetaDataEmit::DefineMemberRef Method</span></span>
+# <a name="imetadataemitdefinememberref-method"></a><span data-ttu-id="3920b-103">IMetaDataEmit::DefineMemberRef Yöntemi</span><span class="sxs-lookup"><span data-stu-id="3920b-103">IMetaDataEmit::DefineMemberRef Method</span></span>
 
-<span data-ttu-id="c1ade-103">Geçerli kapsam dışındaki bir modülün üyesine yönelik bir başvuru tanımlar ve bu başvuru tanımına bir belirteç alır.</span><span class="sxs-lookup"><span data-stu-id="c1ade-103">Defines a reference to a member of a module outside the current scope, and gets a token to that reference definition.</span></span>  
+<span data-ttu-id="3920b-104">Geçerli kapsam dışındaki bir modülün üyesine yönelik bir başvuru tanımlar ve bu başvuru tanımına bir belirteç alır.</span><span class="sxs-lookup"><span data-stu-id="3920b-104">Defines a reference to a member of a module outside the current scope, and gets a token to that reference definition.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c1ade-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="c1ade-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3920b-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="3920b-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineMemberRef (
@@ -38,34 +39,34 @@ HRESULT DefineMemberRef (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c1ade-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c1ade-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3920b-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="3920b-106">Parameters</span></span>  
 
  `tkImport`  
- <span data-ttu-id="c1ade-106">'ndaki Üye genel değilse hedef üyenin sınıfı veya arabirimi için belirteç; üye geneldir ise, `mdModuleRef` diğer dosyanın belirteci.</span><span class="sxs-lookup"><span data-stu-id="c1ade-106">[in] Token for the target member's class or interface, if the member is not global; if the member is global, the `mdModuleRef` token for that other file.</span></span>  
+ <span data-ttu-id="3920b-107">'ndaki Üye genel değilse hedef üyenin sınıfı veya arabirimi için belirteç; üye geneldir ise, `mdModuleRef` diğer dosyanın belirteci.</span><span class="sxs-lookup"><span data-stu-id="3920b-107">[in] Token for the target member's class or interface, if the member is not global; if the member is global, the `mdModuleRef` token for that other file.</span></span>  
   
  `szName`  
- <span data-ttu-id="c1ade-107">'ndaki Hedef üyenin adı.</span><span class="sxs-lookup"><span data-stu-id="c1ade-107">[in] The name of the target member.</span></span>  
+ <span data-ttu-id="3920b-108">'ndaki Hedef üyenin adı.</span><span class="sxs-lookup"><span data-stu-id="3920b-108">[in] The name of the target member.</span></span>  
   
  `pvSigBlob`  
- <span data-ttu-id="c1ade-108">'ndaki Hedef üyenin imzası.</span><span class="sxs-lookup"><span data-stu-id="c1ade-108">[in] The signature of the target member.</span></span>  
+ <span data-ttu-id="3920b-109">'ndaki Hedef üyenin imzası.</span><span class="sxs-lookup"><span data-stu-id="3920b-109">[in] The signature of the target member.</span></span>  
   
  `cbSigBlob`  
- <span data-ttu-id="c1ade-109">'ndaki İçindeki bayt sayısı `pvSigBlob` .</span><span class="sxs-lookup"><span data-stu-id="c1ade-109">[in] The count of bytes in `pvSigBlob`.</span></span>  
+ <span data-ttu-id="3920b-110">'ndaki İçindeki bayt sayısı `pvSigBlob` .</span><span class="sxs-lookup"><span data-stu-id="3920b-110">[in] The count of bytes in `pvSigBlob`.</span></span>  
   
  `pmr`  
- <span data-ttu-id="c1ade-110">dışı `mdMemberRef` Atanan belirteç.</span><span class="sxs-lookup"><span data-stu-id="c1ade-110">[out] The `mdMemberRef` token assigned.</span></span>  
+ <span data-ttu-id="3920b-111">dışı `mdMemberRef` Atanan belirteç.</span><span class="sxs-lookup"><span data-stu-id="3920b-111">[out] The `mdMemberRef` token assigned.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c1ade-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c1ade-111">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3920b-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="3920b-112">Requirements</span></span>  
 
- <span data-ttu-id="c1ade-112">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c1ade-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="3920b-113">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3920b-113">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c1ade-113">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="c1ade-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="3920b-114">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="3920b-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="c1ade-114">**Kitaplık:** MSCorEE.dll kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="c1ade-114">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="3920b-115">**Kitaplık:** MSCorEE.dll kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="3920b-115">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="c1ade-115">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c1ade-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="3920b-116">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3920b-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c1ade-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c1ade-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3920b-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3920b-117">See also</span></span>
 
-- [<span data-ttu-id="c1ade-117">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c1ade-117">IMetaDataEmit Interface</span></span>](imetadataemit-interface.md)
-- [<span data-ttu-id="c1ade-118">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c1ade-118">IMetaDataEmit2 Interface</span></span>](imetadataemit2-interface.md)
+- [<span data-ttu-id="3920b-118">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="3920b-118">IMetaDataEmit Interface</span></span>](imetadataemit-interface.md)
+- [<span data-ttu-id="3920b-119">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="3920b-119">IMetaDataEmit2 Interface</span></span>](imetadataemit2-interface.md)

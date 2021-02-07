@@ -1,29 +1,30 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: etkinlik uzantılarını kullanma'
 title: Etkinlik Uzantıları Kullanma
 ms.date: 03/30/2017
 ms.assetid: 500eb96a-c009-4247-b6b5-b36faffdf715
-ms.openlocfilehash: 3a9cabda9fe92b2ea4e708da8f853f3029328775
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: d0286850bf685497d3a2471a3b4e0db4630070b1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96293292"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755076"
 ---
-# <a name="using-activity-extensions"></a><span data-ttu-id="f1d1b-102">Etkinlik Uzantıları Kullanma</span><span class="sxs-lookup"><span data-stu-id="f1d1b-102">Using Activity Extensions</span></span>
+# <a name="using-activity-extensions"></a><span data-ttu-id="64d7e-103">Etkinlik Uzantıları Kullanma</span><span class="sxs-lookup"><span data-stu-id="64d7e-103">Using Activity Extensions</span></span>
 
-<span data-ttu-id="f1d1b-103">Etkinlikler, konağın iş akışında açıkça Modellenmemiş ek işlevler sağlamasına izin veren iş akışı uygulama uzantılarıyla etkileşime geçebilir.</span><span class="sxs-lookup"><span data-stu-id="f1d1b-103">Activities can interact with workflow application extensions that allow the host to provide additional functionality that is not explicitly modeled in the workflow.</span></span>  <span data-ttu-id="f1d1b-104">Bu konu başlığı altında, etkinliğin kaç kez yürütüleneceğini saymak için bir uzantının nasıl oluşturulduğu ve kullanılacağı açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="f1d1b-104">This topic describes how to create and use an extension to count the number of times the activity executes.</span></span>
+<span data-ttu-id="64d7e-104">Etkinlikler, konağın iş akışında açıkça Modellenmemiş ek işlevler sağlamasına izin veren iş akışı uygulama uzantılarıyla etkileşime geçebilir.</span><span class="sxs-lookup"><span data-stu-id="64d7e-104">Activities can interact with workflow application extensions that allow the host to provide additional functionality that is not explicitly modeled in the workflow.</span></span>  <span data-ttu-id="64d7e-105">Bu konu başlığı altında, etkinliğin kaç kez yürütüleneceğini saymak için bir uzantının nasıl oluşturulduğu ve kullanılacağı açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="64d7e-105">This topic describes how to create and use an extension to count the number of times the activity executes.</span></span>
 
-### <a name="to-use-an-activity-extension-to-count-executions"></a><span data-ttu-id="f1d1b-105">Yürütmeleri saymak için bir etkinlik uzantısı kullanmak için</span><span class="sxs-lookup"><span data-stu-id="f1d1b-105">To use an activity extension to count executions</span></span>
+### <a name="to-use-an-activity-extension-to-count-executions"></a><span data-ttu-id="64d7e-106">Yürütmeleri saymak için bir etkinlik uzantısı kullanmak için</span><span class="sxs-lookup"><span data-stu-id="64d7e-106">To use an activity extension to count executions</span></span>
 
-1. <span data-ttu-id="f1d1b-106">Visual Studio 2010 ' i açın.</span><span class="sxs-lookup"><span data-stu-id="f1d1b-106">Open Visual Studio 2010.</span></span> <span data-ttu-id="f1d1b-107">**Yeni**, **Proje**' yi seçin.</span><span class="sxs-lookup"><span data-stu-id="f1d1b-107">Select **New**, **Project**.</span></span> <span data-ttu-id="f1d1b-108">**Visual C#** düğümünün altında **iş akışı**' nı seçin.</span><span class="sxs-lookup"><span data-stu-id="f1d1b-108">Under the **Visual C#** node, select **Workflow**.</span></span>  <span data-ttu-id="f1d1b-109">Şablonlar listesinden **Iş akışı konsol uygulaması** ' nı seçin.</span><span class="sxs-lookup"><span data-stu-id="f1d1b-109">Select **Workflow Console Application** from the list of templates.</span></span> <span data-ttu-id="f1d1b-110">Projeyi adlandırın `Extensions` .</span><span class="sxs-lookup"><span data-stu-id="f1d1b-110">Name the project `Extensions`.</span></span> <span data-ttu-id="f1d1b-111">Projeyi oluşturmak için **Tamam**'a tıklayın.</span><span class="sxs-lookup"><span data-stu-id="f1d1b-111">Click **OK** to create the project.</span></span>
+1. <span data-ttu-id="64d7e-107">Visual Studio 2010 ' i açın.</span><span class="sxs-lookup"><span data-stu-id="64d7e-107">Open Visual Studio 2010.</span></span> <span data-ttu-id="64d7e-108">**Yeni**, **Proje**' yi seçin.</span><span class="sxs-lookup"><span data-stu-id="64d7e-108">Select **New**, **Project**.</span></span> <span data-ttu-id="64d7e-109">**Visual C#** düğümünün altında **iş akışı**' nı seçin.</span><span class="sxs-lookup"><span data-stu-id="64d7e-109">Under the **Visual C#** node, select **Workflow**.</span></span>  <span data-ttu-id="64d7e-110">Şablonlar listesinden **Iş akışı konsol uygulaması** ' nı seçin.</span><span class="sxs-lookup"><span data-stu-id="64d7e-110">Select **Workflow Console Application** from the list of templates.</span></span> <span data-ttu-id="64d7e-111">Projeyi adlandırın `Extensions` .</span><span class="sxs-lookup"><span data-stu-id="64d7e-111">Name the project `Extensions`.</span></span> <span data-ttu-id="64d7e-112">Projeyi oluşturmak için **Tamam**'a tıklayın.</span><span class="sxs-lookup"><span data-stu-id="64d7e-112">Click **OK** to create the project.</span></span>
 
-2. <span data-ttu-id="f1d1b-112">`using` **System. Collections. Generic** ad alanı için program.cs dosyasına bir ifade ekleyin.</span><span class="sxs-lookup"><span data-stu-id="f1d1b-112">Add a `using` statement in the Program.cs file for the **System.Collections.Generic** namespace.</span></span>
+2. <span data-ttu-id="64d7e-113">`using` **System. Collections. Generic** ad alanı için program.cs dosyasına bir ifade ekleyin.</span><span class="sxs-lookup"><span data-stu-id="64d7e-113">Add a `using` statement in the Program.cs file for the **System.Collections.Generic** namespace.</span></span>
 
     ```csharp
     using System.Collections.Generic;
     ```
 
-3. <span data-ttu-id="f1d1b-113">Program.cs dosyasında, **Executioncountextension** adlı yeni bir sınıf oluşturun.</span><span class="sxs-lookup"><span data-stu-id="f1d1b-113">In the Program.cs file, create a new class named **ExecutionCountExtension**.</span></span> <span data-ttu-id="f1d1b-114">Aşağıdaki kod, **yazmaç** yöntemi çağrıldığında örnek kimliklerini izleyen bir iş akışı uzantısı oluşturur.</span><span class="sxs-lookup"><span data-stu-id="f1d1b-114">The following code creates a workflow extension that tracks instance IDs when its **Register** method is called.</span></span>
+3. <span data-ttu-id="64d7e-114">Program.cs dosyasında, **Executioncountextension** adlı yeni bir sınıf oluşturun.</span><span class="sxs-lookup"><span data-stu-id="64d7e-114">In the Program.cs file, create a new class named **ExecutionCountExtension**.</span></span> <span data-ttu-id="64d7e-115">Aşağıdaki kod, **yazmaç** yöntemi çağrıldığında örnek kimliklerini izleyen bir iş akışı uzantısı oluşturur.</span><span class="sxs-lookup"><span data-stu-id="64d7e-115">The following code creates a workflow extension that tracks instance IDs when its **Register** method is called.</span></span>
 
     ```csharp
     // This extension collects a list of workflow Ids
@@ -57,7 +58,7 @@ ms.locfileid: "96293292"
     }
     ```
 
-4. <span data-ttu-id="f1d1b-115">**Executioncountextension** öğesini tüketen bir etkinlik oluşturun.</span><span class="sxs-lookup"><span data-stu-id="f1d1b-115">Create an activity that consumes the **ExecutionCountExtension**.</span></span> <span data-ttu-id="f1d1b-116">Aşağıdaki kod, çalışma zamanından **Executioncountextension** nesnesini alan ve etkinlik yürütüldüğünde **register** metodunu çağıran bir etkinliği tanımlar.</span><span class="sxs-lookup"><span data-stu-id="f1d1b-116">The following code defines an activity that retrieves the **ExecutionCountExtension** object from the runtime and calls its **Register** method when the activity executes.</span></span>
+4. <span data-ttu-id="64d7e-116">**Executioncountextension** öğesini tüketen bir etkinlik oluşturun.</span><span class="sxs-lookup"><span data-stu-id="64d7e-116">Create an activity that consumes the **ExecutionCountExtension**.</span></span> <span data-ttu-id="64d7e-117">Aşağıdaki kod, çalışma zamanından **Executioncountextension** nesnesini alan ve etkinlik yürütüldüğünde **register** metodunu çağıran bir etkinliği tanımlar.</span><span class="sxs-lookup"><span data-stu-id="64d7e-117">The following code defines an activity that retrieves the **ExecutionCountExtension** object from the runtime and calls its **Register** method when the activity executes.</span></span>
 
     ```csharp
     // Activity that consumes an extension provided by the host. If the extension is available
@@ -76,7 +77,7 @@ ms.locfileid: "96293292"
     }
     ```
 
-5. <span data-ttu-id="f1d1b-117">Etkinliği program.cs dosyasının **Main** yönteminde uygulayın.</span><span class="sxs-lookup"><span data-stu-id="f1d1b-117">Implement the activity in the **Main** method of the program.cs file.</span></span> <span data-ttu-id="f1d1b-118">Aşağıdaki kod, iki farklı iş akışı oluşturmak, her bir iş akışını birkaç kez yürütmek ve uzantısında yer alan elde edilen verileri göstermek için yöntemler içerir.</span><span class="sxs-lookup"><span data-stu-id="f1d1b-118">The following code contains methods to generate two different workflows, execute each workflow several times, and display the resulting data that is contained in the extension.</span></span>
+5. <span data-ttu-id="64d7e-118">Etkinliği program.cs dosyasının **Main** yönteminde uygulayın.</span><span class="sxs-lookup"><span data-stu-id="64d7e-118">Implement the activity in the **Main** method of the program.cs file.</span></span> <span data-ttu-id="64d7e-119">Aşağıdaki kod, iki farklı iş akışı oluşturmak, her bir iş akışını birkaç kez yürütmek ve uzantısında yer alan elde edilen verileri göstermek için yöntemler içerir.</span><span class="sxs-lookup"><span data-stu-id="64d7e-119">The following code contains methods to generate two different workflows, execute each workflow several times, and display the resulting data that is contained in the extension.</span></span>
 
     ```csharp
     class Program
