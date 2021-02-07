@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: MSMQ etkinleştirme'
 title: MSMQ Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 349eadb8f517993c343e81656204ad25e62ed931
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3360ae560cba9c3b42551617beb295154668814b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555243"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752252"
 ---
 # <a name="msmq-activation"></a>MSMQ Etkinleştirme
 
@@ -234,7 +235,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
     1. **Başlat** menüsünde **Çalıştır**' a tıklayın `Compmgmt.msc` ve yazın ve ENTER tuşuna basın.
 
-    2. **Hizmetler ve uygulamalar**altında **Message Queuing**' ı genişletin.
+    2. **Hizmetler ve uygulamalar** altında **Message Queuing**' ı genişletin.
 
     3. **Özel kuyruklar**' a tıklayın.
 
@@ -269,7 +270,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
         Bu komut, ve kullanarak/servicemodelsamples uygulamasına erişilmesini sağlar `http://localhost/servicemodelsamples` `net.msmq://localhost/servicemodelsamples` .
 
-7. Daha önce yapmadıysanız, MSMQ etkinleştirme hizmeti 'nin etkinleştirildiğinden emin olun. **Başlat** menüsünde **Çalıştır**' a tıklayın ve yazın `Services.msc` . **Net. MSMQ dinleyicisi bağdaştırıcısı**için Hizmetler listesinde arama yapın. Sağ tıklayın ve **Özellikler**' i seçin. **Başlangıç türünü** **Otomatik**olarak ayarlayın, **Uygula** ' ya tıklayın ve **Başlat** düğmesine tıklayın. Bu adım yalnızca, net. MSMQ dinleyicisi bağdaştırıcısı hizmetinin ilk kullanımından önce bir kez yapılmalıdır.
+7. Daha önce yapmadıysanız, MSMQ etkinleştirme hizmeti 'nin etkinleştirildiğinden emin olun. **Başlat** menüsünde **Çalıştır**' a tıklayın ve yazın `Services.msc` . **Net. MSMQ dinleyicisi bağdaştırıcısı** için Hizmetler listesinde arama yapın. Sağ tıklayın ve **Özellikler**' i seçin. **Başlangıç türünü** **Otomatik** olarak ayarlayın, **Uygula** ' ya tıklayın ve **Başlat** düğmesine tıklayın. Bu adım yalnızca, net. MSMQ dinleyicisi bağdaştırıcısı hizmetinin ilk kullanımından önce bir kez yapılmalıdır.
 
 8. Örneği tek veya bir çoklu bilgisayar yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin. Ayrıca, satın alma siparişi gönderen istemcideki kodu, satın alma siparişi gönderilirken kuyruğun URI 'sindeki bilgisayar adını yansıtacak şekilde değiştirin. Aşağıdaki kodu kullanın:
 
@@ -329,7 +330,7 @@ Varsayılan olarak `netMsmqBinding` , bağlama aktarımında güvenlik etkindir.
 
     1. Inetmgr.exe çalıştırın.
 
-    2. **Uygulama havuzları**altında, **AppPool** öğesine sağ tıklayın (genellikle **DefaultAppPool**) ve **uygulama havuzu varsayılanlarını ayarla..**. seçeneğini belirleyin.
+    2. **Uygulama havuzları** altında, **AppPool** öğesine sağ tıklayın (genellikle **DefaultAppPool**) ve **uygulama havuzu varsayılanlarını ayarla..**. seçeneğini belirleyin.
 
     3. Kimlik özelliklerini belirli kullanıcı hesabını kullanacak şekilde değiştirin.
 
@@ -337,7 +338,7 @@ Varsayılan olarak `netMsmqBinding` , bağlama aktarımında güvenlik etkindir.
 
     1. Services. msc dosyasını çalıştırın.
 
-    2. **Net. MsmqListener bağdaştırıcısını**sağ tıklatın ve **Özellikler**' i seçin.
+    2. **Net. MsmqListener bağdaştırıcısını** sağ tıklatın ve **Özellikler**' i seçin.
 
 4. Hesabı **oturum açma** sekmesinden değiştirin.
 

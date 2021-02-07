@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: NamedPipe etkinleştirme'
 title: NamedPipe Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: 56775842a742d0c6b07c6870bfce524ed1d275fa
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4955511f24d831f4aa9e3aa67fdb3f6a218d7af0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556108"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752236"
 ---
 # <a name="namedpipe-activation"></a>NamedPipe Etkinleştirme
 

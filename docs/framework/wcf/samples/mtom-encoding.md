@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: MTOM kodlaması'
 title: MTOM Kodlama
 ms.date: 03/30/2017
 ms.assetid: 820e316f-4ee1-4eb5-ae38-b6a536e8a14f
-ms.openlocfilehash: c2b5cc59f2e2a80a323070e452dfcf7c4c0cc4d6
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0663ab07b27dc8d1458af9935f3402432c00ee25
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96260220"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752268"
 ---
 # <a name="mtom-encoding"></a>MTOM Kodlama
 
