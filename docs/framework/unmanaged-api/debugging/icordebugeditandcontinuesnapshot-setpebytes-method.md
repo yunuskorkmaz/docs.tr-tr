@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ICorDebugEditAndContinueSnapshot:: SetPEBytes yöntemi'
 title: ICorDebugEditAndContinueSnapshot::SetPEBytes Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 7235c225-cb6e-49e9-a95b-09a646579841
 topic_type:
 - apiref
-ms.openlocfilehash: 6c654cfb2b2680987b2801a37f3d87352968431d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cfd63cae0aa972d6983df5641339d0c6ff2ca63c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722966"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99694545"
 ---
-# <a name="icordebugeditandcontinuesnapshotsetpebytes-method"></a><span data-ttu-id="670e3-102">ICorDebugEditAndContinueSnapshot::SetPEBytes Yöntemi</span><span class="sxs-lookup"><span data-stu-id="670e3-102">ICorDebugEditAndContinueSnapshot::SetPEBytes Method</span></span>
+# <a name="icordebugeditandcontinuesnapshotsetpebytes-method"></a><span data-ttu-id="c5595-103">ICorDebugEditAndContinueSnapshot::SetPEBytes Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c5595-103">ICorDebugEditAndContinueSnapshot::SetPEBytes Method</span></span>
 
-<span data-ttu-id="670e3-103">`SetPEBytes` artık kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="670e3-103">`SetPEBytes` is obsolete.</span></span> <span data-ttu-id="670e3-104">Bu yöntemi çağırmayın.</span><span class="sxs-lookup"><span data-stu-id="670e3-104">Do not call this method.</span></span>  
+<span data-ttu-id="c5595-104">`SetPEBytes` artık kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="c5595-104">`SetPEBytes` is obsolete.</span></span> <span data-ttu-id="c5595-105">Bu yöntemi çağırmayın.</span><span class="sxs-lookup"><span data-stu-id="c5595-105">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="670e3-105">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="670e3-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c5595-106">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c5595-106">See also</span></span>
 
-- [<span data-ttu-id="670e3-106">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="670e3-106">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="c5595-107">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="c5595-107">Debugging Interfaces</span></span>](debugging-interfaces.md)

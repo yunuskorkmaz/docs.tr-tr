@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ICorDebugEditAndContinueSnapshot:: Setpeşin Ymbolbytes yöntemi'
 title: ICorDebugEditAndContinueSnapshot::SetPESymbolBytes Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: ec00fbdd-6451-4888-ac6f-08e1e2d9b2fd
 topic_type:
 - apiref
-ms.openlocfilehash: df909b4479f70b27a5385ebd7ecce51b963f0e91
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 05fd650286c2e8bdabdb96ec0a02e633ea592914
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95677386"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99694519"
 ---
-# <a name="icordebugeditandcontinuesnapshotsetpesymbolbytes-method"></a><span data-ttu-id="62d24-102">ICorDebugEditAndContinueSnapshot::SetPESymbolBytes Yöntemi</span><span class="sxs-lookup"><span data-stu-id="62d24-102">ICorDebugEditAndContinueSnapshot::SetPESymbolBytes Method</span></span>
+# <a name="icordebugeditandcontinuesnapshotsetpesymbolbytes-method"></a><span data-ttu-id="d9f42-103">ICorDebugEditAndContinueSnapshot::SetPESymbolBytes Yöntemi</span><span class="sxs-lookup"><span data-stu-id="d9f42-103">ICorDebugEditAndContinueSnapshot::SetPESymbolBytes Method</span></span>
 
-<span data-ttu-id="62d24-103">`SetPESymbolBytes` artık kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="62d24-103">`SetPESymbolBytes` is obsolete.</span></span> <span data-ttu-id="62d24-104">Bu yöntemi çağırmayın.</span><span class="sxs-lookup"><span data-stu-id="62d24-104">Do not call this method.</span></span>  
+<span data-ttu-id="d9f42-104">`SetPESymbolBytes` artık kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="d9f42-104">`SetPESymbolBytes` is obsolete.</span></span> <span data-ttu-id="d9f42-105">Bu yöntemi çağırmayın.</span><span class="sxs-lookup"><span data-stu-id="d9f42-105">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="62d24-105">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="62d24-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d9f42-106">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d9f42-106">See also</span></span>
 
-- [<span data-ttu-id="62d24-106">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="62d24-106">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="d9f42-107">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="d9f42-107">Debugging Interfaces</span></span>](debugging-interfaces.md)
