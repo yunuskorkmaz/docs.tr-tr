@@ -1,4 +1,5 @@
 ---
+description: ': IMetaDataInfo arabirimi hakkında daha fazla bilgi'
 title: IMetaDataInfo Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,34 +15,34 @@ helpviewer_keywords:
 ms.assetid: 137cb264-64de-46ac-bc6e-2a7db97e8abe
 topic_type:
 - apiref
-ms.openlocfilehash: 97b2d260dd99f2877157dd0801ac3fd20d0ffb23
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c89c6adcc29b5bcd3005b8f0fcfcd6a313115553
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728244"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99688422"
 ---
-# <a name="imetadatainfo-interface"></a><span data-ttu-id="08f1d-102">IMetaDataInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="08f1d-102">IMetaDataInfo Interface</span></span>
+# <a name="imetadatainfo-interface"></a><span data-ttu-id="b008e-103">IMetaDataInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b008e-103">IMetaDataInfo Interface</span></span>
 
-<span data-ttu-id="08f1d-103">Diskteki bir dosyadaki meta verilerin belleğe eşlenmesiyle ilgili bilgileri alan bir yöntem sağlar.</span><span class="sxs-lookup"><span data-stu-id="08f1d-103">Provides a method that gets information about the mapping of metadata from an on-disk file into memory.</span></span>  
+<span data-ttu-id="b008e-104">Diskteki bir dosyadaki meta verilerin belleğe eşlenmesiyle ilgili bilgileri alan bir yöntem sağlar.</span><span class="sxs-lookup"><span data-stu-id="b008e-104">Provides a method that gets information about the mapping of metadata from an on-disk file into memory.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="08f1d-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="08f1d-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="b008e-105">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="b008e-105">Methods</span></span>  
   
-|<span data-ttu-id="08f1d-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="08f1d-105">Method</span></span>|<span data-ttu-id="08f1d-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="08f1d-106">Description</span></span>|  
+|<span data-ttu-id="b008e-106">Yöntem</span><span class="sxs-lookup"><span data-stu-id="b008e-106">Method</span></span>|<span data-ttu-id="b008e-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="b008e-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="08f1d-107">GetFileMapping Yöntemi</span><span class="sxs-lookup"><span data-stu-id="08f1d-107">GetFileMapping Method</span></span>](imetadatainfo-getfilemapping-method.md)|<span data-ttu-id="08f1d-108">Eşlenen dosyanın bellek bölgesini ve eşleme türünü alır.</span><span class="sxs-lookup"><span data-stu-id="08f1d-108">Gets the memory region of the mapped file, and the kind of mapping.</span></span>|  
+|[<span data-ttu-id="b008e-108">GetFileMapping Yöntemi</span><span class="sxs-lookup"><span data-stu-id="b008e-108">GetFileMapping Method</span></span>](imetadatainfo-getfilemapping-method.md)|<span data-ttu-id="b008e-109">Eşlenen dosyanın bellek bölgesini ve eşleme türünü alır.</span><span class="sxs-lookup"><span data-stu-id="b008e-109">Gets the memory region of the mapped file, and the kind of mapping.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="08f1d-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="08f1d-109">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b008e-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b008e-110">Requirements</span></span>  
 
- <span data-ttu-id="08f1d-110">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="08f1d-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="b008e-111">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b008e-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="08f1d-111">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="08f1d-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="b008e-112">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="b008e-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="08f1d-112">**Kitaplık:** MsCorEE.dll kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="08f1d-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="b008e-113">**Kitaplık:** MsCorEE.dll kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="b008e-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="08f1d-113">**.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="08f1d-113">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="b008e-114">**.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b008e-114">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="08f1d-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="08f1d-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b008e-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b008e-115">See also</span></span>
 
-- [<span data-ttu-id="08f1d-115">Meta Veri Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="08f1d-115">Metadata Interfaces</span></span>](metadata-interfaces.md)
-- [<span data-ttu-id="08f1d-116">CorFileMapping Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="08f1d-116">CorFileMapping Enumeration</span></span>](corfilemapping-enumeration.md)
+- [<span data-ttu-id="b008e-116">Meta Veri Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="b008e-116">Metadata Interfaces</span></span>](metadata-interfaces.md)
+- [<span data-ttu-id="b008e-117">CorFileMapping Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="b008e-117">CorFileMapping Enumeration</span></span>](corfilemapping-enumeration.md)
