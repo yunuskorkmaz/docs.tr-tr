@@ -1,4 +1,5 @@
 ---
+description: ': ICLRRuntimeInfo:: GetVersionString metodu hakkında daha fazla bilgi edinin'
 title: ICLRRuntimeInfo::GetVersionString Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b097ef-2276-4dd9-8551-b03c972e8179
 topic_type:
 - apiref
-ms.openlocfilehash: 34f996f4efe9c0db4c3f0f5277e30f53e91ec47f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1c7603f4e9bb1142c415ba9da7a05a52d2d5e776
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95696797"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753880"
 ---
 # <a name="iclrruntimeinfogetversionstring-method"></a>ICLRRuntimeInfo::GetVersionString Yöntemi
 
@@ -32,7 +33,7 @@ Belirli bir [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) arabirimiyle ilişki
   
 - [GetRequestedRuntimeVersion](getrequestedruntimeversion-function.md)  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetVersionString(  
@@ -57,7 +58,7 @@ HRESULT GetVersionString(
 
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
 |E_POINTER|`pwzBuffer` ya da `pchBuffer` null.|  

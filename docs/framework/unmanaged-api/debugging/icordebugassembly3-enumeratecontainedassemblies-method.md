@@ -1,19 +1,20 @@
 ---
+description: 'Daha fazla bilgi edinin: ICorDebugAssembly3:: EnumerateContainedAssemblies yöntemi'
 title: ICorDebugAssembly3::EnumerateContainedAssemblies Yöntemi
 ms.date: 03/30/2017
 ms.assetid: 98f15b05-afad-4616-9e2a-1a9af31948b6
-ms.openlocfilehash: 1e040453d5eb7a312f2e665974486492b99de16d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8933500713661ef785eb3ce5abc574e512580b6b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719690"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754088"
 ---
 # <a name="icordebugassembly3enumeratecontainedassemblies-method"></a>ICorDebugAssembly3::EnumerateContainedAssemblies Yöntemi
 
 Bu derlemede yer alan derlemeler için bir Numaralandırıcı alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT EnumerateContainedAssemblies(  

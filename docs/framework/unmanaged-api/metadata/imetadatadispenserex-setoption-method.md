@@ -1,4 +1,5 @@
 ---
+description: ': Imetadatadağıtıserex:: SetOption yöntemi hakkında daha fazla bilgi edinin'
 title: IMetaDataDispenserEx::SetOption Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 9f1c7ccd-7fb2-41d8-aa00-24b823376527
 topic_type:
 - apiref
-ms.openlocfilehash: 4216658eb562c5c57b75c3c257cd8e53a7a34221
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0fdaa280619eb750ea9357f590c3b91cf398608f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95700593"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753516"
 ---
 # <a name="imetadatadispenserexsetoption-method"></a>IMetaDataDispenserEx::SetOption Yöntemi
 
 Belirtilen seçeneği geçerli meta veri kapsamı için verilen bir değere ayarlar. Seçeneği, geçerli meta veri kapsamına yapılan çağrıların işlenme biçimini denetler.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT SetOption (  
@@ -47,7 +48,7 @@ HRESULT SetOption (
 
  Aşağıdaki tabloda, parametrenin işaret edip kullanabileceği kullanılabilir GUID 'Ler `optionId` ve parametresi için karşılık gelen geçerli değerler listelenmiştir `pValue` .  
   
-|GUID|Açıklama|`pValue` Parametresinin|  
+|GUID|Description|`pValue` Parametresinin|  
 |----------|-----------------|------------------------|  
 |MetaDataCheckDuplicatesFor|Hangi öğelerin yinelenenlere denetleneceğini denetler. Yeni bir öğe oluşturan bir [ımetadatayayma](imetadataemit-interface.md) yöntemini her çağırdığınızda, yöntemin geçerli kapsamda zaten var olup olmadığını denetlemesini isteyebilirsiniz. Örneğin, öğelerin varlığını kontrol edebilirsiniz `mdMethodDef` ; Bu durumda, [ımetadatayayma::D efineMethod](imetadataemit-definemethod-method.md)' ı çağırdığınızda, yöntemin geçerli kapsamda zaten mevcut olmadığını kontrol eder. Bu denetim, belirli bir yöntemi benzersiz bir şekilde tanımlayan anahtarı kullanır: üst tür, ad ve imza.|UI4 türünde bir değişken olmalıdır ve sabit listesi [Için Corcheckduplicatesvalues](corcheckduplicatesfor-enumeration.md) değerlerinin bir birleşimini içermelidir.|  
 |MetaDataRefToDefCheck|Hangi Başvurulmuş öğelerin tanımlara dönüştürüleceğini denetler. Varsayılan olarak, başvurulan öğe geçerli kapsamda tanımlanmazsa, meta veri altyapısı, başvurulan bir öğeyi tanımına dönüştürerek kodu iyileştirir.|UI4 türünde bir değişken olması gerekir ve [CorRefToDefCheck](correftodefcheck-enumeration.md) numaralandırması değerlerinin bir birleşimini içermelidir.|  

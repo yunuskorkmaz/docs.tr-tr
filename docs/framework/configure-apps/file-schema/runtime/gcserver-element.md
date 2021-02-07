@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: <gcServer> öğesi'
 title: gcServer öğesi
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - gcServer element
 - <gcServer> element
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
-ms.openlocfilehash: 8eab5e36bab90510aff4f1a3e15328197ac59ed7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: bed347699786682421292392a8d2449b7aac61d0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73968942"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754543"
 ---
 # <a name="gcserver-element"></a>\<gcServer> öğesi
 
@@ -23,7 +24,7 @@ Ortak dil çalışma zamanının sunucu çöp toplamayı çalıştırmasını be
 &nbsp;&nbsp;[\<runtime>](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;\<gcServer>
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <gcServer
@@ -44,7 +45,7 @@ Ortak dil çalışma zamanının sunucu çöp toplamayı çalıştırmasını be
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|`false`|Sunucu çöp toplamayı çalıştırmaz. Bu varsayılandır.|
+|`false`|Sunucu çöp toplamayı çalıştırmaz. Bu varsayılan seçenektir.|
 |`true`|Sunucu çöp toplamayı çalıştırır.|
 
 ### <a name="child-elements"></a>Alt öğeleri

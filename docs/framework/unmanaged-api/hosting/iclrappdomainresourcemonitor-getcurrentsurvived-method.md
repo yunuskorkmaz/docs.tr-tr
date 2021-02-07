@@ -1,4 +1,5 @@
 ---
+description: ': Iclartppdomainresourcemonitor:: GetCurrentSurvived yöntemi hakkında daha fazla bilgi edinin'
 title: ICLRAppDomainResourceMonitor::GetCurrentSurvived Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 392e9009-40ef-40e3-ad4d-7ce93a989e78
 topic_type:
 - apiref
-ms.openlocfilehash: eba9caece91e369cd46aed652b559ace49c77725
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 20aea8583da207144aa0ffe29591a113da789fa8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95704914"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753919"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentsurvived-method"></a>ICLRAppDomainResourceMonitor::GetCurrentSurvived Metodu
 
 Son tam ve çöp toplamayı engelleyen ve geçerli uygulama etki alanı tarafından başvurulan bayt sayısını alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT STDMETHODCALLTYPE GetCurrentSurvived(  
@@ -50,7 +51,7 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
 
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
 |COR_E_APPDOMAINUNLOADED|Uygulama etki alanı kaldırıldı veya yok.|  

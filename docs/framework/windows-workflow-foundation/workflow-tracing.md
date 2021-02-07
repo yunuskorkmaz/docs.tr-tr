@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Iş akışı Izleme'
 title: İş Akışı İzleme
 ms.date: 03/30/2017
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
-ms.openlocfilehash: b5a8f650edfdade4a18999c5e7af38ca72112122
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 6d976cce1310a072f8d1c98db138696921b382c2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96273886"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754855"
 ---
 # <a name="workflow-tracing"></a>İş Akışı İzleme
 

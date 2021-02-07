@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugBlockingObjectEnum arabirimi hakkında daha fazla bilgi edinin'
 title: ICorDebugBlockingObjectEnum Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 208e5c2d-3f3f-404e-8b3c-7cccc14ddb16
 topic_type:
 - apiref
-ms.openlocfilehash: 221acf9bea714728a81b9f15c8165c1f9eba16a8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4f28039cb8a9bdcb376a9acf22572d29e41a2adf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719209"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754075"
 ---
 # <a name="icordebugblockingobjectenum-interface"></a>ICorDebugBlockingObjectEnum Arabirimi
 

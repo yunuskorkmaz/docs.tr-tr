@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: <GCNoAffinitize> öğesi'
 title: GCNoAffinitize öğesi
 ms.date: 11/08/2019
 helpviewer_keywords:
 - gcNoAffinitize element
 - <gcNoAffinitize> element
-ms.openlocfilehash: 16d6e5adefe2b632d7251669650058d7df7cea70
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 139c0fd9e1ec829a3569b77a85e6526bec765e21
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84004744"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754556"
 ---
 # <a name="gcnoaffinitize-element"></a>\<GCNoAffinitize> öğesi
 
@@ -19,7 +20,7 @@ Sunucu GC iş parçacıklarının CPU 'Lara yapılıp yapılmayacağını belirt
 &nbsp;&nbsp;\<runtime>\
 &nbsp;&nbsp;&nbsp;&nbsp;\<GCNoAffinitize>
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <GCNoAffinitize
@@ -40,7 +41,7 @@ Sunucu GC iş parçacıklarının CPU 'Lara yapılıp yapılmayacağını belirt
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|`false`|Sunucu GC iş parçacıklarını CPU 'Lara göre sıralar. Bu varsayılandır.|
+|`false`|Sunucu GC iş parçacıklarını CPU 'Lara göre sıralar. Bu varsayılan seçenektir.|
 |`true`|, Sunucu GC iş parçacıklarını CPU 'Lar ile göstermez.|
 
 ### <a name="child-elements"></a>Alt öğeleri

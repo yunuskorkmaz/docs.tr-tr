@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: <supportedRuntime> öğesi'
 title: <supportedRuntime> yapılandırma öğesi-.NET
 ms.date: 04/02/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: 79b49cbc9b122e6591d07643a341841b262edff4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 04c2b3fec591e1b99757085afdddf26c529591b7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201713"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754504"
 ---
 # <a name="supportedruntime-element"></a>\<supportedRuntime> öğesi
 
@@ -33,7 +34,7 @@ Uygulamanın desteklediği ortak dil çalışma zamanı sürümünü ve isteğe 
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|**Sürüm**|İsteğe bağlı öznitelik.<br /><br /> Bu uygulamanın desteklediği ortak dil çalışma zamanı (CLR) sürümünü belirten bir dize değeri. Özniteliğin geçerli değerleri için `version` , ["çalışma zamanı sürümü" değerleri](#version) bölümüne bakın. **Note:**  .NET Framework 3,5 ' de, "*çalışma zamanı sürümü*" değeri formu *önemli*olarak alır. *küçük*. *oluşturun*. .NET Framework 4 ' ten itibaren, yalnızca büyük ve küçük sürüm numaraları gereklidir (yani "v 4.0.30319" yerine "v 4.0"). Kısa dize önerilir.|
+|**Sürüm**|İsteğe bağlı öznitelik.<br /><br /> Bu uygulamanın desteklediği ortak dil çalışma zamanı (CLR) sürümünü belirten bir dize değeri. Özniteliğin geçerli değerleri için `version` , ["çalışma zamanı sürümü" değerleri](#version) bölümüne bakın. **Note:**  .NET Framework 3,5 ' de, "*çalışma zamanı sürümü*" değeri formu *önemli* olarak alır. *küçük*. *oluşturun*. .NET Framework 4 ' ten itibaren, yalnızca büyük ve küçük sürüm numaraları gereklidir (yani "v 4.0.30319" yerine "v 4.0"). Kısa dize önerilir.|
 |**isteyin**|İsteğe bağlı öznitelik.<br /><br /> Bu uygulamanın hangi .NET Framework sürümünü desteklediğini belirten stok tutma birimini (SKU) belirten bir dize değeri.<br /><br /> .NET Framework 4,0 ' den başlayarak `sku` özniteliğin kullanılması önerilir.  Mevcut olduğunda, uygulamanın hedeflediği .NET Framework sürümünü belirtir.<br /><br /> SKU özniteliğinin geçerli değerleri için, ["SKU kimliği" değerleri](#sku) bölümüne bakın.|
 
 ## <a name="remarks"></a>Açıklamalar
@@ -86,13 +87,13 @@ Uygulamaları üzerinde çalıştırabilecekleri tüm .NET Framework sürümleri
 |4,5|". NETFramework, sürüm = v 4.5 "|
 |4.5.1|". NETFramework, sürüm = v 4.5.1 "|
 |4.5.2|". NETFramework, sürüm = v 4.5.2 "|
-|4.6|". NETFramework, sürüm = v 4.6 "|
+|4,6|". NETFramework, sürüm = v 4.6 "|
 |4.6.1|". NETFramework, sürüm = v 4.6.1 "|
 |4.6.2|". NETFramework, sürüm = v 4.6.2 "|
 |4.7|". NETFramework, sürüm = v 4.7 "|
 |4.7.1|". NETFramework, sürüm = v 4.7.1 "|
 |4.7.2|". NETFramework, sürüm = v 4.7.2 "|
-|4,8|". NETFramework, sürüm = v 4.8 "|
+|4.8|". NETFramework, sürüm = v 4.8 "|
 
 ## <a name="example"></a>Örnek
 

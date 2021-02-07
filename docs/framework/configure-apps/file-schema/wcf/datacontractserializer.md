@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: dataContractSerializer'
 title: dataContractSerializer
 ms.date: 03/30/2017
 ms.assetid: a47513a4-a96c-4350-8586-daacb05dee71
-ms.openlocfilehash: 0e4cbc50c25d4fa1f67f283f2b52d4b174428cd3
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5dee59ba97a1632c142179aee79058dd3ce8c349
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153930"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754413"
 ---
 # <a name="datacontractserializer"></a>dataContractSerializer
 

@@ -3,13 +3,13 @@ title: ASP.NET Core ve Azure ile modern web uygulamaları tasarlama
 description: ASP.NET Core ve Azure kullanarak tek parçalı Web uygulamaları oluşturmaya yönelik uçtan uca rehberlik sağlayan bir kılavuz.
 author: ardalis
 ms.author: wiwagn
-ms.date: 12/07/2020
-ms.openlocfilehash: 90d092b2269315e5b6734430e82cc7211324479b
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.date: 02/02/2021
+ms.openlocfilehash: 37aec94625071fdc07f2b8433f6e9ef200d92099
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851301"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754595"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>ASP.NET Core ve Microsoft Azure ile Modern Web Uygulamaları Tasarlama
 
@@ -29,7 +29,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Telif hakkı © 2020 Microsoft Corporation
+Telif hakkı © 2021 Microsoft Corporation
 
 All rights reserved. Bu kitabın içeriğinin herhangi bir bölümü herhangi bir biçimde veya herhangi bir şekilde veya başka bir şekilde herhangi bir şekilde çoğaltılamaz veya herhangi bir şekilde gönderilebilir.
 

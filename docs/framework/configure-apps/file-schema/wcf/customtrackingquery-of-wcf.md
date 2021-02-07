@@ -1,15 +1,16 @@
 ---
-title: <customTrackingQuery>WCF
+description: WCF hakkında daha fazla bilgi edinin <customTrackingQuery>
+title: <customTrackingQuery> WCF
 ms.date: 03/30/2017
 ms.assetid: 164446ae-8440-4b67-b217-6786cfae1e01
-ms.openlocfilehash: 204bbb6cf5ebcb30bf92b697885ecbbbd94385e0
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 3eac26ee94a95b480d743e3c6ec554a84b8747a3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855427"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754465"
 ---
-# <a name="customtrackingquery-of-wcf"></a>\<customTrackingQuery>WCF
+# <a name="customtrackingquery-of-wcf"></a>\<customTrackingQuery> WCF
 
 Kod etkinliklerinizde tanımladığınız olayları izlemek için kullanılan bir sorguyu temsil eder. Sorgu, izleme katılımcısı için özel izleme kayıtlarına abone olmak için gereklidir.
 
@@ -24,7 +25,7 @@ Profil sorgularını izleme hakkında daha fazla bilgi için bkz. [Izleme profil
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<customTrackingQueries>**](customtrackingqueries-of-wcf.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<customTrackingQuery>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <tracking>

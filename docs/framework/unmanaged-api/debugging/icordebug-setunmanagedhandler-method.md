@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebug:: SetUnmanagedHandler yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebug::SetUnmanagedHandler Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 6b546be4-f86d-4536-8cfc-1d08e5066eb6
 topic_type:
 - apiref
-ms.openlocfilehash: 0bce14a6853c872d27057b9fffc32b54c59abf13
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ffd4eb7ff0056a2468ec53eb3534434c2c8d556a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723395"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754335"
 ---
 # <a name="icordebugsetunmanagedhandler-method"></a>ICorDebug::SetUnmanagedHandler Yöntemi
 
 Yönetilmeyen olaylar için olay işleyicisi nesnesini belirtir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT SetUnmanagedHandler (  

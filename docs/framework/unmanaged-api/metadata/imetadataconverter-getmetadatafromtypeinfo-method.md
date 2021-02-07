@@ -1,4 +1,5 @@
 ---
+description: ': IMetaDataConverter:: GetMetaDataFromTypeInfo yöntemi hakkında daha fazla bilgi edinin'
 title: IMetaDataConverter::GetMetaDataFromTypeInfo Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: d44484bb-23a3-49c3-9e46-69d0d9ab4f0f
 topic_type:
 - apiref
-ms.openlocfilehash: 1f45310bc65bc8614033182a81db451b79bcf97f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 224be07463b19ed9e22bef1a9d454d91a8086304
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95714724"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753633"
 ---
 # <a name="imetadataconvertergetmetadatafromtypeinfo-method"></a>IMetaDataConverter::GetMetaDataFromTypeInfo Metodu
 
 Belirtilen örnek tarafından başvurulan tür kitaplığının meta veri imzasını temsil eden bir [IMetaDataImport](imetadataimport-interface.md) örneğine yönelik bir işaretçi alır `ITypeInfo` .  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetMetaDataFromTypeInfo (  

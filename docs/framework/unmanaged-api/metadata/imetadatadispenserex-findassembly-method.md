@@ -1,4 +1,5 @@
 ---
+description: ': Imetadatadağıtıserex:: FindAssembly Yöntemi hakkında daha fazla bilgi edinin'
 title: IMetaDataDispenserEx::FindAssembly Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 3afe7252-5f28-48d9-a74d-1927566c404c
 topic_type:
 - apiref
-ms.openlocfilehash: c11a4498610c3e82590a0ff9be1247173e70be76
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6bed016e9235281b42f5a3231ef2aff284b6cc3b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95713398"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753607"
 ---
 # <a name="imetadatadispenserexfindassembly-method"></a>IMetaDataDispenserEx::FindAssembly Yöntemi
 
 Bu yöntem uygulanmadı. Çağrılırsa, E_NOTIMPL döndürür.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT FindAssembly(  

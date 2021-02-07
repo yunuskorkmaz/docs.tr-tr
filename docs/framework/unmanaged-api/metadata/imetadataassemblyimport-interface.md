@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: IMetaDataAssemblyImport Arabirimi'
 title: IMetaDataAssemblyImport Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 29c6fba5-4cea-417d-b484-7ed22ebff1c9
 topic_type:
 - apiref
-ms.openlocfilehash: c556fe247754b363ece0c5dc60750068276ddcc4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: bb9c5163e4f5b68700e5a3836fa55edbbebac01c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95714763"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753646"
 ---
 # <a name="imetadataassemblyimport-interface"></a>IMetaDataAssemblyImport Arabirimi
 

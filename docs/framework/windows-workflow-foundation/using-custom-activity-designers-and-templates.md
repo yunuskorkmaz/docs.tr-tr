@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: özel etkinlik tasarımcıları ve şablonları kullanma'
 title: Özel Etkinlik Tasarımcıları ve Şablonları Kullanma
 ms.date: 03/30/2017
 ms.assetid: 1aab82e7-7f89-4255-be46-526b09ceeb8b
-ms.openlocfilehash: 92e199a8592fd79a454ecee083d55b7642f829d2
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8e38f445929878036298a3db13fa9aa6acd4bc94
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238645"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755037"
 ---
 # <a name="using-custom-activity-designers-and-templates"></a>Özel Etkinlik Tasarımcıları ve Şablonları Kullanma
 

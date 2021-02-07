@@ -1,18 +1,19 @@
 ---
-title: 'Yöntem tabanlı sorgu söz dizimi örnekleri: projeksiyon (LINQ to DataSet)'
+description: 'Hakkında daha fazla bilgi: Method-Based sorgu söz dizimi örnekleri: projeksiyon (LINQ to DataSet)'
+title: 'Method-Based sorgu söz dizimi örnekleri: projeksiyon (LINQ to DataSet)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0fc2c8f0-1967-4f30-8b20-39b8dccfb82f
-ms.openlocfilehash: 2790ed3e7f8fc2fe6a5c920be8a79402692d6282
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 380c35962ed122f5d4bbe85ba3fbd87cf7d7a3bf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91147911"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754387"
 ---
-# <a name="method-based-query-syntax-examples-projection-linq-to-dataset"></a>Yöntem tabanlı sorgu söz dizimi örnekleri: projeksiyon (LINQ to DataSet)
+# <a name="method-based-query-syntax-examples-projection-linq-to-dataset"></a>Method-Based sorgu söz dizimi örnekleri: projeksiyon (LINQ to DataSet)
 
 Bu konudaki örneklerde, <xref:System.Linq.Enumerable.Select%2A> <xref:System.Linq.Enumerable.SelectMany%2A> <xref:System.Data.DataSet> yöntemi tabanlı sorgu söz dizimini kullanarak bir sorgulamak için ve yöntemlerinin nasıl kullanılacağı gösterilmektedir.  
   

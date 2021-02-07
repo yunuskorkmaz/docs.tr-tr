@@ -1,13 +1,14 @@
 ---
+description: <dataContractSerializer><System. Runtime. serialization> hakkında daha fazla bilgi edinin
 title: <dataContractSerializer> <System. Runtime. Serialization>
 ms.date: 03/30/2017
 ms.assetid: d9b3d625-be3f-4768-8e0d-1b7e6929f6a8
-ms.openlocfilehash: a8d379e7a37bca0cdb58836a6afdf814320e2411
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3755005782ea773344326d211b9f8f115a97f2ae
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91190195"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754426"
 ---
 # <a name="datacontractserializer-of-systemruntimeserialization"></a>\<dataContractSerializer> / \<system.runtime.serialization>
 
