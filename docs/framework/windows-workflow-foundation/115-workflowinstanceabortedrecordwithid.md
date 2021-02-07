@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 115-WorkflowInstanceAbortedRecordWithId'
 title: 115 - WorkflowInstanceAbortedRecordWithId
 ms.date: 03/30/2017
 ms.assetid: 0293dd4e-e6ae-473a-b3d6-c2d38f9bd875
-ms.openlocfilehash: 69c0c58de36a7fff916b11deba888b7cef7c626e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 6d9eb387ba61a646cbf1423d01175b0230272ca5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96285154"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755440"
 ---
 # <a name="115---workflowinstanceabortedrecordwithid"></a>115 - WorkflowInstanceAbortedRecordWithId
 
@@ -17,10 +18,10 @@ ms.locfileid: "96285154"
 |-|-|  
 |ID|115|  
 |Anahtar sözcükler|HealthMonitoring, WFTracking|  
-|Düzey|Uyarı|  
+|Level|Uyarı|  
 |Kanal|Microsoft-Windows-uygulama sunucusu-uygulamalar/analitik|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bu olay, bir iş akışı örneği WorkflowInstanceAbortedRecord yaydığı zaman ETW izleme katılımcısı tarafından yayılır.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96285154"
   
 ## <a name="details"></a>Ayrıntılar  
   
-|Veri öğesi adı|Veri öğesi türü|Açıklama|  
+|Veri öğesi adı|Veri öğesi türü|Description|  
 |--------------------|--------------------|-----------------|  
 |InstanceId|xs: GUID|İş akışının örnek kimliği|  
 |RecordNumber|xs: Long|Yayınlanan kaydın sıra numarası|  

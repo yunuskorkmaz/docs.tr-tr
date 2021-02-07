@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 1027-Starttransactioncontextworkıtem'
 title: 1027 - StartTransactionContextWorkItem
 ms.date: 03/30/2017
 ms.assetid: 116ae5ec-b9d5-4231-824e-270d00eea7b8
-ms.openlocfilehash: cb5671ce7a30a7096104ba0ca6c4f36bed6b93f9
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e7f81a5998d948d3042b51dcdf20fbb1c88ad266
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275238"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755479"
 ---
 # <a name="1027---starttransactioncontextworkitem"></a>1027 - StartTransactionContextWorkItem
 
@@ -17,10 +18,10 @@ ms.locfileid: "96275238"
 |-|-|  
 |ID|1027|  
 |Anahtar sözcükler|WFRuntime|  
-|Düzey|Ayrıntılı|  
+|Level|Ayrıntılı|  
 |Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bir TransactionContextWorkItem 'ın yürütülmeye başlandığını gösterir.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96275238"
   
 ## <a name="details"></a>Ayrıntılar  
   
-|Veri öğesi adı|Veri öğesi türü|Açıklama|  
+|Veri öğesi adı|Veri öğesi türü|Description|  
 |--------------------|--------------------|-----------------|  
 |Etkinlik|xs: String|Etkinliğin tür adı.|  
 |DisplayName|xs: String|Etkinliğin görünen adı.|  

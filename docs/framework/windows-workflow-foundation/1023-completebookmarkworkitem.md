@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 1023-Completebookmarkworkıtem'
 title: 1023 - CompleteBookmarkWorkItem
 ms.date: 03/30/2017
 ms.assetid: fc5dac57-b3eb-4826-b505-c6d269e4774d
-ms.openlocfilehash: cb99fd72165182788955021fbedd2aa657b3a098
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c83972b41a844747c47b97a0dd2bd37c26ae78a9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275329"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755531"
 ---
 # <a name="1023---completebookmarkworkitem"></a>1023 - CompleteBookmarkWorkItem
 
@@ -17,10 +18,10 @@ ms.locfileid: "96275329"
 |-|-|  
 |ID|1023|  
 |Anahtar sözcükler|WFRuntime|  
-|Düzey|Ayrıntılı|  
+|Level|Ayrıntılı|  
 |Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bir BookmarkWorkItem tamamlandığını gösterir.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96275329"
   
 ## <a name="details"></a>Ayrıntılar  
   
-|Veri öğesi adı|Veri öğesi türü|Açıklama|  
+|Veri öğesi adı|Veri öğesi türü|Description|  
 |--------------------|--------------------|-----------------|  
 |Etkinlik|xs: String|Etkinliğin tür adı.|  
 |DisplayName|xs: String|Etkinliğin görünen adı.|  

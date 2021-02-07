@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 1029-Schedulefaultworkıtem'
 title: 1029 - ScheduleFaultWorkItem
 ms.date: 03/30/2017
 ms.assetid: 3a56b29e-f740-459d-8576-d81e58bf5a03
-ms.openlocfilehash: 5c109607b2d353d3d4a5a693f29ab66bb76c8398
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e5f0463626882d6c8c48412326582fafa7be4670
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275095"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755453"
 ---
 # <a name="1029---schedulefaultworkitem"></a>1029 - ScheduleFaultWorkItem
 
@@ -17,10 +18,10 @@ ms.locfileid: "96275095"
 |-|-|  
 |ID|1029|  
 |Anahtar sözcükler|WFRuntime|  
-|Düzey|Ayrıntılı|  
+|Level|Ayrıntılı|  
 |Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bir FaultWorkItem zamanlandığı olduğunu gösterir.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96275095"
   
 ## <a name="details"></a>Ayrıntılar  
   
-|Veri öğesi adı|Veri öğesi türü|Açıklama|  
+|Veri öğesi adı|Veri öğesi türü|Description|  
 |--------------------|--------------------|-----------------|  
 |FaultActivity|xs: String|Hata etkinliğinin tür adı.|  
 |FaultActivityDisplayName|xs: String|Hata etkinliğinin görünen adı.|  
