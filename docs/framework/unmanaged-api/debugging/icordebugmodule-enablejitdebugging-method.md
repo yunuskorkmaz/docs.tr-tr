@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugModule:: Enablejıdebugging yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugModule::EnableJITDebugging Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 0a65e2a4-5bb6-496c-ae6f-40474426b5a6
 topic_type:
 - apiref
-ms.openlocfilehash: 359db27878ea4adf794bcd6221d4b5387026e5c0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 30077bd586e1cb9cb8766290804e31f5999d9e72
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95710317"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99722691"
 ---
 # <a name="icordebugmoduleenablejitdebugging-method"></a>ICorDebugModule::EnableJITDebugging Yöntemi
 
 Just-In-Time (JıT) derleyicisinin Bu modüldeki yöntemler için hata ayıklama bilgilerini koruyamayacağını denetler.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT EnableJITDebugging(  

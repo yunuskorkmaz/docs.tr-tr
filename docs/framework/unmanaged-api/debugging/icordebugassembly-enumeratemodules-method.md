@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugAssembly:: EnumerateModules Yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugAssembly::EnumerateModules Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c7ba51a1-0dd5-4452-b471-232febe0f897
 topic_type:
 - apiref
-ms.openlocfilehash: 6d00d17a5876dd7454b9f89ffa916bc62efb3d0c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5d34fb1762e8f953007d6fcb59ab1147028f06a8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734133"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99722873"
 ---
 # <a name="icordebugassemblyenumeratemodules-method"></a>ICorDebugAssembly::EnumerateModules Yöntemi
 
 İçinde yer alan modüller için bir Numaralandırıcı alır `ICorDebugAssembly` .  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT EnumerateModules (  

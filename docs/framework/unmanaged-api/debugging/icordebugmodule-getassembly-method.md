@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugModule:: GetAssembly yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugModule::GetAssembly Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 989762c4-3d15-4485-b8ee-69e0fa8ec895
 topic_type:
 - apiref
-ms.openlocfilehash: e0ae11ee24a5e25fb439d5c502c4cda5bcb6a80e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 88bda923cd4c3ebfa5da6b3343e1cead4cebbad9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95710278"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99722626"
 ---
 # <a name="icordebugmodulegetassembly-method"></a>ICorDebugModule::GetAssembly Metodu
 
 Bu modülün kapsayan derlemesini alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetAssembly(  

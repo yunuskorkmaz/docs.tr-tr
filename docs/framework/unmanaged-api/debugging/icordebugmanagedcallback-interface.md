@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugManagedCallback arabirimi hakkında daha fazla bilgi edinin'
 title: ICorDebugManagedCallback Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b47f1d61-c7dc-4196-b926-0b08c94f7041
 topic_type:
 - apiref
-ms.openlocfilehash: 6eebabc3a08027eab4ac55c1e46dd75b1f75bd21
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0dd33e4295caa8f5ae41c65d9bd10152737156ca
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95679708"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99722821"
 ---
 # <a name="icordebugmanagedcallback-interface"></a>ICorDebugManagedCallback Arabirimi
 

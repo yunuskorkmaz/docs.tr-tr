@@ -1,4 +1,5 @@
 ---
+description: 'Bu konuda daha fazla bilgi edinin: ıcorı, Garrayvalue arabirimi'
 title: ICorDebugArrayValue Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dc437751-7093-44e2-bfdc-191d9ce3c192
 topic_type:
 - apiref
-ms.openlocfilehash: 90688132b98f8316a4b08988c08b2f7cc7ce0fd8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2b91c910b9444b061b4a6bea715667bca6a4629c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725059"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99722899"
 ---
 # <a name="icordebugarrayvalue-interface"></a>ICorDebugArrayValue Arabirimi
 
