@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugModule:: GetProcess metodu hakkında daha fazla bilgi edinin'
 title: ICorDebugModule::GetProcess Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 5e13446c-0271-446c-924a-9072c0e6eeae
 topic_type:
 - apiref
-ms.openlocfilehash: 8f4b9e73e0d716561dd64bc0df702d835e0eee06
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: eb8497ac8ec6913fe079d6f5f148d3769bf6633a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95709966"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99691633"
 ---
-# <a name="icordebugmodulegetprocess-method"></a><span data-ttu-id="a5e06-102">ICorDebugModule::GetProcess Metodu</span><span class="sxs-lookup"><span data-stu-id="a5e06-102">ICorDebugModule::GetProcess Method</span></span>
+# <a name="icordebugmodulegetprocess-method"></a><span data-ttu-id="6d6a8-103">ICorDebugModule::GetProcess Metodu</span><span class="sxs-lookup"><span data-stu-id="6d6a8-103">ICorDebugModule::GetProcess Method</span></span>
 
-<span data-ttu-id="a5e06-103">Bu modülün bulunduğu işlemi alır.</span><span class="sxs-lookup"><span data-stu-id="a5e06-103">Gets the containing process of this module.</span></span>  
+<span data-ttu-id="6d6a8-104">Bu modülün bulunduğu işlemi alır.</span><span class="sxs-lookup"><span data-stu-id="6d6a8-104">Gets the containing process of this module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a5e06-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="a5e06-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6d6a8-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6d6a8-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetProcess (  
@@ -34,17 +35,17 @@ HRESULT GetProcess (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a5e06-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="a5e06-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6d6a8-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="6d6a8-106">Parameters</span></span>  
 
  `ppProcess`  
- <span data-ttu-id="a5e06-106">dışı Bu modülü içeren işlemi temsil eden bir ICorDebugProcess nesnesinin adresine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="a5e06-106">[out] A pointer to the address of an ICorDebugProcess object that represents the process containing this module.</span></span>  
+ <span data-ttu-id="6d6a8-107">dışı Bu modülü içeren işlemi temsil eden bir ICorDebugProcess nesnesinin adresine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="6d6a8-107">[out] A pointer to the address of an ICorDebugProcess object that represents the process containing this module.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a5e06-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a5e06-107">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6d6a8-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="6d6a8-108">Requirements</span></span>  
 
- <span data-ttu-id="a5e06-108">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a5e06-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="6d6a8-109">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6d6a8-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a5e06-109">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="a5e06-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="6d6a8-110">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="6d6a8-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="a5e06-110">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="a5e06-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6d6a8-111">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="6d6a8-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a5e06-111">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a5e06-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="6d6a8-112">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6d6a8-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

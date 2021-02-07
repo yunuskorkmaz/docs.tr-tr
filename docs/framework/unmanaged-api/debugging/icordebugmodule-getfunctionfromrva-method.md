@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugModule:: GetFunctionFromRVA yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugModule::GetFunctionFromRVA Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: f5a34517-2422-484f-be89-2ce0b4bce195
 topic_type:
 - apiref
-ms.openlocfilehash: 85f368eaa024e7792e5feefeb08f0bac1b59494d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fdafba1321ce32743ccca271e5db551fc746d886
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95710135"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99691581"
 ---
-# <a name="icordebugmodulegetfunctionfromrva-method"></a><span data-ttu-id="7fd02-102">ICorDebugModule::GetFunctionFromRVA Yöntemi</span><span class="sxs-lookup"><span data-stu-id="7fd02-102">ICorDebugModule::GetFunctionFromRVA Method</span></span>
+# <a name="icordebugmodulegetfunctionfromrva-method"></a><span data-ttu-id="b2b34-103">ICorDebugModule::GetFunctionFromRVA Yöntemi</span><span class="sxs-lookup"><span data-stu-id="b2b34-103">ICorDebugModule::GetFunctionFromRVA Method</span></span>
 
-<span data-ttu-id="7fd02-103">Bu yöntem .NET Framework geçerli sürümünde uygulanmadı.</span><span class="sxs-lookup"><span data-stu-id="7fd02-103">This method has not been implemented in the current version of the .NET Framework.</span></span>  
+<span data-ttu-id="b2b34-104">Bu yöntem .NET Framework geçerli sürümünde uygulanmadı.</span><span class="sxs-lookup"><span data-stu-id="b2b34-104">This method has not been implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7fd02-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="7fd02-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b2b34-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="b2b34-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetFunctionFromRVA(  
@@ -35,8 +36,8 @@ HRESULT GetFunctionFromRVA(
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="7fd02-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="7fd02-105">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b2b34-106">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b2b34-106">Requirements</span></span>  
 
- <span data-ttu-id="7fd02-106">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="7fd02-106">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b2b34-107">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="b2b34-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7fd02-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7fd02-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b2b34-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b2b34-108">See also</span></span>
