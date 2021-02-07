@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Işlev Ifadesi (Visual Basic)'
 title: Function İfadesi
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - functions [Visual Basic], function expressions
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
-ms.openlocfilehash: 719969be23a6d94f22a1d86cb4ad3f37e4c3b254
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: bef5db7f167b615c2a0c20539521c186683da985
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873424"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666023"
 ---
 # <a name="function-expression-visual-basic"></a>İşlev İfadesi (Visual Basic)
 
 Bir işlev lambda ifadesi tanımlayan parametreleri ve kodu bildirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 Function ( [ parameterlist ] ) expression  
@@ -29,7 +30,7 @@ End Function
   
 ## <a name="parts"></a>Bölümler  
   
-|Terim|Tanım|  
+|Süre|Tanım|  
 |---|---|  
 |`parameterlist`|İsteğe bağlı. Bu yordamın parametrelerini temsil eden yerel değişken adlarının bir listesi. Liste boş olduğunda bile parantezler mevcut olmalıdır. Bkz. [parametre listesi](../statements/parameter-list.md).|  
 |`expression`|Gereklidir. Tek bir ifade. İfadenin türü, işlevin dönüş türüdür.|  
@@ -79,7 +80,7 @@ End Function
   
 ## <a name="example"></a>Örnek  
 
- Lambda ifadeleri, dil ile tümleşik sorgu (LINQ) içinde sorgu işleçlerinin birçoğunu daha fazla kullanır ve Yöntem tabanlı sorgularda açık bir şekilde kullanılabilir. Aşağıdaki örnek tipik bir LINQ sorgusunu ve ardından sorgunun yöntem biçimine çevirisini gösterir.  
+ Lambda ifadeleri Language-Integrated sorgusunda (LINQ) sorgu işleçlerinin birçoğunu alt olarak kullanır ve Yöntem tabanlı sorgularda açıkça kullanılabilir. Aşağıdaki örnek tipik bir LINQ sorgusunu ve ardından sorgunun yöntem biçimine çevirisini gösterir.  
   
 ```vb  
 Dim londonCusts = From cust In db.Customers  

@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: My ile Geliştirme (Visual Basic)'
 title: My Özelliğiyle Geliştirme
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - My feature
 - Visual Basic, programming in
 ms.assetid: f1d04509-5e46-4551-9f9f-94334a121fca
-ms.openlocfilehash: 3befac591de8fbc7250777a8b87247ee395abf25
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f19365471dab5fa30b565a9dd93c40a2f5795118
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411707"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666569"
 ---
 # <a name="development-with-my-visual-basic"></a>My Özelliğiyle Geliştirme (Visual Basic)
 

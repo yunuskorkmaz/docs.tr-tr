@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi <transport> edinin: <netTcpBinding>'
 title: <transport> / <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-ms.openlocfilehash: 8f752373c51992c51b747f5f4dc4a63910a387c6
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9005de300b41c9f53c62875ee185d0f8a3ee8d7f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91162198"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99664554"
 ---
 # <a name="transport-of-nettcpbinding"></a>\<transport> / \<netTcpBinding>
 
@@ -50,7 +51,7 @@ ms.locfileid: "91162198"
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
 |clientCredentialType|İsteğe bağlı. Aktarım güvenliği kullanılarak istemci kimlik doğrulaması gerçekleştirilirken kullanılacak kimlik bilgisinin türünü belirtir.<br /><br /> -Varsayılan değer `Windows` .<br />-Bu öznitelik türündedir <xref:System.ServiceModel.TcpClientCredentialType> .|  
-|protectionLevel|İsteğe bağlı. TCP aktarımı düzeyinde güvenliği tanımlar. İmzalama iletileri, üçüncü bir tarafın aktarılırken ileti üzerinde izinsiz değişiklik yaptığı riski azaltır. Şifreleme, aktarım sırasında veri düzeyinde gizlilik sağlar.<br /><br /> Varsayılan değer: `EncryptAndSign`.|  
+|protectionLevel|İsteğe bağlı. TCP aktarımı düzeyinde güvenliği tanımlar. İmzalama iletileri, üçüncü bir tarafın aktarılırken ileti üzerinde izinsiz değişiklik yaptığı riski azaltır. Şifreleme, aktarım sırasında veri düzeyinde gizlilik sağlar.<br /><br /> `EncryptAndSign` varsayılan değerdir.|  
 |sslProtocols|Hangi SslProtocols desteklendiğini belirten bir SslProtocols numaralandırma bayrak değeri. Varsayılan değer TLS&#124;Tls11&#124;Tls12 ' dir.|  
 |policyEnforcement|Bu numaralandırma, ne zaman <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> uygulanacağını belirtir.<br /><br /> 1. hiçbir süre – ilke hiçbir şekilde zorlanmaz (genişletilmiş koruma devre dışı bırakılır).<br />2. WhenSupported – ilke yalnızca istemci genişletilmiş korumayı destekliyorsa zorlanır.<br />3. her zaman – ilke her zaman zorlanır. Genişletilmiş korumayı desteklemeyen istemciler kimlik doğrulaması yapamaz.|  
   
@@ -72,7 +73,7 @@ ms.locfileid: "91162198"
   
 ### <a name="child-elements"></a>Alt Öğeler  
 
- Hiçbiri  
+ Yok  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   

@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <filter>'
 title: <filter>
 ms.date: 03/30/2017
 ms.assetid: 3266700b-904b-44e4-93a7-e06a1a445100
-ms.openlocfilehash: 6e78275aaeb202405e327302455d56fa431d7f27
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 993d2265ac3a714475e8cbe9e8a2c3f93c46bde2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855248"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99664684"
 ---
 # \<filter>
 
@@ -18,7 +19,7 @@ Gelen iletileri değerlendirirken kullanılacak Windows Communication Foundation
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<filters>**](filters-of-routing.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<filter>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <routing>
@@ -39,7 +40,7 @@ Gelen iletileri değerlendirirken kullanılacak Windows Communication Foundation
 
 | Öznitelik  | Açıklama |
 | ---------- | ----------- |
-| customType | Filtre olarak kullanılacak özel türün tam nitelikli tür adını içeren bir dize. , `filterType` Olarak ayarlandıysa `custom` , bu öznitelik oluşturulacak sınıfın tam nitelikli tür adını içerir.  `filterData`özel tür filtresi değerlendirmesi sırasında kullanılacak değerleri de içerebilir. |
+| customType | Filtre olarak kullanılacak özel türün tam nitelikli tür adını içeren bir dize. , `filterType` Olarak ayarlandıysa `custom` , bu öznitelik oluşturulacak sınıfın tam nitelikli tür adını içerir.  `filterData` özel tür filtresi değerlendirmesi sırasında kullanılacak değerleri de içerebilir. |
 | filterData | Filtre verilerini içeren bir dize. Bu özniteliği belirtme hakkında daha fazla bilgi için bkz <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A> .. |
 | filterType | Filtre türünü içeren bir dize. Bu öznitelik <xref:System.ServiceModel.Routing.Configuration.FilterType> türü.  Bunun özniteliğiyle nasıl çalıştığı hakkında daha fazla bilgi için `filterData` bkz <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A> .. |
 | name       | Bu filtre öğesinin benzersiz adını içeren bir dize. |

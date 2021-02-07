@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: Işleçler (Visual Basic)'
 title: İşleçler
 ms.date: 10/17/2018
 helpviewer_keywords:
 - operators [Visual Basic]
 ms.assetid: 3d3421df-fcc5-4888-9249-d78f16774ce6
-ms.openlocfilehash: d980621ed493bbe5f243062238f4b87e1e44003b
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: ee14fc653dbc477946507d0cf60c86053546dd2b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838175"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665867"
 ---
 # <a name="operators-visual-basic"></a>İşleçler (Visual Basic)
 
@@ -33,4 +34,4 @@ ms.locfileid: "74838175"
 
 ## <a name="related-sections"></a>İlgili bölümler
 
-- [Visual Basic dil başvurusu](../index.md)
+- [Visual Basic dili başvurusu](../index.md)

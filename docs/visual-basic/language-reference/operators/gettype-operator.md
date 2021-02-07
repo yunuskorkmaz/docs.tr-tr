@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: GetType Işleci (Visual Basic)'
 title: GetType İşleci
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - GetType operator [Visual Basic]
 - GetType keyword [Visual Basic]
 ms.assetid: 4f733297-2503-4607-850c-15eba65fff90
-ms.openlocfilehash: 9ff207ea4f2b89ea30eb8f46a3e640ccf3789974
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 15fe9c28997aa01527f23c0cc8fdbb0fe6cc53f7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867008"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665997"
 ---
 # <a name="gettype-operator-visual-basic"></a>GetType İşleci (Visual Basic)
 

@@ -1,4 +1,5 @@
 ---
+description: Hakkında daha fazla bilgi edinin:/Işleç (Visual Basic)
 title: / İşleci
 ms.date: 07/20/2015
 f1_keywords:
@@ -16,18 +17,18 @@ helpviewer_keywords:
 - / operator [Visual Basic]
 - math operators [Visual Basic]
 ms.assetid: 335e97f2-c434-439e-9064-76973a051101
-ms.openlocfilehash: 765a80d45908e0ecf17e4c21b748dbf6b2a4c0f5
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 717c8fdc6abae02de555040a3aadb92fed2bfbee
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867035"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666010"
 ---
 # <a name="-operator-visual-basic"></a>/ İşleci (Visual Basic)
 
 İki sayıyı böler ve kayan noktalı bir sonuç döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 expression1 / expression2  
@@ -77,7 +78,7 @@ expression1 / expression2
 |Integral (işaretli veya imzasız)|<xref:System.OverflowException>İntegral türler <xref:System.Double.PositiveInfinity> , veya kabul edilemediğinden integral türüne geri dönüştürme denendi. <xref:System.Double.NegativeInfinity><xref:System.Double.NaN>|  
   
 > [!NOTE]
-> `/`İşleç *aşırı*yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../programming-guide/language-features/procedures/operator-procedures.md).  
+> `/`İşleç *aşırı* yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
 

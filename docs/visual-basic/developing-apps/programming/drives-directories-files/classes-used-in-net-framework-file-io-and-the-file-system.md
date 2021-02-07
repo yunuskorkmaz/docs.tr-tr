@@ -1,15 +1,16 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: .NET Framework dosya g/ç 'de kullanılan sınıflar ve dosya sistemi (Visual Basic)"
 title: Dosya Sistemi ve .NET Framework Dosyası G/Ç'de Kullanılan Sınıflar
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
-ms.openlocfilehash: 2c696d5b8c83ae55caf61e4710630ad1e34c088d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a8cbe476044df92fcdbdd0421b91f3c7c098e063
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401777"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666335"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Dosya Sistemi ve .NET Framework Dosyası G/Ç'de Kullanılan Sınıflar (Visual Basic)
 
@@ -21,7 +22,7 @@ Daha kapsamlı bir liste için bkz. [sınıf kitaplığına genel bakış](../..
 
  Aşağıdaki tabloda dosya g/ç için kullanılan ana sınıflar listelenmektedir ve açıklanmaktadır.  
   
-|Sınıf|Description|  
+|Sınıf|Açıklama|  
 |-----------|-----------------|  
 |<xref:System.IO.Directory?displayProperty=nameWithType>|Dizinler ve alt dizinler aracılığıyla oluşturma, taşıma ve sıralama için statik yöntemler sağlar.|  
 |<xref:System.IO.DirectoryInfo?displayProperty=nameWithType>|Dizinler ve alt dizinler aracılığıyla oluşturma, taşıma ve numaralandırma için örnek yöntemleri sağlar.|  
@@ -39,10 +40,10 @@ Daha kapsamlı bir liste için bkz. [sınıf kitaplığına genel bakış](../..
 
  Aşağıdaki tabloda, akışlar oluşturmak için kullanılan ana sınıflar listelenmektedir ve açıklanmaktadır.  
   
-|Sınıf|Description|  
+|Sınıf|Açıklama|  
 |-----------|-----------------|  
 |<xref:System.IO.BufferedStream?displayProperty=nameWithType>|Başka bir akışta okuma ve yazma işlemlerine yönelik bir arabelleğe alma katmanı ekler.|  
-|<xref:System.IO.FileStream?displayProperty=nameWithType>|, Yöntemi aracılığıyla dosyalara rastgele erişimi destekler <xref:System.IO.FileStream.Seek%2A> . <xref:System.IO.FileStream>dosyaları varsayılan olarak eşzamanlı olarak açar, ancak aynı zamanda zaman uyumsuz işlemi destekler.|  
+|<xref:System.IO.FileStream?displayProperty=nameWithType>|, Yöntemi aracılığıyla dosyalara rastgele erişimi destekler <xref:System.IO.FileStream.Seek%2A> . <xref:System.IO.FileStream> dosyaları varsayılan olarak eşzamanlı olarak açar, ancak aynı zamanda zaman uyumsuz işlemi destekler.|  
 |<xref:System.IO.MemoryStream?displayProperty=nameWithType>|Yedekleme deposu bir dosya yerine bellek olan bir akış oluşturur.|  
 |<xref:System.Net.Sockets.NetworkStream?displayProperty=nameWithType>|Ağ erişimi için temel alınan veri akışını sağlar.|  
 |<xref:System.Security.Cryptography.CryptoStream?displayProperty=nameWithType>|Veri akışlarını şifreleme dönüşümlerine bağlayan bir akış tanımlar.|  
@@ -55,7 +56,7 @@ Daha kapsamlı bir liste için bkz. [sınıf kitaplığına genel bakış](../..
 |---------------|---------------------|  
 |<xref:System.IO.BinaryReader?displayProperty=nameWithType>|Bir öğesinden kodlanmış dizeleri ve temel veri türlerini okur <xref:System.IO.FileStream> .|  
 |<xref:System.IO.BinaryWriter?displayProperty=nameWithType>|Kodlanmış dizeleri ve temel veri türlerini bir öğesine yazar <xref:System.IO.FileStream> .|  
-|<xref:System.IO.StreamReader?displayProperty=nameWithType>|<xref:System.IO.FileStream> <xref:System.IO.StreamReader.CurrentEncoding%2A> Karakterleri, bayttan ve baytlara dönüştürmek için kullanarak bir öğesinden okur. <xref:System.IO.StreamReader>, <xref:System.IO.StreamReader.CurrentEncoding%2A> belirli bir akış için, bayt sırası işareti gibi belirli bir girişin varolup olmadığını belirlemek için doğru yokuna izin veren bir oluşturucuya sahiptir <xref:System.IO.StreamReader.CurrentEncoding%2A> .|  
+|<xref:System.IO.StreamReader?displayProperty=nameWithType>|<xref:System.IO.FileStream> <xref:System.IO.StreamReader.CurrentEncoding%2A> Karakterleri, bayttan ve baytlara dönüştürmek için kullanarak bir öğesinden okur. <xref:System.IO.StreamReader> , <xref:System.IO.StreamReader.CurrentEncoding%2A> belirli bir akış için, bayt sırası işareti gibi belirli bir girişin varolup olmadığını belirlemek için doğru yokuna izin veren bir oluşturucuya sahiptir <xref:System.IO.StreamReader.CurrentEncoding%2A> .|  
 |<xref:System.IO.StreamWriter?displayProperty=nameWithType>|`FileStream`Karakteri bayta dönüştürmek için bir, kullanarak karakter yazar <xref:System.IO.StreamWriter.Encoding%2A> .|  
 |<xref:System.IO.StringReader?displayProperty=nameWithType>|İçindeki karakterleri okur `String` . Çıkış herhangi bir kodlamada veya bir akışta akış olabilir `String` .|  
 |<xref:System.IO.StringWriter?displayProperty=nameWithType>|' A karakter yazar `String` . Çıkış herhangi bir kodlamada veya bir akışta akış olabilir `String` .|  

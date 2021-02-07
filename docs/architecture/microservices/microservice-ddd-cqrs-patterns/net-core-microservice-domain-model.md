@@ -1,15 +1,15 @@
 ---
 title: .NET ile bir mikro hizmet etki alanı modeli uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | DDD-odaklı bir etki alanı modelinin uygulama ayrıntılarına ulaşın.
-ms.date: 01/13/2021
-ms.openlocfilehash: 9689058b77701eee35ef018ed2e3f18bd648b0f4
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.date: 02/02/2021
+ms.openlocfilehash: 87d832101d95f3ab69d1a40bbdc820e1e09af5db
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188276"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665282"
 ---
-# <a name="implement-a-microservice-domain-model-with-net-core"></a>.NET Core ile bir mikro hizmet etki alanı modeli uygulama
+# <a name="implement-a-microservice-domain-model-with-net"></a>.NET ile bir mikro hizmet etki alanı modeli uygulama
 
 Önceki bölümde, bir etki alanı modeli tasarlamaya yönelik temel tasarım ilkeleri ve desenleri açıklanmıştı. Artık, .NET (düz C \# kodu) ve EF Core kullanarak etki alanı modelini uygulamak için olası yolları keşfetmeye yönelik bir zaman vardır. Etki alanı modeliniz yalnızca kodunuzla oluşturulur. Yalnızca EF Core model gereksinimlerine sahip olur ancak EF üzerinde gerçek bağımlılıklara sahip olmaz. Etki alanı modelinizdeki EF Core veya başka bir ORM için sabit bağımlılıklara veya başvuru içermemelidir.
 

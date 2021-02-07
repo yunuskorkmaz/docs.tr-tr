@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Mod işleci (Visual Basic)'
 title: Mod İşleci
 ms.date: 04/24/2018
 f1_keywords:
@@ -12,18 +13,18 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-ms.openlocfilehash: 32065567799b023556a018ae2f5ba338796e0b49
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: bfec39f54041714258e21f087a044dce24edcb6b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401517"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665438"
 ---
 # <a name="mod-operator-visual-basic"></a>Mod işleci (Visual Basic)
 
 İki sayıyı böler ve yalnızca kalanı döndürür.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```vb
 result = number1 Mod number2
@@ -51,7 +52,7 @@ Sonuç, öğesinden `number1` bölündükten sonra kalanı `number2` . Örneğin
 > [!NOTE]
 > Olumsuz ve mod arasında negatif sayıların farklı sonuçlarıyla birlikte *kalan* ve *mod* arasında bir farklılık vardır. `Mod`Visual Basic işleci, .NET Framework `op_Modulus` işleci ve temeldeki [REM](<xref:System.Reflection.Emit.OpCodes.Rem>) Il yönergesinin hepsi bir geri kalan işlem gerçekleştirir.
 
-Bir işlemin sonucu, `Mod` bölünün işaretini korur, `number1` ve bu nedenle pozitif veya negatif olabilir. Sonuç her zaman (- `number2` , `number2` ), hariç değişir. Örnek:
+Bir işlemin sonucu, `Mod` bölünün işaretini korur, `number1` ve bu nedenle pozitif veya negatif olabilir. Sonuç her zaman (- `number2` , `number2` ), hariç değişir. Örneğin:
 
 ```vb
 Public Module Example
@@ -102,7 +103,7 @@ Kayan noktalı sayılarla çalışırken her zaman bellekte kesin bir ondalık g
 
 ## <a name="overloading"></a>Aşırı Yükleme
 
-`Mod`İşleç *aşırı*yüklenebilir, yani bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. Kodunuz `Mod` , bu tür bir aşırı yükleme içeren bir sınıf veya yapının örneği için geçerliyse, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../programming-guide/language-features/procedures/operator-procedures.md).
+`Mod`İşleç *aşırı* yüklenebilir, yani bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. Kodunuz `Mod` , bu tür bir aşırı yükleme içeren bir sınıf veya yapının örneği için geçerliyse, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../programming-guide/language-features/procedures/operator-procedures.md).
 
 ## <a name="example"></a>Örnek
 
@@ -120,7 +121,7 @@ Aşağıdaki örnek, kayan nokta işlenenlerinin olası noktasında kesinlik eks
 
 - <xref:Microsoft.VisualBasic.Conversion.Int%2A>
 - <xref:Microsoft.VisualBasic.Conversion.Fix%2A>
-- [Aritmetik İşleçler](arithmetic-operators.md)
+- [Aritmetik Işleçler](arithmetic-operators.md)
 - [Visual Basic'de İşleç Önceliği](operator-precedence.md)
 - [İşlevselliğe Göre Listelenmiş İşleçler](operators-listed-by-functionality.md)
 - [Veri Türü Sorunlarını Giderme](../../programming-guide/language-features/data-types/troubleshooting-data-types.md)

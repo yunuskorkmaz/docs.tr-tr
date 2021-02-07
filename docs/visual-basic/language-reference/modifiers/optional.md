@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi: Isteğe bağlı (Visual Basic)'
 title: İsteğe Bağlı
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Optional keyword [Visual Basic], contexts
 - Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
-ms.openlocfilehash: c46d06dba61158d7362d736731161be306af3f10
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d9a61371364d87745203363dbc0a641cec9660a2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84392151"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666088"
 ---
 # <a name="optional-visual-basic"></a>İsteğe Bağlı (Visual Basic)
 

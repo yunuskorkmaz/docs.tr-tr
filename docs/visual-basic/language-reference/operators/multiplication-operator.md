@@ -1,4 +1,5 @@
 ---
+description: ': * Işleci hakkında daha fazla bilgi edinin (Visual Basic)'
 title: '* Operatör'
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - multiplication operator [Visual Basic], syntax
 - math operators [Visual Basic]
 ms.assetid: 2b210382-99da-4195-89ba-b1d06f5e89ad
-ms.openlocfilehash: 7038fef4258d190b726a851b26f2a2840ff3c0ea
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 9a9f7eff9468fd6784b705a50871bc79fd6c1faa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873373"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665399"
 ---
 # <a name="-operator-visual-basic"></a>* İşleci (Visual Basic)
 
 İki sayıyı çarpar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 number1 * number2  
@@ -29,7 +30,7 @@ number1 * number2
   
 ## <a name="parts"></a>Bölümler  
   
-|Terim|Tanım|  
+|Süre|Tanım|  
 |---|---|  
 |`number1`|Gereklidir. Herhangi bir sayısal ifade.|  
 |`number2`|Gereklidir. Herhangi bir sayısal ifade.|  
@@ -57,7 +58,7 @@ number1 * number2
   
 ## <a name="overloading"></a>Aşırı Yükleme  
 
- `*`İşleç *aşırı*yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../programming-guide/language-features/procedures/operator-procedures.md).  
+ `*`İşleç *aşırı* yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
 

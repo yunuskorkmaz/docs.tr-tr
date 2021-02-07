@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: .NET Framework dosya g/ç ve dosya sistemi (Visual Basic) temelleri'
 title: Dosya Sistemi ve .NET Framework Dosyası G/Ç ile ilgili Temel Bilgiler
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: 187a20617ec901e722a30ebfa571e4a55ed0b5c3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 78ab7f572f0e2cc6255af470f73a549a4d7f274a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401803"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666361"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Dosya Sistemi ve .NET Framework Dosyası G/Ç ile İlgili Temel Bilgiler (Visual Basic)
 
@@ -23,7 +24,7 @@ ms.locfileid: "84401803"
 <xref:System.IO>Ad alanı, <xref:System.IO.File> <xref:System.IO.Directory> dosyaları ve dizinleri işleyen .NET Framework işlevselliği sağlayan ve sınıflarını içerir. Bu nesnelerin yöntemleri statik veya paylaşılan Üyeler olduğundan, bunları önce sınıfın bir örneğini oluşturmadan doğrudan kullanabilirsiniz. Bu sınıflarla ilişkili, <xref:System.IO.FileInfo> <xref:System.IO.DirectoryInfo> özelliği kullanıcılarına tanıdık olacak ve sınıflardır `My` . Bu sınıfları kullanmak için, `Imports` etkilenen kodun başındaki deyimleri dahil ederek adları tam olarak nitelemeniz veya uygun ad alanlarını içeri aktarmanız gerekir. Daha fazla bilgi için bkz. [Imports açıklaması (.net ad alanı ve türü)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md).
 
 > [!NOTE]
-> Bu bölümdeki diğer konular, `My.Computer.FileSystem` `System.IO` sürücüler, dosyalar ve dizinler ile çalışmak için sınıflar yerine nesnesini kullanır. `My.Computer.FileSystem`Nesne öncelikle Visual Basic programlarında kullanılmak üzere tasarlanmıştır. `System.IO`sınıflar, Visual Basic dahil olmak üzere .NET Framework destekleyen herhangi bir dil tarafından kullanılmaya yöneliktir.
+> Bu bölümdeki diğer konular, `My.Computer.FileSystem` `System.IO` sürücüler, dosyalar ve dizinler ile çalışmak için sınıflar yerine nesnesini kullanır. `My.Computer.FileSystem`Nesne öncelikle Visual Basic programlarında kullanılmak üzere tasarlanmıştır. `System.IO` sınıflar, Visual Basic dahil olmak üzere .NET Framework destekleyen herhangi bir dil tarafından kullanılmaya yöneliktir.
 
 ## <a name="definition-of-a-stream"></a>Akışın tanımı
 
@@ -59,7 +60,7 @@ Birçok tür akış vardır ancak dosya girişi/çıkışı (g/ç) ile çalışm
 
 Aşağıdaki tabloda, bir akışta yaygın olarak gerçekleştirilen görevler listelenmiştir:
 
-|Alıcı|Bkz.|
+|Amaç|Bkz.|
 |---|---|
 |Veri dosyasına okuma ve yazma|[Nasıl yapılır: Yeni Oluşturulan bir Veri Dosyasını Okuma ve Dosyaya Yazma](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|
 |Dosyadan metin oku|[Nasıl yapılır: Dosyadan Metin Okuma](../../../../standard/io/how-to-read-text-from-a-file.md)|
@@ -77,7 +78,7 @@ Dosyaların <xref:System.IO.FileAccess> <xref:System.IO.FileMode> <xref:System.I
 
 Aşağıdaki tabloda dosya erişimi ve dosya öznitelikleri içeren görevler listelenmiştir:
 
-|Alıcı|Bkz.|
+|Amaç|Bkz.|
 |---|---|
 |Açın ve bir günlük dosyasına metin ekleyin|[Nasıl yapılır: Günlük Dosyasını Açma ve Sonuna Ekleme](../../../../standard/io/how-to-open-and-append-to-a-log-file.md)|
 |Bir dosyanın özniteliklerini belirleme|<xref:System.IO.FileAttributes>|
@@ -92,7 +93,7 @@ Yalıtılmış depolama, Kullanıcı veya kodun gerekli izinlere sahip olabilece
 
 Aşağıdaki tabloda, yalıtılmış dosya depolama ile yaygın olarak ilişkili görevler listelenmiştir.
 
-|Alıcı|Bkz.|
+|Amaç|Bkz.|
 |---|---|
 |Yalıtılmış mağaza oluşturma|[Nasıl yapılır: Yalıtılmış Depolama için Depoları Alma](../../../../standard/io/how-to-obtain-stores-for-isolated-storage.md)|
 |Yalıtılmış depoları listeleme|[Nasıl yapılır: Yalıtılmış Depolama için Depoları Numaralandırma](../../../../standard/io/how-to-enumerate-stores-for-isolated-storage.md)|

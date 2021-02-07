@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: ınot Işleci (Visual Basic)'
 title: IsNot işleci
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - TypeOf...IsNot expression
 - IsNot operator [Visual Basic]
 ms.assetid: 8dd2bcdb-0166-48a2-9094-60dfb448f36c
-ms.openlocfilehash: ea978f8874cee20fb3a005189fd846f7564da777
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: ac3e127676dfa57d14e07838152022de62fc336b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811047"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665672"
 ---
 # <a name="isnot-operator-visual-basic"></a>IsNot İşleci (Visual Basic)
 
@@ -55,7 +56,7 @@ Aşağıdaki kod örneği `Is` `IsNot` aynı karşılaştırmayı başarmak içi
 
 ## <a name="use-typeof-operator-with-isnot-operator"></a>IsNot işleci ile TypeOf işleci kullanın
 
-Visual Basic 14 ' ten başlayarak, bir `TypeOf` `IsNot` nesnenin veri türüyle uyumlu olup olmadığını test etmek için işlecini işleciyle kullanabilirsiniz *not* . Örnek:
+Visual Basic 14 ' ten başlayarak, bir `TypeOf` `IsNot` nesnenin veri türüyle uyumlu olup olmadığını test etmek için işlecini işleciyle kullanabilirsiniz  . Örneğin:
 
 ```vb
 If TypeOf sender IsNot Button Then

@@ -1,5 +1,6 @@
 ---
-title: DataMemberFieldEditor Sınıfı
+description: 'Daha fazla bilgi edinin: DataMemberFieldEditor Class'
+title: DataMemberFieldEditor sınıfı
 ms.date: 03/30/2017
 ms.technology: dotnet-winforms
 api_name:
@@ -11,35 +12,35 @@ api_type:
 ms.assetid: 27ae39b7-3491-40f9-9b33-2de798f123ad
 topic_type:
 - apiref
-ms.openlocfilehash: 8539cea6697cee5b008be18192d9dee52842d8bd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a0ee47e91480154d8e001ed5ace7cfc13a61bbaf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79156044"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99664788"
 ---
-# <a name="datamemberfieldeditor-class"></a>DataMemberFieldEditor Sınıfı
+# <a name="datamemberfieldeditor-class"></a>DataMemberFieldEditor sınıfı
 
-Değer kaynağını seçmek için nesnenin `DataSource` tüm özelliklerini listeleyerek veriye bağlı nesnelerin özelliklerini düzenlemek için kullanıcı arabirimi sağlar.  
+, `DataSource` Öğesinden değer kaynağını seçmek üzere nesnenin tüm özelliklerini listeleyerek veri bağlantılı nesnelerin özelliklerini düzenlemenin Kullanıcı arabirimini sağlar.  
   
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
   
 ```csharp
 internal class DataMemberFieldEditor : UITypeEditor
 ```
 
 > [!WARNING]
-> Sınıf `DataMemberFieldEditor` dahilidir ve doğrudan kodunuzda kullanılmamalıdır.
+> `DataMemberFieldEditor`Sınıfı dahili ve doğrudan kodunuzda kullanılması amaçlıyordu.
 >
-> Microsoft, hiçbir koşulda bir üretim uygulamasında bu sınıfın kullanımını desteklemez.
+> Microsoft, bu sınıfın herhangi bir koşulda bir üretim uygulamasında kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
 **Ad alanı:**<xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
   
-**Montaj:** System.Design (System.Design.dll içinde)  
+**Bütünleştirilmiş kod:** System. Design (System.Design.dll)  
   
-**.NET Framework sürümleri:** 2.0'dan beri mevcuttur.  
+**.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

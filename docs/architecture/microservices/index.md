@@ -1,17 +1,17 @@
 ---
 title: .NET mikro hizmetleri. Kapsayıcılı .NET Uygulamaları Mimarisi
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Mikro hizmetler modüler ve bağımsız olarak dağıtılabilir hizmetlerdir. Docker Kapsayıcıları (Linux ve Windows için), bir hizmet ve bağımlılıklarını tek bir birim halinde paketleyerek dağıtım ve test etmeyi basitleştirir. Bu, daha sonra yalıtılmış bir ortamda çalıştırılır.
-ms.date: 01/13/2021
-ms.openlocfilehash: a9017d2e9acbcbb861a35f0187632dc90c52e171
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.date: 02/02/2021
+ms.openlocfilehash: e9862445414dbe0bf9a1c5d36d790b57710028f0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188380"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665320"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET Mikro Hizmetleri: Kapsayıcılı .NET Uygulamaları Mimarisi
 
-![Kitap kapağı](./media/cover-small.png)
+![Kitap kapağı](./media/cover-large.png)
 
 **Sürüm v 5.0** -ASP.NET Core 5,0 ' ye güncelleştirildi
 
@@ -68,9 +68,9 @@ Ayrıca, yeni ve modern dağıtılmış uygulamalar için seçilecek yaklaşıma
 
 ### <a name="how-to-use-this-guide"></a>Bu kılavuz nasıl kullanılır?
 
-Bu kılavuzun ilk bölümü Docker kapsayıcılarını tanıtır, .NET Core ve .NET Framework bir geliştirme çerçevesi olarak arasından nasıl seçim yapılacağını açıklar ve mikro hizmetlere genel bir bakış sağlar. Bu içerik, genel bakış isteyen, ancak kod uygulama ayrıntılarına odaklanmayı gerektirmeyen mimarlar ve teknik karar mekanizmaları içindir.
+Bu kılavuzun ilk bölümü Docker kapsayıcılarını tanıtır, .NET 5 ve .NET Framework bir geliştirme çerçevesi olarak arasından nasıl seçim yapılacağını açıklar ve mikro hizmetlere genel bir bakış sağlar. Bu içerik, genel bakış isteyen, ancak kod uygulama ayrıntılarına odaklanmayı gerektirmeyen mimarlar ve teknik karar mekanizmaları içindir.
 
-Kılavuzun ikinci bölümü, [Docker tabanlı uygulamalar Için geliştirme süreci](./docker-application-development-process/index.md) bölümüne başlar. .NET Core ve Docker kullanarak uygulama uygulamaya yönelik geliştirme ve mikro hizmet düzenlerine odaklanır. Bu bölüm, kod ve düzen ve uygulama ayrıntılarına odaklanmak isteyen geliştiricilere ve mimarlara yönelik en çok ilgi çekici olacaktır.
+Kılavuzun ikinci bölümü, [Docker tabanlı uygulamalar Için geliştirme süreci](./docker-application-development-process/index.md) bölümüne başlar. .NET ve Docker kullanarak uygulama uygulamaya yönelik geliştirme ve mikro hizmet düzenlerine odaklanır. Bu bölüm, kod ve düzen ve uygulama ayrıntılarına odaklanmak isteyen geliştiricilere ve mimarlara yönelik en çok ilgi çekici olacaktır.
 
 ## <a name="related-microservice-and-container-based-reference-application-eshoponcontainers"></a>İlgili mikro hizmet ve kapsayıcı tabanlı başvuru uygulaması: eShopOnContainers
 
@@ -162,7 +162,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Telif hakkı © 2020 Microsoft Corporation
+Telif hakkı © 2021 Microsoft Corporation
 
 All rights reserved. Bu kitabın içeriğinin herhangi bir bölümü herhangi bir biçimde veya herhangi bir şekilde veya başka bir şekilde herhangi bir şekilde çoğaltılamaz veya herhangi bir şekilde gönderilebilir.
 

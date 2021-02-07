@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: If Işleci (Visual Basic)'
 title: If İşleci
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - conditional operator [Visual Basic]
 - If Operator [Visual Basic]
 ms.assetid: dd56c9df-7cd4-442c-9ba6-20c70ee44c8f
-ms.openlocfilehash: 28fb2afb2c4cf78ffbbb028145de647a8dc512ed
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3b25ab4b6c5f0d2608644adb6e35ff4ad5128f42
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84371109"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665880"
 ---
 # <a name="if-operator-visual-basic"></a>If İşleci (Visual Basic)
 
 İki değerden birini koşullu olarak döndürmek için kısa devre değerlendirmesi kullanır. `If`İşleci üç bağımsız değişkenle veya iki bağımsız değişkenle çağrılabilir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```vb
 If( [argument1,] argument2, argument3 )
@@ -34,11 +35,11 @@ If( [argument1,] argument2, argument3 )
 
 ### <a name="parts"></a>Bölümler
 
-|Terim|Tanım|
+|Süre|Tanım|
 |---|---|
 |`argument1`|Gereklidir. `Boolean`. Değerlendirmek ve döndürmek için diğer bağımsız değişkenlerden hangisinin verileceğini belirler.|
 |`argument2`|Gereklidir. `Object`. , Olarak değerlendirilirse, değerlendirilir ve döndürülür `argument1` `True` .|
-|`argument3`|Gereklidir. `Object`. Değer olarak değerlendirilen ve değeri `argument1` `False` `argument1` Nothing olarak değerlendirilen [null yapılabilir](../../programming-guide/language-features/data-types/nullable-value-types.md) bir değişken ise, değerlendirilir `Boolean` [Nothing](../nothing.md)ve döndürülür.|
+|`argument3`|Gereklidir. `Object`. Değer olarak değerlendirilen ve değeri `argument1` `False` `argument1` Nothing olarak değerlendirilen [null yapılabilir](../../programming-guide/language-features/data-types/nullable-value-types.md) bir değişken ise, değerlendirilir `Boolean` [](../nothing.md)ve döndürülür.|
 
 `If`Üç bağımsız değişkenle çağrılan bir operatör, `IIf` kısa devre değerlendirmesi kullanması dışında bir işlev gibi çalışır. Bir `IIf` işlev her zaman bağımsız değişkenlerini değerlendirir, ancak `If` üç bağımsız değişkeni olan bir operatör bunlardan yalnızca ikisini değerlendirir. İlk `If` bağımsız değişken değerlendirilir ve sonuç değer olarak atama yapılır `Boolean` `True` `False` . Değer ise `True` , `argument2` değerlendirilir ve değeri döndürülür, ancak `argument3` değerlendirilmez. `Boolean`İfadenin değeri ise `False` , `argument3` değerlendirilir ve değeri döndürülür, ancak `argument2` değerlendirilmez. Aşağıdaki örneklerde, `If` üç bağımsız değişkenin kullanıldığı zaman kullanımı gösterilmektedir:
 
@@ -54,7 +55,7 @@ Aşağıdaki örnek, kısa devre değerlendirmesinin değerini gösterir. Örnek
 
 ### <a name="parts"></a>Bölümler
 
-|Terim|Tanım|
+|Süre|Tanım|
 |---|---|
 |`argument2`|Gereklidir. `Object`. Başvuru veya null yapılabilir bir değer türü olmalıdır. ' Den başka bir şeyi değerlendirirken değerlendirilir ve döndürülür `Nothing` .|
 |`argument3`|Gereklidir. `Object`. , Olarak değerlendirilirse, değerlendirilir ve döndürülür `argument2` `Nothing` .|

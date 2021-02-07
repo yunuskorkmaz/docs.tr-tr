@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: LIKE Işleci (Visual Basic)'
 title: Like İşleci
 ms.date: 07/20/2015
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - data [Visual Basic], string comparisons
 - string comparison [Visual Basic], Like operators
 ms.assetid: 966283ec-80e2-4294-baa8-c75baff804f9
-ms.openlocfilehash: 49dfe5cf5dbcf8dc6f79f569a92e36aa81806913
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: f1be174010b7acae5bface4fc0a2d0e606a90fca
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866770"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665594"
 ---
 # <a name="like-operator-visual-basic"></a>Like İşleci (Visual Basic)
 
@@ -36,7 +37,7 @@ Bir dizeyi bir düzene göre karşılaştırır.
 > [!IMPORTANT]
 > `Like`İşleç Şu anda .NET Core ve .NET Standard projelerinde desteklenmez.
 
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 result = string Like pattern  
@@ -111,7 +112,7 @@ result = string Like pattern
   
 ## <a name="overloading"></a>Aşırı Yükleme  
 
- `Like`İşleç *aşırı*yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../programming-guide/language-features/procedures/operator-procedures.md).  
+ `Like`İşleç *aşırı* yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
 

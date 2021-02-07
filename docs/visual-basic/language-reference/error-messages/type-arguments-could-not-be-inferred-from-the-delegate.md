@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: BC36564: tür bağımsız değişkenleri temsilciden çıkarsanamadı'
 title: Tür bağımsız değişkenleri temsilciden gösterilemedi
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36564
 ms.assetid: 21312807-e1cd-4ac1-ae1c-c28a9c25164d
-ms.openlocfilehash: f7937a34ab425da684f892250884d21e020e4c57
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 1a83ee64df4523cee87d0d677ddafaeadfe5543d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92161250"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666270"
 ---
 # <a name="bc36564-type-arguments-could-not-be-inferred-from-the-delegate"></a>BC36564: tür bağımsız değişkenleri temsilciden çıkarsanamadı
 

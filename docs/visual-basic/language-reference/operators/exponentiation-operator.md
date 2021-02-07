@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ^ Işleci (Visual Basic)'
 title: ^ İşleci
 ms.date: 07/20/2015
 f1_keywords:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 - powers
 - arithmetic operators [Visual Basic], exponentiation
 ms.assetid: d89a1ca8-83da-4784-a87b-a9d7dceb3f62
-ms.openlocfilehash: e139becf74ae367266a23513e18d0bdbdd24cdea
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9333eec7236c363417be7323b673231509da8f1f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84371394"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666049"
 ---
 # <a name="-operator-visual-basic"></a>^ İşleci (Visual Basic)
 
 Bir sayıyı, başka bir sayının kuvvetine yükseltir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```vb
 number ^ exponent
@@ -56,7 +57,7 @@ Değeri `exponent` kesirli, negatif veya her ikisi olabilir.
 Tek bir ifadede birden fazla üs gerçekleştirildiğinde, `^` işleç soldan sağa ile karşılaşıldığından değerlendirilir.
 
 > [!NOTE]
-> `^`İşleç *aşırı*yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../programming-guide/language-features/procedures/operator-procedures.md).
+> `^`İşleç *aşırı* yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../programming-guide/language-features/procedures/operator-procedures.md).
 
 ## <a name="example"></a>Örnek
 
@@ -66,28 +67,28 @@ Aşağıdaki örnek, `^` bir sayının üssünü artırmak için işlecini kulla
 
 Yukarıdaki örnek aşağıdaki sonuçları üretir:
 
-`exp1`4 (2 kare) olarak ayarlanır.
+`exp1` 4 (2 kare) olarak ayarlanır.
 
-`exp2`19683 olarak ayarlanır (3 odadır, daha sonra bu değer bir değeri).
+`exp2` 19683 olarak ayarlanır (3 odadır, daha sonra bu değer bir değeri).
 
-`exp3`-125 (-5 odaya) olarak ayarlanır.
+`exp3` -125 (-5 odaya) olarak ayarlanır.
 
-`exp4`625 (-5 dördüncü güce) olarak ayarlanır.
+`exp4` 625 (-5 dördüncü güce) olarak ayarlanır.
 
-`exp5`2 olarak ayarlanır (8 ' in küp kökü).
+`exp5` 2 olarak ayarlanır (8 ' in küp kökü).
 
-`exp6`0,5 olarak ayarlanır (1,0, 8 ' in küp köküne bölünür).
+`exp6` 0,5 olarak ayarlanır (1,0, 8 ' in küp köküne bölünür).
 
-Önceki örnekteki ifadelerde parantezlerin önemini dikkate alın. *İşleç önceliği*nedeniyle, Visual Basic normalde `^` işleci diğerlerinden önce, hatta birli `–` işleçle uygular. `exp4`Ve `exp6` parantez olmadan hesaplanmışsa, bunlar aşağıdaki sonuçları üretti:
+Önceki örnekteki ifadelerde parantezlerin önemini dikkate alın. *İşleç önceliği* nedeniyle, Visual Basic normalde `^` işleci diğerlerinden önce, hatta birli `–` işleçle uygular. `exp4`Ve `exp6` parantez olmadan hesaplanmışsa, bunlar aşağıdaki sonuçları üretti:
 
-`exp4 = -5 ^ 4`,-625 ile sonuçlanabilecek – (5 dördüncü üssü) olarak hesaplanır.
+`exp4 = -5 ^ 4` ,-625 ile sonuçlanabilecek – (5 dördüncü üssü) olarak hesaplanır.
 
-`exp6 = 8 ^ -1.0 / 3.0`, 0.041666666666666666666666666666667 ile sonuçlanarak 3,0 ile ayrılmış olan (– 1 güç veya 0,125) olarak hesaplanır.
+`exp6 = 8 ^ -1.0 / 3.0` , 0.041666666666666666666666666666667 ile sonuçlanarak 3,0 ile ayrılmış olan (– 1 güç veya 0,125) olarak hesaplanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [^ = İşleci](exponentiation-assignment-operator.md)
-- [Aritmetik İşleçler](arithmetic-operators.md)
+- [Aritmetik Işleçler](arithmetic-operators.md)
 - [Visual Basic'de İşleç Önceliği](operator-precedence.md)
 - [İşlevselliğe Göre Listelenmiş İşleçler](operators-listed-by-functionality.md)
 - [Visual Basic'de Aritmetik İşleçler](../../programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

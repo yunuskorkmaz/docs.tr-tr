@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi <transport> edinin: <netPeerTcpBinding>'
 title: <transport> / <netPeerTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: c44d86d2-1160-44d7-9c7a-297b12eccc7f
-ms.openlocfilehash: 5df47b1bfc149b524fc9b90eacffa832817f653c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e93885234577e4f3c7a99be66e4798d33ffb5893
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172872"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99664580"
 ---
 # <a name="transport-of-netpeertcpbinding"></a>\<transport> / \<netPeerTcpBinding>
 

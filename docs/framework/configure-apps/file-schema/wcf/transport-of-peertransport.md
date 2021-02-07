@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi <transport> edinin: <peerTransport>'
 title: <transport> / <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
-ms.openlocfilehash: 7328d67c4649010dce3e1c866238d1e0067e4990
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ba3405c5dfadb513f92ebd537409a3f7b12fa291
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91157076"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99664515"
 ---
 # <a name="transport-of-peertransport"></a>\<transport> / \<peerTransport>
 
@@ -49,7 +50,7 @@ Bu bağlama ile yapılandırılan eşler tarafından gönderilen güvenli iletil
   
 ### <a name="child-elements"></a>Alt Öğeler  
 
- Hiçbiri  
+ Yok  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   

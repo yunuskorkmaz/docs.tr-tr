@@ -1,4 +1,5 @@
 ---
+description: ': GetXmlNamespace Işleci hakkında daha fazla bilgi edinin (Visual Basic)'
 title: GetXmlNamespace İşleci
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - GetXmlNamespace operator [Visual Basic]
 - GetXmlNamespace keyword [Visual Basic]
 ms.assetid: d0d28cfd-0755-4896-ae0b-4981aa35517c
-ms.openlocfilehash: 660474c1193076755889fd885c1b78bec78f0a2c
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 704ac22493a0d6ce1255d171ae3b418313b74f09
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873470"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665919"
 ---
 # <a name="getxmlnamespace-operator-visual-basic"></a>GetXmlNamespace İşleci (Visual Basic)
 
 <xref:System.Xml.Linq.XNamespace>BELIRTILEN XML ad alanı ön ekine karşılık gelen nesneyi alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 GetXmlNamespace(xmlNamespacePrefix)  

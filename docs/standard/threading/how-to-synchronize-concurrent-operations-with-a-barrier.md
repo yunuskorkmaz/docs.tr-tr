@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: nasıl yapılır: eş zamanlı Işlemleri bir engel ile senkronize etme'
 title: 'Nasıl yapılır: Eş Zamanlı Görevleri bir Engelle Eşitleme'
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - Barrier, how to use
 ms.assetid: e1a253ff-e0fb-4df8-95ff-d01a90d4cb19
-ms.openlocfilehash: dc0955ba6194dd936da19c634ada797d6cbd3720
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7cef2598171f31ddb5685ff8f1734ed705a4752b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95716479"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666764"
 ---
 # <a name="how-to-synchronize-concurrent-operations-with-a-barrier"></a>Nasıl yapılır: Eş Zamanlı Görevleri bir Engelle Eşitleme
 

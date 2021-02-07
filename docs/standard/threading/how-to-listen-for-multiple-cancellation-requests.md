@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: nasıl yapılır: birden çok Iptal Isteğini dinleme'
 title: 'Nasıl yapılır: Birden Çok İptal İsteğini Dinleme'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - cancellation tokens, joining
 - LinkedTokenSource, how to
 ms.assetid: 6f4f3804-2ed7-41b4-a97a-6e32b93f6e05
-ms.openlocfilehash: e5ec32d486dd5eafc8c456c5a4b0b3297f043499
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7b04a1451338544a35dbae22bbd2d1848b50c69e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728530"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666790"
 ---
 # <a name="how-to-listen-for-multiple-cancellation-requests"></a>Nasıl yapılır: Birden Çok İptal İsteğini Dinleme
 

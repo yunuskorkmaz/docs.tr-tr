@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Controlbuilderyakalayıcısı sınıfı'
 title: ControlBuilderInterceptor sınıfı
 ms.date: 08/11/2020
 api_name:
@@ -9,12 +10,12 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: 0cd7409deb9cb84783cfa70600999fa4b2a2d2e2
-ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
+ms.openlocfilehash: ac32709bf814d17ac2a02222d4d92edc6cc93337
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88187992"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99664827"
 ---
 # <a name="controlbuilderinterceptor-class"></a>ControlBuilderInterceptor sınıfı
 

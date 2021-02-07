@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi: nasıl yapılır: alt düzey eşitleme için SpinLock kullanma'
 title: 'Nasıl yapılır: alt düzey eşitleme için SpinLock kullanma'
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - SpinLock, how to use
 ms.assetid: a9ed3e4e-4f29-4207-b730-ed0a51ecbc19
-ms.openlocfilehash: 148ef5e9d5c570ef04bc6e716a884db5e688d91a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 854d34b94d04ea4817b7818193324b8dc4d0a44a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826397"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666751"
 ---
 # <a name="how-to-use-spinlock-for-low-level-synchronization"></a>Nasıl yapılır: alt düzey eşitleme için SpinLock kullanma
 

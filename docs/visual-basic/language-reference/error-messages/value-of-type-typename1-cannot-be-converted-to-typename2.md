@@ -1,4 +1,5 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: BC30955: ' ' türünün değeri <typename1> ' olarak dönüştürülemez<typename2>"
 title: "'<typename1>' türünün değeri '<typename2>' olarak değiştirilemez"
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
-ms.openlocfilehash: a4aab83fd5695633a660eab00a5032ffbe45f326
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: e03201d5dbb84faf06b7acbe42fe6b3bb4272ab9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92161328"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666257"
 ---
 # <a name="bc30955-value-of-type-typename1-cannot-be-converted-to-typename2"></a>BC30955: ' ' türünün değeri \<typename1> ' ' olarak dönüştürülemez \<typename2>
 

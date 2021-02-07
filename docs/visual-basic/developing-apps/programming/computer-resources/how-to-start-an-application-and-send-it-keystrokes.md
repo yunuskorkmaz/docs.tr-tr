@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: uygulama başlatma ve bu tuşlara gönderme (Visual Basic)'
 title: 'Nasıl yapılır: uygulama başlatma ve tuş vuruşu gönderme-Visual Basic'
 ms.date: 10/23/2019
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - processes, starting and sending keystrokes
 - SendKeys.SendWait examples
 ms.assetid: f1303184-fce4-44fb-88b4-aac5f42d5d77
-ms.openlocfilehash: 033999c07bb5839a264122b2ca330916bdf844b8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea54b940b528e0833d9c7a6cbef67f65a4cb4f6b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "72919387"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666465"
 ---
 # <a name="how-to-start-an-application-and-send-it-keystrokes-visual-basic"></a>Nasıl yapılır: uygulama başlatma ve tuş vuruşu gönderme (Visual Basic)
 
@@ -24,11 +25,11 @@ Bu örnek, <xref:Microsoft.VisualBasic.Interaction.Shell%2A> Notepad uygulaması
 
 ## <a name="robust-programming"></a>Güçlü programlama
 
-İstenen <xref:System.ArgumentException> işlem tanımlayıcısına sahip bir uygulama bulunamazsa bir özel durum oluşur.  
+<xref:System.ArgumentException>İstenen işlem tanımlayıcısına sahip bir uygulama bulunamazsa bir özel durum oluşur.  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği
 
-`Shell` İşleve yapılan çağrı için tam güven (<xref:System.Security.SecurityException> sınıf) gerekir.
+İşleve yapılan çağrı için `Shell` tam güven ( <xref:System.Security.SecurityException> sınıf) gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
