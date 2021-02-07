@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: aşırı yüklemeler (Visual Basic)'
 title: Aşırı Yüklemeler
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - signature, hiding by
 ms.assetid: 0c6820b8-25b2-4664-bc59-5ca93c99c042
-ms.openlocfilehash: bd0931cab520f8580c0d7473a44e350752e287bb
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7f0b440b537500595e465d8aabc7724671f3ae95
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84392112"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99730518"
 ---
 # <a name="overloads-visual-basic"></a>Aşırı Yüklemeler (Visual Basic)
 
@@ -23,7 +24,7 @@ Bir özellik veya yordamın, aynı ada sahip bir veya daha fazla var olan özell
 
 ## <a name="remarks"></a>Açıklamalar
 
-*Aşırı yükleme* , aynı kapsamda verilen bir özellik veya yordam adı için birden fazla tanım sağlama uygulamasıdır. Farklı imzaya sahip bir özellik veya yordamın yeniden bildirilmesi bazen *imzaya göre gizleme*olarak adlandırılır.
+*Aşırı yükleme* , aynı kapsamda verilen bir özellik veya yordam adı için birden fazla tanım sağlama uygulamasıdır. Farklı imzaya sahip bir özellik veya yordamın yeniden bildirilmesi bazen *imzaya göre gizleme* olarak adlandırılır.
 
 ## <a name="rules"></a>Kurallar
 
@@ -61,7 +62,7 @@ Bir özellik veya yordamın, aynı ada sahip bir veya daha fazla var olan özell
 
 - **İsteğe bağlı değiştirici.** `Overloads`Aynı sınıfta birden fazla aşırı yüklenmiş özellik veya yordam tanımlarken değiştirici kullanmanız gerekmez. Ancak, `Overloads` bildirimlerden birinde kullanıyorsanız, bunların tümünde kullanmanız gerekir.
 
-- **Gölgeleme ve aşırı yükleme.** `Overloads`, bir temel sınıfta varolan bir üyeyi veya aşırı yüklenmiş üyelerin gölgesini almak için de kullanılabilir. `Overloads`Bu şekilde kullandığınızda, temel sınıf üyesiyle aynı ada ve aynı parametre listesine sahip özelliği veya yöntemi bildirirsiniz ve `Shadows` anahtar sözcüğünü sağlamamalısınız.
+- **Gölgeleme ve aşırı yükleme.** `Overloads` , bir temel sınıfta varolan bir üyeyi veya aşırı yüklenmiş üyelerin gölgesini almak için de kullanılabilir. `Overloads`Bu şekilde kullandığınızda, temel sınıf üyesiyle aynı ada ve aynı parametre listesine sahip özelliği veya yöntemi bildirirsiniz ve `Shadows` anahtar sözcüğünü sağlamamalısınız.
 
 Kullanırsanız `Overrides` , derleyici `Overloads` kitaplık API 'Lerinizin C# ile daha kolay çalışmasını sağlamak için örtülü olarak ekler.
 

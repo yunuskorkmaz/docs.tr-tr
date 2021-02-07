@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: My.Application.Info nesnesi'
 title: My.Application.Info Nesnesi
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Application.Info object
 - My.Application.AssemblyInfo object
 ms.assetid: 2f4782ed-3da2-4d88-b341-0c6f480fb7bb
-ms.openlocfilehash: dfb2dc156d2fd773a9e0403355c60f7eb2a6692e
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 40e1c44c448488a631241c6f00fd092130294755
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875392"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99730349"
 ---
 # <a name="myapplicationinfo-object"></a>My.Application.Info Nesnesi
 

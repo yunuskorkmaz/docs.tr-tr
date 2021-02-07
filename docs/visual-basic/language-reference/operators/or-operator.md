@@ -1,4 +1,5 @@
 ---
+description: ': Or Işleci hakkında daha fazla bilgi edinin (Visual Basic)'
 title: Or İşleci
 ms.date: 07/20/2015
 f1_keywords:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 - logical disjunction
 - disjunction operator [Visual Basic]
 ms.assetid: 41ed6905-bf3d-468a-9e3b-03c10d461891
-ms.openlocfilehash: f6cfd1073ada42aa2db8be9b14c81319bc0db294
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: dfc50af2298c162707976e4b2eda9e9536aa64bc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874764"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99730336"
 ---
 # <a name="or-operator-visual-basic"></a>Or İşleci (Visual Basic)
 
 İki ifadeye mantıksal bir ayırıcı `Boolean` ya da iki sayısal ifadeye bit düzeyinde ayırıcı uygular.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 result = expression1 Or expression2  
@@ -55,7 +56,7 @@ result = expression1 Or expression2
 |`False`|`False`|`False`|  
   
 > [!NOTE]
-> Bir `Boolean` karşılaştırmada, `Or` işleç her zaman her iki ifadeyi değerlendirir ve bu da yordam çağrıları yapmayı içerebilir. [OrElse işleci](orelse-operator.md) *kısa*devre uygular, yani `expression1` ise, `True` `expression2` hesaplanmaz.  
+> Bir `Boolean` karşılaştırmada, `Or` işleç her zaman her iki ifadeyi değerlendirir ve bu da yordam çağrıları yapmayı içerebilir. [OrElse işleci](orelse-operator.md) *kısa* devre uygular, yani `expression1` ise, `True` `expression2` hesaplanmaz.  
   
  Bit düzeyinde işlemler için, `Or` işleç iki sayısal ifadede aynı şekilde konumlandırılmış bitlerin bit düzeyinde karşılaştırmasını gerçekleştirir ve karşılık gelen biti `result` aşağıdaki tabloya göre ayarlar.  
   
@@ -77,7 +78,7 @@ result = expression1 Or expression2
   
 ## <a name="overloading"></a>Aşırı Yükleme  
 
- `Or`İşleç *aşırı*yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../programming-guide/language-features/procedures/operator-procedures.md).  
+ `Or`İşleç *aşırı* yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
 

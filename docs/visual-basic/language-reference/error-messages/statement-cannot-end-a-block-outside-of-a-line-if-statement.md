@@ -1,4 +1,5 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: BC32005: deyimin bir satır ' If ' ifadesinin dışında bir blok sonlandırılamıyor"
 title: Deyim, bir satır 'If' deyimi dışında blok sona erdiremez
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32005
 ms.assetid: 4039f51b-e0ee-4789-a89b-45d06de06b5d
-ms.openlocfilehash: 4fd7577accd0b312ee1e3d2d990d256514d5f5f6
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: afe856b2c2ea3fa1db029d35c5b876f5d67da411
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92161341"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731166"
 ---
 # <a name="bc32005-statement-cannot-end-a-block-outside-of-a-line-if-statement"></a>BC32005: deyimin bir satır ' If ' ifadesinin dışında bir blok sonlandırılamıyor
 

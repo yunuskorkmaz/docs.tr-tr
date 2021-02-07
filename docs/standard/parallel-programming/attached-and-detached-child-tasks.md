@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ekli ve ayrılmış alt görevler'
 title: Eklenen ve Ayrılan Alt Görevler
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, child tasks
 ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
-ms.openlocfilehash: 3b9bc2a854dfdee724c2059b3298b67da799284b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1ee69e1ed8314d976d0d17d7db15f9bcd994970a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734302"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731545"
 ---
 # <a name="attached-and-detached-child-tasks"></a>Eklenen ve Ayrılan Alt Görevler
 
@@ -22,9 +23,9 @@ Bir *alt görev* (veya *iç içe görev*), <xref:System.Threading.Tasks.Task?dis
   
 |Kategori|Ayrılmış alt görevler|Bağlı alt görevler|  
 |--------------|--------------------------|--------------------------|  
-|Üst öğe, alt görevlerin tamamlanmasını bekler.|Hayır|Evet|  
-|Üst öğe, alt görevler tarafından oluşturulan özel durumları yayar.|Hayır|Evet|  
-|Üst öğenin durumu, alt öğenin durumuna bağlıdır.|Hayır|Evet|  
+|Üst öğe, alt görevlerin tamamlanmasını bekler.|Hayır|Yes|  
+|Üst öğe, alt görevler tarafından oluşturulan özel durumları yayar.|Hayır|Yes|  
+|Üst öğenin durumu, alt öğenin durumuna bağlıdır.|Hayır|Yes|  
   
  Çoğu senaryoda, diğer görevlerle ilişkileri daha az karmaşık olduğundan, ayrılmış alt görevleri kullanmanızı öneririz. Bu, üst görevler içinde oluşturulan görevlerin varsayılan olarak ayrılmasının ve <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> bağlı bir alt görev oluşturma seçeneğini açıkça belirtmeniz gerekir.  
   

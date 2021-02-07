@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: <add> webRequestModules için öğesi (ağ ayarları)'
 title: webRequestModules için <add> Öğesi (Ağ Ayarları)
 ms.date: 03/30/2017
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - add element, webRequestModules
 - <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-ms.openlocfilehash: 8d792b967d967540469dca7c090e0f905ecb2e6b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1edb63a1e1095bb4b3c3d749fd389ffaad5ddf9a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201765"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729906"
 ---
 # <a name="add-element-for-webrequestmodules-network-settings"></a>webRequestModules için \<add> Öğesi (Ağ Ayarları)
 
@@ -52,7 +53,7 @@ Uygulamaya özel bir Web isteği modülü ekler.
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
-|**Dosyalarında**|**Açıklama**|  
+|**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
 |[webRequestModules](webrequestmodules-element-network-settings.md)|Ağ konaklarından bilgi istemek için kullanılacak modülleri belirtir.|  
   

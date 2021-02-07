@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: model-görünüm-görünüm modeliyle taşınabilir sınıf kitaplığı kullanma'
 title: Model-Görünüm-Görünüm Model ile Taşınabilir Sınıf Kitaplığı Kullanma
 ms.date: 07/18/2018
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Portable Class Library [.NET Framework], and MVVM
 - MVVM, and Portable Class Library
 ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
-ms.openlocfilehash: e8bce469fd09de02ef6ab30e21ae20a9b9f71325
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4eea099aaa515c2b7d9874fd6c6d5c4132c5e7a2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96259271"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729686"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Model-Görünüm-Görünüm Model ile Taşınabilir Sınıf Kitaplığı Kullanma
 
@@ -59,7 +60,7 @@ Model-görünüm-görünüm modeli (MVVM) modelini uygulamak ve derlemeleri bird
 
  Modeli derleyip, model projelerini görüntülediğinizde, görünümü içeren uygulamadaki bu derlemelere başvurduktan sonra. Görünüm yalnızca görünüm modeliyle etkileşime geçtiğinde, yalnızca görünüm modelini içeren derlemeye başvurmanız gerekir.
 
-### <a name="model"></a>Model
+### <a name="model"></a>Modelleme
 
  Aşağıdaki örnek, taşınabilir bir sınıf kitaplığı projesinde bulunabilecek basitleştirilmiş bir model sınıfını göstermektedir.
 
@@ -88,7 +89,7 @@ Model-görünüm-görünüm modeli (MVVM) modelini uygulamak ve derlemeleri bird
  [!code-csharp[PortableClassLibraryMVVM#5](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainpageviewmodel.cs#5)]
  [!code-vb[PortableClassLibraryMVVM#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customerviewmodel.vb#5)]  
   
-### <a name="view"></a>Görüntüle  
+### <a name="view"></a>Görünüm  
 
  .NET Framework 4,5 uygulaması, Windows 8. x Mağazası uygulaması, Silverlight tabanlı uygulama veya Windows Phone 7,5 uygulaması, modeli içeren derlemeye başvurabilirsiniz ve model projelerini görüntüleyin.  Daha sonra Görünüm modeliyle etkileşim kuran bir görünüm oluşturursunuz. Aşağıdaki örnekte, görünüm modelinden verileri alan ve güncelleştiren bir Basitleştirilmiş Windows Presentation Foundation (WPF) uygulaması gösterilmektedir. Silverlight, Windows Phone veya Windows 8. x Mağaza uygulamalarında benzer görünümler oluşturabilirsiniz.  
   

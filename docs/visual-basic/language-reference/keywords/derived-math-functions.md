@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: türetilmiş matematik Işlevleri (Visual Basic)'
 title: Türetilen Matematik İşlevleri
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - degrees
 - arccosine function
 ms.assetid: 63e449d8-9444-44fb-8db1-6d9cf346e2aa
-ms.openlocfilehash: f84b1ef18ef2a924bb2e47da85ecbb51f982873a
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: daaed1312f08cecc0c68af0e36d574424fc526a1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869023"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99730778"
 ---
 # <a name="derived-math-functions-visual-basic"></a>Türetilen Matematik İşlevleri (Visual Basic)
 
@@ -57,4 +58,4 @@ Aşağıdaki tabloda, nesnenin iç matematik işlevlerinden türetilebilecek iç
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Matematik İşlevleri](../functions/math-functions.md)
+- [Matematik Işlevleri](../functions/math-functions.md)

@@ -1,4 +1,5 @@
 ---
+description: "Daha fazla bilgi edinin: PLıNQ 'te birleştirme seçenekleri"
 title: PLINQ'te Birleştirme Seçenekleri
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
-ms.openlocfilehash: e6212abbc0d9f64765b03c3dd2e9132e9ca96ab7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c58b0134ef6c469b5f13a1d6c43a850bb586d360
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730623"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731467"
 ---
 # <a name="merge-options-in-plinq"></a>PLINQ'te Birleştirme Seçenekleri
 

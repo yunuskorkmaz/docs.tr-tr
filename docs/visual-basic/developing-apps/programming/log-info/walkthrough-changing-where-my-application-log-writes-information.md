@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: Izlenecek yol: My. Application. log bilgi yazma bilgileri (Visual Basic)'
 title: My.Application.Log Günlüğünün Bilgileri Yazdığı Yeri Değiştirme
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-ms.openlocfilehash: f9e45cdf4507840f62e32678f4c0a7be2c0be054
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: aa4e1b8ce33e2afd8dd51c68340feb3e85eb8966
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398298"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731428"
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>İzlenecek Yol: My.Application.Log Günlüğünün Bilgileri Yazdığı Yeri Değiştirme (Visual Basic)
 
@@ -24,11 +25,11 @@ ms.locfileid: "84398298"
 
 ### <a name="to-add-listeners"></a>Dinleyicileri eklemek için
 
-1. **Çözüm Gezgini** içinde App. config öğesine sağ tıklayın ve **Aç**' ı seçin.
+1. **Çözüm Gezgini** app.config sağ tıklayın ve **Aç**' ı seçin.
 
-     \-veya
+     \- veya
 
-     App. config dosyası yoksa:
+     app.config dosya yoksa:
 
     1. **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.
 
@@ -88,7 +89,7 @@ ms.locfileid: "84398298"
          initializeData="true" />
     ```
 
-7. App. config dosyasının içeriği aşağıdaki XML 'e benzer olmalıdır:
+7. app.config dosyasının içeriği aşağıdaki XML 'e benzer olmalıdır:
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>

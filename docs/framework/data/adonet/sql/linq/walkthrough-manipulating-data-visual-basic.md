@@ -1,15 +1,16 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Izlenecek yol: verileri düzenleme (Visual Basic)'
 title: 'İzlenecek yol: Verileri Düzenleme (Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-ms.openlocfilehash: dbf18273e69ff0977f5d16ff179b8659865ef696
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 22bef61c294a92984446402063bf14b06f5b2b2d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164057"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729529"
 ---
 # <a name="walkthrough-manipulating-data-visual-basic"></a>İzlenecek yol: Verileri Düzenleme (Visual Basic)
 
@@ -19,7 +20,7 @@ Bu izlenecek yol [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.
   
  Bu izlenecek yol Visual Basic geliştirme ayarları kullanılarak yazılmıştır.  
   
-## <a name="prerequisites"></a>Ön koşullar  
+## <a name="prerequisites"></a>Önkoşullar  
 
  Bu izlenecek yol aşağıdakileri gerektirir:  
   
@@ -65,7 +66,7 @@ Bu izlenecek yol [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.
   
 3. **Şablonlar** bölmesinde **konsol uygulaması**' na tıklayın.  
   
-4. **Ad** kutusuna **Linqdatalationtionapp**yazın.  
+4. **Ad** kutusuna **Linqdatalationtionapp** yazın.  
   
 5. **Tamam**'a tıklayın.  
   
@@ -81,7 +82,7 @@ Bu izlenecek yol [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.
   
      Derleme projeye eklenir.  
   
-3. Kod Düzenleyicisi 'nde, aşağıdaki yönergeleri **Module1**öğesine ekleyin:  
+3. Kod Düzenleyicisi 'nde, aşağıdaki yönergeleri **Module1** öğesine ekleyin:  
   
      [!code-vb[DLinqWalk3VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#1)]  
   

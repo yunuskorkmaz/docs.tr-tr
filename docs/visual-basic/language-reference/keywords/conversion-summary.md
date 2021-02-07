@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: dönüştürme özeti (Visual Basic)'
 title: Dönüştürme Özeti
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - conversions [Visual Basic], Visual Basic
 - type conversion [Visual Basic], keywords
 ms.assetid: ae2c79a7-2d62-4fbe-8585-14360d11f987
-ms.openlocfilehash: a1e4df718eeac3f547fa29c148d5fc81880e3336
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 3bc299e29cd4bee8ec99e17cbb71b779bd76f5d0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875649"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99730895"
 ---
 # <a name="conversion-summary-visual-basic"></a>Dönüştürme Özeti (Visual Basic)
 

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ParamArray (Visual Basic)'
 title: ParamArray
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - ParamArray keyword [Visual Basic]
 - ParamArray keyword [Visual Basic], syntax
 ms.assetid: a5f18789-92bd-488f-9c7e-cf3719963635
-ms.openlocfilehash: baf9303101eea9eed27e8a4eee9e04d255c798e9
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 064bad8a558308ee3361c11d07020e0e3bf40c13
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867819"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99730401"
 ---
 # <a name="paramarray-visual-basic"></a>ParamArray (Visual Basic)
 

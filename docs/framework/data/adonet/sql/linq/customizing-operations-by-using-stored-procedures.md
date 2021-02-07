@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: saklı yordamları kullanarak Işlemleri özelleştirme'
 title: Saklı Yordamları Kullanarak İşlemleri Özelleştirme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: aedbecc1-c33c-4fb4-8861-fdf7e1dc6b8a
-ms.openlocfilehash: 3034af783f754a0fa044f13cba0df21e277bc1da
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: aa345ef8404b7cae7d96f75bb60325793767cd50
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173516"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729542"
 ---
 # <a name="customizing-operations-by-using-stored-procedures"></a>Saklı Yordamları Kullanarak İşlemleri Özelleştirme
 
@@ -23,7 +24,7 @@ Saklı yordamlar, varsayılan davranışı geçersiz kılan yaygın bir yaklaş�
   
 ## <a name="example"></a>Örnek  
   
-### <a name="description"></a>Açıklama  
+### <a name="description"></a>Description  
 
  Aşağıdaki örnekte, `Northwind` sınıfının türetilmiş bir sınıfta geçersiz Kılmalarda kullanılan saklı yordamları çağırmak için iki yöntem içerdiğini varsayın.  
   
@@ -34,7 +35,7 @@ Saklı yordamlar, varsayılan davranışı geçersiz kılan yaygın bir yaklaş�
   
 ## <a name="example"></a>Örnek  
   
-### <a name="description"></a>Açıklama  
+### <a name="description"></a>Description  
 
  Aşağıdaki sınıf, geçersiz kılma için bu yöntemleri kullanır.  
   
@@ -45,7 +46,7 @@ Saklı yordamlar, varsayılan davranışı geçersiz kılan yaygın bir yaklaş�
   
 ## <a name="example"></a>Örnek  
   
-### <a name="description"></a>Açıklama  
+### <a name="description"></a>Description  
 
  `NorthwindThroughSprocs`Yalnızca kullandığınız gibi kullanabilirsiniz `Northwnd` .  
   

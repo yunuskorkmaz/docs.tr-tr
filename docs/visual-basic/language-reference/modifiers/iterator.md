@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: yineleyici (Visual Basic)'
 title: Iterator
 ms.date: 07/20/2015
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Iterator keyword [Visual Basic]
 ms.assetid: 69cb0b04-ac87-49d0-bcfe-810c0d60daff
-ms.openlocfilehash: 0b459a16317b8ba55886e52ecadb227ddf2fee83
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 7a3329ba23a3f2487343b332f3bb9c4b19c36496
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875435"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99730531"
 ---
 # <a name="iterator-visual-basic"></a>Yineleyici (Visual Basic)
 

@@ -1,16 +1,17 @@
 ---
+description: Daha fazla bilgi için bkz. XslTransform sınıfıyla XSLT dönüşümleri
 title: XslTransform Sınıfı ile XSLT Dönüşümleri
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 500335af-f9b5-413b-968a-e6d9a824478c
-ms.openlocfilehash: ccdee1bbb94581d842cfc6fabe0f98dd6ec1d252
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f350bf8c27804afe769629bc1efdeb1bb51a2876
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818238"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731922"
 ---
 # <a name="xslt-transformations-with-the-xsltransform-class"></a>XslTransform Sınıfı ile XSLT Dönüşümleri
 

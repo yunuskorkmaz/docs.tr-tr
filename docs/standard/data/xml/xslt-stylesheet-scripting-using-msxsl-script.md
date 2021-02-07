@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi için bkz. <msxsl: Script> kullanarak XSLT stil sayfası betiği'
 title: <msxsl:script> Kullanarak XSLT Stil Sayfası Betiğini Oluşturma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-ms.openlocfilehash: 206a659656f1019af1540b9b2476ae7fe9ba93eb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4ed2caf5b31fb5a6494c294b2619535699e09905
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95685116"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731987"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>Kullanarak XSLT stil sayfası betiği oluşturma \<msxsl:script>
 
@@ -47,7 +48,7 @@ ms.locfileid: "95685116"
   
  İşlevler, öğesi içinde bildirilebilecek `msxsl:script` . Aşağıdaki tabloda, varsayılan olarak desteklenen ad alanları gösterilmektedir. Sınıfları listelenen ad alanları dışında kullanabilirsiniz. Ancak, bu sınıfların tam nitelikli olması gerekir.  
   
-|Varsayılan ad alanları|Açıklama|  
+|Varsayılan ad alanları|Description|  
 |------------------------|-----------------|  
 |Sistem|Sistem sınıfı.|  
 |System.Collection|Koleksiyon sınıfları.|  
@@ -216,7 +217,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-## <a name="output"></a>Çıkış  
+## <a name="output"></a>Çıktı  
   
 ```xml  
 <circles xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:user="urn:my-scripts">  

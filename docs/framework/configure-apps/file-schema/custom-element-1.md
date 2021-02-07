@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: SingleTagSectionHandler için özel öğe'
 title: SingleTagSectionHandler için özel öğe
 ms.date: 05/01/2017
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
-ms.openlocfilehash: a40f35838655f6021af0b2e966335803ec8c16b4
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 83022a1ebf295b89d5f868589e3d9a77c78e3fab
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "80635395"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729985"
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>SingleTagSectionHandler için özel öğe
 
@@ -19,7 +20,7 @@ ms.locfileid: "80635395"
 
 [**\<configuration>**](configuration-element.md) &nbsp;&nbsp;*\<sectionName>*
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <sectionName key="value" key2="value2" />
@@ -31,7 +32,7 @@ ms.locfileid: "80635395"
 
 ## <a name="parent-element"></a>Üst öğe
 
-|     | Açıklama |
+|     | Description |
 | --- | ----------- |
 | [**\<configuration>**](configuration-element.md) | Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe. |
 
@@ -61,7 +62,7 @@ Aşağıdaki örnek, **\<sampleSection>** sınıfı tarafından okunan ayarları
 
 ## <a name="configuration-file"></a>Yapılandırma dosyası
 
-Bu öğe uygulama yapılandırma dosyasında, makine yapılandırma dosyasında (*Machine. config*) ve uygulama dizini düzeyinde olmayan *Web. config* dosyalarında kullanılabilir.
+Bu öğe uygulama yapılandırma dosyasında, makine yapılandırma dosyasında (*Machine.config*) ve uygulama dizini düzeyinde olmayan dosyaları *Web.config* kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

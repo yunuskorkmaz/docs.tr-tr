@@ -1,4 +1,5 @@
 ---
+description: Daha fazla bilgi için bkz. .NET 'te Numerics
 title: .NET Sayısal Değerleri
 ms.date: 10/18/2018
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-ms.openlocfilehash: f674f05e864e11c83bb2e046ed54b91afebf167e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 386b5322a19b1f59358a941d7c37f7e5a81df30c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831149"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731675"
 ---
 # <a name="numerics-in-net"></a>.NET Sayısal Değerleri
 

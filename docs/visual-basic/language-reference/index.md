@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Visual Basic dil başvurusu'
 title: Dil Başvurusu
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - language reference, Visual Basic
 - Visual Basic, language reference
 ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
-ms.openlocfilehash: dd7b26d7b5acf924c3eac39b7a67c35245945aaa
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 47a299437b5f3ceab1cb24b8a09666366c546a64
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84362481"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731038"
 ---
 # <a name="visual-basic-language-reference"></a>Visual Basic Dil Başvurusu
 
@@ -66,7 +67,7 @@ Bu bölüm Visual Basic dilinin çeşitli yönleri için başvuru bilgileri sağ
  Visual Basic bulunan özellikleri belgeler.  
   
  [Sorgular](queries/index.md)  
- Kodunuzda dil ile tümleşik sorgu (LINQ) ifadeleri kullanma hakkında başvuru bilgileri sağlar.  
+ Kodunuzda Language-Integrated Query (LINQ) ifadeleri kullanma hakkında başvuru bilgileri sağlar.  
   
  [Deyimler](statements/index.md)  
  Visual Basic ' de bulunan bildirim ve çalıştırılabilir deyimleri belgeler.  
@@ -80,10 +81,10 @@ Bu bölüm Visual Basic dilinin çeşitli yönleri için başvuru bilgileri sağ
  [XML Değişmez Değerleri](xml-literals/index.md)  
  Doğrudan kodunuzda XML birleştirmek için XML değişmez değerleri kullanma hakkındaki bilgilere bağlantılar sağlar.  
   
- [Hata İletileri](error-messages/index.md)  
+ [Hata Iletileri](error-messages/index.md)  
  Visual Basic derleyicisinin ve çalışma zamanı hata iletilerinin bir listesini sağlar ve bunları nasıl işleyeceğinizi öğrenin.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
 
- [Visual Basic komut satırı derleyicisi](../reference/command-line-compiler/index.md)  
+ [Visual Basic Command-Line derleyicisi](../reference/command-line-compiler/index.md)  
  Visual Studio tümleşik geliştirme ortamı (IDE) içinden program derlemek için alternatif olarak komut satırı derleyicisinin nasıl kullanılacağını açıklar.

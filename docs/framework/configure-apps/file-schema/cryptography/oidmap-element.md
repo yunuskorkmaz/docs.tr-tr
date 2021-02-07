@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: <oidMap> öğesi'
 title: <oidMap> Öğesi
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <oidMap> element
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-ms.openlocfilehash: 6c57810389acbd58e6d2e05277a6f26fa0aac8c6
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9a71cc54546f49fcada90a0f9915d44d1fc65e89
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91149523"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729998"
 ---
 # <a name="oidmap-element"></a>\<oidMap> Öğesi
 

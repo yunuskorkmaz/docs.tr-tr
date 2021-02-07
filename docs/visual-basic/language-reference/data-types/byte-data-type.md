@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Byte veri türü (Visual Basic)'
 title: Byte Veri Türü
 ms.date: 01/31/2018
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Byte data type
 - data types [Visual Basic], assigning
 ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
-ms.openlocfilehash: 97acd1bc2ff29bac6588216b9ee4a4f187078815
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 983af36d8340b5df7ac44782bf56349901460c20
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84374323"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731233"
 ---
 # <a name="byte-data-type-visual-basic"></a>Byte veri türü (Visual Basic)
 
@@ -39,7 +40,7 @@ Visual Basic 2017 ' den başlayarak, `_` Aşağıdaki örnekte gösterildiği gi
 
 [!code-vb[Byte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ByteS)]  
 
-Visual Basic 15,5 ' den başlayarak, alt çizgi karakterini ( `_` ) ön ek ile onaltılı, ikili veya sekizlik basamaklar arasında önde gelen bir ayırıcı olarak da kullanabilirsiniz. Örnek:
+Visual Basic 15,5 ' den başlayarak, alt çizgi karakterini ( `_` ) ön ek ile onaltılı, ikili veya sekizlik basamaklar arasında önde gelen bir ayırıcı olarak da kullanabilirsiniz. Örneğin:
 
 ```vb
 Dim number As Byte = &H_6A
@@ -55,7 +56,7 @@ Dim number As Byte = &H_6A
 
 - **Kan.** `Byte`Veri türü widens,,,,, `Short` ,, `UShort` `Integer` `UInteger` `Long` `ULong` `Decimal` `Single` , veya `Double` . Bu, `Byte` bir hatayla karşılaşmadan bu türlerden birine dönüştürebileceğiniz anlamına gelir <xref:System.OverflowException?displayProperty=nameWithType> .
   
-- **Tür karakterleri.** `Byte`değişmez değer türü karakteri veya tanımlayıcı türü karakteri yok.
+- **Tür karakterleri.** `Byte` değişmez değer türü karakteri veya tanımlayıcı türü karakteri yok.
 
 - **Çerçeve türü.** .NET Framework karşılık gelen tür <xref:System.Byte?displayProperty=nameWithType> yapısıdır.
 

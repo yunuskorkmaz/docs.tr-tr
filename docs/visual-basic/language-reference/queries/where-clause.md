@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: WHERE tümcesi (Visual Basic)'
 title: Where Yan Tümcesi
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - queries [Visual Basic], Where
 - Where clause [Visual Basic]
 ms.assetid: 48b5c2c5-3181-429c-8545-894296798c89
-ms.openlocfilehash: 3a43554fb25592bf413525a2df109010e4868492
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 11f9a7e586a1fdea826df4fb34a7227747c8cebd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869638"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99730323"
 ---
 # <a name="where-clause-visual-basic"></a>Where Tümcesi (Visual Basic)
 
 Bir sorgu için filtreleme koşulunu belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 Where condition  

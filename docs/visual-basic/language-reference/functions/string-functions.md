@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: dize Işlevleri (Visual Basic)'
 title: Dize İşlevleri
 ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 778e57eadd75baf1aabd100f9d8d41a490f79a04
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1c121bc3de66caf748426b5cd04d049b30bf78bb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406294"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731165"
 ---
 # <a name="string-functions-visual-basic"></a>Dize İşlevleri (Visual Basic)
 
@@ -47,7 +48,7 @@ Aşağıdaki tablo, <xref:Microsoft.VisualBasic.Strings?displayProperty=nameWith
 |<xref:Microsoft.VisualBasic.Strings.Trim%2A>|Belirtilen dizenin başında veya sonunda boşluk olmayan bir kopyasını içeren bir dize döndürür.|
 |<xref:Microsoft.VisualBasic.Strings.UCase%2A>|Belirtilen dizeyi büyük harfe dönüştürülmüş olarak içeren bir dize veya karakter döndürür.|
 
-Dizelerin, sisteminizin yerel [Option Compare](../statements/option-compare-statement.md) ayarında ( `Text` ) veya karakterlerin iç ikili gösterimlerine () göre belirlenen büyük/küçük harf duyarsız metin sıralama düzeni kullanılarak karşılaştırıldığını ayarlamak için Option Compare ifadesini kullanabilirsiniz `Binary` . Varsayılan metin karşılaştırma yöntemi `Binary` .
+Dizelerin, sisteminizin yerel [](../statements/option-compare-statement.md) ayarında ( `Text` ) veya karakterlerin iç ikili gösterimlerine () göre belirlenen büyük/küçük harf duyarsız metin sıralama düzeni kullanılarak karşılaştırıldığını ayarlamak için Option Compare ifadesini kullanabilirsiniz `Binary` . Varsayılan metin karşılaştırma yöntemi `Binary` .
 
 ## <a name="example-ucase"></a>Örnek: UCase
 

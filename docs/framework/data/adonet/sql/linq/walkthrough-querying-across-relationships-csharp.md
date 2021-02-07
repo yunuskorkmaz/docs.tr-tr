@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Izlenecek yol: Ilişkiler genelinde sorgulama (C#)'
 title: 'İzlenecek yol: İlişkilerde Sorgulama (C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: 9dfe34136f2d0a14a12f72e22a96d1882ddbce49
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 35811043ddd7ecc9aca5e1bd87a370abebf90853
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164022"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729451"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>İzlenecek yol: İlişkilerde Sorgulama (C#)
 
@@ -17,7 +18,7 @@ Bu izlenecek yol, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md
   
  Bu izlenecek yol, Visual C# geliştirme ayarları kullanılarak yazılmıştır.  
   
-## <a name="prerequisites"></a>Ön koşullar  
+## <a name="prerequisites"></a>Önkoşullar  
 
  Gözden geçirmeyi tamamlamış olmanız gerekir [: basit nesne modeli ve sorgu (C#)](walkthrough-simple-object-model-and-query-csharp.md). Bu izlenecek yol, c:\linqtest5' teki kuzeydoğu. mdf dosyasının varlığı da dahil olmak üzere bunun üzerine oluşturulur.  
   
@@ -51,7 +52,7 @@ Bu izlenecek yol, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md
   
      [!code-csharp[DLinqWalk2CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#2)]  
   
-## <a name="creating-and-running-a-query-across-the-customer-order-relationship"></a>Müşteri siparişi Ilişkisi genelinde sorgu oluşturma ve çalıştırma  
+## <a name="creating-and-running-a-query-across-the-customer-order-relationship"></a>Customer-Order Ilişkisi genelinde sorgu oluşturma ve çalıştırma  
 
  Artık `Order` nesnelere doğrudan `Customer` nesnelerden veya ters sırada erişebilirsiniz. Müşteriler ve siparişler arasında açık bir *birleşime* gerek yoktur.  
   

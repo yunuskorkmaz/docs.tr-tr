@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: My (Visual Basic) hangi nesnelerin kullanılabilir olduğunu özelleştirme'
 title: My Özelliklerinde Hangi Nesnelerin Kullanılabilir Olduğunu Özelleştirme
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 ms.assetid: 4e8279c2-ed5b-4681-8903-8a6671874000
-ms.openlocfilehash: 5245c129281bc8c7c1c6fe9215a221889380a901
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 065f7e645a5530db1e485ee3f8ea50f8a163f9e8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410224"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731441"
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>My Özelliklerinde Hangi Nesnelerin Kullanılabilir Olduğunu Özelleştirme (Visual Basic)
 
@@ -33,7 +34,7 @@ Bu konuda, `My` projenizin koşullu derleme sabitini ayarlanarak hangi nesneleri
 |Web|Web|  
 |Web Denetim Kitaplığı|'Dan|  
 |Windows uygulaması|WindowsForms|  
-|Windows uygulaması, özel ile Başlarken`Sub Main`|"WindowsFormsWithCustomSubMain"|  
+|Windows uygulaması, özel ile Başlarken `Sub Main`|"WindowsFormsWithCustomSubMain"|  
 |Windows Denetim Kitaplığı|Pencerelerin|  
 |Windows Hizmeti|Konsola|  
 |Olmamalıdır|Olmamalıdır|  

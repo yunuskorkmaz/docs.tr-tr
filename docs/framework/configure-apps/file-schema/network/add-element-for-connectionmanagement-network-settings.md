@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: <add> connectionManagement için öğesi (ağ ayarları)'
 title: connectionManagement için <add> Öğesi (Ağ Ayarları)
 ms.date: 03/30/2017
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-ms.openlocfilehash: 05e4a1bc42dc39c7d2b56e30c98bdeefd31e4416
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 646d9fcfb73cfd8f4f533672c1a92883274f6e39
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91149484"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729946"
 ---
 # <a name="add-element-for-connectionmanagement-network-settings"></a>connectionManagement için \<add> Öğesi (Ağ Ayarları)
 
@@ -52,7 +53,7 @@ Bağlantı yönetimi listesine bir IP adresi veya DNS adı ekler.
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
-|**Dosyalarında**|**Açıklama**|  
+|**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
 |[connectionManagement](connectionmanagement-element-network-settings.md)|Bir ağ konağına en fazla bağlantı sayısını belirtir.|  
   

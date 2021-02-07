@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <clear> BypassList için öğesi (ağ ayarları)'
 title: bypasslist için <clear> Öğesi (Ağ Ayarları)
 ms.date: 03/30/2017
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - <bypasslist>, clear element
 - bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-ms.openlocfilehash: 96cef2dff3156e49a93be818230c83370dab5264
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4ddb66c837c55391a19826c44c6df7a3e88c8e0b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91185867"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729907"
 ---
 # <a name="clear-element-for-bypasslist-network-settings"></a>bypasslist için \<clear> Öğesi (Ağ Ayarları)
 
@@ -47,7 +48,7 @@ Proxy atlama listesini temizler.
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
-|**Dosyalarında**|**Açıklama**|  
+|**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
 |[BypassList](bypasslist-element-network-settings.md)|Proxy kullanmayan adresleri tanımlayan normal ifadeler kümesi sağlar.|  
   

@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Izlenecek yol: verileri düzenleme (C#)'
 title: 'İzlenecek yol: Verileri Düzenleme (C#)'
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: fefbee533634ee42785c65e0265ce1e0567561b5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6176709a2e02d8c06ec54b70cc6e0e4c302509c3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164070"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729594"
 ---
 # <a name="walkthrough-manipulating-data-c"></a>İzlenecek yol: Verileri Düzenleme (C#)
 
@@ -17,7 +18,7 @@ Bu izlenecek yol [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.
   
  Bu izlenecek yol, Visual C# geliştirme ayarları kullanılarak yazılmıştır.  
   
-## <a name="prerequisites"></a>Ön koşullar  
+## <a name="prerequisites"></a>Önkoşullar  
 
  Bu izlenecek yol aşağıdakileri gerektirir:  
   
@@ -63,7 +64,7 @@ Bu izlenecek yol [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.
   
 3. **Şablonlar** bölmesinde **konsol uygulaması**' na tıklayın.  
   
-4. **Ad** kutusuna **Linqdatalationtionapp**yazın.  
+4. **Ad** kutusuna **Linqdatalationtionapp** yazın.  
   
 5. **Konum** kutusunda, proje dosyalarınızı nerede depolamak istediğinizi doğrulayın.  
   

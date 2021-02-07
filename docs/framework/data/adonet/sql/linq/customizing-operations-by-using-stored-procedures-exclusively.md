@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: yalnızca saklı yordamları kullanarak Işlemleri özelleştirme'
 title: Saklı Yordamları Özel Olarak Kullanarak İşlemleri Özelleştirme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 441e8ef3-998c-4d12-8825-ce66a178f90f
-ms.openlocfilehash: 78db5cf448a19056d7265ab84d97d055748c3faa
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4ddcc6b4face1abccb502e12617105a734bb5f0b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164330"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729555"
 ---
 # <a name="customizing-operations-by-using-stored-procedures-exclusively"></a>Saklı Yordamları Özel Olarak Kullanarak İşlemleri Özelleştirme
 
@@ -18,7 +19,7 @@ Yalnızca saklı yordamlar kullanılarak verilere erişim, yaygın bir senaryodu
   
 ## <a name="example"></a>Örnek  
   
-### <a name="description"></a>Açıklama  
+### <a name="description"></a>Description  
 
  Saklı yordamları kullanarak, bir saklı yordamı sarmalayan ilk sorgu (dinamik SQL yürütmeye neden olur) bir yöntem çağrısıyla değiştirerek, [Işlemleri özelleştirme](customizing-operations-by-using-stored-procedures.md) bölümünde belirtilen örneği değiştirebilirsiniz.  
   

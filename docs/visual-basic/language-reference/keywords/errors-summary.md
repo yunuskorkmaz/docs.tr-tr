@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: hata Özeti (Visual Basic)'
 title: Hatalara İlişkin Özet
 ms.date: 07/20/2015
 helpviewer_keywords:
 - errors [Visual Basic]
 ms.assetid: 2557da60-c6dc-4e99-8128-fceb6f8a0736
-ms.openlocfilehash: ed3e4b358c7364fd555f753e219df96a596b4231
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 43fa015169ec2f968c81bb5a3919b6a10e7dc404
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90868841"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99730739"
 ---
 # <a name="errors-summary-visual-basic"></a>Hatalara İlişkin Özet (Visual Basic)
 

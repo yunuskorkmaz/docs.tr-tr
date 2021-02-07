@@ -1,4 +1,5 @@
 ---
+description: 'İçin: öğesi hakkında daha fazla bilgi <assemblyBinding><configuration>'
 title: <configuration> için <assemblyBinding> öğesi
 ms.date: 03/30/2017
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - assemblyBinding Element
 - <assemblyBinding> Element
 ms.assetid: 6cc55983-b894-449b-8e26-b258e53939cd
-ms.openlocfilehash: 21cf5e749b0dae310c3326f8abf82c6678fc97e9
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5cc3fc7cccd4b9dc7b62815734ff76e32e2243d3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155485"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99730115"
 ---
 # <a name="assemblybinding-element-for-configuration"></a>\<configuration> için \<assemblyBinding> öğesi
 
@@ -20,7 +21,7 @@ Yapılandırma düzeyinde derleme bağlama ilkesini belirtir.
 
 [**\<configuration>**](configuration-element.md) &nbsp;&nbsp;**\<assemblyBinding>**
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
@@ -36,13 +37,13 @@ Yapılandırma düzeyinde derleme bağlama ilkesini belirtir.
 
 ## <a name="parent-element"></a>Üst öğe
 
-|     | Açıklama |
+|     | Description |
 | --- | ----------- |
 | [**\<configuration>**](configuration-element.md) | Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe. |
 
 ## <a name="child-element"></a>Alt öğe
 
-|     | Açıklama |
+|     | Description |
 | --- | ----------- |
 | [**\<linkedConfiguration>**](linkedconfiguration-element.md) | Dahil edilecek bir yapılandırma dosyasını belirtir. |
 

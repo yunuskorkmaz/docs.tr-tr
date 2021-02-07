@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Microsoft Store uygulamalar ve Windows Çalışma Zamanı .NET Framework desteği'
 title: Microsoft Store uygulamalar ve Windows Çalışma Zamanı .NET Framework desteği
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - .NET Framework, and Windows Store apps
 - .NET Framework, and Windows Runtime
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
-ms.openlocfilehash: 88b269e9c6174b32a5fae4edf9a8b7b50a2817ce
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 851deb30420eb19c4fe2037bebe2cf8f84743c49
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687859"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729653"
 ---
 # <a name="net-framework-support-for-microsoft-store-apps-and-windows-runtime"></a>Microsoft Store uygulamalar ve Windows Çalışma Zamanı .NET Framework desteği
 

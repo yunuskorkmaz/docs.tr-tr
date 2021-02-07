@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Boolean veri türü (Visual Basic)'
 title: Boolean Veri Türü
 ms.date: 07/20/2015
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - True keyword [Visual Basic]
 - Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
-ms.openlocfilehash: 851c524a83c5f24b77a151634a96798249c5905e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cdda6bc0571eb0a2a9ee6a079ffd276bfc89a9b4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84374427"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731415"
 ---
 # <a name="boolean-data-type-visual-basic"></a>Boole Veri Türü (Visual Basic)
 
@@ -29,7 +30,7 @@ Yalnızca veya olabilecek değerleri barındırır `True` `False` . Anahtar söz
   
  Varsayılan değeri `Boolean` `False` .  
   
- `Boolean`değerler sayı olarak depolanmaz ve depolanan değerlerin sayılara eşit olması amaçlanmamıştır. Ve için eşdeğer sayısal değerleri temel alan hiçbir kodu asla yazmamanız `True` gerekir `False` . Mümkün olduğunda, `Boolean` değişkenlerin kullanımını tasarlandıkları mantıksal değerlerle kısıtlamalısınız.  
+ `Boolean` değerler sayı olarak depolanmaz ve depolanan değerlerin sayılara eşit olması amaçlanmamıştır. Ve için eşdeğer sayısal değerleri temel alan hiçbir kodu asla yazmamanız `True` gerekir `False` . Mümkün olduğunda, `Boolean` değişkenlerin kullanımını tasarlandıkları mantıksal değerlerle kısıtlamalısınız.  
   
 ## <a name="type-conversions"></a>Tür Dönüştürmeleri  
 
@@ -39,9 +40,9 @@ Yalnızca veya olabilecek değerleri barındırır `True` `False` . Anahtar söz
   
 ## <a name="programming-tips"></a>Programlama İpuçları  
   
-- **Negatif sayılar.** `Boolean`sayısal bir tür değil ve negatif bir değeri temsil edemez. Herhangi bir durumda, `Boolean` sayısal değerleri tutmak için kullanmamalısınız.  
+- **Negatif sayılar.** `Boolean` sayısal bir tür değil ve negatif bir değeri temsil edemez. Herhangi bir durumda, `Boolean` sayısal değerleri tutmak için kullanmamalısınız.  
   
-- **Tür karakterleri.** `Boolean`değişmez değer türü karakteri veya tanımlayıcı türü karakteri yok.  
+- **Tür karakterleri.** `Boolean` değişmez değer türü karakteri veya tanımlayıcı türü karakteri yok.  
   
 - **Çerçeve türü.** .NET Framework karşılık gelen tür <xref:System.Boolean?displayProperty=nameWithType> yapısıdır.  
   

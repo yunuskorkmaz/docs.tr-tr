@@ -1,15 +1,16 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: veri türleri Özeti (Visual Basic)'
 title: Veri Türleri Özeti
 ms.date: 07/20/2015
 helpviewer_keywords:
 - data types [Visual Basic], Visual Basic
 ms.assetid: 4ea2ef2a-3d4d-42d9-9f8f-173a37c96e53
-ms.openlocfilehash: 27e179b49505d8dac1ff48792d02c1d8c991703c
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 0fbfdc2be35a636caf80b1edea25c58cd958f650
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869080"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99730869"
 ---
 # <a name="data-types-summary-visual-basic"></a>Veri Türleri Özeti (Visual Basic)
 
