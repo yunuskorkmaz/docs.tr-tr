@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: uygulama ayarları şeması'
 title: Uygulama ayarları şeması
 ms.date: 05/01/2017
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, app settings schema
 - configuration schema [.NET Framework], app settings
 ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
-ms.openlocfilehash: a67689bd9757f7586881fd910ef6103b1dffeab8
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a98a60b0470e0fa2c03313f25de9b310f5fce785
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550455"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699356"
 ---
 # <a name="app-settings-schema"></a>Uygulama ayarları şeması
 
@@ -33,11 +34,11 @@ Dosya yolları, XML Web hizmeti URL 'Leri veya bir uygulama için başka özel y
 
 ## <a name="appsettings-element"></a>\<appSettings> öğesi
 
-Bu öğe, **\<add>** **\<clear>** **\<remove>** uygulama ayarlarını denetlemek için, ve etiketlerini içerir. **Dosya**için isteğe bağlı bir öznitelik tanımlar.
+Bu öğe, **\<add>** **\<clear>** **\<remove>** uygulama ayarlarını denetlemek için, ve etiketlerini içerir. **Dosya** için isteğe bağlı bir öznitelik tanımlar.
 
 ## <a name="add-element"></a>\<add> öğesi
 
-Uygulama ayarları koleksiyonuna bir ad/değer çifti olarak özel bir uygulama ayarı ekler. **Anahtar** ve **değer**için öznitelikleri tanımlar.
+Uygulama ayarları koleksiyonuna bir ad/değer çifti olarak özel bir uygulama ayarı ekler. **Anahtar** ve **değer** için öznitelikleri tanımlar.
 
 ## <a name="clear-element"></a>\<clear> öğesi
 
@@ -45,7 +46,7 @@ Devralınan özel uygulama ayarlarına yapılan tüm başvuruları kaldırır ve
 
 ## <a name="remove-element"></a>\<remove> öğesi
 
-Devralınan özel uygulama ayarının başvurusunu uygulama ayarları koleksiyonundan kaldırır. **Anahtar**için bir özniteliği tanımlar.
+Devralınan özel uygulama ayarının başvurusunu uygulama ayarları koleksiyonundan kaldırır. **Anahtar** için bir özniteliği tanımlar.
 
 ## <a name="example"></a>Örnek
 

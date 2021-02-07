@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: <schemeSettings> öğesi (URI ayarları)'
 title: <schemeSettings> Öğesi (Uri Ayarları)
 ms.date: 03/30/2017
 ms.assetid: 0ae45c6e-8c4c-4c0d-8b9f-a93824648890
-ms.openlocfilehash: 5a146b854239fd516125e66e05312e27b90c73ec
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 218676c10a8acaa79c2eb2146214e77beee9a972
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91187023"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99698446"
 ---
 # <a name="schemesettings-element-uri-settings"></a>\<schemeSettings> Öğesi (Uri Ayarları)
 
@@ -34,7 +35,7 @@ ms.locfileid: "91187023"
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
-|**Dosyalarında**|**Açıklama**|  
+|**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
 |[add](add-element-for-schemesettings-uri-settings.md)|Düzen adı için bir düzen ayarı ekler.|  
 |[lediğiniz](clear-element-for-schemesettings-uri-settings.md)|Varolan tüm düzen ayarlarını temizler.|  
@@ -42,7 +43,7 @@ ms.locfileid: "91187023"
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
-|**Dosyalarında**|**Açıklama**|  
+|**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
 |[kullanılmamışsa](uri-element-uri-settings.md)|.NET Framework Tekdüzen Kaynak tanımlayıcıları (URI 'Ler) kullanarak ifade edilen Web adreslerini nasıl işleyeceğini belirten ayarları içerir.|  
   

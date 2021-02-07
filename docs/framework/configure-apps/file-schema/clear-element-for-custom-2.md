@@ -1,5 +1,6 @@
 ---
-title: <clear>NameValueSectionHandler ve DictionarySectionHandler için öğesi
+description: 'Hakkında daha fazla bilgi edinin: <clear> NameValueSectionHandler ve DictionarySectionHandler için öğesi'
+title: <clear> NameValueSectionHandler ve DictionarySectionHandler için öğesi
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/clear
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: ff2294ec-fb82-4b0c-933e-ae185433fc7b
-ms.openlocfilehash: f6d860f35d22002030ffa3d09dd0d8a96116bf5e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 896aa7e8f0e3b41574538fcd9e4be9d6155da889
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "77214752"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699239"
 ---
-# <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<clear>NameValueSectionHandler ve DictionarySectionHandler için öğesi
+# <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<clear> NameValueSectionHandler ve DictionarySectionHandler için öğesi
 
 Bir bölümdeki önceden tanımlanmış tüm ayarları temizler.
 
@@ -22,7 +23,7 @@ Bir bölümdeki önceden tanımlanmış tüm ayarları temizler.
 &nbsp;&nbsp;[**\<sectionName>**](custom-element-2.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <clear />
@@ -34,7 +35,7 @@ Yok
 
 ## <a name="parent-element"></a>Üst öğe
 
-|     | Açıklama |
+|     | Description |
 | --- | ------------|
 | [**\<sectionName>** Dosyalarında](custom-element-2.md) | Ve sınıflarını kullanan özel yapılandırma bölümlerinin ayarlarını tanımlar <xref:System.Configuration.NameValueSectionHandler> <xref:System.Configuration.DictionarySectionHandler> . |
 
@@ -78,7 +79,7 @@ Aşağıdaki uygulama yapılandırma dosyası kodu, tüm ayarlarını öğesinde
 
 ## <a name="configuration-file"></a>Yapılandırma dosyası
 
-Bu öğe uygulama yapılandırma dosyasında, makine yapılandırma dosyasında (*Machine. config*) ve uygulama dizini düzeyinde olmayan *Web. config* dosyalarında kullanılabilir.
+Bu öğe, uygulama yapılandırma dosyasında, makine yapılandırma dosyasında (*Machine.config*) ve uygulama dizini düzeyinde olmayan *Web.config* dosyalarda kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

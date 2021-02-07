@@ -1,4 +1,5 @@
 ---
+description: ': PooledStream. NetworkStream özelliği hakkında daha fazla bilgi edinin'
 title: PooledStream. NetworkStream özelliği (System.Net)
 ms.date: 10/21/2019
 ms.technology: dotnet-networking
@@ -12,18 +13,18 @@ api_location:
 - System.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 541b8c94b30675c1286b48a2291c3bd3e4aeea0b
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 8a4f1d6bd9297028e763ef73bf96f85cbbfdafd6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72847180"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699642"
 ---
 # <a name="pooledstreamnetworkstream-property"></a>PooledStream. NetworkStream özelliği
 
-`PooledStream` soketi için ağ akışını alır veya ayarlar.
+Yuva için ağ akışını alır veya ayarlar `PooledStream` .
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```csharp
 internal NetworkStream NetworkStream { get; set; }
@@ -32,19 +33,19 @@ internal NetworkStream NetworkStream { get; set; }
 ## <a name="property-value"></a>Özellik değeri
 
 <xref:System.Net.Sockets.NetworkStream>  
-`PooledStream` soketi için ağ akışı.
+Yuva için ağ akışı `PooledStream` .
 
 ## <a name="remarks"></a>Açıklamalar
 
 > [!WARNING]
-> `PooledStream.NetworkStream` özelliği Dahili ve doğrudan kodunuzda kullanılmamalıdır.
+> `PooledStream.NetworkStream`Özelliği Dahili ve doğrudan kodunuzda kullanılmamalıdır.
 >
 > Microsoft, bu özelliğin herhangi bir koşulda bir üretim uygulamasında kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Ad alanı:** <xref:System.Net>
+**Ad alanı:**<xref:System.Net>
 
-**Bütünleştirilmiş kod:** Sistem (System. dll içinde)
+**Bütünleştirilmiş kod:** Sistem (System.dll)
 
 **.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: JOIN tümcesi (Visual Basic)'
 title: Join Yan Tümcesi
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-ms.openlocfilehash: f73dc31bbbb9014a8a1a315de406c53fa58d1c65
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 69d808e68a32b3f8799dabbbc8abc53acae42b57
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84359780"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700448"
 ---
 # <a name="join-clause-visual-basic"></a>Join Tümcesi (Visual Basic)
 
 İki koleksiyonu tek bir koleksiyon halinde birleştirir. JOIN işlemi, eşleşen anahtarlara dayalıdır ve `Equals` işlecini kullanır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```vb
 Join element In collection _
@@ -32,7 +33,7 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
 
 ## <a name="parts"></a>Bölümler
 
-`element`Gerekli. Birleştirilen koleksiyonun denetim değişkeni.
+`element` Gerekli. Birleştirilen koleksiyonun denetim değişkeni.
 
 `collection`  
 Gereklidir. İşlecin sol tarafında tanımlanan koleksiyonla birleştirilecek koleksiyon `Join` . `Join`Yan tümce, başka bir `Join` yan tümce içinde veya yan tümcesinde iç içe olabilir `Group Join` .
@@ -44,7 +45,7 @@ Gereklidir. İşlecin sol tarafında tanımlanan koleksiyonla birleştirilecek k
 İsteğe bağlı. `Group Join`Sorguyu daha da belirginleştirmek için bir veya daha fazla ek yan tümce.
 
 `key1` `Equals` `key2`  
-Gereklidir. Katılmakta olan koleksiyonlar için anahtarları tanımlar. `Equals`Birleştirilecek koleksiyonlardan anahtarları karşılaştırmak için işlecini kullanmanız gerekir. `And`Birden çok anahtarı tanımlamak için işlecini kullanarak Birleştirme koşullarını birleştirebilirsiniz. `key1`işlecin sol tarafındaki koleksiyondan olmalıdır `Join` . `key2`işlecin sağ tarafındaki koleksiyondan olmalıdır `Join` .
+Gereklidir. Katılmakta olan koleksiyonlar için anahtarları tanımlar. `Equals`Birleştirilecek koleksiyonlardan anahtarları karşılaştırmak için işlecini kullanmanız gerekir. `And`Birden çok anahtarı tanımlamak için işlecini kullanarak Birleştirme koşullarını birleştirebilirsiniz. `key1` işlecin sol tarafındaki koleksiyondan olmalıdır `Join` . `key2` işlecin sağ tarafındaki koleksiyondan olmalıdır `Join` .
 
 JOIN koşulunda kullanılan anahtarlar, koleksiyondan birden fazla öğe içeren ifadeler olabilir. Ancak, her anahtar ifadesi yalnızca ilgili koleksiyonundan öğe içerebilir.
 

@@ -1,20 +1,21 @@
 ---
+description: 'Daha fazla bilgi edinin: sorgular (Visual Basic)'
 title: Sorgular
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [Visual Basic]
 - LINQ, queries
 ms.assetid: 8edc717c-4a24-4cbc-9c16-11f479c935db
-ms.openlocfilehash: 006a4b67094b258d440c2046fe3ae02274e1c337
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: f816078ea7a8a02b84ebf2d23940c67e54997091
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869892"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700435"
 ---
 # <a name="queries-visual-basic"></a>Sorgular (Visual Basic)
 
-Visual Basic kodunuzda dil ile tümleşik sorgu (LINQ) ifadeleri oluşturmanızı sağlar.  
+Visual Basic kodunuzda Language-Integrated Query (LINQ) ifadeleri oluşturmanızı sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
 
@@ -27,7 +28,7 @@ Visual Basic kodunuzda dil ile tümleşik sorgu (LINQ) ifadeleri oluşturmanız�
  [From yan tümcesi](from-clause.md)  
  Bir `From` sorgu için bir koleksiyonu ve bir Aralık değişkenini belirten yan tümcesini açıklar.  
   
- [Group By Yan Tümcesi](group-by-clause.md)  
+ [Group by yan tümcesi](group-by-clause.md)  
  `Group By`Bir sorgu sonucunun öğelerini gruplandıran ve her gruba toplama işlevleri uygulamak için kullanılabilen yan tümceyi açıklar.  
   
  [Group Join Yan Tümcesi](group-join-clause.md)  

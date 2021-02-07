@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: toplama tümcesi (Visual Basic)'
 title: Aggregate Yan Tümcesi
 ms.date: 08/28/2018
 f1_keywords:
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - Aggregate statement [Visual Basic]
 - queries [Visual Basic], Aggregate
 ms.assetid: 1315a814-5db6-4077-b34b-b141e11cc0eb
-ms.openlocfilehash: be2e401c7931b2637c14a3ea3b742a2c09917939
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 404cb4091bc11132450cf0d8d001ce426439ece7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869992"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700669"
 ---
 # <a name="aggregate-clause-visual-basic"></a>Aggregate Tümcesi (Visual Basic)
 
 Bir koleksiyona bir veya daha fazla toplama işlevi uygular.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 Aggregate element [As type] In collection _  
@@ -32,7 +33,7 @@ Aggregate element [As type] In collection _
   
 ## <a name="parts"></a>Bölümler  
   
-|Terim|Tanım|  
+|Süre|Tanım|  
 |---|---|  
 |`element`|Gereklidir. Koleksiyon öğeleri boyunca yinelemek için kullanılan değişken.|  
 |`type`|İsteğe bağlı. Türü `element` . Hiçbir tür belirtilmemişse, türü `element` öğesinden çıkarsanamıyor `collection` .|  
@@ -58,7 +59,7 @@ Aşağıdaki, yan tümcesiyle kullanılabilen standart toplama işlevleridir `Ag
 
  [!code-vb[VbSimpleQuerySamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#5)]
 
-### <a name="any"></a>Herhangi biri
+### <a name="any"></a>Herhangi bir
 
 `true`Koleksiyondaki herhangi bir öğenin belirtilen koşulu karşılayıp karşılamadığını döndürür; Aksi takdirde döndürür `false` . Aşağıda bir örnek verilmiştir:
 
@@ -96,7 +97,7 @@ Koleksiyondaki en küçük değeri hesaplar veya koleksiyondaki tüm öğeler i�
 
  [!code-vb[VbSimpleQuerySamples#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#10)]
 
-### <a name="sum"></a>Toplam
+### <a name="sum"></a>Sum
 
 Koleksiyondaki tüm öğelerin toplamını hesaplar veya koleksiyondaki tüm öğeler için sağlanan bir ifadeyi hesaplar. Aşağıda bir örnek verilmiştir:
 
@@ -108,7 +109,7 @@ Aşağıdaki örnek, `Aggregate` bir sorgu sonucuna toplama işlevleri uygulamak
   
  [!code-vb[VbSimpleQuerySamples#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#4)]  
   
-## <a name="creating-user-defined-aggregate-functions"></a>Kullanıcı tanımlı toplama Işlevleri oluşturma
+## <a name="creating-user-defined-aggregate-functions"></a>User-Defined toplama Işlevleri oluşturma
 
  Türe uzantı yöntemleri ekleyerek kendi özel toplama işlevlerinizi bir sorgu ifadesine dahil edebilirsiniz <xref:System.Collections.Generic.IEnumerable%601> . Özel yönteminiz, toplama işlevinizin başvurduğu sıralanabilir koleksiyonda bir hesaplama veya işlem gerçekleştirebilir. Uzantı yöntemleri hakkında daha fazla bilgi için bkz. [Uzantı yöntemleri](../../programming-guide/language-features/procedures/extension-methods.md).  
   
@@ -127,4 +128,4 @@ Aşağıdaki örnek, `Aggregate` bir sorgu sonucuna toplama işlevleri uygulamak
 - [Select yan tümcesi](select-clause.md)
 - [From yan tümcesi](from-clause.md)
 - [WHERE yan tümcesi](where-clause.md)
-- [Group By Yan Tümcesi](group-by-clause.md)
+- [Group by yan tümcesi](group-by-clause.md)

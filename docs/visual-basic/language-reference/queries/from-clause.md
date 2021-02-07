@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: from tümcesi (Visual Basic)'
 title: From Yan Tümcesi
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-ms.openlocfilehash: 120ba6da11bffc3a0e81873d1fd606633724723d
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: e35188412deb7fd9f2d8306c85057d050a60d030
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875248"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700565"
 ---
 # <a name="from-clause-visual-basic"></a>From Tümcesi (Visual Basic)
 
 Bir veya daha fazla Aralık değişkenini ve sorgulanacak bir koleksiyonu belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 From element [ As type ] In collection [ _ ]  
@@ -30,7 +31,7 @@ From element [ As type ] In collection [ _ ]
   
 ## <a name="parts"></a>Bölümler  
   
-|Terim|Tanım|  
+|Süre|Tanım|  
 |---|---|  
 |`element`|Gereklidir. Koleksiyonun öğeleri boyunca yinelemek için kullanılan bir *Aralık değişkeni* . Bir Aralık değişkeni, `collection` sorgu ile yineleme yaparken öğesinin her üyesine başvurmak için kullanılır `collection` . Sıralanabilir bir tür olmalıdır.|  
 |`type`|İsteğe bağlı. Türü `element` . Hayır `type` belirtilmemişse, türü `element` öğesinden çıkarsanamıyor `collection` .|  
@@ -38,7 +39,7 @@ From element [ As type ] In collection [ _ ]
   
 ## <a name="remarks"></a>Açıklamalar  
 
- `From`Yan tümcesi, bir sorgunun kaynak verilerini ve kaynak koleksiyondaki bir öğeye başvurmak için kullanılan değişkenleri belirlemek için kullanılır. Bu değişkenlere *Aralık değişkenleri*denir. Yan tümcesi, `From` bir sorgu için, `Aggregate` yan tümcesinin yalnızca toplanmış sonuçları döndüren bir sorguyu belirlemek için kullanılması dışında, gereklidir. Daha fazla bilgi için bkz. [toplama yan tümcesi](aggregate-clause.md).  
+ `From`Yan tümcesi, bir sorgunun kaynak verilerini ve kaynak koleksiyondaki bir öğeye başvurmak için kullanılan değişkenleri belirlemek için kullanılır. Bu değişkenlere *Aralık değişkenleri* denir. Yan tümcesi, `From` bir sorgu için, `Aggregate` yan tümcesinin yalnızca toplanmış sonuçları döndüren bir sorguyu belirlemek için kullanılması dışında, gereklidir. Daha fazla bilgi için bkz. [toplama yan tümcesi](aggregate-clause.md).  
   
  `From`Birleştirilecek birden çok koleksiyonu belirlemek için bir sorguda birden çok yan tümce belirtebilirsiniz. Birden çok koleksiyon belirtildiğinde, bunlar birbirinden bağımsız olarak yinelenir veya ilişkili olmaları durumunda bunlara katılabilirler. `Select`Yan tümcesini kullanarak veya açıkça `Join` veya yan tümceleri kullanarak koleksiyonları birleştirebilirsiniz `Group Join` . Alternatif olarak, tek bir yan tümce içinde birden fazla Aralık değişkeni ve koleksiyonlar belirterek `From` , her ilgili Aralık değişkeni ve koleksiyon diğerlerinden virgülle ayırarak belirtebilirsiniz. Aşağıdaki kod örneğinde yan tümce için her iki sözdizimi seçeneği gösterilmektedir `From` .  
   

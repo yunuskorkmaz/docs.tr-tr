@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: XML belgesi değişmez değeri (Visual Basic)'
 title: XML Belgesi Değişmez Değeri
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - XML documents [Visual Basic], creating
 - document literal [Visual Basic]
 ms.assetid: f7bbee56-0911-41de-b907-96f20450137b
-ms.openlocfilehash: bd1b2f43fce563af431d67b3817b05c7c1048314
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: d268f205c9357598a631216879b424dd8155268a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866020"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700318"
 ---
 # <a name="xml-document-literal-visual-basic"></a>XML Belgesi Değişmez Değeri (Visual Basic)
 
 Bir nesneyi temsil eden sabit değer <xref:System.Xml.Linq.XDocument> .  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <?xml version="1.0" [encoding="encoding"] [standalone="standalone"] ?>  
@@ -31,7 +32,7 @@ rootElement
   
 ## <a name="parts"></a>Bölümler  
   
-|Terim|Tanım|  
+|Süre|Tanım|  
 |---|---|  
 |`encoding`|İsteğe bağlı. Belgenin hangi kodlamayla kullandığını bildiren değişmez metin.|  
 |`standalone`|İsteğe bağlı. Değişmez değer metni. "Yes" veya "No" olmalıdır.|  

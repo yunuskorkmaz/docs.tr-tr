@@ -1,4 +1,5 @@
 ---
+description: 'İçin: öğesi hakkında daha fazla bilgi <remove><appSettings>'
 title: <appSettings> için <remove> öğesi
 ms.date: 05/01/2017
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: 218c4464-e007-4539-803f-7c8b0a909fd8
-ms.openlocfilehash: 83abbdbf0d3e4dfd16c0e8c649200c4ecc7329f7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a67003d310377ee4b896843003306201353dae91
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "77215487"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699278"
 ---
 # <a name="remove-element-for-appsettings"></a>\<appSettings> için \<remove> öğesi
 
@@ -22,7 +23,7 @@ ms.locfileid: "77215487"
 &nbsp;&nbsp;[**\<appSettings>**](appsettings-element-for-configuration.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <appSettings>
@@ -38,13 +39,13 @@ ms.locfileid: "77215487"
 
 ### <a name="parent-element"></a>Üst öğe
 
-|     | Açıklama |
+|     | Description |
 | --- | ----------- |
 | [**\<appSettings>**](appsettings-element-for-configuration.md) | Dosya yolları, XML Web hizmeti URL 'Leri veya bir uygulama için başka özel yapılandırma bilgileri gibi özel uygulama ayarlarını içerir. |
 
 ## <a name="child-elements"></a>Alt öğeleri
 
-Yok
+Hiçbiri
 
 ## <a name="example"></a>Örnek
 

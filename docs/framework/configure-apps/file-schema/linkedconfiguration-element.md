@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: <linkedConfiguration> öğesi'
 title: <linkedConfiguration> öğesi
 ms.date: 03/30/2017
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - linked configuration files
 - linkedConfiguration Element
 ms.assetid: 8eb34f3b-427e-4288-a7ff-c73f489deb45
-ms.openlocfilehash: 14ee2275ecf690ab16ffaabd71fbbe7e1a4897bc
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e4312cf788784241efc35304b632dfe1fdef1bc4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74087959"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99698667"
 ---
 # <a name="linkedconfiguration-element"></a>\<linkedConfiguration> öğesi
 
@@ -26,7 +27,7 @@ Dahil edilecek bir yapılandırma dosyasını belirtir.
 &nbsp;&nbsp;[**\<assemblyBinding>**](assemblybinding-element-for-configuration.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<linkedConfiguration>**
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <linkedConfiguration href="URL of linked configuration file" />
@@ -40,7 +41,7 @@ Dahil edilecek bir yapılandırma dosyasını belirtir.
 
 ## <a name="parent-element"></a>Üst öğe
 
-|     | Açıklama |
+|     | Description |
 | --- | ----------- |
 | [**\<assemblyBinding>** Dosyalarında](assemblybinding-element-for-configuration.md) | Yapılandırma düzeyinde derleme bağlama ilkesini belirtir. |
 
@@ -65,7 +66,7 @@ Aşağıdaki kurallar, bağlantılı yapılandırma dosyalarının kullanımın�
 
 - Tüm bağlantılı yapılandırma dosyaları, `#include` C/C++ içindeki yönergedeki davranışa benzer şekilde tek bir dosya oluşturacak şekilde birleştirilir.
 
-- **\<linkedConfiguration>** Öğesine yalnızca uygulama yapılandırma dosyalarında izin verilir; *Machine. config*dosyasında yok sayılır.
+- **\<linkedConfiguration>** Öğesine yalnızca uygulama yapılandırma dosyalarında izin verilir; *Machine.config* yok sayılır.
 
 - Döngüsel başvurular algılanır ve sonlandırılır. Diğer bir deyişle, **\<linkedConfiguration>** bir dizi yapılandırma dosyası öğesi bir döngü oluşturuyor ise döngü algılanır ve durdurulur.
 

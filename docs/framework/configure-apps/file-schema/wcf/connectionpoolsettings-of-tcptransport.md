@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi <connectionPoolSettings> edinin: <tcpTransport>'
 title: <connectionPoolSettings> / <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 2fbc3aa7-fcc9-4193-99a3-85d31d60d3f7
-ms.openlocfilehash: 53523fd550ecad931bfb2af5eb9beb71c60d44f8
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 065d3529740714ffd740c2cec71832a7b386b4a3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91176012"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99698394"
 ---
 # <a name="connectionpoolsettings-of-tcptransport"></a>\<connectionPoolSettings> / \<tcpTransport>
 

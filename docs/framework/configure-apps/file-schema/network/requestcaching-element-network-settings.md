@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: <requestCaching> öğesi (ağ ayarları)'
 title: <requestCaching> Öğesi (Ağ Ayarları)
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - requestCaching element
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
-ms.openlocfilehash: 3eb32b7ae643efdb19892410b669c1e7ff80e0ad
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d09da8ad7a38ac363aaa740cca4de25e33fa8c56
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91174166"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99698563"
 ---
 # <a name="requestcaching-element-network-settings"></a>\<requestCaching> Öğesi (Ağ Ayarları)
 
@@ -44,9 +45,9 @@ Ağ istekleri için önbelleğe alma mekanizmasını denetler.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`isPrivateCache`|Önbelleğin, farklı kullanıcıların bilgileri arasında yalıtım verip içermediğini belirtir. Varsayılan değer: `true`. Bu değer, `false` Orta katman uygulamalar için olmalıdır.|  
+|`isPrivateCache`|Önbelleğin, farklı kullanıcıların bilgileri arasında yalıtım verip içermediğini belirtir. `true` varsayılan değerdir. Bu değer, `false` Orta katman uygulamalar için olmalıdır.|  
 |`disableAllCaching`|Tüm Web yanıtları için önbelleğe almanın devre dışı bırakıldığını belirtir ve program aracılığıyla geçersiz kılınamaz.|  
-|`defaultPolicyLevel`|<xref:System.Net.Cache.RequestCacheLevel>Numaralandırmadaki değerlerden biri. Varsayılan değer: `BypassCache`.|  
+|`defaultPolicyLevel`|<xref:System.Net.Cache.RequestCacheLevel>Numaralandırmadaki değerlerden biri. `BypassCache` varsayılan değerdir.|  
 |`unspecifiedMaximumAge`|İçeriğin süresi dolduğunda, varsayılan süreyi belirtir.|  
   
 ## <a name="policylevel-attribute"></a>policyLevel özniteliği  

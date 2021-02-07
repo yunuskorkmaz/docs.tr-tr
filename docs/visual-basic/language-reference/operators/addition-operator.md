@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: + Işleci (Visual Basic)'
 title: + Operatör
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - strings [Visual Basic], concatenating
 - sum operator [Visual Basic]
 ms.assetid: 5694778f-0a2c-4539-8009-f66f318fb46d
-ms.openlocfilehash: bc31e4c66c64d891e3fffd809b7ae99b9c9a0520
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 9a6517847945cb2edcbd97adac6a013498dde174
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873453"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700695"
 ---
 # <a name="-operator-visual-basic"></a>+ İşleci (Visual Basic)
 
 İki sayı ekler veya sayısal bir ifadenin pozitif değerini döndürür. , İki dize ifadesini birleştirmek için de kullanılabilir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb
 expression1 + expression2
@@ -35,7 +36,7 @@ veya
   
 ## <a name="parts"></a>Bölümler  
   
-|Terim|Tanım|  
+|Süre|Tanım|  
 |---|---|  
 |`expression1`|Gereklidir. Herhangi bir sayısal veya dize ifadesi.|  
 |`expression2`|`+`İşleç negatif bir değer hesaplanmadığı için gereklidir. Herhangi bir sayısal veya dize ifadesi.|  
@@ -92,7 +93,7 @@ veya
   
 ## <a name="overloading"></a>Aşırı Yükleme  
 
- `+`İşleç *aşırı*yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../programming-guide/language-features/procedures/operator-procedures.md).  
+ `+`İşleç *aşırı* yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
 

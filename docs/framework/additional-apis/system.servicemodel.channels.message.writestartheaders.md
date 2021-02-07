@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Message. WriteStartHeaders yöntemi'
 title: Message. WriteStartHeaders yöntemi (System. ServiceModel. Channels)
 ms.date: 11/01/2019
 topic_type:
@@ -9,16 +10,16 @@ api_location:
 - system.servicemodel.dll
 api_type:
 - Assembly
-ms.openlocfilehash: c826e6a3b976e5705e9815586441e8a25b64f76e
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 20cadf5f1eecf6d8e02c5dc4597889abaef4ec36
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77214873"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699369"
 ---
 # <a name="messagewritestartheaders-method"></a>Message. WriteStartHeaders yöntemi
 
-Başlangıç üstbilgisini, <xref:System.ServiceModel.Channels.Message.OnWriteStartHeaders%2A?displayProperty=nameWithType> yöntemini çağırarak bir XML dosyasına yazar.
+Yöntemini çağırarak başlangıç üstbilgisini bir XML dosyasına yazar <xref:System.ServiceModel.Channels.Message.OnWriteStartHeaders%2A?displayProperty=nameWithType> .
 
 ```csharp
 internal void WriteStartHeaders(XmlDictionaryWriter writer)
@@ -32,14 +33,14 @@ internal void WriteStartHeaders(XmlDictionaryWriter writer)
 ## <a name="remarks"></a>Açıklamalar
 
 > [!WARNING]
-> `Message.WriteStartHeaders` yöntemi dahili ve doğrudan kodunuzda kullanılmamalıdır.
+> `Message.WriteStartHeaders`Yöntemi iç yöntemidir ve doğrudan kodunuzda kullanılması amaçlıyordu.
 >
 > Microsoft, bu yöntemin herhangi bir koşulda bir üretim uygulamasında kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Ad alanı:** <xref:System.ServiceModel.Channels>
+**Ad alanı:**<xref:System.ServiceModel.Channels>
 
-**Bütünleştirilmiş kod:** System. ServiceModel. dll
+**Bütünleştirilmiş kod:** System.ServiceModel.dll
 
 **.NET Framework sürümleri:** 3,0 sürümünden itibaren kullanılabilir.

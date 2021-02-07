@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: QuotedPairReader Class'
 title: QuotedPairReader sınıfı (System.Net)
 ms.date: 06/12/2020
 ms.technology: dotnet-networking
@@ -11,11 +12,12 @@ api_location:
 - System.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 898c6e9d2d5dd02f3d5f9c096ad470b5dd445d1d
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 810a7b02948a1b7aa542a179563af9a6d79dd763
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051317"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699668"
 ---
 # <a name="quotedpairreader-class"></a>QuotedPairReader sınıfı
 
@@ -50,13 +52,13 @@ internal static int CountQuotedChars(string data, int index, bool permitUnicodeE
 
 - `permitUnicodeEscaping` <xref:System.Boolean>
 
-  `true`Unicode karakterlerinin atlanmasına izin vermek için; Aksi takdirde, `false` .
+  `true` Unicode karakterlerinin atlanmasına izin vermek için; Aksi takdirde, `false` .
 
 ### <a name="return-value"></a>Döndürülen değer
 
 <xref:System.Int32?displayProperty=nameWithType>
 
-`0`Belirtilen dizindeki karakter kaçışsız ise; Aksi takdirde, ardışık olarak karakter dahil olmak üzere karakteri de içerecek şekilde ardışık tırnak işareti sayısı `index` .
+`0` Belirtilen dizindeki karakter kaçışsız ise; Aksi takdirde, ardışık olarak karakter dahil olmak üzere karakteri de içerecek şekilde ardışık tırnak işareti sayısı `index` .
 
 ### <a name="exceptions"></a>Özel durumlar
 

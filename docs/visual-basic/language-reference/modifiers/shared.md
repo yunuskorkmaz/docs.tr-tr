@@ -1,5 +1,6 @@
 ---
-title: Shared
+description: 'Daha fazla bilgi edinin: paylaşılan (Visual Basic)'
+title: Paylaşılan
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Shared
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - shared [elements VB]
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
-ms.openlocfilehash: b51c88e1af3a720912af8ba6aaf8ae4016af9cfa
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 0cc671c67486d01026f2283837448db7b00c1a0a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990193"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700760"
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
 
@@ -24,7 +25,7 @@ Bir veya daha fazla bildirilmemiş programlama öğesinin, bir sınıf veya yap�
 
 ## <a name="when-to-use-shared"></a>Paylaşılan ne zaman kullanılır
 
-Bir sınıfın veya yapının bir üyesinin paylaşılması, her örneğin kendi kopyasını sakladığı, *paylaşılmayan*değil, her örnek için kullanılabilir hale getirir. Örneğin, bir değişkenin değeri uygulamanın tamamına geçerliyse, paylaşım yararlı olur. Bu değişkenin olduğunu bildirirseniz `Shared` , tüm örnekler aynı depolama konumuna erişir ve bir örnek değişkenin değerini değiştirirse, tüm örnekler güncelleştirilmiş değere erişir.
+Bir sınıfın veya yapının bir üyesinin paylaşılması, her örneğin kendi kopyasını sakladığı, *paylaşılmayan* değil, her örnek için kullanılabilir hale getirir. Örneğin, bir değişkenin değeri uygulamanın tamamına geçerliyse, paylaşım yararlı olur. Bu değişkenin olduğunu bildirirseniz `Shared` , tüm örnekler aynı depolama konumuna erişir ve bir örnek değişkenin değerini değiştirirse, tüm örnekler güncelleştirilmiş değere erişir.
 
 Paylaşım, üyenin erişim düzeyini değiştirmez. Örneğin, bir sınıf üyesi paylaşılabilir ve özel (yalnızca sınıftan erişilebilir) veya paylaşılmayan ve genel olabilir. Daha fazla bilgi için bkz. [Visual Basic erişim düzeyleri](../../programming-guide/language-features/declared-elements/access-levels.md).
 
@@ -96,7 +97,7 @@ Paylaşım, üyenin erişim düzeyini değiştirmez. Örneğin, bir sınıf üye
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Shadows](shadows.md)
-- [Se](static.md)
+- [Static](static.md)
 - [Visual Basic'de Ömür](../../programming-guide/language-features/declared-elements/lifetime.md)
 - [Yordamlar](../../programming-guide/language-features/procedures/index.md)
 - [Yapılar](../../programming-guide/language-features/data-types/structures.md)

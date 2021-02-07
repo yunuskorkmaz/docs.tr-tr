@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Message. BodyToString yöntemi'
 title: Message. BodyToString yöntemi (System. ServiceModel. Channels)
 ms.date: 11/01/2019
 topic_type:
@@ -9,16 +10,16 @@ api_location:
 - system.servicemodel.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 9f1f852c0bd82299fd40afe66a5f90cd7c0335cf
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: babcd881d191ff46b98e9999c4ff04166479a68d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215499"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699382"
 ---
 # <a name="messagebodytostring-method"></a>Message. BodyToString yöntemi
 
-<xref:System.ServiceModel.Channels.Message.OnBodyToString%2A?displayProperty=nameWithType> yöntemini çağırarak ileti gövdesini bir dizeye dönüştürür.
+Yöntemi çağırarak ileti gövdesini bir dizeye dönüştürür <xref:System.ServiceModel.Channels.Message.OnBodyToString%2A?displayProperty=nameWithType> .
 
 ```csharp
 internal void BodyToString(XmlDictionaryWriter writer);
@@ -32,14 +33,14 @@ internal void BodyToString(XmlDictionaryWriter writer);
 ## <a name="remarks"></a>Açıklamalar
 
 > [!WARNING]
-> `Message.BodyToString` yöntemi dahili ve doğrudan kodunuzda kullanılmamalıdır.
+> `Message.BodyToString`Yöntemi iç yöntemidir ve doğrudan kodunuzda kullanılması amaçlıyordu.
 >
 > Microsoft, bu yöntemin herhangi bir koşulda bir üretim uygulamasında kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Ad alanı:** <xref:System.ServiceModel.Channels>
+**Ad alanı:**<xref:System.ServiceModel.Channels>
 
-**Bütünleştirilmiş kod:** System. ServiceModel. dll
+**Bütünleştirilmiş kod:** System.ServiceModel.dll
 
 **.NET Framework sürümleri:** 3,0 sürümünden itibaren kullanılabilir.

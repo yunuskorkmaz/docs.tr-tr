@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: yapılandırma bölümleri şeması'
 title: Yapılandırma bölümleri şeması
 ms.date: 05/02/2017
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - configuration schema [.NET Framework], custom settings in configuration files
 - elements [.NET Framework], custom settings in configuration files
 ms.assetid: 6e4cc793-c526-4007-b4e9-37d56295f2cb
-ms.openlocfilehash: fc43a9c32ba33629b6e89120cf57f6d212ab3a56
-ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
+ms.openlocfilehash: f16ca16417da0b3ee7a7d0a5ebdd1a446ec0714a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86441667"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99698966"
 ---
 # <a name="configuration-sections-schema"></a>Yapılandırma bölümleri şeması
 
@@ -25,11 +26,11 @@ Yapılandırma bölümleri şeması, yapılandırma dosyalarında özel ayarlar�
 [**\<section>**](section-element.md)
 [**\<sectionGroup>**](sectiongroup-element-for-configsections.md)
 
-|     | Açıklama |
+|     | Description |
 | --- | ----------- |
 | [**\<configSections>**](configsections-element-for-configuration.md) | Yapılandırma bölümü ve ad alanı bildirimleri içerir. |
-| [**\<section>****\<configSections>** ve için**\<sectionGroup>**](section-element.md) | Bir yapılandırma bölümü bildirimi içerir. |
-| [**\<sectionGroup>** bekleniyor**\<configSections>**](sectiongroup-element-for-configsections.md) | Yapılandırma bölümleri için bir ad alanı tanımlar. |
+| [**\<section>****\<configSections>** ve için **\<sectionGroup>**](section-element.md) | Bir yapılandırma bölümü bildirimi içerir. |
+| [**\<sectionGroup>** bekleniyor **\<configSections>**](sectiongroup-element-for-configsections.md) | Yapılandırma bölümleri için bir ad alanı tanımlar. |
 
 <a name="dep"></a>
 

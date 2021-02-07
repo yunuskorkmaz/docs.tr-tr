@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: static (Visual Basic)'
 title: Statik
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - static modifier
 - Static keyword [Visual Basic]
 ms.assetid: 19013910-4658-47b6-a22e-1744b527979e
-ms.openlocfilehash: 2b7113424969b0b18c981b0c8932aeef3795ca4a
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 03c2e3f64ac9052a0c604b8bc34782af16edbf34
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867678"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700747"
 ---
 # <a name="static-visual-basic"></a>Statik (Visual Basic)
 
@@ -53,7 +54,7 @@ Bir veya daha fazla tanımlanmış yerel değişkenin mevcut olmaya devam etmesi
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Shadows](shadows.md)
-- [Shared](shared.md)
+- [Paylaşılan](shared.md)
 - [Visual Basic'de Ömür](../../programming-guide/language-features/declared-elements/lifetime.md)
 - [Değişken Bildirimi](../../programming-guide/language-features/variables/variable-declaration.md)
 - [Yapılar](../../programming-guide/language-features/data-types/structures.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: <cryptoNameMapping> öğesi'
 title: <cryptoNameMapping> Öğesi
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <cryptoNameMapping> element
 - cryptoNameMapping element
 ms.assetid: c59c9494-149b-4ce6-b38d-371f896ae85c
-ms.openlocfilehash: 9ffae33a3c8a06d6cfcabf5a58b7d72baeda79c5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b7dac458fdda0aabf36df96b43dca1529ffe4743
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201804"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99698914"
 ---
 # <a name="cryptonamemapping-element"></a>\<cryptoNameMapping> Öğesi
 

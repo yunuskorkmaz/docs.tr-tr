@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Group by yan tümcesi (Visual Basic)'
 title: Group By Yan Tümcesi
 ms.date: 07/20/2015
 f1_keywords:
@@ -12,18 +13,18 @@ helpviewer_keywords:
 - Group By statement [Visual Basic]
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
-ms.openlocfilehash: b60f6759ada845d8eab048bceb1e47f9546ee7d0
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: f5cfb76b0f4b1d191f959ae1812140c6872e93bb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869952"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700513"
 ---
 # <a name="group-by-clause-visual-basic"></a>Group By Tümcesi (Visual Basic)
 
 Bir sorgu sonucunun öğelerini gruplandırır. , Her gruba toplam işlevleri uygulamak için de kullanılabilir. Gruplandırma işlemi bir veya daha fazla anahtara göre belirlenir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]  

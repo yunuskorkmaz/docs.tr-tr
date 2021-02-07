@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: MailAddressParser sınıfı'
 title: MailAddressParser sınıfı (System.Net)
 ms.date: 06/12/2020
 ms.technology: dotnet-networking
@@ -11,12 +12,12 @@ api_location:
 - System.dll
 api_type:
 - Assembly
-ms.openlocfilehash: ff83f6946539fa262ccde980052627f98c75601d
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 5ad534e731e283f5449b3b8cc8e87628716da9b0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051356"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699772"
 ---
 # <a name="mailaddressparser-class"></a>MailAddressParser sınıfı
 

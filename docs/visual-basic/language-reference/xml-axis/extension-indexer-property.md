@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: uzantı Dizin Oluşturucu özelliği (Visual Basic)'
 title: Extension Indexer Özelliği
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - extension indexer [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: a16a4b13-54be-432c-82b3-a87091464ada
-ms.openlocfilehash: 23417cd982c2ddf06afce69d9b120ae0737fb87d
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: ec165836f739db9a74ea266ebba32be5bb42cca6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866113"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700331"
 ---
 # <a name="extension-indexer-property-visual-basic"></a>Extension Indexer Özelliği (Visual Basic)
 
 Bir koleksiyondaki tek tek öğelere erişim sağlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 object(index)  
@@ -28,7 +29,7 @@ object(index)
   
 ## <a name="parts"></a>Bölümler  
   
-|Terim|Tanım|  
+|Süre|Tanım|  
 |---|---|  
 |`object`|Gereklidir. Sorgulanabilir bir koleksiyon. Diğer bir deyişle, veya uygulayan bir <xref:System.Collections.Generic.IEnumerable%601> koleksiyon <xref:System.Linq.IQueryable%601> .|  
 |(|Gereklidir. Dizin Oluşturucu özelliğinin başlangıcını gösterir.|  

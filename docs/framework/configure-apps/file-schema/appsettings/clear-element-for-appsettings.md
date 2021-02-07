@@ -1,4 +1,5 @@
 ---
+description: 'İçin: öğesi hakkında daha fazla bilgi <clear><appSettings>'
 title: <appSettings> için <clear> öğesi
 ms.date: 05/01/2017
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: 6d18c7be-27db-438b-8fb5-765d396b0b7b
-ms.openlocfilehash: 266d32ccb8b322f0472e0f552f9c0fc877c9a78e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 88c6a02441c038619cb74947c024de7712189915
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "77214790"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699343"
 ---
 # <a name="clear-element-for-appsettings"></a>\<appSettings> için \<clear> öğesi
 
@@ -22,7 +23,7 @@ ms.locfileid: "77214790"
 &nbsp;&nbsp;[**\<appSettings>**](appsettings-element-for-configuration.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <appSettings>
@@ -36,13 +37,13 @@ Yok
 
 ## <a name="parent-element"></a>Üst öğe
 
-|     | Açıklama |
+|     | Description |
 | --- | ----------- |
 | [**\<appSettings>**](appsettings-element-for-configuration.md) | Dosya yolları, XML Web hizmeti URL 'Leri veya diğer özel uygulama yapılandırma bilgileri gibi özel uygulama ayarlarını içerir. |
 
 ## <a name="child-elements"></a>Alt öğeleri
 
-Yok
+Hiçbiri
 
 ## <a name="example"></a>Örnek
 

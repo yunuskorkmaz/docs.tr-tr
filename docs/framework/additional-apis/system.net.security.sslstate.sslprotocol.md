@@ -1,4 +1,5 @@
 ---
+description: ': SslState. SslProtocol özelliği hakkında daha fazla bilgi edinin'
 title: SslState. SslProtocol özelliği (System .net. Security)
 ms.date: 10/21/2019
 ms.technology: dotnet-networking
@@ -11,18 +12,18 @@ api_location:
 - System.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 6983ac071dad29b240308031ecd0a3562a6856e4
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: b0b9bebf23fcd8d643d06f1cff10c260c77a7c08
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72847201"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699629"
 ---
 # <a name="sslstatesslprotocol-property"></a>SslState. SslProtocol özelliği
 
 SSL protokolü sürümlerini alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```csharp
 internal SslProtocols SslProtocol { get; }
@@ -36,14 +37,14 @@ SSL protokolü sürümlerini belirten numaralandırma değerlerinin bit düzeyin
 ## <a name="remarks"></a>Açıklamalar
 
 > [!WARNING]
-> `SslState.SslProtocol` özelliği Dahili ve doğrudan kodunuzda kullanılmamalıdır.
+> `SslState.SslProtocol`Özelliği Dahili ve doğrudan kodunuzda kullanılmamalıdır.
 >
 > Microsoft, bu özelliğin herhangi bir koşulda bir üretim uygulamasında kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Ad alanı:** <xref:System.Net.Security>
+**Ad alanı:**<xref:System.Net.Security>
 
-**Bütünleştirilmiş kod:** Sistem (System. dll içinde)
+**Bütünleştirilmiş kod:** Sistem (System.dll)
 
 **.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.

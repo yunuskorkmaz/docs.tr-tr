@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: UnsafeNclNativeMethods sınıfı'
 title: UnsafeNclNativeMethods sınıfı (System.Net)
 ms.date: 06/12/2020
 ms.technology: dotnet-networking
@@ -12,12 +13,12 @@ api_location:
 - System.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 46756a0d1d69b4768dbb8dcdd7ab098d3f1849bf
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: fa1084efddae0ba5cbfc9a949dcd94d2c64f3272
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990357"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699499"
 ---
 # <a name="unsafenclnativemethods-class"></a>UnsafeNclNativeMethods sınıfı
 

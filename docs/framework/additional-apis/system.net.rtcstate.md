@@ -1,5 +1,6 @@
 ---
-title: RtcState Sınıfı (System.Net)
+description: 'Daha fazla bilgi edinin: RtcState Class'
+title: RtcState sınıfı (System.Net)
 ms.date: 11/01/2019
 ms.technology: dotnet-networking
 topic_type:
@@ -11,32 +12,32 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 6f0b8902-f31c-4ab9-a8c9-de43228995ec
-ms.openlocfilehash: 861bf2fc0dfef8f836e98e45ba22c7e2e24e19f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea16b46a918387d2333124ad82ec7b707627575e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155784"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699616"
 ---
-# <a name="rtcstate-class"></a>RtcState Sınıfı
+# <a name="rtcstate-class"></a>RtcState sınıfı
 
-Sınıf, `RtcState` gerçek zamanlı iletişim (RTC) isteği için durum verilerini temsil eder.
+`RtcState`Sınıfı, gerçek zamanlı iletişim (RTC) isteği için durum verilerini temsil eder.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
   
 ```csharp  
 internal class RtcState
 ```
 
 > [!WARNING]
-> Sınıf `RtcState` dahilidir ve doğrudan kodunuzda kullanılmamalıdır.
+> `RtcState`Sınıfı dahili ve doğrudan kodunuzda kullanılması amaçlıyordu.
 >
-> Microsoft, hiçbir koşulda bir üretim uygulamasında bu sınıfın kullanımını desteklemez.
+> Microsoft, bu sınıfın herhangi bir koşulda bir üretim uygulamasında kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
 **Ad alanı:**<xref:System.Net>
 
-**Montaj:** Sistem (System.dll'de)
+**Bütünleştirilmiş kod:** Sistem (System.dll)
 
-**.NET Framework sürümleri:** 4.5'ten beri mevcuttur.
+**.NET Framework sürümleri:** 4,5 sürümünden itibaren kullanılabilir.

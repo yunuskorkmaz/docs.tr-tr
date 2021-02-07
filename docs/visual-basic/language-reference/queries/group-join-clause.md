@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Group JOIN tümcesi (Visual Basic)'
 title: Group Join Yan Tümcesi
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - Group Join statement [Visual Basic]
 - queries [Visual Basic], Group Join
 ms.assetid: 37dbf79c-7b5c-421b-bbb7-dadfd2b92a1c
-ms.openlocfilehash: 8d5f3ec80cb39825a3a283907d614b9be28e6e91
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 177dc2b41c923bc8c1ae0477c3905e8adad36fbe
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869911"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700487"
 ---
 # <a name="group-join-clause-visual-basic"></a>Group Join Tümcesi (Visual Basic)
 
 İki koleksiyonu tek bir hiyerarşik koleksiyonda birleştirir. JOIN işlemi, eşleşen anahtarları temel alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 Group Join element [As type] In collection _  
@@ -32,7 +33,7 @@ Group Join element [As type] In collection _
   
 ## <a name="parts"></a>Bölümler  
   
-|Terim|Tanım|  
+|Süre|Tanım|  
 |---|---|  
 |`element`|Gereklidir. Birleştirilen koleksiyonun denetim değişkeni.|  
 |`type`|İsteğe bağlı. Türü `element` . Hayır `type` belirtilmemişse, türü `element` öğesinden çıkarsanamıyor `collection` .|  
@@ -66,4 +67,4 @@ Group Join element [As type] In collection _
 - [From yan tümcesi](from-clause.md)
 - [JOIN yan tümcesi](join-clause.md)
 - [WHERE yan tümcesi](where-clause.md)
-- [Group By Yan Tümcesi](group-by-clause.md)
+- [Group by yan tümcesi](group-by-clause.md)

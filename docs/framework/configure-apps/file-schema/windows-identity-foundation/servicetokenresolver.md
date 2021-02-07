@@ -1,14 +1,15 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <serviceTokenResolver>'
 title: <serviceTokenResolver>
 ms.date: 03/30/2017
 ms.assetid: 6e9001e1-e064-4f47-84b2-46225c177746
 author: BrucePerlerMS
-ms.openlocfilehash: 3ea9684245bd1c1c3b9ce171a045fff49d0ba592
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ab24c92eee43324365adb3bb3a64c8a765017a53
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91156920"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99698303"
 ---
 # \<serviceTokenResolver>
 
@@ -48,7 +49,7 @@ Belirteç işleyici koleksiyonundaki işleyiciler tarafından kullanılan hizmet
   
 ### <a name="child-elements"></a>Alt Öğeler  
 
- Hiçbiri  
+ Yok  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   

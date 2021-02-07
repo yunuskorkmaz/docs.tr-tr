@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: <ipv6> öğesi (ağ ayarları)'
 title: <ipv6> Öğesi (Ağ Ayarları)
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <ipv6> element
 - ipv6 element
 ms.assetid: 10b79aef-327b-4718-a892-e11f55e4d169
-ms.openlocfilehash: 44ef0b8e1b6dc6ad0efde6b26ad7d4700e06f2c7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 667acaebdb290140f67ea36020bb191cd1a44f34
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91178339"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99698654"
 ---
 # <a name="ipv6-element-network-settings"></a>\<ipv6> Öğesi (Ağ Ayarları)
 
@@ -40,7 +41,7 @@ ms.locfileid: "91178339"
   
 |**Öznitelik**|**Açıklama**|  
 |-------------------|---------------------|  
-|`enabled`|<xref:System.Net.Dns>Sınıfın üyelerinin Internet Protokolü sürüm 6 (IPv6) adresleri döndürmeyeceğini belirtir. Varsayılan değer: `false`.|  
+|`enabled`|<xref:System.Net.Dns>Sınıfın üyelerinin Internet Protokolü sürüm 6 (IPv6) adresleri döndürmeyeceğini belirtir. `false` varsayılan değerdir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
 
@@ -48,7 +49,7 @@ ms.locfileid: "91178339"
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
-|**Dosyalarında**|**Açıklama**|  
+|**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
 |[ayarlar](settings-element-network-settings.md)|Ad alanı için temel ağ seçeneklerini yapılandırır <xref:System.Net> .|  
   

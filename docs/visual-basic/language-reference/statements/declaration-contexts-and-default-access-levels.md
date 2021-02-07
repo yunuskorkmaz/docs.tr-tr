@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: bildirim bağlamları ve varsayılan erişim düzeyleri (Visual Basic)'
 title: Bildirim Bağlamları ve Varsayılan Erişim Düzeyleri
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - access levels, Visual Basic
 - access levels, default levels
 ms.assetid: bf63b96e-e825-4745-88c8-5dae222728db
-ms.openlocfilehash: a659481b34b8b44f1f387b464d5d9656ed98ab3f
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: c550db39862fbe9f69e5651b6e9fc7fdfcc88513
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874957"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700344"
 ---
 # <a name="declaration-contexts-and-default-access-levels-visual-basic"></a>Bildirim Bağlamları ve Varsayılan Erişim Düzeyleri (Visual Basic)
 
@@ -22,7 +23,7 @@ Bu konuda, hangi Visual Basic türlerinin diğer türler içinde bildirilebilece
   
 ## <a name="declaration-context-levels"></a>Bildirim bağlamı düzeyleri  
 
- Bir programlama öğesinin *Bildirim bağlamı* , bildirildiği kodun bölgesidir. Bu, genellikle *kapsayan öğe*olarak adlandırılan diğer bir programlama öğesidir.  
+ Bir programlama öğesinin *Bildirim bağlamı* , bildirildiği kodun bölgesidir. Bu, genellikle *kapsayan öğe* olarak adlandırılan diğer bir programlama öğesidir.  
   
  Bildirim bağlamlarının düzeyleri şunlardır:  
   
@@ -56,5 +57,5 @@ Bu konuda, hangi Visual Basic türlerinin diğer türler içinde bildirilebilece
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Arkadaş](../modifiers/friend.md)
-- [Özelleştirme](../modifiers/private.md)
-- [Geneldir](../modifiers/public.md)
+- [Özel](../modifiers/private.md)
+- [Genel](../modifiers/public.md)

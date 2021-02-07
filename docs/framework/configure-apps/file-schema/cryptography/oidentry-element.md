@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: <oidEntry> öğesi'
 title: <oidEntry> Öğesi
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <oidEntry> element
 - oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
-ms.openlocfilehash: 2207c934f5864890d9b7a5e22c43a1d53e29aaa5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d5fe22018377e247ffa0b6addb58cbeee7119e66
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91187114"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99698758"
 ---
 # <a name="oidentry-element"></a>\<oidEntry> Öğesi
 

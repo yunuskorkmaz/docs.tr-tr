@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <add> ıviewmesettings için öğesi (Uri Ayarları)'
 title: schemeSettings için <add> Öğesi (Uri Ayarları)
 ms.date: 03/30/2017
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
-ms.openlocfilehash: 55fcba41d4dabf8937ebaa11235e9309bcb57952
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c372577af1c7fbfe669455b50c8b55c82da4fc52
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91149467"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99698627"
 ---
 # <a name="add-element-for-schemesettings-uri-settings"></a>schemeSettings için \<add> Öğesi (Uri Ayarları)
 
@@ -45,7 +46,7 @@ Düzen adı için bir düzen ayarı ekler.
   
 ### <a name="child-elements"></a>Alt Öğeler  
 
- Hiçbiri  
+ Yok  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
