@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: XML belgeleri ve verileri'
 title: XML Belgeleri ve Verileri
 ms.date: 03/30/2017
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
-ms.openlocfilehash: db122d1f2fa4ad192bbcc92769873850916a4220
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c2f64c218f2f6051f27087a98616b17e57583f75
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830252"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99713669"
 ---
 # <a name="xml-documents-and-data"></a>XML Belgeleri ve Verileri
 
@@ -25,7 +26,7 @@ ms.locfileid: "94830252"
 
 Tam liste için [.NET API tarayıcısında](../../../../api/index.md?term=system.xml)"System.Xml" araması yapın.
 
-Bu ad alanındaki sınıflar World Wide Web Konsorsiyumu (W3C) önerilerini destekler. Örnek:
+Bu ad alanındaki sınıflar World Wide Web Konsorsiyumu (W3C) önerilerini destekler. Örneğin:
 
 - <xref:System.Xml.XmlDocument?displayProperty=nameWithType>Sınıfı, [W3C belge nesne MODELI (DOM) düzey 1 Core](https://www.w3.org/TR/REC-DOM-Level-1/) ve [DOM düzey 2 temel](https://www.w3.org/TR/DOM-Level-2-Core/) önerilerini uygular.
 

@@ -1,13 +1,14 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ServiceTimeoutsBehavior'
 title: ServiceTimeoutsBehavior
 ms.date: 03/30/2017
 ms.assetid: 4412525d-a3cc-4eae-b3e8-a50ce766d09d
-ms.openlocfilehash: 867219130fc853f3ba2c1c2f807b1651f6480f13
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 147d249af0e87bc41da93a4a31355da7053caaf6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96273977"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99715424"
 ---
 # <a name="servicetimeoutsbehavior"></a>ServiceTimeoutsBehavior
 

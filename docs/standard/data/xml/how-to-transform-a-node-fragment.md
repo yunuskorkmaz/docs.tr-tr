@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: düğüm parçasını dönüştürme'
 title: 'Nasıl yapılır: Düğüm Parçasını Dönüştürme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 73a6c582-b9d7-4fa7-9a05-6d931e1f3de8
-ms.openlocfilehash: f5eb8e7826dd132fd46f6f476335416e7dd03269
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9373491837fdfb176547aa7e01b8ebf72ae91bef
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722693"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99713773"
 ---
 # <a name="how-to-transform-a-node-fragment"></a>Nasıl yapılır: Düğüm Parçasını Dönüştürme
 
@@ -45,7 +46,7 @@ Bir veya nesnesinde bulunan verileri dönüştürdüğünüzde <xref:System.Xml.
 
  [!code-xml[XSLT_NodeFrag#2](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_NodeFrag/XML/single.xsl#2)]  
   
-### <a name="output"></a>Çıkış  
+### <a name="output"></a>Çıktı  
 
  Kitap başlığı, güvenirlik Man.  
   

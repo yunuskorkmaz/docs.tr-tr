@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: Windows hizmet Konağı'
 title: Windows Hizmet Konağı
 ms.date: 03/30/2017
 helpviewer_keywords:
 - NT Service
 - NT Service Host Sample [Windows Communication Foundation]
 ms.assetid: 1b2f45c5-2bed-4979-b0ee-8f9efcfec028
-ms.openlocfilehash: 305cf7897483dbc8e57217cf8098f4e790e2a4c8
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 529256675723e556879b8380f514ab1b0a5b7f8f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96244970"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99715138"
 ---
 # <a name="windows-service-host"></a>Windows Hizmet Konağı
 

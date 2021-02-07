@@ -1,13 +1,14 @@
 ---
+description: 'Bu konuda daha fazla bilgi edinin: TcpConnectionPoolSettings'
 title: TcpConnectionPoolSettings
 ms.date: 03/30/2017
 ms.assetid: 19acfba3-c057-4dbc-bac7-8674d7844d83
-ms.openlocfilehash: de00cac851e4c6d0fd6df16f3a01b65bb5f43415
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 927fcba7f94bcbfa80e06479e79bf20986a661e3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96294683"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99715203"
 ---
 # <a name="tcpconnectionpoolsettings"></a>TcpConnectionPoolSettings
 

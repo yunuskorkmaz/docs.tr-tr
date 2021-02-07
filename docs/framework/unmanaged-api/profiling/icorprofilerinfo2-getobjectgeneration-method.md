@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ICorProfilerInfo2:: GetObjectGeneration yöntemi'
 title: ICorProfilerInfo2::GetObjectGeneration Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: b0d25f76-0bd5-4aa6-96cf-bfec0e1de28b
 topic_type:
 - apiref
-ms.openlocfilehash: 4ba404692bef84c0522a799c61f07eac341eaab4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f4927c081393a11f7dad7d59cce311b82072659c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95703856"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99716451"
 ---
 # <a name="icorprofilerinfo2getobjectgeneration-method"></a>ICorProfilerInfo2::GetObjectGeneration Yöntemi
 
 Belirtilen nesneyi içeren yığının segmentini alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetObjectGeneration(  

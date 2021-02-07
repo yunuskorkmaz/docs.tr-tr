@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ICorProfilerInfo2:: GetStaticFieldInfo yöntemi'
 title: ICorProfilerInfo2::GetStaticFieldInfo Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: fc663e76-e23f-49a8-bdd5-52cdf1a3b2b3
 topic_type:
 - apiref
-ms.openlocfilehash: ff84bdfb8bbd5331fb94eed766f09137adf9e62c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1acde9d5ad1a35b11cb036bced99c1909f0b6b04
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95703850"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99716365"
 ---
 # <a name="icorprofilerinfo2getstaticfieldinfo-method"></a>ICorProfilerInfo2::GetStaticFieldInfo Yöntemi
 
 Belirtilen alan için geçerli olan statik türünü gösteren bir değer alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetStaticFieldInfo (  

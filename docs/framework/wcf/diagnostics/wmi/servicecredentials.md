@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: ServiceCredentials'
 title: ServiceCredentials
 ms.date: 03/30/2017
 ms.assetid: 9c780793-4785-46f7-add9-ac1ebeadb614
-ms.openlocfilehash: d7e89acedc8fc1004b0198172e58813944df85f3
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: bfd025a8f671a3c5aea537059cde0e751cfa9bb9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96262313"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99715554"
 ---
 # <a name="servicecredentials"></a>ServiceCredentials
 

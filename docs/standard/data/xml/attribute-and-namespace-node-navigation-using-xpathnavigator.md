@@ -1,17 +1,18 @@
 ---
+description: 'Daha fazla bilgi edinin: XPathNavigator kullanarak öznitelik ve ad alanı düğümü gezintisi'
 title: XPathNavigator Kullanarak Öznitelik ve Ad Alanı Düğümünde Gezinme
 ms.date: 03/30/2017
 ms.assetid: 23975f88-e0af-4b88-93de-9e20e11880ad
-ms.openlocfilehash: d561afdc477119a6d9d04eacfcd6a6bdb9d0e2d6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0924f7177485a87376e97501effa28e494be90b3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725397"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99714111"
 ---
 # <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a>XPathNavigator Kullanarak Öznitelik ve Ad Alanı Düğümünde Gezinme
 
-<xref:System.Xml.XPath.XPathNavigator>Sınıfı, bir veya nesnesi içindeki düğüm kümelerinde gezinmek için kullanılan ilk küme, bir veya nesne içindeki *düğüm kümelerine* gitmek için kullanılır [Node Set Navigation Using XPathNavigator](node-set-navigation-using-xpathnavigator.md) <xref:System.Xml.XPath.XPathDocument> <xref:System.Xml.XmlDocument> . Bu konuda açıklanan ikinci küme, veya nesne içindeki *öznitelik ve ad alanı düğümlerine* gezinmek için kullanılır <xref:System.Xml.XPath.XPathDocument> <xref:System.Xml.XmlDocument> .  
+<xref:System.Xml.XPath.XPathNavigator>Sınıfı, bir veya nesnesi içindeki düğüm kümelerinde gezinmek için kullanılan ilk küme, bir veya nesne içindeki *düğüm kümelerine* gitmek için kullanılır [](node-set-navigation-using-xpathnavigator.md) <xref:System.Xml.XPath.XPathDocument> <xref:System.Xml.XmlDocument> . Bu konuda açıklanan ikinci küme, veya nesne içindeki *öznitelik ve ad alanı düğümlerine* gezinmek için kullanılır <xref:System.Xml.XPath.XPathDocument> <xref:System.Xml.XmlDocument> .  
   
 ## <a name="attribute-node-navigation"></a>Öznitelik düğümü gezintisi  
 

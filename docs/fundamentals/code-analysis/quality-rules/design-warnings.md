@@ -11,12 +11,12 @@ helpviewer_keywords:
 - rules, design
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 7b49403b1aa3d48008e6f7448ab0ed5a84468373
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: 548e0eaaa6239a9b9ee6a08677cd720710bb48c2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851535"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99714137"
 ---
 # <a name="design-rules"></a>Tasarım kuralları
 
@@ -24,7 +24,7 @@ Tasarım kuralları [.NET Framework Tasarım yönergelerine](../../../standard/d
 
 ## <a name="in-this-section"></a>Bu bölümde
 
-| Kural | Açıklama |
+| Kural | Description |
 | - | - |
 | [CA1000: Genel türlerde statik üyeler belirtme](ca1000.md) | Genel türün statik üyesi çağrıldığında tür bağımsız değişkeni tür için belirlenmelidir. Destek çıkarımı desteklenmeyen genel örnek üyesi çağrıldığında tür bağımsız değişkeni üye için belirlenmelidir. Bu iki durumda tür bağımsız değişkenini belirleyen sözdizimi farklıdır ve kolaylıkla karıştırılır. |
 | [CA1001: Atılabilen alanlara sahip türler atılabilir olmalıdır](ca1001.md) | Bir sınıf, System. IDisposable türünde bir örnek alanı bildirir ve uygular ve sınıf IDisposable uygulamaz. IDisposable alanını derleyen sınıf, yönetilmeyen kaynağı dolaylı yoldan sahiplenir ve IDisposable arayüzünü uygulamalıdır. |
@@ -75,4 +75,3 @@ Tasarım kuralları [.NET Framework Tasarım yönergelerine](../../../standard/d
 | [CA1068: CancellationToken parametreleri en sonda olmalıdır](ca1068.md) | Bir yöntem, son parametre olmayan CancellationToken parametresine sahiptir. |
 | [CA1069: Sabit listeleri yinelenen değerlere sahip olmamalıdır](ca1069.md) | Bir numaralandırma, aynı sabit değere açıkça atanmış birden çok üyeye sahiptir. |
 | [CA1070: Olay alanlarını sanal olarak bildirme](ca1070.md) | [Alan benzeri bir olay](../../../csharp/event-pattern.md#defining-and-raising-field-like-events) sanal olarak bildirildi. |
-| [CA1071: geçersiz kılma tabanı. IEquatable uygularken eşittir](ca1071.md) | Türetilmiş bir tür uygular <xref:System.IEquatable%601> , ancak temel sınıf yöntemini geçersiz kılmaz <xref:System.IEquatable%601.Equals%2A> . |

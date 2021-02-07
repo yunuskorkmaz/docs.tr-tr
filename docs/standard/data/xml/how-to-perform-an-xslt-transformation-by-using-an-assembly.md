@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: derleme kullanarak XSLT dönüşümü gerçekleştirme'
 title: 'Nasıl yapılır: Derleme Kullanarak XSLT Dönüşümü Gerçekleştirme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
-ms.openlocfilehash: 64ae2ecf4dac15170115e232fca0ddee272afd0f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d080d8690c8a3a94867d7e2cca0a73bd9410c962
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722706"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99713812"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Nasıl yapılır: Derleme Kullanarak XSLT Dönüşümü Gerçekleştirme
 

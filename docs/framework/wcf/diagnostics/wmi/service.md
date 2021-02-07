@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: hizmet'
 title: Hizmet
 ms.date: 03/30/2017
 ms.assetid: 999806e1-6376-409e-b998-b0af391adfe7
-ms.openlocfilehash: aa4eecbcc8a2ef818cd99d777b0e3c2f1f222e46
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e66f9a23f8c182327899904c26ff6a6368b9bdc6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96273288"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99715632"
 ---
 # <a name="service"></a>Hizmet
 
@@ -89,7 +90,7 @@ class Service
   
  Hizmet örneği uzantılarının örnek bağlamları.  
   
-### <a name="metadata"></a>Meta Veriler  
+### <a name="metadata"></a>Meta veri  
 
  Veri türü: dize dizisi  
   
@@ -97,7 +98,7 @@ class Service
   
  Hizmet meta verileri ayarları.  
   
-### <a name="name"></a>Adı  
+### <a name="name"></a>Name  
 
  Veri türü: dize  
   

@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi: öğe ve öznitelik Içeren yeni düğümler için varlık başvurusu genişletmesi üzerinde ad alanı etkileri'
 title: Öğe ve Öznitelikler İçeren Yeni Düğümler için Varlık Başvurusu Genişlemesine Ad Alanı Etkisi
 ms.date: 03/30/2017
 ms.assetid: 64359aee-aab0-4042-9a32-d19789af6ca7
-ms.openlocfilehash: 1d3d0a8bddfa2ca68a7be63d09ae6873e994ed44
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 48345d75f9cf77f8e70655c8f166978cafbf06c1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95714438"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99713487"
 ---
 # <a name="namespace-affect-on-entity-reference-expansion-for-new-nodes-containing-elements-and-attributes"></a>Öğe ve Öznitelikler İçeren Yeni Düğümler için Varlık Başvurusu Genişlemesine Ad Alanı Etkisi
 

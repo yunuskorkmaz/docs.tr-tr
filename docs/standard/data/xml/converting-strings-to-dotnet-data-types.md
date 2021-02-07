@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: dizeleri .NET veri türlerine dönüştürme'
 title: Dizeleri .NET veri türlerine dönüştürme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
-ms.openlocfilehash: 0cee7481f9c002f860bff7f12b8be0bb763dadb1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2960657dc4d4a31eed85a9b8af04976692a4dc9f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95701477"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99713942"
 ---
 # <a name="convert-strings-to-net-data-types"></a>Dizeleri .NET veri türlerine Dönüştür
 
@@ -33,7 +34,7 @@ Bir dizeyi .NET veri türüne dönüştürmek istiyorsanız, uygulama gereksinim
 > [!NOTE]
 > Tabloda listelenen herhangi bir .NET türünü **ToString** yöntemini kullanarak bir dizeye dönüştürürseniz, döndürülen dize temel tür değildir, ancak XML ŞEMASı (xsd) dize türüdür.  
   
- **DateTime** ve **TimeSpan** değer türü, bir **Tarih** saat içinde anlık bir zaman aralığını temsil ettiğinden, bir **TimeSpan** değeri bir zaman aralığı temsil ettiğinden farklılık gösterir. **DateTime** ve **TIMESPAN** biçimleri, XML şeması (xsd) veri türleri belirtiminde belirtilir. Örnek:  
+ **DateTime** ve **TimeSpan** değer türü, bir **Tarih** saat içinde anlık bir zaman aralığını temsil ettiğinden, bir **TimeSpan** değeri bir zaman aralığı temsil ettiğinden farklılık gösterir. **DateTime** ve **TIMESPAN** biçimleri, XML şeması (xsd) veri türleri belirtiminde belirtilir. Örneğin:  
   
 ```vb  
 Dim writer As New XmlTextWriter("myfile.xml", Nothing)  

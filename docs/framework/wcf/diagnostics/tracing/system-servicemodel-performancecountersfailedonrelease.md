@@ -1,19 +1,20 @@
 ---
+description: ': System. ServiceModel. PerformanceCountersFailedOnRelease hakkında daha fazla bilgi edinin'
 title: System.ServiceModel.PerformanceCountersFailedOnRelease
 ms.date: 03/30/2017
 ms.assetid: ec1a7bb1-c787-45ec-8292-73d104f3d7bb
-ms.openlocfilehash: 14fc7d0c35bef463bf33bd66889736e5058c7835
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9eb679419c5b1d1e1de95c9f120178e459bd4e7c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96252640"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99716074"
 ---
 # <a name="systemservicemodelperformancecountersfailedonrelease"></a>System.ServiceModel.PerformanceCountersFailedOnRelease
 
 System.ServiceModel.PerformanceCountersFailedOnRelease  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Performans sayaçlarının kaldırılması başarısız oldu.  
   

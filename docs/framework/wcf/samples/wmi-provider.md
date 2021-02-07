@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: WMI sağlayıcısı'
 title: WMI Sağlayıcısı
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 9d654527c6897e071f914d4015ba9a225974b0f1
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 23d673f55781204fb4ce54d7d8ee0dab7933484f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96263803"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99715099"
 ---
 # <a name="wmi-provider"></a>WMI Sağlayıcısı
 

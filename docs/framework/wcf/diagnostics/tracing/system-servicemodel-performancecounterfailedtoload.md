@@ -1,19 +1,20 @@
 ---
+description: ': System. ServiceModel. PerformanceCounterFailedToLoad hakkında daha fazla bilgi edinin'
 title: System.ServiceModel.PerformanceCounterFailedToLoad
 ms.date: 03/30/2017
 ms.assetid: 776ceeae-b0b7-4710-b9ce-592be610025b
-ms.openlocfilehash: 29029a5e791d03002bd15b4fa2f0ae465a523c24
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7a1f343fb8ac171047f46ce263a107c88c5f8883
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96252679"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99716087"
 ---
 # <a name="systemservicemodelperformancecounterfailedtoload"></a>System.ServiceModel.PerformanceCounterFailedToLoad
 
 System.ServiceModel.PerformanceCounterFailedToLoad  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bir performans sayacı yüklenemedi. Bazı performans sayaçları kullanılamıyor.  
   

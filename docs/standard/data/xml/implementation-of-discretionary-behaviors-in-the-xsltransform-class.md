@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: XslTransform sınıfında Isteğe bağlı davranışların uygulanması'
 title: XslTransform Sınıfında İsteğe Bağlı Davranışların Uygulanması
 ms.date: 03/30/2017
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
-ms.openlocfilehash: 7617970ead6c2d75b7ca9749578ba66efec311bc
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 56936183f635a002d2226bd8e91a6539308259e5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829420"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99713760"
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>XslTransform Sınıfında İsteğe Bağlı Davranışların Uygulanması
 
@@ -21,7 +22,7 @@ Bu nedenle, W3C tarafından izin verilen her bir isteğe bağlı davranış içi
 |Sorun|Davranış|Section|
 |-------------|--------------|-------------|
 |Bir metin düğümü `xsl:strip-space` ve ile eşleşir `xsl:preserve-space` .|Kurtar|3.4|
-|Kaynak düğüm, birden fazla şablon kuralıyla eşleşiyor.|Kurtar|5,5|
+|Kaynak düğüm, birden fazla şablon kuralıyla eşleşiyor.|Kurtar|5.5|
 |Ad alanı Tekdüzen Kaynak tanımlayıcısı (URI), birden çok ad alanı URI 'si için bir diğer ad olarak, hepsi aynı içeri aktarma önceliğine sahip olacak şekilde bildirilmiştir.|Kurtar|7.1.1|
 |' Deki `xsl:attribute` ve `xsl:element` öznitelik değeri şablonundan oluşturulan ad özniteliği geçerli bir nitelenmiş ad (QName) değil.|Özel durum oluştu|7.1.2 ve 7.1.3|
 |Alt düğümler zaten öğe düğümüne eklendikten sonra bir öğeye öznitelik ekleme.|Kurtar|7.1.3|
@@ -34,13 +35,13 @@ Bu nedenle, W3C tarafından izin verilen her bir isteğe bağlı davranış içi
 |İçeriğinin örneğini oluşturma sonuçları `xsl:comment` "--" dizesini içerir veya "-" ile biter.|Kurtar|7.4|
 |`xsl:comment`Metin düğümlerinden farklı oluşturulan düğümlerin içeriğini örnekleniyor sonuçları.|Kurtar|7.4|
 |Değişken bağlama öğesi içindeki şablon bir öznitelik düğümü veya bir ad alanı düğümü döndürür.|Kurtar|11,2|
-|Belge işlevine geçilen URI 'den kaynak alınırken bir hata oluştu.|Özel durum oluştu|12,1|
-|Belge işlevindeki URI başvurusu bir parça tanımlayıcısı içeriyor ve parça tanımlayıcısı işlenirken bir hata oluştu.|Özel durum oluştu|12,1|
+|Belge işlevine geçilen URI 'den kaynak alınırken bir hata oluştu.|Özel durum oluştu|12.1|
+|Belge işlevindeki URI başvurusu bir parça tanımlayıcısı içeriyor ve parça tanımlayıcısı işlenirken bir hata oluştu.|Özel durum oluştu|12.1|
 |İçinde adlandırılmayan aynı ada sahip birden çok öznitelik vardır `cdata-section-elements` `xls:output` ve bu özniteliklerin aynı içeri aktarma önceliği vardır.|Kurtar|16|
 |İşlemci, öğesinin özniteliğinde verilen karakter kodlama değerini desteklemiyor `encoding` `xsl:output` .|Kurtar|16,1|
-|`disable-output-escaping` bir metin düğümü için kullanılır ve bu metin düğümü, sonuç ağacındaki bir metin düğümü dışında bir öğe oluşturmak için kullanılır.|`disable-output-escaping` öznitelik yoksayıldı|16,4|
-|Sonuç ağacı parçası, çıkış kaçış özelliği etkinleştirilmiş bir metin düğümü içeriyorsa, sonuç ağacı parçasını sayıya veya dizeye dönüştürme.|Yoksayıldı|16,4|
-|XSLT işlemcisinin çıktı için kullandığı kodlamada temsil edilemeyecek karakterler için çıkış kaçış devre dışı bırakıldı.|Yoksayıldı|16,4|
+|`disable-output-escaping` bir metin düğümü için kullanılır ve bu metin düğümü, sonuç ağacındaki bir metin düğümü dışında bir öğe oluşturmak için kullanılır.|`disable-output-escaping` öznitelik yoksayıldı|16.4|
+|Sonuç ağacı parçası, çıkış kaçış özelliği etkinleştirilmiş bir metin düğümü içeriyorsa, sonuç ağacı parçasını sayıya veya dizeye dönüştürme.|Yoksayıldı|16.4|
+|XSLT işlemcisinin çıktı için kullandığı kodlamada temsil edilemeyecek karakterler için çıkış kaçış devre dışı bırakıldı.|Yoksayıldı|16.4|
 |Bir öğeye alt öğe eklendikten sonra veya öznitelikleri eklendikten sonra bir ad alanı düğümü ekleme|Kurtar|Errampae25|
 |`xsl:number` NaN, Infinite veya 0,5 ' den küçük.|Kurtar|Errampae24|
 |İkinci bağımsız değişken düğümü-belge işlevine ayarlanan boş ve URI başvurusu göreli|Kurtar|Errampae14|
