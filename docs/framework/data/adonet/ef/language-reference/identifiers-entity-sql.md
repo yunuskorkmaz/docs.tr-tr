@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: tanımlayıcılar (Entity SQL)'
 title: Tanımlayıcılar (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
-ms.openlocfilehash: 7e9b12ca351b021fab62988969cb98310cb55cc2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 932f45e8b65b6244eada330caeb9a04b6560d427
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203702"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99748667"
 ---
 # <a name="identifiers-entity-sql"></a>Tanımlayıcılar (Entity SQL)
 

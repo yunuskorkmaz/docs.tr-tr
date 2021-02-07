@@ -1,20 +1,21 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: Model-Defined Işlevlerini nesne yöntemleri olarak çağırma'
 title: 'Nasıl Yapılır: Model Tanımlı İşlevleri Nesne Yöntemleri Olarak Çağırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
-ms.openlocfilehash: 5e5ae2fd838a34d7f665b23a14db2a599367e801
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 46f171d5785bf715382e87c3fb7dae932db0bb65
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197800"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99748680"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>Nasıl Yapılır: Model Tanımlı İşlevleri Nesne Yöntemleri Olarak Çağırma
 
-Bu konu, model tanımlı bir işlevin bir <xref:System.Data.Objects.ObjectContext> nesne veya özel bir sınıfta statik bir yöntem olarak nasıl çağrılacağını açıklar. *Model tanımlı bir işlev* , kavramsal modelde tanımlanan bir işlevdir. Konusundaki yordamlar, LINQ to Entities sorgulardan onları çağırmak yerine, bu işlevlerin doğrudan nasıl çağrılacağını açıklamaktadır. LINQ to Entities sorgularda model tanımlı işlevleri çağırma hakkında daha fazla bilgi için bkz. [nasıl yapılır: sorgularda model tanımlı Işlevleri çağırma](how-to-call-model-defined-functions-in-queries.md).  
+Bu konu, model tanımlı bir işlevin bir <xref:System.Data.Objects.ObjectContext> nesne veya özel bir sınıfta statik bir yöntem olarak nasıl çağrılacağını açıklar. *Model tanımlı bir işlev* , kavramsal modelde tanımlanan bir işlevdir. Konusundaki yordamlar, LINQ to Entities sorgulardan onları çağırmak yerine, bu işlevlerin doğrudan nasıl çağrılacağını açıklamaktadır. LINQ to Entities sorgularda model tanımlı işlevleri çağırma hakkında daha fazla bilgi için bkz. [nasıl yapılır: sorgularda Model-Defined Işlevleri çağırma](how-to-call-model-defined-functions-in-queries.md).  
   
  Model tanımlı bir işlevi bir <xref:System.Data.Objects.ObjectContext> Yöntem olarak veya özel bir sınıfta statik bir yöntem olarak çağırdığınıza göre, öncelikle yöntemi ile model tanımlı işlev ile eşlemeniz gerekir <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> . Ancak, sınıfında bir yöntemi tanımladığınızda <xref:System.Data.Objects.ObjectContext> , <xref:System.Data.Objects.ObjectContext.QueryProvider%2A> LINQ sağlayıcısını göstermek için özelliğini kullanmanız gerekir, ancak özel bir sınıfta statik bir yöntem TANıMLADıĞıNıZDA, <xref:System.Linq.IQueryable.Provider%2A> LINQ sağlayıcısını göstermek için özelliğini kullanmanız gerekir. Daha fazla bilgi için aşağıdaki yordamları izleyen örneklere bakın.  
   
@@ -46,7 +47,7 @@ Bu konu, model tanımlı bir işlevin bir <xref:System.Data.Objects.ObjectContex
   
 ## <a name="example"></a>Örnek  
 
- **Bir ObjectContext nesnesinde model tanımlı bir Işlevi Yöntem olarak çağırma**  
+ **Bir Model-Defined Işlevini bir ObjectContext nesnesi üzerinde yöntem olarak çağırma**  
   
  Aşağıdaki örnek, model tanımlı bir işlevin bir nesne üzerinde yöntem olarak nasıl çağrılacağını gösterir <xref:System.Data.Objects.ObjectContext> . Örnek, [AdventureWorks Sales modelini](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)kullanır.  
   
@@ -90,7 +91,7 @@ Bu konu, model tanımlı bir işlevin bir <xref:System.Data.Objects.ObjectContex
   
 ## <a name="example"></a>Örnek  
 
- **Model tanımlı Işlevi özel bir sınıfta statik yöntem olarak çağırma**  
+ **Bir Model-Defined Işlevi özel bir sınıfta statik yöntem olarak çağırma**  
   
  Sonraki örnek, model tanımlı bir işlevin özel bir sınıfta statik bir yöntem olarak nasıl çağrılacağını gösterir. Örnek, [AdventureWorks Sales modelini](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)kullanır.  
   

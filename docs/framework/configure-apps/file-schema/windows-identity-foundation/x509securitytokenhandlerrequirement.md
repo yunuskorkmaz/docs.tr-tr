@@ -1,14 +1,15 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <x509SecurityTokenHandlerRequirement>'
 title: <x509SecurityTokenHandlerRequirement>
 ms.date: 03/30/2017
 ms.assetid: aca22c2c-5ae7-42af-9bbd-15c2524692ce
 author: BrucePerlerMS
-ms.openlocfilehash: a6a8185297e1345de9fa20c7d4d0dffbdcd8620f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 21a05cfeee6365bd677a6f35e984cb64fa4dd078
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91185398"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99748979"
 ---
 # \<x509SecurityTokenHandlerRequirement>
 

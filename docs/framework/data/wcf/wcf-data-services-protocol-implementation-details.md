@@ -1,15 +1,18 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: WCF Veri Hizmetleri protokol uygulama ayrıntıları'
 title: WCF Veri Hizmetleri Protokol Uygulama Ayrıntıları
 ms.date: 03/30/2017
 ms.assetid: 712d689b-fada-4cbb-bcdb-d65a3ef83b4c
-ms.openlocfilehash: a9b996671f2d8b57593f80fb13e966c5f03a2801
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 123f41859fdf579a75bb925a63619e4089577911
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98190396"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99748251"
 ---
 # <a name="wcf-data-services-protocol-implementation-details"></a>WCF Veri Hizmetleri Protokol Uygulama Ayrıntıları
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 ## <a name="odata-protocol-implementation-details"></a>OData protokol uygulama ayrıntıları  
 

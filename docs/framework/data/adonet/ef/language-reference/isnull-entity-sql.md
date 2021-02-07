@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: ıSNULL (Entity SQL)'
 title: ISNULL (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: dc7a0173-3664-4c90-a57b-5cbb0a8ed7ee
-ms.openlocfilehash: 3360ad4ca7306a8cc1b7d6948204f825ff9a93c6
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1dbaf964facf089ab6714ebd58baf8b040288cff
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203624"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99748498"
 ---
 # <a name="isnull-entity-sql"></a>ISNULL (Entity SQL)
 

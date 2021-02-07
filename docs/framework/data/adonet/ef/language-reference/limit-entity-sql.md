@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: LIMIT (Entity SQL)'
 title: SıNıR (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c22ffede-0a52-44d1-99b9-4a91e651e1b9
-ms.openlocfilehash: 81d135785e567d46a105adcafbf083f48cb4868e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 873f3fd5ed83d04313aff92bf1f97e07001c3f08
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91161769"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99748212"
 ---
 # <a name="limit-entity-sql"></a>SıNıR (Entity SQL)
 

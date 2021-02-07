@@ -1,14 +1,15 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <federationConfiguration>'
 title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: 39e96a161a2e75d5f00b73f6b08b1e4a0c109aee
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f8793a8fbd6fc6d5e6994c8e368f587b740e5973
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201362"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99748992"
 ---
 # \<federationConfiguration>
 
@@ -44,7 +45,7 @@ ms.locfileid: "91201362"
 |-------------|-----------------|  
 |[\<cookieHandler>](cookiehandler.md)|SAM tarafından kullanılan tanımlama bilgisi işleyicisini yapılandırır. İsteğe bağlı.|  
 |[\<serviceCertificate>](servicecertificate.md)|Belirteçleri şifrelemek ve şifrelerini çözmek için kullanılan sertifikayı yapılandırır. İsteğe bağlı.|  
-|[\<wsFederation>](wsfederation.md)|WS-Federation Authentication modülünü (WSFAD) yapılandırır. İsteğe bağlı.|  
+|[\<wsFederation>](wsfederation.md)|WS-Federation kimlik doğrulama modülünü (WSFAD) yapılandırır. İsteğe bağlı.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -56,7 +57,7 @@ ms.locfileid: "91201362"
 
  \<federationConfiguration>Öğesi iki farklı senaryoda ayarlar sağlar:  
   
-- Bir pasif Web uygulamasında WS-Federation kullanılırken, öğesi <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (wsfak) ve (Sam) öğesini yapılandıran ayarları içerir <xref:System.IdentityModel.Services.SessionAuthenticationModule> . Ayrıca güvenlik belirteci işleyicilerini ve sertifikaları ve talep Yetkilendirme Yöneticisi ve talep kimlik doğrulama Yöneticisi gibi bileşenleri yapılandırmak için kullanılacak kimlik yapılandırmasına de başvurur.  
+- Pasif bir Web uygulamasında WS-Federation kullanırken, öğesi <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (wsfab) ve (Sam) öğesini yapılandıran ayarları içerir <xref:System.IdentityModel.Services.SessionAuthenticationModule> . Ayrıca güvenlik belirteci işleyicilerini ve sertifikaları ve talep Yetkilendirme Yöneticisi ve talep kimlik doğrulama Yöneticisi gibi bileşenleri yapılandırmak için kullanılacak kimlik yapılandırmasına de başvurur.  
   
 - <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> Kodunuzda talep tabanlı erişim denetimi sağlamak için veya sınıfını kullanırken, öğesi, yetkilendirme kararları almak için kullanılan talep Yetkilendirme Yöneticisini ve ilkeyi yapılandıran kimlik yapılandırmasına başvurur. Bu, pasif Web senaryoları olmayan senaryolarda bile geçerlidir; Örneğin, Windows Communication Foundation (WCF) uygulamaları veya Web tabanlı olmayan bir uygulama. Uygulama pasif bir Web uygulaması değilse, öğesi [\<claimsAuthorizationManager>](claimsauthorizationmanager.md) tarafından başvurulan kimlik yapılandırmasının öğesi (ve varsa alt ilke öğeleri) `<federationConfiguration>` uygulanır. Diğerlerinin hepsi yok sayılır.  
   

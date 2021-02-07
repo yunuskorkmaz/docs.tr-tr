@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: (Entity SQL)'
 title: IÇINDE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 51662950-ee01-4857-b7b9-311dd8515966
-ms.openlocfilehash: 582a3b988247f1484197c0905fecf7f4407f88b0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 234ed15430e44d12d4ca7c98fcb4a7bc03d117f9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203676"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99748602"
 ---
 # <a name="in-entity-sql"></a>IÇINDE (Entity SQL)
 

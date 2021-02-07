@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: anahtar (Entity SQL)'
 title: ANAHTAR (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: cbaa97a8-c89c-4460-8c74-00474695789f
-ms.openlocfilehash: 07160467dcee60377e3ef448fdc66092da4e06e7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 83901a378c3bcc92436df734a04cb7fdf639ecb5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91161977"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99748303"
 ---
 # <a name="key-entity-sql"></a>ANAHTAR (Entity SQL)
 

@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <= (küçüktür veya eşittir) (Entity SQL)'
 title: <= (küçüktür veya eşittir) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 7c46da5c-fa09-4d90-adcc-c7e1b769d8e6
-ms.openlocfilehash: 09f2a7f53d00739b8542cb1149397f24d3b04f42
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f720c4ef87cdd0cceea175b1ea70caf5ac6e1deb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91161808"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99748264"
 ---
 # <a name="-less-than-or-equal-to-entity-sql"></a>\<= (Küçüktür veya eşittir) (Entity SQL)
 

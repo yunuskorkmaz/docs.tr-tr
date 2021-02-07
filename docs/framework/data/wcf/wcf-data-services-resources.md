@@ -1,21 +1,24 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: WCF Veri Hizmetleri kaynaklar'
 title: WCF Veri Hizmetleri kaynakları
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
-ms.openlocfilehash: 52de0dc16ea2363c48ed48291883352b02f2015c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: bbd4430430d64952aba4ac111033aaa4302c7f4f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91202155"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99748160"
 ---
 # <a name="wcf-data-services-resources"></a>WCF Veri Hizmetleri kaynakları
 
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
+
 WCF Veri Hizmetleri giriş konuları aşağıdaki konumlarda bulunabilir. Bu konuların birçoğu, daha ayrıntılı bilgiler içeren ilgili konuların bağlantılarını da içerir.  
   
- [Genel bakış](wcf-data-services-overview.md)  
+ [Genel Bakış](wcf-data-services-overview.md)  
  WCF Veri Hizmetleri ' de kullanılabilen özellikler ve işlevlere genel bir bakış sağlar.  
   
  [Başlarken](../adonet/ef/getting-started.md)  
@@ -52,7 +55,7 @@ WCF Veri Hizmetleri giriş konuları aşağıdaki konumlarda bulunabilir. Bu kon
  [Microsoft WCF Veri Hizmetleri kullanma](/previous-versions/visualstudio/visual-studio-2008/cc907912(v=msdn.10))  
  Veri hizmetleri oluşturmak ve istemci uygulamalarında veri hizmetlerine erişmek için ek bilgiler ve örnekler sağlayan bir Teknik İnceleme.  
   
- Varlık Ilişkisi modeli: Peter pin-Shan Chen, Massachusetts Institute of Technology 'nin [Birleşik bir veri görünümüne doğru](https://dl.acm.org/doi/10.1145/320434.320440)  
+ Entity-Relationship modeli: Peter Pin-Shan Chen, Massachusetts Institute of Technology 'nin [Birleşik bir veri görünümüne doğru](https://dl.acm.org/doi/10.1145/320434.320440)  
  WCF Veri Hizmetleri tarafından uygulanan varlık ilişkisel modelin temelini açıklar. 1976 dilinde yazılan bu, bilgisayar alanındaki en sık alıntı yapılan kağıtların biridir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
