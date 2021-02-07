@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: IHostThreadPoolManager Arabirimi'
 title: IHostThreadPoolManager Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c3a2cd90-7c4e-4374-bb87-b41befb8344f
 topic_type:
 - apiref
-ms.openlocfilehash: b6625b0ef4dc3de4067514a0b39849c7a958d5c4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0361b7a08f781a8748e43959f65ce0e9f21bbac1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730767"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99728431"
 ---
 # <a name="ihostthreadpoolmanager-interface"></a>IHostThreadPoolManager Arabirimi
 

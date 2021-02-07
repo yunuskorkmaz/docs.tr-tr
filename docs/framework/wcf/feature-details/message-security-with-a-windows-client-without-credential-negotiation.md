@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: kimlik bilgisi anlaşması olmadan Windows Istemcisiyle Ileti güvenliği'
 title: Windows İstemcisi ile Kimlik Bilgileri Görüşmesi Olmadan İleti Güvenliği
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-ms.openlocfilehash: 3e5838c474a4f13136ed29baab440dc1559b95f5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e9edd63c80d868024d8a4b664c42456bb454cb69
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551099"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99727020"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>Windows İstemcisi ile Kimlik Bilgileri Görüşmesi Olmadan İleti Güvenliği
 
@@ -26,7 +27,7 @@ Hem hizmet hem de istemci aynı etki alanında veya güvenilen etki alanlarında
 |Özellik|Description|
 |--------------------|-----------------|
 |Güvenlik modu|İleti|
-|Birlikte Çalışabilirlik|Evet, WS-Kerberos belirteci ile profil uyumlu istemcilerle güvenlik|
+|Birlikte çalışabilirlik|Evet, Kerberos belirteci profili ile uyumlu istemcilerle WS-Security|
 |Kimlik doğrulaması (sunucu)|Sunucu ve istemcinin karşılıklı kimlik doğrulaması|
 |Kimlik doğrulaması (Istemci)|Sunucu ve istemcinin karşılıklı kimlik doğrulaması|
 |Bütünlük|Yes|
@@ -36,7 +37,7 @@ Hem hizmet hem de istemci aynı etki alanında veya güvenilen etki alanlarında
 
 ## <a name="service"></a>Hizmet
 
-Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Şunlardan birini yapın:
+Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Aşağıdakilerden birini yapın:
 
 - Yapılandırma olmadan kodu kullanarak tek başına bir hizmet oluşturun.
 
@@ -98,11 +99,11 @@ Aşağıdaki yapılandırma kod yerine kullanılabilir.
 
 ## <a name="client"></a>İstemci
 
-Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Şunlardan birini yapın:
+Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Aşağıdakilerden birini yapın:
 
 - Kodu kullanarak tek başına istemci oluşturun (ve istemci kodu).
 
-- Herhangi bir uç nokta adresi tanımlamayan bir istemci oluşturun. Bunun yerine, yapılandırma adını bağımsız değişken olarak alan istemci oluşturucusunu kullanın. Örnek:
+- Herhangi bir uç nokta adresi tanımlamayan bir istemci oluşturun. Bunun yerine, yapılandırma adını bağımsız değişken olarak alan istemci oluşturucusunu kullanın. Örneğin:
 
   [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
   [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]

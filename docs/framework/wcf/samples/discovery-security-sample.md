@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: bulma güvenlik örneği'
 title: Keşif Güvenliği Örneği
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 0957e8ddaee99e60b205c92319dc2c61e2ab007a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ddbe961a4e1d47288774e2472087107a6e344a7f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96292642"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99726656"
 ---
 # <a name="discovery-security-sample"></a>Keşif Güvenliği Örneği
 

@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: desteklenmeyen senaryolar'
 title: Desteklenmeyen Senaryolar
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 2d779b49a8201b3ad53507af7710f7aef5e9321c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7547a1acc060a6611a4750e512501cd314bed702
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96289652"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99726760"
 ---
 # <a name="unsupported-scenarios"></a>Desteklenmeyen senaryolar
 

@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: karşılıklı sertifikalarla Ileti güvenliği'
 title: Karşılıklı Sertifikalar ile İleti Güvenliği
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-ms.openlocfilehash: 521b2a887792d41dd28342ca4bfe7be71ceba4b7
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c894f457dcd0fdc449c2f94eaee15004300df5fa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96237384"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99726994"
 ---
 # <a name="message-security-with-mutual-certificates"></a>Karşılıklı Sertifikalar ile İleti Güvenliği
 
@@ -23,13 +24,13 @@ Aşağıdaki senaryoda ileti güvenliği modu kullanılarak güvenliği sağlanm
   
  ![Karşılıklı sertifikalarla ileti güvenliği](media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")  
   
-|Özellik|Açıklama|  
+|Özellik|Description|  
 |--------------------|-----------------|  
 |Güvenlik modu|İleti|  
 |Birlikte çalışabilirlik|Evet, WS-Security ve X. 509.440 sertifika belirteci profiliyle uyumlu istemciler ve hizmetler ile.|  
 |Kimlik Doğrulaması|Sunucu ve istemcinin karşılıklı kimlik doğrulaması.|  
-|Bütünlük|Evet|  
-|Gizlilik|Evet|  
+|Bütünlük|Yes|  
+|Gizlilik|Yes|  
 |Aktarım|HTTP|  
 |Bağlama|<xref:System.ServiceModel.WSHttpBinding>|  
   

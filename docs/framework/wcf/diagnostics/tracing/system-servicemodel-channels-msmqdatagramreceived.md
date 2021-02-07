@@ -1,19 +1,20 @@
 ---
+description: ': System. ServiceModel. Channels. MsmqDatagramReceived hakkında daha fazla bilgi edinin'
 title: System.ServiceModel.Channels.MsmqDatagramReceived
 ms.date: 03/30/2017
 ms.assetid: c924ab16-573a-4fd6-8059-071fc12f4b1b
-ms.openlocfilehash: 7db2a603db38e55fed849a4cb1c85f178b25f952
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: fa921686badb86b17250ede4bd36debbb2cb9da9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257008"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99727657"
 ---
 # <a name="systemservicemodelchannelsmsmqdatagramreceived"></a>System.ServiceModel.Channels.MsmqDatagramReceived
 
 System.ServiceModel.Channels.MsmqDatagramReceived  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  MSMQ veri birimi iletisi alındı.  
   

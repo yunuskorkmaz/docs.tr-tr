@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Internet Information Service barındırma yönergeleri'
 title: Internet Information Service Barındırma Yönergeleri
 ms.date: 03/30/2017
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
-ms.openlocfilehash: 151c5ba8dd79e8554e7d79fb5b8182740b0be18e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 51f5230ecbb8eaf4a909c5c09366680b8c555165
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96237696"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99726383"
 ---
 # <a name="internet-information-service-hosting-instructions"></a>Internet Information Service Barındırma Yönergeleri
 
@@ -69,7 +70,7 @@ Internet Information Services (IIS) tarafından barındırılan örnekleri çal�
   
 15. **Internet Information Services** dizininde, **Microsoft .NET Framework 3.5.1** etiketli öğeyi genişletin ve ardından **http etkinleştirme Windows Communication Foundation**' yı seçin.  
   
-16. **Tamam** düğmesine tıklayın.  
+16. **Tamam**'a tıklayın.  
   
 ### <a name="to-install-iis-version-70-on-windows-server-2008"></a>Windows Server 2008 ' ye IIS 7,0 sürümünü yüklemek için  
   
@@ -127,7 +128,7 @@ Internet Information Services (IIS) tarafından barındırılan örnekleri çal�
   
 15. **Microsoft .NET Framework 3,0** etiketli öğeyi genişletin ve sonra **Windows Communication Foundation HTTP etkinleştirmesi**' ni seçin.  
   
-16. **Tamam** düğmesine tıklayın.  
+16. **Tamam**'a tıklayın.  
   
 ### <a name="to-install-iis-version-60-on-windows-server-2003"></a>Windows Server 2003 ' ye IIS 6,0 sürümünü yüklemek için  
   

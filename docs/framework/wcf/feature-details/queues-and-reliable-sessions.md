@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: kuyruklar ve güvenilir oturumlar'
 title: Kuyruklar ve Güvenilir Oturumlar
 ms.date: 03/30/2017
 ms.assetid: 7e794d03-141c-45ed-b6b1-6c0e104c1464
-ms.openlocfilehash: db47838db1608dac4e0fe22252795b6dd33a0b6e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 87c2d7cd65228f0218082d9126989db8c9275c70
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96244697"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99726916"
 ---
 # <a name="queues-and-reliable-sessions"></a>Kuyruklar ve Güvenilir Oturumlar
 

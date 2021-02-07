@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 3420-WebSocketConnectionFailed'
 title: 3420 - WebSocketConnectionFailed
 ms.date: 03/30/2017
 ms.assetid: 1b5ed1ce-ba57-473c-bc64-fd52646ed3a6
-ms.openlocfilehash: 76f669d6eb1f7e383ee039d13668bddd4d02818b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: bb0e622ebf135b4a5f687a92a259fd7815fea2f8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96245373"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99727735"
 ---
 # <a name="3420---websocketconnectionfailed"></a>3420 - WebSocketConnectionFailed
 
@@ -17,10 +18,10 @@ ms.locfileid: "96245373"
 |-|-|  
 |ID|3420|  
 |Anahtar sözcükler|HTTP|  
-|Düzey|Hata|  
+|Level|Hata|  
 |Kanal|Microsoft-Windows-uygulama sunucusu-uygulamalar/analitik|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  WebSocket bağlantı isteği başarısız olduğunda bu olay yayınlanır.  
   

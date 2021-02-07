@@ -1,19 +1,20 @@
 ---
+description: 'Daha fazla bilgi edinin: System.ServiceModel.ConfigurationIsReadOnly'
 title: System.ServiceModel.ConfigurationIsReadOnly
 ms.date: 03/30/2017
 ms.assetid: a6734380-8ecf-454a-ab45-8832d6a27871
-ms.openlocfilehash: f774b071f56bcf7d281054f70a9e4d57d205276c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: daccac2174641d57f30b6c5e45ac1a151765863e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96254382"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99727501"
 ---
 # <a name="systemservicemodelconfigurationisreadonly"></a>System.ServiceModel.ConfigurationIsReadOnly
 
 System.ServiceModel.ConfigurationIsReadOnly  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Yapılandırma salt okunurdur.  
   

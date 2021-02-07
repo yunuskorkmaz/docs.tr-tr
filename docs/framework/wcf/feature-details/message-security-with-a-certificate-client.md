@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: sertifika Istemcisiyle Ileti güvenliği'
 title: Sertifika İstemcisi ile İleti Güvenliği
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-ms.openlocfilehash: 4a1cb6d804d313f438fc8e7a92946d55f73b9ee5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f1924510c5860b377568da204bbd9154e4970c24
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96288586"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99727072"
 ---
 # <a name="message-security-with-a-certificate-client"></a>Sertifika İstemcisi ile İleti Güvenliği
 
@@ -20,14 +21,14 @@ Aşağıdaki senaryoda ileti güvenliği modu kullanılarak güvenliği sağlanm
   
  Örnek bir uygulama için bkz. [Ileti güvenliği sertifikası](../samples/message-security-certificate.md).  
 
-|Özellik|Açıklama|  
+|Özellik|Description|  
 |--------------------|-----------------|  
 |Güvenlik modu|İleti|  
 |Birlikte çalışabilirlik|Yalnızca WCF|  
 |Kimlik doğrulaması (sunucu)|Hizmet sertifikası kullanma|  
 |Kimlik doğrulaması (Istemci)|İstemci sertifikası kullanma|  
-|Bütünlük|Evet|  
-|Gizlilik|Evet|  
+|Bütünlük|Yes|  
+|Gizlilik|Yes|  
 |Aktarım|HTTP|  
 |Bağlama|<xref:System.ServiceModel.WSHttpBinding>|  
   

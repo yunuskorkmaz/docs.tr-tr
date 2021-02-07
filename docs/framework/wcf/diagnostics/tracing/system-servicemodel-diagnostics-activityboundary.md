@@ -1,19 +1,20 @@
 ---
+description: ': System. ServiceModel. Diagnostics. Activitysınır hakkında daha fazla bilgi edinin'
 title: System.ServiceModel.Diagnostics.ActivityBoundary
 ms.date: 03/30/2017
 ms.assetid: a24e3076-0c14-4271-9990-090c0dfed07f
-ms.openlocfilehash: e596da88caed7c75aaf4f32aa50aece0fa0a81e2
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c029df0c08f85c9c082ea95c72eb9f976eae7684
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96254369"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99727462"
 ---
 # <a name="systemservicemodeldiagnosticsactivityboundary"></a>System.ServiceModel.Diagnostics.ActivityBoundary
 
 System.ServiceModel.Diagnostics.ActivityBoundary  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Etkinlik sınırı.  
   

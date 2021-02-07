@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi için: Ileti filtreleri'
 title: İleti Filtreleri
 ms.date: 03/30/2017
 helpviewer_keywords:
 - routing [WCF], message filters
 ms.assetid: cb33ba49-8b1f-4099-8acb-240404a46d9a
-ms.openlocfilehash: a0cc4663b9a3044d0ab80f03479a024acba50a3f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1b52b2b50dc94e79ba6960e834f601af18200f52
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96279785"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99727071"
 ---
 # <a name="message-filters"></a>İleti Filtreleri
 
@@ -25,7 +26,7 @@ ms.locfileid: "96279785"
   
  Aşağıdaki tabloda <xref:System.ServiceModel.Routing.Configuration.FilterType> , yönlendirme hizmeti tarafından kullanılan, belirli ileti filtresi uygulayan sınıf ve gerekli <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A> parametreler listelenmektedir.  
   
-|Filtre türü|Açıklama|Veri filtreleme anlamı|Örnek filtre|  
+|Filtre türü|Description|Veri filtreleme anlamı|Örnek filtre|  
 |------------------|-----------------|-------------------------|--------------------|  
 |Eylem|, <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> Belirli bir eylemi içeren iletileri eşleştirmek için sınıfını kullanır.|Üzerine filtreleyecek eylem.|\<filter name="action1" filterType="Action" filterData="http://namespace/contract/operation" />|  
 |EndpointAddress|<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>, <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` Belirli bir adresi içeren iletileri eşleştirmek için ile sınıfını kullanır.|Filtrelemeye yönelik adres (-üst bilgisinde).|\<filter name="address1" filterType="EndpointAddress" filterData="http://host/vdir/s.svc/b"  />|  

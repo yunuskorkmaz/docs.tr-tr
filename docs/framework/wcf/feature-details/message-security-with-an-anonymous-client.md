@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: anonim bir Istemciyle Ileti güvenliği'
 title: Anonim İstemci ile İleti Güvenliği
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
-ms.openlocfilehash: aed56be359f094db483ab1d012bd77a1096433b6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 921ddd9e8e7d2a860f3516c452870bc2bb150911
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553772"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99726981"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>Anonim İstemci ile İleti Güvenliği
 
@@ -23,7 +24,7 @@ Aşağıdaki senaryoda, Windows Communication Foundation (WCF) ileti güvenliği
 |Özellik|Description|
 |--------------------|-----------------|
 |Güvenlik modu|İleti|
-|Birlikte Çalışabilirlik|Yalnızca WCF|
+|Birlikte çalışabilirlik|Yalnızca WCF|
 |Kimlik doğrulaması (sunucu)|İlk anlaşma sunucu kimlik doğrulaması gerektirir, ancak istemci kimlik doğrulaması gerektirmez|
 |Kimlik doğrulaması (Istemci)|Yok|
 |Bütünlük|Evet, paylaşılan güvenlik bağlamını kullanma|
@@ -32,7 +33,7 @@ Aşağıdaki senaryoda, Windows Communication Foundation (WCF) ileti güvenliği
 
 ## <a name="service"></a>Hizmet
 
-Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Şunlardan birini yapın:
+Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Aşağıdakilerden birini yapın:
 
 - Yapılandırma olmadan kodu kullanarak tek başına bir hizmet oluşturun.
 
@@ -90,11 +91,11 @@ Aşağıdaki yapılandırma kod yerine kullanılabilir. Hizmet davranışı öğ
 
 ## <a name="client"></a>İstemci
 
-Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Şunlardan birini yapın:
+Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Aşağıdakilerden birini yapın:
 
 - Kodu kullanarak tek başına istemci oluşturun (ve istemci kodu).
 
-- Herhangi bir uç nokta adresi tanımlamayan bir istemci oluşturun. Bunun yerine, yapılandırma adını bağımsız değişken olarak alan istemci oluşturucusunu kullanın. Örnek:
+- Herhangi bir uç nokta adresi tanımlamayan bir istemci oluşturun. Bunun yerine, yapılandırma adını bağımsız değişken olarak alan istemci oluşturucusunu kullanın. Örneğin:
 
     [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
     [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]

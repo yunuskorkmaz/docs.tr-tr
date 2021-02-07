@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 207-Faultproviderçağrılan'
 title: 207 - FaultProviderInvoked
 ms.date: 03/30/2017
 ms.assetid: b730d903-01c2-4deb-85a4-da12f8a21fe4
-ms.openlocfilehash: 71381c9eee6aed4792500c8558db88e239bf89f7
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 03c4f1669fc61019ccf4d23d2994f136e231fbec
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96295177"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99728073"
 ---
 # <a name="207---faultproviderinvoked"></a>207 - FaultProviderInvoked
 
@@ -17,10 +18,10 @@ ms.locfileid: "96295177"
 |-|-|  
 |ID|207|  
 |Anahtar sözcükler|Sorun giderme, ServiceModel|  
-|Düzey|Bilgi|  
+|Level|Bilgi|  
 |Kanal|Microsoft-Windows-uygulama sunucusu-uygulamalar/analitik|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bu olay, bir `FaultProvider` çağrıldıktan sonra yayınlanır.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96295177"
   
 ## <a name="details"></a>Ayrıntılar  
   
-|Veri öğesi adı|Veri öğesi türü|Açıklama|  
+|Veri öğesi adı|Veri öğesi türü|Description|  
 |--------------------|--------------------|-----------------|  
 |TypeName|`xs:string`|Çağrılan türünün CLR FullName değeri `FaultProvider` .|  
 |ExceptionTypeName|`xs:string`|Üzerinde işletitilen özel durumun CLR FullName değeri `FaultProvider` .|  

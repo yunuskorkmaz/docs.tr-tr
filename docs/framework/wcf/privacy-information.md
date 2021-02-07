@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Windows Communication Foundation gizlilik bilgileri'
 title: Windows Communication Foundation Gizlilik Bilgileri
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 5ecd1c39a4ad6a146c734aab8349c5caa4212662
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4f942e84a072d15a12b6db7cc2c310d629a59f6b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96249949"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99726695"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation Gizlilik Bilgileri
 
@@ -277,7 +278,7 @@ Microsoft, son kullanıcı gizliliğini korumayı taahhüt etmektedir. Windows C
   
  Konusuna  
   
- \<Öznitelik  
+ \<Özniteliğe  
   
  AttributeName = "[dize]"  
   
