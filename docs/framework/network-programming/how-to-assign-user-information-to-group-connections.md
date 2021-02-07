@@ -1,22 +1,23 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: Kullanıcı bilgilerini grup bağlantılarına atama'
 title: 'Nasıl yapılır: Bağlantıları Gruplandırmak için Kullanıcı Bilgileri Atama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7ce550d6-8f7c-4ea7-add8-5bc27a7b51be
-ms.openlocfilehash: 01b686702250c68131e8a46b410ce05e67e7c950
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2af901b91c561f5f46c63ed627cbd0053d30e624
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180839"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729269"
 ---
 # <a name="how-to-assign-user-information-to-group-connections"></a>Nasıl yapılır: Bağlantıları Gruplandırmak için Kullanıcı Bilgileri Atama
 
- Aşağıdaki örnek, uygulamanın kullanıcı *adı*, *Güvenli StoredPassword*ve *Etki Alanı* değişkenlerini kod bu bölümü aranmadan önce ayarladığını ve *Kullanıcı Adı'nın* benzersiz olduğunu varsayarak, kullanıcı bilgilerinin grup bağlantılarına nasıl atanacağımı gösterir.  
+ Aşağıdaki örnek, bu kodun bu bölümü çağrılmadan ve *Kullanıcı adının* benzersiz olması Için uygulamanın *UserName*, *securelyStoredPassword* ve *Domain* değişkenlerini ayarladığını varsayarak, Kullanıcı bilgilerinin grup bağlantılarına nasıl atanacağını gösterir.  
   
-### <a name="to-assign-user-information-to-a-group-connection"></a>Kullanıcı bilgilerini grup bağlantısına atamak için  
+### <a name="to-assign-user-information-to-a-group-connection"></a>Kullanıcı bilgilerini bir grup bağlantısına atamak için  
   
 1. Bir bağlantı grubu adı oluşturun.  
   
@@ -32,7 +33,7 @@ ms.locfileid: "79180839"
     Dim secureGroupName As [String] = Encoding.Default.GetString(updHash)  
     ```  
   
-2. Belirli bir URL için istek oluşturun. Örneğin, aşağıdaki kod URL için bir istek oluşturur`http://www.contoso.com.`  
+2. Belirli bir URL için bir istek oluşturun. Örneğin, aşağıdaki kod URL için bir istek oluşturur `http://www.contoso.com.`  
   
     ```csharp  
     WebRequest myWebRequest=WebRequest.Create("http://www.contoso.com");  
@@ -42,7 +43,7 @@ ms.locfileid: "79180839"
     Dim myWebRequest As WebRequest = WebRequest.Create("http://www.contoso.com")  
     ```  
   
-3. Web isteği için kimlik bilgilerini ve Bağlantı Grubu Adını ayarlayın ve **Bir WebYanıt** nesnesini almak için **GetResponse'u** arayın.  
+3. Web isteği için kimlik bilgilerini ve bağlantı grubuadı ' nı ayarlayın ve bir **WebResponse** nesnesi almak Için **GetResponse** öğesini çağırın.  
   
     ```csharp  
     myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);
@@ -58,7 +59,7 @@ ms.locfileid: "79180839"
     Dim myWebResponse As WebResponse = myWebRequest.GetResponse()  
     ```  
   
-4. WebRespose nesnesini kullandıktan sonra yanıt akışını kapatın.  
+4. Webrespoz nesnesini kullandıktan sonra yanıt akışını kapatın.  
   
     ```csharp  
     MyWebResponse.Close();  

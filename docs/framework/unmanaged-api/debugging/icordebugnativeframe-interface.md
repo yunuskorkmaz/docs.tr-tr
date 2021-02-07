@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugNativeFrame arabirimi hakkında daha fazla bilgi edinin'
 title: ICorDebugNativeFrame Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 04819c58-7246-4b32-befb-680cf1dbc436
 topic_type:
 - apiref
-ms.openlocfilehash: 043dc0fdd5218d7bc6b80428d1eb891b3f01ee8c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e417184c9f1ca5136e1b4dba07820fd8242ae932
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95695562"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729140"
 ---
 # <a name="icordebugnativeframe-interface"></a>ICorDebugNativeFrame Arabirimi
 

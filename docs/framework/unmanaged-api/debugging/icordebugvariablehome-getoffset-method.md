@@ -1,4 +1,5 @@
 ---
+description: ': Icordebugvariablehome:: GetOffset Yöntemi hakkında daha fazla bilgi edinin'
 title: 'Icordebugvariablehome:: GetOffset Yöntemi'
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: f025c2e5-3f6c-4be8-9ffe-c8b214617dfe
 topic_type:
 - apiref
-ms.openlocfilehash: c5d491b66e4ec64dffa4e19dabff876c9c473036
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 48b57856d2825dd2ea9328064a28783b4b36029b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711799"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99728775"
 ---
 # <a name="icordebugvariablehomegetoffset-method"></a>Icordebugvariablehome:: GetOffset Yöntemi
 
 Bir değişken için temel kaydın konumunu alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetOffset(  
