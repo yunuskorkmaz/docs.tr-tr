@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: özel güvenli meta veri uç noktası'
 title: Özel Güvenli Meta Veri Uç Noktaları
 ms.date: 03/30/2017
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
-ms.openlocfilehash: d699c8dedfec3068bf0fc1504b47d78fde1988dc
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 11b8439fda74924ff17a101d3aa0b0db948ff8dd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96240907"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752463"
 ---
 # <a name="custom-secure-metadata-endpoint"></a>Özel Güvenli Meta Veri Uç Noktaları
 

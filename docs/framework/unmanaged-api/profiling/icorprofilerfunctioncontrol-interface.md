@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerFunctionControl arabirimi hakkında daha fazla bilgi edinin'
 title: ICorProfilerFunctionControl Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e3d3141-4662-4166-8f05-bc857c1b4216
 topic_type:
 - apiref
-ms.openlocfilehash: 733a8f0bc7e8c19823827297a50f9c6906614ca7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7b4ac58d2b8754108b4e10493596776987a93a49
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95698396"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753321"
 ---
 # <a name="icorprofilerfunctioncontrol-interface"></a>ICorProfilerFunctionControl Arabirimi
 

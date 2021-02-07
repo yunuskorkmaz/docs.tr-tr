@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Web Hizmetleri protokolleri birlikte çalışabilirlik Kılavuzu'
 title: Web Hizmetleri protokolleri birlikte çalışabilirlik Kılavuzu
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-ms.openlocfilehash: f35ca629da65af749897d28d28808d06eced7aa8
-ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
+ms.openlocfilehash: cab744818d3a52c6f6cd0d95195d9112ac9babf6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90720120"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752554"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Web Hizmetleri protokolleri birlikte çalışabilirlik Kılavuzu
 
@@ -49,7 +50,7 @@ Altyapı protokolleri birlikte çalışabilirliği WS-* belirtimleri tarafından
 |XOP ıNCLUDE|[XML-ikili Iyileştirilmiş paketleme](https://www.w3.org/TR/xop10/)|
 |MTOM + SOAP 1.2 bağlama|[SOAP Ileti Iletimi Iyileştirme mekanizması](https://www.w3.org/TR/soap12-mtom/)|
 |MTOM SOAP 1,1 bağlaması|[MTOM 1,0 için SOAP 1,1 bağlaması](https://www.w3.org/Submission/soap11mtom10/)|
-|MTOM WS-Poliyasyıtions|[MTOM serileştirme Ilkesi onaylama (WS-MTOMPolicy)](https://www.w3.org/Submission/WS-MTOMPolicy/)|
+|MTOM WS-PolicyAssertions|[MTOM serileştirme Ilkesi onaylama (WS-MTOMPolicy)](https://www.w3.org/Submission/WS-MTOMPolicy/)|
 
 <xref:System.ServiceModel.Channels.SecurityBindingElement> , aşağıdaki tablodaki belirtimleri destekler.
 
@@ -73,7 +74,7 @@ Altyapı protokolleri birlikte çalışabilirliği WS-* belirtimleri tarafından
 
 |Belirtim/belge|Bağlantı|
 |-----------------------------|----------|
-|WS koordinasyonu|[Web Hizmetleri düzenlemesi](/previous-versions/ms951231(v=msdn.10))|
+|WS-Coordination|[Web Hizmetleri düzenlemesi](/previous-versions/ms951231(v=msdn.10))|
 |WS-AtomicTransaction|[Web Hizmetleri atomik Işlem](http://specs.xmlsoap.org/ws/2004/10/wsat/wsat.pdf)|
 
 <xref:System.ServiceModel.Description.MetadataExporter>,, <xref:System.ServiceModel.Description.MetadataImporter> , <xref:System.ServiceModel.Description.WsdlExporter> <xref:System.ServiceModel.Description.WsdlImporter> Ve <xref:System.ServiceModel.Description.MetadataResolver> sınıfları aşağıdaki meta veri belirtimleri için destek sağlar:

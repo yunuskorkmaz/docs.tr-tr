@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: hizmet sözleşmelerini uygulama'
 title: Hizmet Sözleşmelerini Uygulama
 ms.date: 03/30/2017
 helpviewer_keywords:
 - implementing service contracts [WCF]
 ms.assetid: aefb6f56-47e3-4f24-ab0a-9bc07bf9885f
-ms.openlocfilehash: 121922e3de62653babdac084d6bd226f7263e33c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4510c9e7b9ea3a98a37d528af4064f0e73bea89b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96262742"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752502"
 ---
 # <a name="implementing-service-contracts"></a>Hizmet Sözleşmelerini Uygulama
 

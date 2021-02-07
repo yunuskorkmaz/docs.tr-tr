@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: COR_PRF_SNAPSHOT_INFO numaralandırması'
 title: COR_PRF_SNAPSHOT_INFO Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a5906b2a-ad4a-4cc6-a421-2d7d8adf7468
 topic_type:
 - apiref
-ms.openlocfilehash: 5290db008bfe5727ed5899c2ed6f7e41ae9a353a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fcdaeeb6170cb9998281100c5628b3d95f9e9326
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95716362"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753347"
 ---
 # <a name="cor_prf_snapshot_info-enumeration"></a>COR_PRF_SNAPSHOT_INFO Numaralandırması
 
@@ -37,7 +38,7 @@ typedef enum _COR_PRF_SNAPSHOT_INFO {
   
 ## <a name="members"></a>Üyeler  
   
-|Üyeler|Açıklama|  
+|Üyeler|Description|  
 |-------------|-----------------|  
 |`COR_PRF_SNAPSHOT_DEFAULT`|Parametresi dışında tüm parametrelerin değerlerinin geçirilmesi gerektiğini gösterir `StackSnapshotCallback` `context` .|  
 |`COR_PRF_SNAPSHOT_REGISTER_CONTEXT`|Parametresi dahil tüm parametrelerin değerlerinin geçirilmesi gerektiğini gösterir `StackSnapshotCallback` `context` .|  

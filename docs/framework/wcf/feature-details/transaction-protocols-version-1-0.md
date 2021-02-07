@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Işlem protokolleri sürüm 1,0'
 title: İşlem Protokolleri sürüm 1.0
 ms.date: 03/30/2017
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-ms.openlocfilehash: 7b1cfc21a1361cee3027fd5a61ec61a4a0a998b7
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 5fb49e40ab76ff0eef9825ac886d5afbbf185565
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96246244"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752723"
 ---
 # <a name="transaction-protocols-version-10"></a>İşlem Protokolleri sürüm 1.0
 

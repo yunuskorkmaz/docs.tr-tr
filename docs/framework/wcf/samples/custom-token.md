@@ -1,17 +1,18 @@
 ---
+description: 'Daha fazla bilgi edinin: özel belirteç'
 title: Özel Belirteç
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: 1a8c312248b0c15bb2e366a3d9925014556b6dd8
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 500cc187db0280e508ef079ca370483c716ea2c5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553167"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752437"
 ---
 # <a name="custom-token"></a>Özel Belirteç
 
-Bu örnek, bir Windows Communication Foundation (WCF) uygulamasına özel bir belirteç uygulamasının nasıl ekleneceğini gösterir. Örnek, `CreditCardToken` istemci kredi kartlarıyla ilgili bilgileri hizmete güvenli bir şekilde geçirmek için bir kullanır. Belirteç WS-Security İleti üstbilgisine geçirilir ve simetrik güvenlik bağlama öğesi ve ileti gövdesi ve diğer ileti üst bilgileri kullanılarak imzalanır ve şifrelenir. Bu, yerleşik belirteçlerin yeterli olmadığı durumlarda faydalıdır. Bu örnek, yerleşik belirteçlerden birini kullanmak yerine bir hizmete nasıl özel bir güvenlik belirteci sağlayabileceğinizi gösterir. Hizmet, istek-yanıt iletişim modelini tanımlayan bir sözleşme uygular.
+Bu örnek, bir Windows Communication Foundation (WCF) uygulamasına özel bir belirteç uygulamasının nasıl ekleneceğini gösterir. Örnek, `CreditCardToken` istemci kredi kartlarıyla ilgili bilgileri hizmete güvenli bir şekilde geçirmek için bir kullanır. Belirteç WS-Security ileti başlığına geçirilir ve simetrik güvenlik bağlama öğesi ve ileti gövdesi ve diğer ileti üst bilgileri kullanılarak imzalanır ve şifrelenir. Bu, yerleşik belirteçlerin yeterli olmadığı durumlarda faydalıdır. Bu örnek, yerleşik belirteçlerden birini kullanmak yerine bir hizmete nasıl özel bir güvenlik belirteci sağlayabileceğinizi gösterir. Hizmet, istek-yanıt iletişim modelini tanımlayan bir sözleşme uygular.
 
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.
@@ -28,7 +29,7 @@ Bu örnek, bir Windows Communication Foundation (WCF) uygulamasına özel bir be
 
 ## <a name="client-authentication-using-a-custom-security-token"></a>Özel bir güvenlik belirteci kullanarak istemci kimlik doğrulaması
 
- Hizmet, ve sınıfları kullanılarak programlı bir şekilde oluşturulan tek bir uç noktayı kullanıma sunar `BindingHelper` `EchoServiceHost` . Uç nokta bir adres, bağlama ve bir anlaşmada oluşur. Bağlama, ve kullanarak özel bir bağlama ile yapılandırılır `SymmetricSecurityBindingElement` `HttpTransportBindingElement` . Bu örnek, `SymmetricSecurityBindingElement` iletim sırasında simetrik anahtarı korumak ve BIR `CreditCardToken` WS-Security ileti üst bilgisinde imzalanmış ve şifreli bir güvenlik belirteci olarak özel bir geçiş yapmak için bir hizmetin X. 509.440 sertifikası kullanmak üzere öğesini ayarlar. Davranış, istemci kimlik doğrulaması için kullanılacak hizmet kimlik bilgilerini ve ayrıca Service X. 509.440 sertifikası hakkındaki bilgileri belirtir.
+ Hizmet, ve sınıfları kullanılarak programlı bir şekilde oluşturulan tek bir uç noktayı kullanıma sunar `BindingHelper` `EchoServiceHost` . Uç nokta bir adres, bağlama ve bir anlaşmada oluşur. Bağlama, ve kullanarak özel bir bağlama ile yapılandırılır `SymmetricSecurityBindingElement` `HttpTransportBindingElement` . Bu örnek, `SymmetricSecurityBindingElement` iletim sırasında simetrik anahtarı korumak ve `CreditCardToken` imzalı ve şifreli bir güvenlik belirteci olarak bir WS-Security ileti üstbilgisinde özel bir geçiş yapmak için bir hizmetin X. 509.440 sertifikasını kullanacak şekilde ayarlar. Davranış, istemci kimlik doğrulaması için kullanılacak hizmet kimlik bilgilerini ve ayrıca Service X. 509.440 sertifikası hakkındaki bilgileri belirtir.
 
 ```csharp
 public static class BindingHelper
@@ -619,7 +620,7 @@ string GetCallerCreditCardNumber()
   
 3. Bilgisayarın tam etki alanı adını içeren konu adına sahip bir sunucu sertifikasına sahip olmanız gerekir. `%SERVER_NAME%`Değişkeni, hizmetin barındırıldığı bilgisayarın tam adı olarak değiştirirseniz, Setup.bat kullanarak bir tane oluşturabilirsiniz. Setup.bat dosyasının, yönetici ayrıcalıklarıyla açılan bir Visual Studio için Geliştirici Komut İstemi çalıştırılması gerektiğini unutmayın.  
   
-4. Sunucu sertifikasını istemcideki CurrentUser-Trustedkişiler deposuna kopyalayın. Bunu yalnızca, sunucu sertifikası güvenilen bir veren tarafından verilmediği takdirde yapmanız gerekir.  
+4. Sunucu sertifikasını istemcideki CurrentUser-TrustedPeople deposuna kopyalayın. Bunu yalnızca, sunucu sertifikası güvenilen bir veren tarafından verilmediği takdirde yapmanız gerekir.  
   
 5. EchoServiceHost.cs dosyasında, sertifika konu adının değerini localhost yerine tam nitelikli bir bilgisayar adı belirtecek şekilde değiştirin.  
   

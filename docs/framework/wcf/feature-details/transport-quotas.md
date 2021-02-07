@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: taşıma kotaları'
 title: Taşıma Kotaları
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-ms.openlocfilehash: bcc63e6645580c1021667b278b80c09baf5700c1
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0359d088402235a34b8cf1d13820c0a7c920b023
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96261468"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752633"
 ---
 # <a name="transport-quotas"></a>Taşıma Kotaları
 
@@ -33,7 +34,7 @@ Taşıma kotaları, bir bağlantının aşırı kaynak tükettiği durumlarda ka
   
  Her kota ayarında bir tür, en düşük değer ve varsayılan değer vardır. Kotanın en büyük değeri, türü ile sınırlıdır. Makine sınırlamaları nedeniyle, en yüksek değere sahip bir kota ayarlamak her zaman mümkün değildir.  
   
-|Ad|Tür|Min.<br /><br /> değer|Varsayılan<br /><br /> değer|Açıklama|  
+|Ad|Tür|Min.<br /><br /> değer|Varsayılan<br /><br /> değer|Description|  
 |----------|----------|--------------------|-----------------------|-----------------|  
 |`ChannelInitializationTimeout`|TimeSpan|1 değer çizgisi|5 sn|İlk okuma sırasında girişin gönderilmesi için beklenecek en uzun süre. Bu veriler, kimlik doğrulaması gerçekleşmeden önce alınır. Bu ayar, kota değerinden genellikle daha küçüktür `ReceiveTimeout` .|  
 |`CloseTimeout`|TimeSpan|0|1 dk|Aktarım bir özel durum harekete geçmeden önce bağlantının kapanması için beklenecek en uzun süre.|  
@@ -64,7 +65,7 @@ Taşıma kotaları, bir bağlantının aşırı kaynak tükettiği durumlarda ka
 
  Bağlama öğesi aracılığıyla aktarım kotalarını ayarlamak, taşımanın davranışını denetleme konusunda en büyük esnekliği sunar. Kapatma, açma, alma ve gönderme işlemleri için varsayılan zaman aşımları, bir kanal oluşturulduğunda bağlamadan alınır.  
   
-|Adı|HTTP|TCP/IP|Adlandırılmış kanal|  
+|Name|HTTP|TCP/IP|Adlandırılmış kanal|  
 |----------|----------|-------------|----------------|  
 |`ChannelInitializationTimeout`||X|X|  
 |`CloseTimeout`||||  
@@ -87,7 +88,7 @@ Taşıma kotaları, bir bağlantının aşırı kaynak tükettiği durumlarda ka
 
  Bağlama aracılığıyla aktarım kotalarını ayarlamak, en yaygın kota değerlerine erişim sağlarken, ' ın arasından seçim yapmak için basitleştirilmiş bir kota kümesi sunar.  
   
-|Adı|HTTP|TCP/IP|Adlandırılmış kanal|  
+|Name|HTTP|TCP/IP|Adlandırılmış kanal|  
 |----------|----------|-------------|----------------|  
 |`ChannelInitializationTimeout`||||  
 |`CloseTimeout`|X|X|X|  

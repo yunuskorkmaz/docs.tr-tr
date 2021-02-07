@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 3363-HttpAuthFailed'
 title: 3363 - HttpAuthFailed
 ms.date: 03/30/2017
 ms.assetid: 8ddfc1f0-ab6f-4fd4-a138-05ded7f6680a
-ms.openlocfilehash: 1a1d7e94cfc50f1e15ea37916b1d83b117c2f273
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0668eed606fc0a775b52fc955ce5298eb9718f67
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96259804"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753126"
 ---
 # <a name="3363---httpauthfailed"></a>3363 - HttpAuthFailed
 
@@ -17,10 +18,10 @@ ms.locfileid: "96259804"
 |-|-|  
 |ID|3363|  
 |Anahtar sözcükler|HTTP|  
-|Düzey|Uyarı|  
+|Level|Uyarı|  
 |Kanal|Microsoft-Windows-uygulama sunucusu-uygulamalar/analitik|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Http kimlik doğrulaması başarısız olduğunda bu olay yayınlanır.  
   

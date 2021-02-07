@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Işlem modelleri'
 title: İşlem Modelleri
 ms.date: 03/30/2017
 ms.assetid: 48a8bc1b-128b-4cf1-a421-8cc73223c340
-ms.openlocfilehash: ce7eb74a3e06df8db2e6d8261faca16650e4e4f1
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9abccf74ef5b242cfbe63605046e30e397b8eda6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96242272"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752710"
 ---
 # <a name="transaction-models"></a>İşlem Modelleri
 

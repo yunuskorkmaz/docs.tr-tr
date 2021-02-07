@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: WCF Web HTTP programlama nesnesi modeli'
 title: WCF Web HTTP Programlama Nesnesi Modeli
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-ms.openlocfilehash: 4cd23ccb1956a73e36d5c7d3e444c347247e338d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: cfec94d323e2580cab64b426215cc2c7284743ec
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96266889"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752580"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>WCF Web HTTP Programlama Nesnesi Modeli
 

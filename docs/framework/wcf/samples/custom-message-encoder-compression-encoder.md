@@ -1,13 +1,14 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: özel Ileti Kodlayıcısı: Sıkıştırma Kodlayıcısı'
 title: 'Özel İleti Kodlayıcısı: Sıkıştırma Kodlayıcısı'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: db20ec20579d6fcb0ec202920db0d7781b0676df
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 61c28435000333b1411a3fbcba485e0a252aed63
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600626"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752528"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>Özel İleti Kodlayıcısı: Sıkıştırma Kodlayıcısı
 
@@ -29,7 +30,7 @@ Bu örnek, bir istemci konsolu programından (. exe), şirket içinde barındır
 > [!NOTE]
 > .NET Framework 4 ' te, sunucu sıkıştırılmış bir yanıt gönderiyorsa (GZip veya söndür gibi bir algoritmayla oluşturulmuş) WCF istemcisinde otomatik açma özelliği etkinleştirilmiştir. Hizmet, Internet Information Server 'da (IIS) Web 'de barındırılıyorsa, hizmetin sıkıştırılmış bir yanıt gönderebilmesi için IIS yapılandırılabilir. Bu örnek, gereksinim hem istemcide hem de hizmette sıkıştırma yapmak ve sıkıştırmayı açmak ya da hizmetin şirket içinde barındırılması durumunda kullanılabilir.
 
-Örnek, bir WCF uygulamasında özel bir ileti Kodlayıcısı oluşturmayı ve tümleştirmeyi gösterir. GZipEncoder. dll kitaplığı hem istemci hem de hizmetle birlikte dağıtılır. Bu örnek ayrıca iletileri sıkıştırma etkisini de gösterir. GZipEncoder. dll içindeki kod şunları gösterir:
+Örnek, bir WCF uygulamasında özel bir ileti Kodlayıcısı oluşturmayı ve tümleştirmeyi gösterir. Kitaplık GZipEncoder.dll hem istemci hem de hizmetle birlikte dağıtılır. Bu örnek ayrıca iletileri sıkıştırma etkisini de gösterir. GZipEncoder.dll kod, aşağıdakileri gösterir:
 
 - Özel kodlayıcı ve kodlayıcı fabrikası oluşturma.
 
@@ -183,7 +184,7 @@ GZipMessageEncoderFactory(innerBindingElement.CreateMessageEncoderFactory());
 </wsp:Policy>
 ```
 
-`GZipMessageEncodingBindingElementImporter`Sınıfı `IPolicyImportExtension` arabirimini uygular, bu sınıf için ilkeyi içeri aktarır `GZipMessageEncodingBindingElement` . Svcutil. exe aracı, ilkeleri yapılandırma dosyasına aktarmak için kullanılabilir, işlemek için `GZipMessageEncodingBindingElement` aşağıdaki, Svcutil. exe. config dosyasına eklenmelidir.
+`GZipMessageEncodingBindingElementImporter`Sınıfı `IPolicyImportExtension` arabirimini uygular, bu sınıf için ilkeyi içeri aktarır `GZipMessageEncodingBindingElement` . Svcutil.exe araç, ilkeleri yapılandırma dosyasına aktarmak için kullanılabilir, işlemek için `GZipMessageEncodingBindingElement` aşağıdakiler Svcutil.exe.config eklenmelidir.
 
 ```xml
 <configuration>
@@ -289,7 +290,7 @@ public class GZipMessageEncodingElement : BindingElementExtensionElement
 }
 ```
 
-Bu yapılandırma işleyicisi, hizmet veya istemcinin App. config veya Web. config dosyasında aşağıdaki gösterimiyle eşleşir.
+Bu yapılandırma işleyicisi, hizmet veya istemci için App.config ya da Web.config aşağıdaki gösterimiyle eşlenir.
 
 ```xml
 <gzipMessageEncoding innerMessageEncoding="textMessageEncoding" />
