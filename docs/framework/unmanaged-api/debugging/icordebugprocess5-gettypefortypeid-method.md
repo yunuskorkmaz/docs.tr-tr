@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ICorDebugProcess5:: GetTypeForTypeID Yöntemi'
 title: ICorDebugProcess5::GetTypeForTypeID Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: e0eed5a8-fa6d-4818-bd00-7babcea30325
 topic_type:
 - apiref
-ms.openlocfilehash: 0ed83005bd4ab23124a458a024985d011dfce8c1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a18543b0afc867dc3796264ac1d08a775c73ca59
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95717610"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99746379"
 ---
 # <a name="icordebugprocess5gettypefortypeid-method"></a>ICorDebugProcess5::GetTypeForTypeID Metodu
 
 Bir tür tanımlayıcısını ICorDebugType değerine dönüştürür.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetTypeForTypeID(  

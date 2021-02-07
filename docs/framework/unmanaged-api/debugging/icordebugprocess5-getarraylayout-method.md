@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ICorDebugProcess5:: GetArrayLayout yöntemi'
 title: ICorDebugProcess5::GetArrayLayout Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 9a7393b9-9735-43c6-8616-afb103c432fd
 topic_type:
 - apiref
-ms.openlocfilehash: 8b7fab5fc5a02f8e43dc5f6fe8fc98087859ee3d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c82b296da3a367f5307240225a560af67a56c866
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95671115"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99746405"
 ---
 # <a name="icordebugprocess5getarraylayout-method"></a>ICorDebugProcess5::GetArrayLayout Yöntemi
 
 Dizi türlerinin yerleşimi hakkında bilgi sağlar.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetArrayLayout(    [in] COR_TYPEID id,     [out] COR_ARRAY_LAYOUT *pLayout);  

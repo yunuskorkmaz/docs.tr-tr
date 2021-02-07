@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ICorDebugProcess3:: SetEnableCustomNotification yöntemi'
 title: ICorDebugProcess3::SetEnableCustomNotification Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: afd88ee9-2589-4461-a75a-9b6fe55a2525
 topic_type:
 - apiref
-ms.openlocfilehash: 078e5cb03848564b42e30a079101d5a61e0074bd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 71d1d23b1fa4ba16b26b7c9bacf7fb5cec5e5074
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734029"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99746481"
 ---
 # <a name="icordebugprocess3setenablecustomnotification-method"></a>ICorDebugProcess3::SetEnableCustomNotification Yöntemi
 
 Belirtilen türdeki özel hata ayıklayıcı bildirimlerini etkinleştir ve devre dışı bırakır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT SetEnableCustomNotification(ICorDebugClass * pClass,  

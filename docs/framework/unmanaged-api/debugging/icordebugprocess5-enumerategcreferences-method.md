@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ICorDebugProcess5:: EnumerateGCReferences Yöntemi'
 title: ICorDebugProcess5::EnumerateGCReferences Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 86c397c3-81d8-463e-a248-3cbe06c44d9d
 topic_type:
 - apiref
-ms.openlocfilehash: 0f2f5acfc6a23398b15af3a63345050eb0dfd5b4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5145fd072b083ed107b874fe99403984915233ec
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95687196"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99746418"
 ---
 # <a name="icordebugprocess5enumerategcreferences-method"></a>ICorDebugProcess5::EnumerateGCReferences Yöntemi
 
 Bir işlemde çöp toplanabilecek tüm nesneler için bir Numaralandırıcı alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT EnumerateGCReferences(  
