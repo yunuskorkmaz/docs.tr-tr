@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ICLRDebuggingLibraryProvider Interface'
 title: ICLRDebuggingLibraryProvider Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 67739617-6add-41a9-9de5-a3200c3109ce
 topic_type:
 - apiref
-ms.openlocfilehash: cd17cbc808b7f8381ac320bb55999c6b0466c3d8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8aaec87e97d45c8b7b6f87aee64154ea3f48b133
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723549"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99723289"
 ---
 # <a name="iclrdebugginglibraryprovider-interface"></a>ICLRDebuggingLibraryProvider Arabirimi
 

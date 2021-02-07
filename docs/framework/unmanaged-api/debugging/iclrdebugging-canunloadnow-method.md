@@ -1,4 +1,5 @@
 ---
+description: ': ICLRDebugging:: CanUnloadNow Yöntemi hakkında daha fazla bilgi edinin'
 title: ICLRDebugging::CanUnloadNow Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 62e0630c-8cb7-45d2-b622-5a472abfd8cf
 topic_type:
 - apiref
-ms.openlocfilehash: e89d936c528ea7482487a8629dbd882f6f67483e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 537494fe862c58aa8a8768dd5ce2abc8ca94f87d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723577"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99723380"
 ---
 # <a name="iclrdebuggingcanunloadnow-method"></a>ICLRDebugging::CanUnloadNow Yöntemi
 
 Bir [ICLRDebuggingLibraryProvider](iclrdebugginglibraryprovider-interface.md) arabirimi tarafından sağlanmış bir kitaplığın hala kullanımda olup olmadığını veya kaldırılabileceğini belirler.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT CanUnloadNow(HMODULE hModule);  
@@ -41,13 +42,13 @@ HRESULT CanUnloadNow(HMODULE hModule);
 
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|Tarafından başvurulan modül `hmodule` bellekten kaldırılabilir.|  
 |S_FALSE|Tarafından başvurulan modül `hmodule` hala kullanımda.|  
 |COR_E_NOT_CLR|Belirtilen modül bir CLR modülü değil.|  
   
-## <a name="exceptions"></a>Özel Durumlar  
+## <a name="exceptions"></a>Özel durumlar  
   
 ## <a name="remarks"></a>Açıklamalar  
 
