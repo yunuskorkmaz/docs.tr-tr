@@ -1,32 +1,33 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: nesne modelini dış dosya olarak oluşturma'
 title: 'Nasıl yapılır: Nesne Modelini Dış Dosya Olarak Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 2496fa06-3df4-4ecb-86c4-70a49ea08565
-ms.openlocfilehash: 2442caec5400759ae2bfeca35f99ebd2ff52d011
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 7270e0204b1de5c56d9bc7bf9df89f72d8030e7b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180770"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738903"
 ---
-# <a name="how-to-generate-the-object-model-as-an-external-file"></a><span data-ttu-id="b0318-102">Nasıl yapılır: Nesne Modelini Dış Dosya Olarak Oluşturma</span><span class="sxs-lookup"><span data-stu-id="b0318-102">How to: Generate the Object Model as an External File</span></span>
+# <a name="how-to-generate-the-object-model-as-an-external-file"></a><span data-ttu-id="a0513-103">Nasıl yapılır: Nesne Modelini Dış Dosya Olarak Oluşturma</span><span class="sxs-lookup"><span data-stu-id="a0513-103">How to: Generate the Object Model as an External File</span></span>
 
-<span data-ttu-id="b0318-103">Öznitelik tabanlı eşlemeye alternatif olarak, SQLMetal komut satırı aracını kullanarak nesne modelinizi harici bir XML dosyası olarak oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="b0318-103">As an alternative to attribute-based mapping, you can generate your object model as an external XML file by using the SQLMetal command-line tool.</span></span> <span data-ttu-id="b0318-104">Daha fazla bilgi için bkz. [SqlMetal.exe (kod üretme aracı)](../../../../tools/sqlmetal-exe-code-generation-tool.md).</span><span class="sxs-lookup"><span data-stu-id="b0318-104">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../tools/sqlmetal-exe-code-generation-tool.md).</span></span> <span data-ttu-id="b0318-105">Harici bir XML eşleme dosyası kullanarak kodunuzda dağınıklığı azaltabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="b0318-105">By using an external XML mapping file, you reduce clutter in your code.</span></span> <span data-ttu-id="b0318-106">Ayrıca, uygulamanızın ikili dosyalarını yeniden derlemeden dış dosyayı değiştirerek davranışı değiştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="b0318-106">You can also change behavior by modifying the external file without recompiling the binaries of your application.</span></span> <span data-ttu-id="b0318-107">Daha fazla bilgi için bkz. [dış eşleme](external-mapping.md).</span><span class="sxs-lookup"><span data-stu-id="b0318-107">For more information, see [External Mapping](external-mapping.md).</span></span>  
+<span data-ttu-id="a0513-104">Öznitelik tabanlı eşlemeye alternatif olarak, SQLMetal komut satırı aracını kullanarak nesne modelinizi harici bir XML dosyası olarak oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="a0513-104">As an alternative to attribute-based mapping, you can generate your object model as an external XML file by using the SQLMetal command-line tool.</span></span> <span data-ttu-id="a0513-105">Daha fazla bilgi için bkz. [SqlMetal.exe (kod üretme aracı)](../../../../tools/sqlmetal-exe-code-generation-tool.md).</span><span class="sxs-lookup"><span data-stu-id="a0513-105">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../tools/sqlmetal-exe-code-generation-tool.md).</span></span> <span data-ttu-id="a0513-106">Harici bir XML eşleme dosyası kullanarak kodunuzda dağınıklığı azaltabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="a0513-106">By using an external XML mapping file, you reduce clutter in your code.</span></span> <span data-ttu-id="a0513-107">Ayrıca, uygulamanızın ikili dosyalarını yeniden derlemeden dış dosyayı değiştirerek davranışı değiştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="a0513-107">You can also change behavior by modifying the external file without recompiling the binaries of your application.</span></span> <span data-ttu-id="a0513-108">Daha fazla bilgi için bkz. [dış eşleme](external-mapping.md).</span><span class="sxs-lookup"><span data-stu-id="a0513-108">For more information, see [External Mapping](external-mapping.md).</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="b0318-108">Nesne İlişkisel Tasarımcısı bir dış eşleme dosyası oluşturmayı desteklemez.</span><span class="sxs-lookup"><span data-stu-id="b0318-108">The Object Relational Designer does not support generation of an external mapping file.</span></span>  
+> <span data-ttu-id="a0513-109">Nesne İlişkisel Tasarımcısı bir dış eşleme dosyası oluşturmayı desteklemez.</span><span class="sxs-lookup"><span data-stu-id="a0513-109">The Object Relational Designer does not support generation of an external mapping file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b0318-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="b0318-109">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="a0513-110">Örnek</span><span class="sxs-lookup"><span data-stu-id="a0513-110">Example</span></span>  
 
- <span data-ttu-id="b0318-110">Aşağıdaki komut, Northwind örnek veritabanından bir dış eşleme dosyası oluşturur.</span><span class="sxs-lookup"><span data-stu-id="b0318-110">The following command generates an external mapping file from the Northwind sample database.</span></span>  
+ <span data-ttu-id="a0513-111">Aşağıdaki komut, Northwind örnek veritabanından bir dış eşleme dosyası oluşturur.</span><span class="sxs-lookup"><span data-stu-id="a0513-111">The following command generates an external mapping file from the Northwind sample database.</span></span>  
   
 ```console  
 sqlmetal /server:myserver /database:northwind /map:externalfile.xml  
 ```  
   
-## <a name="example"></a><span data-ttu-id="b0318-111">Örnek</span><span class="sxs-lookup"><span data-stu-id="b0318-111">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="a0513-112">Örnek</span><span class="sxs-lookup"><span data-stu-id="a0513-112">Example</span></span>  
 
- <span data-ttu-id="b0318-112">Bir dış eşleme dosyasından aşağıdaki alıntı, Northwind örnek veritabanındaki Customers tablosunun eşlemesini gösterir.</span><span class="sxs-lookup"><span data-stu-id="b0318-112">The following excerpt from an external mapping file shows the mapping for the Customers table in the Northwind sample database.</span></span> <span data-ttu-id="b0318-113">Bu alıntı, **/Map** seçeneği Ile SqlMetal yürütülerek oluşturulmuştur.</span><span class="sxs-lookup"><span data-stu-id="b0318-113">This excerpt was generated by executing SQLMetal with the **/map** option.</span></span>  
+ <span data-ttu-id="a0513-113">Bir dış eşleme dosyasından aşağıdaki alıntı, Northwind örnek veritabanındaki Customers tablosunun eşlemesini gösterir.</span><span class="sxs-lookup"><span data-stu-id="a0513-113">The following excerpt from an external mapping file shows the mapping for the Customers table in the Northwind sample database.</span></span> <span data-ttu-id="a0513-114">Bu alıntı, **/Map** seçeneği Ile SqlMetal yürütülerek oluşturulmuştur.</span><span class="sxs-lookup"><span data-stu-id="a0513-114">This excerpt was generated by executing SQLMetal with the **/map** option.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -51,8 +52,8 @@ sqlmetal /server:myserver /database:northwind /map:externalfile.xml
 </Database>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b0318-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b0318-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a0513-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a0513-115">See also</span></span>
 
-- [<span data-ttu-id="b0318-115">Nesne Modeli Oluşturma</span><span class="sxs-lookup"><span data-stu-id="b0318-115">Creating the Object Model</span></span>](creating-the-object-model.md)
-- [<span data-ttu-id="b0318-116">Dış Eşleme</span><span class="sxs-lookup"><span data-stu-id="b0318-116">External Mapping</span></span>](external-mapping.md)
-- [<span data-ttu-id="b0318-117">Nasıl yapılır: Visual Basic veya C# içinde Nesne Modeli Oluşturma</span><span class="sxs-lookup"><span data-stu-id="b0318-117">How to: Generate the Object Model in Visual Basic or C#</span></span>](how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+- [<span data-ttu-id="a0513-116">Nesne Modeli Oluşturma</span><span class="sxs-lookup"><span data-stu-id="a0513-116">Creating the Object Model</span></span>](creating-the-object-model.md)
+- [<span data-ttu-id="a0513-117">Dış Eşleme</span><span class="sxs-lookup"><span data-stu-id="a0513-117">External Mapping</span></span>](external-mapping.md)
+- [<span data-ttu-id="a0513-118">Nasıl yapılır: Visual Basic veya C# içinde Nesne Modeli Oluşturma</span><span class="sxs-lookup"><span data-stu-id="a0513-118">How to: Generate the Object Model in Visual Basic or C#</span></span>](how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
