@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Işlevler (Visual Basic)'
 title: İşlevler
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic, functions
 - functions [Visual Basic]
 ms.assetid: d86fc51f-f46e-4941-8ae2-6262da3d2688
-ms.openlocfilehash: e777bdf8445aab0718b5e07f8ea0751d0f10f8f8
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 1c5d146f532daea60080d83c4e031d0cd2d0500a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90870172"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99701254"
 ---
 # <a name="functions-visual-basic"></a>İşlevler (Visual Basic)
 
@@ -23,9 +24,9 @@ Bu bölümdeki konularda Visual Basic çalışma zamanı üye işlevlerinin tabl
 
  [Dönüşüm İşlevleri](conversion-functions.md)  
   
- [Matematik İşlevleri](math-functions.md)  
+ [Matematik Işlevleri](math-functions.md)  
   
- [Dize İşlevleri](string-functions.md)  
+ [Dize Işlevleri](string-functions.md)  
   
  [Tür Dönüştürme İşlevleri](type-conversion-functions.md)  
   

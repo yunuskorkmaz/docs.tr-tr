@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: özel (Visual Basic)'
 title: Özel
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Private keyword [Visual Basic]
 - Private keyword [Visual Basic], syntax
 ms.assetid: aba74a2e-5824-4613-bf63-b9ec7787f4e6
-ms.openlocfilehash: 59f1c1666ce38923a2861244fb377007cd0fa992
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 20dcd943856e20ccb1b7cb5c0603fa5f313d2421
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874983"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700955"
 ---
 # <a name="private-visual-basic"></a>Özel (Visual Basic)
 
@@ -33,7 +34,7 @@ Bir ya da daha fazla bildirilmemiş programlama öğesine, içerilen türlerin d
   
 - **Erişim düzeyi.** Bir bildirim bağlamı içindeki tüm kod `Private` öğelerine erişebilir. Bu, iç içe geçmiş bir sınıf veya bir Numaralandırmadaki atama ifadesi gibi içerilen bir tür içindeki kodu içerir. Bildirim bağlamı dışında hiçbir kod `Private` öğelerine erişemez.  
   
-- **Erişim değiştiricileri.** Erişim düzeyi belirten anahtar sözcüklere *erişim değiştiricileri*denir. Erişim değiştiricilerinden oluşan bir karşılaştırma için bkz. [Visual Basic erişim düzeyleri](../../programming-guide/language-features/declared-elements/access-levels.md).  
+- **Erişim değiştiricileri.** Erişim düzeyi belirten anahtar sözcüklere *erişim değiştiricileri* denir. Erişim değiştiricilerinden oluşan bir karşılaştırma için bkz. [Visual Basic erişim düzeyleri](../../programming-guide/language-features/declared-elements/access-levels.md).  
   
  `Private`Değiştirici şu bağlamlarda kullanılabilir:  
   
@@ -63,7 +64,7 @@ Bir ya da daha fazla bildirilmemiş programlama öğesine, içerilen türlerin d
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Geneldir](public.md)
+- [Genel](public.md)
 - [Korunamadı](protected.md)
 - [Arkadaş](friend.md)
 - [Özel korumalı](./private-protected.md)

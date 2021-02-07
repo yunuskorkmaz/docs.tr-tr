@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ReadOnly (Visual Basic)'
 title: ReadOnly
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - properties [Visual Basic], read-only
 - read-only variables
 ms.assetid: e868185d-6142-4359-a2fd-a7965cadfce8
-ms.openlocfilehash: 3ca322da4e5f0edcbe12bf29bded863daabffe3d
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: f510271531f6e6604f2b542d8331d1a1d7f64d58
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867694"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700916"
 ---
 # <a name="readonly-visual-basic"></a>ReadOnly (Visual Basic)
 

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Async (Visual Basic)'
 title: Zaman Uyumsuz
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - Async [Visual Basic]
 - Async keyword [Visual Basic]
 ms.assetid: 1be8b4b5-9689-41b5-bd33-b906bfd53bc5
-ms.openlocfilehash: 35df7a464937647c6d110142a3e2801cebbea505
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a20c80ace06e386e7c106acc2b7e6258abca13b2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84373173"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99701163"
 ---
 # <a name="async-visual-basic"></a>Zaman Uyumsuz (Visual Basic)
 
-`Async`Değiştirici, değiştirdiği yöntemin veya [lambda ifadesinin](../../programming-guide/language-features/procedures/lambda-expressions.md) zaman uyumsuz olduğunu gösterir. Bu tür yöntemler *zaman uyumsuz yöntemler*olarak adlandırılır.
+`Async`Değiştirici, değiştirdiği yöntemin veya [lambda ifadesinin](../../programming-guide/language-features/procedures/lambda-expressions.md) zaman uyumsuz olduğunu gösterir. Bu tür yöntemler *zaman uyumsuz yöntemler* olarak adlandırılır.
 
 Zaman uyumsuz bir yöntem, çağıranın iş parçacığını engellemeden uzun süre çalışan bir iş yapmak için kullanışlı bir yol sağlar. Zaman uyumsuz bir yöntemi çağıran, zaman uyumsuz yöntemin tamamlanmasını beklemeden işini sürdürür.
 
@@ -110,5 +111,5 @@ End Function
 
 - <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>
 - [Await Işleci](../operators/await-operator.md)
-- [Async ve await ile zaman uyumsuz programlama](../../programming-guide/concepts/async/index.md)
+- [Async ve Await ile Zaman Uyumsuz Programlama](../../programming-guide/concepts/async/index.md)
 - [İzlenecek yol: Async ve await kullanarak Web 'e erişme](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)

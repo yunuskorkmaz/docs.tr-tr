@@ -1,4 +1,5 @@
 ---
+description: ': CType Işlevi (Visual Basic) hakkında daha fazla bilgi'
 title: CType İşlevi
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - CType function
 - conversions [Visual Basic], expression
 ms.assetid: dd4b29e7-6fa1-428c-877e-69955420bb72
-ms.openlocfilehash: 88d609146648fe1b0c3124b99a65e85293fc0707
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9732f52b40e5f762769ba5dc340c000e7e1ba17a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406436"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99701267"
 ---
 # <a name="ctype-function-visual-basic"></a>CType İşlevi (Visual Basic)
 
 Bir ifadeyi belirtilen veri türüne, nesneye, yapıya, sınıfa veya arabirime açıkça dönüştürmenin sonucunu döndürür.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```vb
 CType(expression, typename)
@@ -28,9 +29,9 @@ CType(expression, typename)
 
 ## <a name="parts"></a>Bölümler
 
-`expression`Herhangi bir geçerli ifade. Değeri `expression` tarafından izin verilen aralığın dışındaysa `typename` Visual Basic bir özel durum oluşturur.
+`expression` Herhangi bir geçerli ifade. Değeri `expression` tarafından izin verilen aralığın dışındaysa `typename` Visual Basic bir özel durum oluşturur.
 
-`typename`Deyimdeki bir yan tümce içinde geçerli olan herhangi bir ifade `As` `Dim` , diğer bir deyişle, herhangi bir veri türü, nesne, yapı, sınıf veya arabirimin adı.
+`typename` Deyimdeki bir yan tümce içinde geçerli olan herhangi bir ifade `As` `Dim` , diğer bir deyişle, herhangi bir veri türü, nesne, yapı, sınıf veya arabirimin adı.
 
 ## <a name="remarks"></a>Açıklamalar
 
@@ -40,13 +41,13 @@ CType(expression, typename)
 > - `CByte` `CDbl` `CInt` Belirli bir veri türüne dönüştürme gerçekleştiren, ve gibi tür dönüştürme işlevleri. Daha fazla bilgi için bkz. [tür dönüştürme işlevleri](type-conversion-functions.md).
 > - [DirectCast İşleci](../operators/directcast-operator.md) veya [TryCast İşleci](../operators/trycast-operator.md). Bu işleçler, bir türün diğer türden devralmasını veya uygulamayı gerektirir. `CType`Veri türüne dönüştürme işleminden daha iyi bir performans sağlayabilir `Object` .
 
-`CType`satır içi olarak derlenir, bu da dönüştürme kodunun ifadeyi değerlendiren kodun bir parçası olduğu anlamına gelir. Bazı durumlarda, dönüştürme işlemini gerçekleştirmek için hiçbir yordam çağrılmadığından kod daha hızlı çalışır.
+`CType` satır içi olarak derlenir, bu da dönüştürme kodunun ifadeyi değerlendiren kodun bir parçası olduğu anlamına gelir. Bazı durumlarda, dönüştürme işlemini gerçekleştirmek için hiçbir yordam çağrılmadığından kod daha hızlı çalışır.
 
 ' Den `expression` `typename` ' e (örneğin, öğesinden) hiçbir dönüştürme tanımlanmazsa `Integer` `Date` , Visual Basic bir derleme zamanı hata iletisi görüntüler.
 
 Çalışma zamanında bir dönüştürme başarısız olursa, uygun özel durum oluşturulur. Daraltma dönüştürmesi başarısız olursa, <xref:System.OverflowException> en sık görülen sonuç olur. Dönüştürme tanımsızdır, bir <xref:System.InvalidCastException> içinde atılır. Örneğin, bu durum, `expression` türü ise `Object` ve çalışma zamanı türünün öğesine dönüştürülmesine sahip olması durumunda gerçekleşebilir `typename` .
 
-Veri türü `expression` veya `typename` tanımladığınız bir sınıf veya yapı ise, `CType` Bu sınıf veya yapı üzerinde bir dönüştürme işleci olarak tanımlayabilirsiniz. Bu, `CType` *aşırı yüklenmiş bir operatör*olarak görev yapar. Bunu yaparsanız, oluşturulabilecek özel durumlar da dahil olmak üzere sınıfınıza veya yapınızı dönüştürme davranışını kontrol edebilirsiniz.
+Veri türü `expression` veya `typename` tanımladığınız bir sınıf veya yapı ise, `CType` Bu sınıf veya yapı üzerinde bir dönüştürme işleci olarak tanımlayabilirsiniz. Bu, `CType` *aşırı yüklenmiş bir operatör* olarak görev yapar. Bunu yaparsanız, oluşturulabilecek özel durumlar da dahil olmak üzere sınıfınıza veya yapınızı dönüştürme davranışını kontrol edebilirsiniz.
 
 ## <a name="overloading"></a>Aşırı Yükleme
 

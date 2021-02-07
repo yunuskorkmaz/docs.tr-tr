@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: bir alt görevin kendi üst öğesine Iliştirmesini engelleme'
 title: 'Nasıl yapılır: Alt Görevin Üst Göreve Eklenmesini Önleme'
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, preventing attachments
 ms.assetid: c0fb85d4-9e80-4905-9f65-29acc54201c4
-ms.openlocfilehash: 5874f07d48f99573af78c07a6ab6a0f386e6bc9a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 93c0b3c1e4ae3ded49b8e66f0e726708d63021d3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705910"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99701787"
 ---
 # <a name="how-to-prevent-a-child-task-from-attaching-to-its-parent"></a>Nasıl yapılır: Alt Görevin Üst Göreve Eklenmesini Önleme
 

@@ -1,5 +1,6 @@
 ---
-title: Ortak
+description: 'Daha fazla bilgi edinin: Public (Visual Basic)'
+title: Genel
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Public
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Public keyword [Visual Basic], syntax
 - Public access modifier
 ms.assetid: 284c9e1b-ed23-499b-9bc9-ad87c11485a5
-ms.openlocfilehash: f2b6a126435b111ef56ee2a9870ea6fbddf87901
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 1083ca877cf99917291523fe10f6561784ff06a2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867685"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700929"
 ---
 # <a name="public-visual-basic"></a>Public (Visual Basic)
 
@@ -35,7 +36,7 @@ Bir veya daha fazla tanımlanmış programlama öğesinin erişim kısıtlaması
   
 - **Varsayılan erişim.** Bir yordamın içindeki yerel değişkenler, genel erişim için varsayılan olarak kullanılır ve bunlara herhangi bir erişim değiştiricisi kullanamazsınız.  
   
-- **Erişim değiştiricileri.** Erişim düzeyi belirten anahtar sözcüklere *erişim değiştiricileri*denir. Erişim değiştiricilerinden oluşan bir karşılaştırma için bkz. [Visual Basic erişim düzeyleri](../../programming-guide/language-features/declared-elements/access-levels.md).  
+- **Erişim değiştiricileri.** Erişim düzeyi belirten anahtar sözcüklere *erişim değiştiricileri* denir. Erişim değiştiricilerinden oluşan bir karşılaştırma için bkz. [Visual Basic erişim düzeyleri](../../programming-guide/language-features/declared-elements/access-levels.md).  
   
  `Public`Değiştirici şu bağlamlarda kullanılabilir:  
   
@@ -71,7 +72,7 @@ Bir veya daha fazla tanımlanmış programlama öğesinin erişim kısıtlaması
 
 - [Korunamadı](protected.md)
 - [Arkadaş](friend.md)
-- [Özelleştirme](private.md)
+- [Özel](private.md)
 - [Özel korumalı](private-protected.md)
 - [Protected Friend](protected-friend.md)
 - [Visual Basic erişim düzeyleri](../../programming-guide/language-features/declared-elements/access-levels.md)

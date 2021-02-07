@@ -1,4 +1,5 @@
 ---
+description: Derleme hakkında daha fazla bilgi edinin (Visual Basic)
 title: Bütünleştirilmiş Kod
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Assembly keyword [Visual Basic]
 - attribute blocks, Assembly keyword
 ms.assetid: 925e7471-3bdf-4b51-bb93-cbcfc6efc52f
-ms.openlocfilehash: 34d6b94f31336e3e99b8ca981a9c4899e5a3d912
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 60b8ce4ed2b8b5cb7deeabb702c33d1e561d765f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875523"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99701189"
 ---
 # <a name="assembly-visual-basic"></a>Derleme (Visual Basic)
 

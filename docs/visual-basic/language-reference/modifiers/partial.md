@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: kısmi (Visual Basic)'
 title: Kısmi
 ms.date: 07/20/2015
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - Partial keyword [Visual Basic]
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
-ms.openlocfilehash: 2482facadd0e0528ed1b71df6edb4a447947a902
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: bf2d8b06b83f4a90ec2f4edd52405b58695c26e2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867772"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99701020"
 ---
 # <a name="partial-visual-basic"></a>Kısmi (Visual Basic)
 
@@ -28,9 +29,9 @@ Tür bildiriminin türün kısmi bir tanımı olduğunu gösterir.
  Anahtar sözcüğünü kullanarak, bir türün tanımını birkaç bildirim arasında bölebilirsiniz `Partial` . İstediğiniz kadar çok sayıda kısmi bildirim, istediğiniz kadar farklı kaynak dosyasında kullanabilirsiniz. Ancak, tüm bildirimlerin aynı derlemede ve aynı ad alanında olması gerekir.  
   
 > [!NOTE]
-> Visual Basic, genellikle kısmi sınıflarda uygulanan *Kısmi yöntemleri*destekler. Daha fazla bilgi için bkz. [kısmi Yöntemler](../../programming-guide/language-features/procedures/partial-methods.md) ve [Sub deyimleri](../statements/sub-statement.md).  
+> Visual Basic, genellikle kısmi sınıflarda uygulanan *Kısmi yöntemleri* destekler. Daha fazla bilgi için bkz. [kısmi Yöntemler](../../programming-guide/language-features/procedures/partial-methods.md) ve [Sub deyimleri](../statements/sub-statement.md).  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 [ <attrlist> ] [ accessmodifier ] [ Shadows ] [ MustInherit | NotInheritable ] _  
@@ -44,7 +45,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
 ## <a name="parts"></a>Bölümler  
   
-|Terim|Tanım|  
+|Süre|Tanım|  
 |---|---|  
 |`attrlist`|İsteğe bağlı. Bu tür için uygulanan özniteliklerin listesi. [Öznitelik listesini](../statements/attribute-list.md) açılı ayraç () içine almalısınız `< >` .|  
 |`accessmodifier`|İsteğe bağlı. Hangi kodun bu türe erişebileceğini belirtir. [Visual Basic erişim düzeylerine](../../programming-guide/language-features/declared-elements/access-levels.md)bakın.|  

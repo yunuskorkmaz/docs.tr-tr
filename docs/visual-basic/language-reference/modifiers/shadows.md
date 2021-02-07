@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: gölgeler (Visual Basic)'
 title: Shadows
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - names [Visual Basic], shadowing
 ms.assetid: 6bf687cd-0544-4797-b51b-911125ec57c6
-ms.openlocfilehash: 7aed6bec21bd484cca019b061bd5915de13a9eb8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4a455a78c36e15db977936b81c22e7a5b03d107e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402713"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700851"
 ---
 # <a name="shadows-visual-basic"></a>Shadows (Visual Basic)
 
@@ -24,7 +25,7 @@ Bir temel sınıfta, belirtilen bir programlama öğesinin, aynı adlı bir öğ
 
 ## <a name="remarks"></a>Açıklamalar
 
-Gölgeleme için ana amaç ( *ada göre gizleme*olarak da bilinir), sınıf üyelerinizin tanımını korur. Temel sınıf, zaten tanımlamış olduğunuz adla aynı ada sahip bir öğe oluşturan bir değişikliği olumsuz etkileyebilir. Bu durumda, değiştirici, `Shadows` sınıfınızın içindeki başvuruyu, yeni temel sınıf öğesi yerine tanımladığınız üyeye çözümlenmeye zorlar.
+Gölgeleme için ana amaç ( *ada göre gizleme* olarak da bilinir), sınıf üyelerinizin tanımını korur. Temel sınıf, zaten tanımlamış olduğunuz adla aynı ada sahip bir öğe oluşturan bir değişikliği olumsuz etkileyebilir. Bu durumda, değiştirici, `Shadows` sınıfınızın içindeki başvuruyu, yeni temel sınıf öğesi yerine tanımladığınız üyeye çözümlenmeye zorlar.
 
 Hem gölgeleme hem de geçersiz kılma devralınan bir öğeyi yeniden tanımlayın, ancak iki yaklaşım arasında önemli farklılıklar vardır. Daha fazla bilgi için [Visual Basic 'Da gölgeleme](../../programming-guide/language-features/declared-elements/shadowing.md)bölümüne bakın.
 
@@ -72,9 +73,9 @@ Hem gölgeleme hem de geçersiz kılma devralınan bir öğeyi yeniden tanımlay
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Shared](shared.md)
-- [Se](static.md)
-- [Özelleştirme](private.md)
+- [Paylaşılan](shared.md)
+- [Static](static.md)
+- [Özel](private.md)
 - [Me, My, MyBase ve MyClass](../../programming-guide/program-structure/me-my-mybase-and-myclass.md)
 - [Devralma Temelleri](../../programming-guide/language-features/objects-and-classes/inheritance-basics.md)
 - [MustOverride](mustoverride.md)

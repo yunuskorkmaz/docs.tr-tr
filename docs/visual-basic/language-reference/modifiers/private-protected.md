@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: özel korumalı (Visual Basic)'
 title: Private Protected
 ms.date: 05/10/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Private Protected keyword [Visual Basic]
 - Private Protected keyword [Visual Basic], syntax
-ms.openlocfilehash: 8ad1509da71bc80b33700d363ddd4569a0965dff
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: eb521ace77cd16f4904657cbdc035575e98e98fa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87303471"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700968"
 ---
 # <a name="private-protected-visual-basic"></a>Özel korumalı (Visual Basic)
 
@@ -40,7 +41,7 @@ Daha fazla bilgi için bkz. [Visual Basic dil sürümünü ayarlama](../configur
 
 - **Erişim düzeyi.** Bir sınıftaki tüm kod öğelerine erişebilir. Bir taban sınıftan türetilen ve aynı derlemede yer alan herhangi bir sınıftaki kod, `Private Protected` temel sınıfın tüm öğelerine erişebilir. Ancak, bir taban sınıftan türetilen ve farklı bir derlemede yer alan herhangi bir sınıftaki kod, temel sınıf `Private Protected` öğelerine erişemez.
 
-- **Erişim değiştiricileri.** Erişim düzeyi belirten anahtar sözcüklere *erişim değiştiricileri*denir. Erişim değiştiricilerinden oluşan bir karşılaştırma için bkz. [Visual Basic erişim düzeyleri](../../programming-guide/language-features/declared-elements/access-levels.md).
+- **Erişim değiştiricileri.** Erişim düzeyi belirten anahtar sözcüklere *erişim değiştiricileri* denir. Erişim değiştiricilerinden oluşan bir karşılaştırma için bkz. [Visual Basic erişim düzeyleri](../../programming-guide/language-features/declared-elements/access-levels.md).
 
 `Private Protected`Değiştirici şu bağlamlarda kullanılabilir:
 
@@ -70,9 +71,9 @@ Daha fazla bilgi için bkz. [Visual Basic dil sürümünü ayarlama](../configur
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Geneldir](public.md)
+- [Genel](public.md)
 - [Korunamadı](protected.md)
-- [Dost](friend.md)
+- [Arkadaş](friend.md)
 - [Özel](private.md)
 - [Protected Friend](./protected-friend.md)
 - [Visual Basic erişim düzeyleri](../../programming-guide/language-features/declared-elements/access-levels.md)

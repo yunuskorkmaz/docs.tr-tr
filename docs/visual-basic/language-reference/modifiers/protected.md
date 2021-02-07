@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: korumalı (Visual Basic)'
 title: Korumalı
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Protected access modifier
 - Protected keyword [Visual Basic]
 ms.assetid: 74ad3d56-309f-49d2-b60c-1d0157d010e8
-ms.openlocfilehash: d66ed68004f8b6ef21ae703f02b317589814764b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 74a695e7c8ff06543a7118c935365e31af258171
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398226"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700942"
 ---
 # <a name="protected-visual-basic"></a>Korumalı (Visual Basic)
 
@@ -41,7 +42,7 @@ Bazen bir sınıfta tanımlanan programlama öğesi hassas veriler veya kısıtl
 
      Korumalı erişim arkadaş erişiminin bir üst kümesi veya alt kümesi değil.
 
-- **Erişim değiştiricileri.** Erişim düzeyi belirten anahtar sözcüklere *erişim değiştiricileri*denir. Erişim değiştiricilerinden oluşan bir karşılaştırma için bkz. [Visual Basic erişim düzeyleri](../../programming-guide/language-features/declared-elements/access-levels.md).
+- **Erişim değiştiricileri.** Erişim düzeyi belirten anahtar sözcüklere *erişim değiştiricileri* denir. Erişim değiştiricilerinden oluşan bir karşılaştırma için bkz. [Visual Basic erişim düzeyleri](../../programming-guide/language-features/declared-elements/access-levels.md).
 
 `Protected`Değiştirici şu bağlamlarda kullanılabilir:
 
@@ -71,9 +72,9 @@ Bazen bir sınıfta tanımlanan programlama öğesi hassas veriler veya kısıtl
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Geneldir](public.md)
-- [Dost](friend.md)
-- [Özelleştirme](private.md)
+- [Genel](public.md)
+- [Arkadaş](friend.md)
+- [Özel](private.md)
 - [Özel korumalı](private-protected.md)
 - [Protected Friend](protected-friend.md)
 - [Visual Basic erişim düzeyleri](../../programming-guide/language-features/declared-elements/access-levels.md)
