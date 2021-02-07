@@ -1,37 +1,38 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 1146-FlowchartSwitchCase'
 title: 1146 - FlowchartSwitchCase
 ms.date: 03/30/2017
 ms.assetid: 274e9209-1720-4512-a615-e742f00895f4
-ms.openlocfilehash: 9636e5371440229ced965cf125ffb2ce4e314f72
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f6e9b33f9c068b51695d3ac46cda51fb6d9f8b3f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96286116"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99667076"
 ---
-# <a name="1146---flowchartswitchcase"></a><span data-ttu-id="d88d6-102">1146 - FlowchartSwitchCase</span><span class="sxs-lookup"><span data-stu-id="d88d6-102">1146 - FlowchartSwitchCase</span></span>
+# <a name="1146---flowchartswitchcase"></a><span data-ttu-id="4eec8-103">1146 - FlowchartSwitchCase</span><span class="sxs-lookup"><span data-stu-id="4eec8-103">1146 - FlowchartSwitchCase</span></span>
 
-## <a name="properties"></a><span data-ttu-id="d88d6-103">Özellikler</span><span class="sxs-lookup"><span data-stu-id="d88d6-103">Properties</span></span>  
+## <a name="properties"></a><span data-ttu-id="4eec8-104">Özellikler</span><span class="sxs-lookup"><span data-stu-id="4eec8-104">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="d88d6-104">ID</span><span class="sxs-lookup"><span data-stu-id="d88d6-104">ID</span></span>|<span data-ttu-id="d88d6-105">1146</span><span class="sxs-lookup"><span data-stu-id="d88d6-105">1146</span></span>|  
-|<span data-ttu-id="d88d6-106">Anahtar sözcükler</span><span class="sxs-lookup"><span data-stu-id="d88d6-106">Keywords</span></span>|<span data-ttu-id="d88d6-107">WFActivities</span><span class="sxs-lookup"><span data-stu-id="d88d6-107">WFActivities</span></span>|  
-|<span data-ttu-id="d88d6-108">Düzey</span><span class="sxs-lookup"><span data-stu-id="d88d6-108">Level</span></span>|<span data-ttu-id="d88d6-109">Bilgi</span><span class="sxs-lookup"><span data-stu-id="d88d6-109">Information</span></span>|  
-|<span data-ttu-id="d88d6-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="d88d6-110">Channel</span></span>|<span data-ttu-id="d88d6-111">Microsoft-Windows-Application Server-uygulamalar/hata ayıkla</span><span class="sxs-lookup"><span data-stu-id="d88d6-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="4eec8-105">ID</span><span class="sxs-lookup"><span data-stu-id="4eec8-105">ID</span></span>|<span data-ttu-id="4eec8-106">1146</span><span class="sxs-lookup"><span data-stu-id="4eec8-106">1146</span></span>|  
+|<span data-ttu-id="4eec8-107">Anahtar sözcükler</span><span class="sxs-lookup"><span data-stu-id="4eec8-107">Keywords</span></span>|<span data-ttu-id="4eec8-108">WFActivities</span><span class="sxs-lookup"><span data-stu-id="4eec8-108">WFActivities</span></span>|  
+|<span data-ttu-id="4eec8-109">Level</span><span class="sxs-lookup"><span data-stu-id="4eec8-109">Level</span></span>|<span data-ttu-id="4eec8-110">Bilgi</span><span class="sxs-lookup"><span data-stu-id="4eec8-110">Information</span></span>|  
+|<span data-ttu-id="4eec8-111">Kanal</span><span class="sxs-lookup"><span data-stu-id="4eec8-111">Channel</span></span>|<span data-ttu-id="4eec8-112">Microsoft-Windows-Application Server-uygulamalar/hata ayıkla</span><span class="sxs-lookup"><span data-stu-id="4eec8-112">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="d88d6-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="d88d6-112">Description</span></span>  
+## <a name="description"></a><span data-ttu-id="4eec8-113">Description</span><span class="sxs-lookup"><span data-stu-id="4eec8-113">Description</span></span>  
 
- <span data-ttu-id="d88d6-113">Bir akış çizelgesi anahtarında hangi durumun seçili olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="d88d6-113">Indicates which case has been selected in a Flowchart switch.</span></span>  
+ <span data-ttu-id="4eec8-114">Bir akış çizelgesi anahtarında hangi durumun seçili olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="4eec8-114">Indicates which case has been selected in a Flowchart switch.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="d88d6-114">İleti</span><span class="sxs-lookup"><span data-stu-id="d88d6-114">Message</span></span>  
+## <a name="message"></a><span data-ttu-id="4eec8-115">İleti</span><span class="sxs-lookup"><span data-stu-id="4eec8-115">Message</span></span>  
 
- <span data-ttu-id="d88d6-115">Flowchart ' %1 '/FlowSwitch-Case ' %2 ' seçildi.</span><span class="sxs-lookup"><span data-stu-id="d88d6-115">Flowchart '%1'/FlowSwitch - Case '%2' was selected.</span></span>  
+ <span data-ttu-id="4eec8-116">Flowchart ' %1 '/FlowSwitch-Case ' %2 ' seçildi.</span><span class="sxs-lookup"><span data-stu-id="4eec8-116">Flowchart '%1'/FlowSwitch - Case '%2' was selected.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="d88d6-116">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="d88d6-116">Details</span></span>  
+## <a name="details"></a><span data-ttu-id="4eec8-117">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="4eec8-117">Details</span></span>  
   
-|<span data-ttu-id="d88d6-117">Veri öğesi adı</span><span class="sxs-lookup"><span data-stu-id="d88d6-117">Data Item Name</span></span>|<span data-ttu-id="d88d6-118">Veri öğesi türü</span><span class="sxs-lookup"><span data-stu-id="d88d6-118">Data Item Type</span></span>|<span data-ttu-id="d88d6-119">Açıklama</span><span class="sxs-lookup"><span data-stu-id="d88d6-119">Description</span></span>|  
+|<span data-ttu-id="4eec8-118">Veri öğesi adı</span><span class="sxs-lookup"><span data-stu-id="4eec8-118">Data Item Name</span></span>|<span data-ttu-id="4eec8-119">Veri öğesi türü</span><span class="sxs-lookup"><span data-stu-id="4eec8-119">Data Item Type</span></span>|<span data-ttu-id="4eec8-120">Description</span><span class="sxs-lookup"><span data-stu-id="4eec8-120">Description</span></span>|  
 |--------------------|--------------------|-----------------|  
-|<span data-ttu-id="d88d6-120">FlowChart</span><span class="sxs-lookup"><span data-stu-id="d88d6-120">FlowChart</span></span>|<span data-ttu-id="d88d6-121">xs: String</span><span class="sxs-lookup"><span data-stu-id="d88d6-121">xs:string</span></span>|<span data-ttu-id="d88d6-122">Akış çizelgesinin görünen adı.</span><span class="sxs-lookup"><span data-stu-id="d88d6-122">The display name of the FlowChart.</span></span>|  
-|<span data-ttu-id="d88d6-123">Case (Olay)</span><span class="sxs-lookup"><span data-stu-id="d88d6-123">Case</span></span>|<span data-ttu-id="d88d6-124">xs: String</span><span class="sxs-lookup"><span data-stu-id="d88d6-124">xs:string</span></span>|<span data-ttu-id="d88d6-125">Seçilen anahtar durumu.</span><span class="sxs-lookup"><span data-stu-id="d88d6-125">The switch case that selected.</span></span>|  
-|<span data-ttu-id="d88d6-126">AppDomain</span><span class="sxs-lookup"><span data-stu-id="d88d6-126">AppDomain</span></span>|<span data-ttu-id="d88d6-127">xs: String</span><span class="sxs-lookup"><span data-stu-id="d88d6-127">xs:string</span></span>|<span data-ttu-id="d88d6-128">AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.</span><span class="sxs-lookup"><span data-stu-id="d88d6-128">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|
+|<span data-ttu-id="4eec8-121">FlowChart</span><span class="sxs-lookup"><span data-stu-id="4eec8-121">FlowChart</span></span>|<span data-ttu-id="4eec8-122">xs: String</span><span class="sxs-lookup"><span data-stu-id="4eec8-122">xs:string</span></span>|<span data-ttu-id="4eec8-123">Akış çizelgesinin görünen adı.</span><span class="sxs-lookup"><span data-stu-id="4eec8-123">The display name of the FlowChart.</span></span>|  
+|<span data-ttu-id="4eec8-124">Case (Olay)</span><span class="sxs-lookup"><span data-stu-id="4eec8-124">Case</span></span>|<span data-ttu-id="4eec8-125">xs: String</span><span class="sxs-lookup"><span data-stu-id="4eec8-125">xs:string</span></span>|<span data-ttu-id="4eec8-126">Seçilen anahtar durumu.</span><span class="sxs-lookup"><span data-stu-id="4eec8-126">The switch case that selected.</span></span>|  
+|<span data-ttu-id="4eec8-127">AppDomain</span><span class="sxs-lookup"><span data-stu-id="4eec8-127">AppDomain</span></span>|<span data-ttu-id="4eec8-128">xs: String</span><span class="sxs-lookup"><span data-stu-id="4eec8-128">xs:string</span></span>|<span data-ttu-id="4eec8-129">AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.</span><span class="sxs-lookup"><span data-stu-id="4eec8-129">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|
