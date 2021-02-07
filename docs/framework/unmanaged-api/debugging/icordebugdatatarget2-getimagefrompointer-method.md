@@ -1,19 +1,20 @@
 ---
+description: 'Daha fazla bilgi edinin: ICorDebugDataTarget2:: GetImageFromPointer yöntemi'
 title: ICorDebugDataTarget2::GetImageFromPointer Yöntemi
 ms.date: 03/30/2017
 ms.assetid: 939cabe1-b647-4090-b662-eeec23c6c58d
-ms.openlocfilehash: 41385fe915733f052af67c82d984c8b9d853c579
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: bcf73fa522072707a7b08d90965fcd38188c2bb5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95713827"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764404"
 ---
 # <a name="icordebugdatatarget2getimagefrompointer-method"></a>ICorDebugDataTarget2::GetImageFromPointer Yöntemi
 
 Bu modüldeki bir adresten modül taban adresini ve boyutunu döndürür.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetImageFromPointer(  

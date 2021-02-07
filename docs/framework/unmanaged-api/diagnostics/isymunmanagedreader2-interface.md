@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ISymUnmanagedReader2 Interface'
 title: ISymUnmanagedReader2 Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a01a881b-82a3-4b3e-a3a9-9dc305c2e5f7
 topic_type:
 - apiref
-ms.openlocfilehash: 3f34be833d3ccb5c636d2c5f18ccb6e216ef2c49
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2e6d994a3252b7fb09b2915266e3142255878a88
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95709082"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99763624"
 ---
 # <a name="isymunmanagedreader2-interface"></a>ISymUnmanagedReader2 Arabirimi
 

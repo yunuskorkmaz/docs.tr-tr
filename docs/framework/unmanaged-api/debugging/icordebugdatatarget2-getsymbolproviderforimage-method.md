@@ -1,19 +1,20 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ICorDebugDataTarget2:: GetSymbolProviderForImage yöntemi'
 title: ICorDebugDataTarget2::GetSymbolProviderForImage Metodu
 ms.date: 03/30/2017
 ms.assetid: b7c0a2f0-e904-43b3-98e1-d669e8a589e8
-ms.openlocfilehash: 5a5ccaeb36dcda82c0189026e19c6a7c023f3e1c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7b4493b6c0959dc39d955d7691a22ac6905034b1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95713775"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764391"
 ---
 # <a name="icordebugdatatarget2getsymbolproviderforimage-method"></a>ICorDebugDataTarget2::GetSymbolProviderForImage Metodu
 
 Bu modülün temel adresinden bir modülün sembol sağlayıcısını döndürür.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetSymbolProviderForImage(  

@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugDataTarget:: GetPlatform yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugDataTarget::GetPlatform Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 9ee96c9d-7a3d-4129-a6cc-7675c7f2dda4
 topic_type:
 - apiref
-ms.openlocfilehash: e8612b23cbfa506fddb2fad712848b285b9ac28e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: dec691238009ad69d2e48d994ac250bfb6641863
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95679799"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764534"
 ---
 # <a name="icordebugdatatargetgetplatform-method"></a>ICorDebugDataTarget::GetPlatform Metodu
 
 Hedef işlemin çalıştığı işlemci mimarisi ve işletim sistemi dahil olmak üzere platform hakkında bilgi sağlar.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetPlatform([out] CorDebugPlatform * pTargetPlatform);  

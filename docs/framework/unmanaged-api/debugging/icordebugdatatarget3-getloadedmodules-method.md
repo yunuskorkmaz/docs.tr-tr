@@ -1,19 +1,20 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ICorDebugDataTarget3:: GetLoadedModules yöntemi'
 title: ICorDebugDataTarget3::GetLoadedModules Yöntemi
 ms.date: 03/30/2017
 ms.assetid: 9a48c05b-1949-416e-933c-52549b6fcf5e
-ms.openlocfilehash: efbada02b7a24e0a7ed613b86b8a4a1a0b5b051a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ea6350155fd79b52a37133cad95f624635433a3e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95713760"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764352"
 ---
 # <a name="icordebugdatatarget3getloadedmodules-method"></a>ICorDebugDataTarget3::GetLoadedModules Yöntemi
 
 Şimdiye kadar yüklenmiş modüllerin listesini alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetLoadedModules(  
