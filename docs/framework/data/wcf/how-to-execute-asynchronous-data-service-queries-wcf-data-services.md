@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: nasıl yapılır: zaman uyumsuz veri hizmeti sorguları yürütme (WCF Veri Hizmetleri)'
 title: 'Nasıl yapılır: zaman uyumsuz veri hizmeti sorguları yürütme (WCF Veri Hizmetleri)'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,29 +9,31 @@ helpviewer_keywords:
 - WCF Data Services, asynchronous operations
 - asynchronous operations [WCF Data Services]
 ms.assetid: 902a2dc1-d0e9-4b00-90a8-becc4cb1f6a7
-ms.openlocfilehash: 84eb88695580598d41615653723c137d3f766a47
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 35300de319673b29484dc981b5d6d51c964ad908
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91150615"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765353"
 ---
-# <a name="how-to-execute-asynchronous-data-service-queries-wcf-data-services"></a><span data-ttu-id="75686-102">Nasıl yapılır: zaman uyumsuz veri hizmeti sorguları yürütme (WCF Veri Hizmetleri)</span><span class="sxs-lookup"><span data-stu-id="75686-102">How to: Execute Asynchronous Data Service Queries (WCF Data Services)</span></span>
+# <a name="how-to-execute-asynchronous-data-service-queries-wcf-data-services"></a><span data-ttu-id="07add-103">Nasıl yapılır: zaman uyumsuz veri hizmeti sorguları yürütme (WCF Veri Hizmetleri)</span><span class="sxs-lookup"><span data-stu-id="07add-103">How to: Execute Asynchronous Data Service Queries (WCF Data Services)</span></span>
 
-<span data-ttu-id="75686-103">WCF Veri Hizmetleri istemci kitaplığını kullanarak, sorguları yürütme ve değişiklikleri kaydetme gibi istemci-sunucu işlemlerini zaman uyumsuz olarak gerçekleştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="75686-103">By using the WCF Data Services client library, you can asynchronously perform client-server operations, such as executing queries and saving changes.</span></span> <span data-ttu-id="75686-104">Daha fazla bilgi için bkz. [zaman uyumsuz işlemler](asynchronous-operations-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="75686-104">For more information, see [Asynchronous Operations](asynchronous-operations-wcf-data-services.md).</span></span>  
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
+
+<span data-ttu-id="07add-104">WCF Veri Hizmetleri istemci kitaplığını kullanarak, sorguları yürütme ve değişiklikleri kaydetme gibi istemci-sunucu işlemlerini zaman uyumsuz olarak gerçekleştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="07add-104">By using the WCF Data Services client library, you can asynchronously perform client-server operations, such as executing queries and saving changes.</span></span> <span data-ttu-id="07add-105">Daha fazla bilgi için bkz. [zaman uyumsuz işlemler](asynchronous-operations-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="07add-105">For more information, see [Asynchronous Operations](asynchronous-operations-wcf-data-services.md).</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="75686-105">Geri aramanın belirli bir iş parçacığında çağrılması gereken bir uygulamada, yönteminin yürütülmesini açıkça sıramalısınız <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> .</span><span class="sxs-lookup"><span data-stu-id="75686-105">In an application where the callback must be invoked on a specific thread, you must explicitly marshal the execution of the <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> method.</span></span> <span data-ttu-id="75686-106">Daha fazla bilgi için bkz. [zaman uyumsuz işlemler](asynchronous-operations-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="75686-106">For more information, see [Asynchronous Operations](asynchronous-operations-wcf-data-services.md).</span></span>  
+> <span data-ttu-id="07add-106">Geri aramanın belirli bir iş parçacığında çağrılması gereken bir uygulamada, yönteminin yürütülmesini açıkça sıramalısınız <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> .</span><span class="sxs-lookup"><span data-stu-id="07add-106">In an application where the callback must be invoked on a specific thread, you must explicitly marshal the execution of the <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> method.</span></span> <span data-ttu-id="07add-107">Daha fazla bilgi için bkz. [zaman uyumsuz işlemler](asynchronous-operations-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="07add-107">For more information, see [Asynchronous Operations](asynchronous-operations-wcf-data-services.md).</span></span>  
   
- <span data-ttu-id="75686-107">Bu konudaki örnek, Northwind örnek veri hizmeti ve otomatik olarak istemci veri hizmeti sınıflarını kullanır.</span><span class="sxs-lookup"><span data-stu-id="75686-107">The example in this topic uses the Northwind sample data service and autogenerated client data service classes.</span></span> <span data-ttu-id="75686-108">Bu hizmet ve istemci veri sınıfları, [WCF veri hizmetleri hızlı](quickstart-wcf-data-services.md)başlangıcı 'nı tamamladığınızda oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="75686-108">This service and the client data classes are created when you complete the [WCF Data Services quickstart](quickstart-wcf-data-services.md).</span></span>  
+ <span data-ttu-id="07add-108">Bu konudaki örnek, Northwind örnek veri hizmeti ve otomatik olarak istemci veri hizmeti sınıflarını kullanır.</span><span class="sxs-lookup"><span data-stu-id="07add-108">The example in this topic uses the Northwind sample data service and autogenerated client data service classes.</span></span> <span data-ttu-id="07add-109">Bu hizmet ve istemci veri sınıfları, [WCF veri hizmetleri hızlı](quickstart-wcf-data-services.md)başlangıcı 'nı tamamladığınızda oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="07add-109">This service and the client data classes are created when you complete the [WCF Data Services quickstart](quickstart-wcf-data-services.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="75686-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="75686-109">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="07add-110">Örnek</span><span class="sxs-lookup"><span data-stu-id="07add-110">Example</span></span>  
 
- <span data-ttu-id="75686-110">Aşağıdaki örnek, <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> sorguyu başlatmak için yöntemini çağırarak zaman uyumsuz bir sorgunun nasıl yürütüleceğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="75686-110">The following example shows how to execute an asynchronous query by calling the <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> method to start the query.</span></span> <span data-ttu-id="75686-111">Satır içi temsilci, <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> sorgu sonuçlarını göstermek için yöntemini çağırır.</span><span class="sxs-lookup"><span data-stu-id="75686-111">The inline delegate calls the <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> method to display the query results.</span></span>  
+ <span data-ttu-id="07add-111">Aşağıdaki örnek, <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> sorguyu başlatmak için yöntemini çağırarak zaman uyumsuz bir sorgunun nasıl yürütüleceğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="07add-111">The following example shows how to execute an asynchronous query by calling the <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> method to start the query.</span></span> <span data-ttu-id="07add-112">Satır içi temsilci, <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> sorgu sonuçlarını göstermek için yöntemini çağırır.</span><span class="sxs-lookup"><span data-stu-id="07add-112">The inline delegate calls the <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> method to display the query results.</span></span>  
   
  [!code-csharp[Astoria Northwind Client#ExecuteQueryAsync](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#executequeryasync)]
  [!code-vb[Astoria Northwind Client#ExecuteQueryAsync](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#executequeryasync)]  
   
-## <a name="see-also"></a><span data-ttu-id="75686-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="75686-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="07add-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="07add-113">See also</span></span>
 
-- [<span data-ttu-id="75686-113">WCF Veri Hizmetleri İstemci Kitaplığı</span><span class="sxs-lookup"><span data-stu-id="75686-113">WCF Data Services Client Library</span></span>](wcf-data-services-client-library.md)
+- [<span data-ttu-id="07add-114">WCF Veri Hizmetleri İstemci Kitaplığı</span><span class="sxs-lookup"><span data-stu-id="07add-114">WCF Data Services Client Library</span></span>](wcf-data-services-client-library.md)
