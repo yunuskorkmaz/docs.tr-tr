@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: COR_FIELD yapısı'
 title: COR_FIELD Yapısı
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0822423-a9df-4961-950d-50dcc152f863
 topic_type:
 - apiref
-ms.openlocfilehash: ae8e907d0e0d6ef5030b3e9aa1f1b3dcef50193e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a3e9dcc2a5c3bb2abae42dab4292c1d285df5ad7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726632"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747120"
 ---
 # <a name="cor_field-structure"></a>COR_FIELD Yapısı
 
@@ -38,7 +39,7 @@ typedef struct COR_FIELD{
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`token`|`mdFieldDef`Alan bilgilerini almak için kullanılabilen bir belirteç.|  
 |`offset`|Nesnedeki alan verilerine göre bayt cinsinden fark.|  

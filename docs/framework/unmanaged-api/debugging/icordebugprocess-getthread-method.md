@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugProcess:: GetThread metodu hakkında daha fazla bilgi edinin'
 title: ICorDebugProcess::GetThread Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: a48261ed-700b-41c9-8cb4-18c526546603
 topic_type:
 - apiref
-ms.openlocfilehash: e70204aa555ed9411d1d2cd5ad8cde7e0c53de2a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: bd636df50afd3f12901c1b48559c44ac6ad0cb81
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95695003"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99746912"
 ---
 # <a name="icordebugprocessgetthread-method"></a>ICorDebugProcess::GetThread Metodu
 
 Belirtilen işletim sistemi (OS) iş parçacığı KIMLIĞINE sahip bu işlemin iş parçacığını alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetThread(  

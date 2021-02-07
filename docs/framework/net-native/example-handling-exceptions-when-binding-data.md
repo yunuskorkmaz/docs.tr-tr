@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: örnek: verileri bağlamada özel durumları Işleme'
 title: 'Örnek: Veri Bağlama Sırasında Özel Durum İşleme'
 ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
-ms.openlocfilehash: 399bd1af9ef25eca9cdfe1e13fdc4c01021babcd
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 434520e42afa3e1ab7c453c3ddf41863ceb62eb6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96251080"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747900"
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>Örnek: Veri Bağlama Sırasında Özel Durum İşleme
 

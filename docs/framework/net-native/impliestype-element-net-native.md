@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: <ImpliesType> öğesi (.NET Native)'
 title: <ImpliesType> Öğesi (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
-ms.openlocfilehash: 04c3a9498a5c9c24d67dedd02fb4c9d68d9efbdd
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 6476876f335788a276907fd2aef02d5623382699
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96287962"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747692"
 ---
 # <a name="impliestype-element-net-native"></a>\<ImpliesType> Öğesi (.NET Native)
 
@@ -35,7 +36,7 @@ ms.locfileid: "96287962"
   
 ### <a name="attributes"></a>Öznitelikler  
   
-|Öznitelik|Öznitelik türü|Açıklama|  
+|Öznitelik|Öznitelik türü|Description|  
 |---------------|--------------------|-----------------|  
 |`Name`|Genel|Gerekli öznitelik. Tür adını belirtir.|  
 |`Activate`|Yansıma|İsteğe bağlı öznitelik. Örneklerin etkinleştirilmesini sağlamak için oluşturuculara çalışma zamanı erişimini denetler.|  
@@ -93,7 +94,7 @@ ms.locfileid: "96287962"
   
  Bir örneklemesinin `Explicit` tanımlı bir ilke ayarı yoksa, bu yönergenin hiçbir etkisi yoktur `Dynamic` . Örneğin, için bu durum,, için olan `Explicit<Int32>` `Implicit<Int32>` genel üyeleriyle birlikte oluşturulur ve meta verileri dinamik programlama için erişilebilir hale getirilir.  
   
- Aşağıda, en az bir seri hale getirici için geçerli olan gerçek dünyada bir örnek verilmiştir. Yönergeler, bir şey olarak yazılmış bir şeyi yansıtan gereksinimi yakalar ve `IList<` *something* `>` `List<` *something* `>` uygulama başına ek açıklama gerekmeden ilgili bir tür üzerinde yansıtma de içerir.  
+ Aşağıda, en az bir seri hale getirici için geçerli olan gerçek dünyada bir örnek verilmiştir. Yönergeler, bir şey olarak yazılmış bir şeyi yansıtan gereksinimi yakalar ve `IList<`  `>` `List<`  `>` uygulama başına ek açıklama gerekmeden ilgili bir tür üzerinde yansıtma de içerir.  
   
 ```xml  
 <Type Name="System.Collections.Generic.IList{T}">  

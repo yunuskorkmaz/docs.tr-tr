@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: Cordebugexceptionunwınbir CallbackType numaralandırması'
 title: CorDebugExceptionUnwindCallbackType Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 783dce92-8a98-43db-8f78-888d943dd5b2
 topic_type:
 - apiref
-ms.openlocfilehash: 30de1448a7d1452e1e9049411010e7f43d13eb70
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3e12cffcdf1eb921330f658215c52501dce83eff
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95712644"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747031"
 ---
 # <a name="cordebugexceptionunwindcallbacktype-enumeration"></a>CorDebugExceptionUnwindCallbackType Numaralandırması
 
@@ -36,7 +37,7 @@ typedef enum CorDebugExceptionUnwindCallbackType {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`DEBUG_EXCEPTION_UNWIND_BEGIN`|Geriye doğru izleme işleminin başlangıcı.|  
 |`DEBUG_EXCEPTION_INTERCEPTED`|Özel durum yakalanmıştı.|  

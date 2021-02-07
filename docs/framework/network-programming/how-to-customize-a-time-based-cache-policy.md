@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: zaman tabanlı önbellek ilkesini özelleştirme'
 title: 'Nasıl yapılır: Saat Temelli Önbellek İlkesini Özelleştirme'
 ms.date: 03/30/2017
 dev_langs:
@@ -9,20 +10,20 @@ helpviewer_keywords:
 - customizing time-based cache policies
 - cache [.NET Framework], time-based policies
 ms.assetid: 8d84f936-2376-4356-9264-03162e0f9279
-ms.openlocfilehash: 1a2ba404e333eeec2a23758c834876d0df5aba81
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb00faa5c2cd3170a0f56b74032867d489c1fb8a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73040628"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747458"
 ---
 # <a name="how-to-customize-a-time-based-cache-policy"></a>Nasıl yapılır: Saat Temelli Önbellek İlkesini Özelleştirme
 
-Zaman tabanlı önbellek ilkesi oluştururken, maksimum yaş, minimum tazelik, maksimum bayatlık veya önbellek eşitleme tarihi için değerler belirterek önbelleğe alma davranışını özelleştirebilirsiniz. Nesne, <xref:System.Net.Cache.HttpRequestCachePolicy> bu değerlerin geçerli birleşimlerini belirtmenize olanak tanıyan birkaç oluşturucu sağlar.
+Zaman tabanlı önbellek ilkesi oluştururken, en yüksek yaş, en düşük yenilik, en yüksek eskime veya önbellek eşitleme tarihi değerlerini belirterek önbelleğe alma davranışını özelleştirebilirsiniz. <xref:System.Net.Cache.HttpRequestCachePolicy>Nesnesi, bu değerlerin geçerli birleşimlerini belirtmenize izin veren çeşitli oluşturucular sağlar.
 
-## <a name="to-create-a-time-based-cache-policy-that-uses-a-cache-synchronization-date"></a>Önbellek eşitleme tarihi kullanan zaman tabanlı önbellek ilkesi oluşturmak için
+## <a name="to-create-a-time-based-cache-policy-that-uses-a-cache-synchronization-date"></a>Önbellek eşitleme tarihi kullanan zaman tabanlı bir önbellek ilkesi oluşturmak için
 
-Bir <xref:System.DateTime> nesneyi <xref:System.Net.Cache.HttpRequestCachePolicy> oluşturucuya geçirerek önbellek eşitleme tarihini kullanan zaman tabanlı önbellek ilkesi oluşturun:
+Oluşturucuya bir nesne geçirerek önbellek eşitleme tarihi kullanan zaman tabanlı bir önbellek ilkesi oluşturun <xref:System.DateTime> <xref:System.Net.Cache.HttpRequestCachePolicy> :
 
 ```csharp
 public static HttpRequestCachePolicy CreateLastSyncPolicy(DateTime when)
@@ -50,9 +51,9 @@ When: 1/14/2004 8:07:30 AM
 Level:Default CacheSyncDate:1/14/2004 8:07:30 AM
 ```
 
-## <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness"></a>Minimum tazeliğe dayalı zaman tabanlı bir önbellek ilkesi oluşturmak için
+## <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness"></a>En düşük yeniliği temel alan zaman tabanlı bir önbellek ilkesi oluşturmak için
 
-Parametre değeri <xref:System.Net.Cache.HttpCacheAgeControl.MinFresh> olarak belirterek ve nesneyi <xref:System.Net.Cache.HttpRequestCachePolicy> oluşturucuya geçirerek minimum tazeliğe <xref:System.TimeSpan> dayalı zaman tabanlı bir önbellek ilkesi oluşturun: `cacheAgeControl`
+<xref:System.Net.Cache.HttpCacheAgeControl.MinFresh> `cacheAgeControl` Parametre değeri olarak belirterek ve oluşturucuya bir nesne geçirerek en düşük yeniliği temel alan zaman tabanlı bir önbellek ilkesi oluşturun <xref:System.TimeSpan> <xref:System.Net.Cache.HttpRequestCachePolicy> :
 
 ```csharp
 public static HttpRequestCachePolicy CreateMinFreshPolicy(TimeSpan span)
@@ -71,7 +72,7 @@ Public Shared Function CreateMinFreshPolicy(span As TimeSpan) As HttpRequestCach
 End Function
 ```
 
-Aşağıdaki çağırma için:
+Aşağıdaki çağrı için:
 
 ```csharp
 CreateMinFreshPolicy(new TimeSpan(1,0,0));
@@ -83,9 +84,9 @@ CreateMinFreshPolicy(new TimeSpan(1,0,0));
 Level:Default MinFresh:3600
 ```
 
-## <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness-and-maximum-age"></a>Minimum tazelik ve maksimum yaşa dayalı zamantabanlı bir önbellek ilkesi oluşturmak için
+## <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness-and-maximum-age"></a>En düşük yeniliği ve en yüksek kullanım süresini temel alan zaman tabanlı bir önbellek ilkesi oluşturmak için
 
-Parametre değeri olarak belirterek ve iki <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMinFresh> <xref:System.TimeSpan> nesneyi <xref:System.Net.Cache.HttpRequestCachePolicy> oluşturucuya geçirerek, biri kaynaklar için maksimum yaşı belirtmek ve önbellekten döndürülen bir nesne için izin verilen minimum tazeliği belirtmek için ikinci olarak, minimum tazelik ve maksimum yaşa dayalı zaman tabanlı bir önbellek ilkesi oluşturun: `cacheAgeControl`
+Parametre değeri olarak belirterek en düşük yeniliği ve maksimum yaşı temel alan zaman tabanlı bir önbellek ilkesi oluşturun <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMinFresh> `cacheAgeControl` ve iki <xref:System.TimeSpan> nesneyi oluşturucuya geçirerek <xref:System.Net.Cache.HttpRequestCachePolicy> bir tane, kaynak için en yüksek yaş değerini belirtip, önbellekten döndürülen bir nesne için izin verilen en düşük yeniliği belirtmek için bir ikinci değeri belirtin:
 
 ```csharp
 public static HttpRequestCachePolicy CreateFreshAndAgePolicy(TimeSpan freshMinimum, TimeSpan ageMaximum)
@@ -104,7 +105,7 @@ Public Shared Function CreateFreshAndAgePolicy(freshMinimum As TimeSpan, ageMaxi
 End Function
 ```
 
-Aşağıdaki çağırma için:
+Aşağıdaki çağrı için:
   
 ```csharp
 CreateFreshAndAgePolicy(new TimeSpan(5,0,0), new TimeSpan(10,0,0));  
@@ -122,4 +123,4 @@ Level:Default MaxAge:36000 MinFresh:18000
 - [Önbellek İlkesi](cache-policy.md)
 - [Konum Temelli Önbellek İlkeleri](location-based-cache-policies.md)
 - [Saat Temelli Önbellek İlkeleri](time-based-cache-policies.md)
-- [\<requestCaching> Elemanı (Ağ Ayarları)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [\<requestCaching> Öğesi (ağ ayarları)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

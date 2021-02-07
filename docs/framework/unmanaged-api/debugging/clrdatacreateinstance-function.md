@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: CLRDataCreateInstance Işlevi'
 title: CLRDataCreateInstance İşlevi
 ms.date: 03/30/2017
 api_name:
@@ -7,7 +8,7 @@ api_location:
 - mscordbi.dll
 - mscordacwks.dll
 api_type:
-- COM
+- DLLExport
 f1_keywords:
 - CLRDataCreateInstance
 helpviewer_keywords:
@@ -15,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 440bad90-5a88-45e7-9157-4596801d8d19
 topic_type:
 - apiref
-ms.openlocfilehash: 2ffc575cfcef1089a70ef3b6d38787a5b4c50443
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 923b0c687d2b337eacb475973927452e3b47ad0d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729830"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747263"
 ---
 # <a name="clrdatacreateinstance-function"></a>CLRDataCreateInstance İşlevi
 
-Belirtilen hedef öğe için bir arabirim nesnesi oluşturur.  
-  
-## <a name="syntax"></a>Söz dizimi  
-  
-```cpp  
-HRESULT CLRDataCreateInstance (  
+Belirtilen hedef öğe için bir arabirim nesnesi oluşturur.
+
+## <a name="syntax"></a>Sözdizimi
+
+```cpp
+HRESULT CLRDataCreateInstance (
     [in]  REFIID           iid,
     [in]  ICLRDataTarget  *target,
     [out] void           **iface  
@@ -58,8 +59,10 @@ HRESULT CLRDataCreateInstance (
  **Üst bilgi:** ClrData. IDL  
   
  **Kitaplık:** Corguid. lib  
+
+ **Bütünleştirilmiş kod**: mscordacwks.dll, mscordbi.dll
   
- **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** .NET Framework 2,0 tarihinden itibaren kullanılabilir
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

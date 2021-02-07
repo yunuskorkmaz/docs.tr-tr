@@ -1,15 +1,16 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: WebResponse 'dan türetme"
 title: WebResponse’tan Türetme
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Deriving from WebResponse
 ms.assetid: f11d4866-a199-4087-9306-a5a4c18b13db
-ms.openlocfilehash: 793533b632952df3f0866bb6377efd0e313cd007
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 5e941ce055091c6034640733465020ff62ce3721
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96287533"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747484"
 ---
 # <a name="deriving-from-webresponse"></a>WebResponse’tan Türetme
 

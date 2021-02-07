@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi: örnek: dinamik programlama sorunlarını giderme'
 title: 'Örnek: Dinamik Programlama Sorunlarını Giderme'
 ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
-ms.openlocfilehash: 0cff232668b9eb65b09a22b14e4ae58673ccd6d0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7ad3fde9c81800123abe899e2f696c3833fed5bc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96288079"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747861"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>Örnek: Dinamik Programlama Sorunlarını Giderme
 
@@ -48,7 +49,7 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
   
  Hata için olası bir aday, `App.Core.ViewModels.Layout.LayoutApplicationVM` farklı bir ad alanında olduğu için meta veriler eksik.  
   
- Bu durumda, sorunu çözen bir çalışma zamanı yönergesi ekleme `App.Core.ViewModels` . Kök neden, null döndüren yöntemine yönelik bir API çağrısıdır <xref:System.Type.GetType%28System.String%29?displayProperty=nameWithType> ve **null** uygulama kilitlenme gerçekleşene kadar sorunu sessizce yok sayılır.  
+ Bu durumda, sorunu çözen bir çalışma zamanı yönergesi ekleme `App.Core.ViewModels` . Kök neden, null döndüren yöntemine yönelik bir API çağrısıdır <xref:System.Type.GetType%28System.String%29?displayProperty=nameWithType> ve uygulama kilitlenme gerçekleşene kadar sorunu sessizce yok sayılır.  
   
  Dinamik programlamada, .NET Native altında yansıma API 'Leri kullanırken iyi bir uygulama <xref:System.Type.GetType%2A?displayProperty=nameWithType> hata durumunda özel durum oluşturan aşırı yüklemeleri kullanmaktır.  
   

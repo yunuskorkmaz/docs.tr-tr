@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: AXL_AUTHENTICODE_TIMESTAMPER_INFO yapısı'
 title: AXL_AUTHENTICODE_TIMESTAMPER_INFO Yapısı
 ms.date: 03/30/2017
 ms.assetid: 89e41a81-0f41-45ad-8f20-a120e4ff24fb
-ms.openlocfilehash: b6852519da6cf4e12669aa2efa24862053adbc03
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 35e30241c3c3b5747e247c57183e28e726c0cae3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95674248"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747419"
 ---
 # <a name="axl_authenticode_timestamper_info-structure"></a>AXL_AUTHENTICODE_TIMESTAMPER_INFO Yapısı
 
@@ -27,7 +28,7 @@ typedef struct _AXL_AUTHENTICODE_SIGNER_INFO {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`cbSize`|Bu yapının boyutu.|  
 |`dwError`|Hata kodu.|  

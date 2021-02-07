@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: CLRDataSourceType numaralandırması'
 title: CLRDataSourceType numaralandırması
 ms.date: 01/16/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 7ace405e2624f15b1cdb6d383222ae87c93289bb
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 06590e21aa4cdf6e89977a79da36a413d5ff4f1c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274102"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747248"
 ---
 # <a name="clrdatasourcetype-enumeration"></a>CLRDataSourceType numaralandırması
 
@@ -28,7 +29,7 @@ CLRDATA_IL_ADDRESS_MAP yapısı tarafından kullanılan değerleri sağlar.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef enum
@@ -39,7 +40,7 @@ typedef enum
 
 ## <a name="members"></a>Üyeler
 
-| Üye                        | Açıklama                           |
+| Üye                        | Description                           |
 | ----------------------------- | ------------------------------------- |
 | `CLRDATA_SOURCE_TYPE_INVALID` | Başka hiçbir şeyin uygulanacağını belirtmek için |
 
@@ -49,12 +50,12 @@ Bu numaralandırma çalışma zamanının içinde bulunur ve herhangi bir üst b
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
-**Üst bilgi** Yok.  
-**Kitaplığı** Yok.  
-**.NET Framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+**Üst bilgi:** Seçim  
+**Kitaplık:** Seçim  
+**.NET Framework sürümleri:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hata Ayıklama](index.md)
-- [Hata Ayıklama Sabit Listeleri](debugging-enumerations.md)
+- [Hata Ayıklama Numaralandırmaları](debugging-enumerations.md)

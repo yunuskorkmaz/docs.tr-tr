@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugProcess:: GetThreadContext metodu hakkında daha fazla bilgi edinin'
 title: ICorDebugProcess::GetThreadContext Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 5b132ef1-8d4b-4525-89b3-54123596c194
 topic_type:
 - apiref
-ms.openlocfilehash: 3be689e5c1474bcbfbca72a14a298762dc2e7a90
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4cb926183522548e924013580f207d1d0677a0d3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724552"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99746873"
 ---
 # <a name="icordebugprocessgetthreadcontext-method"></a>ICorDebugProcess::GetThreadContext Yöntemi
 
 Bu işlemdeki verilen iş parçacığının bağlamını alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetThreadContext(  

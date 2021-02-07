@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: .NET Native ile başlangıç geliştirmeyi ölçme'
 title: .NET Yerel ile Başlangıç İyileştirmesini Hesaplama
 ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
-ms.openlocfilehash: 6d89edaff184692eabb11e928f5211f664ff5afa
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ef3245811f79475fc7c267e7376f6140e8686724
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96250976"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747601"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>.NET Yerel ile Başlangıç İyileştirmesini Hesaplama
 

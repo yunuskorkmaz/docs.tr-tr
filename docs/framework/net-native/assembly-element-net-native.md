@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: <Assembly> öğesi (.NET Native)'
 title: <Assembly> Öğesi (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: cfe629eb-1106-4113-86e1-052f402d8d8b
-ms.openlocfilehash: 9d1556d8d414386d3f350a96396381bd7b66ffc5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 567a30a6a77e9de03635a9dfaae6bb28c9d728f0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96251132"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747926"
 ---
 # <a name="assembly-element-net-native"></a>\<Assembly> Öğesi (.NET Native)
 
@@ -35,7 +36,7 @@ Belirtilen derlemedeki tüm türlere çalışma zamanı yansıma ilkesini uygula
   
 ### <a name="attributes"></a>Öznitelikler  
   
-|Öznitelik|Öznitelik türü|Açıklama|  
+|Öznitelik|Öznitelik türü|Description|  
 |---------------|--------------------|-----------------|  
 |`Name`|Genel|Gerekli öznitelik. Bir derlemenin basit adını belirtir.|  
 |`Activate`|Yansıma|İsteğe bağlı öznitelik. Örneklerin etkinleştirilmesini sağlamak için oluşturuculara çalışma zamanı erişimini denetler.|  

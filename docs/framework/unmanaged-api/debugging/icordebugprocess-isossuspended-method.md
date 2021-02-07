@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugProcess:: ısossuspsonlandırılan yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugProcess::IsOSSuspended Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 83406cb2-5797-4402-872d-89c9516aefec
 topic_type:
 - apiref
-ms.openlocfilehash: fffa61d8e406162251b0934a9846e5a813422798
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: aa5e438418330d9fee51fcdb56a617421df06904
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724591"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99746778"
 ---
 # <a name="icordebugprocessisossuspended-method"></a>ICorDebugProcess::IsOSSuspended Yöntemi
 
 Hata ayıklayıcının bu işlemi durdurmasından kaynaklanan belirtilen iş parçacığının askıya alınıp alınmadığını belirten bir değer alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT IsOSSuspended(  

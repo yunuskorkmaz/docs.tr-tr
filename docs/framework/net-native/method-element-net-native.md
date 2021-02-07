@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: <Method> öğesi (.NET Native)'
 title: <Method> Öğesi (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 348b49e5-589d-4eb2-a597-d6ff60ab52d1
-ms.openlocfilehash: 1d57457c90e44c70caa301eccc02c5831d283cea
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 76c379ed81e721316e4293b20ba89acfbc9d174f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96287910"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747536"
 ---
 # <a name="method-element-net-native"></a>\<Method> Öğesi (.NET Native)
 
@@ -28,7 +29,7 @@ ms.locfileid: "96287910"
   
 ### <a name="attributes"></a>Öznitelikler  
   
-|Öznitelik|Öznitelik türü|Açıklama|  
+|Öznitelik|Öznitelik türü|Description|  
 |---------------|--------------------|-----------------|  
 |`Name`|Genel|Gerekli öznitelik. Yöntem adını belirtir.|  
 |`Signature`|Genel|İsteğe bağlı öznitelik. Yöntem imzasını belirtir. Birden çok parametre varsa, bunlar virgülle ayrılır. Örneğin, aşağıdaki `<Method>` öğe yöntemi için ilkeyi tanımlar <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29> .<br /><br /> `<Type Name="System.DateTime">    <Method Name="ToString" Signature="System.String,System.IFormatProvider"            Dynamic="Required" /> </Type>`<br /><br /> Öznitelik yoksa, çalışma zamanı yönergesi metodun tüm aşırı yüklemeleri için geçerlidir.|  

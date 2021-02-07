@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: <Event> öğesi (.NET Native)'
 title: <Event> Öğesi (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: e53b029c-9d6d-4c0a-9cdc-5cfca8a5ca47
-ms.openlocfilehash: b1cf2239e58839c5026bc375ba04568227881bdd
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 16ef4376e5953da514598bd7cdcbe0c196ee4da5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96288105"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747887"
 ---
 # <a name="event-element-net-native"></a>\<Event> Öğesi (.NET Native)
 
@@ -27,7 +28,7 @@ Bir olaya çalışma zamanı yansıtma ilkesi uygular.
   
 ### <a name="attributes"></a>Öznitelikler  
   
-|Öznitelik|Öznitelik türü|Açıklama|  
+|Öznitelik|Öznitelik türü|Description|  
 |---------------|--------------------|-----------------|  
 |`Name`|Genel|Gerekli öznitelik. Olay adını belirtir.|  
 |`Browse`|Yansıma|İsteğe bağlı öznitelik. Olay hakkında bilgi sorgulamayı denetler, ancak çalışma zamanında herhangi bir dinamik erişimi etkinleştirmez.|  

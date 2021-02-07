@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: CorDebugBlockingReason numaralandırması'
 title: CorDebugBlockingReason Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a6ac2531-ddfe-46fd-88fe-8b1eabe0b255
 topic_type:
 - apiref
-ms.openlocfilehash: ddd03d70656ad52fd9d577beedc60b51c7b305d5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c2d9c805549d046fe40ab5ea00f30e2fd0a680a3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95672857"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747119"
 ---
 # <a name="cordebugblockingreason-enumeration"></a>CorDebugBlockingReason Numaralandırması
 
@@ -38,7 +39,7 @@ Typedef enum CorDebugBlockingReason
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`BLOCKING_NONE`|Yalnızca iç kullanım.|  
 |`BLOCKING_MONITOR_CRITICAL_SECTION`|Bir iş parçacığı, bir nesne üzerindeki izleyici kilidi ile ilişkili kritik bölümü almaya çalışıyor. Genellikle, veya yöntemlerinden birini çağırdığınızda bu durum oluşur <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> .|  

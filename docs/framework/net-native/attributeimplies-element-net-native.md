@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: <AttributeImplies> öğesi (.NET Native)'
 title: <AttributeImplies> Öğesi (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 82db7193-a860-418b-84fc-fff2fdf2e025
-ms.openlocfilehash: 4171345bb5337436142128623abc7d183c4477ff
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 5af1f60f2c1e556281f2f1d392b1a046e52dd277
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96288118"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747913"
 ---
 # <a name="attributeimplies-element-net-native"></a>\<AttributeImplies> Öğesi (.NET Native)
 
@@ -34,7 +35,7 @@ ms.locfileid: "96288118"
   
 ### <a name="attributes"></a>Öznitelikler  
   
-|Öznitelik|Öznitelik türü|Açıklama|  
+|Öznitelik|Öznitelik türü|Description|  
 |---------------|--------------------|-----------------|  
 |`Activate`|Yansıma|İsteğe bağlı öznitelik. Örneklerin etkinleştirilmesini sağlamak için oluşturuculara çalışma zamanı erişimini denetler.|  
 |`Browse`|Yansıma|İsteğe bağlı öznitelik. Program öğeleri hakkında bilgi sorgulamayı denetler, ancak hiçbir çalışma zamanı erişimini etkinleştirmez.|  

@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: <MethodInstantiation> öğesi (.NET Native)'
 title: <MethodInstantiation> Öğesi (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: a3355d78-2a88-4109-8521-830d7cae260a
-ms.openlocfilehash: e247db05f8442d4fcfddbf03b5eb8955b8ff425a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 985d522a559dbbce936a2f29a9983c89ebd18a48
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96250963"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747497"
 ---
 # <a name="methodinstantiation-element-net-native"></a>\<MethodInstantiation> Öğesi (.NET Native)
 
@@ -29,7 +30,7 @@ Oluşturulmuş bir genel metoda çalışma zamanı yansıtma ilkesi uygular.
   
 ### <a name="attributes"></a>Öznitelikler  
   
-|Öznitelik|Öznitelik türü|Açıklama|  
+|Öznitelik|Öznitelik türü|Description|  
 |---------------|--------------------|-----------------|  
 |`Name`|Genel|Gerekli öznitelik. Yöntem adını belirtir.|  
 |`Signature`|Genel|İsteğe bağlı öznitelik. Metodun adlandırılmış parametrelerini belirtir. Birden çok adlandırılmış parametre virgüller ile ayrılır. `Signature`Özniteliği, aşırı yüklenmiş yöntemleri ayırt etmek için kullanılır.|  
