@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <issuedTokenParameters>'
 title: <issuedTokenParameters>
 ms.date: 03/30/2017
 ms.assetid: 120b3f37-7331-4816-b712-d6aab39655a4
-ms.openlocfilehash: c90024a0629f39d160967ca00434e48f682d8933
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 92c8f5aa25ddb71561eb702ba3eb0396456008a6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91157323"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99725668"
 ---
 # \<issuedTokenParameters>
 
@@ -52,7 +53,7 @@ Federasyon güvenlik senaryosunda verilen bir güvenlik belirteci için parametr
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|defaultMessageSecurityVersion|Bağlama tarafından desteklenmesi gereken güvenlik belirtimleri sürümlerini (WS-Security, WS-Trust, WS-Secure Conversation and WS-Security Policy) belirtir. Bu değer türünde <xref:System.ServiceModel.MessageSecurityVersion>.|  
+|defaultMessageSecurityVersion|Bağlama tarafından desteklenmesi gereken güvenlik belirtimleri sürümlerini (WS-Security, WS-Trust, WS-Secure Conversation ve WS-Security Policy) belirtir. Bu değer türünde <xref:System.ServiceModel.MessageSecurityVersion>.|  
 |Yani ıonmode|Belirteç ekleme gereksinimlerini belirtir. Bu öznitelik türü <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode> .|  
 |keySize|Belirteç anahtar boyutunu belirten bir tamsayı. Varsayılan değer 256 ' dir.|  
 |Anahtar|<xref:System.IdentityModel.Tokens.SecurityKeyType>Anahtar türünü belirten geçerli bir değeri. Varsayılan değer: `SymmetricKey`.|  

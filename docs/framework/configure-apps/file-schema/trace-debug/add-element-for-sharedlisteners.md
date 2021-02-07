@@ -1,4 +1,5 @@
 ---
+description: 'İçin: öğesi hakkında daha fazla bilgi <add><sharedListeners>'
 title: <sharedListeners> için <add> Öğesi
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <add> element for <sharedListeners>
 - add element for <sharedListeners>
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
-ms.openlocfilehash: f0ede5f9dc19e9589afc888e7fcd01785bc1840c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: df3348fa0cbb357b2ceeb5d9db940a1ae3ae102c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91174036"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99726084"
 ---
 # <a name="add-element-for-sharedlisteners"></a>\<sharedListeners> için \<add> Öğesi
 

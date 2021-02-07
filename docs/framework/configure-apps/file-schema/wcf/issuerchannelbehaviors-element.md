@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: <issuerChannelBehaviors> öğesi'
 title: <issuerChannelBehaviors> Öğesi
 ms.date: 03/30/2017
 ms.assetid: f7378673-8e9b-45b2-98d1-cf5dccdd8c40
@@ -11,27 +12,27 @@ no-loc:
 - <issuedToken>
 - <issuerChannelBehaviors>
 - <dataContractSerializer>
-ms.openlocfilehash: cbbfb9d3b5af47a360aa82cf837cd6749f61b641
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6be79f2ee6afb442a7a399ce49df4ad59dff2db5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70893152"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99725551"
 ---
-# <a name="issuerchannelbehaviors-element"></a>\<issuerChannelBehaviors> Öğesi
+# <a name="issuerchannelbehaviors-element"></a>\::: No-Loc ( <issuerChannelBehaviors> )::: öğesi
 
-Belirtilen hizmet belirteci hizmetleriyle iletişim kurulurken kullanılacak Windows Communication Foundation (WCF) istemci uç noktası davranışları (yapılandırmada tanımlanır) koleksiyonunu içerir. Tanımlı davranışlar herhangi bir öğe içeremez [\<clientCredentials>](clientcredentials.md) .
+Belirtilen hizmet belirteci hizmetleriyle iletişim kurulurken kullanılacak Windows Communication Foundation (WCF) istemci uç noktası davranışları (yapılandırmada tanımlanır) koleksiyonunu içerir. Tanımlı davranışlar şunları içeremez [ \: :: No-Loc ( <clientCredentials> ):::](clientcredentials.md) öğeleri.
 
 [\<configuration>](../configuration-element.md)\
-&nbsp;&nbsp;[\<system.serviceModel>](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<behaviors>](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<endpointBehaviors>](endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<behavior>](behavior-of-endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<clientCredentials>](clientcredentials.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<issuedToken>](issuedtoken.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<issuerChannelBehaviors>
+&nbsp;&nbsp;[\::: No-Loc (<System. serviceModel>):::](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\::: No-Loc ( <behaviors> ):::](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\::: No-Loc ( <endpointBehaviors> ):::](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\::: No-Loc ( <behavior> ):::](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\::: No-Loc ( <clientCredentials> ):::](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\::: No-Loc ( <issuedToken> ):::](issuedtoken.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\::: No-Loc ( <issuerChannelBehaviors> ):::
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <issuerChannelBehaviors>
@@ -58,11 +59,11 @@ Yok.
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[\<issuedToken>](issuedtoken.md)|Bir hizmette istemcinin kimliğini doğrulamak için kullanılan özel bir belirteci belirtir.|
+|[\::: No-Loc ( <issuedToken> ):::](issuedtoken.md)|Bir hizmette istemcinin kimliğini doğrulamak için kullanılan özel bir belirteci belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
-`<clientCredentials>`Bir hizmet ile iletişim kurmak için herhangi bir davranış (öğeler içeren davranışlar dışında) kullanılması gereken bu öğeyi kullanın. Örneğin, bir [\<dataContractSerializer>](datacontractserializer-element.md) davranış öğesi dahil edilmelidir.
+`<clientCredentials>`Bir hizmet ile iletişim kurmak için herhangi bir davranış (öğeler içeren davranışlar dışında) kullanılması gereken bu öğeyi kullanın. Örneğin [ \: :: No-Loc ( <dataContractSerializer> ):::](datacontractserializer-element.md) Behavior öğesi dahil edilmelidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

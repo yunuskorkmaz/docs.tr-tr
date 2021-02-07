@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <message> öğesi <ws2007FederationHttpBinding>'
 title: <message> öğesi <ws2007FederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 52cd941d-e230-4c82-8b29-333a7d20eca8
-ms.openlocfilehash: d71bce5e94568bdad3c52226fa1029a1dd87bfd9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f9116a5075f30421dfb26adc29ec0b167db33673
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204924"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99725460"
 ---
 # <a name="message-element-of-ws2007federationhttpbinding"></a>\<message> öğesi \<ws2007FederationHttpBinding>
 

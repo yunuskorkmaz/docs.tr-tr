@@ -1,13 +1,14 @@
 ---
+description: ': X. 509.440 sertifika doğrulayıcısı hakkında daha fazla bilgi edinin'
 title: X.509 Sertifika Doğrulayıcı
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
-ms.openlocfilehash: 2d117dda8e6748407b6d58677ec55e4e8e4e4740
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3fead47cab4d639640f5af755717636ca2e8d01e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554247"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99726240"
 ---
 # <a name="x509-certificate-validator"></a>X.509 Sertifika Doğrulayıcı
 
@@ -326,7 +327,7 @@ Aşağıdakiler, uygun yapılandırmada çalışacak şekilde değiştirilebilec
 
 1. Hizmet bilgisayarında bir dizin oluşturun.
 
-2. Hizmet programı dosyalarını \service\bin konumundan hizmet bilgisayarındaki sanal dizine kopyalayın. Ayrıca, Setup.bat, Cleanup.bat, GetComputerName. vbs ve ImportClientCert.bat dosyalarını da hizmet bilgisayarına kopyalayın.
+2. Hizmet programı dosyalarını \service\bin konumundan hizmet bilgisayarındaki sanal dizine kopyalayın. Ayrıca, Setup.bat, Cleanup.bat, GetComputerName.vbs ve ImportClientCert.bat dosyalarını da hizmet bilgisayarına kopyalayın.
 
 3. İstemci bilgisayarda istemci ikilileri için bir dizin oluşturun.
 
