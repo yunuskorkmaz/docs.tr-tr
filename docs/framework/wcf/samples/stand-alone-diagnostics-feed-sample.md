@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Stand-Alone tanılama akışı örneği'
 title: Bağımsız Tanılama Akış Örneği
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-ms.openlocfilehash: b4c3613656e0aec42c0d3f5cd7cde0af6540a69a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 98fd65a44f9f6f0183b879627bd8eb444152a8ef
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96268254"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99668870"
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>Bağımsız Tanılama Akış Örneği
 

@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 601-CBAEntryRead'
 title: 601 - CBAEntryRead
 ms.date: 03/30/2017
 ms.assetid: 7d8b757f-e8d8-4c12-927e-ba3776c17983
-ms.openlocfilehash: 03721457bd80d633afa2c4879180e98eb95ad186
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3b28b1470e575db715a5d989b3f7b445cf3f455e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96247037"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99669000"
 ---
 # <a name="601---cbaentryread"></a>601 - CBAEntryRead
 
@@ -17,10 +18,10 @@ ms.locfileid: "96247037"
 |-|-|  
 |ID|601|  
 |Anahtar sözcükler||  
-|Düzey|Ayrıntılı|  
+|Level|Ayrıntılı|  
 |Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bu olay CBAEntry Read ile birlikte yayınlanır.  
   
