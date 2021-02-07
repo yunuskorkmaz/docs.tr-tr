@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: LinkResource yöntemi'
 title: LinkResource Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: c404acb3-4c59-4100-9a4c-483cbdb1d736
 topic_type:
 - apiref
-ms.openlocfilehash: 4f2f13976dfd4e5601bf8b54bed7b851884fbb9d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ff12138433577eccbb313b8e64a329be1358ba70
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95690453"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99662552"
 ---
-# <a name="linkresource-method"></a><span data-ttu-id="a50d9-102">LinkResource Yöntemi</span><span class="sxs-lookup"><span data-stu-id="a50d9-102">LinkResource Method</span></span>
+# <a name="linkresource-method"></a><span data-ttu-id="91652-103">LinkResource Yöntemi</span><span class="sxs-lookup"><span data-stu-id="91652-103">LinkResource Method</span></span>
 
-<span data-ttu-id="a50d9-103">Bir kaynaktaki bağlantılar.</span><span class="sxs-lookup"><span data-stu-id="a50d9-103">Links in a resource.</span></span>  
+<span data-ttu-id="91652-104">Bir kaynaktaki bağlantılar.</span><span class="sxs-lookup"><span data-stu-id="91652-104">Links in a resource.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a50d9-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="a50d9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="91652-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="91652-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT LinkResource(  
@@ -37,33 +38,33 @@ HRESULT LinkResource(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a50d9-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="a50d9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="91652-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="91652-106">Parameters</span></span>  
 
  `AssemblyID`  
- <span data-ttu-id="a50d9-106">Derlemenin KIMLIĞI.</span><span class="sxs-lookup"><span data-stu-id="a50d9-106">ID of the assembly.</span></span>  
+ <span data-ttu-id="91652-107">Derlemenin KIMLIĞI.</span><span class="sxs-lookup"><span data-stu-id="91652-107">ID of the assembly.</span></span>  
   
  `pszFileName`  
- <span data-ttu-id="a50d9-107">Dosyanın adı.</span><span class="sxs-lookup"><span data-stu-id="a50d9-107">Name of the file.</span></span>  
+ <span data-ttu-id="91652-108">Dosyanın adı.</span><span class="sxs-lookup"><span data-stu-id="91652-108">Name of the file.</span></span>  
   
  `pszNewLocation`  
- <span data-ttu-id="a50d9-108">İsteğe bağlı yeni dosya adı.</span><span class="sxs-lookup"><span data-stu-id="a50d9-108">Optional new file name.</span></span> <span data-ttu-id="a50d9-109">NULL olmayan bir değer, `pszFileName` pszNewLocation ' a kopyalanacaktır.</span><span class="sxs-lookup"><span data-stu-id="a50d9-109">If non-NULL, `pszFileName` will be copied to pszNewLocation.</span></span>  
+ <span data-ttu-id="91652-109">İsteğe bağlı yeni dosya adı.</span><span class="sxs-lookup"><span data-stu-id="91652-109">Optional new file name.</span></span> <span data-ttu-id="91652-110">NULL olmayan bir değer, `pszFileName` pszNewLocation ' a kopyalanacaktır.</span><span class="sxs-lookup"><span data-stu-id="91652-110">If non-NULL, `pszFileName` will be copied to pszNewLocation.</span></span>  
   
  `pszResourceName`  
- <span data-ttu-id="a50d9-110">Kaynağın adı.</span><span class="sxs-lookup"><span data-stu-id="a50d9-110">Name of the resource.</span></span>  
+ <span data-ttu-id="91652-111">Kaynağın adı.</span><span class="sxs-lookup"><span data-stu-id="91652-111">Name of the resource.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="a50d9-111">Ve gibi erişilebilirlik bayrakları `mrPublic` `mrPrivate` .</span><span class="sxs-lookup"><span data-stu-id="a50d9-111">Accessibility flags such as `mrPublic` and `mrPrivate`.</span></span> <span data-ttu-id="a50d9-112">Bu parametre [DefineManifestResource metoduna](../metadata/imetadataassemblyemit-definemanifestresource-method.md)geçirilebilir.</span><span class="sxs-lookup"><span data-stu-id="a50d9-112">This parameter may be passed to [DefineManifestResource Method](../metadata/imetadataassemblyemit-definemanifestresource-method.md).</span></span>  
+ <span data-ttu-id="91652-112">Ve gibi erişilebilirlik bayrakları `mrPublic` `mrPrivate` .</span><span class="sxs-lookup"><span data-stu-id="91652-112">Accessibility flags such as `mrPublic` and `mrPrivate`.</span></span> <span data-ttu-id="91652-113">Bu parametre [DefineManifestResource metoduna](../metadata/imetadataassemblyemit-definemanifestresource-method.md)geçirilebilir.</span><span class="sxs-lookup"><span data-stu-id="91652-113">This parameter may be passed to [DefineManifestResource Method](../metadata/imetadataassemblyemit-definemanifestresource-method.md).</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a50d9-113">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="a50d9-113">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="91652-114">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="91652-114">Return Value</span></span>  
 
- <span data-ttu-id="a50d9-114">Yöntem başarılı olursa S_OK döndürür.</span><span class="sxs-lookup"><span data-stu-id="a50d9-114">Returns S_OK if the method succeeds.</span></span>  
+ <span data-ttu-id="91652-115">Yöntem başarılı olursa S_OK döndürür.</span><span class="sxs-lookup"><span data-stu-id="91652-115">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a50d9-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a50d9-115">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="91652-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="91652-116">Requirements</span></span>  
 
- <span data-ttu-id="a50d9-116">ALink. h gerektirir.</span><span class="sxs-lookup"><span data-stu-id="a50d9-116">Requires alink.h.</span></span>  
+ <span data-ttu-id="91652-117">ALink. h gerektirir.</span><span class="sxs-lookup"><span data-stu-id="91652-117">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a50d9-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a50d9-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="91652-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="91652-118">See also</span></span>
 
-- [<span data-ttu-id="a50d9-118">IALink Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a50d9-118">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="a50d9-119">IALink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a50d9-119">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="a50d9-120">ALink API</span><span class="sxs-lookup"><span data-stu-id="a50d9-120">ALink API</span></span>](index.md)
+- [<span data-ttu-id="91652-119">IALink Arabirimi</span><span class="sxs-lookup"><span data-stu-id="91652-119">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="91652-120">IALink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="91652-120">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="91652-121">ALink API</span><span class="sxs-lookup"><span data-stu-id="91652-121">ALink API</span></span>](index.md)

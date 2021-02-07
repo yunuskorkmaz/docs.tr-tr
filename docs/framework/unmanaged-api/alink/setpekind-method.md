@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: SetPEKind yöntemi'
 title: SetPEKind Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 050e77ee-3014-45c0-9e29-2ebe29347b0d
 topic_type:
 - apiref
-ms.openlocfilehash: be8a11cbf70e2c6f19ace67648b124515c1fb3c3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4154e9e80b7f88b6951c9aa8da5fc23d340c96dc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95680046"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99662305"
 ---
-# <a name="setpekind-method"></a><span data-ttu-id="a3960-102">SetPEKind Yöntemi</span><span class="sxs-lookup"><span data-stu-id="a3960-102">SetPEKind Method</span></span>
+# <a name="setpekind-method"></a><span data-ttu-id="0b3d4-103">SetPEKind Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0b3d4-103">SetPEKind Method</span></span>
 
-<span data-ttu-id="a3960-103">Taşınabilir yürütülebilir türü, makineye özgü veya makine belirsiz olarak belirler.</span><span class="sxs-lookup"><span data-stu-id="a3960-103">Determines the portable executable type, either machine-specific or machine-agnostic.</span></span>  
+<span data-ttu-id="0b3d4-104">Taşınabilir yürütülebilir türü, makineye özgü veya makine belirsiz olarak belirler.</span><span class="sxs-lookup"><span data-stu-id="0b3d4-104">Determines the portable executable type, either machine-specific or machine-agnostic.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a3960-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="a3960-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0b3d4-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0b3d4-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetPEKind(  
@@ -36,31 +37,31 @@ HRESULT SetPEKind(
 ) PURE;
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a3960-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="a3960-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0b3d4-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0b3d4-106">Parameters</span></span>  
 
  `AssemblyID`  
- <span data-ttu-id="a3960-106">Derlemenin KIMLIĞI.</span><span class="sxs-lookup"><span data-stu-id="a3960-106">ID of the assembly.</span></span>  
+ <span data-ttu-id="0b3d4-107">Derlemenin KIMLIĞI.</span><span class="sxs-lookup"><span data-stu-id="0b3d4-107">ID of the assembly.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="a3960-107">PE türü ayarlanacak dosyanın belirteci.</span><span class="sxs-lookup"><span data-stu-id="a3960-107">Token of file for which the PE type is to be set.</span></span> <span data-ttu-id="a3960-108">`AssemblyID`İlişkisiz bir netmodule BELIRTMEZSE null olabilir.</span><span class="sxs-lookup"><span data-stu-id="a3960-108">Can be NULL if `AssemblyID` does not indicate an unbound netmodule.</span></span>  
+ <span data-ttu-id="0b3d4-108">PE türü ayarlanacak dosyanın belirteci.</span><span class="sxs-lookup"><span data-stu-id="0b3d4-108">Token of file for which the PE type is to be set.</span></span> <span data-ttu-id="0b3d4-109">`AssemblyID`İlişkisiz bir netmodule BELIRTMEZSE null olabilir.</span><span class="sxs-lookup"><span data-stu-id="0b3d4-109">Can be NULL if `AssemblyID` does not indicate an unbound netmodule.</span></span>  
   
  `dwPEKind`  
- <span data-ttu-id="a3960-109">[CorPEKind numaralandırması](../metadata/corpekind-enumeration.md)tarafından BELIRTILDIĞI gibi PE türü.</span><span class="sxs-lookup"><span data-stu-id="a3960-109">The type of PE, as indicated by the [CorPEKind Enumeration](../metadata/corpekind-enumeration.md).</span></span>  
+ <span data-ttu-id="0b3d4-110">[CorPEKind numaralandırması](../metadata/corpekind-enumeration.md)tarafından BELIRTILDIĞI gibi PE türü.</span><span class="sxs-lookup"><span data-stu-id="0b3d4-110">The type of PE, as indicated by the [CorPEKind Enumeration](../metadata/corpekind-enumeration.md).</span></span>  
   
  `dwMachine`  
- <span data-ttu-id="a3960-110">NT üstbilgisinde gösterildiği gibi hedef makine mimarisi.</span><span class="sxs-lookup"><span data-stu-id="a3960-110">The target machine architecture, as indicated in the NT header.</span></span>  
+ <span data-ttu-id="0b3d4-111">NT üstbilgisinde gösterildiği gibi hedef makine mimarisi.</span><span class="sxs-lookup"><span data-stu-id="0b3d4-111">The target machine architecture, as indicated in the NT header.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a3960-111">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="a3960-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0b3d4-112">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="0b3d4-112">Return Value</span></span>  
 
- <span data-ttu-id="a3960-112">Yöntem başarılı olursa S_OK döndürür.</span><span class="sxs-lookup"><span data-stu-id="a3960-112">Returns S_OK if the method succeeds.</span></span>  
+ <span data-ttu-id="0b3d4-113">Yöntem başarılı olursa S_OK döndürür.</span><span class="sxs-lookup"><span data-stu-id="0b3d4-113">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a3960-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a3960-113">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0b3d4-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0b3d4-114">Requirements</span></span>  
 
- <span data-ttu-id="a3960-114">ALink. h gerektirir.</span><span class="sxs-lookup"><span data-stu-id="a3960-114">Requires alink.h.</span></span>  
+ <span data-ttu-id="0b3d4-115">ALink. h gerektirir.</span><span class="sxs-lookup"><span data-stu-id="0b3d4-115">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a3960-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a3960-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0b3d4-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0b3d4-116">See also</span></span>
 
-- [<span data-ttu-id="a3960-116">GetPEKind Yöntemi</span><span class="sxs-lookup"><span data-stu-id="a3960-116">GetPEKind Method</span></span>](../metadata/imetadataimport2-getpekind-method.md)
-- [<span data-ttu-id="a3960-117">IALink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a3960-117">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="a3960-118">IALink Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a3960-118">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="a3960-119">ALink API</span><span class="sxs-lookup"><span data-stu-id="a3960-119">ALink API</span></span>](index.md)
+- [<span data-ttu-id="0b3d4-117">GetPEKind Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0b3d4-117">GetPEKind Method</span></span>](../metadata/imetadataimport2-getpekind-method.md)
+- [<span data-ttu-id="0b3d4-118">IALink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0b3d4-118">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="0b3d4-119">IALink Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0b3d4-119">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="0b3d4-120">ALink API</span><span class="sxs-lookup"><span data-stu-id="0b3d4-120">ALink API</span></span>](index.md)

@@ -1,4 +1,5 @@
 ---
+description: ': IcorıGetHandleType Ghandlivalue:: yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugHandleValue::GetHandleType Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: d5e7b12d-835a-4e86-ae2f-d658d4f1c67c
 topic_type:
 - apiref
-ms.openlocfilehash: 72ef9a0fe4cd08ce67594600375953c249243d4f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 708d60cd8116cf3f0fdc436a34d863380be2543d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734159"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99660966"
 ---
-# <a name="icordebughandlevaluegethandletype-method"></a><span data-ttu-id="21afc-102">ICorDebugHandleValue::GetHandleType Yöntemi</span><span class="sxs-lookup"><span data-stu-id="21afc-102">ICorDebugHandleValue::GetHandleType Method</span></span>
+# <a name="icordebughandlevaluegethandletype-method"></a><span data-ttu-id="22967-103">ICorDebugHandleValue::GetHandleType Yöntemi</span><span class="sxs-lookup"><span data-stu-id="22967-103">ICorDebugHandleValue::GetHandleType Method</span></span>
 
-<span data-ttu-id="21afc-103">Bu ıcorıınfo Ghandlivalue nesnesinin başvurduğu tanıtıcı türünü gösteren bir değer alır.</span><span class="sxs-lookup"><span data-stu-id="21afc-103">Gets a value that indicates the kind of handle referenced by this ICorDebugHandleValue object.</span></span>  
+<span data-ttu-id="22967-104">Bu ıcorıınfo Ghandlivalue nesnesinin başvurduğu tanıtıcı türünü gösteren bir değer alır.</span><span class="sxs-lookup"><span data-stu-id="22967-104">Gets a value that indicates the kind of handle referenced by this ICorDebugHandleValue object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="21afc-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="21afc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="22967-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="22967-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetHandleType (  
@@ -34,17 +35,17 @@ HRESULT GetHandleType (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="21afc-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="21afc-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="22967-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="22967-106">Parameters</span></span>  
 
  `pType`  
- <span data-ttu-id="21afc-106">dışı Bu tanıtıcının türünü gösteren Cordebugghandlitype numaralandırması değerine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="21afc-106">[out] A pointer to a value of the CorDebugHandleType enumeration that indicates the type of this handle.</span></span>  
+ <span data-ttu-id="22967-107">dışı Bu tanıtıcının türünü gösteren Cordebugghandlitype numaralandırması değerine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="22967-107">[out] A pointer to a value of the CorDebugHandleType enumeration that indicates the type of this handle.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="21afc-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="21afc-107">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="22967-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="22967-108">Requirements</span></span>  
 
- <span data-ttu-id="21afc-108">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="21afc-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="22967-109">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="22967-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="21afc-109">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="21afc-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="22967-110">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="22967-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="21afc-110">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="21afc-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="22967-111">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="22967-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="21afc-111">**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="21afc-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="22967-112">**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="22967-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

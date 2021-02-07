@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ICorDebugGuidToTypeEnum:: Next yöntemi'
 title: ICorDebugGuidToTypeEnum::Next Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c9937666-8e18-484d-9fe0-b9ac95199530
 topic_type:
 - apiref
-ms.openlocfilehash: 68f548705213da7d715ae569116abae0cd24129d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0ab05cc0689c76c0bb185205ea00c5ccebfcbe03
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705663"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99661005"
 ---
-# <a name="icordebugguidtotypeenumnext-method"></a><span data-ttu-id="d0413-102">ICorDebugGuidToTypeEnum::Next Yöntemi</span><span class="sxs-lookup"><span data-stu-id="d0413-102">ICorDebugGuidToTypeEnum::Next Method</span></span>
+# <a name="icordebugguidtotypeenumnext-method"></a><span data-ttu-id="b58dc-103">ICorDebugGuidToTypeEnum::Next Yöntemi</span><span class="sxs-lookup"><span data-stu-id="b58dc-103">ICorDebugGuidToTypeEnum::Next Method</span></span>
 
-<span data-ttu-id="d0413-103">GUID 'Leri tür bilgilerine eşleyen, belirtilen [CorDebugGuidToTypeMapping](cordebugguidtotypemapping-structure.md) örneklerinin sayısını alır.</span><span class="sxs-lookup"><span data-stu-id="d0413-103">Gets the specified number of [CorDebugGuidToTypeMapping](cordebugguidtotypemapping-structure.md) instances that map GUIDs to type information.</span></span>  
+<span data-ttu-id="b58dc-104">GUID 'Leri tür bilgilerine eşleyen, belirtilen [CorDebugGuidToTypeMapping](cordebugguidtotypemapping-structure.md) örneklerinin sayısını alır.</span><span class="sxs-lookup"><span data-stu-id="b58dc-104">Gets the specified number of [CorDebugGuidToTypeMapping](cordebugguidtotypemapping-structure.md) instances that map GUIDs to type information.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d0413-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="d0413-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b58dc-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b58dc-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT Next(  
@@ -36,30 +37,30 @@ HRESULT Next(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d0413-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="d0413-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b58dc-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b58dc-106">Parameters</span></span>  
 
  `celt`  
- <span data-ttu-id="d0413-106">'ndaki Alınacak GUID-tür eşleme nesnelerinin sayısı.</span><span class="sxs-lookup"><span data-stu-id="d0413-106">[in] The number of GUID-to-type mapping objects to be retrieved.</span></span>  
+ <span data-ttu-id="b58dc-107">'ndaki Alınacak GUID-tür eşleme nesnelerinin sayısı.</span><span class="sxs-lookup"><span data-stu-id="b58dc-107">[in] The number of GUID-to-type mapping objects to be retrieved.</span></span>  
   
  `values`  
- <span data-ttu-id="d0413-107">dışı Her biri bir Windows Çalışma Zamanı GUID 'sini karşılık gelen ICorDebugType nesnesine eşleyen bir [CorDebugGuidToTypeMapping](cordebugguidtotypemapping-structure.md) nesnesine işaret eden bir işaretçiler dizisi.</span><span class="sxs-lookup"><span data-stu-id="d0413-107">[out] An array of pointers, each of which points to a [CorDebugGuidToTypeMapping](cordebugguidtotypemapping-structure.md) object that maps a Windows Runtime GUID to its corresponding ICorDebugType object.</span></span>  
+ <span data-ttu-id="b58dc-108">dışı Her biri bir Windows Çalışma Zamanı GUID 'sini karşılık gelen ICorDebugType nesnesine eşleyen bir [CorDebugGuidToTypeMapping](cordebugguidtotypemapping-structure.md) nesnesine işaret eden bir işaretçiler dizisi.</span><span class="sxs-lookup"><span data-stu-id="b58dc-108">[out] An array of pointers, each of which points to a [CorDebugGuidToTypeMapping](cordebugguidtotypemapping-structure.md) object that maps a Windows Runtime GUID to its corresponding ICorDebugType object.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="d0413-108">dışı Gerçekte içinde döndürülen [CorDebugGuidToTypeMapping](cordebugguidtotypemapping-structure.md) nesnelerinin sayısına yönelik bir işaretçi `values` .</span><span class="sxs-lookup"><span data-stu-id="d0413-108">[out] A pointer to the number of [CorDebugGuidToTypeMapping](cordebugguidtotypemapping-structure.md) objects actually returned in `values`.</span></span>  
+ <span data-ttu-id="b58dc-109">dışı Gerçekte içinde döndürülen [CorDebugGuidToTypeMapping](cordebugguidtotypemapping-structure.md) nesnelerinin sayısına yönelik bir işaretçi `values` .</span><span class="sxs-lookup"><span data-stu-id="b58dc-109">[out] A pointer to the number of [CorDebugGuidToTypeMapping](cordebugguidtotypemapping-structure.md) objects actually returned in `values`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d0413-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="d0413-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b58dc-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="b58dc-110">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d0413-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="d0413-110">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b58dc-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b58dc-111">Requirements</span></span>  
 
- <span data-ttu-id="d0413-111">**Platformlar:** Windows Çalışma Zamanı</span><span class="sxs-lookup"><span data-stu-id="d0413-111">**Platforms:** Windows Runtime</span></span>  
+ <span data-ttu-id="b58dc-112">**Platformlar:** Windows Çalışma Zamanı</span><span class="sxs-lookup"><span data-stu-id="b58dc-112">**Platforms:** Windows Runtime</span></span>  
   
- <span data-ttu-id="d0413-112">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="d0413-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b58dc-113">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="b58dc-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d0413-113">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="d0413-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b58dc-114">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="b58dc-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d0413-114">**.NET Framework sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d0413-114">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="b58dc-115">**.NET Framework sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b58dc-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d0413-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d0413-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b58dc-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b58dc-116">See also</span></span>
 
-- [<span data-ttu-id="d0413-116">ICorDebugGuidToTypeEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="d0413-116">ICorDebugGuidToTypeEnum Interface</span></span>](icordebugguidtotypeenum-interface.md)
-- [<span data-ttu-id="d0413-117">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="d0413-117">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="b58dc-117">ICorDebugGuidToTypeEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b58dc-117">ICorDebugGuidToTypeEnum Interface</span></span>](icordebugguidtotypeenum-interface.md)
+- [<span data-ttu-id="b58dc-118">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="b58dc-118">Debugging Interfaces</span></span>](debugging-interfaces.md)
