@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: System. String yöntemleri'
 title: System.String Yöntemleri
 ms.date: 03/30/2017
 ms.assetid: ce307f14-87e6-4816-8694-8a4147f6b784
-ms.openlocfilehash: 44d32ed1000ca49d9fc29ffcde4506b44fc975b6
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 68ade8c3d8f47749dcea9cdaad2a19d28c7032c3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91155672"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99681311"
 ---
 # <a name="systemstring-methods"></a>System.String Yöntemleri
 

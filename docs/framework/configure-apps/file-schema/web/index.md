@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Web ayarları şeması'
 title: Web Ayarları Şeması
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - configuration files [ASP.NET]
 - configuration schema [.NET Framework], Web settings
 ms.assetid: ae1ac356-267d-4753-8d7a-7a04eb45a9be
-ms.openlocfilehash: c3ac9b42aeff3f7b26f0b36480bc75ceda39e7e6
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 262a53ae062788143cbacdc1012085186f4c9652
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91185606"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99681922"
 ---
 # <a name="web-settings-schema"></a>Web Ayarları Şeması
 

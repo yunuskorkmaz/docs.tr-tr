@@ -1,13 +1,14 @@
 ---
+description: 'WCF hakkında daha fazla bilgi edinin: <state><workflowInstanceQuery>'
 title: <state> WCF, <workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: 40f21055-766c-4be9-86c4-d1d899007098
-ms.openlocfilehash: c323f7dba265e7fbcb09482115694088e761af0e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8dbf741473e5f3c15c1833868c2c17abdfba6643
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148899"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682650"
 ---
 # <a name="state-of-wcf-workflowinstancequery"></a>\<state> WCF, \<workflowInstanceQuery>
 

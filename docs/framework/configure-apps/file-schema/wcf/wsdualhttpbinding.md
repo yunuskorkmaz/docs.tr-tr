@@ -1,15 +1,16 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <wsDualHttpBinding>'
 title: <wsDualHttpBinding>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - wsDualHttpBinding Element
 ms.assetid: fd8ac4e2-5641-473b-9115-73f14ab1c065
-ms.openlocfilehash: 114543e43306e4195f92ca625e894a532084be6b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 14a575d867f2fcd3754d28616e8e2b9d3903f1fe
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177780"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682117"
 ---
 # \<wsDualHttpBinding>
 
@@ -99,7 +100,7 @@ ms.locfileid: "91177780"
   
  Bu bağlama, bir veya daha fazla SOAP aracıları aracılığıyla güvenilir bir şekilde iletişim kurmak için kullanılabilir.  
   
- Bu bağlama, varsayılan olarak, güvenilirlik için WS-ReliableMessaging ile bir çalışma zamanı yığını, ileti güvenliği için WS-Security ve kimlik doğrulaması, ileti teslimi için HTTP ve metin/XML iletisi kodlaması oluşturur.  
+ Bu bağlama, varsayılan olarak, güvenilirlik için WS-ReliableMessaging, ileti güvenliği ve kimlik doğrulaması için WS-Security, ileti teslimi için HTTP ve metin/XML ileti kodlaması içeren bir çalışma zamanı yığını üretir.  
   
 ## <a name="example"></a>Örnek  
   

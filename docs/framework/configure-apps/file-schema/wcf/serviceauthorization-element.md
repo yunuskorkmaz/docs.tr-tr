@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: <serviceAuthorization> öğesi'
 title: <serviceAuthorization> öğesi
 ms.date: 03/30/2017
 ms.assetid: 18cddad5-ddcb-4839-a0ac-1d6f6ab783ca
-ms.openlocfilehash: f476f754a340f52859be2986e42754cba0ef3771
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ee447f487027ed12f829dd0fd364556ce095d7d3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "71834017"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682936"
 ---
 # <a name="serviceauthorization-element"></a>\<serviceAuthorization> öğesi
 
@@ -20,7 +21,7 @@ Hizmet işlemlerine erişim yetkisi veren ayarları belirtir
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-servicebehaviors.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<serviceAuthorization>**  
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <serviceAuthorization impersonateCallerForAllOperations="Boolean"

@@ -1,18 +1,19 @@
 ---
-title: 'Yöntem tabanlı sorgu söz dizimi örnekleri: toplu Işleçler (LINQ to DataSet)'
+description: 'Hakkında daha fazla bilgi: Method-Based sorgu söz dizimi örnekleri: toplama Işleçleri (LINQ to DataSet)'
+title: 'Method-Based sorgu söz dizimi örnekleri: toplama Işleçleri (LINQ to DataSet)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5ed5f01d-acb2-4dd4-be60-f04c2d570fa8
-ms.openlocfilehash: f702506e648c73dc179cf1755a467b13afce4bc6
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a404cde84266d4ef8c2118dd07644b28417e159a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164668"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99681610"
 ---
-# <a name="method-based-query-syntax-examples-aggregate-operators-linq-to-dataset"></a>Yöntem tabanlı sorgu söz dizimi örnekleri: toplu Işleçler (LINQ to DataSet)
+# <a name="method-based-query-syntax-examples-aggregate-operators-linq-to-dataset"></a>Method-Based sorgu söz dizimi örnekleri: toplama Işleçleri (LINQ to DataSet)
 
 Bu konudaki örneklerde,,,,,, <xref:System.Linq.Enumerable.Aggregate%2A> <xref:System.Linq.Enumerable.Average%2A> <xref:System.Linq.Enumerable.Count%2A> <xref:System.Linq.Enumerable.LongCount%2A> <xref:System.Linq.Enumerable.Max%2A> <xref:System.Linq.Enumerable.Min%2A> ve <xref:System.Linq.Enumerable.Sum%2A> işleçlerini <xref:System.Data.DataSet> Yöntem sorgu sözdizimini kullanarak bir ve verileri sorgulamak için nasıl kullanacağınız gösterilmektedir.  
   
@@ -151,7 +152,7 @@ Bu konudaki örneklerde,,,,,, <xref:System.Linq.Enumerable.Aggregate%2A> <xref:S
  [!code-csharp[DP LINQ to DataSet Examples#MinElements_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#minelements_mq)]
  [!code-vb[DP LINQ to DataSet Examples#MinElements_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#minelements_mq)]  
   
-## <a name="sum"></a>Toplam  
+## <a name="sum"></a>Sum  
   
 ### <a name="example"></a>Örnek  
 

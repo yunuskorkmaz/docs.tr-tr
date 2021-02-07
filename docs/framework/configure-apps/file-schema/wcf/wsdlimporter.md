@@ -1,17 +1,18 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <wsdlImporter>'
 title: <wsdlImporter>
 ms.date: 03/30/2017
 ms.assetid: 986b2165-8430-4dba-b1b8-00396841bb96
-ms.openlocfilehash: 82704aa40b508f1b1e2237c9768a7b7599c5c87e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9f95d4e6b940f36e9142eb9865327c772e3ce4db
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158597"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682156"
 ---
 # \<wsdlImporter>
 
-WS-Policy ekleriyle Web Hizmetleri Açıklama Dili (WSDL) 1,1 meta verilerini içe aktaran tüm WSDL Importers 'ları belirtir.  
+Web Hizmetleri Açıklama Dili (WSDL) 1,1 meta verilerini WS-Policy eklerle içe aktaran tüm WSDL Importers lerini belirtir.  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
@@ -48,7 +49,7 @@ WS-Policy ekleriyle Web Hizmetleri Açıklama Dili (WSDL) 1,1 meta verilerini i�
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<wsdlImporters>](wsdlimporters.md)|WS-Policy ekleriyle Web Hizmetleri Açıklama Dili (WSDL) 1,1 meta verilerini içe aktaran tüm WSDL Importers 'ları belirtir.|  
+|[\<wsdlImporters>](wsdlimporters.md)|Web Hizmetleri Açıklama Dili (WSDL) 1,1 meta verilerini WS-Policy eklerle içe aktaran tüm WSDL Importers lerini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
 

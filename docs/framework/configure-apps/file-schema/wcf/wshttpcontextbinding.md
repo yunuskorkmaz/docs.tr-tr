@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <wsHttpContextBinding>'
 title: <wsHttpContextBinding>
 ms.date: 03/30/2017
 ms.assetid: 1e40b5c9-0df2-4d66-afc5-a99d0e4ae7a4
-ms.openlocfilehash: 4b611443e836773ad615f919921c8e7ddb29cba9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b020bbcaaa8d7680aeda8dc1a72cbc70fb4f9ada
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91181290"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682065"
 ---
 # \<wsHttpContextBinding>
 
@@ -70,10 +71,10 @@ ms.locfileid: "91181290"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|allowCookies|İstemcinin tanımlama bilgilerini kabul edip etmediğini ve gelecekteki isteklere yayıp yaymadığını belirten bir Boole değeri. Varsayılan değer: `false`.<br /><br /> , `allowCookies` Olarak ayarlandığında `true` , ContextChannel httpCookies öğesini değiştirme bağlamı modu olarak kullanacaktır. Bu öznitelik olarak ayarlandığında `false` , bağlam soap üstbilgileri olarak değiştirilir.<br /><br /> Varsayılan değer: `false`.<br /><br /> Tanımlama bilgilerini kullanan ASMX Web hizmetleriyle etkileşim kurarken bu özelliği kullanabilirsiniz. Bu şekilde, sunucudan döndürülen tanımlama bilgilerinin, bu hizmet için gelecekteki tüm istemci isteklerine otomatik olarak kopyalandığından emin olabilirsiniz.|  
+|allowCookies|İstemcinin tanımlama bilgilerini kabul edip etmediğini ve gelecekteki isteklere yayıp yaymadığını belirten bir Boole değeri. Varsayılan değer: `false`.<br /><br /> , `allowCookies` Olarak ayarlandığında `true` , ContextChannel httpCookies öğesini değiştirme bağlamı modu olarak kullanacaktır. Bu öznitelik olarak ayarlandığında `false` , bağlam soap üstbilgileri olarak değiştirilir.<br /><br /> `false` varsayılan değerdir.<br /><br /> Tanımlama bilgilerini kullanan ASMX Web hizmetleriyle etkileşim kurarken bu özelliği kullanabilirsiniz. Bu şekilde, sunucudan döndürülen tanımlama bilgilerinin, bu hizmet için gelecekteki tüm istemci isteklerine otomatik olarak kopyalandığından emin olabilirsiniz.|  
 |bypassProxyOnLocal|Yerel adresler için proxy sunucusunun atlanıp atlanmayacağını belirten bir Boole değeri. Varsayılan değer: `false`.|  
 |closeTimeout|<xref:System.TimeSpan>Bir kapatma işleminin tamamlanabilmesi için belirtilen zaman aralığını belirten bir değer. Bu değer, değerinden büyük veya buna eşit olmalıdır <xref:System.TimeSpan.Zero> . Varsayılan değer 00:01:00 ' dir.|  
-|contextProtectionLevel|<xref:System.Net.Security.ProtectionLevel>Bağlam bilgilerini yaymak için kullanılan soap üstbilgisinin istenen koruma düzeyini belirten geçerli bir değer.  Varsayılan değer: `Sign`.|  
+|contextProtectionLevel|<xref:System.Net.Security.ProtectionLevel>Bağlam bilgilerini yaymak için kullanılan soap üstbilgisinin istenen koruma düzeyini belirten geçerli bir değer.  `Sign` varsayılan değerdir.|  
 |hostnameComparisonMode|URI 'Leri ayrıştırmak için kullanılan HTTP ana bilgisayar adını karşılaştırma modunu belirtir. Bu öznitelik, <xref:System.ServiceModel.HostNameComparisonMode> ana bilgisayar ADıNıN URI üzerinde eşleştirilirken hizmete erişmek için kullanılıp kullanılmadığını gösteren türüdür. Varsayılan değer, <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard> eşleşenlerin ana bilgisayar adını yok saymaz.|  
 |maxBufferPoolSize|Bu bağlama için en büyük arabellek havuzu boyutunu belirten bir tamsayı. Varsayılan değer 524.288 bayttır (512 * 1024). Windows Communication Foundation (WCF) birçok bölümü arabellekler kullanır. Her kullanıldıkları sırada arabellekleri oluşturma ve yok etme, her zaman pahalıdır ve arabellekler için çöp toplama de pahalıdır. Arabellek havuzları ile havuzdan bir arabellek alabilir, bunu kullanabilir ve işiniz bittiğinde havuza döndürebilirsiniz. Bu nedenle, arabelleklerin oluşturulmasıyla ve yok edilirken ek yük önlenmiş olur.|  
 |Değerini|Bu bağlama ile yapılandırılmış bir kanalda alınabilecek üst bilgiler dahil olmak üzere bayt cinsinden en büyük ileti boyutunu belirten pozitif bir tamsayı. Bu sınırı aşan bir iletiyi gönderen bir SOAP hatası alır. Alıcı, iletiyi bırakır ve izleme günlüğünde olayın bir girişini oluşturur. Varsayılan değer 65536 ' dir.|  

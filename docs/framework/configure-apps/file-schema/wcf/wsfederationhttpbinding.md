@@ -1,15 +1,16 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <wsFederationHttpBinding>'
 title: <wsFederationHttpBinding>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - wsFederationBinding element
 ms.assetid: 9c3312b4-2137-4e71-bf3f-de1cf8e9be79
-ms.openlocfilehash: a57b5ff0b4a8186ffc4c01b5e0824100f265551c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1217c4e46fe18ea5df478b8a790be4da33590c92
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557287"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682104"
 ---
 # \<wsFederationHttpBinding>
 
@@ -144,7 +145,7 @@ WS-Federation destekleyen bir bağlama tanımlar.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Federasyon, kimlik doğrulama ve yetkilendirme için birden fazla sistem genelinde kimlik paylaşma olanağıdır. Bu kimlikler, kullanıcılara veya makinelere başvurabilir. Federasyon HTTP, SOAP güvenliğini ve karma mod güvenliğini destekler, ancak aktarım güvenliğini kullanarak özel olarak desteklenmez. Bu bağlama WS-Federation protokolü için Windows Communication Foundation (WCF) desteği sağlar. Bu bağlama ile yapılandırılan hizmetlerin HTTP aktarımını kullanması gerekir.
+Federasyon, kimlik doğrulama ve yetkilendirme için birden fazla sistem genelinde kimlik paylaşma olanağıdır. Bu kimlikler, kullanıcılara veya makinelere başvurabilir. Federasyon HTTP, SOAP güvenliğini ve karma mod güvenliğini destekler, ancak aktarım güvenliğini kullanarak özel olarak desteklenmez. Bu bağlama, WS-Federation protokolü için Windows Communication Foundation (WCF) desteği sağlar. Bu bağlama ile yapılandırılan hizmetlerin HTTP aktarımını kullanması gerekir.
 
 Bağlamalar bağlama öğelerinden oluşan bir yığından oluşur. İçindeki bağlama öğelerinin yığını
 

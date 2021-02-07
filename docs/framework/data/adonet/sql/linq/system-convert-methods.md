@@ -1,19 +1,20 @@
 ---
+description: 'Daha fazla bilgi edinin: System. Convert yöntemleri'
 title: System.Convert Yöntemleri
 ms.date: 03/30/2017
 ms.assetid: 3ca6c5b6-ea5d-4ab0-b675-f082135b342c
-ms.openlocfilehash: d0aa0b11223e23b874471962d727d8e16e152ceb
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a323f8d0c3c4a8d1248409d2ec27565acdc58222
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781052"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99681415"
 ---
 # <a name="systemconvert-methods"></a>System.Convert Yöntemleri
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Aşağıdaki <xref:System.Convert> yöntemleri desteklemez.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Aşağıdaki <xref:System.Convert> yöntemleri desteklemez.
 
-- Bir <xref:System.IFormatProvider> parametre içeren sürümler.
+- Bir parametre içeren sürümler <xref:System.IFormatProvider> .
 
 - Char dizilerini veya bayt dizilerini içeren Yöntemler:
 
@@ -27,9 +28,9 @@ ms.locfileid: "70781052"
 
 - Aşağıdaki Yöntemler:
 
-  - `public static <Type2> To<Type2>(<Type1> value);`olmadığı
+  - `public static <Type2> To<Type2>(<Type1> value);` olmadığı
 
-    `Type1``Type2` her biri`uint` ,,`ushort`veya. `sbyte` `ulong`
+    `Type1``Type2`her biri,, `sbyte` `uint` `ulong` veya `ushort` .
 
   - C#:
 

@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <windows> <clientCredentials> öğe'
 title: <windows><clientCredentials>öğesinin
 ms.date: 03/30/2017
 ms.assetid: 793e41c2-31ea-4159-abbc-2123bf097233
-ms.openlocfilehash: 115e1822659c04ee37a7364f7b25616b52dc5efe
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d693ad914dfa02ef12a7c8520ca84be3a9595e73
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177832"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682429"
 ---
 # <a name="windows-of-clientcredentials-element"></a>\<windows>\<clientCredentials>öğesinin
 

@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: LINQ to SQL nesne modeli'
 title: LINQ to SQL Nesne Modeli
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
-ms.openlocfilehash: b17e1b6f4a6f849e3b42d69e9b9c2d5f906218e1
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: be4021019d09d1479364b25268eefda50b6eaa6f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91155516"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99681272"
 ---
 # <a name="the-linq-to-sql-object-model"></a>LINQ to SQL Nesne Modeli
 
@@ -34,7 +35,7 @@ ms.locfileid: "91155516"
   
 ## <a name="linq-to-sql-entity-classes-and-database-tables"></a>LINQ to SQL varlık sınıfları ve veritabanı tabloları  
 
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]' De, bir veritabanı tablosu bir *varlık sınıfı*tarafından temsil edilir. Bir varlık sınıfı, sınıfının bir veritabanı tablosuyla ilişkilenme özel bilgilerini kullanarak açıklama ekleyerek, oluşturabileceğiniz diğer herhangi bir sınıf gibidir. <xref:System.Data.Linq.Mapping.TableAttribute>Aşağıdaki örnekte olduğu gibi, sınıf bildirimidir özel bir öznitelik () ekleyerek bu ek açıklamayı yaparsınız:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]' De, bir veritabanı tablosu bir *varlık sınıfı* tarafından temsil edilir. Bir varlık sınıfı, sınıfının bir veritabanı tablosuyla ilişkilenme özel bilgilerini kullanarak açıklama ekleyerek, oluşturabileceğiniz diğer herhangi bir sınıf gibidir. <xref:System.Data.Linq.Mapping.TableAttribute>Aşağıdaki örnekte olduğu gibi, sınıf bildirimidir özel bir öznitelik () ekleyerek bu ek açıklamayı yaparsınız:  
   
 ### <a name="example"></a>Örnek  
 

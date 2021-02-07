@@ -1,13 +1,14 @@
 ---
+description: WCF hakkında daha fazla bilgi edinin <workflow>
 title: <workflow> WCF
 ms.date: 03/30/2017
 ms.assetid: c0443eba-d3b4-4fae-886e-9878daf77691
-ms.openlocfilehash: cada3fca028562312be0272cb2a6021dfd1cf9cb
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 44391017b98bdbe76981c695c22ae68b048c3050
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91194888"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682390"
 ---
 # <a name="workflow-of-wcf"></a>\<workflow> WCF
 

@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi <security> edinin: <webHttpBinding>'
 title: <security> / <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 727cf3d2-6f56-48ad-a59f-ba423edb9c83
-ms.openlocfilehash: 60b863a0a2a846a60dde2e4b323a305b5096b1cc
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a80a919ef877f01503e5ceaeb4fe7432e46f288c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169901"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683053"
 ---
 # <a name="security-of-webhttpbinding"></a>\<security> / \<webHttpBinding>
 
@@ -52,7 +53,7 @@ ms.locfileid: "91169901"
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Yok|Güvenlik devre dışı bırakıldı.|  
+|Hiçbiri|Güvenlik devre dışı bırakıldı.|  
 |Aktarım|Güvenlik, HTTPS kullanılarak sağlanır. Hizmetin SSL sertifikalarıyla yapılandırılması gerekir. İleti HTTPS kullanılarak tamamen güvenli hale getirilir ve hizmetin SSL sertifikası kullanılarak istemcinin kimliği doğrulanır. İstemci kimlik doğrulaması, özniteliği aracılığıyla denetlenir `ClientCredentialType` [\<transport>](transport-of-webhttpbinding.md) .|  
 |Yalnızca transportcredential|Bu mod ileti bütünlüğü ve gizliliği sağlamaz. HTTP tabanlı istemci kimlik doğrulaması sağlar. Bu mod dikkatli kullanılmalıdır. Aktarım güvenliğinin diğer yollarla (IPSec gibi) sağlandığı ve yalnızca WCF altyapısı tarafından istemci kimlik doğrulamasının sağlandığı ortamlarda kullanılması gerekir.|  
   

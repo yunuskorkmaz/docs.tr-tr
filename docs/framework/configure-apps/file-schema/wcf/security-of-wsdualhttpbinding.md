@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi <security> edinin: <wsDualHttpBinding>'
 title: <security> / <wsDualHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 869c05e7-4ebe-467d-95ab-c8f8de4e6b9e
-ms.openlocfilehash: 7398cd538bb240e78413575f7c28abe7f797d05c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6d2e87912aef6114d7dcb99b82e4a7804317b28a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91162211"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683040"
 ---
 # <a name="security-of-wsdualhttpbinding"></a>\<security> / \<wsDualHttpBinding>
 
@@ -38,7 +39,7 @@ Uygulamasının güvenlik yeteneklerini tanımlar [\<wsDualHttpBinding>](wsdualh
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|mod|Seçim. Uygulanan güvenlik türünü belirtir. Varsayılan değer: `Message`. Bu öznitelik türü <xref:System.ServiceModel.WSDualHttpSecurityMode> .|  
+|mod|Seçim. Uygulanan güvenlik türünü belirtir. `Message` varsayılan değerdir. Bu öznitelik türü <xref:System.ServiceModel.WSDualHttpSecurityMode> .|  
   
 ## <a name="mode-attribute"></a>Mode özniteliği  
   

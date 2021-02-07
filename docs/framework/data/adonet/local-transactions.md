@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: yerel Işlemler'
 title: Yerel İşlemler
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: a0b713ab0b81cb2f0661212dae22db34b7f9f3ae
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 998024a6b08ec9cb97c8bb8dbbe2c9d17f38f350
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91175401"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99681649"
 ---
 # <a name="local-transactions"></a>Yerel İşlemler
 
@@ -54,6 +55,6 @@ ADO.NET içindeki işlemler, tek bir iş birimi olarak yürütülmesi için bird
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İşlemler ve Eşzamanlılık](transactions-and-concurrency.md)
-- [Dağıtılmış İşlemler](distributed-transactions.md)
+- [Dağıtılmış Işlemler](distributed-transactions.md)
 - [SQL Server ile System.Transactions Tümleştirmesi](system-transactions-integration-with-sql-server.md)
 - [ADO.NET’e Genel Bakış](ado-net-overview.md)

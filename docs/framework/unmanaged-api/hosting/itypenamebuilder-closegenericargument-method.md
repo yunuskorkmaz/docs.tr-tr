@@ -1,4 +1,5 @@
 ---
+description: ': Itypeenamebuilder:: CloseGenericArgument yöntemi hakkında daha fazla bilgi edinin'
 title: ITypeNameBuilder::CloseGenericArgument Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c9a8178d-be1f-4ad4-abdb-d38470659b82
 topic_type:
 - apiref
-ms.openlocfilehash: 22a9bdc014358ac3cda0da166f3f29d1c60d09ee
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cfef333e1e2b0c179c4aebe316d1db9e742f9a8f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721252"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99680609"
 ---
 # <a name="itypenamebuilderclosegenericargument-method"></a>ITypeNameBuilder::CloseGenericArgument Yöntemi
 

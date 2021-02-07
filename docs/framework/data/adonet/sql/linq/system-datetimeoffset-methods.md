@@ -1,13 +1,14 @@
 ---
+description: ': System. DateTimeOffset yöntemleri hakkında daha fazla bilgi'
 title: System.DateTimeOffset Yöntemleri
 ms.date: 03/30/2017
 ms.assetid: 25b3e5c0-7603-4a70-b3e5-2149e3da69a2
-ms.openlocfilehash: ae588b88ca592ce422202d5231b34060ccc22024
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 050c710d4a3f3db8112d0d108338c010345afdda
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203481"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99681337"
 ---
 # <a name="systemdatetimeoffset-methods"></a>System.DateTimeOffset Yöntemleri
 

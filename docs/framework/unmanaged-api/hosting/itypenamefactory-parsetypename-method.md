@@ -1,4 +1,5 @@
 ---
+description: ': Itypeenamefactory::P arseTypeName yöntemi hakkında daha fazla bilgi edinin'
 title: ITypeNameFactory::ParseTypeName Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 13c9f063-371c-4911-a5e7-e1e0b88ae382
 topic_type:
 - apiref
-ms.openlocfilehash: 2b4d22fac7125ad113aaef5b093396a065f682c1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e0ff068dd0d095c3eed1c7a697d0c72919306996
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728725"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99680206"
 ---
 # <a name="itypenamefactoryparsetypename-method"></a>ITypeNameFactory::ParseTypeName Yöntemi
 

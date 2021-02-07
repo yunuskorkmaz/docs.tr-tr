@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: sorgu Ifadesi sözdizimi örnekleri: bölümleme (LINQ to DataSet)'
 title: 'Sorgu Ifadesi söz dizimi örnekleri: bölümleme (LINQ to DataSet)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: beb5f361-1ac8-44fb-afa1-2aacea15f166
-ms.openlocfilehash: 9f907d16c78b550fbc11cc2cfad3c8249966a2f1
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 01ce41e2281632cf30692656c70c0610971aaa06
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91189038"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99681558"
 ---
 # <a name="query-expression-syntax-examples-partitioning-linq-to-dataset"></a>Sorgu Ifadesi söz dizimi örnekleri: bölümleme (LINQ to DataSet)
 

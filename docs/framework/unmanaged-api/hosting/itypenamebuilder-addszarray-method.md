@@ -1,4 +1,5 @@
 ---
+description: ': Itypeenamebuilder:: AddSzArray yöntemi hakkında daha fazla bilgi edinin'
 title: ITypeNameBuilder::AddSzArray Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a6a46296-af14-4c53-9744-f7a1e3f3028a
 topic_type:
 - apiref
-ms.openlocfilehash: c8d966fad422196c7342fb007354bb7e0a35ca90
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9d3bf8eaf62476e69132c38c9a08a7ac0bf7b3c0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732417"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99680635"
 ---
 # <a name="itypenamebuilderaddszarray-method"></a>ITypeNameBuilder::AddSzArray Yöntemi
 

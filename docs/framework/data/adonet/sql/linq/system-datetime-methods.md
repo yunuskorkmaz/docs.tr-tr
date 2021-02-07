@@ -1,13 +1,14 @@
 ---
+description: Daha fazla bilgi için bkz. System. DateTime yöntemleri
 title: System.DateTime Yöntemleri
 ms.date: 03/30/2017
 ms.assetid: 4f80700c-e83f-4ab6-af0f-1c9a606e1133
-ms.openlocfilehash: e3bffb1f47c19ccf7ea59151cd3545a15d59f1f2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b4b732bf41be2a943610a26f5abc33d1bb080d2f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203494"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99681389"
 ---
 # <a name="systemdatetime-methods"></a>System.DateTime Yöntemleri
 

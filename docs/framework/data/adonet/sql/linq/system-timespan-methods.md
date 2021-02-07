@@ -1,13 +1,14 @@
 ---
+description: ': System. TimeSpan yöntemleri hakkında daha fazla bilgi'
 title: System.TimeSpan Yöntemleri
 ms.date: 03/30/2017
 ms.assetid: 9333fee8-1454-4374-855b-8c14c002f48f
-ms.openlocfilehash: 15b6c8bd5c9cce8e6d1bac030c6b7f6b40df6cd4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: fa3192d18a59e589f2c7510776f8510b2c12cac4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91155594"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99681194"
 ---
 # <a name="systemtimespan-methods"></a>System.TimeSpan Yöntemleri
 

@@ -1,4 +1,5 @@
 ---
+description: ': Itypeenamebuilder:: OpenGenericArgument Yöntemi hakkında daha fazla bilgi edinin'
 title: ITypeNameBuilder::OpenGenericArgument Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 476feeac-e8e9-46cf-9f8d-be103181d0ab
 topic_type:
 - apiref
-ms.openlocfilehash: 8dea4c714380616478b62b206e7585ec14be49ca
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 767f07a7e5e3da73550e5e012add211bb48c180c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732410"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99680393"
 ---
 # <a name="itypenamebuilderopengenericargument-method"></a>ITypeNameBuilder::OpenGenericArgument Yöntemi
 

@@ -1,4 +1,5 @@
 ---
+description: ': IHostTaskManager:: SetCLRTaskManager Yöntemi hakkında daha fazla bilgi edinin'
 title: IHostTaskManager::SetCLRTaskManager Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: ec90ee83-bd4b-408b-9274-62a923ab86a1
 topic_type:
 - apiref
-ms.openlocfilehash: 23d0679599c681468caa2507518d0ae3144ac26a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 438a5b56afd42eceafb484bdf0020efbad86d052
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95669815"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99680882"
 ---
 # <a name="ihosttaskmanagersetclrtaskmanager-method"></a>IHostTaskManager::SetCLRTaskManager Yöntemi
 
 Ana bilgisayarı, ortak dil çalışma zamanı (CLR) tarafından uygulanan bir [ICLRTaskManager](iclrtaskmanager-interface.md) örneğine bir arabirim işaretçisi sağlar.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT SetCLRTaskManager (  
@@ -41,7 +42,7 @@ HRESULT SetCLRTaskManager (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`SetCLRTaskManager` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  

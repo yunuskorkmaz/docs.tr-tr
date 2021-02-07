@@ -1,4 +1,5 @@
 ---
+description: ': Itypeenamebuilder:: AddArray yöntemi hakkında daha fazla bilgi edinin'
 title: ITypeNameBuilder::AddArray Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0a21ae28-54bc-4f6e-aaa6-960a22c5f530
 topic_type:
 - apiref
-ms.openlocfilehash: 6addf469b3383a3a73002af5d822a67b5faed20c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 59c2ec544f8ac218084783b01c092c0f9763b3d8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727763"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99680819"
 ---
 # <a name="itypenamebuilderaddarray-method"></a>ITypeNameBuilder::AddArray Yöntemi
 

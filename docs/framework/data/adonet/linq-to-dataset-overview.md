@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: LINQ to DataSet genel bakış'
 title: LINQ to DataSet Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: dc20a8fb-03f6-4b68-9c2b-7f7299e3070b
-ms.openlocfilehash: f7659d03005df69d7debe604581ce49973f938cc
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 73054a4f9b7397e3fa5d417d85afa2fa23aec643
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91200621"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99681701"
 ---
 # <a name="linq-to-dataset-overview"></a>LINQ to DataSet Genel Bakış
 
@@ -19,7 +20,7 @@ ms.locfileid: "91200621"
   
 ## <a name="querying-datasets-using-linq-to-dataset"></a>LINQ to DataSet kullanarak veri kümelerini sorgulama  
 
- LINQ to DataSet kullanarak bir nesneyi sorgulamaya başlayabilmeniz <xref:System.Data.DataSet> için önce öğesini doldurmanız gerekir <xref:System.Data.DataSet> . <xref:System.Data.DataSet>' A <xref:System.Data.Common.DataAdapter> veya [LINQ to SQL](./sql/linq/index.md)gibi bir veri yüklemek için birkaç yol vardır. Veriler bir nesneye yüklendikten sonra <xref:System.Data.DataSet> sorgu oluşturmaya başlayabilirsiniz. LINQ to DataSet kullanarak sorguları formüle eklemek, diğer LINQ özellikli veri kaynaklarına karşı dil ile tümleşik sorgu (LINQ) kullanılmasına benzerdir. LINQ sorguları <xref:System.Data.DataSet> , <xref:System.Linq.Enumerable.Join%2A> ve <xref:System.Linq.Enumerable.GroupJoin%2A> Standart sorgu işleçlerini kullanarak bir veya birden fazla tabloya karşı tek tablolara karşı gerçekleştirilebilir.  
+ LINQ to DataSet kullanarak bir nesneyi sorgulamaya başlayabilmeniz <xref:System.Data.DataSet> için önce öğesini doldurmanız gerekir <xref:System.Data.DataSet> . <xref:System.Data.DataSet>' A <xref:System.Data.Common.DataAdapter> veya [LINQ to SQL](./sql/linq/index.md)gibi bir veri yüklemek için birkaç yol vardır. Veriler bir nesneye yüklendikten sonra <xref:System.Data.DataSet> sorgu oluşturmaya başlayabilirsiniz. LINQ to DataSet kullanarak sorguları formüle eklemek, diğer LINQ özellikli veri kaynaklarına karşı Language-Integrated sorgusu (LINQ) kullanılmasına benzerdir. LINQ sorguları <xref:System.Data.DataSet> , <xref:System.Linq.Enumerable.Join%2A> ve <xref:System.Linq.Enumerable.GroupJoin%2A> Standart sorgu işleçlerini kullanarak bir veya birden fazla tabloya karşı tek tablolara karşı gerçekleştirilebilir.  
   
  LINQ sorguları hem yazılan hem de türsüz nesneler için desteklenir <xref:System.Data.DataSet> . Şeması <xref:System.Data.DataSet> uygulama tasarım zamanında biliniyorsa, bir türü <xref:System.Data.DataSet> önerilir. Bir tür içinde <xref:System.Data.DataSet> Tablolar ve satırlar, her bir sütun için, sorguları daha basit ve daha okunaklı hale getiren bir üye türdedir.  
   

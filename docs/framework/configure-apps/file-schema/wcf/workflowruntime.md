@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <workflowRuntime>'
 title: <workflowRuntime>
 ms.date: 03/30/2017
 ms.assetid: 304c70fa-78d1-4d0f-b89f-0ca23d734c6f
-ms.openlocfilehash: 4a450fb6f02bbf0f1681f7b2fabea9da7b65cbea
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9c234073bbbbfc8f1b5bb1579ff1dfa54a744ec1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183604"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682233"
 ---
 # \<workflowRuntime>
 
@@ -46,7 +47,7 @@ ms.locfileid: "91183604"
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
 |CachedInstanceExpiration|<xref:System.TimeSpan>Bir iş akışı örneğinin, zorla kaldırılmadan veya durdurulmadan önce boşta durumunda kalabileceği en uzun süreyi belirten isteğe bağlı bir değer. WorkflowRuntime, `PersistenceService` UnloadOnIdle işlemini gerçekleştirirse, bu öznitelik yoksayılır.|  
-|enablePerformanceCounters|Performans sayaçlarının etkin olup olmadığını belirten isteğe bağlı bir Boolean değeri. Performans sayaçları, iş akışı ile ilgili çeşitli istatistikler hakkında bilgi sağlar, ancak iş akışı çalışma zamanı altyapısı başladığında ve iş akışı örnekleri çalışırken performans cezasına neden olur. Varsayılan değer: `true`.|  
+|enablePerformanceCounters|Performans sayaçlarının etkin olup olmadığını belirten isteğe bağlı bir Boolean değeri. Performans sayaçları, iş akışı ile ilgili çeşitli istatistikler hakkında bilgi sağlar, ancak iş akışı çalışma zamanı altyapısı başladığında ve iş akışı örnekleri çalışırken performans cezasına neden olur. `true` varsayılan değerdir.|  
 |name|İş akışı çalışma zamanı altyapısının adını içeren bir dize. Bu ad, bu çalışma zamanını sistemde çalışmakta olabilecek diğer çalışma zamanları (örneğin, performans sayaçları) ayırt etmek için çıktıda kullanılır.<br /><br /> Varsayılan değer boş bir dizedir.|  
 |validateOnCreate|WorkflowServiceHost açıldığında iş akışı tanımı doğrulamasının gerçekleşmeyeceğini belirten isteğe bağlı bir Boolean değeri.  Bu öznitelik olarak ayarlandığında `true` , iş akışı doğrulama her `WorkflowServiceHost.Open` çağrıldığında yürütülür. Doğrulama hataları bulunursa bir <xref:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException> hata oluşur.<br /><br /> Bu özellik olarak ayarlandığında `false` , Iş akışı tanımı doğrulaması gerçekleşmeyecektir.<br /><br /> Bu özellik için varsayılan değer `true` .|  
   

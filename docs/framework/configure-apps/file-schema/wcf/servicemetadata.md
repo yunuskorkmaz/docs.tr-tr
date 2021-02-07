@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <serviceMetadata>'
 title: <serviceMetadata>
 ms.date: 03/30/2017
 ms.assetid: 2b4c3b4c-31d4-4908-a9b7-5bb411c221f2
-ms.openlocfilehash: 2236361316254d065abd1fb62fd2e509be289a4c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b519de04c333f9ddc12de72757587c9b38f29dba
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153865"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682832"
 ---
 # \<serviceMetadata>
 
@@ -56,7 +57,7 @@ Hizmet meta verilerinin ve ilgili bilgilerin yayınlanmasını belirtir.
   
 ### <a name="child-elements"></a>Alt Öğeler  
 
- Hiçbiri  
+ Yok  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -87,7 +88,7 @@ Hizmet meta verilerinin ve ilgili bilgilerin yayınlanmasını belirtir.
   
 ## <a name="example"></a>Örnek  
 
- Aşağıdaki örnek, öğesini kullanarak meta verileri açığa çıkarmak için bir hizmet yapılandırır \<serviceMetadata> . Ayrıca, bir uç noktasını bir `IMetadataExchange` WS-MetadataExchange (MEX) protokolünün bir uygulama olarak kullanıma sunmak için yapılandırır. Örnek, `mexHttpBinding` `wsHttpBinding` güvenlik modu olarak ayarlanmış olan öğesine eşdeğer bir standart bağlama olan öğesini kullanır `None` . Uç noktada "mex" göreli adresi kullanılır. bu durum, hizmet tabanı adresine karşı çözümlenirse, bir uç nokta adresinde oluşur `http://localhost/servicemodelsamples/service.svc/mex` .  
+ Aşağıdaki örnek, öğesini kullanarak meta verileri açığa çıkarmak için bir hizmet yapılandırır \<serviceMetadata> . Ayrıca, `IMetadataExchange` sözleşmeyi bir WS-MetadataExchange (MEX) protokolünün bir uygulama olarak göstermek için bir uç nokta yapılandırır. Örnek, `mexHttpBinding` `wsHttpBinding` güvenlik modu olarak ayarlanmış olan öğesine eşdeğer bir standart bağlama olan öğesini kullanır `None` . Uç noktada "mex" göreli adresi kullanılır. bu durum, hizmet tabanı adresine karşı çözümlenirse, bir uç nokta adresinde oluşur `http://localhost/servicemodelsamples/service.svc/mex` .  
   
 ```xml  
 <configuration>
