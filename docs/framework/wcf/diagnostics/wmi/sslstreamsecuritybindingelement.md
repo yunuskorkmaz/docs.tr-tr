@@ -1,19 +1,20 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: SslStreamSecurityBindingElement'
 title: SslStreamSecurityBindingElement
 ms.date: 03/30/2017
 ms.assetid: 18130d50-8996-4257-9c60-bc457f8654d8
-ms.openlocfilehash: fcb6cb304c7435f8b954ed5aeea7179c7cb40be8
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 32e21adedb533edbe2adf8a30ddaff64eb038936
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96282099"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99715333"
 ---
-# <a name="sslstreamsecuritybindingelement"></a><span data-ttu-id="3bc6f-102">SslStreamSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="3bc6f-102">SslStreamSecurityBindingElement</span></span>
+# <a name="sslstreamsecuritybindingelement"></a><span data-ttu-id="1de9d-103">SslStreamSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="1de9d-103">SslStreamSecurityBindingElement</span></span>
 
-<span data-ttu-id="3bc6f-103">SslStreamSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="3bc6f-103">SslStreamSecurityBindingElement</span></span>  
+<span data-ttu-id="1de9d-104">SslStreamSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="1de9d-104">SslStreamSecurityBindingElement</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3bc6f-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="3bc6f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1de9d-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="1de9d-105">Syntax</span></span>  
   
 ```csharp
 class SslStreamSecurityBindingElement : BindingElement  
@@ -22,28 +23,28 @@ class SslStreamSecurityBindingElement : BindingElement
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="3bc6f-105">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="3bc6f-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="1de9d-106">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="1de9d-106">Methods</span></span>  
 
- <span data-ttu-id="3bc6f-106">SslStreamSecurityBindingElement sınıfı herhangi bir yöntem tanımlamaz.</span><span class="sxs-lookup"><span data-stu-id="3bc6f-106">The SslStreamSecurityBindingElement class does not define any methods.</span></span>  
+ <span data-ttu-id="1de9d-107">SslStreamSecurityBindingElement sınıfı herhangi bir yöntem tanımlamaz.</span><span class="sxs-lookup"><span data-stu-id="1de9d-107">The SslStreamSecurityBindingElement class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="3bc6f-107">Özellikler</span><span class="sxs-lookup"><span data-stu-id="3bc6f-107">Properties</span></span>  
+## <a name="properties"></a><span data-ttu-id="1de9d-108">Özellikler</span><span class="sxs-lookup"><span data-stu-id="1de9d-108">Properties</span></span>  
 
- <span data-ttu-id="3bc6f-108">SslStreamSecurityBindingElement sınıfı aşağıdaki özelliğe sahiptir:</span><span class="sxs-lookup"><span data-stu-id="3bc6f-108">The SslStreamSecurityBindingElement class has the following property:</span></span>  
+ <span data-ttu-id="1de9d-109">SslStreamSecurityBindingElement sınıfı aşağıdaki özelliğe sahiptir:</span><span class="sxs-lookup"><span data-stu-id="1de9d-109">The SslStreamSecurityBindingElement class has the following property:</span></span>  
   
-### <a name="requireclientcertificate"></a><span data-ttu-id="3bc6f-109">RequireClientCertificate</span><span class="sxs-lookup"><span data-stu-id="3bc6f-109">RequireClientCertificate</span></span>  
+### <a name="requireclientcertificate"></a><span data-ttu-id="1de9d-110">RequireClientCertificate</span><span class="sxs-lookup"><span data-stu-id="1de9d-110">RequireClientCertificate</span></span>  
 
- <span data-ttu-id="3bc6f-110">Veri türü: Boole</span><span class="sxs-lookup"><span data-stu-id="3bc6f-110">Data type: boolean</span></span>  
+ <span data-ttu-id="1de9d-111">Veri türü: Boole</span><span class="sxs-lookup"><span data-stu-id="1de9d-111">Data type: boolean</span></span>  
   
- <span data-ttu-id="3bc6f-111">Erişim türü: salt okunurdur</span><span class="sxs-lookup"><span data-stu-id="3bc6f-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="1de9d-112">Erişim türü: salt okunurdur</span><span class="sxs-lookup"><span data-stu-id="1de9d-112">Access type: Read-only</span></span>  
   
- <span data-ttu-id="3bc6f-112">Bu bağlama için bir istemci sertifikasının gerekli olup olmadığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="3bc6f-112">Specifies whether a client certificate is required for this binding.</span></span>  
+ <span data-ttu-id="1de9d-113">Bu bağlama için bir istemci sertifikasının gerekli olup olmadığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="1de9d-113">Specifies whether a client certificate is required for this binding.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3bc6f-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="3bc6f-113">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1de9d-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="1de9d-114">Requirements</span></span>  
   
-|<span data-ttu-id="3bc6f-114">MOF</span><span class="sxs-lookup"><span data-stu-id="3bc6f-114">MOF</span></span>|<span data-ttu-id="3bc6f-115">ServiceModel. mof içinde bildirilmiştir.</span><span class="sxs-lookup"><span data-stu-id="3bc6f-115">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="1de9d-115">MOF</span><span class="sxs-lookup"><span data-stu-id="1de9d-115">MOF</span></span>|<span data-ttu-id="1de9d-116">ServiceModel. mof içinde bildirilmiştir.</span><span class="sxs-lookup"><span data-stu-id="1de9d-116">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="3bc6f-116">Ad Alanı</span><span class="sxs-lookup"><span data-stu-id="3bc6f-116">Namespace</span></span>|<span data-ttu-id="3bc6f-117">Root\ServiceModel içinde tanımlı</span><span class="sxs-lookup"><span data-stu-id="3bc6f-117">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="1de9d-117">Ad Alanı</span><span class="sxs-lookup"><span data-stu-id="1de9d-117">Namespace</span></span>|<span data-ttu-id="1de9d-118">Root\ServiceModel içinde tanımlı</span><span class="sxs-lookup"><span data-stu-id="1de9d-118">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="3bc6f-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3bc6f-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1de9d-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1de9d-119">See also</span></span>
 
 - <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>
