@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ICorDebugCode4 Interface'
 title: ICorDebugCode4 Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a3fdf523-274a-449c-920b-9fcb0aed1d97
 topic_type:
 - apiref
-ms.openlocfilehash: 8a373afdf41590ec44a7cbac7360719a12faa82e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1276db5c55c3d98e5ffa379f6126f700d93c1670
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720730"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764729"
 ---
 # <a name="icordebugcode4-interface"></a>ICorDebugCode4 Arabirimi
 

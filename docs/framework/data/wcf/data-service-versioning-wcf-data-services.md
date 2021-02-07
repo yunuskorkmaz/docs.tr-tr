@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: veri hizmeti sürümü oluşturma (WCF Veri Hizmetleri)'
 title: Veri hizmeti sürümü oluşturma (WCF Veri Hizmetleri)
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,14 +7,16 @@ helpviewer_keywords:
 - versioning [WCF Data Services]
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
-ms.openlocfilehash: 8d7cc0f0033c75c05ac9c39cfbf1ce09dc032a4c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5b08d9d822fc9dd8be4cd4614f8a5536bf98fd43
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91182876"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766146"
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Veri hizmeti sürümü oluşturma (WCF Veri Hizmetleri)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 Açık Veri Protokolü (OData), istemcilerin veri modeli tabanlı URI 'Leri kullanarak verilere kaynak olarak erişebilmeleri için veri Hizmetleri oluşturmanıza olanak sağlar. OData Ayrıca hizmet işlemlerinin tanımını da destekler. İlk dağıtımdan sonra ve ömrü boyunca birkaç kez, bu veri hizmetlerinin iş ihtiyaçlarını değiştirme, bilgi teknolojisi gereksinimleri veya diğer sorunları ele almak gibi çeşitli nedenlerle değiştirilmesi gerekebilir. Var olan bir veri hizmetinde değişiklik yaptığınızda, veri hizmetinizin yeni bir sürümünü tanımlayıp tanımlamadığınızı ve var olan istemci uygulamalarında etkisini en iyi duruma küçültmenizi göz önünde bulundurmanız gerekir. Bu konu, bir veri hizmetinin yeni bir sürümünün nasıl ve ne zaman oluşturulacağı hakkında rehberlik sağlar. Ayrıca, WCF Veri Hizmetleri OData protokolünün farklı sürümlerini destekleyen istemciler ve veri Hizmetleri arasında bir alışverişi nasıl işlediğini açıklar.
 

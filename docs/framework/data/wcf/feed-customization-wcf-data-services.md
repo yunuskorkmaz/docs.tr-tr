@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: akış özelleştirmesi (WCF Veri Hizmetleri)'
 title: Akış özelleştirmesi (WCF Veri Hizmetleri)
 ms.date: 03/30/2017
 dev_langs:
@@ -10,14 +11,16 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: bf25737d98a880ac720318de18b687b4df5b0708
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9c9e0ead05c446b293fd728c3720472529a0cf0c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172638"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765964"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Akış özelleştirmesi (WCF Veri Hizmetleri)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Veri Hizmetleri verileri akış olarak göstermek için açık veri Protokolü 'Nü (OData) kullanır. OData, veri akışları için hem atom hem de JavaScript Nesne Gösterimi (JSON) biçimlerini destekler. Atom akışı kullandığınızda OData, varlıkları ve ilişkileri gibi verileri, HTTP iletisinin gövdesine eklenebilecek bir XML biçiminde seri hale getirmek için standart bir yöntem sağlar. OData, varlıklarda ve Atom öğelerinde bulunan veriler arasında varsayılan bir varlık özelliği eşlemesini tanımlar. Daha fazla bilgi için bkz. [OData: Atom biçimi](https://www.odata.org/documentation/odata-version-2-0/atom-format/).  
   
@@ -50,7 +53,7 @@ WCF Veri Hizmetleri verileri akış olarak göstermek için açık veri Protokol
 
  Aşağıdaki tabloda, veri modelini tanımlayan kavramsal şema tanım diline (CSDL) ekleyebileceğiniz Özet akışları özelleştiren XML öznitelikleri gösterilmektedir. Bu öznitelikler, <xref:System.Data.Services.Common.EntityPropertyMappingAttribute> yansıma sağlayıcısıyla kullanılan özellikleriyle eşdeğerdir.  
   
-|Öznitelik adı|Açıklama|  
+|Öznitelik adı|Description|  
 |--------------------|-----------------|  
 |`FC_ContentKind`|İçeriğin türünü gösterir. Aşağıdaki anahtar sözcükler, dağıtım içerik türlerini tanımlar.<br /><br /> `text:` Özellik değeri akışta metin olarak görüntülenir.<br /><br /> `html:` Özellik değeri akışta HTML olarak görüntülenir.<br /><br /> `xhtml:` Özellik değeri, akışta XML biçimli HTML olarak görüntülenir.<br /><br /> Bu anahtar sözcükler, <xref:System.Data.Services.Common.SyndicationTextContentKind> yansıma sağlayıcısıyla kullanılan numaralandırmanın değerlerine eşdeğerdir.<br /><br /> `FC_NsPrefix`Ve öznitelikleri kullanıldığında bu öznitelik desteklenmez `FC_NsUri` .<br /><br /> Özniteliği için bir değer belirttiğinizde `xhtml` `FC_ContentKind` , özellik değerinin düzgün biçimli xml içerdiğinden emin olmanız gerekir. Veri hizmeti herhangi bir dönüştürme yapılmadan değeri döndürür. Ayrıca, döndürülen XML 'deki tüm XML öğesi öneklerinde, eşlenmiş akışta tanımlanmış bir ad alanı URI 'SI ve öneki olduğundan emin olmanız gerekir.|  
 |`FC_KeepInContent`|Başvurulan özellik değerinin hem akışın içerik bölümüne hem de eşlenmiş konuma dahil edileceğini gösterir. Geçerli değerler `true` ve ' dir `false` . Elde edilen akışı daha önceki WCF Veri Hizmetleri sürümleriyle uyumlu hale getirmek için, değerin `true` akışın içerik bölümüne eklendiğinden emin olmak için değerini belirtin.|  

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: geliştirme ve dağıtma WCF Veri Hizmetleri'
 title: WCF Veri Hizmetleri Geliştirme ve Dağıtma
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -7,16 +8,18 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 484505406701b52a2b80b95b718a23a2156aa22c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 52d7a00ffbd333b9a6ad01298fd1133ea8d5e731
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/29/2020
-ms.locfileid: "90556095"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766081"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Geliştirme ve dağıtma WCF Veri Hizmetleri
 
-Bu makalede WCF Veri Hizmetleri geliştirme ve dağıtma hakkında bilgi sağlanır. WCF Veri Hizmetleri hakkında daha fazla temel bilgi için bkz [Getting Started](getting-started-with-wcf-data-services.md) . Başlarken ve [genel bakış](wcf-data-services-overview.md).
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
+
+Bu makalede WCF Veri Hizmetleri geliştirme ve dağıtma hakkında bilgi sağlanır. WCF Veri Hizmetleri hakkında daha fazla temel bilgi için bkz [](getting-started-with-wcf-data-services.md) . Başlarken ve [genel bakış](wcf-data-services-overview.md).
 
 ## <a name="develop-wcf-data-services"></a>WCF Veri Hizmetleri geliştirin
 

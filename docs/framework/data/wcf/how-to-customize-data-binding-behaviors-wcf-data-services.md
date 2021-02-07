@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: veri bağlama davranışlarını özelleştirme (WCF Veri Hizmetleri)'
 title: 'Nasıl yapılır: veri bağlama davranışlarını özelleştirme (WCF Veri Hizmetleri)'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,14 +9,16 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - WCF Data Services, data binding
 ms.assetid: 40476b89-8941-4771-8d21-2fe430c85a9d
-ms.openlocfilehash: 13847923a5f31108e93ef12cf7775109be3cd9eb
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 60c8808f90f8e0a824a8b2b641508c0fe33f14cc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172521"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765691"
 ---
 # <a name="how-to-customize-data-binding-behaviors-wcf-data-services"></a>Nasıl yapılır: veri bağlama davranışlarını özelleştirme (WCF Veri Hizmetleri)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Veri Hizmetleri ile, <xref:System.Data.Services.Client.DataServiceCollection%601> bağlama koleksiyonuna bir nesne eklendiğinde veya kaldırıldığında ya da bir özellik değişikliği algılandığında tarafından çağrılan özel mantık sağlayabilirsiniz. Bu özel mantık, <xref:System.Func%602> `false` özel yöntem tamamlandığında ve `true` olayın sonraki işlenmesi durdurulduğunda varsayılan davranışın ne zaman gerçekleştirilmesi gerektiğini belirten bir değeri döndüren, temsilciler olarak başvurulan yöntemler olarak sağlanır.  
   

@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: veri hizmeti sorgusuna sorgu seçenekleri ekleme (WCF Veri Hizmetleri)'
 title: 'Nasıl yapılır: veri hizmeti sorgusuna sorgu seçenekleri ekleme (WCF Veri Hizmetleri)'
 ms.date: 03/30/2017
 dev_langs:
@@ -9,14 +10,16 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: e4258526-557e-4e96-91e1-2175400c7c8f
-ms.openlocfilehash: 76d2b1ff3cbb5440bfed62ba840e646cf68de025
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8b5fdf1105ae06485ab8fea7c5db2adf78e7e3e8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180731"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765730"
 ---
 # <a name="how-to-add-query-options-to-a-data-service-query-wcf-data-services"></a>Nasıl yapılır: veri hizmeti sorgusuna sorgu seçenekleri ekleme (WCF Veri Hizmetleri)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Veri Hizmetleri, oluşturulan istemci veri hizmeti sınıflarını kullanarak bir veri hizmetini .NET Framework tabanlı bir istemci uygulamasından sorgulamanızı sağlar. Bunu yapmanın en kolay yolu, istenen sorgu seçeneklerini içeren bir dil tümleşik sorgu (LINQ) sorgu ifadesi oluşturmak olur. Ayrıca, eşdeğer bir sorgu oluşturmak için bir dizi LINQ sorgu yöntemi çağırabilirsiniz. Son olarak, <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> bir sorguya sorgu seçenekleri eklemek için yöntemini kullanabilirsiniz. Bu durumların her birinde, istemci tarafından oluşturulan URI, seçilen sorgu seçenekleri uygulanmış şekilde istenen varlık kümesini içerir. Daha fazla bilgi için bkz. [veri hizmetini sorgulama](querying-the-data-service-wcf-data-services.md).  
   

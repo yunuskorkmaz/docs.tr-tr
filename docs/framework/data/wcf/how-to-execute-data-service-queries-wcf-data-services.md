@@ -1,4 +1,5 @@
 ---
+description: ': Nasıl yapılır: veri hizmeti sorguları yürütme (WCF Veri Hizmetleri) hakkında daha fazla bilgi edinin'
 title: 'Nasıl yapılır: veri hizmeti sorgularını yürütme (WCF Veri Hizmetleri)'
 ms.date: 03/30/2017
 dev_langs:
@@ -9,14 +10,16 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 62997821-e0c6-4c4d-9fb7-1273fb5e5d18
-ms.openlocfilehash: 11a37340df879db7c2f8fdeaa792c1466e4a75d0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0d78a5a82f23bb6035d21bd45d68a0b1bb76f34b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91184761"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765327"
 ---
 # <a name="how-to-execute-data-service-queries-wcf-data-services"></a>Nasıl yapılır: veri hizmeti sorgularını yürütme (WCF Veri Hizmetleri)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Veri Hizmetleri, oluşturulan istemci veri hizmeti sınıflarını kullanarak bir veri hizmetini .NET Framework tabanlı bir istemci uygulamasından sorgulamanızı sağlar. Aşağıdaki yöntemlerden birini kullanarak sorguları yürütebilirsiniz:  
   

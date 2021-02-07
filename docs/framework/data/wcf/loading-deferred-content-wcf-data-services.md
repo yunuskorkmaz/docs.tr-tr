@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: ertelenmiş Içerik yükleme (WCF Veri Hizmetleri)'
 title: Ertelenmiş Içerik yükleniyor (WCF Veri Hizmetleri)
 ms.date: 03/30/2017
 dev_langs:
@@ -9,14 +10,16 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: 32f9b588-c832-44c4-a7e0-fcce635df59a
-ms.openlocfilehash: 6eff454bf4f79f7fe215828956ffe79d0c1f6757
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e14796ba003cbad721160ed4a0e2be3e8d148660
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91194329"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764924"
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>Ertelenmiş Içerik yükleniyor (WCF Veri Hizmetleri)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 Varsayılan olarak, WCF Veri Hizmetleri bir sorgunun döndürdüğü veri miktarını sınırlandırır. Ancak, gerekli olduğunda veri hizmetinden ilgili varlıklar, sayfalama yanıtı verileri ve ikili veri akışları dahil ek verileri açıkça yükleyebilirsiniz. Bu konu, bu tür ertelenmiş içeriğin uygulamanıza nasıl yükleneceğini açıklar.  
   

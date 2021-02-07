@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: LINQ konuları (WCF Veri Hizmetleri)'
 title: LINQ hususları (WCF Veri Hizmetleri)
 ms.date: 03/30/2017
 dev_langs:
@@ -9,14 +10,16 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: 2523aac510516fdf19087425b10ab3f2296eb726
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4205fc5c67c5939377e2a964d5a82d8855b03fce
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91194354"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764971"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>LINQ hususları (WCF Veri Hizmetleri)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 Bu konu, LINQ sorgularının nasıl oluşturulduğu ve WCF Veri Hizmetleri yürütüldüğü ve açık veri Protokolü 'Nü (OData) uygulayan bir veri hizmetini sorgulamak için LINQ kullanma sınırlamalarını kullanırken oluşan yol hakkında bilgi sağlar. OData tabanlı bir veri hizmetine yönelik sorgu oluşturma ve yürütme hakkında daha fazla bilgi için bkz. [veri hizmetini sorgulama](querying-the-data-service-wcf-data-services.md).  
   
@@ -172,7 +175,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 
  Aşağıdaki tablo, LINQ yöntemlerinin sınıflarını içerir ve bir OData hizmetine karşı yürütülen bir sorguya eklenemez:  
   
-|İşlem türü|Desteklenmeyen Yöntem|  
+|İşlem Türü|Desteklenmeyen Yöntem|  
 |--------------------|------------------------|  
 |İşleç ayarla|Tüm küme işleçleri, aşağıdakileri içeren bir öğesine karşı desteklenmez <xref:System.Data.Services.Client.DataServiceQuery%601> :<br /><br /> -   <xref:System.Linq.Enumerable.All%2A><br />-   <xref:System.Linq.Enumerable.Any%2A><br />-   <xref:System.Linq.Enumerable.Concat%2A><br />-   <xref:System.Linq.Enumerable.DefaultIfEmpty%2A><br />-   <xref:System.Linq.Enumerable.Distinct%2A><br />-   <xref:System.Linq.Enumerable.Except%2A><br />-   <xref:System.Linq.Enumerable.Intersect%2A><br />-   <xref:System.Linq.Enumerable.Union%2A><br />-   <xref:System.Linq.Enumerable.Zip%2A>|  
 |Sıralama işleçleri|Gerektiren aşağıdaki sıralama işleçleri bir için <xref:System.Collections.Generic.IComparer%601> desteklenmez <xref:System.Data.Services.Client.DataServiceQuery%601> :<br /><br /> -   <xref:System.Linq.Enumerable.OrderBy%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%2CSystem.Collections.Generic.IComparer%7B%60%601%7D%29><br />-   <xref:System.Linq.Enumerable.OrderByDescending%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%2CSystem.Collections.Generic.IComparer%7B%60%601%7D%29><br />-   <xref:System.Linq.Enumerable.ThenBy%60%602%28System.Linq.IOrderedEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%2CSystem.Collections.Generic.IComparer%7B%60%601%7D%29><br />-   <xref:System.Linq.Enumerable.ThenByDescending%60%602%28System.Linq.IOrderedEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%2CSystem.Collections.Generic.IComparer%7B%60%601%7D%29>|  

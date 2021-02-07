@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: varlık ekleme, değiştirme ve silme (WCF Veri Hizmetleri)'
 title: 'Nasıl yapılır: varlıkları ekleme, değiştirme ve silme (WCF Veri Hizmetleri)'
 ms.date: 03/30/2017
 dev_langs:
@@ -7,14 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: a00f8933-b232-4445-95ba-adc634f055d8
-ms.openlocfilehash: 3d147f05e2911cdaa05c5fc2374e14c539235fda
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 300ec4d710b376979b77c02b2831bb6b64393709
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172534"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765743"
 ---
 # <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>Nasıl yapılır: varlıkları ekleme, değiştirme ve silme (WCF Veri Hizmetleri)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Veri Hizmetleri istemci kitaplıkları ile, içindeki nesneler üzerinde eşdeğer eylemler gerçekleştirerek bir veri hizmetinde varlık verileri oluşturabilir, güncelleştirebilir ve silebilirsiniz <xref:System.Data.Services.Client.DataServiceContext> . Daha fazla bilgi için bkz. [veri hizmetini güncelleştirme](updating-the-data-service-wcf-data-services.md).  
   

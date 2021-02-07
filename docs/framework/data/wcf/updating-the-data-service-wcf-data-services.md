@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: veri hizmetini güncelleştirme (WCF Veri Hizmetleri)'
 title: Veri hizmeti güncelleştiriliyor (WCF Veri Hizmetleri)
 ms.date: 03/30/2017
 dev_langs:
@@ -8,14 +9,16 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-ms.openlocfilehash: 3e2bd3f4ca5402abe4a7f8ec8f5410effaee6700
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3223207b310c28d8e586a537b5c76b7e1b7ca17c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180614"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764898"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Veri hizmeti güncelleştiriliyor (WCF Veri Hizmetleri)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 Açık Veri Protokolü (OData) akışını kullanmak için WCF Veri Hizmetleri istemci kitaplığını kullandığınızda, kitaplık akıştaki girdileri istemci veri hizmeti sınıflarının örneklerine çevirir. Bu veri hizmeti sınıfları, ait olduğu ile izlenir <xref:System.Data.Services.Client.DataServiceContext> <xref:System.Data.Services.Client.DataServiceQuery%601> . İstemci, üzerinde yöntemler kullanarak rapor ettiğiniz varlıklara yapılan değişiklikleri izler <xref:System.Data.Services.Client.DataServiceContext> . Bu yöntemler, istemcinin eklenen ve silinen varlıkları ve ayrıca özellik değerlerinde yaptığınız değişiklikleri ve varlık örnekleri arasındaki ilişkileri izlemesini sağlar. Bu izlenen değişiklikler, yöntemini çağırdığınızda REST tabanlı işlemler olarak veri hizmetine geri gönderilir <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> .  
   
@@ -29,7 +32,7 @@ Açık Veri Protokolü (OData) akışını kullanmak için WCF Veri Hizmetleri i
  [!code-csharp[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#createnewproduct)]
  [!code-vb[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#createnewproduct)]  
   
- Bir varlık örneği eklemek için, *AddTo* <xref:System.Data.Services.Client.DataServiceContext> Aşağıdaki örnekte olduğu gibi **hizmet başvurusu Ekle** iletişim kutusu tarafından oluşturulan sınıfta uygun AddTo metodunu çağırın:  
+ Bir varlık örneği eklemek için,  <xref:System.Data.Services.Client.DataServiceContext> Aşağıdaki örnekte olduğu gibi **hizmet başvurusu Ekle** iletişim kutusu tarafından oluşturulan sınıfta uygun AddTo metodunu çağırın:  
   
  [!code-csharp[Astoria Northwind Client#AddProductSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addproductspecific)]
  [!code-vb[Astoria Northwind Client#AddProductSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addproductspecific)]  
@@ -69,7 +72,7 @@ Açık Veri Protokolü (OData) akışını kullanmak için WCF Veri Hizmetleri i
   
 ## <a name="creating-and-modifying-relationship-links"></a>Ilişki bağlantıları oluşturma ve değiştirme  
 
- <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>Hizmet başvurusu Ekle iletişim kutusunun oluşturduğu sınıfın yöntemini veya uygun *AddTo* yöntemini kullanarak yeni bir varlık eklediğinizde <xref:System.Data.Services.Client.DataServiceContext> , yeni varlık ve ilgili varlıklar **Add Service Reference** arasındaki ilişkiler otomatik olarak tanımlanmamıştır.  
+ <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>Hizmet başvurusu Ekle iletişim kutusunun oluşturduğu sınıfın yöntemini veya uygun *AddTo* yöntemini kullanarak yeni bir varlık eklediğinizde <xref:System.Data.Services.Client.DataServiceContext> , yeni varlık ve ilgili varlıklar  arasındaki ilişkiler otomatik olarak tanımlanmamıştır.  
   
  Varlık örnekleri arasında ilişkiler oluşturabilir ve değiştirebilir ve istemci kitaplığının veri hizmetindeki değişiklikleri yansıtmasını sağlayabilirsiniz. Varlıklar arasındaki ilişkiler modelde ilişkiler olarak tanımlanır ve <xref:System.Data.Services.Client.DataServiceContext> her ilişkiyi bağlamdaki bir bağlantı nesnesi olarak izler. WCF Veri Hizmetleri <xref:System.Data.Services.Client.DataServiceContext> Bu bağlantıları oluşturmak, değiştirmek ve silmek için sınıfında aşağıdaki yöntemleri sağlar:  
   

@@ -1,21 +1,24 @@
 ---
+description: 'Daha fazla bilgi edinin: özel veri hizmeti sağlayıcıları (WCF Veri Hizmetleri)'
 title: Özel veri hizmeti sağlayıcıları (WCF Veri Hizmetleri)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: e702ecdb-3419-4743-92a9-c3c0e7d44082
-ms.openlocfilehash: 4c92bf2f4e75b78cd6236c023246cc6c999086fa
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: df0cafae46cfdbd71a96341686a9200f032a9938
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91186698"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766159"
 ---
 # <a name="custom-data-service-providers-wcf-data-services"></a>Özel veri hizmeti sağlayıcıları (WCF Veri Hizmetleri)
 
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
+
 WCF Veri Hizmetleri, geç bağlanan veri türlerine göre bir veri modeli tanımlamanızı sağlayan bir dizi sağlayıcı içerir.  
   
-|Sağlayıcı|Açıklama|  
+|Sağlayıcı|Description|  
 |--------------|-----------------|  
 |Meta veri sağlayıcısı|Bu, arabirimi uygulayarak çalışma zamanında özel bir veri modeli tanımlamanızı sağlayan temel özel veri hizmeti sağlayıcısıdır <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> .|  
 |Sorgu sağlayıcısı|Bu sağlayıcı, arabirimi kullanılarak tanımlanan özel bir veri modeline karşı sorguları yürütmenizi sağlar <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> . Sorgu sağlayıcısı, arabirimini uygulayarak oluşturulur <xref:System.Data.Services.Providers.IDataServiceQueryProvider> .|  

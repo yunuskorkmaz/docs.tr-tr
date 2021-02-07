@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: veri hizmetini barındırma (WCF Veri Hizmetleri)'
 title: Veri hizmetini barındırma (WCF Veri Hizmetleri)
 ms.date: 03/30/2017
 dev_langs:
@@ -8,14 +9,16 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
-ms.openlocfilehash: 5dfa1d9f02f660b55ecf6598ef5012174a1ba853
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 519adde3a3e054d68ff9a1b7acf7ff06c0ca7532
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172599"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765795"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>Veri hizmetini barındırma (WCF Veri Hizmetleri)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Veri Hizmetleri kullanarak, verileri açık veri Protokolü (OData) akışı olarak sunan bir hizmet oluşturabilirsiniz. Bu veri hizmeti, öğesinden devralan bir sınıf olarak tanımlanır <xref:System.Data.Services.DataService%601> . Bu sınıf, istek iletilerini işlemek, veri kaynağına karşı güncelleştirmeler gerçekleştirmek ve OData için gereken yanıt iletilerini oluşturmak için gereken işlevselliği sağlar. Ancak, bir veri hizmeti gelen HTTP istekleri için bir ağ yuvasına bağlanamaz ve bu yuvayı dinlemez. Bu gerekli işlevsellik için veri hizmeti bir barındırma bileşeni kullanır.
 
@@ -58,7 +61,7 @@ Bir ASP.NET uygulamasında veri hizmeti tanımlamak için Visual Studio 2015 ' d
 
  Bir veri hizmeti bir WCF hizmeti gibi davrandığı için, veri hizmeti ASP.NET ile tümleşir ve WCF Web programlama modelini izler. Daha fazla bilgi için bkz. [WCF Hizmetleri ve ASP.net](../../wcf/feature-details/wcf-services-and-aspnet.md) ve [WCF Web http programlama modeli](../../wcf/feature-details/wcf-web-http-programming-model.md).
 
-## <a name="self-hosted-wcf-services"></a>Şirket içinde barındırılan WCF Hizmetleri
+## <a name="self-hosted-wcf-services"></a>WCF hizmetlerini Self-Hosted
 
  Bir WCF uygulamasını içerdiğinden WCF Veri Hizmetleri, bir WCF hizmeti olarak veri hizmetini kendi kendine barındırmayı destekler. Bir hizmet, konsol uygulaması gibi herhangi bir .NET Framework uygulamasında şirket içinde barınabilir. <xref:System.Data.Services.DataServiceHost>Öğesinden devralan sınıf, <xref:System.ServiceModel.Web.WebServiceHost> belirli bir adreste veri hizmetinin örneğini oluşturmak için kullanılır.
 
