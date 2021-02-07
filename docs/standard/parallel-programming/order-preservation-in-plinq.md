@@ -1,4 +1,5 @@
 ---
+description: "Daha fazla bilgi edinin: PLıNQ 'te sipariş saklama"
 title: PLINQ'te Sıra Koruma
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, order preservation
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
-ms.openlocfilehash: 997bb80b6e30d4769613c4a1df647e6cd475a8ed
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ce267fc94ddedc7919e5ed258db94d47559b8eef
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730610"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99667050"
 ---
 # <a name="order-preservation-in-plinq"></a>PLINQ'te Sıra Koruma
 

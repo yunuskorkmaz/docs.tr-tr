@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 1131-ınvokemethodumevsimsyncmodel'
 title: 1131 - InvokeMethodUseAsyncPattern
 ms.date: 03/30/2017
 ms.assetid: eca50fa7-5276-4759-ad1c-e490b9bd1f82
-ms.openlocfilehash: 2192b63b8a08657b69f6e3984f898bd6baddbc5f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 59d8e5e1fe7c5b038df6fce3211fd01977abc4f9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96294189"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99667323"
 ---
 # <a name="1131---invokemethoduseasyncpattern"></a>1131 - InvokeMethodUseAsyncPattern
 
@@ -17,10 +18,10 @@ ms.locfileid: "96294189"
 |-|-|  
 |ID|1131|  
 |Anahtar sözcükler|WFRuntime|  
-|Düzey|Bilgi|  
+|Level|Bilgi|  
 |Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  CacheMetadata adımı sırasında InvokeMethod etkinliği yöntemi çağrılırken zaman uyumsuz bir model kullandığını belirtir.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96294189"
   
 ## <a name="details"></a>Ayrıntılar  
   
-|Veri öğesi adı|Veri öğesi türü|Açıklama|  
+|Veri öğesi adı|Veri öğesi türü|Description|  
 |--------------------|--------------------|-----------------|  
 |InvokeMethod|xs: String|InvokeMethod etkinliğinin görünen adı.|  
 |BeginMethod|xs: String|Begin yönteminin adı.|  

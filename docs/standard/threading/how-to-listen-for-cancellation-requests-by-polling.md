@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: nasıl yapılır: Yoklaarak Iptal Isteklerini dinleme'
 title: 'Nasıl yapılır: Yoklama ile İptal İsteklerini Dinleme'
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - cancellation, how to poll for requests
 ms.assetid: c7f2f022-d08e-4e00-b4eb-ae84844cb1bc
-ms.openlocfilehash: a527fb7f0f9e3c78b3161fdfed0f1d9f3d52798b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8d3895dfc9e99b57090178b3c75252323c1cb9ef
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723733"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666894"
 ---
 # <a name="how-to-listen-for-cancellation-requests-by-polling"></a>Nasıl yapılır: Yoklama ile İptal İsteklerini Dinleme
 

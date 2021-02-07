@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 1104-Workflowactivityözgeçmişi'
 title: 1104 - WorkflowActivityResume
 ms.date: 03/30/2017
 ms.assetid: 7fe95d1e-34bd-43ca-b92e-587d2d248fff
-ms.openlocfilehash: 2a9c40e2c403d43dc980af116e4b6e98b3b2090b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 875bbae9bdfd772cc9156cf544b7069d8d0b791f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96243566"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99667505"
 ---
 # <a name="1104---workflowactivityresume"></a>1104 - WorkflowActivityResume
 
@@ -17,10 +18,10 @@ ms.locfileid: "96243566"
 |-|-|  
 |ID|1104|  
 |Anahtar sözcükler|WFRuntime|  
-|Düzey|Bilgi|  
+|Level|Bilgi|  
 |Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bir iş akışı etkinliğinin sürdürüldüğünü gösterir.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96243566"
   
 ## <a name="details"></a>Ayrıntılar  
   
-|Veri öğesi adı|Veri öğesi türü|Açıklama|  
+|Veri öğesi adı|Veri öğesi türü|Description|  
 |--------------------|--------------------|-----------------|  
 |WorkflowInstanceId|xs: String|İş akışı örnek kimliği.|  
 |AppDomain|xs: String|AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.|

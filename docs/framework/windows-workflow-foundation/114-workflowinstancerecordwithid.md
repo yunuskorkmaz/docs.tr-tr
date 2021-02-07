@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 114-Workflowcerecordwithıd'
 title: 114 - WorkflowInstanceRecordWithId
 ms.date: 03/30/2017
 ms.assetid: 2bd8b4a1-b210-4c07-8156-f19392318c08
-ms.openlocfilehash: ebeff6af6d18d2794723250bceeecd682d0af6df
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 77d39cd91476d9de41bbb00b5df034fc79cdec08
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96261858"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99667258"
 ---
 # <a name="114---workflowinstancerecordwithid"></a>114 - WorkflowInstanceRecordWithId
 
@@ -17,10 +18,10 @@ ms.locfileid: "96261858"
 |-|-|  
 |ID|114|  
 |Anahtar sözcükler|HealthMonitoring, WFTracking|  
-|Düzey|Bilgi|  
+|Level|Bilgi|  
 |Kanal|Microsoft-Windows-uygulama sunucusu-uygulamalar/analitik|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bu olay, bir iş akışı örneği iş akışı durumları için Workflowcerecord 'yi yayıyorsa ETW izleme katılımcısı tarafından yayılır: başlatıldı, sürdürüldü, kalıcı, boşta, silinmiş, tamamlandı, Iptal edildi, kaldırıldı, geri alındı.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96261858"
   
 ## <a name="details"></a>Ayrıntılar  
   
-|Veri öğesi adı|Veri öğesi türü|Açıklama|  
+|Veri öğesi adı|Veri öğesi türü|Description|  
 |--------------------|--------------------|-----------------|  
 |InstanceId|xs: GUID|İş akışının örnek kimliği|  
 |RecordNumber|xs: Long|Yayınlanan kaydın sıra numarası|  

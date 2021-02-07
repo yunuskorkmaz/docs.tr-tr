@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: paralel Tanılama Araçları'
 title: Paralel Tanılama Araçları
 ms.date: 03/30/2017
 helpviewer_keywords:
 - parallel programming, debugging and profiling tools
 ms.assetid: 38f7302a-ddf6-4179-ba19-f49e00395b9f
-ms.openlocfilehash: e4cdca31502f9d4d0b62fa20b5691accfb1b4fb6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e888b7f650ad06c4c7f560421cf47ad1b1f7ee66
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730580"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666972"
 ---
 # <a name="parallel-diagnostic-tools"></a>Paralel Tanılama Araçları
 

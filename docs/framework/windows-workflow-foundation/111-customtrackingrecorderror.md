@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 111-customtrackingrecor'
 title: 111 - CustomTrackingRecordError
 ms.date: 03/30/2017
 ms.assetid: d469fb12-e094-4d6c-9b4d-abd7ce0d17da
-ms.openlocfilehash: 20c038fda6360c68a84397cde382489b83612536
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7e93d0c1e00e3120f647dda5690e84f758c3ee14
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96294228"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99667479"
 ---
 # <a name="111---customtrackingrecorderror"></a>111 - CustomTrackingRecordError
 
@@ -17,10 +18,10 @@ ms.locfileid: "96294228"
 |-|-|  
 |Id|111|  
 |Anahtar sözcükler|Kullanıcıetkinlikleri, EndToEndMonitoring, sorun giderme, HealthMonitoring, WFTracking|  
-|Düzey|Hata|  
+|Level|Hata|  
 |Kanal|Microsoft-Windows-uygulama sunucusu-uygulamalar/analitik|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bu olay, bir iş akışı örneği içindeki bir etkinlik, düzey hatasıyla CustomTrackingRecord ' i yayıyorsa ETW izleme katılımcısı tarafından yayılır.  
   
@@ -30,14 +31,14 @@ ms.locfileid: "96294228"
   
 ## <a name="details"></a>Ayrıntılar  
   
-|Veri öğesi adı|Veri öğesi türü|Açıklama|  
+|Veri öğesi adı|Veri öğesi türü|Description|  
 |--------------------|--------------------|-----------------|  
 |InstanceId|xs: GUID|İş akışının örnek kimliği|  
 |RecordNumber|xs: Long|Yayınlanan kaydın sıra numarası|  
 |EventTime|xs: dateTime|Olayın yayılışında UTC olarak zaman|  
-|Adı|xs: String|CustomTrackingRecord adı|  
+|Name|xs: String|CustomTrackingRecord adı|  
 |Özelliğinde|xs: String|CustomTrackingRecord ' a yayılan etkinliğin adı|  
-|Etkinlik kimliği|xs: String|CustomTrackingRecord öğesini oluşturan etkinliğin kimliği|  
+|ActivityId|xs: String|CustomTrackingRecord öğesini oluşturan etkinliğin kimliği|  
 |ActivityInstanceId|xs: String|CustomTrackingRecord öğesini oluşturan etkinliğin örnek kimliği|  
 |ActivityTypeName|xs: String|CustomTrackingRecord ' a yayılan etkinliğin adı|  
 |Veriler|xs: String|Bu olayla izlenen veriler.  Değerler, dataValue biçimindeki bir XML öğesinde depolanır \<items> \< item  name = "dataName" type="System.String"> \</item> \</items> .  Hiçbir veri izlenmediyse dize içerir \<items/> . ETW olay boyutu ETW arabellek boyutu veya bir ETW olayı için en fazla yük ile sınırlıdır. Olayın boyutu ETW sınırlarını aşarsa, ek açıklamaları bırakarak ve veri değeri \<items> .. \</items> . ile değiştirilerek olay kesilir.  Aşağıdaki türler, ToString () tarafından döndürülen değerleri olarak depolanır. dize, Char, bool, int, Short, Long, uint, ushort, ulong, System. Single, float, Double, System. Guid, System. DateTimeOffset, System. DateTime.  Tüm diğer türler System. Runtime. Serialization. NetDataContractSerializer kullanılarak serileştirilir.|  
