@@ -1,43 +1,44 @@
 ---
+description: 'Daha fazla bilgi edinin: XSLT dönüşümleri'
 title: XSLT Dönüşümleri
 ms.date: 03/30/2017
 ms.assetid: 202f8820-224c-494f-b61e-cd127eac6e03
-ms.openlocfilehash: 686b2d454eda99095bcb335c8b0edba9ecf2e304
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 34fb84450ac2bb455a9b7132f79b4e1246c48ea3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95685064"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731870"
 ---
-# <a name="xslt-transformations"></a><span data-ttu-id="19f35-102">XSLT Dönüşümleri</span><span class="sxs-lookup"><span data-stu-id="19f35-102">XSLT Transformations</span></span>
+# <a name="xslt-transformations"></a><span data-ttu-id="93ef7-103">XSLT Dönüşümleri</span><span class="sxs-lookup"><span data-stu-id="93ef7-103">XSLT Transformations</span></span>
 
-<span data-ttu-id="19f35-103">Genişletilebilir Stil sayfası dil dönüşümü (XSLT), kaynak XML belgesinin içeriğini biçim veya yapıda farklı başka bir belgeye dönüştürmenizi sağlar.</span><span class="sxs-lookup"><span data-stu-id="19f35-103">The Extensible Stylesheet Language Transformation (XSLT) lets you transform the content of a source XML document into another document that is different in format or structure.</span></span> <span data-ttu-id="19f35-104">Örneğin, XSLT 'yi bir Web sitesinde kullanılmak üzere HTML 'ye dönüştürmek veya yalnızca bir uygulamanın gerektirdiği alanları içeren bir belgeye dönüştürmek için kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="19f35-104">For example, you can use XSLT to transform XML into HTML for use on a Web site or to transform it into a document that contains only the fields required by an application.</span></span> <span data-ttu-id="19f35-105">Bu dönüştürme işlemi [W3C XSL dönüştürmeleri (XSLT) sürüm 1,0 önerisi](https://www.w3.org/TR/xslt-10/)tarafından belirtilir.</span><span class="sxs-lookup"><span data-stu-id="19f35-105">This transformation process is specified by the [W3C XSL Transformations (XSLT) Version 1.0 recommendation](https://www.w3.org/TR/xslt-10/).</span></span>  
+<span data-ttu-id="93ef7-104">Genişletilebilir Stil sayfası dil dönüşümü (XSLT), kaynak XML belgesinin içeriğini biçim veya yapıda farklı başka bir belgeye dönüştürmenizi sağlar.</span><span class="sxs-lookup"><span data-stu-id="93ef7-104">The Extensible Stylesheet Language Transformation (XSLT) lets you transform the content of a source XML document into another document that is different in format or structure.</span></span> <span data-ttu-id="93ef7-105">Örneğin, XSLT 'yi bir Web sitesinde kullanılmak üzere HTML 'ye dönüştürmek veya yalnızca bir uygulamanın gerektirdiği alanları içeren bir belgeye dönüştürmek için kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="93ef7-105">For example, you can use XSLT to transform XML into HTML for use on a Web site or to transform it into a document that contains only the fields required by an application.</span></span> <span data-ttu-id="93ef7-106">Bu dönüştürme işlemi [W3C XSL dönüştürmeleri (XSLT) sürüm 1,0 önerisi](https://www.w3.org/TR/xslt-10/)tarafından belirtilir.</span><span class="sxs-lookup"><span data-stu-id="93ef7-106">This transformation process is specified by the [W3C XSL Transformations (XSLT) Version 1.0 recommendation](https://www.w3.org/TR/xslt-10/).</span></span>  
   
- <span data-ttu-id="19f35-106"><xref:System.Xml.Xsl.XslCompiledTransform>Sınıfı, .net 'TEKI XSLT işlemcisidir.</span><span class="sxs-lookup"><span data-stu-id="19f35-106">The <xref:System.Xml.Xsl.XslCompiledTransform> class is the XSLT processor in .NET.</span></span> <span data-ttu-id="19f35-107"><xref:System.Xml.Xsl.XslCompiledTransform>Sınıfı, [W3C XSLT 1,0 önerisini](https://www.w3.org/TR/xslt-10/)destekler.</span><span class="sxs-lookup"><span data-stu-id="19f35-107">The <xref:System.Xml.Xsl.XslCompiledTransform> class supports the [W3C XSLT 1.0 recommendation](https://www.w3.org/TR/xslt-10/).</span></span>  
+ <span data-ttu-id="93ef7-107"><xref:System.Xml.Xsl.XslCompiledTransform>Sınıfı, .net 'TEKI XSLT işlemcisidir.</span><span class="sxs-lookup"><span data-stu-id="93ef7-107">The <xref:System.Xml.Xsl.XslCompiledTransform> class is the XSLT processor in .NET.</span></span> <span data-ttu-id="93ef7-108"><xref:System.Xml.Xsl.XslCompiledTransform>Sınıfı, [W3C XSLT 1,0 önerisini](https://www.w3.org/TR/xslt-10/)destekler.</span><span class="sxs-lookup"><span data-stu-id="93ef7-108">The <xref:System.Xml.Xsl.XslCompiledTransform> class supports the [W3C XSLT 1.0 recommendation](https://www.w3.org/TR/xslt-10/).</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="19f35-108"><xref:System.Xml.Xsl.XslTransform>Sınıf, .NET Framework sürüm 2,0 ' de kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="19f35-108">The <xref:System.Xml.Xsl.XslTransform> class is obsolete in .NET Framework version 2.0.</span></span> <span data-ttu-id="19f35-109"><xref:System.Xml.Xsl.XslCompiledTransform>Sınıfı, XSLT altyapısının yeni bir uygulamasıdır.</span><span class="sxs-lookup"><span data-stu-id="19f35-109">The <xref:System.Xml.Xsl.XslCompiledTransform> class is a new implementation of the XSLT engine.</span></span> <span data-ttu-id="19f35-110">Performans iyileştirmeleri ve yeni güvenlik özellikleri içerir.</span><span class="sxs-lookup"><span data-stu-id="19f35-110">It includes performance improvements and new security features.</span></span> <span data-ttu-id="19f35-111">Önerilen uygulama, sınıfını kullanarak XSLT uygulamaları oluşturmaktır <xref:System.Xml.Xsl.XslCompiledTransform> .</span><span class="sxs-lookup"><span data-stu-id="19f35-111">The recommended practice is to create XSLT applications using the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span>  
+> <span data-ttu-id="93ef7-109"><xref:System.Xml.Xsl.XslTransform>Sınıf, .NET Framework sürüm 2,0 ' de kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="93ef7-109">The <xref:System.Xml.Xsl.XslTransform> class is obsolete in .NET Framework version 2.0.</span></span> <span data-ttu-id="93ef7-110"><xref:System.Xml.Xsl.XslCompiledTransform>Sınıfı, XSLT altyapısının yeni bir uygulamasıdır.</span><span class="sxs-lookup"><span data-stu-id="93ef7-110">The <xref:System.Xml.Xsl.XslCompiledTransform> class is a new implementation of the XSLT engine.</span></span> <span data-ttu-id="93ef7-111">Performans iyileştirmeleri ve yeni güvenlik özellikleri içerir.</span><span class="sxs-lookup"><span data-stu-id="93ef7-111">It includes performance improvements and new security features.</span></span> <span data-ttu-id="93ef7-112">Önerilen uygulama, sınıfını kullanarak XSLT uygulamaları oluşturmaktır <xref:System.Xml.Xsl.XslCompiledTransform> .</span><span class="sxs-lookup"><span data-stu-id="93ef7-112">The recommended practice is to create XSLT applications using the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="19f35-112">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="19f35-112">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="93ef7-113">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="93ef7-113">In This Section</span></span>  
 
- [<span data-ttu-id="19f35-113">XslCompiledTransform Sınıfını Kullanma</span><span class="sxs-lookup"><span data-stu-id="19f35-113">Using the XslCompiledTransform Class</span></span>](using-the-xslcompiledtransform-class.md)  
- <span data-ttu-id="19f35-114">Sınıfını kullanma hakkında bilgi sağlar <xref:System.Xml.Xsl.XslCompiledTransform> .</span><span class="sxs-lookup"><span data-stu-id="19f35-114">Provides information on using the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span>  
+ [<span data-ttu-id="93ef7-114">XslCompiledTransform Sınıfını Kullanma</span><span class="sxs-lookup"><span data-stu-id="93ef7-114">Using the XslCompiledTransform Class</span></span>](using-the-xslcompiledtransform-class.md)  
+ <span data-ttu-id="93ef7-115">Sınıfını kullanma hakkında bilgi sağlar <xref:System.Xml.Xsl.XslCompiledTransform> .</span><span class="sxs-lookup"><span data-stu-id="93ef7-115">Provides information on using the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span>  
   
- [<span data-ttu-id="19f35-115">XslTransform Sınıfından Geçirme</span><span class="sxs-lookup"><span data-stu-id="19f35-115">Migrating From the XslTransform Class</span></span>](migrating-from-the-xsltransform-class.md)  
- <span data-ttu-id="19f35-116">Sınıfından kodun nasıl geçirileceği açıklanır <xref:System.Xml.Xsl.XslTransform> .</span><span class="sxs-lookup"><span data-stu-id="19f35-116">Discusses how to migrate code from the <xref:System.Xml.Xsl.XslTransform> class.</span></span>  
+ [<span data-ttu-id="93ef7-116">XslTransform Sınıfından Geçirme</span><span class="sxs-lookup"><span data-stu-id="93ef7-116">Migrating From the XslTransform Class</span></span>](migrating-from-the-xsltransform-class.md)  
+ <span data-ttu-id="93ef7-117">Sınıfından kodun nasıl geçirileceği açıklanır <xref:System.Xml.Xsl.XslTransform> .</span><span class="sxs-lookup"><span data-stu-id="93ef7-117">Discusses how to migrate code from the <xref:System.Xml.Xsl.XslTransform> class.</span></span>  
   
- [<span data-ttu-id="19f35-117">XSLT Derleyicisi (xsltc.exe)</span><span class="sxs-lookup"><span data-stu-id="19f35-117">XSLT Compiler (xsltc.exe)</span></span>](xslt-compiler-xsltc-exe.md)  
- <span data-ttu-id="19f35-118">XSLT derleyicisini kullanma hakkında bilgi sağlar.</span><span class="sxs-lookup"><span data-stu-id="19f35-118">Provides information on using the XSLT compiler.</span></span>  
+ [<span data-ttu-id="93ef7-118">XSLT Derleyicisi (xsltc.exe)</span><span class="sxs-lookup"><span data-stu-id="93ef7-118">XSLT Compiler (xsltc.exe)</span></span>](xslt-compiler-xsltc-exe.md)  
+ <span data-ttu-id="93ef7-119">XSLT derleyicisini kullanma hakkında bilgi sağlar.</span><span class="sxs-lookup"><span data-stu-id="93ef7-119">Provides information on using the XSLT compiler.</span></span>  
   
- [<span data-ttu-id="19f35-119">XslTransform Sınıfı ile XSLT Dönüşümleri</span><span class="sxs-lookup"><span data-stu-id="19f35-119">XSLT Transformations with the XslTransform Class</span></span>](xslt-transformations-with-the-xsltransform-class.md)  
- <span data-ttu-id="19f35-120">Sınıfını kullanma hakkında bilgi sağlar <xref:System.Xml.Xsl.XslTransform> .</span><span class="sxs-lookup"><span data-stu-id="19f35-120">Provides information on using the <xref:System.Xml.Xsl.XslTransform> class.</span></span>  
+ [<span data-ttu-id="93ef7-120">XslTransform Sınıfı ile XSLT Dönüşümleri</span><span class="sxs-lookup"><span data-stu-id="93ef7-120">XSLT Transformations with the XslTransform Class</span></span>](xslt-transformations-with-the-xsltransform-class.md)  
+ <span data-ttu-id="93ef7-121">Sınıfını kullanma hakkında bilgi sağlar <xref:System.Xml.Xsl.XslTransform> .</span><span class="sxs-lookup"><span data-stu-id="93ef7-121">Provides information on using the <xref:System.Xml.Xsl.XslTransform> class.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="19f35-121">Başvuru</span><span class="sxs-lookup"><span data-stu-id="19f35-121">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="93ef7-122">Başvuru</span><span class="sxs-lookup"><span data-stu-id="93ef7-122">Reference</span></span>  
 
  <xref:System.Xml.Xsl.XslCompiledTransform>  
  <xref:System.Xml.Xsl.XsltArgumentList>  
  <xref:System.Xml.Xsl.XsltSettings>  
   
-## <a name="related-sections"></a><span data-ttu-id="19f35-122">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="19f35-122">Related Sections</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="93ef7-123">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="93ef7-123">Related Sections</span></span>  
 
- [<span data-ttu-id="19f35-123">XML belgeleri ve verileri</span><span class="sxs-lookup"><span data-stu-id="19f35-123">XML Documents and Data</span></span>](index.md)
+ [<span data-ttu-id="93ef7-124">XML belgeleri ve verileri</span><span class="sxs-lookup"><span data-stu-id="93ef7-124">XML Documents and Data</span></span>](index.md)
