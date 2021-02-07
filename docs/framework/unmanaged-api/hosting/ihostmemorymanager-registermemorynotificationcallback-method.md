@@ -1,4 +1,5 @@
 ---
+description: ': IHostMemoryManager:: RegisterMemoryNotificationCallback Yöntemi hakkında daha fazla bilgi edinin'
 title: IHostMemoryManager::RegisterMemoryNotificationCallback Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 65d301f6-4dbb-4b5f-8eff-82540e2b6465
 topic_type:
 - apiref
-ms.openlocfilehash: edb29378412583d7cdec804b08f8f622d642b02f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 26a7468aba4f473eebff78a8c67eeb5b3e866e9c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731312"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707773"
 ---
 # <a name="ihostmemorymanagerregistermemorynotificationcallback-method"></a>IHostMemoryManager::RegisterMemoryNotificationCallback Yöntemi
 
 Bilgisayarın, bilgisayardaki geçerli bellek yükünün ortak dil çalışma zamanını (CLR) bilgilendirmek için çağırdığı bir geri çağırma işlevine bir işaretçi kaydeder.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT RegisterMemoryNotificationCallback (  
@@ -41,7 +42,7 @@ HRESULT RegisterMemoryNotificationCallback (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`RegisterMemoryNotificationCallback` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  

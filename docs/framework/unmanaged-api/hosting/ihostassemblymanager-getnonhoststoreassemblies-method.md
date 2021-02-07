@@ -1,4 +1,5 @@
 ---
+description: ': IHostAssemblyManager:: GetNonHostStoreAssemblies Yöntemi hakkında daha fazla bilgi'
 title: IHostAssemblyManager::GetNonHostStoreAssemblies Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: d2250b38-c76a-40ce-80c8-ba45149886e8
 topic_type:
 - apiref
-ms.openlocfilehash: a34b907514376927d8a1aa66b136916108b704d8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ef551db45428b2381dfeae8f722257241a4deaf0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95681151"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99709054"
 ---
 # <a name="ihostassemblymanagergetnonhoststoreassemblies-method"></a>IHostAssemblyManager::GetNonHostStoreAssemblies Metodu
 
 Konağın ortak dil çalışma zamanı (CLR) yüklenmesini beklediği derlemelerin listesini temsil eden bir [ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md) öğesine yönelik bir arabirim işaretçisi alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetNonHostStoreAssemblies (  
@@ -41,7 +42,7 @@ HRESULT GetNonHostStoreAssemblies (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`GetNonHostStoreAssemblies` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  

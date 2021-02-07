@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: IHostMAlloc:: Free yöntemi'
 title: IHostMAlloc::Free Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c89abf5b-1120-4437-8b57-4a99fb3ae7f9
 topic_type:
 - apiref
-ms.openlocfilehash: d4c9048c89d55ed048a55a771572823905a056df
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 097e2e95b6dfb9d6a1bae68f9e0455a96383159e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95687144"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99708209"
 ---
 # <a name="ihostmallocfree-method"></a>IHostMAlloc::Free Yöntemi
 
 [Ayırma](ihostmalloc-alloc-method.md) işlevi kullanılarak ayrılan belleği serbest bırakır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT Free (  
@@ -41,7 +42,7 @@ HRESULT Free (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`Free` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  

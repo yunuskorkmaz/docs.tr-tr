@@ -1,4 +1,5 @@
 ---
+description: ': IHostControl:: GetHostManager yöntemi hakkında daha fazla bilgi edinin'
 title: IHostControl::GetHostManager Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 0fa34bca-ed18-4626-9e78-d33684d18edb
 topic_type:
 - apiref
-ms.openlocfilehash: e340dcb5dc093f965e6c08a24a3d65ed0aa6e07a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7cc118808c8788504da2cc07a8c61c419d3c588f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95680839"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99708916"
 ---
 # <a name="ihostcontrolgethostmanager-method"></a>IHostControl::GetHostManager Yöntemi
 
 Konağın, belirtilen arabirim uygulamasına yönelik bir arabirim işaretçisini alır `IID` .  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetHostManager (  
@@ -45,7 +46,7 @@ HRESULT GetHostManager (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`GetHostManager` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  

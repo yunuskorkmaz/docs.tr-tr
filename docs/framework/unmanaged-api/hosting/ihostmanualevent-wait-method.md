@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: IHostManualEvent:: wait yöntemi'
 title: IHostManualEvent::Wait Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 1fbb7d8b-8a23-4c2b-8376-1a70cd2d6030
 topic_type:
 - apiref
-ms.openlocfilehash: 3fe8434ba4a7fc49b99bdf3084ce4f3981f25a9b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f9e681e5075f1de34dc45ed2b2485a0e1269cb11
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719833"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707876"
 ---
 # <a name="ihostmanualeventwait-method"></a>IHostManualEvent::Wait Yöntemi
 
 Geçerli [IHostManualEvent](ihostmanualevent-interface.md) örneğinin, ait olana veya belirli bir süre geçtikten sonra beklemesini sağlar.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT Wait (  
@@ -45,7 +46,7 @@ HRESULT Wait (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`Wait` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  

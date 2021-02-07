@@ -1,4 +1,5 @@
 ---
+description: ': IHostMemoryManager:: VirtualAlloc yöntemi hakkında daha fazla bilgi edinin'
 title: IHostMemoryManager::VirtualAlloc Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 4dff3646-a050-4bd9-ac31-fe307e8637ec
 topic_type:
 - apiref
-ms.openlocfilehash: a2deabc5f1c7ea0f42b6d8ec3944d984854ae571
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 28682aea5e6e7951b3b8f0a9af946a3f3828601b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731286"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707858"
 ---
 # <a name="ihostmemorymanagervirtualalloc-method"></a>IHostMemoryManager::VirtualAlloc Yöntemi
 
 Karşılık gelen Win32 işlevi için bir mantıksal sarmalayıcı görevi görür. Win32 uygulamasının, `VirtualAlloc` çağıran işlemin sanal adres alanındaki bir sayfa bölgesini ayırır veya kaydeder.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT VirtualAlloc (  
@@ -61,7 +62,7 @@ HRESULT VirtualAlloc (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`VirtualAlloc` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  

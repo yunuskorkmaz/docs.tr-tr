@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: IHostTaskManager:: LeaveRuntime yöntemi'
 title: IHostTaskManager::LeaveRuntime Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 43689cc4-e48e-46e5-a22d-bafd768b8759
 topic_type:
 - apiref
-ms.openlocfilehash: 855f8a5d3582bbad59301a344d8a51198c40a051
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7b18bdc17b9cfd52b68309a07c6714fd1efa66cb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95673052"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707453"
 ---
 # <a name="ihosttaskmanagerleaveruntime-method"></a>IHostTaskManager::LeaveRuntime Yöntemi
 
@@ -29,7 +30,7 @@ Ana bilgisayara şu anda yürütülmekte olan görevin ortak dil çalışma zama
 > [!IMPORTANT]
 > [IHostTaskManager:: EnterRuntime](ihosttaskmanager-enterruntime-method.md) öğesine karşılık gelen bir çağrı, ana bilgisayara şu anda yürütülmekte olan görevin yönetilen kodu yeniden girdiğini bildirir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT LeaveRuntime (  
@@ -44,7 +45,7 @@ HRESULT LeaveRuntime (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`LeaveRuntime` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  

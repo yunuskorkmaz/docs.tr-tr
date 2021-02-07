@@ -1,4 +1,5 @@
 ---
+description: ': IHostAssemblyManager:: GetAssemblyStore yöntemi hakkında daha fazla bilgi edinin'
 title: IHostAssemblyManager::GetAssemblyStore Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: d0f74593-9bb1-4a11-8096-e29734b20698
 topic_type:
 - apiref
-ms.openlocfilehash: 936ea068f3cc5567a00af5f2bdd5f3d9cd52bc81
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5edfdc5481803ce0dd3a6f8f400b18e3f1600ea8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95681190"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99709119"
 ---
 # <a name="ihostassemblymanagergetassemblystore-method"></a>IHostAssemblyManager::GetAssemblyStore Yöntemi
 
 Konak tarafından yüklenen derlemelerin listesini temsil eden bir [IHostAssemblyStore](ihostassemblystore-interface.md) için bir arabirim işaretçisi alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetAssemblyStore (  
@@ -41,7 +42,7 @@ HRESULT GetAssemblyStore (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`GetAssemblyStore` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  

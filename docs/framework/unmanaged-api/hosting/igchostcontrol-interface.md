@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: IGCHostControl Arabirimi'
 title: IGCHostControl Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2eb56ea9-8b7e-452b-a209-3d2be719fca6
 topic_type:
 - apiref
-ms.openlocfilehash: ca03883f2d33eda1c867933256141febaa4269ac
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8e8175c6b03e91ce2de6e4aabe71c16630eb3476
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95687723"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99709379"
 ---
 # <a name="igchostcontrol-interface"></a>IGCHostControl Arabirimi
 

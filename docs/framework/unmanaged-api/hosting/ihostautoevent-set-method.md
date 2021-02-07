@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: IHostAutoEvent:: set yöntemi'
 title: IHostAutoEvent::Set Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 46becf3e-bc0e-4338-85c0-9ab0df76a1d0
 topic_type:
 - apiref
-ms.openlocfilehash: facfbb85645f444b010cb1fe1c34bbe94011ac50
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e4ba63b5250a383431e410cd6e552f8344fedf5d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95680836"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99708945"
 ---
 # <a name="ihostautoeventset-method"></a>IHostAutoEvent::Set Yöntemi
 
@@ -34,7 +35,7 @@ HRESULT Set ();
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`Set` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  

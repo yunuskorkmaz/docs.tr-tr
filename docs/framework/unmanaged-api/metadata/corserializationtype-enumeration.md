@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: CorSerializationType numaralandırması'
 title: CorSerializationType Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6b1fcd11-c7fb-4be2-8910-abc862d4caf4
 topic_type:
 - apiref
-ms.openlocfilehash: e9c9674bfe0e5a8006a4881e103b633ee8f2af1d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 86df23bf03037d329a3138798725058f1d24a450
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95706063"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707390"
 ---
 # <a name="corserializationtype-enumeration"></a>CorSerializationType Numaralandırması
 
@@ -56,7 +57,7 @@ typedef enum CorSerializationType {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`SERIALIZATION_TYPE_UNDEFINED`|Nesnenin serileştirilmesi tanımsız.|  
 |`SERIALIZATION_TYPE_BOOLEAN`|Nesne, Boole türü olarak serileştirilir|  

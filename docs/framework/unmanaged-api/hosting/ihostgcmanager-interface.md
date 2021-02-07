@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: IHostGCManager Interface'
 title: IHostGCManager Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 820330a4-244c-4f67-ab5e-f24b0b3c2080
 topic_type:
 - apiref
-ms.openlocfilehash: eb7e52b5237d4341c27b8c167249dc2614168679
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: da229c04eb5f5a27c34c133b5c88183d00f47c40
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729539"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99708664"
 ---
 # <a name="ihostgcmanager-interface"></a>IHostGCManager Arabirimi
 
@@ -27,7 +28,7 @@ Ortak dil çalışma zamanı (CLR) tarafından uygulanan çöp toplama mekanizma
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |[SuspensionEnding Yöntemi](ihostgcmanager-suspensionending-method.md)|Konağa CLR 'nin bir çöp toplama işlemi için askıya alınmış iş parçacıklarında görevlerin yürütülmesini sürdürmesinin sürdürüyor olduğunu bildirir.|  
 |[SuspensionStarting Yöntemi](ihostgcmanager-suspensionstarting-method.md)|Bir atık toplama işlemi gerçekleştirmek için, CLR 'nin görevlerin yürütülmesini askıya aldığı konağa bildirir.|  

@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ICeeGen:: GenerateCeeMemoryImage yöntemi'
 title: ICeeGen::GenerateCeeMemoryImage Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b3847495-0ae6-4a72-b496-65ce2424afc6
 topic_type:
 - apiref
-ms.openlocfilehash: 69c4a64dee0eb12481a78aa6f185ab568266ee30
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 08361454171b1c3ad3879399f9499921738c106a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95715407"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707094"
 ---
 # <a name="iceegengenerateceememoryimage-method"></a>ICeeGen::GenerateCeeMemoryImage Yöntemi
 
@@ -28,7 +29,7 @@ Kod tabanı için bellekte bir görüntü oluşturur.
   
  Bu yöntem kullanılmıyor ve kullanılmamalıdır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GenerateCeeMemoryImage (  

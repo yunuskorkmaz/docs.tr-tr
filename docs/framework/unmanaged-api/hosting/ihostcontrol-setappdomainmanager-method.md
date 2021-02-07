@@ -1,4 +1,5 @@
 ---
+description: ': IHostControl:: SetAppDomainManager yöntemi hakkında daha fazla bilgi edinin'
 title: IHostControl::SetAppDomainManager Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 6562bbe7-0d67-4c50-a958-3a18cf680375
 topic_type:
 - apiref
-ms.openlocfilehash: 2f4c004db39c14e7a71b0caa55a6089e8f69ca3a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1fc5efc0afad73d1805338140f186a50913ca542
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95680668"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99708908"
 ---
 # <a name="ihostcontrolsetappdomainmanager-method"></a>IHostControl::SetAppDomainManager Yöntemi
 
 Ana bilgisayara bir uygulama etki alanının oluşturulduğunu bildirir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT SetAppDomainManager (  
@@ -45,7 +46,7 @@ HRESULT SetAppDomainManager (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`SetAppDomainManager` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  

@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ıhostiocompletionmanager:: SetMinThreads yöntemi'
 title: IHostIoCompletionManager::SetMinThreads Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: dea34b81-8d2b-4cc3-8696-0ad4291d8a92
 topic_type:
 - apiref
-ms.openlocfilehash: 64ea9fdd477ec005b089f451101b742278ab4266
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: aade5ebb9e318d51296e52e7cf1c31c6ea9e4f6f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95672415"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99708248"
 ---
 # <a name="ihostiocompletionmanagersetminthreads-method"></a>IHostIoCompletionManager::SetMinThreads Yöntemi
 
 Ana bilgisayarın g/ç tamamlama için en az sayıda iş parçacığı sayısını ayarlar.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT SetMinThreads (  
@@ -41,7 +42,7 @@ HRESULT SetMinThreads (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`SetMinThreads` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  

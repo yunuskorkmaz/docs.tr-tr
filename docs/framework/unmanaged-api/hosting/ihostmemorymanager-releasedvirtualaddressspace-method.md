@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: IHostMemoryManager:: ReleasedVirtualAddressSpace Yöntemi'
 title: IHostMemoryManager::ReleasedVirtualAddressSpace Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: d1876601-6ab9-48e1-8ebd-184af1d0cd76
 topic_type:
 - apiref
-ms.openlocfilehash: 8a875d59d270f087ce22079830818a9205309cc5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e67e80018b5002bdf2a50530af9ab057696fff4c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731299"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707780"
 ---
 # <a name="ihostmemorymanagerreleasedvirtualaddressspace-method"></a>IHostMemoryManager::ReleasedVirtualAddressSpace Yöntemi
 
 Ana bilgisayara, ortak dil çalışma zamanının (CLR) belirtilen belleği kullanarak tamamlandığını bildirir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT ReleasedVirtualAddressSpace(  

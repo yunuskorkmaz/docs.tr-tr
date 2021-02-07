@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: IHostMemoryManager:: VirtualFree yöntemi'
 title: IHostMemoryManager::VirtualFree Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 1a436e89-eb28-4d15-bcf1-a072f86dbd99
 topic_type:
 - apiref
-ms.openlocfilehash: be006afaf5966aa4e6d11c73b92004d676c97c7f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 987661ce1b7bfd08f757f53082313b8eb60ff282
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731273"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707550"
 ---
 # <a name="ihostmemorymanagervirtualfree-method"></a>IHostMemoryManager::VirtualFree Yöntemi
 
 Karşılık gelen Win32 işlevi için bir mantıksal sarmalayıcı görevi görür. Uygulamaları `VirtualFree` yayınlar, serbest bırakır veya yayınlar, çağıran işlemin sanal adres alanındaki bir sayfa bölgesini kaldırır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT VirtualFree (  
@@ -49,7 +50,7 @@ HRESULT VirtualFree (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`VirtualFree` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  

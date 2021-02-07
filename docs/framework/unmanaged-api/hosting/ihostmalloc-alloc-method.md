@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: IHostMAlloc:: ayırma yöntemi'
 title: IHostMAlloc::Alloc Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: a3007f5e-d75d-4b37-842b-704e9edced5e
 topic_type:
 - apiref
-ms.openlocfilehash: 5858b03676db0839621b121131ded4da9950ce88
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e0349c273ef9e3194bb8bad167510dd8fefcab62
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95675132"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99708245"
 ---
 # <a name="ihostmallocalloc-method"></a>IHostMAlloc::Alloc Yöntemi
 
 Konağın yığından belirtilen bellek miktarını ayırmasını ister.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT Alloc (  
@@ -49,7 +50,7 @@ HRESULT Alloc (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`Alloc` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  

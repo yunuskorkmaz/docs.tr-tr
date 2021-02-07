@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: IGCThreadControl arabirimi'
 title: IGCThreadControl Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3ff04d75-85ac-4df9-886d-dbaa037c0552
 topic_type:
 - apiref
-ms.openlocfilehash: 02facbb0ff1c0f8978d4f4f720ab370f70f07fe2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 07c76848668b1525f4ff45ba5de746beefe0e004
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721692"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99709291"
 ---
 # <a name="igcthreadcontrol-interface"></a>IGCThreadControl Arabirimi
 

@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: IHostAssemblyStore::P rovideModule yöntemi'
 title: IHostAssemblyStore::ProvideModule Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: f42e3dd0-c88e-4748-b6c0-4c515a633180
 topic_type:
 - apiref
-ms.openlocfilehash: 35805d277774e1de03bb7dee1740a2e1305a97c9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9e783b9f8db303d095995507689d7567225a51fd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733002"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99709034"
 ---
 # <a name="ihostassemblystoreprovidemodule-method"></a>IHostAssemblyStore::ProvideModule Yöntemi
 
 Derleme içindeki bir modülü veya bağlı (gömülü) bir kaynak dosyasını çözer.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT ProvideModule (  
@@ -40,7 +41,7 @@ HRESULT ProvideModule (
 ## <a name="parameters"></a>Parametreler  
 
  `pBindInfo`  
- 'ndaki İstenen modülün [ModuleBindInfo](modulebindinfo-structure.md) <xref:System.AppDomain> , derlemenin ve modül adının açıklandığı bir ModuleBindInfo örneği işaretçisi.  
+ 'ndaki İstenen modülün [](modulebindinfo-structure.md) <xref:System.AppDomain> , derlemenin ve modül adının açıklandığı bir ModuleBindInfo örneği işaretçisi.  
   
  `pdwModuleId`  
  dışı Yüklenen modülün bulunduğu bir benzersiz tanımlayıcı işaretçisi `IStream` .  
@@ -53,7 +54,7 @@ HRESULT ProvideModule (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`ProvideModule` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  

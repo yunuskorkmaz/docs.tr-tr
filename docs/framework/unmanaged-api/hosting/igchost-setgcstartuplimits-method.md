@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: IGCHost:: SetGCStartupLimits yöntemi'
 title: IGCHost::SetGCStartupLimits Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cae53926-82ac-4d1d-b297-0bde0bd1bebb
 topic_type:
 - apiref
-ms.openlocfilehash: 0eea9dba57886edfef13c31948a9cff94c6c1bfd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 91c74d54189bbfb7e9f208e507fe6e75b7023e00
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95687892"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99709509"
 ---
 # <a name="igchostsetgcstartuplimits-method"></a>IGCHost::SetGCStartupLimits Yöntemi
 
@@ -29,7 +30,7 @@ Oluşturma 0 ' nın segment boyutunu ve en büyük boyutunu ayarlar.
 > [!IMPORTANT]
 > 4,5 .NET Framework başlayarak, segment boyutunu ve en fazla nesil 0 boyutunu `DWORD` [IGCHost2:: SetGCStartupLimitsEx](igchost2-setgcstartuplimitsex-method.md) yöntemini kullanarak daha büyük değerlere ayarlayabilirsiniz.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT SetGCStartupLimits (  

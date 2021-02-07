@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: IHostGCManager:: Threadisblockingforaskıya alma yöntemi'
 title: IHostGCManager::ThreadIsBlockingForSuspension Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2657d45d-26d2-4d0a-8473-32b652e3321d
 topic_type:
 - apiref
-ms.openlocfilehash: 9120085f6a241bcda04946a843799987bf82bb84
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9cb07b80fa9aad1ac289bc5a3abb5a4760f2bfc9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723889"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99708648"
 ---
 # <a name="ihostgcmanagerthreadisblockingforsuspension-method"></a>IHostGCManager::ThreadIsBlockingForSuspension Yöntemi
 
@@ -34,7 +35,7 @@ HRESULT ThreadIsBlockingForSuspension ();
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`ThreadIsBlockingForSuspension` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: COUNıNITIEE numaralandırması'
 title: COUNINITIEE Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c42baa79-f469-4330-95a2-baf7f021c2fc
 topic_type:
 - apiref
-ms.openlocfilehash: b0f8c7e6d2acf4d4c080cc147bf6d42bf13cb51b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 893ab96851e9c762a888f3c4cac98b486a0b4614
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723837"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707241"
 ---
 # <a name="couninitiee-enumeration"></a>COUNINITIEE Numaralandırması
 
@@ -37,7 +38,7 @@ typedef enum tagCOUNINITEE
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`COUNINITEE_DEFAULT`|Varsayılan başlatma modunu gösterir.|  
 |`COUNINITEE_DLL`|Bir derlemeyi kaldırmak için başlatma modunu gösterir.|  

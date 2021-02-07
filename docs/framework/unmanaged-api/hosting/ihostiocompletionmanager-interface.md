@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ıhostiocompletionmanager arabirimi'
 title: IHostIoCompletionManager Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c28d1983-83f7-46e2-990f-dbb9dc07c818
 topic_type:
 - apiref
-ms.openlocfilehash: 75ad8670008242008aa344835143ff9b2add0a6c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 30cb0ecbfd9645bc0374e3570751832d6fa8eced
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719599"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99708326"
 ---
 # <a name="ihostiocompletionmanager-interface"></a>IHostIoCompletionManager Arabirimi
 

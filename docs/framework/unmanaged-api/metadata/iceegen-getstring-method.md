@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ICeeGen:: GetString yöntemi'
 title: ICeeGen::GetString Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7cc22562-128c-440a-9147-55ff20f173d7
 topic_type:
 - apiref
-ms.openlocfilehash: 9d14ec33128596a148ca3509a49c8c97fafe82d6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 227b4badff3265fc22f1c76301ba03e58fea34c6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723109"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99706909"
 ---
 # <a name="iceegengetstring-method"></a>ICeeGen::GetString Yöntemi
 
@@ -28,7 +29,7 @@ Belirtilen göreli sanal adreste depolanan dizeyi alır.
   
  Bu yöntem kullanılmıyor ve kullanılmamalıdır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetString (  

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: IHostGCManager:: SuspensionEnding yöntemi'
 title: IHostGCManager::SuspensionEnding Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 8849a1db-17f0-44b7-880a-bd36d431eb91
 topic_type:
 - apiref
-ms.openlocfilehash: e2624f5fce168662fac8fd5f4324617c7acf802c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 43ec3db76e6e6448719f9c40ef2476da4e2ccf9c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729557"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99708630"
 ---
 # <a name="ihostgcmanagersuspensionending-method"></a>IHostGCManager::SuspensionEnding Yöntemi
 
 Ana bilgisayara ortak dil çalışma zamanının (CLR) bir çöp toplama işlemi için askıya alınmış iş parçacıklarında görevlerin yürütülmesini sürdürmesinin devam ettirdiğinizi bildirir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT SuspensionEnding (  
@@ -41,7 +42,7 @@ HRESULT SuspensionEnding (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`SuspensionEnding` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  

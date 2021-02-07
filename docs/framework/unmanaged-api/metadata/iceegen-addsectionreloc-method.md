@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ICeeGen:: AddSectionReloc yöntemi'
 title: ICeeGen::AddSectionReloc Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b500a260-1d57-4953-95e1-c27063f7c8da
 topic_type:
 - apiref
-ms.openlocfilehash: 87a5224247c2d94613de482fbaa34bf978198bf0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 715c506f0bdcb3fcef33b3e9165d1f9ae47c6073
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95715543"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707182"
 ---
 # <a name="iceegenaddsectionreloc-method"></a>ICeeGen::AddSectionReloc Yöntemi
 
@@ -28,7 +29,7 @@ Kod tabanına bir. reloc yönergesi ekler.
   
  Bu yöntem kullanılmıyor ve kullanılmamalıdır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT AddSectionReloc (  
