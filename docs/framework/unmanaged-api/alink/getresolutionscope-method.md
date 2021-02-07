@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: GetResolutionScope Yöntemi'
 title: GetResolutionScope Metodu
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 5b48ca60-dacd-44b2-9979-4a5122f00812
 topic_type:
 - apiref
-ms.openlocfilehash: 6318890dd6f0259d8d6a7675380684a129c14c8b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: add8ccb1ef6eb0f4b688dcf80563e9280099120d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95684687"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718401"
 ---
 # <a name="getresolutionscope-method"></a>GetResolutionScope Metodu
 
 Verilen bir türün kapsamını alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetResolutionScope(  

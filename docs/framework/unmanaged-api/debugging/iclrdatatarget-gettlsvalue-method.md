@@ -1,4 +1,5 @@
 ---
+description: ': ICLRDataTarget:: GetTLSValue yöntemi hakkında daha fazla bilgi edinin'
 title: ICLRDataTarget::GetTLSValue Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 0d8a7730-edc9-4728-898f-41b219cf5a28
 topic_type:
 - apiref
-ms.openlocfilehash: f6066774961b3fba2c466e156296907efc2e53df
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5c0c4a462d89c2eceada4180ea532f36fc9e48b9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95703414"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718050"
 ---
 # <a name="iclrdatatargetgettlsvalue-method"></a>ICLRDataTarget::GetTLSValue Yöntemi
 
 Hedef işlemde belirtilen iş parçacığının iş parçacığı yerel depolama alanından (TLS) bir değer alır. Bu yöntem, ortak dil çalışma zamanı (CLR) veri erişim Hizmetleri tarafından çağrılır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetTLSValue (  

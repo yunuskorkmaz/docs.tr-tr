@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: IALink arabirimi'
 title: IALink Arabirimi
 ms.date: 03/30/2017
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - IALink interface
 ms.assetid: 50abd02d-6488-4815-999b-4fb89af4d568
-ms.openlocfilehash: 657c16f6e96633e568903ca4a55b4c68c1a49fa5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0ee6cfe72047c69759df234d1b38ca1776f43c46
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720327"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718245"
 ---
 # <a name="ialink-interface"></a>IALink Arabirimi
 
