@@ -1,37 +1,38 @@
 ---
+description: 'Daha fazla bilgi edinin: çeşitli işleçler (Visual Basic)'
 title: Çeşitli işleçler
 ms.date: 10/18/2018
 helpviewer_keywords:
 - operators [Visual Basic]
 - operators [Visual Basic], miscellaneous
 ms.assetid: 2423b3c5-fc3f-479c-bcd2-2c6ebe92814f
-ms.openlocfilehash: 6aa6887b27f332e0c3084c70b3928cc3954266e0
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 042c9c0c999017482ac8b83a63b2bfb36842829e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866748"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665464"
 ---
-# <a name="miscellaneous-operators-visual-basic"></a><span data-ttu-id="ca8c9-102">Çeşitli işleçler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ca8c9-102">Miscellaneous operators (Visual Basic)</span></span>
+# <a name="miscellaneous-operators-visual-basic"></a><span data-ttu-id="f0793-103">Çeşitli işleçler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f0793-103">Miscellaneous operators (Visual Basic)</span></span>
 
-<span data-ttu-id="ca8c9-103">Aşağıda Visual Basic tanımlı çeşitli işleçler verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="ca8c9-103">The following are miscellaneous operators defined in Visual Basic.</span></span>  
+<span data-ttu-id="f0793-104">Aşağıda Visual Basic tanımlı çeşitli işleçler verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="f0793-104">The following are miscellaneous operators defined in Visual Basic.</span></span>  
   
-[<span data-ttu-id="ca8c9-104">?. null-koşullu işleç</span><span class="sxs-lookup"><span data-stu-id="ca8c9-104">?. null-conditional operator</span></span>](null-conditional-operators.md)
+[<span data-ttu-id="f0793-105">?. null-koşullu işleç</span><span class="sxs-lookup"><span data-stu-id="f0793-105">?. null-conditional operator</span></span>](null-conditional-operators.md)
 
-[<span data-ttu-id="ca8c9-105">? () null-koşullu işleç</span><span class="sxs-lookup"><span data-stu-id="ca8c9-105">?() null-conditional operator</span></span>](null-conditional-operators.md)
+[<span data-ttu-id="f0793-106">? () null-koşullu işleç</span><span class="sxs-lookup"><span data-stu-id="f0793-106">?() null-conditional operator</span></span>](null-conditional-operators.md)
 
- [<span data-ttu-id="ca8c9-106">AddressOf işleci</span><span class="sxs-lookup"><span data-stu-id="ca8c9-106">AddressOf operator</span></span>](addressof-operator.md)  
+ [<span data-ttu-id="f0793-107">AddressOf işleci</span><span class="sxs-lookup"><span data-stu-id="f0793-107">AddressOf operator</span></span>](addressof-operator.md)  
   
- [<span data-ttu-id="ca8c9-107">Await işleci</span><span class="sxs-lookup"><span data-stu-id="ca8c9-107">Await operator</span></span>](await-operator.md)  
+ [<span data-ttu-id="f0793-108">Await işleci</span><span class="sxs-lookup"><span data-stu-id="f0793-108">Await operator</span></span>](await-operator.md)  
   
- [<span data-ttu-id="ca8c9-108">GetType işleci</span><span class="sxs-lookup"><span data-stu-id="ca8c9-108">GetType operator</span></span>](gettype-operator.md)  
+ [<span data-ttu-id="f0793-109">GetType işleci</span><span class="sxs-lookup"><span data-stu-id="f0793-109">GetType operator</span></span>](gettype-operator.md)  
   
- [<span data-ttu-id="ca8c9-109">İşlev ifadesi</span><span class="sxs-lookup"><span data-stu-id="ca8c9-109">Function expression</span></span>](function-expression.md)  
+ [<span data-ttu-id="f0793-110">İşlev ifadesi</span><span class="sxs-lookup"><span data-stu-id="f0793-110">Function expression</span></span>](function-expression.md)  
 
- [<span data-ttu-id="ca8c9-110">If işleci</span><span class="sxs-lookup"><span data-stu-id="ca8c9-110">If operator</span></span>](if-operator.md)  
+ [<span data-ttu-id="f0793-111">If işleci</span><span class="sxs-lookup"><span data-stu-id="f0793-111">If operator</span></span>](if-operator.md)  
   
- [<span data-ttu-id="ca8c9-111">TypeOf işleci</span><span class="sxs-lookup"><span data-stu-id="ca8c9-111">TypeOf operator</span></span>](typeof-operator.md)  
+ [<span data-ttu-id="f0793-112">TypeOf işleci</span><span class="sxs-lookup"><span data-stu-id="f0793-112">TypeOf operator</span></span>](typeof-operator.md)  
   
-## <a name="see-also"></a><span data-ttu-id="ca8c9-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ca8c9-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f0793-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f0793-113">See also</span></span>
 
-- [<span data-ttu-id="ca8c9-113">İşlevlere göre listelenen işleçler</span><span class="sxs-lookup"><span data-stu-id="ca8c9-113">Operators listed by functionality</span></span>](operators-listed-by-functionality.md)
+- [<span data-ttu-id="f0793-114">İşlevlere göre listelenen işleçler</span><span class="sxs-lookup"><span data-stu-id="f0793-114">Operators listed by functionality</span></span>](operators-listed-by-functionality.md)
