@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ISymUnmanagedWriter3:: COMMIT yöntemi'
 title: ISymUnmanagedWriter3::Commit Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,31 +16,31 @@ helpviewer_keywords:
 ms.assetid: f6961922-46ec-4d2c-8369-85f880731f37
 topic_type:
 - apiref
-ms.openlocfilehash: 394832d6144509717d2f79a78afaff50ad81c01d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 308f5d3a16cf60a0e77a581a318d6fd6c398b3f3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95683309"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99761765"
 ---
-# <a name="isymunmanagedwriter3commit-method"></a><span data-ttu-id="9df9a-102">ISymUnmanagedWriter3::Commit Metodu</span><span class="sxs-lookup"><span data-stu-id="9df9a-102">ISymUnmanagedWriter3::Commit Method</span></span>
+# <a name="isymunmanagedwriter3commit-method"></a><span data-ttu-id="075ad-103">ISymUnmanagedWriter3::Commit Metodu</span><span class="sxs-lookup"><span data-stu-id="075ad-103">ISymUnmanagedWriter3::Commit Method</span></span>
 
-<span data-ttu-id="9df9a-103">Şimdiye kadar yazılı olan değişiklikleri akışa kaydeder.</span><span class="sxs-lookup"><span data-stu-id="9df9a-103">Commits the changes written so far to the stream.</span></span>  
+<span data-ttu-id="075ad-104">Şimdiye kadar yazılı olan değişiklikleri akışa kaydeder.</span><span class="sxs-lookup"><span data-stu-id="075ad-104">Commits the changes written so far to the stream.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9df9a-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="9df9a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="075ad-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="075ad-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT Commit();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="9df9a-105">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="9df9a-105">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="075ad-106">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="075ad-106">Return Value</span></span>  
 
- <span data-ttu-id="9df9a-106">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="9df9a-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+ <span data-ttu-id="075ad-107">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="075ad-107">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9df9a-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="9df9a-107">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="075ad-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="075ad-108">Requirements</span></span>  
 
- <span data-ttu-id="9df9a-108">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="9df9a-108">**Header:** CorSym.idl, CorSym.h</span></span>  
+ <span data-ttu-id="075ad-109">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="075ad-109">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9df9a-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9df9a-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="075ad-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="075ad-110">See also</span></span>
 
-- [<span data-ttu-id="9df9a-110">ISymUnmanagedWriter3 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="9df9a-110">ISymUnmanagedWriter3 Interface</span></span>](isymunmanagedwriter3-interface.md)
+- [<span data-ttu-id="075ad-111">ISymUnmanagedWriter3 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="075ad-111">ISymUnmanagedWriter3 Interface</span></span>](isymunmanagedwriter3-interface.md)

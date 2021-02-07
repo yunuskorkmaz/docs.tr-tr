@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ISymUnmanagedWriter2 Interface'
 title: ISymUnmanagedWriter2 Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,31 +15,31 @@ helpviewer_keywords:
 ms.assetid: 8e78faa4-cf43-44fb-a91d-94d6df692a25
 topic_type:
 - apiref
-ms.openlocfilehash: 6feb48b7c78dda64ba372e470b83ffb14f21f2f9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 228bae40e12376b3b5e8ca3bbd3463ba70a6d67b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95683335"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99761786"
 ---
-# <a name="isymunmanagedwriter2-interface"></a><span data-ttu-id="5a4ac-102">ISymUnmanagedWriter2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="5a4ac-102">ISymUnmanagedWriter2 Interface</span></span>
+# <a name="isymunmanagedwriter2-interface"></a><span data-ttu-id="3c4eb-103">ISymUnmanagedWriter2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="3c4eb-103">ISymUnmanagedWriter2 Interface</span></span>
 
-<span data-ttu-id="5a4ac-103">Bir sembol yazıcısını temsil eder ve belgeleri, dizi noktalarını, sözcük temelli kapsamları ve değişkenleri tanımlamak için yöntemler sağlar.</span><span class="sxs-lookup"><span data-stu-id="5a4ac-103">Represents a symbol writer, and provides methods to define documents, sequence points, lexical scopes, and variables.</span></span> <span data-ttu-id="5a4ac-104">Bu arabirim [ıstreamunmanagedwriter](isymunmanagedwriter-interface.md) arabirimini genişletir.</span><span class="sxs-lookup"><span data-stu-id="5a4ac-104">This interface extends the [ISymUnmanagedWriter](isymunmanagedwriter-interface.md) interface.</span></span>  
+<span data-ttu-id="3c4eb-104">Bir sembol yazıcısını temsil eder ve belgeleri, dizi noktalarını, sözcük temelli kapsamları ve değişkenleri tanımlamak için yöntemler sağlar.</span><span class="sxs-lookup"><span data-stu-id="3c4eb-104">Represents a symbol writer, and provides methods to define documents, sequence points, lexical scopes, and variables.</span></span> <span data-ttu-id="3c4eb-105">Bu arabirim [ıstreamunmanagedwriter](isymunmanagedwriter-interface.md) arabirimini genişletir.</span><span class="sxs-lookup"><span data-stu-id="3c4eb-105">This interface extends the [ISymUnmanagedWriter](isymunmanagedwriter-interface.md) interface.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="5a4ac-105">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="5a4ac-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="3c4eb-106">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="3c4eb-106">Methods</span></span>  
   
-|<span data-ttu-id="5a4ac-106">Yöntem</span><span class="sxs-lookup"><span data-stu-id="5a4ac-106">Method</span></span>|<span data-ttu-id="5a4ac-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="5a4ac-107">Description</span></span>|  
+|<span data-ttu-id="3c4eb-107">Yöntem</span><span class="sxs-lookup"><span data-stu-id="3c4eb-107">Method</span></span>|<span data-ttu-id="3c4eb-108">Açıklama</span><span class="sxs-lookup"><span data-stu-id="3c4eb-108">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="5a4ac-108">DefineConstant2 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="5a4ac-108">DefineConstant2 Method</span></span>](isymunmanagedwriter2-defineconstant2-method.md)|<span data-ttu-id="5a4ac-109">Sabit değer için bir ad tanımlar.</span><span class="sxs-lookup"><span data-stu-id="5a4ac-109">Defines a name for a constant value.</span></span>|  
-|[<span data-ttu-id="5a4ac-110">DefineGlobalVariable2 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="5a4ac-110">DefineGlobalVariable2 Method</span></span>](isymunmanagedwriter2-defineglobalvariable2-method.md)|<span data-ttu-id="5a4ac-111">Tek bir genel değişkeni tanımlar.</span><span class="sxs-lookup"><span data-stu-id="5a4ac-111">Defines a single global variable.</span></span>|  
-|[<span data-ttu-id="5a4ac-112">DefineLocalVariable2 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="5a4ac-112">DefineLocalVariable2 Method</span></span>](isymunmanagedwriter2-definelocalvariable2-method.md)|<span data-ttu-id="5a4ac-113">Geçerli sözcük kapsamındaki tek bir değişkeni tanımlar.</span><span class="sxs-lookup"><span data-stu-id="5a4ac-113">Defines a single variable in the current lexical scope.</span></span>|  
+|[<span data-ttu-id="3c4eb-109">DefineConstant2 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="3c4eb-109">DefineConstant2 Method</span></span>](isymunmanagedwriter2-defineconstant2-method.md)|<span data-ttu-id="3c4eb-110">Sabit değer için bir ad tanımlar.</span><span class="sxs-lookup"><span data-stu-id="3c4eb-110">Defines a name for a constant value.</span></span>|  
+|[<span data-ttu-id="3c4eb-111">DefineGlobalVariable2 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="3c4eb-111">DefineGlobalVariable2 Method</span></span>](isymunmanagedwriter2-defineglobalvariable2-method.md)|<span data-ttu-id="3c4eb-112">Tek bir genel değişkeni tanımlar.</span><span class="sxs-lookup"><span data-stu-id="3c4eb-112">Defines a single global variable.</span></span>|  
+|[<span data-ttu-id="3c4eb-113">DefineLocalVariable2 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="3c4eb-113">DefineLocalVariable2 Method</span></span>](isymunmanagedwriter2-definelocalvariable2-method.md)|<span data-ttu-id="3c4eb-114">Geçerli sözcük kapsamındaki tek bir değişkeni tanımlar.</span><span class="sxs-lookup"><span data-stu-id="3c4eb-114">Defines a single variable in the current lexical scope.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="5a4ac-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="5a4ac-114">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3c4eb-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="3c4eb-115">Requirements</span></span>  
 
- <span data-ttu-id="5a4ac-115">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="5a4ac-115">**Header:** CorSym.idl, CorSym.h</span></span>  
+ <span data-ttu-id="3c4eb-116">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="3c4eb-116">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5a4ac-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5a4ac-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3c4eb-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3c4eb-117">See also</span></span>
 
-- [<span data-ttu-id="5a4ac-117">Tanılama Sembol Deposu Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="5a4ac-117">Diagnostics Symbol Store Interfaces</span></span>](diagnostics-symbol-store-interfaces.md)
-- [<span data-ttu-id="5a4ac-118">ISymUnmanagedWriter Arabirimi</span><span class="sxs-lookup"><span data-stu-id="5a4ac-118">ISymUnmanagedWriter Interface</span></span>](isymunmanagedwriter-interface.md)
-- [<span data-ttu-id="5a4ac-119">ISymUnmanagedWriter3 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="5a4ac-119">ISymUnmanagedWriter3 Interface</span></span>](isymunmanagedwriter3-interface.md)
+- [<span data-ttu-id="3c4eb-118">Tanılama Sembol Deposu Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="3c4eb-118">Diagnostics Symbol Store Interfaces</span></span>](diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="3c4eb-119">ISymUnmanagedWriter Arabirimi</span><span class="sxs-lookup"><span data-stu-id="3c4eb-119">ISymUnmanagedWriter Interface</span></span>](isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="3c4eb-120">ISymUnmanagedWriter3 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="3c4eb-120">ISymUnmanagedWriter3 Interface</span></span>](isymunmanagedwriter3-interface.md)

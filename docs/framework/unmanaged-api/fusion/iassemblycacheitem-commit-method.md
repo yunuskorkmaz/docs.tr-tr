@@ -1,4 +1,5 @@
 ---
+description: ': IAssemblyCacheItem:: COMMIT yöntemi hakkında daha fazla bilgi edinin'
 title: IAssemblyCacheItem::Commit Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c2321f17-f46f-4815-ae41-b28678753613
 topic_type:
 - apiref
-ms.openlocfilehash: 2b7c10e82aca2b2ece7ea4d7209c1f3c9a456434
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: bd73bb9099090089e52d52009cfef309b33adc53
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95670413"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760866"
 ---
-# <a name="iassemblycacheitemcommit-method"></a><span data-ttu-id="a562a-102">IAssemblyCacheItem::Commit Metodu</span><span class="sxs-lookup"><span data-stu-id="a562a-102">IAssemblyCacheItem::Commit Method</span></span>
+# <a name="iassemblycacheitemcommit-method"></a><span data-ttu-id="5faa1-103">IAssemblyCacheItem::Commit Metodu</span><span class="sxs-lookup"><span data-stu-id="5faa1-103">IAssemblyCacheItem::Commit Method</span></span>
 
-<span data-ttu-id="a562a-103">Önbelleğe alınmış derleme başvurusunu belleğe kaydeder.</span><span class="sxs-lookup"><span data-stu-id="a562a-103">Commits the cached assembly reference to memory.</span></span>  
+<span data-ttu-id="5faa1-104">Önbelleğe alınmış derleme başvurusunu belleğe kaydeder.</span><span class="sxs-lookup"><span data-stu-id="5faa1-104">Commits the cached assembly reference to memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a562a-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="a562a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5faa1-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5faa1-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT Commit (  
@@ -35,22 +36,22 @@ HRESULT Commit (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a562a-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="a562a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5faa1-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="5faa1-106">Parameters</span></span>  
 
  `dwFlags`  
- <span data-ttu-id="a562a-106">'ndaki Fusion. IDL içinde tanımlanan bayraklar.</span><span class="sxs-lookup"><span data-stu-id="a562a-106">[in] Flags defined in Fusion.idl.</span></span>  
+ <span data-ttu-id="5faa1-107">'ndaki Fusion. IDL içinde tanımlanan bayraklar.</span><span class="sxs-lookup"><span data-stu-id="5faa1-107">[in] Flags defined in Fusion.idl.</span></span>  
   
  `pulDisposition`  
- <span data-ttu-id="a562a-107">[Out, isteğe bağlı] İşlemin sonucunu gösteren bir değer.</span><span class="sxs-lookup"><span data-stu-id="a562a-107">[out, optional] A value that indicates the result of the operation.</span></span>  
+ <span data-ttu-id="5faa1-108">[Out, isteğe bağlı] İşlemin sonucunu gösteren bir değer.</span><span class="sxs-lookup"><span data-stu-id="5faa1-108">[out, optional] A value that indicates the result of the operation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a562a-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a562a-108">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5faa1-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="5faa1-109">Requirements</span></span>  
 
- <span data-ttu-id="a562a-109">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a562a-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="5faa1-110">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5faa1-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a562a-110">**Üst bilgi:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="a562a-110">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="5faa1-111">**Üst bilgi:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="5faa1-111">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="a562a-111">**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a562a-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="5faa1-112">**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5faa1-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a562a-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a562a-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5faa1-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5faa1-113">See also</span></span>
 
-- [<span data-ttu-id="a562a-113">IAssemblyCacheItem Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a562a-113">IAssemblyCacheItem Interface</span></span>](iassemblycacheitem-interface.md)
+- [<span data-ttu-id="5faa1-114">IAssemblyCacheItem Arabirimi</span><span class="sxs-lookup"><span data-stu-id="5faa1-114">IAssemblyCacheItem Interface</span></span>](iassemblycacheitem-interface.md)
