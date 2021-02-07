@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <mexNamedPipeBinding>'
 title: <mexNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: 193412fa-3260-414c-92c6-b32ed3b94a34
-ms.openlocfilehash: 64e250ae5ccb30da3f8857b94628b85b8c237a03
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a7d1c6b10ed436d5ec1b20092d042d6b0a80bd34
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204716"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99684327"
 ---
 # \<mexNamedPipeBinding>
 
@@ -61,7 +62,7 @@ Adlandırılmış kanal üzerinde WS-MetadataExchange (WS-MEX) ileti değişimi 
 - <xref:System.ServiceModel.Configuration.MexNamedPipeBindingElement>
 - [Nasıl yapılır: Yapılandırma Dosyası Kullanarak Bir Hizmet için Meta Verileri Yayımlama](../../../wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [Özel Bağlama Üzerinden Meta Veri Yayımlama ve Alma](../../../wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)
-- [Meta veriler](../../../wcf/feature-details/metadata.md)
+- [Meta veri](../../../wcf/feature-details/metadata.md)
 - [Bağlamalar](../../../wcf/bindings.md)
 - [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../wcf/using-bindings-to-configure-services-and-clients.md)

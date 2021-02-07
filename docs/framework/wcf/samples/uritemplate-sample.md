@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: UriTemplate örneği'
 title: UriTemplate Örneği
 ms.date: 03/30/2017
 ms.assetid: 0aaf91d0-ce18-468d-8006-bc9bc2e48231
-ms.openlocfilehash: 55999167d99069a4b207f4deda42f48bf02e1bdd
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 80e932c06a6819ef7e1e289d9eacab6cd4e55f92
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96294969"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99685445"
 ---
 # <a name="uritemplate-sample"></a>UriTemplate Örneği
 

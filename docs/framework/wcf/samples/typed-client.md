@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: türü belirtilmiş Istemci'
 title: Türü Belirlenmiş İstemci
 ms.date: 03/30/2017
 ms.assetid: 62c40e8f-e9b4-4b1a-939a-93c37393d343
-ms.openlocfilehash: 7e09a4cb3f4b8f8baae7431d9c49b569c276173e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 2d6f8743f3587800fbd9ec64d90e9ac1ab82d02a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96295021"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99685471"
 ---
 # <a name="typed-client"></a>Türü Belirlenmiş İstemci
 

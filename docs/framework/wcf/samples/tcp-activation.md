@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: TCP Etkinleştirmesi'
 title: TCP Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: bf8c215c-0228-4f4f-85c2-e33794ec09a7
-ms.openlocfilehash: e6f40b31656746d3db37545709c4e4813a7422cf
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bfa98eff1bcab31df3e28d46e77d90456020507c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555191"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99685640"
 ---
 # <a name="tcp-activation"></a>TCP Etkinleştirme
 

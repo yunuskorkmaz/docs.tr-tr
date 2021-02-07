@@ -1,17 +1,18 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <mexTcpBinding>'
 title: <mexTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 01baba8d-d784-4255-9ea2-7afff1482bf0
-ms.openlocfilehash: 0d12f886eaee6283ee686209dfc129e397a8e1fe
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d13d9f5eb4bae13a39d4f0cdb57129eb9216ab5d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204703"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99684301"
 ---
 # \<mexTcpBinding>
 
-TCP üzerinde WS-MetadataExchange (WS-MEX) ileti değişimi için kullanılan bir bağlamanın ayarlarını belirtir.  
+TCP üzerinden WS-MetadataExchange (WS-MEX) ileti değişimi için kullanılan bir bağlamanın ayarlarını belirtir.  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
@@ -61,7 +62,7 @@ TCP üzerinde WS-MetadataExchange (WS-MEX) ileti değişimi için kullanılan bi
 - <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexTcpBinding%2A>
 - [Nasıl yapılır: Yapılandırma Dosyası Kullanarak Bir Hizmet için Meta Verileri Yayımlama](../../../wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [Özel Bağlama Üzerinden Meta Veri Yayımlama ve Alma](../../../wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)
-- [Meta veriler](../../../wcf/feature-details/metadata.md)
+- [Meta veri](../../../wcf/feature-details/metadata.md)
 - [Bağlamalar](../../../wcf/bindings.md)
 - [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../wcf/using-bindings-to-configure-services-and-clients.md)

@@ -1,15 +1,16 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <msmqIntegrationBinding>'
 title: <msmqIntegrationBinding>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
-ms.openlocfilehash: bc2b1648ad404ba13920d9f276c299756554b5d4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2745fdf1576d66e3e7c0c74d9b7d6f008fac88b8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204677"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99684249"
 ---
 # \<msmqIntegrationBinding>
 

@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: Kanal Katmanını Genişletme'
 title: Kanal Katmanını Genişletme
 ms.date: 03/30/2017
 helpviewer_keywords:
 - extending channels [WCF]
 ms.assetid: 4238db74-2fb6-4dc8-a326-f58527230810
-ms.openlocfilehash: 8d051ff84ea0562b3d7c810b2c884f4d8b787952
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4588a2749127e454801615cc8916d83fc15592bc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96273028"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99685588"
 ---
 # <a name="extending-the-channel-layer"></a>Kanal Katmanını Genişletme
 

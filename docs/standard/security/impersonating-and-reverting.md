@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: kimliğe bürünme ve geri döndürme'
 title: Kimliğe Bürünme ve Geri Alma
 ms.date: 07/15/2020
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - security [.NET], impersonating Windows accounts
 - impersonating Windows accounts
 ms.assetid: b93d402c-6c28-4f50-b2bc-d9607dc3e470
-ms.openlocfilehash: 90f43510eb0e71fb324012fa00ac08f9ee3292ac
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f3e536f87ef5aa09cd727fe9674c7a40f3a09150
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820065"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99685016"
 ---
 # <a name="impersonating-and-reverting"></a>Kimliğe Bürünme ve Geri Alma
 
@@ -61,7 +62,7 @@ Bazen bir Windows hesabının kimliğine bürünmek için bir Windows hesabı be
   
  Güvenilen kod zaten <xref:System.Security.Principal.WindowsPrincipal> iş parçacığına bir nesne iliştirmişse, bir hesap belirteci almaz, **kimliğe bürünme** örnek yöntemini çağırabilirsiniz. Bu, yalnızca iş parçacığındaki **WindowsPrincipal** nesnesi, işlemin Şu anda yürütülmekte olduğu bir kullanıcıyı temsil ettiğinde yararlı olduğunu unutmayın. Örneğin, Windows kimlik doğrulaması açık ve kimliğe bürünme kapalı ASP.NET kullanarak bu durumla karşılaşabilirsiniz. Bu durumda, işlem Internet Information Services (IIS) ' de yapılandırılmış bir hesap altında çalışıyor, geçerli sorumlusu ise sayfaya erişen Windows kullanıcısını temsil eder.  
   
- **Kimliğe bürünme** ve **geri alma** seçeneklerinin **Principal** <xref:System.Security.Principal.IPrincipal> geçerli çağrı bağlamıyla ilişkili asıl nesne () değişikliklerini unutmayın. Bunun yerine, kimliğe bürünme ve geri döndürme geçerli işletim sistemi işlemiyle ilişkili belirteci değiştirir.  
+ **Kimliğe bürünme** ve **geri alma** seçeneklerinin  <xref:System.Security.Principal.IPrincipal> geçerli çağrı bağlamıyla ilişkili asıl nesne () değişikliklerini unutmayın. Bunun yerine, kimliğe bürünme ve geri döndürme geçerli işletim sistemi işlemiyle ilişkili belirteci değiştirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: bağlamaları genişletme'
 title: Bağlamaları Genişletme
 ms.date: 03/30/2017
 helpviewer_keywords:
 - extending bindings [WCF]
 ms.assetid: 5e40d306-b3c1-4429-80c4-fbb1d956856c
-ms.openlocfilehash: 80e155ff760af2f7478cd6865f6b703b857b0913
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 721a844a51aa2b8a7073f5e489b34eab8955d276
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96251509"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99685783"
 ---
 # <a name="extending-bindings"></a>Bağlamaları Genişletme
 
@@ -17,7 +18,7 @@ Bağlamalar bir uç noktaya bağlanmak için gereken aktarım, kodlama ve Protok
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
-|Konu|Açıklama|  
+|Konu|Description|  
 |-----------|-----------------|  
 |[Bağlamalar ve Bağlama Öğeleri](bindings-and-binding-elements.md)|Bağlamaları, bağlama öğelerini ve bunların nasıl kullanıldığını ve genişletildikleri açıklanmaktadır.|  
 |[Özel Bağlamalar](custom-bindings.md)|<xref:System.ServiceModel.Channels.CustomBinding>Sınıfının, sistem tarafından tanımlanan ve üçüncü taraf bağlama öğelerini kullanarak özel bağlamalar oluşturmak için nasıl kullanılacağını açıklar.|  

@@ -1,17 +1,18 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <mexHttpsBinding>'
 title: <mexHttpsBinding>
 ms.date: 03/30/2017
 ms.assetid: f2ed3774-78b9-4a15-b79b-655f1ad68b86
-ms.openlocfilehash: 8025f5ed42325963aa4b695890caa5031f6bb6a6
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1e6eb66e1379cb8f351e34d4fd406dd3cc1f9a4e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204729"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99684340"
 ---
 # \<mexHttpsBinding>
 
-HTTPS üzerinde WS-MetadataExchange (WS-MEX) ileti değişimi için kullanılan bir bağlamanın ayarlarını belirtir.  
+HTTPS üzerinden WS-MetadataExchange (WS-MEX) ileti değişimi için kullanılan bir bağlamanın ayarlarını belirtir.  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
@@ -57,7 +58,7 @@ HTTPS üzerinde WS-MetadataExchange (WS-MEX) ileti değişimi için kullanılan 
   
 ## <a name="remarks"></a>Açıklamalar  
 
- Bu bağlama temelde, `WSHttpBinding` sertifikaları kullanarak aktarım düzeyi güvenliği destekleyen bir bağlamadır. Bu tür bir meta veri uç noktası yapılandırma ve kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: özel bir WS-Metadata Exchange bağlamayı yapılandırma](../../../wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md), [nasıl yapılır: meta verileri bir MEX olmayan bağlama üzerinden alma](../../../wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)ve örnek [özel güvenli meta veri uç noktası](../../../wcf/samples/custom-secure-metadata-endpoint.md).  
+ Bu bağlama temelde, `WSHttpBinding` sertifikaları kullanarak aktarım düzeyi güvenliği destekleyen bir bağlamadır. Bu tür bir meta veri uç noktası yapılandırma ve kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: özel bir WS-Metadata Exchange bağlamasını yapılandırma](../../../wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md), [nasıl yapılır: meta verileri bir MEX olmayan bağlama üzerinden alma](../../../wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)ve örnek [özel güvenli meta veri uç noktası](../../../wcf/samples/custom-secure-metadata-endpoint.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -68,7 +69,7 @@ HTTPS üzerinde WS-MetadataExchange (WS-MEX) ileti değişimi için kullanılan 
 - [Nasıl yapılır: Özel Bir WS-Metadata Değişimi Bağlaması Yapılandırma](../../../wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)
 - [Nasıl yapılır: MEX Olmayan Bağlama Üzerinden Meta Verileri Alma](../../../wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)
 - [Özel Güvenli Meta Veri Uç Noktaları](../../../wcf/samples/custom-secure-metadata-endpoint.md)
-- [Meta veriler](../../../wcf/feature-details/metadata.md)
+- [Meta veri](../../../wcf/feature-details/metadata.md)
 - [Bağlamalar](../../../wcf/bindings.md)
 - [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../wcf/using-bindings-to-configure-services-and-clients.md)

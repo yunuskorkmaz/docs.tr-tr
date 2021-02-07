@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: standart uç noktaların kullanımı'
 title: Standart Uç Noktaları Kullanma
 ms.date: 03/30/2017
 ms.assetid: ecd6a62f-9619-4778-a497-6f888087a9ea
-ms.openlocfilehash: 2b210bfe683669aeebf54a1701f07d492e6abdb4
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 804fdd84d3f6ff6f961aed81e8bd14cf8c43063c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715340"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99685419"
 ---
 # <a name="usage-of-standard-endpoints"></a>Standart Uç Noktaları Kullanma
 
@@ -15,7 +16,7 @@ Bu örnek, hizmet yapılandırma dosyalarında standart uç noktaların nasıl k
 
 ## <a name="sample-details"></a>Örnek Ayrıntılar
 
-Hizmet uç noktaları üç parametre sunarak belirtilebilir: adres, bağlama ve anlaşma. Sağlanabilecek diğer parametreler, davranış yapılandırması, üst bilgiler, dinleme URI 'SI vb. içerir. Bazı durumlarda, adreslerin, bağlamaların ve sözleşmelerin tümünün veya tümünün değiştirebir değer vardır. Bu nedenle, standart uç noktaları kullanmak mümkündür. Bu uç noktalara bazı örnekler, meta veri değişim uç noktaları ve bulma uç noktaları içerir. Standart uç noktalar Ayrıca, sabit bir doğası hakkında bilgi sağlamak veya kendi standart uç noktalarını oluşturmak zorunda kalmadan hizmet uç noktalarının yapılandırılmasına izin vererek kullanılabilirliği artırır. Örneğin, makul bir varsayılan kümesi sağlayarak kullanılabilirliği artırmak için değerler ve bu sayede yapılandırma dosyalarının ayrıntı düzeyini azaltır.
+Hizmet uç noktaları üç parametre sunarak belirtilebilir: adres, bağlama ve anlaşma. Sağlanabilecek diğer parametreler, davranış yapılandırması, üst bilgiler, dinleme URI 'SI vb. içerir. Bazı durumlarda, adreslerin, bağlamaların ve sözleşmelerin tümünün veya tümünün değiştirebir değer vardır. Bu nedenle, standart uç noktaları kullanmak mümkündür. Bu uç noktalara bazı örnekler, meta veri değişim uç noktaları ve bulma uç noktaları içerir. Standart uç noktalar Ayrıca, sabit bir doğası hakkında bilgi sağlamak ya da kendi standart uç noktalarını oluşturmak zorunda kalmadan hizmet uç noktalarının yapılandırılmasına izin vererek kullanılabilirliği artırır. Örneğin, makul bir varsayılan değerler kümesi sağlayarak kullanılabilirliği artırmak ve bu sayede yapılandırma dosyalarının ayrıntı düzeyini azaltmak.
 
 Bu örnek iki projeden oluşur: iki standart uç noktayı ve hizmetle iletişim kuran istemciyi tanımlayan hizmet. Yapılandırma dosyasında hizmet için standart uç noktaların tanımlandığı şekilde aşağıdaki örnekte gösterilmektedir.
 
@@ -50,9 +51,9 @@ Bu örnek iki projeden oluşur: iki standart uç noktayı ve hizmetle iletişim 
 </configuration>
 ```
 
-Hizmet için tanımlanan ilk uç nokta `customEndpoint`türüdür. Bu, tanımı `property` `true`değeri verilen `<standardEndpoints>` bölümünde görülebilir. Bu, yeni bir özellikle özelleştirilmiş bir uç noktanın durumdur. İkinci uç nokta, adres, bağlama ve anlaşma değerlerinin düzeltildiği bir meta veri uç noktasına karşılık gelir.
+Hizmet için tanımlanan ilk uç nokta, `customEndpoint` tanımı, `<standardEndpoints>` özelliğin değeri verilen bölümünde görünebilen tür olur `property` `true` . Bu, yeni bir özellikle özelleştirilmiş bir uç noktanın durumdur. İkinci uç nokta, adres, bağlama ve anlaşma değerlerinin düzeltildiği bir meta veri uç noktasına karşılık gelir.
 
-Standart uç nokta öğesini tanımlamak için, `StandardEndpointElement` türetilen bir sınıfın oluşturulması gerekir. Bu örnek söz konusu olduğunda, `CustomEndpointElement` sınıfı aşağıdaki örnekte gösterildiği gibi tanımlanmıştır.
+Standart uç nokta öğesini tanımlamak için, öğesinden türetilen bir sınıfın `StandardEndpointElement` oluşturulması gerekir. Bu örnek söz konusu olduğunda, `CustomEndpointElement` sınıf aşağıdaki örnekte gösterildiği gibi tanımlanmıştır.
 
 ```csharp
 public class CustomEndpointElement : StandardEndpointElement
@@ -105,7 +106,7 @@ public class CustomEndpointElement : StandardEndpointElement
 }
 ```
 
-`CreateServiceEndpoint` işlevinde, bir `CustomEndpoint` nesnesi oluşturulur. Tanımı aşağıdaki örnekte gösterilmiştir:
+`CreateServiceEndpoint`İşlevinde bir `CustomEndpoint` nesne oluşturulur. Tanımı aşağıdaki örnekte gösterilmiştir:
 
 ```csharp
 public class CustomEndpoint : ServiceEndpoint
@@ -145,9 +146,9 @@ public class CustomEndpoint : ServiceEndpoint
 
     1. **Çözüm Gezgini**, standart uç noktalar çözümüne sağ tıklayın ve ardından **Özellikler**' i seçin.
 
-    2. **Ortak özellikler**' de **Başlangıç projesi**' ni seçin ve ardından **birden fazla başlangıç**projesi ' ne tıklayın.
+    2. **Ortak özellikler**' de **Başlangıç projesi**' ni seçin ve ardından **birden fazla başlangıç** projesi ' ne tıklayın.
 
-    3. **Eylem** **Başlangıç**olarak ayarlanmış şekilde, hizmet projesini listenin başına taşıyın.
+    3. **Eylem** **Başlangıç** olarak ayarlanmış şekilde, hizmet projesini listenin başına taşıyın.
 
     4. Istemci projesini, **eylem** olarak ayarlanmış şekilde, hizmet projesinden sonra da **taşıyın.**
 
@@ -167,6 +168,6 @@ public class CustomEndpoint : ServiceEndpoint
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\StandardEndpoints`

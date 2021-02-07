@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: hizmetleri güvenli hale getirme'
 title: Hizmetleri Güvenli Hale Getirme
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - WCF security
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
-ms.openlocfilehash: f2a8e10aaf9c1dbe3065344963fcc712776cd2db
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 6d72b814e0669cac90210bd02f36740673f3960e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96242233"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99685315"
 ---
 # <a name="securing-services"></a>Hizmetleri Güvenli Hale Getirme
 

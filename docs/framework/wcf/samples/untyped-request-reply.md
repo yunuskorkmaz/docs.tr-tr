@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: türsüz Istek/yanıt'
 title: Türsüz Request-Reply
 ms.date: 03/30/2017
 ms.assetid: 0bf0f9d9-7caf-4d3d-8c9e-2d468cca16a5
-ms.openlocfilehash: bcd35bcac928397cad57384fdecb55d7e5ad13c3
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: bac1c9982cf5717bec72b128c238c449324446a7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96294995"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99685458"
 ---
 # <a name="untyped-requestreply"></a>Yazılmamış İstek/Yanıt
 

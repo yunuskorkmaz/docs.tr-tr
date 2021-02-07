@@ -1,4 +1,5 @@
 ---
+description: Daha fazla bilgi için bkz. şifreleme Imzaları
 title: Şifreleme İmzası
 ms.date: 07/14/2020
 dev_langs:
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - digital signatures, verifying
 - signing XML
 ms.assetid: aa87cb7f-e608-4a81-948b-c9b8a1225783
-ms.openlocfilehash: 453e9d887012826da3f64d199e15a05fd0661191
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 082f55af648b73b6447d69edd5912804e9332d03
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831136"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99685302"
 ---
 # <a name="cryptographic-signatures"></a>Şifreleme İmzası
 
