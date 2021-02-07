@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: ICorProfilerInfo4:: Requestdöndürülüyor yöntemi'
 title: ICorProfilerInfo4::RequestRevert Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 70261da5-5933-4e25-9de0-ddf51cba56cc
 topic_type:
 - apiref
-ms.openlocfilehash: b80de5e0e03f6b3a424ac59a099e361dd6c50c86
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 24a6a86f32bb9657e62a4433edcb5835e16b9754
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733821"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99737316"
 ---
 # <a name="icorprofilerinfo4requestrevert-method"></a>ICorProfilerInfo4::RequestRevert Yöntemi
 
 Belirtilen işlevlerin tüm örneklerini orijinal sürümlerine geri döndürür.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT RequestRevert (  
@@ -54,7 +55,7 @@ HRESULT RequestRevert (
 
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|Tüm istekleri dönüştürmek için bir girişimde bulunuldu; Ancak, döndürülen durum dizisinin hangi işlevlerin başarıyla geri döndürüldüğünü belirleyebilmek için denetlenmesi gerekir.|  
 |CORPROF_E_CALLBACK4_REQUIRED|Bu çağrının desteklenmesi için profil oluşturucunun [ICorProfilerCallback4](icorprofilercallback4-interface.md) arabirimini uygulaması gerekir.|  
@@ -64,7 +65,7 @@ HRESULT RequestRevert (
   
 ## <a name="status-hresults"></a>Durum HRESULTS  
   
-|Durum dizisi HRESULT|Açıklama|  
+|Durum dizisi HRESULT|Description|  
 |--------------------------|-----------------|  
 |S_OK|Karşılık gelen işlev başarıyla geri döndürüldü.|  
 |E_INVALIDARG|`moduleID`Or `methodDef` parametresi `NULL` .|  

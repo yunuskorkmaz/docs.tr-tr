@@ -1,4 +1,5 @@
 ---
+description: ': Icordebugstackyürüme arabirimi hakkında daha fazla bilgi'
 title: ICorDebugStackWalk Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 16d695e8-975d-431b-8421-e9e6c3e3f476
 topic_type:
 - apiref
-ms.openlocfilehash: b37a89c0a86df49c894dc43676f8feafb80f5c95
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 27dcdfc90829a3a28d81ad28dce0cd4d1d674948
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95687521"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738097"
 ---
 # <a name="icordebugstackwalk-interface"></a>ICorDebugStackWalk Arabirimi
 

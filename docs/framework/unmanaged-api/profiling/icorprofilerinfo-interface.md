@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerInfo arabirimi hakkında daha fazla bilgi edinin'
 title: ICorProfilerInfo Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eb4e4ce0-06e7-4469-bbc4-edc2eb5da4b1
 topic_type:
 - apiref
-ms.openlocfilehash: a029784a28036e531670ad373893b4256c5864c4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d1da0f41a7c7358b7f71c8d931fff723b3144cdd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95671193"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99737395"
 ---
 # <a name="icorprofilerinfo-interface"></a>ICorProfilerInfo Arabirimi
 
@@ -38,18 +39,18 @@ Olay izlemeyi ve istek bilgilerini denetlemek için ortak dil çalışma zamanı
 |[GetAppDomainInfo Yöntemi](icorprofilerinfo-getappdomaininfo-method.md)|Belirtilen uygulama etki alanı hakkında bilgi alır.|  
 |[GetAssemblyInfo Yöntemi](icorprofilerinfo-getassemblyinfo-method.md)|Belirtilen derleme hakkında bilgi alır.|  
 |[GetClassFromObject Yöntemi](icorprofilerinfo-getclassfromobject-method.md)|`ClassID`Bir<br /><br /> nesnesi `ObjectID` .|  
-|[GetClassFromToken Metodu](icorprofilerinfo-getclassfromtoken-method.md)|Meta veri belirteci verilen sınıfın KIMLIĞINI alır. Bu yöntem .NET Framework sürüm 2,0 ' de kullanılmıyor. Bunun yerine [ICorProfilerInfo2:: GetClassFromTokenAndTypeArgs](icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) metodunu kullanın.|  
+|[GetClassFromToken Yöntemi](icorprofilerinfo-getclassfromtoken-method.md)|Meta veri belirteci verilen sınıfın KIMLIĞINI alır. Bu yöntem .NET Framework sürüm 2,0 ' de kullanılmıyor. Bunun yerine [ICorProfilerInfo2:: GetClassFromTokenAndTypeArgs](icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) metodunu kullanın.|  
 |[GetClassIDInfo Yöntemi](icorprofilerinfo-getclassidinfo-method.md)|Belirtilen sınıf için üst modülü ve meta veri belirtecini alır.|  
 |[GetCodeInfo Yöntemi](icorprofilerinfo-getcodeinfo-method.md)|Belirtilen işlev KIMLIĞIYLE ilişkili yerel kod kapsamını alır. Bu yöntem artık kullanılmıyor. Bunun yerine [ICorProfilerInfo2:: GetCodeInfo2](icorprofilerinfo2-getcodeinfo2-method.md) yöntemini kullanın.|  
 |[GetCurrentThreadID Yöntemi](icorprofilerinfo-getcurrentthreadid-method.md)|Yönetilen bir iş parçacığı ise, geçerli iş parçacığının KIMLIĞINI alır.|  
 |[GetEventMask Yöntemi](icorprofilerinfo-geteventmask-method.md)|Profil oluşturucunun CLR 'den olay bildirimleri almak istediği geçerli olay kategorilerini alır.|  
 |[GetFunctionFromIP Yöntemi](icorprofilerinfo-getfunctionfromip-method.md)|Yönetilen bir kod yönerge işaretçisini bir ile eşler `FunctionID` .|  
-|[GetFunctionFromToken Metodu](icorprofilerinfo-getfunctionfromtoken-method.md)|Bir işlevin KIMLIĞINI alır. Bu yöntem .NET Framework sürüm 2,0 ' de kullanılmıyor. Bunun yerine [ICorProfilerInfo2:: GetFunctionFromTokenAndTypeArgs](icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md) metodunu kullanın.|  
+|[GetFunctionFromToken Yöntemi](icorprofilerinfo-getfunctionfromtoken-method.md)|Bir işlevin KIMLIĞINI alır. Bu yöntem .NET Framework sürüm 2,0 ' de kullanılmıyor. Bunun yerine [ICorProfilerInfo2:: GetFunctionFromTokenAndTypeArgs](icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md) metodunu kullanın.|  
 |[GetFunctionInfo Yöntemi](icorprofilerinfo-getfunctioninfo-method.md)|Belirtilen işlev için üst sınıfı ve meta veri belirtecini alır.|  
 |[GetHandleFromThread Yöntemi](icorprofilerinfo-gethandlefromthread-method.md)|Bir iş parçacığının KIMLIĞINI bir Win32 iş parçacığı tanıtıcısına eşler.|  
 |[GetILFunctionBody Yöntemi](icorprofilerinfo-getilfunctionbody-method.md)|Üst bilgisinden başlayarak, Microsoft ara dili (MSIL) kodundaki bir yöntemin gövdesine yönelik bir işaretçi alır.|  
 |[GetILFunctionBodyAllocator Yöntemi](icorprofilerinfo-getilfunctionbodyallocator-method.md)|MSIL kodunda bir yöntemin gövdesini takas etmek için kullanılacak belleği ayırmak üzere bir yöntemi sağlayan bir arabirim alır.|  
-|[GetILToNativeMapping Metodu](icorprofilerinfo-getiltonativemapping-method.md)|Belirtilen işlevde bulunan kod için MSIL uzaklıklarından yerel uzaklıklara bir eşleme alır.|  
+|[GetILToNativeMapping Yöntemi](icorprofilerinfo-getiltonativemapping-method.md)|Belirtilen işlevde bulunan kod için MSIL uzaklıklarından yerel uzaklıklara bir eşleme alır.|  
 |[GetInprocInspectionInterface Yöntemi](icorprofilerinfo-getinprocinspectioninterface-method.md)|ICorDebugProcess arabirimi için sorgulanabilen bir nesne alır. Bu yöntem .NET Framework sürüm 2,0 ' de kullanılmıyor.|  
 |[GetInprocInspectionIThisThread Yöntemi](icorprofilerinfo-getinprocinspectionithisthread-method.md)|ICorDebugThread arabirimi için sorgulanabilen bir nesne alır. Bu yöntem .NET Framework sürüm 2,0 ' de kullanılmıyor.|  
 |[GetModuleInfo Yöntemi](icorprofilerinfo-getmoduleinfo-method.md)|Bir modül KIMLIĞI verildiğinde, modülün dosya adını ve modülün üst derleme KIMLIĞINI döndürür.|  

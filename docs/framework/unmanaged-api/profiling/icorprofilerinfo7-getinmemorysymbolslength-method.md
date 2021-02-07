@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ICorProfilerInfo7:: GetInMemorySymbolsLength yöntemi'
 title: 'ICorProfilerInfo7:: GetInMemorySymbolsLength yöntemi'
 ms.date: 03/30/2017
 api_name:
@@ -9,12 +10,12 @@ api_location:
 api_type:
 - COM
 ms.assetid: d62c4a4c-8a62-45aa-8f01-a8387cf36159
-ms.openlocfilehash: 46ffa5cb4fac6988240d32cb1939cc25bdf0a412
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5d96b17e8abbd023f2d050eff3f121a871a94754
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686078"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99737122"
 ---
 # <a name="icorprofilerinfo7getinmemorysymbolslength-method"></a>ICorProfilerInfo7:: GetInMemorySymbolsLength yöntemi
 
@@ -22,7 +23,7 @@ ms.locfileid: "95686078"
   
  Bellek içi sembol akışının uzunluğunu döndürür.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetInMemorySymbolsLength(  

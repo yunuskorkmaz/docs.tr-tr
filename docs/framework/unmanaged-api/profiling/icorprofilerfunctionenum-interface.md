@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerFunctionEnum arabirimi hakkında daha fazla bilgi edinin'
 title: ICorProfilerFunctionEnum Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0a1d4a38-cd0b-4231-91df-13646218ae72
 topic_type:
 - apiref
-ms.openlocfilehash: 84c3b504dff8a04172dde903c1681c9f3fb2fcd2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0a9437ee1f5c481c2c2d1fd46361da6e938dd179
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95669243"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99737603"
 ---
 # <a name="icorprofilerfunctionenum-interface"></a>ICorProfilerFunctionEnum Arabirimi
 

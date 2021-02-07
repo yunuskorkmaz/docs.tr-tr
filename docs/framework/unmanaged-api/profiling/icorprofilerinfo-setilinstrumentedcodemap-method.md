@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerInfo:: Setilınstrumentedcodemap yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerInfo::SetILInstrumentedCodeMap Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bce1dcf8-b4ec-4e73-a917-f2df1ad49c8a
 topic_type:
 - apiref
-ms.openlocfilehash: cac8e9570dab55af6b6e1fcf6f53b6a697727972
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 0cf3b4ccf31076c2d1ea2df581003e3a07f0e795
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502918"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99737356"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap Yöntemi
 
@@ -29,7 +30,7 @@ Belirtilen Microsoft ara dili (MSIL) eşleme girdilerini kullanarak belirtilen i
 > [!NOTE]
 > .NET Framework sürüm 2,0 ' de, `SetILInstrumentedCodeMap` `FunctionID` belirli bir uygulama etki alanında genel bir işlevi temsil eden bir üzerinde çağırmak, uygulama etki alanındaki bu işlevin tüm örneklerini etkiler.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 HRESULT SetILInstrumentedCodeMap(
@@ -55,7 +56,7 @@ HRESULT SetILInstrumentedCodeMap(
 
 ## <a name="remarks"></a>Açıklamalar
 
-Profil Oluşturucu genellikle bu yöntemi işaretlemek için (örneğin, belirli bir kaynak satırına ulaşıldığında bildirmek üzere) bir yöntemin kaynak koduna deyimler ekler. `SetILInstrumentedCodeMap`profil oluşturucunun özgün MSIL talimatlarını yeni konumlarına eşlemesine olanak sağlar. Bir profil oluşturucu, belirli bir yerel kenar için özgün MSIL sapmasını almak üzere [ICorProfilerInfo:: GetILToNativeMapping](icorprofilerinfo-getiltonativemapping-method.md) metodunu kullanabilir.
+Profil Oluşturucu genellikle bu yöntemi işaretlemek için (örneğin, belirli bir kaynak satırına ulaşıldığında bildirmek üzere) bir yöntemin kaynak koduna deyimler ekler. `SetILInstrumentedCodeMap` profil oluşturucunun özgün MSIL talimatlarını yeni konumlarına eşlemesine olanak sağlar. Bir profil oluşturucu, belirli bir yerel kenar için özgün MSIL sapmasını almak üzere [ICorProfilerInfo:: GetILToNativeMapping](icorprofilerinfo-getiltonativemapping-method.md) metodunu kullanabilir.
 
 Hata ayıklayıcı, her bir eski kaydırın orijinal, değiştirilmemiş MSIL kodu içindeki bir MSIL denkleşeceğini ve her yeni kaydırın yeni, belgelenmiş koddaki MSIL denkleşeceğini varsayacaktır. Haritanın artan sırada sıralanması gerekir. Adımlamayı düzgün şekilde çalışmak için aşağıdaki yönergeleri izleyin:
 

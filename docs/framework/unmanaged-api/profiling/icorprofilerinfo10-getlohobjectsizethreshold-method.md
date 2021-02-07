@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerInfo10:: GetLOHObjectSizeThreshold yöntemi hakkında daha fazla bilgi edinin'
 title: 'ICorProfilerInfo10:: GetLOHObjectSizeThreshold'
 ms.date: 08/06/2019
 dev_langs:
@@ -11,18 +12,18 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 280f0a401f87f81e1ef9d4a2c85c06599442b5ec
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 665a08ae226f04d5282b9584932078736751d5d0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543952"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99737317"
 ---
 # <a name="icorprofilerinfo10getlohobjectsizethreshold-method"></a>ICorProfilerInfo10:: GetLOHObjectSizeThreshold yöntemi
 
 Yapılandırılmış büyük nesne yığını (LOH) eşiğinin değerini alır.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 HRESULT GetLOHObjectSizeThreshold( [out] DWORD *pThreshold );

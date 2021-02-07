@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerFunctionEnum:: Clone yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerFunctionEnum::Clone Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 0c3d4835-e111-4e82-af6d-53f140b8f2c9
 topic_type:
 - apiref
-ms.openlocfilehash: 092c3b328887b7d36ead77c64d31310b614b616a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6cadadd98f64a27de0cd4e7d264fe797d22c33a0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95707535"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99737681"
 ---
 # <a name="icorprofilerfunctionenumclone-method"></a>ICorProfilerFunctionEnum::Clone Yöntemi
 
 Bu [ICorProfilerFunctionEnum](icorprofilerfunctionenum-interface.md) arabiriminin bir kopyasına bir arabirim işaretçisi alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT Clone([out] ICorProfilerFunctionEnum **ppEnum);  

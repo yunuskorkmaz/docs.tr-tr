@@ -1,19 +1,20 @@
 ---
+description: 'Daha fazla bilgi edinin: ıcorprofilerınfo6:: Enumngenmodulemethodsınliningthismethod yöntemi'
 title: ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod Yöntemi
 ms.date: 03/30/2017
 ms.assetid: b933dfe6-7833-40cb-aad8-40842dc3034f
-ms.openlocfilehash: 8ed3f305deceacb976aeff994db1588f9e1ce1fb
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: bd43dcecabe9a75f7ce3a94996727b192574e321
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84495534"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99737174"
 ---
 # <a name="icorprofilerinfo6enumngenmodulemethodsinliningthismethod-method"></a>ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod Yöntemi
 
 Belirli bir NGen modülünde tanımlanan tüm yöntemlere bir Numaralandırıcı ve satır içi verilen bir yöntemi döndürür.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 HRESULT EnumNgenModuleMethodsInliningThisMethod(
@@ -37,14 +38,14 @@ HRESULT EnumNgenModuleMethodsInliningThisMethod(
 'ndaki Satır içine alınan metodun tanımlayıcısı. Daha fazla bilgi için Açıklamalar bölümüne bakın.
 
 `incompleteData`\
-dışı `ppEnum`Tüm yöntemlerin belirli bir yöntemi içerip içermediğini gösteren bir bayrak.  Daha fazla bilgi için Açıklamalar bölümüne bakın.
+dışı `ppEnum` Tüm yöntemlerin belirli bir yöntemi içerip içermediğini gösteren bir bayrak.  Daha fazla bilgi için Açıklamalar bölümüne bakın.
 
 `ppEnum`\
 dışı Numaralandırıcı adresine yönelik bir işaretçi
 
 ## <a name="remarks"></a>Açıklamalar
 
-`inlineeModuleId`ve `inlineeMethodId` birlikte, satır içine alınmış olabilecek yöntemin tam tanımlayıcısını oluşturur. Örneğin, modülün `A` bir yöntemi tanımladığını varsayın `Simple.Add` :
+`inlineeModuleId` ve `inlineeMethodId` birlikte, satır içine alınmış olabilecek yöntemin tam tanımlayıcısını oluşturur. Örneğin, modülün `A` bir yöntemi tanımladığını varsayın `Simple.Add` :
 
 ```csharp
 Simple.Add(int a, int b)
@@ -58,7 +59,7 @@ Fancy.AddTwice(int a, int b)
 { return Simple.Add(a,b) + Simple.Add(a,b); }
 ```
 
-Ayrıca `Fancy.AddTwice` , çağrının Inlines olduğunu varsaymaktadır `SimpleAdd` . Profil Oluşturucu, satır içi olarak B modülünde tanımlanan tüm yöntemleri bulmak için bu numaralandırıcısı kullanabilir `Simple.Add` ve sonuç numaralandırılırdı `AddTwice` .  `inlineeModuleId`, modülünün tanımlayıcısıdır `A` ve `inlineeMethodId` tanıtıcıdır `Simple.Add(int a, int b)` .
+Ayrıca `Fancy.AddTwice` , çağrının Inlines olduğunu varsaymaktadır `SimpleAdd` . Profil Oluşturucu, satır içi olarak B modülünde tanımlanan tüm yöntemleri bulmak için bu numaralandırıcısı kullanabilir `Simple.Add` ve sonuç numaralandırılırdı `AddTwice` .  `inlineeModuleId` , modülünün tanımlayıcısıdır `A` ve `inlineeMethodId` tanıtıcıdır `Simple.Add(int a, int b)` .
 
 `incompleteData`İşlev çağrıldıktan sonra true ise, Numaralandırıcı belirli bir yöntemi geçersiz kılma tüm yöntemleri içermez. Bu durum, bir veya daha fazla ınliners modülünün doğrudan veya dolaylı bağımlılıkları henüz yüklenmediği zaman gerçekleşebilir. Bir profil oluşturucunun doğru verilere ihtiyacı varsa daha sonra, tercihen her modül yükünde daha fazla modül yüklendiğinde yeniden denenmelidir.
 
