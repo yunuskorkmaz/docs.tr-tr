@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: barındırma Iş akışı hizmetleri'
 title: İş Akışı Hizmetlerini Barındırma
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-ms.openlocfilehash: 3bd45575e06ba742b0e6c43766c5e80dff47c03b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8d7d5bbc8b084ac74e51fe3906fd5eef13b5ea09
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96256007"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99743011"
 ---
 # <a name="hosting-workflow-services"></a>İş Akışı Hizmetlerini Barındırma
 

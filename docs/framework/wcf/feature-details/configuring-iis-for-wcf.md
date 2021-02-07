@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Windows Communication Foundation için Internet Information Services 7,0 yapılandırma'
 title: Windows Communication Foundation için Internet Information Services 7.0'ı Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: 1050d395-092e-44d3-b4ba-66be3b039ffb
-ms.openlocfilehash: 865e19d6626846481347274774d3ea59f2f7ecdd
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e76918d70a922cb32c9bbacd5779aa4f8e991b2c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96284218"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99743271"
 ---
 # <a name="configuring-internet-information-services-70-for-windows-communication-foundation"></a>Windows Communication Foundation için Internet Information Services 7.0'ı Yapılandırma
 

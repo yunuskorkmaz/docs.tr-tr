@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: nasıl yapılır: çift yönlü sözleşme ile hizmetlere erişme'
 title: 'Nasıl yapılır: çift yönlü sözleşme ile hizmetlere erişme'
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 746a9d64-f21c-426c-b85d-972e916ec6c5
-ms.openlocfilehash: bc42792b827b49265a0b1addf959de2fa1a041e3
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e58225e6b77115004c3c201d606e328aab184b75
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597221"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99742894"
 ---
 # <a name="how-to-access-services-with-a-duplex-contract"></a>Nasıl yapılır: çift yönlü sözleşme ile hizmetlere erişme
 
@@ -28,7 +29,7 @@ Temel bir WCF hizmeti ve istemcisi oluşturmaya yönelik bir öğretici için bk
 
 2. Hizmeti çalıştırın.
 
-3. İstemci için sözleşmeler (arabirimler) oluşturmak üzere [ServiceModel meta veri yardımcı programı aracını (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) kullanın. Bunun nasıl yapılacağı hakkında bilgi için bkz. [nasıl yapılır: Istemci oluşturma](../how-to-create-a-wcf-client.md).
+3. İstemci için sözleşmeler (arabirimler) oluşturmak üzere [ServiceModel meta veri yardımcı programı aracını (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) kullanın. Bunun nasıl yapılacağı hakkında bilgi için bkz.  [nasıl yapılır: Istemci oluşturma](../how-to-create-a-wcf-client.md).
 
 4. Aşağıdaki örnekte gösterildiği gibi, istemci sınıfında geri çağırma arabirimini uygulayın.
 

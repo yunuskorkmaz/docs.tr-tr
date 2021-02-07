@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: ASP.NET Web hizmetlerini, kullanılan amaca ve standartlara göre WCF ile karşılaştırma'
 title: ASP.NET Web Hizmetlerini Amaç ve Kullanılan Standartları Temel Alarak WCF ile Karşılaştırma
 ms.date: 03/30/2017
 ms.assetid: d3890278-fa9b-4902-91ea-8da73b7143cc
-ms.openlocfilehash: 62917d7a188d0863f6ebcb7dd3531ef2dd6a5132
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: debc20f3ab3e8e9f83641eaa7d3b52dabe82055c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96295073"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99743453"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used"></a>ASP.NET Web Hizmetlerini Amaç ve Kullanılan Standartları Temel Alarak WCF ile Karşılaştırma
 

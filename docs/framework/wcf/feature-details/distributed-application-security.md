@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: dağıtılmış uygulama güvenliği'
 title: Dağıtılan Uygulama Güvenliği
 ms.date: 03/30/2017
 helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: 80878857145c7a4e09106b6e1c4cb9ad68b7680a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 79e206157e7bb0a242b66064d345038d4272cf3b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96254252"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99743167"
 ---
 # <a name="distributed-application-security"></a>Dağıtılan Uygulama Güvenliği
 

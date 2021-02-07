@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: COM+ ve ServiceModel Işlemlerini karşılaştırma'
 title: COM+ ve ServiceModel İşlemlerini Karşılaştırma
 ms.date: 03/30/2017
 ms.assetid: e493bcdd-b91a-4486-853f-83dbcd1931b7
-ms.openlocfilehash: 30ecbd374e909141dbc944740f90c1b41ac44ed2
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9b4e8e0940297e887ec9a3085ebe521afe4d000d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96264914"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99743427"
 ---
 # <a name="comparing-transactions-in-com-and-servicemodel"></a>COM+ ve ServiceModel İşlemlerini Karşılaştırma
 

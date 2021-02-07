@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: bir Iş akışı uygulamasından bir hizmete erişme'
 title: 'Nasıl yapılır: Bir İş Akışı Uygulamasından Bir Hizmete Erişme'
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-ms.openlocfilehash: 13fae7dec3026e96e3c196467da29fe768a3655f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f8972bf7755c0103d164633d53d8d32508ce2efe
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257938"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99743102"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>Nasıl yapılır: Bir İş Akışı Uygulamasından Bir Hizmete Erişme
 
@@ -27,11 +28,11 @@ Bu konu, bir iş akışı konsol uygulamasından bir iş akışı hizmetinin nas
 
 4. Proje oluşturulduktan sonra, Workflow1. xaml dosyası tasarımcıda açılır. **Araç kutusu sekmesine tıklayarak** araç kutusunu açın ve araç kutusu penceresini açık tutmak için raptiye ' ye tıklayın.
 
-5. **Ctrl** + Hizmeti derlemek ve başlatmak için CTRL **F5** tuşuna basın. Daha önce olduğu gibi, ASP.NET Development Server başlatılır ve Internet Explorer, WCF Yardım sayfasını görüntüler. Sonraki adımda kullanmanız gereken bu sayfanın URI 'sine dikkat edin.
+5.  + Hizmeti derlemek ve başlatmak için CTRL **F5** tuşuna basın. Daha önce olduğu gibi, ASP.NET Development Server başlatılır ve Internet Explorer, WCF Yardım sayfasını görüntüler. Sonraki adımda kullanmanız gereken bu sayfanın URI 'sine dikkat edin.
 
      ![WCF Yardım sayfasını ve URI 'yi görüntüleyen IE](./media/how-to-access-a-service-from-a-workflow-application/ie-wcf-help-page-uri.jpg)
 
-6. **Çözüm Gezgini** **MyWFClient** projesine sağ tıklayın ve **Add**  >  **hizmet başvurusu** Ekle ' yi seçin. Tüm hizmetlerde geçerli çözümü aramak için **bul** düğmesine tıklayın. Hizmetler listesinde Service1. xamlx yanındaki üçgeni tıklatın. Service1 hizmeti tarafından uygulanan sözleşmeleri listelemek için Service1 ' ın yanındaki üçgeni tıklatın. **Hizmetler** listesinde **Service1** düğümünü genişletin. Yankı işlemi, aşağıdaki çizimde gösterildiği gibi **işlemler** listesinde görüntülenir.
+6. **Çözüm Gezgini** **MyWFClient** projesine sağ tıklayın ve   >  **hizmet başvurusu** Ekle ' yi seçin. Tüm hizmetlerde geçerli çözümü aramak için **bul** düğmesine tıklayın. Hizmetler listesinde Service1. xamlx yanındaki üçgeni tıklatın. Service1 hizmeti tarafından uygulanan sözleşmeleri listelemek için Service1 ' ın yanındaki üçgeni tıklatın. **Hizmetler** listesinde **Service1** düğümünü genişletin. Yankı işlemi, aşağıdaki çizimde gösterildiği gibi **işlemler** listesinde görüntülenir.
 
      ![Hizmet Başvurusu Ekle Iletişim kutusu](./media/how-to-access-a-service-from-a-workflow-application/add-service-reference.jpg)
 
@@ -53,7 +54,7 @@ Bu konu, bir iş akışı konsol uygulamasından bir iş akışı hizmetinin nas
 
      ![Bağımsız değişkenleri değişkenlere bağlama](./media/how-to-access-a-service-from-a-workflow-application/bind-arguments-variables.jpg)
 
-10. Hizmet çağrısının döndürdüğü dizeyi göstermek için **echo** etkinliğinin altına bir **WriteLine** etkinliği sürükleyip bırakın. **WriteLine** etkinliği araç kutusundaki **temel öğeler** düğümünde bulunur. WriteLine etkinliğinin **metin** bağımsız değişkenini **WriteLine** `outString` `outString` **WriteLine** etkinliğinin metin kutusuna yazarak değişkenine bağlayın. İş akışı şimdi aşağıdaki çizimde gösterildiği gibi görünmelidir.
+10. Hizmet çağrısının döndürdüğü dizeyi göstermek için **echo** etkinliğinin altına bir **WriteLine** etkinliği sürükleyip bırakın. **WriteLine** etkinliği araç kutusundaki **temel öğeler** düğümünde bulunur. WriteLine etkinliğinin **metin** bağımsız değişkenini  `outString` `outString` **WriteLine** etkinliğinin metin kutusuna yazarak değişkenine bağlayın. İş akışı şimdi aşağıdaki çizimde gösterildiği gibi görünmelidir.
 
      ![Tüm istemci iş akışı](./media/how-to-access-a-service-from-a-workflow-application/complete-client-workflow.jpg)
 

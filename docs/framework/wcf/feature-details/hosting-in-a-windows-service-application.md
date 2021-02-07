@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Windows hizmet uygulamasında barındırma'
 title: Windows Hizmet Uygulamasında Barındırma
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-ms.openlocfilehash: 9f5c78adad34b5fed53a50e85f0361eef469de99
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 702fe95b14b9bce3ffaa774e17a9fc1293717e66
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96243078"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99743128"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Windows Hizmet Uygulamasında Barındırma
 

@@ -1,15 +1,16 @@
 ---
+description: Hakkında daha fazla bilgi edinin Internet Information Services
 title: Internet Information Services'te Barındırma
 ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: 7bfdf2b057c791da7e15619d69c0314557944093
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 23c81bcfccba316500d333d277907d66e5d457c7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555841"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99743141"
 ---
 # <a name="host-in-internet-information-services"></a>Internet Information Services 'de barındırma
 
@@ -55,7 +56,7 @@ IIS tarafından barındırılan bir WCF hizmetini geliştirme ve dağıtma aşa�
 
 - WCF hizmetini yapılandırın.
 
-Bu görevlerin her biri hakkında bir tartışma için bkz. [Internet Information Services barındırılan BIR WCF hizmetini dağıtma](deploying-an-internet-information-services-hosted-wcf-service.md).
+Bu görevlerin her biri hakkında bir tartışma için bkz. [Internet ınformation Services-Hosted WCF hizmeti dağıtma](deploying-an-internet-information-services-hosted-wcf-service.md).
 
 ## <a name="wcf-services-and-aspnet"></a>WCF Hizmetleri ve ASP.NET
 
