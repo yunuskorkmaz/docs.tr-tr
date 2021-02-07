@@ -1,13 +1,14 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: .NET Framework 3,0 WF etkinliklerini birlikte çalışabilirlik etkinliğiyle .NET Framework 4 ' te kullanma"
 title: .NET Framework 4’te Birlikte Çalışma Etkinliği ile .NET Framework 3.0 WF Etkinlikleri Kullanma
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
-ms.openlocfilehash: 69b3a49f96de4f955b16225864be3ee46b168356
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8a91e9488b9885682d2d46f7b6afd512700157d9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96268631"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99720117"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>.NET Framework 4’te Birlikte Çalışma Etkinliği ile .NET Framework 3.0 WF Etkinlikleri Kullanma
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - rules, security
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: e907905b065d786fc8b3c370fb2d2e2b19e62a2b
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: 861827662a771ec7cc1827cdd8125be6c05bf05c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "96590021"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719727"
 ---
 # <a name="security-rules"></a>Güvenlik kuralları
 
@@ -25,7 +25,7 @@ Güvenlik kuralları, daha güvenli kitaplıkları ve uygulamaları destekler. B
 
 ## <a name="in-this-section"></a>Bu bölümde
 
-|Kural|Açıklama|
+|Kural|Description|
 |----------|-----------------|
 |[CA2100: SQL sorgularını güvenlik açıkları için inceleyin](ca2100.md)|Bir yöntem, yönteme dize değişkeninden oluşturulmuş dize kullanarak System.Data.IDbCommand.CommandText özelliğini ayarlar. Bu kural, dize değişkeninin kullanıcı girişi içerdiğini varsayar. Kullanıcı girişi ile oluşan SQL komut dizesi, SQL enjeksiyon saldırılarına karşı savunmasız durumdadır.|
 |[CA2109: Görünen olay işleyicilerini gözden geçirin](ca2109.md)|Ortak veya korunan olay işleme yöntemi algılandı. Olay işleme yöntemleri kesinlikle gerekli olmadığı sürece maruz bırakılmamalıdır.|
@@ -93,7 +93,7 @@ Güvenlik kuralları, daha güvenli kitaplıkları ve uygulamaları destekler. B
 |[CA5375: Hesabın paylaşılan erişim imzasını kullanmayın](ca5375.md)|Hesap SAS, bir hizmet SAS 'si ile izin verilmeyen blob kapsayıcıları, tablolar, kuyruklar ve dosya paylaşımları üzerinde okuma, yazma ve silme işlemlerine erişim yetkisi verebilir. Ancak kapsayıcı düzeyindeki ilkeleri desteklemez ve verilen izinler üzerinde daha az esneklik ve denetim sağlar. Kötü amaçlı kullanıcılar bu uygulamayı aldıktan sonra, depolama hesabınızın güvenliği tehlikeye alınacaktır.|
 |[CA5376: SharedAccessProtocol HttpsOnly kullanın](ca5376.md)|SAS, HTTP üzerinde düz metin olarak aktarılamaz gizli veriler.|
 |[CA5377: Kapsayıcı düzeyinde erişim ilkesi kullan](ca5377.md)|Kapsayıcı düzeyinde erişim ilkesi herhangi bir zamanda değiştirilebilir veya iptal edilebilir. Verilen izinler üzerinde daha fazla esneklik ve denetim sağlar.|
-|[CA5378: ServicePointManagerSecurityProtocols'u Devre Dışı Bırakma](ca5378.md)|`Switch.System.ServiceModel.DisableUsingServicePointManagerSecurityProtocols` `true` Windows Communication Framework 'ÜN (WCF) aktarım katmanı GÜVENLIĞI (TLS) bağlantılarını TLS 1,0 ile sınırlayan şekilde ayarlama. Bu TLS sürümü kullanım dışı olacaktır.|
+|[CA5378: ServicePointManagerSecurityProtocols'u Devre Dışı Bırakma](ca5378.md)|`DisableUsingServicePointManagerSecurityProtocols` `true` Windows Communication Framework 'ÜN (WCF) aktarım katmanı GÜVENLIĞI (TLS) bağlantılarını TLS 1,0 ile sınırlayan şekilde ayarlama. Bu TLS sürümü kullanım dışı olacaktır.|
 |[CA5379: anahtar türetme işlev algoritmasının yeterince güçlü olduğundan emin olun](ca5379.md)|<xref:System.Security.Cryptography.Rfc2898DeriveBytes>Sınıfı, algoritmayı kullanmak için varsayılan değer <xref:System.Security.Cryptography.HashAlgorithmName.SHA1> . Ya da daha yüksek bir oluşturucunun bazı yüklerini kullanmak için karma algoritmasını belirtmeniz gerekir <xref:System.Security.Cryptography.HashAlgorithmName.SHA256> . , <xref:System.Security.Cryptography.Rfc2898DeriveBytes.HashAlgorithm> Özelliği yalnızca bir `get` erişimciye sahiptir ve `overriden` değiştiriciye sahip değildir.|
 |[CA5380: Kök depoya sertifika eklemeyin](ca5380.md)|Bu kural, güvenilen kök sertifika yetkilileri sertifika deposuna bir sertifika ekleyen kodu algılar. Varsayılan olarak, güvenilen kök sertifika yetkilileri sertifika deposu, Microsoft kök sertifika programı gereksinimlerini karşılayan bir dizi genel CA ile yapılandırılır.|
 |[CA5381: Sertifikaların kök depoya eklenmemiş olduğundan emin olun](ca5381.md)|Bu kural, güvenilen kök sertifika yetkilileri sertifika deposuna potansiyel olarak bir sertifika ekleyen kodu algılar. Varsayılan olarak, güvenilen kök sertifika yetkilileri sertifika deposu, Microsoft kök sertifika programı gereksinimlerini karşılayan bir dizi ortak sertifika yetkilisi (CA) ile yapılandırılır.|

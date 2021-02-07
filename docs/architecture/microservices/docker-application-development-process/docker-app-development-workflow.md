@@ -1,13 +1,13 @@
 ---
 title: Docker uygulamaları için geliştirme iş akışı
 description: Docker tabanlı uygulamalar geliştirmeye yönelik iş akışının ayrıntılarını anlayın. Adım adım ilerleyin ve Dockerfiles 'ı iyileştirmek ve Visual Studio 'Yu kullanırken kullanılabilecek Basitleştirilmiş iş akışıyla sona erdirmek için bazı ayrıntılara ulaşın.
-ms.date: 01/13/2021
-ms.openlocfilehash: fff0a59bb6001eeb50c31c68bfeceeb71c439223
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.date: 02/02/2021
+ms.openlocfilehash: 678ff76575c70a253fbb06253fadb2f721f16831
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189556"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719985"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker uygulamaları için geliştirme iş akışı
 
@@ -53,7 +53,7 @@ Başlamak için, aşağıdaki yönergelerde açıklandığı gibi Windows için 
 
 [Docker CE for Windows kullanmaya başlayın](https://docs.docker.com/docker-for-windows/)
 
-Ayrıca, Şekil 5-2 ' de gösterildiği gibi, **.NET Core platformlar arası geliştirme** iş yükü yüklüyken Visual Studio 2019 sürüm 16,4 veya üzeri bir sürüme ihtiyacınız vardır.
+Ayrıca, Şekil 5-2 ' de gösterildiği gibi, **.NET Core platformlar arası geliştirme** iş yükü yüklüyken Visual Studio 2019 sürüm 16,8 gerekir.
 
 ![.NET Core platformlar arası geliştirme seçiminin ekran görüntüsü.](./media/docker-app-development-workflow/dotnet-core-cross-platform-development.png)
 
@@ -132,7 +132,7 @@ Kullanmakta olduğunuz dile ve çerçeveye bağlı olarak Dockerfile içinde ek 
 
 ### <a name="using-multi-arch-image-repositories"></a>Multi-Arch Image depoları kullanma
 
-Tek bir depo, Linux görüntüsü ve Windows görüntüsü gibi platform türevlerini içerebilir. Bu özellik, Microsoft (temel görüntü oluşturucuları) gibi satıcıların birden çok platformu (Linux ve Windows) kapsayan tek bir depoyu oluşturmalarına olanak tanır. Örneğin, Docker Hub kayıt defterinde bulunan [DotNet/Core](https://hub.docker.com/_/microsoft-dotnet/) deposu, aynı depo adını kullanarak Linux ve Windows nano sunucu desteği sağlar.
+Tek bir depo, Linux görüntüsü ve Windows görüntüsü gibi platform türevlerini içerebilir. Bu özellik, Microsoft (temel görüntü oluşturucuları) gibi satıcıların birden çok platformu (Linux ve Windows) kapsayan tek bir depoyu oluşturmalarına olanak tanır. Örneğin, Docker Hub kayıt defterinde bulunan [.net](https://hub.docker.com/_/microsoft-dotnet/) deposu, aynı depo adı kullanılarak Linux ve Windows nano Server için destek sağlar.
 
 Bir etiketi belirtirseniz, aşağıdaki durumlarda açık olan bir platformu hedefliyorsanız:
 
@@ -506,7 +506,7 @@ Docker-Compose ve Docker çalıştırma komutları (ya da Visual Studio 'da kaps
 
 ## <a name="step-6-test-your-docker-application-using-your-local-docker-host"></a>6. Adım. Yerel Docker konağını kullanarak Docker uygulamanızı test etme
 
-Bu adım, uygulamanızın yaptığı işe göre farklılık gösterir. Tek bir kapsayıcı veya hizmet olarak dağıtılan basit bir .NET Core Web uygulamasında, Şekil 5-13 ' de gösterildiği gibi, Docker ana bilgisayarında bir tarayıcı açarak ve bu siteye giderek hizmete erişebilirsiniz. (Dockerfile içindeki yapılandırma kapsayıcıyı 80 dışında bir şey olan konaktaki bir bağlantı noktasıyla eşleiyorsa, URL 'ye ana bilgisayar bağlantı noktasını ekleyin.)
+Bu adım, uygulamanızın yaptığı işe göre farklılık gösterir. Tek bir kapsayıcı veya hizmet olarak dağıtılan basit bir .NET Web uygulamasında, Şekil 5-13 ' de gösterildiği gibi, Docker ana bilgisayarında bir tarayıcı açarak ve bu siteye giderek hizmete erişebilirsiniz. (Dockerfile içindeki yapılandırma kapsayıcıyı 80 dışında bir şey olan konaktaki bir bağlantı noktasıyla eşleiyorsa, URL 'ye ana bilgisayar bağlantı noktasını ekleyin.)
 
 ![Localhost/API/Values yanıtının ekran görüntüsü.](./media/docker-app-development-workflow/test-docker-app-locally-localhost.png)
 
