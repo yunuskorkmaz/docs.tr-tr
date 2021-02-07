@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugRegisterSet:: Setyazmaçları yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugRegisterSet::SetRegisters Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ac6244b9-54ba-475f-b72a-abed6afc46ec
 topic_type:
 - apiref
-ms.openlocfilehash: 4be5d2d9d891010e68cd6eb96cd4456e04d8c8b0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7a83d9d01a392d7ed435292f45ee0c75765ced36
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95712293"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99690684"
 ---
 # <a name="icordebugregistersetsetregisters-method"></a>ICorDebugRegisterSet::SetRegisters Yöntemi
 

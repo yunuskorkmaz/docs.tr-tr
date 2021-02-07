@@ -1,4 +1,5 @@
 ---
+description: ': ICLRDomainManager:: SetPropertiesForDefaultAppDomain Yöntemi hakkında daha fazla bilgi edinin'
 title: ICLRDomainManager::SetPropertiesForDefaultAppDomain Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -13,18 +14,18 @@ helpviewer_keywords:
 - ICLRDomainManager::SetPropertiesForDefaultAppDomain method [.NET Framework hosting]
 - SetPropertiesForDefaultAppDomain method [.NET Framework hosting]
 ms.assetid: 43e61c4b-c435-45ec-9ef6-c68403aa4200
-ms.openlocfilehash: b5577d0444caf14fb47d9d7e2de60a8399378db7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 08e6c885d5d089fa22c30a4e3cef69480b840031
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95702140"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99689449"
 ---
 # <a name="iclrdomainmanagersetpropertiesfordefaultappdomain-method"></a>ICLRDomainManager::SetPropertiesForDefaultAppDomain Yöntemi
 
 Varsayılan uygulama etki alanını başlatmak için kullanılacak özellikleri ayarlar.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT SetPropertiesForDefaultAppDomain(  
@@ -49,7 +50,7 @@ HRESULT SetPropertiesForDefaultAppDomain(
 
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
 |HRESULT_FROM_WIN32 (ERROR_UNKNOWN_PROPERTY)|`pwszPropertyNames` Bu yöntem tarafından tanınmayan bir özellik adı içerir.|  

@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugReferenceValue::D ereference yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugReferenceValue::Dereference Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 5ec8cf76-3deb-4ce6-9a49-77a4c35d80b9
 topic_type:
 - apiref
-ms.openlocfilehash: cbcee923ecbb1106bb129f05d2e602a0fd17258d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: af225f746a9c67a90a7ad73046cd03401e4ba735
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732495"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99691113"
 ---
 # <a name="icordebugreferencevaluedereference-method"></a>ICorDebugReferenceValue::Dereference Yöntemi
 
 Başvurulan nesneyi alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT Dereference (  

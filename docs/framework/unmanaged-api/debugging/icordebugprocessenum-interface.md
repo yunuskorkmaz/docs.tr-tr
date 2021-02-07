@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugProcessEnum arabirimi hakkında daha fazla bilgi edinin'
 title: ICorDebugProcessEnum Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b63a507a-ca97-4be0-8e4f-401cce2125f6
 topic_type:
 - apiref
-ms.openlocfilehash: 31f26a40294857701b151cd2fce35b061da28238
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3bb70d2a826be84ecb680014efe5ed918d98e861
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732534"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99691217"
 ---
 # <a name="icordebugprocessenum-interface"></a>ICorDebugProcessEnum Arabirimi
 

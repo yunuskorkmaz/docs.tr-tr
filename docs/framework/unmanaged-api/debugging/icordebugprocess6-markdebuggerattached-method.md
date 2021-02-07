@@ -1,19 +1,20 @@
 ---
+description: 'Daha fazla bilgi edinin: ICorDebugProcess6:: Markdebuggerekli yöntemi'
 title: ICorDebugProcess6::MarkDebuggerAttached Yöntemi
 ms.date: 03/30/2017
 ms.assetid: bf94f090-5265-4112-8e57-5b4e20e070d0
-ms.openlocfilehash: c6543a89a375d4a2887dbe8cff56d66a15650811
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: adbe16049cea73ca5e797f7758a17902b33645c5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732599"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99691386"
 ---
 # <a name="icordebugprocess6markdebuggerattached-method"></a>ICorDebugProcess6::MarkDebuggerAttached Yöntemi
 
 <xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType>.NET Framework sınıf kitaplığındaki yöntemin döndürdüğü şekilde, hata ayıklayıcı 'nın iç durumunu değiştirir `true` .  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT MarkDebuggerAttached(  

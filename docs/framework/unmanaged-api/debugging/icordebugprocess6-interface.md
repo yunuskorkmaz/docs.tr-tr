@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: ICorDebugProcess6 Interface'
 title: ICorDebugProcess6 Arabirimi
 ms.date: 03/30/2017
 ms.assetid: 34a10ac2-882c-4797-8369-f120e8e640c7
-ms.openlocfilehash: ba70bab28eeddad6e3cf3c2b82b196a69ce68647
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f303670d0667a80507bc623f9af037759fdde463
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732612"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99691464"
 ---
 # <a name="icordebugprocess6-interface"></a>ICorDebugProcess6 Arabirimi
 

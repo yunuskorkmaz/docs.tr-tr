@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ıvmunmanagedconstant:: GetName Yöntemi'
 title: ISymUnmanagedConstant::GetName Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: cbaca4e1-4473-459b-ba34-f1f59ce7c0ba
 topic_type:
 - apiref
-ms.openlocfilehash: fca7b11a83b5a695feae82fe5f25218f87afbce2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 57531711ed60c9e35e749a3cb1f1ba5d5c48ca66
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732898"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99689826"
 ---
 # <a name="isymunmanagedconstantgetname-method"></a>ISymUnmanagedConstant::GetName Yöntemi
 
 Sabitin adını alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetName(  
@@ -59,4 +60,4 @@ HRESULT GetName(
 
 - [ISymUnmanagedConstant Arabirimi](isymunmanagedconstant-interface.md)
 - [GetSignature Metodu](isymunmanagedconstant-getsignature-method.md)
-- [GetValue Metodu](isymunmanagedconstant-getvalue-method.md)
+- [GetValue Yöntemi](isymunmanagedconstant-getvalue-method.md)

@@ -1,4 +1,5 @@
 ---
+description: ': ICLRAssemblyIdentityManager:: GetBindingIdentityFromFile Yöntemi hakkında daha fazla bilgi edinin'
 title: ICLRAssemblyIdentityManager::GetBindingIdentityFromFile Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 7797562d-7b4c-4bd9-8b93-f35e0e2869e4
 topic_type:
 - apiref
-ms.openlocfilehash: 443acfa77dc8103008263f19bed116d02e7ea676
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 82e72155b38f71fe2c024994f07178638095be9a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95716752"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99689556"
 ---
 # <a name="iclrassemblyidentitymanagergetbindingidentityfromfile-method"></a>ICLRAssemblyIdentityManager::GetBindingIdentityFromFile Yöntemi
 
 Belirtilen dosya yolundaki derleme için derleme kimliği bağlama verilerini alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetBindingIdentityFromFile(  
@@ -53,7 +54,7 @@ HRESULT GetBindingIdentityFromFile(
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|Yöntem başarıyla döndürüldü.|  
 |E_INVALIDARG|Sağlanan `pwzFilePath` değer null.|  

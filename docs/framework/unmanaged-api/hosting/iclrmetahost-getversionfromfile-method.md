@@ -1,4 +1,5 @@
 ---
+description: ': ICLRMetaHost:: GetVersionFromFile yöntemi hakkında daha fazla bilgi edinin'
 title: ICLRMetaHost::GetVersionFromFile Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 55bb3eb4-f665-42fc-973c-465567570e82
 topic_type:
 - apiref
-ms.openlocfilehash: f5e0ead41ebd13c259c24fa0c02bcc9a3b33e0fb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0122c4aba3b8454a84540b22e815c61a2cb25df8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95689452"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99689059"
 ---
 # <a name="iclrmetahostgetversionfromfile-method"></a>ICLRMetaHost::GetVersionFromFile Metodu
 
 Bir derlemenin özgün .NET Framework derleme sürümünü (meta verilerde depolanır), dosya yolu olarak alır. Bu yöntem, [GetFileVersion](getfileversion-function.md) işlevinin yerini alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetVersionFromFile (  
@@ -56,7 +57,7 @@ HRESULT GetVersionFromFile (
 
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
 |E_POINTER|`pwzbuffer` ya da `pcchBuffer` null.|  

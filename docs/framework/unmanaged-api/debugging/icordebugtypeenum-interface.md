@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugTypeEnum Arabirimi hakkında daha fazla bilgi'
 title: ICorDebugTypeEnum Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 159ccfcf-b37c-4ad9-8e0d-a9a443262472
 topic_type:
 - apiref
-ms.openlocfilehash: 620dbace00afe004454457b2d502461b80359add
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c0bf5c6a67b13b2fe29cb3551e287b2597a01aea
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725683"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99690736"
 ---
 # <a name="icordebugtypeenum-interface"></a>ICorDebugTypeEnum Arabirimi
 

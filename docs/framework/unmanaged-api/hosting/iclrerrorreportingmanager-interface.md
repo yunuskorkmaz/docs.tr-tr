@@ -1,4 +1,5 @@
 ---
+description: ': ICLRErrorReportingManager arabirimi hakkında daha fazla bilgi edinin'
 title: ICLRErrorReportingManager Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea8af0d5-4133-4472-8a1f-50570d7e85fa
 topic_type:
 - apiref
-ms.openlocfilehash: d3816c8a3b6204b053505aa888eb28d696f8990b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 094fe52858983fd0e1e5826e823932cb150b6087
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95677855"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99689280"
 ---
 # <a name="iclrerrorreportingmanager-interface"></a>ICLRErrorReportingManager Arabirimi
 

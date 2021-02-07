@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugRegisterSet arabirimi hakkında daha fazla bilgi edinin'
 title: ICorDebugRegisterSet Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d3d9676d-0b87-4bc3-b679-7bbc7a186c88
 topic_type:
 - apiref
-ms.openlocfilehash: 940810288b72be0d4dfc5366176663c22c369ebb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7d888e9e395e9f5fa88c6a6d96b2b8e3171ef4ac
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95712385"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99690788"
 ---
 # <a name="icordebugregisterset-interface"></a>ICorDebugRegisterSet Arabirimi
 

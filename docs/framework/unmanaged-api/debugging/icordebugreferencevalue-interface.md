@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ICorDebugReferenceValue arabirimi'
 title: ICorDebugReferenceValue Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2040e2be-119a-4cfb-ae52-b0b6f052665c
 topic_type:
 - apiref
-ms.openlocfilehash: 343e504e086e740236d7b5977452cc0d789883fc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e516b1178b4f4268472dedd37d6443e673e16af6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728413"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99690970"
 ---
 # <a name="icordebugreferencevalue-interface"></a>ICorDebugReferenceValue Arabirimi
 
@@ -31,7 +32,7 @@ Bir nesne başvurusu olan bir değeri yöneten yöntemler sağlar. (Diğer bir d
 |------------|-----------------|  
 |[Dereference Yöntemi](icordebugreferencevalue-dereference-method.md)|Başvurulan nesneyi alır.|  
 |[DereferenceStrong Yöntemi](icordebugreferencevalue-dereferencestrong-method.md)|Uygulanmaz. Bu yöntemi çağırmayın.|  
-|[GetValue Metodu](icordebugreferencevalue-getvalue-method.md)|Başvurulan nesnenin geçerli bellek adresini alır.|  
+|[GetValue Yöntemi](icordebugreferencevalue-getvalue-method.md)|Başvurulan nesnenin geçerli bellek adresini alır.|  
 |[IsNull Yöntemi](icordebugreferencevalue-isnull-method.md)|Bunun null bir değer olup olmadığını belirten bir değer alır `ICorDebugReferenceValue` , bu durumda `ICorDebugReferenceValue` bir nesneyi işaret etmez.|  
 |[SetValue Yöntemi](icordebugreferencevalue-setvalue-method.md)|Geçerli bellek adresini ayarlar. Diğer bir deyişle, bu yöntem bunu `ICorDebugReferenceValue` bir nesnesine işaret etmek üzere ayarlar.|  
   

@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugValue arabirimi hakkında daha fazla bilgi edinin'
 title: ICorDebugValue Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b2f7007f-c446-4b18-aed1-a25cff8aee31
 topic_type:
 - apiref
-ms.openlocfilehash: 7d3c35ed6cda637e3b885afe089ddfa590d51076
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cae8fdef5c1c49cbabc25d3d547cb5748a9eeee1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95683621"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99690322"
 ---
 # <a name="icordebugvalue-interface"></a>ICorDebugValue Arabirimi
 
