@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ırivmunmanagedsymbolsearchınfo:: GetSearchPath yöntemi'
 title: ISymUnmanagedSymbolSearchInfo::GetSearchPath Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,37 +16,37 @@ helpviewer_keywords:
 ms.assetid: b588d470-53c2-4492-be8c-957323eaca0b
 topic_type:
 - apiref
-ms.openlocfilehash: eda8a7ff1d8b3031173bf5f73a8b8a8355e6a62c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2ae85733ccca8ac63fbca5d2556026221e5681bb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705533"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99763039"
 ---
-# <a name="isymunmanagedsymbolsearchinfogetsearchpath-method"></a><span data-ttu-id="1e652-102">ISymUnmanagedSymbolSearchInfo::GetSearchPath Yöntemi</span><span class="sxs-lookup"><span data-stu-id="1e652-102">ISymUnmanagedSymbolSearchInfo::GetSearchPath Method</span></span>
+# <a name="isymunmanagedsymbolsearchinfogetsearchpath-method"></a><span data-ttu-id="6ffff-103">ISymUnmanagedSymbolSearchInfo::GetSearchPath Yöntemi</span><span class="sxs-lookup"><span data-stu-id="6ffff-103">ISymUnmanagedSymbolSearchInfo::GetSearchPath Method</span></span>
 
-<span data-ttu-id="1e652-103">Arama yolunu alır.</span><span class="sxs-lookup"><span data-stu-id="1e652-103">Gets the search path.</span></span>  
+<span data-ttu-id="6ffff-104">Arama yolunu alır.</span><span class="sxs-lookup"><span data-stu-id="6ffff-104">Gets the search path.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1e652-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="1e652-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6ffff-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6ffff-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSearchPathLength(  
     [out] ULONG32 *pcchPath);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1e652-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="1e652-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6ffff-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="6ffff-106">Parameters</span></span>  
 
  `pcchPath`  
- <span data-ttu-id="1e652-106">dışı `ULONG32` Arama yolunu içermesi için gereken arabelleğin karakter cinsinden boyutunu alan bir işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="1e652-106">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the search path.</span></span>  
+ <span data-ttu-id="6ffff-107">dışı `ULONG32` Arama yolunu içermesi için gereken arabelleğin karakter cinsinden boyutunu alan bir işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="6ffff-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the search path.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="1e652-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="1e652-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="6ffff-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="6ffff-108">Return Value</span></span>  
 
- <span data-ttu-id="1e652-108">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="1e652-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+ <span data-ttu-id="6ffff-109">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="6ffff-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1e652-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="1e652-109">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6ffff-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="6ffff-110">Requirements</span></span>  
 
- <span data-ttu-id="1e652-110">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="1e652-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+ <span data-ttu-id="6ffff-111">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="6ffff-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1e652-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1e652-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6ffff-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6ffff-112">See also</span></span>
 
-- [<span data-ttu-id="1e652-112">ISymUnmanagedSymbolSearchInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="1e652-112">ISymUnmanagedSymbolSearchInfo Interface</span></span>](isymunmanagedsymbolsearchinfo-interface.md)
+- [<span data-ttu-id="6ffff-113">ISymUnmanagedSymbolSearchInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="6ffff-113">ISymUnmanagedSymbolSearchInfo Interface</span></span>](isymunmanagedsymbolsearchinfo-interface.md)

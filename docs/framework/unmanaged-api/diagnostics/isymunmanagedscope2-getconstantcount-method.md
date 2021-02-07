@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ISymUnmanagedScope2:: GetConstantCount yöntemi'
 title: ISymUnmanagedScope2::GetConstantCount Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,37 +16,37 @@ helpviewer_keywords:
 ms.assetid: 1e1f0be6-c4e8-4d6c-98cd-d5fa9f686e87
 topic_type:
 - apiref
-ms.openlocfilehash: 59f4d85f1d8f24724a2d7eef332ac3b3387b7c91
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e5b084edb116432aa43360db72ca2528dd3cc6a3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725865"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99763260"
 ---
-# <a name="isymunmanagedscope2getconstantcount-method"></a><span data-ttu-id="98a17-102">ISymUnmanagedScope2::GetConstantCount Yöntemi</span><span class="sxs-lookup"><span data-stu-id="98a17-102">ISymUnmanagedScope2::GetConstantCount Method</span></span>
+# <a name="isymunmanagedscope2getconstantcount-method"></a><span data-ttu-id="0dcd5-103">ISymUnmanagedScope2::GetConstantCount Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0dcd5-103">ISymUnmanagedScope2::GetConstantCount Method</span></span>
 
-<span data-ttu-id="98a17-103">Bu kapsam içinde tanımlanan sabitlerin sayısını alır.</span><span class="sxs-lookup"><span data-stu-id="98a17-103">Gets a count of the constants defined within this scope.</span></span>  
+<span data-ttu-id="0dcd5-104">Bu kapsam içinde tanımlanan sabitlerin sayısını alır.</span><span class="sxs-lookup"><span data-stu-id="0dcd5-104">Gets a count of the constants defined within this scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="98a17-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="98a17-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0dcd5-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0dcd5-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetConstantCount(  
     [out, retval] ULONG32 *pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="98a17-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="98a17-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0dcd5-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0dcd5-106">Parameters</span></span>  
 
  `pRetVal`  
- <span data-ttu-id="98a17-106">dışı `ULONG32` Sabitleri içermesi için gereken arabelleğin karakter cinsinden boyutunu alan bir işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="98a17-106">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the constants.</span></span>  
+ <span data-ttu-id="0dcd5-107">dışı `ULONG32` Sabitleri içermesi için gereken arabelleğin karakter cinsinden boyutunu alan bir işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="0dcd5-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the constants.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="98a17-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="98a17-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0dcd5-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="0dcd5-108">Return Value</span></span>  
 
- <span data-ttu-id="98a17-108">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="98a17-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+ <span data-ttu-id="0dcd5-109">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="0dcd5-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="98a17-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="98a17-109">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0dcd5-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0dcd5-110">Requirements</span></span>  
 
- <span data-ttu-id="98a17-110">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="98a17-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+ <span data-ttu-id="0dcd5-111">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="0dcd5-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="98a17-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="98a17-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0dcd5-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0dcd5-112">See also</span></span>
 
-- [<span data-ttu-id="98a17-112">ISymUnmanagedScope2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="98a17-112">ISymUnmanagedScope2 Interface</span></span>](isymunmanagedscope2-interface.md)
+- [<span data-ttu-id="0dcd5-113">ISymUnmanagedScope2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0dcd5-113">ISymUnmanagedScope2 Interface</span></span>](isymunmanagedscope2-interface.md)

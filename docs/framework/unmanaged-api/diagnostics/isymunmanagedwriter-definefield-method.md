@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: ırivefield yöntemi:D'
 title: ISymUnmanagedWriter::DefineField Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c6a1f797-dbf4-40f5-ab99-d9b4bfb26148
 topic_type:
 - apiref
-ms.openlocfilehash: 5683c10938873821cbe998dbf13937a6a7d24d7c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f5bb47d4691780d94baf50cc9ceb3c14b1fa16ec
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95675093"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99762402"
 ---
-# <a name="isymunmanagedwriterdefinefield-method"></a><span data-ttu-id="d8fdc-102">ISymUnmanagedWriter::DefineField Yöntemi</span><span class="sxs-lookup"><span data-stu-id="d8fdc-102">ISymUnmanagedWriter::DefineField Method</span></span>
+# <a name="isymunmanagedwriterdefinefield-method"></a><span data-ttu-id="90ec9-103">ISymUnmanagedWriter::DefineField Yöntemi</span><span class="sxs-lookup"><span data-stu-id="90ec9-103">ISymUnmanagedWriter::DefineField Method</span></span>
 
-<span data-ttu-id="d8fdc-103">Bir yöntem içinde olmayan tek bir değişkeni tanımlar.</span><span class="sxs-lookup"><span data-stu-id="d8fdc-103">Defines a single variable that is not within a method.</span></span> <span data-ttu-id="d8fdc-104">Bu yöntem, sınıflardaki belirli alanlar, bit alanları vb. için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="d8fdc-104">This method is used for certain fields in classes, bit fields, and so on.</span></span>  
+<span data-ttu-id="90ec9-104">Bir yöntem içinde olmayan tek bir değişkeni tanımlar.</span><span class="sxs-lookup"><span data-stu-id="90ec9-104">Defines a single variable that is not within a method.</span></span> <span data-ttu-id="90ec9-105">Bu yöntem, sınıflardaki belirli alanlar, bit alanları vb. için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="90ec9-105">This method is used for certain fields in classes, bit fields, and so on.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d8fdc-105">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="d8fdc-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="90ec9-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="90ec9-106">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineField(  
@@ -41,43 +42,43 @@ HRESULT DefineField(
     [in] ULONG32      addr3);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d8fdc-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="d8fdc-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="90ec9-107">Parametreler</span><span class="sxs-lookup"><span data-stu-id="90ec9-107">Parameters</span></span>  
 
  `parent`  
- <span data-ttu-id="d8fdc-107">'ndaki Meta veri türü veya yöntem belirteci.</span><span class="sxs-lookup"><span data-stu-id="d8fdc-107">[in] The metadata type or method token.</span></span>  
+ <span data-ttu-id="90ec9-108">'ndaki Meta veri türü veya yöntem belirteci.</span><span class="sxs-lookup"><span data-stu-id="90ec9-108">[in] The metadata type or method token.</span></span>  
   
  `name`  
- <span data-ttu-id="d8fdc-108">'ndaki Alan adı.</span><span class="sxs-lookup"><span data-stu-id="d8fdc-108">[in] The field name.</span></span>  
+ <span data-ttu-id="90ec9-109">'ndaki Alan adı.</span><span class="sxs-lookup"><span data-stu-id="90ec9-109">[in] The field name.</span></span>  
   
  `attributes`  
- <span data-ttu-id="d8fdc-109">'ndaki Alan öznitelikleri.</span><span class="sxs-lookup"><span data-stu-id="d8fdc-109">[in] The field attributes.</span></span>  
+ <span data-ttu-id="90ec9-110">'ndaki Alan öznitelikleri.</span><span class="sxs-lookup"><span data-stu-id="90ec9-110">[in] The field attributes.</span></span>  
   
  `cSig`  
- <span data-ttu-id="d8fdc-110">'ndaki `ULONG32` Bu, alan imzasını içermesi için gereken arabelleğin karakter cinsinden boyutudur.</span><span class="sxs-lookup"><span data-stu-id="d8fdc-110">[in] A `ULONG32` that is the size, in characters, of the buffer required to contain the field signature.</span></span>  
+ <span data-ttu-id="90ec9-111">'ndaki `ULONG32` Bu, alan imzasını içermesi için gereken arabelleğin karakter cinsinden boyutudur.</span><span class="sxs-lookup"><span data-stu-id="90ec9-111">[in] A `ULONG32` that is the size, in characters, of the buffer required to contain the field signature.</span></span>  
   
  `signature`  
- <span data-ttu-id="d8fdc-111">'ndaki Alan imzalarının dizisi.</span><span class="sxs-lookup"><span data-stu-id="d8fdc-111">[in] The array of field signatures.</span></span>  
+ <span data-ttu-id="90ec9-112">'ndaki Alan imzalarının dizisi.</span><span class="sxs-lookup"><span data-stu-id="90ec9-112">[in] The array of field signatures.</span></span>  
   
  `addrKind`  
- <span data-ttu-id="d8fdc-112">'ndaki Adres türü.</span><span class="sxs-lookup"><span data-stu-id="d8fdc-112">[in] The address type.</span></span>  
+ <span data-ttu-id="90ec9-113">'ndaki Adres türü.</span><span class="sxs-lookup"><span data-stu-id="90ec9-113">[in] The address type.</span></span>  
   
  `addr1`  
- <span data-ttu-id="d8fdc-113">'ndaki Alan belirtiminin ilk adresi.</span><span class="sxs-lookup"><span data-stu-id="d8fdc-113">[in] The first address for the field specification.</span></span>  
+ <span data-ttu-id="90ec9-114">'ndaki Alan belirtiminin ilk adresi.</span><span class="sxs-lookup"><span data-stu-id="90ec9-114">[in] The first address for the field specification.</span></span>  
   
  `addr2`  
- <span data-ttu-id="d8fdc-114">'ndaki Alan belirtiminin ikinci adresi.</span><span class="sxs-lookup"><span data-stu-id="d8fdc-114">[in] The second address for the field specification.</span></span>  
+ <span data-ttu-id="90ec9-115">'ndaki Alan belirtiminin ikinci adresi.</span><span class="sxs-lookup"><span data-stu-id="90ec9-115">[in] The second address for the field specification.</span></span>  
   
  `addr3`  
- <span data-ttu-id="d8fdc-115">'ndaki Alan belirtiminin üçüncü adresi.</span><span class="sxs-lookup"><span data-stu-id="d8fdc-115">[in] The third address for the field specification.</span></span>  
+ <span data-ttu-id="90ec9-116">'ndaki Alan belirtiminin üçüncü adresi.</span><span class="sxs-lookup"><span data-stu-id="90ec9-116">[in] The third address for the field specification.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d8fdc-116">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="d8fdc-116">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="90ec9-117">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="90ec9-117">Return Value</span></span>  
 
- <span data-ttu-id="d8fdc-117">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="d8fdc-117">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+ <span data-ttu-id="90ec9-118">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="90ec9-118">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d8fdc-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="d8fdc-118">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="90ec9-119">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="90ec9-119">Requirements</span></span>  
 
- <span data-ttu-id="d8fdc-119">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="d8fdc-119">**Header:** CorSym.idl, CorSym.h</span></span>  
+ <span data-ttu-id="90ec9-120">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="90ec9-120">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d8fdc-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d8fdc-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="90ec9-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="90ec9-121">See also</span></span>
 
-- [<span data-ttu-id="d8fdc-121">ISymUnmanagedWriter Arabirimi</span><span class="sxs-lookup"><span data-stu-id="d8fdc-121">ISymUnmanagedWriter Interface</span></span>](isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="90ec9-122">ISymUnmanagedWriter Arabirimi</span><span class="sxs-lookup"><span data-stu-id="90ec9-122">ISymUnmanagedWriter Interface</span></span>](isymunmanagedwriter-interface.md)

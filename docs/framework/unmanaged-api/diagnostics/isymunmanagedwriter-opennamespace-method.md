@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ırivmunmanagedwriter:: OpenNamespace yöntemi'
 title: ISymUnmanagedWriter::OpenNamespace Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,38 +16,38 @@ helpviewer_keywords:
 ms.assetid: 426f4e4f-e60d-4ad1-b546-a10e3c55c283
 topic_type:
 - apiref
-ms.openlocfilehash: 2f64f9f4bde3119f9f089becec5a36d69ed43596
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ab848e44dfda1f5caaa92bfd3376bdcbd67d8a9b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730067"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99762129"
 ---
-# <a name="isymunmanagedwriteropennamespace-method"></a><span data-ttu-id="ae901-102">ISymUnmanagedWriter::OpenNamespace Yöntemi</span><span class="sxs-lookup"><span data-stu-id="ae901-102">ISymUnmanagedWriter::OpenNamespace Method</span></span>
+# <a name="isymunmanagedwriteropennamespace-method"></a><span data-ttu-id="c4737-103">ISymUnmanagedWriter::OpenNamespace Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c4737-103">ISymUnmanagedWriter::OpenNamespace Method</span></span>
 
-<span data-ttu-id="ae901-103">Yeni bir ad alanı açar.</span><span class="sxs-lookup"><span data-stu-id="ae901-103">Opens a new namespace.</span></span> <span data-ttu-id="ae901-104">Bir ad alanı kaplayan yöntemleri veya değişkenleri tanımlamadan önce bu yöntemi çağırın.</span><span class="sxs-lookup"><span data-stu-id="ae901-104">Call this method before defining methods or variables that occupy a namespace.</span></span> <span data-ttu-id="ae901-105">Ad alanları iç içe olabilir.</span><span class="sxs-lookup"><span data-stu-id="ae901-105">Namespaces can be nested.</span></span>  
+<span data-ttu-id="c4737-104">Yeni bir ad alanı açar.</span><span class="sxs-lookup"><span data-stu-id="c4737-104">Opens a new namespace.</span></span> <span data-ttu-id="c4737-105">Bir ad alanı kaplayan yöntemleri veya değişkenleri tanımlamadan önce bu yöntemi çağırın.</span><span class="sxs-lookup"><span data-stu-id="c4737-105">Call this method before defining methods or variables that occupy a namespace.</span></span> <span data-ttu-id="c4737-106">Ad alanları iç içe olabilir.</span><span class="sxs-lookup"><span data-stu-id="c4737-106">Namespaces can be nested.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ae901-106">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="ae901-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c4737-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c4737-107">Syntax</span></span>  
   
 ```cpp  
 HRESULT OpenNamespace(  
     [in] const WCHAR *name);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ae901-107">Parametreler</span><span class="sxs-lookup"><span data-stu-id="ae901-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c4737-108">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c4737-108">Parameters</span></span>  
 
  `name`  
- <span data-ttu-id="ae901-108">'ndaki Yeni ad alanının adı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="ae901-108">[in] A pointer to the name of the new namespace.</span></span>  
+ <span data-ttu-id="c4737-109">'ndaki Yeni ad alanının adı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="c4737-109">[in] A pointer to the name of the new namespace.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ae901-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="ae901-109">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c4737-110">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="c4737-110">Return Value</span></span>  
 
- <span data-ttu-id="ae901-110">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="ae901-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+ <span data-ttu-id="c4737-111">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="c4737-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ae901-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ae901-111">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c4737-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c4737-112">Requirements</span></span>  
 
- <span data-ttu-id="ae901-112">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="ae901-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+ <span data-ttu-id="c4737-113">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="c4737-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ae901-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ae901-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c4737-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c4737-114">See also</span></span>
 
-- [<span data-ttu-id="ae901-114">ISymUnmanagedWriter Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ae901-114">ISymUnmanagedWriter Interface</span></span>](isymunmanagedwriter-interface.md)
-- [<span data-ttu-id="ae901-115">CloseNamespace Yöntemi</span><span class="sxs-lookup"><span data-stu-id="ae901-115">CloseNamespace Method</span></span>](isymunmanagedwriter-closenamespace-method.md)
+- [<span data-ttu-id="c4737-115">ISymUnmanagedWriter Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c4737-115">ISymUnmanagedWriter Interface</span></span>](isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="c4737-116">CloseNamespace Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c4737-116">CloseNamespace Method</span></span>](isymunmanagedwriter-closenamespace-method.md)

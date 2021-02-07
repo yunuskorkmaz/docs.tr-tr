@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ırivmunmanagedsymbolsearchınfo:: GetHRESULT Yöntemi'
 title: ISymUnmanagedSymbolSearchInfo::GetHRESULT Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,37 +16,37 @@ helpviewer_keywords:
 ms.assetid: 6999dc3d-65d7-4bf6-bb0a-6efc0fc72588
 topic_type:
 - apiref
-ms.openlocfilehash: a931c15b1c4a9f099d11c43edd324cfcc2793090
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5d351d84ba4e91ccb9acb531e77407a2d1caceec
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722277"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99763117"
 ---
-# <a name="isymunmanagedsymbolsearchinfogethresult-method"></a><span data-ttu-id="3c2ed-102">ISymUnmanagedSymbolSearchInfo::GetHRESULT Yöntemi</span><span class="sxs-lookup"><span data-stu-id="3c2ed-102">ISymUnmanagedSymbolSearchInfo::GetHRESULT Method</span></span>
+# <a name="isymunmanagedsymbolsearchinfogethresult-method"></a><span data-ttu-id="57fe6-103">ISymUnmanagedSymbolSearchInfo::GetHRESULT Yöntemi</span><span class="sxs-lookup"><span data-stu-id="57fe6-103">ISymUnmanagedSymbolSearchInfo::GetHRESULT Method</span></span>
 
-<span data-ttu-id="3c2ed-103">HRESULT 'yi alır.</span><span class="sxs-lookup"><span data-stu-id="3c2ed-103">Gets the HRESULT.</span></span>  
+<span data-ttu-id="57fe6-104">HRESULT 'yi alır.</span><span class="sxs-lookup"><span data-stu-id="57fe6-104">Gets the HRESULT.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3c2ed-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="3c2ed-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="57fe6-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="57fe6-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetHRESULT(  
     [out] HRESULT *phr);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3c2ed-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="3c2ed-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="57fe6-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="57fe6-106">Parameters</span></span>  
 
  `phr`  
- <span data-ttu-id="3c2ed-106">dışı HRESULT işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="3c2ed-106">[out] A pointer to the HRESULT.</span></span>  
+ <span data-ttu-id="57fe6-107">dışı HRESULT işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="57fe6-107">[out] A pointer to the HRESULT.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="3c2ed-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="3c2ed-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="57fe6-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="57fe6-108">Return Value</span></span>  
 
- <span data-ttu-id="3c2ed-108">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="3c2ed-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+ <span data-ttu-id="57fe6-109">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="57fe6-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3c2ed-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="3c2ed-109">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="57fe6-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="57fe6-110">Requirements</span></span>  
 
- <span data-ttu-id="3c2ed-110">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="3c2ed-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+ <span data-ttu-id="57fe6-111">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="57fe6-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3c2ed-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3c2ed-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="57fe6-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="57fe6-112">See also</span></span>
 
-- [<span data-ttu-id="3c2ed-112">ISymUnmanagedSymbolSearchInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="3c2ed-112">ISymUnmanagedSymbolSearchInfo Interface</span></span>](isymunmanagedsymbolsearchinfo-interface.md)
+- [<span data-ttu-id="57fe6-113">ISymUnmanagedSymbolSearchInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="57fe6-113">ISymUnmanagedSymbolSearchInfo Interface</span></span>](isymunmanagedsymbolsearchinfo-interface.md)
