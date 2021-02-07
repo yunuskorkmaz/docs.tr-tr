@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: sorgu Ifadesi sözdizimi örnekleri: toplama Işleçleri (LINQ to DataSet)'
 title: 'Sorgu Ifadesi söz dizimi örnekleri: toplu Işleçler (LINQ to DataSet)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 85dafa07-e102-46e7-ab78-37bf06f257a6
-ms.openlocfilehash: 2277058c4dad4632f4f47a39e32463eaf77dcd5e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9076f81a21892f467355c86871e49ae3e1a793e9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164577"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663644"
 ---
 # <a name="query-expression-syntax-examples-aggregate-operators-linq-to-dataset"></a>Sorgu Ifadesi söz dizimi örnekleri: toplu Işleçler (LINQ to DataSet)
 
@@ -98,7 +99,7 @@ Bu konudaki örneklerde <xref:System.Linq.Enumerable.Average%2A> , <xref:System.
  [!code-csharp[DP LINQ to DataSet Examples#MinElements_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#minelements_mq)]
  [!code-vb[DP LINQ to DataSet Examples#MinElements_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#minelements_mq)]  
   
-## <a name="sum"></a>Toplam  
+## <a name="sum"></a>Sum  
   
 ### <a name="example"></a>Örnek  
 

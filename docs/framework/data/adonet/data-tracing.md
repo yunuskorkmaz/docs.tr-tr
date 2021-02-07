@@ -1,13 +1,14 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: ADO.NET 'de veri Izleme"
 title: Veri Izleme
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: 5fe04d6b6146079db7d4e110a94ced361949998c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 7fc4407e76ea34bacc97177d6342730a8263b5c9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557116"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663748"
 ---
 # <a name="data-tracing-in-adonet"></a>ADO.NET’te Veri İzleme
 

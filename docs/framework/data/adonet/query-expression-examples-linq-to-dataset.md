@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: sorgu Ifadesi örnekleri (LINQ to DataSet)'
 title: Sorgu Ifadesi örnekleri (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: f743fbc7-faff-45e5-af1e-61577d87f0cc
-ms.openlocfilehash: 1671769871d8c224391a34f5a6294bb6015cafdc
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1d1571a851fae685942cbdbd557b275e86e8b0d2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177377"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663696"
 ---
 # <a name="query-expression-examples-linq-to-dataset"></a>Sorgu Ifadesi örnekleri (LINQ to DataSet)
 
@@ -33,7 +34,7 @@ Bu bölümde, sorgu ifadesi sözdiziminde standart sorgu işleçlerini kullanan 
  [Toplama İşleçleri](query-expression-syntax-examples-aggregate-operators.md)  
  Bu konudaki örneklerde, <xref:System.Linq.Enumerable.Average%2A> <xref:System.Linq.Enumerable.Count%2A> <xref:System.Linq.Enumerable.Max%2A> <xref:System.Linq.Enumerable.Min%2A> <xref:System.Linq.Enumerable.Sum%2A> <xref:System.Data.DataSet> ve verileri sorgulamak için,,, ve yöntemlerinin nasıl kullanılacağı gösterilmektedir.  
   
- [Birleşim İşleçleri](query-expression-syntax-examples-join-operators.md)  
+ [JOIN Işleçleri](query-expression-syntax-examples-join-operators.md)  
  Bu konudaki örneklerde, <xref:System.Linq.Enumerable.GroupJoin%2A> <xref:System.Linq.Enumerable.Join%2A> bir sorgulamak için ve yöntemlerinin nasıl kullanılacağı gösterilmektedir <xref:System.Data.DataSet> .  
   
 ## <a name="see-also"></a>Ayrıca bkz.

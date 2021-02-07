@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: ortak şema koleksiyonları'
 title: Ortak Şema Koleksiyonları
 ms.date: 03/30/2017
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
-ms.openlocfilehash: f822de27e53554aba4011a701f59a8feda847c67
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 63aaf66fa3122f7d40e54ea47d3e9b1908b37ba9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "91203819"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663960"
 ---
 # <a name="common-schema-collections"></a>Ortak Şema Koleksiyonları
 
@@ -21,7 +22,7 @@ Ortak şema koleksiyonları, .NET Framework yönetilen sağlayıcıların her bi
 
  Bu şema koleksiyonu, veritabanına bağlanmak için şu anda kullanılan .NET Framework yönetilen sağlayıcı tarafından desteklenen tüm şema koleksiyonları hakkında bilgi sunar.  
   
-|ColumnName|DataType|Açıklama|  
+|ColumnName|DataType|Description|  
 |----------------|--------------|-----------------|  
 |CollectionName|string|Koleksiyonu döndürmek için **GetSchema** yöntemine geçirilecek koleksiyonun adı.|  
 |NumberOfRestrictions|int|Koleksiyon için belirtime kısıtlamaların sayısı.|  
@@ -31,7 +32,7 @@ Ortak şema koleksiyonları, .NET Framework yönetilen sağlayıcıların her bi
 
  Bu şema koleksiyonu, .NET Framework yönetilen sağlayıcının Şu anda bağlantı aldığı veri kaynağı hakkında bilgi sunar.  
   
-|ColumnName|DataType|Açıklama|  
+|ColumnName|DataType|Description|  
 |----------------|--------------|-----------------|  
 |Compositeıdentifierseparatormodel|string|Bileşik Tanımlayıcıdaki bileşik ayırıcıların eşleşmesi için normal ifade. Örneğin, " \\ ." (SQL Server için) veya " \@&#124;\\ ". (Oracle için).<br /><br /> Bir bileşik tanımlayıcı genellikle veritabanı nesnesi adı için kullanılır, örneğin: pubs. dbo. yazarlar veya pubs \@ dbo. yazarlar.<br /><br /> SQL Server için "." normal ifadesini kullanın \\ . OracleClient için " \@&#124;\\ ." kullanın.<br /><br /> ODBC için Catalog_name_seperator kullanın.<br /><br /> OLE DB için DBLITERAL_CATALOG_SEPARATOR veya DBLITERAL_SCHEMA_SEPARATOR kullanın.|  
 |DataSourceProductName|string|Sağlayıcı tarafından erişilen ürünün adı (örneğin, "Oracle" veya "SQLServer").|  
@@ -55,7 +56,7 @@ Ortak şema koleksiyonları, .NET Framework yönetilen sağlayıcıların her bi
 
  Bu şema koleksiyonu, .NET Framework yönetilen sağlayıcının o anda bağlı olduğu veritabanı tarafından desteklenen veri türleri hakkında bilgi sunar.  
   
-|ColumnName|DataType|Açıklama|  
+|ColumnName|DataType|Description|  
 |----------------|--------------|-----------------|  
 |TypeName|string|Sağlayıcıya özgü veri türü adı.|  
 |ProviderDbType|int|Bir parametrenin türünü belirtirken kullanılması gereken sağlayıcıya özgü tür değeri. Örneğin, SqlDbType. Money veya OracleType. blob.|  
@@ -85,7 +86,7 @@ Ortak şema koleksiyonları, .NET Framework yönetilen sağlayıcıların her bi
 
  Bu şema koleksiyonu, veritabanına bağlanmak için şu anda kullanılan .NET Framework yönetilen sağlayıcı tarafından desteklenen kısıtlamalar hakkında bilgi açığa çıkardık.  
   
-|ColumnName|DataType|Açıklama|  
+|ColumnName|DataType|Description|  
 |----------------|--------------|-----------------|  
 |CollectionName|string|Bu kısıtlamaların uygulandığı koleksiyonun adı.|  
 |RestrictionName|string|Koleksiyondaki kısıtlamanın adı.|  
@@ -96,7 +97,7 @@ Ortak şema koleksiyonları, .NET Framework yönetilen sağlayıcıların her bi
 
  Bu şema koleksiyonu, şu anda bağlı olan .NET Framework yönetilen sağlayıcının veritabanı tarafından ayrılmış sözcükler hakkında bilgi sunar.  
   
-|ColumnName|DataType|Açıklama|  
+|ColumnName|DataType|Description|  
 |----------------|--------------|-----------------|  
 |ReservedWord|string|Sağlayıcıya özel ayrılmış sözcük.|  
   

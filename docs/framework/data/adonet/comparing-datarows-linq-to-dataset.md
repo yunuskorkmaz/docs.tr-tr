@@ -1,20 +1,21 @@
 ---
+description: 'Hakkında daha fazla bilgi: DataRow ile karşılaştırma (LINQ to DataSet)'
 title: DataRow 'ı karşılaştırma (LINQ to DataSet)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8fe0eadf-297b-487c-8d4b-7816753c2883
-ms.openlocfilehash: 8cce52734c83e42312d71806d4151ef21e4df0ba
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: df410432ab31d5ee284cb1d7cd15661db65ca503
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203806"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663943"
 ---
 # <a name="comparing-datarows-linq-to-dataset"></a>DataRow 'ı karşılaştırma (LINQ to DataSet)
 
-Dil ile tümleşik sorgu (LINQ), eşit olup olmadığını görmek için kaynak öğeleri karşılaştırmak üzere çeşitli küme işleçlerini tanımlar. LINQ aşağıdaki set işleçlerini sağlar:  
+Language-Integrated Query (LINQ), eşit olup olmadığını görmek için kaynak öğeleri karşılaştırmak üzere çeşitli küme işleçlerini tanımlar. LINQ aşağıdaki set işleçlerini sağlar:  
   
 - <xref:System.Linq.Enumerable.Distinct%2A>  
   

@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: sorgu Ifadesi söz dizimi örnekleri: projeksiyon (LINQ to DataSet)'
 title: 'Sorgu Ifadesi söz dizimi örnekleri: projeksiyon (LINQ to DataSet)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 48c9f5ed-76bf-4228-ab10-5217bbb295a3
-ms.openlocfilehash: e003c4356c2ab32814ac7a76ce008e21fb34192e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 710426108304d5b3fa38004fb37d234ed206733c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183175"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663527"
 ---
 # <a name="query-expression-syntax-examples-projection--linq-to-dataset"></a>Sorgu Ifadesi söz dizimi örnekleri: projeksiyon (LINQ to DataSet)
 

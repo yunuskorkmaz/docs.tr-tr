@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: DataView nesnesi oluşturma (LINQ to DataSet)'
 title: DataView nesnesi oluşturma (LINQ to DataSet)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 76057508-e12d-4779-a707-06a4c2568acf
-ms.openlocfilehash: f76574a912128918ed575cbf0eca892041dc354c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4261e4bf55616a56652cb111d3660210dc3f96f3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148327"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663826"
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>DataView nesnesi oluşturma (LINQ to DataSet)
 

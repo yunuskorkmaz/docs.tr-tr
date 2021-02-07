@@ -1,14 +1,15 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: ADO.NET içindeki bir veri kaynağına bağlanma'
 title: Veri Kaynağına Bağlanma
 deescription: Learn about Connection objects, used to connect to data sources in ADO.NET. The Connection object you choose depends on the type of data source.
 ms.date: 03/30/2017
 ms.assetid: 9abc3f92-1be3-4e1a-b360-762dc689650e
-ms.openlocfilehash: b9e69b029ad37c583e51c219f87ff9d7d8e7315c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0bf66b9dc609a704cf89380e2376f50197e047a7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203780"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663891"
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a>ADO.NET içinde bir veri kaynağına bağlanma
 

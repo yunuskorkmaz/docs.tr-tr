@@ -1,17 +1,18 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: veritabanı şeması bilgileri alma'
 title: Veritabanı Şema Bilgilerini Alma
 ms.date: 03/30/2017
 ms.assetid: 79038d52-f122-4fd4-9bfb-aaa22d6a114b
-ms.openlocfilehash: c0aaadc82771d1c2a36d797bc157d88b8d3cacdc
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 84ac94a72b23d0b1d6924600f2fd33b2a285eab8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177364"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663410"
 ---
 # <a name="retrieving-database-schema-information"></a>Veritabanı Şema Bilgilerini Alma
 
-Şema bulma işlemi ile bir veritabanından şema bilgileri alma işlemi gerçekleştirilir. Şema bulma, uygulamaların belirli bir veritabanının *meta verileri*olarak da bilinen veritabanı şeması hakkındaki bilgileri bulmasını ve döndürmesini ister. Tablolar, sütunlar ve saklı yordamlar gibi farklı veritabanı şeması öğeleri, şema koleksiyonları aracılığıyla sunulur. Her şema koleksiyonu, kullanılmakta olan sağlayıcıya özgü çeşitli şema bilgilerini içerir.  
+Şema bulma işlemi ile bir veritabanından şema bilgileri alma işlemi gerçekleştirilir. Şema bulma, uygulamaların belirli bir veritabanının *meta verileri* olarak da bilinen veritabanı şeması hakkındaki bilgileri bulmasını ve döndürmesini ister. Tablolar, sütunlar ve saklı yordamlar gibi farklı veritabanı şeması öğeleri, şema koleksiyonları aracılığıyla sunulur. Her şema koleksiyonu, kullanılmakta olan sağlayıcıya özgü çeşitli şema bilgilerini içerir.  
   
  .NET Framework yönetilen sağlayıcıların her biri, **bağlantı** sınıfında **GetSchema** yöntemini uygular ve **GetSchema** yönteminden döndürülen şema bilgileri bir biçiminde gelir <xref:System.Data.DataTable> . **GetSchema** yöntemi, döndürülecek şema koleksiyonunu belirtmek ve döndürülen bilgi miktarını kısıtlamak için isteğe bağlı parametreler sağlayan aşırı yüklenmiş bir yöntemdir.  
   
@@ -25,7 +26,7 @@ ms.locfileid: "91177364"
  **GetSchema** yöntemini ve bir veritabanından şema bilgilerini almak ve kısıtlamak için nasıl kullanılabileceğini açıklar.  
   
  Şema Kısıtlamaları  
- **GetSchema**ile kullanılabilen şema kısıtlamalarını açıklar.  
+ **GetSchema** ile kullanılabilen şema kısıtlamalarını açıklar.  
   
  [Ortak Şema Koleksiyonları](common-schema-collections.md)  
  Tüm .NET Framework yönetilen sağlayıcılar tarafından desteklenen tüm ortak şema koleksiyonlarını açıklar.  

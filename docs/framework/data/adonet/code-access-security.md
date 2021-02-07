@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: kod erişimi güvenliği ve ADO.NET'
 title: Kod Erişimi Güvenliği
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: c4c18e8026dc230db896103d29d40426dbd11f16
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e7a6054cd7c222c700f5a83e46f5b44bfee23248
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203845"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99664008"
 ---
 # <a name="code-access-security-and-adonet"></a>Kod Erişimi Güvenliği ve ADO.NET
 
@@ -43,7 +44,7 @@ ms.locfileid: "91203845"
   
  Uygulamanın yalnızca diskten verileri okuması gereken bir senaryoda, hiçbir bir yazma izni verilmeyeceğinden emin olabilirsiniz. Bir hata veya kötü amaçlı saldırı durumunda kodunuz, üzerinde çalıştığı verilere zarar veremeyeceğinden. Daha fazla bilgi için bkz. [Izinleri isteme](/previous-versions/dotnet/netframework-4.0/yd267cce(v=vs.100)).  
   
-## <a name="role-based-security-and-cas"></a>Rol tabanlı güvenlik ve CA 'LAR  
+## <a name="role-based-security-and-cas"></a>Role-Based güvenlik ve CA 'LAR  
 
  Rol tabanlı güvenlik ve kod erişim güvenliği (CAS) uygulamak, uygulamanız için genel güvenliği geliştirir. Rol tabanlı güvenlik, geçerli iş parçacığı için kullanılabilir güvenlik sorumlusu hakkında bilgi sunarak bir Windows hesabını veya özel bir kimliği temel alabilir. Ayrıca, uygulamalar genellikle kullanıcı tarafından sağlanan kimlik bilgilerine göre veri veya kaynaklara erişim sağlamak için gereklidir. Genellikle, bu gibi uygulamalar bir kullanıcının rolünü denetler ve bu rollere göre kaynaklara erişim sağlar.  
   
@@ -61,7 +62,7 @@ ms.locfileid: "91203845"
 
  Güçlü bir ad veya dijital imza, derleme kimliğinden basit metin adı, sürüm numarası ve kültür bilgileri (sağlanmışsa) ve bir ortak anahtar ve dijital imza dahil oluşur. Dijital imza, karşılık gelen özel anahtar kullanılarak bir derleme dosyasından oluşturulur. Derleme dosyası, derlemeyi oluşturan tüm dosyaların adlarını ve karmalarını içeren derleme bildirimini içerir.  
   
- Bir derlemeyi tanımlayıcı adlandırma bir uygulamaya veya bileşene, başka yazılımın açıkça kendisine başvurabileceği benzersiz bir kimlik verir. Sağlam adlandırma koruyucuları derlemeleri, barındırma kodu içeren bir derleme tarafından sızdırılmakta. Güçlü adlandırma, bir bileşenin farklı sürümleri arasında sürüm tutarlılığını de sağlar. Genel derleme önbelleği 'ne (GAC) dağıtılacak tanımlayıcı ad derlemelerini yapmanız gerekir. Daha fazla bilgi için bkz. [güçlü adlandırılmış derlemeler oluşturma ve kullanma](../../../standard/assembly/create-use-strong-named.md).  
+ Bir derlemeyi tanımlayıcı adlandırma bir uygulamaya veya bileşene, başka yazılımın açıkça kendisine başvurabileceği benzersiz bir kimlik verir. Sağlam adlandırma koruyucuları derlemeleri, barındırma kodu içeren bir derleme tarafından sızdırılmakta. Güçlü adlandırma, bir bileşenin farklı sürümleri arasında sürüm tutarlılığını de sağlar. Genel derleme önbelleği 'ne (GAC) dağıtılacak tanımlayıcı ad derlemelerini yapmanız gerekir. Daha fazla bilgi için bkz. [Strong-Named derlemeleri oluşturma ve kullanma](../../../standard/assembly/create-use-strong-named.md).  
   
 ## <a name="partial-trust-in-adonet-20"></a>ADO.NET 2,0 ' de kısmi güven  
 
@@ -75,7 +76,7 @@ ms.locfileid: "91203845"
   
  Aşağıdaki tabloda kullanılabilen <xref:System.Data.SqlClient.SqlClientPermissionAttribute> Özellikler ve bunların açıklamaları listelenmektedir:  
   
-|İzin özniteliği özelliği|Açıklama|  
+|İzin özniteliği özelliği|Description|  
 |-----------------------------------|-----------------|  
 |`Action`|Bir güvenlik eylemini alır veya ayarlar. Devralındığı yer <xref:System.Security.Permissions.SecurityAttribute> .|  
 |`AllowBlankPassword`|Bir bağlantı dizesinde boş parola kullanımını etkinleştirilir veya devre dışı bırakır. Geçerli değerler `true` (Boş parolaların kullanımını etkinleştirmek için) ve `false` (Boş parolaların kullanımını devre dışı bırakmak için). Devralındığı yer <xref:System.Data.Common.DBDataPermissionAttribute> .|  

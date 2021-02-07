@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: sorgu Ifadesi sözdizimi örnekleri: sıralama (LINQ to DataSet)'
 title: 'Sorgu Ifadesi söz dizimi örnekleri: sıralama (LINQ to DataSet)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 653a4a97-1e4a-4b2d-8d24-7dbe1f2a5c84
-ms.openlocfilehash: e29ce3a1cf666057ae717f0717af73db7be87e30
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e47685e2aee8aae544a48c8e41eb99a1b76dd85a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91189077"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663605"
 ---
 # <a name="query-expression-syntax-examples-ordering-linq-to-dataset"></a>Sorgu Ifadesi söz dizimi örnekleri: sıralama (LINQ to DataSet)
 

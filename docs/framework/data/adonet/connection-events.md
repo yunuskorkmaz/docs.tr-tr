@@ -1,22 +1,23 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: bağlantı olayları'
 title: Bağlantı Olayları
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5a29de74-acfc-4134-8616-829dd7ce0710
-ms.openlocfilehash: fd935306a493bf5a20f5cd6cd61a175c02d8bbba
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: fcf131e41ce90db11e84fd241744e348f4ca739e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203767"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663813"
 ---
 # <a name="connection-events"></a>Bağlantı Olayları
 
 .NET Framework veri sağlayıcılarının tümünde, bir veri kaynağından bilgilendirici iletileri almak veya bir **bağlantının** durumunun değişip değişmediğini öğrenmek için kullanabileceğiniz iki olayla birlikte **bağlantı** nesneleri vardır. Aşağıdaki tabloda **bağlantı** nesnesinin olayları açıklanmaktadır.  
   
-|Olay|Açıklama|  
+|Olay|Description|  
 |-----------|-----------------|  
 |**Bilgi Iletisi**|Bir veri kaynağından bir bilgi iletisi döndürüldüğünde oluşur. Bilgilendirici mesajlar bir veri kaynağından alınan ve bir özel durum oluşmasına neden olmayan iletilerdir.|  
 |**Olayına**|**Bağlantının** durumu değiştiğinde gerçekleşir.|  
@@ -79,7 +80,7 @@ protected static void OnInfoMessage(
   
 ## <a name="working-with-the-statechange-event"></a>StateChange olayından çalışma  
 
- **StateChange** olayı, bir **bağlantının** durumu değiştiğinde oluşur. Bu **StateChange** , <xref:System.Data.StateChangeEventArgs> **OriginalState** ve **CurrentState** özelliklerini kullanarak **bağlantı** durumundaki değişikliği belirlemenizi sağlayan StateChange olayı alır. **OriginalState** özelliği, <xref:System.Data.ConnectionState> **bağlantı** değiştirilmeden önceki durumunu gösteren bir numaralandırmadır. **CurrentState** , <xref:System.Data.ConnectionState> bağlantı değiştirildikten sonra **bağlantının** durumunu gösteren bir numaralandırmadır.  
+ **StateChange** olayı, bir **bağlantının** durumu değiştiğinde oluşur. Bu  , <xref:System.Data.StateChangeEventArgs> **OriginalState** ve **CurrentState** özelliklerini kullanarak **bağlantı** durumundaki değişikliği belirlemenizi sağlayan StateChange olayı alır. **OriginalState** özelliği, <xref:System.Data.ConnectionState> **bağlantı** değiştirilmeden önceki durumunu gösteren bir numaralandırmadır. **CurrentState** , <xref:System.Data.ConnectionState> bağlantı değiştirildikten sonra **bağlantının** durumunu gösteren bir numaralandırmadır.  
   
  Aşağıdaki kod örneği, **bağlantının** durumu değiştiğinde konsola bir ileti yazmak için **StateChange** olayını kullanır.  
   

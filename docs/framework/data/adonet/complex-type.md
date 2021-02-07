@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: karmaşık tür'
 title: complex type
 ms.date: 03/30/2017
 ms.assetid: 63efbd23-11d4-4871-bc88-ad01b9837553
-ms.openlocfilehash: ef20de6a9e72d3123d745ef5501ecdb7fa63967d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 06bb6f54f488e4c6038382707a2ad3e85f000bc2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203793"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663905"
 ---
 # <a name="complex-type"></a>complex type
 
