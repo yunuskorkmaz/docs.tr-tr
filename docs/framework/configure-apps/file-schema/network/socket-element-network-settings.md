@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: <socket> öğesi (ağ ayarları)'
 title: <socket> Öğesi (Ağ Ayarları)
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <socket> element
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
-ms.openlocfilehash: b8df32745007b2a145d35b8cfcc4cbd2bd17eb33
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 564d6566bf6f6b1997b986cb6c0d85f841195e55
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201739"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740138"
 ---
 # <a name="socket-element-network-settings"></a>\<socket> Öğesi (Ağ Ayarları)
 
@@ -42,8 +43,8 @@ Yuva işlemlerinin tamamlama bağlantı noktalarını kullanıp kullanmadığın
   
 |**Öznitelik**|**Açıklama**|  
 |-------------------|---------------------|  
-|`alwaysUseCompletionPortsForAccept`|Yuvanın Yöntem çağrılarını kabul etmek için her zaman tamamlama bağlantı noktalarını kullanıp kullanmayacağını belirtir. Varsayılan değer: `false`.|  
-|`alwaysUseCompletionPortsForConnect`|Yuvanın, bağlantı yöntemi çağrıları için her zaman tamamlama bağlantı noktaları kullanması gerekip gerekmediğini belirtir. Varsayılan değer: `false`.|  
+|`alwaysUseCompletionPortsForAccept`|Yuvanın Yöntem çağrılarını kabul etmek için her zaman tamamlama bağlantı noktalarını kullanıp kullanmayacağını belirtir. `false` varsayılan değerdir.|  
+|`alwaysUseCompletionPortsForConnect`|Yuvanın, bağlantı yöntemi çağrıları için her zaman tamamlama bağlantı noktaları kullanması gerekip gerekmediğini belirtir. `false` varsayılan değerdir.|  
 |`ipProtectionLevel`|<xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType>Yuva için kullanılacak varsayılanı belirtir. Varsayılan değer, Windows sürümüne bağlıdır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
@@ -52,7 +53,7 @@ Yuva işlemlerinin tamamlama bağlantı noktalarını kullanıp kullanmadığın
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
-|**Dosyalarında**|**Açıklama**|  
+|**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
 |[ayarlar](settings-element-network-settings.md)|Ad alanı için temel ağ seçeneklerini yapılandırır <xref:System.Net> .|  
   

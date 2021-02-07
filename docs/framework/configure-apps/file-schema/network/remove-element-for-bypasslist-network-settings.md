@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <remove> BypassList için öğesi (ağ ayarları)'
 title: bypasslist için <remove> Öğesi (Ağ Ayarları)
 ms.date: 03/30/2017
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - bypasslist, remove element
 - remove element, bypasslist
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
-ms.openlocfilehash: 97b49a8a520d6a4f72945366874991d2deb18710
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 48441f1b402b339a1bd2ea069678afb4b1d5f2e1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "71697902"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740294"
 ---
 # <a name="remove-element-for-bypasslist-network-settings"></a>bypasslist için \<remove> Öğesi (Ağ Ayarları)
 
@@ -27,7 +28,7 @@ Proxy atlama listesinden bir IP adresi veya DNS adı kaldırır.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<bypasslist>**](bypasslist-element-network-settings.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**  
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <remove
@@ -51,7 +52,7 @@ Yok.
 
 ### <a name="parent-elements"></a>Üst Öğeler
 
-|**Dosyalarında**|**Açıklama**|
+|**Öğe**|**Açıklama**|
 |-----------------|---------------------|
 |[BypassList](bypasslist-element-network-settings.md)|Proxy kullanmayan adresleri tanımlayan normal ifadeler kümesi sağlar.|
 
@@ -65,7 +66,7 @@ Normal ifadeler hakkında daha fazla bilgi için bkz.. [Normal ifadeleri .NET Fr
 
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları
 
-Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.
+Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine.config) kullanılabilir.
 
 ## <a name="example"></a>Örnek
 
@@ -87,4 +88,4 @@ Aşağıdaki örnek, adventure-works.com etki alanı için önceki tüm tanımla
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [Ağ Ayarları Şeması](index.md)
+- [Ağ ayarları şeması](index.md)

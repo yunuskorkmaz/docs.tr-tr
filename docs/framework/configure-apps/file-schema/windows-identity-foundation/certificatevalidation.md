@@ -1,14 +1,15 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <certificateValidation>'
 title: <certificateValidation>
 ms.date: 03/30/2017
 ms.assetid: 6c54c704-b55e-4631-88ff-4d4a5621554c
 author: BrucePerlerMS
-ms.openlocfilehash: 583fef7eb364c39890b3f9304770b383c1ea6d2a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a12e46487b4fb2ac8071ba1cf9bc5c6057ded060
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183513"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740073"
 ---
 # \<certificateValidation>
 

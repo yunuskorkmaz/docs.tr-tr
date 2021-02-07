@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: <webProxyScript> öğesi (ağ ayarları)'
 title: <webProxyScript> Öğesi (Ağ Ayarları)
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <webProxyScript> element
 - webProxyScript element
 ms.assetid: a13c26db-6218-4af3-9696-38f24b23bfac
-ms.openlocfilehash: e36b470b1ec348085b13a58630b0ac6833e43946
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1627b6650582202f3f1a4c1fdebf2d183e4a894b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91178313"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740112"
 ---
 # <a name="webproxyscript-element-network-settings"></a>\<webProxyScript> Öğesi (Ağ Ayarları)
 

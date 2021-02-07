@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: <iriParsing> öğesi (URI ayarları)'
 title: <iriParsing> Öğesi (Uri Ayarları)
 ms.date: 03/30/2017
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
-ms.openlocfilehash: ec2610e47957d5560bc7f51e0641afc9ba60c814
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 460216b64056cd9c9f769c5bcd1b651d249e98b4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158896"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740307"
 ---
 # <a name="iriparsing-element-uri-settings"></a>\<iriParsing> Öğesi (Uri Ayarları)
 
@@ -31,17 +32,17 @@ Uluslararası kaynak tanımlayıcı (IRI) ayrıştırma 'nin bir öğesine uygul
   
 ### <a name="attributes"></a>Öznitelikler  
   
-|**Dosyalarında**|**Açıklama**|  
+|**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|`enabled`|IRI ayrıştırma özelliğinin etkinleştirilip etkinleştirilmeyeceğini belirtir. Varsayılan değer: `false`.|  
+|`enabled`|IRI ayrıştırma özelliğinin etkinleştirilip etkinleştirilmeyeceğini belirtir. `false` varsayılan değerdir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
 
- Hiçbiri  
+ Yok  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
-|**Dosyalarında**|**Açıklama**|  
+|**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
 |[kullanılmamışsa](uri-element-uri-settings.md)|.NET Framework Tekdüzen Kaynak tanımlayıcıları (URI 'Ler) kullanarak ifade edilen Web adreslerini nasıl işleyeceğini belirten ayarları içerir.|  
   
@@ -67,7 +68,7 @@ Uluslararası kaynak tanımlayıcı (IRI) ayrıştırma 'nin bir öğesine uygul
   
 ## <a name="example"></a>Örnek  
   
-### <a name="description"></a>Açıklama  
+### <a name="description"></a>Description  
 
  Aşağıdaki örnek, <xref:System.Uri> IRI ayrıştırma ve IDN adlarını desteklemek için sınıfı tarafından kullanılan bir yapılandırmayı gösterir.  
   

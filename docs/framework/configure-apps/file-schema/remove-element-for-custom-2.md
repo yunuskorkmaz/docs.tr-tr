@@ -1,5 +1,6 @@
 ---
-title: <remove>NameValueSectionHandler ve DictionarySectionHandler için öğesi
+description: 'Hakkında daha fazla bilgi edinin: <remove> NameValueSectionHandler ve DictionarySectionHandler için öğesi'
+title: <remove> NameValueSectionHandler ve DictionarySectionHandler için öğesi
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/remove
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: 8d8af7f5-26c9-4db9-bbe4-b2a4e6949568
-ms.openlocfilehash: d1e4f3478f6afd6a20c01c6b57a137020ee88f5f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: bf1434b257aa014c8f46e34f2d57d109bd510452
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "77214762"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740086"
 ---
-# <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<remove>NameValueSectionHandler ve DictionarySectionHandler için öğesi
+# <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<remove> NameValueSectionHandler ve DictionarySectionHandler için öğesi
 
 Daha önce tanımlanmış bir ayarı kaldırır.
 
@@ -22,7 +23,7 @@ Daha önce tanımlanmış bir ayarı kaldırır.
 &nbsp;&nbsp;[**\<sectionName>**](custom-element-2.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <add remove="key" />
@@ -80,7 +81,7 @@ Aşağıdaki uygulama yapılandırma dosyası kodu, bu `key2` ayarı öğesinden
 
 ## <a name="configuration-file"></a>Yapılandırma dosyası
 
-Bu öğe uygulama yapılandırma dosyasında, makine yapılandırma dosyasında (*Machine. config*) ve uygulama dizini düzeyinde olmayan *Web. config* dosyalarında kullanılabilir.
+Bu öğe, uygulama yapılandırma dosyasında, makine yapılandırma dosyasında (*Machine.config*) ve uygulama dizini düzeyinde olmayan *Web.config* dosyalarda kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
