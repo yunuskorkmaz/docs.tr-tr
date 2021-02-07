@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ICorDebugEval2:: NewStringWithLength yöntemi'
 title: ICorDebugEval2::NewStringWithLength Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: d5f54a34-6335-4708-b407-a756ec70fab4
 topic_type:
 - apiref
-ms.openlocfilehash: e5bab32f6d18c87b030f484a47bc3f1d525d2338
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 23864dabefcb4fc12f73c66bc2d19a6cca1aacf0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729635"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99693531"
 ---
 # <a name="icordebugeval2newstringwithlength-method"></a>ICorDebugEval2::NewStringWithLength Yöntemi
 
 Belirtilen bir uzunluğa sahip, belirtilen içeriğe sahip bir dize oluşturur.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT NewStringWithLength (  

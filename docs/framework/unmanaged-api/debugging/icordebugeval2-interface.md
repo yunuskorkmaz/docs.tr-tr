@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ICorDebugEval2 Interface'
 title: ICorDebugEval2 Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fce34531-2687-406d-9131-d6ad94f2ce0e
 topic_type:
 - apiref
-ms.openlocfilehash: 090b587ef509795609250914ce8883ad96d28c18
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2c279335bdd30b8dc2698f348d9537443b236a45
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729687"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99693765"
 ---
 # <a name="icordebugeval2-interface"></a>ICorDebugEval2 Arabirimi
 

@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ICorDebugGenericValue arabirimi'
 title: ICorDebugGenericValue Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bc14f408-b359-4c8c-ade2-888ccdf7261b
 topic_type:
 - apiref
-ms.openlocfilehash: cfa0950ca2ef4e969258c147b762fa95e52a82e5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7c81855849d7b72bc509d20072b96bb64f5d395a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705828"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99692043"
 ---
 # <a name="icordebuggenericvalue-interface"></a>ICorDebugGenericValue Arabirimi
 
@@ -29,7 +30,7 @@ Tüm değerler için geçerli olan "ICorDebugValue" öğesinin bir alt sınıfı
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetValue Metodu](icordebuggenericvalue-getvalue-method.md)|Değeri belirtilen arabelleğe kopyalar.|  
+|[GetValue Yöntemi](icordebuggenericvalue-getvalue-method.md)|Değeri belirtilen arabelleğe kopyalar.|  
 |[SetValue Yöntemi](icordebuggenericvalue-setvalue-method.md)|Belirtilen arabellekteki yeni bir değer kopyalar.|  
   
 ## <a name="remarks"></a>Açıklamalar  

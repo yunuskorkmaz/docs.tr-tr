@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ICorDebugEval2:: NewParameterizedObjectNoConstructor yöntemi'
 title: ICorDebugEval2::NewParameterizedObjectNoConstructor Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: f15b5b78-94f4-4eb9-b3b3-a621272f357c
 topic_type:
 - apiref
-ms.openlocfilehash: 796c6aa4c42a037fe612b4b1ee5267a678cf5224
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8300378facb38714b50d6507b19876b8721c6229
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729648"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99693596"
 ---
 # <a name="icordebugeval2newparameterizedobjectnoconstructor-method"></a>ICorDebugEval2::NewParameterizedObjectNoConstructor Yöntemi
 
 Bir Oluşturucu yöntemini çağırmayı denemeden, belirtilen sınıfın yeni parametreli tür nesnesini başlatır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT NewParameterizedObjectNoConstructor (  

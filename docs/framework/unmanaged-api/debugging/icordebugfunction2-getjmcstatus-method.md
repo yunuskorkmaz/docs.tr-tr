@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ICorDebugFunction2:: GetJMCStatus yöntemi'
 title: ICorDebugFunction2::GetJMCStatus Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 840a71ed-bf5a-4f5e-8ed6-762222b34493
 topic_type:
 - apiref
-ms.openlocfilehash: 747f165a98dfd1264ea58d61aaa1615c6d71e073
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 42c72256df57b96a52737f4a0e5e90d6ba5d4e0c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726304"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99692296"
 ---
 # <a name="icordebugfunction2getjmcstatus-method"></a>ICorDebugFunction2::GetJMCStatus Metodu
 
 Bu ICorDebugFunction2 nesnesi tarafından temsil edilen işlevin Kullanıcı kodu olarak işaretlenip işaretlenmediğini gösteren bir değer alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetJMCStatus (  

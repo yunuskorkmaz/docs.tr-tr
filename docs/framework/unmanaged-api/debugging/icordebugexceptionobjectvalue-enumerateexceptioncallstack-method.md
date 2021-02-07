@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugExceptionObjectValue:: EnumerateExceptionCallStack Yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugExceptionObjectValue::EnumerateExceptionCallStack Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 00c64533-15dd-47f4-bb97-fe80a1ebadef
 topic_type:
 - apiref
-ms.openlocfilehash: 101151469e2eece20afe289c9d95387ce6dc7c6a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 97918d280299fae16eb55185baee19c27d99005b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95672129"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99693284"
 ---
 # <a name="icordebugexceptionobjectvalueenumerateexceptioncallstack-method"></a>ICorDebugExceptionObjectValue::EnumerateExceptionCallStack Yöntemi
 
 Özel durum nesnesine katıştırılmış çağrı yığınına bir Numaralandırıcı alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT EnumerateExceptionCallStack(  

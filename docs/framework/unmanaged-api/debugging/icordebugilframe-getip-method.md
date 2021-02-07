@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugILFrame:: GetIP Yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugILFrame::GetIP Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 18217ba1-1776-4297-a3b9-f77e64b0fead
 topic_type:
 - apiref
-ms.openlocfilehash: 314d2a06c8e246a42b315690dc9fe4b507db285a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f3977d4fbe57b24e7b98b7a597b0db7ad171eb1c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95703180"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99691880"
 ---
 # <a name="icordebugilframegetip-method"></a>ICorDebugILFrame::GetIP Metodu
 
 Yönerge işaretçisinin değerini ve yönerge işaretçisi değerinin nasıl elde edileceğini açıklayan bit düzeyinde birleşim değerini alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetIP (  

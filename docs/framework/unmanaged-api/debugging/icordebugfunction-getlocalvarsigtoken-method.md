@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugFunction:: GetLocalVarSigToken yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugFunction::GetLocalVarSigToken Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 31e53494-bcc9-4981-91a4-f7e0f02cad48
 topic_type:
 - apiref
-ms.openlocfilehash: 3ad9697cf94a3dd89fbb00bdaa703632ddfcd6fd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cd7fb03829285ddcb1da2f1a93985fa1f98d3d39
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728140"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99692504"
 ---
 # <a name="icordebugfunctiongetlocalvarsigtoken-method"></a>ICorDebugFunction::GetLocalVarSigToken Metodu
 
 Bu ICorDebugFunction örneğiyle temsil edilen işlevin yerel değişken imzası için meta veri belirtecini alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetLocalVarSigToken (  

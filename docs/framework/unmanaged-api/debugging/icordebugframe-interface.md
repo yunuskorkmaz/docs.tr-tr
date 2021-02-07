@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugFrame arabirimi hakkında daha fazla bilgi edinin'
 title: ICorDebugFrame Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c48f764-3c64-4602-b2f4-4ffc60eb2c65
 topic_type:
 - apiref
-ms.openlocfilehash: bdc17e2c6c63deae1420fe738eac51153f6b368e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d0fd629672d535f89fe78c178032937443d9dfbd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726346"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99692855"
 ---
 # <a name="icordebugframe-interface"></a>ICorDebugFrame Arabirimi
 

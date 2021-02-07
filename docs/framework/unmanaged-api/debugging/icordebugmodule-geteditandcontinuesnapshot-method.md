@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugModule:: GetEditAndContinueSnapshot yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugModule::GetEditAndContinueSnapshot Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fad94e1e-78be-440f-aa43-e0c66e0b102e
 topic_type:
 - apiref
-ms.openlocfilehash: dbb67aba5997297d4649c845b709a4b48060b7ea
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 63ec84c40f3fc11308a657e2161c95b828db1fb2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95710213"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99691737"
 ---
 # <a name="icordebugmodulegeteditandcontinuesnapshot-method"></a>ICorDebugModule::GetEditAndContinueSnapshot Metodu
 

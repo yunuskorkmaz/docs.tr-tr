@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ICOR, Geval:: IsActive yöntemi'
 title: ICorDebugEval::IsActive Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: bf2bba24-d278-43bd-b1c5-35680e748d3e
 topic_type:
 - apiref
-ms.openlocfilehash: 5ac221b0b5837175b8073ab29f94c1f28078d3e4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2314814f8979f460063017ebdf46beb512417395
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729778"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99694064"
 ---
 # <a name="icordebugevalisactive-method"></a>ICorDebugEval::IsActive Yöntemi
 
 Bu ıcorınkıt Geval nesnesinin Şu anda çalışıp çalışmadığını gösteren bir değer alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT IsActive (  

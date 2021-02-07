@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugFrame:: Getzincirine metodu hakkında daha fazla bilgi edinin'
 title: ICorDebugFrame::GetChain Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: e28e51d3-8f73-494f-bcd4-48bac239fbe1
 topic_type:
 - apiref
-ms.openlocfilehash: d605ac36c17a815bf546819e331830f51142cfcd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d162d484a54f107fb5937e57f60e2b82cad90ca1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95690427"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99693063"
 ---
 # <a name="icordebugframegetchain-method"></a>ICorDebugFrame::GetChain Yöntemi
 
 Bu çerçevenin parçası olduğu zincire yönelik bir işaretçi alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetChain (  

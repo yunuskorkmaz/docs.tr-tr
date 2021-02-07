@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ıcorıbgeval:: NewArray Yöntemi'
 title: ICorDebugEval::NewArray Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cc79a67d-5368-434d-a943-209db90491b9
 topic_type:
 - apiref
-ms.openlocfilehash: ef6cbe2cef3c52d9a4b47ff77e8aeb5159e89c76
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1344a99450974369533b1c54b641c036fc64e3ea
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729765"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99693986"
 ---
 # <a name="icordebugevalnewarray-method"></a>ICorDebugEval::NewArray Yöntemi
 
@@ -28,7 +29,7 @@ Belirtilen öğe türü ve boyutlarının yeni bir dizisini ayırır.
   
  Bu yöntem .NET Framework sürüm 2,0 ' de kullanılmıyor. Bunun yerine [ICorDebugEval2:: NewParameterizedArray](icordebugeval2-newparameterizedarray-method.md) kullanın.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT NewArray (  

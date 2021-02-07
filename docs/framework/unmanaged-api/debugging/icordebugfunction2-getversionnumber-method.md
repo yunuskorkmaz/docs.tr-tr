@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ICorDebugFunction2:: GetVersionNumber yöntemi'
 title: ICorDebugFunction2::GetVersionNumber Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: e3a1ce48-9bb9-4ed6-a5fe-5e1819a6333f
 topic_type:
 - apiref
-ms.openlocfilehash: 88fb205235cfaf3566fbd74b05a4e9833058f4a0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7a703789099b82121c65214d6b1929e354405c8d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95696108"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99692218"
 ---
 # <a name="icordebugfunction2getversionnumber-method"></a>ICorDebugFunction2::GetVersionNumber Yöntemi
 
 Bu işlevin Düzenle ve devam et sürümünü alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetVersionNumber (  

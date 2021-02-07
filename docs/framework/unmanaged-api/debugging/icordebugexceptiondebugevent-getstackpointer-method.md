@@ -1,19 +1,20 @@
 ---
+description: ': Icordebugexceptiondebugger gevent:: GetStackPointer metodu hakkında daha fazla bilgi edinin'
 title: 'Icordebugexceptiondebugger gevent:: GetStackPointer yöntemi'
 ms.date: 03/30/2017
 ms.assetid: d8f66a1c-16be-4264-afc5-bc2dfbb4a682
-ms.openlocfilehash: 46906e7d3ce7f257eb776e50dc6097946eb77d1f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5a62a5eb54fff1e94beebc222e3f18cc4655040f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95697408"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99693453"
 ---
 # <a name="icordebugexceptiondebugeventgetstackpointer-method"></a>Icordebugexceptiondebugger gevent:: GetStackPointer yöntemi
 
 Bu özel durum ayıklama olayının yığın işaretçisini alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetStackPointer(  
