@@ -1,19 +1,20 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: başarısız çağrılar'
 title: Başarısız Olan Çağrılar
 ms.date: 03/30/2017
 ms.assetid: 52afeff8-333c-44a5-96ce-1f3c418523fc
-ms.openlocfilehash: 35a2441839ab2ad4e744159e33ed157a4680788d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: bde38e095e53b977337406846433fdce887d7362
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96278264"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759711"
 ---
 # <a name="calls-failed"></a>Başarısız Olan Çağrılar
 
 Sayaç adı: çağrı başarısız  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bu işlemdeki işlenmemiş özel durumları olan çağrı sayısı. Bu işlemde işlenmeyen bir özel durum olduğunda bu sayaç artırılır.  
   

@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 502-CompilationStop'
 title: 502 - CompilationStop
 ms.date: 03/30/2017
 ms.assetid: d7d3ab29-0dfa-4cf4-9bca-cd8191c51db5
-ms.openlocfilehash: 324e72bf3f2b2ec771202a131fa8bc58f2aa1214
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 10754bbd636316e005b50f1457941dad52bee631
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96254681"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760023"
 ---
 # <a name="502---compilationstop"></a>502 - CompilationStop
 
@@ -17,10 +18,10 @@ ms.locfileid: "96254681"
 |-|-|  
 |ID|502|  
 |Anahtar sözcükler|Leyemedi|  
-|Düzey|Bilgi|  
+|Level|Bilgi|  
 |Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bu olay, ServiceHost derlemesi sona erdiğinde yayınlanır.  
   

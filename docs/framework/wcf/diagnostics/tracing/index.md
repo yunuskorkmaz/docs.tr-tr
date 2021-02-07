@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Izleme'
 title: İzleme
 ms.date: 03/30/2017
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
-ms.openlocfilehash: 10b9be028710cdda378aeef0ca235a00aa451e08
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 373e308357016f128c2eacfc34111d4b4e72b6fb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96243917"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759425"
 ---
 # <a name="tracing"></a>İzleme
 

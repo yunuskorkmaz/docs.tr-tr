@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 5012-DCJsonGenReaderStart'
 title: 5012 - DCJsonGenReaderStart
 ms.date: 03/30/2017
 ms.assetid: 6d2ad3c9-47ee-4e77-b1c6-259ab15b0cfb
-ms.openlocfilehash: 778456f429c13505e5b7ac0cb3303e166cb14a7f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7dabcd2452c0901ca64facbd1775e84df997dcb4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96254720"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760088"
 ---
 # <a name="5012---dcjsongenreaderstart"></a>5012 - DCJsonGenReaderStart
 
@@ -17,10 +18,10 @@ ms.locfileid: "96254720"
 |-|-|  
 |ID|5012|  
 |Anahtar sözcükler|Serileştirme|  
-|Düzey|Ayrıntılı|  
+|Level|Ayrıntılı|  
 |Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  JSON tarafından oluşturulan okuyucu başladığında bu olay yayınlanır.  
   

@@ -1,19 +1,20 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Saniyedeki başarısız olan çağrılar'
 title: Saniyede Başarısız Olan Çağrı
 ms.date: 03/30/2017
 ms.assetid: e4ef3773-f650-4876-99cf-4d0c02aa03d4
-ms.openlocfilehash: d3eafc4b31f0e62093a972b7c9f2325a3648d21b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3961754eb73743a1213922f7c9e1bd164334cd6e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96285466"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759724"
 ---
 # <a name="calls-failed-per-second"></a>Saniyede Başarısız Olan Çağrı
 
 Sayaç adı: başarısız çağrı/saniye  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Saniye içinde bu işlemdeki işlenmemiş özel durumları olan çağrı sayısı.  
   

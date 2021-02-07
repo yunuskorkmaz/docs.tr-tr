@@ -1,19 +1,20 @@
 ---
+description: ': System. ServiceModel. Security. SecuritySessionDemuxFailure hakkında daha fazla bilgi edinin'
 title: System.ServiceModel.Security.SecuritySessionDemuxFailure
 ms.date: 03/30/2017
 ms.assetid: 74b89d9a-22be-4799-b9fb-e3dfa5426dec
-ms.openlocfilehash: fde9daf7b3306ac06ab265bfe344d1ab04e8aaf2
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 457f88176e9f283166b0317bc7850e9091f241de
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96273457"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99758619"
 ---
 # <a name="systemservicemodelsecuritysecuritysessiondemuxfailure"></a>System.ServiceModel.Security.SecuritySessionDemuxFailure
 
 System.ServiceModel.Security.SecuritySessionDemuxFailure  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Gelen ileti, var olan bir güvenlik oturumunun parçası değil.  
   

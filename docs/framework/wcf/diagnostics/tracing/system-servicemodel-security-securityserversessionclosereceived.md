@@ -1,19 +1,20 @@
 ---
+description: ': System. ServiceModel. Security. Securityserversessioncloserecıber hakkında daha fazla bilgi edinin'
 title: System.ServiceModel.Security.SecurityServerSessionCloseReceived
 ms.date: 03/30/2017
 ms.assetid: 1260f9e8-78d9-4ccf-9912-3189ff5951e0
-ms.openlocfilehash: a0eae32c5cb51a358bea241e5ceb5d9a7ea2ecc0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 327a652679c1ab22d9e664d53826d1122202844c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96291459"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99758840"
 ---
 # <a name="systemservicemodelsecuritysecurityserversessionclosereceived"></a>System.ServiceModel.Security.SecurityServerSessionCloseReceived
 
 System.ServiceModel.Security.SecurityServerSessionCloseResponseReceived  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Sunucu güvenlik oturumu istemciden bir kapatma yanıtı iletisi aldı.  
   

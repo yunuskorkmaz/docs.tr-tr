@@ -1,19 +1,20 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: hizmet: saniyede akan Işlem sayısı'
 title: 'Hizmet: Saniyede Akışı Yapılan İşlem'
 ms.date: 03/30/2017
 ms.assetid: ec72eb49-2942-4811-91df-d6e5dad81fd8
-ms.openlocfilehash: 158bd7e2f2f98e91215ef7351cf90493a2d3059d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: aae78853272b46a97ce25a710039661f36bf7079
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96236838"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759503"
 ---
 # <a name="service-transactions-flowed-per-second"></a>Hizmet: Saniyede Akışı Yapılan İşlem
 
 Sayaç adı: saniye başına akan Işlem.  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bu hizmette gerçekleştirilen işlemlere aktarılan işlem sayısı (saniye).  
   

@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: User-Code Izlemeleri yayma'
 title: Kullanıcı Kodu İzleri Yayma
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-ms.openlocfilehash: e8b2031165a83e24ba15a2fcf847a170f47e696a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0abc8a4b39979942fd291ffd9cbb96047274dab0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84589298"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759516"
 ---
 # <a name="emitting-user-code-traces"></a>Kullanıcı Kodu İzleri Yayma
 
@@ -25,7 +26,7 @@ TraceSource ts = new TraceSource("myUserTraceSource");
 
 ## <a name="creating-activities"></a>Etkinlik oluşturma
 
-Etkinlikler mantıksal işleme birimidir. İzlemelerin birlikte gruplandırılmasına istediğiniz her önemli işlem birimi için bir etkinlik oluşturabilirsiniz. Örneğin, hizmete her istek için bir etkinlik oluşturabilirsiniz. Bunu yapmak için aşağıdaki adımları gerçekleştirin.
+Etkinlikler mantıksal işleme birimidir. İzlemelerin birlikte gruplandırılmasına istediğiniz her önemli işlem birimi için bir etkinlik oluşturabilirsiniz. Örneğin, hizmete her istek için bir etkinlik oluşturabilirsiniz. Bunu yapmak için aşağıdaki adımları uygulayın.
 
 1. Etkinlik KIMLIĞINI kapsama alanına kaydedin.
 
@@ -109,7 +110,7 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
 
 ## <a name="viewing-user-traces-in-the-service-trace-viewer-tool"></a>Hizmet Izleme Görüntüleyicisi aracında Kullanıcı Izlemelerini görüntüleme
 
-Bu bölüm, [hizmet Izleme Görüntüleyicisi Aracı (SvcTraceViewer. exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md)kullanılarak görüntülenirken, [genişletme izleme](../../samples/extending-tracing.md) örneği çalıştırılarak oluşturulan izlemelerin ekran görüntülerini içerir.
+Bu bölüm, [hizmet Izleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md)kullanılarak görüntülendiğinde, [genişleyen izleme](../../samples/extending-tracing.md) örneği çalıştırılarak oluşturulan izlemelerin ekran görüntülerini içerir.
 
 Aşağıdaki diyagramda, daha önce oluşturulan "istek ekle" etkinliği sol bölmede seçilidir. Uygulama istemci programını oluşturan üç farklı matematik işlemi etkinliği (Böl, çıkart, çarpma) ile listelenir. Kullanıcı kodu, farklı isteklerindeki olası hata oluşumlarını yalıtmak için her işlem için bir yeni etkinlik tanımladı.
 

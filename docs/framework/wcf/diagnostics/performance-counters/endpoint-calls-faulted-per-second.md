@@ -1,19 +1,20 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: uç nokta: saniye başına hatalı çağrı'
 title: 'Uç Noktası: Saniyede Hatalı Çağrı'
 ms.date: 03/30/2017
 ms.assetid: 9840fc0a-0e4d-4638-96fd-40e3ab9e4667
-ms.openlocfilehash: e69e37de9605afd4806fd628088948d0d69291da
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 160680f215dbb3eea5ad15c756c7dc68a0629a90
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96250170"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759620"
 ---
 # <a name="endpoint-calls-faulted-per-second"></a>Uç Noktası: Saniyede Hatalı Çağrı
 
 Sayaç adı: saniye başına hatalı çağrı.  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bu uç noktaya saniye içinde hata döndüren çağrı sayısı.  
   

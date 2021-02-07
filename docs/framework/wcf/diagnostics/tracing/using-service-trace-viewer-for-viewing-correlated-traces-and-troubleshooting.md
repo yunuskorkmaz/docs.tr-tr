@@ -1,23 +1,24 @@
 ---
-title: 'İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma '
+description: 'Hakkında daha fazla bilgi edinin: Ilişkili Izlemeleri ve sorun gidermeyi görüntülemek için hizmet Izleme görüntüleyicisini kullanma'
+title: İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: e1cd1443e96e7195127cb95e7ef1b2c4d6d9c176
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3f6f48c3d366a024c5dcc0cdbc85c4aea47a7a8b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587761"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99758170"
 ---
-# <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma 
+# <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma
 
 Bu konu başlığı altında, izleme verilerinin biçimi, nasıl görüntüleneceği ve uygulamanızın sorunlarını gidermek için hizmet Izleme görüntüleyicisini kullanan yaklaşımlar açıklanmaktadır.
 
 ## <a name="using-the-service-trace-viewer-tool"></a>Hizmet Izleme Görüntüleyicisi aracını kullanma
 
-Windows Communication Foundation (WCF) hizmet Izleme Görüntüleyicisi Aracı, bir hatanın kök nedenini bulmak için WCF dinleyicileri tarafından üretilen tanılama izlemelerini ilişkilendirmenize yardımcı olur. Araç, WCF hizmetleriyle ilgili sorunları tanılamak, onarmak ve doğrulamak üzere izlemeleri kolayca görüntülemenizi, gruplandırmanızı ve filtrelemenizi sağlayan bir yol sunar. Bu aracı kullanma hakkında daha fazla bilgi için bkz. [hizmet Izleme Görüntüleyicisi Aracı (SvcTraceViewer. exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md).
+Windows Communication Foundation (WCF) hizmet Izleme Görüntüleyicisi Aracı, bir hatanın kök nedenini bulmak için WCF dinleyicileri tarafından üretilen tanılama izlemelerini ilişkilendirmenize yardımcı olur. Araç, WCF hizmetleriyle ilgili sorunları tanılamak, onarmak ve doğrulamak üzere izlemeleri kolayca görüntülemenizi, gruplandırmanızı ve filtrelemenizi sağlayan bir yol sunar. Bu aracı kullanma hakkında daha fazla bilgi için bkz. [hizmet Izleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md).
 
-Bu konu, [hizmet Izleme Görüntüleyicisi Aracı (SvcTraceViewer. exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md)kullanılarak görüntülenirken [Izleme ve mesaj günlüğü](../../samples/tracing-and-message-logging.md) örneği çalıştırılarak oluşturulan izlemelerin ekran görüntülerini içerir. Bu konu, izleme içeriğini, etkinlikleri ve bunların bağıntılarını ve sorun giderirken çok sayıda izlemenin nasıl çözümlendiğini gösterir.
+Bu konu, [hizmet Izleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md)kullanılarak görüntülendiğinde [Izleme ve mesaj günlüğü](../../samples/tracing-and-message-logging.md) örneği çalıştırılarak oluşturulan izlemelerin ekran görüntülerini içerir. Bu konu, izleme içeriğini, etkinlikleri ve bunların bağıntılarını ve sorun giderirken çok sayıda izlemenin nasıl çözümlendiğini gösterir.
 
 ## <a name="viewing-trace-content"></a>Izleme Içeriğini görüntüleme
 
@@ -46,15 +47,15 @@ Ayrıca, biçimlendirilen görünüm, izleme için bir açıklama ve kullanılab
 
 XML görünümünde, yararlı XML etiketleri şunları içerir:
 
-- `<SubType>`(izleme düzeyi).
+- `<SubType>` (izleme düzeyi).
 
 - `<TimeCreated>`.
 
-- `<Source>`(izleme kaynağı adı).
+- `<Source>` (izleme kaynağı adı).
 
-- `<Correlation>`(izleme yayırken etkinlik kimliği kümesi).
+- `<Correlation>` (izleme yayırken etkinlik kimliği kümesi).
 
-- `<Execution>`(işlem ve iş parçacığı kimliği).
+- `<Execution>` (işlem ve iş parçacığı kimliği).
 
 - `<Computer>`.
 

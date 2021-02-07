@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: uçtan uca Izleme'
 title: Uçtan Uca İzleme
 ms.date: 03/30/2017
 ms.assetid: f5ac7fc7-f97c-4313-b068-54e0c471b2aa
-ms.openlocfilehash: a8c06b9e4f70321e6ef3756863390dc62c659557
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c1c4a38d4ef8c445994d42abeafbb25da9a5f326
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96243956"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759438"
 ---
 # <a name="end-to-end-tracing"></a>Uçtan Uca İzleme
 

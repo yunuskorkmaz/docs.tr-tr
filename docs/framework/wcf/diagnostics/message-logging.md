@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi için: Ileti günlüğe kaydetme'
 title: İleti Günlüğe Kaydetme
 ms.date: 03/30/2017
 ms.assetid: 6bce0682-75ef-4d65-a659-b328fba4a8b5
-ms.openlocfilehash: 109b81ee7124bb7f89048c35c9f9617ba3e84c87
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 47130acb5ce70f85ba9d20b70566c29531be3fb0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96285518"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759750"
 ---
 # <a name="message-logging"></a>İleti Günlüğe Kaydetme
 

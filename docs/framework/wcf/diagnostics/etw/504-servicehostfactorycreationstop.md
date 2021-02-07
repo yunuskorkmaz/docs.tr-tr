@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 504-ServiceHostFactoryCreationStop'
 title: 504 - ServiceHostFactoryCreationStop
 ms.date: 03/30/2017
 ms.assetid: 284d240a-ef0c-4572-b3cd-8fbc579db05f
-ms.openlocfilehash: 1e93e7a4d797dbf87d876ba4327709a604695340
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f344aaac54448d08b429bd60ede336d6fde4db0c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96254668"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759997"
 ---
 # <a name="504---servicehostfactorycreationstop"></a>504 - ServiceHostFactoryCreationStop
 
@@ -17,10 +18,10 @@ ms.locfileid: "96254668"
 |-|-|  
 |ID|504|  
 |Anahtar sözcükler|Leyemedi|  
-|Düzey|Bilgi|  
+|Level|Bilgi|  
 |Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bu olay, ServiceHostFactory oluşturma sona erdiğinde yayınlanır.  
   

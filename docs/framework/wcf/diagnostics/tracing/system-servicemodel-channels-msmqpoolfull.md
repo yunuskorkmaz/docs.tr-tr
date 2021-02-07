@@ -1,19 +1,20 @@
 ---
+description: ': System. ServiceModel. Channels. MsmqPoolFull hakkında daha fazla bilgi edinin'
 title: System.ServiceModel.Channels.MsmqPoolFull
 ms.date: 03/30/2017
 ms.assetid: f1fb0cfe-cddd-4bed-aea5-c9fa60ccce76
-ms.openlocfilehash: 3ede4759696ae2d76fcca65b7efeecf9212a87b1
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: cdaa0a86f57d9a723753ba11eed92f694b780863
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96243735"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759295"
 ---
 # <a name="systemservicemodelchannelsmsmqpoolfull"></a>System.ServiceModel.Channels.MsmqPoolFull
 
 System.ServiceModel.Channels.MsmqPoolFull  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Yerel MSMQ iletilerinin havuzu dolu. Bu, performansı etkileyebilir.  
   

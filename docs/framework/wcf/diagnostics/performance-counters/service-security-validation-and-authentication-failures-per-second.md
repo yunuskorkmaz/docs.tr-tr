@@ -1,19 +1,20 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: hizmet: güvenlik doğrulama ve kimlik doğrulama başarısızlığı/saniye'
 title: 'Hizmet: Saniyede Güvenlik Doğrulama ve Kimlik Doğrulama Hatası'
 ms.date: 03/30/2017
 ms.assetid: 4af18009-e778-490b-9ba6-e76485285830
-ms.openlocfilehash: f66e6b90622cf181229938bc4fd877a98cd23a48
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8c0baedab3335031ed1737e0e4cecff7febc2944
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96236890"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759529"
 ---
 # <a name="service-security-validation-and-authentication-failures-per-second"></a>Hizmet: Saniyede Güvenlik Doğrulama ve Kimlik Doğrulama Hatası
 
 Sayaç adı: saniye başına güvenlik doğrulaması ve kimlik doğrulama başarısızlığı.  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bu sayaç, "güvenlik çağrıları yetkilendirilmemiş" sayacı kapsamında olmayan bir güvenlik sorunu nedeniyle her ileti reddedildiğinde artırılır. Bu tür sorunlar şunlardır:  
   
