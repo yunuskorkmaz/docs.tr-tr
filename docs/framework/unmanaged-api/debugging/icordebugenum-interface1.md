@@ -1,4 +1,5 @@
 ---
+description: 'Bu konuda daha fazla bilgi edinin: ıcorı, Genum arabirimi'
 title: ICorDebugEnum Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 80be7efe-2c32-4b9f-8c52-40c6f6268219
 topic_type:
 - apiref
-ms.openlocfilehash: b208444de3b427329988f27b9d252b54143b7240
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 20d2bb14bddcaf40802567ec78a8e318ac1db380
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95698799"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99694480"
 ---
 # <a name="icordebugenum-interface"></a>ICorDebugEnum Arabirimi
 
