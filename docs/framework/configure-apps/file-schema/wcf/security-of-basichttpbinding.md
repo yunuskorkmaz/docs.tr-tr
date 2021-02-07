@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi <security> edinin: <basicHttpBinding>'
 title: <security> / <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 6432708d-5465-4bd9-bfc2-466742db99cb
-ms.openlocfilehash: 6144e5448526d7f2a7c89693f70f71a7f26c4a22
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 92d938d062d56cbb066a1170a9d3b8f3f5ba0186
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183669"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683263"
 ---
 # <a name="security-of-basichttpbinding"></a>\<security> / \<basicHttpBinding>
 
@@ -46,7 +47,7 @@ Uygulamasının güvenlik yeteneklerini tanımlar [\<basicHttpBinding>](basichtt
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Yok|-İletiler aktarım sırasında güvenli değildir.|  
+|Hiçbiri|-İletiler aktarım sırasında güvenli değildir.|  
 |Aktarım|Güvenlik, HTTPS taşıması kullanılarak sağlanır. SOAP iletilerinin HTTPS kullanılarak güvenliği sağlanır. Hizmetin, hizmetin X. 509.440 sertifikası kullanılarak istemcinin kimliği doğrulanır. İstemcinin kimliği, sağlanan ClientCredentialType kullanılarak doğrulanır. Bkz [\<transport>](transport-of-basichttpbinding.md) ..|  
 |İleti|Güvenlik, SOAP iletisi güvenliği kullanılarak sağlanır. Varsayılan olarak, gövde şifrelenir ve imzalanır. Bu bağlama için, sistem, sunucu sertifikasının bant dışı istemciye sağlanması gerekir. `ClientCredentialType`Bu bağlama için geçerli tek geçerlidir `Certificate` .|  
 |TransportWithMessageCredential|Bütünlük, gizlilik ve sunucu kimlik doğrulaması, aktarım güvenliği tarafından sağlanır. İstemci kimlik doğrulaması, SOAP iletisi güvenliği aracılığıyla sağlanır. Bu mod, Kullanıcı Kullanıcı adı/parola kullanarak kimlik doğrulaması yapıldığında ve ileti aktarımını güvenli hale getirmek için mevcut bir HTTP dağıtımı olduğunda geçerlidir.|  

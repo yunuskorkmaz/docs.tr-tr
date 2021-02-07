@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <netHttpsBinding>'
 title: <netHttpsBinding>
 ms.date: 03/30/2017
 ms.assetid: ff122116-6042-4792-9f21-275b4f97a105
-ms.openlocfilehash: f6eca792f9bae6712a327fbcb5bdf47be9699062
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 7f93e79fe8c390d2877d7e35ae6004475ddb849b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204599"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99684041"
 ---
 # \<netHttpsBinding>
 

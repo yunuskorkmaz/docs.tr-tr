@@ -1,17 +1,18 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <netNamedPipeBinding>'
 title: <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: 00a8580b-face-47a4-838d-b9fed48e72df
-ms.openlocfilehash: f1ec6091d72c1d1c6d75c44dd1f98d6d4e10ea12
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b6ee706337d3dd33c653bfa0d2b91f4eda0fcea5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204573"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683950"
 ---
 # \<netNamedPipeBinding>
 
-Makine içi çapraz süreç iletişimi için güvenli, güvenilir ve iyileştirilmiş olan bir bağlama tanımlar. Varsayılan olarak, güvenlik için WS-ReliableMessaging ile bir çalışma zamanı iletişim yığını, aktarım güvenliği için taşıma güvenliği, ileti teslimi için adlandırılmış kanallar ve ikili ileti kodlaması.  
+Makine içi çapraz süreç iletişimi için güvenli, güvenilir ve iyileştirilmiş olan bir bağlama tanımlar. Varsayılan olarak, güvenilirlik için WS-ReliableMessaging, aktarım güvenliği için taşıma güvenliği, ileti tesliminde kanallar adlı bir çalışma zamanı iletişim yığını ve ikili ileti kodlaması oluşturur.  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\

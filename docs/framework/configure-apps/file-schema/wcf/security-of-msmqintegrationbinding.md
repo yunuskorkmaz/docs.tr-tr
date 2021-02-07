@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi <security> edinin: <msmqIntegrationBinding>'
 title: <security> / <msmqIntegrationBinding>
 ms.date: 03/30/2017
 ms.assetid: ae5c68a8-14a2-4c6e-b9e0-3e94e3e9135e
-ms.openlocfilehash: be2f48f7d9c3be4ea0a5fe95436930b3f23c7551
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4ad4cb89599198661d764cfeb985609be027c0eb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91170070"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683209"
 ---
 # <a name="security-of-msmqintegrationbinding"></a>\<security> / \<msmqIntegrationBinding>
 
@@ -46,7 +47,7 @@ Message Queuing (MSMQ) tümleştirme kanalının taşıma güvenlik ayarlarını
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|mod|Message Queuing tümleştirme kanalı ile bütünlüğü, gizliliği ve kimlik doğrulamasını denetleyen güvenlik türünü belirtir. Geçerli değerler şunlardır:<br /><br /> -None: Bu, güvenliği devre dışı bırakır.<br />-Taşıma: koruma ve kimlik doğrulama, taşıma tarafından sunulur. Bu, iki kuyruk yöneticisi arasındaki ileti güvenliği için geçerlidir. Uygulama ve kuyruk Yöneticisi arasında bir güvenlik sunulmaz. Mevcut MSMQ uygulamaları, bu tür güvenlik moduyla işlevsel olarak eşdeğerdir.<br /><br /> Varsayılan değer: `Transport`. Bu öznitelik türü <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode> .|  
+|mod|Message Queuing tümleştirme kanalı ile bütünlüğü, gizliliği ve kimlik doğrulamasını denetleyen güvenlik türünü belirtir. Geçerli değerler şunlardır:<br /><br /> -None: Bu, güvenliği devre dışı bırakır.<br />-Taşıma: koruma ve kimlik doğrulama, taşıma tarafından sunulur. Bu, iki kuyruk yöneticisi arasındaki ileti güvenliği için geçerlidir. Uygulama ve kuyruk Yöneticisi arasında bir güvenlik sunulmaz. Mevcut MSMQ uygulamaları, bu tür güvenlik moduyla işlevsel olarak eşdeğerdir.<br /><br /> `Transport` varsayılan değerdir. Bu öznitelik türü <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode> .|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   

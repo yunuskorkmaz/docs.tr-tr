@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <routing>'
 title: <routing>
 ms.date: 03/30/2017
 ms.assetid: a210c209-3940-4288-9a8e-39b1e62606bc
-ms.openlocfilehash: fcf2d4eec93fd7127c6f800e1c739ad1fac49203
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 62222b527a14310b66015d4fdc4503e6cff25c8a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399968"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683352"
 ---
 # \<routing>
 
@@ -17,7 +18,7 @@ Gelen iletileri değerlendirirken kullanılacak Windows Communication Foundation
 &nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<routing>**
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.serviceModel>
@@ -51,14 +52,14 @@ Yok
 
 ### <a name="child-elements"></a>Alt öğeleri
 
-|     | Açıklama |
+|     | Description |
 | --- | ----------- |
 | [**\<filters>**](filters-of-routing.md) | Gelen iletiler değerlendirilirken Windows Communication Foundation (WCF) MessageFilter türünü belirten bir yönlendirme filtreleri kümesi içerir. |
 | [**\<filterTables>**](filtertables.md) | Filtre eşleştiğinde kullanılacak bitiş noktasını belirtmek için yönlendirme filtreleri ve hedef uç noktalar arasında eşlemeler içerir. |
 
 ### <a name="parent-elements"></a>Üst öğeler
 
-|     | Açıklama |
+|     | Description |
 | --- | ----------- |
 | **\<system.ServiceModel>** | Tüm WCF yapılandırma öğelerinin kök öğesi. |
 

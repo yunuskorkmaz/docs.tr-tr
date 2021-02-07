@@ -1,13 +1,14 @@
 ---
+description: WCF hakkında daha fazla bilgi edinin <participants>
 title: <participants> WCF
 ms.date: 03/30/2017
 ms.assetid: d99dbddc-0057-4e18-8e42-f91411d39970
-ms.openlocfilehash: 4ee70d3a9b5d75adc639f1e3922cfde6737e9e01
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4e0285025864a8c70c75bc409a79bc61002f29a3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91170161"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683833"
 ---
 # <a name="participants-of-wcf"></a>\<participants> WCF
 

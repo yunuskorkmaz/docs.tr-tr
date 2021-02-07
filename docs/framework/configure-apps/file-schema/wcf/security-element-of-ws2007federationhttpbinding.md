@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <security> öğesi <ws2007FederationHttpBinding>'
 title: <security> öğesi <ws2007FederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 826219b4-3a16-45fc-832d-0cd7cbbd3b84
-ms.openlocfilehash: 943ccc241aef15b58661699408b085d98cf86c3b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0caa2c3791c0dc3c8db0d9ee27175a28e52f6baa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183708"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683300"
 ---
 # <a name="security-element-of-ws2007federationhttpbinding"></a>\<security> öğesi \<ws2007FederationHttpBinding>
 
@@ -45,13 +46,13 @@ ms.locfileid: "91183708"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`mode`|İsteğe bağlı. Uygulanan güvenlik türünü belirtir. Varsayılan değer: `Message`. Bu öznitelik türü <xref:System.ServiceModel.WSFederationHttpSecurityMode> .|  
+|`mode`|İsteğe bağlı. Uygulanan güvenlik türünü belirtir. `Message` varsayılan değerdir. Bu öznitelik türü <xref:System.ServiceModel.WSFederationHttpSecurityMode> .|  
   
 ## <a name="mode-attribute"></a>mode özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Yok|Aktarım sırasında SOAP iletisi güvenli değildir.|  
+|Hiçbiri|Aktarım sırasında SOAP iletisi güvenli değildir.|  
 |İleti|Bütünlük, gizlilik, sunucu kimlik doğrulaması ve istemci kimlik doğrulaması, SOAP iletisi güvenliği kullanılarak sağlanır. Varsayılan olarak, gövde şifrelenir ve imzalanır. Hizmetin bir sertifikayla yapılandırılması gerekir. İstemci kimlik doğrulaması, bir güvenlik belirteci hizmeti tarafından istemciye verilen belirteci temel alır.|  
 |TransportWithMessageCredential|Bütünlük, gizlilik ve sunucu kimlik doğrulaması, HTTPS tarafından sağlanır. Hizmetin bir sertifikayla yapılandırılması gerekir. İstemci kimlik doğrulaması, SOAP iletisi güvenliği aracılığıyla sağlanır ve istemciye bir güvenlik belirteci hizmeti tarafından verilen belirteci temel alır.|  
   

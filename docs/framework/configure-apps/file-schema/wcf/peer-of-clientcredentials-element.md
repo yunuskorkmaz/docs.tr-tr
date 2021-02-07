@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <peer> <clientCredentials> öğe'
 title: <peer><clientCredentials>öğesinin
 ms.date: 03/30/2017
 ms.assetid: 505bd987-0042-4622-b68e-94f439729d53
-ms.openlocfilehash: 75d8543d7db5eee1345d54f934fc89c9593b85ac
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1ff9386ba51dcf6bab6df71bd345cdaa59f18e3a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91186997"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683794"
 ---
 # <a name="peer-of-clientcredentials-element"></a>\<peer>\<clientCredentials>öğesinin
 

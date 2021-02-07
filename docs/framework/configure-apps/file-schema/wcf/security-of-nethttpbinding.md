@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi <security> edinin: <netHttpBinding>'
 title: <security> / <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: dc41f6f7-cabc-4a64-9fa0-ceabf861b348
-ms.openlocfilehash: 97c52fa4f062ed0c65d5b1a8ca47a1439ab04cf5
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 70d6363c0ac7fa00d83880ddc8c873548b385a29
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73736485"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683131"
 ---
 # <a name="security-of-nethttpbinding"></a>\<security> / \<netHttpBinding>
 
@@ -20,7 +21,7 @@ Uygulamasının güvenlik yeteneklerini tanımlar [\<netHttpBinding>](nethttpbin
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<security>**  
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <security mode="Message/None/Transport/TransportWithCredential">
@@ -46,7 +47,7 @@ Uygulamasının güvenlik yeteneklerini tanımlar [\<netHttpBinding>](nethttpbin
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|Yok|-İletiler aktarım sırasında güvenli değildir.|
+|Hiçbiri|-İletiler aktarım sırasında güvenli değildir.|
 |Aktarım|Güvenlik, HTTPS taşıması kullanılarak sağlanır. SOAP iletilerinin HTTPS kullanılarak güvenliği sağlanır. Hizmetin, hizmetin X. 509.440 sertifikası kullanılarak istemcinin kimliği doğrulanır. İstemcinin kimliği, sağlanan ClientCredentialType kullanılarak doğrulanır.|
 |İleti|Güvenlik, SOAP iletisi güvenliği kullanılarak sağlanır. Varsayılan olarak, gövde şifrelenir ve imzalanır. Bu bağlama için, sistem, sunucu sertifikasının bant dışı istemciye sağlanması gerekir. `ClientCredentialType`Bu bağlama için geçerli tek geçerlidir `Certificate` .|
 |TransportWithMessageCredential|Bütünlük, gizlilik ve sunucu kimlik doğrulaması, aktarım güvenliği tarafından sağlanır. İstemci kimlik doğrulaması, SOAP iletisi güvenliği aracılığıyla sağlanır. Bu mod, Kullanıcı Kullanıcı adı/parola kullanarak kimlik doğrulaması yapıldığında ve ileti aktarımını güvenli hale getirmek için mevcut bir HTTP dağıtımı olduğunda geçerlidir.|

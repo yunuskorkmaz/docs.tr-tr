@@ -1,17 +1,18 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <reliableSession>'
 title: <reliableSession>
 ms.date: 03/30/2017
 ms.assetid: 129b4a59-37f0-4030-b664-03795d257d29
-ms.openlocfilehash: ec69d9194d98302a4744e290f23fbb150b2e87cc
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5b5798326be9b376ece4e590f068f5b5e71bd878
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91181319"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683417"
 ---
 # \<reliableSession>
 
-WS-güvenilir mesajlaşma için ayarı tanımlar. Bu öğe özel bir bağlamaya eklendiğinde, elde edilen kanal, tam olarak bir kez teslimat hakkı destekleyebilir.  
+WS-Reliable mesajlaşma ayarlarını tanımlar. Bu öğe özel bir bağlamaya eklendiğinde, elde edilen kanal, tam olarak bir kez teslimat hakkı destekleyebilir.  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
@@ -42,7 +43,7 @@ WS-güvenilir mesajlaşma için ayarı tanımlar. Bu öğe özel bir bağlamaya 
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
 |bildiren Gementınterval|<xref:System.TimeSpan>Kanalın bu noktaya kadar alınan iletiler için bildirim göndermek üzere bekleyeceği maksimum zaman aralığını içeren bir. Varsayılan değer 00:00:0.2 ' dir.|  
-|flowControlEnabled|Gelişmiş akış denetiminin, WS-güvenilir mesajlaşma için Microsoft 'a özgü akış denetimi uygulamasının etkinleştirilip etkinleştirilmediğini belirten bir Boolean değer. Varsayılan değer: `true`.|  
+|flowControlEnabled|Gelişmiş akış denetiminin, WS-Reliable mesajlaşma için Microsoft 'a özgü bir akış denetimi uygulamasının etkinleştirilip etkinleştirilmediğini belirten bir Boolean değer. Varsayılan değer: `true`.|  
 |InactivityTimeout|<xref:System.TimeSpan>Bu, kanalın diğer iletişim tarafına, kanalın süresi geçmeden önce herhangi bir ileti göndermemeyi sağlayan en uzun süreyi belirtir. Varsayılan değer 00:10:00 ' dir.<br /><br /> Bir kanaldaki etkinlik, uygulama veya altyapı iletileri alma olarak tanımlanır. Bu özellik, etkin olmayan bir oturumun etkin tutulması için en uzun süreyi denetler. Daha uzun süre hiçbir etkinlik olmadan geçerse, oturum altyapı ve kanal hataları tarafından iptal edilir. **Note:**  Uygulamanın bağlantıyı canlı tutmak için düzenli olarak ileti gönderebilmesi gerekli değildir.|  
 |maxPendingChannels|Dinleyicide bekleyebilen en fazla kanal sayısını belirten bir tamsayı. Bu değer 1 ila 16384 arasında olmalıdır. Varsayılan değer 4'tür.<br /><br /> Kanallar kabul edilmeden önce bekliyor. Bu sınıra ulaşıldığında, hiçbir kanal oluşturulmaz. Bunun yerine, bu sayı kapatılıncaya kadar (bekleyen kanalları kabul ederek) bekleyen moda konur. Bu, fabrika başına bir limit.<br /><br /> Eşiğe ulaşıldığında ve bir uzak uygulama yeni bir güvenilir oturum kurmaya çalıştığında, istek reddedilir ve bu hataları isteyen açma işlemi yapılır. Bu sınır, bekleyen giden kanalların sayısı için geçerlidir.|  
 |maxRetryCount|Güvenilir bir kanalın, temel aldığı kanalda Gönder ' i çağırarak bildirim almamış bir iletiyi yeniden göndermek için yaptığı deneme sayısının üst sınırını belirten bir tamsayı.<br /><br /> Bu değer sıfırdan büyük olmalıdır. Varsayılan değer 8 ' dir.<br /><br /> Bu değer sıfırdan büyük bir tamsayı olmalıdır. Son yeniden iletim sonrasında bir bildirim alınmıyorsa, kanal hataları.<br /><br /> Alıcı tarafından alıcının teslimatı onaylanmışsa bir ileti aktarıldıkları kabul edilir.<br /><br /> Bir bildirim, iletilen bir ileti için belirli bir süre içinde alınmadığında, altyapı iletiyi otomatik olarak yeniden iletir. Altyapı, bu özellik tarafından belirtilen en fazla kaç kez iletiyi yeniden göndermeye çalışır. Son yeniden iletim sonrasında bir bildirim alınmıyorsa, kanal hataları.<br /><br /> Altyapı, hesaplanan ortalama gidiş dönüş zamanına bağlı olarak ne zaman yeniden aktarım için bir üstel geri dönüş algoritması kullanır. İlk iletim denemesi ve son yeniden iletme girişimi arasında yaklaşık 8,5 dakika boyunca yeniden iletimden önce 1 saniye içinde başlar ve her denemede gecikme süresi ikiye geçer. İlk yeniden iletim denemesinin saati, hesaplanan gidiş dönüş zamanına ve bu girişimlere göre farklılık gösteren elde edilen süre uzatılmasına göre düzeltilir. Bu, yeniden aktarım süresinin farklı ağ koşullarına dinamik olarak uyum sağlamasına izin verir.|  

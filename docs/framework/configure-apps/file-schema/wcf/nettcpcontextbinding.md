@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <netTcpContextBinding>'
 title: <netTcpContextBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d4715e1-5fff-4c3d-a226-18f21d0b30c4
-ms.openlocfilehash: bb6094b962c0f1199f0a16eb7d0821a95eba4c77
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2a5eea664c4287f8da45e8d286621bb7aa358d0f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91195043"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683872"
 ---
 # \<netTcpContextBinding>
 
@@ -71,7 +72,7 @@ ms.locfileid: "91195043"
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
 |closeTimeout|<xref:System.TimeSpan>Bir kapatma işleminin tamamlanabilmesi için belirtilen zaman aralığını belirten bir değer. Bu değer, değerinden büyük veya buna eşit olmalıdır <xref:System.TimeSpan.Zero> . Varsayılan değer 00:01:00 ' dir.|  
-|contextProtectionLevel|<xref:System.Net.Security.ProtectionLevel>Bağlam bilgilerini yaymak için kullanılan soap üstbilgisinin istenen koruma düzeyini belirten geçerli bir değer.  Varsayılan değer: <xref:System.Net.Security.ProtectionLevel.Sign>.|  
+|contextProtectionLevel|<xref:System.Net.Security.ProtectionLevel>Bağlam bilgilerini yaymak için kullanılan soap üstbilgisinin istenen koruma düzeyini belirten geçerli bir değer.  <xref:System.Net.Security.ProtectionLevel.Sign> varsayılan değerdir.|  
 |hostnameComparisonMode|URI 'Leri ayrıştırmak için kullanılan HTTP ana bilgisayar adını karşılaştırma modunu belirtir. Bu öznitelik, <xref:System.ServiceModel.HostNameComparisonMode> ana bilgisayar ADıNıN URI üzerinde eşleştirilirken hizmete erişmek için kullanılıp kullanılmadığını gösteren türüdür. Varsayılan değer, <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard> eşleşenlerin ana bilgisayar adını yok saymaz.|  
 |listenBacklog|Dinleyicide kabul edilmesini bekleyen kanal sayısı üst sınırını belirten pozitif bir tamsayı. Bu sınırın üzerinde olan bağlantılar, sınırın altındaki boşluk kullanılabilir olana kadar sıraya alınır. `connectionTimeout`Öznitelik, bir bağlantı özel durumu oluşturmadan önce istemcinin bağlanması için bekleyeceği süreyi sınırlandırır. Varsayılan değer 10 ' dur.|  
 |maxBufferPoolSize|Bu bağlama için en büyük arabellek havuzu boyutunu belirten bir tamsayı. Varsayılan değer 512 * 1024 bayttır. Windows Communication Foundation (WCF) birçok bölümü arabellekler kullanır. Her kullanıldıkları sırada arabellekleri oluşturma ve yok etme, her zaman pahalıdır ve arabellekler için çöp toplama de pahalıdır. Arabellek havuzları ile havuzdan bir arabellek alabilir, bunu kullanabilir ve işiniz bittiğinde havuza döndürebilirsiniz. Bu nedenle, arabelleklerin oluşturulmasıyla ve yok edilirken ek yük önlenmiş olur.|  

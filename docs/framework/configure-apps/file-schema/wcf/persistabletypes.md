@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <persistableTypes>'
 title: <persistableTypes>
 ms.date: 03/30/2017
 ms.assetid: 4d255097-45f0-4a04-945e-41d9bcfe8c54
-ms.openlocfilehash: 0905c6978beed7dfb98525661a47e9a3600b988d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: db9aa27dc66f4b5355645e15a17d2431644f2e7f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91181446"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683599"
 ---
 # \<persistableTypes>
 
