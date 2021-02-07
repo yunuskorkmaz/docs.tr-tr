@@ -1,24 +1,25 @@
 ---
+description: ': System. ServiceModel. CommunicationObjectClosing hakkında daha fazla bilgi edinin'
 title: System.ServiceModel.CommunicationObjectClosing
 ms.date: 03/30/2017
 ms.assetid: 2b395653-7615-4dbe-8ee6-2dc11b659221
-ms.openlocfilehash: 80168f9ceb252ae4b987b393327abf97f2af87c2
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 256cb5b95b7ccebc9561f27f052f3564aa84e61c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96270855"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99676735"
 ---
-# <a name="systemservicemodelcommunicationobjectclosing"></a><span data-ttu-id="90807-102">System.ServiceModel.CommunicationObjectClosing</span><span class="sxs-lookup"><span data-stu-id="90807-102">System.ServiceModel.CommunicationObjectClosing</span></span>
+# <a name="systemservicemodelcommunicationobjectclosing"></a><span data-ttu-id="4916b-103">System.ServiceModel.CommunicationObjectClosing</span><span class="sxs-lookup"><span data-stu-id="4916b-103">System.ServiceModel.CommunicationObjectClosing</span></span>
 
-<span data-ttu-id="90807-103">System.ServiceModel.CommunicationObjectClosing</span><span class="sxs-lookup"><span data-stu-id="90807-103">System.ServiceModel.CommunicationObjectClosing</span></span>  
+<span data-ttu-id="4916b-104">System.ServiceModel.CommunicationObjectClosing</span><span class="sxs-lookup"><span data-stu-id="4916b-104">System.ServiceModel.CommunicationObjectClosing</span></span>  
   
-## <a name="description"></a><span data-ttu-id="90807-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="90807-104">Description</span></span>  
+## <a name="description"></a><span data-ttu-id="4916b-105">Description</span><span class="sxs-lookup"><span data-stu-id="4916b-105">Description</span></span>  
 
- <span data-ttu-id="90807-105">İletişim nesnesi kapatılıyor.</span><span class="sxs-lookup"><span data-stu-id="90807-105">A communication object is being closed.</span></span>  
+ <span data-ttu-id="4916b-106">İletişim nesnesi kapatılıyor.</span><span class="sxs-lookup"><span data-stu-id="4916b-106">A communication object is being closed.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="90807-106">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="90807-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4916b-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4916b-107">See also</span></span>
 
-- [<span data-ttu-id="90807-107">İzleme</span><span class="sxs-lookup"><span data-stu-id="90807-107">Tracing</span></span>](index.md)
-- [<span data-ttu-id="90807-108">Uygulamanızda Sorun Giderme için İzleme Kullanma</span><span class="sxs-lookup"><span data-stu-id="90807-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="90807-109">Yönetim ve tanılama</span><span class="sxs-lookup"><span data-stu-id="90807-109">Administration and Diagnostics</span></span>](../index.md)
+- [<span data-ttu-id="4916b-108">İzleme</span><span class="sxs-lookup"><span data-stu-id="4916b-108">Tracing</span></span>](index.md)
+- [<span data-ttu-id="4916b-109">Uygulamanızda Sorun Giderme için İzleme Kullanma</span><span class="sxs-lookup"><span data-stu-id="4916b-109">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="4916b-110">Yönetim ve tanılama</span><span class="sxs-lookup"><span data-stu-id="4916b-110">Administration and Diagnostics</span></span>](../index.md)
