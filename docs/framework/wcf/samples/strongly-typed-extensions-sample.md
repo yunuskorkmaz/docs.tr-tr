@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: türü kesin belirlenmiş Uzantılar örneği'
 title: Kesin tür belirtilmiş Uzantılar örneği
 ms.date: 03/30/2017
 ms.assetid: 02220f11-1a83-441c-9e5a-85f9a9367572
-ms.openlocfilehash: e5b74188d4c9c333858c60ff95a2a90b0e2e9418
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: dd0a12b07db3f805f041742c8957cd46bb418bad
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275937"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99668766"
 ---
 # <a name="strongly-typed-extensions-sample"></a>Kesin tür belirtilmiş Uzantılar örneği
 

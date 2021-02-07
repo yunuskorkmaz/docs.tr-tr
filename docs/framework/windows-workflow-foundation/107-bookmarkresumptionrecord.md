@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 107--BookmarkResumptionRecord'
 title: 107 -- BookmarkResumptionRecord
 ms.date: 03/30/2017
 ms.assetid: aa2d37ed-2bfa-439b-89e8-a9354027f155
-ms.openlocfilehash: 14557ef2726a60bcde49d30f9d6168fd831e613c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 456a6cd9f723732454ce032facd062a26aa609be
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238866"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99667635"
 ---
 # <a name="107----bookmarkresumptionrecord"></a>107 -- BookmarkResumptionRecord
 
@@ -17,10 +18,10 @@ ms.locfileid: "96238866"
 |-|-|  
 |Id|107|  
 |Anahtar sözcükler|EndToEndMonitoring, sorun giderme, HealthMonitoring, WFTracking|  
-|Düzey|Bilgi|  
+|Level|Bilgi|  
 |Kanal|Microsoft-Windows-uygulama sunucusu-uygulamalar/analitik|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bu olay, bir iş akışı örneği bir BookmarkResumptionRecord yaydığı zaman ETW izleme katılımcısı tarafından yayınlanır.  
   
@@ -30,12 +31,12 @@ ms.locfileid: "96238866"
   
 ## <a name="details"></a>Ayrıntılar  
   
-|Veri öğesi adı|Veri öğesi türü|Açıklama|  
+|Veri öğesi adı|Veri öğesi türü|Description|  
 |--------------------|--------------------|-----------------|  
 |InstanceId|xs: GUID|İş akışının örnek kimliği|  
 |RecordNumber|xs: Long|Yayınlanan kaydın sıra numarası|  
 |EventTime|xs: dateTime|Olayın yayılışında UTC olarak zaman|  
-|Adı|xs: String|Devam eden yer işaretinin adı|  
+|Name|xs: String|Devam eden yer işaretinin adı|  
 |SubInstanceID|xs: GUID|Yer işareti kapsamının kimliği|  
 |OwnerActivityName|xs: String|Yer işareti etkinliğinin adı|  
 |OwnerActivityId|xs: String|Yer işareti etkinliğinin kimliği|  

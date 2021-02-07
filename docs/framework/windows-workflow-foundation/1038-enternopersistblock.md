@@ -1,13 +1,14 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: 1038-EnterNoPersistBlock'
 title: 1038 - EnterNoPersistBlock
 ms.date: 03/30/2017
 ms.assetid: 64f3e60a-614d-46a5-8d30-fa63417c3d91
-ms.openlocfilehash: 17c5607a147b2082a8ff8a81f20507391bae3684
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1ea7845f79043d283800ec1057b81f74c1b9a4e5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96294241"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99667856"
 ---
 # <a name="1038---enternopersistblock"></a>1038 - EnterNoPersistBlock
 
@@ -17,10 +18,10 @@ ms.locfileid: "96294241"
 |-|-|  
 |ID|1038|  
 |Anahtar sözcükler|WFRuntime|  
-|Düzey|Ayrıntılı|  
+|Level|Ayrıntılı|  
 |Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Kalıcı olmayan bir blok girilmediğini belirtir.  
   
@@ -30,6 +31,6 @@ ms.locfileid: "96294241"
   
 ## <a name="details"></a>Ayrıntılar  
   
-|Veri öğesi adı|Veri öğesi türü|Açıklama|  
+|Veri öğesi adı|Veri öğesi türü|Description|  
 |--------------------|--------------------|-----------------|  
 |AppDomain|xs: String|AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.|

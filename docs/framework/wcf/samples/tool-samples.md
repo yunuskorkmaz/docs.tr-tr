@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: araç örnekleri'
 title: Araç Örnekleri
 ms.date: 03/30/2017
 ms.assetid: ccf90c64-31de-4a18-9208-28887735ce80
-ms.openlocfilehash: d6a24afd95de72e5656ca218f596e1f8e302b16f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: b3b61b4d2640986a5948ffd9db63fee5f1257e9a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96262326"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99668506"
 ---
 # <a name="tool-samples"></a>Araç Örnekleri
 

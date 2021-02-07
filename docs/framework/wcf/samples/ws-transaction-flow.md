@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: WS Işlem akışı'
 title: WS İşlem Akışı
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: 7fd4968bbe4e1a3dafbfc35cc0617cef7083d291
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4d0a0af77dd516bf98c5dc8318ac110a31e731e7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96252407"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99668376"
 ---
 # <a name="ws-transaction-flow"></a>WS İşlem Akışı
 

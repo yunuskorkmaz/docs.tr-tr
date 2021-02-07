@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 1032-ScheduleRuntimeWorkItem'
 title: 1032 - ScheduleRuntimeWorkItem
 ms.date: 03/30/2017
 ms.assetid: 54688101-becf-42f3-80ca-f53a7b527620
-ms.openlocfilehash: da35201f2b3e3bc07e0b9139b0584ce37011e168
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: d96226b4ab0f856218d292c9c2481bca6c463c8a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96294319"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99668051"
 ---
 # <a name="1032---scheduleruntimeworkitem"></a>1032 - ScheduleRuntimeWorkItem
 
@@ -17,10 +18,10 @@ ms.locfileid: "96294319"
 |-|-|  
 |ID|1032|  
 |Anahtar sözcükler|WFRuntime|  
-|Düzey|Ayrıntılı|  
+|Level|Ayrıntılı|  
 |Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bir RuntimeWorkItem zamanlandığı olduğunu gösterir.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96294319"
   
 ## <a name="details"></a>Ayrıntılar  
   
-|Veri öğesi adı|Veri öğesi türü|Açıklama|  
+|Veri öğesi adı|Veri öğesi türü|Description|  
 |--------------------|--------------------|-----------------|  
 |Etkinlik|xs: String|Etkinliğin tür adı.|  
 |DisplayName|xs: String|Etkinliğin görünen adı.|  

@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 1034-tamamlayıcı Teruntimeworkıtem'
 title: 1034 - CompleteRuntimeWorkItem
 ms.date: 03/30/2017
 ms.assetid: 45620011-8b04-4f87-ab5a-65b24145e17d
-ms.openlocfilehash: 837adc9e143060284f2373a049bc9ad9c8cee336
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: dd8a9fcb2fb692ab3b69df8f07f6a96cf48fc806
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96294293"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99667973"
 ---
 # <a name="1034---completeruntimeworkitem"></a>1034 - CompleteRuntimeWorkItem
 
@@ -17,10 +18,10 @@ ms.locfileid: "96294293"
 |-|-|  
 |ID|1034|  
 |Anahtar sözcükler|WFRuntime|  
-|Düzey|Ayrıntılı|  
+|Level|Ayrıntılı|  
 |Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bir RuntimeWorkItem 'ın tamamlandığını gösterir.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96294293"
   
 ## <a name="details"></a>Ayrıntılar  
   
-|Veri öğesi adı|Veri öğesi türü|Açıklama|  
+|Veri öğesi adı|Veri öğesi türü|Description|  
 |--------------------|--------------------|-----------------|  
 |Etkinlik|xs: String|Etkinliğin tür adı.|  
 |DisplayName|xs: String|Etkinliğin görünen adı.|  

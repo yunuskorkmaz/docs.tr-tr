@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 1031-Completefaultworkıtem'
 title: 1031 - CompleteFaultWorkItem
 ms.date: 03/30/2017
 ms.assetid: 95f4ccb0-6be4-41f3-9330-fae43165828f
-ms.openlocfilehash: 557155fab35a37bdbaa45efb26d6bc025ad825c4
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: dc5cb4988df2aab9710fd7ec875d9b4004bfa7af
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96281839"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99668077"
 ---
 # <a name="1031---completefaultworkitem"></a>1031 - CompleteFaultWorkItem
 
@@ -17,10 +18,10 @@ ms.locfileid: "96281839"
 |-|-|  
 |ID|1031|  
 |Anahtar sözcükler|WFRuntime|  
-|Düzey|Ayrıntılı|  
+|Level|Ayrıntılı|  
 |Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bir FaultWorkItem 'ın tamamlandığını gösterir.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96281839"
   
 ## <a name="details"></a>Ayrıntılar  
   
-|Veri öğesi adı|Veri öğesi türü|Açıklama|  
+|Veri öğesi adı|Veri öğesi türü|Description|  
 |--------------------|--------------------|-----------------|  
 |FaultActivity|xs: String|Hata etkinliğinin tür adı.|  
 |FaultActivityDisplayName|xs: String|Hata etkinliğinin görünen adı.|  
