@@ -1,4 +1,5 @@
 ---
+description: ': ICorPublishAppDomain arabirimi hakkında daha fazla bilgi edinin'
 title: ICorPublishAppDomain Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5e7885a6-d17a-4bfc-a4c6-23cbb7337ad5
 topic_type:
 - apiref
-ms.openlocfilehash: 62e3286c5f0c70d283e78dbb1e502dccd73a5a3a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 88c7a9e5ce0c92633be6968a16b69ec144b2747b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95694275"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99721820"
 ---
 # <a name="icorpublishappdomain-interface"></a>ICorPublishAppDomain Arabirimi
 

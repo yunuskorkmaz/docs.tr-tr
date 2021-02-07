@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ırivmunmanagedmethod:: GetParameters Yöntemi'
 title: ISymUnmanagedMethod::GetParameters Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 3a8074f1-facc-4a3f-bb9b-d6574fc2fc74
 topic_type:
 - apiref
-ms.openlocfilehash: c66fd810ae4976bc0b5e04572b899465cebe4bbb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c8860a4d42019aaacef01879b175fd45ea837f2b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95699514"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99721378"
 ---
 # <a name="isymunmanagedmethodgetparameters-method"></a>ISymUnmanagedMethod::GetParameters Metodu
 
 Bu yöntemin parametrelerini alır. Parametreler, yöntemin imzasında tanımlandıkları sırada döndürülür.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetParameters(  

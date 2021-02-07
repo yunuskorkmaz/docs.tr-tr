@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: WebHostHttpError'
 title: WebHostHttpError
 ms.date: 03/30/2017
 ms.assetid: dff35e7e-5571-463d-abcf-7e048381f91f
-ms.openlocfilehash: 895879513711c3e1ef355dcc90a154c0df5bec59
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 5eb812407cb49c5fbc387605ea5fa0b0b45c7ac4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96237007"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99720741"
 ---
 # <a name="webhosthttperror"></a>WebHostHttpError
 
@@ -17,7 +18,7 @@ Kimlik: 110
   
  Kategori: ServiceModel  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bu olay, bir WebHost HTTP özel durumunun oluştuğunu gösterir. Olay gönderen bilgilerini, HtmlErrorMessage, özel durum, işlem adı ve işlem KIMLIĞINI listeler.  
   

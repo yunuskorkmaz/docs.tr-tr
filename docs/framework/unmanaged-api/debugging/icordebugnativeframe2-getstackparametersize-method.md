@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ICorDebugNativeFrame2:: GetStackParameterSize Yöntemi'
 title: ICorDebugNativeFrame2::GetStackParameterSize Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: f6a449c8-a941-43ba-9a90-c98b29ae3c36
 topic_type:
 - apiref
-ms.openlocfilehash: 21af3980de9b5a768b6af9a8aca74b693c7ac528
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 08a17ced0be75737c1c49aa3f9bb42b13bbe8aa0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95695503"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99722340"
 ---
 # <a name="icordebugnativeframe2getstackparametersize-method"></a>ICorDebugNativeFrame2::GetStackParameterSize Yöntemi
 
 X86 işletim sistemlerindeki yığındaki parametrelerin birikmiş boyutunu döndürür.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetStackParameterSize([out] ULONG32 * pSize)  
@@ -41,14 +42,14 @@ HRESULT GetStackParameterSize([out] ULONG32 * pSize)
 
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|Yığın boyutu başarıyla döndürüldü.|  
 |S_FALSE|`GetStackParameterSize` , x86 olmayan bir platformda çağrıldı.|  
 |E_FAIL|`The size of the parameters could not be returned`.|  
 |E_INVALIDARG|`pSize``null`.|  
   
-## <a name="exceptions"></a>Özel Durumlar  
+## <a name="exceptions"></a>Özel durumlar  
   
 ## <a name="remarks"></a>Açıklamalar  
 

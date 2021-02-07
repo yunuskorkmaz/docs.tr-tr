@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: WCF hizmetlerini yapılandırma'
 title: WCF hizmetlerini yapılandırma
 ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-ms.openlocfilehash: a5fe0cabb1a6be7f93bf5f4d753e9bb08a39cea3
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1c0df8c7d9b4e2b1a032f02e74db2de4a8de020c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96253342"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99720845"
 ---
 # <a name="configuring-wcf-services"></a>WCF hizmetlerini yapılandırma
 

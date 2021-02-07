@@ -1,4 +1,5 @@
 ---
+description: ': ICorPublish:: EnumProcesses yöntemi hakkında daha fazla bilgi edinin'
 title: ICorPublish::EnumProcesses Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 4ae765f0-93b2-4b6f-aea1-7b0cf44e04a7
 topic_type:
 - apiref
-ms.openlocfilehash: 297f672097dd6561a971608f368369c623532907
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2451f179301eff4caca966568f966d145e269f51
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95716921"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99722002"
 ---
 # <a name="icorpublishenumprocesses-method"></a>ICorPublish::EnumProcesses Yöntemi
 
 Bu bilgisayarda çalışan yönetilen işlemlere yönelik bir Numaralandırıcı alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT EnumProcesses (  

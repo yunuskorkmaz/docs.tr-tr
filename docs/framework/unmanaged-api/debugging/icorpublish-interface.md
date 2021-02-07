@@ -1,4 +1,5 @@
 ---
+description: ': ICorPublish arabirimi hakkında daha fazla bilgi edinin'
 title: ICorPublish Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87c4fcb2-7703-4a2e-afb6-42973381b960
 topic_type:
 - apiref
-ms.openlocfilehash: 3ff4efe8b3e2932da7f65246bf4ad614a4dd86cd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0cec1d3407246989c6b916ca0760e6f556566ce6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95694418"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99721833"
 ---
 # <a name="icorpublish-interface"></a>ICorPublish Arabirimi
 

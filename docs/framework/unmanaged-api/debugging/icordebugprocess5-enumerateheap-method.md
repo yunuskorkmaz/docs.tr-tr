@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugProcess5:: EnumerateHeap yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugProcess5::EnumerateHeap Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: b0192104-6073-4089-a4df-dc29ee033074
 topic_type:
 - apiref
-ms.openlocfilehash: 22ab29f8a204a4b27dafdefcd3652cc3dcf9769c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b43e7993b114ed64d009f91746ea987198edde74
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95671141"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99722041"
 ---
 # <a name="icordebugprocess5enumerateheap-method"></a>ICorDebugProcess5::EnumerateHeap Yöntemi
 
 Yönetilen yığındaki nesneler için bir Numaralandırıcı alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT EnumerateHeap(  

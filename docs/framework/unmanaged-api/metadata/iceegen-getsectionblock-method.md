@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ICeeGen:: GetSectionBlock yöntemi'
 title: ICeeGen::GetSectionBlock Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 05c78aaf-5bbd-497e-9ae2-55f4fae0c5fb
 topic_type:
 - apiref
-ms.openlocfilehash: 9ce3afded5f914ecf970d8db738becc7f5cfff84
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d1a9fdeb35507f9dd6528b581be877049d2a1478
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723148"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99721157"
 ---
 # <a name="iceegengetsectionblock-method"></a>ICeeGen::GetSectionBlock Metodu
 
@@ -28,7 +29,7 @@ Kod tabanının bir bölüm bloğunu alır.
   
  Bu yöntem kullanılmıyor ve kullanılmamalıdır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetSectionBlock (  

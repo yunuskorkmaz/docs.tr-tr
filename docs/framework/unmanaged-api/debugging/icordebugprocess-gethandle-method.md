@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugProcess:: GetHandle Yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugProcess::GetHandle Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: e7d3ecf5-09d2-4d94-abb6-ff3483deebb6
 topic_type:
 - apiref
-ms.openlocfilehash: 87b7b7381ef53f7e2abebc053b5c9f87f94d96c2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fbc92be53b30d3c70f85fea36e05c6a5514b0f03
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95695081"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99722132"
 ---
 # <a name="icordebugprocessgethandle-method"></a>ICorDebugProcess::GetHandle Metodu
 
 İşlem için bir tanıtıcı alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetHandle([out] HPROCESS *phProcessHandle);  
