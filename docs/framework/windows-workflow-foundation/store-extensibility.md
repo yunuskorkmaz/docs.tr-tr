@@ -1,21 +1,22 @@
 ---
+description: 'Daha fazla bilgi edinin: depolama genişletilebilirliği'
 title: Depo Genişletilebilirliği
 ms.date: 03/30/2017
 ms.assetid: 7c3f4a46-4bac-4138-ae6a-a7c7ee0d28f5
-ms.openlocfilehash: 46c1ea40925a5c79180171da9a705d7e6b7c8b89
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f04c466224aacd1c8f755e7aa60b18846d0c7180
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641612"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755232"
 ---
 # <a name="store-extensibility"></a>Depo Genişletilebilirliği
 
-<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> kullanılabilir, uygulamaya özgü özel özellikleri yükseltmek kullanıcılara sorgulamak için Kalıcılık veritabanı örnekleri. Bir özellik yükseltme işlemi veritabanı'nda bir özel görünümde kullanılabilir olması değeri neden olur. Bu yükseltilen özelliklerini (kullanıcı sorgularında kullanılan), Int64, Guid, dize ve DateTime gibi basit türler veya seri hale getirilmiş ikili tür (byte[]). olabilir.
+<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> Kullanıcıların kalıcılık veritabanındaki örnekleri sorgulamak için kullanılabilecek özel, uygulamaya özgü özellikleri yükselmesini sağlar. Bir özelliği yükseltme eylemi, değerin veritabanındaki özel bir görünüm içinde kullanılabilir olmasına neden olur. Bu yükseltilen Özellikler (Kullanıcı sorgularında kullanılabilen özellikler), Int64, Guid, dize ve Tarih ve seri hale getirilmiş ikili tür (Byte []) gibi basit türlerde olabilir.
 
-<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> Sınıfında <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.Promote%2A> sorgularında kullanılabilir bir özellik olarak bir özellik yükseltmek için kullanabileceğiniz yöntem. Aşağıdaki örnek bir depo genişletilebilirliği uçtan uca örneğidir.
+<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>Sınıfında, <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.Promote%2A> bir özelliği sorgularda kullanılabilecek bir özellik olarak yükseltmek için kullanabileceğiniz yöntemi vardır. Aşağıdaki örnek, depo genişletilebilirliği için uçtan uca bir örnektir.
 
-1. Bu örnek senaryoda, her biri için belge işleme özel etkinlikler kullanan iş akışları, bir belge (DP) uygulama işleme sahiptir. Bu iş akışları, son kullanıcıya görünür yapılması gereken durumu değişkenler kümesine sahiptir. Bunu başarmak için DP uygulama türünün bir örneği uzantısını sağlar <xref:System.Activities.Persistence.PersistenceParticipant>, durumu değişkenleri sağlamak için etkinlikleri tarafından kullanılır.
+1. Bu örnek senaryoda bir belge işleme (DP) uygulamasında, her biri belge işleme için özel etkinlikler kullanan iş akışları vardır. Bu iş akışlarının, son kullanıcıya görünür olması gereken bir durum değişkenleri kümesi vardır. Bu işlemi gerçekleştirmek için, DP uygulaması <xref:System.Activities.Persistence.PersistenceParticipant> , durum değişkenlerini sağlamak üzere etkinlikler tarafından kullanılan türünde bir örnek uzantısı sağlar.
 
     ```csharp
     class DocumentStatusExtension : PersistenceParticipant
@@ -27,7 +28,7 @@ ms.locfileid: "61641612"
     }
     ```
 
-2. Yeni uzantıyı daha sonra ana bilgisayara eklenir.
+2. Yeni uzantı daha sonra konağa eklenir.
 
     ```csharp
     static Activity workflow = CreateWorkflow();
@@ -36,9 +37,9 @@ ms.locfileid: "61641612"
     application.Extensions.Add(documentStatusExtension);
     ```
 
-     Özel Kalıcılık Katılımcısı ekleme hakkında daha fazla ayrıntı için bkz. [Kalıcılık katılımcıları](persistence-participants.md) örnek.
+     Özel bir Kalıcılık Katılımcısı ekleme hakkında daha fazla bilgi için bkz. [Kalıcılık katılımcıları](persistence-participants.md) örneği.
 
-3. Özel etkinlikler DP uygulamada çeşitli durumu alanları doldurmak **yürütme** yöntemi.
+3. DP uygulamasındaki özel etkinlikler **yürütme** yöntemindeki çeşitli durum alanlarını doldurur.
 
     ```csharp
     public override void Execute(CodeActivityContext context)
@@ -52,7 +53,7 @@ ms.locfileid: "61641612"
     }
     ```
 
-4. Bir iş akışı örneği bir Kalıcılık noktasına ulaştığında **CollectValues** yöntemi **DocumentStatusExtension** Kalıcılık Katılımcısı, bu özellikleri Kalıcılık verilerini kaydeder koleksiyonu.
+4. Bir iş akışı örneği bir kalıcılık noktasına ulaştığında, **Documentkara sextenbir** Kalıcılık Katılımcısı 'Nın **CollectValues** yöntemi bu özellikleri Kalıcılık verileri koleksiyonuna kaydeder.
 
     ```csharp
     class DocumentStatusExtension : PersistenceParticipant
@@ -74,9 +75,9 @@ ms.locfileid: "61641612"
     ```
 
     > [!NOTE]
-    > Tüm bu özellikler geçirilen **SqlWorkflowInstanceStore** Kalıcılık framework tarafından **SaveWorkflowCommand.InstanceData** koleksiyonu.
+    > Bu özelliklerin tümü, **SaveWorkflowCommand. InstanceData** koleksiyonu aracılığıyla Kalıcılık çerçevesi tarafından **SqlWorkflowInstanceStore** 'a geçirilir.
 
-5. DP uygulama SQL iş akışı örneği Store başlatır ve çağıran **Yükselt** bu verileri yükseltmek için yöntemi.
+5. DP uygulaması, SQL Iş akışı örnek deposunu başlatır ve bu verileri yükseltmek için **Yükselt** yöntemini çağırır.
 
     ```csharp
     SqlWorkflowInstanceStore store = new SqlWorkflowInstanceStore(connectionString);
@@ -92,9 +93,9 @@ ms.locfileid: "61641612"
     store.Promote("DocumentStatus", variantProperties, null);
     ```
 
-    Bu promosyon bilgilere göre **SqlWorkflowInstanceStore** veri özellikleri, sütunlarında yerleştirir [InstancePromotedProperties](#InstancePromotedProperties) görünümü.
+    **SqlWorkflowInstanceStore** , bu promosyon bilgilerine göre veri özelliklerini [InstancePromotedProperties](#InstancePromotedProperties) görünümünün sütunlarına koyar.
 
-6. Bir alt kümesini yükseltme tablodaki verileri sorgulamak için özelleştirilmiş bir görünümü yükseltme görünümü üzerinde DP uygulama ekler.
+6. Yükseltme tablosundan verilerin bir alt kümesini sorgulamak için, DP uygulaması promosyon görünümünün üzerine özelleştirilmiş bir görünüm ekler.
 
     ```sql
     create view [dbo].[DocumentStatus] with schemabinding
@@ -109,11 +110,11 @@ ms.locfileid: "61641612"
     go
     ```
 
-## <a name="InstancePromotedProperties"></a> [System.Activities.DurableInstancing.InstancePromotedProperties] görünümü
+## <a name="systemactivitiesdurableinstancinginstancepromotedproperties-view"></a><a name="InstancePromotedProperties"></a> [System. Activities. Durableörnek_adı. InstancePromotedProperties] görünümü
 
-|Sütun adı|Sütun türü|Açıklama|
+|Sütun adı|Sütun türü|Description|
 |-----------------|-----------------|-----------------|
-|InstanceId|GUID|Bu promosyon ait iş akışı örneği.|
-|PromotionName|Nvarchar(400)|Yükseltme adı.|
-|Value1, Value2, Value3,.., Value32|sql_variant|Yükseltilen özellik değeri. İkili, blobları ve üzerinde 8000 bayt uzunluğunda dizeleri dışında çoğu SQL ilkel veri türleri sql_variant uygun olamaz.|
-|Value33, Value34, Value35,..., Value64|VARBINARY(max)|Açıkça VARBINARY(max) bildirilen yükseltilen özellik değeri.|
+|InstanceId|GUID|Bu yükseltmenin ait olduğu iş akışı örneği.|
+|PromotionName|nvarchar (400)|Yükseltmenin kendisi adı.|
+|Değer1, değer2, Value3,.., Value32|sql_variant|Yükseltilen özelliğin değeri. İkili blob 'lar ve 8000 bayt uzunluğundaki dizeler hariç en çok SQL temel veri türleri sql_variant 'e uyabilirler.|
+|Value33, Value34, Value35, ..., Value64|varbinary (max)|Açıkça varbinary (max) olarak belirtilen yükseltilen özelliklerin değeri.|

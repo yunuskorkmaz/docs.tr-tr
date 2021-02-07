@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: olayları Izleme başvurusu'
 title: İzleme Olayları Başvurusu
 ms.date: 03/30/2017
 ms.assetid: c1c1ee87-f80a-449b-acd0-50d81eef116e
-ms.openlocfilehash: 7a1bbabbbc122429908b0f9c038c145a5d4a1e7e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 64df938dc7e37ebc8b3da8f10939bebe1e638be1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96293357"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755193"
 ---
 # <a name="tracking-events-reference"></a>İzleme Olayları Başvurusu
 

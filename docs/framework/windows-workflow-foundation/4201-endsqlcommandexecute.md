@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 4201-Endsqlcommandexyürütüldüğünde'
 title: 4201 - EndSqlCommandExecute
 ms.date: 03/30/2017
 ms.assetid: ae0dbc15-f98c-4096-a8d9-fbe4dc36f1cd
-ms.openlocfilehash: 0d6326889077e36ad49aa6267ae7285849c6818d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e0b98e8da5a0a284bfa55e97f5dde25a2ce42b42
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275872"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755375"
 ---
 # <a name="4201---endsqlcommandexecute"></a>4201 - EndSqlCommandExecute
 
@@ -17,10 +18,10 @@ ms.locfileid: "96275872"
 |-|-|  
 |ID|4201|  
 |Anahtar sözcükler|Wfınstancestore|  
-|Düzey|Ayrıntılı|  
+|Level|Ayrıntılı|  
 |Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bir SQL komutunun yürütmeyi bitirdiğini gösterir.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96275872"
   
 ## <a name="details"></a>Ayrıntılar  
   
-|Veri öğesi adı|Veri öğesi türü|Açıklama|  
+|Veri öğesi adı|Veri öğesi türü|Description|  
 |--------------------|--------------------|-----------------|  
 |SqlCommand|xs: String|Yürütülen SQL komutu.|  
 |AppDomain|xs: String|AppDomain. CurrentDomain. FriendlyName tarafından döndürülen dize.|

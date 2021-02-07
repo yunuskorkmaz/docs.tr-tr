@@ -1,34 +1,35 @@
 ---
+description: 'Daha fazla bilgi edinin: bir akış çizelgesi etkinliğinde TryCatch kullanarak hata Işleme'
 title: TryCatch Kullanarak Akış Çizelgesi Etkinliğine Hata İşleme
 ms.date: 03/30/2017
 ms.assetid: 50922964-bfe0-4ba8-9422-0e7220d514fd
-ms.openlocfilehash: 8e3ca59bc9743300a230877a6fbcbed5468a1589
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 9ab323117e5b26696a07624117e8acc8c0beacff
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710830"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755358"
 ---
 # <a name="fault-handling-in-a-flowchart-activity-using-trycatch"></a>TryCatch Kullanarak Akış Çizelgesi Etkinliğine Hata İşleme
 
-Bu örnek, <xref:System.Activities.Statements.TryCatch> etkinliğinin karmaşık bir denetim akışı etkinliği içinde nasıl kullanılabileceğini gösterir.
+Bu örnek, <xref:System.Activities.Statements.TryCatch> etkinliğin karmaşık bir denetim akışı etkinliği içinde nasıl kullanılabileceğini gösterir.
 
-Bu örnekte, bir promosyon kodu ve alt öğe sayısı, promosyon koduna karşılık gelen formüle göre bir iskontoyu hesaplayan <xref:System.Activities.Statements.Flowchart> etkinliğe değişken olarak geçirilir. Örnek, örneğin, örnek kod ve iş akışı Tasarımcısı sürümlerini içerir.
+Bu örnekte, promosyon kodu ve alt öğe sayısı, <xref:System.Activities.Statements.Flowchart> promosyon koduna karşılık gelen formüle göre bir iskontoyu hesaplayan bir etkinliğe değişken olarak geçirilir. Örnek, örneğin, örnek kod ve iş akışı Tasarımcısı sürümlerini içerir.
 
-Aşağıdaki tabloda `CreateFlowchartWithFaults` etkinliğinin değişkenleri ayrıntılı olarak verilmiştir.
+Aşağıdaki tabloda etkinlik değişkenlerinin ayrıntıları verilmiştir `CreateFlowchartWithFaults` .
 
-|Parametreler|Açıklama|
+|Parametreler|Description|
 |----------------|-----------------|
-|promoCode|Promosyon kodu. Tür: dize<br /><br /> Parantez içinde Açıklama içeren olası değerler:<br /><br /> -Tek (tek)<br />-MNK (çocuk olmadan evli.)<br />-MWK (çocuklarla evli)|
+|promoCode|Promosyon kodu. Türü: Dize<br /><br /> Parantez içinde Açıklama içeren olası değerler:<br /><br /> -Tek (tek)<br />-MNK (çocuk olmadan evli.)<br />-MWK (çocuklarla evli)|
 |numKids|Alt öğe sayısı. Tür: int|
 
-`CreateFlowchartWithFaults` etkinliği, `promoCode` bağımsız değişkenine geçiş yapan ve aşağıdaki formülü kullanarak indirimi hesaplayan <xref:System.Activities.Statements.FlowSwitch%601> etkinliğini kullanır.
+`CreateFlowchartWithFaults`Etkinlik, <xref:System.Activities.Statements.FlowSwitch%601> `promoCode` bağımsız değişkene geçiş yapan ve aşağıdaki formülü kullanarak indirimi hesaplayan bir etkinlik kullanır.
 
-|`promoCode` değeri|İndirim (%)|
+|Değeri `promoCode`|İndirim (%)|
 |--------------------------|--------------------|
 |Tek|10|
 |MNK|15|
-|MWK|15 + (1 – 1/`numberOfKids`)\*10 **Note:** olası, bu hesaplama <xref:System.DivideByZeroException>oluşturabilir. Bu nedenle, indirim hesaplaması, <xref:System.DivideByZeroException> özel durumunu yakalayan ve iskontoyu sıfıra ayarlayan bir <xref:System.Activities.Statements.TryCatch> etkinliğine sarmalanır.|
+|MWK|15 + (1 – 1/ `numberOfKids` ) \* 10 **Note:**  potansiyel olarak bu hesaplama bir oluşturabilir <xref:System.DivideByZeroException> . Bu nedenle, indirim hesaplaması <xref:System.Activities.Statements.TryCatch> özel durumu yakalayan bir etkinliğe sarmalanır <xref:System.DivideByZeroException> ve iskontoyu sıfıra ayarlar.|
 
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için
 
@@ -43,11 +44,11 @@ Aşağıdaki tabloda `CreateFlowchartWithFaults` etkinliğinin değişkenleri ay
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\FlowChartWithFaultHandling`
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Akış Çizelgesi İş Akışları](../flowchart-workflows.md)
-- [Özel Durumlar](../exceptions.md)
+- [Özel durumlar](../exceptions.md)
