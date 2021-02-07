@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ırivmımunmanagedsourceservermodule arabirimi'
 title: ISymUnmanagedSourceServerModule Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a19b23bd-2061-476e-b67d-252f57404f8b
 topic_type:
 - apiref
-ms.openlocfilehash: 5e438c75a29984e9200dc240f389f079a4eecfd7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c837af4cda443ec93bfbaa2d73feeb2b8f8a2803
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733960"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99763130"
 ---
 # <a name="isymunmanagedsourceservermodule-interface"></a>ISymUnmanagedSourceServerModule Arabirimi
 

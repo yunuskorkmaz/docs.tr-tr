@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ıstreamunmanagedvariable arabirimi'
 title: ISymUnmanagedVariable Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 704c69ba-77bc-40d7-8c0c-400061686321
 topic_type:
 - apiref
-ms.openlocfilehash: 93e1f8eb17f06e42ddb243f88c593979fcb28030
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 15b6c7018f92ad4c82abb9e5b4e52bf428b3f54b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733288"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99762701"
 ---
 # <a name="isymunmanagedvariable-interface"></a>ISymUnmanagedVariable Arabirimi
 

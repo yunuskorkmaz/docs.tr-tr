@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ıstreamunmanagedscope arabirimi'
 title: ISymUnmanagedScope Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3db7a220-cfe9-4810-8ca8-a094bb8e0f5b
 topic_type:
 - apiref
-ms.openlocfilehash: 9256342ad3a91e6770d6fd19d9d2f94fab267d3e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f1175656fb49ee16fd1cd676d08f6ebb76f40c6d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725891"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99763273"
 ---
 # <a name="isymunmanagedscope-interface"></a>ISymUnmanagedScope Arabirimi
 
