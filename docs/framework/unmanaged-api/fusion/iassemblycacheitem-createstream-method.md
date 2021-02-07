@@ -1,4 +1,5 @@
 ---
+description: ': IAssemblyCacheItem:: CreateStream yöntemi hakkında daha fazla bilgi edinin'
 title: IAssemblyCacheItem::CreateStream Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 697ab0f4-470c-4baa-a415-4a975c42d0d5
 topic_type:
 - apiref
-ms.openlocfilehash: 0660621f465f2ba3610e06bd1df38baa1bc5c907
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 89592d8fe1a7f43a7da20dd10883881c3339f088
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134478"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760881"
 ---
 # <a name="iassemblycacheitemcreatestream-method"></a>IAssemblyCacheItem::CreateStream Yöntemi
 
@@ -57,7 +58,7 @@ HRESULT CreateStream (
 dışı Döndürülen [IStream](/windows/desktop/api/objidl/nn-objidl-istream) örneğinin adresine yönelik bir işaretçi.
 
 `puliMaxSize`\
-[ın, isteğe bağlı] `ppIStream`başvurduğu akışın en büyük boyutu.
+[ın, isteğe bağlı] Tarafından başvurulan akışın en büyük boyutu `ppIStream` .
 
 ## <a name="requirements"></a>Gereksinimler
 
@@ -65,7 +66,7 @@ dışı Döndürülen [IStream](/windows/desktop/api/objidl/nn-objidl-istream) �
 
 **Üst bilgi:** Fusion. h
 
-**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

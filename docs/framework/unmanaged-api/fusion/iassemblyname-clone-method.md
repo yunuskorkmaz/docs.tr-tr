@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: IAssemblyName:: Clone yöntemi'
 title: IAssemblyName::Clone Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 7b345e08-5e16-4e3d-a044-4e19d0892943
 topic_type:
 - apiref
-ms.openlocfilehash: ca528bdbd9662db373d1beeece803d6c43728f2d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b1d8ba2aec73565e9f6acaa44a5ef3731baa3af9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95698617"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760790"
 ---
 # <a name="iassemblynameclone-method"></a>IAssemblyName::Clone Yöntemi
 
 Bu [IAssemblyName](iassemblyname-interface.md) nesnesinin basit bir kopyasını oluşturur.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT Clone (  

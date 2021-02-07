@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: IAssemblyEnum:: Clone yöntemi'
 title: IAssemblyEnum::Clone Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 0014bb66-590c-486c-9ade-f2133905cd99
 topic_type:
 - apiref
-ms.openlocfilehash: e1eef43858e4f38888f9f31e3076b092fbdd5633
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0b4da5818b66d5b82da0b693c2d1cfa257f08a7f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719911"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760842"
 ---
 # <a name="iassemblyenumclone-method"></a>IAssemblyEnum::Clone Yöntemi
 
 Bu [IAssemblyEnum](iassemblyenum-interface.md) nesnesinin basit bir kopyasını oluşturur.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT Clone (  

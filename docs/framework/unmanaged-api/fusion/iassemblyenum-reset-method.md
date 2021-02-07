@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: IAssemblyEnum:: Reset yöntemi'
 title: IAssemblyEnum::Reset Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e08308d2-7397-4616-b7a6-f81b7686fed6
 topic_type:
 - apiref
-ms.openlocfilehash: 7114ab301c1c5eeb517a7658dc1035650e0ca150
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ae649392b1ebdf88f3d144260386a5676a86cd73
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719872"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760803"
 ---
 # <a name="iassemblyenumreset-method"></a>IAssemblyEnum::Reset Yöntemi
 

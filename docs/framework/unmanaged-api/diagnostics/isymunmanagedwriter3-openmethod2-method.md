@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ISymUnmanagedWriter3:: OpenMethod2 Yöntemi'
 title: ISymUnmanagedWriter3::OpenMethod2 Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 025e358c-448f-4423-a2f2-57acf437c8a5
 topic_type:
 - apiref
-ms.openlocfilehash: 39235c5c26cb168dfc995de97f72b80dccb6b818
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7e76be03598599a6498ed45bc3799c6d6f21e088
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720301"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99761700"
 ---
 # <a name="isymunmanagedwriter3openmethod2-method"></a>ISymUnmanagedWriter3::OpenMethod2 Yöntemi
 
 Bir yöntemi açar ve görüntüde gerçek bölüm konumunu sağlar.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT OpenMethod2(

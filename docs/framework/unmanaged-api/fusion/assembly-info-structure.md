@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ASSEMBLY_INFO yapısı'
 title: ASSEMBLY_INFO Yapısı
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b3cbb47c-457f-4083-8895-49562ca99ab8
 topic_type:
 - apiref
-ms.openlocfilehash: 520a24ced6e897d926ce68ef5973ab7083731b9d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c28d9abf13769197b62705d51bbcf4f099616bbc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95717636"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99761294"
 ---
 # <a name="assembly_info-structure"></a>ASSEMBLY_INFO Yapısı
 
@@ -39,7 +40,7 @@ typedef struct _ASSEMBLY_INFO {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`cbAssemblyInfo`|Yapının bayt cinsinden boyutu. Bu alan gelecekteki genişletilebilirlik için ayrılmıştır.|  
 |`dwAssemblyFlags`|Derlemeyle ilgili yükleme ayrıntılarını gösteren Bayraklar. Aşağıdaki değerler desteklenir:<br /><br /> -Derlemenin yüklendiğini gösteren ASSEMBLYINFO_FLAG_INSTALLED değeri. .NET Framework geçerli sürümü her zaman `dwAssemblyFlags` bu değere ayarlanır.<br />-Derlemenin bir yük yerleşik olduğunu gösteren ASSEMBLYINFO_FLAG_PAYLOADRESIDENT değeri. .NET Framework geçerli sürümü hiçbir `dwAssemblyFlags` şekilde bu değere ayarlanır.|  

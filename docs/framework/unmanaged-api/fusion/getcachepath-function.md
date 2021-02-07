@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: GetCachePath Işlevi'
 title: GetCachePath İşlevi
 ms.date: 03/30/2017
 api_name:
@@ -16,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: d977ad29-6619-42e1-b0be-bc25ea950e80
 topic_type:
 - apiref
-ms.openlocfilehash: c22f0701cfda4523f595366a97435ef8da08b0cb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4f5045d4110ca9aae33ef54eb85a2146f855e6c7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724474"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99761050"
 ---
 # <a name="getcachepath-function"></a>GetCachePath İşlevi
 
 Belirtilen bayrakları kullanarak önbelleğe alınmış derlemenin yolunu alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetCachePath (  

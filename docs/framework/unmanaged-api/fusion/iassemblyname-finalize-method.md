@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: IAssemblyName:: Finalize yöntemi'
 title: IAssemblyName::Finalize Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 610e792d-98ef-411f-90b0-5b9a3813f547
 topic_type:
 - apiref
-ms.openlocfilehash: 842b878fac1e2590eb6ea0b29ebee0d46e818474
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d6277fdbc15f6f907d5e758dac4a3670570d585d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727932"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760777"
 ---
 # <a name="iassemblynamefinalize-method"></a>IAssemblyName::Finalize Yöntemi
 

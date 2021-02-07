@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: ASM_NAME numaralandırması'
 title: ASM_NAME Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c8b65b19-d777-428f-bc0c-0d84c78a37bc
 topic_type:
 - apiref
-ms.openlocfilehash: 64a34cdf92df345041cb94e9069bcc4d489e3cf5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d4fc18b24e3de31e4c6679bb30a013f61346f4dd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728647"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99761354"
 ---
 # <a name="asm_name-enumeration"></a>ASM_NAME Numaralandırması
 

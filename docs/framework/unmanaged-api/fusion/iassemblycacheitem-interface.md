@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: IAssemblyCacheItem arabirimi'
 title: IAssemblyCacheItem Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ccc9387a-9f44-4f4f-bf8f-0ea6d2afa21b
 topic_type:
 - apiref
-ms.openlocfilehash: 72922d1fd0f8ae5e59fe76c7aa50f9c52dcd5302
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2dcb721f6b65ecca93262f9af2ba355d94bb774d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719950"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760878"
 ---
 # <a name="iassemblycacheitem-interface"></a>IAssemblyCacheItem Arabirimi
 

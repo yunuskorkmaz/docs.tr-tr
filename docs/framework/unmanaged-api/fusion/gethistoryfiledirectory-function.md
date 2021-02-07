@@ -1,4 +1,5 @@
 ---
+description: ': GetHistoryFileDirectory Işlevi hakkında daha fazla bilgi edinin'
 title: GetHistoryFileDirectory İşlevi
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 93232222-926e-42ac-b85d-8a6d33977672
 topic_type:
 - apiref
-ms.openlocfilehash: 484adf288356b9955fe0cac0bb30002ec1f012d3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 960bc75d69f4be6d1639e109d6327b5e65d3e129
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724444"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760972"
 ---
 # <a name="gethistoryfiledirectory-function"></a>GetHistoryFileDirectory İşlevi
 
 Uygulama geçmişi dizininin yolunu alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetHistoryFileDirectory (  
@@ -46,7 +47,7 @@ HRESULT GetHistoryFileDirectory (
 
  Bu yöntem, aşağıdaki değerlere ek olarak WinError. h dosyasında tanımlanan standart COM hata kodlarını döndürür.  
   
-|Dönüş kodu|Açıklama|  
+|Dönüş kodu|Description|  
 |-----------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
 |E_INVALIDARG|`wzDir` ya `pdwSize` da null ya da sürüm dizesi yanlış.|  

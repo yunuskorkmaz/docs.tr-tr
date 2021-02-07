@@ -1,4 +1,5 @@
 ---
+description: ': GetAssemblyIdentityFromFile Işlevi hakkında daha fazla bilgi'
 title: GetAssemblyIdentityFromFile İşlevi
 ms.date: 03/30/2017
 api_name:
@@ -16,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 2c32da53-76c7-4048-84d0-d05207333004
 topic_type:
 - apiref
-ms.openlocfilehash: 9580dd3bc5a7279549e8deadac95d35a33da74f8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8832e03182a5652c938404c99115fa8059439d1d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724487"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99761046"
 ---
 # <a name="getassemblyidentityfromfile-function"></a>GetAssemblyIdentityFromFile İşlevi
 
 `IUnknown`Belirtilen dosya yolundaki derlemede belirtilen bir nesneye yönelik bir işaretçi alır `IID` .  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetAssemblyIdentityFromFile (  

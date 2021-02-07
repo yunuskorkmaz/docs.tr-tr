@@ -1,4 +1,5 @@
 ---
+description: ': IAssemblyCache:: Unınstallassembly yöntemi hakkında daha fazla bilgi edinin'
 title: IAssemblyCache::UninstallAssembly Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 973b2c44-8dfc-40c1-9035-10f4846627e9
 topic_type:
 - apiref
-ms.openlocfilehash: 36a2a609e95740ffc45722635a7e1f09e0ed5601
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d50108b9090b4250e8a6cec1d9b5c54bb78dee9c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95670790"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760907"
 ---
 # <a name="iassemblycacheuninstallassembly-method"></a>IAssemblyCache::UninstallAssembly Yöntemi
 
 Belirtilen derlemeyi genel bütünleştirilmiş kod önbelleğinden kaldırır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT UninstallAssembly (  

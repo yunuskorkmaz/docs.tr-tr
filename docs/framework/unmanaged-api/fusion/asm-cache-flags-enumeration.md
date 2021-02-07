@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: ASM_CACHE_FLAGS numaralandırması'
 title: ASM_CACHE_FLAGS Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 82e9a7da-321b-48b8-b239-52eaffda6be8
 topic_type:
 - apiref
-ms.openlocfilehash: 6c6fab627f21977e85f9885ca4b49a0276faa5ce
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 866f61d2960074495ed036e3a8e89ebceec74e87
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732170"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99761440"
 ---
 # <a name="asm_cache_flags-enumeration"></a>ASM_CACHE_FLAGS Numaralandırması
 
@@ -39,7 +40,7 @@ typedef enum {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`ASM_CACHE_ZAP`|Ngen.exe kullanarak önceden derlenmiş derlemelerin önbelleğini sıralar.|  
 |`ASM_CACHE_GAC`|Genel derleme önbelleğini numaralandırır.|  
