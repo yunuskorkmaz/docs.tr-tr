@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: katılımcıları Izleme'
 title: İzleme Katılımcıları
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 345138dab3d77f74f6de5217763ec4f1efc6a047
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 2fa4edd0f93e72bff0ee4c9a07ad6f6988f3e040
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96293370"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755180"
 ---
 # <a name="tracking-participants"></a>İzleme Katılımcıları
 

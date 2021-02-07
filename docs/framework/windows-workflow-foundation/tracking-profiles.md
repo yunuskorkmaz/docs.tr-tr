@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Izleme profilleri'
 title: İzleme Profilleri
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: ceeb0f5533bb4c637ea7df52249f5b00067d9b3d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9748f0452a1699e08760372f826f2458d82f4b79
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551393"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755154"
 ---
 # <a name="tracking-profiles"></a>İzleme Profilleri
 
@@ -64,9 +65,9 @@ TrackingProfile profile = new TrackingProfile()
 
 İzleme profilindeki özniteliği tarafından belirtilen iki görünürlük modu `implementationVisibility` `RootScope` ve ' dir `All` . Modunun kullanılması, `RootScope` bileşik etkinliğin bir iş akışının kökü olmadığı durumda bir etkinliğin uygulanmasını oluşturan etkinliklerin izleme kayıtlarını bastırır. Bu, diğer etkinlikleri kullanarak uygulanan bir etkinlik bir iş akışına eklendiğinde ve `implementationVisibility` RootScope olarak ayarlandığında, yalnızca bu bileşik etkinliğin içindeki en üst düzey etkinliğin izlendiğine ilişkin anlamına gelir. Bir etkinlik iş akışının köküdür, etkinliğin uygulanması iş akışının kendisidir ve izleme kayıtları, uygulamayı oluşturan etkinlikler için yayınlanır. All modunun kullanılması, tüm izleme kayıtlarının kök etkinlik ve tüm bileşik etkinlikleri için oluşturulmasına izin verir.
 
-Örneğin, *MyActivity* , uygulamasında iki etkinlik ( *Activity1* ve *Activity2*) içeren bir bileşik etkinlik olduğunu varsayalım. Bu etkinlik bir iş akışına eklendiğinde ve izleme, olarak ayarlanmış bir izleme profili ile etkinleştirildiğinde `implementationVisibility` `RootScope` , izleme kayıtları yalnızca *MyActivity*için tasarlanmıştır. Ancak, *Activity1* ve *Activity2*etkinlikleri için hiçbir kayıt yayınlanmadı.
+Örneğin, *MyActivity* , uygulamasında iki etkinlik ( *Activity1* ve *Activity2*) içeren bir bileşik etkinlik olduğunu varsayalım. Bu etkinlik bir iş akışına eklendiğinde ve izleme, olarak ayarlanmış bir izleme profili ile etkinleştirildiğinde `implementationVisibility` `RootScope` , izleme kayıtları yalnızca *MyActivity* için tasarlanmıştır. Ancak, *Activity1* ve *Activity2* etkinlikleri için hiçbir kayıt yayınlanmadı.
 
-Ancak, `implementationVisibility` izleme profili için özniteliği olarak ayarlandıysa `All` , izleme kayıtları yalnızca *MyActivity*için değil, *Activity1* ve *Activity2*etkinlikleri için de geçerlidir.
+Ancak, `implementationVisibility` izleme profili için özniteliği olarak ayarlandıysa `All` , izleme kayıtları yalnızca *MyActivity* için değil, *Activity1* ve *Activity2* etkinlikleri için de geçerlidir.
 
 `implementationVisibility`Bayrak aşağıdaki izleme kayıt türleri için geçerlidir:
 
