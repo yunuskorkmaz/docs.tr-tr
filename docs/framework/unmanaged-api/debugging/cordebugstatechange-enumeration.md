@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: CorDebugStateChange numaralandırması'
 title: CorDebugStateChange Numaralandırması
 ms.date: 02/07/2019
 api_name:
@@ -10,18 +11,18 @@ api_type:
 ms.assetid: 1d4424ab-5143-4e50-a84a-ceeb4ddf3bba
 topic_type:
 - apiref
-ms.openlocfilehash: d94422d25da91cd2a6653a95cbd852c3930a151a
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 1900baa77432daa10d0f1a32dd9cb25198b86ed1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795696"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99661824"
 ---
 # <a name="cordebugstatechange-enumeration"></a>CorDebugStateChange Numaralandırması
 
 İşlemdeki değişikliklere göre atılması gereken önbelleğe alınmış verilerin miktarını açıklar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef enum CorDebugStateChange
@@ -33,14 +34,14 @@ typedef enum CorDebugStateChange
 
 ## <a name="members"></a>Üyeler
 
-| Üye            | Açıklama                                                              |
+| Üye            | Description                                                              |
 | ----------------- | ------------------------------------------------------------------------ |
 | `PROCESS_RUNNING` | İşlem, ileri yürütme yoluyla yeni bir bellek durumuna ulaştı.            |
 | `FLUSH_ALL`       | İşlemin belleği daha önce gerekenden farklı olabilir. |
 
 ## <a name="remarks"></a>Açıklamalar
 
- Hata ayıklayıcı ICorDebugProcess4 ile `CorDebugStateChange` `ProcessStateChanged` yöntemi çağırdığında numaralandırma üyesi bir bağımsız değişken olarak sağlanır [::P Rocessstatechanged](icordebugprocess4-processstatechanged-method.md) veya [ICorDebugProcess6::P rocessstatechanged](icordebugprocess6-processstatechanged-method.md)
+ `CorDebugStateChange`Hata ayıklayıcı ICorDebugProcess4 ile yöntemi çağırdığında numaralandırma üyesi bir bağımsız değişken olarak sağlanır `ProcessStateChanged` [::P rocessstatechanged](icordebugprocess4-processstatechanged-method.md) veya [ICorDebugProcess6::P rocessstatechanged](icordebugprocess6-processstatechanged-method.md)
 
 ## <a name="requirements"></a>Gereksinimler
 

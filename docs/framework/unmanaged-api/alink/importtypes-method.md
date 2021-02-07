@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ImportTypes Yöntemi'
 title: ImportTypes Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 351d4b4c-c939-486d-9471-51914a55f471
 topic_type:
 - apiref
-ms.openlocfilehash: 762f78900add70238971978ceecda089d0c725ce
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9a30c735ca2c9ad0f945628c3de1eb1bb56efe2c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705117"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99662630"
 ---
 # <a name="importtypes-method"></a>ImportTypes Yöntemi
 
 [ImportFile yöntemi](importfile-method.md)aracılığıyla içeri aktarılan her kapsamdan türlerin içeri aktarılmasını başlatır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT ImportTypes(  

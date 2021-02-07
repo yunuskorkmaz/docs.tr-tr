@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: SetManifestFile Yöntemi'
 title: SetManifestFile Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 1b33de4c-19cb-4a36-a93f-8675b2a36d58
 topic_type:
 - apiref
-ms.openlocfilehash: a4518e93db887dbdc4397636479be8bf5a705c2d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fe91c7f2b4e6f58a0a740de84e055ead49adb77d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733730"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99662331"
 ---
 # <a name="setmanifestfile-method"></a>SetManifestFile Yöntemi
 
 Bağlayıcının, derlemeyi oluşturduğunda kullandığı bildirim dosyasını belirtmenize veya sıfırlamasına olanak sağlar.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT SetManifestFile(  

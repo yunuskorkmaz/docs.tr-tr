@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: SetPEKind yöntemi'
 title: SetPEKind Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 050e77ee-3014-45c0-9e29-2ebe29347b0d
 topic_type:
 - apiref
-ms.openlocfilehash: be8a11cbf70e2c6f19ace67648b124515c1fb3c3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4154e9e80b7f88b6951c9aa8da5fc23d340c96dc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95680046"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99662305"
 ---
 # <a name="setpekind-method"></a>SetPEKind Yöntemi
 
 Taşınabilir yürütülebilir türü, makineye özgü veya makine belirsiz olarak belirler.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT SetPEKind(  

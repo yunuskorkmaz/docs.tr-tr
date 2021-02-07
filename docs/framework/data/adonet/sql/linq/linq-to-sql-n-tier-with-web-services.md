@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: LINQ to SQL N katmanlı Web Hizmetleri'
 title: Web Hizmetleri ile LINQ to SQL N Katmanı
 ms.date: 03/30/2017
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
-ms.openlocfilehash: dd1f756fae99fbae591b27aaefc7cc4ad7501bd6
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 7c97cc80f071ae964f329265f5c3d0e68e12b84f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91175297"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663111"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>Web Hizmetleri ile LINQ to SQL N Katmanı
 

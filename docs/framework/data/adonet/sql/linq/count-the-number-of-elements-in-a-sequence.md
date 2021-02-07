@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: dizideki öğelerin sayısını sayma'
 title: Dizideki Öğe Sayısını Sayma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ccbe5d54-c9eb-4b14-b0ab-f628483c5f99
-ms.openlocfilehash: d983bc14f4fda04bda0a6f363db4c11f062c4c48
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 91030516098e900229a1e131ea0c9a7d8bef4034
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164356"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663085"
 ---
 # <a name="count-the-number-of-elements-in-a-sequence"></a>Dizideki Öğe Sayısını Sayma
 

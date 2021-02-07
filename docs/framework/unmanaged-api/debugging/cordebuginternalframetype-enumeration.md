@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: CorDebugInternalFrameType numaralandırması'
 title: CorDebugInternalFrameType Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e4412dc2-c338-4cfb-94d8-f682095dd2b1
 topic_type:
 - apiref
-ms.openlocfilehash: 1c94e03aa088d8f48eb7f7a418cebd0492319513
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0479ae7602224e03086b9dacf91d360253b61818
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95696602"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99662006"
 ---
 # <a name="cordebuginternalframetype-enumeration"></a>CorDebugInternalFrameType Numaralandırması
 
@@ -46,7 +47,7 @@ typedef enum CorDebugInternalFrameType {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`STUBFRAME_NONE`|Null değer. `ICorDebugInternalFrame::GetFrameType`Yöntem hiçbir şekilde bu değeri döndürmez.|  
 |`STUBFRAME_M2U`|Yönetilen-yönetilmeyen bir saplama çerçevesi.|  

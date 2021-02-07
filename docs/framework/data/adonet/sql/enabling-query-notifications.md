@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: sorgu bildirimlerini etkinleştirme'
 title: Sorgu Bildirimlerini Etkinleştirme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a5333e19-8e55-4aa9-82dc-ca8745e516ed
-ms.openlocfilehash: 4e9b3a2e1f176a9d01e983bc469cc4032fa5d730
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e0ff405477a9faa141ce81c5ac8ba2d1ace95501
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91156179"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663345"
 ---
 # <a name="enabling-query-notifications"></a>Sorgu Bildirimlerini Etkinleştirme
 

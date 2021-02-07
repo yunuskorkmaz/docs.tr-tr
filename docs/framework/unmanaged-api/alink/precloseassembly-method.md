@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ön-Loseassembly yöntemi'
 title: PreCloseAssembly Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 6d23ac54-15ea-4027-a172-9ebef43e8f56
 topic_type:
 - apiref
-ms.openlocfilehash: 31c0c5e23d1a985c2005693e25ca91379037482a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 088a5bba654b3442da64672991d76537e9b4722c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728686"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99662526"
 ---
 # <a name="precloseassembly-method"></a>PreCloseAssembly Yöntemi
 
 Derleme dosyasını kapatır. Diğer tüm dosyaları kapattıktan sonra, ancak derleme dosyasını kapatmadan önce bu yöntemi çağırın. İlişkisiz modüller için bu yöntemi çağırmayın.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT PreCloseAssembly(  

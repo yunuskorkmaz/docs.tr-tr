@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: CorDebugGenerationTypes sabit listesi'
 title: CorDebugGenerationTypes Sabit Listesi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f25b64f-eedd-4ae5-8b0e-cfdfb9b6c5d8
 topic_type:
 - apiref
-ms.openlocfilehash: 189a276b4228038ab1d70620ce3a4a0f4342b245
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f86b2bc9bf947c6b285c50678f46494005bb5537
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95712527"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99662136"
 ---
 # <a name="cordebuggenerationtypes-enumeration"></a>CorDebugGenerationTypes Sabit Listesi
 
@@ -38,7 +39,7 @@ typedef enum CorDebugGenerationTypes {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye adı|Açıklama|  
+|Üye adı|Description|  
 |-----------------|-----------------|  
 |`CorDebug_Gen0`|Nesil 0.|  
 |`CorDebug_Gen1`|1. nesil.|  

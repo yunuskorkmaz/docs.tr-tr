@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: CorDebugExceptionObjectStackFrame yapısı'
 title: CorDebugExceptionObjectStackFrame Yapısı
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 542cdd81-5ae7-4361-b0ef-1ae4775df258
 topic_type:
 - apiref
-ms.openlocfilehash: 9b904596ed1cce4c4cf2676676508dfb3851e8ce
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: abeb5a9f6385c494745a34c6f37d6fbc1376ad7b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95712683"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99662162"
 ---
 # <a name="cordebugexceptionobjectstackframe-structure"></a>CorDebugExceptionObjectStackFrame Yapısı
 
@@ -38,7 +39,7 @@ typedef struct CorDebugExceptionObjectStackFrame {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`pModule`|Geçerli çerçeve için ICorDebugModule nesnesine yönelik bir işaretçi.|  
 |`ip`|Geçerli çerçeveye ait yönerge işaretçisinin (EıP/RIP) değeri.|  

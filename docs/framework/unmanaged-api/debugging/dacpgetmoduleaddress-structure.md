@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: DacpGetModuleAddress yapısı'
 title: DacpGetModuleAddress Yapısı
 ms.date: 01/16/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: a65fa9974165fa36e59a7fb83dca6dd902f7d8dc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3de76cc4f15bffd35d7a43ae25a313eb2fe59b82
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724401"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99661603"
 ---
 # <a name="dacpgetmoduleaddress-structure"></a>DacpGetModuleAddress Yapısı
 
@@ -39,7 +40,7 @@ struct DacpGetModuleAddress
 
 ## <a name="members"></a>Üyeler
 
-| Üye      | Açıklama                |
+| Üye      | Description                |
 | ----------- | -------------------------- |
 | `ModulePtr` | Modülün işaretçisi. |
 

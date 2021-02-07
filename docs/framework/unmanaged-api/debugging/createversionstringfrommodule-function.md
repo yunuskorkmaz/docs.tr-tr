@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: CreateVersionStringFromModule Işlevi'
 title: CreateVersionStringFromModule İşlevi
 ms.date: 03/30/2017
 api_name:
@@ -16,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 3d2fe9bd-75ef-4364-84a6-da1e1994ac1a
 topic_type:
 - apiref
-ms.openlocfilehash: 1b944034251b34350057866b2a52e63e934d72d4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 45ae3ec31cf77e4c96e42a58b23e1f52dcf7c54b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733353"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99661551"
 ---
 # <a name="createversionstringfrommodule-function"></a>CreateVersionStringFromModule İşlevi
 
 Hedef işlemdeki ortak dil çalışma zamanı (CLR) yolundan bir sürüm dizesi oluşturur.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT CreateVersionStringFromModule (  

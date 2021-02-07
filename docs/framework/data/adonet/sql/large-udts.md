@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: büyük UDTs'
 title: Büyük UDT’ler
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-ms.openlocfilehash: 032093244f51893cd3b0cf50ad81c79413aaa32e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e1a40330bb48d6320dc96533e764f1b856e0f410
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91194550"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663189"
 ---
 # <a name="large-udts"></a>Büyük UDT’ler
 
@@ -44,7 +45,7 @@ Kullanıcı tanımlı türler (UDTs), bir geliştiricinin ortak dil çalışma z
 |`ProviderSpecificDataType`|`SqlTypes.SqlBinary`|UDT örneği|  
 |`ProviderType`|21 ( `SqlDbType.VarBinary` )|29 ( `SqlDbType.Udt` )|  
 |`NonVersionedProviderType`|29 ( `SqlDbType.Udt` )|29 ( `SqlDbType.Udt` )|  
-|`DataTypeName`|`SqlDbType.VarBinary`|*Database. SchemaName. TypeName*olarak belirtilen üç bölüm adı.|  
+|`DataTypeName`|`SqlDbType.VarBinary`|*Database. SchemaName. TypeName* olarak belirtilen üç bölüm adı.|  
 |`IsLong`|Değişir|Değişir|  
   
 ## <a name="sqldatareader-considerations"></a>SqlDataReader konuları  
@@ -75,7 +76,7 @@ Kullanıcı tanımlı türler (UDTs), bir geliştiricinin ortak dil çalışma z
 
  Aşağıdaki <xref:System.Data.SqlClient.SqlParameter> Özellikler, büyük UDTs ile çalışacak şekilde genişletildi.  
   
-|SqlParameter özelliği|Açıklama|  
+|SqlParameter özelliği|Description|  
 |---------------------------|-----------------|  
 |<xref:System.Data.SqlClient.SqlParameter.Value%2A>|Parametresinin değerini temsil eden bir nesne alır veya ayarlar. Varsayılan olarak null'dur. Özelliği `SqlBinary` , `Byte[]` veya yönetilen bir nesne olabilir.|  
 |<xref:System.Data.SqlClient.SqlParameter.SqlValue%2A>|Parametresinin değerini temsil eden bir nesne alır veya ayarlar. Varsayılan olarak null'dur. Özelliği `SqlBinary` , `Byte[]` veya yönetilen bir nesne olabilir.|  

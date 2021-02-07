@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: SetAssemblyFile2 yöntemi'
 title: SetAssemblyFile2 Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: eedb9125-1ef1-4000-abfc-7de86e5a1f17
 topic_type:
 - apiref
-ms.openlocfilehash: 131f5d951e524ef48f2cfe1e3e88ef80ac21c452
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 890646b718c211b476d013daf021f8889198c1ba
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95703687"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99662409"
 ---
 # <a name="setassemblyfile2-method"></a>SetAssemblyFile2 Yöntemi
 
 Yeni bir derleme için adını ve seçeneklerini ayarlar. İlişkisiz modüller üretmeniz durumunda bu yöntemi çağırmayın.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT SetAssemblyFile2(  

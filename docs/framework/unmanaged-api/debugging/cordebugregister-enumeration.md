@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: CorDebugRegister numaralandırması'
 title: CorDebugRegister Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 003bb138-7960-4291-ac88-0d87e470ff70
 topic_type:
 - apiref
-ms.openlocfilehash: 85df98e83396c9439c28dd41a3ffa02b820c9c3e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7a5dc771a239a82448f898e2f518e920993ec35a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726060"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99661896"
 ---
 # <a name="cordebugregister-enumeration"></a>CorDebugRegister Numaralandırması
 
@@ -115,7 +116,7 @@ typedef enum CorDebugRegister {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`REGISTER_INSTRUCTION_POINTER`|Bir yönerge işaretçisi herhangi bir işlemciye kayıt kaydeder.|  
 |`REGISTER_STACK_POINTER`|Yığın işaretçisi herhangi bir işlemciye kayıt kaydeder.|  

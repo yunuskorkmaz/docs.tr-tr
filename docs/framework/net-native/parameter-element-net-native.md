@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: <Parameter> öğesi (.NET Native)'
 title: <Parameter> Öğesi (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
-ms.openlocfilehash: 7e812ab60eb0a89eb868346733a8ea74e2f76d3e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 53b84027e8393e0a799d9652767d173c2787cd27
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96287871"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99662799"
 ---
 # <a name="parameter-element-net-native"></a>\<Parameter> Öğesi (.NET Native)
 
@@ -35,7 +36,7 @@ Bir yönteme geçirilen bağımsız değişkenin türüne yansıma ilkesi uygula
   
 ### <a name="attributes"></a>Öznitelikler  
   
-|Öznitelik|Öznitelik türü|Açıklama|  
+|Öznitelik|Öznitelik türü|Description|  
 |---------------|--------------------|-----------------|  
 |`Name`|Genel|Gerekli öznitelik. Parametre adı. Örneğin, yöntem imzası için `String.CompareTo(Object value)` , `Name` özniteliği değeri "Value" olur.|  
 |`Activate`|Yansıma|İsteğe bağlı öznitelik. Örneklerin etkinleştirilmesini sağlamak için oluşturuculara çalışma zamanı erişimini denetler.|  

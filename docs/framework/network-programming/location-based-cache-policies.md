@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Location-Based önbellek Ilkeleri'
 title: Konum Temelli Önbellek İlkeleri
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - Cache Or Next Cache Only policy
 - Refresh policy
 ms.assetid: e41d7f1a-0a6a-4dee-97d1-c6a8b6a07fc2
-ms.openlocfilehash: 22d99111cd22ef24603f3cdd213c9c9afac5a974
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ef770b45f173fee66c80d721766a0be6244bbeb9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96242207"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99662721"
 ---
 # <a name="location-based-cache-policies"></a>Konum Temelli Önbellek İlkeleri
 

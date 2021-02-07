@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Davcpmoduledata yapısı'
 title: DacpModuleData Yapısı
 ms.date: 02/01/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 5d27ba2de9ff6ed184b6ddf50a517d0dae7715f5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 376a49ab78db08e5906e8d33389cdc45fe76e81e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723057"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99661590"
 ---
 # <a name="dacpmoduledata-structure"></a>DacpModuleData Yapısı
 
@@ -42,7 +43,7 @@ struct DacpModuleData
 
 ## <a name="members"></a>Üyeler
 
-| Üye    | Açıklama                                                             |
+| Üye    | Description                                                             |
 | --------- | ----------------------------------------------------------------------- |
 | `Address` | Modül nesnesinin adresi.                                           |
 | `File`    | Taşınabilir çalıştırılabilir (PE) dosyasına yönelik bir işaretçi.                       |

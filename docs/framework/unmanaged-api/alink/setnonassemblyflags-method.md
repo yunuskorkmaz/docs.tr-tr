@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: SetNonAssemblyFlags yöntemi'
 title: SetNonAssemblyFlags Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: f8ba6fc8-f5aa-4066-ac96-56332758f5ec
 topic_type:
 - apiref
-ms.openlocfilehash: b7bcf530947c161decc9c01c07df310550d69738
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9cf311ec8f04f97da03be626e20c1c07065eac38
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733769"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99662318"
 ---
 # <a name="setnonassemblyflags-method"></a>SetNonAssemblyFlags Yöntemi
 
 Derlemeye özgü olmayan bayrakları ayarlar.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT SetNonAssemblyFlags(  

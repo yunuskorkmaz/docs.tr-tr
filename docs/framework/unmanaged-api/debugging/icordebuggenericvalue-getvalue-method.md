@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugGenericValue:: GetValue yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugGenericValue::GetValue Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 4e95d7cb-144d-4ccf-8a69-d605f4744be2
 topic_type:
 - apiref
-ms.openlocfilehash: dd1c1ba4a976a10d0c38c5295fff838faf072f51
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9c8459ce6a9fb59e934b1ebd355aa091a37b2d7b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728114"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99661070"
 ---
 # <a name="icordebuggenericvaluegetvalue-method"></a>ICorDebugGenericValue::GetValue Metodu
 
 Bu genel değerini belirtilen arabelleğe kopyalar.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetValue (  

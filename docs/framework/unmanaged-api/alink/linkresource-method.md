@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: LinkResource yöntemi'
 title: LinkResource Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: c404acb3-4c59-4100-9a4c-483cbdb1d736
 topic_type:
 - apiref
-ms.openlocfilehash: 4f2f13976dfd4e5601bf8b54bed7b851884fbb9d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ff12138433577eccbb313b8e64a329be1358ba70
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95690453"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99662552"
 ---
 # <a name="linkresource-method"></a>LinkResource Yöntemi
 
 Bir kaynaktaki bağlantılar.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT LinkResource(  

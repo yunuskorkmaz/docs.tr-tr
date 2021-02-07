@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: <Directives> öğesi (.NET Native)'
 title: <Directives> Öğesi (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 444846f3-48d5-4341-a43e-69f7221389eb
-ms.openlocfilehash: 524c30872e218f6428491507bbfb4ca54b6061b1
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7aa3bf3718f32d55ba8189c65705868c6fb399ae
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96251106"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99662916"
 ---
 # <a name="directives-element-net-native"></a>\<Directives> Öğesi (.NET Native)
 

@@ -1,4 +1,5 @@
 ---
+description: 'Bu konuda daha fazla bilgi edinin: CorDebugPlatform numaralandırması'
 title: CorDebugPlatform Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c5444816-7378-4521-afd3-bf5e4b5303d5
 topic_type:
 - apiref
-ms.openlocfilehash: 5435f78b28975a5426fcb2fce94904efc1051c5b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d6a78ec00f99ff34158f784e039372c8937e6d16
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95696407"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99661863"
 ---
 # <a name="cordebugplatform-enumeration"></a>CorDebugPlatform Numaralandırması
 
@@ -42,7 +43,7 @@ typedef enum CorDebugPlatform
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |CORDB_PLATFORM_WINDOWS_X86|Hedef platform, Intel x86 donanımında çalışan bir Windows.|  
 |CORDB_PLATFORM_WINDOWS_AMD64|Hedef platform, AMD64 veya Intel EM64T donanımında çalışan 64 bitlik bir Windows.|  

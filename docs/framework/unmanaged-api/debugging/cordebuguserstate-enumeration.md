@@ -1,4 +1,5 @@
 ---
+description: 'Bu konuda daha fazla bilgi edinin: CorDebugUserState numaralandırması'
 title: CorDebugUserState Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5f6c2bcd-8102-4e3b-abc5-86ab0bd62def
 topic_type:
 - apiref
-ms.openlocfilehash: 968874a46279b7eac651d45c3890429a326651b2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c556e7943751fb8e159e3e0d0b9a71baf1f6b5b5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726957"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99661746"
 ---
 # <a name="cordebuguserstate-enumeration"></a>CorDebugUserState Numaralandırması
 
