@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: IManagedObject arabirimi'
 title: IManagedObject Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1fbbf572-6d28-41a5-82fb-579ac90bfcf5
 topic_type:
 - apiref
-ms.openlocfilehash: 51402168a4e01ed10465d3172465fef69b89de7a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ae16a07065af840c6a3cadd7c5d71700d251c4fe
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730695"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99671145"
 ---
 # <a name="imanagedobject-interface"></a>IManagedObject Arabirimi
 

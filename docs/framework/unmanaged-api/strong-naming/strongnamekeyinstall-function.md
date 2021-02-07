@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: StrongNameKeyInstall Işlevi'
 title: StrongNameKeyInstall İşlevi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e32fd546-7757-4681-be3d-658e93281e50
 topic_type:
 - apiref
-ms.openlocfilehash: 9e441d4da64e9704fbda2368d2b07289aaea610a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0a5d3971ac0927dda7066405adc01a5c80b7faca
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125206"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99670560"
 ---
 # <a name="strongnamekeyinstall-function"></a>StrongNameKeyInstall İşlevi
 
@@ -46,17 +47,17 @@ BOOLEAN StrongNameKeyInstall (
 'ndaki İkili anahtar çifti.
 
 `cbKeyBlob`\
-'ndaki `pbKeyBlob`bayt cinsinden boyutu.
+'ndaki Bayt cinsinden boyutu `pbKeyBlob` .
 
 ## <a name="return-value"></a>Dönüş Değeri
 
-başarılı tamamlamada `true`; Aksi takdirde, `false`.
+`true` başarıyla tamamlandığında; Aksi takdirde, `false` .
 
 ## <a name="remarks"></a>Açıklamalar
 
 Anahtar kapsayıcısını silmek için [StrongNameKeyDelete](strongnamekeydelete-function.md) işlevini kullanın.
 
-`StrongNameKeyInstall` işlevi başarıyla tamamlanmazsa, en son oluşturulan hatayı almak için [StrongNameErrorInfo](strongnameerrorinfo-function.md) işlevini çağırın.
+`StrongNameKeyInstall`İşlev başarıyla tamamlanmazsa, en son oluşturulan hatayı almak Için [StrongNameErrorInfo](strongnameerrorinfo-function.md) işlevini çağırın.
 
 ## <a name="requirements"></a>Gereksinimler
 
@@ -64,9 +65,9 @@ Anahtar kapsayıcısını silmek için [StrongNameKeyDelete](strongnamekeydelete
 
 **Üst bilgi:** StrongName. h
 
-**Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir
+**Kitaplık:** MsCorEE.dll bir kaynak olarak eklendi
 
-**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

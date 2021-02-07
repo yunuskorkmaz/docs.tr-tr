@@ -1,4 +1,5 @@
 ---
+description: ': IMetaDataImport:: EnumMethods yöntemi hakkında daha fazla bilgi edinin'
 title: IMetaDataImport::EnumMethods Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 8cc3b0c3-d97d-4f71-9e7d-ef2a92b4959a
 topic_type:
 - apiref
-ms.openlocfilehash: 00726b7e74bdedc658886cccbc4329eaf3ae76d1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4fce3593d088a8d401335869eb49e598ac4c3fd2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95696810"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99670686"
 ---
 # <a name="imetadataimportenummethods-method"></a>IMetaDataImport::EnumMethods Yöntemi
 
 Belirtilen türdeki yöntemleri temsil eden MethodDef belirteçlerini numaralandırır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT EnumMethods (  
@@ -57,7 +58,7 @@ HRESULT EnumMethods (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |`S_OK`|`EnumMethods` başarıyla döndürüldü.|  
 |`S_FALSE`|Numaralandırılacak bir MethodDef belirteci yok. Bu durumda, `pcTokens` sıfırdır.|  

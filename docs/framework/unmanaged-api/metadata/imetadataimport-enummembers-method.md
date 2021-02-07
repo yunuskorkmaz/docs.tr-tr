@@ -1,4 +1,5 @@
 ---
+description: ': IMetaDataImport:: EnumMembers yöntemi hakkında daha fazla bilgi edinin'
 title: IMetaDataImport::EnumMembers Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 3fb8e178-342b-4c89-9bcf-f7f834e6cb77
 topic_type:
 - apiref
-ms.openlocfilehash: 92503df60ae44dfd44819fe3eda8e6a0549b2b66
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3b56b25c6c581f6bfc3303a55a49a12ffcc73494
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721001"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99670820"
 ---
 # <a name="imetadataimportenummembers-method"></a>IMetaDataImport::EnumMembers Yöntemi
 
 Belirtilen türdeki üyeleri temsil eden MemberDef belirteçlerini numaralandırır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT EnumMembers (
@@ -57,7 +58,7 @@ HRESULT EnumMembers (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |`S_OK`|`EnumMembers` başarıyla döndürüldü.|  
 |`S_FALSE`|Numaralandırılacak MemberDef belirteçleri yok. Bu durumda, `pcTokens` sıfırdır.|  

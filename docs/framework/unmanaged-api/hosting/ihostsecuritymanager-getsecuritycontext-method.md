@@ -1,4 +1,5 @@
 ---
+description: ': IHostSecurityManager:: GetSecurityContext Yöntemi hakkında daha fazla bilgi edinin'
 title: IHostSecurityManager::GetSecurityContext Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 958970d6-f6a2-4b84-b32a-f555cbaf8f61
 topic_type:
 - apiref
-ms.openlocfilehash: dfb96de02549e6d0f178c099793741f7fbd61d55
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0dc9e0380d2fb218b68f6beb85fa1ccba8826d85
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724799"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99671572"
 ---
 # <a name="ihostsecuritymanagergetsecuritycontext-method"></a>IHostSecurityManager::GetSecurityContext Yöntemi
 
 Konaktan istenen [IHostSecurityContext](ihostsecuritycontext-interface.md) değerini alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp
 HRESULT GetSecurityContext (  
@@ -45,7 +46,7 @@ HRESULT GetSecurityContext (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`GetSecurityContext` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
