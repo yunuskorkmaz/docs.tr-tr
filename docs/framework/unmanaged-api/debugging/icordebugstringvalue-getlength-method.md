@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugStringValue:: GetLength yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugStringValue::GetLength Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: a1ebfc69-46a6-4225-8788-b7cfb2f15e1d
 topic_type:
 - apiref
-ms.openlocfilehash: 74a4b42be09c577cc80f1a73e077694e5a4a8d5f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ae4d42b5b65e5f80e884415a5acfc7f894ffe11e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95697122"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99717387"
 ---
 # <a name="icordebugstringvaluegetlength-method"></a>ICorDebugStringValue::GetLength Yöntemi
 
 Bu ICorDebugStringValue tarafından başvurulan dizedeki karakter sayısını alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetLength (  
