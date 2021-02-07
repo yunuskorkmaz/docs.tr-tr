@@ -1,4 +1,5 @@
 ---
+description: ': IMetaDataInfo:: GetFileMapping yöntemi hakkında daha fazla bilgi edinin'
 title: IMetaDataInfo::GetFileMapping Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 2868dfec-c992-4606-88bb-a8e0b6b18271
 topic_type:
 - apiref
-ms.openlocfilehash: 8823f3cc016072d3f20100c29532459da5e97492
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 82a1a23c50a4d8340804f66966933fc6a11e0f8c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95682397"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99688487"
 ---
 # <a name="imetadatainfogetfilemapping-method"></a>IMetaDataInfo::GetFileMapping Yöntemi
 
 Eşlenen dosyanın bellek bölgesini ve eşleme türünü alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetFileMapping (  
@@ -49,7 +50,7 @@ HRESULT GetFileMapping (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |`S_OK`|Tüm çıkışlar doldurulur.|  
 |`E_INVALIDARG`|NULL bir bağımsız değişken değeri olarak geçirildi.|  

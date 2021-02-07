@@ -1,4 +1,5 @@
 ---
+description: ': IMetaDataTables:: GetCodedTokenInfo metodu hakkında daha fazla bilgi edinin'
 title: IMetaDataTables::GetCodedTokenInfo Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 31214d3a-715e-49af-92b3-0fd11e4f218a
 topic_type:
 - apiref
-ms.openlocfilehash: b79ac7f71ec0551336298a90829e1f37e2e30b20
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 982a13636d8b4572113038eaa658158e6c2ca966
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711093"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99688292"
 ---
 # <a name="imetadatatablesgetcodedtokeninfo-method"></a>IMetaDataTables::GetCodedTokenInfo Metodu
 
 Belirtilen satır diziniyle ilişkili bir belirteç dizisine yönelik bir işaretçi alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetCodedTokenInfo (

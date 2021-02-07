@@ -1,4 +1,5 @@
 ---
+description: ': IMetaDataImport2:: GetMethodSpecProps yöntemi hakkında daha fazla bilgi edinin'
 title: IMetaDataImport2::GetMethodSpecProps Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 9544b711-e669-4eaf-8630-ee862e5e4489
 topic_type:
 - apiref
-ms.openlocfilehash: 2eba599c0f7d47ab78c1b158129f03877a4a5d9f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 77f3f78905d1f7f44af0e9c7a75746b4e5b6e684
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95702634"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99688656"
 ---
 # <a name="imetadataimport2getmethodspecprops-method"></a>IMetaDataImport2::GetMethodSpecProps Yöntemi
 
 Belirtilen MethodSpec belirteci tarafından başvurulan metodun meta veri imzasını alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetMethodSpecProps (  

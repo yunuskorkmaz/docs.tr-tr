@@ -1,4 +1,5 @@
 ---
+description: ': IMetaDataTables:: GetColumn metodu hakkında daha fazla bilgi edinin'
 title: IMetaDataTables::GetColumn Yöntemi
 ms.date: 02/25/2019
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 1032055b-cabb-45c5-a50e-7e853201b175
 topic_type:
 - apiref
-ms.openlocfilehash: 270546f0270521e38cfdcae5e4d2137202c13cb1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4c4cec7216f93783b34b594330358d1e6036ed40
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711097"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99688279"
 ---
 # <a name="imetadatatablesgetcolumn-method"></a>IMetaDataTables::GetColumn Yöntemi
 
 Verilen tablodaki belirtilen sütun ve satır hücresinde bulunan değere bir işaretçi alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetColumn (
