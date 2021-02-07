@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: CorArgType numaralandırması'
 title: CorArgType Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 3c1cb268-57a0-4664-91c7-f6908ff29e32
 topic_type:
 - apiref
-ms.openlocfilehash: 6388d804df43964866073d7c3b32dca84fb2d06f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: de7067e6c7b825aae797d88dbd5f2ecd2f5280fa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720431"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99678529"
 ---
-# <a name="corargtype-enumeration"></a><span data-ttu-id="23f68-102">CorArgType Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="23f68-102">CorArgType Enumeration</span></span>
+# <a name="corargtype-enumeration"></a><span data-ttu-id="c9d50-103">CorArgType Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="c9d50-103">CorArgType Enumeration</span></span>
 
-<span data-ttu-id="23f68-103">Çalışma zamanı tanıtıcısının yerel türünü tanımlayan değerleri içerir.</span><span class="sxs-lookup"><span data-stu-id="23f68-103">Contains values that describe the native type of a runtime handle.</span></span>  
+<span data-ttu-id="c9d50-104">Çalışma zamanı tanıtıcısının yerel türünü tanımlayan değerleri içerir.</span><span class="sxs-lookup"><span data-stu-id="c9d50-104">Contains values that describe the native type of a runtime handle.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="23f68-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="23f68-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c9d50-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="c9d50-105">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorArgType {  
@@ -45,14 +46,14 @@ typedef enum CorArgType {
 } CorArgType;  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="23f68-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="23f68-105">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c9d50-106">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c9d50-106">Requirements</span></span>  
 
- <span data-ttu-id="23f68-106">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="23f68-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="c9d50-107">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c9d50-107">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="23f68-107">**Üst bilgi:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="23f68-107">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="c9d50-108">**Üst bilgi:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="c9d50-108">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="23f68-108">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="23f68-108">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c9d50-109">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c9d50-109">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="23f68-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="23f68-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c9d50-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c9d50-110">See also</span></span>
 
-- [<span data-ttu-id="23f68-110">Meta Veri Numaralandırmalar</span><span class="sxs-lookup"><span data-stu-id="23f68-110">Metadata Enumerations</span></span>](metadata-enumerations.md)
+- [<span data-ttu-id="c9d50-111">Meta Veri Numaralandırmalar</span><span class="sxs-lookup"><span data-stu-id="c9d50-111">Metadata Enumerations</span></span>](metadata-enumerations.md)
