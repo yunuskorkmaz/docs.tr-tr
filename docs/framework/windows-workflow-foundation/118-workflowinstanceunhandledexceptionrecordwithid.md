@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 118-Workflowınstanceunhandledexceptionrecordwithıd'
 title: 118 - WorkflowInstanceUnhandledExceptionRecordWithId
 ms.date: 03/30/2017
 ms.assetid: 2ce4b193-e141-4cc4-86a3-2e8c984c110d
-ms.openlocfilehash: 54bbb267902fe547821d4a5580f86da944ae70cd
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9d39afb95db8a393b967d590ee37e9f3f2529ffd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96278693"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99703230"
 ---
 # <a name="118---workflowinstanceunhandledexceptionrecordwithid"></a>118 - WorkflowInstanceUnhandledExceptionRecordWithId
 
@@ -17,10 +18,10 @@ ms.locfileid: "96278693"
 |-|-|  
 |ID|118|  
 |Anahtar sözcükler|HealthMonitoring, WFTracking|  
-|Düzey|Hata|  
+|Level|Hata|  
 |Kanal|Microsoft-Windows-uygulama sunucusu-uygulamalar/analitik|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bu olay, bir iş akışı örneği Workflowunhandledexceptionrecord ' i yayıyorsa ETW izleme katılımcısı tarafından yayılır.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96278693"
   
 ## <a name="details"></a>Ayrıntılar  
   
-|Veri öğesi adı|Veri öğesi türü|Açıklama|  
+|Veri öğesi adı|Veri öğesi türü|Description|  
 |--------------------|--------------------|-----------------|  
 |InstanceId|xs: GUID|İş akışının örnek kimliği|  
 |RecordNumber|xs: Long|Yayınlanan kaydın sıra numarası|  

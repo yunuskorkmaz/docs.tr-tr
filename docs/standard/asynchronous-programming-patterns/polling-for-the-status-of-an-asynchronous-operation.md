@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: zaman uyumsuz bir Işlemin durumu için yoklama'
 title: Zaman Uyumsuz Bir İşlemin Durumu için Yoklama
 ms.date: 03/30/2017
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - polling asynchronous operation status
 - status information [.NET], asynchronous operations
 ms.assetid: b541af31-dacb-4e20-8847-1b1ff7c35363
-ms.openlocfilehash: 8676568a1493c5c404e6b3019f37dd672c2ed8d3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: bf8ae29393ef2b32113d7b76de1ef3503758750f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726697"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702905"
 ---
 # <a name="polling-for-the-status-of-an-asynchronous-operation"></a>Zaman Uyumsuz Bir İşlemin Durumu için Yoklama
 
@@ -26,7 +27,7 @@ Zaman uyumsuz bir işlemin sonuçlarını beklerken diğer işleri yapabilen uyg
   
 ## <a name="example"></a>Örnek  
 
- Aşağıdaki kod örneği, <xref:System.Net.Dns> Kullanıcı tarafından belirtilen bir bilgisayar Için etki alanı adı sistem bilgilerini almak üzere sınıfında zaman uyumsuz yöntemleri kullanmayı gösterir. Bu örnek, zaman uyumsuz işlemi başlatır ve sonra işlem tamamlanana kadar konsola (".") nokta (".") yazdırır. **null** **Nothing** <xref:System.Net.Dns.BeginGetHostByName%2A> <xref:System.AsyncCallback> <xref:System.Object> Bu yaklaşım kullanılırken bu bağımsız değişkenler gerekli olmadığından, ve parametreleri için null (Visual Basic hiçbir şey yok) geçtiğini unutmayın.  
+ Aşağıdaki kod örneği, <xref:System.Net.Dns> Kullanıcı tarafından belirtilen bir bilgisayar Için etki alanı adı sistem bilgilerini almak üzere sınıfında zaman uyumsuz yöntemleri kullanmayı gösterir. Bu örnek, zaman uyumsuz işlemi başlatır ve sonra işlem tamamlanana kadar konsola (".") nokta (".") yazdırır.   <xref:System.Net.Dns.BeginGetHostByName%2A> <xref:System.AsyncCallback> <xref:System.Object> Bu yaklaşım kullanılırken bu bağımsız değişkenler gerekli olmadığından, ve parametreleri için null (Visual Basic hiçbir şey yok) geçtiğini unutmayın.  
   
  [!code-csharp[AsyncDesignPattern#3](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDesignPattern/CS/Async_Poll.cs#3)]
  [!code-vb[AsyncDesignPattern#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDesignPattern/VB/Async_Poll.vb#3)]  

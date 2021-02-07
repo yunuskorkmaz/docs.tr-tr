@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Tarih ve saatlerle aritmetik işlemler gerçekleştirme'
 title: Tarih ve saatlerle aritmetik işlemler gerçekleştirme
 ms.date: 04/10/2017
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - DateTime structure, arithmetic operations
 - DateTimeOffset structure, arithmetic operations
 ms.assetid: 87c7ddf2-f15e-48af-8602-b3642237e6d0
-ms.openlocfilehash: af294c45359f6226c4189aabb34fdfc670bbd1c9
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7b39a6dec3abc2206c8eef7566f74aab6614aae6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94817776"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702567"
 ---
 # <a name="performing-arithmetic-operations-with-dates-and-times"></a>Tarih ve saatlerle aritmetik işlemler gerçekleştirme
 
@@ -33,7 +34,7 @@ Hem hem de <xref:System.DateTime> yapıları, <xref:System.DateTimeOffset> değe
 
 <xref:System.DateTime.CompareTo%28System.DateTime%29>Yöntemi, yerel saatın UTC zamanından daha erken olduğunu ve çıkarma işlemi, ABD Pasifik standart saat dilimindeki bir SISTEMIN UTC ve yerel saati arasındaki farkın yedi saat olduğunu bildirir. Ancak, bu iki değer tek bir noktanın farklı temsillerini sağladığından, bu durum, zaman aralığının UTC 'den yerel saat dilimine göre tam olarak ayrıştırılacağı bu durumda net bir durumdur.
 
-Daha genel olarak, <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> özelliği <xref:System.DateTime.Kind> karşılaştırma ve aritmetik yöntemler tarafından döndürülen sonuçları etkilemez (aynı zamanda iki özdeş noktasının karşılaştırılmasının yanı sıra, bu sonuçların yorumunu etkileyebilse de). Örnek:
+Daha genel olarak, <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> özelliği <xref:System.DateTime.Kind> karşılaştırma ve aritmetik yöntemler tarafından döndürülen sonuçları etkilemez (aynı zamanda iki özdeş noktasının karşılaştırılmasının yanı sıra, bu sonuçların yorumunu etkileyebilse de). Örneğin:
 
 - İki tarih ve saat değeri üzerinde gerçekleştirilen herhangi bir aritmetik işlemin sonucu, <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> özelliklerinin ikisi de eşit olan <xref:System.DateTimeKind> iki değer arasındaki gerçek zaman aralığını yansıtır. Benzer şekilde, iki tarih ve saat değerinin karşılaştırılması saatler arasındaki ilişkiyi doğru bir şekilde yansıtır.
 

@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 116-Workflowcesuspendedrecordwithıd'
 title: 116 - WorkflowInstanceSuspendedRecordWithId
 ms.date: 03/30/2017
 ms.assetid: 38232c03-6139-4494-a020-79bc83eb9dce
-ms.openlocfilehash: affc8e889cba6ea02bddaa0a21d7311df624b087
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 32746777d32ed0c8320d53da9f73ddb8d55a5573
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96281761"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99703256"
 ---
 # <a name="116---workflowinstancesuspendedrecordwithid"></a>116 - WorkflowInstanceSuspendedRecordWithId
 
@@ -17,10 +18,10 @@ ms.locfileid: "96281761"
 |-|-|  
 |ID|116|  
 |Anahtar sözcükler|HealthMonitoring, WFTracking|  
-|Düzey|Bilgi|  
+|Level|Bilgi|  
 |Kanal|Microsoft-Windows-uygulama sunucusu-uygulamalar/analitik|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bu olay, bir iş akışı örneği Workflowcesuspsonlandırılan kaydını yayıyorsa ETW izleme katılımcısı tarafından yayınlanır.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96281761"
   
 ## <a name="details"></a>Ayrıntılar  
   
-|Veri öğesi adı|Veri öğesi türü|Açıklama|  
+|Veri öğesi adı|Veri öğesi türü|Description|  
 |--------------------|--------------------|-----------------|  
 |InstanceId|xs: GUID|İş akışının örnek kimliği|  
 |RecordNumber|xs: Long|Yayınlanan kaydın sıra numarası|  

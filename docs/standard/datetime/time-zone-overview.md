@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: saat dilimine genel bakış'
 title: Saat dilimine genel bakış
 ms.date: 04/10/2017
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - adjustment rule [.NET]
 - time zones [.NET], terminology
 ms.assetid: c4b7ed01-5e38-4959-a3b6-ef9765d6ccf1
-ms.openlocfilehash: 1e876fd608b088b02385467367948440549e96e8
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4f892763cc27794155847c602c458d82780592ee
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94817516"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702437"
 ---
 # <a name="time-zone-overview"></a>Saat dilimine genel bakış
 
@@ -39,7 +40,7 @@ Ayarlama kurallarını destekleyen saat dilimleri için, gün ışığından yar
 
 Aşağıdaki tabloda, Saat dilimleriyle çalışırken ve saat dilimi kullanan uygulamalar geliştirilirken yaygın olarak kullanılan terimler tanımlanmaktadır.
 
-| Terim            | Tanım |
+| Süre            | Tanım |
 | --------------- | ---------- |
 | Ayarlama kuralı | Standart saatten gün ışığından yararlanma saatine ve gün ışığından yararlanma zamanından standart saate geçişin ne zaman gerçekleşeceğini tanımlayan bir kural. Her ayarlama kuralında, kuralın yerinde olduğu zaman tanımlayan bir başlangıç ve bitiş tarihi bulunur (örneğin, ayarlama kuralı 1 Ocak 1986 ' den 31 Aralık 2006 ' e, bir Delta (Standart saatin ayarlama kuralı uygulamasının bir sonucu olarak değiştiği süre) ve ayarlama dönemi boyunca geçişlerin gerçekleştiği belirli tarih ve saat hakkındaki bilgilere sahip olur. Geçişler, sabit bir kural ya da kayan bir kural izleyebilir. |
 | Belirsiz saat  | Tek bir saat diliminde iki farklı kez eşlenebilir bir zaman. Saat diliminin gün ışığından yararlanma saatinden standart saate geçiş sırasında olduğu gibi saat içinde saat olarak ayarlandığında meydana gelir. Örneğin, bu geçiş belirli bir gün 2:00:00 ' da gerçekleşirse ve saat 1:00, her zaman aralığı 1:00 ile arasında değişir. ve 1:59:99 , standart bir saat veya yaz saati olarak yorumlanamaz. |

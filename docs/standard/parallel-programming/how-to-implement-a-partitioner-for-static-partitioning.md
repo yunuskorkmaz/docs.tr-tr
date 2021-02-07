@@ -1,15 +1,16 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: nasıl yapılır: statik bölümleme için bir bölümleyici uygulama'
 title: 'Nasıl yapılır: Statik Bölümleme için bir Bölümleyici Uygulama'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tasks, how to create a static partitioner
 ms.assetid: f4410508-cac6-4ba7-bef1-c5e68b2794f3
-ms.openlocfilehash: 59a5519a8f129576c08604633cd3c411d3ca020e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7636023dcc6036d91dcf76b34b0e445b87dfa8d5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734497"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702008"
 ---
 # <a name="how-to-implement-a-partitioner-for-static-partitioning"></a>Nasıl yapılır: Statik Bölümleme için bir Bölümleyici Uygulama
 

@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Dünya çapında kullanılabilecek uygulamalar geliştirmek için En Iyi uygulamalar'
 title: Dünyaya Hazır Uygulamalar Geliştirmek için En İyi Yöntemler
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - globalization [.NET], best practices
 - international applications [.NET], best practices
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
-ms.openlocfilehash: 3705fece48c136f73c4e31cd025e76dc570a142b
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b82b926217fd0ed5054f85201fbc877f818170d0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827145"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702307"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>Dünya çapında kullanmaya yönelik uygulamalar geliştirmek için en iyi uygulamalar
 

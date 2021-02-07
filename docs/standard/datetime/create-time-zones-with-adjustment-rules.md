@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: ayarlama kuralları ile saat dilimleri oluşturma'
 title: 'Nasıl yapılır: Ayarlama kuralları ile saat dilimleri oluşturma'
 ms.date: 04/10/2017
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - time zones [.NET], and adjustment rules
 - adjustment rule [.NET]
 ms.assetid: c52ef192-13a9-435f-8015-3b12eae8c47c
-ms.openlocfilehash: 9dbb78c489fd6c2463bff747a275d5f72aa502b1
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: d581d01d9f9386adf99079f4f8f8e09585b06848
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818010"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702775"
 ---
 # <a name="how-to-create-time-zones-with-adjustment-rules"></a>Nasıl yapılır: Ayarlama kuralları ile saat dilimleri oluşturma
 

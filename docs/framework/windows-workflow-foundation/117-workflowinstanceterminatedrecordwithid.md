@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 117-Workflowınstancesonlandırıcıkayıt Withıd'
 title: 117 - WorkflowInstanceTerminatedRecordWithId
 ms.date: 03/30/2017
 ms.assetid: e68539d0-5338-468a-9f75-7e5b09d39a3c
-ms.openlocfilehash: 5e16eff8e8ce9815cac604be110e899a29b4af3d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: d57940801cd9850136355a9ad4f91ba7c44fd5b1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96281735"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99703243"
 ---
 # <a name="117---workflowinstanceterminatedrecordwithid"></a>117 - WorkflowInstanceTerminatedRecordWithId
 
@@ -17,10 +18,10 @@ ms.locfileid: "96281735"
 |-|-|  
 |ID|117|  
 |Anahtar sözcükler|HealthMonitoring, WFTracking|  
-|Düzey|Hata|  
+|Level|Hata|  
 |Kanal|Microsoft-Windows-uygulama sunucusu-uygulamalar/analitik|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bu olay, bir iş akışı örneği Workflowsonlandırmış kaydı yaydığı zaman ETW izleme katılımcısı tarafından yayınlanır.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96281735"
   
 ## <a name="details"></a>Ayrıntılar  
   
-|Veri öğesi adı|Veri öğesi türü|Açıklama|  
+|Veri öğesi adı|Veri öğesi türü|Description|  
 |--------------------|--------------------|-----------------|  
 |InstanceId|xs: GUID|İş akışının örnek kimliği|  
 |RecordNumber|xs: Long|Yayınlanan kaydın sıra numarası|  

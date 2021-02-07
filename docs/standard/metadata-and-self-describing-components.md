@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: meta veriler ve Self-Describing bileşenleri'
 title: Meta Veriler ve Kendiliğinden Açıklayıcı Bileşenler
 ms.date: 03/30/2017
 dev_langs:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - PE files, metadata
 - components [.NET], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
-ms.openlocfilehash: c597c1ae6153050f08ed2976f7ee6102cdd3c797
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5f043a1e204c019f83fb15705ca44562a82ad6a2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822353"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702216"
 ---
 # <a name="metadata-and-self-describing-components"></a>Meta Veriler ve Kendiliğinden Açıklayıcı Bileşenler
 
@@ -93,7 +94,7 @@ Bir program ortak dil çalışma zamanı için derlendiğinde, üç bölümden o
 |----------------|----------------------------|
 |PE üst bilgisi|PE dosyasının ana bölümlerinin ve giriş noktası adresinin dizini.<br /><br /> Çalışma zamanı, bu bilgileri, dosyayı bir PE dosyası olarak tanımlamak ve programı belleğe yüklerken yürütmenin nereden başlayacağını belirlemek için kullanır.|
 |MSIL yönergeleri|Kodunuzu oluşturan Microsoft ara dili (MSIL) yönergeleri. Birçok MSIL yönergesi metaveri belirteçleri ile birlikte bulunur.|
-|Meta Veriler|Metaveri tabloları ve yığınlar Çalışma zamanı, bu bölümü, kodunuzdaki tüm türler ve üyeler hakkında bilgi kaydetmek için kullanır. Bu bölüm ayrıca özel öznitelikler ve güvenlik bilgileri de içerir.|
+|Meta veri|Metaveri tabloları ve yığınlar Çalışma zamanı, bu bölümü, kodunuzdaki tüm türler ve üyeler hakkında bilgi kaydetmek için kullanır. Bu bölüm ayrıca özel öznitelikler ve güvenlik bilgileri de içerir.|
 
 ## <a name="run-time-use-of-metadata"></a>Meta Verilerin Çalışma Zamanında Kullanımı
 
@@ -156,7 +157,7 @@ JıT derleyicisi, tüm yöntemi için MSIL 'yi okur, onu tamamen analiz eder ve 
 
 Aşağıdaki tabloda, yöntemini açıklayan meta veri belirtecinin başvurduğu **MethodDef** tablosunun bir kısmı gösterilmektedir `Add` . Bu derlemede diğer meta veri tabloları var ve kendi benzersiz değerleri var olsa da, yalnızca bu tablo ele alınmıştır.
 
-|Satır|Göreli sanal adres (RVA)|ImplFlags|Bayraklar|Ad<br /><br /> (Dize yığınına işaret eder.)|İmza (blob yığınına Işaret eder.)|
+|Satır|Göreli sanal adres (RVA)|ImplFlags|Bayraklar|Name<br /><br /> (Dize yığınına işaret eder.)|İmza (blob yığınına Işaret eder.)|
 |---------|--------------------------------------|---------------|-----------|-----------------------------------------|----------------------------------------|
 |1|0x00002050|IL<br /><br /> Yönetilen|Genel<br /><br /> Reusespartisi<br /><br /> SpecialName<br /><br /> RTSpecialName<br /><br /> . ctor|. ctor (Oluşturucu)||
 |2|0x00002058|IL<br /><br /> Yönetilen|Genel<br /><br /> Statik<br /><br /> Reusespartisi|Ana|Dize|

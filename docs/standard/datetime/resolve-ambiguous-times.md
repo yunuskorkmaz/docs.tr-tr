@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: nasıl yapılır: belirsiz zamanları çözme'
 title: 'Nasıl yapılır: Belirsiz saatleri çözme'
 ms.date: 04/10/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - time zones [.NET], ambiguous time
 - ambiguous time [.NET]
 ms.assetid: 2cf5fb25-492c-4875-9245-98cac8348e97
-ms.openlocfilehash: 29a549d519bd3b6c10fef8205b30a07a71f01d1a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 743aff3303669efcf20e233b1f5b2d520475d5f9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94817763"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702528"
 ---
 # <a name="how-to-resolve-ambiguous-times"></a>Nasıl yapılır: Belirsiz saatleri çözme
 

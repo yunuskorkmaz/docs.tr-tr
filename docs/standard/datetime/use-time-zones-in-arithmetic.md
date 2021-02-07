@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: nasıl yapılır: Tarih ve saat aritmetiği içinde saat dilimlerini kullanma'
 title: 'Nasıl yapılır: Tarih ve saat aritmetiğinde saat dilimlerini kullanma'
 ms.date: 04/10/2017
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - arithmetic operations [.NET], dates and times
 - dates [.NET], adding and subtracting
 ms.assetid: 83dd898d-1338-415d-8cd6-445377ab7871
-ms.openlocfilehash: ca7e9e1fbd73eafa80c444ba2d5ddaa84a6d7f5e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 74f878da85dc959114013d7296b738e8198fc992
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94817490"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702372"
 ---
 # <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>Nasıl yapılır: Tarih ve saat aritmetiğinde saat dilimlerini kullanma
 

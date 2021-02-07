@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: normal Ifade örneği: tarih biçimlerini değiştirme'
 title: 'Normal İfade Örneği: Tarih Biçimlerini Değiştirme'
 ms.date: 06/30/2020
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - regular expressions [.NET], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: 5fcc75a5-09d7-45ae-a4c0-9ad6085ac83d
-ms.openlocfilehash: 9e23a11bd6eac0a77ef04d95cfab8db5d5e26807
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4617188e958042dce9709f8baf32f5b4e2930789
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733574"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702944"
 ---
 # <a name="regular-expression-example-changing-date-formats"></a>Normal İfade Örneği: Tarih Biçimlerini Değiştirme
 
@@ -39,7 +40,7 @@ Aşağıdaki kod örneği, <xref:System.Text.RegularExpressions.Regex.Replace%2A
 
  Normal ifade deseninin  `\b(?<month>\d{1,2})/(?<day>\d{1,2})/(?<year>\d{2,4})\b` Aşağıdaki tabloda gösterildiği gibi yorumlanır.  
   
-|Desen|Açıklama|  
+|Desen|Description|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında eşleşmeye başla.|  
 |`(?<month>\d{1,2})`|Bir veya iki ondalık basamağı eşleştirin. Bu, `month` yakalanan gruptur.|  
@@ -51,7 +52,7 @@ Aşağıdaki kod örneği, <xref:System.Text.RegularExpressions.Regex.Replace%2A
   
  Bu model, `${day}-${month}-${year}` Aşağıdaki tabloda gösterildiği gibi değiştirme dizesini tanımlar.  
   
-|Desen|Açıklama|  
+|Desen|Description|  
 |-------------|-----------------|  
 |`$(day)`|Yakalama grubu tarafından yakalanan dizeyi ekleyin `day` .|  
 |`-`|Kısa çizgi ekleyin.|  

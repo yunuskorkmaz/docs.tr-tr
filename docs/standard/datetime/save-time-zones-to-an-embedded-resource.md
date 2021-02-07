@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: nasıl yapılır: Saat dilimlerini katıştırılmış kaynağa kaydetme'
 title: 'Nasıl yapılır: Saat dilimlerini eklenmiş kaynağa kaydetme'
 ms.date: 04/10/2017
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - time zone objects [.NET], serializing
 - time zone objects [.NET], saving
 ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
-ms.openlocfilehash: 23f86076b2858404f3dbc900d8c40a6509abe8db
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4f1455ffa790652d2dad605a0eb71fb81a05326d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94817607"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702476"
 ---
 # <a name="how-to-save-time-zones-to-an-embedded-resource"></a>Nasıl yapılır: Saat dilimlerini eklenmiş kaynağa kaydetme
 

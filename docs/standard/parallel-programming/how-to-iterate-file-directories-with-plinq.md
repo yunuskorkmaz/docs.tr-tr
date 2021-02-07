@@ -1,15 +1,16 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: PLıNQ ile dosya dizinlerini yineleme'
 title: 'Nasıl yapılır: PLINQ ile Dosya Dizinlerini Yineleme'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - PLINQ queries, how to iterate directories
 ms.assetid: 354e8ce3-35c4-431c-99ca-7661d1f3901b
-ms.openlocfilehash: 4e9e8e646594ce3cd8b8861cb270170bafc9afb8
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 131350d34694b58ccd3a2e78eb2164495bd20708
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826924"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99701917"
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a>Nasıl yapılır: PLINQ ile Dosya Dizinlerini Yineleme
 

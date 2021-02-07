@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: daha fazla okuma (paralel programlama)'
 title: Daha Fazla Bilgi İçin (Paralel Programlama)
 ms.date: 04/26/2018
 helpviewer_keywords:
 - tasks, further reading
 ms.assetid: 98aee307-dde6-4cad-bb58-078497b8064f
-ms.openlocfilehash: 583f4f0cc6a6b188f588403721a0dd4f2d0a852e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c49fe2b7806b55d479f4e6f8ff7600f2ee97d254
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94817438"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702203"
 ---
 # <a name="for-further-reading-parallel-programming"></a>Daha Fazla Bilgi İçin (Paralel Programlama)
 

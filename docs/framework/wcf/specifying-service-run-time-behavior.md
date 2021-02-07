@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: Service Run-Time davranışını belirtme'
 title: Hizmet Çalışma Zamanı Davranışını Belirtme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-ms.openlocfilehash: 61c3b8ebd431c3a16475342984b463d5f8842a89
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a7336a64c32773b0fa960879021bb04cccfaa24f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/29/2020
-ms.locfileid: "96235889"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99703490"
 ---
 # <a name="specifying-service-run-time-behavior"></a>Hizmet Çalışma Zamanı Davranışını Belirtme
 

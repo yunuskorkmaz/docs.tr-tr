@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: WCF basitleştirme özellikleri'
 title: WCF Kolaylaştırma Özellikleri
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: 8a818ec0852cfae20ef23fede04b55b08a7449a5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cf89ff7775e2a162760c3c6c598a045ddccdf8d8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732924"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99703386"
 ---
 # <a name="wcf-simplification-features"></a>WCF Kolaylaştırma Özellikleri
 
@@ -109,7 +110,7 @@ Aşağıdaki tablo, değişen ayarları ve ek bilgilerin nerede bulunacağını 
 
 <xref:System.Xml.XmlDictionaryReaderQuotas> bir ileti oluştururken kodlayıcı tarafından kullanılan bellek miktarını sınırlayan, XML sözlüğü okuyucuları için yapılandırılabilir kota değerleri içerir. Bu kotalar yapılandırılabilir olsa da, varsayılan değerler bir geliştiricinin bunları açıkça ayarlaması gereksinimini azaltmak üzere değiştirilmiştir. `MaxReceivedMessageSize` Kota, bellek tüketimini sınırlayabilmesi için, ' nin karmaşıklığıyla uğraşmanız gereksinimini ortadan yacak şekilde değişmemiştir <xref:System.Xml.XmlDictionaryReaderQuotas> . Aşağıdaki tabloda kotalar, yeni varsayılan değerleri ve her kotanın ne için kullanıldığı hakkında kısa bir açıklama gösterilmektedir.
 
-|Kota adı|Varsayılan değer|Açıklama|
+|Kota adı|Varsayılan değer|Description|
 |----------------|-------------------|-----------------|
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>|Int32. MaxValue|İzin verilen en fazla dizi uzunluğunu alır ve ayarlar. Bu kota, bayt dizileri dahil olmak üzere XML okuyucunun döndürdüğü temel elemanların bir dizisinin maksimum boyutunu sınırlandırır. Bu kota, XML okuyucusu üzerinde bellek tüketimini sınırlamaz, ancak okuyucu kullanan herhangi bir bileşende. Örneğin,, <xref:System.Runtime.Serialization.DataContractSerializer> ile güvenli hale getirilmiş bir okuyucu kullandığında <xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A> , bu kotadan daha büyük olan bayt dizilerinin serisini kaldırmaz.|
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A>|Int32. MaxValue|Her okuma için döndürülen izin verilen bayt sayısını alır ve ayarlar. Bu kota, öğe başlangıç etiketi ve özniteliklerini okurken tek bir okuma işleminde okunan bayt sayısını sınırlar. (Akış olmayan durumlarda, öğe adının kendisi kotaya karşı sayılmaz). Öznitelik adlarının benzersizlik için denetlenmesi gerektiğinden, çok fazla XML özniteliği orantısız işleme süresi kullanabilir. <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A> Bu tehdidi azaltır.|
