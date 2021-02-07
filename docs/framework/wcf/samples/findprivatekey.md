@@ -1,19 +1,20 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: FindPrivateKey Sample'
 title: FindPrivateKey örneği
 ms.date: 12/04/2017
 helpviewer_keywords:
 - FindPrivateKey
 ms.assetid: 16b54116-0ceb-4413-af0c-753bb2a785a6
-ms.openlocfilehash: 0ed1e5e81a5d2f7f3586e5dce306e8244b5ebd48
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 0e876aa3e1f6dde16acbb3ddd2a130ad49d369fc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346011"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99732429"
 ---
 # <a name="findprivatekey-sample"></a>FindPrivateKey örneği
 
-Sertifika deposundaki belirli bir X. 509.440 sertifikasıyla ilişkili özel anahtar dosyasının konumunu ve adını bulmak zor olabilir. FindPrivateKey. exe aracı bu işlemi kolaylaştırır.
+Sertifika deposundaki belirli bir X. 509.440 sertifikasıyla ilişkili özel anahtar dosyasının konumunu ve adını bulmak zor olabilir. FindPrivateKey.exe aracı bu işlemi kolaylaştırır.
 
 > [!IMPORTANT]
 > FindPrivateKey, kullanılmadan önce derlenmesi gereken bir örnektir. FindPrivateKey aracının nasıl oluşturulacağı hakkında yönergeler için bkz. [FindPrivateKey projesi oluşturmak için](#to-build-the-findprivatekey-project) bölümüne bakın.
@@ -22,7 +23,7 @@ X. 509.440 sertifikaları bir yönetici veya makinedeki herhangi bir kullanıcı
 
 Sertifika, ilk olarak yüklenmediği için bu hesabın özel anahtar dosyasına erişimi olmayabilir. FindPrivateKey Aracı, belirli bir X. 509.440 sertifikasının özel anahtar dosyasının konumunu verir. Belirli bir X. 509.952 sertifikaları ' özel anahtar dosyasının konumunu öğrendikten sonra bu dosyaya izinler ekleyebilir veya izinleri kaldırabilirsiniz.
 
-Güvenlik için sertifikaları kullanan örnekler *Setup. bat* dosyasındaki FindPrivateKey aracını kullanır. Özel anahtar dosyası bulduktan sonra, dosya üzerinde uygun erişim haklarını ayarlamak için *cacls. exe* gibi diğer araçları kullanabilirsiniz.
+Güvenlik için sertifikaları kullanan örnekler, *Setup.bat* dosyasında FindPrivateKey aracını kullanır. Özel anahtar dosyası bulduktan sonra, dosya üzerinde uygun erişim haklarını ayarlamak için *Cacls.exe* gibi diğer araçları kullanabilirsiniz.
 
 Şirket içinde barındırılan yürütülebilir dosya gibi bir kullanıcı hesabı altında bir Windows Communication Foundation (WCF) hizmeti çalıştırırken, Kullanıcı hesabının dosyaya salt okuma erişimi olduğundan emin olun. Internet Information Services (IIS) altında bir WCF Hizmeti çalıştırırken, hizmetin altında çalıştığı varsayılan hesaplar IIS 7 ve önceki sürümlerde ağ HIZMETI ya da IIS 7,5 ve sonraki sürümlerde uygulama havuzu kimliği ' nde bulunur. Daha fazla bilgi için bkz. [uygulama havuzu kimlikleri](/iis/manage/configuring-security/application-pool-identities).
 
@@ -36,7 +37,7 @@ Message="The certificate 'CN=localhost' must have a private key that is capable 
 Source="System.ServiceModel"
 ```
 
-Bu durumda, özel anahtar dosyasını bulmak için FindPrivateKey aracını kullanın ve ardından hizmetin altında çalıştığı işlem için erişim hakkını ayarlayın. Örneğin, bu, aşağıdaki örnekte gösterildiği gibi cacls. exe aracı ile yapılabilir:
+Bu durumda, özel anahtar dosyasını bulmak için FindPrivateKey aracını kullanın ve ardından hizmetin altında çalıştığı işlem için erişim hakkını ayarlayın. Örneğin, bu, aşağıdaki örnekte gösterildiği gibi Cacls.exe aracı ile yapılabilir:
 
 ```console
 cacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto\RSA\MachineKeys\8aeda5eb81555f14f8f9960745b5a40d_38f7de48-5ee9-452d-8a5a-92789d7110b1" /E /G "NETWORK SERVICE":R
@@ -52,7 +53,7 @@ Projeyi indirmek için [.NET Framework 4 için Windows Communication Foundation 
 
 3. **Derle** menüsünde **çözümü yeniden derle**' yi seçin.
 
-4. Çözümün oluşturulması şu dosyayı oluşturur: FindPrivateKey. exe.
+4. Çözümü oluşturmak dosyayı oluşturur: FindPrivateKey.exe.
 
 ## <a name="conventionscommand-line-entries"></a>Kurallar — komut satırı girdileri
 
@@ -60,9 +61,9 @@ Projeyi indirmek için [.NET Framework 4 için Windows Communication Foundation 
 
  "{*Option*}", zorunlu bir parametre kümesini temsil eder.
 
- "*Seçenek1* &#124; *Seçenek2*" seçenek kümeleri arasında bir seçimi temsil eder.
+ "*seçenek1* &#124; *Seçenek2*" seçenek kümeleri arasında bir seçimi temsil eder.
 
- "\<>" *değeri*, girilecek bir parametre değeri temsil eder.
+ " \<*value*> " girilecek bir parametre değeri temsil eder.
 
 ## <a name="usage"></a>Kullanım
 
@@ -75,7 +76,7 @@ Konum:
 | Parametre         | Açıklama                                                                       |
 |-----------------|-----------------------------------------------------------------------------------|
 | `<subjectName>` | Sertifikanın konu adı                                               |
-| `<thumbprint>`  | Sertifikanın parmak izi (bunu bulmak için certmgr. exe aracını kullanabilirsiniz) |
+| `<thumbprint>`  | Sertifikanın parmak izi (bunu bulmak için Certmgr.exe aracını kullanabilirsiniz) |
 | `-f`            | yalnızca çıkış dosyası adı                                                             |
 | `-d`            | yalnızca çıkış dizini                                                             |
 | `-a`            | çıkış mutlak dosya adı                                                         |

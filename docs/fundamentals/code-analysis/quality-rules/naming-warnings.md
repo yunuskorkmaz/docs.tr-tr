@@ -11,20 +11,20 @@ helpviewer_keywords:
 - rules, naming
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 88e7ec6bc1051fa98c46696b2193a5d5912eb111
-ms.sourcegitcommit: 2e4adc490c1d2a705a0592b295d606b10b9f51f1
+ms.openlocfilehash: 57524fbff364fd03a90b90a0900bd17e9c8a9248
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "96588819"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99732325"
 ---
 # <a name="naming-rules"></a>Adlandırma kuralları
 
-Adlandırma kuralları, .NET Tasarım Yönergelerinin adlandırma kurallarına uygunluğunu destekler.
+Adlandırma kuralları [, .net Tasarım Yönergelerinin adlandırma kurallarına](../../../standard/design-guidelines/naming-guidelines.md)uygunluğunu destekler.
 
 ## <a name="in-this-section"></a>Bu bölümde
 
-|Kural|Açıklama|
+|Kural|Description|
 |----------|-----------------|
 |[CA1700: Sabit listesi değerlerini 'Reserved' olarak adlandırmayın](ca1700.md)|Bu kural, "ayrılmış" içeren bir ada sahip numaralandırma üyesi şu anda kullanılmamaktadır ancak yeniden adlandırılabilir veya gelecekteki bir sürüme kaldırıldığını varsayar. Üye kaldırma veya yeniden adlandırma bölünmesi farklıdır.|
 |[CA1707: Tanımlayıcılar alt çizgi içermemelidir](ca1707.md)|Kural gereği, tanımlayıcı adlar alt çizgi (_) karakterini içermez. Bu kural ad alanlarını, türleri, üyeleri ve parametreleri denetler.|
