@@ -1,4 +1,5 @@
 ---
+description: ': ICorPublishEnum:: GetCount metodu hakkında daha fazla bilgi edinin'
 title: ICorPublishEnum::GetCount Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: d228f684-2be3-4029-93ae-31fe02213c1f
 topic_type:
 - apiref
-ms.openlocfilehash: a23d61da2913d8732c3860a44eb58ffadab48315
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 99e831ae366604e2ae7494bf80fb2e7f25532582
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95677940"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99721626"
 ---
-# <a name="icorpublishenumgetcount-method"></a><span data-ttu-id="e009f-102">ICorPublishEnum::GetCount Metodu</span><span class="sxs-lookup"><span data-stu-id="e009f-102">ICorPublishEnum::GetCount Method</span></span>
+# <a name="icorpublishenumgetcount-method"></a><span data-ttu-id="cad3d-103">ICorPublishEnum::GetCount Metodu</span><span class="sxs-lookup"><span data-stu-id="cad3d-103">ICorPublishEnum::GetCount Method</span></span>
 
-<span data-ttu-id="e009f-103">Numaralandırmadaki öğelerin sayısını alır.</span><span class="sxs-lookup"><span data-stu-id="e009f-103">Gets the number of items in the enumeration.</span></span>  
+<span data-ttu-id="cad3d-104">Numaralandırmadaki öğelerin sayısını alır.</span><span class="sxs-lookup"><span data-stu-id="cad3d-104">Gets the number of items in the enumeration.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e009f-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="e009f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cad3d-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="cad3d-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCount (  
@@ -34,21 +35,21 @@ HRESULT GetCount (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e009f-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="e009f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cad3d-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="cad3d-106">Parameters</span></span>  
 
  `pcelt`  
- <span data-ttu-id="e009f-106">dışı Numaralandırmadaki öğelerin sayısına yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="e009f-106">[out] A pointer to the number of items in the enumeration.</span></span>  
+ <span data-ttu-id="cad3d-107">dışı Numaralandırmadaki öğelerin sayısına yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="cad3d-107">[out] A pointer to the number of items in the enumeration.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e009f-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e009f-107">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cad3d-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="cad3d-108">Requirements</span></span>  
 
- <span data-ttu-id="e009f-108">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e009f-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="cad3d-109">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cad3d-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e009f-109">**Üst bilgi:** CorPub. IDL, CorPub. h</span><span class="sxs-lookup"><span data-stu-id="e009f-109">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="cad3d-110">**Üst bilgi:** CorPub. IDL, CorPub. h</span><span class="sxs-lookup"><span data-stu-id="cad3d-110">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="e009f-110">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="e009f-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="cad3d-111">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="cad3d-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e009f-111">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e009f-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="cad3d-112">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cad3d-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e009f-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e009f-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cad3d-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="cad3d-113">See also</span></span>
 
-- [<span data-ttu-id="e009f-113">ICorPublishEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e009f-113">ICorPublishEnum Interface</span></span>](icorpublishenum-interface.md)
+- [<span data-ttu-id="cad3d-114">ICorPublishEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="cad3d-114">ICorPublishEnum Interface</span></span>](icorpublishenum-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: ': ICorPublishEnum:: Clone yöntemi hakkında daha fazla bilgi edinin'
 title: ICorPublishEnum::Clone Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c9a26ea3-b8eb-4b8e-854f-9a2ca26b3b39
 topic_type:
 - apiref
-ms.openlocfilehash: 44ecba99999d04603477f411e68834548f6a7cda
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6001f27451afdb564da6275a31256ac348bc693a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95693560"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99721664"
 ---
-# <a name="icorpublishenumclone-method"></a><span data-ttu-id="3218a-102">ICorPublishEnum::Clone Yöntemi</span><span class="sxs-lookup"><span data-stu-id="3218a-102">ICorPublishEnum::Clone Method</span></span>
+# <a name="icorpublishenumclone-method"></a><span data-ttu-id="ac171-103">ICorPublishEnum::Clone Yöntemi</span><span class="sxs-lookup"><span data-stu-id="ac171-103">ICorPublishEnum::Clone Method</span></span>
 
-<span data-ttu-id="3218a-103">Bu [ICorPublishEnum](icorpublishenum-interface.md) nesnesinin bir kopyasını oluşturur.</span><span class="sxs-lookup"><span data-stu-id="3218a-103">Creates a copy of this [ICorPublishEnum](icorpublishenum-interface.md) object.</span></span>  
+<span data-ttu-id="ac171-104">Bu [ICorPublishEnum](icorpublishenum-interface.md) nesnesinin bir kopyasını oluşturur.</span><span class="sxs-lookup"><span data-stu-id="ac171-104">Creates a copy of this [ICorPublishEnum](icorpublishenum-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3218a-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="3218a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ac171-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ac171-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT Clone (  
@@ -34,21 +35,21 @@ HRESULT Clone (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3218a-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="3218a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ac171-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="ac171-106">Parameters</span></span>  
 
  `ppEnum`  
- <span data-ttu-id="3218a-106">dışı `ICorPublishEnum` Bu nesnenin kopyası olan bir nesnenin adresine yönelik bir işaretçi `ICorPublishEnum` .</span><span class="sxs-lookup"><span data-stu-id="3218a-106">[out] A pointer to the address of an `ICorPublishEnum` object that is a copy of this `ICorPublishEnum` object.</span></span>  
+ <span data-ttu-id="ac171-107">dışı `ICorPublishEnum` Bu nesnenin kopyası olan bir nesnenin adresine yönelik bir işaretçi `ICorPublishEnum` .</span><span class="sxs-lookup"><span data-stu-id="ac171-107">[out] A pointer to the address of an `ICorPublishEnum` object that is a copy of this `ICorPublishEnum` object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3218a-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="3218a-107">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ac171-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ac171-108">Requirements</span></span>  
 
- <span data-ttu-id="3218a-108">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3218a-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="ac171-109">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ac171-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3218a-109">**Üst bilgi:** CorPub. IDL, CorPub. h</span><span class="sxs-lookup"><span data-stu-id="3218a-109">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="ac171-110">**Üst bilgi:** CorPub. IDL, CorPub. h</span><span class="sxs-lookup"><span data-stu-id="ac171-110">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="3218a-110">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="3218a-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ac171-111">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="ac171-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3218a-111">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3218a-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ac171-112">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ac171-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3218a-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3218a-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ac171-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ac171-113">See also</span></span>
 
-- [<span data-ttu-id="3218a-113">ICorPublishEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="3218a-113">ICorPublishEnum Interface</span></span>](icorpublishenum-interface.md)
+- [<span data-ttu-id="ac171-114">ICorPublishEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ac171-114">ICorPublishEnum Interface</span></span>](icorpublishenum-interface.md)
