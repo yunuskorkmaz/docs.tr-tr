@@ -1,18 +1,19 @@
 ---
-title: 'Yöntem tabanlı sorgu söz dizimi örnekleri: set Işleçleri (LINQ to DataSet)'
+description: 'Hakkında daha fazla bilgi edinin: Method-Based sorgu sözdizimi örnekleri: Işleç ayarlama (LINQ to DataSet)'
+title: 'Method-Based sorgu söz dizimi örnekleri: set Işleçleri (LINQ to DataSet)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fa93af15-28af-4b5e-846b-897308410edb
-ms.openlocfilehash: f91d009e66f1f0da25e508994040d7e9f80fc681
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3a50c9793e3af6fdab08227b4789c4042dd64931
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91147872"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99723757"
 ---
-# <a name="method-based-query-syntax-examples-set-operators-linq-to-dataset"></a>Yöntem tabanlı sorgu söz dizimi örnekleri: set Işleçleri (LINQ to DataSet)
+# <a name="method-based-query-syntax-examples-set-operators-linq-to-dataset"></a>Method-Based sorgu söz dizimi örnekleri: set Işleçleri (LINQ to DataSet)
 
 Bu konudaki örneklerde, <xref:System.Linq.Enumerable.Distinct%2A> <xref:System.Linq.Enumerable.Except%2A> <xref:System.Linq.Enumerable.Intersect%2A> <xref:System.Linq.Enumerable.Union%2A> veri satırı kümelerinde değer tabanlı karşılaştırma işlemleri gerçekleştirmek için,, ve işleçlerinin[ nasıl kullanılacağı gösterilmektedir. Veri kümesine veri yükleme](loading-data-into-a-dataset.md) hakkında daha fazla bilgi için bkz. [DataRow karşılaştırması](comparing-datarows-linq-to-dataset.md) <xref:System.Data.DataRowComparer> .  
   

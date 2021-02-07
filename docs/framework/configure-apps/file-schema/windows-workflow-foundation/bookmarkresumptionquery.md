@@ -1,14 +1,15 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <bookmarkResumptionQuery>'
 title: <bookmarkResumptionQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 226de75d-d25c-48d5-b069-4b7d80a6852b
-ms.openlocfilehash: efd1e4e54223ff9f5d60b4087fbe5b6bebf1af2f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4e6637b6edd54d9c1cf1a44986b362eb616bf14d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91189597"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99725252"
 ---
 # \<bookmarkResumptionQuery>
 

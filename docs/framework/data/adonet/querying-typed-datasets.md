@@ -1,28 +1,29 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: sorgu türü belirtilmiş veri kümeleri'
 title: Türü Belirtilmiş DataSet’leri Sorgulama
 ms.date: 08/15/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: ad712fa1-2baf-462a-b163-574cce6d376a
-ms.openlocfilehash: 55714c4dae73cd17a849cc35681797dfa4266e3b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5bcf8bb587a0ed0eaca1bbe9b3a7d7143757780e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782970"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99723705"
 ---
 # <a name="query-typed-datasets"></a>Sorgu türü belirtilmiş veri kümeleri
 
-Şeması <xref:System.Data.DataSet> uygulama tasarım zamanında biliniyorsa, LINQ to DataSet kullanırken bir tür <xref:System.Data.DataSet> kullanmanızı öneririz. Türü <xref:System.Data.DataSet> , bir <xref:System.Data.DataSet>sınıfından türetilen bir sınıftır. Bu nedenle, tüm yöntemleri, olayları ve özelliklerini <xref:System.Data.DataSet>devralır. Ayrıca, türü <xref:System.Data.DataSet> kesin belirlenmiş Yöntemler, olaylar ve özellikler sağlar. Bu, koleksiyon tabanlı yöntemler kullanmak yerine tablolara ve sütunlara ada göre erişebileceğiniz anlamına gelir. Bu, sorguları daha basit ve daha okunaklı hale getirir. Daha fazla bilgi için bkz. [türü belirtilmiş veri kümeleri](./dataset-datatable-dataview/typed-datasets.md).
+Şeması <xref:System.Data.DataSet> uygulama tasarım zamanında biliniyorsa, LINQ to DataSet kullanırken bir tür kullanmanızı öneririz <xref:System.Data.DataSet> . Türü <xref:System.Data.DataSet> , bir sınıfından türetilen bir sınıftır <xref:System.Data.DataSet> . Bu nedenle, tüm yöntemleri, olayları ve özelliklerini devralır <xref:System.Data.DataSet> . Ayrıca, türü <xref:System.Data.DataSet> kesin belirlenmiş Yöntemler, olaylar ve özellikler sağlar. Bu, koleksiyon tabanlı yöntemler kullanmak yerine tablolara ve sütunlara ada göre erişebileceğiniz anlamına gelir. Bu, sorguları daha basit ve daha okunaklı hale getirir. Daha fazla bilgi için bkz. [türü belirtilmiş veri kümeleri](./dataset-datatable-dataview/typed-datasets.md).
 
-LINQ to DataSet, bir tür <xref:System.Data.DataSet>üzerinde sorgu yapmayı da destekler. Yazılı <xref:System.Data.DataSet>olarak, sütun verilerine erişmek için genel <xref:System.Data.DataRowExtensions.Field%2A> yöntemi veya <xref:System.Data.DataRowExtensions.SetField%2A> yöntemini kullanmanız gerekmez. Özellik adları derleme zamanında kullanılabilir, çünkü tür bilgileri içine <xref:System.Data.DataSet>dahil edilmiştir. LINQ to DataSet, doğru tür olarak sütun değerlerine erişim sağlar. böylece, kod çalışma zamanı yerine kod derlendiğinde tür uyuşmazlığı hataları yakalanır.
+LINQ to DataSet, bir tür üzerinde sorgu yapmayı da destekler <xref:System.Data.DataSet> . Yazılı <xref:System.Data.DataSet> olarak, <xref:System.Data.DataRowExtensions.Field%2A> <xref:System.Data.DataRowExtensions.SetField%2A> sütun verilerine erişmek için genel yöntemi veya yöntemini kullanmanız gerekmez. Özellik adları derleme zamanında kullanılabilir, çünkü tür bilgileri içine dahil edilmiştir <xref:System.Data.DataSet> . LINQ to DataSet, doğru tür olarak sütun değerlerine erişim sağlar. böylece, kod çalışma zamanı yerine kod derlendiğinde tür uyuşmazlığı hataları yakalanır.
 
-Bir türü <xref:System.Data.DataSet>sorgulamaya başlayabilmeniz için, Visual Studio 'da **veri kümesi tasarımcısını** kullanarak sınıfı oluşturmanız gerekir. Daha fazla bilgi için bkz. [veri kümeleri oluşturma ve yapılandırma](/visualstudio/data-tools/create-and-configure-datasets-in-visual-studio).
+Bir türü sorgulamaya başlayabilmeniz için <xref:System.Data.DataSet> , Visual Studio 'Da **veri kümesi tasarımcısını** kullanarak sınıfı oluşturmanız gerekir. Daha fazla bilgi için bkz. [veri kümeleri oluşturma ve yapılandırma](/visualstudio/data-tools/create-and-configure-datasets-in-visual-studio).
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, yazılı <xref:System.Data.DataSet>bir sorgu gösterir:
+Aşağıdaki örnek, yazılı bir sorgu gösterir <xref:System.Data.DataSet> :
 
 ```csharp
 var query = from o in orders

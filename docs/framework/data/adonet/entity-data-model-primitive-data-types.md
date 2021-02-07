@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Varlık Veri Modeli: Ilkel veri türleri'
 title: 'Varlık Veri Modeli: Basit Veri Türleri'
 ms.date: 03/30/2017
 ms.assetid: 7635168e-0566-4fdd-8391-7941b0d9f787
-ms.openlocfilehash: 4d52f50dec44c7d667dfedc10a2c9c25fcde8917
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: bdc34f3232e78d29e6c2ce25d8f159d7f5238f2f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91194823"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724472"
 ---
 # <a name="entity-data-model-primitive-data-types"></a>Varlık Veri Modeli: Basit Veri Türleri
 
@@ -22,7 +23,7 @@ Varlık Veri Modeli (EDM), kavramsal bir modeldeki [özellikleri](property.md) t
 
  Aşağıdaki tabloda, EDM tarafından desteklenen temel veri türleri listelenmiştir. Tablo, her ilkel veri türüne uygulanabilecek [modelleri](facet.md) de listeler.  
   
-|İlkel veri türü|Açıklama|Uygulanabilir modeller|  
+|İlkel veri türü|Description|Uygulanabilir modeller|  
 |-------------------------|-----------------|-----------------------|  
 |İkili|İkili verileri içerir.|MaxLength, FixedLength, Nullable, varsayılan|  
 |Boole|Veya değerini içerir `true` `false` .|Null yapılabilir, varsayılan|  
@@ -38,7 +39,7 @@ Varlık Veri Modeli (EDM), kavramsal bir modeldeki [özellikleri](property.md) t
 |Int64|İmzalı 64 bitlik bir tamsayı değeri içerir.|Duyarlılık, null yapılabilir, varsayılan|  
 |SByte|İşaretli 8 bit tamsayı değeri içerir.|Duyarlılık, null yapılabilir, varsayılan|  
 |Dize|Karakter verisi içerir.|Unicode, FixedLength, MaxLength, harmanlama, duyarlık, Nullable, varsayılan|  
-|Süre|Günün saatini içerir.|Duyarlılık, null yapılabilir, varsayılan|  
+|Saat|Günün saatini içerir.|Duyarlılık, null yapılabilir, varsayılan|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

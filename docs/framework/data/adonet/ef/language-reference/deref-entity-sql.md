@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: DEREF (Entity SQL)'
 title: DEREF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4c78e833-b260-453d-9bf4-eb39857dd0fa
-ms.openlocfilehash: c0c975ab5cf2761496db6efa1f88f409aa1b1abd
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9d0f29123c1459c6eab21ea9cd860b5c9e77f591
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148223"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724732"
 ---
 # <a name="deref-entity-sql"></a>DEREF (Entity SQL)
 

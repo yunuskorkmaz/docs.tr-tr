@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: nasıl yapılır: veritabanı değerlerinin üzerine yazarak çakışmaları çözme'
 title: 'Nasıl yapılır: Veritabanı Değerlerinin Üzerine Yazarak Çakışmaları Çözümleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fd6db0b8-c29c-48ff-b768-31d28e7a148c
-ms.openlocfilehash: 1dc112350451bde28d27c63961733b96f6fc84be
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4eaa66b4bb49706bb1ca6449d24c688a89f2750b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91191716"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99723510"
 ---
 # <a name="how-to-resolve-conflicts-by-overwriting-database-values"></a>Nasıl yapılır: Veritabanı Değerlerinin Üzerine Yazarak Çakışmaları Çözümleme
 

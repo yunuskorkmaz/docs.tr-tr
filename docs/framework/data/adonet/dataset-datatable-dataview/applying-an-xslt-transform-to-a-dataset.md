@@ -1,22 +1,23 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: bir veri kümesine XSLT dönüşümü uygulama'
 title: DataSet’e XSLT Dönüşümü Uygulama
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-ms.openlocfilehash: 3f066f29b99ade6e92a263110fed8079208567b5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c7fc25441091112f7fbb7e4c1f8dd210d8cd0c5d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151500"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99725122"
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>DataSet’e XSLT Dönüşümü Uygulama
 
-**WriteXml** yöntemi, <xref:System.Data.DataSet> **Bir DataSet'in** içeriğini XML verisi olarak yazmanızı sağlar. Yaygın bir görev daha sonra XSL dönüşümleri (XSLT) kullanarak başka bir biçime xml dönüştürmektir. Ancak, bir **DataSet** ile <xref:System.Xml.XmlDataDocument> senkronize bir XSLT stylesheet ilk **WriteXml**kullanarak XML veri olarak **DataSet** içeriğini yazmak zorunda kalmadan bir **DataSet** içeriğine bir XSLT stylesheet uygulamak için olanak sağlar.  
+Öğesinin **WriteXml** yöntemi, <xref:System.Data.DataSet> bir **veri kümesinin** içeriğini XML verisi olarak yazmanızı sağlar. Ortak bir görev daha sonra söz konusu XML 'i XSL dönüşümleri (XSLT) kullanarak başka bir biçime dönüştürmeye yönelik olur. Ancak, bir **veri kümesini** ile eşitleme, <xref:System.Xml.XmlDataDocument> ilk olarak **veri** kümesinin içeriğini **WriteXml** kullanarak XML verileri olarak yazmak zorunda kalmadan bir **veri kümesinin** içeriğine bir XSLT stil sayfası uygulamanıza olanak sağlar.  
   
- Aşağıdaki örnek, bir **DataSet'i** tablolar ve ilişkilerle doldurur, **DataSet'i** **XmlDataDocument**ile eşitler ve **DataSet'in** bir bölümünü XSLT stil sayfası kullanarak HTML dosyası olarak yazar. XSLT stil sayfasının içeriği şunlardır:
+ Aşağıdaki örnek bir **veri kümesini** tablolar ve ilişkiler ile doldurur, **veri kümesini** bir **XmlDataDocument** ile eşitler ve XSLT stil sayfasını kullanarak bir HTML dosyası olarak **veri kümesinin** bir kısmını yazar. XSLT stil sayfasının içerikleri şunlardır:
   
 ```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">  
@@ -57,10 +58,10 @@ ms.locfileid: "79151500"
 </xsl:stylesheet>  
 ```  
   
- Aşağıdaki kod **DataSet'i** doldurur ve XSLT stil sayfasını uygular.  
+ Aşağıdaki kod, **veri kümesini** doldurur ve XSLT stil sayfasını uygular.  
   
 > [!NOTE]
-> İlişkiler içeren bir **DataSet'e** Bir XSLT stil sayfası uyguluyorsanız, iç **içe** geçen her <xref:System.Data.DataRelation> ilişki için **yuvalanmış** özelliğini ayarlarsanız en iyi performansı elde elabilirsiniz. Bu, performans yoğun XPath konum eksenlerini (örneğin, önceki kardeş ve aşağıdaki kardeş stilinde) kullanmanın aksine, hiyerarşide gezinmek ve verileri dönüştürmek için doğal yukarıdan aşağıya işleme uygulayan XSLT stil sayfalarını kullanmanıza olanak tanır sayfa düğümü test ifadeleri) gezinmek için. İç içe geçen ilişkiler hakkında daha fazla bilgi için İç [Içe Veri İlişkileri'ne](nesting-datarelations.md)bakın.  
+> İlişki içeren bir **veri KÜMESINE** XSLT stil sayfası uyguluyorsanız, iç içe geçmiş her ilişki için ' ın **iç içe** özelliğini <xref:System.Data.DataRelation> **true** olarak ayarlarsanız en iyi performansı elde edersiniz. Bu, hiyerarşide gezinmek için doğal yukarıdan aşağı işleme uygulayan XSLT stil sayfalarını kullanmanıza ve verileri dönüştürmek için performans yoğunluğu olan XPath konum eksenlerini (örneğin, önceki eşdüzey ve stil sayfası düğüm testi ifadelerinde önceki eşdüzey ve aşağıdaki-eşdüzey) kullanmanın aksine kullanır. İç içe geçmiş ilişkiler hakkında daha fazla bilgi için bkz. [Iç Içe geçme istekleri](nesting-datarelations.md).  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  

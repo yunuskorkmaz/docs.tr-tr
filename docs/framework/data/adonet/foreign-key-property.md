@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: yabancı anahtar özelliği'
 title: foreign key property
 ms.date: 03/30/2017
 ms.assetid: 23cb6729-544d-4f67-9ee7-44e8a6545587
-ms.openlocfilehash: be0fcb94b0b457a33c17e7125cd22db50f298cc6
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1666e4477c09dd5d0ed3d2c35a93ca21824e8a0e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91189324"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724134"
 ---
 # <a name="foreign-key-property"></a>foreign key property
 

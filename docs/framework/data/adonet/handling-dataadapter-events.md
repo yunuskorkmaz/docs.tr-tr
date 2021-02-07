@@ -1,22 +1,23 @@
 ---
+description: 'Daha fazla bilgi edinin: DataAdapter olaylarını Işleme'
 title: DataAdapter Olaylarını İşleme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-ms.openlocfilehash: a2c2dc71cc9e5c445fd05534dad5ad47fd66f436
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 045a48ae545ad4354844dd451ff58618b760a9a8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91194732"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99723952"
 ---
 # <a name="handling-dataadapter-events"></a>DataAdapter Olaylarını İşleme
 
 ADO.NET, <xref:System.Data.Common.DataAdapter> veri kaynağındaki verilerde yapılan değişikliklere yanıt vermek için kullanabileceğiniz üç olay sunar. Aşağıdaki tabloda `DataAdapter` Olaylar gösterilmektedir.  
   
-|Olay|Açıklama|  
+|Olay|Description|  
 |-----------|-----------------|  
 |`RowUpdating`|Bir satırdaki GÜNCELLEŞTIRME, ekleme veya SILME işlemi (metotlardan birine yapılan bir çağrı ile `Update` ) başlamak üzere.|  
 |`RowUpdated`|Bir satırdaki GÜNCELLEŞTIRME, ekleme veya SILME işlemi (metotlardan birine yapılan bir çağrı ile `Update` ) tamamlanmıştır.|  
@@ -194,5 +195,5 @@ protected static void FillError(object sender, FillErrorEventArgs args)
 - [DataAdapters ve DataReaders](dataadapters-and-datareaders.md)
 - [DataSet Olaylarını İşleme](./dataset-datatable-dataview/handling-dataset-events.md)
 - [DataTable Olaylarını İşleme](./dataset-datatable-dataview/handling-datatable-events.md)
-- [Olaylar](../../../standard/events/index.md)
+- [Ekinlikler](../../../standard/events/index.md)
 - [ADO.NET’e Genel Bakış](ado-net-overview.md)

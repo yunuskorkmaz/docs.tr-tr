@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Entity SQL hızlı başvuru'
 title: Entity SQL Hızlı Başvurusu
 ms.date: 03/30/2017
 ms.assetid: e53dad9e-5e83-426e-abb4-be3e78e3d6dc
-ms.openlocfilehash: 7ec3b6fc184b4f169d6f6489bda0ec8fa4abb4f5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ddac48bece1f0e9df737db295d4d028529ea290f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148146"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724563"
 ---
 # <a name="entity-sql-quick-reference"></a>Entity SQL Hızlı Başvurusu
 
@@ -89,10 +90,10 @@ SELECT VALUE row (product.ProductID AS ProductID, product.Name
   
  Çıkış:  
   
-|ProductID|Ad|  
+|ProductID|Name|  
 |---------------|----------|  
 |1|Ayarlanabilir yarış|  
-|879|Tüm amaç bisiklet Standı|  
+|879|All-Purpose bisiklet Standı|  
 |712|AWC logosu üst sınırı|  
 |...|...|  
   
@@ -110,7 +111,7 @@ SELECT VALUE product FROM AdventureWorksEntities.Product AS product WHERE produc
   
  Çıkış:  
   
-|ProductID|Ad|ProductNumber|…|  
+|ProductID|Name|ProductNumber|…|  
 |---------------|----------|-------------------|-------|  
 |842|Touring-Panniler, büyük|PA-T100|…|  
   
@@ -168,7 +169,7 @@ SELECT VALUE REF(p).Name FROM
 |Değer|  
 |-----------|  
 |Ayarlanabilir yarış|  
-|Tüm amaç bisiklet Standı|  
+|All-Purpose bisiklet Standı|  
 |AWC logosu üst sınırı|  
 |...|  
   
@@ -188,7 +189,7 @@ SELECT VALUE DEREF(REF(p)).Name FROM
 |Değer|  
 |-----------|  
 |Ayarlanabilir yarış|  
-|Tüm amaç bisiklet Standı|  
+|All-Purpose bisiklet Standı|  
 |AWC logosu üst sınırı|  
 |...|  
   
@@ -234,7 +235,7 @@ SELECT Length(c. FirstName) AS NameLen FROM
 |6|  
 |5|  
   
-### <a name="microsoft-provider-specific"></a>Microsoft sağlayıcıya özgü  
+### <a name="microsoft-provider-specific"></a>Microsoft Provider-Specific  
 
  [Microsoft sağlayıcıya özgü işlevler](../sqlclient-for-ef-functions.md) `SqlServer` ad alanıdır.  
   
@@ -283,7 +284,7 @@ SELECT c.ContactID as ID, c.LastName AS Name FROM
   
  Çıkış:  
   
-|ID|Ad|  
+|ID|Name|  
 |--------|----------|  
 |10|Adina|  
 |11|Agcaoili|  
@@ -344,10 +345,10 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product AS p
   
  Çıkış:  
   
-|Ad|  
+|Name|  
 |----------|  
 |Ayarlanabilir yarış|  
-|Tüm amaç bisiklet Standı|  
+|All-Purpose bisiklet Standı|  
 |AWC logosu üst sınırı|  
 |...|  
   
@@ -359,10 +360,10 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product AS p
   
  AdventureWorksEntities. Product öğesinden p çıkışı olarak p.Name, p. ProductID 'yi SEÇIN:  
   
-|Ad|ProductID|  
+|Name|ProductID|  
 |----------|---------------|  
 |Ayarlanabilir yarış|1|  
-|Tüm amaç bisiklet Standı|879|  
+|All-Purpose bisiklet Standı|879|  
 |AWC logosu üst sınırı|712|  
 |...|...|  
   

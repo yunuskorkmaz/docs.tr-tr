@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Commandoluşturucular ile komut oluşturma'
 title: CommandBuilders ile Komut Oluşturma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6e3fb8b5-373b-4f9e-ab03-a22693df8e91
-ms.openlocfilehash: d88f5772e038766d49baf8c758c547e6d5667904
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 495312f57d497421182384eff23b621130447940
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91200725"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724108"
 ---
 # <a name="generating-commands-with-commandbuilders"></a>CommandBuilders ile Komut Oluşturma
 
@@ -40,7 +41,7 @@ ms.locfileid: "91200725"
   
 ## <a name="optimistic-concurrency-model-for-updates-and-deletes"></a>Güncelleştirmeler ve silmeler için iyimser eşzamanlılık modeli  
 
- UPDATE ve DELETE deyimlerine yönelik komutları otomatik olarak oluşturma mantığı, *iyimser eşzamanlılık*tabanlıdır; Yani, kayıtlar düzenlenmek üzere kilitlenmez ve herhangi bir zamanda diğer Kullanıcı veya süreçler tarafından değiştirilebilir. Bir kayıt, SELECT ifadesinden döndürülmeden sonra değiştirilmiş olabileceğinden, UPDATE veya DELETE deyimi alınmadan önce, otomatik olarak oluşturulan UPDATE veya DELETE deyimi bir WHERE yan tümcesi içerir, bir satırın yalnızca tüm orijinal değerleri içermesi ve veri kaynağından silinmemiş olması halinde güncelleştirildiğini belirten bir WHERE yan tümcesi vardır. Bu, yeni verilerin üzerine yazılmasını önlemek için yapılır. Otomatik olarak oluşturulan bir güncelleştirme silinmiş olan veya içinde bulunan özgün değerleri içermeyen bir satırı güncelleştirmeyi denediğinde <xref:System.Data.DataSet> , komut herhangi bir kaydı etkilemez ve bir oluşturulur <xref:System.Data.DBConcurrencyException> .  
+ UPDATE ve DELETE deyimlerine yönelik komutları otomatik olarak oluşturma mantığı, *iyimser eşzamanlılık* tabanlıdır; Yani, kayıtlar düzenlenmek üzere kilitlenmez ve herhangi bir zamanda diğer Kullanıcı veya süreçler tarafından değiştirilebilir. Bir kayıt, SELECT ifadesinden döndürülmeden sonra değiştirilmiş olabileceğinden, UPDATE veya DELETE deyimi alınmadan önce, otomatik olarak oluşturulan UPDATE veya DELETE deyimi bir WHERE yan tümcesi içerir, bir satırın yalnızca tüm orijinal değerleri içermesi ve veri kaynağından silinmemiş olması halinde güncelleştirildiğini belirten bir WHERE yan tümcesi vardır. Bu, yeni verilerin üzerine yazılmasını önlemek için yapılır. Otomatik olarak oluşturulan bir güncelleştirme silinmiş olan veya içinde bulunan özgün değerleri içermeyen bir satırı güncelleştirmeyi denediğinde <xref:System.Data.DataSet> , komut herhangi bir kaydı etkilemez ve bir oluşturulur <xref:System.Data.DBConcurrencyException> .  
   
  GÜNCELLEŞTIRME veya SILME işleminin özgün değerlerden bağımsız olarak tamamlanmasını istiyorsanız, `UpdateCommand` `DataAdapter` otomatik komut oluşturmaya dayanmayan ve için öğesini açıkça ayarlamanız gerekir.  
   

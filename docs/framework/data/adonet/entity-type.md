@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: varlık türü'
 title: entity type
 ms.date: 03/30/2017
 ms.assetid: a6dee9ab-9e4a-48f2-a169-3f79cc15821c
-ms.openlocfilehash: 3f99667a06d8aa439232802d4909290dfe9db97c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: fb801ca8565fce01466f30bddc8c14c39af568c6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91194784"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724368"
 ---
 # <a name="entity-type"></a>entity type
 

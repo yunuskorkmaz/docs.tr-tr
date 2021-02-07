@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: CREATEREF (Entity SQL)'
 title: CREATEREF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 489828cf-a335-4449-9360-b0d92eec5481
-ms.openlocfilehash: c2a57116f56abf4db3caabcfe3acd0d8afbcf4eb
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c4e96f97bd3587e50b34f6cbd63c5ae9ed8d94ba
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201063"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724784"
 ---
 # <a name="createref-entity-sql"></a>CREATEREF (Entity SQL)
 

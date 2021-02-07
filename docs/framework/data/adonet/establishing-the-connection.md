@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: bağlantı kurma'
 title: Bağlantı Kurma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3af512f3-87d9-4005-9e2f-abb1060ff43f
-ms.openlocfilehash: bf38475711a193bc69176993154f87d455aefe7d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e7f8c837476a678f003eb0477934bb8bd08fd896
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91156478"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724342"
 ---
 # <a name="establishing-the-connection"></a>Bağlantı Kurma
 
@@ -23,7 +24,7 @@ Microsoft SQL Server bağlanmak için, <xref:System.Data.SqlClient.SqlConnection
  Ayrıca, `Close` `Dispose` kullanmakta olduğunuz sağlayıcı için bağlantı nesnesinin veya yöntemlerini de kullanabilirsiniz. Açıkça kapatılmayan bağlantılar, havuza eklenmeyebilir veya havuza döndürülemez. Örneğin, kapsam dışına çıkan ancak açıkça kapatılmayan bir bağlantı yalnızca en büyük havuz boyutuna ulaşılmışsa ve bağlantı hala geçerliyse bağlantı havuzuna döndürülür. Daha fazla bilgi için bkz. [OLE DB, ODBC ve Oracle bağlantı havuzu](ole-db-odbc-and-oracle-connection-pooling.md).  
   
 > [!NOTE]
-> `Close` `Dispose` Sınıfınızın yönteminde veya bir **bağlantı**, bir **DataReader**veya başka bir yönetilen nesne çağırmayın `Finalize` . Sonlandırıcıda yalnızca, sınıfınızın doğrudan sahip olduğu yönetilmeyen kaynakları serbest bırakın. Sınıfınız hiçbir yönetilmeyen kaynağa sahip değilse, `Finalize` sınıf tanımınıza bir yöntem eklemeyin. Daha fazla bilgi için bkz. [çöp toplama](../../../standard/garbage-collection/index.md).  
+> `Close` `Dispose` Sınıfınızın yönteminde veya bir **bağlantı**, bir **DataReader** veya başka bir yönetilen nesne çağırmayın `Finalize` . Sonlandırıcıda yalnızca, sınıfınızın doğrudan sahip olduğu yönetilmeyen kaynakları serbest bırakın. Sınıfınız hiçbir yönetilmeyen kaynağa sahip değilse, `Finalize` sınıf tanımınıza bir yöntem eklemeyin. Daha fazla bilgi için bkz. [çöp toplama](../../../standard/garbage-collection/index.md).  
   
 > [!NOTE]
 > Bağlantı, bağlantı havuzuna döndürüldüğünden bağlantı, gerçekten kapanmadığı için, bağlantı havuzundan bir bağlantı getirilirken ya da geri döndürülene kadar sunucuda oturum açma ve oturum kapatma olayları oluşturulmaz. Daha fazla bilgi için bkz. [SQL Server bağlantı havuzu (ADO.net)](sql-server-connection-pooling.md).  
@@ -65,7 +66,7 @@ using (SqlConnection connection = new SqlConnection(connectionString))
   
 - **Sağlayıcı** anahtar sözcüğü gereklidir.  
   
-- **URL**, **uzak sağlayıcı**ve **uzak sunucu** anahtar sözcükleri desteklenmez.  
+- **URL**, **uzak sağlayıcı** ve **uzak sunucu** anahtar sözcükleri desteklenmez.  
   
  OLE DB bağlantı dizeleri hakkında daha fazla bilgi için konusuna bakın <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A> . Ayrıca, <xref:System.Data.OleDb.OleDbConnectionStringBuilder> çalışma zamanında bağlantı dizeleri oluşturmak için öğesini de kullanabilirsiniz.  
   
@@ -126,7 +127,7 @@ using (OdbcConnection connection =
 
  Oracle için .NET Framework Veri Sağlayıcısı, **OracleConnection** nesnesini kullanarak Oracle veri kaynaklarına bağlantı sağlar.  
   
- Oracle için .NET Framework Veri Sağlayıcısı bağlantı dizesi biçimi, Oracle (MSDAORA) bağlantı dizesi biçimi için OLE DB sağlayıcısı tarafından mümkün olduğunca yakından eşleşecek şekilde tasarlanmıştır. **OracleConnection**hakkında daha fazla ayrıntı için bkz <xref:System.Data.OracleClient.OracleConnection> ..  
+ Oracle için .NET Framework Veri Sağlayıcısı bağlantı dizesi biçimi, Oracle (MSDAORA) bağlantı dizesi biçimi için OLE DB sağlayıcısı tarafından mümkün olduğunca yakından eşleşecek şekilde tasarlanmıştır. **OracleConnection** hakkında daha fazla ayrıntı için bkz <xref:System.Data.OracleClient.OracleConnection> ..  
   
  Aşağıdaki kod örneği, bir Oracle veri kaynağına bir bağlantının nasıl oluşturulduğunu ve açılacağını gösterir.  
   

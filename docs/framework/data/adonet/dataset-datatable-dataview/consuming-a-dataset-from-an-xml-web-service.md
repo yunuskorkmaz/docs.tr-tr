@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: bir XML Web hizmetinden veri kümesi kullanma'
 title: XML Web hizmetinden veri kümesi kullanma
 ms.date: 07/14/2020
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: d4f4d5d34698fbb9a7986f4628b282d4425da3f7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3c9112d259d5a6450a968ba87b33c4072f6dc44c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554703"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99725135"
 ---
 # <a name="consume-a-dataset-from-an-xml-web-service"></a>XML Web hizmetinden veri kümesi kullanma
 
@@ -28,7 +29,7 @@ ms.locfileid: "90554703"
   
      Örnekte, verileri döndüren bir XML Web hizmeti oluşturulur ve bu durumda **Northwind** veritabanındaki müşterilerin bir listesi bulunur ve XML Web hizmeti 'nin özgün veri kaynağına geri çözümlenen veriler için güncelleştirmeler Içeren bir **veri kümesi** alır.  
   
-     XML Web hizmeti, güncelleştirmeleri veri kaynağına geri çözümlemek üzere müşteriler ve **UpdateCustomers**listesini döndürmek için iki yöntem sunar: **GetCustomers**. XML Web hizmeti, Web sunucusunda DataSetSample. asmx adlı bir dosyada depolanır. Aşağıdaki kod, DataSetSample. asmx içeriğini özetler.  
+     XML Web hizmeti, güncelleştirmeleri veri kaynağına geri çözümlemek üzere müşteriler ve **UpdateCustomers** listesini döndürmek için iki yöntem sunar: **GetCustomers**. XML Web hizmeti, Web sunucusunda DataSetSample. asmx adlı bir dosyada depolanır. Aşağıdaki kod, DataSetSample. asmx içeriğini özetler.  
   
     ```vb  
     <% @ WebService Language = "vb" Class = "Sample" %>  
@@ -191,11 +192,11 @@ ms.locfileid: "90554703"
   
 3. Bir XML Web hizmeti istemcisi oluşturun.  
   
-     Sizin için Visual Studio 'nun Web hizmeti proxy sınıfını oluşturmasını istiyorsanız, yalnızca istemci projesini oluşturun ve Çözüm Gezgini penceresinde projeye sağ tıklayıp **Add**  >  **hizmet başvurusu**Ekle ' yi seçin. **Hizmet başvurusu Ekle** Iletişim kutusunda **Gelişmiş**' i seçin ve ardından **Web başvurusu Ekle**' yi seçin. Kullanılabilir Web Hizmetleri listesinden Web hizmeti ' ni seçin (Web hizmeti geçerli çözüm içinde veya geçerli bilgisayarda yoksa Web hizmeti uç noktasının adresini sağlamak gerekebilir). XML Web hizmeti proxy 'sini kendiniz oluşturursanız (önceki adımda açıklandığı gibi), istemci kodunuza içeri aktarabilir ve XML Web hizmeti yöntemlerini kullanabilirsiniz.
+     Sizin için Visual Studio 'nun Web hizmeti proxy sınıfını oluşturmasını istiyorsanız, yalnızca istemci projesini oluşturun ve Çözüm Gezgini penceresinde projeye sağ tıklayıp   >  **hizmet başvurusu** Ekle ' yi seçin. **Hizmet başvurusu Ekle** Iletişim kutusunda **Gelişmiş**' i seçin ve ardından **Web başvurusu Ekle**' yi seçin. Kullanılabilir Web Hizmetleri listesinden Web hizmeti ' ni seçin (Web hizmeti geçerli çözüm içinde veya geçerli bilgisayarda yoksa Web hizmeti uç noktasının adresini sağlamak gerekebilir). XML Web hizmeti proxy 'sini kendiniz oluşturursanız (önceki adımda açıklandığı gibi), istemci kodunuza içeri aktarabilir ve XML Web hizmeti yöntemlerini kullanabilirsiniz.
 
-     Aşağıdaki örnek kod, ara kitaplığı içeri aktarır, müşterilerin listesini almak için **GetCustomers** çağırır, yeni bir müşteri ekliyor ve sonra **UpdateCustomers**güncelleştirmeleriyle birlikte bir **veri kümesi** döndürüyor.  
+     Aşağıdaki örnek kod, ara kitaplığı içeri aktarır, müşterilerin listesini almak için **GetCustomers** çağırır, yeni bir müşteri ekliyor ve sonra **UpdateCustomers** güncelleştirmeleriyle birlikte bir **veri kümesi** döndürüyor.  
   
-     Örnek **DataSet. GetChanges** tarafından döndürülen **veri kümesini** **UpdateCustomers** 'e geçirir çünkü yalnızca değiştirilen satırların **UpdateCustomers**'a geçirilmesi gerekir. **UpdateCustomers** , çözümlenen değişiklikleri ve tüm satır hata bilgilerini güncelleştirmeden birleştirmek için, daha sonra mevcut **veri kümesiyle** **birleştirebilen** çözümlenmiş **veri kümesini**döndürür. Aşağıdaki kod, Web başvurusu oluşturmak için Visual Studio kullandığınızı ve **Web başvurusu Ekle** Iletişim kutusunda dssample için Web başvurusunu yeniden adlandırdığınızı varsayar.  
+     Örnek **DataSet. GetChanges** tarafından döndürülen **veri kümesini** **UpdateCustomers** 'e geçirir çünkü yalnızca değiştirilen satırların **UpdateCustomers**'a geçirilmesi gerekir. **UpdateCustomers** , çözümlenen değişiklikleri ve tüm satır hata bilgilerini güncelleştirmeden birleştirmek için, daha sonra mevcut **veri kümesiyle** **birleştirebilen** çözümlenmiş **veri kümesini** döndürür. Aşağıdaki kod, Web başvurusu oluşturmak için Visual Studio kullandığınızı ve **Web başvurusu Ekle** Iletişim kutusunda dssample için Web başvurusunu yeniden adlandırdığınızı varsayar.  
   
     ```vb  
     Imports System  

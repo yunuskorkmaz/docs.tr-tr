@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: nasıl yapılır: veritabanı değerlerini koruyarak çakışmaları çözme'
 title: 'Nasıl yapılır: Veritabanı Değerlerini Tutarak Çakışmaları Çözümleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b475cf72-9e64-4f6e-99c1-af7737bc85ef
-ms.openlocfilehash: b6f9b0308bcbf53a89ae0690ed44db0a364aef0c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ef47370768ce474ccb6d941bcec0e66807290599
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91191703"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99723497"
 ---
 # <a name="how-to-resolve-conflicts-by-retaining-database-values"></a>Nasıl yapılır: Veritabanı Değerlerini Tutarak Çakışmaları Çözümleme
 

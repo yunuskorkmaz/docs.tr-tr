@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Entity SQL dil'
 title: Entity SQL Dili
 ms.date: 03/30/2017
 ms.assetid: 9e7d8837-28c5-429d-a824-7bafb59724cf
-ms.openlocfilehash: 721a4cd9d4e5618c083392bbe1ae203f285f8feb
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c05e561e5da3f9ee8788a25f8ca97b22444e109f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148120"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724576"
 ---
 # <a name="entity-sql-language"></a>Entity SQL Dili
 
@@ -57,7 +58,7 @@ Entity SQL, SQL 'e benzer bir depolama bağımsız sorgu dilidir. Entity SQL, va
   
  [Nasıl yapılır: gezinme özelliklerini kullanarak Ilişkilerde gezinme](/previous-versions/dotnet/netframework-4.0/bb896321(v=vs.100))  
   
- [Nasıl yapılır: Kullanıcı tanımlı bir Işlevi çağırma](/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100))  
+ [Nasıl yapılır: User-Defined Işlevi çağırma](/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100))  
   
  [Nasıl yapılır: verileri filtreleme](/previous-versions/dotnet/netframework-4.0/cc716755(v=vs.100))  
   

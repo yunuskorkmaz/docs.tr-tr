@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Oracle LOBs'
 title: Oracle LOB
 ms.date: 03/30/2017
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
-ms.openlocfilehash: 072e3e3514c2dd32ddff0bac941da30788feae16
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f59e2326852233648b15cf6aa56ebed905fcb598
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91147846"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99723692"
 ---
 # <a name="oracle-lobs"></a>Oracle LOB
 
@@ -17,15 +18,15 @@ Oracle için .NET Framework Veri Sağlayıcısı, <xref:System.Data.OracleClient
   
 |Veri türü|Açıklama|  
 |---------------|-----------------|  
-|**Blob**|En fazla 4 gigabayt büyüklüğünde ikili veri içeren bir Oracle **BLOB** veri türü. Bu, **byte**türünde bir **diziye** eşlenir.|  
-|**CLOB**|Sunucu üzerindeki varsayılan karakter kümesini temel alan, en fazla 4 gigabayt boyutunda karakter verisi içeren bir Oracle **CLOB** veri türü. Bu **dize**ile eşlenir.|  
-|**NClob**|Sunucu üzerinde en fazla 4 gigabayt olan Ulusal karakter kümesine dayalı karakter verisi içeren Oracle **NCLOB** veri türü. Bu **dize**ile eşlenir.|  
+|**Blob**|En fazla 4 gigabayt büyüklüğünde ikili veri içeren bir Oracle **BLOB** veri türü. Bu, **byte** türünde bir **diziye** eşlenir.|  
+|**CLOB**|Sunucu üzerindeki varsayılan karakter kümesini temel alan, en fazla 4 gigabayt boyutunda karakter verisi içeren bir Oracle **CLOB** veri türü. Bu **dize** ile eşlenir.|  
+|**NClob**|Sunucu üzerinde en fazla 4 gigabayt olan Ulusal karakter kümesine dayalı karakter verisi içeren Oracle **NCLOB** veri türü. Bu **dize** ile eşlenir.|  
   
  Bir **OracleLob** , <xref:System.Data.OracleClient.OracleBFile> verilerin işletim sistemindeki fiziksel bir dosya yerine sunucuda depolanabileceği öğesinden farklıdır. Ayrıca, her zaman salt okunurdur olan **Oraclebdosya**'dan farklı olarak bir okuma-yazma nesnesi de olabilir.  
   
 ## <a name="creating-retrieving-and-writing-to-a-lob"></a>LOB oluşturma, alma ve yazma  
 
- Aşağıdaki C# örneği, bir Oracle tablosunda lob oluşturma ve bunları **OracleLob** nesneleri biçiminde alma ve bunlara yazma işlemlerinin nasıl yapılacağını gösterir. Örnek, <xref:System.Data.OracleClient.OracleDataReader> nesne ve **OracleLob** **okuma** ve **yazma** yöntemlerinin kullanımını gösterir. Örnek, Oracle **BLOB**, **CLOB**ve **NCLOB** veri türlerini kullanır.  
+ Aşağıdaki C# örneği, bir Oracle tablosunda lob oluşturma ve bunları **OracleLob** nesneleri biçiminde alma ve bunlara yazma işlemlerinin nasıl yapılacağını gösterir. Örnek, <xref:System.Data.OracleClient.OracleDataReader> nesne ve **OracleLob** **okuma** ve **yazma** yöntemlerinin kullanımını gösterir. Örnek, Oracle **BLOB**, **CLOB** ve **NCLOB** veri türlerini kullanır.  
   
 ```csharp  
 using System;  
