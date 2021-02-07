@@ -1,18 +1,19 @@
 ---
+description: 'Daha fazla bilgi edinin: Windows Identity Foundation yapılandırma şeması'
 title: Windows Identity Foundation Yapılandırma Şeması
 ms.date: 03/30/2017
 ms.assetid: 4d4f6d76-49a5-4bad-b345-097b2e2844e9
 author: BrucePerlerMS
-ms.openlocfilehash: 14d596ae77019932d169e1a84732fb8522bfc46c
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 926b2dbe25359ebc789c95f75a59090c7e5a52e6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79152729"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99725343"
 ---
-# <a name="windows-identity-foundation-configuration-schema"></a><span data-ttu-id="db853-102">Windows Identity Foundation Yapılandırma Şeması</span><span class="sxs-lookup"><span data-stu-id="db853-102">Windows Identity Foundation Configuration Schema</span></span>
+# <a name="windows-identity-foundation-configuration-schema"></a><span data-ttu-id="d368d-103">Windows Identity Foundation Yapılandırma Şeması</span><span class="sxs-lookup"><span data-stu-id="d368d-103">Windows Identity Foundation Configuration Schema</span></span>
 
-<span data-ttu-id="db853-103">Bu bölümdeki konularda, Windows Identity Foundation (WıF) yapılandırma şeması hakkında bilgi sağlanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="db853-103">The topics in this section provide information about the Windows Identity Foundation (WIF) configuration schema.</span></span> <span data-ttu-id="db853-104">Ayrıca, bir uygulamayı Framework tarafından sunulan sınıfları kullanarak WıF kullanacak şekilde yapılandırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="db853-104">You can also configure an application to use WIF through classes exposed by the framework.</span></span> <span data-ttu-id="db853-105">Bu sınıflar, şemadaki ilgili öğeleri ele alan bölümlerde belirtilmiştir.</span><span class="sxs-lookup"><span data-stu-id="db853-105">These classes are noted in the sections that treat relevant elements in the schema.</span></span> <span data-ttu-id="db853-106">Aşağıdaki, WıF yapılandırma şeması tarafından sunulan temel XML etiketi yapısını gösterir.</span><span class="sxs-lookup"><span data-stu-id="db853-106">The following shows the basic XML tag structure exposed by the WIF configuration schema.</span></span> <span data-ttu-id="db853-107">Öznitelikler atlanır.</span><span class="sxs-lookup"><span data-stu-id="db853-107">Attributes are omitted.</span></span> <span data-ttu-id="db853-108">Vurgulanan Yorumlar şemanın ana bileşenlerini gösterir.</span><span class="sxs-lookup"><span data-stu-id="db853-108">Highlighted comments indicate major components of the schema.</span></span>  
+<span data-ttu-id="d368d-104">Bu bölümdeki konularda, Windows Identity Foundation (WıF) yapılandırma şeması hakkında bilgi sağlanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="d368d-104">The topics in this section provide information about the Windows Identity Foundation (WIF) configuration schema.</span></span> <span data-ttu-id="d368d-105">Ayrıca, bir uygulamayı Framework tarafından sunulan sınıfları kullanarak WıF kullanacak şekilde yapılandırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="d368d-105">You can also configure an application to use WIF through classes exposed by the framework.</span></span> <span data-ttu-id="d368d-106">Bu sınıflar, şemadaki ilgili öğeleri ele alan bölümlerde belirtilmiştir.</span><span class="sxs-lookup"><span data-stu-id="d368d-106">These classes are noted in the sections that treat relevant elements in the schema.</span></span> <span data-ttu-id="d368d-107">Aşağıdaki, WıF yapılandırma şeması tarafından sunulan temel XML etiketi yapısını gösterir.</span><span class="sxs-lookup"><span data-stu-id="d368d-107">The following shows the basic XML tag structure exposed by the WIF configuration schema.</span></span> <span data-ttu-id="d368d-108">Öznitelikler atlanır.</span><span class="sxs-lookup"><span data-stu-id="d368d-108">Attributes are omitted.</span></span> <span data-ttu-id="d368d-109">Vurgulanan Yorumlar şemanın ana bileşenlerini gösterir.</span><span class="sxs-lookup"><span data-stu-id="d368d-109">Highlighted comments indicate major components of the schema.</span></span>  
   
 ```xml  
 <configuration>  
@@ -109,8 +110,8 @@ ms.locfileid: "79152729"
 </configuration>  
 ```  
   
-## <a name="in-this-section"></a><span data-ttu-id="db853-109">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="db853-109">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="d368d-110">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="d368d-110">In This Section</span></span>  
 
-<span data-ttu-id="db853-110">[\<system.identityModel>](system-identitymodel.md)Uygulamalarda WıF seçeneklerini etkinleştirmek için yapılandırma sağlar.</span><span class="sxs-lookup"><span data-stu-id="db853-110">[\<system.identityModel>](system-identitymodel.md) Provides configuration for enabling WIF options in applications.</span></span>  
+<span data-ttu-id="d368d-111">[\<system.identityModel>](system-identitymodel.md) Uygulamalarda WıF seçeneklerini etkinleştirmek için yapılandırma sağlar.</span><span class="sxs-lookup"><span data-stu-id="d368d-111">[\<system.identityModel>](system-identitymodel.md) Provides configuration for enabling WIF options in applications.</span></span>  
   
-<span data-ttu-id="db853-111">[\<system.identityModel.services>](system-identitymodel-services.md)WıF kullanarak Pasif Federasyon için yapılandırma sağlar.</span><span class="sxs-lookup"><span data-stu-id="db853-111">[\<system.identityModel.services>](system-identitymodel-services.md) Provides configuration for passive federation using WIF.</span></span> <span data-ttu-id="db853-112">Oturum kimlik doğrulama modülünü (SAM) ve federal kimlik doğrulama modülünü (WSFAD) yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="db853-112">Configures the Session Authentication Module (SAM) and the Federated Authentication Module (WSFAM).</span></span>
+<span data-ttu-id="d368d-112">[\<system.identityModel.services>](system-identitymodel-services.md) WıF kullanarak Pasif Federasyon için yapılandırma sağlar.</span><span class="sxs-lookup"><span data-stu-id="d368d-112">[\<system.identityModel.services>](system-identitymodel-services.md) Provides configuration for passive federation using WIF.</span></span> <span data-ttu-id="d368d-113">Oturum kimlik doğrulama modülünü (SAM) ve federal kimlik doğrulama modülünü (WSFAD) yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="d368d-113">Configures the Session Authentication Module (SAM) and the Federated Authentication Module (WSFAM).</span></span>

@@ -1,24 +1,25 @@
 ---
+description: 'Daha fazla bilgi edinin: DataRow ve DataRowViews'
 title: DataRows ve DataRowViews
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8f5eec26-b809-4aca-8778-7e202356d856
-ms.openlocfilehash: bce90c1d310178e66da7c758c6df2cd357199c8b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d7700922a9ae76fb9898412b6a08394059e6e494
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153293"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724953"
 ---
-# <a name="datarows-and-datarowviews"></a><span data-ttu-id="d5601-102">DataRows ve DataRowViews</span><span class="sxs-lookup"><span data-stu-id="d5601-102">DataRows and DataRowViews</span></span>
+# <a name="datarows-and-datarowviews"></a><span data-ttu-id="0b72f-103">DataRows ve DataRowViews</span><span class="sxs-lookup"><span data-stu-id="0b72f-103">DataRows and DataRowViews</span></span>
 
-<span data-ttu-id="d5601-103"><xref:System.Data.DataView>, Nesnelerin sıralanabilir koleksiyonunu ortaya koyar <xref:System.Data.DataRowView> .</span><span class="sxs-lookup"><span data-stu-id="d5601-103">A <xref:System.Data.DataView> exposes an enumerable collection of <xref:System.Data.DataRowView> objects.</span></span> <span data-ttu-id="d5601-104">**DataRowView** nesneleri değerleri, temel tablodaki sütunun adı ya da Ordinal başvurusu tarafından dizine alınmış nesne dizileri olarak kullanıma sunar.</span><span class="sxs-lookup"><span data-stu-id="d5601-104">The **DataRowView** objects expose values as object arrays that are indexed by either the name or the ordinal reference of the column in the underlying table.</span></span> <span data-ttu-id="d5601-105">DataRowView <xref:System.Data.DataRow> 'ın özelliğini kullanarak **DataRowView** tarafından açığa çıkarılan öğesine erişebilirsiniz <xref:System.Data.DataRowView.Row%2A> . **DataRowView**</span><span class="sxs-lookup"><span data-stu-id="d5601-105">You can access the <xref:System.Data.DataRow> that is exposed by the **DataRowView** by using the <xref:System.Data.DataRowView.Row%2A> property of the **DataRowView**.</span></span>  
+<span data-ttu-id="0b72f-104"><xref:System.Data.DataView>, Nesnelerin sıralanabilir koleksiyonunu ortaya koyar <xref:System.Data.DataRowView> .</span><span class="sxs-lookup"><span data-stu-id="0b72f-104">A <xref:System.Data.DataView> exposes an enumerable collection of <xref:System.Data.DataRowView> objects.</span></span> <span data-ttu-id="0b72f-105">**DataRowView** nesneleri değerleri, temel tablodaki sütunun adı ya da Ordinal başvurusu tarafından dizine alınmış nesne dizileri olarak kullanıma sunar.</span><span class="sxs-lookup"><span data-stu-id="0b72f-105">The **DataRowView** objects expose values as object arrays that are indexed by either the name or the ordinal reference of the column in the underlying table.</span></span> <span data-ttu-id="0b72f-106">DataRowView <xref:System.Data.DataRow> 'ın özelliğini kullanarak **DataRowView** tarafından açığa çıkarılan öğesine erişebilirsiniz <xref:System.Data.DataRowView.Row%2A> . </span><span class="sxs-lookup"><span data-stu-id="0b72f-106">You can access the <xref:System.Data.DataRow> that is exposed by the **DataRowView** by using the <xref:System.Data.DataRowView.Row%2A> property of the **DataRowView**.</span></span>  
   
- <span data-ttu-id="d5601-106">Bir **DataRowView**kullanarak değerleri görüntülediğinizde, <xref:System.Data.DataView.RowStateFilter%2A> **DataView** özelliği temel alınan **DataRow** 'ın hangi satır sürümünün açığa çıkardığını belirler.</span><span class="sxs-lookup"><span data-stu-id="d5601-106">When you view values by using a **DataRowView**, the <xref:System.Data.DataView.RowStateFilter%2A> property of the **DataView** determines which row version of the underlying **DataRow** is exposed.</span></span> <span data-ttu-id="d5601-107">Bir **DataRow**kullanarak farklı satır sürümlerine erişme hakkında daha fazla bilgi için bkz. [Satır durumları ve satır sürümleri](row-states-and-row-versions.md).</span><span class="sxs-lookup"><span data-stu-id="d5601-107">For information about accessing different row versions using a **DataRow**, see [Row States and Row Versions](row-states-and-row-versions.md).</span></span>  
+ <span data-ttu-id="0b72f-107">Bir **DataRowView** kullanarak değerleri görüntülediğinizde, <xref:System.Data.DataView.RowStateFilter%2A> **DataView** özelliği temel alınan **DataRow** 'ın hangi satır sürümünün açığa çıkardığını belirler.</span><span class="sxs-lookup"><span data-stu-id="0b72f-107">When you view values by using a **DataRowView**, the <xref:System.Data.DataView.RowStateFilter%2A> property of the **DataView** determines which row version of the underlying **DataRow** is exposed.</span></span> <span data-ttu-id="0b72f-108">Bir **DataRow** kullanarak farklı satır sürümlerine erişme hakkında daha fazla bilgi için bkz. [Satır durumları ve satır sürümleri](row-states-and-row-versions.md).</span><span class="sxs-lookup"><span data-stu-id="0b72f-108">For information about accessing different row versions using a **DataRow**, see [Row States and Row Versions](row-states-and-row-versions.md).</span></span>  
   
- <span data-ttu-id="d5601-108">Aşağıdaki kod örneği, bir tablodaki tüm geçerli ve orijinal değerleri görüntüler.</span><span class="sxs-lookup"><span data-stu-id="d5601-108">The following code example displays all the current and original values in a table.</span></span>  
+ <span data-ttu-id="0b72f-109">Aşağıdaki kod örneği, bir tablodaki tüm geçerli ve orijinal değerleri görüntüler.</span><span class="sxs-lookup"><span data-stu-id="0b72f-109">The following code example displays all the current and original values in a table.</span></span>  
   
 ```vb  
 Dim catView As DataView = New DataView(catDS.Tables("Categories"))  
@@ -60,11 +61,11 @@ public static void WriteView(DataView thisDataView)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d5601-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d5601-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0b72f-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0b72f-110">See also</span></span>
 
 - <xref:System.Data.DataRowVersion>
 - <xref:System.Data.DataViewRowState>
 - <xref:System.Data.DataView>
 - <xref:System.Data.DataRowView>
-- [<span data-ttu-id="d5601-110">DataViews</span><span class="sxs-lookup"><span data-stu-id="d5601-110">DataViews</span></span>](dataviews.md)
-- [<span data-ttu-id="d5601-111">ADO.NET’e Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="d5601-111">ADO.NET Overview</span></span>](../ado-net-overview.md)
+- [<span data-ttu-id="0b72f-111">DataViews</span><span class="sxs-lookup"><span data-stu-id="0b72f-111">DataViews</span></span>](dataviews.md)
+- [<span data-ttu-id="0b72f-112">ADO.NET’e Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="0b72f-112">ADO.NET Overview</span></span>](../ado-net-overview.md)
