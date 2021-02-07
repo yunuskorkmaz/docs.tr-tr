@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: GetFileDef yöntemi'
 title: GetFileDef Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4e3fbe6c-b82a-4181-ab17-7faa1263f5b3
 topic_type:
 - apiref
-ms.openlocfilehash: 42935813579d7f1d55a9f1daf9d8c6c1241f85be
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5d44336e686ca565f468fb95ce5290ee41d5e16e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95684713"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718453"
 ---
-# <a name="getfiledef-method"></a><span data-ttu-id="c480a-102">GetFileDef Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c480a-102">GetFileDef Method</span></span>
+# <a name="getfiledef-method"></a><span data-ttu-id="cce51-103">GetFileDef Yöntemi</span><span class="sxs-lookup"><span data-stu-id="cce51-103">GetFileDef Method</span></span>
 
-<span data-ttu-id="c480a-103">Meta verilerde kullanılan gerçek FileDef belirtecini alır (ALink tarafından atanan belirtecin aksine).</span><span class="sxs-lookup"><span data-stu-id="c480a-103">Retrieves the actual FileDef token used in metadata (as opposed to the token assigned by ALink).</span></span>  
+<span data-ttu-id="cce51-104">Meta verilerde kullanılan gerçek FileDef belirtecini alır (ALink tarafından atanan belirtecin aksine).</span><span class="sxs-lookup"><span data-stu-id="cce51-104">Retrieves the actual FileDef token used in metadata (as opposed to the token assigned by ALink).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c480a-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="c480a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cce51-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="cce51-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetFileDef(  
@@ -35,27 +36,27 @@ HRESULT GetFileDef(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c480a-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c480a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cce51-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="cce51-106">Parameters</span></span>  
 
  `AssemblyID`  
- <span data-ttu-id="c480a-106">Derlemenin KIMLIĞI.</span><span class="sxs-lookup"><span data-stu-id="c480a-106">ID of the assembly.</span></span>  
+ <span data-ttu-id="cce51-107">Derlemenin KIMLIĞI.</span><span class="sxs-lookup"><span data-stu-id="cce51-107">ID of the assembly.</span></span>  
   
  `TargetFile`  
- <span data-ttu-id="c480a-107">AddFile yönteminden veya AddImport yönteminden alınan eklenen dosyanın belirteci.</span><span class="sxs-lookup"><span data-stu-id="c480a-107">Token of the added file as retrieved from AddFile Method or AddImport Method.</span></span>  
+ <span data-ttu-id="cce51-108">AddFile yönteminden veya AddImport yönteminden alınan eklenen dosyanın belirteci.</span><span class="sxs-lookup"><span data-stu-id="cce51-108">Token of the added file as retrieved from AddFile Method or AddImport Method.</span></span>  
   
  `pScope`  
- <span data-ttu-id="c480a-108">FileDef belirtecini alır.</span><span class="sxs-lookup"><span data-stu-id="c480a-108">Receives the FileDef token.</span></span>  
+ <span data-ttu-id="cce51-109">FileDef belirtecini alır.</span><span class="sxs-lookup"><span data-stu-id="cce51-109">Receives the FileDef token.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c480a-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="c480a-109">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="cce51-110">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="cce51-110">Return Value</span></span>  
 
- <span data-ttu-id="c480a-110">Yöntem başarılı olursa S_OK döndürür.</span><span class="sxs-lookup"><span data-stu-id="c480a-110">Returns S_OK if the method succeeds.</span></span>  
+ <span data-ttu-id="cce51-111">Yöntem başarılı olursa S_OK döndürür.</span><span class="sxs-lookup"><span data-stu-id="cce51-111">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c480a-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c480a-111">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cce51-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="cce51-112">Requirements</span></span>  
 
- <span data-ttu-id="c480a-112">ALink. h gerektirir</span><span class="sxs-lookup"><span data-stu-id="c480a-112">Requires alink.h</span></span>  
+ <span data-ttu-id="cce51-113">ALink. h gerektirir</span><span class="sxs-lookup"><span data-stu-id="cce51-113">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c480a-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c480a-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cce51-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="cce51-114">See also</span></span>
 
-- [<span data-ttu-id="c480a-114">IALink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c480a-114">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="c480a-115">IALink Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c480a-115">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="c480a-116">ALink API</span><span class="sxs-lookup"><span data-stu-id="c480a-116">ALink API</span></span>](index.md)
+- [<span data-ttu-id="cce51-115">IALink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="cce51-115">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="cce51-116">IALink Arabirimi</span><span class="sxs-lookup"><span data-stu-id="cce51-116">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="cce51-117">ALink API</span><span class="sxs-lookup"><span data-stu-id="cce51-117">ALink API</span></span>](index.md)

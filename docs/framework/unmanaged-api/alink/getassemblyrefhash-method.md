@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: GetAssemblyRefHash yöntemi'
 title: GetAssemblyRefHash Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 091a18bd-e901-46f6-b999-74d71c8a7c41
 topic_type:
 - apiref
-ms.openlocfilehash: af040c4a6c9b85930d2d9261f8587ba69eb204e5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d8222d2fdd2c05ca1a23f881989dc344ba294bc1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721484"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718479"
 ---
-# <a name="getassemblyrefhash-method"></a><span data-ttu-id="aeb41-102">GetAssemblyRefHash Yöntemi</span><span class="sxs-lookup"><span data-stu-id="aeb41-102">GetAssemblyRefHash Method</span></span>
+# <a name="getassemblyrefhash-method"></a><span data-ttu-id="0a0c3-103">GetAssemblyRefHash Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0a0c3-103">GetAssemblyRefHash Method</span></span>
 
-<span data-ttu-id="aeb41-103">Verilen derleme için bir karma blobu alır.</span><span class="sxs-lookup"><span data-stu-id="aeb41-103">Retrieves a hash blob for a given assembly.</span></span>  
+<span data-ttu-id="0a0c3-104">Verilen derleme için bir karma blobu alır.</span><span class="sxs-lookup"><span data-stu-id="0a0c3-104">Retrieves a hash blob for a given assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="aeb41-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="aeb41-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0a0c3-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0a0c3-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetAssemblyRefHash(  
@@ -35,27 +36,27 @@ HRESULT GetAssemblyRefHash(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="aeb41-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="aeb41-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0a0c3-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0a0c3-106">Parameters</span></span>  
 
  `FileToken`  
- <span data-ttu-id="aeb41-106">Karmasının başvurabileceği derlemenin KIMLIĞI.</span><span class="sxs-lookup"><span data-stu-id="aeb41-106">ID of assembly to which the hash will refer.</span></span>  
+ <span data-ttu-id="0a0c3-107">Karmasının başvurabileceği derlemenin KIMLIĞI.</span><span class="sxs-lookup"><span data-stu-id="0a0c3-107">ID of assembly to which the hash will refer.</span></span>  
   
  `ppvHash`  
- <span data-ttu-id="aeb41-107">Elde edilen karma blobu alır.</span><span class="sxs-lookup"><span data-stu-id="aeb41-107">Receives the resulting hash blob.</span></span>  
+ <span data-ttu-id="0a0c3-108">Elde edilen karma blobu alır.</span><span class="sxs-lookup"><span data-stu-id="0a0c3-108">Receives the resulting hash blob.</span></span>  
   
  `pcbHash`  
- <span data-ttu-id="aeb41-108">Karma Blobun boyutunu bayt cinsinden alır.</span><span class="sxs-lookup"><span data-stu-id="aeb41-108">Receives size, in bytes, of hash blob.</span></span>  
+ <span data-ttu-id="0a0c3-109">Karma Blobun boyutunu bayt cinsinden alır.</span><span class="sxs-lookup"><span data-stu-id="0a0c3-109">Receives size, in bytes, of hash blob.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="aeb41-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="aeb41-109">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0a0c3-110">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="0a0c3-110">Return Value</span></span>  
 
- <span data-ttu-id="aeb41-110">Yöntem başarılı olursa S_OK döndürür.</span><span class="sxs-lookup"><span data-stu-id="aeb41-110">Returns S_OK if the method succeeds.</span></span>  
+ <span data-ttu-id="0a0c3-111">Yöntem başarılı olursa S_OK döndürür.</span><span class="sxs-lookup"><span data-stu-id="0a0c3-111">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="aeb41-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="aeb41-111">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0a0c3-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0a0c3-112">Requirements</span></span>  
 
- <span data-ttu-id="aeb41-112">ALink. h gerektirir</span><span class="sxs-lookup"><span data-stu-id="aeb41-112">Requires alink.h</span></span>  
+ <span data-ttu-id="0a0c3-113">ALink. h gerektirir</span><span class="sxs-lookup"><span data-stu-id="0a0c3-113">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="aeb41-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="aeb41-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0a0c3-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0a0c3-114">See also</span></span>
 
-- [<span data-ttu-id="aeb41-114">IALink Arabirimi</span><span class="sxs-lookup"><span data-stu-id="aeb41-114">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="aeb41-115">IALink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="aeb41-115">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="aeb41-116">ALink API</span><span class="sxs-lookup"><span data-stu-id="aeb41-116">ALink API</span></span>](index.md)
+- [<span data-ttu-id="0a0c3-115">IALink Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0a0c3-115">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="0a0c3-116">IALink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0a0c3-116">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="0a0c3-117">ALink API</span><span class="sxs-lookup"><span data-stu-id="0a0c3-117">ALink API</span></span>](index.md)
