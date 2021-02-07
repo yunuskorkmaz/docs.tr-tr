@@ -1,17 +1,18 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: One-Time Windows Communication Foundation örnekleri için Kurulum yordamı'
 title: Windows Communication Foundation Örnekleri için Bir Kerelik Kurulum Prosedürü
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: bf25ea4734bad007fa3ac19df0664932d981519c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8d57da5e018a61c6d11c9a9dc319ee74ec19d2ac
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548123"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752099"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation Örnekleri için Bir Kerelik Kurulum Prosedürü
 
-Windows Communication Foundation (WCF) örneklerinin çoğu Internet Information Services (IIS) içinde barındırılır ve ortak bir sanal dizinden çalıştırılır. Bu tek seferlik kurulum yordamı, disk üzerinde bir klasör oluşturur; Ayrıca, **servicemodelsamples**adlı IIS 'ye bir sanal dizin ekler.
+Windows Communication Foundation (WCF) örneklerinin çoğu Internet Information Services (IIS) içinde barındırılır ve ortak bir sanal dizinden çalıştırılır. Bu tek seferlik kurulum yordamı, disk üzerinde bir klasör oluşturur; Ayrıca, **servicemodelsamples** adlı IIS 'ye bir sanal dizin ekler.
 
 **Servicemodelsamples** sanal DIZINI, IIS tarafından barındırılan bir hizmeti kullanan tüm örnekleri oluşturmak ve çalıştırmak için kullanılır. Bu, örnekleri çalıştırmak için gereken tek sanal dizindir. Örnek oluşturmak, bu sanal dizinde önceden dağıtılan tüm hizmetleri değiştirecek; Bu sanal dizinde yalnızca en son oluşturulan örnek dağıtılır ve kullanılabilir.
 
@@ -45,7 +46,7 @@ Windows Communication Foundation (WCF) örneklerinin çoğu Internet Information
 
 7. Örnekler yüklü değilse, [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerinden](https://www.microsoft.com/download/details.aspx?id=21459)onları yükleme.
 
-8. Örnekleri yükledikten sonra şuraya gidin: \<InstallDrive> :**\ WF_WCF_Samples \WCF\Setup \\ **
+8. Örnekleri yükledikten sonra şuraya gidin: \<InstallDrive> :**\ WF_WCF_Samples \WCF\Setup \\**
 
 9. **Setupvroot.bat** Batch dosyasını çalıştırın. Aşağıdaki adımlar gerçekleştirilir:
 

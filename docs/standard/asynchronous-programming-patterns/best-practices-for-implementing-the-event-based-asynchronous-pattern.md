@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: olay tabanlı zaman uyumsuz model uygulama için En Iyi uygulamalar'
 title: Olay Tabanlı Zaman Uyumsuz Desen Uygulamak için En İyi Yöntemler
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: 6c2df4c2877f9191bd2b8190869c359a74de8e8f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 8c34133664b9fae25ca2d9ef5e906a75c4603d58
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830499"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99751943"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Olay Tabanlı Zaman Uyumsuz Desen Uygulamak için En İyi Yöntemler
 
@@ -104,7 +105,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 - `IsBusy`Özelliği, `true` <em>MethodName</em>**zaman uyumsuz** yöntemi çağrıldıktan sonra ve <em>MethodName</em>**Completed** olayı oluşturulduktan önce döndürmelidir. Aksi takdirde, döndürmelidir `false` . <xref:System.ComponentModel.BackgroundWorker>Ve <xref:System.Net.WebClient> bileşenleri, bir özelliği kullanıma sunan sınıfların örnekleridir `IsBusy` .  
   
-### <a name="cancellation"></a>İptal Etme  
+### <a name="cancellation"></a>İptal  
   
 - Mümkünse iptali destekler. Bu, geliştiricilerin sınıfınızı kullandıklarında daha iyi bir uygulama kullanıcı deneyimi sağlamasına olanak sağlar.  
   
