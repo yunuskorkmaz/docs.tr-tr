@@ -1,13 +1,14 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: 57397-Handledexception'
 title: 57397 - UnhandledException
 ms.date: 03/30/2017
 ms.assetid: 0576aa4a-544c-45c1-8319-1b214824e83e
-ms.openlocfilehash: 2ba177e1942673eaec407a05ab14e387723caa78
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0d1206fd0b7cb5cf583ecca8deb6b0cf2231ec7b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275716"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99669260"
 ---
 # <a name="57397---unhandledexception"></a>57397 - UnhandledException
 
@@ -17,10 +18,10 @@ ms.locfileid: "96275716"
 |-|-|  
 |ID|57397|  
 |Anahtar sözcükler|Altyapı|  
-|Düzey|Kritik|  
+|Level|Kritik|  
 |Kanal|Microsoft-Windows-uygulama sunucusu-uygulamalar/analitik|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bu olay işlenmeyen bir özel duruma göre yayınlanır.  
   
