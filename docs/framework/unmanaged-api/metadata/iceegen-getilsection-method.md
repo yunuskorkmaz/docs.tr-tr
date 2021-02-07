@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ICeeGen:: GetIlSection yöntemi'
 title: ICeeGen::GetIlSection Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: 6f2db2ca-203f-4ac3-9530-208642ca385e
 topic_type:
 - apiref
-ms.openlocfilehash: c179d5e1ca976d8f425e7c408ceb663cba64f641
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 44195ec55480279494620aed6db566f1c2308a6c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95715348"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707013"
 ---
-# <a name="iceegengetilsection-method"></a><span data-ttu-id="ba907-102">ICeeGen::GetIlSection Yöntemi</span><span class="sxs-lookup"><span data-stu-id="ba907-102">ICeeGen::GetIlSection Method</span></span>
+# <a name="iceegengetilsection-method"></a><span data-ttu-id="73376-103">ICeeGen::GetIlSection Yöntemi</span><span class="sxs-lookup"><span data-stu-id="73376-103">ICeeGen::GetIlSection Method</span></span>
 
-<span data-ttu-id="ba907-103">Belirtilen tanıtıcı tarafından başvurulan ara dil kodu tabanının bölümünü alır.</span><span class="sxs-lookup"><span data-stu-id="ba907-103">Gets the section of the intermediate language code base referenced by the specified handle.</span></span>  
+<span data-ttu-id="73376-104">Belirtilen tanıtıcı tarafından başvurulan ara dil kodu tabanının bölümünü alır.</span><span class="sxs-lookup"><span data-stu-id="73376-104">Gets the section of the intermediate language code base referenced by the specified handle.</span></span>  
   
- <span data-ttu-id="ba907-104">Bu yöntem kullanılmıyor ve kullanılmamalıdır.</span><span class="sxs-lookup"><span data-stu-id="ba907-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="73376-105">Bu yöntem kullanılmıyor ve kullanılmamalıdır.</span><span class="sxs-lookup"><span data-stu-id="73376-105">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ba907-105">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="ba907-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="73376-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="73376-106">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetIlSection (  
@@ -36,21 +37,21 @@ HRESULT GetIlSection (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ba907-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="ba907-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="73376-107">Parametreler</span><span class="sxs-lookup"><span data-stu-id="73376-107">Parameters</span></span>  
 
  `section`  
- <span data-ttu-id="ba907-107">'ndaki Alınacak bölüm için tanıtıcı.</span><span class="sxs-lookup"><span data-stu-id="ba907-107">[in] The handle to the section to get.</span></span>  
+ <span data-ttu-id="73376-108">'ndaki Alınacak bölüm için tanıtıcı.</span><span class="sxs-lookup"><span data-stu-id="73376-108">[in] The handle to the section to get.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ba907-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ba907-108">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="73376-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="73376-109">Requirements</span></span>  
 
- <span data-ttu-id="ba907-109">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ba907-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="73376-110">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="73376-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ba907-110">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="ba907-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="73376-111">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="73376-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="ba907-111">**Kitaplık:** MsCorEE.dll kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="ba907-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="73376-112">**Kitaplık:** MsCorEE.dll kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="73376-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="ba907-112">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ba907-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="73376-113">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="73376-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ba907-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ba907-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="73376-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="73376-114">See also</span></span>
 
-- [<span data-ttu-id="ba907-114">ICeeGen Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ba907-114">ICeeGen Interface</span></span>](iceegen-interface.md)
+- [<span data-ttu-id="73376-115">ICeeGen Arabirimi</span><span class="sxs-lookup"><span data-stu-id="73376-115">ICeeGen Interface</span></span>](iceegen-interface.md)
