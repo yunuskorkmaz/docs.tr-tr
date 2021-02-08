@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi için: Ileti günlüğe kaydetme için güvenlik sorunları'
 title: İleti Günlüğe Kaydetme ile İlgili Güvenlik Konuları
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: 8594329fb27aa1d77a2baffee2a7e37ea0d009c4
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 88adc4eb772ad8c39ace23f2771ee68fa2288c3c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96283776"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99771021"
 ---
 # <a name="security-concerns-for-message-logging"></a>İleti Günlüğe Kaydetme ile İlgili Güvenlik Konuları
 

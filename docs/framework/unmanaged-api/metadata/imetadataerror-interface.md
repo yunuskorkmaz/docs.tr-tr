@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: IMetaDataError arabirimi'
 title: IMetaDataError Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0020b62c-ea88-40c7-a9ee-16b064f81624
 topic_type:
 - apiref
-ms.openlocfilehash: 5f5e04787ce0ab0e1c8ecf3c19ba37e76ba38bfe
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f32c8abc3cccce770b86ce47016d9b7e18acad23
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95701932"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99771697"
 ---
 # <a name="imetadataerror-interface"></a>IMetaDataError Arabirimi
 

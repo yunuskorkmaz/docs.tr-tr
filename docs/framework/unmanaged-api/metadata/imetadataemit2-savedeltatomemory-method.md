@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: IMetaDataEmit2:: SaveDeltaToMemory yöntemi'
 title: IMetaDataEmit2::SaveDeltaToMemory Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: e2146726-0084-4c9e-a2d2-e8d461b13b21
 topic_type:
 - apiref
-ms.openlocfilehash: a4dbe090987248ef77ce371b5bc6fb42d898f726
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3ef01889df6dede85947508ca08635c95d655666
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705416"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99771762"
 ---
 # <a name="imetadataemit2savedeltatomemory-method"></a>IMetaDataEmit2::SaveDeltaToMemory Yöntemi
 
 Değişiklikleri geçerli Düzenle ve devam et oturumundan belleğe kaydeder.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT SaveDeltaToMemory (  

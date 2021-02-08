@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: etkinlik'
 title: Etkinlik
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-ms.openlocfilehash: 96d89a69071a90a81ead7d594eb495c5d0cdfc63
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1cedda295e6bf2c6d1a16a88275bdcfa4d15d083
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96254460"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99770852"
 ---
 # <a name="activity"></a>Etkinlik
 

@@ -1,19 +1,20 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Microsoft. Transactions. TransactionBridge. Registrationkoordinatuhatalı'
 title: Microsoft.Transactions.TransactionBridge.RegistrationCoordinatorFaulted
 ms.date: 03/30/2017
 ms.assetid: 8193027e-9db2-4af9-a072-27300cd24330
-ms.openlocfilehash: 5066501faf4c336e095910e7e2d8ba1186ba3386
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: aae2d5824f4205a05e98c7ef00d27c6a844e1566
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96251873"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99770605"
 ---
 # <a name="microsofttransactionstransactionbridgeregistrationcoordinatorfaulted"></a>Microsoft.Transactions.TransactionBridge.RegistrationCoordinatorFaulted
 
 WS-AT protokol hizmeti, bir yazmaç iletisine yanıt olarak düzenleyicinden bir hata aldı.  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Yerel TransactionManager, döndürülmekte olan bir hata nedeniyle üst işlemi ile kayıt yapamezse izleniyor.  
   

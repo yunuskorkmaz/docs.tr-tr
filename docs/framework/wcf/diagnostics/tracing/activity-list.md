@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: etkinlik listesi'
 title: Etkinlik Listesi
 ms.date: 03/30/2017
 ms.assetid: 5540e185-ce8e-4db3-83b0-2b9f5bf71829
-ms.openlocfilehash: d28ae2e4750c718c35105d090aff8d085025b9d6
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 656c605e81872405aa8637b647b40278b06913cb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96236097"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99770878"
 ---
 # <a name="activity-list"></a>Etkinlik Listesi
 
@@ -20,7 +21,7 @@ Bu konu, Windows Communication Foundation (WCF) tarafından tanımlanan tüm etk
 
  Aşağıdaki tabloda, önemli kullanım senaryoları için tüm etkinlikler listelenmektedir.  
   
-|Etiketle|Etkinlik Adı|Etkinlik Türü|Açıklama|  
+|Etiketle|Etkinlik Adı|Etkinlik Türü|Description|  
 |-----------|-------------------|-------------------|-----------------|  
 |A, D|Çevresel etkinlik|Yok (ServiceModel tarafından denetlenmiyor)|KIMLIĞI, ServiceModel koduna (istemci tarafı veya sunucu tarafı) yapılan herhangi bir çağrının önüne TLS olarak ayarlanmış olan etkinlik.<br /><br /> Örnek: WCF istemcisi veya serviceHost üzerinde Open çağrısı yapılacak bir etkinlik. Open çağırılır.|  
 |B|Oluştur<br /><br /> Endpoint. ContractType: ' [Type] '.|Oluştur||  
@@ -39,14 +40,14 @@ Bu konu, Windows Communication Foundation (WCF) tarafından tanımlanan tüm etk
 
  Aşağıdaki tabloda güvenlik ile ilgili tüm etkinlikler listelenmektedir.  
   
-|Etkinlik Adı|Etkinlik Türü|Açıklama|  
+|Etkinlik Adı|Etkinlik Türü|Description|  
 |-------------------|-------------------|-----------------|  
 |Güvenli oturum ayarla|SetupSecurity|Yalnızca istemci tarafında bulunur. Kimlik doğrulaması için tüm RST */SCT değişimlerinin yanı sıra güvenlik bağlamını ayarlamaya da sahiptir. `propagateActivity` = `true` Bu etkinlik, hizmetin karşılık gelen işlem eylemi RST \* /SCT etkinlikleriyle birleştirilir.|  
 |Güvenli oturumu Kapat|SetupSecurity|İstemci tarafında bulunur. Güvenli oturumu kapatmak için Iptal iletisi değişimini içerir. `propagateActivity` = `true` Bu etkinlik, hizmetten "iptal" işlem eylemiyle birleştirilir.|  
   
  Aşağıdaki tabloda, COM+ ile ilgili tüm etkinlikler listelenmektedir.  
   
-|Etkinlik Adı|Etkinlik Türü|Açıklama|  
+|Etkinlik Adı|Etkinlik Türü|Description|  
 |-------------------|-------------------|-----------------|  
 |COM+ örneği oluştur|TransferToCOMPlus|WCF kodundan gelen her COM+ çağrısı için 1 etkinlik örneği|  
 |COM+ yürütme \<operation>|TransferToCOMPlus|WCF kodundan gelen her COM+ çağrısı için 1 etkinlik örneği|  
@@ -55,7 +56,7 @@ Bu konu, Windows Communication Foundation (WCF) tarafından tanımlanan tüm etk
 
  Aşağıdaki tabloda WMI ile ilgili tüm etkinlikler listelenmektedir.  
   
-|Etkinlik Adı|Etkinlik Türü|Açıklama|  
+|Etkinlik Adı|Etkinlik Türü|Description|  
 |-------------------|-------------------|-----------------|  
 |WMI Get|Wgetobject|Kullanıcı WMI 'dan veri alıyor.|  
 |WMI put|Wmiputınstance|Kullanıcı WMI ile verileri güncelleştiriyor.|

@@ -1,19 +1,20 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: saniyede durdurulan Işlem sayısı'
 title: Uygulanıp Durdurulan İşlem/Saniye
 ms.date: 03/30/2017
 ms.assetid: 19fc993f-2b3d-4898-852e-3b98ec2153a5
-ms.openlocfilehash: 1a23420ca1521a11168a859eef61cb8861a144f9
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: de130c18e065e48ed7ac18442b2bc5f82c2f6861
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96250027"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99771203"
 ---
 # <a name="transacted-operations-aborted-per-second"></a>Uygulanıp Durdurulan İşlem/Saniye
 
 Sayaç adı: Işlenen Işlem/saniye.  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Saniye içinde bu hizmette durdurulan işlem işlemlerinin sayısı.  
   

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: yönetim ve tanılama'
 title: Yönetim ve Tanılama
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - administration [WCF]
 - WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
-ms.openlocfilehash: 703724c3040f2508f011e002c22fa45dd3197884
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: aa2efe31431f80dda6c98b0ac13162e32390b12c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96285570"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99771268"
 ---
 # <a name="administration-and-diagnostics"></a>Yönetim ve Tanılama
 
