@@ -1,4 +1,5 @@
 ---
+description: ': ICLRDebugManager:: ısdebuggerekli yöntemi hakkında daha fazla bilgi edinin'
 title: ICLRDebugManager::IsDebuggerAttached Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 2f105fe0-f52d-49c5-bda5-583fb27e3aa6
 topic_type:
 - apiref
-ms.openlocfilehash: 71e11d7db3bd679e7972fb2f6ce098edc3399885
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 74305989797bcb553feb727a133e24bd308ac715
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731026"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99772139"
 ---
 # <a name="iclrdebugmanagerisdebuggerattached-method"></a>ICLRDebugManager::IsDebuggerAttached Yöntemi
 
 Bir hata ayıklayıcının işleme bağlı olup olmadığını gösteren bir değer alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT IsDebuggerAttached (  
@@ -41,7 +42,7 @@ HRESULT IsDebuggerAttached (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`IsDebuggerAttached` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
