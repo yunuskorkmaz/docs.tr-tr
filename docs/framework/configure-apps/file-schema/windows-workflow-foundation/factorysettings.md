@@ -1,18 +1,19 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <factorySettings>'
 title: <factorySettings>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 202aad17-1b8b-4c87-ad57-4ca5de18ed35
-ms.openlocfilehash: 9f9183d4c579c4f7c7985e5c7f372604d8d82947
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 766e68bbf2a48725b2603221bfbbcd25b0a83acb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91150862"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795072"
 ---
 # \<factorySettings>
 
-<span data-ttu-id="7cbce-101">Kanal üreteci önbellek ayarlarını belirtir.</span><span class="sxs-lookup"><span data-stu-id="7cbce-101">Specifies the settings of the channel factory cache.</span></span>  
+<span data-ttu-id="c8d1f-102">Kanal üreteci önbellek ayarlarını belirtir.</span><span class="sxs-lookup"><span data-stu-id="c8d1f-102">Specifies the settings of the channel factory cache.</span></span>  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.ServiceModel>**](system-servicemodel-of-workflow.md)\
@@ -22,7 +23,7 @@ ms.locfileid: "91150862"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<sendMessageChannelCache>**](sendmessagechannelcache.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<factorySettings>**  
   
-## <a name="syntax"></a><span data-ttu-id="7cbce-102">Syntax</span><span class="sxs-lookup"><span data-stu-id="7cbce-102">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c8d1f-103">Syntax</span><span class="sxs-lookup"><span data-stu-id="c8d1f-103">Syntax</span></span>  
   
 ```xml  
 <behaviors>
@@ -38,39 +39,39 @@ ms.locfileid: "91150862"
 </behaviors>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="7cbce-103">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="7cbce-103">Attributes and Elements</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="c8d1f-104">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="c8d1f-104">Attributes and Elements</span></span>  
 
- <span data-ttu-id="7cbce-104">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="7cbce-104">The following sections describe attributes, child elements, and parent elements.</span></span>  
+ <span data-ttu-id="c8d1f-105">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="c8d1f-105">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="7cbce-105">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="7cbce-105">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="c8d1f-106">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="c8d1f-106">Attributes</span></span>  
   
-|<span data-ttu-id="7cbce-106">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="7cbce-106">Attribute</span></span>|<span data-ttu-id="7cbce-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="7cbce-107">Description</span></span>|  
+|<span data-ttu-id="c8d1f-107">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="c8d1f-107">Attribute</span></span>|<span data-ttu-id="c8d1f-108">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c8d1f-108">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="7cbce-108">IdleTimeout</span><span class="sxs-lookup"><span data-stu-id="7cbce-108">idleTimeout</span></span>|<span data-ttu-id="7cbce-109">En fazla kendisi için nesne önbellekte atıldı önce boşta kalacağını zaman aralığını belirten bir TimeSpan değeri.</span><span class="sxs-lookup"><span data-stu-id="7cbce-109">A TimeSpan value that specifies the maximum interval of time for which the object can remain idle in the cache before being disposed.</span></span>|  
-|<span data-ttu-id="7cbce-110">leaseTimeout</span><span class="sxs-lookup"><span data-stu-id="7cbce-110">leaseTimeout</span></span>|<span data-ttu-id="7cbce-111">Bir nesne önbellekten kaldırıldıktan sonra geçen zaman aralığını belirten bir TimeSpan değeri.</span><span class="sxs-lookup"><span data-stu-id="7cbce-111">A TimeSpan value that specifies  the interval of time after which an object is removed from the cache.</span></span>|  
-|<span data-ttu-id="7cbce-112">maxItemsInCache</span><span class="sxs-lookup"><span data-stu-id="7cbce-112">maxItemsInCache</span></span>|<span data-ttu-id="7cbce-113">Bir tamsayı önbellekte olabilir nesneleri sayısı üst sınırını belirtir.</span><span class="sxs-lookup"><span data-stu-id="7cbce-113">An integer that specifies the maximum number of objects that can be in the cache.</span></span>|  
+|<span data-ttu-id="c8d1f-109">IdleTimeout</span><span class="sxs-lookup"><span data-stu-id="c8d1f-109">idleTimeout</span></span>|<span data-ttu-id="c8d1f-110">En fazla kendisi için nesne önbellekte atıldı önce boşta kalacağını zaman aralığını belirten bir TimeSpan değeri.</span><span class="sxs-lookup"><span data-stu-id="c8d1f-110">A TimeSpan value that specifies the maximum interval of time for which the object can remain idle in the cache before being disposed.</span></span>|  
+|<span data-ttu-id="c8d1f-111">leaseTimeout</span><span class="sxs-lookup"><span data-stu-id="c8d1f-111">leaseTimeout</span></span>|<span data-ttu-id="c8d1f-112">Bir nesne önbellekten kaldırıldıktan sonra geçen zaman aralığını belirten bir TimeSpan değeri.</span><span class="sxs-lookup"><span data-stu-id="c8d1f-112">A TimeSpan value that specifies  the interval of time after which an object is removed from the cache.</span></span>|  
+|<span data-ttu-id="c8d1f-113">maxItemsInCache</span><span class="sxs-lookup"><span data-stu-id="c8d1f-113">maxItemsInCache</span></span>|<span data-ttu-id="c8d1f-114">Bir tamsayı önbellekte olabilir nesneleri sayısı üst sınırını belirtir.</span><span class="sxs-lookup"><span data-stu-id="c8d1f-114">An integer that specifies the maximum number of objects that can be in the cache.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="7cbce-114">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="7cbce-114">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="c8d1f-115">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="c8d1f-115">Child Elements</span></span>  
 
- <span data-ttu-id="7cbce-115">Yok.</span><span class="sxs-lookup"><span data-stu-id="7cbce-115">None.</span></span>  
+ <span data-ttu-id="c8d1f-116">Yok.</span><span class="sxs-lookup"><span data-stu-id="c8d1f-116">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="7cbce-116">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="7cbce-116">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="c8d1f-117">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="c8d1f-117">Parent Elements</span></span>  
   
-|<span data-ttu-id="7cbce-117">Öğe</span><span class="sxs-lookup"><span data-stu-id="7cbce-117">Element</span></span>|<span data-ttu-id="7cbce-118">Açıklama</span><span class="sxs-lookup"><span data-stu-id="7cbce-118">Description</span></span>|  
+|<span data-ttu-id="c8d1f-118">Öğe</span><span class="sxs-lookup"><span data-stu-id="c8d1f-118">Element</span></span>|<span data-ttu-id="c8d1f-119">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c8d1f-119">Description</span></span>|  
 |-------------|-----------------|  
-|[\<sendMessageChannelCache>](sendmessagechannelcache.md)|<span data-ttu-id="7cbce-119">Önbellek paylaşım düzeylerinin özelleştirilmesine, kanal fabrikası önbelleğinin ayarlarına ve ileti gönderme etkinlikleri kullanarak hizmet uç noktalarına ileti gönderen iş akışları için kanal önbelleğinin ayarlarına olanak tanıyan bir hizmet davranışı.</span><span class="sxs-lookup"><span data-stu-id="7cbce-119">A service behavior that enables the customization of the cache sharing levels, the settings of the channel factory cache, and the settings of the channel cache for workflows that send messages to service endpoints using Send messaging activities.</span></span>|  
+|[\<sendMessageChannelCache>](sendmessagechannelcache.md)|<span data-ttu-id="c8d1f-120">Önbellek paylaşım düzeylerinin özelleştirilmesine, kanal fabrikası önbelleğinin ayarlarına ve ileti gönderme etkinlikleri kullanarak hizmet uç noktalarına ileti gönderen iş akışları için kanal önbelleğinin ayarlarına olanak tanıyan bir hizmet davranışı.</span><span class="sxs-lookup"><span data-stu-id="c8d1f-120">A service behavior that enables the customization of the cache sharing levels, the settings of the channel factory cache, and the settings of the channel cache for workflows that send messages to service endpoints using Send messaging activities.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="7cbce-120">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="7cbce-120">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c8d1f-121">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="c8d1f-121">Remarks</span></span>  
 
- <span data-ttu-id="7cbce-121">Bu hizmet davranışını ileti göndermek için hizmet bitiş noktası iş akışları için yöneliktir.</span><span class="sxs-lookup"><span data-stu-id="7cbce-121">This service behavior is intended for workflows that send messages to service endpoints.</span></span> <span data-ttu-id="7cbce-122">Bu iş akışları genellikle istemci iş akışlarıdır ancak içinde barındırılan iş akışı Hizmetleri ayrıca olabilir bir <xref:System.ServiceModel.WorkflowServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="7cbce-122">These workflows are typically client workflows but could also be workflow services that are hosted in a <xref:System.ServiceModel.WorkflowServiceHost>.</span></span>  
+ <span data-ttu-id="c8d1f-122">Bu hizmet davranışını ileti göndermek için hizmet bitiş noktası iş akışları için yöneliktir.</span><span class="sxs-lookup"><span data-stu-id="c8d1f-122">This service behavior is intended for workflows that send messages to service endpoints.</span></span> <span data-ttu-id="c8d1f-123">Bu iş akışları genellikle istemci iş akışlarıdır ancak içinde barındırılan iş akışı Hizmetleri ayrıca olabilir bir <xref:System.ServiceModel.WorkflowServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="c8d1f-123">These workflows are typically client workflows but could also be workflow services that are hosted in a <xref:System.ServiceModel.WorkflowServiceHost>.</span></span>  
   
- <span data-ttu-id="7cbce-123">Varsayılan olarak, bir iş akışı tarafından barındırılan bir <xref:System.ServiceModel.WorkflowServiceHost>, tarafından kullanılan önbellek <xref:System.ServiceModel.Activities.Send> etkinlikler ileti sistemi tüm iş akışı durumlarda arasında paylaşılır <xref:System.ServiceModel.WorkflowServiceHost> (ana bilgisayar önbelleğe alma düzeyi).</span><span class="sxs-lookup"><span data-stu-id="7cbce-123">By default, in a workflow hosted by a <xref:System.ServiceModel.WorkflowServiceHost>, the cache used by <xref:System.ServiceModel.Activities.Send> messaging activities is shared across all workflow instances in the <xref:System.ServiceModel.WorkflowServiceHost> (host-level caching).</span></span> <span data-ttu-id="7cbce-124">Tarafından barındırılmadığında bir istemci iş akışı için bir <xref:System.ServiceModel.WorkflowServiceHost>, önbelleğe yalnızca (örnek düzeyi önbelleğe alma) iş akışı örneği için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="7cbce-124">For a client workflow that is not hosted by a <xref:System.ServiceModel.WorkflowServiceHost>, the cache is available only to the workflow instance (instance-level caching).</span></span> <span data-ttu-id="7cbce-125">Önbelleğe alma herhangi bir gönderme etkinlik bitiş noktaları yapılandırmasında tanımlandığı sahip akışınızın için varsayılan olarak devre dışıdır.</span><span class="sxs-lookup"><span data-stu-id="7cbce-125">Caching is disabled by default for any send activity in your workflow that has endpoints defined in configuration.</span></span>  
+ <span data-ttu-id="c8d1f-124">Varsayılan olarak, bir iş akışı tarafından barındırılan bir <xref:System.ServiceModel.WorkflowServiceHost>, tarafından kullanılan önbellek <xref:System.ServiceModel.Activities.Send> etkinlikler ileti sistemi tüm iş akışı durumlarda arasında paylaşılır <xref:System.ServiceModel.WorkflowServiceHost> (ana bilgisayar önbelleğe alma düzeyi).</span><span class="sxs-lookup"><span data-stu-id="c8d1f-124">By default, in a workflow hosted by a <xref:System.ServiceModel.WorkflowServiceHost>, the cache used by <xref:System.ServiceModel.Activities.Send> messaging activities is shared across all workflow instances in the <xref:System.ServiceModel.WorkflowServiceHost> (host-level caching).</span></span> <span data-ttu-id="c8d1f-125">Tarafından barındırılmadığında bir istemci iş akışı için bir <xref:System.ServiceModel.WorkflowServiceHost>, önbelleğe yalnızca (örnek düzeyi önbelleğe alma) iş akışı örneği için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="c8d1f-125">For a client workflow that is not hosted by a <xref:System.ServiceModel.WorkflowServiceHost>, the cache is available only to the workflow instance (instance-level caching).</span></span> <span data-ttu-id="c8d1f-126">Önbelleğe alma herhangi bir gönderme etkinlik bitiş noktaları yapılandırmasında tanımlandığı sahip akışınızın için varsayılan olarak devre dışıdır.</span><span class="sxs-lookup"><span data-stu-id="c8d1f-126">Caching is disabled by default for any send activity in your workflow that has endpoints defined in configuration.</span></span>  
   
- <span data-ttu-id="7cbce-126">Kanal fabrikası ve kanal önbelleği için varsayılan önbellek paylaşım düzeylerini ve önbellek ayarlarını değiştirme hakkında daha fazla bilgi için bkz. [gönderme etkinlikleri Için önbellek paylaşımı düzeylerini değiştirme](../../../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).</span><span class="sxs-lookup"><span data-stu-id="7cbce-126">For more information about how to change the default cache sharing levels and cache settings for the channel factory and channel cache, see [Changing the Cache Sharing Levels for Send Activities](../../../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).</span></span>  
+ <span data-ttu-id="c8d1f-127">Kanal fabrikası ve kanal önbelleği için varsayılan önbellek paylaşım düzeylerini ve önbellek ayarlarını değiştirme hakkında daha fazla bilgi için bkz. [gönderme etkinlikleri Için önbellek paylaşımı düzeylerini değiştirme](../../../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).</span><span class="sxs-lookup"><span data-stu-id="c8d1f-127">For more information about how to change the default cache sharing levels and cache settings for the channel factory and channel cache, see [Changing the Cache Sharing Levels for Send Activities](../../../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7cbce-127">Örnek</span><span class="sxs-lookup"><span data-stu-id="7cbce-127">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="c8d1f-128">Örnek</span><span class="sxs-lookup"><span data-stu-id="c8d1f-128">Example</span></span>  
 
- <span data-ttu-id="7cbce-128">Barındırılan iş akışı hizmetinde, uygulama yapılandırma dosyasında üreteci önbellek ve kanal önbellek ayarları belirtebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7cbce-128">In a hosted workflow service, you can specify the factory cache and channel cache settings in the application configuration file.</span></span> <span data-ttu-id="7cbce-129">Bunu yapmak için üretecini ve kanal önbellek için önbellek ayarlarını içeren bir hizmet davranışını ekleyin ve bu hizmet davranışını hizmetinize ekleyin.</span><span class="sxs-lookup"><span data-stu-id="7cbce-129">To do so, add a service behavior that contains the cache settings for the factory and channel cache and add this service behavior to your service.</span></span> <span data-ttu-id="7cbce-130">Aşağıdaki örnek, `MyChannelCacheBehavior` özel fabrika önbelleği ve kanal önbelleği ayarları ile hizmet davranışını içeren bir yapılandırma dosyasının içeriğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="7cbce-130">The following example shows the contents of a configuration file that contains the `MyChannelCacheBehavior` service behavior with the custom factory cache and channel cache settings.</span></span> <span data-ttu-id="7cbce-131">Bu hizmet davranışı, özelliği aracılığıyla hizmete eklenir `behaviorConfiguration` .</span><span class="sxs-lookup"><span data-stu-id="7cbce-131">This service behavior is added to the service through the `behaviorConfiguration` attribute.</span></span>  
+ <span data-ttu-id="c8d1f-129">Barındırılan iş akışı hizmetinde, uygulama yapılandırma dosyasında üreteci önbellek ve kanal önbellek ayarları belirtebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="c8d1f-129">In a hosted workflow service, you can specify the factory cache and channel cache settings in the application configuration file.</span></span> <span data-ttu-id="c8d1f-130">Bunu yapmak için üretecini ve kanal önbellek için önbellek ayarlarını içeren bir hizmet davranışını ekleyin ve bu hizmet davranışını hizmetinize ekleyin.</span><span class="sxs-lookup"><span data-stu-id="c8d1f-130">To do so, add a service behavior that contains the cache settings for the factory and channel cache and add this service behavior to your service.</span></span> <span data-ttu-id="c8d1f-131">Aşağıdaki örnek, `MyChannelCacheBehavior` özel fabrika önbelleği ve kanal önbelleği ayarları ile hizmet davranışını içeren bir yapılandırma dosyasının içeriğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="c8d1f-131">The following example shows the contents of a configuration file that contains the `MyChannelCacheBehavior` service behavior with the custom factory cache and channel cache settings.</span></span> <span data-ttu-id="c8d1f-132">Bu hizmet davranışı, özelliği aracılığıyla hizmete eklenir `behaviorConfiguration` .</span><span class="sxs-lookup"><span data-stu-id="c8d1f-132">This service behavior is added to the service through the `behaviorConfiguration` attribute.</span></span>  
   
 ```xml  
 <configuration>
@@ -94,10 +95,10 @@ ms.locfileid: "91150862"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="7cbce-132">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7cbce-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c8d1f-133">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c8d1f-133">See also</span></span>
 
 - <xref:System.ServiceModel.Activities.SendMessageChannelCache>
 - <xref:System.ServiceModel.Activities.Configuration.SendMessageChannelCacheElement>
 - <xref:System.ServiceModel.Activities.Send>
 - <xref:System.ServiceModel.Activities.ChannelCacheSettings>
-- [<span data-ttu-id="7cbce-133">Gönderme İşlemleri için Önbellek Paylaşımı Düzeylerini Değiştirme</span><span class="sxs-lookup"><span data-stu-id="7cbce-133">Changing the Cache Sharing Levels for Send Activities</span></span>](../../../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)
+- [<span data-ttu-id="c8d1f-134">Gönderme İşlemleri için Önbellek Paylaşımı Düzeylerini Değiştirme</span><span class="sxs-lookup"><span data-stu-id="c8d1f-134">Changing the Cache Sharing Levels for Send Activities</span></span>](../../../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ICorDebugValue3 Interface'
 title: ICorDebugValue3 Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,38 +15,38 @@ helpviewer_keywords:
 ms.assetid: 7d5385d3-f4a5-47c4-8478-a3513b5e9406
 topic_type:
 - apiref
-ms.openlocfilehash: 419efc7f21f4ac2e68657b2a4d69a8690a2938d4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e5868b91d23426a2d8dd8fed87b13ec61fef95ef
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722316"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794656"
 ---
-# <a name="icordebugvalue3-interface"></a><span data-ttu-id="97635-102">ICorDebugValue3 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="97635-102">ICorDebugValue3 Interface</span></span>
+# <a name="icordebugvalue3-interface"></a><span data-ttu-id="f6335-103">ICorDebugValue3 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="f6335-103">ICorDebugValue3 Interface</span></span>
 
-<span data-ttu-id="97635-103">2 GB 'den büyük diziler için destek sağlamak üzere "ICorDebugValue" ve "ICorDebugValue2" arabirimlerini genişletir.</span><span class="sxs-lookup"><span data-stu-id="97635-103">Extends the "ICorDebugValue" and "ICorDebugValue2" interfaces to provide support for arrays that are larger than 2 GB.</span></span>  
+<span data-ttu-id="f6335-104">2 GB 'den büyük diziler için destek sağlamak üzere "ICorDebugValue" ve "ICorDebugValue2" arabirimlerini genişletir.</span><span class="sxs-lookup"><span data-stu-id="f6335-104">Extends the "ICorDebugValue" and "ICorDebugValue2" interfaces to provide support for arrays that are larger than 2 GB.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="97635-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="97635-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="f6335-105">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="f6335-105">Methods</span></span>  
   
-|<span data-ttu-id="97635-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="97635-105">Method</span></span>|<span data-ttu-id="97635-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="97635-106">Description</span></span>|  
+|<span data-ttu-id="f6335-106">Yöntem</span><span class="sxs-lookup"><span data-stu-id="f6335-106">Method</span></span>|<span data-ttu-id="f6335-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f6335-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="97635-107">GetSize64 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="97635-107">GetSize64 Method</span></span>](icordebugvalue3-getsize64-method.md)|<span data-ttu-id="97635-108">Bu nesnenin boyutunu bayt cinsinden alır `ICorDebugValue3` .</span><span class="sxs-lookup"><span data-stu-id="97635-108">Gets the size, in bytes, of this `ICorDebugValue3` object.</span></span>|  
+|[<span data-ttu-id="f6335-108">GetSize64 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="f6335-108">GetSize64 Method</span></span>](icordebugvalue3-getsize64-method.md)|<span data-ttu-id="f6335-109">Bu nesnenin boyutunu bayt cinsinden alır `ICorDebugValue3` .</span><span class="sxs-lookup"><span data-stu-id="f6335-109">Gets the size, in bytes, of this `ICorDebugValue3` object.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="97635-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="97635-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f6335-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="f6335-110">Remarks</span></span>  
 
- <span data-ttu-id="97635-110">[ICorDebugValue:: GetSize](icordebugvalue3-getsize64-method.md) yöntemi, 0 ile 2.147.483.647 bayt arasında değişen bir nesne boyutu döndürür.</span><span class="sxs-lookup"><span data-stu-id="97635-110">The [ICorDebugValue::GetSize](icordebugvalue3-getsize64-method.md) method returns an object size that ranges from 0 to 2,147,483,647 bytes.</span></span> <span data-ttu-id="97635-111">.NET Framework 4,5 ' de, dizilerin boyutu 2 GB 'ı aşabilirler.</span><span class="sxs-lookup"><span data-stu-id="97635-111">In the .NET Framework 4.5, the size of arrays can exceed 2 GB.</span></span> <span data-ttu-id="97635-112">`ICorDebugValue3`Arabirim, bu dizilerin boyutunu belirlemenizi sağlar.</span><span class="sxs-lookup"><span data-stu-id="97635-112">The `ICorDebugValue3` interface enables you to determine the size of these arrays.</span></span>  
+ <span data-ttu-id="f6335-111">[ICorDebugValue:: GetSize](icordebugvalue3-getsize64-method.md) yöntemi, 0 ile 2.147.483.647 bayt arasında değişen bir nesne boyutu döndürür.</span><span class="sxs-lookup"><span data-stu-id="f6335-111">The [ICorDebugValue::GetSize](icordebugvalue3-getsize64-method.md) method returns an object size that ranges from 0 to 2,147,483,647 bytes.</span></span> <span data-ttu-id="f6335-112">.NET Framework 4,5 ' de, dizilerin boyutu 2 GB 'ı aşabilirler.</span><span class="sxs-lookup"><span data-stu-id="f6335-112">In the .NET Framework 4.5, the size of arrays can exceed 2 GB.</span></span> <span data-ttu-id="f6335-113">`ICorDebugValue3`Arabirim, bu dizilerin boyutunu belirlemenizi sağlar.</span><span class="sxs-lookup"><span data-stu-id="f6335-113">The `ICorDebugValue3` interface enables you to determine the size of these arrays.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="97635-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="97635-113">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f6335-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f6335-114">Requirements</span></span>  
 
- <span data-ttu-id="97635-114">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="97635-114">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="f6335-115">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f6335-115">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="97635-115">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="97635-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f6335-116">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="f6335-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="97635-116">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="97635-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f6335-117">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="f6335-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="97635-117">**.NET Framework sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="97635-117">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="f6335-118">**.NET Framework sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f6335-118">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="97635-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="97635-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f6335-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f6335-119">See also</span></span>
 
-- [<span data-ttu-id="97635-119">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="97635-119">Debugging Interfaces</span></span>](debugging-interfaces.md)
-- [<span data-ttu-id="97635-120">Hata Ayıklama</span><span class="sxs-lookup"><span data-stu-id="97635-120">Debugging</span></span>](index.md)
+- [<span data-ttu-id="f6335-120">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="f6335-120">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="f6335-121">Hata Ayıklama</span><span class="sxs-lookup"><span data-stu-id="f6335-121">Debugging</span></span>](index.md)
