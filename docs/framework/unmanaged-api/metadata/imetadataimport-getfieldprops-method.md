@@ -1,4 +1,5 @@
 ---
+description: ': IMetaDataImport:: GetFieldProps yöntemi hakkında daha fazla bilgi edinin'
 title: IMetaDataImport::GetFieldProps Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 7b0e9b10-8cef-4ba6-8432-40bf63e65ab1
 topic_type:
 - apiref
-ms.openlocfilehash: 458a90bc47711d9f831805faa8468a49f3e0d305
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 76735f837ff53b46b35cdf8c39990ed8689cc69c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95704009"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789209"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>IMetaDataImport::GetFieldProps Metodu
 
 Belirtilen FieldDef belirtecinin başvurduğu alanla ilişkili meta verileri alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetFieldProps (  

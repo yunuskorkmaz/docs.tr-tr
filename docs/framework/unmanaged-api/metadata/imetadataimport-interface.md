@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: IMetaDataImport arabirimi'
 title: IMetaDataImport Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0adbbd35-5e8d-4fec-8268-dc70a07c5975
 topic_type:
 - apiref
-ms.openlocfilehash: 0049db66d7a753488388c85e87e1f907db56c7cf
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4fb0dc4cce6901858cde8cfbc494fce7ddbfeb0c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95679097"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789092"
 ---
 # <a name="imetadataimport-interface"></a>IMetaDataImport Arabirimi
 
@@ -68,7 +69,7 @@ Taşınabilir çalıştırılabilir (PE) dosyadan veya bir tür kitaplığı ya 
 |[GetInterfaceImplProps Yöntemi](imetadataimport-getinterfaceimplprops-method.md)|Belirtilen yöntemi uygulayan tür için ve bu yöntemi bildiren arabirim için meta veri belirteçlerine bir işaretçi alır.|  
 |[GetMemberProps Yöntemi](imetadataimport-getmemberprops-method.md)|Belirtilen meta veri belirtecinin başvurduğu tür üyesinin meta veri bilgilerini (ad, ikili imza ve göreli sanal adres dahil) alır.|  
 |[GetMemberRefProps Yöntemi](imetadataimport-getmemberrefprops-method.md)|Belirtilen belirteç tarafından başvurulan üyeyle ilişkili meta verileri alır.|  
-|[GetMethodProps Metodu](imetadataimport-getmethodprops-method.md)|Belirtilen MethodDef belirtecinin başvurduğu metotla ilişkili meta verileri alır.|  
+|[GetMethodProps Yöntemi](imetadataimport-getmethodprops-method.md)|Belirtilen MethodDef belirtecinin başvurduğu metotla ilişkili meta verileri alır.|  
 |[GetMethodSemantics Yöntemi](imetadataimport-getmethodsemantics-method.md)|Belirtilen MethodDef belirtecinin başvurduğu yöntem ile eşleştirilen özellik ve belirtilen EventProp belirteci tarafından başvurulan olay arasındaki ilişkiye yönelik bir işaretçi alır.|  
 |[GetModuleFromScope Yöntemi](imetadataimport-getmodulefromscope-method.md)|Geçerli meta veri kapsamında başvurulan modülün meta veri belirtecine yönelik bir işaretçi alır.|  
 |[GetModuleRefProps Yöntemi](imetadataimport-getmodulerefprops-method.md)|Belirtilen meta veri belirtecinin başvurduğu modülün adını alır.|  

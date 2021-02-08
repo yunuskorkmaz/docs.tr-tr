@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerCallback:: RemotingClientInvocationStarted yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerCallback::RemotingClientInvocationStarted Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 796b63f3-c809-47f1-89cc-b23ad8eb5e79
 topic_type:
 - apiref
-ms.openlocfilehash: 22b9970556dd9d8b5070f38a7712462aa5a4aae2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3727383c3a23fa9e4327970e84c6ebde4ab14db0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720171"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788975"
 ---
 # <a name="icorprofilercallbackremotingclientinvocationstarted-method"></a>ICorProfilerCallback::RemotingClientInvocationStarted Yöntemi
 

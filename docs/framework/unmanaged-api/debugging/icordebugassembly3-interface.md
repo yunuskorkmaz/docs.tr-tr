@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: ICorDebugAssembly3 Interface'
 title: ICorDebugAssembly3 Arabirimi
 ms.date: 03/30/2017
 ms.assetid: 17fc5d76-75a9-4933-83f0-594de7f973f3
-ms.openlocfilehash: 0260267a05a880fbb3ac48325e55deff326f5f87
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3a8cabf41dffa75d82c2b6fde53dff2ede4838e7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95688373"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791510"
 ---
 # <a name="icordebugassembly3-interface"></a>ICorDebugAssembly3 Arabirimi
 

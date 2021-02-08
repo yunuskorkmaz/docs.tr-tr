@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerCallback:: RuntimeResumeStarted yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerCallback::RuntimeResumeStarted Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5854bfb2-c568-4f19-904a-7c9d41e7b995
 topic_type:
 - apiref
-ms.openlocfilehash: 9a283d305c1a19112574cbf3486b1c67e64ed24c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 74e87906b4c429d795aa3074b25f4ac7a9edfa37
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95717287"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788845"
 ---
 # <a name="icorprofilercallbackruntimeresumestarted-method"></a>ICorProfilerCallback::RuntimeResumeStarted Yöntemi
 

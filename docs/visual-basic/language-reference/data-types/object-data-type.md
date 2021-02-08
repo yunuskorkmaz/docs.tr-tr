@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nesne veri türü'
 title: Nesne Veri Türü
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Object data type
 - Object data type [Visual Basic], reference
 ms.assetid: 61ea4a7c-3b3d-48d4-adc4-eacfa91779b2
-ms.openlocfilehash: 14770e74a0169dba3a45a04845dd32323e6201e3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b1f169e4e590335a0879f5ecd9b68507a3fa2ccb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415589"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792160"
 ---
 # <a name="object-data-type"></a>Nesne Veri Türü
 
@@ -54,9 +55,9 @@ Başvurduğu veri türü ne olursa olsun, bir `Object` değişken veri değerini
 
 - **Kan.** Tüm veri türleri ve tüm başvuru türleri veri türüne göre genişledir `Object` . Bu, herhangi `Object` bir türü bir hatayla karşılaşmadan dönüştürmek üzere dönüştürebileceğiniz anlamına gelir <xref:System.OverflowException?displayProperty=nameWithType> .
 
-  Ancak, değer türleri arasında dönüştürme yaparsanız `Object` , Visual Basic, yürütmeyi daha yavaş hale getiren *kutulama* ve *kutudan*çıkarma adlı işlemleri gerçekleştirir.
+  Ancak, değer türleri arasında dönüştürme yaparsanız `Object` , Visual Basic, yürütmeyi daha yavaş hale getiren *kutulama* ve *kutudan* çıkarma adlı işlemleri gerçekleştirir.
 
-- **Tür karakterleri.** `Object`değişmez değer türü karakteri veya tanımlayıcı türü karakteri yok.
+- **Tür karakterleri.** `Object` değişmez değer türü karakteri veya tanımlayıcı türü karakteri yok.
 
 - **Çerçeve türü.** .NET Framework karşılık gelen tür <xref:System.Object?displayProperty=nameWithType> sınıftır.
 

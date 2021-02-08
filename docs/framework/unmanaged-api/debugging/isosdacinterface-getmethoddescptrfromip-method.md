@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ısosdacınterface:: Getmethoddescptrfromıp yöntemi'
 title: 'Iosdacınterface:: Getmethoddescptrfromıp yöntemi'
 ms.date: 02/01/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: c3de9e5ffe23a13c126343c6f74f042bf1239609
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 8d7c7071b7b3fc520faea71c8d7792317745cfde
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421013"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790418"
 ---
 # <a name="isosdacinterfacegetmethoddescptrfromip-method"></a>Iosdacınterface:: Getmethoddescptrfromıp yöntemi
 
@@ -28,7 +29,7 @@ Verilen yerel yönerge adresini içeren yöntemi karşılık gelen MethodDesc i�
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 HRESULT GetMethodDescPtrFromIP(
@@ -43,7 +44,7 @@ HRESULT GetMethodDescPtrFromIP(
 'ndaki Çalışma zamanında yöntemi içindeki bir adres.
 
 `ppMD`\
-dışı `MethodDesc`Belirli yöntemin adresi.
+dışı `MethodDesc` Belirli yöntemin adresi.
 
 ## <a name="remarks"></a>Açıklamalar
 

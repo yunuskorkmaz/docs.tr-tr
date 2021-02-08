@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: iş parçacıkları zamanlama'
 title: İş parçacıklarını zamanlama
 ms.date: 03/30/2017
 helpviewer_keywords:
 - threading [.NET], scheduling
 - scheduling threads
 ms.assetid: 67e4a0eb-3095-4ea7-b20f-908faa476277
-ms.openlocfilehash: be1b87e9dd811606b1a57f3be39dc94a5c4f4043
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 61627a5b669e946116eaec03dbd93ab34bbfea9a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829888"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792368"
 ---
 # <a name="scheduling-threads"></a>İş parçacıklarını zamanlama
 

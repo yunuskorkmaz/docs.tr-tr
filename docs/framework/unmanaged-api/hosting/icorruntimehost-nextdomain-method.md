@@ -1,4 +1,5 @@
 ---
+description: ': ICorRuntimeHost:: NextDomain Yöntemi hakkında daha fazla bilgi edinin'
 title: ICorRuntimeHost::NextDomain Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: fe07a05b-f6d6-44b5-ab01-b9a6eb15c350
 topic_type:
 - apiref
-ms.openlocfilehash: 598c46d50d7b4a67c1b2c0d844c9b12deb12a428
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cfced9d1d3c91f4ec9508b86157ceebae9f95a56
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95671375"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789625"
 ---
 # <a name="icorruntimehostnextdomain-method"></a>ICorRuntimeHost::NextDomain Yöntemi
 
 Numaralandırmadaki bir sonraki etki alanına bir arabirim işaretçisi alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT NextDomain (  
@@ -45,7 +46,7 @@ HRESULT NextDomain (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|İşlem başarılı oldu.|  
 |S_FALSE|İşlem tamamlanamadı veya numaralandırmada başka etki alanı yok.|  

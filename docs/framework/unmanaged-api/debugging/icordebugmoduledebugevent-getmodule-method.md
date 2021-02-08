@@ -1,19 +1,20 @@
 ---
+description: ': Icordebugmoduledebuggevent:: GetModule yöntemi hakkında daha fazla bilgi edinin'
 title: 'Icordebugmoduledebuggevent:: GetModule yöntemi'
 ms.date: 03/30/2017
 ms.assetid: b1141c35-4253-4e34-b3e4-ed406a9dea4f
-ms.openlocfilehash: ec23cda02ff689a3365fe96fb5280054a9795caa
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c6d7171da231576ff90f54aaefe4b473af0afd40
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95709511"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790743"
 ---
 # <a name="icordebugmoduledebugeventgetmodule-method"></a>Icordebugmoduledebuggevent:: GetModule yöntemi
 
 Yeni yüklenen veya kaldırılan birleştirilmiş modülü alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetModule(  

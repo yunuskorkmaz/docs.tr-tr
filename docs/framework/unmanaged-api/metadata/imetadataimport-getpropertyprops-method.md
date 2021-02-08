@@ -1,4 +1,5 @@
 ---
+description: ': IMetaDataImport:: GetPropertyProps Yöntemi hakkında daha fazla bilgi edinin'
 title: IMetaDataImport::GetPropertyProps Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: dc0ff3e6-7e7d-4f6c-948d-52b28f5cb78c
 topic_type:
 - apiref
-ms.openlocfilehash: aded23e190de18d76bb2b9e2ffbae51cf2325419
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 25fae4488117a35d94479ce501154679b6b536ad
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729232"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789183"
 ---
 # <a name="imetadataimportgetpropertyprops-method"></a>IMetaDataImport::GetPropertyProps Metodu
 
 Belirtilen belirteç tarafından temsil edilen özelliğin meta verilerini alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetPropertyProps (  

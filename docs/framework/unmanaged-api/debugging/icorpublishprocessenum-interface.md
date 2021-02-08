@@ -1,4 +1,5 @@
 ---
+description: ': ICorPublishProcessEnum arabirimi hakkında daha fazla bilgi edinin'
 title: ICorPublishProcessEnum Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: aac8fcf9-ac09-437c-bd5c-2fda14ae1007
 topic_type:
 - apiref
-ms.openlocfilehash: ebf484524b32d8e917d88c21425fab314dfc41be
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 87d80d066995dbeca67f461e01652dd3deb3bf1b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95692624"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790496"
 ---
 # <a name="icorpublishprocessenum-interface"></a>ICorPublishProcessEnum Arabirimi
 
-ICorPublishEnum [ICorPublishEnum](icorpublishenum-interface.md) arabiriminin bir [ICorPublishProcess](icorpublishprocess-interface.md) nesneleri koleksiyonunu gezme yöntemleri sağlayan bir alt sınıfı.  
+ICorPublishEnum [](icorpublishenum-interface.md) arabiriminin bir [ICorPublishProcess](icorpublishprocess-interface.md) nesneleri koleksiyonunu gezme yöntemleri sağlayan bir alt sınıfı.  
   
 ## <a name="methods"></a>Yöntemler  
   

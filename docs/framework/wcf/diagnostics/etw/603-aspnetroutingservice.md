@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 603-AspNetRoutingService'
 title: 603 - AspNetRoutingService
 ms.date: 03/30/2017
 ms.assetid: 4a63dddc-72a2-4b43-b1f1-bfce434dcee9
-ms.openlocfilehash: 5055c231cf3da6f69a8dfd660c110bac3a4e0fe5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f8559bc9592bda6a03967b9602447eada20e5073
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96247011"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788338"
 ---
 # <a name="603---aspnetroutingservice"></a>603 - AspNetRoutingService
 
@@ -17,10 +18,10 @@ ms.locfileid: "96247011"
 |-|-|  
 |ID|603|  
 |Anahtar sözcükler|Yönlendirme hizmetleri|  
-|Düzey|Ayrıntılı|  
+|Level|Ayrıntılı|  
 |Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bu olay, gelen istek, adresi %1 olan ASP.NET rotasında tanımlanan bir WCF hizmeti ile eşleştiğinde yayınlanır.  
   

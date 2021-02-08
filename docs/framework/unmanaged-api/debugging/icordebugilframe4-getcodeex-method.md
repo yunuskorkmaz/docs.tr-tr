@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ICorDebugILFrame4:: GetCodeEx yöntemi'
 title: ICorDebugILFrame4::GetCodeEx Yöntemi
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ api_type:
 ms.assetid: aeda0e42-29ee-4ca8-9f21-ac4641677a62
 topic_type:
 - apiref
-ms.openlocfilehash: a88bb02626dc125c494e4bbe68bfe6ed8bfd3b7b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1d17dfa531354b8a4b0dd3c0d3d2eb47206900cc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719651"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791237"
 ---
 # <a name="icordebugilframe4getcodeex-method"></a>ICorDebugILFrame4::GetCodeEx Yöntemi
 
@@ -25,7 +26,7 @@ ms.locfileid: "95719651"
   
  Bu yığın çerçevesinin yürütüldüğü koda yönelik bir işaretçi alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp
 HRESULT GetCodeEx(  

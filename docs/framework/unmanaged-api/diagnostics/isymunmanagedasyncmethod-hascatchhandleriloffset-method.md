@@ -1,19 +1,20 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ırivmanagedasyncmethod:: hascatchhandlerılıngıgıgı'
 title: ISymUnmanagedAsyncMethod::HasCatchHandlerILOffset Yöntemi
 ms.date: 03/30/2017
 ms.assetid: a9ce105c-6495-49ab-b0e5-903a48ebadb3
-ms.openlocfilehash: e1c566fa64e30149a2d0a2dd1a38cf9c22feaa96
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 60035f1657bf99c4af9b13b30ffe64ffe4aceba8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727399"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790288"
 ---
 # <a name="isymunmanagedasyncmethodhascatchhandleriloffset-method"></a>ISymUnmanagedAsyncMethod::HasCatchHandlerILOffset Yöntemi
 
 Bkz. [Definecatch Handlerılsapmasını metodu](isymunmanagedasyncmethodpropertieswriter-definecatchhandleriloffset-method.md).  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```idl  
 HRESULT HasCatchHandlerILOffset(    [out, retval] BOOL* pRetVal);  

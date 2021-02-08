@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ICorDebugILFrame2 Interface'
 title: ICorDebugILFrame2 Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f94b9d53-d8f8-4424-a95e-53a1bfd26e4a
 topic_type:
 - apiref
-ms.openlocfilehash: 3ada9e19bb1a92b3bd7e41340b99bf81b651dd37
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8379fda39a210e1df902dab3ac85132f04aee5fc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725020"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791315"
 ---
 # <a name="icordebugilframe2-interface"></a>ICorDebugILFrame2 Arabirimi
 

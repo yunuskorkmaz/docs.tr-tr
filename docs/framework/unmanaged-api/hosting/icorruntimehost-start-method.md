@@ -1,4 +1,5 @@
 ---
+description: ': ICorRuntimeHost:: Start yöntemi hakkında daha fazla bilgi edinin'
 title: ICorRuntimeHost::Start Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c66f3ac5-6489-484a-9bed-c31b711cee01
 topic_type:
 - apiref
-ms.openlocfilehash: bc647ad025b5e22187b476383ed0128761cb632f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d07c0144c7192bc2f57927c294ea472cd6b47f9f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721042"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789612"
 ---
 # <a name="icorruntimehoststart-method"></a>ICorRuntimeHost::Start Yöntemi
 
@@ -34,7 +35,7 @@ HRESULT Start ();
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|İşlem başarılı oldu.|  
 |S_FALSE|İşlem tamamlanamadı.|  

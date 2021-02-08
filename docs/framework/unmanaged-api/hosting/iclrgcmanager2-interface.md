@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ICLRGCManager2 Interface'
 title: ICLRGCManager2 Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4b5ffd7b-9ad7-41cd-9bba-34030ae3da7e
 topic_type:
 - apiref
-ms.openlocfilehash: d2873b5e1f8229e8a16dfaacf1c9737ac47405bb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 455b3a99d10fa43bf325e9f7075d255dd55ae38b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95672805"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789963"
 ---
 # <a name="iclrgcmanager2-interface"></a>ICLRGCManager2 Arabirimi
 

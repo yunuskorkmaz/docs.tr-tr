@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: COR_PRF_REJIT_FLAGS numaralandırması'
 title: COR_PRF_REJIT_FLAGS Sabit Listesi
 ms.date: 08/06/2019
 api_name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 09349674e0cf80649cc948e25a1c476c6f8097e4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a27b6d90b51254560f25fbadb18ac95fe838ab2b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95716375"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789027"
 ---
 # <a name="cor_prf_rejit_flags-enumeration"></a>COR_PRF_REJIT_FLAGS Sabit Listesi
 
@@ -38,7 +39,7 @@ typedef enum
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`COR_PRF_REJIT_BLOCK_INLINING`| Yeniden derlenen yöntemlerin diğer metotlarda satır içine alınmış olması engellenir. |  
 |`COR_PRF_REJIT_INLINING_CALLBACKS`| `GetFunctionParameters`Yeniden derleme yapmak istenen yöntemlerin satır içi yöntemler için geri çağrılar alın. |  

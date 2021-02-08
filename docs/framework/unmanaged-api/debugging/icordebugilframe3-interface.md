@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ICorDebugILFrame3 Interface'
 title: ICorDebugILFrame3 Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -10,12 +11,12 @@ api_type:
 ms.assetid: 15212cb5-93d4-4025-bec9-d4b9919eb1fe
 topic_type:
 - apiref
-ms.openlocfilehash: dab5329086971b9349deaf84535fa251744f3cf0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a34a3f0941871a2d0a63fb2d9f78ccb7ff455866
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724994"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791263"
 ---
 # <a name="icordebugilframe3-interface"></a>ICorDebugILFrame3 Arabirimi
 

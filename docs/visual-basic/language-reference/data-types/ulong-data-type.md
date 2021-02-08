@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ULong veri türü (Visual Basic)'
 title: ULong Veri Türü
 ms.date: 01/31/2018
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - ULong data type
 - UL literal type characters [Visual Basic]
 ms.assetid: 017e0702-774e-44ae-bedc-786b424ca84e
-ms.openlocfilehash: ee9297ae917345d44d8e630bd09beea2245b56da
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9082fc9444f0754c60a6aa3f9b58db1d833349b8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415524"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792095"
 ---
 # <a name="ulong-data-type-visual-basic"></a>ULong veri türü (Visual Basic)
 
@@ -48,7 +49,7 @@ Visual Basic 2017 ' den başlayarak, `_` Aşağıdaki örnekte gösterildiği gi
 
 [!code-vb[ULong](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#LongS)]
 
-Visual Basic 15,5 ' den başlayarak, alt çizgi karakterini ( `_` ) ön ek ile onaltılı, ikili veya sekizlik basamaklar arasında önde gelen bir ayırıcı olarak da kullanabilirsiniz. Örnek:
+Visual Basic 15,5 ' den başlayarak, alt çizgi karakterini ( `_` ) ön ek ile onaltılı, ikili veya sekizlik basamaklar arasında önde gelen bir ayırıcı olarak da kullanabilirsiniz. Örneğin:
 
 ```vb
 Dim number As ULong = &H_F9AC_0326_1489_D68C
@@ -74,7 +75,7 @@ Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
 
 - **Kan.** `ULong`, Ve için widens veri `Decimal` türü `Single` `Double` . Bu, `ULong` bir hatayla karşılaşmadan bu türlerden birine dönüştürebileceğiniz anlamına gelir <xref:System.OverflowException?displayProperty=nameWithType> .
 
-- **Tür karakterleri.** Değişmez değer türü karakterlerinin `UL` bir sabit değere eklenmesi, `ULong` veri türüne zorlar. `ULong`tanımlayıcı türü karakteri yok.
+- **Tür karakterleri.** Değişmez değer türü karakterlerinin `UL` bir sabit değere eklenmesi, `ULong` veri türüne zorlar. `ULong` tanımlayıcı türü karakteri yok.
 
 - **Çerçeve türü.** .NET Framework karşılık gelen tür <xref:System.UInt64?displayProperty=nameWithType> yapısıdır.
 

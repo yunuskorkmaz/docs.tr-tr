@@ -1,4 +1,5 @@
 ---
+description: ': ICLRPolicyManager:: SetActionOnFailure yöntemi hakkında daha fazla bilgi edinin'
 title: ICLRPolicyManager::SetActionOnFailure Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 4664033f-db97-4388-b988-2ec470796e58
 topic_type:
 - apiref
-ms.openlocfilehash: 8f44247ca7904a40f5ebc092d95c2e08b6048438
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 67d3ca5d7924caf0a768b4de53b4b24f1c72fa27
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725579"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789807"
 ---
 # <a name="iclrpolicymanagersetactiononfailure-method"></a>ICLRPolicyManager::SetActionOnFailure Yöntemi
 
 Belirtilen hata oluştuğunda ortak dil çalışma zamanının (CLR) yapması gereken ilke eylemini belirtir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT SetActionOnFailure (  
@@ -45,7 +46,7 @@ HRESULT SetActionOnFailure (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`SetActionOnFailure` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  
@@ -61,16 +62,16 @@ HRESULT SetActionOnFailure (
   
 ||CriticalHandle dışı kaynak|Kritikkaynak|FatalRuntime|OrphanedLock|StackOverflow|Accessihlaihlaline|CodeContract|  
 |-|-------------------------|----------------------|------------------|------------------|-------------------|---------------------|------------------|  
-|`eNoAction`|X|X||||YOK||  
-|eThrowException|X|X||||YOK||  
-|`eAbortThread`|X|X||||YOK|X|  
-|`eRudeAbortThread`|X|X||||YOK|X|  
-|`eUnloadAppDomain`|X|X||X||YOK|X|  
-|`eRudeUnloadAppDomain`|X|X||X|X|YOK|X|  
-|`eExitProcess`|X|X||X|X|YOK|X|  
-|eFastExitProcess|X|X||X|X|YOK||  
-|`eRudeExitProcess`|X|X|X|X|X|YOK||  
-|`eDisableRuntime`|X|X|X|X|X|YOK||  
+|`eNoAction`|X|X||||Yok||  
+|eThrowException|X|X||||Yok||  
+|`eAbortThread`|X|X||||Yok|X|  
+|`eRudeAbortThread`|X|X||||Yok|X|  
+|`eUnloadAppDomain`|X|X||X||Yok|X|  
+|`eRudeUnloadAppDomain`|X|X||X|X|Yok|X|  
+|`eExitProcess`|X|X||X|X|Yok|X|  
+|eFastExitProcess|X|X||X|X|Yok||  
+|`eRudeExitProcess`|X|X|X|X|X|Yok||  
+|`eDisableRuntime`|X|X|X|X|X|Yok||  
   
 ## <a name="requirements"></a>Gereksinimler  
 

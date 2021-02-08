@@ -1,4 +1,5 @@
 ---
+description: ': ICLRHostBindingPolicyManager:: ModifyApplicationPolicy Yöntemi hakkında daha fazla bilgi edinin'
 title: ICLRHostBindingPolicyManager::ModifyApplicationPolicy Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: d82d633e-cce6-427c-8b02-8227e34e12ba
 topic_type:
 - apiref
-ms.openlocfilehash: 8da9c9fea5cf5b3a27eeb9d0222f0845c832b7da
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3f7d992f4b7d24233da175814f991106bb97a937
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95714204"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789937"
 ---
 # <a name="iclrhostbindingpolicymanagermodifyapplicationpolicy-method"></a>ICLRHostBindingPolicyManager::ModifyApplicationPolicy Yöntemi
 
 Belirtilen derleme için bağlama ilkesini değiştirir ve ilkenin yeni bir sürümünü oluşturur.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT  ModifyApplicationPolicy (  
@@ -65,7 +66,7 @@ HRESULT  ModifyApplicationPolicy (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|İlke başarıyla değiştirildi.|  
 |E_INVALIDARG|`pwzSourceAssemblyIdentity` ya da `pwzTargetAssemblyIdentity` null bir başvurudur.|  

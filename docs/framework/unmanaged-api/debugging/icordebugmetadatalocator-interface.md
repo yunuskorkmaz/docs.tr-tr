@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugMetaDataLocator arabirimi hakkında daha fazla bilgi edinin'
 title: ICorDebugMetaDataLocator Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 287f5ecd-863f-4090-a615-077859f0257b
 topic_type:
 - apiref
-ms.openlocfilehash: dbf5c751e84dfd9bf0549e8ce79d07a90fb4a3b2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7b87527d4d0b98fc97631fb47184665daaf39edb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95710395"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790834"
 ---
 # <a name="icordebugmetadatalocator-interface"></a>ICorDebugMetaDataLocator Arabirimi
 

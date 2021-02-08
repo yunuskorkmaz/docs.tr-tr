@@ -1,22 +1,23 @@
 ---
+description: 'Daha fazla bilgi edinin: Izlenecek yol: özel günlük dinleyicileri oluşturma (Visual Basic)'
 title: Özel Günlük Dinleyicileri Oluşturma
 ms.date: 07/20/2015
 helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: 5a140607a4fe7e1e13de54e8d56cab53e52aaa2a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: bc5e1743eeaec427adf909ca95aa1979ce61a993
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398272"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792303"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>İzlenecek Yol: Özel Günlük Dinleyicileri Oluşturma (Visual Basic)
 
 Bu izlenecek yol, özel bir günlük dinleyicisinin nasıl oluşturulacağını ve nesnenin çıkışını dinlemek için nasıl yapılandırılacağını gösterir `My.Application.Log` .
 
-## <a name="getting-started"></a>Başlarken
+## <a name="getting-started"></a>Kullanmaya Başlama
 
 Günlük dinleyicileri sınıfından devralması gerekir <xref:System.Diagnostics.TraceListener> .
 
@@ -35,7 +36,7 @@ Günlük dinleyicileri sınıfından devralması gerekir <xref:System.Diagnostic
 
 `My.Application.Log`Günlük dinleyicinizi kullandığından emin olmak için, günlük dinleyicinizi içeren derlemeyi kesin bir şekilde adlandırın.
 
-Sonraki yordam, kesin adlandırılmış bir log-Listener derlemesi oluşturmak için bazı basit adımlar sağlar. Daha fazla bilgi için bkz. [güçlü adlandırılmış derlemeler oluşturma ve kullanma](../../../../standard/assembly/create-use-strong-named.md).
+Sonraki yordam, kesin adlandırılmış bir log-Listener derlemesi oluşturmak için bazı basit adımlar sağlar. Daha fazla bilgi için bkz. [Strong-Named derlemeleri oluşturma ve kullanma](../../../../standard/assembly/create-use-strong-named.md).
 
 #### <a name="to-strongly-name-the-log-listener-assembly"></a>Log dinleyicisi derlemesini kesin olarak adlandırmak için
 
@@ -77,11 +78,11 @@ Tanımlayıcı adıyla, dinleyiciyi `My.Application.Log` log-Listener koleksiyon
 
 #### <a name="to-add-the-listener-to-myapplicationlog"></a>Dinleyiciyi My. Application. log dosyasına eklemek için
 
-1. **Çözüm Gezgini** App. config dosyasına sağ tıklayın ve **Aç**' ı seçin.
+1. **Çözüm Gezgini** app.config sağ tıklayın ve **Aç**' ı seçin.
 
      -veya-
 
-     Bir App. config dosyası varsa:
+     Bir app.config dosyası varsa:
 
     1. **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.
 

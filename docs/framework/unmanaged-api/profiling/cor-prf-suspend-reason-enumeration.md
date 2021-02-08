@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: COR_PRF_SUSPEND_REASON numaralandırması'
 title: COR_PRF_SUSPEND_REASON Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 75594833-bed3-47b2-a426-b75c5fe6fbcf
 topic_type:
 - apiref
-ms.openlocfilehash: f7d76c72ed5db95425f5b1fa2db5e4346983daa4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9e8b3dc98aa6b1a989088f5f4d0efb74d488d927
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95696693"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789014"
 ---
 # <a name="cor_prf_suspend_reason-enumeration"></a>COR_PRF_SUSPEND_REASON Numaralandırması
 
@@ -41,7 +42,7 @@ typedef enum {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`COR_PRF_FIELD_SUSPEND_OTHER`|Beklenmeyen bir nedenden dolayı çalışma zamanı askıya alındı.|  
 |`COR_PRF_FIELD_SUSPEND_FOR_GC`|Bir çöp toplama isteğine hizmet vermek için çalışma zamanı askıya alındı.<br /><br /> [ICorProfilerCallback:: RuntimeSuspendFinished](icorprofilercallback-runtimesuspendfinished-method.md) ve [ICorProfilerCallback:: RuntimeResumeStarted](icorprofilercallback-runtimeresumestarted-method.md) geri çağırmaları arasında çöp toplama ile ilgili geri çağırmaları meydana gelir.|  

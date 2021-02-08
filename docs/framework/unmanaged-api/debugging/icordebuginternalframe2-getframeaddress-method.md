@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ICorDebugInternalFrame2:: GetFrameAddress yöntemi'
 title: ICorDebugInternalFrame2::GetFrameAddress Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 4ee8d058-ffc8-4967-9133-a5adfef4e518
 topic_type:
 - apiref
-ms.openlocfilehash: 05a9ab58acb3bf5829fd231ae6d8bcc96ae06da6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: bb745424680c5b9a5277badfbe2d96db46e2e3d8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724877"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791120"
 ---
 # <a name="icordebuginternalframe2getframeaddress-method"></a>ICorDebugInternalFrame2::GetFrameAddress Yöntemi
 
 İç çerçevenin yığın adresini döndürür.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);  
@@ -41,7 +42,7 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
 
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|İç çerçevenin adresi başarıyla döndürüldü.|  
 |E_FAIL|İç çerçevenin adresi döndürülemedi.|  

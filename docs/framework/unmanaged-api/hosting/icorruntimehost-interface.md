@@ -1,4 +1,5 @@
 ---
+description: ': ICorRuntimeHost arabirimi hakkında daha fazla bilgi edinin'
 title: ICorRuntimeHost Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4369533d-7834-4497-bc37-bfea0ad737b1
 topic_type:
 - apiref
-ms.openlocfilehash: 9fcb5e189af9f72de7635aad550a5e8ab5522dbd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cd50d31668b2dd0718dbe644343bfe314a0afdbe
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720626"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789664"
 ---
 # <a name="icorruntimehost-interface"></a>ICorRuntimeHost Arabirimi
 

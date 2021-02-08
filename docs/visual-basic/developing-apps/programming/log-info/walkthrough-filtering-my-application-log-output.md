@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Izlenecek yol: My. Application. log çıktısından filtreleme (Visual Basic)'
 title: My.Application.Log Çıktısını Filtreleme
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: e77a56b2be33555bc02157c8e643ac655b083bc3
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 0fa64bde27be17b1809e45bfe294e70c7dd33563
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282209"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792264"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>İzlenecek Yol: My.Application.Log Çıktısını Filtreleme (Visual Basic)
 
 Bu izlenecek yol, nesneden `My.Application.Log` dinleyicilerine hangi bilgilerin geçtiğini `Log` ve hangi bilgilerin dinleyiciler tarafından yazıldığını denetlemek için nesnenin varsayılan günlük filtrelemesinin nasıl değiştirileceğini gösterir. Yapılandırma bilgileri uygulamanın yapılandırma dosyasında depolandığından, uygulamayı oluşturduktan sonra bile günlüğe kaydetme davranışını değiştirebilirsiniz.
 
-## <a name="getting-started"></a>Başlarken
+## <a name="getting-started"></a>Kullanmaya Başlama
 
 Yazan her ileti `My.Application.Log` , bir ilişkili önem düzeyine sahiptir ve bu da filtreleme mekanizmalarının günlük çıkışını denetlemek için kullandığı bir önem düzeyi vardır Bu örnek uygulama `My.Application.Log` , farklı önem düzeylerindeki çeşitli günlük iletilerini yazmak için yöntemler kullanır.
 
@@ -33,7 +34,7 @@ Yazan her ileti `My.Application.Log` , bir ilişkili önem düzeyine sahiptir ve
 
 4. Uygulamayı hata ayıklayıcıda çalıştırın.
 
-5. **Button1** 'e basın.
+5. **Button1**'e basın.
 
      Uygulama, uygulamanın hata ayıklama çıktısına ve günlük dosyasına aşağıdaki bilgileri yazar.
 
@@ -74,17 +75,17 @@ Bu tabloda, önceki örnekte gösterilen günlük çıktısı açıklanmaktadır
 
 #### <a name="to-log-only-activity-tracing-events"></a>Yalnızca etkinlik izleme olaylarını günlüğe kaydetmek için
 
-1. **Çözüm Gezgini** app.config sağ tıklayın ve **Aç** ' ı seçin.
+1. **Çözüm Gezgini** app.config sağ tıklayın ve **Aç**' ı seçin.
 
      -veya-
 
      app.config dosya yoksa:
 
-    1. **Proje** menüsünde **Yeni öğe Ekle** ' yi seçin.
+    1. **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.
 
-    2. **Yeni öğe Ekle** Iletişim kutusundan **uygulama yapılandırma dosyası** ' nı seçin.
+    2. **Yeni öğe Ekle** Iletişim kutusundan **uygulama yapılandırma dosyası**' nı seçin.
 
-    3. **Ekle** 'ye tıklayın.
+    3. **Ekle**'ye tıklayın.
 
 2. `<switches>`Üst düzey bölümde bulunan bölümünde olan bölümünü bulun `<system.diagnostics>` `<configuration>` .
 
@@ -125,7 +126,7 @@ Bu tabloda, önceki örnekte gösterilen günlük çıktısı açıklanmaktadır
 
 6. Uygulamayı hata ayıklayıcıda çalıştırın.
 
-7. **Button1** 'e basın.
+7. **Button1**'e basın.
 
      Uygulama aşağıdaki bilgileri uygulamanın hata ayıklama çıktısına ve günlük dosyasına yazar:
 
@@ -150,19 +151,19 @@ Bu örnek, yeni bir hata ayıklama dinleyicisi için filtrelemenin nasıl yapıl
 
 #### <a name="to-log-only-activity-tracing-events"></a>Yalnızca etkinlik izleme olaylarını günlüğe kaydetmek için
 
-1. **Çözüm Gezgini** app.config sağ tıklayın ve **Aç** ' ı seçin.
+1. **Çözüm Gezgini** app.config sağ tıklayın ve **Aç**' ı seçin.
 
      \-veya
 
      app.config dosya yoksa:
 
-    1. **Proje** menüsünde **Yeni öğe Ekle** ' yi seçin.
+    1. **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.
 
-    2. **Yeni öğe Ekle** Iletişim kutusundan **uygulama yapılandırma dosyası** ' nı seçin.
+    2. **Yeni öğe Ekle** Iletişim kutusundan **uygulama yapılandırma dosyası**' nı seçin.
 
-    3. **Ekle** 'ye tıklayın.
+    3. **Ekle**'ye tıklayın.
 
-2. **Çözüm Gezgini** app.config sağ tıklayın. **Aç** ' ı seçin.
+2. **Çözüm Gezgini** app.config sağ tıklayın. **Aç**' ı seçin.
 
 3. Bölümünün `<listeners>` `<source>` altında bulunan `name` "DefaultSource" özniteliğine sahip bölümünde bölümünü bulun `<sources>` . `<sources>`Bölümü, `<system.diagnostics>` bölümünün üst düzey bölümünde yer aldığı bölümdür `<configuration>` .
 
@@ -235,7 +236,7 @@ Bu örnek, yeni bir hata ayıklama dinleyicisi için filtrelemenin nasıl yapıl
 
 8. Uygulamayı hata ayıklayıcıda çalıştırın.
 
-9. **Button1** 'e basın.
+9. **Button1**'e basın.
 
      Uygulama, uygulamanın günlük dosyasına aşağıdaki bilgileri yazar:
 

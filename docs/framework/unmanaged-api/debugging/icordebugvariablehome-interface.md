@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ıcordebugvariablehome arabirimi'
 title: ICorDebugVariableHome Arabirimi
 ms.date: 03/30/2017
 dev_langs:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76f2bf3b-759f-4eed-bce7-119415b25915
 topic_type:
 - apiref
-ms.openlocfilehash: 089e68278113dfdf509ed848f424ad32baa145ed
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a1dcc959ba9aeffc0e511dcd2f5bb15f58445139
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95679552"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790639"
 ---
 # <a name="icordebugvariablehome-interface"></a>ICorDebugVariableHome Arabirimi
 
@@ -35,7 +36,7 @@ Bir işlevin yerel bir değişkenini veya bağımsız değişkenini temsil eder.
 |[GetCode Yöntemi](icordebugvariablehome-getcode-method.md)|Bu nesneyi içeren "ICorDebugCode" örneğini alır `ICorDebugVariableHome` .|  
 |[GetLiveRange Yöntemi](icordebugvariablehome-getliverange-method.md)|Bu değişkenin canlı olduğu yerel aralığı alır.|  
 |[GetLocationType Yöntemi](icordebugvariablehome-getlocationtype-method.md)|Değişkenin yerel konumunun türünü alır.|  
-|[GetOffset Metodu](icordebugvariablehome-getoffset-method.md)|Bir değişken için temel kaydın konumunu alır.|  
+|[GetOffset Yöntemi](icordebugvariablehome-getoffset-method.md)|Bir değişken için temel kaydın konumunu alır.|  
 |[GetRegister Yöntemi](icordebugvariablehome-getregister-method.md)|Konum türü olan bir değişken içeren kaydı `VLT_REGISTER` ve konum türü olan bir değişken için temel kaydı alır `VLT_REGISTER_RELATIVE` .|  
 |[GetSlotIndex Yöntemi](icordebugvariablehome-getslotindex-method.md)|Yerel bir değişkenin yönetilen yuva dizinini alır.|  
   

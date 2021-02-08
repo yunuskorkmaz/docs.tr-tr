@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Decimal veri türü (Visual Basic)'
 title: Decimal Veri Türü
 ms.date: 07/20/2015
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - '@ identifier type character'
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
-ms.openlocfilehash: 690c8061b6df1115aa24668520170b44edfa8287
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5806041e7737b8fe0f1c7ffa63f6cbadcbf92e42
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415653"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792238"
 ---
 # <a name="decimal-data-type-visual-basic"></a>Onluk Veri Türü (Visual Basic)
 
@@ -39,7 +40,7 @@ Varsayılan değeri 0 ' `Decimal` dır.
 
 ## <a name="programming-tips"></a>Programlama İpuçları
 
-- **Duyarlılık.** `Decimal`kayan nokta veri türü değil. `Decimal`Yapı bir ikili tamsayı değerini, bir işaret biti ve değerin hangi kısmının ondalık kesir olduğunu belirten bir tamsayı ölçekleme faktörüyle birlikte tutar. Bu nedenle, `Decimal` sayıların, kayan nokta türlerinden (ve) daha kesin bir temsili vardır `Single` `Double` .
+- **Duyarlılık.** `Decimal` kayan nokta veri türü değil. `Decimal`Yapı bir ikili tamsayı değerini, bir işaret biti ve değerin hangi kısmının ondalık kesir olduğunu belirten bir tamsayı ölçekleme faktörüyle birlikte tutar. Bu nedenle, `Decimal` sayıların, kayan nokta türlerinden (ve) daha kesin bir temsili vardır `Single` `Double` .
 
 - **Mının.** `Decimal`Veri türü, tüm sayısal türlerin en yavaş türüdür. Veri türü seçmeden önce, performans için duyarlık önem derecesine sahip olmanız gerekir.
 

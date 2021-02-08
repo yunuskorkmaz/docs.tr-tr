@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugManagedCallback:: ExitProcess yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugManagedCallback::ExitProcess Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 63a7d47a-0d54-4e29-9767-9f09feaa38b7
 topic_type:
 - apiref
-ms.openlocfilehash: 67f3e63b58e08a4b9ccfbd555e6edcdef0d00d90
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3418931b8397edefcb801986275c35b28e00072d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95688982"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790964"
 ---
 # <a name="icordebugmanagedcallbackexitprocess-method"></a>ICorDebugManagedCallback::ExitProcess Yöntemi
 
 Hata ayıklayıcıya bir işlemin çıkış olduğunu bildirir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT ExitProcess (  

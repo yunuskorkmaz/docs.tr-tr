@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ılcodekind numaralandırması'
 title: ILCodeKind Numaralandırması
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ api_type:
 ms.assetid: b91765e4-82db-46f9-a6dc-6b80610276af
 topic_type:
 - apiref
-ms.openlocfilehash: 7e9cf760ec609786804a05177349ee2eacd79eaf
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2d3163b2c601c6f53d9a532fa877c014a67b3e18
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95692247"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790470"
 ---
 # <a name="ilcodekind-enumeration"></a>ILCodeKind Numaralandırması
 
@@ -36,14 +37,14 @@ typedef enum ILCodeKind {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye adı|Açıklama|  
+|Üye adı|Description|  
 |-----------------|-----------------|  
 |`ILCODE_ORIGINAL_IL`|Hata ayıklayıcının, ReJIT araçlarından bilgilere erişimi yok.|  
 |`ILCODE_REJIT_IL`|Hata ayıklayıcının, ReJIT araçlarından bilgilere erişimi vardır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
 
- `ILCodeKind`Hata ayıklayıcının profil oluşturucu ReJIT araçları 'nda eklenen değişkenlere [EnumerateLocalVariablesEx](icordebugilframe4-enumeratelocalvariablesex-method.md) erişip erişemeyeceğini ve hata ayıklayıcının [GetLocalVariableEx](icordebugilframe4-getlocalvariableex-method.md) belgelenmiş Il 'ye erişip erişemeyeceğini anlamak için [GetCodeEx](icordebugilframe4-getcodeex-method.md) yöntemine bir numaralandırma üyesi iletilebilir.  
+ `ILCodeKind`Hata ayıklayıcının profil oluşturucu ReJIT araçları 'nda eklenen değişkenlere [](icordebugilframe4-enumeratelocalvariablesex-method.md) erişip erişemeyeceğini ve hata ayıklayıcının [](icordebugilframe4-getlocalvariableex-method.md) belgelenmiş Il 'ye erişip erişemeyeceğini anlamak için [GetCodeEx](icordebugilframe4-getcodeex-method.md) yöntemine bir numaralandırma üyesi iletilebilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
 

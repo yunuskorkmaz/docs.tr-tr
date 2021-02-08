@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugModule3:: CreateReaderForInMemorySymbols yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugModule3::CreateReaderForInMemorySymbols Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: af317171-d66d-4114-89eb-063554c74940
 topic_type:
 - apiref
-ms.openlocfilehash: 44f4c59f95c28f9982d67875584e2f9803c0ed3b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: af037cc891e83f53fd94bad290f40286ed665e6f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95709576"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790782"
 ---
 # <a name="icordebugmodule3createreaderforinmemorysymbols-method"></a>ICorDebugModule3::CreateReaderForInMemorySymbols Yöntemi
 
 Dinamik bir modül için hata ayıklama simgesi okuyucu oluşturur.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT CreateReaderForInMemorySymbols (  

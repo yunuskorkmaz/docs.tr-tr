@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: veri türü Özeti (Visual Basic)'
 title: Veri Türü Özeti
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - storage order, controlling in Visual Basic
 - data types [Visual Basic], memory requirements
 ms.assetid: e975cdb6-64d8-4a4a-ae27-f3b3ed198ae0
-ms.openlocfilehash: 5eb52ef937a677c0b7498d058b5a39a375351ddc
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ac5b8e438210c2d1407e0d6a12d560f29523620c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415627"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792199"
 ---
 # <a name="data-type-summary-visual-basic"></a>Veri Türü Özeti (Visual Basic)
 
@@ -58,11 +59,11 @@ Aşağıdaki tabloda Visual Basic veri türleri, bunların destekleyici ortak di
 |[Double](double-data-type.md) (çift duyarlıklı kayan nokta)|<xref:System.Double>|8 bayt|-1.79769313486231570 e + 308 ile-4.94065645841246544 E-324 <sup>†</sup> -negatif değerler için;<br /><br /> 4.94065645841246544 e-324-1.79769313486231570 E + 308 <sup>†</sup> pozitif değerler için|  
 |[Tamsayı](integer-data-type.md)|<xref:System.Int32>|4 bayt|-2.147.483.648-2.147.483.647 (imzalı)|  
 |[Long](long-data-type.md) (uzun tamsayı)|<xref:System.Int64>|8 bayt|-9223372036854775808 ila 9.223.372.036.854.775.807 (9.2... E + 18 <sup>†</sup>) (imzalı)|  
-|[Nesne](object-data-type.md)|<xref:System.Object>sınıfı|32 bit platformda 4 bayt<br /><br /> 64 bit platformda 8 bayt|Herhangi bir tür, türünde bir değişkende depolanabilir`Object`|  
+|[Nesne](object-data-type.md)|<xref:System.Object> sınıfı|32 bit platformda 4 bayt<br /><br /> 64 bit platformda 8 bayt|Herhangi bir tür, türünde bir değişkende depolanabilir `Object`|  
 |[SByte](sbyte-data-type.md)|<xref:System.SByte>|1 bayt|-128-127 (imzalı)|  
 |[Short](short-data-type.md) (kısa tamsayı)|<xref:System.Int16>|2 bayt|-32.768-32.767 (imzalı)|  
 |[Tek](single-data-type.md) (tek duyarlıklı kayan nokta)|<xref:System.Single>|4 bayt|-3.4028235 e + 38 ila-1.401298 E-45 <sup>†</sup> -negatif değerler için;<br /><br /> 1.401298 e-45 ile 3.4028235 E + 38 <sup>†</sup> pozitif değerler için|  
-|[Dize](string-data-type.md) (değişken uzunlukta)|<xref:System.String>sınıfı|Uygulama platformuna bağlıdır|0 ile yaklaşık 2.000.000.000 Unicode karakter|  
+|[Dize](string-data-type.md) (değişken uzunlukta)|<xref:System.String> sınıfı|Uygulama platformuna bağlıdır|0 ile yaklaşık 2.000.000.000 Unicode karakter|  
 |[UInteger](uinteger-data-type.md)|<xref:System.UInt32>|4 bayt|0 ila 4.294.967.295 (işaretsiz)|  
 |['Tur](ulong-data-type.md)|<xref:System.UInt64>|8 bayt|0 ile 18446744073709551615 (1.8... E + 19 <sup>†</sup>) (imzasız)|  
 |[Kullanıcı tanımlı](user-defined-data-type.md) (yapı)|(öğesinden devralır <xref:System.ValueType> )|Uygulama platformuna bağlıdır|Yapının her üyesi, veri türü ve diğer üyelerin aralıklarından bağımsız olarak belirlenen aralığa sahiptir|  

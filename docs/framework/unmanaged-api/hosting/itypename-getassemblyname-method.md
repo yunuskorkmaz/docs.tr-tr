@@ -1,4 +1,5 @@
 ---
+description: ': ITypeName:: GetAssemblyName Yöntemi hakkında daha fazla bilgi edinin'
 title: ITypeName::GetAssemblyName Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 97801d99-f5f1-4a30-882f-959827093fac
 topic_type:
 - apiref
-ms.openlocfilehash: 256c0ccf7a39992ebb14adfd820729f8351e1990
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c2e84ec2fc7c6a300611643783d61b46c14997ce
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725124"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789352"
 ---
 # <a name="itypenamegetassemblyname-method"></a>ITypeName::GetAssemblyName Metodu
 

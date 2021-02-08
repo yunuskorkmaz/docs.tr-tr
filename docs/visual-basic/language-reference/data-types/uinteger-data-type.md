@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: UInteger Veri türü'
 title: UInteger Veri Türü
 ms.date: 01/31/2018
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - UI literal type characters [Visual Basic]
 - data types [Visual Basic], integral
 ms.assetid: db7ddd34-4f23-46f5-84dd-8b0f83bb8729
-ms.openlocfilehash: 11070f6c7f3259b8c34528eb54d99b031b68f9f9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5202619909de4a132bda8ab3dca63337c6f3493f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415550"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792108"
 ---
 # <a name="uinteger-data-type"></a>UInteger veri türü
 
@@ -48,7 +49,7 @@ Visual Basic 2017 ' den başlayarak, `_` Aşağıdaki örnekte gösterildiği gi
 
 [!code-vb[UInteger](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UIntS)]
 
-Visual Basic 15,5 ' den başlayarak, alt çizgi karakterini ( `_` ) ön ek ile onaltılı, ikili veya sekizlik basamaklar arasında önde gelen bir ayırıcı olarak da kullanabilirsiniz. Örnek:
+Visual Basic 15,5 ' den başlayarak, alt çizgi karakterini ( `_` ) ön ek ile onaltılı, ikili veya sekizlik basamaklar arasında önde gelen bir ayırıcı olarak da kullanabilirsiniz. Örneğin:
 
 ```vb
 Dim number As UInteger = &H_0F8C_0326
@@ -74,7 +75,7 @@ Dim number = &H_0FAC_14D7ui
 
 - **Kan.** `UInteger`Veri türü,,,, ve için widens `Long` `ULong` `Decimal` `Single` `Double` . Bu, `UInteger` bir hatayla karşılaşmadan bu türlerden birine dönüştürebileceğiniz anlamına gelir <xref:System.OverflowException?displayProperty=nameWithType> .
 
-- **Tür karakterleri.** Değişmez değer türü karakterlerinin `UI` bir sabit değere eklenmesi, `UInteger` veri türüne zorlar. `UInteger`tanımlayıcı türü karakteri yok.
+- **Tür karakterleri.** Değişmez değer türü karakterlerinin `UI` bir sabit değere eklenmesi, `UInteger` veri türüne zorlar. `UInteger` tanımlayıcı türü karakteri yok.
 
 - **Çerçeve türü.** .NET Framework karşılık gelen tür <xref:System.UInt32?displayProperty=nameWithType> yapısıdır.
 

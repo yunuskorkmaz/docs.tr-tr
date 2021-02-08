@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugModuleBreakpoint arabirimi hakkında daha fazla bilgi edinin'
 title: ICorDebugModuleBreakpoint Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 34667162-f314-475f-ae1b-ce9cb0fcbb83
 topic_type:
 - apiref
-ms.openlocfilehash: 14f2b6822744070e649cf9a6722272992c0bf1c8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c864850400471c9a3580de9bb94262c62656edf0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95709524"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790756"
 ---
 # <a name="icordebugmodulebreakpoint-interface"></a>ICorDebugModuleBreakpoint Arabirimi
 

@@ -1,4 +1,5 @@
 ---
+description: ': ICLRMemoryNotificationCallback:: OnMemoryNotification yöntemi hakkında daha fazla bilgi edinin'
 title: ICLRMemoryNotificationCallback::OnMemoryNotification Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 5612a44d-56cc-4f34-af31-8c9809ba9431
 topic_type:
 - apiref
-ms.openlocfilehash: f9b2715801ebcaff3d97962540a4b1b103bbd53b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 92041c433fa82bb63afda7968eb8c6e1fa72acb3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730480"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789922"
 ---
 # <a name="iclrmemorynotificationcallbackonmemorynotification-method"></a>ICLRMemoryNotificationCallback::OnMemoryNotification Yöntemi
 
 Bilgisayardaki bellek yükünün ortak dil çalışma zamanına (CLR) bildirir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT OnMemoryNotification (  
@@ -41,7 +42,7 @@ HRESULT OnMemoryNotification (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`OnMemoryNotification` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  

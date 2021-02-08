@@ -1,4 +1,5 @@
 ---
+description: ': IDebuggerThreadControl:: Threadıblockingfordebugger yöntemi hakkında daha fazla bilgi edinin'
 title: IDebuggerThreadControl::ThreadIsBlockingForDebugger Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d4d7cb2d-69da-48b3-879a-1a8a68c9bfa8
 topic_type:
 - apiref
-ms.openlocfilehash: 8c2741d7db60781fef12293f3be0b515a55b7885
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0fa96b2e36ea6653e1698dd32fa1e73d223afb94
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705520"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789521"
 ---
 # <a name="idebuggerthreadcontrolthreadisblockingfordebugger-method"></a>IDebuggerThreadControl::ThreadIsBlockingForDebugger Yöntemi
 

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: tamsayı veri türü (Visual Basic)'
 title: Integer Veri Türü
 ms.date: 01/31/2018
 f1_keywords:
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - I literal type character [Visual Basic]
 - Integer data type
 ms.assetid: a8f233b4-4be3-455c-861b-05af2fbb6c60
-ms.openlocfilehash: aa7b64162308d6af2763b29034c5a7276c973876
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8c60bf19ecd44ca7c9972cbfeb4ee2197bcb137c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415615"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792212"
 ---
 # <a name="integer-data-type-visual-basic"></a>Tamsayı veri türü (Visual Basic)
 
@@ -53,7 +54,7 @@ Visual Basic 2017 ' den başlayarak, `_` Aşağıdaki örnekte gösterildiği gi
 
 [!code-vb[integer](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#IntS)]  
 
-Visual Basic 15,5 ' den başlayarak, alt çizgi karakterini ( `_` ) ön ek ile onaltılı, ikili veya sekizlik basamaklar arasında önde gelen bir ayırıcı olarak da kullanabilirsiniz. Örnek:
+Visual Basic 15,5 ' den başlayarak, alt çizgi karakterini ( `_` ) ön ek ile onaltılı, ikili veya sekizlik basamaklar arasında önde gelen bir ayırıcı olarak da kullanabilirsiniz. Örneğin:
 
 ```vb
 Dim number As Integer = &H_C305_F860
@@ -61,7 +62,7 @@ Dim number As Integer = &H_C305_F860
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Sayısal değişmez değerler, `I` [type character](../../programming-guide/language-features/data-types/type-characters.md) `Integer` Aşağıdaki örnekte gösterildiği gibi, veri türünü belirtmek için de tür karakterini içerebilir.
+Sayısal değişmez değerler, `I` [](../../programming-guide/language-features/data-types/type-characters.md) `Integer` Aşağıdaki örnekte gösterildiği gibi, veri türünü belirtmek için de tür karakterini içerebilir.
 
 ```vb
 Dim number = &H_035826I

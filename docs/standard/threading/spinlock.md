@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: SpinLock'
 title: SpinLock
 ms.date: 03/30/2017
 helpviewer_keywords:
 - synchronization primitives, SpinLock
 ms.assetid: f9af93bb-7a0d-4ba5-afe8-74f48b6b6958
-ms.openlocfilehash: adb80ffb1917ea725c458dbe3c37f3d364276fb6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 44285f27b387d411b1cdd511b7d191aa2a2166b1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95674300"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792355"
 ---
 # <a name="spinlock"></a>SpinLock
 
@@ -21,7 +22,7 @@ ms.locfileid: "95674300"
   
  Bu türü kullanma hakkında daha fazla bilgi için bkz <xref:System.Threading.SpinLock?displayProperty=nameWithType> .. Bir örnek için bkz. [nasıl yapılır: Low-Level eşitleme Için SpinLock kullanma](how-to-use-spinlock-for-low-level-synchronization.md).  
   
- <xref:System.Threading.SpinLock>*thread* - , kilidi belirli bir zamanda tutan iş parçacığını izlemeye yardımcı olmak için geliştirme aşamasında kullanabileceğiniz bir iş parçacığı *izleme* modunu destekler. İş parçacığı izleme modu hata ayıklama için çok faydalı olmakla kalmaz, performansı yavaşlatabilecek için programınızın yayın sürümünde kapatmanız önerilir. Daha fazla bilgi için bkz. [nasıl yapılır: SpinLock 'ta Thread-Tracking modunu etkinleştirme](how-to-enable-thread-tracking-mode-in-spinlock.md).  
+ <xref:System.Threading.SpinLock> - , kilidi belirli bir zamanda tutan iş parçacığını izlemeye yardımcı olmak için geliştirme aşamasında kullanabileceğiniz bir iş parçacığı *izleme* modunu destekler. İş parçacığı izleme modu hata ayıklama için çok faydalı olmakla kalmaz, performansı yavaşlatabilecek için programınızın yayın sürümünde kapatmanız önerilir. Daha fazla bilgi için bkz. [nasıl yapılır: SpinLock 'ta Thread-Tracking modunu etkinleştirme](how-to-enable-thread-tracking-mode-in-spinlock.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

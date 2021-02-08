@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugManagedCallback:: ControlCTrap yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugManagedCallback::ControlCTrap Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 0500854e-2121-43d9-a028-64312da35258
 topic_type:
 - apiref
-ms.openlocfilehash: 0c38269ea4d730d8f3f9ba5d2c5d8f0edf6d7d45
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9fa71dacb20ff6df21d8aabb687c2601f27643c7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731845"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791076"
 ---
 # <a name="icordebugmanagedcallbackcontrolctrap-method"></a>ICorDebugManagedCallback::ControlCTrap Yöntemi
 
 Hata ayıklayıcıya CTRL + C 'nin hata ayıklamakta olan işlemde yakalandığını bildirir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT ControlCTrap (  
@@ -41,7 +42,7 @@ HRESULT ControlCTrap (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|Hata ayıklayıcı CTRL + C yakalamasını işleymeyecektir.|  
 |S_FALSE|Hata ayıklayıcı CTRL + C yakalamasını işlemez.|  

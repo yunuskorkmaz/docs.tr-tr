@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: özel Izleme'
 title: Özel İzleme
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: 3d125c59196cb2a7d33961e0f271aab8c5663a50
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a06faaaa50a06d613f7183ca018438a8f2b4460b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96234577"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792563"
 ---
 # <a name="custom-tracking"></a>Özel İzleme
 
@@ -25,7 +26,7 @@ Bu örnek, bir özel izleme katılımcısının nasıl oluşturulacağını ve i
 
  Aşağıdaki tabloda iş akışı çalışma zamanının yaydığı izleme kayıtlarının ayrıntıları verilmiştir.
 
-|İzleme kaydı|Açıklama|
+|İzleme kaydı|Description|
 |---------------------|-----------------|
 |İş akışı örneği izleme kayıtları.|İş akışı örneğinin yaşam döngüsünü açıklar. Örneğin, iş akışı başladığında veya tamamlandığında bir örnek kayıt yayınlanır.|
 |Etkinlik durumu Izleme kayıtları.|Ayrıntıları etkinlik yürütmesi. Bu kayıtlar, bir etkinliğin zamanlandığı veya etkinliğin ne zaman tamamlandığı ya da bir hata oluşturulduğu zaman gibi bir iş akışı etkinliğinin durumunu gösterir.|

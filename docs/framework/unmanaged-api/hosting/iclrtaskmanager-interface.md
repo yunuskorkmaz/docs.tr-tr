@@ -1,4 +1,5 @@
 ---
+description: ': ICLRTaskManager arabirimi hakkında daha fazla bilgi edinin'
 title: ICLRTaskManager Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2bd55e0c-001b-41fd-b29d-f01670fe8216
 topic_type:
 - apiref
-ms.openlocfilehash: 1170b29c01275b108a6ccdf6e324c96d97c10c82
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0ce3641042725bc2f3acb95933ccd7a5bbe3bc4d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732456"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789755"
 ---
 # <a name="iclrtaskmanager-interface"></a>ICLRTaskManager Arabirimi
 

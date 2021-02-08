@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: hata ayıklama yapıları'
 title: Hata Ayıklama Yapıları
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - debugging structures [.NET Framework]
 - structures [.NET Framework debugging]
 ms.assetid: 173ba2c2-ab34-49ae-b6a8-e5c49882bf05
-ms.openlocfilehash: bf84f8ddb1e86da3b9d0e4326584e61304640558
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2b3b9e3678b34a25f9bfa58fcf6913cfe95aa729
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95676276"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791562"
 ---
 # <a name="debugging-structures"></a>Hata Ayıklama Yapıları
 

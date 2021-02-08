@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ıvmunmanagedciltçi:: GetReaderForFile yöntemi'
 title: ISymUnmanagedBinder::GetReaderForFile Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 46c06258-831e-47c8-a50a-8650af6b637e
 topic_type:
 - apiref
-ms.openlocfilehash: ac895032e70cf31532ab4c73409d6d750eae65df
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ede494cbc1bbe4059b98a639c1d0621dc2cbdfa6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95707002"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790223"
 ---
 # <a name="isymunmanagedbindergetreaderforfile-method"></a>ISymUnmanagedBinder::GetReaderForFile Yöntemi
 
@@ -28,7 +29,7 @@ Meta veri arabirimi ve dosya adı verildiğinde, modülle ilişkili hata ayıkla
   
  Bu yöntem, program veritabanı (PDB) dosyasını yalnızca yürütülebilir dosyanın yanında olduğunda açar. Bu değişiklik güvenlik amacıyla yapılmıştır. PDB dosyası için daha kapsamlı bir aramanız gerekiyorsa, [ISymUnmanagedBinder2:: GetReaderForFile2](isymunmanagedbinder2-getreaderforfile2-method.md) yöntemini kullanın.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetReaderForFile(  

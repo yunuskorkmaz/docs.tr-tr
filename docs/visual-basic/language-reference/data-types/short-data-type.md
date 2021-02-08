@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: kısa veri türü (Visual Basic)'
 title: Short Veri Türü
 ms.date: 01/31/2018
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - Short data type
 - literal type characters [Visual Basic], S
 ms.assetid: 65fcbcf3-a841-400e-885e-301497729a8b
-ms.openlocfilehash: 176d27c86127dac1d9c9c0231790f7a5c2a2fefc
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8c6bee45355548b3a32d74d059159918b4009fbb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415563"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792147"
 ---
 # <a name="short-data-type-visual-basic"></a>Short veri türü (Visual Basic)
 
@@ -48,7 +49,7 @@ Visual Basic 2017 ' den başlayarak, `_` Aşağıdaki örnekte gösterildiği gi
 
 [!code-vb[Short](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ShortS)]
 
-Visual Basic 15,5 ' den başlayarak, alt çizgi karakterini ( `_` ) ön ek ile onaltılı, ikili veya sekizlik basamaklar arasında önde gelen bir ayırıcı olarak da kullanabilirsiniz. Örnek:
+Visual Basic 15,5 ' den başlayarak, alt çizgi karakterini ( `_` ) ön ek ile onaltılı, ikili veya sekizlik basamaklar arasında önde gelen bir ayırıcı olarak da kullanabilirsiniz. Örneğin:
 
 ```vb
 Dim number As Short = &H_3264
@@ -56,7 +57,7 @@ Dim number As Short = &H_3264
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Sayısal değişmez değerler, `S` [type character](../../programming-guide/language-features/data-types/type-characters.md) `Short` Aşağıdaki örnekte gösterildiği gibi, veri türünü belirtmek için de tür karakterini içerebilir.
+Sayısal değişmez değerler, `S` [](../../programming-guide/language-features/data-types/type-characters.md) `Short` Aşağıdaki örnekte gösterildiği gibi, veri türünü belirtmek için de tür karakterini içerebilir.
 
 ```vb
 Dim number = &H_3264S
@@ -66,7 +67,7 @@ Dim number = &H_3264S
 
 - **Kan.** `Short`Veri türü widens,,,, `Integer` `Long` `Decimal` `Single` veya `Double` . Bu, `Short` bir hatayla karşılaşmadan bu türlerden birine dönüştürebileceğiniz anlamına gelir <xref:System.OverflowException?displayProperty=nameWithType> .  
   
-- **Tür karakterleri.** Değişmez değer türü karakterini `S` bir sabit değere eklemek, `Short` veri türüne zorlar. `Short`tanımlayıcı türü karakteri yok.  
+- **Tür karakterleri.** Değişmez değer türü karakterini `S` bir sabit değere eklemek, `Short` veri türüne zorlar. `Short` tanımlayıcı türü karakteri yok.  
   
 - **Çerçeve türü.** .NET Framework karşılık gelen tür <xref:System.Int16?displayProperty=nameWithType> yapısıdır.  
   

@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: char veri türü (Visual Basic)'
 title: Char Veri Türü
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
-ms.openlocfilehash: 3dbbf9f6a2c4079775e05f5d2dcd8704c1ec4259
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 371244ee4eae6d7dde20487dd7f38c09f3929cd8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387484"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792251"
 ---
 # <a name="char-data-type-visual-basic"></a>Char Veri Türü (Visual Basic)
 
-0 ile 65535 arasında değer değişen işaretsiz 16 bit (2 baytlık) kod noktalarını tutar. Her *kod noktası*veya karakter kodu, tek bir Unicode karakteri temsil eder.
+0 ile 65535 arasında değer değişen işaretsiz 16 bit (2 baytlık) kod noktalarını tutar. Her *kod noktası* veya karakter kodu, tek bir Unicode karakteri temsil eder.
 
 ## <a name="remarks"></a>Açıklamalar
 
@@ -57,13 +58,13 @@ End Module
 
 ## <a name="programming-tips"></a>Programlama İpuçları
 
-- **Negatif sayılar.** `Char`işaretsiz bir tür ve negatif bir değer temsil edemez. Herhangi bir durumda, `Char` sayısal değerleri tutmak için kullanmamalısınız.
+- **Negatif sayılar.** `Char` işaretsiz bir tür ve negatif bir değer temsil edemez. Herhangi bir durumda, `Char` sayısal değerleri tutmak için kullanmamalısınız.
 
 - **Birlikte çalışma konuları.** Örneğin Otomasyon veya COM nesneleri gibi .NET Framework için yazılmayan bileşenlerle arabiriminiz varsa, başka ortamlarda karakter türlerinin farklı bir veri genişliğine (8 bit) sahip olduğunu unutmayın. Böyle bir bileşene 8 bitlik bir bağımsız değişken geçirirseniz, bunu `Byte` `Char` Yeni Visual Basic kodunuzda değil olarak bildirin.
 
 - **Kan.** `Char`Widens veri türü `String` . Bu, `Char` ' a dönüştürebileceğiniz `String` ve ile karşılaşmayacak anlamına gelir <xref:System.OverflowException?displayProperty=nameWithType> .
 
-- **Tür karakterleri.** Değişmez değer türü karakterini `C` tek karakterli bir dize değişmez değerine eklemek, `Char` veri türüne zorlar. `Char`tanımlayıcı türü karakteri yok.
+- **Tür karakterleri.** Değişmez değer türü karakterini `C` tek karakterli bir dize değişmez değerine eklemek, `Char` veri türüne zorlar. `Char` tanımlayıcı türü karakteri yok.
 
 - **Çerçeve türü.** .NET Framework karşılık gelen tür <xref:System.Char?displayProperty=nameWithType> yapısıdır.
 

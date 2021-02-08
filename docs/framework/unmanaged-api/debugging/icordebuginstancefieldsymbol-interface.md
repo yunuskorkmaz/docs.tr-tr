@@ -1,13 +1,14 @@
 ---
+description: ': Icordebugınstancefieldsymbol arabirimi hakkında daha fazla bilgi edinin'
 title: ICorDebugInstanceFieldSymbol Arabirimi
 ms.date: 03/30/2017
 ms.assetid: a4a8f259-b83a-4425-ae8b-72b067dbc0d9
-ms.openlocfilehash: 4ef0f7a46acf7e9df732d630c9eb22044e09d658
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: aa47c858ec5b4b0d04b851357fe81c0fc9b2e30a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724903"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791139"
 ---
 # <a name="icordebuginstancefieldsymbol-interface"></a>ICorDebugInstanceFieldSymbol Arabirimi
 
@@ -18,7 +19,7 @@ Bir örnek alanı için hata ayıklama simgesi bilgisini temsil eder.
 |Yöntem|Açıklama|  
 |------------|-----------------|  
 |[GetName Yöntemi](icordebuginstancefieldsymbol-getname-method.md)|Örnek alanının adını alır.|  
-|[GetOffset Metodu](icordebuginstancefieldsymbol-getoffset-method.md)|Üst sınıfındaki bu örnek alanının bayt cinsinden konumunu alır.|  
+|[GetOffset Yöntemi](icordebuginstancefieldsymbol-getoffset-method.md)|Üst sınıfındaki bu örnek alanının bayt cinsinden konumunu alır.|  
 |[GetSize Yöntemi](icordebuginstancefieldsymbol-getsize-method.md)|Örnek alanının bayt cinsinden boyutunu alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  

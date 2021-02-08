@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugManagedCallback:: CreateAppDomain Yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugManagedCallback::CreateAppDomain Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 48d410d7-6749-4125-a8fd-f9562c7088e9
 topic_type:
 - apiref
-ms.openlocfilehash: 5f831f0f42231f594e170567535af75216e68c45
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5f4aa49ce90e8ec1343794db71ae3aa911c9e09f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721315"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791081"
 ---
 # <a name="icordebugmanagedcallbackcreateappdomain-method"></a>ICorDebugManagedCallback::CreateAppDomain Yöntemi
 
 Hata ayıklayıcıya bir uygulama etki alanının oluşturulduğunu bildirir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT CreateAppDomain (  

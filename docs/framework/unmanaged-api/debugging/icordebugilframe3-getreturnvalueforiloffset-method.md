@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ICorDebugILFrame3:: Getreturnvalueforılsapmasını yöntemi'
 title: ICorDebugILFrame3::GetReturnValueForILOffset Yöntemi
 ms.date: 03/30/2017
 dev_langs:
@@ -13,18 +14,18 @@ api_type:
 ms.assetid: 06522727-5f64-4391-9331-11386883c352
 topic_type:
 - apiref
-ms.openlocfilehash: 11207298b071527151535144330790df767c2101
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4be4cb3a108394f2701f6690b06f6c2252ae25cd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725007"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791276"
 ---
 # <a name="icordebugilframe3getreturnvalueforiloffset-method"></a>ICorDebugILFrame3::GetReturnValueForILOffset Yöntemi
 
 Bir işlevin dönüş değerini kapsülleyen bir "ICorDebugValue" nesnesi alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp
 HRESULT GetReturnValueForILOffset(  

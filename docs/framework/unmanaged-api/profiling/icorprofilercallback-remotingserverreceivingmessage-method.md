@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerCallback:: RemotingServerReceivingMessage yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerCallback::RemotingServerReceivingMessage Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 5604d21f-e6b7-490e-b469-42122a7568e1
 topic_type:
 - apiref
-ms.openlocfilehash: 0fc84a15d3250d5103c1dbc6486960f0ea780a2b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5efa706d934158d09796dfab40b132a334c10ffd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95676822"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788897"
 ---
 # <a name="icorprofilercallbackremotingserverreceivingmessage-method"></a>ICorProfilerCallback::RemotingServerReceivingMessage Yöntemi
 
 Profil oluşturucuya işlemin bir uzak yöntem çağırma veya etkinleştirme isteği aldığını bildirir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT RemotingClientSendingMessage(  

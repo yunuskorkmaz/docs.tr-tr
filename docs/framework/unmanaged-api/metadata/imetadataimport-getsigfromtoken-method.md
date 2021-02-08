@@ -1,4 +1,5 @@
 ---
+description: ': IMetaDataImport:: GetSigFromToken yöntemi hakkında daha fazla bilgi edinin'
 title: IMetaDataImport::GetSigFromToken Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: ab894dc4-f7b6-4afc-bfcb-582a4b7e53a2
 topic_type:
 - apiref
-ms.openlocfilehash: 67abdfd8f8c67299eae757533f20df69392f25b8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 16b77fe5866319e24b33ec4ce9d2d56797f04514
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729193"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789144"
 ---
 # <a name="imetadataimportgetsigfromtoken-method"></a>IMetaDataImport::GetSigFromToken Yöntemi
 
 Belirtilen belirteçle ilişkili ikili meta veri imzasını alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetSigFromToken (

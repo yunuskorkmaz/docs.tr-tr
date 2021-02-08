@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: COR_PRF_TRANSITION_REASON numaralandırması'
 title: COR_PRF_TRANSITION_REASON Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da941118-01b7-4197-ae5b-9f2f8adcd623
 topic_type:
 - apiref
-ms.openlocfilehash: 747313f217092652d5a9404fbf81383fa0828ee9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8d0b7852f80f80a47f910e9f1240a5315772cd23
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95696667"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789001"
 ---
 # <a name="cor_prf_transition_reason-enumeration"></a>COR_PRF_TRANSITION_REASON Numaralandırması
 
@@ -36,7 +37,7 @@ typedef enum {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`COR_PRF_TRANSITION_CALL`|Geçiş bir işleve yapılan çağrıdır.|  
 |`COR_PRF_TRANSITION_RETURN`|Geçiş, bir işlevden geri dönüş nedeniyle yapılır.|  

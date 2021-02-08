@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: COR_PRF_STATIC_TYPE numaralandırması'
 title: COR_PRF_STATIC_TYPE Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 441d7809-5b65-41a5-ba64-2910a8008315
 topic_type:
 - apiref
-ms.openlocfilehash: 2fbcbb6f6115ec48085b533dbf5611054a8235c5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b7171fe4e9c536d94109d46ae6cad9201a15bab9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95696745"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789050"
 ---
 # <a name="cor_prf_static_type-enumeration"></a>COR_PRF_STATIC_TYPE Numaralandırması
 
@@ -39,7 +40,7 @@ typedef enum {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`COR_PRF_FIELD_NOT_A_STATIC`|Alan statik değil.|  
 |`COR_PRF_FIELD_APP_DOMAIN_STATIC`|Alan, uygulama etki alanı-statik ' dır.|  

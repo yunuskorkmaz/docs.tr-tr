@@ -1,4 +1,5 @@
 ---
+description: ': IMetaDataImport:: GetTypeSpecFromToken yöntemi hakkında daha fazla bilgi edinin'
 title: IMetaDataImport::GetTypeSpecFromToken Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: ee518bda-3296-482e-a7b7-e9d51dd1a181
 topic_type:
 - apiref
-ms.openlocfilehash: 62495aa4280bb1799af09fea2e550ae6107e09e9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b71f8f856da517b3e5046c20d787a555816fb728
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729154"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789118"
 ---
 # <a name="imetadataimportgettypespecfromtoken-method"></a>IMetaDataImport::GetTypeSpecFromToken Metodu
 
 Belirtilen belirteçle temsil edilen tür belirtiminin ikili meta veri imzasını alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetTypeSpecFromToken (

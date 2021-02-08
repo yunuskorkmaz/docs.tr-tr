@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: COR_PRF_RUNTIME_TYPE numaralandırması'
 title: COR_PRF_RUNTIME_TYPE Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 35449514-333f-4918-9c60-7aa198d655d2
 topic_type:
 - apiref
-ms.openlocfilehash: b599a97f414491ff80000f99551a727b86ae13de
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8f4b4a0c51c43b1db97b511387eaee1aee79f523
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95696758"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789053"
 ---
 # <a name="cor_prf_runtime_type-enumeration"></a>COR_PRF_RUNTIME_TYPE Numaralandırması
 
@@ -37,7 +38,7 @@ typedef enum
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`COR_PRF_DESKTOP_CLR`|CLR masaüstü sürümü.|  
 |`COR_PRF_CORE_CLR`|Silverlight 'ta kullanılan CLR 'nin çekirdek sürümü.|  

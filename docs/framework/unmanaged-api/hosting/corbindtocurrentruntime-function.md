@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: CorBindToCurrentRuntime Işlevi'
 title: CorBindToCurrentRuntime İşlevi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6105c13e-d9cd-44d2-a95a-924e042830c7
 topic_type:
 - apiref
-ms.openlocfilehash: 4a8ab6e1aeedef5b821fc977387b8039f54edd64
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7dd2ab7febf4b1f87265a670a1af5d54b1e1102e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95682503"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790119"
 ---
 # <a name="corbindtocurrentruntime-function"></a>CorBindToCurrentRuntime İşlevi
 
@@ -28,7 +29,7 @@ Bir XML dosyasında depolanan sürüm bilgilerini kullanarak ortak dil çalışm
   
  Bu işlev .NET Framework 4 ' te kullanım dışıdır. Bkz. [ortak dil çalışma zamanını bir Işleme yükleme](/previous-versions/dotnet/netframework-4.0/01918c6x(v=vs.100)).  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT CorBindToCurrentRuntime (  

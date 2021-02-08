@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: dize veri türü (Visual Basic)'
 title: Dize Veri Türü
 ms.date: 07/20/2015
 f1_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - String literals [Visual Basic]
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
-ms.openlocfilehash: cd4b64c101ae56928e84a04649e49c17b6f4023c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6597a5c4b8ee0eb961d3e33bee52ae493068da35
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415511"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792121"
 ---
 # <a name="string-data-type-visual-basic"></a>Dize Veri Türü (Visual Basic)
 
-0 ile 65535 arasında bir değer olarak aralıktaki işaretsiz 16 bit (2 baytlık) kod noktalarının dizilerini barındırır. Her *kod noktası*veya karakter kodu, tek bir Unicode karakteri temsil eder. Dize, 0 ile yaklaşık 2.000.000.000 (2 ^ 31) Unicode karakter içerebilir.  
+0 ile 65535 arasında bir değer olarak aralıktaki işaretsiz 16 bit (2 baytlık) kod noktalarının dizilerini barındırır. Her *kod noktası* veya karakter kodu, tek bir Unicode karakteri temsil eder. Dize, 0 ile yaklaşık 2.000.000.000 (2 ^ 31) Unicode karakter içerebilir.  
   
 ## <a name="remarks"></a>Açıklamalar  
 
@@ -79,7 +80,7 @@ S = Microsoft.VisualBasic.Left(S, 4)
   
 - **Birlikte çalışma konuları.** Otomasyon veya COM nesneleri gibi .NET Framework için yazılmayan bileşenlerle arabirimleriniz varsa, diğer ortamlarda dize karakterlerinin farklı bir veri genişliğine (8 bit) sahip olduğunu unutmayın. Bu bileşene 8 bitlik karakterlerin dize bağımsız değişkenini geçirdiğinizden, bunu `Byte()` `Byte` Yeni Visual Basic kodunuzda değil, bir dizi öğe olarak bildirin `String` .  
   
-- **Tür karakterleri.** Tanımlayıcı türü karakteri `$` herhangi bir tanımlayıcıya eklemek bunu `String` veri türüne zorlar. `String`değişmez değer türü karakteri yok. Ancak derleyici, değişmez değerleri () olarak tırnak işaretleri içinde değerlendirir `" "` `String` .  
+- **Tür karakterleri.** Tanımlayıcı türü karakteri `$` herhangi bir tanımlayıcıya eklemek bunu `String` veri türüne zorlar. `String` değişmez değer türü karakteri yok. Ancak derleyici, değişmez değerleri () olarak tırnak işaretleri içinde değerlendirir `" "` `String` .  
   
 - **Çerçeve türü.** .NET Framework karşılık gelen tür <xref:System.String?displayProperty=nameWithType> sınıftır.  
   

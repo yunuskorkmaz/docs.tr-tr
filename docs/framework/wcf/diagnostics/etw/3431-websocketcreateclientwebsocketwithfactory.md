@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 3431-WebSocketCreateClientWebSocketWithFactory'
 title: 3431 - WebSocketCreateClientWebSocketWithFactory
 ms.date: 03/30/2017
 ms.assetid: 8311f19c-970f-436a-b985-0dc8bcac85c0
-ms.openlocfilehash: 0d55997ef50fdaeb1919868e7e9a20c45e72a5e6
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f83178ff5c4cfe29f9f84e95ef7772d9c21765ef
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96244021"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788507"
 ---
 # <a name="3431---websocketcreateclientwebsocketwithfactory"></a>3431 - WebSocketCreateClientWebSocketWithFactory
 
@@ -17,10 +18,10 @@ ms.locfileid: "96244021"
 |-|-|  
 |ID|3431|  
 |Anahtar sözcükler|HTTP|  
-|Düzey|Ayrıntılı|  
+|Level|Ayrıntılı|  
 |Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bu olay, istemci WebSocket 'i oluşturulurken yayınlanır.  
   

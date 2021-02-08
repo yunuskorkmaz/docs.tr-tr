@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: veritabanı erişim etkinlikleri'
 title: Veritabanı Erişimi Etkinlikleri
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: ed3f0ad3f2fd19f622c9cb0faf7d5cd864b81995
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 421da4a55997dac62ccc5c598bc401a20711ec61
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094650"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792550"
 ---
 # <a name="database-access-activities"></a>Veritabanı Erişimi Etkinlikleri
 
@@ -18,7 +19,7 @@ Veritabanı erişim etkinlikleri, bir iş akışı içindeki bir veritabanına e
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek için (sayfayı indir) bölümüne gidin. Bu örnek, aşağıdaki dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için (indirme sayfası) bölümüne gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`
 
@@ -30,13 +31,13 @@ Aşağıdaki bölümler, bu örneğe dahil edilen etkinliklerin listesini ayrın
 
 Veritabanında değişiklik üreten bir SQL sorgusu yürütür (ekleme, güncelleştirme, silme ve diğer değişiklikler).
 
-Bu sınıf, işini zaman uyumsuz olarak gerçekleştirir (<xref:System.Activities.AsyncCodeActivity> türetilir ve zaman uyumsuz yeteneklerini kullanır).
+Bu sınıf, işini zaman uyumsuz olarak gerçekleştirir (öğesinden türetilir <xref:System.Activities.AsyncCodeActivity> ve zaman uyumsuz yeteneklerini kullanır).
 
-Bağlantı bilgileri, bir sağlayıcı sabit adı (`ProviderName`) ve bağlantı dizesi (`ConnectionString`) ayarlanarak veya yalnızca uygulama yapılandırma dosyasından bir bağlantı dizesi yapılandırma adı (`ConfigFileSectionName`) kullanılarak yapılandırılabilir.
+Bağlantı bilgileri, bir sağlayıcı sabit adı ( `ProviderName` ) ve bağlantı dizesi ( `ConnectionString` ) ayarlanarak veya yalnızca uygulama yapılandırma dosyasından bir bağlantı dizesi yapılandırma adı () kullanılarak yapılandırılabilir `ConfigFileSectionName` .
 
-Yürütülecek sorgu `Sql` özelliğinde yapılandırılır ve parametreler `Parameters` koleksiyonundan geçirilir.
+Yürütülecek sorgu, `Sql` özelliğinde yapılandırılır ve parametreler `Parameters` koleksiyondan geçirilir.
 
-`DbUpdate` yürütüldükten sonra, etkilenen kayıtların sayısı `AffectedRecords` özelliğinde döndürülür.
+`DbUpdate`Yürütüldükten sonra, etkilenen kayıtların sayısı, `AffectedRecords` özelliğinde döndürülür.
 
 ```csharp
 Public class DbUpdate: AsyncCodeActivity
@@ -72,12 +73,12 @@ Public class DbUpdate: AsyncCodeActivity
 }
 ```
 
-|Bağımsız Değişken|Açıklama|
+|Bağımsız Değişken|Description|
 |-|-|
-|Adı|ADO.NET sağlayıcısı sabit adı. Bu bağımsız değişken ayarlandıysa, `ConnectionString` de ayarlanmalıdır.|
-|ConnectionString|Veritabanına bağlanmak için bağlantı dizesi. Bu bağımsız değişken ayarlandıysa, `ProviderName` de ayarlanmalıdır.|
-|ConfigName|Bağlantı bilgilerinin depolandığı yapılandırma dosyası bölümünün adı. Bu bağımsız değişken ayarlandığında `ProviderName` ve `ConnectionString` gerekli değildir.|
-|CommandType|Yürütülecek <xref:System.Data.Common.DbCommand> türü.|
+|Adı|ADO.NET sağlayıcısı sabit adı. Bu bağımsız değişken ayarlandıysa `ConnectionString` de ayarlanmalıdır.|
+|Dizisi|Veritabanına bağlanmak için bağlantı dizesi. Bu bağımsız değişken ayarlandıysa `ProviderName` de ayarlanmalıdır.|
+|ConfigName|Bağlantı bilgilerinin depolandığı yapılandırma dosyası bölümünün adı. Bu bağımsız değişken ayarlandığında `ProviderName` ve `ConnectionString` gerekli olmadığında.|
+|CommandType|Yürütülecek öğesinin türü <xref:System.Data.Common.DbCommand> .|
 |Sql|Yürütülecek SQL komutu.|
 |Parametreler|SQL sorgusunun parametrelerinin koleksiyonu.|
 |AffectedRecords|Son işlemden etkilenen kayıt sayısı.|
@@ -86,13 +87,13 @@ Public class DbUpdate: AsyncCodeActivity
 
 Veritabanından tek bir değer alan bir sorgu yürütür.
 
-Bu sınıf, işini zaman uyumsuz olarak gerçekleştirir (<xref:System.Activities.AsyncCodeActivity%601> türetilir ve zaman uyumsuz yeteneklerini kullanır).
+Bu sınıf, işini zaman uyumsuz olarak gerçekleştirir (öğesinden türetilir <xref:System.Activities.AsyncCodeActivity%601> ve zaman uyumsuz yeteneklerini kullanır).
 
-Bağlantı bilgileri, bir sağlayıcı sabit adı (`ProviderName`) ve bağlantı dizesi (`ConnectionString`) ayarlanarak veya yalnızca uygulama yapılandırma dosyasından bir bağlantı dizesi yapılandırma adı (`ConfigFileSectionName`) kullanılarak yapılandırılabilir.
+Bağlantı bilgileri, bir sağlayıcı sabit adı ( `ProviderName` ) ve bağlantı dizesi ( `ConnectionString` ) ayarlanarak veya yalnızca uygulama yapılandırma dosyasından bir bağlantı dizesi yapılandırma adı () kullanılarak yapılandırılabilir `ConfigFileSectionName` .
 
-Yürütülecek sorgu `Sql` özelliğinde yapılandırılır ve parametreler `Parameters` koleksiyonundan geçirilir.
+Yürütülecek sorgu, `Sql` özelliğinde yapılandırılır ve parametreler `Parameters` koleksiyondan geçirilir.
 
-`DbQueryScalar` yürütüldükten sonra skaler, `Result out` bağımsız değişkeninde (`TResult`türünde, temel sınıfta tanımlanan <xref:System.Activities.AsyncCodeActivity%601>) döndürülür.
+`DbQueryScalar`Yürütüldükten sonra skaler, `Result out` bağımsız değişkende ( `TResult` temel sınıfta tanımlanan türünde <xref:System.Activities.AsyncCodeActivity%601> ) döndürülür.
 
 ```csharp
 public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
@@ -126,25 +127,25 @@ public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
 }
 ```
 
-|Bağımsız Değişken|Açıklama|
+|Bağımsız Değişken|Description|
 |-|-|
-|Adı|ADO.NET sağlayıcısı sabit adı. Bu bağımsız değişken ayarlandıysa, `ConnectionString` de ayarlanmalıdır.|
-|ConnectionString|Veritabanına bağlanmak için bağlantı dizesi. Bu bağımsız değişken ayarlandıysa, `ProviderName` de ayarlanmalıdır.|
-|ConfigName|Bağlantı bilgilerinin depolandığı yapılandırma dosyası bölümünün adı. Bu bağımsız değişken ayarlandığında `ProviderName` ve `ConnectionString` gerekli değildir.|
-|CommandType|Yürütülecek <xref:System.Data.Common.DbCommand> türü.|
+|Adı|ADO.NET sağlayıcısı sabit adı. Bu bağımsız değişken ayarlandıysa `ConnectionString` de ayarlanmalıdır.|
+|Dizisi|Veritabanına bağlanmak için bağlantı dizesi. Bu bağımsız değişken ayarlandıysa `ProviderName` de ayarlanmalıdır.|
+|ConfigName|Bağlantı bilgilerinin depolandığı yapılandırma dosyası bölümünün adı. Bu bağımsız değişken ayarlandığında `ProviderName` ve `ConnectionString` gerekli olmadığında.|
+|CommandType|Yürütülecek öğesinin türü <xref:System.Data.Common.DbCommand> .|
 |Sql|Yürütülecek SQL komutu.|
 |Parametreler|SQL sorgusunun parametrelerinin koleksiyonu.|
-|Sonuç|Sorgu yürütüldükten sonra elde edilen skaler. Bu bağımsız değişken `TResult`türündedir.|
+|Sonuç|Sorgu yürütüldükten sonra elde edilen skaler. Bu bağımsız değişken türündedir `TResult` .|
 
 ## <a name="dbquery"></a>DbQuery
 
-Bir nesne listesini alan bir sorgu yürütür. Sorgu yürütüldükten sonra bir eşleme işlevi yürütülür (<xref:System.Func%601><`DbDataReader`, `TResult`> veya <xref:System.Activities.ActivityFunc%601><`DbDataReader``TResult`>) olabilir. Bu eşleme işlevi `DbDataReader` bir kayıt alır ve bunu döndürülecek nesneyle eşler.
+Bir nesne listesini alan bir sorgu yürütür. Sorgu yürütüldükten sonra bir eşleme işlevi yürütülür (Bu <xref:System.Func%601> < `DbDataReader` , `TResult`> veya bir <xref:System.Activities.ActivityFunc%601> < `DbDataReader` `TResult`> olabilir). Bu eşleme işlevi, içindeki bir kaydı alır `DbDataReader` ve döndürülecek nesne ile eşler.
 
-Bağlantı bilgileri, bir sağlayıcı sabit adı (`ProviderName`) ve bağlantı dizesi (`ConnectionString`) ayarlanarak veya yalnızca uygulama yapılandırma dosyasından bir bağlantı dizesi yapılandırma adı (`ConfigFileSectionName`) kullanılarak yapılandırılabilir.
+Bağlantı bilgileri, bir sağlayıcı sabit adı ( `ProviderName` ) ve bağlantı dizesi ( `ConnectionString` ) ayarlanarak veya yalnızca uygulama yapılandırma dosyasından bir bağlantı dizesi yapılandırma adı () kullanılarak yapılandırılabilir `ConfigFileSectionName` .
 
-Yürütülecek sorgu `Sql` özelliğinde yapılandırılır ve parametreler `Parameters` koleksiyonundan geçirilir.
+Yürütülecek sorgu, `Sql` özelliğinde yapılandırılır ve parametreler `Parameters` koleksiyondan geçirilir.
 
-SQL sorgusunun sonuçları bir `DbDataReader`kullanılarak alınır. Etkinlik `DbDataReader` boyunca yinelenir ve `DbDataReader` satırları `TResult`bir örneğine eşler. `DbQuery` kullanıcısının eşleme kodunu sağlaması gerekir ve bu iki şekilde yapılabilir: <xref:System.Func%601><`DbDataReader`, `TResult`> veya <xref:System.Activities.ActivityFunc%601><`DbDataReader`, `TResult`> kullanımı. İlk durumda, eşleme tek bir yürütme darbeli yapılır. Bu nedenle daha hızlıdır, ancak bu XAML 'e serileştirilemiyor. Son durumda, eşleme birden çok pulda gerçekleştirilir. Bu nedenle, daha yavaş olabilir ancak XAML 'ye serileştirilebilir ve bildirimli olarak yazılabilir (varolan herhangi bir etkinlik eşlemeye katılabilir).
+SQL sorgusunun sonuçları bir kullanılarak alınır `DbDataReader` . Etkinlik `DbDataReader` öğesinde yinelenir ve içindeki satırları `DbDataReader` bir örneğine eşler `TResult` . Kullanıcısının `DbQuery` eşleme kodunu sağlaması gerekir ve bu iki şekilde yapılabilir: bir <xref:System.Func%601> < `DbDataReader` , `TResult`> veya bir <xref:System.Activities.ActivityFunc%601> < `DbDataReader` `TResult`> kullanarak. İlk durumda, eşleme tek bir yürütme darbeli yapılır. Bu nedenle daha hızlıdır, ancak bu XAML 'e serileştirilemiyor. Son durumda, eşleme birden çok pulda gerçekleştirilir. Bu nedenle, daha yavaş olabilir ancak XAML 'ye serileştirilebilir ve bildirimli olarak yazılabilir (varolan herhangi bir etkinlik eşlemeye katılabilir).
 
 ```csharp
 public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult : class
@@ -186,27 +187,27 @@ public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult 
 }
 ```
 
-|Bağımsız Değişken|Açıklama|
+|Bağımsız Değişken|Description|
 |-|-|
-|Adı|ADO.NET sağlayıcısı sabit adı. Bu bağımsız değişken ayarlandıysa, `ConnectionString` de ayarlanmalıdır.|
-|ConnectionString|Veritabanına bağlanmak için bağlantı dizesi. Bu bağımsız değişken ayarlandıysa, `ProviderName` de ayarlanmalıdır.|
-|ConfigName|Bağlantı bilgilerinin depolandığı yapılandırma dosyası bölümünün adı. Bu bağımsız değişken ayarlandığında `ProviderName` ve `ConnectionString` gerekli değildir.|
-|CommandType|Yürütülecek <xref:System.Data.Common.DbCommand> türü.|
+|Adı|ADO.NET sağlayıcısı sabit adı. Bu bağımsız değişken ayarlandıysa `ConnectionString` de ayarlanmalıdır.|
+|Dizisi|Veritabanına bağlanmak için bağlantı dizesi. Bu bağımsız değişken ayarlandıysa `ProviderName` de ayarlanmalıdır.|
+|ConfigName|Bağlantı bilgilerinin depolandığı yapılandırma dosyası bölümünün adı. Bu bağımsız değişken ayarlandığında `ProviderName` ve `ConnectionString` gerekli olmadığında.|
+|CommandType|Yürütülecek öğesinin türü <xref:System.Data.Common.DbCommand> .|
 |Sql|Yürütülecek SQL komutu.|
 |Parametreler|SQL sorgusunun parametrelerinin koleksiyonu.|
-|Eşleyici|Eşleme işlevi (<xref:System.Func%601><`DbDataReader`, `TResult`>) sorguyu yürütmenin sonucu olarak elde edilen `DataReader` bir kayıt alır ve `TResult` koleksiyonuna eklenmek üzere `Result` türünde bir nesnenin örneğini döndürür.<br /><br /> Bu durumda, eşleme tek bir yürütmede yürütme yapılır, ancak tasarımcı kullanılarak bildirimli olarak yazılamıyor.|
-|MapperFunc|Eşleme işlevi (<xref:System.Activities.ActivityFunc%601><`DbDataReader`, `TResult`>) sorguyu yürütmenin sonucu olarak elde edilen `DataReader` bir kayıt alır ve `TResult` koleksiyonuna eklenmek üzere `Result` türünde bir nesnenin örneğini döndürür.<br /><br /> Bu durumda, eşleme birden çok sayıda yürütmede yapılır. Bu işlev XAML 'ye serileştirilebilir ve bildirimli olarak yazılabilir (var olan herhangi bir etkinlik eşlemede yer alabilir).|
-|Sonuç|Sorguyu yürütmenin ve `DataReader`her kayıt için eşleme işlevinin yürütüldüğü sonuç olarak elde edilen nesnelerin listesi.|
+|Eşleyici|<xref:System.Func%601> < `DbDataReader` `TResult` Sorgu yürütmenin sonucu olarak elde edilen bir kaydı alan eşleme işlevi (,>) `DataReader` ve `TResult` koleksiyona eklenmek üzere türünde bir nesnenin örneğini döndürür `Result` .<br /><br /> Bu durumda, eşleme tek bir yürütmede yürütme yapılır, ancak tasarımcı kullanılarak bildirimli olarak yazılamıyor.|
+|MapperFunc|<xref:System.Activities.ActivityFunc%601> < `DbDataReader` `TResult` Sorgu yürütmenin sonucu olarak elde edilen bir kaydı alan eşleme işlevi (,>) `DataReader` ve `TResult` koleksiyona eklenmek üzere türünde bir nesnenin örneğini döndürür `Result` .<br /><br /> Bu durumda, eşleme birden çok sayıda yürütmede yapılır. Bu işlev XAML 'ye serileştirilebilir ve bildirimli olarak yazılabilir (var olan herhangi bir etkinlik eşlemede yer alabilir).|
+|Sonuç|Sorguyu yürütmenin ve içindeki her kayıt için eşleme işlevinin yürütüldüğü sonuç olarak elde edilen nesnelerin listesi `DataReader` .|
 
 ## <a name="dbquerydataset"></a>DbQueryDataSet
 
-<xref:System.Data.DataSet>döndüren bir sorgu yürütür. Bu sınıf, zaman uyumsuz olarak işini gerçekleştirir. <xref:System.Activities.AsyncCodeActivity><`TResult`> türetilir ve zaman uyumsuz yeteneklerini kullanır.
+Döndüren bir sorgu yürütür <xref:System.Data.DataSet> . Bu sınıf, zaman uyumsuz olarak işini gerçekleştirir. <xref:System.Activities.AsyncCodeActivity> < `TResult`> türetilir ve zaman uyumsuz yeteneklerini kullanır.
 
-Bağlantı bilgileri, bir sağlayıcı sabit adı (`ProviderName`) ve bağlantı dizesi (`ConnectionString`) ayarlanarak veya yalnızca uygulama yapılandırma dosyasından bir bağlantı dizesi yapılandırma adı (`ConfigFileSectionName`) kullanılarak yapılandırılabilir.
+Bağlantı bilgileri, bir sağlayıcı sabit adı ( `ProviderName` ) ve bağlantı dizesi ( `ConnectionString` ) ayarlanarak veya yalnızca uygulama yapılandırma dosyasından bir bağlantı dizesi yapılandırma adı () kullanılarak yapılandırılabilir `ConfigFileSectionName` .
 
-Yürütülecek sorgu `Sql` özelliğinde yapılandırılır ve parametreler `Parameters` koleksiyonundan geçirilir.
+Yürütülecek sorgu, `Sql` özelliğinde yapılandırılır ve parametreler `Parameters` koleksiyondan geçirilir.
 
-`DbQueryDataSet` yürütüldükten sonra, `DataSet` `Result out` bağımsız değişkenine döndürülür (`TResult`türü, temel sınıfta tanımlanmıştır <xref:System.Activities.AsyncCodeActivity%601>).
+Yürütüldükten sonra, `DbQueryDataSet` `DataSet` `Result out` bağımsız değişkende ( `TResult` temel sınıfta tanımlanan türünde <xref:System.Activities.AsyncCodeActivity%601> ) döndürülür.
 
 ```csharp
 public class DbQueryDataSet : AsyncCodeActivity<DataSet>
@@ -240,15 +241,15 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 }
 ```
 
-|Bağımsız Değişken|Açıklama|
+|Bağımsız Değişken|Description|
 |-|-|
-|Adı|ADO.NET sağlayıcısı sabit adı. Bu bağımsız değişken ayarlandıysa, `ConnectionString` de ayarlanmalıdır.|
-|ConnectionString|Veritabanına bağlanmak için bağlantı dizesi. Bu bağımsız değişken ayarlandıysa, `ProviderName` de ayarlanmalıdır.|
-|ConfigName|Bağlantı bilgilerinin depolandığı yapılandırma dosyası bölümünün adı. Bu bağımsız değişken ayarlandığında `ProviderName` ve `ConnectionString` gerekli değildir.|
-|CommandType|Yürütülecek <xref:System.Data.Common.DbCommand> türü.|
+|Adı|ADO.NET sağlayıcısı sabit adı. Bu bağımsız değişken ayarlandıysa `ConnectionString` de ayarlanmalıdır.|
+|Dizisi|Veritabanına bağlanmak için bağlantı dizesi. Bu bağımsız değişken ayarlandıysa `ProviderName` de ayarlanmalıdır.|
+|ConfigName|Bağlantı bilgilerinin depolandığı yapılandırma dosyası bölümünün adı. Bu bağımsız değişken ayarlandığında `ProviderName` ve `ConnectionString` gerekli olmadığında.|
+|CommandType|Yürütülecek öğesinin türü <xref:System.Data.Common.DbCommand> .|
 |Sql|Yürütülecek SQL komutu.|
 |Parametreler|SQL sorgusunun parametrelerinin koleksiyonu.|
-|Sonuç|Sorgu yürütüldükten sonra elde edilen <xref:System.Data.DataSet>.|
+|Sonuç|<xref:System.Data.DataSet> Sorgu yürütüldükten sonra elde edilen.|
 
 ## <a name="configuring-connection-information"></a>Bağlantı bilgilerini yapılandırma
 
@@ -267,7 +268,7 @@ Tüm Dbacmize aynı yapılandırma parametrelerini paylaşır. İki şekilde yap
   };
   ```
 
-- `ConfigName`: bağlantı bilgilerini içeren yapılandırma bölümünün adını ayarlayın.
+- `ConfigName`: Bağlantı bilgilerini içeren yapılandırma bölümünün adını ayarlayın.
 
   ```xml
   <connectionStrings>
@@ -333,6 +334,6 @@ Setup. cmd betiği, aşağıdakileri yapan SQL komutlarını içeren CreateDb. S
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`

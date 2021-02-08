@@ -1,4 +1,5 @@
 ---
+description: ': Isosdacınterface:: GetModuleData yöntemi hakkında daha fazla bilgi'
 title: 'Iosdacınterface:: GetModuleData yöntemi'
 ms.date: 02/01/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: b302100eb6cbfa83896cd358762c496ea01f7509
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: c01f55d55d5ee9082dee4b3adb3022bb17807aa2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420987"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790392"
 ---
 # <a name="isosdacinterfacegetmoduledata-method"></a>Iosdacınterface:: GetModuleData yöntemi
 
@@ -28,7 +29,7 @@ Verilen bir adreste yüklü olan modüle karşılık gelen verileri getirir.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 HRESULT GetModuleData(

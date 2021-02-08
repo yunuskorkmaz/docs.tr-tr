@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerCallback:: Runtimesuspendadted yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerCallback::RuntimeSuspendAborted Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5a8a4277-345b-448b-a028-fc8cff9998aa
 topic_type:
 - apiref
-ms.openlocfilehash: 4b6eb59dd771e4013106e6a77fc7475b77b2b007
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 892de7ce0b4537f5526a58b6e70f66cd295be2df
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732027"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788832"
 ---
 # <a name="icorprofilercallbackruntimesuspendaborted-method"></a>ICorProfilerCallback::RuntimeSuspendAborted Yöntemi
 

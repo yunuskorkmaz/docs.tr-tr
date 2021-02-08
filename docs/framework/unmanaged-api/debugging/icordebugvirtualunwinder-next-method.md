@@ -1,19 +1,20 @@
 ---
+description: 'Daha fazla bilgi edinin: ICorDebugVirtualUnwinder:: Next yöntemi'
 title: 'ICorDebugVirtualUnwinder:: Next yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 790e0426-e5cd-49fd-a792-f8c8635d72fe
-ms.openlocfilehash: bfc827a1503b0367a442e3f3ca0915bd2aaeb01e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b509e8e4fb24c66764999e67ba7e36299ce7f570
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725956"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790522"
 ---
 # <a name="icordebugvirtualunwindernext-method"></a>ICorDebugVirtualUnwinder:: Next yöntemi
 
 Çağıranın bağlamına ilerletir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT Next();  

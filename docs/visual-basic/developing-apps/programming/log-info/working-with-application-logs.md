@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Visual Basic uygulama günlükleriyle çalışma'
 title: Uygulama Günlükleriyle Çalışma
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - application event logs, Visual Basic
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
-ms.openlocfilehash: e33efac8f65832c87d5c9271eba25c2ca1d1803b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0c05bd63cfbae668c58a87aa39651b6c3ef166ad
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387601"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792277"
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Visual Basic'te Uygulama Günlükleriyle Çalışma
 
@@ -49,9 +50,9 @@ Bilgisayar ve uygulamanın yapılandırma dosyalarını ekleyerek veya değişti
 
 ## <a name="configuring-log-settings"></a>Günlük ayarlarını yapılandırma
 
-`Log`Nesnesi, uygulama yapılandırma dosyası, App. config olmadan çalışacak varsayılan bir uygulamaya sahiptir. Varsayılanları değiştirmek için yeni ayarlara sahip bir yapılandırma dosyası eklemeniz gerekir. Daha fazla bilgi için bkz. [Izlenecek yol: My. Application. log çıktısını filtreleme](walkthrough-filtering-my-application-log-output.md).
+`Log`Nesnesi, bir uygulama yapılandırma dosyası olmadan çalışacak varsayılan bir uygulamaya sahiptir app.config. Varsayılanları değiştirmek için yeni ayarlara sahip bir yapılandırma dosyası eklemeniz gerekir. Daha fazla bilgi için bkz. [Izlenecek yol: My. Application. log çıktısını filtreleme](walkthrough-filtering-my-application-log-output.md).
 
-Günlük yapılandırma bölümleri, `<system.diagnostics>` `<configuration>` app. config dosyasının ana düğümündeki düğümünde bulunur. Günlük bilgileri çeşitli düğümlerde tanımlanmıştır:
+Günlük yapılandırma bölümleri, `<system.diagnostics>` `<configuration>` app.config dosyasının ana düğümündeki düğümünde bulunur. Günlük bilgileri çeşitli düğümlerde tanımlanmıştır:
 
 - `Log`Nesnenin dinleyicileri `<sources>` DefaultSource adlı düğümde tanımlanmıştır.
 
@@ -88,7 +89,7 @@ Günlük yapılandırma bölümleri, `<system.diagnostics>` `<configuration>` ap
 
 ## <a name="changing-log-settings-after-deployment"></a>Dağıtımdan sonra günlük ayarlarını değiştirme
 
-Bir uygulama geliştirirken, yapılandırma ayarları Yukarıdaki örneklerde gösterildiği gibi App. config dosyasında depolanır. Uygulamanızı dağıttıktan sonra yapılandırma dosyasını düzenleyerek günlüğü yapılandırmaya devam edebilirsiniz. Windows tabanlı bir uygulamada, bu dosyanın adı *ApplicationName*. exe. config olur ve yürütülebilir dosyayla aynı klasörde bulunmalıdır. Bir Web uygulaması için, bu, projeyle ilişkili Web. config dosyasıdır.
+Bir uygulama geliştirirken, Yukarıdaki örneklerde gösterildiği gibi, yapılandırma ayarları app.config dosyasında depolanır. Uygulamanızı dağıttıktan sonra yapılandırma dosyasını düzenleyerek günlüğü yapılandırmaya devam edebilirsiniz. Windows tabanlı bir uygulamada, bu dosyanın adı *applicationName*.exe.config ve yürütülebilir dosyayla aynı klasörde bulunmalıdır. Bir Web uygulaması için bu, projeyle ilişkili Web.config dosyasıdır.
 
 Uygulamanız bir sınıfın bir örneğini ilk kez oluşturan kodu yürüttüğünde, nesne hakkında bilgi için yapılandırma dosyasını kontrol eder. Nesnesi için `Log` , bu nesne ilk kez `Log` erişildiğinde gerçekleşir. Sistem, yapılandırma dosyasını belirli bir nesne için yalnızca bir kez inceler — uygulamanız nesneyi ilk kez oluşturduğunda. Bu nedenle, değişikliklerin etkili olması için uygulamayı yeniden başlatmanız gerekebilir.
 

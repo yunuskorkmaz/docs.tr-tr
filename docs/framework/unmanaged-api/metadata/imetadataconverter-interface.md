@@ -1,4 +1,5 @@
 ---
+description: ': IMetaDataConverter arabirimi hakkında daha fazla bilgi edinin'
 title: IMetaDataConverter Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9caea662-0167-4267-b14a-2fa42c3be4ea
 topic_type:
 - apiref
-ms.openlocfilehash: 74804cdc9dc04c3ede5cc26a6310dbb3948cd78a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6ed84083bad924e760c576afe485bd7ccad012cf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729492"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789261"
 ---
 # <a name="imetadataconverter-interface"></a>IMetaDataConverter Arabirimi
 

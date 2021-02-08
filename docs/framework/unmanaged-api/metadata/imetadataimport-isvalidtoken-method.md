@@ -1,4 +1,5 @@
 ---
+description: ': IMetaDataImport:: IsValidToken yöntemi hakkında daha fazla bilgi edinin'
 title: IMetaDataImport::IsValidToken Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: aeb0fc63-9eff-4384-9284-cb9900572d74
 topic_type:
 - apiref
-ms.openlocfilehash: b4dc1e60f3d29e2671882d1900a1c49e56969601
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 68589496213c93f81cfbd0992f9b210e03d6f178
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95702868"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789066"
 ---
 # <a name="imetadataimportisvalidtoken-method"></a>IMetaDataImport::IsValidToken Yöntemi
 
 Belirtilen belirtecin bir kod nesnesine geçerli bir başvuru içerip içermediğini gösteren bir değer alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 BOOL IsValidToken (  

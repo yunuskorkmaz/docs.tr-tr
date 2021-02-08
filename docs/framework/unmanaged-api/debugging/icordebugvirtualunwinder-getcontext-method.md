@@ -1,19 +1,20 @@
 ---
+description: 'Daha fazla bilgi edinin: ICorDebugVirtualUnwinder:: GetContext yöntemi'
 title: 'ICorDebugVirtualUnwinder:: GetContext yöntemi'
 ms.date: 03/30/2017
 ms.assetid: fe502a76-3068-47e5-a0a0-85ccb72dfac3
-ms.openlocfilehash: a5a1afa47e52eff7c930698a3354a03d8c62259f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 864f32ce82149658b2d4a617b08e8d7aa41fe642
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95679461"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790535"
 ---
 # <a name="icordebugvirtualunwindergetcontext-method"></a>ICorDebugVirtualUnwinder:: GetContext yöntemi
 
 Bu unwinder 'in geçerli bağlamını alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetContext(  

@@ -1,19 +1,20 @@
 ---
+description: ': ICorDebugVariableSymbol:: Getslotındex yöntemi hakkında daha fazla bilgi edinin'
 title: 'ICorDebugVariableSymbol:: Getslotındex yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 09c19f5f-afc4-4e0c-bffe-cd7147bc7a43
-ms.openlocfilehash: fc42517cb95dfc14c472b5bb9111ebd70639cee7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3b5cba06a5e80ffa323d2e6521e9ec4666f6f5f3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725995"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790561"
 ---
 # <a name="icordebugvariablesymbolgetslotindex-method"></a>ICorDebugVariableSymbol:: Getslotındex yöntemi
 
 Yerel bir değişkenin yönetilen yuva dizinini alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetSlotIndex(  

@@ -1,4 +1,5 @@
 ---
+description: ': Imetadatadağıtıcı::D efineScope yöntemi hakkında daha fazla bilgi'
 title: IMetaDataDispenser::DefineScope Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: af28db02-29af-45ac-aec6-8d6c6123c2ff
 topic_type:
 - apiref
-ms.openlocfilehash: 87a39350986cb7bb62f76b0d9a6a9aae8f82e2f9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b7a7870ec06af4c08a4ef3609077eb93f74da776
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726099"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789248"
 ---
 # <a name="imetadatadispenserdefinescope-method"></a>IMetaDataDispenser::DefineScope Yöntemi
 
 Bellekte yeni meta veri oluşturabileceğiniz yeni bir alan oluşturur.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT DefineScope (  

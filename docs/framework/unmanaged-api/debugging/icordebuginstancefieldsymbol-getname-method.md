@@ -1,19 +1,20 @@
 ---
+description: ': Icordebugınstancefieldsymbol:: GetName Yöntemi hakkında daha fazla bilgi edinin'
 title: 'Icordebugınstancefieldsymbol:: GetName Yöntemi'
 ms.date: 03/30/2017
 ms.assetid: d9c12b1f-9c1d-4943-8e9e-93b55faf085f
-ms.openlocfilehash: e466a62761cc6dd1f1fc0a54f05d54f85c190d07
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9cc2106d1527aa0b4d9e5c52115b703ffe55037f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724942"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791198"
 ---
 # <a name="icordebuginstancefieldsymbolgetname-method"></a>Icordebugınstancefieldsymbol:: GetName Yöntemi
 
 Örnek alanının adını alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetName(  

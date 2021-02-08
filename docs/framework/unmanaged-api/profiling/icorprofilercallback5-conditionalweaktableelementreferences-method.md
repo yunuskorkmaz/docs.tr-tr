@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ICorProfilerCallback5:: ConditionalWeakTableElementReferences Yöntemi'
 title: ICorProfilerCallback5::ConditionalWeakTableElementReferences Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 532c7a02-a9de-4cea-bb2b-7f470da594de
 topic_type:
 - apiref
-ms.openlocfilehash: 17fbc99b30921f795c1f7ff882ec73432aade8c6
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 40114f6e1d80719eceaf2dbc398b74c1e790c76a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499252"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788676"
 ---
 # <a name="icorprofilercallback5conditionalweaktableelementreferences-method"></a>ICorProfilerCallback5::ConditionalWeakTableElementReferences Yöntemi
 
 Doğrudan üye alan başvuruları ve bağımlılıklar aracılığıyla bu köklerin başvurduğu nesnelerin geçişli kapanışını tanımlar `ConditionalWeakTable` .
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 HRESULT ConditionalWeakTableElementReferences(
@@ -49,7 +50,7 @@ HRESULT ConditionalWeakTableElementReferences(
 'ndaki Her biri `ObjectID` bağımlı tanıtıcı çiftindeki ikincil öğe için öğesini içeren bir nesne kimlikleri dizisi. ( `keyRefIds[i]` `valueRefIds[i]` canlı tutar.)
 
 `rootIds`\
-'ndaki `GCHandleID`Çöp toplama köküyle ilgili ek bilgiler içeren bir tamsayıyı işaret eden bir değer dizisi.
+'ndaki `GCHandleID` Çöp toplama köküyle ilgili ek bilgiler içeren bir tamsayıyı işaret eden bir değer dizisi.
 
 `ObjectID` `ConditionalWeakTableElementReferences` Çöp toplayıcı nesneleri eskileri yeni konumlara taşıma sürecinde olabileceğinden, yöntem tarafından döndürülen değerlerden hiçbiri geçerli değildir. Bu nedenle, profil oluşturucular bir çağrı sırasında nesneleri incelemeyi denememelidir `ConditionalWeakTableElementReferences` . `GarbageCollectionFinished`' De, tüm nesneler yeni konumlarına taşınmıştır ve denetleme yapılabilir.
 
@@ -80,7 +81,7 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 
 ## <a name="remarks"></a>Açıklamalar
 
-.NET Framework 4,5 veya sonraki sürümler için bir profil oluşturucu [ICorProfilerCallback5](icorprofilercallback5-interface.md) arabirimini uygular ve yöntemi tarafından belirtilen bağımlılıkları kaydeder `ConditionalWeakTableElementReferences` . `ICorProfilerCallback5`, girdilere göre temsil edilen canlı nesneler arasındaki tüm bağımlılık kümesini sağlar `ConditionalWeakTable` . Bu bağımlılıklar ve [ICorProfilerCallback:: ObjectReferences](icorprofilercallback-objectreferences-method.md) yöntemi tarafından belirtilen üye alanı başvuruları, canlı nesnelerin tam nesne grafiğini oluşturmak için yönetilen bir profil oluşturucuyu etkinleştirir.
+.NET Framework 4,5 veya sonraki sürümler için bir profil oluşturucu [ICorProfilerCallback5](icorprofilercallback5-interface.md) arabirimini uygular ve yöntemi tarafından belirtilen bağımlılıkları kaydeder `ConditionalWeakTableElementReferences` . `ICorProfilerCallback5` , girdilere göre temsil edilen canlı nesneler arasındaki tüm bağımlılık kümesini sağlar `ConditionalWeakTable` . Bu bağımlılıklar ve [ICorProfilerCallback:: ObjectReferences](icorprofilercallback-objectreferences-method.md) yöntemi tarafından belirtilen üye alanı başvuruları, canlı nesnelerin tam nesne grafiğini oluşturmak için yönetilen bir profil oluşturucuyu etkinleştirir.
 
 ## <a name="requirements"></a>Gereksinimler
 
