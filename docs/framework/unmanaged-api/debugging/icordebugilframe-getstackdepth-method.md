@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugILFrame:: GetStackDepth Yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugILFrame::GetStackDepth Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: da6a1123-871d-4492-9d35-3bdb49f94c93
 topic_type:
 - apiref
-ms.openlocfilehash: 4d03d1c3fccf0be7e8d8a79477fc5b48a565cf2a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 950903f35c59d87a121e71a2ce81e9e0302ec2f4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95703076"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791362"
 ---
-# <a name="icordebugilframegetstackdepth-method"></a><span data-ttu-id="cfec5-102">ICorDebugILFrame::GetStackDepth Metodu</span><span class="sxs-lookup"><span data-stu-id="cfec5-102">ICorDebugILFrame::GetStackDepth Method</span></span>
+# <a name="icordebugilframegetstackdepth-method"></a><span data-ttu-id="e6dd0-103">ICorDebugILFrame::GetStackDepth Metodu</span><span class="sxs-lookup"><span data-stu-id="e6dd0-103">ICorDebugILFrame::GetStackDepth Method</span></span>
 
-<span data-ttu-id="cfec5-103">Bu yöntem uygulanmadı.</span><span class="sxs-lookup"><span data-stu-id="cfec5-103">This method has not been implemented.</span></span>  
+<span data-ttu-id="e6dd0-104">Bu yöntem uygulanmadı.</span><span class="sxs-lookup"><span data-stu-id="e6dd0-104">This method has not been implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cfec5-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="cfec5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e6dd0-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="e6dd0-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetStackDepth (  
@@ -34,6 +35,6 @@ HRESULT GetStackDepth (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="cfec5-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="cfec5-105">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e6dd0-106">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e6dd0-106">Requirements</span></span>  
 
- <span data-ttu-id="cfec5-106">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="cfec5-106">**Header:** CorDebug.idl, CorDebug.h</span></span>
+ <span data-ttu-id="e6dd0-107">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="e6dd0-107">**Header:** CorDebug.idl, CorDebug.h</span></span>

@@ -1,4 +1,5 @@
 ---
+description: ': ICorRuntimeHost:: SwitchInLogicalThreadState Yöntemi hakkında daha fazla bilgi edinin'
 title: ICorRuntimeHost::SwitchInLogicalThreadState Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 7df1e492-8014-43ea-80d1-a4743e9b1c17
 topic_type:
 - apiref
-ms.openlocfilehash: a4590bcd96226a713ff5535a8bc802c2116f862a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3e375379cc5d6af7c3a8fb8d64a40a389e0f9dcc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95690141"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789573"
 ---
-# <a name="icorruntimehostswitchinlogicalthreadstate-method"></a><span data-ttu-id="9e9ca-102">ICorRuntimeHost::SwitchInLogicalThreadState Yöntemi</span><span class="sxs-lookup"><span data-stu-id="9e9ca-102">ICorRuntimeHost::SwitchInLogicalThreadState Method</span></span>
+# <a name="icorruntimehostswitchinlogicalthreadstate-method"></a><span data-ttu-id="1ffe1-103">ICorRuntimeHost::SwitchInLogicalThreadState Yöntemi</span><span class="sxs-lookup"><span data-stu-id="1ffe1-103">ICorRuntimeHost::SwitchInLogicalThreadState Method</span></span>
 
-<span data-ttu-id="9e9ca-103">Bu yöntem .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.</span><span class="sxs-lookup"><span data-stu-id="9e9ca-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+<span data-ttu-id="1ffe1-104">Bu yöntem .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.</span><span class="sxs-lookup"><span data-stu-id="1ffe1-104">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9e9ca-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="9e9ca-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1ffe1-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="1ffe1-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT SwitchInLogicalThreadState(  
@@ -34,21 +35,21 @@ HRESULT SwitchInLogicalThreadState(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9e9ca-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="9e9ca-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1ffe1-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="1ffe1-106">Parameters</span></span>  
 
  `pFiberCookie`  
- <span data-ttu-id="9e9ca-106">'ndaki Kullanılacak fiber öğesini gösteren tanımlama bilgisi.</span><span class="sxs-lookup"><span data-stu-id="9e9ca-106">[in] Cookie that indicates the fiber to use.</span></span>  
+ <span data-ttu-id="1ffe1-107">'ndaki Kullanılacak fiber öğesini gösteren tanımlama bilgisi.</span><span class="sxs-lookup"><span data-stu-id="1ffe1-107">[in] Cookie that indicates the fiber to use.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9e9ca-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="9e9ca-107">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1ffe1-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="1ffe1-108">Requirements</span></span>  
 
- <span data-ttu-id="9e9ca-108">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9e9ca-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="1ffe1-109">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1ffe1-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9e9ca-109">**Üst bilgi:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="9e9ca-109">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="1ffe1-110">**Üst bilgi:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="1ffe1-110">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="9e9ca-110">**Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi</span><span class="sxs-lookup"><span data-stu-id="9e9ca-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="1ffe1-111">**Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi</span><span class="sxs-lookup"><span data-stu-id="1ffe1-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="9e9ca-111">**.NET Framework sürümü:** 1,0, 1,1</span><span class="sxs-lookup"><span data-stu-id="9e9ca-111">**.NET Framework Version:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="1ffe1-112">**.NET Framework sürümü:** 1,0, 1,1</span><span class="sxs-lookup"><span data-stu-id="1ffe1-112">**.NET Framework Version:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9e9ca-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9e9ca-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1ffe1-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1ffe1-113">See also</span></span>
 
-- [<span data-ttu-id="9e9ca-113">ICorRuntimeHost Arabirimi</span><span class="sxs-lookup"><span data-stu-id="9e9ca-113">ICorRuntimeHost Interface</span></span>](icorruntimehost-interface.md)
+- [<span data-ttu-id="1ffe1-114">ICorRuntimeHost Arabirimi</span><span class="sxs-lookup"><span data-stu-id="1ffe1-114">ICorRuntimeHost Interface</span></span>](icorruntimehost-interface.md)

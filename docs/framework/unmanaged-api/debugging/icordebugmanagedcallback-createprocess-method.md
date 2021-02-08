@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugManagedCallback:: CreateProcess yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugManagedCallback::CreateProcess Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 8e89d5ee-e4e3-4738-8302-0b7d1cf4846e
 topic_type:
 - apiref
-ms.openlocfilehash: cd24e672c65769586dc618c21503dbb344566974
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 564c9862dd90431f0626204fdfe49e59b85a124d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731819"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791055"
 ---
-# <a name="icordebugmanagedcallbackcreateprocess-method"></a><span data-ttu-id="7f19b-102">ICorDebugManagedCallback::CreateProcess Yöntemi</span><span class="sxs-lookup"><span data-stu-id="7f19b-102">ICorDebugManagedCallback::CreateProcess Method</span></span>
+# <a name="icordebugmanagedcallbackcreateprocess-method"></a><span data-ttu-id="d9997-103">ICorDebugManagedCallback::CreateProcess Yöntemi</span><span class="sxs-lookup"><span data-stu-id="d9997-103">ICorDebugManagedCallback::CreateProcess Method</span></span>
 
-<span data-ttu-id="7f19b-103">Bir işlem ilk kez eklendiğinde veya başlatıldığında hata ayıklayıcıya bildirir.</span><span class="sxs-lookup"><span data-stu-id="7f19b-103">Notifies the debugger when a process has been attached or started for the first time.</span></span>  
+<span data-ttu-id="d9997-104">Bir işlem ilk kez eklendiğinde veya başlatıldığında hata ayıklayıcıya bildirir.</span><span class="sxs-lookup"><span data-stu-id="d9997-104">Notifies the debugger when a process has been attached or started for the first time.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7f19b-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="7f19b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d9997-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="d9997-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT CreateProcess (  
@@ -34,25 +35,25 @@ HRESULT CreateProcess (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7f19b-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="7f19b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d9997-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="d9997-106">Parameters</span></span>  
 
  `pProcess`  
- <span data-ttu-id="7f19b-106">'ndaki Eklenmiş veya başlatılan işlemi temsil eden ICorDebugProcess nesnesine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="7f19b-106">[in] A pointer to an ICorDebugProcess object that represents the process that has been attached or started.</span></span>  
+ <span data-ttu-id="d9997-107">'ndaki Eklenmiş veya başlatılan işlemi temsil eden ICorDebugProcess nesnesine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="d9997-107">[in] A pointer to an ICorDebugProcess object that represents the process that has been attached or started.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7f19b-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="7f19b-107">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d9997-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="d9997-108">Remarks</span></span>  
 
- <span data-ttu-id="7f19b-108">Bu yöntem, ortak dil çalışma zamanı başlatılana kadar çağrılmaz.</span><span class="sxs-lookup"><span data-stu-id="7f19b-108">This method is not called until the common language runtime is initialized.</span></span> <span data-ttu-id="7f19b-109">[ICorDebug](icordebug-interface.md) yöntemlerinin çoğu geri aramadan önce CORDBG_E_NOTREADY döndürür `CreateProcess` .</span><span class="sxs-lookup"><span data-stu-id="7f19b-109">Most of the [ICorDebug](icordebug-interface.md) methods will return CORDBG_E_NOTREADY before the `CreateProcess` callback.</span></span>  
+ <span data-ttu-id="d9997-109">Bu yöntem, ortak dil çalışma zamanı başlatılana kadar çağrılmaz.</span><span class="sxs-lookup"><span data-stu-id="d9997-109">This method is not called until the common language runtime is initialized.</span></span> <span data-ttu-id="d9997-110">[ICorDebug](icordebug-interface.md) yöntemlerinin çoğu geri aramadan önce CORDBG_E_NOTREADY döndürür `CreateProcess` .</span><span class="sxs-lookup"><span data-stu-id="d9997-110">Most of the [ICorDebug](icordebug-interface.md) methods will return CORDBG_E_NOTREADY before the `CreateProcess` callback.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7f19b-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="7f19b-110">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d9997-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="d9997-111">Requirements</span></span>  
 
- <span data-ttu-id="7f19b-111">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7f19b-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="d9997-112">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d9997-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7f19b-112">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="7f19b-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d9997-113">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="d9997-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="7f19b-113">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="7f19b-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d9997-114">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="d9997-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="7f19b-114">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7f19b-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="d9997-115">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d9997-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7f19b-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7f19b-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d9997-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d9997-116">See also</span></span>
 
-- [<span data-ttu-id="7f19b-116">ICorDebugManagedCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7f19b-116">ICorDebugManagedCallback Interface</span></span>](icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="d9997-117">ICorDebugManagedCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="d9997-117">ICorDebugManagedCallback Interface</span></span>](icordebugmanagedcallback-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ICorDebugManagedCallback2:: FunctionRemapOpportunity yöntemi'
 title: ICorDebugManagedCallback2::FunctionRemapOpportunity Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 0d6471bc-ad9b-4b1d-a307-c10443918863
 topic_type:
 - apiref
-ms.openlocfilehash: 50fabec08a63d348b0a1934f029582ae1446519e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 901a9432ddf17efabd96153581b816f653ff501d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729063"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790873"
 ---
-# <a name="icordebugmanagedcallback2functionremapopportunity-method"></a><span data-ttu-id="0873d-102">ICorDebugManagedCallback2::FunctionRemapOpportunity Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0873d-102">ICorDebugManagedCallback2::FunctionRemapOpportunity Method</span></span>
+# <a name="icordebugmanagedcallback2functionremapopportunity-method"></a><span data-ttu-id="6a5f7-103">ICorDebugManagedCallback2::FunctionRemapOpportunity Yöntemi</span><span class="sxs-lookup"><span data-stu-id="6a5f7-103">ICorDebugManagedCallback2::FunctionRemapOpportunity Method</span></span>
 
-<span data-ttu-id="0873d-103">Kod yürütmenin, düzenlenmiş bir işlevin daha eski bir sürümündeki bir sıra noktasına ulaştığı hata ayıklayıcıya bildirir.</span><span class="sxs-lookup"><span data-stu-id="0873d-103">Notifies the debugger that code execution has reached a sequence point in an older version of an edited function.</span></span>  
+<span data-ttu-id="6a5f7-104">Kod yürütmenin, düzenlenmiş bir işlevin daha eski bir sürümündeki bir sıra noktasına ulaştığı hata ayıklayıcıya bildirir.</span><span class="sxs-lookup"><span data-stu-id="6a5f7-104">Notifies the debugger that code execution has reached a sequence point in an older version of an edited function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0873d-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="0873d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6a5f7-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6a5f7-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT FunctionRemapOpportunity (  
@@ -38,40 +39,40 @@ HRESULT FunctionRemapOpportunity (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0873d-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0873d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6a5f7-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="6a5f7-106">Parameters</span></span>  
 
  `pAppDomain`  
- <span data-ttu-id="0873d-106">'ndaki Düzenlenen işlevi içeren uygulama etki alanını temsil eden ICorDebugAppDomain nesnesine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="0873d-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the edited function.</span></span>  
+ <span data-ttu-id="6a5f7-107">'ndaki Düzenlenen işlevi içeren uygulama etki alanını temsil eden ICorDebugAppDomain nesnesine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="6a5f7-107">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the edited function.</span></span>  
   
  `pThread`  
- <span data-ttu-id="0873d-107">'ndaki Yeniden eşleme kesme noktasının karşılaştığı iş parçacığını temsil eden ICorDebugThread nesnesine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="0873d-107">[in] A pointer to an ICorDebugThread object that represents the thread on which the remap breakpoint was encountered.</span></span>  
+ <span data-ttu-id="6a5f7-108">'ndaki Yeniden eşleme kesme noktasının karşılaştığı iş parçacığını temsil eden ICorDebugThread nesnesine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="6a5f7-108">[in] A pointer to an ICorDebugThread object that represents the thread on which the remap breakpoint was encountered.</span></span>  
   
  `pOldFunction`  
- <span data-ttu-id="0873d-108">'ndaki İş parçacığında çalışmakta olan işlevin sürümünü temsil eden ICorDebugFunction nesnesine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="0873d-108">[in] A pointer to an ICorDebugFunction object that represents the version of the function that is currently running on the thread.</span></span>  
+ <span data-ttu-id="6a5f7-109">'ndaki İş parçacığında çalışmakta olan işlevin sürümünü temsil eden ICorDebugFunction nesnesine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="6a5f7-109">[in] A pointer to an ICorDebugFunction object that represents the version of the function that is currently running on the thread.</span></span>  
   
  `pNewFunction`  
- <span data-ttu-id="0873d-109">'ndaki İşlevin en son sürümünü temsil eden ICorDebugFunction nesnesine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="0873d-109">[in] A pointer to an ICorDebugFunction object that represents the latest version of the function.</span></span>  
+ <span data-ttu-id="6a5f7-110">'ndaki İşlevin en son sürümünü temsil eden ICorDebugFunction nesnesine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="6a5f7-110">[in] A pointer to an ICorDebugFunction object that represents the latest version of the function.</span></span>  
   
  `oldILOffset`  
- <span data-ttu-id="0873d-110">'ndaki İşlevin eski sürümündeki yönerge işaretçisinin Microsoft ara dili (MSIL) boşluğu.</span><span class="sxs-lookup"><span data-stu-id="0873d-110">[in] The Microsoft intermediate language (MSIL) offset of the instruction pointer in the old version of the function.</span></span>  
+ <span data-ttu-id="6a5f7-111">'ndaki İşlevin eski sürümündeki yönerge işaretçisinin Microsoft ara dili (MSIL) boşluğu.</span><span class="sxs-lookup"><span data-stu-id="6a5f7-111">[in] The Microsoft intermediate language (MSIL) offset of the instruction pointer in the old version of the function.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0873d-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="0873d-111">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6a5f7-112">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="6a5f7-112">Remarks</span></span>  
 
- <span data-ttu-id="0873d-112">Bu geri çağırma, [ICorDebugILFrame2:: RemapFunction](icordebugilframe2-remapfunction-method.md) metodunu çağırarak, yönerge işaretçisini belirtilen işlevin yeni sürümünde doğru yere yeniden eşlemek için bir fırsat sağlar.</span><span class="sxs-lookup"><span data-stu-id="0873d-112">This callback gives the debugger an opportunity to remap the instruction pointer to its proper place in the new version of the specified function by calling the [ICorDebugILFrame2::RemapFunction](icordebugilframe2-remapfunction-method.md) method.</span></span> <span data-ttu-id="0873d-113">Hata ayıklayıcı `RemapFunction` [ICorDebugController:: Continue](icordebugcontroller-continue-method.md) metodunu çağırmadan önce çağrıdıysa, çalışma zamanı eski kodu yürütmeye devam eder ve `FunctionRemapOpportunity` sonraki dizi noktasında başka bir geri çağırma harekete geçmeyecektir.</span><span class="sxs-lookup"><span data-stu-id="0873d-113">If the debugger does not call `RemapFunction` before calling the [ICorDebugController::Continue](icordebugcontroller-continue-method.md) method, the runtime will continue to execute the old code and will fire another `FunctionRemapOpportunity` callback at the next sequence point.</span></span>  
+ <span data-ttu-id="6a5f7-113">Bu geri çağırma, [ICorDebugILFrame2:: RemapFunction](icordebugilframe2-remapfunction-method.md) metodunu çağırarak, yönerge işaretçisini belirtilen işlevin yeni sürümünde doğru yere yeniden eşlemek için bir fırsat sağlar.</span><span class="sxs-lookup"><span data-stu-id="6a5f7-113">This callback gives the debugger an opportunity to remap the instruction pointer to its proper place in the new version of the specified function by calling the [ICorDebugILFrame2::RemapFunction](icordebugilframe2-remapfunction-method.md) method.</span></span> <span data-ttu-id="6a5f7-114">Hata ayıklayıcı `RemapFunction` [ICorDebugController:: Continue](icordebugcontroller-continue-method.md) metodunu çağırmadan önce çağrıdıysa, çalışma zamanı eski kodu yürütmeye devam eder ve `FunctionRemapOpportunity` sonraki dizi noktasında başka bir geri çağırma harekete geçmeyecektir.</span><span class="sxs-lookup"><span data-stu-id="6a5f7-114">If the debugger does not call `RemapFunction` before calling the [ICorDebugController::Continue](icordebugcontroller-continue-method.md) method, the runtime will continue to execute the old code and will fire another `FunctionRemapOpportunity` callback at the next sequence point.</span></span>  
   
- <span data-ttu-id="0873d-114">Bu geri çağırma, hata ayıklayıcı S_OK dönene kadar verilen işlevin daha eski bir sürümünü yürüten her çerçeve için çağrılacaktır.</span><span class="sxs-lookup"><span data-stu-id="0873d-114">This callback will be invoked for every frame that is executing an older version of the given function until the debugger returns S_OK.</span></span>  
+ <span data-ttu-id="6a5f7-115">Bu geri çağırma, hata ayıklayıcı S_OK dönene kadar verilen işlevin daha eski bir sürümünü yürüten her çerçeve için çağrılacaktır.</span><span class="sxs-lookup"><span data-stu-id="6a5f7-115">This callback will be invoked for every frame that is executing an older version of the given function until the debugger returns S_OK.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0873d-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0873d-115">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6a5f7-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="6a5f7-116">Requirements</span></span>  
 
- <span data-ttu-id="0873d-116">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0873d-116">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="6a5f7-117">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6a5f7-117">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0873d-117">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="0873d-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="6a5f7-118">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="6a5f7-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="0873d-118">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="0873d-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6a5f7-119">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="6a5f7-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0873d-119">**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0873d-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="6a5f7-120">**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6a5f7-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0873d-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0873d-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6a5f7-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6a5f7-121">See also</span></span>
 
-- [<span data-ttu-id="0873d-121">ICorDebugManagedCallback2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0873d-121">ICorDebugManagedCallback2 Interface</span></span>](icordebugmanagedcallback2-interface.md)
-- [<span data-ttu-id="0873d-122">ICorDebugManagedCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0873d-122">ICorDebugManagedCallback Interface</span></span>](icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="6a5f7-122">ICorDebugManagedCallback2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="6a5f7-122">ICorDebugManagedCallback2 Interface</span></span>](icordebugmanagedcallback2-interface.md)
+- [<span data-ttu-id="6a5f7-123">ICorDebugManagedCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="6a5f7-123">ICorDebugManagedCallback Interface</span></span>](icordebugmanagedcallback-interface.md)
