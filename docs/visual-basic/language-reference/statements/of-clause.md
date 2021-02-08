@@ -1,4 +1,5 @@
 ---
+description: For yan tümcesi hakkında daha fazla bilgi edinin (Visual Basic)
 title: Of Yan Tümcesi
 ms.date: 07/20/2015
 f1_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - type parameters
 - data type arguments
 ms.assetid: 0db8f65c-65af-4089-ab7f-6fcfecb60444
-ms.openlocfilehash: 0595356fb75fc0ac73a49622d71fe1d28fa7b648
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: d6002041a2fe8db5b07e12e9e396a65fde30b716
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90865911"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768850"
 ---
 # <a name="of-clause-visual-basic"></a>Of Tümcesi (Visual Basic)
 
@@ -30,7 +31,7 @@ Bir `Of` *genel* sınıf, yapı, arabirim, temsilci veya yordamda bir *tür para
   
 ## <a name="using-the-of-keyword"></a>Anahtar sözcüğünü kullanma  
 
- Aşağıdaki kod örneği, `Of` iki tür parametresi alan bir sınıfın ana hattını tanımlamak için anahtar sözcüğünü kullanır. Parametreyi *constrains* arabirimini kısıtlar `keyType` , bu da <xref:System.IComparable> tüketen kodun uygulayan bir tür bağımsız değişkeni sağlaması gerektiği anlamına gelir <xref:System.IComparable> . `add`Yordamın yöntemi çağırabilmesi için bu gereklidir <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> . Kısıtlamalar hakkında daha fazla bilgi için bkz. [tür listesi](type-list.md).  
+ Aşağıdaki kod örneği, `Of` iki tür parametresi alan bir sınıfın ana hattını tanımlamak için anahtar sözcüğünü kullanır. Parametreyi  arabirimini kısıtlar `keyType` , bu da <xref:System.IComparable> tüketen kodun uygulayan bir tür bağımsız değişkeni sağlaması gerektiği anlamına gelir <xref:System.IComparable> . `add`Yordamın yöntemi çağırabilmesi için bu gereklidir <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> . Kısıtlamalar hakkında daha fazla bilgi için bkz. [tür listesi](type-list.md).  
   
 ```vb  
 Public Class Dictionary(Of entryType, keyType As IComparable)  

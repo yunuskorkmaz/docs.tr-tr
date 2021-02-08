@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: else (Visual Basic)'
 title: Else Deyimi
 ms.date: 07/20/2015
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Else keyword [Visual Basic]
 ms.assetid: 154dd3d3-137b-4de6-a5aa-699b18dfb639
-ms.openlocfilehash: c73008b9047f2a0e2a1cc3014a5930f97effed34
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 819577e0ca6b2c58bfedcbfd46703368ea591582
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866211"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769227"
 ---
 # <a name="else-statement-visual-basic"></a>Else Deyimi (Visual Basic)
 

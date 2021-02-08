@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: her biri Için... Next açıklaması (Visual Basic)'
 title: For Each...Next Deyimi
 ms.date: 07/20/2015
 f1_keywords:
@@ -22,18 +23,18 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For Each...Next statements
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
-ms.openlocfilehash: 0feb938121a97b06509b472652e6a753841ab2b8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ff7afb5e3b505ebe2326343063a7884dc4f567b1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404660"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769110"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next Deyimi (Visual Basic)
 
 Bir koleksiyondaki her öğe için bir deyim grubunu yineler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```vb
 For Each element [ As datatype ] In group
@@ -47,7 +48,7 @@ Next [ element ]
 
 ## <a name="parts"></a>Bölümler
 
-|Terim|Tanım|
+|Süre|Tanım|
 |---|---|
 |`element`|`For Each`İfadesinde gereklidir. `Next`Deyimde isteğe bağlı. Değişken. Koleksiyonun öğeleri arasında yineleme yapmak için kullanılır.|
 |`datatype`|Açık ise [`Option Infer`](option-infer-statement.md) (varsayılan) veya zaten bildirilirse, isteğe bağlıdır `element` ; `Option Infer` kapalıysa ve önceden bildirilmemiş olması gerekir `element` . Veri türü `element` .|
@@ -94,11 +95,11 @@ Aşağıdaki örnek, ve deyimlerinin nasıl kullanılacağını göstermektedir 
 
 `Exit For`Bir döngüye herhangi bir sayıda deyim yerleştirebilirsiniz `For Each` . İç içe döngüler içinde kullanıldığında `For Each` `Exit For` yürütmenin en içteki döngüden çıkmasına ve denetimi bir sonraki daha yüksek iç içe geçme düzeyine aktarmasına neden olur.
 
-`Exit For`genellikle bir koşul değerlendirmesinden sonra, örneğin bir `If` .. `Then` . ...`Else` yapısı. `Exit For`Aşağıdaki koşullar için kullanmak isteyebilirsiniz:
+`Exit For` genellikle bir koşul değerlendirmesinden sonra, örneğin bir `If` .. `Then` . ...`Else` yapısı. `Exit For`Aşağıdaki koşullar için kullanmak isteyebilirsiniz:
 
 - Tekrarlamaya devam etmek gereksiz veya imkansız. Bunun nedeni hatalı bir değer veya sonlandırma isteği olabilir.
 
-- Bir özel durum içinde yakalandı `Try` .. `Catch` . ...`Finally`. `Exit For`Bloğunun sonunda kullanabilirsiniz `Finally` .
+- Bir özel durum içinde yakalandı `Try` .. `Catch` . ...`Finally`. `Exit For` Bloğunun sonunda kullanabilirsiniz `Finally` .
 
 - Sonsuz bir döngü vardır. Bu bir döngü, büyük veya hatta sonsuz bir sayı çalıştırabilir. Böyle bir koşulu tespit ediyorsanız, `Exit For` döngüyü atlamak için kullanabilirsiniz. Daha fazla bilgi için bkz [. do... Loop deyimleri](do-loop-statement.md).
 

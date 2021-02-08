@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Implements tümcesi (Visual Basic)'
 title: Implements Yan Tümcesi
 ms.date: 07/20/2015
 f1_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - members [Visual Basic], Implements keyword
 - reimplementation
 ms.assetid: 5252cdf9-964d-4fc6-af0f-0449b7126b5a
-ms.openlocfilehash: 7c95cf76b1bac24e2a0f20857b8984d54ebbea85
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 360d8812a7c49d6462818246b1448e171dcd597f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866168"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769006"
 ---
 # <a name="implements-clause-visual-basic"></a>Implements Tümcesi (Visual Basic)
 

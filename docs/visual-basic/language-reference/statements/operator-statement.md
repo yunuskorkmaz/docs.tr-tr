@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: operator ekstresi'
 title: Operator Deyimi
 ms.date: 07/20/2015
 f1_keywords:
@@ -17,18 +18,18 @@ helpviewer_keywords:
 - Operator statement [Visual Basic]
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
-ms.openlocfilehash: f9e6ffe5a49715592399321ab471d73826e05d8e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f6a8ae2ac51e8bc8fe1be0de3549004b9dda4ef4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404401"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768824"
 ---
 # <a name="operator-statement"></a>Operator Deyimi
 
 Bir sınıf veya yapıda operatör yordamını tanımlayan işleç sembolünü, işlenenleri ve kodu bildirir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```vb
 [ <attrlist> ] Public [ Overloads ] Shared [ Shadows ] [ Widening | Narrowing ]
@@ -72,7 +73,7 @@ Gereklidir. Birli işlecin tek işleneninin adı ve türü (dönüştürme işle
 `operand2`  
 İkili işleçler için gereklidir. Bir ikili işlecinin sağ işleneninin adı ve türü.
 
-`operand1`ve `operand2` aşağıdaki söz dizimi ve bölümlere sahiptir:
+`operand1` ve `operand2` aşağıdaki söz dizimi ve bölümlere sahiptir:
 
 `[ ByVal ] operandname [ As operandtype ]`
 
@@ -102,7 +103,7 @@ Tüm işleçler olmalıdır `Public Shared` . `ByRef` `Optional` `ParamArray` He
 
 Dönüş değerini tutmak için işleç sembolünü veya tanımlayıcıyı kullanamazsınız. İfadesini kullanmanız gerekir `Return` ve bir değer belirtmelidir. Herhangi bir sayıda `Return` deyim yordamda herhangi bir yerde görünebilir.
 
-Bu şekilde bir işleci tanımlamak *işleç aşırı yüklemesi*olarak adlandırılır, `Overloads` anahtar sözcüğünü kullanıp kullanmayacağınızı. Aşağıdaki tabloda, tanımlayabilmeniz için kullanabileceğiniz işleçler listelenmektedir.
+Bu şekilde bir işleci tanımlamak *işleç aşırı yüklemesi* olarak adlandırılır, `Overloads` anahtar sözcüğünü kullanıp kullanmayacağınızı. Aşağıdaki tabloda, tanımlayabilmeniz için kullanabileceğiniz işleçler listelenmektedir.
 
 |Tür|İşleçler|
 |----------|---------------|
@@ -174,7 +175,7 @@ Bir dönüştürme yordamının başarılı bir şekilde başarısız olabilece�
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod örneği,,, `Operator` ve işleçleri için işleç yordamları içeren bir yapının anahattını tanımlamak için ifadesini kullanır `And` `Or` `IsFalse` `IsTrue` . `And`ve `Or` her biri türü ve dönüş türü iki işleneni alır `abc` `abc` . `IsFalse`ve `IsTrue` her biri, türünde tek bir işlenen alır `abc` ve döndürür `Boolean` . Bu tanımlar çağıran kodun,,, `And` `AndAlso` `Or` ve `OrElse` türündeki işlenenleri `abc` kullanmasına izin verir.
+Aşağıdaki kod örneği,,, `Operator` ve işleçleri için işleç yordamları içeren bir yapının anahattını tanımlamak için ifadesini kullanır `And` `Or` `IsFalse` `IsTrue` . `And` ve `Or` her biri türü ve dönüş türü iki işleneni alır `abc` `abc` . `IsFalse` ve `IsTrue` her biri, türünde tek bir işlenen alır `abc` ve döndürür `Boolean` . Bu tanımlar çağıran kodun,,, `And` `AndAlso` `Or` ve `OrElse` türündeki işlenenleri `abc` kullanmasına izin verir.
 
 [!code-vb[VbVbalrStatements#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#44)]
 

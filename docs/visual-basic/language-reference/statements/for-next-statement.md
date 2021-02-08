@@ -1,4 +1,5 @@
 ---
+description: Hakkında daha fazla bilgi edinin:... Next açıklaması (Visual Basic)
 title: For...Next Deyimi
 ms.date: 07/20/2015
 f1_keywords:
@@ -23,18 +24,18 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-ms.openlocfilehash: 6896c6cfb4ec5d6207011e56b72639c459120e53
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f26d9cb1885d9d22b96d622f44325aad64e34d1d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404647"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769084"
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next Deyimi (Visual Basic)
 
 Bir deyim grubunu belirtilen sayıda yineler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```vb
 For counter [ As datatype ] = start To end [ Step step ]
@@ -100,7 +101,7 @@ Aşağıdaki örnek, `Continue For` ve deyimlerinin kullanımını gösterir `Ex
 
 `Exit For`Bir... içinde herhangi bir sayıda deyim yerleştirebilirsiniz. `For``Next` gerçekleştirmek. İç içe yerleştirilmiş `For` ... içinde kullanıldığında`Next` döngüler, en `Exit For` içteki döngüden çıkar ve denetimi sonraki daha yüksek iç içe geçme düzeyine aktarır.
 
-`Exit For`genellikle bazı koşulları değerlendirdikten sonra kullanılır (örneğin, bir `If` . `Then` .. ...`Else` Yapı). `Exit For`Aşağıdaki koşullar için kullanmak isteyebilirsiniz:
+`Exit For` genellikle bazı koşulları değerlendirdikten sonra kullanılır (örneğin, bir `If` . `Then` .. ...`Else` Yapı). `Exit For`Aşağıdaki koşullar için kullanmak isteyebilirsiniz:
 
 - Tekrarlamaya devam etmek gereksiz veya imkansız. Hatalı bir değer veya sonlandırma isteği bu durumu oluşturabilir.
 
@@ -131,14 +132,14 @@ Değeri `step` pozitif veya negatif olabilir. Bu parametre, döngü işlemeyi a�
 
 `step` varsayılan değeri 1'dir.
 
-### <a name="counter-argument"></a><a name="BKMK_Counter"></a>Sayaç bağımsız değişkeni
+### <a name="counter-argument"></a><a name="BKMK_Counter"></a> Sayaç bağımsız değişkeni
 
 Aşağıdaki tabloda, `counter` Tüm döngünün kapsamına alınmış yeni bir yerel değişken oluşturulup oluşturulmayacağını gösterir `For…Next` . Bu belirleme `datatype` , var olup olmadığına ve önceden tanımlanmış olup olmadığına bağlıdır `counter` .
 
 |`datatype`Var mı?|`counter`Zaten tanımlanmış mı?|Sonuç ( `counter` Tüm döngünün kapsamına alınmış yeni bir yerel değişken tanımlar `For...Next` )|
 |----------------------------|-----------------------------------|-------------------------------------------------------------------------------------------------------------|
-|Hayır|Evet|Hayır, `counter` zaten tanımlanmış. Öğesinin kapsamı, `counter` yordamda yerel değilse, bir derleme zamanı uyarısı oluşur.|
-|No|Hayır|Evet. Veri türü `start` ,, `end` ve `step` ifadelerinden algılanır. Tür çıkarımı hakkında daha fazla bilgi için bkz. [Option Infer deyimleri](option-infer-statement.md) ve [Yerel tür çıkarımı](../../programming-guide/language-features/variables/local-type-inference.md)|
+|Hayır|Yes|Hayır, `counter` zaten tanımlanmış. Öğesinin kapsamı, `counter` yordamda yerel değilse, bir derleme zamanı uyarısı oluşur.|
+|Hayır|Hayır|Evet. Veri türü `start` ,, `end` ve `step` ifadelerinden algılanır. Tür çıkarımı hakkında daha fazla bilgi için bkz. [Option Infer deyimleri](option-infer-statement.md) ve [Yerel tür çıkarımı](../../programming-guide/language-features/variables/local-type-inference.md)|
 |Yes|Yes|Evet, ancak yalnızca varolan `counter` değişken yordamın dışında tanımlanmışsa. Bu değişken ayrı kalır. Varolan `counter` değişkenin kapsamı yordamın yerelse, bir derleme zamanı hatası oluşur.|
 |Yes|Hayır|Evet.|
 

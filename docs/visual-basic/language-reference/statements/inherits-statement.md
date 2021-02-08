@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Inherits ekstresi'
 title: Inherits Deyimi
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic]
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-ms.openlocfilehash: dd8fbc71fdc859bb127764951464278267c0984c
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: fba574ec207b384c1e7219341526a4a89c8a619c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875224"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768928"
 ---
 # <a name="inherits-statement"></a>Inherits Deyimi
 
 Geçerli sınıfın ya da arabirimin öznitelikleri, değişkenleri, özellikleri, yordamları ve olayları başka bir sınıf veya arabirim kümesinden devralmasını sağlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 Inherits basetypenames  
@@ -27,7 +28,7 @@ Inherits basetypenames
   
 ## <a name="parts"></a>Bölümler  
   
-|Terim|Tanım|  
+|Süre|Tanım|  
 |---|---|  
 |`basetypenames`|Gereklidir. Bu sınıfın türetildiği sınıfın adı.<br /><br /> -veya-<br /><br /> Bu arabirimin türettiği arabirimlerin adları. Birden çok adı ayırmak için virgül kullanın.|  
   

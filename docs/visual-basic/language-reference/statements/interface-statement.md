@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: arabirim ekstresi (Visual Basic)'
 title: Interface Deyimi
 ms.date: 05/12/2018
 f1_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - interface statement [Visual Basic]
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
-ms.openlocfilehash: 3025adfe8c881a08df3b5f03253510c263c624d1
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: e7fccec585fdbfd3946c2fa9874b5ea9b65ff014
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873222"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768915"
 ---
 # <a name="interface-statement-visual-basic"></a>Interface Deyimi (Visual Basic)
 
 Bir arabirimin adını bildirir ve arabirimin içerdiği üyelerin tanımlarını tanıtır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 [ <attributelist> ] [ accessmodifier ] [ Shadows ] _  
@@ -36,7 +37,7 @@ End Interface
   
 ## <a name="parts"></a>Bölümler  
   
-|Terim|Tanım|  
+|Süre|Tanım|  
 |---|---|  
 |`attributelist`|İsteğe bağlı. Bkz. [öznitelik listesi](attribute-list.md).|  
 |`accessmodifier`|İsteğe bağlı. Aşağıdakilerden biri olabilir:<br /><br /> -   [Geneldir](../modifiers/public.md)<br />-   [Korunamadı](../modifiers/protected.md)<br />-   [Dost](../modifiers/friend.md)<br />-   [Özelleştirme](../modifiers/private.md)<br />-  [Korumalı arkadaş](../modifiers/protected-friend.md)<br/>- [Özel korumalı](../modifiers/private-protected.md)<br /><br /> [Visual Basic erişim düzeylerine](../../programming-guide/language-features/declared-elements/access-levels.md)bakın.|  
@@ -69,7 +70,7 @@ End Interface
   
 ## <a name="rules"></a>Kurallar  
   
-- **Arabirimleri iç içe geçirme.** Bir arabirimi diğeri içinde tanımlayabilirsiniz. Dış arabirime *kapsayan arabirim*denir ve iç arabirime *iç içe arabirim*denir.  
+- **Arabirimleri iç içe geçirme.** Bir arabirimi diğeri içinde tanımlayabilirsiniz. Dış arabirime *kapsayan arabirim* denir ve iç arabirime *iç içe arabirim* denir.  
   
 - **Üye bildirimi.** Bir özelliğin veya yordamın bir arabirimin üyesi olarak bildirimini yaptığınızda, yalnızca bu özelliğin veya yordamın *imzasını* tanımlamanız gerekir. Buna öğe türü (özellik veya yordam), parametreleri ve parametre türleri ve dönüş türü dahildir. Bu nedenle, üye tanımı yalnızca bir kod satırı kullanır ve ya da gibi sonlandırma deyimleri `End Function` `End Property` arabirim içinde geçerli değildir.  
   
@@ -87,7 +88,7 @@ End Interface
   
      Bir sınıf bir yordamı uygularken, yordamı olarak belirleyemez `Shared` .  
   
-- **Varsayılan özellik.** Arabirim, özellik adı kullanılmadan başvurulabilen en az bir özelliği *varsayılan özelliği*olarak belirtebilir. Böyle bir özelliği [varsayılan](../modifiers/default.md) değiştiriciyle bildirerek belirtirsiniz.  
+- **Varsayılan özellik.** Arabirim, özellik adı kullanılmadan başvurulabilen en az bir özelliği *varsayılan özelliği* olarak belirtebilir. Böyle bir özelliği [varsayılan](../modifiers/default.md) değiştiriciyle bildirerek belirtirsiniz.  
   
      Bunun anlamı, bir arabirimin varsayılan bir özelliği yalnızca hiçbiri devralırsa tanımlayabileceğini unutmayın.  
   

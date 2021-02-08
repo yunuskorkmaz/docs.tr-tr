@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Işlev ekstresi (Visual Basic)'
 title: Function Deyimi
 ms.date: 05/12/2018
 f1_keywords:
@@ -28,18 +29,18 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-ms.openlocfilehash: 49cf4fead2c5594b7ac6815f82fea0dc995ea436
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e8a05b02c3a214f0572e85c1fc973cb9f03118ae
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404634"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769071"
 ---
 # <a name="function-statement-visual-basic"></a>Function Deyimi (Visual Basic)
 
 Bir yordamı tanımlayan adı, parametreleri ve kodu bildirir `Function` .
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```vb
 [ <attributelist> ] [ accessmodifier ] [ proceduremodifiers ] [ Shared ] [ Shadows ] [ Async | Iterator ]
@@ -60,13 +61,13 @@ End Function
 
   İsteğe bağlı. Aşağıdakilerden biri olabilir:
 
-  - [Geneldir](../modifiers/public.md)
+  - [Genel](../modifiers/public.md)
 
   - [Korunamadı](../modifiers/protected.md)
 
-  - [Dost](../modifiers/friend.md)
+  - [Arkadaş](../modifiers/friend.md)
 
-  - [Özelleştirme](../modifiers/private.md)
+  - [Özel](../modifiers/private.md)
 
   - [Protected Friend](../modifiers/protected-friend.md)
 
@@ -180,7 +181,7 @@ Tüm yürütülebilir kodların bir yordamın içinde olması gerekir. Her yorda
 
 Bir `Function` yordamı yalnızca modül düzeyinde tanımlayabilirsiniz. Bu nedenle, bir işlev için bildirim bağlamı bir sınıf, yapı, modül veya arabirim olmalıdır ve kaynak dosya, bir ad alanı, yordam veya bir blok olamaz. Daha fazla bilgi için bkz. [bildirim bağlamları ve varsayılan erişim düzeyleri](declaration-contexts-and-default-access-levels.md).
 
-`Function`yordamlar, genel erişim için varsayılan olarak. Erişim değiştiricilerini kullanarak erişim düzeylerini ayarlayabilirsiniz.
+`Function` yordamlar, genel erişim için varsayılan olarak. Erişim değiştiricilerini kullanarak erişim düzeylerini ayarlayabilirsiniz.
 
 `Function`Yordam, yordamın döndürdüğü değerin veri türünü bildirebilirler. Herhangi bir veri türü veya bir numaralandırma, bir yapı, sınıf veya arabirim adı belirtebilirsiniz. `returntype`Parametresini belirtmezseniz, yordam döndürür `Object` .
 
@@ -258,7 +259,7 @@ Aşağıdaki örnek, önceki örnekte belirtilen işlevi çağırır.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte, `DelayAsync` `Async` `Function` öğesinin dönüş türü olan bir <xref:System.Threading.Tasks.Task%601> . `DelayAsync`, `Return` bir tamsayı döndüren bir ifadeye sahiptir. Bu nedenle, işlev bildiriminin `DelayAsync` bir dönüş türüne sahip olması gerekir `Task(Of Integer)` . Dönüş türü olduğundan `Task(Of Integer)` , `Await` ifadesinin içindeki değerlendirmesi `DoSomethingAsync` bir tamsayı oluşturur. Bu bildirimde gösterilmiştir: `Dim result As Integer = Await delayTask` .
+Aşağıdaki örnekte, `DelayAsync` `Async` `Function` öğesinin dönüş türü olan bir <xref:System.Threading.Tasks.Task%601> . `DelayAsync` , `Return` bir tamsayı döndüren bir ifadeye sahiptir. Bu nedenle, işlev bildiriminin `DelayAsync` bir dönüş türüne sahip olması gerekir `Task(Of Integer)` . Dönüş türü olduğundan `Task(Of Integer)` , `Await` ifadesinin içindeki değerlendirmesi `DoSomethingAsync` bir tamsayı oluşturur. Bu bildirimde gösterilmiştir: `Dim result As Integer = Await delayTask` .
 
 `startButton_Click`Yordam bir `Async Sub` yordam örneğidir. `DoSomethingAsync`Bir işlev olduğundan `Async` , `DoSomethingAsync` Aşağıdaki ifadede gösterildiği gibi çağrının görevi beklenmelidir: `Await DoSomethingAsync()` . `startButton_Click` `Sub` Bir ifadesi içerdiğinden yordamın değiştirici ile tanımlanması gerekir `Async` `Await` .
 

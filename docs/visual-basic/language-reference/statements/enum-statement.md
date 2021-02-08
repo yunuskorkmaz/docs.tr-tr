@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: enum ekstresi (Visual Basic)'
 title: Enum Deyimi
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - variables [Visual Basic], enumeration
 - constants [Visual Basic], enumerated
 ms.assetid: a45e51f1-65ff-48e1-bf32-79130f137377
-ms.openlocfilehash: 976cc68d67c69ec86918962ab2dd3406d15aed9a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: dcaf28e949f8d34b8d72b07d8029ea10d6baeabf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404738"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769175"
 ---
 # <a name="enum-statement-visual-basic"></a>Enum Deyimi (Visual Basic)
 
 Bir sabit listesi bildirir ve üyelerinin değerlerini tanımlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```vb
 [ <attributelist> ] [ accessmodifier ]  [ Shadows ]
@@ -43,13 +44,13 @@ End Enum
 
   İsteğe bağlı. Bu numaralandırmaya erişebilecek kodu belirtir. Aşağıdakilerden biri olabilir:
 
-  - [Geneldir](../modifiers/public.md)
+  - [Genel](../modifiers/public.md)
 
   - [Korunamadı](../modifiers/protected.md)
 
-  - [Dost](../modifiers/friend.md)
+  - [Arkadaş](../modifiers/friend.md)
 
-  - [Özelleştirme](../modifiers/private.md)
+  - [Özel](../modifiers/private.md)
 
   - [Protected Friend](../modifiers/protected-friend.md)
 
@@ -71,7 +72,7 @@ End Enum
 
   Gereklidir. Bu bildirimde bildirildiği üye sabitlerinin listesi. Tek tek kaynak kodu satırlarında birden çok üye görüntülenir.
 
-  Her birinin `member` aşağıdaki söz dizimi ve parçaları vardır:`[<attribute list>] member name [ = initializer ]`
+  Her birinin `member` aşağıdaki söz dizimi ve parçaları vardır: `[<attribute list>] member name [ = initializer ]`
 
   |Bölüm|Description|
   |---|---|

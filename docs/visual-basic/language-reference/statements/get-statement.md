@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Get deyimleri'
 title: Get Deyimi
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - Get keyword [Visual Basic]
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
-ms.openlocfilehash: 3da6c099b3f43a144484eaddf58605609eb0bbfe
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 1cda485867a941129ab2453d4c0900d1403f4e8d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866206"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769045"
 ---
 # <a name="get-statement"></a>Get Deyimi
 
 `Get`Bir özelliğin değerini almak için kullanılan bir özellik yordamı bildirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 [ <attributelist> ] [ accessmodifier ] Get()  
@@ -32,7 +33,7 @@ End Get
   
 ## <a name="parts"></a>Bölümler  
   
-|Terim|Tanım|  
+|Süre|Tanım|  
 |---|---|  
 |`attributelist`|İsteğe bağlı. Bkz. [öznitelik listesi](attribute-list.md).|  
 |`accessmodifier`|`Get`Bu özellikte ve deyimlerden en fazla bir isteğe bağlı `Set` . Aşağıdakilerden biri olabilir:<br /><br /> -   [Korunamadı](../modifiers/protected.md)<br />-   [Dost](../modifiers/friend.md)<br />-   [Özelleştirme](../modifiers/private.md)<br />-   `Protected Friend`<br /><br /> [Visual Basic erişim düzeylerine](../../programming-guide/language-features/declared-elements/access-levels.md)bakın.|  
@@ -45,7 +46,7 @@ End Get
   
  Visual Basic, `Get` bir ifade özelliğin değerini istediğinde bir özelliğin yordamını otomatik olarak çağırır.  
   
- Özellik bildiriminin gövdesi, yalnızca Property Ifadesiyle ve ifadesiyle olan özellik `Get` ve yordamları içerebilir `Set` [Property Statement](property-statement.md) `End Property` . Bu yordamlar dışında bir şey depolayamazsınız. Özellikle, özelliğin geçerli değerini depolayaamaz. Özellik yordamlarından birinde depolursa, diğer özellik yordamının bu değeri, özelliğin dışında depolamanız gerekir. Her zamanki yaklaşım, değeri özelliği ile aynı düzeyde belirtilen [özel](../modifiers/private.md) bir değişkende depokullanmaktır. `Get`Uygulandığı özelliğin içinde bir yordam tanımlamanız gerekir.  
+ Özellik bildiriminin gövdesi, yalnızca Property Ifadesiyle ve ifadesiyle olan özellik `Get` ve yordamları içerebilir `Set` [](property-statement.md) `End Property` . Bu yordamlar dışında bir şey depolayamazsınız. Özellikle, özelliğin geçerli değerini depolayaamaz. Özellik yordamlarından birinde depolursa, diğer özellik yordamının bu değeri, özelliğin dışında depolamanız gerekir. Her zamanki yaklaşım, değeri özelliği ile aynı düzeyde belirtilen [özel](../modifiers/private.md) bir değişkende depokullanmaktır. `Get`Uygulandığı özelliğin içinde bir yordam tanımlamanız gerekir.  
   
  `Get`Yöntemi, bildiriminde kullanmadığınız müddetçe, kendisini kapsayan özelliğin erişim düzeyi olur `accessmodifier` `Get` .  
   

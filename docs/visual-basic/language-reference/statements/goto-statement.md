@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: GoTo deyimleri'
 title: GoTo Deyimi
 ms.date: 07/20/2015
 f1_keywords:
@@ -13,18 +14,18 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-ms.openlocfilehash: 000f6754575bcce6b2d79d85541e755219aca956
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 804baec130111562225b09cbdc7b5fb2d73adba5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866617"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769058"
 ---
 # <a name="goto-statement"></a>GoTo Deyimi
 
 Bir yordamda belirtilen satıra koşulsuz olarak dallandırır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 GoTo line  

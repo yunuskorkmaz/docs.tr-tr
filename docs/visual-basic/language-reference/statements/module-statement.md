@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Module ekstresi'
 title: Module Deyimi
 ms.date: 07/20/2015
 f1_keywords:
@@ -13,18 +14,18 @@ helpviewer_keywords:
 - classes [Visual Basic], vs. modules
 - declarations [Visual Basic], modules
 ms.assetid: a1243afc-14a5-45df-95d5-51118aeac362
-ms.openlocfilehash: 24a27ba41f5ac889f2f2725a2852368a4292a6fb
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2a19bcfa4521d34b5a91fbc9de412a6d8f6f39c0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404466"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768876"
 ---
 # <a name="module-statement"></a>Module Deyimi
 
 Modülün adını bildirir ve modülün içerdiği değişkenlerin, özelliklerin, olayların ve yordamların tanımını tanıtır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```vb
 [ <attributelist> ] [ accessmodifier ]  Module name
@@ -40,9 +41,9 @@ End Module
 `accessmodifier`  
 İsteğe bağlı. Aşağıdakilerden biri olabilir:
 
-- [Geneldir](../modifiers/public.md)
+- [Genel](../modifiers/public.md)
 
-- [Dost](../modifiers/friend.md)
+- [Arkadaş](../modifiers/friend.md)
 
 [Visual Basic erişim düzeylerine](../../programming-guide/language-features/declared-elements/access-levels.md)bakın.
 
@@ -57,7 +58,7 @@ Tanımı sonlandırır `Module` .
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bir `Module` ifade, ad alanı genelinde kullanılabilir bir başvuru türü tanımlar. *Modül* (bazen *Standart Modül*olarak adlandırılır), bir sınıfa benzer ancak bazı önemli ayrımlarla benzerdir. Her modülün tam olarak bir örneği vardır ve oluşturulması veya bir değişkene atanması gerekmez. Modüller devralmayı veya uygulama arabirimlerini desteklemez. Bir modülün bir sınıfın veya yapının olduğu anlamda bir *tür* olmadığına dikkat edin; bir modül veri türüne sahip olacak bir programlama öğesi bildiremezsiniz.
+Bir `Module` ifade, ad alanı genelinde kullanılabilir bir başvuru türü tanımlar. *Modül* (bazen *Standart Modül* olarak adlandırılır), bir sınıfa benzer ancak bazı önemli ayrımlarla benzerdir. Her modülün tam olarak bir örneği vardır ve oluşturulması veya bir değişkene atanması gerekmez. Modüller devralmayı veya uygulama arabirimlerini desteklemez. Bir modülün bir sınıfın veya yapının olduğu anlamda bir *tür* olmadığına dikkat edin; bir modül veri türüne sahip olacak bir programlama öğesi bildiremezsiniz.
 
 `Module`Yalnızca ad alanı düzeyinde kullanabilirsiniz. Bu, bir modülün *bildirim bağlamının* bir kaynak dosya veya ad alanı olması ve bir sınıf, yapı, modül, arabirim, yordam veya blok olamayacağı anlamına gelir. Bir modülün başka bir modül içinde veya herhangi bir türde iç içe geçirilemez. Daha fazla bilgi için bkz. [bildirim bağlamları ve varsayılan erişim düzeyleri](declaration-contexts-and-default-access-levels.md).
 
@@ -71,7 +72,7 @@ Modülün tüm üyeleri örtük olarak alınır `Shared` .
 
 Bu öğelerin birçok benzerlikleri vardır ancak bazı önemli farklılıklar da vardır.
 
-- **Terminolojiyi.** Önceki Visual Basic sürümleri iki tür modül tanır: *sınıf modülleri* (. CLS dosyaları) ve *Standart modüller* (. bas dosyaları). Geçerli sürüm, sırasıyla bu *sınıfları* ve *modülleri*çağırır.
+- **Terimler.** Önceki Visual Basic sürümleri iki tür modül tanır: *sınıf modülleri* (. CLS dosyaları) ve *Standart modüller* (. bas dosyaları). Geçerli sürüm, sırasıyla bu *sınıfları* ve *modülleri* çağırır.
 
 - **Paylaşılan Üyeler.** Bir sınıfın bir üyesinin paylaşılan bir veya örnek üye olup olmadığını kontrol edebilirsiniz.
 
@@ -93,7 +94,7 @@ Bu öğelerin birçok benzerlikleri vardır ancak bazı önemli farklılıklar d
 
 - **Kapsam.** Modül, ad alanının tamamında kapsam içinde yer alan bir modüldür.
 
-  Her modül üyesinin kapsamı tüm modüldür. Tüm üyelerin *tür promosyonu*olduğuna dikkat edin ve bu, kapsamının modülü içeren ad alanına yükseltilmesine neden olur. Daha fazla bilgi için bkz. [yükseltme türü](../../programming-guide/language-features/declared-elements/type-promotion.md).
+  Her modül üyesinin kapsamı tüm modüldür. Tüm üyelerin *tür promosyonu* olduğuna dikkat edin ve bu, kapsamının modülü içeren ad alanına yükseltilmesine neden olur. Daha fazla bilgi için bkz. [yükseltme türü](../../programming-guide/language-features/declared-elements/type-promotion.md).
 
 - **Yeter.** Bir projede birden fazla modülünüz olabilir ve aynı ada sahip üyeleri iki veya daha fazla modülle bildirebilirsiniz. Bununla birlikte, başvurunun bu modülün dışından olması durumunda, ilgili modül adı ile böyle bir üyeye yönelik herhangi bir başvuruyu nitelemeniz gerekir. Daha fazla bilgi için bkz. [bildirilmemiş öğelere başvurular](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md).
 

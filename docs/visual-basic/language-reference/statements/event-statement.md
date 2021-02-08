@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: olay ekstresi'
 title: Event Deyimi
 ms.date: 05/12/2018
 f1_keywords:
@@ -18,18 +19,18 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: 0575a67f89f734c79259036fe48d6e2671c2d1ed
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 719b7af664795e2ff39d86bfa204112b7a90e1b2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873259"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769135"
 ---
 # <a name="event-statement"></a>Event Deyimi
 
 Kullanıcı tanımlı bir olay bildirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 [ <attrlist> ] [ accessmodifier ] _  
@@ -57,7 +58,7 @@ End Event
   
 ## <a name="parts"></a>Bölümler  
   
-|Bölüm|Açıklama|  
+|Bölüm|Description|  
 |---|---|  
 |`attrlist`|İsteğe bağlı. Bu olay için uygulanan özniteliklerin listesi. Birden çok öznitelik virgülle ayrılır. [Öznitelik listesini](attribute-list.md) açılı ayraçlar (" `<` " ve " `>` ") içine almalısınız.|  
 |`accessmodifier`|İsteğe bağlı. Olaya hangi kodun erişebileceğini belirtir. Aşağıdakilerden biri olabilir:<br /><br /> -   [Public](../modifiers/public.md)— onu bildiren öğeye erişebilen herhangi bir kod, buna erişebilir.<br />-   [Korumalı](../modifiers/protected.md)— yalnızca kendi sınıfı veya türetilmiş bir sınıf içindeki kodlar buna erişebilir.<br />-   [Friend](../modifiers/friend.md)— yalnızca aynı derlemede bulunan kod erişebilir.<br />-   [Özel](../modifiers/private.md)— yalnızca bu öğeyi bildiren kod, ona erişebilir.<br /> -   Yalnızca olayın sınıfında, türetilmiş bir sınıfta veya aynı derlemede bulunan yalnızca [arkadaş](../modifiers/protected-friend.md)kod, buna erişebilir. <br />- Yalnızca olayın sınıfında veya aynı derlemede bulunan türetilmiş bir sınıfta bulunan [özel korumalı](../modifiers/private-protected.md)kod, buna erişebilir.|  
@@ -115,7 +116,7 @@ End Event
   
  [!code-vb[VbVbalrEvents#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#15)]  
   
- Önceki örneği çalıştırmak için F5 tuşuna basın ve **Başlat**etiketli düğmeye tıklayın. İlk metin kutusu, saniyeyi saymaya başlar. Tam süre (10 saniye) geçtiğinde, ilk metin kutusunda "bitti" görüntülenir.  
+ Önceki örneği çalıştırmak için F5 tuşuna basın ve **Başlat** etiketli düğmeye tıklayın. İlk metin kutusu, saniyeyi saymaya başlar. Tam süre (10 saniye) geçtiğinde, ilk metin kutusunda "bitti" görüntülenir.  
   
 > [!NOTE]
 > `My.Application.DoEvents`Yöntemi, olayları formla aynı şekilde işlemez. Formun olayları doğrudan işlemesini sağlamak için çoklu iş parçacığı kullanımı ' nı kullanabilirsiniz. Daha fazla bilgi için bkz. [yönetilen Iş parçacığı](../../../standard/threading/index.md).  
@@ -131,5 +132,5 @@ End Event
 - [Delegate Deyimi](delegate-statement.md)
 - [Nasıl yapılır: Bellekten Kazanacak Şekilde Özel Olayları Bildirme](../../programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
 - [Nasıl yapılır: Engellemekten Kaçınacak Şekilde Özel Olayları Bildirme](../../programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)
-- [Shared](../modifiers/shared.md)
+- [Paylaşılan](../modifiers/shared.md)
 - [Shadows](../modifiers/shadows.md)

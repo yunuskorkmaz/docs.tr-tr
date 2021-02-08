@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Imports ekstresi (XML ad alanı)'
 title: Imports ekstresi-XML ad alanı
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-ms.openlocfilehash: a3184d68b0e4cdff5d4296a5a638e22b4e83bcde
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2ca285c9104c5a03b265dd15ce38a378e66d6916
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404543"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768967"
 ---
 # <a name="imports-statement-xml-namespace"></a>Imports Deyimi (XML Ad Alanı)
 
 XML sabit değerleri ve XML eksen özelliklerinde kullanılmak üzere XML ad alanı öneklerini içeri aktarır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```vb
 Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
@@ -42,7 +43,7 @@ XML ad alanı önekleri, aynı ad alanından daha tekrarlı XML öğeleri oluşt
 
 Bir ad alanı öneki olmadan (örneğin,) genel bir XML ad alanı tanımlarsanız `Imports <xmlns="http://SomeNameSpace>"` , bu ad alanı varsayılan XML ad alanı olarak kabul edilir. Varsayılan XML ad alanı, açıkça bir ad alanı belirtmeyen hiçbir XML öğesi değişmez değeri veya XML özniteliği eksen özellikleri için kullanılır. Varsayılan ad alanı, belirtilen ad alanı boş ad alanı (yani,) ise de kullanılır `xmlns=""` . Varsayılan XML ad alanı, XML değişmez değerlerinde veya bir ad alanına sahip olmayan XML öznitelik ekseni özellikleriyle XML öznitelikleri için geçerlidir.
 
-*Yerel xml ad alanları*olarak adlandırılan XML sabit DEĞERINDE tanımlanmış XML ad alanları, genel olarak, IFADESIYLE tanımlanmış XML ad alanlarını önceliklidir `Imports` . İfadesiyle tanımlanan XML ad alanları, `Imports` bir Visual Basic projesi için içeri AKTARıLAN XML ad alanlarına göre önceliklidir. Bir XML sabit değeri bir XML ad alanı tanımlıyorsa, bu yerel ad alanı katıştırılmış ifadeler için uygulanmaz.
+*Yerel xml ad alanları* olarak adlandırılan XML sabit DEĞERINDE tanımlanmış XML ad alanları, genel olarak, IFADESIYLE tanımlanmış XML ad alanlarını önceliklidir `Imports` . İfadesiyle tanımlanan XML ad alanları, `Imports` bir Visual Basic projesi için içeri AKTARıLAN XML ad alanlarına göre önceliklidir. Bir XML sabit değeri bir XML ad alanı tanımlıyorsa, bu yerel ad alanı katıştırılmış ifadeler için uygulanmaz.
 
 Genel XML ad alanları, .NET Framework ad alanları ile aynı kapsam ve tanım kurallarını izler. Sonuç olarak, `Imports` bir .NET Framework ad alanını içeri aktarabileceğiniz yerde, genel BIR XML ad alanı tanımlamak için bir ifade ekleyebilirsiniz. Bu hem kod dosyalarını hem de proje düzeyinde içeri aktarılan ad alanlarını içerir. Proje düzeyinde içeri aktarılan ad alanları hakkında bilgi için bkz. [Başvurular sayfası, proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic).
 

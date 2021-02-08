@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: If... Sonra... Else ekstresi (Visual Basic)'
 title: If...Then...Else Deyimi
 ms.date: 04/16/2018
 f1_keywords:
@@ -21,18 +22,18 @@ helpviewer_keywords:
 - If function [Visual Basic], and If...Then...Else statements
 - Else statement [Visual Basic]
 ms.assetid: 790068a2-1307-4e28-8a72-be5ebda099e9
-ms.openlocfilehash: 0884b71c24742286e695e720add9d00dd4bfe52b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 83850771354b95f0e2d9c1bf1360a61d5264fe2e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404595"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769019"
 ---
 # <a name="ifthenelse-statement-visual-basic"></a>If...Then...Else Deyimi (Visual Basic)
 
 İfadenin değerine bağlı olarak bir deyim grubunu koşullu yürütür.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```vb
 ' Multiline syntax:
@@ -61,7 +62,7 @@ Bu makale, `If` .. `Then` . öğesinin kullanımını gösteren birkaç örnek i
 `condition` \
 Gereklidir. İfadesini. `True` `False` Örtük olarak dönüştürülebilir bir veri türü veya ya da olarak değerlendirilmelidir `Boolean` .
 
-İfade [Nullable](../../programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` [hiçbir şey](../nothing.md)olarak değerlendirilen null yapılabilir bir değişkense, koşul ifade gibi değerlendirilir `False` ve bloklar varsa `ElseIf` değerlendirilir veya varsa, `Else` blok yürütülür.
+İfade [](../../programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` [hiçbir şey](../nothing.md)olarak değerlendirilen null yapılabilir bir değişkense, koşul ifade gibi değerlendirilir `False` ve bloklar varsa `ElseIf` değerlendirilir veya varsa, `Else` blok yürütülür.
 
 `Then` \
 Tek satır sözdiziminde gereklidir; çok satırlı sözdiziminde isteğe bağlı.
@@ -94,7 +95,7 @@ Bir `If` .. `Then` . ...`Else` ifadesiyle karşılaşıldı, `condition` test ed
 > [!TIP]
 > [Seç... Case deyimi](select-case-statement.md) , birkaç olası değeri olan tek bir ifadeyi değerlendirirken daha kullanışlı olabilir.
 
-### <a name="single-line-syntax"></a>Tek satır sözdizimi
+### <a name="single-line-syntax"></a>Single-Line sözdizimi
 
 Doğru ise yürütmek üzere kod ile tek bir koşul için tek satırlık sözdizimini kullanabilirsiniz. Ancak, çok satırlı sözdizimi daha fazla yapı ve esneklik sağlar ve okunması, bakımını yapmak ve hata ayıklaması daha kolay olur.
 
@@ -118,9 +119,9 @@ Aşağıdaki örnek iç içe geçmiş `If` ... `Then` ...`Else` deyimler.
 
 [!code-vb[VbVbalrStatements#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class6.vb#102)]
 
-## <a name="single-line-syntax-example"></a>Tek satırlık sözdizimi örneği
+## <a name="single-line-syntax-example"></a>Single-Line sözdizimi örneği
 
-<a name="single-line"></a>Aşağıdaki örnek, tek satırlık sözdiziminin kullanımını gösterir.
+<a name="single-line"></a> Aşağıdaki örnek, tek satırlık sözdiziminin kullanımını gösterir.
 
 [!code-vb[VbVbalrStatements#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class6.vb#103)]
 

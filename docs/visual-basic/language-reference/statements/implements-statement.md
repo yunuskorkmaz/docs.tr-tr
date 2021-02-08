@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Implements ekstresi'
 title: Implements Deyimi
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - Implements statement [Visual Basic]
 - interface implementation [Visual Basic], Implements statement
 ms.assetid: 1fafb83f-f55a-4215-8ea9-681e8622613d
-ms.openlocfilehash: b982057d2094f807b68d5190dfad388fb9a2c65a
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: aa53d1f3b4ba9d9111f5ffb09198a11511f8d9e9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873236"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768993"
 ---
 # <a name="implements-statement"></a>Implements Deyimi
 
 Görüntülenen sınıf veya yapı tanımında uygulanması gereken bir veya daha fazla arabirimi veya arabirim üyesini belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 Implements interfacename [, ...]  
@@ -42,7 +43,7 @@ Implements interfacename.interfacemember [, ...]
   
  `Implements`Deyimin hemen arkasından `Class` veya ifadesini izlemesi gerekir `Structure` .  
   
- Bir arabirim uyguladığınızda, arabiriminde belirtilen tüm üyeleri uygulamanız gerekir. Herhangi bir üyenin atlanması, söz dizimi hatası olarak kabul edilir. Tek bir üyeyi uygulamak için, [Implements](implements-clause.md) `Implements` sınıf veya yapıda üyeyi bildirdiğinizde Implements anahtar sözcüğünü (deyimden ayrı olan) belirtirsiniz. Daha fazla bilgi için bkz. [arabirimler](../../programming-guide/language-features/interfaces/index.md).  
+ Bir arabirim uyguladığınızda, arabiriminde belirtilen tüm üyeleri uygulamanız gerekir. Herhangi bir üyenin atlanması, söz dizimi hatası olarak kabul edilir. Tek bir üyeyi uygulamak için, [](implements-clause.md) `Implements` sınıf veya yapıda üyeyi bildirdiğinizde Implements anahtar sözcüğünü (deyimden ayrı olan) belirtirsiniz. Daha fazla bilgi için bkz. [arabirimler](../../programming-guide/language-features/interfaces/index.md).  
   
  Sınıflar, özelliklerin ve yordamların [özel](../modifiers/private.md) uygulamalarını kullanabilir, ancak bu üyelere yalnızca uygulama sınıfının bir örneğini arabirimin türü olarak belirtilen bir değişkene atama yoluyla erişilebilir.  
   

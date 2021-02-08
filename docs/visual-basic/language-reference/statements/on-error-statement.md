@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: On Error bildiriminde (Visual Basic)'
 title: On Error Deyimi
 ms.date: 07/20/2015
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: 7e007d59292fc577c0c8927766423ba6f7896a71
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 593e90b07101d08d18a0db127bcb74cf6509f317
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873181"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768837"
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error Deyimi (Visual Basic)
 
@@ -38,7 +39,7 @@ Bir hata işleme yordamını sunar ve yordamın içindeki konumunu belirtir; , h
 > [!NOTE]
 > `Error`Anahtar sözcüğü, geri uyumluluk için desteklenen [hata bildiriminde](error-statement.md)de kullanılır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```vb
 On Error { GoTo [ line | 0 | -1 ] | Resume Next }
@@ -46,9 +47,9 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 
 ## <a name="parts"></a>Bölümler
 
-|Terim|Tanım|
+|Süre|Tanım|
 |---|---|
-|`GoTo` *line*|Gerekli *satır* bağımsız değişkeninde belirtilen satırda başlayan hata işleme yordamını sunar. *Satır* bağımsız değişkeni herhangi bir satır etiketi veya satır numarasıdır. Bir çalışma zamanı hatası oluşursa, dalları belirtilen satıra göre kontrol edin ve hata işleyicisini etkin hale getirir. Belirtilen satır, deyimle aynı yordamda `On Error` veya bir derleme zamanı hatasıyla oluşmalıdır.|
+|`GoTo`*satır*|Gerekli *satır* bağımsız değişkeninde belirtilen satırda başlayan hata işleme yordamını sunar. *Satır* bağımsız değişkeni herhangi bir satır etiketi veya satır numarasıdır. Bir çalışma zamanı hatası oluşursa, dalları belirtilen satıra göre kontrol edin ve hata işleyicisini etkin hale getirir. Belirtilen satır, deyimle aynı yordamda `On Error` veya bir derleme zamanı hatasıyla oluşmalıdır.|
 |`GoTo 0`|Etkin hata işleyicisini geçerli yordamda devre dışı bırakır ve öğesini olarak sıfırlar `Nothing` .|
 |`GoTo -1`|Etkin özel durumu geçerli yordamda devre dışı bırakır ve öğesini olarak sıfırlar `Nothing` .|
 |`Resume Next`|Bir çalışma zamanı hatası oluştuğunda, denetimin Hatanın gerçekleştiği deyimin hemen ardından ifadeye ve yürütmenin bu noktadan devam edeceğini belirtir. Nesnelere erişmek yerine bu formu kullanın `On Error GoTo` .|
@@ -134,5 +135,5 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 - [End ekstresi](end-statement.md)
 - [Exit Deyimi](exit-statement.md)
 - [Resume Deyimi](resume-statement.md)
-- [Hata İletileri](../error-messages/index.md)
+- [Hata Iletileri](../error-messages/index.md)
 - [Try...Catch...Finally Deyimi](try-catch-finally-statement.md)

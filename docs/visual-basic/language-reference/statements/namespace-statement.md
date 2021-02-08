@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ad alanı ekstresi'
 title: Namespace Deyimi
 ms.date: 07/20/2015
 f1_keywords:
@@ -12,18 +13,18 @@ helpviewer_keywords:
 - root namespaces
 - declarations [Visual Basic], namespaces
 ms.assetid: a31fbd95-9ace-4c3d-bbb1-51222a2272b2
-ms.openlocfilehash: cef339a66458ee9657dc1706082c3c5328746dc6
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 2c315947a26f72a90e03bc1f4bf1b5f647866b33
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875209"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768863"
 ---
 # <a name="namespace-statement"></a>Namespace Deyimi
 
 Bir ad alanının adını bildirir ve bildirimi takip eden kaynak kodunun bu ad alanı içinde derlenmesini sağlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 Namespace [Global.] { name | name.name }  
@@ -65,7 +66,7 @@ End Namespace
   
 ## <a name="root-namespace"></a>Kök ad alanı  
 
- Projenizdeki tüm ad alanı adları bir *kök ad alanını*temel alır. Visual Studio, projenizdeki tüm kodlar için proje adınızı varsayılan kök ad alanı olarak atar. Örneğin, projeniz adlandırılmışsa `Payroll` , programlama öğeleri ad alanına aittir `Payroll` . Bildirirseniz `Namespace funding` , bu ad alanının tam adı olur `Payroll.funding` .  
+ Projenizdeki tüm ad alanı adları bir *kök ad alanını* temel alır. Visual Studio, projenizdeki tüm kodlar için proje adınızı varsayılan kök ad alanı olarak atar. Örneğin, projeniz adlandırılmışsa `Payroll` , programlama öğeleri ad alanına aittir `Payroll` . Bildirirseniz `Namespace funding` , bu ad alanının tam adı olur `Payroll.funding` .  
   
  `Namespace`Genel liste sınıfı örneğinde olduğu gibi, bir bildirimde mevcut bir ad alanı belirtmek istiyorsanız, kök ad alanınızı null bir değer olarak ayarlayabilirsiniz. Bunu yapmak için **Proje** menüsünden **Proje özellikleri** ' ne tıklayın ve ardından kutunun boş olması için **kök ad alanı** girişini temizleyin. Bunu genel liste sınıfı örneğinde yapmadıysanız, Visual Basic Derleyicisi `System.Collections.Generic` proje içinde `Payroll` , tam adıyla birlikte yeni bir ad alanı olarak alır `Payroll.System.Collections.Generic` .  
   

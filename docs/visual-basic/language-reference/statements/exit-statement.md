@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Exit deyiminiz (Visual Basic)'
 title: Exit Deyimi
 ms.date: 07/20/2015
 f1_keywords:
@@ -12,18 +13,18 @@ helpviewer_keywords:
 - program termination
 - execution [Visual Basic], stopping
 ms.assetid: 760bfb32-5c3f-4bdb-a432-9a6001c92db7
-ms.openlocfilehash: 1bfe81428fd3c50663fd8978e05c6a945cd47df8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 54af7fbf908dbad829cf6f08bf442dfe85e35610
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345931"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769136"
 ---
 # <a name="exit-statement-visual-basic"></a>Exit Deyimi (Visual Basic)
 
 Bir yordam veya bloğundan çıkar ve denetimi yordam çağrısının veya blok tanımının ardından gelen deyime hemen aktarır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```vb
 Exit { Do | For | Function | Property | Select | Sub | Try | While }
@@ -32,50 +33,50 @@ Exit { Do | For | Function | Property | Select | Sub | Try | While }
 ## <a name="statements"></a>Deyimler
 
  `Exit Do`  
- Görüntülenen `Do` döngüsünden hemen çıkar. Yürütme `Loop` deyiminden sonraki deyimle devam eder. `Exit Do`, yalnızca bir `Do` döngüsü içinde kullanılabilir. İç içe geçmiş `Do` döngüleri içinde kullanıldığında, `Exit Do` en içteki döngüden çıkar ve denetimi sonraki daha yüksek iç içe geçme düzeyine aktarır.
+ `Do`Üzerinde Göründüğü döngüden hemen çıkar. Yürütme, deyimden sonraki deyimle devam eder `Loop` . `Exit Do` yalnızca bir döngü içinde kullanılabilir `Do` . İç içe döngüler içinde kullanıldığında `Do` , en `Exit Do` içteki döngüden çıkar ve denetimi sonraki daha yüksek iç içe geçme düzeyine aktarır.
 
  `Exit For`  
- Görüntülenen `For` döngüsünden hemen çıkar. Yürütme `Next` deyiminden sonraki deyimle devam eder. `Exit For`, yalnızca bir `For`...`Next` veya `For Each`...`Next` döngüsü içinde kullanılabilir. İç içe geçmiş `For` döngüleri içinde kullanıldığında, `Exit For` en içteki döngüden çıkar ve denetimi sonraki daha yüksek iç içe geçme düzeyine aktarır.
+ `For`Üzerinde Göründüğü döngüden hemen çıkar. Yürütme, deyimden sonraki deyimle devam eder `Next` . `Exit For` yalnızca bir `For` ... `Next` veya `For Each` ... döngüsü içinde kullanılabilir `Next` . İç içe döngüler içinde kullanıldığında `For` , en `Exit For` içteki döngüden çıkar ve denetimi sonraki daha yüksek iç içe geçme düzeyine aktarır.
 
  `Exit Function`  
- Görüntülenen `Function` yordamından hemen çıkar. Yürütme `Function` yordamını çağıran deyimden sonraki deyimle devam eder. `Exit Function`, yalnızca bir `Function` yordamı içinde kullanılabilir.
+ `Function`Görüntülenen yordamdan hemen çıkar. Yürütme yordamı çağıran deyimden sonraki deyimle devam eder `Function` . `Exit Function` yalnızca bir yordam içinde kullanılabilir `Function` .
 
- Bir dönüş değeri belirtmek için, `Exit Function` deyimden önceki bir satırdaki işlev adına değeri atayabilirsiniz. Dönüş değerini atamak ve tek bir ifadede işlevinden çıkmak için, bunun yerine [return ifadesini](return-statement.md)kullanabilirsiniz.
+ Bir dönüş değeri belirtmek için, değeri deyimden önceki bir satırdaki işlev adına atayabilirsiniz `Exit Function` . Dönüş değerini atamak ve tek bir ifadede işlevinden çıkmak için, bunun yerine [return ifadesini](return-statement.md)kullanabilirsiniz.
 
  `Exit Property`  
- Görüntülenen `Property` yordamından hemen çıkar. Yürütme `Property` yordamını çağıran deyimle devam eder, diğer bir deyişle, özellik değerini talep eden veya ayarla. `Exit Property`, yalnızca özelliğin `Get` veya `Set` yordamının içinde kullanılabilir.
+ `Property`Görüntülenen yordamdan hemen çıkar. Yürütme, yordamı çağıran deyimle devam eder `Property` , diğer bir deyişle, özelliğin değerini talep eden veya ayarla. `Exit Property` yalnızca bir özelliğin `Get` ya da yordamın içinde kullanılabilir `Set` .
 
- Bir `Get` yordamında bir dönüş değeri belirtmek için, `Exit Property` deyimden önceki bir satırdaki işlev adına değeri atayabilirsiniz. Dönüş değerini atamak ve tek bir ifadede `Get` yordamından çıkmak için, bunun yerine `Return` ifadesini kullanabilirsiniz.
+ Bir yordamda dönüş değeri belirtmek için `Get` , değeri deyimden önceki bir satırdaki işlev adına atayabilirsiniz `Exit Property` . Dönüş değerini atamak ve `Get` yordamın tek bir ifadede çıkış yapmak için, bunun yerine `Return` ifadesini kullanabilirsiniz.
 
- `Set` yordamında, `Exit Property` deyimleri `Return` ifadesiyle eşdeğerdir.
+ Bir `Set` yordamda, `Exit Property` deyimleri `Return` ifadesiyle eşdeğerdir.
 
  `Exit Select`  
- Görüntülenen `Select Case` bloğundan hemen çıkar. Yürütme `End Select` deyiminden sonraki deyimle devam eder. `Exit Select`, yalnızca bir `Select Case` bildiriminde kullanılabilir.
+ `Select Case`Görüntülenen bloğundan hemen çıkar. Yürütme, deyimden sonraki deyimle devam eder `End Select` . `Exit Select` yalnızca bir deyimin içinde kullanılabilir `Select Case` .
 
  `Exit Sub`  
- Görüntülenen `Sub` yordamından hemen çıkar. Yürütme `Sub` yordamını çağıran deyimden sonraki deyimle devam eder. `Exit Sub`, yalnızca bir `Sub` yordamı içinde kullanılabilir.
+ `Sub`Görüntülenen yordamdan hemen çıkar. Yürütme yordamı çağıran deyimden sonraki deyimle devam eder `Sub` . `Exit Sub` yalnızca bir yordam içinde kullanılabilir `Sub` .
 
- `Sub` yordamında, `Exit Sub` deyimleri `Return` ifadesiyle eşdeğerdir.
+ Bir `Sub` yordamda, `Exit Sub` deyimleri `Return` ifadesiyle eşdeğerdir.
 
  `Exit Try`  
- Görüntülenen `Try` veya `Catch` bloğundan hemen çıkar. Yürütme, varsa `Finally` bloğuyla devam eder veya `End Try` deyiminden sonraki deyimle devam eder. `Exit Try`, `Finally` bloğu içinde değil, yalnızca bir `Try` veya `Catch` bloğunda kullanılabilir.
+ `Try`Görüntülenen veya bloğundan hemen çıkar `Catch` . Yürütme, varsa bloğa devam eder `Finally` veya deyimden sonraki deyimle devam eder `End Try` . `Exit Try` yalnızca bir veya bloğu içinde kullanılabilir `Try` `Catch` ve bir blok içinde kullanılamaz `Finally` .
 
  `Exit While`  
- Görüntülenen `While` döngüsünden hemen çıkar. Yürütme `End While` deyiminden sonraki deyimle devam eder. `Exit While`, yalnızca bir `While` döngüsü içinde kullanılabilir. İç içe `While` döngüleri içinde kullanıldığında, `Exit While` denetimi, döngünün üzerinde yer alan bir iç içe geçmiş düzeyi olan döngüye `Exit While` meydana gelir.
+ `While`Üzerinde Göründüğü döngüden hemen çıkar. Yürütme, deyimden sonraki deyimle devam eder `End While` . `Exit While` yalnızca bir döngü içinde kullanılabilir `While` . İç içe döngüler içinde kullanıldığında `While` , `Exit While` denetimi döngünün üzerinde bir iç içe geçmiş düzeyi olan döngüye aktarır `Exit While` .
 
 ## <a name="remarks"></a>Açıklamalar
 
-`Exit` deyimlerini `End` deyimleriyle karıştırmayın. `Exit` deyimin sonunu tanımlamaz.
+Deyimlerini `Exit` `End` deyimlerle karıştırmayın. `Exit` bir deyimin sonunu tanımlamaz.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte, `index` değişken 100 ' den büyükse döngü koşulu döngüyü sonlandırır. Ancak, döngüdeki `If` ifade, dizin değişkeni 10 ' dan büyük olduğunda `Exit Do` deyimin döngüyü durdurmasına neden olur.
+Aşağıdaki örnekte, değişken 100 ' den büyükse döngü koşulu döngüyü sonlandırır `index` . `If`Ancak, döngüdeki ifade, `Exit Do` Dizin değişkeni 10 ' dan büyük olduğunda deyimin döngüyü durdurmasına neden olur.
 
 [!code-vb[VbVbalrStatements#133](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#133)]
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, `myFunction`işlev adına döndürülen değeri atar ve sonra işlevden geri dönmek için `Exit Function` kullanır:
+Aşağıdaki örnek, dönüş değerini işlev adına atar `myFunction` ve sonra `Exit Function` işlevden dönmek için kullanır:
 
 [!code-vb[VbVbalrStatements#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#23)]
 
@@ -89,7 +90,7 @@ Aşağıdaki örnek, dönüş değerini atamak ve işlevden çıkmak için [retu
 
 - [Continue Deyimi](continue-statement.md)
 - [Do...Loop Deyimi](do-loop-statement.md)
-- [End Deyimi](end-statement.md)
+- [End ekstresi](end-statement.md)
 - [For Each...Next Deyimi](for-each-next-statement.md)
 - [For...Next Deyimi](for-next-statement.md)
 - [Function Deyimi](function-statement.md)
