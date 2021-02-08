@@ -1,4 +1,5 @@
 ---
+description: ': ICLRMetadataLocator arabirimi hakkında daha fazla bilgi edinin'
 title: ICLRMetadataLocator Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 43c944f4-406a-4df6-981e-0eabb33dd5d0
 topic_type:
 - apiref
-ms.openlocfilehash: 69c52c13a4a0aca5094274de969ebed6e09651b2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6e7fd45197294563e12da020379d1bd54b088698
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723512"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99772630"
 ---
 # <a name="iclrmetadatalocator-interface"></a>ICLRMetadataLocator Arabirimi
 

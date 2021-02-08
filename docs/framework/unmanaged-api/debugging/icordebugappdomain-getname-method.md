@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugAppDomain:: GetName metodu hakkında daha fazla bilgi edinin'
 title: ICorDebugAppDomain::GetName Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 02c596d7-00b0-4e2c-856b-5425158fcefd
 topic_type:
 - apiref
-ms.openlocfilehash: 501a4543940437bfe2a6cb0952aed8184107150c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 56995f544e1576534e35b899a659ed409972305f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95672168"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99772438"
 ---
 # <a name="icordebugappdomaingetname-method"></a>ICorDebugAppDomain::GetName Yöntemi
 
 Uygulama etki alanının adını alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetName (  
