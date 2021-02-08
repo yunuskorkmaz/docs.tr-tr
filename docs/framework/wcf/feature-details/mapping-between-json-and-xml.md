@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: JSON ve XML arasında eşleme'
 title: JSON ve XML Arasında Eşleme
 ms.date: 03/30/2017
 ms.assetid: 22ee1f52-c708-4024-bbf0-572e0dae64af
-ms.openlocfilehash: 649d0f50aae806394587c7b79a7970c2de03e087
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1d9652d1683446da9946987a31a92906d5e38e55
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96234654"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793681"
 ---
 # <a name="mapping-between-json-and-xml"></a>JSON ve XML Arasında Eşleme
 

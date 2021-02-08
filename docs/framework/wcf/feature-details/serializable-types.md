@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi için: Serializable türler'
 title: Seri Hale Getirilebilir Türler
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
-ms.openlocfilehash: 4ba5fb80b3a7f4149eb49aa838826f2792147dd1
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0316946a2d373f6fec4df388e5ed50bd4dc2b1c2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96253966"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793577"
 ---
 # <a name="serializable-types"></a>Seri Hale Getirilebilir Türler
 

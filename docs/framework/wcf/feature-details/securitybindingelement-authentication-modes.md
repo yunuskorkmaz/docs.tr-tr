@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: SecurityBindingElement Kimlik doğrulama modları'
 title: SecurityBindingElement Kimlik Doğrulama Modları
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 12300bf4-c730-4405-9f65-d286f68b5a43
-ms.openlocfilehash: bf1b8103714c174fc2746bc864a7d7e0e5ea5ff1
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: bf91f0fbb112e8a0fcd4d03fe7dd82a3a4eebbd0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96253992"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793590"
 ---
 # <a name="securitybindingelement-authentication-modes"></a>SecurityBindingElement Kimlik Doğrulama Modları
 

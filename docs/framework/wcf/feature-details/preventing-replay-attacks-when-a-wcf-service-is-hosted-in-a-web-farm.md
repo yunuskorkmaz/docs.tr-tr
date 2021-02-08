@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: bir WCF hizmeti bir Web grubunda barındırıldığında yeniden yürütme saldırılarını önler'
 title: Bir WCF Hizmeti Bir Web Grubunda Barındırıldığında Yeniden Yürütme Saldırılarını Önleme
 ms.date: 03/30/2017
 ms.assetid: 1c2ed695-7a31-4257-92bd-9e9731b886a5
-ms.openlocfilehash: 23d0ce32ea4c2450d669b8ca9d887a633f0d99ea
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 015059ef650b3ec213c54b89763bac7d46dd218f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96244788"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793616"
 ---
 # <a name="preventing-replay-attacks-when-a-wcf-service-is-hosted-in-a-web-farm"></a>Bir WCF Hizmeti Bir Web Grubunda Barındırıldığında Yeniden Yürütme Saldırılarını Önleme
 

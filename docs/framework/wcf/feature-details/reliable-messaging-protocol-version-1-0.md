@@ -1,23 +1,24 @@
 ---
+description: 'Daha fazla bilgi edinin: güvenilir mesajlaşma Protokolü sürüm 1,0'
 title: Güvenilir Mesajlaşma Protokolü sürüm 1.0
 ms.date: 03/30/2017
 ms.assetid: a5509a5c-de24-4bc2-9a48-19138055dcce
-ms.openlocfilehash: 8d192afcffca52136d6d71de49770c5a5ad13895
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: dbd0184fd6ea9f92c96639d71088ac61bec20f3e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202300"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793603"
 ---
 # <a name="reliable-messaging-protocol-version-10"></a>Güvenilir Mesajlaşma Protokolü sürüm 1.0
 
-Bu konu, HTTP taşıması kullanılarak birlikte çalışabilirlik için gereken WS-güvenilir mesajlaşma Şubat 2005 (sürüm 1,0) protokolü için Windows Communication Foundation (WCF) uygulama ayrıntılarını ele almaktadır. WCF, bu konuda açıklanan kısıtlamalar ve açıklamalar ile WS-güvenilir mesajlaşma belirtimini izler. WS-ReliableMessaging sürüm 1,0 protokolünün WinFX ile başlayarak uygulandığını unutmayın.
+Bu konu, HTTP taşıması kullanılarak birlikte çalışabilirlik için gereken WS-Reliable mesajlaşma Şubat 2005 (sürüm 1,0) protokolü için Windows Communication Foundation (WCF) uygulama ayrıntılarını içerir. WCF, bu konuda açıklanan kısıtlamalar ve açıklamalar ile WS-Reliable mesajlaşma belirtimini izler. WS-ReliableMessaging sürüm 1,0 protokolünün WinFX ile başlayarak uygulandığını unutmayın.
 
-WS-güvenilir mesajlaşma Şubat 2005 protokolü, tarafından WCF 'de uygulanır <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> .
+WS-Reliable mesajlaşma Şubat 2005 protokolü, tarafından WCF 'de uygulanır <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> .
 
 Kolaylık olması için, konusu aşağıdaki rolleri kullanır:
 
-- Başlatıcı: WS-güvenilir Ileti sırası oluşturmayı Başlatan istemci
+- Başlatıcı: WS-Reliable Ileti sırası oluşturmayı Başlatan istemci
 
 - Yanıtlayıcı: başlatıcısının isteklerini alan hizmet
 
@@ -41,7 +42,7 @@ WCF `CreateSequence` , `CreateSequenceResponse` güvenilir bir ileti sırası ol
 
 - B1102: `CreateSequence` iletiye erişirken, WCF, varsa `Responder` her iki öğeyi de gönderir ve alır `Expires` , ancak değerlerini kullanmaz.
 
-WS-güvenilir mesajlaşma, `Offer` bir oturum oluşturan iki dönüştürüce bağıntılı diziyi oluşturma mekanizmasını tanıtır.
+WS-Reliable mesajlaşma, `Offer` bir oturum oluşturan iki dönüştürüce bağıntılı diziyi oluşturma mekanizmasını tanıtır.
 
 - R1103: `CreateSequence` bir öğesi varsa `Offer` , güvenilir mesajlaşma Yanıtlayıcısı diziyi kabul etmeli ve `CreateSequenceResponse` bir `wsrm:Accept` öğesi içeren, iki ilişkili dönüştürme dizisi oluşturan veya isteği reddedecek şekilde yanıt vermelidir `CreateSequence` .
 
@@ -61,7 +62,7 @@ WS-güvenilir mesajlaşma, `Offer` bir oturum oluşturan iki dönüştürüce ba
 
 - R1109: mekanizma kullanılarak iki listesiyse dizisi oluşturulduğunda `Offer` , başlatıcı tarafından gönderilen iletiler ve yanıtlayanın yanıt veren tarafından ileti bildirimleri aynı uç nokta başvurusuna gönderilmelidir.
 
-  WCF, başlatıcı ve Yanıtlayıcı arasında güvenilir oturumlar oluşturmak için WS-güvenilir mesajlaşma kullanır. WCF WS-güvenilir Mesajlaşma uygulamasının tek yönlü, istek-yanıt ve tam çift yönlü mesajlaşma desenleri için güvenilir bir oturum sağlar. Üzerinde WS-güvenilir mesajlaşma `Offer` mekanizması `CreateSequence` / `CreateSequenceResponse` , iki bağıntılı dönüştürme dizisi ayarlamanıza olanak sağlar ve tüm ileti uç noktaları için uygun bir oturum Protokolü sağlar. WCF, oturum bütünlüğü için uçtan uca koruma dahil olmak üzere bu tür bir oturum için güvenlik garantisi sağladığından, aynı tarafa yönelik iletilerin aynı hedefe döndürüldüğünü sağlamak yararlıdır. Bu Ayrıca, uygulama iletilerinde sıralı olarak oluşan bildirimlerin yedeklenmesini sağlar. Bu nedenle, R1104, R1105 ve R1108 kısıtlamaları WCF için geçerlidir.
+  WCF, başlatıcı ve Yanıtlayıcı arasında güvenilir oturumlar oluşturmak için WS-Reliable mesajlaşma kullanır. WCF WS-Reliable mesajlaşma kullanımı, tek yönlü, istek-yanıt ve tam çift yönlü mesajlaşma desenleri için güvenilir oturum sağlar. Üzerinde WS-Reliable mesajlaşma `Offer` mekanizması `CreateSequence` / `CreateSequenceResponse` , iki bağıntılı dönüştürme dizisi ayarlamanıza olanak sağlar ve tüm ileti uç noktaları için uygun bir oturum Protokolü sağlar. WCF, oturum bütünlüğü için uçtan uca koruma dahil olmak üzere bu tür bir oturum için güvenlik garantisi sağladığından, aynı tarafa yönelik iletilerin aynı hedefe döndürüldüğünü sağlamak yararlıdır. Bu Ayrıca, uygulama iletilerinde sıralı olarak oluşan bildirimlerin yedeklenmesini sağlar. Bu nedenle, R1104, R1105 ve R1108 kısıtlamaları WCF için geçerlidir.
 
 `CreateSequence`İleti örneği.
 
@@ -170,7 +171,7 @@ WCF `AckRequested` üstbilgiyi etkin tut mekanizması olarak kullanır. WCF iste
 
 ### <a name="sequenceacknowledgement-header"></a>SequenceAcknowledgement üstbilgisi
 
-WCF, WS-güvenilir mesajlaşma 'da sunulan sıra bildirimleri için Piggy-Back mekanizmasını kullanır.
+WCF, WS-Reliable mesajlaşma 'da sunulan sıra bildirimleri için Piggy-Back mekanizmasını kullanır.
 
 - R1401: mekanizma kullanılarak iki listesiyse dizisi oluşturulduğunda `Offer` , `SequenceAcknowledgement` üst bilgi, istenen alıcıya iletilen herhangi bir uygulama iletisine dahil edilebilir.
 
@@ -189,7 +190,7 @@ WCF, WS-güvenilir mesajlaşma 'da sunulan sıra bildirimleri için Piggy-Back m
 
 ### <a name="ws-reliablemessaging-faults"></a>WS-ReliableMessaging hataları
 
-Aşağıda, WS-güvenilir mesajlaşma hatalarının WCF uygulaması için uygulanan kısıtlamaların bir listesi verilmiştir:
+Aşağıda, WS-Reliable mesajlaşma hatalarının WCF uygulaması için uygulanan kısıtlamaların bir listesi verilmiştir:
 
 - B1501: WCF `MessageNumberRollover` hata oluşturmaz.
 
@@ -233,7 +234,7 @@ Aşağıda, WS-güvenilir mesajlaşma hatalarının WCF uygulaması için uygula
 
 ### <a name="ws-addressing-faults"></a>WS-Addressing hataları
 
-WS-güvenilir mesajlaşma, WS-Addressing kullandığından, WCF WS güvenilir mesajlaşma uygulamaları WS-Addressing hataları oluşturabilir. Bu bölüm, WCF 'nin WS-güvenilir mesajlaşma katmanında açıkça oluşturduğu WS-Addressing hatalarını ele almaktadır:
+WS-Reliable mesajlaşma WS-Addressing kullandığından, WCF WS-Reliable mesajlaşma uygulama WS-Addressing hata oluşturabilir. Bu bölümde, WCF 'nin WS-Reliable mesajlaşma katmanında açıkça oluşturduğu WS-Addressing hataları ele alınmaktadır:
 
 - B1601: WCF, aşağıdakilerden biri true olduğunda gereken hata Iletisi adresleme üstbilgisini üretir:
 
@@ -243,7 +244,7 @@ WS-güvenilir mesajlaşma, WS-Addressing kullandığından, WCF WS güvenilir me
 
   - Bir `CreateSequence` iletide `ReplyTo` üst bilgi eksik.
 
-- B1602: WCF, bir `Sequence` üst bilgi eksik olan ve `Action` WS güvenilir mesajlaşma belirtiminde tanınmayan bir üstbilgiye sahip olan bir iletiye yanıt olarak desteklenmeyen hata eylemini oluşturur.
+- B1602: WCF, bir `Sequence` üst bilgi eksik olan ve `Action` WS-Reliable mesajlaşma belirtiminde tanınan bir üst bilgisine sahip olan bir iletiye yanıt olarak desteklenmeyen hata eylemi oluşturur.
 
 - B1603: WCF, hata uç noktasını, `CreateSequence` iletinin adres üst bilgilerini incelemeye göre sırayı işlemediğini göstermek Için kullanılamaz olarak oluşturur.
 
@@ -253,39 +254,39 @@ WS-güvenilir mesajlaşma, WS-Addressing kullandığından, WCF WS güvenilir me
 
 WCF iki WS-Addressing sürümü destekler: WS-Addressing 2004/08 [WS-ADDR] ve W3C WS-Addressing 1,0 önerileri [WS-ADDR-CORE] ve [WS-ADDR-SOAP].
 
-WS-güvenilir mesajlaşma belirtiminde yalnızca WS-Addressing 2004/08 bahsetirken, WS-Addressing sürümü kullanılacak şekilde kısıtlanmaz. WCF için uygulanan kısıtlamaların listesi aşağıda verilmiştir:
+WS-Reliable mesajlaşma belirtimi yalnızca WS-Addressing 2004/08 ' den bahsetirken, WS-Addressing sürümü kullanılmak üzere kısıtlanmaz. WCF için uygulanan kısıtlamaların listesi aşağıda verilmiştir:
 
-- R2101: hem WS-Addressing 2004/08 hem de WS-Addressing 1,0, WS-güvenilir mesajlaşma ile kullanılabilir.
+- R2101: WS-Addressing 2004/08 ve WS-Addressing 1,0, WS-Reliable mesajlaşma ile birlikte kullanılabilir.
 
-- R2102: tek bir WS-Addressing sürümü, belirli bir WS-Addressing mesajlaşma sırası boyunca veya mekanizması kullanılarak bağıntılı bir convero dizileri çifti olarak kullanılmalıdır `wsrm:Offer` .
+- R2102: tek bir WS-Addressing bir sürümü, belirli bir WS-Reliable mesajlaşma sırası boyunca veya mekanizması kullanılarak bağıntılı bir convero dizileri çifti olarak kullanılmalıdır `wsrm:Offer` .
 
 ### <a name="composition-with-soap"></a>SOAP ile bileşim
 
-WCF, hem SOAP 1,1 hem de WS-güvenilir mesajlaşma ile SOAP 1,2 kullanımını destekler.
+WCF, WS-Reliable mesajlaşma ile hem SOAP 1,1 hem de SOAP 1,2 kullanımını destekler.
 
-### <a name="composition-with-ws-security-and-ws-secureconversation"></a>WS-Security ve WS-SecureConversation ile birleştirme
+### <a name="composition-with-ws-security-and-ws-secureconversation"></a>WS-Security ve WS-SecureConversation oluşturma
 
-WCF, güvenli aktarım (HTTPS), WS-Security ile bileşim ve WS-Secure konuşmasıyla bileşim kullanılarak WS-güvenilir mesajlaşma dizileri için koruma sağlar. WCF için uygulanan kısıtlamaların listesi aşağıda verilmiştir:
+WCF, güvenli aktarım (HTTPS), WS-güvenlik ile bileşim ve WS-Secure konuşmayla bileşim kullanarak WS-Reliable mesajlaşma dizileri için koruma sağlar. WCF için uygulanan kısıtlamaların listesi aşağıda verilmiştir:
 
-- R2301: tek tek iletilerin bütünlüğünden ve gizliliğine ek olarak, WS-güvenilir bir mesajlaşma sırasının bütünlüğünü korumak Için, WCF WS-Secure konuşmasının kullanılması gerektiğini gerektirir.
+- R2301: tek tek iletilerin bütünlüğünden ve gizliliğine ek olarak, WS-Reliable bir mesajlaşma sırasının bütünlüğünü korumak Için, WCF WS-Secure konuşmanın kullanılmasını gerektirir.
 
-- R2302: AWS-Secure görüşme oturumunun, WS-güvenilir mesajlaşma sırası kurulmadan önce kurulması gerekir.
+- R2302: AWS-Secure konuşma oturumunun WS-Reliable mesajlaşma sırası kurulmadan önce oluşturulması gerekir.
 
-- R2303: WS-güvenilir mesajlaşma sırası ömrü WS-Secure konuşma oturumunun ömrünü aşarsa, WS-Secure konuşma `SecurityContextToken` kullanılarak belirlenen, karşılık gelen WS-Secure konuşma yenileme bağlaması kullanılarak yenilenir.
+- R2303: WS-Reliable mesajlaşma sırası ömrü WS-Secure konuşma oturumunun ömrünü aşarsa, `SecurityContextToken` WS-Secure konuşması kullanılarak belirlenen, karşılık gelen WS-Secure konuşma yenileme bağlaması kullanılarak yenilenmelidir.
 
 - B2304: WS-güvenilir mesajlaşma sırası veya bir çift bağıntılı dönüştürme dizisi her zaman tek bir WS-SecureConversation oturumuna bağlanır.
 
   WCF kaynağı, `wsse:SecurityTokenReference` iletinin öğe genişletilebilirliği bölümünde öğesini oluşturur `CreateSequence` .
 
-- R2305: WS-Secure konuşmasıyla birlikte kullanıldığında, bir `CreateSequence` ileti `wsse:SecurityTokenReference` öğesini içermelidir.
+- R2305: WS-Secure konuşmasıyla birlikte oluşturulduğunda, bir `CreateSequence` ileti `wsse:SecurityTokenReference` öğesini içermelidir.
 
-## <a name="ws-reliable-messaging-ws-policy-assertion"></a>WS-güvenilir mesajlaşma WS-Ilke onaylama
+## <a name="ws-reliable-messaging-ws-policy-assertion"></a>WS-Reliable mesajlaşma WS-Policy onaylama
 
-WCF `wsrm:RMAssertion` uç noktalar özelliklerini anlatmak IÇIN WS-güvenilir mesajlaşma WS-Policy onaylama işlemi kullanır. WCF için uygulanan kısıtlamaların listesi aşağıda verilmiştir:
+WCF, `wsrm:RMAssertion` uç noktalar özelliklerini anlatmak için WS-Reliable mesajlaşma WS-Policy onayını kullanır. WCF için uygulanan kısıtlamaların listesi aşağıda verilmiştir:
 
-- B3001: WCF `wsrm:RMAssertion` WS-Policy onay onayını `wsdl:binding` öğelere iliştirir. WCF her iki Eki `wsdl:binding` ve `wsdl:port` öğelerini destekler.
+- B3001: WCF `wsrm:RMAssertion` öğelere WS-Policy onay ekler `wsdl:binding` . WCF her iki Eki `wsdl:binding` ve `wsdl:port` öğelerini destekler.
 
-- B3002: WCF, WS-güvenilir mesajlaşma onaylama 'nın aşağıdaki isteğe bağlı özelliklerini destekler ve WCF üzerinde denetim sağlar `ReliableMessagingBindingElement` :
+- B3002: WCF WS-Reliable mesajlaşma onaylaması 'nın aşağıdaki isteğe bağlı özelliklerini destekler ve WCF üzerinde denetim sağlar `ReliableMessagingBindingElement` :
 
   - `wsrm:InactivityTimeout`
 
@@ -300,9 +301,9 @@ WCF `wsrm:RMAssertion` uç noktalar özelliklerini anlatmak IÇIN WS-güvenilir 
   </wsrm:RMAssertion>
   ```
 
-## <a name="flow-control-ws-reliable-messaging-extension"></a>Akış denetimi WS-güvenilir mesajlaşma uzantısı
+## <a name="flow-control-ws-reliable-messaging-extension"></a>Akış denetimi WS-Reliable mesajlaşma uzantısı
 
-WCF, sıralı ileti akışı üzerinde isteğe bağlı ek daha sıkı denetim sağlamak için WS-güvenilir mesajlaşma genişletilebilirliği kullanır.
+WCF, sıralı ileti akışı üzerinde isteğe bağlı ek daha sıkı denetim sağlamak için WS-Reliable mesajlaşma genişletilebilirliği kullanır.
 
 Akış denetimi <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled?displayProperty=nameWithType> özelliği olarak ayarlanarak etkinleştirilir `true` . WCF için uygulanan kısıtlamaların listesi aşağıda verilmiştir:
 
@@ -330,7 +331,7 @@ Akış denetimi <xref:System.ServiceModel.Channels.ReliableSessionBindingElement
 
 ## <a name="message-exchange-patterns"></a>İleti değişimi desenleri
 
-Bu bölümde, farklı Ileti değişimi desenleri için WS-güvenilir mesajlaşma kullanıldığında WCF 'nin davranışı açıklanmaktadır. Her Ileti değişim deseninin aşağıdaki iki dağıtım senaryosu göz önünde bulundurulmalıdır:
+Bu bölümde, farklı Ileti değişimi desenleri için WS-Reliable mesajlaşma kullanıldığında WCF 'nin davranışı açıklanmaktadır. Her Ileti değişim deseninin aşağıdaki iki dağıtım senaryosu göz önünde bulundurulmalıdır:
 
 - Adreslenebilir Başlatıcı: Başlatıcı güvenlik duvarının arkasındaysa; Yanıtlayıcı yalnızca HTTP yanıtlarında iletileri başlatıcıya teslim edebilir.
 
