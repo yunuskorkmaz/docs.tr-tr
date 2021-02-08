@@ -10,7 +10,7 @@
           href: container-docker-introduction/docker-terminology.md
         - name: 'Docker kapsayıcıları, görüntüleri ve kayıt defterleri'
           href: container-docker-introduction/docker-containers-images-registries.md
-    - name: Docker Kapsayıcıları için NET 5 ile NET Framework Arasında Seçim Yapma
+    - name: .NET 5 ve Docker kapsayıcıları için .NET Framework arasında seçim yapma
       href: net-core-net-framework-containers/index.md
       items:
         - name: Genel kılavuz
@@ -65,7 +65,7 @@
       items:
         - name: Docker uygulamaları için geliştirme iş akışı
           href: docker-application-development-process/docker-app-development-workflow.md
-    - name: Çok Kapsayıcılı ve Mikro Hizmet Tabanlı NET Uygulamaları Tasarlama ve Geliştirme
+    - name: Çoklu kapsayıcı ve mikro hizmet tabanlı .NET uygulamaları tasarlama ve geliştirme
       href: multi-container-microservice-net-applications/index.md
       items:
         - name: Mikro hizmet odaklı bir uygulama tasarlama
@@ -144,7 +144,7 @@
           href: implement-resilient-applications/implement-circuit-breaker-pattern.md
         - name: Sistem durumu izleme
           href: implement-resilient-applications/monitor-app-health.md
-    - name: NET Mikro Hizmet ve Web Uygulamalarının Güvenliğini Sağlama
+    - name: .NET mikro hizmetleri ve Web uygulamalarının güvenliğini sağlama
       href: secure-net-microservices-web-applications/index.md
       items:
         - name: .NET mikro hizmet ve web uygulamalarında yetkilendirme hakkında

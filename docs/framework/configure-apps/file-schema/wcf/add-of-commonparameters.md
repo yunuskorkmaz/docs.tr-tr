@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi <add> edinin: <commonParameters>'
 title: <add> / <commonParameters>
 ms.date: 03/30/2017
 ms.assetid: 3713bf25-20c8-455f-bb85-de46b6487932
-ms.openlocfilehash: 11be233d846f9025f041a26174e5b3bd2abdab55
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d7a1b78ed79b7eab472460b364b90bd372ecf6bf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91149198"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99804016"
 ---
 # <a name="add-of-commonparameters"></a>\<add> / \<commonParameters>
 

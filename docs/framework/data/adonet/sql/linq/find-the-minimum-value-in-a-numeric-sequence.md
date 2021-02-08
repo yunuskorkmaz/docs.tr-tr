@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi: sayısal bir dizide en küçük değeri bulma'
 title: Sayısal Dizideki En Küçük Değeri Bulma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 78203093-f242-4572-9b31-9495b10926aa
-ms.openlocfilehash: 2ffff8b69839d5c1e70e81f9fc6f3a97f57ac6c6
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6f265c6db3e143bdd5371aa9d30b4dd248e8fe3f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91155984"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803847"
 ---
 # <a name="find-the-minimum-value-in-a-numeric-sequence"></a>Sayısal Dizideki En Küçük Değeri Bulma
 

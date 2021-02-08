@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Izlenecek yollara göre öğrenme'
 title: İzlenecek Yollarla Öğrenme
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: f3d313fd50108420b631cff783708191f97a8b04
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8a0163e03ee7e992d75c8f8864a6a2b256c40a7c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158246"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803834"
 ---
 # <a name="learning-by-walkthroughs"></a>İzlenecek Yollarla Öğrenme
 
@@ -52,15 +53,15 @@ ms.locfileid: "91158246"
 
  Çalışma zamanı hataları oluşabilir çünkü bu izlenecek yollarda kullanılan veritabanlarına erişmek için yeterli izinlere sahip değilsiniz. Bu sorunların en yaygın olarak giderilmesine yardımcı olması için aşağıdaki adımlara bakın.  
   
-### <a name="log-on-issues"></a>Oturum açma sorunları  
+### <a name="log-on-issues"></a>Log-On sorunları  
 
  Uygulamanız, kabul edilemez bir veritabanı oturum açma yöntemiyle veritabanına erişmeye çalışıyor olabilir.  
   
 ##### <a name="to-verify-or-change-the-database-log-on"></a>Veritabanı oturumunu doğrulamak veya değiştirmek için  
   
-1. Windows **Başlat** menüsünde **tüm programlar**' ın üzerine gelin, **Microsoft SQL Server 2005**, **yapılandırma araçları**üzerine gelin ve **SQL Server Yapılandırma Yöneticisi**' ye tıklayın.  
+1. Windows **Başlat** menüsünde **tüm programlar**' ın üzerine gelin, **Microsoft SQL Server 2005**, **yapılandırma araçları** üzerine gelin ve **SQL Server Yapılandırma Yöneticisi**' ye tıklayın.  
   
-2. **SQL Server Yapılandırma Yöneticisi**sol bölmesinde **SQL Server 2005 Hizmetleri**' ne tıklayın.  
+2. **SQL Server Yapılandırma Yöneticisi** sol bölmesinde **SQL Server 2005 Hizmetleri**' ne tıklayın.  
   
 3. Sağ bölmede **SQL Server (SQLEXPRESS)** öğesine sağ tıklayın ve ardından **Özellikler**' e tıklayın.  
   
@@ -76,7 +77,7 @@ ms.locfileid: "91158246"
   
 ##### <a name="to-enable-the-named-pipes-protocol"></a>Adlandırılmış kanallar protokolünü etkinleştirmek için  
   
-1. **SQL Server Yapılandırma Yöneticisi**sol bölmesinde, **SQL Server 2005 ağ yapılandırması**' nı genişletin ve ardından **SQLExpress protokolleri**' ne tıklayın.  
+1. **SQL Server Yapılandırma Yöneticisi** sol bölmesinde, **SQL Server 2005 ağ yapılandırması**' nı genişletin ve ardından **SQLExpress protokolleri**' ne tıklayın.  
   
 2. Sağ bölmede, **adlandırılmış kanallar** protokolünün etkinleştirildiğinden emin olun. Değilse, **ad kanalları** ' na sağ tıklayın ve ardından **Etkinleştir**' e tıklayın.  
   
@@ -88,7 +89,7 @@ ms.locfileid: "91158246"
   
 ##### <a name="to-stop-and-restart-the-service"></a>Hizmeti durdurmak ve yeniden başlatmak için  
   
-1. **SQL Server Yapılandırma Yöneticisi**sol bölmesinde **SQL Server 2005 Hizmetleri**' ne tıklayın.  
+1. **SQL Server Yapılandırma Yöneticisi** sol bölmesinde **SQL Server 2005 Hizmetleri**' ne tıklayın.  
   
 2. Sağ bölmede **SQL Server (SQLEXPRESS)** öğesine sağ tıklayın ve ardından **Durdur**' a tıklayın.  
   

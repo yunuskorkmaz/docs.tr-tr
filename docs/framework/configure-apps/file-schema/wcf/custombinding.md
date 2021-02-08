@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <customBinding>'
 title: <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: cdaaacf0dfa75209d001f6e8d6ac7175816048aa
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a4d297750d107648aa10b349c6febc1a8929a30b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74140802"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803951"
 ---
 # \<customBinding>
 
@@ -18,7 +19,7 @@ Kullanıcı için mesajlaşma yığını üzerinde tam denetim sağlar.
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<customBinding>**  
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <customBinding>
@@ -193,7 +194,7 @@ Aşağıdaki bölümlerde öznitelikler, alt öğeler ve üst öğeler açıklan
 |-------------|-----------------|
 |[\<compositeDuplex>](compositeduplex.md)|Özel bağlamaya iki yönlü mesajlaşma belirtir. Çift yönlü iletişimleri yerel olarak (örneğin, HTTP) izin verilmeyen aktarımlarla birlikte kullanılır. Bunun aksine TCP, çift yönlü iletişimleri yerel olarak sağlar ve hizmetin istemciye geri ileti gönderebilmesi için bu bağlama öğesinin kullanılmasını gerektirmez.<br /><br /> İstemci, iletişim kurmak ve bağlantı kurmak için hizmetin bir adresini kullanıma sunmalıdır. Bu istemci adresi özniteliği tarafından sağlanır `ClientBaseAddress` .<br /><br /> Bu öğe türündedir <xref:System.ServiceModel.Configuration.CompositeDuplexElement> .|
 |[\<pnrpPeerResolver>](pnrppeerresolver.md)|Eş adı çözümleme Protokolü (PNRP) eş adı çözümleyicisini belirtir. Bu öğe türündedir <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement> .|
-|[\<reliableSession>](reliablesession.md)|WS-güvenilir mesajlaşma için ayarı belirtir. Bu öğe özel bir bağlamaya eklendiğinde, elde edilen kanal, tam olarak bir kez teslimat hakkı destekleyebilir. Bu öğe türündedir <xref:System.ServiceModel.Configuration.ReliableSessionElement> .|
+|[\<reliableSession>](reliablesession.md)|WS-Reliable mesajlaşma ayarını belirtir. Bu öğe özel bir bağlamaya eklendiğinde, elde edilen kanal, tam olarak bir kez teslimat hakkı destekleyebilir. Bu öğe türündedir <xref:System.ServiceModel.Configuration.ReliableSessionElement> .|
 |[\<security>](security-of-custombinding.md)|Özel bağlamanın güvenliği için seçenekleri belirtir. Bu öğe türündedir <xref:System.ServiceModel.Configuration.SecurityElement> .|
 |[\<sslStreamSecurity>](sslstreamsecurity.md)|SSL akışı bağlamasının güvenlik ayarlarını belirtir. Bu öğe türündedir <xref:System.ServiceModel.Configuration.SslStreamSecurityElement> .|
 |[\<transactionFlow>](transactionflow.md)|Bağlamanın işlem akışını desteklediğini ve özniteliği tarafından kullanılacak protokolü belirtir `transactionProtocol` . Bu öğe türündedir <xref:System.ServiceModel.Configuration.TransactionFlowElement> .|
@@ -281,17 +282,17 @@ Aşağıdaki tabloda her bir katmanın seçenekleri özetlenmektedir.
 
 |Katman|Seçenekler|Gerekli|
 |-----------|-------------|--------------|
-|İşlem akışı|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|Hayır|
-|Güvenilirlik|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|Hayır|
-|Güvenlik|Simetrik, asimetrik, aktarım düzeyi|Hayır|
-|Şekil değişikliği|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>|Hayır|
-|Aktarım yükseltmeleri|SSL akışı, Windows Stream, eş çözümleyici|Hayır|
+|İşlem akışı|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|No|
+|Güvenilirlik|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|No|
+|Güvenlik|Simetrik, asimetrik, Transport-Level|No|
+|Şekil değişikliği|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>|No|
+|Aktarım yükseltmeleri|SSL akışı, Windows Stream, eş çözümleyici|No|
 |Encoding|Metin, Ikili, MTOM, özel|Yes|
 |Aktarım|TCP, adlandırılmış kanallar, HTTP, HTTPS, MSMQ, özel|Yes|
 
 Ayrıca, kendi bağlama öğelerinizi tanımlayabilir ve bunları önceki tanımlı katmanlardan herhangi biri arasına ekleyebilirsiniz.
 
-Sistem tarafından sağlanmış bir bağlamayı değiştirmek için özel bağlama kullanma hakkında tartışma için bkz. [nasıl yapılır: sistem tarafından belirtilen bağlamayı özelleştirme](../../../wcf/extending/how-to-customize-a-system-provided-binding.md).
+Sistem tarafından sağlanmış bir bağlamayı değiştirmek için özel bağlama kullanma hakkında bir tartışma için bkz. [nasıl yapılır: System-Provided bağlamayı özelleştirme](../../../wcf/extending/how-to-customize-a-system-provided-binding.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

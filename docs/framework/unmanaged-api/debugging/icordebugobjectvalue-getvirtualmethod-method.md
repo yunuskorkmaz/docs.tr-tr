@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugObjectValue:: GetVirtualMethod yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugObjectValue::GetVirtualMethod Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f783ebc3-e952-46e6-9325-14dd2c666f21
 topic_type:
 - apiref
-ms.openlocfilehash: 208723c42f58febc18182e8be67732bf310ccb56
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b4e97cce86d10918bd0292c6b22132a735855a21
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95695263"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803595"
 ---
 # <a name="icordebugobjectvaluegetvirtualmethod-method"></a>ICorDebugObjectValue::GetVirtualMethod Metodu
 

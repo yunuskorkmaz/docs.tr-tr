@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugRemoteTarget:: GetHostName yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugRemoteTarget::GetHostName Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 1c7276f7-7e54-470c-808c-e13745ac07a1
 topic_type:
 - apiref
-ms.openlocfilehash: 3e946d8a27ec6b568b2f3c3633695c9f6795c938
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a24f34dd638c7031211c2185cd761af0aa24105e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95712059"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803532"
 ---
 # <a name="icordebugremotetargetgethostname-method"></a>ICorDebugRemoteTarget::GetHostName Yöntemi
 
 Uzaktan hata ayıklama hedef makinesinin tam etki alanı adını veya IPv4 adresini döndürür. IPV6 Şu anda desteklenmiyor.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetHostName (  

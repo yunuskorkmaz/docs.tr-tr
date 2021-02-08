@@ -28,6 +28,8 @@
                   href: aspnet-core/6.0/kestrel-log-message-attributes-changed.md
             - name: Windows Forms
               items:
+                - name: API 'Ler bağımsız değişkenler NullException oluşturur
+                  href: windows-forms/6.0/apis-throw-argumentnullexception.md
                 - name: NotifyIcon.Text en fazla metin uzunluğu artırıldı
                   href: windows-forms/6.0/notifyicon-text-max-text-length-increased.md
                 - name: TableLayoutSettings özellikleri InvalidEnumArgumentException oluşturuyor
@@ -574,6 +576,8 @@
           items:
             - name: .NET 6.0
               items:
+                - name: API 'Ler bağımsız değişkenler NullException oluşturur
+                  href: windows-forms/6.0/apis-throw-argumentnullexception.md
                 - name: NotifyIcon.Text en fazla metin uzunluğu artırıldı
                   href: windows-forms/6.0/notifyicon-text-max-text-length-increased.md
                 - name: TableLayoutSettings özellikleri InvalidEnumArgumentException oluşturuyor

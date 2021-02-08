@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: <TypeParameter> öğesi (.NET Native)'
 title: <TypeParameter> Öğesi (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: d37bb1b7-1ddc-4c6d-8ecf-583f804a2479
-ms.openlocfilehash: dc04115914b7571b677c6d069d2d4b820b895d59
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 182cd62dc0584991b8ef0f5757d6005173d6d7a7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96287676"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803652"
 ---
 # <a name="typeparameter-element-net-native"></a>\<TypeParameter> Öğesi (.NET Native)
 
@@ -35,7 +36,7 @@ Bir yönteme geçirilen bir tür bağımsız değişkeni tarafından temsil edil
   
 ### <a name="attributes"></a>Öznitelikler  
   
-|Öznitelik|Öznitelik türü|Açıklama|  
+|Öznitelik|Öznitelik türü|Description|  
 |---------------|--------------------|-----------------|  
 |`Name`|Genel|Gerekli öznitelik. Türünün parametresinin adı <xref:System.Type> . Örneğin, yöntem imzası için `Type.GetInterfaceMap(Type interfaceType)` , `Name` özniteliği değeri "InterfaceType" olur.|  
 |`Activate`|Yansıma|İsteğe bağlı öznitelik. Örneklerin etkinleştirilmesini sağlamak için oluşturuculara çalışma zamanı erişimini denetler.|  

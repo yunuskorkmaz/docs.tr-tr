@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: dizi Işleçleri'
 title: Dizi İşleçleri
 ms.date: 03/30/2017
 ms.assetid: 4d332d32-3806-4451-b7af-25af269194ae
-ms.openlocfilehash: a2394ed57335431fe0246f66219392af5cc0e6b1
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: cf118c7038bae922f94abcefe0d13f6af8078037
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173451"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803800"
 ---
 # <a name="sequence-operators"></a>Dizi İşleçleri
 

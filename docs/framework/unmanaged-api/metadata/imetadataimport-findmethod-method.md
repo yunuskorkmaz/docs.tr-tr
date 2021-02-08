@@ -1,4 +1,5 @@
 ---
+description: ': IMetaDataImport:: FindMethod yöntemi hakkında daha fazla bilgi edinin'
 title: IMetaDataImport::FindMethod Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 0f9bde1d-e306-438d-941b-d0925b322304
 topic_type:
 - apiref
-ms.openlocfilehash: 111e42a6d8f413c616779bc44e0722ab38781588
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0d2866554fcb4dcf3984310e4da24d501f1fc7b6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711344"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803561"
 ---
 # <a name="imetadataimportfindmethod-method"></a>IMetaDataImport::FindMethod Yöntemi
 
 Belirtilen <xref:System.Type> ve belirtilen ad ve meta veri imzasına sahip olan yöntemi Için MethodDef belirtecine yönelik bir işaretçi alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT FindMethod (  

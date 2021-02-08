@@ -1,4 +1,5 @@
 ---
+description: 'Bu konuda daha fazla bilgi edinin: ICorDebugHeapValue Arabirimi'
 title: ICorDebugHeapValue Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1bca66db-0359-4ae8-846e-e35f7e547e8b
 topic_type:
 - apiref
-ms.openlocfilehash: ee3ea319360bba1a113c15daf8cf143ea512e5cd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7c65cbce530f0d1f00d8610031fb604a0118ee29
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733327"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803691"
 ---
 # <a name="icordebugheapvalue-interface"></a>ICorDebugHeapValue Arabirimi
 
