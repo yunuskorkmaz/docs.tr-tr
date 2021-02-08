@@ -1,21 +1,22 @@
 ---
+description: 'Daha fazla bilgi edinin: bir Iş akışını duraklatma ve sürdürme'
 title: İş Akışını Duraklatma ve Sürdürme
 ms.date: 03/30/2017
 ms.assetid: 11f38339-79c7-4295-b610-24a7223bbf6d
-ms.openlocfilehash: e8d1806c6d2c8e72b4e3a8b18bff669fcd0e0538
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 787dc2e2ddac03a059df30798645d561cb57437b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96268546"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787896"
 ---
-# <a name="pausing-and-resuming-a-workflow"></a><span data-ttu-id="afa09-102">İş Akışını Duraklatma ve Sürdürme</span><span class="sxs-lookup"><span data-stu-id="afa09-102">Pausing and Resuming a Workflow</span></span>
+# <a name="pausing-and-resuming-a-workflow"></a><span data-ttu-id="037e2-103">İş Akışını Duraklatma ve Sürdürme</span><span class="sxs-lookup"><span data-stu-id="037e2-103">Pausing and Resuming a Workflow</span></span>
 
-<span data-ttu-id="afa09-103">İş akışları, gibi yer işaretlerine ve engelleme etkinliklerine yanıt olarak duraklatıp devam eder <xref:System.Activities.Statements.Delay> , ancak bir iş akışı Ayrıca kalıcı olarak duraklatılabilir, kaldırılabilirler ve kalıcılık kullanılarak devam edebilir.</span><span class="sxs-lookup"><span data-stu-id="afa09-103">Workflows will pause and resume in response to bookmarks and blocking activities such as <xref:System.Activities.Statements.Delay>, but a workflow can also be explicitly paused, unloaded, and resumed by using persistence.</span></span>  
+<span data-ttu-id="037e2-104">İş akışları, gibi yer işaretlerine ve engelleme etkinliklerine yanıt olarak duraklatıp devam eder <xref:System.Activities.Statements.Delay> , ancak bir iş akışı Ayrıca kalıcı olarak duraklatılabilir, kaldırılabilirler ve kalıcılık kullanılarak devam edebilir.</span><span class="sxs-lookup"><span data-stu-id="037e2-104">Workflows will pause and resume in response to bookmarks and blocking activities such as <xref:System.Activities.Statements.Delay>, but a workflow can also be explicitly paused, unloaded, and resumed by using persistence.</span></span>  
   
-## <a name="pausing-a-workflow"></a><span data-ttu-id="afa09-104">Bir Iş akışını duraklatma</span><span class="sxs-lookup"><span data-stu-id="afa09-104">Pausing a Workflow</span></span>  
+## <a name="pausing-a-workflow"></a><span data-ttu-id="037e2-105">Bir Iş akışını duraklatma</span><span class="sxs-lookup"><span data-stu-id="037e2-105">Pausing a Workflow</span></span>  
 
- <span data-ttu-id="afa09-105">Bir iş akışını duraklatmak için kullanın <xref:System.Activities.WorkflowApplication.Unload%2A> .</span><span class="sxs-lookup"><span data-stu-id="afa09-105">To pause a workflow, use <xref:System.Activities.WorkflowApplication.Unload%2A>.</span></span>  <span data-ttu-id="afa09-106">Bu yöntem iş akışının devam ediyor ve bellekten kaldırılmasına ve <xref:System.TimeoutException> iş akışı 30 saniye içinde bellekten kaldırıldığında bir oluşturacak.</span><span class="sxs-lookup"><span data-stu-id="afa09-106">This method requests that the workflow persist and unload, and will throw a <xref:System.TimeoutException> if the workflow does not unload in 30 seconds.</span></span>  
+ <span data-ttu-id="037e2-106">Bir iş akışını duraklatmak için kullanın <xref:System.Activities.WorkflowApplication.Unload%2A> .</span><span class="sxs-lookup"><span data-stu-id="037e2-106">To pause a workflow, use <xref:System.Activities.WorkflowApplication.Unload%2A>.</span></span>  <span data-ttu-id="037e2-107">Bu yöntem iş akışının devam ediyor ve bellekten kaldırılmasına ve <xref:System.TimeoutException> iş akışı 30 saniye içinde bellekten kaldırıldığında bir oluşturacak.</span><span class="sxs-lookup"><span data-stu-id="037e2-107">This method requests that the workflow persist and unload, and will throw a <xref:System.TimeoutException> if the workflow does not unload in 30 seconds.</span></span>  
   
 ```csharp  
 try  
@@ -29,9 +30,9 @@ catch (TimeoutException e)
 }  
 ```  
   
-## <a name="resuming-a-workflow"></a><span data-ttu-id="afa09-107">Iş akışı sürdürülüyor</span><span class="sxs-lookup"><span data-stu-id="afa09-107">Resuming a Workflow</span></span>  
+## <a name="resuming-a-workflow"></a><span data-ttu-id="037e2-108">Iş akışı sürdürülüyor</span><span class="sxs-lookup"><span data-stu-id="037e2-108">Resuming a Workflow</span></span>  
 
- <span data-ttu-id="afa09-108">Daha önce duraklatılmış ve yüklenmemiş bir iş akışını sürdürmesini sağlamak için kullanın <xref:System.Activities.WorkflowApplication.Load%2A> .</span><span class="sxs-lookup"><span data-stu-id="afa09-108">To resume a previously paused and unloaded workflow, use <xref:System.Activities.WorkflowApplication.Load%2A>.</span></span> <span data-ttu-id="afa09-109">Bu yöntem bir kalıcılık deposundan bir iş akışını belleğe yükler.</span><span class="sxs-lookup"><span data-stu-id="afa09-109">This method loads a workflow from a persistence store into memory.</span></span>  
+ <span data-ttu-id="037e2-109">Daha önce duraklatılmış ve yüklenmemiş bir iş akışını sürdürmesini sağlamak için kullanın <xref:System.Activities.WorkflowApplication.Load%2A> .</span><span class="sxs-lookup"><span data-stu-id="037e2-109">To resume a previously paused and unloaded workflow, use <xref:System.Activities.WorkflowApplication.Load%2A>.</span></span> <span data-ttu-id="037e2-110">Bu yöntem bir kalıcılık deposundan bir iş akışını belleğe yükler.</span><span class="sxs-lookup"><span data-stu-id="037e2-110">This method loads a workflow from a persistence store into memory.</span></span>  
   
 ```csharp  
 WorkflowApplication application = new WorkflowApplication(activity);  
@@ -39,9 +40,9 @@ application.InstanceStore = instanceStore;
 application.Load(id);  
 ```  
   
-## <a name="example"></a><span data-ttu-id="afa09-110">Örnek</span><span class="sxs-lookup"><span data-stu-id="afa09-110">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="037e2-111">Örnek</span><span class="sxs-lookup"><span data-stu-id="037e2-111">Example</span></span>  
 
- <span data-ttu-id="afa09-111">Aşağıdaki kod örneği, kalıcılığı kullanarak bir iş akışının nasıl duraklatılacağını ve sürdürüleceğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="afa09-111">The following code sample demonstrates how to pause and resume a workflow by using persistence.</span></span>  
+ <span data-ttu-id="037e2-112">Aşağıdaki kod örneği, kalıcılığı kullanarak bir iş akışının nasıl duraklatılacağını ve sürdürüleceğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="037e2-112">The following code sample demonstrates how to pause and resume a workflow by using persistence.</span></span>  
   
 ```csharp  
 static string bkName = "bkName";  

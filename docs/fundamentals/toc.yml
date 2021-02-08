@@ -492,6 +492,8 @@ items:
                     href: code-analysis/code-style-rule-options.md
           - name: Kural başvurusu
             items:
+              - name: Kategoriler
+                href: code-analysis/categories.md
               - name: Kod kalitesi kuralları
                 items:
                   - name: Genel Bakış
@@ -1255,15 +1257,9 @@ items:
                       - name: IDE0077
                         href: code-analysis/style-rules/ide0077.md
                   - name: Biçimlendirme kuralları
-                    items:
-                      - name: Genel bakış
-                        displayName: formatting rules
-                        href: code-analysis/style-rules/formatting-rules.md
+                    href: code-analysis/style-rules/formatting-rules.md
                   - name: Adlandırma kuralları
-                    items:
-                      - name: Genel Bakış
-                        displayName: naming rules
-                        href: code-analysis/style-rules/naming-rules.md
+                    href: code-analysis/style-rules/naming-rules.md
           - name: Platform uyumluluk çözümleyicisi
             href: ../standard/analyzers/platform-compat-analyzer.md
           - name: API çözümleyicisi

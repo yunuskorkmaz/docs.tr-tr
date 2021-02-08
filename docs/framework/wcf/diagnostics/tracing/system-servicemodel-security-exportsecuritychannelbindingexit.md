@@ -1,24 +1,25 @@
 ---
+description: ': System. ServiceModel. Security. ExportSecurityChannelBindingExit hakkında daha fazla bilgi edinin'
 title: System.ServiceModel.Security.ExportSecurityChannelBindingExit
 ms.date: 03/30/2017
 ms.assetid: 714a8f4d-a297-4f1c-b9df-d97115a1d82a
-ms.openlocfilehash: 7a26d683c6ac17b2602f8cda7e8f413cf8e1d203
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 6745cc7171fe795933027cf4c4ba708a0ba42b33
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96277263"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99798764"
 ---
-# <a name="systemservicemodelsecurityexportsecuritychannelbindingexit"></a><span data-ttu-id="0a168-102">System.ServiceModel.Security.ExportSecurityChannelBindingExit</span><span class="sxs-lookup"><span data-stu-id="0a168-102">System.ServiceModel.Security.ExportSecurityChannelBindingExit</span></span>
+# <a name="systemservicemodelsecurityexportsecuritychannelbindingexit"></a><span data-ttu-id="a3b4f-103">System.ServiceModel.Security.ExportSecurityChannelBindingExit</span><span class="sxs-lookup"><span data-stu-id="a3b4f-103">System.ServiceModel.Security.ExportSecurityChannelBindingExit</span></span>
 
-<span data-ttu-id="0a168-103">System.ServiceModel.Security.ExportSecurityChannelBindingExit</span><span class="sxs-lookup"><span data-stu-id="0a168-103">System.ServiceModel.Security.ExportSecurityChannelBindingExit</span></span>  
+<span data-ttu-id="a3b4f-104">System.ServiceModel.Security.ExportSecurityChannelBindingExit</span><span class="sxs-lookup"><span data-stu-id="a3b4f-104">System.ServiceModel.Security.ExportSecurityChannelBindingExit</span></span>  
   
-## <a name="description"></a><span data-ttu-id="0a168-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="0a168-104">Description</span></span>  
+## <a name="description"></a><span data-ttu-id="a3b4f-105">Description</span><span class="sxs-lookup"><span data-stu-id="a3b4f-105">Description</span></span>  
 
- <span data-ttu-id="0a168-105">Güvenlik ExportChannelBinding bitti.</span><span class="sxs-lookup"><span data-stu-id="0a168-105">The Security ExportChannelBinding finished.</span></span>  
+ <span data-ttu-id="a3b4f-106">Güvenlik ExportChannelBinding bitti.</span><span class="sxs-lookup"><span data-stu-id="a3b4f-106">The Security ExportChannelBinding finished.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0a168-106">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0a168-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a3b4f-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a3b4f-107">See also</span></span>
 
-- [<span data-ttu-id="0a168-107">İzleme</span><span class="sxs-lookup"><span data-stu-id="0a168-107">Tracing</span></span>](index.md)
-- [<span data-ttu-id="0a168-108">Uygulamanızda Sorun Giderme için İzleme Kullanma</span><span class="sxs-lookup"><span data-stu-id="0a168-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="0a168-109">Yönetim ve tanılama</span><span class="sxs-lookup"><span data-stu-id="0a168-109">Administration and Diagnostics</span></span>](../index.md)
+- [<span data-ttu-id="a3b4f-108">İzleme</span><span class="sxs-lookup"><span data-stu-id="a3b4f-108">Tracing</span></span>](index.md)
+- [<span data-ttu-id="a3b4f-109">Uygulamanızda Sorun Giderme için İzleme Kullanma</span><span class="sxs-lookup"><span data-stu-id="a3b4f-109">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="a3b4f-110">Yönetim ve tanılama</span><span class="sxs-lookup"><span data-stu-id="a3b4f-110">Administration and Diagnostics</span></span>](../index.md)

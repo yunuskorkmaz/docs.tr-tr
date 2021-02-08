@@ -1,31 +1,32 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 711-Dispatchmessagebeforeauthorleştirme'
 title: 711 - DispatchMessageBeforeAuthorization
 ms.date: 03/30/2017
 ms.assetid: ea7f7228-e642-441d-9470-6609a9fe08f0
-ms.openlocfilehash: ab44d8bb3c9541f64e92d4c425b6d38064a83f2d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a4dd0e3190e2c42b72b7115455f3a2651a52fb7a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96242168"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788221"
 ---
-# <a name="711---dispatchmessagebeforeauthorization"></a><span data-ttu-id="0d7bc-102">711 - DispatchMessageBeforeAuthorization</span><span class="sxs-lookup"><span data-stu-id="0d7bc-102">711 - DispatchMessageBeforeAuthorization</span></span>
+# <a name="711---dispatchmessagebeforeauthorization"></a><span data-ttu-id="d03b9-103">711 - DispatchMessageBeforeAuthorization</span><span class="sxs-lookup"><span data-stu-id="d03b9-103">711 - DispatchMessageBeforeAuthorization</span></span>
 
-## <a name="properties"></a><span data-ttu-id="0d7bc-103">Özellikler</span><span class="sxs-lookup"><span data-stu-id="0d7bc-103">Properties</span></span>  
+## <a name="properties"></a><span data-ttu-id="d03b9-104">Özellikler</span><span class="sxs-lookup"><span data-stu-id="d03b9-104">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="0d7bc-104">ID</span><span class="sxs-lookup"><span data-stu-id="0d7bc-104">ID</span></span>|<span data-ttu-id="0d7bc-105">711</span><span class="sxs-lookup"><span data-stu-id="0d7bc-105">711</span></span>|  
-|<span data-ttu-id="0d7bc-106">Anahtar sözcükler</span><span class="sxs-lookup"><span data-stu-id="0d7bc-106">Keywords</span></span>|<span data-ttu-id="0d7bc-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="0d7bc-107">ServiceModel</span></span>|  
-|<span data-ttu-id="0d7bc-108">Düzey</span><span class="sxs-lookup"><span data-stu-id="0d7bc-108">Level</span></span>|<span data-ttu-id="0d7bc-109">Ayrıntılı</span><span class="sxs-lookup"><span data-stu-id="0d7bc-109">Verbose</span></span>|  
-|<span data-ttu-id="0d7bc-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="0d7bc-110">Channel</span></span>|<span data-ttu-id="0d7bc-111">Microsoft-Windows-uygulama sunucusu-uygulamalar/analitik</span><span class="sxs-lookup"><span data-stu-id="0d7bc-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="d03b9-105">ID</span><span class="sxs-lookup"><span data-stu-id="d03b9-105">ID</span></span>|<span data-ttu-id="d03b9-106">711</span><span class="sxs-lookup"><span data-stu-id="d03b9-106">711</span></span>|  
+|<span data-ttu-id="d03b9-107">Anahtar sözcükler</span><span class="sxs-lookup"><span data-stu-id="d03b9-107">Keywords</span></span>|<span data-ttu-id="d03b9-108">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="d03b9-108">ServiceModel</span></span>|  
+|<span data-ttu-id="d03b9-109">Level</span><span class="sxs-lookup"><span data-stu-id="d03b9-109">Level</span></span>|<span data-ttu-id="d03b9-110">Ayrıntılı</span><span class="sxs-lookup"><span data-stu-id="d03b9-110">Verbose</span></span>|  
+|<span data-ttu-id="d03b9-111">Kanal</span><span class="sxs-lookup"><span data-stu-id="d03b9-111">Channel</span></span>|<span data-ttu-id="d03b9-112">Microsoft-Windows-uygulama sunucusu-uygulamalar/analitik</span><span class="sxs-lookup"><span data-stu-id="d03b9-112">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="0d7bc-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="0d7bc-112">Description</span></span>  
+## <a name="description"></a><span data-ttu-id="d03b9-113">Description</span><span class="sxs-lookup"><span data-stu-id="d03b9-113">Description</span></span>  
 
- <span data-ttu-id="0d7bc-113">İleti dağıtma için kimlik doğrulaması başlatıldığında bu olay yayınlanır.</span><span class="sxs-lookup"><span data-stu-id="0d7bc-113">This event is emitted when authentication for message dispatching is started.</span></span>  
+ <span data-ttu-id="d03b9-114">İleti dağıtma için kimlik doğrulaması başlatıldığında bu olay yayınlanır.</span><span class="sxs-lookup"><span data-stu-id="d03b9-114">This event is emitted when authentication for message dispatching is started.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="0d7bc-114">İleti</span><span class="sxs-lookup"><span data-stu-id="0d7bc-114">Message</span></span>  
+## <a name="message"></a><span data-ttu-id="d03b9-115">İleti</span><span class="sxs-lookup"><span data-stu-id="d03b9-115">Message</span></span>  
 
- <span data-ttu-id="0d7bc-115">İleti gönderme için Yetkilendirmeyi başlatın.</span><span class="sxs-lookup"><span data-stu-id="0d7bc-115">Start authorization for message dispatching.</span></span>  
+ <span data-ttu-id="d03b9-116">İleti gönderme için Yetkilendirmeyi başlatın.</span><span class="sxs-lookup"><span data-stu-id="d03b9-116">Start authorization for message dispatching.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="0d7bc-116">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="0d7bc-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="d03b9-117">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="d03b9-117">Details</span></span>
