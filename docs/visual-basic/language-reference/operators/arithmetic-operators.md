@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: aritmetik Işleçler (Visual Basic)'
 title: Aritmetik İşleçler
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,32 +7,32 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic]
 - math operators [Visual Basic]
 ms.assetid: 330178e0-a375-4742-b662-b3080c89fa54
-ms.openlocfilehash: 3a300ab5d72a0fdbdbdfaf47a72dcb89a0d21743
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: ce73df474e605408cec67319c950c1aa39749c72
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874837"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774245"
 ---
-# <a name="arithmetic-operators-visual-basic"></a><span data-ttu-id="25c23-102">Aritmetik İşleçler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="25c23-102">Arithmetic Operators (Visual Basic)</span></span>
+# <a name="arithmetic-operators-visual-basic"></a><span data-ttu-id="c0265-103">Aritmetik İşleçler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c0265-103">Arithmetic Operators (Visual Basic)</span></span>
 
-<span data-ttu-id="25c23-103">Aşağıda, Visual Basic tanımlanan aritmetik işleçler verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="25c23-103">The following are the arithmetic operators defined in Visual Basic.</span></span>  
+<span data-ttu-id="c0265-104">Aşağıda, Visual Basic tanımlanan aritmetik işleçler verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="c0265-104">The following are the arithmetic operators defined in Visual Basic.</span></span>  
   
- [<span data-ttu-id="25c23-104">^ İşleci</span><span class="sxs-lookup"><span data-stu-id="25c23-104">^ Operator</span></span>](exponentiation-operator.md)  
+ [<span data-ttu-id="c0265-105">^ İşleci</span><span class="sxs-lookup"><span data-stu-id="c0265-105">^ Operator</span></span>](exponentiation-operator.md)  
   
- [<span data-ttu-id="25c23-105">\* İşleci</span><span class="sxs-lookup"><span data-stu-id="25c23-105">\* Operator</span></span>](multiplication-operator.md)  
+ [<span data-ttu-id="c0265-106">\* İşleci</span><span class="sxs-lookup"><span data-stu-id="c0265-106">\* Operator</span></span>](multiplication-operator.md)  
   
- [<span data-ttu-id="25c23-106">/İşleci</span><span class="sxs-lookup"><span data-stu-id="25c23-106">/ Operator</span></span>](floating-point-division-operator.md)  
+ [<span data-ttu-id="c0265-107">/İşleci</span><span class="sxs-lookup"><span data-stu-id="c0265-107">/ Operator</span></span>](floating-point-division-operator.md)  
   
- [<span data-ttu-id="25c23-107">\ İşleci</span><span class="sxs-lookup"><span data-stu-id="25c23-107">\ Operator</span></span>](integer-division-operator.md)  
+ [<span data-ttu-id="c0265-108">\ İşleci</span><span class="sxs-lookup"><span data-stu-id="c0265-108">\ Operator</span></span>](integer-division-operator.md)  
   
- [<span data-ttu-id="25c23-108">Mod İşleci</span><span class="sxs-lookup"><span data-stu-id="25c23-108">Mod Operator</span></span>](mod-operator.md)  
+ [<span data-ttu-id="c0265-109">Mod İşleci</span><span class="sxs-lookup"><span data-stu-id="c0265-109">Mod Operator</span></span>](mod-operator.md)  
   
- <span data-ttu-id="25c23-109">[+ İşleci](addition-operator.md) (birli ve ikili)</span><span class="sxs-lookup"><span data-stu-id="25c23-109">[+ Operator](addition-operator.md) (unary and binary)</span></span>  
+ <span data-ttu-id="c0265-110">[+ İşleci](addition-operator.md) (birli ve ikili)</span><span class="sxs-lookup"><span data-stu-id="c0265-110">[+ Operator](addition-operator.md) (unary and binary)</span></span>  
   
- <span data-ttu-id="25c23-110">[-İşleci](subtraction-operator.md) (birli ve ikili)</span><span class="sxs-lookup"><span data-stu-id="25c23-110">[- Operator](subtraction-operator.md) (unary and binary)</span></span>  
+ <span data-ttu-id="c0265-111">[-İşleci](subtraction-operator.md) (birli ve ikili)</span><span class="sxs-lookup"><span data-stu-id="c0265-111">[- Operator](subtraction-operator.md) (unary and binary)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="25c23-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="25c23-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c0265-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c0265-112">See also</span></span>
 
-- [<span data-ttu-id="25c23-112">Visual Basic'de İşleç Önceliği</span><span class="sxs-lookup"><span data-stu-id="25c23-112">Operator Precedence in Visual Basic</span></span>](operator-precedence.md)
-- [<span data-ttu-id="25c23-113">Visual Basic'de Aritmetik İşleçler</span><span class="sxs-lookup"><span data-stu-id="25c23-113">Arithmetic Operators in Visual Basic</span></span>](../../programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [<span data-ttu-id="c0265-113">Visual Basic'de İşleç Önceliği</span><span class="sxs-lookup"><span data-stu-id="c0265-113">Operator Precedence in Visual Basic</span></span>](operator-precedence.md)
+- [<span data-ttu-id="c0265-114">Visual Basic'de Aritmetik İşleçler</span><span class="sxs-lookup"><span data-stu-id="c0265-114">Arithmetic Operators in Visual Basic</span></span>](../../programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

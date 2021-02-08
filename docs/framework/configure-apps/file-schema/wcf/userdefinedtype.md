@@ -1,17 +1,18 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <userDefinedType>'
 title: <userDefinedType>
 ms.date: 03/30/2017
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
-ms.openlocfilehash: a4bbd677aba27d93389f8d2f99aadd801c86b65f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 11f4380f54abbdb0faf37998b07473e38ec9245f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172846"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773426"
 ---
 # \<userDefinedType>
 
-<span data-ttu-id="42040-101">Hizmet sözleşmesine dahil edilecek Kullanıcı tanımlı bir tür (UDT) temsil eder.</span><span class="sxs-lookup"><span data-stu-id="42040-101">Represents a User Defined Type (UDT) that is to be included in the service contract.</span></span>  
+<span data-ttu-id="7a6c4-102">Hizmet sözleşmesine dahil edilecek Kullanıcı tanımlı bir tür (UDT) temsil eder.</span><span class="sxs-lookup"><span data-stu-id="7a6c4-102">Represents a User Defined Type (UDT) that is to be included in the service contract.</span></span>  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
@@ -20,7 +21,7 @@ ms.locfileid: "91172846"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<userDefinedTypes>**](userdefinedtypes.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<userDefinedType>**  
   
-## <a name="syntax"></a><span data-ttu-id="42040-102">Syntax</span><span class="sxs-lookup"><span data-stu-id="42040-102">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7a6c4-103">Syntax</span><span class="sxs-lookup"><span data-stu-id="7a6c4-103">Syntax</span></span>  
   
 ```xml  
 <comContracts>
@@ -36,36 +37,36 @@ ms.locfileid: "91172846"
 </comContracts>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="42040-103">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="42040-103">Attributes and Elements</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="7a6c4-104">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="7a6c4-104">Attributes and Elements</span></span>  
 
- <span data-ttu-id="42040-104">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="42040-104">The following sections describe attributes, child elements, and parent elements.</span></span>  
+ <span data-ttu-id="7a6c4-105">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="7a6c4-105">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="42040-105">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="42040-105">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="7a6c4-106">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="7a6c4-106">Attributes</span></span>  
   
-|<span data-ttu-id="42040-106">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="42040-106">Attribute</span></span>|<span data-ttu-id="42040-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="42040-107">Description</span></span>|  
+|<span data-ttu-id="7a6c4-107">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="7a6c4-107">Attribute</span></span>|<span data-ttu-id="7a6c4-108">Açıklama</span><span class="sxs-lookup"><span data-stu-id="7a6c4-108">Description</span></span>|  
 |---------------|-----------------|  
-|`name`|<span data-ttu-id="42040-108">Okunabilir tür adını sağlayan bir dize içeren isteğe bağlı öznitelik.</span><span class="sxs-lookup"><span data-stu-id="42040-108">An optional attribute that contains a string that provides the readable type name.</span></span> <span data-ttu-id="42040-109">Bu, çalışma zamanı tarafından kullanılmaz, ancak bir okuyucunun türleri ayırt etmesine yardımcı olur.</span><span class="sxs-lookup"><span data-stu-id="42040-109">This is not used by the runtime but helps a reader to distinguish the types.</span></span>|  
-|`TypeDefID`|<span data-ttu-id="42040-110">Kayıtlı tür kitaplığı içinde belirli UDT türünü tanımlayan bir GUID dizesi.</span><span class="sxs-lookup"><span data-stu-id="42040-110">A GUID string that identifies the specific UDT type within the registered type library.</span></span>|  
-|`TypeLibID`|<span data-ttu-id="42040-111">Türü tanımlayan kayıtlı tür kitaplığını tanımlayan bir GUID dizesi.</span><span class="sxs-lookup"><span data-stu-id="42040-111">A GUID string that identifies the registered type library that defines the type.</span></span>|  
-|`TypeLibVersion`|<span data-ttu-id="42040-112">Türü tanımlayan tür kitaplığı sürümünü tanımlayan bir dize.</span><span class="sxs-lookup"><span data-stu-id="42040-112">A string that identifies the type library version that defines the type.</span></span>|  
+|`name`|<span data-ttu-id="7a6c4-109">Okunabilir tür adını sağlayan bir dize içeren isteğe bağlı öznitelik.</span><span class="sxs-lookup"><span data-stu-id="7a6c4-109">An optional attribute that contains a string that provides the readable type name.</span></span> <span data-ttu-id="7a6c4-110">Bu, çalışma zamanı tarafından kullanılmaz, ancak bir okuyucunun türleri ayırt etmesine yardımcı olur.</span><span class="sxs-lookup"><span data-stu-id="7a6c4-110">This is not used by the runtime but helps a reader to distinguish the types.</span></span>|  
+|`TypeDefID`|<span data-ttu-id="7a6c4-111">Kayıtlı tür kitaplığı içinde belirli UDT türünü tanımlayan bir GUID dizesi.</span><span class="sxs-lookup"><span data-stu-id="7a6c4-111">A GUID string that identifies the specific UDT type within the registered type library.</span></span>|  
+|`TypeLibID`|<span data-ttu-id="7a6c4-112">Türü tanımlayan kayıtlı tür kitaplığını tanımlayan bir GUID dizesi.</span><span class="sxs-lookup"><span data-stu-id="7a6c4-112">A GUID string that identifies the registered type library that defines the type.</span></span>|  
+|`TypeLibVersion`|<span data-ttu-id="7a6c4-113">Türü tanımlayan tür kitaplığı sürümünü tanımlayan bir dize.</span><span class="sxs-lookup"><span data-stu-id="7a6c4-113">A string that identifies the type library version that defines the type.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="42040-113">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="42040-113">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="7a6c4-114">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="7a6c4-114">Child Elements</span></span>  
 
- <span data-ttu-id="42040-114">Yok.</span><span class="sxs-lookup"><span data-stu-id="42040-114">None.</span></span>  
+ <span data-ttu-id="7a6c4-115">Yok.</span><span class="sxs-lookup"><span data-stu-id="7a6c4-115">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="42040-115">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="42040-115">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="7a6c4-116">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="7a6c4-116">Parent Elements</span></span>  
   
-|<span data-ttu-id="42040-116">Öğe</span><span class="sxs-lookup"><span data-stu-id="42040-116">Element</span></span>|<span data-ttu-id="42040-117">Açıklama</span><span class="sxs-lookup"><span data-stu-id="42040-117">Description</span></span>|  
+|<span data-ttu-id="7a6c4-117">Öğe</span><span class="sxs-lookup"><span data-stu-id="7a6c4-117">Element</span></span>|<span data-ttu-id="7a6c4-118">Açıklama</span><span class="sxs-lookup"><span data-stu-id="7a6c4-118">Description</span></span>|  
 |-------------|-----------------|  
-|`userDefinedTypes`|<span data-ttu-id="42040-118">`userDefinedType`Öğelerin koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="42040-118">A collection of `userDefinedType` elements.</span></span>|  
+|`userDefinedTypes`|<span data-ttu-id="7a6c4-119">`userDefinedType`Öğelerin koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="7a6c4-119">A collection of `userDefinedType` elements.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="42040-119">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="42040-119">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7a6c4-120">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="7a6c4-120">Remarks</span></span>  
 
- <span data-ttu-id="42040-120">COM+ tümleştirme çalışma zamanı, tür kitaplığını inceleyerek hizmet oluşturur.</span><span class="sxs-lookup"><span data-stu-id="42040-120">The COM+ integration runtime creates services by inspecting the type library.</span></span> <span data-ttu-id="42040-121">Bir COM+ bileşeni bir DEĞIŞKEN geçiren Yöntemler içerdiğinde, sistem çalışma zamanına göre geçirilecek gerçek türleri belirleyemez.</span><span class="sxs-lookup"><span data-stu-id="42040-121">When a COM+ component contains methods that pass a VARIANT, the system cannot determine the actual types to be passed prior to runtime.</span></span> <span data-ttu-id="42040-122">Bu nedenle, bir DEĞIŞKEN içinde Kullanıcı tanımlı tür (UDT) geçirmeye çalıştığınızda, serileştirme için bilinen bir tür olmadığından başarısız olur.</span><span class="sxs-lookup"><span data-stu-id="42040-122">Therefore, when you attempt to pass a User Defined Type (UDT) within a VARIANT, it fails because it is not a known type for serialization.</span></span>  
+ <span data-ttu-id="7a6c4-121">COM+ tümleştirme çalışma zamanı, tür kitaplığını inceleyerek hizmet oluşturur.</span><span class="sxs-lookup"><span data-stu-id="7a6c4-121">The COM+ integration runtime creates services by inspecting the type library.</span></span> <span data-ttu-id="7a6c4-122">Bir COM+ bileşeni bir DEĞIŞKEN geçiren Yöntemler içerdiğinde, sistem çalışma zamanına göre geçirilecek gerçek türleri belirleyemez.</span><span class="sxs-lookup"><span data-stu-id="7a6c4-122">When a COM+ component contains methods that pass a VARIANT, the system cannot determine the actual types to be passed prior to runtime.</span></span> <span data-ttu-id="7a6c4-123">Bu nedenle, bir DEĞIŞKEN içinde Kullanıcı tanımlı tür (UDT) geçirmeye çalıştığınızda, serileştirme için bilinen bir tür olmadığından başarısız olur.</span><span class="sxs-lookup"><span data-stu-id="7a6c4-123">Therefore, when you attempt to pass a User Defined Type (UDT) within a VARIANT, it fails because it is not a known type for serialization.</span></span>  
   
- <span data-ttu-id="42040-123">Bu sorunu aşmak için, her türlü uygun hizmet sözleşmesinde bilinen türler olarak dahil edilmesini sağlamak üzere UDTs 'yi yapılandırma dosyasına ekleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="42040-123">To circumvent this problem, you can add the UDTs to the configuration file so that they can be included as known types on the appropriate service contract.</span></span> <span data-ttu-id="42040-124">Bunu yapmak için, UDT 'yi ve sözleşmeyi (Sözleşmelerinin) benzersiz şekilde belirlemeniz gerekir. Bu, diğer bir deyişle, onu kullanan özgün COM arabirimidir.</span><span class="sxs-lookup"><span data-stu-id="42040-124">In order to do so, you have to uniquely identify the UDT and the contract(s), that is, the original COM interface(s) that uses it.</span></span>  
+ <span data-ttu-id="7a6c4-124">Bu sorunu aşmak için, her türlü uygun hizmet sözleşmesinde bilinen türler olarak dahil edilmesini sağlamak üzere UDTs 'yi yapılandırma dosyasına ekleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7a6c4-124">To circumvent this problem, you can add the UDTs to the configuration file so that they can be included as known types on the appropriate service contract.</span></span> <span data-ttu-id="7a6c4-125">Bunu yapmak için, UDT 'yi ve sözleşmeyi (Sözleşmelerinin) benzersiz şekilde belirlemeniz gerekir. Bu, diğer bir deyişle, onu kullanan özgün COM arabirimidir.</span><span class="sxs-lookup"><span data-stu-id="7a6c4-125">In order to do so, you have to uniquely identify the UDT and the contract(s), that is, the original COM interface(s) that uses it.</span></span>  
   
- <span data-ttu-id="42040-125">Aşağıdaki örnek, `userDefinedTypes` Bu amaçla yapılandırma dosyasının <> bölümüne iki özel udun eklenmesini gösterir.</span><span class="sxs-lookup"><span data-stu-id="42040-125">The following example demonstrates adding two specific UDTs to the <`userDefinedTypes`> section of the configuration file for this purpose.</span></span>  
+ <span data-ttu-id="7a6c4-126">Aşağıdaki örnek, `userDefinedTypes` Bu amaçla yapılandırma dosyasının <> bölümüne iki özel udun eklenmesini gösterir.</span><span class="sxs-lookup"><span data-stu-id="7a6c4-126">The following example demonstrates adding two specific UDTs to the <`userDefinedTypes`> section of the configuration file for this purpose.</span></span>  
   
 ```xml  
 <comContracts>
@@ -94,13 +95,13 @@ ms.locfileid: "91172846"
 </comContracts>
 ```  
   
- <span data-ttu-id="42040-126">Hizmet başlatıldığında, tümleştirme çalışma zamanı belirtilen türleri arar ve belirtilen sözleşmeler için bunları bilinen türler koleksiyonuna ekler.</span><span class="sxs-lookup"><span data-stu-id="42040-126">When the service is initialized, the integration runtime looks up the specified types and adds them to the known types collection for the specified contracts.</span></span>  
+ <span data-ttu-id="7a6c4-127">Hizmet başlatıldığında, tümleştirme çalışma zamanı belirtilen türleri arar ve belirtilen sözleşmeler için bunları bilinen türler koleksiyonuna ekler.</span><span class="sxs-lookup"><span data-stu-id="7a6c4-127">When the service is initialized, the integration runtime looks up the specified types and adds them to the known types collection for the specified contracts.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="42040-127">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="42040-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7a6c4-128">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7a6c4-128">See also</span></span>
 
 - <xref:System.ServiceModel.Configuration.ComContractElement.UserDefinedTypes%2A>
 - <xref:System.ServiceModel.Configuration.ComUdtElementCollection>
 - <xref:System.ServiceModel.Configuration.ComUdtElement>
 - [\<comContracts>](comcontracts.md)
-- [<span data-ttu-id="42040-128">COM+ uygulamalarıyla tümleştirme</span><span class="sxs-lookup"><span data-stu-id="42040-128">Integrating with COM+ Applications</span></span>](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
-- [<span data-ttu-id="42040-129">Nasıl yapılır: COM+ Hizmet Ayarlarını Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="42040-129">How to: Configure COM+ Service Settings</span></span>](../../../wcf/feature-details/how-to-configure-com-service-settings.md)
+- [<span data-ttu-id="7a6c4-129">COM+ uygulamalarıyla tümleştirme</span><span class="sxs-lookup"><span data-stu-id="7a6c4-129">Integrating with COM+ Applications</span></span>](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
+- [<span data-ttu-id="7a6c4-130">Nasıl yapılır: COM+ Hizmet Ayarlarını Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="7a6c4-130">How to: Configure COM+ Service Settings</span></span>](../../../wcf/feature-details/how-to-configure-com-service-settings.md)
