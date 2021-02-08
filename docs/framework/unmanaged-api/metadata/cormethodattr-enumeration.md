@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Cormethodadttr numaralandırması'
 title: CorMethodAttr Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4e0c3521-e54d-43c1-9857-cc76b49b8ffc
 topic_type:
 - apiref
-ms.openlocfilehash: 6c3e721c24da217eaf2e8857377359e1c51b7b59
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4050235675f4b237b184d31378a614a0613ab3df
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95677030"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784385"
 ---
-# <a name="cormethodattr-enumeration"></a><span data-ttu-id="a3b3c-102">CorMethodAttr Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="a3b3c-102">CorMethodAttr Enumeration</span></span>
+# <a name="cormethodattr-enumeration"></a><span data-ttu-id="b2d23-103">CorMethodAttr Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="b2d23-103">CorMethodAttr Enumeration</span></span>
 
-<span data-ttu-id="a3b3c-103">Bir yöntemin özelliklerini tanımlayan değerleri içerir.</span><span class="sxs-lookup"><span data-stu-id="a3b3c-103">Contains values that describe the features of a method.</span></span>  
+<span data-ttu-id="b2d23-104">Bir yöntemin özelliklerini tanımlayan değerleri içerir.</span><span class="sxs-lookup"><span data-stu-id="b2d23-104">Contains values that describe the features of a method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a3b3c-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="a3b3c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b2d23-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="b2d23-105">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorMethodAttr {  
@@ -63,43 +64,43 @@ typedef enum CorMethodAttr {
 } CorMethodAttr;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="a3b3c-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="a3b3c-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="b2d23-106">Üyeler</span><span class="sxs-lookup"><span data-stu-id="b2d23-106">Members</span></span>  
   
-|<span data-ttu-id="a3b3c-106">Üye</span><span class="sxs-lookup"><span data-stu-id="a3b3c-106">Member</span></span>|<span data-ttu-id="a3b3c-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a3b3c-107">Description</span></span>|  
+|<span data-ttu-id="b2d23-107">Üye</span><span class="sxs-lookup"><span data-stu-id="b2d23-107">Member</span></span>|<span data-ttu-id="b2d23-108">Description</span><span class="sxs-lookup"><span data-stu-id="b2d23-108">Description</span></span>|  
 |------------|-----------------|  
-|`mdMemberAccessMask`|<span data-ttu-id="a3b3c-108">Üye erişimini belirtir.</span><span class="sxs-lookup"><span data-stu-id="a3b3c-108">Specifies member access.</span></span>|  
-|`mdPrivateScope`|<span data-ttu-id="a3b3c-109">Üyenin başvurumadığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="a3b3c-109">Specifies that the member cannot be referenced.</span></span>|  
-|`mdPrivate`|<span data-ttu-id="a3b3c-110">Üyenin yalnızca üst tür tarafından erişilebilir olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="a3b3c-110">Specifies that the member is accessible only by the parent type.</span></span>|  
-|`mdFamANDAssem`|<span data-ttu-id="a3b3c-111">Üyenin yalnızca bu derlemede alt türler tarafından erişilebilir olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="a3b3c-111">Specifies that the member is accessible by subtypes only in this assembly.</span></span>|  
-|`mdAssem`|<span data-ttu-id="a3b3c-112">Üyenin derlemedeki herkes tarafından erişilebilir olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="a3b3c-112">Specifies that the member is accessibly by anyone in the assembly.</span></span>|  
-|`mdFamily`|<span data-ttu-id="a3b3c-113">Üyenin yalnızca Type ve alt türleri tarafından erişilebilir olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="a3b3c-113">Specifies that the member is accessible only by type and subtypes.</span></span>|  
-|`mdFamORAssem`|<span data-ttu-id="a3b3c-114">Üyenin türetilmiş sınıflar ve kendi derlemesindeki diğer türler tarafından erişilebilir olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="a3b3c-114">Specifies that the member is accessible by derived classes and by other types in its assembly.</span></span>|  
-|`mdPublic`|<span data-ttu-id="a3b3c-115">Üyenin kapsama erişimi olan tüm türler tarafından erişilebilir olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="a3b3c-115">Specifies that the member is accessible by all types with access to the scope.</span></span>|  
-|`mdStatic`|<span data-ttu-id="a3b3c-116">Üyenin, bir örneğin üyesi olarak değil türün bir parçası olarak tanımlandığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="a3b3c-116">Specifies that the member is defined as part of the type rather than as a member of an instance.</span></span>|  
-|`mdFinal`|<span data-ttu-id="a3b3c-117">Yöntemin geçersiz kılınamayacağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="a3b3c-117">Specifies that the method cannot be overridden.</span></span>|  
-|`mdVirtual`|<span data-ttu-id="a3b3c-118">Yöntemin geçersiz kılınabileceğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="a3b3c-118">Specifies that the method can be overridden.</span></span>|  
-|`mdHideBySig`|<span data-ttu-id="a3b3c-119">Yöntemin yalnızca ada göre değil, ad ve imzaya göre gizlediğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="a3b3c-119">Specifies that the method hides by name and signature, rather than just by name.</span></span>|  
-|`mdVtableLayoutMask`|<span data-ttu-id="a3b3c-120">Sanal tablo yerleşimini belirtir.</span><span class="sxs-lookup"><span data-stu-id="a3b3c-120">Specifies virtual table layout.</span></span>|  
-|`mdReuseSlot`|<span data-ttu-id="a3b3c-121">Sanal tabloda bu yöntem için kullanılan yuvanın yeniden kullanıldığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="a3b3c-121">Specifies that the slot used for this method in the virtual table be reused.</span></span> <span data-ttu-id="a3b3c-122">Bu varsayılan seçenektir.</span><span class="sxs-lookup"><span data-stu-id="a3b3c-122">This is the default.</span></span>|  
-|`mdNewSlot`|<span data-ttu-id="a3b3c-123">Yöntemin sanal tabloda her zaman yeni bir yuva aldığından emin olur.</span><span class="sxs-lookup"><span data-stu-id="a3b3c-123">Specifies that the method always gets a new slot in the virtual table.</span></span>|  
-|`mdCheckAccessOnOverride`|<span data-ttu-id="a3b3c-124">Yöntemin görünür olduğu aynı türler tarafından geçersiz kılınabileceğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="a3b3c-124">Specifies that the method can be overridden by the same types to which it is visible.</span></span>|  
-|`mdAbstract`|<span data-ttu-id="a3b3c-125">Yöntemin uygulandığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="a3b3c-125">Specifies that the method is not implemented.</span></span>|  
-|`mdSpecialName`|<span data-ttu-id="a3b3c-126">Yöntemin özel olduğunu ve adının nasıl kullanıldığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="a3b3c-126">Specifies that the method is special, and that its name describes how.</span></span>|  
-|`mdPinvokeImpl`|<span data-ttu-id="a3b3c-127">Yöntem uygulamasının PInvoke kullanılarak iletildiğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="a3b3c-127">Specifies that the method implementation is forwarded using PInvoke.</span></span>|  
-|`mdUnmanagedExport`|<span data-ttu-id="a3b3c-128">Yöntemin yönetilmeyen koda aktarılmış yönetilen bir yöntem olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="a3b3c-128">Specifies that the method is a managed method exported to unmanaged code.</span></span>|  
-|`mdReservedMask`|<span data-ttu-id="a3b3c-129">Ortak dil çalışma zamanı tarafından iç kullanım için ayrılmıştır.</span><span class="sxs-lookup"><span data-stu-id="a3b3c-129">Reserved for internal use by the common language runtime.</span></span>|  
-|`mdRTSpecialName`|<span data-ttu-id="a3b3c-130">Ortak dil çalışma zamanının Yöntem adının kodlamasını denetlemesi gerektiğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="a3b3c-130">Specifies that the common language runtime should check the encoding of the method name.</span></span>|  
-|`mdHasSecurity`|<span data-ttu-id="a3b3c-131">Metodun onunla ilişkili güvenlik olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="a3b3c-131">Specifies that the method has security associated with it.</span></span>|  
-|`mdRequireSecObject`|<span data-ttu-id="a3b3c-132">Metodun güvenlik kodu içeren başka bir yöntemi çağırıyorsa belirtir.</span><span class="sxs-lookup"><span data-stu-id="a3b3c-132">Specifies that the method calls another method containing security code.</span></span>|  
+|`mdMemberAccessMask`|<span data-ttu-id="b2d23-109">Üye erişimini belirtir.</span><span class="sxs-lookup"><span data-stu-id="b2d23-109">Specifies member access.</span></span>|  
+|`mdPrivateScope`|<span data-ttu-id="b2d23-110">Üyenin başvurumadığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="b2d23-110">Specifies that the member cannot be referenced.</span></span>|  
+|`mdPrivate`|<span data-ttu-id="b2d23-111">Üyenin yalnızca üst tür tarafından erişilebilir olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="b2d23-111">Specifies that the member is accessible only by the parent type.</span></span>|  
+|`mdFamANDAssem`|<span data-ttu-id="b2d23-112">Üyenin yalnızca bu derlemede alt türler tarafından erişilebilir olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="b2d23-112">Specifies that the member is accessible by subtypes only in this assembly.</span></span>|  
+|`mdAssem`|<span data-ttu-id="b2d23-113">Üyenin derlemedeki herkes tarafından erişilebilir olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="b2d23-113">Specifies that the member is accessibly by anyone in the assembly.</span></span>|  
+|`mdFamily`|<span data-ttu-id="b2d23-114">Üyenin yalnızca Type ve alt türleri tarafından erişilebilir olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="b2d23-114">Specifies that the member is accessible only by type and subtypes.</span></span>|  
+|`mdFamORAssem`|<span data-ttu-id="b2d23-115">Üyenin türetilmiş sınıflar ve kendi derlemesindeki diğer türler tarafından erişilebilir olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="b2d23-115">Specifies that the member is accessible by derived classes and by other types in its assembly.</span></span>|  
+|`mdPublic`|<span data-ttu-id="b2d23-116">Üyenin kapsama erişimi olan tüm türler tarafından erişilebilir olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="b2d23-116">Specifies that the member is accessible by all types with access to the scope.</span></span>|  
+|`mdStatic`|<span data-ttu-id="b2d23-117">Üyenin, bir örneğin üyesi olarak değil türün bir parçası olarak tanımlandığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="b2d23-117">Specifies that the member is defined as part of the type rather than as a member of an instance.</span></span>|  
+|`mdFinal`|<span data-ttu-id="b2d23-118">Yöntemin geçersiz kılınamayacağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="b2d23-118">Specifies that the method cannot be overridden.</span></span>|  
+|`mdVirtual`|<span data-ttu-id="b2d23-119">Yöntemin geçersiz kılınabileceğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="b2d23-119">Specifies that the method can be overridden.</span></span>|  
+|`mdHideBySig`|<span data-ttu-id="b2d23-120">Yöntemin yalnızca ada göre değil, ad ve imzaya göre gizlediğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="b2d23-120">Specifies that the method hides by name and signature, rather than just by name.</span></span>|  
+|`mdVtableLayoutMask`|<span data-ttu-id="b2d23-121">Sanal tablo yerleşimini belirtir.</span><span class="sxs-lookup"><span data-stu-id="b2d23-121">Specifies virtual table layout.</span></span>|  
+|`mdReuseSlot`|<span data-ttu-id="b2d23-122">Sanal tabloda bu yöntem için kullanılan yuvanın yeniden kullanıldığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="b2d23-122">Specifies that the slot used for this method in the virtual table be reused.</span></span> <span data-ttu-id="b2d23-123">Bu varsayılan seçenektir.</span><span class="sxs-lookup"><span data-stu-id="b2d23-123">This is the default.</span></span>|  
+|`mdNewSlot`|<span data-ttu-id="b2d23-124">Yöntemin sanal tabloda her zaman yeni bir yuva aldığından emin olur.</span><span class="sxs-lookup"><span data-stu-id="b2d23-124">Specifies that the method always gets a new slot in the virtual table.</span></span>|  
+|`mdCheckAccessOnOverride`|<span data-ttu-id="b2d23-125">Yöntemin görünür olduğu aynı türler tarafından geçersiz kılınabileceğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="b2d23-125">Specifies that the method can be overridden by the same types to which it is visible.</span></span>|  
+|`mdAbstract`|<span data-ttu-id="b2d23-126">Yöntemin uygulandığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="b2d23-126">Specifies that the method is not implemented.</span></span>|  
+|`mdSpecialName`|<span data-ttu-id="b2d23-127">Yöntemin özel olduğunu ve adının nasıl kullanıldığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="b2d23-127">Specifies that the method is special, and that its name describes how.</span></span>|  
+|`mdPinvokeImpl`|<span data-ttu-id="b2d23-128">Yöntem uygulamasının PInvoke kullanılarak iletildiğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="b2d23-128">Specifies that the method implementation is forwarded using PInvoke.</span></span>|  
+|`mdUnmanagedExport`|<span data-ttu-id="b2d23-129">Yöntemin yönetilmeyen koda aktarılmış yönetilen bir yöntem olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="b2d23-129">Specifies that the method is a managed method exported to unmanaged code.</span></span>|  
+|`mdReservedMask`|<span data-ttu-id="b2d23-130">Ortak dil çalışma zamanı tarafından iç kullanım için ayrılmıştır.</span><span class="sxs-lookup"><span data-stu-id="b2d23-130">Reserved for internal use by the common language runtime.</span></span>|  
+|`mdRTSpecialName`|<span data-ttu-id="b2d23-131">Ortak dil çalışma zamanının Yöntem adının kodlamasını denetlemesi gerektiğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="b2d23-131">Specifies that the common language runtime should check the encoding of the method name.</span></span>|  
+|`mdHasSecurity`|<span data-ttu-id="b2d23-132">Metodun onunla ilişkili güvenlik olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="b2d23-132">Specifies that the method has security associated with it.</span></span>|  
+|`mdRequireSecObject`|<span data-ttu-id="b2d23-133">Metodun güvenlik kodu içeren başka bir yöntemi çağırıyorsa belirtir.</span><span class="sxs-lookup"><span data-stu-id="b2d23-133">Specifies that the method calls another method containing security code.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="a3b3c-133">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a3b3c-133">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b2d23-134">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b2d23-134">Requirements</span></span>  
 
- <span data-ttu-id="a3b3c-134">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a3b3c-134">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="b2d23-135">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b2d23-135">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a3b3c-135">**Üst bilgi:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="a3b3c-135">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="b2d23-136">**Üst bilgi:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="b2d23-136">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="a3b3c-136">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a3b3c-136">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="b2d23-137">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b2d23-137">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a3b3c-137">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a3b3c-137">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b2d23-138">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b2d23-138">See also</span></span>
 
-- [<span data-ttu-id="a3b3c-138">Meta Veri Numaralandırmalar</span><span class="sxs-lookup"><span data-stu-id="a3b3c-138">Metadata Enumerations</span></span>](metadata-enumerations.md)
+- [<span data-ttu-id="b2d23-139">Meta Veri Numaralandırmalar</span><span class="sxs-lookup"><span data-stu-id="b2d23-139">Metadata Enumerations</span></span>](metadata-enumerations.md)
