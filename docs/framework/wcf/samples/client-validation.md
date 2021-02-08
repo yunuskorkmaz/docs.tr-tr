@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Istemci doğrulaması'
 title: İstemci Doğrulaması
 ms.date: 03/30/2017
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
-ms.openlocfilehash: dee57e039d4510673b7205fd44fa300b24ac1df5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 373ee49bccd8905e0cb9bfebf281abdd183ac506
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96243319"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99778574"
 ---
 # <a name="client-validation"></a>İstemci Doğrulaması
 

@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: BasicBinding'
 title: BasicBinding
 ms.date: 03/30/2017
 ms.assetid: 86fbeb87-4d89-4b61-9577-867e0ac12945
-ms.openlocfilehash: 84bfe78aa9e82b9600c48e0a32514f669fcc7d77
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3a539ccec12d86b40198b01597b152b60b03c49b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575660"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99778769"
 ---
 # <a name="basicbinding"></a>BasicBinding
 
