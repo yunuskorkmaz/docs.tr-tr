@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Dağıtım Genişletilebilirliği'
 title: Dağıtım Genişletilebilirliği
 ms.date: 03/30/2017
 ms.assetid: 4d941175-74a2-4b15-81b3-086e8a95d25f
-ms.openlocfilehash: 39187f228e47ed4e82c8e737563b860ce5734416
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 103fa0a1b288068e724ab27f37cf096f3ececa42
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96266538"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793356"
 ---
 # <a name="syndication-extensibility"></a>Dağıtım Genişletilebilirliği
 

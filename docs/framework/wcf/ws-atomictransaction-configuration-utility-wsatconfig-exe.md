@@ -1,17 +1,18 @@
 ---
+description: 'Daha fazla bilgi edinin: WS-AtomicTransaction yapılandırma yardımcı programı (wsatConfig.exe)'
 title: WS-AtomicTransaction Yapılandırma Yardımcı Programı (wsatConfig.exe)
 ms.date: 03/30/2017
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-ms.openlocfilehash: dbd33869de6b1ecee6406dfeede88afc4eca07f1
-ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
+ms.openlocfilehash: 8b315e5aa5df23a4d9bb032db41b7067accfa010
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90720497"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792966"
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>WS-AtomicTransaction Yapılandırma Yardımcı Programı (wsatConfig.exe)
 
-WS-AtomicTransaction Yapılandırma yardımcı programı, temel WS-AtomicTransaction destek ayarlarını yapılandırmak için kullanılır.  
+WS-AtomicTransaction yapılandırma yardımcı programı temel WS-AtomicTransaction destek ayarlarını yapılandırmak için kullanılır.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -21,13 +22,13 @@ wsatConfig [Options]
   
 ## <a name="remarks"></a>Açıklamalar
 
- Bu komut satırı aracı, yalnızca yerel bir makinedeki temel WS-AT ayarlarını yapılandırmak için kullanılabilir. Hem yerel hem de uzak makinelerde ayarları yapılandırmanız gerekiyorsa, [WS Atomik Işlem desteğini yapılandırma](./feature-details/configuring-ws-atomic-transaction-support.md)bölümünde AÇıKLANDıĞı gibi MMC ek bileşenini kullanmanız gerekir.  
+ Bu komut satırı aracı, yalnızca yerel bir makinedeki temel WS-AT ayarlarını yapılandırmak için kullanılabilir. Hem yerel hem de uzak makinelerde ayarları yapılandırmanız gerekiyorsa, [WS-Atomic Işlem desteğini yapılandırma](./feature-details/configuring-ws-atomic-transaction-support.md)bölümünde AÇıKLANDıĞı gibi MMC ek bileşenini kullanmanız gerekir.  
   
  Komut satırı aracı Windows SDK yükleme konumunda bulunabilir:
   
  %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Iletişim Foundation\wsatConfig.exe
   
- Aşağıdaki tabloda, WS-AtomicTransaction Yapılandırma yardımcı programı (wsatConfig.exe) ile kullanılabilecek seçenekler gösterilmektedir.  
+ Aşağıdaki tabloda WS-AtomicTransaction yapılandırma yardımcı programı (wsatConfig.exe) ile kullanılabilen seçenekler gösterilmektedir.  
   
 > [!NOTE]
 > Seçili bir bağlantı noktası için bir SSL sertifikası ayarladığınızda, varsa, bu bağlantı noktasıyla ilişkili özgün SSL sertifikasının üzerine yazarsınız.  
@@ -46,7 +47,7 @@ wsatConfig [Options]
 |tracePII\<enable&#124;disable>|Kişisel bilgilerin izlenmesini etkinleştirilir veya devre dışı bırakır.|  
 |-traceProp:\<enable&#124;disable>|Yayma olaylarının izlenmesini etkinleştirilir veya devre dışı bırakır.|  
 |-yeniden Başlat|Değişiklikleri hemen etkinleştirmek için MSDTC 'yi yeniden başlatır. Bu belirtilmemişse, değişiklikler MSDTC yeniden başlatıldığında geçerli olur.|  
-|-göster|Geçerli WS-AtomicTransaction protokol ayarlarını görüntüler.|  
+|-göster|Geçerli WS-AtomicTransaction Protokolü ayarlarını görüntüler.|  
 |-virtualServer:\<virtualServer>|DTC kaynak kümesi adını belirtir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.

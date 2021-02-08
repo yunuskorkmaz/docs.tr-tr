@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: hizmet uç noktaları ve sıra adresleme'
 title: Hizmet Uç Noktaları ve Kuyruk İşleme
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: f7c3221d466d2599139eb29a8358d726c2b4edda
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 61b4e35de6bd89f45aa9f5e54a55beaf8536b74b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96253927"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793564"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Hizmet Uç Noktaları ve Kuyruk İşleme
 

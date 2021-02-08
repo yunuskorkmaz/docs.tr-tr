@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: akış Ileti aktarımı'
 title: İleti Aktarma Akışı
 ms.date: 03/30/2017
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-ms.openlocfilehash: 4b90e5bf15f5cb1c4684a3ba224371f6cc232034
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 282b16850e4babe73207e3f3e1a8bd5da24c70cf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96246335"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793395"
 ---
 # <a name="streaming-message-transfer"></a>İleti Aktarma Akışı
 

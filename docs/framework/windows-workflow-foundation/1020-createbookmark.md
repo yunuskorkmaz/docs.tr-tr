@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 1020-CreateBookmark'
 title: 1020 - CreateBookmark
 ms.date: 03/30/2017
 ms.assetid: 4bee948d-816f-4803-85cc-3883b5e23d10
-ms.openlocfilehash: 8c9c20fd4fb74f80779c1d2ef8f29ac3d44050d9
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 39796eaf68d9cb52e9faa2605fc21955a2c167ac
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275381"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792849"
 ---
 # <a name="1020---createbookmark"></a>1020 - CreateBookmark
 
@@ -17,10 +18,10 @@ ms.locfileid: "96275381"
 |-|-|  
 |ID|1020|  
 |Anahtar sözcükler|WFRuntime|  
-|Düzey|Ayrıntılı|  
+|Level|Ayrıntılı|  
 |Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bir etkinlik için bir yer işaretinin oluşturulduğunu gösterir.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96275381"
   
 ## <a name="details"></a>Ayrıntılar  
   
-|Veri öğesi adı|Veri öğesi türü|Açıklama|  
+|Veri öğesi adı|Veri öğesi türü|Description|  
 |--------------------|--------------------|-----------------|  
 |Etkinlik|xs: String|Etkinliğin tür adı.|  
 |DisplayName|xs: String|Etkinliğin görünen adı.|  

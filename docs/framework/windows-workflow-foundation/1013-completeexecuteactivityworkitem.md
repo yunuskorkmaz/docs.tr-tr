@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 1013-Completeexecuteactivityworkıtem'
 title: 1013 - CompleteExecuteActivityWorkItem
 ms.date: 03/30/2017
 ms.assetid: 31fc57b3-ef2f-48f0-a5de-b4e2c5c9ded7
-ms.openlocfilehash: 654f961088c371ab53e4a81f40e3c63335efb1a8
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 815f859c40a02e8c06e44603a80ab964dc4e64bd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96239594"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792953"
 ---
 # <a name="1013---completeexecuteactivityworkitem"></a>1013 - CompleteExecuteActivityWorkItem
 
@@ -17,10 +18,10 @@ ms.locfileid: "96239594"
 |-|-|  
 |ID|1013|  
 |Anahtar sözcükler|WFRuntime|  
-|Düzey|Ayrıntılı|  
+|Level|Ayrıntılı|  
 |Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bir ExecuteActivityWorkItem 'ın tamamlandığını belirtir  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96239594"
   
 ## <a name="details"></a>Ayrıntılar  
   
-|Veri öğesi adı|Veri öğesi türü|Açıklama|  
+|Veri öğesi adı|Veri öğesi türü|Description|  
 |--------------------|--------------------|-----------------|  
 |Etkinlik|xs: String|Etkinliğin tür adı.|  
 |DisplayName|xs: String|Etkinliğin görünen adı.|  

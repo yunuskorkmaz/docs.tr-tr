@@ -1,15 +1,16 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: hizmetler ve Işlemler'
 title: Hizmetler ve İşlemler
 ms.date: 03/30/2017
 helpviewer_keywords:
 - service contracts [WCF], designing services and transactions
 ms.assetid: 864813ff-2709-4376-912d-f5c8d318c460
-ms.openlocfilehash: e60f84aafe6c62a657cd3f27c9ccdb6b65186c35
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4126ca139bd2097aeaaff756de694d0ff0061b5d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96235915"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792979"
 ---
 # <a name="services-and-transactions"></a>Hizmetler ve İşlemler
 

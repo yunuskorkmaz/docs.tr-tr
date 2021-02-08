@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: değişiklik'
 title: Tampering (Kurcalama)
 ms.date: 03/30/2017
 ms.assetid: 3bad93be-60bb-4f89-96ab-a1c3dc7c0fad
-ms.openlocfilehash: c2b0cae1dc57fac486122ca17fc8109ffe62f77d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3b14fef66e5c98737d8d2f6a8b889f16c83020f9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96249806"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793330"
 ---
 # <a name="tampering"></a>Tampering (Kurcalama)
 

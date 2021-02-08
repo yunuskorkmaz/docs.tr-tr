@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: hizmet sözleşmelerinde hata bildirme'
 title: 'Nasıl yapılır: Hizmet Sözleşmelerinde Hata Bildirme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e8da98e7-d22f-4f60-ac82-3fb0928a353f
-ms.openlocfilehash: 06262d5f698f8898e162e92dad272a7188897af0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1d83840386338747c983d8c4e9a788a452b9c4b0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96240062"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793265"
 ---
 # <a name="how-to-declare-faults-in-service-contracts"></a>Nasıl yapılır: Hizmet Sözleşmelerinde Hata Bildirme
 

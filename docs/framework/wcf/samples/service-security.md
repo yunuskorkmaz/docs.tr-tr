@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: hizmet güvenliği'
 title: Hizmet Güvenliği
 ms.date: 03/30/2017
 ms.assetid: bb8eea87-4c87-437a-b70f-697dd5e1c21e
-ms.openlocfilehash: 30da25b5f89a76a9bf146e763efc1deafce7316d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7ac84c84fec440a149ca8571563dde05723fd995
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96264653"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793057"
 ---
 # <a name="service-security"></a>Hizmet Güvenliği
 

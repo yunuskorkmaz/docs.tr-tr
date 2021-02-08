@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Iş akışı için Izlemeyi yapılandırma'
 title: İş Akışı için İzlemeyi Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: 098b295be00b1b8283e26e79ea14e78634fdb504
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 061a0edf107296e04d86ed1a50b9a8bfefd7bfce
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557560"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792771"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>İş Akışı için İzlemeyi Yapılandırma
 
@@ -148,7 +149,7 @@ invoker.Invoke();
 
 ### <a name="viewing-tracking-records-in-event-viewer"></a>Olay Görüntüleyicisi izleme kayıtlarını görüntüleme
 
-WF yürütmesi izlenirken, analiz günlüğü ve hata ayıklama günlüğünde görüntülemek için belirli bir ilgi çekici iki Olay Görüntüleyicisi günlüğü vardır. Her ikisi de Microsoft&#124;Windows&#124;uygulama sunucusu-uygulamalar düğümünün altında bulunur. Bu bölümün içindeki günlüklerde, tüm sistem üzerinde bir etkisi olan olaylar yerine tek bir uygulamanın olayları bulunur.
+WF yürütmesi izlenirken, analiz günlüğü ve hata ayıklama günlüğünde görüntülemek için belirli bir ilgi çekici iki Olay Görüntüleyicisi günlüğü vardır. Her ikisi de Microsoft&#124;Windows&#124;uygulama Server-Applications düğümünün altında bulunur. Bu bölümün içindeki günlüklerde, tüm sistem üzerinde bir etkisi olan olaylar yerine tek bir uygulamanın olayları bulunur.
 
 Hata ayıklama izleme olayları hata ayıklama günlüğüne yazılır. Olay Görüntüleyicisi WF hata ayıklama izleme olaylarını toplamak için, hata ayıklama günlüğünü etkinleştirin.
 
@@ -156,7 +157,7 @@ Hata ayıklama izleme olayları hata ayıklama günlüğüne yazılır. Olay Gö
 
 2. Olay Görüntüleyicisi iletişim kutusunda, **uygulamalar ve hizmetler günlükleri** düğümünü genişletin.
 
-3. **Microsoft**, **Windows**ve **uygulama sunucusu-uygulamalar** düğümlerini genişletin.
+3. **Microsoft**, **Windows** ve **uygulama sunucusu-uygulamalar** düğümlerini genişletin.
 
 4. **Uygulama sunucusu-uygulamalar** düğümünün altındaki **hata ayıklama** düğümüne sağ tıklayın ve **günlüğü etkinleştir**' i seçin.
 
@@ -172,7 +173,7 @@ WF 4, izleme kayıtlarını ETW (Windows için olay Izleme) oturumuna yazan bir 
 
 2. Olay Görüntüleyicisi iletişim kutusunda, **uygulamalar ve hizmetler günlükleri** düğümünü genişletin.
 
-3. **Microsoft**, **Windows**ve **uygulama sunucusu-uygulamalar** düğümlerini genişletin.
+3. **Microsoft**, **Windows** ve **uygulama sunucusu-uygulamalar** düğümlerini genişletin.
 
 4. **Uygulama sunucusu-uygulamalar** düğümünün altındaki **analitik** düğüme sağ tıklayın ve **günlüğü etkinleştir**' i seçin.
 
@@ -196,7 +197,7 @@ Olayların belirli bir uygulama günlüğüne yazılması gerekiyorsa, yeni sağ
     </system.serviceModel>
     ```
 
-2. Bildirim dosyasını%windir%\Microsoft.NET\Framework \\ \<latest version of [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.Man konumundan geçici bir konuma kopyalayın ve Microsoft. Windows. applicationserver. Applications_Provider1. man olarak yeniden adlandırın
+2. Bildirim dosyasını%windir%\Microsoft.NET\Framework \\ \<latest version of [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.Man konumundan geçici bir konuma kopyalayın ve Microsoft.Windows.ApplicationServer.Applications_Provider1. man olarak yeniden adlandırın
 
 3. Bildirim dosyasındaki GUID 'yi yeni GUID ile değiştirin.
 

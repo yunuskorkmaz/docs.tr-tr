@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: ServiceModel öznitelikleri ve ServiceDescription Başvurusu'
 title: ServiceModel Öznitelikleri ve ServiceDescription Başvurusu
 ms.date: 03/30/2017
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
-ms.openlocfilehash: db2824d7452f1ec4c675782e18ad25bd4be6a483
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 52d800d1aab7fc7d60f0b1234065aa876944ea3e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96253875"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793512"
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>ServiceModel Öznitelikleri ve ServiceDescription Başvurusu
 
@@ -49,7 +50,7 @@ ms.locfileid: "96253875"
 |IsOneWay|Tek bir ile eşlenir <xref:System.ServiceModel.Description.MessageDescription><xref:System.ServiceModel.Description.OperationDescription.Messages%2A>|  
 |IsInitiating|<xref:System.ServiceModel.Description.OperationDescription.IsInitiating%2A>|  
 |IsTerminating|<xref:System.ServiceModel.Description.OperationDescription.IsTerminating%2A>|  
-|Adı|<xref:System.ServiceModel.Description.OperationDescription.Name%2A>|  
+|Name|<xref:System.ServiceModel.Description.OperationDescription.Name%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> ve muhtemelen alt koruma düzeyleri. Koruma düzeyi hiyerarşisi hakkında daha fazla bilgi için bkz. [koruma düzeyini anlama](../understanding-protection-level.md).|  
 |ReplyAction|<xref:System.ServiceModel.Description.MessageDescription.Action%2A> çıkış iletisi veya giriş iletisi için, sözleşme/geri çağırma sözleşmesine bağlı olarak.|  
   
@@ -84,14 +85,14 @@ ms.locfileid: "96253875"
 |----------------------------------|-------------------------------------|  
 |Actor (Oyuncu)|<xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A> içindeki ilgili üst bilgi için <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
 |MustUnderstand|<xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A> içindeki ilgili üst bilgi için <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|Adı|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> içindeki ilgili üst bilgi için <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|Name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> içindeki ilgili üst bilgi için <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
 |Ad Alanı|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A> içindeki ilgili üst bilgi için <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A> içindeki ilgili üst bilgi için <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
 |Geçiş|<xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A> içindeki ilgili üst bilgi için <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
   
 |MessageBodyMemberAttribute değeri|Açıklama ağacı değeri etkilendi|  
 |--------------------------------------|-------------------------------------|  
-|Adı|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> içindeki ilgili bölüm için <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|Name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> içindeki ilgili bölüm için <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
 |Ad Alanı|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A> içindeki ilgili bölüm için <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
 |Sipariş|<xref:System.ServiceModel.Description.MessagePartDescription.Index%2A> içindeki ilgili bölüm için <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A> içindeki ilgili bölüm için <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
@@ -107,11 +108,11 @@ ms.locfileid: "96253875"
   
 |MessagePropertyAttribute değeri|Açıklama ağacı değeri etkilendi|  
 |------------------------------------|-------------------------------------|  
-|Adı|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>|  
+|Name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>|  
   
 |MessageParameterAttribute değeri|Açıklama ağacı değeri etkilendi|  
 |-------------------------------------|-------------------------------------|  
-|Adı|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> içindeki ilgili bölüm için <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|Name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> içindeki ilgili bölüm için <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
   
  Açıklama ağacı değerlerinin meta verilere nasıl dönüştürüldüğü hakkında daha fazla bilgi için bkz. [ServiceDescription ve WSDL başvurusu](servicedescription-and-wsdl-reference.md).  
   

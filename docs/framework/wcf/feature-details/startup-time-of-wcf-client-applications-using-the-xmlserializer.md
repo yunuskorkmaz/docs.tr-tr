@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: XmlSerializer kullanarak WCF Istemci uygulamalarının başlangıç zamanını geliştirme'
 title: 'Nasıl yapılır: XmlSerializer Kullanarak WCF İstemci Uygulamalarının Başlangıç Zamanlarını İyileştirme'
 ms.date: 03/30/2017
 ms.assetid: 21093451-0bc3-4b1a-9a9d-05f7f71fa7d0
-ms.openlocfilehash: ac54a766161db146331a3e072b97822b609344c0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8cf46cc35753934e8f4cb3abadc20c912e9efca9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96246387"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793408"
 ---
 # <a name="how-to-improve-the-startup-time-of-wcf-client-applications-using-the-xmlserializer"></a>Nasıl yapılır: XmlSerializer Kullanarak WCF İstemci Uygulamalarının Başlangıç Zamanlarını İyileştirme
 
@@ -48,7 +49,7 @@ ms.locfileid: "96246387"
   
 1. Visual Studio 'da WCF hizmetini ve istemci projelerini oluşturun. Ardından, istemci projesine bir hizmet başvurusu ekleyin.  
   
-2. <xref:System.ServiceModel.XmlSerializerFormatAttribute> *reference.cs* **ServiceReference**  ->  **Reference. svcmap** altındaki istemci uygulaması projesindeki Reference.cs dosyasına hizmet sözleşmesine ekleyin. Bu dosyaları görmek için **Çözüm Gezgini** tüm dosyaları göstermesinin gerekli olduğunu unutmayın.  
+2. <xref:System.ServiceModel.XmlSerializerFormatAttribute>  **ServiceReference**  ->  **Reference. svcmap** altındaki istemci uygulaması projesindeki Reference.cs dosyasına hizmet sözleşmesine ekleyin. Bu dosyaları görmek için **Çözüm Gezgini** tüm dosyaları göstermesinin gerekli olduğunu unutmayın.  
   
 3. İstemci uygulamasını oluşturun.  
   

@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: hizmet Işlem davranışı'
 title: Hizmet İşlem Davranışı
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: 0be5bf0dbe6416febb898fb5150c5a516c8b0969
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1f8b76de250ef87ec5ca2d4ea4353a9a28bac248
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591533"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793070"
 ---
 # <a name="service-transaction-behavior"></a>Hizmet İşlem Davranışı
 
@@ -207,13 +208,13 @@ Bunlardan herhangi birinin sonucu, bu kapsamda gerçekleştirilen işlemlerin hi
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için
 
-1. SQL Server 2005 Express Sürüm veya SQL Server 2005 ' i yüklediğinizden emin olun. Hizmetin App. config dosyasında, veritabanı `connectionString` ayarlanabilir veya appSettings değeri olarak ayarlanarak veritabanı etkileşimleri devre dışı bırakılabilir `usingSql` `false` .
+1. SQL Server 2005 Express Sürüm veya SQL Server 2005 ' i yüklediğinizden emin olun. Hizmetin App.config dosyasında veritabanı `connectionString` ayarlanabilir veya appSettings değeri olarak ayarlanarak veritabanı etkileşimleri devre dışı bırakılabilir `usingSql` `false` .
 
 2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)konusundaki yönergeleri izleyin.
 
 3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin.
 
-Örneği makinelerde çalıştırırsanız, ağ işlem akışını etkinleştirmek için Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) yapılandırmanız ve Windows Communication Foundation (WCF) işlemleri ağ desteğini etkinleştirmek için WsatConfig. exe aracını kullanmanız gerekir.
+Örneği makinelerde çalıştırırsanız, ağ işlem akışını etkinleştirmek için Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) yapılandırmanız ve Windows Communication Foundation (WCF) işlemleri ağ desteğini etkinleştirmek için WsatConfig.exe aracını kullanmanız gerekir.
 
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample-across-machines"></a>Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) hizmetini makineler genelinde çalıştırmayı destekleyecek şekilde yapılandırmak için
 
@@ -239,7 +240,7 @@ Bunlardan herhangi birinin sonucu, bu kapsamda gerçekleştirilen işlemlerin hi
 
     3. C:\WINDOWS\System32. klasörüne gidin
 
-    4. MSDTC. exe ' yi seçin ve **Aç**' a tıklayın.
+    4. Msdtc.exe seçip **Aç**' a tıklayın.
 
     5. **Tamam** ' a tıklayarak **Program Ekle** iletişim kutusunu kapatın ve yeniden **Tamam** ' a tıklayarak Windows Güvenlik Duvarı uygulamasını kapatın.
 

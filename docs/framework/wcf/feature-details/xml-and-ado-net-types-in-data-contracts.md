@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: veri sözleşmeleri içindeki XML ve ADO.NET Types'
 title: Veri Sözleşmelerinde XML ve ADO.NET Türleri
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c2ce8461-3c15-4c41-8c81-1cb78f5b59a6
-ms.openlocfilehash: d4ac956af0addf9c3b38f3bfb8e8644757dc81c3
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c83520b1be1bdf0f7985982dc498f9c12cef5722
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238320"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793317"
 ---
 # <a name="xml-and-adonet-types-in-data-contracts"></a>Veri Sözleşmelerinde XML ve ADO.NET Türleri
 

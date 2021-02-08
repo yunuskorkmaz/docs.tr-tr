@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: hizmet açıklaması'
 title: Hizmet Açıklaması
 ms.date: 03/30/2017
 ms.assetid: 7034b5d6-d608-45f3-b57d-ec135f83ff24
-ms.openlocfilehash: c0fa389e9c894bcfec49ce7538b512c96f176c23
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0985933bb48708faac716575f6a95588df1620d1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96262586"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793096"
 ---
 # <a name="service-description"></a>Hizmet Açıklaması
 

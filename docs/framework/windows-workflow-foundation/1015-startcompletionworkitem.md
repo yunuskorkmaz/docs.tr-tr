@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 1015-Startcompletionworkıtem'
 title: 1015 - StartCompletionWorkItem
 ms.date: 03/30/2017
 ms.assetid: 96fd1d4e-c5d0-46ad-8a71-4b4b49ac7262
-ms.openlocfilehash: c0d8572f192a8faa22327fd671cd9ea49c5054ca
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 6c79a02b144aa1176eb1cb334c8430c8f0babc3a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275550"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792927"
 ---
 # <a name="1015---startcompletionworkitem"></a>1015 - StartCompletionWorkItem
 
@@ -17,10 +18,10 @@ ms.locfileid: "96275550"
 |-|-|  
 |ID|1015|  
 |Anahtar sözcükler|WFRuntime|  
-|Düzey|Ayrıntılı|  
+|Level|Ayrıntılı|  
 |Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bir CompletionWorkItem 'ın yürütmeyi başlatdığını gösterir.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96275550"
   
 ## <a name="details"></a>Ayrıntılar  
   
-|Veri öğesi adı|Veri öğesi türü|Açıklama|  
+|Veri öğesi adı|Veri öğesi türü|Description|  
 |--------------------|--------------------|-----------------|  
 |ParentActivity|xs: String|Üst etkinliğin tür adı.|  
 |ParentDisplayName|xs: String|Ana etkinliğin görünen adı.|  
