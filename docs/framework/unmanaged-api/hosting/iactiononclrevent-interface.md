@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: IActionOnCLREvent arabirimi'
 title: IActionOnCLREvent Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b5f9b41e-7301-429c-911f-21d5422292b3
 topic_type:
 - apiref
-ms.openlocfilehash: 8ca4bb1fe35451f95f752a4e71f5f0b541b55e58
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9d762635247f897663f4c6f2badf67edf98bd5d0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721783"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785178"
 ---
 # <a name="iactiononclrevent-interface"></a>IActionOnCLREvent Arabirimi
 

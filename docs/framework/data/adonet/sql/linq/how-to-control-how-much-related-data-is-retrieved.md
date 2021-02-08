@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: Ilgili verilerin ne kadar alındığını denetleme'
 title: 'Nasıl yapılır: Ne Kadar İlgili Verilerin Alındığını Denetleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: efdc203e-3da9-4477-815e-54f10c3d7c6c
-ms.openlocfilehash: 77ac29eeeaa30ef438b635364dc8e883a0e4c158
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: becf1282d18d5c630da3e3be27c62ebae404d940
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91161340"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786049"
 ---
 # <a name="how-to-control-how-much-related-data-is-retrieved"></a>Nasıl yapılır: Ne Kadar İlgili Verilerin Alındığını Denetleme
 

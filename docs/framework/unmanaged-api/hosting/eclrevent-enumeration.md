@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: EClrEvent numaralandırması'
 title: EClrEvent Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7c36a7c2-75a2-4971-bc23-abf54c812154
 topic_type:
 - apiref
-ms.openlocfilehash: 5d6ec42da60a7b294177063b9f8bd5afbf352c62
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7c2365d1a2fb0109bab9159c3af4e2da3a46de6f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726827"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785607"
 ---
 # <a name="eclrevent-enumeration"></a>EClrEvent Numaralandırması
 
@@ -38,7 +39,7 @@ typedef enum {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`Event_ClrDisabled`|Önemli bir CLR hatası belirtir.|  
 |`Event_DomainUnload`|Belirli bir sürümü kaldırmayı belirtir <xref:System.AppDomain> .|  

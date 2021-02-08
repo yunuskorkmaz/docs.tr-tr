@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Ile... WITH Ifadesiyle bitir (Visual Basic)'
 title: With...End With Deyimi
 ms.date: 07/20/2015
 f1_keywords:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 - With block
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
-ms.openlocfilehash: 50f3bd0c6e96254274b429794901e2e4ac719ad0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 86393d5dee7a03b2b8396b34b31326d1b0ea3c28
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401387"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787571"
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With Deyimi (Visual Basic)
 
 Deyimlerin, nesne veya yapı üyelerine erişim sağlarken basitleştirilmiş bir sözdizimi kullanabilmesi için sürekli olarak tek bir nesneye veya yapıya başvuran bir dizi deyim yürütür.  Bir yapı kullanırken, yalnızca üye değerlerini okuyabilir veya yöntemleri çağırabilir ve bir bildirimde kullanılan bir yapının üyelerine değer atamaya çalışırsanız hata alırsınız `With...End With` .
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```vb
 With objectExpression
@@ -36,7 +37,7 @@ End With
 
 ## <a name="parts"></a>Bölümler
 
-|Terim|Tanım|
+|Süre|Tanım|
 |---|---|
 |`objectExpression`|Gereklidir. Nesne olarak değerlendirilen bir ifade. İfade rasgele karmaşık olabilir ve yalnızca bir kez değerlendirilir. İfade, basit türler de dahil olmak üzere herhangi bir veri türü olarak değerlendirilebilir.|
 |`statements`|İsteğe bağlı. Ve arasındaki bir veya daha fazla deyim, `With` `End With` değerlendirmesi tarafından üretilen bir nesnenin üyelerine başvurabilir `objectExpression` .|

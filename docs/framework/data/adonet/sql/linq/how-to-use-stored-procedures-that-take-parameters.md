@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: parametre alma saklı yordamlarını kullanma'
 title: 'Nasıl yapılır: Parametre Alan Saklı Yordamlar Kullanma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: a54e2ee553629179022b68658d44cbcb02ab590f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: eaa2e9c602e2e6baae82648a4237d1098e89896a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91184969"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785802"
 ---
 # <a name="how-to-use-stored-procedures-that-take-parameters"></a>Nasıl yapılır: Parametre Alan Saklı Yordamlar Kullanma
 

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: EPolicyAction numaralandırması'
 title: EPolicyAction Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 72dd76ba-239e-45ac-9ded-318fb07d6c6d
 topic_type:
 - apiref
-ms.openlocfilehash: 72b371d72b2f055f2840da5595d9022ffd7e2507
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fb66de2211972bd4d25ccfbab4965f315c0144a2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95674755"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785477"
 ---
 # <a name="epolicyaction-enumeration"></a>EPolicyAction Numaralandırması
 
@@ -44,7 +45,7 @@ typedef enum {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`eAbortThread`|Ortak dil çalışma zamanının (CLR) iş parçacığını düzgün bir şekilde iptal etmesi gerektiğini belirtir. Düzgün bir şekilde iptali, tüm blokları çalıştırma girişimlerini `finally` , `catch` iş parçacığı iptalleriyle ilgili tüm blokları ve sonlandırıcıları içerir.|  
 |`eDisableRuntime`|CLR 'nin devre dışı bir durum girmesi gerektiğini belirtir. Etkilenen işlemde başka yönetilen kod yürütülemez ve iş parçacıklarının CLR 'ye girmaları engellenir.|  

@@ -1,21 +1,22 @@
 ---
+description: 'Daha fazla bilgi edinin: özel bileşik tasarımcılar-Iş akışı öğe sunum'
 title: Özel Bileşik Tasarımcılar - İş Akışı Öğesi Sunucu
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
-ms.openlocfilehash: d1047b8be35545e83eaa8788b53751b6b0056984
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 20a3bddf7efd69b6138d6b8a5caae250aa377999
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75338049"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787818"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a>Özel Bileşik Tasarımcılar - İş Akışı Öğesi Sunucu
 
-<xref:System.Activities.Presentation.WorkflowItemPresenter>, WF Tasarımcısı programlama modelinde, rastgele bir etkinliğin yerleştirilebileceği bir "bırakma bölgesi" oluşturulmasına izin veren bir anahtar türüdür. Bu örnek, "bırakma bölgesi" gibi yüzeylere sahip bir etkinlik tasarımcısının nasıl oluşturulacağını gösterir.
+, <xref:System.Activities.Presentation.WorkflowItemPresenter> WF Tasarımcısı programlama modelinde, rastgele bir etkinliğin yerleştirilebileceği bir "bırakma bölgesi" oluşturulmasına izin veren bir anahtar türüdür. Bu örnek, "bırakma bölgesi" gibi yüzeylere sahip bir etkinlik tasarımcısının nasıl oluşturulacağını gösterir.
 
 Bu örnek şunları gösterir:
 
-- <xref:System.Activities.Presentation.WorkflowItemPresenter>ile özel etkinlik Tasarımcısı oluşturma.
+- İle özel etkinlik Tasarımcısı oluşturma <xref:System.Activities.Presentation.WorkflowItemPresenter> .
 
 - Meta veri deposu kullanılarak özel tasarımcı kaydediliyor.
 
@@ -25,9 +26,9 @@ Bu örnek şunları gösterir:
 
 Bu örnek için kod şunu gösterir:
 
-- Özel etkinlik Tasarımcısı `SimpleNativeActivity` sınıfı için oluşturulmuştur.
+- Özel etkinlik Tasarımcısı sınıfı için oluşturulmuştur `SimpleNativeActivity` .
 
-- Bir <xref:System.Activities.Presentation.WorkflowItemPresenter>ile özel etkinlik Tasarımcısı oluşturma.
+- İle özel etkinlik tasarımcısının oluşturulması <xref:System.Activities.Presentation.WorkflowItemPresenter> .
 
 ```xaml
 <sap:ActivityDesigner x:Class="Microsoft.Samples.UsingWorkflowItemPresenter.SimpleNativeDesigner"
@@ -63,11 +64,11 @@ Bu örnek için kod şunu gösterir:
 </sap:ActivityDesigner>
 ```
 
- `ModelItem.Body`bağlamak için WPF veri bağlamasının kullanımını göz önünde edin. `ModelItem`, tasarımcı 'nın, bu örnekte **SimpleNativeActivity**' de kullanılan temel nesneye başvuran <xref:System.Activities.Presentation.ActivityDesigner> özelliğidir.
+ Bağlamak için WPF veri bağlamasının kullanımını göz önünde edin `ModelItem.Body` . `ModelItem` ,, <xref:System.Activities.Presentation.ActivityDesigner> Bu örnekte, **SimpleNativeActivity**' de tasarımcı 'nın kullanıldığı temeldeki nesneyi ifade eden özelliğidir.
 
 ## <a name="set-up-build-and-run-the-sample"></a>Örneği kurma, oluşturma ve çalıştırma
 
-1. Visual Studio içinde çözümü açın.
+1. Visual Studio 'da çözümü açın.
 
 2. Uygulamayı derlemek ve çalıştırmak için **F5** tuşuna basın.
 
@@ -76,7 +77,7 @@ Bu örnek için kod şunu gösterir:
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemPresenter`
 

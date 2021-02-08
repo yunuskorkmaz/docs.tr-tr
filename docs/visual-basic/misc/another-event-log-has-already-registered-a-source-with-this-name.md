@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: başka bir olay günlüğü zaten bu adı taşıyan bir kaynağı kaydetti'
 title: Başka bir olay günlüğü bu adı taşıyan bir kaynağı zaten kaydetti
 ms.date: 07/20/2015
 ms.assetid: e6f5cd95-bb3f-4845-84fb-ae623a9bd44e
-ms.openlocfilehash: 333c28036e2d1b7514c7370b98ff70a6d195a9dd
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: ec6ae0b3ef12452a0135e5bf17dbdd5844c0f478
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91058397"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787363"
 ---
 # <a name="another-event-log-has-already-registered-a-source-with-this-name"></a>Başka bir olay günlüğü bu adı taşıyan bir kaynağı zaten kaydetti
 

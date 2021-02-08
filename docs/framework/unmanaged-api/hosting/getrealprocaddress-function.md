@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: GetRealProcAddress Işlevi'
 title: GetRealProcAddress İşlevi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f1f2fab1-400b-488f-95f2-d49c4fca3556
 topic_type:
 - apiref
-ms.openlocfilehash: d48106fca6008955409581ad9ac202aebe785cb4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b8b3db77d6aef7fae3045a7aa2310c1fadc70e91
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733236"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785321"
 ---
 # <a name="getrealprocaddress-function"></a>GetRealProcAddress İşlevi
 
@@ -27,7 +28,7 @@ Ortak dil çalışma zamanının (CLR) en son yüklenen sürümünden aktarılm�
   
  Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetRealProcAddress (  
@@ -48,7 +49,7 @@ HRESULT GetRealProcAddress (
 
  Bu yöntem, CorError. h içinde tanımlanan aşağıdaki değerlere ek olarak, WinError. h içinde tanımlanan standart bileşen nesne modeli (COM) hata kodlarını döndürür.  
   
-|Dönüş kodu|Açıklama|  
+|Dönüş kodu|Description|  
 |-----------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
 |E_POINTER|`ppv` geçerli değil.|  

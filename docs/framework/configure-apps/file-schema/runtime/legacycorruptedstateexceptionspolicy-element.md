@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: <legacyCorruptedStateExceptionsPolicy> öğesi'
 title: <legacyCorruptedStateExceptionsPolicy> Öğesi
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <legacyCorruptedStateExceptionsPolicy> element
 - legacyCorruptedStateExceptionsPolicy element
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
-ms.openlocfilehash: f36e27a1b85cff2ba8c7e838bace37890a5aa760
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 34082c0779b09400a875894359cf7cf501173508
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91151213"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786960"
 ---
 # <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacyCorruptedStateExceptionsPolicy> Öğesi
 

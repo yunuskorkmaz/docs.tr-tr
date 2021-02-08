@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Işlevler (Entity SQL)'
 title: İşlevler (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 52b3d776-5acc-4f69-b614-5a43ce56ef9f
-ms.openlocfilehash: bef959ae6a835b5d1d696162528a8f904c59e8e5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c557d264587a1d40194971d756e6b5c75a3856aa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201076"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786309"
 ---
 # <a name="functions-entity-sql"></a>İşlevler (Entity SQL)
 
@@ -23,7 +24,7 @@ Entity SQL, Kullanıcı tanımlı işlevleri, kurallı işlevleri ve sağlayıc�
   
  [İşlev Aşırı Yükleme Çözümü](function-overload-resolution-entity-sql.md)  
   
- [Toplama İşlevleri](../aggregate-functions-sqlclient-for-entity-framework.md)  
+ [Toplama Işlevleri](../aggregate-functions-sqlclient-for-entity-framework.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

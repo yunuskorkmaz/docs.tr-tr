@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: DbDataAdapter ile verileri değiştirme'
 title: DbDataAdapter ile Verileri Değiştirme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e35c7f9e-648b-4fcc-9361-d365c3e42c9a
-ms.openlocfilehash: 5272a53ae0b3ac1888d01dc2a59778c6c7231619
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 749c56e8db76a469d7ebf0e503508665c2fdbd94
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91150771"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786257"
 ---
 # <a name="modifying-data-with-a-dbdataadapter"></a>DbDataAdapter ile Verileri Değiştirme
 
@@ -36,7 +37,7 @@ ms.locfileid: "91150771"
   
 |Veri sağlayıcısı|Parametre adlandırma sözdizimi|  
 |-------------------|-----------------------------|  
-|`SqlClient`|Parametre adı olarak adlandırılmış parametreleri kullanır `@` *parametername*.|  
+|`SqlClient`|Parametre adı olarak adlandırılmış parametreleri kullanır `@` .|  
 |`OracleClient`|, `:` *Parmname* (veya *parmname*) biçiminde adlandırılmış parametreleri kullanır.|  
 |`OleDb`|Bir soru işaretiyle () belirtilen Konumsal parametre işaretçilerini kullanır `?` .|  
 |`Odbc`|Bir soru işaretiyle () belirtilen Konumsal parametre işaretçilerini kullanır `?` .|  

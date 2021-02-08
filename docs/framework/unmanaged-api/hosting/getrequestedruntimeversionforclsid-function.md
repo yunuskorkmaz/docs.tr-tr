@@ -1,4 +1,5 @@
 ---
+description: ': GetRequestedRuntimeVersionForCLSID Işlevi hakkında daha fazla bilgi'
 title: GetRequestedRuntimeVersionForCLSID İşlevi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5bb12f9a-0612-434b-b4ed-2db636a20bec
 topic_type:
 - apiref
-ms.openlocfilehash: 3afb89a42d7e26c5e89e6f9458ef3406cc0102ca
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 10fdc947181d3f1fa12b33f11cf31b68fc4285cd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95684193"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785269"
 ---
 # <a name="getrequestedruntimeversionforclsid-function"></a>GetRequestedRuntimeVersionForCLSID İşlevi
 
@@ -27,7 +28,7 @@ Belirtilen sınıf için uygun ortak dil çalışma zamanı (CLR) sürüm bilgil
   
  Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetRequestedRuntimeVersionForCLSID (  
@@ -62,7 +63,7 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|İşlev başarıyla döndürüldü.|  
 |E_INVALIDARG|Parametrelerden birinde geçersiz bir tür veya biçim vardır.|  

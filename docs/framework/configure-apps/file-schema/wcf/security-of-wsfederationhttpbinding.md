@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi <security> edinin: <wsFederationHttpBinding>'
 title: <security> / <wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: a8e5e854-b8dc-4921-843d-34b6a4a6a8ba
-ms.openlocfilehash: 650483099c7d70450cfc56a9a28efac076d64675
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6c01c7a50b05f1723b3620407eb5e5761bae35cb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91162249"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786804"
 ---
 # <a name="security-of-wsfederationhttpbinding"></a>\<security> / \<wsFederationHttpBinding>
 
@@ -88,7 +89,7 @@ ms.locfileid: "91162249"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|Mod|İsteğe bağlı. Uygulanan güvenlik türünü belirtir. Varsayılan değer: `Message`. Bu öznitelik türü <xref:System.ServiceModel.WSFederationHttpSecurityMode> .|  
+|Mod|İsteğe bağlı. Uygulanan güvenlik türünü belirtir. `Message` varsayılan değerdir. Bu öznitelik türü <xref:System.ServiceModel.WSFederationHttpSecurityMode> .|  
   
 ## <a name="mode-attribute"></a>Mode özniteliği  
   

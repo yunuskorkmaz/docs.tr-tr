@@ -1,4 +1,5 @@
 ---
+description: ': GetRequestedRuntimeInfo Işlevi hakkında daha fazla bilgi'
 title: GetRequestedRuntimeInfo İşlevi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0dfd7cdc-c116-4e25-b56a-ac7b0378c942
 topic_type:
 - apiref
-ms.openlocfilehash: b120b854e1787824808dd64d95b0fa78ba6c9fa2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 63d0bdcd07be5727cddc0acc352e8358b5ff0090
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705494"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785295"
 ---
 # <a name="getrequestedruntimeinfo-function"></a>GetRequestedRuntimeInfo İşlevi
 
@@ -28,7 +29,7 @@ Bir uygulama tarafından istenen ortak dil çalışma zamanı (CLR) hakkındaki 
   
  Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetRequestedRuntimeInfo (  
@@ -85,7 +86,7 @@ HRESULT GetRequestedRuntimeInfo (
 
  Bu yöntem, aşağıdaki değerlere ek olarak, WinError. h içinde tanımlanan standart bileşen nesne modeli (COM) hata kodlarını döndürür.  
   
-|Dönüş kodu|Açıklama|  
+|Dönüş kodu|Description|  
 |-----------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
 |ERROR_INSUFFICIENT_BUFFER|Dizin arabelleği, dizin yolunu depolamaya yetecek kadar büyük değil.<br /><br /> - veya -<br /><br /> Sürüm arabelleği, sürüm dizesini depolamak için yeterince büyük değil.|  

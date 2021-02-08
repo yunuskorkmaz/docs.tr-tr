@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: EMemoryAvailable numaralandırması'
 title: EMemoryAvailable Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 38e72a06-dbed-473b-a59b-7e0b3ea4f2af
 topic_type:
 - apiref
-ms.openlocfilehash: 6a8765bfd62a2e6543661804ab8d009ce19f8813
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fdb33b45c354d39b1a52fd815a44041b659181ec
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724318"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785455"
 ---
 # <a name="ememoryavailable-enumeration"></a>EMemoryAvailable Numaralandırması
 
@@ -37,7 +38,7 @@ typedef enum {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`eMemoryAvailableHigh`|Yeterince fiziksel bellek mevcuttur.|  
 |`eMemoryAvailableLow`|Çok az fiziksel bellek mevcuttur.|  

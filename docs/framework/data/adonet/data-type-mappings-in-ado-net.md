@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: ADO.NET içinde veri türü eşlemeleri'
 title: Veri Türü Eşlemeleri
 ms.date: 03/30/2017
 ms.assetid: d4afab94-ada6-4c77-a73c-41f17bae6b5a
-ms.openlocfilehash: 52e64714a17448cd94723bdc216d8ea069fc5eef
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c1829fdc2ebc053d1fd3a76e827a81e582572233
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177754"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786452"
 ---
 # <a name="data-type-mappings-in-adonet"></a>ADO.NET’te Veri Türü Eşlemeleri
 

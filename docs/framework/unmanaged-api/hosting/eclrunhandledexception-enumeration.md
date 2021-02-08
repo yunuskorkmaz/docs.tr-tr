@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: EClrUnhandledException numaralandırması'
 title: EClrUnhandledException Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d231044e-2b53-4836-93f9-8117ff0e5c3a
 topic_type:
 - apiref
-ms.openlocfilehash: bccd44e1bead4feadf67929dc104557715904577
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 088d448a92c4d9030208537b9c788477c85f9d37
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686481"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785555"
 ---
 # <a name="eclrunhandledexception-enumeration"></a>EClrUnhandledException Numaralandırması
 
@@ -36,7 +37,7 @@ typedef enum {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`eRuntimeDeterminedPolicy`|Varsayılan davranışın oluştuğunu belirtir. İşlem bozulmuş.|  
 |`eHostDeterminedPolicy`|Ortak dil çalışma zamanının (CLR) işlenmemiş özel durumları yok saymadığını ve konağın başka bir eylem belirlemesine izin verir.|  

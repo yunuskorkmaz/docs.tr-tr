@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: belge açıklamaları için önerilen XML etiketleri (Visual Basic)'
 title: Belge açıklamaları için önerilen XML etiketleri
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - XML comments, recommended tags [Visual Basic]
 - comments, recommended XML tags
 ms.assetid: 294e0736-ff1e-498e-af83-6db71ed41a72
-ms.openlocfilehash: 9f877ee3fc9d616dc1e946293489a8aab96ac2e1
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 5d3451d98b66817de143cfbddbcb6121de57ca8b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90872801"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787454"
 ---
 # <a name="recommended-xml-tags-for-documentation-comments-visual-basic"></a>Belge Açıklamaları için Önerilen XML Etiketleri (Visual Basic)
 

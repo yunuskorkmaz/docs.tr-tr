@@ -1,4 +1,5 @@
 ---
+description: ': ICLRSyncManager:: Getmonitortorowner yöntemi hakkında daha fazla bilgi edinin'
 title: ICLRSyncManager::GetMonitorOwner Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 840983a4-396d-47b4-86a0-d35f9b437cdb
 topic_type:
 - apiref
-ms.openlocfilehash: a2cb82d8071518af4d4bc3276871f3846a5a5693
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 67fb966c415009236cabef5e6b4d27cbb90d50ac
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95687105"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785035"
 ---
 # <a name="iclrsyncmanagergetmonitorowner-method"></a>ICLRSyncManager::GetMonitorOwner Metodu
 
 Belirtilen tanımlama bilgisi tarafından tanımlanan izleyicinin sahibi olan [IHostTask](ihosttask-interface.md) örneğini alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetMonitorOwner (  
@@ -45,7 +46,7 @@ HRESULT GetMonitorOwner (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`GetMonitorOwner` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  

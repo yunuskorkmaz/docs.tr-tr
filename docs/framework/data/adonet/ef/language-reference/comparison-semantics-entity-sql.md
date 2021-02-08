@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: karşılaştırma semantiği (Entity SQL)'
 title: Karşılaştırma semantiği (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: b36ce28a-2fe4-4236-b782-e5f7c054deae
-ms.openlocfilehash: 9a36fcc4476c25d64fed670e857f339fb20043d8
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b1c832cb6f2903073b1c6be806c73823b1f4a220
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197839"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786439"
 ---
 # <a name="comparison-semantics-entity-sql"></a>Karşılaştırma semantiği (Entity SQL)
 
@@ -71,7 +72,7 @@ Aşağıdaki işleçlerden herhangi birini gerçekleştirmek, [!INCLUDE[esql](..
 
  Aşağıdaki tabloda her tür türü için karşılaştırma işleçleri 'nin desteklenen tüm birleşimleri gösterilmektedir:  
   
-|**Tür**|**=**<br /><br /> **!=**|**GROUP BY**<br /><br /> **DISTINCT**|**BIRLEŞIM**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **KURMAK**<br /><br /> **OVERLAPS**|**'NDAKI**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**NULL**<br /><br /> **NULL DEĞIL**|  
+|**Tür**|**=**<br /><br /> **!=**|**GROUP BY**<br /><br /> **AYRı**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**'NDAKI**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**NULL**<br /><br /> **NULL DEĞIL**|  
 |-|-|-|-|-|-|-|-|  
 |Varlık türü|Başvuru<sup>1</sup>|Tüm Özellikler<sup>2</sup>|Tüm Özellikler<sup>2</sup>|Tüm Özellikler<sup>2</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Başvuru<sup>1</sup>|  
 |Karmaşık tür|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|  

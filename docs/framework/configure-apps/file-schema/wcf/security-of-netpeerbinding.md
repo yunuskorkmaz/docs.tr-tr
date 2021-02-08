@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi <security> edinin: <netPeerBinding>'
 title: <security> / <netPeerBinding>
 ms.date: 03/30/2017
 ms.assetid: 1ef40d8c-f903-4426-9b08-da81462766d8
-ms.openlocfilehash: 543c57d6b2dba1ff5934b49e0e219cf2e5cad153
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f67cfa445a5a605b99783cfd67dd1bae6e17b51e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91170031"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786843"
 ---
 # <a name="security-of-netpeerbinding"></a>\<security> / \<netPeerBinding>
 
@@ -40,7 +41,7 @@ ms.locfileid: "91170031"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|mod|İsteğe bağlı. Bu bağlama ile yapılandırılan eşler tarafından kullanılan güvenlik türünü belirtir. Varsayılan değer: `Message`. Bu öznitelik türü <xref:System.ServiceModel.SecurityMode> .|  
+|mod|İsteğe bağlı. Bu bağlama ile yapılandırılan eşler tarafından kullanılan güvenlik türünü belirtir. `Message` varsayılan değerdir. Bu öznitelik türü <xref:System.ServiceModel.SecurityMode> .|  
   
 ## <a name="mode-attribute"></a>mode özniteliği  
   

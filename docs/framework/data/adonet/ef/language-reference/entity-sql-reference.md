@@ -1,19 +1,20 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Entity SQL başvurusu'
 title: Entity SQL başvurusu
 ms.date: 03/30/2017
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-ms.openlocfilehash: 987aa5c05b88d684e050721077d704b29e546aab
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 89a53d6d365d8cae99e16c52cc159c9d2ff57cfc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90542130"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786426"
 ---
 # <a name="entity-sql-reference"></a>Entity SQL başvurusu
 
 Bu bölüm Entity SQL başvuru makaleleri içerir. Bu makale, Entity SQL işleçlerini kategoriye göre özetler ve gruplandırır.
 
-## <a name="arithmetic-operators"></a>Aritmetik İşleçler
+## <a name="arithmetic-operators"></a>Aritmetik işleçler
 
 Aritmetik işleçler bir veya daha fazla sayısal veri türünün iki ifadesi üzerinde matematik işlemleri gerçekleştirir. Aşağıdaki tabloda Entity SQL aritmetik işleçler listelenmektedir:
 
@@ -80,8 +81,8 @@ Sorgu işleçleri, varlık verileri döndüren sorgu ifadelerini tanımlamak iç
 |[GROUPPARTITION](grouppartition-entity-sql.md)|Toplamanın ilişkili olduğu grup bölümünü tahmin eden bağımsız değişken değerlerinin bir koleksiyonunu döndürür.|
 |[HAVING](having-entity-sql.md)|Grup veya toplama için bir arama koşulu belirtir.|
 |[SıNıRLı](limit-entity-sql.md)|Fiziksel disk belleği gerçekleştirmeyen [order by](order-by-entity-sql.md) yan tümcesi ile kullanılır.|
-|[SİPARİŞ VEREN](order-by-entity-sql.md)|Bir [Select](select-entity-sql.md) ifadesinde döndürülen nesnelerde kullanılan sıralama düzenini belirtir.|
-|[SEÇIN](select-entity-sql.md)|Bir sorgu tarafından döndürülen projeksiyondaki öğeleri belirtir.|
+|[ORDER BY](order-by-entity-sql.md)|Bir [Select](select-entity-sql.md) ifadesinde döndürülen nesnelerde kullanılan sıralama düzenini belirtir.|
+|[SELECT](select-entity-sql.md)|Bir sorgu tarafından döndürülen projeksiyondaki öğeleri belirtir.|
 |[ŞIMDILIK](skip-entity-sql.md)|Fiziksel disk belleği gerçekleştirmeyen [order by](order-by-entity-sql.md) yan tümcesi ile kullanılır.|
 |[Sayfanın Üstü](top-entity-sql.md)|Sorgu sonucundan yalnızca ilk satır kümesinin döndürüleceğini belirtir.|
 |[WHERE](where-entity-sql.md)|Bir sorgu tarafından döndürülen verileri koşullu olarak filtreler.|
@@ -111,8 +112,8 @@ Entity SQL, çeşitli güçlü ayarlama işlemleri sağlar. Bu, UNıON, ıNTERSE
 |[\[NOT \] ın](in-entity-sql.md)|Bir değerin bir koleksiyondaki herhangi bir değerle eşleşip eşleşmediğini belirler.|
 |[INTERSECT](intersect-entity-sql.md)|INTERSECT işleneninin sol ve sağ taraflarındaki sorgu ifadeleri tarafından döndürülen ayrı değerlerin bir koleksiyonunu döndürür.|
 |[OVERLAPS](overlaps-entity-sql.md)|İki koleksiyonun ortak öğelere sahip olup olmadığını belirler.|
-|[KURMAK](set-entity-sql.md)|Yinelenen öğeleri kaldırılmış şekilde yeni bir koleksiyon oluşturarak bir nesne koleksiyonunu bir kümesine dönüştürmek için kullanılır.|
-|[BIRLEŞIM](union-entity-sql.md)|İki veya daha fazla sorgunun sonuçlarını tek bir koleksiyonda birleştirir.|
+|[SET](set-entity-sql.md)|Yinelenen öğeleri kaldırılmış şekilde yeni bir koleksiyon oluşturarak bir nesne koleksiyonunu bir kümesine dönüştürmek için kullanılır.|
+|[UNION](union-entity-sql.md)|İki veya daha fazla sorgunun sonuçlarını tek bir koleksiyonda birleştirir.|
 
 ## <a name="type-operators"></a>Tür işleçleri
 

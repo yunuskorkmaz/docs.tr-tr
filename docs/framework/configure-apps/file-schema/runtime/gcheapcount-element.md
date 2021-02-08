@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: <GCHeapCount> öğesi'
 title: GCHeapCount öğesi
 ms.date: 11/08/2019
 helpviewer_keywords:
 - gcHeapCount element
 - <gcHeapCount> element
-ms.openlocfilehash: 3d6cac4185af182758cb82e6bfd9d96ed24869b4
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9e1e000d647435fe7a8c4b1a8f7549f06c2a3b38
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74283077"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786973"
 ---
 # <a name="gcheapcount-element"></a>\<GCHeapCount> öğesi
 
@@ -19,7 +20,7 @@ Sunucu atık toplama için kullanılacak Heap/iş parçacığı sayısını beli
 &nbsp;&nbsp;\<runtime>\
 &nbsp;&nbsp;&nbsp;&nbsp;\<GCHeapCount>
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <GCHeapCount

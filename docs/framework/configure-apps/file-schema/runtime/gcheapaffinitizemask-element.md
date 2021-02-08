@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: <GCHeapAffinitizeMask> öğesi'
 title: GCHeapAffinitizeMask öğesi
 ms.date: 11/08/2019
 helpviewer_keywords:
 - gcHeapCount element
 - <gcHeapCount> element
-ms.openlocfilehash: 09d6523fb10692dd3617a3827d5bccf112bc632b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ea6be3fa3d973f228576db69d0700b1f7ddba585
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73978384"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786986"
 ---
 # <a name="gcheapaffinitizemask-element"></a>\<GCHeapAffinitizeMask> öğesi
 
@@ -19,7 +20,7 @@ GC yığınlarını ve bireysel işlemcileri arasındaki benzeşimi tanımlar.
 &nbsp;&nbsp;\<runtime>\
 &nbsp;&nbsp;&nbsp;&nbsp;\<GCHeapAffinitizeMask>
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <GCHeapAffinitizeMask

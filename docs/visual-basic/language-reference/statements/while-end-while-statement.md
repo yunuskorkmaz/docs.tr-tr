@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: while... End while (Visual Basic) ekstresi'
 title: While...End While Deyimi
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - While statement [Visual Basic]
 - While...End While statements [Visual Basic]
 ms.assetid: b931d1ce-e8ed-44d8-a13d-92a4f5458a1e
-ms.openlocfilehash: e3ab95f43e101a9ad8abe6fa61b94ae7542e409c
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: ab452e2d9446c9c44b952c6ebf026f7a6f9080cd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869478"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787584"
 ---
 # <a name="whileend-while-statement-visual-basic"></a>While...End While Deyimi (Visual Basic)
 
 Belirli bir koşul olduğu sürece bir dizi deyim çalıştırır `True` .  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 While condition  
@@ -34,7 +35,7 @@ End While
   
 ## <a name="parts"></a>Bölümler  
   
-|Terim|Tanım|  
+|Süre|Tanım|  
 |---|---|  
 |`condition`|Gereklidir. `Boolean` ifadesini. İse `condition` `Nothing` , Visual Basic olduğu gibi davranır `False` .|  
 |`statements`|İsteğe bağlı. Aşağıdaki her seferinde çalıştırılan bir veya daha fazla deyim `While` `condition` `True` .|  
@@ -61,7 +62,7 @@ End While
 
  [Exit While](exit-statement.md) deyimleri, bir döngüden çıkmak için başka bir yol sağlayabilir `While` . `Exit While` , denetimi hemen takip eden deyime aktarır `End While` .  
   
- Genellikle `Exit While` bir koşul hesaplandıktan sonra (örneğin, bir `If...Then...Else` yapıda) kullanırsınız. Hatalı bir değer veya sonlandırma isteği gibi yineleme işleminin devam etmesi için gereksiz veya imkansız hale getiren bir koşul tespit ederseniz bir döngüden çıkmak isteyebilirsiniz. Sonsuz `Exit While` *döngüye*neden olabilecek bir koşul için test ettiğinizde kullanabilirsiniz. Bu, son derece büyük veya hatta sonsuz bir sayı çalışabilen bir döngüdür. Ardından, `Exit While` döngüyü atlamak için kullanabilirsiniz.  
+ Genellikle `Exit While` bir koşul hesaplandıktan sonra (örneğin, bir `If...Then...Else` yapıda) kullanırsınız. Hatalı bir değer veya sonlandırma isteği gibi yineleme işleminin devam etmesi için gereksiz veya imkansız hale getiren bir koşul tespit ederseniz bir döngüden çıkmak isteyebilirsiniz. Sonsuz `Exit While` *döngüye* neden olabilecek bir koşul için test ettiğinizde kullanabilirsiniz. Bu, son derece büyük veya hatta sonsuz bir sayı çalışabilen bir döngüdür. Ardından, `Exit While` döngüyü atlamak için kullanabilirsiniz.  
   
  `Exit While`Döngüde herhangi bir yere herhangi bir sayıda deyim yerleştirebilirsiniz `While` .  
   

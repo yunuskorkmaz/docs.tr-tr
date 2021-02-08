@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: barındırma ortak sınıfları'
 title: Barındırma Yardımcı Sınıfları
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - unmanaged coclasses [.NET Framework], hosting
 - coclasses [.NET Framework hosting]
 ms.assetid: e32d8667-58ee-4760-814f-d22963881622
-ms.openlocfilehash: ef8ae7144b3dc625b14cf9fc19052f102ee7a1ff
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3c95b6f36fb736eba257294d2b2b28251ba2a00c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721848"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785230"
 ---
 # <a name="hosting-coclasses"></a>Barındırma Yardımcı Sınıfları
 

@@ -1,4 +1,5 @@
 ---
+description: ': ICLRTask:: GetMemStats metodu hakkında daha fazla bilgi edinin'
 title: ICLRTask::GetMemStats Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c9e07657-1682-4c30-a336-f8658ff1a125
 topic_type:
 - apiref
-ms.openlocfilehash: 5d57bc742ebcba00f9fbe569a4be27b82a5f8055
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ed81e9ced20a43528247d70012077ffd466f9ed1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726515"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784983"
 ---
 # <a name="iclrtaskgetmemstats-method"></a>ICLRTask::GetMemStats Yöntemi
 
 Geçerli [ICLRTask](iclrtask-interface.md) örneğinin temsil ettiği görevle ilgili istatistiksel bellek kullanım bilgilerini alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetMemStats (  
@@ -41,7 +42,7 @@ HRESULT GetMemStats (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`GetMemStats` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  

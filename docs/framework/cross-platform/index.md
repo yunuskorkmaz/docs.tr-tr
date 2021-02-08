@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: .NET Framework ile birden çok platform için geliştirme'
 title: .NET Framework ile birden çok platform için geliştirme
 ms.date: 10/21/2020
 ms.assetid: b153baaa-130c-4169-860b-e580591de91e
-ms.openlocfilehash: ef8fae4238f404d650528d25ab873fa48e2c0703
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 6223da53a4b2bf26e793ac01f31d9d1bfeb03f9d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687865"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786485"
 ---
 # <a name="develop-for-multiple-platforms-with-net-framework"></a>.NET Framework ile birden çok platform için geliştirme
 

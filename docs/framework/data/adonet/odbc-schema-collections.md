@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: ODBC şema koleksiyonları'
 title: ODBC Şema Koleksiyonları
 ms.date: 03/30/2017
 ms.assetid: 1bb126a5-ceec-4649-a4bc-8aa19e801046
-ms.openlocfilehash: f0240e99d2420b0956d3c144f837b39e094bb78a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ceac67e49914db7010e315a2dfcdb630bea1e29f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794723"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786205"
 ---
 # <a name="odbc-schema-collections"></a>ODBC Şema Koleksiyonları
 
@@ -17,9 +18,9 @@ Bu bölümde Microsoft SQL Server, Oracle ve Microsoft Jet için ODBC sürücül
 
 Microsoft SQL Server ODBC sürücüsü, ortak şema koleksiyonlarına ek olarak aşağıdaki belirli şema koleksiyonlarını destekler:
 
-- Takvimleri
+- Tablolar
 
-- Dizinlerde
+- Dizinler
 
 - Sütunlar
 
@@ -33,17 +34,17 @@ Microsoft SQL Server ODBC sürücüsü, ortak şema koleksiyonlarına ek olarak 
 
 ### <a name="tables-and-views"></a>Tablolar ve görünümler
 
-|Tation|DataType|
+|ColumnName|DataType|
 |----------------|--------------|
 |TABLE_CAT|Dize|
 |TABLE_SCHEM|Dize|
 |TABLE_NAME|Dize|
 |TABLE_TYPE|Dize|
-|AÇIKLAMALARININ|Dize|
+|AÇıKLAMALARıNıN|Dize|
 
-### <a name="indexes"></a>Dizinlerde
+### <a name="indexes"></a>Dizinler
 
-|Tation|DataType|
+|ColumnName|DataType|
 |----------------|--------------|
 |TABLE_CAT|Dize|
 |TABLE_SCHEM|Dize|
@@ -51,19 +52,19 @@ Microsoft SQL Server ODBC sürücüsü, ortak şema koleksiyonlarına ek olarak 
 |NON_UNIQUE|Int16|
 |INDEX_QUALIFIER|Dize|
 |INDEX_NAME|Dize|
-|TÜRÜYLE|Int16|
+|TÜR|Int16|
 |ORDINAL_POSITION|Int16|
 |COLUMN_NAME|Dize|
 |ASC_OR_DESC|Dize|
 |ITE|Int32|
-|SAYFALARI|Int32|
+|SAYFALARı|Int32|
 |FILTER_CONDITION|Dize|
 |SS_TYPE_SCHEMA|Dize|
 |SS_DATA_TYPE|Bayt|
 
 ### <a name="columns"></a>Sütunlar
 
-|Tation|DataType|
+|ColumnName|DataType|
 |----------------|--------------|
 |TABLE_CAT|Dize|
 |TABLE_SCHEM|Dize|
@@ -75,8 +76,8 @@ Microsoft SQL Server ODBC sürücüsü, ortak şema koleksiyonlarına ek olarak 
 |BUFFER_LENGTH|Int32|
 |DECIMAL_DIGITS|Int16|
 |NUM_PREC_RADIX|Int16|
-|YAPILAMAZ|Int16|
-|AÇIKLAMALARININ|Dize|
+|YAPıLAMAZ|Int16|
+|AÇıKLAMALARıNıN|Dize|
 |COLUMN_DEF|Dize|
 |SQL_DATA_TYPE|Int16|
 |SQL_DATETIME_SUB|Int16|
@@ -89,7 +90,7 @@ Microsoft SQL Server ODBC sürücüsü, ortak şema koleksiyonlarına ek olarak 
 
 ### <a name="procedures"></a>Yordamlar
 
-|Tation|DataType|
+|ColumnName|DataType|
 |----------------|--------------|
 |PROCEDURE_CAT|Dize|
 |PROCEDURE_SCHEM|Dize|
@@ -97,12 +98,12 @@ Microsoft SQL Server ODBC sürücüsü, ortak şema koleksiyonlarına ek olarak 
 |NUM_INPUT_PARAMS|Int32|
 |NUM_OUTPUT_PARAMS|Int32|
 |NUM_RESULT_SETS|Int32|
-|AÇIKLAMALARININ|Dize|
+|AÇıKLAMALARıNıN|Dize|
 |PROCEDURE_TYPE|Int16|
 
 ### <a name="procedurecolumns"></a>ProcedureColumns
 
-|Tation|DataType|
+|ColumnName|DataType|
 |----------------|--------------|
 |PROCEDURE_CAT|Dize|
 |PROCEDURE_SCHEM|Dize|
@@ -115,8 +116,8 @@ Microsoft SQL Server ODBC sürücüsü, ortak şema koleksiyonlarına ek olarak 
 |BUFFER_LENGTH|Int32|
 |DECIMAL_DIGITS|Int16|
 |NUM_PREC_RADIX|Int16|
-|YAPILAMAZ|Int16|
-|AÇIKLAMALARININ|Dize|
+|YAPıLAMAZ|Int16|
+|AÇıKLAMALARıNıN|Dize|
 |COLUMN_DEF|Dize|
 |SQL_DATA_TYPE|Int16|
 |SQL_DATETIME_SUB|Int16|
@@ -129,7 +130,7 @@ Microsoft SQL Server ODBC sürücüsü, ortak şema koleksiyonlarına ek olarak 
 
 ### <a name="procedureparameters"></a>ProcedureParameters
 
-|Tation|DataType|
+|ColumnName|DataType|
 |----------------|--------------|
 |PROCEDURE_CAT|Dize|
 |PROCEDURE_SCHEM|Dize|
@@ -142,8 +143,8 @@ Microsoft SQL Server ODBC sürücüsü, ortak şema koleksiyonlarına ek olarak 
 |BUFFER_LENGTH|Int32|
 |DECIMAL_DIGITS|Int16|
 |NUM_PREC_RADIX|Int16|
-|YAPILAMAZ|Int16|
-|AÇIKLAMALARININ|Dize|
+|YAPıLAMAZ|Int16|
+|AÇıKLAMALARıNıN|Dize|
 |COLUMN_DEF|Dize|
 |SQL_DATA_TYPE|Int16|
 |SQL_DATETIME_SUB|Int16|
@@ -158,7 +159,7 @@ Microsoft SQL Server ODBC sürücüsü, ortak şema koleksiyonlarına ek olarak 
 
 Microsoft SQL Server Oracle ODBC sürücüsü, ortak şema koleksiyonlarına ek olarak aşağıdaki belirli şema koleksiyonlarını destekler:
 
-- Takvimleri
+- Tablolar
 
 - Sütunlar
 
@@ -170,21 +171,21 @@ Microsoft SQL Server Oracle ODBC sürücüsü, ortak şema koleksiyonlarına ek 
 
 - Görünümler
 
-- Dizinlerde
+- Dizinler
 
 ### <a name="tables-and-views"></a>Tablolar ve görünümler
 
-|Tation|DataType|
+|ColumnName|DataType|
 |----------------|--------------|
 |TABLE_QUALIFIER|Dize|
 |TABLE_OWNER|Dize|
 |TABLE_NAME|Dize|
 |TABLE_TYPE|Dize|
-|AÇIKLAMALARININ|Dize|
+|AÇıKLAMALARıNıN|Dize|
 
 ### <a name="columns"></a>Sütunlar
 
-|Tation|DataType|
+|ColumnName|DataType|
 |----------------|--------------|
 |TABLE_QUALIFIER|Dize|
 |TABLE_OWNER|Dize|
@@ -192,17 +193,17 @@ Microsoft SQL Server Oracle ODBC sürücüsü, ortak şema koleksiyonlarına ek 
 |COLUMN_NAME|Dize|
 |DATA_TYPE|Int16|
 |TYPE_NAME|Dize|
-|DUYARLILIK|Int32|
-|UZUNLUKLU|Int32|
+|DUYARLıLıK|Int32|
+|LENGTH|Int32|
 |ÖLÇEK|Int16|
 |TABAN|Int16|
-|YAPILAMAZ|Int16|
-|AÇIKLAMALARININ|Dize|
+|YAPıLAMAZ|Int16|
+|AÇıKLAMALARıNıN|Dize|
 |ORDINAL_POSITION|Int32|
 
 ### <a name="procedures"></a>Yordamlar
 
-|Tation|DataType|
+|ColumnName|DataType|
 |----------------|--------------|
 |PROCEDURE_QUALIFIER|Dize|
 |PROCEDURE_OWNER|Dize|
@@ -210,12 +211,12 @@ Microsoft SQL Server Oracle ODBC sürücüsü, ortak şema koleksiyonlarına ek 
 |NUM_INPUT_PARAMS|Int16|
 |NUM_OUTPUT_PARAMS|Int16|
 |NUM_RESULT_SETS|Int16|
-|AÇIKLAMALARININ|Dize|
+|AÇıKLAMALARıNıN|Dize|
 |PROCEDURE_TYPE|Int16|
 
 ### <a name="procedurecolumns"></a>ProcedureColumns
 
-|Tation|DataType|
+|ColumnName|DataType|
 |----------------|--------------|
 |PROCEDURE_QUALIFIER|Dize|
 |PROCEDURE_OWNER|Dize|
@@ -224,12 +225,12 @@ Microsoft SQL Server Oracle ODBC sürücüsü, ortak şema koleksiyonlarına ek 
 |COLUMN_TYPE|Int16|
 |DATA_TYPE|Int16|
 |TYPE_NAME|Dize|
-|DUYARLILIK|Int32|
-|UZUNLUKLU|Int32|
+|DUYARLıLıK|Int32|
+|LENGTH|Int32|
 |ÖLÇEK|Int16|
 |TABAN|Int16|
-|YAPILAMAZ|Int16|
-|AÇIKLAMALARININ|Dize|
+|YAPıLAMAZ|Int16|
+|AÇıKLAMALARıNıN|Dize|
 |YÜKLEMEK|Int32|
 |ORDINAL_POSITION|Int32|
 
@@ -237,9 +238,9 @@ Microsoft SQL Server Oracle ODBC sürücüsü, ortak şema koleksiyonlarına ek 
 
 Microsoft Jet ODBC sürücüsü, ortak şema koleksiyonlarına ek olarak aşağıdaki belirli şema koleksiyonlarını destekler:
 
-- Takvimleri
+- Tablolar
 
-- Dizinlerde
+- Dizinler
 
 - Sütunlar
 
@@ -253,17 +254,17 @@ Microsoft Jet ODBC sürücüsü, ortak şema koleksiyonlarına ek olarak aşağ�
 
 ### <a name="tables-and-views"></a>Tablolar ve görünümler
 
-|Tation|DataType|
+|ColumnName|DataType|
 |----------------|--------------|
 |TABLE_QUALIFIER|Dize|
 |TABLE_OWNER|Dize|
 |TABLE_NAME|Dize|
 |TABLE_TYPE|Dize|
-|AÇIKLAMALARININ|Dize|
+|AÇıKLAMALARıNıN|Dize|
 
 ### <a name="columns"></a>Sütunlar
 
-|Tation|DataType|
+|ColumnName|DataType|
 |----------------|--------------|
 |TABLE_QUALIFIER|Dize|
 |TABLE_OWNER|Dize|
@@ -271,17 +272,17 @@ Microsoft Jet ODBC sürücüsü, ortak şema koleksiyonlarına ek olarak aşağ�
 |COLUMN_NAME|Dize|
 |DATA_TYPE|Int16|
 |TYPE_NAME|Dize|
-|DUYARLILIK|Int32|
-|UZUNLUKLU|Int32|
+|DUYARLıLıK|Int32|
+|LENGTH|Int32|
 |ÖLÇEK|Int16|
 |TABAN|Int16|
-|YAPILAMAZ|Int16|
-|AÇIKLAMALARININ|Dize|
+|YAPıLAMAZ|Int16|
+|AÇıKLAMALARıNıN|Dize|
 |ORDINAL_POSITION|Int32|
 
 ### <a name="procedures"></a>Yordamlar
 
-|Tation|DataType|
+|ColumnName|DataType|
 |----------------|--------------|
 |PROCEDURE_QUALIFIER|Dize|
 |PROCEDURE_OWNER|Dize|
@@ -289,12 +290,12 @@ Microsoft Jet ODBC sürücüsü, ortak şema koleksiyonlarına ek olarak aşağ�
 |NUM_INPUT_PARAMS|Int16|
 |NUM_OUTPUT_PARAMS|Int16|
 |NUM_RESULT_SETS|Int16|
-|AÇIKLAMALARININ|Dize|
+|AÇıKLAMALARıNıN|Dize|
 |PROCEDURE_TYPE|Int16|
 
 ### <a name="procedurecolumns"></a>ProcedureColumns
 
-|Tation|DataType|
+|ColumnName|DataType|
 |----------------|--------------|
 |PROCEDURE_QUALIFIER|Dize|
 |PROCEDURE_OWNER|Dize|
@@ -303,18 +304,18 @@ Microsoft Jet ODBC sürücüsü, ortak şema koleksiyonlarına ek olarak aşağ�
 |COLUMN_TYPE|Int16|
 |DATA_TYPE|Int16|
 |TYPE_NAME|Dize|
-|DUYARLILIK|Int32|
-|UZUNLUKLU|Int32|
+|DUYARLıLıK|Int32|
+|LENGTH|Int32|
 |ÖLÇEK|Int16|
 |TABAN|Int16|
-|YAPILAMAZ|Int16|
-|AÇIKLAMALARININ|Dize|
+|YAPıLAMAZ|Int16|
+|AÇıKLAMALARıNıN|Dize|
 |YÜKLEMEK|Int32|
 |ORDINAL_POSITION|Int32|
 
 ### <a name="procedureparameters"></a>ProcedureParameters
 
-|Tation|DataType|
+|ColumnName|DataType|
 |----------------|--------------|
 |PROCEDURE_CAT|Dize|
 |PROCEDURE_SCHEM|Dize|
@@ -327,8 +328,8 @@ Microsoft Jet ODBC sürücüsü, ortak şema koleksiyonlarına ek olarak aşağ�
 |BUFFER_LENGTH|Int32|
 |DECIMAL_DIGITS|Int16|
 |NUM_PREC_RADIX|Int16|
-|YAPILAMAZ|Int16|
-|AÇIKLAMALARININ|Dize|
+|YAPıLAMAZ|Int16|
+|AÇıKLAMALARıNıN|Dize|
 |COLUMN_DEF|Dize|
 |SQL_DATA_TYPE|Int16|
 |SQL_DATETIME_SUB|Int16|

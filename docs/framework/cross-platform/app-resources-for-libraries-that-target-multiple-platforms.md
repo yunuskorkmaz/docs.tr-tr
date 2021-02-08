@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: birden çok platformu hedefleyen kitaplıklar için uygulama kaynakları'
 title: Birden Çok Platformu Hedefleyen Kitaplıklar için Uygulama Kaynakları
 ms.date: 07/18/2018
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - resources, for multiple platforms
 - targeting multiple platforms, resources for
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
-ms.openlocfilehash: a4fa3f5e5a4b0e88a0c37f84672ab4b611f89f0c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c6d1a8d19c58174e4b08842c4965dfbe3389d1e8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96272924"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786492"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Birden Çok Platformu Hedefleyen Kitaplıklar için Uygulama Kaynakları
 
@@ -34,7 +35,7 @@ Sınıf kitaplıklarınızdaki kaynaklara birden çok platformdan erişilebildi�
 
  Taşınabilir sınıf kitaplığı projesi, <xref:System.Resources.ResourceManager> Aşağıdaki tabloda listelenen dört üyeyi içerir. Bu oluşturucular ve yöntemler bir <xref:System.Resources.ResourceManager> nesne örneği oluşturup dize kaynaklarını almanızı sağlar.
 
-|`ResourceManager` üyesidir|Açıklama|
+|`ResourceManager` üyesidir|Description|
 |------------------------------|-----------------|
 |<xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%29>|<xref:System.Resources.ResourceManager>Belirtilen derlemede bulunan adlandırılmış kaynak dosyasına erişmek için bir örnek oluşturur.|
 |<xref:System.Resources.ResourceManager.%23ctor%28System.Type%29>|<xref:System.Resources.ResourceManager>Belirtilen türe karşılık gelen bir örnek oluşturur.|
@@ -94,7 +95,7 @@ Sınıf kitaplıklarınızdaki kaynaklara birden çok platformdan erişilebildi�
 |İşe Alma|İşe Giriş Tarihi|
 |İşe Alma Uzunluğu|16|
 |ID|ID|
-|Adı|Ad|
+|Name|Ad|
 |Başlık|Çalışanlar veritabanı|
 
  Aşağıdaki kodda, `UILibrary` sınıfının ve kaynaklarına konsol modundaki bir uygulamadan nasıl erişilebileceği gösterilmektedir. Konsol uygulaması projesine eklenmek üzere UILibrary.dll için bir başvuru gerektirir.

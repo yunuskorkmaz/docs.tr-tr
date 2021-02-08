@@ -1,23 +1,24 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: Scalar-Valued User-Defined Işlevleri kullanma'
 title: 'Nasıl yapılır: Skaler Değerli Kullanıcı Tanımlı İşlevler Kullanma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 714e252f-c053-4bbb-b1f3-924111cd4d97
-ms.openlocfilehash: faf8d6e94c88575f6cb73003fa5bed87650d7d54
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e606dd3f840b8f082928217c6118b48d8d4a2e5c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91196942"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785817"
 ---
 # <a name="how-to-use-scalar-valued-user-defined-functions"></a>Nasıl yapılır: Skaler Değerli Kullanıcı Tanımlı İşlevler Kullanma
 
 Özniteliğini kullanarak, bir sınıfta tanımlanan istemci yöntemini Kullanıcı tanımlı bir işlev ile eşleyebilirsiniz <xref:System.Data.Linq.Mapping.FunctionAttribute> . Yöntemin gövdesi, yöntem çağrısının amacını yakalayan bir ifade oluşturur ve bu ifadeyi <xref:System.Data.Linq.DataContext> çeviri ve yürütmeye geçirir.  
   
 > [!NOTE]
-> Doğrudan yürütme yalnızca işlev bir sorgu dışında çağrıldığında gerçekleşir. Daha fazla bilgi için bkz. [nasıl yapılır: Kullanıcı tanımlı Işlevleri Iç satır Içinde çağırma](how-to-call-user-defined-functions-inline.md).  
+> Doğrudan yürütme yalnızca işlev bir sorgu dışında çağrıldığında gerçekleşir. Daha fazla bilgi için bkz. [nasıl yapılır: User-Defined Işlevlerini satır Içi çağırma](how-to-call-user-defined-functions-inline.md).  
   
 ## <a name="example"></a>Örnek  
 

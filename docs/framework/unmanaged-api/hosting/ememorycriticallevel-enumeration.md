@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Ememorykritiklevel numaralandırması'
 title: EMemoryCriticalLevel Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2ca8a7a2-7b54-4ba3-8e73-277c7df485f3
 topic_type:
 - apiref
-ms.openlocfilehash: 3b9ad4b40ce94420f2ab5fc25335c41dec15dc09
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 88965a29164de1ec7b01c2fcc8f51415127e69fd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720561"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785438"
 ---
 # <a name="ememorycriticallevel-enumeration"></a>EMemoryCriticalLevel Numaralandırması
 
@@ -37,7 +38,7 @@ typedef enum {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`eAppDomainCritical`|Ayırmayı isteyen etki alanında yönetilen kodu yürütmek için ayırmanın kritik olduğunu gösterir. Bellek ayrılabileceği takdirde, CLR etki alanının hala kullanılabilir olduğundan emin olamaz. Ana bilgisayar, ayırma karşılanmıyorsa hangi eylemin yapılacağını belirler. CLR 'nin `AppDomain` otomatik olarak iptal etmesini veya [ICLRPolicyManager](iclrpolicymanager-interface.md)'daki yöntemleri çağırarak çalışmaya devam etmesini sağlayabilirsiniz.|  
 |`eProcessCritical`|Ayırmanın, işlemdeki yönetilen kodun yürütülmesi için kritik öneme sahip olduğunu gösterir. Bu değer başlangıç sırasında ve sonlandırıcılar çalıştırılırken kullanılır. Bellek ayrılabileceği takdirde, CLR işlemde çalışamaz. Ayırma başarısız olursa, CLR etkin bir şekilde devre dışı bırakılır. CLR 'ye yapılan tüm sonraki çağrılar HOST_E_CLRNOTAVAILABLE ile başarısız olur.|  

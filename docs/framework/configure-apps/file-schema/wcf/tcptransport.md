@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <tcpTransport>'
 title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 6d4302e1840f58e2daad855942493cc96b7d5e34
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b660443ac58e8ed72d70adb5bf9e9e87b060e3af
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158675"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786622"
 ---
 # \<tcpTransport>
 
@@ -70,7 +71,7 @@ ms.locfileid: "91158675"
   
 ### <a name="child-elements"></a>Alt Öğeler  
 
- Hiçbiri  
+ Yok  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   

@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: veritabanı veri türlerini belirtme'
 title: 'Nasıl yapılır: Veritabanı Veri Türleri Belirtme'
 ms.date: 03/30/2017
 ms.assetid: 2228fdad-7e6a-4b1b-b4d1-79d0198b7c28
-ms.openlocfilehash: f070ff718ac10b9681c5ab3c0f4b46547349101b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 004a16fe9dd0cda608485b13b03ce922d6a9f671
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197241"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785919"
 ---
 # <a name="how-to-specify-database-data-types"></a>Nasıl yapılır: Veritabanı Veri Türleri Belirtme
 

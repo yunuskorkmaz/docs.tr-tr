@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: IApartmentCallback::D oCallback yöntemi'
 title: IApartmentCallback::DoCallback Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 8edad30c-30ff-4bee-813c-75525a82fc93
 topic_type:
 - apiref
-ms.openlocfilehash: e3031bf123ff9107b4cebc0723f1be0d423bdaec
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 65b7f496f953f08e099bf13ef8212c7d6e1026ff
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721757"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785116"
 ---
 # <a name="iapartmentcallbackdocallback-method"></a>IApartmentCallback::DoCallback Yöntemi
 
 Belirtilen işlevi bir apartman içinde yürütür.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT _stdcall DoCallback(  

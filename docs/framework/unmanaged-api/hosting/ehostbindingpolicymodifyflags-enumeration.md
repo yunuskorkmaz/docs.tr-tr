@@ -1,4 +1,5 @@
 ---
+description: ': EHostBindingPolicyModifyFlags numaralandırması hakkında daha fazla bilgi'
 title: EHostBindingPolicyModifyFlags Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0339af16-ee1d-48ec-837d-a79d9a9c89f8
 topic_type:
 - apiref
-ms.openlocfilehash: ec64f9bec0ee9b63796958b17c7f10b87692f1d0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: be8a15cad49097d1ea2e206e01da2d5d5dcb165a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686156"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785490"
 ---
 # <a name="ehostbindingpolicymodifyflags-enumeration"></a>EHostBindingPolicyModifyFlags Numaralandırması
 
@@ -38,7 +39,7 @@ typedef enum _hostBindingPolicyModifyFlags {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`HOST_BINDING_POLICY_MODIFY_CHAIN`|CLR 'nin, kaynak derlemenin ilke değerlerini hedef derlemeye göre zincirlemesini belirtir.|  
 |`HOST_BINDING_POLICY_MODIFY_DEFAULT`|CLR 'nin varsayılan eylemi gerçekleştireceğini belirtir.|  

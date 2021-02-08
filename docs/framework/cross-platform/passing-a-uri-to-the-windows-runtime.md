@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Windows Çalışma Zamanı URI geçirme'
 title: URI'yı Windows Çalışma Zamanı'na Geçirme
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Windows Runtime, .NET Framework support for
 - Windows Runtime, passing a URI to
 ms.assetid: 3eb5ce6f-f304-4f87-8e81-0f25092f5ad4
-ms.openlocfilehash: f1998c0664be323902489a3d0c1fa66a2c0aa578
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 918f8ea71f4b23aeaf2a1295f2edd043a73a95ed
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96272852"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786459"
 ---
 # <a name="passing-a-uri-to-the-windows-runtime"></a>URI'yı Windows Çalışma Zamanı'na Geçirme
 

@@ -1,4 +1,5 @@
 ---
+description: ': GetRequestedRuntimeVersion Işlevi hakkında daha fazla bilgi'
 title: GetRequestedRuntimeVersion İşlevi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 82f596a4-483d-4509-b0c5-a84c53c3da1b
 topic_type:
 - apiref
-ms.openlocfilehash: 6c16b02a5ae323ba80d44937f322810022dfa9f5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 836cc4b875ddc427c6779950f5b68d2df8b6ef75
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711643"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785282"
 ---
 # <a name="getrequestedruntimeversion-function"></a>GetRequestedRuntimeVersion İşlevi
 
@@ -28,7 +29,7 @@ Belirtilen uygulama tarafından istenen ortak dil çalışma zamanının (CLR) s
   
  Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetRequestedRuntimeVersion (  
@@ -57,7 +58,7 @@ HRESULT GetRequestedRuntimeVersion (
 
  Bu yöntem, aşağıdaki değerlere ek olarak, WinError. h içinde tanımlanan standart bileşen nesne modeli (COM) hata kodlarını döndürür.  
   
-|Dönüş kodu|Açıklama|  
+|Dönüş kodu|Description|  
 |-----------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
 |ERROR_INSUFFICIENT_BUFFER|Sürüm arabelleği, sürüm dizesini depolamak için yeterince büyük değil.|  

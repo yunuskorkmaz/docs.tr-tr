@@ -1,15 +1,16 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: uygulama tanımlı veya nesne tanımlı hata'
 title: Uygulama tanımlı veya nesne tanımlı hata
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID95
 ms.assetid: 02b8e145-7988-48ad-abad-ed7656b4933c
-ms.openlocfilehash: a020b2c6ccc08830653bfca9f2ee6b85985b89f5
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 8407ce247f7df9574484a7fd44bfa3b7e6afc312
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91058358"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787350"
 ---
 # <a name="application-defined-or-object-defined-error"></a>Uygulama tanımlı veya nesne tanımlı hata
 

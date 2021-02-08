@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: EInitializeNewDomainFlags numaralandırması'
 title: EInitializeNewDomainFlags Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - EInitializeNewDomainFlags enumeration [.NET Framework hosting]
 ms.assetid: 3a120ab2-f5ef-4c9b-8595-d3ed7247c342
-ms.openlocfilehash: 8350b507609e63c060cda08514200d386c37a6b3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b856d061e86c0c79b35f842975378307b79a37e7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724331"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785471"
 ---
 # <a name="einitializenewdomainflags-enumeration"></a>EInitializeNewDomainFlags Numaralandırması
 
@@ -34,7 +35,7 @@ typedef enum {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`eInitializeNewDomainFlags_None`|Bayrak yok.|  
 |`eInitializeNewDomainFlags_NoSecurityChanges`|Ortak dil çalışma zamanına (CLR), ana bilgisayarın yöntemdeki uygulama etki alanının güvenlik durumunda değişiklik yapmayacağı konusunda bilgilendirir <xref:System.AppDomainManager.InitializeNewDomain%2A> .|  

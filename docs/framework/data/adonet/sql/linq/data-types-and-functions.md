@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: veri türleri ve Işlevleri'
 title: Veri Türleri ve İşlevleri
 ms.date: 03/30/2017
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
-ms.openlocfilehash: 456cf5acf42221379e68ff79ee57c084664e30e5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5a718d5fd4b110d35153e4486e42cee0b8a215bd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91147768"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786153"
 ---
 # <a name="data-types-and-functions"></a>Veri Türleri ve İşlevleri
 
@@ -15,12 +16,12 @@ Aşağıdaki tabloda listelenen konularda, ortak dil çalışma zamanının (CLR
   
  Tablodaki desteklenmeyen bir öğe, LINQ to SQL CLR üyesini, yapıyı veya SQL Server yürütme için dönüştürmeyi çeviremediği anlamına gelir. Bunları kodunuzda kullanmaya devam edebilirsiniz, ancak sorgu Transact-SQL ' e çevrilmeden veya sonuçlar veritabanından alındıktan sonra değerlendirilmelidir.  
   
-|Konu|Açıklama|  
+|Konu|Description|  
 |-----------|-----------------|  
 |[SQL-CLR Tür Eşlemesi](sql-clr-type-mapping.md)|CLR türleri ve SQL Server türleri arasında ayrıntılı bir eşleşme matrisi sağlar.|  
 |[Temel Veri Türleri](basic-data-types.md)|.NET Framework davranış farklarını özetler.|  
 |[Boole Veri Türleri](boolean-data-types.md)|.NET Framework davranış farklarını özetler.|  
-|[Null Semantikler](null-semantics.md)|[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Null ve null yapılabilir sorunları tartışan konuların bağlantılarını sağlar.|  
+|[Null semantiği](null-semantics.md)|[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Null ve null yapılabilir sorunları tartışan konuların bağlantılarını sağlar.|  
 |[Sayısal ve Karşılaştırma İşleçleri](numeric-and-comparison-operators.md)|.NET Framework davranış farklarını özetler.|  
 |[Dizi İşleçleri](sequence-operators.md)|.NET Framework davranış farklarını özetler.|  
 |[System.Convert Yöntemleri](system-convert-methods.md)|.NET Framework davranış farklarını özetler.|  

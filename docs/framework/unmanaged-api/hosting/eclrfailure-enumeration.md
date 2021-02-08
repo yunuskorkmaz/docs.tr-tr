@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: EClrFailure numaralandırması'
 title: EClrFailure Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 37b95cce-9bfb-4ecf-a00b-33dcba782c67
 topic_type:
 - apiref
-ms.openlocfilehash: d2794b53ed17640413928b3af0d1ed3656e25f22
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9f3a2270651e5b05d2d31ed90511b8eb05dd4d44
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95675769"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785594"
 ---
 # <a name="eclrfailure-enumeration"></a>EClrFailure Numaralandırması
 
@@ -41,7 +42,7 @@ typedef enum {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`FAIL_NonCriticalResource`|Kritik olmayan bir kod bölgesinde bir kaynak (iş parçacığı, bir bellek bloğu veya kilit gibi) ayırma girişimi sırasında bir hata oluştu.|  
 |`FAIL_CriticalResource`|Kritik kod bölgesinde bir kaynak (iş parçacığı, bir bellek bloğu veya kilit gibi) ayırma girişimi sırasında bir hata oluştu.|  

@@ -1,15 +1,16 @@
 ---
-title: <states>WCF,<workflowInstanceQuery>
+description: 'WCF hakkında daha fazla bilgi edinin: <states><workflowInstanceQuery>'
+title: <states> WCF, <workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: d17f7525-8035-4e9e-85a0-4cddae59f85d
-ms.openlocfilehash: 5b779cf1074687dbd648b23d04f7cf3a354a2014
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 66b3008b352d1f76c30aab9a0ec038836f33d408
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855033"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786648"
 ---
-# <a name="states-of-wcf-workflowinstancequery"></a>\<states>WCF,\<workflowInstanceQuery>
+# <a name="states-of-wcf-workflowinstancequery"></a>\<states> WCF, \<workflowInstanceQuery>
 
 İzleme kayıtları oluşturulduğunda izlenen iş akışı örneğinden abone olunan durumlar koleksiyonunu temsil eder.  
   
@@ -25,7 +26,7 @@ Profil sorgularını izleme hakkında daha fazla bilgi için bkz. [Izleme profil
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<workflowInstanceQuery>**](workflowinstancequery-of-wcf.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<states>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <tracking>
@@ -71,7 +72,7 @@ Bu koleksiyondaki durumları tarafından döndürülen kayıtları filTRe uygula
   
 Olası durum değerleri aşağıdaki tabloda açıklanan.  
   
-|Eyalet|Açıklama|  
+|Durum|Açıklama|  
 |-----------|-----------------|  
 |İptal edildi|İş akışı örneği iptal edildi.|  
 |Tamamlandı|İş akışı örneği tamamlandı.|  
@@ -84,7 +85,7 @@ Olası durum değerleri aşağıdaki tabloda açıklanan.
 |Kaldırıldı|İş akışı örneği kaldırılır.|  
 |İptal edildi|İş akışı örneği iptal edildi.|  
 |Askıya alındı|İş akışı örneği askıya alınır.|  
-|Sona erdi|İş akışı örneği sonlandırıldı.|  
+|Sonlandırıldı|İş akışı örneği sonlandırıldı.|  
 |Unsuspended|İş akışı örneği unsuspended.|  
   
 ## <a name="example"></a>Örnek

@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <serviceDebug>'
 title: <serviceDebug>
 ms.date: 03/30/2017
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
-ms.openlocfilehash: 8236e581ee754a39ae32fa97084b8e2bfbaee652
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 7563969ef54e9644982c707ef1cd2e18ca7b41f6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153878"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786752"
 ---
 # \<serviceDebug>
 

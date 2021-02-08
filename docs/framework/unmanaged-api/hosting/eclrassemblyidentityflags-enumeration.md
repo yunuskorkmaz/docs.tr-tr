@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ECLRAssemblyIdentityFlags sabit listesi'
 title: ECLRAssemblyIdentityFlags Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d1e0b654-ccaf-4fa2-9aa3-8e007813c84d
 topic_type:
 - apiref
-ms.openlocfilehash: c3fed9166d95c0ca71ac44f5447b95eee97af310
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d0211c6116b566964aeca29a52aede7e232f5556
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726840"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785588"
 ---
 # <a name="eclrassemblyidentityflags-enumeration"></a>ECLRAssemblyIdentityFlags Numaralandırması
 
@@ -35,7 +36,7 @@ typedef enum _CLRAssemblyIdentityFlags {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT`|Kimlik kurallı.|  
   

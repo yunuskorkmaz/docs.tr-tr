@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: EClrOperation numaralandırması'
 title: EClrOperation Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5aef6808-5aac-4b2f-a2c7-fee1575c55ed
 topic_type:
 - apiref
-ms.openlocfilehash: c24e4557695d26666682ee385131abaab707a24d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9f75762a400955b5f36fb2a337f283e36a32658c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720717"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785568"
 ---
 # <a name="eclroperation-enumeration"></a>EClrOperation Numaralandırması
 
@@ -41,7 +42,7 @@ typedef enum {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`OPR_AppDomainRudeUnload`|Ana bilgisayar, <xref:System.AppDomain> normal olmayan (Rude) bir biçimde kaldırıldığında gerçekleştirilecek ilke eylemlerini belirtebilir.|  
 |`OPR_AppDomainUnload`|Ana bilgisayar, kaldırıldığında gerçekleştirilecek ilke eylemlerini belirtebilir <xref:System.AppDomain> .|  

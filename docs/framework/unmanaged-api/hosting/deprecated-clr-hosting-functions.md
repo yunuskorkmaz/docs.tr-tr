@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: kullanım dışı CLR Barındırma Işlevleri'
 title: Kullanım Dışı CLR Barındırma İşlevleri
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - .NET Framework 2.0, hosting global static functions
 - hosting global static functions [.NET Framework], version 2.0
 ms.assetid: 91fbbb35-e543-4814-b806-371cebae8c5a
-ms.openlocfilehash: 9e19502672973f292991b72c7ea9b4fdc17f5707
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3d16b5829e29c5c963f4790bbb3be7adcaeedbfc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95673130"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785672"
 ---
 # <a name="deprecated-clr-hosting-functions"></a>Kullanım Dışı CLR Barındırma İşlevleri
 

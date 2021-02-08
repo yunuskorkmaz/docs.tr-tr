@@ -1,4 +1,5 @@
 ---
+description: ': ICLRRuntimeHost:: ExecuteInDefaultAppDomain yöntemi hakkında daha fazla bilgi edinin'
 title: ICLRRuntimeHost::ExecuteInDefaultAppDomain Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 30b5cf9a-a762-4bd4-be12-d6c1442b78b1
 topic_type:
 - apiref
-ms.openlocfilehash: df0b2d96963ad03e04bd8770d8a8078c6c20b8ff
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0fae9be69cf67da252dcdb423432ec922c0b00ac
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728877"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785145"
 ---
 # <a name="iclrruntimehostexecuteindefaultappdomain-method"></a>ICLRRuntimeHost::ExecuteInDefaultAppDomain Yöntemi
 
 Belirtilen yönetilen derlemede belirtilen türde belirtilen metodu çağırır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT ExecuteInDefaultAppDomain (  
@@ -57,7 +58,7 @@ HRESULT ExecuteInDefaultAppDomain (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`ExecuteInDefaultAppDomain` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  

@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: <disableFusionUpdatesFromADManager> öğesi'
 title: <disableFusionUpdatesFromADManager> Öğesi
 ms.date: 03/30/2017
 helpviewer_keywords:
 - disableFusionUpdatesFromADManager element
 - <disableFusionUpdatesFromADManager> element
 ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
-ms.openlocfilehash: c3971379b358ae16fc463df2b8d6288cf8881391
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c3b5758a12fc78c67ec0a4a9631361808724e72a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91205041"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787090"
 ---
 # <a name="disablefusionupdatesfromadmanager-element"></a>\<disableFusionUpdatesFromADManager> Öğesi
 

@@ -1,15 +1,16 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: ekleme başarısız. Yinelenen anahtar değeri sağlandı'
 title: Ekleme başarısız oldu. Yinelenen anahtar değeri sağlandı
 ms.date: 07/20/2015
 f1_keywords:
 - vbrCollection_DuplicateKey
 ms.assetid: 7b1d6e6c-a69d-4713-a19d-ae1534a60464
-ms.openlocfilehash: 00ee39d97b9e68f972a7a07b5872457a09f3acee
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: af669f2cdc503970467d9a625842fe306959e374
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91083962"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787415"
 ---
 # <a name="add-failed-duplicate-key-value-supplied"></a>Ekleme başarısız oldu. Yinelenen anahtar değeri sağlandı
 

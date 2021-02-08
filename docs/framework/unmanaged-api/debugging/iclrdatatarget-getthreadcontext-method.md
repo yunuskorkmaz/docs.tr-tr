@@ -1,4 +1,5 @@
 ---
+description: ': ICLRDataTarget:: GetThreadContext metodu hakkında daha fazla bilgi edinin'
 title: ICLRDataTarget::GetThreadContext Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: b9d8c3b5-3a2e-4225-95d4-dd052c4532c3
 topic_type:
 - apiref
-ms.openlocfilehash: 35b7bff5d4d778a429ddc1dcd0206e6e8970ee4f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 210f4294aed31307557db419a0fb567cc71d4354
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95703505"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785698"
 ---
 # <a name="iclrdatatargetgetthreadcontext-method"></a>ICLRDataTarget::GetThreadContext Metodu
 
 Hedef işlemde verilen iş parçacığı için geçerli yürütme bağlamını alır. Bu yöntem, ortak dil çalışma zamanı veri erişim Hizmetleri tarafından çağrılır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetThreadContext (  

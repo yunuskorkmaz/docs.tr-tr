@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: öğeleri sırayla gruplandırma'
 title: Dizideki Öğeleri Gruplama
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1d50c8b4-f550-4775-bbb6-eab6e874cb43
-ms.openlocfilehash: d11d6f6231c1871cd54f0b0e3f6f862dc10b328b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: bc9a4d042ed0edb090f0530ebb24d99a5390c882
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91194355"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786075"
 ---
 # <a name="group-elements-in-a-sequence"></a>Dizideki Öğeleri Gruplama
 

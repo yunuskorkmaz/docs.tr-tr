@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <soapProcessing>'
 title: <soapProcessing>
 ms.date: 03/30/2017
 ms.assetid: e8707027-e6b8-4539-893d-3cd7c13fbc18
-ms.openlocfilehash: 0728e22205d4ac2c7674f7690e142aed51d42440
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1355dc5b344891d7b6ed0fa0d5c64f877ec0ba48
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399536"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786674"
 ---
 # \<soapProcessing>
 
@@ -20,7 +21,7 @@ Farklı bağlama türleri ve ileti sürümleri arasındaki iletileri sıralamak 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-endpointbehaviors.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<soapProcessing>**
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <soapProcessing processMessages="true|false" />
@@ -32,7 +33,7 @@ Farklı bağlama türleri ve ileti sürümleri arasındaki iletileri sıralamak 
   
 ### <a name="attributes"></a>Öznitelikler  
   
-|                   | Açıklama |
+|                   | Description |
 | ----------------- | ----------- |
 | `processMessages` | SOAP iletisi sürümleri arasında iletilerin sıralanması gerekip gerekmediğini belirten bir Boole değeri. |
 
@@ -42,7 +43,7 @@ Yok
 
 ### <a name="parent-elements"></a>Üst öğeler
 
-|     | Açıklama |
+|     | Description |
 | --- | ----------- |
 | [**\<behavior>**](behavior-of-endpointbehaviors.md) | Bir uç nokta davranışı belirtir. |
 

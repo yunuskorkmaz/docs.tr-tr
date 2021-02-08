@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: varlıkları seri hale getirme'
 title: 'Nasıl yapılır: Varlıkları Serileştirilebilir Hale Getirme'
 ms.date: 03/30/2017
 ms.assetid: a6c5bf6e-064a-4f77-b74c-76b3a5dec309
-ms.openlocfilehash: f4528cab21ac678f5d06717d0ce6e7ff7e77d3e4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: cb2253d7933f3584543b4b030bc8b5aa3cc62921
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203507"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785945"
 ---
 # <a name="how-to-make-entities-serializable"></a>Nasıl yapılır: Varlıkları Serileştirilebilir Hale Getirme
 

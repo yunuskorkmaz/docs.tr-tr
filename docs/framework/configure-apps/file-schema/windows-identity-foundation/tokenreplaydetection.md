@@ -1,14 +1,15 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <tokenReplayDetection>'
 title: <tokenReplayDetection>
 ms.date: 03/30/2017
 ms.assetid: ac3f588e-5f75-4275-b969-2d492ecc3b47
 author: BrucePerlerMS
-ms.openlocfilehash: df512960b522f17dc9247bb5959e246c8c1f15b8
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a8a6b754a3282afe4f2932296b06b84c09fb6f1a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169810"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786544"
 ---
 # \<tokenReplayDetection>
 

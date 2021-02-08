@@ -1,4 +1,5 @@
 ---
+description: ': GetVersionFromProcess Işlevi hakkında daha fazla bilgi edinin'
 title: GetVersionFromProcess İşlevi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a9f7f824-64a1-408d-8607-91c7f19d21fe
 topic_type:
 - apiref
-ms.openlocfilehash: da0d159da6eef7745c1fa7f7320d5e1355f6e413
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ab665d2984f79baf049009690b36782528094937
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721887"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785256"
 ---
 # <a name="getversionfromprocess-function"></a>GetVersionFromProcess İşlevi
 
@@ -28,7 +29,7 @@ Belirtilen işlem tanıtıcısıyla ilişkili ortak dil çalışma zamanının (
   
  Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetVersionFromProcess (  
@@ -57,7 +58,7 @@ HRESULT GetVersionFromProcess (
 
  Bu yöntem, aşağıdaki değerlere ek olarak, WinError. h içinde tanımlanan standart bileşen nesne modeli (COM) hata kodlarını döndürür.  
   
-|Dönüş kodu|Açıklama|  
+|Dönüş kodu|Description|  
 |-----------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
 |E_INVALIDARG|`pVersion` null ve `cchBuffer` null ya da tam tersi.<br /><br /> -veya-<br /><br /> `hProcess` bir işleme geçerli bir tanıtıcı değil.<br /><br /> -veya-<br /><br /> CLR yüklü değil.|  

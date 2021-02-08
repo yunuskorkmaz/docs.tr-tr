@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: (Entity SQL)'
 title: (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-ms.openlocfilehash: 8affac82fb1813aa0282540b5dc2f47d42234a1b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e8f7906669b3ea9ee5c3be307bd31a2043b2650e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148067"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786348"
 ---
 # <a name="from-entity-sql"></a>(Entity SQL)
 

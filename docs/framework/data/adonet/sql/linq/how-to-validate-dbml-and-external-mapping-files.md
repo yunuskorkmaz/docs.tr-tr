@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: nasıl yapılır: DBML ve dış eşleme dosyalarını doğrulama'
 title: 'Nasıl yapılır: DBML ve Dış Eşleme Dosyalarını Doğrulama'
 ms.date: 03/30/2017
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
-ms.openlocfilehash: b5901705ac7c0692025ff1f4a4b78f976d62176d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 46e5c787bef8e152020fc97631ef8c1c4928fe74
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793045"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785789"
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>Nasıl yapılır: DBML ve Dış Eşleme Dosyalarını Doğrulama
 
@@ -21,7 +22,7 @@ Değiştirdiğiniz dış eşleme dosyaları ve. dbml dosyaları kendi şema tan�
 
 2. **Dosya Aç** iletişim kutusunda, doğrulamak istediğiniz. dbml veya XML eşleme dosyasına tıklayın.
 
-    Dosya **XML düzenleyicisinde**açılır.
+    Dosya **XML düzenleyicisinde** açılır.
 
 3. Pencereye sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
@@ -68,7 +69,7 @@ Bazı nedenlerle uygun. xsd dosyası **XML şemaları** iletişim kutusunda gör
 6. **Kodlama** kutusunda **Unicode**' u seçin.
 
     > [!IMPORTANT]
-    > Bu seçim, Unicode-16 bayt sıra işaretçisinin (`FFFE`) metin dosyasına eklenmiş olmasını sağlar.
+    > Bu seçim, Unicode-16 bayt sıra işaretçisinin ( `FFFE` ) metin dosyasına eklenmiş olmasını sağlar.
 
 7. **Dosya adı** kutusunda. xsd uzantılı bir dosya adı oluşturun.
 

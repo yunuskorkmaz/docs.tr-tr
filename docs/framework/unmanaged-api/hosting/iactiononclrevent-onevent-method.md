@@ -1,4 +1,5 @@
 ---
+description: ': IActionOnCLREvent:: OnEvent yöntemi hakkında daha fazla bilgi edinin'
 title: IActionOnCLREvent::OnEvent Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 0970f10c-4304-4c12-91c0-83e51455afb4
 topic_type:
 - apiref
-ms.openlocfilehash: 3bfcb01e30b4cb33ec9276f1d3c6ac2f3bde4b58
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 163956ab319eb34d58da23d2c4ef2a6b592aab0d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721770"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785152"
 ---
 # <a name="iactiononclreventonevent-method"></a>IActionOnCLREvent::OnEvent Yöntemi
 
 [ICLROnEventManager:: RegisterActionOnEvent](iclroneventmanager-registeractiononevent-method.md) metoduna yapılan bir çağrı kullanılarak kaydedilmiş olaylarda geri çağırmaları gerçekleştirir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT OnEvent (  
@@ -45,7 +46,7 @@ HRESULT OnEvent (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`OnEvent` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  

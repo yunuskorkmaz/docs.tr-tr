@@ -1,4 +1,5 @@
 ---
+description: ': ESymbolReadingPolicy numaralandırması hakkında daha fazla bilgi edinin'
 title: ESymbolReadingPolicy Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4dc6c80d-b694-480b-a378-d5b18420ce17
 topic_type:
 - apiref
-ms.openlocfilehash: 42ce1f02294db98c5c593a5f16de5226703d5f9d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e84c31343b589cb6019d88fafc9b94207c5f5892
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733717"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785425"
 ---
 # <a name="esymbolreadingpolicy-enumeration"></a>ESymbolReadingPolicy Numaralandırması
 
@@ -37,7 +38,7 @@ typedef enum {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`eSymbolReadingAlways`|Hata ayıklayıcının her zaman PDB dosyalarını okuduğunuzu belirtir.|  
 |`eSymbolReadingFullTrustOnly`|Hata ayıklayıcının yalnızca tam güven Derlemeleriyle ilişkili PDB dosyalarını okuması gerektiğini belirtir.|  

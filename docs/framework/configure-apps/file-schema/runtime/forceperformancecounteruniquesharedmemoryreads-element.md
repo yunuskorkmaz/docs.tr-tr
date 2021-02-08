@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: <forcePerformanceCounterUniqueSharedMemoryReads> öğesi'
 title: <forcePerformanceCounterUniqueSharedMemoryReads> Öğesi
 ms.date: 03/30/2017
 helpviewer_keywords:
 - forcePerformanceCounterUniqueSharedMemoryReads element
 - <forcePerformanceCounterUniqueSharedMemoryReads> element
 ms.assetid: 91149858-4810-4f65-9b48-468488172c9b
-ms.openlocfilehash: 719448ba3de2aca0621fc17b9fadbdd3b8588f2e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 63fe695cc993faa851a9ea3196294397d2992c45
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91178248"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787038"
 ---
 # <a name="forceperformancecounteruniquesharedmemoryreads-element"></a>\<forcePerformanceCounterUniqueSharedMemoryReads> Öğesi
 
@@ -66,7 +67,7 @@ enabled="true|false"/>
 > [!NOTE]
 > Öğesinin etkinleştirilmesi, `<forcePerformanceCounterUniqueSharedMemoryReads>` kategoriye özgü paylaşılan belleğin kullanılacağını garanti etmez. Enabled ayarı `true` yalnızca PerfCounter.dll CategoryOptions kayıt defteri ayarına başvuracak. CategoryOptions için varsayılan ayar, kategoriye özgü paylaşılan bellek kullanmaktır; Ancak, genel paylaşılan belleğin kullanılması gerektiğini belirtmek için CategoryOptions ' ı değiştirebilirsiniz.  
   
- CategoryOptions ayarını içeren kayıt defteri anahtarı HKEY_LOCAL_MACHINE \System\CurrentControlSet\Services \\<CategoryName \> \ performanceşeklindedir. Varsayılan olarak, CategoryOptions 3 olarak ayarlanır, bu da kategoriye özgü paylaşılan belleği kullanmak PerfCounter.dll bildirir. CategoryOptions 0 olarak ayarlandıysa, PerfCounter.dll genel paylaşılan belleği kullanır. Örnek verileri yalnızca oluşturulan örneğin adı, yeniden kullanılan örnekle aynıysa yeniden kullanılır. Tüm sürümler kategoriye yazabilecektir. Kategorili olarak 1 olarak ayarlanırsa, genel paylaşılan bellek kullanılır, ancak kategori adı, yeniden kullanılan kategoriyle aynı uzunluktadır sonra örnek verileri yeniden kullanılabilir.  
+ CategoryOptions ayarını içeren kayıt defteri anahtarı HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\\<CategoryName \> \ performanceşeklindedir. Varsayılan olarak, CategoryOptions 3 olarak ayarlanır, bu da kategoriye özgü paylaşılan belleği kullanmak PerfCounter.dll bildirir. CategoryOptions 0 olarak ayarlandıysa, PerfCounter.dll genel paylaşılan belleği kullanır. Örnek verileri yalnızca oluşturulan örneğin adı, yeniden kullanılan örnekle aynıysa yeniden kullanılır. Tüm sürümler kategoriye yazabilecektir. Kategorili olarak 1 olarak ayarlanırsa, genel paylaşılan bellek kullanılır, ancak kategori adı, yeniden kullanılan kategoriyle aynı uzunluktadır sonra örnek verileri yeniden kullanılabilir.  
   
  0 ve 1 ayarları, bellek sızıntılarına ve performans sayacı belleğinin doldurulmasına yol açabilir.  
   

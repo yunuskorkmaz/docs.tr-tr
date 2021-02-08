@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Işlev (Entity SQL)'
 title: Işlev (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 0bb88992-37ed-4991-ace5-55be612a2c4d
-ms.openlocfilehash: 4e06b5bf8a2ca62630666ab3e8ba35f0425e3988
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d61aafce03dc7b82b678f1eb107afb79c6c3ed2f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148041"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786322"
 ---
 # <a name="function-entity-sql"></a>Işlev (Entity SQL)
 
@@ -64,7 +65,7 @@ FUNCTION function-name
   
  `A()`  
   
- Daha fazla bilgi için bkz. [nasıl yapılır: Kullanıcı tanımlı bir Işlevi çağırma](/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100)).  
+ Daha fazla bilgi için bkz. [nasıl yapılır: çağrı User-Defined işlevi](/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100)).  
   
  İşlevler ayrıca modelin kendisinde de belirtilebilir. Modelde belirtilen işlevler, komutta satır içi olarak belirtilen işlevlerle aynı şekilde yürütülür. Daha fazla bilgi için bkz. [Kullanıcı tanımlı işlevler](user-defined-functions-entity-sql.md).  
   

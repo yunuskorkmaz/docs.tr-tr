@@ -1,4 +1,5 @@
 ---
+description: ': ICLRRuntimeHost:: SetHostControl yöntemi hakkında daha fazla bilgi edinin'
 title: ICLRRuntimeHost::SetHostControl Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 6136be87-e631-4756-81ed-74b66581bad4
 topic_type:
 - apiref
-ms.openlocfilehash: 32483be43d4d4fe9d185c091e15a13c6feb95600
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e51c61666716badc7214f9a74ad11aa646f2316c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728829"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785120"
 ---
 # <a name="iclrruntimehostsethostcontrol-method"></a>ICLRRuntimeHost::SetHostControl Yöntemi
 
 Ortak dil çalışma zamanının (CLR), ana bilgisayarın [IHostControl arabirimi](ihostcontrol-interface.md)uygulamasını almak için kullanabileceği arabirim işaretçisini ayarlar.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT SetHostControl(  
@@ -41,7 +42,7 @@ HRESULT SetHostControl(
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`SetHostControl` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  

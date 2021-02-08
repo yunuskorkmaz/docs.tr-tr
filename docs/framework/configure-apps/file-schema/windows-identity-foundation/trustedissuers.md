@@ -1,14 +1,15 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <trustedIssuers>'
 title: <trustedIssuers>
 ms.date: 03/30/2017
 ms.assetid: d818c917-07b4-40db-9801-8676561859fd
 author: BrucePerlerMS
-ms.openlocfilehash: 08cddd19f40f039f86e100cc7ee6a78633502eb2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8789eaa38666e22f6a58b3178103aef4408677b7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91185567"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786518"
 ---
 # \<trustedIssuers>
 

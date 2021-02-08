@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: LINQ to SQL komutları görüntüleme'
 title: 'Nasıl yapılır: LINQ to SQL Komutlarını Görüntüleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1decb05e-37ad-4ed6-ab2f-071eb4c4f628
-ms.openlocfilehash: e703ea9be3ead50afae9b8f42aaa4f54a292c23c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 480e7c1cbcceb09f0d727d03569d6277e0dd754b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169446"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785997"
 ---
 # <a name="how-to-display-linq-to-sql-commands"></a>Nasıl yapılır: LINQ to SQL Komutlarını Görüntüleme
 

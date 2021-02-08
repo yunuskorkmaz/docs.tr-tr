@@ -1,16 +1,17 @@
 ---
+description: ': Nasıl yapılır: DataContext düzeyinde filtreleme hakkında daha fazla bilgi edinin'
 title: 'Nasıl yapılır: DataContext Düzeyinde Filtreleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 15505cd7-0df2-427a-9f86-e0f96f60ee2e
-ms.openlocfilehash: 6fe79febd41c040e430dd772b87ca5624824bb65
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ffb287ac1ef8cc19044ec3d519e745f905fe213d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173477"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785984"
 ---
 # <a name="how-to-filter-at-the-datacontext-level"></a>Nasıl yapılır: DataContext Düzeyinde Filtreleme
 
