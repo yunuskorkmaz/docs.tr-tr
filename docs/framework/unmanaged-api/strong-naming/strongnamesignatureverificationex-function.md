@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Strongnamesignaturedoğrulamaları Icationex Işlevi'
 title: StrongNameSignatureVerificationEx İşlevi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cfe4b634-18bf-44b8-9773-d94fb7e8a480
 topic_type:
 - apiref
-ms.openlocfilehash: 27417c379411e242c48d6d9b0c99de833f7ede8a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9e20044e9c3caef8c2276ac5f390269ee978d55b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719274"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794539"
 ---
 # <a name="strongnamesignatureverificationex-function"></a>StrongNameSignatureVerificationEx İşlevi
 
@@ -28,7 +29,7 @@ Belirtilen yoldaki Derleme bildiriminin tanımlayıcı ad imzası içerip içerm
   
  Bu işlev kullanım dışı bırakıldı. Bunun yerine [ICLRStrongName:: Strongnamesignaturedoğrulamaları Icationex](../hosting/iclrstrongname-strongnamesignatureverificationex-method.md) metodunu kullanın.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 BOOLEAN StrongNameSignatureVerificationEx (  

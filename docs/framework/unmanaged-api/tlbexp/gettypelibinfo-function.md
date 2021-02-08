@@ -1,4 +1,5 @@
 ---
+description: ': Gettypeliınfo Işlevi hakkında daha fazla bilgi'
 title: GetTypeLibInfo İşlevi
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: a1c4d165-9bdc-4ca8-940e-292d4ffcc338
 topic_type:
 - apiref
-ms.openlocfilehash: e9f6ae9a0fcd6651395c54c2e44973e53668c1ac
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 61a830f3ce81345634da377f6fc815a307700e9e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95708328"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794474"
 ---
 # <a name="gettypelibinfo-function"></a>GetTypeLibInfo İşlevi
 
 [Tlibattr](/windows/win32/api/oaidl/ns-oaidl-tlibattr) yapısını inceleyerek belirtilen tür kitaplığıyla ilgili bilgileri döndürür.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetTypeLibInfo(  

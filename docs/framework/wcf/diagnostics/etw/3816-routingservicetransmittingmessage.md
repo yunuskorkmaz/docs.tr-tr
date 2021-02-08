@@ -1,13 +1,14 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: 3816-RoutingServiceTransmittingMessage'
 title: 3816 - RoutingServiceTransmittingMessage
 ms.date: 03/30/2017
 ms.assetid: a7ee6e3b-4a02-47bd-b004-46abb6dd820e
-ms.openlocfilehash: c8d4cc9ec2ada6b873d0a74e8db8636b18ab80d0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7b0c54e6804c42fe4813f0a0b4f17465394e1bd5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96284686"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794149"
 ---
 # <a name="3816---routingservicetransmittingmessage"></a>3816 - RoutingServiceTransmittingMessage
 
@@ -17,10 +18,10 @@ ms.locfileid: "96284686"
 |-|-|  
 |ID|3816|  
 |Anahtar sözcükler|Yönlendirme hizmetleri|  
-|Düzey|Bilgi|  
+|Level|Bilgi|  
 |Kanal|Microsoft-Windows-Application Server-uygulamalar/hata ayıkla|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bu olay, yönlendirme hizmeti bir ileti aktarırken yayınlanır.  
   

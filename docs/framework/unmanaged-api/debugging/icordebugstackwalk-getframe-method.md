@@ -1,4 +1,5 @@
 ---
+description: ': Icordebugstackizlenecek yol:: GetFrame yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugStackWalk::GetFrame Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 4083b505-5b59-44fb-8c5d-129db6a96c10
 topic_type:
 - apiref
-ms.openlocfilehash: 452635764794e01858baab10464a03c966a55271
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b00ddb6a475aff4263a922f5a20b866cd0e1b2ed
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711945"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794747"
 ---
 # <a name="icordebugstackwalkgetframe-method"></a>ICorDebugStackWalk::GetFrame Metodu
 
 [Icordebugstackyürüme](icordebugstackwalk-interface.md) nesnesinde geçerli kareyi alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetFrame([out] ICorDebugFrame ** pFrame);  
@@ -41,7 +42,7 @@ HRESULT GetFrame([out] ICorDebugFrame ** pFrame);
 
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|Çalışma zamanı geçerli çerçeveyi başarıyla döndürdü.|  
 |E_FAIL|Geçerli çerçeve döndürülmedi.|  
@@ -49,7 +50,7 @@ HRESULT GetFrame([out] ICorDebugFrame ** pFrame);
 |E_INVALIDARG|`pFrame` null.|  
 |CORDBG_E_PAST_END_OF_STACK|Çerçeve işaretçisi zaten yığının sonunda. Bu nedenle, ek çerçevelere erişilemez.|  
   
-## <a name="exceptions"></a>Özel Durumlar  
+## <a name="exceptions"></a>Özel durumlar  
   
 ## <a name="remarks"></a>Açıklamalar  
 

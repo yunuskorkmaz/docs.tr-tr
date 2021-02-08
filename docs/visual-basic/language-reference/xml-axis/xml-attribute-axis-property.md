@@ -1,4 +1,5 @@
 ---
+description: ': XML özniteliği eksen özelliği (Visual Basic) hakkında daha fazla bilgi'
 title: XML Özniteliği Axis Özelliği
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - XML axis [Visual Basic], attribute
 - XML [Visual Basic], accessing
 ms.assetid: 7a4777e1-0618-4de9-9510-fb9ace2bf4db
-ms.openlocfilehash: 9eddd132b2d4dd6ffbd935a0c8c57a03a3d65435
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 2085ef2151e7aef7c5642e0ba9ac2e6fa90bfd4e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869440"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795176"
 ---
 # <a name="xml-attribute-axis-property-visual-basic"></a>XML Özniteliği Axis Özelliği (Visual Basic)
 
 Bir nesne için bir özniteliğin değerine <xref:System.Xml.Linq.XElement> veya nesne koleksiyonundaki ilk öğeye erişim sağlar <xref:System.Xml.Linq.XElement> .  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 object.@attribute  
@@ -43,7 +44,7 @@ object.@<attribute>
  `attribute`  
  Gereklidir. [:] Biçiminde erişebileceğiniz özniteliğin adı `prefix` `name` .  
   
-|Bölüm|Açıklama|  
+|Bölüm|Description|  
 |----------|-----------------|  
 |`prefix`|İsteğe bağlı. Öznitelik için XML ad alanı ön eki. Bir ifadesiyle tanımlanmış bir genel XML ad alanı olmalıdır `Imports` .|  
 |`name`|Gereklidir. Yerel öznitelik adı. [BELIRTILEN XML öğelerinin ve özniteliklerin adlarına](../../programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)bakın.|  

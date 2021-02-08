@@ -1,15 +1,16 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: taşma (Visual Basic Run-Time hata)'
 title: Taşma (Visual Basic Çalışma Süresi Hatası)
 ms.date: 07/20/2015
 f1_keywords:
 - vbrERRID_Overflow
 ms.assetid: c6a23279-3086-412a-bcff-ff8ed2cb8c6f
-ms.openlocfilehash: e287d6c24eca75d8bf20181a201056f467d6fc4e
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: a01a8916e09f9278dbdf6d594c5ef84d63b04c51
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90871216"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795462"
 ---
 # <a name="overflow-visual-basic-run-time-error"></a>Taşma (Visual Basic Çalışma Süresi Hatası)
 

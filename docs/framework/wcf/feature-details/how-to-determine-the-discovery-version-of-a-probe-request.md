@@ -1,13 +1,14 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: nasıl yapılır: bir araştırma Isteğinin keşif sürümünü belirleme'
 title: 'Nasıl yapılır: Bir Araştırma İsteğinin Keşif sürümünü Belirleme'
 ms.date: 03/30/2017
 ms.assetid: b3c4e2e2-2957-4074-ae6a-776a5ca84278
-ms.openlocfilehash: 2b7e42714ae1d16a84bcb6f0fc79cf5b376a7a16
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c41283cb84d75dd2dbf7e86da0dec075ab8b6635
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595420"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793798"
 ---
 # <a name="how-todetermine-the-discovery-version-of-a-probe-request"></a>Nasıl yapılır: Bir Araştırma İsteğinin Keşif sürümünü Belirleme
 

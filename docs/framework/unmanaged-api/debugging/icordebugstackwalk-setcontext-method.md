@@ -1,4 +1,5 @@
 ---
+description: ': Icordebugstackizlenecek yol:: SetContext yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugStackWalk::SetContext Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: bac0b156-31a3-4e7f-be4d-ab21789c81f1
 topic_type:
 - apiref
-ms.openlocfilehash: 1ae9fc1f1154866945d40cd63042fa8a43b88905
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 20e18460d237a63e4c2695b9e7cbfa766ed3908f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95677303"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794721"
 ---
 # <a name="icordebugstackwalksetcontext-method"></a>ICorDebugStackWalk::SetContext Yöntemi
 
 [Icordebugstackyürüme](icordebugstackwalk-interface.md) nesnesinin geçerli bağlamını iş parçacığı için geçerli bir bağlam olarak ayarlar.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT SetContext([in] CorDebugSetContextFlag flag,  
@@ -49,14 +50,14 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
 
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`ICorDebugStackWalk`Nesnenin bağlamı başarıyla ayarlandı.|  
 |E_FAIL|`ICorDebugStackWalk`Nesnenin bağlamı ayarlanmadı.|  
 |E_INVALIDARG|Bağlam null.|  
 |HRESULT_FROM_WIN32 (ERROR_INSUFFICIENT_BUFFER)|Bağlam arabelleği çok küçük.|  
   
-## <a name="exceptions"></a>Özel Durumlar  
+## <a name="exceptions"></a>Özel durumlar  
   
 ## <a name="remarks"></a>Açıklamalar  
 

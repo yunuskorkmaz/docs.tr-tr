@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 223-Operationhatalı'
 title: 223 - OperationFaulted
 ms.date: 03/30/2017
 ms.assetid: 2f7d89d7-3a6a-40fe-9610-5424eb6bbf61
-ms.openlocfilehash: 310e91320d27dd9817302fc14ef088d180152b73
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e4155516e07568d4ee4ca76d63754ec4171e1064
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96263080"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794292"
 ---
 # <a name="223---operationfaulted"></a>223 - OperationFaulted
 
@@ -17,10 +18,10 @@ ms.locfileid: "96263080"
 |-|-|  
 |ID|223|  
 |Anahtar sözcükler|EndToEndMonitoring, HealthMonitoring, sorun giderme, ServiceModel|  
-|Düzey|Uyarı|  
+|Level|Uyarı|  
 |Kanal|Microsoft-Windows-uygulama sunucusu-uygulamalar/analitik|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bu olay, hizmet modeli varsayılan, `OperationInvoker` yöntemini çağırırken öğesinden türetilen bir özel durumla karşılaştıysa yayınlanır `FaultException` .  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96263080"
   
 ## <a name="details"></a>Ayrıntılar  
   
-|Veri öğesi adı|Veri öğesi türü|Açıklama|  
+|Veri öğesi adı|Veri öğesi türü|Description|  
 |--------------------|--------------------|-----------------|  
 |MethodName|`xs:string`|Tarafından çağrılan metodun CLR adı `OperationInvoker` .|  
 |Süre|`xs:long`|Yöntemi çağırmak için geçen milisaniye cinsinden süre `OperationInvoker` .|  

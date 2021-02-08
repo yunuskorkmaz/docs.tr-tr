@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: alt Ifade (Visual Basic)'
 title: Sub İfadesi
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - Sub Expression [Visual Basic]
 - subroutines [Visual Basic], sub expressions
 ms.assetid: 36b6bfd1-6539-4d8f-a5eb-6541a745ffde
-ms.openlocfilehash: e564fa3f717fc1a9f4e9961d9b3e961912a4d56b
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: e47aa8f9707701b5fd9d90fb3fabb31e9c052b53
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873326"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795293"
 ---
 # <a name="sub-expression-visual-basic"></a>Alt İfade (Visual Basic)
 
 Bir altyordam lambda ifadesi tanımlayan parametreleri ve kodu bildirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 Sub ( [ parameterlist ] ) statement  
@@ -29,7 +30,7 @@ End Sub
   
 ## <a name="parts"></a>Bölümler  
   
-|Terim|Tanım|  
+|Süre|Tanım|  
 |---|---|  
 |`parameterlist`|İsteğe bağlı. Yordamın parametrelerini temsil eden yerel değişken adlarının bir listesi. Liste boş olduğunda bile parantezler mevcut olmalıdır. Daha fazla bilgi için bkz. [parametre listesi](../statements/parameter-list.md).|  
 |`statement`|Gereklidir. Tek bir ifade.|  

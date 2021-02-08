@@ -1,13 +1,14 @@
 ---
+description: "Şu konuda daha fazla bilgi edinin: nasıl yapılır: WAS 'da bir WCF hizmeti barındırma"
 title: "Nasıl yapılır: WAS'de WCF Hizmeti Barındırma"
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: 640cfdd7525fb9877c6f3551a1456fed29c99b8a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: dcc5d553cc864050c5d1641fa86effc5a8129d4c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96244411"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793772"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Nasıl yapılır: WAS'de WCF Hizmeti Barındırma
 

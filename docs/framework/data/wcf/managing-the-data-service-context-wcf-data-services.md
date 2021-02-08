@@ -1,15 +1,18 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: veri hizmeti bağlamını yönetme (WCF Veri Hizmetleri)'
 title: Veri hizmeti bağlamını yönetme (WCF Veri Hizmetleri)
 ms.date: 03/30/2017
 ms.assetid: 15b19d09-7de7-4638-9556-6ef396cc45ec
-ms.openlocfilehash: e67f7280bc85c7577f960707659890f59470e535
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 713136245ae2d7d27010cc527efad83979929761
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91194303"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795020"
 ---
 # <a name="managing-the-data-service-context-wcf-data-services"></a>Veri hizmeti bağlamını yönetme (WCF Veri Hizmetleri)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 <xref:System.Data.Services.Client.DataServiceContext>Sınıfı, belirtilen bir veri hizmetine göre desteklenen işlemleri kapsüller. OData Hizmetleri durum bilgisiz olmasına karşın bağlam değildir. Bu nedenle, <xref:System.Data.Services.Client.DataServiceContext> değişiklik yönetimi gibi özellikleri desteklemek için veri hizmeti ile etkileşimler arasında istemcideki durumu korumak için sınıfını kullanabilirsiniz. Bu sınıf Ayrıca kimlikleri yönetir ve değişiklikleri izler.  
   
@@ -40,7 +43,7 @@ ms.locfileid: "91194303"
   
 ### <a name="post-tunneling"></a>Tünel SONRASı  
 
- Varsayılan olarak, istemci kitaplığı POST, GET, PUT/MERGE/PATCH ve DELETE için karşılık gelen HTTP yöntemlerini kullanarak bir OData hizmetine oluşturma, okuma, güncelleştirme ve silme istekleri gönderir. Bu, temsili durum aktarımının (REST) temel ilkelerini barındırır. Ancak, her Web sunucusu uygulamasında HTTP yöntemlerinin tam kümesini desteklememektedir. Bazı durumlarda, desteklenen yöntemler yalnızca GET ve POST ile sınırlandırılmış olabilir. Bu, bir güvenlik duvarı gibi bir aracı belirli yöntemlerle istekleri engellediğinde meydana gelebilir. GET ve POST yöntemleri en sık desteklendiğinden, OData bir POST isteği kullanarak desteklenmeyen HTTP yöntemlerini yürütmek için bir yol önerir. *Yöntem tünel oluşturma* veya *gönderi tüneli*olarak bilinen bu, istemcinin özel üstbilgide BELIRTILEN gerçek yöntemle bir post isteği göndermesini sağlar `X-HTTP-Method` . İstekler için GÖNDERI tünelini etkinleştirmek üzere <xref:System.Data.Services.Client.DataServiceContext.UsePostTunneling%2A> <xref:System.Data.Services.Client.DataServiceContext> örnekteki özelliğini olarak ayarlayın `true` .  
+ Varsayılan olarak, istemci kitaplığı POST, GET, PUT/MERGE/PATCH ve DELETE için karşılık gelen HTTP yöntemlerini kullanarak bir OData hizmetine oluşturma, okuma, güncelleştirme ve silme istekleri gönderir. Bu, temsili durum aktarımının (REST) temel ilkelerini barındırır. Ancak, her Web sunucusu uygulamasında HTTP yöntemlerinin tam kümesini desteklememektedir. Bazı durumlarda, desteklenen yöntemler yalnızca GET ve POST ile sınırlandırılmış olabilir. Bu, bir güvenlik duvarı gibi bir aracı belirli yöntemlerle istekleri engellediğinde meydana gelebilir. GET ve POST yöntemleri en sık desteklendiğinden, OData bir POST isteği kullanarak desteklenmeyen HTTP yöntemlerini yürütmek için bir yol önerir. *Yöntem tünel oluşturma* veya *gönderi tüneli* olarak bilinen bu, istemcinin özel üstbilgide BELIRTILEN gerçek yöntemle bir post isteği göndermesini sağlar `X-HTTP-Method` . İstekler için GÖNDERI tünelini etkinleştirmek üzere <xref:System.Data.Services.Client.DataServiceContext.UsePostTunneling%2A> <xref:System.Data.Services.Client.DataServiceContext> örnekteki özelliğini olarak ayarlayın `true` .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

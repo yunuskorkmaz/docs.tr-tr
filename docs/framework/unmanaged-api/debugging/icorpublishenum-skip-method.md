@@ -1,4 +1,5 @@
 ---
+description: ': ICorPublishEnum:: Skip yöntemi hakkında daha fazla bilgi edinin'
 title: ICorPublishEnum::Skip Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 1680ec06-4ab0-447e-93ad-cdb8693fde5c
 topic_type:
 - apiref
-ms.openlocfilehash: 888cc40c194cb86b0f898f5556ea14b8897e08c7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f0124681c8051a5c05c1caf3edd06c697da486e5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95693313"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794610"
 ---
 # <a name="icorpublishenumskip-method"></a>ICorPublishEnum::Skip Yöntemi
 
 İmleci belirtilen öğe sayısına göre numaralandırmada ileri doğru kaydırır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT Skip (  

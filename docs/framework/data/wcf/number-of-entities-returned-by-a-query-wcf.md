@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: bir sorgu tarafından döndürülen varlıkların sayısını belirleme (WCF Veri Hizmetleri)'
 title: 'Nasıl yapılır: bir sorgu tarafından döndürülen varlıkların sayısını belirleme (WCF Veri Hizmetleri)'
 ms.date: 03/30/2017
 dev_langs:
@@ -7,14 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, row count
 ms.assetid: 03d41a82-df95-40ac-8439-a6c327d37ba8
-ms.openlocfilehash: 0513d7cdb3ab8de8cd8a73528f7e6038a0e4faed
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f8eb305bc515d1d69025ce3bcd0a6a9f3baf8232
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91194290"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794994"
 ---
 # <a name="how-to-determine-the-number-of-entities-returned-by-a-query-wcf-data-services"></a>Nasıl yapılır: bir sorgu tarafından döndürülen varlıkların sayısını belirleme (WCF Veri Hizmetleri)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Veri Hizmetleri, bir sorgu URI 'SI tarafından belirtilen varlık kümesindeki varlıkların sayısını belirleyebilirsiniz. Bu sayı, sorgu sonucuyla birlikte veya bir tamsayı değeri olarak dahil edilebilir. Daha fazla bilgi için bkz. [veri hizmetini sorgulama](querying-the-data-service-wcf-data-services.md).  
   

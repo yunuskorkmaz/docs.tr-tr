@@ -1,4 +1,5 @@
 ---
+description: ': TryCast Işleci (Visual Basic) hakkında daha fazla bilgi'
 title: TryCast İşleci
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - TryCast keyword [Visual Basic]
 ms.assetid: d1ef5d47-fef4-491e-b014-1d910628f65c
-ms.openlocfilehash: dc4807781f9e1aaf894016952911bd7b32c42948
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 5b941ec40c4ba0198fced64d0ef039605efad472
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875316"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795254"
 ---
 # <a name="trycast-operator-visual-basic"></a>TryCast İşleci (Visual Basic)
 

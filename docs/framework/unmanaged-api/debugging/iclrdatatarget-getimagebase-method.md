@@ -1,4 +1,5 @@
 ---
+description: ': ICLRDataTarget:: GetImageBase yöntemi hakkında daha fazla bilgi edinin'
 title: ICLRDataTarget::GetImageBase Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 091c5f32-c160-49e3-a75f-4692e084c8e4
 topic_type:
 - apiref
-ms.openlocfilehash: f1b9f55a383f1deb867c6b3e2fa385a82158d1e9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 34e8341b219aaa184b4894c631f854e0a31921d6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95703583"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794877"
 ---
 # <a name="iclrdatatargetgetimagebase-method"></a>ICLRDataTarget::GetImageBase Yöntemi
 
 Belirtilen görüntünün taban bellek adresini alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetImageBase (  

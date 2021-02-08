@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: daraltma (Visual Basic)'
 title: Narrowing
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Narrowing keyword [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: a207ee91-aca4-4771-b4e2-713f029bf2bb
-ms.openlocfilehash: 77515357ac9dc972992df09c471695aad13985c4
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 1dd9185ccf30fb6f9dc9360f75450c2533ab90e5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867937"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795358"
 ---
 # <a name="narrowing-visual-basic"></a>Daraltma (Visual Basic)
 

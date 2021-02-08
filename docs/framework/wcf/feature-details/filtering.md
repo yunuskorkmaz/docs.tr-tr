@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi için: filtreleme'
 title: Filtreleme
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-ms.openlocfilehash: cc95852a5eb191befe7e3cd563939c340ef16e06
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: d5f2abc1050ece8ebf2bed53a1c963134afad43a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96268488"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793876"
 ---
 # <a name="filtering"></a>Filtreleme
 
@@ -23,7 +24,7 @@ Windows Communication Foundation (WCF) filtreleme sistemi, iletileri eşleştirm
 
  Filtre, bir ileti alındıktan ve doğru uygulama bileşenine ileti gönderme işleminin bir parçası olduktan sonra yapılır. Filtreleme sisteminin tasarımı, mesajlaşma, yönlendirme, güvenlik, olay işleme ve sistem yönetimi de dahil olmak üzere birkaç WCF alt sisteminin gereksinimlerini ele alınmaktadır.  
   
-## <a name="filters"></a>FilTReleri  
+## <a name="filters"></a>Filtreler  
 
  Filtre altyapısının iki adet birincil bileşeni, filtre ve filtre tabloları vardır. Filtre, Kullanıcı tarafından belirtilen mantıksal koşullara göre bir iletiyle ilgili Boole kararları verir. Filtreler sınıfı uygular <xref:System.ServiceModel.Dispatcher.MessageFilter> .  
   

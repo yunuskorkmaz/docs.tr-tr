@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: değişkenler (Entity SQL)'
 title: Değişkenler (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 3eed222a-f8f6-46b6-9cd5-220cc0e4e5d8
-ms.openlocfilehash: af6d586a22f14a04bfc7ec339d0aa8e9ba7c66c7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 134fee8f61c8e87a18520e6622f6a6a5cceb0076
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91181004"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795046"
 ---
 # <a name="variables-entity-sql"></a>Değişkenler (Entity SQL)
 

@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: do... Loop ekstresi (Visual Basic)'
 title: Do...Loop Deyimi
 ms.date: 07/20/2015
 f1_keywords:
@@ -20,18 +21,18 @@ helpviewer_keywords:
 - loops, exiting
 - Loop keyword [Visual Basic], Do...Loop statement
 ms.assetid: 892f9096-b3e2-4aee-834d-83bc4e2c379d
-ms.openlocfilehash: 86a702aefeea1e5e359a579a3f29e9c06f1c619c
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: d170074c44d1692517f6b51abd4a6b3d005941c0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90865929"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795189"
 ---
 # <a name="doloop-statement-visual-basic"></a>Do...Loop Deyimi (Visual Basic)
 
 Bir `Boolean` koşul olduğunda `True` veya koşul haline gelene kadar bir deyim bloğunu yineler `True` .  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 Do { While | Until } condition  
@@ -53,7 +54,7 @@ Loop { While | Until } condition
   
 ## <a name="parts"></a>Bölümler  
   
-|Terim|Tanım|  
+|Süre|Tanım|  
 |---|---|  
 |`Do`|Gereklidir. Döngünün tanımını başlatır `Do` .|  
 |`While`|`Until`Kullanılmadıysa gereklidir. Loop olana kadar tekrarlayın `condition` `False` .|  
@@ -83,7 +84,7 @@ Loop { While | Until } condition
 
  [Exit Do](exit-statement.md) deyimleri, bir çıkışı için alternatif bir yol sağlayabilir `Do…Loop` . `Exit Do` denetimi, ifadesiyle takip eden deyime hemen aktarır `Loop` .  
   
- `Exit Do` Genellikle, örneğin bir yapıda, bazı koşullar hesaplandıktan sonra kullanılır `If...Then...Else` . Hatalı bir değer veya sonlandırma isteği gibi yineleme işleminin devam etmesi için gereksiz veya imkansız hale getiren bir koşul tespit ederseniz bir döngüden çıkmak isteyebilirsiniz. Tek kullanımı, sonsuz bir `Exit Do` *döngüye*neden olabilecek bir durum için test etmek, büyük veya hatta sonsuz bir sayı çalışabilen bir döngüdür. `Exit Do`Döngüyü atlamak için ' i kullanabilirsiniz.  
+ `Exit Do` Genellikle, örneğin bir yapıda, bazı koşullar hesaplandıktan sonra kullanılır `If...Then...Else` . Hatalı bir değer veya sonlandırma isteği gibi yineleme işleminin devam etmesi için gereksiz veya imkansız hale getiren bir koşul tespit ederseniz bir döngüden çıkmak isteyebilirsiniz. Tek kullanımı, sonsuz bir `Exit Do` *döngüye* neden olabilecek bir durum için test etmek, büyük veya hatta sonsuz bir sayı çalışabilen bir döngüdür. `Exit Do`Döngüyü atlamak için ' i kullanabilirsiniz.  
   
  Herhangi `Exit Do` bir yerde herhangi bir sayıda deyim ekleyebilirsiniz `Do…Loop` .  
   

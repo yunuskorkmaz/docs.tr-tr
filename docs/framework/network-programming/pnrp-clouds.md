@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi için bkz: PNRP bulutları'
 title: PNRP Bulutları
 ms.date: 03/30/2017
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
-ms.openlocfilehash: 60b6fb44116fe2d8af50fb0b310615b3b962977b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 82e9fe85e019d1ef53fa35ed49d55cd2759b4335
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96263210"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794903"
 ---
 # <a name="pnrp-clouds"></a>PNRP Bulutları
 

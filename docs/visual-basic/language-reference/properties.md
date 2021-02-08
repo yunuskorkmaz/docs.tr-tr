@@ -1,15 +1,16 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Özellikler (Visual Basic)'
 title: Özellikler
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [Visual Basic]
 ms.assetid: c995caf9-8d0e-4fb8-ae02-e9e6087d7651
-ms.openlocfilehash: 1e56be71c1841c202f08b64716e62b003bda4d97
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 86b7949c2b4693221ebc43781bc31e4b512cb4d0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406307"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795215"
 ---
 # <a name="properties-visual-basic"></a>Özellikler (Visual Basic)
 

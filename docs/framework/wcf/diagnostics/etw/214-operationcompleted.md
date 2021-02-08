@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 214-OperationCompleted'
 title: 214 - OperationCompleted
 ms.date: 03/30/2017
 ms.assetid: a6287eef-023f-4816-813c-1802c82366df
-ms.openlocfilehash: 6147c70448efb122cb43a2b42a1e9b59980fab29
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: aad1ac49667a2ebbf172b5132507584e05d0f03e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96278953"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794396"
 ---
 # <a name="214---operationcompleted"></a>214 - OperationCompleted
 
@@ -17,10 +18,10 @@ ms.locfileid: "96278953"
 |-|-|  
 |ID|214|  
 |Anahtar sözcükler|HealthMonitoring, EndToEndMonitoring, sorun giderme, ServiceModel|  
-|Düzey|Bilgi|  
+|Level|Bilgi|  
 |Kanal|Microsoft-Windows-uygulama sunucusu-uygulamalar/analitik|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bu olay, hizmet modelinin varsayılan yöntemi bir `OperationInvoker` özel durum oluşturmadan bir yönteme çağrı tamamladığında yayınlanır.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96278953"
   
 ## <a name="details"></a>Ayrıntılar  
   
-|Veri öğesi adı|Veri öğesi türü|Açıklama|  
+|Veri öğesi adı|Veri öğesi türü|Description|  
 |--------------------|--------------------|-----------------|  
 |Yöntem adı|`xs:string`|Tarafından çağrılan metodun CLR adı `OperationInvoker` .|  
 |Süre|`xs:long`|Yöntemi çağırmak için geçen milisaniye cinsinden süre `OperationInvoker` .|  

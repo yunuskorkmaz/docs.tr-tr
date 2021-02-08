@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ICorDebugValue3 Interface'
 title: ICorDebugValue3 Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7d5385d3-f4a5-47c4-8478-a3513b5e9406
 topic_type:
 - apiref
-ms.openlocfilehash: 419efc7f21f4ac2e68657b2a4d69a8690a2938d4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e5868b91d23426a2d8dd8fed87b13ec61fef95ef
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722316"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794656"
 ---
 # <a name="icordebugvalue3-interface"></a>ICorDebugValue3 Arabirimi
 

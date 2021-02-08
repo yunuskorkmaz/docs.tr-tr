@@ -1,4 +1,5 @@
 ---
+description: Daha fazla bilgi edinin:-Işleci (Visual Basic)
 title: '- Operatör'
 ms.date: 07/20/2015
 f1_keywords:
@@ -17,18 +18,18 @@ helpviewer_keywords:
 - operators [Visual Basic], negation
 - minus operator [Visual Basic]
 ms.assetid: bff2c368-662d-4c92-ac87-1d9bdfd3426a
-ms.openlocfilehash: b5129c2dbb361940fa6da2cb424ee23736ba72c5
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 858e887fa7c5c0cc6129996c98bddb78bc53045c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875326"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795267"
 ---
 # <a name="--operator-visual-basic"></a>- İşleci (Visual Basic)
 
 İki sayısal ifade arasındaki farkı ya da sayısal bir ifadenin negatif değerini döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 expression1 – expression2
@@ -67,7 +68,7 @@ veya
  Her iki ifade de [Nothing](../nothing.md)olarak değerlendirilirse, `–` işleç onu sıfır olarak değerlendirir.  
   
 > [!NOTE]
-> `–`İşleç *aşırı*yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../programming-guide/language-features/procedures/operator-procedures.md).  
+> `–`İşleç *aşırı* yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
 

@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: veri hizmetini sorgulama (WCF Veri Hizmetleri)'
 title: Veri hizmetini sorgulama (WCF Veri Hizmetleri)
 ms.date: 03/30/2017
 dev_langs:
@@ -9,14 +10,16 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: 13334f6425c47e45d729d606d99602a99f35d8e6
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7eb76b9d90273235d97318a70a4c880f869f249b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286164"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794942"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>Veri hizmetini sorgulama (WCF Veri Hizmetleri)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Veri Hizmetleri istemci kitaplığı, dil ile tümleşik sorgu (LINQ) ile birlikte tanıdık .NET Framework programlama düzenlerini kullanarak bir veri hizmetine karşı sorgu yürütmenize olanak sağlar. İstemci kitaplığı, istemcide bir <xref:System.Data.Services.Client.DataServiceQuery%601> http get isteği iletisine bir sınıf örneği olarak tanımlanan bir sorguyu çevirir. Kitaplık, yanıt iletisini alır ve bunu istemci veri hizmeti sınıfları örneklerine dönüştürür. Bu sınıflar, <xref:System.Data.Services.Client.DataServiceContext> ait olduğu öğesine göre izlenir <xref:System.Data.Services.Client.DataServiceQuery%601> .
 
@@ -106,17 +109,17 @@ Veri hizmetindeki varlıkları temsil eden varlık türü örnekleri, istemci ü
 
 <xref:System.Data.Services.Client.QueryOperationResponse%601>Ayrıca, bir sorgu sonucuyla ilgili ek bilgilere erişmenizi sağlayan aşağıdaki üyelere sahiptir:
 
-- <xref:System.Data.Services.Client.OperationResponse.Error%2A>-varsa, işlem tarafından oluşturulan bir hata alır.
+- <xref:System.Data.Services.Client.OperationResponse.Error%2A> -varsa, işlem tarafından oluşturulan bir hata alır.
 
-- <xref:System.Data.Services.Client.OperationResponse.Headers%2A>-sorgu yanıtıyla ilişkili HTTP yanıt üst bilgileri koleksiyonunu içerir.
+- <xref:System.Data.Services.Client.OperationResponse.Headers%2A> -sorgu yanıtıyla ilişkili HTTP yanıt üst bilgileri koleksiyonunu içerir.
 
-- <xref:System.Data.Services.Client.QueryOperationResponse.Query%2A>-tarafından oluşturulan orijinali alır <xref:System.Data.Services.Client.DataServiceQuery%601> <xref:System.Data.Services.Client.QueryOperationResponse%601> .
+- <xref:System.Data.Services.Client.QueryOperationResponse.Query%2A> -tarafından oluşturulan orijinali alır <xref:System.Data.Services.Client.DataServiceQuery%601> <xref:System.Data.Services.Client.QueryOperationResponse%601> .
 
-- <xref:System.Data.Services.Client.OperationResponse.StatusCode%2A>-sorgu yanıtının HTTP yanıt kodunu alır.
+- <xref:System.Data.Services.Client.OperationResponse.StatusCode%2A> -sorgu yanıtının HTTP yanıt kodunu alır.
 
-- <xref:System.Data.Services.Client.QueryOperationResponse%601.TotalCount%2A>-Yöntem üzerinde çağrıldığında varlık kümesindeki toplam varlık sayısını alır <xref:System.Data.Services.Client.DataServiceQuery%601.IncludeTotalCount%2A> <xref:System.Data.Services.Client.DataServiceQuery%601> .
+- <xref:System.Data.Services.Client.QueryOperationResponse%601.TotalCount%2A> -Yöntem üzerinde çağrıldığında varlık kümesindeki toplam varlık sayısını alır <xref:System.Data.Services.Client.DataServiceQuery%601.IncludeTotalCount%2A> <xref:System.Data.Services.Client.DataServiceQuery%601> .
 
-- <xref:System.Data.Services.Client.QueryOperationResponse.GetContinuation%2A>-bir <xref:System.Data.Services.Client.DataServiceQueryContinuation> sonraki sonuç SAYFASıNıN URI 'sini içeren bir nesne döndürür.
+- <xref:System.Data.Services.Client.QueryOperationResponse.GetContinuation%2A> -bir <xref:System.Data.Services.Client.DataServiceQueryContinuation> sonraki sonuç SAYFASıNıN URI 'sini içeren bir nesne döndürür.
 
 Varsayılan olarak, WCF Veri Hizmetleri yalnızca sorgu URI 'SI tarafından açıkça seçilen verileri döndürür. Bu, gerektiğinde veri hizmetinden ek verileri açıkça yükleme seçeneği sunar. Veri hizmetinden verileri her açık şekilde yüklediğinizde veri hizmetine bir istek gönderilir. Açık şekilde yüklenebilen veriler ilgili varlıkları, disk belleğine alınan yanıt verilerini ve ikili veri akışlarını içerir.
 
@@ -149,7 +152,7 @@ Ayrıca <xref:System.Int32> <xref:System.Int64> , <xref:System.Linq.Enumerable.C
 
 - [Nasıl yapılır: İstemci İsteğinde Üst Bilgileri Ayarlama](how-to-set-headers-in-the-client-request-wcf-data-services.md)
 
-- [Nasıl Yapılır: Sorgu Sonuçlarını Yansıtma](how-to-project-query-results-wcf-data-services.md)
+- [Nasıl yapılır: Sorgu Sonuçlarını Yansıtma](how-to-project-query-results-wcf-data-services.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

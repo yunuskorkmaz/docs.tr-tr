@@ -1,13 +1,14 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: nasıl yapılır: keşif proxy 'Si uygulama"
 title: "Nasıl yapılır: Keşif Proxy'si Uygulama"
 ms.date: 03/30/2017
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
-ms.openlocfilehash: ca7ab2ee434aef7649d71cbfc33273f48020788f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e7bd9833ac0d449eefd5e439b442ecb0eee121ca
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597078"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793759"
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>Nasıl yapılır: Keşif Proxy'si Uygulama
 
@@ -31,7 +32,7 @@ Bu konuda, bulma proxy 'nin nasıl uygulanacağı açıklanmaktadır. Windows Co
 
     1. System.ServiceModel.dll
 
-    2. System. ServiceModel. Discovery. dll
+    2. System.Servicemodel.Discovery.dll
 
     > [!CAUTION]
     > Sürüm 4,0 veya bu derlemelerin daha büyük bir sürümüne başvurtığınızdan emin olun.

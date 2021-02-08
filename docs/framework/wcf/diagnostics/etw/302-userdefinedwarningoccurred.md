@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 302-Userdefinedwarningoluştu'
 title: 302 - UserDefinedWarningOccurred
 ms.date: 03/30/2017
 ms.assetid: 8d1f0bf1-0151-45e6-be92-573d397b54de
-ms.openlocfilehash: b942b2e9716713371b8679fc9df9b9634dfc7283
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: eb79e32d8993ec60c05e5aaaee1b5e15ee7e32e2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96243449"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794227"
 ---
 # <a name="302---userdefinedwarningoccurred"></a>302 - UserDefinedWarningOccurred
 
@@ -17,10 +18,10 @@ ms.locfileid: "96243449"
 |-|-|  
 |ID|302|  
 |Anahtar sözcükler|Sorun giderme, HealthMonitoring, UserEvents, ServiceModel, EndToEndMonitoring|  
-|Düzey|Uyarı|  
+|Level|Uyarı|  
 |Kanal|Microsoft-Windows-uygulama sunucusu-uygulamalar/analitik|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bu olay kullanıcı kodundan yayınlanır. Geliştiriciler, hizmetinde özel tanımlanmış bir uyarı olayı oluştuğunda bu olayı oluşturabilir. Bu, API 'ler kullanılarak yapılabilir <xref:System.Diagnostics.Eventing> . Ayrıca, bu API 'YI sarmalayan ve bu olayı doğru şekilde nasıl yayılacağını gösteren bir WCF örneği vardır.  
   

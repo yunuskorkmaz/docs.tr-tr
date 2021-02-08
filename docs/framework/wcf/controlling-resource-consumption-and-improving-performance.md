@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: kaynak tüketimini denetleme ve performansı geliştirme'
 title: Kaynak Tüketimini Denetleme ve Performansı Geliştirme
 ms.date: 03/30/2017
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
-ms.openlocfilehash: f06dd0b7e66ae783b2f268551f15c5e6e8369b7f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: df2a2ae8235acecd269644690546098f36bf73c8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96255071"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794461"
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>Kaynak Tüketimini Denetleme ve Performansı Geliştirme
 

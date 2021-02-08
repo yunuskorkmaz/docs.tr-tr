@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: USING (Entity SQL)'
 title: KULLANMA (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 20f58b8f-6070-4456-b7e8-5ff3d6269273
-ms.openlocfilehash: bdab81ed8acae5e757de0a669922dc79d0303ee4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 084ab56f25041377dd6a0a35dd743122f482eeba
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203598"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795059"
 ---
 # <a name="using-entity-sql"></a>KULLANMA (Entity SQL)
 

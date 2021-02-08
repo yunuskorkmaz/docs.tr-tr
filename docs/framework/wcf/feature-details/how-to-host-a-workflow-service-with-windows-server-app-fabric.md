@@ -1,17 +1,18 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: Windows Server App Fabric ile Iş akışı hizmeti barındırma'
 title: 'Nasıl yapılır: Windows Server App Fabric ile İş Akışı Hizmeti Barındırma'
 ms.date: 03/30/2017
 ms.assetid: 83b62cce-5fc2-4c6d-b27c-5742ba3bac73
-ms.openlocfilehash: 2cf77753a0540e75ae6778065f7fa006729f8d6a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 057e81c50844d1a36e32fe899de3469f024d775b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555991"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793811"
 ---
 # <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>Nasıl yapılır: Windows Server App Fabric ile İş Akışı Hizmeti Barındırma
 
-Uygulama dokusunda barındırma iş akışı hizmetleri, IIS/WAS altında barındırılmasına benzer. Tek fark, iş akışı hizmetlerini dağıtmak, izlemek ve yönetmek için uygulama dokusunun sağladığı araçlardır. Bu konu, [uzun süre çalışan bir Iş akışı hizmeti oluşturma](creating-a-long-running-workflow-service.md)bölümünde oluşturulan iş akışı hizmetini kullanır. Bu konu, bir iş akışı hizmeti oluşturma işleminde size yol gösterecektir. Bu konu, App Fabric kullanılarak iş akışı hizmetinin nasıl barındıralınacağını açıklar. Windows Server App Fabric hakkında daha fazla bilgi için bkz. [Windows Server App Fabric belgeleri](/previous-versions/appfabric/ff384253(v=azure.10)). Aşağıdaki adımları tamamlamadan önce, Windows Server App Fabric 'in yüklü olduğundan emin olun.  Bunu yapmak için Internet Information Services (inetmgr.exe) açın, **Bağlantılar** görünümündeki sunucu adına tıklayın, siteler ' e tıklayın ve **varsayılan Web sitesi**' ne tıklayın. Ekranın sağ tarafında, **App Fabric**adlı bir bölüm görmeniz gerekir. Bu bölümü görmüyorsanız (Sağ bölmenin üst kısmında olacaktır) App Fabric yüklü değildir. Windows Server App Fabric 'i yükleme hakkında daha fazla bilgi için bkz. [Windows Server App Fabric 'ı yükleme](/previous-versions/appfabric/ee790960(v=azure.10)).  
+Uygulama dokusunda barındırma iş akışı hizmetleri, IIS/WAS altında barındırılmasına benzer. Tek fark, iş akışı hizmetlerini dağıtmak, izlemek ve yönetmek için uygulama dokusunun sağladığı araçlardır. Bu konu, [uzun süre çalışan bir Iş akışı hizmeti oluşturma](creating-a-long-running-workflow-service.md)bölümünde oluşturulan iş akışı hizmetini kullanır. Bu konu, bir iş akışı hizmeti oluşturma işleminde size yol gösterecektir. Bu konu, App Fabric kullanılarak iş akışı hizmetinin nasıl barındıralınacağını açıklar. Windows Server App Fabric hakkında daha fazla bilgi için bkz. [Windows Server App Fabric belgeleri](/previous-versions/appfabric/ff384253(v=azure.10)). Aşağıdaki adımları tamamlamadan önce, Windows Server App Fabric 'in yüklü olduğundan emin olun.  Bunu yapmak için Internet Information Services (inetmgr.exe) açın, **Bağlantılar** görünümündeki sunucu adına tıklayın, siteler ' e tıklayın ve **varsayılan Web sitesi**' ne tıklayın. Ekranın sağ tarafında, **App Fabric** adlı bir bölüm görmeniz gerekir. Bu bölümü görmüyorsanız (Sağ bölmenin üst kısmında olacaktır) App Fabric yüklü değildir. Windows Server App Fabric 'i yükleme hakkında daha fazla bilgi için bkz. [Windows Server App Fabric 'ı yükleme](/previous-versions/appfabric/ee790960(v=azure.10)).  
   
 ### <a name="creating-a-simple-workflow-service"></a>Basit bir Iş akışı hizmeti oluşturma  
   
@@ -35,23 +36,23 @@ Uygulama dokusunda barındırma iş akışı hizmetleri, IIS/WAS altında barın
   
 4. Aşağıdaki ekran görüntüsünde gösterildiği gibi uygulamayla ilgili genel bilgileri göstermek için **genel** sekmesini seçin.  
   
-     ![App Fabric yapılandırma iletişim kutusunun Genel sekmesi](media/appfabricconfiguration-general.gif "AppFabricConfiguration-genel")  
+     ![App Fabric yapılandırma iletişim kutusunun Genel sekmesi](media/appfabricconfiguration-general.gif "AppFabricConfiguration-General")  
   
 5. **İzleme** sekmesini seçin. Bu, aşağıdaki ekran görüntüsünde gösterildiği gibi çeşitli izleme ayarlarını gösterir.  
   
-     ![App Fabric yapılandırma Izleme sekmesi](media/appfabricconfiguration-monitoring.gif "AppFabricConfiguration-Izleme")  
+     ![App Fabric yapılandırma Izleme sekmesi](media/appfabricconfiguration-monitoring.gif "AppFabricConfiguration-Monitoring")  
   
      Uygulama dokusunda iş akışı hizmeti izlemeyi yapılandırma hakkında daha fazla bilgi için bkz. [App Fabric ile Izleme yapılandırma](/previous-versions/appfabric/ee677384(v=azure.10)).  
   
 6. **Iş akışı kalıcılığı** sekmesini seçin. Bu, uygulamanızı aşağıdaki ekran görüntüsünde gösterildiği gibi App Fabric 'in varsayılan kalıcılık sağlayıcısını kullanacak şekilde yapılandırmanıza olanak tanır.  
   
-     ![App Fabric yapılandırma &#45; kalıcılığı](media/appfabricconfiguration-persistence.gif "AppFabricConfiguration-Kalıcılık")  
+     ![App Fabric yapılandırma &#45; kalıcılığı](media/appfabricconfiguration-persistence.gif "AppFabricConfiguration-Persistence")  
   
      Windows Server App Fabric 'te iş akışı kalıcılığını yapılandırma hakkında daha fazla bilgi için bkz. [App Fabric 'Te Iş akışı kalıcılığı yapılandırma](/previous-versions/appfabric/ee677353(v=azure.10))  
   
 7. **Iş akışı konak yönetimi** sekmesini seçin. Bu, aşağıdaki ekran görüntüsünde gösterildiği gibi boştaki iş akışı hizmeti örneklerinin ne zaman kaldırılabileceğini ve kalıcı hale gelmelidir belirtmenizi sağlar.  
   
-     ![App Fabric yapılandırma Iş akışı konak yönetimi](media/appfabricconfiguration-management.gif "AppFabricConfiguration-yönetim")  
+     ![App Fabric yapılandırma Iş akışı konak yönetimi](media/appfabricconfiguration-management.gif "AppFabricConfiguration-Management")  
   
      İş akışı konak Yönetimi yapılandırması hakkında daha fazla bilgi için bkz. [App Fabric 'Te Iş akışı konak yönetimini yapılandırma](/previous-versions/appfabric/ff383424(v=azure.10)).  
   
@@ -69,7 +70,7 @@ Uygulama dokusunda barındırma iş akışı hizmetleri, IIS/WAS altında barın
   
 10. **Güvenlik** sekmesini seçin. Bu, aşağıdaki ekran görüntüsünde gösterildiği gibi uygulamanın güvenlik ayarlarını yapılandırmanızı sağlar.  
   
-     ![App Fabric güvenlik yapılandırması](media/appfabricconfiguration-security.gif "AppFabricConfiguration-güvenlik")  
+     ![App Fabric güvenlik yapılandırması](media/appfabricconfiguration-security.gif "AppFabricConfiguration-Security")  
   
      Windows Server App Fabric ile güvenliği yapılandırma hakkında daha fazla bilgi için bkz. [App Fabric Ile güvenliği yapılandırma](/previous-versions/appfabric/ee677278(v=azure.10)).  
   

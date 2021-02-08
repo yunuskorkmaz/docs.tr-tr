@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: BC30036: overflow (Visual Basic hatası)'
 title: Taşma (Visual Basic Hatası)
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30036
 ms.assetid: b2c83de9-a132-449a-870b-e7c409d4d7ee
-ms.openlocfilehash: 134e849c8cafe489f939e60acca4e82e3b0cbe6e
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 8cb7dc151b1b2bcc5d9c15b7149379094325430a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162407"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795475"
 ---
 # <a name="bc30036-overflow-visual-basic-error"></a>BC30036: overflow (Visual Basic hatası)
 
