@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ICorProfilerCallback6 Interface'
 title: ICorProfilerCallback6 Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -11,12 +12,12 @@ api_type:
 ms.assetid: edc420b7-96d1-4dec-ace0-36d907f644bc
 topic_type:
 - apiref
-ms.openlocfilehash: 2176b624a427994b9d2af4b5eba31a64c9288a0e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 12eaafff8bd9ab8d4d58eac8f2d62415531bc898
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725475"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781759"
 ---
 # <a name="icorprofilercallback6-interface"></a>ICorProfilerCallback6 Arabirimi
 

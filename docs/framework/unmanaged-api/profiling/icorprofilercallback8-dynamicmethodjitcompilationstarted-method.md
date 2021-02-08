@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: ICorProfilerCallback8::D ynamicMethodJITCompilationStarted yöntemi'
 title: ICorProfilerCallback8::D ynamicMethodJITCompilationStarted yöntemi
 ms.date: 04/10/2018
 api_name:
@@ -8,12 +9,12 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-ms.openlocfilehash: 46a25fc6e9119481f728275e0569429cc6c46dc9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 186b41564e0aabb069b06356b8eccbe90296ec4b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725436"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781707"
 ---
 # <a name="icorprofilercallback8dynamicmethodjitcompilationstarted-method"></a>ICorProfilerCallback8::D ynamicMethodJITCompilationStarted yöntemi
 
@@ -21,7 +22,7 @@ ms.locfileid: "95725436"
   
 Dinamik bir yöntemin JıT derlemesi başladığında profil oluşturucuyu bilgilendirir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT DynamicMethodJITCompilationStarted(  

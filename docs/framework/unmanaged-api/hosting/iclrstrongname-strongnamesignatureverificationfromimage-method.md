@@ -1,4 +1,5 @@
 ---
+description: ': ICLRStrongName:: Strongnamesignaturedoğrulamaları Icationfromımage yöntemi hakkında daha fazla bilgi edinin'
 title: ICLRStrongName::StrongNameSignatureVerificationFromImage Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: da91c138-ee30-4fd4-a040-464d97d7e41a
 topic_type:
 - apiref
-ms.openlocfilehash: 134b32b6b281a08997849f4c23edfc1f357dadcd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5c1c3568dd0ad506c478525503f168d8b8c2dfbc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95674404"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781837"
 ---
 # <a name="iclrstrongnamestrongnamesignatureverificationfromimage-method"></a>ICLRStrongName::StrongNameSignatureVerificationFromImage Yöntemi
 
 Zaten bellekle eşlenmiş bir derlemenin ilişkili ortak anahtar için geçerli olduğunu doğrular.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT StrongNameSignatureVerificationFromImage (  

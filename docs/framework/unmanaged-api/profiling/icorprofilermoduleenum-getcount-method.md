@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerModuleEnum:: GetCount metodu hakkında daha fazla bilgi edinin'
 title: ICorProfilerModuleEnum::GetCount Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: f0a4a5e0-4689-474b-b0f4-37ca0639c918
 topic_type:
 - apiref
-ms.openlocfilehash: 53009a1805056b83047299ebdca8f21d98ad5137
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: efdd812795002c25aaeb7634e7a4f4e4287553e8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732989"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781395"
 ---
 # <a name="icorprofilermoduleenumgetcount-method"></a>ICorProfilerModuleEnum::GetCount Yöntemi
 
 Uygulamaya yüklenmiş olan yönetilen modüllerin sayısını alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetCount([out] ULONG * pcelt);  

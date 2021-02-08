@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ICLRStrongName2 Interface'
 title: ICLRStrongName2 Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f098a74-201e-4628-a468-8dee9ab99b4a
 topic_type:
 - apiref
-ms.openlocfilehash: df570f32d694ec21e9642e75b4965e169afaccfc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7442bd054af735e9f1b75b05feb8724dfa993f73
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95677654"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781798"
 ---
 # <a name="iclrstrongname2-interface"></a>ICLRStrongName2 Arabirimi
 

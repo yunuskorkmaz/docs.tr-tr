@@ -1,4 +1,5 @@
 ---
+description: ': ICLRStrongName:: StrongNameSignatureGenerationEx Yöntemi hakkında daha fazla bilgi edinin'
 title: ICLRStrongName::StrongNameSignatureGenerationEx Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c3f34584-c6e2-41fd-bb44-e44da8546309
 topic_type:
 - apiref
-ms.openlocfilehash: 78cc043953e6288df136b43590831569d112afef
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 911f55aa509c25eb0d95d6d2a31c9f715af2080d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95674521"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781876"
 ---
 # <a name="iclrstrongnamestrongnamesignaturegenerationex-method"></a>ICLRStrongName::StrongNameSignatureGenerationEx Yöntemi
 
 Belirtilen bayrağa göre belirtilen derleme için bir tanımlayıcı ad imzası üretir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp
 HRESULT StrongNameSignatureGenerationEx (  
