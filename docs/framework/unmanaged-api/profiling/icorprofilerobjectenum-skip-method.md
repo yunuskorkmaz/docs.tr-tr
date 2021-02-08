@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerObjectEnum:: Skip yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerObjectEnum::Skip Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: f8e498f8-f93a-4b82-bd22-55bdbf5e8d45
 topic_type:
 - apiref
-ms.openlocfilehash: 83c6af74ebc3eb668317bd64628af17513a2aed6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8a2aa5dd2b905931b97fafa4db6709aab16aacc4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95702361"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781265"
 ---
-# <a name="icorprofilerobjectenumskip-method"></a><span data-ttu-id="6c866-102">ICorProfilerObjectEnum::Skip Yöntemi</span><span class="sxs-lookup"><span data-stu-id="6c866-102">ICorProfilerObjectEnum::Skip Method</span></span>
+# <a name="icorprofilerobjectenumskip-method"></a><span data-ttu-id="f954d-103">ICorProfilerObjectEnum::Skip Yöntemi</span><span class="sxs-lookup"><span data-stu-id="f954d-103">ICorProfilerObjectEnum::Skip Method</span></span>
 
-<span data-ttu-id="6c866-103">Belirtilen sayıda öğe atlanabilmesi için, bu Numaralandırıcının imlecini geçerli konumundan ilerletir.</span><span class="sxs-lookup"><span data-stu-id="6c866-103">Advances the cursor of this enumerator from its current position so that the specified number of elements are skipped.</span></span>  
+<span data-ttu-id="f954d-104">Belirtilen sayıda öğe atlanabilmesi için, bu Numaralandırıcının imlecini geçerli konumundan ilerletir.</span><span class="sxs-lookup"><span data-stu-id="f954d-104">Advances the cursor of this enumerator from its current position so that the specified number of elements are skipped.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6c866-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="6c866-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f954d-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f954d-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT Skip (  
@@ -34,25 +35,25 @@ HRESULT Skip (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6c866-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="6c866-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f954d-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="f954d-106">Parameters</span></span>  
 
  `celt`  
- <span data-ttu-id="6c866-106">'ndaki Atlanacak öğe sayısı.</span><span class="sxs-lookup"><span data-stu-id="6c866-106">[in] The number of elements to be skipped.</span></span>  
+ <span data-ttu-id="f954d-107">'ndaki Atlanacak öğe sayısı.</span><span class="sxs-lookup"><span data-stu-id="f954d-107">[in] The number of elements to be skipped.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6c866-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="6c866-107">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f954d-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="f954d-108">Remarks</span></span>  
 
- <span data-ttu-id="6c866-108">Bu Numaralandırıcı imlecinizin yeni konumu: (geçerli konum) + `celt` .</span><span class="sxs-lookup"><span data-stu-id="6c866-108">The new position of this enumerator's cursor is: (current position) + `celt` .</span></span>  
+ <span data-ttu-id="f954d-109">Bu Numaralandırıcı imlecinizin yeni konumu: (geçerli konum) + `celt` .</span><span class="sxs-lookup"><span data-stu-id="f954d-109">The new position of this enumerator's cursor is: (current position) + `celt` .</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6c866-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="6c866-109">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f954d-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f954d-110">Requirements</span></span>  
 
- <span data-ttu-id="6c866-110">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6c866-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="f954d-111">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f954d-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6c866-111">**Üst bilgi:** CorProf. IDL, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="6c866-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="f954d-112">**Üst bilgi:** CorProf. IDL, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="f954d-112">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="6c866-112">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="6c866-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f954d-113">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="f954d-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6c866-113">**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6c866-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f954d-114">**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f954d-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6c866-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6c866-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f954d-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f954d-115">See also</span></span>
 
-- [<span data-ttu-id="6c866-115">ICorProfilerObjectEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="6c866-115">ICorProfilerObjectEnum Interface</span></span>](icorprofilerobjectenum-interface.md)
+- [<span data-ttu-id="f954d-116">ICorProfilerObjectEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="f954d-116">ICorProfilerObjectEnum Interface</span></span>](icorprofilerobjectenum-interface.md)
