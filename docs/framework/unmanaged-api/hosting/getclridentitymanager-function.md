@@ -1,4 +1,5 @@
 ---
+description: ': GetCLRIdentityManager Işlevi hakkında daha fazla bilgi'
 title: GetCLRIdentityManager İşlevi
 ms.date: 03/30/2017
 api_name:
@@ -14,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 66eeca30-adb4-45f4-aff5-347564c95724
 topic_type:
 - apiref
-ms.openlocfilehash: 9d1196749e033c71b0c8923d0325eb4886122d1a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 483cf0499fa162da4c89e350198a5609f9f1bab6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733665"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785373"
 ---
-# <a name="getclridentitymanager-function"></a><span data-ttu-id="55b0b-102">GetCLRIdentityManager İşlevi</span><span class="sxs-lookup"><span data-stu-id="55b0b-102">GetCLRIdentityManager Function</span></span>
+# <a name="getclridentitymanager-function"></a><span data-ttu-id="e880d-103">GetCLRIdentityManager İşlevi</span><span class="sxs-lookup"><span data-stu-id="e880d-103">GetCLRIdentityManager Function</span></span>
 
-<span data-ttu-id="55b0b-103">Ortak dil çalışma zamanının (CLR) kimlikleri yönetmesine izin veren bir arabirime yönelik bir işaretçi alır.</span><span class="sxs-lookup"><span data-stu-id="55b0b-103">Gets a pointer to an interface that allows the common language runtime (CLR) to manage identities.</span></span>  
+<span data-ttu-id="e880d-104">Ortak dil çalışma zamanının (CLR) kimlikleri yönetmesine izin veren bir arabirime yönelik bir işaretçi alır.</span><span class="sxs-lookup"><span data-stu-id="e880d-104">Gets a pointer to an interface that allows the common language runtime (CLR) to manage identities.</span></span>  
   
- <span data-ttu-id="55b0b-104">Bu işlev .NET Framework 4 ' te kullanım dışıdır.</span><span class="sxs-lookup"><span data-stu-id="55b0b-104">This function has been deprecated in the .NET Framework 4.</span></span>  
+ <span data-ttu-id="e880d-105">Bu işlev .NET Framework 4 ' te kullanım dışıdır.</span><span class="sxs-lookup"><span data-stu-id="e880d-105">This function has been deprecated in the .NET Framework 4.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="55b0b-105">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="55b0b-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e880d-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e880d-106">Syntax</span></span>  
   
 ```cpp  
 STDAPI GetCLRIdentityManager(  
@@ -36,28 +37,28 @@ STDAPI GetCLRIdentityManager(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="55b0b-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="55b0b-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e880d-107">Parametreler</span><span class="sxs-lookup"><span data-stu-id="e880d-107">Parameters</span></span>  
 
  `riid`  
- <span data-ttu-id="55b0b-107">'ndaki `REFIID` Hangi arabirimin alınacağını belirten bir (bir arabirim tanımlayıcısı).</span><span class="sxs-lookup"><span data-stu-id="55b0b-107">[in] A `REFIID` (an interface identifier) that specifies which interface to get.</span></span> <span data-ttu-id="55b0b-108">Bu değer IID_ICLRAssemblyIdentityManager ya da IID_ICLRHostBindingPolicyManager olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="55b0b-108">This value must be either IID_ICLRAssemblyIdentityManager or IID_ICLRHostBindingPolicyManager.</span></span>  
+ <span data-ttu-id="e880d-108">'ndaki `REFIID` Hangi arabirimin alınacağını belirten bir (bir arabirim tanımlayıcısı).</span><span class="sxs-lookup"><span data-stu-id="e880d-108">[in] A `REFIID` (an interface identifier) that specifies which interface to get.</span></span> <span data-ttu-id="e880d-109">Bu değer IID_ICLRAssemblyIdentityManager ya da IID_ICLRHostBindingPolicyManager olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="e880d-109">This value must be either IID_ICLRAssemblyIdentityManager or IID_ICLRHostBindingPolicyManager.</span></span>  
   
  `ppManager`  
- <span data-ttu-id="55b0b-109">dışı Bir [ICLRAssemblyIdentityManager](iclrassemblyidentitymanager-interface.md) veya [ICLRHostBindingPolicyManager](iclrhostbindingpolicymanager-interface.md) nesnesinin adresine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="55b0b-109">[out] A pointer to the address of either an [ICLRAssemblyIdentityManager](iclrassemblyidentitymanager-interface.md) or an [ICLRHostBindingPolicyManager](iclrhostbindingpolicymanager-interface.md) object.</span></span>  
+ <span data-ttu-id="e880d-110">dışı Bir [ICLRAssemblyIdentityManager](iclrassemblyidentitymanager-interface.md) veya [ICLRHostBindingPolicyManager](iclrhostbindingpolicymanager-interface.md) nesnesinin adresine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="e880d-110">[out] A pointer to the address of either an [ICLRAssemblyIdentityManager](iclrassemblyidentitymanager-interface.md) or an [ICLRHostBindingPolicyManager](iclrhostbindingpolicymanager-interface.md) object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="55b0b-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="55b0b-110">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e880d-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="e880d-111">Remarks</span></span>  
 
- <span data-ttu-id="55b0b-111">İşleve bir işaretçi almak için [GetRealProcAddress](getrealprocaddress-function.md) işlevini çağırın `GetCLRIdentityManager` .</span><span class="sxs-lookup"><span data-stu-id="55b0b-111">Call the [GetRealProcAddress](getrealprocaddress-function.md) function to get a pointer to the `GetCLRIdentityManager` function.</span></span>  
+ <span data-ttu-id="e880d-112">İşleve bir işaretçi almak için [GetRealProcAddress](getrealprocaddress-function.md) işlevini çağırın `GetCLRIdentityManager` .</span><span class="sxs-lookup"><span data-stu-id="e880d-112">Call the [GetRealProcAddress](getrealprocaddress-function.md) function to get a pointer to the `GetCLRIdentityManager` function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="55b0b-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="55b0b-112">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e880d-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e880d-113">Requirements</span></span>  
 
- <span data-ttu-id="55b0b-113">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="55b0b-113">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="e880d-114">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e880d-114">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="55b0b-114">**Üst bilgi:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="55b0b-114">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="e880d-115">**Üst bilgi:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="e880d-115">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="55b0b-115">**Kitaplık:** MSCorWks.dll</span><span class="sxs-lookup"><span data-stu-id="55b0b-115">**Library:** MSCorWks.dll</span></span>  
+ <span data-ttu-id="e880d-116">**Kitaplık:** MSCorWks.dll</span><span class="sxs-lookup"><span data-stu-id="e880d-116">**Library:** MSCorWks.dll</span></span>  
   
- <span data-ttu-id="55b0b-116">**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="55b0b-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="e880d-117">**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e880d-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="55b0b-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="55b0b-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e880d-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e880d-118">See also</span></span>
 
-- [<span data-ttu-id="55b0b-118">Kullanım Dışı CLR Barındırma İşlevleri</span><span class="sxs-lookup"><span data-stu-id="55b0b-118">Deprecated CLR Hosting Functions</span></span>](deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="e880d-119">Kullanım Dışı CLR Barındırma İşlevleri</span><span class="sxs-lookup"><span data-stu-id="e880d-119">Deprecated CLR Hosting Functions</span></span>](deprecated-clr-hosting-functions.md)

@@ -1,4 +1,5 @@
 ---
+description: ': IActionOnCLREvent:: OnEvent yöntemi hakkında daha fazla bilgi edinin'
 title: IActionOnCLREvent::OnEvent Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 0970f10c-4304-4c12-91c0-83e51455afb4
 topic_type:
 - apiref
-ms.openlocfilehash: 3bfcb01e30b4cb33ec9276f1d3c6ac2f3bde4b58
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 163956ab319eb34d58da23d2c4ef2a6b592aab0d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721770"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785152"
 ---
-# <a name="iactiononclreventonevent-method"></a><span data-ttu-id="3c4da-102">IActionOnCLREvent::OnEvent Yöntemi</span><span class="sxs-lookup"><span data-stu-id="3c4da-102">IActionOnCLREvent::OnEvent Method</span></span>
+# <a name="iactiononclreventonevent-method"></a><span data-ttu-id="7f0cb-103">IActionOnCLREvent::OnEvent Yöntemi</span><span class="sxs-lookup"><span data-stu-id="7f0cb-103">IActionOnCLREvent::OnEvent Method</span></span>
 
-<span data-ttu-id="3c4da-103">[ICLROnEventManager:: RegisterActionOnEvent](iclroneventmanager-registeractiononevent-method.md) metoduna yapılan bir çağrı kullanılarak kaydedilmiş olaylarda geri çağırmaları gerçekleştirir.</span><span class="sxs-lookup"><span data-stu-id="3c4da-103">Performs callbacks on events that have been registered by using a call to the [ICLROnEventManager::RegisterActionOnEvent](iclroneventmanager-registeractiononevent-method.md) method.</span></span>  
+<span data-ttu-id="7f0cb-104">[ICLROnEventManager:: RegisterActionOnEvent](iclroneventmanager-registeractiononevent-method.md) metoduna yapılan bir çağrı kullanılarak kaydedilmiş olaylarda geri çağırmaları gerçekleştirir.</span><span class="sxs-lookup"><span data-stu-id="7f0cb-104">Performs callbacks on events that have been registered by using a call to the [ICLROnEventManager::RegisterActionOnEvent](iclroneventmanager-registeractiononevent-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3c4da-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="3c4da-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7f0cb-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="7f0cb-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT OnEvent (  
@@ -35,46 +36,46 @@ HRESULT OnEvent (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3c4da-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="3c4da-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7f0cb-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="7f0cb-106">Parameters</span></span>  
 
  `event`  
- <span data-ttu-id="3c4da-106">'ndaki Olay türünü gösteren [EClrEvent](eclrevent-enumeration.md) değerlerinden biri.</span><span class="sxs-lookup"><span data-stu-id="3c4da-106">[in] One of the [EClrEvent](eclrevent-enumeration.md) values, which indicates the type of event.</span></span>  
+ <span data-ttu-id="7f0cb-107">'ndaki Olay türünü gösteren [EClrEvent](eclrevent-enumeration.md) değerlerinden biri.</span><span class="sxs-lookup"><span data-stu-id="7f0cb-107">[in] One of the [EClrEvent](eclrevent-enumeration.md) values, which indicates the type of event.</span></span>  
   
  `data`  
- <span data-ttu-id="3c4da-107">'ndaki Hakkındaki ayrıntıları içeren bir nesne işaretçisi `event` .</span><span class="sxs-lookup"><span data-stu-id="3c4da-107">[in] A pointer to an object that contains details about `event`.</span></span>  
+ <span data-ttu-id="7f0cb-108">'ndaki Hakkındaki ayrıntıları içeren bir nesne işaretçisi `event` .</span><span class="sxs-lookup"><span data-stu-id="7f0cb-108">[in] A pointer to an object that contains details about `event`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="3c4da-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="3c4da-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7f0cb-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="7f0cb-109">Return Value</span></span>  
   
-|<span data-ttu-id="3c4da-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="3c4da-109">HRESULT</span></span>|<span data-ttu-id="3c4da-110">Açıklama</span><span class="sxs-lookup"><span data-stu-id="3c4da-110">Description</span></span>|  
+|<span data-ttu-id="7f0cb-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="7f0cb-110">HRESULT</span></span>|<span data-ttu-id="7f0cb-111">Description</span><span class="sxs-lookup"><span data-stu-id="7f0cb-111">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="3c4da-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="3c4da-111">S_OK</span></span>|<span data-ttu-id="3c4da-112">`OnEvent` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="3c4da-112">`OnEvent` returned successfully.</span></span>|  
-|<span data-ttu-id="3c4da-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="3c4da-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="3c4da-114">Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.</span><span class="sxs-lookup"><span data-stu-id="3c4da-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="3c4da-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="3c4da-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="3c4da-116">Çağrı zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="3c4da-116">The call timed out.</span></span>|  
-|<span data-ttu-id="3c4da-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="3c4da-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="3c4da-118">Çağıranın kilidi yoktur.</span><span class="sxs-lookup"><span data-stu-id="3c4da-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="3c4da-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="3c4da-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="3c4da-120">Engellenen bir iş parçacığı veya fiber üzerinde beklerken bir olay iptal edildi.</span><span class="sxs-lookup"><span data-stu-id="3c4da-120">An event was cancelled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="3c4da-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="3c4da-121">E_FAIL</span></span>|<span data-ttu-id="3c4da-122">Bilinmeyen bir çok zararlı hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="3c4da-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="3c4da-123">Bir yöntem E_FAIL döndürürse, CLR artık işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="3c4da-123">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="3c4da-124">Herhangi bir barındırma yöntemine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="3c4da-124">Subsequent calls to any hosting method return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="7f0cb-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="7f0cb-112">S_OK</span></span>|<span data-ttu-id="7f0cb-113">`OnEvent` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="7f0cb-113">`OnEvent` returned successfully.</span></span>|  
+|<span data-ttu-id="7f0cb-114">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="7f0cb-114">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="7f0cb-115">Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.</span><span class="sxs-lookup"><span data-stu-id="7f0cb-115">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="7f0cb-116">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="7f0cb-116">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="7f0cb-117">Çağrı zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="7f0cb-117">The call timed out.</span></span>|  
+|<span data-ttu-id="7f0cb-118">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="7f0cb-118">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="7f0cb-119">Çağıranın kilidi yoktur.</span><span class="sxs-lookup"><span data-stu-id="7f0cb-119">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="7f0cb-120">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="7f0cb-120">HOST_E_ABANDONED</span></span>|<span data-ttu-id="7f0cb-121">Engellenen bir iş parçacığı veya fiber üzerinde beklerken bir olay iptal edildi.</span><span class="sxs-lookup"><span data-stu-id="7f0cb-121">An event was cancelled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="7f0cb-122">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="7f0cb-122">E_FAIL</span></span>|<span data-ttu-id="7f0cb-123">Bilinmeyen bir çok zararlı hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="7f0cb-123">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="7f0cb-124">Bir yöntem E_FAIL döndürürse, CLR artık işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="7f0cb-124">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="7f0cb-125">Herhangi bir barındırma yöntemine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="7f0cb-125">Subsequent calls to any hosting method return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="3c4da-125">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="3c4da-125">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7f0cb-126">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="7f0cb-126">Remarks</span></span>  
 
- <span data-ttu-id="3c4da-126">`data`Parametresi, belirtilmeyen türdeki bir nesnenin işaretçisidir.</span><span class="sxs-lookup"><span data-stu-id="3c4da-126">The `data` parameter is a pointer to an object of unspecified type.</span></span> <span data-ttu-id="3c4da-127">Parametresi ise, `event` `Event_DomainUnload` `data` bellekten kaldırılan için sayısal tanıtıcıdır <xref:System.AppDomain> .</span><span class="sxs-lookup"><span data-stu-id="3c4da-127">If the `event` parameter is `Event_DomainUnload`, `data` is the numeric identifier for the <xref:System.AppDomain> that was unloaded.</span></span> <span data-ttu-id="3c4da-128">Ana bilgisayar bu tanımlayıcıyı anahtar olarak kullanarak uygun eylemi gerçekleştirebilir.</span><span class="sxs-lookup"><span data-stu-id="3c4da-128">The host can take appropriate action using this identifier as a key.</span></span>  
+ <span data-ttu-id="7f0cb-127">`data`Parametresi, belirtilmeyen türdeki bir nesnenin işaretçisidir.</span><span class="sxs-lookup"><span data-stu-id="7f0cb-127">The `data` parameter is a pointer to an object of unspecified type.</span></span> <span data-ttu-id="7f0cb-128">Parametresi ise, `event` `Event_DomainUnload` `data` bellekten kaldırılan için sayısal tanıtıcıdır <xref:System.AppDomain> .</span><span class="sxs-lookup"><span data-stu-id="7f0cb-128">If the `event` parameter is `Event_DomainUnload`, `data` is the numeric identifier for the <xref:System.AppDomain> that was unloaded.</span></span> <span data-ttu-id="7f0cb-129">Ana bilgisayar bu tanımlayıcıyı anahtar olarak kullanarak uygun eylemi gerçekleştirebilir.</span><span class="sxs-lookup"><span data-stu-id="7f0cb-129">The host can take appropriate action using this identifier as a key.</span></span>  
   
- <span data-ttu-id="3c4da-129">`event`İse `Event_MDAFired` , `data` yönetilen hata ayıklama Yardımcısı 'nın (MDA) ileti çıkışını Içeren bir [mdadınfo](mdainfo-structure.md) örneğine yönelik bir işaretçidir.</span><span class="sxs-lookup"><span data-stu-id="3c4da-129">If `event` is `Event_MDAFired`, `data` is a pointer to an [MDAInfo](mdainfo-structure.md) instance that contains the message output from a Managed Debugging Assistant (MDA).</span></span> <span data-ttu-id="3c4da-130">Mdalar, geliştiricilerin hata ayıklamasına yardımcı olan ve tuzak zorluğu eden olaylar hakkında XML iletileri oluşturarak CLR 'nin bir özelliğidir.</span><span class="sxs-lookup"><span data-stu-id="3c4da-130">MDAs are a feature of the CLR that help developers with debugging, by generating XML messages about events that are otherwise difficult to trap.</span></span> <span data-ttu-id="3c4da-131">Bu tür iletiler, yönetilen ve yönetilmeyen kod arasındaki geçişlerde hata ayıklama için özellikle yararlı olabilir.</span><span class="sxs-lookup"><span data-stu-id="3c4da-131">Such messages can be especially useful in debugging transitions between managed and unmanaged code.</span></span> <span data-ttu-id="3c4da-132">Daha fazla bilgi için bkz. [yönetilen hata ayıklama yardımcıları Ile hataları tanılama](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).</span><span class="sxs-lookup"><span data-stu-id="3c4da-132">For more information, see [Diagnosing Errors with Managed Debugging Assistants](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).</span></span>  
+ <span data-ttu-id="7f0cb-130">`event`İse `Event_MDAFired` , `data` yönetilen hata ayıklama Yardımcısı 'nın (MDA) ileti çıkışını Içeren bir [mdadınfo](mdainfo-structure.md) örneğine yönelik bir işaretçidir.</span><span class="sxs-lookup"><span data-stu-id="7f0cb-130">If `event` is `Event_MDAFired`, `data` is a pointer to an [MDAInfo](mdainfo-structure.md) instance that contains the message output from a Managed Debugging Assistant (MDA).</span></span> <span data-ttu-id="7f0cb-131">Mdalar, geliştiricilerin hata ayıklamasına yardımcı olan ve tuzak zorluğu eden olaylar hakkında XML iletileri oluşturarak CLR 'nin bir özelliğidir.</span><span class="sxs-lookup"><span data-stu-id="7f0cb-131">MDAs are a feature of the CLR that help developers with debugging, by generating XML messages about events that are otherwise difficult to trap.</span></span> <span data-ttu-id="7f0cb-132">Bu tür iletiler, yönetilen ve yönetilmeyen kod arasındaki geçişlerde hata ayıklama için özellikle yararlı olabilir.</span><span class="sxs-lookup"><span data-stu-id="7f0cb-132">Such messages can be especially useful in debugging transitions between managed and unmanaged code.</span></span> <span data-ttu-id="7f0cb-133">Daha fazla bilgi için bkz. [yönetilen hata ayıklama yardımcıları Ile hataları tanılama](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).</span><span class="sxs-lookup"><span data-stu-id="7f0cb-133">For more information, see [Diagnosing Errors with Managed Debugging Assistants](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3c4da-133">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="3c4da-133">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7f0cb-134">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="7f0cb-134">Requirements</span></span>  
 
- <span data-ttu-id="3c4da-134">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3c4da-134">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="7f0cb-135">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7f0cb-135">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3c4da-135">**Üst bilgi:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="3c4da-135">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="7f0cb-136">**Üst bilgi:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="7f0cb-136">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="3c4da-136">**Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi</span><span class="sxs-lookup"><span data-stu-id="3c4da-136">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="7f0cb-137">**Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi</span><span class="sxs-lookup"><span data-stu-id="7f0cb-137">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="3c4da-137">**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3c4da-137">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="7f0cb-138">**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7f0cb-138">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3c4da-138">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3c4da-138">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7f0cb-139">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7f0cb-139">See also</span></span>
 
-- [<span data-ttu-id="3c4da-139">Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama</span><span class="sxs-lookup"><span data-stu-id="3c4da-139">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [<span data-ttu-id="3c4da-140">EClrEvent Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="3c4da-140">EClrEvent Enumeration</span></span>](eclrevent-enumeration.md)
-- [<span data-ttu-id="3c4da-141">IActionOnCLREvent Arabirimi</span><span class="sxs-lookup"><span data-stu-id="3c4da-141">IActionOnCLREvent Interface</span></span>](iactiononclrevent-interface.md)
-- [<span data-ttu-id="3c4da-142">ICLRControl Arabirimi</span><span class="sxs-lookup"><span data-stu-id="3c4da-142">ICLRControl Interface</span></span>](iclrcontrol-interface.md)
-- [<span data-ttu-id="3c4da-143">ICLROnEventManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="3c4da-143">ICLROnEventManager Interface</span></span>](iclroneventmanager-interface.md)
-- [<span data-ttu-id="3c4da-144">MDAInfo Yapısı</span><span class="sxs-lookup"><span data-stu-id="3c4da-144">MDAInfo Structure</span></span>](mdainfo-structure.md)
+- [<span data-ttu-id="7f0cb-140">Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama</span><span class="sxs-lookup"><span data-stu-id="7f0cb-140">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="7f0cb-141">EClrEvent Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="7f0cb-141">EClrEvent Enumeration</span></span>](eclrevent-enumeration.md)
+- [<span data-ttu-id="7f0cb-142">IActionOnCLREvent Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7f0cb-142">IActionOnCLREvent Interface</span></span>](iactiononclrevent-interface.md)
+- [<span data-ttu-id="7f0cb-143">ICLRControl Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7f0cb-143">ICLRControl Interface</span></span>](iclrcontrol-interface.md)
+- [<span data-ttu-id="7f0cb-144">ICLROnEventManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7f0cb-144">ICLROnEventManager Interface</span></span>](iclroneventmanager-interface.md)
+- [<span data-ttu-id="7f0cb-145">MDAInfo Yapısı</span><span class="sxs-lookup"><span data-stu-id="7f0cb-145">MDAInfo Structure</span></span>](mdainfo-structure.md)

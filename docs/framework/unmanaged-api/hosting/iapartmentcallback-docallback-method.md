@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: IApartmentCallback::D oCallback yöntemi'
 title: IApartmentCallback::DoCallback Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 8edad30c-30ff-4bee-813c-75525a82fc93
 topic_type:
 - apiref
-ms.openlocfilehash: e3031bf123ff9107b4cebc0723f1be0d423bdaec
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 65b7f496f953f08e099bf13ef8212c7d6e1026ff
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721757"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785116"
 ---
-# <a name="iapartmentcallbackdocallback-method"></a><span data-ttu-id="1e558-102">IApartmentCallback::DoCallback Yöntemi</span><span class="sxs-lookup"><span data-stu-id="1e558-102">IApartmentCallback::DoCallback Method</span></span>
+# <a name="iapartmentcallbackdocallback-method"></a><span data-ttu-id="7c75b-103">IApartmentCallback::DoCallback Yöntemi</span><span class="sxs-lookup"><span data-stu-id="7c75b-103">IApartmentCallback::DoCallback Method</span></span>
 
-<span data-ttu-id="1e558-103">Belirtilen işlevi bir apartman içinde yürütür.</span><span class="sxs-lookup"><span data-stu-id="1e558-103">Executes the specified function within an apartment.</span></span>  
+<span data-ttu-id="7c75b-104">Belirtilen işlevi bir apartman içinde yürütür.</span><span class="sxs-lookup"><span data-stu-id="7c75b-104">Executes the specified function within an apartment.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1e558-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="1e558-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7c75b-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="7c75b-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT _stdcall DoCallback(  
@@ -35,24 +36,24 @@ HRESULT _stdcall DoCallback(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1e558-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="1e558-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7c75b-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="7c75b-106">Parameters</span></span>  
 
  `pFunc`  
- <span data-ttu-id="1e558-106">'ndaki Apartman içinde yürütülecek işleve yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="1e558-106">[in] A pointer to the function to be executed within the apartment.</span></span>  
+ <span data-ttu-id="7c75b-107">'ndaki Apartman içinde yürütülecek işleve yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="7c75b-107">[in] A pointer to the function to be executed within the apartment.</span></span>  
   
  `pData`  
- <span data-ttu-id="1e558-107">'ndaki İşlevin bağımsız değişkenine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="1e558-107">[in] A pointer to the function's argument.</span></span>  
+ <span data-ttu-id="7c75b-108">'ndaki İşlevin bağımsız değişkenine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="7c75b-108">[in] A pointer to the function's argument.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1e558-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="1e558-108">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7c75b-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="7c75b-109">Requirements</span></span>  
 
- <span data-ttu-id="1e558-109">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1e558-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="7c75b-110">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7c75b-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1e558-110">**Üst bilgi:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="1e558-110">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="7c75b-111">**Üst bilgi:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="7c75b-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="1e558-111">**Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi</span><span class="sxs-lookup"><span data-stu-id="1e558-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="7c75b-112">**Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi</span><span class="sxs-lookup"><span data-stu-id="7c75b-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="1e558-112">**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1e558-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="7c75b-113">**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7c75b-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1e558-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1e558-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7c75b-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7c75b-114">See also</span></span>
 
-- [<span data-ttu-id="1e558-114">IApartmentCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="1e558-114">IApartmentCallback Interface</span></span>](iapartmentcallback-interface.md)
+- [<span data-ttu-id="7c75b-115">IApartmentCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7c75b-115">IApartmentCallback Interface</span></span>](iapartmentcallback-interface.md)

@@ -1,22 +1,23 @@
 ---
+description: 'Daha fazla bilgi edinin: nasıl yapılır: WebRequest kullanarak özel protokol kaydetme'
 title: 'Nasıl yapılır: WebRequest Kullanarak Özel Protokolü Kaydetme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 98ddbdb9-66b1-4080-92ad-51f5c447fcf8
-ms.openlocfilehash: 86ad862dbff9f4a982eec27a6806bcbb6c16f3ae
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7415017f20c0c6ed80570992e249fb8121907de2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96255812"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785763"
 ---
-# <a name="how-to-register-a-custom-protocol-using-webrequest"></a><span data-ttu-id="aba65-102">Nasıl yapılır: WebRequest Kullanarak Özel Protokolü Kaydetme</span><span class="sxs-lookup"><span data-stu-id="aba65-102">How to: Register a Custom Protocol Using WebRequest</span></span>
+# <a name="how-to-register-a-custom-protocol-using-webrequest"></a><span data-ttu-id="1ca2c-103">Nasıl yapılır: WebRequest Kullanarak Özel Protokolü Kaydetme</span><span class="sxs-lookup"><span data-stu-id="1ca2c-103">How to: Register a Custom Protocol Using WebRequest</span></span>
 
-<span data-ttu-id="aba65-103">Bu örnek, başka bir yerde tanımlanan protokole özgü bir sınıfın nasıl kaydedileceği gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="aba65-103">This example shows how to register a protocol specific class that is defined elsewhere.</span></span> <span data-ttu-id="aba65-104">Bu örnekte, `CustomWebRequestCreator` nesnesini döndüren **Create** yöntemini uygulayan kullanıcı tarafından uygulanan nesnedir `CustomWebRequest` .</span><span class="sxs-lookup"><span data-stu-id="aba65-104">In this example, `CustomWebRequestCreator` is the user-implemented object that implements the **Create** method that returns the `CustomWebRequest` object.</span></span> <span data-ttu-id="aba65-105">Kod örneği, `CustomWebRequest` özel protokolü uygulayan kodu yazdığınızı varsayar.</span><span class="sxs-lookup"><span data-stu-id="aba65-105">The code example assumes that you have written the `CustomWebRequest` code that implements the custom protocol.</span></span>  
+<span data-ttu-id="1ca2c-104">Bu örnek, başka bir yerde tanımlanan protokole özgü bir sınıfın nasıl kaydedileceği gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="1ca2c-104">This example shows how to register a protocol specific class that is defined elsewhere.</span></span> <span data-ttu-id="1ca2c-105">Bu örnekte, `CustomWebRequestCreator` nesnesini döndüren **Create** yöntemini uygulayan kullanıcı tarafından uygulanan nesnedir `CustomWebRequest` .</span><span class="sxs-lookup"><span data-stu-id="1ca2c-105">In this example, `CustomWebRequestCreator` is the user-implemented object that implements the **Create** method that returns the `CustomWebRequest` object.</span></span> <span data-ttu-id="1ca2c-106">Kod örneği, `CustomWebRequest` özel protokolü uygulayan kodu yazdığınızı varsayar.</span><span class="sxs-lookup"><span data-stu-id="1ca2c-106">The code example assumes that you have written the `CustomWebRequest` code that implements the custom protocol.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="aba65-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="aba65-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="1ca2c-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="1ca2c-107">Example</span></span>  
   
 ```csharp  
 WebRequest.RegisterPrefix("custom", new CustomWebRequestCreator());  
@@ -28,12 +29,12 @@ WebRequest.RegisterPrefix("custom", New CustomWebRequestCreator())
 Dim req As WebRequest = WebRequest.Create("custom://customHost.contoso.com/")  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="aba65-107">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="aba65-107">Compiling the Code</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="1ca2c-108">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="1ca2c-108">Compiling the Code</span></span>  
 
- <span data-ttu-id="aba65-108">Bu örnek şunları gerektirir:</span><span class="sxs-lookup"><span data-stu-id="aba65-108">This example requires:</span></span>  
+ <span data-ttu-id="1ca2c-109">Bu örnek şunları gerektirir:</span><span class="sxs-lookup"><span data-stu-id="1ca2c-109">This example requires:</span></span>  
   
- <span data-ttu-id="aba65-109"><xref:System.Net>Ad alanına başvurular.</span><span class="sxs-lookup"><span data-stu-id="aba65-109">References to the <xref:System.Net> namespace.</span></span>  
+ <span data-ttu-id="1ca2c-110"><xref:System.Net>Ad alanına başvurular.</span><span class="sxs-lookup"><span data-stu-id="1ca2c-110">References to the <xref:System.Net> namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="aba65-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="aba65-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1ca2c-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1ca2c-111">See also</span></span>
 
-- [<span data-ttu-id="aba65-111">Takılabilir Protokoller Programlama</span><span class="sxs-lookup"><span data-stu-id="aba65-111">Programming Pluggable Protocols</span></span>](programming-pluggable-protocols.md)
+- [<span data-ttu-id="1ca2c-112">Takılabilir Protokoller Programlama</span><span class="sxs-lookup"><span data-stu-id="1ca2c-112">Programming Pluggable Protocols</span></span>](programming-pluggable-protocols.md)
