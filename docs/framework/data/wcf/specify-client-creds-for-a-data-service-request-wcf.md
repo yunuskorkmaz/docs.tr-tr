@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: bir veri hizmeti Isteği için Istemci kimlik bilgilerini belirtme (WCF Veri Hizmetleri)'
 title: 'Nasıl yapılır: veri hizmeti Isteği için Istemci kimlik bilgilerini belirtme (WCF Veri Hizmetleri)'
 ms.date: 03/30/2017
 dev_langs:
@@ -7,14 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 1632f9af-e45f-4363-9222-03823daa8e28
-ms.openlocfilehash: fd69d5f7eddf713612000b0ad677e7ada378553e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 45ccb237d310479d708b6ab0a7dcfe8812c1ea3f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180666"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773062"
 ---
 # <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>Nasıl yapılır: veri hizmeti Isteği için Istemci kimlik bilgilerini belirtme (WCF Veri Hizmetleri)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 Varsayılan olarak, istemci kitaplığı bir OData hizmetine istek gönderilirken kimlik bilgileri sağlamaz. Ancak, için bir özelliği sağlayarak veri hizmetine isteklerin kimliğini doğrulamak üzere kimlik bilgilerinin gönderilmesini belirtebilirsiniz <xref:System.Net.NetworkCredential> <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> <xref:System.Data.Services.Client.DataServiceContext> . Daha fazla bilgi için bkz. [güvenliği WCF veri Hizmetleri](securing-wcf-data-services.md). Bu konudaki örnekte, veri hizmetinden veri istenirken WCF Veri Hizmetleri istemcisi tarafından kullanılan kimlik bilgilerinin açık bir şekilde nasıl sağlanması gösterilmektedir.  
   

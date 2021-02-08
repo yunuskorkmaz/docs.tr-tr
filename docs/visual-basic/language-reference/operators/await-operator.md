@@ -1,4 +1,5 @@
 ---
+description: ': Await Işleci (Visual Basic) hakkında daha fazla bilgi'
 title: Await İşleci
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - Await operator [Visual Basic]
 - Await [Visual Basic]
 ms.assetid: 6b1ce283-e92b-4ba7-b081-7be7b3d37af9
-ms.openlocfilehash: 9d55ba82547dfcb0336c3a3fd12521c0dcb3eb58
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 04e32f31de970b389ae38fc3a4cdc6ab3f873f3d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84371836"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774141"
 ---
 # <a name="await-operator-visual-basic"></a>Await İşleci (Visual Basic)
 
 `Await` operatörünü awaited görevi tamamlanıncaya kadar, metodun yürütülmesini askıya almak için bir zaman uyumsuz metod veya lambda ifadesinde bir işlenene uygularsınız. Görev, devam eden işi temsil eder.
 
-' In kullanıldığı yöntemin `Await` [zaman uyumsuz](../modifiers/async.md) değiştiricisi olmalıdır. Bu tür bir yöntem, değiştirici kullanılarak tanımlanır `Async` ve genellikle bir veya daha fazla ifade içeren bir `Await` *zaman uyumsuz yöntem*olarak adlandırılır.
+' In kullanıldığı yöntemin `Await` [zaman uyumsuz](../modifiers/async.md) değiştiricisi olmalıdır. Bu tür bir yöntem, değiştirici kullanılarak tanımlanır `Async` ve genellikle bir veya daha fazla ifade içeren bir `Await` *zaman uyumsuz yöntem* olarak adlandırılır.
 
 > [!NOTE]
 > `Async`Ve `Await` anahtar sözcükleri Visual Studio 2012 ' de tanıtılmıştı. Zaman uyumsuz programlamaya giriş için bkz. [Async ve await Ile zaman uyumsuz programlama](../../programming-guide/concepts/async/index.md).
@@ -64,7 +65,7 @@ Bir `Await` ifadesi yalnızca bir `Async` değiştiricisiyle işaretlenmiş bir 
 
 En zaman uyumsuz yöntemler bir <xref:System.Threading.Tasks.Task> veya döndürür <xref:System.Threading.Tasks.Task%601> . Döndürülen görevin özellikleri, görevin tamamlanıp tamamlanmayacağı, zaman uyumsuz yöntemin bir özel durum mi olduğunu, yoksa iptal edildiğini mi olduğunu ve nihai sonucun ne olduğunu belirtir gibi durum ve geçmişi hakkındaki bilgileri taşır. `Await`İşleci bu özelliklere erişir.
 
-Bir özel duruma neden olan bir görev döndüren zaman uyumsuz yöntemi beklelerseniz, `Await` işleç özel durumu yeniden oluşturur.
+Bir özel duruma neden olan bir görev döndüren zaman uyumsuz yöntemi beklelerseniz,  `Await` işleç özel durumu yeniden oluşturur.
 
 İptal edilen bir görev döndüren zaman uyumsuz yöntemi beklerseniz, `Await` operatörü yeniden bir <xref:System.OperationCanceledException> oluşturur.
 
@@ -108,6 +109,6 @@ End Function
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Async ve await ile zaman uyumsuz programlama](../../programming-guide/concepts/async/index.md)
+- [Async ve Await ile Zaman Uyumsuz Programlama](../../programming-guide/concepts/async/index.md)
 - [İzlenecek yol: Async ve await kullanarak Web 'e erişme](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Eş](../modifiers/async.md)

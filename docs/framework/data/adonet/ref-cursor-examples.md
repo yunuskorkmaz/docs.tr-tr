@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: REF CURSOR örnekleri'
 title: REF CURSOR Örnekleri
 ms.date: 03/30/2017
 ms.assetid: c257da03-c6c9-4cf8-b591-b7740a962c40
-ms.openlocfilehash: b45ef971ccb6b785988cc351d02be9e0844f6e11
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e7cb411778b325400d37511b082032e590b339c0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91200543"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773231"
 ---
 # <a name="ref-cursor-examples"></a>REF CURSOR Örnekleri
 
@@ -16,7 +17,7 @@ REF CURSOR örnekleri, REF IMLEÇLER kullanmayı gösteren aşağıdaki üç Mic
 |Örnek|Açıklama|  
 |------------|-----------------|  
 |[OracleDataReader’da REF CURSOR Parametreleri](ref-cursor-parameters-in-an-oracledatareader.md)|Bu örnek, bir REF CURSOR parametresi döndüren bir PL/SQL saklı yordamını yürütür ve değeri olarak okur <xref:System.Data.OracleClient.OracleDataReader> .|  
-|[OracleDataReader Kullanarak Birden Çok REF CURSOR’dan Veri Alma](retrieving-data-from-multiple-ref-cursors.md)|Bu örnek, iki REF CURSOR parametresi döndüren bir PL/SQL saklı yordamını yürütür ve bir **OracleDataReader**kullanarak değerleri okur.|  
+|[OracleDataReader Kullanarak Birden Çok REF CURSOR’dan Veri Alma](retrieving-data-from-multiple-ref-cursors.md)|Bu örnek, iki REF CURSOR parametresi döndüren bir PL/SQL saklı yordamını yürütür ve bir **OracleDataReader** kullanarak değerleri okur.|  
 |[Bir veya daha fazla REF CURSOR Kullanarak DataSet Doldurma](filling-a-dataset-using-one-or-more-ref-cursors.md)|Bu örnek, iki REF CURSOR parametresi döndüren bir PL/SQL saklı yordamını yürütür ve <xref:System.Data.DataSet> döndürülen satırlarla birlikte bir doldurur.|  
   
  Bu örnekleri kullanmak için Oracle tabloları oluşturmanız gerekebilir ve bir PL/SQL paketi ve paket gövdesi oluşturmanız gerekir.  

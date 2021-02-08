@@ -1,13 +1,14 @@
 ---
+description: WCF hakkında daha fazla bilgi edinin <tracking>
 title: <tracking> WCF
 ms.date: 03/30/2017
 ms.assetid: 70cfaf24-a91c-4e56-ac47-d2ed87a963b3
-ms.openlocfilehash: 223a30cd79d346d6ae36ca64fa887a683e6bfc8d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e372139623cd0b92bde74a6b19761d8a4c5ad6db
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201440"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773829"
 ---
 # <a name="tracking-of-wcf"></a>\<tracking> WCF
 

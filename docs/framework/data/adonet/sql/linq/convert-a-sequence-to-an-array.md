@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: bir diziyi diziye dönüştürme'
 title: Diziyi (Sequence) Diziye (Array) Dönüştürme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: bf0af444-890d-43e2-aeca-98589dd74ddf
-ms.openlocfilehash: 24a813b044bdbee2621cb57a8f34ec818d4533c3
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4286466a6f95fe896e019ebc966e7347cba6b442
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164382"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773166"
 ---
 # <a name="convert-a-sequence-to-an-array"></a>Diziyi (Sequence) Diziye (Array) Dönüştürme
 

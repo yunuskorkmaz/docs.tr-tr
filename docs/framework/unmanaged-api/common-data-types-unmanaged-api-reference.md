@@ -1,19 +1,20 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: ortak veri türleri (yönetilmeyen API Başvurusu)'
 title: Ortak Veri Türleri (Yönetilmeyen API Başvurusu)
 ms.date: 03/30/2017
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
-ms.openlocfilehash: 5c00ff6d0947b5d847a9622dce02bd310491818c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 037a212d9b58adbfdc24635bc651946af9f9bb7c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95673988"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99772828"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>Ortak Veri Türleri (Yönetilmeyen API Başvurusu)
 
 Bu konu, C/C++ deyimleri tarafından tanımlanan .NET Framework için yönetilmeyen API 'Ler tarafından kullanılan basit veri türlerini listeler `typedef` . Bu veri türleri genellikle C/C++ temel veri türleri için diğer adlardır. Genellikle, bu veri türlerinin değerleri opaktır; diğer bir deyişle, bunlar belirli bir işlev veya yöntem tarafından, değişiklik yapılmadan diğer işlevlere veya yöntemlere geçirilebilmeleri için döndürülür.  
   
-|Veri türü|Tanım|Tanımlı|Açıklama|  
+|Veri türü|Tanım|Tanımlı|Description|  
 |---------------|----------------|----------------|-----------------|  
 |AppDomainID|`typedef UINT_PTR AppDomainID;`|CorProf. h|Bir uygulama etki alanının tanımlayıcısı.|  
 |AssemblyId|`typedef UINT_PTR AssemblyID;`|CorProf. h|Bir derlemenin tanımlayıcısı.|  

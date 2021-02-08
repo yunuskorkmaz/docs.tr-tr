@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: AndAlso Işleci (Visual Basic)'
 title: AndAlso İşleci
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - short-circuit evaluation
 ms.assetid: bbc15191-b374-495b-9b8f-7b8c2f4388eb
-ms.openlocfilehash: aff4621b8f415b9441ad1edf537b9b0736892bb8
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: dcf6c2685bf8f9ffee27b00543786cd3b315b327
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874847"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774271"
 ---
 # <a name="andalso-operator-visual-basic"></a>AndAlso İşleci (Visual Basic)
 
 İki ifadeye kısa devre mantıksal birlikte uygular.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb
 result = expression1 AndAlso expression2  
@@ -30,7 +31,7 @@ result = expression1 AndAlso expression2
   
 ## <a name="parts"></a>Bölümler  
   
-|Terim|Tanım|  
+|Süre|Tanım|  
 |---|---|  
 |`result`|Gereklidir. Herhangi bir `Boolean` ifade. Sonuç, `Boolean` iki ifadenin karşılaştırmasının sonucudur.|  
 |`expression1`|Gereklidir. Herhangi bir `Boolean` ifade.|  
@@ -55,7 +56,7 @@ Daha fazla bilgi için bkz. [Boole tür dönüştürmeleri](../data-types/boolea
   
 ## <a name="overloading"></a>Aşırı Yükleme  
 
- [And işleci](and-operator.md) ve [IsFalse işleci](isfalse-operator.md) *aşırı*yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışlarını yeniden tanımlayabileceği anlamına gelir. `And`Ve işleçlerini aşırı yüklemek `IsFalse` işlecin davranışını etkiler `AndAlso` . Kodunuz `AndAlso` , ve ' yi aşırı yükleyen bir sınıf veya yapı üzerinde kullanıyorsa `And` `IsFalse` , yeniden tanımlanmış davranışlarını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../programming-guide/language-features/procedures/operator-procedures.md).  
+ [And işleci](and-operator.md) ve [IsFalse işleci](isfalse-operator.md) *aşırı* yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışlarını yeniden tanımlayabileceği anlamına gelir. `And`Ve işleçlerini aşırı yüklemek `IsFalse` işlecin davranışını etkiler `AndAlso` . Kodunuz `AndAlso` , ve ' yi aşırı yükleyen bir sınıf veya yapı üzerinde kullanıyorsa `And` `IsFalse` , yeniden tanımlanmış davranışlarını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
 

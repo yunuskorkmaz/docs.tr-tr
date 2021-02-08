@@ -1,4 +1,5 @@
 ---
+description: Hakkında daha fazla bilgi edinin WCF Veri Hizmetleri
 title: WCF Veri Hizmetlerinin Güvenliğini Sağlama
 ms.date: 03/30/2017
 dev_langs:
@@ -8,14 +9,16 @@ helpviewer_keywords:
 - securing application [WCF Data Services]
 - WCF Data Services, security
 ms.assetid: 99fc2baa-a040-4549-bc4d-f683d60298af
-ms.openlocfilehash: e45e09e821928d110e67f82810f51e2d9d4a85e8
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c7f8cb989c33df3d124a1745046ea68cb27e8c2f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180692"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773114"
 ---
 # <a name="securing-wcf-data-services"></a>WCF Veri Hizmetlerinin Güvenliğini Sağlama
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 Bu makalede, açık veri Protokolü 'Nü (OData) destekleyen hizmetlere erişen WCF Veri Hizmetleri ve uygulamalar geliştirmeye, dağıtmaya ve çalıştırmaya özgü güvenlik konuları açıklanmaktadır. Ayrıca, güvenli .NET Framework uygulamalar oluşturmaya yönelik önerileri de izlemeniz gerekir.  
   
@@ -29,7 +32,7 @@ WCF Veri Hizmetleri, kendi kendine herhangi bir tür kimlik doğrulaması uygula
 
  Aşağıdaki tabloda, WCF Veri Hizmeti için isteklerin kimliğini doğrulamanıza yardımcı olacak kimlik doğrulama mekanizmalarından bazıları listelenmektedir.  
   
-|Kimlik doğrulama seçenekleri|Açıklama|  
+|Kimlik doğrulama seçenekleri|Description|  
 |----------------------------|-----------------|  
 |Anonim kimlik doğrulama|HTTP anonim kimlik doğrulama etkinleştirildiğinde, herhangi bir ilke veri hizmetine bağlanabilir. Anonim erişim için kimlik bilgileri gerekmez. Bu seçeneği, yalnızca herkesin veri hizmetine erişmesini istediğinizde kullanın.|  
 |Temel ve özet kimlik doğrulama|Kimlik doğrulama için bir kullanıcı adı ve paroladan oluşan kimlik bilgileri gereklidir. Windows olmayan istemcilerin kimlik doğrulamasını destekler. **Güvenlik notno:**  Temel kimlik doğrulama kimlik bilgileri (Kullanıcı adı ve parola) açık olarak gönderilir ve yakalanabilir. Özet kimlik doğrulama, sağlanan kimlik bilgilerini temel alan bir karma değer gönderir; bu nedenle temel kimlik doğrulamaya göre daha güvenlidir. Her ikisi de ortadaki adam saldırılarına maruz kalabilir. Bu kimlik doğrulama yöntemlerini kullanırken, Güvenli Yuva Katmanı (SSL) kullanarak istemci ile veri hizmeti arasındaki iletişimi şifrelemeyi göz önünde bulundurmanız gerekir. <br /><br /> Microsoft Internet Information Services (IIS), bir ASP.NET uygulamasındaki HTTP istekleri için hem temel hem de Özet kimlik doğrulamasının uygulanmasını sağlar. Bu Windows Kimlik Doğrulama Sağlayıcısı uygulaması, Windows kullanıcısının kimlik doğrulaması üzerinde sorunsuz bir şekilde anlaşmaya varmak için veri hizmetine isteğin HTTP üstbilgisindeki kimlik bilgilerini sağlayan bir .NET Framework istemci uygulaması sağlar. Daha fazla bilgi için bkz. [Özet kimlik doğrulaması teknik başvurusu](/previous-versions/windows/it-pro/windows-server-2003/cc782794(v=ws.10)).<br /><br /> Veri hizmetinizin Windows kimlik bilgileri değil, bazı özel kimlik doğrulama hizmetine göre temel kimlik doğrulaması kullanmasını istediğinizde, kimlik doğrulaması için özel bir ADP.NET HTTP modülü uygulamanız gerekir.<br /><br /> WCF Veri Hizmetleri ile özel bir temel kimlik doğrulama düzeninin nasıl kullanılacağına ilişkin bir örnek için, bkz. Web günlüğü gönderi [OData ve kimlik doğrulaması – Bölüm 6 – özel temel kimlik doğrulaması](https://devblogs.microsoft.com/odata/odata-and-authentication-part-6-custom-basic-authentication/).|  

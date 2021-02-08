@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi <transport> edinin: <basicHttpBinding>'
 title: <transport> / <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
-ms.openlocfilehash: d575b7e282775e2e2c498ac94bb54a563b8d125e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6148bbd5fa234adb51266714fff818e72f0abf40
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201401"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773543"
 ---
 # <a name="transport-of-basichttpbinding"></a>\<transport> / \<basicHttpBinding>
 
@@ -59,7 +60,7 @@ HTTP taşıması için kimlik doğrulama parametrelerini denetleyen özellikleri
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Yok|Aktarım sırasında iletiler güvenli değildir.|  
+|Hiçbiri|Aktarım sırasında iletiler güvenli değildir.|  
 |Temel|Temel kimlik doğrulamasını belirtir.|  
 |Bilgisi|Özet kimlik doğrulamasını belirtir.|  
 |NT|Mümkünse NTLM kimlik doğrulamasını belirtir ve Windows kimlik doğrulaması başarısız olursa.|  
@@ -69,7 +70,7 @@ HTTP taşıması için kimlik doğrulama parametrelerini denetleyen özellikleri
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Yok|-İletiler aktarım sırasında güvenli değildir.|  
+|Hiçbiri|-İletiler aktarım sırasında güvenli değildir.|  
 |Temel|RFC 2617 – HTTP kimlik doğrulaması ile tanımlanan temel kimlik doğrulamasını belirtir: temel ve Özet kimlik doğrulaması.|  
 |Bilgisi|RFC 2617 – HTTP kimlik doğrulaması ile tanımlanan Özet kimlik doğrulamasını belirtir: temel ve Özet kimlik doğrulaması.|  
 |NT|Mümkünse NTLM kimlik doğrulamasını belirtir ve Windows kimlik doğrulaması başarısız olursa.|  

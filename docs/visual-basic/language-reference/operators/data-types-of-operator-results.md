@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Işleç sonuçlarının veri türleri (Visual Basic)'
 title: İşleç Sonuçlarının Veri Türleri
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], ranges
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
-ms.openlocfilehash: f7a1249cec159f98ede48b960fadc5e2ff4a75f3
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: ebc99d5d735c30124feb52232e28a5fe6fe5fd50
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867098"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773933"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>İşleç Sonuçlarının Veri Türleri (Visual Basic)
 
@@ -50,7 +51,7 @@ Visual Basic, işlenen veri türlerine göre bir işlemin sonuç veri türünü 
   
  ,,, Veya işleminin herhangi bir işleneni `+` `–` `*` `/` `Mod` ise `Decimal` ve diğeri `Single` veya değilse `Double` , diğer işleneni widens Visual Basic `Decimal` . Üzerinde işlemi gerçekleştirir `Decimal` ve sonuç veri türü olur `Decimal` .  
   
-## <a name="floating-point-arithmetic"></a>Kayan nokta aritmetiği  
+## <a name="floating-point-arithmetic"></a>Floating-Point aritmetik  
 
  Visual Basic, bu tür işlemler için en verimli veri türü olan [Double](../data-types/double-data-type.md)'ta çoğu kayan nokta aritmetiği gerçekleştirir. Ancak, bir işlenen [tek](../data-types/single-data-type.md) ise ve diğeri değilse `Double` , Visual Basic içinde işlem gerçekleştirir `Single` . Her işleneni, işlem öncesinde uygun veri türü için gereken şekilde widens ve sonuç bu veri türüne sahip olur.  
   

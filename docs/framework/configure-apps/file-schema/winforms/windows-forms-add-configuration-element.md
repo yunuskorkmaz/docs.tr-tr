@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: Windows Forms yapılandırma öğesi Ekle'
 title: Windows Forms yapılandırma öğesi Ekle
 ms.date: 04/07/2017
 helpviewer_keywords:
 - Windows Forms Add configuration element
 - configuring Windows Forms applications
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
-ms.openlocfilehash: dc1786f1f2dcc7bd01488dd24c6ef454f7e1cfbd
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a0db81e0dd86f9ee6f2a47183100645ece78280c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557638"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773266"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Forms yapılandırma öğesi Ekle
 
@@ -69,13 +70,13 @@ Windows Forms yüksek DPı desteğine genel bakış için bkz. [Windows Forms y�
 
 ### <a name="dpiawareness"></a>Dpitanıma
 
-Windows 10 Creators Edition ve .NET Framework 4,7 ile başlayan .NET Framework hedef sürümleriyle başlayan Windows Forms uygulamalar, .NET Framework 4,7 ' de sunulan yüksek DPı geliştirmelerinden faydalanmak için yapılandırılabilir. Bu güncelleştirmeler şunlardır:
+Windows 10 Creators Edition ve .NET Framework 4,7 ile başlayan .NET Framework hedef sürümleriyle başlayan Windows Forms uygulamalar, .NET Framework 4,7 ' de sunulan yüksek DPı geliştirmelerinden faydalanmak için yapılandırılabilir. Bu modüller şunlardır:
 
 - Windows Forms bir uygulama başlatıldıktan sonra kullanıcının DPı veya ölçek faktörünü değiştirdiği dinamik DPı senaryoları için destek.
 
 - Denetim ve denetim gibi bir dizi Windows Forms denetiminin ölçeklendirilmesine ve düzenine yönelik iyileştirmeler <xref:System.Windows.Forms.MonthCalendar> <xref:System.Windows.Forms.CheckedListBox> .
 
-Yüksek DPı tanıma, bir katılım özelliğidir; Varsayılan olarak, değeri `DpiAwareness` `false` . Bu anahtarın değerini uygulama yapılandırma dosyasında olarak ayarlayarak DPı tanıma desteğini Windows Forms tercih edebilirsiniz `PerMonitorV2` . DPı tanıma etkinse, tüm tek DPı özellikleri de etkinleştirilir. Bu güncelleştirmeler şunlardır:
+Yüksek DPı tanıma, bir katılım özelliğidir; Varsayılan olarak, değeri `DpiAwareness` `false` . Bu anahtarın değerini uygulama yapılandırma dosyasında olarak ayarlayarak DPı tanıma desteğini Windows Forms tercih edebilirsiniz `PerMonitorV2` . DPı tanıma etkinse, tüm tek DPı özellikleri de etkinleştirilir. Bu modüller şunlardır:
 
 - Anahtar tarafından denetlenen DPı değiştirilmiş iletileri `DisableDpiChangedMessageHandling` .
 

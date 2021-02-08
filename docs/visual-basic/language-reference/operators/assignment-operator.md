@@ -1,4 +1,5 @@
 ---
+description: ': = Işleci hakkında daha fazla bilgi edinin (Visual Basic)'
 title: = İşleci
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - = operator [Visual Basic]
 - = assignment statements [Visual Basic]
 ms.assetid: 2dac2e49-86c8-42f8-80c1-458452fb5e29
-ms.openlocfilehash: eccea0b43564a4980778c9d1a5b8f9a8c2a9207d
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 3cf45fb93bf5138f9e7fa5a43650019ab58674fd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874829"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774258"
 ---
 # <a name="-operator-visual-basic"></a>= İşleci (Visual Basic)
 
 Bir değişkene veya özelliğe bir değer atar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 variableorproperty = value  

@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi <transport> edinin: <ws2007HttpBinding>'
 title: <transport> / <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-ms.openlocfilehash: 60e8758d653848176ca3f287e253bd7990e78470
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8c6890bc291458ba0849ab7a206487431b279576
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91162055"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773439"
 ---
 # <a name="transport-of-ws2007httpbinding"></a>\<transport> / \<ws2007HttpBinding>
 
@@ -69,7 +70,7 @@ HTTP taşıması için kimlik doğrulama ayarlarını tanımlar.
   
 ### <a name="child-elements"></a>Alt Öğeler  
 
- Hiçbiri  
+ Yok  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
