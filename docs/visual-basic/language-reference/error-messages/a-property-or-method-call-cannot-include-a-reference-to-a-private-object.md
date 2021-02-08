@@ -1,15 +1,16 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: bir özellik veya yöntem çağrısı, bir özel nesneye bağımsız değişken olarak veya dönüş değeri olarak başvuru içeremez'
 title: Özellik veya yöntem çağrısı, bir özel nesneye bağımsız değişken ya da dönüş değeri olarak başvuru içeremez.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID98
 ms.assetid: 059b43e1-202d-4fa2-806b-7bad63c1e7ca
-ms.openlocfilehash: 00237d795fb62fbae426e0015d8e64d5fabb4c32
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 8fe570c9ed789a5bac36aafa9b1ec2f507a55d51
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162680"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797204"
 ---
 # <a name="a-property-or-method-call-cannot-include-a-reference-to-a-private-object-either-as-an-argument-or-as-a-return-value"></a>Özellik veya yöntem çağrısı, bir özel nesneye bağımsız değişken ya da dönüş değeri olarak başvuru içeremez.
 
@@ -29,4 +30,4 @@ Bu hatanın olası nedenleri arasında:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Özelleştirme](../modifiers/private.md)
+- [Özel](../modifiers/private.md)

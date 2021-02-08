@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ICorDebugThread4:: GetCurrentCustomDebuggerNotification yöntemi'
 title: ICorDebugThread4::GetCurrentCustomDebuggerNotification Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 57e0f2d2-5f0e-4e2d-99ec-3f26632eb693
 topic_type:
 - apiref
-ms.openlocfilehash: 76ad1c0ac421f05cf30f6d3d1f3e65848796a0c7
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 20d9449e98b9ab91dbdec84ba026e91514d5b3cc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378692"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800948"
 ---
 # <a name="icordebugthread4getcurrentcustomdebuggernotification-method"></a>ICorDebugThread4::GetCurrentCustomDebuggerNotification Metodu
 
@@ -37,7 +38,7 @@ HRESULT GetCurrentCustomDebuggerNotification(
 ## <a name="parameters"></a>Parametreler
 
 `ppNotificationObject`\
-dışı `ICorDebugManagedCallback3::CustomNotification`Geçerli iş parçacığındaki geçerli nesneye yönelik bir işaretçi.
+dışı `ICorDebugManagedCallback3::CustomNotification` Geçerli iş parçacığındaki geçerli nesneye yönelik bir işaretçi.
 
 ## <a name="remarks"></a>Açıklamalar
 

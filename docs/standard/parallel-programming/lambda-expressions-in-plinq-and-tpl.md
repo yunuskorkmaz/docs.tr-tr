@@ -1,4 +1,5 @@
 ---
+description: "Daha fazla bilgi edinin: PLıNQ ve TPL 'deki lambda Ifadeleri"
 title: PLINQ ve TPL'deki Lambda İfadeleri
 ms.date: 03/30/2017
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Action delegate, creating with lambda expression
 - lambda expressions, with Action and Func
 ms.assetid: 645b2c17-29d0-4ffa-8684-430743cc2f2d
-ms.openlocfilehash: 9d884bbcb248effa41b24788d530151783280a53
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 86ecfca0e9866a08b4f4bb40d15b74257ec4540e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94817127"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99798036"
 ---
 # <a name="lambda-expressions-in-plinq-and-tpl"></a>PLINQ ve TPL'deki Lambda İfadeleri
 

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: IBindingDisplay arabirimi'
 title: IBindingDisplay Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3367166f-31fe-43d0-8107-2e786f984e50
 topic_type:
 - apiref
-ms.openlocfilehash: d3bbdea3b2f23ddd2207ff2a036f32978cd837e8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2c0122988cbc6dea4a962876dbf82cc91d75820a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725137"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800389"
 ---
 # <a name="ibindingdisplay-interface"></a>IBindingDisplay Arabirimi
 

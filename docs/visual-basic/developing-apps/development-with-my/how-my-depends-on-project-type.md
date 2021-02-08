@@ -1,23 +1,24 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: proje türüne nasıl dayanıyor (Visual Basic)'
 title: My Özellikleri Proje Türüne Nasıl Bağımlıdır
 ms.date: 07/20/2015
 helpviewer_keywords:
 - _MYTYPE
 ms.assetid: c188b38e-bd9d-4121-9983-41ea6a94d28e
-ms.openlocfilehash: 740185d8030c09e8813bc7680b451f6326588593
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 69c1ffdbd241816c9061bf4b4feb6d4359258059
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411720"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797984"
 ---
 # <a name="how-my-depends-on-project-type-visual-basic"></a>My Özellikleri Proje Türüne Nasıl Bağımlıdır (Visual Basic)
 
-`My`yalnızca belirli bir proje türü için gereken nesneleri gösterir. Örneğin, `My.Forms` nesne Windows Forms bir uygulamada kullanılabilir ancak konsol uygulamasında kullanılamaz. Bu konuda `My` , farklı proje türlerinde hangi nesnelerin kullanılabildiği açıklanmaktadır.  
+`My` yalnızca belirli bir proje türü için gereken nesneleri gösterir. Örneğin, `My.Forms` nesne Windows Forms bir uygulamada kullanılabilir ancak konsol uygulamasında kullanılamaz. Bu konuda `My` , farklı proje türlerinde hangi nesnelerin kullanılabildiği açıklanmaktadır.  
   
 ## <a name="my-in-windows-applications-and-web-sites"></a>My Windows Uygulamaları ve Web siteleri  
 
- `My`yalnızca geçerli proje türünde yararlı olan nesneleri gösterir; geçerli olmayan nesneleri bastırır. Örneğin, aşağıdaki görüntüde `My` nesne modeli Windows Forms bir projede gösterilmektedir.  
+ `My` yalnızca geçerli proje türünde yararlı olan nesneleri gösterir; geçerli olmayan nesneleri bastırır. Örneğin, aşağıdaki görüntüde `My` nesne modeli Windows Forms bir projede gösterilmektedir.  
   
  ![Windows Forms uygulamasındaki nesnem modelini gösteren diyagram.](./media/how-my-depends-on-project-type/my-object-model-windows-forms.png)  
   

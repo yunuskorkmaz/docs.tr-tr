@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: IXCLRDataMethodDefinition:: Startenumınstances yöntemi'
 title: 'IXCLRDataMethodDefinition:: Startenumınstances yöntemi'
 ms.date: 01/16/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: b0c37c666f23f04239ed827246b87c43ee8d5ad9
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 74de6360c90766cfec17e6b88a495fe2a70858b4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420935"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800831"
 ---
 # <a name="ixclrdatamethoddefinitionstartenuminstances-method"></a>IXCLRDataMethodDefinition:: Startenumınstances yöntemi
 
@@ -28,7 +29,7 @@ Belirli bir için yöntem örneklerinin numaralandırması için bir tanıtıcı
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 HRESULT StartEnumInstances(

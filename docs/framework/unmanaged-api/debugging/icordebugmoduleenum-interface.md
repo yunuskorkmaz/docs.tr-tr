@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ICorDebugModuleEnum arabirimi'
 title: ICorDebugModuleEnum Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2fb93cd6-6d47-4fdc-a9a0-047726fd03a1
 topic_type:
 - apiref
-ms.openlocfilehash: 08d16393a04888cd3f1a03fa209a1fceac28520b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c9c847f926984ed2b8aea87463e351cd97a62c80
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724760"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801052"
 ---
 # <a name="icordebugmoduleenum-interface"></a>ICorDebugModuleEnum Arabirimi
 

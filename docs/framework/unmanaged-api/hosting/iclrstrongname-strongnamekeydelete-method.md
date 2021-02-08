@@ -1,4 +1,5 @@
 ---
+description: ': ICLRStrongName:: StrongNameKeyDelete yöntemi hakkında daha fazla bilgi edinin'
 title: ICLRStrongName::StrongNameKeyDelete Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 0163412f-f617-4428-89e0-03992fec31e8
 topic_type:
 - apiref
-ms.openlocfilehash: 46345ae570673c9c9c0c58fb6edea1464ba8dd91
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5b782785921eb24394db53d29a66600a3867b489
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95671700"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799583"
 ---
 # <a name="iclrstrongnamestrongnamekeydelete-method"></a>ICLRStrongName::StrongNameKeyDelete Yöntemi
 
 Belirtilen anahtar kapsayıcısını siler.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT StrongNameKeyDelete (  

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Izlenecek yol: Windows Forms uygulamasında veri akışı kullanma'
 title: "İzlenecek yol: Windows Forms Uygulaması'nda Veri Akışı Kullanma"
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - Windows Forms, and TPL
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
-ms.openlocfilehash: da42358007b887f6bab05c35e0f7542f1069abd4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 761f47b3250827a8d5cbee8bb444d172e9ae950f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95689816"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99798049"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>İzlenecek yol: Windows Forms Uygulaması'nda Veri Akışı Kullanma
 
@@ -90,7 +91,7 @@ Bu belgede, Windows Forms uygulamasında görüntü işlemeyi gerçekleştiren b
   
  Aşağıdaki tablo, ağın üyelerini açıklar.  
   
-|Üye|Tür|Açıklama|  
+|Üye|Tür|Description|  
 |------------|----------|-----------------|  
 |`loadBitmaps`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Bir klasör yolunu girdi olarak alır ve <xref:System.Drawing.Bitmap> çıktı olarak bir nesne koleksiyonu oluşturur.|  
 |`createCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Bir <xref:System.Drawing.Bitmap> nesne koleksiyonunu girdi olarak alır ve çıkış olarak bileşik bir bit eşlem üretir.|  

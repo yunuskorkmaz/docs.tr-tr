@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: IDENTITY_ATTRIBUTE Yapısı'
 title: IDENTITY_ATTRIBUTE Yapısı
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ee7c434-9681-4fa8-badd-652cb1a9742b
 topic_type:
 - apiref
-ms.openlocfilehash: da4b1d6f2a7079ef33859fce29c9555ac06fcfc2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 52610961ab202fc79351073eac1846a1a63889e3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725657"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800181"
 ---
 # <a name="identity_attribute-structure"></a>IDENTITY_ATTRIBUTE Yapısı
 
@@ -37,7 +38,7 @@ typedef struct _IDENTITY_ATTRIBUTE {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`pszNamespace`|Özniteliğin bulunduğu ad alanını içeren, null ile sonlandırılmış bir karakter dizesinin işaretçisi.|  
 |`pszName`|Özniteliğin adını içeren, null ile sonlandırılmış bir karakter dizesinin işaretçisi.|  

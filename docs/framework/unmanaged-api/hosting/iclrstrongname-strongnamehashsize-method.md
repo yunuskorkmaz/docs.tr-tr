@@ -1,4 +1,5 @@
 ---
+description: ': ICLRStrongName:: StrongNameHashSize yöntemi hakkında daha fazla bilgi edinin'
 title: ICLRStrongName::StrongNameHashSize Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 4a05ee56-08e4-4f3a-86a9-9b52083d5c0f
 topic_type:
 - apiref
-ms.openlocfilehash: 6ee87fdbf75d4a07a7337a1c9fdc58a06191b992
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 74781f0eaec720a84a242e6a9637036408652601
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95674833"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799596"
 ---
 # <a name="iclrstrongnamestrongnamehashsize-method"></a>ICLRStrongName::StrongNameHashSize Yöntemi
 
 Belirtilen karma algoritmasını kullanarak bir karma için gereken arabellek boyutunu alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT StrongNameHashSize (  

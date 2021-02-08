@@ -1,4 +1,5 @@
 ---
+description: ': IMetaDataImport:: FindMember yöntemi hakkında daha fazla bilgi edinin'
 title: IMetaDataImport::FindMember Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: ad32fb84-c2b6-41cd-888d-787ff3a90449
 topic_type:
 - apiref
-ms.openlocfilehash: bcd9499d0aef34fb34065ed58c0f0d69cc4ecedc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fdf02f57b8c4ff912d732515576fc05045474517
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711448"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799297"
 ---
 # <a name="imetadataimportfindmember-method"></a>IMetaDataImport::FindMember Yöntemi
 
 Belirtilen <xref:System.Type> ve belirtilen ad ve meta veri imzasına sahip olan alan veya yöntem Için MemberDef belirtecine yönelik bir işaretçi alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT FindMember (  

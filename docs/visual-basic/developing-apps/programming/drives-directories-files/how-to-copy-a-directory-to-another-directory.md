@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: Visual Basic bir dizini başka bir dizine kopyalama'
 title: 'Nasıl yapılır: Bir Dizini Diğerine Kopyalama'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - folders [Visual Basic], copying
 - directories [Visual Basic], copying
 ms.assetid: 2a370bd7-10ba-4219-afc4-4519d031eb6c
-ms.openlocfilehash: e28f50f6a812188ac7af801cea691818488bd6cd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 37eb63449ce355382c5ed058fda6c1142b7d3e3c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401725"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797659"
 ---
 # <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te bir Dizini Diğerine Kopyalama
 
@@ -26,7 +27,7 @@ Dosyaları bir dizin içinde kopyalarken, özel bir dosya (örneğin, birleştir
 
     [!code-vb[VbVbcnMyFileSystem#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#16)]
 
-    Bu kod örneği, bir IntelliSense kod parçacığı olarak da kullanılabilir. Kod parçacığı seçicide **dosya sistemi Işleme sürücülerinde, klasörlerinde ve dosyalarında**bulunur. Daha fazla bilgi için bkz. [kod parçacıkları](/visualstudio/ide/code-snippets).
+    Bu kod örneği, bir IntelliSense kod parçacığı olarak da kullanılabilir. Kod parçacığı seçicide **dosya sistemi Işleme sürücülerinde, klasörlerinde ve dosyalarında** bulunur. Daha fazla bilgi için bkz. [kod parçacıkları](/visualstudio/ide/code-snippets).
 
 ## <a name="robust-programming"></a>Güçlü Programlama
 
@@ -48,7 +49,7 @@ Aşağıdaki koşullar özel bir duruma neden olabilir:
 
 - Kaynak yolu ve hedef yolu aynı ( <xref:System.IO.IOException> ).
 
-- `ShowUI`, olarak ayarlanır `UIOption.AllDialogs` ve Kullanıcı işlemi iptal eder veya dizindeki bir veya daha fazla Dosya kopyalanamıyor ( <xref:System.OperationCanceledException> ).
+- `ShowUI` , olarak ayarlanır `UIOption.AllDialogs` ve Kullanıcı işlemi iptal eder veya dizindeki bir veya daha fazla Dosya kopyalanamıyor ( <xref:System.OperationCanceledException> ).
 
 - İşlem döngüsel ( <xref:System.InvalidOperationException> ).
 

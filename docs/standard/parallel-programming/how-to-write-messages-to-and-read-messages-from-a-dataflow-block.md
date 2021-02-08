@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: veri akışı bloğundan ileti yazma ve okuma'
 title: 'Nasıl yapılır: veri akışı bloğundan ileti yazma ve okuma'
 ms.date: 09/10/2020
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, reading and writing messages
 ms.assetid: 1a9bf078-aa82-46eb-b95a-f87237f028c5
-ms.openlocfilehash: be0e78989105cc59bd041ceb8c6f31073a702f83
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7571ac7acf3dad6dedb1e16546197c5f0e72a9a3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820793"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99798062"
 ---
 # <a name="how-to-write-and-read-messages-from-a-dataflow-block"></a>Nasıl yapılır: veri akışı bloğundan ileti yazma ve okuma
 
@@ -40,7 +41,7 @@ Aşağıdaki örnek, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A
 
 ## <a name="writing-and-reading-asynchronously"></a>Zaman uyumsuz olarak yazma ve okuma
 
-Aşağıdaki örnek, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A> bir nesneye zaman uyumsuz olarak yazma için yöntemini <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> ve <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A> aynı nesneden zaman uyumsuz olarak okuma yöntemini kullanır. Bu örnek, verileri zaman uyumsuz ve hedef bloğundan okumak için [Await](../../visual-basic/language-reference/operators/await-operator.md) zaman [uyumsuz](../../csharp/language-reference/keywords/async.md) ve [await](../../csharp/language-reference/operators/await.md) [işleçlerini (Visual Basic](../../visual-basic/language-reference/modifiers/async.md) ) kullanır. <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A>Yöntemi, iletileri ertelemek için bir veri akışı bloğunu etkinleştirmeniz gerektiğinde faydalıdır. <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A>Bu yöntem, veriler kullanılabilir hale geldiğinde veriler üzerinde işlem yapmak istediğinizde faydalıdır. İletilerin ileti blokları arasında nasıl yayılır hakkında daha fazla bilgi için, [veri akışı](dataflow-task-parallel-library.md)' na geçirme bölümüne bakın.
+Aşağıdaki örnek, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A> bir nesneye zaman uyumsuz olarak yazma için yöntemini <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> ve <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A> aynı nesneden zaman uyumsuz olarak okuma yöntemini kullanır. Bu örnek, verileri zaman uyumsuz ve hedef bloğundan okumak için [](../../visual-basic/language-reference/operators/await-operator.md) zaman [uyumsuz](../../csharp/language-reference/keywords/async.md) ve [await](../../csharp/language-reference/operators/await.md) [işleçlerini (Visual Basic](../../visual-basic/language-reference/modifiers/async.md) ) kullanır. <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A>Yöntemi, iletileri ertelemek için bir veri akışı bloğunu etkinleştirmeniz gerektiğinde faydalıdır. <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A>Bu yöntem, veriler kullanılabilir hale geldiğinde veriler üzerinde işlem yapmak istediğinizde faydalıdır. İletilerin ileti blokları arasında nasıl yayılır hakkında daha fazla bilgi için, [veri akışı](dataflow-task-parallel-library.md)' na geçirme bölümüne bakın.
 
 :::code language="csharp" source="../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_readwrite/cs/dataflowreadwrite.cs" id="5":::
 :::code language="vb" source="../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_readwrite/vb/dataflowreadwrite.vb" id="5":::

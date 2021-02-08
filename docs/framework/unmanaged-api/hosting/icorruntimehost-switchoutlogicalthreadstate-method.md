@@ -1,4 +1,5 @@
 ---
+description: ': ICorRuntimeHost:: SwitchOutLogicalThreadState Yöntemi hakkında daha fazla bilgi edinin'
 title: ICorRuntimeHost::SwitchOutLogicalThreadState Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: e1968f0b-2675-4dc2-8507-46164e1df154
 topic_type:
 - apiref
-ms.openlocfilehash: e41ead54b50b8b28ebd9ee9c97d15ca6c71e7313
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b4190ebe6b2c260f85afd8dd17127d0c63dca6c8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95690128"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799453"
 ---
 # <a name="icorruntimehostswitchoutlogicalthreadstate-method"></a>ICorRuntimeHost::SwitchOutLogicalThreadState Yöntemi
 
 Bu yöntem .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT SwitchOutLogicalThreadState(  

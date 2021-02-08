@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: LogSwitchCallReason numaralandırması'
 title: LogSwitchCallReason Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5bbb8d1b-bbc4-47b0-b1b1-2d54cc0be291
 topic_type:
 - apiref
-ms.openlocfilehash: dfb34595530a47b74762610f5824b68ea00a8a69
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 46c457ee4c12fe9a73796aa7b7a5f599d90c9c6c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95671962"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800621"
 ---
 # <a name="logswitchcallreason-enumeration"></a>LogSwitchCallReason Numaralandırması
 
@@ -37,7 +38,7 @@ typedef enum LogSwitchCallReason {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`SWITCH_CREATE`|Hata ayıklama/izleme anahtarı oluşturuldu.|  
 |`SWITCH_MODIFY`|Bir hata ayıklama/izleme anahtarı değiştirildi.|  

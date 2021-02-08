@@ -1,4 +1,5 @@
 ---
+description: ': IMetaDataImport:: EnumProperties metodu hakkında daha fazla bilgi edinin'
 title: IMetaDataImport::EnumProperties Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 60573ad7-8821-4721-a068-3f7a6d25926a
 topic_type:
 - apiref
-ms.openlocfilehash: 24ee37a36e34c74258e1c750ba424640c0496f0a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7503dd14668e8ea4ccf8939e67b91a41db187105
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728257"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799362"
 ---
 # <a name="imetadataimportenumproperties-method"></a>IMetaDataImport::EnumProperties Yöntemi
 
 Belirtilen TypeDef belirtecinin başvurduğu türün özelliklerini temsil eden PropertyDef belirteçlerini numaralandırır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT EnumProperties (  
@@ -57,7 +58,7 @@ HRESULT EnumProperties (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |`S_OK`|`EnumProperties` başarıyla döndürüldü.|  
 |`S_FALSE`|Numaralandırılacak belirteç yok. Bu durumda, `pcProperties` sıfırdır.|  

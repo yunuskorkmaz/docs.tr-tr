@@ -1,4 +1,5 @@
 ---
+description: ': Icordebugvariablehome:: GetLiveRange yöntemi hakkında daha fazla bilgi edinin'
 title: 'Icordebugvariablehome:: GetLiveRange yöntemi'
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 87277e1a-1595-4729-9e25-d1c3ac18ce5f
 topic_type:
 - apiref
-ms.openlocfilehash: 4d66d09e02b907281f64400b0c605a7b5c44d476
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: daa53a164c7660826d44285ce21ecea1b649a727
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731052"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800844"
 ---
 # <a name="icordebugvariablehomegetliverange-method"></a>Icordebugvariablehome:: GetLiveRange yöntemi
 
 Bu değişkenin canlı olduğu yerel aralığı alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetLiveRange(  

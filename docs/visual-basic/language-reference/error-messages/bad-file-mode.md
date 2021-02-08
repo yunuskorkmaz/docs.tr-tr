@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi: Hatalı dosya modu'
 title: Hatalı dosya modu
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID54
 ms.assetid: 74891e96-884b-4c8d-872d-cd11ae272372
-ms.openlocfilehash: 99b84902ddf032f2ecb6e26400e200bea862dfdf
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: da792407fb37f5c206be7ff39da14d314ef1e2d2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875149"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797087"
 ---
 # <a name="bad-file-mode"></a>Hatalı dosya modu
 

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: CLRRuntimeHost coclass'
 title: CLRRuntimeHost Coclass’ı
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2ac9cbf5-8a2d-4e4f-8831-0dad8ef0a897
 topic_type:
 - apiref
-ms.openlocfilehash: 7c77cb2e89cb8fd87bf219780b9460649de19c9d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a371b9b7263f8bb58b5c513de6647320f000beed
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731777"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799895"
 ---
 # <a name="clrruntimehost-coclass"></a>CLRRuntimeHost Coclass’ı
 
@@ -36,7 +37,7 @@ coclass CLRRuntimeHost {
   
 ## <a name="interfaces"></a>Arabirimler  
   
-|Arabirim|Açıklama|  
+|Arabirim|Description|  
 |---------------|-----------------|  
 |[ICLRRuntimeHost Arabirimi](iclrruntimehost-interface.md)|Çalışma zamanı tarafından uygulamaların yürütülmesini denetlemek için yöntemler sağlar.|  
 |[ICLRValidator Arabirimi](iclrvalidator-interface.md)|Taşınabilir yürütülebilir görüntülerin doğrulanması ve doğrulama hatalarının ayrıntılı raporlanması için yöntemler sağlar.|  

@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: UriTemplate Tablo dağıtıcısı örneği'
 title: UriTemplate Tablosu Dağıtıcı Örneği
 ms.date: 03/30/2017
 ms.assetid: 3b32975d-ba90-4c5c-83bc-2fbb48f11c0c
-ms.openlocfilehash: 57489264de62b6adbca1c98230a0f90735b3918a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 68cd7e87c9768995210f369e2d55a10ad048e338
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96294956"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99798205"
 ---
 # <a name="uritemplate-table-dispatcher-sample"></a>UriTemplate Tablosu Dağıtıcı Örneği
 

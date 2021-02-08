@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: klavyeye erişme (Visual Basic)'
 title: Klavyeye Erişme
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - keystrokes
 - CapsLock property
 ms.assetid: aa37d54c-5c98-4b44-b98a-c26d2a03c038
-ms.openlocfilehash: f837c01d297f8fc7375b02497c87db7798187115
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 244f8a6972fa784de28c56e123818b735744e1c6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410094"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797789"
 ---
 # <a name="accessing-the-keyboard-visual-basic"></a>Klavyeye Erişme (Visual Basic)
 
@@ -22,7 +23,7 @@ ms.locfileid: "84410094"
 
  Bu tablo, nesnesiyle ilişkili görevleri listeler `My.Computer.Keyboard` ve her bir görevin nasıl gerçekleştirileceğini gösteren konuların noktalarını gösterir.  
   
-|Alıcı|Bkz.|  
+|Amaç|Bkz.|  
 |--------|---------|  
 |Caps Lock açık olup olmadığını belirleme|<xref:Microsoft.VisualBasic.Devices.Keyboard.CapsLock%2A>|  
 |SHIFT tuşunun aşağı olup olmadığını belirleme|<xref:Microsoft.VisualBasic.Devices.Keyboard.ShiftKeyDown%2A>|  

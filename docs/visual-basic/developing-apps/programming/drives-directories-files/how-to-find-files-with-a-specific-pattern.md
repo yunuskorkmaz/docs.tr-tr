@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: Visual Basic belirli bir düzene sahip dosyaları bulma'
 title: 'Nasıl yapılır: Belirli bir Düzendeki Dosyaları Bulma'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - pattern matching
 - patterns, matching
 ms.assetid: 25e3b71d-b844-4293-9e4e-f06c5836b5cc
-ms.openlocfilehash: 71073672ed14cb2d5df5b5365266b718c59cb18f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 42266ad354e1ac8e3920663447e4d39fe7ad1b8f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401647"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797568"
 ---
 # <a name="how-to-find-files-with-a-specific-pattern-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Belirli bir Düzendeki Dosyaları Bulma
 
@@ -36,9 +37,9 @@ ms.locfileid: "84401647"
   
 - Yol () olduğu için geçerli değil `Nothing` <xref:System.ArgumentNullException> .  
   
-- `directory`yok ( <xref:System.IO.DirectoryNotFoundException> ).  
+- `directory` yok ( <xref:System.IO.DirectoryNotFoundException> ).  
   
-- `directory`var olan bir dosyaya () işaret eder <xref:System.IO.IOException> .  
+- `directory` var olan bir dosyaya () işaret eder <xref:System.IO.IOException> .  
   
 - Yol, sistem tarafından tanımlanan uzunluk üst sınırını ( <xref:System.IO.PathTooLongException> ) aşıyor.  
   

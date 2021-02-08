@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi: Hatalı DLL çağırma kuralı'
 title: Hatalı DLL çağrı standardı
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID49
 ms.assetid: 7c7def45-b0ab-450f-ad3f-4383dfd9aed7
-ms.openlocfilehash: 0481bd5e4dfe7a24dff454d0754b519509fa967f
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 7e98ce5131d440a12bff4a4630da087102bdc4da
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875740"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797100"
 ---
 # <a name="bad-dll-calling-convention"></a>Hatalı DLL çağrı standardı
 

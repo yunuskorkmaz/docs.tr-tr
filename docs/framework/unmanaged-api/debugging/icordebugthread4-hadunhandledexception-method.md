@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ICorDebugThread4:: HadUnhandledException yöntemi'
 title: ICorDebugThread4::HadUnhandledException Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 05558daa-39e2-4c38-aeaf-e2aec4a09468
 topic_type:
 - apiref
-ms.openlocfilehash: 4e368b2c63e8e43b5c392bec4b79daac8bae249d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cd0ccdbdd68c37b5fbdbd705da7136e5d36baa60
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95678549"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800935"
 ---
 # <a name="icordebugthread4hadunhandledexception-method"></a>ICorDebugThread4::HadUnhandledException Yöntemi
 
 İş parçacığının işlenmeyen bir özel duruma sahip olup olmadığını gösterir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetBlockingObjects (  
@@ -43,7 +44,7 @@ HRESULT GetBlockingObjects (
 
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|İş parçacığında oluşturulduktan sonra işlenmeyen bir özel durum oluştu.|  
 |S_FALSE|İş parçacığında işlenmeyen bir özel durum yoktu.|  

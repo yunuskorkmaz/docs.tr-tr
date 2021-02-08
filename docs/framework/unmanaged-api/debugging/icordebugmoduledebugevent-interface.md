@@ -1,13 +1,14 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ıcordebugmoduledebugger gevent arabirimi'
 title: ICorDebugModuleDebugEvent Arabirimi
 ms.date: 03/30/2017
 ms.assetid: 41950c52-1ac8-4212-b814-c77e20879f91
-ms.openlocfilehash: 62d419a193cff000e1dd748d0cbb6b61775a81aa
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0c2d43d7b04caeea0407ede23f0df6e278d60c92
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95695822"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801039"
 ---
 # <a name="icordebugmoduledebugevent-interface"></a>ICorDebugModuleDebugEvent Arabirimi
 

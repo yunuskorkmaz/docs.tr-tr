@@ -1,4 +1,5 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: uygulama Web Hizmetleri 'Ne erişme (Visual Basic)"
 title: Uygulama Web Hizmetlerine Erişme
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - My.WebServices object
 - applications [Visual Basic], Web services
 ms.assetid: 8ad5405b-e771-42b1-82d3-ce97af2cea9e
-ms.openlocfilehash: cf9a0c9840b9228b59af9959cf3a4efb9a1d1ea0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4efd35ed7c8f4251a749b85a45242af299a51e6c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410198"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797893"
 ---
 # <a name="accessing-application-web-services-visual-basic"></a>Uygulama Web Hizmetlerine Erişme (Visual Basic)
 
@@ -21,7 +22,7 @@ ms.locfileid: "84410198"
 
 Aşağıdaki tabloda, bir uygulama tarafından başvurulan Web hizmetlerine erişmenin olası yolları listelenmektedir.
 
-|Alıcı|Bkz.|
+|Amaç|Bkz.|
 |---|---|
 |Web hizmeti çağırma|[My.WebServices Nesnesi](../../language-reference/objects/my-webservices-object.md)|
 |Bir Web hizmetini zaman uyumsuz olarak çağırma ve tamamlandığında bir olayı işleme|[Nasıl yapılır: Web Hizmetini Zaman Uyumsuz Çağırma](how-to-call-a-web-service-asynchronously.md)|

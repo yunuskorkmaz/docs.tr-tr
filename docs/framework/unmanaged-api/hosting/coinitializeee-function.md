@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Coınitialeee Işlevi'
 title: CoInitializeEE İşlevi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 7e42a928-5068-4ba6-b8c3-806551a01fa8
 topic_type:
 - apiref
-ms.openlocfilehash: 707e182e62f4a7b7b813e6b288c6825b0d3d2eab
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9664324c569ed4de73262491cf8eda8296b3c3a1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731763"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799830"
 ---
 # <a name="coinitializeee-function"></a>CoInitializeEE İşlevi
 
 Ortak dil çalışma zamanı yürütme altyapısının bir işleme yüklenmesini sağlar. Bu işlev .NET Framework 4 ' te kullanım dışıdır. Bunun yerine [ICLRRuntimeHost:: Start](iclrruntimehost-start-method.md) metodunu kullanın.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT CoInitializeEE (  
@@ -43,7 +44,7 @@ HRESULT CoInitializeEE (
 
  Bu yöntem, Winerror. h içinde tanımlanan standart COM hata kodlarını ve aşağıdaki tabloda bulunan değerleri döndürür.  
   
-|Dönüş kodu|Açıklama|  
+|Dönüş kodu|Description|  
 |-----------------|-----------------|  
 |S_OK|Yürütme altyapısı başarıyla yüklendi.|  
 |S_FALSE|Yürütme altyapısı zaten yüklü.|  

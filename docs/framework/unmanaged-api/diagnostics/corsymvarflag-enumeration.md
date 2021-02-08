@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: CorSymVarFlag numaralandırması'
 title: CorSymVarFlag Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c3f7d307-4047-4f9a-be8c-f152fca42fd0
 topic_type:
 - apiref
-ms.openlocfilehash: ed08d9f818f6fc180dbd655243488bf8a527ae11
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 28f4b4775e20703e5dcaa7daf69affd3548aa3f2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725293"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800467"
 ---
 # <a name="corsymvarflag-enumeration"></a>CorSymVarFlag Numaralandırması
 
@@ -36,7 +37,7 @@ typedef enum CorSymVarFlag
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`VAR_IS_COMP_GEN`|Verilen değişkenin derleyicinin ürettiği olduğunu gösterir.|  
   

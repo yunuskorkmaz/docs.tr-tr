@@ -1,19 +1,20 @@
 ---
+description: ': ICorDebugStaticFieldSymbol:: GetAddress yöntemi hakkında daha fazla bilgi edinin'
 title: 'ICorDebugStaticFieldSymbol:: GetAddress Yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 5a6c9a5a-ec72-4c40-a9c3-cee7baa63687
-ms.openlocfilehash: e9404b429ad4507acb5132a86af5f287dbcf07b3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1944839ff6afc31dc3667111397cbb088b95b412
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95677290"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801013"
 ---
 # <a name="icordebugstaticfieldsymbolgetaddress-method"></a>ICorDebugStaticFieldSymbol:: GetAddress Yöntemi
 
 Statik bir alanın adresini alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetAddress(  

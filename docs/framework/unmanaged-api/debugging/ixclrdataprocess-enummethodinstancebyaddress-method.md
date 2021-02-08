@@ -1,4 +1,5 @@
 ---
+description: ': IXCLRDataProcess:: Enummethodınstancebyaddress yöntemi hakkında daha fazla bilgi edinin'
 title: 'IXCLRDataProcess:: Enummethodınstancebyaddress yöntemi'
 ms.date: 01/16/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 142099ae5cf9637cc28e8c82aabcd831cc8f0f52
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: a0d59956288e39be188628d10c63a52d09d17638
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420805"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800701"
 ---
 # <a name="ixclrdataprocessenummethodinstancebyaddress-method"></a>IXCLRDataProcess:: Enummethodınstancebyaddress yöntemi
 
@@ -28,7 +29,7 @@ Bir adres uzaklığında başlayarak bu işlemin Yöntem örneklerini numaraland
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 HRESULT EnumMethodInstanceByAddress(

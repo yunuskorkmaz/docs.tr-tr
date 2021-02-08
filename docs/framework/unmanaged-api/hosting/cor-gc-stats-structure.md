@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: COR_GC_STATS yapısı'
 title: COR_GC_STATS Yapısı
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8d4ff73e-739b-40f6-9349-359fbc99c2f9
 topic_type:
 - apiref
-ms.openlocfilehash: 53a70c53a06ac55a2dab7c646018d63189ee0b36
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9b1002f462fb9b447e521cd1b3e5c78297eefc04
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726229"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799815"
 ---
 # <a name="cor_gc_stats-structure"></a>COR_GC_STATS Yapısı
 
@@ -45,7 +46,7 @@ typedef struct _COR_GC_STATS {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`Flags`|Hangi alan değerlerinin hesaplanacağını ve döndürüleceğini belirtir.|  
 |`ExplicitGCCount`|Dış istek tarafından zorlanan çöp koleksiyonlarının sayısını belirtir.|  

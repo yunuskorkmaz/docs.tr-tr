@@ -1,15 +1,16 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: sınıfı Otomasyonu desteklemiyor veya beklenen arabirimi desteklemiyor'
 title: Sınıf Otomasyonu veya beklenen arabirimi desteklemiyor
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID430
 ms.assetid: d985bb7e-e48e-443e-86f2-ddb86758757c
-ms.openlocfilehash: aa97ae420a0a289979fe86db373c635361dc6475
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: cc5ae539064b8d049e2808d916f9f4b75f7e94c9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874640"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796801"
 ---
 # <a name="class-does-not-support-automation-or-does-not-support-expected-interface"></a>Sınıf Otomasyonu veya beklenen arabirimi desteklemiyor
 

@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: uygulama formlarına erişme (Visual Basic)'
 title: Uygulama Formlarına Erişme
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - My.Forms object
 - forms [Visual Basic], accessing all open
 ms.assetid: 9aaf5aaf-2012-4f97-89c7-6e62b9d17863
-ms.openlocfilehash: 44f98632fd2fd6c4c087a78b805d5b7da750df87
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: dae73700434f9cdbb145ebea605c87c33f7c0c73
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410211"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797906"
 ---
 # <a name="accessing-application-forms-visual-basic"></a>Uygulama Formlarına Erişme (Visual Basic)
 
@@ -23,7 +24,7 @@ ms.locfileid: "84410211"
 
  Aşağıdaki tabloda, bir uygulamanın formlarına nasıl erişileceğini gösteren örnekler listelenmektedir.  
   
-|Alıcı|Bkz.|  
+|Amaç|Bkz.|  
 |---|---|  
 |Bir uygulamadaki başka bir formdan bir forma erişin.|[My.Forms Nesnesi](../../language-reference/objects/my-forms-object.md)|  
 |Tüm uygulamanın açık formlarının unvanlarını görüntüleyin.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>|  

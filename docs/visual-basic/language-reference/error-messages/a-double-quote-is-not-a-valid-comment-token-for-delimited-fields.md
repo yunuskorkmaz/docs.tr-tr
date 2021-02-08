@@ -1,15 +1,16 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: bir çift tırnak işareti, kaçış eşlerinin true olarak ayarlandığı sınırlı alanlar için geçerli bir açıklama belirteci değildir'
 title: EscapeQuote True olarak ayarlandığında çift tırnak işareti ayrılmış alanlar için geçerli bir açıklama belirteci değildir
 ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_InvalidComment
 ms.assetid: 636d4b81-00ba-4cfd-98f7-4d57036f494d
-ms.openlocfilehash: a66d43d249a12ffa552073866f2e0a1e6d453608
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d0668c6ffb479e649d4d3900070dc125db6dec05
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409951"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797217"
 ---
 # <a name="a-double-quote-is-not-a-valid-comment-token-for-delimited-fields-where-escapequote-is-set-to-true"></a>EscapeQuote True olarak ayarlandığında çift tırnak işareti ayrılmış alanlar için geçerli bir açıklama belirteci değildir
 

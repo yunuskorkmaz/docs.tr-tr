@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: IXCLRDataModule Interface'
 title: IXCLRDataModule Arabirimi
 ms.date: 01/16/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 3c2bc771c0a131329b9403c99a33ca7b79023771
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 403d4dd3db64f2855347562da7217a3562985c7d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420857"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800753"
 ---
 # <a name="ixclrdatamodule-interface"></a>IXCLRDataModule Arabirimi
 

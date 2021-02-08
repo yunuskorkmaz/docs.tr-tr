@@ -1,4 +1,5 @@
 ---
+description: ': IMetaDataImport:: Enumalanadı Withname yöntemi hakkında daha fazla bilgi edinin'
 title: IMetaDataImport::EnumFieldsWithName Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 42145e8d-000f-4d0b-ae43-c08201190fa2
 topic_type:
 - apiref
-ms.openlocfilehash: 0a254587282dea43a3507fbbeca35bd7aa9604f3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 88096b2b12a9571eb05d4550e6e26a348e28cfd2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711578"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799376"
 ---
 # <a name="imetadataimportenumfieldswithname-method"></a>IMetaDataImport::EnumFieldsWithName Yöntemi
 
 Belirtilen ada sahip belirtilen türdeki FieldDef belirteçlerini numaralandırır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT EnumFieldsWithName (  
@@ -65,7 +66,7 @@ HRESULT EnumFieldsWithName (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |`S_OK`|`EnumFieldsWithName` başarıyla döndürüldü.|  
 |`S_FALSE`|Numaralandırılacak alan yok. Bu durumda, `pcTokens` sıfırdır.|  

@@ -1,4 +1,5 @@
 ---
+description: ': ICLRStrongName:: StrongNameCompareAssemblies Yöntemi hakkında daha fazla bilgi'
 title: ICLRStrongName::StrongNameCompareAssemblies Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: b1fb356c-72cf-4aa4-8376-f291a6d97c01
 topic_type:
 - apiref
-ms.openlocfilehash: ddcbe84053aa7f4cafd81e905f8aef988f92875e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ab02312073f9caf5059ecf7b4eeddaef864bd7b6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95685709"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799661"
 ---
 # <a name="iclrstrongnamestrongnamecompareassemblies-method"></a>ICLRStrongName::StrongNameCompareAssemblies Yöntemi
 
 İki derlemenin yalnızca kendi tanımlayıcı ad imzalarına göre farklı olup olmadığını belirler.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT StrongNameCompareAssemblies (  

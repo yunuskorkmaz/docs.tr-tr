@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: StackTrace_SimpleContext yapısı'
 title: StackTrace_SimpleContext Yapısı
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d4cef11f-a8ca-49bc-a1b8-6631f9e28f3e
 topic_type:
 - apiref
-ms.openlocfilehash: 30775b4a6f904d06b9c77e6b2b64aec693c446d7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 22a0acada5ef2d392dfdef5326953be137280d7f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95671804"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800571"
 ---
 # <a name="stacktrace_simplecontext-structure"></a>StackTrace_SimpleContext Yapısı
 
@@ -39,7 +40,7 @@ struct StackTrace_SimpleContext
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`StackOffset`|X86 platformlarında yığın işaretçisi veya yığın işaretçisi (ESP) girin.|  
 |`FrameOffset`|Çerçeve kayması veya x86 platformlarında EBP kaydı.|  

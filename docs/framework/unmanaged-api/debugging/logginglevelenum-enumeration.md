@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: LoggingLevelEnum numaralandırması'
 title: LoggingLevelEnum Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 09daac08-005a-46b2-beab-408d0820c5e5
 topic_type:
 - apiref
-ms.openlocfilehash: 389edbeb746fbeaf60d88bf9ee2a3a0731822e55
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7c9676fef83ea44f45a25350a2b3d325c1c22f98
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95672025"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800623"
 ---
 # <a name="logginglevelenum-enumeration"></a>LoggingLevelEnum Numaralandırması
 
@@ -47,7 +48,7 @@ typedef enum LoggingLevelEnum {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`LTraceLevel0`|İleti bir izleme düzeyi 0 ' dır.|  
 |`LTraceLevel1`|İleti bir izleme düzeyi 1 ' dir.|  

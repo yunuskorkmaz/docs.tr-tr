@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: My. Application, My. Computer ve My. User ile görev gerçekleştirme (Visual Basic)'
 title: My.Application, My.Computer ve My.User ile Görev Gerçekleştirme
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - My.Computer object [Visual Basic], developing applications
 - My.User object [Visual Basic], developing applications
 ms.assetid: c8af61bd-4dd3-4a0f-9af5-795b594b240b
-ms.openlocfilehash: 55961d6857b690fc2726f541df8a5497a3207928
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 46f8e4654008b38ae98b4c61f5a0c54506e42fcd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411700"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797945"
 ---
 # <a name="performing-tasks-with-myapplication-mycomputer-and-myuser-visual-basic"></a>My.Application, My.Computer ve My.User ile Görev Gerçekleştirme (Visual Basic)
 
@@ -34,7 +35,7 @@ ms.locfileid: "84411700"
   
  [!code-vb[VbVbalrTextFieldParser#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTextFieldParser/VB/Class1.vb#23)]  
   
- `My.Application`uygulamanız için kültürü değiştirmenize izin verir. Aşağıdaki örnek, bu yöntemin nasıl çağrılacağını gösterir.  
+ `My.Application` uygulamanız için kültürü değiştirmenize izin verir. Aşağıdaki örnek, bu yöntemin nasıl çağrılacağını gösterir.  
   
  [!code-vb[VbVbcnMy#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#3)]  
   

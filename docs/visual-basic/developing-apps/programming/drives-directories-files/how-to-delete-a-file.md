@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi için: nasıl yapılır: Visual Basic dosya silme'
 title: 'Nasıl yapılır: Dosya Silme'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - files [Visual Basic], manipulating
 - File object
 ms.assetid: 4b721769-3e45-4be7-b7fe-b08dc4141b44
-ms.openlocfilehash: 0c8213786b8073d784f1f3ea51417741d5ad4cba
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 49bfe2e4a0d9114e2f653ae14dab303e35e2dfeb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401660"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797581"
 ---
 # <a name="how-to-delete-a-file-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Dosya Silme
 
@@ -32,7 +33,7 @@ ms.locfileid: "84401660"
   
 ### <a name="to-delete-a-text-file-and-send-it-to-the-recycle-bin"></a>Bir metin dosyasını silmek ve geri dönüşüm kutusu 'na göndermek için  
   
-- `DeleteFile`Parametresi için belirterek dosyayı silmek için yöntemini kullanın `SendToRecycleBin` `recycle` . Aşağıdaki kod, adlı dosyanın nasıl silineceğini `test.txt` ve **geri dönüşüm**kutusu 'na nasıl gönderileceğini gösterir.  
+- `DeleteFile`Parametresi için belirterek dosyayı silmek için yöntemini kullanın `SendToRecycleBin` `recycle` . Aşağıdaki kod, adlı dosyanın nasıl silineceğini `test.txt` ve **geri dönüşüm** kutusu 'na nasıl gönderileceğini gösterir.  
   
      [!code-vb[VbFileIOMisc#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#10)]  
   

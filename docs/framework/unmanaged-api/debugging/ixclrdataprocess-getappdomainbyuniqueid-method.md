@@ -1,4 +1,5 @@
 ---
+description: ': IXCLRDataProcess:: Getappdomainbyuniqueıd yöntemi hakkında daha fazla bilgi edinin'
 title: 'IXCLRDataProcess:: Getappdomainbyuniqueıd yöntemi'
 ms.date: 01/16/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: bb02ffed09cbcc31e653bfd3165050c247908c5d
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 7087362efbb810fcb6e1b6f7eb9f23c54c38fade
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420792"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800675"
 ---
 # <a name="ixclrdataprocessgetappdomainbyuniqueid-method"></a>IXCLRDataProcess:: Getappdomainbyuniqueıd yöntemi
 
@@ -28,7 +29,7 @@ ms.locfileid: "83420792"
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 HRESULT GetAppDomainByUniqueID(

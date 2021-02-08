@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ICorDebugThread4 Interface'
 title: ICorDebugThread4 Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8c7719a-322b-4133-8566-4c27218dc104
 topic_type:
 - apiref
-ms.openlocfilehash: 5c108420772be9e6d0932f3759f18da9446f99d6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4ad587cee81ce635df0a8917b7a6d68e60aaf0b3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727945"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800922"
 ---
 # <a name="icordebugthread4-interface"></a>ICorDebugThread4 Arabirimi
 

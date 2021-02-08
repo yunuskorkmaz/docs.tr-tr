@@ -1,4 +1,5 @@
 ---
+description: ': IXCLRDataMethodInstance:: Getıladdressmap yöntemi hakkında daha fazla bilgi edinin'
 title: 'IXCLRDataMethodInstance:: Getıladdressmap yöntemi'
 ms.date: 01/16/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 0acfa9ffd6f4bc3be567855008dccd08c9c74153
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: ddddf593c3c18f2b4cd1682b5d6f7c8ff1985ac6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420922"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800818"
 ---
 # <a name="ixclrdatamethodinstancegetiladdressmap-method"></a>IXCLRDataMethodInstance:: Getıladdressmap yöntemi
 
@@ -28,7 +29,7 @@ Eşleme bilgilerini ele almak için Il 'yi alır.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 HRESULT GetILAddressMap(

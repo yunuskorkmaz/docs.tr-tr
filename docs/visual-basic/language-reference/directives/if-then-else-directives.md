@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: #If... Sonra... #Else yönergeler'
 title: '#If...Then...#Else Yönergeleri'
 ms.date: 04/11/2018
 f1_keywords:
@@ -18,18 +19,18 @@ helpviewer_keywords:
 - else directive (#else)
 - '#Else directive [Visual Basic]'
 ms.assetid: 10bba104-e3fd-451b-b672-faa472530502
-ms.openlocfilehash: 7054a6ada4583c5d89e020437eb622a59d3eb17a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: fd95d259315e0bd6fd6ab2a3f222288bb4726ce6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410016"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797256"
 ---
 # <a name="ifthenelse-directives"></a>#If...Then...#Else Yönergeleri
 
 Seçili Visual Basic kodu bloklarını koşullu olarak derler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```vb
 #If expression Then

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: PreBindAssemblyEx Işlevi'
 title: PreBindAssemblyEx İşlevi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bd285233-a4a2-4b52-bbca-0025a60e4864
 topic_type:
 - apiref
-ms.openlocfilehash: a729249f7b0681941a0b1a478dbe2c0d9d6cd01c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e94bd7c335555e8109df60a00cadc76f7e13434b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723967"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800012"
 ---
 # <a name="prebindassemblyex-function"></a>PreBindAssemblyEx İşlevi
 
@@ -27,7 +28,7 @@ Bir derlemenin ilke sonrası görünen adını alır.
   
  Bu işlev .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT PreBindAssemblyEx (  

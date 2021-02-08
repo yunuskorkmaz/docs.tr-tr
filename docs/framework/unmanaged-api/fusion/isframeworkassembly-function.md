@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: IsFrameworkAssembly Işlevi'
 title: IsFrameworkAssembly İşlevi
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: b0c6f19b-d4fd-4971-88f0-12ffb5793da3
 topic_type:
 - apiref
-ms.openlocfilehash: 828c7660d6c006e700302d119ce4caf7d76e5d84
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8f264df7b1ae5c494298b11ebd94cc93aed5543a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728569"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800025"
 ---
 # <a name="isframeworkassembly-function"></a>IsFrameworkAssembly İşlevi
 
 Belirtilen derlemenin yönetilip yönetilmediğini gösteren bir değer alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT IsFrameworkAssembly (  

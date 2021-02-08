@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: IXCLRDataProcess:: Startenummethodınstancesbyaddress yöntemi'
 title: 'IXCLRDataProcess:: Startenummethodınstancesbyaddress yöntemi'
 ms.date: 01/16/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 52d533f1c86b34b7b9febade8590e7ab58d8221e
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 155d09192b60b8671435abb439f07dfbb290bc87
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420741"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800597"
 ---
 # <a name="ixclrdataprocessstartenummethodinstancesbyaddress-method"></a>IXCLRDataProcess:: Startenummethodınstancesbyaddress yöntemi
 
@@ -28,7 +29,7 @@ Verilen bir adresten başlayarak Yöntem örneklerinin numaralandırılacağı b
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 HRESULT StartEnumMethodInstancesByAddress(

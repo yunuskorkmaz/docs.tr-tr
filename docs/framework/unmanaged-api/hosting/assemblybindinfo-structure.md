@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: AssemblyBindInfo yapısı'
 title: AssemblyBindInfo Yapısı
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6fc01e98-c2e7-49de-ab9f-95937cc89017
 topic_type:
 - apiref
-ms.openlocfilehash: d2ba7d8e66472f771a932a2dfb05bb9e1ee96290
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3e11e05924ee6818737f84d9ca92394ee5313292
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95685883"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799986"
 ---
 # <a name="assemblybindinfo-structure"></a>AssemblyBindInfo Yapısı
 
@@ -38,7 +39,7 @@ typedef struct _AssemblyBindInfo {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`dwAppDomainId`|`IStream` [IHostAssemblyStore](ihostassemblystore-provideassembly-method.md)çağrısı tarafından döndürülen benzersiz bir tanımlayıcı::P rovideassembly, başvurulan derlemenin yükleneceği.|  
 |`lpReferencedIdentity`|Başvurulan derleme için benzersiz bir tanımlayıcı.|  

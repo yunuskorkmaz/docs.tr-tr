@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: sürücüleri, dizinleri ve dosyaları Işleme (Visual Basic)'
 title: Sürücüleri, Dizinleri ve Dosyaları İşleme
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - files [Visual Basic], accessing
 - directories [Visual Studio], processing
 ms.assetid: f1db14c8-a4fd-4d0b-8323-c7cb29d688c2
-ms.openlocfilehash: b69c65621f3849b07bd31f569fc4ae9fe04b50a6
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a6333bb5d3e634ecfcd38de5dcd1b98b63bda78f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411570"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797321"
 ---
 # <a name="processing-drives-directories-and-files-visual-basic"></a>Sürücüleri, Dizinleri ve Dosyaları İşleme (Visual Basic)
 

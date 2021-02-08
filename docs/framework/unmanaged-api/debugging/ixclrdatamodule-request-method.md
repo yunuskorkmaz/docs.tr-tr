@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: IXCLRDataModule:: Request Yöntemi'
 title: 'IXCLRDataModule:: Request Yöntemi'
 ms.date: 01/16/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 3c18fc5c947cbb89fc4e9aed60d3cedcbe22d749
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 96f4153c58a228cfb22a5cd25a53b6e60fc4dfd1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420818"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800740"
 ---
 # <a name="ixclrdatamodulerequest-method"></a>IXCLRDataModule:: Request Yöntemi
 
@@ -28,7 +29,7 @@ Modülün verileriyle verilen arabelleği doldurma istekleri.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 HRESULT Request([in] ULONG32 reqCode,

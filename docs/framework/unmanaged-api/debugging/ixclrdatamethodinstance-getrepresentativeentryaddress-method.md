@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: IXCLRDataMethodInstance:: GetRepresentativeEntryAddress yöntemi'
 title: 'IXCLRDataMethodInstance:: GetRepresentativeEntryAddress yöntemi'
 ms.date: 02/01/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: d546cda5c68732e75550a3de286089f7df261c91
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 21cc6c50ab460c0e3a3a92c11fcfe51d4a2a4606
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420909"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800805"
 ---
 # <a name="ixclrdatamethodinstancegetrepresentativeentryaddress-method"></a>IXCLRDataMethodInstance:: GetRepresentativeEntryAddress yöntemi
 
@@ -28,7 +29,7 @@ Bir yöntem için tüm olası giriş noktalarının yerel derlenmesi için en te
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```cpp
 HRESULT GetRepresentativeEntryAddress(

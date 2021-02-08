@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugType:: GetRank metodu hakkında daha fazla bilgi edinin'
 title: ICorDebugType::GetRank Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 72d3d927-f590-4f2d-8f60-448f3dfb96af
 topic_type:
 - apiref
-ms.openlocfilehash: defd2623b85225f4139ff0bfce8495d16e3b4182
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e13416856f900846d2df4b8a39303cf0b6a48ebc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95684440"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800909"
 ---
 # <a name="icordebugtypegetrank-method"></a>ICorDebugType::GetRank Metodu
 
 Bir dizi türündeki boyut sayısını alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetRank (  

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ICLRTask arabirimi'
 title: ICLRTask Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b3a44df3-578a-4451-b55e-70c8e7695f5e
 topic_type:
 - apiref
-ms.openlocfilehash: 5ecc42950775a620796a1c775e5f088f461a12c3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f48216b19dd2c1d0d0ba64117169b74767dbdf2b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95690831"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799559"
 ---
 # <a name="iclrtask-interface"></a>ICLRTask Arabirimi
 
@@ -43,7 +44,7 @@ Konağın ortak dil çalışma zamanı (CLR) isteği yapmasına veya ilişkili g
   
 ## <a name="remarks"></a>Açıklamalar  
 
- , `ICLRTask` Clr için bir görevin gösterimidir. Kod yürütme sırasında herhangi bir noktada, bir görev çalışıyor ya da çalıştırmayı bekliyor olarak açıklanabilir. Konak `ICLRTask::SwitchIn` , clr 'ye geçerli `ICLRTask` örneği temsil eden görevin Şu anda bir çalıştırılabilir durumunda olduğunu bildirmek için yöntemini çağırır. Bir çağrısından sonra `ICLRTask::SwitchIn` konak, çalışma zamanının [IHostTaskManager:: BeginThreadAffinity](ihosttaskmanager-beginthreadaffinity-method.md) ve [IHostTaskManager:: EndThreadAffinity](ihosttaskmanager-endthreadaffinity-method.md) yöntemlerine yapılan çağrılar tarafından belirtildiği gibi iş parçacığı benzeşimi gerektirdiği durumlar dışında, görevi herhangi bir işletim sistemi iş parçacığında zamanlayabilir. Daha sonra, işletim sistemi bu görevi iş parçacığından kaldırmaya ve çalışır durumda olmayan bir duruma yerleştirmeye karar verebilir. Örneğin, görev, eşitleme temelleri üzerinde engellediğinde veya g/ç işlemlerinin tamamlanmasını bekliyorsa bu durum oluşabilir. Konak, geçerli [SwitchOut](iclrtask-switchout-method.md) örnek tarafından temsil edilen görevin `ICLRTask` artık bir ÇALıŞTıRıLABILIR durumunda olmadığını clr 'ye bildirmek için geçiş yöntemini çağırır.  
+ , `ICLRTask` Clr için bir görevin gösterimidir. Kod yürütme sırasında herhangi bir noktada, bir görev çalışıyor ya da çalıştırmayı bekliyor olarak açıklanabilir. Konak `ICLRTask::SwitchIn` , clr 'ye geçerli `ICLRTask` örneği temsil eden görevin Şu anda bir çalıştırılabilir durumunda olduğunu bildirmek için yöntemini çağırır. Bir çağrısından sonra `ICLRTask::SwitchIn` konak, çalışma zamanının [IHostTaskManager:: BeginThreadAffinity](ihosttaskmanager-beginthreadaffinity-method.md) ve [IHostTaskManager:: EndThreadAffinity](ihosttaskmanager-endthreadaffinity-method.md) yöntemlerine yapılan çağrılar tarafından belirtildiği gibi iş parçacığı benzeşimi gerektirdiği durumlar dışında, görevi herhangi bir işletim sistemi iş parçacığında zamanlayabilir. Daha sonra, işletim sistemi bu görevi iş parçacığından kaldırmaya ve çalışır durumda olmayan bir duruma yerleştirmeye karar verebilir. Örneğin, görev, eşitleme temelleri üzerinde engellediğinde veya g/ç işlemlerinin tamamlanmasını bekliyorsa bu durum oluşabilir. Konak, geçerli [](iclrtask-switchout-method.md) örnek tarafından temsil edilen görevin `ICLRTask` artık bir ÇALıŞTıRıLABILIR durumunda olmadığını clr 'ye bildirmek için geçiş yöntemini çağırır.  
   
  Bir görev genellikle kod yürütmenin sonunda sonlanır. Bu sırada, ana bilgisayar ilişkili öğesini `ICLRTask::ExitTask` yok etmek için çağırır `ICLRTask` . Bununla birlikte, görevler, `ICLRTask::Reset` örneğinin yeniden kullanılmasına izin veren çağrısı kullanılarak da geri dönüştürülebilir `ICLRTask` . Bu yaklaşım, örneklerin tekrar tekrar oluşturulmasına ve yok edilmesinin yükünü önler.  
   

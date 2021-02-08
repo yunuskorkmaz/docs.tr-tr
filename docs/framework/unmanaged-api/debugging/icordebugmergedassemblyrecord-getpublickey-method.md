@@ -1,19 +1,20 @@
 ---
+description: ': Icordebugmergedassemblyrecord:: GetPublicKey Yöntemi hakkında daha fazla bilgi edinin'
 title: 'Icordebugmergedassemblyrecord:: GetPublicKey Yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 6f4e78ba-082b-489d-8b58-4c35fbcc7a5b
-ms.openlocfilehash: e89ecca25edb0d7eae3a7e65f9585d71ad4ace4d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 15175b0d02773bcbce46bfaec9ce1de3021b7dde
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95710603"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801104"
 ---
 # <a name="icordebugmergedassemblyrecordgetpublickey-method"></a>Icordebugmergedassemblyrecord:: GetPublicKey Yöntemi
 
 Derlemenin ortak anahtarını alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetPublicKey(  

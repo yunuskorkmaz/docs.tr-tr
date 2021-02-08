@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi için: nasıl yapılır: Visual Basic metin dosyalarından okuma'
 title: 'Nasıl yapılır: Metin Dosyalarını Okuma'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - examples [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 735fe9d7-0f7a-4185-ba02-f35e580ec4b8
-ms.openlocfilehash: 0d99209ed123686355e8d49c82ba23f94084f895
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 76f8bbbb7a0064818d324fc6dd9f1f37f7271401
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411622"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797438"
 ---
 # <a name="how-to-read-from-text-files-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Metin Dosyalarını Okuma
 

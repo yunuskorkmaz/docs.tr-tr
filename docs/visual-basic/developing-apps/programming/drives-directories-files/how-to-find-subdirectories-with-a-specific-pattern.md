@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: Visual Basic belirli bir düzene sahip alt dizinleri bulma'
 title: 'Nasıl yapılır: Belirli bir Desendeki Alt Dizinleri Bulma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - pattern matching
 - folders, finding
 ms.assetid: c9265fd1-7483-4150-8b7f-ff642caa939d
-ms.openlocfilehash: 5b57914a518b568732955e5c73bb2031824c84dd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: aaf1fe0e844c6a3db2b011289613a80dbd1b43fb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401634"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797555"
 ---
 # <a name="how-to-find-subdirectories-with-a-specific-pattern-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Belirli bir Desendeki Alt Dizinleri Bulma
 
@@ -34,9 +35,9 @@ Aşağıdaki koşullar özel bir duruma neden olabilir:
 
 - Belirtilen Joker karakterlerden biri veya birkaçı `Nothing` , boş bir dize veya yalnızca boşluk ( <xref:System.ArgumentNullException> ) içeriyor.
 
-- `directory`yok ( <xref:System.IO.DirectoryNotFoundException> ).
+- `directory` yok ( <xref:System.IO.DirectoryNotFoundException> ).
 
-- `directory`var olan bir dosyaya () işaret eder <xref:System.IO.IOException> .
+- `directory` var olan bir dosyaya () işaret eder <xref:System.IO.IOException> .
 
 - Yol, sistem tarafından tanımlanan uzunluk üst sınırını ( <xref:System.IO.PathTooLongException> ) aşıyor.
 
