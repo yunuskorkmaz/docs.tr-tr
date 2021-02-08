@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Auto (Visual Basic)'
 title: Otomatik
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Auto keyword [Visual Basic]
 - Auto keyword [Visual Basic], marshaling strings
 ms.assetid: bf79ba95-a62c-48a5-916f-0ac7a52c13ec
-ms.openlocfilehash: 799a7320b701384dc5f4b4b46fef8544f6b15b02
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 9601b6c253d4366c453950b4d8f3c5b2caf3805f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875513"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774687"
 ---
 # <a name="auto-visual-basic"></a>Otomatik (Visual Basic)
 
@@ -39,5 +40,5 @@ Visual Basic, bildirildiği dış yordamın dış adına göre .NET Framework ku
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Ansi](ansi.md)
-- [Kodlamaları](unicode.md)
+- [Unicode](unicode.md)
 - [Anahtar sözcükler](../keywords/index.md)

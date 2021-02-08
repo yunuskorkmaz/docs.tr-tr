@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Matematik Özeti (Visual Basic)'
 title: Matematik Özeti
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - math functions, Visual Basic
 - math functions
 ms.assetid: 6abf2dd7-92d2-488a-8e2b-819be9b30c3f
-ms.openlocfilehash: eb13a5f32ea407bebad576ef063c9def03fc6693
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 8d2b03f465e3b215f9377cae70291f0f7b37ca17
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875590"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774765"
 ---
 # <a name="math-summary-visual-basic"></a>Matematik Özeti (Visual Basic)
 

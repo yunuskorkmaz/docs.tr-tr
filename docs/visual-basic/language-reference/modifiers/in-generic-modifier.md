@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: ın (genel değiştirici) (Visual Basic)'
 title: In (genel değiştirici)-Visual Basic
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - contravariance, In keyword [Visual Basic]
 - In keyword [Visual Basic]
 ms.assetid: 59bb13c5-fe96-42b8-8286-86293d1661c5
-ms.openlocfilehash: 9c0f7d454767112e1e309af81407b5fdef22eee9
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: e6ac95a77253b28e45a4be8a29623bdd76a231f1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004874"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774544"
 ---
 # <a name="in-generic-modifier-visual-basic"></a>In (Genel Değiştirici) (Visual Basic)
 
-Genel tür parametreleri için `In` anahtar sözcüğü tür parametresinin değişken karşıtı olduğunu belirtir.
+Genel tür parametreleri için, `In` anahtar sözcüğü tür parametresinin değişken karşıtı olduğunu belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
 
@@ -26,9 +27,9 @@ Daha fazla bilgi için bkz. [Kovaryans ve değişken varyans](../../programming-
 
 ## <a name="rules"></a>Kurallar
 
-Genel arabirimlerde ve temsilcilerde `In` anahtar sözcüğünü kullanabilirsiniz.
+`In`Genel arabirimlerde ve temsilcilerde anahtar sözcüğünü kullanabilirsiniz.
   
-Bir tür parametresi, yalnızca Yöntem bağımsız değişkenlerinin türü olarak kullanılırsa ve yöntem dönüş türü olarak kullanılmazsa genel bir arabirimde veya temsilcisinde değişken karşıtı olarak bildirilemez. `ByRef` parametreleri birlikte değişken veya değişken karşıtı olamaz.
+Bir tür parametresi, yalnızca Yöntem bağımsız değişkenlerinin türü olarak kullanılırsa ve yöntem dönüş türü olarak kullanılmazsa genel bir arabirimde veya temsilcisinde değişken karşıtı olarak bildirilemez. `ByRef` parametreler birlikte değişken veya değişken karşıtı olamaz.
 
 Kovaryans ve değişken Varyans, başvuru türleri için desteklenir ve değer türleri için desteklenmez.
 
@@ -36,7 +37,7 @@ Visual Basic, temsilci türünü belirtmeden olayları değişken olmayan arabir
 
 ## <a name="behavior"></a>Davranış
 
-Değişken karşıtı tür parametresine sahip bir arabirim, yöntemlerinin, arabirim türü parametresi tarafından belirtilenden daha az türetilmiş türlerin bağımsız değişkenlerini kabul etmesine olanak tanır. Örneğin, .NET Framework 4 ' te, <xref:System.Collections.Generic.IComparer%601> arabiriminde T yazın ve `Employee` `Person` ' ten devralırsa herhangi bir özel dönüştürme yöntemini kullanmadan `IComparer(Of Person)` türünün bir nesnesine `IComparer(Of Employee)` türünde bir nesne atayabilirsiniz.
+Değişken karşıtı tür parametresine sahip bir arabirim, yöntemlerinin, arabirim türü parametresi tarafından belirtilenden daha az türetilmiş türlerin bağımsız değişkenlerini kabul etmesine olanak tanır. Örneğin, .NET Framework 4 ' te, <xref:System.Collections.Generic.IComparer%601> arabiriminde, T türü değişken değişken ise, ' `IComparer(Of Person)` `IComparer(Of Employee)` den devralırsa herhangi bir özel dönüştürme yöntemini kullanmadan, türün bir nesnesine türünün bir nesnesine atayabilirsiniz `Employee` `Person` .
 
 Değişken karşıtı bir temsilciye aynı türde başka bir temsilci atanabilir, ancak daha az türetilmiş bir genel tür parametresi olabilir.
 
