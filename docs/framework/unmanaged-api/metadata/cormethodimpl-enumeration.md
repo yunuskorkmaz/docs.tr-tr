@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: CorMethodImpl numaralandırması'
 title: CorMethodImpl Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ffbb3caf-20da-4a4b-8983-77376e72b990
 topic_type:
 - apiref
-ms.openlocfilehash: 40e82997e58292a10f5e960cc9d9785d9ea8946a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 157db81a72742f1f2aae7e95249b819b2396ef4b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95676991"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784398"
 ---
 # <a name="cormethodimpl-enumeration"></a>CorMethodImpl Numaralandırması
 
@@ -55,7 +56,7 @@ typedef enum CorMethodImpl {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`miCodeTypeMask`|Kod türünü tanımlayan bayraklar.|  
 |`miIL`|Yöntem uygulamasının Microsoft ara dil (MSIL) olduğunu belirtir.|  

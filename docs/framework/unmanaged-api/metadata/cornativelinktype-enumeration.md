@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Cornativelınktype numaralandırması'
 title: CorNativeLinkType Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f86ff37-2dab-4e64-819a-76b3bfe828ff
 topic_type:
 - apiref
-ms.openlocfilehash: c155373f7da47e904c94a44efa2fba42309d4218
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 40efc75a793da8b024eff3d7c2c620123eca08b2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95671362"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784346"
 ---
 # <a name="cornativelinktype-enumeration"></a>CorNativeLinkType Numaralandırması
 
@@ -41,7 +42,7 @@ typedef enum
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`nltNone`|Anahtar sözcüklerin hiçbirinin belirtilmediğini belirtir.|  
 |`nltAnsi`|Bir ANSI anahtar sözcüğünün belirtildiğini belirtir.|  

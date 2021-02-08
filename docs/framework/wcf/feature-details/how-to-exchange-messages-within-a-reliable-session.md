@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: güvenilir bir oturumda Ileti alışverişi yapma'
 title: 'Nasıl yapılır: Güvenilir Bir Oturumda İleti Alma ve Gönderme'
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 97371f8572d5d0db633ab8dd1ca82067d9d55c3f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e4a8f6a180b9c2ff9471558997034d02acc817e7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550195"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802911"
 ---
 # <a name="how-to-exchange-messages-within-a-reliable-session"></a>Nasıl yapılır: Güvenilir Bir Oturumda İleti Alma ve Gönderme
 
@@ -27,7 +28,7 @@ Bu örneğin kaynak kopyası için bkz. [WS güvenilir oturumu](../samples/ws-re
 
    [!code-csharp[c_HowTo_UseReliableSession#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/service.cs#1122)]
 
-1. *Web.config* `CalculatorService` <xref:System.ServiceModel.WSHttpBinding> Güvenilir oturum etkin ve gereken iletilerin sıralı teslimini kullanan, için bir uç nokta yapılandırmak üzere birWeb.configdosyası oluşturun.
+1.  `CalculatorService` <xref:System.ServiceModel.WSHttpBinding> Güvenilir oturum etkin ve gereken iletilerin sıralı teslimini kullanan, için bir uç nokta yapılandırmak üzere birWeb.configdosyası oluşturun.
 
    [!code-xml[c_HowTo_UseReliableSession#2111](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/common/web.config#2111)]
 
@@ -67,7 +68,7 @@ Bu örneğin kaynak kopyası için bkz. [WS güvenilir oturumu](../samples/ws-re
 
 ## <a name="example"></a>Örnek
 
-Sistem tarafından sunulan bağlamalardan bazıları varsayılan olarak güvenilir oturumları destekler. Bu güncelleştirmeler şunlardır:
+Sistem tarafından sunulan bağlamalardan bazıları varsayılan olarak güvenilir oturumları destekler. Bu modüller şunlardır:
 
 - <xref:System.ServiceModel.WSDualHttpBinding>
 

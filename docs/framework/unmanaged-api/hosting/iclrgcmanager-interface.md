@@ -1,4 +1,5 @@
 ---
+description: ': ICLRGCManager arabirimi hakkında daha fazla bilgi'
 title: ICLRGCManager Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fb511c9b-3fe4-41b0-822a-6ba4a079d1f5
 topic_type:
 - apiref
-ms.openlocfilehash: dbe3df6bb20e5ad8f9eb534a366405eb9c33984f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 648b2b131e28da8aabc7028b6d745351cae772fe
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95678252"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790002"
 ---
 # <a name="iclrgcmanager-interface"></a>ICLRGCManager Arabirimi
 

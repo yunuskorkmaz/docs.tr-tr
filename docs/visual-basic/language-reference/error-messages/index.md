@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Visual Basic hata iletileri'
 title: Visual Basic hata iletileri
 titleSuffix: ''
 ms.date: 10/13/2020
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - errors [Visual Basic]
 - error messages
 ms.assetid: f2dda05b-baef-41f5-8bb1-598bd7cf239f
-ms.openlocfilehash: 70973b6d34ed1a84a38af3694e144dfcefa61c20
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 28e59a47c47ff7905dfec93b057f7cb534842b91
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92163382"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796073"
 ---
 # <a name="error-messages-in-visual-basic"></a>Visual Basic hata iletileri
 
@@ -31,7 +32,7 @@ Kod, çalışma zamanı hatalarını yakalayabilir ve inceleyebilir. Hata veren 
 
 ## <a name="compile-time-errors"></a>Derleme zamanı hataları
 
-Visual Basic Derleyicisi kodda bir sorunla karşılaşırsa, derleme zamanı hatası oluşur. Visual Studio Code düzenleyicisinde, bu kod satırının altında dalgalı bir çizgi göründüğünden, hataya neden olan kod satırını kolayca belirleyebilirsiniz. Dalgalı alt çizgiyi işaret ettikten veya **hata listesi**açarsanız, diğer iletileri de gösteren hata iletisi görüntülenir.
+Visual Basic Derleyicisi kodda bir sorunla karşılaşırsa, derleme zamanı hatası oluşur. Visual Studio Code düzenleyicisinde, bu kod satırının altında dalgalı bir çizgi göründüğünden, hataya neden olan kod satırını kolayca belirleyebilirsiniz. Dalgalı alt çizgiyi işaret ettikten veya **hata listesi** açarsanız, diğer iletileri de gösteren hata iletisi görüntülenir.
 
 Bir tanımlayıcının dalgalı bir alt çizgi varsa ve en sağdaki karakter altında kısa bir alt çizgi görünürse, sınıf, Oluşturucu, yöntem, özellik, alan veya sabit listesi için bir saplama oluşturabilirsiniz. Daha fazla bilgi için bkz. [kullanımdan oluşturma (Visual Studio)](/visualstudio/ide/visual-csharp-intellisense#generate-from-usage).
 

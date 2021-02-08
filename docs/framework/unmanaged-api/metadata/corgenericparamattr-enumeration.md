@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: CorGenericParamAttr sabit listesi'
 title: CorGenericParamAttr Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 36c76266-71d8-48dc-bd89-54943fa659c1
 topic_type:
 - apiref
-ms.openlocfilehash: ea50430c3ae6cef9b47880bcb8ad969f62ce9c39
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8fe8cb20834ecbc5477bbe8b01bf77d6b1af0eea
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95704922"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784463"
 ---
 # <a name="corgenericparamattr-enumeration"></a>CorGenericParamAttr Numaralandırması
 
@@ -46,7 +47,7 @@ typedef enum CorGenericParamAttr {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`gpVarianceMask`|Parametre varyansı yalnızca arabirimler ve temsilciler için genel parametreler için geçerlidir.|  
 |`gpNonVariant`|Varyans yokluğunu gösterir.|  

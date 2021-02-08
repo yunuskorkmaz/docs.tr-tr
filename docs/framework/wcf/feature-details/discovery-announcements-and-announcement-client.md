@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: bulma duyuruları ve duyuru Istemcisi'
 title: Keşif Duyuruları ve Duyuru İstemcisi
 ms.date: 03/30/2017
 ms.assetid: 426c6437-f8d2-4968-b23a-18afd671aa4b
-ms.openlocfilehash: 4ad0b3ea5c257fa3117c426391bd59ad7b560d4f
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 2076b4dbdc57bd3de47fccdb4a51ef9e6fc48366
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040176"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802976"
 ---
 # <a name="discovery-announcements-and-announcement-client"></a>Keşif Duyuruları ve Duyuru İstemcisi
 
@@ -15,7 +16,7 @@ WCF bulma özelliği, bileşenlerin kullanılabilirliğini duyurmalarını sağl
 
 ## <a name="discovery-announcements"></a>Keşif Duyuruları
 
-Duyurular için yapılandırılmış bir hizmet bir ağa katıldığında ve bulunabilir hale geldiğinde, istemcileri dinlemek için kullanılabilirliğini duyuran bir Hello iletisi gönderir. İleti, hizmet hakkında, sözleşme, uç nokta adresi ve ilişkili kapsamlar gibi bulma ile ilgili bilgileri içerir. Duyuru iletisinin <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> sınıf ile nereye gönderileceğini belirtebilirsiniz. Duyuru uç noktası bir <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> ise, Merhaba ve bye çok noktaya yayın ise veya duyuru uç noktası tek noktaya ise, iletiler doğrudan belirtilen uç noktaya gönderilir.
+Duyurular için yapılandırılmış bir hizmet bir ağa katıldığında ve bulunabilir hale geldiğinde, istemcileri dinlemek için kullanılabilirliğini duyuran bir Hello iletisi gönderir. İleti, hizmet hakkında, sözleşme, uç nokta adresi ve ilişkili kapsamlar gibi bulma ile ilgili bilgileri içerir. Duyuru iletisinin sınıf ile nereye gönderileceğini belirtebilirsiniz <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> . Duyuru uç noktası bir ise, <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> Merhaba ve bye çok noktaya yayın ise veya duyuru uç noktası tek noktaya ise, iletiler doğrudan belirtilen uç noktaya gönderilir.
 
 > [!NOTE]
 > Duyurular, hizmet ana bilgisayarı açılıp kapandığında gönderilir. Bu çağrılar düzgün tamamlanmazsa, duyuru iletisi gönderilemeyebilir. Örneğin, hizmet hataları varsa, Bye duyuru iletisi gönderilmez.
@@ -23,11 +24,11 @@ Duyurular için yapılandırılmış bir hizmet bir ağa katıldığında ve bul
 > [!TIP]
 > Duyuru işlevini özelleştirerek, her seçerken Duyurular göndermenize olanak sağlayabilirsiniz.
 
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]hizmetlerin ve istemcilerin <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> kolayca Hello ve bye duyuruları göndermesini sağlamak için vestandartuçnoktalarıtanımlar.<xref:System.ServiceModel.Discovery.AnnouncementEndpoint>
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]<xref:System.ServiceModel.Discovery.AnnouncementEndpoint> <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> hizmetlerin ve Istemcilerin kolayca Hello ve bye duyuruları göndermesini sağlamak için ve standart uç noktaları tanımlar.
 
 ### <a name="announcements-on-the-service"></a>Hizmette Duyurular
 
-Hizmeti Duyurular gönderecek şekilde yapılandırmak için bir <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> duyuru uç noktası ekleyin. Aşağıdaki örnek, bu davranışın hizmet ana bilgisayarına programlı bir şekilde nasıl ekleneceğini gösterir. Bu örnek, bildirilerinin `UdpAnnouncementEndpoint`çok noktaya yayın olduğunu belirten, bu standart uç nokta tarafından belirtilen bir konuma kadar olan öğesini kullanır.
+Hizmeti Duyurular gönderecek şekilde yapılandırmak için bir <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> duyuru uç noktası ekleyin. Aşağıdaki örnek, bu davranışın hizmet ana bilgisayarına programlı bir şekilde nasıl ekleneceğini gösterir. Bu örnek, `UdpAnnouncementEndpoint` bildirilerinin çok noktaya yayın olduğunu belirten, bu standart uç nokta tarafından belirtilen bir konuma kadar olan öğesini kullanır.
 
 ```csharp
 ServiceDiscoveryBehavior serviceDiscoveryBehavior = new ServiceDiscoveryBehavior();
@@ -58,11 +59,11 @@ Aşağıdaki örnekte gösterildiği gibi, davranış yapılandırma dosyasında
 </behaviors>
 ```
 
-Yukarıdaki örneklerde, bir hizmet otomatik olarak duyuru iletileri gönderecek şekilde yapılandırılır. Ayrıca, <xref:System.ServiceModel.Discovery.AnnouncementClient> sınıfını kullanarak bildiri iletilerini açıkça de gönderebilirsiniz.
+Yukarıdaki örneklerde, bir hizmet otomatik olarak duyuru iletileri gönderecek şekilde yapılandırılır. Ayrıca, sınıfını kullanarak bildiri iletilerini açıkça de gönderebilirsiniz <xref:System.ServiceModel.Discovery.AnnouncementClient> .
 
 ### <a name="announcements-on-the-client"></a>Istemcideki Duyurular
 
-İstemci uygulaması, Merhaba ve bye iletilerine yanıt vermek ve <xref:System.ServiceModel.Discovery.AnnouncementService.OnlineAnnouncementReceived> ve <xref:System.ServiceModel.Discovery.AnnouncementService.OfflineAnnouncementReceived> olaylarına abone olmak için bir duyuru hizmeti barındırmalıdır. Aşağıdaki örnek bunun nasıl yapılacağını göstermektedir.
+İstemci uygulaması, Merhaba ve bye iletilerine yanıt vermek ve ve olaylarına abone olmak için bir duyuru hizmeti barındırmalıdır <xref:System.ServiceModel.Discovery.AnnouncementService.OnlineAnnouncementReceived> <xref:System.ServiceModel.Discovery.AnnouncementService.OfflineAnnouncementReceived> . Aşağıdaki örnek bunun nasıl yapılacağını göstermektedir.
 
 ```csharp
 // Create an AnnouncementService instance
@@ -84,7 +85,7 @@ using (ServiceHost announcementServiceHost = new ServiceHost(announcementService
 }
 ```
 
-Bir Hello veya bye iletisi alındığında, aşağıdaki örnekte gösterildiği <xref:System.ServiceModel.Discovery.AnnouncementEventArgs> gibi, uç nokta bulgu meta verilerine erişebilirsiniz.
+Bir Hello veya bye iletisi alındığında, <xref:System.ServiceModel.Discovery.AnnouncementEventArgs> Aşağıdaki örnekte gösterildiği gibi, uç nokta bulgu meta verilerine erişebilirsiniz.
 
 ```csharp
 static void OnOnlineEvent(object sender, AnnouncementEventArgs e)

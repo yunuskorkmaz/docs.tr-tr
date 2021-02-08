@@ -1,13 +1,14 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: OperationBehaviorAttribute'
 title: OperationBehaviorAttribute
 ms.date: 03/30/2017
 ms.assetid: 8c9b0755-9e83-411f-bdcb-61a586022797
-ms.openlocfilehash: 76cc619aed4ba2b944a8d11dc454a40368a4068c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c1f1b80134163ee65d5015e52017f5bb455aeac7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96269086"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803067"
 ---
 # <a name="operationbehaviorattribute"></a>OperationBehaviorAttribute
 

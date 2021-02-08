@@ -1,4 +1,5 @@
 ---
+description: ': ICLRDomainManager arabirimi hakkında daha fazla bilgi edinin'
 title: ICLRDomainManager Arabirimi
 ms.date: 03/30/2017
 api_name:
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICLRDomainManager interface [.NET Framework hosting]
 ms.assetid: f08b2390-d872-4521-a815-e9c237c4c45d
-ms.openlocfilehash: a5abb601fe795a0c615403eec69f68ad9f66f00f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d719e89d81e8c7abb1f238ce50b4e236de17ac72
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95681177"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790015"
 ---
 # <a name="iclrdomainmanager-interface"></a>ICLRDomainManager Arabirimi
 

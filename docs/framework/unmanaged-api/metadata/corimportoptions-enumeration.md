@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: CorImportOptions numaralandırması'
 title: CorImportOptions Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e5d03cb-97c9-4ff4-8dbd-17d94ee374d3
 topic_type:
 - apiref
-ms.openlocfilehash: 3d5989d43644088403a77f26c02af9ffaae0732b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b942ed3f5b1b3c400b4f901e3dd3c4364e1d588c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95677233"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784450"
 ---
 # <a name="corimportoptions-enumeration"></a>CorImportOptions Numaralandırması
 
@@ -45,7 +46,7 @@ typedef enum CorImportOptions {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`MDImportOptionDefault`|Silinen kayıtları atlamak için olan varsayılan davranışı gösterir.|  
 |`MDImportOptionAll`|Tüm meta verilerin numaralandırılacağını belirtir.|  

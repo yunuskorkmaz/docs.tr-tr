@@ -1,4 +1,5 @@
 ---
+description: ': ICLRAssemblyReferenceList:: IsStringAssemblyReferenceInList Yöntemi hakkında daha fazla bilgi edinin'
 title: ICLRAssemblyReferenceList::IsStringAssemblyReferenceInList Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: e6121cc3-2f11-42c7-bdae-47808581ff71
 topic_type:
 - apiref
-ms.openlocfilehash: 74d47b3f55c10f65d47f726a2b96ba5e0b18b749
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 667764337fbda22a526e51575faf049efc4b86ca
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95679149"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790041"
 ---
 # <a name="iclrassemblyreferencelistisstringassemblyreferenceinlist-method"></a>ICLRAssemblyReferenceList::IsStringAssemblyReferenceInList Yöntemi
 
 Sağlanan adın listedeki bir derlemenin adıyla eşleşip eşleşmediğini gösteren bir değer alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT IsStringAssemblyReferenceInList (  
@@ -41,7 +42,7 @@ HRESULT IsStringAssemblyReferenceInList (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|Dize listede görüntülenir.|  
 |S_FALSE|Dize listede görünmüyor.|  

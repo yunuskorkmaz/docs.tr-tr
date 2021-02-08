@@ -1,19 +1,20 @@
 ---
+description: 'Daha fazla bilgi edinin: PeerCustomResolverBindingElement'
 title: PeerCustomResolverBindingElement
 ms.date: 03/30/2017
 ms.assetid: 9ccc2770-a20e-4dff-9970-f56ad8aec2b5
-ms.openlocfilehash: c7f8fd23133cd83ad87a00134b9755b94f531d8b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f4277c04818eec69c1041eee30282d3111421eaa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963065"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803054"
 ---
 # <a name="peercustomresolverbindingelement"></a>PeerCustomResolverBindingElement
 
 PeerCustomResolverBindingElement
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```csharp
 class PeerCustomResolverBindingElement : PeerResolverBindingElement
@@ -25,7 +26,7 @@ class PeerCustomResolverBindingElement : PeerResolverBindingElement
 
 ## <a name="methods"></a>Yöntemler
 
-PeerCustomResolverBindingElement sınıf herhangi bir yöntemi tanımlamaz.
+PeerCustomResolverBindingElement sınıfı herhangi bir yöntem tanımlamaz.
 
 ## <a name="properties"></a>Özellikler
 
@@ -35,23 +36,23 @@ PeerCustomResolverBindingElement sınıf herhangi bir yöntemi tanımlamaz.
 
 Veri türü: dize
 
-Erişim türü: salt okunur
+Erişim türü: salt okunurdur
 
-Özel eş çözümleyici adresi.
+Eş özel Çözümleyicisinin adresi.
 
 ### <a name="binding"></a>Bağlama
 
 Veri türü: dize
 
-Erişim türü: salt okunur
+Erişim türü: salt okunurdur
 
-Bağlama yapılandırma adı.
+Bağlamanın yapılandırma adı.
 
 ## <a name="requirements"></a>Gereksinimler
 
-|MOF|Bildirilmiş Servicemodel.mof.|
+|MOF|ServiceModel. mof içinde bildirilmiştir.|
 |---------|-----------------------------------|
-|Ad Alanı|İçinde tanımlı root\ServiceModel|
+|Ad Alanı|Root\ServiceModel içinde tanımlı|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,4 +1,5 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: BC42015: ' <interfacename> . <membername> ', ' ' temel sınıfı tarafından zaten uygulandı <baseclassname> . <type> öğesinin yeniden uygulandığı varsayılıyor"
 title: "'<interfacename>.<membername>', '<baseclassname>' temel sınıfı tarafından zaten uygulandı. <type> öğesinin yeniden uygulandığı varsayılıyor"
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42015
 ms.assetid: 658c070a-113e-4bd8-b294-12c243191160
-ms.openlocfilehash: 8137f6b1712b6a0752a991f5a3d598b5f958252c
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 7e9cce6250d21dfc4255d9971eea407b3a60e96a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162823"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796034"
 ---
 # <a name="bc42015-interfacenamemembername-is-already-implemented-by-the-base-class-baseclassname-re-implementation-of-type-assumed"></a>BC42015: ' \<interfacename> . \<membername> ', ' ' temel sınıfı tarafından zaten uygulandı \<baseclassname> . \<type> öğesinin yeniden uygulandığı varsayılıyor
 

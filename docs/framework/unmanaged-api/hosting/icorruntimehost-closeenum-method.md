@@ -1,4 +1,5 @@
 ---
+description: ': ICorRuntimeHost:: CloseEnum Yöntemi hakkında daha fazla bilgi edinin'
 title: ICorRuntimeHost::CloseEnum Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: f7ce7e8c-0a3e-4587-a180-063e2b85940e
 topic_type:
 - apiref
-ms.openlocfilehash: d3748621474373fee8248496d48414ff67c699d6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1fc18ff3e00f85a4f047417f880ec2b0e06496b7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95715705"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789729"
 ---
 # <a name="icorruntimehostcloseenum-method"></a>ICorRuntimeHost::CloseEnum Yöntemi
 
 Bir etki alanı numaralandırıcısını etki alanı listesinin başına geri döndürür.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT CloseEnum (  
@@ -41,7 +42,7 @@ HRESULT CloseEnum (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|İşlem başarılı oldu.|  
 |S_FALSE|İşlem tamamlanamadı.|  

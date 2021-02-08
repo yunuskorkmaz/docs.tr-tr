@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: CorBindToRuntimeByCfg Işlevi'
 title: CorBindToRuntimeByCfg İşlevi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ded1e492-a782-4185-9c66-709e421c1782
 topic_type:
 - apiref
-ms.openlocfilehash: d319382b577844a804c3e4562676491a15de5f63
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c1acf6a8f1d8637bc2d6cd180016ff51cf500107
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95673793"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790080"
 ---
 # <a name="corbindtoruntimebycfg-function"></a>CorBindToRuntimeByCfg İşlevi
 
@@ -27,7 +28,7 @@ Bir XML dosyasından okunan sürüm bilgilerini kullanarak ortak dil çalışma 
   
  Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT CorBindToRuntimeByCfg (  

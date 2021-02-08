@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: 206-Errorhandlerçağrıldı'
 title: 206 - ErrorHandlerInvoked
 ms.date: 03/30/2017
 ms.assetid: 97340f4d-4e09-4e42-a17a-982b3868dbcf
-ms.openlocfilehash: 99415733624752217d32f6f026a419b2b32bfa7b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: addbcbdea25c7f8e7515b743e98e426476fa0b28
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96244619"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783787"
 ---
 # <a name="206---errorhandlerinvoked"></a>206 - ErrorHandlerInvoked
 
@@ -17,10 +18,10 @@ ms.locfileid: "96244619"
 |-|-|  
 |ID|206|  
 |Anahtar sözcükler|Sorun giderme, ServiceModel|  
-|Düzey|Bilgi|  
+|Level|Bilgi|  
 |Kanal|Microsoft-Windows-uygulama sunucusu-uygulamalar/analitik|  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bu olay, bir `ErrorHandler` hizmet işleminde oluşan bir özel durumu işlemeye yönelik bir fırsata sahip olduktan sonra yayınlanır.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96244619"
   
 ## <a name="details"></a>Ayrıntılar  
   
-|Veri öğesi adı|Veri öğesi türü|Açıklama|  
+|Veri öğesi adı|Veri öğesi türü|Description|  
 |--------------------|--------------------|-----------------|  
 |TypeName|`xs:string`|Çağrılan türünün CLR FullName değeri `ErrorHandler` .|  
 |İşlenenler|`xs:unsignedByte`|`true` hata işleyicisi hatayı işleirse, tersi durumda `false` .|  

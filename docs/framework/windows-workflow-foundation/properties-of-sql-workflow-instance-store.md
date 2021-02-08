@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: SQL Iş akışı örnek deposunun özellikleri'
 title: SQL İş Akışı Örnek Deposunun Özellikleri
 ms.date: 03/30/2017
 ms.assetid: 5bf75f3c-8f33-450d-967f-6ee862c14c67
-ms.openlocfilehash: 2a21f5f858c5242ad88d65a583964fb95589948d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: be4ebdc9a91c78e56a254bf3c1e868e12a2d7925
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96245997"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99777638"
 ---
 # <a name="properties-of-sql-workflow-instance-store"></a>SQL İş Akışı Örnek Deposunun Özellikleri
 

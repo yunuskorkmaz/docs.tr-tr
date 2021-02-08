@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: Federasyon ve güven'
 title: Federasyon ve Güven
 ms.date: 03/30/2017
 helpviewer_keywords:
 - federation [WCF], and trust
 ms.assetid: 4bdec4f2-f8a2-4512-bdcf-14ef54b5877a
-ms.openlocfilehash: 6baa336f96f2349315cab2ed51bfb67c4745a110
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ccacb38f9542fab5522331d53dc29792318c5dea
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96255487"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802950"
 ---
 # <a name="federation-and-trust"></a>Federasyon ve Güven
 

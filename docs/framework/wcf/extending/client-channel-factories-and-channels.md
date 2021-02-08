@@ -1,13 +1,14 @@
 ---
+description: 'Istemci: kanal fabrikaları ve kanallar hakkında daha fazla bilgi edinin'
 title: 'İstemci: Kanal Fabrikaları ve Kanallar'
 ms.date: 03/30/2017
 ms.assetid: ef245191-fdab-4468-a0da-7c6f25d2110f
-ms.openlocfilehash: 2476147d20b1aec27986a01773c3d16fb764c665
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: b61c37743899b8ba74ec18cc84397e4521e7bde7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275638"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803041"
 ---
 # <a name="client-channel-factories-and-channels"></a>İstemci: Kanal Fabrikaları ve Kanallar
 

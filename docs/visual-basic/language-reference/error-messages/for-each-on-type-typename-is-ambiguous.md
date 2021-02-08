@@ -1,4 +1,5 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: ' ' türü Için BC32096: ' for each ', ' <typename> System. Collections. Generic. IEnumerable (Of T) ' in birden çok örneğini uyguladığından"
 title: Tür birden fazla 'System.Collections.Generic.IEnumerable(Of T)' örneği uyguladığından '<typename>' türü üzerindeki 'For Each' belirsiz
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32096
 ms.assetid: ed20d09c-913f-482e-89f8-c0a596c3ec24
-ms.openlocfilehash: 0f19836efeabcf1d9e5097667c719c1f7d99cbbb
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: c96bab40d4f7216f90368cf4c5526c7b4e5532f1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92163473"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796216"
 ---
 # <a name="bc32096-for-each-on-type-typename-is-ambiguous-because-the-type-implements-multiple-instantiations-of-systemcollectionsgenericienumerableof-t"></a>\<typename>Tür birden çok ' System. Collections. Generic. IEnumerable (Of T) ' örneği uyguladığı için, ' ' TÜRÜNDEKI BC32096: ' for each ' belirsiz
 

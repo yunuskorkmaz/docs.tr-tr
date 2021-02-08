@@ -1,4 +1,5 @@
 ---
+description: ': IMetaDataAssemblyImport:: GetFileProps yöntemi hakkında daha fazla bilgi edinin'
 title: IMetaDataAssemblyImport::GetFileProps Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c5e6216f-ae3d-4697-9688-66b69c1251ec
 topic_type:
 - apiref
-ms.openlocfilehash: 0b9ff2716cc0bc32c81fe6fcdd4e6c367d4d835f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6814fee7edf5478a1ce2cf2b81d8f16fa62cd3f3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95718185"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784112"
 ---
 # <a name="imetadataassemblyimportgetfileprops-method"></a>IMetaDataAssemblyImport::GetFileProps Metodu
 
 Belirtilen meta veri imzasıyla dosyanın özelliklerini alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetFileProps (  
