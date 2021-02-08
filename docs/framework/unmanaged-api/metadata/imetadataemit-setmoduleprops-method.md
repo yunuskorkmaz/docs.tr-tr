@@ -1,4 +1,5 @@
 ---
+description: ': Imetadatayayma:: SetModuleProps yöntemi hakkında daha fazla bilgi edinin'
 title: IMetaDataEmit::SetModuleProps Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: b74d7629-5f46-458f-8d67-2456a1e7030c
 topic_type:
 - apiref
-ms.openlocfilehash: 1757662d2004dce3156182c35b37237ff91bae7f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0fc68a3f40871ddbb70cef885789ae7fe8ae0cba
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730350"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99772035"
 ---
-# <a name="imetadataemitsetmoduleprops-method"></a><span data-ttu-id="0acbc-102">IMetaDataEmit::SetModuleProps Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0acbc-102">IMetaDataEmit::SetModuleProps Method</span></span>
+# <a name="imetadataemitsetmoduleprops-method"></a><span data-ttu-id="b2cc0-103">IMetaDataEmit::SetModuleProps Yöntemi</span><span class="sxs-lookup"><span data-stu-id="b2cc0-103">IMetaDataEmit::SetModuleProps Method</span></span>
 
-<span data-ttu-id="0acbc-103">Imetadatayayma için önceki bir çağrı tarafından tanımlanan bir modüle yapılan başvuruları güncelleştirir [::D efineModuleRef](imetadataemit-definemoduleref-method.md).</span><span class="sxs-lookup"><span data-stu-id="0acbc-103">Updates references to a module defined by a prior call to [IMetaDataEmit::DefineModuleRef](imetadataemit-definemoduleref-method.md).</span></span>  
+<span data-ttu-id="b2cc0-104">Imetadatayayma için önceki bir çağrı tarafından tanımlanan bir modüle yapılan başvuruları güncelleştirir [::D efineModuleRef](imetadataemit-definemoduleref-method.md).</span><span class="sxs-lookup"><span data-stu-id="b2cc0-104">Updates references to a module defined by a prior call to [IMetaDataEmit::DefineModuleRef](imetadataemit-definemoduleref-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0acbc-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="0acbc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b2cc0-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b2cc0-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetModuleProps (
@@ -34,22 +35,22 @@ HRESULT SetModuleProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0acbc-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0acbc-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b2cc0-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b2cc0-106">Parameters</span></span>  
 
  `szName`  
- <span data-ttu-id="0acbc-106">'ndaki Unicode 'daki modül adı.</span><span class="sxs-lookup"><span data-stu-id="0acbc-106">[in] The module name in Unicode.</span></span> <span data-ttu-id="0acbc-107">Bu, yalnızca dosya adıdır ve tam yol adı değildir.</span><span class="sxs-lookup"><span data-stu-id="0acbc-107">This is the file name only and not the full path name.</span></span>  
+ <span data-ttu-id="b2cc0-107">'ndaki Unicode 'daki modül adı.</span><span class="sxs-lookup"><span data-stu-id="b2cc0-107">[in] The module name in Unicode.</span></span> <span data-ttu-id="b2cc0-108">Bu, yalnızca dosya adıdır ve tam yol adı değildir.</span><span class="sxs-lookup"><span data-stu-id="b2cc0-108">This is the file name only and not the full path name.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0acbc-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0acbc-108">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b2cc0-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b2cc0-109">Requirements</span></span>  
 
- <span data-ttu-id="0acbc-109">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0acbc-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="b2cc0-110">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b2cc0-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0acbc-110">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="0acbc-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="b2cc0-111">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="b2cc0-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="0acbc-111">**Kitaplık:** MSCorEE.dll kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="0acbc-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="b2cc0-112">**Kitaplık:** MSCorEE.dll kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="b2cc0-112">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="0acbc-112">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0acbc-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="b2cc0-113">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b2cc0-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0acbc-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0acbc-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b2cc0-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b2cc0-114">See also</span></span>
 
-- [<span data-ttu-id="0acbc-114">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0acbc-114">IMetaDataEmit Interface</span></span>](imetadataemit-interface.md)
-- [<span data-ttu-id="0acbc-115">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0acbc-115">IMetaDataEmit2 Interface</span></span>](imetadataemit2-interface.md)
+- [<span data-ttu-id="b2cc0-115">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b2cc0-115">IMetaDataEmit Interface</span></span>](imetadataemit-interface.md)
+- [<span data-ttu-id="b2cc0-116">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b2cc0-116">IMetaDataEmit2 Interface</span></span>](imetadataemit2-interface.md)
