@@ -1,37 +1,38 @@
 ---
+description: 'Daha fazla bilgi edinin: Istemci'
 title: İstemci
 ms.date: 03/30/2017
 ms.assetid: fabb0c70-b79b-4e58-a5d3-9705de85ee5b
-ms.openlocfilehash: b9887d6200a0101be2185b5bc2fdcc969fc7c69e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a7aaf08007a5ca0731a0212066368b37b80330cf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96243306"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99778561"
 ---
-# <a name="client"></a><span data-ttu-id="bf730-102">İstemci</span><span class="sxs-lookup"><span data-stu-id="bf730-102">Client</span></span>
+# <a name="client"></a><span data-ttu-id="92305-103">İstemci</span><span class="sxs-lookup"><span data-stu-id="92305-103">Client</span></span>
 
-<span data-ttu-id="bf730-103">Bu bölüm Windows Communication Foundation (WCF) istemci uygulamalarını gösteren örnekleri içerir.</span><span class="sxs-lookup"><span data-stu-id="bf730-103">This section contains samples that demonstrate Windows Communication Foundation (WCF) client applications.</span></span>  
+<span data-ttu-id="92305-104">Bu bölüm Windows Communication Foundation (WCF) istemci uygulamalarını gösteren örnekleri içerir.</span><span class="sxs-lookup"><span data-stu-id="92305-104">This section contains samples that demonstrate Windows Communication Foundation (WCF) client applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="bf730-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="bf730-104">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="92305-105">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="92305-105">In This Section</span></span>  
 
- [<span data-ttu-id="bf730-105">İstemci Birlikte Kullanılabilirliği</span><span class="sxs-lookup"><span data-stu-id="bf730-105">Client Interoperability</span></span>](client-interoperability.md)  
- <span data-ttu-id="bf730-106">WCF ve diğer teknolojiler arasında birlikte çalışabilirliği gösterir.</span><span class="sxs-lookup"><span data-stu-id="bf730-106">Demonstrates interoperability between WCF and other technologies.</span></span>  
+ [<span data-ttu-id="92305-106">İstemci Birlikte Kullanılabilirliği</span><span class="sxs-lookup"><span data-stu-id="92305-106">Client Interoperability</span></span>](client-interoperability.md)  
+ <span data-ttu-id="92305-107">WCF ve diğer teknolojiler arasında birlikte çalışabilirliği gösterir.</span><span class="sxs-lookup"><span data-stu-id="92305-107">Demonstrates interoperability between WCF and other technologies.</span></span>  
   
- [<span data-ttu-id="bf730-107">Adres Üstbilgileri</span><span class="sxs-lookup"><span data-stu-id="bf730-107">Address Headers</span></span>](address-headers.md)  
- <span data-ttu-id="bf730-108">İstemcilerin WCF kullanarak başvuru parametrelerini bir hizmete nasıl geçirebileceğinizi gösterir.</span><span class="sxs-lookup"><span data-stu-id="bf730-108">Demonstrates how clients can pass reference parameters to a service using WCF.</span></span>  
+ [<span data-ttu-id="92305-108">Adres Üstbilgileri</span><span class="sxs-lookup"><span data-stu-id="92305-108">Address Headers</span></span>](address-headers.md)  
+ <span data-ttu-id="92305-109">İstemcilerin WCF kullanarak başvuru parametrelerini bir hizmete nasıl geçirebileceğinizi gösterir.</span><span class="sxs-lookup"><span data-stu-id="92305-109">Demonstrates how clients can pass reference parameters to a service using WCF.</span></span>  
   
- [<span data-ttu-id="bf730-109">Kanal Fabrikası</span><span class="sxs-lookup"><span data-stu-id="bf730-109">Channel Factory</span></span>](channel-factory.md)  
- <span data-ttu-id="bf730-110">İstemci uygulamasının <xref:System.ServiceModel.ChannelFactory> oluşturulmuş bir istemci yerine sınıfıyla nasıl bir kanal oluşturacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="bf730-110">Demonstrates how a client application can create a channel with the <xref:System.ServiceModel.ChannelFactory> class instead of a generated client.</span></span>  
+ [<span data-ttu-id="92305-110">Kanal Fabrikası</span><span class="sxs-lookup"><span data-stu-id="92305-110">Channel Factory</span></span>](channel-factory.md)  
+ <span data-ttu-id="92305-111">İstemci uygulamasının <xref:System.ServiceModel.ChannelFactory> oluşturulmuş bir istemci yerine sınıfıyla nasıl bir kanal oluşturacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="92305-111">Demonstrates how a client application can create a channel with the <xref:System.ServiceModel.ChannelFactory> class instead of a generated client.</span></span>  
   
- [<span data-ttu-id="bf730-111">Beklenen Özel Durumlar</span><span class="sxs-lookup"><span data-stu-id="bf730-111">Expected Exceptions</span></span>](expected-exceptions.md)  
- <span data-ttu-id="bf730-112">Yazılan bir istemci kullanılırken beklenen özel durumların nasıl yakalanacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="bf730-112">Demonstrates how to catch expected exceptions when using a typed client.</span></span>  
+ [<span data-ttu-id="92305-112">Beklenen Özel Durumlar</span><span class="sxs-lookup"><span data-stu-id="92305-112">Expected Exceptions</span></span>](expected-exceptions.md)  
+ <span data-ttu-id="92305-113">Yazılan bir istemci kullanılırken beklenen özel durumların nasıl yakalanacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="92305-113">Demonstrates how to catch expected exceptions when using a typed client.</span></span>  
   
- [<span data-ttu-id="bf730-113">Meta Verileri Alma</span><span class="sxs-lookup"><span data-stu-id="bf730-113">Retrieve Metadata</span></span>](retrieve-metadata.md)  
- <span data-ttu-id="bf730-114">İletişim kuracak bir uç nokta seçmek için bir hizmetten meta verileri dinamik olarak alan bir istemcinin nasıl uygulanacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="bf730-114">Demonstrates how to implement a client that dynamically retrieves metadata from a service to choose an endpoint with which to communicate.</span></span>  
+ [<span data-ttu-id="92305-114">Meta Verileri Alma</span><span class="sxs-lookup"><span data-stu-id="92305-114">Retrieve Metadata</span></span>](retrieve-metadata.md)  
+ <span data-ttu-id="92305-115">İletişim kuracak bir uç nokta seçmek için bir hizmetten meta verileri dinamik olarak alan bir istemcinin nasıl uygulanacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="92305-115">Demonstrates how to implement a client that dynamically retrieves metadata from a service to choose an endpoint with which to communicate.</span></span>  
   
- [<span data-ttu-id="bf730-115">Kapat ve Durdur seçeneklerini kullanarak WCF istemci kaynaklarını serbest bırakma</span><span class="sxs-lookup"><span data-stu-id="bf730-115">Use Close and Abort to release WCF client resources</span></span>](use-close-abort-release-wcf-client-resources.md)  
- <span data-ttu-id="bf730-116">Yazılmış bir istemci kullanırken kaynakları otomatik olarak temizlemek için C# "Using" ifadesini nasıl kullanmamalısınız gösterir.</span><span class="sxs-lookup"><span data-stu-id="bf730-116">Demonstrates how you should not use the C# "using" statement to automatically clean up resources when using a typed client.</span></span>  
+ [<span data-ttu-id="92305-116">Kapat ve Durdur seçeneklerini kullanarak WCF istemci kaynaklarını serbest bırakma</span><span class="sxs-lookup"><span data-stu-id="92305-116">Use Close and Abort to release WCF client resources</span></span>](use-close-abort-release-wcf-client-resources.md)  
+ <span data-ttu-id="92305-117">Yazılmış bir istemci kullanırken kaynakları otomatik olarak temizlemek için C# "Using" ifadesini nasıl kullanmamalısınız gösterir.</span><span class="sxs-lookup"><span data-stu-id="92305-117">Demonstrates how you should not use the C# "using" statement to automatically clean up resources when using a typed client.</span></span>  
   
- [<span data-ttu-id="bf730-117">Türü Belirlenmiş İstemci</span><span class="sxs-lookup"><span data-stu-id="bf730-117">Typed Client</span></span>](typed-client.md)  
- <span data-ttu-id="bf730-118">[ServiceModel meta veri yardımcı programı Aracı (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)tarafından oluşturulan, yazılmış bir istemciden nasıl bilgi alınacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="bf730-118">Demonstrates how to obtain information from a typed client generated by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span>
+ [<span data-ttu-id="92305-118">Türü Belirlenmiş İstemci</span><span class="sxs-lookup"><span data-stu-id="92305-118">Typed Client</span></span>](typed-client.md)  
+ <span data-ttu-id="92305-119">[ServiceModel meta veri yardımcı programı Aracı (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)tarafından oluşturulan, yazılmış bir istemciden nasıl bilgi alınacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="92305-119">Demonstrates how to obtain information from a typed client generated by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span>
