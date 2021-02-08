@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: BC30106: Dizin sayısı, dizinlenmiş dizinin boyut sayısını aşıyor'
 title: Dizin sayısı, sıralı dizinin boyut sayısını aşıyor
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30106
 ms.assetid: 2c5363e1-62c2-4f5a-b675-c7337aeb363d
-ms.openlocfilehash: 9a191ff7ec3ad6a607e6509cc143c359f64f21ea
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 35ec1ea106e67022046179412b142cd92712c822
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92159917"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795618"
 ---
 # <a name="bc30106-number-of-indices-exceeds-the-number-of-dimensions-of-the-indexed-array"></a>BC30106: Dizin sayısı, dizinlenmiş dizinin boyut sayısını aşıyor
 
@@ -22,7 +23,7 @@ Bir dizi öğesine erişmek için kullanılan dizin sayısı, dizi sırasıyla t
 
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
 
-- Alt simgelerin toplam sayısı dizi derecesine eşit olana kadar alt simgeleri dizi başvurusundan kaldırın. Örnek:
+- Alt simgelerin toplam sayısı dizi derecesine eşit olana kadar alt simgeleri dizi başvurusundan kaldırın. Örneğin:
 
     ```vb
     Dim gameBoard(3, 3) As String

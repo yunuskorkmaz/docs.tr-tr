@@ -1,4 +1,5 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: BC40056: Imports ' ' içinde belirtilen ad alanı veya tür <qualifiedelementname> hiçbir ortak üye içermiyor veya bulunamıyor"
 title: Imports '<qualifiedelementname>' içinde belirtilen ad alanı veya tür ortak üye içermiyor veya bulunamıyor
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40056
 ms.assetid: b59f5754-444f-4378-9272-9678b437e84a
-ms.openlocfilehash: 284a8c71fee8835f78ca5435932819fded1b1f30
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: e98ba70660823196e763300cd33ec1ba9a9db3b4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92160138"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795712"
 ---
 # <a name="bc40056-namespace-or-type-specified-in-the-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>BC40056: Imports ' ' içinde belirtilen ad alanı veya tür \<qualifiedelementname> ortak üye içermiyor veya bulunamıyor
 
@@ -50,6 +51,6 @@ Imports behave = winfrm.Design.Behavior`
 
 - [Imports Deyimi (.NET Ad Alanı ve Türü)](../statements/imports-statement-net-namespace-and-type.md)
 - [Namespace Deyimi](../statements/namespace-statement.md)
-- [Geneldir](../modifiers/public.md)
+- [Genel](../modifiers/public.md)
 - [Visual Basic'de Ad Alanları](../../programming-guide/program-structure/namespaces.md)
 - [Bildirilmiş Öğelere Başvurular](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)

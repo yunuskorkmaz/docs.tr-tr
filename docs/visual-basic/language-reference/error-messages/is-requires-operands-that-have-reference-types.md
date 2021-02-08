@@ -1,4 +1,5 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: BC30020: ' IS ' başvuru türleri olan işlenenler gerektirir, ancak bu işlenen değer türüne sahiptir '<typename>"
 title: "'Is' için başvuru türünde işlenenler gerekir, ancak bu işlenen '<typename>' değer türünde"
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30020
 ms.assetid: 228afebd-1203-4bd3-8d7a-c5c56f3cedc4
-ms.openlocfilehash: 5c9f156272cd0c3cbaeadbc0e162129f41619cc6
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: f12d4bb4787c3d003c9afc6a0367f7f9e9248f15
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92163356"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796008"
 ---
 # <a name="bc30020-is-requires-operands-that-have-reference-types-but-this-operand-has-the-value-type-typename"></a>BC30020: ' IS ' için başvuru türleri olan işlenenler gerekiyor, ancak bu işlenen ' ' değer türünde \<typename>
 

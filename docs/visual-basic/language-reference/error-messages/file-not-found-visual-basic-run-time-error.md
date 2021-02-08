@@ -1,15 +1,16 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: dosya bulunamadı (Visual Basic Run-Time hata)'
 title: Dosya bulunamadı (Visual Basic Çalışma Süresi Hatası)
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID53
 ms.assetid: 57addb16-6f9a-444d-8af8-dda52431daca
-ms.openlocfilehash: 6c65ca7f41af48f9fc8e60634815be1a615c561b
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: da249093a18936a94099b3d5b727e666597f5b6e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92160730"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796268"
 ---
 # <a name="file-not-found-visual-basic-run-time-error"></a>Dosya bulunamadı (Visual Basic Çalışma Süresi Hatası)
 

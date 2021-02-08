@@ -1,4 +1,5 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: BC36635: lambda ifadeleri bir ' Select Case ' deyiminin ilk ifadesinde geçerli değildir"
 title: Bir 'Select Case' deyiminin ilk ifadesinde lambda ifadeleri geçerli değildir
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36635
 ms.assetid: 74609979-9c03-4864-bbce-f588aa2e0917
-ms.openlocfilehash: 448a685a7c174ce212389842c31066f1c4557cdf
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: e0c388db7164f6c9f99ba917109593a796f7b23b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162537"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795943"
 ---
 # <a name="bc36635-lambda-expressions-are-not-valid-in-the-first-expression-of-a-select-case-statement"></a>BC36635: lambda ifadeleri bir ' Select Case ' deyiminin ilk ifadesinde geçerli değildir
 

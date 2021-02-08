@@ -1,4 +1,5 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: BC32126: ' System. Nullable (Of T) ' metotları ' AddressOf ' işlecinin işlenenleri olarak kullanılamaz"
 title: "'System.Nullable(Of T)' yöntemleri 'AddressOf' işlecinin işlenenleri olarak kullanılamaz"
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32126
 ms.assetid: 2325668b-e2ad-40ee-a1ec-30450236c20d
-ms.openlocfilehash: 173cf19537e3f9ffc4cff6cef71f34b6d365e5d3
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 5ddf2f11bab3193423a3294a7f96afe68f0e5dce
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92160398"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795800"
 ---
 # <a name="bc32126-methods-of-systemnullableof-t-cannot-be-used-as-operands-of-the-addressof-operator"></a>BC32126: ' System. Nullable (Of T) ' metotları ' AddressOf ' işlecinin işlenenleri olarak kullanılamaz
 

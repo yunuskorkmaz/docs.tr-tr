@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: BC30594: paylaşılan WithEvents değişkenlerinin olayları paylaşılmayan yöntemler tarafından işlenemez'
 title: Paylaşılan WithEvents değişkenlerinin olayları paylaşılmayan yöntemler tarafından işlenemez
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30594
 ms.assetid: 5b9fceb4-ab11-41bb-ad3b-6f1a9da8ae7e
-ms.openlocfilehash: 02039b81251e59a951a0fe37ec2c9534b458b6a5
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: f9e8bf6e0d365c4ee747deb6be0e809904d87117
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92161926"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796424"
 ---
 # <a name="bc30594-events-of-shared-withevents-variables-cannot-be-handled-by-non-shared-methods"></a>BC30594: paylaşılan WithEvents değişkenlerinin olayları paylaşılmayan yöntemler tarafından işlenemez
 
@@ -26,5 +27,5 @@ Değiştiriciyle belirtilen bir değişken `Shared` paylaşılan bir değişkend
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Shared](../modifiers/shared.md)
+- [Paylaşılan](../modifiers/shared.md)
 - [WithEvents](../modifiers/withevents.md)

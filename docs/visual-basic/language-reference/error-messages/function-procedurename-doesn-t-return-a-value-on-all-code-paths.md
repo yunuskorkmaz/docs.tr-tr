@@ -1,4 +1,5 @@
 ---
+description: "Şu konuda daha fazla bilgi edinin: BC42105: ' <procedurename> ' işlevi tüm kod yollarında değer döndürmüyor"
 title: "'<procedurename>' işlevi tüm kod yollarında değer döndürmüyor"
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42105
 ms.assetid: b6929bf4-a365-4a70-8dc9-6b0fc09e1468
-ms.openlocfilehash: 19b305e337767dfb34718aed7b665f142851bd36
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 2d0fa99906606228595a0c0d45f58dae0b269b77
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92163369"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796177"
 ---
 # <a name="bc42105-function-procedurename-doesnt-return-a-value-on-all-code-paths"></a>BC42105: ' \<procedurename> ' işlevi tüm kod yollarında bir değer döndürmüyor
 

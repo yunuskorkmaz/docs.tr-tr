@@ -1,4 +1,5 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: BC32128: ' TypeName ' türündeki ' IsNot ' işleneni, null yapılabilir bir tür olduğundan yalnızca ' Nothing ' ile karşılaştırılabilir"
 title: "'typename' türündeki 'IsNot' işleneni, 'typename' boş değer atanabilir bir tür olduğundan, sadece 'Nothing' ile karşılaştırılabilir."
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32128
 ms.assetid: 1155b23a-ad75-4bab-b9da-73f35c767a36
-ms.openlocfilehash: 084978c1e047eebd60149af63c0ec9a1135225be
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 732c8bee2ae352824c7d50bba8b2b35598d6f53b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92163343"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795995"
 ---
 # <a name="bc32128-isnot-operand-of-type-typename-can-only-be-compared-to-nothing-because-typename-is-a-nullable-type"></a>BC32128: ' TypeName ' null yapılabilir bir tür olduğundan, ' TypeName ' türündeki ' IsNot ' işleneni yalnızca ' Nothing ' ile karşılaştırılabilir
 

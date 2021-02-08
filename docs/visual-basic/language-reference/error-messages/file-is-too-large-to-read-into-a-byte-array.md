@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: dosya bir bayt dizisine okunamayacak kadar büyük'
 title: Dosya bir bayt dizisine okunamayacak kadar büyük
 ms.date: 07/20/2015
 ms.assetid: 686630a6-a439-46c7-8d7b-34613ae4c5d8
-ms.openlocfilehash: 89459aaf766a70f69008f847dda7ac6e2a1e41d1
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 8b2eb7bcbbea42c56d607147e55d6c02695c5670
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874193"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796294"
 ---
 # <a name="file-is-too-large-to-read-into-a-byte-array"></a>Dosya bir bayt dizisine okunamayacak kadar büyük
 

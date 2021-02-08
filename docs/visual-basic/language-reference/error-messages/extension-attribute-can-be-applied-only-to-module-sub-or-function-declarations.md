@@ -1,4 +1,5 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: BC36550: ' Extension ' özniteliği yalnızca ' Module ', ' Sub ' veya ' function ' bildirimlerine uygulanabilir"
 title: "'Extension' özniteliği yalnızca 'Module', 'Sub' veya 'Function' bildirimlerine uygulanabilir"
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36550
 ms.assetid: 4387a51f-733c-45d7-abdb-eb64d4f51078
-ms.openlocfilehash: bd4d14721b93800831dbce897535b4f5956fe9c7
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: f0c87de34238974229bc572a0f634a16e8cc78d9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92160756"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796320"
 ---
 # <a name="bc36550-extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations"></a>BC36550: ' Extension ' özniteliği yalnızca ' Module ', ' Sub ' veya ' function ' bildirimlerine uygulanabilir
 

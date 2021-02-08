@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: BC36593: tür Ifadesi <type> sorgulanabilir değil'
 title: <type> türündeki ifade sorgulanabilir değil
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36593
 ms.assetid: 6f1f5860-bf97-4885-9ebb-bc87d028095c
-ms.openlocfilehash: d605243c213166f20592fdc440a3362f957ebbf2
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: b2fc6c81ee34c1f8e251ac65ba582fde1c6a7b9d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92163070"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796359"
 ---
 # <a name="bc36593-expression-of-type-type-is-not-queryable"></a>BC36593: tür Ifadesi \<type> sorgulanabilir değil
 

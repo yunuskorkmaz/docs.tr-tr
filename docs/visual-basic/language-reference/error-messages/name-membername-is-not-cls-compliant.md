@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: BC40031: ad <membername> CLS uyumlu değil'
 title: <membername> adı CLS uyumlu değil
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40031
 ms.assetid: e2b885dc-cbf9-49ff-bbbe-531657ea99f7
-ms.openlocfilehash: 43fff3f12295f3837148b0a349887e8405126819
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 7abc4aee8bb468b523e5bdd2ac13947d19c926bc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92160242"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795761"
 ---
 # <a name="bc40031-name-membername-is-not-cls-compliant"></a>BC40031: ad \<membername> CLS uyumlu değil
 

@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: dosya zaten açık'
 title: Dosya zaten açık
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID55
 ms.assetid: d674a0fb-ef16-4cc2-9da7-709a8a07dbea
-ms.openlocfilehash: ce8f8bf96d7355e45b2df82e8a131472c2ed2367
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 2f3345c15f4a3095a8e733c2c8424edb25b4dee6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162758"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796307"
 ---
 # <a name="file-already-open"></a>Dosya zaten açık
 

@@ -1,4 +1,5 @@
 ---
+description: "Daha fazla bilgi: BC30933: ' <procedurename> ' öğesine erişen örnek bir arabirim türü olduğundan, geç bağlanan aşırı yükleme çözümü ' ' öğesine uygulanamaz"
 title: Erişen örnek bir arabirim türü olduğundan geç bağlanan tekrar yükleme çözümü '<procedurename>' öğesine uygulanamaz
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - overload resolution [Visual Basic], with late-bound argument
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
-ms.openlocfilehash: 090ec6f3bbf56350fda2ab15c974b0bc6b15e3d3
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 3002232c953fa21a10de944bc61e2f0c448ae4fa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162524"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795917"
 ---
 # <a name="bc30933-latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>BC30933: \<procedurename> erişen örnek bir arabirim türü olduğundan, geç bağlanan aşırı yükleme çözümlemesi ' ' öğesine uygulanamaz
 

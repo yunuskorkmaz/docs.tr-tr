@@ -1,4 +1,5 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: BC40057: proje düzeyi Imports ' ' içinde belirtilen ad alanı veya tür <qualifiedelementname> ortak üye içermiyor veya bulunamıyor"
 title: Proje düzeyi Imports '<qualifiedelementname>' içinde belirtilen ad alanı veya tür ortak üye içermiyor veya bulunamıyor
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40057
 ms.assetid: 4ae3506e-2ebe-4ff3-995d-14ac60db5e9f
-ms.openlocfilehash: 54ee046cda998be8bd70e531918d6ab2a67d0494
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 66ae40ca6a2feff78f80bdbc8886387e801f7db2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92160125"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795696"
 ---
 # <a name="bc40057-namespace-or-type-specified-in-the-project-level-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>BC40057: proje düzeyi Imports ' ' içinde belirtilen ad alanı veya tür \<qualifiedelementname> ortak üye içermiyor veya bulunamıyor
 
@@ -26,7 +27,7 @@ Proje düzeyi Imports ' ' içinde belirtilen ad alanı veya tür \<qualifiedelem
 
  Derleyici belirtilen içeren öğeyi bulamazsa, onu kullanan başvuruları çözemez. Öğe bulunursa ancak öğe hiçbir üye sunmadığında `Public` , hiçbir başvuru başarılı olmaz. Her iki durumda da, öğesini içeri aktarmak anlamlı değildir.
 
- İçeri aktarılacak öğeleri belirtmek için **Proje tasarımcısını** kullanın. **Başvurular** sayfasının **içeri aktarılan ad alanları** bölümünü kullanın. **Proje tasarımcısına** , **Çözüm Gezgini**içindeki **projem** simgesine çift tıklayarak ulaşabilirsiniz.
+ İçeri aktarılacak öğeleri belirtmek için **Proje tasarımcısını** kullanın. **Başvurular** sayfasının **içeri aktarılan ad alanları** bölümünü kullanın. **Proje tasarımcısına** , **Çözüm Gezgini** içindeki **projem** simgesine çift tıklayarak ulaşabilirsiniz.
 
  **Hata kimliği:** BC40057
 
@@ -42,6 +43,6 @@ Proje düzeyi Imports ' ' içinde belirtilen ad alanı veya tür \<qualifiedelem
 
 - [Başvurular Sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)
 - [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)
-- [Geneldir](../modifiers/public.md)
+- [Genel](../modifiers/public.md)
 - [Visual Basic'de Ad Alanları](../../programming-guide/program-structure/namespaces.md)
 - [Bildirilmiş Öğelere Başvurular](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)

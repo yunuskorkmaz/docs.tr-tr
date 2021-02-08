@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: BC36629: Nullable tür çıkarımı bu bağlamda desteklenmiyor'
 title: Bu bağlamda boş değerler atanabilen tür çıkarma desteklenmiyor
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36629
 ms.assetid: 0a1e2dbc-d9a4-433d-9306-c5540782b81d
-ms.openlocfilehash: 610d2dc427d882c412b87eb67f021a8a86025f25
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 915f964d55068f39b0468e2c47cc6e5538be1a6f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92159936"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795631"
 ---
 # <a name="bc36629-nullable-type-inference-is-not-supported-in-this-context"></a>BC36629: Nullable tür çıkarımı bu bağlamda desteklenmiyor
 

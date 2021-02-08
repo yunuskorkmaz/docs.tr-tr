@@ -1,4 +1,5 @@
 ---
+description: "Şu konuda daha fazla bilgi edinin: BC30737: ' içinde uygun imzaya sahip erişilebilir bir ' Main ' yöntemi bulunamadı<name>"
 title: "'<name>' içinde uygun imzaya sahip erişilebilir bir 'Main' yöntemi bulunamadı"
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30737
 ms.assetid: 3f40bacd-3fac-4741-b204-852f693d4340
-ms.openlocfilehash: e1f95484a153bdcac9543508b7f2708dc6b7d942
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 1865d6baea824c435d276aa9c160bcd282abf4ae
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92160047"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795657"
 ---
 # <a name="bc30737-no-accessible-main-method-with-an-appropriate-signature-was-found-in-name"></a>BC30737: ' ' içinde uygun imzaya sahip erişilebilir bir ' Main ' yöntemi bulunamadı \<name>
 
