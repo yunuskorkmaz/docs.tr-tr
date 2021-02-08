@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: <idn> öğesi (URI ayarları)'
 title: <idn> Öğesi (Uri Ayarları)
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
-ms.openlocfilehash: f45922ecd5f7476362aab5348d91415d8e31c53f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a53afd59b713a804d5b969521f468000dbbad6e8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91195408"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802482"
 ---
 # <a name="idn-element-uri-settings"></a>\<idn> Öğesi (Uri Ayarları)
 
@@ -31,7 +32,7 @@ Uluslararası etki alanı adı (ıDN) ayrıştırmanın bir etki alanı adına u
   
 ### <a name="attributes"></a>Öznitelikler  
 
-|**Dosyalarında**|**Açıklama**|  
+|**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
 |`enabled`|Uluslararası etki alanı adı (ıDN) ayrıştırmanın bir etki alanı adına uygulandığını belirtir varsayılan değer None ' dır.|  
 
@@ -41,7 +42,7 @@ Yok
   
 ### <a name="parent-elements"></a>Üst öğeler
 
-|**Dosyalarında**|**Açıklama**|  
+|**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
 |[kullanılmamışsa](uri-element-uri-settings.md)|.NET Framework Tekdüzen Kaynak tanımlayıcıları (URI 'Ler) kullanarak ifade edilen Web adreslerini nasıl işleyeceğini belirten ayarları içerir.|  
 

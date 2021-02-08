@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ICorDebugInternalFrame2:: ıclosertoyaprak yöntemi'
 title: ICorDebugInternalFrame2::IsCloserToLeaf Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c1d3d1eb-8370-4f25-8297-3bd262b4740a
 topic_type:
 - apiref
-ms.openlocfilehash: 83d3eda0f3c4619ec7a5df91d13ab9f3a58e5f01
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d773f8670f600a5bcd2a8dad7f23fe243195957c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721354"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801286"
 ---
 # <a name="icordebuginternalframe2isclosertoleaf-method"></a>ICorDebugInternalFrame2::IsCloserToLeaf Yöntemi
 
 `this`İç karenin belirtilen ICorDebugFrame nesnesinden daha yakın olup olmadığını denetler.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,  
@@ -45,7 +46,7 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
 
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|Karşılaştırma başarıyla gerçekleştirildi.|  
 |E_FAIL|Karşılaştırma gerçekleştirilemedi.|  

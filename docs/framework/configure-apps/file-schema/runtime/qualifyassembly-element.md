@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: <qualifyAssembly> öğesi'
 title: <qualifyAssembly> Öğesi
 ms.date: 03/30/2017
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - <qualifyAssembly> element
 - qualifyAssembly element
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
-ms.openlocfilehash: 26b265996a059d8e52901557603bcf5e7636e596
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 16891cca40d907d0ca32aea7f610e84305fcd0e6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91195226"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802468"
 ---
 # <a name="qualifyassembly-element"></a>\<qualifyAssembly> Öğesi
 

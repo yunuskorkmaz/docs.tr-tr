@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <message> öğesi <netTcpBinding>'
 title: <message> öğesi <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d71edd9-c085-4c2e-b6d3-980c313366f9
-ms.openlocfilehash: ab767a5a1179de81bf9a8adc61799ede2d915ac1
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 10c1f2897bc880ca1f328b546357d3cf7cdb26a4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204911"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802183"
 ---
 # <a name="message-element-of-nettcpbinding"></a>\<message> öğesi \<netTcpBinding>
 
@@ -36,8 +37,8 @@ ms.locfileid: "91204911"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`algorithmSuite`|İleti şifrelemesini ve anahtar sarması algoritmalarını ayarlar. Algoritmalar ve anahtar boyutları sınıfına göre belirlenir <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> . Bu algoritmalar güvenlik Ilkesi dili (WS-SecurityPolicy) belirtiminde belirtilen olanlarla eşlenir.<br /><br /> Olası değerler aşağıdaki tabloda gösterilmiştir. Varsayılan değer: `Basic256`.<br /><br /> Hizmet bağlaması `algorithmSuite` varsayılan değere eşit olmayan bir değer belirtiyorsa ve Svcutil.exe kullanarak yapılandırma dosyasını oluşturursanız, doğru şekilde oluşturulmaz ve bu özniteliği istenen değere ayarlamak için yapılandırma dosyasını el ile düzenlemeniz gerekir.|  
-|`clientCredentialType`|Ileti tabanlı güvenlik kullanarak istemci kimlik doğrulaması gerçekleştirirken kullanılacak kimlik bilgisinin türünü belirtir. Olası değerler aşağıdaki tabloda gösterilmiştir. Varsayılan değer: `UserName`. Bu öznitelik türü <xref:System.ServiceModel.MessageCredentialType> .|  
+|`algorithmSuite`|İleti şifrelemesini ve anahtar sarması algoritmalarını ayarlar. Algoritmalar ve anahtar boyutları sınıfına göre belirlenir <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> . Bu algoritmalar güvenlik Ilkesi dili (WS-SecurityPolicy) belirtiminde belirtilen olanlarla eşlenir.<br /><br /> Olası değerler aşağıdaki tabloda gösterilmiştir. `Basic256` varsayılan değerdir.<br /><br /> Hizmet bağlaması `algorithmSuite` varsayılan değere eşit olmayan bir değer belirtiyorsa ve Svcutil.exe kullanarak yapılandırma dosyasını oluşturursanız, doğru şekilde oluşturulmaz ve bu özniteliği istenen değere ayarlamak için yapılandırma dosyasını el ile düzenlemeniz gerekir.|  
+|`clientCredentialType`|Ileti tabanlı güvenlik kullanarak istemci kimlik doğrulaması gerçekleştirirken kullanılacak kimlik bilgisinin türünü belirtir. Olası değerler aşağıdaki tabloda gösterilmiştir. `UserName` varsayılan değerdir. Bu öznitelik türü <xref:System.ServiceModel.MessageCredentialType> .|  
   
 ## <a name="algorithmsuite-attribute"></a>algorithmSuite özniteliği  
   
@@ -64,7 +65,7 @@ ms.locfileid: "91204911"
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Yok|Bu, hizmetin anonim istemcilerle etkileşime geçmesini sağlar. Hizmette, bu hizmetin hiçbir istemci kimlik bilgisi gerektirmediğini belirtir. İstemcide Bu, istemcinin hiçbir istemci kimlik bilgisi sunmadığını gösterir.|  
+|Hiçbiri|Bu, hizmetin anonim istemcilerle etkileşime geçmesini sağlar. Hizmette, bu hizmetin hiçbir istemci kimlik bilgisi gerektirmediğini belirtir. İstemcide Bu, istemcinin hiçbir istemci kimlik bilgisi sunmadığını gösterir.|  
 |Windows|SOAP değişimlerinin bir Windows kimlik bilgisinin kimliği doğrulanmış bağlamı altında olmasını sağlar.|  
 |UserName|Hizmetin, istemcinin bir Kullanıcı adı kimlik bilgisi kullanarak kimlik doğrulaması yapmasını gerektirmesini sağlar. WCF parola özetinin gönderilmesini veya parola kullanarak anahtar türemesini veya ileti güvenliği için bu tuşları kullanmayı desteklemez. Bu nedenle, WCF, Kullanıcı adı kimlik bilgileri kullanılırken taşımanın güvenli olmasını zorunlu kılar. Bu kimlik bilgisi modu, özelliği temel alan, birlikte çalışabilen bir Exchange veya birlikte çalışabilen bir anlaşma ile sonuçlanır `negotiateServiceCredential` .|  
 |Sertifika|Hizmetin, bir sertifika kullanarak istemcinin kimliğinin doğrulanmasını gerektirmesini sağlar. İleti güvenlik modu kullanılıyorsa ve `negotiateServiceCredential` özniteliği olarak ayarlandıysa `false` , istemci hizmet sertifikası ile sağlanmalıdır.|  

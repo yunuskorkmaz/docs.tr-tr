@@ -1,4 +1,5 @@
 ---
+description: ': ICorDebugMDA:: GetDescription yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugMDA::GetDescription Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 01d1b481-ca67-4712-8744-d342ec0df639
 topic_type:
 - apiref
-ms.openlocfilehash: cb1e0f2bc597b48496dc362c9d7a364421c68a87
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 75ee7d0b912c9f0039acc872173f2cbad25fff38
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95681853"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801208"
 ---
 # <a name="icordebugmdagetdescription-method"></a>ICorDebugMDA::GetDescription Metodu
 
 [ICorDebugMDA](icordebugmda-interface.md)tarafından temsil edilen yönetilen hata ayıklama Yardımcısı 'NıN (MDA) açıklamasını içeren bir dize alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetDescription (  

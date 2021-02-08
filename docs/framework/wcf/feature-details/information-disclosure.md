@@ -1,15 +1,16 @@
 ---
-title: Bilgileri Açıklama
+description: 'Hakkında daha fazla bilgi edinin: bilgi açıklaması'
+title: Information Disclosure (Bilgilerin Açığa Çıkması)
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
-ms.openlocfilehash: a58ac4dd3715052031c7fb5c1da480c0d01396ea
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 420437703fab883698cdd7217efb14c214a1f529
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596870"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802859"
 ---
-# <a name="information-disclosure"></a>Bilgileri Açıklama
+# <a name="information-disclosure"></a>Information Disclosure (Bilgilerin Açığa Çıkması)
 
 Bilgilerin açığa çıkması, saldırganın bir sistem hakkında değerli bilgiler sağlamasına olanak sağlar. Bu nedenle, hangi bilgileri öğrendiklerinizi ve kötü niyetli bir kullanıcı tarafından kullanılıp kullanılamayacağını her zaman düşünün. Aşağıda olası bilgilerin açığa çıkması saldırıları listelenmekte ve her biri için azaltmalar sunulmaktadır.
 
@@ -35,7 +36,7 @@ Bir istemcinin kimliğini doğrulamak için bir X. 509.952 sertifikası kulland�
 
 ## <a name="service-references"></a>Hizmet başvuruları
 
-Hizmet başvurusu, başka bir hizmete başvurudur. Örneğin, bir hizmet, bir işlem sırasında bir istemciye hizmet başvurusu geçirebilir. Hizmet başvurusu, uygulama verileri veya hedef kimlik bilgileri gibi bilgileri kapatmadan önce hedef Sorumlunun kimliğini sağlayan bir *güven Kimliği Doğrulayıcısı*ile de kullanılır. Uzak güven kimliği doğrulanamazsa veya yanlışsa, gönderici kendisini, uygulamayı veya kullanıcıyı tehlikeye atabilecek hiçbir veri açıklanmamalıdır.
+Hizmet başvurusu, başka bir hizmete başvurudur. Örneğin, bir hizmet, bir işlem sırasında bir istemciye hizmet başvurusu geçirebilir. Hizmet başvurusu, uygulama verileri veya hedef kimlik bilgileri gibi bilgileri kapatmadan önce hedef Sorumlunun kimliğini sağlayan bir *güven Kimliği Doğrulayıcısı* ile de kullanılır. Uzak güven kimliği doğrulanamazsa veya yanlışsa, gönderici kendisini, uygulamayı veya kullanıcıyı tehlikeye atabilecek hiçbir veri açıklanmamalıdır.
 
 Azaltmaları şunları içerir:
 
@@ -68,8 +69,8 @@ Etki alanı belirtilmişse, ancak Endpoint Identity özelliği kullanılarak ge�
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Güvenlik konuları](security-considerations-in-wcf.md)
-- [Ayrıcalıkların Yükseltilmesi](elevation-of-privilege.md)
+- [Ayrıcalık Yükseltme](elevation-of-privilege.md)
 - [Hizmet Reddi](denial-of-service.md)
-- [İzinsiz Değişiklik](tampering.md)
+- [Kurcalama](tampering.md)
 - [Desteklenmeyen Senaryolar](unsupported-scenarios.md)
 - [Yeniden Yürütme Saldırıları](replay-attacks.md)

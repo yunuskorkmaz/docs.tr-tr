@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: COR_DEBUG_STEP_RANGE yapısı'
 title: COR_DEBUG_STEP_RANGE Yapısı
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8809d00e-beaa-4dcf-b4e8-e89d0a5406b7
 topic_type:
 - apiref
-ms.openlocfilehash: cd85ba2e6a907ff9546614e02b4da5f45e74b924
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 40462be4b165351b3265fa0833d19f18e0fa3a37
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726645"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801845"
 ---
 # <a name="cor_debug_step_range-structure"></a>COR_DEBUG_STEP_RANGE Yapısı
 
@@ -38,7 +39,7 @@ typedef struct {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`startOffset`|Aralığın başındaki fark.|  
 |`endOffset`|Aralığın sonundaki fark.|  

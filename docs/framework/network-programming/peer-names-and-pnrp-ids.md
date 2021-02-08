@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: eş adları ve PNRP kimlikleri'
 title: Eş Adları ve PNRP Kimlikleri
 ms.date: 03/30/2017
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
-ms.openlocfilehash: a56200d599d417dac549af000b35024338d43796
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ff9f77917ef05754f2373369d623b66e66b5a753
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96239230"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801871"
 ---
 # <a name="peer-names-and-pnrp-ids"></a>Eş Adları ve PNRP Kimlikleri
 

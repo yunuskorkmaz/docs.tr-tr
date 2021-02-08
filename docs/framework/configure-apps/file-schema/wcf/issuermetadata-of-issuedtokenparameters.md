@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi <issuerMetadata> edinin: <issuedTokenParameters>'
 title: <issuerMetadata> / <issuedTokenParameters>
 ms.date: 03/30/2017
 ms.assetid: 1a85ca37-496d-4fa3-8d44-d6c9383d735c
-ms.openlocfilehash: 389ac9e96c1462f59bc42b2e20cb511acdefda00
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6b0b5064254caf1c6bcf72c2e6d3449402853b98
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91185671"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802248"
 ---
 # <a name="issuermetadata-of-issuedtokenparameters"></a>\<issuerMetadata> / \<issuedTokenParameters>
 

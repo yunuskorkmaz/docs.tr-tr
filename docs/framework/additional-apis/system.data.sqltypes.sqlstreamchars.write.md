@@ -1,4 +1,5 @@
 ---
+description: ': SqlStreamChars. Write (Char [], Int32, Int32) yöntemi hakkında daha fazla bilgi edinin'
 title: SqlStreamChars. Write (Char [], Int32, Int32) yöntemi (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
@@ -12,16 +13,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 9d952041122ceb3824712bd81cab7ce4789c9db8
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 3031b57902215df01c5c30625281a99be73ba2d9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395582"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802560"
 ---
 # <a name="sqlstreamcharswritechar-int32-int32-method"></a>SqlStreamChars. Write (Char [], Int32, Int32) yöntemi
 
-Türetilmiş bir sınıfta geçersiz kılınırsa, geçerli akışa bir karakter dizisi yazar ve yazılan karakter sayısına göre bu akış içindeki geçerli konumu ilerletir. Bu yöntemi içeren derlemenin SQLAccess. dll ile bir arkadaş ilişkisi vardır. SQL Server tarafından kullanılmak üzere tasarlanmıştır. Diğer veritabanları için, bu veritabanı tarafından sunulan barındırma mekanizmasını kullanın.
+Türetilmiş bir sınıfta geçersiz kılınırsa, geçerli akışa bir karakter dizisi yazar ve yazılan karakter sayısına göre bu akış içindeki geçerli konumu ilerletir. Bu yöntemi içeren derlemenin SQLAccess.dll bir arkadaş ilişkisi vardır. SQL Server tarafından kullanılmak üzere tasarlanmıştır. Diğer veritabanları için, bu veritabanı tarafından sunulan barındırma mekanizmasını kullanın.
 
 ```csharp
 public abstract void Write (char[] buffer, int offset, int count);
@@ -41,14 +42,14 @@ Geçerli akışa yazılacak karakter sayısı.
 ## <a name="remarks"></a>Açıklamalar
 
 > [!WARNING]
-> @No__t-0 Yöntemi özeldir ve doğrudan kodunuzda kullanılmamalıdır.
+> `SqlStreamChars.Write`Yöntemi özeldir ve doğrudan kodunuzda kullanılması amaçlıyordu.
 >
 > Microsoft, bu yöntemin herhangi bir koşulda bir üretim uygulamasında yazma kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Ad alanı:** <xref:System.Data.SqlTypes>
+**Ad alanı:**<xref:System.Data.SqlTypes>
 
-**Bütünleştirilmiş kod:** System. Data (System. Data. dll dosyasında)
+**Bütünleştirilmiş kod:** System. Data (System.Data.dll)
 
 **.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.

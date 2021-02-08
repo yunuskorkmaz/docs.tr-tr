@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: CorDebugChainReason numaralandırması'
 title: CorDebugChainReason Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c915da51-50b2-41df-841a-2b971f4d0975
 topic_type:
 - apiref
-ms.openlocfilehash: 6185c5dda69a0cf7e9847ddc021448612a426b19
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 18b6ac9c50c3a44a77a0f63a680b84c70e667e9f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95716063"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801754"
 ---
 # <a name="cordebugchainreason-enumeration"></a>CorDebugChainReason Numaralandırması
 
@@ -47,7 +48,7 @@ typedef enum CorDebugChainReason {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`CHAIN_NONE`|Hiçbir çağrı zinciri başlatılmadı.|  
 |`CHAIN_CLASS_INIT`|Zincir bir Oluşturucu tarafından başlatıldı.|  

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: ComNetOS sınıfı'
 title: ComNetOS sınıfı (System.Net)
 ms.date: 06/12/2020
 ms.technology: dotnet-networking
@@ -11,12 +12,12 @@ api_location:
 - System.dll
 api_type:
 - Assembly
-ms.openlocfilehash: ed2b970d07df2c338870b386e75c1688703f1d68
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 7376fe4a5e02818907cb71573451fffb3a3667cb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990426"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802534"
 ---
 # <a name="comnetos-class"></a>ComNetOS sınıfı
 

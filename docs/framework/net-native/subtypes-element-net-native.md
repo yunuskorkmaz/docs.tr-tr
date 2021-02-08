@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: <Subtypes> öğesi (.NET Native)'
 title: <Subtypes> Öğesi (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
-ms.openlocfilehash: 7484152c351f59ee84b601584bd84347186628a3
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: d30bb482e784d912d3f5d61f688ed2b824e45f27
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96287819"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801962"
 ---
 # <a name="subtypes-element-net-native"></a>\<Subtypes> Öğesi (.NET Native)
 
@@ -34,7 +35,7 @@ ms.locfileid: "96287819"
   
 ### <a name="attributes"></a>Öznitelikler  
   
-|Öznitelik|Öznitelik türü|Açıklama|  
+|Öznitelik|Öznitelik türü|Description|  
 |---------------|--------------------|-----------------|  
 |`Activate`|Yansıma|İsteğe bağlı öznitelik. Örneklerin etkinleştirilmesini sağlamak için oluşturuculara çalışma zamanı erişimini denetler.|  
 |`Browse`|Yansıma|İsteğe bağlı öznitelik. Program öğeleri hakkında bilgi sorgulamayı denetler, ancak hiçbir çalışma zamanı erişimini etkinleştirmez.|  

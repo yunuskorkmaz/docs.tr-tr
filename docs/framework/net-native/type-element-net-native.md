@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: <Type> öğesi (.NET Native)'
 title: <Type> Öğesi (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
-ms.openlocfilehash: e71df41c4a37206910d835ee85dc3d68b4cbad4a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9a0304049c5b8f97c30a85de1c6ed60cde111df1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96287715"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801949"
 ---
 # <a name="type-element-net-native"></a>\<Type> Öğesi (.NET Native)
 
@@ -35,7 +36,7 @@ ms.locfileid: "96287715"
 
 ### <a name="attributes"></a>Öznitelikler
 
-|Öznitelik|Öznitelik türü|Açıklama|
+|Öznitelik|Öznitelik türü|Description|
 |---------------|--------------------|-----------------|
 |`Name`|Genel|Gerekli öznitelik. Tür adını belirtir.|
 |`Activate`|Yansıma|İsteğe bağlı öznitelik. Örneklerin etkinleştirilmesini sağlamak için oluşturuculara çalışma zamanı erişimini denetler.|

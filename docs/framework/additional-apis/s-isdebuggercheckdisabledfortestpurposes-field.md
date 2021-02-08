@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: s_isDebuggerCheckDisabledForTestPurposes alanı'
 title: s_isDebuggerCheckDisabledForTestPurposes alanı
 ms.date: 03/30/2017
 ms.technology: dotnet-wpf
@@ -11,32 +12,32 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 9033a513-c255-4f31-b6d7-09b8d8c50e2d
-ms.openlocfilehash: ad9bc0ecf4b7a8e5f3ef13fdff5aa59ca8915922
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a71235c13a7a35872bcf5374be8077bafad5ff9a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634651"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802664"
 ---
-# <a name="sisdebuggercheckdisabledfortestpurposes-field"></a>s_isDebuggerCheckDisabledForTestPurposes alanı
+# <a name="s_isdebuggercheckdisabledfortestpurposes-field"></a>s_isDebuggerCheckDisabledForTestPurposes alanı
 
-Bu özel bir alanda `System.Windows.Diagnostics.VisualDiagnostics` sınıfı için bir etkin hata ayıklayıcı iç bir onay gerçekleştirip gerçekleştirmediğini belirlemek için Visual Studio tarafından kullanılır.
+Sınıftaki bu özel alan `System.Windows.Diagnostics.VisualDiagnostics` , Visual Studio tarafından etkin bir hata ayıklayıcı için iç denetim yapılıp yapılmayacağını anlamak üzere kullanılır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```csharp
 private static bool s_isDebuggerCheckDisabledForTestPurposes
 ```
 
 > [!WARNING]
-> API'leri `System.Windows.Diagnostics.VisualDiagnostics` sınıfı bulunan ve yalnızca bir uygulama hata ayıklayıcı altında çalışırken. Ayarlama `s_isDebuggerCheckDisabledForTestPurposes` için `true` API'lere bir hata ayıklayıcı dışında.
+> Sınıftaki API 'Ler `System.Windows.Diagnostics.VisualDiagnostics` yalnızca bir uygulama hata ayıklayıcı altında çalışırken kullanılabilir. `s_isDebuggerCheckDisabledForTestPurposes` `true` Bir hata ayıklayıcı dışında API 'lere erişmek için olarak ayarlayın.
 >
-> Microsoft hiçbir koşulda, bir üretim uygulamasında bu alanı kullanımını desteklemez.
+> Microsoft, herhangi bir koşulda bu alanın bir üretim uygulamasında kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Namespace:** <xref:System.Windows.Diagnostics>
+**Ad alanı:**<xref:System.Windows.Diagnostics>
 
-**Derleme:** PresentationCore (içinde PresentationCore.dll)
+**Bütünleştirilmiş kod:** PresentationCore (PresentationCore.dll)
 
-**.NET framework sürümleri:** 4.6 sonrasında kullanılabilir.
+**.NET Framework sürümleri:** 4,6 sürümünden itibaren kullanılabilir.

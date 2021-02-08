@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: COR_VERSION yapısı'
 title: COR_VERSION Yapısı
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5efaee1c-a001-4c73-9525-4160f4c71567
 topic_type:
 - apiref
-ms.openlocfilehash: 874c0520482cc5a3bbfcdd17924edee84fe91ff5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: abdbe2a62d89db9dd673a429d81209fc42c34b73
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95675327"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801780"
 ---
 # <a name="cor_version-structure"></a>COR_VERSION Yapısı
 
@@ -38,7 +39,7 @@ typedef struct _COR_VERSION {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`dwMajor`|Ana sürüm numarası.|  
 |`dwMinor`|İkincil sürüm numarası.|  

@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: bilgi sorgula'
 title: 'Nasıl yapılır: Bilgi Sorgulama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e538d288-2070-40ca-9da6-4fbc68cd6ad0
-ms.openlocfilehash: d45fdfa8b8976e3cdc86b905443bf7bcea578714
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 41774834fe919b28d71691203941cb8e0a8a0397
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166410"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802027"
 ---
 # <a name="how-to-query-for-information"></a>Nasıl yapılır: Bilgi Sorgulama
 

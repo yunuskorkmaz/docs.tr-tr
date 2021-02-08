@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <message> öğesi <wsFederationHttpBinding>'
 title: <message> öğesi <wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
-ms.openlocfilehash: ea320b1d97e742d4f90ec55502f3bd429803283d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 64978902081ec9e5a603804fed3b378da12fe42e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204898"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802196"
 ---
 # <a name="message-element-of-wsfederationhttpbinding"></a>\<message> öğesi \<wsFederationHttpBinding>
 
@@ -89,7 +90,7 @@ ms.locfileid: "91204898"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|algorithmSuite|İleti şifrelemesini ve anahtar sarması algoritmalarını ayarlar. Bu özniteliğin geçerli değerleri için "algorithmSuite Attribute" tablosuna bakın. Varsayılan değer: `Basic256`.<br /><br /> Bu öznitelik türü <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> . Bu algoritmalar güvenlik Ilkesi dili (WS-SecurityPolicy) belirtiminde belirtilen olanlarla eşlenir.|  
+|algorithmSuite|İleti şifrelemesini ve anahtar sarması algoritmalarını ayarlar. Bu özniteliğin geçerli değerleri için "algorithmSuite Attribute" tablosuna bakın. `Basic256` varsayılan değerdir.<br /><br /> Bu öznitelik türü <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> . Bu algoritmalar güvenlik Ilkesi dili (WS-SecurityPolicy) belirtiminde belirtilen olanlarla eşlenir.|  
 |IssuedKeyType|Verilecek anahtarın türünü belirtir. Geçerli değerler şunlardır:<br /><br /> -SymmetricKey<br />-PublicKey<br /><br /> Varsayılan değer: `SymmetricKey`. Bu öznitelik türü <xref:System.IdentityModel.Tokens.SecurityKeyType> .|  
 |IssuedTokenType|Verilecek belirtecin türünü belirten bir URI içeren dize. Varsayılan değer: `null`.|  
 |negotiateServiceCredential|Hizmet kimlik bilgisinin, anlaşmanın parçası olarak alınıp alınmayacağını veya bant dışı kullanılabilir olup olmadığını belirten bir Boolean değer. Varsayılan olarak, `true` hizmet kimlik bilgisinin anlaşıldığı anlamına gelir.|  

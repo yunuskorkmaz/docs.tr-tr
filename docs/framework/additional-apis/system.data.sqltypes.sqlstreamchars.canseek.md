@@ -1,4 +1,5 @@
 ---
+description: ': SqlStreamChars. CanSeek özelliği hakkında daha fazla bilgi'
 title: SqlStreamChars. CanSeek özelliği (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
@@ -13,16 +14,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: eb32978f62b7d46f0abf715e2bca347592c0fda8
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 5919a66bef9ac31e0ef15ad4af64b456700605f7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395772"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802625"
 ---
 # <a name="sqlstreamcharscanseek-property"></a>SqlStreamChars. CanSeek özelliği
 
-Türetilmiş bir sınıfta geçersiz kılındığında, geçerli Buhar 'un arama işlemini destekleyip desteklemediğini gösteren bir değer alır. Bu özelliği içeren derlemenin SQLAccess. dll ile bir Friend ilişkisi vardır. SQL Server tarafından kullanılmak üzere tasarlanmıştır. Diğer veritabanları için, bu veritabanı tarafından sunulan barındırma mekanizmasını kullanın.
+Türetilmiş bir sınıfta geçersiz kılındığında, geçerli Buhar 'un arama işlemini destekleyip desteklemediğini gösteren bir değer alır. Bu özelliği içeren derlemenin SQLAccess.dll bir arkadaş ilişkisi vardır. SQL Server tarafından kullanılmak üzere tasarlanmıştır. Diğer veritabanları için, bu veritabanı tarafından sunulan barındırma mekanizmasını kullanın.
 
 ```csharp
 public abstract bool CanSeek { get; }
@@ -31,19 +32,19 @@ public abstract bool CanSeek { get; }
 ## <a name="property-value"></a>Özellik değeri
 
 <xref:System.Boolean>\
-geçerli sözcük arama işlemini destekliyorsa, `true`; Aksi takdirde, `false`.
+`true` geçerli Buhar, arama işlemini destekliyorsa; Aksi takdirde, `false` .
 
 ## <a name="remarks"></a>Açıklamalar
 
 > [!WARNING]
-> @No__t-0 özelliği özeldir ve doğrudan kodunuzda kullanılmamalıdır.
+> `SqlStreamChars.CanSeek`Özelliği özeldir ve doğrudan kodunuzda kullanılması amaçlıyordu.
 >
 > Microsoft, bu özelliğin herhangi bir koşulda bir üretim uygulamasında kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Ad alanı:** <xref:System.Data.SqlTypes>
+**Ad alanı:**<xref:System.Data.SqlTypes>
 
-**Bütünleştirilmiş kod:** System. Data (System. Data. dll dosyasında)
+**Bütünleştirilmiş kod:** System. Data (System.Data.dll)
 
 **.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.

@@ -1,17 +1,18 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: çalışma zamanı yönergeleri (rd.xml) yapılandırma dosyası başvurusu'
 title: Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu
 ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
-ms.openlocfilehash: e74d34693446cca645003a9f93bc1777849e3182
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9c995bd831f01e47c651d015895398e1ad42633d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "76738412"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802001"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu
 
-Çalışma zamanı yönergeleri (. RD. xml) dosyası, belirtilen program öğelerinin yansıma için kullanılabilir olup olmadığını belirten bir XML yapılandırma dosyasıdır. Çalışma zamanı yönergeleri dosyasına bir örnek aşağıda verilmiştir:
+Çalışma zamanı yönergeleri (.rd.xml) dosyası, belirtilen program öğelerinin yansıma için kullanılabilir olup olmadığını belirten bir XML yapılandırma dosyasıdır. Çalışma zamanı yönergeleri dosyasına bir örnek aşağıda verilmiştir:
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -105,7 +106,7 @@ Başvuru bilgileri için aşağıdaki yapıdaki öğeleri seçin veya [çalışm
 
 [Uygulama](application-element-net-native.md) öğesinin hiç özniteliği olamaz veya [çalışma zamanı yönergesinde ve ilke bölümünde](#Directives)ele alınan ilke özniteliklerine sahip olabilir.
 
-Bir [kitaplık](library-element-net-native.md) öğesi, `Name` dosya uzantısı olmadan bir kitaplığın veya derlemenin adını belirten tek bir özniteliğe sahiptir. Örneğin, aşağıdaki [kitaplık](library-element-net-native.md) öğesi Extensions. dll adlı bir derleme için geçerlidir.
+Bir [kitaplık](library-element-net-native.md) öğesi, `Name` dosya uzantısı olmadan bir kitaplığın veya derlemenin adını belirten tek bir özniteliğe sahiptir. Örneğin, aşağıdaki [kitaplık](library-element-net-native.md) öğesi Extensions.dll adlı bir derleme için geçerlidir.
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -170,7 +171,7 @@ Bu ilke türleriyle ilişkili ayarlar şunlardır:
 
 - `Required All`. Araç zincirinin tüm türleri ve üyeleri kullanıp kullanmadığını ve bunların kullanılmadığını ve ilke için etkin olmasını gerektir.
 
-Örneğin, aşağıdaki çalışma zamanı yönergeleri dosyası, veri sınıfları. dll dosyasındaki tüm türler ve Üyeler için ilkeyi tanımlar. Tüm ortak özelliklerin serileştirilmesi için yansıma kullanımını, tüm türler ve tür üyeleri için gözatmayı etkinleştirmek, tüm türler için etkinleştirmeyi etkinleştirmek ( `Dynamic` özniteliği nedeniyle) ve tüm genel türler ve Üyeler için yansıma 'yi etkinleştirmek.
+Örneğin, aşağıdaki çalışma zamanı yönergeleri dosyası DataClasses.dll derlemedeki tüm türler ve Üyeler için ilkeyi tanımlar. Tüm ortak özelliklerin serileştirilmesi için yansıma kullanımını, tüm türler ve tür üyeleri için gözatmayı etkinleştirmek, tüm türler için etkinleştirmeyi etkinleştirmek ( `Dynamic` özniteliği nedeniyle) ve tüm genel türler ve Üyeler için yansıma 'yi etkinleştirmek.
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -189,27 +190,27 @@ Bu ilke türleriyle ilişkili ayarlar şunlardır:
 
 [Özellik](property-element-net-native.md) ve [alan](field-element-net-native.md) öğeleri aşağıdaki ilke türlerini destekler:
 
-- `Browse`-Bu üye hakkında bilgi sorgulamayı denetler, ancak hiçbir çalışma zamanı erişimini etkinleştirmez.
+- `Browse` -Bu üye hakkında bilgi sorgulamayı denetler, ancak hiçbir çalışma zamanı erişimini etkinleştirmez.
 
-- `Dynamic`-Dinamik programlamayı etkinleştirmek için oluşturucular, Yöntemler, alanlar, Özellikler ve olaylar dahil olmak üzere tüm tür üyelerine çalışma zamanı erişimini denetler. Ayrıca, kapsayan tür hakkındaki bilgileri sorgulamayı denetler.
+- `Dynamic` -Dinamik programlamayı etkinleştirmek için oluşturucular, Yöntemler, alanlar, Özellikler ve olaylar dahil olmak üzere tüm tür üyelerine çalışma zamanı erişimini denetler. Ayrıca, kapsayan tür hakkındaki bilgileri sorgulamayı denetler.
 
-- `Serialize`-Tür örneklerinin, Newtonsoft JSON serileştirici gibi kitaplıklar tarafından serileştirilmesi ve seri durumdan çıkarılmakta olması için üyeye çalışma zamanı erişimini denetler. Bu ilke oluşturucular, alanlar ve özelliklere uygulanabilir.
+- `Serialize` -Tür örneklerinin, Newtonsoft JSON serileştirici gibi kitaplıklar tarafından serileştirilmesi ve seri durumdan çıkarılmakta olması için üyeye çalışma zamanı erişimini denetler. Bu ilke oluşturucular, alanlar ve özelliklere uygulanabilir.
 
 [Yöntemi](method-element-net-native.md) ve [olay](event-element-net-native.md) öğeleri aşağıdaki ilke türlerini destekler:
 
-- `Browse`-Bu üye hakkında bilgi sorgulamayı denetler, ancak hiçbir çalışma zamanı erişimini etkinleştirmez.
+- `Browse` -Bu üye hakkında bilgi sorgulamayı denetler, ancak hiçbir çalışma zamanı erişimini etkinleştirmez.
 
-- `Dynamic`-Dinamik programlamayı etkinleştirmek için oluşturucular, Yöntemler, alanlar, Özellikler ve olaylar dahil olmak üzere tüm tür üyelerine çalışma zamanı erişimini denetler. Ayrıca, kapsayan tür hakkındaki bilgileri sorgulamayı denetler.
+- `Dynamic` -Dinamik programlamayı etkinleştirmek için oluşturucular, Yöntemler, alanlar, Özellikler ve olaylar dahil olmak üzere tüm tür üyelerine çalışma zamanı erişimini denetler. Ayrıca, kapsayan tür hakkındaki bilgileri sorgulamayı denetler.
 
  Bu ilke türleriyle ilişkili ayarlar şunlardır:
 
-- `Auto`-Varsayılan davranışı kullanın. (Bir ilke belirtmeksizin, bir `Auto` öğe geçersiz kılınmadığı takdirde bu ilkeyi ayarlamaya eşdeğerdir.)
+- `Auto` -Varsayılan davranışı kullanın. (Bir ilke belirtmeksizin, bir `Auto` öğe geçersiz kılınmadığı takdirde bu ilkeyi ayarlamaya eşdeğerdir.)
 
-- `Excluded`-Üyenin meta verilerini hiçbir şekilde eklemeyin.
+- `Excluded` -Üyenin meta verilerini hiçbir şekilde eklemeyin.
 
-- `Included`-Üst tür çıktıda varsa ilkeyi etkinleştirin.
+- `Included` -Üst tür çıktıda varsa ilkeyi etkinleştirin.
 
-- `Required`-Araç zincirinin, kullanılmamış gibi görünse bile bu üyeyi tutması gerekir ve ilkeyi etkinleştirir.
+- `Required` -Araç zincirinin, kullanılmamış gibi görünse bile bu üyeyi tutması gerekir ve ilkeyi etkinleştirir.
 
 ## <a name="runtime-directives-file-semantics"></a>Çalışma zamanı yönergeleri dosya semantiği
 
@@ -225,13 +226,13 @@ Farklı çalışma zamanı yönergeleri dosyalarındaki iki öğe aynı program 
 
 1. `Excluded`Öğe varsa, önceliğe sahip olur.
 
-2. `Required`, öğesinden önceliklidir `Required` .
+2. `Required` , öğesinden önceliklidir `Required` .
 
-3. `All`önceliğe sahip olan `PublicAndInternal` , önceliği olan `Public` .
+3. `All` önceliğe sahip olan `PublicAndInternal` , önceliği olan `Public` .
 
 4. Herhangi bir açık ayar önceliklidir `Auto` .
 
-Örneğin, tek bir proje aşağıdaki iki çalışma zamanı yönergeleri dosyasını içeriyorsa, DataClasses. dll serileştirme ilkesi hem hem de olarak ayarlanır `Required Public` `All` . Bu durumda, serileştirme ilkesi olarak çözümlenir `Required All` .
+Örneğin, tek bir proje aşağıdaki iki çalışma zamanı yönergeleri dosyasını içeriyorsa, DataClasses.dll için serileştirme ilkesi hem hem de olarak ayarlanır `Required Public` `All` . Bu durumda, serileştirme ilkesi olarak çözümlenir `Required All` .
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">

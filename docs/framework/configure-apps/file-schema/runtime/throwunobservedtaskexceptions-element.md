@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: <ThrowUnobservedTaskExceptions> öğesi'
 title: <ThrowUnobservedTaskExceptions> Öğesi
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - ThrowUnobservedTaskExceptions element
 - <ThrowUnobservedTaskExceptions> element
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
-ms.openlocfilehash: 012c2e70e66015bc317606a7eea07812b5df26e7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 53f3f1275ea8419bed52fd73726c043e1c49eed7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183929"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802404"
 ---
 # <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions> Öğesi
 
@@ -73,7 +74,7 @@ ms.locfileid: "91183929"
   
 - Ortam değişkenini `COMPlus_ThrowUnobservedTaskExceptions` ( `set COMPlus_ThrowUnobservedTaskExceptions=1` ) ayarlayarak.  
   
-- ThrowUnobservedTaskExceptions = 1 kayıt defteri DWORD değerini HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft olarak ayarlayarak \\ . NETFramework anahtarı.  
+- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoftkayıt defteri DWORD değerini ThrowUnobservedTaskExceptions = 1 olarak ayarlayarak \\ . NETFramework anahtarı.  
   
 ## <a name="example"></a>Örnek  
 

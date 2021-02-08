@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Web Hizmetleri geliştirmeleri ile birlikte çalışabilirlik 3,0'
 title: Web Services Enhancements 3.0 ile Birlikte Çalışabilme
 ms.date: 03/30/2017
 ms.assetid: e8e589d2-12c6-4794-8a11-1ee90b47dfaa
-ms.openlocfilehash: 9c921909980f14a79e365925eab241ee2b84ea88
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 43963226ec97538cda529db7715a7ca60d7ed62f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96276626"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802703"
 ---
 # <a name="interoperability-with-web-services-enhancements-30"></a>Web Services Enhancements 3.0 ile Birlikte Çalışabilme
 

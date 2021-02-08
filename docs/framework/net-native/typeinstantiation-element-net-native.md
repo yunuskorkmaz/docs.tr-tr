@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: <TypeInstantiation> öğesi (.NET Native)'
 title: <TypeInstantiation> Öğesi (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
-ms.openlocfilehash: a1db497762b3dc8c135154086d72fb3ac92ff5a4
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8939767e016283ea525fbd74554fe30b1cca952a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96250755"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801936"
 ---
 # <a name="typeinstantiation-element-net-native"></a>\<TypeInstantiation> Öğesi (.NET Native)
 
@@ -36,7 +37,7 @@ Oluşturulmuş genel bir türe çalışma zamanı yansıtma ilkesi uygular.
   
 ### <a name="attributes"></a>Öznitelikler  
   
-|Öznitelik|Öznitelik türü|Açıklama|  
+|Öznitelik|Öznitelik türü|Description|  
 |---------------|--------------------|-----------------|  
 |`Name`|Genel|Gerekli öznitelik. Tür adını belirtir.|  
 |`Arguments`|Genel|Gerekli öznitelik. Genel tür bağımsız değişkenlerini belirtir. Birden çok bağımsız değişken varsa, bunlar virgülle ayrılır.|  

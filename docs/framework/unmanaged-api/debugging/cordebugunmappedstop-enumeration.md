@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: CorDebugUnmappedStop numaralandırması'
 title: CorDebugUnmappedStop Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a684f7d7-d0c2-4690-b721-639e613f11f8
 topic_type:
 - apiref
-ms.openlocfilehash: e251bf67adcaf2bbd6565eda068d487eb0d70efd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9c4f70c5de451689f98a1c08627fd6df5128fdbd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725783"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801533"
 ---
 # <a name="cordebugunmappedstop-enumeration"></a>CorDebugUnmappedStop Numaralandırması
 
@@ -41,7 +42,7 @@ typedef enum CorDebugUnmappedStop {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`STOP_NONE`|Herhangi bir eşlenmemiş kod türünde durmayın.|  
 |`STOP_PROLOG`|Giriş kodunda durdur.|  

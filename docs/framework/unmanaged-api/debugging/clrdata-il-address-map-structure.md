@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: CLRDATA_IL_ADDRESS_MAP yapısı'
 title: CLRDATA_IL_ADDRESS_MAP Yapısı
 ms.date: 01/16/2019
 api.name:
@@ -15,20 +16,20 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: e680a7a0dc3209d1988f6c84be0864572a74b3a4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 02ee14154de0c1609e58cf6a2ad1ca62710567f5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179370"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801858"
 ---
 # <a name="clrdata_il_address_map-structure"></a>CLRDATA_IL_ADDRESS_MAP Yapısı
 
-Adres eşleme için bir IL tanımlar.
+Bir Il 'yi eşlemek için bir Il tanımlar.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef struct
@@ -42,25 +43,25 @@ typedef struct
 
 ## <a name="members"></a>Üyeler
 
-| Üye         | Açıklama                                            |
+| Üye         | Description                                            |
 | -------------- | ------------------------------------------------------ |
-| `ilOffset`     | İçerdiği adres aralığı için IL ofset              |
+| `ilOffset`     | Kapsanan adres aralığı için Il kayması              |
 | `startAddress` | Aralığın başlangıç adresi.                        |
-| `endAddress`   | Aralığın son adresi.                          |
-| `type`         | Verilerin türü. Bu değer şu anda kullanılmaz |
+| `endAddress`   | Aralığın bitiş adresi.                          |
+| `type`         | Verilerin türü. Bu değer şu anda kullanılmıyor |
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu yapı çalışma zamanı içinde yaşar ve üstbilgi veya kitaplık dosyaları aracılığıyla açıklanmaz. Kullanmak için, 64 bit imzasız `CLRDATA_ADDRESS` tamsayı olduğu yapıyı yukarıda belirtildiği gibi tanımlayın.
+Bu yapı çalışma zamanının içinde bulunur ve herhangi bir üst bilgi veya kitaplık dosyası aracılığıyla gösterilmez. Kullanmak için, yapıyı yukarıda belirtilen şekilde tanımlayın; burada `CLRDATA_ADDRESS` 64 bitlik işaretsiz bir tamsayıdır.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
-**Üstbilgi:** Hiçbiri  
-**Kütüphane:** Yok **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+**Üst bilgi:** Seçim  
+**Kitaplık:** Hiçbiri **.NET Framework sürümler:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [CLRDataSourceType Numaralandırma](clrdatasourcetype-enumeration.md)
-- [Hata ayıklama](index.md)
+- [CLRDataSourceType numaralandırması](clrdatasourcetype-enumeration.md)
+- [Hata Ayıklama](index.md)
 - [Hata Ayıklama Yapıları](debugging-structures.md)

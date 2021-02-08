@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: COR_GC_REFERENCE yapısı'
 title: COR_GC_REFERENCE Yapısı
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 162e8179-0cd4-4110-8f06-5f387698bd62
 topic_type:
 - apiref
-ms.openlocfilehash: bb4a8f7ff3ee54474804e3e5620dcce7c9f79fb5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 38518bb1eb870081621bf32af9e63cdaa208dbd3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726619"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801819"
 ---
 # <a name="cor_gc_reference-structure"></a>COR_GC_REFERENCE Yapısı
 
@@ -38,7 +39,7 @@ typedef struct _COR_GC_REFERENCE {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`domain`|Tanıtıcının veya nesnenin ait olduğu uygulama etki alanına yönelik bir işaretçi. Değeri olabilir `null` .|  
 |`location`|Atık toplanan nesneye karşılık gelen bir ICorDebugValue ya da ICorDebugReferenceValue arabirimi.|  

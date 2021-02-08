@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Dacprejdata yapısı'
 title: DacpReJitData Yapısı
 ms.date: 02/01/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 46708acc77dad00727ee35e7d06e4228eacbd502
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8e8d506856dbc6579ac6ea0eee2b2088a980a315
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723044"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801442"
 ---
 # <a name="dacprejitdata-structure"></a>DacpReJitData Yapısı
 
@@ -49,7 +50,7 @@ struct MSLAYOUT DacpReJitData
 
 ## <a name="members"></a>Üyeler
 
-| Üye           | Açıklama                                                                                      |
+| Üye           | Description                                                                                      |
 | ---------------- | ------------------------------------------------------------------------------------------------ |
 | `rejitID`        | Bir yöntem için ReJIT düzeltme numarası.                                                          |
 | `flags`          | Metodun verilen sürüm için yeniden JIT araçlarının geçerli durumunu belirten bayrak. |

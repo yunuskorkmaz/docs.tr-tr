@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi: null değişmez değerler ve tür çıkarımı (Entity SQL)'
 title: Null değişmez değerler ve tür çıkarımı (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: edd56afb-af1b-4e7d-b210-cb8998143426
-ms.openlocfilehash: 5797c9f55b1a1c89cc27787af6f9ad7bfffc5767
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3b3474ea9841a34970d2269173d263fda2eb1789
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91185073"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802144"
 ---
 # <a name="null-literals-and-type-inference-entity-sql"></a>Null değişmez değerler ve tür çıkarımı (Entity SQL)
 
@@ -19,7 +20,7 @@ Null sabit değerleri tür sistemindeki herhangi bir türle uyumludur [!INCLUDE[
   
  `(cast(null as Int16))`  
   
-## <a name="free-floating-null-literals"></a>Serbest kayan boş sabit değerler  
+## <a name="free-floating-null-literals"></a>Null değişmez değerleri Free-Floating  
 
  Serbest kayan null sabit değerleri aşağıdaki bağlamlarda kullanılabilir:  
   

@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <Thread_UseAllCpuGroups> öğesi'
 title: <Thread_UseAllCpuGroups> Öğesi
 ms.date: 03/30/2017
 ms.assetid: d30fe7c5-8469-46e2-b804-e3eec7b24256
-ms.openlocfilehash: a3a612c0ffbcb211157b9623d298ce8ad7a13e94
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 3f11ba6855caab25bd261de71c80c78232f2690f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73115404"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802417"
 ---
 # <a name="thread_useallcpugroups-element"></a>\<Thread_UseAllCpuGroups> Öğesi
 
@@ -17,7 +18,7 @@ ms.locfileid: "73115404"
 &nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<Thread_UseAllCpuGroups>**  
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <Thread_UseAllCpuGroups
@@ -38,7 +39,7 @@ ms.locfileid: "73115404"
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|`false`|Çalışma zamanı, yönetilen iş parçacıklarını birden çok CPU grubu arasında dağıtmaz. Bu varsayılandır.|
+|`false`|Çalışma zamanı, yönetilen iş parçacıklarını birden çok CPU grubu arasında dağıtmaz. Bu varsayılan seçenektir.|
 |`true`|Çalışma zamanı, yönetilen iş parçacıklarını birden çok CPU grubuna dağıtır ve bilgisayarda birden çok CPU grubu varsa ve [\<GCCpuGroup>](gccpugroup-element.md) öğesi etkinse.|
 
 ### <a name="child-elements"></a>Alt Öğeler
@@ -74,4 +75,4 @@ Aşağıdaki örnekte, birden çok CPU grubu için desteğin nasıl etkinleştir
 
 - [Çalışma zamanı ayarları şeması](index.md)
 - [Yapılandırma dosyası şeması](../index.md)
-- [\<GCCpuGroup>Dosyalarında](gccpugroup-element.md)
+- [\<GCCpuGroup> Dosyalarında](gccpugroup-element.md)

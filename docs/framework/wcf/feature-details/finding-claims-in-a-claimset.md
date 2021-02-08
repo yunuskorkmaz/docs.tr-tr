@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: bir ClaimSet içinde talepler bulma'
 title: ClaimSet için Beyan Bulma
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - claims [WCF], finding in a claimset
 - claims [WCF]
 ms.assetid: a76ce107-aeb3-47d0-bfa9-134c53664e20
-ms.openlocfilehash: c43a47b32a2a3c15d1a51b8b6931ebb021722a64
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3ac4553e50f98f54e0a23aa9d759d7ae2f7caa8c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96268462"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802937"
 ---
 # <a name="finding-claims-in-a-claimset"></a>ClaimSet için Beyan Bulma
 

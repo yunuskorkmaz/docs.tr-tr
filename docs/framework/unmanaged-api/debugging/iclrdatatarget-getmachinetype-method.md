@@ -1,4 +1,5 @@
 ---
+description: ': ICLRDataTarget:: GetMachineType yöntemi hakkında daha fazla bilgi edinin'
 title: ICLRDataTarget::GetMachineType Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 5f1f9c61-3e3b-48b2-b111-a4395f7623a7
 topic_type:
 - apiref
-ms.openlocfilehash: 00601e0bc722c0dc5e972324eddc0ab073d04586
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5624f734a77f51b4ea6cd9dd0c9df393c72e7d26
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95703544"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801351"
 ---
 # <a name="iclrdatatargetgetmachinetype-method"></a>ICLRDataTarget::GetMachineType Metodu
 
 Hedef işlemin kullandığı yönerge kümesi türünün tanımlayıcısını alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetMachineType (  

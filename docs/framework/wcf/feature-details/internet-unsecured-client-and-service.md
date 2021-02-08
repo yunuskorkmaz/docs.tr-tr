@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: Internet güvenli olmayan Istemci ve hizmet'
 title: İnternet Güvenli Olmayan Hizmet ve İstemci
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-ms.openlocfilehash: 32c08daaacb482aa98a58d7f8882da2c9389293d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8b402b276c80b2e1c148de0837d8644aad7a2d4a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96276678"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802781"
 ---
 # <a name="internet-unsecured-client-and-service"></a>İnternet Güvenli Olmayan Hizmet ve İstemci
 
@@ -18,7 +19,7 @@ Aşağıdaki çizimde, genel, güvenli olmayan Windows Communication Foundation 
   
  ![Güvenli olmayan bir Internet senaryosunu gösteren ekran görüntüsü](./media/internet-unsecured-client-and-service/public-unsecured-internet.gif)  
   
-|Özellik|Açıklama|  
+|Özellik|Description|  
 |--------------------|-----------------|  
 |Güvenlik modu|Yok|  
 |Aktarım|HTTP|  

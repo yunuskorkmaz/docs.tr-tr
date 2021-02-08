@@ -1,4 +1,5 @@
 ---
+description: ': SqlStreamChars. Read (Char [], Int32, Int32) yöntemi hakkında daha fazla bilgi edinin'
 title: SqlStreamChars. Read (Char [], Int32, Int32) yöntemi (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
@@ -12,16 +13,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 9c8a1526e75fdc304022e74a7cc52506762489ea
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: a899ddff7b7242fcc32aaf7b7f7794970596027b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395746"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802586"
 ---
 # <a name="sqlstreamcharsreadchar-int32-int32-method"></a>SqlStreamChars. Read (Char [], Int32, Int32) yöntemi
 
-Türetilmiş bir sınıfta geçersiz kılınırsa, giriş akışından sonraki karakter kümesini okur. Bu yöntemi içeren derlemenin SQLAccess. dll ile bir arkadaş ilişkisi vardır. SQL Server tarafından kullanılmak üzere tasarlanmıştır. Diğer veritabanları için, bu veritabanı tarafından sunulan barındırma mekanizmasını kullanın.
+Türetilmiş bir sınıfta geçersiz kılınırsa, giriş akışından sonraki karakter kümesini okur. Bu yöntemi içeren derlemenin SQLAccess.dll bir arkadaş ilişkisi vardır. SQL Server tarafından kullanılmak üzere tasarlanmıştır. Diğer veritabanları için, bu veritabanı tarafından sunulan barındırma mekanizmasını kullanın.
 
 ```csharp
 public abstract int Read (char[] buffer, int offset, int count);
@@ -38,7 +39,7 @@ Kaynağa göre bir göreli konum.
 `count`\
 Geçerli akıştan okunacak karakter sayısı.
 
-## <a name="returns"></a>Döndürür
+## <a name="returns"></a>Döndürülenler
 
 <xref:System.Int32>\
 Arabelleğe okunan toplam karakter sayısı.
@@ -46,14 +47,14 @@ Arabelleğe okunan toplam karakter sayısı.
 ## <a name="remarks"></a>Açıklamalar
 
 > [!WARNING]
-> @No__t-0 Yöntemi özeldir ve doğrudan kodunuzda kullanılmamalıdır.
+> `SqlStreamChars.Read`Yöntemi özeldir ve doğrudan kodunuzda kullanılması amaçlıyordu.
 >
 > Microsoft, bu yöntemin herhangi bir koşulda bir üretim uygulamasında kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Ad alanı:** <xref:System.Data.SqlTypes>
+**Ad alanı:**<xref:System.Data.SqlTypes>
 
-**Bütünleştirilmiş kod:** System. Data (System. Data. dll dosyasında)
+**Bütünleştirilmiş kod:** System. Data (System.Data.dll)
 
 **.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.

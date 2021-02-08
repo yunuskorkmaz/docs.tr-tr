@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: CorGCReferenceType numaralandırması'
 title: CorGCReferenceType Sabit Listesi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d9f16439-5a36-4474-8ffd-4f0b2c2bb686
 topic_type:
 - apiref
-ms.openlocfilehash: e2903637faa11a3c0a62080cc6fafcf1fc668a56
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a1f534f9fe4b9ba4ede0bef94f35cf1688fe1817
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705000"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801520"
 ---
 # <a name="corgcreferencetype-enumeration"></a>CorGCReferenceType Sabit Listesi
 
@@ -49,7 +50,7 @@ typedef enum {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye adı|Açıklama|  
+|Üye adı|Description|  
 |-----------------|-----------------|  
 |`CorHandleStrong`|Nesne işleyicisi tablosundan bir güçlü başvuruya işleyici.|  
 |`CorHandleStrongPinning`|Nesne tutamacı tablosundan sabitlenmiş güçlü başvuruya yönelik bir tanıtıcı.|  

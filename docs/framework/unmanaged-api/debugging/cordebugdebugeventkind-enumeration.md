@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: Cordebugdebugger Geventkind numaralandırması'
 title: CorDebugDebugEventKind Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -10,12 +11,12 @@ api_type:
 ms.assetid: 6075a6cd-97e6-4472-a090-0dd14860d1f3
 topic_type:
 - apiref
-ms.openlocfilehash: e348e0070a5ce619f95dad9ebe4085d17f7ade6d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 62094c934873a74fdab01fad87c42126e28cb0f4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733379"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801715"
 ---
 # <a name="cordebugdebugeventkind-enumeration"></a>CorDebugDebugEventKind Numaralandırması
 
@@ -36,7 +37,7 @@ typedef enum CorDebugDebugEventKind {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`DEBUG_EVENT_KIND_MODULE_LOADED`|Modül yükleme olayı.|  
 |`DEBUG_EVENT_KIND_MODULE_UNLOADED`|Modül kaldırma olayı.|  

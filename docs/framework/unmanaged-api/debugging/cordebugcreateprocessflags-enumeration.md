@@ -1,4 +1,5 @@
 ---
+description: 'Bu konuda daha fazla bilgi edinin: CorDebugCreateProcessFlags numaralandırması'
 title: CorDebugCreateProcessFlags Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e709acce-6a17-4346-b38a-467dba567358
 topic_type:
 - apiref
-ms.openlocfilehash: f6f589656a3063fc89bd276b32d0ed751fd8d2d3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 29363510c83873c7f367079857809c165bc55b1e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733405"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801741"
 ---
 # <a name="cordebugcreateprocessflags-enumeration"></a>CorDebugCreateProcessFlags Numaralandırması
 
@@ -35,7 +36,7 @@ typedef enum CorDebugCreateProcessFlags {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`DEBUG_NO_SPECIAL_OPTIONS`|Hiçbir özel seçenek ayarlanmadı.|  
   

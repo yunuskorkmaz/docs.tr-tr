@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: COR_TYPE_LAYOUT yapısı'
 title: COR_TYPE_LAYOUT Yapısı
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 43a7addd-f25a-4049-9907-abec3eb17af2
 topic_type:
 - apiref
-ms.openlocfilehash: f33c8f5cf218979404063342d9b1cc5123839f83
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 07bed0c526aae38cb380b57da505a3f02bdf4aae
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726333"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801771"
 ---
 # <a name="cor_type_layout-structure"></a>COR_TYPE_LAYOUT Yapısı
 
@@ -39,7 +40,7 @@ typedef struct COR_TYPE_LAYOUT {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`parentID`|Bu türe üst türün tanımlayıcısı. Bu, tür kimliği öğesine karşılık geliyorsa, NULL tür kimliği (token1 = 0, token2 = 0) olacaktır <xref:System.Object?displayProperty=nameWithType> .|  
 |`objectSize`|Bu türdeki bir nesnenin temel boyutu. Bu, değişken olmayan ölçekli nesnelerin toplam boyutudur.|  

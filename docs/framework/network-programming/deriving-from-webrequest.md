@@ -1,4 +1,5 @@
 ---
+description: "Daha fazla bilgi edinin: WebRequest 'ten türetme"
 title: WebRequest’ten Türetme
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 9810c177-973e-43d7-823c-14960bd625ea
-ms.openlocfilehash: a480f38aeefed3481187e5027409a49d1535c9f4
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ede2480767f11ef66bccc79ab4e3a4bc8aafc1fb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96250560"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801910"
 ---
 # <a name="deriving-from-webrequest"></a>WebRequest’ten Türetme
 

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: CorDebugStepReason numaralandırması'
 title: CorDebugStepReason Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fe248069-b33c-48e1-a777-06ac9b239c54
 topic_type:
 - apiref
-ms.openlocfilehash: 50903b3737c0fc63eda2b1190e4c3d961ce3ae7b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2a331b09709ffb6179f2e481baf4bf421d60ea99
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726047"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801546"
 ---
 # <a name="cordebugstepreason-enumeration"></a>CorDebugStepReason Numaralandırması
 
@@ -41,7 +42,7 @@ typedef enum CorDebugStepReason {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`STEP_NORMAL`|Adımlama, aynı işlev içinde normal şekilde tamamlandı.|  
 |`STEP_RETURN`|İşlev çağrıldıktan sonra normal şekilde çalışmaya devam eder.|  

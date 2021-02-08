@@ -1,4 +1,5 @@
 ---
+description: 'Bu konuda daha fazla bilgi edinin: CorDebugInterfaceVersion numaralandırması'
 title: CorDebugInterfaceVersion Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7d1e6cd9-2a15-41c6-9b68-008705a4ed90
 topic_type:
 - apiref
-ms.openlocfilehash: 939400fcc40edd62532d459d6ed626dbdc4f41fc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 35b8fd6eae2b7999d7669632506cfea43dffbd45
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95675314"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801650"
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a>CorDebugInterfaceVersion Numaralandırması
 
@@ -138,74 +139,74 @@ typedef enum CorDebugInterfaceVersion {
 |Üye|Belirler|.NET Framework sürümü|  
 |------------|---------------|----------------------------|  
 |`CorDebugInvalidVersion`|.NET Framework sürümü geçersiz.|-|  
-|`CorDebugVersion_1_0`|Tüm hizmet paketleri de dahil olmak üzere .NET Framework sürümü 1,0 ' dir.|1,0|  
+|`CorDebugVersion_1_0`|Tüm hizmet paketleri de dahil olmak üzere .NET Framework sürümü 1,0 ' dir.|1.0|  
 |`CorDebugVersion_1_1`|Tüm hizmet paketleri de dahil olmak üzere .NET Framework sürümü 1,1 ' dir.|1.1|  
-|`CorDebugVersion_2_0`|Tüm hizmet paketleri de dahil olmak üzere .NET Framework sürümü 2,0 ' dir.|2,0|  
+|`CorDebugVersion_2_0`|Tüm hizmet paketleri de dahil olmak üzere .NET Framework sürümü 2,0 ' dir.|2.0|  
 |`CorDebugVersion_4_0`|Tüm hizmet paketleri de dahil olmak üzere .NET Framework sürümü 4 ' ün.|4|  
 |`CorDebugVersion_4_5`|Tüm hizmet paketleri de dahil olmak üzere .NET Framework sürümü 4,5 ' dir.|4,5|  
-|`ver_ICorDebugManagedCallback`|[ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)|1,0|  
-|`ver_ICorDebugUnmanagedCallback`|[ICorDebugUnmanagedCallback](icordebugunmanagedcallback-interface.md)|1,0|  
-|`ver_ICorDebug`|[ICorDebug](icordebug-interface.md)|1,0|  
-|`ver_ICorDebugController`|[ICorDebugController](icordebugcontroller-interface.md)|1,0|  
-|`ver_ICorDebugAppDomain`|[ICorDebugAppDomain](icordebugappdomain-interface.md)|1,0|  
-|`ver_ICorDebugAssembly`|[ICorDebugAssembly](icordebugassembly-interface.md)|1,0|  
-|`ver_ICorDebugProcess`|[ICorDebugProcess](icordebugprocess-interface.md)|1,0|  
-|`ver_ICorDebugBreakpoint`|[ICorDebugBreakpoint](icordebugbreakpoint-interface.md)|1,0|  
-|`ver_ICorDebugFunctionBreakpoint`|[ICorDebugFunctionBreakpoint](icordebugfunctionbreakpoint-interface.md)|1,0|  
-|`ver_ICorDebugModuleBreakpoint`|[ICorDebugModuleBreakpoint](icordebugmodulebreakpoint-interface.md)|1,0|  
-|`ver_ICorDebugValueBreakpoint`|[ICorDebugValueBreakpoint](icordebugvaluebreakpoint-interface.md)|1,0|  
-|`ver_ICorDebugStepper`|[ICorDebugStepper](icordebugstepper-interface.md)|1,0|  
-|`ver_ICorDebugRegisterSet`|[ICorDebugRegisterSet](icordebugregisterset-interface.md)|1,0|  
-|`ver_ICorDebugThread`|[ICorDebugThread](icordebugthread-interface.md)|1,0|  
-|`ver_ICorDebugChain`|[ICorDebugChain](icordebugchain-interface.md)|1,0|  
-|`ver_ICorDebugFrame`|[ICorDebugFrame](icordebugframe-interface.md)|1,0|  
-|`ver_ICorDebugILFrame`|[ICorDebugILFrame](icordebugilframe-interface.md)|1,0|  
-|`ver_ICorDebugNativeFrame`|[ICorDebugNativeFrame](icordebugnativeframe-interface.md)|1,0|  
-|`ver_ICorDebugModule`|[ICorDebugModule](icordebugmodule-interface.md)|1,0|  
-|`ver_ICorDebugFunction`|[ICorDebugFunction](icordebugfunction-interface1.md)|1,0|  
-|`ver_ICorDebugCode`|[ICorDebugCode](icordebugcode-interface1.md)|1,0|  
-|`ver_ICorDebugClass`|[ICorDebugClass](icordebugclass-interface.md)|1,0|  
-|`ver_ICorDebugEval`|[ICorDebugEval](icordebugeval-interface.md)|1,0|  
-|`ver_ICorDebugValue`|[ICorDebugValue](icordebugvalue-interface.md)|1,0|  
-|`ver_ICorDebugGenericValue`|[ICorDebugGenericValue](icordebuggenericvalue-interface.md)|1,0|  
-|`ver_ICorDebugReferenceValue`|[ICorDebugReferenceValue](icordebugreferencevalue-interface.md)|1,0|  
-|`ver_ICorDebugHeapValue`|[ICorDebugHeapValue](icordebugheapvalue-interface.md)|1,0|  
-|`ver_ICorDebugObjectValue`|[ICorDebugObjectValue](icordebugobjectvalue-interface.md)|1,0|  
-|`ver_ICorDebugBoxValue`|[ICorDebugBoxValue](icordebugboxvalue-interface.md)|1,0|  
-|`ver_ICorDebugStringValue`|[ICorDebugStringValue](icordebugstringvalue-interface.md)|1,0|  
-|`ver_ICorDebugArrayValue`|[ICorDebugArrayValue](icordebugarrayvalue-interface.md)|1,0|  
-|`ver_ICorDebugContext`|[ICorDebugContext](icordebugcontext-interface.md)|1,0|  
-|`ver_ICorDebugEnum`|[ICorDebugEnum](icordebugenum-interface1.md)|1,0|  
-|`ver_ICorDebugObjectEnum`|[ICorDebugObjectEnum](icordebugobjectenum-interface.md)|1,0|  
-|`ver_ICorDebugBreakpointEnum`|[ICorDebugBreakpointEnum](icordebugbreakpointenum-interface.md)|1,0|  
-|`ver_ICorDebugStepperEnum`|[ICorDebugStepperEnum](icordebugstepperenum-interface.md)|1,0|  
-|`ver_ICorDebugProcessEnum`|[ICorDebugProcessEnum](icordebugprocessenum-interface.md)|1,0|  
-|`ver_ICorDebugThreadEnum`|[ICorDebugThreadEnum](icordebugthreadenum-interface1.md)|1,0|  
-|`ver_ICorDebugFrameEnum`|[ICorDebugFrameEnum](icordebugframeenum-interface.md)|1,0|  
-|`ver_ICorDebugChainEnum`|[ICorDebugChainEnum](icordebugchainenum-interface.md)|1,0|  
-|`ver_ICorDebugModuleEnum`|[ICorDebugModuleEnum](icordebugmoduleenum-interface.md)|1,0|  
-|`ver_ICorDebugValueEnum`|[ICorDebugValueEnum](icordebugvalueenum-interface.md)|1,0|  
-|`ver_ICorDebugCodeEnum`|[ICorDebugCodeEnum](icordebugcodeenum-interface.md)|1,0|  
-|`ver_ICorDebugTypeEnum`|[ICorDebugTypeEnum](icordebugtypeenum-interface.md)|1,0|  
-|`ver_ICorDebugErrorInfoEnum`|[ICorDebugErrorInfoEnum](icordebugerrorinfoenum-interface.md)|1,0|  
-|`ver_ICorDebugAppDomainEnum`|[ICorDebugAppDomainEnum](icordebugappdomainenum-interface.md)|1,0|  
-|`ver_ICorDebugAssemblyEnum`|[ICorDebugAssemblyEnum](icordebugassemblyenum-interface.md)|1,0|  
-|`ver_ICorDebugEditAndContinueErrorInfo`|[ICorDebugEditAndContinueErrorInfo](icordebugeditandcontinueerrorinfo-interface.md)|1,0|  
-|`ver_ICorDebugEditAndContinueSnapshot`|[ICorDebugEditAndContinueSnapshot](icordebugeditandcontinuesnapshot-interface.md)|1,0|  
-|`ver_ICorDebugManagedCallback2`|[ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md)|2,0|  
-|`ver_ICorDebugAppDomain2`|[ICorDebugAppDomain2](icordebugappdomain2-interface.md)|2,0|  
-|`ver_ICorDebugProcess2`|[ICorDebugProcess2](icordebugprocess2-interface1.md)|2,0|  
-|`ver_ICorDebugStepper2`|[ICorDebugStepper2](icordebugstepper2-interface1.md)|2,0|  
-|`ver_ICorDebugRegisterSet2`|[ICorDebugRegisterSet2](icordebugregisterset2-interface.md)|2,0|  
-|`ver_ICorDebugThread2`|[ICorDebugThread2](icordebugthread2-interface.md)|2,0|  
-|`ver_ICorDebugILFrame2`|[ICorDebugILFrame2](icordebugilframe2-interface.md)|2,0|  
-|`ver_ICorDebugModule2`|[ICorDebugModule2](icordebugmodule2-interface.md)|2,0|  
-|`ver_ICorDebugFunction2`|[ICorDebugFunction2](icordebugfunction2-interface.md)|2,0|  
-|`ver_ICorDebugCode2`|[ICorDebugCode2](icordebugcode2-interface.md)|2,0|  
-|`ver_ICorDebugClass2`|ICorDebugClass2|2,0|  
-|`ver_ICorDebugValue2`|ICorDebugValue2|2,0|  
-|`ver_ICorDebugEval2`|"ICorDebugEval2".|2,0|  
-|`ver_ICorDebugObjectValue2`|ICorDebugObjectValue2|2,0|  
+|`ver_ICorDebugManagedCallback`|[ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)|1.0|  
+|`ver_ICorDebugUnmanagedCallback`|[ICorDebugUnmanagedCallback](icordebugunmanagedcallback-interface.md)|1.0|  
+|`ver_ICorDebug`|[ICorDebug](icordebug-interface.md)|1.0|  
+|`ver_ICorDebugController`|[ICorDebugController](icordebugcontroller-interface.md)|1.0|  
+|`ver_ICorDebugAppDomain`|[ICorDebugAppDomain](icordebugappdomain-interface.md)|1.0|  
+|`ver_ICorDebugAssembly`|[ICorDebugAssembly](icordebugassembly-interface.md)|1.0|  
+|`ver_ICorDebugProcess`|[ICorDebugProcess](icordebugprocess-interface.md)|1.0|  
+|`ver_ICorDebugBreakpoint`|[ICorDebugBreakpoint](icordebugbreakpoint-interface.md)|1.0|  
+|`ver_ICorDebugFunctionBreakpoint`|[ICorDebugFunctionBreakpoint](icordebugfunctionbreakpoint-interface.md)|1.0|  
+|`ver_ICorDebugModuleBreakpoint`|[ICorDebugModuleBreakpoint](icordebugmodulebreakpoint-interface.md)|1.0|  
+|`ver_ICorDebugValueBreakpoint`|[ICorDebugValueBreakpoint](icordebugvaluebreakpoint-interface.md)|1.0|  
+|`ver_ICorDebugStepper`|[ICorDebugStepper](icordebugstepper-interface.md)|1.0|  
+|`ver_ICorDebugRegisterSet`|[ICorDebugRegisterSet](icordebugregisterset-interface.md)|1.0|  
+|`ver_ICorDebugThread`|[ICorDebugThread](icordebugthread-interface.md)|1.0|  
+|`ver_ICorDebugChain`|[ICorDebugChain](icordebugchain-interface.md)|1.0|  
+|`ver_ICorDebugFrame`|[ICorDebugFrame](icordebugframe-interface.md)|1.0|  
+|`ver_ICorDebugILFrame`|[ICorDebugILFrame](icordebugilframe-interface.md)|1.0|  
+|`ver_ICorDebugNativeFrame`|[ICorDebugNativeFrame](icordebugnativeframe-interface.md)|1.0|  
+|`ver_ICorDebugModule`|[ICorDebugModule](icordebugmodule-interface.md)|1.0|  
+|`ver_ICorDebugFunction`|[ICorDebugFunction](icordebugfunction-interface1.md)|1.0|  
+|`ver_ICorDebugCode`|[ICorDebugCode](icordebugcode-interface1.md)|1.0|  
+|`ver_ICorDebugClass`|[ICorDebugClass](icordebugclass-interface.md)|1.0|  
+|`ver_ICorDebugEval`|[ICorDebugEval](icordebugeval-interface.md)|1.0|  
+|`ver_ICorDebugValue`|[ICorDebugValue](icordebugvalue-interface.md)|1.0|  
+|`ver_ICorDebugGenericValue`|[ICorDebugGenericValue](icordebuggenericvalue-interface.md)|1.0|  
+|`ver_ICorDebugReferenceValue`|[ICorDebugReferenceValue](icordebugreferencevalue-interface.md)|1.0|  
+|`ver_ICorDebugHeapValue`|[ICorDebugHeapValue](icordebugheapvalue-interface.md)|1.0|  
+|`ver_ICorDebugObjectValue`|[ICorDebugObjectValue](icordebugobjectvalue-interface.md)|1.0|  
+|`ver_ICorDebugBoxValue`|[ICorDebugBoxValue](icordebugboxvalue-interface.md)|1.0|  
+|`ver_ICorDebugStringValue`|[ICorDebugStringValue](icordebugstringvalue-interface.md)|1.0|  
+|`ver_ICorDebugArrayValue`|[ICorDebugArrayValue](icordebugarrayvalue-interface.md)|1.0|  
+|`ver_ICorDebugContext`|[ICorDebugContext](icordebugcontext-interface.md)|1.0|  
+|`ver_ICorDebugEnum`|[ICorDebugEnum](icordebugenum-interface1.md)|1.0|  
+|`ver_ICorDebugObjectEnum`|[ICorDebugObjectEnum](icordebugobjectenum-interface.md)|1.0|  
+|`ver_ICorDebugBreakpointEnum`|[ICorDebugBreakpointEnum](icordebugbreakpointenum-interface.md)|1.0|  
+|`ver_ICorDebugStepperEnum`|[ICorDebugStepperEnum](icordebugstepperenum-interface.md)|1.0|  
+|`ver_ICorDebugProcessEnum`|[ICorDebugProcessEnum](icordebugprocessenum-interface.md)|1.0|  
+|`ver_ICorDebugThreadEnum`|[ICorDebugThreadEnum](icordebugthreadenum-interface1.md)|1.0|  
+|`ver_ICorDebugFrameEnum`|[ICorDebugFrameEnum](icordebugframeenum-interface.md)|1.0|  
+|`ver_ICorDebugChainEnum`|[ICorDebugChainEnum](icordebugchainenum-interface.md)|1.0|  
+|`ver_ICorDebugModuleEnum`|[ICorDebugModuleEnum](icordebugmoduleenum-interface.md)|1.0|  
+|`ver_ICorDebugValueEnum`|[ICorDebugValueEnum](icordebugvalueenum-interface.md)|1.0|  
+|`ver_ICorDebugCodeEnum`|[ICorDebugCodeEnum](icordebugcodeenum-interface.md)|1.0|  
+|`ver_ICorDebugTypeEnum`|[ICorDebugTypeEnum](icordebugtypeenum-interface.md)|1.0|  
+|`ver_ICorDebugErrorInfoEnum`|[ICorDebugErrorInfoEnum](icordebugerrorinfoenum-interface.md)|1.0|  
+|`ver_ICorDebugAppDomainEnum`|[ICorDebugAppDomainEnum](icordebugappdomainenum-interface.md)|1.0|  
+|`ver_ICorDebugAssemblyEnum`|[ICorDebugAssemblyEnum](icordebugassemblyenum-interface.md)|1.0|  
+|`ver_ICorDebugEditAndContinueErrorInfo`|[ICorDebugEditAndContinueErrorInfo](icordebugeditandcontinueerrorinfo-interface.md)|1.0|  
+|`ver_ICorDebugEditAndContinueSnapshot`|[ICorDebugEditAndContinueSnapshot](icordebugeditandcontinuesnapshot-interface.md)|1.0|  
+|`ver_ICorDebugManagedCallback2`|[ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md)|2.0|  
+|`ver_ICorDebugAppDomain2`|[ICorDebugAppDomain2](icordebugappdomain2-interface.md)|2.0|  
+|`ver_ICorDebugProcess2`|[ICorDebugProcess2](icordebugprocess2-interface1.md)|2.0|  
+|`ver_ICorDebugStepper2`|[ICorDebugStepper2](icordebugstepper2-interface1.md)|2.0|  
+|`ver_ICorDebugRegisterSet2`|[ICorDebugRegisterSet2](icordebugregisterset2-interface.md)|2.0|  
+|`ver_ICorDebugThread2`|[ICorDebugThread2](icordebugthread2-interface.md)|2.0|  
+|`ver_ICorDebugILFrame2`|[ICorDebugILFrame2](icordebugilframe2-interface.md)|2.0|  
+|`ver_ICorDebugModule2`|[ICorDebugModule2](icordebugmodule2-interface.md)|2.0|  
+|`ver_ICorDebugFunction2`|[ICorDebugFunction2](icordebugfunction2-interface.md)|2.0|  
+|`ver_ICorDebugCode2`|[ICorDebugCode2](icordebugcode2-interface.md)|2.0|  
+|`ver_ICorDebugClass2`|ICorDebugClass2|2.0|  
+|`ver_ICorDebugValue2`|ICorDebugValue2|2.0|  
+|`ver_ICorDebugEval2`|"ICorDebugEval2".|2.0|  
+|`ver_ICorDebugObjectValue2`|ICorDebugObjectValue2|2.0|  
 |`ver_ICorDebugThread3`|[ICorDebugThread3](icordebugthread3-interface.md)|4|  
 |`ver_ICorDebugThread4`|[ICorDebugThread4](icordebugthread4-interface.md)|4|  
 |`ver_ICorDebugStackWalk`|[ICorDebugStackWalk](icordebugstackwalk-interface.md)|4|  

@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: POX uygulamalarıyla birlikte çalışabilirlik'
 title: POX Uygulamaları ile birlikte çalışabilirlik
 ms.date: 03/30/2017
 ms.assetid: 449276b8-4633-46f0-85c9-81f01d127636
-ms.openlocfilehash: 64a6d850a32b14bc60cd43466e04b53a7a39be81
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 832b9ae93f6046ca9995b57bdcbbfbfeb46d2a09
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579273"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802716"
 ---
 # <a name="interoperability-with-pox-applications"></a>POX Uygulamaları ile birlikte çalışabilirlik
 

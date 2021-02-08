@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: FıLESTREAM verileri'
 title: FILESTREAM Verileri
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: 87bed5dd345c240cc00b2c36aa976ec53fe63b93
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0110be6b867a07ec1cd204e2a3de371367bbfa36
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794100"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802053"
 ---
 # <a name="filestream-data"></a>FILESTREAM Verileri
 
@@ -20,7 +21,7 @@ Varbinary (max) sütununda FıLESTREAM özniteliğini belirtmek SQL Server, veri
 
 ## <a name="sqlclient-support-for-filestream"></a>FıLESTREAM için SqlClient desteği
 
-SQL Server <xref:System.Data.SqlClient>için .NET Framework veri sağlayıcısı, <xref:System.Data.SqlTypes> ad alanında tanımlanan <xref:System.Data.SqlTypes.SqlFileStream> sınıfı kullanarak FILESTREAM verilerine okumayı ve yazmayı destekler. `SqlFileStream`, veri akışlarına okumak ve yazmak için yöntemler sağlayan sınıfındandevralır.<xref:System.IO.Stream> Akıştan okuma, akıştan bir bayt dizisi gibi veri yapısına veri aktarır. Yazma, verileri veri yapısından akışa aktarır.
+SQL Server için .NET Framework Veri Sağlayıcısı, <xref:System.Data.SqlClient> <xref:System.Data.SqlTypes.SqlFileStream> ad alanında tanımlanan sınıfı kullanarak FILESTREAM verilerine okumayı ve yazmayı destekler <xref:System.Data.SqlTypes> . `SqlFileStream`<xref:System.IO.Stream>, veri akışlarına okumak ve yazmak için yöntemler sağlayan sınıfından devralır. Akıştan okuma, akıştan bir bayt dizisi gibi veri yapısına veri aktarır. Yazma, verileri veri yapısından akışa aktarır.
 
 ### <a name="creating-the-sql-server-table"></a>SQL Server tablosu oluşturma
 
@@ -42,11 +43,11 @@ GO
 
 ### <a name="example-reading-overwriting-and-inserting-filestream-data"></a>Örnek: FıLESTREAM verilerini okuma, üzerine yazma ve ekleme
 
-Aşağıdaki örnek, bir FıLESTREAM 'ten verilerin nasıl okunacağını gösterir. Kod, `FileAccess` dosyanın mantıksal yolunu alır `Read` ve ' a ve `FileOptions` `SequentialScan`' yi olarak ayarlar. Kod daha sonra SqlFileStream 'den arabelleğe bayt olarak okur. Baytlar daha sonra konsol penceresine yazılır.
+Aşağıdaki örnek, bir FıLESTREAM 'ten verilerin nasıl okunacağını gösterir. Kod, dosyanın mantıksal yolunu alır ve ' a ve ' yi olarak ayarlar `FileAccess` `Read` `FileOptions` `SequentialScan` . Kod daha sonra SqlFileStream 'den arabelleğe bayt olarak okur. Baytlar daha sonra konsol penceresine yazılır.
 
-Örnek ayrıca, var olan tüm verilerin üzerine yazıldığı bir FıLESTREAM 'e nasıl veri yazılacağını gösterir. Kod, dosyanın mantıksal yolunu `SqlFileStream`alır ve ' a `Write` ve `FileOptions` `SequentialScan`' ı ' a `FileAccess` ayarlayarak öğesini oluşturur. Dosyadaki tüm veriler değiştirilerek öğesine `SqlFileStream`tek bir bayt yazılır.
+Örnek ayrıca, var olan tüm verilerin üzerine yazıldığı bir FıLESTREAM 'e nasıl veri yazılacağını gösterir. Kod, dosyanın mantıksal yolunu alır ve `SqlFileStream` ' a ve ' ı ' a ayarlayarak öğesini oluşturur `FileAccess` `Write` `FileOptions` `SequentialScan` . Dosyadaki tüm veriler değiştirilerek öğesine tek bir bayt yazılır `SqlFileStream` .
 
-Örnek ayrıca, dosyanın sonuna veri eklemek için Seek yöntemi kullanılarak bir FıLESTREAM 'e nasıl veri yazılacağını gösterir. Kod, dosyanın mantıksal yolunu `SqlFileStream`alır ve ' a `ReadWrite` ve `FileOptions` `SequentialScan`' ı ' a `FileAccess` ayarlayarak öğesini oluşturur. Kod, mevcut dosyaya tek bir bayt ekleyerek dosyanın sonuna gitmek için Seek yöntemini kullanır.
+Örnek ayrıca, dosyanın sonuna veri eklemek için Seek yöntemi kullanılarak bir FıLESTREAM 'e nasıl veri yazılacağını gösterir. Kod, dosyanın mantıksal yolunu alır ve `SqlFileStream` ' a ve ' ı ' a ayarlayarak öğesini oluşturur `FileAccess` `ReadWrite` `FileOptions` `SequentialScan` . Kod, mevcut dosyaya tek bir bayt ekleyerek dosyanın sonuna gitmek için Seek yöntemini kullanır.
 
 ```csharp
 using System;
@@ -177,7 +178,7 @@ Diğer bir örnek için bkz. [nasıl yapılır ve ikili verileri bir dosya akı�
 
 FıLESTREAM için tüm belgeler SQL Server Books Online 'daki aşağıdaki bölümlerde bulunur.
 
-|Konu|Açıklama|
+|Konu|Description|
 |-----------|-----------------|
 |[FıLESTREAM (SQL Server)](/sql/relational-databases/blob/filestream-sql-server)|FıLESTREAM depolamanın ne zaman kullanılacağını ve SQL Server veritabanı altyapısını bir NTFS dosya sistemiyle nasıl tümleştirdiğini açıklar.|
 |[FıLESTREAM verileri için Istemci uygulamaları oluşturma](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|FıLESTREAM verileriyle çalışmaya yönelik Windows API işlevlerini açıklar.|

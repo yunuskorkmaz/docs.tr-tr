@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: CreateDebuggingInterfaceFromVersion Function for Silverlight'
 title: Silverlight için CreateDebuggingInterfaceFromVersion İşlevi
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - debugging API [Silverlight]
 - Silverlight, debugging
 ms.assetid: 35c7a18f-133a-4584-bd25-bb338568b0c6
-ms.openlocfilehash: f40345b09cae164660711b987f62130518736518
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 8c61593f2e912260ecca65efce9f905ce56e88dc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83208630"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801455"
 ---
 # <a name="createdebugginginterfacefromversion-function-for-silverlight"></a>Silverlight için CreateDebuggingInterfaceFromVersion İşlevi
 
@@ -45,12 +46,12 @@ HRESULT CreateDebuggingInterfaceFromVersion (
  `szDebuggeeVersion`Ya da `ppCordb` null.  
   
  `CORDBG_E_DEBUG_COMPONENT_MISSING`\
- CLR hata ayıklaması için gerekli bir bileşen bulunamıyor. _Mscordbi. dll_ veya _mscordaccore. dll_ , hedef CoreCLR. dll ile aynı dizinde bulunamadı.  
+ CLR hata ayıklaması için gerekli bir bileşen bulunamıyor. _mscordbi.dll_ ya da _mscordaccore.dll_ hedef CoreCLR.dll aynı dizinde bulunamadı.  
   
  `CORDBG_E_INCOMPATIBLE_PROTOCOL`\
- Mscordbi. dll veya mscordaccore. dll, hedef CoreCLR. dll ile aynı sürümde değil.  
+ mscordbi.dll ya da mscordaccore.dll, hedef CoreCLR.dll aynı sürümde değil.  
   
- `E_FAIL`(veya diğer `E_` dönüş kodları) \
+ `E_FAIL` (veya diğer `E_` dönüş kodları) \
  [ICorDebug arabirimi](icordebug-interface.md)döndürülemiyor.  
   
 ## <a name="remarks"></a>Açıklamalar
@@ -63,6 +64,6 @@ HRESULT CreateDebuggingInterfaceFromVersion (
   
  **Üstbilgi:** dbgshim. h  
   
- **Kitaplık:** dbgshim. dll  
+ **Kitaplık:** dbgshim.dll  
   
  **.NET Framework sürümleri:** 3,5 SP1

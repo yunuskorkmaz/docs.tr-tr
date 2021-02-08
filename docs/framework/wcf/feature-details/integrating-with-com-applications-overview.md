@@ -1,15 +1,16 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: COM uygulamalarıyla tümleştirme genel bakış'
 title: COM Uygulamaları ile Tümleştirme Genel Bakış
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
-ms.openlocfilehash: c283e7cbc4cb4b8bc37dd1313480410df93a93bf
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a179fd73c8065fff1e16d3f86202d717df155b81
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596831"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802820"
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM Uygulamaları ile Tümleştirme Genel Bakış
 
@@ -53,7 +54,7 @@ Aşağıdaki tabloda, hizmet bilinen adı tarafından desteklenen parametreler g
 |`serializer`|"Xml" veya "DataContract" serileştirici kullanımını belirtin.|
 
 > [!NOTE]
-> Tamamen COM tabanlı istemcilerle birlikte kullanıldığında, hizmet bilinen adı WCF ve destekleyici .NET Framework 2,0 ' i istemci bilgisayara yüklemek için gerekir. Ayrıca, hizmet bilinen adını kullanan istemci uygulamalarının .NET Framework çalışma zamanının uygun sürümünü yüklemesi de önemlidir. Office uygulamalarında bilinen ad kullanıldığında, doğru çerçeve sürümünün yüklendiğinden emin olmak için bir yapılandırma dosyası gerekebilir. Örneğin, Excel 'de aşağıdaki metin, Excel. exe. config adlı bir dosyaya Excel. exe dosyası ile aynı dizinde yerleştirilmelidir:
+> Tamamen COM tabanlı istemcilerle birlikte kullanıldığında, hizmet bilinen adı WCF ve destekleyici .NET Framework 2,0 ' i istemci bilgisayara yüklemek için gerekir. Ayrıca, hizmet bilinen adını kullanan istemci uygulamalarının .NET Framework çalışma zamanının uygun sürümünü yüklemesi de önemlidir. Office uygulamalarında bilinen ad kullanıldığında, doğru çerçeve sürümünün yüklendiğinden emin olmak için bir yapılandırma dosyası gerekebilir. Örneğin, Excel 'de aşağıdaki metin, Excel.exe dosyası ile aynı dizinde Excel.exe.config adlı bir dosyaya yerleştirilmelidir:
 >
 > `<?xml version="1.0" encoding="utf-8"?>`
 >

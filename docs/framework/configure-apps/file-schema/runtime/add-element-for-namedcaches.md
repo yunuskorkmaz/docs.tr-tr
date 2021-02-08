@@ -1,16 +1,17 @@
 ---
+description: 'İçin: öğesi hakkında daha fazla bilgi <add><namedCaches>'
 title: <namedCaches> için <add> Öğesi
 ms.date: 03/30/2017
 helpviewer_keywords:
 - add element for <namedCaches>
 - <add> element for <namedCaches>
 ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
-ms.openlocfilehash: cd920b58290050fcc30ea5d0a1ac113a333902fa
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1485b80fa84268f68759bfb50744133744142d72
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91195369"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802437"
 ---
 # <a name="add-element-for-namedcaches"></a>\<namedCaches> için \<add> Öğesi
 
@@ -60,7 +61,7 @@ ms.locfileid: "91195369"
   
 ## <a name="remarks"></a>Açıklamalar  
 
- `add`Öğesi, `namedCaches` bir bellek önbelleği için koleksiyona bir giriş ekler. [clear](clear-element-for-namedcaches.md) `add` Koleksiyonda başka bir adlandırılmış önbellek bulunmadığından emin olmak için öğesini kullanmadan önce Clear öğesini kullanabilirsiniz. Bu öğe machine.config dosyasında ve Web.config dosyasında kullanılabilir.  
+ `add`Öğesi, `namedCaches` bir bellek önbelleği için koleksiyona bir giriş ekler. [](clear-element-for-namedcaches.md) `add` Koleksiyonda başka bir adlandırılmış önbellek bulunmadığından emin olmak için öğesini kullanmadan önce Clear öğesini kullanabilirsiniz. Bu öğe machine.config dosyasında ve Web.config dosyasında kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
 

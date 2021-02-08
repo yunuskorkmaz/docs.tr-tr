@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: CorDebugExceptionCallbackType numaralandırması'
 title: CorDebugExceptionCallbackType Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4d946ad4-3c19-42cb-bec9-8633325ba769
 topic_type:
 - apiref
-ms.openlocfilehash: cddcf66939a2ae7ab9e7f63a6fd61b72c56f6c7a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 41b9cdf707de017703ee3756b3d04a38163bb03b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95712735"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801689"
 ---
 # <a name="cordebugexceptioncallbacktype-enumeration"></a>CorDebugExceptionCallbackType Numaralandırması
 
@@ -38,7 +39,7 @@ typedef enum CorDebugExceptionCallbackType {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`DEBUG_EXCEPTION_FIRST_CHANCE`|Özel durum oluşturuldu.|  
 |`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|İşlem için Kullanıcı kodu girilen özel durum.|  

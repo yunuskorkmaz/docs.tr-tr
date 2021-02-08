@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: ASP.NET Web Hizmetleri ile birlikte çalışabilirlik'
 title: ASP.NET Web Hizmetleri ile Birlikte Çalışabilirlik
 ms.date: 03/30/2017
 ms.assetid: 622422f8-6651-442f-b8be-e654a4aabcac
-ms.openlocfilehash: cca4e1b3da26d8026d41d0a7107432cdd2960545
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f5e439bac3be4c12231653f7059792792edbc21e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96276639"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802742"
 ---
 # <a name="interoperability-with-aspnet-web-services"></a>ASP.NET Web Hizmetleri ile Birlikte Çalışabilirlik
 

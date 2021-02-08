@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: CustomPeerResolverService: Istemci kayıtları'
 title: 'CustomPeerResolverService İçinde: İstemci Kayıtları'
 ms.date: 03/30/2017
 ms.assetid: 40236953-a916-4236-84a6-928859e1331a
-ms.openlocfilehash: a905e5d1e467f32575eb38451d66392be25a0759
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 2cc0706fc473985cf6572e6ee5387a26366bc2c8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96265888"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802846"
 ---
 # <a name="inside-the-custompeerresolverservice-client-registrations"></a>CustomPeerResolverService İçinde: İstemci Kayıtları
 

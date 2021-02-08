@@ -1,4 +1,5 @@
 ---
+description: ': SqlStreamChars. length özelliği hakkında daha fazla bilgi'
 title: SqlStreamChars. length Özelliği (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
@@ -13,18 +14,18 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 2171b10d1c0eb7bcad894cc44c5103bdab18b0a5
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: b0a9686cadc6d4018c7f291f0326b71195fd5cf5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395601"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802599"
 ---
 # <a name="sqlstreamcharslength-property"></a>SqlStreamChars. length özelliği
 
-Türetilmiş bir sınıfta geçersiz kılındığında, geçerli akışın uzunluğunu alır. Bu özelliği içeren derlemenin SQLAccess. dll ile bir Friend ilişkisi vardır. SQL Server tarafından kullanılmak üzere tasarlanmıştır. Diğer veritabanları için, bu veritabanı tarafından sunulan barındırma mekanizmasını kullanın.
+Türetilmiş bir sınıfta geçersiz kılındığında, geçerli akışın uzunluğunu alır. Bu özelliği içeren derlemenin SQLAccess.dll bir arkadaş ilişkisi vardır. SQL Server tarafından kullanılmak üzere tasarlanmıştır. Diğer veritabanları için, bu veritabanı tarafından sunulan barındırma mekanizmasını kullanın.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```csharp
 public abstract long Length { get; }
@@ -38,14 +39,14 @@ Akışın uzunluğu.
 ## <a name="remarks"></a>Açıklamalar
 
 > [!WARNING]
-> @No__t-0 özelliği özeldir ve doğrudan kodunuzda kullanılmamalıdır.
+> `SqlStreamChars.Length`Özelliği özeldir ve doğrudan kodunuzda kullanılması amaçlıyordu.
 >
 > Microsoft, bu özelliğin herhangi bir koşulda bir üretim uygulamasında kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Ad alanı:** <xref:System.Data.SqlTypes>
+**Ad alanı:**<xref:System.Data.SqlTypes>
 
-**Bütünleştirilmiş kod:** System. Data (System. Data. dll dosyasında)
+**Bütünleştirilmiş kod:** System. Data (System.Data.dll)
 
 **.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.

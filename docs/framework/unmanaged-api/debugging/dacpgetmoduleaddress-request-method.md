@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: DacpGetModuleAddress:: Request Yöntemi'
 title: DacpGetModuleAddress::Request Yöntemi
 ms.date: 01/16/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 1755526636bed6d78663112e4c2ad5ab7c3f731c
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 4cdec9cf6b9bd818ce1137fb5b2c691532fab94e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860842"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801507"
 ---
 # <a name="dacpgetmoduleaddressrequest-method"></a>DacpGetModuleAddress::Request Yöntemi
 
@@ -45,7 +46,7 @@ HRESULT Request(
 
 Bu yapı çalışma zamanının içinde bulunur ve herhangi bir üst bilgi veya kitaplık dosyası aracılığıyla gösterilmez. Bunu kullanmak için, en kolay yöntem uygulamayı taklit etmek olur:
 
-- `IXCLRDataModule*` Parametre üzerinde `Request` yöntemi çağrılmadan elde edilen değeri aşağıdaki parametrelerle döndürün:`((uint32) 0xf0000000, 0, 0, (uint32) sizeof(*this), (uint8*) this)`
+- Parametre üzerinde yöntemi çağrılmadan elde edilen değeri `Request` `IXCLRDataModule*` aşağıdaki parametrelerle döndürün: `((uint32) 0xf0000000, 0, 0, (uint32) sizeof(*this), (uint8*) this)`
 
 ## <a name="requirements"></a>Gereksinimler
 

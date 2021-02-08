@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: CorDebugDecodeEventFlagsWindows sabit listesi'
 title: CorDebugDecodeEventFlagsWindows Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -10,12 +11,12 @@ api_type:
 ms.assetid: aa6cf962-30ae-4cfd-8895-826deeb46a54
 topic_type:
 - apiref
-ms.openlocfilehash: 60eab923aac5dea927105e8ca9fa77eb5708f5ac
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 765ce4b967d00bd70becca666e2ed418614d6fe3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733366"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801702"
 ---
 # <a name="cordebugdecodeeventflagswindows-enumeration"></a>CorDebugDecodeEventFlagsWindows Numaralandırması
 
@@ -31,7 +32,7 @@ typedef enum CorDebugDecodeEventFlagsWindows {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`IS_FIRST_CHANCE`|Hata ayıklama olayının ilk şans özel durumu olduğunu gösterir.|  
   

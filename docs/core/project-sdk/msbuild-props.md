@@ -4,12 +4,12 @@ description: MSBuild özellikleri ve .NET SDK tarafından anlaşılan öğeler i
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 21bbe46cf60540c01344cc8fcb82c62ff0fbbee5
-ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
+ms.openlocfilehash: e140491c694291438fe1db7fd60d581ffed0319d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98692716"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802677"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>.NET SDK projeleri için MSBuild başvurusu
 
@@ -344,7 +344,12 @@ Bu özellik, `DefaultItemExcludes` yalnızca proje klasöründeki dosya ve klas�
 
 ### <a name="analysislevel"></a>AnalysisLevel
 
-`AnalysisLevel`Özelliği, bir kod analizi düzeyi belirtmenize olanak tanır. Örneğin, önizleme kodu Çözümleyicileri için erişim istiyorsanız, `AnalysisLevel` olarak ayarlayın `preview` . `latest` varsayılan değerdir.
+`AnalysisLevel`Özelliği, bir kod analizi düzeyi belirtmenize olanak tanır. Örneğin, önizleme kodu Çözümleyicileri için erişim istiyorsanız, `AnalysisLevel` olarak ayarlayın `preview` .
+
+Varsayılan değer:
+
+- Projeniz .NET 5,0 veya üstünü hedefliyorsa veya [Analysismode](#analysismode) özelliğini eklediyseniz, varsayılan değer olur `latest` .
+- Aksi takdirde, açıkça proje dosyasına eklemediğiniz takdirde bu özellik atlanır.
 
 ```xml
 <PropertyGroup>
@@ -398,9 +403,6 @@ Aşağıdaki tabloda kullanılabilir seçenekler gösterilmektedir.
   <EnableNETAnalyzers>true</EnableNETAnalyzers>
 </PropertyGroup>
 ```
-
-> [!TIP]
-> .NET 5,0 ' den önceki .NET sürümlerini hedefleyen projelerde .NET kod analizini etkinleştirmenin bir diğer yolu, [Analysislevel](#analysislevel) özelliğini olarak ayarlamadır `latest` .
 
 ### <a name="enforcecodestyleinbuild"></a>Enforcecodestyleınbuild
 

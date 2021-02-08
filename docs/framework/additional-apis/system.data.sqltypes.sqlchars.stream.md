@@ -1,5 +1,6 @@
 ---
-title: SqlChars.Stream özelliği (System.Data.SqlTypes)
+description: ': SqlChars. Stream özelliği hakkında daha fazla bilgi'
+title: SqlChars. Stream özelliği (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/19/2018
@@ -14,16 +15,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 7485f462ec19a20a4bc6989c2f1b576b0f991009
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9af0df98b268a749d890ab1b40dddbbe98ced8d9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634403"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802651"
 ---
 # <a name="sqlcharsstream-property"></a>SqlChars.Stream Özelliği
 
-Alır veya ayarlar karakter akışı. Bu özellik içeren derleme SQLAccess.dll bir arkadaş ilişkisi vardır. Bu, SQL Server tarafından kullanıma yöneliktir. Diğer veritabanları için veritabanı tarafından sağlanan barındırma mekanizmasına kullanın.
+Karakter akışını alır veya ayarlar. Bu özelliği içeren derlemenin SQLAccess.dll bir arkadaş ilişkisi vardır. SQL Server tarafından kullanılmak üzere tasarlanmıştır. Diğer veritabanları için, bu veritabanı tarafından sunulan barındırma mekanizmasını kullanın.
 
 ```csharp
 internal SqlStreamChars Stream { get; set; }
@@ -32,19 +33,19 @@ internal SqlStreamChars Stream { get; set; }
 ## <a name="property-value"></a>Özellik değeri
 
 `System.Data.SqlTypes.SqlStreamChars`\
-Karakter akış.
+Karakter akışı.
 
 ## <a name="remarks"></a>Açıklamalar
 
 > [!WARNING]
-> `SqlChars.Stream` Özelliği dahili kullanım içindir ve kodunuzda doğrudan kullanılmak üzere tasarlanmamıştır.
+> `SqlChars.Stream`Özelliği Dahili ve doğrudan kodunuzda kullanılmamalıdır.
 >
-> Microsoft hiçbir koşulda, bir üretim uygulamasında bu özelliğin kullanımı desteklemez.
+> Microsoft, bu özelliğin herhangi bir koşulda bir üretim uygulamasında kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Namespace:** <xref:System.Data.SqlTypes>
+**Ad alanı:**<xref:System.Data.SqlTypes>
 
-**Derleme:** System.Data (içinde System.Data.dll)
+**Bütünleştirilmiş kod:** System. Data (System.Data.dll)
 
-**.NET framework sürümleri:** 2.0 sürümünden itibaren kullanılabilir.
+**.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.

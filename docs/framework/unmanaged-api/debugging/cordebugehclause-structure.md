@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Corhata ayıklama Gehclause yapısı'
 title: CorDebugEHClause Yapısı
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ api_type:
 ms.assetid: 0e350a1b-6997-46d0-bfc5-962a5011ef43
 topic_type:
 - apiref
-ms.openlocfilehash: 225523280a2e1e0d8f51321e9dd865d901e725ba
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ecb00e2a110719ab82de32fb1f1c861e2033a528
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95712710"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801676"
 ---
 # <a name="cordebugehclause-structure"></a>CorDebugEHClause Yapısı
 
@@ -41,7 +42,7 @@ typedef struct _CorDebugEHClause {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`Flags`|EH yan tümcesindeki özel durum bilgilerini açıklayan bir bit alanı. Daha fazla bilgi için, açıklamalar bölümüne bakın.|  
 |`TryOffset`|`try`Metot gövdesinin başlangıcından itibaren bloğunun bayt cinsinden değeri.|  

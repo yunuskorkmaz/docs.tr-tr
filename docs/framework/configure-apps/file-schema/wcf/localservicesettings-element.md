@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: <localServiceSettings> öğesi'
 title: <localServiceSettings> öğesi
 ms.date: 03/30/2017
 ms.assetid: 0658549c-3f65-46dd-8c5c-9895441ed734
-ms.openlocfilehash: 3043c07afd316d90cc5525a67bef144f33d9b136
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ee3306588d6a86ed9ced9c66624cd34f18e2c5c6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204937"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802209"
 ---
 # <a name="localservicesettings-element"></a>\<localServiceSettings> öğesi
 
@@ -58,7 +59,7 @@ Bu bağlama için yerel bir hizmetin güvenlik ayarlarını belirtir.
 |`maxPendingSessions`|Hizmetin desteklediği en fazla beklemedeki güvenlik oturumu sayısını belirten pozitif bir tamsayı. Bu sınıra ulaşıldığında, tüm yeni istemciler SOAP hataları alır. Varsayılan değer 1000'dir.|  
 |`maxStatefulNegotiations`|Aynı anda etkin olabilen güvenlik anlaşmaları sayısını belirten pozitif bir tamsayı. Sınırın üzerinde olan anlaşma oturumları sıraya alınır ve yalnızca sınırın altındaki bir boşluk kullanılabilir hale geldiğinde tamamlanabilir. Varsayılan değer 1024 ' dir.|  
 |`negotiationTimeout`|<xref:System.TimeSpan>Kanal tarafından kullanılan güvenlik ilkesinin ömrünü belirten bir. Süre sona erdiğinde, kanal yeni bir güvenlik ilkesi için istemcisiyle yeniden anlaşmaya varılır. Varsayılan değer "00:02:00" dır.|  
-|`reconnectTransportOnFailure`|WS-güvenilir mesajlaşma kullanan bağlantıların, aktarım hatalarından sonra yeniden bağlanmaya çalışıp çalışmadığını belirten bir Boole değeri. Varsayılan olarak, `true` sınırsız yeniden bağlanma girişimlerinin denendiği anlamına gelir. Bu zaman aşımı, kanalın yeniden bağlanamayan bir özel durum oluşturmasına neden olan etkinlik dışı zaman aşımı nedeniyle bozulur.|  
+|`reconnectTransportOnFailure`|WS-Reliable mesajlaşma kullanan bağlantıların, aktarım hatalarından sonra yeniden bağlanmaya çalışıp çalışmadığını belirten bir Boole değeri. Varsayılan olarak, `true` sınırsız yeniden bağlanma girişimlerinin denendiği anlamına gelir. Bu zaman aşımı, kanalın yeniden bağlanamayan bir özel durum oluşturmasına neden olan etkinlik dışı zaman aşımı nedeniyle bozulur.|  
 |`replayCacheSize`|Yeniden yürütme algılaması için kullanılan önbelleğe alınmış nonce sayısını belirten pozitif bir tamsayı. Bu sınır aşılırsa, en eski nonce kaldırılır ve yeni ileti için yeni bir nonce oluşturulur. Varsayılan değer 500000 ' dir.|  
 |`replayWindow`|<xref:System.TimeSpan>Tek tek ileti nonce öğelerinin geçerli olduğu süreyi belirten bir.<br /><br /> Bu süreden sonra, daha önce gönderilen ile aynı nonce ile gönderilen bir ileti kabul edilmez. Bu öznitelik, yeniden `maxClockSkew` yürütme saldırılarını engellemek için özniteliğiyle birlikte kullanılır. Bir saldırgan, yeniden yürütme penceresinin süresi dolduktan sonra bir iletiyi yeniden oynamıştır. Bununla birlikte, bu ileti, `maxClockSkew` gönderme zamanı zaman damgalarına sahip iletileri, daha sonra veya daha önceki bir süre içinde ileti alındığı zamandan reddeden test başarısız olur.|  
 |`sessionKeyRenewalInterval`|<xref:System.TimeSpan>Bu, başlatanın güvenlik oturumu anahtarını yenileyecek süreyi belirten bir. Varsayılan değer "10:00:00" dır.|  
