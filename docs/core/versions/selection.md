@@ -1,42 +1,42 @@
 ---
-title: Hangi .NET Core sürümünün kullanılacağını seçin
-description: .NET Core 'un programınızın çalışma zamanı sürümlerini otomatik olarak bulduğu ve seçtiği hakkında bilgi edinin. Ayrıca, bu makalede belirli bir sürümün nasıl zorlanacağı öğretilir.
+title: Hangi .NET sürümünün kullanılacağını seçin
+description: .NET 'in programınızın çalışma zamanı sürümlerini otomatik olarak bulmasını ve tercih etme hakkında bilgi edinin. Ayrıca, bu makalede belirli bir sürümün nasıl zorlanacağı öğretilir.
 author: adegeo
 ms.author: adegeo
-ms.date: 03/24/2020
-ms.openlocfilehash: 82b5522601b0ed5d3f4faf6e6c6c970ba285b11f
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.date: 02/05/2021
+ms.openlocfilehash: 2fe30041cbf85de644d9ba17330884961fcf7504
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608199"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792004"
 ---
-# <a name="select-the-net-core-version-to-use"></a>Kullanılacak .NET Core sürümünü seçin
+# <a name="select-the-net-version-to-use"></a>Kullanılacak .NET sürümünü seçin
 
-Bu makalede, .NET Core araçları, SDK ve sürümleri seçme çalışma zamanı tarafından kullanılan ilkeler açıklanmaktadır. Bu ilkeler, belirtilen sürümleri kullanarak çalışan uygulamalar arasında bir denge sağlar ve hem geliştirici hem de Son Kullanıcı makinelerini yükseltme kolaylığını etkinleştirir. Bu ilkeler aşağıdaki eylemleri gerçekleştirir:
+Bu makalede, sürümleri seçmek için .NET araçları, SDK ve çalışma zamanı tarafından kullanılan ilkeler açıklanmaktadır. Bu ilkeler, belirtilen sürümleri kullanarak çalışan uygulamalar arasında bir denge sağlar ve hem geliştirici hem de Son Kullanıcı makinelerini yükseltme kolaylığını etkinleştirir. Bu ilkeler aşağıdaki eylemleri gerçekleştirir:
 
-- Güvenlik ve güvenilirlik güncelleştirmeleri dahil olmak üzere .NET Core 'un kolay ve verimli dağıtımı.
+- Güvenlik ve güvenilirlik güncelleştirmeleri dahil olmak üzere kolay ve verimli .NET dağıtımı.
 - Hedef çalışma zamanından bağımsız olarak en son araçları ve komutları kullanın.
 
 Sürüm seçimi meydana gelir:
 
 - SDK komutunu çalıştırdığınızda, [SDK en son yüklenen sürümü kullanır](#the-sdk-uses-the-latest-installed-version).
 - Bir derleme oluşturduğunuzda, [hedef çerçeve takma adları derleme süresi API 'lerini tanımlar](#target-framework-monikers-define-build-time-apis).
-- .NET Core uygulaması çalıştırdığınızda, [hedef çerçeveye bağımlı uygulamalar ileri sarma](#framework-dependent-apps-roll-forward).
+- Bir .NET uygulaması çalıştırdığınızda, [hedef Framework bağımlı uygulamalar ileri sarma](#framework-dependent-apps-roll-forward).
 - Kendi içinde olan bir uygulamayı yayımladığınızda, [kendi içinde kapsanan dağıtımlar seçili çalışma zamanını içerir](#self-contained-deployments-include-the-selected-runtime).
 
 Bu belgenin geri kalanında bu dört senaryo incededir.
 
 ## <a name="the-sdk-uses-the-latest-installed-version"></a>SDK en son yüklü sürümü kullanıyor
 
-SDK komutları `dotnet new` ve içerir `dotnet run` . .NET Core CLI her komut için bir SDK sürümü seçmeniz gerekir `dotnet` . Şu durumlarda bile varsayılan olarak makinede yüklü olan en son SDK 'yi kullanır:
+SDK komutları `dotnet new` ve içerir `dotnet run` . .NET CLı her komut için bir SDK sürümü seçmelidir `dotnet` . Şu durumlarda bile varsayılan olarak makinede yüklü olan en son SDK 'yi kullanır:
 
-- Proje .NET Core çalışma zamanının önceki bir sürümünü hedefliyor.
-- .NET Core SDK en son sürümü bir önizleme sürümüdür.
+- Proje .NET çalışma zamanının önceki bir sürümünü hedefler.
+- .NET SDK 'sının en son sürümü bir önizleme sürümüdür.
 
-Önceki .NET Core çalışma zamanı sürümlerini hedeflerken en son SDK özelliklerinden ve geliştirmelerinden yararlanabilirsiniz. .NET Core 'un birden fazla çalışma zamanı sürümünü, tüm projeler için aynı SDK araçlarını kullanarak farklı projelerde hedefleyebilirsiniz.
+Önceki .NET çalışma zamanı sürümlerini hedeflerken en son SDK özelliklerinden ve geliştirmelerinden yararlanabilirsiniz. Tüm projeler için aynı SDK araçlarını kullanarak .NET 'in birden fazla çalışma zamanı sürümünü farklı projelerde hedefleyebilirsiniz.
 
-Nadir durumlarda, SDK 'nın önceki bir sürümünü kullanmanız gerekebilir. Bu sürümü dosyadaki bir [ *global.js* ](../tools/global-json.md)belirlersiniz. "En son kullanım" ilkesi, en son yüklenen sürümden daha eski bir .NET Core SDK sürümünü belirtmek için yalnızca *global.js* kullanacağınızı gösterir.
+Nadir durumlarda, SDK 'nın önceki bir sürümünü kullanmanız gerekebilir. Bu sürümü dosyadaki bir [ *global.js*](../tools/global-json.md)belirlersiniz. "En son kullanım" ilkesi, en son yüklenen sürümden önceki bir .NET SDK sürümünü belirtmek için yalnızca *global.js* kullanacağınızı gösterir.
 
 *global.js* , dosya hiyerarşisinde herhangi bir yere yerleştirilebilir. CLı, bulduğu ilk *global.js* için proje dizininden yukarı doğru arama yapar. Belirli bir *global.js* hangi projelerin dosya sistemindeki yerine uygulanacağını kontrol edersiniz. .NET CLı, yolda geçerli çalışma dizininden yukarı doğru gezinerek bir *global.js* dosya arar. Bulunan dosyadaki ilk *global.js* kullanılan sürümü belirtiyor. Bu SDK sürümü yüklüyse, bu sürüm kullanılır. *global.js* belirtilen SDK bulunamazsa, .net CLI uyumlu bir SDK seçmek için [eşleşen kuralları](../tools/global-json.md#matching-rules) kullanır veya Hiçbiri bulunmazsa başarısız olur.
 
@@ -56,7 +56,7 @@ SDK sürümü seçme işlemi şu şekilde yapılır:
 1. `dotnet` bulunan ilk *global.js* belirtilen SDK 'yı kullanır.
 1. `dotnet`*global.json* yoksa en son yüklenen SDK 'yı kullanır.
 
-*global.js*üzerindeki makalenin [eşleştirme KURALLARı](../tools/global-json.md#matching-rules) bölümünde bir SDK sürümü seçme hakkında daha fazla bilgi edinebilirsiniz.
+*global.js* üzerindeki makalenin [eşleştirme KURALLARı](../tools/global-json.md#matching-rules) bölümünde bir SDK sürümü seçme hakkında daha fazla bilgi edinebilirsiniz.
 
 ## <a name="target-framework-monikers-define-build-time-apis"></a>Hedef çerçeve takma adları derleme süresi API 'Lerini tanımlar
 
@@ -72,9 +72,9 @@ Projenizi birden çok TFMs 'ye karşı derleyebilirsiniz. Birden çok hedef çer
 <TargetFrameworks>netcoreapp3.0;net47</TargetFrameworks>
 ```
 
-Belirli bir SDK, birlikte geldiği çalışma zamanının hedef çerçevesine katıp sabit bir çerçeve kümesini destekler. Örneğin, .NET Core 3,0 SDK 'Sı, hedef Framework 'ün uygulanması olan .NET Core 3,0 çalışma zamanını içerir `netcoreapp3.0` . .NET Core 3,0 SDK,,,, `netcoreapp2.1` `netcoreapp2.2` `netcoreapp3.0` ancak değil `netcoreapp3.1` (veya üzeri). İçin derlemek üzere .NET Core 3,1 SDK 'sını yüklersiniz `netcoreapp3.1` .
+Belirli bir SDK, birlikte geldiği çalışma zamanının hedef çerçevesine katıp sabit bir çerçeve kümesini destekler. Örneğin, .NET Core 3,1 SDK 'Sı, hedef Framework 'ün uygulanması olan .NET Core 3,1 çalışma zamanını içerir `netcoreapp3.0` . .NET Core 3,1 SDK,,,, `netcoreapp2.1` `netcoreapp2.2` `netcoreapp3.0` ancak değil `net5.0` (veya üzeri). İçin derlemek üzere .NET 5,0 SDK 'sını yüklersiniz `net5.0` .
 
-.NET Standard hedef çerçeveler, SDK 'nın birlikte geldiği çalışma zamanının hedef çerçevesine de dönüştürülür. .NET Core 3,1 SDK 'Sı `netstandard2.1` . Daha fazla bilgi için bkz. [.NET Standard](../../standard/net-standard.md).
+.NET Standard hedef çerçeveler, SDK 'nın birlikte geldiği çalışma zamanının hedef çerçevesine de dönüştürülür. .NET 5,0 SDK 'Sı `netstandard2.1` . Daha fazla bilgi için bkz. [.NET Standard](../../standard/net-standard.md).
 
 ## <a name="framework-dependent-apps-roll-forward"></a>Çerçeveye bağımlı uygulamalar ileri alma
 
@@ -101,11 +101,11 @@ Birkaç kullanım örneği, 3,0 hedefliyorsanız davranışı gösterir:
 
 ## <a name="self-contained-deployments-include-the-selected-runtime"></a>Kendi içindeki dağıtımlar seçili çalışma zamanını içerir
 
-Bir uygulamayı [**kendi kendine dahil**](../deploying/index.md#publish-self-contained)edilen bir dağıtım olarak yayımlayabilirsiniz. Bu yaklaşım, uygulamanızla birlikte .NET Core çalışma zamanı ve kitaplıklarını paketler. Kendi içinde olan dağıtımlar çalışma zamanı ortamlarına bağımlılığı yoktur. Çalışma zamanı sürüm seçimi yayımlama zamanında gerçekleşir, çalışma zamanı değildir.
+Bir uygulamayı [**kendi kendine dahil**](../deploying/index.md#publish-self-contained)edilen bir dağıtım olarak yayımlayabilirsiniz. Bu yaklaşım, uygulamanızla birlikte .NET çalışma zamanını ve kitaplıklarını paketler. Kendi içinde olan dağıtımlar çalışma zamanı ortamlarına bağımlılığı yoktur. Çalışma zamanı sürüm seçimi yayımlama zamanında gerçekleşir, çalışma zamanı değildir.
 
 Yayımlama işlemi, belirtilen çalışma zamanı ailesinin en son düzeltme eki sürümünü seçer. Örneğin, `dotnet publish` .net core 3,0 çalışma zamanı ailesindeki en son düzeltme eki sürümledir, .NET Core 3.0.3 ' ı seçer. Hedef Framework (en son yüklenen güvenlik düzeltme ekleri dahil) uygulamayla birlikte paketlenir.
 
-Bir uygulama için belirtilen minimum sürüm karşılanmazsa, bu bir hatadır. `dotnet publish` en son çalışma zamanı düzeltme eki sürümüne bağlar (belirli bir ana. ikincil sürüm ailesi içinde). `dotnet publish` , ' ın geri iletme semantiğini desteklemez `dotnet run` . Düzeltme ekleri ve bağımsız dağıtımlar hakkında daha fazla bilgi için .NET Core Uygulamaları Dağıtma konusundaki [çalışma zamanı düzeltme eki seçimi](../deploying/runtime-patch-selection.md) başlıklı makaleye bakın.
+Bir uygulama için belirtilen minimum sürüm karşılanmazsa, bu bir hatadır. `dotnet publish` en son çalışma zamanı düzeltme eki sürümüne bağlar (belirli bir ana. ikincil sürüm ailesi içinde). `dotnet publish` , ' ın geri iletme semantiğini desteklemez `dotnet run` . Düzeltme ekleri ve bağımsız dağıtımlar hakkında daha fazla bilgi için .NET uygulamaları dağıtma konusunda [çalışma zamanı düzeltme eki seçimi](../deploying/runtime-patch-selection.md) başlıklı makaleye bakın.
 
 Kendi içinde olan dağıtımlar belirli bir düzeltme eki sürümü gerektirebilir. Aşağıdaki örnekte gösterildiği gibi, proje dosyasında en düşük çalışma zamanı düzeltme eki sürümünü (daha yüksek veya daha düşük sürümlere) geçersiz kılabilirsiniz:
 
@@ -117,5 +117,5 @@ Kendi içinde olan dağıtımlar belirli bir düzeltme eki sürümü gerektirebi
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Core indirin ve yükleyin](../install/index.yml).
-- [.NET Core çalışma zamanı ve SDK 'yı kaldırma](../install/remove-runtime-sdk-versions.md).
+- [.Net indirin ve yükleyin](../install/index.yml).
+- [.NET çalışma zamanını ve SDK 'yı kaldırma](../install/remove-runtime-sdk-versions.md).

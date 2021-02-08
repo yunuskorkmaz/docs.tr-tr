@@ -1,4 +1,5 @@
 ---
+description: "Şu konuda daha fazla bilgi edinin: BC30007: ' <assemblyname> ' temel sınıfını içeren ' ' derlemesine başvuru gerekiyor '<classname>"
 title: "'<assemblyname>' temel sınıfını içeren '<classname>' derlemesine başvuru gereklidir"
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30007
 ms.assetid: 5f34cf47-6c6e-4954-bd8e-d6b020b75fb7
-ms.openlocfilehash: d2fb3498219dfe3318ec418ede250de818874ba9
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: f01795d3e8147015f9f46697b047a8c63099ff32
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162342"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792056"
 ---
 # <a name="bc30007-reference-required-to-assembly-assemblyname-containing-the-base-class-classname"></a>BC30007: \<assemblyname> ' ' temel sınıfını içeren ' ' derlemesine başvuru gerekiyor \<classname>
 

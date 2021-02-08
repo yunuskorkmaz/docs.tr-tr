@@ -1,4 +1,5 @@
 ---
+description: Daha fazla bilgi için bkz. profil oluşturma yapıları
 title: Profil Oluşturma Yapıları
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - unmanaged structures [.NET Framework], profiling
 - structures [.NET Framework profiling]
 ms.assetid: 750385f2-f365-41b1-939f-ca2f2ff9b466
-ms.openlocfilehash: 3f832850fac918a568d02e9ef2f1e5b140ffc04f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7a76c49aaa301ba45c41fb2eb3f7770539dcc6c0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722758"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99798894"
 ---
 # <a name="profiling-structures"></a>Profil Oluşturma Yapıları
 

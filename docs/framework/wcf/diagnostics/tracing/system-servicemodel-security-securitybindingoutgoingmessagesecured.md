@@ -1,19 +1,20 @@
 ---
+description: ': System. ServiceModel. Security. Securitybindingoutgoingmessagesecurity hakkında daha fazla bilgi edinin'
 title: System.ServiceModel.Security.SecurityBindingOutgoingMessageSecured
 ms.date: 03/30/2017
 ms.assetid: 5b6cd812-63ba-4614-89f1-3c31d7540c5d
-ms.openlocfilehash: c161139c934e3c64fd0b8a21938bab5077af8fd5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: accf9ff8b53ca9e35690b9f7edfd625a159ca6a7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96276821"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99798569"
 ---
 # <a name="systemservicemodelsecuritysecuritybindingoutgoingmessagesecured"></a>System.ServiceModel.Security.SecurityBindingOutgoingMessageSecured
 
 System.ServiceModel.Security.SecurityBindingOutgoingMessageSecured  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Güvenlik protokolü giden iletiyi güvenli hale getirdi.  
   

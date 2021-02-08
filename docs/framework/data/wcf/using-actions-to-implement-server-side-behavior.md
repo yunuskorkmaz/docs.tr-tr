@@ -1,21 +1,24 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: sunucu tarafı davranışı uygulamak için eylemleri kullanma'
 title: Sunucu tarafı davranışı uygulamak için eylemleri kullanma
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: 19139a7efd955448a1f97c492a7245c1bbfe6c3d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6decd6134184de860ae2865b6dcf34b3c0b81813
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180601"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791718"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Sunucu tarafı davranışı uygulamak için eylemleri kullanma
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 OData eylemleri, bir OData hizmetinden alınan bir kaynak üzerinde davranan bir davranışı uygulamak için bir yol sağlar. Örneğin, bir dijital filmi kaynak olarak düşünün, dijital bir filmle yapabileceğiniz pek çok şey vardır: kullanıma alma, oran/açıklama veya iade etme. Bunlar, dijital filmleri yöneten bir WCF veri hizmeti tarafından uygulanabilecek eylemlere örnektir. Eylemler, üzerinde eylemin çağrılabilecek bir kaynağı içeren bir OData yanıtında açıklanır. Bir Kullanıcı dijital bir filmi temsil eden bir kaynak istediğinde, WCF veri hizmetinden döndürülen yanıt, bu kaynak için kullanılabilen eylemler hakkında bilgi içerir. Bir eylemin kullanılabilirliği, veri hizmetinin veya kaynağın durumuna bağlı olabilir. Örneğin, dijital bir film kullanıma alındıktan sonra başka bir kullanıcı tarafından kullanıma alınamaz. İstemciler bir URL belirterek eylemi çağırabilirler. Örneğin, `http://MyServer/MovieService.svc/Movies(6)` belirli bir dijital filmi tanımlayabilir ve `http://MyServer/MovieService.svc/Movies(6)/Checkout` eylemi belirli bir filmde çağıracaktır. Eylemler, veri modelinizi açığa çıkarmadan hizmet modelini kullanıma sunmanıza olanak tanır. Film hizmeti örneğine devam etmek için, bir kullanıcının bir filmi derecelendirmesini, ancak derecelendirme verilerini bir kaynak olarak doğrudan kullanıma sunmasına izin vermek isteyebilirsiniz. Kullanıcının bir filmi derecelendirmesini, ancak derecelendirme verilerine kaynak olarak doğrudan erişemesinin bir ücret eylemi uygulayabilirsiniz.
 
 ## <a name="implementing-an-action"></a>Eylem uygulama
 
- Bir hizmet eylemi uygulamak için <xref:System.IServiceProvider> ,, [IDataServiceActionProvider](/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103))ve [ıstreamınkable](/previous-versions/dotnet/wcf-data-services/hh859893(v=vs.103)) arabirimlerini uygulamanız gerekir. <xref:System.IServiceProvider> WCF Veri Hizmetleri, [IDataServiceActionProvider](/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103))uygulamanızı almasına izin verir. [IDataServiceActionProvider](/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) , hizmet eylemlerini oluşturma, bulma, açıklama ve çağırma WCF veri Hizmetleri olanak tanır. [IDataServiceInvokable](/previous-versions/dotnet/wcf-data-services/hh859893(v=vs.103)) , hizmet eylemlerinin davranışını uygulayan kodu çağıralmanızı ve varsa sonuçları almanızı sağlar. WCF Veri Hizmetleri, her hizmet çağrıldığında hizmetin yeni bir örneğinin oluşturulduğuna dikkat edin, bu da hizmetin her çağrılışında bir hizmetin yeni bir örneğini oluşturulacaktır.  Hizmet oluşturulduğunda gereksiz bir işin yapıldığından emin olun.
+ Bir hizmet eylemi uygulamak için <xref:System.IServiceProvider> ,, [IDataServiceActionProvider](/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103))ve [ıstreamınkable](/previous-versions/dotnet/wcf-data-services/hh859893(v=vs.103)) arabirimlerini uygulamanız gerekir. <xref:System.IServiceProvider> WCF Veri Hizmetleri, [IDataServiceActionProvider](/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103))uygulamanızı almasına izin verir. [IDataServiceActionProvider](/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) , hizmet eylemlerini oluşturma, bulma, açıklama ve çağırma WCF veri Hizmetleri olanak tanır. [IDataServiceInvokable](/previous-versions/dotnet/wcf-data-services/hh859893(v=vs.103)) , hizmet eylemlerinin davranışını uygulayan kodu çağıralmanızı ve varsa sonuçları almanızı sağlar. WCF Veri Hizmetleri Per-Call WCF Hizmetleri olduğunu aklınızda bulundurun. hizmetin her çağrılışında hizmetin yeni bir örneği oluşturulur.  Hizmet oluşturulduğunda gereksiz bir işin yapıldığından emin olun.
 
 ### <a name="iserviceprovider"></a>IServiceProvider
 

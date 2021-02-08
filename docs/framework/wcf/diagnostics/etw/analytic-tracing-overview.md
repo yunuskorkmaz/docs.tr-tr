@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: analitik izlemeye genel bakış'
 title: Çözümleme İzleme Genel Bakış
 ms.date: 03/30/2017
 helpviewer_keywords:
 - analytic tracing [WCF], overview
 ms.assetid: ae55e9cc-0809-442f-921f-d644290ebf15
-ms.openlocfilehash: b519156faba68c769f4c1380a11706aebaab7e7c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 574236b364ab03afbf3c1f3dc3a63842220e38b0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559063"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99798868"
 ---
 # <a name="analytic-tracing-overview"></a>Analitik izlemeye genel bakış
 

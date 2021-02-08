@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: <headers> öğesi'
 title: <headers> öğesi
 ms.date: 03/30/2017
 ms.assetid: 040f7a8c-bb57-4db6-bdb0-cfb92a1b01af
-ms.openlocfilehash: 1b3118629e03220e7550c8ac4e2af9beb846e8dd
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a4a77b04599d68a3fc2b89b47c8c52b58b05699e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91178118"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791900"
 ---
 # <a name="headers-element"></a>\<headers> öğesi
 

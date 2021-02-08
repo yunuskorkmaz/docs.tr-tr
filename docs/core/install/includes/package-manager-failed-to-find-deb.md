@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: aba7b473af7685aa45f7e093a2f75311687593df
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 3275865cf7f4669ba7deaacea320136d02f64dda
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506981"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99804249"
 ---
 
 **{DotNet-Package} paketi bulunamadı** veya **bazı paketler yüklenemediğinden** benzer bir hata iletisi alırsanız, aşağıdaki komutları çalıştırın.
@@ -15,7 +15,7 @@ Aşağıdaki komut kümesinde iki yer tutucu vardır.
 Bu, yüklemekte olduğunuz .NET paketini (gibi) temsil eder `aspnetcore-runtime-3.1` . Bu, aşağıdaki `sudo apt-get install` komutta kullanılır.
 
 - `{os-version}`\
-Bu, açık olduğunuz Linux sürümünü temsil eder. Bu, `wget` aşağıdaki komutta kullanılır.
+Bu, kullandığınız dağıtım sürümünü temsil eder. Bu, `wget` aşağıdaki komutta kullanılır. Dağıtım sürümü, `20.04` Ubuntu veya Dete gibi sayısal bir değerdir `10` .
 
 Önce paket listesini temizlemeyi deneyin:
 

@@ -1,4 +1,5 @@
 ---
+description: Daha fazla bilgi için bkz. profil oluşturma genel bakış
 title: Profil Oluşturmaya Genel Bakış
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - security, profiling API considerations
 - stack depth [.NET Framework profiling]
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
-ms.openlocfilehash: cf29260c36437aaf679498f648d0fcac5d65f321
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f83a4435f6a4a62a190383543cf824c76a54a838
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558335"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99798920"
 ---
 # <a name="profiling-overview"></a>Profil Oluşturmaya Genel Bakış
 
@@ -46,7 +47,7 @@ CLR uygulamasının profilini oluşturmak, profil oluşturma genel olarak derlen
 
 ## <a name="the-profiling-api"></a>Profil oluşturma API 'SI
 
-Genellikle, profil oluşturma API 'SI, yönetilen bir uygulamanın yürütülmesini izleyen bir program olan *kod profil oluşturucu*yazmak için kullanılır.
+Genellikle, profil oluşturma API 'SI, yönetilen bir uygulamanın yürütülmesini izleyen bir program olan *kod profil oluşturucu* yazmak için kullanılır.
 
 Profil oluşturma API 'si, profili oluşturulan uygulamayla aynı işleme yüklenen bir profil oluşturucu DLL tarafından kullanılır. Profil oluşturucu DLL, .NET Framework sürüm 1,0 ve 1,1 ' de bir[geri çağırma arabirimi (](icorprofilercallback-interface.md) [ICorProfilerCallback2](icorprofilercallback2-interface.md) sürüm 2,0 ve üzeri) uygular. CLR, profili oluşturulan işlemdeki olayların profil oluşturucuyu bilgilendirmek için bu arabirimdeki yöntemleri çağırır. Profil Oluşturucu, profili oluşturulmuş uygulamanın durumu hakkında bilgi almak için [ICorProfilerInfo](icorprofilerinfo-interface.md) ve [ICorProfilerInfo2](icorprofilerinfo2-interface.md) arabirimlerindeki yöntemleri kullanarak çalışma zamanına geri çağırabilir.
 

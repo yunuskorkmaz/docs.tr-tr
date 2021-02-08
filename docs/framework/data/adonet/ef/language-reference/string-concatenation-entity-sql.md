@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: + (dize birleştirme) (Entity SQL)'
 title: + (Dize birleştirme) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 580130fa-6c7c-4f76-a47d-d22c27ccadf6
-ms.openlocfilehash: 92591448a3707ba11ad2462161050e48e0398728
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 7b6aac5b865e2127bb23446248e20d83ea3c7ea3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173633"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791848"
 ---
 # <a name="-string-concatenation-entity-sql"></a>+ (Dize birleştirme) (Entity SQL)
 

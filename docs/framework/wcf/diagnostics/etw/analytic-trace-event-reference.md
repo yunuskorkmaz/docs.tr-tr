@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: analitik Izleme olayı başvurusu'
 title: Çözümleme İzleme Etkinliği Başvurusu
 ms.date: 03/30/2017
 helpviewer_keywords:
 - analytic tracing [WCF]. reference
 ms.assetid: e44540cf-44a1-4efc-b965-7fbfd2131d73
-ms.openlocfilehash: 28ae252d562b57df0553f0fd4370845e836ef537
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1f4773692d3481cd5fa662d4fc70905215939db3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96254850"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99798842"
 ---
 # <a name="analytic-trace-event-reference"></a>Çözümleme İzleme Etkinliği Başvurusu
 

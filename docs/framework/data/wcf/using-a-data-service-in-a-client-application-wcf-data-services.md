@@ -1,18 +1,21 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: bir Istemci uygulamasında veri hizmeti kullanma (WCF Veri Hizmetleri)'
 title: Istemci uygulamasında bir veri hizmeti kullanma (WCF Veri Hizmetleri)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: b921e78c1b3d3d90d9ac8b4a459df496cf6d14dd
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f16b927a00aae55a3cb95630fc5d75a1c4c9e238
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180588"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791731"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Istemci uygulamasında bir veri hizmeti kullanma (WCF Veri Hizmetleri)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 Bir Web tarayıcısına URI sağlayarak açık veri Protokolü (OData) akışı sunan bir hizmete erişebilirsiniz. URI, bir kaynağın adresini sağlar ve isteğin gösterdiği temel verilere erişmek veya değiştirmek için bu adreslere gönderilen istek iletileri gönderilir. Tarayıcı bir HTTP GET komutu yayınlar ve istenen kaynağı OData akışı olarak döndürür. Daha fazla bilgi için bkz. [bir Web tarayıcısından hizmete erişme](accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  
   

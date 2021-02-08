@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Kurumsal satın alma Işlemi'
 title: Şirket Satın Alma İşlemi
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: aa2ca2577eb68204ffcb755ce1b16b9354348ee3
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c26b1f46f29b7a6ec06acf5d19381b5c8f460433
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96293474"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787870"
 ---
 # <a name="corporate-purchase-process"></a>Şirket Satın Alma İşlemi
 
@@ -29,7 +30,7 @@ Bu örnek, otomatik en iyi teklif seçimine sahip teklifler (RFP) tabanlı satı
 
 - Leriniz.
 
-- Kalıcılığı.
+- Kalıcılık.
 
 - Şema sürekliliği.
 
@@ -93,7 +94,7 @@ Bu örnek, otomatik en iyi teklif seçimine sahip teklifler (RFP) tabanlı satı
 
  Aşağıdaki tabloda WfDefinition projesindeki en önemli dosyaların açıklaması yer almaktadır.  
   
-|Dosya|Açıklama|  
+|Dosya|Description|  
 |----------|-----------------|  
 |IPurchaseProcessHost.cs|İş akışının ana bilgisayarı için arabirim.|  
 |PurchaseProcessHost.cs|İş akışı için bir konak uygulama. Konak, iş akışı örneklerini yüklemek, çalıştırmak ve bunlarla etkileşim kurmak için tüm istemci uygulamalarında kullanılır `PurchaseProcess` .|  
@@ -121,7 +122,7 @@ Bu örnek, otomatik en iyi teklif seçimine sahip teklifler (RFP) tabanlı satı
 
  Aşağıdaki tabloda, Web Istemcisi projesindeki en önemli Web sayfalarının açıklaması yer almaktadır.  
   
-|Dosya|Açıklama|  
+|Dosya|Description|  
 |-|-|  
 |CreateRfp. aspx|Teklifler için yeni bir Istek oluşturur ve gönderir.|  
 |Default.aspx|Teklifler için tüm etkin ve tamamlanmış Istekleri gösterir.|  
@@ -132,7 +133,7 @@ Bu örnek, otomatik en iyi teklif seçimine sahip teklifler (RFP) tabanlı satı
 
  Aşağıdaki tabloda, Win Forms projesindeki en önemli formların açıklaması yer almaktadır.  
   
-|Form|Açıklama|  
+|Form|Description|  
 |-|-|  
 |NewRfp|Teklifler için yeni bir Istek oluşturur ve gönderir.|  
 |Showtekliflerin|Teklifler için tüm etkin ve tamamlanmış Istekleri gösterin. **Note:**  Teklif talebi oluşturduktan veya değiştirdikten sonra bu ekrandaki değişiklikleri görmek için Kullanıcı arabirimindeki **Yenile** düğmesine tıklamanız gerekebilir.|  

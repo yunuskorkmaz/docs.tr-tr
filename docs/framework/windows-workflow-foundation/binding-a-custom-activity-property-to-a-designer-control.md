@@ -1,25 +1,26 @@
 ---
+description: 'Daha fazla bilgi edinin: özel etkinlik özelliğini Tasarımcı denetimine bağlama'
 title: Özel etkinlik özelliğini tasarımcı denetimine bağlama
 ms.date: 03/30/2017
 ms.assetid: 2e8061ea-10f5-407c-a31f-d0d74ce12f27
-ms.openlocfilehash: 142a9eb273a98d3a2d83a1239d6d7c891d5cc305
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 522e3df3028270d42f7654026383c628ec951e8d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945905"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787948"
 ---
 # <a name="binding-a-custom-activity-property-to-a-designer-control"></a>Özel etkinlik özelliğini tasarımcı denetimine bağlama
 
-Bir etkinlik bağımsız değişkeni için bir metin kutusu Tasarımcı denetimine bağlama oldukça basittir; Etkinlik bağımsız değişkeni (örneğin, bir birleşik giriş kutusu) karmaşık Tasarımcı denetimine bağlama zorlukları, ancak sunabilir. Bu konuda, bir etkinlik bağımsız değişkeni bir birleşik giriş kutusu denetimi özel etkinlik tasarımcısında bağlamak anlatılmaktadır.
+Bir metin kutusu Tasarımcı denetimini bir etkinlik bağımsız değişkenine bağlama oldukça basittir; bir etkinlik bağımsız değişkenine karmaşık tasarımcı denetiminin (örneğin, Birleşik giriş kutusu) bağlanması, sorunlar oluşturabilir. Bu konuda, bir etkinlik bağımsız değişkeninin özel bir etkinlik tasarımcısında bir açılan kutu denetimine nasıl bağlanacağı anlatılmaktadır.
 
-## <a name="creating-the-combo-box-item-converter"></a>Birleşik giriş kutusu öğesi dönüştürücü oluşturma
+## <a name="creating-the-combo-box-item-converter"></a>Birleşik giriş kutusu öğe dönüştürücüsünü oluşturma
 
-1. Visual Studio CustomProperty adlı yeni bir boş çözüm oluşturun.
+1. Visual Studio 'da CustomProperty adlı yeni bir boş çözüm oluşturun.
 
-2. ComboBoxItemConverter adlı yeni bir sınıf oluşturun. System.Windows.Data bir başvuru ekleyin ve türetilen sınıf sahip <xref:System.Windows.Data.IValueConverter>. Visual Studio için saplamalar oluşturmak için arabirimi gerçekleştirmeniz sahip `Convert` ve `ConvertBack`.
+2. ComboBoxItemConverter adlı yeni bir sınıf oluşturun. System. Windows. Data öğesine bir başvuru ekleyin ve sınıfın türemesini sağlayabilirsiniz <xref:System.Windows.Data.IValueConverter> . Visual Studio 'nun ve için saplamalar oluşturmak üzere arabirimini uygulaması gerekir `Convert` `ConvertBack` .
 
-3. Aşağıdaki kodu ekleyin `Convert` yöntemi. Bu kod etkinliğin dönüştürür <xref:System.Activities.InArgument%601> türü <xref:System.String> Tasarımcısı'nda yerleştirilecek değer.
+3. `Convert` yöntemine aşağıdaki kodu ekleyin. Bu kod, etkinliğin <xref:System.Activities.InArgument%601> türünü <xref:System.String> tasarımcıya yerleştirilecek değere dönüştürür.
 
     ```csharp
     ModelItem modelItem = value as ModelItem;
@@ -46,7 +47,7 @@ Bir etkinlik bağımsız değişkeni için bir metin kutusu Tasarımcı denetimi
     return null;
     ```
 
-     Yukarıdaki kod parçacığında ifadesi kullanılarak da oluşturulabilir <xref:Microsoft.CSharp.Activities.CSharpValue%601> yerine <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>.
+     Yukarıdaki kod parçacığında ifadesi yerine kullanılarak da oluşturulabilir <xref:Microsoft.CSharp.Activities.CSharpValue%601> <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> .
 
     ```csharp
     ModelItem modelItem = value as ModelItem;
@@ -73,7 +74,7 @@ Bir etkinlik bağımsız değişkeni için bir metin kutusu Tasarımcı denetimi
     return null;
     ```
 
-4. Aşağıdaki kodu ekleyin `ConvertBack` yöntemi. Bu kod dönüştürür gelen birleşik giriş kutusu öğeyi yeniden bir <xref:System.Activities.InArgument%601>.
+4. `ConvertBack` yöntemine aşağıdaki kodu ekleyin. Bu kod, gelen Birleşik giriş kutusu öğesini geri dönüştürür <xref:System.Activities.InArgument%601> .
 
     ```csharp
     // Convert combo box value to InArgument<string>
@@ -83,7 +84,7 @@ Bir etkinlik bağımsız değişkeni için bir metin kutusu Tasarımcı denetimi
                 return inArgument;
     ```
 
-     Yukarıdaki kod parçacığında ifadesi kullanılarak da oluşturulabilir <xref:Microsoft.CSharp.Activities.CSharpValue%601> yerine <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>.
+     Yukarıdaki kod parçacığında ifadesi yerine kullanılarak da oluşturulabilir <xref:Microsoft.CSharp.Activities.CSharpValue%601> <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> .
 
     ```csharp
     // Convert combo box value to InArgument<string>
@@ -93,13 +94,13 @@ Bir etkinlik bağımsız değişkeni için bir metin kutusu Tasarımcı denetimi
                 return inArgument;
     ```
 
-## <a name="adding-the-comboboxitemconverter-to-the-custom-designer-of-an-activity"></a>Özel bir etkinlik Tasarımcısı için ComboBoxItemConverter ekleme
+## <a name="adding-the-comboboxitemconverter-to-the-custom-designer-of-an-activity"></a>Bir etkinliğin özel tasarımcısına ComboBoxItemConverter ekleme
 
-1. Yeni bir öğe projeye ekleyin. Yeni öğe iletişim kutusunda iş akışı düğümünü seçin ve etkinlik Tasarımcısı yeni öğe türü olarak seçin. ' % S'öğesi CustomPropertyDesigner adı.
+1. Projeye yeni bir öğe ekleyin. Yeni öğe iletişim kutusunda Iş akışı düğümünü seçin ve yeni öğe türü olarak etkinlik Tasarımcısı ' nı seçin. Öğeyi CustomPropertyDesigner olarak adlandırın.
 
-2. Birleşik giriş kutusu yeni tasarımcıya ekleyin. Items özelliğini "Item1" içerik değerleriyle Kombo kutusu birkaç öğe ekleyin ve ' Item2 ".
+2. Yeni tasarımcıya Birleşik giriş kutusu ekleyin. Items özelliğinde, "Item1" ve "Item2" Içerik değerleriyle birlikte Birleşik giriş kutusuna birkaç öğe ekleyin.
 
-3. Yeni öğe dönüştürücü için birleşik giriş kutusu kullanılacak öğe dönüştürücü olarak eklemek için kutunun XAML değiştirin. Dönüştürücü ActivityDesigner.Resources Segmentte bir kaynak olarak eklenir ve dönüştürücü dönüştürücü özniteliğini belirtir <xref:System.Windows.Controls.ComboBox>. Ad alanı projenin etkinlik Tasarımcısı için ad alanları özniteliklerinde belirtilen dikkat edin. Tasarımcı, farklı bir projede kullanılacak ise, bu ad alanı değiştirilmesi gerekir.
+3. Birleşik giriş kutusu için kullanılacak öğe dönüştürücü olarak yeni öğe dönüştürücüsünü eklemek için açılan kutunun XAML 'sini değiştirin. Dönüştürücü, ActivityDesigner. resources segmentine bir kaynak olarak eklenir ve için dönüştürücü özniteliğinde dönüştürücüyü belirtir <xref:System.Windows.Controls.ComboBox> . Projenin ad alanının, etkinlik Tasarımcısı için ad alanları özniteliklerinde belirtildiğine unutmayın; Tasarımcı farklı bir projede kullanılacaksa, bu ad alanının değiştirilmesi gerekir.
 
     ```xaml
     <sap:ActivityDesigner x:Class="CustomProperty.CustomPropertyDesigner"
@@ -123,14 +124,14 @@ Bir etkinlik bağımsız değişkeni için bir metin kutusu Tasarımcı denetimi
     </sap:ActivityDesigner>
     ```
 
-4. Yeni bir öğe türünün oluşturma <xref:System.Activities.CodeActivity>. IDE etkinliği tarafından oluşturulan varsayılan kod bu örnek için yeterli olacaktır.
+4. Türünde yeni bir öğe oluşturun <xref:System.Activities.CodeActivity> . Etkinlik için IDE tarafından oluşturulan varsayılan kod bu örnek için yeterli olacaktır.
 
-5. Sınıf tanımına aşağıdaki özniteliği ekleyin:
+5. Aşağıdaki özniteliği sınıf tanımına ekleyin:
 
     ```csharp
     [Designer(typeof(CustomPropertyDesigner))]
     ```
 
-     Bu satır, yeni Tasarımcı yeni sınıf ile ilişkilendirir.
+     Bu satır yeni tasarımcıyı yeni sınıfla ilişkilendirir.
 
- Şimdi yeni etkinlik Tasarımcısı ile ilişkili olmalıdır. Yeni Etkinlik test etmek için bir iş akışına ekleme ve iki değerleri birleşik giriş kutusu ayarlayın. Özellikler penceresinde, birleşik giriş kutusu değeri yansıtacak şekilde güncelleştirmeniz gerekir.
+ Yeni etkinlik artık tasarımcı ile ilişkilendirilmelidir. Yeni etkinliği test etmek için bir iş akışına ekleyin ve Birleşik giriş kutusunu iki değere ayarlayın. Özellikler penceresi, Birleşik giriş kutusu değerini yansıtacak şekilde güncellemelidir.

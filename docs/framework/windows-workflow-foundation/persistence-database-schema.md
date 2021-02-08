@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Kalıcılık veritabanı şeması'
 title: Kalıcılık Veritabanı Şeması
 ms.date: 03/30/2017
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
-ms.openlocfilehash: f0ee076aa327f298007dfb18af324fb81c309067
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 40c47c5bfcb6c974eab6f2f2c926e0fa13054a38
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96246101"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787844"
 ---
 # <a name="persistence-database-schema"></a>Kalıcılık Veritabanı Şeması
 
@@ -17,7 +18,7 @@ Bu konuda, SQL Iş akışı örnek deposu tarafından desteklenen genel görün�
 
  **Örnekler** görünümü veritabanındaki tüm Iş akışı örnekleri hakkında genel bilgiler içerir.  
   
-|Sütun adı|Sütun türü|Açıklama|  
+|Sütun adı|Sütun türü|Description|  
 |-----------------|-----------------|-----------------|  
 |InstanceId|Benzersiz tanımlayıcı|Bir iş akışı örneğinin KIMLIĞI.|  
 |PendingTimer|DateTime|Bir gecikme etkinliğinde iş akışının engellenip engellenmediğini ve Zamanlayıcının süresi dolduktan sonra devam edecek olduğunu gösterir. İş akışı, bir zamanlayıcının süre sonu beklenememesi durumunda bu değer null olabilir.|  
@@ -52,7 +53,7 @@ Bu konuda, SQL Iş akışı örnek deposu tarafından desteklenen genel görün�
 
  **Servicedağıtımlar** görünümü tüm Web (IIS/WAS) barındırılan iş akışı hizmetleri için dağıtım bilgilerini içerir. Web 'de barındırılan her iş akışı örneği, bu görünümdeki bir satıra başvuran bir **ServiceDeploymentId** içerir.  
   
-|Sütun adı|Sütun türü|Açıklama|  
+|Sütun adı|Sütun türü|Description|  
 |-----------------|-----------------|-----------------|  
 |ServiceDeploymentId|BigInt|Bu görünüm için birincil anahtar.|  
 |SiteAdı|Nvarchar (max)|İş akışı hizmetini içeren sitenin adını temsil eder (örneğin, **varsayılan Web sitesi**).|  
@@ -71,7 +72,7 @@ Bu konuda, SQL Iş akışı örnek deposu tarafından desteklenen genel görün�
 
  **InstancePromotedProperties** görünümü, Kullanıcı tarafından belirtilen tüm yükseltilen özelliklerle ilgili bilgiler içerir. Yükseltilen bir özellik, bir kullanıcının örnekleri almak için sorgularda kullanabileceği birinci sınıf bir özellik olarak çalışır.  Örneğin, bir Kullanıcı her zaman **değer1** sütununda bir siparişin maliyetini depolayan bir PurchaseOrder yükseltmesi ekleyebilir. Bu, bir kullanıcının maliyeti belirli bir değeri aşan tüm satın alma siparişlerinin sorgulanbilmesini sağlar.  
   
-|Sütun türü|Sütun türü|Açıklama|  
+|Sütun türü|Sütun türü|Description|  
 |-|-|-|  
 |InstanceId|Benzersiz tanımlayıcı|Iş akışı örneğinin KIMLIĞI|  
 |EncodingOption|Iç|Yükseltilen ikili özellikleri seri hale getirmek için kullanılan kodlamayı açıklar.<br /><br /> -0 – kodlama yok<br />-1 – GZipStream|  

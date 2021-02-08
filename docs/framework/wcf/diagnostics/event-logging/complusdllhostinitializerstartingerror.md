@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Complusdllhostınitializerstartingerror'
 title: ComPlusDllHostInitializerStartingError
 ms.date: 03/30/2017
 ms.assetid: ad7d176a-cf40-412a-9335-eef64a25454a
-ms.openlocfilehash: 3aeea6a2e269756db34fce39fcb410ffd932a78e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: cb6b06c47dbdf6c0b1af6ab677dc78fd022aba1c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96266603"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788182"
 ---
 # <a name="complusdllhostinitializerstartingerror"></a>ComPlusDllHostInitializerStartingError
 
@@ -17,7 +18,7 @@ Kimlik: 131
   
  Kategori: ServiceModel  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bu olay, DllHost başlatıcısı başlatılırken bir hata oluştuğunu gösterir. Olay AppID, özel durum, işlem adı ve işlem KIMLIĞI ' ni listeler.  
   

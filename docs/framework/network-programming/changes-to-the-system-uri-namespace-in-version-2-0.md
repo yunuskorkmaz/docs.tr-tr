@@ -1,25 +1,26 @@
 ---
-title: Sürüm 2.0'da System.Uri ad alanında yapılan değişiklikler
+description: "Hakkında daha fazla bilgi edinin: sürüm 2,0 ' de System. Uri ad alanındaki değişiklikler"
+title: Sürüm 2,0 ' de System. Uri ad alanındaki değişiklikler
 ms.date: 03/30/2017
 ms.assetid: 35883fe9-2d09-4d8b-80ca-cf23a941e459
-ms.openlocfilehash: 987010b8367069e8089df3f809d23f258bb68f2b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8b5e2f2b3b59fba96e20e40a4df18273a2f6034f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "61642769"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791627"
 ---
-# <a name="changes-to-the-systemuri-namespace-in-version-20"></a>Sürüm 2.0'da System.Uri ad alanında yapılan değişiklikler
+# <a name="changes-to-the-systemuri-namespace-in-version-20"></a>Sürüm 2,0 ' de System. Uri ad alanındaki değişiklikler
 
-<xref:System.Uri?displayProperty=nameWithType> Sınıfta çeşitli değişiklikler yapıldı. Bu değişiklikler yanlış davranışı, gelişmiş kullanılabilirliği ve gelişmiş güvenliği düzelttirdi.
+Sınıfta birkaç değişiklik yapılmıştır <xref:System.Uri?displayProperty=nameWithType> . Bu değişiklikler hatalı davranışı, gelişmiş kullanılabilirliği ve geliştirilmiş güvenliği düzelttik.
 
-## <a name="obsolete-and-deprecated-members"></a>Eski ve yıkıntılı Üyeler
+## <a name="obsolete-and-deprecated-members"></a>Kullanımdan kaldırılan ve kullanım dışı bırakılmış Üyeler
 
- Kurucular:
+ Kurucu
 
-- `dontEscape` Parametresi olan tüm yapıcılar.
+- Parametresi olan tüm oluşturucular `dontEscape` .
 
- Yöntemler:
+ Yöntem
 
 - <xref:System.Uri.CheckSecurity%2A>
 
@@ -39,37 +40,37 @@ ms.locfileid: "61642769"
 
 ## <a name="changes"></a>Değişiklikler
 
-- Sorgu bölümü (dosya, ftp ve diğerleri) olmadığı bilinen URI düzenleri için '?' karakteri her zaman kaçar <xref:System.Uri.Query%2A> ve bir bölümün başlangıcı olarak kabul edilmez.
+- Bir sorgu bölümüne (dosya, FTP ve diğerleri) sahip olmadığı bilinen URI şemaları için, '? ' karakteri her zaman kaçışın ve bir parçanın başlangıcını kabul etmez <xref:System.Uri.Query%2A> .
 
-- Örtük dosya URI'leri `c:\directory\file@name.txt`(formdan), parça karakteri ('#') her zaman tam <xref:System.Uri.LocalPath%2A> `true`unescaping istenmedikçe veya .
+- Örtük dosya URI 'Leri (form) için `c:\directory\file@name.txt` , tam kaçış istenmediği veya olduğu müddetçe, parça karakteri (' # ') her zaman atlanmalıdır <xref:System.Uri.LocalPath%2A> `true` .
 
-- UNC hostname desteği kaldırıldı; uluslararası ana bilgisayar adlarını temsil eden IDN belirtimi kabul edilmiştir.
+- UNC konak adı desteği kaldırıldı; Uluslararası ana bilgisayar adlarını temsil eden ıDN belirtimi benimsendi.
 
-- <xref:System.Uri.LocalPath%2A>her zaman tamamen kaçılmamış bir dize döndürür.
+- <xref:System.Uri.LocalPath%2A> her zaman tamamen kaçışsız bir dize döndürür.
 
-- <xref:System.Uri.ToString%2A>kaçan bir '%', '?'veya '#' karakterinden kaçmaz.
+- <xref:System.Uri.ToString%2A> kaçışın '% ', '? ' veya ' # ' karakterinin kaçış yapmaz.
 
-- <xref:System.Uri.Equals%2A>şimdi eşitlik <xref:System.Uri.Query%2A> denetimindeki bölümü içerir.
+- <xref:System.Uri.Equals%2A> Artık <xref:System.Uri.Query%2A> eşitlik denetiminin bölümünü içerir.
 
-- "==" ve "!=" işleçleri geçersiz <xref:System.Uri.Equals%2A> kılınmış ve yönteme bağlanır.
+- "= =" Ve "! =" işleçleri geçersiz kılınır ve <xref:System.Uri.Equals%2A> yöntemine bağlanır.
 
-- <xref:System.Uri.IsLoopback%2A>şimdi tutarlı sonuçlar üretir.
+- <xref:System.Uri.IsLoopback%2A> Artık tutarlı sonuçlar üretir.
 
-- URI "`file:///path`" artık `file://path`.
+- "" URI 'SI `file:///path` artık öğesine çevrilmedi `file://path` .
 
-- "#" artık bir ana bilgisayar adı sonlandırıcısı olarak kabul edilmektedir. Yani, `http://contoso.com#fragment` şimdi dönüştürülür `http://contoso.com/#fragment`.
+- "#" artık ana bilgisayar adı Sonlandırıcı olarak tanınıyor. Diğer bir deyişle, `http://contoso.com#fragment` Şimdi öğesine dönüştürülür `http://contoso.com/#fragment` .
 
-- Bir temel URI'yi bir parçayla birleştirirken bir hata düzeltildi.
+- Temel URI 'yi bir parçaya birleştirilirken bir hata düzeltildi.
 
-- Bir hata <xref:System.Uri.HostNameType%2A> giderilmiştir.
+- İçindeki bir hata <xref:System.Uri.HostNameType%2A> düzeltildi.
 
-- NNTP ayrıştırma bir hata giderilmiştir.
+- NNTP ayrıştırmasındaki bir hata düzeltildi.
 
-- Formun bir URI HTTP:contoso.com şimdi bir ayrıştırma özel atar.
+- HTTP:contoso. com biçiminde bir URI artık ayrıştırma özel durumu oluşturuyor.
 
-- Framework, bir URI'deki userinfo'yu doğru şekilde işler.
+- Framework bir URI 'de UserInfo doğru şekilde işler.
 
-- URI yol sıkıştırma, bozuk bir URI'nin dosya sisteminde kökün üzerinde geçememesi için sabitlenir.
+- URI yolu sıkıştırması, bozuk bir URI 'nin kök üzerindeki dosya sisteminde geçiş yapmasını sağlamak için düzeltilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

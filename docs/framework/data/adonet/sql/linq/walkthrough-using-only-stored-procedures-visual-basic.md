@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: Izlenecek yol: yalnızca saklı yordamları kullanma (Visual Basic)'
 title: 'İzlenecek yol: Yalnızca Saklı Yordamlar Kullanma (Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-ms.openlocfilehash: 57ae5dba89a299365e1ce3c2d54d844da0102f31
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b368bdd5717c0f424192c3eabb8058d633cac61e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91163954"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791770"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>İzlenecek yol: Yalnızca Saklı Yordamlar Kullanma (Visual Basic)
 
@@ -26,7 +27,7 @@ Bu izlenecek yol, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md
   
  Bu izlenecek yol Visual Basic geliştirme ayarları kullanılarak yazılmıştır.  
   
-## <a name="prerequisites"></a>Ön koşullar  
+## <a name="prerequisites"></a>Önkoşullar  
 
  Bu izlenecek yol aşağıdakileri gerektirir:  
   
@@ -68,11 +69,11 @@ Bu izlenecek yol, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md
   
 1. Visual Studio **Dosya** menüsünde **Yeni proje**' ye tıklayın.  
   
-2. **Yeni proje** Iletişim kutusundaki **proje türleri** bölmesinde **Visual Basic**öğesini genişletin ve ardından **Windows**' a tıklayın.  
+2. **Yeni proje** Iletişim kutusundaki **proje türleri** bölmesinde **Visual Basic** öğesini genişletin ve ardından **Windows**' a tıklayın.  
   
 3. **Şablonlar** bölmesinde **Windows Forms uygulama**' ya tıklayın.  
   
-4. **Ad** kutusuna **SprocOnlyApp**yazın.  
+4. **Ad** kutusuna **SprocOnlyApp** yazın.  
   
 5. **Tamam**'a tıklayın.  
   
@@ -110,7 +111,7 @@ Bu izlenecek yol, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md
   
 ### <a name="to-create-the-database-connection"></a>Veritabanı bağlantısını oluşturmak için  
   
-1. **Çözüm Gezgini**, **Form1. vb**öğesine sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.  
+1. **Çözüm Gezgini**, **Form1. vb** öğesine sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.  
   
      `Class Form1` Kod düzenleyicisinde görünür.  
   
@@ -133,19 +134,19 @@ Bu izlenecek yol, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md
     > [!NOTE]
     > Bu bölümde kalan adımları gerçekleştirirken araç kutusunu açık tutmak için otomatik **gizleme** raptiye ' ye tıklayın.  
   
-3. İki düğme, iki metin kutusu ve iki etiketi araç kutusundan **Form1**üzerine sürükleyin.  
+3. İki düğme, iki metin kutusu ve iki etiketi araç kutusundan **Form1** üzerine sürükleyin.  
   
      Denetimleri, eşlik eden çizimde olduğu gibi düzenleyin. Denetimlerin kolayca sığması için **Form1** ' i genişletin.  
   
-4. **Label1**öğesine sağ tıklayın ve ardından **Özellikler**' e tıklayın.  
+4. **Label1** öğesine sağ tıklayın ve ardından **Özellikler**' e tıklayın.  
   
 5. **Text** özelliğini **Label1** olarak değiştirin, **OrderID: yazın**.  
   
-6. **Etiket 2**için aynı şekilde, **Etiket 2** ' deki **Text** özelliğini CustomerID olarak değiştirin **:**.  
+6. **Etiket 2** için aynı şekilde, **Etiket 2** ' deki **Text** özelliğini CustomerID olarak değiştirin **:**.  
   
-7. Aynı şekilde, **button1** için **metin** özelliğini **sipariş ayrıntıları**olarak değiştirin.  
+7. Aynı şekilde, **button1** için **metin** özelliğini **sipariş ayrıntıları** olarak değiştirin.  
   
-8. **Button2** için **metin** özelliğini **sıra geçmişiyle**değiştirin.  
+8. **Button2** için **metin** özelliğini **sıra geçmişiyle** değiştirin.  
   
      Düğme denetimlerini tüm metinlerin görünür olması için genişletebilirsiniz.  
   
@@ -157,7 +158,7 @@ Bu izlenecek yol, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md
   
      [!code-vb[DLinqWalk4VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk4VB/vb/Form1.vb#2)]  
   
-3. Şimdi, **Button2** `Button2` olay işleyicisini oluşturmak ve kod düzenleyicisini açmak Için Form1 üzerinde Button2 'e çift tıklayın.  
+3. Şimdi,  `Button2` olay işleyicisini oluşturmak ve kod düzenleyicisini açmak Için Form1 üzerinde Button2 'e çift tıklayın.  
   
 4. İşleyiciye aşağıdaki kodu yazın `Button2` :  
   

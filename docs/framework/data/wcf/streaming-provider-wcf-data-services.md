@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: akış sağlayıcısı (WCF Veri Hizmetleri)'
 title: Akış sağlayıcısı (WCF Veri Hizmetleri)
 ms.date: 03/30/2017
 dev_langs:
@@ -10,14 +11,16 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 9ed728fa8d1d56c835aa27645a28921aa4f641e9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a87cd0764156e803bf30520160b54f6baaf4f644
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544459"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791744"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Akış sağlayıcısı (WCF Veri Hizmetleri)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 Veri hizmeti, büyük nesne ikili verilerini açığa çıkarır. Bu ikili veriler video ve ses akışlarını, görüntüleri, belge dosyalarını veya diğer ikili medya türlerini temsil edebilir. Veri modelindeki bir varlık bir veya daha fazla ikili özellik içerdiğinde, veri hizmeti yanıt akışındaki girdinin içinde Base-64 olarak kodlanmış bu ikili verileri döndürür. Büyük ikili verilerin bu şekilde yüklenmesi ve serileştirilmesi performansı etkileyebileceğinden, açık veri Protokolü (OData), ait olduğu varlıktan bağımsız ikili verileri almak için bir mekanizma tanımlar. Bu, ikili verileri varlıktaki bir veya daha fazla veri akışlarına ayırarak gerçekleştirilir.
 

@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: etkinlik tanımı kapsamı ve görünürlüğü'
 title: Etkinlik Tanımı Kapsamı ve Görünürlüğü
 ms.date: 03/30/2017
 ms.assetid: ccdffa07-9503-4eea-a61b-17f1564368b7
-ms.openlocfilehash: c7f656fee4960a8c43ac58abafba400ed9b35bc1
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ab779fe36473a8888ee0fb0c1b94f1ea6324f991
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96289171"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787974"
 ---
 # <a name="activity-definition-scoping-and-visibility"></a>Etkinlik Tanımı Kapsamı ve Görünürlüğü
 
@@ -63,7 +64,7 @@ Bir nesnenin kapsamı ve görünürlüğü gibi etkinlik tanımı kapsamı ve g�
   
 |Üye Türü|NativeActivity|Etkinlik|CodeActivity/AsyncCodeActivity|  
 |-----------------|--------------------|--------------|--------------------------------------|  
-|Arguments|Ortak/özel|Genel|uygulanamaz|  
+|Bağımsız değişkenler|Ortak/özel|Genel|uygulanamaz|  
 |Değişkenler|Ortak/özel|Genel|uygulanamaz|  
 |Alt etkinlikler|Ortak/özel|Ortak, bir sabit özel alt öğesi uygulamada tanımlandı.|uygulanamaz|  
 |ActivityDelegates|Ortak/özel|Genel|uygulanamaz|  

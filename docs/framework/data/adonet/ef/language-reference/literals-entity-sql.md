@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: değişmez değerler (Entity SQL)'
 title: Değişmez değerler (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-ms.openlocfilehash: 4402f4c6ee38432a0f606e39dd4a18639076ce04
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: cae2ec7ab8cf19166dc3100a85473fca2ed0a7be
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91161782"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791887"
 ---
 # <a name="literals-entity-sql"></a>Değişmez değerler (Entity SQL)
 
@@ -64,7 +65,7 @@ DATETIME'2006-10-1 23:11'
 DATETIME'2006-12-25 01:01:00.0000000' -- same as DATETIME'2006-12-25 01:01'  
 ```  
   
-## <a name="time"></a>Süre  
+## <a name="time"></a>Saat  
 
  Bir zaman sabiti, yerel ayardan bağımsızdır ve yalnızca bir zaman kısmından oluşur. Saat bölümü zorunludur ve varsayılan değer yoktur. HH: MM [: SS [. fffffff]] biçiminde olmalıdır; burada ss, 0 ile 23 arasında bir Hour değeridir, 59 MM 0 ile 59 arasındaki ikinci değerdir ve fffffff 0 ile 9999999 arasında ikinci kesir değeridir. Tüm değer aralıkları dahil değildir. Kesirli saniyeler isteğe bağlıdır. Kesirli saniyeler belirtilmediği takdirde saniyeler isteğe bağlıdır; Bu durumda, saniyeler gereklidir. Saniyeler veya kesirler belirtilmediğinde bunun yerine varsayılan sıfır değeri kullanılır.  
   

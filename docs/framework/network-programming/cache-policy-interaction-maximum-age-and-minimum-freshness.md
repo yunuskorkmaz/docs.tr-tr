@@ -1,4 +1,5 @@
 ---
+description: Önbellek Ilkesi etkileşimi — maksimum yaş ve en düşük yeniliği hakkında daha fazla bilgi edinin
 title: Önbellek İlkesi Etkileşimi — Yaş Üst Sınırı ve En Az Eskime
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - minimum freshness policy
 - age of cached resources
 ms.assetid: 6567d451-ecec-496c-95a3-a415b99ba52a
-ms.openlocfilehash: d4182268341f4a4334a627fc8c9e24fa235f003f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 882df93d44c0d745fcf30a7d9be3152797df4844
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96287559"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791653"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-minimum-freshness"></a>Önbellek İlkesi Etkileşimi — Yaş Üst Sınırı ve En Az Eskime
 

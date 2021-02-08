@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: çözümleme Izlemeyi dinamik olarak etkinleştirme'
 title: Analitik İzlemeyi Dinamik Olarak Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
-ms.openlocfilehash: 2c213507f6ed4e9fff4f1385b10f22e96b0a41b4
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 5fff4da8839b986ccb43a2280d6f994f31be7423
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96282359"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99798829"
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>Analitik İzlemeyi Dinamik Olarak Etkinleştirme
 
@@ -27,7 +28,7 @@ Windows işletim sistemiyle birlikte gelen araçları kullanarak izlemeyi Window
   
  WCF analitik izleme için, her izleme olayının iki tür anahtar sözcüğü vardır. İlk olarak, her olayda bir veya daha fazla senaryo anahtar sözcüğü vardır. Bu anahtar sözcükler, bu olayın desteklemeye yönelik senaryolar olduğunu gösterir. Her biri aşağıdaki tabloda gösterildiği gibi, belirli bir amaç için tasarlanan üç senaryo anahtar sözcüğü vardır. Anahtar sözcükleri kullanarak filtreleme, WCF hizmetini bozmadan dinamik olarak değiştirilebilir. Yani, geçerli izleme senaryonuzu ve topladığınız izleme bilgilerini dinamik olarak değiştirebileceðiniz anlamına gelir. Örneğin, öğesini değiştirebilir `HealthMonitoring` `Troubleshooting` ve olay ayrıntı düzeyini izlemeyi artırabilirsiniz.  
   
-|Sözcükle|Açıklama|  
+|Sözcükle|Description|  
 |-------------|-----------------|  
 |`HealthMonitoring`|Hizmetinizin etkinliklerini izlemenize olanak tanıyan çok hafif ve en az izleme.|  
 |`EndToEndMonitoring`|İleti akışı izlemeyi desteklemek için kullanılan olaylar.|  
@@ -35,7 +36,7 @@ Windows işletim sistemiyle birlikte gelen araçları kullanarak izlemeyi Window
   
  İkinci anahtar sözcük grubu, .NET Framework hangi bileşenin olayı yayındığını tanımlar.  
   
-|Sözcükle|Açıklama|  
+|Sözcükle|Description|  
 |-------------|-----------------|  
 |`UserEvents`|.NET Framework değil, Kullanıcı kodu tarafından yayılan olaylar.|  
 |`ServiceModel`|WCF çalışma zamanı tarafından yayılan olaylar.|  

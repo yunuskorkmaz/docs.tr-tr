@@ -1,13 +1,14 @@
 ---
+description: Hakkında daha fazla bilgi edinin:-(Çıkart) (Entity SQL)
 title: '- Çıkarma (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: bc4327f9-09c0-438f-a008-927c5c478040
-ms.openlocfilehash: 17841f336ed186dcbc50b84254048546b15297e7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: cba23d998ad6beaf545118c69d806de46a1f6db0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91181043"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791835"
 ---
 # <a name="--subtract-entity-sql"></a>-(Çıkart) (Entity SQL)
 
