@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: CorManifestResourceFlags numaralandırması'
 title: CorManifestResourceFlags Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 1b0306b7-622b-4b57-8edc-3c713bb147ae
 topic_type:
 - apiref
-ms.openlocfilehash: f8334cb44042e21c086bc05c723e99b0c079fa2c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a863e1248bf5274e12fc16d2edea6b28dd493963
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95677069"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784411"
 ---
-# <a name="cormanifestresourceflags-enumeration"></a><span data-ttu-id="1d3d2-102">CorManifestResourceFlags Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="1d3d2-102">CorManifestResourceFlags Enumeration</span></span>
+# <a name="cormanifestresourceflags-enumeration"></a><span data-ttu-id="26934-103">CorManifestResourceFlags Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="26934-103">CorManifestResourceFlags Enumeration</span></span>
 
-<span data-ttu-id="1d3d2-103">Bir derleme bildiriminde kodlanan kaynakların görünürlüğünü gösterir.</span><span class="sxs-lookup"><span data-stu-id="1d3d2-103">Indicates the visibility of resources encoded in an assembly manifest.</span></span>  
+<span data-ttu-id="26934-104">Bir derleme bildiriminde kodlanan kaynakların görünürlüğünü gösterir.</span><span class="sxs-lookup"><span data-stu-id="26934-104">Indicates the visibility of resources encoded in an assembly manifest.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1d3d2-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="1d3d2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="26934-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="26934-105">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorManifestResourceFlags {  
@@ -37,22 +38,22 @@ typedef enum CorManifestResourceFlags {
 } CorManifestResourceFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="1d3d2-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="1d3d2-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="26934-106">Üyeler</span><span class="sxs-lookup"><span data-stu-id="26934-106">Members</span></span>  
   
-|<span data-ttu-id="1d3d2-106">Üye</span><span class="sxs-lookup"><span data-stu-id="1d3d2-106">Member</span></span>|<span data-ttu-id="1d3d2-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="1d3d2-107">Description</span></span>|  
+|<span data-ttu-id="26934-107">Üye</span><span class="sxs-lookup"><span data-stu-id="26934-107">Member</span></span>|<span data-ttu-id="26934-108">Description</span><span class="sxs-lookup"><span data-stu-id="26934-108">Description</span></span>|  
 |------------|-----------------|  
-|`mrVisibilityMask`|<span data-ttu-id="1d3d2-108">Ayrılmış.</span><span class="sxs-lookup"><span data-stu-id="1d3d2-108">Reserved.</span></span>|  
-|`mrPublic`|<span data-ttu-id="1d3d2-109">Kaynaklar geneldir.</span><span class="sxs-lookup"><span data-stu-id="1d3d2-109">The resources are public.</span></span>|  
-|`mrPrivate`|<span data-ttu-id="1d3d2-110">Kaynaklar özeldir.</span><span class="sxs-lookup"><span data-stu-id="1d3d2-110">The resources are private.</span></span>|  
+|`mrVisibilityMask`|<span data-ttu-id="26934-109">Ayrılmış.</span><span class="sxs-lookup"><span data-stu-id="26934-109">Reserved.</span></span>|  
+|`mrPublic`|<span data-ttu-id="26934-110">Kaynaklar geneldir.</span><span class="sxs-lookup"><span data-stu-id="26934-110">The resources are public.</span></span>|  
+|`mrPrivate`|<span data-ttu-id="26934-111">Kaynaklar özeldir.</span><span class="sxs-lookup"><span data-stu-id="26934-111">The resources are private.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="1d3d2-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="1d3d2-111">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="26934-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="26934-112">Requirements</span></span>  
 
- <span data-ttu-id="1d3d2-112">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1d3d2-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="26934-113">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="26934-113">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1d3d2-113">**Üst bilgi:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="1d3d2-113">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="26934-114">**Üst bilgi:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="26934-114">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="1d3d2-114">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1d3d2-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="26934-115">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="26934-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1d3d2-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1d3d2-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="26934-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="26934-116">See also</span></span>
 
-- [<span data-ttu-id="1d3d2-116">Meta Veri Numaralandırmalar</span><span class="sxs-lookup"><span data-stu-id="1d3d2-116">Metadata Enumerations</span></span>](metadata-enumerations.md)
+- [<span data-ttu-id="26934-117">Meta Veri Numaralandırmalar</span><span class="sxs-lookup"><span data-stu-id="26934-117">Metadata Enumerations</span></span>](metadata-enumerations.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: CorSaveSize numaralandırması'
 title: CorSaveSize Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: eb95ce39-5688-43c1-a34d-578794b32faa
 topic_type:
 - apiref
-ms.openlocfilehash: 81d47a3e4d72f991dc15924e7ff1ecc8df2e7322
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 47e2d4d77f58f8f1c2135da5867dfa47cedfd83d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95706066"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784229"
 ---
-# <a name="corsavesize-enumeration"></a><span data-ttu-id="4ae2b-102">CorSaveSize Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="4ae2b-102">CorSaveSize Enumeration</span></span>
+# <a name="corsavesize-enumeration"></a><span data-ttu-id="c9f24-103">CorSaveSize Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="c9f24-103">CorSaveSize Enumeration</span></span>
 
-<span data-ttu-id="4ae2b-103">Bir kaydetme işleminin boyutunu sorgularken gereken duyarlık düzeyini gösteren değerleri içerir.</span><span class="sxs-lookup"><span data-stu-id="4ae2b-103">Contains values indicating the level of precision required when querying for the size of a save operation.</span></span>  
+<span data-ttu-id="c9f24-104">Bir kaydetme işleminin boyutunu sorgularken gereken duyarlık düzeyini gösteren değerleri içerir.</span><span class="sxs-lookup"><span data-stu-id="c9f24-104">Contains values indicating the level of precision required when querying for the size of a save operation.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4ae2b-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="4ae2b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c9f24-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="c9f24-105">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorSaveSize {  
@@ -35,24 +36,24 @@ typedef enum CorSaveSize {
 } CorSaveSize;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="4ae2b-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="4ae2b-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="c9f24-106">Üyeler</span><span class="sxs-lookup"><span data-stu-id="c9f24-106">Members</span></span>  
   
-|<span data-ttu-id="4ae2b-106">Üye</span><span class="sxs-lookup"><span data-stu-id="4ae2b-106">Member</span></span>|<span data-ttu-id="4ae2b-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="4ae2b-107">Description</span></span>|  
+|<span data-ttu-id="c9f24-107">Üye</span><span class="sxs-lookup"><span data-stu-id="c9f24-107">Member</span></span>|<span data-ttu-id="c9f24-108">Description</span><span class="sxs-lookup"><span data-stu-id="c9f24-108">Description</span></span>|  
 |------------|-----------------|  
-|`cssAccurate`|<span data-ttu-id="4ae2b-108">Dönüş değerinin tam olarak doğru olması gerektiğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="4ae2b-108">Specifies that the return value should be exact.</span></span>|  
-|`cssQuick`|<span data-ttu-id="4ae2b-109">Dönüş değerinin tahmini olması gerektiğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="4ae2b-109">Specifies that the return value should be estimated.</span></span>|  
-|`cssDiscardTransientCAs`|<span data-ttu-id="4ae2b-110">Discardable türlerinin kaldırılması gerektiğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="4ae2b-110">Specifies that discardable types should be removed.</span></span>|  
+|`cssAccurate`|<span data-ttu-id="c9f24-109">Dönüş değerinin tam olarak doğru olması gerektiğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="c9f24-109">Specifies that the return value should be exact.</span></span>|  
+|`cssQuick`|<span data-ttu-id="c9f24-110">Dönüş değerinin tahmini olması gerektiğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="c9f24-110">Specifies that the return value should be estimated.</span></span>|  
+|`cssDiscardTransientCAs`|<span data-ttu-id="c9f24-111">Discardable türlerinin kaldırılması gerektiğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="c9f24-111">Specifies that discardable types should be removed.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="4ae2b-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="4ae2b-111">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c9f24-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c9f24-112">Requirements</span></span>  
 
- <span data-ttu-id="4ae2b-112">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4ae2b-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="c9f24-113">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c9f24-113">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4ae2b-113">**Üst bilgi:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="4ae2b-113">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="c9f24-114">**Üst bilgi:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="c9f24-114">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="4ae2b-114">**Kitaplık:** MsCorEE.dll kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="4ae2b-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c9f24-115">**Kitaplık:** MsCorEE.dll kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="c9f24-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="4ae2b-115">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4ae2b-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c9f24-116">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c9f24-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4ae2b-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4ae2b-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c9f24-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c9f24-117">See also</span></span>
 
-- [<span data-ttu-id="4ae2b-117">Meta Veri Numaralandırmalar</span><span class="sxs-lookup"><span data-stu-id="4ae2b-117">Metadata Enumerations</span></span>](metadata-enumerations.md)
+- [<span data-ttu-id="c9f24-118">Meta Veri Numaralandırmalar</span><span class="sxs-lookup"><span data-stu-id="c9f24-118">Metadata Enumerations</span></span>](metadata-enumerations.md)

@@ -1,19 +1,20 @@
 ---
+description: WCF hakkında daha fazla bilgi edinin <activityScheduledQueries>
 title: <activityScheduledQueries> WCF
 ms.date: 03/30/2017
 ms.assetid: e351329f-9676-4f11-9b19-f4bac82f36fc
-ms.openlocfilehash: 86f196437b2230d6541570aa8994d99e7b340f66
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b92bb2827b4c8bce43e4ee0b8dc03c7be124e3da
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91151200"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782253"
 ---
-# <a name="activityscheduledqueries-of-wcf"></a><span data-ttu-id="f19c3-102">\<activityScheduledQueries> WCF</span><span class="sxs-lookup"><span data-stu-id="f19c3-102">\<activityScheduledQueries> of WCF</span></span>
+# <a name="activityscheduledqueries-of-wcf"></a><span data-ttu-id="4632a-103">\<activityScheduledQueries> WCF</span><span class="sxs-lookup"><span data-stu-id="4632a-103">\<activityScheduledQueries> of WCF</span></span>
 
-<span data-ttu-id="f19c3-103">Bir üst etkinliğin yürütülmesi için zamanlanmış bir etkinliği izlemek için kullanılan bir sorgu koleksiyonunu temsil eder.</span><span class="sxs-lookup"><span data-stu-id="f19c3-103">Represents a collection of queries that are used to track an activity scheduled for execution by a parent activity.</span></span> <span data-ttu-id="f19c3-104">Sorgu, etkinlik zamanlanan kayıtlarına abone olmak için izleme katılımcısı için gereklidir.</span><span class="sxs-lookup"><span data-stu-id="f19c3-104">The query is necessary for a tracking participant to subscribe to activity scheduled records.</span></span>  
+<span data-ttu-id="4632a-104">Bir üst etkinliğin yürütülmesi için zamanlanmış bir etkinliği izlemek için kullanılan bir sorgu koleksiyonunu temsil eder.</span><span class="sxs-lookup"><span data-stu-id="4632a-104">Represents a collection of queries that are used to track an activity scheduled for execution by a parent activity.</span></span> <span data-ttu-id="4632a-105">Sorgu, etkinlik zamanlanan kayıtlarına abone olmak için izleme katılımcısı için gereklidir.</span><span class="sxs-lookup"><span data-stu-id="4632a-105">The query is necessary for a tracking participant to subscribe to activity scheduled records.</span></span>  
   
-<span data-ttu-id="f19c3-105">Profil sorgularını izleme hakkında daha fazla bilgi için bkz. [Izleme profilleri](../../../windows-workflow-foundation/tracking-profiles.md)</span><span class="sxs-lookup"><span data-stu-id="f19c3-105">For more information on tracking profile queries, see [Tracking Profiles](../../../windows-workflow-foundation/tracking-profiles.md)</span></span>  
+<span data-ttu-id="4632a-106">Profil sorgularını izleme hakkında daha fazla bilgi için bkz. [Izleme profilleri](../../../windows-workflow-foundation/tracking-profiles.md)</span><span class="sxs-lookup"><span data-stu-id="4632a-106">For more information on tracking profile queries, see [Tracking Profiles](../../../windows-workflow-foundation/tracking-profiles.md)</span></span>  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
@@ -23,7 +24,7 @@ ms.locfileid: "91151200"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<workflow>**](workflow-of-wcf.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<activityScheduledQueries>**  
   
-## <a name="syntax"></a><span data-ttu-id="f19c3-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="f19c3-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4632a-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="4632a-107">Syntax</span></span>  
   
 ```xml  
 <tracking>
@@ -40,29 +41,29 @@ ms.locfileid: "91151200"
 </tracking>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="f19c3-107">Öznitelikler ve öğeler</span><span class="sxs-lookup"><span data-stu-id="f19c3-107">Attributes and elements</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="4632a-108">Öznitelikler ve öğeler</span><span class="sxs-lookup"><span data-stu-id="4632a-108">Attributes and elements</span></span>  
 
-<span data-ttu-id="f19c3-108">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="f19c3-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+<span data-ttu-id="4632a-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="4632a-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="f19c3-109">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="f19c3-109">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="4632a-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="4632a-110">Attributes</span></span>  
 
-<span data-ttu-id="f19c3-110">Yok.</span><span class="sxs-lookup"><span data-stu-id="f19c3-110">None.</span></span>  
+<span data-ttu-id="4632a-111">Yok.</span><span class="sxs-lookup"><span data-stu-id="4632a-111">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="f19c3-111">Alt öğeleri</span><span class="sxs-lookup"><span data-stu-id="f19c3-111">Child elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="4632a-112">Alt öğeleri</span><span class="sxs-lookup"><span data-stu-id="4632a-112">Child elements</span></span>  
   
-|<span data-ttu-id="f19c3-112">Öğe</span><span class="sxs-lookup"><span data-stu-id="f19c3-112">Element</span></span>|<span data-ttu-id="f19c3-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f19c3-113">Description</span></span>|  
+|<span data-ttu-id="4632a-113">Öğe</span><span class="sxs-lookup"><span data-stu-id="4632a-113">Element</span></span>|<span data-ttu-id="4632a-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="4632a-114">Description</span></span>|  
 |-------------|-----------------|  
-|[\<activityScheduledQuery>](activityscheduledquery-of-wcf.md)|<span data-ttu-id="f19c3-114">Bir üst etkinliğin yürütülmesi için zamanlanmış bir etkinliği izlemek için kullanılan sorgu.</span><span class="sxs-lookup"><span data-stu-id="f19c3-114">A query that is used to track an activity scheduled for execution by a parent activity.</span></span>|  
+|[\<activityScheduledQuery>](activityscheduledquery-of-wcf.md)|<span data-ttu-id="4632a-115">Bir üst etkinliğin yürütülmesi için zamanlanmış bir etkinliği izlemek için kullanılan sorgu.</span><span class="sxs-lookup"><span data-stu-id="4632a-115">A query that is used to track an activity scheduled for execution by a parent activity.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="f19c3-115">Üst öğeler</span><span class="sxs-lookup"><span data-stu-id="f19c3-115">Parent elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="4632a-116">Üst öğeler</span><span class="sxs-lookup"><span data-stu-id="4632a-116">Parent elements</span></span>  
   
-|<span data-ttu-id="f19c3-116">Öğe</span><span class="sxs-lookup"><span data-stu-id="f19c3-116">Element</span></span>|<span data-ttu-id="f19c3-117">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f19c3-117">Description</span></span>|  
+|<span data-ttu-id="4632a-117">Öğe</span><span class="sxs-lookup"><span data-stu-id="4632a-117">Element</span></span>|<span data-ttu-id="4632a-118">Açıklama</span><span class="sxs-lookup"><span data-stu-id="4632a-118">Description</span></span>|  
 |-------------|-----------------|  
-|[\<workflow>](../windows-workflow-foundation/workflow.md)|<span data-ttu-id="f19c3-118">Belirli bir iş akışı tarafından tanımlanan tüm sorgularında içeren bir yapılandırma öğesi `activityDefinitionId` özelliği.</span><span class="sxs-lookup"><span data-stu-id="f19c3-118">A configuration element that contains all queries for a specific workflow identified by the `activityDefinitionId` property.</span></span>|  
+|[\<workflow>](../windows-workflow-foundation/workflow.md)|<span data-ttu-id="4632a-119">Belirli bir iş akışı tarafından tanımlanan tüm sorgularında içeren bir yapılandırma öğesi `activityDefinitionId` özelliği.</span><span class="sxs-lookup"><span data-stu-id="4632a-119">A configuration element that contains all queries for a specific workflow identified by the `activityDefinitionId` property.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="f19c3-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f19c3-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4632a-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4632a-120">See also</span></span>
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElementCollection>
 - <xref:System.Activities.Tracking.ActivityScheduledQuery>
-- [<span data-ttu-id="f19c3-120">İş Akışı Takip ve İzleme</span><span class="sxs-lookup"><span data-stu-id="f19c3-120">Workflow Tracking and Tracing</span></span>](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [<span data-ttu-id="f19c3-121">İzleme Profilleri</span><span class="sxs-lookup"><span data-stu-id="f19c3-121">Tracking Profiles</span></span>](../../../windows-workflow-foundation/tracking-profiles.md)
+- [<span data-ttu-id="4632a-121">İş Akışı Takip ve İzleme</span><span class="sxs-lookup"><span data-stu-id="4632a-121">Workflow Tracking and Tracing</span></span>](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [<span data-ttu-id="4632a-122">İzleme Profilleri</span><span class="sxs-lookup"><span data-stu-id="4632a-122">Tracking Profiles</span></span>](../../../windows-workflow-foundation/tracking-profiles.md)
