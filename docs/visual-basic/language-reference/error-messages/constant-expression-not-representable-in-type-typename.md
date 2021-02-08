@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: BC30439: sabit ifade tür içinde gösterilemeyen tablo değil<typename>'
 title: Sabit ifade '<typename>' türünde gösterilemez
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30439
 ms.assetid: 0a842906-3bc5-4946-8a37-3e3da883ef63
-ms.openlocfilehash: e18f05c0d6a37ac4563b554d7ba943ba21131f85
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 763ed8a414d8dda3e950ae85a4b1152a459518a5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92163174"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796749"
 ---
 # <a name="bc30439-constant-expression-not-representable-in-type-typename"></a>BC30439: sabit ifade ' ' türünde gösterilemez \<typename>
 

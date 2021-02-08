@@ -1,4 +1,5 @@
 ---
+description: "Daha fazla bilgi edinin: BC30014: ' #ElseIf ' öncesinde eşleşen bir ' #If ' veya ' #ElseIf olmalıdır"
 title: "'#ElseIf' öncesinde eşleşen bir '#If' veya '#ElseIf' olmalıdır"
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30014
 ms.assetid: 5215585e-2efa-485a-9efe-9833a1cc83a0
-ms.openlocfilehash: 142c142afe0d9be0ecd4d8a0340f0f1957b20470
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 5eeb9c2fc0fd7267d95a8713a7071cd08788e48b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162784"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796567"
 ---
 # <a name="bc30014-elseif-must-be-preceded-by-a-matching-if-or-elseif"></a>BC30014: ' #ElseIf ' öncesinde eşleşen bir ' #If ' veya ' #ElseIf ' olmalıdır
 

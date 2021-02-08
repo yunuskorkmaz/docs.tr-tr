@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: BC30188: bildirim bekleniyor'
 title: Bildirim bekleniyor
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30188
 ms.assetid: da6b1df3-fe6b-4415-88e6-0977e5189e0b
-ms.openlocfilehash: 2755f5afcb96ca7a6c4d140908649390dd66d571
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: b86c182fb9dc8ab7d624833136f0e87b072aed92
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162706"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796671"
 ---
 # <a name="bc30188-declaration-expected"></a>BC30188: bildirim bekleniyor
 

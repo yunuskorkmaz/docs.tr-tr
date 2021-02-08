@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: BC30140: derleme bildirimi oluşturma hatası: <error message>'
 title: 'Derleme bildirimi oluşturulurken hata oldu: <error message>'
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30140
 ms.assetid: 1beb5aa0-7b79-4c85-946b-5c2d0a41d1d2
-ms.openlocfilehash: a772167966c4ec858197cc2032f4ae3d4e86070c
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 4116f3293a36f4592712c3e39c988aa730753de4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92163421"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796541"
 ---
 # <a name="bc30140-error-creating-assembly-manifest-error-message"></a>BC30140: derleme bildirimi oluşturulurken hata oluştu: \<error message>
 

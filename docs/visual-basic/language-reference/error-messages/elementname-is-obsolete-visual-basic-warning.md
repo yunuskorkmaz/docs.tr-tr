@@ -1,4 +1,5 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: BC40008: ' <elementname> ' artık kullanılmıyor (Visual Basic uyarısı)"
 title: "'<elementname>' eski (Visual Basic Uyarısı)"
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40008
 ms.assetid: 729e3eb5-76ac-4c55-9fdd-78350e0de55e
-ms.openlocfilehash: 555030d97434852eab64cc8b4bda2e901649d17d
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 6fea3526f19b139af103f21ddd89f2272eb6eac5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92163148"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796580"
 ---
 # <a name="bc40008-elementname-is-obsolete-visual-basic-warning"></a>BC40008: ' \<elementname> ' artık kullanılmıyor (Visual Basic uyarısı)
 

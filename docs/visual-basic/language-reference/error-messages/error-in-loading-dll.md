@@ -1,15 +1,16 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: DLL yüklenirken hata (Visual Basic)'
 title: DLL dosyasını yüklemede hata
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID48
 ms.assetid: 4226cd1f-028c-477d-88a5-cb57f7e0cdc8
-ms.openlocfilehash: 35733fe2e20d46207f6cfdaee32f6559fceed6eb
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 098d05e93d328f3667000bd81290f4b77cf7949e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874377"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796515"
 ---
 # <a name="error-in-loading-dll-visual-basic"></a>DLL yüklenirken hata (Visual Basic)
 

@@ -1,15 +1,16 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: ActiveX bileşeni oluşturulamıyor'
 title: ActiveX Bileşeni oluşturulamıyor
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID429
 ms.assetid: 7fc5a271-8195-40a2-89f9-e05fd71bb8e0
-ms.openlocfilehash: f50fe1664f474b4b61e438f14ff8c3b0b527075b
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 5650dcd9ab40091ade7f11e8afade4e5692639cb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874660"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796814"
 ---
 # <a name="cannot-create-activex-component"></a>ActiveX Bileşeni oluşturulamıyor
 

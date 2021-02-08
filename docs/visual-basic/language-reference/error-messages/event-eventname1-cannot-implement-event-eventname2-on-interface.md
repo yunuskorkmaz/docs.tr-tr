@@ -1,4 +1,5 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: BC31423: ' ' <eventname1> <eventname2> <interface> <delegate1> ve ' ' temsilci türleri <delegate2> eşleşmediğinden ' ' olayı ' ' arabiriminde ' ' olayını uygulayamaz"
 title: "'<eventname1>' ile '<eventname2>' temsilci türleri eşleşmediğinden '<interface>' olayı '<delegate1>' arabiriminde '<delegate2>' olayını uygulayamaz."
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31423
 ms.assetid: 2e754b66-5836-48ff-9697-b9c0d7085f18
-ms.openlocfilehash: d0b2b095ed355b420b28e87ed0b9d6a31f049ebf
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: cfb967d2b43ce1f34f56f3d019a9a663b000296c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162030"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796463"
 ---
 # <a name="bc31423-event-eventname1-cannot-implement-event-eventname2-on-interface-interface-because-their-delegate-types-delegate1-and-delegate2-do-not-match"></a>BC31423: ' ' \<eventname1> \<eventname2> \<interface> \<delegate1> ve ' ' temsilci türleri \<delegate2> eşleşmediğinden ' ' olayı ' ' arabiriminde ' ' olayını uygulayamaz
 
