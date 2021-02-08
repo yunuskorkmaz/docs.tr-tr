@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: s_isDebuggerCheckDisabledForTestPurposes alanı'
 title: s_isDebuggerCheckDisabledForTestPurposes alanı
 ms.date: 03/30/2017
 ms.technology: dotnet-wpf
@@ -11,32 +12,32 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 9033a513-c255-4f31-b6d7-09b8d8c50e2d
-ms.openlocfilehash: ad9bc0ecf4b7a8e5f3ef13fdff5aa59ca8915922
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a71235c13a7a35872bcf5374be8077bafad5ff9a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634651"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802664"
 ---
-# <a name="sisdebuggercheckdisabledfortestpurposes-field"></a><span data-ttu-id="3cc51-102">s_isDebuggerCheckDisabledForTestPurposes alanı</span><span class="sxs-lookup"><span data-stu-id="3cc51-102">s_isDebuggerCheckDisabledForTestPurposes Field</span></span>
+# <a name="s_isdebuggercheckdisabledfortestpurposes-field"></a><span data-ttu-id="56c62-103">s_isDebuggerCheckDisabledForTestPurposes alanı</span><span class="sxs-lookup"><span data-stu-id="56c62-103">s_isDebuggerCheckDisabledForTestPurposes Field</span></span>
 
-<span data-ttu-id="3cc51-103">Bu özel bir alanda `System.Windows.Diagnostics.VisualDiagnostics` sınıfı için bir etkin hata ayıklayıcı iç bir onay gerçekleştirip gerçekleştirmediğini belirlemek için Visual Studio tarafından kullanılır.</span><span class="sxs-lookup"><span data-stu-id="3cc51-103">This private field in the `System.Windows.Diagnostics.VisualDiagnostics` class is used by Visual Studio to determine whether an internal check for an active debugger will be performed.</span></span>
+<span data-ttu-id="56c62-104">Sınıftaki bu özel alan `System.Windows.Diagnostics.VisualDiagnostics` , Visual Studio tarafından etkin bir hata ayıklayıcı için iç denetim yapılıp yapılmayacağını anlamak üzere kullanılır.</span><span class="sxs-lookup"><span data-stu-id="56c62-104">This private field in the `System.Windows.Diagnostics.VisualDiagnostics` class is used by Visual Studio to determine whether an internal check for an active debugger will be performed.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="3cc51-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="3cc51-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="56c62-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="56c62-105">Syntax</span></span>
 
 ```csharp
 private static bool s_isDebuggerCheckDisabledForTestPurposes
 ```
 
 > [!WARNING]
-> <span data-ttu-id="3cc51-105">API'leri `System.Windows.Diagnostics.VisualDiagnostics` sınıfı bulunan ve yalnızca bir uygulama hata ayıklayıcı altında çalışırken.</span><span class="sxs-lookup"><span data-stu-id="3cc51-105">APIs in the `System.Windows.Diagnostics.VisualDiagnostics` class are only available when an application is running under a debugger.</span></span> <span data-ttu-id="3cc51-106">Ayarlama `s_isDebuggerCheckDisabledForTestPurposes` için `true` API'lere bir hata ayıklayıcı dışında.</span><span class="sxs-lookup"><span data-stu-id="3cc51-106">Set `s_isDebuggerCheckDisabledForTestPurposes` to `true` to access the APIs outside of a debugger.</span></span>
+> <span data-ttu-id="56c62-106">Sınıftaki API 'Ler `System.Windows.Diagnostics.VisualDiagnostics` yalnızca bir uygulama hata ayıklayıcı altında çalışırken kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="56c62-106">APIs in the `System.Windows.Diagnostics.VisualDiagnostics` class are only available when an application is running under a debugger.</span></span> <span data-ttu-id="56c62-107">`s_isDebuggerCheckDisabledForTestPurposes` `true` Bir hata ayıklayıcı dışında API 'lere erişmek için olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="56c62-107">Set `s_isDebuggerCheckDisabledForTestPurposes` to `true` to access the APIs outside of a debugger.</span></span>
 >
-> <span data-ttu-id="3cc51-107">Microsoft hiçbir koşulda, bir üretim uygulamasında bu alanı kullanımını desteklemez.</span><span class="sxs-lookup"><span data-stu-id="3cc51-107">Microsoft does not support the use of this field in a production application under any circumstance.</span></span>
+> <span data-ttu-id="56c62-108">Microsoft, herhangi bir koşulda bu alanın bir üretim uygulamasında kullanımını desteklemez.</span><span class="sxs-lookup"><span data-stu-id="56c62-108">Microsoft does not support the use of this field in a production application under any circumstance.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="3cc51-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="3cc51-108">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="56c62-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="56c62-109">Requirements</span></span>
 
-<span data-ttu-id="3cc51-109">**Namespace:** <xref:System.Windows.Diagnostics></span><span class="sxs-lookup"><span data-stu-id="3cc51-109">**Namespace:** <xref:System.Windows.Diagnostics></span></span>
+<span data-ttu-id="56c62-110">**Ad alanı:**<xref:System.Windows.Diagnostics></span><span class="sxs-lookup"><span data-stu-id="56c62-110">**Namespace:** <xref:System.Windows.Diagnostics></span></span>
 
-<span data-ttu-id="3cc51-110">**Derleme:** PresentationCore (içinde PresentationCore.dll)</span><span class="sxs-lookup"><span data-stu-id="3cc51-110">**Assembly:** PresentationCore (in PresentationCore.dll)</span></span>
+<span data-ttu-id="56c62-111">**Bütünleştirilmiş kod:** PresentationCore (PresentationCore.dll)</span><span class="sxs-lookup"><span data-stu-id="56c62-111">**Assembly:** PresentationCore (in PresentationCore.dll)</span></span>
 
-<span data-ttu-id="3cc51-111">**.NET framework sürümleri:** 4.6 sonrasında kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="3cc51-111">**.NET Framework versions:** Available since 4.6.</span></span>
+<span data-ttu-id="56c62-112">**.NET Framework sürümleri:** 4,6 sürümünden itibaren kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="56c62-112">**.NET Framework versions:** Available since 4.6.</span></span>

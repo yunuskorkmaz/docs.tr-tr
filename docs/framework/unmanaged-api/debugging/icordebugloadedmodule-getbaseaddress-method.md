@@ -1,19 +1,20 @@
 ---
+description: ': ICorDebugLoadedModule:: GetBaseAddress yöntemi hakkında daha fazla bilgi edinin'
 title: ICorDebugLoadedModule::GetBaseAddress Metodu
 ms.date: 03/30/2017
 ms.assetid: 7c036772-d58a-47f1-a5fa-31779898ef0d
-ms.openlocfilehash: 29153da86812583a0ea789da0c0816f08e0a6b43
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2852131d543cfb9593cf4ff607d1f752226c2880
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95698084"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801273"
 ---
-# <a name="icordebugloadedmodulegetbaseaddress-method"></a><span data-ttu-id="d046d-102">ICorDebugLoadedModule::GetBaseAddress Metodu</span><span class="sxs-lookup"><span data-stu-id="d046d-102">ICorDebugLoadedModule::GetBaseAddress Method</span></span>
+# <a name="icordebugloadedmodulegetbaseaddress-method"></a><span data-ttu-id="f3fed-103">ICorDebugLoadedModule::GetBaseAddress Metodu</span><span class="sxs-lookup"><span data-stu-id="f3fed-103">ICorDebugLoadedModule::GetBaseAddress Method</span></span>
 
-<span data-ttu-id="d046d-103">Yüklenen modülün temel adresini alır.</span><span class="sxs-lookup"><span data-stu-id="d046d-103">Gets the base address of the loaded module.</span></span>  
+<span data-ttu-id="f3fed-104">Yüklenen modülün temel adresini alır.</span><span class="sxs-lookup"><span data-stu-id="f3fed-104">Gets the base address of the loaded module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d046d-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="d046d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f3fed-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f3fed-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetBaseAddress(  
@@ -21,27 +22,27 @@ HRESULT GetBaseAddress(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d046d-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="d046d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f3fed-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="f3fed-106">Parameters</span></span>  
 
  `pAddress`  
- <span data-ttu-id="d046d-106">dışı Yüklenen modülün temel adresine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="d046d-106">[out] A pointer to the base address of the loaded module.</span></span>  
+ <span data-ttu-id="f3fed-107">dışı Yüklenen modülün temel adresine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="f3fed-107">[out] A pointer to the base address of the loaded module.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d046d-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="d046d-107">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f3fed-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="f3fed-108">Remarks</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="d046d-108">Bu yöntem yalnızca .NET Native kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="d046d-108">This method is available with .NET Native only.</span></span>  
+> <span data-ttu-id="f3fed-109">Bu yöntem yalnızca .NET Native kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="f3fed-109">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d046d-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="d046d-109">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f3fed-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f3fed-110">Requirements</span></span>  
 
- <span data-ttu-id="d046d-110">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d046d-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="f3fed-111">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f3fed-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d046d-111">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="d046d-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f3fed-112">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="f3fed-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d046d-112">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="d046d-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f3fed-113">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="f3fed-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d046d-113">**.NET Framework sürümleri:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d046d-113">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="f3fed-114">**.NET Framework sürümleri:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f3fed-114">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d046d-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d046d-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f3fed-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f3fed-115">See also</span></span>
 
-- [<span data-ttu-id="d046d-115">ICorDebugLoadedModule Arabirimi</span><span class="sxs-lookup"><span data-stu-id="d046d-115">ICorDebugLoadedModule Interface</span></span>](icordebugloadedmodule-interface.md)
-- [<span data-ttu-id="d046d-116">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="d046d-116">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="f3fed-116">ICorDebugLoadedModule Arabirimi</span><span class="sxs-lookup"><span data-stu-id="f3fed-116">ICorDebugLoadedModule Interface</span></span>](icordebugloadedmodule-interface.md)
+- [<span data-ttu-id="f3fed-117">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="f3fed-117">Debugging Interfaces</span></span>](debugging-interfaces.md)

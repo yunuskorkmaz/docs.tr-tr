@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Cortcggctype numaralandırması'
 title: CorDebugGCType Sabit Listesi
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 880ca92a-42d4-42a5-9b9c-c2848eb39c6a
 topic_type:
 - apiref
-ms.openlocfilehash: 6b3075613af0403527ecf67d574c0f5733a5cd8b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4be835a9a028a882fa050991beb31d2a8dec5354
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95712618"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801663"
 ---
-# <a name="cordebuggctype-enumeration"></a><span data-ttu-id="59604-102">CorDebugGCType Sabit Listesi</span><span class="sxs-lookup"><span data-stu-id="59604-102">CorDebugGCType Enumeration</span></span>
+# <a name="cordebuggctype-enumeration"></a><span data-ttu-id="c628b-103">CorDebugGCType Sabit Listesi</span><span class="sxs-lookup"><span data-stu-id="c628b-103">CorDebugGCType Enumeration</span></span>
 
-<span data-ttu-id="59604-103">Çöp toplayıcının bir iş istasyonunda veya sunucuda çalışıp çalışmadığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="59604-103">Indicates whether the garbage collector is running on a workstation or a server.</span></span>  
+<span data-ttu-id="c628b-104">Çöp toplayıcının bir iş istasyonunda veya sunucuda çalışıp çalışmadığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="c628b-104">Indicates whether the garbage collector is running on a workstation or a server.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="59604-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="59604-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c628b-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c628b-105">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorDebugGCType {  
@@ -34,27 +35,27 @@ typedef enum CorDebugGCType {
 } CorDebugGCType;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="59604-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="59604-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c628b-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c628b-106">Parameters</span></span>  
   
-## <a name="members"></a><span data-ttu-id="59604-106">Üyeler</span><span class="sxs-lookup"><span data-stu-id="59604-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="c628b-107">Üyeler</span><span class="sxs-lookup"><span data-stu-id="c628b-107">Members</span></span>  
   
-|<span data-ttu-id="59604-107">Üye adı</span><span class="sxs-lookup"><span data-stu-id="59604-107">Member name</span></span>|<span data-ttu-id="59604-108">Açıklama</span><span class="sxs-lookup"><span data-stu-id="59604-108">Description</span></span>|  
+|<span data-ttu-id="c628b-108">Üye adı</span><span class="sxs-lookup"><span data-stu-id="c628b-108">Member name</span></span>|<span data-ttu-id="c628b-109">Description</span><span class="sxs-lookup"><span data-stu-id="c628b-109">Description</span></span>|  
 |-----------------|-----------------|  
-|`CorDebugWorkstationGC`|<span data-ttu-id="59604-109">Çöp toplayıcı bir iş istasyonunda çalışıyor.</span><span class="sxs-lookup"><span data-stu-id="59604-109">The garbage collector is running on a workstation.</span></span>|  
-|`CorDebugServerGC`|<span data-ttu-id="59604-110">Çöp toplayıcı bir sunucuda çalışıyor.</span><span class="sxs-lookup"><span data-stu-id="59604-110">The garbage collector is running on a server.</span></span>|  
+|`CorDebugWorkstationGC`|<span data-ttu-id="c628b-110">Çöp toplayıcı bir iş istasyonunda çalışıyor.</span><span class="sxs-lookup"><span data-stu-id="c628b-110">The garbage collector is running on a workstation.</span></span>|  
+|`CorDebugServerGC`|<span data-ttu-id="c628b-111">Çöp toplayıcı bir sunucuda çalışıyor.</span><span class="sxs-lookup"><span data-stu-id="c628b-111">The garbage collector is running on a server.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="59604-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="59604-111">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c628b-112">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="c628b-112">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="59604-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="59604-112">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c628b-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c628b-113">Requirements</span></span>  
 
- <span data-ttu-id="59604-113">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="59604-113">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="c628b-114">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c628b-114">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="59604-114">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="59604-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c628b-115">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="c628b-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="59604-115">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="59604-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c628b-116">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="c628b-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="59604-116">**.NET Framework sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="59604-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="c628b-117">**.NET Framework sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c628b-117">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="59604-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="59604-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c628b-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c628b-118">See also</span></span>
 
-- [<span data-ttu-id="59604-118">Hata Ayıklama Numaralandırmaları</span><span class="sxs-lookup"><span data-stu-id="59604-118">Debugging Enumerations</span></span>](debugging-enumerations.md)
+- [<span data-ttu-id="c628b-119">Hata Ayıklama Numaralandırmaları</span><span class="sxs-lookup"><span data-stu-id="c628b-119">Debugging Enumerations</span></span>](debugging-enumerations.md)

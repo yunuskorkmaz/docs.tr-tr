@@ -1,4 +1,5 @@
 ---
+description: ': SqlStreamChars. Dispose (Boolean) yöntemi hakkında daha fazla bilgi edinin'
 title: SqlStreamChars. Dispose (Boolean) yöntemi (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
@@ -12,37 +13,37 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 44dc97835b8a7141064e8de4d2d5325c40be5a34
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: ce24cc885d87a3ff0bbcdbea7992ca78ee592454
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395760"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802612"
 ---
-# <a name="sqlstreamcharsdisposeboolean-method"></a><span data-ttu-id="595ce-102">SqlStreamChars. Dispose (Boolean) yöntemi</span><span class="sxs-lookup"><span data-stu-id="595ce-102">SqlStreamChars.Dispose(Boolean) Method</span></span>
+# <a name="sqlstreamcharsdisposeboolean-method"></a><span data-ttu-id="936d7-103">SqlStreamChars. Dispose (Boolean) yöntemi</span><span class="sxs-lookup"><span data-stu-id="936d7-103">SqlStreamChars.Dispose(Boolean) Method</span></span>
 
-<span data-ttu-id="595ce-103">Türetilmiş bir sınıfta geçersiz kılınırsa, akış tarafından kullanılan kaynakları serbest bırakır.</span><span class="sxs-lookup"><span data-stu-id="595ce-103">When overridden in a derived class, releases the resources used by the stream.</span></span> <span data-ttu-id="595ce-104">Bu yöntemi içeren derlemenin SQLAccess. dll ile bir arkadaş ilişkisi vardır.</span><span class="sxs-lookup"><span data-stu-id="595ce-104">The assembly that contains this method has a friend relationship with SQLAccess.dll.</span></span> <span data-ttu-id="595ce-105">SQL Server tarafından kullanılmak üzere tasarlanmıştır.</span><span class="sxs-lookup"><span data-stu-id="595ce-105">It's intended for use by SQL Server.</span></span> <span data-ttu-id="595ce-106">Diğer veritabanları için, bu veritabanı tarafından sunulan barındırma mekanizmasını kullanın.</span><span class="sxs-lookup"><span data-stu-id="595ce-106">For other databases, use the hosting mechanism provided by that database.</span></span>
+<span data-ttu-id="936d7-104">Türetilmiş bir sınıfta geçersiz kılınırsa, akış tarafından kullanılan kaynakları serbest bırakır.</span><span class="sxs-lookup"><span data-stu-id="936d7-104">When overridden in a derived class, releases the resources used by the stream.</span></span> <span data-ttu-id="936d7-105">Bu yöntemi içeren derlemenin SQLAccess.dll bir arkadaş ilişkisi vardır.</span><span class="sxs-lookup"><span data-stu-id="936d7-105">The assembly that contains this method has a friend relationship with SQLAccess.dll.</span></span> <span data-ttu-id="936d7-106">SQL Server tarafından kullanılmak üzere tasarlanmıştır.</span><span class="sxs-lookup"><span data-stu-id="936d7-106">It's intended for use by SQL Server.</span></span> <span data-ttu-id="936d7-107">Diğer veritabanları için, bu veritabanı tarafından sunulan barındırma mekanizmasını kullanın.</span><span class="sxs-lookup"><span data-stu-id="936d7-107">For other databases, use the hosting mechanism provided by that database.</span></span>
 
 ```csharp
 protected virtual void Dispose (bool disposing);
 ```
 
-## <a name="parameters"></a><span data-ttu-id="595ce-107">Parametreler</span><span class="sxs-lookup"><span data-stu-id="595ce-107">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="936d7-108">Parametreler</span><span class="sxs-lookup"><span data-stu-id="936d7-108">Parameters</span></span>
 
 `disposing`\
-<span data-ttu-id="595ce-108">hem yönetilen hem de yönetilmeyen kaynakları serbest bırakmak için `true`; yalnızca yönetilmeyen kaynakları serbest bırakmak için `false`.</span><span class="sxs-lookup"><span data-stu-id="595ce-108">`true` to release both managed and unmanaged resources; `false` to release only unmanaged resources.</span></span>
+<span data-ttu-id="936d7-109">Hem yönetilen hem de yönetilmeyen kaynakları serbest bırakmak için `true`; yalnızca yönetilmeyen kaynakları serbest bırakmak için `false`.</span><span class="sxs-lookup"><span data-stu-id="936d7-109">`true` to release both managed and unmanaged resources; `false` to release only unmanaged resources.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="595ce-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="595ce-109">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="936d7-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="936d7-110">Remarks</span></span>
 
 > [!WARNING]
-> <span data-ttu-id="595ce-110">`SqlStreamChars.Dispose` Yöntemi özeldir ve doğrudan kodunuzda kullanılmamalıdır.</span><span class="sxs-lookup"><span data-stu-id="595ce-110">The `SqlStreamChars.Dispose` method is private and is not meant to be used directly in your code.</span></span>
+> <span data-ttu-id="936d7-111">`SqlStreamChars.Dispose`Yöntemi özeldir ve doğrudan kodunuzda kullanılması amaçlıyordu.</span><span class="sxs-lookup"><span data-stu-id="936d7-111">The `SqlStreamChars.Dispose` method is private and is not meant to be used directly in your code.</span></span>
 >
-> <span data-ttu-id="595ce-111">Microsoft, bu yöntemin herhangi bir koşulda bir üretim uygulamasında kullanımını desteklemez.</span><span class="sxs-lookup"><span data-stu-id="595ce-111">Microsoft does not support the use of this method in a production application under any circumstance.</span></span>
+> <span data-ttu-id="936d7-112">Microsoft, bu yöntemin herhangi bir koşulda bir üretim uygulamasında kullanımını desteklemez.</span><span class="sxs-lookup"><span data-stu-id="936d7-112">Microsoft does not support the use of this method in a production application under any circumstance.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="595ce-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="595ce-112">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="936d7-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="936d7-113">Requirements</span></span>
 
-<span data-ttu-id="595ce-113">**Ad alanı:** <xref:System.Data.SqlTypes></span><span class="sxs-lookup"><span data-stu-id="595ce-113">**Namespace:** <xref:System.Data.SqlTypes></span></span>
+<span data-ttu-id="936d7-114">**Ad alanı:**<xref:System.Data.SqlTypes></span><span class="sxs-lookup"><span data-stu-id="936d7-114">**Namespace:** <xref:System.Data.SqlTypes></span></span>
 
-<span data-ttu-id="595ce-114">**Bütünleştirilmiş kod:** System. Data (System. Data. dll dosyasında)</span><span class="sxs-lookup"><span data-stu-id="595ce-114">**Assembly:** System.Data (in System.Data.dll)</span></span>
+<span data-ttu-id="936d7-115">**Bütünleştirilmiş kod:** System. Data (System.Data.dll)</span><span class="sxs-lookup"><span data-stu-id="936d7-115">**Assembly:** System.Data (in System.Data.dll)</span></span>
 
-<span data-ttu-id="595ce-115">**.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="595ce-115">**.NET Framework versions:** Available since 2.0.</span></span>
+<span data-ttu-id="936d7-116">**.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="936d7-116">**.NET Framework versions:** Available since 2.0.</span></span>
