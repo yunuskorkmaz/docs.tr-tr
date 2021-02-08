@@ -1,13 +1,14 @@
 ---
+description: "Daha fazla bilgi edinin: DOM 'da ad alanları ve DTD 'Ler"
 title: DOM Ad Alanları ve DTD’ler
 ms.date: 03/30/2017
 ms.assetid: 1e9b55c4-76ad-4f54-8d96-7ce4b4cf1e05
-ms.openlocfilehash: 42bd30e7eea2ec0a3e1aa6846196c3280697efdf
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4445c1a33cca50707940758f812995c6b1db64cd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95714555"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775935"
 ---
 # <a name="namespaces-and-dtds-in-the-dom"></a>DOM Ad Alanları ve DTD’ler
 

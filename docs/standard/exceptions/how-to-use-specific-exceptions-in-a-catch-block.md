@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: bir catch bloğunda belirli özel durumları kullanma'
 title: 'Nasıl yapılır: Bir Catch Bloğunda Belirli Özel Durumları Kullanma'
 ms.date: 03/30/2017
 dev_langs:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - try/catch blocks
 - catch blocks
 ms.assetid: 12af9ff3-8587-4f31-90cf-6c2244e0fdae
-ms.openlocfilehash: bf4813e950b034cb807abebfe016c1e34487d594
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5eb2a753af05c10b722cc7e41b5bb13f45fdef9a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828029"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775870"
 ---
 # <a name="how-to-use-specific-exceptions-in-a-catch-block"></a>Bir catch bloğunda belirli özel durumları kullanma
 

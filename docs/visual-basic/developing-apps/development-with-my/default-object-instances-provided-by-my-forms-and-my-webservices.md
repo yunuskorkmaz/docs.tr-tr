@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: My. Forms ve My. WebServices tarafından sunulan varsayılan nesne örnekleri (Visual Basic)'
 title: My.Forms ve My.WebServices ile Sağlanan Varsayılan Nesne Örnekleri
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - rapid application development (RAD), My.Forms
 - rapid application development (RAD), My.WebServices
 ms.assetid: de930027-9108-4f0c-b97c-5e7db4d6ef79
-ms.openlocfilehash: 141f2f5f98499498d3c6732f7ae8d0abe6259ed9
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 34363a56577ca0fafb839e782a8066bd8a8c5a14
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990251"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775363"
 ---
 # <a name="default-object-instances-provided-by-myforms-and-mywebservices-visual-basic"></a>My.Forms ve My.WebServices ile Sağlanan Varsayılan Nesne Örnekleri (Visual Basic)
 

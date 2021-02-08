@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: nasıl yapılır: yalıtılmış depolamada dosyaları okuma ve yazma'
 title: 'Nasıl yapılır: Yalıtılmış Depolamadaki Dosyaları Okuma ve Yazma'
 ms.date: 03/30/2017
 dev_langs:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - data stores, reading and writing to files
 - stores, reading and writing to files
 ms.assetid: f977ebdc-1b55-475a-bc3d-3376470b08ae
-ms.openlocfilehash: 3a8b783cf2cce93cb26b11823d9f565961376ca3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6e88cc4c590c44394768472ce8bd5fd89ac99d38
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734601"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775545"
 ---
 # <a name="how-to-read-and-write-to-files-in-isolated-storage"></a>Nasıl yapılır: Yalıtılmış Depolamadaki Dosyaları Okuma ve Yazma
 

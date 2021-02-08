@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: .NET Framework ve Windows Çalışma Zamanı akışları arasında dönüştürme (yalnızca Windows)'
 title: 'Nasıl yapılır: .NET Framework ve Windows Çalışma Zamanı akışları arasında dönüştürme (yalnızca Windows)'
 ms.date: 01/14/2019
 dev_langs:
 - csharp
 - vb
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
-ms.openlocfilehash: c2ab384b6d84a14d5e8f4cfe66281a26b14421f4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fc79af9debb721ddb136d525fab0845ea03f8618
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726970"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775766"
 ---
 # <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>Nasıl yapılır: .NET Framework ve Windows Çalışma Zamanı akışları arasında dönüştürme (yalnızca Windows)
 

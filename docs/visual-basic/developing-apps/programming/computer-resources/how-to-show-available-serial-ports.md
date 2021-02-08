@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: Visual Basic kullanılabilir seri bağlantı noktalarını gösterme'
 title: 'Nasıl yapılır: Kullanılabilir Seri Bağlantı Noktalarını Gösterme'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - My.Computer.Ports object
 - ports, serial port availability
 ms.assetid: eaf2ee5a-8103-4e10-a205-ed1d4db120ba
-ms.openlocfilehash: b19bdd56311ab7029fb224256d138a0dc0dd8ddc
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0f55e7ed7155940dd279a22ae9da5f21097f56a6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557352"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775298"
 ---
 # <a name="how-to-show-available-serial-ports-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Kullanılabilecek Seri Bağlantı Noktalarını Gösterme
 
@@ -28,7 +29,7 @@ Bu konuda `My.Computer.Ports` , Visual Basic ' de bilgisayarın kullanılabilir 
   
  [!code-vb[VbVbalrMyComputer#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#45)]  
   
- Bu kod örneği, bir IntelliSense kod parçacığı olarak da kullanılabilir. Kod parçacığı seçicide, **bağlantı ve ağ**bölümünde bulunur. Daha fazla bilgi için bkz. [kod parçacıkları](/visualstudio/ide/code-snippets).  
+ Bu kod örneği, bir IntelliSense kod parçacığı olarak da kullanılabilir. Kod parçacığı seçicide, **bağlantı ve ağ** bölümünde bulunur. Daha fazla bilgi için bkz. [kod parçacıkları](/visualstudio/ide/code-snippets).  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
 

@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: UShort veri türü (Visual Basic)'
 title: UShort Veri Türü
 ms.date: 01/31/2018
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - UShort data type
 - US literal type characters [Visual Basic]
 ms.assetid: 138db892-665d-4ba8-9cae-d8d91c4a8f39
-ms.openlocfilehash: ee31156e00059699125fd72a7f091afbb21beab0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9c709e2110aef4281c348f697408044a191314c6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415485"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774986"
 ---
 # <a name="ushort-data-type-visual-basic"></a>UShort veri türü (Visual Basic)
 
@@ -48,7 +49,7 @@ Visual Basic 2017 ' den başlayarak, `_` Aşağıdaki örnekte gösterildiği gi
 
 [!code-vb[UShort](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UShortS)]
 
-Visual Basic 15,5 ' den başlayarak, alt çizgi karakterini ( `_` ) ön ek ile onaltılı, ikili veya sekizlik basamaklar arasında önde gelen bir ayırıcı olarak da kullanabilirsiniz. Örnek:
+Visual Basic 15,5 ' den başlayarak, alt çizgi karakterini ( `_` ) ön ek ile onaltılı, ikili veya sekizlik basamaklar arasında önde gelen bir ayırıcı olarak da kullanabilirsiniz. Örneğin:
 
 ```vb
 Dim number As UShort = &H_FF8C
@@ -70,7 +71,7 @@ Dim number = &H_5826us
   
 - **Kan.** Veri türü,,,,, `UShort` `Integer` `UInteger` `Long` `ULong` `Decimal` `Single` , ve `Double` için widens. Bu, `UShort` bir hatayla karşılaşmadan bu türlerden birine dönüştürebileceğiniz anlamına gelir <xref:System.OverflowException?displayProperty=nameWithType> .  
   
-- **Tür karakterleri.** Değişmez değer türü karakterlerinin `US` bir sabit değere eklenmesi, `UShort` veri türüne zorlar. `UShort`tanımlayıcı türü karakteri yok.  
+- **Tür karakterleri.** Değişmez değer türü karakterlerinin `US` bir sabit değere eklenmesi, `UShort` veri türüne zorlar. `UShort` tanımlayıcı türü karakteri yok.  
   
 - **Çerçeve türü.** .NET Framework karşılık gelen tür <xref:System.UInt16?displayProperty=nameWithType> yapısıdır.  
   

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Izlenecek yol: Visual Basic dosya ve dizinleri düzenleme'
 title: Dosyaları ve Dizinleri Düzenleme
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-ms.openlocfilehash: 4b77618e5cd525cf3ad012405f402681aa5bb52c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 315635ee43ee4d4956fc35b7f9bc635b374646f8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406670"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775389"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>İzlenecek Yol: Visual Basic'te Dosyaları ve Dizinleri Düzenleme
 
@@ -36,21 +37,21 @@ Bu izlenecek yol, Visual Basic dosya g/ç 'nin temelleri için bir giriş sağla
   
      **Yeni Proje** iletişim kutusu görünür.  
   
-2. **Yüklü şablonlar** bölmesinde, **Visual Basic**öğesini genişletin ve ardından **Windows**' a tıklayın. Ortadaki **Şablonlar** bölmesinde **Windows Forms uygulama**' ya tıklayın.  
+2. **Yüklü şablonlar** bölmesinde, **Visual Basic** öğesini genişletin ve ardından **Windows**' a tıklayın. Ortadaki **Şablonlar** bölmesinde **Windows Forms uygulama**' ya tıklayın.  
   
 3. **Ad** kutusunda, `FileExplorer` proje adını ayarlamak için yazın ve ardından **Tamam**' a tıklayın.  
   
-     Visual Studio, projeyi **Çözüm Gezgini**ekler ve Windows Form Tasarımcısı açılır.  
+     Visual Studio, projeyi **Çözüm Gezgini** ekler ve Windows Form Tasarımcısı açılır.  
   
 4. Aşağıdaki tablodaki denetimleri forma ekleyin ve özellikleri için karşılık gelen değerleri ayarlayın.  
   
     |Denetim|Özellik|Değer|  
     |-------------|--------------|-----------|  
-    |**ListBox**|**Adı**|`filesListBox`|  
-    |**Düğme**|**Adı**<br /><br /> **Metin**|`browseButton`<br /><br /> **Gözat**|  
-    |**Düğme**|**Adı**<br /><br /> **Metin**|`examineButton`<br /><br /> **İncelemesine**|  
-    |**CheckBox**|**Adı**<br /><br /> **Metin**|`saveCheckBox`<br /><br /> **Sonuçları Kaydet**|  
-    |**FolderBrowserDialog**|**Adı**|`FolderBrowserDialog1`|  
+    |**ListBox**|**Ad**|`filesListBox`|  
+    |**Düğme**|**Ad**<br /><br /> **Metin**|`browseButton`<br /><br /> **Gözat**|  
+    |**Düğme**|**Ad**<br /><br /> **Metin**|`examineButton`<br /><br /> **İncelemesine**|  
+    |**CheckBox**|**Ad**<br /><br /> **Metin**|`saveCheckBox`<br /><br /> **Sonuçları Kaydet**|  
+    |**FolderBrowserDialog**|**Ad**|`FolderBrowserDialog1`|  
   
 ### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>Bir klasörü seçmek ve dosyaları bir klasöre listelemek için  
   
@@ -88,7 +89,7 @@ Bu izlenecek yol, Visual Basic dosya g/ç 'nin temelleri için bir giriş sağla
   
      Kod, içinde bir öğenin seçili olduğunu doğrular `ListBox` . Daha sonra konumundan dosya yolu girişini edinir `ListBox` . <xref:Microsoft.VisualBasic.FileIO.FileSystem.FileExists%2A>Yöntemi, dosyanın hala mevcut olup olmadığını denetlemek için kullanılır.  
   
-     Dosya yolu, bir `GetTextForOutput` sonraki adımda eklenen yöntemine bir bağımsız değişken olarak gönderilir. Bu yöntem, dosya bilgilerini içeren bir dize döndürür. Dosya bilgileri bir **MessageBox**içinde görüntülenir.  
+     Dosya yolu, bir `GetTextForOutput` sonraki adımda eklenen yöntemine bir bağımsız değişken olarak gönderilir. Bu yöntem, dosya bilgilerini içeren bir dize döndürür. Dosya bilgileri bir **MessageBox** içinde görüntülenir.  
   
 3. Aşağıdaki yöntemi ekleyin `GetTextForOutput` .  
   

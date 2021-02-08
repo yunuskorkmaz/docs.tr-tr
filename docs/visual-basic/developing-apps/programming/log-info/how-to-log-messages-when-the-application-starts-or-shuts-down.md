@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: nasıl yapılır: uygulama başladığında veya kapandığında Iletileri günlüğe kaydetme (Visual Basic)'
 title: 'Nasıl yapılır: Uygulama Başlarken veya Kapanırken İletileri Günlüğe Kaydetme'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Shutdown event [Visual Basic]
 - My.Log object, logging
 ms.assetid: 67624d05-cddf-48b7-8c36-5c99baa4c621
-ms.openlocfilehash: ac5fb17e527bcbcb55f98ec0ced06c152555ce6c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 545a57c3666aa12e3763961d05067face9fe324a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410081"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775194"
 ---
 # <a name="how-to-log-messages-when-the-application-starts-or-shuts-down-visual-basic"></a>Nasıl Yapılır: Uygulama Başlarken veya Kapanırken İletileri Günlüğe Kaydetme (Visual Basic)
 

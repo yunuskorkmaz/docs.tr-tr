@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: Iş akışları ve Iş akışı hizmetleri için SQL kalıcılığı etkinleştirme'
 title: 'Nasıl yapılır: İş Akışları ve İş Akışı Hizmetleri için SQL Kalıcılığını Etkinleştirme'
 ms.date: 03/30/2017
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: 5bcd37a654db35ba6e8af1b15d6c132a090b0579
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 5c124c4ec1d75d4b3b24468c04a4fb82236aa29a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547759"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99777729"
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Nasıl yapılır: İş Akışları ve İş Akışı Hizmetleri için SQL Kalıcılığını Etkinleştirme
 
@@ -30,7 +31,7 @@ SQL Iş akışı örneği deposu özelliğini kullanmadan önce, özelliğin iş
 
 Aşağıdaki bölümlerde, SQL Iş akışı örnek deposu kullanılarak iş akışları ve iş akışı hizmetleri için kalıcılığın nasıl etkinleştirileceği açıklanır. SQL Iş akışı örnek deposunun özellikleri hakkında daha fazla bilgi için bkz. [SQL Workflow örnek deposunun özellikleri](properties-of-sql-workflow-instance-store.md).
 
-## <a name="enabling-persistence-for-self-hosted-workflows-that-use-workflowapplication"></a>WorkflowApplication kullanan kendi kendine barındırılan Iş akışları için kalıcılığı etkinleştirme
+## <a name="enabling-persistence-for-self-hosted-workflows-that-use-workflowapplication"></a>WorkflowApplication kullanan Self-Hosted Iş akışları için kalıcılığın etkinleştirilmesi
 
 <xref:System.Activities.WorkflowApplication>Nesne modelini kullanarak programlı olarak kullanan kendi kendine barındırılan iş akışları için kalıcılığı etkinleştirebilirsiniz <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> . Aşağıdaki yordam bunu yapmak için gereken adımları içerir.
 
@@ -71,7 +72,7 @@ Aşağıdaki bölümlerde, SQL Iş akışı örnek deposu kullanılarak iş akı
 > [!NOTE]
 > Adım adım yönergeler için bkz. Başlangıç [öğreticisinin](getting-started-tutorial.md) [uzun süre çalışan iş akışı oluşturma ve çalıştırma](how-to-create-and-run-a-long-running-workflow.md) adımı.
 
-## <a name="enabling-persistence-for-self-hosted-workflow-services-that-use-the-workflowservicehost"></a>WorkflowServiceHost kullanan kendi kendine barındırılan Iş akışı hizmetleri için kalıcılığı etkinleştirme
+## <a name="enabling-persistence-for-self-hosted-workflow-services-that-use-the-workflowservicehost"></a>WorkflowServiceHost kullanan Self-Hosted Iş akışı hizmetleri için kalıcılığın etkinleştirilmesi
 
 <xref:System.ServiceModel.WorkflowServiceHost>Sınıfını veya sınıfını kullanarak programlı olarak kullanan şirket içinde barındırılan iş akışı hizmetleri için kalıcılığın etkin olmasını sağlayabilirsiniz <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> <xref:System.ServiceModel.Activities.WorkflowServiceHost.DurableInstancingOptions%2A> .
 
@@ -122,7 +123,7 @@ Uygulandığında, `SqlWorkflowInstanceStoreBehavior` `DurableInstancingOptions.
 workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObject;
 ```
 
-## <a name="enabling-persistence-for-was-hosted-workflow-services-that-use-the-workflowservicehost-using-a-configuration-file"></a>Yapılandırma dosyası kullanarak WorkflowServiceHost kullanan, WAS tarafından barındırılan Iş akışı hizmetleri için kalıcılık etkinleştiriliyor
+## <a name="enabling-persistence-for-was-hosted-workflow-services-that-use-the-workflowservicehost-using-a-configuration-file"></a>Yapılandırma dosyası kullanarak WorkflowServiceHost kullanan WAS-Hosted Iş akışı hizmetleri için kalıcılığın etkinleştirilmesi
 
 Kendi kendine barındırılan veya Windows Işlem etkinleştirme hizmeti (WAS) tarafından barındırılan iş akışı hizmetleri için bir yapılandırma dosyası kullanarak kalıcılığı etkinleştirebilirsiniz. Bir barındırılan iş akışı hizmeti, otomatik olarak barındırılan iş akışı hizmetleri olarak WorkflowServiceHost kullanır.
 

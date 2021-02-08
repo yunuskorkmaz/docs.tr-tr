@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: özel uzantılarımı paketleme ve dağıtma (Visual Basic)'
 title: Özel uzantılarımı paketleme ve dağıtma
 ms.date: 08/14/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: fd89c54b-0290-4c50-95a3-ff17d4487a21
-ms.openlocfilehash: 6d2cc2b01b04b30bd3b1a4371352ded20ea8664b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7037cc72951fc5228ae47998f39dca3455bf57de
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411759"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775415"
 ---
 # <a name="package-and-deploy-custom-my-extensions-visual-basic"></a>Özel uzantılarımı paketleme ve dağıtma (Visual Basic)
 
@@ -46,7 +47,7 @@ Ad alanı uzantınızı içeren bir kod dosyasına sahip olduktan sonra `My` , k
 
 CustomData dosyası, dosya adı uzantısına sahip olan bir metin dosyasıdır. CustomData (dosya adı, şablonunuz için anlamlı olan herhangi bir değere ayarlanabilir) ve XML içerir. CustomData dosyasındaki XML, `My` kullanıcılar Visual Basic proje Tasarımcısı 'Nın **uzantılarım** sayfasını kullanırken uzantınızı içermesini Visual Basic söyler. İsteğe bağlı olarak, <`AssemblyFullName>` özniteliğini CustomData FILE XML dosyanıza ekleyebilirsiniz. Bu `My` , projeye belirli bir derlemeye yönelik bir başvuru eklendiğinde özel uzantınızı otomatik olarak yüklemesini Visual Basic söyler. Herhangi bir metin düzenleyicisini veya XML düzenleyicisini kullanarak CustomData dosyasını oluşturabilir ve ardından bunu öğe şablonunuzun sıkıştırılmış klasörüne (. zip dosyası) ekleyebilirsiniz.
 
-Örneğin, aşağıdaki XML, projeye Microsoft. VisualBasic. PowerPacks. vs. dll derlemesine yönelik bir başvuru eklendiğinde, şablon öğesini bir Visual Basic projesinin Uzantılar klasörüne ekleyecek bir CustomData dosyasının içeriğini gösterir.
+Örneğin, aşağıdaki XML, projeye Microsoft.VisualBasic.PowerPacks.Vs.dll derlemesine bir başvuru eklendiğinde bir Visual Basic projesinin Uzantılar klasörüne şablon öğesi ekleyecek bir CustomData dosyasının içeriğini gösterir.
 
 ```xml
 <VBMyExtensionTemplate
@@ -58,7 +59,7 @@ CustomData dosyası, dosya adı uzantısına sahip olan bir metin dosyasıdır. 
 
 CustomData dosyası, `VBMyExtensionTemplate>` Aşağıdaki tabloda listelendiği gibi özniteliklere sahip bir <öğesi içerir.
 
-|Öznitelik|Description|
+|Öznitelik|Açıklama|
 |---|---|
 |`ID`|Gereklidir. Uzantı için benzersiz bir tanımlayıcı. Bu KIMLIĞE sahip uzantı projeye zaten eklendiyse, kullanıcıdan yeniden eklemesi istenmez.|
 |`Version`|Gereklidir. Öğe şablonu için sürüm numarası.|
@@ -99,7 +100,7 @@ Aşağıdaki örnek, öğesinin eklendiği bir. vstemplate dosyasının içeriğ
 
 ## <a name="install-the-template"></a>Şablonu yükler
 
-Şablonu yüklemek için sıkıştırılmış klasörü (*. zip* dosyası) Visual Basic öğesi şablonları klasörüne kopyalayabilirsiniz. Varsayılan olarak, Kullanıcı öğesi şablonları * \<Version\> %USERPROFILE%\k\studio \Templates\ıtemtemplates\visual Basic*dizininde bulunur. Alternatif olarak, şablonu bir Visual Studio Yükleyicisi (*. vsi*) dosyası olarak yayımlayabilirsiniz.
+Şablonu yüklemek için sıkıştırılmış klasörü (*. zip* dosyası) Visual Basic öğesi şablonları klasörüne kopyalayabilirsiniz. Varsayılan olarak, Kullanıcı öğesi şablonları *\<Version\> %USERPROFILE%\k\studio \Templates\ıtemtemplates\visual Basic* dizininde bulunur. Alternatif olarak, şablonu bir Visual Studio Yükleyicisi (*. vsi*) dosyası olarak yayımlayabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

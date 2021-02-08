@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Izlenecek yol: .NET Framework yöntemleri kullanarak dosyaları düzenleme (Visual Basic)'
 title: .NET Framework Yöntemlerini Kullanarak Dosyaları Düzenleme
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-ms.openlocfilehash: 9abb87f3f6cdefefef29eb37c2c2d4d15155e93d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e59dca15660a981c487688234c864a818398af65
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406657"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775376"
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>İzlenecek Yol: .NET Framework Yöntemlerini Kullanarak Dosyaları Düzenleme (Visual Basic)
 
@@ -40,19 +41,19 @@ Visual Studio 'Yu başlatın ve kullanıcının belirlenen dosyaya yazmak için 
 
 3. **Ad** kutusuna yazın `MyDiary` ve **Tamam**' a tıklayın.
 
-     Visual Studio, projeyi **Çözüm Gezgini**ekler ve **Windows Form Tasarımcısı** açılır.
+     Visual Studio, projeyi **Çözüm Gezgini** ekler ve **Windows Form Tasarımcısı** açılır.
 
 4. Aşağıdaki tablodaki denetimleri forma ekleyin ve özellikleri için karşılık gelen değerleri ayarlayın.
 
 |**Nesne**|**Özellikler**|**Değer**|
 |---|---|---|
-|<xref:System.Windows.Forms.Button>|**Adı**<br /><br /> **Metin**|`Submit`<br /><br /> **Giriş Gönder**|
-|<xref:System.Windows.Forms.Button>|**Adı**<br /><br /> **Metin**|`Clear`<br /><br /> **Girişi temizle**|
-|<xref:System.Windows.Forms.TextBox>|**Adı**<br /><br /> **Metin**<br /><br /> **Multiline**|`Entry`<br /><br /> **Lütfen bir ad girin.**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Ad**<br /><br /> **Metin**|`Submit`<br /><br /> **Giriş Gönder**|
+|<xref:System.Windows.Forms.Button>|**Ad**<br /><br /> **Metin**|`Clear`<br /><br /> **Girişi temizle**|
+|<xref:System.Windows.Forms.TextBox>|**Ad**<br /><br /> **Metin**<br /><br /> **Multiline**|`Entry`<br /><br /> **Lütfen bir ad girin.**<br /><br /> `False`|
 
 ## <a name="writing-to-the-file"></a>Dosyaya yazma
 
-Uygulama aracılığıyla bir dosyaya yazma yeteneğini eklemek için <xref:System.IO.StreamWriter> sınıfını kullanın. <xref:System.IO.StreamWriter>, belirli bir kodlamada karakter çıkışı için tasarlanmıştır, ancak <xref:System.IO.Stream> Sınıf bayt girişi ve çıkışı için tasarlanmıştır. <xref:System.IO.StreamWriter>Standart metin dosyasına bilgi satırları yazmak için kullanın. Sınıfı hakkında daha fazla bilgi için <xref:System.IO.StreamWriter> bkz <xref:System.IO.StreamWriter> ..
+Uygulama aracılığıyla bir dosyaya yazma yeteneğini eklemek için <xref:System.IO.StreamWriter> sınıfını kullanın. <xref:System.IO.StreamWriter> , belirli bir kodlamada karakter çıkışı için tasarlanmıştır, ancak <xref:System.IO.Stream> Sınıf bayt girişi ve çıkışı için tasarlanmıştır. <xref:System.IO.StreamWriter>Standart metin dosyasına bilgi satırları yazmak için kullanın. Sınıfı hakkında daha fazla bilgi için <xref:System.IO.StreamWriter> bkz <xref:System.IO.StreamWriter> ..
 
 ### <a name="to-add-writing-functionality"></a>Yazma işlevselliği eklemek için
 
@@ -64,7 +65,7 @@ Uygulama aracılığıyla bir dosyaya yazma yeteneğini eklemek için <xref:Syst
 
      Dosyaya yazmadan önce bir sınıfın örneğini oluşturmanız gerekir <xref:System.IO.StreamWriter> .
 
-3. **Görünüm** menüsünden, **Windows Form Tasarımcısı**geri dönmek için **Tasarımcı** ' yı seçin. Düğmeye çift tıklayarak `Submit` <xref:System.Windows.Forms.Control.Click> düğme için bir olay işleyicisi oluşturun ve ardından aşağıdaki kodu ekleyin.
+3. **Görünüm** menüsünden, **Windows Form Tasarımcısı** geri dönmek için **Tasarımcı** ' yı seçin. Düğmeye çift tıklayarak `Submit` <xref:System.Windows.Forms.Control.Click> düğme için bir olay işleyicisi oluşturun ve ardından aşağıdaki kodu ekleyin.
 
      [!code-vb[VbVbcnMyFileSystem#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#36)]
 
@@ -95,10 +96,10 @@ Bu bölümde, içinde en son girişi görüntüleyen bir özellik eklersiniz `Di
 
 |Denetim|Özellikler|Değerler|
 |-------------|----------------|------------|
-|<xref:System.Windows.Forms.TextBox>|**Adı**<br /><br /> **Visible**<br /><br /> **Boyut**<br /><br /> **Multiline**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|
-|<xref:System.Windows.Forms.Button>|**Adı**<br /><br /> **Metin**|`Display`<br /><br /> **Görüntüleme**|
-|<xref:System.Windows.Forms.Button>|**Adı**<br /><br /> **Metin**|`GetEntries`<br /><br /> **Girişleri Al**|
-|<xref:System.Windows.Forms.ComboBox>|**Adı**<br /><br /> **Metin**<br /><br /> **Etkin**|`PickEntries`<br /><br /> **Bir giriş seçin**<br /><br /> `False`|
+|<xref:System.Windows.Forms.TextBox>|**Ad**<br /><br /> **Görünür**<br /><br /> **Boyut**<br /><br /> **Multiline**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|
+|<xref:System.Windows.Forms.Button>|**Ad**<br /><br /> **Metin**|`Display`<br /><br /> **Görüntüleme**|
+|<xref:System.Windows.Forms.Button>|**Ad**<br /><br /> **Metin**|`GetEntries`<br /><br /> **Girişleri Al**|
+|<xref:System.Windows.Forms.ComboBox>|**Ad**<br /><br /> **Metin**<br /><br /> **Etkin**|`PickEntries`<br /><br /> **Bir giriş seçin**<br /><br /> `False`|
 
 ### <a name="to-populate-the-combo-box"></a>Birleşik giriş kutusunu doldurmak için
 
@@ -124,9 +125,9 @@ Aşağıdaki tablodaki denetimleri forma ekleyin ve özellikleri için karşıl�
 
 |Denetim|Özellikler|Değerler|
 |-------------|----------------|------------|
-|<xref:System.Windows.Forms.Button>|**Adı**<br /><br /> **Metin**<br /><br /> **Etkin**|`DeleteEntry`<br /><br /> **Girişi Sil**<br /><br /> `False`|
-|<xref:System.Windows.Forms.Button>|**Adı**<br /><br /> **Metin**<br /><br /> **Etkin**|`EditEntry`<br /><br /> **Girişi Düzenle**<br /><br /> `False`|
-|<xref:System.Windows.Forms.Button>|**Adı**<br /><br /> **Metin**<br /><br /> **Etkin**|`SubmitEdit`<br /><br /> **Düzenleme gönder**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Ad**<br /><br /> **Metin**<br /><br /> **Etkin**|`DeleteEntry`<br /><br /> **Girişi Sil**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Ad**<br /><br /> **Metin**<br /><br /> **Etkin**|`EditEntry`<br /><br /> **Girişi Düzenle**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Ad**<br /><br /> **Metin**<br /><br /> **Etkin**|`SubmitEdit`<br /><br /> **Düzenleme gönder**<br /><br /> `False`|
 
 ### <a name="to-enable-deletion-and-modification-of-entries"></a>Girişlerin silinmesini ve değiştirilmesini etkinleştirmek için
 

@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Tarih veri türü (Visual Basic)'
 title: Date Veri Türü
 ms.date: 07/20/2015
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - literals [Visual Basic], Date
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
-ms.openlocfilehash: 46c25e14db56d4cc3c6d59ec7649b37c35676e2e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f6ea6aa99339d13824477bba99ecd211f826a3ad
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387432"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775025"
 ---
 # <a name="date-data-type-visual-basic"></a>Date Veri Türü (Visual Basic)
 
@@ -70,7 +71,7 @@ Bir `Date` değeri `String` türüne dönüştürürseniz Visual Basic, tarihi �
 
 - **Birlikte çalışma konuları.** Otomasyon veya COM nesneleri gibi .NET Framework için yazılmayan bileşenlerle arabirimleriniz varsa, diğer ortamlardaki tarih/saat türlerinin Visual Basic türüyle uyumlu olmadığını aklınızda bulundurun `Date` . Böyle bir bileşene bir tarih/saat bağımsız değişkeni geçirdiğinizden, bunu `Double` yeni Visual Basic kodunuzda değil olarak bildirin `Date` ve dönüştürme yöntemlerini <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> ve kullanın <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType> .
 
-- **Tür karakterleri.** `Date`değişmez değer türü karakteri veya tanımlayıcı türü karakteri yok. Ancak derleyici, sayıları sayı işaretleri () içinde olarak değerlendirir `# #` `Date` .
+- **Tür karakterleri.** `Date` değişmez değer türü karakteri veya tanımlayıcı türü karakteri yok. Ancak derleyici, sayıları sayı işaretleri () içinde olarak değerlendirir `# #` `Date` .
 
 - **Çerçeve türü.** .NET Framework karşılık gelen tür <xref:System.DateTime?displayProperty=nameWithType> yapısıdır.
 

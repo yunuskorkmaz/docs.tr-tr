@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: sorun giderme: günlük dinleyicileri (Visual Basic)'
 title: 'Sorun Giderme: Günlük Dinleyicileri'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - troubleshooting Visual Basic, event logs
 - troubleshooting event logs
 ms.assetid: ac6eb760-3d5d-461e-aedd-40599ee22e49
-ms.openlocfilehash: 8d2d8294d9e9bb42d72fe4f6c37bf846bd644907
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: dc40f88a19e9cb205c6adb290c1ed48d40eabf5b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398324"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775051"
 ---
 # <a name="troubleshooting-log-listeners-visual-basic"></a>Sorun Giderme: Günlük Dinleyicileri (Visual Basic)
 

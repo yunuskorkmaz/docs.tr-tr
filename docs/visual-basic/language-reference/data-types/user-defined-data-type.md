@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: User-Defined veri türü'
 title: Kullanıcı Tanımlı Veri Türü
 ms.date: 07/20/2015
 f1_keywords:
@@ -23,18 +24,18 @@ helpviewer_keywords:
 - user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
-ms.openlocfilehash: fbd9536a54d7fb471d6cb2e130b14a84e40a4940
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6eb94b38e2d29a4bbdfcf94de307bbe07a2c1b0c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415498"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774973"
 ---
 # <a name="user-defined-data-type"></a>Kullanıcı Tanımlı Veri Türü
 
 Verileri tanımladığınız biçimde tutar. `Structure`İfade biçimi tanımlar.
 
-Önceki Visual Basic sürümleri Kullanıcı tanımlı türü (UDT) destekler. Geçerli sürüm, UDT 'yi bir *yapıya*genişletir. Yapı, çeşitli veri türlerindeki bir veya daha fazla *üyenin* bitiştirilmesi olur. Visual Basic, üyelerine tek bir birim olarak davranır, ancak üyelerine ayrı ayrı de erişebilirsiniz.
+Önceki Visual Basic sürümleri Kullanıcı tanımlı türü (UDT) destekler. Geçerli sürüm, UDT 'yi bir *yapıya* genişletir. Yapı, çeşitli veri türlerindeki bir veya daha fazla *üyenin* bitiştirilmesi olur. Visual Basic, üyelerine tek bir birim olarak davranır, ancak üyelerine ayrı ayrı de erişebilirsiniz.
 
 ## <a name="remarks"></a>Açıklamalar
 

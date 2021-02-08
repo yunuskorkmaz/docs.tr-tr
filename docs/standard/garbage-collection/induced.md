@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: alınmış Koleksiyonlar'
 title: Uyarılmış Koleksiyonlar
 ms.date: 03/30/2017
 helpviewer_keywords:
 - garbage collection, forced
 ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
-ms.openlocfilehash: 25e94221355569931a31b566a53434cbed9ea93f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c9f1929b40ed7cdb38832afebd6d0c67910ccfb7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95714243"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775857"
 ---
 # <a name="induced-collections"></a>Uyarılmış Koleksiyonlar
 
@@ -21,7 +22,7 @@ ms.locfileid: "95714243"
 
  <xref:System.GC.Collect%2A?displayProperty=nameWithType> <xref:System.GCCollectionMode> Zorunlu bir koleksiyonun davranışını aşağıdaki gibi belirtmek için bir değer içeren yöntem aşırı yüklemelerinin birini kullanabilirsiniz.  
   
-|`GCCollectionMode` deeri|Açıklama|  
+|`GCCollectionMode` deeri|Description|  
 |------------------------------|-----------------|  
 |<xref:System.GCCollectionMode.Default>|, .NET 'in çalışan sürümü için varsayılan çöp toplama ayarını kullanır.|  
 |<xref:System.GCCollectionMode.Forced>|Çöp toplamayı hemen gerçekleşecek şekilde zorlar. Bu, aşırı yüklemeyi çağırma ile eşdeğerdir <xref:System.GC.Collect?displayProperty=nameWithType> . Tüm nesiller için tam engelleme koleksiyonuna neden olur.<br /><br /> Ayrıca, <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> <xref:System.Runtime.GCLargeObjectHeapCompactionMode.CompactOnce?displayProperty=nameWithType> bir anlık tam engelleme çöp toplamayı zorlamak için özelliğini olarak ayarlayarak büyük nesne yığınını da genişletebilirsiniz.|  

@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: Visual Basic özel durumları günlüğe kaydetme'
 title: 'Nasıl yapılır: Özel Durumları Günlüğe Kaydetme'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions, logging
 - exceptions, tracking
 ms.assetid: a26c60e2-ae39-444a-aebb-33eccadc0eeb
-ms.openlocfilehash: 59ed7b836126a38f32b7c6f479570a566d236e6c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a4155de4e73c632edf071256976161cfdbffba77
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410120"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775220"
 ---
 # <a name="how-to-log-exceptions-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Günlük Özel Durumları
 
@@ -54,7 +55,7 @@ ms.locfileid: "84410120"
   
 4. ApplicationEvents. vb dosyasını kod düzenleyicisinde açın. **Genel** menüsünde **MyApplication olayları**' nı seçin.  
   
-5. **Bildirimler** menüsünde **UnhandledException**öğesini seçin.  
+5. **Bildirimler** menüsünde **UnhandledException** öğesini seçin.  
   
      Uygulama, <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> ana uygulama çalışmadan önce olayı başlatır.  
   

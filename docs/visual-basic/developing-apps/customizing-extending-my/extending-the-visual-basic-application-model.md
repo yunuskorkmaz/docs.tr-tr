@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: Visual Basic uygulama modelini genişletme'
 title: Visual Basic Uygulama Modelini Genişletme
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-ms.openlocfilehash: e707f034f05aababdc70d5d6e1f9e1da0ed558bc
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3aea2ab77b46976b6f7b220ee0b5811dc97e373c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410237"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775584"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Visual Basic Uygulama Modelini Genişletme
 
@@ -47,7 +48,7 @@ Uygulama normal bir uygulama (birden çok örnekli uygulama) veya tek örnekli b
 
     2. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>. Tasarımcı 'nın giriş ekranını başlatan kodu yaymanızı sağlar.
 
-         Varsayılan olarak, bu yöntem hiçbir şey yapmaz. Visual Basic **Proje tasarımcısında**uygulamanız için bir giriş ekranı seçerseniz, tasarımcı <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> yöntemi, <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> özelliği giriş ekranı formunun yeni bir örneğine ayarlayan bir yöntemle geçersiz kılar.
+         Varsayılan olarak, bu yöntem hiçbir şey yapmaz. Visual Basic **Proje tasarımcısında** uygulamanız için bir giriş ekranı seçerseniz, tasarımcı <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> yöntemi, <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> özelliği giriş ekranı formunun yeni bir örneğine ayarlayan bir yöntemle geçersiz kılar.
 
 2. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartup%2A>. Olayı yükseltmek için bir genişletilebilirlik noktası sağlar `Startup` . Bu işlev döndürürse uygulama başlatma sırası duraklar `False` .
 
@@ -59,7 +60,7 @@ Uygulama normal bir uygulama (birden çok örnekli uygulama) veya tek örnekli b
 
     1. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>. Tasarımcı 'nın ana formu başlatan kodu yayma yolunu sağlar.
 
-         Varsayılan olarak, bu yöntem hiçbir şey yapmaz. Ancak, Visual Basic **projesi tasarımcısında**uygulamanız için bir ana form seçtiğinizde, tasarımcı <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> yöntemi <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> özelliği, ana formun yeni bir örneğine ayarlayan bir yöntemle geçersiz kılar.
+         Varsayılan olarak, bu yöntem hiçbir şey yapmaz. Ancak, Visual Basic **projesi tasarımcısında** uygulamanız için bir ana form seçtiğinizde, tasarımcı <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> yöntemi <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> özelliği, ana formun yeni bir örneğine ayarlayan bir yöntemle geçersiz kılar.
 
     2. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A>. Uygulamanın tanımlanmış bir giriş ekranı varsa ve açık ise, bu yöntem giriş ekranını kapatır.
 
