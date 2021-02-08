@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: COM+ hizmet modeli yapılandırma aracı (ComSvcConfig.exe)'
 title: COM+ Hizmet Modeli Yapılandırma Aracı (ComSvcConfig.exe)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: 7717c6c2-85fc-418b-a8ed-bad8e61cec5c
-ms.openlocfilehash: ee0fb5f08446b03485f97de0037e898415016fea
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 81bfcbd468cb5401646a49967b6381b48e2f7cf0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96295281"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781070"
 ---
 # <a name="com-service-model-configuration-tool-comsvcconfigexe"></a>COM+ Hizmet Modeli Yapılandırma Aracı (ComSvcConfig.exe)
 
@@ -69,7 +70,7 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
 ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financial,IFinances /hosting:complus /verbose  
 ```  
   
-### <a name="description"></a>Açıklama  
+### <a name="description"></a>Description  
 
  Aşağıdaki örnek, `IStockLevels` `ItemInventory.Warehouse` bileşen arabirimini (OnlineWarehouse com+ uygulamasından) Web barındırma modu kullanılarak Web Hizmetleri olarak gösterilen arabirimler kümesine ekler. Web hizmeti, IIS 'nin OnlineWarehouse sanal dizininde barındırılır.  
   
@@ -79,7 +80,7 @@ ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financia
 ComSvcConfig.exe /install /application:OnlineWarehouse /contract:ItemInventory.Warehouse,IStockLevels /hosting:was /webDirectory:root/OnlineWarehouse  
 ```  
   
-### <a name="description"></a>Açıklama  
+### <a name="description"></a>Description  
 
  Aşağıdaki örnek `IFinances` `ItemOrders.Financial` bileşen arabirimini (ONLINESBIR com+ uygulamasından) Web Hizmetleri olarak kullanıma sunulan arabirimlerin kümesinden kaldırır.  
   
@@ -89,7 +90,7 @@ ComSvcConfig.exe /install /application:OnlineWarehouse /contract:ItemInventory.W
 ComSvcConfig.exe /uninstall /application:OnlineStore /interface:ItemOrders.Financial,IFinances /hosting:complus  
 ```  
   
-### <a name="description"></a>Açıklama  
+### <a name="description"></a>Description  
 
  Aşağıdaki örnek, yerel makinedeki Onlinescompactcom+ uygulaması için ilgili adres ve bağlama ayrıntılarının yanı sıra, şu anda sunulan COM+ barındırılan arabirimlerini listelemektedir.  
   

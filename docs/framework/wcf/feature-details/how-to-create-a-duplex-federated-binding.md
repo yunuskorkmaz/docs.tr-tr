@@ -1,17 +1,18 @@
 ---
+description: 'Daha fazla bilgi edinin: nasıl yapılır: çift yönlü federe bağlama oluşturma'
 title: 'Nasıl yapılır: Çift Yönlü Federe Bağlama Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 4331d2bc-5455-492a-9189-634a82597726
-ms.openlocfilehash: e93651ce9fe9dae55c299fcb061da6bdc4b6bc5e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 92d5eeeffab88d88aa245b51738048dced2d5d2d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598976"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99779913"
 ---
 # <a name="how-to-create-a-duplex-federated-binding"></a>Nasıl yapılır: Çift Yönlü Federe Bağlama Oluşturma
 
-<xref:System.ServiceModel.WSFederationHttpBinding>yalnızca veri birimini ve istek/yanıt iletisi değişimi sözleşmelerini destekler. Çift yönlü ileti değişimi sözleşmesini kullanmak için özel bir bağlama oluşturmanız gerekir. Aşağıdaki yordamlarda bunun nasıl yapılacağı, HTTP ve TCP aktarımları için Ileti modu güvenliğinin kullanılması ve TCP aktarımı için karışık mod güvenliği kullanılması gösterilmektedir. Tüm 3 bağlamaları gösteren örnek kod bu konunun sonunda yer almaktadır.
+<xref:System.ServiceModel.WSFederationHttpBinding> yalnızca veri birimini ve istek/yanıt iletisi değişimi sözleşmelerini destekler. Çift yönlü ileti değişimi sözleşmesini kullanmak için özel bir bağlama oluşturmanız gerekir. Aşağıdaki yordamlarda bunun nasıl yapılacağı, HTTP ve TCP aktarımları için Ileti modu güvenliğinin kullanılması ve TCP aktarımı için karışık mod güvenliği kullanılması gösterilmektedir. Tüm 3 bağlamaları gösteren örnek kod bu konunun sonunda yer almaktadır.
 
 Ayrıca, koddaki bağlamayı da oluşturabilirsiniz. Oluşturulacak bağlama öğeleri yığınının bir açıklaması için, bkz. [nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](how-to-create-a-custom-binding-using-the-securitybindingelement.md).
 

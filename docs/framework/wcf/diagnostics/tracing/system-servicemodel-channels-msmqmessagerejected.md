@@ -1,19 +1,20 @@
 ---
+description: ': System. ServiceModel. Channels. MsmqMessageRejected hakkında daha fazla bilgi edinin'
 title: System.ServiceModel.Channels.MsmqMessageRejected
 ms.date: 03/30/2017
 ms.assetid: 9b7c10a7-2af6-44a2-8b1a-90bba0c7cf26
-ms.openlocfilehash: 12978af11ac3663403deaeb21818643ca2d366aa
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4400519c814627fd2a2f2585359d6d6376798ac0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96260363"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780953"
 ---
 # <a name="systemservicemodelchannelsmsmqmessagerejected"></a>System.ServiceModel.Channels.MsmqMessageRejected
 
 MSMQ iletiyi reddetti.  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bu izleme bir MSMQ iletisinin reddedildiğini belirtir.  
   

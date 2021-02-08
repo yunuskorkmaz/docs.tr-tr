@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: WCF bulgu genel bakış'
 title: WCF Keşif Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
-ms.openlocfilehash: 5876605f5096bfb75c18680faaef4ba0cd15c082
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: d6acfb86ce0961ea7fbfba7695bece067e3dcec2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96281423"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99779653"
 ---
 # <a name="wcf-discovery-overview"></a>WCF Keşif Genel Bakış
 
@@ -61,7 +62,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
   
  <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>Hizmetin keşfedilmesini sağlamak için bir hizmet açıklamasına bir örnek eklenmelidir. Hizmeti <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> bulma isteklerinin nerede dinleneceğini bildirmek için hizmet ana bilgisayarına bir örnek eklenmelidir. Bu örnekte, <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> hizmetin UDP çok noktaya yayın aktarımı üzerinden bulma isteklerini dinlemesi gerektiğini belirtmek için bir (öğesinden türetilmiş) bir () eklenir. , <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> Tüm iletiler çok noktaya yayın düzeyinde gönderildiğinden, geçici bulma için kullanılır.  
   
-## <a name="announcement"></a>Duyur  
+## <a name="announcement"></a>Duyuru  
 
  Varsayılan olarak, hizmet yayını duyuru iletileri göndermez. Hizmetin duyuru iletileri gönderecek şekilde yapılandırılması gerekir. Bu, hizmeti bulma iletilerini dinlemeden ayrı olarak duyurabileceğinden, hizmet yazarları için ek esneklik sağlar. Hizmet duyurusu Ayrıca, Hizmetleri bulma proxy 'si veya diğer hizmet kayıt defterlerine kaydetme mekanizması olarak da kullanılabilir. Aşağıdaki kod, bir hizmetin UDP bağlama üzerinden duyuru iletileri göndermek için nasıl yapılandırılacağını gösterir.  
   

@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: temel örnek'
 title: Temel Örnek
 ms.date: 03/30/2017
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
-ms.openlocfilehash: db560ec7dea3912ecec8d84943cc9a01512d1f33
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 064c3d616a911f789050ccd5da433ed10fcfb596
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575777"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99778847"
 ---
 # <a name="basic-sample"></a>Temel Örnek
 
@@ -89,9 +90,9 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
 
 2. Visual Studio 2012 kullanarak, Basic. sln ' yi açın ve örneği derleyin.
 
-3. Service. exe uygulamasını çalıştırın.
+3. service.exe uygulamasını çalıştırın.
 
-4. Hizmet başladıktan sonra Client. exe ' yi çalıştırın.
+4. Hizmet başladıktan sonra client.exe çalıştırın.
 
 5. İstemcinin adresini bilmeden hizmeti bulabildiğinin gözlemleyin.
 

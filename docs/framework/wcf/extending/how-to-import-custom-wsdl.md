@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: özel WSDL alma'
 title: 'Nasıl yapılır: Özel WSDL İçeri Aktarma'
 ms.date: 03/30/2017
 ms.assetid: ddc3718d-ce60-44f6-92af-a5c67477dd99
-ms.openlocfilehash: c5aa554394743314a91afd6a5cdf86f9974e81f8
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f21e5cace532bd6d20d409f297480f65bb23cbf4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96249091"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780745"
 ---
 # <a name="how-to-import-custom-wsdl"></a>Nasıl yapılır: Özel WSDL İçeri Aktarma
 
@@ -81,6 +82,6 @@ Bu konu başlığı altında, özel WSDL 'nin nasıl içeri aktarılacağı aç�
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veriyi](../feature-details/metadata.md)
+- [Meta veri](../feature-details/metadata.md)
 - [Meta Verileri Dışarı ve İçeri Aktarma](../feature-details/exporting-and-importing-metadata.md)
 - [Özel WSDL Yayımı](../samples/custom-wsdl-publication.md)

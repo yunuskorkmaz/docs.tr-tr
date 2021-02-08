@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: temel veri sözleşmesi'
 title: Temel Veri Sözleşmesi
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Data Contract
 ms.assetid: b124e9e0-cb73-4ae0-b9c3-e6cdf5eced98
-ms.openlocfilehash: 66df6a1d7c2df17e79925490644891c0a536b1cd
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 332b9325e87c91be70e1ddd708902c4cef3777b7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585499"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99778873"
 ---
 # <a name="basic-data-contract"></a>Temel Veri Sözleşmesi
 
@@ -96,7 +97,7 @@ public class CalculatorService : ICalculator
 }
 ```
 
-İstemci uygulama da karmaşık sayılar kullanır. Hizmet sözleşmesinin ve veri sözleşmesinin her ikisi de, hizmet meta verilerinden [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) tarafından oluşturulan generatedClient.cs kaynak dosyasında tanımlanmıştır.
+İstemci uygulama da karmaşık sayılar kullanır. Hizmet sözleşmesinin ve veri sözleşmesinin her ikisi de, hizmet meta verilerinden [ServiceModel meta veri yardımcı programı Aracı (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) tarafından oluşturulan generatedClient.cs kaynak dosyasında tanımlanmıştır.
 
 ```csharp
 // Create a client.

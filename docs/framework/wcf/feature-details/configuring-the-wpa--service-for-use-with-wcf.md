@@ -1,13 +1,14 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: Windows Communication Foundation ile kullanmak üzere Windows Işlem etkinleştirme hizmeti 'Ni yapılandırma"
 title: Windows Süreç Etkinleştirme Hizmetini Windows Communication Foundation ile Kullanmak için Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: 1d50712e-53cd-4773-b8bc-a1e1aad66b78
-ms.openlocfilehash: 2f84afba72e5260a44726dcc812401da5475679f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: b98cc776b3a0bd860b4837ba70d58d10a83827dc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96284101"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780628"
 ---
 # <a name="configuring-the-windows-process-activation-service-for-use-with-windows-communication-foundation"></a>Windows Süreç Etkinleştirme Hizmetini Windows Communication Foundation ile Kullanmak için Yapılandırma
 

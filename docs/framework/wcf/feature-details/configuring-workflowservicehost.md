@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: WorkflowServiceHost yapılandırma'
 title: WorkflowServiceHost Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: d8e961cb-0ef5-4f8c-8a25-e76ae6334fed
-ms.openlocfilehash: 3f452bf0a6edce42b8a42dee75faaa6c1ef39ad6
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4e65272f41c447ecc21256deedcc916cc8ff69d0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96284011"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780602"
 ---
 # <a name="configuring-workflowservicehost"></a>WorkflowServiceHost Yapılandırma
 

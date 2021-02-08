@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerObjectEnum:: Skip yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerObjectEnum::Skip Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: f8e498f8-f93a-4b82-bd22-55bdbf5e8d45
 topic_type:
 - apiref
-ms.openlocfilehash: 83c6af74ebc3eb668317bd64628af17513a2aed6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8a2aa5dd2b905931b97fafa4db6709aab16aacc4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95702361"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781265"
 ---
 # <a name="icorprofilerobjectenumskip-method"></a>ICorProfilerObjectEnum::Skip Yöntemi
 
 Belirtilen sayıda öğe atlanabilmesi için, bu Numaralandırıcının imlecini geçerli konumundan ilerletir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT Skip (  

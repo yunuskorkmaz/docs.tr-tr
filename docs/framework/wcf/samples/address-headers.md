@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: adres üstbilgileri'
 title: Adres Üstbilgileri
 ms.date: 03/30/2017
 ms.assetid: b0c94d4a-3bde-4b4d-bb6d-9f12bc3a6940
-ms.openlocfilehash: 133826bbbea62b660bdcdd884ce657528ad30873
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a0b421776e1b6b792fa237e0cd65f9686198194e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84576011"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99779198"
 ---
 # <a name="address-headers"></a>Adres Üstbilgileri
 

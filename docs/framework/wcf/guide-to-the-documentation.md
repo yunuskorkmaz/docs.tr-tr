@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Belge Kılavuzu'
 title: Belgeler için Kılavuz
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF [WCF], documentation
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
-ms.openlocfilehash: 10a4fe88c9d49d49338776db83abc1201ada8a95
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7b5c3aa7c6f6a561fa49fb5d417d3fd1e82fcacd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238151"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99779419"
 ---
 # <a name="guide-to-the-documentation"></a>Belgeler için Kılavuz
 

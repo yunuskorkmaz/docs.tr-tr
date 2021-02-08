@@ -1,19 +1,20 @@
 ---
+description: ': System. ServiceModel. Channels. Peerbakımeylemsizlik etkinliği hakkında daha fazla bilgi edinin'
 title: System.ServiceModel.Channels.PeerMaintainerActivity
 ms.date: 03/30/2017
 ms.assetid: ef28d086-d7fb-4e81-82e9-45a54647783b
-ms.openlocfilehash: c1e82611bb776531ad3e3d60283d970602eb7f15
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: da4e4cf87da808cb6779445b6507b51d098132b3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96293032"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780888"
 ---
 # <a name="systemservicemodelchannelspeermaintaineractivity"></a>System.ServiceModel.Channels.PeerMaintainerActivity
 
 Peerbakımcı modülü belirli bir işlemi gerçekleştiriyor (izleme iletisi gövdesinde bulunan Ayrıntılar).  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
 
  Bu izleme, çeşitli Peerbakımcı işlemleri sırasında oluşur.  
   

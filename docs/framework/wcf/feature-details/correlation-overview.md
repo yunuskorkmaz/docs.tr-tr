@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: bağıntı genel bakış'
 title: Bağıntı Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: edcc0315-5d26-44d6-a36d-ea554c418e9f
-ms.openlocfilehash: 3cc0bc49ad464401ccff769fd5873d5b7e19dccc
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 66413a5289a8ff6172c7167a972754e3e0ba4279
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96293721"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780394"
 ---
 # <a name="correlation-overview"></a>Bağıntı Genel Bakış
 

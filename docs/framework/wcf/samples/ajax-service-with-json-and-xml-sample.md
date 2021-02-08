@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: JSON ve XML örneği ile AJAX Hizmeti'
 title: JSON ve XML ile AJAX Hizmeti Örneği
 ms.date: 03/30/2017
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
-ms.openlocfilehash: 8f70b6aa2e61d01a075a6edb3fe490ef593e73b0
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e47f6cbd7e4659488325e158e5594ca94322c520
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575959"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99779068"
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>JSON ve XML ile AJAX Hizmeti Örneği
 
@@ -24,7 +25,7 @@ Non-ASP.NET AJAX istemcilerinin kullanımını etkinleştirmek için <xref:Syste
 
 `<%@ServiceHost language="c#" Debug="true" Service="Microsoft.Samples.XmlAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebServiceHostFactory" %>`
 
-Web. config dosyasındaki aşağıdaki bölüm, uç noktada ek yapılandırma değişiklikleri yapmak için kullanılabilir. Ek değişiklik gerekmiyorsa bu, kaldırılabilir.
+Web.config ' deki aşağıdaki bölüm, uç noktada ek yapılandırma değişiklikleri yapmak için kullanılabilir. Ek değişiklik gerekmiyorsa bu, kaldırılabilir.
 
 ```xml
 <system.serviceModel>
@@ -59,7 +60,7 @@ MathResult DoMathJson(double n1, double n2);
 
 Her iki durumda da işlemler `MathResult` Standart BIR WCF veri anlaşması türü olan karmaşık bir tür döndürdüğüne de göz önünde.
 
-XmlAjaxClientPage. htm istemci Web sayfası, Kullanıcı **Hesaplama gerçekleştirme (JSON döndürme)** veya sayfadaki **Hesaplama (dönüş XML)** düğmelerini tıklattığında önceki Iki işlemden birini çağıran JavaScript kodunu içerir. Hizmeti çağırmak için kod bir JSON gövdesi oluşturur ve HTTP POST kullanarak gönderir. İstek, [temel Ajax hizmet](basic-ajax-service.md) örneği ve ASP.NET Ajax kullanan diğer örneklerin aksine, JavaScript 'te el ile oluşturulur.
+İstemci Web sayfası XmlAjaxClientPage.htm, Kullanıcı, sayfada hesaplama **yapma (JSON dönüş)** veya **Hesaplama (Return XML)** düğmelerini tıklattığında önceki Iki işlemden birini çağıran JavaScript kodunu içerir. Hizmeti çağırmak için kod bir JSON gövdesi oluşturur ve HTTP POST kullanarak gönderir. İstek, [temel Ajax hizmet](basic-ajax-service.md) örneği ve ASP.NET Ajax kullanan diğer örneklerin aksine, JavaScript 'te el ile oluşturulur.
 
 ```csharp
 // Create HTTP request
@@ -108,7 +109,7 @@ xmlHttp.onreadystatechange=function(){
 
 2. [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)bölümünde açıklandığı gibi XmlAjaxService. sln çözümünü oluşturun.
 
-3. Öğesine gidin `http://localhost/ServiceModelSamples/XmlAjaxClientPage.htm` (proje dizininden tarayıcıda XmlAjaxClientPage. htm dosyasını açmayın).
+3. Git `http://localhost/ServiceModelSamples/XmlAjaxClientPage.htm` (proje dizininden tarayıcıda XmlAjaxClientPage.htm açmayın).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

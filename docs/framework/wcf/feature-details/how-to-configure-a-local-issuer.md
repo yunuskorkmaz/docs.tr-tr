@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: yerel veren yapılandırma'
 title: 'Nasıl yapılır: Yerel Yayımlayan Yapılandırma'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
-ms.openlocfilehash: 7da3cd34d0840eea48c9ef0bb89fb6580b87623b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1c950c2bbbb55954fc65e35632523ea14ee3ac00
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601250"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780173"
 ---
 # <a name="how-to-configure-a-local-issuer"></a>Nasıl yapılır: Yerel Yayımlayan Yapılandırma
 
 Bu konu, bir istemcinin verilen belirteçler için yerel bir veren kullanmak üzere nasıl yapılandırılacağını açıklamaktadır.
 
-Genellikle, bir istemci federe bir hizmetle iletişim kurduğunda, hizmet istemcinin federasyon hizmetinde kimliğini doğrulamak için kullanacağı belirteci vermesi beklenen güvenlik belirteci hizmetinin adresini belirtir. Belirli durumlarda, istemci *yerel bir veren*kullanmak üzere yapılandırılmış olabilir.
+Genellikle, bir istemci federe bir hizmetle iletişim kurduğunda, hizmet istemcinin federasyon hizmetinde kimliğini doğrulamak için kullanacağı belirteci vermesi beklenen güvenlik belirteci hizmetinin adresini belirtir. Belirli durumlarda, istemci *yerel bir veren* kullanmak üzere yapılandırılmış olabilir.
 
 Windows Communication Foundation (WCF), Federasyon bağlamasının veren adresinin veya olduğu durumlarda yerel bir veren kullanır `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` `null` . Bu gibi durumlarda, öğesini <xref:System.ServiceModel.Description.ClientCredentials> yerel veren adresiyle ve bu veren ile iletişim kurmak için kullanılacak bağlama ile yapılandırmanız gerekir.
 
@@ -28,7 +29,7 @@ Windows Communication Foundation (WCF), Federasyon bağlamasının veren adresin
 
 ## <a name="to-configure-the-local-issuer-in-code"></a>Kod içinde yerel sertifikayı yapılandırmak için
 
-1. Türünde değişken oluşturma<xref:System.ServiceModel.Security.IssuedTokenClientCredential>
+1. Türünde değişken oluşturma <xref:System.ServiceModel.Security.IssuedTokenClientCredential>
 
 2. Değişkenini sınıfının özelliğinden döndürülen örneğe ayarlayın <xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A> `ClientCredentials` . Bu örnek, <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> istemcisinin özelliği (öğesinden devralınmış <xref:System.ServiceModel.ClientBase%601> ) veya özelliği tarafından döndürülür <xref:System.ServiceModel.ChannelFactory.Credentials%2A> <xref:System.ServiceModel.ChannelFactory> :
 

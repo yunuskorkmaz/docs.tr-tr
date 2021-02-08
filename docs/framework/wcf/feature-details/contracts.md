@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: sözleşmeler'
 title: Sözleşmeler
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - contracts [WCF]
 - Windows Communication Foundation [WCF], contracts
 ms.assetid: c8364183-4ac1-480b-804a-c5e6c59a5d7d
-ms.openlocfilehash: b51bbd1a8a9bfc8963cee429dab41fdf9b4f594c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: efa924970ce8d07a6b068e92ff85f099b696016d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96286766"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780524"
 ---
 # <a name="contracts"></a>Sözleşmeler
 

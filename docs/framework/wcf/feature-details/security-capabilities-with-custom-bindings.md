@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: özel bağlamalarla güvenlik özellikleri'
 title: Özel Bağlamalarla Güvenlik Özellikleri
 ms.date: 03/30/2017
 ms.assetid: a2425679-484a-4e6c-9c98-7da7304f1516
-ms.openlocfilehash: 1b12907481ccb3f3c5f4b8aaba6ede8ebfa6228a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0d4298bcb0b22d607c4abb15d879e3b093394bad
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96288313"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99779848"
 ---
 # <a name="security-capabilities-with-custom-bindings"></a>Özel Bağlamalarla Güvenlik Özellikleri
 

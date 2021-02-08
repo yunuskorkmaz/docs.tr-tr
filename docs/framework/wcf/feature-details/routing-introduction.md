@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: yönlendirme tanıtımı'
 title: Yönlendirme Tanıtımı
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: 8ce98aab2ed14401fa7c2cbf43eb92a633fa96b0
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 86f5b5dcc0bea067ac3dcfc8a87331da42c642aa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746471"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99779900"
 ---
 # <a name="routing-introduction"></a>Yönlendirme Tanıtımı
 
@@ -17,26 +18,26 @@ Bu konu, yönlendirme hizmeti için yeni olanlar için tasarlanmıştır ve teme
 
 ## <a name="configuration"></a>Yapılandırma
 
-Yönlendirme hizmeti, istemci uygulamalarından ileti alan ve iletileri bir veya daha fazla hedef uç noktaya yönlendiren bir veya daha fazla hizmet uç noktası sunan bir WCF hizmeti olarak uygulanır. Hizmet, hizmet tarafından açığa çıkarılan hizmet uç noktalarına uygulanan bir <xref:System.ServiceModel.Routing.RoutingBehavior>sağlar. Bu davranış, hizmetin nasıl çalıştığı hakkında çeşitli yönleri yapılandırmak için kullanılır. Yapılandırma dosyası kullanılırken yapılandırma kolaylığı için, parametreler **RoutingBehavior**üzerinde belirtilir. Kod tabanlı senaryolarda, bu parametreler bir <xref:System.ServiceModel.Routing.RoutingConfiguration> nesnesinin parçası olarak belirtilir ve bu daha sonra bir **RoutingBehavior**'a geçirilebilirler.
+Yönlendirme hizmeti, istemci uygulamalarından ileti alan ve iletileri bir veya daha fazla hedef uç noktaya yönlendiren bir veya daha fazla hizmet uç noktası sunan bir WCF hizmeti olarak uygulanır. Hizmet <xref:System.ServiceModel.Routing.RoutingBehavior> , hizmet tarafından sunulan hizmet uç noktalarına uygulanan bir sağlar. Bu davranış, hizmetin nasıl çalıştığı hakkında çeşitli yönleri yapılandırmak için kullanılır. Yapılandırma dosyası kullanılırken yapılandırma kolaylığı için, parametreler **RoutingBehavior** üzerinde belirtilir. Kod tabanlı senaryolarda, bu parametreler bir nesnenin parçası olarak belirtilir <xref:System.ServiceModel.Routing.RoutingConfiguration> ve daha sonra bir **RoutingBehavior**'a geçirilebilirler.
 
-Bu davranış başlatıldığında, istemci uç noktalarına iletilerin SOAP işlemesini gerçekleştirmek için kullanılan <xref:System.ServiceModel.Routing.SoapProcessingBehavior>ekler. Bu, yönlendirme hizmetinin ileti alındığı uç noktadan farklı bir **MessageVersion** gerektiren uç noktalara ileti aktarmasına olanak sağlar. **RoutingBehavior** Ayrıca, çalışma zamanında yönlendirme hizmeti yapılandırmasını değiştirmek için bir erişilebilirlik noktası sağlayan <xref:System.ServiceModel.Routing.RoutingExtension>bir hizmet uzantısı kaydeder.
+Bu davranış, başlatıldığında, <xref:System.ServiceModel.Routing.SoapProcessingBehavior> istemci uç noktalarına ILETILERIN SOAP işlemesini gerçekleştirmek için kullanılan öğesini ekler. Bu, yönlendirme hizmetinin ileti alındığı uç noktadan farklı bir **MessageVersion** gerektiren uç noktalara ileti aktarmasına olanak sağlar. **RoutingBehavior** Ayrıca, <xref:System.ServiceModel.Routing.RoutingExtension> çalışma zamanında yönlendirme hizmeti yapılandırmasını değiştirmek için bir erişilebilirlik noktası sağlayan bir hizmet uzantısı kaydeder.
 
 **RoutingConfiguration** sınıfı, yönlendirme hizmeti yapılandırmasını yapılandırmak ve güncelleştirmek için tutarlı bir yol sağlar.  Yönlendirme hizmeti için ayarlar olarak davranan ve hizmet başlatıldığında **RoutingBehavior** 'ı yapılandırmak için kullanılan ve çalışma zamanında yönlendirme yapılandırmasını değiştirmek Için **RoutingExtension** 'a geçirilen parametreleri içerir.
 
-İletilerin içerik tabanlı yönlendirilmesini gerçekleştirmek için kullanılan yönlendirme mantığı, birden çok <xref:System.ServiceModel.Dispatcher.MessageFilter> nesnesini, filtre tabloları (<xref:System.ServiceModel.Dispatcher.MessageFilterTable%601> nesneleri) halinde gruplandırarak tanımlanır. Gelen iletiler, filtre tablosunda bulunan ileti filtrelerine ve bir hedef uç noktaya iletilen iletiyle eşleşen her **MessageFilter** için değerlendirilir. İletileri yönlendirmek için kullanılması gereken filtre tablosu, yapılandırma veya **RoutingConfiguration** nesnesi kullanılarak kod aracılığıyla yönlendirme **davranışı** kullanılarak belirtilir.
+İletilerin içerik tabanlı yönlendirilmesini gerçekleştirmek için kullanılan yönlendirme mantığı, birden çok <xref:System.ServiceModel.Dispatcher.MessageFilter> nesneyi filtre tablolarında (nesneler) birlikte gruplandırarak tanımlanır <xref:System.ServiceModel.Dispatcher.MessageFilterTable%601> . Gelen iletiler, filtre tablosunda bulunan ileti filtrelerine ve bir hedef uç noktaya iletilen iletiyle eşleşen her **MessageFilter** için değerlendirilir. İletileri yönlendirmek için kullanılması gereken filtre tablosu, yapılandırma veya **RoutingConfiguration** nesnesi kullanılarak kod aracılığıyla yönlendirme **davranışı** kullanılarak belirtilir.
 
 ### <a name="defining-endpoints"></a>Uç noktaları tanımlama
 
-Kullanacağınız yönlendirme mantığını tanımlayarak yapılandırmanızı başlatmanız gerektiği gibi görünse de, ilk adımınız ileti yönlendirdiğiniz uç noktaların şeklini belirlemektir, gerçekten yapmanız gerekir. Yönlendirme hizmeti, iletileri almak ve göndermek için kullanılan kanalların şeklini tanımlayan sözleşmeleri kullanır ve bu nedenle, giriş kanalının şekli çıkış kanalının ile aynı olmalıdır.  Örneğin, istek-yanıt kanalı şeklini kullanan uç noktalara yönlendirmeniz durumunda, <xref:System.ServiceModel.Routing.IRequestReplyRouter>gibi gelen uç noktalarında uyumlu bir sözleşme kullanmanız gerekir.
+Kullanacağınız yönlendirme mantığını tanımlayarak yapılandırmanızı başlatmanız gerektiği gibi görünse de, ilk adımınız ileti yönlendirdiğiniz uç noktaların şeklini belirlemektir, gerçekten yapmanız gerekir. Yönlendirme hizmeti, iletileri almak ve göndermek için kullanılan kanalların şeklini tanımlayan sözleşmeleri kullanır ve bu nedenle, giriş kanalının şekli çıkış kanalının ile aynı olmalıdır.  Örneğin, istek-yanıt kanalı şeklini kullanan uç noktalara yönlendirmeniz durumunda, gelen uç noktalarında, gibi uyumlu bir anlaşma kullanmanız gerekir <xref:System.ServiceModel.Routing.IRequestReplyRouter> .
 
 Yani, hedef uç noktalarınız birden çok iletişim deseniyle (tek yönlü ve iki yönlü işlemleri karıştırma gibi) sözleşmeler kullanıyorsa, bunlara ileti alabilen ve bunlara yönlendirebileceği tek bir hizmet uç noktası oluşturamazsınız. Hangi uç noktaların uyumlu şekillere sahip olduğunu ve hedef uç noktalara yönlendirilmek üzere ileti almak için kullanılacak bir veya daha fazla hizmet uç noktası tanımlanacağını belirlemelisiniz.
 
 > [!NOTE]
-> Birden çok iletişim deseni (tek yönlü ve iki yönlü işlemlerin karışımı gibi) belirten sözleşmelerle çalışırken, bir geçici çözüm, yönlendirme hizmetinde <xref:System.ServiceModel.Routing.IDuplexSessionRouter>gibi bir çift yönlü sözleşme kullanmaktır. Ancak bu, bağlamanın çift yönlü iletişim özelliği olması gerektiği anlamına gelir. Bu, tüm senaryolarda mümkün olmayabilir. Bunun mümkün olmadığı senaryolarda, iletişimin birden çok uç noktaya düzenleme veya uygulamanın değiştirilmesi gerekebilir.
+> Birden çok iletişim deseni (tek yönlü ve iki yönlü işlemlerin karışımı gibi) belirten sözleşmelerle çalışırken, bir geçici çözüm, yönlendirme hizmetinde, gibi bir çift yönlü sözleşme kullanmaktır <xref:System.ServiceModel.Routing.IDuplexSessionRouter> . Ancak bu, bağlamanın çift yönlü iletişim özelliği olması gerektiği anlamına gelir. Bu, tüm senaryolarda mümkün olmayabilir. Bunun mümkün olmadığı senaryolarda, iletişimin birden çok uç noktaya düzenleme veya uygulamanın değiştirilmesi gerekebilir.
 
 Yönlendirme sözleşmeleri hakkında daha fazla bilgi için bkz. [yönlendirme sözleşmeleri](routing-contracts.md).
 
-Hizmet uç noktası tanımlandıktan sonra, belirli bir **RoutingConfiguration** 'ı uç noktayla Ilişkilendirmek Için **RoutingBehavior** 'ı kullanabilirsiniz. Yönlendirme hizmetini bir yapılandırma dosyası kullanarak yapılandırırken, bu uç noktada alınan iletileri işlemek için kullanılan yönlendirme mantığını içeren filtre tablosunu belirtmek için **RoutingBehavior** kullanılır. Yönlendirme hizmetini programlı olarak yapılandırıyorsanız, **RoutingConfiguration**kullanarak filtre tablosunu belirtebilirsiniz.
+Hizmet uç noktası tanımlandıktan sonra, belirli bir **RoutingConfiguration** 'ı uç noktayla Ilişkilendirmek Için **RoutingBehavior** 'ı kullanabilirsiniz. Yönlendirme hizmetini bir yapılandırma dosyası kullanarak yapılandırırken, bu uç noktada alınan iletileri işlemek için kullanılan yönlendirme mantığını içeren filtre tablosunu belirtmek için **RoutingBehavior** kullanılır. Yönlendirme hizmetini programlı olarak yapılandırıyorsanız, **RoutingConfiguration** kullanarak filtre tablosunu belirtebilirsiniz.
 
 Aşağıdaki örnek, yönlendirme hizmeti tarafından hem programlı olarak hem de bir yapılandırma dosyası kullanılarak kullanılan hizmet ve istemci uç noktalarını tanımlar.
 
@@ -101,7 +102,7 @@ serviceHost.Description.Behaviors.Add(
      new RoutingBehavior(rc));
 ```
 
-Bu örnek, yönlendirme hizmetini, yönlendirileceği iletileri almak için kullanılan `http://localhost:8000/routingservice/router`adresiyle tek bir uç nokta kullanıma sunulacak şekilde yapılandırır. İletiler istek-yanıt uç noktalarına yönlendirildiğinden, hizmet uç noktası <xref:System.ServiceModel.Routing.IRequestReplyRouter> sözleşmesini kullanır. Bu yapılandırma ayrıca iletilerin yönlendirildiği `http://localhost:8000/servicemodelsample/service` tek bir istemci uç noktasını tanımlar. "RoutingTable1" adlı Filtre tablosu (gösterilmez), iletileri yönlendirmek için kullanılan yönlendirme mantığını içerir ve **RoutingBehavior** (bir yapılandırma dosyası için) veya **RoutingConfiguration** (programlı yapılandırma için) kullanılarak hizmet uç noktasıyla ilişkilendirilir.
+Bu örnek, yönlendirme hizmetini `http://localhost:8000/routingservice/router` yönlendirilen iletileri almak için kullanılan adresine sahip tek bir uç noktayı kullanıma sunmak üzere yapılandırır. İletiler istek-yanıt uç noktalarına yönlendirildiğinden, hizmet uç noktası <xref:System.ServiceModel.Routing.IRequestReplyRouter> sözleşmeyi kullanır. Bu yapılandırma ayrıca iletilerin yönlendirildiği tek bir istemci uç noktasını tanımlar `http://localhost:8000/servicemodelsample/service` . "RoutingTable1" adlı Filtre tablosu (gösterilmez), iletileri yönlendirmek için kullanılan yönlendirme mantığını içerir ve **RoutingBehavior** (bir yapılandırma dosyası için) veya **RoutingConfiguration** (programlı yapılandırma için) kullanılarak hizmet uç noktasıyla ilişkilendirilir.
 
 ### <a name="routing-logic"></a>Yönlendirme mantığı
 
@@ -111,9 +112,9 @@ Yönlendirme hizmeti, ileti içindeki adres, eylem, uç nokta adı ve hatta bir 
 
 Birden çok ileti filtresi, her **MessageFilter** öğesini bir hedef uç noktasıyla ilişkilendiren filtre tablolarında birlikte düzenlenir. İsteğe bağlı olarak, bir aktarım hatası durumunda yönlendirme hizmetinin iletiyi göndermek için deneyeceği yedek uç noktaların listesini belirtmek için filtre tablosu da kullanılabilir.
 
-Varsayılan olarak, bir filtre tablosu içindeki tüm ileti filtreleri aynı anda değerlendirilir; Ancak, ileti filtrelerinin belirli bir sırada değerlendirilmesine neden olan bir <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.Priority%2A> belirtebilirsiniz. En yüksek önceliğe sahip tüm girişler önce değerlendirilir ve daha yüksek bir öncelik düzeyinde eşleşme bulunursa düşük önceliklerdeki ileti filtreleri değerlendirilmez. Filtre tabloları hakkında daha fazla bilgi için bkz. [Ileti filtreleri](message-filters.md).
+Varsayılan olarak, bir filtre tablosu içindeki tüm ileti filtreleri aynı anda değerlendirilir; Ancak, <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.Priority%2A> ileti filtrelerinin belirli bir sırada değerlendirilmesini sağlayan bir de belirtebilirsiniz. En yüksek önceliğe sahip tüm girişler önce değerlendirilir ve daha yüksek bir öncelik düzeyinde eşleşme bulunursa düşük önceliklerdeki ileti filtreleri değerlendirilmez. Filtre tabloları hakkında daha fazla bilgi için bkz. [Ileti filtreleri](message-filters.md).
 
-Aşağıdaki örneklerde, tüm iletiler için `true` değerlendirilen <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>kullanılır. Bu **MessageFilter** , "routingTable1" filtre tablosuna eklenir ve bu, **MessageFilter** öğesini "hesaplatorservice" adlı istemci uç noktasıyla ilişkilendirir. **RoutingBehavior** daha sonra bu tablonun hizmet uç noktası tarafından işlenen iletileri yönlendirmek için kullanılması gerektiğini belirtir.
+Aşağıdaki örneklerde, <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> tüm iletiler için değerlendirilen ' kullanılır `true` . Bu **MessageFilter** , "routingTable1" filtre tablosuna eklenir ve bu, **MessageFilter** öğesini "hesaplatorservice" adlı istemci uç noktasıyla ilişkilendirir. **RoutingBehavior** daha sonra bu tablonun hizmet uç noktası tarafından işlenen iletileri yönlendirmek için kullanılması gerektiğini belirtir.
 
 ```xml
 <behaviors>
@@ -154,7 +155,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
 ```
 
 > [!NOTE]
-> Varsayılan olarak, yönlendirme hizmeti yalnızca iletinin üstbilgilerini değerlendirir. Filtrelerin ileti gövdesine erişmesine izin vermek için <xref:System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly%2A> `false`ayarlamanız gerekir.
+> Varsayılan olarak, yönlendirme hizmeti yalnızca iletinin üstbilgilerini değerlendirir. Filtrelerin ileti gövdesine erişmesine izin vermek için, olarak ayarlamanız gerekir <xref:System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly%2A> `false` .
 
 **Noktalı**
 
@@ -162,9 +163,9 @@ Birçok yönlendirme hizmeti yapılandırması iletileri yalnızca belirli bir u
 
 - İstek yanıtındaki istemci uygulaması tarafından yalnızca bir yanıt alınabileceğinden, kanal şeklinin istek Yanıtla (ancak tek yönlü veya çift yönlü olabilir) olması gerekir.
 
-- İleti değerlendirilirken birden çok filtrenin `true` döndürmesi gerekir.
+- İleti değerlendirilirken birden çok filtrenin dönmesi gerekir `true` .
 
-Bu koşullar karşılanıyorsa, ileti `true`sonucunu değerlendiren tüm filtrelerin tüm uç noktalarına yönlendirilir. Aşağıdaki örnek, iletideki bitiş noktası adresi `http://localhost:8000/routingservice/router/rounding`olduğunda, iletilerin her iki uç noktaya yönlendirilmesine neden olan bir yönlendirme yapılandırmasını tanımlar.
+Bu koşullar karşılanıyorsa ileti, ' i değerlendiren tüm filtrelerin tüm uç noktalarına yönlendirilir `true` . Aşağıdaki örnek, iletideki bitiş noktası adresi olduğunda, iletilerin her iki uç noktaya yönlendirilmesine neden olan bir yönlendirme yapılandırmasını tanımlar `http://localhost:8000/routingservice/router/rounding` .
 
 ```xml
 <!--ROUTING SECTION -->
@@ -194,7 +195,7 @@ rc.FilterTable.Add(new EndpointAddressMessageFilter(new EndpointAddress(
 
 ### <a name="soap-processing"></a>SOAP Işleme
 
-Farklı protokoller arasında ileti yönlendirmeyi desteklemek için, varsayılan olarak **RoutingBehavior** , iletilerin yönlendirildiği tüm istemci uç noktaları için <xref:System.ServiceModel.Routing.SoapProcessingBehavior> ekler. Bu davranış, iletiyi uç noktaya yönlendirmeden önce otomatik olarak yeni bir **MessageVersion** oluşturur, Ayrıca, istenen istemci uygulamasına döndürmeden önce herhangi bir yanıt belgesi için uyumlu bir **MessageVersion** oluşturma.
+Farklı protokoller arasında ileti yönlendirmeyi desteklemek için, varsayılan olarak **RoutingBehavior** , <xref:System.ServiceModel.Routing.SoapProcessingBehavior> iletilerinin yönlendirildiği tüm istemci uç noktalara ekler. Bu davranış, iletiyi uç noktaya yönlendirmeden önce otomatik olarak yeni bir **MessageVersion** oluşturur, Ayrıca, istenen istemci uygulamasına döndürmeden önce herhangi bir yanıt belgesi için uyumlu bir **MessageVersion** oluşturma.
 
 Giden ileti için yeni bir **MessageVersion** oluşturmak için uygulanan adımlar aşağıdaki gibidir:
 
@@ -204,9 +205,9 @@ Giden ileti için yeni bir **MessageVersion** oluşturmak için uygulanan adıml
 
 - Özgün ileti için gövde okuyucuyu alın.
 
-- Aynı eylem, gövde okuyucu ve yeni bir **MessageVersion**ile yeni bir ileti oluşturun.
+- Aynı eylem, gövde okuyucu ve yeni bir **MessageVersion** ile yeni bir ileti oluşturun.
 
-- <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A>! = **Addressing. None**Ise, to, from, FaultTo ve RelatesTo üst bilgilerini yeni iletiye kopyalayın.
+- Eğer <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing. None** ise, to, from, FaultTo ve RelatesTo üst bilgilerini yeni iletiye kopyalayın.
 
 - Tüm ileti özelliklerini yeni iletiye kopyalayın.
 
@@ -222,16 +223,16 @@ Giden ileti için yeni bir **MessageVersion** oluşturmak için uygulanan adıml
 
 - Aynı eylem, gövde okuyucu ve özgün istek iletisinin **MessageVersion** ile yeni bir yanıt iletisi oluşturun.
 
-- <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A>! = **Addressing. None**Ise, to, from, FaultTo ve RelatesTo üst bilgilerini yeni iletiye kopyalayın.
+- Eğer <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing. None** ise, to, from, FaultTo ve RelatesTo üst bilgilerini yeni iletiye kopyalayın.
 
 - İleti özelliklerini yeni iletiye kopyalayın.
 
 - Yeni yanıt iletisini döndürün.
 
-Varsayılan olarak, **SoapProcessingBehavior** , hizmet başladığında <xref:System.ServiceModel.Routing.RoutingBehavior> tarafından istemci uç noktalarına otomatik olarak eklenir; Ancak, <xref:System.ServiceModel.Routing.RoutingConfiguration.SoapProcessingEnabled%2A> özelliğini kullanarak SOAP işlemenin tüm istemci uç noktalarına eklenip eklenmeyeceğini kontrol edebilirsiniz. Ayrıca, daha ayrıntılı bir SOAP işleme denetimi gerekiyorsa, davranışı doğrudan belirli bir uç noktaya ekleyebilir ve uç nokta düzeyinde bu davranışı etkinleştirebilir veya devre dışı bırakabilirsiniz.
+Varsayılan olarak, **SoapProcessingBehavior** , hizmet başladığında istemci uç noktalarına otomatik olarak eklenir <xref:System.ServiceModel.Routing.RoutingBehavior> ; ancak, özelliğini kullanarak soap işlemenin tüm istemci uç noktalarına eklenip eklenmeyeceğini denetleyebilirsiniz <xref:System.ServiceModel.Routing.RoutingConfiguration.SoapProcessingEnabled%2A> . Ayrıca, daha ayrıntılı bir SOAP işleme denetimi gerekiyorsa, davranışı doğrudan belirli bir uç noktaya ekleyebilir ve uç nokta düzeyinde bu davranışı etkinleştirebilir veya devre dışı bırakabilirsiniz.
 
 > [!NOTE]
-> SOAP işleme, özgün istek iletisinden farklı bir MessageVersion gerektiren bir uç nokta için devre dışı bırakılmışsa, iletiyi ileti gönderilmeden önce gereken SOAP değişikliklerinin gerçekleştirilmesi için özel bir mekanizma sağlamanız gerekir. hedef uç nokta.
+> SOAP işleme, özgün istek iletisinden farklı bir MessageVersion gerektiren bir uç nokta için devre dışıysa, iletiyi hedef uç noktaya göndermeden önce gereken SOAP değişikliklerinin gerçekleştirilmesi için özel bir mekanizma sağlamanız gerekir.
 
 Aşağıdaki örneklerde **SoapProcessingEnabled** özelliği, **SoapProcessingBehavior** 'ın tüm istemci uç noktalarına otomatik olarak eklenmesini engellemek için kullanılır.
 
@@ -254,9 +255,9 @@ rc.SoapProcessingEnabled = false;
 
 ### <a name="dynamic-configuration"></a>Dinamik yapılandırma
 
-Ek istemci uç noktaları eklediğinizde veya iletileri yönlendirmek için kullanılan filtreleri değiştirmeniz gerekiyorsa, hizmetin Şu anda iletileri aldığı uç noktalara engel olmak için yapılandırmayı çalışma zamanında dinamik olarak güncelleştirmeniz için bir yola sahip olmanız gerekir. Yönlendirme hizmeti. Bir yapılandırma dosyasını veya ana bilgisayar uygulamasının kodunu değiştirmek her zaman yeterli değildir çünkü her iki yöntem de uygulamanın geri dönüşümünü gerektirir, bu da şu anda aktarımda olan iletilerin olası kaybına ve kapalı kalma süresine yol açabilir. hizmetin yeniden başlatılması bekleniyor.
+Ek istemci uç noktaları eklediğinizde veya iletileri yönlendirmek için kullanılan filtreleri değiştirmeniz gerekiyorsa, hizmetin yönlendirme hizmeti aracılığıyla iletileri aldığı uç noktalara engel olmak için yapılandırmayı çalışma zamanında dinamik olarak güncelleştirmeniz için bir yola sahip olmanız gerekir. Bir yapılandırma dosyasını veya ana bilgisayar uygulamasının kodunu değiştirmek her zaman yeterli değildir, çünkü herhangi bir yöntem uygulamanın geri dönüşümünü gerektirir, bu da şu anda aktarımda olan iletilerin olası kaybına ve hizmetin yeniden başlatılmasını beklerken kapalı kalma süresine neden olur.
 
-**RoutingConfiguration** 'ı yalnızca programlı olarak değiştirebilirsiniz. Hizmeti bir yapılandırma dosyası kullanarak ilk olarak yapılandırabilmeniz mümkün olsa da, yalnızca yeni bir **RoutingConfiguration** oluşturarak ve onu <xref:System.ServiceModel.Routing.RoutingExtension> hizmeti uzantısı tarafından sunulan <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> metoduna parametre olarak geçirerek yapılandırmayı çalışma zamanında değiştirebilirsiniz. Şu anda yoldaki tüm iletiler önceki yapılandırma kullanılarak yönlendirilmeye devam ederken, **ApplyConfiguration** çağrısından sonra alınan iletiler yeni yapılandırmayı kullanır. Aşağıdaki örnek, yönlendirme hizmeti 'nin bir örneğini oluşturmayı ve sonra yapılandırmayı değiştirmeyi gösterir.
+**RoutingConfiguration** 'ı yalnızca programlı olarak değiştirebilirsiniz. Hizmeti bir yapılandırma dosyası kullanarak ilk olarak yapılandırabilmeniz mümkün olsa da, yalnızca yeni bir **RoutingConfiguration** oluşturup <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> hizmet uzantısının açığa çıkarılan yöntemine bir parametre olarak geçirerek yapılandırmayı çalışma zamanında değiştirebilirsiniz <xref:System.ServiceModel.Routing.RoutingExtension> . Şu anda yoldaki tüm iletiler önceki yapılandırma kullanılarak yönlendirilmeye devam ederken, **ApplyConfiguration** çağrısından sonra alınan iletiler yeni yapılandırmayı kullanır. Aşağıdaki örnek, yönlendirme hizmeti 'nin bir örneğini oluşturmayı ve sonra yapılandırmayı değiştirmeyi gösterir.
 
 ```csharp
 RoutingConfiguration routingConfig = new RoutingConfiguration();
@@ -287,18 +288,18 @@ routerHost.routerHost.Extensions.Find<RoutingExtension>().ApplyConfiguration(rc2
 
 ## <a name="error-handling"></a>Hata İşleme
 
-İleti gönderilmeye çalışılırken herhangi bir <xref:System.ServiceModel.CommunicationException> karşılaşılırsa, hata işleme gerçekleşir. Bu özel durumlar genellikle <xref:System.ServiceModel.EndpointNotFoundException>, <xref:System.ServiceModel.ServerTooBusyException>veya <xref:System.ServiceModel.CommunicationObjectFaultedException>gibi tanımlı istemci uç noktasıyla iletişim kurmaya çalışırken bir sorunla karşılaşıldığını gösterir. Hata işleme-kod ayrıca, **CommunicationException**'dan türetilmeyen başka bir ortak özel durum olan bir <xref:System.TimeoutException> gerçekleştiğinde göndermeyi yeniden denemeye çalışır.
+<xref:System.ServiceModel.CommunicationException>İleti gönderilmeye çalışılırken herhangi bir hatayla karşılaşırsanız, hata işleme gerçekleşir. Bu özel durumlar genellikle, veya gibi tanımlı istemci uç noktasıyla iletişim kurmaya çalışırken bir sorunla karşılaşıldığını gösterir <xref:System.ServiceModel.EndpointNotFoundException> <xref:System.ServiceModel.ServerTooBusyException> <xref:System.ServiceModel.CommunicationObjectFaultedException> . Hata işleme-kod ayrıca, bir durum <xref:System.TimeoutException> oluştuğunda, **CommunicationException**'dan türetilmeyen başka bir ortak özel durum olduğunda göndermeyi yeniden denemeye çalışır.
 
 Yukarıdaki özel durumlardan biri gerçekleştiğinde, yönlendirme hizmeti yedekleme uç noktaları listesine yük devreder. Tüm yedekleme uç noktaları bir iletişim hatasıyla başarısız olursa veya bir uç nokta hedef hizmette bir hata olduğunu gösteren bir özel durum döndürürse, yönlendirme hizmeti istemci uygulamasına bir hata döndürür.
 
 > [!NOTE]
-> Hata işleme işlevselliği, bir ileti gönderilirken ve bir kanalı kapatmaya çalışırken oluşan özel durumları yakalar ve işler. Hata işleme kodu, iletişim kurduğu uygulama uç noktaları tarafından oluşturulan özel durumları algılamaya veya işlemeye yönelik değildir; bir hizmet tarafından oluşturulan <xref:System.ServiceModel.FaultException>, yönlendirme hizmetinde bir **FaultMessage** olarak görünür ve istemciye geri gönderilir.
+> Hata işleme işlevselliği, bir ileti gönderilirken ve bir kanalı kapatmaya çalışırken oluşan özel durumları yakalar ve işler. Hata işleme kodu, iletişim kurduğu uygulama uç noktaları tarafından oluşturulan özel durumları algılamaya veya işlemeye yönelik değildir; <xref:System.ServiceModel.FaultException> bir hizmet tarafından oluşturulan bir durum, yönlendirme hizmetinde bir **FaultMessage** olarak görünür ve istemciye geri gönderilir.
 >
-> Yönlendirme hizmeti bir iletiyi geçirmeye çalıştığında bir hata oluşursa, normalde yönlendirme hizmeti yokluğunda alacağınız bir <xref:System.ServiceModel.EndpointNotFoundException> yerine istemci tarafında <xref:System.ServiceModel.FaultException> alabilirsiniz. Bu nedenle, iç içe özel durumları incelemeden bir yönlendirme hizmeti özel durumları maskeleyebilir ve tam saydamlık sağlamaz.
+> Yönlendirme hizmeti bir iletiyi geçirmeye çalıştığında bir hata oluşursa, <xref:System.ServiceModel.FaultException> <xref:System.ServiceModel.EndpointNotFoundException> normalde yönlendirme hizmeti yokluğunda olmak yerine istemci tarafında bir alabilirsiniz. Bu nedenle, iç içe özel durumları incelemeden bir yönlendirme hizmeti özel durumları maskeleyebilir ve tam saydamlık sağlamaz.
 
 ### <a name="tracing-exceptions"></a>Özel durumları izleme
 
-Bir listedeki uç noktaya ileti gönderilirken, yönlendirme hizmeti elde edilen özel durum verilerini izler ve özel durum ayrıntılarını özel **durumlar**adlı bir ileti özelliği olarak ekler. Bu, özel durum verilerini korur ve bir kullanıcı tarafından ileti denetçisi aracılığıyla programlı erişim sağlar.  Özel durum verileri, bir ileti gönderilmeye çalışırken karşılaşılan özel durum ayrıntılarıyla eşleşen bir sözlükte ileti başına depolanır.
+Bir listedeki uç noktaya ileti gönderilirken, yönlendirme hizmeti elde edilen özel durum verilerini izler ve özel durum ayrıntılarını özel **durumlar** adlı bir ileti özelliği olarak ekler. Bu, özel durum verilerini korur ve bir kullanıcı tarafından ileti denetçisi aracılığıyla programlı erişim sağlar.  Özel durum verileri, bir ileti gönderilmeye çalışırken karşılaşılan özel durum ayrıntılarıyla eşleşen bir sözlükte ileti başına depolanır.
 
 ### <a name="backup-endpoints"></a>Yedekleme uç noktaları
 
@@ -366,22 +367,22 @@ Aşağıdaki tabloda, yedekleme uç noktası listelerinin kullanımıyla uyumlu 
 
 |Desen|Oturum|İşlem|Alma bağlamı|Yedekleme listesi destekleniyor|Notlar|
 |-------------|-------------|-----------------|---------------------|---------------------------|-----------|
-|Tek Yönlü||||Evet|İletiyi bir yedekleme uç noktasında yeniden göndermeye çalışır. Bu ileti çok noktaya yayın ise, yalnızca başarısız olan kanaldaki ileti yedekleme hedefine taşınır.|
-|Tek Yönlü||✔ ︎||Hayır|Bir özel durum oluşturulur ve işlem geri alınır.|
-|Tek Yönlü|||✔ ︎|Evet|İletiyi bir yedekleme uç noktasında yeniden göndermeye çalışır. İleti başarıyla alındıktan sonra tüm alma bağlamlarını doldurun. İleti herhangi bir uç nokta tarafından başarıyla alınmıyorsa, alma bağlamını tamamlamayın.<br /><br /> Bu ileti çok noktaya yayın olduğunda, alma bağlamı yalnızca ileti en az bir uç nokta (birincil veya yedek) tarafından başarıyla alınmışsa tamamlanır. Çok noktaya yayın yollarındaki uç noktaların hiçbiri iletiyi başarıyla aldıysanız, alma bağlamını tamamlamayın.|
-|Tek Yönlü||✔ ︎|✔ ︎|Evet|Önceki işlemi iptal edin, yeni bir işlem oluşturun ve tüm iletileri yeniden gönderin. Bir hatayla karşılaşan iletiler bir yedekleme hedefine iletilir.<br /><br /> Tüm iletimlerin başarılı olduğu bir işlem oluşturulduktan sonra alma bağlamlarını tamamlayıp işlemi yürütün.|
-|Tek Yönlü|✔ ︎|||Evet|İletiyi bir yedekleme uç noktasında yeniden göndermeye çalışır. Çok noktaya yayın senaryosunda yalnızca bir oturumdaki veya oturum kapatma başarısız olan bir oturumdaki iletiler yedekleme hedeflerine yeniden gönderilir.|
-|Tek Yönlü|✔ ︎|✔ ︎||Hayır|Bir özel durum oluşturulur ve işlem geri alınır.|
-|Tek Yönlü|✔ ︎||✔ ︎|Evet|İletiyi bir yedekleme uç noktasında yeniden göndermeye çalışır. Tüm iletiler hatasız tamamlandı, oturum daha fazla ileti olmadığını ve yönlendirme hizmeti tüm giden oturum kanallarını başarıyla kapatmışsa, tüm alma bağlamlarının tamamlandığı ve gelen oturum kanalının kapalı olması gerekir.|
-|Tek Yönlü|✔ ︎|✔ ︎|✔ ︎|Evet|Geçerli işlemi iptal edin ve yeni bir tane oluşturun. Oturumdaki tüm önceki iletileri yeniden gönderin. Tüm iletilerin başarıyla gönderildiği ve oturum daha fazla ileti olmadığını gösterdiği bir işlem oluşturulduktan sonra, tüm giden oturum kanalları kapatılır, alma bağlamlarının tümü işlemle tamamlanır, gelen oturum kanalı kapalı ve işlem kaydedildi.<br /><br /> Oturumlar çok noktaya yayın yaparken, hatasız bir hata olmayan mesajlar daha önce olduğu gibi aynı hedefe gönderilir ve bir hatayla karşılaşan iletiler yedekleme hedeflerine gönderilir.|
-|İki yönlü||||Evet|Bir yedekleme hedefine gönderin.  Bir kanal yanıt iletisi döndürdüğünde, yanıtı özgün istemciye döndürün.|
-|İki yönlü|✔ ︎|||Evet|Kanaldaki tüm iletileri bir yedekleme hedefine gönderin.  Bir kanal yanıt iletisi döndürdüğünde, yanıtı özgün istemciye döndürün.|
-|İki yönlü||✔ ︎||Hayır|Bir özel durum oluşturulur ve işlem geri alınır.|
-|İki yönlü|✔ ︎|✔ ︎||Hayır|Bir özel durum oluşturulur ve işlem geri alınır.|
-|Çift Yönlü||||Hayır|Oturum olmayan çift yönlü iletişim şu anda desteklenmiyor.|
-|Çift Yönlü|✔ ︎|||Evet|Bir yedekleme hedefine gönderin.|
+|Tek Yönlü||||Yes|İletiyi bir yedekleme uç noktasında yeniden göndermeye çalışır. Bu ileti çok noktaya yayın ise, yalnızca başarısız olan kanaldaki ileti yedekleme hedefine taşınır.|
+|Tek Yönlü||✔️||No|Bir özel durum oluşturulur ve işlem geri alınır.|
+|Tek Yönlü|||✔️|Yes|İletiyi bir yedekleme uç noktasında yeniden göndermeye çalışır. İleti başarıyla alındıktan sonra tüm alma bağlamlarını doldurun. İleti herhangi bir uç nokta tarafından başarıyla alınmıyorsa, alma bağlamını tamamlamayın.<br /><br /> Bu ileti çok noktaya yayın olduğunda, alma bağlamı yalnızca ileti en az bir uç nokta (birincil veya yedek) tarafından başarıyla alınmışsa tamamlanır. Çok noktaya yayın yollarındaki uç noktaların hiçbiri iletiyi başarıyla aldıysanız, alma bağlamını tamamlamayın.|
+|Tek Yönlü||✔️|✔️|Yes|Önceki işlemi iptal edin, yeni bir işlem oluşturun ve tüm iletileri yeniden gönderin. Bir hatayla karşılaşan iletiler bir yedekleme hedefine iletilir.<br /><br /> Tüm iletimlerin başarılı olduğu bir işlem oluşturulduktan sonra alma bağlamlarını tamamlayıp işlemi yürütün.|
+|Tek Yönlü|✔️|||Yes|İletiyi bir yedekleme uç noktasında yeniden göndermeye çalışır. Çok noktaya yayın senaryosunda yalnızca bir oturumdaki veya oturum kapatma başarısız olan bir oturumdaki iletiler yedekleme hedeflerine yeniden gönderilir.|
+|Tek Yönlü|✔️|✔️||No|Bir özel durum oluşturulur ve işlem geri alınır.|
+|Tek Yönlü|✔️||✔️|Yes|İletiyi bir yedekleme uç noktasında yeniden göndermeye çalışır. Tüm iletiler hatasız tamamlandı, oturum daha fazla ileti olmadığını ve yönlendirme hizmeti tüm giden oturum kanallarını başarıyla kapatmışsa, tüm alma bağlamlarının tamamlandığı ve gelen oturum kanalının kapalı olması gerekir.|
+|Tek Yönlü|✔️|✔️|✔️|Yes|Geçerli işlemi iptal edin ve yeni bir tane oluşturun. Oturumdaki tüm önceki iletileri yeniden gönderin. Tüm iletilerin başarıyla gönderildiği ve oturum daha fazla ileti olmadığını gösterdiği bir işlem oluşturulduktan sonra, tüm giden oturum kanalları kapatılır, alma bağlamlarının tümü işlemle tamamlanır, gelen oturum kanalı kapatılır ve işlem gerçekleştirilir.<br /><br /> Oturumlar çok noktaya yayın yaparken, hatasız bir hata olmayan mesajlar daha önce olduğu gibi aynı hedefe gönderilir ve bir hatayla karşılaşan iletiler yedekleme hedeflerine gönderilir.|
+|Two-Way||||Yes|Bir yedekleme hedefine gönderin.  Bir kanal yanıt iletisi döndürdüğünde, yanıtı özgün istemciye döndürün.|
+|Two-Way|✔️|||Yes|Kanaldaki tüm iletileri bir yedekleme hedefine gönderin.  Bir kanal yanıt iletisi döndürdüğünde, yanıtı özgün istemciye döndürün.|
+|Two-Way||✔️||No|Bir özel durum oluşturulur ve işlem geri alınır.|
+|Two-Way|✔️|✔️||No|Bir özel durum oluşturulur ve işlem geri alınır.|
+|Çift Yönlü||||No|Oturum olmayan çift yönlü iletişim şu anda desteklenmiyor.|
+|Çift Yönlü|✔️|||Yes|Bir yedekleme hedefine gönderin.|
 
-## <a name="hosting"></a>Barındırma
+## <a name="hosting"></a>Hosting
 
 Yönlendirme hizmeti bir WCF hizmeti olarak uygulandığından, bir uygulama içinde kendi kendine barındırılan veya IIS ya da WAS tarafından barındırılan olmalıdır. Bu barındırma ortamlarında sunulan otomatik başlatma ve yaşam döngüsü yönetim özelliklerinden yararlanmak için yönlendirme hizmetinin IIS, WAS veya bir Windows hizmet uygulamasında barındırılması önerilir.
 
@@ -392,7 +393,7 @@ using (ServiceHost serviceHost =
                 new ServiceHost(typeof(RoutingService)))
 ```
 
-Yönlendirme hizmetini IIS veya WAS içinde barındırmak için bir hizmet dosyası (. svc) oluşturmanız ya da hizmetin yapılandırma tabanlı etkinleştirmesini kullanmanız gerekir. Bir hizmet dosyası kullanırken, hizmet parametresini kullanarak <xref:System.ServiceModel.Routing.RoutingService> belirtmeniz gerekir. Aşağıdaki örnek, yönlendirme hizmetini IIS veya WAS ile barındırmak için kullanılabilecek örnek bir hizmet dosyası içerir.
+Yönlendirme hizmetini IIS veya WAS içinde barındırmak için bir hizmet dosyası (. svc) oluşturmanız ya da hizmetin yapılandırma tabanlı etkinleştirmesini kullanmanız gerekir. Bir hizmet dosyası kullanırken, <xref:System.ServiceModel.Routing.RoutingService> hizmet parametresini kullanarak belirtmeniz gerekir. Aşağıdaki örnek, yönlendirme hizmetini IIS veya WAS ile barındırmak için kullanılabilecek örnek bir hizmet dosyası içerir.
 
 ```aspx-csharp
 <%@ ServiceHost Language="C#" Debug="true" Service="System.ServiceModel.Routing.RoutingService,
@@ -411,10 +412,10 @@ Yönlendirme hizmeti ile kimliğe bürünme, ASP.NET uyumluluk modundayken ASP.N
 
 Yönlendirme hizmeti ile ASP.NET Kimliğe bürünme özelliğini kullanmak için hizmet barındırma ortamında ASP.NET uyumluluk modunu etkinleştirin. Yönlendirme hizmeti zaten ASP.NET uyumluluk moduna izin vermek üzere işaretlendi ve kimliğe bürünme otomatik olarak etkinleştirilir. Kimliğe bürünme, ASP.NET tümleştirmesi 'nin yönlendirme hizmeti ile desteklenen tek kullanımı.
 
-Windows kimlik bilgisi kimliğe bürünme özelliğini yönlendirme hizmeti ile birlikte kullanmak için hem kimlik bilgilerini hem de hizmeti yapılandırmanız gerekir. <xref:System.ServiceModel.ChannelFactory>tarafından çözümlenemeyen istemci kimlik bilgileri nesnesi (<xref:System.ServiceModel.Security.WindowsClientCredential>, kimliğe bürünmeye izin vermek için ayarlanması gereken bir <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> özelliği tanımlar. Son olarak, hizmette `true``ImpersonateCallerForAllOperations` ayarlamak için <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> davranışını yapılandırmanız gerekir. Yönlendirme hizmeti, kimliğe bürünme özelliği etkinken iletileri iletmek için istemciler oluşturulup oluşturulmayacağını belirlemek için bu bayrağı kullanır.
+Windows kimlik bilgisi kimliğe bürünme özelliğini yönlendirme hizmeti ile birlikte kullanmak için hem kimlik bilgilerini hem de hizmeti yapılandırmanız gerekir. İstemci kimlik bilgileri nesnesi (, <xref:System.ServiceModel.Security.WindowsClientCredential> öğesinden çözümlenemeyen), <xref:System.ServiceModel.ChannelFactory> <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> kimliğe bürünmeye izin vermek için ayarlanması gereken bir özelliği tanımlar. Son olarak, hizmette olarak <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> ayarlanacak davranışı yapılandırmanız gerekir `ImpersonateCallerForAllOperations` `true` . Yönlendirme hizmeti, kimliğe bürünme özelliği etkinken iletileri iletmek için istemciler oluşturulup oluşturulmayacağını belirlemek için bu bayrağı kullanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İleti Filtreleri](message-filters.md)
-- [Anlaşmaları Yönlendirme](routing-contracts.md)
+- [Sözleşmeleri Yönlendirme](routing-contracts.md)
 - [Filtre Seçme](choosing-a-filter.md)

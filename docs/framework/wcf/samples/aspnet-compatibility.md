@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: ASP.NET uyumluluğu'
 title: ASP.NET Uyumluluğu
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: b1d1a72b9ac3041a1547ac42a33eb7d3e1f87a63
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a5685481a16d87715d4fc9096055af5be479f459
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553217"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99778860"
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET Uyumluluğu
 
@@ -20,7 +21,7 @@ Bu örnekte, istemci bir konsol uygulaması (yürütülebilir) ve hizmet Interne
 
 Bu örnek, çalıştırmak için bir .NET Framework 4 uygulama havuzu gerektirir. Yeni bir uygulama havuzu oluşturmak veya varsayılan uygulama havuzunu değiştirmek için aşağıdaki adımları izleyin.
 
-1. **Denetim Masası 'nı**açın.  **Sistem ve güvenlik** başlığı altında **Yönetimsel Araçlar** uygulamasını açın. **Internet Information Services (IIS) Yöneticisi** uygulamasını açın.
+1. **Denetim Masası 'nı** açın.  **Sistem ve güvenlik** başlığı altında **Yönetimsel Araçlar** uygulamasını açın. **Internet Information Services (IIS) Yöneticisi** uygulamasını açın.
 
 2. **Bağlantılar** bölmesinde TreeView ' ı genişletin. **Uygulama havuzları** düğümünü seçin.
 

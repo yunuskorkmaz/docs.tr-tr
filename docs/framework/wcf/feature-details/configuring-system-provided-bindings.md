@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: System-Provided bağlamalarını yapılandırma'
 title: Sistem Tarafından Sağlanan Bağlamaları Yapılandırma
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - WCF [WCF], system-provided bindings
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
-ms.openlocfilehash: ab608ba954eafd9035335f00c8755629c5703c22
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1254d40638dd27ea14d79888cdf326d49345e02a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96284166"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780732"
 ---
 # <a name="configuring-system-provided-bindings"></a>Sistem Tarafından Sağlanan Bağlamaları Yapılandırma
 
@@ -35,7 +36,7 @@ Bağlamalar bir uç noktaya konuşurken kullanılacak iletişim mekanizmasını 
 
  Aşağıdaki bağlamalar WCF ile birlikte gönderilir.  
   
-|Bağlama|Yapılandırma öğesi|Açıklama|  
+|Bağlama|Yapılandırma öğesi|Description|  
 |-------------|---------------------------|-----------------|  
 |<xref:System.ServiceModel.BasicHttpBinding>|[\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md)|ASP.NET Web Hizmetleri (ASMX) tabanlı hizmetler gibi WS-Basic profiliyle uyumlu Web hizmetleriyle iletişim kurmak için uygun bir bağlama. Bu bağlama, varsayılan ileti kodlaması olarak aktarım ve metin/XML olarak HTTP kullanır.|  
 |<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md)|Çift yönlü hizmet sözleşmeleri için uygun olan güvenli ve birlikte çalışabilen bir bağlama.|  
@@ -59,13 +60,13 @@ Bağlamalar bir uç noktaya konuşurken kullanılacak iletişim mekanizmasını 
 |<xref:System.ServiceModel.BasicHttpBinding>|Temel profil 1,1|(Yok), aktarım, Ileti, karışık|Hiçbiri, (yok)|(Yok)|yok|  
 |<xref:System.ServiceModel.WSHttpBinding>|WS|None, Transport, (Ileti), karışık|(Yok), taşıma, güvenilir oturum|(Yok), Evet|yok|  
 |<xref:System.ServiceModel.WS2007HttpBinding>|WS-Security, WS-Trust, WS-SecureConversation, WS-SecurityPolicy|None, Transport, (Ileti), karışık|(Yok), taşıma, güvenilir oturum|(Yok), Evet|yok|  
-|<xref:System.ServiceModel.WSDualHttpBinding>|WS|Hiçbiri, (Ileti)|(Güvenilir oturum)|(Yok), Evet|Evet|  
-|<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|Hiçbiri, (Ileti), karışık|(Yok), güvenilir oturum|(Yok), Evet|Hayır|  
-|<xref:System.ServiceModel.WS2007FederationHttpBinding>|WS-Federation|Hiçbiri, (Ileti), karışık|(Yok), güvenilir oturum|(Yok), Evet|Hayır|  
-|<xref:System.ServiceModel.NetTcpBinding>|.NET|Hiçbiri, (aktarım), Ileti,<br /><br /> Karışık|Güvenilir oturum, (aktarım)|(Yok), Evet|Evet|  
-|<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|Seçim<br /><br /> Aktarım|Hiçbiri, (taşıma)|(Yok), Evet|Evet|  
-|<xref:System.ServiceModel.NetMsmqBinding>|.NET|Hiçbiri, Ileti, (taşıma), her Ikisi|(Yok)|(Yok), Evet|Hayır|  
-|<xref:System.ServiceModel.NetPeerTcpBinding>|Eşdüzey hizmet sağlayıcı|Hiçbiri, Ileti, (aktarım), karışık|(Yok)|(Yok)|Evet|  
+|<xref:System.ServiceModel.WSDualHttpBinding>|WS|Hiçbiri, (Ileti)|(Güvenilir oturum)|(Yok), Evet|Yes|  
+|<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|Hiçbiri, (Ileti), karışık|(Yok), güvenilir oturum|(Yok), Evet|No|  
+|<xref:System.ServiceModel.WS2007FederationHttpBinding>|WS-Federation|Hiçbiri, (Ileti), karışık|(Yok), güvenilir oturum|(Yok), Evet|No|  
+|<xref:System.ServiceModel.NetTcpBinding>|.NET|Hiçbiri, (aktarım), Ileti,<br /><br /> Karışık|Güvenilir oturum, (aktarım)|(Yok), Evet|Yes|  
+|<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|Seçim<br /><br /> Aktarım|Hiçbiri, (taşıma)|(Yok), Evet|Yes|  
+|<xref:System.ServiceModel.NetMsmqBinding>|.NET|Hiçbiri, Ileti, (taşıma), her Ikisi|(Yok)|(Yok), Evet|No|  
+|<xref:System.ServiceModel.NetPeerTcpBinding>|Eşdüzey hizmet sağlayıcı|Hiçbiri, Ileti, (aktarım), karışık|(Yok)|(Yok)|Yes|  
 |<xref:System.ServiceModel.WebHttpBinding>|.NET|None, Transport, TransportCredentialOnly|(Yok)|(Yok)|yok|  
 |<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|Hiçbiri, (taşıma)|(Yok)|(Yok), Evet|yok|  
   

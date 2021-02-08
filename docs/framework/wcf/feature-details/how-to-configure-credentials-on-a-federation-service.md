@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: Federasyon Hizmeti kimlik bilgilerini yapılandırma'
 title: 'Nasıl yapılır: Federe Bir Hizmette Kimlik Bilgilerini Yapılandırma'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
-ms.openlocfilehash: 692ccc0c39ca7ed40601551ea6bbcdd840fa03af
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 100012312b9b900f35753e1fa0761ba132fe0c06
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257593"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780082"
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>Nasıl yapılır: Federe Bir Hizmette Kimlik Bilgilerini Yapılandırma
 

@@ -1,13 +1,14 @@
 ---
+description: Daha fazla bilgi için bkz. Duyurular örneği
 title: Duyuru Örnekleri
 ms.date: 03/30/2017
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
-ms.openlocfilehash: c3824fb0dc7ab4169c309d1a5154127d6bc3b78f
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 076efed31f862f6de68e924446528d682a62824a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76747005"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99778951"
 ---
 # <a name="announcements-sample"></a>Duyuru Örnekleri
 
@@ -15,7 +16,7 @@ Bu örnek, bulma özelliğinin duyuru işlevselliğinin nasıl kullanılacağın
 
 ## <a name="service"></a>Hizmet
 
-Bu proje, şirket içinde barındırılan bir Hesaplayıcı hizmeti içerir. `Main` yönteminde bir hizmet ana bilgisayarı oluşturulur ve buna bir hizmet uç noktası eklenir. Sonra bir <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> oluşturulur. Duyuruları etkinleştirmek için <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>bir duyuru uç noktası eklenmelidir. Bu durumda, UDP çok noktaya yayın kullanan standart bir uç nokta, duyuru uç noktası olarak eklenir. Bu, duyuruları iyi bilinen bir UDP adresi üzerinden yayınlar.
+Bu proje, şirket içinde barındırılan bir Hesaplayıcı hizmeti içerir. `Main`Yönteminde bir hizmet ana bilgisayarı oluşturulur ve buna bir hizmet uç noktası eklenir. Ardından, bir <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> oluşturulur. Duyuruları etkinleştirmek için, ' a bir duyuru uç noktası eklenmelidir <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> . Bu durumda, UDP çok noktaya yayın kullanan standart bir uç nokta, duyuru uç noktası olarak eklenir. Bu, duyuruları iyi bilinen bir UDP adresi üzerinden yayınlar.
 
 ```csharp
 Uri baseAddress = new Uri("http://localhost:8000/" + Guid.NewGuid().ToString());
@@ -40,7 +41,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
 
 ## <a name="client"></a>İstemci
 
-Bu projede, istemcinin bir <xref:System.ServiceModel.Discovery.AnnouncementService>barındırdığını unutmayın. Ayrıca, iki temsilci olaylar ile kaydedilir. Bu olaylar, çevrimiçi ve çevrimdışı Duyurular alındığında istemcinin ne yaptığını belirler.
+Bu projede, istemcisinin bir barındırdığını unutmayın <xref:System.ServiceModel.Discovery.AnnouncementService> . Ayrıca, iki temsilci olaylar ile kaydedilir. Bu olaylar, çevrimiçi ve çevrimdışı Duyurular alındığında istemcinin ne yaptığını belirler.
 
 ```csharp
 // Create an AnnouncementService instance
@@ -51,7 +52,7 @@ announcementService.OnlineAnnouncementReceived += OnOnlineEvent;
 announcementService.OfflineAnnouncementReceived += OnOfflineEvent;
 ```
 
-`OnOnlineEvent` ve `OnOfflineEvent` yöntemleri sırasıyla Merhaba ve bye bildiri iletilerini işler.
+`OnOnlineEvent`Ve `OnOfflineEvent` yöntemleri sırasıyla Merhaba ve bye bildiri iletilerini işler.
 
 ```csharp
 static void OnOnlineEvent(object sender, AnnouncementEventArgs e)
@@ -73,19 +74,19 @@ static void OnOfflineEvent(object sender, AnnouncementEventArgs e)
 
 1. Bu örnek HTTP uç noktalarını kullanır ve bu örneği çalıştırmak için uygun URL ACL 'Leri eklenmelidir. Daha fazla bilgi için bkz. [http ve https yapılandırma](../feature-details/configuring-http-and-https.md). Yükseltilmiş bir ayrıcalıkta aşağıdaki komutu yürütmek uygun ACL 'Leri eklememelidir. Komutu olduğu gibi çalışmazsa, etki alanınızı ve Kullanıcı adınızı aşağıdaki bağımsız değişkenler için yerine koymak isteyebilirsiniz. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`
 
-2. Çözümü oluşturun.
+2. Çözümü derleyin.
 
-3. Client. exe uygulamasını çalıştırın.
+3. client.exe uygulamasını çalıştırın.
 
-4. Service. exe uygulamasını çalıştırın. İstemcinin bir çevrimiçi duyuru aldığını aklınızda edin.
+4. service.exe uygulamasını çalıştırın. İstemcinin bir çevrimiçi duyuru aldığını aklınızda edin.
 
-5. Service. exe uygulamasını kapatın. İstemcinin çevrimdışı bir duyuru aldığını aklınızda bırakın.
+5. service.exe uygulamasını kapatın. İstemcinin çevrimdışı bir duyuru aldığını aklınızda bırakın.
 
 > [!IMPORTANT]
 > Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Announcements`

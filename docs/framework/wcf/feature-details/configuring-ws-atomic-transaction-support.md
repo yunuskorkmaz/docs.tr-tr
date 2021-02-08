@@ -1,17 +1,18 @@
 ---
+description: 'Daha fazla bilgi edinin: WS-Atomic Işlem desteğini yapılandırma'
 title: WS-Atomic İşlem Desteğini Yapılandırma
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 9c0e75d58fbcf61137ceae3fba9d8acfe3902171
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c9b732bd0d6b6aa8cb1cf04803ae302a00348987
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556596"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780550"
 ---
-# <a name="configure-ws-atomic-transaction-support"></a>WS Atomik Işlem desteğini yapılandırma
+# <a name="configure-ws-atomic-transaction-support"></a>WS-Atomic Işlem desteğini yapılandırma
 
 Bu konu, WS-AT yapılandırma yardımcı programını kullanarak WS-AtomicTransaction (WS-AT) desteğini nasıl yapılandırabileceğinizi açıklamaktadır.
 

@@ -1,13 +1,14 @@
 ---
+description: Daha fazla bilgi için bkz. bir WCF hizmeti ile ASMX Istemcisi
 title: WCF Hizmeti ile ASMX İstemcisi
 ms.date: 03/30/2017
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-ms.openlocfilehash: fd13d4907f1be09440387a36e14ecdc4926ba7e7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b9f561f6651c591556f821478c4c4bfd7d7da23d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594783"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99778925"
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>WCF Hizmeti ile ASMX İstemcisi
 
@@ -35,9 +36,9 @@ public interface ICalculator
 }
 ```
 
-<xref:System.Runtime.Serialization.DataContractSerializer>Ve <xref:System.Xml.Serialization.XmlSerializer> clr TÜRLERINI bir XML temsili ile eşleyin. , <xref:System.Runtime.Serialization.DataContractSerializer> Bazı XML temsillerini XmlSerializer 'dan farklı yorumlar. WSDL. exe gibi WCF olmayan proxy oluşturucuları, XmlSerializer kullanılırken daha kullanılabilir bir arabirim oluşturur. , <xref:System.ServiceModel.XmlSerializerFormatAttribute> `ICalculator` XMLSERIALIZER 'ın CLR türlerini XML 'e eşlemek için kullanıldığından emin olmak için arabirimine uygulanır. Hizmet uygulama, uygun sonucu hesaplar ve döndürür.
+<xref:System.Runtime.Serialization.DataContractSerializer>Ve <xref:System.Xml.Serialization.XmlSerializer> clr TÜRLERINI bir XML temsili ile eşleyin. , <xref:System.Runtime.Serialization.DataContractSerializer> Bazı XML temsillerini XmlSerializer 'dan farklı yorumlar. Wsdl.exe gibi WCF olmayan proxy oluşturucular, XmlSerializer kullanılırken daha kullanılabilir bir arabirim oluşturur. , <xref:System.ServiceModel.XmlSerializerFormatAttribute> `ICalculator` XMLSERIALIZER 'ın CLR türlerini XML 'e eşlemek için kullanıldığından emin olmak için arabirimine uygulanır. Hizmet uygulama, uygun sonucu hesaplar ve döndürür.
 
-Hizmet, bir yapılandırma dosyası (Web. config) kullanılarak tanımlanan, hizmetle iletişim kurmak için tek bir uç nokta sunar. Uç nokta bir adres, bağlama ve bir anlaşmada oluşur. Hizmet, uç noktayı Internet Information Services (IIS) ana bilgisayarı tarafından belirtilen temel adreste kullanıma sunar. `binding`Özniteliği, aşağıdaki örnek yapılandırmada gösterildiği gıbı WS-ı BasicProfile 1,1 ile uyumlu olan SOAP 1,1 kullanarak http iletişimleri sağlayan BasicHttpBinding olarak ayarlanır.
+Hizmet, bir yapılandırma dosyası (Web.config) kullanılarak tanımlanan hizmetle iletişim kurmak için tek bir uç nokta sunar. Uç nokta bir adres, bağlama ve bir anlaşmada oluşur. Hizmet, uç noktayı Internet Information Services (IIS) ana bilgisayarı tarafından belirtilen temel adreste kullanıma sunar. `binding`Özniteliği, aşağıdaki örnek yapılandırmada gösterildiği gıbı WS-ı BasicProfile 1,1 ile uyumlu olan SOAP 1,1 kullanarak http iletişimleri sağlayan BasicHttpBinding olarak ayarlanır.
 
 ```xml
 <services>
@@ -51,7 +52,7 @@ Hizmet, bir yapılandırma dosyası (Web. config) kullanılarak tanımlanan, hiz
 </services>
 ```
 
-ASMX istemcisi, Web Hizmetleri Açıklama Dili (WSDL) yardımcı programı (wsdl. exe) tarafından oluşturulan türü belirlenmiş bir ara sunucu kullanarak WCF hizmeti ile iletişim kurar. Yazılan ara sunucu generatedClient.cs dosyasında bulunur. WSDL yardımcı programı, belirtilen hizmet için meta verileri alır ve bir istemci tarafından iletişim kurmak için kullanılan bir ara sunucu oluşturur. Varsayılan olarak, çerçeve herhangi bir meta veri sunmaz. Proxy 'yi oluşturmak için gereken meta verileri göstermek için, [\<serviceMetadata>](../../configure-apps/file-schema/wcf/servicemetadata.md) `httpGetEnabled` `True` Aşağıdaki yapılandırmada gösterildiği gibi bir özniteliğini eklemeli ve öğesini olarak ayarlamanız gerekir.
+ASMX istemcisi, Web Hizmetleri Açıklama Dili (WSDL) yardımcı programı (Wsdl.exe) tarafından oluşturulan türü belirlenmiş bir ara sunucu kullanarak WCF hizmeti ile iletişim kurar. Yazılan ara sunucu generatedClient.cs dosyasında bulunur. WSDL yardımcı programı, belirtilen hizmet için meta verileri alır ve bir istemci tarafından iletişim kurmak için kullanılan bir ara sunucu oluşturur. Varsayılan olarak, çerçeve herhangi bir meta veri sunmaz. Proxy 'yi oluşturmak için gereken meta verileri göstermek için, [\<serviceMetadata>](../../configure-apps/file-schema/wcf/servicemetadata.md) `httpGetEnabled` `True` Aşağıdaki yapılandırmada gösterildiği gibi bir özniteliğini eklemeli ve öğesini olarak ayarlamanız gerekir.
 
 ```xml
 <behaviors>
@@ -73,7 +74,7 @@ Yazılan proxy 'yi oluşturmak için istemci dizinindeki bir komut isteminden a�
 wsdl /n:Microsoft.ServiceModel.Samples /o:generatedClient.cs /urlkey:CalculatorServiceAddress http://localhost/servicemodelsamples/service.svc?wsdl
 ```
 
-Oluşturulan tür ara sunucusunu kullanarak istemci, uygun adresi yapılandırarak belirli bir hizmet uç noktasına erişebilir. İstemci, iletişim kuracak uç noktayı belirtmek için bir yapılandırma dosyası (App. config) kullanır.
+Oluşturulan tür ara sunucusunu kullanarak istemci, uygun adresi yapılandırarak belirli bir hizmet uç noktasına erişebilir. İstemci, iletişim kuracak uç noktayı belirtmek için bir yapılandırma dosyası (App.config) kullanır.
 
 ```xml
 <appSettings>
