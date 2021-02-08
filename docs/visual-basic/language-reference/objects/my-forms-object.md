@@ -1,4 +1,5 @@
 ---
+description: ': My. Forms nesnesi hakkında daha fazla bilgi edinin'
 title: My.Forms Nesnesi
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Forms object
 ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
-ms.openlocfilehash: 001f6fbfae2467ea0af5e98ca041b694d1e7b8f9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 18ef8ee475163ff7eb177dfee590d959a242a88e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84372446"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774414"
 ---
 # <a name="myforms-object"></a>My.Forms Nesnesi
 
@@ -22,9 +23,9 @@ Geçerli projede belirtilen her bir Windows formunun örneğine erişim için ö
 
 `My.Forms`Nesnesi, geçerli projede her formun bir örneğini sağlar. Özelliğin adı, özelliğin eriştiği form adıyla aynıdır.
 
-Nesne tarafından sunulan formlara `My.Forms` , nitelik olmadan formun adını kullanarak erişebilirsiniz. Özellik adı formun tür adıyla aynı olduğundan, bir forma varsayılan bir örnek olsa da erişmenize izin verir. Örneğin, `My.Forms.Form1.Show` öğesine eşdeğerdir `Form1.Show` .
+Nesne tarafından sunulan formlara `My.Forms` , nitelik olmadan formun adını kullanarak erişebilirsiniz. Özellik adı formun tür adıyla aynı olduğundan, bir forma varsayılan bir örnek olsa da erişmenize izin verir. Örneğin `My.Forms.Form1.Show` ile `Form1.Show` eşdeğerdir.
 
-`My.Forms`Nesne yalnızca geçerli projeyle ilişkili formları kullanıma sunar. Başvurulan DLL 'lerde belirtilen formlara erişim sağlamaz. Bir DLL 'nin sağladığı bir forma erişmek için, formun adı dll olarak *yazılmış şekilde tam*adını kullanmanız gerekir. *FormName*.
+`My.Forms`Nesne yalnızca geçerli projeyle ilişkili formları kullanıma sunar. Başvurulan DLL 'lerde belirtilen formlara erişim sağlamaz. Bir DLL 'nin sağladığı bir forma erişmek için, formun adı dll olarak *yazılmış şekilde tam* adını kullanmanız gerekir. *FormName*.
 
 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>Tüm uygulamanın açık formlarının bir koleksiyonunu almak için özelliğini kullanabilirsiniz.
 
@@ -35,7 +36,7 @@ Nesnesi ve özellikleri yalnızca Windows uygulamaları için kullanılabilir.
 Nesnesinin her özelliği, `My.Forms` geçerli projedeki bir form örneğine erişim sağlar. Özelliğin adı, özelliğin eriştiği form adı ile aynıdır ve özellik türü formun türü ile aynıdır.
 
 > [!NOTE]
-> Bir ad çakışması varsa, bir forma erişmek için özellik adı, *RootNamespace**_ ad alanı* \_ *FormName*olur. Örneğin, `Form1.` Bu formlardan biri kök ad alanında `WindowsApplication1` ve ad alanında olduğunda, bu `Namespace1` formdan ' a eriştiğinizde adlı iki formu göz önünde bulundurun `My.Forms.WindowsApplication1_Namespace1_Form1` .
+> Bir ad çakışması varsa, bir forma erişmek için özellik adı, *RootNamespace**_ ad alanı* \_ *FormName* olur. Örneğin, `Form1.` Bu formlardan biri kök ad alanında `WindowsApplication1` ve ad alanında olduğunda, bu `Namespace1` formdan ' a eriştiğinizde adlı iki formu göz önünde bulundurun `My.Forms.WindowsApplication1_Namespace1_Form1` .
 
 `My.Forms`Nesnesi, başlangıçta oluşturulan uygulamanın ana formunun örneğine erişim sağlar. Diğer tüm formlarda, `My.Forms` nesne erişildiğinde formun yeni bir örneğini oluşturur ve depolar. Bu özelliğe daha sonra erişme girişimleri, formun bu örneğini döndürür.
 
