@@ -1,5 +1,6 @@
 ---
-title: SmiOrderProperty.Item özelliği (Microsoft.SqlServer.Server)
+description: 'Daha fazla bilgi edinin: Smorderproperty. Item özelliği'
+title: Smorderproperty. Item Özelliği (Microsoft. SqlServer. Server)
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
@@ -13,18 +14,18 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: e2d8788f610d80c30baf51bff0131f0834d59fcd
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: fc2151d3f36a6746e80e2fd6d611a803b2c3162e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634580"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767992"
 ---
-# <a name="smiorderpropertyitem-property"></a>SmiOrderProperty.Item özelliği
+# <a name="smiorderpropertyitem-property"></a>Smorderproperty. Item özelliği
 
-Varlık için sütun sırasını alır. Bu özellik içeren derleme SQLAccess.dll bir arkadaş ilişkisi vardır. Bu, SQL Server tarafından kullanıma yöneliktir. Diğer veritabanları için veritabanı tarafından sağlanan barındırma mekanizmasına kullanın.
+Varlığın sütun sırasını alır. Bu özelliği içeren derlemenin SQLAccess.dll bir arkadaş ilişkisi vardır. SQL Server tarafından kullanılmak üzere tasarlanmıştır. Diğer veritabanları için, bu veritabanı tarafından sunulan barındırma mekanizmasını kullanın.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```csharp
 internal SmiColumnOrder Item { get; }
@@ -37,14 +38,14 @@ Sütun sırası.
 ## <a name="remarks"></a>Açıklamalar
 
 > [!WARNING]
-> `SmiOrderProperty.Item` Özelliği dahili kullanım içindir ve kodunuzda doğrudan kullanılmak üzere tasarlanmamıştır.
+> `SmiOrderProperty.Item`Özelliği Dahili ve doğrudan kodunuzda kullanılmamalıdır.
 >
-> Microsoft hiçbir koşulda, bir üretim uygulamasında bu özelliğin kullanımı desteklemez.
+> Microsoft, bu özelliğin herhangi bir koşulda bir üretim uygulamasında kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Namespace:** <xref:Microsoft.SqlServer.Server>
+**Ad alanı:**<xref:Microsoft.SqlServer.Server>
 
-**Derleme:** System.Data (içinde System.Data.dll)
+**Bütünleştirilmiş kod:** System. Data (System.Data.dll)
 
-**.NET framework sürümleri:** 2.0 sürümünden itibaren kullanılabilir.
+**.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.

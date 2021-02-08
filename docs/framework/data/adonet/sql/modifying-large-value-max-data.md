@@ -1,16 +1,17 @@
 ---
-title: Büyük değer (max) verilerini değiştirme
+description: "Hakkında daha fazla bilgi edinin: ADO.NET 'de Large-Value (max) verileri değiştirme"
+title: Large-Value (max) verileri değiştirme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: 4748740379df689669ee87f66dce58a7015d1217
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2d4721d2de24399a33322bde9e70eb68e59480cc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172703"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767680"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>ADO.NET İçinde Büyük Değerli (Maks) Verileri Değiştirme
 
@@ -22,9 +23,9 @@ Büyük nesne (LOB) veri türleri, 8 kilobayt (KB) olan en büyük satır boyutu
   
  **SQL Server belgeleri**  
   
-1. [Büyük değer veri türlerini kullanma](/previous-versions/sql/sql-server-2008/ms178158(v=sql.100))  
+1. [Large-Value veri türlerini kullanma](/previous-versions/sql/sql-server-2008/ms178158(v=sql.100))  
   
-## <a name="large-value-type-restrictions"></a>Büyük değer türü kısıtlamaları  
+## <a name="large-value-type-restrictions"></a>Large-Value tür kısıtlamaları  
 
  Aşağıdaki kısıtlamalar `max` , daha küçük veri türleri için mevcut olmayan veri türleri için geçerlidir:  
   
@@ -34,7 +35,7 @@ Büyük nesne (LOB) veri türleri, 8 kilobayt (KB) olan en büyük satır boyutu
   
 - Büyük `varchar` sütunlar bölümlendirme anahtar sütunları olarak kullanılamaz.  
   
-## <a name="working-with-large-value-types-in-transact-sql"></a>Transact-SQL ' de büyük değer türleriyle çalışma  
+## <a name="working-with-large-value-types-in-transact-sql"></a>Transact-SQL ' de Large-Value türleriyle çalışma  
 
  Transact-SQL `OPENROWSET` işlevi, uzak verilere bağlanmak ve bu verilere erişmek için tek seferlik bir yöntemdir. Bir OLE DB veri kaynağından uzak verilere erişmek için gereken tüm bağlantı bilgilerini içerir. `OPENROWSET` bir sorgunun FROM yan tümcesinde tablo adı gibi bir sorgu oluşturulabilir. Ayrıca, bir INSERT, UPDATE veya DELETE deyimlerinin hedef tablosu olarak, OLE DB sağlayıcının özelliklerine tabi olabilir.  
   
@@ -67,7 +68,7 @@ FROM OPENROWSET
   
  { *column_name* = {. YAZMA ( *ifade* , @Offset , @Length )}  
   
- WRITE yöntemi, *column_name* değerinin bir bölümünün değiştirildiğini belirtir. İfade, *column_name*kopyalanacak değerdir, `@Offset` ifadenin yazılacağı başlangıç noktasıdır ve `@Length` bağımsız değişken, sütundaki bölümün uzunluğudur ve bağımsız değişkeni, sütununda bulunan bölümdür.  
+ WRITE yöntemi, *column_name* değerinin bir bölümünün değiştirildiğini belirtir. İfade, *column_name* kopyalanacak değerdir, `@Offset` ifadenin yazılacağı başlangıç noktasıdır ve `@Length` bağımsız değişken, sütundaki bölümün uzunluğudur ve bağımsız değişkeni, sütununda bulunan bölümdür.  
   
 |Eğer|Ardından|  
 |--------|----------|  
@@ -108,7 +109,7 @@ GO
 -- Reflectors are vital safety features of your bicycle.  
 ```  
   
-## <a name="working-with-large-value-types-in-adonet"></a>ADO.NET 'de büyük değerli türlerle çalışma  
+## <a name="working-with-large-value-types-in-adonet"></a>ADO.NET içinde Large-Value türleriyle çalışma  
 
  Büyük değer türlerini <xref:System.Data.SqlClient.SqlParameter> bir sonuç kümesi döndürmek için bir içinde nesne olarak belirterek veya bir öğesini dolduracak şekilde kullanarak ADO.NET içinde büyük değer türleriyle çalışabilirsiniz <xref:System.Data.SqlClient.SqlDataReader> <xref:System.Data.SqlClient.SqlDataAdapter> `DataSet` / `DataTable` . Büyük bir değer türü ve ilgili, daha küçük değer veri türü ile çalışma şekli arasında fark yoktur.  
   

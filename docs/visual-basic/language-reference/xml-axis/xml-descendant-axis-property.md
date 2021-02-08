@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: XML descendant Axis Özelliği (Visual Basic)'
 title: XML Descendant Axis Özelliği
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - XML axis [Visual Basic], descendant
 - XML [Visual Basic], accessing
 ms.assetid: a178f85b-5d54-438f-8479-40b62af6fe76
-ms.openlocfilehash: 52544619171dbc7034baeb5feb61395d81096387
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c356d4d6f9a84755e9df171b26060fc6bfc4ead6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400259"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768785"
 ---
 # <a name="xml-descendant-axis-property-visual-basic"></a>XML Descendant Axis Özelliği (Visual Basic)
 
 Aşağıdakilerin alt öğeleri için erişim sağlar: <xref:System.Xml.Linq.XElement> nesne, <xref:System.Xml.Linq.XDocument> nesne, nesne koleksiyonu <xref:System.Xml.Linq.XElement> veya <xref:System.Xml.Linq.XDocument> nesne koleksiyonu.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```vb
 object...<descendant>
@@ -29,18 +30,18 @@ object...<descendant>
 
 ## <a name="parts"></a>Bölümler
 
-`object`Gerekli. <xref:System.Xml.Linq.XElement>Nesne, <xref:System.Xml.Linq.XDocument> nesne, <xref:System.Xml.Linq.XElement> nesneler koleksiyonu veya nesne koleksiyonu <xref:System.Xml.Linq.XDocument> .
+`object` Gerekli. <xref:System.Xml.Linq.XElement>Nesne, <xref:System.Xml.Linq.XDocument> nesne, <xref:System.Xml.Linq.XElement> nesneler koleksiyonu veya nesne koleksiyonu <xref:System.Xml.Linq.XDocument> .
 
-`...<`Gerekli. Alt eksen özelliğinin başlangıcını gösterir.
+`...<` Gerekli. Alt eksen özelliğinin başlangıcını gösterir.
 
-`descendant`Gerekli. Erişmek için alt düğümlerin adı, form [ `prefix:]name` .
+`descendant` Gerekli. Erişmek için alt düğümlerin adı, form [ `prefix:]name` .
 
 |Bölüm|Description|
 |----------|-----------------|
 |`prefix`|İsteğe bağlı. Alt düğüm için XML ad alanı öneki. Bir ifade kullanılarak tanımlanmış bir genel XML ad alanı olmalıdır `Imports` .|
 |`name`|Gereklidir. Alt düğümün yerel adı. [BELIRTILEN XML öğelerinin ve özniteliklerin adlarına](../../programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)bakın.|
 
-`>`Gerekli. Alt eksen özelliğinin sonunu belirtir.
+`>` Gerekli. Alt eksen özelliğinin sonunu belirtir.
 
 ## <a name="return-value"></a>Dönüş Değeri
 

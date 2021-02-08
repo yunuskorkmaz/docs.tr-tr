@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: SQL Server saklı yordamları Imzalama'
 title: SQL Server'da Saklı Yordam İmzalama
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-ms.openlocfilehash: 3f33af0238781407dd845a823ff28d87af48feb2
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1189f3ac24c8499cd8fb3ff9e6b6263a71fcc3a0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558556"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767511"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>SQL Server'da Saklı Yordam İmzalama
 

@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: XML açıklama değişmez değeri (Visual Basic)'
 title: XML Açıklama Değişmez Değeri
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - XML comment literal [Visual Basic]
 - XML literals [Visual Basic], comment
 ms.assetid: 634c1cee-5e01-48d0-88d7-2dd55e4a9e52
-ms.openlocfilehash: 3272cc0f976d6e8819e51bb5d5fce73066007963
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: f44d2e132236d74d312910921fabb3a85afd82d6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875194"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768746"
 ---
 # <a name="xml-comment-literal-visual-basic"></a>XML Açıklama Değişmez Değeri (Visual Basic)
 
 Bir nesneyi temsil eden sabit değer <xref:System.Xml.Linq.XComment> .  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <!-- content -->  
@@ -28,7 +29,7 @@ Bir nesneyi temsil eden sabit değer <xref:System.Xml.Linq.XComment> .
   
 ## <a name="parts"></a>Bölümler  
   
-|Terim|Tanım|  
+|Süre|Tanım|  
 |---|---|  
 |`<!--`|Gereklidir. XML açıklamasının başlangıcını gösterir.|  
 |`content`|Gereklidir. XML açıklamasında görüntülenecek metin. Bir dizi iki kısa çizgi (--) veya kapanış etiketinin bitişiğindeki bir tire ile bitemez.|  

@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: SQL Server için sağlayıcı Istatistikleri'
 title: SQL Server için Sağlayıcı İstatistikleri
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-ms.openlocfilehash: 21bf7662094d5bc8948a1ce6378c454713cacc62
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ece5a6214d438ecac64e8738755d5fb5d0ed7245
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183123"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767602"
 ---
 # <a name="provider-statistics-for-sql-server"></a>SQL Server için Sağlayıcı İstatistikleri
 
@@ -18,14 +19,14 @@ ms.locfileid: "91183123"
   
 ## <a name="statistical-values-available"></a>İstatistiksel değerler kullanılabilir  
 
- Şu anda Microsoft SQL Server sağlayıcısından 18 farklı öğe mevcuttur. Kullanılabilir öğelerin sayısına **Count** <xref:System.Collections.IDictionary> tarafından döndürülen arabirim başvurusunun Count özelliği aracılığıyla erişilebilir <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> . Sağlayıcı istatistikleri için tüm sayaçlar, ortak dil çalışma zamanı <xref:System.Int64> türünü (C# ve Visual Basic**uzun** ) kullanır ve bu 64 bit genişliğinde olur. Int64 tarafından tanımlanan en büyük **Int64** veri türü değeri **. MaxValue** alanı ((2 ^ 63)-1)). Sayaçların değerleri bu en büyük değere ulaştığında, artık doğru olarak değerlendirilmemelidir. Bu, söz konusu int64 anlamına gelir **. MaxValue**-1 ((2 ^ 63)-2), herhangi bir istatistiğin en büyük geçerli değeri etkin değildir.  
+ Şu anda Microsoft SQL Server sağlayıcısından 18 farklı öğe mevcuttur. Kullanılabilir öğelerin sayısına  <xref:System.Collections.IDictionary> tarafından döndürülen arabirim başvurusunun Count özelliği aracılığıyla erişilebilir <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> . Sağlayıcı istatistikleri için tüm sayaçlar, ortak dil çalışma zamanı <xref:System.Int64> türünü (C# ve Visual Basic **uzun** ) kullanır ve bu 64 bit genişliğinde olur. Int64 tarafından tanımlanan en büyük **Int64** veri türü değeri **. MaxValue** alanı ((2 ^ 63)-1)). Sayaçların değerleri bu en büyük değere ulaştığında, artık doğru olarak değerlendirilmemelidir. Bu, söz konusu int64 anlamına gelir **. MaxValue**-1 ((2 ^ 63)-2), herhangi bir istatistiğin en büyük geçerli değeri etkin değildir.  
   
 > [!NOTE]
 > Döndürülen istatistiklerin sayısı, isimleri ve sırası gelecekte değiştirebileceğinden, sağlayıcı istatistiklerini döndürmek için bir sözlük kullanılır. Uygulamalar, sözlükte bulunan belirli bir değere güvenmemelidir, ancak bunun yerine değerin aynı ve uygun olup olmadığını kontrol etmelidir.  
   
  Aşağıdaki tabloda mevcut istatistiksel değerler açıklanmaktadır. Tek tek değerler için anahtar adlarının, Microsoft .NET çerçevesinin bölgesel sürümlerinde yerelleştirilmediğini unutmayın.  
   
-|Anahtar adı|Açıklama|  
+|Anahtar adı|Description|  
 |--------------|-----------------|  
 |`BuffersReceived`|Uygulama sağlayıcıyı kullanmaya başladıktan ve istatistikleri etkinleştirdikten sonra SQL Server sağlayıcı tarafından alınan tablo veri akışı (TDS) paketlerinin sayısını döndürür.|  
 |`BuffersSent`|İstatistikler etkinleştirildikten sonra sağlayıcı tarafından SQL Server gönderilen TDS paketlerinin sayısını döndürür. Büyük komutlar, birden çok arabellek gerektirebilir. Örneğin, sunucuya büyük bir komut gönderiliyorsa ve altı paket gerektiriyorsa, `ServerRoundtrips` bunlardan biri ile artırılır ve `BuffersSent` altı ile artırılır.|  

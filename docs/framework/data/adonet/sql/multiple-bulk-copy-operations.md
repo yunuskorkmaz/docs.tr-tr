@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: çoklu toplu kopyalama Işlemleri'
 title: Çoklu Toplu Kopyalama İşlemleri
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5ad12f94-7459-4a93-a421-4160d1a90715
-ms.openlocfilehash: d447f09fcbfe108346b81a2bced44cf305e2844b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: dfc694cfb4a993889bed607be71821bb1f9fddf1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172677"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767667"
 ---
 # <a name="multiple-bulk-copy-operations"></a>Çoklu Toplu Kopyalama İşlemleri
 

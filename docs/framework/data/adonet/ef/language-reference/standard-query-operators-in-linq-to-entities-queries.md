@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: LINQ to Entities sorgularda standart sorgu Işleçleri'
 title: LINQ to Entities Sorgularında Standart Sorgu İşleçleri
 ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
-ms.openlocfilehash: 23aea5fe1bcee8d043a7f093790cb45a1edc4aae
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2186d8efb9994a44f700ac3eb5de0d6658385a58
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173646"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767862"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>LINQ to Entities Sorgularında Standart Sorgu İşleçleri
 
