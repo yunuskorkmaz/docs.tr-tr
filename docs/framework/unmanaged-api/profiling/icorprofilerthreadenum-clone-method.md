@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerThreadEnum:: Clone yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerThreadEnum::Clone Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 5a278bc9-88e2-4c69-b035-9d550dd77081
 topic_type:
 - apiref
-ms.openlocfilehash: de2584b56701f4cffb6a108a5872641ec40e5762
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 00920484ed6f089f40281ea2590e6d9c27cd3268
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95702530"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783800"
 ---
 # <a name="icorprofilerthreadenumclone-method"></a>ICorProfilerThreadEnum::Clone Yöntemi
 
 Bu [ICorProfilerThreadEnum](icorprofilerthreadenum-interface.md) arabiriminin bir kopyasına bir arabirim işaretçisi alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT Clone (    [out] ICorProfilerThreadEnum **ppEnum  

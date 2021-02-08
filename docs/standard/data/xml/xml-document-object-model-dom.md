@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: XML Belge Nesne Modeli (DOM)'
 title: XML Belge Nesne Modeli (DOM)
 ms.date: 03/30/2017
 ms.assetid: b5e52844-4820-47c0-a61d-de2da33e9f54
-ms.openlocfilehash: 5e7c4e62b7bb19b1ddab61f78b360fed0b6752ef
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 21b4f049e936b36f72053a9eb6a2fece1ea70168
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821781"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782760"
 ---
 # <a name="xml-document-object-model-dom"></a>XML Belge Nesne Modeli (DOM)
 
@@ -49,13 +50,13 @@ XML belge yapısında, bu çizimdeki her bir daire, **XMLNode** nesnesi olarak a
 
 - Çoğu düğüm, doğrudan düğümlerin altındaki düğümler olan birden çok alt düğüme sahip olabilir. Aşağıda alt düğümlere sahip olan düğüm türlerinin bir listesi verilmiştir.
 
-  - **Belge**
+  - **Belgedeki**
 
   - **DocumentFragment**
 
   - **EntityReference**
 
-  - **Dosyalarında**
+  - **Öğe**
 
   - **Öznitelik**
 

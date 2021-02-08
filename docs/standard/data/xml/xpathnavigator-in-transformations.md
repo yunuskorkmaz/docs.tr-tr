@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: dönüşümlerdeki XPathNavigator'
 title: Dönüşümlerde XPathNavigator
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 118f97d1-7110-4d1b-b0bd-4143252c0bb0
-ms.openlocfilehash: 935f0b2263fbf909decee354b0109d16d82a06e0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0f939dca7ef941a444ca90d7afc5edfe6ce7ba8d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720860"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782578"
 ---
 # <a name="xpathnavigator-in-transformations"></a>Dönüşümlerde XPathNavigator
 
@@ -107,7 +108,7 @@ public class sample
 }  
 ```  
   
-## <a name="output"></a>Çıkış  
+## <a name="output"></a>Çıktı  
 
  Dönüşümün sonucu dosya **out.xml** bulunur:  
   

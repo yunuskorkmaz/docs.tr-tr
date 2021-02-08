@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: CorManifestResourceFlags numaralandırması'
 title: CorManifestResourceFlags Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1b0306b7-622b-4b57-8edc-3c713bb147ae
 topic_type:
 - apiref
-ms.openlocfilehash: f8334cb44042e21c086bc05c723e99b0c079fa2c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a863e1248bf5274e12fc16d2edea6b28dd493963
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95677069"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784411"
 ---
 # <a name="cormanifestresourceflags-enumeration"></a>CorManifestResourceFlags Numaralandırması
 
@@ -39,7 +40,7 @@ typedef enum CorManifestResourceFlags {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`mrVisibilityMask`|Ayrılmış.|  
 |`mrPublic`|Kaynaklar geneldir.|  

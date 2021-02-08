@@ -1,13 +1,14 @@
 ---
+description: Daha fazla bilgi için bkz. XslCompiledTransform sınıfında çıkış seçenekleri
 title: XslCompiledTransform Sınıfındaki Çıkış Seçenekleri
 ms.date: 03/30/2017
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
-ms.openlocfilehash: 5835cfee69730d5dd2322422aeed6e0d72995eec
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8f16de929ba196eddb6ebb4b8b251668820b4d91
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731143"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783306"
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>XslCompiledTransform Sınıfındaki Çıkış Seçenekleri
 

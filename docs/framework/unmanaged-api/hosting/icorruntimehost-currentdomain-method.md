@@ -1,4 +1,5 @@
 ---
+description: ': ICorRuntimeHost:: CurrentDomain Yöntemi hakkında daha fazla bilgi edinin'
 title: ICorRuntimeHost::CurrentDomain Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: dd2afb38-675b-4c3c-a9f3-8ab3b133eb02
 topic_type:
 - apiref
-ms.openlocfilehash: 33d56354a560949b2f451df9ef82d4f433951195
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fd75028b57475a620cc88a75016911dd0ab55b2e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95715569"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784905"
 ---
 # <a name="icorruntimehostcurrentdomain-method"></a>ICorRuntimeHost::CurrentDomain Yöntemi
 
 <xref:System.AppDomain?displayProperty=nameWithType>Geçerli iş parçacığında yüklü olan etki alanını temsil eden türün bir arabirim işaretçisini alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT CurrentDomain (  
@@ -41,7 +42,7 @@ HRESULT CurrentDomain (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|İşlem başarılı oldu.|  
 |S_FALSE|İşlem tamamlanamadı.|  

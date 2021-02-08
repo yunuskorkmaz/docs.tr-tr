@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: XPathNavigator kullanarak şema doğrulama'
 title: XPathNavigator Kullanarak Şema Doğrulama
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 81fa0e41-d9c9-46f0-b22b-50da839c77f5
-ms.openlocfilehash: 1c91dfa63723cc087662630232376e74394c7b13
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 69b57aa4f2efc08ba196e0abe1f4d8a0b91887db
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734705"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782994"
 ---
 # <a name="schema-validation-using-xpathnavigator"></a>XPathNavigator Kullanarak Şema Doğrulama
 

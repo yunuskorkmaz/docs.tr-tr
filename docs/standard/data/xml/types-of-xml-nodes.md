@@ -1,19 +1,20 @@
 ---
+description: 'Daha fazla bilgi edinin: XML düğümlerinin türleri'
 title: XML Düğüm Türleri
 ms.date: 03/30/2017
 ms.assetid: 71d03b78-6898-4ce7-b0fc-1282573f31f7
-ms.openlocfilehash: edf47246782e86cf134ea88d41381bed9ff16f69
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6a43d9259bc1798be962ec0c599299a2a663a0d4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95675639"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782890"
 ---
 # <a name="types-of-xml-nodes"></a>XML Düğüm Türleri
 
 Bir XML belgesi, düğüm ağacı olarak belleğe okuna, düğümlerin düğüm türleri düğümler oluşturulduğunda karardır. XML Belge Nesne Modeli (DOM), World Wide Web Konsorsiyumu (W3C) tarafından belirlendiği ve DOM yapı modelinde bölümünde listelenen çeşitli düğüm türleri türlerine sahiptir. Aşağıdaki tabloda düğüm türleri, bu düğüm türüne atanan nesne ve her birinin kısa bir açıklaması listelenmektedir.  
   
-|DOM düğüm türü|Nesne|Açıklama|  
+|DOM düğüm türü|Nesne|Description|  
 |-------------------|------------|-----------------|  
 |Belge|<xref:System.Xml.XmlDocument>|Ağaçtaki tüm düğümlerin kapsayıcısı. Her zaman kök öğesiyle aynı olmayan belge kökü olarak da bilinir.|  
 |DocumentFragment|<xref:System.Xml.XmlDocumentFragment>|Herhangi bir ağaç yapısı olmadan bir veya daha fazla düğüm içeren geçici bir paket.|  
@@ -32,7 +33,7 @@ Bir XML belgesi, düğüm ağacı olarak belleğe okuna, düğümlerin düğüm 
   
  Aşağıdaki tabloda, W3C tarafından tanımlanmayan ek düğüm türleri gösterilmektedir, ancak bunlar Microsoft .NET Framework nesne modelinde, **XmlNodeType** numaralandırmalar olarak kullanıma sunulmuştur. Bu nedenle, bu düğüm türleri için eşleşen bir DOM düğüm türü sütunu yok.  
   
-|Düğüm türü|Açıklama|  
+|Düğüm türü|Description|  
 |---------------|-----------------|  
 |<xref:System.Xml.XmlDeclaration>|Bildirim düğümünü temsil eder `<?xml version="1.0"…>` .|  
 |<xref:System.Xml.XmlSignificantWhitespace>|Karışık içerikte boşluk olan önemli boşluk temsil eder.|  

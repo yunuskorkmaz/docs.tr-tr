@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi <filters> edinin: <routing>'
 title: <filters> / <routing>
 ms.date: 03/30/2017
 ms.assetid: 7993cf90-9afd-4c3c-9608-184d5da1105c
-ms.openlocfilehash: c9bc3a2c379e14d8cf687676a3ec40702d150e1e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 41b51453f53fca042f53ca1ee8372413b8478ecd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855243"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782058"
 ---
 # <a name="filters-of-routing"></a>\<filters> / \<routing>
 
@@ -17,7 +18,7 @@ Gelen iletileri değerlendirirken kullanılacak Windows Communication Foundation
 &nbsp;&nbsp;[**\<routing>**](routing.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<filters>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.serviceModel>
@@ -42,13 +43,13 @@ Yok
 
 ### <a name="child-elements"></a>Alt öğeleri
 
-|     | Açıklama |
+|     | Description |
 | --- | ----------- |
 | [**\<filter>**](filter.md) | Gelen iletiler değerlendirilirken Windows Communication Foundation (WCF) türünü belirleyen bir yönlendirme filtresi içerir <xref:System.ServiceModel.Dispatcher.MessageFilter> . |
 
 ### <a name="parent-elements"></a>Üst öğeler
 
-|     | Açıklama |
+|     | Description |
 | --- | ----------- |
 | [**\<routing>**](routing.md) | Gelen iletileri değerlendirirken kullanılacak Windows Communication Foundation (WCF) türünü belirleyen bir yönlendirme filtresi kümesini tanımlamak için bir yapılandırma bölümünü temsil eder <xref:System.ServiceModel.Dispatcher.MessageFilter> . Ayrıca, bir filtre eşleştiğinde ileti göndermek için hedef uç noktalarını tanımlayan yönlendirme tablolarını tanımlar. |
 

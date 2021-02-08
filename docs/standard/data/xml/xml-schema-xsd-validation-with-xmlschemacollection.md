@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: XmlSchemaCollection ile XML şeması (XSD) doğrulaması'
 title: XmlSchemaCollection ile XML Şeması (XSD) Doğrulaması
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ad0b5717-3d32-41ad-a4d7-072c3e492b82
-ms.openlocfilehash: bd6bb440a00b3e485f4e6794e538f761267236b3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b0363f6d5f656591d56a1202f223ee9797abd26d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733015"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782695"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a>XmlSchemaCollection ile XML Şeması (XSD) Doğrulaması
 

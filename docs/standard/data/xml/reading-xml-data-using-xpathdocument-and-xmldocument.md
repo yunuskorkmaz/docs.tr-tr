@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: XPathDocument ve XmlDocument kullanarak XML verilerini okuma'
 title: XPathDocument ve XmlDocument Kullanarak XML Verilerini Okuma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5711b225-6aa2-4e4f-9898-19f2d518ad1a
-ms.openlocfilehash: 8ffd03d1a9915bade6c4d421d5fad096a4784fb8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cfb21a98cc6d2bf4f3caa4e86c3c6bfffa636d72
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686793"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783176"
 ---
 # <a name="reading-xml-data-using-xpathdocument-and-xmldocument"></a>XPathDocument ve XmlDocument Kullanarak XML Verilerini Okuma
 

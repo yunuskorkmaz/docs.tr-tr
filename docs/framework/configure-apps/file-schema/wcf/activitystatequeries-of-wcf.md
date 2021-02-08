@@ -1,15 +1,16 @@
 ---
-title: <activityStateQueries>WCF
+description: WCF hakkında daha fazla bilgi edinin <activityStateQueries>
+title: <activityStateQueries> WCF
 ms.date: 10/08/2018
 ms.assetid: 9e45db49-ed85-4fdf-bd65-0d5477e31823
-ms.openlocfilehash: 249ac3d91f6251a943dd856e4122b8b54f691702
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 00795a26a37f62fae8aa884b5a4188be79453186
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850578"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782240"
 ---
-# <a name="activitystatequeries-of-wcf"></a>\<activityStateQueries>WCF
+# <a name="activitystatequeries-of-wcf"></a>\<activityStateQueries> WCF
 
 Bir iş akışı örneği oluşturan etkinliklerin yaşam döngüsü değişikliklerini izlemek için kullanılan bir sorgu koleksiyonunu temsil eder. Örneğin, bir iş akışı örneği içinde "e-posta gönder" etkinliğinin tamamlandığı her seferinde izlemek isteyebilirsiniz. Bu sorgu, bir izleme katılımcısı için etkinlik durumu kayıt nesnelerine abone olmak için gereklidir. Abone olmak için kullanılabilir durumları ActivityStates belirtilir.
 
@@ -23,7 +24,7 @@ Profil sorgularını izleme hakkında daha fazla bilgi için bkz. [Izleme profil
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<workflow>**](workflow-of-wcf.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<activityStateQueries>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <tracking>

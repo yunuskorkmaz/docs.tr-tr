@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <NetFx40_LegacySecurityPolicy> öğesi'
 title: <NetFx40_LegacySecurityPolicy> Öğesi
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <NetFx40_LegacySecurityPolicy> element
 - NetFx40_LegacySecurityPolicy element
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
-ms.openlocfilehash: d5192eb56bb8b640544bdc52a0bb9d8a5277efef
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6be520d4cfd4f9ec05f4aceec82e4fef5440f55d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73116247"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782318"
 ---
 # <a name="netfx40_legacysecuritypolicy-element"></a>\<NetFx40_LegacySecurityPolicy> Öğesi
 
@@ -20,7 +21,7 @@ ms.locfileid: "73116247"
 &nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<NetFx40_LegacySecurityPolicy>**  
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <NetFx40_LegacySecurityPolicy
@@ -41,7 +42,7 @@ ms.locfileid: "73116247"
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|`false`|Çalışma zamanı eski CAS ilkesini kullanmaz. Bu varsayılandır.|
+|`false`|Çalışma zamanı eski CAS ilkesini kullanmaz. Bu varsayılan seçenektir.|
 |`true`|Çalışma zamanı eski CAS ilkesini kullanır.|
 
 ### <a name="child-elements"></a>Alt Öğeler
@@ -64,7 +65,7 @@ CAS ilkesi sürüme özgüdür. .NET Framework önceki sürümlerinde bulunan ö
 `<NetFx40_LegacySecurityPolicy>`Öğesini bir .NET Framework 4 derlemesine uygulamak, [güvenlik açısından saydam kodu](../../../misc/security-transparent-code.md)etkilemez; saydamlık kuralları yine de geçerlidir.
 
 > [!IMPORTANT]
-> Öğesi uygulandığında, `<NetFx40_LegacySecurityPolicy>` [genel derleme önbelleğinde](../../../app-domains/gac.md)yüklü olmayan [Yerel Görüntü Oluşturucu (Ngen. exe)](../../../tools/ngen-exe-native-image-generator.md) tarafından oluşturulan yerel görüntü derlemeleri için önemli performans cezaları oluşabilir. Performans düşüşü, çalışma zamanının öznitelik uygulandığında derlemeleri yerel görüntü olarak yüklemesi nedeniyle oluşur ve bu, tam zamanında derlemeler olarak yüklenmekte olur.
+> Öğesi uygulandığında, `<NetFx40_LegacySecurityPolicy>` [genel derleme önbelleğinde](../../../app-domains/gac.md)yüklü olmayan [yerel görüntü Oluşturucu (Ngen.exe)](../../../tools/ngen-exe-native-image-generator.md) tarafından oluşturulan yerel görüntü derlemeleri için önemli performans cezaları oluşabilir. Performans düşüşü, çalışma zamanının öznitelik uygulandığında derlemeleri yerel görüntü olarak yüklemesi nedeniyle oluşur ve bu, tam zamanında derlemeler olarak yüklenmekte olur.
 
 > [!NOTE]
 > Visual Studio projeniz için proje ayarları içindeki .NET Framework 4 ' ten daha eski bir hedef .NET Framework sürümünü belirtirseniz, bu sürüm için belirttiğiniz özel CAS ilkeleri de dahil olmak üzere CAS ilkesi etkinleştirilir. Ancak, yeni .NET Framework 4 türlerini ve üyelerini kullanamazsınız. Ayrıca, [uygulama yapılandırma dosyanızdaki](../../index.md)başlangıç ayarları şemasında [ \<supportedRuntime> öğesini](../startup/supportedruntime-element.md) kullanarak .NET Framework önceki bir sürümünü de belirtebilirsiniz.

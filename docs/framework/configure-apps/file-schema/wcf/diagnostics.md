@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <diagnostics>'
 title: <diagnostics>
 ms.date: 03/30/2017
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
-ms.openlocfilehash: 775ec3a4d3dd8709c61fb46155b5085a3343d218
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d1651d949cdc095e630e9cde0bacbe51a5eb6062
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91192275"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782162"
 ---
 # \<diagnostics>
 
@@ -49,7 +50,7 @@ ms.locfileid: "91192275"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|EtwProviderId|ETW oturumlarına olayları yazan olay Izleme sağlayıcısı için tanımlayıcıyı belirten bir dize.|  
+|EtwProviderId|ETW oturumlarına olayları yazan Event-Tracing sağlayıcısı için tanımlayıcıyı belirten bir dize.|  
 |performanceCounters|Derleme için performans sayaçlarının etkinleştirilip etkinleştirilmeyeceğini belirtir. Geçerli değerler şunlardır<br /><br /> -Off: performans sayaçları devre dışı bırakıldı.<br />-Yalnızca ServiceOnly: yalnızca bu hizmetle ilgili performans sayaçları etkindir.<br />-All: performans sayaçları çalışma zamanında görüntülenebilir.<br />-Varsayılan: tek bir performans sayacı örneği _WCF_Admin oluşturulur. Bu örnek, altyapı tarafından kullanılan SQM verilerinin toplanmasını etkinleştirmek için kullanılır. Bu örnek için sayaç değerlerinden hiçbiri güncelleştirilmemiş ve bu nedenle sıfır olarak kalacak. WCF için bir yapılandırma yoksa, bu varsayılan değerdir.|  
 |wmiProviderEnabled|Derleme için WMI sağlayıcısının etkin olup olmadığını belirten bir Boolean değer. Kullanıcının Windows Communication Foundation (WCF) İnceleme ve denetim özelliklerine çalışma zamanı erişimi kazanması için WMI sağlayıcısı gerekir. Varsayılan değer: `false`.|  
   

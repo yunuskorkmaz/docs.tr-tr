@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: <namedCaches> öğesi (önbellek ayarları)'
 title: <namedCaches> Öğesi (Önbellek Ayarları)
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - <namedCaches> element
 ms.assetid: 6bd4fbc5-55a6-4dc4-998b-cdcc7e023330
-ms.openlocfilehash: ad76c01bba859934be399d73262bd974309efe98
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 543650513270c0cee24d965b8efe98a75d7b8f9a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91192405"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782331"
 ---
 # <a name="namedcaches-element-cache-settings"></a>\<namedCaches> Öğesi (Önbellek Ayarları)
 

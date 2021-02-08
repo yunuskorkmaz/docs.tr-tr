@@ -1,4 +1,5 @@
 ---
+description: ': ICorProfilerInfo:: GetTokenAndMetadataFromFunction yöntemi hakkında daha fazla bilgi edinin'
 title: ICorProfilerInfo::GetTokenAndMetadataFromFunction Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: e525aa16-c923-4b16-833b-36f1f0dd70fc
 topic_type:
 - apiref
-ms.openlocfilehash: 8e03eefc3758347389be4af6d53921480ee40263
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0cea6564df15c7a7f4c46097714cc0956002599b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724084"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783852"
 ---
 # <a name="icorprofilerinfogettokenandmetadatafromfunction-method"></a>ICorProfilerInfo::GetTokenAndMetadataFromFunction Metodu
 
 Belirtilen işlev için belirtece karşı kullanılabilecek meta veri belirtecini ve bir meta veri arabirim örneğini alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetTokenAndMetaDataFromFunction(  

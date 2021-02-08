@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: basit türleri erteleme kuralları'
 title: Basit Türlerin Çıkarımını Yapma Kuralları
 ms.date: 03/30/2017
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
-ms.openlocfilehash: b8fa3037d9ad5af057f477733ffdea74681f5549
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4b7c212f262d3c24a3bd4e677ee04bd169c6dd3e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686546"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783020"
 ---
 # <a name="rules-for-inferring-simple-types"></a>Basit Türlerin Çıkarımını Yapma Kuralları
 
@@ -23,7 +24,7 @@ ms.locfileid: "95686546"
   
  Aşağıdaki tabloda, sonuçta elde edilen şema için olası çıkartılan türler listelenmektedir.  
   
-|Basit tür|Açıklama|  
+|Basit tür|Description|  
 |-----------------|-----------------|  
 |boolean|True, false, 0, 1.|  
 |byte|-128 ile 127 arasında tamsayılar.|  
@@ -41,7 +42,7 @@ ms.locfileid: "95686546"
 |süre|W3C süre biçimi.|  
 |tarih saat|W3C dateTime biçimi.|  
 |time|W3C saat biçimi.|  
-|tarih|Yıl değerleri 0001 ile 9999 arasında kısıtlanmıştır.|  
+|date|Yıl değerleri 0001 ile 9999 arasında kısıtlanmıştır.|  
 |Gyearayı|W3C Gregoryen ay ve yıl biçimi.|  
 |string|Bir veya daha fazla Unicode karakteri.|  
   

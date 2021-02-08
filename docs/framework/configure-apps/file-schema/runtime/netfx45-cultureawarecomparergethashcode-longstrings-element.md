@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <NetFx45_CultureAwareComparerGetHashCode_LongStrings> öğesi'
 title: <NetFx45_CultureAwareComparerGetHashCode_LongStrings> Öğesi
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - GetHashCode method
 - hash codes, calculating
 ms.assetid: 3a5f38d1-ebc8-44de-aaeb-2929f6e6b48f
-ms.openlocfilehash: 413eb6c6e61b509135601c65cf045eabd849e8b3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ca4099d3bf812cb25e6a611b9b51b3752b1ad361
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74802117"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782292"
 ---
 # <a name="netfx45_cultureawarecomparergethashcode_longstrings-element"></a>\<NetFx45_CultureAwareComparerGetHashCode_LongStrings> Öğesi
 
@@ -22,7 +23,7 @@ ms.locfileid: "74802117"
 &nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<NetFx45_CultureAwareComparerGetHashCode_LongStrings>**  
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <NetFx45_CultureAwareComparerGetHashCode_LongStrings enabled="0|1">
@@ -42,7 +43,7 @@ ms.locfileid: "74802117"
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|0|Ortak dil çalışma zamanı, <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> karma kodları hesaplamak için yöntemi için değişken miktarda bellek ayırır. Bu varsayılandır.|
+|0|Ortak dil çalışma zamanı, <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> karma kodları hesaplamak için yöntemi için değişken miktarda bellek ayırır. Bu varsayılan seçenektir.|
 |1|Ortak dil çalışma zamanı, <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> karma kodları hesaplamak için yöntemi için sabit miktarda bellek ayırır.|
 
 ### <a name="child-elements"></a>Alt Öğeler

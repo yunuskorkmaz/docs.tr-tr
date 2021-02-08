@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: XSLT derleyicisi (xsltc.exe)'
 title: XSLT Derleyicisi (xsltc.exe)
 ms.date: 03/30/2017
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
-ms.openlocfilehash: 89e2291cb4eafe9ca9e5001061b960f348fe4719
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 96236e7a7c985c4a71c2f09ffd3ad720bb3d40f1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720834"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782552"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT Derleyicisi (xsltc.exe)
 
@@ -23,7 +24,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
   
 ## <a name="argument"></a>Bağımsız Değişken  
   
-|Bağımsız Değişken|Açıklama|  
+|Bağımsız Değişken|Description|  
 |--------------|-----------------|  
 |`sourceFile`|Stil sayfasının adını belirtir. Stil sayfası yerel bir dosya olmalıdır veya intranette bulunmalıdır.|  
   

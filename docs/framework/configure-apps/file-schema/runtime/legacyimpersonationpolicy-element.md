@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: <legacyImpersonationPolicy> öğesi'
 title: <legacyImpersonationPolicy> Öğesi
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <legacyImpersonationPolicy> element
 - legacyImpersonationPolicy element
 ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
-ms.openlocfilehash: ca10c809ddf319817aaa074ba5fc3415abf6387d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 36cc3336e8e3c0196ae20fc749fc2239c35c8584
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91192522"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782370"
 ---
 # <a name="legacyimpersonationpolicy-element"></a>\<legacyImpersonationPolicy> Öğesi
 

@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: dizine göre sıralı düğüm alımı'
 title: Dizine Göre Sıralı Düğüm Alma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5412c90f-2703-4aa8-a9c4-1b8a35183c37
-ms.openlocfilehash: 37d350231e03e8a435977328a288abff2f336a4b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b6bf7491b4e237a0dcd21c1a75a90160425db922
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731169"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783293"
 ---
 # <a name="ordered-node-retrieval-by-index"></a>Dizine Göre Sıralı Düğüm Alma
 
@@ -53,7 +54,7 @@ for (int i=0; i < elemList.Count; i++)
 }
 ```  
   
- **Count** özelliğine ek olarak, **GetEnumerator** `foreach` **XmlNodeList** içindeki düğümlerin koleksiyonu üzerinde bir stil yinelemesi sağlayan bir GetEnumerator yöntemi vardır. Aşağıdaki kod örneği, ifadesinin kullanımını gösterir `foreach` .  
+ **Count** özelliğine ek olarak,  `foreach` **XmlNodeList** içindeki düğümlerin koleksiyonu üzerinde bir stil yinelemesi sağlayan bir GetEnumerator yöntemi vardır. Aşağıdaki kod örneği, ifadesinin kullanımını gösterir `foreach` .  
   
 ```vb  
 Dim doc As New XmlDocument()  

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: şema sonrası derleme bilgi kümesi'
 title: Şema Derleme Sonrası Bilgi Kümesi
 ms.date: 03/30/2017
 dev_langs:
@@ -6,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 7f1bc7f4-401b-459f-9078-f099cc711fde
-ms.openlocfilehash: 79ffea3831d5f56d73c6974fdf7265c9b00ab8ec
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9c574728b564c69de9574aba551bfb6967cf8488
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95691272"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783267"
 ---
 # <a name="post-schema-compilation-infoset"></a>Şema Derleme Sonrası Bilgi Kümesi
 

@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: şema düğümü türlerini ve yapısını edinme kuralları'
 title: Şema Düğüm Türleri ve Yapısını Çıkarma Kuralları
 ms.date: 03/30/2017
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
-ms.openlocfilehash: e49e50dc21951d739b12cdfa60c6a48f67576873
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cbcc60a4c2510fb75aa5194164881f573f1a688f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95697603"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783033"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>Şema Düğüm Türleri ve Yapısını Çıkarma Kuralları
 
@@ -153,7 +154,7 @@ Bu konuda, şema çıkarımı işleminin bir XML belgesindeki düğüm türlerin
 |Varlık başvurusu|<xref:System.Xml.Schema.XmlSchemaInference>Sınıf, varlık başvurularını işlemez. Bir XML belgesi varlık başvuruları içeriyorsa, varlıkları genişleten bir okuyucu kullanmanız gerekir. Örneğin, <xref:System.Xml.XmlTextReader> <xref:System.Xml.XmlTextReader.EntityHandling%2A> özelliğini bir parametre olarak ayarlanmış şekilde bir ile geçirebilirsiniz <xref:System.Xml.EntityHandling.ExpandEntities> . Varlık başvurularına karşılaşılırsa ve okuyucu varlıkları genişletmezse bir özel durum oluşturur.|  
 |CDATA|`<![CDATA[ … ]]`XML belgesindeki tüm bölümler, olarak algılanır `xs:string` .|  
 |Belge türü|LIP.|  
-|Ad Alanları|LIP.|  
+|Ad alanları|LIP.|  
   
  Şema çıkarımı işlemi hakkında daha fazla bilgi için bkz. [xml belgelerinden şemaları esnek](inferring-schemas-from-xml-documents.md)yapma.  
   

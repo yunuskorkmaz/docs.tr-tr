@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: var olan düğümleri kopyalama'
 title: Var Olan Düğümleri Kopyalama
 ms.date: 03/30/2017
 ms.assetid: 2aa8f65c-cc62-4638-9c46-129dc15be786
-ms.openlocfilehash: 651e9fc9dc0d1a50a2d15d382b3ca65f7fd4b7fd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 48bc1fd4f0eeb16691d6f9c0631998db9a54bba1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95701438"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783436"
 ---
 # <a name="copy-existing-nodes"></a>Var Olan Düğümleri Kopyalama
 

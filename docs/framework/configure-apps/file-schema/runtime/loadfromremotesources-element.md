@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: <loadFromRemoteSources> öğesi'
 title: <loadFromRemoteSources> Öğesi
 ms.date: 05/24/2018
 helpviewer_keywords:
 - loadFromRemoteSources element
 - <loadFromRemoteSources> element
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
-ms.openlocfilehash: 568c0c814dcc57be0f5be435bb7750c970ffec19
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f5dcff1fb7b0393fe5896dd9d107461a3151f79a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91192457"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782357"
 ---
 # <a name="loadfromremotesources-element"></a>\<loadFromRemoteSources> öğesi
 

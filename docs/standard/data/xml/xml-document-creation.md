@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: XML belgesi oluşturma'
 title: XML Belgesi Oluşturma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 877e9c62-b082-4bfb-bc5b-f47297eb30ef
-ms.openlocfilehash: 18c391e33e0c43f2407ccbc87c12b6c25a12509d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 825c616fc6c0f7216248ae71e7d7630383d9cfea
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686533"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782786"
 ---
 # <a name="xml-document-creation"></a>XML Belgesi Oluşturma
 

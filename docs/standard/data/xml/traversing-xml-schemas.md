@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: XML şemalarında geçiş yapma'
 title: XML Şemalarını Çapraz Geçirme
 ms.date: 03/30/2017
 dev_langs:
@@ -6,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
-ms.openlocfilehash: 6371d7e16af45eebf09f95bce2864be3bf44321e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: d860235fb8d4414a465a931438701ace5ed1e08c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824681"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782916"
 ---
 # <a name="traversing-xml-schemas"></a>XML Şemalarını Çapraz Geçirme
 

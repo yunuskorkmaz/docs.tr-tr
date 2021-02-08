@@ -1,4 +1,5 @@
 ---
+description: ': ICLRTask:: SetTaskIdentifier yöntemi hakkında daha fazla bilgi edinin'
 title: ICLRTask::SetTaskIdentifier Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: bdb7f047-1e90-40fc-9e3b-d44a16509073
 topic_type:
 - apiref
-ms.openlocfilehash: d1f731e00d4917b997dfba392cb9b6ce2afc082e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e746d8ec96d16f7761dd49ac814ddbed073c2686
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95690752"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784957"
 ---
 # <a name="iclrtasksettaskidentifier-method"></a>ICLRTask::SetTaskIdentifier Yöntemi
 
 Ortak dil çalışma zamanını (CLR), belirtilen tanımlayıcı değerini geçerli [ICLRTask](iclrtask-interface.md) örneğiyle temsil edilen görevle ilişkilendider.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT SetTaskIdentifier (  
@@ -41,7 +42,7 @@ HRESULT SetTaskIdentifier (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`SetTaskIdentifier` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  

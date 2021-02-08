@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: XmlNameTable kullanarak nesne karşılaştırması'
 title: XmlNameTable Kullanarak Nesne Karşılaştırma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8d94e041-d340-4ddf-9a2c-d7319e3f4f86
-ms.openlocfilehash: 5e0f5de6fd956bcaaf30b592e04c432a5f824c52
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7be93741b9eeb353e4e3a2135f975f9031557d6e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734107"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783319"
 ---
 # <a name="object-comparison-using-xmlnametable"></a>XmlNameTable Kullanarak Nesne Karşılaştırma
 

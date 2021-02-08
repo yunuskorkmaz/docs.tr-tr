@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: çöp toplama bildirimleri'
 title: Çöp Toplama Bildirimleri
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - garbage collection, notifications
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
-ms.openlocfilehash: 70343851ba73af9041014e8654f5df82d8389c39
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: bbdb3cecde6a7e91b79992be9424ecffebfdaa15
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734783"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782461"
 ---
 # <a name="garbage-collection-notifications"></a>Çöp Toplama Bildirimleri
 
@@ -65,7 +66,7 @@ Ortak dil çalışma zamanı ile tam çöp toplamanın (yani 2. nesil bir koleks
   
 ## <a name="example"></a>Örnek  
   
-### <a name="description"></a>Açıklama  
+### <a name="description"></a>Description  
 
  Aşağıdaki örnekte, bir sunucu grubu gelen Web istekleri hizmetidir. İstekleri işleme iş yükünün benzetimini yapmak için, bir koleksiyona bayt dizileri eklenir <xref:System.Collections.Generic.List%601> . Her sunucu bir çöp toplama bildirimine kaydolduktan sonra `WaitForFullGCProc` <xref:System.GCNotificationStatus> , ve yöntemleri tarafından döndürülen numaralandırmayı sürekli olarak izlemek için Kullanıcı yönteminde bir iş parçacığı başlatır <xref:System.GC.WaitForFullGCApproach%2A> <xref:System.GC.WaitForFullGCComplete%2A> .  
   

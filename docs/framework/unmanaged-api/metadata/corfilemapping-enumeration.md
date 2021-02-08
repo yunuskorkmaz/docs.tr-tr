@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: CorFileMapping numaralandırması'
 title: CorFileMapping Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3ca41592-b8da-475a-8032-a15627730003
 topic_type:
 - apiref
-ms.openlocfilehash: 63e27a62e176a92b03c10b59a55d9da3192918f4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0fc3916e75c576a6b133ba8a49c00eec6c9bac19
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726124"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784476"
 ---
 # <a name="corfilemapping-enumeration"></a>CorFileMapping Numaralandırması
 
@@ -38,7 +39,7 @@ typedef enum CorFileMapping {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`fmFlat`|Dosya bir veri dosyası olarak eşlendi. Yani, `SEC_IMAGE` bayrak Microsoft Win32 işlevine geçirilmedi `CreateFileMapping` .|  
 |`fmExecutableImage`|Dosya, bayrağı ile işlevi ya da işlevi kullanılarak yürütme için eşlenir `LoadLibrary` `CreateFileMapping` `SEC_IMAGE` .|  

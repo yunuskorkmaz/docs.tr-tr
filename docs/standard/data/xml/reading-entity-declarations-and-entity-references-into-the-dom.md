@@ -1,13 +1,14 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: DOM 'a varlık bildirimleri ve varlık başvuruları okuma"
 title: DOM’da Varlık Bildirimleri ve Varlık Başvuruları Okuma
 ms.date: 03/30/2017
 ms.assetid: 86dba977-5cc4-4567-964f-027ffabc47b2
-ms.openlocfilehash: 8af9e4c1aedc588bcbf3b4f43e9e562fda2f3ce3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 312fd215076f4b0eee280767b8c367d34ffe6bb6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686832"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783228"
 ---
 # <a name="reading-entity-declarations-and-entity-references-into-the-dom"></a>DOM’da Varlık Bildirimleri ve Varlık Başvuruları Okuma
 
@@ -44,7 +45,7 @@ Varlık, içerik veya biçimlendirme yerine XML 'de kullanılacak adı belirten 
   
  ![varlık türü hiyerarşisinin akış grafiği](media/entity-hierarchy.gif "Entity_hierarchy")  
   
- XML Belge Nesne Modeli (DOM) Microsoft .NET Framework uygulamasının varsayılan örneği, varlıkların başvurularını korumasıdır ve XML yüklendiğinde varlıkları genişletmez. Bu, DOM 'da bir belge yüklendiği için, **XmlEntityReference** `&publisher;` DTD 'de bildirildiği varlıktaki içeriği temsil eden alt düğümler ile başvuru değişkenini içeren bir XmlEntityReference düğümü oluşturulur.  
+ XML Belge Nesne Modeli (DOM) Microsoft .NET Framework uygulamasının varsayılan örneği, varlıkların başvurularını korumasıdır ve XML yüklendiğinde varlıkları genişletmez. Bu, DOM 'da bir belge yüklendiği için,  `&publisher;` DTD 'de bildirildiği varlıktaki içeriği temsil eden alt düğümler ile başvuru değişkenini içeren bir XmlEntityReference düğümü oluşturulur.  
   
  `<!ENTITY publisher "Microsoft Press">`Varlık bildirimini kullanarak, aşağıdaki diyagramda bu bildirimden oluşturulan **XmlEntity** ve **XmlText** düğümleri gösterilmektedir.  
   

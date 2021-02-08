@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: XSLT Işleme sırasında dış kaynakları çözümleme'
 title: XSLT İşleme Sırasında Dış Kaynakları Çözümleme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3a59d31c-0ec5-4de6-a2a9-558531c8116e
-ms.openlocfilehash: 5d50711eda266cecdb817c778f04aa845fa4c342
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5b45458f8d4f240de5dc5e370e5a57c6ecab191d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686650"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783085"
 ---
 # <a name="resolving-external-resources-during-xslt-processing"></a>XSLT İşleme Sırasında Dış Kaynakları Çözümleme
 

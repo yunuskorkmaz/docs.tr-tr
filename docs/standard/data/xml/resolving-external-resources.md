@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: dış kaynakları çözümleme'
 title: Dış Kaynakları Çözümleme
 ms.date: 03/30/2017
 ms.assetid: ad3fa320-4b8f-4e5c-b549-01157591007a
-ms.openlocfilehash: dffaef1b27d5814591c935c0ca795ba4ea3eba84
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8dcd508c2bc811601c6ae8fdbef40209ae520dcd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686611"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783072"
 ---
 # <a name="resolving-external-resources"></a>Dış Kaynakları Çözümleme
 
@@ -48,7 +49,7 @@ ms.locfileid: "95686611"
  XmlResolver 'ın doğru kimlik bilgilerini içerecek şekilde ayarlanması, dış kaynaklara erişime izin verir.  
   
 > [!NOTE]
-> **XmlResolver** özelliğini almanın bir yolu yoktur. Bu, bir kullanıcının kimlik bilgilerinin ayarlandığı bir **XmlResolver** 'ı yeniden kullanmasını önlemeye yardımcı olur. Ayrıca, XmlDocument 'yi yüklemek için bir **XmlTextReader** veya doğrulama <xref:System.Xml.XmlReader> kullanılıyorsa ve **XmlDocument** **XmlDocument** ayarlanmış bir çözümleyici 'ye sahipse, bu okuyuculardan gelen çözümleyiciler **yükleme** aşamasından sonra **XmlDocument** tarafından önbelleğe alınmaz, çünkü bu da bir güvenlik riski oluşturur.  
+> **XmlResolver** özelliğini almanın bir yolu yoktur. Bu, bir kullanıcının kimlik bilgilerinin ayarlandığı bir **XmlResolver** 'ı yeniden kullanmasını önlemeye yardımcı olur. Ayrıca, XmlDocument 'yi yüklemek için bir **XmlTextReader** veya doğrulama <xref:System.Xml.XmlReader> kullanılıyorsa ve  **XmlDocument** ayarlanmış bir çözümleyici 'ye sahipse, bu okuyuculardan gelen çözümleyiciler **yükleme** aşamasından sonra **XmlDocument** tarafından önbelleğe alınmaz, çünkü bu da bir güvenlik riski oluşturur.  
   
  Daha fazla bilgi için başvuru sayfasının açıklamalar bölümüne bakın <xref:System.Xml.XmlResolver> .  
   

@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: düğüm, Içerik ve değerleri bir XML belgesinden kaldırma'
 title: Bir XML Belgesinden Düğümleri, İçeriği ve Değerleri Kaldırma
 ms.date: 03/30/2017
 ms.assetid: d818a29a-6ee5-4725-97c4-78cf60a156b6
-ms.openlocfilehash: 288f2d2e19aef34559c59c611516e57b1b10eab3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 269457b42895d95b952e6e8c5adcaa4abd425044
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686754"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783111"
 ---
 # <a name="removing-nodes-content-and-values-from-an-xml-document"></a>Bir XML Belgesinden Düğümleri, İçeriği ve Değerleri Kaldırma
 

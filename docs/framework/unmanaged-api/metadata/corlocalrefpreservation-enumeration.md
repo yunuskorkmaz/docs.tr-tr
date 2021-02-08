@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Corlocalrefkoruma numaralandırması'
 title: CorLocalRefPreservation Sabit Listesi
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44757163-1228-4213-a4c4-d4de503cc75d
 topic_type:
 - apiref
-ms.openlocfilehash: 49b0298f4fa776c93f89ac380ce65568b493379b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: afcdf6ce22c5f786e8f728cc1e45ad3ca44e7ef5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95677121"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784424"
 ---
 # <a name="corlocalrefpreservation-enumeration"></a>CorLocalRefPreservation Sabit Listesi
 
@@ -38,7 +39,7 @@ typedef enum CorLocalRefPreservation
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`MDPreserveLocalRefsNone`|Yerel başvuruları koru.|  
 |`MDPreserveLocalTypeRef`|Yerel tür başvurularını koru.|  

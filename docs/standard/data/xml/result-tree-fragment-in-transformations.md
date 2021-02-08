@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: dönüşümlerdeki sonuç ağacı parçası'
 title: Dönüşümlerdeki Sonuç Ağacı Parçası
 ms.date: 03/30/2017
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
-ms.openlocfilehash: e5ca285c0b5d6c32d15647508c611a47ed97ee03
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 6f3d0b561fcca57b81d154cfc21dcee05e866230
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823569"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783046"
 ---
 # <a name="result-tree-fragment-in-transformations"></a>Dönüşümlerdeki Sonuç Ağacı Parçası
 
@@ -110,7 +111,7 @@ Burada, zengin metin biçimi (RTF) ve bu nedenle bir düğüm kümesine Dönüş
 
 Bu stil sayfasıyla herhangi bir XML dönüştürmenin sonucu aşağıdaki çıktıda gösterilmektedir.
 
-## <a name="output"></a>Çıkış
+## <a name="output"></a>Çıktı
 
 ```xml
 <first_book xmlns:user="urn:books">Book1</first_book>

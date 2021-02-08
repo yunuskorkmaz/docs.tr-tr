@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: <NetFx40_PInvokeStackResilience> öğesi'
 title: <NetFx40_PInvokeStackResilience> Öğesi
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <NetFx40_PInvokeStackResilience> element
 - NetFx40_PInvokeStackResilience element
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
-ms.openlocfilehash: 86f50aafe0b21d5080288e09ac7118ca1e4c939a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 59e2a5845868ebfa186344c9a731871739a29c47
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73116153"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782305"
 ---
 # <a name="netfx40_pinvokestackresilience-element"></a>\<NetFx40_PInvokeStackResilience> Öğesi
 
@@ -20,7 +21,7 @@ ms.locfileid: "73116153"
 &nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<NetFx40_PInvokeStackResilience>**  
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <NetFx40_PInvokeStackResilience  enabled="1|0"/>
@@ -40,7 +41,7 @@ ms.locfileid: "73116153"
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|`0`|Çalışma zamanı, yanlış platform çağırma bildirimlerini algılamadığında ve gideremeyecek .NET Framework 4 ' te tanıtılan daha hızlı birlikte çalışma hazırlama mimarisini kullanır. Bu varsayılandır.|
+|`0`|Çalışma zamanı, yanlış platform çağırma bildirimlerini algılamadığında ve gideremeyecek .NET Framework 4 ' te tanıtılan daha hızlı birlikte çalışma hazırlama mimarisini kullanır. Bu varsayılan seçenektir.|
 |`1`|Çalışma zamanı, hatalı platform çağırma bildirimlerini algılayan ve giderecek daha yavaş geçişler kullanır.|
 
 ### <a name="child-elements"></a>Alt Öğeler

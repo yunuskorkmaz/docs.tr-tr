@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: IHostTask:: GetPriority Yöntemi'
 title: IHostTask::GetPriority Metodu
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 4b463cd6-77c1-4f9a-8518-346ad8fc4b70
 topic_type:
 - apiref
-ms.openlocfilehash: d30dcbe4e7c289c23c5af00e4bdadedc186809b4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fb64164a54806a362888e93f031713ccc0ac3578
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95714776"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784697"
 ---
 # <a name="ihosttaskgetpriority-method"></a>IHostTask::GetPriority Metodu
 
 Geçerli [IHostTask](ihosttask-interface.md) örneği tarafından temsil edilen görevin iş parçacığı öncelik düzeyini alır.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT GetPriority (  
@@ -41,7 +42,7 @@ HRESULT GetPriority (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`GetPriority` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  

@@ -1,13 +1,14 @@
 ---
+description: "Daha fazla bilgi edinin: DOM 'da yeni düğümler oluşturma"
 title: DOM’da Yeni Düğümler Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 6c2b9789-b61a-49f9-b33f-db01a945edf2
-ms.openlocfilehash: dea7add100fbdbb9e761fe39d0d824d27975757f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fdc2eb20a71450285e47a5f8b6766ba77151a7f8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95704753"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783423"
 ---
 # <a name="create-new-nodes-in-the-dom"></a>DOM’da Yeni Düğümler Oluşturma
 
@@ -44,7 +45,7 @@ ms.locfileid: "95704753"
 |Yöntem|Düğüm yerleşimi|  
 |------------|--------------------|  
 |<xref:System.Xml.XmlNode.InsertBefore%2A>|Başvuru düğümünden önce eklenirler. Örneğin, konum 5 ' te yeni düğümü eklemek için:<br /><br /> `Dim refChild As XmlNode = node.ChildNodes(4) 'The reference is zero-based.node.InsertBefore(newChild, refChild);`<br /><br /> `XmlNode refChild = node.ChildNodes[4]; //The reference is zero-based. node.InsertBefore(newChild, refChild);`<br /><br /> Daha fazla bilgi için bkz <xref:System.Xml.XmlNode.InsertBefore%2A> . yöntemi.|  
-|<xref:System.Xml.XmlNode.InsertAfter%2A>|Başvuru düğümünden sonra eklenirler. Örnek:<br /><br /> `node.InsertAfter(newChild, refChild)`<br /><br /> `node.InsertAfter(newChild, refChild);`<br /><br /> Daha fazla bilgi için bkz <xref:System.Xml.XmlNode.InsertAfter%2A> . yöntemi.|  
+|<xref:System.Xml.XmlNode.InsertAfter%2A>|Başvuru düğümünden sonra eklenirler. Örneğin:<br /><br /> `node.InsertAfter(newChild, refChild)`<br /><br /> `node.InsertAfter(newChild, refChild);`<br /><br /> Daha fazla bilgi için bkz <xref:System.Xml.XmlNode.InsertAfter%2A> . yöntemi.|  
 |<xref:System.Xml.XmlNode.AppendChild%2A>|Düğümü, verilen düğüm için alt düğümler listesinin sonuna ekler. Eklenen düğüm bir ise <xref:System.Xml.XmlDocumentFragment> , belge parçasının tüm içeriği bu düğümün alt listesine taşınır. Daha fazla bilgi için bkz <xref:System.Xml.XmlNode.AppendChild%2A> . yöntemi.|  
 |<xref:System.Xml.XmlNode.PrependChild%2A>|Düğümü, belirtilen düğümün alt düğümleri listesinin başına ekler. Eklenen düğüm bir ise <xref:System.Xml.XmlDocumentFragment> , belge parçasının tüm içeriği bu düğümün alt listesine taşınır. Daha fazla bilgi için bkz <xref:System.Xml.XmlNode.PrependChild%2A> . yöntemi.|  
 |<xref:System.Xml.XmlAttributeCollection.Append%2A>|<xref:System.Xml.XmlAttribute>Bir öğe ile ilişkili öznitelik koleksiyonunun sonuna bir düğüm ekler. Daha fazla bilgi için bkz <xref:System.Xml.XmlAttributeCollection.Append%2A> . yöntemi.|  

@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: NodeLists ve NamedNodeMaps için dinamik güncelleştirmeler'
 title: NodeLists ve NamedNodeMaps Dinamik Güncelleştirmeleri
 ms.date: 03/30/2017
 ms.assetid: 76c511fd-6704-4ca4-8078-860a68d898ad
-ms.openlocfilehash: 3d02b08327774e50b31e147cdaa2ad12217dcefb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4e4b88d0e084e32fdb27f3d5762e305a4e900f1e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95687404"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783384"
 ---
 # <a name="dynamic-updates-to-nodelists-and-namednodemaps"></a>NodeLists ve NamedNodeMaps Dinamik Güncelleştirmeleri
 

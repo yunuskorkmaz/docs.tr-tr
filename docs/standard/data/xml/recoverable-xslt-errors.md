@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: kurtarılabilir XSLT hataları'
 title: Kurtarılabilir XSLT Hataları
 ms.date: 03/30/2017
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
-ms.openlocfilehash: 2123ead435fe389693f3b141a26873700ba5647f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5e31059554d36efd4c8738da7720e0ddf04999c5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686780"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783163"
 ---
 # <a name="recoverable-xslt-errors"></a>Kurtarılabilir XSLT Hataları
 
@@ -26,7 +27,7 @@ W3C XSL dönüştürmeleri (XSLT) sürüm 1,0 önerisi, uygulama sağlayıcısı
 |XSLT koşulu|Section|XslCompiledTransform davranışı|  
 |--------------------|-------------|-----------------------------------|  
 |Bir metin düğümü `xsl:strip-space` ve ile eşleşir `xsl:preserve-space` .|3.4|Kurtar|  
-|Kaynak düğüm, birden fazla şablon kuralıyla eşleşiyor.|5,5|Kurtar|  
+|Kaynak düğüm, birden fazla şablon kuralıyla eşleşiyor.|5.5|Kurtar|  
 |Bir ad alanı URI 'SI, birden çok ad alanı URI 'si için diğer ad olarak, aynı içeri aktarma önceliğine sahip olacak şekilde bildirilmiştir.|7.1.1|Kurtar|  
 |`name` `xsl:attribute` `xsl:element` Bir öznitelik değerinden içindeki ve oluşturulan özniteliği QName değil.|7.1.2, 7.1.3|Hatayla|  
 |Aynı içeri ve genişletilmiş ada sahip iki öznitelik kümesi ortak bir özniteliğe sahiptir ve aynı ada sahip ortak özniteliği içeren başka bir öznitelik kümesi yoktur.|7.1.4|Kurtar|  
@@ -40,13 +41,13 @@ W3C XSL dönüştürmeleri (XSLT) sürüm 1,0 önerisi, uygulama sağlayıcısı
 |Öğesinin içeriğinin örnekleniyor sonucu `xsl:processing-instruction` "--" dizesini içerir veya "-" ile biter.|7.4|Kurtar|  
 |`xsl:comment`Metin düğümlerinden farklı oluşturulan düğümlerin içeriğini örnekleme sonucu.|7.4|Hatayla|  
 |Değişken bağlama öğesi içindeki şablon bir öznitelik düğümü veya bir ad alanı düğümü döndürür.|11,2|Hatayla|  
-|Belge işlevine geçilen URI 'den kaynak alınırken bir hata oluştu.|12,1|Hata|  
-|Belge işlevindeki URI başvurusu bir parça tanımlayıcısı içeriyor ve parça tanımlayıcısı işlenirken bir hata oluştu.|12,1|Kurtarılamıyor|  
+|Belge işlevine geçilen URI 'den kaynak alınırken bir hata oluştu.|12.1|Hata|  
+|Belge işlevindeki URI başvurusu bir parça tanımlayıcısı içeriyor ve parça tanımlayıcısı işlenirken bir hata oluştu.|12.1|Kurtarılamıyor|  
 |Aynı ada sahip birden çok öznitelik vardır, ancak `xsl:output` aynı içeri aktarma önceliğiyle içinde CDATA-bölüm öğelerinin adlandırılmayan farklı değerleri vardır.|16|Kurtar|  
 |İşlemci `xsl:output` kodlama özniteliğinde kodlamayı desteklemez.|16,1|Kurtar|  
-|Sonuç ağacındaki bir metin düğümü dışında bir öğe için kullanılan bir metin düğümü için çıkış kaçı devre dışı bırakılıyor.|16,4|Kurtarılamıyor|  
-|Sonuç ağacı parçası, çıkış kaçış özelliği etkinleştirilmiş bir metin düğümü içeriyorsa, sonuç ağacı parçasını sayıya veya dizeye dönüştürme.|16,4|Kurtarılamıyor|  
-|XSLT işlemcisinin çıkış için kullandığı kodlamada temsil edilemeyecek bir karakter için çıkış kaçış devre dışı bırakıldı.|16,4|Kurtarılamıyor|  
+|Sonuç ağacındaki bir metin düğümü dışında bir öğe için kullanılan bir metin düğümü için çıkış kaçı devre dışı bırakılıyor.|16.4|Kurtarılamıyor|  
+|Sonuç ağacı parçası, çıkış kaçış özelliği etkinleştirilmiş bir metin düğümü içeriyorsa, sonuç ağacı parçasını sayıya veya dizeye dönüştürme.|16.4|Kurtarılamıyor|  
+|XSLT işlemcisinin çıkış için kullandığı kodlamada temsil edilemeyecek bir karakter için çıkış kaçış devre dışı bırakıldı.|16.4|Kurtarılamıyor|  
 |Bir öğeye alt öğe eklendikten sonra veya öznitelikleri eklendikten sonra bir ad alanı düğümü ekleme.|eroyta 25|Hatayla|  
 |`value`ÖZNITELIĞI `xsl:number` Nan, sonsuz veya 0,5 küçüktür|eroyta 24|Kurtar|  
 |İkinci bağımsız değişken düğümü-belge işlevine ayarlanan boş ve URI başvurusu görelidir.|eroyta 14|Kurtar|  

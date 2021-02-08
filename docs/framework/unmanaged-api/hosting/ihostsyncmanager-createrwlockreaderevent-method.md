@@ -1,4 +1,5 @@
 ---
+description: ': IHostSyncManager:: CreateRWLockReaderEvent yöntemi hakkında daha fazla bilgi edinin'
 title: IHostSyncManager::CreateRWLockReaderEvent Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 68c4ea19-c47c-45c6-b420-d3a2ba1c2d50
 topic_type:
 - apiref
-ms.openlocfilehash: 7c9bf2186d3dc4500694225ea4023df3609b9010
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: be20757924aa45d2a44edab9bf921026aa0247a5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95704389"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784775"
 ---
 # <a name="ihostsyncmanagercreaterwlockreaderevent-method"></a>IHostSyncManager::CreateRWLockReaderEvent Yöntemi
 
 Bir okuyucu kilidinin uygulanması için el ile sıfırlama olay nesnesi oluşturur.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 HRESULT CreateRWLockReaderEvent (  
@@ -49,7 +50,7 @@ HRESULT CreateRWLockReaderEvent (
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`CreateRWLockReaderEvent` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  

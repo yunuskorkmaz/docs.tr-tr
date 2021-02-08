@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: yeni düğümler oluştururken XML öğesi ve öznitelik adı doğrulama'
 title: Yeni Düğümler Oluştururken XML Öğesi ve Öznitelik Adı Doğrulaması
 ms.date: 03/30/2017
 ms.assetid: b489f647-a175-4659-ada4-170058bb41d0
-ms.openlocfilehash: 5bad0faf8aec2f6f1d2395477867fbdaeea4a97a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 07b878424df57c34c5dc2b614fdff9a5dcef26bf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733067"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782721"
 ---
 # <a name="xml-element-and-attribute-name-verification-when-creating-new-nodes"></a>Yeni Düğümler Oluştururken XML Öğesi ve Öznitelik Adı Doğrulaması
 

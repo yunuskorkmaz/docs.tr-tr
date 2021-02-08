@@ -1,4 +1,5 @@
 ---
+description: ': ICLRTask:: ExitTask yöntemi hakkında daha fazla bilgi edinin'
 title: ICLRTask::ExitTask Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 746c85a6-4b33-4f72-a2e9-379fdf2e96af
 topic_type:
 - apiref
-ms.openlocfilehash: bcd1cac47e4b59cc47c95145f0ccf60c92ea54fe
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 267b7f284ccac5b535a72dab425c035b6c689361
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95690847"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784972"
 ---
 # <a name="iclrtaskexittask-method"></a>ICLRTask::ExitTask Yöntemi
 
@@ -34,7 +35,7 @@ HRESULT ExitTask ();
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`ExitTask` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  

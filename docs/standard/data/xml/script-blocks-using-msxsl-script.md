@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi için bkz. msxsl: script kullanarak betik blokları'
 title: msxsl:script Kullanan Betik Blokları
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
-ms.openlocfilehash: 1a2d1f0972bc610cb4943dacc74c1bae8c54012b
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 30cfd7b2504a6f97f64bdf11393a7d84b23dd218
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96032222"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782981"
 ---
 # <a name="script-blocks-using-msxslscript"></a>msxsl:script Kullanan Betik Blokları
 
@@ -143,7 +144,7 @@ ms.locfileid: "96032222"
 
  [!code-xml[XSLT_Script#3](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Script/XML/calc.xsl#3)]  
   
-### <a name="output"></a>Çıkış  
+### <a name="output"></a>Çıktı  
   
 ```xml  
 <circles xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:user="urn:my-scripts">  
