@@ -1,4 +1,5 @@
 ---
+description: "Daha fazla bilgi: BC30933: ' <procedurename> ' öğesine erişen örnek bir arabirim türü olduğundan, geç bağlanan aşırı yükleme çözümü ' ' öğesine uygulanamaz"
 title: Erişen örnek bir arabirim türü olduğundan geç bağlanan tekrar yükleme çözümü '<procedurename>' öğesine uygulanamaz
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,30 +9,30 @@ helpviewer_keywords:
 - overload resolution [Visual Basic], with late-bound argument
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
-ms.openlocfilehash: 090ec6f3bbf56350fda2ab15c974b0bc6b15e3d3
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 3002232c953fa21a10de944bc61e2f0c448ae4fa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162524"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795917"
 ---
-# <a name="bc30933-latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a><span data-ttu-id="d4544-102">BC30933: \<procedurename> erişen örnek bir arabirim türü olduğundan, geç bağlanan aşırı yükleme çözümlemesi ' ' öğesine uygulanamaz</span><span class="sxs-lookup"><span data-stu-id="d4544-102">BC30933: Latebound overload resolution cannot be applied to '\<procedurename>' because the accessing instance is an interface type</span></span>
+# <a name="bc30933-latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a><span data-ttu-id="8481e-103">BC30933: \<procedurename> erişen örnek bir arabirim türü olduğundan, geç bağlanan aşırı yükleme çözümlemesi ' ' öğesine uygulanamaz</span><span class="sxs-lookup"><span data-stu-id="8481e-103">BC30933: Latebound overload resolution cannot be applied to '\<procedurename>' because the accessing instance is an interface type</span></span>
 
-<span data-ttu-id="d4544-103">Derleyici aşırı yüklenmiş bir özellik veya yordama yönelik bir başvuruyu çözümlemeye çalışıyor, ancak bir bağımsız değişken türünde olduğu `Object` ve başvuran nesnenin bir arabirimin veri türü olduğu için başvuru başarısız olur.</span><span class="sxs-lookup"><span data-stu-id="d4544-103">The compiler is attempting to resolve a reference to an overloaded property or procedure, but the reference fails because an argument is of type `Object` and the referring object has the data type of an interface.</span></span> <span data-ttu-id="d4544-104">`Object`Bağımsız değişkeni, derleyicinin başvuruyu geç bağlantılı olarak çözmeye zorlar.</span><span class="sxs-lookup"><span data-stu-id="d4544-104">The `Object` argument forces the compiler to resolve the reference as late-bound.</span></span>
+<span data-ttu-id="8481e-104">Derleyici aşırı yüklenmiş bir özellik veya yordama yönelik bir başvuruyu çözümlemeye çalışıyor, ancak bir bağımsız değişken türünde olduğu `Object` ve başvuran nesnenin bir arabirimin veri türü olduğu için başvuru başarısız olur.</span><span class="sxs-lookup"><span data-stu-id="8481e-104">The compiler is attempting to resolve a reference to an overloaded property or procedure, but the reference fails because an argument is of type `Object` and the referring object has the data type of an interface.</span></span> <span data-ttu-id="8481e-105">`Object`Bağımsız değişkeni, derleyicinin başvuruyu geç bağlantılı olarak çözmeye zorlar.</span><span class="sxs-lookup"><span data-stu-id="8481e-105">The `Object` argument forces the compiler to resolve the reference as late-bound.</span></span>
 
-<span data-ttu-id="d4544-105">Bu koşullarda derleyici, temel alınan arabirim yerine uygulama sınıfı aracılığıyla aşırı yüklemeyi çözer.</span><span class="sxs-lookup"><span data-stu-id="d4544-105">In these circumstances, the compiler resolves the overload through the implementing class instead of through the underlying interface.</span></span> <span data-ttu-id="d4544-106">Sınıf, aşırı yüklenmiş sürümlerden birini yeniden adlandırdığında, adı farklı olduğu için derleyici bu sürümü bir aşırı yükleme olarak kabul etmez.</span><span class="sxs-lookup"><span data-stu-id="d4544-106">If the class renames one of the overloaded versions, the compiler does not consider that version to be an overload because its name is different.</span></span> <span data-ttu-id="d4544-107">Bu işlem, derleyicinin başvuruyu çözümlemek için doğru seçim yapmış olabileceği zaman yeniden adlandırılan sürümü yoksaymasına neden olur.</span><span class="sxs-lookup"><span data-stu-id="d4544-107">This in turn causes the compiler to ignore the renamed version when it might have been the correct choice to resolve the reference.</span></span>
+<span data-ttu-id="8481e-106">Bu koşullarda derleyici, temel alınan arabirim yerine uygulama sınıfı aracılığıyla aşırı yüklemeyi çözer.</span><span class="sxs-lookup"><span data-stu-id="8481e-106">In these circumstances, the compiler resolves the overload through the implementing class instead of through the underlying interface.</span></span> <span data-ttu-id="8481e-107">Sınıf, aşırı yüklenmiş sürümlerden birini yeniden adlandırdığında, adı farklı olduğu için derleyici bu sürümü bir aşırı yükleme olarak kabul etmez.</span><span class="sxs-lookup"><span data-stu-id="8481e-107">If the class renames one of the overloaded versions, the compiler does not consider that version to be an overload because its name is different.</span></span> <span data-ttu-id="8481e-108">Bu işlem, derleyicinin başvuruyu çözümlemek için doğru seçim yapmış olabileceği zaman yeniden adlandırılan sürümü yoksaymasına neden olur.</span><span class="sxs-lookup"><span data-stu-id="8481e-108">This in turn causes the compiler to ignore the renamed version when it might have been the correct choice to resolve the reference.</span></span>
 
-<span data-ttu-id="d4544-108">**Hata kimliği:** BC30933</span><span class="sxs-lookup"><span data-stu-id="d4544-108">**Error ID:** BC30933</span></span>
+<span data-ttu-id="8481e-109">**Hata kimliği:** BC30933</span><span class="sxs-lookup"><span data-stu-id="8481e-109">**Error ID:** BC30933</span></span>
 
-## <a name="to-correct-this-error"></a><span data-ttu-id="d4544-109">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="d4544-109">To correct this error</span></span>
+## <a name="to-correct-this-error"></a><span data-ttu-id="8481e-110">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="8481e-110">To correct this error</span></span>
 
-- <span data-ttu-id="d4544-110">`CType`Bağımsız değişkenini, `Object` çağırmak istediğiniz aşırı yüklemenin imzasıyla belirtilen türe dönüştürmek için kullanın.</span><span class="sxs-lookup"><span data-stu-id="d4544-110">Use `CType` to cast the argument from `Object` to the type specified by the signature of the overload you want to call.</span></span>
+- <span data-ttu-id="8481e-111">`CType`Bağımsız değişkenini, `Object` çağırmak istediğiniz aşırı yüklemenin imzasıyla belirtilen türe dönüştürmek için kullanın.</span><span class="sxs-lookup"><span data-stu-id="8481e-111">Use `CType` to cast the argument from `Object` to the type specified by the signature of the overload you want to call.</span></span>
 
-  <span data-ttu-id="d4544-111">Başvuran nesneyi temel arabirime dönüştürmeye yardımcı olmadığına unutmayın.</span><span class="sxs-lookup"><span data-stu-id="d4544-111">Note that it does not help to cast the referring object to the underlying interface.</span></span> <span data-ttu-id="d4544-112">Bu hatadan kaçınmak için bağımsız değişkeni atamalısınız.</span><span class="sxs-lookup"><span data-stu-id="d4544-112">You must cast the argument to avoid this error.</span></span>
+  <span data-ttu-id="8481e-112">Başvuran nesneyi temel arabirime dönüştürmeye yardımcı olmadığına unutmayın.</span><span class="sxs-lookup"><span data-stu-id="8481e-112">Note that it does not help to cast the referring object to the underlying interface.</span></span> <span data-ttu-id="8481e-113">Bu hatadan kaçınmak için bağımsız değişkeni atamalısınız.</span><span class="sxs-lookup"><span data-stu-id="8481e-113">You must cast the argument to avoid this error.</span></span>
 
-## <a name="example"></a><span data-ttu-id="d4544-113">Örnek</span><span class="sxs-lookup"><span data-stu-id="d4544-113">Example</span></span>
+## <a name="example"></a><span data-ttu-id="8481e-114">Örnek</span><span class="sxs-lookup"><span data-stu-id="8481e-114">Example</span></span>
 
-<span data-ttu-id="d4544-114">Aşağıdaki örnek, `Sub` derleme zamanında bu hataya neden olan aşırı yüklenmiş bir yordamın çağrısını gösterir.</span><span class="sxs-lookup"><span data-stu-id="d4544-114">The following example shows a call to an overloaded `Sub` procedure that causes this error at compile time.</span></span>
+<span data-ttu-id="8481e-115">Aşağıdaki örnek, `Sub` derleme zamanında bu hataya neden olan aşırı yüklenmiş bir yordamın çağrısını gösterir.</span><span class="sxs-lookup"><span data-stu-id="8481e-115">The following example shows a call to an overloaded `Sub` procedure that causes this error at compile time.</span></span>
 
 ```vb
 Module m1
@@ -55,19 +56,19 @@ Module m1
 End Module
 ```
 
-<span data-ttu-id="d4544-115">Önceki örnekte, derleyici çağrıyı `s1` yazıldığı gibi olarak izin verirdi, çözümleme arabirimi yerine sınıfı aracılığıyla gerçekleşir `c1` `i1` .</span><span class="sxs-lookup"><span data-stu-id="d4544-115">In the preceding example, if the compiler allowed the call to `s1` as written, the resolution would take place through the class `c1` instead of the interface `i1`.</span></span> <span data-ttu-id="d4544-116">Bu, `s2` `c1` tarafından tanımlandığı gibi doğru seçim olsa da, derleyicinin adı farklı olduğu için göz önünde bulundurmadığı anlamına gelir `i1` .</span><span class="sxs-lookup"><span data-stu-id="d4544-116">This would mean that the compiler would not consider `s2` because its name is different in `c1`, even though it is the correct choice as defined by `i1`.</span></span>
+<span data-ttu-id="8481e-116">Önceki örnekte, derleyici çağrıyı `s1` yazıldığı gibi olarak izin verirdi, çözümleme arabirimi yerine sınıfı aracılığıyla gerçekleşir `c1` `i1` .</span><span class="sxs-lookup"><span data-stu-id="8481e-116">In the preceding example, if the compiler allowed the call to `s1` as written, the resolution would take place through the class `c1` instead of the interface `i1`.</span></span> <span data-ttu-id="8481e-117">Bu, `s2` `c1` tarafından tanımlandığı gibi doğru seçim olsa da, derleyicinin adı farklı olduğu için göz önünde bulundurmadığı anlamına gelir `i1` .</span><span class="sxs-lookup"><span data-stu-id="8481e-117">This would mean that the compiler would not consider `s2` because its name is different in `c1`, even though it is the correct choice as defined by `i1`.</span></span>
 
-<span data-ttu-id="d4544-117">Çağrıyı aşağıdaki kod satırlarından birine değiştirerek hatayı düzeltebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="d4544-117">You can correct the error by changing the call to either of the following lines of code:</span></span>
+<span data-ttu-id="8481e-118">Çağrıyı aşağıdaki kod satırlarından birine değiştirerek hatayı düzeltebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="8481e-118">You can correct the error by changing the call to either of the following lines of code:</span></span>
 
 ```vb
 refer.s1(CType(o1, Integer))
 refer.s1(CType(o1, Double))
 ```
 
-<span data-ttu-id="d4544-118">Önceki kod satırlarının her biri `Object` değişkeni açıkça `o1` aşırı yüklemeler için tanımlanan parametre türlerinden birine açıkça yayınlar.</span><span class="sxs-lookup"><span data-stu-id="d4544-118">Each of the preceding lines of code explicitly casts the `Object` variable `o1` to one of the parameter types defined for the overloads.</span></span>
+<span data-ttu-id="8481e-119">Önceki kod satırlarının her biri `Object` değişkeni açıkça `o1` aşırı yüklemeler için tanımlanan parametre türlerinden birine açıkça yayınlar.</span><span class="sxs-lookup"><span data-stu-id="8481e-119">Each of the preceding lines of code explicitly casts the `Object` variable `o1` to one of the parameter types defined for the overloads.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="d4544-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d4544-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8481e-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8481e-120">See also</span></span>
 
-- [<span data-ttu-id="d4544-120">Yordam Aşırı Yüklemesi</span><span class="sxs-lookup"><span data-stu-id="d4544-120">Procedure Overloading</span></span>](../../programming-guide/language-features/procedures/procedure-overloading.md)
-- [<span data-ttu-id="d4544-121">Aşırı yükleme çözümlemesi</span><span class="sxs-lookup"><span data-stu-id="d4544-121">Overload Resolution</span></span>](../../programming-guide/language-features/procedures/overload-resolution.md)
-- [<span data-ttu-id="d4544-122">CType İşlevi</span><span class="sxs-lookup"><span data-stu-id="d4544-122">CType Function</span></span>](../functions/ctype-function.md)
+- [<span data-ttu-id="8481e-121">Yordam Aşırı Yüklemesi</span><span class="sxs-lookup"><span data-stu-id="8481e-121">Procedure Overloading</span></span>](../../programming-guide/language-features/procedures/procedure-overloading.md)
+- [<span data-ttu-id="8481e-122">Aşırı yükleme çözümlemesi</span><span class="sxs-lookup"><span data-stu-id="8481e-122">Overload Resolution</span></span>](../../programming-guide/language-features/procedures/overload-resolution.md)
+- [<span data-ttu-id="8481e-123">CType İşlevi</span><span class="sxs-lookup"><span data-stu-id="8481e-123">CType Function</span></span>](../functions/ctype-function.md)
