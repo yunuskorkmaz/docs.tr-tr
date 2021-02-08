@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: COR_GC_THREAD_STATS_TYPES numaralandırması'
 title: COR_GC_THREAD_STATS_TYPES Numaralandırması
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: aa227704-0ab1-4b08-aee2-1f439762162e
 topic_type:
 - apiref
-ms.openlocfilehash: 122536877b2fd5f0e5c64118bd978b54c4a8b3df
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 04bc4e11c527b83cf5f1384b1092cc0d084008a3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95696823"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799778"
 ---
-# <a name="cor_gc_thread_stats_types-enumeration"></a><span data-ttu-id="4de45-102">COR_GC_THREAD_STATS_TYPES Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="4de45-102">COR_GC_THREAD_STATS_TYPES Enumeration</span></span>
+# <a name="cor_gc_thread_stats_types-enumeration"></a><span data-ttu-id="27571-103">COR_GC_THREAD_STATS_TYPES Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="27571-103">COR_GC_THREAD_STATS_TYPES Enumeration</span></span>
 
-<span data-ttu-id="4de45-103">Bir iş parçacığının çöp toplama istatistiklerini gösterir.</span><span class="sxs-lookup"><span data-stu-id="4de45-103">Indicates the garbage collection statistics for a thread.</span></span>  
+<span data-ttu-id="27571-104">Bir iş parçacığının çöp toplama istatistiklerini gösterir.</span><span class="sxs-lookup"><span data-stu-id="27571-104">Indicates the garbage collection statistics for a thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4de45-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="4de45-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="27571-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="27571-105">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -33,20 +34,20 @@ typedef enum {
 } COR_GC_THREAD_STATS_TYPES;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="4de45-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="4de45-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="27571-106">Üyeler</span><span class="sxs-lookup"><span data-stu-id="27571-106">Members</span></span>  
   
-|<span data-ttu-id="4de45-106">Üye</span><span class="sxs-lookup"><span data-stu-id="4de45-106">Member</span></span>|<span data-ttu-id="4de45-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="4de45-107">Description</span></span>|  
+|<span data-ttu-id="27571-107">Üye</span><span class="sxs-lookup"><span data-stu-id="27571-107">Member</span></span>|<span data-ttu-id="27571-108">Description</span><span class="sxs-lookup"><span data-stu-id="27571-108">Description</span></span>|  
 |------------|-----------------|  
-|`COR_GC_THREAD_HAS_PROMOTED_BYTES`|<span data-ttu-id="4de45-108">İş parçacığında en son çöp toplamada yükseltilen baytlar vardır.</span><span class="sxs-lookup"><span data-stu-id="4de45-108">The thread has bytes that were promoted in the most recent garbage collection.</span></span>|  
+|`COR_GC_THREAD_HAS_PROMOTED_BYTES`|<span data-ttu-id="27571-109">İş parçacığında en son çöp toplamada yükseltilen baytlar vardır.</span><span class="sxs-lookup"><span data-stu-id="27571-109">The thread has bytes that were promoted in the most recent garbage collection.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="4de45-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="4de45-109">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="27571-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="27571-110">Requirements</span></span>  
 
- <span data-ttu-id="4de45-110">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4de45-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="27571-111">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="27571-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4de45-111">**Üst bilgi:** GCHost. IDL, GCHost. h</span><span class="sxs-lookup"><span data-stu-id="4de45-111">**Header:** GCHost.idl, GCHost.h</span></span>  
+ <span data-ttu-id="27571-112">**Üst bilgi:** GCHost. IDL, GCHost. h</span><span class="sxs-lookup"><span data-stu-id="27571-112">**Header:** GCHost.idl, GCHost.h</span></span>  
   
- <span data-ttu-id="4de45-112">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4de45-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="27571-113">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="27571-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4de45-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4de45-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="27571-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="27571-114">See also</span></span>
 
-- [<span data-ttu-id="4de45-114">Barındırma Numaralandırmaları</span><span class="sxs-lookup"><span data-stu-id="4de45-114">Hosting Enumerations</span></span>](hosting-enumerations.md)
+- [<span data-ttu-id="27571-115">Barındırma Numaralandırmaları</span><span class="sxs-lookup"><span data-stu-id="27571-115">Hosting Enumerations</span></span>](hosting-enumerations.md)

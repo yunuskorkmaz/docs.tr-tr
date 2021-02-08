@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: ICorProfilerCallback2:: ThreadNameChanged yöntemi'
 title: ICorProfilerCallback2::ThreadNameChanged Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c8bbd76d-a9ff-44f2-87a6-be052819da36
 topic_type:
 - apiref
-ms.openlocfilehash: 8398febd17c7e77f2ad281ebeafc138fca4a47d5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 161247f9692d1307d063e244b200eb0d8f739e9a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95718039"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799050"
 ---
-# <a name="icorprofilercallback2threadnamechanged-method"></a><span data-ttu-id="a3900-102">ICorProfilerCallback2::ThreadNameChanged Yöntemi</span><span class="sxs-lookup"><span data-stu-id="a3900-102">ICorProfilerCallback2::ThreadNameChanged Method</span></span>
+# <a name="icorprofilercallback2threadnamechanged-method"></a><span data-ttu-id="46454-103">ICorProfilerCallback2::ThreadNameChanged Yöntemi</span><span class="sxs-lookup"><span data-stu-id="46454-103">ICorProfilerCallback2::ThreadNameChanged Method</span></span>
 
-<span data-ttu-id="a3900-103">Kod Profilcisi bir iş parçacığı adının değiştiğini bildirir.</span><span class="sxs-lookup"><span data-stu-id="a3900-103">Notifies the code profiler that the name of a thread has changed.</span></span>  
+<span data-ttu-id="46454-104">Kod Profilcisi bir iş parçacığı adının değiştiğini bildirir.</span><span class="sxs-lookup"><span data-stu-id="46454-104">Notifies the code profiler that the name of a thread has changed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a3900-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="a3900-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="46454-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="46454-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT ThreadNameChanged(  
@@ -35,28 +36,28 @@ HRESULT ThreadNameChanged(
     [in] WCHAR name[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a3900-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="a3900-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="46454-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="46454-106">Parameters</span></span>  
 
  `threadId`  
- <span data-ttu-id="a3900-106">'ndaki İş parçacığının KIMLIĞI.</span><span class="sxs-lookup"><span data-stu-id="a3900-106">[in] The ID of the thread.</span></span>  
+ <span data-ttu-id="46454-107">'ndaki İş parçacığının KIMLIĞI.</span><span class="sxs-lookup"><span data-stu-id="46454-107">[in] The ID of the thread.</span></span>  
   
  `cchName`  
- <span data-ttu-id="a3900-107">'ndaki İş parçacığının yeni adının uzunluğu.</span><span class="sxs-lookup"><span data-stu-id="a3900-107">[in] The length of the new name of the thread.</span></span>  
+ <span data-ttu-id="46454-108">'ndaki İş parçacığının yeni adının uzunluğu.</span><span class="sxs-lookup"><span data-stu-id="46454-108">[in] The length of the new name of the thread.</span></span>  
   
  `name`  
- <span data-ttu-id="a3900-108">'ndaki İş parçacığının yeni adı.</span><span class="sxs-lookup"><span data-stu-id="a3900-108">[in] The new name of the thread.</span></span> <span data-ttu-id="a3900-109">Ad, null ile Sonlandırılmamış.</span><span class="sxs-lookup"><span data-stu-id="a3900-109">The name is not null-terminated.</span></span>  
+ <span data-ttu-id="46454-109">'ndaki İş parçacığının yeni adı.</span><span class="sxs-lookup"><span data-stu-id="46454-109">[in] The new name of the thread.</span></span> <span data-ttu-id="46454-110">Ad, null ile Sonlandırılmamış.</span><span class="sxs-lookup"><span data-stu-id="46454-110">The name is not null-terminated.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a3900-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a3900-110">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="46454-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="46454-111">Requirements</span></span>  
 
- <span data-ttu-id="a3900-111">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a3900-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="46454-112">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="46454-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a3900-112">**Üst bilgi:** CorProf. IDL, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="a3900-112">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="46454-113">**Üst bilgi:** CorProf. IDL, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="46454-113">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="a3900-113">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="a3900-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="46454-114">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="46454-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a3900-114">**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a3900-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="46454-115">**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="46454-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a3900-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a3900-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="46454-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="46454-116">See also</span></span>
 
-- [<span data-ttu-id="a3900-116">ICorProfilerCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a3900-116">ICorProfilerCallback Interface</span></span>](icorprofilercallback-interface.md)
-- [<span data-ttu-id="a3900-117">ICorProfilerCallback2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a3900-117">ICorProfilerCallback2 Interface</span></span>](icorprofilercallback2-interface.md)
+- [<span data-ttu-id="46454-117">ICorProfilerCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="46454-117">ICorProfilerCallback Interface</span></span>](icorprofilercallback-interface.md)
+- [<span data-ttu-id="46454-118">ICorProfilerCallback2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="46454-118">ICorProfilerCallback2 Interface</span></span>](icorprofilercallback2-interface.md)

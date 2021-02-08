@@ -1,4 +1,5 @@
 ---
+description: ': IXCLRDataMethodInstance:: Getıladdressmap yöntemi hakkında daha fazla bilgi edinin'
 title: 'IXCLRDataMethodInstance:: Getıladdressmap yöntemi'
 ms.date: 01/16/2019
 api.name:
@@ -15,20 +16,20 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 0acfa9ffd6f4bc3be567855008dccd08c9c74153
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: ddddf593c3c18f2b4cd1682b5d6f7c8ff1985ac6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420922"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800818"
 ---
-# <a name="ixclrdatamethodinstancegetiladdressmap-method"></a><span data-ttu-id="34f6b-102">IXCLRDataMethodInstance:: Getıladdressmap yöntemi</span><span class="sxs-lookup"><span data-stu-id="34f6b-102">IXCLRDataMethodInstance::GetILAddressMap Method</span></span>
+# <a name="ixclrdatamethodinstancegetiladdressmap-method"></a><span data-ttu-id="ee2ba-103">IXCLRDataMethodInstance:: Getıladdressmap yöntemi</span><span class="sxs-lookup"><span data-stu-id="ee2ba-103">IXCLRDataMethodInstance::GetILAddressMap Method</span></span>
 
-<span data-ttu-id="34f6b-103">Eşleme bilgilerini ele almak için Il 'yi alır.</span><span class="sxs-lookup"><span data-stu-id="34f6b-103">Gets the IL to address mapping information.</span></span>
+<span data-ttu-id="ee2ba-104">Eşleme bilgilerini ele almak için Il 'yi alır.</span><span class="sxs-lookup"><span data-stu-id="ee2ba-104">Gets the IL to address mapping information.</span></span>
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a><span data-ttu-id="34f6b-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="34f6b-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="ee2ba-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ee2ba-105">Syntax</span></span>
 
 ```cpp
 HRESULT GetILAddressMap(
@@ -38,29 +39,29 @@ HRESULT GetILAddressMap(
 );
 ```
 
-## <a name="parameters"></a><span data-ttu-id="34f6b-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="34f6b-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="ee2ba-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="ee2ba-106">Parameters</span></span>
 
 `mapLen`\
-<span data-ttu-id="34f6b-106">'ndaki Belirtilen haritalar dizisinin uzunluğu.</span><span class="sxs-lookup"><span data-stu-id="34f6b-106">[in] The length of the provided maps array.</span></span>
+<span data-ttu-id="ee2ba-107">'ndaki Belirtilen haritalar dizisinin uzunluğu.</span><span class="sxs-lookup"><span data-stu-id="ee2ba-107">[in] The length of the provided maps array.</span></span>
 
 `mapNeeded`\
-<span data-ttu-id="34f6b-107">dışı Metodun ihtiyacı olan eşleme girdilerinin sayısı.</span><span class="sxs-lookup"><span data-stu-id="34f6b-107">[out] The number of map entries that the method needs.</span></span>
+<span data-ttu-id="ee2ba-108">dışı Metodun ihtiyacı olan eşleme girdilerinin sayısı.</span><span class="sxs-lookup"><span data-stu-id="ee2ba-108">[out] The number of map entries that the method needs.</span></span>
 
 `maps`\
-<span data-ttu-id="34f6b-108">[Out, size_is (mapLen)] Harita girdilerini depolamak için dizi.</span><span class="sxs-lookup"><span data-stu-id="34f6b-108">[out, size_is(mapLen)] The array for storing the map entries.</span></span>
+<span data-ttu-id="ee2ba-109">[Out, size_is (mapLen)] Harita girdilerini depolamak için dizi.</span><span class="sxs-lookup"><span data-stu-id="ee2ba-109">[out, size_is(mapLen)] The array for storing the map entries.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="34f6b-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="34f6b-109">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="ee2ba-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="ee2ba-110">Remarks</span></span>
 
-<span data-ttu-id="34f6b-110">Belirtilen yöntem arabirimin bir parçasıdır `IXCLRDataMethodInstance` ve sanal yöntem tablosunun 15. yuvasına karşılık gelir.</span><span class="sxs-lookup"><span data-stu-id="34f6b-110">The provided method is part of the `IXCLRDataMethodInstance` interface and corresponds to the 15th slot of the virtual method table.</span></span>
+<span data-ttu-id="ee2ba-111">Belirtilen yöntem arabirimin bir parçasıdır `IXCLRDataMethodInstance` ve sanal yöntem tablosunun 15. yuvasına karşılık gelir.</span><span class="sxs-lookup"><span data-stu-id="ee2ba-111">The provided method is part of the `IXCLRDataMethodInstance` interface and corresponds to the 15th slot of the virtual method table.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="34f6b-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="34f6b-111">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="ee2ba-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ee2ba-112">Requirements</span></span>
 
-<span data-ttu-id="34f6b-112">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="34f6b-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-<span data-ttu-id="34f6b-113">**Üst bilgi:** Seçim</span><span class="sxs-lookup"><span data-stu-id="34f6b-113">**Header:** None</span></span>  
-<span data-ttu-id="34f6b-114">**Kitaplık:** Seçim</span><span class="sxs-lookup"><span data-stu-id="34f6b-114">**Library:** None</span></span>  
-<span data-ttu-id="34f6b-115">**.NET Framework sürümleri:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="34f6b-115">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
+<span data-ttu-id="ee2ba-113">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ee2ba-113">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+<span data-ttu-id="ee2ba-114">**Üst bilgi:** Seçim</span><span class="sxs-lookup"><span data-stu-id="ee2ba-114">**Header:** None</span></span>  
+<span data-ttu-id="ee2ba-115">**Kitaplık:** Seçim</span><span class="sxs-lookup"><span data-stu-id="ee2ba-115">**Library:** None</span></span>  
+<span data-ttu-id="ee2ba-116">**.NET Framework sürümleri:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="ee2ba-116">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
 
-## <a name="see-also"></a><span data-ttu-id="34f6b-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="34f6b-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ee2ba-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ee2ba-117">See also</span></span>
 
-- [<span data-ttu-id="34f6b-117">Hata Ayıklama</span><span class="sxs-lookup"><span data-stu-id="34f6b-117">Debugging</span></span>](index.md)
-- [<span data-ttu-id="34f6b-118">IXCLRDataMethodInstance Arabirimi</span><span class="sxs-lookup"><span data-stu-id="34f6b-118">IXCLRDataMethodInstance Interface</span></span>](ixclrdatamethodinstance-interface.md)
+- [<span data-ttu-id="ee2ba-118">Hata Ayıklama</span><span class="sxs-lookup"><span data-stu-id="ee2ba-118">Debugging</span></span>](index.md)
+- [<span data-ttu-id="ee2ba-119">IXCLRDataMethodInstance Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ee2ba-119">IXCLRDataMethodInstance Interface</span></span>](ixclrdatamethodinstance-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: PLıNQ veri örneği'
 title: PLINQ Veri Örneği
 ms.date: 03/30/2017
 dev_langs:
@@ -7,31 +8,31 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
-ms.openlocfilehash: cdbecc0c7483ec189c7c19f19d75ababeb20989f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2461878367c81f684776f6b8ffb3a1b72c3e4256
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730558"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99798010"
 ---
-# <a name="plinq-data-sample"></a><span data-ttu-id="e7339-102">PLINQ Veri Örneği</span><span class="sxs-lookup"><span data-stu-id="e7339-102">PLINQ Data Sample</span></span>
+# <a name="plinq-data-sample"></a><span data-ttu-id="1e105-103">PLINQ Veri Örneği</span><span class="sxs-lookup"><span data-stu-id="1e105-103">PLINQ Data Sample</span></span>
 
-<span data-ttu-id="e7339-103">Bu örnek,. csv biçimindeki örnek verileri, bu dosyayı bellek içi müşteriler, ürünler, siparişler ve sipariş ayrıntılarına dönüştüren yöntemlerle birlikte içerir.</span><span class="sxs-lookup"><span data-stu-id="e7339-103">This sample contains example data in .csv format, together with methods that transform it into in-memory collections of Customers, Products, Orders, and Order Details.</span></span> <span data-ttu-id="e7339-104">PLıNQ ile daha fazla denemek için, belirli diğer konulardan kod örneklerini bu konudaki koda yapıştırabilir ve `Main` yönteminden çağırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="e7339-104">To further experiment with PLINQ, you can paste code examples from certain other topics into the code in this topic and invoke it from the `Main` method.</span></span> <span data-ttu-id="e7339-105">Bu verileri kendi PLıNQ sorgularınız ile de kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="e7339-105">You can also use this data with your own PLINQ queries.</span></span>  
+<span data-ttu-id="1e105-104">Bu örnek,. csv biçimindeki örnek verileri, bu dosyayı bellek içi müşteriler, ürünler, siparişler ve sipariş ayrıntılarına dönüştüren yöntemlerle birlikte içerir.</span><span class="sxs-lookup"><span data-stu-id="1e105-104">This sample contains example data in .csv format, together with methods that transform it into in-memory collections of Customers, Products, Orders, and Order Details.</span></span> <span data-ttu-id="1e105-105">PLıNQ ile daha fazla denemek için, belirli diğer konulardan kod örneklerini bu konudaki koda yapıştırabilir ve `Main` yönteminden çağırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="1e105-105">To further experiment with PLINQ, you can paste code examples from certain other topics into the code in this topic and invoke it from the `Main` method.</span></span> <span data-ttu-id="1e105-106">Bu verileri kendi PLıNQ sorgularınız ile de kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="1e105-106">You can also use this data with your own PLINQ queries.</span></span>  
   
- <span data-ttu-id="e7339-106">Veriler, Northwind veritabanının bir alt kümesini temsil eder.</span><span class="sxs-lookup"><span data-stu-id="e7339-106">The data represents a subset of the Northwind database.</span></span> <span data-ttu-id="e7339-107">50 (50) müşteri kayıtları dahildir, ancak tüm alanları içermez.</span><span class="sxs-lookup"><span data-stu-id="e7339-107">Fifty (50) customer records are included, but not all fields.</span></span> <span data-ttu-id="e7339-108">Siparişlerdeki satırların bir alt kümesi ve her müşteri için karşılık gelen Order_Detail verileri dahildir.</span><span class="sxs-lookup"><span data-stu-id="e7339-108">A subset of the rows from the Orders and corresponding Order_Detail data for every Customer is included.</span></span> <span data-ttu-id="e7339-109">Tüm ürünler dahil edilmiştir.</span><span class="sxs-lookup"><span data-stu-id="e7339-109">All Products are included.</span></span>  
+ <span data-ttu-id="1e105-107">Veriler, Northwind veritabanının bir alt kümesini temsil eder.</span><span class="sxs-lookup"><span data-stu-id="1e105-107">The data represents a subset of the Northwind database.</span></span> <span data-ttu-id="1e105-108">50 (50) müşteri kayıtları dahildir, ancak tüm alanları içermez.</span><span class="sxs-lookup"><span data-stu-id="1e105-108">Fifty (50) customer records are included, but not all fields.</span></span> <span data-ttu-id="1e105-109">Siparişlerdeki satırların bir alt kümesi ve her müşteri için karşılık gelen Order_Detail verileri dahildir.</span><span class="sxs-lookup"><span data-stu-id="1e105-109">A subset of the rows from the Orders and corresponding Order_Detail data for every Customer is included.</span></span> <span data-ttu-id="1e105-110">Tüm ürünler dahil edilmiştir.</span><span class="sxs-lookup"><span data-stu-id="1e105-110">All Products are included.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="e7339-110">Veri kümesi, PLıNQ 'in yalnızca temel `where` ve yan tümceleri içeren sorgular için LINQ to Objects daha hızlı olduğunu göstermek için yeterince büyük değil `select` .</span><span class="sxs-lookup"><span data-stu-id="e7339-110">The data set is not large enough to demonstrate that PLINQ is faster than LINQ to Objects for queries that contain just basic `where` and `select` clauses.</span></span> <span data-ttu-id="e7339-111">Bu gibi küçük veri kümeleri için hız artışı gözlemlemek için, veri kümesindeki her öğe üzerinde hesaplama maliyetli işlemler içeren sorguları kullanın.</span><span class="sxs-lookup"><span data-stu-id="e7339-111">To observe speed increases for small data sets such as this, use queries that contain computationally expensive operations on every element in the data set.</span></span>  
+> <span data-ttu-id="1e105-111">Veri kümesi, PLıNQ 'in yalnızca temel `where` ve yan tümceleri içeren sorgular için LINQ to Objects daha hızlı olduğunu göstermek için yeterince büyük değil `select` .</span><span class="sxs-lookup"><span data-stu-id="1e105-111">The data set is not large enough to demonstrate that PLINQ is faster than LINQ to Objects for queries that contain just basic `where` and `select` clauses.</span></span> <span data-ttu-id="1e105-112">Bu gibi küçük veri kümeleri için hız artışı gözlemlemek için, veri kümesindeki her öğe üzerinde hesaplama maliyetli işlemler içeren sorguları kullanın.</span><span class="sxs-lookup"><span data-stu-id="1e105-112">To observe speed increases for small data sets such as this, use queries that contain computationally expensive operations on every element in the data set.</span></span>  
   
-### <a name="to-set-up-this-sample"></a><span data-ttu-id="e7339-112">Bu örneği ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="e7339-112">To set up this sample</span></span>  
+### <a name="to-set-up-this-sample"></a><span data-ttu-id="1e105-113">Bu örneği ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="1e105-113">To set up this sample</span></span>  
   
-1. <span data-ttu-id="e7339-113">Visual Basic veya Visual C# konsol uygulaması projesi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="e7339-113">Create a Visual Basic or Visual C# console application project.</span></span>  
+1. <span data-ttu-id="1e105-114">Visual Basic veya Visual C# konsol uygulaması projesi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="1e105-114">Create a Visual Basic or Visual C# console application project.</span></span>  
   
-2. <span data-ttu-id="e7339-114">Bu adımları takip eden kodu kullanarak Module1. vb veya Program.cs içeriğini değiştirin.</span><span class="sxs-lookup"><span data-stu-id="e7339-114">Replace the contents of Module1.vb or Program.cs by using the code that follows these steps.</span></span>  
+2. <span data-ttu-id="1e105-115">Bu adımları takip eden kodu kullanarak Module1. vb veya Program.cs içeriğini değiştirin.</span><span class="sxs-lookup"><span data-stu-id="1e105-115">Replace the contents of Module1.vb or Program.cs by using the code that follows these steps.</span></span>  
   
-3. <span data-ttu-id="e7339-115">**Proje** menüsünde **Yeni öğe Ekle**' ye tıklayın.</span><span class="sxs-lookup"><span data-stu-id="e7339-115">On the **Project** menu, click **Add New Item**.</span></span> <span data-ttu-id="e7339-116">**Metin dosyası** ' nı seçin ve ardından **Tamam**' a tıklayın.</span><span class="sxs-lookup"><span data-stu-id="e7339-116">Select **Text File** and then click **OK**.</span></span> <span data-ttu-id="e7339-117">Bu konudaki verileri kopyalayın ve ardından yeni metin dosyasına yapıştırın.</span><span class="sxs-lookup"><span data-stu-id="e7339-117">Copy the data in this topic and then paste it in the new text file.</span></span> <span data-ttu-id="e7339-118">**Dosya** menüsünde, **Kaydet**' e tıklayın, dosyayı Plinqdata.csv olarak adlandırın ve ardından kaynak kodu dosyalarınızı içeren klasöre kaydedin.</span><span class="sxs-lookup"><span data-stu-id="e7339-118">On the **File** menu, click **Save**, name the file Plinqdata.csv, and then save it in the folder that contains your source code files.</span></span>  
+3. <span data-ttu-id="1e105-116">**Proje** menüsünde **Yeni öğe Ekle**' ye tıklayın.</span><span class="sxs-lookup"><span data-stu-id="1e105-116">On the **Project** menu, click **Add New Item**.</span></span> <span data-ttu-id="1e105-117">**Metin dosyası** ' nı seçin ve ardından **Tamam**' a tıklayın.</span><span class="sxs-lookup"><span data-stu-id="1e105-117">Select **Text File** and then click **OK**.</span></span> <span data-ttu-id="1e105-118">Bu konudaki verileri kopyalayın ve ardından yeni metin dosyasına yapıştırın.</span><span class="sxs-lookup"><span data-stu-id="1e105-118">Copy the data in this topic and then paste it in the new text file.</span></span> <span data-ttu-id="1e105-119">**Dosya** menüsünde, **Kaydet**' e tıklayın, dosyayı Plinqdata.csv olarak adlandırın ve ardından kaynak kodu dosyalarınızı içeren klasöre kaydedin.</span><span class="sxs-lookup"><span data-stu-id="1e105-119">On the **File** menu, click **Save**, name the file Plinqdata.csv, and then save it in the folder that contains your source code files.</span></span>  
   
-4. <span data-ttu-id="e7339-119">Projenin doğru bir şekilde oluşturulup çalıştığını doğrulamak için F5 tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="e7339-119">Press F5 to verify that the project builds and runs correctly.</span></span> <span data-ttu-id="e7339-120">Aşağıdaki çıkışın konsol penceresinde gösterilmesi gerekir.</span><span class="sxs-lookup"><span data-stu-id="e7339-120">The following output should be displayed in the console window.</span></span>  
+4. <span data-ttu-id="1e105-120">Projenin doğru bir şekilde oluşturulup çalıştığını doğrulamak için F5 tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="1e105-120">Press F5 to verify that the project builds and runs correctly.</span></span> <span data-ttu-id="1e105-121">Aşağıdaki çıkışın konsol penceresinde gösterilmesi gerekir.</span><span class="sxs-lookup"><span data-stu-id="1e105-121">The following output should be displayed in the console window.</span></span>  
   
     ```console  
     Customer count: 50  
@@ -44,7 +45,7 @@ ms.locfileid: "95730558"
  [!code-csharp[PLINQ#50](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#50)]
  [!code-vb[PLINQ#50](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#50)]  
   
-## <a name="data"></a><span data-ttu-id="e7339-121">Veriler</span><span class="sxs-lookup"><span data-stu-id="e7339-121">Data</span></span>  
+## <a name="data"></a><span data-ttu-id="1e105-122">Veriler</span><span class="sxs-lookup"><span data-stu-id="1e105-122">Data</span></span>  
   
 ```console  
 CUSTOMERS  
@@ -860,6 +861,6 @@ PRODUCTS
 END PRODUCTS  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e7339-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e7339-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1e105-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1e105-123">See also</span></span>
 
-- [<span data-ttu-id="e7339-123">Paralel LINQ (PLINQ)</span><span class="sxs-lookup"><span data-stu-id="e7339-123">Parallel LINQ (PLINQ)</span></span>](introduction-to-plinq.md)
+- [<span data-ttu-id="1e105-124">Paralel LINQ (PLINQ)</span><span class="sxs-lookup"><span data-stu-id="1e105-124">Parallel LINQ (PLINQ)</span></span>](introduction-to-plinq.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: INotifySink2:: OnSyncCallEnter yöntemi'
 title: INotifySink2::OnSyncCallEnter Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: e33265be-c25d-4145-ad02-c3e89d6f26c1
 topic_type:
 - apiref
-ms.openlocfilehash: 57d12a463bc0904e1a5c873d24f843e004b95101
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e7537b16ec8ea8d92ad92498c1bfdac5a9de6475
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720015"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800285"
 ---
-# <a name="inotifysink2onsynccallenter-method"></a><span data-ttu-id="73cd7-102">INotifySink2::OnSyncCallEnter Yöntemi</span><span class="sxs-lookup"><span data-stu-id="73cd7-102">INotifySink2::OnSyncCallEnter Method</span></span>
+# <a name="inotifysink2onsynccallenter-method"></a><span data-ttu-id="ebdc0-103">INotifySink2::OnSyncCallEnter Yöntemi</span><span class="sxs-lookup"><span data-stu-id="ebdc0-103">INotifySink2::OnSyncCallEnter Method</span></span>
 
-<span data-ttu-id="73cd7-103">Bir çağrı girilirken çağrılır.</span><span class="sxs-lookup"><span data-stu-id="73cd7-103">Gets invoked when entering a call.</span></span>  
+<span data-ttu-id="ebdc0-104">Bir çağrı girilirken çağrılır.</span><span class="sxs-lookup"><span data-stu-id="ebdc0-104">Gets invoked when entering a call.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="73cd7-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="73cd7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ebdc0-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ebdc0-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT OnSyncCallEnter  
@@ -37,27 +38,27 @@ HRESULT OnSyncCallEnter
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="73cd7-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="73cd7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ebdc0-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="ebdc0-106">Parameters</span></span>  
 
  `in_CallID`  
- <span data-ttu-id="73cd7-106">'ndaki Girilen çağrının KIMLIĞI.</span><span class="sxs-lookup"><span data-stu-id="73cd7-106">[in] ID of the call being entered.</span></span> <span data-ttu-id="73cd7-107">Bkz. [CALL_ID yapısı](call-id-structure.md).</span><span class="sxs-lookup"><span data-stu-id="73cd7-107">See [CALL_ID Structure](call-id-structure.md).</span></span>  
+ <span data-ttu-id="ebdc0-107">'ndaki Girilen çağrının KIMLIĞI.</span><span class="sxs-lookup"><span data-stu-id="ebdc0-107">[in] ID of the call being entered.</span></span> <span data-ttu-id="ebdc0-108">Bkz. [CALL_ID yapısı](call-id-structure.md).</span><span class="sxs-lookup"><span data-stu-id="ebdc0-108">See [CALL_ID Structure](call-id-structure.md).</span></span>  
   
  `in_pBuffer`  
- <span data-ttu-id="73cd7-108">'ndaki Çağrı arabelleği.</span><span class="sxs-lookup"><span data-stu-id="73cd7-108">[in] Call buffer.</span></span>  
+ <span data-ttu-id="ebdc0-109">'ndaki Çağrı arabelleği.</span><span class="sxs-lookup"><span data-stu-id="ebdc0-109">[in] Call buffer.</span></span>  
   
  `in_BufferSize`  
- <span data-ttu-id="73cd7-109">'ndaki Çağrı arabelleğinin bayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="73cd7-109">[in] Size of the call buffer, in bytes.</span></span>  
+ <span data-ttu-id="ebdc0-110">'ndaki Çağrı arabelleğinin bayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="ebdc0-110">[in] Size of the call buffer, in bytes.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="73cd7-110">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="73cd7-110">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ebdc0-111">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="ebdc0-111">Return Value</span></span>  
 
- <span data-ttu-id="73cd7-111">Yöntem başarılı olursa S_OK.</span><span class="sxs-lookup"><span data-stu-id="73cd7-111">S_OK if the method succeeds.</span></span>  
+ <span data-ttu-id="ebdc0-112">Yöntem başarılı olursa S_OK.</span><span class="sxs-lookup"><span data-stu-id="ebdc0-112">S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="73cd7-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="73cd7-112">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ebdc0-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ebdc0-113">Requirements</span></span>  
 
- <span data-ttu-id="73cd7-113">**Üst bilgi:** ProtocolNotify2. IDL</span><span class="sxs-lookup"><span data-stu-id="73cd7-113">**Header:** ProtocolNotify2.idl</span></span>  
+ <span data-ttu-id="ebdc0-114">**Üst bilgi:** ProtocolNotify2. IDL</span><span class="sxs-lookup"><span data-stu-id="ebdc0-114">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="73cd7-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="73cd7-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ebdc0-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ebdc0-115">See also</span></span>
 
-- [<span data-ttu-id="73cd7-115">INotifySink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="73cd7-115">INotifySink2 Interface</span></span>](inotifysink2-interface.md)
-- [<span data-ttu-id="73cd7-116">INotifySource2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="73cd7-116">INotifySource2 Interface</span></span>](inotifysource2-interface.md)
-- [<span data-ttu-id="73cd7-117">INotifyConnection2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="73cd7-117">INotifyConnection2 Interface</span></span>](inotifyconnection2-interface.md)
+- [<span data-ttu-id="ebdc0-116">INotifySink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ebdc0-116">INotifySink2 Interface</span></span>](inotifysink2-interface.md)
+- [<span data-ttu-id="ebdc0-117">INotifySource2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ebdc0-117">INotifySource2 Interface</span></span>](inotifysource2-interface.md)
+- [<span data-ttu-id="ebdc0-118">INotifyConnection2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ebdc0-118">INotifyConnection2 Interface</span></span>](inotifyconnection2-interface.md)
