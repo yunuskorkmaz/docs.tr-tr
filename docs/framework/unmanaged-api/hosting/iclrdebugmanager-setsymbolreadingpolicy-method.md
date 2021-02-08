@@ -1,4 +1,5 @@
 ---
+description: ': ICLRDebugManager:: SetSymbolReadingPolicy yöntemi hakkında daha fazla bilgi edinin'
 title: ICLRDebugManager::SetSymbolReadingPolicy Yöntemi
 ms.date: 03/30/2017
 api_name:
@@ -16,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: bd921fa2-d377-4d79-acfc-64c38d4dcae9
 topic_type:
 - apiref
-ms.openlocfilehash: a311166e79f930e763b0338451f6356c8c93f929
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2c0862f3c572808ffbf418b275e1ad1c62c2ac89
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95670152"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781954"
 ---
-# <a name="iclrdebugmanagersetsymbolreadingpolicy-method"></a><span data-ttu-id="0114e-102">ICLRDebugManager::SetSymbolReadingPolicy Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0114e-102">ICLRDebugManager::SetSymbolReadingPolicy Method</span></span>
+# <a name="iclrdebugmanagersetsymbolreadingpolicy-method"></a><span data-ttu-id="e0301-103">ICLRDebugManager::SetSymbolReadingPolicy Yöntemi</span><span class="sxs-lookup"><span data-stu-id="e0301-103">ICLRDebugManager::SetSymbolReadingPolicy Method</span></span>
 
-<span data-ttu-id="0114e-103">Program veritabanı (PDB) dosyalarını okuma ilkesini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="0114e-103">Sets the policy for reading program database (PDB) files.</span></span> <span data-ttu-id="0114e-104">İlke, satır numaraları ve dosya hakkındaki bilgilerin çağrı yığınlarına dahil edilip edilmeyeceğini belirler.</span><span class="sxs-lookup"><span data-stu-id="0114e-104">The policy determines whether information about line numbers and files is included in call stacks.</span></span>  
+<span data-ttu-id="e0301-104">Program veritabanı (PDB) dosyalarını okuma ilkesini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="e0301-104">Sets the policy for reading program database (PDB) files.</span></span> <span data-ttu-id="e0301-105">İlke, satır numaraları ve dosya hakkındaki bilgilerin çağrı yığınlarına dahil edilip edilmeyeceğini belirler.</span><span class="sxs-lookup"><span data-stu-id="e0301-105">The policy determines whether information about line numbers and files is included in call stacks.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0114e-105">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="0114e-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e0301-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e0301-106">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetSymbolReadingPolicy (  
@@ -35,29 +36,29 @@ HRESULT SetSymbolReadingPolicy (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0114e-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0114e-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e0301-107">Parametreler</span><span class="sxs-lookup"><span data-stu-id="e0301-107">Parameters</span></span>  
 
  `policy`  
- <span data-ttu-id="0114e-107">'ndaki [Esi Mbolreadingpolicy](esymbolreadingpolicy-enumeration.md) numaralandırması üyesi.</span><span class="sxs-lookup"><span data-stu-id="0114e-107">[in] A member of the [ESymbolReadingPolicy](esymbolreadingpolicy-enumeration.md) enumeration.</span></span>  
+ <span data-ttu-id="e0301-108">'ndaki [Esi Mbolreadingpolicy](esymbolreadingpolicy-enumeration.md) numaralandırması üyesi.</span><span class="sxs-lookup"><span data-stu-id="e0301-108">[in] A member of the [ESymbolReadingPolicy](esymbolreadingpolicy-enumeration.md) enumeration.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0114e-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="0114e-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="e0301-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="e0301-109">Return Value</span></span>  
   
-|<span data-ttu-id="0114e-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="0114e-109">HRESULT</span></span>|<span data-ttu-id="0114e-110">Açıklama</span><span class="sxs-lookup"><span data-stu-id="0114e-110">Description</span></span>|  
+|<span data-ttu-id="e0301-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="e0301-110">HRESULT</span></span>|<span data-ttu-id="e0301-111">Description</span><span class="sxs-lookup"><span data-stu-id="e0301-111">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="0114e-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="0114e-111">S_OK</span></span>|<span data-ttu-id="0114e-112">`SetSymbolReadingPolicy` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="0114e-112">`SetSymbolReadingPolicy` returned successfully.</span></span>|  
-|<span data-ttu-id="0114e-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="0114e-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="0114e-114">Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.</span><span class="sxs-lookup"><span data-stu-id="0114e-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="0114e-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="0114e-115">E_FAIL</span></span>|<span data-ttu-id="0114e-116">Bilinmeyen bir çok zararlı hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="0114e-116">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="0114e-117">Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="0114e-117">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="0114e-118">Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="0114e-118">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="e0301-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="e0301-112">S_OK</span></span>|<span data-ttu-id="e0301-113">`SetSymbolReadingPolicy` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="e0301-113">`SetSymbolReadingPolicy` returned successfully.</span></span>|  
+|<span data-ttu-id="e0301-114">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="e0301-114">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="e0301-115">Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.</span><span class="sxs-lookup"><span data-stu-id="e0301-115">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="e0301-116">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="e0301-116">E_FAIL</span></span>|<span data-ttu-id="e0301-117">Bilinmeyen bir çok zararlı hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="e0301-117">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="e0301-118">Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="e0301-118">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="e0301-119">Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="e0301-119">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="0114e-119">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0114e-119">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e0301-120">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e0301-120">Requirements</span></span>  
 
- <span data-ttu-id="0114e-120">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0114e-120">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="e0301-121">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e0301-121">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0114e-121">**Üst bilgi:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="0114e-121">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="e0301-122">**Üst bilgi:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="e0301-122">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="0114e-122">**Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi</span><span class="sxs-lookup"><span data-stu-id="0114e-122">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="e0301-123">**Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi</span><span class="sxs-lookup"><span data-stu-id="e0301-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="0114e-123">**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0114e-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="e0301-124">**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e0301-124">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0114e-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0114e-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e0301-125">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e0301-125">See also</span></span>
 
-- [<span data-ttu-id="0114e-125">ICLRDebugManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0114e-125">ICLRDebugManager Interface</span></span>](iclrdebugmanager-interface.md)
+- [<span data-ttu-id="e0301-126">ICLRDebugManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e0301-126">ICLRDebugManager Interface</span></span>](iclrdebugmanager-interface.md)
