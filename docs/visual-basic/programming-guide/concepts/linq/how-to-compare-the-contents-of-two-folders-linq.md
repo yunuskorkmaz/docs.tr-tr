@@ -1,30 +1,31 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: nasıl yapılır: Iki klasörün Içeriğini karşılaştırma (LINQ) (Visual Basic)'
 title: 'Nasıl yapılır: İki Klasörün İçeriğini Karşılaştırma (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
-ms.openlocfilehash: 63a062c562e2c79ea81ac270651aa16776801b99
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8891617b7b95bf4543603ca40e7b85abb914da34
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410766"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100424495"
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a><span data-ttu-id="36d23-102">Nasıl yapılır: Iki klasörün Içeriğini karşılaştırma (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="36d23-102">How to: Compare the Contents of Two Folders (LINQ) (Visual Basic)</span></span>
+# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a><span data-ttu-id="d5899-103">Nasıl yapılır: Iki klasörün Içeriğini karşılaştırma (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d5899-103">How to: Compare the Contents of Two Folders (LINQ) (Visual Basic)</span></span>
 
-<span data-ttu-id="36d23-103">Bu örnekte iki dosya listesi karşılaştırmanın üç yolu gösterilmektedir:</span><span class="sxs-lookup"><span data-stu-id="36d23-103">This example demonstrates three ways to compare two file listings:</span></span>
+<span data-ttu-id="d5899-104">Bu örnekte iki dosya listesi karşılaştırmanın üç yolu gösterilmektedir:</span><span class="sxs-lookup"><span data-stu-id="d5899-104">This example demonstrates three ways to compare two file listings:</span></span>
 
-- <span data-ttu-id="36d23-104">İki dosya listelerinin aynı olup olmadığını belirten bir Boolean değeri sorgulayarak.</span><span class="sxs-lookup"><span data-stu-id="36d23-104">By querying for a Boolean value that specifies whether the two file lists are identical.</span></span>
+- <span data-ttu-id="d5899-105">İki dosya listelerinin aynı olup olmadığını belirten bir Boolean değeri sorgulayarak.</span><span class="sxs-lookup"><span data-stu-id="d5899-105">By querying for a Boolean value that specifies whether the two file lists are identical.</span></span>
 
-- <span data-ttu-id="36d23-105">Her iki klasördeki dosyaları almak için kesişimini sorgulayarak.</span><span class="sxs-lookup"><span data-stu-id="36d23-105">By querying for the intersection to retrieve the files that are in both folders.</span></span>
+- <span data-ttu-id="d5899-106">Her iki klasördeki dosyaları almak için kesişimini sorgulayarak.</span><span class="sxs-lookup"><span data-stu-id="d5899-106">By querying for the intersection to retrieve the files that are in both folders.</span></span>
 
-- <span data-ttu-id="36d23-106">Bir klasörde olan ancak diğeri olmayan dosyaları almak için ayarlanan farkı sorgulayarak.</span><span class="sxs-lookup"><span data-stu-id="36d23-106">By querying for the set difference to retrieve the files that are in one folder but not the other.</span></span>
+- <span data-ttu-id="d5899-107">Bir klasörde olan ancak diğeri olmayan dosyaları almak için ayarlanan farkı sorgulayarak.</span><span class="sxs-lookup"><span data-stu-id="d5899-107">By querying for the set difference to retrieve the files that are in one folder but not the other.</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="36d23-107">Burada gösterilen teknikler, herhangi bir türdeki nesne dizilerini karşılaştırmak için uyarlanmıştır.</span><span class="sxs-lookup"><span data-stu-id="36d23-107">The techniques shown here can be adapted to compare sequences of objects of any type.</span></span>
+    > <span data-ttu-id="d5899-108">Burada gösterilen teknikler, herhangi bir türdeki nesne dizilerini karşılaştırmak için uyarlanmıştır.</span><span class="sxs-lookup"><span data-stu-id="d5899-108">The techniques shown here can be adapted to compare sequences of objects of any type.</span></span>
 
-<span data-ttu-id="36d23-108">`FileComparer`Burada gösterilen sınıf, standart sorgu işleçleri ile birlikte özel bir karşılaştırıcı sınıfının nasıl kullanılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="36d23-108">The `FileComparer` class shown here demonstrates how to use a custom comparer class together with the Standard Query Operators.</span></span> <span data-ttu-id="36d23-109">Sınıfı, gerçek dünyada senaryolarda kullanılmak üzere tasarlanmamıştır.</span><span class="sxs-lookup"><span data-stu-id="36d23-109">The class is not intended for use in real-world scenarios.</span></span> <span data-ttu-id="36d23-110">Her bir klasörün içeriğinin aynı olup olmadığını anlamak için her bir dosyanın bayt cinsinden adını ve uzunluğunu kullanır.</span><span class="sxs-lookup"><span data-stu-id="36d23-110">It just uses the name and length in bytes of each file to determine whether the contents of each folder are identical or not.</span></span> <span data-ttu-id="36d23-111">Gerçek dünyada bir senaryoda, daha kapsamlı bir eşitlik denetimi gerçekleştirmek için bu karşılaştırıcıyı değiştirmelisiniz.</span><span class="sxs-lookup"><span data-stu-id="36d23-111">In a real-world scenario, you should modify this comparer to perform a more rigorous equality check.</span></span>
+<span data-ttu-id="d5899-109">`FileComparer`Burada gösterilen sınıf, standart sorgu işleçleri ile birlikte özel bir karşılaştırıcı sınıfının nasıl kullanılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="d5899-109">The `FileComparer` class shown here demonstrates how to use a custom comparer class together with the Standard Query Operators.</span></span> <span data-ttu-id="d5899-110">Sınıfı, gerçek dünyada senaryolarda kullanılmak üzere tasarlanmamıştır.</span><span class="sxs-lookup"><span data-stu-id="d5899-110">The class is not intended for use in real-world scenarios.</span></span> <span data-ttu-id="d5899-111">Her bir klasörün içeriğinin aynı olup olmadığını anlamak için her bir dosyanın bayt cinsinden adını ve uzunluğunu kullanır.</span><span class="sxs-lookup"><span data-stu-id="d5899-111">It just uses the name and length in bytes of each file to determine whether the contents of each folder are identical or not.</span></span> <span data-ttu-id="d5899-112">Gerçek dünyada bir senaryoda, daha kapsamlı bir eşitlik denetimi gerçekleştirmek için bu karşılaştırıcıyı değiştirmelisiniz.</span><span class="sxs-lookup"><span data-stu-id="d5899-112">In a real-world scenario, you should modify this comparer to perform a more rigorous equality check.</span></span>
 
-## <a name="example"></a><span data-ttu-id="36d23-112">Örnek</span><span class="sxs-lookup"><span data-stu-id="36d23-112">Example</span></span>
+## <a name="example"></a><span data-ttu-id="d5899-113">Örnek</span><span class="sxs-lookup"><span data-stu-id="d5899-113">Example</span></span>
 
 ```vb
 Module CompareDirs
@@ -114,11 +115,11 @@ Module CompareDirs
 End Module
 ```
 
-## <a name="compile-the-code"></a><span data-ttu-id="36d23-113">Kodu derle</span><span class="sxs-lookup"><span data-stu-id="36d23-113">Compile the code</span></span>
+## <a name="compile-the-code"></a><span data-ttu-id="d5899-114">Kodu derle</span><span class="sxs-lookup"><span data-stu-id="d5899-114">Compile the code</span></span>
 
-<span data-ttu-id="36d23-114">`Imports`System. Linq ad alanı için bir deyimle birlikte Visual Basic konsol uygulaması projesi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="36d23-114">Create a Visual Basic console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+<span data-ttu-id="d5899-115">`Imports`System. Linq ad alanı için bir deyimle birlikte Visual Basic konsol uygulaması projesi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="d5899-115">Create a Visual Basic console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="36d23-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="36d23-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d5899-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d5899-116">See also</span></span>
 
-- [<span data-ttu-id="36d23-116">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="36d23-116">LINQ to Objects (Visual Basic)</span></span>](linq-to-objects.md)
-- [<span data-ttu-id="36d23-117">LINQ ve dosya dizinleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="36d23-117">LINQ and File Directories (Visual Basic)</span></span>](linq-and-file-directories.md)
+- [<span data-ttu-id="d5899-117">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d5899-117">LINQ to Objects (Visual Basic)</span></span>](linq-to-objects.md)
+- [<span data-ttu-id="d5899-118">LINQ ve dosya dizinleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d5899-118">LINQ and File Directories (Visual Basic)</span></span>](linq-and-file-directories.md)

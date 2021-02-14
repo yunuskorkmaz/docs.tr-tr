@@ -1,19 +1,20 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: LINQ sorgularını normal ifadelerle birleştirme (Visual Basic)'
 title: Normal ifadelerle LINQ sorgularını birleştirme
 ms.date: 07/20/2015
 ms.assetid: 3da1bd10-b0d8-4d5b-a637-966891c13592
-ms.openlocfilehash: a091418be1f7cc30d42a98f80ebae2d36d29b5d8
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: a2fd06f76c5c278ad1a67f3822151e5f73a2630e
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337556"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100424521"
 ---
-# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a><span data-ttu-id="a9e28-102">LINQ sorgularını normal ifadelerle birleştirme (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a9e28-102">How to combine LINQ queries with regular expressions (Visual Basic)</span></span>
+# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a><span data-ttu-id="50439-103">LINQ sorgularını normal ifadelerle birleştirme (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="50439-103">How to combine LINQ queries with regular expressions (Visual Basic)</span></span>
 
-<span data-ttu-id="a9e28-103">Bu örnek, metin dizelerinde daha karmaşık eşleştirme için bir normal ifade oluşturmak üzere <xref:System.Text.RegularExpressions.Regex> sınıfını nasıl kullanacağınızı gösterir.</span><span class="sxs-lookup"><span data-stu-id="a9e28-103">This example shows how to use the <xref:System.Text.RegularExpressions.Regex> class to create a regular expression for more complex matching in text strings.</span></span> <span data-ttu-id="a9e28-104">LINQ sorgusu, normal ifadeyle arama yapmak istediğiniz dosyaları tam olarak filtrelemenizi ve sonuçları şekillendirmenizi kolaylaştırır.</span><span class="sxs-lookup"><span data-stu-id="a9e28-104">The LINQ query makes it easy to filter on exactly the files that you want to search with the regular expression, and to shape the results.</span></span>
+<span data-ttu-id="50439-104">Bu örnek, <xref:System.Text.RegularExpressions.Regex> metin dizelerinde daha karmaşık eşleştirme için bir normal ifade oluşturmak üzere sınıfının nasıl kullanılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="50439-104">This example shows how to use the <xref:System.Text.RegularExpressions.Regex> class to create a regular expression for more complex matching in text strings.</span></span> <span data-ttu-id="50439-105">LINQ sorgusu, normal ifadeyle arama yapmak istediğiniz dosyaları tam olarak filtrelemenizi ve sonuçları şekillendirmenizi kolaylaştırır.</span><span class="sxs-lookup"><span data-stu-id="50439-105">The LINQ query makes it easy to filter on exactly the files that you want to search with the regular expression, and to shape the results.</span></span>
 
-## <a name="example"></a><span data-ttu-id="a9e28-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="a9e28-105">Example</span></span>
+## <a name="example"></a><span data-ttu-id="50439-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="50439-106">Example</span></span>
 
 ```vb
 Imports System.IO
@@ -82,13 +83,13 @@ Class LinqRegExVB
 End Class
 ```
 
-<span data-ttu-id="a9e28-106">Ayrıca, bir `RegEx` arama tarafından döndürülen <xref:System.Text.RegularExpressions.MatchCollection> nesnesini sorgulayabileceğinizi unutmayın.</span><span class="sxs-lookup"><span data-stu-id="a9e28-106">Note that you can also query the <xref:System.Text.RegularExpressions.MatchCollection> object that is returned by a `RegEx` search.</span></span> <span data-ttu-id="a9e28-107">Bu örnekte, sonuçlarda yalnızca her bir eşleşmenin değeri üretilir.</span><span class="sxs-lookup"><span data-stu-id="a9e28-107">In this example only the value of each match is produced in the results.</span></span> <span data-ttu-id="a9e28-108">Ancak, bu koleksiyonda tüm filtreleme, sıralama ve gruplama türlerini gerçekleştirmek için LINQ kullanmak da mümkündür.</span><span class="sxs-lookup"><span data-stu-id="a9e28-108">However, it is also possible to use LINQ to perform all kinds of filtering, sorting, and grouping on that collection.</span></span> <span data-ttu-id="a9e28-109"><xref:System.Text.RegularExpressions.MatchCollection> genel olmayan bir <xref:System.Collections.IEnumerable> koleksiyonu olduğundan, sorgudaki aralık değişkeninin türünü açıkça belirtmelisiniz.</span><span class="sxs-lookup"><span data-stu-id="a9e28-109">Because <xref:System.Text.RegularExpressions.MatchCollection> is a non-generic <xref:System.Collections.IEnumerable> collection, you have to explicitly state the type of the range variable in the query.</span></span>
+<span data-ttu-id="50439-107"><xref:System.Text.RegularExpressions.MatchCollection>Bir arama tarafından döndürülen nesneyi de sorgulayabileceğinizi unutmayın `RegEx` .</span><span class="sxs-lookup"><span data-stu-id="50439-107">Note that you can also query the <xref:System.Text.RegularExpressions.MatchCollection> object that is returned by a `RegEx` search.</span></span> <span data-ttu-id="50439-108">Bu örnekte, sonuçlarda yalnızca her bir eşleşmenin değeri üretilir.</span><span class="sxs-lookup"><span data-stu-id="50439-108">In this example only the value of each match is produced in the results.</span></span> <span data-ttu-id="50439-109">Ancak, bu koleksiyonda tüm filtreleme, sıralama ve gruplama türlerini gerçekleştirmek için LINQ kullanmak da mümkündür.</span><span class="sxs-lookup"><span data-stu-id="50439-109">However, it is also possible to use LINQ to perform all kinds of filtering, sorting, and grouping on that collection.</span></span> <span data-ttu-id="50439-110"><xref:System.Text.RegularExpressions.MatchCollection>Genel olmayan bir <xref:System.Collections.IEnumerable> koleksiyon olduğundan, sorgudaki aralık değişkeninin türünü açıkça belirtmelisiniz.</span><span class="sxs-lookup"><span data-stu-id="50439-110">Because <xref:System.Text.RegularExpressions.MatchCollection> is a non-generic <xref:System.Collections.IEnumerable> collection, you have to explicitly state the type of the range variable in the query.</span></span>
 
-## <a name="compile-the-code"></a><span data-ttu-id="a9e28-110">Kod derleme</span><span class="sxs-lookup"><span data-stu-id="a9e28-110">Compile the code</span></span>
+## <a name="compile-the-code"></a><span data-ttu-id="50439-111">Kodu derle</span><span class="sxs-lookup"><span data-stu-id="50439-111">Compile the code</span></span>
 
-<span data-ttu-id="a9e28-111">Visual Basic konsol uygulaması projesi oluşturun, kod örneğini kopyalayıp yapıştırın ve proje özelliklerindeki başlangıç nesnesi değerini ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="a9e28-111">Create a Visual Basic console application project, copy and paste the code sample, and adjust the Startup object value in the project properties.</span></span>
+<span data-ttu-id="50439-112">Visual Basic konsol uygulaması projesi oluşturun, kod örneğini kopyalayıp yapıştırın ve proje özelliklerindeki başlangıç nesnesi değerini ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="50439-112">Create a Visual Basic console application project, copy and paste the code sample, and adjust the Startup object value in the project properties.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="a9e28-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a9e28-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="50439-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="50439-113">See also</span></span>
 
-- [<span data-ttu-id="a9e28-113">LINQ ve dizeler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a9e28-113">LINQ and Strings (Visual Basic)</span></span>](linq-and-strings.md)
-- [<span data-ttu-id="a9e28-114">LINQ ve dosya dizinleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a9e28-114">LINQ and File Directories (Visual Basic)</span></span>](linq-and-file-directories.md)
+- [<span data-ttu-id="50439-114">LINQ ve dizeler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="50439-114">LINQ and Strings (Visual Basic)</span></span>](linq-and-strings.md)
+- [<span data-ttu-id="50439-115">LINQ ve dosya dizinleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="50439-115">LINQ and File Directories (Visual Basic)</span></span>](linq-and-file-directories.md)
