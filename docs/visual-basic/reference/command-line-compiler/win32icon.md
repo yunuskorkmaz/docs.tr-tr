@@ -1,4 +1,5 @@
 ---
+description: Hakkında daha fazla bilgi edinin:-win32icon
 title: -win32icon
 ms.date: 03/13/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - -win32icon compiler option [Visual Basic]
 - /win32icon compiler option [Visual Basic]
 ms.assetid: aecaab01-9353-46c5-941c-6edabd4eff92
-ms.openlocfilehash: c6d5e054063592db5777a76fe19da79337ed5034
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 32a46771012708a42beb5450d28daf2fbab3f1c0
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91084963"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100433555"
 ---
 # <a name="-win32icon"></a>-win32icon
 
@@ -37,7 +38,7 @@ ms.locfileid: "91084963"
   
 |Visual Studio IDE 'de set-win32icon|  
 |---|  
-|1. **Çözüm Gezgini**bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın. <br />2. **uygulama** sekmesine tıklayın.<br />3. **simge** kutusunda değeri değiştirin.|  
+|1. **Çözüm Gezgini** bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın. <br />2. **uygulama** sekmesine tıklayın.<br />3. **simge** kutusunda değeri değiştirin.|  
   
 ## <a name="example"></a>Örnek  
 
@@ -49,5 +50,5 @@ vbc -win32icon:rf.ico in.vb
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](index.md)
+- [Visual Basic Command-Line derleyicisi](index.md)
 - [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)

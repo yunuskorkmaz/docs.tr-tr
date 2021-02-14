@@ -1,21 +1,22 @@
 ---
+description: 'Daha fazla bilgi edinin: anonim tür tanımı (Visual Basic)'
 title: Anonim Tip Tanımı
 ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [Visual Basic], type definition
 ms.assetid: 7a8a0ddc-55ba-4d67-869e-87a84d938bac
-ms.openlocfilehash: 952eb295cc71eab5d0ad6e18f2b697a9b701b434
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2e3f847f5f844e3ed6e036c26efc330a237d193f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404907"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100436922"
 ---
 # <a name="anonymous-type-definition-visual-basic"></a>Anonim Tür Tanımı (Visual Basic)
 
 Anonim türdeki bir örneğin bildirimine yanıt olarak, derleyici tür için belirtilen özellikleri içeren yeni bir sınıf tanımı oluşturur.
 
-## <a name="compiler-generated-code"></a>Derleyici tarafından üretilen kod
+## <a name="compiler-generated-code"></a>Compiler-Generated kodu
 
 Aşağıdaki tanımı için, `product` derleyici, ve özelliklerini içeren yeni bir sınıf tanımı oluşturur `Name` `Price` `OnHand` .
 
@@ -70,9 +71,9 @@ Anonim bir tür bildiriminde en az bir anahtar özellik varsa tür tanımı, ö�
 
     [!code-vb[VbVbalrAnonymousTypes#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#24)]
 
-- `GetHashcode`uygun şekilde benzersiz bir GetHashCode algoritması sağlar. Algoritma, karma kodu hesaplamak için yalnızca anahtar özelliklerini kullanır.
+- `GetHashcode` uygun şekilde benzersiz bir GetHashCode algoritması sağlar. Algoritma, karma kodu hesaplamak için yalnızca anahtar özelliklerini kullanır.
 
-- `ToString`Aşağıdaki örnekte gösterildiği gibi, art arda eklenmiş özellik değerleri dizesini döndürür. Anahtar ve anahtar olmayan özellikler dahil edilmiştir.
+- `ToString` Aşağıdaki örnekte gösterildiği gibi, art arda eklenmiş özellik değerleri dizesini döndürür. Anahtar ve anahtar olmayan özellikler dahil edilmiştir.
 
   [!code-vb[VbVbalrAnonymousTypes#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#29)]
 

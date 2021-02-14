@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: standart sorgu Işleçlerine genel bakış (Visual Basic)'
 title: Standart Sorgu İşleçlerine Genel Bakış
 ms.date: 07/20/2015
 ms.assetid: 302bd39e-2ec1-495b-94bf-37d370d6f05f
-ms.openlocfilehash: 7c229a576f6695282473352d6253d2c699c76604
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: febf0fa85c020504858587bdb080c1bd6725158e
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406787"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434907"
 ---
 # <a name="standard-query-operators-overview-visual-basic"></a>Standart sorgu Işleçlerine genel bakış (Visual Basic)
 
@@ -66,7 +67,7 @@ MsgBox(output.ToString())
 
 ## <a name="query-expression-syntax"></a>Sorgu Ifadesi söz dizimi
 
-Daha sık kullanılan standart sorgu işleçlerinden bazılarının, bir *sorgu* *ifadesinin*parçası olarak çağrılmasına olanak sağlayan adanmış C# ve Visual Basic Language anahtar sözcüğü vardır. Adanmış anahtar sözcüklere ve bunlara karşılık gelen sözdizimleri içeren standart sorgu işleçleri hakkında daha fazla bilgi için bkz. [Standart sorgu işleçleri Için sorgu Ifadesi sözdizimi (Visual Basic)](query-expression-syntax-for-standard-query-operators.md).
+Daha sık kullanılan standart sorgu işleçlerinden bazılarının, bir *sorgu* *ifadesinin* parçası olarak çağrılmasına olanak sağlayan adanmış C# ve Visual Basic Language anahtar sözcüğü vardır. Adanmış anahtar sözcüklere ve bunlara karşılık gelen sözdizimleri içeren standart sorgu işleçleri hakkında daha fazla bilgi için bkz. [Standart sorgu işleçleri Için sorgu Ifadesi sözdizimi (Visual Basic)](query-expression-syntax-for-standard-query-operators.md).
 
 ## <a name="extending-the-standard-query-operators"></a>Standart sorgu Işleçlerini genişletme
 
@@ -111,4 +112,4 @@ Aşağıdaki bağlantılar, işlevleri temel alan çeşitli standart sorgu işle
 - [LINQ 'e giriş (Visual Basic)](introduction-to-linq.md)
 - [Standart sorgu Işleçleri için sorgu Ifadesi sözdizimi (Visual Basic)](query-expression-syntax-for-standard-query-operators.md)
 - [Standart sorgu Işleçleri yürütme yöntemine göre sınıflandırma (Visual Basic)](classification-of-standard-query-operators-by-manner-of-execution.md)
-- [Uzantı yöntemleri](../../language-features/procedures/extension-methods.md)
+- [Uzantı Metotları](../../language-features/procedures/extension-methods.md)

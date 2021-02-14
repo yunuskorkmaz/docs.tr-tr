@@ -1,20 +1,21 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: LINQ 'i destekleyen Visual Basic Özellikler"
 title: LINQ 'i destekleyen özellikler
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-ms.openlocfilehash: bd63cd36c1f85fd89349293a71ecc5b281165380
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 58862ac4083bcd58ee08ef1afeebf95541c53e98
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078313"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100428654"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>LINQ'i Destekleyen Visual Basic Özellikleri
 
-Dil ile tümleşik sorgu (LINQ), sorgu söz dizimini ve diğer dil yapılarını doğrudan dilde destekleyen Visual Basic teknolojiden başvurur. LINQ ile, bir dış veri kaynağında sorgulama yapmak için yeni bir dil öğreninizin olması gerekmez. Visual Basic kullanarak ilişkisel veritabanlarındaki, XML mağazalarındaki veya nesnelerdeki verilere göre sorgulama yapabilirsiniz. Bu dile sorgu yeteneklerini tümleştirme, sözdizimi hataları ve tür güvenliği için derleme zamanı denetimini sunar. Bu tümleştirme Ayrıca, Visual Basic içinde zengin, değişen sorgular yazmak için bilmeniz gerekenleri zaten öğrenmenizi de sağlar.  
+Language-Integrated Query (LINQ) adı, sorgu söz dizimini ve diğer dil yapılarını doğrudan dilde destekleyen Visual Basic teknolojiden başvurur. LINQ ile, bir dış veri kaynağında sorgulama yapmak için yeni bir dil öğreninizin olması gerekmez. Visual Basic kullanarak ilişkisel veritabanlarındaki, XML mağazalarındaki veya nesnelerdeki verilere göre sorgulama yapabilirsiniz. Bu dile sorgu yeteneklerini tümleştirme, sözdizimi hataları ve tür güvenliği için derleme zamanı denetimini sunar. Bu tümleştirme Ayrıca, Visual Basic içinde zengin, değişen sorgular yazmak için bilmeniz gerekenleri zaten öğrenmenizi de sağlar.  
   
  Aşağıdaki bölümlerde, giriş belgelerini, kod örneklerini ve örnek uygulamaları okumaya başlamanıza olanak tanımak için LINQ 'i destekleyen dil yapıları açıklanır. Ayrıca, dil özelliklerinin, dil ile tümleşik sorguyu etkinleştirmek için nasıl bir araya geldiği hakkında daha ayrıntılı açıklamalar bulmak için bağlantılara tıklayabilirsiniz. Başlamak için iyi bir yer [Izlenecek yol: Visual Basic sorguları yazma](walkthrough-writing-queries.md).  
   
@@ -28,7 +29,7 @@ Dil ile tümleşik sorgu (LINQ), sorgu söz dizimini ve diğer dil yapılarını
   
 ## <a name="implicitly-typed-variables"></a>Örtük olarak yazılan değişkenler  
 
- Bir değişkeni bildirdiğinizde ve başlattığınızda açıkça bir tür belirtmek yerine, derleyicinin türü çıkarması ve atamasını sağlayabilirsiniz. Bu, *Yerel tür çıkarımı*olarak adlandırılır.  
+ Bir değişkeni bildirdiğinizde ve başlattığınızda açıkça bir tür belirtmek yerine, derleyicinin türü çıkarması ve atamasını sağlayabilirsiniz. Bu, *Yerel tür çıkarımı* olarak adlandırılır.  
   
  Türleri çıkarılan değişkenler, türü açıkça belirttiğiniz değişkenler gibi kesin şekilde türdedir. Yerel tür çıkarımı yalnızca bir yöntem gövdesi içinde yerel bir değişken tanımladığınızda kullanılır. Daha fazla bilgi için bkz. [Option Infer deyimleri](../../../language-reference/statements/option-infer-statement.md) ve [Yerel tür çıkarımı](../../language-features/variables/local-type-inference.md).  
   

@@ -2,12 +2,12 @@
 title: 'C# ayrılmış öznitelikleri: Nullable statik analiz'
 ms.date: 02/02/2021
 description: Bu öznitelikler, null yapılabilir ve null yapılamayan başvuru türleri için daha iyi statik analiz sağlamak üzere derleyici tarafından yorumlanır.
-ms.openlocfilehash: c1c3e0a0fe1ee9000e0a1a85ee08e6e966200be5
-ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
+ms.openlocfilehash: 91bba16506e2e8bbac9fdef2d1c4badcf59c1546
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99548363"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100432575"
 ---
 # <a name="reserved-attributes-contribute-to-the-compilers-null-state-static-analysis"></a>Ayrılmış öznitelikler derleyicinin null durum statik analizine katkıda bulunur
 
@@ -240,7 +240,7 @@ Dönüş değerine ve bağımsız değişkenine, her iki durumda da olabilecek �
 
 ## <a name="constructor-helper-methods-membernotnull-and-membernotnullwhen"></a>Oluşturucu yardımcı yöntemleri: `MemberNotNull` ve `MemberNotNullWhen`
 
-Bu öznitelikler, oluşturuculardan yardımcı yöntemlere ortak kod yeniden düzenlenmiş sahip olduğunuzda amacınızı belirler. C# derleyicisi, her bir Oluşturucu döndürülmeden önce null yapılamayan tüm başvuru alanlarının başlatıldığından emin olmak için oluşturucuları ve alan başlatıcıları analiz eder. Ancak, C# derleyicisi tüm yardımcı yöntemler aracılığıyla alan atamalarını izlemez. Derleyici, `CS8618` alanlar doğrudan oluşturucuda başlatılmadığında, ancak bir yardımcı yönteminde değil, uyarı verir. <xref:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute>Bir yöntem bildirimine, yöntemi içinde null olmayan bir değere başlatılan alanlara eklersiniz. Örneğin, aşağıdaki örneği göz önünde bulundurun:
+Bu öznitelikler, oluşturuculardan yardımcı yöntemlere ortak kod yeniden düzenlenmiş sahip olduğunuzda amacınızı belirler. C# derleyicisi, her bir Oluşturucu döndürülmeden önce null yapılamayan tüm başvuru alanlarının başlatıldığından emin olmak için oluşturucuları ve alan başlatıcıları analiz eder. Ancak, C# derleyicisi tüm yardımcı yöntemler aracılığıyla alan atamalarını izlemez. Derleyici, `CS8618` alanlar doğrudan oluşturucuda başlatılmadığında, ancak bir yardımcı yönteminde değil, uyarı verir. <xref:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute>Yöntemini bir yöntem bildirimine eklersiniz ve yöntemdeki null olmayan bir değere başlatılan alanları belirtirsiniz. Örneğin, aşağıdaki örneği göz önünde bulundurun:
 
 :::code language="csharp" source="snippets/InitializeMembers.cs" ID="MemberNotNullExample":::
 

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin Visual Basic: gölgeleme'
 title: Gölge Kullanım
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-ms.openlocfilehash: 81e54875a3c1a4bbc5f5631e7ebac649a2e5afaf
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 468ad72808d689016cacb8d2be56fa9f9fcd1eec
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085899"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434829"
 ---
 # <a name="shadowing-in-visual-basic"></a>Visual Basic'de Gölgeleme
 
@@ -35,7 +36,7 @@ ms.locfileid: "91085899"
   
 ## <a name="types-of-shadowing"></a>Gölgeleme türleri  
 
- Bir öğe, başka bir öğeyi iki farklı şekilde gölgelendirebilir. Gölgeleme öğesi, gölgeli öğeyi içeren bölgenin bir alt bölgesi içinde, bu durumda gölgeleme *kapsam aracılığıyla*yapılır. Ya da türetilen bir sınıf temel sınıfın bir üyesini yeniden tanımlayabilir, bu durumda gölgeleme *Devralma yoluyla*yapılır.  
+ Bir öğe, başka bir öğeyi iki farklı şekilde gölgelendirebilir. Gölgeleme öğesi, gölgeli öğeyi içeren bölgenin bir alt bölgesi içinde, bu durumda gölgeleme *kapsam aracılığıyla* yapılır. Ya da türetilen bir sınıf temel sınıfın bir üyesini yeniden tanımlayabilir, bu durumda gölgeleme *Devralma yoluyla* yapılır.  
   
 ### <a name="shadowing-through-scope"></a>Kapsam üzerinden gölgeleme  
 

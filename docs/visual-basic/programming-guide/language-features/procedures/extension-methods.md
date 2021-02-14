@@ -1,5 +1,6 @@
 ---
-title: Genişletme Yöntemleri
+description: 'Daha fazla bilgi edinin: uzantı yöntemleri (Visual Basic)'
+title: Uzantı Metotları
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ExtensionMethods
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: a88756fce9137f89db1b6b8b007d528e98381830
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5a1482502b144524c0be90e1c83a38f49b4a4d26
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74341183"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434361"
 ---
 # <a name="extension-methods-visual-basic"></a>Uzantı Yöntemleri (Visual Basic)
 
@@ -20,31 +21,31 @@ Uzantı yöntemleri, geliştiricilerin zaten yeni bir türetilmiş tür oluştur
 
 ## <a name="remarks"></a>Açıklamalar
 
-Genişletme yöntemi yalnızca bir `Sub` yordamı veya bir `Function` yordamı olabilir. Uzantı özelliğini, alanı veya olayı tanımlayamazsınız. Tüm genişletme yöntemlerinin, <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> ad alanından `<Extension>` uzantı özniteliğiyle işaretlenmesi ve bir [modülde](../../../language-reference/statements/module-statement.md)tanımlanması gerekir. Bir uzantı yöntemi bir modül dışında tanımlanmışsa, Visual Basic Derleyicisi Hata [BC36551](../../../misc/bc36551.md)oluşturur, "uzantı yöntemleri yalnızca modüllerde tanımlanabilir".
+Genişletme yöntemi yalnızca bir `Sub` yordam veya `Function` yordam olabilir. Uzantı özelliğini, alanı veya olayı tanımlayamazsınız. Tüm genişletme yöntemlerinin ad alanından uzantı özniteliğiyle işaretlenmesi `<Extension>` <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> ve bir [modülde](../../../language-reference/statements/module-statement.md)tanımlanması gerekir. Bir uzantı yöntemi bir modül dışında tanımlanmışsa, Visual Basic Derleyicisi Hata [BC36551](../../../misc/bc36551.md)oluşturur, "uzantı yöntemleri yalnızca modüllerde tanımlanabilir".
 
 Bir genişletme yöntemi tanımındaki ilk parametre, yöntemin hangi veri türünde genişletiğini belirtir. Yöntemi çalıştırıldığında, ilk parametre yöntemini çağıran veri türü örneğine bağlanır.
 
-`Extension` özniteliği yalnızca bir Visual Basic [`Module`](../../../language-reference/statements/module-statement.md), [`Sub`](../../../language-reference/statements/sub-statement.md)veya [`Function`](../../../language-reference/statements/function-statement.md)uygulanabilir. Bunu bir `Class` veya `Structure`uygularsanız Visual Basic Derleyicisi Hata [BC36550](../../../language-reference/error-messages/extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations.md)oluşturuyor, "' Extension" özniteliği yalnızca ' Module ', ' Sub ' veya ' function ' bildirimlerine uygulanabilir.
+`Extension`Özniteliği yalnızca bir Visual Basic [`Module`](../../../language-reference/statements/module-statement.md) , veya için uygulanabilir [`Sub`](../../../language-reference/statements/sub-statement.md) [`Function`](../../../language-reference/statements/function-statement.md) . Bunu bir veya a 'ya uygularsanız `Class` `Structure` Visual Basic Derleyicisi Hata [BC36550](../../../language-reference/error-messages/extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations.md)oluşturuyor, "' Extension" özniteliği yalnızca ' Module ', ' Sub ' veya ' function ' bildirimlerine uygulanabilir.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, <xref:System.String> veri türüne `Print` uzantısını tanımlar. Yöntemi bir dizeyi göstermek için `Console.WriteLine` kullanır. `Print` yönteminin parametresi `aString`, yönteminin <xref:System.String> sınıfını genişlettiğini belirler.
+Aşağıdaki örnek, `Print` veri türü için bir uzantı tanımlar <xref:System.String> . Yöntemi `Console.WriteLine` bir dizeyi göstermek için kullanır. Yönteminin parametresi, `Print` `aString` yönteminin sınıfını genişlettiğini belirler <xref:System.String> .
 
 [!code-vb[VbVbalrExtensionMethods#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/StringExtensions.vb#1)]
 
-Uzantı metodu tanımının `<Extension()>`uzantı özniteliğiyle işaretlendiğine dikkat edin. Yöntemin tanımlandığı modülün işaretlenmesi isteğe bağlıdır, ancak her genişletme yöntemi işaretlenmelidir. Uzantı özniteliğine erişebilmek için <xref:System.Runtime.CompilerServices> içeri aktarılmalıdır.
+Uzantı metodu tanımının uzantı özniteliğiyle işaretlendiğine dikkat edin `<Extension()>` . Yöntemin tanımlandığı modülün işaretlenmesi isteğe bağlıdır, ancak her genişletme yöntemi işaretlenmelidir. <xref:System.Runtime.CompilerServices> Uzantı özniteliğine erişebilmek için içeri aktarılmalıdır.
 
-Uzantı yöntemleri yalnızca modüller içinde bildirilemez. Genellikle, bir uzantı yönteminin tanımlandığı modül, çağrıldığı bir modül olarak değildir. Bunun yerine, uzantı yöntemini içeren modül içeri aktarıldıysa, kapsama getirmek için içeri aktarılır. `Print` içeren modül kapsamdadır, yöntemi, `ToUpper`gibi bağımsız değişken içermeyen sıradan bir örnek yöntemi gibi çağrılabilir:
+Uzantı yöntemleri yalnızca modüller içinde bildirilemez. Genellikle, bir uzantı yönteminin tanımlandığı modül, çağrıldığı bir modül olarak değildir. Bunun yerine, uzantı yöntemini içeren modül içeri aktarıldıysa, kapsama getirmek için içeri aktarılır. İçeren modül `Print` kapsam içinde olduğunda, yöntemi bağımsız değişken içermeyen sıradan bir örnek yöntemi gibi çağrılabilir, örneğin `ToUpper` :
 
 [!code-vb[VbVbalrExtensionMethods#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class1.vb#2)]
 
-`PrintAndPunctuate`sonraki örnek, bu kez aynı zamanda iki parametre ile tanımlanan <xref:System.String>bir uzantıdır. `aString`ilk parametresi, Uzantı yönteminin <xref:System.String>genişlettiğini belirler. `punc`ikinci parametresi, yöntemi çağrıldığında bağımsız değişken olarak geçirilen bir noktalama işaretleri dizesi olarak tasarlanmıştır. Yöntemi, dizeyi ve ardından noktalama işaretlerini görüntüler.
+Sonraki örnek, `PrintAndPunctuate` için de bir uzantısıdır <xref:System.String> , bu kez iki parametreyle tanımlanır. İlk parametresi, `aString` Uzantı yönteminin genişlettiğini belirler <xref:System.String> . İkinci parametresi, `punc` yöntemi çağrıldığında bağımsız değişken olarak geçirilen bir noktalama işaretleri dizesi olmak üzere tasarlanmıştır. Yöntemi, dizeyi ve ardından noktalama işaretlerini görüntüler.
 
 [!code-vb[VbVbalrExtensionMethods#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class2.vb#3)]
 
-Yöntemi, `punc`için bir dize bağımsız değişkeninde göndererek çağrılır: `example.PrintAndPunctuate(".")`
+Yöntemi, için bir dize bağımsız değişkeninde göndererek çağrılır `punc` : `example.PrintAndPunctuate(".")`
 
-Aşağıdaki örnekte `Print` ve `PrintAndPunctuate` tanımlı ve çağrıldı gösterilmektedir. Uzantı özniteliğine erişimi etkinleştirmek için <xref:System.Runtime.CompilerServices> tanım modülüne içeri aktarılır.
+Aşağıdaki örnek gösterir `Print` ve `PrintAndPunctuate` tanımlanır ve çağırılır. <xref:System.Runtime.CompilerServices> Uzantı özniteliğine erişimi etkinleştirmek için tanım modülüne içeri aktarılır.
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -83,9 +84,9 @@ End Module
 
 Bu veya benzer uzantı yöntemlerini çalıştırmak için gerekli olan tüm bunlar kapsam içinde yer alırlar. Bir genişletme yöntemi içeren modül kapsamdadır, IntelliSense 'de görünür ve sıradan bir örnek yöntemi gibi çağrılabilir.
 
-Yöntemler çağrıldığında, ilk parametre için ' de bir bağımsız değişken gönderildiğine dikkat edin. Önceki yöntem tanımlarındaki `aString` parametresi, onları çağıran `String` örneği olan `example`bağımlıdır. Derleyici ilk parametreye gönderilen bağımsız değişken olarak `example` kullanacaktır.
+Yöntemler çağrıldığında, ilk parametre için ' de bir bağımsız değişken gönderildiğine dikkat edin. `aString`Önceki yöntem tanımlarındaki parametresi `example` , `String` bunları çağıran örneği olan öğesine bağlanır. Derleyici, `example` ilk parametreye gönderilen bağımsız değişken olarak kullanacaktır.
 
-`Nothing`olarak ayarlanmış bir nesne için bir genişletme yöntemi çağrılırsa, genişletme yöntemi yürütülür. Bu, sıradan örnek yöntemlerine uygulanmaz. Uzantı yönteminde `Nothing` açıkça kontrol edebilirsiniz.
+Olarak ayarlanmış bir nesne için bir genişletme yöntemi çağrılırsa `Nothing` , genişletme yöntemi yürütülür. Bu, sıradan örnek yöntemlerine uygulanmaz. Uzantı yönteminde açıkça kontrol edebilirsiniz `Nothing` .
 
 ## <a name="types-that-can-be-extended"></a>Genişletilebilen türler
 
@@ -99,9 +100,9 @@ Aşağıdakiler de dahil olmak üzere Visual Basic parametre listesinde gösteri
 - Genel yöntem parametreleri
 - Diziler
 
-İlk parametre Uzantı yönteminin genişlettiği veri türünü belirttiğinden, gereklidir ve isteğe bağlı olamaz. Bu nedenle, `Optional` parametreleri ve `ParamArray` parametreleri parametre listesindeki ilk parametre olamaz.
+İlk parametre Uzantı yönteminin genişlettiği veri türünü belirttiğinden, gereklidir ve isteğe bağlı olamaz. Bu nedenle, `Optional` Parametreler ve `ParamArray` parametreleri parametre listesindeki ilk parametre olamaz.
 
-Genişletme metotları geç bağlamada dikkate alınmıyor. Aşağıdaki örnekte, ifade `anObject.PrintMe()`, ikinci `PrintMe` uzantı yöntemi tanımının silinip silinmediğini göreceğiniz aynı özel durumu <xref:System.MissingMemberException> bir özel durum başlatır.
+Genişletme metotları geç bağlamada dikkate alınmıyor. Aşağıdaki örnekte, ifade `anObject.PrintMe()` bir <xref:System.MissingMemberException> özel durum oluşturur, ikinci `PrintMe` uzantı yöntemi tanımı silinmişse aynı özel durum görüntülenir.
 
 [!code-vb[VbVbalrExtensionMethods#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class6.vb#9)]
 
@@ -123,11 +124,11 @@ Genellikle, sahip olmadığınız türlere eklediğiniz genişletme yöntemleri,
 
 ## <a name="extension-methods-instance-methods-and-properties"></a>Uzantı yöntemleri, örnek yöntemleri ve Özellikler
 
-Kapsam içi bir örnek yöntemi, bir çağırma ifadesinin bağımsız değişkenleriyle uyumlu bir imzaya sahip olduğunda, örnek yöntemi herhangi bir genişletme yöntemine göre tercih edilir. Uzantı yöntemi daha iyi bir eşleşme olsa bile örnek yöntemi önceliğe sahiptir. Aşağıdaki örnekte `ExampleClass`, `Integer`türünde bir parametreye sahip `ExampleMethod` adında bir örnek yöntemi içerir. Genişletme yöntemi `ExampleMethod` `ExampleClass`genişletir ve `Long`türünde bir parametreye sahiptir.
+Kapsam içi bir örnek yöntemi, bir çağırma ifadesinin bağımsız değişkenleriyle uyumlu bir imzaya sahip olduğunda, örnek yöntemi herhangi bir genişletme yöntemine göre tercih edilir. Uzantı yöntemi daha iyi bir eşleşme olsa bile örnek yöntemi önceliğe sahiptir. Aşağıdaki örnekte, `ExampleClass` `ExampleMethod` türünde bir parametreye sahip adlı bir örnek yöntemi içerir `Integer` . Genişletme yöntemi `ExampleMethod` `ExampleClass` , ve türünde bir parametreye sahiptir `Long` .
 
 [!code-vb[VbVbalrExtensionMethods#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class4.vb#4)]
 
-Aşağıdaki kodda `ExampleMethod` yapılan ilk çağrı, `arg1` `Long` ve yalnızca genişletme yöntemindeki `Long` parametresiyle uyumlu olduğundan, genişletme yöntemini çağırır. `ExampleMethod` ikinci çağrısı, `arg2``Integer` bağımsız değişkenine sahiptir ve örnek yöntemini çağırır.
+Aşağıdaki kodda öğesine yapılan ilk çağrı `ExampleMethod` uzantı yöntemini çağırır, çünkü `arg1` `Long` ve yalnızca `Long` genişletme yöntemindeki parametresiyle uyumludur. İkinci çağrısının `ExampleMethod` bir `Integer` bağımsız değişkeni vardır `arg2` ve örnek yöntemini çağırır.
 
 [!code-vb[VbVbalrExtensionMethods#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class4.vb#5)]
 
@@ -135,11 +136,11 @@ Aşağıdaki kodda `ExampleMethod` yapılan ilk çağrı, `arg1` `Long` ve yaln�
 
 [!code-vb[VbVbalrExtensionMethods#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class5.vb#6)]
 
-Bu kez `Main` kod, her iki kez de örnek yöntemini çağırır. Bunun nedeni, hem `arg1` hem de `arg2` `Long`genişleme dönüştürmesinin yanı sıra örnek yöntemi her iki durumda da genişletme yöntemine göre önceliklidir.
+Bu kez, içindeki kod `Main` her iki kez örnek yöntemini çağırır. Bunun nedeni, hem hem de `arg1` `arg2` üzerinde bir genişletme dönüştürmesi olması `Long` ve örnek yönteminin her iki durumda da genişletme yöntemine göre öncelikli olması olabilir.
 
 [!code-vb[VbVbalrExtensionMethods#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class5.vb#7)]
 
-Bu nedenle, bir genişletme yöntemi var olan bir örnek yönteminin yerini alamaz. Ancak, bir genişletme yöntemi bir örnek yöntemiyle aynı ada sahip olsa da imzalar çakışmadığında her iki yönteme de erişilebilir. Örneğin, sınıf `ExampleClass` hiçbir bağımsız değişken alan `ExampleMethod` adlı bir yöntemi içeriyorsa, aşağıdaki kodda gösterildiği gibi, aynı ada sahip ve farklı imzalara sahip genişletme yöntemlerine izin verilir.
+Bu nedenle, bir genişletme yöntemi var olan bir örnek yönteminin yerini alamaz. Ancak, bir genişletme yöntemi bir örnek yöntemiyle aynı ada sahip olsa da imzalar çakışmadığında her iki yönteme de erişilebilir. Örneğin, sınıfı `ExampleClass` bağımsız değişken içermeyen adlı bir yöntemi içeriyorsa `ExampleMethod` , aşağıdaki kodda gösterildiği gibi, aynı ada sahip ve farklı imzalara sahip genişletme yöntemlerine izin verilir.
 
 [!code-vb[VbVbalrExtensionMethods#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Module3.vb#8)]
 
@@ -168,16 +169,16 @@ Aynı imzaya sahip iki genişletme yöntemi kapsam içinde ve erişilebilir oldu
 
 6. Herhangi bir proje düzeyi ad alanı içeri aktarma içinde tanımlanan genişletme yöntemleri.
 
-Öncelik belirsizlik çözümlenmezse, aradığınız yöntemi belirtmek için tam nitelikli adı kullanabilirsiniz. Önceki örnekteki `Print` yöntemi `StringExtensions`adlı bir modülde tanımlanmışsa, tam adı `example.Print()`yerine `StringExtensions.Print(example)`.
+Öncelik belirsizlik çözümlenmezse, aradığınız yöntemi belirtmek için tam nitelikli adı kullanabilirsiniz. `Print`Önceki örnekteki yöntem adlı bir modülde tanımlanmışsa `StringExtensions` , tam adı `StringExtensions.Print(example)` yerine olur `example.Print()` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.CompilerServices>
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>
-- [Genişletme Yöntemleri](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+- [Uzantı Metotları](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
 - [Module Deyimi](../../../language-reference/statements/module-statement.md)
 - [Yordam Parametreleri ve Bağımsız Değişkenleri](procedure-parameters-and-arguments.md)
 - [İsteğe Bağlı Parametreler](optional-parameters.md)
 - [Parametre Dizileri](parameter-arrays.md)
 - [Özniteliklere genel bakış](../../concepts/attributes/index.md)
-- [Visual Basic kapsam](../declared-elements/scope.md)
+- [Visual Basic'de Kapsam](../declared-elements/scope.md)

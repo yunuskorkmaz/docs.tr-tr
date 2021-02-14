@@ -3,12 +3,12 @@ title: Atarsa-C# Kılavuzu
 description: ", Atanmamış, discardable değişkenleri ve atma 'un kullanılabileceği yollarla ilgili olarak, C# ' nin atma desteğini açıklar."
 ms.technology: csharp-fundamentals
 ms.date: 09/22/2020
-ms.openlocfilehash: 7562da880ff3136dfc04ce4061bafa8ed55f5a23
-ms.sourcegitcommit: 38999dc0ec4f7c4404de5ce0951b64c55997d9ab
+ms.openlocfilehash: 3c18fbb0bbb80c2c29c9f5d8334a5dd711b68cc5
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99426924"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100432640"
 ---
 # <a name="discards---c-guide"></a>Atarsa-C# Kılavuzu
 
@@ -40,7 +40,7 @@ Atma ile tanımlama gruplarını kaldırma hakkında daha fazla bilgi için bkz.
 
 Kullanıcı tanımlı türleri atma ile kaldırma hakkında daha fazla bilgi için bkz. [tanımlama gruplarını ve diğer türleri kaldırma](deconstruct.md#deconstructing-a-user-defined-type-with-discards).
 
-## <a name="pattern-matching-with-switch"></a>' Switch ' ile eşleşen desenler
+## <a name="pattern-matching-with-switch"></a>İle eşleşen desenler `switch`
 
 *Atma stili* , [anahtar](language-reference/keywords/switch.md) anahtar sözcüğüyle birlikte bir model eşleme içinde kullanılabilir. Her ifade her zaman atma düzeniyle eşleşir. (Bu [,,](language-reference/keywords/is.md) ifadeleriyle birlikte kullanılabilir. Bununla birlikte, atma bunun anlamı değiştirilmeden kaldırılabileceğinden, bu kullanım nadir bir durumdur.
 

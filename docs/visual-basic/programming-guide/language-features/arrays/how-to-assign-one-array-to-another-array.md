@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: bir diziyi başka bir diziye atama (Visual Basic)'
 title: 'Nasıl yapılır: Bir Diziyi Başka Diziye Atama'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], assigning
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-ms.openlocfilehash: c38def1ba9f3720bc760d6f6e4264510c884c930
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: dc86225c1f25c207e793e33a048d948646ac77b6
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413085"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434738"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Nasıl yapılır: Bir Diziyi Başka Diziye Atama (Visual Basic)
 
@@ -39,7 +40,7 @@ Bir diziyi diğerine atadığınızda, aşağıdaki kurallar geçerlidir:
 
   - Her iki dizide de değer türü öğeler varsa, öğe veri türleri tam olarak aynı olmalıdır. Bunun tek istisnası, bir dizi `Enum` öğeyi temel türünün bir dizisine atayabilmenizi sağlar `Enum` .
 
-  - Her iki dizide de başvuru türü öğeleri varsa, kaynak öğe türünün hedef öğe türünden türetilmesi gerekir. Bu durumda, iki dizi öğeleriyle aynı devralma ilişkisine sahiptir. Buna *dizi Kovaryans*adı verilir.
+  - Her iki dizide de başvuru türü öğeleri varsa, kaynak öğe türünün hedef öğe türünden türetilmesi gerekir. Bu durumda, iki dizi öğeleriyle aynı devralma ilişkisine sahiptir. Buna *dizi Kovaryans* adı verilir.
 
 Yukarıdaki kurallar ihlal edildiğinde derleyici bir hata bildirir, örneğin, veri türleri uyumlu değilse veya derecelendirmelerinin eşit olduğu durumlarda. Bir atamayı denemeden önce dizilerin uyumlu olduğundan emin olmak için kodunuza hata işleme ekleyebilirsiniz. Özel durum oluşturmamak istiyorsanız [TryCast İşleci](../../../language-reference/operators/trycast-operator.md) anahtar sözcüğünü de kullanabilirsiniz.
 

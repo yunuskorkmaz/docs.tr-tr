@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: diziler sorunlarını giderme (Visual Basic)'
 title: Dizilerle İlgili Sorun Giderme
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], declaration errors
 - arrays [Visual Basic], troubleshooting
 ms.assetid: f4e971c7-c0a4-4ed7-a77a-8d71039f266f
-ms.openlocfilehash: e0cb1008f4182331b7380db81d7a92a0fd45f2f4
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 2aca3c1819ed6482e132ba432e5e70fbdf9a5b3a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086367"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100454502"
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>Dizilerle İlgili Sorun Giderme (Visual Basic)
 

@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Koleksiyonlar (Visual Basic)'
 title: Koleksiyonlar
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: 91c6048caf622f21a02032bac31cb2ba5565c54c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8189eb6d3b95ef81b47f5694092a20a18894103c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551073"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100435115"
 ---
 # <a name="collections-visual-basic"></a>Koleksiyonlar (Visual Basic)
 
@@ -22,7 +23,7 @@ Koleksiyon bir sınıftır, bu nedenle bu koleksiyona öğe ekleyebilmeniz için
 Koleksiyonunuz yalnızca bir veri türünün öğelerini içeriyorsa, ad alanındaki sınıflardan birini kullanabilirsiniz <xref:System.Collections.Generic?displayProperty=nameWithType> . Genel bir koleksiyon, tür güvenliğini, başka bir veri türü eklenememesi için uygular. Genel koleksiyondan bir öğe aldığınızda, veri türünü belirlememek veya dönüştürmek zorunda değilsiniz.
 
 > [!NOTE]
-> Bu konudaki örnekler için, [Imports](../../language-reference/statements/imports-statement-net-namespace-and-type.md) `System.Collections.Generic` ve ad alanları için Imports deyimlerini ekleyin `System.Linq` .
+> Bu konudaki örnekler için, [](../../language-reference/statements/imports-statement-net-namespace-and-type.md) `System.Collections.Generic` ve ad alanları için Imports deyimlerini ekleyin `System.Linq` .
 
 <a name="BKMK_SimpleCollection"></a>
 

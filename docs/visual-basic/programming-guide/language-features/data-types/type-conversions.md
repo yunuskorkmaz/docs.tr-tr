@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Visual Basic dönüşümler yazın'
 title: Tür Dönüştürmeleri
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - changing data types [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: 1cdacd21-ba31-4b62-b5be-395e41eeaa17
-ms.openlocfilehash: ee8700ea757cee9c20e2598de029f54ae33a7114
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 1f40951856710eb6f2892a7f7a4e04173ee3ee44
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090163"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100454488"
 ---
 # <a name="type-conversions-in-visual-basic"></a>Visual Basic'de Tür Dönüştürmeleri
 
-Bir değeri bir veri türünden başka bir türe değiştirme işlemi *dönüştürme*olarak adlandırılır. Dönüşümler, dahil edilen türlerin veri kapasiteye bağlı olarak, *genişletme* veya *daraltma*. Bunlar ayrıca, kaynak kodundaki sözdizimine bağlı olarak *örtük* veya *açıktır*.  
+Bir değeri bir veri türünden başka bir türe değiştirme işlemi *dönüştürme* olarak adlandırılır. Dönüşümler, dahil edilen türlerin veri kapasiteye bağlı olarak, *genişletme* veya *daraltma*. Bunlar ayrıca, kaynak kodundaki sözdizimine bağlı olarak *örtük* veya *açıktır*.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
 

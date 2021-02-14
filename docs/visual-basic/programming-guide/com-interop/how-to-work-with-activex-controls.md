@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: ActiveX denetimleriyle çalışma (Visual Basic)'
 title: 'Nasıl yapılır: ActiveX Denetimleriyle Çalışma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Toolbox, adding controls
 - ActiveX controls, adding to Toolbox
 ms.assetid: ec675027-866f-4c05-aaf2-92fca5200f9a
-ms.openlocfilehash: d1346d362bf030e794212d74040f1ff0845eb704
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 3c38a38bf573ecee8425a837ce472cee60fb031f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91083260"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100438989"
 ---
 # <a name="how-to-work-with-activex-controls-visual-basic"></a>Nasıl yapılır: ActiveX Denetimleriyle Çalışma (Visual Basic)
 
@@ -26,7 +27,7 @@ ActiveX denetimleri, başka birinin programlandığı paketlenmiş işlevselliğ
   
 3. Kullanmak istediğiniz ActiveX denetiminin yanındaki onay kutusunu işaretleyin ve ardından **Tamam**' a tıklayın.  
   
-     Yeni denetim, **araç kutusundaki**diğer araçlarla görüntülenir.  
+     Yeni denetim, **araç kutusundaki** diğer araçlarla görüntülenir.  
   
     > [!NOTE]
     > ActiveX denetimleri için birlikte çalışma derlemesini el ile oluşturmak üzere Aximp yardımcı programını kullanabilirsiniz. Daha fazla bilgi için bkz. [Aximp.exe (Windows Forms ActiveX denetim Içeri Aktarıcı)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md).  

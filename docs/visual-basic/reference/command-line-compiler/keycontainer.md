@@ -1,4 +1,5 @@
 ---
+description: Daha fazla bilgi edinin:-keycontainer
 title: -keycontainer
 ms.date: 03/10/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - keycontainer compiler option [Visual Basic]
 - /keycontainer compiler option [Visual Basic]
 ms.assetid: 6a9bc861-1752-4db1-9f64-b5252f0482cc
-ms.openlocfilehash: 243583e55dcf278f951b813cca8384246d2d6db9
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: d8b83162d9404eb2ce80e5e531457360b040f27d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085236"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100436818"
 ---
 # <a name="-keycontainer"></a>-keycontainer
 
@@ -39,7 +40,7 @@ Bir derlemeye tanımlayıcı ad vermek için bir anahtar çifti için anahtar ka
   
  Ayrıca, [-keyfile](keyfile.md)ile şifreleme bilgilerinizi derleyiciye geçirebilirsiniz. Kısmen imzalanmış bir derleme istiyorsanız [-delaysign](delaysign.md) kullanın.  
   
- Bir derlemeyi imzalama hakkında daha fazla bilgi için bkz. [tanımlayıcı adlı derlemeler oluşturma ve kullanma](../../../standard/assembly/create-use-strong-named.md) .  
+ Bir derlemeyi imzalama hakkında daha fazla bilgi için bkz. [Strong-Named derlemeleri oluşturma ve kullanma](../../../standard/assembly/create-use-strong-named.md) .  
   
 > [!NOTE]
 > `-keycontainer`Bu seçenek, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
@@ -55,6 +56,6 @@ vbc -keycontainer:key1 input.vb
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [.NET’te bütünleştirilmiş kodlar](../../../standard/assembly/index.md)
-- [Visual Basic komut satırı derleyicisi](index.md)
+- [Visual Basic Command-Line derleyicisi](index.md)
 - [-keyfile](keyfile.md)
 - [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)

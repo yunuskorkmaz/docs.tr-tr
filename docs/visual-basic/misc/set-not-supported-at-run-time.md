@@ -1,15 +1,16 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: küme çalışma zamanında desteklenmez'
 title: Çalışma zamanında desteklenmeyen ayarla
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID382
 ms.assetid: cb7285d3-778f-423d-a2be-88573be8ad48
-ms.openlocfilehash: 563cecde105f18ebba6da909a1977a272b052413
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e6ea52ed6fa20cef2059351b509f89b99ebd402d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91060633"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100438261"
 ---
 # <a name="set-not-supported-at-run-time"></a>Çalışma zamanında desteklenmeyen ayarla
 

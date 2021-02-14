@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Visual Basic Diziler'
 title: Diziler
 ms.date: 12/06/2017
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - arrays [Visual Basic]
 - Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
-ms.openlocfilehash: 5093f28f05c5b72294dce9a4e69723acafb31a9f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b6e8349fe02e77f12fb827618f84d44288914b62
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413097"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100454605"
 ---
 # <a name="arrays-in-visual-basic"></a>Visual Basic'de Diziler
 
-Dizi, mantıksal olarak birbirleriyle ilgili olan, adlandırılmış *öğeler*olan bir değerler kümesidir. Örneğin, bir dizi, bir dilbilgisi okulundaki her bir sınıfta bulunan öğrencilerin sayısından oluşabilir; dizideki her öğe, tek bir sınıfta bulunan öğrencilerin sayısıdır. Benzer şekilde, bir dizi bir sınıfın bir öğrenciye ait olan bir sınıftan oluşabilir; dizideki her öğe tek bir sınıf olur.
+Dizi, mantıksal olarak birbirleriyle ilgili olan, adlandırılmış *öğeler* olan bir değerler kümesidir. Örneğin, bir dizi, bir dilbilgisi okulundaki her bir sınıfta bulunan öğrencilerin sayısından oluşabilir; dizideki her öğe, tek bir sınıfta bulunan öğrencilerin sayısıdır. Benzer şekilde, bir dizi bir sınıfın bir öğrenciye ait olan bir sınıftan oluşabilir; dizideki her öğe tek bir sınıf olur.
 
 Her bir veri öğesini depolamak için bağımsız değişkenler mümkündür. Örneğin, uygulamamız öğrenci 'yi çözümlerimizde,, vb. her öğrencinin derecesi için ayrı bir değişken kullanabiliriz `englishGrade1` `englishGrade2` . Bu yaklaşım üç önemli sınırlamalara sahiptir:
 
@@ -73,7 +74,7 @@ Aşağıdaki örnek, diziyi oluşturan ve kullanan Visual Basic kodu içerir:
 - Dizideki her öğeye değerler atar. Dizi öğelerine, dizi adı kullanılarak erişilir ve parantez içinde tek bir öğenin dizini de eklenir.
 - Dizinin her bir değerini listeler. Örnek, [`For`](../../../language-reference/statements/for-next-statement.md) dizinin her öğesine Dizin numarası ile erişmek için bir ifade kullanır.
 
-`students`Önceki örnekteki dizi bir dizin kullandığından tek boyutlu bir dizidir. Birden fazla dizin veya alt simge kullanan bir dizi *çok boyutlu*olarak adlandırılır. Daha fazla bilgi için bu makalenin geri kalanına ve [dizi boyutlarına Visual Basic](array-dimensions.md)bakın.
+`students`Önceki örnekteki dizi bir dizin kullandığından tek boyutlu bir dizidir. Birden fazla dizin veya alt simge kullanan bir dizi *çok boyutlu* olarak adlandırılır. Daha fazla bilgi için bu makalenin geri kalanına ve [dizi boyutlarına Visual Basic](array-dimensions.md)bakın.
 
 ## <a name="creating-an-array"></a>Dizi oluşturma
 
@@ -116,7 +117,7 @@ Tür çıkarımı kullandığınızda, dizi türü, değişmez değerler listesi
 
 Önceki örnekte, `values` `Double` tüm dizi değişmezleri türünde olsa bile, türünde bir dizi olarak tanımladığına göz önünde kalabileceğinizi unutmayın `Integer` . Bu diziyi, dizi sabit değerindeki değerler değerlere genişlebildiğinden oluşturabilirsiniz `Double` .
 
-Ayrıca, *iç içe dizi değişmez*değerlerini kullanarak çok boyutlu bir dizi oluşturup doldurabilirsiniz. İç içe geçmiş dizi değişmez değerleri, sonuçta elde edilen dizi ile tutarlı olan sayıda boyutlara sahip olmalıdır. Aşağıdaki örnek, iç içe dizi değişmez değerlerini kullanarak iki boyutlu tamsayılar dizisi oluşturur.
+Ayrıca, *iç içe dizi değişmez* değerlerini kullanarak çok boyutlu bir dizi oluşturup doldurabilirsiniz. İç içe geçmiş dizi değişmez değerleri, sonuçta elde edilen dizi ile tutarlı olan sayıda boyutlara sahip olmalıdır. Aşağıdaki örnek, iç içe dizi değişmez değerlerini kullanarak iki boyutlu tamsayılar dizisi oluşturur.
 
 [!code-vb[nested-array-literals](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#5)]
 
@@ -130,13 +131,13 @@ Daha fazla örnek için bkz. [nasıl yapılır: Visual Basic dizi değişkenini 
 
 ## <a name="iterating-through-an-array"></a>Bir dizi boyunca yineleme yapma
 
-Bir dizi boyunca yineleme yaparken, dizideki her öğeye en düşük dizinden en yüksek veya en düşük değerden en düşüğe erişirsiniz. Genellikle, [için kullanın... Sonraki bildiri](../../../language-reference/statements/for-next-statement.md) veya [for each... ](../../../language-reference/statements/for-each-next-statement.md)Bir dizinin öğeleri boyunca yinelemek için sonraki ifade. Dizinin üst sınırlarını bilmiyorsanız, <xref:System.Array.GetUpperBound%2A?displayProperty=nameWithType> dizinin en yüksek değerini almak için yöntemini çağırabilirsiniz. En düşük dizin değeri neredeyse her zaman 0 olsa da, <xref:System.Array.GetLowerBound%2A?displayProperty=nameWithType> dizinin en düşük değerini almak için yöntemini çağırabilirsiniz.
+Bir dizi boyunca yineleme yaparken, dizideki her öğeye en düşük dizinden en yüksek veya en düşük değerden en düşüğe erişirsiniz. Genellikle, [için kullanın... Sonraki bildiri](../../../language-reference/statements/for-next-statement.md) veya [for each... ](../../../language-reference/statements/for-each-next-statement.md) Bir dizinin öğeleri boyunca yinelemek için sonraki ifade. Dizinin üst sınırlarını bilmiyorsanız, <xref:System.Array.GetUpperBound%2A?displayProperty=nameWithType> dizinin en yüksek değerini almak için yöntemini çağırabilirsiniz. En düşük dizin değeri neredeyse her zaman 0 olsa da, <xref:System.Array.GetLowerBound%2A?displayProperty=nameWithType> dizinin en düşük değerini almak için yöntemini çağırabilirsiniz.
 
 Aşağıdaki örnek, ifadesini kullanarak tek boyutlu bir dizi boyunca yinelenir [`For...Next`](../../../language-reference/statements/for-next-statement.md) .
 
 [!code-vb[iterate-one-dimensional-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate1d.vb)]
 
-Aşağıdaki örnek, bir deyimleri kullanarak çok boyutlu bir dizi boyunca yinelenir [`For...Next`](../../../language-reference/statements/for-next-statement.md) . <xref:System.Array.GetUpperBound%2A>Yöntemi, boyutu belirten bir parametreye sahiptir. `GetUpperBound(0)`İlk boyutun en yüksek dizinini döndürür ve `GetUpperBound(1)` İkinci boyutun en yüksek dizinini döndürür.
+Aşağıdaki örnek, bir deyimleri kullanarak çok boyutlu bir dizi boyunca yinelenir [`For...Next`](../../../language-reference/statements/for-next-statement.md) . <xref:System.Array.GetUpperBound%2A>Yöntemi, boyutu belirten bir parametreye sahiptir. `GetUpperBound(0)` İlk boyutun en yüksek dizinini döndürür ve `GetUpperBound(1)` İkinci boyutun en yüksek dizinini döndürür.
 
 [!code-vb[iterate-two-dimensional-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate2d.vb)]
 
@@ -170,7 +171,7 @@ Bir dizinin boyutuyla ilgilenirken göz önünde bulundurmanız gereken birkaç 
 
 ## <a name="the-array-type"></a>Dizi türü
 
-Her dizide, öğelerinin veri türünden farklı bir veri türü vardır. Tüm diziler için tek bir veri türü yoktur. Bunun yerine, bir dizinin veri türü, dizinin boyut sayısı veya *sıralaması*ile dizideki öğelerin veri türü tarafından belirlenir. İki dizi değişkeni yalnızca aynı dereceye sahip olduklarında ve öğeleri aynı veri türüne sahip olduğunda aynı veri türündedir. Bir dizinin boyutlarının uzunlukları dizi veri türünü etkilemez.
+Her dizide, öğelerinin veri türünden farklı bir veri türü vardır. Tüm diziler için tek bir veri türü yoktur. Bunun yerine, bir dizinin veri türü, dizinin boyut sayısı veya *sıralaması* ile dizideki öğelerin veri türü tarafından belirlenir. İki dizi değişkeni yalnızca aynı dereceye sahip olduklarında ve öğeleri aynı veri türüne sahip olduğunda aynı veri türündedir. Bir dizinin boyutlarının uzunlukları dizi veri türünü etkilemez.
 
 Her dizi <xref:System.Array?displayProperty=nameWithType> sınıfından devralır ve bir değişkeni türünde olacak şekilde bildirebilirsiniz `Array` , ancak türünde bir dizi oluşturamazsınız `Array` . Örneğin, aşağıdaki kod `arr` değişkeni türünde olacak şekilde bildirir `Array` ve <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> dizi örneği oluşturmak için yöntemini çağırır, dizinin türü Object [] olarak kanıtlar.
 
@@ -203,7 +204,7 @@ Aşağıdaki örnekte, `GetNumbersMultiDim` işlevi bir `Integer(,)` türünde i
 
 ## <a name="jagged-arrays"></a>Sivri diziler
 
-Bazen uygulamanızdaki veri yapısı iki boyutlu ancak dikdörtgen değildir. Örneğin, ayın her gününün yüksek sıcaklığına ilişkin verileri depolamak için bir dizi kullanabilirsiniz. Dizinin ilk boyutu ayı temsil eder, ancak ikinci boyut gün sayısını ve ay içindeki gün sayısını temsil eder. Dizi *dizileri*olarak da adlandırılan *pürüzlü bir dizi*, bu tür senaryolar için tasarlanmıştır. Pürüzlü dizi öğeleri de diziler olan bir dizidir. Sivri dizi ve pürüzlü dizideki her öğe bir veya daha fazla boyuta sahip olabilir.
+Bazen uygulamanızdaki veri yapısı iki boyutlu ancak dikdörtgen değildir. Örneğin, ayın her gününün yüksek sıcaklığına ilişkin verileri depolamak için bir dizi kullanabilirsiniz. Dizinin ilk boyutu ayı temsil eder, ancak ikinci boyut gün sayısını ve ay içindeki gün sayısını temsil eder. Dizi *dizileri* olarak da adlandırılan *pürüzlü bir dizi*, bu tür senaryolar için tasarlanmıştır. Pürüzlü dizi öğeleri de diziler olan bir dizidir. Sivri dizi ve pürüzlü dizideki her öğe bir veya daha fazla boyuta sahip olabilir.
 
 Aşağıdaki örnek, her bir bir gün dizisi olan her öğesi bir ay dizisini kullanır. Farklı aylar farklı gün sayılarına sahip olduğundan, örnek pürüzlü bir diziyi kullanır.  Örnek, pürüzlü bir dizi oluşturmayı, bu değere değer atamayı ve değerlerini almayı ve görüntülemeyi gösterir.
 
@@ -219,13 +220,13 @@ Sivri dizi öğeleri diziler içeren tek boyutlu bir dizidir. Bu nedenle, <xref:
 
 ## <a name="zero-length-arrays"></a>Sıfır uzunluklu diziler
 
-Visual Basic, başlatılmamış bir dizi (değeri olan bir dizi `Nothing` ) ve *sıfır uzunluklu bir dizi* ya da boş dizi (öğesi olmayan bir dizi) arasında ayrım yapar. Başlatılmamış bir dizi, boyutlandırılmış olmayan veya kendisine atanmış değer içeren bir dizidir. Örnek:
+Visual Basic, başlatılmamış bir dizi (değeri olan bir dizi `Nothing` ) ve *sıfır uzunluklu bir dizi* ya da boş dizi (öğesi olmayan bir dizi) arasında ayrım yapar. Başlatılmamış bir dizi, boyutlandırılmış olmayan veya kendisine atanmış değer içeren bir dizidir. Örneğin:
 
 ```vb
 Dim arr() As String
 ```
 
-Sıfır uzunlukta bir dizi,-1 boyutuyla birlikte bildirilmiştir. Örnek:
+Sıfır uzunlukta bir dizi,-1 boyutuyla birlikte bildirilmiştir. Örneğin:
 
 ```vb
 Dim arrZ(-1) As String
@@ -296,7 +297,7 @@ Koleksiyonlar hakkında daha fazla bilgi için bkz. [koleksiyonlar](../../concep
 
 ## <a name="related-topics"></a>İlgili konular
 
-|Terim|Tanım|
+|Süre|Tanım|
 |----------|----------------|
 |[Visual Basic'de Dizi Boyutları](array-dimensions.md)|Dizilerde derecelendirme ve boyutları açıklar.|
 |[Nasıl yapılır: Visual Basic'te Dizi Değişkeni Başlatma](how-to-initialize-an-array-variable.md)|İlk değerlerle dizilerin nasıl doldurulacağını açıklar.|

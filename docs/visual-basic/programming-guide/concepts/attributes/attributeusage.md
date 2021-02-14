@@ -1,17 +1,18 @@
 ---
+description: 'Daha fazla bilgi edinin: AttributeUsage (Visual Basic)'
 title: AttributeUsage
 ms.date: 07/20/2015
 ms.assetid: 48757216-c21d-4051-86d5-8a3e03c39d2c
-ms.openlocfilehash: 677d49aba38801f2adf42cc745983af30b3eddc5
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: afb043c1b16da3e134888a38ec73f0b6f4ec5f58
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400738"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100437819"
 ---
 # <a name="attributeusage-visual-basic"></a>AttributeUsage (Visual Basic)
 
-Özel bir öznitelik sınıfının nasıl kullanılabileceğini belirler. `AttributeUsage`, yeni özniteliğin nasıl uygulanabileceğini denetlemek için özel öznitelik tanımlarına uygulanabilen bir özniteliktir. Varsayılan ayarlar açıkça uygulandığında şöyle görünür:
+Özel bir öznitelik sınıfının nasıl kullanılabileceğini belirler. `AttributeUsage` , yeni özniteliğin nasıl uygulanabileceğini denetlemek için özel öznitelik tanımlarına uygulanabilen bir özniteliktir. Varsayılan ayarlar açıkça uygulandığında şöyle görünür:
 
 ```vb
 <System.AttributeUsage(System.AttributeTargets.All,
@@ -57,7 +58,7 @@ End Class
 
 Bu durumda `MultiUseAttr` `AllowMultiple` , olarak ayarlandığı için tekrar tekrar uygulanabilir `true` . Birden çok özniteliği uygulamak için gösterilen her iki biçim de geçerlidir.
 
-, `Inherited` Olarak ayarlanırsa `false` öznitelik, öznitelikli bir sınıftan türetilmiş sınıflar tarafından devralınmaz. Örnek:
+, `Inherited` Olarak ayarlanırsa `false` öznitelik, öznitelikli bir sınıftan türetilmiş sınıflar tarafından devralınmaz. Örneğin:
 
 ```vb
 <AttributeUsage(AttributeTargets.Class, Inherited:=False)>
@@ -79,7 +80,7 @@ Bu durumda `Attr1` `DClass` devralma aracılığıyla öğesine uygulanmaz.
 
 ## <a name="remarks"></a>Açıklamalar
 
-`AttributeUsage`Öznitelik tek kullanım özniteliğidir; aynı sınıfa birden çok kez uygulanamaz. `AttributeUsage`, için bir diğer addır <xref:System.AttributeUsageAttribute> .
+`AttributeUsage`Öznitelik tek kullanım özniteliğidir; aynı sınıfa birden çok kez uygulanamaz. `AttributeUsage` , için bir diğer addır <xref:System.AttributeUsageAttribute> .
 
 Daha fazla bilgi için bkz. [yansıma kullanarak özniteliklere erişme (Visual Basic)](accessing-attributes-by-using-reflection.md).
 

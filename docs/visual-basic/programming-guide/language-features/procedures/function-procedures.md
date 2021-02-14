@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Işlev yordamları (Visual Basic)'
 title: İşlev yordamları
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], Function procedures
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
-ms.openlocfilehash: b0ba96a875fd8785e45eee565beefe4b961ffc9d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4997059fc33fb5d438519356b2c9fdd9e6a27cce
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388757"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100436155"
 ---
 # <a name="function-procedures-visual-basic"></a>İşlev yordamları (Visual Basic)
 
@@ -92,7 +93,7 @@ Bir yordama yapılan çağrının sözdizimi aşağıdaki gibidir `Function` .
 
 `If ((`*fonksiyonadı* `[(` *bağımsız değişkenler listesi* `)] / 3) <=` *ifade*  `) Then`
 
-Bir `Function` yordamı çağırdığınızda, dönüş değerini kullanmak zorunda değilsiniz. Bunu yapmazsanız, işlevin tüm eylemleri gerçekleştirilir, ancak dönüş değeri yok sayılır. <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>genellikle bu şekilde çağırılır.
+Bir `Function` yordamı çağırdığınızda, dönüş değerini kullanmak zorunda değilsiniz. Bunu yapmazsanız, işlevin tüm eylemleri gerçekleştirilir, ancak dönüş değeri yok sayılır. <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> genellikle bu şekilde çağırılır.
 
 ### <a name="illustration-of-declaration-and-call"></a>Bildirim ve çağrı gösterimi
 

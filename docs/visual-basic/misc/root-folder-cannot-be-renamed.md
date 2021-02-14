@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: kök klasör yeniden adlandırılamıyor'
 title: Kök klasör yeniden adlandırılamıyor
 ms.date: 07/20/2015
 ms.assetid: 325eb73c-d5fe-4b65-8926-5dabff007277
-ms.openlocfilehash: 80765a5b1cea5993d555068a01a77cd093cc341a
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: a940853341eeeb9c92d29db4f7138323c8db231b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086666"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100435622"
 ---
 # <a name="root-folder-cannot-be-renamed"></a>Kök klasör yeniden adlandırılamıyor
 

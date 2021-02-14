@@ -3,18 +3,20 @@ title: Bellek sızıntısı öğreticisinde hata ayıklama
 description: .NET Core 'da Bellek sızıntısını nasıl ayıklayacağınızı öğrenin.
 ms.topic: tutorial
 ms.date: 04/20/2020
-ms.openlocfilehash: 7fa87a411606e81ffe91348c3cbce5f258a6e4e2
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6764663eedc28cd75f9f68927a12ae5b2255d11b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538598"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100431457"
 ---
 # <a name="debug-a-memory-leak-in-net-core"></a>.NET Core 'da bellek sızıntısı hatalarını ayıklama
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .net Core 3,1 SDK ve sonraki sürümleri
 
-Bu öğreticide, .NET Core Bellek sızıntısını çözümlemek için Araçlar gösterilmektedir.
+Uygulamanız artık istenen görevi gerçekleştirmek için ihtiyaç duymadığı nesnelere başvurduğunda, bir bellek sızıntısı meydana gelebilir. Söyleyen nesnelere başvurmak, çöp toplayıcısının kullanılan belleği geri kazanmasına neden olur, genellikle performans düşüşüne ve büyük olasılıkla bir atma işlemini ortaya çıkarır <xref:System.OutOfMemoryException> .
+
+Bu öğreticide, .net tanılama CLı araçları kullanılarak .NET Core uygulamasında bir Bellek sızıntısının çözümlenmesi için Araçlar gösterilmektedir. Windows kullanıyorsanız, bellek sızıntısı hatalarını ayıklamak için [Visual Studio 'Nun bellek tanılama araçlarını kullanabilirsiniz](/visualstudio/profiling/memory-usage) .
 
 Bu öğreticide, kasıtlı olarak bellek sızıntısı için tasarlanan örnek bir uygulama kullanılmaktadır. Örnek, bir alıştırma olarak sağlanır. Yanlışlıkla bellek sızdıran bir uygulamayı analiz edebilirsiniz.
 
@@ -238,6 +240,7 @@ Oluşturulan döküm dosyasını da silebilirsiniz.
 - [DotNet-](dotnet-counters.md) yönetilen bellek kullanımını denetlemek için sayaçlar
 - [DotNet-](dotnet-dump.md) döküm dosyasını toplamak ve analiz etmek için döküm
 - [DotNet/Diagnostics](https://github.com/dotnet/diagnostics/tree/master/documentation/tutorial)
+- [Bellek sızıntılarını ayıklamak için Visual Studio 'Yu kullanma](/visualstudio/profiling/memory-usage)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: tür karakterleri (Visual Basic)'
 title: Tür Karakterleri
 ms.date: 01/31/2018
 helpviewer_keywords:
@@ -36,16 +37,16 @@ helpviewer_keywords:
 - UL literal type characters [Visual Basic]
 - literal types [Visual Basic], default
 ms.assetid: 6353cb9b-6ee4-4af6-a5a8-88ce39f90cc5
-ms.openlocfilehash: a48260694c1dfcbbb8f804f220fe89b1663c7319
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d1afccb821d2ffb4dfabe3c38e0db4a7f902c164
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393084"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100454553"
 ---
 # <a name="type-characters-visual-basic"></a>Tür karakterleri (Visual Basic)
 
-Bir bildirim bildiriminde bir veri türü belirtmenin yanı sıra, bazı programlama öğelerinin veri türünü bir *tür karakteriyle*zorlayabilirsiniz. Tür karakteri, hiçbir türden hiçbir araya girmeden önce öğesini hemen izlemelidir.
+Bir bildirim bildiriminde bir veri türü belirtmenin yanı sıra, bazı programlama öğelerinin veri türünü bir *tür karakteriyle* zorlayabilirsiniz. Tür karakteri, hiçbir türden hiçbir araya girmeden önce öğesini hemen izlemelidir.
 
 Tür karakteri öğenin adının bir parçası değil. Tür karakteriyle tanımlanmış bir öğeye, tür karakteri olmadan başvurulabilir.
 
@@ -79,14 +80,14 @@ Kodunuzda göründüğü gibi bir sabit değerin biçimi normalde veri türünü
 |Sabit değerin metin biçimi|Varsayılan veri türü|Örnek|  
 |-----------------------------|-----------------------|-------------|  
 |Sayısal, kesirli bölüm yok|`Integer`|`2147483647`|  
-|Sayısal, kesirli bölüm yok, için çok büyük`Integer`|`Long`|`2147483648`|  
+|Sayısal, kesirli bölüm yok, için çok büyük `Integer`|`Long`|`2147483648`|  
 |Sayısal, kesirli bölüm|`Double`|`1.2`|  
 |Çift tırnak işareti içine alınmış|`String`|`"A"`|  
 |Sayı işaretleri içine alınmış|`Date`|`#5/17/1993 9:32 AM#`|  
 
 ### <a name="forced-literal-types"></a>Zorunlu değişmez değer türleri
 
-Visual Basic değişmez değer *türü karakterleri*sağlar, bu, bir hazır değeri, kendi formu dışında bir veri türünü varsaymaya zorlamak için kullanabilirsiniz. Bu, karakteri sabit değerin sonuna ekleyerek yapabilirsiniz. Aşağıdaki tabloda, kullanılabilir değişmez değer türü karakterleri kullanım örnekleri ile gösterilmektedir.
+Visual Basic değişmez değer *türü karakterleri* sağlar, bu, bir hazır değeri, kendi formu dışında bir veri türünü varsaymaya zorlamak için kullanabilirsiniz. Bu, karakteri sabit değerin sonuna ekleyerek yapabilirsiniz. Aşağıdaki tabloda, kullanılabilir değişmez değer türü karakterleri kullanım örnekleri ile gösterilmektedir.
   
 |Değişmez değer türü karakteri|Veri türü|Örnek|  
 |----------------------------|---------------|-------------|  
@@ -132,7 +133,7 @@ Dim flags As UShort = &H8000US
 
 Önceki örnekte, `counter` -32768 ondalık değerine sahiptir ve `flags` + 32768 ondalık değerine sahiptir.
 
-Visual Basic 15,5 ' den başlayarak, alt çizgi karakterini ( `_` ) ön ek ile onaltılı, ikili veya sekizlik basamaklar arasında önde gelen bir ayırıcı olarak da kullanabilirsiniz. Örnek:
+Visual Basic 15,5 ' den başlayarak, alt çizgi karakterini ( `_` ) ön ek ile onaltılı, ikili veya sekizlik basamaklar arasında önde gelen bir ayırıcı olarak da kullanabilirsiniz. Örneğin:
 
 ```vb
 Dim number As Integer = &H_C305_F860
@@ -144,7 +145,7 @@ Dim number As Integer = &H_C305_F860
 
 - [Veri türleri](index.md)
 - [Başlangıç Veri Türleri](elementary-data-types.md)
-- [Değer Türleri ve Başvuru Türleri](value-types-and-reference-types.md)
+- [Değer türleri ve başvuru türleri](value-types-and-reference-types.md)
 - [Visual Basic'de Tür Dönüştürmeleri](type-conversions.md)
 - [Veri Türü Sorunlarını Giderme](troubleshooting-data-types.md)
 - [Değişken Bildirimi](../variables/variable-declaration.md)

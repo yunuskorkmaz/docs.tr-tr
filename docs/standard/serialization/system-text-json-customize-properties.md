@@ -1,7 +1,7 @@
 ---
 title: İle özellik adlarını ve değerleri özelleştirme System.Text.Json
 description: .NET ' te ile serileştirilirken özellik adlarını ve değerlerini özelleştirmeyi öğrenin System.Text.Json .
-ms.date: 11/30/2020
+ms.date: 02/01/2021
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 4b88509313e719ea993e00d889bc6145f4976a2d
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: f38511838fee299880ba7ca50c071aa790a031cd
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97008909"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100438183"
 ---
-# <a name="how-to-customize-property-names-and-values-with-no-locsystemtextjson"></a>İle özellik adlarını ve değerleri özelleştirme System.Text.Json
+# <a name="how-to-customize-property-names-and-values-with-systemtextjson"></a>İle özellik adlarını ve değerleri özelleştirme System.Text.Json
 
 Varsayılan olarak, özellik adları ve sözlük anahtarları, büyük/küçük harf gibi JSON çıktısında değiştirilmez. Sabit listesi değerleri sayı olarak temsil edilir. Bu makalede şunları yapmayı öğreneceksiniz:
 
@@ -53,6 +53,7 @@ Bu öznitelik tarafından ayarlanan özellik adı:
 
 * Serileştirme ve seri durumundan çıkarma için her iki yönde de geçerlidir.
 * Özellik adlandırma ilkelerine göre önceliklidir.
+* [Parametreli oluşturucular için parametre adı eşleştirmeyi etkilemez](system-text-json-immutability.md#immutable-types-and-records).
 
 ## <a name="use-camel-case-for-all-json-property-names"></a>Tüm JSON Özellik adları için ortası Case kullanın
 
