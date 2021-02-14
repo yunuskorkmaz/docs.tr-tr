@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: Bu sistem SimplifiedChinese yerel ayarı için destek içermez'
 title: Bu sistem SimplifiedChinese yerel ayarı için destek içermiyor
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_SCNotSupported
 ms.assetid: 197d17cb-2904-4e12-8e45-aba23bddec8c
-ms.openlocfilehash: 05670ede3f6f40d309babc4d9e7b8709a86800ce
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 5c40d26d03255ec05e44a2b09b558328b027a2f7
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078456"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100427654"
 ---
 # <a name="this-system-does-not-contain-support-for-the-simplifiedchinese-locale"></a>Bu sistem SimplifiedChinese yerel ayarı için destek içermiyor
 

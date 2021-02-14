@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: nesne odaklı programlama (Visual Basic)'
 title: Nesne odaklı programlama
 ms.date: 07/20/2015
 ms.assetid: 49794de4-64c3-473c-b8ed-fe98835df69c
-ms.openlocfilehash: f7e222cde8ce80d4c52cc8b4b111c576eb4041b9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: af2fbac16bfefc90876bf22bb8c67de162ee6459
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413199"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100486803"
 ---
 # <a name="object-oriented-programming-visual-basic"></a>Nesne odaklı programlama (Visual Basic)
 
@@ -27,7 +28,7 @@ Visual Basic, kapsülleme, devralma ve çok biçimlilik dahil olmak üzere nesne
     - [Yöntemler](#methods)
     - [Oluşturucular](#constructors)
     - [Yıkıcılar](#destructors)
-    - [Olaylar](#events)
+    - [Ekinlikler](#events)
     - [İç içe geçmiş sınıflar](#nested-classes)
   - [Erişim değiştiricileri ve erişim düzeyleri](#access-modifiers-and-access-levels)
     - [Sınıfları örnekleme](#instantiating-classes)
@@ -41,7 +42,7 @@ Visual Basic, kapsülleme, devralma ve çok biçimlilik dahil olmak üzere nesne
 
 ## <a name="classes-and-objects"></a>Sınıflar ve nesneler
 
-Terimler *sınıfı* ve *nesne* bazen birbirinin yerine kullanılır, ancak aslında nesneler sınıfların kullanılabilir *örnekleri* olduğunda sınıflar nesne *türünü* betimler. Bu nedenle, bir nesne oluşturma konusuna *örnek*oluşturma denir. Şema benzerleme vurguladı kullanarak bir sınıf şeması bir şema, bir nesne ise bu şema tarafından oluşturulan bir derleme.
+Terimler *sınıfı* ve *nesne* bazen birbirinin yerine kullanılır, ancak aslında nesneler sınıfların kullanılabilir *örnekleri* olduğunda sınıflar nesne *türünü* betimler. Bu nedenle, bir nesne oluşturma konusuna *örnek* oluşturma denir. Şema benzerleme vurguladı kullanarak bir sınıf şeması bir şema, bir nesne ise bu şema tarafından oluşturulan bir derleme.
 
 Bir sınıf tanımlamak için:
 
@@ -137,7 +138,7 @@ Class SampleClass
 End Class
 ```
 
-Bir sınıf, parametrelerin veya parametre türlerinin sayısında farklı olan aynı yöntemin çeşitli uygulamalarına veya *aşırı*yüküne sahip olabilir.
+Bir sınıf, parametrelerin veya parametre türlerinin sayısında farklı olan aynı yöntemin çeşitli uygulamalarına veya *aşırı* yüküne sahip olabilir.
 
 Bir yöntemi aşırı yüklemek için:
 
@@ -157,7 +158,7 @@ Daha fazla bilgi için bkz.
 - [Function Deyimi](../../language-reference/statements/function-statement.md)
 - [Sub Deyimi](../../language-reference/statements/sub-statement.md)
 - [Aşırı Yüklemeler](../../language-reference/modifiers/overloads.md)
-- [Uzantı yöntemleri](../language-features/procedures/extension-methods.md)
+- [Uzantı Metotları](../language-features/procedures/extension-methods.md)
 
 #### <a name="constructors"></a>Oluşturucular
 
@@ -181,9 +182,9 @@ Yok ediciler sınıfların örneklerini deketmek için kullanılır. .NET Framew
 
 .NET Framework Yıkıcılar ve çöp toplama hakkında daha fazla bilgi için bkz. [çöp toplama](../../../standard/garbage-collection/index.md).
 
-#### <a name="events"></a>Olaylar
+#### <a name="events"></a>Ekinlikler
 
-Olaylar, bir sınıf ya da nesnenin, ilgi çekici bir şeyler gerçekleştiğinde diğer sınıflara veya nesnelere bildirilmesini sağlar. Olayı gönderen (veya Başlatan) sınıf *Yayımcı* olarak adlandırılır ve olayı alan (veya işleyen) sınıflar *aboneler*olarak adlandırılır. Olaylar, nasıl oluşturulur ve işlenir hakkında daha fazla bilgi için bkz. [Olaylar](../../../standard/events/index.md).
+Olaylar, bir sınıf ya da nesnenin, ilgi çekici bir şeyler gerçekleştiğinde diğer sınıflara veya nesnelere bildirilmesini sağlar. Olayı gönderen (veya Başlatan) sınıf *Yayımcı* olarak adlandırılır ve olayı alan (veya işleyen) sınıflar *aboneler* olarak adlandırılır. Olaylar, nasıl oluşturulur ve işlenir hakkında daha fazla bilgi için bkz. [Olaylar](../../../standard/events/index.md).
 
 - Olayları bildirmek için [Event ifadesini](../../language-reference/statements/event-statement.md)kullanın.
 
@@ -195,7 +196,7 @@ Olaylar, bir sınıf ya da nesnenin, ilgi çekici bir şeyler gerçekleştiğind
 
 #### <a name="nested-classes"></a>İç içe geçmiş sınıflar
 
-Başka bir sınıf içinde tanımlı bir sınıf *iç içe*çağırılır. Varsayılan olarak, iç içe yerleştirilmiş sınıf özeldir.
+Başka bir sınıf içinde tanımlı bir sınıf *iç içe* çağırılır. Varsayılan olarak, iç içe yerleştirilmiş sınıf özeldir.
 
 ```vb
 Class Container
@@ -213,16 +214,16 @@ Dim nestedInstance As Container.Nested = New Container.Nested()
 
 ### <a name="access-modifiers-and-access-levels"></a>Erişim değiştiricileri ve erişim düzeyleri
 
-Tüm sınıflar ve sınıf üyeleri, *erişim değiştiricilerini*kullanarak diğer sınıflara hangi erişim düzeyini sundukları belirler.
+Tüm sınıflar ve sınıf üyeleri, *erişim değiştiricilerini* kullanarak diğer sınıflara hangi erişim düzeyini sundukları belirler.
 
 Aşağıdaki erişim değiştiriciler kullanılabilir:
 
 |Visual Basic değiştirici|Tanım|
 |---------------------------|----------------|
-|[Geneldir](../../language-reference/modifiers/public.md)|Türe veya üyeye aynı derlemedeki veya buna başvuran başka bir derlemede bir veya daha fazla kod tarafından erişilebilir.|
-|[Özelleştirme](../../language-reference/modifiers/private.md)|Türe veya üyeye yalnızca aynı sınıftaki kodla erişilebilir.|
+|[Genel](../../language-reference/modifiers/public.md)|Türe veya üyeye aynı derlemedeki veya buna başvuran başka bir derlemede bir veya daha fazla kod tarafından erişilebilir.|
+|[Özel](../../language-reference/modifiers/private.md)|Türe veya üyeye yalnızca aynı sınıftaki kodla erişilebilir.|
 |[Korunamadı](../../language-reference/modifiers/protected.md)|Türe veya üyeye yalnızca aynı sınıftaki veya türetilmiş bir sınıftaki kodla erişilebilir.|
-|[Dost](../../language-reference/modifiers/friend.md)|Türe veya üyeye aynı derlemedeki kod tarafından erişilebilir, ancak başka bir derlemeden erişilebilir.|
+|[Arkadaş](../../language-reference/modifiers/friend.md)|Türe veya üyeye aynı derlemedeki kod tarafından erişilebilir, ancak başka bir derlemeden erişilebilir.|
 |`Protected Friend`|Türe veya üyeye aynı derlemedeki herhangi bir kod ya da başka bir derlemedeki türetilmiş bir sınıf tarafından erişilebilir.|
 
 Daha fazla bilgi için bkz. [Visual Basic erişim düzeyleri](../language-features/declared-elements/access-levels.md).
@@ -278,7 +279,7 @@ MsgBox(SampleClass.SampleString)
 
  Daha fazla bilgi için bkz.
 
-- [Shared](../../language-reference/modifiers/shared.md)
+- [Paylaşılan](../../language-reference/modifiers/shared.md)
 - [Module Deyimi](../../language-reference/statements/module-statement.md)
 
 ### <a name="anonymous-types"></a>Anonim türler
@@ -297,7 +298,7 @@ Daha fazla bilgi için bkz: [anonim türler](../language-features/objects-and-cl
 
 ## <a name="inheritance"></a>Devralma
 
-Devralma, başka bir sınıfta tanımlanan davranışı yeniden kullanan, genişleten ve değiştiren yeni bir sınıf oluşturmanıza olanak sağlar. Üyeleri devralınmış olan sınıfa *temel sınıf*denir ve bu üyeleri devralan sınıfa *türetilmiş sınıf*denir. Ancak Visual Basic içindeki tüm sınıflar, <xref:System.Object> .NET sınıf hiyerarşisini destekleyen sınıftan dolaylı olarak devralınır ve tüm sınıflara alt düzey hizmetler sağlar.
+Devralma, başka bir sınıfta tanımlanan davranışı yeniden kullanan, genişleten ve değiştiren yeni bir sınıf oluşturmanıza olanak sağlar. Üyeleri devralınmış olan sınıfa *temel sınıf* denir ve bu üyeleri devralan sınıfa *türetilmiş sınıf* denir. Ancak Visual Basic içindeki tüm sınıflar, <xref:System.Object> .NET sınıf hiyerarşisini destekleyen sınıftan dolaylı olarak devralınır ve tüm sınıflara alt düzey hizmetler sağlar.
 
 > [!NOTE]
 > Visual Basic birden çok devralmayı desteklemez. Diğer bir deyişle, türetilmiş bir sınıf için yalnızca bir temel sınıf belirtebilirsiniz.

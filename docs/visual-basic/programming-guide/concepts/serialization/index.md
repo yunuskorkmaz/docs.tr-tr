@@ -1,13 +1,14 @@
 ---
+description: ': Serileştirme (Visual Basic) hakkında daha fazla bilgi'
 title: Serileştirme
 ms.date: 07/20/2015
 ms.assetid: 67379a76-5465-4af8-a781-0b0b25a62d9a
-ms.openlocfilehash: 98400c9e7ed9e26a9dc6ca548988c3691bfecdc2
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: dcc10591bc9e220bc5bebd8fa9b6ac90a307e540
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086510"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100486907"
 ---
 # <a name="serialization-visual-basic"></a>Serileştirme (Visual Basic)
 

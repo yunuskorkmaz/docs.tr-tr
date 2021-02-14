@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi için Visual Basic: mantıksal ve bit düzeyinde Işleçler'
 title: Mantıksal ve Bit Düzeyinde İşleçler
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - OrElse operator [Visual Basic]
 - logical operators [Visual Basic], unary
 ms.assetid: ca474e13-567d-4b1d-a18b-301433705e57
-ms.openlocfilehash: c15b9337f262563941699c0ff8fe5219ca6a5c93
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 55d9567813a9114573e1e3f70fe181cb8621b350
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086003"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100472728"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Visual Basic'de Mantıksal ve Bit Düzeyinde İşleçler
 
-Mantıksal işleçler `Boolean` ifadeleri karşılaştırır ve bir `Boolean` sonuç döndürür. `And`,, `Or` , `AndAlso` `OrElse` Ve `Xor` işleçleri iki işlenen kullandığından, *binary* `Not` tek bir işlenen aldığı için işleç *tekil* olduğu için ikili bir dosyaysa. Bu işleçlerden bazıları, tam sayı değerlerinde bit düzeyinde mantıksal işlemler de gerçekleştirebilir.  
+Mantıksal işleçler `Boolean` ifadeleri karşılaştırır ve bir `Boolean` sonuç döndürür. `And`,, `Or` , `AndAlso` `OrElse` Ve `Xor` işleçleri iki işlenen kullandığından,  `Not` tek bir işlenen aldığı için işleç *tekil* olduğu için ikili bir dosyaysa. Bu işleçlerden bazıları, tam sayı değerlerinde bit düzeyinde mantıksal işlemler de gerçekleştirebilir.  
   
 ## <a name="unary-logical-operator"></a>Birli mantıksal Işleç  
 
@@ -50,13 +51,13 @@ Mantıksal işleçler `Boolean` ifadeleri karşılaştırır ve bir `Boolean` so
   
  [!code-vb[VbVbalrOperators#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#78)]  
   
-## <a name="short-circuiting-logical-operations"></a>Kısa devre mantıksal Işlemler yürütülüyor  
+## <a name="short-circuiting-logical-operations"></a>Short-Circuiting mantıksal Işlemler  
 
- [AndAlso işleci](../../../language-reference/operators/andalso-operator.md) , `And` işleçle çok benzerdir, bu da iki ifadeye de mantıksal bir işlem yapar `Boolean` . İkisi arasındaki temel fark, kısa devre uygulayan `AndAlso` davranışı *short-circuiting* gösteriyor. Bir ifadedeki ilk ifade `AndAlso` olarak değerlendirilirse `False` , ikinci ifade nihai sonucu değiştirmediği ve döndürdüğü için değerlendirilmez `AndAlso` `False` .  
+ [AndAlso işleci](../../../language-reference/operators/andalso-operator.md) , `And` işleçle çok benzerdir, bu da iki ifadeye de mantıksal bir işlem yapar `Boolean` . İkisi arasındaki temel fark, kısa devre uygulayan `AndAlso` davranışı  gösteriyor. Bir ifadedeki ilk ifade `AndAlso` olarak değerlendirilirse `False` , ikinci ifade nihai sonucu değiştirmediği ve döndürdüğü için değerlendirilmez `AndAlso` `False` .  
   
  Benzer şekilde, [OrElse işleci](../../../language-reference/operators/orelse-operator.md) iki ifadeye kısa devre uygulayan mantıksal bir birleşim uygular `Boolean` . Bir ifadedeki ilk ifade `OrElse` olarak değerlendirilirse `True` , ikinci ifade nihai sonucu değiştirmediği ve döndürdüğü için değerlendirilmez `OrElse` `True` .  
   
-### <a name="short-circuiting-trade-offs"></a>Kısa süreli bir denge  
+### <a name="short-circuiting-trade-offs"></a>Short-Circuiting Trade-Offs  
 
  Kısa devre uygulayan, mantıksal işlemin sonucunu değiştirebilecek bir ifadeyi değerlendirmeden performansı iyileştirebilir. Ancak, bu ifade ek eylemler gerçekleştirdiğinde, kısa devre uygulayan bu eylemleri atlar. Örneğin, ifade bir yordama çağrı içeriyorsa `Function` , ifade kısa devre dışı ise ve içinde yer alan ek kodlar çalıştırılsa, bu yordam çağrılmaz `Function` . Bu nedenle, işlev yalnızca belirli bir zaman çalışabilir ve doğru şekilde sınanmayabilir. Ya da program mantığı içindeki koda bağlı olabilirler `Function` .  
   

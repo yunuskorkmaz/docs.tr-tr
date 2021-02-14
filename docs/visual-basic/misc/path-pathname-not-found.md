@@ -1,15 +1,16 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: ' <pathname> ' yolu bulunamadı"
 title: "' <pathname> ' Yolu bulunamadı"
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_PathNotFound1
 ms.assetid: 184d09ab-771f-4298-bd71-94b33efc325b
-ms.openlocfilehash: c9b10aecd906b0a132f3c34d5f4d9c085ff96b32
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 5b30a87f2c68ea99a0a6b038db5a4f9d516c29ab
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078768"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100486790"
 ---
 # <a name="path-pathname-not-found"></a>' \<pathname> ' Yolu bulunamadı
 

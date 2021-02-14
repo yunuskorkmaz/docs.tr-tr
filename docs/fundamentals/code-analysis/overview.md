@@ -8,21 +8,21 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: 2cda5a23bbc90ca5dc2305b5d7023e8ea6120b79
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: eb978d6af6695fd2e4b5473ac5c0dc216e726e52
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99643078"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100459961"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>.NET kaynak kodu çözümlemesine genel bakış
 
-.NET derleyici platformu (Roslyn) çözümleyicileri, C# veya Visual Basic kodunuzda kod kalitesi ve kod stili sorunları olup olmadığını inceler. .NET 5,0 ' den itibaren bu çözümleyiciler .NET SDK 'ya dahildir ve bunları ayrı olarak yüklemeniz gerekmez. Projeniz .NET 5 veya sonraki bir sürümünü hedefliyorsa, kod analizi varsayılan olarak etkindir. Projeniz, örneğin .NET Core, .NET Standard veya .NET Framework gibi farklı bir .NET uygulamasını hedefliyorsanız, [Enablenetçözümleyiciler](../../core/project-sdk/msbuild-props.md#enablenetanalyzers) özelliğini olarak ayarlayarak Kod analizini el ile etkinleştirmeniz gerekir `true` .
+.NET derleyici platformu (Roslyn) Çözümleyicileri, kod kalitesi ve stil sorunları için C# veya Visual Basic kodunuzu inceler. .NET 5,0 ' den itibaren bu çözümleyiciler .NET SDK 'ya dahildir ve bunları ayrı olarak yüklemeniz gerekmez. Projeniz .NET 5 veya sonraki bir sürümünü hedefliyorsa, kod analizi varsayılan olarak etkindir. Projeniz örneğin .NET Core, .NET Standard veya .NET Framework gibi farklı bir .NET uygulamasını hedefliyorsa, [Enablenetçözümleyiciler](../../core/project-sdk/msbuild-props.md#enablenetanalyzers) özelliğini olarak ayarlayarak Kod analizini el ile etkinleştirmeniz gerekir `true` .
 
-.NET 5 + SDK ' ya geçmek istemiyorsanız veya bir NuGet paket tabanlı modeli tercih ediyorsanız, çözümleyiciler [Microsoft. CodeAnalysis. Netçözümleyiciler NuGet paketinde](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers)de mevcuttur. İsteğe bağlı sürüm güncelleştirmeleri için paket tabanlı bir model tercih edebilirsiniz.
+.NET 5 + SDK ' ya geçmek istemiyorsanız, SDK olmayan bir .NET Framework projesi veya NuGet paket tabanlı bir model tercih ediyorsanız, çözümleyiciler [Microsoft. CodeAnalysis. Netçözümleyiciler NuGet paketinde](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers)de mevcuttur. İsteğe bağlı sürüm güncelleştirmeleri için paket tabanlı bir model tercih edebilirsiniz.
 
 > [!NOTE]
-> .NET Çözümleyicileri hedef çerçeve belirsiz. Diğer bir deyişle, projenizin belirli bir .NET uygulamasını hedeflemesi gerekmez. Çözümleyiciler, `net5.0` ve gibi önceki .NET sürümlerinin yanı sıra hedeflenen projeler için de çalışır `netcoreapp3.1` `net472` .
+> .NET Çözümleyicileri hedef çerçeve belirsiz. Diğer bir deyişle, projenizin belirli bir .NET uygulamasını hedeflemesi gerekmez. Çözümleyiciler, `net5.0` ve gibi önceki .NET sürümlerinin yanı sıra hedeflenen projeler için de çalışır `netcoreapp3.1` `net472` . Ancak, [Enablenetçözümleyiciler](../../core/project-sdk/msbuild-props.md#enablenetanalyzers) özelliğini kullanarak kod analizini etkinleştirmek için projeniz bir [Proje SDK 'sına](../../core/project-sdk/overview.md)başvurmalıdır.
 
 Kural ihlalleri bir çözümleyici tarafından bulunursa, her kuralın nasıl [yapılandırıldığına](configuration-options.md)bağlı olarak öneri, uyarı veya hata olarak bildirilir. Kod Analizi ihlalleri, derleyici hatalarından ayırt edilebilmesi için "CA" veya "IDE" önekiyle birlikte görüntülenir.
 
@@ -58,7 +58,7 @@ Bu kuralların önem derecesini devre dışı bırakmak veya hatalara yükseltme
 
 ### <a name="enable-additional-rules"></a>Ek kuralları etkinleştir
 
-*Analiz modu* , hiçbir yerde, bazı veya tüm kuralların etkin olduğu önceden tanımlanmış bir kod analizi yapılandırmasına başvurur. Varsayılan analiz modunda, [derleme uyarıları olarak](#enabled-rules)yalnızca az sayıda kural etkindir. Proje dosyasındaki [analysismode](../../core/project-sdk/msbuild-props.md#analysismode) özelliğini ayarlayarak projenizin analiz modunu değiştirebilirsiniz. İzin verilen değerler şunlardır:
+*Analiz modu* , hiçbir yerde, bazı veya tüm kuralların etkin olduğu önceden tanımlanmış bir kod analizi yapılandırmasına başvurur. Varsayılan analiz modunda, [derleme uyarıları olarak](#enabled-rules)yalnızca az sayıda kural etkindir. Proje dosyasındaki özelliğini ayarlayarak projeniz için analiz modunu değiştirebilirsiniz [\<AnalysisMode>](../../core/project-sdk/msbuild-props.md#analysismode) . İzin verilen değerler şunlardır:
 
 | Değer | Açıklama |
 | - | - |

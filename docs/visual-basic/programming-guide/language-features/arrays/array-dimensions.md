@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Visual Basic dizi boyutları'
 title: Dizi Boyutları
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-ms.openlocfilehash: f971f0c3693177adbcb8869d487e3ad41d49ddc2
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 055a3efc1410bf80daf3804453adc2c20266733c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413110"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100486556"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Visual Basic'de Dizi Boyutları
 
-*Boyut* , bir dizinin öğelerinin belirtimini değiştirebileceğiniz bir yöndir. Ayın her günü için satış toplamı tutan bir dizinin bir boyutu (ayın günü) vardır. Ayın her günü için departmanın satış toplamı tutan bir dizinin iki boyutu vardır (Departman numarası ve ayın günü). Bir dizinin sahip olduğu boyut sayısı *derece*olarak adlandırılır.
+*Boyut* , bir dizinin öğelerinin belirtimini değiştirebileceğiniz bir yöndir. Ayın her günü için satış toplamı tutan bir dizinin bir boyutu (ayın günü) vardır. Ayın her günü için departmanın satış toplamı tutan bir dizinin iki boyutu vardır (Departman numarası ve ayın günü). Bir dizinin sahip olduğu boyut sayısı *derece* olarak adlandırılır.
 
 > [!NOTE]
 > <xref:System.Array.Rank%2A>Bir dizinin kaç boyut olduğunu anlamak için özelliğini kullanabilirsiniz.
@@ -51,7 +52,7 @@ Bazı diziler, kampüs üzerinde her binadaki her bir kata ait ofislerin sayıs�
 Dim officeCounts(40, 5) As Byte
 ```
 
-İki boyutlu bir dizi *dikdörtgen dizi*olarak da adlandırılır.
+İki boyutlu bir dizi *dikdörtgen dizi* olarak da adlandırılır.
 
 ### <a name="three-dimensions"></a>Üç boyut
 

@@ -1,22 +1,23 @@
 ---
+description: 'Daha fazla bilgi edinin: kültür Visual Basic içindeki dizeleri nasıl etkiler'
 title: Kültürün Visual Basic'te Dizelere Etkisi
 ms.date: 07/20/2015
 helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: 878e028f7c7f0e93752765272e93baa3ffe1426d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e1d330c9bf879ad174f58d7a91c0ddac7e68c0dd
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91059228"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100459974"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Kültürün Visual Basic'de Dizeleri Etkilemesi
 
 Bu yardım sayfası, Visual Basic dize dönüştürmeleri ve karşılaştırmaları gerçekleştirmek için kültür bilgilerini nasıl kullandığını açıklar.  
   
-## <a name="when-to-use-culture-specific-strings"></a>Kültüre özgü dizeler ne zaman kullanılır?  
+## <a name="when-to-use-culture-specific-strings"></a>Culture-Specific dizeleri ne zaman kullanılır?  
 
  Genellikle, kullanıcılara sunulan ve buradan okunan tüm veriler için kültüre özgü dizeler kullanmanız ve uygulamanızın iç verileri için kültür sabit dizeler kullanmanız gerekir.  
   
@@ -24,7 +25,7 @@ Bu yardım sayfası, Visual Basic dize dönüştürmeleri ve karşılaştırmala
   
  Ancak, uygulama tarihi bir merkezi sunucuya yüklediğinde, potansiyel olarak farklı tarih biçimleri arasında karışıklık oluşmasını önlemek için dizeyi tek bir belirli kültüre göre biçimlendirmelidir.  
   
-## <a name="culture-sensitive-functions"></a>Kültüre duyarlı Işlevler  
+## <a name="culture-sensitive-functions"></a>Culture-Sensitive Işlevleri  
 
  Tüm Visual Basic dize dönüştürme işlevleri ( `Str` ve `Val` işlevleri hariç), dönüştürmelerin ve karşılaştırmaların uygulamanın kullanıcı kültürü için uygun olduğundan emin olmak için uygulamanın kültür bilgilerini kullanır.  
   

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Visual Basic aritmetik Işleçler'
 title: Aritmetik İşleçler
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: 023e479736285aa2d04509e05f49fe930cb4721d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 3a7005b0a44f9b0358e393d8580a2a19a9a19881
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090085"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100465333"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Visual Basic'de Aritmetik İşleçler
 
@@ -66,7 +67,7 @@ Aritmetik işleçler, değişmez değerler, değişkenler, diğer ifadeler, işl
   
  Bir <xref:System.DivideByZeroException> özel durumu yakalarsanız, bunu işleyebilmeniz için üyelerini kullanabilirsiniz. Örneğin, <xref:System.Exception.Message%2A> özelliği özel durum için ileti metnini tutar. Daha fazla bilgi için bkz [. TRY... Yakala... Finally ekstresi](../../../language-reference/statements/try-catch-finally-statement.md).  
   
-## <a name="bit-shift-operations"></a>Bit kaydırma Işlemleri  
+## <a name="bit-shift-operations"></a>Bit-Shift Işlemler  
 
  Bit kaydırma işlemi bir bit düzeninde aritmetik kaydırma gerçekleştirir. Model, sol taraftaki işlenende bulunur, ancak sağdaki işlenen, kalıbı kaydırmak için konumların sayısını belirtir. [>> işleçle](../../../language-reference/operators/right-shift-operator.md) veya [<< işleci](../../../language-reference/operators/left-shift-operator.md)ile sola doğru bir düzende kaydırma yapabilirsiniz.  
   

@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: TargetFilePath var olan bir klasörü belirtir'
 title: TargetFilePath var olan bir klasörü belirtir
 ms.date: 07/20/2015
 ms.assetid: 2334f49e-d080-4ee2-b036-f95c7f76c3ec
-ms.openlocfilehash: 51fe7d8d452353c4e662f173e851a46030ec4bfd
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: b1f2c50c02750a932bcda622725b09a0f3eba7fc
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078534"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100455359"
 ---
 # <a name="targetfilepath-specifies-an-existing-folder"></a>TargetFilePath var olan bir klasörü belirtir
 

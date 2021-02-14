@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Izlenecek yol: olayları Işleme (Visual Basic)'
 title: Olayları İşleme
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 4489f75e50a783a9b1acfb9c30568fdec6614488
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 5101bd2287c81e03efb69b398d6cc961d3e6d9dc
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91057916"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100436193"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>İzlenecek yol: Olayları İşleme (Visual Basic)
 
@@ -36,11 +37,11 @@ Bu, etkinliklerle nasıl çalışabileceğini gösteren iki konunun ikinci konud
   
 ## <a name="writing-code-to-handle-an-event"></a>Bir olayı Işlemek için kod yazma  
 
- Kullanarak bir değişken bildirdikten hemen sonra `WithEvents` , sınıfın **kod düzenleyicisinin**sol açılır listesinde değişken adı belirir. Seçtiğinizde `mWidget` , `Widget` sınıfın olayları sağ açılan listede görüntülenir. Bir olay seçilmesi, ilgili olay yordamını önek `mWidget` ve alt çizgi ile görüntüler. Bir değişkenle ilişkili tüm olay yordamlarına `WithEvents` önek olarak değişken adı verilir.  
+ Kullanarak bir değişken bildirdikten hemen sonra `WithEvents` , sınıfın **kod düzenleyicisinin** sol açılır listesinde değişken adı belirir. Seçtiğinizde `mWidget` , `Widget` sınıfın olayları sağ açılan listede görüntülenir. Bir olay seçilmesi, ilgili olay yordamını önek `mWidget` ve alt çizgi ile görüntüler. Bir değişkenle ilişkili tüm olay yordamlarına `WithEvents` önek olarak değişken adı verilir.  
   
 #### <a name="to-handle-an-event"></a>Bir olayı işlemek için  
   
-1. `mWidget` **Kod düzenleyicisinde**sol aşağı açılan listeden seçim yapın.  
+1. `mWidget` **Kod düzenleyicisinde** sol aşağı açılan listeden seçim yapın.  
   
 2. `PercentDone`Sağ açılan listeden olayı seçin. **Kod Düzenleyicisi** `mWidget_PercentDone` olay yordamını açar.  
   
@@ -67,7 +68,7 @@ Bu, etkinliklerle nasıl çalışabileceğini gösteren iki konunun ikinci konud
   
 #### <a name="to-create-an-object-and-assign-a-reference-to-it"></a>Bir nesne oluşturmak ve buna bir başvuru atamak için  
   
-1. **Kod düzenleyicisinde**sol aşağı açılan listeden **(Form1 olayları)** öğesini seçin.  
+1. **Kod düzenleyicisinde** sol aşağı açılan listeden **(Form1 olayları)** öğesini seçin.  
   
 2. `Load`Sağ açılan listeden olayı seçin. **Kod Düzenleyicisi** `Form1_Load` olay yordamını açar.  
   
