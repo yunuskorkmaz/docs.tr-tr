@@ -1,24 +1,25 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: özellik <propertyname> boş bir dizeye veya Nothing olarak ayarlanamaz'
 title: Özellik <propertyname> boş bir dizeye veya Nothing olarak ayarlanamaz
 ms.date: 07/20/2015
 ms.assetid: c4f6ceb2-cee0-4e79-9cc6-cb20276d24f8
-ms.openlocfilehash: c7f4e27aa03d6c5f97c9905eada7c4e9aab594d7
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: dbaf4ebd1238e3341facb767c86640edb93a36be
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077468"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100454787"
 ---
-# <a name="property-propertyname-cannot-be-set-to-an-empty-string-or-nothing"></a><span data-ttu-id="cf8e6-102">Özellik \<propertyname> boş bir dizeye veya Nothing olarak ayarlanamaz</span><span class="sxs-lookup"><span data-stu-id="cf8e6-102">Property \<propertyname> cannot be set to an empty string or Nothing</span></span>
+# <a name="property-propertyname-cannot-be-set-to-an-empty-string-or-nothing"></a><span data-ttu-id="ad6f8-103">Özellik \<propertyname> boş bir dizeye veya Nothing olarak ayarlanamaz</span><span class="sxs-lookup"><span data-stu-id="ad6f8-103">Property \<propertyname> cannot be set to an empty string or Nothing</span></span>
 
-<span data-ttu-id="cf8e6-103">Özelliği, boş bir dize ("") veya ya da dışında bir değer gerektirir `Nothing` .</span><span class="sxs-lookup"><span data-stu-id="cf8e6-103">The property requires a value other than an empty string ("") or `Nothing`.</span></span> <span data-ttu-id="cf8e6-104">Bu, değerin yanlış hesaplanmasının bir sonucu olabilir.</span><span class="sxs-lookup"><span data-stu-id="cf8e6-104">This may be a result of incorrectly calculating the value.</span></span>  
+<span data-ttu-id="ad6f8-104">Özelliği, boş bir dize ("") veya ya da dışında bir değer gerektirir `Nothing` .</span><span class="sxs-lookup"><span data-stu-id="ad6f8-104">The property requires a value other than an empty string ("") or `Nothing`.</span></span> <span data-ttu-id="ad6f8-105">Bu, değerin yanlış hesaplanmasının bir sonucu olabilir.</span><span class="sxs-lookup"><span data-stu-id="ad6f8-105">This may be a result of incorrectly calculating the value.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="cf8e6-105">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="cf8e6-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="ad6f8-106">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="ad6f8-106">To correct this error</span></span>  
   
-- <span data-ttu-id="cf8e6-106">Geçerli bir değer sağlayın.</span><span class="sxs-lookup"><span data-stu-id="cf8e6-106">Supply a valid value.</span></span>  
+- <span data-ttu-id="ad6f8-107">Geçerli bir değer sağlayın.</span><span class="sxs-lookup"><span data-stu-id="ad6f8-107">Supply a valid value.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cf8e6-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="cf8e6-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ad6f8-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ad6f8-108">See also</span></span>
 
-- [<span data-ttu-id="cf8e6-108">Hata Türleri</span><span class="sxs-lookup"><span data-stu-id="cf8e6-108">Error Types</span></span>](../programming-guide/language-features/error-types.md)
-- [<span data-ttu-id="cf8e6-109">Yapma</span><span class="sxs-lookup"><span data-stu-id="cf8e6-109">Nothing</span></span>](../language-reference/nothing.md)
+- [<span data-ttu-id="ad6f8-109">Hata Türleri</span><span class="sxs-lookup"><span data-stu-id="ad6f8-109">Error Types</span></span>](../programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="ad6f8-110">Nothing</span><span class="sxs-lookup"><span data-stu-id="ad6f8-110">Nothing</span></span>](../language-reference/nothing.md)
 - <xref:System.NullReferenceException>
