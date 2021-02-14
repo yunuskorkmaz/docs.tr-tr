@@ -1,5 +1,5 @@
 ---
-description: "Şu konuda daha fazla bilgi edinin: BC30561: ' <name1> ' belirsiz, ad alanları veya türlerden içeri aktarıldı '<name2>"
+description: "Şu konuda daha fazla bilgi edinin: BC30561: ' <name1> ' belirsiz, ' ' ad alanlarından veya türlerinden içeri aktarıldı <name2>"
 title: "'<name1>' ad alanlarından veya türlerinden içeri aktarılan '<name2>' belirsiz"
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,27 +8,27 @@ f1_keywords:
 helpviewer_keywords:
 - BC30561
 ms.assetid: 761091f7-1018-4299-b481-3966a4a2c126
-ms.openlocfilehash: fab7c8242c9f388948caf5cd70beadc6c28284b7
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: d338d16c563be988c215dd19ac59174d79a8c7a7
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99795722"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100483579"
 ---
-# <a name="bc30561-name1-is-ambiguous-imported-from-the-namespaces-or-types-name2"></a><span data-ttu-id="7ccf4-103">BC30561: ' ' \<name1> belirsiz, ' ' ad alanlarından veya türlerinden içeri aktarıldı \<name2></span><span class="sxs-lookup"><span data-stu-id="7ccf4-103">BC30561: '\<name1>' is ambiguous, imported from the namespaces or types '\<name2>'</span></span>
+# <a name="bc30561-name1-is-ambiguous-imported-from-the-namespaces-or-types-name2"></a><span data-ttu-id="00154-103">BC30561: ' ' \<name1> belirsiz, ' ' ad alanlarından veya türlerinden içeri aktarıldı \<name2></span><span class="sxs-lookup"><span data-stu-id="00154-103">BC30561: '\<name1>' is ambiguous, imported from the namespaces or types '\<name2>'</span></span>
 
-<span data-ttu-id="7ccf4-104">Belirsiz bir ad sağladınız ve bu nedenle başka bir adla çakışıyor.</span><span class="sxs-lookup"><span data-stu-id="7ccf4-104">You have provided a name that is ambiguous and therefore conflicts with another name.</span></span> <span data-ttu-id="7ccf4-105">Visual Basic derleyicisinde herhangi bir çakışma çözümleme kuralı yok; adları kendiniz kesinleştirmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="7ccf4-105">The Visual Basic compiler does not have any conflict resolution rules; you must disambiguate names yourself.</span></span>
+<span data-ttu-id="00154-104">Belirsiz bir ad sağladınız ve bu nedenle başka bir adla çakışıyor.</span><span class="sxs-lookup"><span data-stu-id="00154-104">You have provided a name that is ambiguous and therefore conflicts with another name.</span></span> <span data-ttu-id="00154-105">Visual Basic derleyicisinde herhangi bir çakışma çözümleme kuralı yok; adları kendiniz kesinleştirmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="00154-105">The Visual Basic compiler does not have any conflict resolution rules; you must disambiguate names yourself.</span></span>
 
- <span data-ttu-id="7ccf4-106">**Hata kimliği:** BC30561</span><span class="sxs-lookup"><span data-stu-id="7ccf4-106">**Error ID:** BC30561</span></span>
+ <span data-ttu-id="00154-106">**Hata kimliği:** BC30561</span><span class="sxs-lookup"><span data-stu-id="00154-106">**Error ID:** BC30561</span></span>
 
-## <a name="to-correct-this-error"></a><span data-ttu-id="7ccf4-107">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="7ccf4-107">To correct this error</span></span>
+## <a name="to-correct-this-error"></a><span data-ttu-id="00154-107">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="00154-107">To correct this error</span></span>
 
-- <span data-ttu-id="7ccf4-108">Ad alanı içeri aktarmaları kaldırılarak adı belirsizliğini kaldırır.</span><span class="sxs-lookup"><span data-stu-id="7ccf4-108">Disambiguate the name by removing namespace imports.</span></span>
+- <span data-ttu-id="00154-108">Ad alanı içeri aktarmaları kaldırılarak adı belirsizliğini kaldırır.</span><span class="sxs-lookup"><span data-stu-id="00154-108">Disambiguate the name by removing namespace imports.</span></span>
 
-- <span data-ttu-id="7ccf4-109">Adı tam olarak nitelendirin.</span><span class="sxs-lookup"><span data-stu-id="7ccf4-109">Fully qualify the name.</span></span>
+- <span data-ttu-id="00154-109">Adı tam olarak nitelendirin.</span><span class="sxs-lookup"><span data-stu-id="00154-109">Fully qualify the name.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="7ccf4-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7ccf4-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="00154-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="00154-110">See also</span></span>
 
-- [<span data-ttu-id="7ccf4-111">Imports Deyimi (.NET Ad Alanı ve Türü)</span><span class="sxs-lookup"><span data-stu-id="7ccf4-111">Imports Statement (.NET Namespace and Type)</span></span>](../statements/imports-statement-net-namespace-and-type.md)
-- [<span data-ttu-id="7ccf4-112">Visual Basic'de Ad Alanları</span><span class="sxs-lookup"><span data-stu-id="7ccf4-112">Namespaces in Visual Basic</span></span>](../../programming-guide/program-structure/namespaces.md)
-- [<span data-ttu-id="7ccf4-113">Namespace Deyimi</span><span class="sxs-lookup"><span data-stu-id="7ccf4-113">Namespace Statement</span></span>](../statements/namespace-statement.md)
+- [<span data-ttu-id="00154-111">Imports Deyimi (.NET Ad Alanı ve Türü)</span><span class="sxs-lookup"><span data-stu-id="00154-111">Imports Statement (.NET Namespace and Type)</span></span>](../statements/imports-statement-net-namespace-and-type.md)
+- [<span data-ttu-id="00154-112">Visual Basic'de Ad Alanları</span><span class="sxs-lookup"><span data-stu-id="00154-112">Namespaces in Visual Basic</span></span>](../../programming-guide/program-structure/namespaces.md)
+- [<span data-ttu-id="00154-113">Namespace Deyimi</span><span class="sxs-lookup"><span data-stu-id="00154-113">Namespace Statement</span></span>](../statements/namespace-statement.md)
