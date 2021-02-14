@@ -1,19 +1,20 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: bir klasördeki dosyaların içeriğini sorgulama (LINQ) (Visual Basic)'
 title: Bir klasördeki dosyaların içeriklerini sorgulama (LINQ)
 ms.date: 07/20/2015
 ms.assetid: edacbcd3-f3e4-4429-a8be-28a58dc0dd70
-ms.openlocfilehash: 3ad5fd6c893d590d46be67e6320ac5b915829f4b
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5043f64a0bb38811b6155394b18a88f702515cc5
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346042"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434998"
 ---
-# <a name="how-to-query-the-contents-of-files-in-a-folder-linq-visual-basic"></a><span data-ttu-id="a2b12-102">Bir klasördeki dosyaların içeriğini sorgulama (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a2b12-102">How to query the contents of files in a folder (LINQ) (Visual Basic)</span></span>
+# <a name="how-to-query-the-contents-of-files-in-a-folder-linq-visual-basic"></a><span data-ttu-id="6c652-103">Bir klasördeki dosyaların içeriğini sorgulama (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6c652-103">How to query the contents of files in a folder (LINQ) (Visual Basic)</span></span>
 
-<span data-ttu-id="a2b12-103">Bu örnek, belirtilen bir dizin ağacındaki tüm dosyaların üzerinde nasıl sorgu yapılacağını, her bir dosyanın nasıl açılacağını ve içeriğini incelemenizi gösterir.</span><span class="sxs-lookup"><span data-stu-id="a2b12-103">This example shows how to query over all the files in a specified directory tree, open each file, and inspect its contents.</span></span> <span data-ttu-id="a2b12-104">Bu tür bir teknik, dizin ağacı içeriğinin dizinlerini veya ters dizinlerini oluşturmak için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="a2b12-104">This type of technique could be used to create indexes or reverse indexes of the contents of a directory tree.</span></span> <span data-ttu-id="a2b12-105">Bu örnekte basit bir dize araması gerçekleştirilir.</span><span class="sxs-lookup"><span data-stu-id="a2b12-105">A simple string search is performed in this example.</span></span> <span data-ttu-id="a2b12-106">Ancak, bir normal ifadeyle, daha karmaşık bir tür model eşleşmesi gerçekleştirilebilir.</span><span class="sxs-lookup"><span data-stu-id="a2b12-106">However, more complex types of pattern matching can be performed with a regular expression.</span></span> <span data-ttu-id="a2b12-107">Daha fazla bilgi için bkz. [nasıl yapılır: LINQ sorgularını normal Ifadelerle birleştirme (Visual Basic)](how-to-combine-linq-queries-with-regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="a2b12-107">For more information, see [How to: Combine LINQ Queries with Regular Expressions (Visual Basic)](how-to-combine-linq-queries-with-regular-expressions.md).</span></span>  
+<span data-ttu-id="6c652-104">Bu örnek, belirtilen bir dizin ağacındaki tüm dosyaların üzerinde nasıl sorgu yapılacağını, her bir dosyanın nasıl açılacağını ve içeriğini incelemenizi gösterir.</span><span class="sxs-lookup"><span data-stu-id="6c652-104">This example shows how to query over all the files in a specified directory tree, open each file, and inspect its contents.</span></span> <span data-ttu-id="6c652-105">Bu tür bir teknik, dizin ağacı içeriğinin dizinlerini veya ters dizinlerini oluşturmak için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="6c652-105">This type of technique could be used to create indexes or reverse indexes of the contents of a directory tree.</span></span> <span data-ttu-id="6c652-106">Bu örnekte basit bir dize araması gerçekleştirilir.</span><span class="sxs-lookup"><span data-stu-id="6c652-106">A simple string search is performed in this example.</span></span> <span data-ttu-id="6c652-107">Ancak, bir normal ifadeyle, daha karmaşık bir tür model eşleşmesi gerçekleştirilebilir.</span><span class="sxs-lookup"><span data-stu-id="6c652-107">However, more complex types of pattern matching can be performed with a regular expression.</span></span> <span data-ttu-id="6c652-108">Daha fazla bilgi için bkz. [nasıl yapılır: LINQ sorgularını normal Ifadelerle birleştirme (Visual Basic)](how-to-combine-linq-queries-with-regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="6c652-108">For more information, see [How to: Combine LINQ Queries with Regular Expressions (Visual Basic)](how-to-combine-linq-queries-with-regular-expressions.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a2b12-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="a2b12-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="6c652-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="6c652-109">Example</span></span>  
   
 ```vb
 Imports System.IO
@@ -73,11 +74,11 @@ Module Module1
 End Module
 ```
 
-## <a name="compile-the-code"></a><span data-ttu-id="a2b12-109">Kod derleme</span><span class="sxs-lookup"><span data-stu-id="a2b12-109">Compile the code</span></span>
+## <a name="compile-the-code"></a><span data-ttu-id="6c652-110">Kodu derle</span><span class="sxs-lookup"><span data-stu-id="6c652-110">Compile the code</span></span>
 
-<span data-ttu-id="a2b12-110">Visual Basic konsol uygulaması projesi oluşturun, kod örneğini kopyalayıp yapıştırın ve proje özelliklerindeki başlangıç nesnesi değerini ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="a2b12-110">Create a Visual Basic console application project, copy and paste the code sample, and adjust the Startup object value in the project properties.</span></span>
+<span data-ttu-id="6c652-111">Visual Basic konsol uygulaması projesi oluşturun, kod örneğini kopyalayıp yapıştırın ve proje özelliklerindeki başlangıç nesnesi değerini ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="6c652-111">Create a Visual Basic console application project, copy and paste the code sample, and adjust the Startup object value in the project properties.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="a2b12-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a2b12-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6c652-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6c652-112">See also</span></span>
 
-- [<span data-ttu-id="a2b12-112">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a2b12-112">LINQ to Objects (Visual Basic)</span></span>](linq-to-objects.md)
-- [<span data-ttu-id="a2b12-113">LINQ ve dosya dizinleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a2b12-113">LINQ and File Directories (Visual Basic)</span></span>](linq-and-file-directories.md)
+- [<span data-ttu-id="6c652-113">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6c652-113">LINQ to Objects (Visual Basic)</span></span>](linq-to-objects.md)
+- [<span data-ttu-id="6c652-114">LINQ ve dosya dizinleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6c652-114">LINQ and File Directories (Visual Basic)</span></span>](linq-and-file-directories.md)

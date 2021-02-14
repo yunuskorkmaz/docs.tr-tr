@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: ne yazık ki bu Visual Basic hata ile ilgili bilgiler yok'
 title: Maalesef bu Visual Basic hatasıyla ilgili ayrıntı yok
 ms.date: 07/20/2015
 f1_keywords:
@@ -3044,36 +3045,36 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: d96f2512e2fae038853baedfb78fcf2feb84542b
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 51cd9e21ba40677953fc63d64758dd9c122bc69c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91059646"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100431151"
 ---
-# <a name="sorry-we-dont-have-specifics-on-this-visual-basic-error"></a><span data-ttu-id="f6d38-102">Maalesef bu Visual Basic hatasıyla ilgili ayrıntı yok</span><span class="sxs-lookup"><span data-stu-id="f6d38-102">Sorry, we don't have specifics on this Visual Basic error</span></span>
+# <a name="sorry-we-dont-have-specifics-on-this-visual-basic-error"></a><span data-ttu-id="a872c-103">Maalesef bu Visual Basic hatasıyla ilgili ayrıntı yok</span><span class="sxs-lookup"><span data-stu-id="a872c-103">Sorry, we don't have specifics on this Visual Basic error</span></span>
 
-<span data-ttu-id="f6d38-103">Ne yazık ki bu hatayla ilgili belirli bilgiler yok.</span><span class="sxs-lookup"><span data-stu-id="f6d38-103">We’re sorry, but we don’t have any specific information about this error.</span></span> <span data-ttu-id="f6d38-104">Web 'de bilgi bulmak için hata numarası ve ileti metni araması yapabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="f6d38-104">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="f6d38-105">Ya da, şu forumlardan birini kullanarak diğer geliştiricilerle sorun da isteyebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="f6d38-105">Or, you can ask other developers using one of these forums:</span></span>  
+<span data-ttu-id="a872c-104">Ne yazık ki bu hatayla ilgili belirli bilgiler yok.</span><span class="sxs-lookup"><span data-stu-id="a872c-104">We’re sorry, but we don’t have any specific information about this error.</span></span> <span data-ttu-id="a872c-105">Web 'de bilgi bulmak için hata numarası ve ileti metni araması yapabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="a872c-105">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="a872c-106">Ya da, şu forumlardan birini kullanarak diğer geliştiricilerle sorun da isteyebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="a872c-106">Or, you can ask other developers using one of these forums:</span></span>  
   
- [<span data-ttu-id="f6d38-106">Visual Basic dili</span><span class="sxs-lookup"><span data-stu-id="f6d38-106">Visual Basic Language</span></span>](https://social.msdn.microsoft.com/Forums/home?forum=vblanguage)  
- <span data-ttu-id="f6d38-107">Visual Basic dil sözdizimi ve derleyicisi hakkında sorular ve genel tartışmalar için bir forum sağlar.</span><span class="sxs-lookup"><span data-stu-id="f6d38-107">Provides a forum for questions about and general discussions of the Visual Basic language syntax and compiler.</span></span>  
+ [<span data-ttu-id="a872c-107">Visual Basic dili</span><span class="sxs-lookup"><span data-stu-id="a872c-107">Visual Basic Language</span></span>](https://social.msdn.microsoft.com/Forums/home?forum=vblanguage)  
+ <span data-ttu-id="a872c-108">Visual Basic dil sözdizimi ve derleyicisi hakkında sorular ve genel tartışmalar için bir forum sağlar.</span><span class="sxs-lookup"><span data-stu-id="a872c-108">Provides a forum for questions about and general discussions of the Visual Basic language syntax and compiler.</span></span>  
   
- [<span data-ttu-id="f6d38-108">Birlikte çalışma ve yükseltme Visual Basic</span><span class="sxs-lookup"><span data-stu-id="f6d38-108">Visual Basic Interop and Upgrade</span></span>](https://social.msdn.microsoft.com/Forums/home?forum=vbinterop)  
- <span data-ttu-id="f6d38-109">Visual Basic Yükseltme ve birlikte çalışabilirlik özellikleriyle çalışma ile ilgili sorular ve sorunlar için bir forum sağlar.</span><span class="sxs-lookup"><span data-stu-id="f6d38-109">Provides a forum for questions about and issues with upgrading to Visual Basic and working with interoperability features.</span></span>  
+ [<span data-ttu-id="a872c-109">Birlikte çalışma ve yükseltme Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a872c-109">Visual Basic Interop and Upgrade</span></span>](https://social.msdn.microsoft.com/Forums/home?forum=vbinterop)  
+ <span data-ttu-id="a872c-110">Visual Basic Yükseltme ve birlikte çalışabilirlik özellikleriyle çalışma ile ilgili sorular ve sorunlar için bir forum sağlar.</span><span class="sxs-lookup"><span data-stu-id="a872c-110">Provides a forum for questions about and issues with upgrading to Visual Basic and working with interoperability features.</span></span>  
   
- [<span data-ttu-id="f6d38-110">Visual Basic IDE</span><span class="sxs-lookup"><span data-stu-id="f6d38-110">Visual Basic IDE</span></span>](https://social.msdn.microsoft.com/Forums/home?forum=vbide)  
- <span data-ttu-id="f6d38-111">Visual Studio ortamında nasıl çalışılacağı hakkında sorularınız için bir forum sağlar.</span><span class="sxs-lookup"><span data-stu-id="f6d38-111">Provides a forum for questions about how to work in the Visual Studio environment.</span></span>  
+ [<span data-ttu-id="a872c-111">Visual Basic IDE</span><span class="sxs-lookup"><span data-stu-id="a872c-111">Visual Basic IDE</span></span>](https://social.msdn.microsoft.com/Forums/home?forum=vbide)  
+ <span data-ttu-id="a872c-112">Visual Studio ortamında nasıl çalışılacağı hakkında sorularınız için bir forum sağlar.</span><span class="sxs-lookup"><span data-stu-id="a872c-112">Provides a forum for questions about how to work in the Visual Studio environment.</span></span>  
   
- [<span data-ttu-id="f6d38-112">Visual Basic genel</span><span class="sxs-lookup"><span data-stu-id="f6d38-112">Visual Basic General</span></span>](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)  
- <span data-ttu-id="f6d38-113">Hakkında sorularınız ve diğer forumlarda açıklanmayan Visual Basic sorunları için bir forum sağlar.</span><span class="sxs-lookup"><span data-stu-id="f6d38-113">Provides a forum for questions about and issues with Visual Basic that are not discussed in other forums.</span></span>  
+ [<span data-ttu-id="a872c-113">Visual Basic genel</span><span class="sxs-lookup"><span data-stu-id="a872c-113">Visual Basic General</span></span>](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)  
+ <span data-ttu-id="a872c-114">Hakkında sorularınız ve diğer forumlarda açıklanmayan Visual Basic sorunları için bir forum sağlar.</span><span class="sxs-lookup"><span data-stu-id="a872c-114">Provides a forum for questions about and issues with Visual Basic that are not discussed in other forums.</span></span>  
   
- [<span data-ttu-id="f6d38-114">StackOverflow</span><span class="sxs-lookup"><span data-stu-id="f6d38-114">StackOverflow</span></span>](https://stackoverflow.com/questions/tagged/vb.net)  
- <span data-ttu-id="f6d38-115">Hakkında sorularınız ve Visual Basic sorunları için bir forum sağlar.</span><span class="sxs-lookup"><span data-stu-id="f6d38-115">Provides a forum for questions about and issues with Visual Basic.</span></span>  
+ [<span data-ttu-id="a872c-115">StackOverflow</span><span class="sxs-lookup"><span data-stu-id="a872c-115">StackOverflow</span></span>](https://stackoverflow.com/questions/tagged/vb.net)  
+ <span data-ttu-id="a872c-116">Hakkında sorularınız ve Visual Basic sorunları için bir forum sağlar.</span><span class="sxs-lookup"><span data-stu-id="a872c-116">Provides a forum for questions about and issues with Visual Basic.</span></span>  
   
- <span data-ttu-id="f6d38-116">Ayrıca bkz:</span><span class="sxs-lookup"><span data-stu-id="f6d38-116">Also see:</span></span>  
- [<span data-ttu-id="f6d38-117">Visual Basic Programcıları için Ek Kaynaklar</span><span class="sxs-lookup"><span data-stu-id="f6d38-117">Additional Resources for Visual Basic Programmers</span></span>](../getting-started/additional-resources.md)  
+ <span data-ttu-id="a872c-117">Ayrıca bkz:</span><span class="sxs-lookup"><span data-stu-id="a872c-117">Also see:</span></span>  
+ [<span data-ttu-id="a872c-118">Visual Basic Programcıları için Ek Kaynaklar</span><span class="sxs-lookup"><span data-stu-id="a872c-118">Additional Resources for Visual Basic Programmers</span></span>](../getting-started/additional-resources.md)  
   
-## <a name="see-also"></a><span data-ttu-id="f6d38-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f6d38-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a872c-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a872c-119">See also</span></span>
 
-- [<span data-ttu-id="f6d38-119">Visual Basic Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="f6d38-119">Visual Basic Programming Guide</span></span>](../programming-guide/index.md)
-- [<span data-ttu-id="f6d38-120">Visual Basic Başvurusu</span><span class="sxs-lookup"><span data-stu-id="f6d38-120">Visual Basic Reference</span></span>](../reference/index.md)
+- [<span data-ttu-id="a872c-120">Visual Basic Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="a872c-120">Visual Basic Programming Guide</span></span>](../programming-guide/index.md)
+- [<span data-ttu-id="a872c-121">Visual Basic Başvurusu</span><span class="sxs-lookup"><span data-stu-id="a872c-121">Visual Basic Reference</span></span>](../reference/index.md)
