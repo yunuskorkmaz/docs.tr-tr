@@ -1,15 +1,16 @@
 ---
+description: Daha fazla bilgi için bkz. tanımlama bilgileri (Visual Basic)
 title: Demetler
 ms.date: 04/23/2017
 helpviewer_keywords:
 - tuples [Visual Basic]
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
-ms.openlocfilehash: b169a1c13b3f20d7b5e2a1386cfb28a9cc093dcd
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: f598facb446b7d50864c0cf9151195cfcde158bb
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559095"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100454462"
 ---
 # <a name="tuples-visual-basic"></a>Tanımlama grupları (Visual Basic)
 

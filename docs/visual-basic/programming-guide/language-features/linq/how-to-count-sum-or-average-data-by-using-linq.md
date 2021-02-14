@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: nasıl yapılır: LINQ kullanarak sayma, toplama veya ortalama veri (Visual Basic)'
 title: 'Nasıl yapılır: LINQ Kullanarak Verileri Sayma, Toplama veya Ortalamasını Alma'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 - count operator [LINQ in Visual Basic]
 ms.assetid: 51ca1f59-7770-4884-8b76-113002e54fc0
-ms.openlocfilehash: 617c6959e2d3add6d36266b0827ef7281b0c77a9
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 1759a2f990c2e61a862d032f2a09f29f65a05103
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91059255"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100422814"
 ---
 # <a name="how-to-count-sum-or-average-data-by-using-linq-visual-basic"></a>Nasıl yapılır: LINQ Kullanarak Count, Sum veya Average Verisi (Visual Basic)
 
-Dil ile tümleşik sorgu (LINQ), veritabanı bilgilerine erişmeyi ve sorguları yürütmeyi kolaylaştırır.  
+Language-Integrated sorgu (LINQ), veritabanı bilgilerine erişmeyi ve sorguları yürütmeyi kolaylaştırır.  
   
  Aşağıdaki örnek, SQL Server veritabanına karşı sorgu gerçekleştiren yeni bir uygulamanın nasıl oluşturulacağını gösterir. Örnek, `Aggregate` ve yan tümceleri kullanılarak sonuçların sayımlarını, toplamlarını ve ortalamasını verir `Group By` . Daha fazla bilgi için bkz. [toplama yan tümcesi](../../../language-reference/queries/aggregate-clause.md) ve [Group by yan tümcesi](../../../language-reference/queries/group-by-clause.md).  
   
@@ -34,9 +35,9 @@ Dil ile tümleşik sorgu (LINQ), veritabanı bilgilerine erişmeyi ve sorguları
   
 ### <a name="to-create-a-connection-to-a-database"></a>Bir veritabanına bağlantı oluşturmak için  
   
-1. Visual Studio 'da, **Server Explorer** / **Database Explorer** Görünüm menüsünde **Sunucu Gezgini** / **veritabanı Gezgini** ' a tıklayarak Sunucu Gezgini veritabanı Gezgini **View** açın.  
+1. Visual Studio 'da,  /  Görünüm menüsünde **Sunucu Gezgini** / **veritabanı Gezgini** ' a tıklayarak Sunucu Gezgini veritabanı Gezgini  açın.  
   
-2. **Sunucu Gezgini**veritabanı Gezgini **veri bağlantıları** ' na sağ tıklayın / **Database Explorer** ve ardından **bağlantı ekle**' ye tıklayın.  
+2. **Sunucu Gezgini** veritabanı Gezgini **veri bağlantıları** ' na sağ tıklayın /  ve ardından **bağlantı ekle**' ye tıklayın.  
   
 3. Northwind örnek veritabanına geçerli bir bağlantı belirtin.  
   
@@ -85,4 +86,4 @@ Dil ile tümleşik sorgu (LINQ), veritabanı bilgilerine erişmeyi ve sorguları
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
 - [DataContext Metotları (O/R Tasarımcısı)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
 - [Aggregate Yan Tümcesi](../../../language-reference/queries/aggregate-clause.md)
-- [Group By Yan Tümcesi](../../../language-reference/queries/group-by-clause.md)
+- [Group by yan tümcesi](../../../language-reference/queries/group-by-clause.md)

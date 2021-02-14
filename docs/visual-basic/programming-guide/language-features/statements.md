@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Visual Basic deyimleri'
 title: Deyimler
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - variables [Visual Basic], defining
 - statements [Visual Basic], about statements
 ms.assetid: fcfdee1a-82b7-4846-98f7-9ca3f5160089
-ms.openlocfilehash: 09fe53f4bc2b6d025b762c6595c5337263456bae
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9da27c77c858075e413580047b7ed688b328c87f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401985"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100436896"
 ---
 # <a name="statements-in-visual-basic"></a>Visual Basic'deki Deyimler
 
@@ -28,7 +29,7 @@ Visual Basic bir ifade, bir bütün yönergedir. Anahtar sözcükler, işleçler
 
 - Bir değişken, sabit veya yordamı belirleyen ve ayrıca bir veri türü de içerebilen **bildirim deyimleri**.
 
-- Eylem başlatan **çalıştırılabilir deyimler**. Bu deyimler bir yöntemi veya işlevi çağırabilir ve kod blokları aracılığıyla döngü ya da dallarda bulunabilir. Executable deyimleri, bir değişkene veya sabitine bir değer veya ifade atayan **atama deyimlerini**içerir.
+- Eylem başlatan **çalıştırılabilir deyimler**. Bu deyimler bir yöntemi veya işlevi çağırabilir ve kod blokları aracılığıyla döngü ya da dallarda bulunabilir. Executable deyimleri, bir değişkene veya sabitine bir değer veya ifade atayan **atama deyimlerini** içerir.
 
 Bu konuda her kategori açıklanmaktadır. Ayrıca, bu konu, birden çok deyimin tek bir satırda nasıl birleştirileceğini ve birden çok satır üzerinde bir ifadeye nasıl devam edileceğini açıklar.
 
@@ -82,7 +83,7 @@ Yukarıdaki örnekte, atama bildiriminde 42 sabit değeri, değişkende saklanı
 
 ### <a name="eligible-programming-elements"></a>Uygun programlama öğeleri
 
-Atama işlecinin sol tarafındaki programlama öğesi bir değeri kabul edip depolayabilmelidir. Bu, [salt okunur](../../language-reference/modifiers/readonly.md)olmayan bir değişken veya özellik olması veya bir dizi öğesi olması gerektiği anlamına gelir. Atama ifadesinin bağlamında, bu tür bir öğe bazen "sol değer" için *lvalue*olarak adlandırılır.
+Atama işlecinin sol tarafındaki programlama öğesi bir değeri kabul edip depolayabilmelidir. Bu, [salt okunur](../../language-reference/modifiers/readonly.md)olmayan bir değişken veya özellik olması veya bir dizi öğesi olması gerektiği anlamına gelir. Atama ifadesinin bağlamında, bu tür bir öğe bazen "sol değer" için *lvalue* olarak adlandırılır.
 
 Atama işlecinin sağ tarafındaki değer, değişmez değer, sabitler, değişkenler, özellikler, dizi öğeleri, diğer ifadeler veya işlev çağrılarının birleşiminden oluşabilen bir ifade tarafından oluşturulur. Aşağıdaki örnek bunu göstermektedir.
 
@@ -144,85 +145,85 @@ Bir ifade genellikle tek bir satıra sığar, ancak çok uzun olduğunda bir sat
 
 Birçok durumda, alt çizgi karakterini () kullanmadan sonraki ardışık satırda bir ifadeye devam edebilirsiniz `_` . Aşağıdaki sözdizimi öğeleri, bir sonraki kod satırında ifadesiyle dolaylı olarak devam eder.
 
-- Virgülden sonra ( `,` ). Örnek:
+- Virgülden sonra ( `,` ). Örneğin:
 
    [!code-vb[VbVbalrLineContinuation#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#1)]
 
-- Bir açık parantezden ( `(` ) sonra veya kapatma parantezinden ( `)` ) önce. Örnek:
+- Bir açık parantezden ( `(` ) sonra veya kapatma parantezinden ( `)` ) önce. Örneğin:
 
    [!code-vb[VbVbalrLineContinuation#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#2)]
 
-- Açık bir küme ayracı ( `{` ) veya bir kapanış küme ayracı () öncesi `}` . Örnek:
+- Açık bir küme ayracı ( `{` ) veya bir kapanış küme ayracı () öncesi `}` . Örneğin:
 
     [!code-vb[VbVbalrLineContinuation#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#3)]
 
     Daha fazla bilgi için bkz. [nesne başlatıcıları: adlandırılmış ve anonim türler](./objects-and-classes/object-initializers-named-and-anonymous-types.md) veya [koleksiyon başlatıcıları](./collection-initializers/index.md).
 
-- Açık bir katıştırılmış ifadeden sonra ( `<%=` ) veya BIR `%>` XML sabit değeri içindeki katıştırılmış bir ifadenin () kapatıldıktan önce. Örnek:
+- Açık bir katıştırılmış ifadeden sonra ( `<%=` ) veya BIR `%>` XML sabit değeri içindeki katıştırılmış bir ifadenin () kapatıldıktan önce. Örneğin:
 
    [!code-vb[VbVbalrLineContinuation#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#4)]
 
    Daha fazla bilgi için bkz. [XML 'de katıştırılmış ifadeler](./xml/embedded-expressions-in-xml.md).
 
-- Birleştirme işlecinden sonra ( `&` ). Örnek:
+- Birleştirme işlecinden sonra ( `&` ). Örneğin:
 
    [!code-vb[VbVbcnConventions#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/vb/Class1.vb#9)]
 
    Daha fazla bilgi için bkz. [işlevlere göre listelenen işleçler](../../language-reference/operators/operators-listed-by-functionality.md).
 
-- Atama işleçleri ( `=` , `&=` ,, `:=` , `+=` , `-=` `*=` , `/=` , `\=` , `^=` , `<<=` , `>>=` ,,,,) sonra. Örnek:
+- Atama işleçleri ( `=` , `&=` ,, `:=` , `+=` , `-=` `*=` , `/=` , `\=` , `^=` , `<<=` , `>>=` ,,,,) sonra. Örneğin:
 
    [!code-vb[VbVbalrLineContinuation#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#5)]
 
    Daha fazla bilgi için bkz. [işlevlere göre listelenen işleçler](../../language-reference/operators/operators-listed-by-functionality.md).
 
-- İkili işleçlerden (,,,,,,,,,,,,,, `+` `-` `/` `*` `Mod` `<>` `<` `>` `<=` `>=` `^` `>>` `<<` `And` `AndAlso` , `Or` `OrElse` `Like` `Xor` ,,,,,,,,,,,,, Örnek:
+- İkili işleçlerden (,,,,,,,,,,,,,, `+` `-` `/` `*` `Mod` `<>` `<` `>` `<=` `>=` `^` `>>` `<<` `And` `AndAlso` , `Or` `OrElse` `Like` `Xor` ,,,,,,,,,,,,, Örneğin:
 
    [!code-vb[VbVbalrLineContinuation#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#7)]
 
    Daha fazla bilgi için bkz. [işlevlere göre listelenen işleçler](../../language-reference/operators/operators-listed-by-functionality.md).
 
-- `Is`Ve `IsNot` işleçlerinden sonra. Örnek:
+- `Is`Ve `IsNot` işleçlerinden sonra. Örneğin:
 
    [!code-vb[VbVbalrLineContinuation#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#8)]
 
    Daha fazla bilgi için bkz. [işlevlere göre listelenen işleçler](../../language-reference/operators/operators-listed-by-functionality.md).
 
-- Bir üye niteleyicisi karakterinden ( `.` ) sonra ve üye adından önce. Örnek:
+- Bir üye niteleyicisi karakterinden ( `.` ) sonra ve üye adından önce. Örneğin:
 
    [!code-vb[VbVbalrLineContinuation#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#5)]
 
-   Ancak, `_` `With` ifadeyi kullanırken veya bir tür için başlatma listesinde değerler sağlayan bir üye niteleyicisi karakterini takip eden bir satır devamlılık karakteri () eklemeniz gerekir. `=` `With` Deyim veya nesne başlatma listeleri kullanırken, atama işlecinden (örneğin,) sonra çizgiyi koparın. Örnek:
+   Ancak, `_` `With` ifadeyi kullanırken veya bir tür için başlatma listesinde değerler sağlayan bir üye niteleyicisi karakterini takip eden bir satır devamlılık karakteri () eklemeniz gerekir. `=` `With` Deyim veya nesne başlatma listeleri kullanırken, atama işlecinden (örneğin,) sonra çizgiyi koparın. Örneğin:
 
    [!code-vb[VbVbalrLineContinuation#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#14)]
 
    Daha fazla bilgi için bkz [.... WITH Ifadesiyle](../../language-reference/statements/with-end-with-statement.md) veya [nesne başlatıcılarına son: adlandırılmış ve anonim türler](./objects-and-classes/object-initializers-named-and-anonymous-types.md).
 
-- Bir XML ekseni Özellik niteleyicisi ( `.` veya `.@` veya) sonra `...` . Ancak, `_` anahtar sözcüğünü kullanırken bir üye niteleyicisi belirttiğinizde bir satır devamlılık karakteri () eklemeniz gerekir `With` . Örnek:
+- Bir XML ekseni Özellik niteleyicisi ( `.` veya `.@` veya) sonra `...` . Ancak, `_` anahtar sözcüğünü kullanırken bir üye niteleyicisi belirttiğinizde bir satır devamlılık karakteri () eklemeniz gerekir `With` . Örneğin:
 
    [!code-vb[VbVbalrLineContinuation#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#9)]
 
    Daha fazla bilgi için bkz. [xml eksen özellikleri](../../language-reference/xml-axis/index.md).
 
-- Bir öznitelik belirttiğinizde küçüktür işaretinden (<) veya büyüktür işaretinden ( `>` ) önce. Ayrıca bir özniteliği belirttiğinizde büyüktür işaretinden ( `>` ) sonra. Ancak, `_` derleme düzeyi veya modül düzeyi öznitelikleri belirttiğinizde bir satır devamlılık karakteri () eklemeniz gerekir. Örnek:
+- Bir öznitelik belirttiğinizde küçüktür işaretinden (<) veya büyüktür işaretinden ( `>` ) önce. Ayrıca bir özniteliği belirttiğinizde büyüktür işaretinden ( `>` ) sonra. Ancak, `_` derleme düzeyi veya modül düzeyi öznitelikleri belirttiğinizde bir satır devamlılık karakteri () eklemeniz gerekir. Örneğin:
 
    [!code-vb[VbVbalrLineContinuation#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#10)]
 
    Daha fazla bilgi için bkz. [özniteliklere genel bakış](../concepts/attributes/index.md).
 
-- Sorgu işleçlerinden önce ve sonra ( `Aggregate` , `Distinct` ,, `From` `Group By` , `Group Join` , `Join` , `Let` , `Order By` , `Select` , `Skip` , `Skip While` , `Take` ,,,,, `Take While` , `Where` `In` `Into` `On` `Ascending` `Descending` ,,,,, ve). Birden çok anahtar kelimeyle ( `Order By` ,, `Group Join` `Take While` ve) oluşan sorgu işleçleri anahtar kelimeleri arasında bir satırı bozamaz `Skip While` . Örnek:
+- Sorgu işleçlerinden önce ve sonra ( `Aggregate` , `Distinct` ,, `From` `Group By` , `Group Join` , `Join` , `Let` , `Order By` , `Select` , `Skip` , `Skip While` , `Take` ,,,,, `Take While` , `Where` `In` `Into` `On` `Ascending` `Descending` ,,,,, ve). Birden çok anahtar kelimeyle ( `Order By` ,, `Group Join` `Take While` ve) oluşan sorgu işleçleri anahtar kelimeleri arasında bir satırı bozamaz `Skip While` . Örneğin:
 
    [!code-vb[VbVbalrLineContinuation#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#11)]
 
    Daha fazla bilgi için bkz. [sorgular](../../language-reference/queries/index.md).
 
-- `In`Deyimdeki anahtar sözcükten sonra `For Each` . Örnek:
+- `In`Deyimdeki anahtar sözcükten sonra `For Each` . Örneğin:
 
    [!code-vb[VbVbalrLineContinuation#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#12)]
 
    Daha fazla bilgi için bkz [. her biri için... Sonraki Ifade](../../language-reference/statements/for-each-next-statement.md).
 
-- `From`Bir koleksiyon başlatıcısındaki anahtar sözcükten sonra. Örnek:
+- `From`Bir koleksiyon başlatıcısındaki anahtar sözcükten sonra. Örneğin:
 
    [!code-vb[VbVbalrLineContinuation#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#13)]
 
@@ -242,7 +243,7 @@ Bir kod satırı yazdığınızda, çizgi dalgalı mavi alt çizgiyle görüntü
 
 ## <a name="related-sections"></a>İlgili bölümler
 
-|Terim|Tanım|
+|Süre|Tanım|
 |---|---|
 |[Atama Işleçleri](../../language-reference/operators/assignment-operators.md)|, Ve gibi atama işleçlerini kapsayan dil başvuru sayfalarına bağlantılar sağlar `=` `*=` `&=` .|
 |[İşleçler ve Ifadeler](./operators-and-expressions/index.md)|Yeni değerler sağlamak için işleçlerle öğelerin nasıl birleştirileceğini gösterir.|

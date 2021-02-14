@@ -1,15 +1,16 @@
 ---
+description: "Hakkında daha fazla bilgi: ' ' kayıt defteri anahtarı <keyname> oluşturulamadı"
 title: "' ' Kayıt defteri anahtarı <keyname> oluşturulamadı"
 ms.date: 07/20/2015
 f1_keywords:
 - vbrInteraction_ResKeyNotCreated1
 ms.assetid: 465ccd53-dfdc-47ec-8b3f-9a65ba739314
-ms.openlocfilehash: b495883c2aacd1f2ffd3ad77fab864dab8502938
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: bad441c9d45f8e1b983a0b01635fffca11411d8f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91059697"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100454670"
 ---
 # <a name="registry-key-keyname-could-not-be-created"></a>' ' Kayıt defteri anahtarı \<keyname> oluşturulamadı
 

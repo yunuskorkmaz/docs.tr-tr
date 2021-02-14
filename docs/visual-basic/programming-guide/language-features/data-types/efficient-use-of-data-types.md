@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: veri türlerinin etkili kullanımı (Visual Basic)'
 title: Veri Türlerinin Etkili Kullanımı
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], optimizing
 - ChrW function [Visual Basic], preferred to Chr
 ms.assetid: 28f5e4ba-ec24-4f37-b90a-e8ee822f778a
-ms.openlocfilehash: 7f446b264dcb5c05ed6ddfba34acbbf66be0e447
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e7660bbdec530ef18d663975e314d90b64e4b055
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91084118"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100476442"
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>Veri Türlerinin Etkili Kullanımı (Visual Basic)
 
@@ -26,7 +27,7 @@ Bildirilmemiş değişkenlere ve veri türü olmadan belirtilen değişkenlere v
 
 ## <a name="strong-typing"></a>Güçlü yazma
 
- Tüm değişkenlerinizin veri türlerini belirtme, *güçlü yazma*olarak bilinir. Güçlü yazma kullanmanın çeşitli avantajları vardır:
+ Tüm değişkenlerinizin veri türlerini belirtme, *güçlü yazma* olarak bilinir. Güçlü yazma kullanmanın çeşitli avantajları vardır:
 
 - Değişkenleriniz için IntelliSense desteği sunar. Bu, kodu yazarken özelliklerini ve diğer üyelerini görmenizi sağlar.
 

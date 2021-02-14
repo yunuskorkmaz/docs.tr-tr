@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: nasıl yapılır: dinamik sorgular oluşturmak için Ifade ağaçları kullanma (Visual Basic)'
 title: 'Nasıl yapılır: Dinamik Sorgular Derlemek için İfade Ağaçları Kullanma'
 ms.date: 07/20/2015
 ms.assetid: 16278787-7532-4b65-98b2-7a412406c4ee
-ms.openlocfilehash: 1f686c37b5d04263ac5ae0dd6883aa8a519ed19e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: bb8abb22749cbf7c15b72632f60a5bd08287378d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410985"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100423101"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>Nasıl yapılır: dinamik sorgular oluşturmak için Ifade ağaçları kullanma (Visual Basic)
 

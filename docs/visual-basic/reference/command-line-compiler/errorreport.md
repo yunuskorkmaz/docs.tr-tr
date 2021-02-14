@@ -1,4 +1,5 @@
 ---
+description: :-Errorreport hakkında daha fazla bilgi edinin
 title: -errorreport
 ms.date: 08/14/2018
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - /errorreport compiler option [Visual Basic]
 - errorreport compiler option [Visual Basic]
 ms.assetid: a7fe83a2-a6d8-460c-8dad-79a8f433f501
-ms.openlocfilehash: b6a1c8fce17e3e5a54366c2ff4dff4e6aa668f56
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b6fa10482e6852a819303074b4662f02eb8d1f88
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408666"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100475948"
 ---
 # <a name="-errorreport"></a>-errorreport
 
 Visual Basic derleyicisinin iç derleyici hatalarını nasıl rapor etmesi gerektiğini belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```console
 -errorreport:{ prompt | queue | send | none }
@@ -55,6 +56,6 @@ vbc -errorreport:prompt t2.vb
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](index.md)
+- [Visual Basic Command-Line derleyicisi](index.md)
 - [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)
 - [-bugreport](bugreport.md)

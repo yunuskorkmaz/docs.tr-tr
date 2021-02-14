@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: dizeler ve diğer türler arasında dönüştürmeler (Visual Basic)'
 title: Dizeler ve Diğer Türler Arasında Dönüştürmeler
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - type conversion [Visual Basic], string
 - regional options
 ms.assetid: c3a99596-f09a-44a5-81dd-1b89a094f1df
-ms.openlocfilehash: 823931f7d6beb8218e8b99d4a8d45716b7214304
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: c0f7f7637d173d039d58b2516fba41ae55b990ac
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077156"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100477222"
 ---
 # <a name="conversions-between-strings-and-other-types-visual-basic"></a>Dizeler ve Diğer Türleri Arasında Dönüştürmeler (Visual Basic)
 

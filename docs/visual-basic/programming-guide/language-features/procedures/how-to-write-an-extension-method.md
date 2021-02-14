@@ -1,17 +1,18 @@
 ---
-title: 'Nasıl yapılır: Uzantı Yöntemi Yazma'
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: uzantı yöntemi yazma (Visual Basic)'
+title: 'Nasıl yapılır: Uzantı Metodu Yazma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - extending data types [Visual Basic]
 - writing extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-ms.openlocfilehash: 697508f86ff4ff0a89150b65782121395d0fed12
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4c5d88976e55288ccb350ab82d459db0a23f468e
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346014"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100476195"
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>Nasıl yapılır: Uzantı Metodu Yazma (Visual Basic)
 
@@ -27,13 +28,13 @@ Uzantı yöntemleri varolan bir sınıfa Yöntemler eklemenizi sağlar. Genişle
     Imports System.Runtime.CompilerServices
     ```
 
-3. Yeni veya mevcut uygulamanızdaki bir modül içinde [`<Extension>`](xref:System.Runtime.CompilerServices.ExtensionAttribute) özniteliğiyle yöntem tanımını başlatın:
+3. Yeni veya mevcut uygulamanızdaki bir modül içinde, yöntem tanımını [`<Extension>`](xref:System.Runtime.CompilerServices.ExtensionAttribute) özniteliğiyle başlatın:
 
     ```vb
     <Extension()>
     ```
 
-    `Extension` özniteliğinin bir Visual Basic [modülünde](../../../language-reference/statements/module-statement.md)yalnızca bir yönteme (bir `Sub` veya `Function` yordamına) uygulanabileceğini unutmayın. Bunu bir `Class` veya `Structure`bir yönteme uygularsanız Visual Basic Derleyicisi Hata [BC36551](../../../misc/bc36551.md)oluşturur, "uzantı yöntemleri yalnızca modüllerde tanımlanabilir."
+    `Extension`Özniteliğinin yalnızca bir Visual Basic modülündeki bir yönteme ( `Sub` veya `Function` yordama) uygulanabileceğini unutmayın. [](../../../language-reference/statements/module-statement.md) Bunu bir veya a içindeki bir yönteme uygularsanız, `Class` `Structure` Visual Basic Derleyicisi Hata [BC36551](../../../misc/bc36551.md)oluşturuyor, "uzantı yöntemleri yalnızca modüllerde tanımlanabilir."
 
 4. Yöntemi sıradan bir şekilde bildirin, ancak ilk parametre türü genişletmek istediğiniz veri türü olmalıdır.
 
@@ -46,7 +47,7 @@ Uzantı yöntemleri varolan bir sınıfa Yöntemler eklemenizi sağlar. Genişle
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek modül `StringExtensions`bir genişletme yöntemi bildirir. İkinci bir modül, `Module1`, `StringExtensions` içeri aktarır ve yöntemini çağırır. Uzantı yöntemi çağrıldığında kapsam içinde olmalıdır. Genişletme yöntemi `PrintAndPunctuate` <xref:System.String> sınıfını bir parametre olarak gönderilen bir noktalama sembolleri dizesi tarafından izlenen bir yöntem ile genişletir.
+Aşağıdaki örnek, modülünde bir genişletme yöntemi bildirir `StringExtensions` . İkinci bir modül, `Module1` yöntemini içeri aktarır `StringExtensions` ve çağırır. Uzantı yöntemi çağrıldığında kapsam içinde olmalıdır. Genişletme yöntemi `PrintAndPunctuate` , <xref:System.String> sınıfını bir parametre olarak gönderilen bir noktalama sembolleri dizesi gelen dize örneğini görüntüleyen bir yöntemle genişletir.
 
 ```vb
 ' Declarations will typically be in a separate module.
@@ -78,7 +79,7 @@ Module Module1
 End Module
 ```
 
-Yöntemin iki parametre ile tanımlandığından ve yalnızca bir ile çağırdığına dikkat edin. Yöntem tanımındaki `aString`ilk parametresi, yöntemi çağıran `String` örneği olan `example`bağlanır. Örneğin çıktısı aşağıdaki gibidir:
+Yöntemin iki parametre ile tanımlandığından ve yalnızca bir ile çağırdığına dikkat edin. Yöntem tanımındaki ilk parametre, `aString` `example` `String` yöntemini çağıran örneği olan öğesine bağlanır. Örneğin çıktısı aşağıdaki gibidir:
 
 ```console
 Hello?
@@ -88,7 +89,7 @@ Hello!!!!
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>
-- [Genişletme Yöntemleri](extension-methods.md)
+- [Uzantı Metotları](extension-methods.md)
 - [Module Deyimi](../../../language-reference/statements/module-statement.md)
 - [Yordam Parametreleri ve Bağımsız Değişkenleri](procedure-parameters-and-arguments.md)
-- [Visual Basic kapsam](../declared-elements/scope.md)
+- [Visual Basic'de Kapsam](../declared-elements/scope.md)

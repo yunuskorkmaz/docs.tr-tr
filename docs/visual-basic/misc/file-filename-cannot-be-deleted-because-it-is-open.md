@@ -1,15 +1,16 @@
 ---
+description: "Daha fazla bilgi edinin: açık olduğu için ' <filename> ' dosyası silinemiyor"
 title: "' <filename> ' Dosyası açık olduğundan silinemiyor"
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_FileAlreadyOpen1
 ms.assetid: e1cbc46a-1db0-412d-8109-31342ec9d327
-ms.openlocfilehash: 1bfb54c046bda3c797b4620e51e4a457ba222055
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 3bbdfce899b5ba49e2898a197705d2f321214c71
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91060710"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100459032"
 ---
 # <a name="file-filename-cannot-be-deleted-because-it-is-open"></a>' \<filename> ' Dosyası açık olduğundan silinemiyor
 
