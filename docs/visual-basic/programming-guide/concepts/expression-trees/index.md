@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Ifade ağaçları (Visual Basic)'
 title: İfade Ağaçları
 ms.date: 07/20/2015
 ms.assetid: 8bbbb02d-7ffc-476b-8c25-118d82bf5d46
-ms.openlocfilehash: 29f2545a3bc1d53e8ab28478f63ef7b0dfe7a15e
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 7fa4f36334a5a951cbe86c6db80af77db40e245a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075414"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100462262"
 ---
 # <a name="expression-trees-visual-basic"></a>İfade ağaçları (Visual Basic)
 

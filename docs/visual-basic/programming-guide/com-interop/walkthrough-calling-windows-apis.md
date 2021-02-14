@@ -1,4 +1,5 @@
 ---
+description: "Daha fazla bilgi edinin: Izlenecek yol: Windows API 'Leri çağırma (Visual Basic)"
 title: "İzlenecek yol: Windows API'lerini Çağırma"
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: 88b3df2f18add6641d0355d2c605bc5f74dabbc7
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 9ffe89cabade780dbe1ced189a92c37e822c59e9
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91098326"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100427264"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>İzlenecek yol: Windows API'larını Çağırma (Visual Basic)
 
@@ -67,7 +68,7 @@ Windows API 'Leri, Windows işletim sisteminin bir parçası olan dinamik bağla
   
 #### <a name="argument-and-data-type-declarations"></a>Bağımsız değişken ve veri türü bildirimleri  
 
- Bağımsız değişkenleri ve veri türlerini bildirin. Bu bölüm, Windows 'un kullandığı veri türleri Visual Studio veri türlerine karşılık gelmediğinden zor olabilir. Visual Basic, değişkenleri *sıralama*adlı bir işlem olan uyumlu veri türlerine dönüştürerek sizin için çok sayıda iş yapar. <xref:System.Runtime.InteropServices.MarshalAsAttribute>Ad alanında tanımlanan özniteliği kullanarak bağımsız değişkenlerin nasıl sıralanarak açıkça kontrol edebilirsiniz <xref:System.Runtime.InteropServices> .  
+ Bağımsız değişkenleri ve veri türlerini bildirin. Bu bölüm, Windows 'un kullandığı veri türleri Visual Studio veri türlerine karşılık gelmediğinden zor olabilir. Visual Basic, değişkenleri *sıralama* adlı bir işlem olan uyumlu veri türlerine dönüştürerek sizin için çok sayıda iş yapar. <xref:System.Runtime.InteropServices.MarshalAsAttribute>Ad alanında tanımlanan özniteliği kullanarak bağımsız değişkenlerin nasıl sıralanarak açıkça kontrol edebilirsiniz <xref:System.Runtime.InteropServices> .  
   
 > [!NOTE]
 > Önceki Visual Basic sürümleri, parametreleri bildirmenize izin `As Any` ver, yani herhangi bir veri türü verisinin kullanılabileceği anlamına gelir. Visual Basic, tüm deyimler için belirli bir veri türü kullanmanızı gerektirir `Declare` .  
@@ -118,7 +119,7 @@ Windows API 'Leri, Windows işletim sisteminin bir parçası olan dinamik bağla
 
  `DllImport`Özniteliği, dll 'lerdeki işlevleri tür kitaplıkları olmadan çağırmak için ikinci bir yol sağlar. `DllImport` , bir deyimin kullanımı için kabaca eşdeğerdir, `Declare` ancak işlevlerin nasıl çağrıldığı üzerinde daha fazla denetim sağlar.  
   
- `DllImport`Çağrı paylaşılan (bazen *statik*olarak adlandırılır) yöntemine başvurduğu sürece, çoğu Windows API çağrısı ile kullanabilirsiniz. Bir sınıf örneği gerektiren yöntemleri kullanamazsınız. `Declare`Deyimlerden farklı olarak, `DllImport` çağrılar `MarshalAs` özniteliği kullanamaz.  
+ `DllImport`Çağrı paylaşılan (bazen *statik* olarak adlandırılır) yöntemine başvurduğu sürece, çoğu Windows API çağrısı ile kullanabilirsiniz. Bir sınıf örneği gerektiren yöntemleri kullanamazsınız. `Declare`Deyimlerden farklı olarak, `DllImport` çağrılar `MarshalAs` özniteliği kullanamaz.  
   
 ### <a name="to-call-a-windows-api-using-the-dllimport-attribute"></a>DllImport özniteliğini kullanarak bir Windows API 'SI çağırmak için  
   

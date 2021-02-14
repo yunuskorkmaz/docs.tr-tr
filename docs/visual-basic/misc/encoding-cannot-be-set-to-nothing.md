@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: kodlama Nothing olarak ayarlanamaz'
 title: Kodlama Nothing olarak ayarlanamaz
 ms.date: 07/20/2015
 ms.assetid: 59f7c731-8291-4a85-bf51-c225e48cdc84
-ms.openlocfilehash: 0356098ca3fb41804ea396b0ff792cf2990b3340
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 4fa9cbd9488501b5295da8d8ace41ef06a706c12
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077546"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100463001"
 ---
 # <a name="encoding-cannot-be-set-to-nothing"></a>Kodlama Nothing olarak ayarlanamaz
 

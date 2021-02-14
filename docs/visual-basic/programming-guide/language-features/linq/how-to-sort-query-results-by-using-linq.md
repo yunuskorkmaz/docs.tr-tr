@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: sorgu sonuçlarını LINQ kullanarak sıralama (Visual Basic)'
 title: 'Nasıl yapılır: Sorgu Sonuçlarını LINQ Kullanarak Sıralama'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,16 +12,16 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 07a4584d-9fd8-4a1d-b7d9-ccf2efa5c84e
-ms.openlocfilehash: 94c2907f05aa9b5b2bc8659cef6f523187f1ef6b
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: dbf792423c53602d5d36937590d6f3ec8931f5ac
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071800"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100469415"
 ---
 # <a name="how-to-sort-query-results-by-using-linq-visual-basic"></a>Nasıl yapılır: Sorgu Sonuçlarını LINQ Kullanarak Sıralama (Visual Basic)
 
-Dil ile tümleşik sorgu (LINQ), veritabanı bilgilerine erişmeyi ve sorguları yürütmeyi kolaylaştırır.  
+Language-Integrated sorgu (LINQ), veritabanı bilgilerine erişmeyi ve sorguları yürütmeyi kolaylaştırır.  
   
  Aşağıdaki örnek, bir SQL Server veritabanına karşı sorgu gerçekleştiren yeni bir uygulamanın nasıl oluşturulacağını gösterir ve yan tümcesini kullanarak sonuçları birden çok alana göre sıralar `Order By` . Her bir alan için sıralama düzeni artan sıra veya azalan sırada olabilir. Daha fazla bilgi için bkz. [order by yan tümcesi](../../../language-reference/queries/order-by-clause.md).  
   
@@ -30,9 +31,9 @@ Dil ile tümleşik sorgu (LINQ), veritabanı bilgilerine erişmeyi ve sorguları
   
 ### <a name="to-create-a-connection-to-a-database"></a>Bir veritabanına bağlantı oluşturmak için  
   
-1. Visual Studio 'da, **Server Explorer** / **Database Explorer** Görünüm menüsünde **Sunucu Gezgini** / **veritabanı Gezgini** ' a tıklayarak Sunucu Gezgini veritabanı Gezgini **View** açın.  
+1. Visual Studio 'da,  /  Görünüm menüsünde **Sunucu Gezgini** / **veritabanı Gezgini** ' a tıklayarak Sunucu Gezgini veritabanı Gezgini  açın.  
   
-2. **Sunucu Gezgini**veritabanı Gezgini **veri bağlantıları** ' na sağ tıklayın / **Database Explorer** ve ardından **bağlantı ekle**' ye tıklayın.  
+2. **Sunucu Gezgini** veritabanı Gezgini **veri bağlantıları** ' na sağ tıklayın /  ve ardından **bağlantı ekle**' ye tıklayın.  
   
 3. Northwind örnek veritabanına geçerli bir bağlantı belirtin.  
   

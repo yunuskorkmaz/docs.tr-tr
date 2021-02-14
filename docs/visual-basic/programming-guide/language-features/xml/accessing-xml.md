@@ -1,4 +1,5 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: Visual Basic XML 'e erişme"
 title: XML'e erişme
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - XML [Visual Basic], axis properties
 - XML [Visual Basic], accessing
 ms.assetid: c47f88b2-3cbc-4bb1-b4b9-be60f71ffc6a
-ms.openlocfilehash: 8ffe6d5ed368aee6d6984ec6ab28c8832921a3f8
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 2d77b2aa5f4136095ce5684976fe3ba03be7c28c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91080185"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100462665"
 ---
 # <a name="accessing-xml-in-visual-basic"></a>Visual Basic'de XML'e Erişme
 
@@ -29,7 +30,7 @@ Visual Basic, yapılara erişmek ve bunları gezinmek için XML eksen özellikle
 |*öznitelik ekseni*|`phone.@type`|Öğesinin tüm `type` özniteliklerini alır `phone` .|  
 |*alt öğe ekseni*|`contacts...<name>`|`name` `contacts` Meydana gelen hiyerarşide ne kadar derinlikte olursa olsun, öğenin tüm öğelerini alır.|  
 |*Uzantı Dizin Oluşturucu*|`contacts...<name>(0)`|`name`Sıradaki ilk öğeyi alır.|  
-|*deeri*|`contacts...<name>.Value`|Dizideki ilk nesnenin dize gösterimini alır veya `Nothing` dizi boşsa.|  
+|*değer*|`contacts...<name>.Value`|Dizideki ilk nesnenin dize gösterimini alır veya `Nothing` dizi boşsa.|  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
 

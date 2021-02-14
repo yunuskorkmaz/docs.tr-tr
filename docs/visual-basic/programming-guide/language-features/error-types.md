@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: hata türleri (Visual Basic)'
 title: Hata Türleri
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], types of errors
 - syntax errors [Visual Basic], Visual Basic
 ms.assetid: 3048aabf-8c97-4e13-9150-853769cb5f6f
-ms.openlocfilehash: caeaab9a358e3e3a995c1df7274d16daaff7a667
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: cc4fce5e0ce77a4e402ba832fd6f4e36e6feed07
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91084001"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100423777"
 ---
 # <a name="error-types-visual-basic"></a>Hata Türleri (Visual Basic)
 
@@ -28,7 +29,7 @@ Visual Basic, hatalar üç kategoriden birine ayrılır: sözdizimi hataları, �
 > [!NOTE]
 > `Option Explicit`İfade, sözdizimi hatalarından kaçınmanın bir yöntemidir. Bu, uygulamada kullanılacak tüm değişkenleri önceden bildirmeye zorlar. Bu nedenle, bu değişkenler kodda kullanıldığında, her tipografik hata hemen yakalanır ve düzeltilebilir.
 
-## <a name="run-time-errors"></a>Çalışma zamanı hataları
+## <a name="run-time-errors"></a>Run-Time hataları
 
  *Çalışma zamanı hataları* yalnızca kodunuzu derleyip çalıştırdıktan sonra görüntülenen olanlardır. Bunlar, sözdizimi hataları olmayan, ancak yürütülmeyecek şekilde doğru görünebilen kodu içerir. Örneğin, bir dosyayı açmak için doğru bir kod satırı yazabilirsiniz. Ancak dosya yoksa, uygulama dosyayı açamaz ve bir özel durum oluşturur. Hatalı kodu yeniden yazarak veya [özel durum işlemeyi](../../language-reference/statements/try-catch-finally-statement.md)kullanarak ve sonra yeniden oluşturup yeniden çalıştırarak birçok çalışma zamanı hatasını giderebilirsiniz.
   

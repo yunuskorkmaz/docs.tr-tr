@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: XML değişmez değerleri genel bakış (Visual Basic)'
 title: XML Değişmez Değerlerine Genel Bakış
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], XML literals
 - literals [Visual Basic], XML
 ms.assetid: 37987c15-4ab8-471b-bd45-399816bfb57f
-ms.openlocfilehash: c65cac4f6e8f5f314587f20d5c373c92ea0c51e5
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 5544c0238b117ed5b9b2f9cdab312127736e97d7
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085392"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100423855"
 ---
 # <a name="xml-literals-overview-visual-basic"></a>XML Değişmez Değerlerine Genel Bakış (Visual Basic)
 
 *XML sabit değeri* , doğrudan VISUAL BASIC kodunuzda XML eklemenize olanak tanır. XML sabit sözdizimi nesneleri temsil eder [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ve xml 1,0 söz dizimine benzerdir. Bu, kodunuzun son XML ile aynı yapıya sahip olması nedeniyle, programlama yoluyla XML öğelerinin ve belgelerinin oluşturulmasını kolaylaştırır.  
   
- Visual Basic XML sabit değerlerini [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nesnelere derler. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] XML oluşturmak ve işlemek için basit bir nesne modeli sağlar ve bu model dil ile tümleşik sorgu (LINQ) ile iyi tümleşir. Daha fazla bilgi için bkz. <xref:System.Xml.Linq.XElement>.  
+ Visual Basic XML sabit değerlerini [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nesnelere derler. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] XML oluşturmak ve işlemek için basit bir nesne modeli sağlar ve bu model Language-Integrated sorgusuyla iyi tümleşir (LINQ). Daha fazla bilgi için bkz. <xref:System.Xml.Linq.XElement>.  
   
  Bir Visual Basic ifadesini bir XML değişmez değerine ekleyebilirsiniz. Çalışma zamanında, uygulamanız [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] her sabit değer için bir nesne oluşturur ve katıştırılmış ifadelerin değerlerini dahil. Bu, bir XML sabit değeri içinde dinamik içerik belirtmenize olanak sağlar. Daha fazla bilgi için bkz. [XML 'de katıştırılmış ifadeler](embedded-expressions-in-xml.md).  
   

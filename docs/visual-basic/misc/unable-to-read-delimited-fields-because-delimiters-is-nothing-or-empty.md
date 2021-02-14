@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: sınırlayıcılar Nothing veya boş olduğu için sınırlandırılmış alanlar okunamadı'
 title: Sınırlandırıcılar Nothing veya boş olduğu için ayrılmış alanlar okunamadı
 ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_DelimitersNothing
 ms.assetid: 94f64c48-8e17-449d-b92a-0426efec879c
-ms.openlocfilehash: 3442168d4fee00ea74d236eb7bc21d1bbbf915c5
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e17f3abf17b4a2cafc9104a2cb75fe545eeb13ee
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075752"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100455268"
 ---
 # <a name="unable-to-read-delimited-fields-because-delimiters-is-nothing-or-empty"></a>Sınırlandırıcılar Nothing veya boş olduğu için ayrılmış alanlar okunamadı
 

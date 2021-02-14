@@ -1,20 +1,21 @@
 ---
+description: 'Daha fazla bilgi edinin: Olaylar (Visual Basic)'
 title: Ekinlikler
 ms.date: 07/20/2015
 helpviewer_keywords:
 - events [Visual Basic], about events
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
-ms.openlocfilehash: 15ab02c20c1baf0fbc9087bfe2e75ec97acd0734
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 6cd4a4b997ec13b394cae38e9d66c7dd9c283aaf
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91057942"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100483683"
 ---
 # <a name="events-visual-basic"></a>Olaylar (Visual Basic)
 
-Bir Visual Studio projesini bir dizide yürütülen bir dizi yordam olarak görselleştirirken, gerçekte çoğu program olay odaklı olur, yani yürütme akışı *Olaylar*olarak adlandırılan dış oluşumlara göre belirlenir.  
+Bir Visual Studio projesini bir dizide yürütülen bir dizi yordam olarak görselleştirirken, gerçekte çoğu program olay odaklı olur, yani yürütme akışı *Olaylar* olarak adlandırılan dış oluşumlara göre belirlenir.  
   
  Bir olay, bir uygulamaya önemli bir şeyi oluştuğunu bildiren sinyaldir. Örneğin, Kullanıcı formdaki bir denetime tıkladığında form bir `Click` olay oluşturabilir ve olayı işleyen bir yordamı çağırabilir. Olaylar ayrıca ayrı görevlerin iletişim kurmasına izin verir. Örneğin, uygulamanızın ana uygulamadan ayrı bir sıralama görevi gerçekleştirmesini söyleyin. Kullanıcı sıralamayı iptal ederse, uygulamanız sıralama işlemini durdurmak için bir iptal olayı gönderebilir.  
   
@@ -38,7 +39,7 @@ Bir Visual Studio projesini bir dizide yürütülen bir dizi yordam olarak görs
   
 ### <a name="event-senders"></a>Olay Gönderenler  
 
- Olayı tetiklenebilecek herhangi bir nesne, *olay kaynağı*olarak da bilinen bir *olay gönderisine*sahiptir. Formlar, denetimler ve Kullanıcı tanımlı nesneler, olay gönderenlerin örnekleridir.  
+ Olayı tetiklenebilecek herhangi bir nesne, *olay kaynağı* olarak da bilinen bir *olay gönderisine* sahiptir. Formlar, denetimler ve Kullanıcı tanımlı nesneler, olay gönderenlerin örnekleridir.  
   
 ### <a name="event-handlers"></a>Olay İşleyicileri  
 
@@ -101,7 +102,7 @@ Bir Visual Studio projesini bir dizide yürütülen bir dizi yordam olarak görs
   
 ### <a name="to-handle-events-from-a-base-class"></a>Bir temel sınıftan olayları işlemek için  
   
-- Olay işleyicisi prosedürünün bildirim satırına bir EventName bildirimi ekleyerek türetilmiş sınıfta bir olay işleyicisi bildirin; `Handles MyBase.` *eventname* burada *EventName* , işlemekte olduğunuz temel sınıftaki olayın adıdır. Örneğin:  
+- Olay işleyicisi prosedürünün bildirim satırına bir EventName bildirimi ekleyerek türetilmiş sınıfta bir olay işleyicisi bildirin; `Handles MyBase.`  burada *EventName* , işlemekte olduğunuz temel sınıftaki olayın adıdır. Örneğin:  
   
      [!code-vb[VbVbalrEvents#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#12)]  
   

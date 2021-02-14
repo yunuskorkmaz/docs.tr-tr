@@ -1,4 +1,5 @@
 ---
+description: :-Target (Visual Basic) hakkında daha fazla bilgi
 title: -target
 ms.date: 03/13/2018
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - -target compiler options [Visual Basic]
 - /target compiler options [Visual Basic]
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
-ms.openlocfilehash: 0ab28d55b2426a4efda112ab84da5e790909d565
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6f07bd081131934b9d7046f0db7b8a35acfce5fe
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403076"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100483605"
 ---
 # <a name="-target-visual-basic"></a>-target (Visual Basic)
 
 Derleyici çıktısının biçimini belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```console
 -target:{exe | library | module | winexe | appcontainerexe | winmdobj}
@@ -27,7 +28,7 @@ Derleyici çıktısının biçimini belirtir.
 
 Aşağıdaki tablo, seçeneğinin etkisini özetler `-target` .
 
-|**Seçeneği**|**Davranış**|
+|**Seçenek**|**Davranış**|
 |----------------|------------------|
 |`-target:exe`|Derleyicinin yürütülebilir bir konsol uygulaması oluşturmasına neden olur.<br /><br /> Hiçbir seçenek belirtilmediğinde bu varsayılan seçenektir `-target` . Yürütülebilir dosya bir. exe uzantısıyla oluşturulur.<br /><br /> Bu seçenekle aksi belirtilmedikçe `-out` , çıkış dosyası adı, yordamı içeren giriş dosyasının adını alır `Sub Main` .<br /><br /> `Sub Main`Bir. exe dosyasına derlenen kaynak kodu dosyalarında yalnızca bir yordam gereklidir. `-main`Yordamı hangi sınıfın içerdiğini belirtmek için derleyici seçeneğini kullanın `Sub Main` .|
 |`-target:library`|Derleyicinin dinamik bağlantı kitaplığı (DLL) oluşturmasına neden olur.<br /><br /> Dinamik bağlantı kitaplığı dosyası bir. dll uzantısıyla oluşturulur.<br /><br /> Aksi belirtilmediği takdirde `-out` , çıkış dosyası adı ilk giriş dosyasının adını alır.<br /><br /> Bir DLL derlerken, bir `Sub Main` yordam gerekli değildir.|
@@ -38,7 +39,7 @@ Aşağıdaki tablo, seçeneğinin etkisini özetler `-target` .
 
 Belirtmediğiniz takdirde `-target:module` , `-target` bir .NET Framework derleme bildiriminin bir çıkış dosyasına eklenmesine neden olur.
 
-Her Vbc. exe örneği, en çok bir çıkış dosyası üretir. Veya birden çok kez gibi bir derleyici seçeneği `-out` belirtirseniz `-target` , derleyici işlemlerinin son bir etkisi olur. Bir derlemedeki tüm dosyalar hakkındaki bilgiler bildirime eklenir. İle oluşturulanlar dışındaki tüm çıkış dosyaları `-target:module` , bildirimde derleme meta verileri içerir. Meta verileri bir çıkış dosyasında görüntülemek için [ıldadsm. exe (IL Disassembler)](../../../framework/tools/ildasm-exe-il-disassembler.md) kullanın.
+Her Vbc.exe örneği, en çok bir çıkış dosyası üretir. Veya birden çok kez gibi bir derleyici seçeneği `-out` belirtirseniz `-target` , derleyici işlemlerinin son bir etkisi olur. Bir derlemedeki tüm dosyalar hakkındaki bilgiler bildirime eklenir. İle oluşturulanlar dışındaki tüm çıkış dosyaları `-target:module` , bildirimde derleme meta verileri içerir. Meta verileri bir çıkış dosyasında görüntülemek için [Ildasm.exe (IL Disassembler)](../../../framework/tools/ildasm-exe-il-disassembler.md) kullanın.
 
 Öğesinin kısa biçimi `-target` `-t` .
 
@@ -60,8 +61,8 @@ vbc -target:library in.vb
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](index.md)
-- [-main](main.md)
+- [Visual Basic Command-Line derleyicisi](index.md)
+- [-Main](main.md)
 - [-Out (Visual Basic)](out.md)
 - [-başvuru (Visual Basic)](reference.md)
 - [-addmodule](addmodule.md)
