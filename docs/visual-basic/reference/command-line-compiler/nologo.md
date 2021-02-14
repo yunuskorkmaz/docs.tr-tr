@@ -1,4 +1,5 @@
 ---
+description: Hakkında daha fazla bilgi edinin:-nologo (Visual Basic)
 title: -nologo
 ms.date: 03/13/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - nologo compiler option [Visual Basic]
 - /nologo compiler option [Visual Basic]
 ms.assetid: 25ef54b6-d676-4639-a2d2-a747a158bc07
-ms.openlocfilehash: 5557d681c5e6901592936efd35b3c552d43e39b0
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 370889fbd5d4e499ba27ff8bee4adc16a7a71876
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91097676"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434894"
 ---
 # <a name="-nologo-visual-basic"></a>-nologo (Visual Basic)
 
@@ -41,5 +42,5 @@ vbc -nologo t2.vb
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](index.md)
+- [Visual Basic Command-Line derleyicisi](index.md)
 - [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)

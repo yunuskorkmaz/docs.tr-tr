@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Bu işlem yalnızca dosya kapatıldığında yapılabilir'
 title: Bu işlem yalnızca dosya kapatıldığında yapılabilir
 ms.date: 07/20/2015
 ms.assetid: 79fe95ae-4aff-469f-beda-d5a85c91d421
-ms.openlocfilehash: 45afaa585591f16e10d42a6792719c201a5d1709
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 1f408eb2fd9a7300a83fee981e9026f90845b2c1
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91060439"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100462301"
 ---
 # <a name="this-operation-can-only-be-done-when-the-file-is-closed"></a>Bu işlem yalnızca dosya kapatıldığında yapılabilir
 

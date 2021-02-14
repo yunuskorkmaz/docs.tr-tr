@@ -3,12 +3,12 @@ title: .NET mimari bileşenleri
 description: .NET Standard, .NET uygulamaları, .NET çalışma zamanları ve araç araçları gibi .NET mimari bileşenlerini açıklar.
 author: cartermp
 ms.date: 10/05/2020
-ms.openlocfilehash: 00d05ee328087042f7603779438436656c45be48
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c5f174034ce0cd0e1cf0b799c7b3f4bff99447a2
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819428"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100423141"
 ---
 # <a name="net-architectural-components"></a>.NET mimari bileşenleri
 
@@ -106,8 +106,8 @@ Standartlardaki sonraki düzeltmeler, programlama dilleri Technical komite ([TC4
 Aşağıdaki resmi ECMA belgeleri [C#](http://www.ecma-international.org/publications/standards/Ecma-334.htm) ve [CLI](http://www.ecma-international.org/publications/standards/Ecma-335.htm) ([tr-84](http://www.ecma-international.org/publications/techreports/E-TR-084.htm)) için kullanılabilir:
 
 - **C# dil standardı (sürüm 5,0)**: [ECMA-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
-- **Ortak dil altyapısı**: [PDF](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf) form ve [ZIP](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip) formunda kullanılabilir.
-- **IV XML dosyasından türetilmiş bilgiler**: [PDF](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) ve [ZIP](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip) biçimlerinde kullanılabilir.
+- **Ortak dil altyapısı**: [ECMA-335.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf).
+- **IV XML dosyasından türetilmiş bilgiler**: [ECMA-084.pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) biçimi.
 
 Resmi ISO/ıEC belgeleri ISO/ıEC [genel kullanıma açık standartlar](https://standards.iso.org/ittf/PubliclyAvailableStandards/) sayfasından kullanılabilir. Bu bağlantılar bu sayfadan doğrudan yapılır:
 

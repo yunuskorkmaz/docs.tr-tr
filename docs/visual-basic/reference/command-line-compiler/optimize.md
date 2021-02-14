@@ -1,4 +1,5 @@
 ---
+description: Daha fazla bilgi edinin:-optimize
 title: -optimize
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - optimization [Visual Basic], enabling
 - -optimize compiler option [Visual Basic]
 ms.assetid: fcba4a97-3622-4b87-a891-0f77deab4998
-ms.openlocfilehash: d4b50d56373676bf78a7591102095209401c907d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 812eaa544dd874fd3871e58f366a34ee8176273a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91097598"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100426705"
 ---
 # <a name="-optimize"></a>-optimize
 
@@ -40,7 +41,7 @@ Derleyici iyileştirmelerini etkinleştirilir veya devre dışı bırakır.
   
 |Visual Studio tümleşik geliştirme ortamında ayarlanacak şekilde iyileştirmek için|  
 |---|  
-|1. **Çözüm Gezgini**bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın.<br />     <br />2. **Derle** sekmesine tıklayın.<br />3. **Gelişmiş** düğmesine tıklayın.<br />4. **Iyileştirmeleri etkinleştir** onay kutusunu değiştirin.|  
+|1. **Çözüm Gezgini** bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın.<br />     <br />2. **Derle** sekmesine tıklayın.<br />3. **Gelişmiş** düğmesine tıklayın.<br />4. **Iyileştirmeleri etkinleştir** onay kutusunu değiştirin.|  
   
 ## <a name="example"></a>Örnek  
 
@@ -52,7 +53,7 @@ vbc t2.vb -optimize
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](index.md)
+- [Visual Basic Command-Line derleyicisi](index.md)
 - [-Debug (Visual Basic)](debug.md)
 - [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)
 - [-target (Visual Basic)](target.md)

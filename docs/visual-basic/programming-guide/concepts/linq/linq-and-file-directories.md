@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: LINQ ve dosya dizinleri (Visual Basic)'
 title: LINQ ve Dosya Dizinleri
 ms.date: 07/20/2015
 ms.assetid: 159fd5c3-3926-4071-ae78-d8e423287eb7
-ms.openlocfilehash: 670611cd285a1b1f2602e2c700c2bdeb56db943f
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: ed7f4151acde51794269e5028820397f9a3bb3f9
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100171"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100426770"
 ---
 # <a name="linq-and-file-directories-visual-basic"></a>LINQ ve dosya dizinleri (Visual Basic)
 

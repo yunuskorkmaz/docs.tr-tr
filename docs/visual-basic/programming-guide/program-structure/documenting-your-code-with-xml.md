@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: kodunuzu XML ile belgeleme (Visual Basic)'
 title: XML ile Kodunuzu Belgeleme
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - XML comments, Visual Basic
 - Visual Basic code, documenting with XML
 ms.assetid: a0d35dc7-c5f9-4d74-92ff-a1c6f28d5235
-ms.openlocfilehash: f391fb909cfe4de8f27afb24d6db389e2c8cdfae
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b554007bdd5183d0d92dc7ff62d08885f4b7f486
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84590935"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100476013"
 ---
 # <a name="document-your-code-with-xml-visual-basic"></a>Kodunuzu XML ile belgeleyin (Visual Basic)
 
@@ -47,7 +48,7 @@ Belge açıklamalarıyla bir XML dosyası oluşturma hakkında daha fazla bilgi 
 
 - [Nasıl yapılır: XML Belgesi Oluşturma](how-to-create-xml-documentation.md)
 
-- [Visual Studio'daki XML Araçları](/visualstudio/xml-tools/xml-tools-in-visual-studio)
+- [Visual Studio 'da XML araçları](/visualstudio/xml-tools/xml-tools-in-visual-studio)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,15 +1,16 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: dinamik nesnelerle çalışma (Visual Basic)'
 title: Dinamik Nesnelerle Çalışma
 ms.date: 07/20/2015
 helpviewer_keywords:
 - dynamic objects [Visual Basic]
 ms.assetid: bdee2a00-07ff-46f9-86dd-fdac9b99cc97
-ms.openlocfilehash: 45f8b5c327d40f93b59c2115c75b3b7d385f5a8d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 4991ae3deca908fc0b96760f50c85514df92714f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91057929"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434400"
 ---
 # <a name="working-with-dynamic-objects-visual-basic"></a>Dinamik Nesnelerle Çalışma (Visual Basic)
 

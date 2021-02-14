@@ -1,5 +1,5 @@
 ---
-description: "Hakkında daha fazla bilgi edinin: BC30920: ' ' öğesinin ' ' <constructorname> temel sınıfındaki ' ' <baseclassname> artık kullanılmıyor olarak işaretlendiğinden, bu ' Sub New ' öğesinin ilk Ifadesinin ' MyBase. New ' veya ' MyClass. New ' için açık çağrı olması gerekir <derivedclassname> : '<errormessage>"
+description: "Hakkında daha fazla bilgi edinin: BC30920: ' ' öğesinin ' ' <constructorname> temel sınıfındaki ' ' <baseclassname> <derivedclassname> artık kullanılmıyor olarak işaretlendiğinden, bu ' Sub New ' öğesinin Ilk ifadesinin ' MyBase. New ' veya ' MyClass. New ' için açık çağrı olması gerekir: ' <errormessage> '"
 title: "'<constructorname>' öğesinin '<baseclassname>' temel sınıfındaki '<derivedclassname>' kullanılmıyor biçiminde işaretlendiğinden, bu 'Sub New' yönteminin ilk deyimi 'MyBase.New' veya 'MyClass.New' için açık çağrı olmalıdır: '<errormessage>'"
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30920
 ms.assetid: e47dc755-4294-4368-b813-2177b7677957
-ms.openlocfilehash: 777543b7f29fb17dd5eb6a6196035ef0f18bb907
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 9a61ed67a7d65c49c06d6848acf7d9fc40173af7
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99796242"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100426601"
 ---
 # <a name="bc30920-first-statement-of-this-sub-new-must-be-an-explicit-call-to-mybasenew-or-myclassnew-because-the-constructorname-in-the-base-class-baseclassname-of-derivedclassname-is-marked-obsolete-errormessage"></a>BC30920: ' ' öğesinin ' ' \<constructorname> temel sınıfındaki ' ' \<baseclassname> \<derivedclassname> artık kullanılmıyor olarak işaretlendiğinden, bu ' Sub New ' öğesinin Ilk ifadesinin ' MyBase. New ' veya ' MyClass. New ' için açık çağrı olması gerekir: ' \<errormessage> '
 
