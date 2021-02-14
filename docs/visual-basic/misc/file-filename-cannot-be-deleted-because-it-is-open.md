@@ -1,25 +1,26 @@
 ---
+description: "Daha fazla bilgi edinin: açık olduğu için ' <filename> ' dosyası silinemiyor"
 title: "' <filename> ' Dosyası açık olduğundan silinemiyor"
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_FileAlreadyOpen1
 ms.assetid: e1cbc46a-1db0-412d-8109-31342ec9d327
-ms.openlocfilehash: 1bfb54c046bda3c797b4620e51e4a457ba222055
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 3bbdfce899b5ba49e2898a197705d2f321214c71
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91060710"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100459032"
 ---
-# <a name="file-filename-cannot-be-deleted-because-it-is-open"></a><span data-ttu-id="ec2f2-102">' \<filename> ' Dosyası açık olduğundan silinemiyor</span><span class="sxs-lookup"><span data-stu-id="ec2f2-102">File '\<filename>' cannot be deleted because it is open</span></span>
+# <a name="file-filename-cannot-be-deleted-because-it-is-open"></a><span data-ttu-id="2334f-103">' \<filename> ' Dosyası açık olduğundan silinemiyor</span><span class="sxs-lookup"><span data-stu-id="2334f-103">File '\<filename>' cannot be deleted because it is open</span></span>
 
-<span data-ttu-id="ec2f2-103">Açık bir dosya üzerinde silme yapılmaya çalışıldı.</span><span class="sxs-lookup"><span data-stu-id="ec2f2-103">A deletion is being attempted on an open file.</span></span>  
+<span data-ttu-id="2334f-104">Açık bir dosya üzerinde silme yapılmaya çalışıldı.</span><span class="sxs-lookup"><span data-stu-id="2334f-104">A deletion is being attempted on an open file.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="ec2f2-104">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="ec2f2-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="2334f-105">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="2334f-105">To correct this error</span></span>  
   
-- <span data-ttu-id="ec2f2-105">Silmeden önce dosyayı kapatın.</span><span class="sxs-lookup"><span data-stu-id="ec2f2-105">Close the file before deleting it.</span></span>  
+- <span data-ttu-id="2334f-106">Silmeden önce dosyayı kapatın.</span><span class="sxs-lookup"><span data-stu-id="2334f-106">Close the file before deleting it.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ec2f2-106">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ec2f2-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2334f-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2334f-107">See also</span></span>
 
-- [<span data-ttu-id="ec2f2-107">My. Computer. FileSystem. DeleteFile</span><span class="sxs-lookup"><span data-stu-id="ec2f2-107">My.Computer.FileSystem.DeleteFile</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem.DeleteFile%2A)
-- [<span data-ttu-id="ec2f2-108">My. Computer. FileSystem</span><span class="sxs-lookup"><span data-stu-id="ec2f2-108">My.Computer.FileSystem</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem)
+- [<span data-ttu-id="2334f-108">My. Computer. FileSystem. DeleteFile</span><span class="sxs-lookup"><span data-stu-id="2334f-108">My.Computer.FileSystem.DeleteFile</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem.DeleteFile%2A)
+- [<span data-ttu-id="2334f-109">My. Computer. FileSystem</span><span class="sxs-lookup"><span data-stu-id="2334f-109">My.Computer.FileSystem</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem)
