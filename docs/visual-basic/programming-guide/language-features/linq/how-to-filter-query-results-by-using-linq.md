@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: sorgu sonuçlarını LINQ kullanarak filtreleme (Visual Basic)'
 title: 'Nasıl yapılır: Sorgu Sonuçlarını LINQ Kullanarak Sıralama'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,16 +12,16 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 - filtering data [Visual Basic]
 ms.assetid: ef103092-9bed-4134-97f4-2db696e83c12
-ms.openlocfilehash: 4d91783429f24abfe4149217542f8f7a6073bfef
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b3f861d9a7fb7b601606f190ad3bfbeef054cad7
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404997"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100422813"
 ---
 # <a name="how-to-filter-query-results-by-using-linq-visual-basic"></a>Nasıl yapılır: Sorgu Sonuçlarını LINQ Kullanarak Filtreleme (Visual Basic)
 
-Dil ile tümleşik sorgu (LINQ), veritabanı bilgilerine erişmeyi ve sorguları yürütmeyi kolaylaştırır.
+Language-Integrated sorgu (LINQ), veritabanı bilgilerine erişmeyi ve sorguları yürütmeyi kolaylaştırır.
 
 Aşağıdaki örnek, bir SQL Server veritabanına yönelik sorgular gerçekleştiren yeni bir uygulamanın nasıl oluşturulduğunu ve yan tümcesini kullanarak belirli bir değere göre sonuçları filtreleyeceğini gösterir `Where` . Daha fazla bilgi için bkz. [WHERE yan tümcesi](../../../language-reference/queries/where-clause.md).
 
@@ -30,9 +31,9 @@ Bu konudaki örneklerde Northwind örnek veritabanı kullanılır. Geliştirme b
 
 ## <a name="to-create-a-connection-to-a-database"></a>Bir veritabanına bağlantı oluşturmak için
 
-1. Visual Studio 'da, **Server Explorer** / **Database Explorer** Görünüm menüsünde **Sunucu Gezgini** / **veritabanı Gezgini** ' a tıklayarak Sunucu Gezgini veritabanı Gezgini **View** açın.
+1. Visual Studio 'da,  /  Görünüm menüsünde **Sunucu Gezgini** / **veritabanı Gezgini** ' a tıklayarak Sunucu Gezgini veritabanı Gezgini  açın.
 
-2. **Sunucu Gezgini**veritabanı Gezgini **veri bağlantıları** ' na sağ tıklayın / **Database Explorer** ve ardından **bağlantı ekle**' ye tıklayın.
+2. **Sunucu Gezgini** veritabanı Gezgini **veri bağlantıları** ' na sağ tıklayın /  ve ardından **bağlantı ekle**' ye tıklayın.
 
 3. Northwind örnek veritabanına geçerli bir bağlantı belirtin.
 

@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: özellik <propertyname> boş bir dizeye veya Nothing olarak ayarlanamaz'
 title: Özellik <propertyname> boş bir dizeye veya Nothing olarak ayarlanamaz
 ms.date: 07/20/2015
 ms.assetid: c4f6ceb2-cee0-4e79-9cc6-cb20276d24f8
-ms.openlocfilehash: c7f4e27aa03d6c5f97c9905eada7c4e9aab594d7
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: dbaf4ebd1238e3341facb767c86640edb93a36be
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077468"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100454787"
 ---
 # <a name="property-propertyname-cannot-be-set-to-an-empty-string-or-nothing"></a>Özellik \<propertyname> boş bir dizeye veya Nothing olarak ayarlanamaz
 
@@ -20,5 +21,5 @@ ms.locfileid: "91077468"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hata Türleri](../programming-guide/language-features/error-types.md)
-- [Yapma](../language-reference/nothing.md)
+- [Nothing](../language-reference/nothing.md)
 - <xref:System.NullReferenceException>

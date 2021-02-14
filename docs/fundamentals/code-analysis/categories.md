@@ -5,16 +5,16 @@ ms.date: 02/05/2021
 ms.topic: reference
 helpviewer_keywords:
 - code analysis, categories
-ms.openlocfilehash: 3eaff57a7ea175fbe0895fb7bb8d8d0d8df1365d
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: fdb4662f52a13906a2d9bcb3fd9a90860e394e72
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99804182"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100467335"
 ---
 # <a name="rule-categories"></a>Kural kategorileri
 
-Her kod analizi kuralı bir kural kategorisine aittir. Örneğin, tasarım kuralları .NET tasarım yönergelerine uygunluğunu destekler ve güvenlik kuralları güvenlik kusurlarını önlemeye yardımcı olur. Kural [kategorisini tümüyle etkinleştirebilir veya devre dışı](configuration-options.md#scope) bırakabilirsiniz. Ayrıca, kategori başına [ek seçenekleri de yapılandırabilirsiniz](code-quality-rule-options.md#category-of-rules) .
+Her kod analizi kuralı bir kural kategorisine aittir. Örneğin, tasarım kuralları .NET tasarım yönergelerine uygunluğunu destekler ve güvenlik kuralları güvenlik kusurlarını önlemeye yardımcı olur. Tüm kural kategorisi için [önem düzeyini yapılandırabilirsiniz](configuration-options.md#scope) . Ayrıca, kategori başına [ek seçenekleri de yapılandırabilirsiniz](code-quality-rule-options.md#category-of-rules) .
 
 Aşağıdaki tabloda farklı kod analizi kuralı kategorileri gösterilmektedir ve her kategorideki kurallara bir bağlantı sağlanır.
 

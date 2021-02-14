@@ -2,18 +2,18 @@
 title: Mikro hizmet API’leri ve anlaşmaları oluşturma, geliştirme ve sürüm oluşturma
 description: Gereksinimler değiştikçe, gelişleri ve sürüm oluşturmayı ele alarak mikro hizmet API 'Leri ve sözleşmeleri oluşturun.
 ms.date: 01/13/2021
-ms.openlocfilehash: 84eeaa9776947abda6171949c730f8473e97b241
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: ec4dbcd1fde2078ddb6b5feb67b47a52f8b3aeb8
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189466"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100425535"
 ---
 # <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>Mikro hizmet API’leri ve anlaşmaları oluşturma, geliştirme ve sürüm oluşturma
 
 Mikro hizmet API 'SI, hizmet ve istemcileri arasında bir anlaşmada bulunur. Bir mikro hizmeti yalnızca API sözleşmesini bozmadıysanız bağımsız olarak geliştirebilirsiniz, bu da sözleşmenin bu kadar önemli olduğu anlamına gelir. Sözleşmeyi değiştirirseniz, istemci uygulamalarınızı veya API ağ geçidinizi etkileyecektir.
 
-API tanımının doğası, kullanmakta olduğunuz protokole bağlıdır. Örneğin, mesajlaşma kullanıyorsanız ( [AMQP](http://www.amqp.org/)gibi), API ileti türlerinden oluşur. HTTP ve yeniden deneme Hizmetleri kullanıyorsanız, API, URL 'Lerden ve istek ve yanıt JSON biçimlerinden oluşur.
+API tanımının doğası, kullanmakta olduğunuz protokole bağlıdır. Örneğin, mesajlaşma kullanıyorsanız ( [AMQP](http://www.amqp.org)gibi), API ileti türlerinden oluşur. HTTP ve yeniden deneme Hizmetleri kullanıyorsanız, API, URL 'Lerden ve istek ve yanıt JSON biçimlerinden oluşur.
 
 Ancak, ilk sözleşmeniz hakkında düşünceli olsanız bile, bir hizmet API 'sinin zaman içinde değişiklik yapması gerekir. Bu gerçekleştiğinde — ve API 'niz birden çok istemci uygulaması tarafından tüketilen ortak bir API ise, genellikle tüm istemcilerin yeni API sözleşmenizi yükseltmesine izin verilmez. Genellikle bir hizmetin yeni sürümlerini, bir hizmet sözleşmesinin hem eski hem de yeni sürümlerinin aynı anda çalıştığı bir şekilde artımlı olarak dağıtmanız gerekir. Bu nedenle, hizmet sürümü oluşturma stratejiniz için bir strateji olması önemlidir.
 

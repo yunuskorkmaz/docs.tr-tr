@@ -1,17 +1,18 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: zaman uyumsuz görevleri bir süre sonra Iptal etme (Visual Basic)'
 title: Zaman Uyumsuz Görevleri Belirli Bir Süre Sonunda İptal Etme
 ms.date: 07/20/2015
 ms.assetid: a48045a3-6a99-42af-b824-af340f0b9a5d
-ms.openlocfilehash: 048d4c19d459905ea579ede96c69230e718d55aa
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: fa1711017128dd32f29adfd87a540676371d02cf
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396694"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100431639"
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-visual-basic"></a>Zaman uyumsuz görevleri bir süre sonra iptal et (Visual Basic)
 
-İşlemin bitmesini beklemek istemiyorsanız yöntemini kullanarak bir süre sonra zaman uyumsuz bir işlemi iptal edebilirsiniz <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> . Bu yöntem, ifadesi tarafından belirlenen süre içinde tamamlanmamış olan ilişkili görevlerin iptalini zamanlar `CancelAfter` .
+İşlemin bitmesini beklemek istemiyorsanız yöntemini kullanarak bir süre sonra zaman uyumsuz bir işlemi iptal edebilirsiniz  <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> . Bu yöntem, ifadesi tarafından belirlenen süre içinde tamamlanmamış olan ilişkili görevlerin iptalini zamanlar `CancelAfter` .
 
 Bu örnek, bir Web sitesi listesini indirmek ve her birinin içindekilerin uzunluğunu göstermek için [zaman uyumsuz bir görevi veya görev listesini (Visual Basic) iptal](cancel-an-async-task-or-a-list-of-tasks.md) etmek üzere geliştirilmiş koda ekler.
 
@@ -42,7 +43,7 @@ Tüm Windows Presentation Foundation (WPF) projesini [zaman uyumsuz örnekten in
 
 Bu konudaki örnek, bir görev listesini iptal etmek için [zaman uyumsuz bir görevi veya görev listesini iptal etmek (Visual Basic)](cancel-an-async-task-or-a-list-of-tasks.md) için geliştirilmiş projeye ekler. Örnek, aynı kullanıcı arabirimini kullanır, ancak **iptal** düğmesi açıkça kullanılmaz.
 
-Örneği kendiniz oluşturmak için, "örneği Indirme" bölümündeki yönergeleri izleyin, ancak **Başlangıç projesi**olarak iptal eden **ınlıftasks** ' ı seçin. Bu konudaki değişiklikleri bu projeye ekleyin.
+Örneği kendiniz oluşturmak için, "örneği Indirme" bölümündeki yönergeleri izleyin, ancak **Başlangıç projesi** olarak iptal eden **ınlıftasks** ' ı seçin. Bu konudaki değişiklikleri bu projeye ekleyin.
 
 Görevler iptal edildi olarak işaretlenmeden önce en uzun süreyi belirtmek için, `CancelAfter` `startButton_Click` Aşağıdaki örnekte gösterildiği gibi öğesine bir çağrı ekleyin. Toplama, yıldız işareti ile işaretlenir.
 

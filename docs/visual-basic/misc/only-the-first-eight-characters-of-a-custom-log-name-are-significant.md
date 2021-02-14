@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: özel günlük adının yalnızca ilk sekiz karakteri önemli'
 title: Özel günlük adının yalnızca ilk sekiz karakteri önemli
 ms.date: 07/20/2015
 ms.assetid: db2a0252-9ddd-4e93-a239-6a690cc09557
-ms.openlocfilehash: 02f4de7ebdcfc6cc4441ccb6a92ba7ee9060e058
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: c5abd7bccae7aaf333b3a7791a0dc768e4feda59
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91084274"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100423257"
 ---
 # <a name="only-the-first-eight-characters-of-a-custom-log-name-are-significant"></a>Özel günlük adının yalnızca ilk sekiz karakteri önemli
 

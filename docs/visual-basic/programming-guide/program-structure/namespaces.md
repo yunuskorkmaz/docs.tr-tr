@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Visual Basic ad alanları'
 title: Ad alanları
 ms.date: 07/20/2015
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: f4521fa10c3bb9e8e121e3c228a23061becd1741
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 2f7c0bfd29bf6fe104252aa125b4ddff1259b50a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072203"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100460754"
 ---
 # <a name="namespaces-in-visual-basic"></a>Visual Basic'de Ad Alanları
 
@@ -33,7 +34,7 @@ Ad alanları bir derlemede tanımlanan nesneleri düzenler. Derlemeler birden ç
   
 ## <a name="avoiding-name-collisions"></a>Ad çakışmalarını önleme  
 
- .NET Framework ad alanları, bazen bir sınıf kitaplığı geliştiricisinin başka bir kitaplıktaki benzer adların kullanımıyla birlikte olduğu *ad alanı kirliliğine*de denilen bir sorunu ele alırlar. Var olan bileşenlerle ilgili bu çakışmalar bazen *ad çarpışmaları*olarak adlandırılır.  
+ .NET Framework ad alanları, bazen bir sınıf kitaplığı geliştiricisinin başka bir kitaplıktaki benzer adların kullanımıyla birlikte olduğu *ad alanı kirliliğine* de denilen bir sorunu ele alırlar. Var olan bileşenlerle ilgili bu çakışmalar bazen *ad çarpışmaları* olarak adlandırılır.  
   
  Örneğin, adlı yeni bir sınıf oluşturursanız `ListBox` , bunu proje içinde nitelik olmadan kullanabilirsiniz. Ancak .NET Framework <xref:System.Windows.Forms.ListBox> sınıfını aynı projede kullanmak istiyorsanız, başvuruyu benzersiz hale getirmek için tam olarak nitelenmiş bir başvuru kullanmanız gerekir. Başvuru benzersiz değilse, Visual Basic adın belirsiz olduğunu belirten bir hata üretir. Aşağıdaki kod örneği, bu nesnelerin nasıl bildirileceğini göstermektedir:  
   
@@ -53,7 +54,7 @@ Ad alanları bir derlemede tanımlanan nesneleri düzenler. Derlemeler birden ç
   
  [!code-vb[VbVbalrApplication#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#8)]  
   
- Tam nitelikli adlar, derleyicinin hangi nesnenin kullanılmakta olduğunu belirlemesini olanaklı kıdığından, adlandırma çakışmalarını önler. Ancak, adları uzun ve çok daha fazla alabilir. Bu sorunu gidermek için, bir `Imports` *diğer*ad tanımlamak için ifadesini kullanabilirsiniz — bir tam adı yerine kullanabileceğiniz kısaltılmış bir addır. Örneğin, aşağıdaki kod örneği iki tam ad için diğer adlar oluşturur ve iki nesneyi tanımlamak için bu diğer adları kullanır.  
+ Tam nitelikli adlar, derleyicinin hangi nesnenin kullanılmakta olduğunu belirlemesini olanaklı kıdığından, adlandırma çakışmalarını önler. Ancak, adları uzun ve çok daha fazla alabilir. Bu sorunu gidermek için, bir `Imports` *diğer* ad tanımlamak için ifadesini kullanabilirsiniz — bir tam adı yerine kullanabileceğiniz kısaltılmış bir addır. Örneğin, aşağıdaki kod örneği iki tam ad için diğer adlar oluşturur ve iki nesneyi tanımlamak için bu diğer adları kullanır.  
   
  [!code-vb[VbVbalrApplication#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#9)]  
   

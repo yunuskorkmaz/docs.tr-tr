@@ -2,12 +2,12 @@
 title: Dağıtılmış izleme-.NET
 description: .NET dağıtılmış izleme 'ye giriş.
 ms.date: 02/02/2021
-ms.openlocfilehash: d21d2a978cfe58d89db689dec07107f089363912
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: d29c803dfec00474562abdc61ce65ea3f3faa133
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99640127"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100431444"
 ---
 # <a name="net-distributed-tracing"></a>.NET dağıtılmış Izleme
 
@@ -79,7 +79,7 @@ Uygulamalar ve kitaplıklar yalnızca ve sınıflarını kullanarak izleme veril
 İzleme verilerini yayımlamanın ilk adımı, ActivitySource sınıfının bir örneğini oluşturmaktır. ActivitySource, etkinlik nesnelerinin oluşturulması ve başlatılması ve etkinlik olaylarını dinlemek için ActivityListener nesnelerinin kaydedilmesi için API 'Ler sağlayan sınıftır.
 
 ```csharp
-    internal static ActivitySource source = new ActivitySource("MyCompany.MyComponent.SourceName", "v1");
+    private static ActivitySource source = new ActivitySource("MyCompany.MyComponent.SourceName", "v1");
 ```
 
 #### <a name="best-practices"></a>En İyi Uygulamalar
