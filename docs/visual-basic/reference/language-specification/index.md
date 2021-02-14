@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Visual Basic dil belirtimi'
 title: Dil Belirtimi
 ms.date: 08/02/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, specifications
 - specifications, Visual Basic
 ms.assetid: 42c30017-19d0-442e-87a2-850b66ddc3df
-ms.openlocfilehash: ddc4558cbf79afc968509177e5be14f5e2f17ef7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7f2a55a9859bd5a8811dec5dc933359f4662b7fe
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414232"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100433452"
 ---
 # <a name="visual-basic-language-specification"></a>Visual Basic dil belirtimi
 

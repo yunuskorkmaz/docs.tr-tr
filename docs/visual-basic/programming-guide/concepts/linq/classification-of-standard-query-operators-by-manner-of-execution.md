@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: standart sorgu Işleçleri yürütme yöntemine göre sınıflandırma (Visual Basic)'
 title: Standart Sorgu İşleçlerinin Yürütme Yöntemine Göre Sınıflandırılması
 ms.date: 07/20/2015
 ms.assetid: 7f55b0be-9f6e-44f8-865c-6afbea50cc54
-ms.openlocfilehash: 0628565fc0406c88aac814a05275cccdc61c44fe
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 286520f7697d7d88de903bd1965864942c1728e1
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078365"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100424574"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-visual-basic"></a>Standart sorgu Işleçleri yürütme yöntemine göre sınıflandırma (Visual Basic)
 

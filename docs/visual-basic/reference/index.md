@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: başvuru (Visual Basic)'
 title: Başvuru
 ms.date: 07/20/2015
 helpviewer_keywords:
 - language reference
 - Visual Basic code, language reference
 ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
-ms.openlocfilehash: 7f4b375c350dca58aa1002402806113ec0f91b55
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: d95a802a8bb4b53d71a4e8428aa1d6b2c0b5b65d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91098767"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100433477"
 ---
 # <a name="reference-visual-basic"></a>Başvuru (Visual Basic)
 
@@ -21,7 +22,7 @@ Bu bölüm Visual Basic programlamanın çeşitli yönleri hakkında başvuru bi
  [Visual Basic dil başvurusu](../language-reference/index.md)  
  Visual Basic dilinin çeşitli yönleri için başvuru bilgileri sağlar.  
   
- [Visual Basic komut satırı derleyicisi](command-line-compiler/index.md)  
+ [Visual Basic Command-Line derleyicisi](command-line-compiler/index.md)  
  Visual Studio IDE 'den program derlemeye bir alternatif sağlayan komut satırı derleyicisi hakkındaki bilgilere bağlantılar sağlar.  
   
  [.NET Framework Başvuru Bilgisi](net-framework-reference-information.md)  

@@ -1,4 +1,5 @@
 ---
+description: Hakkında daha fazla bilgi edinin:-Main
 title: -main
 ms.date: 03/13/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - /main compiler option [Visual Basic]
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
-ms.openlocfilehash: fb317b3c555d151e132122c476ce19bdeceb1321
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 4c225c5a0030de6de0aaa510080a586272aa920b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91065625"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100455671"
 ---
 # <a name="-main"></a>-main
 
@@ -26,7 +27,7 @@ Yordamı içeren sınıfı veya modülü belirtir `Sub Main` .
 ## <a name="arguments"></a>Bağımsız değişkenler  
 
  `location`  
- Gereklidir. Program başlatıldığında Çağrılacak yordamı içeren sınıfın veya modülün adı `Sub Main` . Bu, **-Main: Module** veya **-Main: Namespace. Module**biçiminde olabilir.  
+ Gereklidir. Program başlatıldığında Çağrılacak yordamı içeren sınıfın veya modülün adı `Sub Main` . Bu, **-Main: Module** veya **-Main: Namespace. Module** biçiminde olabilir.  
   
 ## <a name="remarks"></a>Açıklamalar  
 
@@ -58,7 +59,7 @@ vbc t2.vb t3.vb -main:Test2
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](index.md)
+- [Visual Basic Command-Line derleyicisi](index.md)
 - [-target (Visual Basic)](target.md)
 - [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)
 - [Visual Basic'de Ana Yordam](../../programming-guide/program-structure/main-procedure.md)

@@ -1,4 +1,5 @@
 ---
+description: Hakkında daha fazla bilgi edinin:-Resource (Visual Basic)
 title: -resource
 ms.date: 03/13/2018
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - -res compiler option [Visual Basic]
 - resource compiler option [Visual Basic]
 ms.assetid: eee2f227-91f2-4f2b-a9d6-1c51c5320858
-ms.openlocfilehash: 726f3dd179aedb39b578c8580c9632182af2d5e0
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 830d89ab4f4063aa12d12a5206b76e49c5355708
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085132"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100474115"
 ---
 # <a name="-resource-visual-basic"></a>-Kaynak (Visual Basic)
 
@@ -59,7 +60,7 @@ vbc -res:rf.resource in.vb
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](index.md)
+- [Visual Basic Command-Line derleyicisi](index.md)
 - [-win32resource](win32resource.md)
 - [-linkresource (Visual Basic)](linkresource.md)
 - [-target (Visual Basic)](target.md)

@@ -1,15 +1,16 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: kategoriye göre listelenen Visual Basic derleyici seçenekleri'
 title: Kategorilere Göre Listelenen Derleyici Seçenekleri
 ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: 77a130b684d26cf7e4b9df9382348a371a60bc5d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: f0535e2aa94cda96610acb0edb24f6d46cc4afa0
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072047"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100474180"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Kategoriye göre listelenmiş Visual Basic derleyici seçenekleri
 
@@ -39,12 +40,12 @@ Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme or
 |Seçenek|Amaç|  
 |---|---|  
 |[-doc](doc.md)|Belge açıklamalarını bir XML dosyası ile işleyin.|  
-|[-deterministic](deterministic.md)|Girişlerin özdeş olması halinde, derleyicinin ikili içerik özdeş olan bir derlemeyi çıkış yapmasına neden olur.|
+|[-belirleyici](deterministic.md)|Girişlerin özdeş olması halinde, derleyicinin ikili içerik özdeş olan bir derlemeyi çıkış yapmasına neden olur.|
 |[-netcf](netcf.md)|.NET Compact Framework hedeflemek için derleyiciyi ayarlar.|  
-|[-out](out.md)|Bir çıkış dosyasını belirtir.|  
+|[-Out](out.md)|Bir çıkış dosyasını belirtir.|  
 |[-refonly](refonly-compiler-option.md)|Yalnızca bir başvuru derlemesini verir.|
 |[-refout](refout-compiler-option.md)|Bir başvuru derlemesinin çıkış yolunu belirtir.|
-|[-target](target.md)|Çıkışın biçimini belirtir.|  
+|[-hedef](target.md)|Çıkışın biçimini belirtir.|  
   
 ## <a name="net-assemblies"></a>.NET derlemeleri  
   
@@ -94,7 +95,7 @@ Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme or
   
 |Seçenek|Amaç|  
 |---|---|  
-|[-tanımla](define.md)|Koşullu derleme için sembolleri tanımlar.|  
+|[-define](define.md)|Koşullu derleme için sembolleri tanımlar.|  
   
 ## <a name="resources"></a>Kaynaklar  
   
@@ -114,7 +115,7 @@ Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme or
 |[-codepage](codepage.md)|Derlemedeki tüm kaynak kodu dosyaları için kullanılacak kod sayfasını belirtir.|  
 |[-errorreport](errorreport.md)|Visual Basic derleyicisinin iç derleyici hatalarını nasıl rapor etmesi gerektiğini belirtir.|  
 |[-highentropyva](highentropyva.md)|Windows çekirdeğine, belirli bir yürütülebilir dosyanın yüksek entropi adres alanı düzeni rastgele seçimini (ASLR) destekleyip desteklemediğini söyler.|  
-|[-main](main.md)|Başlangıçta kullanılacak yordamı içeren sınıfı belirtir `Sub Main` .|  
+|[-Main](main.md)|Başlangıçta kullanılacak yordamı içeren sınıfı belirtir `Sub Main` .|  
 |[-noconfig](noconfig.md)|Vbc. rsp ile derleme|  
 |[-nostdlib](nostdlib.md)|Derleyicinin standart kitaplıklara Başvurmamasını sağlar.|  
 |[-nowin32manifest](nowin32manifest.md)|Derleyicinin hiçbir uygulama bildirimini yürütülebilir dosyaya katıştırmamasını sağlar.|  

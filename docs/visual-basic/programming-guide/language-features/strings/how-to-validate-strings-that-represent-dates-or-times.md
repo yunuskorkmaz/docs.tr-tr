@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: tarihleri veya saatleri temsil eden dizeleri doğrulama (Visual Basic)'
 title: 'Nasıl yapılır: Tarihleri veya Saatleri Temsil Eden Dizeleri Doğrulama'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], validating
 - String data type [Visual Basic], validation
 ms.assetid: ae7d4b29-3436-4032-bdbf-4650eb1c8e19
-ms.openlocfilehash: f3654894e274404410179dab04422e20f6040440
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 4e9255717d1711d8e9839c218a78b359549d9eef
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072606"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100424273"
 ---
 # <a name="how-to-validate-strings-that-represent-dates-or-times-visual-basic"></a>Nasıl yapılır: Tarihleri veya Saatleri Temsil Eden Dizeleri Doğrulama (Visual Basic)
 

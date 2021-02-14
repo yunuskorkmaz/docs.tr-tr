@@ -1,4 +1,5 @@
 ---
+description: :-Moduleassemblyname hakkında daha fazla bilgi edinin
 title: -moduleassemblyname
 ms.date: 03/13/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [Visual Basic]
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
-ms.openlocfilehash: 9fb9287f9472d4b33eff4cb601aff5eed370b2c0
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 1b5daac8fea264e86b7200f3cead4cb657641000
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91065573"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434322"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
 
@@ -47,9 +48,9 @@ Bu modülün bir parçası olacağı derlemenin adını belirtir.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Nasıl yapılır: çok dosyalı bütünleştirilmiş kod derleme](../../../framework/app-domains/build-multifile-assembly.md)
-- [Visual Basic komut satırı derleyicisi](index.md)
+- [Visual Basic Command-Line derleyicisi](index.md)
 - [-target (Visual Basic)](target.md)
-- [-main](main.md)
+- [-Main](main.md)
 - [-başvuru (Visual Basic)](reference.md)
 - [-addmodule](addmodule.md)
 - [.NET’te bütünleştirilmiş kodlar](../../../standard/assembly/index.md)

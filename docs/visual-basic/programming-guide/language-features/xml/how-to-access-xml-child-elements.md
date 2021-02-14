@@ -1,4 +1,5 @@
 ---
+description: ': Nasıl yapılır: XML alt öğelerine erişme (Visual Basic) hakkında daha fazla bilgi edinin'
 title: 'Nasıl yapılır: XML Alt Öğelerine Erişme'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - XML child axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 6689eb36-c471-469f-a82d-099ab8197b25
-ms.openlocfilehash: 9c33bec9b9ea865d570bab08f27227129867cce9
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: fad4d45853006762bc319b0ff8f9143ef13058da
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91058306"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100433245"
 ---
 # <a name="how-to-access-xml-child-elements-visual-basic"></a>Nasıl yapılır: XML Alt Öğelerine Erişme (Visual Basic)
 

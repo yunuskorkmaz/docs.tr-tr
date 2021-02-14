@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: nasıl yapılır: LINQ kullanarak veritabanındaki verileri değiştirme (Visual Basic)'
 title: 'Nasıl yapılır: LINQ Kullanarak Veritabanındaki Verileri Değiştirme'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], data changes in database
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
-ms.openlocfilehash: eb076d9156fa66858f2e560422eef0dc61ba22b5
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b58ca542fbc6f4d63705e45b53edc8ded83ab88b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403491"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100422776"
 ---
 # <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Nasıl yapılır: LINQ Kullanarak Veritabanındaki Verileri Değiştirme (Visual Basic)
 
-Dil ile tümleşik sorgu (LINQ) sorguları, veritabanı bilgilerine erişmeyi ve veritabanındaki değerleri değiştirmeyi kolaylaştırır.
+Language-Integrated Query (LINQ) sorguları, veritabanı bilgilerine erişmeyi ve veritabanındaki değerleri değiştirmeyi kolaylaştırır.
 
 Aşağıdaki örnek, SQL Server bir veritabanında bilgi alıp güncelleştiren yeni bir uygulamanın nasıl oluşturulacağını gösterir.
 
@@ -29,9 +30,9 @@ Bu konudaki örneklerde Northwind örnek veritabanı kullanılır. Geliştirme b
 
 ### <a name="to-create-a-connection-to-a-database"></a>Bir veritabanına bağlantı oluşturmak için
 
-1. Visual Studio 'da, **Server Explorer** / **Görünüm** menüsüne tıklayarak Sunucu Gezgini**veritabanı Gezgini** açın ve **Sunucu Gezgini** / **veritabanı Gezgini**' ı seçin.
+1. Visual Studio 'da,  / **Görünüm** menüsüne tıklayarak Sunucu Gezgini **veritabanı Gezgini** açın ve **Sunucu Gezgini** / **veritabanı Gezgini**' ı seçin.
 
-2. **Sunucu Gezgini**veritabanı Gezgini **veri bağlantıları** ' na sağ tıklayın / **Database Explorer**ve **bağlantı ekle**' ye tıklayın.
+2. **Sunucu Gezgini** veritabanı Gezgini **veri bağlantıları** ' na sağ tıklayın / ve **bağlantı ekle**' ye tıklayın.
 
 3. Northwind örnek veritabanına geçerli bir bağlantı belirtin.
 
@@ -65,7 +66,7 @@ Bu konudaki örneklerde Northwind örnek veritabanı kullanılır. Geliştirme b
 
      Kodunuzda nesnenin bir örneğini oluşturabilir ve, <xref:System.Data.Linq.DataContext> O/R Tasarımcısı tarafından belirtilen müşteriler koleksiyonunu sorgulayabilir ve değiştirebilirsiniz. Müşteriler koleksiyonunda yaptığınız değişiklikler, nesne yöntemini çağırarak gönderene kadar veritabanına yansıtılmaz <xref:System.Data.Linq.DataContext.SubmitChanges%2A> <xref:System.Data.Linq.DataContext> .
 
-     ' <xref:System.Windows.Forms.Form.Load> In bir özelliği olarak sunulan Customers tablosunu sorgulamak üzere olaya kod eklemek Için Windows formunu çift tıklayın <xref:System.Data.Linq.DataContext> . Aşağıdaki kodu ekleyin:
+     ' <xref:System.Windows.Forms.Form.Load> In bir özelliği olarak sunulan Customers tablosunu sorgulamak üzere olaya kod eklemek Için Windows formunu çift tıklayın <xref:System.Data.Linq.DataContext> . Şu kodu ekleyin:
 
     ```vb
     Private db As northwindDataContext
@@ -87,9 +88,9 @@ Bu konudaki örneklerde Northwind örnek veritabanı kullanılır. Geliştirme b
     End Sub
     ```
 
-3. **Araç kutusundan**üç <xref:System.Windows.Forms.Button> denetimi form üzerine sürükleyin. İlk denetimi seçin `Button` . **Özellikler** penceresinde, denetiminin öğesini ile `Name` olarak ayarlayın `Button` `AddButton` `Text` `Add` . İkinci düğmeyi seçin ve `Name` özelliğini `UpdateButton` ve `Text` özelliğini olarak ayarlayın `Update` . Üçüncü düğmesini seçin ve `Name` özelliğini `DeleteButton` ve `Text` özelliğini olarak ayarlayın `Delete` .
+3. **Araç kutusundan** üç <xref:System.Windows.Forms.Button> denetimi form üzerine sürükleyin. İlk denetimi seçin `Button` . **Özellikler** penceresinde, denetiminin öğesini ile `Name` olarak ayarlayın `Button` `AddButton` `Text` `Add` . İkinci düğmeyi seçin ve `Name` özelliğini `UpdateButton` ve `Text` özelliğini olarak ayarlayın `Update` . Üçüncü düğmesini seçin ve `Name` özelliğini `DeleteButton` ve `Text` özelliğini olarak ayarlayın `Delete` .
 
-4. Olayına kod eklemek için **Ekle** düğmesine çift tıklayın `Click` . Aşağıdaki kodu ekleyin:
+4. Olayına kod eklemek için **Ekle** düğmesine çift tıklayın `Click` . Şu kodu ekleyin:
 
     ```vb
     Private Sub AddButton_Click(ByVal sender As System.Object,
@@ -114,7 +115,7 @@ Bu konudaki örneklerde Northwind örnek veritabanı kullanılır. Geliştirme b
     End Sub
     ```
 
-5. Olayına kod eklemek için **Güncelleştir** düğmesine çift tıklayın `Click` . Aşağıdaki kodu ekleyin:
+5. Olayına kod eklemek için **Güncelleştir** düğmesine çift tıklayın `Click` . Şu kodu ekleyin:
 
     ```vb
     Private Sub UpdateButton_Click(ByVal sender As System.Object, _
@@ -138,7 +139,7 @@ Bu konudaki örneklerde Northwind örnek veritabanı kullanılır. Geliştirme b
     End Sub
     ```
 
-6. Olayına kod eklemek için **Sil** düğmesine çift tıklayın `Click` . Aşağıdaki kodu ekleyin:
+6. Olayına kod eklemek için **Sil** düğmesine çift tıklayın `Click` . Şu kodu ekleyin:
 
     ```vb
     Private Sub DeleteButton_Click(ByVal sender As System.Object, _

@@ -1,13 +1,14 @@
 ---
+description: "Daha fazla bilgi edinin: Izlenecek yol: Async ve await kullanarak Web 'e erişme (Visual Basic)"
 title: "İzlenecek yol: Async ve Await Kullanarak Web'e Erişme"
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 41ededd4d4335b78b8d7a33e8fe387c7d632cbee
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 08488d4909e4fbc40cc11213eb293c2693fdec71
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400751"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100474167"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>İzlenecek yol: Async ve await kullanarak Web 'e erişme (Visual Basic)
 
@@ -53,7 +54,7 @@ Bilgisayarınızda Visual Studio 2012 veya üzeri yüklü olmalıdır. Daha fazl
 
 4. **Ad** metin kutusuna girin `AsyncExampleWPF` ve sonra **Tamam** düğmesini seçin.
 
-    Yeni proje **Çözüm Gezgini**görüntülenir.
+    Yeni proje **Çözüm Gezgini** görüntülenir.
 
 ## <a name="design-a-simple-wpf-mainwindow"></a>Basit bir WPF MainWindow tasarımı
 
@@ -77,7 +78,7 @@ Bilgisayarınızda Visual Studio 2012 veya üzeri yüklü olmalıdır. Daha fazl
 
     - **Name** özelliğini olarak ayarlayın `startButton` .
 
-    - **İçerik** özelliğinin değerini **düğmeden** **başla**olarak değiştirin.
+    - **İçerik** özelliğinin değerini **düğmeden** **başla** olarak değiştirin.
 
 6. Metin kutusunu ve düğmeyi her ikisinin de **MainWindow** penceresinde görünmesi için konumlandırın.
 
@@ -113,7 +114,7 @@ Bilgisayarınızda Visual Studio 2012 veya üzeri yüklü olmalıdır. Daha fazl
 
 ## <a name="create-a-synchronous-application"></a>Zaman uyumlu uygulama oluşturma
 
-1. MainWindow. xaml tasarım penceresinde, **Start** `startButton_Click` MainWindow. xaml. vb ' de olay Işleyicisini oluşturmak için Başlat düğmesine çift tıklayın.
+1. MainWindow. xaml tasarım penceresinde,  `startButton_Click` MainWindow. xaml. vb ' de olay Işleyicisini oluşturmak için Başlat düğmesine çift tıklayın.
 
 2. MainWindow. xaml. vb dosyasında aşağıdaki kodu ' ın gövdesine kopyalayın `startButton_Click` :
 
@@ -234,7 +235,7 @@ Bilgisayarınızda Visual Studio 2012 veya üzeri yüklü olmalıdır. Daha fazl
     Control returned to startButton_Click.
     ```
 
-    Sayıları görüntülemenin birkaç saniye sürdiğine dikkat edin. Bu süre boyunca, Kullanıcı arabirimi iş parçacığı istenen kaynakların indirilmesini beklerken engellenir. Sonuç olarak, **Başlat** düğmesini seçtikten sonra görüntü penceresini taşıyamaz, ekranı kaplamaz, simge durumuna küçültebilir ya da kapatabilirsiniz. Bu çalışmalar, bayt sayıları görünene kadar başarısız olur. Bir Web sitesi yanıt vermiyorsa, hangi sitenin başarısız olduğunun belirtii olmaz. Beklemeyi durdurup programı kapatmanız zordur.
+    Sayıları görüntülemenin birkaç saniye sürdiğine dikkat edin. Bu süre boyunca, Kullanıcı arabirimi iş parçacığı istenen kaynakların indirilmesini beklerken engellenir. Sonuç olarak,  **Başlat** düğmesini seçtikten sonra görüntü penceresini taşıyamaz, ekranı kaplamaz, simge durumuna küçültebilir ya da kapatabilirsiniz. Bu çalışmalar, bayt sayıları görünene kadar başarısız olur. Bir Web sitesi yanıt vermiyorsa, hangi sitenin başarısız olduğunun belirtii olmaz. Beklemeyi durdurup programı kapatmanız zordur.
 
 ## <a name="convert-geturlcontents-to-an-asynchronous-method"></a>GetURLContents öğesini zaman uyumsuz bir metoda Dönüştür
 
@@ -251,7 +252,7 @@ Bilgisayarınızda Visual Studio 2012 veya üzeri yüklü olmalıdır. Daha fazl
     Using response As WebResponse = webReq.GetResponseAsync()
     ```
 
-2. `GetResponseAsync`döndürür <xref:System.Threading.Tasks.Task%601> . Bu durumda, *görev dönüş değişkeni*, `TResult` türündedir <xref:System.Net.WebResponse> . Görev, `WebResponse` istenen veriler indirildikten ve görevin tamamlanmasını çalıştırdıktan sonra gerçek bir nesne oluşturmak için bir taahhüddir.
+2. `GetResponseAsync` döndürür <xref:System.Threading.Tasks.Task%601> . Bu durumda, *görev dönüş değişkeni*, `TResult` türündedir <xref:System.Net.WebResponse> . Görev, `WebResponse` istenen veriler indirildikten ve görevin tamamlanmasını çalıştırdıktan sonra gerçek bir nesne oluşturmak için bir taahhüddir.
 
     `WebResponse`Görevden değeri almak için, aşağıdaki kodda gösterildiği gibi çağrısına bir [await](../../../language-reference/operators/await-operator.md) işleci uygulayın `GetResponseAsync` .
 
@@ -293,7 +294,7 @@ Bilgisayarınızda Visual Studio 2012 veya üzeri yüklü olmalıdır. Daha fazl
         Await copyTask
         ```
 
-4. Tüm bunlar ' de yapılacak şekilde, `GetURLContents` yöntem imzasını ayarlamasıdır. `Await`İşlecini yalnızca [zaman uyumsuz](../../../language-reference/modifiers/async.md) değiştiriciyle işaretlenen yöntemlerde kullanabilirsiniz. Aşağıdaki kodun gösterdiği gibi, yöntemi *zaman uyumsuz bir yöntem*olarak işaretlemek için değiştirici ekleyin.
+4. Tüm bunlar ' de yapılacak şekilde, `GetURLContents` yöntem imzasını ayarlamasıdır. `Await`İşlecini yalnızca [zaman uyumsuz](../../../language-reference/modifiers/async.md) değiştiriciyle işaretlenen yöntemlerde kullanabilirsiniz. Aşağıdaki kodun gösterdiği gibi, yöntemi *zaman uyumsuz bir yöntem* olarak işaretlemek için değiştirici ekleyin.
 
     ```vb
     Private Async Function GetURLContents(url As String) As Byte()

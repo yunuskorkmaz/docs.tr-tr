@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: bir klasör kümesindeki toplam bayt sayısını sorgulama (LINQ) (Visual Basic)'
 title: 'Nasıl yapılır: Bir Klasör Kümesindeki Toplam Bayt Sayısını Sorgulama (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: bfe85ed2-44dc-4ef1-aac7-241622b80a69
-ms.openlocfilehash: c8e1ee66c2c9b570acd2c815bdc1ba0324380eda
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 493caa8c3f42a9f00ccca539ec8349b9f8d361b8
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100210"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100435050"
 ---
 # <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-visual-basic"></a>Nasıl yapılır: bir klasör kümesindeki toplam bayt sayısını sorgulama (LINQ) (Visual Basic)
 

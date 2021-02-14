@@ -1,4 +1,5 @@
 ---
+description: :-Netcf hakkında daha fazla bilgi
 title: -netcf
 ms.date: 03/13/2018
 f1_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - netcf compiler option [Visual Basic]
 - /netcf compiler option [Visual Basic]
 ms.assetid: db7cfa59-c315-401c-a59b-0daf355343d6
-ms.openlocfilehash: 16fb6b3b63c848ea6c09cc18b0fcc488670f0926
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 053e177d8d7008b10bfa552ee60cbbd2d5dda565
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397481"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434920"
 ---
 # <a name="-netcf"></a>-netcf
 
 .NET Compact Framework hedeflemek için derleyiciyi ayarlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```console
 -netcf
@@ -85,7 +86,7 @@ ms.locfileid: "84397481"
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod, `Myfile.vb` C sürücüsündeki .NET Compact Framework varsayılan yükleme dizininde bulunan mscorlib. dll ve Microsoft. VisualBasic. dll sürümlerini kullanarak .NET Compact Framework ile derlenir. Genellikle .NET Compact Framework en son sürümünü kullanırsınız.
+Aşağıdaki kod, `Myfile.vb` C sürücüsündeki .NET Compact Framework varsayılan yükleme dizininde bulunan mscorlib.dll ve Microsoft.VisualBasic.dll sürümlerini kullanarak .NET Compact Framework ile derlenir. Genellikle .NET Compact Framework en son sürümünü kullanırsınız.
 
 ```console
 vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb
@@ -93,6 +94,6 @@ vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactF
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](index.md)
+- [Visual Basic Command-Line derleyicisi](index.md)
 - [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)
 - [-sdkpath](sdkpath.md)

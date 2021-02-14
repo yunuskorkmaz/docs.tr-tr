@@ -1,15 +1,16 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Visual Basic Nothing ve dizeler'
 title: Nothing ve Dizeler
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], Nothing
 ms.assetid: 261380af-2024-4ecf-823b-43b1034d92cd
-ms.openlocfilehash: d4c7ee6d13334617a80abb845af52bf388a12797
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: a32dd8b38033f1845f2ada87bf5f538d45fede18
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072528"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100424352"
 ---
 # <a name="nothing-and-strings-in-visual-basic"></a>Visual Basic'de Dizeler ve Nothing
 

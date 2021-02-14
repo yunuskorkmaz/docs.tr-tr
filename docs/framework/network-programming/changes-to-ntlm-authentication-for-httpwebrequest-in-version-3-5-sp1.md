@@ -3,12 +3,12 @@ description: "Hakkında daha fazla bilgi edinin: sürüm 3,5 SP1 'de HttpWebRequ
 title: Sürüm 3.5 SP1’de HttpWebRequest için NTLM kimlik doğrulamasındaki değişiklikler
 ms.date: 03/30/2017
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
-ms.openlocfilehash: cdb17317dbafc167cce7a9b2785be68a35d3bd5b
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 24787894d89f65024f7022a44b507c689bb0beb5
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99791640"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434855"
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>Sürüm 3.5 SP1’de HttpWebRequest için NTLM kimlik doğrulamasındaki değişiklikler
 
@@ -52,7 +52,7 @@ Geri döngü adresiyle eşlenen ana bilgisayar adlarını belirtmek ve yerel bir
 
 7. Kayıt defteri düzenleyicisinden çıkın ve sonra IISADMIN hizmetini yeniden başlatın ve IISRESET komutunu çalıştırın.
 
-Daha az güvenli bir iş, bölümünde açıklandığı gibi geri döngü denetimini devre dışı bırakmamaktadır <https://support.microsoft.com/kb/896861> . Bu, yansıma saldırılarına karşı korumayı devre dışı bırakır. Bu nedenle, alternatif adlar kümesini yalnızca makinenin gerçekten kullanmasını beklediğinizi kısıtlamak daha iyidir.
+Daha az güvenli bir iş, geri döngü denetimini devre dışı bırakdır. Bu, yansıma saldırılarına karşı korumayı devre dışı bırakır. Bu nedenle, alternatif adlar kümesini yalnızca makinenin gerçekten kullanmasını beklediğinizi kısıtlamak daha iyidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

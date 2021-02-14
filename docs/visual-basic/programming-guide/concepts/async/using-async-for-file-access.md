@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: dosya erişimi için Async Kullanma (Visual Basic)'
 title: Dosya Erişimi için Async Kullanma
 ms.date: 07/20/2015
 ms.assetid: c989305f-08e3-4687-95c3-948465cda202
-ms.openlocfilehash: 2e7fa4a78363a08f2ff25e6a961868e85994e200
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: f065ef8d8672569921e1652e62d24c10a506f828
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077364"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100474219"
 ---
 # <a name="using-async-for-file-access-visual-basic"></a>Dosya erişimi için Async Kullanma (Visual Basic)
 
@@ -27,7 +28,7 @@ Dosyalara erişmek için zaman uyumsuz özelliği kullanabilirsiniz. Async özel
   
 ## <a name="running-the-examples"></a>Örnekleri çalıştırma  
 
- Bu konudaki örnekleri çalıştırmak için bir **WPF uygulaması** veya **Windows Forms uygulaması** oluşturabilir ve sonra bir **düğme**ekleyebilirsiniz. Düğmenin `Click` olayında, her örnekteki ilk yönteme bir çağrı ekleyin.  
+ Bu konudaki örnekleri çalıştırmak için bir **WPF uygulaması** veya **Windows Forms uygulaması** oluşturabilir ve sonra bir **düğme** ekleyebilirsiniz. Düğmenin `Click` olayında, her örnekteki ilk yönteme bir çağrı ekleyin.  
   
  Aşağıdaki örneklerde aşağıdaki `Imports` deyimlerini ekleyin.  
   

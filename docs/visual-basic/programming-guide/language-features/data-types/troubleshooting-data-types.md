@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: veri türleri sorunlarını giderme (Visual Basic)'
 title: Veri Türü Sorunlarını Giderme
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -19,18 +20,18 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-ms.openlocfilehash: 239e1c2f908a9023aeca6e92aff4633b60f27b69
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 417a71e88dcd0bfb0c6582ee6304a64871640255
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393409"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100463851"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>Veri Türleri Sorunlarını Giderme (Visual Basic)
 
 Bu sayfada, iç veri türlerinde işlem gerçekleştirdiğinizde oluşabilecek bazı yaygın sorunlar listelenmektedir.
 
-## <a name="floating-point-expressions-do-not-compare-as-equal"></a>Kayan nokta Ifadeleri eşit olarak karşılaştırmaz
+## <a name="floating-point-expressions-do-not-compare-as-equal"></a>Floating-Point Ifadeler eşit olarak karşılaştırmaz
 
 Kayan nokta numaralarıyla ([tek veri türü](../../../language-reference/data-types/single-data-type.md) ve [Double veri türü](../../../language-reference/data-types/double-data-type.md)) çalışırken, bunların ikili kesirler olarak depolandığını unutmayın. Bu, ikili bir kesir olmayan miktarın (k/(2 ^ n) (k ve n tamsayıların tamsayılar) tam bir temsilini tutamayacağı anlamına gelir. Örneğin, 0,5 (= 1/2) ve 0,3125 (= 5/16) kesin değerler olarak tutulabilir, ancak 0,2 (= 1/5) ve 0,3 (= 3/10) yalnızca yaklaştırmalar olabilir.
 
@@ -70,7 +71,7 @@ Olarak bildirmek için yeterli olmadığına unutmayın `decimalRemainder` `Deci
 
 ## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a>Boole türü, doğru şekilde sayısal türe dönüştürülmüyor
 
-[Boole veri türü](../../../language-reference/data-types/boolean-data-type.md) değerleri sayı olarak depolanmaz ve depolanan değerlerin sayılara eşit olması amaçlanmamıştır. Önceki sürümlerle uyumluluk için Visual Basic,[CType Function](../../../language-reference/functions/ctype-function.md) `CBool` `CInt` `Boolean` ve sayısal türleri dönüştürmek için dönüştürme anahtar sözcükleri (CType işlevi,,, vb.) sağlar. Ancak, diğer diller bazen .NET Framework Yöntemler gibi bu dönüştürmeleri farklı şekilde gerçekleştirebilir.
+[Boole veri türü](../../../language-reference/data-types/boolean-data-type.md) değerleri sayı olarak depolanmaz ve depolanan değerlerin sayılara eşit olması amaçlanmamıştır. Önceki sürümlerle uyumluluk için Visual Basic,[](../../../language-reference/functions/ctype-function.md) `CBool` `CInt` `Boolean` ve sayısal türleri dönüştürmek için dönüştürme anahtar sözcükleri (CType işlevi,,, vb.) sağlar. Ancak, diğer diller bazen .NET Framework Yöntemler gibi bu dönüştürmeleri farklı şekilde gerçekleştirebilir.
 
 Ve için eşdeğer sayısal değerleri temel alan hiçbir kodu asla yazmamanız `True` gerekir `False` . Mümkün olduğunda, `Boolean` değişkenlerin kullanımını tasarlandıkları mantıksal değerlerle kısıtlamalısınız. Değer karıştırmanız `Boolean` ve sayısal değerler gerekiyorsa, seçtiğiniz dönüştürme yöntemini anladığınızdan emin olun.
 
@@ -102,7 +103,7 @@ Aşağıdaki örnek, bir değişken için hem başarısız hem de başarılı bi
 
 ## <a name="string-conversion-fails-at-run-time"></a>Çalışma zamanında dize dönüştürme başarısız oluyor
 
-[Dize veri türü](../../../language-reference/data-types/string-data-type.md) , çok az genişleyen dönüşümlere katılır. `String`widens yalnızca kendi kendine ve `Object` ' a ve `Char` `Char()` (bir `Char` dizi) öğesini olarak Genişlet `String` . Bunun nedeni, `String` değişkenlerin ve sabitlerin diğer veri türlerinin içeremeyeceği değerleri içerebildiği bir.
+[Dize veri türü](../../../language-reference/data-types/string-data-type.md) , çok az genişleyen dönüşümlere katılır. `String` widens yalnızca kendi kendine ve `Object` ' a ve `Char` `Char()` (bir `Char` dizi) öğesini olarak Genişlet `String` . Bunun nedeni, `String` değişkenlerin ve sabitlerin diğer veri türlerinin içeremeyeceği değerleri içerebildiği bir.
 
 Tür denetleme anahtarı ([Option Strict deyimin](../../../language-reference/statements/option-strict-statement.md)) olduğunda `On` , derleyici tüm örtük daraltma dönüştürmelerine izin vermez. Bu, ilgili olanları içerir `String` . Kodunuz `CStr` ve [CType işlevi](../../../language-reference/functions/ctype-function.md)gibi dönüştürme anahtar sözcüklerini kullanmaya devam edebilir, bu da dönüştürmeyi denemek için .NET Framework yönlendirir.
 
@@ -127,7 +128,7 @@ Genel olarak, `String` değerler diğer veri türlerinde anlamlı değildir ve d
 
 - [Veri türleri](index.md)
 - [Tür Karakterleri](type-characters.md)
-- [Değer Türleri ve Başvuru Türleri](value-types-and-reference-types.md)
+- [Değer türleri ve başvuru türleri](value-types-and-reference-types.md)
 - [Visual Basic'de Tür Dönüştürmeleri](type-conversions.md)
 - [Veri türleri](../../../language-reference/data-types/index.md)
 - [Tür Dönüştürme İşlevleri](../../../language-reference/functions/type-conversion-functions.md)
