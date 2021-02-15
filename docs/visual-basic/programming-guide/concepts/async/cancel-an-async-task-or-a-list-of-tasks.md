@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: zaman uyumsuz bir görevi veya görev listesini Iptal etme (Visual Basic)'
 title: Zaman Uyumsuz bir Görevi veya Görev Listesini İptal Etme
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: 932bf46f1e3aee220d0412f1688e961faaef3459
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d61db65db62c62e93abf0a5036533dd2967fe917
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396707"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100467088"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Zaman uyumsuz bir görevi veya görev listesini iptal etme (Visual Basic)
 
@@ -18,7 +19,7 @@ Bir zaman uyumsuz uygulamayı, bitmesini beklemek istemiyorsanız iptal etmek i�
 > [!NOTE]
 > Örnekleri çalıştırmak için, bilgisayarınızda Visual Studio 2012 veya daha yeni bir sürümü ve .NET Framework 4,5 ya da daha yeni bir sürümü yüklü olmalıdır.
 
-## <a name="cancel-a-task"></a><a name="BKMK_CancelaTask"></a>Bir görevi iptal etme
+## <a name="cancel-a-task"></a><a name="BKMK_CancelaTask"></a> Bir görevi iptal etme
 
 İlk örnek, **iptal** düğmesini tek bir indirme göreviyle ilişkilendirir. Uygulama içerik indirirken düğmeyi seçerseniz, indirme iptal edilir.
 
@@ -97,7 +98,7 @@ Ardından, bu projenin MainWindow. xaml. vb dosyasına aşağıdaki değişiklik
       End Try
       ```
 
-4. İçinde `AccessTheWebAsync` , <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> `GetAsync` <xref:System.Net.Http.HttpClient> bir Web sitesinin içeriğini indirmek için türünde yönteminin aşırı yüklemesini kullanın. `ct` <xref:System.Threading.CancellationToken> `AccessTheWebAsync` İkinci bağımsız değişken olarak, parametresini geçirin. Kullanıcı **iptal** düğmesini seçerse, belirteç iletiyi taşır.
+4. İçinde `AccessTheWebAsync` ,  <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> `GetAsync` <xref:System.Net.Http.HttpClient> bir Web sitesinin içeriğini indirmek için türünde yönteminin aşırı yüklemesini kullanın. `ct` <xref:System.Threading.CancellationToken> `AccessTheWebAsync` İkinci bağımsız değişken olarak, parametresini geçirin. Kullanıcı **iptal** düğmesini seçerse, belirteç iletiyi taşır.
 
     Aşağıdaki kod, içindeki değişiklikleri gösterir `AccessTheWebAsync` .
 
@@ -138,7 +139,7 @@ Ardından, bu projenin MainWindow. xaml. vb dosyasına aşağıdaki değişiklik
     Download canceled.
     ```
 
-## <a name="cancel-a-list-of-tasks"></a><a name="BKMK_CancelaListofTasks"></a>Görev listesini iptal etme
+## <a name="cancel-a-list-of-tasks"></a><a name="BKMK_CancelaListofTasks"></a> Görev listesini iptal etme
 
 Aynı örneği her görevle ilişkilendirerek, daha fazla görevi iptal etmek için önceki örneği genişletebilirsiniz `CancellationTokenSource` . **İptal** düğmesini seçerseniz, henüz tamamlanmamış tüm görevleri iptal edersiniz.
 
@@ -253,7 +254,7 @@ Tüm Windows Presentation Foundation (WPF) projesini [zaman uyumsuz örnekten in
     Downloads canceled.
     ```
 
-## <a name="complete-examples"></a><a name="BKMK_CompleteExamples"></a>Tüm örnekler
+## <a name="complete-examples"></a><a name="BKMK_CompleteExamples"></a> Tüm örnekler
 
 Aşağıdaki bölümler, önceki örneklerin her birine ilişkin kodu içerir. İçin bir başvuru eklemeniz gerektiğini unutmayın <xref:System.Net.Http> .
 

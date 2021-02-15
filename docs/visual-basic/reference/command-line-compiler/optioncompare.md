@@ -1,4 +1,5 @@
 ---
+description: :-OptionCompare hakkında daha fazla bilgi edinin
 title: -optioncompare
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - -optioncompare compiler option [Visual Basic]
 - /optioncompare compiler option [Visual Basic]
 ms.assetid: 7237b766-b44d-4cc5-9a3c-885348a7d9e4
-ms.openlocfilehash: ed9adc7cddd9eb204937b9819e4eeff176821e95
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9be4867c75cc16a8f699cf492dc41e9d08b96495
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400570"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100475935"
 ---
 # <a name="-optioncompare"></a>-optioncompare
 
 Dize karşılaştırmalarının nasıl yapılacağını belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```console
 -optioncompare:{binary | text}
@@ -60,7 +61,7 @@ vbc -optioncompare:binary projFile.vb
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](index.md)
+- [Visual Basic Command-Line derleyicisi](index.md)
 - [-optionexplicit](optionexplicit.md)
 - [-optionstrict](optionstrict.md)
 - [-optioninfer](optioninfer.md)

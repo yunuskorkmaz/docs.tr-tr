@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: yanlış sayıda bağımsız değişken veya özellik ataması geçerli değil'
 title: Yanlış sayıda bağımsız değişken veya özellik ataması geçerli değil
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID450
 ms.assetid: 61700dd4-ebd0-4088-b439-2cd1ef9fc8f4
-ms.openlocfilehash: cc58c8c770b19bd3773fe5a29b437f13b872ec90
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 8ac77d009bb3c9dbecee81976e015be340ac0bf8
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100275"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100475662"
 ---
 # <a name="wrong-number-of-arguments-or-property-assignment-not-valid"></a>Yanlış sayıda bağımsız değişken veya özellik ataması geçerli değil
 

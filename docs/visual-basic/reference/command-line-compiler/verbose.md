@@ -1,4 +1,5 @@
 ---
+description: Hakkında daha fazla bilgi edinin:-verbose
 title: -verbose
 ms.date: 03/13/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - -verbose compiler option [Visual Basic]
 - /verbose compiler option [Visual Basic]
 ms.assetid: d1aec0c1-0261-421d-9adc-5b13756100be
-ms.openlocfilehash: c5bf988d819a8df8aed99588abbb30e19d14b1ac
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: ea222d4f284bcaf163b142269fe250a081b0ee4f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91084989"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100470142"
 ---
 # <a name="-verbose"></a>-verbose
 
@@ -45,5 +46,5 @@ vbc -verbose in.vb
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](index.md)
+- [Visual Basic Command-Line derleyicisi](index.md)
 - [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)

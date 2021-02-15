@@ -1,4 +1,5 @@
 ---
+description: Daha fazla bilgi edinin:-Imports (Visual Basic)
 title: -imports
 ms.date: 03/10/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - imports compiler option [Visual Basic]
 - -imports compiler option [Visual Basic]
 ms.assetid: 9a93fb53-c080-497b-bf9b-441022dbbc39
-ms.openlocfilehash: 69781dff1474e42ae5f735fdefd694c6447636b5
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 8c6744ff857a15da9362b724a62fcf053e9fd8f0
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085262"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100470206"
 ---
 # <a name="-imports-visual-basic"></a>-içeri aktarmalar (Visual Basic)
 
@@ -37,7 +38,7 @@ Belirtilen bir derlemeden ad alanlarını içeri aktarır.
   
 |Visual Studio tümleşik geliştirme ortamında ayarlama-içeri aktarmalar|  
 |---|  
-|1. **Çözüm Gezgini**bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın. <br />2. **Başvurular** sekmesine tıklayın.<br />3. ad alanı adını **Kullanıcı Içeri aktarma Ekle** düğmesinin yanındaki kutuya girin.<br />4. **Kullanıcı Içeri aktarma Ekle** düğmesine tıklayın.|  
+|1. **Çözüm Gezgini** bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın. <br />2. **Başvurular** sekmesine tıklayın.<br />3. ad alanı adını **Kullanıcı Içeri aktarma Ekle** düğmesinin yanındaki kutuya girin.<br />4. **Kullanıcı Içeri aktarma Ekle** düğmesine tıklayın.|  
   
 ## <a name="example"></a>Örnek  
 
@@ -53,6 +54,6 @@ End Module
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](index.md)
+- [Visual Basic Command-Line derleyicisi](index.md)
 - [References ve Imports Deyimi](../../programming-guide/program-structure/references-and-the-imports-statement.md)
 - [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)

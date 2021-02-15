@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: bir bağımsız değişkeni değere ve başvuruya göre geçirme arasındaki farklar (Visual Basic)'
 title: Değere ve Başvuruya Göre Bağımsız Değişken Geçirme Arasındaki Farklar
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], passing arguments by value
 - arguments [Visual Basic], passing by value or by reference
 ms.assetid: 5f5c38fe-3e2d-494c-8fff-f4025b55ec93
-ms.openlocfilehash: f9fdb1e98fb827391b615f5fe0afd1ee43c9f8e1
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 632895eae82a20c9bcd773da71f88ebef26d786c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075050"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100464735"
 ---
 # <a name="differences-between-passing-an-argument-by-value-and-by-reference-visual-basic"></a>Değere ve Başvuruya Göre Bağımsız Değişken Geçirme Arasındaki Farklar (Visual Basic)
 
-Bir yordama bir veya daha fazla bağımsız değişken geçirdiğinizde, her bağımsız değişken çağıran koddaki temel bir programlama öğesine karşılık gelir. Bu temel öğenin veya buna bir başvurunun değerini geçirebilirsiniz. Bu, *geçirme mekanizması*olarak bilinir.  
+Bir yordama bir veya daha fazla bağımsız değişken geçirdiğinizde, her bağımsız değişken çağıran koddaki temel bir programlama öğesine karşılık gelir. Bu temel öğenin veya buna bir başvurunun değerini geçirebilirsiniz. Bu, *geçirme mekanizması* olarak bilinir.  
   
 ## <a name="passing-by-value"></a>Değere göre geçirme  
 
@@ -55,4 +56,4 @@ Bir yordama bir veya daha fazla bağımsız değişken geçirdiğinizde, her ba�
 - [Nasıl yapılır: Bir Yordam Bağımsız Değişkenini Değer Değişikliklerine Karşı Koruma](./how-to-protect-a-procedure-argument-against-value-changes.md)
 - [Nasıl yapılır: Bağımsız Değişkeni Değere Göre Geçirilecek Şekilde Zorlama](./how-to-force-an-argument-to-be-passed-by-value.md)
 - [Bağımsız Değişkenleri Konuma ve Ada Göre Geçirme](./passing-arguments-by-position-and-by-name.md)
-- [Değer Türleri ve Başvuru Türleri](../data-types/value-types-and-reference-types.md)
+- [Değer türleri ve başvuru türleri](../data-types/value-types-and-reference-types.md)

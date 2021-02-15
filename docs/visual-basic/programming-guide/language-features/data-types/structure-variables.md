@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Yapı değişkenleri (Visual Basic)'
 title: Yapı Değişkenleri
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - variables [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: 156872f8-aabc-4454-8e2d-f2253c3c13c9
-ms.openlocfilehash: 270e8ca26185e4a68def3b95f4ce6ab4c57a629c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 64c53b06369bc7d7d0c46bc87d4c73ce90b4011f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393591"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100484164"
 ---
 # <a name="structure-variables-visual-basic"></a>Yapı Değişkenleri (Visual Basic)
 
@@ -60,7 +61,7 @@ Bir yapı öğesi,, veya dizisi gibi bir başvuru türü ise `String` , `Object`
 - [Veri türleri](index.md)
 - [Başlangıç Veri Türleri](elementary-data-types.md)
 - [Bileşik Veri Türleri](composite-data-types.md)
-- [Değer Türleri ve Başvuru Türleri](value-types-and-reference-types.md)
+- [Değer türleri ve başvuru türleri](value-types-and-reference-types.md)
 - [Yapılar](structures.md)
 - [Veri Türü Sorunlarını Giderme](troubleshooting-data-types.md)
 - [Nasıl yapılır: Yapıyı Bildirme](how-to-declare-a-structure.md)

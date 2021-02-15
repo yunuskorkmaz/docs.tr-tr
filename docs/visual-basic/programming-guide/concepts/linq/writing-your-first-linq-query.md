@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Ilk LINQ sorgunuzu yazma (Visual Basic)'
 title: İlk LINQ Sorgunuzu Yazma
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: c7d0595b991bdad6ef05b567f95ead8c7fccdbc2
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: cb57ae3c22b7e2ee2c3b66a8f033eda6fd72e16a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077286"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100477521"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>İlk LINQ Sorgunuzu Yazma (Visual Basic)
 
 *Sorgu* , veri kaynağından veri alan bir ifadedir. Sorgular adanmış bir sorgu dilinde ifade edilir. Zaman içinde farklı diller, örneğin, ilişkisel veritabanları için SQL ve XML için XQuery gibi farklı türlerde veri kaynakları için geliştirilmiştir. Bu, uygulama geliştiricisinin desteklenen her bir veri kaynağı türü veya veri biçimi için yeni bir sorgu dili öğrenmesini zorunlu kılar.  
   
- Dil ile tümleşik sorgu (LINQ), çeşitli veri kaynakları ve biçimlerdeki verilerle çalışmaya yönelik tutarlı bir model sunarak durumu basitleştirir. LINQ sorgusunda, her zaman nesneleriyle birlikte çalışmanız gerekir. XML belgelerinde, SQL veritabanlarında, ADO.NET veri kümelerinde ve varlıklarda, .NET Framework koleksiyonlarında ve LINQ sağlayıcısının kullanılabildiği diğer tüm kaynak veya biçimdeki verileri sorgulamak ve dönüştürmek için aynı temel kodlama düzenlerini kullanırsınız. Bu belgede temel LINQ sorgularının oluşturulması ve kullanılması için üç aşama açıklanmaktadır.  
+ Language-Integrated Query (LINQ), çeşitli veri kaynakları ve biçimlerdeki verilerle çalışmaya yönelik tutarlı bir model sunarak durumu basitleştirir. LINQ sorgusunda, her zaman nesneleriyle birlikte çalışmanız gerekir. XML belgelerinde, SQL veritabanlarında, ADO.NET veri kümelerinde ve varlıklarda, .NET Framework koleksiyonlarında ve LINQ sağlayıcısının kullanılabildiği diğer tüm kaynak veya biçimdeki verileri sorgulamak ve dönüştürmek için aynı temel kodlama düzenlerini kullanırsınız. Bu belgede temel LINQ sorgularının oluşturulması ve kullanılması için üç aşama açıklanmaktadır.  
   
 ## <a name="three-stages-of-a-query-operation"></a>Bir Sorgu İşleminin Üç Aşaması  
 
@@ -34,7 +35,7 @@ ms.locfileid: "91077286"
  Aşağıdaki örnekte, bir sorgu işleminin üç bölümü gösterilmektedir. Örnek, Gösterim amacıyla uygun bir veri kaynağı olarak bir tamsayılar dizisi kullanır. Ancak, aynı kavramlar diğer veri kaynakları için de geçerlidir.  
   
 > [!NOTE]
-> [Derleme sayfasında, proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), **seçenek çıkarımı seçeneğinin** **Açık**olarak ayarlandığından emin olun.  
+> [Derleme sayfasında, proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), **seçenek çıkarımı seçeneğinin** **Açık** olarak ayarlandığından emin olun.  
   
  [!code-vb[VbLINQFirstQuery#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#1)]  
   
@@ -44,7 +45,7 @@ ms.locfileid: "91077286"
   
 ## <a name="the-data-source"></a>Veri Kaynağı  
 
- Önceki örnekteki veri kaynağı bir dizi olduğundan, genel arabirimi örtülü olarak destekler <xref:System.Collections.Generic.IEnumerable%601> . Bu aslında bir diziyi bir LINQ sorgusu için veri kaynağı olarak kullanmanıza olanak sağlar. Destekleyen türler <xref:System.Collections.Generic.IEnumerable%601> veya genel gibi türetilmiş bir arabirim <xref:System.Linq.IQueryable%601> *sorgulanabilir türler*olarak adlandırılır.  
+ Önceki örnekteki veri kaynağı bir dizi olduğundan, genel arabirimi örtülü olarak destekler <xref:System.Collections.Generic.IEnumerable%601> . Bu aslında bir diziyi bir LINQ sorgusu için veri kaynağı olarak kullanmanıza olanak sağlar. Destekleyen türler <xref:System.Collections.Generic.IEnumerable%601> veya genel gibi türetilmiş bir arabirim <xref:System.Linq.IQueryable%601> *sorgulanabilir türler* olarak adlandırılır.  
   
  Örtük olarak sorgulanabilir bir tür olarak, dizi hiçbir değişiklik veya bir LINQ veri kaynağı olarak kullanılacak özel bir işleme gerektirmez. Aynı şekilde, <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Collections.Generic.List%601> <xref:System.Collections.Generic.Dictionary%602> .NET Framework sınıf kitaplığındaki genel, ve diğer sınıflar da dahil olmak üzere, destekleyen tüm koleksiyon türleri için de geçerlidir.  
   
@@ -83,7 +84,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
 ### <a name="deferred-execution"></a>Ertelenmiş Yürütme  
 
- Tipik bir LINQ sorgusu, içinde tanımlanan önceki örnekteki bir örneğe benzer `evensQuery` . Sorguyu oluşturur ancak hemen yürütmez. Bunun yerine sorgu tanımı sorgu değişkeninde depolanır `evensQuery` . Sorguyu daha sonra `For Each` bir değer dizisi döndüren bir döngü kullanarak ya da veya gibi standart bir sorgu işleci uygulayarak yürütün `Count` `Max` . Bu işlem *ertelenmiş yürütme*olarak adlandırılır.  
+ Tipik bir LINQ sorgusu, içinde tanımlanan önceki örnekteki bir örneğe benzer `evensQuery` . Sorguyu oluşturur ancak hemen yürütmez. Bunun yerine sorgu tanımı sorgu değişkeninde depolanır `evensQuery` . Sorguyu daha sonra `For Each` bir değer dizisi döndüren bir döngü kullanarak ya da veya gibi standart bir sorgu işleci uygulayarak yürütün `Count` `Max` . Bu işlem *ertelenmiş yürütme* olarak adlandırılır.  
   
  [!code-vb[VbLINQFirstQuery#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#7)]  
   

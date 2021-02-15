@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - DisposeAsync method
 - garbage collection, DisposeAsync method
-ms.openlocfilehash: f04ac6695864b96cdcb7efeb6eb8e1d9551e1d14
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: d82883198626b3c760b86decab8a7f791fa9b7cf
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009696"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100485191"
 ---
 # <a name="implement-a-disposeasync-method"></a>DisposeAsync metodu uygulama
 
@@ -107,7 +107,7 @@ Uygulayan birden çok nesne oluşturup kullandığınız durumlarda <xref:System
 
 :::code language="csharp" id="one" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/stacked-await-usings.cs":::
 
-Yukarıdaki örnekte, her zaman uyumsuz temizleme işlemi bloğunun altında açıkça kapsamlandırılır `await using` . Dış kapsam, bu, kapsayan, kapsayan, ve ' `objOne` `objTwo` nin ilk olarak nasıl `objTwo` bırakıldığı, ve ardından tarafından tanımlanır `objOne` . Her iki `IAsyncDisposable` örnek de <xref:System.IAsyncDisposable.DisposeAsync> bekletildi ve bu nedenle zaman uyumsuz temizleme işlemini gerçekleştiriyor. Çağrılar yığılır, iç içe değildir.
+Yukarıdaki örnekte, her zaman uyumsuz temizleme işlemi bloğunun altında açıkça kapsamlandırılır `await using` . Dış kapsam, bu, kapsayan, kapsayan, ve ' `objOne` `objTwo` nin ilk olarak nasıl `objTwo` bırakıldığı, ve ardından tarafından tanımlanır `objOne` . Her iki `IAsyncDisposable` <xref:System.IAsyncDisposable.DisposeAsync> Örneğin yöntemi bekletildi, bu nedenle her örnek zaman uyumsuz temizleme işlemini gerçekleştirir. Çağrılar yığılır, iç içe değildir.
 
 ### <a name="acceptable-pattern-two"></a>Kabul edilebilir iki model
 
