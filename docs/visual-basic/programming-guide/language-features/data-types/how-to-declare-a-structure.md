@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: yapı bildirme (Visual Basic)'
 title: 'Nasıl yapılır: Yapıyı Bildirme'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - statements [Visual Basic], structure
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-ms.openlocfilehash: bffdc5974eff6b71e0abc4780a61aa300769eed6
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 7560f22db70fd5804ca309720d32477bcb9a3782
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91058553"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100436935"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>Nasıl yapılır: Bir Yapıyı Bildirme (Visual Basic)
 
-Yapı [ifadesiyle](../../../language-reference/statements/structure-statement.md)bir yapı bildirimi başlar ve bunu `End Structure` ifadesiyle sonlandırın. Bu iki deyim arasında en az bir *öğe*bildirmeniz gerekir. Öğeleri herhangi bir veri türünde olabilir, ancak en az bir veya paylaşılmayan olmayan bir değişken ya da paylaşılmayan olmayan bir olay olmalıdır.  
+Yapı [ifadesiyle](../../../language-reference/statements/structure-statement.md)bir yapı bildirimi başlar ve bunu `End Structure` ifadesiyle sonlandırın. Bu iki deyim arasında en az bir *öğe* bildirmeniz gerekir. Öğeleri herhangi bir veri türünde olabilir, ancak en az bir veya paylaşılmayan olmayan bir değişken ya da paylaşılmayan olmayan bir olay olmalıdır.  
   
  Yapı bildiriminde yapı öğelerinden hiçbirini başlatamıyor. Bir yapı türünde olması için bir değişken bildirdiğinizde, değişkenine değerleri değişken aracılığıyla erişerek atayabilirsiniz.  
   
@@ -54,14 +55,14 @@ Yapı [ifadesiyle](../../../language-reference/statements/structure-statement.md
   
      `salary`Yukarıdaki örnekteki alan, `Private` kapsayan sınıftan bile yapının dışından erişilemediği anlamına gelir. Ancak yordam, `giveRaise` `Public` Yapı dışından çağrılabilir. Benzer şekilde, `salaryReviewTime` olayı yapının dışından yükseltebilirsiniz.  
   
-     Değişkenlere, `Sub` yordamlara ve olaylara ek olarak, `Function` bir yapıda sabitler, yordamlar ve özellikler de tanımlayabilirsiniz. En az bir bağımsız değişken alması şartıyla, en az bir özelliği *varsayılan özellik*olarak belirleyebilirsiniz. Bir olayı, paylaşılan bir yordamla işleyebilirsiniz [Shared](../../../language-reference/modifiers/shared.md) `Sub` . Daha fazla bilgi için bkz. [nasıl yapılır: Visual Basic ' de varsayılan bir özellik bildirme ve çağırma](../procedures/how-to-declare-and-call-a-default-property.md).  
+     Değişkenlere, `Sub` yordamlara ve olaylara ek olarak, `Function` bir yapıda sabitler, yordamlar ve özellikler de tanımlayabilirsiniz. En az bir bağımsız değişken alması şartıyla, en az bir özelliği *varsayılan özellik* olarak belirleyebilirsiniz. Bir olayı, paylaşılan bir yordamla işleyebilirsiniz [](../../../language-reference/modifiers/shared.md) `Sub` . Daha fazla bilgi için bkz. [nasıl yapılır: Visual Basic ' de varsayılan bir özellik bildirme ve çağırma](../procedures/how-to-declare-and-call-a-default-property.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Veri türleri](index.md)
 - [Başlangıç Veri Türleri](elementary-data-types.md)
 - [Bileşik Veri Türleri](composite-data-types.md)
-- [Değer Türleri ve Başvuru Türleri](value-types-and-reference-types.md)
+- [Değer türleri ve başvuru türleri](value-types-and-reference-types.md)
 - [Yapılar](structures.md)
 - [Veri Türü Sorunlarını Giderme](troubleshooting-data-types.md)
 - [Yapı Değişkenleri](structure-variables.md)

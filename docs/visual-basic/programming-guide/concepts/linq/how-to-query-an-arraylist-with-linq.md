@@ -1,13 +1,14 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: nasıl yapılır: LINQ ile ArrayList 'i sorgulama (Visual Basic)"
 title: 'Nasıl yapılır: LINQ ile ArrayList Sorgulama'
 ms.date: 07/20/2015
 ms.assetid: 176358a9-d765-4b57-9557-7feb4428138d
-ms.openlocfilehash: b7b75e017fb314b5e5998b743dbf922f34fd9b7c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: df7c6e1cee6d8e37074ce209f3bea97a402d8dbe
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396473"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100428525"
 ---
 # <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a>Nasıl yapılır: LINQ ile ArrayList 'i sorgulama (Visual Basic)
 
@@ -20,7 +21,7 @@ Dim query = From student As Student In arrList
 
 Aralık değişkeninin türünü belirterek, içindeki her bir öğeyi öğesine vurarak <xref:System.Collections.ArrayList> `Student` .
 
-Bir sorgu ifadesinde açıkça yazılmış bir aralık değişkeninin kullanılması yöntemi çağırma ile eşdeğerdir <xref:System.Linq.Enumerable.Cast%2A> . <xref:System.Linq.Enumerable.Cast%2A>Belirtilen tür dönüştürme gerçekleştirilemiyorsa bir özel durum oluşturur. <xref:System.Linq.Enumerable.Cast%2A>ve <xref:System.Linq.Enumerable.OfType%2A> genel olmayan türlerde çalışan Iki standart sorgu işleci yöntemi vardır <xref:System.Collections.IEnumerable> . Visual Basic, <xref:System.Linq.Enumerable.Cast%2A> belirli bir Aralık değişkeni türü sağlamak için veri kaynağındaki yöntemi açıkça çağırmanız gerekir. Daha fazla bilgi için bkz. [sorgu Işlemlerinde tür ilişkileri (Visual Basic)](type-relationships-in-query-operations.md).
+Bir sorgu ifadesinde açıkça yazılmış bir aralık değişkeninin kullanılması yöntemi çağırma ile eşdeğerdir <xref:System.Linq.Enumerable.Cast%2A> . <xref:System.Linq.Enumerable.Cast%2A> Belirtilen tür dönüştürme gerçekleştirilemiyorsa bir özel durum oluşturur. <xref:System.Linq.Enumerable.Cast%2A> ve <xref:System.Linq.Enumerable.OfType%2A> genel olmayan türlerde çalışan Iki standart sorgu işleci yöntemi vardır <xref:System.Collections.IEnumerable> . Visual Basic, <xref:System.Linq.Enumerable.Cast%2A> belirli bir Aralık değişkeni türü sağlamak için veri kaynağındaki yöntemi açıkça çağırmanız gerekir. Daha fazla bilgi için bkz. [sorgu Işlemlerinde tür ilişkileri (Visual Basic)](type-relationships-in-query-operations.md).
 
 ## <a name="example"></a>Örnek
 

@@ -1,13 +1,14 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: EventLogSource 'ta belirtilen kaynak adı, EventLogName içinde belirtilenden farklı bir günlüğe kayıtlı"
 title: EventLogSource 'da belirtilen kaynak adı, EventLogName içinde belirtilenden farklı bir günlüğe kayıtlı
 ms.date: 07/20/2015
 ms.assetid: 7317e100-098b-408d-86e5-7c74cf8558c7
-ms.openlocfilehash: 1b577e3b0613001b6241dcfdc59c8c84029197d2
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: d6b9c1265276f94369d37e6ac55604b761fb9bcc
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91058936"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100455463"
 ---
 # <a name="source-name-specified-in-eventlogsource-is-registered-to-a-log-other-than-that-specified-in-eventlogname"></a>EventLogSource 'da belirtilen kaynak adı, EventLogName içinde belirtilenden farklı bir günlüğe kayıtlı
 

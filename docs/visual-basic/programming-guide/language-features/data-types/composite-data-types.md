@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: bileşik veri türleri (Visual Basic)'
 title: Bileşik Veri Türleri
 ms.date: 04/25/2017
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - classes [Visual Basic], composite types
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
-ms.openlocfilehash: 842b74aa7cc99c8196fdfb1eb6c976d9e72a4fa4
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 981ee36c416f2524be155b1238f5b306c98aa92b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077169"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100456438"
 ---
 # <a name="composite-data-types-visual-basic"></a>Bileşik Veri Türleri (Visual Basic)
 
@@ -71,7 +72,7 @@ Dim arrayE( , ) As Short = New Short(4, 10) {}
 - [Veri türleri](index.md)
 - [Başlangıç Veri Türleri](elementary-data-types.md)
 - [Visual Basic genel türler](generic-types.md)
-- [Değer Türleri ve Başvuru Türleri](value-types-and-reference-types.md)
+- [Değer türleri ve başvuru türleri](value-types-and-reference-types.md)
 - [Visual Basic'de Tür Dönüştürmeleri](type-conversions.md)
 - [Yapılar](structures.md)
 - [Veri Türü Sorunlarını Giderme](troubleshooting-data-types.md)

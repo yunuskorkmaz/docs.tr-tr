@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: sorgu Işlemlerinde tür Ilişkileri (Visual Basic)'
 title: Sorgu İşlemlerinde Tür İlişkileri
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,22 +12,22 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: 73a287541ddf115510bf6ab5c830eafac370cc3a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b6a59308e76afdcf1aaf7084904b9925cd5bef14
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406735"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100428226"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>LINQ Sorgu İşlemlerinde Tür İlişkileri (Visual Basic)
 
-Dil ile tümleşik sorgu (LINQ) sorgu işlemlerinde kullanılan değişkenler kesin olarak türdedir ve birbirleriyle uyumlu olmalıdır. Güçlü yazma, veri kaynağında, sorgunun kendisinde ve sorgu yürütmesinde kullanılır. Aşağıdaki çizimde, bir LINQ sorgusunu tanımlamak için kullanılan terimler tanımlanmaktadır. Bir sorgunun kısımları hakkında daha fazla bilgi için bkz. [temel sorgu işlemleri (Visual Basic)](basic-query-operations.md).
+Language-Integrated Query (LINQ) sorgu işlemlerinde kullanılan değişkenler kesin olarak türdedir ve birbirleriyle uyumlu olmalıdır. Güçlü yazma, veri kaynağında, sorgunun kendisinde ve sorgu yürütmesinde kullanılır. Aşağıdaki çizimde, bir LINQ sorgusunu tanımlamak için kullanılan terimler tanımlanmaktadır. Bir sorgunun kısımları hakkında daha fazla bilgi için bkz. [temel sorgu işlemleri (Visual Basic)](basic-query-operations.md).
 
 ![Öğeleri vurgulanmış bir sözde kod sorgusunu gösteren ekran görüntüsü.](./media/type-relationships-in-query-operations/linq-query-description-terms.png)
 
 Sorgudaki aralık değişkeninin türü, veri kaynağındaki öğelerin türüyle uyumlu olmalıdır. Sorgu değişkeninin türü, yan tümcesinde tanımlanan dizi öğesiyle uyumlu olmalıdır `Select` . Son olarak, dizi öğelerinin türü sorguyu yürüten ifadede kullanılan döngü denetimi değişkeninin türüyle uyumlu olmalıdır `For Each` . Bu güçlü yazma, derleme zamanında tür hatalarının tanımlanmasını kolaylaştırır.
 
-Visual Basic, *örtülü yazma*olarak da bilinen yerel tür çıkarımı uygulayarak güçlü yazma kullanışlı hale getirir. Bu özellik önceki örnekte kullanılır ve LINQ örnekleri ve belgelerinin tamamında kullanıldığını görürsünüz. Visual Basic, yerel tür çıkarımı yalnızca `Dim` yan tümce olmadan bir deyimi kullanılarak gerçekleştirilir `As` . Aşağıdaki örnekte, `city` kesin bir dize olarak türdedir.
+Visual Basic, *örtülü yazma* olarak da bilinen yerel tür çıkarımı uygulayarak güçlü yazma kullanışlı hale getirir. Bu özellik önceki örnekte kullanılır ve LINQ örnekleri ve belgelerinin tamamında kullanıldığını görürsünüz. Visual Basic, yerel tür çıkarımı yalnızca `Dim` yan tümce olmadan bir deyimi kullanılarak gerçekleştirilir `As` . Aşağıdaki örnekte, `city` kesin bir dize olarak türdedir.
 
 [!code-vb[VbLINQTypeRels#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#1)]
 

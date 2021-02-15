@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: yapılar (Visual Basic)'
 title: Yapılar
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - user-defined data types [Visual Basic], about user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: 55e86462-5e99-4d33-8018-6d097ca491b2
-ms.openlocfilehash: 04ccb5d39ea7c76a1e75dbeafd9230f2cb604d7c
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: c79ba7b4ea8e80aced6c2a280c4896ed9f8c9916
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090241"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100427628"
 ---
 # <a name="structures-visual-basic"></a>Yapılar (Visual Basic)
 
 *Yapı* , önceki Visual Basic sürümleri tarafından desteklenen Kullanıcı tanımlı tür (udt) genelleştirmesidir. Alanlara ek olarak, yapılar özellikleri, yöntemleri ve olayları kullanıma sunabilir. Bir yapı bir veya daha fazla arabirim uygulayabilir ve her alan için ayrı erişim düzeyleri bildirebilirsiniz.  
   
- Bir yapı oluşturmak için farklı türlerdeki veri öğelerini birleştirebilirsiniz. Bir yapı, bir veya daha fazla *öğeyi* birbirleriyle ve yapının kendisi ile ilişkilendirir. Bir yapıyı bildirdiğinizde, *bileşik veri türü*olur ve bu türün değişkenlerini bildirebilirsiniz.  
+ Bir yapı oluşturmak için farklı türlerdeki veri öğelerini birleştirebilirsiniz. Bir yapı, bir veya daha fazla *öğeyi* birbirleriyle ve yapının kendisi ile ilişkilendirir. Bir yapıyı bildirdiğinizde, *bileşik veri türü* olur ve bu türün değişkenlerini bildirebilirsiniz.  
   
  Yapıları, tek bir değişkenin ilgili birçok bilgi parçasını tutabilmesini istediğinizde faydalıdır. Örneğin, bir çalışanın adını, telefon uzantısını ve maaşını birlikte tutmak isteyebilirsiniz. Bu bilgiler için birkaç değişken kullanabilir veya bir yapı tanımlayabilir ve tek bir çalışan değişkeni için kullanabilirsiniz. Yapının avantajı çok sayıda çalışanına ve bu nedenle değişkenin çok sayıda örneğine sahip olduğunuzda görünür hale gelir.  
   

@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: veri türlerini dönüştürme (Visual Basic)'
 title: Veri Türlerini Dönüştürme
 ms.date: 07/20/2015
 ms.assetid: 9b0cf1ab-de48-4c6e-9f00-05b40fade46e
-ms.openlocfilehash: 1394f53923ba850ae11fbc326a25c279589c3be1
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7650f5d5d6f727b7815b9dd2de8a565e27fa18d9
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410857"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100428720"
 ---
 # <a name="converting-data-types-visual-basic"></a>Veri türlerini dönüştürme (Visual Basic)
 

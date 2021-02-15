@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi: dosyanın açma modu geçerli bir değer olarak ayarlanmadı'
 title: Dosyanın açma modu geçerli bir değer olarak ayarlanmadı
 ms.date: 07/20/2015
 ms.assetid: 969541f6-9ff6-4804-ba61-0d17370060ef
-ms.openlocfilehash: d3ced7efa8169a6f29dfb9c307123699ef42527b
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 75026589c18a209f4a512bf4ddb706eae2d51ca8
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090826"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429409"
 ---
 # <a name="files-open-mode-wasnt-set-to-a-valid-value"></a>Dosyanın açma modu geçerli bir değer olarak ayarlanmadı
 

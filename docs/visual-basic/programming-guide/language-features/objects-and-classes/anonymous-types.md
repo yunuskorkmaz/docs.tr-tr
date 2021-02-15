@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: anonim türler (Visual Basic)'
 title: Anonim Türler
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - anonymous types [Visual Basic]
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-ms.openlocfilehash: 5ab3cf8c3c02ff35890f71ad6c7f314b51b87133
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 447ca914726d4b426ad4ba2ec370a4bbe9589b81
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075245"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100425626"
 ---
 # <a name="anonymous-types-visual-basic"></a>Anonim Türleri (Visual Basic)
 
-Visual Basic, veri türü için bir sınıf tanımı yazmadan nesneler oluşturmanıza olanak sağlayan anonim türleri destekler. Bunun yerine, derleyici sizin için bir sınıf oluşturur. Sınıfın kullanılabilir bir adı yoktur, doğrudan öğesinden devralır <xref:System.Object> ve nesneyi bildirirken belirttiğiniz özellikleri içerir. Veri türünün adı belirtilmediğinden, *anonim tür*olarak adlandırılır.  
+Visual Basic, veri türü için bir sınıf tanımı yazmadan nesneler oluşturmanıza olanak sağlayan anonim türleri destekler. Bunun yerine, derleyici sizin için bir sınıf oluşturur. Sınıfın kullanılabilir bir adı yoktur, doğrudan öğesinden devralır <xref:System.Object> ve nesneyi bildirirken belirttiğiniz özellikleri içerir. Veri türünün adı belirtilmediğinden, *anonim tür* olarak adlandırılır.  
   
  Aşağıdaki örnek `product` , ve iki özelliği olan anonim bir türün bir örneği olarak değişkenini bildirir ve oluşturur `Name` `Price` .  
   
@@ -82,7 +83,7 @@ Visual Basic, veri türü için bir sınıf tanımı yazmadan nesneler oluşturm
   
  [!code-vb[VbVbalrAnonymousTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#7)]  
   
-### <a name="read-only-values"></a>Salt okunurdur değerler  
+### <a name="read-only-values"></a>Read-Only değerleri  
 
  Anahtar özelliklerinin değerleri değiştirilemez. Örneğin, `prod8` Önceki örnekte, `Name` ve `Price` alanları `read-only` , ancak `OnHand` değiştirilebilir.  
   

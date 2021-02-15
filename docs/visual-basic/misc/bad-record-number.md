@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: Hatalı kayıt numarası'
 title: Hatalı kayıt numarası
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID63
 ms.assetid: 1fcc33f8-822a-4de9-a6e3-228ddb5824a6
-ms.openlocfilehash: 8cbffc7714211fb10bedc3a73729eac59d98f0bb
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: a250419c131f75381426705d52563732322631cb
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086991"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100461001"
 ---
 # <a name="bad-record-number"></a>Hatalı kayıt numarası
 

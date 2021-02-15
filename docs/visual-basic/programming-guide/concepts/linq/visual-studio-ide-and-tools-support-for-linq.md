@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Visual Studio IDE ve LINQ için Araçlar desteği (Visual Basic)'
 title: Visual Studio IDE ve LINQ için Araçlar Desteği
 ms.date: 07/20/2015
 ms.assetid: e3bfe0d9-4a79-49cf-a31c-93297c688829
-ms.openlocfilehash: 9b1fa503b3c51cf50872e82d9a60206874c8e642
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 96d1cd54e8b4cc507aa697a2228d341b29f94f8f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077299"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100428109"
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-visual-basic"></a>Visual Studio IDE ve LINQ için Araçlar desteği (Visual Basic)
 
@@ -21,7 +22,7 @@ Visual Studio tümleşik geliştirme ortamı (IDE), LINQ uygulama geliştirmeyi 
 
  SQLMetal, LINQ to SQL uygulamalarında kullanılmak üzere mevcut veritabanlarından sınıflar oluşturmak için derleme işlemlerinde kullanılabilen bir komut satırı aracıdır. Daha fazla bilgi için bkz. [SqlMetal.exe (kod üretme aracı)](../../../../framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
-## <a name="linq-aware-code-editor"></a>LINQ duyarlı kod Düzenleyicisi  
+## <a name="linq-aware-code-editor"></a>LINQ-Aware kod Düzenleyicisi  
 
  Visual Basic kod Düzenleyicisi, IntelliSense ve biçimlendirme özellikleri ile LINQ 'i destekler.  
   
