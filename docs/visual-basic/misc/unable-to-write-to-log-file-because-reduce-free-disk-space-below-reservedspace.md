@@ -1,15 +1,16 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: dosyaya yazmak, ayrılan alan değerinin altındaki boş disk alanını azaltacağından günlük dosyasına yazılamıyor'
 title: Günlük dosyası yazılamıyor çünkü dosyaya yazma, ayrılan alan değerinin altındaki boş disk alanını azalttı
 ms.date: 07/20/2015
 f1_keywords:
 - vbrApplicationLog_ReservedSpaceEncroached
 ms.assetid: 95832e70-4ecc-47aa-90c1-f35c4d468151
-ms.openlocfilehash: e5247876c683812edf0eb73ab5f1a5e607b48102
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e02fa9527539169da3ea99f89246dafe82646cff
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075609"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100456958"
 ---
 # <a name="unable-to-write-to-log-file-because-writing-to-it-would-reduce-free-disk-space-below-reservedspace-value"></a>Günlük dosyası yazılamıyor çünkü dosyaya yazma, ayrılan alan değerinin altındaki boş disk alanını azalttı
 

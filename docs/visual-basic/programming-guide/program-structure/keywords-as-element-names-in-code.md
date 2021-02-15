@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: kodda öğe adları olarak anahtar sözcükler (Visual Basic)'
 title: Code’da Öğe Adları Olarak Anahtar Sözcükler
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - name conflicts [Visual Basic]
 - element names [Visual Basic], in code
 ms.assetid: 2e4e8e02-23f7-49b9-a1c8-2b0402b6b525
-ms.openlocfilehash: e895db180dbb44cd4cfe4053d4be429f13324fe8
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 4782c0f3ea065e3e140d449575c187cf2254cd08
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91065755"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100433219"
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>Kodda Öğe Adları Olarak Anahtar Sözcükler (Visual Basic)
 

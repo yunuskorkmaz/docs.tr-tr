@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: nesne değişkeni bildirimi (Visual Basic)'
 title: Nesne Değişken Bildirimi
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - declaring classes [Visual Basic]
 - late binding [Visual Basic]
 ms.assetid: 2a5a41a3-1aa8-4236-b1f0-2382af7bf715
-ms.openlocfilehash: 74b1401df3dbb2d744de74734d10cbcd92e9689e
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 853f9e775976022e52121c164884fd91ef0a831c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077052"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100463721"
 ---
 # <a name="object-variable-declaration-visual-basic"></a>Nesne Değişken Bildirimi (Visual Basic)
 
@@ -45,9 +46,9 @@ Dim objC As System.OperatingSystem
   
 ## <a name="late-binding-and-early-binding"></a>Geç bağlama ve erken bağlama  
 
- Bazen, kodunuz çalışana kadar belirli bir sınıf bilinmez. Bu durumda, nesne değişkenini `Object` veri türüyle bildirmeniz gerekir. Bu, herhangi bir nesne türüne genel bir başvuru oluşturur ve belirli bir sınıf çalışma zamanında atanır. Bu, *geç bağlama*olarak adlandırılır. Geç bağlama ek yürütme süresi gerektirir. Ayrıca, kodunuzu en son atadığınız sınıfın yöntemleriyle ve özellikleriyle da sınırlandırır. Bu, kodunuzun farklı bir sınıfın üyelerine erişmeye çalışırsa çalışma zamanı hatalarına neden olabilir.  
+ Bazen, kodunuz çalışana kadar belirli bir sınıf bilinmez. Bu durumda, nesne değişkenini `Object` veri türüyle bildirmeniz gerekir. Bu, herhangi bir nesne türüne genel bir başvuru oluşturur ve belirli bir sınıf çalışma zamanında atanır. Bu, *geç bağlama* olarak adlandırılır. Geç bağlama ek yürütme süresi gerektirir. Ayrıca, kodunuzu en son atadığınız sınıfın yöntemleriyle ve özellikleriyle da sınırlandırır. Bu, kodunuzun farklı bir sınıfın üyelerine erişmeye çalışırsa çalışma zamanı hatalarına neden olabilir.  
   
- Derleme zamanında belirli bir sınıfı bildiğinizde, nesne değişkenini bu sınıftan olacak şekilde bildirmeniz gerekir. Bu, *erken bağlama*olarak adlandırılır. Erken bağlama performansı iyileştirir ve kodun tüm yöntemlerine ve özelliklerine yönelik kod erişiminizi güvence altına alır. Önceki örnek bildirimlerinde, değişken `objA` yalnızca sınıfının nesnelerini kullanıyorsa <xref:System.Windows.Forms.Label?displayProperty=nameWithType> , bildiriminde belirtmeniz gerekir `As System.Windows.Forms.Label` .  
+ Derleme zamanında belirli bir sınıfı bildiğinizde, nesne değişkenini bu sınıftan olacak şekilde bildirmeniz gerekir. Bu, *erken bağlama* olarak adlandırılır. Erken bağlama performansı iyileştirir ve kodun tüm yöntemlerine ve özelliklerine yönelik kod erişiminizi güvence altına alır. Önceki örnek bildirimlerinde, değişken `objA` yalnızca sınıfının nesnelerini kullanıyorsa <xref:System.Windows.Forms.Label?displayProperty=nameWithType> , bildiriminde belirtmeniz gerekir `As System.Windows.Forms.Label` .  
   
 ### <a name="advantages-of-early-binding"></a>Erken bağlamanın avantajları  
 

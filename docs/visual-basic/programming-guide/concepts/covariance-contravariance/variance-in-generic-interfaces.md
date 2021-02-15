@@ -1,31 +1,32 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Genel Arabirimlerde Varyans (Visual Basic)'
 title: Genel Arabirimlerde Varyans
 ms.date: 07/20/2015
 ms.assetid: cf4096d0-4bb3-45a9-9a6b-f01e29a60333
-ms.openlocfilehash: df28a9f24518f24d1be89acba726da7dfbbf9570
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 42257f80cb929756583b1e488cd315450b9db35e
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84375596"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100469844"
 ---
 # <a name="variance-in-generic-interfaces-visual-basic"></a>Genel Arabirimlerde Varyans (Visual Basic)
 
 .NET Framework 4, mevcut birçok genel arabirim için varyans desteği getirmiştir. Varyans desteği, bu arabirimleri uygulayan sınıfların örtük dönüştürülmesini mümkün. Aşağıdaki arabirimler artık değişkendir:
 
-- <xref:System.Collections.Generic.IEnumerable%601>(T değişkenle birlikte)
+- <xref:System.Collections.Generic.IEnumerable%601> (T değişkenle birlikte)
 
-- <xref:System.Collections.Generic.IEnumerator%601>(T değişkenle birlikte)
+- <xref:System.Collections.Generic.IEnumerator%601> (T değişkenle birlikte)
 
-- <xref:System.Linq.IQueryable%601>(T değişkenle birlikte)
+- <xref:System.Linq.IQueryable%601> (T değişkenle birlikte)
 
-- <xref:System.Linq.IGrouping%602>( `TKey` ve `TElement` değişkenle birlikte)
+- <xref:System.Linq.IGrouping%602> ( `TKey` ve `TElement` değişkenle birlikte)
 
-- <xref:System.Collections.Generic.IComparer%601>(T değişken karşıtı)
+- <xref:System.Collections.Generic.IComparer%601> (T değişken karşıtı)
 
-- <xref:System.Collections.Generic.IEqualityComparer%601>(T değişken karşıtı)
+- <xref:System.Collections.Generic.IEqualityComparer%601> (T değişken karşıtı)
 
-- <xref:System.IComparable%601>(T değişken karşıtı)
+- <xref:System.IComparable%601> (T değişken karşıtı)
 
 Kovaryans, bir metodun, arabirimin genel tür parametresiyle tanımlananla daha türetilmiş bir dönüş türüne sahip olmasını sağlar. Kovaryans özelliğini göstermek için şu genel arabirimleri göz önünde bulundurun: `IEnumerable(Of Object)` ve `IEnumerable(Of String)` . `IEnumerable(Of String)`Arabirim, `IEnumerable(Of Object)` arabirimini almıyor. Ancak, `String` tür devralınır `Object` ve bazı durumlarda bu arabirimlerin nesnelerini birbirlerine atamak isteyebilirsiniz. Bu, aşağıdaki kod örneğinde gösterilmiştir.
 

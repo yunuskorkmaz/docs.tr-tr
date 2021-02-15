@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Visual Basic LINQ ile çalışmaya başlama'
 title: LINQ Kullanmaya Başlama
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - LINQ [Visual Basic]
 - LINQ, Visual Basic
 ms.assetid: 53c66373-ff43-431f-b4bb-f98362830279
-ms.openlocfilehash: 2097eb9caccd65a7983244cd06cbc18759677be1
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 264ee4cef26cd2ee965771e50aeaafbeb71d91f9
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090319"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100469818"
 ---
 # <a name="getting-started-with-linq-in-visual-basic"></a>Visual Basic'te LINQ'e Başlarken
 
-Bu bölümde, Visual Basic ve dil ile tümleşik sorgu (LINQ) anlamanıza ve kullanmanıza yardımcı olacak genel bilgiler, örnekler ve arka plan bilgileri yer almaktadır.  
+Bu bölümde, Visual Basic ve Language-Integrated sorgusunu (LINQ) anlamanıza ve kullanmanıza yardımcı olacak genel bilgiler, örnekler ve arka plan bilgileri yer almaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
 

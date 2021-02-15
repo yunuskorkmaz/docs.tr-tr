@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: LINQ ve dizeler (Visual Basic)'
 title: LINQ ve Dizeler
 ms.date: 07/20/2015
 ms.assetid: 75ddb201-d97a-4f98-8cdf-4ad51714529a
-ms.openlocfilehash: 28c11dcc3c788ea85516e8b3fbafe2677b6d9b54
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 16e1a2c3d8cee30643743400ad21dfc4ff15c14d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075349"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100469792"
 ---
 # <a name="linq-and-strings-visual-basic"></a>LINQ ve dizeler (Visual Basic)
 
@@ -34,7 +35,7 @@ LINQ, dizeleri ve dize koleksiyonlarını sorgulamak ve dönüştürmek için ku
  [LINQ sorgularını normal ifadelerle birleştirme (Visual Basic)](how-to-combine-linq-queries-with-regular-expressions.md)  
  Filtrelenmiş sorgu sonuçlarında karmaşık model eşleştirmesi için LINQ sorgularında normal ifadelerin nasıl kullanılacağını gösterir.  
   
-## <a name="querying-semi-structured-data-in-text-format"></a>Yarı yapılandırılmış verileri metin biçiminde sorgulama  
+## <a name="querying-semi-structured-data-in-text-format"></a>Semi-Structured verileri metin biçiminde sorgulama  
 
  Birçok farklı metin dosyası türü, genellikle sekme veya virgülle ayrılmış dosyalar ya da sabit uzunluklu çizgiler gibi benzer biçimlendirmeler içeren bir dizi satırdan oluşur. Bu tür bir metin dosyasını belleğe okuduktan sonra, satırları sorgulamak ve/veya değiştirmek için LINQ kullanabilirsiniz. LINQ sorguları Ayrıca birden çok kaynaktan veri birleştirme görevini basitleştirir.  
   

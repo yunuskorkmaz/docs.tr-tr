@@ -4,12 +4,16 @@ titleSuffix: ''
 description: .NET proje SDK 'Ları hakkında bilgi edinin.
 ms.date: 09/17/2020
 ms.topic: conceptual
-ms.openlocfilehash: d0eb4291f4def9263f37d2d09f09ef43d40dfbac
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+no-loc:
+- EmbeddedResource
+- Compile
+- None
+ms.openlocfilehash: e5a6d0a1c988818e507936b567fa0188675cedc3
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99506402"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100432653"
 ---
 # <a name="net-project-sdks"></a>.NET projesi SDK 'Ları
 
@@ -19,13 +23,13 @@ ms.locfileid: "99506402"
 
 Aşağıdaki SDK 'lar kullanılabilir:
 
-| ID | Açıklama | Depo|
+| ID | Description | Depo|
 | - | - | - |
 | `Microsoft.NET.Sdk` | .NET SDK | <https://github.com/dotnet/sdk> |
 | `Microsoft.NET.Sdk.Web` | .NET [Web SDK 'sı](/aspnet/core/razor-pages/web-sdk) | <https://github.com/dotnet/sdk> |
 | `Microsoft.NET.Sdk.Razor` | .NET [Razor SDK 'sı](/aspnet/core/razor-pages/sdk) |
 | `Microsoft.NET.Sdk.Worker` | .NET Worker hizmeti SDK 'Sı |
-| `Microsoft.NET.Sdk.WindowsDesktop` | WinForms ve WPF SDK 'Sı\* | <https://github.com/dotnet/winforms> ve <https://github.com/dotnet/wpf> |
+| `Microsoft.NET.Sdk.WindowsDesktop` | Windows Forms (WinForms) ve Windows Presentation Foundation (WPF) içeren .NET [Masaüstü SDK 'sı](msbuild-props-desktop.md).\* | <https://github.com/dotnet/winforms> ve <https://github.com/dotnet/wpf> |
 
 .NET SDK, .NET için temel SDK 'dir. Diğer SDK 'lar .NET SDK 'ya başvuru sağlar ve diğer SDK 'lar ile ilişkili projelere tüm .NET SDK özellikleri de mevcuttur. Örneğin, Web SDK 'sı, hem .NET SDK hem de Razor SDK 'ya bağlıdır.
 
@@ -91,20 +95,22 @@ Aşağıdaki tabloda, .NET SDK 'sında hangi öğelerin ve hangi [genelleştirme
 
 | Öğe           | Glob 'yi dahil et                              | Glob 'yi hariç tut                                                  | Glob 'yi kaldır              |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|--------------------------|
-| Se           | \*\*/\*. cs (veya diğer dil uzantıları) | \*\*/\*kullanıcısını  \*\*/\*.\* PROJ  \*\*/\*. sln  \*\*/\*. vssscc  | Yok                      |
+| Compile           | \*\*/\*. cs (veya diğer dil uzantıları) | \*\*/\*kullanıcısını  \*\*/\*.\* PROJ  \*\*/\*. sln  \*\*/\*. vssscc  | Yok                      |
 | EmbeddedResource  | \*\*/\*. resx                              | \*\*/\*kullanıcısını \*\*/\*.\* PROJ \*\*/\*. sln \*\*/\*. vssscc     | Yok                      |
-| Yok              | \*\*/\*                                   | \*\*/\*kullanıcısını \*\*/\*.\* PROJ \*\*/\*. sln \*\*/\*. vssscc     | \*\*/\*.cs \*\*/\*. resx |
+| None              | \*\*/\*                                   | \*\*/\*kullanıcısını \*\*/\*.\* PROJ \*\*/\*. sln \*\*/\*. vssscc     | \*\*/\*.cs \*\*/\*. resx |
 
 > [!NOTE]
 > Ve `./bin` `./obj` MSBuild özellikleriyle temsil edilen ve klasörleri, `$(BaseOutputPath)` `$(BaseIntermediateOutputPath)` Varsayılan olarak genelleştirmeler 'tan çıkarılır. Dışlayarak [DefaultItemExcludes özelliği](msbuild-props.md#defaultitemexcludes)tarafından temsil edilir.
+
+.NET masaüstü SDK 'sının WPF için daha fazla içerme ve dışladığı vardır. Daha fazla bilgi için bkz. [WPF varsayılan içerme ve dışladığı](msbuild-props-desktop.md#wpf-default-includes-and-excludes).
 
 ### <a name="build-errors"></a>Derleme hataları
 
 Proje dosyanızda bu öğelerden herhangi birini açıkça tanımlarsanız, büyük olasılıkla aşağıdakine benzer bir "NETSDK1022" derleme hatası alırsınız:
 
-  > Yinelenen ' Compile ' öğeleri eklendi. .NET SDK varsayılan olarak proje dizininizdeki ' derleme ' öğelerini içerir. Bu öğeleri proje dosyanıza kaldırabilir ya da bunları proje dosyanıza açıkça dahil etmek istiyorsanız ' Enabledefaultcompileıtems ' özelliğini ' false ' olarak ayarlayabilirsiniz.
+> Yinelenen ' Compile ' öğeleri eklendi. .NET SDK, Compile Varsayılan olarak proje dizininizdeki ' ' öğelerini içerir. Proje dosyanızdaki bu öğeleri kaldırabilir ya da Compile bunları proje dosyanıza açıkça dahil etmek istiyorsanız ' EnableDefault Items ' özelliğini ' false ' olarak ayarlayabilirsiniz.
 
-  > Yinelenen ' EmbeddedResource ' öğeleri eklendi. .NET SDK varsayılan olarak proje dizininizdeki ' EmbeddedResource ' öğelerini içerir. Bu öğeleri proje dosyanıza kaldırabilir ya da bunları proje dosyanıza açıkça dahil etmek istiyorsanız ' Enabledefaultembeddedresourceıtems ' özelliğini ' false ' olarak ayarlayabilirsiniz.
+> Yinelenen ' EmbeddedResource ' öğeleri eklendi. .NET SDK, EmbeddedResource Varsayılan olarak proje dizininizdeki ' ' öğelerini içerir. Proje dosyanızdaki bu öğeleri kaldırabilir ya da EmbeddedResource bunları proje dosyanıza açıkça dahil etmek istiyorsanız ' EnableDefault Items ' özelliğini ' false ' olarak ayarlayabilirsiniz.
 
 Hataları gidermek için aşağıdakilerden birini yapın:
 
@@ -120,7 +126,7 @@ Hataları gidermek için aşağıdakilerden birini yapın:
 
   Uygulamanızla yayımlanacak dosyaları belirtmek istiyorsanız, bu gibi bilinen MSBuild mekanizmalarını yine de kullanabilirsiniz (örneğin, `Content` öğesi).
 
-- `Compile` `EmbeddedResource` `None` [Enabledefaultcompileıtems](msbuild-props.md#enabledefaultcompileitems), [enabledefaultembeddedresourceıtems](msbuild-props.md#enabledefaultembeddedresourceitems)veya [enabledefaultnoneıtems](msbuild-props.md#enabledefaultnoneitems) özelliğini şu şekilde ayarlayarak yalnızca, veya genelleştirmeler öğesini seçerek devre dışı bırakın `false` :
+- `Compile` `EmbeddedResource` `None` [Enabledefault Compile öğelerini](msbuild-props.md#enabledefaultcompileitems), [enabledefault EmbeddedResource öğelerini](msbuild-props.md#enabledefaultembeddedresourceitems)veya [enabledefault None Items](msbuild-props.md#enabledefaultnoneitems) özelliğini şu şekilde ayarlayarak yalnızca, veya genelleştirmeler öğesini seçmeli olarak devre dışı bırakın `false` :
 
   ```xml
   <PropertyGroup>

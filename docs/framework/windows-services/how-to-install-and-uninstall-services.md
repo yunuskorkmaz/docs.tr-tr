@@ -12,12 +12,12 @@ helpviewer_keywords:
 - uninstalling Windows services
 - installutil.exe tool
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
-ms.openlocfilehash: 6b7cfd8b241df4fe01c9c2a08888c88a1c749d13
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 0803d9908a9b92df0d17537ee4db2d798a2a07cc
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609687"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100433427"
 ---
 # <a name="how-to-install-and-uninstall-windows-services"></a>Nasıl yapılır: Windows hizmetlerini yükleme ve kaldırma
 
@@ -31,11 +31,11 @@ Bu makaledeki adımları kullanmak için, önce Windows hizmetinize bir hizmet Y
 F5 'e basarak Windows hizmeti projelerini doğrudan Visual Studio geliştirme ortamından çalıştıramazsınız. Projeyi çalıştırmadan önce, hizmeti projeye yüklemelisiniz.
 
 > [!TIP]
-> Hizmetinizi yüklediğinizi veya kaldırdığınızı doğrulamak için **Sunucu Gezgini** kullanabilirsiniz. Daha fazla bilgi için bkz. [Visual Studio 'da Sunucu Gezgini kullanma](https://support.microsoft.com/help/316649/how-to-use-the-server-explorer-in-visual-studio-net-and-visual-studio).
+> Hizmetinizi yüklediğinizi veya kaldırdığınızı doğrulamak için **Sunucu Gezgini** kullanabilirsiniz.
 
-### <a name="install-your-service-manually-using-installutilexe-utility"></a>InstallUtil.exe yardımcı programını kullanarak hizmetinizi el ile yükleyebilirsiniz
+## <a name="install-using-installutilexe-utility"></a>InstallUtil.exe yardımcı programını kullanarak yüklemeyi
 
-1. **Başlat** menüsünde **Visual Studio \<*version*> ** dizinini seçin ve ardından ** \<*version*> vs için geliştirici komut istemi **seçin.
+1. **Başlat** menüsünde **Visual Studio \<*version*>** dizinini seçin ve ardından **\<*version*> vs için geliştirici komut istemi** seçin.
 
      Visual Studio için Geliştirici Komut İstemi görüntülenir.
 
@@ -47,15 +47,15 @@ F5 'e basarak Windows hizmeti projelerini doğrudan Visual Studio geliştirme or
     installutil <yourproject>.exe
     ```
 
-     Visual Studio için Geliştirici Komut İstemi kullanıyorsanız, *InstallUtil.exe* sistem yolunda olmalıdır. Aksi takdirde, yolu yola ekleyebilir veya tam yolu kullanarak çağırabilirsiniz. Bu araç, *%windir%\Microsoft.NET\Framework [64] \\<framework_version \> *.NET Framework ile yüklenir.
+     Visual Studio için Geliştirici Komut İstemi kullanıyorsanız, *InstallUtil.exe* sistem yolunda olmalıdır. Aksi takdirde, yolu yola ekleyebilir veya tam yolu kullanarak çağırabilirsiniz. Bu araç, *%windir%\Microsoft.NET\Framework [64] \\<framework_version \>*.NET Framework ile yüklenir.
 
      Örneğin:
-     - .NET Framework 4 veya 4,5 ' nin 32 bit sürümü ve sonrasında, Windows yükleme dizininiz *C:\Windows*ise, varsayılan yol *C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe*.
+     - .NET Framework 4 veya 4,5 ' nin 32 bit sürümü ve sonrasında, Windows yükleme dizininiz *C:\Windows* ise, varsayılan yol *C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe*.
      - .NET Framework 4 veya 4,5 ve sonraki sürümlerin 64 bit sürümü için varsayılan yol *C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*.
 
-### <a name="uninstall-your-service-manually-using-installutilexe-utility"></a>InstallUtil.exe yardımcı programını kullanarak hizmetinizi el ile kaldırın
+## <a name="uninstall-using-installutilexe-utility"></a>InstallUtil.exe yardımcı programını kullanarak kaldırma
 
-1. **Başlat** menüsünde **Visual Studio \<*version*> ** dizinini seçin ve ardından ** \<*version*> vs için geliştirici komut istemi **seçin.
+1. **Başlat** menüsünde **Visual Studio \<*version*>** dizinini seçin ve ardından **\<*version*> vs için geliştirici komut istemi** seçin.
 
      Visual Studio için Geliştirici Komut İstemi görüntülenir.
 
@@ -67,7 +67,7 @@ F5 'e basarak Windows hizmeti projelerini doğrudan Visual Studio geliştirme or
 
 3. Bir hizmetin yürütülebilir dosyası silindikten sonra, hizmet kayıt defterinde hala mevcut olabilir. Bu durumda, hizmet girdisini kayıt defterinden kaldırmak için [sc delete](/windows-server/administration/windows-commands/sc-delete) komutunu kullanın.
 
-### <a name="install-your-service-manually-using-powershell"></a>PowerShell kullanarak hizmetinizi el ile yükleyebilirsiniz
+## <a name="install-using-powershell"></a>PowerShell kullanarak yüklemeyi
 
 1. **Başlat** menüsünde **Windows PowerShell** dizini ' ni seçin ve ardından **Windows PowerShell**' i seçin.
 
@@ -79,7 +79,7 @@ F5 'e basarak Windows hizmeti projelerini doğrudan Visual Studio geliştirme or
     New-Service -Name "YourServiceName" -BinaryPathName <yourproject>.exe
     ```
 
-### <a name="uninstall-your-service-manually-using-powershell"></a>PowerShell kullanarak hizmetinizi el ile kaldırma
+## <a name="uninstall-using-powershell"></a>PowerShell 'i kullanarak kaldırma
 
 1. **Başlat** menüsünde **Windows PowerShell** dizini ' ni seçin ve ardından **Windows PowerShell**' i seçin.
 

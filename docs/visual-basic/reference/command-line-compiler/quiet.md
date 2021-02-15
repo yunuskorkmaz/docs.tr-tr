@@ -1,4 +1,5 @@
 ---
+description: Daha fazla bilgi edinin:-quiet
 title: -quiet
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - /quiet compiler option [Visual Basic]
 - quiet compiler option [Visual Basic]
 ms.assetid: 5d77fa23-4c50-4708-8535-649912b098e8
-ms.openlocfilehash: f894ed6a778e026ffd3976a63fe3b677eb6a9557
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 23e1b6472e80ac6ca2ecea5c4390b43722ccebb6
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400532"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100432734"
 ---
 # <a name="-quiet"></a>-quiet
 
 Derleyicinin sözdizimiyle ilgili hatalar ve uyarılar için kod görüntülemesini engeller.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```console
 -quiet
@@ -40,7 +41,7 @@ Module Module1
 End Module
 ```
 
-Çıktı:
+Çıkış:
 
 ```console
 C:\projects\vb2.vb(3) : error BC30451: 'x' is not declared. It may be inaccessible due to its protection level.
@@ -68,5 +69,5 @@ vbc -quiet t2.vb
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](index.md)
+- [Visual Basic Command-Line derleyicisi](index.md)
 - [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)
