@@ -1,15 +1,16 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: @ (yanıt dosyası belirtme) (Visual Basic)'
 title: '@ (Yanıt Dosyasını Belirtin)'
 ms.date: 03/13/2018
 helpviewer_keywords:
 - '@ (Specify Response File) compiler option [Visual Basic]'
 ms.assetid: a6847eaa-e5f9-4303-9421-45b55484b9ca
-ms.openlocfilehash: 91cf1b5a55d16ab47a83fbd259dd1d83d8e9c31a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7a28be0d0bf6da177d9cfe85ecdb40eccf8a339f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403102"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100473920"
 ---
 # <a name="-specify-response-file-visual-basic"></a>@ (Yanıt Dosyası Belirtme) (Visual Basic)
 
@@ -40,7 +41,7 @@ Bir yanıt dosyasında, tek satırda birden çok derleyici seçeneği ve kaynak 
 
 Komut satırında belirtilen seçenekleri, bir veya daha fazla yanıt dosyasında belirtilen seçeneklerle birleştirebilirsiniz. Derleyici, komut seçeneklerini kendileriyle karşılaştığı şekilde işler. Bu nedenle, komut satırı bağımsız değişkenleri yanıt dosyalarında daha önce listelenen seçenekleri geçersiz kılabilir. Buna karşılık, bir yanıt dosyasındaki seçenekler, önceden komut satırında veya diğer yanıt dosyalarında listelenen seçenekleri geçersiz kılar.
 
-Visual Basic, vbc. exe dosyası ile aynı dizinde bulunan Vbc. rsp dosyasını sağlar. Seçenek kullanılmamışsa, vbc. rsp dosyası varsayılan olarak dahil edilir `-noconfig` . Daha fazla bilgi için bkz. [-noconfig](noconfig.md).
+Visual Basic, Vbc.exe dosyası ile aynı dizinde bulunan Vbc. rsp dosyasını sağlar. Seçenek kullanılmamışsa, vbc. rsp dosyası varsayılan olarak dahil edilir `-noconfig` . Daha fazla bilgi için bkz. [-noconfig](noconfig.md).
 
 > [!NOTE]
 > `@`Bu seçenek, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.
@@ -67,6 +68,6 @@ vbc @file1.rsp
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](index.md)
+- [Visual Basic Command-Line derleyicisi](index.md)
 - [-noconfig](noconfig.md)
 - [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)

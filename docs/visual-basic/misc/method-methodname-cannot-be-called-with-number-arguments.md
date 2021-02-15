@@ -1,15 +1,16 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: ' <methodname> ' metodu <number> bağımsız değişkenlerle çağrılamaz"
 title: "' <methodname> ' Metodu <number> bağımsız değişkenlerle çağrılamaz"
 ms.date: 07/20/2015
 f1_keywords:
 - vbrNoMethodTakingXArguments2
 ms.assetid: 23260199-b6a4-469f-b75f-4a3d8d25e2cc
-ms.openlocfilehash: c66bcc0c525f816fdf5814d70351eb7e8eeda22f
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 903c71c98691ea497514d8a06c781fc1199e1dd8
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91076142"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100430007"
 ---
 # <a name="method-methodname-cannot-be-called-with-number-arguments"></a>' \<methodname> ' Metodu \<number> bağımsız değişkenlerle çağrılamaz
 

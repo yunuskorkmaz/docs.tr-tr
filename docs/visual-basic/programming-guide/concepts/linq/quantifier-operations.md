@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nicelik Işlemleri (Visual Basic)'
 title: Niceleyici İşlemleri
 ms.date: 07/20/2015
 ms.assetid: ae1a2b73-503c-4f4b-a3fd-31b5adbee67c
-ms.openlocfilehash: 0c1c69cb36ac16126454dc0c24cd84fc85b0b218
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 7cbd8a9cf18a0ad8b70ada58d7fa6602dce4bd1b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075310"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100430098"
 ---
 # <a name="quantifier-operations-visual-basic"></a>Nicelik belirteci Işlemleri (Visual Basic)
 
@@ -24,7 +25,7 @@ Nicelik belirteci işlemleri bir <xref:System.Boolean> dizideki öğelerin bazı
 |Yöntem adı|Description|Sorgu Ifadesi söz dizimini Visual Basic|Daha Fazla Bilgi|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |Tümü|Bir dizideki tüm öğelerin bir koşulu karşılayıp karşılamadığını belirler.|`Aggregate … In … Into All(…)`|<xref:System.Linq.Enumerable.All%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.All%2A?displayProperty=nameWithType>|  
-|Herhangi biri|Bir dizideki herhangi bir öğenin bir koşulu karşılayıp karşılamadığını belirler.|`Aggregate … In … Into Any()`|<xref:System.Linq.Enumerable.Any%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Any%2A?displayProperty=nameWithType>|  
+|Herhangi bir|Bir dizideki herhangi bir öğenin bir koşulu karşılayıp karşılamadığını belirler.|`Aggregate … In … Into Any()`|<xref:System.Linq.Enumerable.Any%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Any%2A?displayProperty=nameWithType>|  
 |Contains|Bir sıranın belirtilen bir öğeyi içerip içermediğini belirler.|Geçerli değildir.|<xref:System.Linq.Enumerable.Contains%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Contains%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-examples"></a>Sorgu Ifadesi söz dizimi örnekleri  

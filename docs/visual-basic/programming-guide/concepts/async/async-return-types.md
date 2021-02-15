@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: zaman uyumsuz dönüş türleri (Visual Basic)'
 title: Zaman Uyumsuz Dönüş Türleri
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: 5d19fc9831580412da24333be0885fce55384658
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 12a7f577a89ff8f8037de879f9e37d6fdb917aa8
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396720"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100438924"
 ---
 # <a name="async-return-types-visual-basic"></a>Zaman uyumsuz dönüş türleri (Visual Basic)
 
@@ -18,7 +19,7 @@ Her dönüş türü aşağıdaki bölümlerden birinde incelenir ve konunun sonu
 > [!NOTE]
 > Örneği çalıştırmak için, bilgisayarınızda Visual Studio 2012 veya daha yeni bir sürümü ve .NET Framework 4,5 ya da daha yeni bir sürümü yüklü olmalıdır.
 
-## <a name="taskt-return-type"></a><a name="BKMK_TaskTReturnType"></a>Görev (T) dönüş türü
+## <a name="taskt-return-type"></a><a name="BKMK_TaskTReturnType"></a> Görev (T) dönüş türü
 
 <xref:System.Threading.Tasks.Task%601>Dönüş türü, işlenenin türü olan bir [Return](../../../language-reference/statements/return-statement.md) ifadesini içeren zaman uyumsuz bir yöntem için kullanılır `TResult` .
 
@@ -81,7 +82,7 @@ textBox1.Text &= $"Value of result2 variable:   {result2}" & vbCrLf
 textBox1.Text &= $"Value of resultTask.Result:  {integerTask.Result}" & vbCrLf
 ```
 
-## <a name="task-return-type"></a><a name="BKMK_TaskReturnType"></a>Görev dönüş türü
+## <a name="task-return-type"></a><a name="BKMK_TaskReturnType"></a> Görev dönüş türü
 
 Dönüş açıklaması içermeyen veya bir işleneni döndürmeyen bir return ifadesini içeren zaman uyumsuz yöntemler genellikle dönüş türüne sahiptir <xref:System.Threading.Tasks.Task> . Bu tür yöntemler, zaman uyumlu olarak çalışmak üzere yazılmışsa [alt](../../language-features/procedures/sub-procedures.md) yordamlar olur. `Task`Zaman uyumsuz bir yöntem için dönüş türü kullanırsanız, çağıran `Await` zaman uyumsuz yöntem bitene kadar çağıranın tamamlanmasını askıya almak için bir operatör kullanabilirsiniz.
 
@@ -101,7 +102,7 @@ Async Function Task_MethodAsync() As Task
 End Function
 ```
 
-`Task_MethodAsync`, zaman uyumlu veya void döndüren bir yöntem için çağırma deyimine benzer bir await ifadesi yerine await deyimi kullanılarak çağrılır ve bekletildi `Sub` . `Await`Bu durumda bir işlecin uygulaması bir değer üretmez.
+`Task_MethodAsync` , zaman uyumlu veya void döndüren bir yöntem için çağırma deyimine benzer bir await ifadesi yerine await deyimi kullanılarak çağrılır ve bekletildi `Sub` . `Await`Bu durumda bir işlecin uygulaması bir değer üretmez.
 
 Aşağıdaki kod çağrıları ve Await yöntemi `Task_MethodAsync` .
 
@@ -124,7 +125,7 @@ textBox1.Text &= vbCrLf & "Application can continue working while the Task runs.
 Await simpleTask
 ```
 
-## <a name="void-return-type"></a><a name="BKMK_VoidReturnType"></a>Void dönüş türü
+## <a name="void-return-type"></a><a name="BKMK_VoidReturnType"></a> Void dönüş türü
 
 Yordamların birincil kullanımı, `Sub` dönüş türü olmayan (diğer dillerde void dönüş türü olarak ifade edilen) olay işleyicileridir. Void Return Ayrıca, void döndüren yöntemleri geçersiz kılmak için veya "Fire ve unut" olarak kategorilere ayrılmamış etkinlikler gerçekleştiren yöntemler için de kullanılabilir. Ancak, `Task` void döndüren zaman uyumsuz bir yöntem beklenmediğinden, mümkün olan her yerde dönebilmelisiniz. Bu tür bir yöntemi çağıran, çağrılan zaman uyumsuz yöntemin tamamlanmasını beklemeden tamamlamaya devam edebilmelidir ve çağıranın, zaman uyumsuz yöntemin ürettiği herhangi bir değerden veya özel durumlardan bağımsız olması gerekir.
 
@@ -149,7 +150,7 @@ Async Sub button1_Click(sender As Object, e As RoutedEventArgs) Handles button1.
 End Sub
 ```
 
-## <a name="complete-example"></a><a name="BKMK_Example"></a>Örnek Tamam
+## <a name="complete-example"></a><a name="BKMK_Example"></a> Örnek Tamam
 
 Aşağıdaki Windows Presentation Foundation (WPF) projesi bu konudan kod örneklerini içerir.
 
@@ -161,11 +162,11 @@ Aşağıdaki Windows Presentation Foundation (WPF) projesi bu konudan kod örnek
 
      **Yeni proje** iletişim kutusu açılır.
 
-3. **Yüklü**, **Şablonlar** kategorisinde **Visual Basic**ve ardından **Windows**' u seçin. Proje türleri listesinden **WPF uygulaması** ' nı seçin.
+3. **Yüklü**, **Şablonlar** kategorisinde **Visual Basic** ve ardından **Windows**' u seçin. Proje türleri listesinden **WPF uygulaması** ' nı seçin.
 
 4. `AsyncReturnTypes`Projenin adı olarak girin ve **Tamam** düğmesini seçin.
 
-     Yeni proje **Çözüm Gezgini**görüntülenir.
+     Yeni proje **Çözüm Gezgini** görüntülenir.
 
 5. Visual Studio Code düzenleyicisinde **MainWindow. xaml** sekmesini seçin.
 

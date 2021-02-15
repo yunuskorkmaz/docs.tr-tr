@@ -5,12 +5,12 @@ ms.date: 09/24/2020
 ms.topic: conceptual
 no-loc:
 - EditorConfig
-ms.openlocfilehash: 8f76c9c86c202ef1bad23bffe8379b0b93a53f17
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 9c09fc381a161a9deea012d98d06ab57f2f7345e
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99787727"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100480550"
 ---
 # <a name="configuration-options-for-code-analysis"></a>Kod analizi için yapılandırma seçenekleri
 
@@ -60,14 +60,14 @@ Kurala özgü seçenekler tek bir kurala, bir dizi kurala veya tüm kurallara uy
 
 Aşağıdaki tabloda, [kod kalitesi](quality-rules/index.md) ve [kod stili](style-rules/index.md) kuralları da dahil olmak üzere tüm çözümleyici kuralları için yapılandırabileceğiniz farklı kural önem dereceleri gösterilmektedir.
 
-| Önem derecesi | Derleme zamanı davranışı |
+| Önem derecesi yapılandırma değeri | Derleme zamanı davranışı |
 |-|-|
 | `error` | İhlaller derleme *hataları* olarak görünür ve yapıların başarısız olmasına neden olur.|
 | `warning` | İhlaller derleme *uyarıları* olarak görünür, ancak yapıların başarısız olmasına neden olmaz (uyarıları hata olarak değerlendirmek için bir seçeneğe sahip olmadığınız sürece). |
 | `suggestion` | İhlaller derleme *iletileri* olarak ve VISUAL Studio IDE 'de öneri olarak görünür. |
 | `silent` | İhlaller kullanıcıya görünür değil. |
 | `none` | Kural tamamen bastırılır. |
-| `default` | Kuralın varsayılan önem derecesi kullanılır. |
+| `default` | Kuralın varsayılan önem derecesi kullanılır. Her .NET sürümü için varsayılan önem dereceleri, [Roslyn-çözümleyiciler](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)deposunda listelenmiştir. Bu tabloda, "devre dışı" karşılık gelir `none` , "Hidden" öğesine karşılık gelir `silent` ve "bilgi" öğesine karşılık gelir `suggestion` . |
 
 > [!TIP]
 > Visual Studio 'da kural oluşturma işlemlerinin nasıl yapılacağı hakkında bilgi için bkz. [önem düzeyleri](/visualstudio/ide/editorconfig-language-conventions#severity-levels).
@@ -91,6 +91,12 @@ Tüm çözümleyici kuralları için varsayılan kural önem derecesini ayarlama
 ```ini
 dotnet_analyzer_diagnostic.severity = <severity value>
 ```
+
+> [!IMPORTANT]
+> Bir kural *kategorisi* ya da *Tüm* kurallar için tek bir girdiyle birden çok kural için önem düzeyini yapılandırdığınızda, önem derecesi yalnızca [Varsayılan olarak etkinleştirilen](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)kurallar için geçerlidir. Varsayılan olarak devre dışı bırakılan kuralları etkinleştirmek için şunlardan birini yapmanız gerekir:
+>
+> - `dotnet_diagnostic.<rule ID>.severity = <severity>`Her kural için bir açık yapılandırma girişi ekleyin.
+> - ' İ ayarlayarak *Tüm* kuralları [\<AnalysisMode>](../../core/project-sdk/msbuild-props.md#analysismode) etkinleştirin `AllEnabledByDefault` .
 
 #### <a name="precedence"></a>Önceliği
 

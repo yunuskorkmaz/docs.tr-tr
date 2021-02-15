@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: bağımsız değişkenleri değere ve başvuruya göre geçirme (Visual Basic)'
 title: Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - arguments [Visual Basic], passing by value or by reference
 - argument passing [Visual Basic], by value or by reference
 ms.assetid: fd8a9de6-7178-44d5-a9bf-458d4ad907c2
-ms.openlocfilehash: b7430b209f53a0a924ec587a0097178baf0075e3
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: dbe020a7fffd48c14d377fff740f57e4bcc43ed2
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91059229"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100466685"
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme (Visual Basic)
 
-Visual Basic, bir yordama *değere* veya *başvuruya*göre bir bağımsız değişken geçirebilirsiniz. Bu, *geçirme mekanizması*olarak bilinir ve yordamın çağıran koddaki bağımsız değişkenin temelindeki programlama öğesini değiştirip değiştiremeyeceğini belirler. Yordam bildirimi, [ByVal](../../../language-reference/modifiers/byval.md) veya [ByRef](../../../language-reference/modifiers/byref.md) anahtar sözcüğü belirtilerek her bir parametre için geçen geçiş mekanizmasını belirler.  
+Visual Basic, bir yordama *değere* veya *başvuruya* göre bir bağımsız değişken geçirebilirsiniz. Bu, *geçirme mekanizması* olarak bilinir ve yordamın çağıran koddaki bağımsız değişkenin temelindeki programlama öğesini değiştirip değiştiremeyeceğini belirler. Yordam bildirimi, [ByVal](../../../language-reference/modifiers/byval.md) veya [ByRef](../../../language-reference/modifiers/byref.md) anahtar sözcüğü belirtilerek her bir parametre için geçen geçiş mekanizmasını belirler.  
   
 ## <a name="distinctions"></a>Farklar  
 
@@ -83,4 +84,4 @@ Visual Basic, bir yordama *değere* veya *başvuruya*göre bir bağımsız deği
 - [Nasıl yapılır: Bir Yordam Bağımsız Değişkenini Değer Değişikliklerine Karşı Koruma](./how-to-protect-a-procedure-argument-against-value-changes.md)
 - [Nasıl yapılır: Bağımsız Değişkeni Değere Göre Geçirilecek Şekilde Zorlama](./how-to-force-an-argument-to-be-passed-by-value.md)
 - [Bağımsız Değişkenleri Konuma ve Ada Göre Geçirme](./passing-arguments-by-position-and-by-name.md)
-- [Değer Türleri ve Başvuru Türleri](../data-types/value-types-and-reference-types.md)
+- [Değer türleri ve başvuru türleri](../data-types/value-types-and-reference-types.md)

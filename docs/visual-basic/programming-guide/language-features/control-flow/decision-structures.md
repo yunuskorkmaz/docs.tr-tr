@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: karar yapıları (Visual Basic)'
 title: Karar Yapıları
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - decision structures [Visual Basic]
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
-ms.openlocfilehash: 79c4949cd4d5b07d1b1d666b21467bf8db41ab3d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 76b63d2cdc238ec5590d11a6a802f55866990a3a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91095622"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100480693"
 ---
 # <a name="decision-structures-visual-basic"></a>Karar Yapıları (Visual Basic)
 
