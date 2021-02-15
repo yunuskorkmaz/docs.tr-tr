@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: aşırı yüklenmiş Özellikler ve Yöntemler (Visual Basic)'
 title: Aşırı yüklenmiş Özellikler ve Yöntemler
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - method overloading
 - Overloads keyword [Visual Basic], overloaded members
 ms.assetid: b686fb97-e7d7-4001-afaa-6650cba08f0d
-ms.openlocfilehash: 1672f12773ece012c580253b6dafbf9d0ac8f07c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: fb46876d346ad5f391241aee0b07175df290e656
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84389158"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100438781"
 ---
 # <a name="overloaded-properties-and-methods-visual-basic"></a>Aşırı yüklenmiş Özellikler ve Yöntemler (Visual Basic)
 
@@ -51,9 +52,9 @@ Aşırı yükleme özelliği, kullanılabilecek bir veri türleri seçimi sağla
 
 `Overloads`Anahtar sözcüğü aşırı yükleme sırasında isteğe bağlıdır, ancak herhangi bir aşırı yüklenmiş üye `Overloads` anahtar sözcüğünü kullanıyorsa, aynı ada sahip diğer tüm aşırı yüklenmiş Üyeler de bu anahtar sözcüğü belirtmelidir.
 
-Türetilmiş sınıflar, *ad ve imza ile gölgeleme*olarak bilinen bir işlem olan aynı parametrelere ve parametre türlerine sahip üyelere sahip devralınan üyeleri aşırı yükleyebilir. `Overloads`Anahtar sözcüğü ad ve imza ile gölgelendirmesi sırasında kullanılıyorsa, türetilmiş sınıfın üyenin uygulanması, temel sınıftaki uygulama yerine kullanılır ve bu üyeye ait diğer tüm aşırı yüklemeler türetilmiş sınıfın örnekleri tarafından kullanılabilir.
+Türetilmiş sınıflar, *ad ve imza ile gölgeleme* olarak bilinen bir işlem olan aynı parametrelere ve parametre türlerine sahip üyelere sahip devralınan üyeleri aşırı yükleyebilir. `Overloads`Anahtar sözcüğü ad ve imza ile gölgelendirmesi sırasında kullanılıyorsa, türetilmiş sınıfın üyenin uygulanması, temel sınıftaki uygulama yerine kullanılır ve bu üyeye ait diğer tüm aşırı yüklemeler türetilmiş sınıfın örnekleri tarafından kullanılabilir.
 
-`Overloads`Aynı parametrelere ve parametre türlerine sahip bir üyeye sahip devralınmış bir üyeyi aşırı yüklerken anahtar sözcük atlanırsa, aşırı yükleme *ada göre gölgeleme*olarak adlandırılır. Ada göre gölgeleme bir üyenin devralınmış uygulamasını değiştirir ve diğer tüm aşırı yüklemeleri türetilmiş sınıfın örneklerine ve onun decedents kullanılamaz hale getirir.
+`Overloads`Aynı parametrelere ve parametre türlerine sahip bir üyeye sahip devralınmış bir üyeyi aşırı yüklerken anahtar sözcük atlanırsa, aşırı yükleme *ada göre gölgeleme* olarak adlandırılır. Ada göre gölgeleme bir üyenin devralınmış uygulamasını değiştirir ve diğer tüm aşırı yüklemeleri türetilmiş sınıfın örneklerine ve onun decedents kullanılamaz hale getirir.
 
 `Overloads`Ve `Shadows` değiştiricileri aynı özellik veya yöntemle birlikte kullanılamaz.
 
@@ -65,7 +66,7 @@ Aşağıdaki örnek, bir dolar tutarının bir ya da gösterimini kabul eden aş
 
 1. Yeni bir proje açın ve adlı bir sınıf ekleyin `TaxClass` .
 
-2. Sınıfına aşağıdaki kodu ekleyin `TaxClass` .
+2. Aşağıdaki kodu `TaxClass` sınıfına ekleyin.
 
     [!code-vb[VbVbalrOOP#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#67)]
 

@@ -1,13 +1,14 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: nasıl yapılır: grupları kullanarak bir dosyayı birçok dosyaya bölme (LINQ) (Visual Basic)'
 title: 'Nasıl yapılır: Gruplar Kullanarak Bir Dosyayı Birden Çok Dosyaya Bölme (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-ms.openlocfilehash: f6b11ab4b4fe11dbf1cb4cf07654b5ef3f6785ad
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 545b572e6cd2414823a46db9c757a1876b56a5a5
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397719"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100465632"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>Nasıl yapılır: grupları (LINQ) kullanarak bir dosyayı birçok dosyaya bölme (Visual Basic)
 
@@ -15,7 +16,7 @@ Bu örnek, iki dosyanın içeriğini birleştirmenin bir yolunu gösterir ve ard
 
 ### <a name="to-create-the-data-files"></a>Veri dosyalarını oluşturmak için
 
-1. Bu adları names1. txt adlı bir metin dosyasına kopyalayın ve proje klasörünüze kaydedin:
+1. Bu adları names1.txt adlı bir metin dosyasına kopyalayın ve proje klasörünüze kaydedin:
 
     ```text
     Bankov, Peter
@@ -30,7 +31,7 @@ Bu örnek, iki dosyanın içeriğini birleştirmenin bir yolunu gösterir ve ard
     Garcia, Debra
     ```
 
-2. Bu adları names2. txt adlı bir metin dosyasına kopyalayın ve proje klasörünüze kaydedin: iki dosyanın ortak olarak bazı adlara sahip olduğunu unutmayın.
+2. Bu adları names2.txt adlı bir metin dosyasına kopyalayın ve proje klasörünüze kaydedin: iki dosyanın ortak olarak bazı adlara sahip olduğunu unutmayın.
 
     ```text
     Liu, Jinghao

@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: zaman uyumsuz programlarda denetim akışı (Visual Basic)'
 title: Zaman Uyumsuz Programlarda Denetim Akışı
 ms.date: 07/20/2015
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
-ms.openlocfilehash: 0c479b9dd2a691b1b353fac54ee3320a895b1c7f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: bf0ca6a083971cb02cfb6dff2dfcaaabd5405b36
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396668"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100428252"
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>Zaman uyumsuz programlarda denetim akışı (Visual Basic)
 
@@ -121,11 +122,11 @@ Projeyi çalıştırmak için aşağıdaki adımları gerçekleştirin:
 
     **Yeni proje** iletişim kutusu açılır.
 
-3. **Yüklü şablonlar** bölmesinde **Visual Basic**öğesini seçin ve ardından Proje türleri listesinden **WPF uygulaması** ' nı seçin.
+3. **Yüklü şablonlar** bölmesinde **Visual Basic** öğesini seçin ve ardından Proje türleri listesinden **WPF uygulaması** ' nı seçin.
 
 4. `AsyncTracer`Projenin adı olarak girin ve **Tamam** düğmesini seçin.
 
-    Yeni proje **Çözüm Gezgini**görüntülenir.
+    Yeni proje **Çözüm Gezgini** görüntülenir.
 
 5. Visual Studio Code düzenleyicisinde **MainWindow. xaml** sekmesini seçin.
 
@@ -272,7 +273,7 @@ Bir görev döndüren zaman uyumsuz yöntem, Denetim çağırana geri dönzaman 
 Dim getStringTask As Task(Of String) = client.GetStringAsync("https://msdn.microsoft.com")
 ```
 
-Son olarak `client.GetStringAsync` gerçek bir dize oluşturmak için görevi bir Promise olarak düşünebilirsiniz. Bu sırada, bu, ' de `AccessTheWebAsync` taahhüt edilen dizeye bağlı değilse `client.GetStringAsync` , bu iş, bekleme sırasında devam edebilir `client.GetStringAsync` . Örnekte, "üç" olarak etiketlenen aşağıdaki çıktı satırları, bağımsız iş yapmak için fırsatı temsil eder
+Son olarak `client.GetStringAsync` gerçek bir dize oluşturmak için görevi bir Promise olarak düşünebilirsiniz. Bu sırada, bu, ' de `AccessTheWebAsync` taahhüt edilen dizeye bağlı değilse `client.GetStringAsync` , bu iş, bekleme sırasında devam edebilir  `client.GetStringAsync` . Örnekte, "üç" olarak etiketlenen aşağıdaki çıktı satırları, bağımsız iş yapmak için fırsatı temsil eder
 
 ```console
 THREE: Back in AccessTheWebAsync.
@@ -288,12 +289,12 @@ Dim urlContents As String = Await getStringTask
 
 Aşağıdaki görüntüde denetim akışını, `client.GetStringAsync` `getStringTask` `getStringTask` bir await işlecinin uygulamasına ve oluşturma işleminden öğesine kadar gösterir.
 
-![Üçüncü adım](../../../../csharp/programming-guide/concepts/async/media/asynctrace-three.png "AsyncTrace-üç")
+![Üçüncü adım](../../../../csharp/programming-guide/concepts/async/media/asynctrace-three.png "AsyncTrace-Three")
 
 Await ifadesi `AccessTheWebAsync` dönüşene kadar askıya alır `client.GetStringAsync` . Bu sırada denetim, ' ın çağıranına döner `AccessTheWebAsync` `startButton_Click` .
 
 > [!NOTE]
-> Genellikle, zaman uyumsuz bir yöntem çağrısını hemen bekleolursunuz. Örneğin, aşağıdaki atama, oluşturan ve daha sonra bekleyen önceki kodun yerini alır `getStringTask` :`Dim urlContents As String = Await client.GetStringAsync("https://msdn.microsoft.com")`
+> Genellikle, zaman uyumsuz bir yöntem çağrısını hemen bekleolursunuz. Örneğin, aşağıdaki atama, oluşturan ve daha sonra bekleyen önceki kodun yerini alır `getStringTask` : `Dim urlContents As String = Await client.GetStringAsync("https://msdn.microsoft.com")`
 >
 > Bu konuda, Await işleci daha sonra Denetim akışını program aracılığıyla işaretleyen çıkış satırlarına uyum sağlayacak şekilde uygulanır.
 
@@ -336,13 +337,13 @@ FIVE:  Back in AccessTheWebAsync.
            Exiting from AccessTheWebAsync.
 ```
 
-Return ifadesinin işleneni, `urlContents.Length` döndüren görevde saklanır `AccessTheWebAsync` . Await ifadesi bu değeri içindeki öğesinden alır `getLengthTask` `startButton_Click` .
+Return ifadesinin işleneni, `urlContents.Length` döndüren görevde saklanır  `AccessTheWebAsync` . Await ifadesi bu değeri içindeki öğesinden alır `getLengthTask` `startButton_Click` .
 
 Aşağıdaki görüntüde (ve) sonra denetimin aktarımı gösterilmektedir `client.GetStringAsync` `getStringTask` .
 
 ![5. adım](../../../../csharp/programming-guide/concepts/async/media/asynctrace-five.png "AsyncTrace-beş")
 
-`AccessTheWebAsync`tamamlandı olarak çalışır ve denetimi ' a döner, `startButton_Click` Bu da tamamlamayı bekliyor.
+`AccessTheWebAsync` tamamlandı olarak çalışır ve denetimi ' a döner, `startButton_Click` Bu da tamamlamayı bekliyor.
 
 ### <a name="step-six"></a>Altı adım
 

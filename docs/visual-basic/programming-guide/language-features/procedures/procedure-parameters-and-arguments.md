@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: yordam parametreleri ve bağımsız değişkenler (Visual Basic)'
 title: Yordam Parametreleri ve Bağımsız Değişkenleri
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - argument lists [Visual Basic]
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-ms.openlocfilehash: c7f8eb1fa4e1fa3d87474d048d5a60994b0b7fc5
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: c2239c76450f503e74dbf5f191cd212e05d11600
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071280"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100423166"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>Yordam Parametreleri ve Bağımsız Değişkenler (Visual Basic)
 
@@ -31,9 +32,9 @@ ms.locfileid: "91071280"
   
  Bir *parametre* , yordamı çağırdığınızda belirtmeniz beklenen bir değeri temsil eder. Yordamın bildirimi, parametrelerini tanımlar.  
   
- Parametresiz, bir parametre veya birden fazla parametre içermeyen bir yordam tanımlayabilirsiniz. Yordam tanımının parametreleri belirten bölümü *parametre listesi*olarak adlandırılır.  
+ Parametresiz, bir parametre veya birden fazla parametre içermeyen bir yordam tanımlayabilirsiniz. Yordam tanımının parametreleri belirten bölümü *parametre listesi* olarak adlandırılır.  
   
- Bir *bağımsız değişken* , yordamı çağırdığınızda bir yordam parametresine sağladığınız değeri temsil eder. Çağıran kod, yordamı çağırdığında bağımsız değişkenleri sağlar. Yordam çağrısının bağımsız değişkenleri belirten kısmına *bağımsız değişken listesi*denir.  
+ Bir *bağımsız değişken* , yordamı çağırdığınızda bir yordam parametresine sağladığınız değeri temsil eder. Çağıran kod, yordamı çağırdığında bağımsız değişkenleri sağlar. Yordam çağrısının bağımsız değişkenleri belirten kısmına *bağımsız değişken listesi* denir.  
   
  Aşağıdaki çizim, iki farklı yerden yordam çağıran kodu gösterir `safeSquareRoot` . İlk çağrı, değişkenin değerini `x` (4,0) parametresine geçirir `number` ve `root` (2,0) içindeki dönüş değeri değişkenine atanır `y` . İkinci çağrı 9,0 sabit değerini ' a geçirir `number` ve dönüş değerini (3,0) değişkenine atar `z` .  
   

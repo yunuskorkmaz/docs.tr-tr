@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: operatör yordamları (Visual Basic)'
 title: İşleç Yordamları
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,16 +12,16 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: a1dd183570c8aa50efff85bdaebef90bd3b0120f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 836eeb2e705a96c49b5fa53e277ccf025d1915b2
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84364324"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100479965"
 ---
 # <a name="operator-procedures-visual-basic"></a>İşleç Yordamları (Visual Basic)
 
-İşleç yordamı, `*` `<>` `And` tanımladığınız bir sınıf veya yapıda standart işlecin (örneğin,, veya) davranışını tanımlayan Visual Basic deyimlerinin bir dizisidir. Buna *işleç aşırı yüklemesi*de denir.
+İşleç yordamı, `*` `<>` `And` tanımladığınız bir sınıf veya yapıda standart işlecin (örneğin,, veya) davranışını tanımlayan Visual Basic deyimlerinin bir dizisidir. Buna *işleç aşırı yüklemesi* de denir.
 
 ## <a name="when-to-define-operator-procedures"></a>Operatör yordamları ne zaman tanımlanır
 

@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Visual Basic dize düzenleme yöntemlerinin türleri'
 title: Visual Basic'te Dize Düzenleme Yöntemlerinin Türleri
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], manipulating [Visual Basic]
 - string manipulation
 ms.assetid: 905055cd-7f50-48fb-9eed-b0995af1dc1f
-ms.openlocfilehash: c44f02880858b8a9fc1f0e70c3226623d05baa3a
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 02b127d5cd023a8bd73a3042a8bcec340ce63ed8
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072476"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429760"
 ---
 # <a name="types-of-string-manipulation-methods-in-visual-basic"></a>Visual Basic'de Dize Düzenleme Yöntemlerinin Türleri
 

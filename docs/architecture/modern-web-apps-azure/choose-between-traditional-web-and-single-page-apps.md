@@ -7,12 +7,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 12/01/2020
-ms.openlocfilehash: c29e58fb4c748d6025b7c2fbe62a54a85cc71fba
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: 309630b4b20105d0f64903c1920006dcfb945f76
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851659"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429708"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Geleneksel Web Apps ve tek sayfalı uygulamalar (maça 'Lar) arasında seçim yapın
 
@@ -89,18 +89,15 @@ Maça yazmak için JavaScript ve/veya TypeScript ile istemci tarafı programlama
 
 > ### <a name="references--spa-frameworks"></a>Başvurular – SPA çerçeveleri
 >
-> - **Angular**  
->   <https://angular.io>
-> - **Tıkla**
->   <https://reactjs.org/>
-> - **JavaScript çerçeveleri karşılaştırması**  
->   <https://jsreport.io/the-ultimate-guide-to-javascript-frameworks/>
+> - **Angular**: <https://angular.io>
+> - **Tepki** verme: <https://reactjs.org/>
+> - **Vue.js**: <https://vuejs.org/>
 
 **Uygulamanız zaten diğer (iç veya genel) istemciler için bir API 'YI kullanıma sunmalıdır**
 
 Web API 'sini zaten başka istemciler tarafından kullanılmak üzere destekliyorsanız, sunucu tarafı formundaki mantığı yeniden oluşturmak yerine bu API 'lerden yararlanan bir SPA uygulamasının oluşturulması daha az çaba gerektirebilir. Maça, kullanıcılar uygulamayla etkileşime geçerek verileri sorgulamak ve güncelleştirmek için Web API 'lerinin kapsamlı bir şekilde kullanılmasını sağlar.
 
-## <a name="when-to-choose-no-locblazor"></a>Ne zaman seçim Blazor
+## <a name="when-to-choose-blazor"></a>Ne zaman seçim Blazor
 
 Aşağıdaki bölümde, Web uygulamanız için ne zaman seçeceğiniz hakkında daha ayrıntılı bir açıklama verilmiştir Blazor .
 

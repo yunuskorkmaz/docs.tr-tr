@@ -24,8 +24,18 @@
               href: 6.0.md
             - name: ASP.NET Core
               items:
+                - name: 'Blazor: parametre adı, talep Estimagefileasync yönteminde değiştirildi'
+                  href: aspnet-core/6.0/blazor-parameter-name-changed-in-method.md
                 - name: 'Kestrel: günlük iletisi öznitelikleri değiştirildi'
                   href: aspnet-core/6.0/kestrel-log-message-attributes-changed.md
+                - name: 'Ara yazılım: HTTPS yeniden yönlendirme ara yazılımı belirsiz HTTPS bağlantı noktalarında özel durum oluşturur'
+                  href: aspnet-core/6.0/middleware-ambiguous-https-ports-exception.md
+                - name: 'Razor: RazorEngine API ''Leri kullanılmıyor olarak işaretlendi'
+                  href: aspnet-core/6.0/razor-engine-apis-obsolete.md
+            - name: Core .NET kitaplıkları
+              items:
+                - name: Null olabilme ek açıklama değişiklikleri
+                  href: core-libraries/6.0/nullable-ref-type-annotation-changes.md
             - name: Windows Forms
               items:
                 - name: API 'Ler bağımsız değişkenler NullException oluşturur
@@ -306,8 +316,14 @@
           items:
             - name: .NET 6.0
               items:
+                - name: 'Blazor: parametre adı, talep Estimagefileasync yönteminde değiştirildi'
+                  href: aspnet-core/6.0/blazor-parameter-name-changed-in-method.md
                 - name: 'Kestrel: günlük iletisi öznitelikleri değiştirildi'
                   href: aspnet-core/6.0/kestrel-log-message-attributes-changed.md
+                - name: 'Ara yazılım: HTTPS yeniden yönlendirme ara yazılımı belirsiz HTTPS bağlantı noktalarında özel durum oluşturur'
+                  href: aspnet-core/6.0/middleware-ambiguous-https-ports-exception.md
+                - name: 'Razor: RazorEngine API ''Leri kullanılmıyor olarak işaretlendi'
+                  href: aspnet-core/6.0/razor-engine-apis-obsolete.md
             - name: .NET 5.0
               items:
                 - name: ASP.NET Core uygulamaları tırnak içine alınmış sayıları seri durumdan çıkarıyor
@@ -406,6 +422,10 @@
                   href: code-analysis/5.0/ca2247-ctor-arg-should-be-taskcreationoptions.md
         - name: Core .NET kitaplıkları
           items:
+            - name: .NET 6.0
+              items:
+                - name: Null olabilme ek açıklama değişiklikleri
+                  href: core-libraries/6.0/nullable-ref-type-annotation-changes.md
             - name: .NET 5.0
               items:
                 - name: Tek dosya yayımlama için bütünleştirilmiş kodla ilgili API değişiklikleri
