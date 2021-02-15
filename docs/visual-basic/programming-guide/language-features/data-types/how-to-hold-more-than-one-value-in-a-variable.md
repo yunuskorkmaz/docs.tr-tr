@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: bir değişkende birden fazla değer tutma (Visual Basic)'
 title: 'Nasıl yapılır: Değişkende Birden Fazla Değer Tutma'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,16 +12,16 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: 399c5909ee6988f96bcc85260b0401f3bd18a0f2
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5248bc29f58cccf3b8ced95d3fba8f0d39033a83
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393902"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100484008"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Nasıl yapılır: Değişkende Birden Fazla Değer Tutma (Visual Basic)
 
-Bir değişken, *bileşik veri türünde*olduğunu bildirirseniz birden fazla değeri tutar.
+Bir değişken, *bileşik veri türünde* olduğunu bildirirseniz birden fazla değeri tutar.
 
 [Bileşik veri türleri](composite-data-types.md) yapılar, diziler ve sınıflar içerir. Bileşik veri türünün bir değişkeni, Öğesel veri türlerinin ve diğer bileşik türlerin bir birleşimini tutabilir. Yapılar ve sınıflar, kodu ve verileri içerebilir.
 
@@ -50,4 +51,4 @@ Bir değişken, *bileşik veri türünde*olduğunu bildirirseniz birden fazla de
 - [Yapılar](structures.md)
 - [Diziler](../arrays/index.md)
 - [Nesneler ve sınıflar](../objects-and-classes/index.md)
-- [Değer Türleri ve Başvuru Türleri](value-types-and-reference-types.md)
+- [Değer türleri ve başvuru türleri](value-types-and-reference-types.md)

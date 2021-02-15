@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: etkin Işleçler birleşimi (Visual Basic)'
 title: İşleçlerin Etkili Bileşimi
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - parentheses [Visual Basic], complex expressions
 - numeric expressions
 ms.assetid: bd22340e-b5be-458b-8772-3916c02309a4
-ms.openlocfilehash: 9ba6be8e1dd03c0589f712b0e9b39258953cd223
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: a4d2d0c1caeea95dd8d34b2033a398d26bcf63ef
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077091"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100476273"
 ---
 # <a name="efficient-combination-of-operators-visual-basic"></a>İşleçlerin Etkili Bileşimi (Visual Basic)
 

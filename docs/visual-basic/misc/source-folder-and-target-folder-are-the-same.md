@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: kaynak klasör ve hedef klasör aynı'
 title: Kaynak klasör ve hedef klasör aynı
 ms.date: 07/20/2015
 ms.assetid: d4e6f996-8bbe-45f2-b662-f26b4474f44d
-ms.openlocfilehash: 011c24b4c0a53b2fb5507ffc7efa21900c370103
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 53aa98fc9e12874ec286ef310d4fe259187fc209
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078742"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100431099"
 ---
 # <a name="source-folder-and-target-folder-are-the-same"></a>Kaynak klasör ve hedef klasör aynı
 

@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: belirtilen yol yok'
 title: Belirtilen yol yok
 ms.date: 07/20/2015
 ms.assetid: b0855f92-03c2-446b-94c1-856c87359c54
-ms.openlocfilehash: 369730fb65d49cf3ca0a9e279b2e837f0e96247d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 6a81cb90f275122f6b2dc6c7a851410d0eb5ee68
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086536"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100430722"
 ---
 # <a name="the-specified-path-does-not-exist"></a>Belirtilen yol yok
 

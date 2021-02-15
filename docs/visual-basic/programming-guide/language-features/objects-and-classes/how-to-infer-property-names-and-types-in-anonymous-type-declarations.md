@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: anonim tür bildirimlerinde özellik adlarını ve türleri Çıkarçıkar (Visual Basic)'
 title: 'Nasıl yapılır: Anonim Türde Bildirimlerden Özellik Adları ve Türlerini Çıkarma'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - anonymous types [Visual Basic], inferring property names and types
 - inferring property types [Visual Basic]
 ms.assetid: 7c748b22-913f-4d9d-b747-6b7bf296a0bc
-ms.openlocfilehash: 9ebbbe9d2e6d36f5ab2bc7f7c916d18c9240a06d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e4bff8cd8dd879b97618a3bc69e1eaf1c7c269b7
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404894"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100483904"
 ---
 # <a name="how-to-infer-property-names-and-types-in-anonymous-type-declarations-visual-basic"></a>Nasıl yapılır: Anonim Türde Bildirimlerden Özellik Adları ve Türlerini Çıkarma (Visual Basic)
 
@@ -131,4 +132,4 @@ Anonim türler Ayrıca diğer kaynaklardan özellik adlarını ve türlerini de 
 - [Nesne Başlatıcıları: Adlandırılmış ve Anonim Türler](object-initializers-named-and-anonymous-types.md)
 - [Yerel Tür Arabirimi](../variables/local-type-inference.md)
 - [Anonim Türler](anonymous-types.md)
-- [Anahtar](../../../language-reference/modifiers/key.md)
+- [Key](../../../language-reference/modifiers/key.md)

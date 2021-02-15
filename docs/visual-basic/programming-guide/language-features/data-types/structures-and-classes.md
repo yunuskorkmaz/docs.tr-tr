@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: yapılar ve sınıflar (Visual Basic)'
 title: Yapılar ve Sınıflar
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - structures [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
-ms.openlocfilehash: e7ca5b9d55611eafad88517e71f9807fe2aa4416
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 129948bd9a16309ffea5b1e4c690d8883c450b74
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086224"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100430631"
 ---
 # <a name="structures-and-classes-visual-basic"></a>Yapılar ve Sınıflar (Visual Basic)
 
@@ -38,7 +39,7 @@ Visual Basic yapılar ve sınıfların sözdizimini birleştirir ve her iki varl
   
 - Her ikisinde de, parametresiz veya olmayan paylaşılan oluşturucular olabilir.  
   
-- Her ikisi de *varsayılan bir özellik*sunabilir, bu özellik en az bir parametre alır.  
+- Her ikisi de *varsayılan bir özellik* sunabilir, bu özellik en az bir parametre alır.  
   
 - Her ikisi de olayları bildirebilir ve oluşturabilir ve her ikisi de temsilciler bildirebilir.  
   
@@ -94,7 +95,7 @@ Visual Basic yapılar ve sınıfların sözdizimini birleştirir ve her iki varl
 
 - [Veri türleri](index.md)
 - [Bileşik Veri Türleri](composite-data-types.md)
-- [Değer Türleri ve Başvuru Türleri](value-types-and-reference-types.md)
+- [Değer türleri ve başvuru türleri](value-types-and-reference-types.md)
 - [Yapılar](structures.md)
 - [Veri Türü Sorunlarını Giderme](troubleshooting-data-types.md)
 - [Yapılar ve Diğer Programlama Öğeleri](structures-and-other-programming-elements.md)

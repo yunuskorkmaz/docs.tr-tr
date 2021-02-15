@@ -1,15 +1,16 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: iç hata nedeniyle tam işlem sistem adı alınamadı'
 title: İç hata nedeniyle tam işlem sistem adı alınamadı
 ms.date: 07/20/2015
 f1_keywords:
 - vbrDiagnosticInfo_FullOSName
 ms.assetid: f69da02b-eb9a-4284-bb9e-3025517ae6c1
-ms.openlocfilehash: 744d549b9313727af2feb82e45c24b729cae7262
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: d274a08728b084b21309862de69e2fded5c164da
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91079093"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100463500"
 ---
 # <a name="could-not-obtain-full-operation-system-name-due-to-internal-error"></a>İç hata nedeniyle tam işlem sistem adı alınamadı
 

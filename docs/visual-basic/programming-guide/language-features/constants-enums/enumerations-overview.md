@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: numaralandırmalara genel bakış (Visual Basic)'
 title: Sabit Listelerine Genel Bakış
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, enumerations
 - enumerations [Visual Basic], about enumerations
 ms.assetid: b42a38ee-5e77-4f99-a037-e3a127ead89c
-ms.openlocfilehash: 7d0f28ff8b7f773b8b4ecc68320fbfa34c263136
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 56d7b823e6c5367ae1249a1ab30c94ad7ced32ae
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91095661"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100477469"
 ---
 # <a name="enumerations-overview-visual-basic"></a>Numaralandırmalara Genel Bakış (Visual Basic)
 

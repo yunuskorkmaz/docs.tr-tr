@@ -1,15 +1,16 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: hedef dizin kaynak dizin altında olduğundan işlem tamamlanamadı'
 title: Hedef dizin kaynak dizin altında olduğundan işlem tamamlanamadı
 ms.date: 07/20/2015
 f1_keywords:
 - vbrIO_CyclicOperation
 ms.assetid: 850d3a24-5d51-4ac8-a912-630efcd75278
-ms.openlocfilehash: d159b9bb3a765a2fefe99fa15dff42e979fda9e3
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 5fb0bf1d761faf9d3d0c64e8815e28e14841b1fd
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91079145"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100463526"
 ---
 # <a name="could-not-complete-operation-since-target-directory-is-under-source-directory"></a>Hedef dizin kaynak dizin altında olduğundan işlem tamamlanamadı
 

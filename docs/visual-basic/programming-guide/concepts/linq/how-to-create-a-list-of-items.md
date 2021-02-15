@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: öğe listesi oluşturma'
 title: 'Nasıl yapılır: Öğe Listesi Oluşturma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - list [LINQ in Visual Basic]
 - objects [Visual Basic], list of items
 ms.assetid: fe941aba-6340-455c-8b1f-ffd9c3eb1ac5
-ms.openlocfilehash: 6b1adea2aa8b51a8cb5d863fd1eb2d5adb0274c5
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 88eba45ed2f70c940de41fc33ccdd38d97286bf2
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100236"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100483709"
 ---
 # <a name="how-to-create-a-list-of-items"></a>Nasıl yapılır: Öğe Listesi Oluşturma
 

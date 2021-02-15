@@ -1,4 +1,5 @@
 ---
+description: "Daha fazla bilgi edinin: Visual Basic XML 'i düzenleme"
 title: XML düzenleme
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - Visual Basic code, XML
 - XML [Visual Basic], manipulating
 ms.assetid: da32cffb-198d-41b1-9af3-260fe32e3b7d
-ms.openlocfilehash: 52c8822c34a85af81dde505d36e6e159745a0d12
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 34ac12d522b0b4e2d6a78a1117984cfd8de33fdb
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085704"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100483631"
 ---
 # <a name="manipulating-xml-in-visual-basic"></a>Visual Basic'de XML'i Düzenleme
 
-XML *değişmez* değerlerini dize, dosya veya akış gibi bir dış kaynaktan XML yüklemek için kullanabilirsiniz. Ardından, XML 'yi [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgulamak için ve dil Ile tümleşik sorgu (LINQ) kullanabilirsiniz.  
+XML *değişmez* değerlerini dize, dosya veya akış gibi bir dış kaynaktan XML yüklemek için kullanabilirsiniz. Daha sonra, XML 'yi [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgulamak için Language-Integrated sorgu (LINQ) kullanabilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
 

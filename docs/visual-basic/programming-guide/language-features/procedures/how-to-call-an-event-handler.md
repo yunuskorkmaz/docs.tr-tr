@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Visual Basic bir olay işleyicisini çağırma'
 title: Olay işleyicisini çağırma
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 no-loc:
 - WithEvents
 ms.assetid: 72e18ef8-144e-40df-a1f4-066a57271e28
-ms.openlocfilehash: 3762c79dd3d883ae2ccfe76b335cf98ac87d4246
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 7e65b36d392211be533bb4881658b1cdb8057d5d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89464967"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100476260"
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>Visual Basic bir olay işleyicisini çağırma
 
@@ -27,7 +28,7 @@ Olay gerçekleştiğinde, Visual Basic olay işleyicisi yordamını otomatik ola
 
 Birden fazla olay işleyicisini aynı olayla ilişkilendirebilirsiniz. Bazı durumlarda, bir etkinliğin bir olaydan ilişkisini kaldırabilirsiniz. Daha fazla bilgi için bkz. [Olaylar](../events/index.md).
 
-## <a name="call-an-event-handler-using-no-loc-texthandles-and-no-locwithevents"></a>Ve kullanarak bir olay işleyicisi çağırma :::no-loc text="Handles":::WithEvents
+## <a name="call-an-event-handler-using-no-loc-texthandles-and-withevents"></a>Ve kullanarak bir olay işleyicisi çağırma :::no-loc text="Handles":::WithEvents
 
 1. Olayın bir [Event ifadesiyle](../../../language-reference/statements/event-statement.md)bildiriminin bulunduğundan emin olun.
 

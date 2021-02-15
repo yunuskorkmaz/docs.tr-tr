@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: farklı veri türlerinde özdeş Işlevsellik sağlayabilen bir sınıf tanımlama (Visual Basic)'
 title: 'Nasıl yapılır: Farklı Veri Türlerinde Aynı İşlevselliği Sağlayabilen Bir Sınıf Tanımlama'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -26,16 +27,16 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: 268daf333dc5463e5436304cec188a9e6d477166
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 14be6c748ccb311c6a2974e8947b01a1c55a90b6
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077130"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100469753"
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Nasıl yapılır: Farklı Veri Türlerinde Aynı İşlevselliği Sağlayabilen Bir Sınıf Tanımlama (Visual Basic)
 
-Farklı veri türleri üzerinde özdeş işlevsellik sağlayan nesneler oluşturabileceğiniz bir sınıf tanımlayabilirsiniz. Bunu yapmak için tanımda bir veya daha fazla *tür parametresi* belirtirsiniz. Sınıf daha sonra çeşitli veri türlerini kullanan nesneler için bir şablon işlevi görebilir. Bu şekilde tanımlanan bir sınıfa *Genel sınıf*denir.  
+Farklı veri türleri üzerinde özdeş işlevsellik sağlayan nesneler oluşturabileceğiniz bir sınıf tanımlayabilirsiniz. Bunu yapmak için tanımda bir veya daha fazla *tür parametresi* belirtirsiniz. Sınıf daha sonra çeşitli veri türlerini kullanan nesneler için bir şablon işlevi görebilir. Bu şekilde tanımlanan bir sınıfa *Genel sınıf* denir.  
   
  Genel bir sınıf tanımlamanın avantajı bunu yalnızca bir kez tanımlamanız, kodunuzun çok çeşitli veri türlerini kullanan birçok nesne oluşturmak için bunu kullanmasını sağlayabilirsiniz. Bu, sınıfının türüyle tanımlanması gerekenden daha iyi performans elde ediyor `Object` .  
   
@@ -45,11 +46,11 @@ Farklı veri türleri üzerinde özdeş işlevsellik sağlayan nesneler oluştur
   
 1. Sınıfı normal şekilde tanımlayın.  
   
-2. `(Of` *typeparameter* `)` Bir tür parametresi belirtmek için sınıf adından hemen sonra typeparameter ekleyin.  
+2. `(Of`  `)` Bir tür parametresi belirtmek için sınıf adından hemen sonra typeparameter ekleyin.  
   
 3. Birden fazla tür parametreye sahipseniz, parantez içinde virgülle ayrılmış bir liste oluşturun. Anahtar sözcüğünü tekrarlamayın `Of` .  
   
-4. Kodunuz basit atama haricinde bir tür parametresinde işlemler gerçekleştiriyorsa, `As` bir veya daha fazla *kısıtlama*eklemek için bu tür parametresini yan tümcesiyle birlikte izleyin. Bir kısıtlama, bu tür parametresi için sağlanan türün aşağıdakiler gibi bir gereksinime uygun olmasını sağlar:  
+4. Kodunuz basit atama haricinde bir tür parametresinde işlemler gerçekleştiriyorsa, `As` bir veya daha fazla *kısıtlama* eklemek için bu tür parametresini yan tümcesiyle birlikte izleyin. Bir kısıtlama, bu tür parametresi için sağlanan türün aşağıdakiler gibi bir gereksinime uygun olmasını sağlar:  
   
     - Kodunuzun gerçekleştirdiği gibi bir işlemi destekler `>`  
   
