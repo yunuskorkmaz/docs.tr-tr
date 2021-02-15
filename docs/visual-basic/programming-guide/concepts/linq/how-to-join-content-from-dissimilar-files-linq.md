@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: nasıl yapılır: Içeriğe benzer dosyalardan Içerik ekleme (LINQ) (Visual Basic)'
 title: 'Nasıl yapılır: Farklı Dosyalardan İçerik Birleştirme (LINQ)'
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: 7dac73a16d0d3fbf409f58628bc5c69716dcee14
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a0718463a36e1a3e1e312fbe0c0947e39648846d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398376"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468518"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Nasıl yapılır: farklı dosyalardan Içerik ekleme (LINQ) (Visual Basic)
 
@@ -15,7 +16,7 @@ Bu örnek, eşleşen anahtar olarak kullanılan ortak bir değeri paylaşan, vir
 
 ## <a name="to-create-the-data-files"></a>Veri dosyalarını oluşturmak için
 
-1. Aşağıdaki satırları puanlarını. csv adlı bir dosyaya kopyalayın ve proje klasörünüze kaydedin. Dosya, elektronik tablo verilerini temsil eder. 1. sütun, öğrencinin KIMLIĞIDIR ve 2 ile 5 arasındaki sütunlar test puanlarıdır.
+1. Aşağıdaki satırları scores.csv adlı bir dosyaya kopyalayın ve proje klasörünüze kaydedin. Dosya, elektronik tablo verilerini temsil eder. 1. sütun, öğrencinin KIMLIĞIDIR ve 2 ile 5 arasındaki sütunlar test puanlarıdır.
 
     ```csv
     111, 97, 92, 81, 60
@@ -32,7 +33,7 @@ Bu örnek, eşleşen anahtar olarak kullanılan ortak bir değeri paylaşan, vir
     122, 94, 92, 91, 91
     ```
 
-2. Aşağıdaki satırları Names. csv adlı bir dosyaya kopyalayın ve proje klasörünüze kaydedin. Dosya, öğrencinin Soyadı, adı ve öğrenci KIMLIĞINI içeren bir elektronik tabloyu temsil eder.
+2. Aşağıdaki satırları names.csv adlı bir dosyaya kopyalayın ve proje klasörünüze kaydedin. Dosya, öğrencinin Soyadı, adı ve öğrenci KIMLIĞINI içeren bir elektronik tabloyu temsil eder.
 
     ```csv
     Omelchenko,Svetlana,111

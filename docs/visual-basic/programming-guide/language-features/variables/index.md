@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Visual Basic değişkenleri'
 title: Değişkenler
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic]
 - values [Visual Basic], storing
 ms.assetid: 4cfaa06d-4ae3-4307-897b-cf599dc24caa
-ms.openlocfilehash: bd6417033a6c2626d17ad003de6c637dd1e8adaa
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: d00907e451fa09c6e9b6be990a24a4d39b386622
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91080225"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100481720"
 ---
 # <a name="variables-in-visual-basic"></a>Visual Basic'de Değişkenler
 

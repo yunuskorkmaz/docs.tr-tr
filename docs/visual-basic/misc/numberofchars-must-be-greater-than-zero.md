@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi: NumberOfChars sıfırdan büyük olmalıdır'
 title: NumberOfChars sıfırdan büyük olmalıdır
 ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_NumberOfCharsMustBePositive
 ms.assetid: 3eea4bbf-cd49-4d19-adfb-0e2adf087065
-ms.openlocfilehash: 4a3e6fbe359a7a950375aab095eaea0a08b98daa
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 5db0cc50e40baafc1b11968794533af4442177a9
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078833"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100479003"
 ---
 # <a name="numberofchars-must-be-greater-than-zero"></a>NumberOfChars sıfırdan büyük olmalıdır
 

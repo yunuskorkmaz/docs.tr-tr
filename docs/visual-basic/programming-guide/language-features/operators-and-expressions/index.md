@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Visual Basic Işleçler ve Ifadeler'
 title: İşleçler ve İfadeler
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - operands
 - expressions [Visual Basic]
 ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
-ms.openlocfilehash: 01e3a53e998774caee8863675b9151a140606852
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 526051e16da29cd139abf587e1393ad331fdcdaa
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071683"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100471402"
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Visual Basic'de İşleçler ve İfadeler
 
@@ -35,7 +36,7 @@ ms.locfileid: "91071683"
   
 - [Visual Basic birleştiren mantıksal ve bit düzeyinde işleçler](logical-and-bitwise-operators.md) `Boolean` ve değerler ile aynı veri türünde bir sonuç döndürür.  
   
- Bir işleçle birleştirilmiş değer öğelerine, bu işlecin *işlenenleri* adı verilir. İşleç, bir *deyimi*oluşturan atama işleci dışında, değer öğeleri form ifadeleriyle birleştirilir. Daha fazla bilgi için bkz. [deyimler](../statements.md).  
+ Bir işleçle birleştirilmiş değer öğelerine, bu işlecin *işlenenleri* adı verilir. İşleç, bir *deyimi* oluşturan atama işleci dışında, değer öğeleri form ifadeleriyle birleştirilir. Daha fazla bilgi için bkz. [deyimler](../statements.md).  
   
 ## <a name="evaluation-of-expressions"></a>Ifadelerin değerlendirmesi  
 

@@ -1,17 +1,18 @@
 ---
-title: Bellek yetersiz (Visual Basic çalışma zamanı hatası)
+description: 'Hakkında daha fazla bilgi edinin: bellek yetersiz (Visual Basic Run-Time hata)'
+title: Bellek yetersiz (Visual Basic Run-Time hata)
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID7
 ms.assetid: 96cc12e1-d40a-425f-b365-1ac39e5ddcb0
-ms.openlocfilehash: 58e673ffe0983c91fcca3fff8f867042f51eafc0
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 152fabd55b8a5724a12f24bc2a078d622a2689bf
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91084196"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100478860"
 ---
-# <a name="out-of-memory-visual-basic-run-time-error"></a>Bellek yetersiz (Visual Basic çalışma zamanı hatası)
+# <a name="out-of-memory-visual-basic-run-time-error"></a>Bellek yetersiz (Visual Basic Run-Time hata)
 
 Kullanılabilir olandan daha fazla bellek gerekiyordu.  
   

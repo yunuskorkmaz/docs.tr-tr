@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: program yapısı ve kod kuralları (Visual Basic)'
 title: Program Yapısı ve Kod Kuralları
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - Visual Basic code
 - programming [Visual Basic], Visual Basic coding conventions
 ms.assetid: dd9be76f-6944-4e78-ad72-0b6084a3fc13
-ms.openlocfilehash: ee61c676f3ff554267f6659453ec55e45df69aee
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 7d4202ead0550cf54a80eac89c4a4274a22d0315
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072125"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468492"
 ---
 # <a name="program-structure-and-code-conventions-visual-basic"></a>Program Yapısı ve Kod Kuralları (Visual Basic)
 

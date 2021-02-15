@@ -1,16 +1,17 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: nasıl yapılır: değerde değişmez bir değişken oluşturma (Visual Basic)'
 title: 'Nasıl yapılır: Değeri Değişmeyen Bir Değişken Oluşturma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], read-only
 - variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
-ms.openlocfilehash: 04e08784b5cfbdeb6db73b9b00fe9afa201bd06d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0392a27249de3bf604a73c8f8aaa16caf6f1c3e2
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410522"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100481941"
 ---
 # <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>Nasıl yapılır: Değeri Değişmeyen Bir Değişken Oluşturma (Visual Basic)
 
@@ -34,7 +35,7 @@ Değerini değiştirolmayan bir değişken kavramı, çelişkili gibi görünebi
 
     `ReadOnly`Yalnızca bir üye değişkeninde belirtebilirsiniz. Bu, herhangi bir yordamın dışında değişkeni modül düzeyinde tanımlamanız gereken anlamına gelir.
 
-2. Derleme zamanında değeri tek bir ifadede hesapladıysanız, deyimindeki bir başlatma yan tümcesini kullanın `Dim` . Eşittir işareti [As](../../../language-reference/statements/as-clause.md) ( `=` ) ve ardından bir ifade gelen as yan tümcesini izleyin. Derleyicinin bu ifadeyi sabit bir değere değerlendirebilmesi için emin olun.
+2. Derleme zamanında değeri tek bir ifadede hesapladıysanız, deyimindeki bir başlatma yan tümcesini kullanın `Dim` . Eşittir işareti [](../../../language-reference/statements/as-clause.md) ( `=` ) ve ardından bir ifade gelen as yan tümcesini izleyin. Derleyicinin bu ifadeyi sabit bir değere değerlendirebilmesi için emin olun.
 
     ```vb
     Dim ReadOnly timeStarted As Date = Now

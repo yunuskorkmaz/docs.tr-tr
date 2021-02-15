@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Yerel tür çıkarımı (Visual Basic)'
 title: Yerel Tür Arabirimi
 ms.date: 07/20/2015
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - inference [Visual Basic]
 - type inference [Visual Basic]
 ms.assetid: b8307f18-2e56-4ab3-a45a-826873f400f6
-ms.openlocfilehash: 3979396d32aa5d3b853aa087d43f70d5987e510b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 50be8544229360287d2aef27f31360d7140640ac
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410405"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100481707"
 ---
 # <a name="local-type-inference-visual-basic"></a>Yerel Türü Arabirimi (Visual Basic Başvurusu)
 
@@ -63,7 +64,7 @@ Aşağıdaki örnekte gösterildiği gibi, bir değişkenin türü, işlevlerin 
 
 ## <a name="option-infer"></a>Seçenek çıkarımı
 
-`Option Infer`belirli bir dosyada yerel tür çıkarımı izin verilip verilmeyeceğini belirtmenizi belirler. Seçeneği etkinleştirmek veya engellemek için, dosyanın başlangıcında aşağıdaki deyimlerden birini yazın.
+`Option Infer` belirli bir dosyada yerel tür çıkarımı izin verilip verilmeyeceğini belirtmenizi belirler. Seçeneği etkinleştirmek veya engellemek için, dosyanın başlangıcında aşağıdaki deyimlerden birini yazın.
 
 `Option Infer On`
 

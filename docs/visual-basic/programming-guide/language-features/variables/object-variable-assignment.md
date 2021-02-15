@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: nesne değişkeni ataması (Visual Basic)'
 title: Nesne Değişkeni Ataması
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - assignment statements [Visual Basic], object variable assignment
 - Me keyword [Visual Basic], as object variable
 ms.assetid: 3706811d-fd40-44fe-8727-d692e8e55d6d
-ms.openlocfilehash: 9ae1a307e8c886166d516140b7f100a411cedcfa
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ac5e534a03d651a23e651e1049477b2bd0769b82
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410380"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100481655"
 ---
 # <a name="object-variable-assignment-visual-basic"></a>Nesne Değişkeni Ataması (Visual Basic)
 
@@ -32,7 +33,7 @@ thisObject = Form1
 thisObject = Nothing
 ```
 
-`Nothing`Şu anda değişkene atanmış bir nesne olmadığı anlamına gelir.
+`Nothing` Şu anda değişkene atanmış bir nesne olmadığı anlamına gelir.
 
 ## <a name="initialization"></a>Başlatma
 
@@ -57,7 +58,7 @@ End If
 
 Değişkeninizin başvurduğu nesne başka bir uygulamada ise, bu test uygulamanın sonlandırılıp sonlandırılmadığını veya yalnızca geçersiz kılınmadığını belirleyemez.
 
-Değerine sahip bir nesne değişkeni `Nothing` de *null başvuru*olarak adlandırılır.
+Değerine sahip bir nesne değişkeni `Nothing` de *null başvuru* olarak adlandırılır.
 
 ## <a name="current-instance"></a>Geçerli örnek
 

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Visual Basic sabitler ve numaralandırmalar'
 title: Sabitler ve Numaralandırmalar
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], constants
 - Visual Basic code, improving readability with constants
 ms.assetid: c8aba36e-fa47-4a33-8b68-cb2009218270
-ms.openlocfilehash: aad4f8b24a43ecc51c372916b438daee72adc405
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 78436f1e00c95c33d547fb9819b21bbe8ebafc2c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91058696"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468453"
 ---
 # <a name="constants-and-enumerations-in-visual-basic"></a>Visual Basic'de Sabitler ve Numaralandırmalar
 
@@ -26,14 +27,14 @@ Sabitler, değişmez bir değer yerine anlamlı adlar kullanmanın bir yoludur. 
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
-|Terim|Tanım|  
+|Süre|Tanım|  
 |---|---|  
 |[Sabitlere Genel Bakış](constants-overview.md)|Bu bölümdeki konularda sabitler ve kullanımları açıklanır.|  
 |[Sabit Listelerine Genel Bakış](enumerations-overview.md)|Bu bölümdeki konularda, numaralandırmalar ve kullanımları açıklanır.|  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
   
-|Terim|Tanım|  
+|Süre|Tanım|  
 |---|---|  
 |[Const Deyimi](../../../language-reference/statements/const-statement.md)|`Const`Sabitleri bildirmek için kullanılan ifadesini açıklar.|  
 |[Enum Deyimi](../../../language-reference/statements/enum-statement.md)|`Enum`Numaralandırmalar oluşturmak için kullanılan ifadesini açıklar.|  

@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Temsilcilerde varyans kullanma (Visual Basic)'
 title: Temsilcilerde Varyans Kullanma
 ms.date: 07/20/2015
 ms.assetid: 7b5c20f1-6416-46a3-94b6-f109c31c842c
-ms.openlocfilehash: 842392a1342f7d3689d4d1f2a2adb7470eeda05e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d146460c515c1579a9a98d31aa48441f9584b83b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84375790"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100482006"
 ---
 # <a name="using-variance-in-delegates-visual-basic"></a>Temsilcilerde varyans kullanma (Visual Basic)
 
