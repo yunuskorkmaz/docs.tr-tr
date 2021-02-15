@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: CSV metin dosyasında (LINQ) sütun değerlerini hesaplama (Visual Basic)'
 title: 'Nasıl yapılır: Bir CSV Metinde Dosyasında Sütun Değerlerini Hesaplama (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-ms.openlocfilehash: 679d53787b1392181696c05e0327ca1b1b910015
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f2bed49cf69d812659aae0cee398a735b3b42dbe
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84357510"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100484190"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>Nasıl yapılır: CSV metin dosyasında (LINQ) sütun değerlerini hesaplama (Visual Basic)
 
@@ -15,7 +16,7 @@ Bu örnek, bir. csv dosyasının sütunlarında Sum, Average, min ve Max gibi to
 
 ### <a name="to-create-the-source-file"></a>Kaynak dosyayı oluşturmak için
 
-1. Aşağıdaki satırları puanlarını. csv adlı bir dosyaya kopyalayın ve proje klasörünüze kaydedin. İlk sütunun bir öğrenci KIMLIĞINI temsil ettiğini ve sonraki sütunlarda dört sınavın puanlarını temsil ettiğini varsayın.
+1. Aşağıdaki satırları scores.csv adlı bir dosyaya kopyalayın ve proje klasörünüze kaydedin. İlk sütunun bir öğrenci KIMLIĞINI temsil ettiğini ve sonraki sütunlarda dört sınavın puanlarını temsil ettiğini varsayın.
 
     ```csv
     111, 97, 92, 81, 60

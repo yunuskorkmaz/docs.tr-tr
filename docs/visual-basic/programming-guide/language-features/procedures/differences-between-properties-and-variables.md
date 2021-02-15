@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Visual Basic Özellikler ve değişkenler arasındaki farklar'
 title: Özellikler ile Değişkenler Arasındaki Farklar
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - variables [Visual Basic], and properties
 - properties [Visual Basic], and variables
 ms.assetid: 7a03a8be-5381-431f-bd7c-16e887e4e07b
-ms.openlocfilehash: 95bafcaca98e1a0fbdd62a550291c8ece932c1ba
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 6118d37616f3df1f21dda8e3a6392b6a6f37a24e
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075037"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100464722"
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a>Visual Basic'de Özellikler ve Değişkenler Arasındaki Farklar
 
@@ -27,11 +28,11 @@ Değişkenler ve özellikler, erişebileceğiniz değerleri temsil eder. Ancak, 
   
 ## <a name="variables"></a>Değişkenler  
 
- *Değişken* doğrudan bir bellek konumuna karşılık gelir. Tek bir bildirim bildirimiyle bir değişken tanımlarsınız. Bir değişken, bir yordamda tanımlanmış ve yalnızca bu yordamda kullanılabilen bir *yerel değişken*olabilir ya da bir modül, sınıf veya yapıda tanımlanmış, ancak herhangi bir yordamda tanımlanmış bir *üye değişkeni*olabilir. Bir üye değişkeni de *alan*olarak adlandırılır.  
+ *Değişken* doğrudan bir bellek konumuna karşılık gelir. Tek bir bildirim bildirimiyle bir değişken tanımlarsınız. Bir değişken, bir yordamda tanımlanmış ve yalnızca bu yordamda kullanılabilen bir *yerel değişken* olabilir ya da bir modül, sınıf veya yapıda tanımlanmış, ancak herhangi bir yordamda tanımlanmış bir *üye değişkeni* olabilir. Bir üye değişkeni de *alan* olarak adlandırılır.  
   
 ## <a name="properties"></a>Özellikler  
 
- Bir *özellik* , modül, sınıf veya yapıda tanımlanmış bir veri öğesidir. Ve deyimleri arasında kod bloğu içeren bir özellik tanımlarsınız `Property` `End Property` . Kod bloğu bir `Get` yordam, `Set` yordam veya her ikisini de içerir. Bu yordamlar, *özellik yordamları* veya *özellik erişimcileri*olarak adlandırılır. Özelliğin değerini almaya veya depolamaya ek olarak, bir erişim sayacını güncelleştirme gibi özel eylemler de gerçekleştirebilirler.  
+ Bir *özellik* , modül, sınıf veya yapıda tanımlanmış bir veri öğesidir. Ve deyimleri arasında kod bloğu içeren bir özellik tanımlarsınız `Property` `End Property` . Kod bloğu bir `Get` yordam, `Set` yordam veya her ikisini de içerir. Bu yordamlar, *özellik yordamları* veya *özellik erişimcileri* olarak adlandırılır. Özelliğin değerini almaya veya depolamaya ek olarak, bir erişim sayacını güncelleştirme gibi özel eylemler de gerçekleştirebilirler.  
   
 ## <a name="differences"></a>Farklılıklar  
 
@@ -42,7 +43,7 @@ Değişkenler ve özellikler, erişebileceğiniz değerleri temsil eder. Ancak, 
 |Bildirim|Single bildirim ekstresi|Kod bloğundaki deyim dizisi|  
 |Uygulama|Tek depolama konumu|Yürütülebilir kod (özellik yordamları)|  
 |Depolama|Değişken değeriyle doğrudan ilişkili|Genellikle, özelliğin kapsayan sınıf veya modül dışında kullanılamayan iç depolama alanı vardır<br /><br /> Özelliğin değeri, depolanan bir öğe olarak olabilir veya mevcut olmayabilir <sup>1</sup>|  
-|Yürütülebilir kod|Hiçbiri|En az bir yordam olmalıdır|  
+|Yürütülebilir kod|Yok|En az bir yordam olmalıdır|  
 |Okuma ve yazma erişimi|Okuma/yazma veya salt okuma|Okuma/yazma, salt okunurdur veya salt yazılır|  
 |Özel eylemler (değerin kabul edilmesi veya döndürülmesinin yanı sıra)|Mümkün değil|Özellik değerinin ayarlanması veya alınması kapsamında gerçekleştirilebilir|  
   

@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Visual Basic veri türleri'
 title: Veri Türleri
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Visual Basic code, data types
 - data types [Visual Basic], improving speed with
 ms.assetid: 5e1b9aaf-c7ca-4b29-9b22-0e82ed8e85e2
-ms.openlocfilehash: 8cb9642c1d7e6876030efe17f5c09e4888700a24
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: f431b501b40d2fafd4422b1f3fa1ea3a2ebf56fb
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91095596"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100483943"
 ---
 # <a name="data-types-in-visual-basic"></a>Visual Basic'de Veri Türleri
 
@@ -42,7 +43,7 @@ Bir programlama öğesinin *veri türü* , ne tür verileri tutabileceğini ve b
 - [Başlangıç Veri Türleri](elementary-data-types.md)
 - [Bileşik Veri Türleri](composite-data-types.md)
 - [Visual Basic genel türler](generic-types.md)
-- [Değer Türleri ve Başvuru Türleri](value-types-and-reference-types.md)
+- [Değer türleri ve başvuru türleri](value-types-and-reference-types.md)
 - [Visual Basic'de Tür Dönüştürmeleri](type-conversions.md)
 - [Yapılar](structures.md)
 - [Demetler](tuples.md)

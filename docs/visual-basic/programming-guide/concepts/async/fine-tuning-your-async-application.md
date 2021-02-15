@@ -1,15 +1,16 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: zaman uyumsuz uygulamanızı Fine-Tuning (Visual Basic)'
 title: Zaman Uyumsuz Uygulamanızda Hassas Ayar Yapma
 ms.date: 07/20/2015
 ms.assetid: 4c3e7997-a95f-4fbe-a6ac-60ba042d30b9
-ms.openlocfilehash: 6ad4f9a526e0497029ff8ddc3e93637a4f9acb00
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 1e31ffdee4d2af9379e8073010ed2b1925023e43
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075440"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100464423"
 ---
-# <a name="fine-tuning-your-async-application-visual-basic"></a>Zaman uyumsuz uygulamanızda ince ayar yapma (Visual Basic)
+# <a name="fine-tuning-your-async-application-visual-basic"></a>Zaman uyumsuz uygulamanızı Fine-Tuning (Visual Basic)
 
 Türün kullanılabilir hale getiren yöntemleri ve özellikleri kullanarak, zaman uyumsuz uygulamalarınıza duyarlık ve esneklik ekleyebilirsiniz <xref:System.Threading.Tasks.Task> . Bu bölümdeki konularda, <xref:System.Threading.CancellationToken> ve gibi önemli Yöntemler ve kullanılan örnekler gösterilmektedir `Task` <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> .  
   

@@ -1,4 +1,5 @@
 ---
+description: Daha fazla bilgi için:-CodePage (Visual Basic)
 title: -codepage
 ms.date: 03/09/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - codepage compiler option [Visual Basic]
 - -codepage compiler option [Visual Basic]
 ms.assetid: be36ec33-6800-4505-838c-4124564f5cc9
-ms.openlocfilehash: 769f3586ddef7f430fa96d6101b250a5bbc4e26c
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 8bc68263bda298787a48dc06729ea17c5adfcfa5
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91065742"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468284"
 ---
 # <a name="-codepage-visual-basic"></a>-CodePage (Visual Basic)
 
@@ -40,4 +41,4 @@ Derlemedeki tüm kaynak kodu dosyaları için kullanılacak kod sayfasını beli
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](index.md)
+- [Visual Basic Command-Line derleyicisi](index.md)

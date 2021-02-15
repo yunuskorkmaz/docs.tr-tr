@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Visual Basic programın yapısı'
 title: Bir Visual Basic Programının Yapısı
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-ms.openlocfilehash: 90bc1fd62a05f670424e1fac368376401d1030c0
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e5941b1cbdfdc460e3e860a5449e8ccae0673612
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91097780"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468206"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Bir Visual Basic Programının Yapısı
 
@@ -20,7 +21,7 @@ Bir Visual Basic program standart yapı taşlarından oluşturulmuştur. Bir *ç
   
  Visual Basic bir programın bu yapı taşları hakkında daha fazla bilgi için bkz. [.net 'Teki](../../../standard/assembly/index.md) [çözümler ve projeler](/visualstudio/ide/solutions-and-projects-in-visual-studio) ve derlemeler.  
   
-## <a name="file-level-programming-elements"></a>Dosya düzeyi programlama öğeleri  
+## <a name="file-level-programming-elements"></a>File-Level programlama öğeleri  
 
  Bir proje veya dosya başlattığınızda ve kod düzenleyicisini açtığınızda, bazı kodları zaten yerinde ve doğru sırada görürsünüz. Yazdığınız herhangi bir kod aşağıdaki sırayı izlemelidir:  
   
@@ -50,7 +51,7 @@ Bir Visual Basic program standart yapı taşlarından oluşturulmuştur. Bir *ç
 
  Koşullu derleme deyimleri, kaynak dosyanızda neredeyse her yerde görünebilir. Bunlar, belirli koşullara bağlı olarak, kodunuzun bölümlerinin derleme zamanına dahil edilmesini veya dışlanmasına neden olur. Koşullu kod yalnızca hata ayıklama modunda çalıştığı için, bunları uygulamanızda hata ayıklamak için de kullanabilirsiniz. Daha fazla bilgi için bkz. [koşullu derleme](conditional-compilation.md).  
   
-## <a name="namespace-level-programming-elements"></a>Ad alanı düzeyinde programlama öğeleri  
+## <a name="namespace-level-programming-elements"></a>Namespace-Level programlama öğeleri  
 
  Sınıflar, yapılar ve modüller, kaynak dosyanızdaki tüm kodu içerir. Ad alanı *düzeyindeki* öğelerdir ve bu, bir ad alanı içinde veya kaynak dosya düzeyinde görünebilir. Diğer tüm programlama öğelerinin bildirimlerini tutar. Öğe imzalarını tanımlayan ancak uygulama sağlamayan arabirimler, modül düzeyinde de görünür. Modül düzeyi öğeler hakkında daha fazla bilgi için aşağıdakilere bakın:  
   
@@ -64,7 +65,7 @@ Bir Visual Basic program standart yapı taşlarından oluşturulmuştur. Bir *ç
   
  Ad alanı düzeyindeki veri öğeleri numaralandırmalar ve temsilcileriniz.  
   
-## <a name="module-level-programming-elements"></a>Modül düzeyinde programlama öğeleri  
+## <a name="module-level-programming-elements"></a>Module-Level programlama öğeleri  
 
  İşlemler, işleçler, Özellikler ve olaylar çalıştırılabilir kodu tutabilecek tek programlama öğeleridir (çalışma zamanında eylem gerçekleştiren deyimler). Programınızın *Modül düzeyi* öğeleridir. Yordam düzeyi öğeler hakkında daha fazla bilgi için aşağıdakilere bakın:  
   
@@ -82,7 +83,7 @@ Bir Visual Basic program standart yapı taşlarından oluşturulmuştur. Bir *ç
   
  Modül düzeyindeki veri öğeleri, değişkenler, sabitler, numaralandırmalar ve temsilcilerle.  
   
-## <a name="procedure-level-programming-elements"></a>Yordam düzeyi programlama öğeleri  
+## <a name="procedure-level-programming-elements"></a>Procedure-Level programlama öğeleri  
 
  *Yordam düzeyindeki* öğelerin çoğu, programınızın çalışma zamanı kodunu oluşturan çalıştırılabilir deyimlerdir. Tüm yürütülebilir kodlar bazı yordamda ( `Function` , `Sub` ,,,, `Operator` `Get` `Set` `AddHandler` , `RemoveHandler` , `RaiseEvent` ,,,,) olmalıdır. Daha fazla bilgi için bkz. [deyimler](../language-features/statements.md).  
   

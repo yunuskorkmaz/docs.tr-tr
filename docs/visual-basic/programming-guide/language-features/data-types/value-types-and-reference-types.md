@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: değer türleri ve başvuru türleri'
 title: Değer Türleri ve Başvuru Türleri
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-ms.openlocfilehash: 72cb1455300e1ff00d9d558aa5a9df95f32aa7b0
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 22cce68260955545e810f6fefe645b5ad6a37ca5
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090124"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100462145"
 ---
 # <a name="value-types-and-reference-types"></a>Değer Türleri ve Başvuru Türleri
 

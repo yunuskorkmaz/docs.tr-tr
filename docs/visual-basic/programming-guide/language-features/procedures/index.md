@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Visual Basic yordamları'
 title: Yordamlar
 ms.date: 04/28/2017
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - structured code [Visual Basic], procedures
 - procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
-ms.openlocfilehash: 926d2dcc7f29102457d5ed9632e7455f8f0c7b96
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: faff01163511d71f6dc5c6fd540b292e1dea72fb
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071332"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100475155"
 ---
 # <a name="procedures-in-visual-basic"></a>Visual Basic'de Yordamlar
 
@@ -21,7 +22,7 @@ ms.locfileid: "91071332"
   
 ## <a name="calling-a-procedure"></a>Yordam çağırma  
 
- Koddaki başka bir yerden yordam çağırılır. Bu, *yordam çağrısı*olarak bilinir. Yordam çalışmayı bitirdiğinde, *çağıran*kod olarak bilinen, çağrılan koda denetim döndürür. Çağıran kod, bir deyim veya deyim içindeki bir ifadedir ve bu yordam ada göre yordamı belirtir ve denetimi buna aktarır.  
+ Koddaki başka bir yerden yordam çağırılır. Bu, *yordam çağrısı* olarak bilinir. Yordam çalışmayı bitirdiğinde, *çağıran* kod olarak bilinen, çağrılan koda denetim döndürür. Çağıran kod, bir deyim veya deyim içindeki bir ifadedir ve bu yordam ada göre yordamı belirtir ve denetimi buna aktarır.  
   
 ## <a name="returning-from-a-procedure"></a>Bir yordamdan dönme  
 
@@ -35,7 +36,7 @@ ms.locfileid: "91071332"
   
 ## <a name="parameters-and-arguments"></a>Parametreler ve Bağımsız Değişkenler  
 
- Çoğu durumda, bir yordamın her çağırdığınızda farklı veriler üzerinde çalışması gerekir. Yordam çağrısının bir parçası olarak bu bilgileri yordama geçirebilirsiniz. Yordam sıfır veya daha fazla *parametreyi*tanımlar, her biri, kendisine geçirilmesini bekleyen bir değeri temsil eder. Yordam tanımındaki her parametreye karşılık gelen yordam çağrısındaki bir *bağımsız değişkendir* . Bağımsız değişken, belirli bir yordam çağrısında karşılık gelen parametreye geçirdiğiniz değeri temsil eder.  
+ Çoğu durumda, bir yordamın her çağırdığınızda farklı veriler üzerinde çalışması gerekir. Yordam çağrısının bir parçası olarak bu bilgileri yordama geçirebilirsiniz. Yordam sıfır veya daha fazla *parametreyi* tanımlar, her biri, kendisine geçirilmesini bekleyen bir değeri temsil eder. Yordam tanımındaki her parametreye karşılık gelen yordam çağrısındaki bir *bağımsız değişkendir* . Bağımsız değişken, belirli bir yordam çağrısında karşılık gelen parametreye geçirdiğiniz değeri temsil eder.  
   
 ## <a name="types-of-procedures"></a>Yordam türleri  
 
@@ -47,7 +48,7 @@ ms.locfileid: "91071332"
   
 - [Işlev yordamları](./function-procedures.md) , çağırma koduna bir değer döndürür. Bu işlemler, döndürmeden önce başka eylemler gerçekleştirebilir.
 
-    C# dilinde yazılan bazı işlevler bir *Başvuru dönüş değeri*döndürür. İşlev çağıranları dönüş değerini değiştirebilir ve bu değişiklik çağrılan nesnenin durumunda yansıtılır. Visual Basic 2017 ' den başlayarak, Visual Basic kodu başvuru dönüş değerlerini tüketebilir, ancak başvuruya göre bir değer döndüremez. Daha fazla bilgi için bkz. [Başvuru dönüş değerleri](ref-return-values.md).
+    C# dilinde yazılan bazı işlevler bir *Başvuru dönüş değeri* döndürür. İşlev çağıranları dönüş değerini değiştirebilir ve bu değişiklik çağrılan nesnenin durumunda yansıtılır. Visual Basic 2017 ' den başlayarak, Visual Basic kodu başvuru dönüş değerlerini tüketebilir, ancak başvuruya göre bir değer döndüremez. Daha fazla bilgi için bkz. [Başvuru dönüş değerleri](ref-return-values.md).
   
 - [Özellik yordamları](./property-procedures.md) , nesne veya modüllerde özelliklerin değerlerini döndürür ve atar.  
   

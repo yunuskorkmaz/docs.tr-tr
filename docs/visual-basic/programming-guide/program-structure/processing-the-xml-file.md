@@ -1,15 +1,16 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: XML dosyası Işleme (Visual Basic)'
 title: XML Dosyasını İşleme
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML comments [Visual Basic], parsing [Visual Basic]
 ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
-ms.openlocfilehash: 9e12f6f5d86957a7f9aaea6047a79957fac8ce1e
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 2314e7dafbd747f9a19b73d06d71c73631e53861
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072138"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468401"
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>XML Dosyasını İşleme (Visual Basic)
 
@@ -23,7 +24,7 @@ Derleyici, kodunuzda belge oluşturmak için etiketlenmiş her yapı için bir K
   
 - KIMLIK dizesinin ilk bölümü, tanımlanmakta olan üyenin türünü tanımlar, tek bir karakter ve iki nokta üst üste gelir. Aşağıdaki üye türleri kullanılır.  
   
-|Karakter|Description|  
+|Karakter|Açıklama|  
 |---|---|  
 |N|ad alanı<br /><br /> Bir ad alanına belge açıklamaları ekleyemezsiniz, ancak bu kişilere, desteklenmiş olduğu durumlarda bu başvuruları yapabilirsiniz.|  
 |T|Tür: `Class` , `Module` ,,, `Interface` `Structure` `Enum` , `Delegate`|  

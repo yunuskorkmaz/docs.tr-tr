@@ -1,4 +1,5 @@
 ---
+description: Daha fazla bilgi edinin:-bugreport
 title: -bugreport
 ms.date: 03/08/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - bugreport compiler option [Visual Basic]
 - /bugreport compiler option [Visual Basic]
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
-ms.openlocfilehash: 4b468b8ee4301693312e9545396f2b9f495f75d8
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 45831073121991774e462bce26040c575e0a0dc2
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550917"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468219"
 ---
 # <a name="-bugreport"></a>-bugreport
 
@@ -57,7 +58,7 @@ Bu seçenek, veya ile kullanılırsa `-errorreport:prompt` `-errorreport:queue` 
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, *T2. vb* ' i derler ve tüm hata raporlama bilgilerini dosya *Problem.txt*koyar.
+Aşağıdaki örnek, *T2. vb* ' i derler ve tüm hata raporlama bilgilerini dosya *Problem.txt* koyar.
 
 ```console
 vbc -bugreport:problem.txt t2.vb
@@ -65,7 +66,7 @@ vbc -bugreport:problem.txt t2.vb
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](index.md)
+- [Visual Basic Command-Line derleyicisi](index.md)
 - [-Debug (Visual Basic)](debug.md)
 - [-errorreport](errorreport.md)
 - [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)

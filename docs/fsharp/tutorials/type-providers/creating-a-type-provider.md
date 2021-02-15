@@ -2,20 +2,20 @@
 title: 'Öğretici: tür sağlayıcısı oluşturma'
 description: "Temel kavramları göstermek üzere çeşitli basit tür sağlayıcılarını inceleyerek F # 3,0 ' de kendi F # tür sağlayıcılarını oluşturmayı öğrenin."
 ms.date: 11/04/2019
-ms.openlocfilehash: 65cb9616f66b5850135dbfcdd9b9a9dad30421de
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 803b6ea141ed4404daf5daccd1a53212d8b42234
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739704"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468310"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Öğretici: tür sağlayıcısı oluşturma
 
 F # içindeki tür sağlayıcısı mekanizması, bilgi zengin programlama desteğinin önemli bir parçasıdır. Bu öğreticide, temel kavramları göstermek için çeşitli basit tür sağlayıcılarının geliştirilmesi sırasında kendi tür sağlayıcılarınızın nasıl oluşturulduğu açıklanmaktadır. F # içindeki tür sağlayıcısı mekanizması hakkında daha fazla bilgi için bkz. [tür sağlayıcıları](index.md).
 
-F # ekosistemi, yaygın olarak kullanılan Internet ve kurumsal veri Hizmetleri için bir dizi tür sağlayıcı içerir. Örnek:
+F # ekosistemi, yaygın olarak kullanılan Internet ve kurumsal veri Hizmetleri için bir dizi tür sağlayıcı içerir. Örneğin:
 
-- [FSharp. Data](https://fsharp.github.io/FSharp.Data/) , JSON, XML, CSV ve HTML belge biçimleri için tür sağlayıcıları içerir.
+- FSharp. Data, JSON, XML, CSV ve HTML belge biçimleri için tür sağlayıcıları içerir.
 
 - [SqlProvider](https://fsprojects.github.io/SQLProvider/) , bu veri kaynaklarında bir nesne eşlemesi ve F # LINQ SORGULARı aracılığıyla SQL veritabanlarına kesin olarak belirlenmiş erişim sağlar.
 
@@ -743,7 +743,7 @@ Basit bir örnek olarak, virgülle ayrılmış değer (CSV) biçiminde bilimsel 
 |Uzaklık (ölçüm)|Süre (saniye)|
 |----------------|-------------|
 |50.0|3.7|
-|100,0|5,2|
+|100,0|5.2|
 |150,0|6.4|
 
 Bu bölümde, `Distance` türünde bir özelliği `float<meter>` ve türünde bir özelliği olan satırları almak için kullanabileceğiniz bir türün nasıl sağlayacağınız gösterilmektedir `Time` `float<second>` . Basitlik için aşağıdaki varsayımlar yapılır:

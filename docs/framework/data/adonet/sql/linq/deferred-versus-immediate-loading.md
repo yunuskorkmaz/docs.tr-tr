@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: Ertelenen ve anında yükleme'
 title: Ertelenmiş ve Hemen Yükleme Karşılaştırması
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1d7247f-a3b7-460b-b342-5c1a2365aa1a
-ms.openlocfilehash: 4e2cb7c90eb703985cbb1b8673522a9e253564d0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8c2237bd726ca79c7c168040e2a701f51ec3d238
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164304"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100464761"
 ---
 # <a name="deferred-versus-immediate-loading"></a>Ertelenmiş ve Hemen Yükleme Karşılaştırması
 

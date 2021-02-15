@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: koddaki özel karakterler (Visual Basic)'
 title: Koddaki Özel Karakterler
 ms.date: 07/20/2015
 f1_keywords:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - exclamation point operator (!)
 - Visual Basic code, special characters
 ms.assetid: 310dce0c-45b5-4e0d-83e9-32df258d2a3e
-ms.openlocfilehash: 60f815f0d30fa785f4a2166db5a041d3851aa954
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 4afadc13cea6cc41480cb1674b7ff6f31629b569
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91097832"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468258"
 ---
 # <a name="special-characters-in-code-visual-basic"></a>Kod'da Özel Karakterler (Visual Basic)
 
@@ -61,7 +62,7 @@ Bazen kodunuzda özel karakterler kullanmanız gerekir, diğer bir deyişle, alf
   
 ## <a name="concatenation"></a>Birleştirme  
 
- `&` *Birleştirmek*veya dizeleri birbirine bağlamak için işlecini kullanın. `+`Sayısal değerleri bir araya ekleyen işleçle karıştırmayın. `+`Sayısal değerler üzerinde çalışırken birleştirme için işlecini kullanırsanız, yanlış sonuçlar elde edebilirsiniz. Aşağıdaki örnek bunu gösterir.  
+ `&` *Birleştirmek* veya dizeleri birbirine bağlamak için işlecini kullanın. `+`Sayısal değerleri bir araya ekleyen işleçle karıştırmayın. `+`Sayısal değerler üzerinde çalışırken birleştirme için işlecini kullanırsanız, yanlış sonuçlar elde edebilirsiniz. Aşağıdaki örnek bunu gösterir.  
   
  [!code-vb[VbVbcnConventions#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#13)]  
   

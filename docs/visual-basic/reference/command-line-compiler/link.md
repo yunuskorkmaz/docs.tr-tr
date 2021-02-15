@@ -1,4 +1,5 @@
 ---
+description: Daha fazla bilgi edinin:-link (Visual Basic)
 title: -link
 ms.date: 03/10/2018
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-ms.openlocfilehash: 3c02c914a27e6095f8f6bc34e29e2447a1a373e5
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 31d98d2c0fb0cbd8e8baff82869501a7ff0ea270
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91065729"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100475142"
 ---
 # <a name="-link-visual-basic"></a>-bağlantı (Visual Basic)
 
@@ -51,7 +52,7 @@ veya
 > [!NOTE]
 > Kodunuzda gömülü bir COM türünün örneğini oluşturduğunuzda, uygun arabirimi kullanarak örneği oluşturmanız gerekir. CoClass kullanarak gömülü COM türünün bir örneğini oluşturma girişimi hataya neden olur.  
   
- `-link`Visual Studio 'da seçeneğini ayarlamak için bir derleme başvurusu ekleyin ve `Embed Interop Types` özelliği **true**olarak ayarlayın. Özelliği için varsayılan değer `Embed Interop Types` **false**'dur.  
+ `-link`Visual Studio 'da seçeneğini ayarlamak için bir derleme başvurusu ekleyin ve `Embed Interop Types` özelliği **true** olarak ayarlayın. Özelliği için varsayılan değer `Embed Interop Types` **false**'dur.  
   
  Başka bir COM derlemesine (derleme B) başvuran bir COM derlemesine (derleme A) bağlarsanız, aşağıdakilerden biri doğruysa derleme B 'ye de bağlantı oluşturmanız gerekir:  
   
@@ -97,7 +98,7 @@ vbc -link:COMData1.dll,COMData2.dll -out:OfficeApp.exe OfficeApp.vb
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](index.md)
+- [Visual Basic Command-Line derleyicisi](index.md)
 - [İzlenecek yol: Yönetilen Bütünleştirilmiş Kodlardan Türler Katıştırma](../../../standard/assembly/embed-types-visual-studio.md)
 - [-başvuru (Visual Basic)](reference.md)
 - [-noconfig](noconfig.md)

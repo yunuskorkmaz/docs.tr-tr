@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - nameof expression [C#]
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
-ms.openlocfilehash: 04109cde2a1f9146bf9bb44f301272808797ded0
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 568127a64efc02717b34fbd9d1e508e2e40596fd
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89118318"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100464397"
 ---
 # <a name="nameof-expression-c-reference"></a>NameOf ifadesi (C# Başvurusu)
 
@@ -21,7 +21,7 @@ Bir `nameof` ifade, dize sabiti olarak bir değişkenin, türün veya üyenin ad
 
 [!code-csharp-interactive[nameof expression](snippets/shared/NameOfOperator.cs#Examples)]
 
-Yukarıdaki örnekte gösterildiği gibi, bir tür ve ad alanı durumunda, oluşturulan ad genellikle [tam olarak nitelenir](~/_csharplang/spec/basic-concepts.md#fully-qualified-names).
+Yukarıdaki örnekte gösterildiği gibi, bir tür ve ad alanı durumunda, oluşturulan ad [tam olarak nitelenir](~/_csharplang/spec/basic-concepts.md#fully-qualified-names).
 
 Tam [tanımlayıcılar](../tokens/verbatim.md)söz konusu olduğunda, `@` Aşağıdaki örnekte gösterildiği gibi karakter bir adın parçası değildir:
 
