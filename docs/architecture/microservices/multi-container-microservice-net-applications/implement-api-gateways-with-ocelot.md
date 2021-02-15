@@ -2,12 +2,12 @@
 title: Ocelot ile API Ağ Geçitlerini uygulama
 description: Ocelot ile API ağ geçitleri uygulamayı ve kapsayıcı tabanlı bir ortamda Ocelot 'yi kullanmayı öğrenin.
 ms.date: 03/02/2020
-ms.openlocfilehash: 5da8533eff394b587d123970742727484a7236ad
-ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
+ms.openlocfilehash: 3f8fcaac162d2bffd221f07b2e5061455d73e1bd
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97678123"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429305"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Ocelot ile API ağ geçitleri uygulama
 
@@ -196,7 +196,7 @@ Ocelot için buradaki önemli nokta, `configuration.json` Oluşturucu yöntemi a
 
 Yapılandırmanın iki bölümü vardır. Bir ReRoutes dizisi ve bir GlobalConfiguration. ReRoutes, bir yukarı akış isteğini nasıl ele alacaklarını belirten nesnelerdir. Genel yapılandırma, belirli ayarları yeniden yönlendirme için geçersiz kılmalara izin verir. Çok sayıda yeniden yönlendirme için belirli ayarları yönetmek istemiyorsanız yararlıdır.
 
-Aşağıda, eShopOnContainers 'dan API ağ geçitlerinden birinden [yapılandırma dosyası yeniden yönlendirme](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/ApiGateways/Web.Bff.Shopping/apigw/configuration.json) için basitleştirilmiş bir örnek verilmiştir.
+Aşağıda, eShopOnContainers 'dan API ağ geçitlerinden birinden [yapılandırma dosyası yeniden yönlendirme](https://github.com/dotnet-architecture/eShopOnContainers/blob/main/src/ApiGateways/Mobile.Bff.Shopping/apigw/configuration.json) için basitleştirilmiş bir örnek verilmiştir.
 
 ```json
 {

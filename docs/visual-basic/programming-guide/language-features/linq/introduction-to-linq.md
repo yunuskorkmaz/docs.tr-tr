@@ -1,4 +1,5 @@
 ---
+description: "Daha fazla bilgi edinin: Visual Basic LINQ 'e giriş"
 title: LINQ'ye Giriş
 ms.date: 08/28/2018
 helpviewer_keywords:
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 00022fc7790548dbc0ed8018f202e136bdbcc033
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 6dc260f7c7305dc3380cbd7c7c9f2402e000b986
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075258"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100438807"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Visual Basic'de LINQ'e Giriş
 
-Dil ile tümleşik sorgu (LINQ) Visual Basic 'e sorgu özellikleri ekler ve tüm veri türleriyle çalışırken basit ve güçlü yetenekler sağlar. İşlenecek bir veritabanına sorgu göndermek veya arama yaptığınız her veri türü için farklı sorgu söz dizimiyle çalışmak yerine, LINQ sorguları Visual Basic dilinin bir parçası olarak tanıtır. Veri türünden bağımsız olarak Birleşik bir sözdizimi kullanır.  
+Language-Integrated Query (LINQ), Visual Basic bir sorgu özelliği ekler ve tüm veri türleriyle çalışırken basit ve güçlü yetenekler sağlar. İşlenecek bir veritabanına sorgu göndermek veya arama yaptığınız her veri türü için farklı sorgu söz dizimiyle çalışmak yerine, LINQ sorguları Visual Basic dilinin bir parçası olarak tanıtır. Veri türünden bağımsız olarak Birleşik bir sözdizimi kullanır.  
   
  LINQ, SQL Server veritabanından, XML, bellek içi dizilerden ve koleksiyonlardan, ADO.NET veri kümelerinde veya LINQ destekleyen başka herhangi bir uzak ya da yerel veri kaynağından veri sorgulamanızı sağlar. Tüm bunu ortak Visual Basic dil öğeleriyle yapabilirsiniz. Sorgularınızı Visual Basic dilde yazıldığı için, sorgu sonuçlarınız kesin olarak belirlenmiş nesneler olarak döndürülür. Bu nesneler IntelliSense 'i destekler, bu da çalışma zamanı yerine, derleme zamanında daha hızlı kod yazmanızı ve sorgularınızdaki hataları yakalamanıza olanak sağlar. LINQ sorguları, sonuçları iyileştirmek için ek sorguların kaynağı olarak kullanılabilir. Kullanıcıların sorgu sonuçlarınızı kolayca görüntülemesi ve değiştirebilmeleri için denetimlere de bağlanabilir.  
   
@@ -50,9 +51,9 @@ Dil ile tümleşik sorgu (LINQ) Visual Basic 'e sorgu özellikleri ekler ve tüm
   
 ## <a name="structure-of-a-linq-query"></a>LINQ sorgusunun yapısı  
 
- Genellikle *sorgu ifadesi*olarak ANıLAN bir LINQ sorgusu, sorgu için veri kaynaklarını ve yineleme değişkenlerini tanımlayan bir sorgu yan tümceleri birleşimini içerir. Sorgu ifadesi Ayrıca sıralama, filtreleme, gruplama ve katılma veya kaynak verilere uygulanacak hesaplamalar için yönergeleri de içerebilir. Sorgu ifadesi söz dizimi SQL; sözdizimine benzer Bu nedenle, bilinen sözdiziminin büyük bir bölümünü bulabilirsiniz.  
+ Genellikle *sorgu ifadesi* olarak ANıLAN bir LINQ sorgusu, sorgu için veri kaynaklarını ve yineleme değişkenlerini tanımlayan bir sorgu yan tümceleri birleşimini içerir. Sorgu ifadesi Ayrıca sıralama, filtreleme, gruplama ve katılma veya kaynak verilere uygulanacak hesaplamalar için yönergeleri de içerebilir. Sorgu ifadesi söz dizimi SQL; sözdizimine benzer Bu nedenle, bilinen sözdiziminin büyük bir bölümünü bulabilirsiniz.  
   
- Sorgu ifadesi bir `From` yan tümcesiyle başlar. Bu yan tümce, bir sorgunun kaynak verilerini ve kaynak verilerin her öğesine tek tek başvurmak için kullanılan değişkenleri tanımlar. Bu değişkenler, *Aralık değişkenleri* veya *yineleme değişkenleri*olarak adlandırılır. Yan tümcesi, WHERE `From` `Aggregate` `From` yan tümcesinin isteğe bağlı olduğu sorgular dışında bir sorgu için gereklidir. Sorgunun kapsamı ve kaynağı `From` veya `Aggregate` yan tümcelerinde tanımlandıktan sonra sorgu yan tümcelerinin herhangi bir birleşimini dahil edebilirsiniz ve sorguyu daraltın. Sorgu yan tümceleri hakkında daha fazla bilgi için bu konunun ilerleyen kısımlarında Visual Basic LINQ sorgu Işleçleri ' ne bakın. Örneğin, aşağıdaki sorgu müşteri verilerinin bir kaynak koleksiyonunu `customers` değişken olarak ve adlı bir yineleme değişkenini tanımlar `cust` .  
+ Sorgu ifadesi bir `From` yan tümcesiyle başlar. Bu yan tümce, bir sorgunun kaynak verilerini ve kaynak verilerin her öğesine tek tek başvurmak için kullanılan değişkenleri tanımlar. Bu değişkenler, *Aralık değişkenleri* veya *yineleme değişkenleri* olarak adlandırılır. Yan tümcesi, WHERE `From` `Aggregate` `From` yan tümcesinin isteğe bağlı olduğu sorgular dışında bir sorgu için gereklidir. Sorgunun kapsamı ve kaynağı `From` veya `Aggregate` yan tümcelerinde tanımlandıktan sonra sorgu yan tümcelerinin herhangi bir birleşimini dahil edebilirsiniz ve sorguyu daraltın. Sorgu yan tümceleri hakkında daha fazla bilgi için bu konunun ilerleyen kısımlarında Visual Basic LINQ sorgu Işleçleri ' ne bakın. Örneğin, aşağıdaki sorgu müşteri verilerinin bir kaynak koleksiyonunu `customers` değişken olarak ve adlı bir yineleme değişkenini tanımlar `cust` .  
   
  [!code-vb[VbVbalrIntroToLINQ#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#2)]  
   
@@ -186,7 +187,7 @@ LINQ tarafından sunulan sıralanabilir ve sorgulanabilir türlerin üyelerini �
   
 ## <a name="visual-basic-features-that-support-linq"></a>LINQ 'i destekleyen Visual Basic özellikleri  
 
- Visual Basic, LINQ Simple kullanımını yapan ve LINQ sorguları gerçekleştirmek için yazmanız gereken kod miktarını azaltan diğer önemli özellikleri içerir. Bu araçlar şunlardır:  
+ Visual Basic, LINQ Simple kullanımını yapan ve LINQ sorguları gerçekleştirmek için yazmanız gereken kod miktarını azaltan diğer önemli özellikleri içerir. Buna aşağıdakiler dahildir:  
   
 - Bir sorgu sonucuna dayalı yeni bir tür oluşturmanıza olanak sağlayan **anonim türler**.  
   
@@ -200,9 +201,9 @@ LINQ tarafından sunulan sıralanabilir ve sorgulanabilir türlerin üyelerini �
 
  Sorgu yürütme, sorgu oluşturmaktan farklıdır. Bir sorgu oluşturulduktan sonra, yürütülmesi ayrı bir mekanizma tarafından tetiklenir. Sorgu, tanımlanır (*anında yürütme*), veya tanım depolanabilir ve sorgu daha sonra yürütülebilir (*ertelenmiş yürütme*).  
   
- Varsayılan olarak, bir sorgu oluşturduğunuzda sorgu hemen yürütülmez. Bunun yerine sorgu tanımı, sorgu sonucuna başvurmak için kullanılan değişkende depolanır. Sorgu sonuç değişkenine bir döngüde olduğu gibi, daha sonra kod içinde erişildiğinde `For…Next` sorgu yürütülür. Bu işlem *ertelenmiş yürütme*olarak adlandırılır.  
+ Varsayılan olarak, bir sorgu oluşturduğunuzda sorgu hemen yürütülmez. Bunun yerine sorgu tanımı, sorgu sonucuna başvurmak için kullanılan değişkende depolanır. Sorgu sonuç değişkenine bir döngüde olduğu gibi, daha sonra kod içinde erişildiğinde `For…Next` sorgu yürütülür. Bu işlem *ertelenmiş yürütme* olarak adlandırılır.  
   
- Sorgular, tanımlandıklarında da çalıştırılabilir, bu da *anında yürütme*olarak adlandırılır. Sorgu sonucunun tek tek öğelerine erişmesi gereken bir yöntemi uygulayarak hemen yürütmeyi tetikleyebilirsiniz. Bu,,,, veya gibi bir toplama işlevinin dahil edilmesi sonucu `Count` olabilir `Sum` `Average` `Min` `Max` . Toplama işlevleri hakkında daha fazla bilgi için bkz. [Aggregate yan tümcesi](../../../language-reference/queries/aggregate-clause.md).  
+ Sorgular, tanımlandıklarında da çalıştırılabilir, bu da *anında yürütme* olarak adlandırılır. Sorgu sonucunun tek tek öğelerine erişmesi gereken bir yöntemi uygulayarak hemen yürütmeyi tetikleyebilirsiniz. Bu,,,, veya gibi bir toplama işlevinin dahil edilmesi sonucu `Count` olabilir `Sum` `Average` `Min` `Max` . Toplama işlevleri hakkında daha fazla bilgi için bkz. [Aggregate yan tümcesi](../../../language-reference/queries/aggregate-clause.md).  
   
  Ya da `ToList` yöntemlerinin kullanılması, `ToArray` hemen yürütmeye zorlar. Bu, sorguyu hemen çalıştırmak ve sonuçları önbelleğe almak istediğinizde yararlı olabilir. Bu yöntemler hakkında daha fazla bilgi için bkz. [veri türlerini dönüştürme](../../concepts/linq/converting-data-types.md).  
   

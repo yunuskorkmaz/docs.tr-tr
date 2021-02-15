@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: aşırı yükleme çözümü (Visual Basic)'
 title: Aşırı Yükleme Çözümü
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-ms.openlocfilehash: 9b83eba8efc8dfe14b6ec1cbab270984977198e5
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 71375083e661ee156339abf13e1a5b8da21b9358
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071371"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100480043"
 ---
 # <a name="overload-resolution-visual-basic"></a>Aşırı Yükleme Çözümü (Visual Basic Başvurusu)
 

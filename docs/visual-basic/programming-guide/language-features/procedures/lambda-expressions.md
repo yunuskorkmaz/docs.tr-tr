@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: lambda Ifadeleri (Visual Basic)'
 title: Lambda İfadeleri
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
-ms.openlocfilehash: 54a9c0cf275a67c77748c32771c3c5dcbdb916d7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: adac7f0d0dbbff575837f691d70c7752eebb39f1
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406709"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100480095"
 ---
 # <a name="lambda-expressions-visual-basic"></a>Lambda İfadeleri (Visual Basic)
 
@@ -63,7 +64,7 @@ Bir lambda ifadesinin sözdizimi, standart bir işlev veya alt yordamın sözdiz
 
 - Anahtar sözcüğünü kullanarak bir lambda ifadesi parametresinin veri türünü belirtebilir `As` veya parametresinin veri türü çıkarsanamıyor. Tüm parametrelerin belirtilmiş veri türleri olmalıdır veya hepsi çıkarsanmalıdır.
 
-- `Optional`ve `Paramarray` parametrelerine izin verilmez.
+- `Optional` ve `Paramarray` parametrelerine izin verilmez.
 
 - Genel parametrelere izin verilmiyor.
 
@@ -122,15 +123,15 @@ Yerel değişkenlere ve kapsayan kapsamdaki parametrelere erişim, bu kapsamın 
 
 Aşağıdaki örnek, iç içe lambda ifadesinin çok çeşitli erişim haklarını gösterir. Döndürülen lambda ifadesi sürümünden yürütüldüğünde `Main` `aDel` , şu öğelere erişir:
 
-- İçinde tanımlandığı sınıfın alanı:`aField`
+- İçinde tanımlandığı sınıfın alanı: `aField`
 
-- İçinde tanımlandığı sınıfın bir özelliği:`aProp`
+- İçinde tanımlandığı sınıfın bir özelliği: `aProp`
 
-- Tanımlı yöntemin parametresi `functionWithNestedLambda` :`level1`
+- Tanımlı yöntemin parametresi `functionWithNestedLambda` : `level1`
 
-- Yerel değişkeni `functionWithNestedLambda` :`localVar`
+- Yerel değişkeni `functionWithNestedLambda` : `localVar`
 
-- İçinde iç içe yerleştirilmiş olan lambda ifadesinin parametresi:`level2`
+- İçinde iç içe yerleştirilmiş olan lambda ifadesinin parametresi: `level2`
 
  [!code-vb[VbVbalrLambdas#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class3.vb#9)]
 

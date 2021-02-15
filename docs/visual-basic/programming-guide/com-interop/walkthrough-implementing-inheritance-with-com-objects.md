@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Izlenecek yol: COM nesneleriyle devralma uygulama (Visual Basic)'
 title: 'İzlenecek yol: COM Nesnelerinde Kalıtım Uygulama'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - inheritance [Visual Basic], walkthroughs
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
-ms.openlocfilehash: bdb891e1a150f0d7b79aefcc3db1f18dc8e84be4
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: dc16990f25126cba52ef3ea457e8c3157c987c60
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396733"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100438950"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>İzlenecek yol: COM Nesnelerinde Kalıtım Uygulama (Visual Basic)
 
@@ -26,9 +27,9 @@ Aşağıdaki yordamda, bir sınıfı içeren COM nesnesi oluşturmak için Visua
 
 1. Visual Basic 6,0 ' de, yeni bir ActiveX DLL projesi açın. Adlı bir proje `Project1` oluşturulur. Adında bir sınıfı vardır `Class1` .
 
-2. **Proje Gezgini**'Nde, **Project1**öğesine sağ tıklayın ve ardından **Project1 özellikleri**' ne tıklayın. **Proje özellikleri** iletişim kutusu görüntülenir.
+2. **Proje Gezgini**'Nde, **Project1** öğesine sağ tıklayın ve ardından **Project1 özellikleri**' ne tıklayın. **Proje özellikleri** iletişim kutusu görüntülenir.
 
-3. Proje **özellikleri** Iletişim kutusunun **genel** sekmesinde Proje adı alanına yazarak proje adını değiştirin `ComObject1` . **Project Name**
+3. Proje **özellikleri** Iletişim kutusunun **genel** sekmesinde Proje adı alanına yazarak proje adını değiştirin `ComObject1` . 
 
 4. **Proje Gezgini**'nde, öğesine sağ tıklayın `Class1` ve ardından **Özellikler**' e tıklayın. Sınıfının **Özellikler** penceresi görüntülenir.
 
@@ -67,14 +68,14 @@ Aşağıdaki yordamda, bir sınıfı içeren COM nesnesi oluşturmak için Visua
     End Function
     ```
 
-10. **Dosya** menüsündeki **ComObject1. dll** ' ye tıklayarak com nesnesi oluşturun ve kaydedin.
+10. **Dosya** menüsünde **ComObject1.dllyap** ' a tıklayarak com nesnesini oluşturun ve kaydedin.
 
     > [!NOTE]
     > Ayrıca, Visual Basic ile oluşturulmuş bir sınıfı bir COM nesnesi olarak kullanıma sunabilseniz de, bu, gerçek bir COM nesnesi değildir ve bu kılavuzda kullanılamaz. Ayrıntılar için bkz. [.NET Framework uygulamalarda com birlikte çalışabilirliği](com-interoperability-in-net-framework-applications.md).
 
 ## <a name="interop-assemblies"></a>Birlikte çalışma derlemeleri
 
-Aşağıdaki yordamda, yönetilmeyen kod (COM nesnesi gibi) ve Visual Studio 'Nun kullandığı yönetilen kod arasında köprü görevi gören bir birlikte çalışma derlemesi oluşturacaksınız. Visual Basic tarafından oluşturulan birlikte çalışma derlemesi, *birlikte çalışma hazırlama*ve com nesnelerinden gelen ve bunlara geçiş yaparken değerleri eşdeğer veri türlerine döndürme gibi com nesneleriyle çalışma hakkında pek çok ayrıntıyı işler. Visual Basic uygulamasındaki başvuru, gerçek COM nesnesi değil birlikte çalışma derlemesine işaret eder.
+Aşağıdaki yordamda, yönetilmeyen kod (COM nesnesi gibi) ve Visual Studio 'Nun kullandığı yönetilen kod arasında köprü görevi gören bir birlikte çalışma derlemesi oluşturacaksınız. Visual Basic tarafından oluşturulan birlikte çalışma derlemesi, *birlikte çalışma hazırlama* ve com nesnelerinden gelen ve bunlara geçiş yaparken değerleri eşdeğer veri türlerine döndürme gibi com nesneleriyle çalışma hakkında pek çok ayrıntıyı işler. Visual Basic uygulamasındaki başvuru, gerçek COM nesnesi değil birlikte çalışma derlemesine işaret eder.
 
 ### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>Visual Basic 2005 ve sonraki sürümlerde bir COM nesnesi kullanmak için
 

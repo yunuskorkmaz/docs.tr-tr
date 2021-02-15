@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: birlikte çalışabilirlik sorunlarını giderme (Visual Basic)'
 title: Birlikte Çalışabilirlik İle İlgili Sorun Giderme
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - interoperability, sharing components
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
-ms.openlocfilehash: 135b121638b92adc5a3b0920aa29d10fd1d62d14
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 49a108e47c9614f11db6f6c1e7ba0b8714e936b2
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075999"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100438963"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>Birlikte Çalışabilirlik İle İlgili Sorun Giderme (Visual Basic)
 
@@ -31,7 +32,7 @@ ms.locfileid: "91075999"
 
  Her zaman, .NET Framework parçası olmayan veri türlerini kullanmanız gerekebilir. Birlikte çalışma derlemeleri, COM nesneleri için çalışmanın çoğunu işler, ancak yönetilen nesneler COM 'a sunulduğunda kullanılan veri türlerini kontrol etmeniz gerekebilir. Örneğin, sınıf kitaplıklarındaki yapılar, `BStr` Visual Basic 6,0 ve önceki sürümlerde oluşturulan com nesnelerine gönderilen dizelerde yönetilmeyen türü belirtmelidir. Bu gibi durumlarda, <xref:System.Runtime.InteropServices.MarshalAsAttribute> Yönetilen türlerin yönetilmeyen türler olarak gösterilmesini sağlamak için özniteliğini kullanabilirsiniz.  
   
-## <a name="exporting-fixed-length-strings-to-unmanaged-code"></a><a name="vbconinteroperabilitymarshalinganchor2"></a> Sabit uzunluklu dizeleri yönetilmeyen koda verme  
+## <a name="exporting-fixed-length-strings-to-unmanaged-code"></a><a name="vbconinteroperabilitymarshalinganchor2"></a> Fixed-Length dizeleri yönetilmeyen koda dışarı aktarma  
 
  Visual Basic 6,0 ve önceki sürümlerde dizeler, COM nesnelerine null sonlandırma karakteri olmayan bayt dizileri olarak aktarılmalıdır. Diğer dillerle uyumluluk için, .NET Visual Basic dizeleri dışarı aktarırken sonlandırma karakteri içerir. Bu uyumsuzluğun en iyi yolu, sonlandırma karakteri olmayan dizeleri veya dizileri olarak dışa aktarmak `Byte` `Char` .  
   
@@ -115,7 +116,7 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
 - Microsoft Forms 2,0 çerçeve denetimi  
   
-- Aşağı açılan denetim, döndürme denetimi olarak da bilinir  
+- Döndürme denetimi olarak da bilinen Up-Down denetimi  
   
 - Sheridan Tab denetimi  
   
