@@ -1,19 +1,20 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: nasıl yapılır: dizedeki bir sözcüğün tekrarlamalarını sayma (LINQ) (Visual Basic)'
 title: 'Nasıl yapılır: Bir Sözcüğün Bir Dizede Kaç Kez Geçtiğini Sayma (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: bc367e46-f7cc-45f9-936f-754e661b7bb9
-ms.openlocfilehash: c6894359e5785419ccf8f283f976c0a897288a5d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: dd00d1840f8f4eacdf949b0c1200b26f3692e00d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405332"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100464813"
 ---
-# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a><span data-ttu-id="6afc3-102">Nasıl yapılır: dizedeki bir sözcüğün tekrarlamalarını sayma (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6afc3-102">How to: Count Occurrences of a Word in a String (LINQ) (Visual Basic)</span></span>
+# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a><span data-ttu-id="79fdd-103">Nasıl yapılır: dizedeki bir sözcüğün tekrarlamalarını sayma (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="79fdd-103">How to: Count Occurrences of a Word in a String (LINQ) (Visual Basic)</span></span>
 
-<span data-ttu-id="6afc3-103">Bu örnek, bir dizedeki belirli bir sözcüğün tekrarlamalarını saymak için bir LINQ sorgusunun nasıl kullanılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="6afc3-103">This example shows how to use a LINQ query to count the occurrences of a specified word in a string.</span></span> <span data-ttu-id="6afc3-104">Count işlemini gerçekleştirmek için öncelikle <xref:System.String.Split%2A> yöntemin bir dizi sözcük oluşturmak için çağrıldığını unutmayın.</span><span class="sxs-lookup"><span data-stu-id="6afc3-104">Note that to perform the count, first the <xref:System.String.Split%2A> method is called to create an array of words.</span></span> <span data-ttu-id="6afc3-105">Yöntemin performans maliyeti vardır <xref:System.String.Split%2A> .</span><span class="sxs-lookup"><span data-stu-id="6afc3-105">There is a performance cost to the <xref:System.String.Split%2A> method.</span></span> <span data-ttu-id="6afc3-106">Dizedeki tek işlem kelimeleri saymaya ise <xref:System.Text.RegularExpressions.Regex.Matches%2A> bunun yerine veya yöntemlerini kullanmayı göz önünde bulundurmanız gerekir <xref:System.String.IndexOf%2A> .</span><span class="sxs-lookup"><span data-stu-id="6afc3-106">If the only operation on the string is to count the words, you should consider using the <xref:System.Text.RegularExpressions.Regex.Matches%2A> or <xref:System.String.IndexOf%2A> methods instead.</span></span> <span data-ttu-id="6afc3-107">Ancak, performans kritik bir sorun değilse veya tümceyi zaten böldüğünüz takdirde, diğer sorgu türlerini kullanmak için tümceyi daha önce ayırdıysanız, LINQ 'ı kullanarak sözcükleri veya tümceleri de saymanız mantıklıdır.</span><span class="sxs-lookup"><span data-stu-id="6afc3-107">However, if performance is not a critical issue, or you have already split the sentence in order to perform other types of queries over it, then it makes sense to use LINQ to count the words or phrases as well.</span></span>
+<span data-ttu-id="79fdd-104">Bu örnek, bir dizedeki belirli bir sözcüğün tekrarlamalarını saymak için bir LINQ sorgusunun nasıl kullanılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="79fdd-104">This example shows how to use a LINQ query to count the occurrences of a specified word in a string.</span></span> <span data-ttu-id="79fdd-105">Count işlemini gerçekleştirmek için öncelikle <xref:System.String.Split%2A> yöntemin bir dizi sözcük oluşturmak için çağrıldığını unutmayın.</span><span class="sxs-lookup"><span data-stu-id="79fdd-105">Note that to perform the count, first the <xref:System.String.Split%2A> method is called to create an array of words.</span></span> <span data-ttu-id="79fdd-106">Yöntemin performans maliyeti vardır <xref:System.String.Split%2A> .</span><span class="sxs-lookup"><span data-stu-id="79fdd-106">There is a performance cost to the <xref:System.String.Split%2A> method.</span></span> <span data-ttu-id="79fdd-107">Dizedeki tek işlem kelimeleri saymaya ise <xref:System.Text.RegularExpressions.Regex.Matches%2A> bunun yerine veya yöntemlerini kullanmayı göz önünde bulundurmanız gerekir <xref:System.String.IndexOf%2A> .</span><span class="sxs-lookup"><span data-stu-id="79fdd-107">If the only operation on the string is to count the words, you should consider using the <xref:System.Text.RegularExpressions.Regex.Matches%2A> or <xref:System.String.IndexOf%2A> methods instead.</span></span> <span data-ttu-id="79fdd-108">Ancak, performans kritik bir sorun değilse veya tümceyi zaten böldüğünüz takdirde, diğer sorgu türlerini kullanmak için tümceyi daha önce ayırdıysanız, LINQ 'ı kullanarak sözcükleri veya tümceleri de saymanız mantıklıdır.</span><span class="sxs-lookup"><span data-stu-id="79fdd-108">However, if performance is not a critical issue, or you have already split the sentence in order to perform other types of queries over it, then it makes sense to use LINQ to count the words or phrases as well.</span></span>
 
-## <a name="example"></a><span data-ttu-id="6afc3-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="6afc3-108">Example</span></span>
+## <a name="example"></a><span data-ttu-id="79fdd-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="79fdd-109">Example</span></span>
 
 ```vb
 Class CountWords
@@ -58,10 +59,10 @@ End Class
 ' 3 occurrence(s) of the search term "data" were found.
 ```
 
-## <a name="compile-the-code"></a><span data-ttu-id="6afc3-109">Kodu derle</span><span class="sxs-lookup"><span data-stu-id="6afc3-109">Compile the code</span></span>
+## <a name="compile-the-code"></a><span data-ttu-id="79fdd-110">Kodu derle</span><span class="sxs-lookup"><span data-stu-id="79fdd-110">Compile the code</span></span>
 
-<span data-ttu-id="6afc3-110">`Imports`System. Linq ad alanı için bir deyimle birlikte Visual Basic konsol uygulaması projesi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="6afc3-110">Create a Visual Basic console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+<span data-ttu-id="79fdd-111">`Imports`System. Linq ad alanı için bir deyimle birlikte Visual Basic konsol uygulaması projesi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="79fdd-111">Create a Visual Basic console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="6afc3-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6afc3-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="79fdd-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="79fdd-112">See also</span></span>
 
-- [<span data-ttu-id="6afc3-112">LINQ ve dizeler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6afc3-112">LINQ and Strings (Visual Basic)</span></span>](linq-and-strings.md)
+- [<span data-ttu-id="79fdd-113">LINQ ve dizeler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="79fdd-113">LINQ and Strings (Visual Basic)</span></span>](linq-and-strings.md)
