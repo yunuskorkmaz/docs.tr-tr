@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: b61fede9144e554ee68f0b41adac36209adb7288
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ff5ee6569d8526f44ca489ddc48b09b02f6f8804
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177812"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100461664"
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework Veri Sağlayıcıları
 
@@ -19,7 +19,7 @@ Bir .NET Framework veri sağlayıcısı, bir veritabanına bağlanmak, komutlar�
   
  Aşağıdaki tabloda .NET Framework dahil edilen veri sağlayıcıları listelenmektedir.  
   
-|.NET Framework veri sağlayıcısı|Açıklama|  
+|.NET Framework veri sağlayıcısı|Description|  
 |-------------------------------------------------------------------------------|-----------------|  
 |SQL Server için .NET Framework Veri Sağlayıcısı|Microsoft SQL Server için veri erişimi sağlar. <xref:System.Data.SqlClient>Ad alanını kullanır.|  
 |OLE DB için .NET Framework Veri Sağlayıcısı|OLE DB kullanılarak sunulan veri kaynakları için. <xref:System.Data.OleDb>Ad alanını kullanır.|  
@@ -32,7 +32,7 @@ Bir .NET Framework veri sağlayıcısı, bir veritabanına bağlanmak, komutlar�
 
  Aşağıdaki tabloda .NET Framework veri sağlayıcısı oluşturan dört çekirdekli nesne özetlenmektedir.  
   
-|Nesne|Açıklama|  
+|Nesne|Description|  
 |------------|-----------------|  
 |`Connection`|Belirli bir veri kaynağına bağlantı kurar. Tüm nesneler için temel sınıf `Connection` <xref:System.Data.Common.DbConnection> sınıfındır.|  
 |`Command`|Bir veri kaynağına karşı bir komut yürütür. `Parameters`' Dan bir öğesinin kapsamında sunar ve çalıştırılabilir `Transaction` `Connection` . Tüm nesneler için temel sınıf `Command` <xref:System.Data.Common.DbCommand> sınıfındır.|  
@@ -41,7 +41,7 @@ Bir .NET Framework veri sağlayıcısı, bir veritabanına bağlanmak, komutlar�
   
  Bu belgede daha önce açıklanan tabloda listelenen çekirdek sınıflarının yanı sıra, bir .NET Framework veri sağlayıcısı aşağıdaki tabloda listelenen sınıfları da içerir.  
   
-|Nesne|Açıklama|  
+|Nesne|Description|  
 |------------|-----------------|  
 |`Transaction`|İşlemler içindeki komutları veri kaynağında listeler. Tüm nesneler için temel sınıf `Transaction` <xref:System.Data.Common.DbTransaction> sınıfındır. ADO.NET ayrıca, ad alanındaki sınıfları kullanan işlemler için destek sağlar <xref:System.Transactions> .|  
 |`CommandBuilder`|`DataAdapter`Saklı bir yordamdan bir veya türetilmiş parametre bilgisinin otomatik olarak oluşturduğu ve `Parameters` bir nesnenin koleksiyonunu dolduran yardımcı nesne `Command` . Tüm nesneler için temel sınıf `CommandBuilder` <xref:System.Data.Common.DbCommandBuilder> sınıfındır.|  
@@ -129,7 +129,7 @@ using System.Data.Odbc;
 ```  
   
 > [!NOTE]
-> ODBC için .NET Framework Veri Sağlayıcısı, MDAC 2,6 veya sonraki bir sürümü gerektirir ve MDAC 2,8 SP1 önerilir. MDAC 2,8 SP1 'i [Microsoft Indirme merkezi](https://www.microsoft.com/download/details.aspx?id=5793)' nden indirebilirsiniz.
+> ODBC için .NET Framework Veri Sağlayıcısı, MDAC 2,6 veya sonraki bir sürümü gerektirir ve MDAC 2,8 SP1 önerilir.
   
 ## <a name="net-framework-data-provider-for-oracle"></a>Oracle için .NET Framework Veri Sağlayıcısı  
 

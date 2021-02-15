@@ -1,13 +1,14 @@
 ---
+description: "Hakkında daha fazla bilgi: baud hızı 0 ' dan büyük olmalıdır"
 title: Baud hızı 0 ' dan büyük olmalıdır
 ms.date: 07/20/2015
 ms.assetid: 5d26c4b1-45ca-459b-9b96-907dbc6ea25c
-ms.openlocfilehash: 8bd1e69752b3ddf1cb94eedc95f7a6f1b53f793e
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 87de29602f8b09f7ee5b234a34a087ccfad229d4
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91083118"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100460975"
 ---
 # <a name="baudrate-must-be-greater-than-0"></a>Baud hızı 0 ' dan büyük olmalıdır
 

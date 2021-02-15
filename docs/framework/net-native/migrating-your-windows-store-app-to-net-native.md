@@ -3,12 +3,12 @@ description: 'Hakkında daha fazla bilgi edinin: .NET Native Windows mağazası 
 title: Windows Mağazası Uygulamanızı .NET Yerel'e Taşıma
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: 39f8427474b37c42d856366bf4e4d677ba77e7f1
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 7a9e8f7108ca21dbbae7ca0097b15af078c8c6bb
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99738721"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100464683"
 ---
 # <a name="migrate-your-windows-store-app-to-net-native"></a>Windows mağazası uygulamanızı .NET Native geçirin
 
@@ -160,7 +160,7 @@ Sınıf ile yerelleştirilmiş kaynakların kullanımı <xref:System.Diagnostics
 
 - [TypeInfo. GUID](xref:System.Type.GUID) özelliği, <xref:System.PlatformNotSupportedException> bir <xref:System.Runtime.InteropServices.GuidAttribute> öznitelik türe uygulanmadıysa bir özel durum oluşturur. GUID öncelikle COM desteği için kullanılır.
 
-- <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>Yöntemi, .NET Native kısa tarihleri içeren dizeleri doğru bir şekilde ayrıştırır. Ancak, Microsoft Bilgi Bankası makalelerinde [KB2803771](https://support.microsoft.com/kb/2803771) ve [KB2803755](https://support.microsoft.com/kb/2803755)'de açıklanan tarih ve saat ayrıştırılırken yapılan değişikliklerle uyumluluğu korumaz.
+- <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>Yöntemi, .NET Native kısa tarihleri içeren dizeleri doğru bir şekilde ayrıştırır. Ancak, tarih ve saat ayrıştırılırken belirli değişikliklerle uyumluluğu korumaz.
 
 - <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType>`("E")`.NET Native, doğru şekilde yuvarlanır. CLR 'nin bazı sürümlerinde, sonuç dizesi yuvarlatılmış yerine kesilir.
 

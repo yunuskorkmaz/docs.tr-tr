@@ -1,4 +1,5 @@
 ---
+description: Daha fazla bilgi edinin:-OptionExplicit
 title: -optionexplicit
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - optionexplicit compiler option [Visual Basic]
 - -optionexplicit compiler option [Visual Basic]
 ms.assetid: 5d296ab3-bafe-4c4d-9887-78f162ed86c7
-ms.openlocfilehash: 65cc3fb1b2fa9daa04013caa2b93a3949d0a15b9
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 4d1ab14bbf9de176de17fb5077f4bb919f5472b4
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91098946"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100433568"
 ---
 # <a name="-optionexplicit"></a>-optionexplicit
 
@@ -51,7 +52,7 @@ Değişkenler kullanılmadan önce bildirilmemiş olursa derleyicinin hata rapor
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](index.md)
+- [Visual Basic Command-Line derleyicisi](index.md)
 - [-optioncompare](optioncompare.md)
 - [-optionstrict](optionstrict.md)
 - [-optioninfer](optioninfer.md)

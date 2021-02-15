@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interop marshaling, blittable types
 - blittable types, interop marshaling
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
-ms.openlocfilehash: 5f0f6b2f35c184b4df8c93af1c85e7169cb0cc95
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c9168bd245e10232a798b3e6f3b9448b24996a77
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96283152"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100436129"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Blok Halinde Kopyalanabilir ve Kopyalanamaz Türler
 
@@ -47,19 +47,19 @@ ms.locfileid: "96283152"
   
  Aşağıdaki karmaşık türler de blittable türleridir:  
   
-- Tamsayılar dizisi gibi blittable türlerin tek boyutlu dizileri. Ancak, blittable türlerin değişken dizisini içeren bir tür kendi blittable değildir.  
+- Bir tamsayılar dizisi gibi, blittable basit türlerin tek boyutlu dizileri. Ancak, blittable türlerin değişken dizisini içeren bir tür kendi blittable değildir.
   
 - Yalnızca blittable türlerini içeren biçimlendirilen değer türleri (ve bunları biçimli türler olarak sıralanmış olmaları durumunda sınıflar). Biçimlendirilen değer türleri hakkında daha fazla bilgi için bkz. [değer türleri Için varsayılan sıralama](default-marshaling-behavior.md#default-marshaling-for-value-types).  
   
  Nesne başvuruları blittable değildir. Bu, kendileri tarafından blittable olan nesnelere başvuru dizisi içerir. Örneğin, blittable olan bir yapı tanımlayabilirsiniz, ancak bu yapılara başvuru dizisi içeren bir blittable Türü tanımlayamazsınız.  
   
- En iyi duruma getirme olarak, blittable türündeki diziler ve yalnızca blittable üyeleri içeren sınıflar sıralama [pinned](copying-and-pinning.md) sırasında kopyalanabilir. Çağıran ve çağrılan aynı Apartment olduğunda bu türler ın/out parametreleri olarak sıralanabilen görünebilir. Ancak, bu türler aslında parametrelerde olarak sıralanır ve <xref:System.Runtime.InteropServices.InAttribute> <xref:System.Runtime.InteropServices.OutAttribute> bağımsız değişkeni bir ın/out parametresi olarak sıralamak istiyorsanız ve özniteliklerini uygulamanız gerekir.  
+ En iyi duruma getirme olarak, blittable temel türleri ve yalnızca blittable üyeleri içeren sınıfların dizileri, sıralama sırasında kopyalanmaları yerine [sabitlenmiştir](copying-and-pinning.md) . Çağıran ve çağrılan aynı Apartment olduğunda bu türler ın/out parametreleri olarak sıralanabilen görünebilir. Ancak, bu türler aslında parametrelerde olarak sıralanır ve <xref:System.Runtime.InteropServices.InAttribute> <xref:System.Runtime.InteropServices.OutAttribute> bağımsız değişkeni bir ın/out parametresi olarak sıralamak istiyorsanız ve özniteliklerini uygulamanız gerekir.
   
  Bazı yönetilen veri türleri, yönetilmeyen bir ortamda farklı bir temsil gerektirir. Bu blittable olmayan veri türlerinin sıralanabilen bir forma dönüştürülmesi gerekir. Örneğin, yönetilen dizeler, sıralanmadan önce dize nesnelerine dönüştürülmesi gerektiğinden blittable olmayan türlerdir.  
   
  Aşağıdaki tabloda, ad alanından blittable olmayan türler listelenmektedir <xref:System> . Statik bir yönteme veya bir sınıf örneğine başvuran veri yapıları olan [Temsilciler](default-marshaling-behavior.md#default-marshaling-for-delegates)de blittable değildir.  
   
-|Blittable olmayan tür|Açıklama|  
+|Blittable olmayan tür|Description|  
 |-------------------------|-----------------|  
 |[System. Array](default-marshaling-for-arrays.md)|C stili bir diziye veya öğesine dönüştürür `SAFEARRAY` .|  
 |[System. Boolean](/previous-versions/dotnet/netframework-4.0/t2t3725f(v=vs.100))|1, 2 veya 4 baytlık bir değere `true` 1 veya-1 ile dönüştürür.|  

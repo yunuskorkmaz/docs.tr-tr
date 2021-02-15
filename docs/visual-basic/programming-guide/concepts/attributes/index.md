@@ -1,17 +1,18 @@
 ---
+description: 'Daha fazla bilgi edinin: özniteliklere genel bakış (Visual Basic)'
 title: Özniteliklere genel bakış
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
-ms.openlocfilehash: a0a080d44796289cc3562803c84ec915dcedd314
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f25e69452f0af1c89af667619e673f8906704d1f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400712"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100437728"
 ---
 # <a name="attributes-overview-visual-basic"></a>Özniteliklere genel bakış (Visual Basic)
 
-Öznitelikler, meta verileri veya bildirime dayalı bilgilerin kod (derlemeler, türler, Yöntemler, özellikler, vb.) ile ilişkilendirilmesi için güçlü bir yöntem sağlar. Bir öznitelik bir program varlığıyla ilişkilendirildikten sonra, çalışma zamanında, *yansıma*adlı bir teknik kullanarak öznitelik sorgulanabilir. Daha fazla bilgi için bkz. [yansıma (Visual Basic)](../reflection.md).
+Öznitelikler, meta verileri veya bildirime dayalı bilgilerin kod (derlemeler, türler, Yöntemler, özellikler, vb.) ile ilişkilendirilmesi için güçlü bir yöntem sağlar. Bir öznitelik bir program varlığıyla ilişkilendirildikten sonra, çalışma zamanında, *yansıma* adlı bir teknik kullanarak öznitelik sorgulanabilir. Daha fazla bilgi için bkz. [yansıma (Visual Basic)](../reflection.md).
 
 Öznitelikler aşağıdaki özelliklere sahiptir:
 

@@ -1,4 +1,5 @@
 ---
+description: :-Subsystemversion (Visual Basic) hakkında daha fazla bilgi
 title: -subsystemversion
 ms.date: 03/13/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - -subsystemversion compiler option [Visual Basic]
 - subsystemversion compiler option [Visual Basic]
 ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
-ms.openlocfilehash: 09ddc4bb735b645e09d34198c66dff78183592bf
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7f15d0257d65c0883d3028b20515e29caf25be9b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403089"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100456412"
 ---
 # <a name="-subsystemversion-visual-basic"></a>-subsystemversion (Visual Basic)
 
@@ -20,7 +21,7 @@ Oluşturulan yürütülebilir dosyanın çalıştırılabileceği alt sistemin e
 > [!NOTE]
 > Alt sistemin kendisini belirtmek için [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) derleyici seçeneğini kullanın.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```vb
 -subsystemversion:major.minor
@@ -40,7 +41,7 @@ Aşağıdaki tabloda, Windows 'un ortak alt sistem sürümleri listelenmektedir.
 
 |Windows sürümü|Alt sistem sürümü|
 |---------------------|-----------------------|
-|Windows 2000|5,00|
+|Windows 2000|5.00|
 |Windows XP|5,01|
 |Windows Server 2003|5,02|
 |Windows Vista|6,00|
@@ -70,6 +71,6 @@ Visual Studio 'da **-subsystemversion** derleyici seçeneğini ayarlamak için,.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](index.md)
+- [Visual Basic Command-Line derleyicisi](index.md)
 
-- [MSBuild Özellikleri](/visualstudio/msbuild/msbuild-properties)
+- [MSBuild özellikleri](/visualstudio/msbuild/msbuild-properties)

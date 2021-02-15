@@ -1,15 +1,16 @@
 ---
+description: "Daha fazla bilgi edinin: ConnectionTimeout 0 ' dan büyük olmalıdır"
 title: ConnectionTimeout 0 ' dan büyük olmalıdır
 ms.date: 07/20/2015
 f1_keywords:
 - vbrNetwork_BadConnectionTimeout
 ms.assetid: 15ac09a7-47f0-44f3-9e84-5bd10bd07450
-ms.openlocfilehash: 1fa368fa8f82cbd701362438a133f82a0c8e1764
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: ca9cd67ca75c99636534b8eff393de91b9328dc0
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078482"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100430956"
 ---
 # <a name="the-connectiontimeout-must-be-greater-than-0"></a>ConnectionTimeout 0 ' dan büyük olmalıdır
 
