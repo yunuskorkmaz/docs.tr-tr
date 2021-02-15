@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: sayısal veri türleri (Visual Basic)'
 title: Sayısal Veri Türleri
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - Single data type [Visual Basic], numeric types
 - Decimal data type [Visual Basic], numeric data types
 ms.assetid: a27bd4d0-7e14-43eb-9cc4-b42eaab323c9
-ms.openlocfilehash: 317c0862953e7bb866faa4712d42dfd5995ecf35
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 0e44301d953ab75378aabbec82fdb6dce00a02e2
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086237"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100430696"
 ---
 # <a name="numeric-data-types-visual-basic"></a>Sayısal Veri Türleri (Visual Basic)
 
@@ -60,7 +61,7 @@ Visual Basic, çeşitli temsillerde sayıları işlemek için birkaç *sayısal 
   
 ### <a name="unsigned-integers"></a>İşaretsiz tamsayılar  
 
- Değişkeninizin negatif bir sayı tutması gerekmediğini biliyorsanız,, ve *imzasız türlerini*kullanabilirsiniz `Byte` `UShort` `UInteger` `ULong` . Bu veri türlerinin her biri, karşılık gelen imzalı türü ( `SByte` ,, `Short` `Integer` ve) kadar büyük pozitif bir tam sayı iki kez tutabilir `Long` . Performans açısından, her imzasız tür, kendisine karşılık gelen imzalı tür kadar etkilidir. Özellikle, `UInteger` `Integer` Tüm elemensel sayısal veri türlerinin en verimli şekilde ayırım ile paylaşır.  
+ Değişkeninizin negatif bir sayı tutması gerekmediğini biliyorsanız,, ve *imzasız türlerini* kullanabilirsiniz `Byte` `UShort` `UInteger` `ULong` . Bu veri türlerinin her biri, karşılık gelen imzalı türü ( `SByte` ,, `Short` `Integer` ve) kadar büyük pozitif bir tam sayı iki kez tutabilir `Long` . Performans açısından, her imzasız tür, kendisine karşılık gelen imzalı tür kadar etkilidir. Özellikle, `UInteger` `Integer` Tüm elemensel sayısal veri türlerinin en verimli şekilde ayırım ile paylaşır.  
   
 ## <a name="nonintegral-numeric-types"></a>İntegral olmayan sayısal türler  
 

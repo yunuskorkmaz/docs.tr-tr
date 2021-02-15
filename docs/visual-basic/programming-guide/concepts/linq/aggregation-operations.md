@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: toplama Işlemleri (Visual Basic)'
 title: Toplama İşlemleri
 ms.date: 07/20/2015
 ms.assetid: 0f47e92c-5dd2-4007-baf4-c5fe5dc3b4a8
-ms.openlocfilehash: 1cf82d8acfdb1f8b0fc33c324064574b0dd01f4a
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 2ef41faf03100814e062ec98afb8fe17b1ef64bc
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078404"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100462171"
 ---
 # <a name="aggregation-operations-visual-basic"></a>Toplama Işlemleri (Visual Basic)
 
@@ -29,7 +30,7 @@ Toplama işlemi, bir değerler koleksiyonundan tek bir değeri hesaplar. Bir top
 |LongCount|Büyük bir koleksiyondaki öğeleri, isteğe bağlı olarak yalnızca bir koşul işlevini karşılayan öğeleri sayar.|`Aggregate … In … Into LongCount()`|<xref:System.Linq.Enumerable.LongCount%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.LongCount%2A?displayProperty=nameWithType>|  
 |En yüksek değer|Bir koleksiyondaki maksimum değeri belirler.|`Aggregate … In … Into Max()`|<xref:System.Linq.Enumerable.Max%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Max%2A?displayProperty=nameWithType>|  
 |Min|Bir koleksiyondaki en küçük değeri belirler.|`Aggregate … In … Into Min()`|<xref:System.Linq.Enumerable.Min%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Min%2A?displayProperty=nameWithType>|  
-|Toplam|Bir koleksiyondaki değerlerin toplamını hesaplar.|`Aggregate … In … Into Sum()`|<xref:System.Linq.Enumerable.Sum%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Sum%2A?displayProperty=nameWithType>|  
+|Sum|Bir koleksiyondaki değerlerin toplamını hesaplar.|`Aggregate … In … Into Sum()`|<xref:System.Linq.Enumerable.Sum%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Sum%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-examples"></a>Sorgu Ifadesi söz dizimi örnekleri  
   
@@ -63,7 +64,7 @@ Toplama işlemi, bir değerler koleksiyonundan tek bir değeri hesaplar. Bir top
   
  [!code-vb[CsLINQAggregating#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#5)]  
   
-### <a name="sum"></a>Toplam  
+### <a name="sum"></a>Sum  
 
  Aşağıdaki kod örneği, `Aggregate Into Sum` giderleri temsil eden bir değer dizisinden toplam harcama miktarını hesaplamak için yan tümcesini kullanır.  
   

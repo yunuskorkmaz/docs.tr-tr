@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: resim geçerli değil'
 title: Resim geçerli değil
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID481
 ms.assetid: 6ac18c39-042b-423a-9d95-25a7745c84dd
-ms.openlocfilehash: a95e3f6d5b89f398e2e282308ecea426e826f2e7
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: c89f801ed0758447c3c55c34568387ec6da0bf3d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91059710"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100480602"
 ---
 # <a name="picture-is-not-valid"></a>Resim geçerli değil
 

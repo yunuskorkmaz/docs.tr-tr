@@ -1,4 +1,5 @@
 ---
+description: :-Langversion (Visual Basic) hakkında daha fazla bilgi edinin
 title: -langversion
 ms.date: 03/10/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - -langversion compiler option [Visual Basic]
 ms.custom: updateeachrelease
 ms.assetid: 59b7b0c8-2dde-4e9b-94e7-0237f7e0bafb
-ms.openlocfilehash: 9921df0b8bb1a4808528b58a5a38d75e5e3fbdd2
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: 52bf910e5d6f579ec535d9de5698a8921f058002
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359265"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100466867"
 ---
 # <a name="-langversion-visual-basic"></a>-langversion (Visual Basic)
 
@@ -51,5 +52,5 @@ vbc -langversion:9.0 sample.vb
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](index.md)
+- [Visual Basic Command-Line derleyicisi](index.md)
 - [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)

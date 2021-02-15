@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Visual Basic kapsam'
 title: Kapsam
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 - scope [Visual Basic], Visual Basic
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-ms.openlocfilehash: 1bee904996257474b7457b2aefb1f17d250933cb
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5b5412f5743162bb91fc3651d08f5c7ff9ba8abd
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410740"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100480212"
 ---
 # <a name="scope-in-visual-basic"></a>Visual Basic'de Kapsam
 
 Belirtilen bir öğenin *kapsamı* , adını nitelemeden veya bir [içeri aktarmalar Ifadesiyle (.net ad alanı ve türü)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md)kullanılabilir hale getirmeden başvurabilen tüm kod kümesidir. Bir öğesi aşağıdaki düzeylerin birinde kapsama sahip olabilir:
 
-|Düzey|Description|
+|Level|Description|
 |-----------|-----------------|
 |Blok kapsamı|Yalnızca bildirildiği kod bloğu içinde kullanılabilir|
 |Yordam kapsamı|İçinde bildirildiği yordamın içindeki tüm kodlar için kullanılabilir|
@@ -57,7 +58,7 @@ Blok, aşağıdaki gibi bildirim deyimlerini başlatma ve sonlandırma içinde y
 
 - `Do` ve `Loop`
 
-- `For`[ `Each` ] ve`Next`
+- `For` [ `Each` ] ve `Next`
 
 - `If` ve `End If`
 
@@ -85,7 +86,7 @@ End If
 
 ### <a name="procedure-scope"></a>Yordam kapsamı
 
-Yordam içinde belirtilen bir öğe, bu yordamın dışında kullanılamaz. Yalnızca bildirimi içeren yordam bunu kullanabilir. Bu düzeydeki değişkenler *yerel değişkenler*olarak da bilinir. Onları, [static](../../../language-reference/modifiers/static.md) anahtar sözcüğüyle veya olmadan [Dim ifadesiyle](../../../language-reference/statements/dim-statement.md)bildirirsiniz.
+Yordam içinde belirtilen bir öğe, bu yordamın dışında kullanılamaz. Yalnızca bildirimi içeren yordam bunu kullanabilir. Bu düzeydeki değişkenler *yerel değişkenler* olarak da bilinir. Onları, [static](../../../language-reference/modifiers/static.md) anahtar sözcüğüyle veya olmadan [Dim ifadesiyle](../../../language-reference/statements/dim-statement.md)bildirirsiniz.
 
 Yordam ve blok kapsamı yakından ilgilidir. Bir yordam içinde bir değişken bildirirseniz, ancak bu yordamın içindeki herhangi bir blok dışında, değişkenini blok kapsamına sahip olarak düşünebilirsiniz; burada blok tüm yordamdır.
 
@@ -126,7 +127,7 @@ Public strMsg As String
 
 Ad alanı kapsamı iç içe geçmiş ad alanlarını içerir. Ad alanı içinde bulunan bir öğe, bu ad alanı içinde iç içe yerleştirilmiş herhangi bir ad alanı içinde de kullanılabilir.
 
-Projeniz herhangi bir [ad alanı bildirisi](../../../language-reference/statements/namespace-statement.md)içermiyorsa, projedeki her şey aynı ad alanında bulunur. Bu durumda, ad alanı kapsamı Proje kapsamı olarak düşünülebilir. `Public`bir modül, sınıf veya yapıdaki öğeler, projesine başvuran tüm projeler için de kullanılabilir.
+Projeniz herhangi bir [ad alanı bildirisi](../../../language-reference/statements/namespace-statement.md)içermiyorsa, projedeki her şey aynı ad alanında bulunur. Bu durumda, ad alanı kapsamı Proje kapsamı olarak düşünülebilir. `Public` bir modül, sınıf veya yapıdaki öğeler, projesine başvuran tüm projeler için de kullanılabilir.
 
 ## <a name="choice-of-scope"></a>Kapsam seçimi
 

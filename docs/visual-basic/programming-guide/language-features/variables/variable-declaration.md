@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Visual Basic değişken bildirimi'
 title: Değişken Bildirimi
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-ms.openlocfilehash: 8d78509e1604fee4a151608f6166de6fc8ccfdaa
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: ef0e7bc7a99f320bd40788ef019b05c7ebf4ce46
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91080159"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100462704"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Visual Basic'de Değişken Bildirimi
 
@@ -38,9 +39,9 @@ Adını ve özelliklerini belirtmek için bir değişken bildirirsiniz. Değişk
   
 ### <a name="shared-and-instance-variables"></a>Paylaşılan ve örnek değişkenleri  
 
- Bir sınıf veya yapıda, bir üye değişkeninin kategorisi paylaşılıp paylaşıldığına bağlıdır. [Paylaşılan](../../../language-reference/modifiers/shared.md) anahtar sözcüğü ile bildirilirse, *paylaşılan bir değişkendir*ve sınıf veya yapının tüm örnekleri arasında paylaşılan tek bir kopyada bulunur.  
+ Bir sınıf veya yapıda, bir üye değişkeninin kategorisi paylaşılıp paylaşıldığına bağlıdır. [Paylaşılan](../../../language-reference/modifiers/shared.md) anahtar sözcüğü ile bildirilirse, *paylaşılan bir değişkendir* ve sınıf veya yapının tüm örnekleri arasında paylaşılan tek bir kopyada bulunur.  
   
- Aksi takdirde, bir *örnek değişkenidir*ve sınıfın ya da yapının her örneği için ayrı bir kopyası oluşturulur. Örnek değişkeninin belirli bir kopyası yalnızca oluşturulduğu sınıf veya yapının örneği için kullanılabilir. Sınıf veya yapının diğer örneğindeki örnek değişkeninin bir kopyasından bağımsızdır.  
+ Aksi takdirde, bir *örnek değişkenidir* ve sınıfın ya da yapının her örneği için ayrı bir kopyası oluşturulur. Örnek değişkeninin belirli bir kopyası yalnızca oluşturulduğu sınıf veya yapının örneği için kullanılabilir. Sınıf veya yapının diğer örneğindeki örnek değişkeninin bir kopyasından bağımsızdır.  
   
 ## <a name="declaring-data-type"></a>Veri türü bildirme  
 

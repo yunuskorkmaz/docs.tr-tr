@@ -1,5 +1,5 @@
 ---
-description: 'Hakkında daha fazla bilgi edinin: BC30712: sınıf için bilgiler yüklenemiyor<classname>'
+description: "Hakkında daha fazla bilgi edinin: BC30712: ' ' sınıfı için bilgiler yüklenemiyor <classname>"
 title: "'<classname>' sınıfının bilgileri yüklenemiyor"
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30712
 ms.assetid: c7ffbd6d-05c6-4261-b44b-1bcd521bb350
-ms.openlocfilehash: 5e96df57b83b32b70a2d0d6eca1578b5d15ec065
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 5325afabfd267f15f0d0497be6ef03c8f5c828c0
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99674837"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100480537"
 ---
 # <a name="bc30712-unable-to-load-information-for-class-classname"></a>BC30712: ' ' sınıfının bilgileri yüklenemiyor \<classname>
 

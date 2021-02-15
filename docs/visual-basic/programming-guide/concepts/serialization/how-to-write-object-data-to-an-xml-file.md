@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: nesne verilerini bir XML dosyasına yazma (Visual Basic)'
 title: 'Nasıl Yapılır: Nesne Verilerini bir XML Dosyasına Yazma'
 ms.date: 07/20/2015
 ms.assetid: f7966480-5ed2-43ac-9894-33427436de2a
-ms.openlocfilehash: af62d10b29e76701668fd3d595b967bd1754a22c
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: c6935fa97ed8813528630f5794e0a8e3e7e77b4d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077234"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100486842"
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>Nasıl yapılır: nesne verilerini bir XML dosyasına yazma (Visual Basic)
 

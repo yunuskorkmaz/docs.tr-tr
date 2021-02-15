@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: özyinelemeli yordamlar (Visual Basic)'
 title: Özyinelemeli Yordamlar
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - functions [Visual Basic], calling recursively
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
-ms.openlocfilehash: 646d4e29ed7a0b6367d4b35a7f8641bcf659e616
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 378b279a6664cd494fb2e26ff3276afcea56cc16
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352551"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100466568"
 ---
 # <a name="recursive-procedures-visual-basic"></a>Özyinelemeli Yordamlar (Visual Basic)
 
@@ -29,13 +30,13 @@ ms.locfileid: "74352551"
 
  **Koşulları sınırlandırma**. Özyineleme 'yi sonlandıran en az bir koşul için test etmek üzere yinelemeli bir yordam tasarlaması gerekir ve ayrıca makul sayıda özyinelemeli çağrı içinde böyle bir koşulun karşılanmadığı durumu da işlemeniz gerekir. Başarısız olmadan karşılanabilecek en az bir koşul olmadan, yordamınız sonsuz bir döngüde yürütmenin yüksek bir riskini çalıştırır.
 
- **Bellek kullanımı**. Uygulamanızın yerel değişkenler için sınırlı miktarda alanı vardır. Her bir yordam kendi kendine her çağırdığında, yerel değişkenlerinin ek kopyaları için bu alanın daha fazlasını kullanır. Bu işlem süresiz olarak devam ederse, sonuçta <xref:System.StackOverflowException> hataya neden olur.
+ **Bellek kullanımı**. Uygulamanızın yerel değişkenler için sınırlı miktarda alanı vardır. Her bir yordam kendi kendine her çağırdığında, yerel değişkenlerinin ek kopyaları için bu alanın daha fazlasını kullanır. Bu işlem süresiz olarak devam ederse, bir hataya neden olur <xref:System.StackOverflowException> .
 
  **Verimlilik**. Özyineleme için neredeyse her zaman bir döngü kullanabilirsiniz. Döngü, bağımsız değişken geçirme, ek depolama başlatma ve değer döndürme ek yüküne sahip değildir. Performans özyinelemeli çağrılar olmadan çok daha iyi olabilir.
 
  **Karşılıklı özyineleme**. İki yordam de varsa, çok kötü performans veya sonsuz bir döngü gözlemleyebilirsiniz. Böyle bir tasarım, tek bir özyinelemeli yordamla aynı sorunları sunar, ancak algılaması ve hata ayıklaması zor olabilir.
 
- **Parantez Ile çağırma**. Bir `Function` yordam kendisini yinelemeli olarak çağırdığında, bağımsız değişken listesi olmasa bile, parantez ile yordam adını izlemelisiniz. Aksi takdirde, işlev adı işlevin dönüş değerini temsil eden olarak alınır.
+ **Parantez Ile çağırma**. Bir `Function` yordam yinelemeli olarak çağırdığında, bağımsız değişken listesi olmasa bile, parantez ile yordam adını izlemelisiniz. Aksi takdirde, işlev adı işlevin dönüş değerini temsil eden olarak alınır.
 
  **Test ediliyor**. Özyinelemeli bir yordam yazarsanız, her zaman sınırlandırma koşullarını karşıladığından emin olmak için bunu dikkatle sınamanız gerekir. Ayrıca çok fazla özyinelemeli çağrı olduğundan belleği tükendiğinizden emin olmanız gerekir.
 

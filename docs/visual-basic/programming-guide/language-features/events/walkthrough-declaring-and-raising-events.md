@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Izlenecek yol: olayları bildirme ve oluşturma (Visual Basic)'
 title: Olay Bildirme ve Oluşturma
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-ms.openlocfilehash: 07ef611b50cfa13f77fa168d58dd3b43e97eeec6
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 98e9d2eabd1ace06de9f8cc7931013093d864e7a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91057994"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100466386"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>İzlenecek yol: Olay Bildirme ve Oluşturma (Visual Basic)
 

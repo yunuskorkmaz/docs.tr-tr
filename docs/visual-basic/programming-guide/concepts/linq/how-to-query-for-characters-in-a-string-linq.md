@@ -1,17 +1,18 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: bir dizedeki karakterleri sorgulama (LINQ) (Visual Basic)'
 title: 'Nasıl yapılır: Bir Dizedeki Karakterleri Sorgulama (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 499ebbe0-746c-4235-9dba-ce722c12b50e
-ms.openlocfilehash: 2f306a488610aaa5775210eba3d7312b092545a7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: bd8fabc06e88c83ae4e89079378ad67efb13c446
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345517"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100425756"
 ---
 # <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a>Nasıl yapılır: bir dizedeki karakterleri sorgulama (LINQ) (Visual Basic)
 
-<xref:System.String> sınıfı genel <xref:System.Collections.Generic.IEnumerable%601> arabirimini gerçekleştirdiğinden, herhangi bir dize bir karakter dizisi olarak sorgulanabilir. Ancak bu, LINQ 'in yaygın bir kullanımı değildir. Karmaşık kalıp eşleştirme işlemleri için <xref:System.Text.RegularExpressions.Regex> sınıfını kullanın.
+<xref:System.String>Sınıfı genel <xref:System.Collections.Generic.IEnumerable%601> arabirimi uyguladığından, herhangi bir dize bir karakter dizisi olarak sorgulanabilir. Ancak bu, LINQ 'in yaygın bir kullanımı değildir. Karmaşık kalıp eşleştirme işlemleri için <xref:System.Text.RegularExpressions.Regex> sınıfını kullanın.
 
 ## <a name="example"></a>Örnek
 
@@ -56,9 +57,9 @@ End Class
 ' ABCDE99F
 ```
 
-## <a name="compile-the-code"></a>Kod derleme
+## <a name="compile-the-code"></a>Kodu derle
 
-System. Linq ad alanı için `Imports` bildirimiyle bir Visual Basic konsol uygulaması projesi oluşturun.
+`Imports`System. Linq ad alanı için bir deyimle birlikte Visual Basic konsol uygulaması projesi oluşturun.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

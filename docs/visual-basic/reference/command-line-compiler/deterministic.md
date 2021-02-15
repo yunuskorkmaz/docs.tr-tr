@@ -1,22 +1,23 @@
 ---
+description: Daha fazla bilgi edinin:-belirleyici
 title: -deterministic
 ms.date: 04/11/2018
 helpviewer_keywords:
 - deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
-ms.openlocfilehash: 0cf9aceef54998f269e9e377fe5d0a48492969c0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b339b76d4f95ba80f8e92c4961586fa390b0839a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408692"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100461521"
 ---
 # <a name="-deterministic"></a>-deterministic
 
 Derleyicinin bayt çıkışı, aynı girişlerin derlemeleri arasında özdeş olan bir derleme üretmesine neden olur.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```console
 -deterministic
@@ -24,7 +25,7 @@ Derleyicinin bayt çıkışı, aynı girişlerin derlemeleri arasında özdeş o
 
 ## <a name="remarks"></a>Açıklamalar
 
-Varsayılan olarak, belirli bir giriş kümesinden Derleyici çıktısı benzersizdir, çünkü derleyici bir zaman damgası ve rastgele sayıdan oluşturulan bir GUID ekliyor. `-deterministic`Değer aynı kaldığı sürece, bir *belirleyici derleme*oluşturmak için bu seçeneği kullanın.
+Varsayılan olarak, belirli bir giriş kümesinden Derleyici çıktısı benzersizdir, çünkü derleyici bir zaman damgası ve rastgele sayıdan oluşturulan bir GUID ekliyor. `-deterministic`Değer aynı kaldığı sürece, bir *belirleyici derleme* oluşturmak için bu seçeneği kullanın.
 
 Derleyici, belirlemeleri için aşağıdaki girişleri dikkate alır:
 
@@ -52,5 +53,5 @@ Kaynaklar herkese açık olduğunda, bir ikilinin güvenilir bir kaynaktan derle
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](index.md)
+- [Visual Basic Command-Line derleyicisi](index.md)
 - [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)
