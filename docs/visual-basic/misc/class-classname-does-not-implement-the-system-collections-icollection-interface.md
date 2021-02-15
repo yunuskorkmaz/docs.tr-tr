@@ -1,15 +1,16 @@
 ---
+description: "Hakkında daha fazla bilgi: ' <classname> ' sınıfı System. Collections. ICollection arabirimini uygulamıyor"
 title: "' <classname> ' Sınıfı System. Collections. ICollection arabirimini uygulamıyor"
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID100
 ms.assetid: cc73bbc6-a283-41e0-b750-61ef553e83b3
-ms.openlocfilehash: 87cf730b454f7fdb98d7c778edcc607a54e13cf3
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 0e6f0d2445c3bae8934d690196888d7a8fec83a9
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91060906"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100474921"
 ---
 # <a name="class-classname-does-not-implement-the-systemcollectionsicollection-interface"></a>' \<classname> ' Sınıfı System. Collections. ICollection arabirimini uygulamıyor
 

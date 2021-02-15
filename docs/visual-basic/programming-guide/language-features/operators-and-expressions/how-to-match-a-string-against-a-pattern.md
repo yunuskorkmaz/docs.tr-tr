@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: bir dizeyi bir düzene göre eşleştirme (Visual Basic)'
 title: 'Nasıl yapılır: Bir Dizeyi Belirli Bir Desene Göre Eşleştirme'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -13,18 +14,18 @@ helpviewer_keywords:
 - pattern matching, empty strings
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-ms.openlocfilehash: d8a3c363d1a443db4a0b7633e380562af1913aca
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f3e3426f85d420726571f03c88546d181cdccf97
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403452"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100461950"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Nasıl yapılır: Bir Dizeyi Belirli Bir Desene Göre Eşleştirme (Visual Basic)
 
 [Dize veri türünde](../../../language-reference/data-types/string-data-type.md) bir ifadenin bir kalıbı karşılayıp karşılamadığını öğrenmek Isterseniz, [LIKE işlecini](../../../language-reference/operators/like-operator.md)kullanabilirsiniz.
 
-`Like`iki işlenen alır. Sol işlenen bir dize ifadesidir ve sağ işlenen, eşleştirme için kullanılacak olan kalıbı içeren bir dizedir. `Like``Boolean`dize ifadesinin kalıbı karşılayıp karşılamadığını gösteren bir değer döndürür.
+`Like` iki işlenen alır. Sol işlenen bir dize ifadesidir ve sağ işlenen, eşleştirme için kullanılacak olan kalıbı içeren bir dizedir. `Like``Boolean`dize ifadesinin kalıbı karşılayıp karşılamadığını gösteren bir değer döndürür.
 
 Dize ifadesindeki her karakteri belirli bir karakter, joker karakter, bir karakter listesi veya karakter aralığı ile eşleştirebilirsiniz. Model dizesinde belirtimlerin konumları, dize ifadesinde eşleştirilecek karakterlerin konumlarına karşılık gelir.
 
@@ -66,7 +67,7 @@ Bu eşleşmenin büyük/küçük harfe duyarlı olduğunu unutmayın.
 
 ## <a name="matching-empty-strings"></a>Eşleşen boş dizeler
 
-`Like`diziyi `[]` sıfır uzunluklu bir dize () olarak değerlendirir `""` . `[]`Tüm dize ifadesinin boş olup olmadığını test etmek için kullanabilirsiniz, ancak dize ifadesindeki belirli bir konumun boş olup olmadığını test etmek için kullanamazsınız. Boş bir konum test etmeniz gereken seçeneklerden biri ise, birden `Like` çok kez kullanabilirsiniz.
+`Like` diziyi `[]` sıfır uzunluklu bir dize () olarak değerlendirir `""` . `[]`Tüm dize ifadesinin boş olup olmadığını test etmek için kullanabilirsiniz, ancak dize ifadesindeki belirli bir konumun boş olup olmadığını test etmek için kullanamazsınız. Boş bir konum test etmeniz gereken seçeneklerden biri ise, birden `Like` çok kez kullanabilirsiniz.
 
 ### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a>Dize ifadesindeki bir karakteri bir karakter listesiyle veya karakter olmadan eşleştirmek için
 

@@ -2,16 +2,16 @@
 title: Tür Sağlayıcıları
 description: 'Bir F # tür sağlayıcısının, programlarınızda kullanım için türler, Özellikler ve yöntemler sağlayan bir bileşen olduğunu öğrenin.'
 ms.date: 04/02/2018
-ms.openlocfilehash: eae64d2e318ee93f0b8d5b91f0c6da6c91743527
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: f01e207407b2282005d5722bed798df1d49d3ef6
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202105"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468232"
 ---
 # <a name="type-providers"></a>Tür Sağlayıcıları
 
-Bir F# tür sağlayıcısı programınız içinde kullanmanız için türler, özellikler ve yöntemler sağlayan bir bileşendir. Tür sağlayıcıları, F # derleyicisi tarafından oluşturulan ve bir dış veri kaynağını temel alan, **sunulan türler**olarak bilinen öğeleri oluşturur.
+Bir F# tür sağlayıcısı programınız içinde kullanmanız için türler, özellikler ve yöntemler sağlayan bir bileşendir. Tür sağlayıcıları, F # derleyicisi tarafından oluşturulan ve bir dış veri kaynağını temel alan, **sunulan türler** olarak bilinen öğeleri oluşturur.
 
 Örneğin, SQL için bir F # tür sağlayıcısı, ilişkisel bir veritabanındaki tabloları ve sütunları temsil eden türler oluşturabilir. Aslında, bu, [SqlProvider](https://fsprojects.github.io/SQLProvider/) tür sağlayıcısının yaptığı şeydir.
 
@@ -29,7 +29,7 @@ Tür sağlayıcılarının silinmesinin, yalnızca oluşturulduğu derlemede vey
 
 Aşağıdaki yaygın olarak kullanılan kitaplıklar farklı kullanımlar için tür sağlayıcıları içerir:
 
-- [FSharp. Data](https://fsharp.github.io/FSharp.Data/) , JSON, XML, CSV ve HTML belge biçimleri ve kaynakları Için tür sağlayıcıları içerir.
+- FSharp. Data, JSON, XML, CSV ve HTML belge biçimleri ve kaynakları için tür sağlayıcıları içerir.
 - [SqlProvider](https://fsprojects.github.io/SQLProvider/) , bu veri kaynaklarına karşı nesne eşleme ve F # LINQ sorguları aracılığıyla ilişki veritabanlarına kesin olarak belirlenmiş erişim sağlar.
 - [FSharp. Data. SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) , F # ' de T-SQL ' y i, derleme zamanında denetlenmiş ekleme için bir dizi tür sağlayıcıya sahiptir.
 - [Azure depolama türü sağlayıcısı](https://fsprojects.github.io/AzureStorageTypeProvider/) , Azure Blob 'Ları, tabloları ve kuyrukları için türler sağlar. bu sayede, kaynak adlarını programınızın tamamında dizeler olarak belirtmeye gerek kalmadan bu kaynaklara erişmenize izin verilir.

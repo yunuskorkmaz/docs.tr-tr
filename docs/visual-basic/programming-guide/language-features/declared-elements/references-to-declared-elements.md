@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: belirtilen öğelerin başvuruları (Visual Basic)'
 title: Bildirilmiş Öğelere Başvurular
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: af5be47335b6d48bd6c0bccc30b8db15c9912807
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 75cc05381f01af00ac75995739647810fb7ff1d7
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085886"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100471441"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>Bildirilmiş Öğelere Başvurular (Visual Basic)
 
 Kodunuz, belirtilen bir öğeye başvurduğunda, Visual Basic derleyici, bu adın uygun bildirimine başvurinizdeki adla eşleşir. Aynı ada sahip birden fazla öğe bildirilirse, adını *niteleyerek* bu öğelerin ne şekilde başvurulduğunu kontrol edebilirsiniz.  
   
- Derleyici, bir ad başvurusunu en *dar kapsamlı*bir ad bildirimine eşleştirmeye çalışır. Bu, başvuru yapan kod ile başladığı ve kapsayan öğelerin birbirini izleyen düzeylerinde dışa doğru çalışacağı anlamına gelir.  
+ Derleyici, bir ad başvurusunu en *dar kapsamlı* bir ad bildirimine eşleştirmeye çalışır. Bu, başvuru yapan kod ile başladığı ve kapsayan öğelerin birbirini izleyen düzeylerinde dışa doğru çalışacağı anlamına gelir.  
   
  Aşağıdaki örnek, aynı ada sahip iki değişkene yapılan başvuruları gösterir. Örnek, her adı, `totalCount` modüldeki farklı kapsam düzeylerinde olan iki değişken bildirir `container` . Yordam, `showCount` `totalCount` nitelik olmadan görüntülendiğinde, Visual Basic derleyici, en dar kapsama sahip bildirime başvuruyu çözer, yani içinde yerel bildirim `showCount` . `totalCount`Kapsayıcı modül ile nitelediğinde `container` , derleyici daha geniş kapsamlı bir bildirime başvuruyu çözer.  
   
@@ -46,7 +47,7 @@ End Module
 
  Bu arama işlemini geçersiz kılmak ve daha geniş bir kapsamda belirtilen bir ad belirtmek istiyorsanız, adı daha geniş kapsamın kapsayan öğesiyle *nitelemeniz* gerekir. Bazı durumlarda, kapsayan öğesini de nitelemeniz gerekebilir.  
   
- Bir adın nitelemesini, kaynak deyiminizde, hedef öğenin nerede tanımlandığını tanımlayan bilgilerle daha önce anlamına gelir. Bu bilgilere bir *nitelik dizesi*adı verilir. Bir veya daha fazla ad alanı ve bir modül, sınıf ya da yapı içerebilir.  
+ Bir adın nitelemesini, kaynak deyiminizde, hedef öğenin nerede tanımlandığını tanımlayan bilgilerle daha önce anlamına gelir. Bu bilgilere bir *nitelik dizesi* adı verilir. Bir veya daha fazla ad alanı ve bir modül, sınıf ya da yapı içerebilir.  
   
  Nitelik dizesi, hedef öğeyi içeren modülü, sınıfı veya yapıyı kesin olarak belirtmelidir. Kapsayıcı, genellikle bir ad alanı olan başka bir kapsayan öğede bulunabilir. Nitelik dizesinde içerilen birkaç öğe eklemeniz gerekebilir.  
   
@@ -208,4 +209,4 @@ Dim xDoc As xD.XmlDocument
 - [Değişkenler](../variables/index.md)
 - [Imports Deyimi (.NET Ad Alanı ve Türü)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [New Işleci](../../../language-reference/operators/new-operator.md)
-- [Geneldir](../../../language-reference/modifiers/public.md)
+- [Genel](../../../language-reference/modifiers/public.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: yordam aşırı yüklemesi (Visual Basic)'
 title: Yordam Aşırı Yüklemesi
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - procedure overloading
 - procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
-ms.openlocfilehash: f8accc74fbdd9b1d8cf9bc3d8f6ddd26f73452b8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 27e79e12153bc7ac6a9e3b3b5997a50c1c354195
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84363882"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100466646"
 ---
 # <a name="procedure-overloading-visual-basic"></a>Yordam Aşırı Yüklemesi (Visual Basic)
 

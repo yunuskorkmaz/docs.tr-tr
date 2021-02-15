@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: bir yordamdan değer döndürme (Visual Basic)'
 title: 'Nasıl yapılır: Bir Yordamdan Değer Döndürme'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], returning from
 - procedures [Visual Basic], returning a value
 ms.assetid: 4bcc4724-2b4e-4df8-9b4b-16054607f87d
-ms.openlocfilehash: cbc785a07aa8a7b299508a093e08d5d0510b838a
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: c158f15b1e6acb7334d78037d84145981822e177
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071384"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100476182"
 ---
 # <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>Nasıl yapılır: Bir Yordamdan Değer Döndürme (Visual Basic)
 

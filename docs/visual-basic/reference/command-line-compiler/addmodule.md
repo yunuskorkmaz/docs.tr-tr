@@ -1,4 +1,5 @@
 ---
+description: :-AddModule hakkında daha fazla bilgi edinin
 title: -addmodule
 ms.date: 03/09/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - addmodule compiler option [Visual Basic]
 - -addmodule compiler option [Visual Basic]
 ms.assetid: fb4b89d4-4926-4f20-868d-427fa28497b2
-ms.openlocfilehash: 2db122acc03056a9cb6f355119d4c4e6da6ed175
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: ca08aa599003897e680240af21c4a0eb568e31d8
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91097793"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468297"
 ---
 # <a name="-addmodule"></a>-addmodule
 
@@ -55,7 +56,7 @@ Derleyicinin, belirtilen dosya (lar) dan tüm tür bilgilerini şu anda derledi�
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](index.md)
+- [Visual Basic Command-Line derleyicisi](index.md)
 - [-target (Visual Basic)](target.md)
 - [-başvuru (Visual Basic)](reference.md)
 - [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)

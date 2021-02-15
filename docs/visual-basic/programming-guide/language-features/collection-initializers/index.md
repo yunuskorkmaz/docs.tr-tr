@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: koleksiyon başlatıcıları (Visual Basic)'
 title: Koleksiyon Başlatıcıları
 ms.date: 07/20/2015
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
-ms.openlocfilehash: 1d2d5adc7266faaa1636e568d6433429761eeaab
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: afae9278092934ead4572f16fb1ec4a29d631803
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414549"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100475467"
 ---
 # <a name="collection-initializers-visual-basic"></a>Koleksiyon Başlatıcıları (Visual Basic)
 
@@ -26,7 +27,7 @@ Anahtar ayracını `From` ve ardından kaşlı ayraçları kullanarak bir koleks
 > [!NOTE]
 > C# Ayrıca koleksiyon başlatıcıları sağlar. C# koleksiyon başlatıcıları Visual Basic koleksiyonu başlatıcılarına benzer işlevleri sağlar. C# koleksiyon başlatıcıları hakkında daha fazla bilgi için bkz. [nesne ve koleksiyon başlatıcıları](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 Bir koleksiyon başlatıcısı, `{}` `From` aşağıdaki kodda gösterildiği gibi, önünde anahtar sözcüğünden sonra gelen ve ayraç () içine alınmış bir virgülle ayrılmış değerler listesinden oluşur.
 

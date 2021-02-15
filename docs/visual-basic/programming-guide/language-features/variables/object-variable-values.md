@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: nesne değişkeni değerleri (Visual Basic)'
 title: Nesne Değişkeni Değerleri
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - data types [Visual Basic], object variable
 - variables [Visual Basic], object
 ms.assetid: 31555704-58a3-49f1-9a0a-6421f605664f
-ms.openlocfilehash: 800b9754ce27cc6a494dd781d06f4bdca8a10e87
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 3259a0b04ed629feea89c1a3e9dba69ed7d226f6
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91080237"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100481681"
 ---
 # <a name="object-variable-values-visual-basic"></a>Nesne Değişkeni Değerleri (Visual Basic)
 

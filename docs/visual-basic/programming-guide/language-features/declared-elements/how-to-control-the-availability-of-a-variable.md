@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: bir değişkenin kullanılabilirliğini denetleme (Visual Basic)'
 title: 'Nasıl yapılır: Bir Değişkenin Kullanılabilirliğini Denetleme'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,16 +12,16 @@ helpviewer_keywords:
 - declared elements [Visual Basic], access level
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
-ms.openlocfilehash: e6173a0eaa0bf84abb1979711c6df932533c5ce9
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 3fa21a804008f31da9003aa847752f749154d602
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086120"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429890"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>Nasıl yapılır: Bir Değişkenin Kullanılabilirliğini Denetleme (Visual Basic)
 
-Bir değişkenin kullanılabilirliğini, *erişim düzeyini*belirterek kontrol edersiniz. Erişim düzeyi, hangi kodun değişkene okuma veya yazma izni olduğunu belirler.  
+Bir değişkenin kullanılabilirliğini, *erişim düzeyini* belirterek kontrol edersiniz. Erişim düzeyi, hangi kodun değişkene okuma veya yazma izni olduğunu belirler.  
   
 - *Üye değişkenleri* (modül düzeyinde ve herhangi bir yordam dışında tanımlanır) varsayılan olarak genel erişim için, bu, bunlara erişebilen herhangi bir kod anlamına gelir. Bu, bir erişim değiştiricisi belirterek değiştirebilirsiniz.  
   
@@ -94,7 +95,7 @@ Private numberForMeOnly As Integer
 
 - [Visual Basic erişim düzeyleri](access-levels.md)
 - [Dim Deyimi](../../../language-reference/statements/dim-statement.md)
-- [Geneldir](../../../language-reference/modifiers/public.md)
+- [Genel](../../../language-reference/modifiers/public.md)
 - [Korunamadı](../../../language-reference/modifiers/protected.md)
 - [Arkadaş](../../../language-reference/modifiers/friend.md)
-- [Özelleştirme](../../../language-reference/modifiers/private.md)
+- [Özel](../../../language-reference/modifiers/private.md)

@@ -1,15 +1,16 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: ' ' türünden <typename1> ' ' türüne dönüştürme <typename2> geçerli değil"
 title: "' <typename1> ' Türünden ' ' türüne dönüştürme <typename2> geçerli değil"
 ms.date: 07/20/2015
 f1_keywords:
 - vbrInvalidCast_FromTo
 ms.assetid: 4e6a8957-63ca-461f-a833-f48a1ff2eba6
-ms.openlocfilehash: 9533cdadd30044ef79492237e343300555321fca
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: cb77b7acbfe40aa1c117c33c0cff5af191ad7610
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077559"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100472936"
 ---
 # <a name="cast-from-type-typename1-to-type-typename2-is-not-valid"></a>' \<typename1> ' Türünden ' ' türüne dönüştürme \<typename2> geçerli değil
 

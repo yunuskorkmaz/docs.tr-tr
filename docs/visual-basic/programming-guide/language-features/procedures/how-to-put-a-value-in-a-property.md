@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: bir özelliğe değer koyma (Visual Basic)'
 title: 'Nasıl yapılır: Bir Özelliğe Değer Ekleme'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: c39401e5-b5fc-4439-8f31-ed640f7ce6ed
-ms.openlocfilehash: 7d85066d4678ee2a53b8339bee2db20374482579
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 62f5552f821fb98bd3a4695505aba5ff73b08fc7
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071410"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100476208"
 ---
 # <a name="how-to-put-a-value-in-a-property-visual-basic"></a>Nasıl yapılır: Bir Özelliğe Değer Ekleme (Visual Basic)
 

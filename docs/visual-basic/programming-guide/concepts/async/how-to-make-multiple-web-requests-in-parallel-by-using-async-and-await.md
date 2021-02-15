@@ -1,13 +1,14 @@
 ---
+description: 'Şu konuda daha fazla bilgi edinin: nasıl yapılır: Async ve await kullanarak birden çok Web Isteğini paralel hale getirme (Visual Basic)'
 title: 'Nasıl yapılır: Async ve Await Kullanarak Birden Çok Web İsteğini Paralel Hale Getirme'
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-ms.openlocfilehash: 40bab392af94ba941c2562e885a8d2e08aeea5b9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e1137424911b77ba94a760a4b4b034e45ef83462
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396590"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100474349"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>Nasıl yapılır: Async ve await kullanarak birden çok Web Isteğini paralel hale getirme (Visual Basic)
 
@@ -71,7 +72,7 @@ Bu örnek için kodu [Geliştirici kodu örneklerinden](https://code.msdn.micros
 
     - `ProcessURLAsync`<xref:System.Net.Http.HttpClient>bir Web sitesinin içeriğini bayt dizisi olarak indirmek için bir yöntem kullanır. Destek yöntemi, `ProcessURLAsync` ardından dizinin uzunluğunu görüntüler ve döndürür.
 
-    - `DisplayResults`her URL için bayt dizisindeki bayt sayısını görüntüler. Bu ekranda, her görevin indirilmesi tamamlandığında gösterilir.
+    - `DisplayResults` her URL için bayt dizisindeki bayt sayısını görüntüler. Bu ekranda, her görevin indirilmesi tamamlandığında gösterilir.
 
      Aşağıdaki yöntemleri kopyalayın ve `startButton_Click` MainWindow. xaml. vb içindeki olay işleyicisinden sonra yapıştırın.
 

@@ -1,15 +1,16 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: bir numaralandırma ne zaman kullanılır (Visual Basic)'
 title: Bir Numaralandırmanın Ne Zaman Kullanılacağı
 ms.date: 07/20/2015
 helpviewer_keywords:
 - enumerations [Visual Basic]
 ms.assetid: e6e47b5b-3ed9-452d-a481-9c3fed88519a
-ms.openlocfilehash: 7b1b269a5d28d89cd491bac88fbefd4547fdc3c3
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: a29d0e3bb8ac99baf5d43827a8b58701eddcfbdd
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91095635"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100480745"
 ---
 # <a name="when-to-use-an-enumeration-visual-basic"></a>Bir Numaralandırmanın Ne Zaman Kullanılacağı (Visual Basic)
 
