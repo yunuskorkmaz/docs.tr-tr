@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: LINQ sorguları için özel yöntemler ekleme (Visual Basic)'
 title: 'Nasıl yapılır: LINQ sorguları için özel yöntemler ekleme'
 ms.date: 08/28/2020
 ms.assetid: 099b2e2a-83cd-45c6-aa4d-01b398b5faaf
-ms.openlocfilehash: 7d38a45263135fa10dc53dc0d09b8129838e78e6
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 62acf22a8be9986388233ee34121a97d65a87f43
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89117785"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100424534"
 ---
 # <a name="how-to-add-custom-methods-for-linq-queries-visual-basic"></a>Nasıl yapılır: LINQ sorguları için özel yöntemler ekleme (Visual Basic)
 

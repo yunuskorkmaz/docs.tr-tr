@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: geçerli klasör altında veya alt klasörlerinden birinde olan bir yol belirtmeniz gerekir'
 title: Geçerli klasör altında veya alt klasörlerinden birinde olan bir yol belirtmeniz gerekir
 ms.date: 07/20/2015
 ms.assetid: 8717dabd-a9a7-4d4d-8b21-004b5ce7e652
-ms.openlocfilehash: e88e29960e5b86326a0124e1abaee7098634b0aa
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: f6ae6962ee5bc699333e1b07b0eb8fb778c7d4f6
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100249"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100428135"
 ---
 # <a name="you-must-specify-a-path-that-is-under-the-current-folder-or-one-of-its-sub-folders"></a>Geçerli klasör altında veya alt klasörlerinden birinde olan bir yol belirtmeniz gerekir
 

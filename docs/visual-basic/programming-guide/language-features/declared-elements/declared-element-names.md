@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: belirtilen öğe adları (Visual Basic)'
 title: Bildirilen Öğe Adları
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - identifiers [Visual Basic], elements
 ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
-ms.openlocfilehash: 327a18644c1dc1d8dae59016b8e30600357d2ca9
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: ba0a6d6b236c0c4e9ce81c37a1cca4e709cc5588
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086185"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100425691"
 ---
 # <a name="declared-element-names-visual-basic"></a>Bildirilen Öğe Adları (Visual Basic)
 
-Her beyan edilen öğe *tanımlayıcı*olarak da bilinen ve kodun buna başvurmak için kullandığı bir ada sahiptir.  
+Her beyan edilen öğe *tanımlayıcı* olarak da bilinen ve kodun buna başvurmak için kullandığı bir ada sahiptir.  
   
 ## <a name="rules"></a>Kurallar  
 
@@ -65,7 +66,7 @@ Her beyan edilen öğe *tanımlayıcı*olarak da bilinen ve kodun buna başvurma
  `xyz$wv`  
   
 > [!CAUTION]
-> Alt çizgi () ile başlayan öğe adları, `_` [Dil bağımsızlığı ve dilden bağımsız bileşenlerin](../../../../standard/language-independence-and-language-independent-components.md) (CLS) bir parçası değildir, bu nedenle CLS uyumlu kod bu adı tanımlayan bir bileşeni kullanamaz. Ancak, bir öğe adında başka bir konumdaki alt çizgi CLS uyumludur.  
+> Alt çizgi () ile başlayan öğe adları, `_` [dil bağımsızlık ve Language-Independent bileşenlerinin](../../../../standard/language-independence-and-language-independent-components.md) (CLS) bir parçası değildir, bu nedenle CLS uyumlu kod bu adı tanımlayan bir bileşeni kullanamaz. Ancak, bir öğe adında başka bir konumdaki alt çizgi CLS uyumludur.  
   
 ### <a name="name-length-guidelines"></a>Ad uzunluğu yönergeleri  
 
@@ -75,7 +76,7 @@ Her beyan edilen öğe *tanımlayıcı*olarak da bilinen ve kodun buna başvurma
   
 ## <a name="escaped-names"></a>Kaçan adlar  
 
- Genellikle, öğe adı, veya gibi Visual Basic tarafından ayrılmış bir anahtar kelimelerle eşleşmemelidir `Case` `Friend` . Ancak, köşeli ayraç () içine alınmış bir *kaçan adı*tanımlayabilirsiniz `[ ]` . Kaçış adı herhangi bir Visual Basic anahtar sözcüğüyle eşleşemez, köşeli ayraçlar herhangi bir belirsizliği ortadan kaldırır. Ayrıca, kodunuzun sonraki kısımlarında bulunan ada başvurduğunuzda de ayraçları kullanırsınız.  
+ Genellikle, öğe adı, veya gibi Visual Basic tarafından ayrılmış bir anahtar kelimelerle eşleşmemelidir `Case` `Friend` . Ancak, köşeli ayraç () içine alınmış bir *kaçan adı* tanımlayabilirsiniz `[ ]` . Kaçış adı herhangi bir Visual Basic anahtar sözcüğüyle eşleşemez, köşeli ayraçlar herhangi bir belirsizliği ortadan kaldırır. Ayrıca, kodunuzun sonraki kısımlarında bulunan ada başvurduğunuzda de ayraçları kullanırsınız.  
   
  Genel olarak, yalnızca şu durumlarda atlanan kaçış adlarını kullanmanız gerekir:  
   

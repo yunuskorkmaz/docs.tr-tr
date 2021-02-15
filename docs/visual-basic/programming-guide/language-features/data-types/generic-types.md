@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Visual Basic genel türler (Visual Basic)'
 title: Genel Türler
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: f9b343c664baaf316e5cd6df72da8dcf56222382
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 1164513825240b1e83fbce2aeb6478430b0bc250
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090267"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100428551"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic'de Genel Türler (Visual Basic)
 
@@ -71,7 +72,7 @@ ms.locfileid: "91090267"
   
  [!code-vb[VbVbalrDataTypes#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#3)]  
   
- Önceki deyimler, belirli bir türün tür parametresinin yerini aldığı *oluşturulan sınıfları*bildirir. Bu değişiklik, oluşturulan sınıf içindeki kod boyunca yayılır. Aşağıdaki örnek, `processNewItem` yordamının içinde nasıl göründüğünü gösterir `integerClass` .  
+ Önceki deyimler, belirli bir türün tür parametresinin yerini aldığı *oluşturulan sınıfları* bildirir. Bu değişiklik, oluşturulan sınıf içindeki kod boyunca yayılır. Aşağıdaki örnek, `processNewItem` yordamının içinde nasıl göründüğünü gösterir `integerClass` .  
   
  [!code-vb[VbVbalrDataTypes#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#4)]  
   
@@ -129,7 +130,7 @@ ms.locfileid: "91090267"
   
 - Tür bağımsız değişkeni, içinden nesneler oluşturan koda erişilebilen parametresiz bir oluşturucuyu kullanıma sunmalıdır  
   
-- Tür bağımsız değişkeni bir *başvuru türü*olmalı veya bir *değer türü* olmalıdır  
+- Tür bağımsız değişkeni bir *başvuru türü* olmalı veya bir *değer türü* olmalıdır  
   
  Birden fazla gereksinim belirlemeniz gerekiyorsa, küme ayracı () içinde virgülle ayrılmış bir *kısıtlama listesi* kullanırsınız `{ }` . Erişilebilir bir Oluşturucu istemek için, [Yeni işleç](../../../language-reference/operators/new-operator.md) anahtar sözcüğünü listeye ekleyin. Bir başvuru türü gerektirmek için, `Class` anahtar sözcüğünü dahil edersiniz; bir değer türü gerektirmek için anahtar sözcüğünü dahil edersiniz `Structure` .  
   
@@ -159,7 +160,7 @@ ms.locfileid: "91090267"
 
 - [Veri türleri](index.md)
 - [Tür Karakterleri](type-characters.md)
-- [Değer Türleri ve Başvuru Türleri](value-types-and-reference-types.md)
+- [Değer türleri ve başvuru türleri](value-types-and-reference-types.md)
 - [Visual Basic'de Tür Dönüştürmeleri](type-conversions.md)
 - [Veri Türü Sorunlarını Giderme](troubleshooting-data-types.md)
 - [Veri türleri](../../../language-reference/data-types/index.md)

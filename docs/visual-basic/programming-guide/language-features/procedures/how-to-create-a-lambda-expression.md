@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: lambda Ifadesi oluşturma (Visual Basic)'
 title: 'Nasıl yapılır: Lambda İfadesi Oluşturma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [Visual Basic]
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
-ms.openlocfilehash: cc2de38f7375848d104edff6f419656d9caa9cb2
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 386d40c1e2021c9b02b2f785300c4e978b4da87d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071932"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100472572"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>Nasıl yapılır: Lambda İfadesi Oluşturma (Visual Basic)
 
@@ -102,7 +103,7 @@ ms.locfileid: "91071932"
   
  [!code-vb[VbVbalrLambdas#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class4.vb#10)]  
   
- Önceki örnek, dil ile tümleşik sorgu (LINQ) sözdiziminde yazılan aşağıdaki koda eşdeğerdir:  
+ Önceki örnek, Language-Integrated Query (LINQ) sözdiziminde yazılan aşağıdaki koda eşdeğerdir:  
   
  [!code-vb[VbVbalrLambdas#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class5.vb#11)]  
   

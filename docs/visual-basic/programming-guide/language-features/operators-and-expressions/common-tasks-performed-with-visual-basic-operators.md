@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Visual Basic Işleçleriyle gerçekleştirilen ortak görevler'
 title: Visual Basic İşleçleriyle Yapılan Genel Görevler
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -13,16 +14,16 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 - operators [Visual Basic], short-circuiting logical
 ms.assetid: d181afe5-fafa-460f-a13b-81203f6f4587
-ms.openlocfilehash: a8a8d7898e52077fef47b91172e34ad50d7f54e7
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 5103241c7c92ffe7264178e9abb6a56ba03d4b52
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075219"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100465268"
 ---
 # <a name="common-tasks-performed-with-visual-basic-operators"></a>Visual Basic İşleçleriyle Yapılan Genel Görevler
 
-İşleçler, *işlenenler*adlı bir veya daha fazla ifadeye ilişkin birçok ortak görevi gerçekleştirir.  
+İşleçler, *işlenenler* adlı bir veya daha fazla ifadeye ilişkin birçok ortak görevi gerçekleştirir.  
   
 ## <a name="arithmetic-and-bit-shift-tasks"></a>Aritmetik ve bit kaydırma görevleri  
 

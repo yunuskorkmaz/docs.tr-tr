@@ -2,12 +2,12 @@
 title: Yerel birlikte çalışabilirlik en iyi uygulamaları-.NET
 description: .NET 'teki yerel bileşenlerle arabirimlendirme için en iyi uygulamaları öğrenin.
 ms.date: 01/18/2019
-ms.openlocfilehash: 3ed69fd0f57e937da3f43e11d57ead37984fed78
-ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
+ms.openlocfilehash: e64aa0aa43a56145bd7636835f507f8433fa3db4
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97593389"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100465255"
 ---
 # <a name="native-interoperability-best-practices"></a>Yerel birlikte çalışabilirlik en iyi uygulamaları
 
@@ -95,7 +95,7 @@ Blittable türleri, yönetilen ve yerel kodda aynı bit düzeyi gösterimine sah
 
 **Blittable içeriği olan türler:**
 
-- blittable türlerin iç içe olmayan tek boyutlu dizileri (örneğin, `int[]` )
+- blittable ilkel türlerin iç içe olmayan, tek boyutlu dizileri (örneğin, `int[]` )
 - örnek alanlar için yalnızca blittable değer türlerine sahip sabit düzene sahip sınıflar
   - Sabit düzen için `[StructLayout(LayoutKind.Sequential)]` veya `[StructLayout(LayoutKind.Explicit)]`
   - sınıflar `LayoutKind.Auto` Varsayılan olarak
@@ -130,7 +130,7 @@ Bir türün blittable olup olmadığını veya bir sabitlenmiş bir oluşturma g
 
 ✔️ yapılarınızı mümkün olduğunca blittable yapın.
 
-Daha fazla bilgi için bkz:
+Daha fazla bilgi için bkz.
 
 - [Blok Halinde Kopyalanabilir ve Kopyalanamaz Türler](../../framework/interop/blittable-and-non-blittable-types.md)
 - [Tür sıralaması](type-marshaling.md)

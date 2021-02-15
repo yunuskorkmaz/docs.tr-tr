@@ -1,7 +1,7 @@
 ---
 title: İle değişmez türleri ve genel olmayan erişimcileri kullanma System.Text.Json
 description: .NET ' te JSON ile seri hale getirme ve serisini kaldırma sırasında değişmez türleri ve genel olmayan erişimcileri kullanmayı öğrenin.
-ms.date: 11/30/2020
+ms.date: 02/08/2021
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
@@ -11,23 +11,34 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: ff8ecec0d70c877b7cbbd0297b85f0d9578ab828
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 9fe1e6e96703ba404308c758eca49be6e196ad61
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97008831"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100438170"
 ---
-# <a name="how-to-use-immutable-types-and-non-public-accessors-with-no-locsystemtextjson"></a>İle değişmez türleri ve genel olmayan erişimcileri kullanma System.Text.Json
+# <a name="how-to-use-immutable-types-and-non-public-accessors-with-systemtextjson"></a>İle değişmez türleri ve genel olmayan erişimcileri kullanma System.Text.Json
 
-Bu makalede, ad alanı ile kayıtlar gibi değişmez türlerin nasıl kullanılacağını öğreneceksiniz `System.Text.Json` .
+Bu makalede, ad alanıyla değişmez türlerin, genel parametreli oluşturucuların ve genel olmayan erişimcilerinin nasıl kullanılacağı gösterilmektedir `System.Text.Json` .
 
 ## <a name="immutable-types-and-records"></a>Sabit türler ve kayıtlar
 
 ::: zone pivot="dotnet-5-0"
-`System.Text.Json` , sabit bir sınıfın veya yapının serisini kaldırma olanağı sağlayan parametreli bir Oluşturucu kullanabilir. Bir sınıf için, tek Oluşturucu parametreli bir ise, bu Oluşturucu kullanılacaktır. Bir yapı veya birden çok Oluşturucu içeren bir sınıf için, [[Jsonconstructor]](xref:System.Text.Json.Serialization.JsonConstructorAttribute.%23ctor%2A) özniteliğini uygulayarak kullanılacak olanı belirtin. Özniteliği kullanılmazsa, varsa Ortak parametresiz bir Oluşturucu her zaman kullanılır. Özniteliği yalnızca ortak oluşturucularla birlikte kullanılabilir. Aşağıdaki örnek `[JsonConstructor]` özniteliğini kullanır:
+`System.Text.Json` , sabit bir sınıfın veya yapının serisini kaldırmak mümkün kılan ortak parametreli bir Oluşturucu kullanabilir. Bir sınıf için, tek Oluşturucu parametreli bir ise, bu Oluşturucu kullanılacaktır. Bir yapı veya birden çok Oluşturucu içeren bir sınıf için, [[Jsonconstructor]](xref:System.Text.Json.Serialization.JsonConstructorAttribute) özniteliğini uygulayarak kullanılacak olanı belirtin. Özniteliği kullanılmazsa, varsa Ortak parametresiz bir Oluşturucu her zaman kullanılır. Özniteliği yalnızca ortak oluşturucularla birlikte kullanılabilir. Aşağıdaki örnek `[JsonConstructor]` özniteliğini kullanır:
 
 :::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/ImmutableTypes.cs" highlight="13":::
+
+Parametreli bir oluşturucunun parametre adları, özellik adlarıyla eşleşmelidir. Eşleştirme büyük/küçük harfe duyarlıdır ve bir özelliği yeniden adlandırmak için [[Jsonpropertyname]](xref:System.Text.Json.Serialization.JsonPropertyNameAttribute) kullanıyor olsanız bile, Oluşturucu parametresi gerçek özellik adıyla eşleşmelidir. Aşağıdaki örnekte, `TemperatureC` özelliğinin adı `celsius` JSON içinde olarak değiştirilir, ancak Oluşturucu parametresi hala adlandırılmaktadır `temperatureC` :
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/ImmutableTypesCtorParms.cs" highlight="10,14-16":::
+
+`[JsonPropertyName]`Aşağıdaki özniteliklerin yanı sıra parametreli oluşturucularla serisini kaldırma desteği de vardır:
+
+* [[JsonConverter]](xref:System.Text.Json.Serialization.JsonConverterAttribute)
+* [[Jsonıgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute)
+* [[Jsonınclude]](xref:System.Text.Json.Serialization.JsonIncludeAttribute)
+* [[JsonNumberHandling]](xref:System.Text.Json.Serialization.JsonNumberHandlingAttribute)
 
 C# 9 ' da kayıtlar aşağıdaki örnekte gösterildiği gibi desteklenir:
 
