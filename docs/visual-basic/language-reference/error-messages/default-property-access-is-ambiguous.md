@@ -1,5 +1,5 @@
 ---
-description: "Şu konuda daha fazla bilgi edinin: BC30686: varsayılan özellik erişimi ' ' arabiriminin ' ' devralınan ' ' arabirimi üyeleri <defaultpropertyname> <interfacename1> ve ' <defaultpropertyname> ' arabiriminin ' '<interfacename2>"
+description: "Şu konuda daha fazla bilgi edinin: BC30686: varsayılan özellik erişimi ' ' arabiriminin ' ' devralınan ' ' arabirimi üyeleri <defaultpropertyname> <interfacename1> ile ' <defaultpropertyname> ' arabiriminin ' <interfacename2> ' arasında belirsiz"
 title: Varsayılan özellik erişimi '<defaultpropertyname>' arabiriminin '<interfacename1>' devralınan üyesi ile '<defaultpropertyname>' arabiriminin '<interfacename2>' devralınan üyesi arasında belirsiz
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: 5ae5e5b2dc7a61540e26d125e960d4755141d975
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: edf2823fb11184efb2c3101b81119ea1696234db
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99796658"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100455229"
 ---
 # <a name="bc30686-default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>BC30686: ' ' arabiriminin ' ' \<defaultpropertyname> \<interfacename1> ve ' ' \<defaultpropertyname> \<interfacename2> arabiriminin devralınan ' ' arabirim üyeleri arasında varsayılan özellik erişimi belirsiz
 

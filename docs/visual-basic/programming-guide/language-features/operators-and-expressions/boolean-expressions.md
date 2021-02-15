@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Boolean Ifadeleri (Visual Basic)'
 title: Boole İfadeleri
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - operators [Visual Basic], Boolean
 - Visual Basic code, expressions
 ms.assetid: d3d90406-55c8-4404-8143-50fd7f0d0d1a
-ms.openlocfilehash: 51340bf95795d837c055df796424f3cad912adc7
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 3b752e2146755e1272b261f32931e3022e8ef354
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085756"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100465320"
 ---
 # <a name="boolean-expressions-visual-basic"></a>Boolean İfadeleri (Visual Basic)
 
@@ -51,9 +52,9 @@ ms.locfileid: "91085756"
   
  Yukarıdaki örnekte, genel ifadenin değeri, işlecin her tarafındaki ifadelerin değerlerine bağlıdır `And` . Her iki ifade de ise `True` , genel ifade olarak değerlendirilir `True` . Her iki ifade ise `False` , tüm ifade olarak değerlendirilir `False` .  
   
-## <a name="short-circuiting-operators"></a>Kısa devre dışı Işleçler  
+## <a name="short-circuiting-operators"></a>Short-Circuiting Işleçleri  
 
- Mantıksal işleçler `AndAlso` ve `OrElse` *kısa*devre olarak bilinen bir davranış gösterir. Kısa devre dışı bir işleç, önce sol işleneni değerlendirir. Sol işlenen tüm ifadenin değerini belirlerse, program yürütmesi, doğru ifadeyi değerlendirmeden devam eder. Aşağıdaki örnek bunu göstermektedir.  
+ Mantıksal işleçler `AndAlso` ve `OrElse` *kısa* devre olarak bilinen bir davranış gösterir. Kısa devre dışı bir işleç, önce sol işleneni değerlendirir. Sol işlenen tüm ifadenin değerini belirlerse, program yürütmesi, doğru ifadeyi değerlendirmeden devam eder. Aşağıdaki örnek bunu göstermektedir.  
   
  [!code-vb[VbVbalrOperators#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#89)]  
   

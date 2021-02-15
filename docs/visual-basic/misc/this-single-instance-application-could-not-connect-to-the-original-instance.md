@@ -1,15 +1,16 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Bu tek örnekli uygulama özgün örneğe bağlanamadı'
 title: Bu tek örnekli uygulama özgün örneğe bağlanamadı
 ms.date: 07/20/2015
 f1_keywords:
 - vbrAppModel_SingleInstanceCantConnect
 ms.assetid: 7c2c0cee-02a1-4157-be03-39d18e18408f
-ms.openlocfilehash: 8e2caa158c3874d216671979430a03b11bf60066
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 123cf2cded43c10d0f538fc12f31f4065caeb6dd
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91095687"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100427939"
 ---
 # <a name="this-single-instance-application-could-not-connect-to-the-original-instance"></a>Bu tek örnekli uygulama özgün örneğe bağlanamadı
 

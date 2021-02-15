@@ -1,13 +1,14 @@
 ---
+description: "Daha fazla bilgi edinin: Visual Studio 'da Ifade ağaçlarında hata ayıklama (Visual Basic)"
 title: Visual Studio’da İfade Ağacı Hatalarını Ayıklama
 ms.date: 07/20/2015
 ms.assetid: 492cc28f-b7a2-4c47-b582-b3c437b8a5d5
-ms.openlocfilehash: ae37f9b8ca05ba915d394922b73c519273e2d415
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 0221533a79dbc76be479380bd9b6e6df4156e288
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086575"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100459090"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a>Visual Studio 'da Ifade ağaçlarında hata ayıklama (Visual Basic)
 

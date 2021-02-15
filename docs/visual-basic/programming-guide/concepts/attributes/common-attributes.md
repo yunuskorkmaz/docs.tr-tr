@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: ortak öznitelikler (Visual Basic)'
 title: Ortak Öznitelikler
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 57ef8f103d64a51d896f46d2889d78ec99ff3223
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 875554b69a23640c2d67367c93b56c34c286df37
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400725"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100437793"
 ---
 # <a name="common-attributes-visual-basic"></a>Ortak öznitelikler (Visual Basic)
 
@@ -23,7 +24,7 @@ Bu konuda Visual Basic programlarında en yaygın olarak kullanılan öznitelikl
 
 - [Visual Basic öznitelikleri](#VB)
 
-## <a name="global-attributes"></a><a name="Global"></a>Genel öznitelikler
+## <a name="global-attributes"></a><a name="Global"></a> Genel öznitelikler
 
 Çoğu öznitelik sınıflar veya yöntemler gibi belirli dil öğelerine uygulanır; Ancak, bazı öznitelikler geneldir, tüm derleme veya modül için geçerlidir. Örneğin, özniteliği aşağıdaki <xref:System.Reflection.AssemblyVersionAttribute> gibi bir derlemeye sürüm bilgisi eklemek için kullanılabilir:
 
@@ -43,7 +44,7 @@ Derleme öznitelikleri, bir derleme hakkında bilgi sağlayan değerlerdir. Bunl
 
 ### <a name="assembly-identity-attributes"></a>Bütünleştirilmiş kod kimliği öznitelikleri
 
-Üç öznitelik (varsa, güçlü bir ad varsa) bir derlemenin kimliğini belirleme: ad, sürüm ve kültür. Bu öznitelikler, derlemenin tam adını oluşturur ve kodda başvuru yaptığınızda gereklidir. Öznitelikleri kullanarak bir derlemenin sürümünü ve kültürünü ayarlayabilirsiniz. Bununla birlikte, ad değeri derleyici tarafından, derleme [bilgileri Iletişim kutusunda](/visualstudio/ide/reference/assembly-information-dialog-box)VISUAL Studio IDE veya derleme oluşturulduğunda derleme Bağlayıcısı (al. exe) tarafından ayarlanır. <xref:System.Reflection.AssemblyFlagsAttribute>Özniteliği, derlemenin birden çok kopyasının birlikte kullanılıp kullanılamayacağını belirtir.
+Üç öznitelik (varsa, güçlü bir ad varsa) bir derlemenin kimliğini belirleme: ad, sürüm ve kültür. Bu öznitelikler, derlemenin tam adını oluşturur ve kodda başvuru yaptığınızda gereklidir. Öznitelikleri kullanarak bir derlemenin sürümünü ve kültürünü ayarlayabilirsiniz. Bununla birlikte, ad değeri derleyici tarafından, derleme [bilgileri Iletişim kutusunda](/visualstudio/ide/reference/assembly-information-dialog-box)VISUAL Studio IDE veya bütünleştirilmiş kod bildirimini içeren dosya temelinde derleme bağlayıcı (Al.exe) olarak ayarlanır. <xref:System.Reflection.AssemblyFlagsAttribute>Özniteliği, derlemenin birden çok kopyasının birlikte kullanılıp kullanılamayacağını belirtir.
 
 Aşağıdaki tabloda kimlik öznitelikleri gösterilmektedir.
 
@@ -79,9 +80,9 @@ Derleme bildiriminde bilgi sağlamak için bütünleştirilmiş kod bildirim öz
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|Derleme bildirimi için bir derleme yapılandırması (perakende veya hata ayıklama) belirten özel bir öznitelik tanımlar.|
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|Bir derleme bildirimi için kolay bir varsayılan diğer ad tanımlar|
 
-## <a name="obsolete-attribute"></a><a name="Obsolete"></a>Kullanımdan kaldırılmış öznitelik
+## <a name="obsolete-attribute"></a><a name="Obsolete"></a> Kullanımdan kaldırılmış öznitelik
 
-`Obsolete`Özniteliği, bir program varlığını artık kullanım için önerilmeyen bir şekilde işaretler. Kullanımdan kalktı olarak işaretlenen bir varlığın her kullanımı, özniteliğin nasıl yapılandırıldığına bağlı olarak bir uyarı veya hata oluşturur. Örnek:
+`Obsolete`Özniteliği, bir program varlığını artık kullanım için önerilmeyen bir şekilde işaretler. Kullanımdan kalktı olarak işaretlenen bir varlığın her kullanımı, özniteliğin nasıl yapılandırıldığına bağlı olarak bir uyarı veya hata oluşturur. Örneğin:
 
 ```vb
 <System.Obsolete("use class B")>
@@ -120,9 +121,9 @@ Sınıf için iki uyarı `A` oluşturulur: biri sınıf başvurusunun bildirimi 
 
 `Obsolete`Öznitelik bağımsız değişkenler olmadan kullanılabilir, ancak öğenin neden kullanımdan kalkdığına ve bunun yerine ne tür bir açıklama dahil edilmesi önerilir.
 
-`Obsolete`Özniteliği tek kullanım özniteliğidir ve özniteliklere izin veren herhangi bir varlığa uygulanabilir. `Obsolete`, için bir diğer addır <xref:System.ObsoleteAttribute> .
+`Obsolete`Özniteliği tek kullanım özniteliğidir ve özniteliklere izin veren herhangi bir varlığa uygulanabilir. `Obsolete` , için bir diğer addır <xref:System.ObsoleteAttribute> .
 
-## <a name="conditional-attribute"></a><a name="Conditional"></a>Koşullu öznitelik
+## <a name="conditional-attribute"></a><a name="Conditional"></a> Koşullu öznitelik
 
 `Conditional`Özniteliği bir işlem ön işleme tanımlayıcısına bağımlı bir yöntemin yürütülmesini sağlar. `Conditional`Özniteliği için bir diğer addır <xref:System.Diagnostics.ConditionalAttribute> ve bir yönteme veya öznitelik sınıfına uygulanabilir.
 
@@ -218,13 +219,13 @@ Class SampleClass
 End Class
 ```
 
-## <a name="caller-info-attributes"></a><a name="CallerInfo"></a>Arayan bilgileri öznitelikleri
+## <a name="caller-info-attributes"></a><a name="CallerInfo"></a> Arayan bilgileri öznitelikleri
 
 Arayan Bilgisi özniteliklerini kullanarak bir yöntemin arayanı hakkında bilgi edinebilirsiniz. Kaynak kodun dosya yolunu, kaynak kodundaki satır numarasını ve arayanın üye adını elde edebilirsiniz.
 
 Üye çağıran bilgilerini almak için, isteğe bağlı parametrelere uygulanan öznitelikleri kullanırsınız. Her isteğe bağlı parametre varsayılan bir değer belirtir. Aşağıdaki tabloda, ad alanında tanımlanan arayan bilgileri öznitelikleri listelenmektedir <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> :
 
-|Öznitelik|Description|Tür|
+|Öznitelik|Açıklama|Tür|
 |---|---|---|
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Kaynak dosyasının arayanı içeren tam yolu. Bu, derleme zamanının yoludur.|`String`|
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Yöntemin çağrıldığı kaynak dosyadaki satır numarası.|`Integer`|
@@ -232,7 +233,7 @@ Arayan Bilgisi özniteliklerini kullanarak bir yöntemin arayanı hakkında bilg
 
 Arayan bilgileri öznitelikleri hakkında daha fazla bilgi için bkz. [arayan bilgileri (Visual Basic)](../caller-information.md).
 
-## <a name="visual-basic-attributes"></a><a name="VB"></a>Visual Basic öznitelikleri
+## <a name="visual-basic-attributes"></a><a name="VB"></a> Visual Basic öznitelikleri
 
 Aşağıdaki tablo Visual Basic özgü öznitelikleri listeler.
 

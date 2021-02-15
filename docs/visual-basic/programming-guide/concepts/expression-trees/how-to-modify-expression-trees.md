@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: Ifade ağaçlarını değiştirme (Visual Basic)'
 title: 'Nasıl Yapılır: İfade Ağaçlarını Değiştirme'
 ms.date: 07/20/2015
 ms.assetid: d1309fff-28bd-4d8e-a2cf-75725999e8f2
-ms.openlocfilehash: 1f052120a2e7e12f5a985adce3ae193afec0e9af
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 13098f5588fe44be8e57c9be52a9cfe5f7cd661f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410998"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100455916"
 ---
 # <a name="how-to-modify-expression-trees-visual-basic"></a>Nasıl yapılır: Ifade ağaçlarını değiştirme (Visual Basic)
 

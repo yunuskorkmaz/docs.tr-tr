@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Isteğe bağlı parametreler (Visual Basic)'
 title: İsteğe Bağlı Parametreler
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], optional
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
-ms.openlocfilehash: 73a51ab65a8ea4c38b6fd6737279fb19fb1cfe73
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 048f940f25fc05a66245e267ff23dc9845fcafdd
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071865"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100436142"
 ---
 # <a name="optional-parameters-visual-basic"></a>İsteğe Bağlı Parametreler (Visual Basic)
 
