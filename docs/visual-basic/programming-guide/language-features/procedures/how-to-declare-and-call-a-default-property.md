@@ -1,4 +1,5 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: nasıl yapılır: Visual Basic ' de varsayılan bir özellik bildirme ve çağırma"
 title: 'Nasıl yapılır: Varsayılan Bir Özelliği Bildirme ve Çağırma'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-ms.openlocfilehash: 21aa6e6a9bba23d767b9d1fac610eaac3265550d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 2a0e82fe89bb89613996f613930ace1aa6e41b7f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91087459"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100472455"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Nasıl yapılır: Visual Basic'de Varsayılan Bir Özelliği Bildirme ve Çağırma
 

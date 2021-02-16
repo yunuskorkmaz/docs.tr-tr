@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: döngü yapıları (Visual Basic)'
 title: Döngü Yapıları
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Do statement [Visual Basic], Do loops
 - conditional statements [Visual Basic], loop structures
 ms.assetid: ecacb09b-a4c9-42be-98b2-a15d368b5db8
-ms.openlocfilehash: 5019eaf219ad70f9c667356636d05ab69fc5a187
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 82ff36d8f5c05501fcff0f1d564e2613c9b78953
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077221"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100480654"
 ---
 # <a name="loop-structures-visual-basic"></a>Çevrim Yapıları (Visual Basic)
 
@@ -35,7 +36,7 @@ Visual Basic döngüsü yapıları, bir veya daha fazla kod kaldı satırını �
   
 ## <a name="for-loops"></a>Döngüler için  
 
- `For`... `Next` Oluşturma, döngüye bir dizi kez uygular. Tekrarları izlemek için *sayaç*olarak da adlandırılan bir döngü denetim değişkeni kullanır. Bu sayacın başlangıç ve bitiş değerlerini belirtirsiniz ve isteğe bağlı olarak bir tekrardan bir yinelemeden artarak miktarı belirtebilirsiniz. Daha fazla bilgi için bkz.... [ Sonraki Ifade](../../../language-reference/statements/for-next-statement.md).  
+ `For`... `Next` Oluşturma, döngüye bir dizi kez uygular. Tekrarları izlemek için *sayaç* olarak da adlandırılan bir döngü denetim değişkeni kullanır. Bu sayacın başlangıç ve bitiş değerlerini belirtirsiniz ve isteğe bağlı olarak bir tekrardan bir yinelemeden artarak miktarı belirtebilirsiniz. Daha fazla bilgi için bkz.... [ Sonraki Ifade](../../../language-reference/statements/for-next-statement.md).  
   
 ## <a name="for-each-loops"></a>Her döngü için  
 

@@ -1,15 +1,16 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: alfabetik olarak listelenen Visual Basic derleyici seçenekleri'
 title: Alfabetik Listelenmiş Derleyici Seçenekleri
 ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
-ms.openlocfilehash: d0dbe785edf7a9aa029d4be08a9b854cf1fb2b79
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 67967220f1293c40053472d4fc2f85d85d54118b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085301"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100483930"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Alfabetik olarak listelenen Visual Basic derleyici seçenekleri
 
@@ -29,9 +30,9 @@ Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme or
 |`-checksumalgorithm:<alg>`|PDB 'de depolanan kaynak dosyası sağlama toplamını hesaplamak için algoritmayı belirtin.  Desteklenen değerler şunlardır: SHA1 (varsayılan) veya SHA256. <br>Microsoft, SHA1 ile ilgili çakışma sorunları nedeniyle SHA256 veya daha iyi bir performans öneriyor.|  
 |[-codepage](codepage.md)|Derlemedeki tüm kaynak kodu dosyaları için kullanılacak kod sayfasını belirtir.|  
 |[-Hata Ayıkla](debug.md)|Hata ayıklama bilgileri üretir.|  
-|[-tanımla](define.md)|Koşullu derleme için sembolleri tanımlar.|  
+|[-define](define.md)|Koşullu derleme için sembolleri tanımlar.|  
 |[-delaysign](delaysign.md)|Derlemenin tamamen veya kısmen imzalanacağını belirtir.|  
-|[-deterministic](deterministic.md)|Girişlerin özdeş olması halinde, derleyicinin ikili içerik özdeş olan bir derlemeyi çıkış yapmasına neden olur.|
+|[-belirleyici](deterministic.md)|Girişlerin özdeş olması halinde, derleyicinin ikili içerik özdeş olan bir derlemeyi çıkış yapmasına neden olur.|
 |[-doc](doc.md)|Belge açıklamalarını bir XML dosyasına işler.|  
 |[-errorreport](errorreport.md)|Visual Basic derleyicisinin iç derleyici hatalarını nasıl rapor etmesi gerektiğini belirtir.|  
 |[-filealign](filealign.md)|Çıktı dosyasının bölümlerinin hangi noktada hizalanacağını belirtir.|  
@@ -43,7 +44,7 @@ Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme or
 |[-langversion](langversion.md)|Dil sürümünü belirtin: 9&#124;9,0&#124;10&#124;10,0&#124;11&#124;11,0.|  
 |[-libpath](libpath.md)|[-Reference](reference.md) seçeneğinin başvurduğu derlemelerin konumunu belirtir.|  
 |[-linkresource](linkresource.md)|Yönetilen bir kaynağa bir bağlantı oluşturur.|  
-|[-main](main.md)|Başlangıçta kullanılacak yordamı içeren sınıfı belirtir `Sub Main` .|  
+|[-Main](main.md)|Başlangıçta kullanılacak yordamı içeren sınıfı belirtir `Sub Main` .|  
 |[-moduleassemblyname](moduleassemblyname.md)|Modülün bir parçası olacağı derlemenin adını belirtir.|  
 |`-modulename:<string>`|Kaynak modülünün adını belirtin|  
 |[-netcf](netcf.md)|.NET Compact Framework hedeflemek için derleyiciyi ayarlar.|  
@@ -57,7 +58,7 @@ Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme or
 |[-optionexplicit](optionexplicit.md)|Değişkenlerin açık bildirimini uygular.|  
 |[-optioninfer](optioninfer.md)|Değişken bildirimlerinde yerel tür çıkarımı kullanımını mümkün.|  
 |[-optionstrict](optionstrict.md)|Katı dil semantiğini zorlar.|  
-|[-out](out.md)|Bir çıkış dosyasını belirtir.|  
+|[-Out](out.md)|Bir çıkış dosyasını belirtir.|  
 |<code>-parallel[+&#124;-]</code>|Eşzamanlı yapı (+) kullanılıp kullanılmayacağını belirtir.|  
 |[-Platform](platform.md)|Derleyicinin çıkış dosyası için hedeflediği işlemci platformunu belirtir.|  
 |`-preferreduilang`|Tercih edilen çıkış dili adını belirtin.|  
@@ -72,7 +73,7 @@ Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme or
 |`-ruleset:<file>`|Belirli tanılamayı devre dışı bırakan bir RuleSet dosyası belirtin.|  
 |[-sdkpath](sdkpath.md)|Mscorlib.dll ve Microsoft.VisualBasic.dll konumunu belirtir.|  
 |[-subsystemversion](subsystemversion.md)|Oluşturulan yürütülebilir dosyanın kullanabileceği alt sistemin en düşük sürümünü belirtir.|  
-|[-target](target.md)|Çıkış dosyasının biçimini belirtir.|  
+|[-hedef](target.md)|Çıkış dosyasının biçimini belirtir.|  
 |[-utf8output](utf8output.md)|UTF-8 kodlamasını kullanarak derleyici çıkışını görüntüler.|  
 |[-vbruntime](vbruntime.md)|Derleyicinin Visual Basic çalışma zamanı kitaplığına bir başvuru olmadan veya belirli bir çalışma zamanı kitaplığı başvurusuyla derlenmesi gerektiğini belirtir.|  
 |[-verbose](verbose.md)|Derleme sırasında ek bilgi verir.|  

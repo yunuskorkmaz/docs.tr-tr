@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Iç Içe denetim yapıları (Visual Basic)'
 title: İç İçe Geçmiş Denetim Yapıları
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: 290366d9d9428cefee108ac472fbe7c0eb66d82e
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 086e1201cab3ea133b01a003de58f8d3e67bfc44
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91084170"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100473608"
 ---
 # <a name="nested-control-structures-visual-basic"></a>İç İçe Geçmiş Denetim Yapıları (Visual Basic)
 
-Denetim deyimlerini diğer denetim deyimlerinin içine yerleştirebilirsiniz. Örneğin, `If...Then...Else` bir döngü içindeki bir blok `For...Next` . Başka bir denetim ifadesinin içine yerleştirilmiş bir denetim ifadesinin *iç içe*olduğu söylenir.  
+Denetim deyimlerini diğer denetim deyimlerinin içine yerleştirebilirsiniz. Örneğin, `If...Then...Else` bir döngü içindeki bir blok `For...Next` . Başka bir denetim ifadesinin içine yerleştirilmiş bir denetim ifadesinin *iç içe* olduğu söylenir.  
   
 ## <a name="nesting-levels"></a>İç içe düzeyler  
 

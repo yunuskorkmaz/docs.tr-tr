@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: Özellik oluşturma (Visual Basic)'
 title: 'Nasıl yapılır: Özellik Oluşturma'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
-ms.openlocfilehash: bd138177d5f4b7ee1eb63833360d227baa54f66d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: cf6c76f6a6284cf055f16cf3973da1bb1c54e48d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072749"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100472481"
 ---
 # <a name="how-to-create-a-property-visual-basic"></a>Nasıl yapılır: Özellik Oluşturma (Visual Basic)
 

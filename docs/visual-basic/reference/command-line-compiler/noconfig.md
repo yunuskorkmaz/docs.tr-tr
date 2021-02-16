@@ -1,4 +1,5 @@
 ---
+description: :-Noconfig hakkında daha fazla bilgi edinin
 title: -noconfig
 ms.date: 03/13/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - -noconfig compiler option [Visual Basic]
 - /noconfig compiler option [Visual Basic]
 ms.assetid: a7405067-bd21-4171-adf4-a126fa3ad6c3
-ms.openlocfilehash: d7fc73aa24e3d2e323170f38f0f5d689f9c3abaf
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e97d44427b537e73a404a47d30db202e2c3b1f41
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91065560"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100481694"
 ---
 # <a name="-noconfig"></a>-noconfig
 
@@ -40,6 +41,6 @@ Derleyicinin yaygın olarak kullanılan .NET Framework derlemelerine otomatik ol
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [-nostdlib (Visual Basic)](nostdlib.md)
-- [Visual Basic komut satırı derleyicisi](index.md)
+- [Visual Basic Command-Line derleyicisi](index.md)
 - [@ (Yanıt Dosyasını Belirtin)](specify-response-file.md)
 - [-başvuru (Visual Basic)](reference.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: yapılar ve diğer programlama öğeleri (Visual Basic)'
 title: Yapılar ve Diğer Programlama Öğeleri
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], structure elements
 - nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-ms.openlocfilehash: 26c98adda7305783b0220141db35b08285b21554
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 62052389b617849566a3cd0c475a2eb5da9e61ca
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91084092"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100430592"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>Yapılar ve Diğer Programlama Öğeleri (Visual Basic)
 
@@ -85,7 +86,7 @@ Public Sub fillSystem(ByRef someSystem As systemInfo)
 End Sub  
 ```  
   
- Önceki örnek, yapıyı *başvuruya göre*geçirir, bu da değişikliklerin çağıran kodda etkili olması için öğelerini değiştirmesine olanak tanır. Bir yapıyı bu değişikliğe karşı korumak istiyorsanız, değere göre geçirin.  
+ Önceki örnek, yapıyı *başvuruya göre* geçirir, bu da değişikliklerin çağıran kodda etkili olması için öğelerini değiştirmesine olanak tanır. Bir yapıyı bu değişikliğe karşı korumak istiyorsanız, değere göre geçirin.  
   
  Ayrıca, bir yordamdan bir yapı da döndürebilirsiniz `Function` . Aşağıdaki örnek bunu göstermektedir.  
   
@@ -132,7 +133,7 @@ allSystems(1).diskDrives(0).type = "Floppy"
 - [Veri türleri](index.md)
 - [Başlangıç Veri Türleri](elementary-data-types.md)
 - [Bileşik Veri Türleri](composite-data-types.md)
-- [Değer Türleri ve Başvuru Türleri](value-types-and-reference-types.md)
+- [Değer türleri ve başvuru türleri](value-types-and-reference-types.md)
 - [Yapılar](structures.md)
 - [Veri Türü Sorunlarını Giderme](troubleshooting-data-types.md)
 - [Nasıl yapılır: Yapıyı Bildirme](how-to-declare-a-structure.md)

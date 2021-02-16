@@ -1,28 +1,29 @@
 ---
+description: 'Daha fazla bilgi edinin: COM birlikte çalışabilirliğine giriş (Visual Basic)'
 title: COM Birlikte Çalışma'ya Giriş
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interop assemblies
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
-ms.openlocfilehash: 7bfbf0c6de8519e91a458ab4cbb5693024cdbeb2
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 86741958e63263f0788384a1261063d71d16df16
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090397"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100480797"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>COM Birlikte Çalışma'ya Giriş (Visual Basic)
 
 Bileşen nesne modeli (COM), bir nesnenin işlevselliğini diğer bileşenlere sunma ve uygulamaları barındırmasına imkan tanır. COM nesneleri birçok yıl için Windows programlamasında temel alınırken, ortak dil çalışma zamanı (CLR) için tasarlanan uygulamalar birçok avantaj sunar.  
   
- .NET Framework uygulamalar, son olarak COM ile geliştirilen bu bunların yerini alır. Böylece, Visual Studio 'Yu kullanarak COM nesneleri kullanmanız veya oluşturmanız gerekebilir. COM veya *com*birlikte çalışabilirliğiyle birlikte çalışabilirlik, mevcut com nesnelerini kendi hızınızda .NET Framework geçiş yaparken kullanmanıza olanak sağlar.  
+ .NET Framework uygulamalar, son olarak COM ile geliştirilen bu bunların yerini alır. Böylece, Visual Studio 'Yu kullanarak COM nesneleri kullanmanız veya oluşturmanız gerekebilir. COM veya *com* birlikte çalışabilirliğiyle birlikte çalışabilirlik, mevcut com nesnelerini kendi hızınızda .NET Framework geçiş yaparken kullanmanıza olanak sağlar.  
   
  COM bileşenleri oluşturmak için .NET Framework kullanarak kayıtsız COM birlikte çalışma kullanabilirsiniz. Bu, bir bilgisayara birden fazla sürüm yüklendiğinde hangi DLL sürümünün etkinleştirildiğini denetlemenize olanak tanır ve son kullanıcıların, bir bilgisayar üzerinde çalıştırılabileceği uygun bir dizine kopyalamak için XCOPY veya FTP kullanmasına izin verir. Daha fazla bilgi için bkz. [KAYıTSıZ com birlikte çalışma](../../../framework/interop/registration-free-com-interop.md).  
   
 ## <a name="managed-code-and-data"></a>Yönetilen kod ve veriler  
 
- .NET Framework için geliştirilen kod, *yönetilen kod*olarak ADLANDıRıLıR ve CLR tarafından kullanılan meta verileri içerir. .NET Framework uygulamalar tarafından kullanılan verilere *yönetilen veriler* denir çünkü çalışma zamanı, bellek ayırma ve geri kazanma ve tür denetimi gerçekleştirme gibi verilerle ilgili görevleri yönetir. Varsayılan olarak, Visual Basic .NET yönetilen kod ve verileri kullanır, ancak birlikte çalışma derlemelerini (Bu sayfada daha sonra açıklanan) kullanarak COM nesnelerinin yönetilmeyen koduna ve verilerine erişebilirsiniz.  
+ .NET Framework için geliştirilen kod, *yönetilen kod* olarak ADLANDıRıLıR ve CLR tarafından kullanılan meta verileri içerir. .NET Framework uygulamalar tarafından kullanılan verilere *yönetilen veriler* denir çünkü çalışma zamanı, bellek ayırma ve geri kazanma ve tür denetimi gerçekleştirme gibi verilerle ilgili görevleri yönetir. Varsayılan olarak, Visual Basic .NET yönetilen kod ve verileri kullanır, ancak birlikte çalışma derlemelerini (Bu sayfada daha sonra açıklanan) kullanarak COM nesnelerinin yönetilmeyen koduna ve verilerine erişebilirsiniz.  
   
 ## <a name="assemblies"></a>Bütünleştirilmiş Kodlar  
 

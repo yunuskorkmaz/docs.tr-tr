@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: bir nesne değişkeninin hangi türe başvurduğunu belirleme (Visual Basic)'
 title: 'Nasıl yapılır: Bir Nesne Değişkeninin Hangi Türe Başvurduğunu Belirleme'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - variables [Visual Basic], object
 - object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
-ms.openlocfilehash: d3224000f5958a8619e38c4d2f6dc5dbb275ad45
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 699a8c5c075fc923a61a66f617c255f193cd8797
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410496"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100481928"
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>Nasıl yapılır: Bir Nesne Değişkeninin Hangi Türe Başvurduğunu Belirleme (Visual Basic)
 
@@ -38,7 +39,7 @@ Bir nesne değişkeni, başka bir yerde depolanan veriler için bir işaretçi i
 
 ### <a name="to-determine-whether-an-object-variables-type-is-compatible-with-a-specified-type"></a>Bir nesne değişkeninin türünün belirtilen tür ile uyumlu olup olmadığını belirleme
 
-- `TypeOf`Nesneyi bir [Is Operator](../../../language-reference/operators/is-operator.md) `TypeOf` ... ifadesi Ile test etmek için, işleç işleç ile birlikte kullanın `Is` .
+- `TypeOf`Nesneyi bir [](../../../language-reference/operators/is-operator.md) `TypeOf` ... ifadesi Ile test etmek için, işleç işleç ile birlikte kullanın `Is` .
 
     ```vb
     If TypeOf objA Is System.Windows.Forms.Control Then

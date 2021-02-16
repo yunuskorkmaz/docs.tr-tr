@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi: değiştirilebilir ve değiştirilemeyen bağımsız değişkenler arasındaki farklar (Visual Basic)'
 title: Değiştirilebilir ve Değiştirilemez Bağımsız Değişkenler Arasındaki Farklar
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - arguments [Visual Basic], modifiable
 ms.assetid: 87b2df69-e1f7-4657-9caf-b3f48d693428
-ms.openlocfilehash: 662ad3039bb3fd5c44847d5b2a97a033a18ad063
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 8d83802b4b8830a17412fdef44eabd2e5b8a7f2d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071969"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100472637"
 ---
 # <a name="differences-between-modifiable-and-nonmodifiable-arguments-visual-basic"></a>Değiştirilebilir ve Değiştirilemez Bağımsız Değişkenler Arasındaki Farklar (Visual Basic)
 
@@ -21,7 +22,7 @@ Bir yordamı çağırdığınızda, genellikle bir veya daha fazla bağımsız d
   
 ## <a name="modifiable-and-nonmodifiable-elements"></a>Değiştirilebilir ve değiştirilemeyen öğeler  
 
- Bir programlama öğesi, değeri değişmiş olabilen *değiştirilebilir bir öğe*ya da oluşturulduktan sonra sabit bir değere sahip *değiştirilemeyen bir öğe*olabilir.  
+ Bir programlama öğesi, değeri değişmiş olabilen *değiştirilebilir bir öğe* ya da oluşturulduktan sonra sabit bir değere sahip *değiştirilemeyen bir öğe* olabilir.  
   
  Aşağıdaki tabloda değiştirilebilir ve değiştirilemeyen programlama öğeleri listelenmektedir.  
   
@@ -51,4 +52,4 @@ Bir yordamı çağırdığınızda, genellikle bir veya daha fazla bağımsız d
 - [Nasıl yapılır: Bir Yordam Bağımsız Değişkenini Değer Değişikliklerine Karşı Koruma](./how-to-protect-a-procedure-argument-against-value-changes.md)
 - [Nasıl yapılır: Bağımsız Değişkeni Değere Göre Geçirilecek Şekilde Zorlama](./how-to-force-an-argument-to-be-passed-by-value.md)
 - [Bağımsız Değişkenleri Konuma ve Ada Göre Geçirme](./passing-arguments-by-position-and-by-name.md)
-- [Değer Türleri ve Başvuru Türleri](../data-types/value-types-and-reference-types.md)
+- [Değer türleri ve başvuru türleri](../data-types/value-types-and-reference-types.md)
