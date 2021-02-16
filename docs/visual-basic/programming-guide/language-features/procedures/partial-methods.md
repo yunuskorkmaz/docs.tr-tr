@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: kısmi Yöntemler (Visual Basic)'
 title: Kısmi Yöntemler
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - methods [Visual Basic], partial methods
 - inserting custom logic into code
 ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
-ms.openlocfilehash: 0e7c1315df50e83c919270f76405e80862bdd03b
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: d9be2d318ca0da9e1197949c88db5332832bdb3b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071267"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100466724"
 ---
 # <a name="partial-methods-visual-basic"></a>Kısmi Yöntemler (Visual Basic)
 

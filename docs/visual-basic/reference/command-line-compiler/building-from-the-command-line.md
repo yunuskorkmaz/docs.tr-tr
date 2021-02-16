@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: komut satırından oluşturma (Visual Basic)'
 title: Komut Satırından Derleme
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - command-line compilers [Visual Basic], Visual Basic
 - command line [Visual Basic], Visual Basic
 ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
-ms.openlocfilehash: ec6ae3328c2042af950d1ee78a33d3de97219f10
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5f0f8dd61bd5b79987cc1e59dcf4bfd8071a925e
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414304"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468271"
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>Komut Satırından Derleme (Visual Basic)
 
@@ -35,7 +36,7 @@ MSBuild kullanarak, bir komut isteminde proje (. vbproj) dosyalarını derleyebi
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
-[Nasıl yapılır: komut satırı derleyicisini çağırma](how-to-invoke-the-command-line-compiler.md) \
+[Nasıl yapılır: Command-Line derleyicisini çağırma](how-to-invoke-the-command-line-compiler.md) \
 Komut satırı derleyicisinin MS-DOS isteminde veya belirli bir alt dizinden nasıl çağırılacağını açıklar.
 
 [Örnek derleme komut satırları](sample-compilation-command-lines.md) \
@@ -43,7 +44,7 @@ Kendi kullanımı için değiştirebileceğiniz örnek komut satırlarının bir
 
 ## <a name="related-sections"></a>İlgili Bölümler
 
-[Visual Basic komut satırı derleyicisi](index.md) \
+[Visual Basic Command-Line derleyicisi](index.md) \
 Alfabetik olarak veya amacına göre düzenlenmiş derleyici seçeneklerinin listesini sağlar.
 
 [Koşullu derleme](../../programming-guide/program-structure/conditional-compilation.md) \

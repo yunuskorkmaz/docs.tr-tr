@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: hedef klasör bir dosya'
 title: Hedef klasör bir dosya
 ms.date: 07/20/2015
 ms.assetid: c5e40bcb-2414-4484-b2b9-a9c391ad0029
-ms.openlocfilehash: 4885c4c5c6162dc527fcbc643f4770cafe00f17a
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 52525bc2422e913457e2597086139b19931b510c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078625"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100455372"
 ---
 # <a name="target-folder-is-a-file"></a>Hedef klasör bir dosya
 

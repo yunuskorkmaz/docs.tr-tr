@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Izlenecek yol: arabirimleri oluşturma ve uygulama (Visual Basic)'
 title: Arabirimleri Oluşturma ve Uygulama
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - interface implementation [Visual Basic], walkthrough
 - interfaces [Visual Basic], creating
 ms.assetid: ded82af2-9f52-4232-98ef-fe458180f112
-ms.openlocfilehash: 89e8f91a04b25b84bc783d5c4f4b91cf12426f72
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 058011d311fdecba626a59228816f9bced319c97
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405073"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468427"
 ---
 # <a name="walkthrough-creating-and-implementing-interfaces-visual-basic"></a>İzlenecek yol: Arabirimleri Oluşturma ve Uygulama (Visual Basic)
 
@@ -83,7 +84,7 @@ Arabirimler özellikler, Yöntemler ve olayların özelliklerini ve uygulama ayr
   
 ### <a name="to-test-the-implementation-of-the-interface"></a>Arabirimin uygulamasını test etmek için
   
-1. **Çözüm Gezgini**projenizin başlangıç formuna sağ tıklayın ve **kodu görüntüle**' ye tıklayın. Düzenleyici, başlangıç formunuz için sınıfını görüntüler. Varsayılan olarak, başlangıç formu çağırılır `Form1` .  
+1. **Çözüm Gezgini** projenizin başlangıç formuna sağ tıklayın ve **kodu görüntüle**' ye tıklayın. Düzenleyici, başlangıç formunuz için sınıfını görüntüler. Varsayılan olarak, başlangıç formu çağırılır `Form1` .  
   
 2. `testInstance`Sınıfına aşağıdaki alanı ekleyin `Form1` :  
   

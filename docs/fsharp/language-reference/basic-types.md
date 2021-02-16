@@ -2,12 +2,12 @@
 title: Temel Türler
 description: 'F # dilinde kullanılan temel temel türleri bulur.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 659ac8424c62985affcca1741e1b2a74c9c3ee8d
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 2bfc9ba9370cb8ba1fcc1d42369c2551cbb57623
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557704"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100456919"
 ---
 # <a name="basic-types"></a>Temel türler
 
@@ -34,7 +34,7 @@ Bu konu, F # dilinde tanımlanan temel türleri listeler. Bu türler, neredeyse 
 |`unit`|uygulanamaz|Gerçek değerin yokluğunu gösterir. Türün yalnızca bir biçimsel değeri vardır ve bu değer gösterilir `()` . Birim değeri, `()` genellikle bir değerin gerekli olduğu ancak gerçek bir değer kullanılabilir olmayan bir yer tutucu olarak kullanılır veya anlamlı olur.|`()`|
 
 > [!NOTE]
-> [Tamsayı türü kullanılarak](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-bigint.html) 64 bitlik tamsayı türü için çok büyük tamsayılar içeren hesaplamalar yapabilirsiniz. `bigint` temel tür olarak kabul edilmez; için bir kısaltmadır `System.Numerics.BigInteger` .
+> Türü kullanılarak 64 bitlik tamsayı türü için çok büyük tamsayılarla hesaplamalar yapabilirsiniz `bigint` . `bigint` temel tür olarak kabul edilmez; için bir kısaltmadır `System.Numerics.BigInteger` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

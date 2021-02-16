@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: verileri sıralama (Visual Basic)'
 title: Verileri Sıralama
 ms.date: 07/20/2015
 ms.assetid: 6f81065c-0c89-4bf3-a6d8-442273f8810e
-ms.openlocfilehash: a5ccff745995ed7f41731cf98fb7c49d3247d994
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 83e05b2af1b3421d004a87630cd5df43f2a21ae4
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406800"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468557"
 ---
 # <a name="sorting-data-visual-basic"></a>Verileri sıralama (Visual Basic)
 
@@ -151,6 +152,6 @@ MsgBox(sb.ToString())
 
 - <xref:System.Linq>
 - [Standart sorgu Işleçlerine genel bakış (Visual Basic)](standard-query-operators-overview.md)
-- [Order By Yan Tümcesi](../../../language-reference/queries/order-by-clause.md)
+- [Order by yan tümcesi](../../../language-reference/queries/order-by-clause.md)
 - [Nasıl yapılır: sorgu sonuçlarını sıralama](../../language-features/linq/how-to-sort-query-results-by-using-linq.md)
 - [Nasıl yapılır: herhangi bir sözcük veya alana göre metin verilerini sıralama veya filtreleme (LINQ) (Visual Basic)](how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

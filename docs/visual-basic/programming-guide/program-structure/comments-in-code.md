@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: koddaki açıklamalar (Visual Basic)'
 title: Kod Açıklamaları
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -14,16 +15,16 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: b0077bdae3bad1d67c3d26e503d05f318982eb80
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 66e12a18c2532bb5b694affccb84153f01bcddd5
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91099027"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100461937"
 ---
 # <a name="comments-in-code-visual-basic"></a>Kod Açıklamaları (Visual Basic)
 
-Kod örneklerini okurken genellikle açıklama simgesiyle ( `'` ) karşılaşırsınız. Bu simge, Visual Basic derleyicisine onu izleyen metni veya *yorumu*yoksaymasını söyler. Açıklamalar, okuyan kişinin yararına olması için koda eklenmiş kısa ve açıklayıcı notlardır.  
+Kod örneklerini okurken genellikle açıklama simgesiyle ( `'` ) karşılaşırsınız. Bu simge, Visual Basic derleyicisine onu izleyen metni veya *yorumu* yoksaymasını söyler. Açıklamalar, okuyan kişinin yararına olması için koda eklenmiş kısa ve açıklayıcı notlardır.  
   
  Tüm yordamlara, ilgili yordamın işlevsel özelliklerini (neler yaptığını) açıklayan kısa bir açıklama ile başlanması iyi bir programlama uygulamasıdır. Bu hem sizin yararınıza, hem de kodu inceleyen herhangi bir kişinin yararına olur. Gerçekleştirme ayrıntılarını (yordamın bunu nasıl yaptığı), işlevsel özellikleri anlatan açıklamalardan ayırmalısınız. Açıklamaya gerçekleştirme ayrıntılarını eklediğinizde, işlevi güncelleştirirken bunları da güncelleştirmeyi unutmayın.  
   
@@ -56,10 +57,10 @@ Kod örneklerini okurken genellikle açıklama simgesiyle ( `'` ) karşılaşır
   
 - Açıklamalar, aynı satırdaki bir satır devamlılığı dizisinden sonra gelemez.  
   
- Bir veya daha fazla kod satırı seçip **Açıklama** ( ![ visual Studio 'da Visual Basic Açıklama düğmesi) seçerek ve ](./media/comments-in-code/visual-basic-comment-button.gif) **Uncomment** ![ ](./media/comments-in-code/visual-basic-uncomment-button.gif) **düzenleme** araç çubuğundaki açıklamayı (Visual Studio 'da yorum düğmesi Visual Basic) seçerek bir kod bloğu için açıklama sembolleri ekleyebilir veya kaldırabilirsiniz.  
+ Bir veya daha fazla kod satırı seçip **Açıklama** ( ![ visual Studio 'da Visual Basic Açıklama düğmesi) seçerek ve ](./media/comments-in-code/visual-basic-comment-button.gif)  ![ ](./media/comments-in-code/visual-basic-uncomment-button.gif) **düzenleme** araç çubuğundaki açıklamayı (Visual Studio 'da yorum düğmesi Visual Basic) seçerek bir kod bloğu için açıklama sembolleri ekleyebilir veya kaldırabilirsiniz.  
   
 > [!NOTE]
-> Ayrıca, metin anahtar sözcüğüyle metinden önce kodunuza yorum ekleyebilirsiniz `REM` . Ancak `'` simge ve **Açıklama açıklama**ekleme / **Uncomment** düğmelerinin kullanımı daha kolaydır ve daha az alan ve bellek gerektirir.  
+> Ayrıca, metin anahtar sözcüğüyle metinden önce kodunuza yorum ekleyebilirsiniz `REM` . Ancak `'` simge ve **Açıklama açıklama** ekleme /  düğmelerinin kullanımı daha kolaydır ve daha az alan ve bellek gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

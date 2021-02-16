@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: erken ve geç bağlama (Visual Basic)'
 title: Erken ve Geç Bağlama
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - late binding [Visual Basic], Visual Basic compiler
 ms.assetid: d6ff7f1e-b94f-4205-ab8d-5cfa91758724
-ms.openlocfilehash: ce74498225fb7947c92f2f4f61ec46e6b2594151
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 1cdffe70035630ec56de04c54d7861283e1b5599
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086016"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100475636"
 ---
 # <a name="early-and-late-binding-visual-basic"></a>Erken ve Geç Bağlama (Visual Basic)
 

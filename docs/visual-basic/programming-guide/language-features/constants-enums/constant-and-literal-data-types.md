@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: sabit ve değişmez değerli veri türleri (Visual Basic)'
 title: Sabit ve Değişmez Değerli Veri Türleri
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - literals [Visual Basic], coercing data type
 - declarations [Visual Basic], data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
-ms.openlocfilehash: 03d693653cd166bbf1096031f1a864b492e2e896
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e750b1e5746f935c7878e186d064060d0fa055dc
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086302"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100475441"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>Sabit ve Değişmez Değerli Veri Türleri (Visual Basic)
 

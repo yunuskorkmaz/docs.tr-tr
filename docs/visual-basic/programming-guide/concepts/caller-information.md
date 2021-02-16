@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: arayan bilgileri (Visual Basic)'
 title: Arayan Bilgileri
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-ms.openlocfilehash: 33c7367626d66d1db2705fc2882ca0780d1b867f
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: bcb4f553a9840a76f24825c3c2b7e2e98914abc2
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090358"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100437715"
 ---
 # <a name="caller-information-visual-basic"></a>Arayan bilgileri (Visual Basic)
 

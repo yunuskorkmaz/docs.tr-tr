@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: yineleyiciler (Visual Basic)'
 title: Yineleyiciler
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
-ms.openlocfilehash: e638d35aeb86837d91fb14681d300772e3c2375a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9d12bd436a976e3f84dbd063ca746fc7e3b17bfb
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410935"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100462158"
 ---
 # <a name="iterators-visual-basic"></a>Yineleyiciler (Visual Basic)
 
@@ -62,9 +63,9 @@ Yineleyiciler, Visual Studio 2012 ' de Visual Basic sunulmuştur.
 - [Yineleyicilerin kullanımı](#BKMK_UseOfIterators)
 
 > [!NOTE]
-> Konunun basit Yineleyici örneği hariç tüm örnekleri için, [Imports](../../language-reference/statements/imports-statement-net-namespace-and-type.md) `System.Collections` ve ad alanları için Imports deyimlerini ekleyin `System.Collections.Generic` .
+> Konunun basit Yineleyici örneği hariç tüm örnekleri için, [](../../language-reference/statements/imports-statement-net-namespace-and-type.md) `System.Collections` ve ad alanları için Imports deyimlerini ekleyin `System.Collections.Generic` .
 
-## <a name="simple-iterator"></a><a name="BKMK_SimpleIterator"></a>Basit Yineleyici
+## <a name="simple-iterator"></a><a name="BKMK_SimpleIterator"></a> Basit Yineleyici
 
 Aşağıdaki örnek, Için içinde olan tek bir `Yield` ifadeye sahiptir [... Sonraki](../../language-reference/statements/for-next-statement.md) döngü. ' De `Main` , `For Each` ifade gövdesinin her yinelemesi bir sonraki ifadeye devam eden Yineleyici işlevine bir çağrı oluşturur `Yield` .
 
@@ -90,7 +91,7 @@ As System.Collections.Generic.IEnumerable(Of Integer)
 End Function
 ```
 
-## <a name="creating-a-collection-class"></a><a name="BKMK_CollectionClass"></a>Koleksiyon sınıfı oluşturma
+## <a name="creating-a-collection-class"></a><a name="BKMK_CollectionClass"></a> Koleksiyon sınıfı oluşturma
 
 Aşağıdaki örnekte, `DaysOfTheWeek` sınıfı <xref:System.Collections.IEnumerable> bir yöntemi gerektiren arabirimini uygular <xref:System.Collections.IEnumerable.GetEnumerator%2A> . Derleyici, `GetEnumerator` bir döndüren yöntemini dolaylı olarak çağırır <xref:System.Collections.IEnumerator> .
 
@@ -216,7 +217,7 @@ Public Class Zoo
 End Class
 ```
 
-## <a name="try-blocks"></a><a name="BKMK_TryBlocks"></a>TRY blokları
+## <a name="try-blocks"></a><a name="BKMK_TryBlocks"></a> TRY blokları
 
 Visual Basic `Yield` try bloğundaki bir ifadeye izin verir `Try` [... Yakala... Finally ekstresi](../../language-reference/statements/try-catch-finally-statement.md). `Try`Bir deyime sahip bir blok `Yield` blokları olabilir `Catch` ve bir bloğuna sahip olabilir `Finally` .
 
@@ -257,7 +258,7 @@ Bir `Yield` ifade bir `Catch` blok veya blok içinde olamaz `Finally` .
 
 `For Each`Gövde (yineleyici yöntemi yerine) bir özel durum oluşturursa, `Catch` Yineleyici işlevindeki bir blok yürütülmez, ancak `Finally` Yineleyici işlevindeki bir blok yürütülür. `Catch`Yineleyici işlevi içindeki bir blok yalnızca Yineleyici işlevinin içinde oluşan özel durumları yakalar.
 
-## <a name="anonymous-methods"></a><a name="BKMK_AnonymousMethods"></a>Anonim Yöntemler
+## <a name="anonymous-methods"></a><a name="BKMK_AnonymousMethods"></a> Anonim Yöntemler
 
 Visual Basic, anonim bir işlev bir yineleyici işlevi olabilir. Aşağıdaki örnek bunu göstermektedir.
 
@@ -308,7 +309,7 @@ End Function
 
 Doğrulama işlemi Yineleyici işlevi içinde ise, gövdenin ilk yinelemesinin başlangıcına kadar doğrulama gerçekleştirilemez `For Each` .
 
-## <a name="using-iterators-with-a-generic-list"></a><a name="BKMK_GenericList"></a>Bir genel liste ile yineleyiciler kullanma
+## <a name="using-iterators-with-a-generic-list"></a><a name="BKMK_GenericList"></a> Bir genel liste ile yineleyiciler kullanma
 
 Aşağıdaki örnekte, `Stack(Of T)` Genel sınıf <xref:System.Collections.Generic.IEnumerable%601> genel arabirimini uygular. `Push`Yöntemi, türü bir diziye değerler atar `T` . <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A>Yöntemi, ifadesini kullanarak dizi değerlerini döndürür `Yield` .
 
@@ -419,7 +420,7 @@ Public Class Stack(Of T)
 End Class
 ```
 
-## <a name="syntax-information"></a><a name="BKMK_SyntaxInformation"></a>Sözdizimi bilgileri
+## <a name="syntax-information"></a><a name="BKMK_SyntaxInformation"></a> Sözdizimi bilgileri
 
 Yineleyici bir yöntem veya erişimci olarak gerçekleşebilir `get` . Bir olay, örnek Oluşturucu, statik oluşturucu veya statik yok edicisi içinde yineleyici olamaz.
 
@@ -429,11 +430,11 @@ Visual Basic, yineleyici yöntemi herhangi bir parametreye sahip olamaz `ByRef` 
 
 Visual Basic, "yield" ayrılmış bir sözcük değildir ve yalnızca bir `Iterator` yöntemde veya erişimcisinde kullanıldığında özel anlamı vardır `get` .
 
-## <a name="technical-implementation"></a><a name="BKMK_Technical"></a>Teknik uygulama
+## <a name="technical-implementation"></a><a name="BKMK_Technical"></a> Teknik uygulama
 
 Bir yineleyici Yöntem olarak yazdığınızda, derleyici onu bir durum makinesi olan bir iç içe geçmiş sınıfa çevirir. Bu sınıf, `For Each...Next` istemci kodundaki döngü devam ettiğinde yineleyicinin konumunu izler.
 
-Derleyicinin ne yaptığını görmek için, bir yineleyici yöntemi için oluşturulan Microsoft ara dil kodunu görüntülemek için ıldadsm. exe aracını kullanabilirsiniz.
+Derleyicinin ne yaptığını görmek için Ildasm.exe aracını kullanarak bir yineleyici yöntemi için oluşturulan Microsoft ara dil kodunu görüntüleyebilirsiniz.
 
 Bir [sınıf](../../language-reference/statements/class-statement.md) veya [Yapı](../../language-reference/statements/structure-statement.md)için Yineleyici oluşturduğunuzda, tüm arabirimini uygulamanız gerekmez <xref:System.Collections.IEnumerator> . Derleyici yineleyiciyi algıladığında, `Current` `MoveNext` veya arabiriminin,, ve yöntemlerini otomatik olarak oluşturur `Dispose` <xref:System.Collections.IEnumerator> <xref:System.Collections.Generic.IEnumerator%601> .
 
@@ -443,7 +444,7 @@ Yineleyiciler <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=name
 
 Daha fazla bilgi için [Visual Basic dil belirtimine](../../reference/language-specification/index.md)bakın.
 
-## <a name="use-of-iterators"></a><a name="BKMK_UseOfIterators"></a>Yineleyicilerin kullanımı
+## <a name="use-of-iterators"></a><a name="BKMK_UseOfIterators"></a> Yineleyicilerin kullanımı
 
 Yineleyiciler, `For Each` bir liste dizisini doldurmak için karmaşık kod kullanmanız gerektiğinde bir döngünün basitliğini korumanıza olanak sağlar. Bu, aşağıdakileri yapmak istediğinizde yararlı olabilir:
 

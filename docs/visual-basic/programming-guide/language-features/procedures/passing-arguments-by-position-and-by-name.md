@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: bağımsız değişkenleri konuma ve ada göre geçirme (Visual Basic)'
 title: Bağımsız Değişkenleri Konuma ve Ada Göre Geçirme
 ms.date: 02/01/2018
 helpviewer_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - argument passing [Visual Basic], by position
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
-ms.openlocfilehash: 686b64977f086c8128e56298a0ed8c5aa0c51efa
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2938638bbdeb411bec53f338371d4215140dc4a0
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84364038"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100466698"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>Bağımsız Değişkenleri Konuma ve Ada Göre Geçirme (Visual Basic)
 
-Bir `Sub` veya `Function` yordamını çağırdığınızda, bağımsız değişkenleri, yordamın tanımında göründükleri sırada, *konuma göre* geçirebilirsiniz veya konuma *göre onları ada göre*geçirebilirsiniz.
+Bir `Sub` veya `Function` yordamını çağırdığınızda, bağımsız değişkenleri, yordamın tanımında göründükleri sırada, *konuma göre* geçirebilirsiniz veya konuma *göre onları ada göre* geçirebilirsiniz.
 
 Bir bağımsız değişkeni adına göre geçirdiğinizde, bağımsız değişkenin belirtilen adını, ardından iki nokta üst üste ve eşittir işaretini ( `:=` ) ve ardından bağımsız değişken değerini belirtirsiniz. Adlandırılmış bağımsız değişkenleri istediğiniz sırada sağlayabilirsiniz.
 
@@ -105,5 +106,5 @@ Bir parametre dizisini ada göre geçiremezsiniz. Bunun nedeni, yordamı çağı
 - [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](./passing-arguments-by-value-and-by-reference.md)
 - [İsteğe Bağlı Parametreler](./optional-parameters.md)
 - [Parametre Dizileri](./parameter-arrays.md)
-- [İsteğe Bağlı](../../../language-reference/modifiers/optional.md)
+- [İsteğe bağlı](../../../language-reference/modifiers/optional.md)
 - [ParamArray](../../../language-reference/modifiers/paramarray.md)

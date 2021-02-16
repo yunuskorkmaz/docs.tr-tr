@@ -3,12 +3,12 @@ title: C# ' nin geçmişi-c# Kılavuzu
 description: Dil en eski sürümlerinde ne şekilde görünür ve bu tarihten sonra nasıl gelişmiştir?
 author: erikdietrich
 ms.date: 04/08/2020
-ms.openlocfilehash: 7258dc8b8fcfbd6354b5ceee4183429bfee14038
-ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
+ms.openlocfilehash: 0f6739ba7a2dd0488c52b917c4a60a1b3f04a930
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97110734"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100456425"
 ---
 # <a name="the-history-of-c"></a>C geçmişi\#
 
@@ -70,7 +70,7 @@ Diğer C# 2,0 özellikleri varolan özelliklere özellikler eklemiştir:
 
 C# genel Object-Oriented (OO) dili olarak başlatılmış olsa da, C# sürüm 2,0, bir acelendeki değiştirilmiş olabilir. Bunların altındaysa, önemli geliştirici sorun noktalarından sonra gitirler. Ve bunları önemli bir şekilde yaptıktan sonra.
 
-Genel türler ile türler ve Yöntemler, tür güvenliğini korurken rastgele bir tür üzerinde çalışabilir. Örneğin, bir uygulamasına sahip olma, <xref:System.Collections.Generic.List%601> `List<string>` `List<int>` Bu dizeler veya tamsayılar üzerinde yineleme yaparken tür kullanımı güvenli işlemleri gerçekleştirmenize izin verir. Genel türleri kullanmak, `ListInt` `ArrayList`  her işlem için kaynağından veya kümeden türeten daha iyidir `Object` .
+Genel türler ile türler ve Yöntemler, tür güvenliğini korurken rastgele bir tür üzerinde çalışabilir. Örneğin, bir uygulamasına sahip olma, <xref:System.Collections.Generic.List%601> `List<string>` `List<int>` Bu dizeler veya tamsayılar üzerinde yineleme yaparken tür kullanımı güvenli işlemleri gerçekleştirmenize izin verir. Genel türleri kullanmak, `ListInt` `ArrayList`  her işlem için öğesinden veya kümeden türeten bir tür oluşturmaktan daha iyidir `Object` .
 
 C# sürüm 2,0 yineleyiciler tarafından getirildi. Yineleyiciler, succinctly koymak için bir `List` (veya diğer sıralanabilir türler) içindeki tüm öğeleri bir `foreach` döngüyle incelemenizi sağlar. Dilin birinci sınıf parçası olarak yineleyiciler olması, dilin okunabilirliğini ve kişilerin kod hakkında neden olma yeteneğini önemli ölçüde geliştirmiştir.
 

@@ -2,12 +2,12 @@
 title: Kapsayıcı olarak çalışan bir veritabanı sunucusunu kullanma
 description: Yalnızca geliştirme için bir kapsayıcı olarak çalışan bir veritabanı sunucusunu kullanmanın önemini anlayın. Üretim için hiçbir şekilde.
 ms.date: 01/13/2021
-ms.openlocfilehash: 1292bf37e3baaeb6284f6fba15b4bc7c9c17b4a7
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: f24e9561c2d3d950fd017403ff91d961e134d11f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188744"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100424313"
 ---
 # <a name="use-a-database-server-running-as-a-container"></a>Kapsayıcı olarak çalışan bir veritabanı sunucusunu kullanma
 
@@ -15,7 +15,7 @@ Veritabanlarınızı (SQL Server, PostgreSQL, MySQL, vb.) normal tek başına su
 
 ## <a name="sql-server-running-as-a-container-with-a-microservice-related-database"></a>Mikro hizmetle ilgili bir veritabanıyla kapsayıcı olarak çalışan SQL Server
 
-EShopOnContainers 'da, `sqldata` [Docker-Compose. yıml](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/docker-compose.yml) dosyasında tanımlandığı gibi adlı bir kapsayıcı vardır. Bu, bir Linux örneği için, bir tane olması gereken tüm MIKRO hizmetler için SQL veritabanlarıyla bir SQL Server çalıştırır.
+EShopOnContainers 'da, `sqldata` [Docker-Compose. yıml](https://github.com/dotnet-architecture/eShopOnContainers/blob/main/src/docker-compose.yml) dosyasında tanımlandığı gibi adlı bir kapsayıcı vardır. Bu, bir Linux örneği için, bir tane olması gereken tüm MIKRO hizmetler için SQL veritabanlarıyla bir SQL Server çalıştırır.
 
 Mikro hizmetlerde bir anahtar noktası, her mikro hizmetin ilgili verilerinin sahibi olduğu için kendi veritabanına sahip olması gerekir. Ancak veritabanları her yerde olabilir. Bu durumda, Docker bellek gereksinimlerini mümkün olduğunca düşük tutmak için aynı kapsayıcıda bulunur. Bu, geliştirme ve, belki de test için yeterli bir çözüm olduğunu ve üretime yönelik olmayan bir çözüm olduğunu göz önünde bulundurun.
 
