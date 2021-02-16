@@ -1,15 +1,16 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: bağımsız değişken Nothing olamaz'
 title: Bağımsız değişken Nothing olamaz
 ms.date: 07/20/2015
 f1_keywords:
 - vbrGeneral_ArgumentNullException
 ms.assetid: 2abd995b-36a5-45f0-b3c1-6e0c3b31a875
-ms.openlocfilehash: 27c959b0fd62a930750bc731e6ca242b2415f1e3
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 7a35d464b9e8cdbcfd0ee98a538eff653dca346c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91087238"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100472338"
 ---
 # <a name="argument-cannot-be-nothing"></a>Bağımsız değişken Nothing olamaz
 

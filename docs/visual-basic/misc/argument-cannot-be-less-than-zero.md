@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: bağımsız değişken sıfırdan küçük olamaz'
 title: Bağımsız değişken sıfırdan küçük olamaz
 ms.date: 07/20/2015
 ms.assetid: ce004a9a-5fb5-4aa9-8717-63bdc101a639
-ms.openlocfilehash: 3b2c847f771c0e6bab4d597b25a74a4d35c035f3
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: f01bfecc21f5f8307c3a426318b8a377cf75ba91
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91087264"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100472311"
 ---
 # <a name="argument-cannot-be-less-than-zero"></a>Bağımsız değişken sıfırdan küçük olamaz
 

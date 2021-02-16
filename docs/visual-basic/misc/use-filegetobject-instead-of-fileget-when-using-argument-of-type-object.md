@@ -1,13 +1,14 @@
 ---
+description: "Hakkında daha fazla bilgi edinin: ' Object ' türünde bağımsız değişken kullanırken ' FileGet ' yerine ' FileGetObject ' kullanın"
 title: "' Object ' türünde bağımsız değişken kullanırken ' FileGet ' yerine ' FileGetObject ' kullanın"
 ms.date: 07/20/2015
 ms.assetid: 090b8088-895a-482a-9362-606596bac304
-ms.openlocfilehash: 318a0772a99aa86d9a4633e6021f77616a43fc7e
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 4481fdced961cacf0e652c141601efa13bec776b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91059411"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100471168"
 ---
 # <a name="use-filegetobject-instead-of-fileget-when-using-argument-of-type-object"></a>' Object ' türünde bağımsız değişken kullanırken ' FileGet ' yerine ' FileGetObject ' kullanın
 

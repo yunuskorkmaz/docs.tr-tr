@@ -1,4 +1,5 @@
 ---
+description: ': Nasıl yapılır: sistem kaynağını atma (Visual Basic) hakkında daha fazla bilgi edinin'
 title: 'Nasıl yapılır: Bir Sistem Kaynağını Atma'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: c430bc7744f5aefaa65f2a86f3e5e22743ffed57
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 6594c9e2eedf756cc7a46c2c17deab58fcba3a8c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077208"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100480667"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Nasıl yapılır: Bir Sistem Kaynağını Atma (Visual Basic)
 

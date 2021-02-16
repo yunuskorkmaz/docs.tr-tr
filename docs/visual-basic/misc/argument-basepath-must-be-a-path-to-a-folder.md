@@ -1,13 +1,14 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: bağımsız değişken BasePath bir klasörün yolu olması gerekir'
 title: Bağımsız değişken BasePath bir klasörün yolu olmalıdır
 ms.date: 07/20/2015
 ms.assetid: b180ce60-ad57-41a6-a313-491d86d84cc7
-ms.openlocfilehash: 3c8d17db7cc03490ff437c91814db967612942a0
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 314ccd8510a286fc7f01518600a625cac48e10af
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91079756"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100472312"
 ---
 # <a name="argument-basepath-must-be-a-path-to-a-folder"></a>Bağımsız değişken BasePath bir klasörün yolu olmalıdır
 

@@ -3,13 +3,13 @@ title: Birim testi için kod kapsamını kullanma
 description: .NET birim testleri için kod kapsamı özelliklerini nasıl kullanacağınızı öğrenin.
 author: IEvangelist
 ms.author: dapine
-ms.date: 07/01/2020
-ms.openlocfilehash: 98652de8e8b5c3765dfee8e1b511399bc5a0be25
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.date: 02/10/2021
+ms.openlocfilehash: 492e036593dcdc81f8256b05183c8f0a9e13b414
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189661"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100432666"
 ---
 # <a name="use-code-coverage-for-unit-testing"></a>Birim testi için kod kapsamını kullanma
 
@@ -271,7 +271,7 @@ cd XUnit.Coverlet.Collector && dotnet test --collect:"XPlat Code Coverage"
 > dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura
 > ```
 >
-> Elde edilen *coverage.cobertura.xml* dosyası çıktı.  
+> Elde edilen *coverage.cobertura.xml* dosyası çıktı.
 > MSBuild tümleştirme kılavuzunu [buradan](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/MSBuildIntegration.md) izleyebilirsiniz
 
 ## <a name="generate-reports"></a>Rapor oluştur

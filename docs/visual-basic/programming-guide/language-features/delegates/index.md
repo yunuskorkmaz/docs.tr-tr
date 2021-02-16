@@ -1,16 +1,17 @@
 ---
+description: 'Daha fazla bilgi edinin: Temsilciler (Visual Basic)'
 title: Temsilciler
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [Visual Basic]
 - Visual Basic code, delegates
 ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
-ms.openlocfilehash: 1f161248fa04f8fab0e5335413e69ca565732f71
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: aba3c1483f2875600d925ec3edb0167ddfb18125
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410688"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434439"
 ---
 # <a name="delegates-visual-basic"></a>Temsilciler (Visual Basic)
 
@@ -54,7 +55,7 @@ Bir yönteme başvuru belirtmek için aşağıdaki sözdizimini kullanın:
 
 Bir lambda ifadesi belirtmek için aşağıdaki sözdizimini kullanın:
 
-`Function`([ `parm` As `type` , `parm2` as `type2` ,...])`expression`
+`Function` ([ `parm` As `type` , `parm2` as `type2` ,...]) `expression`
 
 Aşağıdaki örnekte, `AddressOf` bir temsilcinin başvurusunu belirtmek için kullanılan hem hem de lambda ifadeleri gösterilmektedir.
 
@@ -69,4 +70,4 @@ Aşağıdaki örnekte, `AddressOf` bir temsilcinin başvurusunu belirtmek için 
 |[Nasıl yapılır: Temsilci Yöntemi Çağırma](how-to-invoke-a-delegate-method.md)|Bir yöntemi bir temsilciyle ilişkilendirmeyi ve sonra bu yöntemi temsilci aracılığıyla çağırmayı gösteren bir örnek sağlar.|
 |[Nasıl yapılır: Visual Basic'de Başka Bir Yordama Yordam Geçirme](how-to-pass-procedures-to-another-procedure.md)|Bir yordamı başka bir yordama geçirmek için temsilcilerin nasıl kullanılacağını gösterir.|
 |[Gevşek Temsilci Dönüştürme](relaxed-delegate-conversion.md)|İmzaları özdeş olmadığında bile temsilcilerin veya işleyicilere nasıl alt ve işlev atayabileceğinizi açıklar|
-|[Olaylar](../events/index.md)|Visual Basic olaylar için bir genel bakış sağlar.|
+|[Ekinlikler](../events/index.md)|Visual Basic olaylar için bir genel bakış sağlar.|

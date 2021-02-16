@@ -1,15 +1,16 @@
 ---
+description: "Daha fazla bilgi: ' ' bağımsız değişkeni <argumentname> 0 ile 99 arasında olmalıdır"
 title: "' ' Bağımsız değişkeni <argumentname> 0 ile 99 arasında olmalıdır"
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_Range0to99_1
 ms.assetid: d9d9a15e-c5ee-4104-9504-b48a4a191415
-ms.openlocfilehash: 9d015f2c7dd396e742685bc47052869c4bb3f57e
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 837c39efac12fb968ebf2e35e4eeb4d635580179
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91079808"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100472390"
 ---
 # <a name="argument-argumentname-must-be-within-the-range-0-to-99"></a>' ' Bağımsız değişkeni \<argumentname> 0 ile 99 arasında olmalıdır
 

@@ -1,13 +1,14 @@
 ---
+description: "Daha fazla bilgi edinin: Izlenecek yol: Visual Studio 'da bir nesneyi kalıcı hale getirme (Visual Basic)"
 title: Visual Studio’da Bir Nesneyi Kalıcı Kılma
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: 0b2fff171164a29e6066839371fc95ad41b452f1
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 4145f84d14eadae6a305a4a1f5860cdcc38450c8
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086471"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100486868"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>İzlenecek yol: Visual Studio 'da bir nesneyi kalıcı hale getirme (Visual Basic)
 
@@ -81,7 +82,7 @@ Tasarım zamanında bir nesnenin özelliklerini varsayılan değerlere ayarlayab
   
 1. Çözümünüze Windows Forms bir uygulama projesi eklemek için **Dosya** menüsünde **Ekle**,**Yeni proje**' yi seçin.  
   
-2. **Yeni Proje Ekle** Iletişim kutusunda **uygulama Windows Forms**seçin ve `LoanApp` projenin adı olarak girin ve ardından iletişim kutusunu kapatmak için **Tamam** ' ı tıklatın.  
+2. **Yeni Proje Ekle** Iletişim kutusunda **uygulama Windows Forms** seçin ve `LoanApp` projenin adı olarak girin ve ardından iletişim kutusunu kapatmak için **Tamam** ' ı tıklatın.  
   
 3. **Çözüm Gezgini**, kremi uygulama projesini seçin.  
   

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Devralma Temelleri (Visual Basic)'
 title: Devralma Temelleri
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], inheritance
 - overriding, Overrides keyword
 ms.assetid: dfc8deba-f5b3-4d1d-a937-7cb826446fc5
-ms.openlocfilehash: 3bf1847f618a642d26df4aa1c5247a4ba2bd3b23
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: facaa9a21fe3f99fc6e923ecb59dd977d72275ad
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411785"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100485750"
 ---
 # <a name="inheritance-basics-visual-basic"></a>Devralma Temelleri (Visual Basic)
 
-İfade, bir `Inherits` *temel sınıf*olarak bilinen varolan bir sınıfa göre *türetilmiş sınıf*olarak adlandırılan yeni bir sınıf bildirmek için kullanılır. Türetilmiş sınıflar devralınır ve temel sınıfta tanımlanan özellikleri, yöntemleri, olayları, alanları ve sabitleri genişletebilir. Aşağıdaki bölümde, devralma için bazı kurallar ve sınıfların devralınması veya Devralındığı şekilde değiştirmek için kullanabileceğiniz değiştiriciler açıklanmaktadır:
+İfade, bir `Inherits` *temel sınıf* olarak bilinen varolan bir sınıfa göre *türetilmiş sınıf* olarak adlandırılan yeni bir sınıf bildirmek için kullanılır. Türetilmiş sınıflar devralınır ve temel sınıfta tanımlanan özellikleri, yöntemleri, olayları, alanları ve sabitleri genişletebilir. Aşağıdaki bölümde, devralma için bazı kurallar ve sınıfların devralınması veya Devralındığı şekilde değiştirmek için kullanabileceğiniz değiştiriciler açıklanmaktadır:
 
 - Varsayılan olarak, anahtar sözcüğüyle işaretlenmedikçe tüm sınıflar devralınabilir `NotInheritable` . Sınıflar, projenizdeki diğer sınıflardan veya projenizin başvurduğu diğer derlemelerin sınıflarından devralınabilir.
 
@@ -41,23 +42,23 @@ ms.locfileid: "84411785"
 
 Visual Basic devralmayı desteklemek için aşağıdaki sınıf düzeyi deyimleri ve değiştiricilerini tanıtır:
 
-- `Inherits`ifade — temel sınıfı belirtir.
+- `Inherits` ifade — temel sınıfı belirtir.
 
-- `NotInheritable`değiştirici — programcıların sınıfı temel sınıf olarak kullanmasını engeller.
+- `NotInheritable` değiştirici — programcıların sınıfı temel sınıf olarak kullanmasını engeller.
 
-- `MustInherit`değiştirici — sınıfın yalnızca temel sınıf olarak kullanılması amaçlandığını belirtir. Sınıfların örnekleri `MustInherit` doğrudan oluşturulamaz; yalnızca türetilmiş bir sınıfın temel sınıf örnekleri olarak oluşturulabilirler. (C++ ve C# gibi diğer programlama dilleri, bu tür bir sınıfı anlatmak için *soyut sınıf* terimini kullanır.)
+- `MustInherit` değiştirici — sınıfın yalnızca temel sınıf olarak kullanılması amaçlandığını belirtir. Sınıfların örnekleri `MustInherit` doğrudan oluşturulamaz; yalnızca türetilmiş bir sınıfın temel sınıf örnekleri olarak oluşturulabilirler. (C++ ve C# gibi diğer programlama dilleri, bu tür bir sınıfı anlatmak için *soyut sınıf* terimini kullanır.)
 
 ## <a name="overriding-properties-and-methods-in-derived-classes"></a>Türetilmiş sınıflarda özellikleri ve yöntemleri geçersiz kılma
 
 Varsayılan olarak, türetilmiş bir sınıf, temel sınıfından özellikleri ve yöntemleri devralır. Devralınan bir özelliğin veya yöntemin türetilmiş sınıfta farklı davranması gerekiyorsa, *geçersiz kılınabilir*. Diğer bir deyişle, türetilmiş sınıfta yönteminin yeni bir uygulamasını tanımlayabilirsiniz. Özelliklerin ve yöntemlerin nasıl geçersiz kılınabileceğini denetlemek için aşağıdaki değiştiriciler kullanılır:
 
-- `Overridable`— Bir sınıftaki özelliğin veya yöntemin türetilmiş bir sınıfta geçersiz kılınmasına izin verir.
+- `Overridable` — Bir sınıftaki özelliğin veya yöntemin türetilmiş bir sınıfta geçersiz kılınmasına izin verir.
 
-- `Overrides`— `Overridable` Temel sınıfta tanımlanan bir özelliği veya yöntemi geçersiz kılar.
+- `Overrides` — `Overridable` Temel sınıfta tanımlanan bir özelliği veya yöntemi geçersiz kılar.
 
-- `NotOverridable`— Bir özelliğin veya yöntemin devralan bir sınıfta geçersiz kılınmasını önler. Varsayılan olarak `Public` Yöntemler `NotOverridable` .
+- `NotOverridable` — Bir özelliğin veya yöntemin devralan bir sınıfta geçersiz kılınmasını önler. Varsayılan olarak `Public` Yöntemler `NotOverridable` .
 
-- `MustOverride`— Türetilmiş bir sınıfın özelliği veya yöntemi geçersiz kılmasını gerektirir. `MustOverride`Anahtar sözcüğü kullanıldığında, yöntem tanımı yalnızca `Sub` , `Function` , veya `Property` deyiminden oluşur. Başka hiçbir ifadeye izin verilmez ve özellikle bir `End Sub` veya `End Function` deyimi yoktur. `MustOverride`Yöntemler `MustInherit` sınıflarda bildirilmelidir.
+- `MustOverride` — Türetilmiş bir sınıfın özelliği veya yöntemi geçersiz kılmasını gerektirir. `MustOverride`Anahtar sözcüğü kullanıldığında, yöntem tanımı yalnızca `Sub` , `Function` , veya `Property` deyiminden oluşur. Başka hiçbir ifadeye izin verilmez ve özellikle bir `End Sub` veya `End Function` deyimi yoktur. `MustOverride` Yöntemler `MustInherit` sınıflarda bildirilmelidir.
 
 Bordroları işlemek için sınıflar tanımlamak istediğinizi varsayalım. `Payroll` `RunPayroll` Tipik bir hafta için bordroları hesaplayan bir yöntemi içeren genel bir sınıf tanımlayabilirsiniz. `Payroll`Daha sonra `BonusPayroll` , çalışan primi dağıtılırken kullanılabilecek daha özelleştirilmiş bir sınıf için temel sınıf olarak kullanabilirsiniz.
 
@@ -69,7 +70,7 @@ Aşağıdaki örnek, bir temel sınıfı `Payroll,` ve devralınmış bir yönte
 
 ## <a name="the-mybase-keyword"></a>MyBase anahtar sözcüğü
 
-`MyBase`Anahtar sözcüğü, sınıfın geçerli örneğinin temel sınıfına başvuran bir nesne değişkeni gibi davranır. `MyBase`, türetilmiş bir sınıfta geçersiz kılınan veya gölgeli temel sınıf üyelerine erişmek için sık kullanılır. Özellikle, `MyBase.New` türetilmiş bir sınıf oluşturucusundan bir temel sınıf oluşturucusunu açıkça çağırmak için kullanılır.
+`MyBase`Anahtar sözcüğü, sınıfın geçerli örneğinin temel sınıfına başvuran bir nesne değişkeni gibi davranır. `MyBase` , türetilmiş bir sınıfta geçersiz kılınan veya gölgeli temel sınıf üyelerine erişmek için sık kullanılır. Özellikle, `MyBase.New` türetilmiş bir sınıf oluşturucusundan bir temel sınıf oluşturucusunu açıkça çağırmak için kullanılır.
 
 Örneğin, temel sınıftan devralınan bir yöntemi geçersiz kılan türetilmiş bir sınıf tasarlamakta olduğunuzu varsayalım. Geçersiz kılınan yöntem, temel sınıfta yöntemi çağırabilir ve döndürülen değeri aşağıdaki kod parçasında gösterildiği gibi değiştirebilir:
 
@@ -77,19 +78,19 @@ Aşağıdaki örnek, bir temel sınıfı `Payroll,` ve devralınmış bir yönte
 
 Aşağıdaki listede, kullanma kısıtlamaları açıklanmaktadır `MyBase` :
 
-- `MyBase`en hızlı temel sınıfa ve devralınan üyelerine başvurur. Sınıftaki üyelere erişmek için kullanılamaz `Private` .
+- `MyBase` en hızlı temel sınıfa ve devralınan üyelerine başvurur. Sınıftaki üyelere erişmek için kullanılamaz `Private` .
 
-- `MyBase`, gerçek bir nesne değil, bir anahtar sözcüktür. `MyBase`bir değişkene atanamaz, yordamlara geçirilemez veya bir `Is` karşılaştırmada kullanılamaz.
+- `MyBase` , gerçek bir nesne değil, bir anahtar sözcüktür. `MyBase` bir değişkene atanamaz, yordamlara geçirilemez veya bir `Is` karşılaştırmada kullanılamaz.
 
 - `MyBase`Niteleyen yöntemin, anlık temel sınıfta tanımlanması gerekmez; bunun yerine dolaylı olarak devralınan bir temel sınıfta tanımlanabilir. Bir başvurunun `MyBase` doğru bir şekilde derlenmesi için, bazı temel sınıflar, çağrıda görünen ad ve parametre türleriyle eşleşen bir yöntem içermelidir.
 
 - `MyBase` `MustOverride` Temel sınıf yöntemlerini çağırmak için kullanamazsınız.
 
-- `MyBase`kendisini nitelemek için kullanılamaz. Bu nedenle, aşağıdaki kod geçerli değildir:
+- `MyBase` kendisini nitelemek için kullanılamaz. Bu nedenle, aşağıdaki kod geçerli değildir:
 
   `MyBase.MyBase.BtnOK_Click()`
 
-- `MyBase`modüllerde kullanılamaz.
+- `MyBase` modüllerde kullanılamaz.
 
 - `MyBase``Friend`temel sınıf farklı bir derlemede yer alıyorsa olarak işaretlenen temel sınıf üyelerine erişmek için kullanılamaz.
 
@@ -97,19 +98,19 @@ Daha fazla bilgi ve diğer bir örnek için bkz. [nasıl yapılır: türetilmiş
 
 ## <a name="the-myclass-keyword"></a>MyClass anahtar sözcüğü
 
-`MyClass`Anahtar sözcüğü, başlangıçta uygulanmış olan bir sınıfın geçerli örneğine başvuran bir nesne değişkeni gibi davranır. `MyClass`benzerdir `Me` , ancak her yöntem ve özellik çağrısı, `MyClass` Yöntem veya özellik [NotOverridable](../../../language-reference/modifiers/notoverridable.md)gibi değerlendirilir. Bu nedenle, yöntem veya özellik türetilmiş bir sınıfta geçersiz kılınmadan etkilenmez.
+`MyClass`Anahtar sözcüğü, başlangıçta uygulanmış olan bir sınıfın geçerli örneğine başvuran bir nesne değişkeni gibi davranır. `MyClass` benzerdir `Me` , ancak her yöntem ve özellik çağrısı, `MyClass` Yöntem veya özellik [NotOverridable](../../../language-reference/modifiers/notoverridable.md)gibi değerlendirilir. Bu nedenle, yöntem veya özellik türetilmiş bir sınıfta geçersiz kılınmadan etkilenmez.
 
-- `MyClass`, gerçek bir nesne değil, bir anahtar sözcüktür. `MyClass`bir değişkene atanamaz, yordamlara geçirilemez veya bir `Is` karşılaştırmada kullanılamaz.
+- `MyClass` , gerçek bir nesne değil, bir anahtar sözcüktür. `MyClass` bir değişkene atanamaz, yordamlara geçirilemez veya bir `Is` karşılaştırmada kullanılamaz.
 
-- `MyClass`içerilen sınıfa ve devralınan üyelerine başvurur.
+- `MyClass` içerilen sınıfa ve devralınan üyelerine başvurur.
 
-- `MyClass`, Üyeler için bir niteleyici olarak kullanılabilir `Shared` .
+- `MyClass` , Üyeler için bir niteleyici olarak kullanılabilir `Shared` .
 
-- `MyClass`bir yöntem içinde kullanılamaz `Shared` , ancak bir sınıfın paylaşılan üyesine erişmek için bir örnek yöntemi içinde kullanılabilir.
+- `MyClass` bir yöntem içinde kullanılamaz `Shared` , ancak bir sınıfın paylaşılan üyesine erişmek için bir örnek yöntemi içinde kullanılabilir.
 
-- `MyClass`standart modüllerde kullanılamaz.
+- `MyClass` standart modüllerde kullanılamaz.
 
-- `MyClass`, bir temel sınıfta tanımlanan ve bu sınıfta sağlanmış yöntemin uygulanması olmayan bir yöntemi nitelemek için kullanılabilir. Bu tür bir başvuru, yöntemiyle aynı anlama sahiptir `MyBase.` *Method*.
+- `MyClass` , bir temel sınıfta tanımlanan ve bu sınıfta sağlanmış yöntemin uygulanması olmayan bir yöntemi nitelemek için kullanılabilir. Bu tür bir başvuru, yöntemiyle aynı anlama sahiptir `MyBase.` .
 
 Aşağıdaki örnek `Me` ve ile karşılaştırılır `MyClass` .
 

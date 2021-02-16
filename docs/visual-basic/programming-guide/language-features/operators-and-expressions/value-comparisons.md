@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi: değer karşılaştırmaları (Visual Basic)'
 title: Değer Karşılaştırmaları
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 - expressions [Visual Basic], comparing
 ms.assetid: 60da0c76-9458-4afc-97e9-44a7939c064c
-ms.openlocfilehash: e424dd58cada8cda250554a4a8870e1900d0fa7d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: b5d2228b5bb6be18aecebcd0247a1e29e29df9ec
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085977"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100472715"
 ---
 # <a name="value-comparisons-visual-basic"></a>Değer Karşılaştırmaları (Visual Basic)
 

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Visual Basic XML oluşturma'
 title: XML oluşturma
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], creating XML
 - XML literals [Visual Basic], creating
 ms.assetid: 8ae29ec5-e5fb-4137-9df5-60a288df7045
-ms.openlocfilehash: a6a927c8dc1a4f3e38a99a1f730be68a2566d048
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 9511253791720d1f45e00669b0abc41a45237f63
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090033"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100431652"
 ---
 # <a name="creating-xml-in-visual-basic"></a>Visual Basic'de XML Oluşturma
 
@@ -19,7 +20,7 @@ Visual Basic, *XML sabit* değerlerini doğrudan kodunuzda kullanmanıza olanak 
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
-|Terim|Tanım|  
+|Süre|Tanım|  
 |---|---|  
 |[XML Değişmez Değerlerine Genel Bakış](xml-literals-overview.md)|XML değişmez değerleri ve ile ilişkilerini giriş [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] .|  
 |[XML'de Katıştırılmış İfadeler](embedded-expressions-in-xml.md)|XML değişmez değerlerinde gömülü ifadelerin nasıl kullanılacağını açıklar.|  

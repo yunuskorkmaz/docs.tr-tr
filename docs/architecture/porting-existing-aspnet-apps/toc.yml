@@ -1,0 +1,68 @@
+- name: Mevcut ASP.NET uygulamalarının .NET Core 'a bağlantı noktası
+  href: index.md
+  items:
+    - name: .NET Core 'a uygulama taşıma konusuna giriş
+      href: introduction.md
+      items:
+        - name: Geçiş fikirleri
+          href: migration-considerations.md
+        - name: 'ASP.NET Core 2,1 '' ye geçir'
+          href: migrate-aspnet-core-2-1.md
+        - name: Doğru .NET Core sürümünü seçin
+          href: choose-net-core-version.md
+        - name: Artımlı geçiş stratejileri
+          href: incremental-migration-strategies.md
+        - name: ASP.NET Web Forms uygulamalarını geçirme stratejileri
+          href: migrate-web-forms.md
+        - name: Dağıtım stratejileri
+          href: deployment-strategies.md
+        - name: Ek geçiş kaynakları
+          href: additional-migration-resources.md
+    - name: ASP.NET MVC ve ASP.NET Core arasındaki mimari farklar
+      href: architectural-differences.md
+      items:
+        - name: Uygulama başlatma farklılıkları
+          href: app-startup-differences.md
+        - name: Barındırma farkları
+          href: hosting-differences.md
+        - name: Statik dosyaları sunma
+          href: serving-static-files.md
+        - name: Bağımlılık ekleme farkları
+          href: dependency-injection-differences.md
+        - name: 'Ara yazılım, modüller ve işleyiciler'
+          href: middleware-modules-handlers.md
+        - name: Yapılandırma farkları
+          href: configuration-differences.md
+        - name: Yönlendirme farklılıkları
+          href: routing-differences.md
+        - name: Razor Pages ASP.NET MVC ile karşılaştırın
+          href: comparing-razor-pages-aspnet-mvc.md
+        - name: Web API 'SI farklılıkları
+          href: webapi-differences.md
+        - name: Kimlik doğrulama farklılıkları
+          href: authentication-differences.md
+        - name: Kimlik farklılıkları
+          href: identity-differences.md
+        - name: Denetleyici farkları
+          href: controller-differences.md
+        - name: Razor farkları
+          href: razor-differences.md
+        - name: SignalR farkları
+          href: signalr-differences.md
+        - name: Test farkları
+          href: testing-differences.md
+    - name: Büyük çözümleri geçirme
+      href: migrate-large-solutions.md
+      items:
+        - name: Geçirilecek proje dizisini tanımla
+          href: identify-migration-sequence.md
+        - name: Bağımlılıkları anlama ve güncelleştirme
+          href: understand-update-dependencies.md
+        - name: Üretimde çalışırken geçiş stratejileri
+          href: strategies-migrating-in-production.md
+    - name: EShop projesinin örnek geçişi
+      href: example-migration-eshop.md
+    - name: Dağıtım senaryoları
+      href: deployment-scenarios.md
+    - name: Özet
+      href: summary.md

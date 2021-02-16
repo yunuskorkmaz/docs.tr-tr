@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: fare tekerleği yok'
 title: Fare tekerleği yok
 ms.date: 07/20/2015
 f1_keywords:
 - vbrMouse_NoWheelIsPresent
 ms.assetid: e924ffba-4af1-4247-9a6f-d19a03738f62
-ms.openlocfilehash: a9b468d876945a177f3e326a7dc37e6c8a80285d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: c712903f41aa9f7c37c0cf1e3ffdc76edfd85b7f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078846"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100479107"
 ---
 # <a name="no-mouse-wheel-is-present"></a>Fare tekerleği yok
 
