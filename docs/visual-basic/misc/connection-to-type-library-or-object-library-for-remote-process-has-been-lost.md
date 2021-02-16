@@ -1,15 +1,16 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: tür kitaplığına bağlantı veya uzak işlem için nesne kitaplığı kayboldu'
 title: Uzak işlem için tür kitaplığı veya nesne kitaplığı bağlantısı kesildi
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID442
 ms.assetid: 9e3544e2-cfc9-463a-8c0c-ed82e5e6462f
-ms.openlocfilehash: 5d94c20688e6fc2efda6b0febc3d89d0039214c0
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 371638a531b8dc47d05dc52bb1aaafc40b90885c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91084495"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100463604"
 ---
 # <a name="connection-to-type-library-or-object-library-for-remote-process-has-been-lost"></a>Uzak işlem için tür kitaplığı veya nesne kitaplığı bağlantısı kesildi
 

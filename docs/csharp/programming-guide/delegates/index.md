@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: 86f7908501c075881786d16caffdd765b8aaf6b5
-ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
+ms.openlocfilehash: 0da404146f09028754087c5e24bd05b9289a4220
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99548077"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100456932"
 ---
 # <a name="delegates-c-programming-guide"></a>Temsilciler (C# Programlama Kılavuzu)
 
@@ -26,7 +26,7 @@ Temsilci türüyle eşleşen herhangi bir erişilebilir sınıf veya yapıdan al
 > [!NOTE]
 > Yöntem aşırı yükü bağlamında, yöntemin imzası dönüş değeri içermez. Ancak, temsilciler bağlamında, imza dönüş değerini içermez. Başka bir deyişle, bir yöntemin dönüş türü temsilciyle aynı olmalıdır.
 
-Bir yönteme bir parametre olarak başvurma yeteneği, temsilciyi geri çağırma yöntemleri için ideal hale getirir. Uygulamanızdaki iki nesneyi karşılaştıran bir yöntem yazabilirsiniz. Bu yöntem, bir sıralama algoritym için bir temsilci içinde kullanılabilir. Karşılaştırma kodu kitaplıktan ayrı olduğundan, sıralama yöntemi daha genel olabilir.
+Bir yönteme bir parametre olarak başvurma yeteneği, temsilciyi geri çağırma yöntemleri için ideal hale getirir. Uygulamanızdaki iki nesneyi karşılaştıran bir yöntem yazabilirsiniz. Bu yöntem, bir sıralama algoritması için bir temsilci içinde kullanılabilir. Karşılaştırma kodu kitaplıktan ayrı olduğundan, sıralama yöntemi daha genel olabilir.
 
 [İşlev işaretçileri](~/_csharplang/proposals/csharp-9.0/function-pointers.md) , çağırma kuralı üzerinde daha fazla denetime ihtiyaç duyduğunuz benzer senaryolar Için C# 9 ' a eklenmiştir. Bir temsilciyle ilişkili kod, bir temsilci türüne eklenen bir sanal yöntem kullanılarak çağrılır. İşlev işaretçilerini kullanarak farklı kurallar belirtebilirsiniz.
 

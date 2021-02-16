@@ -2,12 +2,12 @@
 title: Gecikmeli İfadeler
 description: 'F # yavaş ifadelerinin uygulamalarınızın ve kitaplıklarınızın performansını nasıl geliştirebileceğinizi öğrenin.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 71c466ca3b74c9e92b81a3c268e07438ec944905
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 0b8496467295ce6793f80c341af88bb1819f4a47
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558094"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100425509"
 ---
 # <a name="lazy-expressions"></a>Gecikmeli İfadeler
 
@@ -21,7 +21,7 @@ let identifier = lazy ( expression )
 
 ## <a name="remarks"></a>Açıklamalar
 
-Önceki sözdiziminde *ifade* , yalnızca bir sonuç gerekli olduğunda değerlendirilen koddur ve *tanımlayıcı* sonucu depolayan bir değerdir. Değer [`Lazy<'T>`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-lazy-1-0.html) , için kullanılan gerçek türün `'T` ifadenin sonucundan belirlendiği türdür.
+Önceki sözdiziminde *ifade* , yalnızca bir sonuç gerekli olduğunda değerlendirilen koddur ve *tanımlayıcı* sonucu depolayan bir değerdir. Değer `Lazy<'T>` , için kullanılan gerçek türün `'T` ifadenin sonucundan belirlendiği türdür.
 
 Yavaş ifadeler, bir ifadenin yürütülmesini yalnızca bir sonucun gerekli olduğu durumlara göre kısıtlayarak performansı iyileştirmenize olanak tanır.
 

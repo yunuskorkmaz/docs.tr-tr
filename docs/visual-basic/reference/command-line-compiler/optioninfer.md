@@ -1,4 +1,5 @@
 ---
+description: Daha fazla bilgi edinin:-optionfer
 title: -optioninfer
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /optioninfer compiler option [Visual Basic]
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
-ms.openlocfilehash: 3edb1f74ab63497aeda0d72847bce92ad315a1a5
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: d45761914612a28788cc5c1a848d92238f05c162
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91098923"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100475922"
 ---
 # <a name="-optioninfer"></a>-optioninfer
 
@@ -40,7 +41,7 @@ Değişken bildirimlerinde yerel tür çıkarımı kullanımını mümkün.
   
 ### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>Visual Studio IDE 'de set-OptionInfer  
   
-1. **Çözüm Gezgini**bir proje seçin. **Proje** menüsünde **Özellikler**' e tıklayın.  
+1. **Çözüm Gezgini** bir proje seçin. **Proje** menüsünde **Özellikler**' e tıklayın.  
   
 2. **Derle** sekmesinde, **seçenek çıkarımı** kutusunda değeri değiştirin.  
   
@@ -54,7 +55,7 @@ vbc -optioninfer+ test.vb
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](index.md)
+- [Visual Basic Command-Line derleyicisi](index.md)
 - [-optioncompare](optioncompare.md)
 - [-optionexplicit](optionexplicit.md)
 - [-optionstrict](optionstrict.md)

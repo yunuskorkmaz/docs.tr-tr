@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: dosya şu anda okumak üzere açık'
 title: Dosya şu anda okumak üzere açık
 ms.date: 07/20/2015
 ms.assetid: 7f662a68-021a-4432-947a-6bde48061257
-ms.openlocfilehash: b31c13061066f3ab620db724bf770fbad83d90b4
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 5d564d23f77e5d27876baafddbbaac066656433d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100184"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100430852"
 ---
 # <a name="the-file-is-currently-open-for-reading"></a>Dosya şu anda okumak üzere açık
 

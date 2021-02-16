@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: çeşitli veri türleri (Visual Basic)'
 title: Çeşitli Veri Türleri
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Object data type [Visual Basic], data types
 - data types [Visual Basic], choosing
 ms.assetid: 64c71a12-9057-4dbf-baca-7379c4aada69
-ms.openlocfilehash: 45b44abc24b968f19b456cbe0be0f25efc8f0ce8
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 3875a3fc3027d573013470cb96c9482a0be6cbbf
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91095466"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100462002"
 ---
 # <a name="miscellaneous-data-types-visual-basic"></a>Çeşitli Veri Türleri (Visual Basic)
 
@@ -28,11 +29,11 @@ Visual Basic, sayı veya karakterlere yönelik olmayan çeşitli veri türleri s
   
 ## <a name="object-type"></a>Nesne Türü  
 
- [Nesne veri türü](../../../language-reference/data-types/object-data-type.md) , uygulamanızdaki bir nesne örneğine veya başka bir uygulamaya işaret eden 32 bitlik bir adrestir. Bir `Object` değişken, uygulamanızın tanıdığı herhangi bir nesneye veya herhangi bir veri türünün verilerine başvurabilir. Bu,, ve yapı örnekleri gibi *değer türlerini*ve, ve `Integer` `Boolean` dizi örnekleri gibi sınıflardan oluşturulan nesne örnekleri olan *başvuru türlerini*içerir `String` <xref:System.Windows.Forms.Form> .  
+ [Nesne veri türü](../../../language-reference/data-types/object-data-type.md) , uygulamanızdaki bir nesne örneğine veya başka bir uygulamaya işaret eden 32 bitlik bir adrestir. Bir `Object` değişken, uygulamanızın tanıdığı herhangi bir nesneye veya herhangi bir veri türünün verilerine başvurabilir. Bu,, ve yapı örnekleri gibi *değer türlerini* ve, ve `Integer` `Boolean` dizi örnekleri gibi sınıflardan oluşturulan nesne örnekleri olan *başvuru türlerini* içerir `String` <xref:System.Windows.Forms.Form> .  
   
  Bir değişken, derleme zamanında tanımadığınız bir sınıfın örneğine bir işaretçi depolarsa veya çeşitli veri türlerindeki verileri işaret edebilir, olarak bildirin `Object` .  
   
- Veri türünün avantajı, `Object` herhangi bir veri türünün verilerini depolamak için kullanabilirsiniz. Dezavantajı, daha fazla yürütme süresi alan ve uygulamanızı daha yavaş hale getirebilmeniz için ek işlemlere neden olur. `Object`Değer türleri için bir değişken kullanırsanız, *kutulama* ve *kutudan*çıkarma uygulanır. Bunu başvuru türleri için kullanıyorsanız, *geç bağlamaya*tabi olursunuz.  
+ Veri türünün avantajı, `Object` herhangi bir veri türünün verilerini depolamak için kullanabilirsiniz. Dezavantajı, daha fazla yürütme süresi alan ve uygulamanızı daha yavaş hale getirebilmeniz için ek işlemlere neden olur. `Object`Değer türleri için bir değişken kullanırsanız, *kutulama* ve *kutudan* çıkarma uygulanır. Bunu başvuru türleri için kullanıyorsanız, *geç bağlamaya* tabi olursunuz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: sabitlere genel bakış (Visual Basic)'
 title: Sabitlere Genel Bakış
 ms.date: 07/20/2015
 helpviewer_keywords:
 - constants [Visual Basic]
 ms.assetid: 29016fe8-78b3-4dc8-90b8-1cfec2fa8ac9
-ms.openlocfilehash: 7f2a2dc140352588246d80a7feb46ce1f609b358
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: af5a64339c04306538fe1b9dc195a044aa89ab9f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086289"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100475454"
 ---
 # <a name="constants-overview-visual-basic"></a>Sabitlere Genel Bakış (Visual Basic)
 
@@ -32,7 +33,7 @@ Sabit, değişmez bir sayının veya dizenin yerini alan anlamlı bir addır. Ad
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
-|Tanım|Terim|  
+|Tanım|Süre|  
 |---|---|  
 |[Nasıl yapılır: Bir Sabit Bildirme](how-to-declare-a-constant.md)|Bir sabiti `Const` bildirmek ve değerini ayarlamak için ifadesinin nasıl kullanılacağını açıklar; bir sabiti bildirerek değere anlamlı bir ad atarsınız.|  
 |[Kullanıcı Tanımlı Sabitler](user-defined-constants.md)|Kapsam ve dairesel başvuruların nasıl engelleneceği hakkında bilgiler de dahil olmak üzere kendi sabitlerinizi oluşturmayı açıklar.|  
@@ -41,7 +42,7 @@ Sabit, değişmez bir sayının veya dizenin yerini alan anlamlı bir addır. Ad
   
 ## <a name="reference"></a>Başvuru  
   
-|Tanım|Terim|  
+|Tanım|Süre|  
 |---|---|  
 |[Sabitler ve numaralandırmalar](../../../language-reference/constants-and-enumerations.md)|Visual Basic tarafından önceden tanımlanan sabitleri listeler.|  
 |[Const Deyimi](../../../language-reference/statements/const-statement.md)|`Const`İfadesini ve kullanımını açıklar.|  

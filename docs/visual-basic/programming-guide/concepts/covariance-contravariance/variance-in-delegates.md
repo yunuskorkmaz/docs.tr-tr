@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Temsilcilerde varyans (Visual Basic)'
 title: Temsilcilerde Varyans
 ms.date: 07/20/2015
 ms.assetid: 38e9353f-74f8-4211-a8f0-7a495414df4a
-ms.openlocfilehash: 86ea9f3f744381bcff71a88e9d88485cafa4a568
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d47f05a5ce3f3e59223f1f37ab09fb8a21e6e7ba
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84375622"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100458973"
 ---
 # <a name="variance-in-delegates-visual-basic"></a>Temsilcilerde varyans (Visual Basic)
 
@@ -123,9 +124,9 @@ End Sub
 
 .NET Framework 4, çeşitli genel temsilcilerde genel tür parametrelerine yönelik varyans desteği getirmiştir:
 
-- `Action`ad alanından temsilciler, <xref:System> Örneğin <xref:System.Action%601> ve<xref:System.Action%602>
+- `Action` ad alanından temsilciler, <xref:System> Örneğin <xref:System.Action%601> ve <xref:System.Action%602>
 
-- `Func`ad alanından temsilciler, <xref:System> Örneğin <xref:System.Func%601> ve<xref:System.Func%602>
+- `Func` ad alanından temsilciler, <xref:System> Örneğin <xref:System.Func%601> ve <xref:System.Func%602>
 
 - <xref:System.Predicate%601>Temsilci
 
@@ -137,7 +138,7 @@ Daha fazla bilgi ve örnek için bkz. [Func ve eylem genel temsilcileri Için va
 
 ### <a name="declaring-variant-type-parameters-in-generic-delegates"></a>Genel Temsilcilerde değişken tür parametreleri bildirme
 
-Genel bir temsilcinin birlikte değişken veya değişken karşıtı genel tür parametreleri varsa, bu, *VARIANT genel temsilcisi*olarak adlandırılır.
+Genel bir temsilcinin birlikte değişken veya değişken karşıtı genel tür parametreleri varsa, bu, *VARIANT genel temsilcisi* olarak adlandırılır.
 
 Anahtar sözcüğünü kullanarak genel bir temsilci içinde genel bir tür parametresi ortak değişkeni bildirebilirsiniz `out` . Covaryant türü, yöntem bağımsız değişkenlerinin türü olarak değil, yalnızca bir yöntem dönüş türü olarak kullanılabilir. Aşağıdaki kod örneği, bir covaryant genel temsilcisinin nasıl bildirilemeyeceğini gösterir.
 
@@ -152,7 +153,7 @@ Public Delegate Sub DContravariant(Of In A)(ByVal a As A)
 ```
 
 > [!IMPORTANT]
-> `ByRef`Visual Basic parametreler değişken olarak işaretlenemez.
+> `ByRef` Visual Basic parametreler değişken olarak işaretlenemez.
 
 Aynı temsilci, ancak farklı tür parametreleri için hem varyansı hem de kovaryansı desteklemek de mümkündür. Bu, aşağıdaki örnekte gösterilir.
 

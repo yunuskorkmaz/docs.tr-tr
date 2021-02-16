@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: tanımlama (Visual Basic)'
 title: -define
 ms.date: 03/10/2018
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-ms.openlocfilehash: cb56e727479fd249cb0d7e5e7c3c50d5b68b3a72
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 9d6394ecad8e59d64ef3c51312ac85562ba3ec2c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072021"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100466984"
 ---
 # <a name="-define-visual-basic"></a>-tanımla (Visual Basic)
 
@@ -51,7 +52,7 @@ veya
   
 |Visual Studio tümleşik geliştirme ortamında ayarlamak için|  
 |---|  
-|1. **Çözüm Gezgini**bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın. <br />2. **Derle** sekmesine tıklayın.<br />3. **Gelişmiş**'e tıklayın.<br />4. **Özel sabitler** kutusundaki değeri değiştirin.|  
+|1. **Çözüm Gezgini** bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın. <br />2. **Derle** sekmesine tıklayın.<br />3. **Gelişmiş**'e tıklayın.<br />4. **Özel sabitler** kutusundaki değeri değiştirin.|  
   
 ## <a name="example"></a>Örnek  
 
@@ -61,7 +62,7 @@ veya
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](index.md)
+- [Visual Basic Command-Line derleyicisi](index.md)
 - [#If... Sonra... #Else yönergeler](../../language-reference/directives/if-then-else-directives.md)
 - [#Const Yönergesi](../../language-reference/directives/const-directive.md)
 - [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)

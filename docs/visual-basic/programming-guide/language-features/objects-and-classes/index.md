@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: Visual Basic nesneler ve sınıflar'
 title: Nesneler ve sınıflar
 ms.date: 05/26/2020
 helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: 9e3cf262ef617a1ae5ee92bcc3d6fd5c691602f9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9cefcc117c9dd4ac42940f342dbf75d8ddb4f41d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600418"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100462730"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Visual Basic içindeki nesneler ve sınıflar
 
@@ -22,15 +23,15 @@ Bu konu, nesneleri ayrıntılı bir şekilde ele alır.
 
 ## <a name="objects-and-classes"></a>Nesneler ve sınıflar
 
-Visual Basic içindeki her nesne bir *sınıf*tarafından tanımlanır. Bir sınıf, bir nesnenin değişkenlerini, özelliklerini, yordamlarını ve olaylarını açıklar. Nesneler sınıfların örnekleridir; bir sınıfı tanımladıktan sonra ihtiyacınız olan sayıda nesne oluşturabilirsiniz.
+Visual Basic içindeki her nesne bir *sınıf* tarafından tanımlanır. Bir sınıf, bir nesnenin değişkenlerini, özelliklerini, yordamlarını ve olaylarını açıklar. Nesneler sınıfların örnekleridir; bir sınıfı tanımladıktan sonra ihtiyacınız olan sayıda nesne oluşturabilirsiniz.
 
 Bir nesne ve sınıfı arasındaki ilişkiyi anlamak için tanımlama bilgisi cutters ve tanımlama bilgilerini düşünün. Tanımlama bilgisi kesici sınıftır. Her tanımlama bilgisinin, örneğin boyut ve şekil özelliklerini tanımlar. Sınıfı, nesneleri oluşturmak için kullanılır. Nesneler tanımlama bilgileri.
 
 Bir nesnesi, [`Shared`](../../../language-reference/modifiers/shared.md) sınıfının bir nesnesi olmadan erişilebilen Üyeler hariç, üyelerine erişebilmek için önce bir nesne oluşturmanız gerekir.
 
-### <a name="create-an-object-from-a-class"></a>Bir sınıftan nesne oluşturma
+### <a name="create-an-object-from-a-class"></a>Sınıftan nesne oluşturma
 
-1. Hangi sınıftan bir nesne oluşturmak istediğinizi belirleyin veya kendi sınıfınızı tanımlayın. Örnek:
+1. Hangi sınıftan bir nesne oluşturmak istediğinizi belirleyin veya kendi sınıfınızı tanımlayın. Örneğin:
 
    ```vb
    Public Class Customer
@@ -57,7 +58,7 @@ Bir nesnesi, [`Shared`](../../../language-reference/modifiers/shared.md) sınıf
    ```
 
 > [!NOTE]
-> Mümkün olduğunda, değişkeni atamak istediğiniz sınıf türünde olacak şekilde bildirmeniz gerekir. Bu, *erken bağlama*olarak adlandırılır. Derleme zamanında sınıf türünü bilmiyorsanız, değişkeni [nesne veri türünde](../../../language-reference/data-types/object-data-type.md)olacak şekilde bildirerek *geç bağlamayı* çağırabilirsiniz. Ancak, geç bağlama performansı daha yavaş yapabilir ve çalışma zamanı nesnesinin üyelerine erişimi sınırlayabilir. Daha fazla bilgi için bkz. [nesne değişkeni bildirimi](../variables/object-variable-declaration.md).
+> Mümkün olduğunda, değişkeni atamak istediğiniz sınıf türünde olacak şekilde bildirmeniz gerekir. Bu, *erken bağlama* olarak adlandırılır. Derleme zamanında sınıf türünü bilmiyorsanız, değişkeni [nesne veri türünde](../../../language-reference/data-types/object-data-type.md)olacak şekilde bildirerek *geç bağlamayı* çağırabilirsiniz. Ancak, geç bağlama performansı daha yavaş yapabilir ve çalışma zamanı nesnesinin üyelerine erişimi sınırlayabilir. Daha fazla bilgi için bkz. [nesne değişkeni bildirimi](../variables/object-variable-declaration.md).
 
 ### <a name="multiple-instances"></a>Birden çok örnek
 
@@ -65,7 +66,7 @@ Bir sınıftan yeni oluşturulan nesneler genellikle birbirleriyle aynıdır. An
 
 ## <a name="object-members"></a>Nesne üyeleri
 
-Bir nesne, bir sınıfın *örneğini* temsil eden bir uygulamanın öğesidir. Alanlar, özellikler, Yöntemler ve olaylar, nesnelerin yapı taşlarıdır ve *üyelerini*oluşturur.
+Bir nesne, bir sınıfın *örneğini* temsil eden bir uygulamanın öğesidir. Alanlar, özellikler, Yöntemler ve olaylar, nesnelerin yapı taşlarıdır ve *üyelerini* oluşturur.
 
 ### <a name="member-access"></a>Üye Erişimi
 
@@ -88,7 +89,7 @@ Dim warningWidth As Integer = warningLabel.Width
 warningLabel.ForeColor = System.Drawing.Color.Red
 ```
 
-Bir alana *üye değişkeni*olarak da adlandırıldığını unutmayın.
+Bir alana *üye değişkeni* olarak da adlandırıldığını unutmayın.
 
 Şu durumlarda özellik yordamlarını kullan:
 
@@ -138,7 +139,7 @@ Ayrıca, kendi özel olaylarınızı kendi nesneleriniz tarafından da geliştir
 
 ### <a name="instance-members-and-shared-members"></a>Örnek üyeleri ve paylaşılan Üyeler
 
-Bir sınıftan bir nesne oluşturduğunuzda, sonuç bu sınıfın bir örneğidir. [Paylaşılan](../../../language-reference/modifiers/shared.md) anahtar sözcükle bildirilmeyen Üyeler *örnek üyeleridir*ve bu belirli örneğe tamamen aittir. Bir örnekteki örnek üye, aynı sınıfın başka bir örneğindeki aynı Üyeden bağımsız. Örneğin, örnek üye değişkeni farklı örneklerde farklı değerlere sahip olabilir.
+Bir sınıftan bir nesne oluşturduğunuzda, sonuç bu sınıfın bir örneğidir. [Paylaşılan](../../../language-reference/modifiers/shared.md) anahtar sözcükle bildirilmeyen Üyeler *örnek üyeleridir* ve bu belirli örneğe tamamen aittir. Bir örnekteki örnek üye, aynı sınıfın başka bir örneğindeki aynı Üyeden bağımsız. Örneğin, örnek üye değişkeni farklı örneklerde farklı değerlere sahip olabilir.
 
 Anahtar sözcüğüyle belirtilen Üyeler `Shared` , belirli bir örneğe değil, bir bütün olarak sınıfa ait olan *paylaşılan üyeleridir*. Paylaşılan bir üye yalnızca bir kez bulunur, sınıfının kaç örneği oluşturabileceğiniz ve hatta örnek oluştursanız bile. Örneğin, bir paylaşılan üye değişkeni, sınıfına erişebilen tüm kodlar için kullanılabilen yalnızca bir değere sahiptir.
 
@@ -173,7 +174,7 @@ Sınıflar ve modüller arasındaki temel fark, sınıfların standart modüller
 > [!NOTE]
 > `Shared`Değiştirici bir sınıf üyesine uygulandığında, sınıfının belirli bir örneği yerine sınıfın kendisiyle ilişkilendirilir. Üyeye doğrudan sınıf adı kullanılarak erişilir, modül üyelerine aynı şekilde erişilir.
 
-Sınıflar ve modüller, üyeleri için farklı kapsamlar da kullanır. Bir sınıf içinde tanımlanan Üyeler, sınıfın belirli bir örneği içinde kapsamlandırılır ve yalnızca nesnenin ömrü için mevcuttur. Sınıf üyelerine bir sınıfın dışından erişmek için, *nesne*biçiminde tam nitelikli adlar kullanmanız gerekir. *Üye*.
+Sınıflar ve modüller, üyeleri için farklı kapsamlar da kullanır. Bir sınıf içinde tanımlanan Üyeler, sınıfın belirli bir örneği içinde kapsamlandırılır ve yalnızca nesnenin ömrü için mevcuttur. Sınıf üyelerine bir sınıfın dışından erişmek için, *nesne* biçiminde tam nitelikli adlar kullanmanız gerekir. *Üye*.
 
 Öte yandan, bir modül içinde bildirilen üyelere varsayılan olarak genel olarak erişilebilir ve modüle erişebilen herhangi bir kod tarafından erişilebilir. Bu, bir standart modüldeki değişkenlerin, projenizdeki herhangi bir yerden görünedikleri ve programın ömrü için mevcut olduğu için etkin olmayan genel değişkenler olduğu anlamına gelir.
 
@@ -181,7 +182,7 @@ Sınıflar ve modüller, üyeleri için farklı kapsamlar da kullanır. Bir sın
 
 Nesneler, değişkenleri ve yordamları bir kez bildirmenizi ve sonra gerektiğinde bunları yeniden kullanmayı sağlar. Örneğin, bir uygulamaya yazım denetleyicisi eklemek istiyorsanız, yazım denetimi işlevselliği sağlamak için tüm değişkenleri ve destek işlevlerini tanımlayabilirsiniz. Yazım denetimcisini bir sınıf olarak oluşturursanız, derlenen derlemeye bir başvuru ekleyerek diğer uygulamalarda onu yeniden kullanabilirsiniz. Daha iyi bir şekilde, başka birinin zaten geliştirildiği bir yazım denetleyicisi sınıfını kullanarak kendi çalışmalarınızı kaydedebilirsiniz.
 
-.NET, kullanıma açık olan bileşenlere birçok örnek sağlar. Aşağıdaki örnek, <xref:System.TimeZone> <xref:System> ad alanındaki sınıfını kullanır. <xref:System.TimeZone>geçerli bilgisayar sisteminin saat dilimi hakkında bilgi almanıza izin veren Üyeler sağlar.
+.NET, kullanıma açık olan bileşenlere birçok örnek sağlar. Aşağıdaki örnek, <xref:System.TimeZone> <xref:System> ad alanındaki sınıfını kullanır. <xref:System.TimeZone> geçerli bilgisayar sisteminin saat dilimi hakkında bilgi almanıza izin veren Üyeler sağlar.
 
 ```vb
 Public Sub ExamineTimeZone()
@@ -205,7 +206,7 @@ Nesneler birbirleriyle çeşitli yollarla ilişkili olabilir. Asıl ilişki tür
 
 ### <a name="hierarchical-relationship"></a>Hiyerarşik ilişki
 
-Sınıflar daha temel sınıflardan türetildiklerinde *hiyerarşik bir ilişkiye*sahip oldukları söylenir. Sınıf hiyerarşileri, daha genel bir sınıfın alt türü olan öğeleri açıklayarak yararlıdır.
+Sınıflar daha temel sınıflardan türetildiklerinde *hiyerarşik bir ilişkiye* sahip oldukları söylenir. Sınıf hiyerarşileri, daha genel bir sınıfın alt türü olan öğeleri açıklayarak yararlıdır.
 
 Aşağıdaki örnekte, <xref:System.Windows.Forms.Button> normal gibi davranan <xref:System.Windows.Forms.Button> ve ayrıca ön plan ve arka plan renklerini tersine getiren bir yöntemi ortaya çıkaran özel bir tür tanımlamak istediğinizi varsayalım.
 
@@ -254,7 +255,7 @@ Nesnelerin ilişkili olduğu başka bir yol da *kapsama ilişkisidir*. Kapsayıc
 
 #### <a name="collections"></a>Koleksiyonlar
 
-Nesne *kapsamaların*belirli bir türü koleksiyonlar tarafından temsil edilir. Koleksiyonlar, numaralandırılabilir benzer nesne gruplarıdır. Visual Basic her biri Için içindeki belirli bir sözdizimini destekler [... ](../../../language-reference/statements/for-each-next-statement.md)Bir koleksiyonun öğeleri arasında yineleme yapmanızı sağlayan Next bildirisi. Ayrıca, Koleksiyonlar genellikle <xref:Microsoft.VisualBasic.Collection.Item%2A> öğelerini dizine göre almak için veya bunları benzersiz bir dizeyle ilişkilendirerek kullanmanıza izin verir. Koleksiyonlar, dizinleri kullanmadan öğeleri eklemenize veya kaldırmanıza izin verdiklerinden, dizilerden kullanımı daha kolay olabilir. Kullanım kolaylığı nedeniyle, Koleksiyonlar genellikle formları ve denetimleri depolamak için kullanılır.
+Nesne *kapsamaların* belirli bir türü koleksiyonlar tarafından temsil edilir. Koleksiyonlar, numaralandırılabilir benzer nesne gruplarıdır. Visual Basic her biri Için içindeki belirli bir sözdizimini destekler [... ](../../../language-reference/statements/for-each-next-statement.md) Bir koleksiyonun öğeleri arasında yineleme yapmanızı sağlayan Next bildirisi. Ayrıca, Koleksiyonlar genellikle <xref:Microsoft.VisualBasic.Collection.Item%2A> öğelerini dizine göre almak için veya bunları benzersiz bir dizeyle ilişkilendirerek kullanmanıza izin verir. Koleksiyonlar, dizinleri kullanmadan öğeleri eklemenize veya kaldırmanıza izin verdiklerinden, dizilerden kullanımı daha kolay olabilir. Kullanım kolaylığı nedeniyle, Koleksiyonlar genellikle formları ve denetimleri depolamak için kullanılır.
 
 ## <a name="related-topics"></a>İlgili konular
 

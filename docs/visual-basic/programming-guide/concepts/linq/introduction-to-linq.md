@@ -1,17 +1,18 @@
 ---
+description: "Daha fazla bilgi edinin: LINQ 'e giriş (Visual Basic)"
 title: LINQ'ye Giriş
 ms.date: 07/20/2015
 ms.assetid: c6339c12-9b2d-433e-961c-0d2b7f0091c2
-ms.openlocfilehash: e99da74eb69511b92ddccfb42f8002adc7be83d1
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: b6be93bbf9b458ca19068961617ee08f67601edc
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91098287"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100426796"
 ---
 # <a name="introduction-to-linq-visual-basic"></a>LINQ 'e giriş (Visual Basic)
 
-Dil ile tümleşik sorgu (LINQ), .NET Framework sürüm 3,5 ' de sunulan ve nesnelerin dünyası ve veri dünyası arasındaki boşluğu bağlayan bir yeniliği.  
+Language-Integrated Query (LINQ), .NET Framework sürüm 3,5 ' de sunulan ve nesnelerin dünyası ve veri dünyası arasındaki boşluğu köprügören bir yeniliği.  
   
  Geleneksel olarak, verilere karşı sorgular derleme zamanında veya IntelliSense desteğiyle tür denetlemesi olmadan basit dizeler olarak ifade edilir. Ayrıca, her veri kaynağı türü için farklı bir sorgu dili öğrenirsiniz: SQL veritabanları, XML belgeleri, çeşitli Web Hizmetleri ve benzeri. LINQ, Visual Basic ' de bir *sorgu* birinci sınıf dil yapısı yapar. Dil anahtar sözcükleri ve tanıdık işleçleri kullanarak, türü kesin belirlenmiş nesne koleksiyonlara karşı sorgular yazarsınız.  
   

@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: genişletme ve daraltma dönüştürmeleri (Visual Basic)'
 title: Genişletme ve Daraltma Dönüşümleri
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-ms.openlocfilehash: c0e10f5593ce5c81002233516444e415571541f3
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 2ccd7d51b811aaf0f3e29dc0dc1730dffad2106b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91058540"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468440"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>Genişletme ve Daraltma Dönüşümleri (Visual Basic)
 
@@ -57,11 +58,11 @@ Tür dönüştürmesinin sonucu, dönüştürme sonucunun hedef veri türünün 
 |Herhangi bir tür|[Nesne](../../../language-reference/data-types/object-data-type.md)|  
 |Türetilmiş herhangi bir tür|<sup>3</sup>' ün türetildiği temel tür.|  
 |Herhangi bir tür|Uyguladığı herhangi bir arabirim.|  
-|[Yapma](../../../language-reference/nothing.md)|Herhangi bir veri türü veya nesne türü.|  
+|[Nothing](../../../language-reference/nothing.md)|Herhangi bir veri türü veya nesne türü.|  
   
  <sup>1</sup> tanım, her veri türü ise widens.  
   
- <sup>2</sup> ,,, `Integer` `UInteger` veya ile arasındaki dönüşümler `Long` `ULong` `Decimal` `Single` `Double` duyarlık kaybına neden olabilir, ancak hiçbir şekilde büyüklük kaybı olmaz. Bu anlamda bilgi kaybı yoktur.  
+ <sup></sup> ,,, `Integer` `UInteger` veya ile arasındaki dönüşümler `Long` `ULong` `Decimal` `Single` `Double` duyarlık kaybına neden olabilir, ancak hiçbir şekilde büyüklük kaybı olmaz. Bu anlamda bilgi kaybı yoktur.  
   
  <sup>3</sup> bu, türetilmiş bir türden bir dönüştürmenin temel türlerinden birine dönüştürülmesinin genişleyen olduğunu ortaya çıkarmayabilir. Gerekçe, türetilmiş türün temel türün tüm üyelerini içermesinden dolayı temel türün bir örneği olarak nitelendirir. Ters yönde, temel tür türetilmiş tür tarafından tanımlanan yeni üyeleri içermez.  
   

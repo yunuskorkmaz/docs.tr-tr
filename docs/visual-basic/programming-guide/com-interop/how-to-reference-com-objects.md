@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: Visual Basic COM nesnelerine başvurma'
 title: "Nasıl yapılır: Visual Basic'den COM Nesnelerine Başvuru Yapma"
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - COM objects, referencing
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
-ms.openlocfilehash: 43ba068663db9f8c3816a6f731395a6682a130e6
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: f0c08e5be9144bdefc3fe0b4609bad2421889d52
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91083299"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100477573"
 ---
 # <a name="how-to-reference-com-objects-from-visual-basic"></a>Nasıl yapılır: Visual Basic'den COM Nesnelerine Başvuru Yapma
 

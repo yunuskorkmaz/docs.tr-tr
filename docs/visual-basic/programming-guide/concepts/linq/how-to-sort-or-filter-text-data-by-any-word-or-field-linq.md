@@ -1,21 +1,22 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: metin verilerini herhangi bir sözcüğe veya alana göre sıralama veya filtreleme (LINQ) (Visual Basic)'
 title: 'Nasıl yapılır: Herhangi bir Sözcük veya Alana Göre Metin Verilerini Sıralama veya Filtreleme (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 9df137fe-335b-46e0-aecf-ea8a9eddd4e3
-ms.openlocfilehash: 798f30d39b4f805001c8c28b9ad6212061550775
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 49fff8df58b41acf7c8a63b94e8d1c85eefec8ab
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397732"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434933"
 ---
 # <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a>Nasıl yapılır: herhangi bir sözcük veya alana göre metin verilerini sıralama veya filtreleme (LINQ) (Visual Basic)
 
-Aşağıdaki örnek, virgülle ayrılmış değerler gibi yapılandırılmış metnin çizgilerinin satırdaki herhangi bir alana göre nasıl sıralanacağını gösterir. Alan, çalışma zamanında dinamik olarak belirtilmiş olabilir. Puanlar. csv içindeki alanların, bir öğrencinin KIMLIK numarasını temsil ettiğini ve ardından bir dizi dört test puandığını varsayın.
+Aşağıdaki örnek, virgülle ayrılmış değerler gibi yapılandırılmış metnin çizgilerinin satırdaki herhangi bir alana göre nasıl sıralanacağını gösterir. Alan, çalışma zamanında dinamik olarak belirtilmiş olabilir. scores.csv içindeki alanların, bir öğrencinin KIMLIK numarasını temsil ettiğini ve ardından dört test puanı serisi olduğunu varsayalım.
 
 ### <a name="to-create-a-file-that-contains-data"></a>Veri içeren bir dosya oluşturmak için
 
-Bu konudaki puanlarını. csv verilerini, [benzer dosyalardan (LINQ) (Visual Basic) Içerik ekleme](how-to-join-content-from-dissimilar-files-linq.md) ve çözüm klasörünüze kaydetme konularına kopyalayın.
+scores.csv verilerini, [farklı dosyalardan (LINQ) (Visual Basic) Içerik ekleme](how-to-join-content-from-dissimilar-files-linq.md) ve çözüm klasörünüze kaydetme konusundaki konuya kopyalayın.
 
 ## <a name="example"></a>Örnek
 
