@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: Kovaryans ve değişken varyans (Visual Basic)'
 title: Kovaryans ve Kontravaryans
 ms.date: 07/20/2015
 ms.assetid: 59224c46-9931-466b-8c6e-3648c3e609c6
-ms.openlocfilehash: 11dd71a8cfde12b7af1de79e3f5a095f79d8aa6e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6569b2c6c4790a5fcf53a9991543286ad6c4314c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400635"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100485256"
 ---
 # <a name="covariance-and-contravariance-visual-basic"></a>Kovaryans ve değişken varyans (Visual Basic)
 

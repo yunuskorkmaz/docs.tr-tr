@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: Visual Basic ömrü'
 title: Ömür
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: 67fe63eecd2aa0c134682708cdeddb21ba06db12
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 7c95358209c61b42862f4e995d02a97dfb6e8487
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91087498"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100471467"
 ---
 # <a name="lifetime-in-visual-basic"></a>Visual Basic'de Ömür
 
@@ -85,8 +86,8 @@ Belirtilen bir öğenin *yaşam süresi* , kullanım için kullanılabilir oldu�
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Shared](../../../language-reference/modifiers/shared.md)
-- [Yapma](../../../language-reference/nothing.md)
+- [Paylaşılan](../../../language-reference/modifiers/shared.md)
+- [Nothing](../../../language-reference/nothing.md)
 - [Bildirilen Öğe Adları](declared-element-names.md)
 - [Bildirilmiş Öğelere Başvurular](references-to-declared-elements.md)
 - [Visual Basic'de Kapsam](scope.md)

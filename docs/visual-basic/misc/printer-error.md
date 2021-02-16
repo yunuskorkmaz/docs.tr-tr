@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: yazıcı hatası'
 title: Yazıcı hatası
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID482
 ms.assetid: 0ce0c4b3-3604-4638-9363-6c9333d0cc9d
-ms.openlocfilehash: cd4d18dc73d714eb22bb7888e7534f966bfe87e6
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 9e46d7c69a8074755bb34f76ca82ea11b1d1f695
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91076012"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100480576"
 ---
 # <a name="printer-error"></a>Yazıcı hatası
 

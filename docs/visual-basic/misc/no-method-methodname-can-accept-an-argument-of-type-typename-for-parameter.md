@@ -1,13 +1,14 @@
 ---
+description: "Daha fazla bilgi edinin: ' ' metodu ' ' <methodname> <typename> parametresi için ' ' türünde bir bağımsız değişken kabul <parametername> edebilir"
 title: "' ' Parametresi için ' ' <methodname> türünde bir bağımsız değişken kabul edemesiz ' ' yöntemi <typename> <parametername>"
 ms.date: 07/20/2015
 ms.assetid: 175c01dc-279c-4996-8501-d19a6671fdeb
-ms.openlocfilehash: 6c0cf8e212a49ed046b600c67585500cb7d2c5df
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: ef122533bff555cb321aed6e23cb6170aae15a15
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91084352"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100479120"
 ---
 # <a name="no-method-methodname-can-accept-an-argument-of-type-typename-for-parameter-parametername"></a>' ' Parametresi için ' ' \<methodname> türünde bir bağımsız değişken kabul edemesiz ' ' yöntemi \<typename> \<parametername>
 

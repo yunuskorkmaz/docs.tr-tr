@@ -1,18 +1,19 @@
 ---
-title: Çalışma zamanı Iletileri
+description: 'Hakkında daha fazla bilgi edinin: Visual Basic Run-Time Iletileri'
+title: Run-Time Iletileri
 ms.date: 07/20/2015
 helpviewer_keywords:
 - errors [Visual Basic], run-time
 - run-time errors [Visual Basic], Visual Basic
 ms.assetid: 130f7c2b-8eb1-4a6e-81aa-e30e27d3d4f7
-ms.openlocfilehash: 88c9d341064f5c8d85d4c27b7d9bc79114642610
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 6e6367c8094d5a1d3eb3554cbc56e09cc5c8034a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91060711"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100485815"
 ---
-# <a name="visual-basic-run-time-messages"></a>Visual Basic çalışma zamanı Iletileri
+# <a name="visual-basic-run-time-messages"></a>Visual Basic Run-Time Iletileri
 
 Bu bölüm, çalışma zamanında oluşan Visual Basic hata iletilerini içerir.  
   
@@ -202,7 +203,7 @@ Bu bölüm, çalışma zamanında oluşan Visual Basic hata iletilerini içerir.
   
  [Sıfıra bölme (Visual Basic hatası)](division-by-zero-error.md)  
   
- [Sıfıra bölme (Visual Basic çalışma zamanı hatası)](division-by-zero-run-time-error.md)  
+ [Sıfıra bölme (Visual Basic Run-Time hatası)](division-by-zero-run-time-error.md)  
   
  [' \<drivename> ' Sürücüsü bulunamadı](drive-drivename-not-found.md)  
   
@@ -354,7 +355,7 @@ Bu bölüm, çalışma zamanında oluşan Visual Basic hata iletilerini içerir.
   
  [Sıra sayısı geçerli değil](../language-reference/error-messages/ordinal-is-not-valid.md)  
   
- [Bellek yetersiz (Visual Basic çalışma zamanı hatası)](out-of-memory-run-time-error.md)  
+ [Bellek yetersiz (Visual Basic Run-Time hata)](out-of-memory-run-time-error.md)  
   
  [Yığın için ayrılan alan doldu (Visual Basic)](../language-reference/error-messages/out-of-stack-space.md)  
   
@@ -556,4 +557,4 @@ Bu bölüm, çalışma zamanında oluşan Visual Basic hata iletilerini içerir.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata İletileri](../language-reference/error-messages/index.md)
+- [Hata Iletileri](../language-reference/error-messages/index.md)

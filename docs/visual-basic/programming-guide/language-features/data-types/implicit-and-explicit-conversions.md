@@ -1,4 +1,5 @@
 ---
+description: 'Daha fazla bilgi edinin: örtük ve açık dönüştürmeler (Visual Basic)'
 title: Örtük ve Açık Dönüştürmeler
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], implicit
 - implicit data type conversions [Visual Basic]
 ms.assetid: 77de1659-af8a-492c-967e-e7ef60ccce66
-ms.openlocfilehash: 2858dafd2531bd846ad89672348d103f385c4511
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6a53c0998025cc8c19274c67d9dfe1c50a4f1373
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393837"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100483956"
 ---
 # <a name="implicit-and-explicit-conversions-visual-basic"></a>Örtük ve Açık Dönüştürmeler (Visual Basic)
 
@@ -56,29 +57,29 @@ Aşağıdaki tabloda kullanılabilir dönüştürme anahtar sözcükleri göster
 
 |Tür dönüştürme anahtar sözcüğü|Bir ifadeyi veri türüne dönüştürür|Dönüştürülecek ifadenin izin verilen veri türleri|
 |---|---|---|
-|`CBool`|[Boolean Veri Türü](../../../language-reference/data-types/boolean-data-type.md)|Herhangi bir sayısal tür ( `Byte` , `SByte` ve numaralandırılmış türler dahil), `String` ,`Object`|
-|`CByte`|[Byte Veri Türü](../../../language-reference/data-types/byte-data-type.md)|Herhangi bir sayısal tür ( `SByte` ve numaralandırılmış türler dahil),, `Boolean` `String` ,`Object`|
+|`CBool`|[Boolean Veri Türü](../../../language-reference/data-types/boolean-data-type.md)|Herhangi bir sayısal tür ( `Byte` , `SByte` ve numaralandırılmış türler dahil), `String` , `Object`|
+|`CByte`|[Byte Veri Türü](../../../language-reference/data-types/byte-data-type.md)|Herhangi bir sayısal tür ( `SByte` ve numaralandırılmış türler dahil),, `Boolean` `String` , `Object`|
 |`CChar`|[Char Veri Türü](../../../language-reference/data-types/char-data-type.md)|`String`, `Object`|
 |`CDate`|[Date Veri Türü](../../../language-reference/data-types/date-data-type.md)|`String`, `Object`|
-|`CDbl`|[Double Veri Türü](../../../language-reference/data-types/double-data-type.md)|Herhangi bir sayısal tür ( `Byte` , `SByte` ve numaralandırılmış türler dahil), `Boolean` , `String` ,`Object`|
-|`CDec`|[Decimal Veri Türü](../../../language-reference/data-types/decimal-data-type.md)|Herhangi bir sayısal tür ( `Byte` , `SByte` ve numaralandırılmış türler dahil), `Boolean` , `String` ,`Object`|
-|`CInt`|[Integer Veri Türü](../../../language-reference/data-types/integer-data-type.md)|Herhangi bir sayısal tür ( `Byte` , `SByte` ve numaralandırılmış türler dahil), `Boolean` , `String` ,`Object`|
-|`CLng`|[Long Veri Türü](../../../language-reference/data-types/long-data-type.md)|Herhangi bir sayısal tür ( `Byte` , `SByte` ve numaralandırılmış türler dahil), `Boolean` , `String` ,`Object`|
+|`CDbl`|[Double Veri Türü](../../../language-reference/data-types/double-data-type.md)|Herhangi bir sayısal tür ( `Byte` , `SByte` ve numaralandırılmış türler dahil), `Boolean` , `String` , `Object`|
+|`CDec`|[Decimal Veri Türü](../../../language-reference/data-types/decimal-data-type.md)|Herhangi bir sayısal tür ( `Byte` , `SByte` ve numaralandırılmış türler dahil), `Boolean` , `String` , `Object`|
+|`CInt`|[Integer Veri Türü](../../../language-reference/data-types/integer-data-type.md)|Herhangi bir sayısal tür ( `Byte` , `SByte` ve numaralandırılmış türler dahil), `Boolean` , `String` , `Object`|
+|`CLng`|[Long Veri Türü](../../../language-reference/data-types/long-data-type.md)|Herhangi bir sayısal tür ( `Byte` , `SByte` ve numaralandırılmış türler dahil), `Boolean` , `String` , `Object`|
 |`CObj`|[Nesne Veri Türü](../../../language-reference/data-types/object-data-type.md)|Herhangi bir tür|
-|`CSByte`|[SByte Veri Türü](../../../language-reference/data-types/sbyte-data-type.md)|Herhangi bir sayısal tür ( `Byte` ve numaralandırılmış türler dahil),, `Boolean` `String` ,`Object`|
-|`CShort`|[Short Veri Türü](../../../language-reference/data-types/short-data-type.md)|Herhangi bir sayısal tür ( `Byte` , `SByte` ve numaralandırılmış türler dahil), `Boolean` , `String` ,`Object`|
-|`CSng`|[Single Veri Türü](../../../language-reference/data-types/single-data-type.md)|Herhangi bir sayısal tür ( `Byte` , `SByte` ve numaralandırılmış türler dahil), `Boolean` , `String` ,`Object`|
-|`CStr`|[Dize Veri Türü](../../../language-reference/data-types/string-data-type.md)|Herhangi bir sayısal tür ( `Byte` , `SByte` ve numaralandırılmış türler dahil), `Boolean` , `Char` , `Char` dizi, `Date` ,`Object`|
-|`CType`|Virgül () sonrasında belirtilen tür `,`|Bir *Öğesel veri türüne* dönüştürme sırasında (bir öğesel türün dizisi dahil), karşılık gelen dönüştürme anahtar sözcüğü için izin verilen türler<br /><br /> *Bileşik veri türüne*dönüştürme yaparken, uyguladığı arabirimler ve devraldığı sınıflar<br /><br /> Daha fazla yüklü olan bir sınıfa veya yapıya dönüştürme sırasında `CType` , bu sınıf veya yapı|
-|`CUInt`|[UInteger Veri Türü](../../../language-reference/data-types/uinteger-data-type.md)|Herhangi bir sayısal tür ( `Byte` , `SByte` ve numaralandırılmış türler dahil), `Boolean` , `String` ,`Object`|
-|`CULng`|[ULong Veri Türü](../../../language-reference/data-types/ulong-data-type.md)|Herhangi bir sayısal tür ( `Byte` , `SByte` ve numaralandırılmış türler dahil), `Boolean` , `String` ,`Object`|
-|`CUShort`|[UShort Veri Türü](../../../language-reference/data-types/ushort-data-type.md)|Herhangi bir sayısal tür ( `Byte` , `SByte` ve numaralandırılmış türler dahil), `Boolean` , `String` ,`Object`|
+|`CSByte`|[SByte Veri Türü](../../../language-reference/data-types/sbyte-data-type.md)|Herhangi bir sayısal tür ( `Byte` ve numaralandırılmış türler dahil),, `Boolean` `String` , `Object`|
+|`CShort`|[Short Veri Türü](../../../language-reference/data-types/short-data-type.md)|Herhangi bir sayısal tür ( `Byte` , `SByte` ve numaralandırılmış türler dahil), `Boolean` , `String` , `Object`|
+|`CSng`|[Single Veri Türü](../../../language-reference/data-types/single-data-type.md)|Herhangi bir sayısal tür ( `Byte` , `SByte` ve numaralandırılmış türler dahil), `Boolean` , `String` , `Object`|
+|`CStr`|[Dize Veri Türü](../../../language-reference/data-types/string-data-type.md)|Herhangi bir sayısal tür ( `Byte` , `SByte` ve numaralandırılmış türler dahil), `Boolean` , `Char` , `Char` dizi, `Date` , `Object`|
+|`CType`|Virgül () sonrasında belirtilen tür `,`|Bir *Öğesel veri türüne* dönüştürme sırasında (bir öğesel türün dizisi dahil), karşılık gelen dönüştürme anahtar sözcüğü için izin verilen türler<br /><br /> *Bileşik veri türüne* dönüştürme yaparken, uyguladığı arabirimler ve devraldığı sınıflar<br /><br /> Daha fazla yüklü olan bir sınıfa veya yapıya dönüştürme sırasında `CType` , bu sınıf veya yapı|
+|`CUInt`|[UInteger Veri Türü](../../../language-reference/data-types/uinteger-data-type.md)|Herhangi bir sayısal tür ( `Byte` , `SByte` ve numaralandırılmış türler dahil), `Boolean` , `String` , `Object`|
+|`CULng`|[ULong Veri Türü](../../../language-reference/data-types/ulong-data-type.md)|Herhangi bir sayısal tür ( `Byte` , `SByte` ve numaralandırılmış türler dahil), `Boolean` , `String` , `Object`|
+|`CUShort`|[UShort Veri Türü](../../../language-reference/data-types/ushort-data-type.md)|Herhangi bir sayısal tür ( `Byte` , `SByte` ve numaralandırılmış türler dahil), `Boolean` , `String` , `Object`|
 
 ## <a name="the-ctype-function"></a>CType Işlevi
 
 [CType işlevi](../../../language-reference/functions/ctype-function.md) iki bağımsız değişken üzerinde çalışır. İlki dönüştürülecek ifade, ikincisi ise hedef veri türü veya nesne sınıfıdır. İlk bağımsız değişkenin bir tür değil bir ifade olması gerektiğini unutmayın.
 
-`CType`, bir *satır içi işlevdir*, yani derlenmiş kod, genellikle bir işlev çağrısı oluşturmadan dönüştürmeyi yapar. Bu, performansı geliştirir.
+`CType` , bir *satır içi işlevdir*, yani derlenmiş kod, genellikle bir işlev çağrısı oluşturmadan dönüştürmeyi yapar. Bu, performansı geliştirir.
 
 `CType`Diğer tür dönüştürme anahtar sözcükleriyle bir karşılaştırması için bkz. [DirectCast Işleci](../../../language-reference/operators/directcast-operator.md) ve [TryCast İşleci](../../../language-reference/operators/trycast-operator.md).
 
@@ -107,7 +108,7 @@ h = CType(cZ, iZone)
 
 ### <a name="array-types"></a>Dizi türleri
 
-`CType`, aşağıdaki örnekte olduğu gibi dizi veri türlerini de dönüştürebilir.
+`CType` , aşağıdaki örnekte olduğu gibi dizi veri türlerini de dönüştürebilir.
 
 ```vb
 Dim v() As classV
