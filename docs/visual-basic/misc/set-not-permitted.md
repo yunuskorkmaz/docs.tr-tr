@@ -1,15 +1,16 @@
 ---
+description: 'Daha fazla bilgi edinin: set izin verilmiyor'
 title: İzin verilmiyor
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID387
 ms.assetid: 809f6768-7dd7-4632-b4dd-83856edfdb48
-ms.openlocfilehash: 061e611d5b35068f82a76e0ad642ad14679362c9
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 891a34401266c095260e3cedcdb51784b9eed1af
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91060646"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100485776"
 ---
 # <a name="set-not-permitted"></a>İzin verilmiyor
 

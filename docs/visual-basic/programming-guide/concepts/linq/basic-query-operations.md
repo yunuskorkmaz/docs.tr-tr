@@ -1,4 +1,5 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: temel sorgu Işlemleri (Visual Basic)'
 title: Temel Sorgu İşlemleri
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-ms.openlocfilehash: 6f4c58b15c33d8d2007069df88b2984e692df0a8
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 1f8fbda83c21fe9032415d96ff2d7e184083a839
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078378"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100428694"
 ---
 # <a name="basic-query-operations-visual-basic"></a>Temel Sorgu İşlemleri (Visual Basic)
 
-Bu konu, Visual Basic dil ile tümleşik sorgu (LINQ) ifadelerine ve bir sorguda gerçekleştirdiğiniz bazı tipik işlem türlerinden bazılarına kısa bir giriş sağlar. Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:  
+Bu konu, Visual Basic Language-Integrated sorgu (LINQ) ifadelerine ve bir sorguda gerçekleştirdiğiniz bazı tipik işlem türlerine yönelik kısa bir giriş sağlar. Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:  
   
  [Visual Basic'de LINQ'e Giriş](../../language-features/linq/introduction-to-linq.md)  
   
@@ -38,7 +39,7 @@ Bu konu, Visual Basic dil ile tümleşik sorgu (LINQ) ifadelerine ve bir sorguda
   
  [!code-vb[VbLINQBasicOps#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#1)]  
   
- `From`Yan tümce veri kaynağını, `customers` ve bir *Aralık değişkenini*belirtir `cust` . Aralık değişkeni, bir sorgu ifadesinde gerçek yineleme gerçekleşmediğinde bir döngü yineleme değişkeni gibidir. Sorgu yürütüldüğünde, genellikle bir `For Each` döngü kullanılarak Aralık değişkeni, içinde birbirini izleyen her öğe için bir başvuru işlevi görür `customers` . Derleyici türünü çıkarsanbildiğinden `cust` , açıkça belirtmeniz gerekmez. Açık yazma olmadan ve ile yazılan sorguların örnekleri için bkz. [sorgu Işlemlerinde tür ilişkileri (Visual Basic)](type-relationships-in-query-operations.md).  
+ `From`Yan tümce veri kaynağını, `customers` ve bir *Aralık değişkenini* belirtir `cust` . Aralık değişkeni, bir sorgu ifadesinde gerçek yineleme gerçekleşmediğinde bir döngü yineleme değişkeni gibidir. Sorgu yürütüldüğünde, genellikle bir `For Each` döngü kullanılarak Aralık değişkeni, içinde birbirini izleyen her öğe için bir başvuru işlevi görür `customers` . Derleyici türünü çıkarsanbildiğinden `cust` , açıkça belirtmeniz gerekmez. Açık yazma olmadan ve ile yazılan sorguların örnekleri için bkz. [sorgu Işlemlerinde tür ilişkileri (Visual Basic)](type-relationships-in-query-operations.md).  
   
  Visual Basic yan tümcesini kullanma hakkında daha fazla bilgi için `From` bkz. [from yan tümcesi](../../../language-reference/queries/from-clause.md).  
   
@@ -74,7 +75,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
 ## <a name="selecting-data-select"></a>Verileri Seçme (Seçim)  
 
- `Select`Yan tümce döndürülen öğelerin formunu ve içeriğini belirtir. Örneğin, sonuçlarınızın tam `Customer` nesnelerden, tek bir `Customer` özellikten, özelliklerin bir alt kümesinden, çeşitli veri kaynaklarından özelliklerin bir birleşimini veya bir hesaplamayı temel alan bir dizi yeni sonuç türüne sahip olup olmayacağını belirtebilirsiniz. `Select`Yan tümce, kaynak öğenin bir kopyası dışında bir şey üretirse, işleme bir *projeksiyon*olarak adlandırılır.  
+ `Select`Yan tümce döndürülen öğelerin formunu ve içeriğini belirtir. Örneğin, sonuçlarınızın tam `Customer` nesnelerden, tek bir `Customer` özellikten, özelliklerin bir alt kümesinden, çeşitli veri kaynaklarından özelliklerin bir birleşimini veya bir hesaplamayı temel alan bir dizi yeni sonuç türüne sahip olup olmayacağını belirtebilirsiniz. `Select`Yan tümce, kaynak öğenin bir kopyası dışında bir şey üretirse, işleme bir *projeksiyon* olarak adlandırılır.  
   
  Tüm nesnelerden oluşan bir koleksiyonu almak için `Customer` , Aralık değişkeninin kendisini seçin:  
   

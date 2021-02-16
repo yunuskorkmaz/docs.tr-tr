@@ -1,16 +1,17 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: XML değişmez değerlerinde boşluk (Visual Basic)'
 title: XML Değişmez Değerlerinde Boşluk
 ms.date: 07/20/2015
 helpviewer_keywords:
 - white space [XML in Visual Basic]
 - XML literals [Visual Basic], white space
 ms.assetid: dfe3a9ff-d69a-418e-a6b5-476f4ed84219
-ms.openlocfilehash: 5db8f92117e77d96eab34f28758546393e2afca0
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 9b4134626c0ad1f7f4be2923573eb6058fa7687f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91099105"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100428122"
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a>XML Değişmez Değerlerinde Boşluk (Visual Basic)
 

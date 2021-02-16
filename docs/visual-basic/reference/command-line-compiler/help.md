@@ -1,4 +1,5 @@
 ---
+description: Hakkında daha fazla bilgi edinin:-yardım,-? (Visual Basic)
 title: -help, -?
 ms.date: 03/10/2018
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - -? compiler option [Visual Basic]
 - '? compiler option [Visual Basic]'
 ms.assetid: eb984aa5-ac98-4d0b-a0d2-24238d7bc8dc
-ms.openlocfilehash: 3cf70e45b169eca43db5b5c377dd3364db0188ab
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 44dcb243f1792e3980ebdfd23cf237f8389e6490
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91058098"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100470284"
 ---
 # <a name="-help---visual-basic"></a>-help, -? (Visual Basic)
 
@@ -49,5 +50,5 @@ vbc -help
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](index.md)
+- [Visual Basic Command-Line derleyicisi](index.md)
 - [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)

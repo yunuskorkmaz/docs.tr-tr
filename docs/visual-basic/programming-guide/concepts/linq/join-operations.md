@@ -1,13 +1,14 @@
 ---
+description: 'Daha fazla bilgi edinin: JOIN Işlemleri (Visual Basic)'
 title: Birleştirme İşlemleri
 ms.date: 07/20/2015
 ms.assetid: 39ab4854-ac84-4738-9d0b-3cb79be84db4
-ms.openlocfilehash: e69e060447c0103c3c47be0fb34cad90e88c4516
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: d5566de71bf96d2af86329929a5ab6ab34e6d154
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077325"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100426783"
 ---
 # <a name="join-operations-visual-basic"></a>JOIN Işlemleri (Visual Basic)
 

@@ -1,16 +1,17 @@
 ---
+description: Daha fazla bilgi edinin:-highentropyva (Visual Basic)
 title: -highentropyva
 ms.date: 03/10/2018
 helpviewer_keywords:
 - highentropyva compiler option (Visual Basic)
 - /highentropyva compiler option (Visual Basic)
 ms.assetid: ff25f20a-6ca2-467b-9e52-5cf439f5028e
-ms.openlocfilehash: 4d88c302281097fabd0eb361d60319bc8a0daf8d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 90fc3713ae4f9a073a63a57c5b35114548e26cbb
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91058072"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100470271"
 ---
 # <a name="-highentropyva-visual-basic"></a>-highentropyva (Visual Basic)
 
@@ -35,5 +36,5 @@ ms.locfileid: "91058072"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](index.md)
+- [Visual Basic Command-Line derleyicisi](index.md)
 - [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)
