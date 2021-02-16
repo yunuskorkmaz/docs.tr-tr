@@ -1,23 +1,24 @@
 ---
+description: 'Hakkında daha fazla bilgi edinin: nasıl yapılır: metin verilerini herhangi bir sözcüğe veya alana göre sıralama veya filtreleme (LINQ) (Visual Basic)'
 title: 'Nasıl yapılır: Herhangi bir Sözcük veya Alana Göre Metin Verilerini Sıralama veya Filtreleme (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 9df137fe-335b-46e0-aecf-ea8a9eddd4e3
-ms.openlocfilehash: 798f30d39b4f805001c8c28b9ad6212061550775
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 49fff8df58b41acf7c8a63b94e8d1c85eefec8ab
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397732"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434933"
 ---
-# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a><span data-ttu-id="7e412-102">Nasıl yapılır: herhangi bir sözcük veya alana göre metin verilerini sıralama veya filtreleme (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7e412-102">How to: Sort or Filter Text Data by Any Word or Field (LINQ) (Visual Basic)</span></span>
+# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a><span data-ttu-id="2f0b0-103">Nasıl yapılır: herhangi bir sözcük veya alana göre metin verilerini sıralama veya filtreleme (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2f0b0-103">How to: Sort or Filter Text Data by Any Word or Field (LINQ) (Visual Basic)</span></span>
 
-<span data-ttu-id="7e412-103">Aşağıdaki örnek, virgülle ayrılmış değerler gibi yapılandırılmış metnin çizgilerinin satırdaki herhangi bir alana göre nasıl sıralanacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="7e412-103">The following example shows how to sort lines of structured text, such as comma-separated values, by any field in the line.</span></span> <span data-ttu-id="7e412-104">Alan, çalışma zamanında dinamik olarak belirtilmiş olabilir.</span><span class="sxs-lookup"><span data-stu-id="7e412-104">The field may be dynamically specified at runtime.</span></span> <span data-ttu-id="7e412-105">Puanlar. csv içindeki alanların, bir öğrencinin KIMLIK numarasını temsil ettiğini ve ardından bir dizi dört test puandığını varsayın.</span><span class="sxs-lookup"><span data-stu-id="7e412-105">Assume that the fields in scores.csv represent a student's ID number, followed by a series of four test scores.</span></span>
+<span data-ttu-id="2f0b0-104">Aşağıdaki örnek, virgülle ayrılmış değerler gibi yapılandırılmış metnin çizgilerinin satırdaki herhangi bir alana göre nasıl sıralanacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="2f0b0-104">The following example shows how to sort lines of structured text, such as comma-separated values, by any field in the line.</span></span> <span data-ttu-id="2f0b0-105">Alan, çalışma zamanında dinamik olarak belirtilmiş olabilir.</span><span class="sxs-lookup"><span data-stu-id="2f0b0-105">The field may be dynamically specified at runtime.</span></span> <span data-ttu-id="2f0b0-106">scores.csv içindeki alanların, bir öğrencinin KIMLIK numarasını temsil ettiğini ve ardından dört test puanı serisi olduğunu varsayalım.</span><span class="sxs-lookup"><span data-stu-id="2f0b0-106">Assume that the fields in scores.csv represent a student's ID number, followed by a series of four test scores.</span></span>
 
-### <a name="to-create-a-file-that-contains-data"></a><span data-ttu-id="7e412-106">Veri içeren bir dosya oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="7e412-106">To create a file that contains data</span></span>
+### <a name="to-create-a-file-that-contains-data"></a><span data-ttu-id="2f0b0-107">Veri içeren bir dosya oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="2f0b0-107">To create a file that contains data</span></span>
 
-<span data-ttu-id="7e412-107">Bu konudaki puanlarını. csv verilerini, [benzer dosyalardan (LINQ) (Visual Basic) Içerik ekleme](how-to-join-content-from-dissimilar-files-linq.md) ve çözüm klasörünüze kaydetme konularına kopyalayın.</span><span class="sxs-lookup"><span data-stu-id="7e412-107">Copy the scores.csv data from the topic [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](how-to-join-content-from-dissimilar-files-linq.md) and save it to your solution folder.</span></span>
+<span data-ttu-id="2f0b0-108">scores.csv verilerini, [farklı dosyalardan (LINQ) (Visual Basic) Içerik ekleme](how-to-join-content-from-dissimilar-files-linq.md) ve çözüm klasörünüze kaydetme konusundaki konuya kopyalayın.</span><span class="sxs-lookup"><span data-stu-id="2f0b0-108">Copy the scores.csv data from the topic [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](how-to-join-content-from-dissimilar-files-linq.md) and save it to your solution folder.</span></span>
 
-## <a name="example"></a><span data-ttu-id="7e412-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="7e412-108">Example</span></span>
+## <a name="example"></a><span data-ttu-id="2f0b0-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="2f0b0-109">Example</span></span>
 
 ```vb
 Class SortLines
@@ -70,12 +71,12 @@ End Class
 ' 115, 35, 72, 91, 70
 ```
 
-<span data-ttu-id="7e412-109">Bu örnek ayrıca bir Işlevden nasıl sorgu değişkeni dönebileceğinizi gösterir.</span><span class="sxs-lookup"><span data-stu-id="7e412-109">This example also demonstrates how to return a query variable from a Function.</span></span>
+<span data-ttu-id="2f0b0-110">Bu örnek ayrıca bir Işlevden nasıl sorgu değişkeni dönebileceğinizi gösterir.</span><span class="sxs-lookup"><span data-stu-id="2f0b0-110">This example also demonstrates how to return a query variable from a Function.</span></span>
 
-## <a name="compile-the-code"></a><span data-ttu-id="7e412-110">Kodu derle</span><span class="sxs-lookup"><span data-stu-id="7e412-110">Compile the code</span></span>
+## <a name="compile-the-code"></a><span data-ttu-id="2f0b0-111">Kodu derle</span><span class="sxs-lookup"><span data-stu-id="2f0b0-111">Compile the code</span></span>
 
-<span data-ttu-id="7e412-111">`Imports`System. Linq ad alanı için bir deyimle birlikte Visual Basic konsol uygulaması projesi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="7e412-111">Create a Visual Basic console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+<span data-ttu-id="2f0b0-112">`Imports`System. Linq ad alanı için bir deyimle birlikte Visual Basic konsol uygulaması projesi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="2f0b0-112">Create a Visual Basic console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="7e412-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7e412-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2f0b0-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2f0b0-113">See also</span></span>
 
-- [<span data-ttu-id="7e412-113">LINQ ve dizeler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7e412-113">LINQ and Strings (Visual Basic)</span></span>](linq-and-strings.md)
+- [<span data-ttu-id="2f0b0-114">LINQ ve dizeler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2f0b0-114">LINQ and Strings (Visual Basic)</span></span>](linq-and-strings.md)
