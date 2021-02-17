@@ -3,12 +3,12 @@ title: Artımlı geçiş stratejileri
 description: Takım, büyük uygulamaları ASP.NET MVC 'den .NET Core 'a artımlı bir biçimde geçirmeye olanak sağlayacak olan stratejileri benimseyebilirler.
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: f09504c2c20c9038c3bdaa13c6a0ac0438f684e7
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: 1c962065360f37e6fc22db8bf5a73a532ae39627
+ms.sourcegitcommit: 456b3cd82a87b453fa737b4661295070d1b6d684
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 02/17/2021
-ms.locfileid: "100583017"
+ms.locfileid: "100639215"
 ---
 # <a name="strategies-for-migrating-incrementally"></a>Artımlı geçiş stratejileri
 
@@ -30,7 +30,7 @@ Uygulamanın .NET Core 3,1 ' de çalıştırıldığı zamana göre, geçerli .N
 
 Geçişe yönelik başka bir yaklaşım ise dikey işlev dilimlerini tanımlamak ve bunları hedef platforma tek tek geçirmek olacaktır. İlk adım, yeni bir ASP.NET Core 3,1 veya 5 uygulaması oluşturmaktır. Sonra, önce geçirilecek tek sayfayı veya API uç noktasını bir kez daha belirlemelisiniz. ASP.NET Core uygulamasında bu yolu desteklemek için yalnızca gerekli işlevleri oluşturun. Daha sonra, bu sayfalara veya uç noktalara yönelik istekleri ASP.NET uygulaması yerine yeni uygulamaya göndermeye başlamak için HTTP yeniden yazma ve/veya ters proxy kullanın.
 
-Bu stratejiyi IIS kullanarak izlemeye yönelik bazı özel yönergeler [, Bölüm 5, dağıtım senaryolarında](deployment-scenarios-md)ele alınmıştır.
+Bu stratejiyi IIS kullanarak izlemeye yönelik bazı özel yönergeler [, Bölüm 5, dağıtım senaryolarında](deployment-scenarios.md)ele alınmıştır.
 
 ## <a name="references"></a>Başvurular
 

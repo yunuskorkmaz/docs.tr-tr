@@ -3,12 +3,12 @@ title: Davpr hizmeti çağırma yapı taşı
 description: Hizmet çağırma oluşturma bloğunun açıklaması, özellikleri, avantajları ve nasıl uygulanacağı
 author: amolenk
 ms.date: 02/07/2021
-ms.openlocfilehash: a68fc281b267ac32052fcc7729d257c44c9fc753
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: 1b31496bc40aebeb24716da519ed25d660242035
+ms.sourcegitcommit: 456b3cd82a87b453fa737b4661295070d1b6d684
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 02/17/2021
-ms.locfileid: "100629487"
+ms.locfileid: "100639269"
 ---
 # <a name="the-dapr-service-invocation-building-block"></a>Davpr hizmeti çağırma yapı taşı
 
@@ -20,7 +20,7 @@ Dağıtılmış bir uygulamadaki hizmetler arasında çağrı yapmak kolay gör�
 
 - Diğer hizmetlerin bulunduğu yer.
 - Hizmet adresi verildiğinde hizmeti güvenli bir şekilde çağırma.
-- Kısa süreli [geçici hatalar](https://docs.microsoft.com/aspnet/aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/transient-fault-handling) oluştuğunda yeniden denemeleri işleme.
+- Kısa süreli [geçici hatalar](/aspnet/aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/transient-fault-handling) oluştuğunda yeniden denemeleri işleme.
 
 Son olarak, dağıtılmış uygulamalar birçok farklı hizmet oluştururken, hizmet çağrı grafikleri genelinde öngörüleri yakalamak, üretim sorunlarını tanılamak için kritik öneme sahiptir.
 
@@ -235,7 +235,7 @@ Yukarıdaki örnekte, Davprclient, `order` [protoarabelleğe](https://developers
 
 ## <a name="reference-application-eshopondapr"></a>Başvuru uygulaması: Eshopondadpr
 
-Microsoft 'un orijinal [Eshoponcontainers](https://github.com/dotnet-architecture/eShopOnContainers) mikro hizmet başvuru mımarısı, http/REST ve GRPC hizmetlerinin bir karışımını kullandı. GRPC kullanımı, [Toplayıcı hizmeti](../cloud-native/service-to-service-communication#service-aggregator-pattern) ile çekirdek arka uç hizmetleri arasındaki iletişim ile sınırlandırılmıştır. Şekil 6-2 mimariyi gösterme:
+Microsoft 'un orijinal [Eshoponcontainers](https://github.com/dotnet-architecture/eShopOnContainers) mikro hizmet başvuru mımarısı, http/REST ve GRPC hizmetlerinin bir karışımını kullandı. GRPC kullanımı, [Toplayıcı hizmeti](../cloud-native/service-to-service-communication.md#service-aggregator-pattern) ile çekirdek arka uç hizmetleri arasındaki iletişim ile sınırlandırılmıştır. Şekil 6-2 mimariyi gösterme:
 
 ![eShopOnContainers 'da gRPC ve HTTP/REST çağrıları](./media/service-invocation/eshop-on-containers.png)
 
@@ -448,7 +448,7 @@ Eshopondadpr başvuru mimarisi, eski eShopOnContainers çözümünün, Davpr hiz
 
 - [Davpr hizmeti çağırma yapı taşı](https://docs.dapr.io/developing-applications/building-blocks/service-invocation/)
 
-- [Dağıtılmış bulutta yerel uygulamaları izleme](../cloud-native/observability-patterns)
+- [Dağıtılmış bulutta yerel uygulamaları izleme](../cloud-native/observability-patterns.md)
 
 > [!div class="step-by-step"]
 > [Önceki](state-management.md) 

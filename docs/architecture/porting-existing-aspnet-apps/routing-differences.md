@@ -3,12 +3,12 @@ title: ASP.NET MVC ve ASP.NET Core arasındaki yönlendirme farklılıkları
 description: Yönlendirme nasıl tanımlanır ve ASP.NET MVC 'de çalışma zamanında nasıl çalışır? Yönlendirme ASP.NET Core uygulamalarda farklı midir?
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 82b657b21bbe61b47540bc0182d9674f0480951f
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 187cfdbf40bc8021eb886017a234e06df6933e80
+ms.sourcegitcommit: 456b3cd82a87b453fa737b4661295070d1b6d684
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100488950"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100639222"
 ---
 # <a name="routing-differences-between-aspnet-mvc-and-aspnet-core"></a>ASP.NET MVC ve ASP.NET Core arasındaki yönlendirme farklılıkları
 
@@ -116,7 +116,7 @@ public class ProductsController : ApiController
 {
     // matched by name and (lack of) parameters
     public IEnumerable<Product> GetAll() { }
-    
+
     // matched by GET and string parameter
     [HttpGet]
     public IEnumerable<Product> FindProductsByName(string name) { }

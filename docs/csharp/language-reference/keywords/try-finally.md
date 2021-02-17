@@ -9,18 +9,18 @@ helpviewer_keywords:
 - finally keyword [C#]
 - try-finally statement [C#]
 ms.assetid: c27623fb-7261-4464-862c-7a369d3c8f0a
-ms.openlocfilehash: 621c5bf1607136361b72f978681607ec2aec150f
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 03e5fa46cef6b30a0af15c113ec6b141a61bee47
+ms.sourcegitcommit: 456b3cd82a87b453fa737b4661295070d1b6d684
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89141978"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100639422"
 ---
 # <a name="try-finally-c-reference"></a>try-finally (C# Başvurusu)
 
 Bir blok kullanarak `finally` , bir [TRY](try-catch.md) bloğunda ayrılan tüm kaynakları temizleyebilir ve bir özel durum bloğunda meydana gelirse bile kodu çalıştırabilirsiniz `try` . Genellikle, `finally` Denetim bir deyiminden ayrıldığında blok deyimleri çalışır `try` . Denetimin aktarımı normal yürütme,,, `break` `continue` `goto` veya `return` bildiriminin yürütülmesi ya da deyimden bir özel durumun yayılmasından kaynaklanıyor olabilir `try` .
 
-İşlenmiş bir özel durum içinde, ilişkili `finally` bloğun çalıştırılması garanti edilir. Ancak, özel durum işlenmemiş ise, `finally` bloğun yürütülmesi özel durum geriye doğru tetikleme işleminin tetiklendiği duruma bağlıdır. Bu da, bilgisayarınızın nasıl ayarlanmayacağına bağlıdır.
+İşlenmiş bir özel durum içinde, ilişkili `finally` bloğun çalıştırılması garanti edilir. Ancak, özel durum işlenmemiş ise, `finally` bloğun yürütülmesi özel durum geriye doğru tetikleme işleminin tetiklendiği duruma bağlıdır. Bu da, bilgisayarınızın nasıl ayarlanmayacağına bağlıdır. `finally`Yan tümcelerin çalıştırılamadığı tek durum, hemen durdurulan bir program içerir. Il deyimleri bozulduğundan bunun bir örneği oluşur <xref:System.InvalidProgramException> . Çoğu işletim sisteminde, işlem durdurma ve kaldırma işleminin parçası olarak makul kaynak Temizleme gerçekleşmeyecektir.
 
 Genellikle, işlenmeyen bir özel durum uygulamayı sona erdirdiğinde, `finally` bloğun çalıştırılıp çalıştırılmayacağı önemli değildir. Ancak, `finally` Bu durumda bile çalıştırılması gereken bir blokta deyimler varsa, bir çözüm `catch` ifadeye bir blok eklemektir `try` - `finally` . Alternatif olarak, `try` `try` - çağrı yığınının üst kısmında yer alan bir deyimin bloğunda ortaya atılmış olabilecek özel durumu yakalayabilirsiniz `finally` . Diğer bir deyişle, bir yöntemi `try` - `finally` , ifadeyi içeren yöntemi veya bu yöntemi çağıran yöntemi ya da çağrı yığınında herhangi bir yöntemi çağıran yöntemini yakalayabilirsiniz. Özel durum yakalanmadığında, `finally` bloğun yürütülmesi işletim sisteminin özel durum geriye doğru izleme işlemi tetiklemeyi seçip seçmediğine bağlıdır.
 

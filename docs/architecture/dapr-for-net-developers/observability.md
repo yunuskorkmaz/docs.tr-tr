@@ -4,18 +4,18 @@ description: Observability yapı bloğunun açıklaması, özellikleri, avantajl
 author: edwinvw
 ms.date: 02/07/2021
 ms.reviewer: robvet
-ms.openlocfilehash: d825df732f1f0fdbfd69e5d55b9e530fcdfe6871
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: 6fc1da7d3266d668f258cfac91f24f30a015f367
+ms.sourcegitcommit: 456b3cd82a87b453fa737b4661295070d1b6d684
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 02/17/2021
-ms.locfileid: "100629645"
+ms.locfileid: "100639350"
 ---
 # <a name="the-dapr-observability-building-block"></a>Davpr Observability yapı taşı
 
 Modern dağıtılmış sistemler karmaşıktır. Küçük, gevşek olarak bağlanmış ve bağımsız dağıtılabilir hizmetlerle başlayabilirsiniz. Bu hizmetler çapraz işlem ve sunucu sınırları. Daha sonra farklı türlerde altyapı yedekleme hizmetleri (veritabanları, ileti aracıları, Anahtar kasaları) kullanır. Son olarak, bu farklı parçalar bir uygulama oluşturmak için birlikte oluşturur.
 
-Çok sayıda ayrı, hareketli parçalar sayesinde ne olduğunu nasıl anladığınızda? Ne yazık ki, geçmişteki eski izleme yaklaşımları yeterince fazla değil. Bunun yerine, sistemin uçtan uca **observable** olması gerekir. Modern [Observability](../cloud-native/observability-patterns) uygulamaları, her zaman uygulamanın sistem durumu hakkında görünürlük ve öngörüler sağlar. Bu kişiler, çıktıyı gözlemleyerek iç durumu çıkarımı sağlar. Observability, dağıtılmış uygulamaları izlemek ve sorunlarını gidermek için zorunludur.
+Çok sayıda ayrı, hareketli parçalar sayesinde ne olduğunu nasıl anladığınızda? Ne yazık ki, geçmişteki eski izleme yaklaşımları yeterince fazla değil. Bunun yerine, sistemin uçtan uca **observable** olması gerekir. Modern [Observability](../cloud-native/observability-patterns.md) uygulamaları, her zaman uygulamanın sistem durumu hakkında görünürlük ve öngörüler sağlar. Bu kişiler, çıktıyı gözlemleyerek iç durumu çıkarımı sağlar. Observability, dağıtılmış uygulamaları izlemek ve sorunlarını gidermek için zorunludur.
 
 Observability kazanmak için kullanılan sistem bilgileri **telemetri** olarak adlandırılır. Bu, dört geniş kategoriye ayrılabilir:
 

@@ -3,12 +3,12 @@ title: ASP.NET MVC ve ASP.NET Core arasındaki yapılandırma farklılıkları
 description: Yapılandırma değerleri nasıl depolanır ve ASP.NET ile ASP.NET Core arasında önemli ölçüde değiştirilir. Bu bölüm, ayrıntıları ve ASP.NET 'den ASP.NET Core 'e nasıl geçiş yapılacağını inceler.
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 0ecd169535d136b5462032431bb22e3b4ddb5b13
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: cdac00334f86a147dfa9c8b99412b5f3facad8fd
+ms.sourcegitcommit: 456b3cd82a87b453fa737b4661295070d1b6d684
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100488914"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100639229"
 ---
 # <a name="configuration-differences-between-aspnet-mvc-and-aspnet-core"></a>ASP.NET MVC ve ASP.NET Core arasındaki yapılandırma farklılıkları
 
@@ -51,7 +51,7 @@ public class TestModel : PageModel
     public ContentResult OnGet()
     {
         var myKeyValue = _configuration["MyKey"];
-        
+
         // ...
     }
 }

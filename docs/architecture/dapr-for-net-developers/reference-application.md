@@ -3,12 +3,12 @@ title: Eshopondadpr başvuru uygulamasına giriş
 description: Eshopondadpr başvuru uygulamasına ve geçmişine genel bakış.
 author: amolenk
 ms.date: 02/07/2021
-ms.openlocfilehash: 41f89ae3e873676ef33ce5d203603d559ee15514
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: 86b3c329e957446bd13fed850abc4edf0cf56f0f
+ms.sourcegitcommit: 456b3cd82a87b453fa737b4661295070d1b6d684
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 02/17/2021
-ms.locfileid: "100629640"
+ms.locfileid: "100639276"
 ---
 # <a name="dapr-reference-application"></a>Davpr başvuru uygulaması
 
@@ -53,7 +53,7 @@ Eshopondadpr başvuru uygulamasının odağı, Davpr üzerinde olduğundan, özg
 
 1. API ağ geçidi, arka uç çekirdekli mikro hizmetleri ön uç istemcisinden soyutlar. Bu, yüksek performanslı bir hizmet proxy 'si olan [Envoy](https://www.envoyproxy.io/)kullanılarak uygulanır. Envoy, gelen istekleri çeşitli arka uç mikro hizmetlerine yönlendirir. Çoğu istek basit CRUD operasyonlardır (örneğin, katalogdan markalar listesini alır) ve arka uç mikro hizmetine doğrudan çağrısıyla işlenir.
 
-1. Diğer istekler mantıksal olarak daha karmaşıktır ve birden fazla mikro hizmetin birlikte çalışmasını gerektirir. Bu durumlarda eShopOnDapr, işlemi gerçekleştirmek için gereken mikro hizmetlerde bir iş akışını düzenleyen bir [toplayıcı mikro hizmeti](../cloud-native/service-to-service-communication#service-aggregator-pattern) uygular.
+1. Diğer istekler mantıksal olarak daha karmaşıktır ve birden fazla mikro hizmetin birlikte çalışmasını gerektirir. Bu durumlarda eShopOnDapr, işlemi gerçekleştirmek için gereken mikro hizmetlerde bir iş akışını düzenleyen bir [toplayıcı mikro hizmeti](../cloud-native/service-to-service-communication.md#service-aggregator-pattern) uygular.
 
 1. Çekirdek arka uç mikro Hizmetleri kümesi, bir eCommerce Mağazası için gereken işlevselliği içerir. Her biri kendi içinde ve diğerlerinden bağımsızdır. Her mikro hizmet, yaygın olarak kabul edilen etki alanı oluşturma desenlerine göre belirli bir *iş kapasitesini* yalıtır:
 
@@ -63,7 +63,7 @@ Eshopondadpr başvuru uygulamasının odağı, Davpr üzerinde olduğundan, özg
    - Sipariş Hizmeti, sipariş yerleştirme ve yönetmenin tüm yönlerini işler.
    - Ödeme hizmeti müşterinin ödemesini transacts.
 
-   Her hizmetin kendi kalıcı depolama alanı vardır. Mikro hizmet [en iyi uygulamalarına](../cloud-native/distributed-data#database-per-microservice-why)uymak, tüm hizmetlerin etkileşimde bulunduğu paylaşılan bir veri deposu değildir.
+   Her hizmetin kendi kalıcı depolama alanı vardır. Mikro hizmet [en iyi uygulamalarına](../cloud-native/distributed-data.md#database-per-microservice-why)uymak, tüm hizmetlerin etkileşimde bulunduğu paylaşılan bir veri deposu değildir.
 
    Her mikro hizmetin tasarımı, bireysel gereksinimlerine göre belirlenir. Basit hizmetler, temel alınan veri depolarına erişmek için temel CRUD işlemlerini kullanır. Sıralama gibi gelişmiş hizmetler, iş karmaşıklığını yönetmek için Domain-Driven tasarım yaklaşımı kullanır. Gerekirse, hizmetler .NET Core, Java, Go, NodeJS ve daha fazlası gibi farklı teknoloji yığınlarında oluşturulabilir.
 

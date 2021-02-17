@@ -1,15 +1,15 @@
 ---
 title: Davpr durum yönetimi yapı taşı
 description: Durum yönetimi oluşturma bloğunun açıklaması, özellikleri, avantajları ve nasıl uygulanacağı.
-author: sanderm
+author: amolenk
 ms.date: 02/07/2021
 ms.reviewer: robvet
-ms.openlocfilehash: 21fc8cb72a4eb2e03d388cbdf27b4021dc3af38b
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: 9d74d5f5b1648d56063ef8a187b4b73b8e1cf549
+ms.sourcegitcommit: 456b3cd82a87b453fa737b4661295070d1b6d684
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 02/17/2021
-ms.locfileid: "100629444"
+ms.locfileid: "100639236"
 ---
 # <a name="the-dapr-state-management-building-block"></a>Davpr durum yönetimi yapı taşı
 

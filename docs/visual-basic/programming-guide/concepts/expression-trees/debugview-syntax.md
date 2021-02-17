@@ -3,17 +3,17 @@ title: DebugView özelliği tarafından kullanılan sözdizimi
 description: İfade ağaçlarının dize gösterimini üretmek için DebugView özelliği tarafından kullanılan özel sözdizimini açıklar
 author: zspitz
 ms.author: wiwagn
-ms.date: 14/02/2021
+ms.date: 02/14/2021
 ms.topic: reference
 helpviewer_keywords:
 - expression trees
 - debugview
-ms.openlocfilehash: 8a4feac72c2cd79485f5733b16d65b52cc50ee6c
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: 1b6d117bb1ce0cb13344c72be3b55742c443448f
+ms.sourcegitcommit: 456b3cd82a87b453fa737b4661295070d1b6d684
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 02/17/2021
-ms.locfileid: "100584897"
+ms.locfileid: "100639195"
 ---
 # <a name="debugview-syntax"></a>**DebugView** sözdizimi
 

@@ -3,12 +3,12 @@ title: Platform uyumluluk çözümleyicisi
 description: Platformlar arası uygulamalarda ve kitaplıklarda platform uyumluluk sorunlarını algılamaya yardımcı olabilecek bir Roslyn Çözümleyicisi.
 author: buyaa-n
 ms.date: 09/17/2020
-ms.openlocfilehash: 6ba521110e21e169955c54faf5c2a16c2838335b
-ms.sourcegitcommit: 38999dc0ec4f7c4404de5ce0951b64c55997d9ab
+ms.openlocfilehash: 273fa81965d0c451427df1142f2bf22b753346b5
+ms.sourcegitcommit: 456b3cd82a87b453fa737b4661295070d1b6d684
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99427002"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100639363"
 ---
 # <a name="platform-compatibility-analyzer"></a>Platform uyumluluk çözümleyicisi
 
@@ -178,7 +178,10 @@ Bu tanılamalarla başa çıkmak için önerilen yol, uygun bir platformda çal�
 
 - **Kodu silin**. Kodunuz Windows kullanıcıları tarafından kullanıldığında, genellikle istediğiniz gibi değildir. Platformlar arası bir alternatif olduğu durumlarda, platforma özgü API 'lerden daha iyi bir şekilde faydalanarak daha iyi bir hale getiriyorsunuz.
 
-- **Uyarıyı gizleyin**. Ayrıca, bir EditorConfig girişi ya da ya da yalnızca uyarıyı gizleyebilirsiniz `#pragma warning disable ca1416` . Ancak, platforma özgü API 'Ler kullanılırken bu seçenek son çare olmalıdır.
+- **Uyarıyı gizleyin**. Ayrıca, bir [Editorconfig](/visualstudio/ide/create-portable-custom-editor-options) girişi ya da ya da yalnızca uyarıyı gizleyebilirsiniz `#pragma warning disable CA1416` . Ancak, platforma özgü API 'Ler kullanılırken bu seçenek son çare olmalıdır.
+
+  > [!TIP]
+  > Derleyici öncesi yönergeleri kullanarak uyarıları devre dışı bıraktığınızda `#pragma` , hedeflediğiniz tanımlayıcılar büyük/küçük harfe duyarlıdır. Örneğin, `ca1416` Uyarı CA1416 gerçekten devre dışı olmaz.
 
 ### <a name="guard-platform-specific-apis-with-guard-methods"></a>Guard yöntemleriyle platforma özel API 'Leri koruma
 

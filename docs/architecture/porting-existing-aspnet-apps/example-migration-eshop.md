@@ -3,12 +3,12 @@ title: ASP.NET Core için eShop 'ın örnek geçişi
 description: Bir başvuru olarak örnek bir çevrimiçi mağaza uygulaması kullanarak, mevcut bir ASP.NET MVC uygulamasını ASP.NET Core 'e geçirmeye yönelik yönergeler.
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 91eb35321429d5f83a9cd3b96e8571c974643a73
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: 8175e24cbc82c8ce36d302c9e5f6376994668171
+ms.sourcegitcommit: 456b3cd82a87b453fa737b4661295070d1b6d684
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 02/17/2021
-ms.locfileid: "100583046"
+ms.locfileid: "100639296"
 ---
 # <a name="example-migration-of-eshop-to-aspnet-core"></a>ASP.NET Core için eShop 'ın örnek geçişi
 
@@ -144,7 +144,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     }
 
     app.UseStaticFiles();
-    
+
     // ...
 }
 ```
@@ -747,7 +747,7 @@ public class ApplicationModule : Module
     {
         _useMockData = useMockData;
     }
-    
+
     protected override void Load(ContainerBuilder builder)
     {
         if (_useMockData)

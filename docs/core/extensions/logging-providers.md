@@ -3,13 +3,13 @@ title: .NET 'te günlüğe kaydetme sağlayıcıları
 description: Günlüğe kaydetme sağlayıcısı API 'sinin .NET uygulamalarında nasıl kullanıldığını öğrenin.
 author: IEvangelist
 ms.author: dapine
-ms.date: 12/04/2020
-ms.openlocfilehash: fdec9018e58c6038b5589c01e775bbb5f10b6b10
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.date: 02/16/2021
+ms.openlocfilehash: 7265e51a4d92cd99abebef2ebf0bc5db37b306e3
+ms.sourcegitcommit: 456b3cd82a87b453fa737b4661295070d1b6d684
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96740092"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100639395"
 ---
 # <a name="logging-providers-in-net"></a>.NET 'te günlüğe kaydetme sağlayıcıları
 
@@ -20,7 +20,7 @@ Varsayılan .NET Worker uygulama şablonları:
 - [Genel Konağı](generic-host.md)kullanın.
 - <xref:Microsoft.Extensions.Hosting.Host.CreateDefaultBuilder%2A>Aşağıdaki günlük sağlayıcılarını ekleyen çağırın:
   - [Konsol](#console)
-  - [H](#debug)
+  - [Hata ayıklama](#debug)
   - [EventSource](#event-source)
   - [EventLog](#windows-eventlog): yalnızca Windows
 
@@ -68,7 +68,7 @@ Yukarıdaki kod, dı kapsayıcısının bir örneğini oluşturmak için ilk kez
 Microsoft uzantıları, çalışma zamanı kitaplıklarının bir parçası olarak aşağıdaki günlük sağlayıcılarını içerir:
 
 - [Konsol](#console)
-- [H](#debug)
+- [Hata ayıklama](#debug)
 - [EventSource](#event-source)
 - [EventLog](#windows-eventlog)
 
@@ -102,7 +102,7 @@ Bkz. yükleme yönergeleri için [DotNet-Trace](../diagnostics/dotnet-trace.md) 
 
 ### <a name="windows-eventlog"></a>Windows olay günlüğü
 
-`EventLog`Sağlayıcı, Windows olay günlüğüne günlük çıktısı gönderir. Diğer sağlayıcılardan farklı olarak, `EventLog` sağlayıcı, varsayılan sağlayıcı **not** olmayan ayarları içermez. `EventLog`Günlük ayarları belirtilmemişse, varsayılan olarak `LogLevel.Warning` .
+`EventLog`Sağlayıcı, Windows olay günlüğüne günlük çıktısı gönderir. Diğer sağlayıcılardan farklı olarak, `EventLog` sağlayıcı varsayılan sağlayıcı  olmayan ayarları uygulamaz. `EventLog`Günlük ayarları belirtilmemişse, varsayılan olarak `LogLevel.Warning` .
 
 Olayları daha düşük günlüğe kaydetmek için <xref:Microsoft.Extensions.Logging.LogLevel.Warning?displayProperty=nameWithType> , günlük düzeyini açık olarak ayarlayın. Aşağıdaki örnek, olay günlüğü varsayılan günlük düzeyini şu şekilde ayarlar <xref:Microsoft.Extensions.Logging.LogLevel.Information?displayProperty=nameWithType> :
 
@@ -172,7 +172,7 @@ class Program
                 services.Configure<AzureFileLoggerOptions>(options =>
                 {
                     options.FileName = "azure-diagnostics-";
-                    options.FileSizeLimit = 50 _ 1024;
+                    options.FileSizeLimit = 50 * 1024;
                     options.RetainedFileCountLimit = 5;
                 })
                 .Configure<AzureBlobLoggerOptions>(options =>
@@ -229,6 +229,7 @@ Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 - [Log4Net](https://logging.apache.org/log4net) ([GitHub deposu](https://github.com/apache/logging-log4net))
 - [Loggr](https://loggr.net) ([GitHub deposu](https://github.com/imobile3/Loggr.Extensions.Logging))
 - [NLog](https://nlog-project.org) ([GitHub deposu](https://github.com/NLog/NLog.Extensions.Logging))
+- [NReco. Logging](https://github.com/nreco/logging/blob/master/README.md) ([GitHub deposu](https://github.com/nreco/logging))
 - [Sentry](https://sentry.io/welcome) ([GitHub deposu](https://github.com/getsentry/sentry-dotnet))
 - [Serilog](https://serilog.net) ([GitHub deposu](https://github.com/serilog/serilog-sinks-console))
 - [Stackdriver](https://cloud.google.com/dotnet/docs/stackdriver#logging) ([GitHub deposu](https://github.com/googleapis/google-cloud-dotnet))
