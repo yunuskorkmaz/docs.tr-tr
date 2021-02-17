@@ -3,12 +3,12 @@ title: .NET taşınabilirlik Çözümleyicisi-.NET
 description: .Net taşınabilirlik Çözümleyicisi aracını kullanarak kodunuzun, .NET Core, .NET Standard, UWP ve Xamarin gibi çeşitli .NET uygulamaları arasında nasıl olduğunu değerlendirmek için nasıl kullanılacağı hakkında bilgi edinin.
 ms.date: 09/13/2019
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 048ff916d309f4159fe78177e093a58d731c2e11
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c53560176c66f1b69a5e3d7208e91fd4c4ec7dbd
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734289"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100584382"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET taşınabilirlik Çözümleyicisi
 
@@ -26,7 +26,7 @@ Projenizi, .NET Core gibi yeni platformu hedefleyecek şekilde dönüştürdükt
 
 ## <a name="how-to-use-the-net-portability-analyzer"></a>.NET taşınabilirlik Çözümleyicisi 'ni kullanma
 
-Visual Studio 'da .NET taşınabilirlik Çözümleyicisi 'ni kullanmaya başlamak için önce uzantıyı [Visual Studio Market](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)indirip yüklemeniz gerekir. Visual Studio 2017 ve sonraki sürümlerinde çalışmaktadır. Visual Studio 'da **Analyze**  >  **taşınabilirlik Çözümleyicisi ayarlarını** analiz ederek yapılandırın ve geçerli derlemelerinizin oluşturulduğu platform/sürümle kıyaslanması gereken taşınabilirlik boşluklarını değerlendirmek istediğiniz .net platformları/sürümleri olan hedef Platformlarınızı seçin.
+Visual Studio 'da .NET taşınabilirlik Çözümleyicisi 'ni kullanmaya başlamak için önce uzantıyı [Visual Studio Market](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)indirip yüklemeniz gerekir. Visual Studio 2017 ve sonraki sürümlerinde çalışmaktadır. Visual Studio 'da   >  **taşınabilirlik Çözümleyicisi ayarlarını** analiz ederek yapılandırın ve geçerli derlemelerinizin oluşturulduğu platform/sürümle kıyaslanması gereken taşınabilirlik boşluklarını değerlendirmek istediğiniz .net platformları/sürümleri olan hedef Platformlarınızı seçin.
 
 ![Taşınabilirlik Çözümleyicisi 'nin ekran görüntüsü.](./media/portability-analyzer/portability-screenshot.png)
 
@@ -54,9 +54,25 @@ Visual Studio 'daki tüm projenizi çözümlemek için **Çözüm Gezgini** ' de
 
 [Apiport konsol uygulamasını](https://aka.ms/apiportdownload)da kullanabilirsiniz.
 
-- Geçerli dizini çözümlemek için aşağıdaki komutu yazın: `ApiPort.exe analyze -f .`
-- Belirli bir. dll dosyaları listesini analiz etmek için aşağıdaki komutu yazın: `ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
-- `ApiPort.exe -?`Daha fazla yardım almak için çalıştırın
+Geçerli dizini çözümlemek için aşağıdaki komutu yazın:
+
+```console
+ApiPort.exe analyze -f .
+```
+
+Belirli bir. dll dosyaları listesini analiz etmek için aşağıdaki komutu yazın:
+
+```console
+ApiPort.exe analyze -f first.dll -f second.dll -f third.dll
+```
+
+Belirli bir sürümü hedeflemek için, parametresini kullanın `-t` :
+
+```console
+ApiPort.exe analyze -t ".NET, Version=5.0" -f .
+```
+
+`ApiPort.exe -?`Daha fazla yardım almak için çalıştırın.
 
 Sahip olduğunuz ve bağlantı noktası yapmak istediğiniz tüm ilgili exe ve DLL dosyalarını dahil etmeniz ve uygulamanızın bağlı olduğu dosyaları dışlayamazsınız, ancak bağlantı noktası kullanamazsınız. Bu, size en uygun taşınabilirlik raporu sağlar.
 

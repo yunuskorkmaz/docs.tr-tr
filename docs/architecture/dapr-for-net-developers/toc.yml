@@ -1,0 +1,39 @@
+- name: .NET geliştiricileri için dadpr
+  href: index.md
+  items:
+    - name: Önsöz
+      href: foreword.md
+      displayName: 'mark russinovich, foreword by mark russinovich, distributed system future, distributed application future, distributed architecture, microservice, monolithic, monolithic architecture'
+    - name: Dünya dağıtıldı
+      href: the-world-is-distributed.md
+      displayName: 'distributed system, distributed application, distributed architecture, microservice, SOA, monolithic, monolithic architecture'
+    - name: 20.000 fit üzerinde davpr
+      href: dapr-at-20000-feet.md
+      displayName: 'dapr, distributed system, distributed application, dapr building blocks, dapr components, microservice, sidecar architecture, service mesh'
+    - name: Başlarken
+      href: getting-started.md
+      displayName: 'dapr, distributed system, distributed application, service invocation, state management, install dapr, component configuration files, multi-container dapr application'
+    - name: Başvuru uygulaması
+      href: reference-application.md
+      displayName: 'dapr, distributed system, distributed application, dapr building blocks, dapr components, microservice, eshop'
+    - name: Durum yönetimi
+      href: state-management.md
+      displayName: 'dapr, distributed system, distributed application, state management, dapr state management building block, cap theorem, concurrency, transactions'
+    - name: Hizmet çağrısı
+      href: service-invocation.md
+      displayName: 'dapr, distributed system, distributed application, service invocation, dapr service invocation building block, envoy'
+    - name: Yayımla & abone ol
+      href: publish-subscribe.md
+      displayName: 'dapr, distributed system, distributed application, pub/sub, publish and subscribe, cloud events, publishing events, subscribing to events, dapr publish-subscribe building block'
+    - name: Bağlamalar
+      href: bindings.md
+      displayName: 'dapr bindings building block, input binding, output binding, binding components, dapr bindings building block'
+    - name: Gözlemlenebilirlik
+      href: observability.md
+      displayName: 'dapr, distributed system, distributed application, observability, distributed tracing, traces, metrics, logging, zipkin, jaeger, prometheus, new relic, dapr observability building block'
+    - name: Gizli Diziler
+      href: secrets.md
+      displayName: 'dapr, distributed system, distributed application, secrets, dapr secrets building block, kubernetes secrets, azure key vault'
+    - name: Özet ve yol ileride
+      href: summary.md
+      displayName: 'dapr, distributed system, distributed application, dapr building blocks, dapr components, microservice, sidecar architecture, dapr futures'

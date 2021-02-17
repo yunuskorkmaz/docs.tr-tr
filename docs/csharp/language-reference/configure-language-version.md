@@ -3,12 +3,12 @@ title: C# dil sürümü oluşturma-C# Kılavuzu
 description: C# dil sürümünün projenize göre nasıl belirlendiği ve bu seçimin arkasındaki nedenler hakkında bilgi edinin. Varsayılanı el ile nasıl geçersiz kılacağınızı öğrenin.
 ms.custom: updateeachrelease
 ms.date: 08/11/2020
-ms.openlocfilehash: b022b726861bd6ea45b188df44549dc279d34a74
-ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
+ms.openlocfilehash: fb4a869fe67b3292ba430ea563bc2a072590adb2
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96598922"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100582152"
 ---
 # <a name="c-language-versioning"></a>C# dil sürümü oluşturma
 
@@ -35,7 +35,7 @@ Derleyici, bu kurallara göre bir varsayılan değer belirler:
 | .NET Core        | 3.x     | C# 8.0                      |
 | .NET Core        | 2.x     | C# 7.3                      |
 | .NET Standard    | 2.1     | C# 8.0                      |
-| .NET Standard    | 2,0     | C# 7.3                      |
+| .NET Standard    | 2.0     | C# 7.3                      |
 | .NET Standard    | 'in     | C# 7.3                      |
 | .NET Framework   | tümü     | C# 7.3                      |
 
@@ -53,7 +53,7 @@ C# sürümünüzü açık bir şekilde belirtmeniz gerekiyorsa, bunu birkaç şe
 - [ `-langversion` Derleyici seçeneğini](compiler-options/langversion-compiler-option.md)yapılandırın.
 
 > [!TIP]
-> Kullanmakta olduğunuz dil sürümünü görmek için `#error version` kodunuzda (büyük/küçük harfe duyarlı) koyun. Bu, derleyicinin, kullanılmakta olan derleyici sürümünü ve geçerli seçili dil sürümünü içeren bir ileti içeren bir tanılama, CS8304 oluşturmasını sağlar.
+> Kullanmakta olduğunuz dil sürümünü görmek için `#error version` kodunuzda (büyük/küçük harfe duyarlı) koyun. Bu, derleyicinin, kullanılmakta olan derleyici sürümünü ve geçerli seçili dil sürümünü içeren bir ileti ile derleyici hatası (CS8304) rapor etmelerini sağlar. Daha fazla bilgi için bkz. [#error (C# Başvurusu)](preprocessor-directives/preprocessor-error.md) .
 
 ### <a name="edit-the-project-file"></a>Proje dosyasını düzenleme
 

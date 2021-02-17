@@ -1,24 +1,27 @@
 ---
 title: İle JsonSerializerOptions örneği System.Text.Json
 description: Performans sorunlarından kaçının ve JsonSerializerOptions örnekleri için kullanılabilir oluşturucuların nasıl kullanılacağını öğrenin.
-ms.date: 12/02/2020
+ms.date: 01/19/2021
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
 zone_pivot_groups: dotnet-version
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 5f32e1369e58dd9550f28abc822f187dee46c022
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: a74f4e0aa286f182906033e34be7bad63a72503f
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009839"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100583224"
 ---
-# <a name="how-to-instantiate-jsonserializeroptions-instances-with-no-locsystemtextjson"></a>İle JsonSerializerOptions örneklerinin örneğini oluşturma System.Text.Json
+# <a name="how-to-instantiate-jsonserializeroptions-instances-with-systemtextjson"></a>İle JsonSerializerOptions örneklerinin örneğini oluşturma System.Text.Json
 
 Bu makalede, kullanırken performans sorunlarının nasıl önleneceği açıklanmaktadır <xref:System.Text.Json.JsonSerializerOptions> . Ayrıca, kullanılabilir parametreli oluşturucuların nasıl kullanılacağını gösterir.
 
@@ -42,6 +45,7 @@ Bir örnekteki meta veri önbelleğinin boyutu, `JsonSerializerOptions` seri hal
 [JsonSerializerOptions Oluşturucusu] (XREF:) var System.Text.Json . JsonSerializerOptions .% 23ctor ( System.Text.Json . JsonSerializerOptions)), aşağıdaki örnekte gösterildiği gibi, var olan örnekle aynı seçeneklere sahip yeni bir örnek oluşturmanıza olanak sağlar:
 
 :::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/CopyOptions.cs" highlight="29":::
+:::code language="vb" source="snippets/system-text-json-how-to-5-0/vb/CopyOptions.vb" :::
 ::: zone-end
 
 ::: zone pivot="dotnet-core-3-1"
@@ -60,6 +64,7 @@ Web uygulamaları için farklı varsayılan değerlere sahip olan seçenekler ş
 [JsonSerializerOptions Oluşturucusu] (XREF:) var System.Text.Json . JsonSerializerOptions .% 23ctor ( System.Text.Json . JsonSerializerDefaults)? View = net-5,0&Preserve-View = true), aşağıdaki örnekte gösterildiği gibi, ASP.NET Core Web Apps için kullandığı varsayılan seçeneklerle yeni bir örnek oluşturmanıza olanak sağlar:
 
 :::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/OptionsDefaults.cs" highlight="24":::
+:::code language="vb" source="snippets/system-text-json-how-to-5-0/vb/OptionsDefaults.vb" :::
 ::: zone-end
 
 ::: zone pivot="dotnet-core-3-1"

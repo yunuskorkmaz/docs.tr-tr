@@ -311,22 +311,16 @@ items:
             tocHref: /dotnet/csharp/
             topicHref: /dotnet/csharp/index
             items:
-              - name: C# diline giriş
-                tocHref: /dotnet/csharp/tutorials/intro-to-csharp/
-                topicHref: /dotnet/csharp/tutorials/intro-to-csharp/index
               - name: Kullanmaya başlayın
-                tocHref: /dotnet/csharp/getting-started/
-                topicHref: /dotnet/csharp/getting-started/index
+                tocHref: /dotnet/csharp/tour-of-csharp/
+                topicHref: /dotnet/csharp/tour-of-csharp/index
                 items:
-                  - name: C# Turu
-                    tocHref: /dotnet/csharp/tour-of-csharp/
-                    topicHref: /dotnet/csharp/tour-of-csharp/index
+                  - name: Öğreticiler
+                    tocHref: /dotnet/csharp/tour-of-csharp/tutorials/
+                    topicHref: /dotnet/csharp/tour-of-csharp/tutorials/index
               - name: Öğreticiler
                 tocHref: /dotnet/csharp/tutorials/
                 topicHref: /dotnet/csharp/tutorials/index
-              - name: Tur
-                tocHref: /dotnet/csharp/tour-of-csharp/
-                topicHref: /dotnet/csharp/tour-of-csharp/index
               - name: Yenilikler
                 tocHref: /dotnet/csharp/whats-new/
                 topicHref: /dotnet/csharp/whats-new/index

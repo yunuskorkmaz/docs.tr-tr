@@ -2,12 +2,12 @@
 title: DotNet-sayaçlar Tanılama aracı-.NET CLı
 description: Ad hoc sistem durumu izleme ve ilk düzey performans araştırması için DotNet-Counter CLı aracını yüklemeyi ve kullanmayı öğrenin.
 ms.date: 11/17/2020
-ms.openlocfilehash: 1842b1fb9cde0e0b7a570456766cbfdeb64c5896
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 1c802e33602c2d8f18600b9771a1f68e722d8fdf
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188588"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100583301"
 ---
 # <a name="investigate-performance-counters-dotnet-counters"></a>Performans sayaçlarını araştırın (DotNet-sayaçlar)
 
@@ -236,6 +236,9 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [-n|--name] [--diagnostic-
 
 > [!NOTE]
 > Kullanarak ölçümleri izlemek için `dotnet-counters` , hedef işlem ya da kök olarak çalışan kullanıcı ile aynı kullanıcı olarak çalıştırılması gerekir.
+
+> [!NOTE]
+> Aşağıdakine benzer bir hata iletisi görürseniz `[ERROR] System.ComponentModel.Win32Exception (299): A 32 bit processes cannot access modules of a 64 bit process.` , `dotnet-counters` hedef işleme karşı eşleşmeyen bit genişliğine sahip olan kullanmaya çalışıyorsunuz. [Yükleme](#install) bağlantısında aracın doğru bit durumunu indirdiğinizden emin olun.
 
 ### <a name="examples"></a>Örnekler
 

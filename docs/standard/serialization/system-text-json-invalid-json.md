@@ -6,19 +6,22 @@ no-loc:
 - System.Text.Json
 - Newtonsoft.Json
 zone_pivot_groups: dotnet-version
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 2559b081010fb0a2fa208b121cb095efdeb8da2e
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 19ceaeb882e8126826e7928122c25027bcb12275
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009825"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100581465"
 ---
-# <a name="how-to-allow-some-kinds-of-invalid-json-with-no-locsystemtextjson"></a>İle bazı geçersiz JSON türlerine izin verme System.Text.Json
+# <a name="how-to-allow-some-kinds-of-invalid-json-with-systemtextjson"></a>İle bazı geçersiz JSON türlerine izin verme System.Text.Json
 
 Bu makalede, JSON 'da açıklamalara, sondaki virgüller ve tırnak içine alınmış sayılara ve sayıların dize olarak nasıl yazılacağını öğreneceksiniz.
 
@@ -28,6 +31,7 @@ Varsayılan olarak, JSON 'da yorumlara ve sondaki virgüllerin kullanımına izi
 Ve sondaki virgüllerin kullanılmasına izin vermek için <xref:System.Text.Json.JsonSerializerOptions.AllowTrailingCommas?displayProperty=nameWithType> özelliğini olarak ayarlayın `true` . Aşağıdaki örnek, her ikisine de izin vermeyi göstermektedir:
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/DeserializeCommasComments.cs" id="Deserialize":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/DeserializeCommasComments.vb" id="Deserialize":::
 
 Yorumlar ve sondaki virgülden oluşan örnek JSON aşağıda verilmiştir:
 
@@ -66,6 +70,7 @@ Onun yerine:
 Tırnak işaretleri içindeki sayıları seri hale getirmek veya giriş nesnesi grafiğinin tamamına tırnak içinde kabul etmek için <xref:System.Text.Json.JsonSerializerOptions.NumberHandling%2A?displayProperty=nameWithType> Aşağıdaki örnekte gösterildiği gibi ayarlayın:
 
 :::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/QuotedNumbers.cs" highlight="27-29":::
+:::code language="vb" source="snippets/system-text-json-how-to-5-0/vb/QuotedNumbers.vb" :::
 
 `System.Text.Json`ASP.NET Core aracılığıyla dolaylı olarak kullandığınızda, ASP.NET Core [Web varsayılan seçeneklerini](xref:System.Text.Json.JsonSerializerDefaults.Web)belirttiğinden, serisi kaldırılırken tırnak işaretli sayılara izin verilir.
 
@@ -94,4 +99,4 @@ Belirli özellikler, alanlar veya türler için tırnak işaretli sayılara izin
 * [JSON serileştirme için özel dönüştürücüler yazma](system-text-json-converters-how-to.md)
 * [DateTime ve DateTimeOffset desteği](../datetime/system-text-json-support.md)
 * [System.Text.Json API başvurusu](xref:System.Text.Json)
-* [System.Text.Json. Serialization API başvurusu](xref:System.Text.Json.Serialization)
+* [System.Text.Json. Serileştirme API başvurusu](xref:System.Text.Json.Serialization)

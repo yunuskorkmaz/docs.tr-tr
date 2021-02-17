@@ -6,20 +6,18 @@ helpviewer_keywords:
 - C# language, about C# program
 - Visual C#, program structure
 ms.assetid: 9551354b-33f0-4e11-bbf0-1a35e3702b22
-ms.openlocfilehash: 05b0d6542e5a786d0aa36a034c08b07acea26e74
-ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
+ms.openlocfilehash: b060d44833cd5a1d02e16e629945cce9df16d333
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99216830"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100583487"
 ---
 # <a name="inside-a-c-program"></a>C# programı içinde
 
 Bu bölümde bir C# programının genel yapısı ele alınmaktadır ve "Hello, World!" standardı bulunur örneğinde.
 
 ## <a name="in-this-section"></a>Bu bölümde
-
-- [Hello World -- İlk Programınız](hello-world-your-first-program.md)
 
 - [C# Programının Genel Yapısı](general-structure-of-a-csharp-program.md)
 

@@ -5,19 +5,22 @@ ms.date: 11/30/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 3e2fb8cbdd35e772b5e97c731199f69aa834bd0a
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: d0d4bf8841cd8057b20f51ab7d2ab407e2299152
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009748"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100584367"
 ---
-# <a name="how-to-enable-case-insensitive-property-name-matching-with-no-locsystemtextjson"></a>İle eşleşme büyük/küçük harf duyarsız Özellik adı etkinleştirme System.Text.Json
+# <a name="how-to-enable-case-insensitive-property-name-matching-with-systemtextjson"></a>İle eşleşme büyük/küçük harf duyarsız Özellik adı etkinleştirme System.Text.Json
 
 Bu makalede, ad alanıyla büyük/küçük harfe duyarsız Özellik adı eşleştirmeyi nasıl etkinleştireceğinizi öğreneceksiniz `System.Text.Json` .
 
@@ -29,6 +32,7 @@ Varsayılan olarak, seri durumdan çıkarma JSON ile hedef nesne özellikleri ar
 > [Web varsayılanı](system-text-json-configure-options.md#web-defaults-for-jsonserializeroptions) , büyük/küçük harfe duyarlıdır.
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/DeserializeCaseInsensitive.cs" id="Deserialize":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/DeserializeCaseInsensitive.vb" id="Deserialize":::
 
 Aşağıda, ortası Case özellik adlarına sahip JSON örneği verilmiştir. Bu,, Pascal case özellik adlarına sahip olan aşağıdaki türde seri durumdan çıkarılmış olabilir.
 
@@ -41,6 +45,7 @@ Aşağıda, ortası Case özellik adlarına sahip JSON örneği verilmiştir. Bu
 ```
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WF":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/WeatherForecast.vb" id="WF":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

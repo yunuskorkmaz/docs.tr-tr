@@ -1,114 +1,146 @@
 ---
-description: 'Daha fazla bilgi edinin: nasıl yapılır: dinamik sorgular oluşturmak için Ifade ağaçları kullanma (Visual Basic)'
-title: 'Nasıl yapılır: Dinamik Sorgular Derlemek için İfade Ağaçları Kullanma'
-ms.date: 07/20/2015
+title: Çalışma zamanı durumu temelinde sorgulama (Visual Basic)
+description: Kodunuzun, bu yöntemlere geçirilen LINQ Yöntem çağrılarını veya ifade ağaçlarını değiştirerek çalışma zamanı durumuna göre dinamik olarak sorgulamak için kullanabileceği çeşitli teknikler açıklanmaktadır.
+ms.date: 02/14/2021
 ms.assetid: 16278787-7532-4b65-98b2-7a412406c4ee
-ms.openlocfilehash: bb8abb22749cbf7c15b72632f60a5bd08287378d
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: c9f57950b2c26c0cca798ab632da90bf9f6c519a
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100423101"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100584865"
 ---
-# <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>Nasıl yapılır: dinamik sorgular oluşturmak için Ifade ağaçları kullanma (Visual Basic)
+# <a name="querying-based-on-runtime-state-visual-basic"></a>Çalışma zamanı durumu temelinde sorgulama (Visual Basic)
 
-LINQ içinde, ifade ağaçları, uygulayan veri kaynaklarını hedefleyen yapılandırılmış sorguları temsil etmek için kullanılır <xref:System.Linq.IQueryable%601> . Örneğin, LINQ sağlayıcısı <xref:System.Linq.IQueryable%601> ilişkisel veri depolarını sorgulamak için arabirimini uygular. Visual Basic Derleyicisi, bu tür veri kaynaklarını hedefleyen sorguları, çalışma zamanında bir ifade ağacı oluşturan koda derler. Sorgu sağlayıcısı daha sonra ifade ağacı veri yapısına çapraz geçiş yapabilir ve veri kaynağı için uygun bir sorgu diline çevirebilir.
+Bir <xref:System.Linq.IQueryable> veri kaynağına karşı bir veya bir [IQueryable (Of T)](<xref:System.Linq.IQueryable%601>) tanımlayan kodu düşünün:
 
-İfade ağaçları Ayrıca LINQ 'te tür değişkenlerine atanan Lambda ifadelerini temsil etmek için de kullanılır <xref:System.Linq.Expressions.Expression%601> .
+:::code language="vb" source="../../../../../samples/snippets/visualbasic/programming-guide/dynamic-linq-expression-trees/Program.vb" id="Initialize":::
 
-Bu konu başlığı altında, dinamik LINQ sorguları oluşturmak için ifade ağaçlarının nasıl kullanılacağı açıklanmaktadır. Dinamik sorgular, bir sorgunun özelliklerinin derleme zamanında bilinmediği durumlarda faydalıdır. Örneğin, bir uygulama, son kullanıcının verileri filtrelemek için bir veya daha fazla koşul belirtmesini sağlayan bir kullanıcı arabirimi sağlayabilir. Bu tür bir uygulamanın, sorgulama için LINQ kullanabilmesi amacıyla, çalışma zamanında LINQ sorgusu oluşturmak için ifade ağaçları kullanması gerekir.
+Bu kodu her çalıştırdığınızda, aynı tam sorgu yürütülür. Bu, kodunuzun çalışma zamanında koşullara bağlı olarak farklı sorgular yürütmesini isteyebileceğiniz için genellikle çok yararlı değildir. Bu makalede, çalışma zamanı durumuna göre farklı bir sorguyu nasıl yürütebileceğinizi açıklar.
 
-## <a name="example"></a>Örnek
+## <a name="iqueryable--iqueryableof-t-and-expression-trees"></a>IQueryable/IQueryable (Of T) ve ifade ağaçları
 
-Aşağıdaki örnek, bir veri kaynağına yönelik sorgu oluşturmak ve ardından yürütmek için ifade ağaçlarının nasıl kullanılacağını gösterir `IQueryable` . Kod, aşağıdaki sorguyu temsil etmek için bir ifade ağacı oluşturur:
+Temelde <xref:System.Linq.IQueryable> iki bileşeni vardır:
 
-`companies.Where(Function(company) company.ToLower() = "coho winery" OrElse company.Length > 16).OrderBy(Function(company) company)`
+* <xref:System.Linq.IQueryable.Expression>&mdash;bir ifade ağacı biçiminde geçerli sorgu bileşenlerinin dil ve veri kaynağı belirsiz temsili.
+* <xref:System.Linq.IQueryable.Provider>&mdash;bir LINQ sağlayıcısı örneği, geçerli sorguyu bir değere veya bir değer kümesine nasıl bir şekilde bir değere veya değer kümesine nasıl bir şekilde bir değere göre nasıl bir
 
-Ad alanındaki Fabrika yöntemleri, <xref:System.Linq.Expressions> genel sorguyu oluşturan ifadeleri temsil eden ifade ağaçları oluşturmak için kullanılır. Standart sorgu operatörü yöntemlerine yapılan çağrıları temsil eden ifadeler, <xref:System.Linq.Queryable> Bu yöntemlerin uygulamalarına başvurur. Son ifade ağacı, <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> `IQueryable` türünde çalıştırılabilir bir sorgu oluşturmak için veri kaynağının sağlayıcısı uygulamasına geçirilir `IQueryable` . Sonuçlar, bu sorgu değişkeni numaralandırıldığı için alınır.
+Dinamik sorgulama bağlamında, sağlayıcı genellikle aynı kalır; sorgunun ifade ağacı sorgudan sorguya farklı olacak.
 
-```vb
-' Add an Imports statement for System.Linq.Expressions.
+İfade ağaçları sabittir; farklı bir ifade ağacı &mdash; ve bu nedenle farklı bir sorgu istiyorsanız &mdash; , var olan ifade ağacını yeni birine ve bu nedenle de yeni bir sorguya çevirmeniz gerekir <xref:System.Linq.IQueryable> .
 
-Dim companies =
-    {"Consolidated Messenger", "Alpine Ski House", "Southridge Video", "City Power & Light",
-     "Coho Winery", "Wide World Importers", "Graphic Design Institute", "Adventure Works",
-     "Humongous Insurance", "Woodgrove Bank", "Margie's Travel", "Northwind Traders",
-     "Blue Yonder Airlines", "Trey Research", "The Phone Company",
-     "Wingtip Toys", "Lucerne Publishing", "Fourth Coffee"}
+Aşağıdaki bölümlerde, çalışma zamanı durumuna yanıt olarak farklı sorgulama için özel teknikler açıklanır:
 
-' The IQueryable data to query.
-Dim queryableData As IQueryable(Of String) = companies.AsQueryable()
+- Çalışma zamanı durumunu ifade ağacı içinden kullanın
+- Ek LINQ yöntemlerini çağırın
+- LINQ yöntemlerine geçirilen ifade ağacını farklılık gösterir
+- Üzerinde Fabrika yöntemlerini kullanarak bir [ifade (Of TDelegate)](xref:System.Linq.Expressions.Expression%601) ifade ağacı oluşturun <xref:System.Linq.Expressions.Expression>
+- Bir ifade ağacına Yöntem çağrı düğümleri ekleme <xref:System.Linq.IQueryable>
+- Dizeler oluşturun ve [dınamık LINQ kitaplığını](https://dynamic-linq.net/) kullanın
 
-' Compose the expression tree that represents the parameter to the predicate.
-Dim pe As ParameterExpression = Expression.Parameter(GetType(String), "company")
+## <a name="use-runtime-state-from-within-the-expression-tree"></a>Çalışma zamanı durumunu ifade ağacı içinden kullanın
 
-' ***** Where(Function(company) company.ToLower() = "coho winery" OrElse company.Length > 16) *****
-' Create an expression tree that represents the expression: company.ToLower() = "coho winery".
-Dim left As Expression = Expression.Call(pe, GetType(String).GetMethod("ToLower", System.Type.EmptyTypes))
-Dim right As Expression = Expression.Constant("coho winery")
-Dim e1 As Expression = Expression.Equal(left, right)
+LINQ sağlayıcısı 'nın onu desteklediğine göre, dinamik olarak sorgu oluşturmanın en kolay yolu, aşağıdaki kod örneğinde olduğu gibi, doğrudan sorgudaki bir kapalı değişken aracılığıyla çalışma zamanı durumuna başvurmalıdır `length` :
 
-' Create an expression tree that represents the expression: company.Length > 16.
-left = Expression.Property(pe, GetType(String).GetProperty("Length"))
-right = Expression.Constant(16, GetType(Integer))
-Dim e2 As Expression = Expression.GreaterThan(left, right)
+:::code language="vb" source="../../../../../samples/snippets/visualbasic/programming-guide/dynamic-linq-expression-trees/Program.vb" id="Runtime_state_from_within_expression_tree":::
 
-' Combine the expressions to create an expression tree that represents the
-' expression: company.ToLower() = "coho winery" OrElse company.Length > 16).
-Dim predicateBody As Expression = Expression.OrElse(e1, e2)
+İç ifade ağacı &mdash; ve bu nedenle sorgu &mdash; değiştirilmedi; sorgu yalnızca değeri değiştiği için farklı değerler döndürüyor `length` .
 
-' Create an expression tree that represents the expression:
-' queryableData.Where(Function(company) company.ToLower() = "coho winery" OrElse company.Length > 16)
-Dim whereCallExpression As MethodCallExpression = Expression.Call(
-        GetType(Queryable),
-        "Where",
-        New Type() {queryableData.ElementType},
-        queryableData.Expression,
-        Expression.Lambda(Of Func(Of String, Boolean))(predicateBody, New ParameterExpression() {pe}))
-' ***** End Where *****
+## <a name="call-additional-linq-methods"></a>Ek LINQ yöntemlerini çağırın
 
-' ***** OrderBy(Function(company) company) *****
-' Create an expression tree that represents the expression:
-' whereCallExpression.OrderBy(Function(company) company)
-Dim orderByCallExpression As MethodCallExpression = Expression.Call(
-        GetType(Queryable),
-        "OrderBy",
-        New Type() {queryableData.ElementType, queryableData.ElementType},
-        whereCallExpression,
-        Expression.Lambda(Of Func(Of String, String))(pe, New ParameterExpression() {pe}))
-' ***** End OrderBy *****
+Genellikle, [YERLEŞIK LINQ yöntemleri](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Linq.Queryable/src/System/Linq/Queryable.cs) <xref:System.Linq.Queryable> iki adım gerçekleştirir:
 
-' Create an executable query from the expression tree.
-Dim results As IQueryable(Of String) = queryableData.Provider.CreateQuery(Of String)(orderByCallExpression)
+* Yöntem çağrısını temsil eden içinde geçerli ifade ağacını sarın <xref:System.Linq.Expressions.MethodCallExpression> .
+* Sarmalanan ifade ağacını sağlayıcıya geri geçirin; Örneğin, sağlayıcının yöntemi aracılığıyla bir değer döndürün <xref:System.Linq.IQueryProvider.Execute%2A?displayProperty=nameWithType> ya da yöntemi aracılığıyla çevrilmiş bir sorgu nesnesi döndürün <xref:System.Linq.IQueryProvider.CreateQuery%2A?displayProperty=nameWithType> .
 
-' Enumerate the results.
-For Each company As String In results
-    Console.WriteLine(company)
-Next
+Yeni bir sorgu almak için bir [IQueryable (Of T)](xref:System.Linq.IQueryable%601)-döndüren yönteminin sonucuyla birlikte özgün sorguyu değiştirebilirsiniz. Bu, aşağıdaki örnekte olduğu gibi, çalışma zamanı durumuna göre koşullu şekilde yapabilirsiniz:
 
-' This code produces the following output:
-'
-' Blue Yonder Airlines
-' City Power & Light
-' Coho Winery
-' Consolidated Messenger
-' Graphic Design Institute
-' Humongous Insurance
-' Lucerne Publishing
-' Northwind Traders
-' The Phone Company
-' Wide World Importers
-```
+:::code language="vb" source="../../../../../samples/snippets/visualbasic/programming-guide/dynamic-linq-expression-trees/Program.vb" id="Added_method_calls":::
 
-Bu kod, metoduna geçirilen koşuldaki sabit sayıda ifadeyi kullanır `Queryable.Where` . Ancak, kullanıcı girişine bağlı bir değişken sayıda koşul ifadesini birleştiren bir uygulama yazabilirsiniz. Ayrıca, kullanıcının girişine bağlı olarak sorguda çağrılan standart sorgu işleçlerini da değiştirebilirsiniz.
+## <a name="vary-the-expression-tree-passed-into-the-linq-methods"></a>LINQ yöntemlerine geçirilen ifade ağacını farklılık gösterir
 
-## <a name="compile-the-code"></a>Kodu derle
+Çalışma zamanı durumuna bağlı olarak LINQ yöntemlerine farklı ifadeler geçirebilirsiniz:
 
-- Yeni bir **konsol uygulaması** projesi oluşturun.
+:::code language="vb" source="../../../../../samples/snippets/visualbasic/programming-guide/dynamic-linq-expression-trees/Program.vb" id="Varying_expressions":::
 
-- System. Linq. Ifadeler ad alanını ekleyin.
+Ayrıca, [Linqkit](http://www.albahari.com/nutshell/linqkit.aspx)'In [predicatebuilder](http://www.albahari.com/nutshell/predicatebuilder.aspx)gibi üçüncü taraf bir kitaplık kullanarak çeşitli alt ifadeler oluşturmak isteyebilirsiniz:
 
-- Örnekteki kodu kopyalayın ve `Main` `Sub` yordama yapıştırın.
+:::code language="vb" source="../../../../../samples/snippets/visualbasic/programming-guide/dynamic-linq-expression-trees/Program.vb" id="Compose_expression":::
+
+## <a name="construct-expression-trees-and-queries-using-factory-methods"></a>Fabrika yöntemlerini kullanarak ifade ağaçları ve sorgular oluşturun
+
+Bu noktaya kadar olan tüm örneklerde, derleme zamanında öğe türü &mdash; `String` &mdash; ve bu nedenle sorgu türü bilinirdi &mdash; `IQueryable(Of String)` . Herhangi bir öğe türünün sorgusuna bileşen eklemeniz veya öğe türüne bağlı olarak farklı bileşenler eklemeniz gerekebilir. ' Deki fabrika yöntemlerini kullanarak baştan sona ifade ağaçları oluşturabilir <xref:System.Linq.Expressions.Expression?displayProperty=fullName> ve bu sayede çalışma zamanında ifadeyi belirli bir öğe türüne uyarlayabilirsiniz.
+
+### <a name="constructing-an-expressionof-tdelegate"></a>Ifade oluşturma [(TDelegate 'in)](xref:System.Linq.Expressions.Expression%601)
+
+LINQ metotlarından birine geçirilecek bir ifade oluşturduğunuzda, aslında bir [ifade örneği (TDelegate)](xref:System.Linq.Expressions.Expression%601)oluşturursunuz; burada,, `TDelegate` `Func(Of String, Boolean)` `Action` veya özel bir temsilci türü gibi bir temsilci türüdür.
+
+[İfade (Of TDelegate))](xref:System.Linq.Expressions.Expression%601) <xref:System.Linq.Expressions.LambdaExpression>, aşağıdaki gibi bir bütün lambda ifadesini temsil eden öğesinden devralır:
+
+:::code language="vb" source="../../../../../samples/snippets/visualbasic/programming-guide/dynamic-linq-expression-trees/Program.vb" id="Compiler_generated":::
+
+<xref:System.Linq.Expressions.LambdaExpression>, İki bileşene sahiptir:
+
+* &mdash; `(x As String)` &mdash; özelliği tarafından temsil edilen bir parametre <xref:System.Linq.Expressions.LambdaExpression.Parameters> listesi
+* &mdash; `x.StartsWith("a")` &mdash; özelliği tarafından temsil edilen bir gövde <xref:System.Linq.Expressions.LambdaExpression.Body> .
+
+Bir [ifade (TDelegate)](xref:System.Linq.Expressions.Expression%601) oluşturma içindeki temel adımlar aşağıdaki gibidir:
+
+* <xref:System.Linq.Expressions.ParameterExpression>Lambda ifadesindeki her bir parametre (varsa) için nesneleri, <xref:System.Linq.Expressions.Expression.Parameter%2A> Factory yöntemini kullanarak tanımlayın.
+
+    :::code language="vb" source="../../../../../samples/snippets/visualbasic/programming-guide/dynamic-linq-expression-trees/Program.vb" id="Factory_method_parameter":::
+
+* <xref:System.Linq.Expressions.LambdaExpression> <xref:System.Linq.Expressions.ParameterExpression> Tanımladığınız öğeleri ve ' deki fabrika yöntemlerini kullanarak, gövdesinin gövdesini oluşturun <xref:System.Linq.Expressions.Expression> . Örneğin, temsil eden bir ifade şöyle `x.StartsWith("a")` oluşturulabilir:
+
+    :::code language="vb" source="../../../../../samples/snippets/visualbasic/programming-guide/dynamic-linq-expression-trees/Program.vb" id="Factory_method_body":::
+
+* Parametreleri ve gövdesini, uygun fabrika yöntemi aşırı yüklemesini kullanarak, derleme zamanı türü belirtilmiş bir [ifadede (TDelegate)](xref:System.Linq.Expressions.Expression%601)sarın <xref:System.Linq.Expressions.Expression.Lambda%2A> :
+
+    :::code language="vb" source="../../../../../samples/snippets/visualbasic/programming-guide/dynamic-linq-expression-trees/Program.vb" id="Factory_method_lambda":::
+
+Aşağıdaki bölümlerde, bir LINQ yöntemine geçirilecek bir [ifade (TDelegate)](xref:System.Linq.Expressions.Expression%601) oluşturmak isteyebileceğiniz ve Fabrika yöntemlerini kullanarak nasıl yapılacağını gösteren bir örnek sağlayan bir senaryo açıklanır.
+
+### <a name="scenario"></a>Senaryo
+
+Birden çok varlık türü olduğunu varsayalım:
+
+:::code language="vb" source="../../../../../samples/snippets/visualbasic/programming-guide/dynamic-linq-expression-trees/Entities.vb":::
+
+Bu varlık türlerinin herhangi biri için, yalnızca kendi alanlarından birinde belirli bir metne sahip olan varlıkları filtrelemek ve döndürmek istersiniz `string` . İçin, `Person` `FirstName` ve özelliklerini aramak istersiniz `LastName` :
+
+:::code language="vb" source="../../../../../samples/snippets/visualbasic/programming-guide/dynamic-linq-expression-trees/Program.vb" id="PersonsQry":::
+
+Ancak `Car` , için yalnızca özelliğini aramak istersiniz `Model` :
+
+:::code language="vb" source="../../../../../samples/snippets/visualbasic/programming-guide/dynamic-linq-expression-trees/Program.vb" id="CarsQry":::
+
+İçin bir özel işlev ve diğeri için yazabilirken `IQueryable(Of Person)` `IQueryable(Of Car)` , aşağıdaki işlev bu filtrelemeyi, belirli öğe türünden bağımsız olarak varolan herhangi bir sorguya ekler.
+
+### <a name="example"></a>Örnek
+
+:::code language="vb" source="../../../../../samples/snippets/visualbasic/programming-guide/dynamic-linq-expression-trees/Program.vb" id="Factory_methods_expression_of_tdelegate":::
+
+`TextFilter`İşlev bir [IQueryable (Of T)](xref:System.Linq.IQueryable%601) alıp döndürdüğünden (yalnızca bir <xref:System.Linq.IQueryable> ), metin filtresinden sonra, derleme zamanı türü belirtilmiş sorgu öğeleri ekleyebilirsiniz.
+
+:::code language="vb" source="../../../../../samples/snippets/visualbasic/programming-guide/dynamic-linq-expression-trees/Program.vb" id="Factory_methods_expression_of_tdelegate_usage":::
+
+## <a name="add-method-call-nodes-to-the-xrefsystemlinqiqueryables-expression-tree"></a>İfade ağacına Yöntem çağrı düğümleri ekleyin <xref:System.Linq.IQueryable>
+
+Bir <xref:System.Linq.IQueryable> [IQueryable (Of T)](xref:System.Linq.IQueryable%601)yerıne, genel LINQ yöntemleri doğrudan çağrılamaz. Diğer bir seçenek de, yukarıdaki gibi iç ifade ağacını derlemek ve ifade ağacına geçiş yaparken uygun LINQ metodunu çağırmak için yansıma kullanmaktır.
+
+LINQ yönteminin işlevini, LINQ yöntemine yapılan çağrıyı temsil eden ' de tüm ağacı sarmalayarak da çoğaltabilirsiniz <xref:System.Linq.Expressions.MethodCallExpression> .
+
+:::code language="vb" source="../../../../../samples/snippets/visualbasic/programming-guide/dynamic-linq-expression-trees/Program.vb" id="Factory_methods_lambdaexpression":::
+
+Bu durumda, bir derleme zamanı `T` genel yer tutucusu olmadığından, <xref:System.Linq.Expressions.Expression.Lambda%2A> derleme zamanı türü bilgileri gerektirmeyen ve bir <xref:System.Linq.Expressions.LambdaExpression> [Ifade (Of TDelegate)](xref:System.Linq.Expressions.Expression%601)yerine bir oluşturan aşırı yüklemeyi kullanacaksınız.
+
+## <a name="the-dynamic-linq-library"></a>Dinamik LINQ kitaplığı
+
+Fabrika yöntemlerini kullanarak ifade ağaçları oluşturmak nispeten karmaşıktır; dizeleri oluşturmak daha kolaydır. [Dınamık LINQ kitaplığı](https://dynamic-linq.net/) , IÇINDEKI <xref:System.Linq.IQueryable> standart LINQ yöntemlerine karşılık gelen <xref:System.Linq.Queryable> ve ifade ağaçları yerine [özel bir sözdiziminde](https://dynamic-linq.net/expression-language) dizeleri kabul eden bir genişletme yöntemleri kümesi sunar. Kitaplık, dizeden uygun ifade ağacını oluşturur ve elde edilen çevrilen sonuçları döndürebilir <xref:System.Linq.IQueryable> .
+
+Örneğin, önceki örnek (ifade ağacı oluşturma dahil) şu şekilde yeniden yazılabilir:
+
+:::code language="vb" source="../../../../../samples/snippets/visualbasic/programming-guide/dynamic-linq-expression-trees/Program.vb" id="Dynamic_linq":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

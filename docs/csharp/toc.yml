@@ -1,7 +1,7 @@
 items:
   - name: C# belgeleri
     href: index.yml
-  - name: C# Turu
+  - name: başlarken
     items:
       - name: Giriş
         href: tour-of-csharp/index.md
@@ -11,37 +11,39 @@ items:
         href: tour-of-csharp/program-building-blocks.md
       - name: Ana dil alanları
         href: tour-of-csharp/features.md
+      - name: Öğreticiler
+        items:
+          - name: İlk dersinizi seçme
+            href: tour-of-csharp/tutorials/index.md
+          - name: Tarayıcı tabanlı öğreticiler
+            items:
+              - name: Merhaba dünya
+                href: tour-of-csharp/tutorials/hello-world.yml
+              - name: C# numaraları
+                href: tour-of-csharp/tutorials/numbers-in-csharp.yml
+              - name: Dal ve döngüler
+                href: tour-of-csharp/tutorials/branches-and-loops.yml
+              - name: Liste koleksiyonları
+                href: tour-of-csharp/tutorials/list-collection.yml
+          - name: Yerel ortamınızda çalışma
+            items:
+              - name: Ortamınızı ayarlama
+                href: tour-of-csharp/tutorials/local-environment.md
+              - name: C# numaraları
+                href: tour-of-csharp/tutorials/numbers-in-csharp-local.md
+              - name: Dal ve döngüler
+                href: tour-of-csharp/tutorials/branches-and-loops-local.md
+              - name: Liste koleksiyonları
+                href: tour-of-csharp/tutorials/arrays-and-collections.md
   - name: Öğreticiler
     items:
       - name: Genel Bakış
         displayName: tutorials
         href: tutorials/index.md
-      - name: C# ile programlamaya giriş
-        items:
-          - name: İlk dersinizi seçme
-            href: tutorials/intro-to-csharp/index.md
-          - name: Merhaba dünya
-            href: tutorials/intro-to-csharp/hello-world.yml
-          - name: C# numaraları
-            href: tutorials/intro-to-csharp/numbers-in-csharp.yml
-          - name: Dal ve döngüler
-            href: tutorials/intro-to-csharp/branches-and-loops.yml
-          - name: Liste koleksiyonları
-            href: tutorials/intro-to-csharp/list-collection.yml
-          - name: Yerel ortamınızda çalışma
-            items:
-              - name: Ortamınızı ayarlama
-                href: tutorials/intro-to-csharp/local-environment.md
-              - name: C# numaraları
-                href: tutorials/intro-to-csharp/numbers-in-csharp-local.md
-              - name: Dal ve döngüler
-                href: tutorials/intro-to-csharp/branches-and-loops-local.md
-              - name: Liste koleksiyonları
-                href: tutorials/intro-to-csharp/arrays-and-collections.md
-              - name: Sınıflara giriş
-                href: tutorials/intro-to-csharp/introduction-to-classes.md
-              - name: Nesne Odaklı programlama
-                href: tutorials/intro-to-csharp/object-oriented-programming.md
+      - name: Sınıflara giriş
+        href: tutorials/intro-to-csharp/introduction-to-classes.md
+      - name: Nesne Odaklı programlama
+        href: tutorials/intro-to-csharp/object-oriented-programming.md
       - name: Kayıt türlerini keşfetme
         href: tutorials/exploration/records.md
       - name: Üst düzey deyimleri keşfetme
@@ -267,8 +269,6 @@ items:
         items:
           - name: C# programı içinde neler bulunur?
             href: programming-guide/inside-a-program/index.md
-          - name: Hello World -- İlk Programınız
-            href: programming-guide/inside-a-program/hello-world-your-first-program.md
           - name: C# Programının Genel Yapısı
             href: programming-guide/inside-a-program/general-structure-of-a-csharp-program.md
           - name: Tanımlayıcı adları
