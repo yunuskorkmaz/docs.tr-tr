@@ -3,12 +3,12 @@ title: Çalışma zamanı durumuna göre sorgulama (C#)
 description: Kodunuzun, bu yöntemlere geçirilen LINQ Yöntem çağrılarını veya ifade ağaçlarını değiştirerek çalışma zamanı durumuna göre dinamik olarak sorgulamak için kullanabileceği çeşitli teknikler açıklanmaktadır.
 ms.date: 02/11/2021
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
-ms.openlocfilehash: 0dcf1696ca323ac4823c80c7993fef7873fd8ed5
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 5e015bbc69b61b783abd7eba9cfcf13c29d5c3be
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100433789"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100581936"
 ---
 # <a name="querying-based-on-runtime-state-c"></a>Çalışma zamanı durumuna göre sorgulama (C#)
 
@@ -35,7 +35,7 @@ Aşağıdaki bölümlerde, çalışma zamanı durumuna yanıt olarak farklı sor
 - Ek LINQ yöntemlerini çağırın
 - LINQ yöntemlerine geçirilen ifade ağacını farklılık gösterir
 - Üzerinde Fabrika yöntemlerini kullanarak bir [ifade \<TDelegate> ](xref:System.Linq.Expressions.Expression%601) ifadesi ağacı oluşturun<xref:System.Linq.Expressions.Expression>
-- Yöntem çağrı düğümlerini bir <xref:System.Linq.IQueryable> ifade ağacına ekleme
+- Bir ifade ağacına Yöntem çağrı düğümleri ekleme <xref:System.Linq.IQueryable>
 - Dizeler oluşturun ve [dınamık LINQ kitaplığını](https://dynamic-linq.net/) kullanın
 
 ## <a name="use-runtime-state-from-within-the-expression-tree"></a>Çalışma zamanı durumunu ifade ağacı içinden kullanın
@@ -53,7 +53,7 @@ Genellikle, [YERLEŞIK LINQ yöntemleri](https://github.com/dotnet/runtime/blob/
 * Yöntem çağrısını temsil eden içinde geçerli ifade ağacını sarın <xref:System.Linq.Expressions.MethodCallExpression> .
 * Sarmalanan ifade ağacını sağlayıcıya geri geçirin; Örneğin, sağlayıcının yöntemi aracılığıyla bir değer döndürün <xref:System.Linq.IQueryProvider.Execute%2A?displayProperty=nameWithType> ya da yöntemi aracılığıyla çevrilmiş bir sorgu nesnesi döndürün <xref:System.Linq.IQueryProvider.CreateQuery%2A?displayProperty=nameWithType> .
 
-Yeni bir sorgu almak için özgün sorguyu bir [IQueryable \<T> ](xref:System.Linq.IQueryable%601)döndüren metodun sonucuyla değiştirebilirsiniz. Bunu, aşağıdaki örnekte olduğu gibi çalışma zamanı durumuna göre yapabilirsiniz:
+Yeni bir sorgu almak için özgün sorguyu bir [IQueryable \<T> ](xref:System.Linq.IQueryable%601)döndüren metodun sonucuyla değiştirebilirsiniz. Bu, aşağıdaki örnekte olduğu gibi, çalışma zamanı durumuna göre koşullu şekilde yapabilirsiniz:
 
 :::code language="csharp" source="../../../../../samples/snippets/csharp/programming-guide/dynamic-linq-expression-trees/Program.cs" id="Added_method_calls":::
 
@@ -69,7 +69,7 @@ Ayrıca, [Linqkit](http://www.albahari.com/nutshell/linqkit.aspx)'In [predicateb
 
 ## <a name="construct-expression-trees-and-queries-using-factory-methods"></a>Fabrika yöntemlerini kullanarak ifade ağaçları ve sorgular oluşturun
 
-Bu noktaya kadar olan tüm örneklerde, derleme zamanında öğe türü &mdash; `string` &mdash; ve bu nedenle sorgu türü bilinirdi &mdash; `IQueryable<string>` . Herhangi bir öğe türünün sorgusuna bileşen eklemeniz gerekebilir. Öğe türüne bağlı olarak farklı bileşenler eklemeniz gerekebilir. ' Deki fabrika yöntemlerini kullanarak baştan sona ifade ağaçları oluşturabilir <xref:System.Linq.Expressions.Expression?displayProperty=fullName> ve bu sayede ifadeyi belirli bir öğe türüne uyarlayabilirsiniz.
+Bu noktaya kadar olan tüm örneklerde, derleme zamanında öğe türü &mdash; `string` &mdash; ve bu nedenle sorgu türü bilinirdi &mdash; `IQueryable<string>` . Öğe türüne bağlı olarak herhangi bir öğe türünün sorgusuna bileşen eklemeniz veya farklı bileşenler eklemeniz gerekebilir. ' Deki fabrika yöntemlerini kullanarak baştan sona ifade ağaçları oluşturabilir <xref:System.Linq.Expressions.Expression?displayProperty=fullName> ve bu sayede çalışma zamanında ifadeyi belirli bir öğe türüne uyarlayabilirsiniz.
 
 ### <a name="constructing-an-expressiontdelegate"></a>[İfade \<TDelegate> ](xref:System.Linq.Expressions.Expression%601) oluşturma
 
@@ -77,9 +77,7 @@ LINQ metotlarından birine geçirilecek bir ifade oluşturduğunuzda, aslında b
 
 [İfade \<TDelegate> ](xref:System.Linq.Expressions.Expression%601) <xref:System.Linq.Expressions.LambdaExpression>, aşağıdaki gibi bir bütün lambda ifadesini temsil eden öğesinden devralır:
 
-```csharp
-Expression<Func<string, bool>> expr = x => x.StartsWith("a");
-```
+:::code language="csharp" source="../../../../../samples/snippets/csharp/programming-guide/dynamic-linq-expression-trees/Program.cs" id="Compiler_generated_expression_tree":::
 
 <xref:System.Linq.Expressions.LambdaExpression>, İki bileşene sahiptir:
 
@@ -90,25 +88,15 @@ Bir [ifade \<TDelegate> ](xref:System.Linq.Expressions.Expression%601) oluşturm
 
 * <xref:System.Linq.Expressions.ParameterExpression>Lambda ifadesindeki her bir parametre (varsa) için nesneleri, <xref:System.Linq.Expressions.Expression.Parameter%2A> Factory yöntemini kullanarak tanımlayın.
 
-    ```csharp
-    ParameterExpression x = Parameter(typeof(string), "x");
-    ```
+    :::code language="csharp" source="../../../../../samples/snippets/csharp/programming-guide/dynamic-linq-expression-trees/Program.cs" id="Factory_method_expression_tree_parameter":::
 
-* <xref:System.Linq.Expressions.LambdaExpression>Tanımladığınız öğesini kullanarak, gövdesini oluşturun <xref:System.Linq.Expressions.ParameterExpression> . Örneğin, temsil eden bir ifade şöyle `x.StartsWith("a")` oluşturulabilir:
+* <xref:System.Linq.Expressions.LambdaExpression> <xref:System.Linq.Expressions.ParameterExpression> Tanımladığınız öğeleri ve ' deki fabrika yöntemlerini kullanarak, gövdesinin gövdesini oluşturun <xref:System.Linq.Expressions.Expression> . Örneğin, temsil eden bir ifade şöyle `x.StartsWith("a")` oluşturulabilir:
 
-    ```csharp
-    Expression body = Call(
-        x,
-        typeof(string).GetMethod("StartsWith", new [] {typeof(string)}),
-        Constant("a")
-    );
-    ```
+    :::code language="csharp" source="../../../../../samples/snippets/csharp/programming-guide/dynamic-linq-expression-trees/Program.cs" id="Factory_method_expression_tree_body":::
 
 * Parametreleri ve gövdesi, uygun fabrika yöntemi aşırı yüklemesini kullanarak, derleme zamanı türü belirlenmiş bir [ifadede \<TDelegate> ](xref:System.Linq.Expressions.Expression%601)sarın <xref:System.Linq.Expressions.Expression.Lambda%2A> :
 
-    ```csharp
-    Expression<Func<string, bool>> expr = Lambda<Func<string, bool>>(body, prm);
-    ```
+    :::code language="csharp" source="../../../../../samples/snippets/csharp/programming-guide/dynamic-linq-expression-trees/Program.cs" id="Factory_method_expression_tree_lambda":::
 
 Aşağıdaki bölümlerde, bir LINQ yöntemine geçirilecek bir [ifade \<TDelegate> ](xref:System.Linq.Expressions.Expression%601) oluşturmak isteyebileceğiniz ve Fabrika yöntemlerini kullanarak nasıl yapılacağını gösteren bir örnek sağlayan bir senaryo açıklanır.
 
@@ -116,10 +104,7 @@ Aşağıdaki bölümlerde, bir LINQ yöntemine geçirilecek bir [ifade \<TDelega
 
 Birden çok varlık türü olduğunu varsayalım:
 
-```csharp
-record Person(string LastName, string FirstName, DateTime DateOfBirth);
-record Car(string Model, int Year);
-```
+:::code language="csharp" source="../../../../../samples/snippets/csharp/programming-guide/dynamic-linq-expression-trees/Program.cs" id="Entities":::
 
 Bu varlık türlerinin herhangi biri için, yalnızca kendi alanlarından birinde belirli bir metne sahip olan varlıkları filtrelemek ve döndürmek istersiniz `string` . İçin, `Person` `FirstName` ve özelliklerini aramak istersiniz `LastName` :
 
@@ -149,7 +134,7 @@ var carsQry = new List<Car>()
 
 :::code language="csharp" source="../../../../../samples/snippets/csharp/programming-guide/dynamic-linq-expression-trees/Program.cs" id="Factory_methods_expression_of_tdelegate_usage":::
 
-## <a name="adding-method-call-nodes-to-the-xrefsystemlinqiqueryables-expression-tree"></a>Yöntem çağrı düğümleri, <xref:System.Linq.IQueryable> ifade ağacına ekleniyor
+## <a name="add-method-call-nodes-to-the-xrefsystemlinqiqueryables-expression-tree"></a>İfade ağacına Yöntem çağrı düğümleri ekleyin <xref:System.Linq.IQueryable>
 
 Bir <xref:System.Linq.IQueryable> [IQueryable \<T> ](xref:System.Linq.IQueryable%601)yerıne sahipseniz, genel LINQ yöntemlerini doğrudan çağrılamaz. Diğer bir seçenek de, yukarıdaki gibi iç ifade ağacını derlemek ve ifade ağacına geçiş yaparken uygun LINQ metodunu çağırmak için yansıma kullanmaktır.
 

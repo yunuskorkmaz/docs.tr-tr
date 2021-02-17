@@ -3,12 +3,12 @@ title: ASP.NET Core geçiş yaparken dağıtım senaryoları
 description: ASP.NET 'den ASP.NET Core 'e geçiş yaparken kullanılabilecek, yan yana ve aşamalı geçişlere izin veren, dağıtıma yönelik farklı yaklaşımlara genel bakış.
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 8a3b658c777f2243c7c63908d9d0b24822b6790e
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: ed1b856358f1e20a53c9b4bf845764813078a040
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100488912"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100583054"
 ---
 # <a name="deployment-scenarios-when-migrating-to-aspnet-core"></a>ASP.NET Core geçiş yaparken dağıtım senaryoları
 
@@ -73,7 +73,8 @@ Uygulamanız IIS içindeki farklı siteler veya uygulamalar arasında çoklu otu
 - [URL yeniden yazma](https://www.iis.net/downloads/microsoft/url-rewrite)
 - [ASP.NET Core Modülü](https://docs.microsoft.com/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-2.1&preserve-view=true)
 - [ASP.NET uygulamaları arasında kimlik doğrulama tanımlama bilgilerini paylaşma](https://docs.microsoft.com/aspnet/core/host-and-deploy/iis/)
+- [Bu bölümde kullanılan örnekler](https://github.com/ardalis/MigrateDotNetWithIIS)
 
 >[!div class="step-by-step"]
->[Önceki](example-migration-eshop.md) 
+>[Önceki](more-migration-scenarios.md) 
 > [Sonraki](summary.md)

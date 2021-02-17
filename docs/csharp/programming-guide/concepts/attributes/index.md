@@ -2,16 +2,16 @@
 title: Öznitelikler (C#)
 description: Meta verileri veya bildirim temelli bilgileri C# ' deki kodla ilişkilendirmek için öznitelikleri kullanmayı öğrenin. Bir öznitelik, yansıma kullanılarak çalışma zamanında sorgulanabilir.
 ms.date: 04/26/2018
-ms.openlocfilehash: 5c57838b649531d8e8fe89919771adf8830e7f54
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: f468b01d3f7832ed8c127f34e6d4e3c1bcf7901a
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924991"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100583671"
 ---
 # <a name="attributes-c"></a>Öznitelikler (C#)
 
-Öznitelikler, meta verileri veya bildirime dayalı bilgilerin kod (derlemeler, türler, Yöntemler, özellikler, vb.) ile ilişkilendirilmesi için güçlü bir yöntem sağlar. Bir öznitelik bir program varlığıyla ilişkilendirildikten sonra, çalışma zamanında, *yansıma*adlı bir teknik kullanarak öznitelik sorgulanabilir. Daha fazla bilgi için bkz. [yansıma (C#)](../reflection.md).
+Öznitelikler, meta verileri veya bildirime dayalı bilgilerin kod (derlemeler, türler, Yöntemler, özellikler, vb.) ile ilişkilendirilmesi için güçlü bir yöntem sağlar. Bir öznitelik bir program varlığıyla ilişkilendirildikten sonra, çalışma zamanında, *yansıma* adlı bir teknik kullanarak öznitelik sorgulanabilir. Daha fazla bilgi için bkz. [yansıma (C#)](../reflection.md).
 
 Öznitelikler aşağıdaki özelliklere sahiptir:
 
@@ -22,7 +22,7 @@ ms.locfileid: "86924991"
 
 ## <a name="using-attributes"></a>Öznitelikleri kullanma
 
-Öznitelikler, her bir bildirime yerleştirilebilecek, ancak belirli bir öznitelik, geçerli olduğu bildirimlerin türlerini kısıtlayabilir. C# ' de, geçerli olduğu varlık bildiriminin üstüne köşeli ayraç ([]) içine alınmış özniteliğin adını yerleştirerek bir özniteliği belirtirsiniz.
+Öznitelikler, neredeyse her bildirime yerleştirilebilir, ancak belirli bir öznitelik geçerli olduğu bildirimlerin türlerini kısıtlayabilir. C# ' de, geçerli olduğu varlık bildiriminin üstüne köşeli ayraç ([]) içine alınmış özniteliğin adını yerleştirerek bir özniteliği belirtirsiniz.
 
 Bu örnekte, <xref:System.SerializableAttribute> özniteliği bir sınıfa belirli bir özelliği uygulamak için kullanılır:
 

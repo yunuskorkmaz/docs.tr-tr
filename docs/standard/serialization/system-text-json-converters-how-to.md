@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: 5406f862eeec83b619f660716e68b85f3d90b28f
-ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
+ms.openlocfilehash: 1a13fe4e4717764130d05131969379de8a913f48
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99216362"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100583767"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>.NET 'teki JSON serileştirme (sıralama) için özel dönüştürücüler yazma
 
@@ -46,6 +46,8 @@ Ayrıca, `System.Text.Json` geçerli sürüme dahil olmayan işlevlerle özelle�
 ::: zone-end
 
 Özel bir dönüştürücü için yazdığınız kodda, yeni örnekleri kullanmaya yönelik önemli performans cezası hakkında dikkat edin <xref:System.Text.Json.JsonSerializerOptions> . Daha fazla bilgi için bkz. [JsonSerializerOptions örneklerini yeniden kullanma](system-text-json-configure-options.md#reuse-jsonserializeroptions-instances).
+
+Visual Basic, özel dönüştürücüler yazmak için kullanılamaz, ancak C# kitaplıklarında uygulanan dönüştürücüler çağırabilir. Daha fazla bilgi için bkz. [Visual Basic desteği](system-text-json-how-to.md#visual-basic-support).
 
 ## <a name="custom-converter-patterns"></a>Özel dönüştürücü desenleri
 
@@ -392,6 +394,44 @@ Bu null işleme davranışı öncelikle, dönüştürücünün ek bir çağrıs�
 Bir özel dönüştürücünün `null` bir başvuru veya değer türü için işlemesini sağlamak için, <xref:System.Text.Json.Serialization.JsonConverter%601.HandleNull%2A?displayProperty=nameWithType> `true` Aşağıdaki örnekte gösterildiği gibi, döndürecek şekilde geçersiz kılın:
 
 :::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/CustomConverterHandleNull.cs" highlight="18":::
+::: zone-end
+
+## <a name="preserve-references"></a>Başvuruları koruma
+
+::: zone pivot="dotnet-5-0"
+
+Varsayılan olarak, başvuru verileri yalnızca veya için yapılan her çağrı için önbelleğe alınır <xref:System.Text.Json.JsonSerializer.Serialize%2A> <xref:System.Text.Json.JsonSerializer.Deserialize%2A> . Bir çağrıdan diğerine yapılan başvuruları kalıcı hale getirmek için `Serialize` / `Deserialize` , ' <xref:System.Text.Json.Serialization.ReferenceResolver> ın çağrı sitesinde kökünü yapın `Serialize` / `Deserialize` . Aşağıdaki kod, bu senaryo için bir örnek gösterir:
+
+* Tür için özel bir dönüştürücü yazarsınız `Company` .
+* Özelliği olan özelliğini el ile seri hale getirmek istemezsiniz `Supervisor` `Employee` . Bunu serileştiriciye atamak istiyorsunuz ve daha önce kaydettiğiniz başvuruları korumak istiyorsunuz.
+
+`Employee`Ve `Company` sınıfları şunlardır:
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/CustomConverterPreserveReferences.cs" id="EmployeeAndCompany":::
+
+Dönüştürücü şuna benzer:
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/CustomConverterPreserveReferences.cs" id="CompanyConverter":::
+
+Öğesinden türetilen bir sınıf <xref:System.Text.Json.Serialization.ReferenceResolver> , başvuruları bir sözlükte depolar:
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/CustomConverterPreserveReferences.cs" id="MyReferenceResolver":::
+
+Öğesinden türetilen bir sınıf <xref:System.Text.Json.Serialization.ReferenceHandler> , bir örneğini tutar `MyReferenceResolver` ve yalnızca gerektiğinde yeni bir örnek oluşturur (Bu örnekte adlı bir yöntemde `Reset` ):
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/CustomConverterPreserveReferences.cs" id="MyReferenceHandler":::
+
+Örnek kod serileştiriciyi çağırdığında, <xref:System.Text.Json.JsonSerializerOptions> <xref:System.Text.Json.JsonSerializerOptions.ReferenceHandler> özelliğinin bir örneğine ayarlandığı bir örneği kullanır `MyReferenceHandler` . Bu kalıbı izlediğinizde, `ReferenceResolver` seri hale getirmeyi tamamladıktan sonra, sonsuza kadar büyümeye devam etmek için sözlüğü sıfırladığınızdan emin olun.
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/CustomConverterPreserveReferences.cs" id="CallSerializer" highlight = "4-5,12":::
+
+Yukarıdaki örnek yalnızca serileştirme amaçlıdır, ancak seri durumundan çıkarma için benzer bir yaklaşım benimsemiş olabilir.
+
+::: zone-end
+::: zone pivot="dotnet-core-3-1"
+
+Başvuruların nasıl korunduğu hakkında daha fazla bilgi için [bu sayfanın .net 5,0 sürümüne](system-text-json-converters-how-to.md?pivots=dotnet-5-0#preserve-references)bakın.
+
 ::: zone-end
 
 ## <a name="other-custom-converter-samples"></a>Diğer özel dönüştürücü örnekleri

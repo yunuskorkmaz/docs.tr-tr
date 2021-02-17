@@ -6,19 +6,19 @@ helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: a249f0de00c45b1588762ffa0f826e890f961334
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 45df7b2c4dad1aa84ad39ca38fba8d2ec16c8fb3
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91607778"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100585348"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Nasıl yapılır: Geliştirme Sırasında Kullanmak için Geçici Sertifikalar Oluşturma
 
 Windows Communication Foundation (WCF) kullanarak güvenli bir hizmet veya istemci geliştirirken, genellikle kimlik bilgisi olarak kullanılacak bir X. 509.440 sertifikası sağlamak gereklidir. Sertifika genellikle bilgisayarın güvenilen kök sertifika yetkilileri deposunda bulunan bir kök yetkiliyle bir Sertifika zincirinin parçasıdır. Bir sertifika zinciri olması, genellikle kök yetkilisinin kuruluşunuzun veya iş biriminden olduğu bir sertifika kümesini kapsamlamanıza olanak sağlar. Geliştirme zamanında buna öykünmek için, güvenlik gereksinimlerini karşılamak üzere iki sertifika oluşturabilirsiniz. Birincisi, güvenilen kök sertifika yetkilileri deposuna yerleştirilmiş otomatik olarak imzalanan bir sertifikadır ve ikinci sertifika birinciden oluşturulur ve yerel makine konumunun kişisel deposuna ya da geçerli kullanıcı konumunun kişisel deposuna yerleştirilir. Bu konu, PowerShell [New-SelfSignedCertificate)](/powershell/module/pkiclient/new-selfsignedcertificate) cmdlet 'ini kullanarak bu iki sertifikayı oluşturma adımlarında size kılavuzluk eder.
 
 > [!IMPORTANT]
-> New-SelfSignedCertificate cmdlet 'inin oluşturduğu sertifikalar yalnızca sınama amacıyla sağlanır. Bir hizmet veya istemci dağıtıldığında, bir sertifika yetkilisi tarafından sunulan uygun bir sertifikayı kullandığınızdan emin olun. Bu, kuruluşunuzdaki bir Windows Server sertifika sunucusundan veya üçüncü bir tarafa ait olabilir.
+> New-SelfSignedCertificate cmdlet 'in oluşturduğu sertifikalar yalnızca sınama amacıyla sağlanır. Bir hizmet veya istemci dağıtıldığında, bir sertifika yetkilisi tarafından sunulan uygun bir sertifikayı kullandığınızdan emin olun. Bu, kuruluşunuzdaki bir Windows Server sertifika sunucusundan veya üçüncü bir tarafa ait olabilir.
 >
 > Varsayılan olarak, [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) cmdlet 'i, kendinden imzalı sertifikalar oluşturur ve bu sertifikalar güvenli değildir. Otomatik olarak imzalanan sertifikaların güvenilen kök sertifika yetkilileri deposuna yerleştirilmesi, dağıtım ortamınızı daha yakından taklit eden bir geliştirme ortamı oluşturmanızı sağlar.
 
@@ -29,15 +29,15 @@ Windows Communication Foundation (WCF) kullanarak güvenli bir hizmet veya istem
 Aşağıdaki komut, geçerli kullanıcı Kişisel deposunda "RootCA" konu adına sahip kendinden imzalı bir sertifika oluşturur.
 
 ```powershell
-$rootcert = New-SelfSignedCertificate -CertStoreLocation Cert:\CurrentUser\My -DnsName "RootCA" -TextExtension @("2.5.29.19={text}CA=true") -KeyUsage CertSign,CrlSign,DigitalSignature
+$rootCert = New-SelfSignedCertificate -CertStoreLocation Cert:\CurrentUser\My -DnsName "RootCA" -TextExtension @("2.5.29.19={text}CA=true") -KeyUsage CertSign,CrlSign,DigitalSignature
 ```
 
 Sertifikayı bir PFX dosyasına aktardığımızda, daha sonraki bir adımda gereken yere aktarılabilmesi gerekir. Özel anahtarla bir sertifika dışarı aktarılırken, bunu korumak için bir parola gerekir. Parolayı bir `SecureString` öğesine kaydeder ve sertifikayı ilişkili özel anahtarla BIR PFX dosyasına aktarmak Için [Export-pfxcertificate](/powershell/module/pkiclient/export-pfxcertificate) cmdlet 'ini kullanın. Ayrıca, [Export-Certificate](/powershell/module/pkiclient/export-certificate) cmdlet 'ini kullanarak yalnızca genel sertifikayı CRT dosyasına kaydettik.
 
 ```powershell
-[System.Security.SecureString]$rootcertPassword = ConvertTo-SecureString -String "password" -Force -AsPlainText
-[String]$rootCertPath = Join-Path -Path 'cert:\CurrentUser\My\' -ChildPath "$($rootcert.Thumbprint)"
-Export-PfxCertificate -Cert $rootCertPath -FilePath 'RootCA.pfx' -Password $rootcertPassword
+[System.Security.SecureString]$rootCertPassword = ConvertTo-SecureString -String "password" -Force -AsPlainText
+[String]$rootCertPath = Join-Path -Path 'cert:\CurrentUser\My\' -ChildPath "$($rootCert.Thumbprint)"
+Export-PfxCertificate -Cert $rootCertPath -FilePath 'RootCA.pfx' -Password $rootCertPassword
 Export-Certificate -Cert $rootCertPath -FilePath 'RootCA.crt'
 ```
 
@@ -53,7 +53,7 @@ Benzer şekilde, imzalı sertifikayı özel anahtarla bir PFX dosyasına ve yaln
 
 ```powershell
 [String]$testCertPath = Join-Path -Path 'cert:\LocalMachine\My\' -ChildPath "$($testCert.Thumbprint)"
-Export-PfxCertificate -Cert $testCertPath -FilePath testcert.pfx -Password $rootcertPassword
+Export-PfxCertificate -Cert $testCertPath -FilePath testcert.pfx -Password $rootCertPassword
 Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 ```
 
@@ -65,7 +65,7 @@ Otomatik olarak imzalanan bir sertifika oluşturulduktan sonra, güvenilen kök 
 
 1. Sertifika ek bileşenini açın. Daha fazla bilgi için bkz. [nasıl yapılır: MMC ek bileşeni Ile sertifikaları görüntüleme](how-to-view-certificates-with-the-mmc-snap-in.md).
 
-2. Sertifikayı **Yerel bilgisayar** veya **Geçerli Kullanıcı**olarak depolamak için klasörü açın.
+2. Sertifikayı **Yerel bilgisayar** veya **Geçerli Kullanıcı** olarak depolamak için klasörü açın.
 
 3. **Güvenilen kök sertifika yetkilileri** klasörünü açın.
 

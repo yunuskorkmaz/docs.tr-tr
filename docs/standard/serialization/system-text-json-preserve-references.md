@@ -1,24 +1,27 @@
 ---
 title: İle başvuruları koruma System.Text.Json
 description: .NET 'teki JSON 'dan serileştirilirken ve seri durumdan çıkarılırken başvuruları nasıl koruyacağınızı ve döngüsel başvuruları nasıl işleyeceğinizi öğrenin.
-ms.date: 12/09/2020
+ms.date: 01/12/2021
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
 zone_pivot_groups: dotnet-version
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: d358c953c0979ca097c080fcd750d5ef95b07de0
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 0dda695c7e21090f68703309da03d5158fc858f1
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97008740"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100584058"
 ---
-# <a name="how-to-preserve-references-and-handle-circular-references-with-no-locsystemtextjson"></a>Başvuruları koruma ve ile döngüsel başvuruları işleme System.Text.Json
+# <a name="how-to-preserve-references-and-handle-circular-references-with-systemtextjson"></a>Başvuruları koruma ve ile döngüsel başvuruları işleme System.Text.Json
 
 ::: zone pivot="dotnet-5-0"
 
@@ -35,6 +38,7 @@ Başvuruları korumak ve döngüsel başvuruları işlemek için olarak ayarlay�
 Aşağıdaki kod, ayarın kullanımını gösterir `Preserve` .
 
 :::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/PreserveReferences.cs" highlight="34":::
+:::code language="vb" source="snippets/system-text-json-how-to-5-0/vb/PreserveReferences.vb" :::
 
 Bu özellik değer türlerini veya sabit türleri korumak için kullanılamaz. Seri durumdan çıkarma sırasında, tüm yük okunduktan sonra sabit bir tür örneği oluşturulur. Bu nedenle, JSON yükünün içinde bir başvuru görünürse aynı örneğin serisini kaldırma imkansızdır.
 
@@ -45,6 +49,29 @@ Nesnelerin eşit olup olmadığını anlamak için, System.Text.Json <xref:Syste
 Başvuruların serileştirilme ve seri durumdan çıkarıldığı hakkında daha fazla bilgi için bkz <xref:System.Text.Json.Serialization.ReferenceHandler.Preserve%2A?displayProperty=nameWithType> ..
 
 <xref:System.Text.Json.Serialization.ReferenceResolver>Sınıfı serileştirme ve seri durumundan çıkarma için başvuruları koruma davranışını tanımlar. Özel davranışı belirtmek için türetilmiş bir sınıf oluşturun. Bir örnek için bkz. [GuidReferenceResolver](https://github.com/dotnet/docs/blob/9d5e88edbd7f12be463775ffebbf07ac8415fe18/docs/standard/serialization/snippets/system-text-json-how-to-5-0/csharp/GuidReferenceResolverExample.cs).
+
+## <a name="persist-reference-metadata-across-multiple-serialization-and-deserialization-calls"></a>Birden çok serileştirme ve seri durumdan çıkarma çağrılarında başvuru meta verilerini kalıcı yap
+
+Varsayılan olarak, başvuru verileri yalnızca veya için yapılan her çağrı için önbelleğe alınır <xref:System.Text.Json.JsonSerializer.Serialize%2A> <xref:System.Text.Json.JsonSerializer.Deserialize%2A> . Bir çağrıdan diğerine yapılan başvuruları kalıcı hale getirmek için `Serialize` / `Deserialize` , ' <xref:System.Text.Json.Serialization.ReferenceResolver> ın çağrı sitesinde kökünü yapın `Serialize` / `Deserialize` . Aşağıdaki kod, bu senaryo için bir örnek gösterir:
+
+* Bir listeniz vardır `Employee` ve her birini ayrı olarak serileştirmek zorunda olursunuz.
+* çözümleyicisine kaydedilen başvuruların avantajlarından yararlanmak istiyorsunuz `ReferenceHandler` .
+
+`Employee`Sınıf şöyledir:
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/PreserveReferencesMultipleCalls.cs" id="Employee":::
+
+Öğesinden türetilen bir sınıf <xref:System.Text.Json.Serialization.ReferenceResolver> , başvuruları bir sözlükte depolar:
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/PreserveReferencesMultipleCalls.cs" id="MyReferenceResolver":::
+
+Öğesinden türetilen bir sınıf <xref:System.Text.Json.Serialization.ReferenceHandler> , bir örneğini tutar `MyReferenceResolver` ve yalnızca gerektiğinde yeni bir örnek oluşturur (Bu örnekte adlı bir yöntemde `Reset` ):
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/PreserveReferencesMultipleCalls.cs" id="MyReferenceHandler":::
+
+Örnek kod serileştiriciyi çağırdığında, <xref:System.Text.Json.JsonSerializerOptions> <xref:System.Text.Json.JsonSerializerOptions.ReferenceHandler> özelliğinin bir örneğine ayarlandığı bir örneği kullanır `MyReferenceHandler` . Bu kalıbı izlediğinizde, `ReferenceResolver` seri hale getirmeyi tamamladıktan sonra, sonsuza kadar büyümeye devam etmek için sözlüğü sıfırladığınızdan emin olun.
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/PreserveReferencesMultipleCalls.cs" id="CallSerializer" highlight = "3-4,14":::
 
 ::: zone-end
 

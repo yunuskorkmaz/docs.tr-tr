@@ -5,19 +5,22 @@ ms.date: 11/30/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 265ce4f77d353720419122d17c36e508a377b68f
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 61f21d131922bc98d7f70093abf55eed3dcd8a61
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97008922"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100583695"
 ---
-# <a name="how-to-handle-overflow-json-with-no-locsystemtextjson"></a>İle taşma JSON ile işleme System.Text.Json
+# <a name="how-to-handle-overflow-json-with-systemtextjson"></a>İle taşma JSON ile işleme System.Text.Json
 
 Bu makalede, ad alanıyla taşma JSON 'u nasıl işleyeceğinizi öğreneceksiniz `System.Text.Json` .
 
@@ -26,6 +29,7 @@ Bu makalede, ad alanıyla taşma JSON 'u nasıl işleyeceğinizi öğreneceksini
 Seri durumdan çıkarma sırasında, JSON 'da hedef türünün özellikleriyle temsil edilmeyen verileri alabilirsiniz. Örneğin, hedef türünün bu olduğunu varsayalım:
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WF":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/WeatherForecast.vb" id="WF":::
 
 Ve seri durumdan çıkarılacak JSON şu şekilde yapılır:
 
@@ -49,6 +53,7 @@ Ve seri durumdan çıkarılacak JSON şu şekilde yapılır:
 Gösterilen türde gösterilen JSON serisini kaldırırsanız, `DatesAvailable` ve `SummaryWords` özellikleri nonereye gidebileceği ve kaybediliyor. Bu özellikler gibi ek verileri yakalamak için, [[Jsonextensiondata]](xref:System.Text.Json.Serialization.JsonExtensionDataAttribute) özniteliğini türü bir özelliğe uygulayın `Dictionary<string,object>` `Dictionary<string,JsonElement>` :
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WFWithExtensionData":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/WeatherForecast.vb" id="WFWithExtensionData":::
 
 Daha önce Bu örnek türünde gösterilen JSON serisini kaldırdığınızda, ek veri özelliğin anahtar-değer çiftleri haline gelir `ExtensionData` :
 

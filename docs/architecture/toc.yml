@@ -21,3 +21,5 @@
       href: microservices/
     - name: 'Sunucusuz uygulamalar: Mimari, desenler ve Azure’ı uygulama'
       href: serverless/
+    - name: .NET geliştiricileri için dadpr
+      href: dapr-for-net-developers/

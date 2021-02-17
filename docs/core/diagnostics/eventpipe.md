@@ -3,12 +3,12 @@ title: EventPipe genel bakış
 description: EventPipe hakkında bilgi edinin ve performans sorunlarını tanılamak üzere .NET uygulamalarınızı izlemek için nasıl kullanacağınızı öğrenin.
 ms.date: 11/09/2020
 ms.topic: overview
-ms.openlocfilehash: 00378c4f409b307afa9183e40de6078cdafd3ae7
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f315beafabbd99bf78647b3f714fd76d93fcac28
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820624"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100582980"
 ---
 # <a name="eventpipe"></a>EventPipe
 
@@ -36,7 +36,7 @@ EventPipe ile ETW/LTTng arasındaki diğer önemli fark, yönetici/kök ayrıcal
 
 Aşağıdaki tabloda EventPipe ile ETW/LTTng arasındaki farkların bir özeti verilmiştir.
 
-|Öne çıkan özelliği|EventPipe|ETW|Lttng kullanılabilir|
+|Özellik|EventPipe|ETW|Lttng kullanılabilir|
 |-------|---------|---|-----------|
 |Platformlar arası|Yes|Hayır (yalnızca Windows üzerinde)|Hayır (yalnızca desteklenen Linux 'ları destekler)|
 |Yönetici/kök ayrıcalığı iste|Hayır|Yes|Yes|
@@ -94,3 +94,5 @@ Ancak, bir uygulamada EventPipe oturumu ayarlamak ve izlemeyi doğrudan bir dosy
   - `Microsoft-Windows-DotNETRuntime:4c14fccbd:5`
   - `Microsoft-Windows-DotNETRuntimePrivate:4002000b:5`
   - `Microsoft-DotNETCore-SampleProfiler:0:5`
+
+  .NET 'teki iyi bilinen sağlayıcılar hakkında daha fazla bilgi edinmek için [iyi bilinen olay sağlayıcılarına](./well-known-event-providers.md)bakın.

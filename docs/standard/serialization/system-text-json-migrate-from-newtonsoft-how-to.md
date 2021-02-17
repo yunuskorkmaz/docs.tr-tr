@@ -13,12 +13,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 3c9383aed97ed3b22f8fccdd55a9fa5664edef2d
-ms.sourcegitcommit: 38999dc0ec4f7c4404de5ce0951b64c55997d9ab
+ms.openlocfilehash: 3cd8bbb03d1c9a2cfb38c2e6b076fa660690cfea
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99426937"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100584175"
 ---
 # <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>' Den ' a geçiş Newtonsoft.JsonSystem.Text.Json
 
@@ -33,6 +33,8 @@ Bu makalede, ' den ' e nasıl geçiş yapılacağı gösterilmektedir [Newtonsof
 `System.Text.Json` Öncelikle performans, güvenlik ve standartlar uyumluluğuna odaklanır. Varsayılan davranışta bazı önemli farklılıklar vardır ve ile özellik eşliği yoktur `Newtonsoft.Json` . Bazı senaryolarda `System.Text.Json` yerleşik işlevselliği yoktur, ancak önerilen geçici çözümler vardır. Diğer senaryolar için geçici çözümler pratik bir şekilde yapılır. Uygulamanız eksik bir özelliğe bağımlıysa, senaryonuza yönelik desteğin eklenip eklenemediğine ulaşmak için [bir sorun](https://github.com/dotnet/runtime/issues/new) yerleştirmeyi düşünün.
 
 Bu makalenin çoğu, API 'yi kullanma ile <xref:System.Text.Json.JsonSerializer> ilgilidir, ancak aynı zamanda <xref:System.Text.Json.JsonDocument> (belge nesne MODELI veya DOM), <xref:System.Text.Json.Utf8JsonReader> ve türlerini temsil eder <xref:System.Text.Json.Utf8JsonWriter> .
+
+Visual Basic ' de kullanamazsınız <xref:System.Text.Json.Utf8JsonReader> , bu da özel dönüştürücüler yazamıyoruz anlamına gelir. Burada sunulan geçici çözümlerin çoğu için özel dönüştürücüler yazmanız gerekir. C# dilinde özel bir dönüştürücü yazabilir ve bunu bir Visual Basic projesine kaydedebilirsiniz. Daha fazla bilgi için bkz. [Visual Basic desteği](system-text-json-how-to.md#visual-basic-support).
 
 ## <a name="table-of-differences-between-newtonsoftjson-and-systemtextjson"></a>Ve arasındaki farklar tablosu Newtonsoft.JsonSystem.Text.Json
 

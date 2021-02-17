@@ -2,12 +2,12 @@
 title: DotNet-Trace Tanılama aracı-.NET CLı
 description: .NET EventPipe kullanarak, yerel profil oluşturucu olmadan çalışan bir işlemin .NET izlemelerini toplamak için DotNet-Trace CLı aracını yüklemeyi ve kullanmayı öğrenin.
 ms.date: 11/17/2020
-ms.openlocfilehash: 93698882e94f58eda84abebc277e1eacfe22a3da
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: abf98df6e31747ea3e8013fc77b246613a3402ad
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189716"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100583005"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>DotNet-izleme performansı Analizi yardımcı programı
 
@@ -180,6 +180,8 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
   - `Provider` Şu biçimdedir: `KnownProviderName[:Flags[:Level][:KeyValueArgs]]` .
   - `KeyValueArgs` Şu biçimdedir: `[key1=value1][;key2=value2]` .
 
+  .NET 'teki iyi bilinen sağlayıcılar hakkında daha fazla bilgi edinmek için [iyi bilinen olay sağlayıcılarına](./well-known-event-providers.md)bakın.
+
 - **`-- <command>` (yalnızca .NET 5,0 çalıştıran hedef uygulamalar için)**
 
   Koleksiyon yapılandırma parametrelerinden sonra, Kullanıcı, `--` en az bir 5,0 çalışma zamanına sahip bir .NET uygulamasını başlatmak için ardından bir komut ekleyebilir. Bu, işlemin başında gerçekleşen, başlangıç performansı sorunu veya derleme yükleyicisi ve bağlayıcı hataları gibi sorunları tanılarken yararlı olabilir.
@@ -195,6 +197,9 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
 
 > [!NOTE]
 > Kullanarak bir izleme toplamak için `dotnet-trace` , hedef işlem ya da kök olarak çalışan kullanıcı ile aynı kullanıcı olarak çalıştırılması gerekir. Aksi halde araç, hedef işlemle bağlantı kurmayacak.
+
+> [!NOTE]
+> Aşağıdakine benzer bir hata iletisi görürseniz `[ERROR] System.ComponentModel.Win32Exception (299): A 32 bit processes cannot access modules of a 64 bit process.` , `dotnet-trace` hedef işleme karşı eşleşmeyen bit genişliğine sahip olan kullanmaya çalışıyorsunuz. [Yükleme](#install) bağlantısında aracın doğru bit durumunu indirdiğinizden emin olun.
 
 ## <a name="dotnet-trace-convert"></a>DotNet-Trace Dönüştür
 

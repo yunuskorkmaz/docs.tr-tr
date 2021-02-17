@@ -3,12 +3,12 @@ title: ASP.NET Core için eShop 'ın örnek geçişi
 description: Bir başvuru olarak örnek bir çevrimiçi mağaza uygulaması kullanarak, mevcut bir ASP.NET MVC uygulamasını ASP.NET Core 'e geçirmeye yönelik yönergeler.
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 2b7e3aaf70d7400cf84814c7c9845d5444321f1f
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 91eb35321429d5f83a9cd3b96e8571c974643a73
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100488900"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100583046"
 ---
 # <a name="example-migration-of-eshop-to-aspnet-core"></a>ASP.NET Core için eShop 'ın örnek geçişi
 
@@ -854,5 +854,5 @@ Ayarları için yapılandırma dosyalarına güvenmek yerine, WCF istemcileri ve
 - [HasData EF Core derinlemesine bakış](https://docs.microsoft.com/archive/msdn-magazine/2018/august/data-points-deep-dive-into-ef-core-hasdata-seeding)
 
 >[!div class="step-by-step"]
->[Önceki](strategies-migrating-in-production.md) 
+>[Önceki](more-migration-scenarios.md) 
 > [Sonraki](deployment-scenarios.md)

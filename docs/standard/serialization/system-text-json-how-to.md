@@ -1,23 +1,26 @@
 ---
 title: C#-.NET kullanarak JSON serileştirmek ve serisini kaldırma
 description: System.Text.Json.Net 'TEKI JSON 'a seri hale getirmek ve seri durumdan çıkarmak için ad alanını nasıl kullanacağınızı öğrenin. Örnek kod içerir.
-ms.date: 01/12/2021
+ms.date: 01/19/2021
 ms.custom: contperf-fy21q2
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
 zone_pivot_groups: dotnet-version
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 6e7c9d9c87eb8407489939ec77ba4fbe9b20cc82
-ms.sourcegitcommit: 4f5f1855849cb02c3b610c7006ac21d7429f3348
+ms.openlocfilehash: fb0866dfad67bfe14a7f1388ec2f52a8dc970233
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98235306"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100583225"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>.NET içinde JSON ve seri hale getirme (sıralama ve kaldırma)
 
@@ -30,14 +33,16 @@ Serileştirme örnek kodunun çoğu, <xref:System.Text.Json.JsonSerializerOption
 Kod örnekleri, aşağıdaki sınıfa ve türevlerini ifade eder:
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WF":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/WeatherForecast.vb" id="WF":::
 
-> [!NOTE]
-> System.Text.JsonVisual Basic tarafından desteklenmeyen [ref yapıları](../../csharp/language-reference/builtin-types/struct.md#ref-struct)kullanma bölümleri. System.Text.JsonVisual Basic ile ref struct API 'leri kullanmayı denerseniz, BC40000 derleyici hataları alırsınız. Hata iletisi, sorunun eski bir API olduğunu gösterir ancak gerçek sorun, derleyicide başvuru yapısı desteğinin olmamasından kaynaklanır. Aşağıdaki bölümleri System.Text.Json Visual Basic kullanılamaz:
->
-> * <xref:System.Text.Json.Utf8JsonReader>Sınıfı.
-> * Bir tür içeren diğer API 'lerin aşırı yüklemeleri <xref:System.Memory%601.Span> . Çoğu yöntem yerine kullanan aşırı yüklemeleri içerir `String` `Span` .
->
-> Başvuru yapıları, yalnızca "verileri üzerinden geçirme" sırasında bile dil desteği olmadan güvenli şekilde kullanılamadığından bu kısıtlamalar uygulanır. Bu hatanın gerçekleştirilmesi, belleği bozmaya ve yapılmamalıdır Visual Basic koda neden olur.
+## <a name="visual-basic-support"></a>Visual Basic desteği
+
+System.Text.JsonVisual Basic tarafından desteklenmeyen [ref yapıları](../../csharp/language-reference/builtin-types/struct.md#ref-struct)kullanma bölümleri. System.Text.JsonVisual Basic ile ref struct API 'leri kullanmayı denerseniz, BC40000 derleyici hataları alırsınız. Hata iletisi, sorunun eski bir API olduğunu gösterir ancak gerçek sorun, derleyicide başvuru yapısı desteğinin olmamasından kaynaklanır. Aşağıdaki bölümleri System.Text.Json Visual Basic kullanılamaz:
+
+* <xref:System.Text.Json.Utf8JsonReader>Sınıfı. <xref:System.Text.Json.Serialization.JsonConverter%601.Read%2A?displayProperty=nameWithType>Yöntem bir `Utf8JsonReader` parametre kullandığından, bu sınırlama özel dönüştürücüler yazmak için Visual Basic kullanma ' yı yazamıyoruz. Bunun için geçici bir çözüm olarak, bir C# Kitaplığı derlemesinde özel dönüştürücüler uygulamanız ve bu derlemeye VB projenizden başvurulamıyor. Bu, Visual Basic ' de her şey, dönüştürücülerin serileştiriciye kaydettirilmekte olduğunu varsayar. `Read`Visual Basic koddan dönüştürücülerin yöntemlerini çağırabilirsiniz.
+* Bir tür içeren diğer API 'lerin aşırı yüklemeleri <xref:System.ReadOnlySpan%601> . Çoğu yöntem yerine kullanan aşırı yüklemeleri içerir `String` `ReadOnlySpan` .
+
+Başvuru yapıları, yalnızca "verileri üzerinden geçirme" sırasında bile dil desteği olmadan güvenli şekilde kullanılamadığından bu kısıtlamalar uygulanır. Bu hatanın gerçekleştirilmesi, belleği bozmaya ve yapılmamalıdır Visual Basic koda neden olur.
 
 ## <a name="namespaces"></a>Ad alanları
 
@@ -46,6 +51,11 @@ Kod örnekleri, aşağıdaki sınıfa ve türevlerini ifade eder:
 ```csharp
 using System.Text.Json;
 using System.Text.Json.Serialization;
+```
+
+```vb
+Imports System.Text.Json
+Imports System.Text.Json.Serialization
 ```
 
 > [!IMPORTANT]
@@ -58,24 +68,29 @@ JSON 'yi bir dizeye veya bir dosyaya yazmak için <xref:System.Text.Json.JsonSer
 Aşağıdaki örnek bir dize olarak JSON oluşturur:
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripToString.cs" id="Serialize":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/RoundtripToString.vb" id="Serialize":::
 
 Aşağıdaki örnek, bir JSON dosyası oluşturmak için zaman uyumlu kod kullanır:
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripToFile.cs" id="Serialize":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/RoundtripToFile.vb" id="Serialize":::
 
 Aşağıdaki örnek, bir JSON dosyası oluşturmak için zaman uyumsuz kod kullanır:
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripToFileAsync.cs" id="Serialize":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/RoundtripToFileAsync.vb" id="Serialize":::
 
 Önceki örneklerde, serileştirilmekte olan türün tür çıkarımı kullanılır. Öğesinin aşırı yüklemesi `Serialize()` genel bir tür parametresi alır:
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripToString.cs" id="SerializeWithGenericParameter":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/RoundtripToString.vb" id="SerializeWithGenericParameter":::
 
 ### <a name="serialization-example"></a>Serileştirme örneği
 
 Aşağıda, koleksiyon türü özellikleri ve Kullanıcı tanımlı bir tür içeren örnek bir sınıf verilmiştir:
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WFWithPOCOs":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/WeatherForecast.vb" id="WFWithPOCOs":::
 
 > [!TIP]
 > "POCO", [düz eskı clr nesnesini](https://en.wikipedia.org/wiki/Plain_old_CLR_object)temsil eder. POCO, örneğin devralma veya öznitelikler aracılığıyla herhangi bir çerçeveye özgü türe bağımlı olmayan bir .NET türüdür.
@@ -120,6 +135,7 @@ Aşağıdaki örnek aynı JSON 'ı gösterir, ancak biçimlendirilir (yani, boş
 UTF-8 ' e seri hale getirmek için <xref:System.Text.Json.JsonSerializer.SerializeToUtf8Bytes%2A?displayProperty=nameWithType> yöntemini çağırın:
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripToUtf8.cs" id="Serialize":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/RoundtripToUtf8.vb" id="Serialize":::
 
 ' İ <xref:System.Text.Json.JsonSerializer.Serialize%2A> alan bir aşırı yükleme <xref:System.Text.Json.Utf8JsonWriter> de mevcuttur.
 
@@ -188,14 +204,17 @@ Bir dizeden veya dosyadan seri durumdan çıkarmak için <xref:System.Text.Json.
 Aşağıdaki örnek, bir dizeden JSON okur ve `WeatherForecastWithPOCOs` daha önce [serileştirme örneği](#serialization-example)için gösterilen sınıfının bir örneğini oluşturur:
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripToString.cs" id="Deserialize":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/RoundtripToString.vb" id="Deserialize":::
 
 Zaman uyumlu kod kullanarak bir dosyadan seri durumdan çıkarmak için, aşağıdaki örnekte gösterildiği gibi dosyayı bir dizeye okuyun:
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripToFile.cs" id="Deserialize":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/RoundtripToFile.vb" id="Deserialize":::
 
 Zaman uyumsuz kod kullanarak bir dosyadan seri durumdan çıkarmak için yöntemini çağırın <xref:System.Text.Json.JsonSerializer.DeserializeAsync%2A> :
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripToFileAsync.cs" id="Deserialize":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/RoundtripToFileAsync.vb" id="Deserialize":::
 
 > [!TIP]
 > Seri durumdan çıkarmak istediğiniz JSON varsa ve bunun serisini kaldırmak için sınıfınız yoksa, Visual Studio 2019, ihtiyacınız olan sınıfı otomatik olarak oluşturabilir:
@@ -211,8 +230,10 @@ Zaman uyumsuz kod kullanarak bir dosyadan seri durumdan çıkarmak için yöntem
 UTF-8 ' den seri durumdan çıkarmak için, <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> `ReadOnlySpan<byte>` `Utf8JsonReader` Aşağıdaki örneklerde gösterildiği gibi bir veya içeren bir aşırı yükleme çağırın. Örnekler, JSON 'ın jsonUtf8Bytes adlı bir bayt dizisinde olduğunu varsayar.
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripToUtf8.cs" id="Deserialize1":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/RoundtripToUtf8.vb" id="Deserialize1":::
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripToUtf8.cs" id="Deserialize2":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/RoundtripToUtf8.vb" id="Deserialize2":::
 
 ## <a name="deserialization-behavior"></a>Seri durumdan çıkarma davranışı
 
@@ -253,10 +274,12 @@ Yerleşik dönüştürücüler tarafından desteklenmeyen işlevselliği sağlam
 JSON çıkışını gerçekten yazdırmak için şu <xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType> şekilde ayarlayın `true` :
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripToString.cs" id="SerializePrettyPrint":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/RoundtripToString.vb" id="SerializePrettyPrint":::
 
 Aşağıda, seri hale getirilebilir ve düzgün şekilde yazdırılan JSON çıkışının örnek bir türü verilmiştir:
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WF":::
+:::code language="vb" source="snippets/system-text-json-how-to/vb/WeatherForecast.vb" id="WF":::
 
 ```json
 {
@@ -274,6 +297,7 @@ Aşağıda, seri hale getirilebilir ve düzgün şekilde yazdırılan JSON çık
 <xref:System.Text.Json.JsonSerializerOptions.IncludeFields?displayProperty=nameWithType>Aşağıdaki örnekte gösterildiği gibi, seri hale getirilirken veya seri durumdan çıkarılırken alanları dahil etmek için genel ayarını veya [[jsonınclude]](xref:System.Text.Json.Serialization.JsonIncludeAttribute) özniteliğini kullanın:
 
 :::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/Fields.cs" highlight="16,18,20,32-35":::
+:::code language="vb" source="snippets/system-text-json-how-to-5-0/vb/Fields.vb" :::
 
 Salt okuma alanlarını yok saymak için <xref:System.Text.Json.JsonSerializerOptions.IgnoreReadOnlyFields%2A?displayProperty=nameWithType> genel ayarını kullanın.
 ::: zone-end
@@ -291,6 +315,7 @@ JSON yüklerini ağdan serileştirmek ve serisini kaldırma yaygın işlemlerdir
 Aşağıdaki örnek, ve kullanımını göstermektedir <xref:System.Net.Http.Json.HttpClientJsonExtensions.GetFromJsonAsync%2A?displayProperty=nameWithType> <xref:System.Net.Http.Json.HttpClientJsonExtensions.PostAsJsonAsync%2A?displayProperty=nameWithType> :
 
 :::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/HttpClientExtensionMethods.cs" highlight="26,33":::
+:::code language="vb" source="snippets/system-text-json-how-to-5-0/vb/HttpClientExtensionMethods.vb" :::
 
 Ayrıca, HttpContent için uzantı yöntemleri de vardır System.Text.Json . [](xref:System.Net.Http.Json.HttpContentJsonExtensions)
 ::: zone-end

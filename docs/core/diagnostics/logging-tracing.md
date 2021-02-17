@@ -2,12 +2,12 @@
 title: Günlüğe kaydetme ve izleme-.NET Core
 description: .NET Core günlüğe kaydetme ve izlemeye giriş.
 ms.date: 10/12/2020
-ms.openlocfilehash: a8c6d82ddb7bc3f8b4cc9eae9dd7aaf65732a0b8
-ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
+ms.openlocfilehash: 70cff297688270d30b9850d123ffc8bb27ef7fbe
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99548402"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100582973"
 ---
 # <a name="net-core-logging-and-tracing"></a>.NET Core günlüğe kaydetme ve izleme
 
@@ -64,9 +64,6 @@ Aşağıdaki API 'Ler daha fazla olay yönelimlidir. Basit dizeleri günlüğe k
   - .NET Core 'a ve .NET Framework için bir [NuGet paketi](https://www.nuget.org/packages/System.Diagnostics.DiagnosticSource) olarak eklenmiştir.
   - Seri hale getirilebilir olmayan nesnelerin işlem içi izlenmesini sağlar.
   - Günlüğe kaydedilen nesnelerin seçili alanlarının bir öğesine yazılmasına izin veren bir köprü içerir <xref:System.Diagnostics.Tracing.EventSource> .
-
-- <xref:System.Diagnostics.Activity?displayProperty=nameWithType>
-  - Belirli bir etkinlik veya işlemden kaynaklanan günlük iletilerini belirlemek için kesin bir yol sağlar. Bu nesne, farklı hizmetlerde günlükleri ilişkilendirmek için kullanılabilir.
 
 - <xref:System.Diagnostics.EventLog?displayProperty=nameWithType>
   - Yalnızca Windows.

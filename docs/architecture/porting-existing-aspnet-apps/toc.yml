@@ -62,6 +62,9 @@
           href: strategies-migrating-in-production.md
     - name: EShop projesinin örnek geçişi
       href: example-migration-eshop.md
+      items:
+        - name: Daha fazla geçiş senaryosu
+          href: more-migration-scenarios.md
     - name: Dağıtım senaryoları
       href: deployment-scenarios.md
     - name: Özet

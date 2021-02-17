@@ -1,25 +1,25 @@
 ---
-title: C# programlarının yapı taşları "
+title: C# programlarının yapı taşları
 description: C# üyeleri, ifadeler ve deyimler hakkında bilgi edinin. Türler yazdığınız üyeleri içerir. Bu Üyeler deyimlerden ve ifadelerden oluşturulur.
 ms.date: 08/06/2020
-ms.openlocfilehash: 0ac45eee180b60062a328fca9ab5c63a1537debe
-ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
+ms.openlocfilehash: 79ba391a6c4c6dc453f6c6e07107e4dd831e111d
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99216622"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100582958"
 ---
 # <a name="program-building-blocks"></a>Program yapı taşları
 
-Önceki makalede açıklanan türler, bu derleme blokları kullanılarak oluşturulmuştur: [ * **Üyeler** _](../programming-guide/classes-and-structs/members.md), [ _*_ifadeler_*_ ve _*_deyimler_*_](../programming-guide/statements-expressions-operators/index.md).
+Önceki makalede açıklanan türler, bu derleme blokları kullanılarak oluşturulmuştur: [ * **Üyeler** _](../programming-guide/classes-and-structs/members.md), [ _*_ifadeler_*_ ve _ *_deyimleri_* *](../programming-guide/statements-expressions-operators/index.md).
 
 ## <a name="members"></a>Üyeler
 
-A üyeleri `class` _*_statik Üyeler_*_ veya _*_örnek üyeleridir_*_. Statik Üyeler sınıflara aittir ve örnek üyeleri nesnelere aittir (sınıf örnekleri).
+A üyeleri `class` ***statik Üyeler** _ veya _ *_örnek üyeleri_* * ' dir. Statik Üyeler sınıflara aittir ve örnek üyeleri nesnelere aittir (sınıf örnekleri).
 
 Aşağıdaki liste, bir sınıfın içerebileceği üye türlerine genel bir bakış sağlar.
 
-- _ * Sabitler * *: sınıfla ilişkili sabit değerler
+- **Sabitler**: sınıfla ilişkili sabit değerler
 - **Alanlar**: sınıfıyla ilişkili değişkenler
 - **Yöntemler**: sınıfı tarafından gerçekleştirilebilecek eylemler
 - **Özellikler**: sınıfının adlandırılmış özelliklerini okuma ve yazma ile ilişkili eylemler
