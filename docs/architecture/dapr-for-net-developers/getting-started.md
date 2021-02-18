@@ -3,12 +3,12 @@ title: Davpr ile çalışmaya başlama
 description: Yerel geliştirme ortamınızı hazırlamaya ve ilk .NET uygulamalarınızı Davpr ile oluşturmaya yönelik bir kılavuz.
 author: amolenk
 ms.date: 02/07/2021
-ms.openlocfilehash: 4ddcb894d7ce7a053cff7821ea6858d1aff4ad0c
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: 4d984f5f31f00e776fb9d521592ad9dbb4a79339
+ms.sourcegitcommit: b924ade6426cf61a4604c4e2ee54cb3592c29317
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100629654"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101096746"
 ---
 # <a name="get-started-with-dapr"></a>Davpr ile çalışmaya başlama
 
@@ -43,7 +43,7 @@ Bu, [Davpr durum yönetimi](state-management.md) yapı taşını tüketen basit 
    dotnet new console -o DaprCounter
    ```
 
-   Komut, basit bir "Merhaba Dünya" .NET Core uygulamasını yasaklıyor.  
+   Komut, basit bir "Merhaba Dünya" .NET Core uygulamasını yasaklıyor.
 
 1. Ardından, önceki komutla oluşturulan yeni dizine gidin:
 
@@ -207,7 +207,7 @@ spec:
 
 İlk örnekte, bir Davpr sidecar ile yan yana çalıştırılan bir basit .NET konsol uygulaması oluşturdunuz. Ancak modern dağıtılmış uygulamalar genellikle birçok hareketli parçadan oluşur. Bağımsız mikro hizmetleri eşzamanlı olarak çalıştırabilirler. Bu modern uygulamalar genellikle Kapsayıcılı hale getirilir ve Docker Compose veya Kubernetes gibi kapsayıcı düzenleme araçları gerektirir.
 
-Sonraki örnekte, çok kapsayıcılı bir uygulama oluşturacaksınız. Ayrıca, hizmetler arasında iletişim kurmak için de [Davpr hizmet çağırma](service-invocation.md) yapı taşını kullanacaksınız. Çözüm, Web API 'sinden Hava durumu tahminlerini alan bir Web uygulamasından oluşur. Ve her biri bir Docker kapsayıcısında çalıştırılır. Kapsayıcıyı yerel olarak çalıştırmak ve hata ayıklama yeteneklerini etkinleştirmek için Docker Compose kullanacaksınız.
+Sonraki örnekte, çok kapsayıcılı bir uygulama oluşturacaksınız. Ayrıca, hizmetler arasında iletişim kurmak için de [Davpr hizmet çağırma](service-invocation.md) yapı taşını kullanacaksınız. Çözüm, Web API 'sinden Hava durumu tahminlerini alan bir Web uygulamasından oluşur. Her biri bir Docker kapsayıcısında çalıştırılır. Kapsayıcıyı yerel olarak çalıştırmak ve hata ayıklama yeteneklerini etkinleştirmek için Docker Compose kullanacaksınız.
 
 Inpr için yerel ortamınızı yapılandırdığınızdan ve [.NET Core 3 geliştirme araçlarının](https://dotnet.microsoft.com/download/dotnet-core/3.1) yüklü olduğundan emin olun (Bu bölümün başında yönergeler mevcuttur).
 

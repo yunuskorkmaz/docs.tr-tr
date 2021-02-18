@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: 58e60e1dc0b574ae922e6a27a22978b91aca4ec4
-ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
+ms.openlocfilehash: 3210500719529f8bb7f2627abf634cc7b9dcb772
+ms.sourcegitcommit: b924ade6426cf61a4604c4e2ee54cb3592c29317
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98899054"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101096829"
 ---
 # <a name="fields-c-programming-guide"></a>Alanlar (C# Programlama Kılavuzu)
 
@@ -26,11 +26,11 @@ Alanlar, alanın erişim düzeyini, ardından alanın türü ve ardından alanı
 
 [!code-csharp[fields#1](snippets/fields/Program.cs#1)]
 
-Bir nesne içindeki bir alana erişmek için, nesne adından sonra, ' de olduğu gibi alanın adı ile bir nokta ekleyin `objectname.fieldname` . Örneğin:
+Bir nesne içindeki bir alana erişmek için, nesne adından sonra, ' de olduğu gibi alanın adı ile bir nokta ekleyin `objectname._fieldName` . Örneğin:
 
 [!code-csharp[fields#2](snippets/fields/Program.cs#2)]
 
-Alan bildirildiği zaman atama işleci kullanılarak bir alana ilk değer verilebilir. Alanı için otomatik olarak atamak için `day` `"Monday"` , örneğin, `day` Aşağıdaki örnekte olduğu gibi bildirimini yapmanız gerekir:
+Alan bildirildiği zaman atama işleci kullanılarak bir alana ilk değer verilebilir. Alanı için otomatik olarak atamak için `Day` `"Monday"` , örneğin, `Day` Aşağıdaki örnekte olduğu gibi bildirimini yapmanız gerekir:
 
 [!code-csharp[fields#3](snippets/fields/Program.cs#3)]
 

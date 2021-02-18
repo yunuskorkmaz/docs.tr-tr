@@ -5,12 +5,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/04/2020
-ms.openlocfilehash: 3ee644f05ea5929ffc7b11054ef1d974b811f418
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: acaaf025555c46f720452b8c9d4f875b8656125a
+ms.sourcegitcommit: b924ade6426cf61a4604c4e2ee54cb3592c29317
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634461"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101096816"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -33,7 +33,7 @@ dotnet new <TEMPLATE> [-l|--list] [--type <TYPE>]
 dotnet new -h|--help
 ```
 
-## <a name="description"></a>Açıklama
+## <a name="description"></a>Description
 
 `dotnet new`Komut bir şablonu temel alan bir .NET projesi veya başka yapılar oluşturur.
 
@@ -43,7 +43,7 @@ Komutu, belirtilen şablon ve seçeneklere göre diskteki yapıtları oluşturma
 
 [!INCLUDE[dotnet restore note](~/includes/dotnet-restore-note.md)]
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız değişkenler
 
 - **`TEMPLATE`**
 
@@ -58,43 +58,43 @@ Komutu, belirtilen şablon ve seçeneklere göre diskteki yapıtları oluşturma
 
   Aşağıdaki tabloda .NET SDK ile önceden yüklenmiş olarak gelen şablonlar gösterilmektedir. Şablon için varsayılan dil, köşeli ayraçlar içinde gösterilir. Özel şablon seçeneklerini görmek için kısa ad bağlantısına tıklayın.
 
-| Şablonlar                                    | Kısa ad                      | Dil     | Etiketler                                  | Sunulan özellikler |
-|----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
-| Konsol Uygulaması                          | [konsola](#console)             | [C#], F #, VB | Ortak/konsol                        | 1,0        |
-| Sınıf kitaplığı                                | [projesinin](#classlib)           | [C#], F #, VB | Ortak/Kitaplık                        | 1,0        |
-| WPF uygulaması                              | [WPF](#wpf)                     | [C#], VB     | Ortak/WPF                            | 3,0 (VB için 5,0)|
-| WPF sınıf kitaplığı                            | [wpflib](#wpf)                  | [C#], VB     | Ortak/WPF                            | 3,0 (VB için 5,0)|
-| WPF Özel Denetim Kitaplığı                   | [wpfcustomcontrollib](#wpf)     | [C#], VB     | Ortak/WPF                            | 3,0 (VB için 5,0)|
-| WPF Kullanıcı denetimi kitaplığı                     | [wpfusercontrollib](#wpf)       | [C#], VB     | Ortak/WPF                            | 3,0 (VB için 5,0)|
-| Windows Forms (WinForms) uygulaması         | [WinForms](#winforms)           | [C#], VB     | Ortak/WinForms                       | 3,0 (VB için 5,0)|
-| Windows Forms (WinForms) sınıf kitaplığı       | [winformslib](#winforms)        | [C#], VB     | Ortak/WinForms                       | 3,0 (VB için 5,0)|
-| Çalışan hizmeti                               | [ından](#web-others)           | Þ         | Ortak/çalışan/Web                     | 3,0        |
-| Birim testi projesi                            | ['i](#test)                 | [C#], F #, VB | Test/MSTest                           | 1,0        |
-| NUnit 3 test projesi                         | [NUnit](#nunit)                 | [C#], F #, VB | Test/NUnit                            | 2.1.400    |
-| NUnit 3 test öğesi                            | `nunit-test`                    | [C#], F #, VB | Test/NUnit                            | 2.2        |
-| xUnit test projesi                           | [xUnit](#test)                  | [C#], F #, VB | Test/xUnit                            | 1,0        |
-| Razor bileşeni                              | `razorcomponent`                | Þ         | Web/ASP. NET                           | 3,0        |
-| Razor sayfası                                   | [page (sayfa)](#page)                    | Þ         | Web/ASP. NET                           | 2,0        |
-| MVC Viewıtemts                              | [viewıtems 'lar](#namespace)       | Þ         | Web/ASP. NET                           | 2,0        |
-| MVC ViewStart                                | `viewstart`                     | Þ         | Web/ASP. NET                           | 2,0        |
-| Blazor Sunucu uygulaması                            | [blazorserver](#blazorserver)   | Þ         | WebBlazor                            | 3,0        |
-| BlazorWebAssemblyUygulama                       | [blazorwasm](#blazorwasm)       | Þ         | WebBlazor/WebAssembly                | 3.1.300    |
-| ASP.NET Core boş                           | [Web](#web)                     | [C#], F #     | Web/boş                             | 1,0        |
-| ASP.NET Core Web uygulaması (Model-View-Controller) | [MVC](#web-options)             | [C#], F #     | Web/MVC                               | 1,0        |
-| ASP.NET Core Web uygulaması                         | [WEBAPP, Razor](#web-options)   | Þ         | Web/MVC/Razor Pages                   | 2,2, 2,0   |
-| Angular ile ASP.NET Core                    | [Angular](#spa)                 | Þ         | Web/MVC/SPA                           | 2,0        |
-| React.js ASP.NET Core                   | [tıkla](#spa)                   | Þ         | Web/MVC/SPA                           | 2,0        |
-| React.js ve Redux ile ASP.NET Core         | [reactredux](#reactredux)       | Þ         | Web/MVC/SPA                           | 2,0        |
-| Razor sınıf kitaplığı                          | [razorclasslib](#razorclasslib) | Þ         | Web/Razor/kitaplık/Razor sınıfı kitaplığı | 2.1        |
-| ASP.NET Core Web API'si                         | [WebApi](#webapi)               | [C#], F #     | Web/WebAPI                            | 1,0        |
-| ASP.NET Core gRPC hizmeti                    | [GRPC](#web-others)             | Þ         | Web/gRPC                              | 3,0        |
-| DotNet gitignore dosyası                        | `gitignore`                     |              | Config                                | 3,0        |
-| Dosya üzerinde global.js                             | [globaljson](#globaljson)       |              | Config                                | 2,0        |
-| NuGet yapılandırması                                 | `nugetconfig`                   |              | Config                                | 1,0        |
-| DotNet yerel araç bildirim dosyası              | `tool-manifest`                 |              | Config                                | 3,0        |
-| Web yapılandırması                                   | `webconfig`                     |              | Config                                | 1,0        |
-| Çözüm dosyası                                | `sln`                           |              | Çözüm                              | 1,0        |
-| Protokol arabelleği dosyası                         | [Proto](#namespace)             |              | Web/gRPC                              | 3,0        |
+| Şablonlar                                    | Kısa ad                        | Dil     | Etiketler                                  | Sunulan özellikler |
+|----------------------------------------------|-----------------------------------|--------------|---------------------------------------|------------|
+| Konsol Uygulaması                          | [`console`](#console)             | [C#], F #, VB | Ortak/konsol                        | 1.0        |
+| Sınıf kitaplığı                                | [`classlib`](#classlib)           | [C#], F #, VB | Ortak/Kitaplık                        | 1.0        |
+| WPF uygulaması                              | [`wpf`](#wpf)                     | [C#], VB     | Ortak/WPF                            | 3,0 (VB için 5,0)|
+| WPF sınıf kitaplığı                            | [`wpflib`](#wpf)                  | [C#], VB     | Ortak/WPF                            | 3,0 (VB için 5,0)|
+| WPF Özel Denetim Kitaplığı                   | [`wpfcustomcontrollib`](#wpf)     | [C#], VB     | Ortak/WPF                            | 3,0 (VB için 5,0)|
+| WPF Kullanıcı denetimi kitaplığı                     | [`wpfusercontrollib`](#wpf)       | [C#], VB     | Ortak/WPF                            | 3,0 (VB için 5,0)|
+| Windows Forms (WinForms) uygulaması         | [`winforms`](#winforms)           | [C#], VB     | Ortak/WinForms                       | 3,0 (VB için 5,0)|
+| Windows Forms (WinForms) sınıf kitaplığı       | [`winformslib`](#winforms)        | [C#], VB     | Ortak/WinForms                       | 3,0 (VB için 5,0)|
+| Çalışan hizmeti                               | [`worker`](#web-others)           | Þ         | Ortak/çalışan/Web                     | 3.0        |
+| Birim testi projesi                            | [`mstest`](#test)                 | [C#], F #, VB | Test/MSTest                           | 1.0        |
+| NUnit 3 test projesi                         | [`nunit`](#nunit)                 | [C#], F #, VB | Test/NUnit                            | 2.1.400    |
+| NUnit 3 test öğesi                            | `nunit-test`                      | [C#], F #, VB | Test/NUnit                            | 2,2        |
+| xUnit test projesi                           | [`xunit`](#test)                  | [C#], F #, VB | Test/xUnit                            | 1.0        |
+| Razor bileşeni                              | `razorcomponent`                  | Þ         | Web/ASP. NET                           | 3.0        |
+| Razor sayfası                                   | [`page`](#page)                   | Þ         | Web/ASP. NET                           | 2.0        |
+| MVC Viewıtemts                              | [`viewimports`](#namespace)       | Þ         | Web/ASP. NET                           | 2.0        |
+| MVC ViewStart                                | `viewstart`                       | Þ         | Web/ASP. NET                           | 2.0        |
+| Blazor Sunucu uygulaması                            | [`blazorserver`](#blazorserver)   | Þ         | WebBlazor                            | 3.0        |
+| BlazorWebAssemblyUygulama                       | [`blazorwasm`](#blazorwasm)       | Þ         | WebBlazor/WebAssembly                | 3.1.300    |
+| ASP.NET Core boş                           | [`web`](#web)                     | [C#], F #     | Web/boş                             | 1.0        |
+| ASP.NET Core Web uygulaması (Model-View-Controller) | [`mvc`](#web-options)             | [C#], F #     | Web/MVC                               | 1.0        |
+| ASP.NET Core Web uygulaması                         | [`webapp, razor`](#web-options)   | Þ         | Web/MVC/Razor Pages                   | 2,2, 2,0   |
+| Angular ile ASP.NET Core                    | [`angular`](#spa)                 | Þ         | Web/MVC/SPA                           | 2.0        |
+| React.js ASP.NET Core                   | [`react`](#spa)                   | Þ         | Web/MVC/SPA                           | 2.0        |
+| React.js ve Redux ile ASP.NET Core         | [`reactredux`](#reactredux)       | Þ         | Web/MVC/SPA                           | 2.0        |
+| Razor sınıf kitaplığı                          | [`razorclasslib`](#razorclasslib) | Þ         | Web/Razor/kitaplık/Razor sınıfı kitaplığı | 2.1        |
+| ASP.NET Core Web API'si                         | [`webapi`](#webapi)               | [C#], F #     | Web/WebAPI                            | 1.0        |
+| ASP.NET Core gRPC hizmeti                    | [`grpc`](#web-others)             | Þ         | Web/gRPC                              | 3.0        |
+| DotNet gitignore dosyası                        | `gitignore`                       |              | Config                                | 3.0        |
+| Dosya üzerinde global.js                             | [`globaljson`](#globaljson)       |              | Config                                | 2.0        |
+| NuGet yapılandırması                                 | `nugetconfig`                     |              | Config                                | 1.0        |
+| DotNet yerel araç bildirim dosyası              | `tool-manifest`                   |              | Config                                | 3.0        |
+| Web yapılandırması                                   | `webconfig`                       |              | Config                                | 1.0        |
+| Çözüm dosyası                                | `sln`                             |              | Çözüm                              | 1.0        |
+| Protokol arabelleği dosyası                         | [`proto`](#namespace)             |              | Web/gRPC                              | 3.0        |
 
 ## <a name="options"></a>Seçenekler
 
@@ -167,7 +167,7 @@ Komutu, belirtilen şablon ve seçeneklere göre diskteki yapıtları oluşturma
 
 Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıdaki ek seçeneklere sahiptir:
 
-### <a name="console"></a>console
+### `console`
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -179,7 +179,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
   |-------------|-----------------|
   | 5.0         | `net5.0`        |
   | 3,1         | `netcoreapp3.1` |
-  | 3,0         | `netcoreapp3.0` |
+  | 3.0         | `netcoreapp3.0` |
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -191,11 +191,11 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
   Belirtilmişse, proje oluşturma sırasında örtük geri yükleme yürütmez. .NET Core 2,2 SDK 'dan beri kullanılabilir.
 
-**_
+***
 
-### <a name="classlib"></a>projesinin
+### `classlib`
 
-- _ *`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   Hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. Değerler: `net5.0` veya bir `netcoreapp<version>` .NET sınıf kitaplığı oluşturmak veya `netstandard<version>` bir .NET Standard sınıf kitaplığı oluşturmak için. .NET 5,0 SDK için varsayılan değer `net5.0` .
 
@@ -209,11 +209,11 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
   Proje oluşturma sırasında örtük geri yükleme yürütülmez.
 
-**_
+***
 
-### <a name="wpf-wpflib-wpfcustomcontrollib-wpfusercontrollib"></a><a name="wpf"></a> WPF, wpflib, wpfcustomcontrollib, wpfusercontrollib
+### <a name="wpf-wpflib-wpfcustomcontrollib-wpfusercontrollib"></a><a name="wpf"></a> `wpf`, `wpflib`, `wpfcustomcontrollib`, `wpfusercontrollib`
 
-- _ *`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   Hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. `net5.0` varsayılan değerdir. .NET Core 3,1 SDK 'dan beri kullanılabilir.
 
@@ -227,11 +227,11 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
   Proje oluşturma sırasında örtük geri yükleme yürütülmez.
 
-**_
+***
 
-### <a name="winforms-winformslib"></a><a name="winforms"></a> WinForms, winformslib
+### <a name="winforms-winformslib"></a><a name="winforms"></a> `winforms`, `winformslib`
 
-- _ *`--langVersion <VERSION_NUMBER>`**
+- **`--langVersion <VERSION_NUMBER>`**
 
   `LangVersion`Oluşturulan proje dosyasındaki özelliği ayarlar. Örneğin, `--langVersion 7.3` C# 7,3 kullanmak için kullanın.
 
@@ -241,11 +241,11 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
   Proje oluşturma sırasında örtük geri yükleme yürütülmez.
 
-**_
+***
 
-### <a name="worker-grpc"></a><a name="web-others"></a> çalışan, GRPC
+### <a name="worker-grpc"></a><a name="web-others"></a> `worker`, `grpc`
 
-- _ *`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   Hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. `netcoreapp3.1` varsayılan değerdir. .NET Core 3,1 SDK 'dan beri kullanılabilir.
 
@@ -257,11 +257,11 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
   Proje oluşturma sırasında örtük geri yükleme yürütülmez.
 
-**_
+***
 
-### <a name="mstest-xunit"></a><a name="test"></a> MSTest, xUnit
+### <a name="mstest-xunit"></a><a name="test"></a> `mstest`, `xunit`
 
-- _ *`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   Hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. .NET Core 3,0 SDK 'dan beri kullanılabilir seçeneği.
 
@@ -271,7 +271,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
   |-------------|-----------------|
   | 5.0         | `net5.0`        |
   | 3,1         | `netcoreapp3.1` |
-  | 3,0         | `netcoreapp3.0` |
+  | 3.0         | `netcoreapp3.0` |
 
 - **`-p|--enable-pack`**
 
@@ -281,11 +281,11 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
   Proje oluşturma sırasında örtük geri yükleme yürütülmez.
 
-**_
+***
 
-### <a name="nunit"></a>NUnit
+### `nunit`
 
-- _ *`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   Hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir.
 
@@ -295,8 +295,8 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
   |-------------|-----------------|
   | 5.0         | `net5.0`        |
   | 3,1         | `netcoreapp3.1` |
-  | 3,0         | `netcoreapp3.0` |
-  | 2.2         | `netcoreapp2.2` |
+  | 3.0         | `netcoreapp3.0` |
+  | 2,2         | `netcoreapp2.2` |
   | 2.1         | `netcoreapp2.1` |
 
 - **`-p|--enable-pack`**
@@ -307,11 +307,11 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
   Proje oluşturma sırasında örtük geri yükleme yürütülmez.
 
-**_
+***
 
-### <a name="page"></a>page (sayfa)
+### `page`
 
-- _ *`-na|--namespace <NAMESPACE_NAME>`**
+- **`-na|--namespace <NAMESPACE_NAME>`**
 
   Oluşturulan kod için ad alanı. `MyApp.Namespace` varsayılan değerdir.
 
@@ -319,19 +319,19 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
   PageModel olmadan sayfayı oluşturur.
 
-**_
+***
 
-### <a name="viewimports-proto"></a><a name="namespace"></a> viewıtemler, Proto
+### <a name="viewimports-proto"></a><a name="namespace"></a> `viewimports`, `proto`
 
-- _ *`-na|--namespace <NAMESPACE_NAME>`**
+- **`-na|--namespace <NAMESPACE_NAME>`**
 
   Oluşturulan kod için ad alanı. `MyApp.Namespace` varsayılan değerdir.
 
-**_
+***
 
-### <a name="blazorserver"></a>blazorserver
+### `blazorserver`
 
-- _ *`-au|--auth <AUTHENTICATION_TYPE>`**
+- **`-au|--auth <AUTHENTICATION_TYPE>`**
 
   Kullanılacak kimlik doğrulaması türü. Olası değerler şunlardır:
 
@@ -398,11 +398,11 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
   Proje oluşturma sırasında örtük geri yükleme yürütülmez.
 
-**_
+***
 
-### <a name="blazorwasm"></a>blazorwasm
+### `blazorwasm`
 
-- _ *`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   Hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir.
 
@@ -502,11 +502,11 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
   Web uygulamasından API 'yi çağırmak için istenen kapsamlar. Yalnızca `SingleOrg` `IndividualB2C` ASP.NET Core bir ana bilgisayar olmadan veya kimlik doğrulaması için geçerlidir. Varsayılan değer: `user.read`.
 
-**_
+***
 
-### <a name="web"></a>web
+### `web`
 
-- _ *`--exclude-launch-settings`**
+- **`--exclude-launch-settings`**
 
   Oluşturulan şablondan *launchSettings.js* dışlar.
 
@@ -520,7 +520,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
   |-------------|-----------------|
   | 5.0         | `net5.0`        |
   | 3,1         | `netcoreapp3.1` |
-  | 3,0         | `netcoreapp3.0` |
+  | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.1` |
 
 - **`--no-restore`**
@@ -531,11 +531,11 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
   HTTPS 'yi kapatır.
 
-**_
+***
 
-### <a name="mvc-webapp"></a><a name="web-options"></a> MVC, WebApp
+### <a name="mvc-webapp"></a><a name="web-options"></a> `mvc`, `webapp`
 
-- _ *`-au|--auth <AUTHENTICATION_TYPE>`**
+- **`-au|--auth <AUTHENTICATION_TYPE>`**
 
   Kullanılacak kimlik doğrulaması türü. Olası değerler şunlardır:
 
@@ -608,7 +608,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
   |-------------|-----------------|
   | 5.0         | `net5.0`        |
   | 3,1         | `netcoreapp3.1` |
-  | 3,0         | `netcoreapp3.0` |
+  | 3.0         | `netcoreapp3.0` |
 
 - **`--no-restore`**
 
@@ -622,11 +622,11 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
   Projenin hata ayıklama yapılarında [Razor çalışma zamanı derlemesini](/aspnet/core/mvc/views/view-compilation#runtime-compilation) kullanmak üzere yapılandırılıp yapılandırılmadığını belirler. .NET Core 3.1.201 SDK 'dan beri kullanılabilir seçeneği.
 
-**_
+***
 
-### <a name="angular-react"></a><a name="spa"></a> Angular, tepki verme
+### <a name="angular-react"></a><a name="spa"></a> `angular`, `react`
 
-- _ *`-au|--auth <AUTHENTICATION_TYPE>`**
+- **`-au|--auth <AUTHENTICATION_TYPE>`**
 
   Kullanılacak kimlik doğrulaması türü. .NET Core 3,0 SDK 'dan beri kullanılabilir.
   
@@ -661,14 +661,14 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
   |-------------|-----------------|
   | 5.0         | `net5.0`        |
   | 3,1         | `netcoreapp3.1` |
-  | 3,0         | `netcoreapp3.0` |
+  | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.0` |
 
-**_
+***
 
-### <a name="reactredux"></a>reactredux
+### `reactredux`
 
-- _ *`--exclude-launch-settings`**
+- **`--exclude-launch-settings`**
 
   Oluşturulan şablondan *launchSettings.js* dışlar.
 
@@ -682,7 +682,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
   |-------------|-----------------|
   | 5.0         | `net5.0`        |
   | 3,1         | `netcoreapp3.1` |
-  | 3,0         | `netcoreapp3.0` |
+  | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.0` |
 
 - **`--no-restore`**
@@ -693,11 +693,11 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
   HTTPS 'yi kapatır.
 
-**_
+***
 
-### <a name="razorclasslib"></a>razorclasslib
+### `razorclasslib`
 
-- _ *`--no-restore`**
+- **`--no-restore`**
 
   Proje oluşturma sırasında örtük geri yükleme yürütülmez.
 
@@ -705,11 +705,11 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
   , Bu kitaplığa bileşenlere ek olarak geleneksel Razor sayfaları ve görünümleri eklenmesini destekler. .NET Core 3,0 SDK 'dan beri kullanılabilir.
 
-**_
+***
   
-### <a name="webapi"></a>WebApi
+### `webapi`
 
-- _ *`-au|--auth <AUTHENTICATION_TYPE>`**
+- **`-au|--auth <AUTHENTICATION_TYPE>`**
 
   Kullanılacak kimlik doğrulaması türü. Olası değerler şunlardır:
 
@@ -768,18 +768,18 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
   |-------------|-----------------|
   | 5.0         | `net5.0`        |
   | 3,1         | `netcoreapp3.1` |
-  | 3,0         | `netcoreapp3.0` |
+  | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.1` |
 
 - **`--no-restore`**
 
   Proje oluşturma sırasında örtük geri yükleme yürütülmez.
 
-**_
+***
 
-### <a name="globaljson"></a>globaljson
+### `globaljson`
 
-- _ *`--sdk-version <VERSION_NUMBER>`**
+- **`--sdk-version <VERSION_NUMBER>`**
 
   Dosyasında *global.js* kullanılacak .NET SDK sürümünü belirtir.
 

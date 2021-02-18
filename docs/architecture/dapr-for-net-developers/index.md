@@ -3,12 +3,12 @@ title: .NET geliştiricileri için dadpr
 description: .NET geliştiricilerinin Microsoft 'un açık kaynaklı dağıtılmış uygulama çalışma zamanının tam gücünden yararlanmasını ve bu avantajlardan faydalamasını sağlar.
 author: robvet
 ms.date: 02/07/2021
-ms.openlocfilehash: a9f1362d8e588790151f9b828f53de90565cacbb
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: 53d5356c8e010f0c4e168a2186d48dd9af369ff6
+ms.sourcegitcommit: b924ade6426cf61a4604c4e2ee54cb3592c29317
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100629670"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101096734"
 ---
 # <a name="dapr-for-net-developers"></a>.NET geliştiricileri için dadpr
 
@@ -66,7 +66,7 @@ Edit
 
 > **David çam**, üst düzey içerik Geliştirici, .NET ekibi, Microsoft
 
-> **Maira Wenzel**, program Yöneticisi, .NET ekibi, Microsoft
+> **Maira Wenzel**, Kıdemli Program Yöneticisi, .NET ekibi, Microsoft
 
 ## <a name="version"></a>Sürüm
 

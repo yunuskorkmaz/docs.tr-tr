@@ -4,12 +4,12 @@ description: Birçok tür uygulama oluşturmaya yönelik ücretsiz, açık kayna
 author: tdykstra
 ms.date: 11/16/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: e0c86b377d4ea73bb275bc48c0f0cccb2db249dd
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: d08e00ee9702c71cacc8a6588c1f4290b4ab3ae9
+ms.sourcegitcommit: b924ade6426cf61a4604c4e2ee54cb3592c29317
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98190006"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101096802"
 ---
 # <a name="introduction-to-net"></a>.NET’e giriş
 
@@ -343,7 +343,7 @@ Aynı sözcük farklı bağlamlarda farklı şekillerde kullanıldığından, .N
   | [.Net indirme sayfasında .NET çalışma zamanı](https://dotnet.microsoft.com/download/dotnet-core) | Birlikte, [çerçeveye bağımlı](#deployment-models) uygulamaları çalıştırmaya yönelik destek sağlayan [clr](#clr) ve [çalışma zamanı kitaplıkları](#runtime-libraries). Bu sayfada, ASP.NET Core Server uygulamaları ve Windows Masaüstü uygulamaları için çalışma zamanı seçenekleri de sunulur. |
   | [Çalışma zamanı tanımlayıcısı (RID)](rid-catalog.md) | .NET uygulamasının üzerinde çalıştığı işletim sistemi platformu ve CPU mimarisi. Örneğin: Windows x64, Linux x64. |
 
-* **çerçevenin**
+* **çerçeve**
 
   |Bağlam  | "Framework" anlamı |
   |---------|---------------------|
