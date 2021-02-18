@@ -24,6 +24,8 @@
               href: 6.0.md
             - name: ASP.NET Core
               items:
+                - name: Null yapılabilir başvuru türü ek açıklamaları değişti
+                  href: aspnet-core/6.0/nullable-reference-type-annotations-changed.md
                 - name: 'Blazor: parametre adı, talep Estimagefileasync yönteminde değiştirildi'
                   href: aspnet-core/6.0/blazor-parameter-name-changed-in-method.md
                 - name: 'Kestrel: günlük iletisi öznitelikleri değiştirildi'
@@ -316,6 +318,8 @@
           items:
             - name: .NET 6.0
               items:
+                - name: Null yapılabilir başvuru türü ek açıklamaları değişti
+                  href: aspnet-core/6.0/nullable-reference-type-annotations-changed.md
                 - name: 'Blazor: parametre adı, talep Estimagefileasync yönteminde değiştirildi'
                   href: aspnet-core/6.0/blazor-parameter-name-changed-in-method.md
                 - name: 'Kestrel: günlük iletisi öznitelikleri değiştirildi'
