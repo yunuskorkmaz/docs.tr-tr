@@ -3,12 +3,12 @@ title: Aracı kaldır
 description: .NET SDK 'larının ve çalışma zamanlarının kontrollü temizlenmesini sağlayan kılavuzlu bir araç olan .NET kaldırma aracına genel bakış.
 author: sfoslund
 ms.date: 01/28/2021
-ms.openlocfilehash: a3819b11af94d4fec3ecb072ec3d5ddf6de706c9
-ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
+ms.openlocfilehash: 9afcac150659a8f58a04f4c254b0a0219af42e74
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99216323"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105440"
 ---
 # <a name="net-uninstall-tool"></a>.NET kaldırma aracı
 
@@ -302,8 +302,8 @@ Bu aracın bozucu bir davranışı olduğundan, Kaldır komutunu çalıştırmad
 > [!CAUTION]
 > Aşağıdaki uyarıları aklınızda bulundurun:
 >
->- Bu araç, makinenizde bulunan dosyalar için gerekli olan .NET SDK sürümlerini kaldırabilir `global.json` . .NET SDK 'larını [indirme .net](https://dotnet.microsoft.com/download/dotnet-core) sayfasından yeniden yükleyebilirsiniz.
->- Bu araç, makinenizde bağımlı uygulamalar için gerekli olan .NET çalışma zamanının sürümlerini kaldırabilir. .NET çalışma zamanlarını [.net yükleme](https://dotnet.microsoft.com/download/dotnet-core) sayfasından yeniden yükleyebilirsiniz.
+>- Bu araç, makinenizde bulunan dosyalar için gerekli olan .NET SDK sürümlerini kaldırabilir `global.json` . .NET SDK 'larını [indirme .net](https://dotnet.microsoft.com/download/dotnet) sayfasından yeniden yükleyebilirsiniz.
+>- Bu araç, makinenizde bağımlı uygulamalar için gerekli olan .NET çalışma zamanının sürümlerini kaldırabilir. .NET çalışma zamanlarını [.net yükleme](https://dotnet.microsoft.com/download/dotnet) sayfasından yeniden yükleyebilirsiniz.
 >- Bu araç, Visual Studio 'nun temel aldığı .NET SDK ve çalışma zamanının sürümlerini kaldırabilir. Visual Studio yüklemenizi ayırırsanız, çalışma durumuna geri dönmek için Visual Studio yükleyicisindeki "Onar" ı çalıştırın.
 
 Varsayılan olarak, tüm komutlar, Visual Studio veya diğer SDK 'lar için gerekli olabilecek .NET SDK 'larını ve çalışma zamanlarını saklar. Bu SDK 'lar ve çalışma zamanları, açıkça bağımsız değişken olarak listelenerek veya seçeneği kullanılarak kaldırılabilir `--force` .

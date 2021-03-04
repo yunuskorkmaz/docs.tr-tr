@@ -3,12 +3,12 @@ title: ASP.NET Core geçiş yaparken dağıtım senaryoları
 description: ASP.NET 'den ASP.NET Core 'e geçiş yaparken kullanılabilecek, yan yana ve aşamalı geçişlere izin veren, dağıtıma yönelik farklı yaklaşımlara genel bakış.
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: ed1b856358f1e20a53c9b4bf845764813078a040
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: 589acd8c66baacc3aef5833dfaa24e2dcc5c1ee5
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100583054"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106049"
 ---
 # <a name="deployment-scenarios-when-migrating-to-aspnet-core"></a>ASP.NET Core geçiş yaparken dağıtım senaryoları
 
@@ -22,7 +22,7 @@ Mevcut ASP.NET MVC ve Web API Apps, IIS ve Windows üzerinde çalışır. Büyü
 
 Uygulamanın taşıma görevinin, MVC işlevselliği veya API işlevselliği ilk ASP.NET Core geçirilecek şekilde bölündüğü varsayılırsa, özgün site başka bir yerde çalışan yeni ASP.NET Core uygulamayla sorunsuz bir şekilde çalışmaya devam eder mi? Sistemin kullanıcıları, bunları değiştirmek kesinlikle gerekli olmadığı müddetçe geçişten önceki URL 'Leri görmeye devam etmelidir.
 
-Neyse ki IIS, çok özellik zengin bir Web sunucusudur ve bir süredir bir süre içinde bulunan iki özellik [URL yeniden yazma modülü ve uygulama Isteği yönlendirme](https://docs.microsoft.com/iis/extensions/url-rewrite-module/reverse-proxy-with-url-rewrite-v2-and-application-request-routing)' dir. IIS, bu özellikleri kullanarak, istemci isteklerini uygun arka uç Web uygulamasına yönlendiren bir [ters proxy](https://docs.microsoft.com/iis/extensions/url-rewrite-module/reverse-proxy-with-url-rewrite-v2-and-application-request-routing)işlevi görebilir. IIS 'yi ters bir ara sunucu olarak yapılandırmak için uygulama Isteği yönlendirme özelliğindeki **proxy 'Yi etkinleştir** onay kutusunu işaretleyin ve aşağıdakine benzer bir URL yeniden yazma kuralı ekleyin:
+Neyse ki IIS, çok özellik zengin bir Web sunucusudur ve bir süredir bir süre içinde bulunan iki özellik [URL yeniden yazma modülü ve uygulama Isteği yönlendirme](/iis/extensions/url-rewrite-module/reverse-proxy-with-url-rewrite-v2-and-application-request-routing)' dir. IIS, bu özellikleri kullanarak, istemci isteklerini uygun arka uç Web uygulamasına yönlendiren bir [ters proxy](/iis/extensions/url-rewrite-module/reverse-proxy-with-url-rewrite-v2-and-application-request-routing)işlevi görebilir. IIS 'yi ters bir ara sunucu olarak yapılandırmak için uygulama Isteği yönlendirme özelliğindeki **proxy 'Yi etkinleştir** onay kutusunu işaretleyin ve aşağıdakine benzer bir URL yeniden yazma kuralı ekleyin:
 
 ```xml
 <rule name="NetCoreProxy">
@@ -38,7 +38,7 @@ Yalnızca URL yeniden yazma modülünü (Belki de ana bilgisayar üstbilgileri i
 > [!IMPORTANT]
 > Alt etki alanları genellikle en üstteki iki düzeyden önceki bir etki alanının bölümüne başvurur. Örneğin, etki alanında etki `api.contoso.com` `api` `contoso.com` alanının (kendisi `contoso` etki alanı adı ve `.com` en üst düzey etki alanı veya TLD) bir alt etki alanıdır. URL yolları, ile başlayan, etki alanı adını izleyen URL 'nin bölümüne başvurur `/` . URL `https://contoso.com/api` 'nin bir yolu vardır `/api` .
 
-Tek bir uygulamayı barındırmak için aynı veya farklı alt etki alanlarını (ve etki alanlarını) kullanmanın olumlu ve olumsuz yönleri vardır. [CORS](https://docs.microsoft.com/aspnet/core/security/cors) gibi mekanizmalar kullanılarak tanımlama bilgileri ve uygulama içi iletişim gibi özellikler, dağıtılmış uygulamalarda daha fazla yapılandırmanın düzgün çalışmasını gerektirebilir. Ancak, farklı alt etki alanları kullanan uygulamalar, istekleri tamamen farklı ağ hedeflerine yönlendirmek için DNS 'yi daha kolay bir şekilde kullanabilir ve bu sayede IIS 'nin ters ara sunucu olarak davranmasına gerek kalmadan çok sayıda farklı sunucuya (sanal veya diğer) daha kolay bir şekilde dağıtılabilir.
+Tek bir uygulamayı barındırmak için aynı veya farklı alt etki alanlarını (ve etki alanlarını) kullanmanın olumlu ve olumsuz yönleri vardır. [CORS](/aspnet/core/security/cors) gibi mekanizmalar kullanılarak tanımlama bilgileri ve uygulama içi iletişim gibi özellikler, dağıtılmış uygulamalarda daha fazla yapılandırmanın düzgün çalışmasını gerektirebilir. Ancak, farklı alt etki alanları kullanan uygulamalar, istekleri tamamen farklı ağ hedeflerine yönlendirmek için DNS 'yi daha kolay bir şekilde kullanabilir ve bu sayede IIS 'nin ters ara sunucu olarak davranmasına gerek kalmadan çok sayıda farklı sunucuya (sanal veya diğer) daha kolay bir şekilde dağıtılabilir.
 
 Yukarıda açıklanan örnekte, API uç noktalarının ASP.NET Core, uygulamanın ilk parçası olarak tasarlandığını varsayın. Bu durumda, yeni bir ASP.NET Core uygulaması, IIS 'de mevcut ASP.NET MVC web *sitesi* içinde ayrı bir Web *uygulaması* olarak oluşturulur ve barındırılır. Özgün Web sitesinin bir alt öğesi olarak eklenecekse ve *API* adı verilecek olduğundan, varsayılan yolu artık ile başlamamalıdır `api/` . Bunu korumak, formun URL 'Leri ile eşleşmesine neden olur `/api/api/endpoint` .
 
@@ -48,7 +48,7 @@ Yukarıda açıklanan örnekte, API uç noktalarının ASP.NET Core, uygulamanı
 
 **Şekil 5-1**. IIS 'de .NET Core uygulaması olan site .NET Framework.
 
-*Dotnetmvcapp* sitesi, .NET Framework 4.7.2 üzerinde çalışan bir MVC 5 uygulaması olarak barındırılır. Kendi IIS uygulama havuzu tümleşik modda yapılandırılmış ve .NET CLR Version 4.0.30319 çalıştırıyorsa. *API* uygulaması, .NET Framework 4.6.1 () üzerinde çalışan bir ASP.NET Core uygulamasıdır `net461` . *Dotnetmvcapp* 'e yenı bir IIS uygulaması olarak eklenmiştir ve kendi uygulama havuzunu kullanacak şekilde yapılandırılmıştır. Uygulama havuzu tümleşik modda da çalışır, ancak [ASP.NET Core modülü](https://docs.microsoft.com/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-2.1&preserve-view=true)kullanılarak yürütüleceği Için, **yönetilen kod IÇERMEYEN** bir .NET CLR sürümü ile yapılandırılır. ASP.NET Core uygulamasının sürümü yalnızca bir örnektir. Ayrıca .NET Core 3,1 veya .NET 5,0 ' de çalışacak şekilde yapılandırılabilir. Bu noktada, artık .NET Framework kitaplıklarını hedefleyemiyor (bkz [. doğru .NET Core sürümünü seçme](choose-net-core-version.md))
+*Dotnetmvcapp* sitesi, .NET Framework 4.7.2 üzerinde çalışan bir MVC 5 uygulaması olarak barındırılır. Kendi IIS uygulama havuzu tümleşik modda yapılandırılmış ve .NET CLR Version 4.0.30319 çalıştırıyorsa. *API* uygulaması, .NET Framework 4.6.1 () üzerinde çalışan bir ASP.NET Core uygulamasıdır `net461` . *Dotnetmvcapp* 'e yenı bir IIS uygulaması olarak eklenmiştir ve kendi uygulama havuzunu kullanacak şekilde yapılandırılmıştır. Uygulama havuzu tümleşik modda da çalışır, ancak [ASP.NET Core modülü](/aspnet/core/host-and-deploy/aspnet-core-module?preserve-view=true&view=aspnetcore-2.1)kullanılarak yürütüleceği Için, **yönetilen kod IÇERMEYEN** bir .NET CLR sürümü ile yapılandırılır. ASP.NET Core uygulamasının sürümü yalnızca bir örnektir. Ayrıca .NET Core 3,1 veya .NET 5,0 ' de çalışacak şekilde yapılandırılabilir. Bu noktada, artık .NET Framework kitaplıklarını hedefleyemiyor (bkz [. doğru .NET Core sürümünü seçme](choose-net-core-version.md))
 
 Bu şekilde yapılandırıldığında, ASP.NET Core uygulamasının API 'Lerinin düzgün şekilde yönlendirilmesi için yapılması gereken tek değişiklik, varsayılan yol şablonunu ' den ' ye değiştirmesidir `[Route("[api/controller]")]` `[Route("[controller]")]` .
 
@@ -60,7 +60,7 @@ Alternatif olarak, ASP.NET Core uygulaması IIS 'de başka bir üst düzey Web s
 
 **Şekil 5-2**. Alt klasör isteklerini başka bir Web sitesine yeniden yazmak için kuralı yeniden yazın.
 
-Uygulamanız IIS içindeki farklı siteler veya uygulamalar arasında çoklu oturum açma gerektiriyorsa, bu senaryoyu destekleme hakkında ayrıntılı yönergeler için [ASP.net Apps arasında kimlik doğrulama tanımlama bilgilerini paylaşma](https://docs.microsoft.com/aspnet/core/host-and-deploy/iis/) hakkındaki belgelere bakın.
+Uygulamanız IIS içindeki farklı siteler veya uygulamalar arasında çoklu oturum açma gerektiriyorsa, bu senaryoyu destekleme hakkında ayrıntılı yönergeler için [ASP.net Apps arasında kimlik doğrulama tanımlama bilgilerini paylaşma](/aspnet/core/host-and-deploy/iis/) hakkındaki belgelere bakın.
 
 ## <a name="summary"></a>Özet
 
@@ -68,11 +68,11 @@ Uygulamanız IIS içindeki farklı siteler veya uygulamalar arasında çoklu otu
 
 ## <a name="references"></a>Başvurular
 
-- [IIS ile Windows üzerinde ASP.NET Core barındırma](https://docs.microsoft.com/aspnet/core/host-and-deploy/iis/)
-- [URL yeniden yazma modülü ve uygulama Isteği yönlendirme](https://docs.microsoft.com/iis/extensions/url-rewrite-module/reverse-proxy-with-url-rewrite-v2-and-application-request-routing)
+- [IIS ile Windows üzerinde ASP.NET Core barındırma](/aspnet/core/host-and-deploy/iis/)
+- [URL yeniden yazma modülü ve uygulama Isteği yönlendirme](/iis/extensions/url-rewrite-module/reverse-proxy-with-url-rewrite-v2-and-application-request-routing)
 - [URL yeniden yazma](https://www.iis.net/downloads/microsoft/url-rewrite)
-- [ASP.NET Core Modülü](https://docs.microsoft.com/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-2.1&preserve-view=true)
-- [ASP.NET uygulamaları arasında kimlik doğrulama tanımlama bilgilerini paylaşma](https://docs.microsoft.com/aspnet/core/host-and-deploy/iis/)
+- [ASP.NET Core Modülü](/aspnet/core/host-and-deploy/aspnet-core-module?preserve-view=true&view=aspnetcore-2.1)
+- [ASP.NET uygulamaları arasında kimlik doğrulama tanımlama bilgilerini paylaşma](/aspnet/core/host-and-deploy/iis/)
 - [Bu bölümde kullanılan örnekler](https://github.com/ardalis/MigrateDotNetWithIIS)
 
 >[!div class="step-by-step"]

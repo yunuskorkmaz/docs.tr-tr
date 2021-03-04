@@ -3,12 +3,12 @@ title: Tanılama araçlarına genel bakış-.NET Core
 description: .NET Core uygulamalarını tanılamak için kullanılabilen araçlara ve tekniklere genel bakış.
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: ee79057e45700e17fdd37cc36288b790d64d7a09
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 9836ea11e7f17d6ed6e04bcba8bc0ed851bb368f
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188484"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105290"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>.NET Core 'da hangi tanılama araçları kullanılabilir?
 
@@ -38,7 +38,7 @@ Bu makale, ihtiyacınız olan çeşitli araçları bulmanıza yardımcı olur.
 
 ## <a name="symbols"></a>Simgeleri
 
-Semboller, hata ayıklama ve diğer tanılama araçları için temel bir gereksinimdir. Sembol dosyalarının içerikleri diller, derleyiciler ve platformlar arasında farklılık gösterir. Çok yüksek düzey semboller, kaynak kodu ile derleyici tarafından üretilen ikili arasında bir eşlemedir. Bu eşlemeler, [Visual Studio](/visualstudio/debugger/what-is-debugging) ve [Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging)gibi Tanılama Araçlarındaki satır numarası bilgileri ve yerel değişkenlerinizin adları gibi şeyler sağlamak için kullanılır.  Aşağıdaki bağlantı, birçok [kavramın da](/windows/win32/dxtecharts/debugging-with-symbols) diğer platformlar için de geçerlidir. [.NET taşınabilir sembolleri](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) Windows pdb ile benzer BIR "pdb" dosya uzantısına sahiptir, ancak Windows pdb biçimiyle uyumlu değildir.
+[Semboller](./symbols.md) , kaynak kodu ile derleyici tarafından üretilen ikili arasında bir eşlemedir. Bunlar genellikle .NET hata ayıklayıcıları tarafından kaynak satır numaralarını, yerel değişken adlarını ve diğer tanılama bilgileri türlerini çözümlemek için kullanılır.
 
 ## <a name="collect-diagnostics-in-containers"></a>Kapsayıcılarda tanılama toplama
 

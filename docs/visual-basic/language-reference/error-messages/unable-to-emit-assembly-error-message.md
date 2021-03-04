@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30145
 ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
-ms.openlocfilehash: 015ab6e1d186495d72bddd65678ab15088c0f1b2
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 393571f5b1fab518f379bbd6f4e6f1cb62a74b26
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99674889"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104789"
 ---
 # <a name="bc30145-unable-to-emit-assembly-error-message"></a>BC30145: bütünleştirilmiş kod yayılamıyor: \<error message>
 
@@ -39,8 +39,6 @@ Visual Basic derleyici, bildirime sahip bir derleme oluşturmak için derleme ba
 
 3. [Visual Studio için geliştirici komut istemi](../../../framework/tools/developer-command-prompt-for-vs.md)açın.
 
-   Windows 10 ' da, görev çubuğundaki arama kutusuna **Geliştirici komut istemi** ' ni girin. Ardından, sonuçlar listesinden **VS 2017 için geliştirici komut istemi** seçin.
-
 4. Dizinini, derleme sarmalayıcıyı yerleştirmek istediğiniz dizine değiştirin.
 
 5. Aşağıdaki komutu girin:
@@ -65,4 +63,4 @@ Visual Basic derleyici, bildirime sahip bir derleme oluşturmak için derleme ba
 - [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
 - [Sn.exe (tanımlayıcı ad aracı)](../../../framework/tools/sn-exe-strong-name-tool.md)
 - [Nasıl yapılır: Public-Private anahtar çifti oluşturma](../../../standard/assembly/create-public-private-key-pair.md)
-- [Bizimle iletişime geçin](/visualstudio/ide/feedback-options)
+- [Visual Studio geri bildirim seçenekleri](/visualstudio/ide/feedback-options)

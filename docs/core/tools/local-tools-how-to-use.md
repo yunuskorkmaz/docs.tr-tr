@@ -3,12 +3,12 @@ title: 'Öğretici: .NET yerel araçlarını yükleyip kullanın'
 description: .NET aracını yerel bir araç olarak yüklemeyi ve kullanmayı öğrenin.
 ms.topic: tutorial
 ms.date: 12/11/2020
-ms.openlocfilehash: f32a5c4091ff63c7c50cf339dddd89b78e543c4c
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: 29c561d27aad99c0383fc8e0bb5a4543ae65705a
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97512469"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104134"
 ---
 # <a name="tutorial-install-and-use-a-net-local-tool-using-the-net-cli"></a>Öğretici: .NET CLı kullanarak .NET yerel aracını yükleyip kullanma
 
@@ -21,7 +21,7 @@ Bu öğretici, yerel bir araç yüklemeyi ve kullanmayı öğretir. [Bu serinin 
 * [Bu serinin ilk öğreticisini](global-tools-how-to-create.md)doldurun.
 * .NET Core 2,1 çalışma zamanını yükler.
 
-  Bu öğreticide, .NET Core 2,1 ' i hedefleyen bir araç yükleyip kullanacaksınız, bu yüzden çalışma zamanının makinenizde yüklü olması gerekir. 2,1 çalışma zamanını yüklemek için [.NET Core 2,1 indirme sayfasına](https://dotnet.microsoft.com/download/dotnet-core/2.1) gidin ve **Çalıştır-çalışma zamanı** sütununda çalışma zamanı yükleme bağlantısını bulun.
+  Bu öğreticide, .NET Core 2,1 ' i hedefleyen bir araç yükleyip kullanacaksınız, bu yüzden çalışma zamanının makinenizde yüklü olması gerekir. 2,1 çalışma zamanını yüklemek için [.NET Core 2,1 indirme sayfasına](https://dotnet.microsoft.com/download/dotnet/2.1) gidin ve **Çalıştır-çalışma zamanı** sütununda çalışma zamanı yükleme bağlantısını bulun.
 
 ## <a name="create-a-manifest-file"></a>Bildirim dosyası oluşturma
 

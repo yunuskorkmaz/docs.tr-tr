@@ -3,12 +3,12 @@ title: Özet ve yol ileride
 description: Key Davpr ekibinizle Özeti ve yolda ileride bir bakış.
 ms.date: 02/04/2021
 author: robvet
-ms.openlocfilehash: 28b4b2a86865fd2e701e95bdd0b0979ed45786ca
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: c15104f861dd6cfb999d3f67f19b988d1a8ffb03
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100629439"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106208"
 ---
 # <a name="summary-and-the-road-ahead"></a>Özet ve yol ileride
 

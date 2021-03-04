@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 06/03/2020
 ms.custom: mvc,mlnet-tooling
 ms.topic: tutorial
-ms.openlocfilehash: 89fc5169eee539aa857a9be03c82bf084fe4b60d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 47c38bb0b66a6fc08dd319583847dd83baedcd1e
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554442"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103705"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>ML.NET CLI kullanarak yaklaşımı çözümleme
 
@@ -35,7 +35,7 @@ Sağladığınız eğitim veri kümelerine göre iyi kalitede ML.NET modelleri v
 
 ## <a name="pre-requisites"></a>Ön koşullar
 
-- [.NET Core 3,1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1) veya üzeri
+- [.NET Core 3,1 SDK](https://dotnet.microsoft.com/download/dotnet/3.1) veya üzeri
 - Seçim [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
 - [ML.NET CLI](../how-to-guides/install-ml-net-cli.md)
 
@@ -86,9 +86,9 @@ Oluşturulan C# kod projelerini Visual Studio 'dan veya `dotnet run` (.NET Core 
     mlnet classification --dataset "yelp_labelled.txt" --label-col 1 --has-header false --train-time 10
     ```
 
-    Bu komut ** `mlnet classification` komutunu**çalıştırır:
+    Bu komut **`mlnet classification` komutunu** çalıştırır:
     - *sınıflandırmanın* **ml görevi** için
-    - **veri kümesi dosyasını `yelp_labelled.txt` ** eğitim ve test veri kümesi olarak kullanır (dahili olarak CLI, çapraz doğrulama kullanır ya da bir diğeri de test için bir tane olmak üzere iki veri kümesinde bölüşlecektir)
+    - **veri kümesi dosyasını `yelp_labelled.txt`** eğitim ve test veri kümesi olarak kullanır (dahili olarak CLI, çapraz doğrulama kullanır ya da bir diğeri de test için bir tane olmak üzere iki veri kümesinde bölüşlecektir)
     - tahmin etmek istediğiniz **amaç/hedef sütununun** (genellikle **' Label '** olarak adlandırılır) dizin 1 (Dizin sıfır tabanlı olduğundan ikinci sütun) **olan sütundur**
     - Bu veri kümesi dosyası bir üst bilgisine sahip olmadığından, sütun adlarıyla **bir dosya üstbilgisi kullanmaz**
     - deneme için **hedeflenen araştırma/tren süresi** **10 saniyedir**
@@ -165,7 +165,7 @@ Bu numaralandırılabilir varlıklar, öğreticinin aşağıdaki adımlarında a
     }
     ```
 
-    - Kodun ilk satırı, bu örnekte tahmin için kullanılacak veri kümenizin ilk satırına göre *tek bir örnek veri*oluşturur. Ayrıca, kodu güncelleştirerek ' sabit kodlanmış ' verileri de oluşturabilirsiniz:
+    - Kodun ilk satırı, bu örnekte tahmin için kullanılacak veri kümenizin ilk satırına göre *tek bir örnek veri* oluşturur. Ayrıca, kodu güncelleştirerek ' sabit kodlanmış ' verileri de oluşturabilirsiniz:
 
         ```csharp
         ModelInput sampleData = new ModelInput()

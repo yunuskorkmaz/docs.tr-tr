@@ -3,12 +3,12 @@ title: Bellek sızıntısı öğreticisinde hata ayıklama
 description: .NET Core 'da Bellek sızıntısını nasıl ayıklayacağınızı öğrenin.
 ms.topic: tutorial
 ms.date: 04/20/2020
-ms.openlocfilehash: 6764663eedc28cd75f9f68927a12ae5b2255d11b
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 2e96dff7c0d38d918d32113a3a86e8d5129a91fc
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100431457"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105342"
 ---
 # <a name="debug-a-memory-leak-in-net-core"></a>.NET Core 'da bellek sızıntısı hatalarını ayıklama
 
@@ -32,8 +32,7 @@ Bu öğreticide şunları yapacaksınız:
 
 Öğretici şunları kullanır:
 
-- [.NET Core 3,1 SDK](https://dotnet.microsoft.com/download/dotnet-core) veya sonraki bir sürümü.
-- [DotNet-](dotnet-trace.md) liste süreçlerini izleme.
+- [.NET Core 3,1 SDK](https://dotnet.microsoft.com/download/dotnet) veya sonraki bir sürümü.
 - [DotNet-](dotnet-counters.md) yönetilen bellek kullanımını denetlemek için sayaçlar.
 - [DotNet-](dotnet-dump.md) döküm dosyasını toplamak ve analiz etmek için döküm.
 - Tanılama için bir [örnek hata ayıklama hedef](/samples/dotnet/samples/diagnostic-scenarios/) uygulaması.
@@ -50,10 +49,10 @@ Bir konsol penceresi açın ve [örnek hata ayıklama hedefini](/samples/dotnet/
 dotnet run
 ```
 
-Ayrı bir konsoldan, [DotNet-Trace](dotnet-trace.md) aracını kullanarak işlem kimliğini bulun:
+Ayrı bir konsoldan, işlem KIMLIĞINI bulun:
 
 ```console
-dotnet-trace ps
+dotnet-counters ps
 ```
 
 Çıktının şuna benzer olması gerekir:

@@ -3,12 +3,12 @@ title: Üretimde çalışırken geçiş stratejileri
 description: ASP.NET MVC 'den büyük bir uygulamayı tek seferde ASP.NET Core geçiremeyebilir. Bir uygulamayı çalışırken ve mevcut kullanıcılar için üretimde ASP.NET Core geçirmek için bazı stratejiler öğrenin.
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: be2016ab1faf3dc79f16c8d6219a670a74dc9cbd
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 4910984cb281139493aa5424809ba3eedab776e9
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100488947"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105764"
 ---
 # <a name="strategies-for-migrating-while-running-in-production"></a>Üretimde çalışırken geçiş stratejileri
 
@@ -36,13 +36,13 @@ Ana bilgisayar üstbilgileri ve yeniden yönlendirmeleri bileşimini kullanarak,
 
 ## <a name="apply-the-strangler-pattern"></a>Strangler modelini uygulama
 
-Büyük ASP.NET MVC uygulamaları, işlevselliğin parçalarını artımlı olarak geçirerek yeni bir ASP.NET Core uygulamayla aşamalı olarak değiştirilebilir. Buna bir yaklaşımda, Strangler Vines 'nin adı ve sonunda ağaçları koparmış olan [Strangler deseninin](https://docs.microsoft.com/azure/architecture/patterns/strangler)adı verilir. Bu yaklaşım, ilk olarak mevcut çözümün en üstünde bir façlade katmanını uygulamaya dayanır. Bu façlade, soruna yönelik yeni yaklaşım veya bir API ağ geçidi gibi raf dışı bir çözüm kullanılarak oluşturulmalıdır.
+Büyük ASP.NET MVC uygulamaları, işlevselliğin parçalarını artımlı olarak geçirerek yeni bir ASP.NET Core uygulamayla aşamalı olarak değiştirilebilir. Buna bir yaklaşımda, Strangler Vines 'nin adı ve sonunda ağaçları koparmış olan [Strangler deseninin](/azure/architecture/patterns/strangler)adı verilir. Bu yaklaşım, ilk olarak mevcut çözümün en üstünde bir façlade katmanını uygulamaya dayanır. Bu façlade, soruna yönelik yeni yaklaşım veya bir API ağ geçidi gibi raf dışı bir çözüm kullanılarak oluşturulmalıdır.
 
 Façlade olduktan sonra, bunun bir kısmını yeni bir ASP.NET Core uygulamasına yönlendirebilirsiniz. .NET Core 'a özgün .NET Framework uygulamasının daha fazlasını yaptığınızda, façlade katmanını uygun şekilde güncelleştirmeye devam edersiniz ve bu da daha fazla façladem işlevinin yeni sisteme gönderilmesini sağlar. Şekil 3-5, zaman içinde yabangler deseninin ilerlemesini gösterir.
 
 ## <a name="multi-targeting-approaches"></a>Çoklu hedefleme yaklaşımları
 
-.NET Framework hedef olan büyük uygulamalar, her bir çerçeve için Çoklu hedefleme ve ayrı kod yolları kullanılarak zaman içinde ASP.NET Core geçirilebilir. Örneğin, her iki ortamda da çalışması gereken kod, farklı işlevler uygulamak veya .NET Framework .NET Core 'da çalıştırıldığında farklı bağımlılıklar kullanmak için [Önişlemci `#if` ](https://docs.microsoft.com/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-if) yönergeleri ile değiştirilebilir. Başka bir seçenek de proje dosyalarını, hedeflenen Framework 'ü temel alan farklı dosya kümelerini içerecek şekilde değiştirmektir. Proje dosyaları, `*.core.cs` hedeflenen çerçeveye göre farklı kaynak dosya kümelerini dahil etmek için gibi farklı glob desenleri kullanabilir.
+.NET Framework hedef olan büyük uygulamalar, her bir çerçeve için Çoklu hedefleme ve ayrı kod yolları kullanılarak zaman içinde ASP.NET Core geçirilebilir. Örneğin, her iki ortamda da çalışması gereken kod, farklı işlevler uygulamak veya .NET Framework .NET Core 'da çalıştırıldığında farklı bağımlılıklar kullanmak için [Önişlemci `#if` ](../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) yönergeleri ile değiştirilebilir. Başka bir seçenek de proje dosyalarını, hedeflenen Framework 'ü temel alan farklı dosya kümelerini içerecek şekilde değiştirmektir. Proje dosyaları, `*.core.cs` hedeflenen çerçeveye göre farklı kaynak dosya kümelerini dahil etmek için gibi farklı glob desenleri kullanabilir.
 
 Bu teknikler, tek bir ortak kod temelinin, yeni işlevsellik eklendiğinde ve (bazı parçalar) .NET Core kullanımı dışında tutulmasını sağlar.
 
@@ -60,8 +60,8 @@ Genellikle, büyük ASP.NET MVC ve Web API uygulamaları her seferinde ASP.NET C
 
 - [.NET mikro hizmetleri: Kapsayıcılı .NET uygulamaları için mimari](https://aka.ms/microservicesebook)
 - [eShopOnContainers başvuru mikro hizmetleri uygulaması](https://github.com/dotnet-architecture/eShopOnContainers)
-- [IIS ile Windows üzerinde ASP.NET Core barındırma](https://docs.microsoft.com/aspnet/core/host-and-deploy/iis/)
-- [Strangler düzeni](https://docs.microsoft.com/azure/architecture/patterns/strangler)
+- [IIS ile Windows üzerinde ASP.NET Core barındırma](/aspnet/core/host-and-deploy/iis/)
+- [Strangler düzeni](/azure/architecture/patterns/strangler)
 
 >[!div class="step-by-step"]
 >[Önceki](understand-update-dependencies.md) 

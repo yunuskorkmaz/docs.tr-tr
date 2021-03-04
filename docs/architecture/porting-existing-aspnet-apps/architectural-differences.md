@@ -3,12 +3,12 @@ title: ASP.NET MVC ve ASP.NET Core arasındaki mimari farklar
 description: ASP.NET ve ASP.NET Core arasındaki mimari farklılıkları inceleyin.
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 0e546465a3da6971a118c65114af81c3a387e00e
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 96477f2393482380eee9891e9b2dbbb6445e15bd
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100488926"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106153"
 ---
 # <a name="architectural-differences-between-aspnet-mvc-and-aspnet-core"></a>ASP.NET MVC ve ASP.NET Core arasındaki mimari farklar
 
@@ -18,7 +18,7 @@ ms.locfileid: "100488926"
 
 ## <a name="breaking-changes"></a>Yeni değişiklikler
 
-.NET Core, .NET Framework platformlar arası yeniden yazma işlemi. [İki çerçeve arasında çok sayıda Son değişiklik](https://docs.microsoft.com/dotnet/core/compatibility/fx-core)vardır. Aşağıdaki bölümler, ASP.NET MVC ve ASP.NET Core uygulamalarının nasıl tasarlandığına ve geliştirildiğiyle ilgili belirli farklılıkları belirler. Ayrıca, hangi çerçeve kitaplıklarının değişiklik yapması gerektiğini belirleyen belgeleri incelemek için de dikkatli olmanız gerekir. Birçok durumda, bir değiştirme NuGet paketi .NET Framework ve .NET Core arasında kalan boşlukları dolduracak şekilde bulunur. Nadir durumlarda, uyumsuzlukları karşılamak için bir üçüncü taraf çözümü bulmanız veya yeni özel kod uygulamanız gerekebilir.
+.NET Core, .NET Framework platformlar arası yeniden yazma işlemi. [İki çerçeve arasında çok sayıda Son değişiklik](../../core/compatibility/fx-core.md)vardır. Aşağıdaki bölümler, ASP.NET MVC ve ASP.NET Core uygulamalarının nasıl tasarlandığına ve geliştirildiğiyle ilgili belirli farklılıkları belirler. Ayrıca, hangi çerçeve kitaplıklarının değişiklik yapması gerektiğini belirleyen belgeleri incelemek için de dikkatli olmanız gerekir. Birçok durumda, bir değiştirme NuGet paketi .NET Framework ve .NET Core arasında kalan boşlukları dolduracak şekilde bulunur. Nadir durumlarda, uyumsuzlukları karşılamak için bir üçüncü taraf çözümü bulmanız veya yeni özel kod uygulamanız gerekebilir.
 
 >[!div class="step-by-step"]
 >[Önceki](additional-migration-resources.md) 

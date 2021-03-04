@@ -6,12 +6,12 @@ dev_langs:
 - vb
 ms.date: 07/22/2016
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 259db1b9d33dd3b068f4d4fa18d2118db34bf0b0
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 0cd8179de929ea55212d600844e658d6946861ab
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819090"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103081"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Dil bağımsızlığı ve dilden bağımsız bileşenler
 
@@ -20,13 +20,13 @@ ms.locfileid: "94819090"
 > [!NOTE]
 > Bu makalenin ilk bölümünde dilden bağımsız bileşenler, diğer bir deyişle, herhangi bir dilde yazılmış uygulamalar tarafından tüketilen bileşenler oluşturma işlemi ele alınmaktadır. Ayrıca, birden çok dilde yazılmış kaynak kodundan tek bir bileşen veya uygulama oluşturabilirsiniz; Bu makalenin ikinci bölümünde [Diller arası birlikte çalışabilirlik](#cross-language-interoperability) bölümüne bakın.
 
-Herhangi bir dilde yazılmış diğer nesnelerle tam olarak etkileşimde bulunmak için, nesneler yalnızca tüm diller için ortak olan özellikleri çağıranlar halinde kullanıma sunmalıdır. Bu ortak özellikler kümesi, oluşturulan derlemeler için uygulanan bir dizi kural olan ortak dil belirtimi (CLS) tarafından tanımlanır. Ortak dil belirtimi, [ECMA-335 Standardı: ortak dil altyapısının](https://www.ecma-international.org/publications/standards/Ecma-335.htm), Bölüm ı, yan tümceler 7 ila 11 ' de tanımlanmıştır.
+Herhangi bir dilde yazılmış diğer nesnelerle tam olarak etkileşimde bulunmak için, nesneler yalnızca tüm diller için ortak olan özellikleri çağıranlar halinde kullanıma sunmalıdır. Bu ortak özellikler kümesi, oluşturulan derlemeler için uygulanan bir dizi kural olan ortak dil belirtimi (CLS) tarafından tanımlanır. Ortak dil belirtimi, [ECMA-335 Standardı: ortak dil altyapısının](https://www.ecma-international.org/publications-and-standards/standards/ecma-335/), Bölüm ı, yan tümceler 7 ila 11 ' de tanımlanmıştır.
 
 Bileşeniniz Ortak dil belirtimine uyuyorsa, CLS uyumlu olması garantilenir ve CLS 'yi destekleyen herhangi bir programlama dilinde yazılan derlemelerdeki koddan erişilebilir. Kaynak kodunuza [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) özniteliğini uygulayarak, bileşeninizin derleme zamanında ortak dil belirtimine uygun olup olmadığını belirleyebilirsiniz. Daha fazla bilgi için bkz. [CLSCompliantAttribute özniteliği](#the-clscompliantattribute-attribute).
 
 ## <a name="cls-compliance-rules"></a>CLS Uyumluluk kuralları
 
-Bu bölümde, CLS uyumlu bir bileşen oluşturmak için kurallar açıklanmaktadır. Kuralların tam bir listesi için, bkz. [ECMA-335 standart: ortak dil altyapısının](https://www.ecma-international.org/publications/standards/Ecma-335.htm)bölüm ı, yan tümcesi 11.
+Bu bölümde, CLS uyumlu bir bileşen oluşturmak için kurallar açıklanmaktadır. Kuralların tam bir listesi için, bkz. [ECMA-335 standart: ortak dil altyapısının](https://www.ecma-international.org/publications-and-standards/standards/ecma-335/)bölüm ı, yan tümcesi 11.
 
 > [!NOTE]
 > Ortak dil belirtimi, tüketiciler (CLS uyumlu bir bileşene programlı olarak erişen geliştiriciler), çerçeveler (CLS uyumlu kitaplıklar oluşturmak için bir dil derleyicisi kullanan geliştiriciler) ve Extender 'lar (bir dil derleyicisi veya CLS uyumlu bileşenler oluşturan bir kod ayrıştırıcısı gibi bir araç oluşturan geliştiriciler) için geçerli olduğu için her bir kuralı CLS uyumluluğu için tartışır. Bu makale, çerçeveler için uygulanan kurallara odaklanır. Ancak, Extender 'lara uygulanan kuralların bazılarının, [yansıma. yayma](xref:System.Reflection.Emit)kullanılarak oluşturulan derlemeler için de uygulanabilir olabileceğini unutmayın.
@@ -111,7 +111,7 @@ Kitaplığın ortak arabirimi aşağıdakilerden oluşur:
 
 * Ortak sınıfların ortak yöntemlerinin parametreleri ve dönüş türleri, parametreleri ve türetilmiş sınıflar tarafından erişilebilen yöntemlerin dönüş türleri.
 
-CLS uyumluluğu kuralları aşağıdaki tabloda listelenmiştir. Kuralların metni, telif hakkı 2012 olan [ECMA-335 Standardı: ortak dil altyapısından](https://www.ecma-international.org/publications/standards/Ecma-335.htm)(Ecma International göre) alınır. Bu kurallar hakkında daha ayrıntılı bilgi aşağıdaki bölümlerde bulunur.
+CLS uyumluluğu kuralları aşağıdaki tabloda listelenmiştir. Kuralların metni, telif hakkı 2012 olan [ECMA-335 Standardı: ortak dil altyapısından](https://www.ecma-international.org/publications-and-standards/standards/ecma-335/)(Ecma International göre) alınır. Bu kurallar hakkında daha ayrıntılı bilgi aşağıdaki bölümlerde bulunur.
 
 Kategori | Bkz. | Kural | Kural numarası
 -------- | --- | ---- | -----------
@@ -126,11 +126,11 @@ Oluşturucular | [Oluşturucular](#constructors) | Bir nesne Oluşturucusu, bir 
 Listelemeler | [Listelemeler](#enumerations) | Bir numaralandırmanın temel alınan türü yerleşik bir CLS tamsayı türü olacaktır, alanın adı "value__" ve bu alan işaretlenir `RTSpecialName` . |  7
 Listelemeler | [Listelemeler](#enumerations) | [System. FlagsAttribute](xref:System.FlagsAttribute) (Bölüm IV kitaplığı) özel özniteliğinin varlığı veya yokluğu tarafından belirtilen iki farklı tür numaralandırmalar vardır. Biri adlandırılmış tamsayı değerlerini temsil eder; diğeri adlandırılmamış bir değer oluşturmak için birleştirilebilen adlandırılmış bit bayraklarını temsil eder. Öğesinin değeri `enum` belirtilen değerlerle sınırlı değil. |  8
 Listelemeler | [Listelemeler](#enumerations) | Sabit listesinin değişmez statik alanları, sabit listesinin kendi türüne sahip olacaktır. |  9
-Olaylar | [Olaylar](#events) | Bir olayı uygulayan yöntemler `SpecialName` meta verilerde işaretlenir. |29
-Olaylar | [Olaylar](#events) | Bir olayın ve erişimcilerinin erişilebilirliği aynı olacaktır. |30
-Olaylar | [Olaylar](#events) | `add` `remove` Bir olay için ve yöntemlerinin her ikisi de mevcut ya da yok olacaktır. |31
-Olaylar | [Olaylar](#events) | `add` `remove` Bir olay için ve yöntemlerinin her biri, türü olay türünü tanımlayan ve [System. Delegate](xref:System.Delegate)'ten türetilebilecek bir parametre alır. |32
-Olaylar | [Olaylar](#events) | Olaylar belirli bir adlandırma düzenine bağlı olacaktır. CLS kuralı 29 ' da başvurulan SpecialName özniteliği, uygun ad karşılaştırmaları içinde yok sayılacak ve tanımlayıcı kurallarına uymalecektir.  |33
+Ekinlikler | [Ekinlikler](#events) | Bir olayı uygulayan yöntemler `SpecialName` meta verilerde işaretlenir. |29
+Ekinlikler | [Ekinlikler](#events) | Bir olayın ve erişimcilerinin erişilebilirliği aynı olacaktır. |30
+Ekinlikler | [Ekinlikler](#events) | `add` `remove` Bir olay için ve yöntemlerinin her ikisi de mevcut ya da yok olacaktır. |31
+Ekinlikler | [Ekinlikler](#events) | `add` `remove` Bir olay için ve yöntemlerinin her biri, türü olay türünü tanımlayan ve [System. Delegate](xref:System.Delegate)'ten türetilebilecek bir parametre alır. |32
+Ekinlikler | [Ekinlikler](#events) | Olaylar belirli bir adlandırma düzenine bağlı olacaktır. CLS kuralı 29 ' da başvurulan SpecialName özniteliği, uygun ad karşılaştırmaları içinde yok sayılacak ve tanımlayıcı kurallarına uymalecektir.  |33
 Özel durumlar | [Özel durumlar](#exceptions) | Oluşturulan nesneler [System. Exception](xref:System.Exception) veya bundan devralan bir tür olmalıdır. Nonetheless, diğer özel durum türlerinin yayılmasını engellemek için CLS uyumlu yöntemler gerekli değildir. | 40
 Genel | [CLS Uyumluluk kuralları](#cls-compliance-rules) | CLS kuralları yalnızca, tanımlayıcı derlemenin dışında erişilebilen veya görülebilen bir türün bölümleri için geçerlidir. | 1
 Genel | [CLS Uyumluluk kuralları](#cls-compliance-rules) | CLS olmayan uyumlu türlerin üyeleri CLS uyumlu olarak işaretlenmemelidir. | 2
@@ -176,7 +176,7 @@ Alt bölümleri dizine:
 * [Genel türler ve Üyeler](#generic-types-and-members)
 * [Oluşturucular](#constructors)
 * [Özellikler](#properties)
-* [Olaylar](#events)
+* [Ekinlikler](#events)
 * [Aşırı Yüklemeler](#overloads)
 * [Özel durumlar](#exceptions)
 * [Öznitelikler](#attributes)
@@ -299,10 +299,10 @@ CLS uyumlu tür | Açıklama
 [Bayt](xref:System.Byte) | 8 bit işaretsiz tamsayı
 [Int16](xref:System.Int16) | 16 bit işaretli tamsayı
 [Int32](xref:System.Int32) | 32-bit işaretli tamsayı
-[Tutulamaz](xref:System.Int64) | 64-bit işaretli tamsayı
+[Int64](xref:System.Int64) | 64-bit işaretli tamsayı
 [Tek](xref:System.Single) | Tek duyarlıklı kayan nokta değeri
 [Çift](xref:System.Double) | Çift duyarlıklı kayan nokta değeri
-[Boolean](xref:System.Boolean) | doğru veya yanlış değer türü
+[Boole](xref:System.Boolean) | doğru veya yanlış değer türü
 [Char](xref:System.Char) | UTF-16 kodlu kod birimi
 [Kategori](xref:System.Decimal) | Kayan nokta olmayan ondalık sayı
 [Serisi](xref:System.IntPtr) | Platform tanımlı boyutun işaretçisi veya işleyicisi
@@ -314,7 +314,7 @@ Uyumlu olmayan tür | Açıklama | CLS uyumlu alternatif
 ------------------ | ----------- | -------------------------
 [SByte](xref:System.SByte) | 8 bit işaretli tamsayı veri türü | [Int16](xref:System.Int16)
 [UInt16](xref:System.UInt16) | 16 bit işaretsiz tamsayı | [Int32](xref:System.Int32)
-[UInt32](xref:System.UInt32) | 32-bit işaretsiz tamsayı | [Tutulamaz](xref:System.Int64)
+[UInt32](xref:System.UInt32) | 32-bit işaretsiz tamsayı | [Int64](xref:System.Int64)
 [UInt64](xref:System.UInt64) | 64-bit işaretsiz tamsayı | [Int64](xref:System.Int64) (taşma olabilir), [BigInteger](xref:System.Numerics.BigInteger)veya [Double](xref:System.Double)
 [UIntPtr](xref:System.UIntPtr) | İşaretsiz işaretçi veya tanıtıcı | [Serisi](xref:System.IntPtr)
 
@@ -1298,7 +1298,7 @@ Daha fazla bilgi için bkz. [enum](xref:System.Enum) yapısına yönelik belgele
 
 Ortak dil belirtimi, tüm alanlara ve yöntemlere belirli bir sınıfın üyeleri olarak erişilmesini gerektirir. Bu nedenle, genel statik alanlar ve Yöntemler (yani, statik alanlar veya bir türden ayrı tanımlanmış yöntemler) CLS uyumlu değildir. Kaynak kodunuza genel bir alan veya yöntem eklemeyi denerseniz, C# derleyicisi bir derleyici hatası oluşturur.
 
-Ortak dil belirtimi yalnızca standart yönetilen çağırma kuralını destekler. Anahtar sözcükle işaretlenmiş bağımsız değişken listeleriyle yönetilmeyen çağırma kurallarını ve yöntemlerini desteklemez `varargs` . Standart yönetilen çağırma kuralıyla uyumlu olan değişken bağımsız değişken listeleri için, [ParamArrayAttribute](xref:System.ParamArrayAttribute) `params` C# ' deki anahtar sözcüğü ve `ParamArray` Visual Basic anahtar sözcüğü gibi, ParamArrayAttribute özniteliğini veya bağımsız dilin uygulamasını kullanın.
+Ortak dil belirtimi yalnızca standart yönetilen çağırma kuralını destekler. Anahtar sözcükle işaretlenmiş bağımsız değişken listeleriyle yönetilmeyen çağırma kurallarını ve yöntemlerini desteklemez `varargs` . Standart yönetilen çağırma kuralıyla uyumlu olan değişken bağımsız değişken listeleri için, [](xref:System.ParamArrayAttribute) `params` C# ' deki anahtar sözcüğü ve `ParamArray` Visual Basic anahtar sözcüğü gibi, ParamArrayAttribute özniteliğini veya bağımsız dilin uygulamasını kullanın.
 
 ### <a name="member-accessibility"></a>Üye erişilebilirliği
 
@@ -2031,21 +2031,21 @@ CLS uyumlu sınıfların ve yapıların içindeki oluşturucular şu kurallara u
 
 CLS uyumlu türlerdeki özellikler aşağıdaki kurallara uymalıdır:
 
-* Özelliğin bir ayarlayıcı, alıcı veya her ikisi de olmalıdır. Bir derlemede, bunlar özel yöntemler olarak uygulanır, yani ayrı yöntemler olarak (alıcı `get` \_ *PropertyName* ve ayarlayıcı, PropertyName olarak adlandırılır `set` \_ *propertyname*) `SpecialName` derlemenin meta verilerinde olarak işaretlenir. C# derleyicisi, özniteliği uygulamaya gerek olmadan bu kuralı otomatik olarak uygular <xref:System.CLSCompliantAttribute> .
+* Özelliğin bir ayarlayıcı, alıcı veya her ikisi de olmalıdır. Bir derlemede, bunlar özel yöntemler olarak uygulanır, yani ayrı yöntemler olarak (alıcı `get` \_ *PropertyName* ve ayarlayıcı, PropertyName olarak adlandırılır `set` \_ ) `SpecialName` derlemenin meta verilerinde olarak işaretlenir. C# derleyicisi, özniteliği uygulamaya gerek olmadan bu kuralı otomatik olarak uygular <xref:System.CLSCompliantAttribute> .
 
 * Özelliğin türü, özellik alıcısının dönüş türü ve ayarlayıcının son bağımsız değişkenidir. Bu türler CLS uyumlu olmalıdır ve bağımsız değişkenler başvuruya göre özelliğe atanamaz (yani, yönetilen işaretçiler olamaz).
 
 * Bir özelliğin hem alıcı hem de ayarlayıcı varsa, her ikisi de sanal, hem statik hem de her iki örnek olmalıdır. C# derleyicisi otomatik olarak bu kuralı özellik tanımı sözdizimi üzerinden zorlar.
 
-### <a name="events"></a>Olaylar
+### <a name="events"></a>Ekinlikler
 
 Bir olay, adı ve türü ile tanımlanır. Olay türü, olayı göstermek için kullanılan bir temsilcisidir. Örneğin, `DbConnection.StateChange` olay türündedir `StateChangeEventHandler` . Olayın kendisinin yanı sıra, olay adına göre adlara sahip üç yöntem olayın uygulamasını sağlar ve `SpecialName` derlemenin meta verilerinde olarak işaretlenir:
 
-* _ EventName adlı bir olay işleyicisi ekleme yöntemi `add` .*EventName* Örneğin, olay için olay aboneliği yöntemi `DbConnection.StateChange` adlandırılır `add_StateChange` .
+* _ EventName adlı bir olay işleyicisi ekleme yöntemi `add` . Örneğin, olay için olay aboneliği yöntemi `DbConnection.StateChange` adlandırılır `add_StateChange` .
 
-* _ EventName adlı bir olay işleyicisini kaldırma yöntemi `remove` .*EventName* Örneğin, olay için kaldırma yöntemi `DbConnection.StateChange` olarak adlandırılır `remove_StateChange` .
+* _ EventName adlı bir olay işleyicisini kaldırma yöntemi `remove` . Örneğin, olay için kaldırma yöntemi `DbConnection.StateChange` olarak adlandırılır `remove_StateChange` .
 
-* EventName adlı olayın oluştuğunu belirten bir yöntem `raise` \_ *EventName*.
+* EventName adlı olayın oluştuğunu belirten bir yöntem `raise` \_ .
 
 > [!NOTE]
 > Ortak dil belirtiminin olayları ile ilgili kuralları, dil derleyicileri tarafından uygulanır ve bileşen geliştiricileri için saydamdır.
@@ -2543,7 +2543,7 @@ End Structure
 
 CLS uyumlu bir özniteliğin Oluşturucusu veya özellikleri yalnızca aşağıdaki türleri açığa alabilir:
 
-* [Boolean](xref:System.Boolean)
+* [Boole](xref:System.Boolean)
 
 * [Bayt](xref:System.Byte)
 
@@ -2555,7 +2555,7 @@ CLS uyumlu bir özniteliğin Oluşturucusu veya özellikleri yalnızca aşağıd
 
 * [Int32](xref:System.Int32)
 
-* [Tutulamaz](xref:System.Int64)
+* [Int64](xref:System.Int64)
 
 * [Tek](xref:System.Single)
 

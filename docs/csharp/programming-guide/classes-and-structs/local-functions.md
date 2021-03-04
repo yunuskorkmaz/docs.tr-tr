@@ -4,16 +4,16 @@ description: C# ' deki yerel işlevler, başka bir üyede iç içe yerleştirilm
 ms.date: 10/16/2020
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: 75accda2e40443073274ece4d8964c13a0945dad
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: 1c0cd1b8122f9069e5d6385d698f0ff8278912dd
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92332906"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103250"
 ---
 # <a name="local-functions-c-programming-guide"></a>Yerel işlevler (C# Programlama Kılavuzu)
 
-C# 7,0 ' den başlayarak, c# *Yerel Işlevleri*destekler. Yerel işlevler, başka bir üyede iç içe yerleştirilmiş bir türün özel yöntemleridir. Yalnızca kendi kapsayıcı üyelerinden çağrılabilir. Yerel işlevler içinde bildirilebilecek ve şuradan çağrılabilir:
+C# 7,0 ' den başlayarak, c# *Yerel Işlevleri* destekler. Yerel işlevler, başka bir üyede iç içe yerleştirilmiş bir türün özel yöntemleridir. Yalnızca kendi kapsayıcı üyelerinden çağrılabilir. Yerel işlevler içinde bildirilebilecek ve şuradan çağrılabilir:
 
 - Yöntemler, özellikle Yineleyici yöntemleri ve zaman uyumsuz yöntemler
 - Oluşturucular
@@ -72,16 +72,6 @@ Yineleyici mantığını yerel bir işleve yerleştirirseniz, aşağıdaki örne
 
 :::code language="csharp" source="snippets/local-functions/IteratorWithLocal.cs" :::
 
-Yerel işlevleri, zaman uyumsuz işlemlerle benzer bir şekilde kullanabilirsiniz. Karşılık gelen görev beklendiğinde zaman uyumsuz yöntem yüzeyinde oluşturulan özel durumlar. Yerel işlevler, kodunuzun hızlı bir şekilde başarısız olmasına olanak tanır ve özel durumun hem zaman uyumlu olarak hem de aynı şekilde gözlemlenip
-
-Aşağıdaki örnek, belirtilen saniye sayısını duraklatmak için adlı zaman uyumsuz bir yöntem kullanır `GetMultipleAsync` ve bu sayıda saniyeden oluşan rastgele bir değer döndürür. En fazla gecikme 5 saniyedir; <xref:System.ArgumentOutOfRangeException> değer 5 ' ten büyükse bir sonuç elde edilir. Aşağıdaki örnekte gösterildiği gibi, yöntemine 6 değeri geçirildiğinde oluşturulan özel durum `GetMultipleAsync` yalnızca görev beklendiğinde gözlemlenir.
-
-:::code language="csharp" source="snippets/local-functions/AsyncWithoutLocal.cs" :::
-
-Yöntem yineleyicisi ile benzer şekilde, önceki örneği yeniden düzenleyebilir ve zaman uyumsuz işlem kodunu yerel bir işlevde koyabilirsiniz. Aşağıdaki örnekteki Çıktının gösterdiği gibi, <xref:System.ArgumentOutOfRangeException> `GetMultiple` yöntemi çağrılır almaz.
-
-:::code language="csharp" source="snippets/local-functions/AsyncWithLocal.cs" :::
-
 ## <a name="local-functions-vs-lambda-expressions"></a>Yerel işlevler ve lambda ifadeleri karşılaştırması
 
 İlk bakışta, yerel işlevler ve [lambda ifadeleri](../../language-reference/operators/lambda-expressions.md) çok benzerdir. Birçok durumda, lambda ifadeleri ve yerel işlevler kullanma arasında seçim stili ve kişisel tercihlerden bağımsız olur. Ancak, dikkat etmeniz gereken bir veya diğerini kullanabileceğiniz gerçek farklılıklar vardır.
@@ -106,7 +96,7 @@ Lambda ifadeleri, `Action` / `Func` bağımsız değişkenini ve dönüş türle
 
 Lambda ifadeleri, çalışma zamanında bildirildiği ve atanan nesnelerdir. Bir lambda ifadesinin kullanılabilmesi için, kesinlikle atanması gerekir: kendisine `Action` / `Func` atanacak olan değişken bildirilmelidir ve kendisine atanmış lambda ifadesi. `LambdaFactorial`Tanımlanmadan önce lambda ifadesini bildirmelidir ve başlatmalıdır `nthFactorial` . Bu nedenle, atamadan önce başvurmak için derleme zamanı hatasına neden `nthFactorial` olur.
 
-Yerel işlevler, derleme zamanında tanımlanır. Değişkenlere atanmadığından, bunlara **kapsamda olduğu**herhangi bir kod konumundan başvurulabilirler; ilk örneğimizde `LocalFunctionFactorial` , deyimin üzerinde veya altında `return` olan ve herhangi bir derleyici hatası tetiklemeyen yerel işlevimizi bildirebiliriz.
+Yerel işlevler, derleme zamanında tanımlanır. Değişkenlere atanmadığından, bunlara **kapsamda olduğu** herhangi bir kod konumundan başvurulabilirler; ilk örneğimizde `LocalFunctionFactorial` , deyimin üzerinde veya altında `return` olan ve herhangi bir derleyici hatası tetiklemeyen yerel işlevimizi bildirebiliriz.
 
 Bu farklılıklar özyinelemeli algoritmaların yerel işlevler kullanılarak oluşturulması daha kolay hale gelir. Kendisini çağıran bir yerel işlev tanımlayabilir ve tanımlayabilirsiniz. Lambda ifadeleri, aynı lambda ifadesine başvuran bir gövdeye yeniden atanabilmeleri için bildirilmelidir ve varsayılan bir değer atanmalıdır.
 

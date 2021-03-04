@@ -1,16 +1,16 @@
 ---
 title: Memory<T> ve Span<T> kullanım yönergeleri
 description: Bu makalede <T> <T> , .NET Core 'da işlem hatları 'nda kullanılabilecek yapılandırılmış verilerin arabellekleri olan bellek ve yayılma açıklanmaktadır.
-ms.date: 10/01/2018
+ms.date: 02/05/2021
 helpviewer_keywords:
 - Memory&lt;T&gt; and Span&lt;T&gt; best practices
 - using Memory&lt;T&gt; and Span&lt;T&gt;
-ms.openlocfilehash: 4a08148dc8a4736b40af45d11490200056bb6f83
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: b09c2444a4edab0c5f7bdecc64a19aadca37df34
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99506362"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103640"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Memory\<T> ve Span\<T> kullanım yönergeleri
 
@@ -28,7 +28,7 @@ Arabellekler API 'Ler arasında geçirilebileceği ve arabelleklerin bazen birde
 
 - **Kira**. Kira, belirli bir bileşenin arabelleğin tüketicisi olmasına izin verilen süredir.
 
-Aşağıdaki sözde kod örneğinde bu üç kavram gösterilmektedir. Bu `Main` , türünde bir arabellek örnekleyen bir yöntemi içerir <xref:System.Memory%601> <xref:System.Char> , `WriteInt32ToBuffer` arabelleğe bir tamsayının dize gösterimini yazmak için yöntemini çağırır ve ardından `DisplayBufferToConsole` arabelleğin değerini göstermek için yöntemini çağırır.
+Aşağıdaki sözde kod örneğinde bu üç kavram gösterilmektedir. `Buffer` sözde kodda, <xref:System.Memory%601> türünde bir veya arabelleği temsil eder <xref:System.Span%601> <xref:System.Char> . `Main`Yöntemi, arabelleği örnekleyen, arabelleğe `WriteInt32ToBuffer` bir tamsayının dize gösterimini yazmak için yöntemini çağırır ve ardından `DisplayBufferToConsole` arabelleğin değerini göstermek için yöntemini çağırır.
 
 ```csharp
 using System;
@@ -59,7 +59,7 @@ class Program
 }
 ```
 
-`Main`Yöntemi, arabelleği oluşturur (Bu durumda bir <xref:System.Span%601> örnek) ve bu nedenle sahibi olur. Bu nedenle, `Main` artık kullanımda olmadığında arabelleği yok etmek sorumludur. Bunu, arabelleğin yöntemini çağırarak yapar <xref:System.Span%601.Clear?displayProperty=nameWithType> . ( <xref:System.Span%601.Clear> Buradaki Yöntem, arabelleğin belleğini temizler; <xref:System.Span%601> yapının aslında arabelleği yok eden bir yöntemi yoktur.)
+`Main`Yöntemi, arabelleği oluşturur ve sahibidir. Bu nedenle, `Main` artık kullanımda olmadığında arabelleği yok etmek sorumludur. Sözde kod, arabelleğe bir yöntem çağırarak bunu gösterir `Destroy` . (Hiçbir ne <xref:System.Memory%601> de <xref:System.Span%601> aslında bir `Destroy` yöntemi yoktur. Bu makalenin ilerleyen kısımlarında gerçek kod örnekleri görürsünüz.)
 
 Arabellek iki tüketiciye sahiptir `WriteInt32ToBuffer` ve `DisplayBufferToConsole` . Tek seferde yalnızca bir tüketici vardır (ilk `WriteInt32ToBuffer` , sonra `DisplayBufferToConsole` ) ve hiçbir tüketicisinin arabelleğe sahip olmadığı. Ayrıca, bu bağlamda "Consumer" öğesinin, arabelleğin salt okunurdur görünümünü göstermez; müşteriler, arabelleğin `WriteInt32ToBuffer` okuma/yazma görünümü verildiyse, olduğu gibi arabelleğin içeriğini değiştirebilir.
 

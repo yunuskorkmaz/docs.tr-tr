@@ -4,12 +4,12 @@ description: .NET CLı komutlarını çalıştırırken .NET SDK sürümünü ay
 ms.topic: how-to
 ms.date: 05/01/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 02a0ab478a23f7df55a8cc2e872e480b311304fe
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: cc471cf5b50cf91c38b46607ccf38bd4d087aa6a
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634005"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104147"
 ---
 # <a name="globaljson-overview"></a>global.json’a genel bakış
 
@@ -55,7 +55,7 @@ SDK Çözümleyicisinin kullanılacak SDK sürümünü seçerken yayın öncesi 
 Bu değeri açıkça ayarlamazsanız, varsayılan değer Visual Studio 'dan çalıştırıp çalıştırdığınıza bağlıdır:
 
 - Visual Studio 'da **değilseniz** varsayılan değer olur `true` .
-- Visual Studio 'da çalışıyorsanız, istenen ön sürüm durumunu kullanır. Diğer bir deyişle, Visual Studio 'nun önizleme sürümünü kullanıyorsanız veya .NET Core SDK seçeneğinin ( **Araçlar** **Use previews of the .NET Core SDK**  >  **Seçenekler**  >  **ortamı**  >  **Önizleme özellikleri** altında) kullanım önizlemelerini ayarlarsanız, varsayılan değer olur `true` ; Aksi takdirde, `false` .
+- Visual Studio 'da çalışıyorsanız, istenen ön sürüm durumunu kullanır. Diğer bir deyişle, Visual Studio 'nun önizleme sürümünü kullanıyorsanız veya .NET Core SDK seçeneğinin ( **Araçlar**   >  **Seçenekler**  >  **ortamı**  >  **Önizleme özellikleri** altında) kullanım önizlemelerini ayarlarsanız, varsayılan değer olur `true` ; Aksi takdirde, `false` .
 
 #### <a name="rollforward"></a>Ileri alınmaya
 
@@ -153,7 +153,7 @@ Aşağıdaki örnek, belirli bir sürümün yüklü olduğu en yüksek düzeltme
 
 Dosyasında *global.js* bir tane ayarlamak için MAKINENIZDE hangi SDK sürümlerinin yüklü olduğunu bilmemiz yararlı olur. Bunun nasıl yapılacağı hakkında daha fazla bilgi için bkz. [.net 'in zaten yüklü olduğunu denetleme](../install/how-to-detect-installed-versions.md#check-sdk-versions).
 
-Makinenize ek .NET SDK sürümleri yüklemek için [.NET Core 'U indirme](https://dotnet.microsoft.com/download/dotnet-core) sayfasını ziyaret edin.
+Makinenize ek .NET SDK sürümleri yüklemek için [indirme .net](https://dotnet.microsoft.com/download/dotnet) sayfasını ziyaret edin.
 
 Aşağıdaki örneğe benzer şekilde, [DotNet New](dotnet-new.md) komutunu yürüterek geçerli dizinde dosya üzerinde yeni bir *global.js* oluşturabilirsiniz:
 
@@ -172,7 +172,7 @@ dotnet new globaljson --sdk-version 3.0.100
 
 - Dosya *üzerindeglobal.js* bulunamazsa veya *global.js* bir SDK sürümü ya da bir değer belirtmezse `allowPrerelease` , en yüksek yüklü SDK sürümü kullanılır (ayarına eşdeğerdir `rollForward` `latestMajor` ). Ön sürüm SDK sürümlerinin kabul edilip edilmediği, nasıl `dotnet` çağrıldığına bağlıdır.
   - Visual Studio 'da **değilseniz** , ön sürüm sürümleri göz önünde bulundurulmaz.
-  - Visual Studio 'da çalışıyorsanız, istenen ön sürüm durumunu kullanır. Diğer bir deyişle, Visual Studio 'nun önizleme sürümünü kullanıyorsanız veya .NET Core SDK seçeneğinin ( **Araçlar** **Use previews of the .NET Core SDK**  >  **Seçenekler**  >  **ortamı**  >  **Önizleme özellikleri** altında) kullanım önizlemelerini ayarlarsanız, ön sürüm sürümlerinin kabul edilmesi gerekir; Aksi takdirde yalnızca yayın sürümleri kabul edilir.
+  - Visual Studio 'da çalışıyorsanız, istenen ön sürüm durumunu kullanır. Diğer bir deyişle, Visual Studio 'nun önizleme sürümünü kullanıyorsanız veya .NET Core SDK seçeneğinin ( **Araçlar**   >  **Seçenekler**  >  **ortamı**  >  **Önizleme özellikleri** altında) kullanım önizlemelerini ayarlarsanız, ön sürüm sürümlerinin kabul edilmesi gerekir; Aksi takdirde yalnızca yayın sürümleri kabul edilir.
 - Bir SDK sürümü belirtmeyen, ancak bir değeri belirten bir *global.js* dosya bulunursa `allowPrerelease` , en yüksek yüklü SDK sürümü kullanılır (ayarına eşdeğerdir `rollForward` `latestMajor` ). En son SDK sürümünün yayınlanıp yayınlanamayacağını veya ön sürümün değerine bağlı olup olmadığı `allowPrerelease` . `true` ön sürüm sürümlerinin kabul edileceğini belirtir; `false` yalnızca yayın sürümlerinin kabul edileceğini gösterir.
 - Dosyadaki bir *global.js* bulunursa ve bir SDK sürümü belirtiyorsa:
 

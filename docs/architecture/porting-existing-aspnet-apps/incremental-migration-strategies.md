@@ -3,12 +3,12 @@ title: Artımlı geçiş stratejileri
 description: Takım, büyük uygulamaları ASP.NET MVC 'den .NET Core 'a artımlı bir biçimde geçirmeye olanak sağlayacak olan stratejileri benimseyebilirler.
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 1c962065360f37e6fc22db8bf5a73a532ae39627
-ms.sourcegitcommit: 456b3cd82a87b453fa737b4661295070d1b6d684
+ms.openlocfilehash: 384056d2e5e417c19d7edd621e3430c2cd364924
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100639215"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105965"
 ---
 # <a name="strategies-for-migrating-incrementally"></a>Artımlı geçiş stratejileri
 
@@ -24,7 +24,9 @@ Bir .NET Framework 4,5 sistem katmanını artımlı olarak yükseltmeye yönelik
 
 Uygulama ASP.NET Core 2,1 ' de çalışmaya başladıktan sonra, yalıtım ASP.NET Core 3,1 ' e geçişi nispeten basittir. Bu adım sırasında en olası zorluk, .NET Core ve büyük olasılıkla daha yüksek .NET Standard sürümleri desteklemek için uyumsuz bağımlılıkları güncelleştirmedir. Yalnızca .NET Framework kitaplıklarında sorunlu bağımlılıkları olmayan uygulamalarda, ASP.NET Core 2,1 ' e yükseltmeniz çok neden olabilir. ASP.NET Core 3,1 ' ye doğrudan taşıma daha anlamlı hale gelir ve daha az çaba gerektirir.
 
-Uygulamanın .NET Core 3,1 ' de çalıştırıldığı zamana göre, geçerli .NET 5,0 sürümüne geçiş oldukça düşüktür. İşlem öncelikle proje dosyalarınızın hedef çerçevesini ve bunlarla ilişkili NuGet paketi bağımlılıklarını güncellemeyi içerir. [Göz önünde bulundurmanız gereken](/dotnet/core/compatibility/3.1-5.0)birkaç önemli değişiklik olsa da, çoğu uygulama .net Core 3,1 ' den .NET 5,0 ' e geçmek için önemli değişiklikler gerektirmez. [.NET Core 3,1 ve .net 5,0 arasında seçim](choose-net-core-version.md)yaparken birincil karar verme faktörü büyük olasılıkla destek olabilir.
+Uygulamanın .NET Core 3,1 ' de çalıştırıldığı zamana göre, geçerli .NET 5,0 sürümüne geçiş oldukça düşüktür. İşlem öncelikle proje dosyalarınızın hedef çerçevesini ve bunlarla ilişkili NuGet paketi bağımlılıklarını güncellemeyi içerir. [Göz önünde bulundurmanız gereken](../../core/compatibility/5.0.md)birkaç önemli değişiklik olsa da, çoğu uygulama .net Core 3,1 ' den .NET 5,0 ' e geçmek için önemli değişiklikler gerektirmez. [.NET Core 3,1 ve .net 5,0 arasında seçim](choose-net-core-version.md)yaparken birincil karar verme faktörü büyük olasılıkla destek olabilir.
+
+Bir "alt yukarı" yaklaşımı yerine, başka bir alternatif de Web uygulamasıyla (veya tüm çözümle birlikte) başlamak ve yükseltmeye yardımcı olması için otomatikleştirilmiş bir araç kullanmaktır. [.NET Yükseltme Yardımcısı aracı](https://aka.ms/dotnet-upgrade-assistant) , .NET Framework uygulamalarını .NET Core/.NET 5 ' e yükseltmeye yardımcı olmak için kullanılabilir. Proje dosyası biçimini değiştirme, uygun hedef çerçeveleri ayarlama, NuGet bağımlılıklarını güncelleştirme ve daha fazlası gibi uygulamaları yükseltmeyle ilgili birçok ortak görevi otomatikleştirir.
 
 ## <a name="migrating-slice-by-slice"></a>Dilimi dilimle geçirme
 
@@ -36,7 +38,8 @@ Bu stratejiyi IIS kullanarak izlemeye yönelik bazı özel yönergeler [, Bölü
 
 - [.NET Standard nedir?](https://dotnet.microsoft.com/platform/dotnet-standard)
 - [.NET 5 tanıtımı](https://devblogs.microsoft.com/dotnet/introducing-net-5/)
-- [ASP.NET Core 3,1 ' den 5,0 ' e geçiş yapın](https://docs.microsoft.com/aspnet/core/migration/31-to-50)
+- [ASP.NET Core 3,1 ' den 5,0 ' e geçiş yapın](/aspnet/core/migration/31-to-50)
+- [.NET Yükseltme Yardımcısı aracı](https://aka.ms/dotnet-upgrade-assistant)
 
 >[!div class="step-by-step"]
 >[Önceki](choose-net-core-version.md) 

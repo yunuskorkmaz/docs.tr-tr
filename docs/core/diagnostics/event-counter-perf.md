@@ -3,12 +3,12 @@ title: .NET Core 'da EventCounters kullanarak performansı ölçme
 description: Bu öğreticide, EventCounters kullanarak performansı ölçme hakkında bilgi edineceksiniz.
 ms.date: 08/07/2020
 ms.topic: tutorial
-ms.openlocfilehash: 2ed7f234b685dab91ab275105d26b474e3bd1a87
-ms.sourcegitcommit: 3d6d6595a03915f617349781f455f838a44b0f44
+ms.openlocfilehash: bde54ce1996b2f4e2a703c23384eadece06e66cb
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2020
-ms.locfileid: "97700749"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105316"
 ---
 # <a name="tutorial-measure-performance-using-eventcounters-in-net-core"></a>Öğretici: .NET Core 'da EventCounters kullanarak performansı ölçme
 
@@ -23,11 +23,11 @@ Bu öğreticide şunları yapacaksınız:
 > - Uygulayın <xref:System.Diagnostics.Tracing.EventSource> .
 > - [DotNet sayaçları](dotnet-counters.md)olan sayaçları izleyin.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Öğretici şunları kullanır:
 
-- [.NET Core 3,1 SDK](https://dotnet.microsoft.com/download/dotnet-core) veya sonraki bir sürümü.
+- [.NET Core 3,1 SDK](https://dotnet.microsoft.com/download/dotnet) veya sonraki bir sürümü.
 - olay sayaçlarını izlemek için [DotNet sayaçları](dotnet-counters.md) .
 - Tanılama için bir [örnek hata ayıklama hedef](/samples/dotnet/samples/diagnostic-scenarios) uygulaması.
 

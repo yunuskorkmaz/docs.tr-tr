@@ -3,12 +3,12 @@ title: ASP.NET MVC ve ASP.NET Core arasındaki günlük farklılıkları
 description: ASP.NET MVC ve Web API uygulamaları ile ASP.NET Core uygulamalar arasında nasıl farklı günlüğe kaydedilir?
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: a364f761699428967b7c7b79d3f9e5103a59da14
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 0ad12463c8d13d13516ab027e56f809b67f713e4
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100488882"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105910"
 ---
 # <a name="logging-differences-between-aspnet-mvc-and-aspnet-core"></a>ASP.NET MVC ve ASP.NET Core arasındaki günlük farklılıkları
 
@@ -20,7 +20,7 @@ ASP.NET MVC ve Web API uygulamalarında yerleşik günlük çözümü yoktur. Bu
 
 ## <a name="aspnet-core-logging"></a>Günlüğe kaydetme ASP.NET Core
 
-ASP.NET Core, günlüğe kaydetme, uygulama başladığında yapılandırılabilen ve genişletilebilen [yerleşik bir özelliktir](https://docs.microsoft.com/aspnet/core/fundamentals/logging/) . Yukarıda bahsedilen gibi üçüncü taraf Günlükçüler, işlevselliğini geliştirmek için ASP.NET Core ile tümleştirilebilir.
+ASP.NET Core, günlüğe kaydetme, uygulama başladığında yapılandırılabilen ve genişletilebilen [yerleşik bir özelliktir](/aspnet/core/fundamentals/logging/) . Yukarıda bahsedilen gibi üçüncü taraf Günlükçüler, işlevselliğini geliştirmek için ASP.NET Core ile tümleştirilebilir.
 
 ASP.NET Core günlüğü, günlüğe kaydedilen ve nasıl olduğunu denetlemek için kategorileri ve düzeyleri kullanır. Sınıflar genellikle `ILogger<T>` , sınıfının genel tür olarak kullanılan türü ile arabirimin örneklerini kullanır `T` . Bu senaryoda, sınıf tam adı kategori olarak kullanılır. Günlükçüler, kullanılarak özel bir kategori ile de oluşturulabilir `ILoggerFactory` . Günlük düzeyleri en ayrıntılı, `Trace` en önemlik, en önemlik aralığıdır `Critical` . Yapılandırma kullanarak, uygulamalar kategori başına en az sayıda günlüğe kaydetme (joker karakter) temelinde ne tür bir günlük ekleneceğini belirtebilir.
 
@@ -37,7 +37,7 @@ Tipik bir günlüğe kaydetme yapılandırması `Information` , varsayılan olar
 }
 ```
 
-ASP.NET Core oturum açma desteği kapsamlı ve esnektir. Daha ayrıntılı bilgi için [belgelere bakın](https://docs.microsoft.com/aspnet/core/fundamentals/logging/).
+ASP.NET Core oturum açma desteği kapsamlı ve esnektir. Daha ayrıntılı bilgi için [belgelere bakın](/aspnet/core/fundamentals/logging/).
 
 ## <a name="migrate-logging"></a>Günlüğe kaydetmeyi geçir
 
@@ -51,7 +51,7 @@ ASP.NET Core oturum açma desteği kapsamlı ve esnektir. Daha ayrıntılı bilg
 
 ## <a name="references"></a>Başvurular
 
-- [.NET Core ve ASP.NET Core'da günlük](https://docs.microsoft.com/aspnet/core/fundamentals/logging/)
+- [.NET Core ve ASP.NET Core'da günlük](/aspnet/core/fundamentals/logging/)
 - [Microsoft. Extensions. günlük NuGet paketi](https://www.nuget.org/packages/microsoft.extensions.logging/)
 
 >[!div class="step-by-step"]

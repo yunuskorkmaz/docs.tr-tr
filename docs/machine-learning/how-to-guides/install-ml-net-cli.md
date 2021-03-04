@@ -1,16 +1,16 @@
 ---
-title: ML.NET komut satırı arabirimi (CLı) aracını yüklemek
-description: ML.NET komut satırı arabirimi (CLı) aracını yükleme, yükseltme, düşürme ve kaldırma hakkında bilgi edinin.
+title: ML.NET Command-Line Interface (CLı) aracını yüklemek
+description: ML.NET Command-Line arabirimi (CLı) aracını yükleme, yükseltme, düşürme ve kaldırma hakkında bilgi edinin.
 ms.date: 06/08/2020
 ms.custom: mlnet-tooling
-ms.openlocfilehash: 13203246411deadf3ab13a5eba0d2c8e6e9027c5
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a99ffa30dcbacba3341125fd0e37e617e0f4cd1e
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602277"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103952"
 ---
-# <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>ML.NET komut satırı arabirimi (CLı) aracını yüklemek
+# <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>ML.NET Command-Line Interface (CLı) aracını yüklemek
 
 Windows, Mac veya Linux 'a ML.NET CLı (komut satırı arabirimi) yüklemeyi öğrenin.
 
@@ -21,7 +21,7 @@ ML.NET CLı, otomatik makine öğrenimi (Otomatikml) ve bir eğitim veri kümesi
 
 ## <a name="pre-requisites"></a>Ön koşullar
 
-- [.NET Core 3,1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [.NET Core 3,1 SDK](https://dotnet.microsoft.com/download/dotnet/3.1)
 
 - Seçim [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
 
@@ -110,7 +110,7 @@ Tamamlamayı etkinleştirmek istediğiniz makinede iki şey yapmanız gerekir.
 
     - Bash için [DotNet-öner-Shim. bash](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.bash) içeriğini ' ye ekleyin `~/.bash_profile` .
 
-    - PowerShell için, [DotNet-Suggest-Shim. ps1](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.ps1) içeriğini PowerShell profilinize ekleyin. Konsolunda aşağıdaki komutu çalıştırarak, PowerShell profilinize beklenen yolu bulabilirsiniz:
+    - PowerShell için [dotnet-suggest-shim.ps1](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.ps1) içeriğini PowerShell profilinize ekleyin. Konsolunda aşağıdaki komutu çalıştırarak, PowerShell profilinize beklenen yolu bulabilirsiniz:
 
     ```console
     echo $profile

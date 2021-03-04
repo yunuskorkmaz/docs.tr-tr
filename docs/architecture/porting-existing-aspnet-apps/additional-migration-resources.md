@@ -3,12 +3,12 @@ title: Ek geçiş kaynakları
 description: Ekipler .NET Framework uygulamalarını .NET Core 'a bağlantı kurduklarında yardımcı olacak kaynakları nerede bulabilirler?
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: d730f242220d6cdff3779ffdce6208850571a0f3
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 88b31d084bdbdd4be84da4a2b02b3ced48c27025
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100488935"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106174"
 ---
 # <a name="additional-migration-resources"></a>Ek geçiş kaynakları
 
@@ -32,6 +32,7 @@ ASP.NET MVC ve/veya Web API 'sinden ASP.NET Core için geçişinizi planlama ve 
   - [Belgeler](https://github.com/dotnet/docs)
   - [Docs örnekleri](https://github.com/dotnet/samples)
   - [Dönüştürmeyi deneyin](https://github.com/dotnet/try-convert)
+  - [.NET Yükseltme Yardımcısı aracı](https://aka.ms/dotnet-upgrade-assistant)
 - [.NET mimarisi başvuru uygulamaları](https://github.com/dotnet-architecture)
   - [Eshopmodernize](https://github.com/dotnet-architecture/eShopModernizing)
   - [eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb)
@@ -56,8 +57,9 @@ YouTube, karşılaşabileceğiniz herhangi bir senaryoyu kapsayan yararlı öğr
 
 ## <a name="references"></a>Başvurular
 
-- [.NET Framework .NET Core 'a taşıma ile genel bakış](https://docs.microsoft.com/dotnet/core/porting/)
-- [ASP.NET 'den ASP.NET Core 'e geçiş](https://docs.microsoft.com/dotnet/core/porting/)
+- [.NET Framework .NET Core 'a taşıma ile genel bakış](../../core/porting/index.md)
+- [.NET Yükseltme Yardımcısı aracı](https://aka.ms/dotnet-upgrade-assistant)
+- [ASP.NET 'den ASP.NET Core 'e geçiş](/aspnet/core/migration/proper-to-2x)
 - [.NET Community kaynakları](https://dotnet.microsoft.com/platform/community)
 
 >[!div class="step-by-step"]

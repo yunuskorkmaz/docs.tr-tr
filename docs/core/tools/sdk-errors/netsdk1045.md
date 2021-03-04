@@ -5,12 +5,12 @@ ms.topic: error-reference
 ms.date: 02/12/2021
 f1_keywords:
 - NETSDK1045
-ms.openlocfilehash: 900402ae01f945b1096170ea4fc79d00ea789b62
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 7f21270fdc7c2db862a49302a302bf8121fc86a5
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100488338"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104108"
 ---
 # <a name="netsdk1045-the-current-net-sdk-does-not-support-newer-version-as-a-target"></a>NETSDK1045: geçerli .NET SDK, hedef olarak ' yeni sürümü ' desteklemez.
 
@@ -40,7 +40,7 @@ dotnet --list-sdks
 
 .NET SDK 'sının her sürümü hem x86 hem de x64 mimarisinde kullanılabilir. Proje, yanlış mimaride .NET SDK 'yı bulmaya çalışıyor veya projenizin ihtiyaç duyacağı mimariye yönelik .NET SDK 'Sı yüklenmemiş olabilir. İhtiyacınız olan mimarinin yükleme klasörlerini denetleyin. Örneğin, Windows 'ta, .NET SDK 'nın x86 sürümü *C:\Program Files (x86) \dotnet* ' ye yüklenir ve x64 sürümü *c:\Program files\dotnet* dizinine yüklenir. Bkz. [.net 'in zaten yüklü olduğunu denetleme](../../install/how-to-detect-installed-versions.md) ve makinenizde nelerin yüklü olduğunu nasıl algılayabileceğinizi öğrenmek için işletim sisteminizi seçin.
 
-İhtiyacınız olan sürüm yüklü değilse [buradan](https://dotnet.microsoft.com/download/dotnet-core)indirin.
+İhtiyacınız olan sürüm yüklü değilse, [.net İndirmeleri](https://dotnet.microsoft.com/download/dotnet) sayfasında ihtiyacınız olan birini bulun.
 
 ## <a name="preview-not-enabled"></a>Önizleme etkin değil
 

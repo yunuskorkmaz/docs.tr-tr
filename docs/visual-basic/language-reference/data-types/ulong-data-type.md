@@ -17,12 +17,12 @@ helpviewer_keywords:
 - ULong data type
 - UL literal type characters [Visual Basic]
 ms.assetid: 017e0702-774e-44ae-bedc-786b424ca84e
-ms.openlocfilehash: 9082fc9444f0754c60a6aa3f9b58db1d833349b8
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 5e47fc49e8e0a6df4d1fcc70174a8519752fd3e1
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99792095"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104828"
 ---
 # <a name="ulong-data-type-visual-basic"></a>ULong veri türü (Visual Basic)
 
@@ -49,7 +49,7 @@ Visual Basic 2017 ' den başlayarak, `_` Aşağıdaki örnekte gösterildiği gi
 
 [!code-vb[ULong](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#LongS)]
 
-Visual Basic 15,5 ' den başlayarak, alt çizgi karakterini ( `_` ) ön ek ile onaltılı, ikili veya sekizlik basamaklar arasında önde gelen bir ayırıcı olarak da kullanabilirsiniz. Örneğin:
+Visual Basic 15,5 ' den başlayarak, alt çizgi karakterini ( `_` ) ön ek ile onaltılı, ikili veya sekizlik basamaklar arasında önde gelen bir ayırıcı olarak da kullanabilirsiniz. Örnek:
 
 ```vb
 Dim number As ULong = &H_F9AC_0326_1489_D68C
@@ -67,7 +67,7 @@ Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
 
 - **Negatif sayılar.** `ULong`İşaretsiz bir tür olduğundan, negatif bir sayıyı temsil edemez. `-`Türü değerlendirilen bir ifadede birli eksi () işlecini kullanırsanız `ULong` , Visual Basic ifadeyi `Decimal` önce dönüştürür.
 
-- **CLS uyumluluğu.** `ULong`Veri türü [ortak dil belirtiminin](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS) bir parçası değildir, bu nedenle CLS uyumlu kod onu kullanan bir bileşeni tüketmez.
+- **CLS uyumluluğu.** `ULong`Veri türü [ortak dil belirtiminin](https://www.ecma-international.org/publications-and-standards/standards/ecma-335/) (CLS) bir parçası değildir, bu nedenle CLS uyumlu kod onu kullanan bir bileşeni tüketmez.
 
 - **Birlikte çalışma konuları.** Otomasyon veya COM nesneleri gibi .NET Framework için yazılmayan bileşenlerle arabirimsiz değilseniz, gibi türlerin `ulong` diğer ortamlarda farklı bir veri genişliğine (32 bit) sahip olabileceğini aklınızda bulundurun. Böyle bir bileşene 32 bitlik bir bağımsız değişken geçiriyorsa, bunu `UInteger` `ULong` yönetilen Visual Basic kodunuzda değil olarak bildirin.
 

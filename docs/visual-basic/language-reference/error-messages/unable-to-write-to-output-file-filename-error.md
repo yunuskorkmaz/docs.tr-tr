@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-ms.openlocfilehash: 4a1feff6429a5b82968d3a87e4c9c9ef80e6612a
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 86ddd01764d51c3050186e99e047edb8aba158eb
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99640907"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104814"
 ---
 # <a name="bc31019-unable-to-write-to-output-file-filename-error"></a>BC31019: ' ' çıkış dosyasına yazılamıyor \<filename> : \<error>
 
@@ -61,4 +61,4 @@ Dosya oluşturulurken bir sorun oluştu.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Bizimle iletişime geçin](/visualstudio/ide/feedback-options)
+- [Visual Studio geri bildirim seçenekleri](/visualstudio/ide/feedback-options)

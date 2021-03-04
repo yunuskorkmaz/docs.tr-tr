@@ -5,12 +5,12 @@ ms.date: 10/07/2020
 ms.topic: overview
 ms.author: tdykstra
 author: tdykstra
-ms.openlocfilehash: 896b88cbf1f7f31d2d26d69ec7d219da6b27ceff
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.openlocfilehash: 65c13239f32a0166681d7a731de84a973a627f29
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982295"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104190"
 ---
 # <a name="releases-and-support-for-net-core-and-net-5"></a>.NET Core ve .NET 5 için yayınlar ve destek
 
@@ -93,7 +93,7 @@ Bir sonraki bakım güncelleştirmesi yayımlanıncaya kadar .NET hizmet güncel
 
 Uygulamalarınızın güvenli ve desteklenen bir durumda olduğundan emin olmak için düzenli olarak bakım güncelleştirmeleri yüklemeniz gerekir. Örneğin, .NET Core 3,1 için en son bakım güncelleştirmesi 3.1.8 ve 3.1.9 gönderdiğimiz takdirde, 3.1.8 artık en son. 3,1 için desteklenen bakım düzeyi 3.1.9.
 
-Her bir birincil ve ikincil sürüm için en son bakım güncelleştirmeleri hakkında bilgi için bkz. [.net İndirmeleri sayfası](https://dotnet.microsoft.com/download/dotnet-core).
+Her bir birincil ve ikincil sürüm için en son bakım güncelleştirmeleri hakkında bilgi için bkz. [.net İndirmeleri sayfası](https://dotnet.microsoft.com/download/dotnet).
 
 ## <a name="end-of-support"></a>Destek sonu
 
@@ -107,7 +107,7 @@ Bir işletim sistemi sürümü destek dışında kaldığında, bu sürümü tes
 
 Daha fazla bilgi için bkz. [.net OS yaşam döngüsü ilkesi](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md).
 
-## <a name="get-support"></a>Destek alma
+## <a name="get-support"></a>Destek alın
 
 Microsoft yardımlı destek ve topluluk desteği arasında seçim yapabilirsiniz.
 

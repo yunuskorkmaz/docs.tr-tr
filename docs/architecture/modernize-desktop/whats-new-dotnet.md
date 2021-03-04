@@ -1,15 +1,15 @@
 ---
-title: Masaüstü için .NET yenilikleri nelerdir?
+title: Masaüstü için .NET’teki yenilikler
 description: .Net ve .NET Framework arasındaki farklar ve eklenen yeni özellikler hakkında bilgi edinin.
 ms.date: 12/29/2020
-ms.openlocfilehash: 9cae715f64e9de959b5b1ee6fb58ef381bab1040
-ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
+ms.openlocfilehash: 03dea849ad8a797b917dca953d93be6878d7ec72
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98618022"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106187"
 ---
-# <a name="whats-new-with-net-for-desktop"></a>Masaüstü için .NET yenilikleri nelerdir?
+# <a name="whats-new-with-net-for-desktop"></a>Masaüstü için .NET’teki yenilikler
 
 .NET Core 3,0 ile başlayarak, .NET Windows Forms ve WPF 'yi destekler. Bu nedenle, masaüstü uygulamalarınız için .NET Framework ve .NET arasında bir seçeneğiniz vardır. Bu bölümde, .NET nedir ve masaüstü uygulamalarına yönelik avantajları açıklanır.
 
@@ -63,7 +63,7 @@ Bu çerçeve, farklı desteklenen platformlarda paketlemeyi ve dağıtımı basi
 - .NET Core, .NET Framework, Xamarin ve mono 'nin en iyi özelliklerini alarak .NET yeteneklerini genişletin.
 - Bu ürünü, geliştiricilerin (Microsoft ve topluluk) üzerinde çalışabileceği ve birlikte ve tüm senaryoları geliştiren tek bir kod tabanında oluşturun.
 
-Bu yeni sürüm ve yön, .NET için bir oyun değiştiricisine sahiptir. .NET 5 ile kod ve proje dosyalarınız, hangi tür bir uygulama oluşturmakta olduğumdan bağımsız olarak görünür ve çalışır. Her uygulamayla aynı çalışma zamanına, API 'Lere ve dil özelliklerine erişebilirsiniz. Bu, çalışma zamanına, neredeyse günlük olarak kaydedilen yeni [performans geliştirmeleri](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-5/) içerir. Daha ayrıntılı bilgi için [.NET 5](https://docs.microsoft.com/dotnet/core/dotnet-five)sürümündeki yenilikler bölümüne bakın.
+Bu yeni sürüm ve yön, .NET için bir oyun değiştiricisine sahiptir. .NET 5 ile kod ve proje dosyalarınız, hangi tür bir uygulama oluşturmakta olduğumdan bağımsız olarak görünür ve çalışır. Her uygulamayla aynı çalışma zamanına, API 'Lere ve dil özelliklerine erişebilirsiniz. Bu, çalışma zamanına, neredeyse günlük olarak kaydedilen yeni [performans geliştirmeleri](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-5/) içerir. Daha ayrıntılı bilgi için [.NET 5](../../core/dotnet-five.md)sürümündeki yenilikler bölümüne bakın.
 
 ![.NET 5 ' in tüm etki alanları](./media/whats-new-dotnet-core/all-domains-of-dotnet5.png)
 

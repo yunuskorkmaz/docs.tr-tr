@@ -2,12 +2,12 @@
 title: Dağıtılmış izleme-.NET
 description: .NET dağıtılmış izleme 'ye giriş.
 ms.date: 02/02/2021
-ms.openlocfilehash: d29c803dfec00474562abdc61ce65ea3f3faa133
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 44022232d4451f8d8a255a352206d7bdc9cb4e5c
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100431444"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105577"
 ---
 # <a name="net-distributed-tracing"></a>.NET dağıtılmış Izleme
 
@@ -119,14 +119,14 @@ Dinleyici, izleme verilerini toplamak, örneklemek veya etkinlik nesnesinin olu�
 `ActivityListener`Sınıfı, farklı olayları işlemek için farklı geri çağrılar sağlar.
 
 ```csharp
-
-ActivityListener listener = new ActivityListener()
-
-ShouldListenTo = (activitySource) => object.ReferenceEquals(source, activitySource),
-ActivityStarted = activity => /* Handle the Activity start event here */ DoSomething(),
-ActivityStopped = activity => /* Handle the Activity stop event here */ DoSomething(),
-SampleUsingParentId = (ref ActivityCreationOptions<string> activityOptions) => ActivitySamplingResult.AllData,
-Sample = (ref ActivityCreationOptions<ActivityContext> activityOptions) => ActivitySamplingResult.AllData
+var listener = new ActivityListener
+{
+    ShouldListenTo = (activitySource) => object.ReferenceEquals(source, activitySource),
+    ActivityStarted = activity => /* Handle the Activity start event here */ DoSomething(),
+    ActivityStopped = activity => /* Handle the Activity stop event here */ DoSomething(),
+    SampleUsingParentId = (ref ActivityCreationOptions<string> activityOptions) => ActivitySamplingResult.AllData,
+    Sample = (ref ActivityCreationOptions<ActivityContext> activityOptions) => ActivitySamplingResult.AllData
+};
 
 // Enable the listener
 ActivitySource.AddActivityListener(listener);

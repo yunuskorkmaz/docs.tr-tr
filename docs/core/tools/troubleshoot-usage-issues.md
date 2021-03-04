@@ -4,12 +4,12 @@ description: .NET araçları ve olası çözümleri çalıştırırken sık kar�
 author: kdollard
 ms.topic: troubleshooting
 ms.date: 02/14/2020
-ms.openlocfilehash: c5bac4c273cdddae609657c65448e3cc4bd3579d
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 9cf0320ec5b5d6f317a4ef7f9052c0068b3ad8e5
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94633914"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104095"
 ---
 # <a name="troubleshoot-net-tool-usage-issues"></a>.NET araç kullanımı sorunlarını giderme
 
@@ -94,7 +94,7 @@ dotnet --list-runtimes
 dotnet --info
 ```
 
-Aracın şu anda yüklü olan çalışma zamanı sürümünü desteklemesi gerektiğini düşünüyorsanız, araç yazarıyla iletişim kurun ve sürüm numarasını veya çoklu hedefi güncelleştirebilir. Araç paketlerini yeniden derlendikten ve güncelleştirilmiş bir sürüm numarasıyla NuGet 'e yeniden yayınladıktan sonra, kopyanızı güncelleştirebilirsiniz. Gerçekleşmediğinden, sizin için en hızlı çözüm, çalıştırmaya çalıştığınız araçla çalışacak çalışma zamanının bir sürümünü yüklemektir. Belirli bir .NET çalışma zamanı sürümünü indirmek için [.net indirme sayfasını](https://dotnet.microsoft.com/download/dotnet-core)ziyaret edin.
+Aracın şu anda yüklü olan çalışma zamanı sürümünü desteklemesi gerektiğini düşünüyorsanız, araç yazarıyla iletişim kurun ve sürüm numarasını veya çoklu hedefi güncelleştirebilir. Araç paketlerini yeniden derlendikten ve güncelleştirilmiş bir sürüm numarasıyla NuGet 'e yeniden yayınladıktan sonra, kopyanızı güncelleştirebilirsiniz. Gerçekleşmediğinden, sizin için en hızlı çözüm, çalıştırmaya çalıştığınız araçla çalışacak çalışma zamanının bir sürümünü yüklemektir. Belirli bir .NET çalışma zamanı sürümünü indirmek için [.net indirme sayfasını](https://dotnet.microsoft.com/download/dotnet)ziyaret edin.
 
 .NET SDK 'sını varsayılan olmayan bir konuma yüklerseniz, ortam değişkenini `DOTNET_ROOT` yürütülebilir dosyayı içeren dizine ayarlamanız gerekir `dotnet` .
 

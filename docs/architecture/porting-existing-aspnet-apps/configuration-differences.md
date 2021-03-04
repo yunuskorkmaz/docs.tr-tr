@@ -3,12 +3,12 @@ title: ASP.NET MVC ve ASP.NET Core arasındaki yapılandırma farklılıkları
 description: Yapılandırma değerleri nasıl depolanır ve ASP.NET ile ASP.NET Core arasında önemli ölçüde değiştirilir. Bu bölüm, ayrıntıları ve ASP.NET 'den ASP.NET Core 'e nasıl geçiş yapılacağını inceler.
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: cdac00334f86a147dfa9c8b99412b5f3facad8fd
-ms.sourcegitcommit: 456b3cd82a87b453fa737b4661295070d1b6d684
+ms.openlocfilehash: 1e8e4d4ac408862f0216a5744476047186222304
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100639229"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106070"
 ---
 # <a name="configuration-differences-between-aspnet-mvc-and-aspnet-core"></a>ASP.NET MVC ve ASP.NET Core arasındaki yapılandırma farklılıkları
 
@@ -32,7 +32,7 @@ string connectionString =
 
 ASP.NET Core uygulamalarda, yapılandırma, yapılandırılabilir. Ancak, çoğu uygulama Standart proje şablonlarının bir parçası olarak bir dizi varsayılan kümesi kullanır ve bu `ConfigureWebHostDefaults` Yöntem içinde kullanılır. Varsayılan ayarlar, *üzerindeappsettings.Development.js* gibi ortama özgü dosyalarla *appsettings.jstemel* ayarları geçersiz KıLABILME özelliği ile JSON biçimli dosyaları kullanır. Ayrıca, varsayılan yapılandırma sistemi, dosya tabanlı tüm ayarları aynı adlandırılmış ayar için mevcut olan herhangi bir ortam değişkeniyle daha da geçersiz kılar. Bu pek çok senaryoda faydalıdır ve özellikle barındırma ortamına dağıtım yaparken yararlıdır, çünkü yapılandırma dosyalarının dağıtımı, önemli üretim yapılandırma ayarlarının yanlışlıkla üzerine yazılıp yazılmayacağı konusunda endişelenmenize gerek kalmaz. Yapılandırma değerleri, komut satırı bağımsız değişkenleri olarak da bulunabilir.
 
-Yapılandırma değerlerine erişim, .NET Core 'da birçok şekilde yapılabilir. Bağımlılık ekleme, .NET Core 'da yerleşik olduğundan, yapılandırma değerlerine genellikle gereken sınıflara eklenen bir arabirim üzerinden erişilir. Bu, gibi bir arabirimi geçirmeyi gerektirebilir <xref:Microsoft.Extensions.Configuration.IConfiguration> , ancak genellikle [Seçenekler modelini](https://docs.microsoft.com/aspnet/core/fundamentals/configuration/options)kullanarak sınıfın gerektirdiği ayarları geçirmek daha iyidir.
+Yapılandırma değerlerine erişim, .NET Core 'da birçok şekilde yapılabilir. Bağımlılık ekleme, .NET Core 'da yerleşik olduğundan, yapılandırma değerlerine genellikle gereken sınıflara eklenen bir arabirim üzerinden erişilir. Bu, gibi bir arabirimi geçirmeyi gerektirebilir <xref:Microsoft.Extensions.Configuration.IConfiguration> , ancak genellikle [Seçenekler modelini](/aspnet/core/fundamentals/configuration/options)kullanarak sınıfın gerektirdiği ayarları geçirmek daha iyidir.
 
 Şekil 2-2 `IConfiguration` ' de bir Razor sayfasına geçme ve yapılandırma ayarlarına erişme işlemlerinin nasıl yapılacağı gösterilmektedir:
 
@@ -105,9 +105,9 @@ ASP.NET uygulamasını hala koruyorsanız, statik başvuruların `ConfigurationM
 
 ## <a name="references"></a>Başvurular
 
-- [ASP.NET Core yapılandırma](https://docs.microsoft.com/aspnet/core/fundamentals/configuration/)
-- [ASP.NET Core'da seçenek deseni](https://docs.microsoft.com/aspnet/core/fundamentals/configuration/options)
-- [Yapılandırmayı ASP.NET Core geçir](https://docs.microsoft.com/aspnet/core/migration/configuration)
+- [ASP.NET Core yapılandırma](/aspnet/core/fundamentals/configuration/)
+- [ASP.NET Core'da seçenek deseni](/aspnet/core/fundamentals/configuration/options)
+- [Yapılandırmayı ASP.NET Core geçir](/aspnet/core/migration/configuration)
 - [Statik yapılandırma erişimini yeniden düzenleme](https://ardalis.com/refactoring-static-config-access/)
 
 >[!div class="step-by-step"]

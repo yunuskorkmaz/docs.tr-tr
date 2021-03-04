@@ -3,12 +3,12 @@ title: Daha fazla geçiş senaryosu
 description: Bu bölümde, .NET Framework uygulamalarını .NET Core/.NET 5 ' e yükseltmeye yönelik ek geçiş senaryoları ve teknikleri açıklanmaktadır.
 author: ardalis
 ms.date: 02/11/2021
-ms.openlocfilehash: 9bae7e5c1fa5672c21401809b7d6a256459c6281
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: fa1b756d8852854e50127ae3e7443e2949cceaa8
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100629384"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105882"
 ---
 # <a name="more-migration-scenarios"></a>Daha fazla geçiş senaryosu
 
@@ -90,7 +90,7 @@ Hiçbir yardımcı olmadığı için bir özel durum kodu döndürmediğiniz far
 
 ## <a name="migrate-content-negotiation-from-aspnet-web-api-to-aspnet-core"></a>ASP.NET Web API 'sindeki içerik anlaşmasını ASP.NET Core 'ye geçirme
 
-ASP.NET Web API 2, [içerik anlaşmasını](https://docs.microsoft.com/aspnet/web-api/overview/formats-and-model-binding/content-negotiation) yerel olarak destekler. Örnek uygulama, `BrandsController` SONUÇLARıNı XML veya JSON olarak listeleyerek bu desteği gösteren bir içerir. Bu, isteğin `Accept` üstbilgisine ve veya içerdiğinde değişikliklere dayalıdır `application/xml` `application/json` .
+ASP.NET Web API 2, [içerik anlaşmasını](/aspnet/web-api/overview/formats-and-model-binding/content-negotiation) yerel olarak destekler. Örnek uygulama, `BrandsController` SONUÇLARıNı XML veya JSON olarak listeleyerek bu desteği gösteren bir içerir. Bu, isteğin `Accept` üstbilgisine ve veya içerdiğinde değişikliklere dayalıdır `application/xml` `application/json` .
 
 ASP.NET MVC 5 uygulamalarında yerleşik olarak bulunan içerik anlaşması desteği yoktur.
 
@@ -106,7 +106,7 @@ public ActionResult Index()
 }
 ```
 
-ASP.NET Core MVC, uygun bir [dönüş türü](https://docs.microsoft.com/aspnet/core/web-api/action-return-types) kullanıldığından, [içerik anlaşmasını yerel olarak destekler](https://docs.microsoft.com/aspnet/core/web-api/advanced/formatting). İçerik anlaşması, denetleyici Yardımcısı yöntemleri tarafından döndürülen durum koduna özgü eylem sonuçları tarafından döndürülen [ObjectResult] tarafından uygulanır. ASP.NET Core MVC 'de uygulanan ve içerik anlaşmasını kullanan önceki eylem yöntemi şöyle olacaktır:
+ASP.NET Core MVC, uygun bir [dönüş türü](/aspnet/core/web-api/action-return-types) kullanıldığından, [içerik anlaşmasını yerel olarak destekler](/aspnet/core/web-api/advanced/formatting). İçerik anlaşması, denetleyici Yardımcısı yöntemleri tarafından döndürülen durum koduna özgü eylem sonuçları tarafından döndürülen [ObjectResult] tarafından uygulanır. ASP.NET Core MVC 'de uygulanan ve içerik anlaşmasını kullanan önceki eylem yöntemi şöyle olacaktır:
 
 ```csharp
 public IActionResult Index()
@@ -115,12 +115,12 @@ public IActionResult Index()
 }
 ```
 
-Bu, varsayılan olarak JSON biçimindeki verileri döndürür. [Uygulama uygun biçimlendirici ile yapılandırıldıysa](https://docs.microsoft.com/aspnet/core/web-api/advanced/formatting), XML ve diğer biçimler de kullanılacaktır.
+Bu, varsayılan olarak JSON biçimindeki verileri döndürür. [Uygulama uygun biçimlendirici ile yapılandırıldıysa](/aspnet/core/web-api/advanced/formatting), XML ve diğer biçimler de kullanılacaktır.
 
 ## <a name="references"></a>Başvurular
 
-- [ASP.NET Web API 'SI Içerik anlaşması](https://docs.microsoft.com/aspnet/web-api/overview/formats-and-model-binding/content-negotiation)
-- [ASP.NET Core Web API 'sindeki yanıt verilerini biçimlendirme](https://docs.microsoft.com/aspnet/core/web-api/advanced/formatting)
+- [ASP.NET Web API 'SI Içerik anlaşması](/aspnet/web-api/overview/formats-and-model-binding/content-negotiation)
+- [ASP.NET Core Web API 'sindeki yanıt verilerini biçimlendirme](/aspnet/core/web-api/advanced/formatting)
 
 >[!div class="step-by-step"]
 >[Önceki](example-migration-eshop.md) 

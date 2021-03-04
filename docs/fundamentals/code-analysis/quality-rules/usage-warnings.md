@@ -11,12 +11,12 @@ helpviewer_keywords:
 - usage rules
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: c8b14d2f92502d5a82e41a322e599745bdcf8b85
-ms.sourcegitcommit: a6bd4cad438fe479cbd112eae10f2cd449f06e40
+ms.openlocfilehash: b05edde3c6faef39aa724dd49d159abe23d049f5
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "96589649"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102102977"
 ---
 # <a name="usage-rules"></a>Kullanım kuralları
 
@@ -55,6 +55,6 @@ Kullanım kuralları, .NET 'in uygun kullanımını destekler.
 |[CA2244: Dizine eklenmiş öğe başlatmalarını yineleme](ca2244.md)|Bir nesne başlatıcısının aynı sabit dizine sahip birden fazla dizinli öğe başlatıcısı vardır. Son başlatıcı gereksizdir.|
 |[CA2245: Bir özelliği kendisine atama](ca2245.md)|Bir özellik yanlışlıkla kendisine atandı.|
 |[CA2246: Sembol ve üyesini aynı deyime atama](ca2246.md)|Bir sembol ve üyesini atama, diğer bir deyişle, bir alan veya özellik, aynı deyimde önerilmez. Üye erişiminin, bu deyimdeki atamadan önce simgenin eski değerini veya atamasından yeni değeri kullanması amaçlandıysa, bu, net değildir.|
-|[CA2247: TaskCompletionSource oluşturucusuna geçirilen bağımsız değişken TaskContinuationOptions sabit listesi yerine TaskCreationOptions sabit listesi olmalı](ca2246.md)|TaskCompletionSource, temel alınan görevi denetleyen TaskCreationOptions ve görevde saklanan nesne durumunu alan oluşturucuların bulunduğu oluşturuculara sahiptir.  TaskCreationOptions yerine bir TaskContinuationOptions 'ı yanlışlıkla geçirmek, çağrının durum olarak kabul edilmesine neden olur.|
+|[CA2247: TaskCompletionSource oluşturucusuna geçirilen bağımsız değişken TaskContinuationOptions sabit listesi yerine TaskCreationOptions sabit listesi olmalı](ca2247.md)|TaskCompletionSource, temel alınan görevi denetleyen TaskCreationOptions ve görevde saklanan nesne durumunu alan oluşturucuların bulunduğu oluşturuculara sahiptir.  TaskCreationOptions yerine bir TaskContinuationOptions 'ı yanlışlıkla geçirmek, çağrının durum olarak kabul edilmesine neden olur.|
 |[CA2248: ' Enum. HasFlag ' için doğru ' Enum ' bağımsız değişkenini sağlayın](ca2248.md)|Yöntem çağrısına bir bağımsız değişken olarak geçirilen sabit listesi türü, `HasFlag` çağıran enum türünden farklı.|
 |[CA2249: String.IndexOf yerine String.Contains kullanmayı düşünün](ca2249.md)|`string.IndexOf`Sonucun varlığı veya bir alt dizenin yokluğunu denetlemek için kullanıldığı yere yapılan çağrılar, ile değiştirilebilir `string.Contains` .|

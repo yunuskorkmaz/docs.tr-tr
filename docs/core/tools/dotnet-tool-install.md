@@ -2,12 +2,12 @@
 title: DotNet aracı install komutu
 description: DotNet aracı yükleme komutu, makinenizde belirtilen .NET aracını yükler.
 ms.date: 02/14/2020
-ms.openlocfilehash: 1dd870a8f91e557a2f59919682616aa8817fc070
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 5cdc0e16c964a639ebae25ac5075f186af4a9842
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634330"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105010"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
@@ -63,7 +63,7 @@ dotnet new tool-manifest
 
 Daha fazla bilgi için bkz. [yerel araç yüklemesi](global-tools.md#install-a-local-tool).
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız değişkenler
 
 - **`PACKAGE_NAME`**
 
@@ -71,15 +71,15 @@ Daha fazla bilgi için bkz. [yerel araç yüklemesi](global-tools.md#install-a-l
 
 ## <a name="options"></a>Seçenekler
 
-- **`add-source <SOURCE>`**
+- **`--add-source <SOURCE>`**
 
   Yükleme sırasında kullanmak üzere ek bir NuGet paketi kaynağı ekler.
 
-- **`configfile <FILE>`**
+- **`--configfile <FILE>`**
 
-  Kullanılacak NuGet yapılandırma ( *nuget.config* ) dosyası.
+  Kullanılacak NuGet yapılandırma (*nuget.config*) dosyası.
 
-- **`framework <FRAMEWORK>`**
+- **`--framework <FRAMEWORK>`**
 
   Aracının yükleneceği [hedef çerçeveyi](../../standard/frameworks.md) belirtir. .NET SDK varsayılan olarak en uygun hedef çerçeveyi seçmenizi dener.
 
@@ -91,7 +91,7 @@ Daha fazla bilgi için bkz. [yerel araç yüklemesi](global-tools.md#install-a-l
 
   Komut için kısa bir yardım yazdırır.
 
-- **`tool-path <PATH>`**
+- **`--tool-path <PATH>`**
 
   Genel aracın yükleneceği konumu belirtir. YOL mutlak veya göreli olabilir. YOL yoksa, komut onu oluşturmaya çalışır. Her ikisini de atlayarak `--global` `--tool-path` bir yerel araç yüklemesi belirtilir.
 

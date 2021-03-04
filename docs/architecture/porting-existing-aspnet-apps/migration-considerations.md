@@ -3,12 +3,12 @@ title: Geçiş fikirleri
 description: ASP.NET MVC 'den .NET Core 'a geçiş yapılıp yapılmayacağını ve nasıl geçirileceğiyle ilgili doğru kararı vermek için bir takımın bilmeleri gerekir mi?
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 4ae64b928b5fef75fcb16c33fb1a3a42013480cf
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 5dba4fd058f66cfc49cbd2161232df85110a28f7
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100488953"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105875"
 ---
 # <a name="migration-considerations"></a>Geçiş fikirleri
 
@@ -46,7 +46,7 @@ Modern, etkin şekilde geliştirilmiş bir teknoloji yığınında kalmakta olan
 
 ## <a name="when-is-net-framework-appropriate"></a>Ne zaman uygunsa .NET Framework?
 
-.NET Framework kalmak için en büyük neden, bir uygulamanın etkin geliştirme kapsamında olmaması ve yukarıda listelenen avantajlardan önemli ölçüde yararlanmamamadır. Bu durumda, uygulamanın taşıma maliyetine tabi olmak büyük olasılıkla iyi bir iş durumu yoktur. Uygulamanız avantajlı .NET Core tekliflerine yarar olabileceğinden, .NET Core 'da kullanılamayan belirli teknolojiler varsa .NET Framework devam etmeniz gerekebilir. Uygulama etki alanları, uzaktan Iletişim, kod erişim güvenliği (CAS), güvenlik saydamlığı ve dahil [.NET Core 'da kullanılamayan bazı .NET teknolojileri](https://docs.microsoft.com/dotnet/core/porting/net-framework-tech-unavailable)vardır `System.EnterpriseServices` . Bu teknolojilerin kısa bir özeti ve bunların alternatifleri aşağıda verilmiştir. Daha ayrıntılı rehberlik için belgelerine bakın.
+.NET Framework kalmak için en büyük neden, bir uygulamanın etkin geliştirme kapsamında olmaması ve yukarıda listelenen avantajlardan önemli ölçüde yararlanmamamadır. Bu durumda, uygulamanın taşıma maliyetine tabi olmak büyük olasılıkla iyi bir iş durumu yoktur. Uygulamanız avantajlı .NET Core tekliflerine yarar olabileceğinden, .NET Core 'da kullanılamayan belirli teknolojiler varsa .NET Framework devam etmeniz gerekebilir. Uygulama etki alanları, uzaktan Iletişim, kod erişim güvenliği (CAS), güvenlik saydamlığı ve dahil [.NET Core 'da kullanılamayan bazı .NET teknolojileri](../../core/porting/net-framework-tech-unavailable.md)vardır `System.EnterpriseServices` . Bu teknolojilerin kısa bir özeti ve bunların alternatifleri aşağıda verilmiştir. Daha ayrıntılı rehberlik için belgelerine bakın.
 
 ### <a name="application-domains"></a>Uygulama etki alanları
 
@@ -56,7 +56,7 @@ Uygulama etki alanları (AppDomain), uygulamaları birbirinden ayırır. AppDoma
 
 Sunucu tarafı WCF, .NET Core 'da desteklenmez. .NET Core, WCF ana bilgisayarlarını değil, WCF istemcilerini destekler. Bu işlevselliği gerektiren uygulamaların, geçişin bir parçası olarak farklı bir iletişim teknolojisine (gRPC veya REST gibi) yükseltilmesi gerekir.
 
-[.Net Foundation 'da kullanılabilen bir WCF istemci bağlantı noktası](https://docs.microsoft.com/dotnet/core/dotnet-five#windows-communication-foundation)vardır. Bu, tamamen açık kaynak, platformlar arası ve Microsoft tarafından desteklenmektedir. Ayrıca *, Microsoft tarafından resmi olarak* desteklenmeyen bir topluluk destekli [corewcf projesi](https://github.com/CoreWCF/CoreWCF) de mevcuttur.
+[.Net Foundation 'da kullanılabilen bir WCF istemci bağlantı noktası](../../core/dotnet-five.md#windows-communication-foundation)vardır. Bu, tamamen açık kaynak, platformlar arası ve Microsoft tarafından desteklenmektedir. Ayrıca *, Microsoft tarafından resmi olarak* desteklenmeyen bir topluluk destekli [corewcf projesi](https://github.com/CoreWCF/CoreWCF) de mevcuttur.
 
 ### <a name="remoting"></a>Uzaktan iletişim
 
@@ -68,7 +68,7 @@ Bu teknolojilerin hiçbiri .NET Core tarafından desteklenmez. Bunun yerine, iş
 
 ## <a name="references"></a>Başvurular
 
-[.NET Core 'da .NET Framework teknolojileri kullanılamıyor](https://docs.microsoft.com/dotnet/core/porting/net-framework-tech-unavailable)
+[.NET Core 'da .NET Framework teknolojileri kullanılamıyor](../../core/porting/net-framework-tech-unavailable.md)
 
 >[!div class="step-by-step"]
 >[Önceki](introduction.md) 

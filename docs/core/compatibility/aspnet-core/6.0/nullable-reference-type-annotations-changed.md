@@ -4,12 +4,12 @@ description: ASP.NET Core 6,0 ' deki, null yapılabilir başvuru türü ek açı
 author: scottaddie
 ms.author: scaddie
 ms.date: 02/16/2021
-ms.openlocfilehash: 6277b57e0340d099d11ddf2e955ab1fc969e3270
-ms.sourcegitcommit: 456b3cd82a87b453fa737b4661295070d1b6d684
+ms.openlocfilehash: e2753bc17d2a139560bde6d21c08c04aa1c314e5
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100643602"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105710"
 ---
 # <a name="nullable-reference-type-annotations-changed"></a>Null yapılabilir başvuru türü ek açıklamaları değişti
 
@@ -100,6 +100,10 @@ Düzeltilen null olabilme sözleşmelerini yansıtmak için bu API 'Leri çağı
 * <xref:Microsoft.AspNetCore.Connections.IConnectionListener.AcceptAsync(System.Threading.CancellationToken)?displayProperty=nameWithType>
 * <xref:Microsoft.AspNetCore.Authentication.AuthenticationSchemeOptions.ForwardDefaultSelector?displayProperty=nameWithType>
 * <xref:Microsoft.Net.Http.Headers.RangeConditionHeaderValue.%23ctor(Microsoft.Net.Http.Headers.EntityTagHeaderValue)?displayProperty=nameWithType>
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Ana .NET kitaplıklarında null yapılabilir başvuru türü ek açıklaması değişiklikleri](../../core-libraries/6.0/nullable-ref-type-annotation-changes.md)
 
 <!--
 

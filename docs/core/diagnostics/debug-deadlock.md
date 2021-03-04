@@ -3,12 +3,12 @@ title: Hata ayıklama kilitlenmesi-.NET Core
 description: .NET Core 'da kilitleme sorununu ayıklamada size kılavuzluk eden bir öğretici.
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: d9a9328b376de5886d22ca7315f6d7d9d73fd2c2
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0f5862c9acc4c1ae892caf29cea2ca484116cabf
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538702"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105590"
 ---
 # <a name="debug-a-deadlock-in-net-core"></a>.NET Core 'da kilitlenmeyle hata ayıklama
 
@@ -30,7 +30,7 @@ Bu öğreticide şunları yapacaksınız:
 
 Öğretici şunları kullanır:
 
-- [.NET Core 3,1 SDK](https://dotnet.microsoft.com/download/dotnet-core) veya sonraki bir sürümü
+- [.NET Core 3,1 SDK](https://dotnet.microsoft.com/download/dotnet) veya sonraki bir sürümü
 - [Örnek hata ayıklama hedefi-](/samples/dotnet/samples/diagnostic-scenarios) senaryoyu tetiklemek için Web uygulaması
 - [DotNet-](dotnet-trace.md) liste işlemlerine izleme
 - [DotNet-](dotnet-dump.md) döküm dosyasını toplamak ve analiz etmek için döküm
@@ -237,7 +237,7 @@ ComClassFactory 0
 Free            0
 ```
 
-İlgi **çekici ve** **sahip iş parçacığı bilgilerinin**iki ilginç sütunu. **Monitortutuldu** sütunu, bir iş parçacığı ve bekleme iş parçacığı sayısı tarafından bir izleyici kilidinin elde edilip edilmeyeceğini gösterir. **Sahip Iş parçacığı bilgileri** sütununda, şu anda izleyici kilidine sahip olan iş parçacığı gösterilir. İş parçacığı bilgisinde üç farklı alt sütun vardır. İkinci alt sütun, işletim sistemi iş parçacığı KIMLIĞINI gösterir.
+İlgi **çekici ve** **sahip iş parçacığı bilgilerinin** iki ilginç sütunu. **Monitortutuldu** sütunu, bir iş parçacığı ve bekleme iş parçacığı sayısı tarafından bir izleyici kilidinin elde edilip edilmeyeceğini gösterir. **Sahip Iş parçacığı bilgileri** sütununda, şu anda izleyici kilidine sahip olan iş parçacığı gösterilir. İş parçacığı bilgisinde üç farklı alt sütun vardır. İkinci alt sütun, işletim sistemi iş parçacığı KIMLIĞINI gösterir.
 
 Bu noktada, iki farklı iş parçacığını (0x5634 ve 0x51d4) bir izleyici kilidi tutabiliyoruz. Sonraki adım, bu iş parçacıklarının yaptığına göz atabilmenizdir. Kilidi sonsuza kadar sürekli olarak takılıp takıldıklarından emin olmamız gerekiyor. `setthread` `clrstack` Her iş parçacığının her birine geçiş yapmak ve çağrı yığınlarını göstermek için ve komutlarını kullanalım.
 

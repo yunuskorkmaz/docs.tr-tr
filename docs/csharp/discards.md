@@ -3,12 +3,12 @@ title: Atarsa-C# Kılavuzu
 description: ", Atanmamış, discardable değişkenleri ve atma 'un kullanılabileceği yollarla ilgili olarak, C# ' nin atma desteğini açıklar."
 ms.technology: csharp-fundamentals
 ms.date: 09/22/2020
-ms.openlocfilehash: 3c18fbb0bbb80c2c29c9f5d8334a5dd711b68cc5
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: eefa81d3bd8d56c9296e01533aaf93c4725323a3
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100432640"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104958"
 ---
 # <a name="discards---c-guide"></a>Atarsa-C# Kılavuzu
 
@@ -42,9 +42,9 @@ Kullanıcı tanımlı türleri atma ile kaldırma hakkında daha fazla bilgi iç
 
 ## <a name="pattern-matching-with-switch"></a>İle eşleşen desenler `switch`
 
-*Atma stili* , [anahtar](language-reference/keywords/switch.md) anahtar sözcüğüyle birlikte bir model eşleme içinde kullanılabilir. Her ifade her zaman atma düzeniyle eşleşir. (Bu [,,](language-reference/keywords/is.md) ifadeleriyle birlikte kullanılabilir. Bununla birlikte, atma bunun anlamı değiştirilmeden kaldırılabileceğinden, bu kullanım nadir bir durumdur.
+*Atma stili* , [anahtar ifadesiyle](language-reference/operators/switch-expression.md)birlikte bir model eşleme içinde kullanılabilir. Dahil her bir ifade, `null` her zaman atma düzeniyle eşleşir.
 
-Aşağıdaki örnek `ProvidesFormatInfo` , bir nesnenin bir uygulama verip içermediğini ve nesnenin olup olmadığını test etmek için [,,,,](language-reference/keywords/is.md) bir yöntemi tanımlar <xref:System.IFormatProvider> `null` . Ayrıca, başka bir türdeki null olmayan nesneleri işlemek için de atma modelini kullanır.
+Aşağıdaki örnek, bir `ProvidesFormatInfo` `switch` nesnenin uygulama ve test olup olmadığını belirleyen bir ifade kullanan bir yöntemi tanımlar <xref:System.IFormatProvider> `null` . Ayrıca, başka bir türdeki null olmayan nesneleri işlemek için de atma modelini kullanır.
 
 :::code language="csharp" source="snippets/discards/discard-pattern2.cs" ID="DiscardSwitchExample" :::
 
@@ -75,11 +75,11 @@ Görevi bir atılsın atamadan aşağıdaki kod bir derleyici uyarısı oluştur
 
 `_` aynı zamanda geçerli bir tanımlayıcıdır. Desteklenen bir bağlam dışında kullanıldığında, `_` atma olarak kabul edilir, ancak geçerli bir değişken olarak değerlendirilir. Adlı bir tanımlayıcı `_` zaten kapsamda ise, `_` tek başına atma olarak kullanılması şu şekilde olabilir:
 
-- İstenen atma değeri atanarak kapsam içi değişkenin değerini yanlışlıkla değiştirme `_` . Örneğin:
+- İstenen atma değeri atanarak kapsam içi değişkenin değerini yanlışlıkla değiştirme `_` . Örnek:
    :::code language="csharp" source="snippets/discards/standalone-discard2.cs" ID="VariableIdentifier" :::
-- Tür güvenliğini ihlal eden bir derleyici hatası. Örneğin:
+- Tür güvenliğini ihlal eden bir derleyici hatası. Örnek:
    :::code language="csharp" source="snippets/discards/standalone-discard2.cs" ID="VariableTypeInference" :::
-- Derleyici hatası CS0136, " \_ Bu ad bir yerel veya parametre tanımlamak için kapsayan bir yerel kapsamda kullanıldığı için," ' ' adlı yerel veya parametre bu kapsamda bildirilemez. " Örneğin:
+- Derleyici hatası CS0136, " \_ Bu ad bir yerel veya parametre tanımlamak için kapsayan bir yerel kapsamda kullanıldığı için," ' ' adlı yerel veya parametre bu kapsamda bildirilemez. " Örnek:
    :::code language="csharp" source="snippets/discards/standalone-discard2.cs" ID="CannotRedeclare" :::
 
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -2,12 +2,12 @@
 title: 'Son değişiklik: null yapılabilir başvuru türü ek açıklama değişiklikleri'
 description: Bazı null yapılabilir başvuru türü ek açıklamaların değiştiği çekirdek .NET kitaplıklarında .NET 6,0 son değişikliği hakkında bilgi edinin.
 ms.date: 02/11/2021
-ms.openlocfilehash: a0133ce49ba33d0e835b718f3f2b19180526c61b
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 105247a9e50d345697d0680edaa9e85b0c3a3762
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100488341"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105669"
 ---
 # <a name="changes-to-nullable-reference-type-annotations"></a>Null yapılabilir başvuru türü ek açıklamalarına yapılan değişiklikler
 
@@ -63,6 +63,12 @@ Aşağıdaki tabloda etkilenen API 'Ler listelenmektedir:
 | <xref:System.Data.IDataRecord.GetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)?displayProperty=nameWithType> | `buffer` parametre türü null yapılabilir | Yeni | Önizleme 1 |
 | <xref:System.Data.Common.DbDataRecord.GetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)?displayProperty=nameWithType> | `buffer` parametre türü null yapılabilir | Yeni | Önizleme 1 |
 | <xref:System.Data.Common.DbDataRecord.GetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)?displayProperty=nameWithType> | `buffer` parametre türü null yapılabilir | Yeni | Önizleme 1 |
+| <xref:System.Net.HttpListenerContext.AcceptWebSocketAsync%2A?displayProperty=fullName> | `subProtocol` parametre türü null yapılabilir | Ne | Önizleme 2 |
+| Geçersiz kılan <xref:System.Object.Equals(System.Object)?displayProperty=nameWithType> ve [çok sayıda diğerlerini döndüren `bool` ](https://github.com/dotnet/runtime/pull/47598/files) Yöntemler | `[NotNullWhen(true)]` ilk, null yapılabilir parametreye eklendi | Yeni | Önizleme 2 |
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [ASP.NET Core null yapılabilir başvuru türü ek açıklama değişiklikleri](../../aspnet-core/6.0/nullable-reference-type-annotations-changed.md)
 
 <!--
 

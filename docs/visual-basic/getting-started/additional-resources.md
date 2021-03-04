@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-ms.openlocfilehash: 4b2d671e310763e6ddfa114bd63b031afba83a20
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: 0debc2c07f0cecf1ac1ab4e4fad524cd6a114ba0
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400623"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105544"
 ---
 # <a name="additional-resources"></a>Ek kaynaklar
 
@@ -33,12 +33,13 @@ Aşağıdaki Web siteleri rehberlik sağlar ve yaygın sorunların yanıtların�
 |URL|Açıklama|
 |----------|----------------|
 |[Visual Basic belge örnekleri](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic)|Visual Basic ve .NET belgelerinin tamamında kullanılan örnekleri içerir.|
+|[Örnek tarayıcı](https://docs.microsoft.com/samples/browse/?languages=vb)|Visual Basic yazılan kod örneklerini içerir|
 
 ### <a name="forums"></a>Forumlar
 
 |URL|Açıklama|
 |----------|----------------|
-|[Visual Basic forumları](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)|Genel Visual Basic sorunları açıklanmaktadır.|
+|[Microsoft Soru-Cevap](https://docs.microsoft.com/answers/topics/dotnet-visual-basic.html)|Visual Basic programlama diliyle ilgili teknik sorular.|
 
 ### <a name="videos-and-webcasts"></a>Videolar ve Web yayınları
 
@@ -50,8 +51,8 @@ Aşağıdaki Web siteleri rehberlik sağlar ve yaygın sorunların yanıtların�
 
 |URL|Açıklama|
 |----------|----------------|
-|[Microsoft Desteği](https://support.microsoft.com)|Bilgi Bankası (KB) makalelerine, indirmelere ve güncelleştirmelere, destek Web yayınlarına ve diğer hizmetlere erişim sağlar.|
-|[Visual Studio Soruları](https://aka.ms/feedback/report?space=61)|Hataları dosyalamanıza veya Microsoft 'a .NET ve Visual Studio hakkında öneriler sağlamanıza olanak sağlar. Ayrıca, **Help**  >  Visual Studio 'da **geri bildirim gönder**  >  **sorun bildir** Yardım ' a tıklayarak da bir hata bildirebilirsiniz.|
+|[Microsoft Destek](https://support.microsoft.com)|Bilgi Bankası (KB) makalelerine, indirmelere ve güncelleştirmelere, destek Web yayınlarına ve diğer hizmetlere erişim sağlar.|
+|[Visual Studio Soruları](https://aka.ms/feedback/report?space=61)|Hataları dosyalamanıza veya Microsoft 'a .NET ve Visual Studio hakkında öneriler sağlamanıza olanak sağlar. Ayrıca,   >  Visual Studio 'da **geri bildirim gönder**  >  **sorun bildir** Yardım ' a tıklayarak da bir hata bildirebilirsiniz.|
 
 ## <a name="third-party-resources"></a>Üçüncü taraf kaynakları
 
@@ -64,4 +65,4 @@ Aşağıdaki Web siteleri rehberlik sağlar ve yaygın sorunların yanıtların�
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Basic kullanmaya başlama](index.md)
-- [Bizimle iletişime geçin](/visualstudio/ide/feedback-options)
+- [Visual Studio geri bildirim seçenekleri](/visualstudio/ide/feedback-options)

@@ -3,12 +3,12 @@ title: Yüksek CPU kullanımı hata ayıkla-.NET Core
 description: .NET Core 'da yüksek CPU kullanımında hata ayıklama konusunda size yol gösteren bir öğretici.
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: 91f31f77b54398d2f9816890338955bc9b0852e4
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 3ba07f0bb40f8128c091fa427b957d824c07bcd5
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96437825"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105368"
 ---
 # <a name="debug-high-cpu-usage-in-net-core"></a>.NET Core 'da yüksek CPU kullanımını hata ayıkla
 
@@ -30,7 +30,7 @@ Bu öğreticide şunları yapacaksınız:
 
 Öğretici şunları kullanır:
 
-- [.NET Core 3,1 SDK](https://dotnet.microsoft.com/download/dotnet-core) veya sonraki bir sürümü.
+- [.NET Core 3,1 SDK](https://dotnet.microsoft.com/download/dotnet) veya sonraki bir sürümü.
 - Senaryonun tetiklenmesi için [örnek hata ayıklama hedefi](/samples/dotnet/samples/diagnostic-scenarios) .
 - [DotNet-](dotnet-trace.md) işlem listelemek ve bir profil oluşturmak için izleyin.
 - [DotNet sayaçları](dotnet-counters.md) , CPU kullanımını izlemeye yönelik sayaçlardır.

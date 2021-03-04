@@ -5,12 +5,12 @@ author: adegeo
 ms.author: adegeo
 ms.date: 09/29/2020
 ms.custom: vs-dotnet
-ms.openlocfilehash: 6ad2b96e668c52ee80b707e31a63eac2433f3c9e
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: f196f5cfe914fe7ecddec61d2abf618c21968bbd
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756097"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105160"
 ---
 # <a name="get-started-with-net"></a>.NET kullanmaya başlama
 
@@ -20,9 +20,9 @@ Bu makalede bir "Merhaba Dünya!" oluşturma ve çalıştırma hakkında öğret
 
 ## <a name="create-an-application"></a>Uygulama oluşturma
 
-İlk olarak, bilgisayarınıza [.NET SDK 'sını](https://dotnet.microsoft.com/download/dotnet-core) indirip yükleyin.
+İlk olarak, bilgisayarınıza [.NET SDK 'sını](https://dotnet.microsoft.com/download/dotnet) indirip yükleyin.
 
-Ardından, **PowerShell**, **komut istemi**veya **Bash**gibi bir Terminal açın. `dotnet`Bir C# uygulaması oluşturmak ve çalıştırmak için aşağıdaki komutları girin:
+Ardından, **PowerShell**, **komut istemi** veya **Bash** gibi bir Terminal açın. `dotnet`Bir C# uygulaması oluşturmak ve çalıştırmak için aşağıdaki komutları girin:
 
 ```dotnetcli
 dotnet new console --output sample1

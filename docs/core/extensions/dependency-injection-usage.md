@@ -10,12 +10,12 @@ no-loc:
 - Scoped
 - Singleton
 - Example
-ms.openlocfilehash: b1e84685ad95372c4b2038e913199f7283135b71
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: d6654d5d1c8f7959e96998c18a1790cce46ebf41
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634520"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105564"
 ---
 # <a name="tutorial-use-dependency-injection-in-net"></a>Öğretici: .NET 'te bağımlılık ekleme kullanma
 
@@ -32,7 +32,7 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- [.NET Core 3,1 SDK](https://dotnet.microsoft.com/download/dotnet-core) veya üzeri.
+- [.NET Core 3,1 SDK](https://dotnet.microsoft.com/download/dotnet) veya üzeri.
 - Yeni .NET uygulamaları oluşturma ve NuGet paketleri yükleme hakkında benzerlik.
 
 ## <a name="create-a-new-console-application"></a>Yeni bir konsol uygulaması oluşturma

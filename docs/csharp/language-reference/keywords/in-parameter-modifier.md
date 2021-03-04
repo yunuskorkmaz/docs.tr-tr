@@ -5,16 +5,16 @@ ms.date: 03/19/2020
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: b9cd308a1eaf2ae8f4e3e89b1a4770933b3978cc
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 171218dcc4904b797b0c9a66b56bcb970607684e
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91188414"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104854"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>parametre değiştiricide (C# Başvurusu)
 
-`in`Anahtar sözcüğü, bağımsız değişkenlerin başvuruya göre geçirilmesine neden olur. Bir değişken olması gereken, biçimsel parametreye bağımsız değişken için bir diğer ad oluşturur. Diğer bir deyişle, parametresindeki tüm işlemler bağımsız değişkende yapılır. [Başvuru](ref.md) veya [Çıkış](out-parameter-modifier.md) anahtar kelimeleri gibidir, bu `in` bağımsız değişkenler çağrılan yöntem tarafından değiştirilemez. `ref`Bağımsız değişkenler değiştirilebilir, `out` bağımsız değişkenler çağrılan yöntemle değiştirilmelidir ve bu değişiklikler çağıran bağlamda Observable ' tır.
+`in`Anahtar sözcüğü, bağımsız değişkenlerin başvuruya göre geçirilmesine neden olur, ancak bağımsız değişkenin değiştirilmediğinden emin olun. Bir değişken olması gereken, biçimsel parametreye bağımsız değişken için bir diğer ad oluşturur. Diğer bir deyişle, parametresindeki tüm işlemler bağımsız değişkende yapılır. [Başvuru](ref.md) veya [Çıkış](out-parameter-modifier.md) anahtar kelimeleri gibidir, bu `in` bağımsız değişkenler çağrılan yöntem tarafından değiştirilemez. `ref`Bağımsız değişkenler değiştirilebilir, `out` bağımsız değişkenler çağrılan yöntemle değiştirilmelidir ve bu değişiklikler çağıran bağlamda Observable ' tır.
 
 [!code-csharp-interactive[cs-in-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/InParameterModifier.cs#1)]  
 
@@ -120,14 +120,8 @@ Bağımsız değişkenin başvuruya göre geçirildiği tek yöntem çağrısı 
 - Uzantı yönteminin ilk bağımsız değişkeni, `in` Bu bağımsız değişken bir struct olmadığı takdirde değiştiriciye sahip olamaz.
 - Bu bağımsız değişkenin genel bir tür olduğu bir genişletme yönteminin ilk bağımsız değişkeni (Bu tür bir struct gibi kısıtlanıyor olsa bile).
 
+Değiştirici hakkında daha fazla bilgi edinmek için `in` , nasıl farklılık olduğunu ve bu makalenin ne kadar uyumlu olduğunu öğrenin `ref` `out` . [](../../write-safe-efficient-code.md)
+
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>Ayrıca bkz.
-
-- [C# başvurusu](../index.md)
-- [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# anahtar sözcükleri](index.md)
-- [Yöntem Parametreleri](method-parameters.md)
-- [Güvenli verimli kod yazma](../../write-safe-efficient-code.md)

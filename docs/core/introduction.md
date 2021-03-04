@@ -4,12 +4,12 @@ description: Birçok tür uygulama oluşturmaya yönelik ücretsiz, açık kayna
 author: tdykstra
 ms.date: 11/16/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: d08e00ee9702c71cacc8a6588c1f4290b4ab3ae9
-ms.sourcegitcommit: b924ade6426cf61a4604c4e2ee54cb3592c29317
+ms.openlocfilehash: 7997346c9b248962b36688592d357247ec0ce6aa
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "101096802"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105095"
 ---
 # <a name="introduction-to-net"></a>.NET’e giriş
 
@@ -132,7 +132,7 @@ Daha fazla bilgi için bkz. [.NET Core ve .NET 5 Için yayınlar ve destek](rele
 
 [.NET SDK](sdk.md) , .NET uygulamaları geliştirmeye ve çalıştırmaya yönelik kitaplıkların ve araçların bir kümesidir.
 
-.NET 'i [indirdiğinizde](https://dotnet.microsoft.com/download/dotnet-core/), SDK 'yı veya .NET çalışma zamanı veya ASP.NET Core çalışma zamanı gibi bir *çalışma zamanını* seçebilirsiniz. .NET uygulamalarını çalıştırmaya hazırlamak istediğiniz bir makineye çalışma zamanı yükler. Geliştirme için kullanmak istediğiniz bir makineye SDK 'Yı yükler. SDK 'Yı indirdiğinizde, çalışma zamanlarını otomatik olarak alırsınız.
+.NET 'i [indirdiğinizde](https://dotnet.microsoft.com/download/dotnet), SDK 'yı veya .NET çalışma zamanı veya ASP.NET Core çalışma zamanı gibi bir *çalışma zamanını* seçebilirsiniz. .NET uygulamalarını çalıştırmaya hazırlamak istediğiniz bir makineye çalışma zamanı yükler. Geliştirme için kullanmak istediğiniz bir makineye SDK 'Yı yükler. SDK 'Yı indirdiğinizde, çalışma zamanlarını otomatik olarak alırsınız.
 
 SDK indirmesi aşağıdaki bileşenleri içerir:
 
@@ -340,7 +340,7 @@ Aynı sözcük farklı bağlamlarda farklı şekillerde kullanıldığından, .N
   |Bağlam  |"çalışma zamanı" anlamı |
   |---------|---------|
   | [Ortak Dil Çalışma Zamanı (CLR)](#clr)| Yönetilen programın yürütme ortamı. İşletim sistemi çalışma zamanı ortamının bir parçasıdır ancak .NET çalışma zamanının bir parçası değildir. |
-  | [.Net indirme sayfasında .NET çalışma zamanı](https://dotnet.microsoft.com/download/dotnet-core) | Birlikte, [çerçeveye bağımlı](#deployment-models) uygulamaları çalıştırmaya yönelik destek sağlayan [clr](#clr) ve [çalışma zamanı kitaplıkları](#runtime-libraries). Bu sayfada, ASP.NET Core Server uygulamaları ve Windows Masaüstü uygulamaları için çalışma zamanı seçenekleri de sunulur. |
+  | [.Net indirme sayfasında .NET çalışma zamanı](https://dotnet.microsoft.com/download/dotnet) | Birlikte, [çerçeveye bağımlı](#deployment-models) uygulamaları çalıştırmaya yönelik destek sağlayan [clr](#clr) ve [çalışma zamanı kitaplıkları](#runtime-libraries). Bu sayfada, ASP.NET Core Server uygulamaları ve Windows Masaüstü uygulamaları için çalışma zamanı seçenekleri de sunulur. |
   | [Çalışma zamanı tanımlayıcısı (RID)](rid-catalog.md) | .NET uygulamasının üzerinde çalıştığı işletim sistemi platformu ve CPU mimarisi. Örneğin: Windows x64, Linux x64. |
 
 * **çerçeve**
@@ -350,7 +350,7 @@ Aynı sözcük farklı bağlamlarda farklı şekillerde kullanıldığından, .N
   | .NET Framework | .NET ' in orijinal, yalnızca Windows için uygulanması. "Framework" büyük harfli. |
   | hedef çerçeve | Bir .NET uygulamasının veya kitaplığının dayandığı API 'lerin koleksiyonu. Örnekler: .NET Core 3,1, .NET Standard 2,0 |
   | Hedef çerçeve bilinen adı (tfd)  | TFD, .NET uygulaması veya kitaplığının hedef çerçevesini belirtmek için standartlaştırılmış bir belirteç biçimidir. Örnek: `net462` .NET Framework 4.6.2 için. |
-  | çerçeveye bağımlı uygulama | Yalnızca [.net indirme sayfasından](https://dotnet.microsoft.com/download/dotnet-core)çalışma zamanını yüklediğiniz bir makinede çalışabilen bir uygulama. Bu kullanımdaki "Framework", .NET indirme sayfasından indirdiğinizde "çalışma zamanı" ile aynıdır. |
+  | çerçeveye bağımlı uygulama | Yalnızca [.net indirme sayfasından](https://dotnet.microsoft.com/download/dotnet)çalışma zamanını yüklediğiniz bir makinede çalışabilen bir uygulama. Bu kullanımdaki "Framework", .NET indirme sayfasından indirdiğinizde "çalışma zamanı" ile aynıdır. |
   | çerçeve kitaplıkları | Bazen [çalışma zamanı kitaplıkları](#runtime-libraries)için bir eş anlamlı olarak kullanılır. |
 
 * **'SıNıN**

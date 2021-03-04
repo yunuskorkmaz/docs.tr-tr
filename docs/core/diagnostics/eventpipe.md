@@ -3,12 +3,12 @@ title: EventPipe genel bakış
 description: EventPipe hakkında bilgi edinin ve performans sorunlarını tanılamak üzere .NET uygulamalarınızı izlemek için nasıl kullanacağınızı öğrenin.
 ms.date: 11/09/2020
 ms.topic: overview
-ms.openlocfilehash: f315beafabbd99bf78647b3f714fd76d93fcac28
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: 213d15e48ac9d50af0c87565738f952295c4f041
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100582980"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105303"
 ---
 # <a name="eventpipe"></a>EventPipe
 
@@ -77,10 +77,11 @@ Ancak, bir uygulamada EventPipe oturumu ayarlamak ve izlemeyi doğrudan bir dosy
 
 * `COMPlus_EventPipeOutputPath`: Üzerinden çalışacak şekilde yapılandırıldığında çıkış EventPipe izleme dosyasının yolu `COMPlus_EnableEventPipe` . Varsayılan değer `trace.nettrace` , uygulamanın üzerinde çalıştığı aynı dizinde oluşturulacak olur.
 
-* `COMPlus_CircularBufferMB`: İle çalışacak şekilde yapılandırıldığında EventPipe tarafından kullanılan iç arabelleğin boyutu `COMPlus_EnableEventPipe` .
+* `COMPlus_EventPipeCircularMB`: EventPipe 'ın iç arabelleğinin megabayt cinsinden boyutunu temsil eden onaltılık bir değer. Bu yapılandırma değeri yalnızca EventPipe kullanılarak çalışacak şekilde yapılandırıldığında kullanılır `COMPlus_EnableEventPipe` . Varsayılan arabellek boyutu 10 24 MB 'tır ve bu, bu ortam değişkenine, bu yana ayarlanmış olarak çevrilir `400` `0x400`  ==  `1024` .
+
+* `COMPlus_EventPipeProcNumbers`: `1` EventPipe olay başlıklarında işlemci numaralarının yakalanmasını etkinleştirmek için bunu olarak ayarlayın. `0` varsayılan değerdir.
 
 * `COMPlus_EventPipeConfig`: EventPipe oturumu başlatılırken EventPipe oturum yapılandırmasını ayarlar `COMPlus_EnableEventPipe` .
-
   Söz dizimi şu şekildedir:
 
   `<provider>:<keyword>:<level>`

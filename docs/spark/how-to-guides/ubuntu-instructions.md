@@ -4,12 +4,12 @@ description: Ubuntu 'da Apache Spark için .NET uygulamanızı nasıl oluşturac
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 77daad7298c41d21054db9174f30a8d1ed12648d
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: ae5e0e24ef53b74bd34a2c0100c30a375d8bd71f
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687798"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103926"
 ---
 # <a name="learn-how-to-build-your-net-for-apache-spark-application-on-ubuntu"></a>Ubuntu 'da Apache Spark için .NET uygulamanızı nasıl oluşturacağınızı öğrenin
 
@@ -19,7 +19,7 @@ Bu makalede, Ubuntu üzerinde Apache Spark uygulamalarınızı .NET için nasıl
 
 Aşağıdaki önkoşulların tümüne zaten sahipseniz, [derleme](#build) adımlarına atlayın.
 
-1. **[.NET Core 3,1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1)** 'sını indirin ve yükleyin-SDK 'yı yüklemek `dotnet` yolunuza toolzincirini ekler.  .NET Core 2,1, 2,2 ve 3,1 desteklenir.
+1. **[.NET Core 3,1 SDK](https://dotnet.microsoft.com/download/dotnet/3.1)** 'sını indirin ve yükleyin-SDK 'yı yüklemek `dotnet` yolunuza toolzincirini ekler.  .NET Core 2,1, 2,2 ve 3,1 desteklenir.
 
 2. **[OpenJDK 8](https://openjdk.java.net/install/)**' i yükler.
 
@@ -113,7 +113,7 @@ Aşağıdaki önkoşulların tümüne zaten sahipseniz, [derleme](#build) adıml
 
 Bir `dotnet` `java` `mvn` `spark-shell` sonraki bölüme geçmeden önce komut satırınızdan,,,,,, ' i çalıştırabildiğinizden emin olun. Daha iyi bir yol var mı? Lütfen [bir sorun açıp](https://github.com/dotnet/spark/issues) katkıda bulunmaktan çekinmeyin.
 
-## <a name="build"></a>Yapı
+## <a name="build"></a>Oluşturma
 
 Bu kılavuzun geri kalanında, .NET Apache Spark deposunu makinenize Klonladığınız için, örneğin, `~/dotnet.spark/` .
 

@@ -3,12 +3,12 @@ title: Sınıflar ve nesneler-C# öğreticisine giriş
 description: İlk C# programınızı oluşturun ve nesne yönelimli kavramları keşfedebilirsiniz
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: a48e5790d2872ca3074bd7ce06c23412086b00f3
-ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
+ms.openlocfilehash: 1b68c6e6636c3157aaeb42aa228158ad913fc491
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99585370"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105557"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Sınıflar ve nesneler ile nesne odaklı programlamayı keşfet
 
@@ -16,7 +16,7 @@ Bu öğreticide, bir konsol uygulaması oluşturacaksınız ve C# dilinin bir pa
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Öğretici, yerel geliştirme için ayarlanmış bir makineniz olmasını bekler. Windows, Linux veya macOS 'ta, uygulamaları oluşturmak, derlemek ve çalıştırmak için .NET CLı kullanabilirsiniz. Windows 'ta, Visual Studio 2019 ' i kullanabilirsiniz. Kurulum yönergeleri için bkz. [Yerel ortamınızı ayarlama](local-environment.md).
+Öğretici, yerel geliştirme için ayarlanmış bir makineniz olmasını bekler. Windows, Linux veya macOS 'ta, uygulamaları oluşturmak, derlemek ve çalıştırmak için .NET CLı kullanabilirsiniz. Windows 'ta, Visual Studio 2019 ' i kullanabilirsiniz. Kurulum yönergeleri için bkz. [Yerel ortamınızı ayarlama](../../tour-of-csharp/tutorials/local-environment.md).
 
 ## <a name="create-your-application"></a>Uygulamanızı oluşturma
 

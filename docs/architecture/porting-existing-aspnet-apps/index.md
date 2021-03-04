@@ -3,12 +3,12 @@ title: Mevcut ASP.NET uygulamalarını .NET Core 'a taşıma
 description: ASP.NET MVC ve Web API uygulamalarını ASP.NET Core dönüştürmeye yönelik ücretsiz kılavuz.
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 36c0cdbe03fb97ae82336d53e15be2108e9c6367
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 848f0e9533a65b59055853f1d502307abb69118c
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100488884"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105951"
 ---
 # <a name="porting-existing-aspnet-apps-to-net-core"></a>Mevcut ASP.NET uygulamalarını .NET Core 'a taşıma
 
@@ -62,7 +62,7 @@ Bu kılavuzda .NET Core 3,1 sürümü ile aynı teknoloji "Wave" (yani Azure ve 
 
 ## <a name="who-should-use-this-guide"></a>Bu kılavuzu kimler kullanmalıdır?
 
-Bu kılavuzun hedef kitlesi, ASP.NET MVC ve Web API 'SI (.NET Framework 4. x) için yazılmış mevcut uygulamalarını .NET Core 'a geçirmeye ilgilenen geliştiriciler, geliştirme müşteri adayları ve mimarlardır. ASP.NET Web Forms geliştiriciler bu kılavuzdan faydalanır, ancak [ASP.NET Web Forms geliştiricileri](https://docs.microsoft.com/dotnet/architecture/blazor-for-web-forms-developers/) e-book için Blazor ' i de okumalı.
+Bu kılavuzun hedef kitlesi, ASP.NET MVC ve Web API 'SI (.NET Framework 4. x) için yazılmış mevcut uygulamalarını .NET Core 'a geçirmeye ilgilenen geliştiriciler, geliştirme müşteri adayları ve mimarlardır. ASP.NET Web Forms geliştiriciler bu kılavuzdan faydalanır, ancak [ASP.NET Web Forms geliştiricileri](../blazor-for-web-forms-developers/index.md) e-book için Blazor ' i de okumalı.
 
 İkincil bir hedef kitle, uygulamalarını .NET Core 'a ne zaman taşıyacağınız teknik karar verme mekanizmalarıdır.
 

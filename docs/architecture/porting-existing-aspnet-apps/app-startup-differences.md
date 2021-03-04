@@ -3,12 +3,12 @@ title: ASP.NET MVC ve ASP.NET Core arasındaki uygulama başlatma farklılıklar
 description: ASP.NET MVC ve ASP.NET Core uygulamaların nasıl çalıştığı konusunda önemli ölçüde farklılık gösterir. Önemli farklılıkları ve ASP.NET MVC 'den ASP.NET Core geçiş yapmayı öğrenin.
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 4f40bb9cf616ea67b9826ff6a9dfe1c21cd1ea07
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: eaf8d8fac42ddebbb944273b672666e0bd2b1a67
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100488932"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106167"
 ---
 # <a name="app-startup-differences-between-aspnet-mvc-and-aspnet-core"></a>ASP.NET MVC ve ASP.NET Core arasındaki uygulama başlatma farklılıkları
 
@@ -20,7 +20,7 @@ IIS 'de barındırılan ASP.NET Apps, belirli nesneleri başlatmak ve bir istek 
 
 ASP.NET MVC ve Web API için birçok NuGet paketi, uygulamanın başlatılması sırasında bazı kodlar çalıştırmaya izin vermek için [Webactivator](https://github.com/davidebbo/WebActivator) paketini kullanır. Kurala göre, bu kod genellikle bir *App_Start* klasöre eklenir ve özniteliği aracılığıyla hemen önce veya hemen sonrasında çalıştırılacak şekilde yapılandırılır `Application_Start` .
 
-Ayrıca, [.net (OWıN) Için açık Web arabirimi ve ASP.NET MVC Ile proje Katana](https://docs.microsoft.com/aspnet/aspnet/overview/owin-and-katana/getting-started-with-owin-and-katana)öğesini kullanmak da mümkündür. Bu durumda, uygulama ASP.NET Core, istek ara yazılımı ayarlamanın ne kadar davranına benzer bir şekilde ayarlamaktan sorumlu bir *Startup.cs* dosyası içerir.
+Ayrıca, [.net (OWıN) Için açık Web arabirimi ve ASP.NET MVC Ile proje Katana](/aspnet/aspnet/overview/owin-and-katana/getting-started-with-owin-and-katana)öğesini kullanmak da mümkündür. Bu durumda, uygulama ASP.NET Core, istek ara yazılımı ayarlamanın ne kadar davranına benzer bir şekilde ayarlamaktan sorumlu bir *Startup.cs* dosyası içerir.
 
 ASP.NET MVC uygulamanız başlatıldığında kodu çalıştırmanız gerekirse, genellikle bu yaklaşımlardan birini kullanacaktır.
 
@@ -51,7 +51,7 @@ public class Program
 
 `Startup`Sınıfı, ana bilgisayar için iki yöntem sunar: `ConfigureServices` ve `Configure` . `ConfigureServices`Yöntemi, uygulamanın kullanacağı Hizmetleri ve ilgili yaşam sürelerini tanımlamak için kullanılır. `Configure`Yöntemi, bir uygulamaya yönelik her isteğin, ara yazılım tarafından oluşturulan bir istek işlem hattı ayarlanarak nasıl işleneceğini tanımlamak için kullanılır.
 
-Uygulamanın hizmetlerini veya istek işlem hattını yapılandırma ile ilgili kodun yanı sıra, uygulamalar uygulama başladığında çalışması gereken başka bir koda de sahip olabilir. Bu tür kodlar genellikle *program.cs* ' a yerleştirilir veya olarak kaydedilir ve `IHostedService` uygulama başlatıldığında [genel ana bilgisayar](https://docs.microsoft.com/aspnet/core/fundamentals/host/generic-host?view=aspnetcore-3.1&preserve-view=true) tarafından başlatılır.
+Uygulamanın hizmetlerini veya istek işlem hattını yapılandırma ile ilgili kodun yanı sıra, uygulamalar uygulama başladığında çalışması gereken başka bir koda de sahip olabilir. Bu tür kodlar genellikle *program.cs* ' a yerleştirilir veya olarak kaydedilir ve `IHostedService` uygulama başlatıldığında [genel ana bilgisayar](/aspnet/core/fundamentals/host/generic-host?preserve-view=true&view=aspnetcore-3.1) tarafından başlatılır.
 
 `IHostedService`Arabirim yalnızca iki yöntem sunar `StartAsync` ve `StopAsync` . Arabirimini ' a kaydedersiniz `ConfigureServices` ve konak, uygulama başlamadan önce yöntemi çağıran geri kalanı yapar `StartAsync` .
 
@@ -61,13 +61,13 @@ Uygulamalarını ASP.NET MVC 'den ASP.NET Core 'e geçirmek isteyen ekipler, uyg
 
 ## <a name="references"></a>Başvurular
 
-- [IIS 7 için ASP.NET uygulama yaşam döngüsüne genel bakış](https://docs.microsoft.com/previous-versions/aspnet/bb470252(v=vs.100))
-- [IIS 5 ve 6 için ASP.NET uygulama yaşam döngüsüne genel bakış](https://docs.microsoft.com/previous-versions/aspnet/ms178473(v=vs.100))
-- [OWIN ve Katana ile Çalışmaya Başlama](https://docs.microsoft.com/aspnet/aspnet/overview/owin-and-katana/getting-started-with-owin-and-katana)
+- [IIS 7 için ASP.NET uygulama yaşam döngüsüne genel bakış](/previous-versions/aspnet/bb470252(v=vs.100))
+- [IIS 5 ve 6 için ASP.NET uygulama yaşam döngüsüne genel bakış](/previous-versions/aspnet/ms178473(v=vs.100))
+- [OWIN ve Katana ile Çalışmaya Başlama](/aspnet/aspnet/overview/owin-and-katana/getting-started-with-owin-and-katana)
 - [WebActivator](https://github.com/davidebbo/WebActivator)
-- [ASP.NET Core 'de uygulama başlatma](https://docs.microsoft.com/aspnet/core/fundamentals/startup?view=aspnetcore-3.1&preserve-view=true)
-- [ASP.NET Core .NET genel ana bilgisayarı](https://docs.microsoft.com/aspnet/core/fundamentals/host/generic-host?view=aspnetcore-3.1&preserve-view=true)
-- [Ihostedservice](https://docs.microsoft.com/dotnet/architecture/microservices/multi-container-microservice-net-applications/background-tasks-with-ihostedservice)
+- [ASP.NET Core 'de uygulama başlatma](/aspnet/core/fundamentals/startup?preserve-view=true&view=aspnetcore-3.1)
+- [ASP.NET Core .NET genel ana bilgisayarı](/aspnet/core/fundamentals/host/generic-host?preserve-view=true&view=aspnetcore-3.1)
+- [Ihostedservice](../microservices/multi-container-microservice-net-applications/background-tasks-with-ihostedservice.md)
 
 >[!div class="step-by-step"]
 >[Önceki](architectural-differences.md) 

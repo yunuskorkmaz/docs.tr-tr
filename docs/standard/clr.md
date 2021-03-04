@@ -17,12 +17,12 @@ helpviewer_keywords:
 - code, runtime functionality
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 ms.custom: updateeachrelease
-ms.openlocfilehash: 917649475271c288516f9eb0913a0959601427af
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 89aa77f7704a1d8caba12369cb82fff131a8aab0
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823881"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103653"
 ---
 # <a name="common-language-runtime-clr-overview"></a>Ortak dil çalışma zamanı (CLR) genel bakış
 
@@ -63,7 +63,7 @@ Dil derleyicileri ve araçları, çalışma zamanının işlevselliğini gelişt
 
 ## <a name="clr-versions"></a>CLR sürümleri
 
-.NET Core ve .NET 5 + sürümlerinin tek bir ürün sürümü vardır, diğer bir deyişle, ayrı bir CLR sürümü yoktur. .NET Core sürümlerinin listesi için bkz. [.NET Core 'U indirme](https://dotnet.microsoft.com/download/dotnet-core).
+.NET Core ve .NET 5 + sürümlerinin tek bir ürün sürümü vardır, diğer bir deyişle, ayrı bir CLR sürümü yoktur. .NET Core sürümlerinin listesi için bkz. [.NET Core 'U indirme](https://dotnet.microsoft.com/download/dotnet).
 
 Ancak .NET Framework sürüm numarası, içerdiği CLR 'nin sürüm numarasına karşılık gelmez. .NET Framework sürümlerinin ve bunlara karşılık gelen CLR sürümlerinin listesi için, bkz. [.NET Framework sürümler ve bağımlılıklar](../framework/migration-guide/versions-and-dependencies.md).
 

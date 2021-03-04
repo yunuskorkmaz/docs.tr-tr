@@ -4,12 +4,12 @@ description: Hangi Windows sürümlerini .NET yükleyebileceğinizi öğrenin.
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 55746b29b579a6d3aacb7d11c5604dc601440ab5
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: 7909a94c6384e53569db3ba17047cbcc93e80fe1
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99506298"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105108"
 ---
 # <a name="install-net-on-windows"></a>Windows 'a .NET yükler
 
@@ -24,7 +24,7 @@ Bu makalede, Windows 'a .NET yüklemeyi öğreneceksiniz. .NET çalışma zaman�
 En son .NET sürümü 5,0 ' dir.
 
 > [!div class="button"]
-> [.NET İndir](https://dotnet.microsoft.com/download/dotnet-core)
+> [.NET İndir](https://dotnet.microsoft.com/download/dotnet)
 
 ## <a name="supported-releases"></a>Desteklenen yayınlar
 
@@ -76,7 +76,7 @@ Windows 'a yükleyebileceğiniz üç farklı çalışma zamanı vardır:
   Bu çalışma zamanı, en basit çalışma zamanı ve başka bir çalışma zamanı içermez. .NET uygulamalarıyla en iyi uyumluluk için hem *ASP.NET Core çalışma zamanını* hem de *Masaüstü çalışma zamanını* yüklemenizi öneririz.
 
 > [!div class="button"]
-> [.NET çalışma zamanını indirin](https://dotnet.microsoft.com/download/dotnet-core)
+> [.NET çalışma zamanını indirin](https://dotnet.microsoft.com/download/dotnet)
 
 ## <a name="sdk-information"></a>SDK bilgileri
 
@@ -263,12 +263,12 @@ Visual Studio Code, masaüstünüzde çalışan güçlü ve hafif bir kaynak kod
 Visual Studio Code, Visual Studio gibi otomatikleştirilmiş bir .NET Core yükleyicisi ile birlikte gelmediğinden, .NET Core desteği eklemek basittir.
 
 01. [Visual Studio Code indirin ve yükleyin](https://code.visualstudio.com/Download).
-01. [.NET Core SDK indirin ve yükleyin](https://dotnet.microsoft.com/download/dotnet-core).
+01. [.NET Core SDK indirin ve yükleyin](https://dotnet.microsoft.com/download/dotnet).
 01. [Visual Studio Code marketi 'Nden C# uzantısını yükler](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
 
 ## <a name="windows-installer"></a>Windows Installer
 
-.NET için [karşıdan yükleme sayfası](https://dotnet.microsoft.com/download/dotnet-core) Windows ınstaller yürütülebilir dosyaları sağlar.
+.NET için [karşıdan yükleme sayfası](https://dotnet.microsoft.com/download/dotnet) Windows ınstaller yürütülebilir dosyaları sağlar.
 
 .NET yüklemek için Windows yükleyicilerini kullandığınızda, ve parametrelerini ayarlayarak yükleme yolunu özelleştirebilirsiniz `DOTNETHOME_X64` `DOTNETHOME_X86` :
 
@@ -298,14 +298,14 @@ Daha fazla bilgi için bkz. [Standart yükleyici Command-Line seçenekleri](/win
 
 ## <a name="download-and-manually-install"></a>İndirme ve el ile yükleme
 
-.NET için Windows yükleyicilerine alternatif olarak SDK veya çalışma zamanını indirip el ile yükleyebilirsiniz. El ile yüklemeyi, genellikle sürekli tümleştirme testinin bir parçası olarak yapılır. Bir geliştirici veya Kullanıcı için genellikle bir [Yükleyici](https://dotnet.microsoft.com/download/dotnet-core)kullanmak daha iyidir.
+.NET için Windows yükleyicilerine alternatif olarak SDK veya çalışma zamanını indirip el ile yükleyebilirsiniz. El ile yüklemeyi, genellikle sürekli tümleştirme testinin bir parçası olarak yapılır. Bir geliştirici veya Kullanıcı için genellikle bir [Yükleyici](https://dotnet.microsoft.com/download/dotnet)kullanmak daha iyidir.
 
 Hem .NET SDK hem de .NET çalışma zamanı indirildikten sonra el ile yüklenebilir. .NET SDK 'yı yüklerseniz, ilgili çalışma zamanını yüklemeniz gerekmez. İlk olarak, aşağıdaki sitelerden birinden SDK veya çalışma zamanı için ikili bir sürüm indirin:
 
 - [.NET 5,0 İndirmeleri](https://dotnet.microsoft.com/download/dotnet/5.0)
-- [.NET Core 3,1 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-- [.NET Core 2,1 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/2.1)
-- [Tüm .NET Core İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core)
+- [.NET Core 3,1 İndirmeleri](https://dotnet.microsoft.com/download/dotnet/3.1)
+- [.NET Core 2,1 İndirmeleri](https://dotnet.microsoft.com/download/dotnet/2.1)
+- [Tüm .NET Core İndirmeleri](https://dotnet.microsoft.com/download/dotnet)
 
 Örneğin, .NET ' i ayıklamak için bir dizin oluşturun `%USERPROFILE%\dotnet` . Ardından, indirilen ZIP dosyasını bu dizine ayıklayın.
 

@@ -3,12 +3,12 @@ title: Büyük çözümleri ASP.NET Core geçirin
 description: Büyük ASP.NET MVC uygulamalarının ASP.NET Core nasıl geçirileceğiyle bir bakış.
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: e0fcf4b975678e81a71bac800cbe8bd01f1b8d17
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: d3ebd71213e074ce80dc83fc3230c4e365275ad3
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100488955"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105889"
 ---
 # <a name="migrate-large-solutions-to-aspnet-core"></a>Büyük çözümleri ASP.NET Core geçirin
 
@@ -21,7 +21,7 @@ Bu bölümde, büyük bir çözüm için geçiş planı oluşturma, geçişe yar
 ## <a name="references"></a>Başvurular
 
 - [Büyük MVC ve Web API uygulamalarını .NET Core 'a geçirmek için hangi konular önemlidir?](https://twitter.com/ardalis/status/1313669040859217921)
-- [.NET Framework 'den .NET Core 'a taşıma](https://docs.microsoft.com/dotnet/core/porting/)
+- [.NET Framework 'den .NET Core 'a taşıma](../../core/porting/index.md)
 
 >[!div class="step-by-step"]
 >[Önceki](testing-differences.md) 

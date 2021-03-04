@@ -10,18 +10,18 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: 6db16a86e949fb50254c301f5e5ac0904a6072a4
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 59928ce89dacc47534a1e7cb5ed0603d259b5a4e
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063605"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104815"
 ---
 # <a name="c-programming-guide"></a>C# programlama kılavuzu
 
 Bu bölüm, .NET aracılığıyla C# tarafından erişilebilen temel C# dil özellikleri ve özellikleri hakkında ayrıntılı bilgi sağlar.  
   
- Bu bölümün çoğu, C# ve genel programlama kavramları hakkında bir şeyi zaten bildiğiniz varsayılmaktadır. Programlama veya C# ile tam bir başlangıç yapıyorsanız, önceden programlama bilgisi gerekli olmayan [C# öğreticilerine](../tutorials/intro-to-csharp/index.md) veya [.net-tarayıcı öğreticisine](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)giriş ' i ziyaret etmek isteyebilirsiniz.  
+ Bu bölümün çoğu, C# ve genel programlama kavramları hakkında bir şeyi zaten bildiğiniz varsayılmaktadır. Programlama veya C# ile ücretsiz bir başlangıç yapıyorsanız, daha önce programlama bilgisi gerekmediği [C# öğreticilerine](../tour-of-csharp/tutorials/index.md) veya [.net In-Browser öğreticisine](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)giriş hakkında bilgi almak isteyebilirsiniz.  
   
  Belirli anahtar sözcükler, işleçler ve Önişlemci yönergeleri hakkında daha fazla bilgi için bkz. [C# başvurusu](../language-reference/index.md). C# dil belirtimi hakkında daha fazla bilgi için bkz. [C# dil belirtimi](/dotnet/csharp/language-reference/language-specification/introduction).  
   
@@ -29,7 +29,7 @@ Bu bölüm, .NET aracılığıyla C# tarafından erişilebilen temel C# dil öze
 
 [C# programı içinde](./inside-a-program/index.md)  
   
-[Main () ve komut satırı bağımsız değişkenleri](./main-and-command-args/index.md)  
+[Main () ve Command-Line bağımsız değişkenleri](./main-and-command-args/index.md)  
 
 ## <a name="language-sections"></a>Dil bölümleri
 
@@ -51,7 +51,7 @@ Bu bölüm, .NET aracılığıyla C# tarafından erişilebilen temel C# dil öze
   
  [Dizin Oluşturucular](./indexers/index.md)  
   
- [Olaylar](./events/index.md)  
+ [Ekinlikler](./events/index.md)  
   
  [Genel Türler](./generics/index.md)  
   
@@ -59,7 +59,7 @@ Bu bölüm, .NET aracılığıyla C# tarafından erişilebilen temel C# dil öze
   
  [LINQ sorgu Ifadeleri](../linq/index.md)  
   
- [Ad Alanları](./namespaces/index.md)  
+ [Ad alanları](./namespaces/index.md)  
   
  [Güvenli Olmayan Kod ve İşaretçiler](./unsafe-code-pointers/index.md)  
   

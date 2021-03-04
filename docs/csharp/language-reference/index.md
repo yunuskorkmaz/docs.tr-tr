@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: 663d08921b1fb6c5013ce8dddb044ba12ead8409
-ms.sourcegitcommit: 4f5f1855849cb02c3b610c7006ac21d7429f3348
+ms.openlocfilehash: dfbf7a2548f403bce895d388fe2cd1483e092b2e
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98235241"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104069"
 ---
 # <a name="c-reference"></a>C# başvurusu
 
@@ -44,7 +44,7 @@ Bu bölümde C# anahtar kelimeleri, işleçler, özel karakterler, Önişlemci y
  C# derleyici hatalarının ve uyarılarının nedenini ve düzeltmesini gösteren kod parçacıkları içerir.  
   
  [C# dil belirtimi](../../../_csharplang/spec/introduction.md)  
- C# 6,0 dil belirtimi. Bu, C# 6,0 diline yönelik taslak bir önersahiptir. Bu belge, ECMA C# standartları Komitesi ile çalışma aracılığıyla iyileştirilmelidir. Sürüm 5,0, [standart ECMA-334 5 sürümü](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf) belgesi olarak 2017 Aralık 'ta yayımlanmıştır.
+ C# 6,0 dil belirtimi. Bu, C# 6,0 diline yönelik taslak bir önersahiptir. Bu belge, ECMA C# standartları Komitesi ile çalışma aracılığıyla iyileştirilmelidir. Sürüm 5,0, [standart ECMA-334 5 sürümü](https://www.ecma-international.org/wp-content/uploads/ECMA-334_5th_edition_december_2017.pdf) belgesi olarak 2017 Aralık 'ta yayımlanmıştır.
 
 6,0 sonrasında C# sürümlerinde uygulanan özellikler, dil belirtimi tekliflerinde temsil edilir. Bu belgeler, bu yeni özellikleri eklemek için dil belirtimine yönelik değişimleri ' i anlatmaktadır. Bunlar taslak teklif formundadır. Bu belirtimler, resmi İnceleme için ECMA standartları Komitesi ve C# standardının gelecek bir sürümüne kurulduğu gönderilir.
 

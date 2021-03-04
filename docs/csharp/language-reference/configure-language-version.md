@@ -3,12 +3,12 @@ title: C# dil sürümü oluşturma-C# Kılavuzu
 description: C# dil sürümünün projenize göre nasıl belirlendiği ve bu seçimin arkasındaki nedenler hakkında bilgi edinin. Varsayılanı el ile nasıl geçersiz kılacağınızı öğrenin.
 ms.custom: updateeachrelease
 ms.date: 08/11/2020
-ms.openlocfilehash: fb4a869fe67b3292ba430ea563bc2a072590adb2
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: 3473ad62bd0c7d5fb98fd14f9697a422702cf156
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100582152"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104082"
 ---
 # <a name="c-language-versioning"></a>C# dil sürümü oluşturma
 
@@ -79,7 +79,7 @@ Birden çok proje yapılandırmak için, öğesini içeren bir **Dizin. Build. p
 </Project>
 ```
 
-Bu dosyayı içeren dizinin tüm alt dizinlerindeki derlemeler, Preview C# sürümünü kullanacaktır. Daha fazla bilgi için, [yapınızı özelleştirme](/visualstudio/msbuild/customize-your-build)başlıklı makaleye bakın.
+Bu dosyayı içeren dizinin tüm alt dizinlerindeki derlemeler, Preview C# sürümünü kullanacaktır. Daha fazla bilgi için bkz. [yapınızı özelleştirme](/visualstudio/msbuild/customize-your-build).
 
 ## <a name="c-language-version-reference"></a>C# dil sürümü başvurusu
 
@@ -94,7 +94,7 @@ Aşağıdaki tabloda tüm geçerli C# dil sürümleri gösterilmektedir. Daha es
 > csc -langversion:?
 > ```
 >
-> Bunun gibi [-langversion](compiler-options/langversion-compiler-option.md) derleme seçeneğini Sorga benzemekle, aşağıdakine benzer bir şey yazdıracaktır:
+> [-Langversion](compiler-options/langversion-compiler-option.md) derleme seçeneğinin sorgulanması şuna benzer bir şey yazdırır:
 >
 > ```CMD
 > Supported language versions:

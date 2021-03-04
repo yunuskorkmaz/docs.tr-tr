@@ -2,12 +2,12 @@
 title: DotNet-symbol Tanılama aracı-.NET CLı
 description: .NET dökümlerinde ve mini dökümlerinde hata ayıklamak için gereken dosyaları indirmek için DotNet-symbol CLı aracını yüklemeyi ve kullanmayı öğrenin.
 ms.date: 11/17/2020
-ms.openlocfilehash: 69c05544e886d9d41113c8a2383f760b85d01124
-ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
+ms.openlocfilehash: 5cc304a3917921a964ceb61bc2c58e942b0baa85
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97765000"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105329"
 ---
 # <a name="symbol-downloader-dotnet-symbol"></a>Sembol yükleyici (DotNet-Symbol)
 
@@ -97,7 +97,7 @@ dotnet-symbol --host-only --debugging <dump file path>
 
 - sembol indirilirken 404 bulunamadı.
 
-   Sembol indirme yalnızca resmi [Web sitesi](https://dotnet.microsoft.com/download/dotnet-core) gibi resmi kanallar aracılığıyla elde edilen resmi .NET Core çalışma zamanı sürümleri ve [DotNet yükleme betiklerindeki varsayılan kaynaklar](../tools/dotnet-install-script.md)için desteklenir. Hata ayıklama dosyalarını karşıdan yüklerken 404 hatası, döküm dosyasının yerel olarak veya belirli bir Linux dışından oluşturulmuş bir .NET Core çalışma zamanı ile oluşturulduğunu veya arşiv Linux gibi topluluk sitelerini gösteriyor olabilir. Bu gibi durumlarda, hata ayıklama için gereken dosya (DotNet, libcoreclr.so ve libmscordaccore.so) bu kaynaklardan veya döküm dosyasının oluşturulduğu ortamdan kopyalanmalıdır.
+   Sembol indirme yalnızca resmi [Web sitesi](https://dotnet.microsoft.com/download/dotnet) gibi resmi kanallar aracılığıyla elde edilen resmi .NET Core çalışma zamanı sürümleri ve [DotNet yükleme betiklerindeki varsayılan kaynaklar](../tools/dotnet-install-script.md)için desteklenir. Hata ayıklama dosyalarını karşıdan yüklerken 404 hatası, döküm dosyasının yerel olarak veya belirli bir Linux dışından oluşturulmuş bir .NET Core çalışma zamanı ile oluşturulduğunu veya arşiv Linux gibi topluluk sitelerini gösteriyor olabilir. Bu gibi durumlarda, hata ayıklama için gereken dosya (DotNet, libcoreclr.so ve libmscordaccore.so) bu kaynaklardan veya döküm dosyasının oluşturulduğu ortamdan kopyalanmalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

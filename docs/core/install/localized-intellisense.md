@@ -2,12 +2,12 @@
 title: Yerelleştirilmiş IntelliSense dosyalarını yükler
 description: Geliştirme makinenizi, Visual Studio 'daki .NET 5 + projeleri (.NET Core dahil) için yerelleştirilmiş IntelliSense dosyalarını kullanacak şekilde ayarlamayı öğrenin.
 ms.date: 11/06/2020
-ms.openlocfilehash: 45eeae12ca79179cacb3d48fca28118de70e0a4f
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: febd748429dd3a2e13460354eb7402d25515f934
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506772"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105212"
 ---
 # <a name="how-to-install-localized-intellisense-files-for-net"></a>.NET için yerelleştirilmiş IntelliSense dosyalarını nasıl yükleyeceğiniz
 
@@ -16,9 +16,9 @@ ms.locfileid: "94506772"
 - Bu dosyaların yerelleştirilmiş sürümünü nasıl yükleyeceksiniz.
 - Visual Studio yüklemesini farklı bir dil kullanacak şekilde değiştirme.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
-- [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download/dotnet-core) veya [.NET 5 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)gibi sonraki bir sürüm.
+- [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download/dotnet) veya [.NET 5 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)gibi sonraki bir sürüm.
 - [Visual Studio 2019 sürüm 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) veya sonraki bir sürümü.
 
 ## <a name="download-and-install-the-localized-intellisense-files"></a>Yerelleştirilmiş IntelliSense dosyalarını indirme ve yükleme
@@ -79,7 +79,7 @@ Visual Studio 'nun IntelliSense için farklı bir dil kullanabilmesi için, uygu
 
 1. Bilgisayarınızda Visual Studio Yükleyicisi bulun.
 
-   Örneğin, Windows 10 çalıştıran bir bilgisayarda **Başlat** ' ı seçin ve ardından **Visual Studio yükleyicisi** olarak listelendiği **V** harfine gidin.
+   Örneğin, Windows 10 çalıştıran bir bilgisayarda **Başlat**' ı seçin ve ardından **Visual Studio yükleyicisi** olarak listelendiği **V** harfine gidin.
 
    ![Visual Studio Yükleyicisi Windows 'tan açın](./media/localized-intellisense/vs-installer-windows-start.png)
 
@@ -90,7 +90,7 @@ Visual Studio 'nun IntelliSense için farklı bir dil kullanabilmesi için, uygu
 
    Devam etmeden önce yükleyiciyi güncelleştirmeniz gerekebilir. Bu durumda, istemleri izleyin.
 
-1. Yükleyicide, dil paketini eklemek istediğiniz Visual Studio sürümünü bulun ve ardından **Değiştir** ' i seçin.
+1. Yükleyicide, dil paketini eklemek istediğiniz Visual Studio sürümünü bulun ve ardından **Değiştir**' i seçin.
 
    ![Visual Studio 'Yu güncelleştirme veya değiştirme](./media/localized-intellisense/vs-installer-modify.png)
 
@@ -102,7 +102,7 @@ Visual Studio 'nun IntelliSense için farklı bir dil kullanabilmesi için, uygu
 
    ![Visual Studio dil paketleri sekmesi](./media/localized-intellisense/vs-modify-language-packs.png)
 
-1. **Değiştir** 'i seçin. Güncelleştirme başlar.
+1. **Değiştir**'i seçin. Güncelleştirme başlar.
 
 ### <a name="modify-language-settings-in-visual-studio"></a>Visual Studio 'da dil ayarlarını değiştirme
 
@@ -110,11 +110,11 @@ Visual Studio 'nun IntelliSense için farklı bir dil kullanabilmesi için, uygu
 
 1. Visual Studio'yu açın.
 
-1. Başlangıç penceresinde, **kod olmadan devam et** ' i seçin.
+1. Başlangıç penceresinde, **kod olmadan devam et**' i seçin.
 
-1. Menü çubuğunda **Araçlar**  >  **Seçenekler** ' i seçin. Seçenekler iletişim kutusu açılır.
+1. Menü çubuğunda **Araçlar**  >  **Seçenekler**' i seçin. Seçenekler iletişim kutusu açılır.
 
-1. **Ortam** düğümü altında **Uluslararası ayarlar** ' ı seçin.
+1. **Ortam** düğümü altında **Uluslararası ayarlar**' ı seçin.
 
 1. **Dil** açılan çubuğunda istediğiniz dili seçin. **Tamam ' ı** seçin.
 

@@ -4,12 +4,12 @@ description: Linux üzerinde bir paket yöneticisi olmadan .NET SDK ve .NET çal
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 14789587a58c7b9d5ef2c9251ed599ce18a48f24
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: 414246e472c3d58a6768311bd7a4635100f3b618
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99505582"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105186"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-manually"></a>.NET SDK veya .NET çalışma zamanını el ile yükleyebilirsiniz
 
@@ -111,9 +111,9 @@ Paket yöneticilerine alternatif olarak SDK ve çalışma zamanını indirip el 
 .NET SDK 'yı yüklerseniz, ilgili çalışma zamanını yüklemeniz gerekmez. İlk olarak, aşağıdaki sitelerden birinden SDK veya çalışma zamanı için **ikili** bir sürüm indirin:
 
 - ✔️ [.net 5,0 İndirmeleri](https://dotnet.microsoft.com/download/dotnet/5.0)
-- ✔️ [.NET Core 3,1 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-- ✔️ [.NET Core 2,1 İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core/2.1)
-- [Tüm .NET Core İndirmeleri](https://dotnet.microsoft.com/download/dotnet-core)
+- ✔️ [.NET Core 3,1 İndirmeleri](https://dotnet.microsoft.com/download/dotnet/3.1)
+- ✔️ [.NET Core 2,1 İndirmeleri](https://dotnet.microsoft.com/download/dotnet/2.1)
+- [Tüm .NET Core İndirmeleri](https://dotnet.microsoft.com/download/dotnet)
 
 Ardından, indirilen dosyayı ayıklayın ve `export` .NET tarafından kullanılan değişkenleri ayarlamak için komutunu kullanın ve ardından .net 'ın yol içinde olduğundan emin olun.
 
@@ -133,7 +133,7 @@ export PATH=$PATH:$DOTNET_ROOT
 > [!TIP]
 > Yukarıdaki `export` Komutlar yalnızca .net CLI komutlarını çalıştırıldığı terminal oturumu için kullanılabilir hale getirir.
 >
-> Komutları kalıcı olarak eklemek için kabuk profilinizi düzenleyebilirsiniz. Linux için kullanılabilen birçok farklı kabuk vardır ve her birinin farklı bir profili vardır. Örneğin:
+> Komutları kalıcı olarak eklemek için kabuk profilinizi düzenleyebilirsiniz. Linux için kullanılabilen birçok farklı kabuk vardır ve her birinin farklı bir profili vardır. Örnek:
 >
 > - **Bash kabuğu**: *~/.bash_profile*, *~/,bashrc*
 > - **Korn kabuğu**: *~/,KSHRC* veya *. Profile*

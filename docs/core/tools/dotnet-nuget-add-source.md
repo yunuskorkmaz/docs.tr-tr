@@ -2,12 +2,12 @@
 title: DotNet NuGet Kaynak Ekle komutu
 description: DotNet NuGet Kaynak Ekle komutu, NuGet yapılandırma dosyalarınıza yeni bir paket kaynağı ekler.
 ms.date: 03/20/2020
-ms.openlocfilehash: b847d987de2d88cb3452d32d1bc84232a1e20b6e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: df31a2eaba997d0e9fe4f4c2666052fd7c7c2f03
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537979"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105057"
 ---
 # <a name="dotnet-nuget-add-source"></a>dotnet nuget add source
 
@@ -27,11 +27,14 @@ dotnet nuget add source <PACKAGE_SOURCE_PATH> [--name <SOURCE_NAME>] [--username
 dotnet nuget add source -h|--help
 ```
 
-## <a name="description"></a>Description
+## <a name="description"></a>Açıklama
 
 `dotnet nuget add source`Komut, NuGet yapılandırma dosyalarınıza yeni bir paket kaynağı ekler.
 
-## <a name="arguments"></a>Arguments
+> [!WARNING]
+> Birden çok paket kaynağı eklerken, bir [bağımlılık karışıklık güvenlik açığı](https://aka.ms/pkg-sec-wp)tanıtmamaya dikkat edin.
+
+## <a name="arguments"></a>Bağımsız değişkenler
 
 - **`PACKAGE_SOURCE_PATH`**
 

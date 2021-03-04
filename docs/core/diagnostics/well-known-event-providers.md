@@ -3,12 +3,12 @@ title: .NET 'teki iyi bilinen olay sağlayıcıları
 description: .NET çalışma zamanı ve kitaplıkları tarafından yayımlanan sağlayıcıları ve olayları gözden geçirin.
 ms.topic: reference
 ms.date: 12/21/2020
-ms.openlocfilehash: 03d505f33e300b094958676bb768fb542d828aeb
-ms.sourcegitcommit: c3093e9d106d8ca87cc86eef1f2ae4ecfb392118
+ms.openlocfilehash: 37aa9551397bb3e3e8858a1289ddc3921327b722
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97738206"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105173"
 ---
 # <a name="well-known-event-providers-in-net"></a>.NET 'teki iyi bilinen olay sağlayıcıları
 
@@ -113,3 +113,9 @@ Bu sağlayıcı, Görev Zamanlayıcı olayları gibi [görev paralel kitaplığ�
 ASP.NET Core Ayrıca, ASP.NET Core yığınındaki sorunları tanılamanıza yardımcı olacak çeşitli olaylar sağlar.
 
 ASP.NET Core olaylar ve bunların nasıl kullanılacağı hakkında daha fazla bilgi edinmek için bkz. [.NET Core 'Da günlüğe kaydetme ve ASP.NET Core](/aspnet/core/fundamentals/logging/).
+
+## <a name="entity-framework-core"></a>Entity Framework Çekirdek
+
+EF Core Ayrıca, EF Core sorunları tanılamanıza yardımcı olacak olaylar da sağlar.
+
+EF Core olaylar ve bunları kullanma hakkında daha fazla bilgi edinmek için, bkz. [EF Core .net Events](/ef/core/logging-events-diagnostics/events).

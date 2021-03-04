@@ -15,12 +15,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: be2311c601effbebd519e33b7a5e13d49f44bd05
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: c881abc3e88df4c1855a0faa29936621a4488078
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687493"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103060"
 ---
 # <a name="how-to-view-assembly-contents"></a>Nasıl yapılır: derleme içeriğini görüntüleme
 
@@ -120,7 +120,7 @@ Aşağıdaki tabloda, örnekte kullanılan *Hello.exe* derlemesinin derleme bild
 Bütünleştirilmiş kod bildirimi, derlemenin içeriğine bağlı olarak bir dizi farklı yönergeler içerebilir. Derleme bildirimindeki yönergelerin kapsamlı bir listesi için, bkz. ECMA belgeleri, özellikle "Bölüm II: meta veri tanımı ve semantiği" ve "Bölüm III: CıL yönerge kümesi":
 
 - [ECMA C# ve ortak dil altyapısı standartları](../components.md#applicable-standards)
-- [Standart ECMA-335-ortak dil altyapısı (CLı)](http://www.ecma-international.org/publications/standards/Ecma-335.htm)
+- [Standart ECMA-335-ortak dil altyapısı (CLı)](https://www.ecma-international.org/publications-and-standards/standards/ecma-335/)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

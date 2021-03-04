@@ -17,12 +17,12 @@ helpviewer_keywords:
 - UI literal type characters [Visual Basic]
 - data types [Visual Basic], integral
 ms.assetid: db7ddd34-4f23-46f5-84dd-8b0f83bb8729
-ms.openlocfilehash: 5202619909de4a132bda8ab3dca63337c6f3493f
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: c3c04f746f0e2cf15bc1881544b93a538dbdc04e
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99792108"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104841"
 ---
 # <a name="uinteger-data-type"></a>UInteger veri türü
 
@@ -49,7 +49,7 @@ Visual Basic 2017 ' den başlayarak, `_` Aşağıdaki örnekte gösterildiği gi
 
 [!code-vb[UInteger](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UIntS)]
 
-Visual Basic 15,5 ' den başlayarak, alt çizgi karakterini ( `_` ) ön ek ile onaltılı, ikili veya sekizlik basamaklar arasında önde gelen bir ayırıcı olarak da kullanabilirsiniz. Örneğin:
+Visual Basic 15,5 ' den başlayarak, alt çizgi karakterini ( `_` ) ön ek ile onaltılı, ikili veya sekizlik basamaklar arasında önde gelen bir ayırıcı olarak da kullanabilirsiniz. Örnek:
 
 ```vb
 Dim number As UInteger = &H_0F8C_0326
@@ -69,7 +69,7 @@ Dim number = &H_0FAC_14D7ui
 
 - **Negatif sayılar.** `UInteger`İşaretsiz bir tür olduğundan, negatif bir sayıyı temsil edemez. `-`Türü değerlendirilen bir ifadede birli eksi () işlecini kullanırsanız `UInteger` , Visual Basic ifadeyi `Long` önce dönüştürür.
 
-- **CLS uyumluluğu.** `UInteger`Veri türü [ortak dil belirtiminin](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS) bir parçası değildir, bu nedenle CLS uyumlu kod onu kullanan bir bileşeni tüketmez.
+- **CLS uyumluluğu.** `UInteger`Veri türü [ortak dil belirtiminin](https://www.ecma-international.org/publications-and-standards/standards/ecma-335/) (CLS) bir parçası değildir, bu nedenle CLS uyumlu kod onu kullanan bir bileşeni tüketmez.
 
 - **Birlikte çalışma konuları.** Otomasyon veya COM nesneleri gibi .NET Framework için yazılmayan bileşenlerle ilgili bir arabirimleriniz varsa, gibi türlerin `uint` diğer ortamlarda farklı bir veri genişliğine (16 bit) sahip olabileceğini göz önünde bulundurun. Böyle bir bileşene 16 bitlik bir bağımsız değişken geçirirseniz, bunu `UShort` `UInteger` yönetilen Visual Basic kodunuzda değil olarak bildirin.
 

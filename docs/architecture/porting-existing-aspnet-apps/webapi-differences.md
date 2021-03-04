@@ -3,12 +3,12 @@ title: ASP.NET Web API 2 ve ASP.NET Core karşılaştırın
 description: Web API 'Leri ASP.NET Web API 2 uygulamaları ve ASP.NET Core uygulamalar arasında farklılık gösterir?
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 02e243591c0a6815cfe8371fbbc0b45a1cf22651
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 93aa917174bce24fdf924f6372312c3972473289
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100488938"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105730"
 ---
 # <a name="compare-aspnet-web-api-2-and-aspnet-core"></a>ASP.NET Web API 2 ve ASP.NET Core karşılaştırın
 
@@ -20,7 +20,7 @@ ASP.NET Web API 2 ' den ASP.NET Core geçiş yaparken, geçiş basittir. Büyük
 
 ## <a name="references"></a>Başvurular
 
-- [ASP.NET Web API 'sinden ASP.NET Core 'e geçiş](https://docs.microsoft.com/aspnet/core/migration/webapi)
+- [ASP.NET Web API 'sinden ASP.NET Core 'e geçiş](/aspnet/core/migration/webapi)
 - [Ardalış. ApiEndpoints NuGet paketi](https://www.nuget.org/packages/Ardalis.ApiEndpoints/)
 
 >[!div class="step-by-step"]

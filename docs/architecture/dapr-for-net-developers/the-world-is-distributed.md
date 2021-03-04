@@ -3,12 +3,12 @@ title: Dünya dağıtıldı
 description: Tek parçalı ve SOA yaklaşımları ile Dağıtılmış uygulamaların avantajları ve güçlükleri.
 author: robvet
 ms.date: 02/07/2021
-ms.openlocfilehash: ce3bfff94aa4136eb177bcc727a552c3f4d600fd
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: b857355880c3942526d751312d98f2b822704759
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100629438"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106201"
 ---
 # <a name="the-world-is-distributed"></a>Dünya dağıtıldı
 
@@ -31,13 +31,13 @@ Başlamak için geri sarın ve son 15 yıla göz atalım. Bu süre boyunca, gene
 
 Tek sunuculu bir işlemde sıralama, kimlik ve pazarlama modüllerinin nasıl yürütüleceğini aklınızda edin. Uygulama verileri paylaşılan bir veritabanında depolanır. İş işlevselliği, HTML ve yeniden oluşturulan arayüzler aracılığıyla sunulur.
 
-Birçok şekilde tek parçalı uygulamalar vardır `straightforward` . Bunlar basittir...
+Birçok şekilde tek parçalı uygulamalar vardır `straightforward` . Bunlar basittir:
 
-- derleme
-- test
-- deploy
-- troubleshoot
-- dikey olarak Ölçeklendir (ölçeği büyütme)
+- Oluşturma
+- Test
+- Dağıtma
+- Sorun giderme
+- Dikey olarak Ölçeklendir (ölçeği büyütme)
 
 Ancak, tek parçalı mimarilerin önemli güçlükleri olabilir.
 
@@ -53,7 +53,7 @@ Zaman içinde, denetimin kaybedilme işlemini yaptığınız bir noktaya ulaşab
 - Kod tabanı, ' de hiçbir zaman sonlandırma "özel durumlar" ile bir arada bulunan mimari Eroi 'ler olarak ayarlanır.
 - Danışmanların sonunda yer aldığı ve yeniden yazmanız söylüyoruz.
 
-BT uygulayıcıları bu durumu çağırır `the Fear Cycle` . Teknoloji işletmenizde herhangi bir süre boyunca karşılaştıysanız, bu sorunla karşılaştık. BT bütçenize neşeli ve BT bütçenizi tüketmektedir. Yeni ve yenilikçi çözümler oluşturmak yerine, bütçeniz büyük çoğunluğunda eski uygulamalar korunmaya harcanacak.
+BT uygulayıcıları bu durumu çağırır `the Fear Cycle` . Teknoloji işletmenizde herhangi bir süre boyunca karşılaştıysanız, bu sorunla karşılaştık. BT bütçenize neşeli ve BT bütçenizi tüketmektedir. Yeni ve yenilikçi çözümler oluşturmak yerine, bütçelerinizdeki çoğu eski uygulamaları korumak için kullanılır.
 
 Korku yerine işletmeler gerekir `speed and agility` . Bunlar, piyasa koşullarına hızlı yanıt verebilecekleri mimari bir stil arar. Canlı bir uygulamanın küçük bölümlerini güncelleştirmek ve tek tek ölçeklendirmek anında gerekir.
 

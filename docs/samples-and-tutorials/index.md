@@ -4,16 +4,16 @@ description: .NET Core, ASP.NET Core ve .NET hakkında bilgi edinmenize yardımc
 author: BillWagner
 ms.author: wiwagn
 ms.date: 02/01/2021
-ms.openlocfilehash: c7bbb99eeb4e00771cd1e4a3ab33b7690620b194
-ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
+ms.openlocfilehash: 35cc5e74e764148b072438eea994905df778c835
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99585734"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103575"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET örnekleri ve öğreticiler
 
-.NET belgeleri size .NET hakkında bilgi veren bir örnek ve öğretici kümesi içerir. Bu makalede, .NET, ASP.NET Core ve C# örnekleri ile öğreticilerinin nasıl bulunacağı, görüntüleneceği ve indirileceği açıklanır. F [# Foundation sitesinde](https://fsharp.org/learn/)f # programlama dilini öğrenmek için kaynakları bulun. Bir çevrimiçi kod Düzenleyicisi kullanarak C# ' yi keşfetmeye ilgileniyorsanız, [Bu etkileşimli öğreticiyle](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1) başlayın ve [c# etkileşimli öğreticisiyle](../csharp/tutorials/intro-to-csharp/index.md)devam edin. Örnek kodun nasıl görüntüleneceği ve indirileceği hakkında yönergeler için, [örnekleri görüntüleme ve indirme](#view-and-download-samples) bölümüne bakın.
+.NET belgeleri size .NET hakkında bilgi veren bir örnek ve öğretici kümesi içerir. Bu makalede, .NET, ASP.NET Core ve C# örnekleri ile öğreticilerinin nasıl bulunacağı, görüntüleneceği ve indirileceği açıklanır. F [# Foundation sitesinde](https://fsharp.org/learn/)f # programlama dilini öğrenmek için kaynakları bulun. Bir çevrimiçi kod Düzenleyicisi kullanarak C# ' yi keşfetmeye ilgileniyorsanız, [Bu etkileşimli öğreticiyle](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1) başlayın ve [c# etkileşimli öğreticisiyle](../csharp/tour-of-csharp/tutorials/index.md)devam edin. Örnek kodun nasıl görüntüleneceği ve indirileceği hakkında yönergeler için, [örnekleri görüntüleme ve indirme](#view-and-download-samples) bölümüne bakın.
 
 ## <a name="net"></a>.NET
 

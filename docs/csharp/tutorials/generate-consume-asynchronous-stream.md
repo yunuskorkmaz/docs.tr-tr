@@ -4,18 +4,18 @@ description: Bu gelişmiş öğreticide, zaman uyumsuz akışlar oluşturma ve k
 ms.date: 02/10/2019
 ms.technology: csharp-async
 ms.custom: mvc
-ms.openlocfilehash: fd9fed3469d18c919102640df7bb501b116f5e0e
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 376db8a84a789697ccb8e286cb66a074c8890b99
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420376"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103198"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>Öğretici: C# 8,0 ve .NET Core 3,0 kullanarak zaman uyumsuz akışlar oluşturma ve kullanma
 
-C# 8,0, akış veri kaynağını modelleyebilir ve **zaman uyumsuz akışları**tanıtır. Veri akışları genellikle zaman uyumsuz olarak öğeleri alır veya oluşturur. Zaman uyumsuz akışlar .NET Standard 2,1 ' de tanıtılan yeni arabirimleri kullanır. Bu arabirimler .NET Core 3,0 ve üzeri sürümlerde desteklenir. Bunlar, zaman uyumsuz akış veri kaynakları için doğal bir programlama modeli sağlar.
+C# 8,0, akış veri kaynağını modelleyebilir ve **zaman uyumsuz akışları** tanıtır. Veri akışları genellikle zaman uyumsuz olarak öğeleri alır veya oluşturur. Zaman uyumsuz akışlar .NET Standard 2,1 ' de tanıtılan yeni arabirimleri kullanır. Bu arabirimler .NET Core 3,0 ve üzeri sürümlerde desteklenir. Bunlar, zaman uyumsuz akış veri kaynakları için doğal bir programlama modeli sağlar.
 
-Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
+Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 
 > [!div class="checklist"]
 >
@@ -24,7 +24,7 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > - Zaman uyumsuz akışlar için iptal ve yakalanan bağlamlara destek.
 > - Yeni arabirim ve veri kaynağı daha önceki zaman uyumlu veri dizileri için tercih edildiği zaman tanıyın.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 C# 8,0 derleyicisi dahil olmak üzere makinenizi .NET Core çalıştıracak şekilde ayarlamanız gerekir. C# 8 derleyicisi, [Visual Studio 2019 sürüm 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) veya [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download)ile başlayarak kullanılabilir.
 
@@ -48,7 +48,7 @@ Başlangıç uygulaması, [DotNet/docs](https://github.com/dotnet/docs) deposund
 
 :::code language="csharp" source="snippets/generate-consume-asynchronous-streams/start/Program.cs" id="SnippetStarterAppMain" :::
 
-`GitHubKey`Kişisel erişim belirtecinize bir ortam değişkeni ayarlayabilir veya çağrısındaki son bağımsız değişkeni `GenEnvVariable` kişisel erişim belirtecinizle değiştirebilirsiniz. Kaynağı başkalarıyla paylaşacaksanız, erişim kodunuzu kaynak koda yerleştirmeyin. Erişim kodlarını bir paylaşılan kaynak deposuna hiçbir daha yükleme.
+`GitHubKey`Kişisel erişim belirtecinize bir ortam değişkeni ayarlayabilir veya çağrısındaki son bağımsız değişkeni `GetEnvVariable` kişisel erişim belirtecinizle değiştirebilirsiniz. Kaynağı başkalarıyla paylaşacaksanız, erişim kodunuzu kaynak koda yerleştirmeyin. Erişim kodlarını bir paylaşılan kaynak deposuna hiçbir daha yükleme.
 
 GitHub istemcisini oluşturduktan sonra, içindeki kod `Main` bir ilerleme raporlama nesnesi ve bir iptal belirteci oluşturur. Bu nesneler oluşturulduktan sonra, `Main` `runPagedQueryAsync` en son 250 oluşturulan sorunları almak için çağırır. Bu görev bittikten sonra sonuçlar görüntülenir.
 
@@ -60,7 +60,7 @@ Uygulama, önceki bölümde ele alınan davranışı neden gözlemlediğinizi or
 
 :::code language="csharp" source="snippets/generate-consume-asynchronous-streams/start/Program.cs" id="SnippetRunPagedQuery" :::
 
-Yukarıdaki kodun disk belleği algoritmasına ve zaman uyumsuz yapısına odaklanalım. (GitHub GraphQL API 'SI ile ilgili ayrıntılar için [GitHub graphql belgelerine](https://developer.github.com/v4/guides/) başvurabilirsiniz.) `runPagedQueryAsync`Yöntemi en sonuncudan en eskiye doğru olan sorunları numaralandırır. Sayfa başına 25 sorun ister ve `pageInfo` önceki sayfaya devam etmek için yanıtın yapısını inceler. Bu, çok sayfalı yanıtlar için GraphQL 'in standart disk belleği desteğini izler. Yanıt, `pageInfo` bir `hasPreviousPages` değeri ve `startCursor` önceki sayfayı istemek için kullanılan bir değeri içeren bir nesnesi içerir. Sorunlar `nodes` dizide bulunur. `runPagedQueryAsync`Yöntemi, tüm sayfalardaki sonuçları içeren bir diziye bu düğümleri ekler.
+Yukarıdaki kodun disk belleği algoritmasına ve zaman uyumsuz yapısına odaklanalım. (GitHub GraphQL API 'SI ile ilgili ayrıntılar için [GitHub graphql belgelerine](https://developer.github.com/v4/guides/) başvurabilirsiniz.) `runPagedQueryAsync` Yöntemi en sonuncudan en eskiye doğru olan sorunları numaralandırır. Sayfa başına 25 sorun ister ve `pageInfo` önceki sayfaya devam etmek için yanıtın yapısını inceler. Bu, çok sayfalı yanıtlar için GraphQL 'in standart disk belleği desteğini izler. Yanıt, `pageInfo` bir `hasPreviousPages` değeri ve `startCursor` önceki sayfayı istemek için kullanılan bir değeri içeren bir nesnesi içerir. Sorunlar `nodes` dizide bulunur. `runPagedQueryAsync`Yöntemi, tüm sayfalardaki sonuçları içeren bir diziye bu düğümleri ekler.
 
 Bir sonuç sayfasını aldıktan ve geri yükledikten sonra, `runPagedQueryAsync` ilerlemeyi raporlar ve iptal olup olmadığını denetler. İptal isteniyorsa, `runPagedQueryAsync` bir oluşturur <xref:System.OperationCanceledException> .
 
@@ -82,7 +82,7 @@ Bu üç arabirim çoğu C# geliştiricisi için tanıdık olmalıdır. Zaman uyu
 - <xref:System.Collections.Generic.IEnumerator%601?displayProperty=nameWithType>
 - <xref:System.IDisposable?displayProperty=nameWithType>
 
-Alışkın olabilecek bir tür <xref:System.Threading.Tasks.ValueTask?displayProperty=nameWithType> . `ValueTask`Struct, sınıfa benzer BIR API sağlar <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> . `ValueTask`performans nedenleriyle bu arabirimlerde kullanılır.
+Alışkın olabilecek bir tür <xref:System.Threading.Tasks.ValueTask?displayProperty=nameWithType> . `ValueTask`Struct, sınıfa benzer BIR API sağlar <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> . `ValueTask` performans nedenleriyle bu arabirimlerde kullanılır.
 
 ## <a name="convert-to-async-streams"></a>Zaman uyumsuz akışlara Dönüştür
 

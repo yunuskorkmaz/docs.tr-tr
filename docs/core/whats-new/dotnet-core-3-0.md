@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 1e48f2f83b65ef934c7c460d42f05e2f8de04cbd
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: bab14ec385ca6e4d71919ddaebd6d49ee8d002e0
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96437900"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104997"
 ---
 # <a name="whats-new-in-net-core-30"></a>​.NET Core 3.0’daki yenilikler
 
@@ -263,7 +263,7 @@ Bağlama ve Razor sayfası yayımlama gibi bazı işlemler, yayımlamayı gerekt
 
 Yerel araçlar, geçerli dizininizde bir bildirim dosyası adına bağımlıdır `dotnet-tools.json` . Bu bildirim dosyası, bu klasörde ve altında kullanılabilecek araçları tanımlar. Kodunuzla çalışan herkesin aynı araçları geri yükleyip kullanabilmesini sağlamak için, bildirim dosyasını kodunuzla dağıtabilirsiniz.
 
-Hem genel hem de yerel araçlar için, çalışma zamanının uyumlu bir sürümü gereklidir. Şu anda NuGet.org hedef .NET Core çalışma zamanı 2,1 ' de birçok araç. Bu araçları küresel olarak veya yerel olarak yüklemek için, hala [NET Core 2,1 çalışma zamanını](https://dotnet.microsoft.com/download/dotnet-core/2.1)yüklemeniz gerekir.
+Hem genel hem de yerel araçlar için, çalışma zamanının uyumlu bir sürümü gereklidir. Şu anda NuGet.org hedef .NET Core çalışma zamanı 2,1 ' de birçok araç. Bu araçları küresel olarak veya yerel olarak yüklemek için, hala [NET Core 2,1 çalışma zamanını](https://dotnet.microsoft.com/download/dotnet/2.1)yüklemeniz gerekir.
 
 ### <a name="new-globaljson-options"></a>Seçenekler üzerinde yeni global.js
 

@@ -3,12 +3,12 @@ title: ASP.NET Core için eShop 'ın örnek geçişi
 description: Bir başvuru olarak örnek bir çevrimiçi mağaza uygulaması kullanarak, mevcut bir ASP.NET MVC uygulamasını ASP.NET Core 'e geçirmeye yönelik yönergeler.
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 8175e24cbc82c8ce36d302c9e5f6376994668171
-ms.sourcegitcommit: 456b3cd82a87b453fa737b4661295070d1b6d684
+ms.openlocfilehash: 83110909632e4eb433e1fabaedf3490ce594e12e
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100639296"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106084"
 ---
 # <a name="example-migration-of-eshop-to-aspnet-core"></a>ASP.NET Core için eShop 'ın örnek geçişi
 
@@ -22,11 +22,13 @@ Projenin ilk sürümü Şekil 4-1 ' de gösterilmiştir. Bu, oldukça standart b
 
 **Şekil 4-1.** MVC örnek proje yapısı *Eshopmodernize* .
 
+Bu bölümde, el ile Yükseltme adımlarının çoğunun nasıl gerçekleştirileceği gösterilmektedir. Alternatif olarak, proje dosyasını dönüştürme, hedef çerçeveyi değiştirme ve NuGet paketlerini güncelleştirme gibi ilk adımların çoğunu gerçekleştirmek için [.NET Yükseltme Yardımcısı aracını](https://aka.ms/dotnet-upgrade-assistant) kullanabilirsiniz.
+
 ## <a name="run-apiport-to-identify-problematic-apis"></a>Sorunlu API 'Leri tanımlamak için *Apiport* çalıştırma
 
 Geçirmeye hazırlanın ilk adımı, *Apiport* aracını çalıştırıyordu. Araç, uygulamanın kaç .NET Framework API 'sini ve bunların kaç tane .NET Standard veya .NET Core eşdeğerlerine sahip olduğunu tanımlar. Birincil olarak kendi uygulamanızın mantığına odaklanın, üçüncü taraf bağımlılıklara değil, ve `System.Web` bu yana, bir arada olması gereken bağımlılıklara dikkat edin. ApiPort Aracı, son bölümde [bağımlılıkları anlama ve güncelleştirme](/understand-update-dependencies.md)konusunda sunulmuştur.
 
-[ *Apiport* aracını yükledikten ve yapılandırdıktan](https://docs.microsoft.com/dotnet/standard/analyzers/portability-analyzer)sonra, Şekil 4-2 ' de gösterildiği gibi Analizi Visual Studio içinden çalıştırın.
+[ *Apiport* aracını yükledikten ve yapılandırdıktan](../../standard/analyzers/portability-analyzer.md)sonra, Şekil 4-2 ' de gösterildiği gibi Analizi Visual Studio içinden çalıştırın.
 
 ![Şekil 4-2](media/Figure4-2.png)
 
@@ -72,7 +74,7 @@ C# proje dosyasına ek olarak, NuGet bağımlılıkları Şekil 4-7 ' de göster
 
 **Şekil 4-7.** *packages.config* dosyası.
 
-Yeni *. csproj* dosya biçimine yükselttikten sonra Visual Studio 'yu kullanarak sınıf kitaplığı projelerinde *packages.config* geçirebilirsiniz. Ancak, bu işlevsellik ASP.NET projeleriyle birlikte çalışmaz. [ *packages.config* `<PackageReference>` Visual Studio 'da ' a geçirme hakkında daha fazla bilgi edinin](https://docs.microsoft.com/nuget/consume-packages/migrate-packages-config-to-package-reference). Geçirilecek çok sayıda projeniz varsa, [Bu topluluk aracı yardımcı olabilir](https://github.com/MarkKharitonov/NuGetPCToPRMigrator).
+Yeni *. csproj* dosya biçimine yükselttikten sonra Visual Studio 'yu kullanarak sınıf kitaplığı projelerinde *packages.config* geçirebilirsiniz. Ancak, bu işlevsellik ASP.NET projeleriyle birlikte çalışmaz. [ *packages.config* `<PackageReference>` Visual Studio 'da ' a geçirme hakkında daha fazla bilgi edinin](/nuget/consume-packages/migrate-packages-config-to-package-reference). Geçirilecek çok sayıda projeniz varsa, [Bu topluluk aracı yardımcı olabilir](https://github.com/MarkKharitonov/NuGetPCToPRMigrator).
 
 ## <a name="create-new-aspnet-core-project"></a>Yeni ASP.NET Core projesi oluştur
 
@@ -109,7 +111,7 @@ iwr https://git.io/vdKar -OutFile  Convert-ToPackageReference.xsl
 - popper.js
 - Yanıtlama
 
-Bu paketler için NuGet tarafından yüklenen statik istemci dosyaları, yeni projenin *Wwwroot* klasörüne kopyalanacak ve oradan barındırılacak. Bu dosyaların uygulama için hala gerekli olup olmadığını ve bunun yerine bunları barındırmayı veya bir içerik teslim ağı (CDN) kullanmayı bir anlam taşıdığını düşünürken. Bu kitaplık sürümleri, [Libman](https://docs.microsoft.com/aspnet/core/client-side/libman/) veya [NPM](https://www.npmjs.com/)gibi araçlar kullanılarak derleme zamanında yönetilebilir. Şekil 4-10, gösterilen dönüştürme aracını kullanarak paket başvurularını geçirdikten sonra ve gereksiz paketleri kaldırarak tam *Esatlamalı. csproj* dosyasını gösterir.
+Bu paketler için NuGet tarafından yüklenen statik istemci dosyaları, yeni projenin *Wwwroot* klasörüne kopyalanacak ve oradan barındırılacak. Bu dosyaların uygulama için hala gerekli olup olmadığını ve bunun yerine bunları barındırmayı veya bir içerik teslim ağı (CDN) kullanmayı bir anlam taşıdığını düşünürken. Bu kitaplık sürümleri, [Libman](/aspnet/core/client-side/libman/) veya [NPM](https://www.npmjs.com/)gibi araçlar kullanılarak derleme zamanında yönetilebilir. Şekil 4-10, gösterilen dönüştürme aracını kullanarak paket başvurularını geçirdikten sonra ve gereksiz paketleri kaldırarak tam *Esatlamalı. csproj* dosyasını gösterir.
 
 ![Şekil 4-10](media/Figure4-10.png)
 
@@ -250,7 +252,7 @@ Bu değişikliklerle proje bir kez daha derlenir. Genellikle etki alanı modelin
 
 ## <a name="migrate-views"></a>Görünümleri geçirme
 
-Görünümlerle ilgili iki en büyük ASP.NET Core MVC özelliği [Razor Pages](https://docs.microsoft.com/aspnet/core/razor-pages/) ve [etiket yardımcılardır](https://docs.microsoft.com/aspnet/core/mvc/views/tag-helpers/built-in/). İlk geçiş için, her iki özelliği de kullanmayacağız. Ancak, geçiş yapıldıktan sonra uygulamayı desteklemeye devam ederseniz özellikleri aklınızda bulundurmanız gerekir. Bir sonraki adım, *Görünümler* klasörünü özgün projeden yeni bir kopyaya kopyalamadır. Derlemeden sonra dokuz hata vardır:
+Görünümlerle ilgili iki en büyük ASP.NET Core MVC özelliği [Razor Pages](/aspnet/core/razor-pages/) ve [etiket yardımcılardır](/aspnet/core/mvc/views/tag-helpers/built-in/). İlk geçiş için, her iki özelliği de kullanmayacağız. Ancak, geçiş yapıldıktan sonra uygulamayı desteklemeye devam ederseniz özellikleri aklınızda bulundurmanız gerekir. Bir sonraki adım, *Görünümler* klasörünü özgün projeden yeni bir kopyaya kopyalamadır. Derlemeden sonra dokuz hata vardır:
 
 - HttpContext yok (2)
 - Betikler yok (5)
@@ -351,7 +353,7 @@ protected void Application_Start()
 
 Bu satırlara tek tek bakarak, `RegisterContainer` yöntemi aşağıda yer alacak bağımlılık ekleme işlemini ayarlar. Sonraki üç satır MVC 'nin farklı kısımlarını yapılandırır: bölgeler, filtreler ve rotalar. Paketler, bağlantı verilen uygulamadaki statik dosyalarla değiştirilmiştir. Son satır, daha sonraki bir bölümde gösterilecek olan uygulama için veri erişimini ayarlar.
 
-Bu uygulama aslında alanlar kullandığından, alan kayıt çağrısını geçirmek için yapılması gereken hiçbir şey yok. Uygulamanızın alan geçirilmesi gerekiyorsa, [docs ASP.NET Core alanların nasıl yapılandırılacağını belirtir](https://docs.microsoft.com/aspnet/core/mvc/controllers/areas).
+Bu uygulama aslında alanlar kullandığından, alan kayıt çağrısını geçirmek için yapılması gereken hiçbir şey yok. Uygulamanızın alan geçirilmesi gerekiyorsa, [docs ASP.NET Core alanların nasıl yapılandırılacağını belirtir](/aspnet/core/mvc/controllers/areas).
 
 Genel filtreleri kaydetme çağrısı, `FilterConfig` uygulamanın *App_Start* klasöründeki sınıfında bir yardımcı çağırır:
 
@@ -399,7 +401,7 @@ public static void RegisterRoutes(RouteCollection routes)
 
 Bu kod satırı satır içine alınıyor, ilk satır öznitelik yolları için desteği ayarlar. Bu ASP.NET Core yerleşik olarak bulunur, bu nedenle ayrı olarak yapılandırmak gereksizdir. Benzer şekilde, *{Resource}. axd* dosyaları ASP.NET Core ile kullanılmaz, bu nedenle bu yolların yoksayılmasına gerek yoktur. `MapRoute`Yöntemi, tipik yol şablonunu kullanan MVC için varsayılanı yapılandırır `{controller}/{action}/{id}` . Bu, `CatalogController` varsayılan denetleyicinin kullanıldığı ve `Index` yöntemi varsayılan eylem olduğu gibi, bu şablon için varsayılan değerleri de belirtir. Daha büyük uygulamalar genellikle `MapRoute` ek rotalar ayarlamak için daha fazla çağrı içerecektir.
 
-ASP.NET Core MVC [geleneksel yönlendirme ve öznitelik yönlendirmeyi](https://docs.microsoft.com/aspnet/core/mvc/controllers/routing?view=aspnetcore-2.2&preserve-view=true)destekler. Geleneksel yönlendirme, yol tablosunun `RegisterRoutes` daha önce listelenen yöntemde nasıl yapılandırıldığına benzer. *EShop* uygulamasında kullanılan gibi varsayılan bir yol ile geleneksel yönlendirmeyi ayarlamak için, `Configure` *Startup.cs* içindeki yönteminin sonuna aşağıdaki kodu ekleyin:
+ASP.NET Core MVC [geleneksel yönlendirme ve öznitelik yönlendirmeyi](/aspnet/core/mvc/controllers/routing?preserve-view=true&view=aspnetcore-2.2)destekler. Geleneksel yönlendirme, yol tablosunun `RegisterRoutes` daha önce listelenen yöntemde nasıl yapılandırıldığına benzer. *EShop* uygulamasında kullanılan gibi varsayılan bir yol ile geleneksel yönlendirmeyi ayarlamak için, `Configure` *Startup.cs* içindeki yönteminin sonuna aşağıdaki kodu ekleyin:
 
 ```csharp
 app.UseMvc(routes =>
@@ -503,7 +505,7 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
 
 #### <a name="migrate-app-settings"></a>Uygulama ayarlarını geçirme
 
-ASP.NET Core yeni bir [yapılandırma sistemi](https://docs.microsoft.com/aspnet/core/fundamentals/configuration/?view=aspnetcore-2.2&preserve-view=true)kullanır ve bu, varsayılan olarak dosya *üzerinde birappsettings.js* yararlanır. Program.cs ' `CreateDefaultBuilder` de kullanarak varsayılan yapılandırma uygulamada zaten ayarlanmıştır. Yapılandırmaya erişmek için sınıfların yalnızca kendi kurucusunda istemesi gerekir. `Startup`Sınıf özel durum değildir. İçindeki yapılandırmaya `Startup` ve uygulamanın geri kalanına erişmeye başlamak için oluşturucudan bir örneği isteyin `IConfiguration` :
+ASP.NET Core yeni bir [yapılandırma sistemi](/aspnet/core/fundamentals/configuration/?preserve-view=true&view=aspnetcore-2.2)kullanır ve bu, varsayılan olarak dosya *üzerinde birappsettings.js* yararlanır. Program.cs ' `CreateDefaultBuilder` de kullanarak varsayılan yapılandırma uygulamada zaten ayarlanmıştır. Yapılandırmaya erişmek için sınıfların yalnızca kendi kurucusunda istemesi gerekir. `Startup`Sınıf özel durum değildir. İçindeki yapılandırmaya `Startup` ve uygulamanın geri kalanına erişmeye başlamak için oluşturucudan bir örneği isteyin `IConfiguration` :
 
 ```csharp
 public Startup(IConfiguration configuration)
@@ -519,7 +521,7 @@ public IConfiguration Configuration { get; }
 - `UseMockData`
 - `UseCustomizationData`
 
-Uygulamanızda daha karmaşık bir yapılandırma varsa, özellikle özel yapılandırma bölümleri kullanılıyorsa, büyük olasılıkla nesneleri oluşturup uygulamanızın yapılandırmasının farklı bölümlerine bağlamak isteyeceksiniz. Bu türlere daha sonra [Seçenekler deseninin](https://docs.microsoft.com/dotnet/core/extensions/options)kullanılması erişilebilir. Ancak, başvurulan belge ' de belirtildiği gibi bu düzenin içinde kullanılmaması gerekir `ConfigureServices` . Bunun yerine, bağlantı verilen uygulama `UseMockData` yapılandırma değerine doğrudan başvuracaktır.
+Uygulamanızda daha karmaşık bir yapılandırma varsa, özellikle özel yapılandırma bölümleri kullanılıyorsa, büyük olasılıkla nesneleri oluşturup uygulamanızın yapılandırmasının farklı bölümlerine bağlamak isteyeceksiniz. Bu türlere daha sonra [Seçenekler deseninin](../../core/extensions/options.md)kullanılması erişilebilir. Ancak, başvurulan belge ' de belirtildiği gibi bu düzenin içinde kullanılmaması gerekir `ConfigureServices` . Bunun yerine, bağlantı verilen uygulama `UseMockData` yapılandırma değerine doğrudan başvuracaktır.
 
 İlk olarak, bağlantı verilen uygulamanın `appsettings.json` dosyasını değiştirin ve iki ayarı köke ekleyin:
 
@@ -608,11 +610,11 @@ builder.RegisterModule(new ApplicationModule(useMockData, connectionString));
 
 Bu kodla birlikte, uygulama daha önce olduğu gibi çalışır, bir SQL Server veritabanına bağlanarak `UseMockData` `false` .
 
-Uygulama bu noktada dağıtılabilir ve çalıştırılabilir, ASP.NET Core dönüştürülür, ancak yine de .NET Framework ve EF 6 ' da çalışır. İsterseniz, uygulama .NET Core ve Entity Framework Core çalışmak üzere geçirilebilir ve bu, önceki bölümlerde açıklanan ek avantajları getirir. Entity Framework özel olarak, [Bu belge EF Core ve EF 6](https://docs.microsoft.com/ef/efcore-and-ef6/) ' ı karşılaştırır ve hangi kitaplığın her bir onlarca ayrı özelliği desteklediğini gösteren bir kılavuz içerir.
+Uygulama bu noktada dağıtılabilir ve çalıştırılabilir, ASP.NET Core dönüştürülür, ancak yine de .NET Framework ve EF 6 ' da çalışır. İsterseniz, uygulama .NET Core ve Entity Framework Core çalışmak üzere geçirilebilir ve bu, önceki bölümlerde açıklanan ek avantajları getirir. Entity Framework özel olarak, [Bu belge EF Core ve EF 6](/ef/efcore-and-ef6/) ' ı karşılaştırır ve hangi kitaplığın her bir onlarca ayrı özelliği desteklediğini gösteren bir kılavuz içerir.
 
 ### <a name="migrate-to-entity-framework-core"></a>Entity Framework Core geçir
 
-EF Core geçirilecek bir kararın olduğu varsayıldığında, özellikle özgün uygulama kod tabanlı bir model yaklaşımı kullanıyorsa, adımlar oldukça basittir. [EF 6 ' dan EF Core bağlantı noktasına hazırlarken](https://docs.microsoft.com/ef/efcore-and-ef6/porting/), kullanacağınız EF Core hedef sürümündeki özelliklerin kullanılabilirliğini gözden geçirin. [Kod tabanlı bir modelden taşıma](https://docs.microsoft.com/ef/efcore-and-ef6/porting/port-code) [ve edmx tabanlı modelden taşıma ile](https://docs.microsoft.com/ef/efcore-and-ef6/porting/port-edmx) ilgili belgeleri gözden geçirin.
+EF Core geçirilecek bir kararın olduğu varsayıldığında, özellikle özgün uygulama kod tabanlı bir model yaklaşımı kullanıyorsa, adımlar oldukça basittir. [EF 6 ' dan EF Core bağlantı noktasına hazırlarken](/ef/efcore-and-ef6/porting/), kullanacağınız EF Core hedef sürümündeki özelliklerin kullanılabilirliğini gözden geçirin. [Kod tabanlı bir modelden taşıma](/ef/efcore-and-ef6/porting/port-code) [ve edmx tabanlı modelden taşıma ile](/ef/efcore-and-ef6/porting/port-edmx) ilgili belgeleri gözden geçirin.
 
 EF Core 2,2 ' ye yükseltmek için, ilgili temel adımlar uygun NuGet paketlerini ve güncelleştirme ad alanlarını eklemektir. Sonra bağlantı dizesinin türüne nasıl geçtiğini `DbContext` ve bunların bağımlılık ekleme için nasıl bağlı olduklarını ayarlayın.
 
@@ -673,7 +675,7 @@ namespace eShopPorted.Models.Config
 }
 ```
 
-`CatalogDBInitializer`Ve temel sınıfı, `CreateDatabaseIfNotExists<T>` EF Core ile uyumsuzdur. Bu sınıfın amacı, veritabanını oluşturmak ve tohum sağlamaktır. EF Core kullanmak, bu yöntemleri kullanarak [bir `DbContext` için ilişkili veritabanını oluşturup bırakacak](https://docs.microsoft.com/ef/core/managing-schemas/ensure-created) :
+`CatalogDBInitializer`Ve temel sınıfı, `CreateDatabaseIfNotExists<T>` EF Core ile uyumsuzdur. Bu sınıfın amacı, veritabanını oluşturmak ve tohum sağlamaktır. EF Core kullanmak, bu yöntemleri kullanarak [bir `DbContext` için ilişkili veritabanını oluşturup bırakacak](/ef/core/managing-schemas/ensure-created) :
 
 ```csharp
 dbContext.Database.EnsureDeleted();
@@ -805,7 +807,7 @@ Bu değişiklik ile, uygulamayı çalıştırmak görüntüleri daha önce oldu�
 
 ## <a name="additional-mvc-customizations"></a>Ek MVC özelleştirmeleri
 
-*Eshoplegacymvc* uygulaması oldukça basittir, bu nedenle varsayılan MVC davranışı açısından yapılandırılması çok önemlidir. Ancak, CORS, filtreler ve yol kısıtlamaları gibi ek MVC bileşenleri yapılandırmanız gerekiyorsa, genellikle bu bilgileri ' de sağlarsınız; `Startup.ConfigureServices` burada `UseMvc` çağrılır. Örneğin, aşağıdaki kod listesi [CORS](https://docs.microsoft.com/aspnet/core/security/cors?view=aspnetcore-2.2&preserve-view=true) 'yi yapılandırır ve genel eylem filtresi ayarlıyor:
+*Eshoplegacymvc* uygulaması oldukça basittir, bu nedenle varsayılan MVC davranışı açısından yapılandırılması çok önemlidir. Ancak, CORS, filtreler ve yol kısıtlamaları gibi ek MVC bileşenleri yapılandırmanız gerekiyorsa, genellikle bu bilgileri ' de sağlarsınız; `Startup.ConfigureServices` burada `UseMvc` çağrılır. Örneğin, aşağıdaki kod listesi [CORS](/aspnet/core/security/cors?preserve-view=true&view=aspnetcore-2.2) 'yi yapılandırır ve genel eylem filtresi ayarlıyor:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -829,7 +831,7 @@ public void ConfigureServices(IServiceCollection services)
 > [!Note]
 > CORS 'yi yapılandırmayı bitirebilmeniz için de ' de çağırmanız gerekir `app.UseCors()` `Configure` .
 
-[Özel model ciltçileri](https://docs.microsoft.com/aspnet/core/mvc/advanced/custom-model-binding?view=aspnetcore-2.2&preserve-view=true), Formatters ve daha fazlasını ekleme gibi diğer gelişmiş senaryolar, ayrıntılı ASP.NET Core belgeleri kapsamında ele alınmıştır. Genellikle bunlar tek bir denetleyiciye veya eyleme göre veya bir önceki kod listesinde gösterilen aynı seçenek yaklaşımını kullanarak küresel olarak uygulanabilir.
+[Özel model ciltçileri](/aspnet/core/mvc/advanced/custom-model-binding?preserve-view=true&view=aspnetcore-2.2), Formatters ve daha fazlasını ekleme gibi diğer gelişmiş senaryolar, ayrıntılı ASP.NET Core belgeleri kapsamında ele alınmıştır. Genellikle bunlar tek bir denetleyiciye veya eyleme göre veya bir önceki kod listesinde gösterilen aynı seçenek yaklaşımını kullanarak küresel olarak uygulanabilir.
 
 ## <a name="other-dependencies"></a>Diğer bağımlılıklar
 
@@ -849,9 +851,10 @@ Ayarları için yapılandırma dosyalarına güvenmek yerine, WCF istemcileri ve
 ## <a name="references"></a>Başvurular
 
 - [GitHub deposu için Eshopmodernize](https://github.com/dotnet-architecture/eShopModernizing)
+- [.NET Yükseltme Yardımcısı aracı](https://aka.ms/dotnet-upgrade-assistant)
 - [API ve Viewmodelleriniz etki alanı modellerine başvurmamalıdır](https://ardalis.com/your-api-and-view-models-should-not-reference-domain-models/)
-- [Geliştirici özel durum sayfası ara yazılımı](https://docs.microsoft.com/aspnet/core/fundamentals/error-handling#developer-exception-page)
-- [HasData EF Core derinlemesine bakış](https://docs.microsoft.com/archive/msdn-magazine/2018/august/data-points-deep-dive-into-ef-core-hasdata-seeding)
+- [Geliştirici özel durum sayfası ara yazılımı](/aspnet/core/fundamentals/error-handling#developer-exception-page)
+- [HasData EF Core derinlemesine bakış](/archive/msdn-magazine/2018/august/data-points-deep-dive-into-ef-core-hasdata-seeding)
 
 >[!div class="step-by-step"]
 >[Önceki](more-migration-scenarios.md) 

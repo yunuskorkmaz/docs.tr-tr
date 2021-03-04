@@ -2,19 +2,19 @@
 title: Object-Oriented programlama (C#)
 description: C#; soyutlama, kapsülleme, devralma ve çok biçimlilik dahil olmak üzere nesne odaklı programlama için tam destek sağlar.
 ms.date: 09/30/2020
-ms.openlocfilehash: b778b7c42bbfb1f20bdd2d83b9cb10512ea3f41b
-ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
+ms.openlocfilehash: 006bdc37a1d70d672db14f352d5572491b403918
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98794845"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105531"
 ---
 # <a name="object-oriented-programming-c"></a>Object-Oriented programlama (C#)
 
 C#, nesne yönelimli bir dildir. Nesne odaklı programlamada kullanılan temel tekniklerin dördü şunlardır:
 
-- *Soyutlama* , tür tüketicilerden gereksiz ayrıntıların gizlenmesi anlamına gelir.
-- *Kapsülleme* , ilişkili özellikler, Yöntemler ve diğer üyelerin bir grubunun tek bir birim veya nesne olarak kabul edildiği anlamına gelir.
+- *Soyutlama* , bir grup özellikler, Yöntemler ve diğer üyelerin tek bir birim veya nesne olarak kabul edildiği anlamına gelir.
+- *Kapsülleme* , tür tüketicilerden gereksiz ayrıntıların gizlenmesi anlamına gelir.
 - *Devralma* , mevcut bir sınıfı temel alan yeni sınıflar oluşturma özelliğini açıklar.
 - Çok *biçimlilik* , her bir sınıf farklı yollarla aynı özellikleri veya yöntemleri uyguladığından bile, birbirinin yerine kullanılabilecek birden fazla sınıfa sahip olabileceği anlamına gelir.
 

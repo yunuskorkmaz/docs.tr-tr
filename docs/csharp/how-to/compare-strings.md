@@ -5,12 +5,12 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: d1ea0fc3573714347580a2aaded2d0f3118681a8
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 5c417ccbdd763de5bbb67ae6a17ac1a5ff165065
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324179"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104984"
 ---
 # <a name="how-to-compare-strings-in-c"></a>C 'de dizeleri karşılaştırma\#
 
@@ -31,7 +31,6 @@ Dizeleri karşılaştırdığınızda, aralarında bir sıra tanımlarsınız. K
 
 Varsayılan olarak en yaygın işlemler şunlardır:
 
-- <xref:System.String.CompareTo%2A?displayProperty=nameWithType>
 - <xref:System.String.Equals%2A?displayProperty=nameWithType>
 - <xref:System.String.op_Equality%2A?displayProperty=nameWithType>ve, <xref:System.String.op_Inequality%2A?displayProperty=nameWithType> diğer bir deyişle, [eşitlik işleçleri `==` ve `!=` ](../language-reference/operators/equality-operators.md#string-equality)sırasıyla
 
@@ -122,7 +121,7 @@ Her zaman sıralama ve arama için aynı karşılaştırma türünü kullandığ
 
 ## <a name="reference-equality-and-string-interning"></a>Başvuru eşitliği ve dize oluşturma
 
-Örneklerden Hiçbiri kullanılmadı <xref:System.Object.ReferenceEquals%2A> . Bu yöntem, iki dizenin aynı nesne olup olmadığını belirler ve bu, dize karşılaştırmalarında tutarsız sonuçlara yol açabilir. Aşağıdaki örnek, C# ' nin *dize özelliklerini* gösterir. Bir program iki veya daha fazla özdeş dize değişkeni bildiriyorsa, derleyici bunları aynı konumda depolar. <xref:System.Object.ReferenceEquals%2A>Yöntemini çağırarak, iki dizenin bellekteki aynı nesneye gerçekten başvurduğundan emin olabilirsiniz. ' İ <xref:System.String.Copy%2A?displayProperty=nameWithType> kullanmaktan kaçınmak için yöntemini kullanın. Kopya yapıldıktan sonra, aynı değere sahip olsalar bile iki dize farklı depolama konumlarına sahiptir. Bu dizeleri göstermek için aşağıdaki örneği çalıştırın `a` ve `b` aynı depolama *interned* alanını paylaştıkları anlamına gelir. Dizeler `a` ve `c` değildir.
+Örneklerden Hiçbiri kullanılmadı <xref:System.Object.ReferenceEquals%2A> . Bu yöntem, iki dizenin aynı nesne olup olmadığını belirler ve bu, dize karşılaştırmalarında tutarsız sonuçlara yol açabilir. Aşağıdaki örnek, C# ' nin *dize özelliklerini* gösterir. Bir program iki veya daha fazla özdeş dize değişkeni bildiriyorsa, derleyici bunları aynı konumda depolar. <xref:System.Object.ReferenceEquals%2A>Yöntemini çağırarak, iki dizenin bellekteki aynı nesneye gerçekten başvurduğundan emin olabilirsiniz. ' İ <xref:System.String.Copy%2A?displayProperty=nameWithType> kullanmaktan kaçınmak için yöntemini kullanın. Kopya yapıldıktan sonra, aynı değere sahip olsalar bile iki dize farklı depolama konumlarına sahiptir. Bu dizeleri göstermek için aşağıdaki örneği çalıştırın `a` ve `b` aynı depolama  alanını paylaştıkları anlamına gelir. Dizeler `a` ve `c` değildir.
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs" id="Snippet9":::
 

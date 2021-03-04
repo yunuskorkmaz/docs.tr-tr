@@ -3,18 +3,18 @@ title: Varsayılan arabirim yöntemlerini kullanarak Mixin türleri oluşturma
 description: Varsayılan arabirim üyelerini kullanarak, uygulamaları uygulayıcılar için isteğe bağlı varsayılan uygulamalarla genişletebilirsiniz.
 ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: 0095d76eadfe0c6a1b30bf8a0c5000509f5e1bf9
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: fb876731f1cf16840b583ea23b1dd09d8ff74bfe
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396705"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103718"
 ---
 # <a name="tutorial-mix-functionality-in-when-creating-classes-using-interfaces-with-default-interface-methods"></a>Öğretici: varsayılan arabirim yöntemleriyle arabirimleri kullanarak sınıf oluştururken içindeki işlevselliği karıştırma
 
 .NET Core 3,0 ' de C# 8,0 ' den başlayarak bir arabirimin üyesini bildirdiğinizde bir uygulama tanımlayabilirsiniz. Bu özellik, arabirimlerde belirtilen özellikler için varsayılan uygulamaları tanımlayabileceğiniz yeni yetenekler sağlar. Sınıflar işlevin ne zaman geçersiz kılınacağını, varsayılan işlevselliğin ne zaman kullanılacağını ve ayrık özellikler için ne zaman destek bildirelemeyeceğini seçebilir.
 
-Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
+Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 
 > [!div class="checklist"]
 >
@@ -22,9 +22,9 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > * Varsayılan uygulamaları kullanan sınıflar oluşturun.
 > * Varsayılan uygulamaların bazılarını veya tümünü geçersiz kılan sınıflar oluşturun.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
-C# 8,0 derleyicisi dahil olmak üzere makinenizi .NET Core çalıştıracak şekilde ayarlamanız gerekir. C# 8,0 derleyicisi, [Visual Studio 2019 sürüm 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)veya [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download/dotnet-core) veya sonraki sürümleriyle başlayarak kullanılabilir.
+C# 8,0 derleyicisi dahil olmak üzere makinenizi .NET Core çalıştıracak şekilde ayarlamanız gerekir. C# 8,0 derleyicisi, [Visual Studio 2019 sürüm 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)veya [.NET Core 3,0 SDK](https://dotnet.microsoft.com/download/dotnet) veya sonraki sürümleriyle başlayarak kullanılabilir.
 
 ## <a name="limitations-of-extension-methods"></a>Uzantı yöntemlerinin sınırlamaları
 

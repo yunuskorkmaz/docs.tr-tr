@@ -5,12 +5,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: c7521f6aef79825a8cc20d5455588a2d684b9ccb
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 2e1df125d677cd6b845b516173117ef0190a7580
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609609"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104043"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main () dönüş değerleri (C# Programlama Kılavuzu)
 
@@ -99,6 +99,6 @@ Uygulama giriş noktası bir `Task` veya döndürdüğünde `Task<int>` , derley
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
-- [C# başvurusu](../index.md)
-- [Main () ve komut satırı bağımsız değişkenleri](index.md)
+- [C# başvurusu](../../language-reference/index.md)
+- [Main () ve Command-Line bağımsız değişkenleri](index.md)
 - [Komut satırı bağımsız değişkenlerini görüntüleme](./how-to-display-command-line-arguments.md)

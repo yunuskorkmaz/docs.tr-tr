@@ -3,16 +3,16 @@ title: Bağımlılıkları anlama ve güncelleştirme
 description: Bir .NET Framework projesini .NET Core 'a geçirmek için, onun bağımlılıkları .NET Core ile çalışacak şekilde güncellenmelidir. Bu bölümde, büyük uygulamalar için geçişleri planlamak üzere kullanılabilecek araçlar ve yaklaşımlar incelenir.
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: fa789153ac23bf682a6e4d69234782f31059e56b
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: afad77860099e4737b5270dc32fc20c2025e63dd
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100488939"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105750"
 ---
 # <a name="understand-and-update-dependencies"></a>Bağımlılıkları anlama ve güncelleştirme
 
-Uygulamanın bireysel projelerinin geçirilmesi gereken diziyi tanımladıktan sonra, bir sonraki adım, her projenin bağımlılıklarını anlamaktır ve gerekirse bunları güncelleştirir. Platform bağımlılıkları için başlamak için en iyi yöntem, [.net taşınabilirlik Çözümleyicisi](https://docs.microsoft.com/dotnet/standard/analyzers/portability-analyzer) 'ni söz konusu derlemede çalıştırmak ve sonra oluşturulan ayrıntılı sonuçlara bakmanız. Aracı, .NET Core 3,1 veya .NET Standard 2,0 gibi bir veya daha fazla hedef platformu belirtecek şekilde yapılandırırsınız. Sonuçlar, hedeflenen her platform için ayrıntılarla birlikte sağlanır. Şekil 3-4, aracın çıkışının bir örneğini gösterir.
+Uygulamanın bireysel projelerinin geçirilmesi gereken diziyi tanımladıktan sonra, bir sonraki adım, her projenin bağımlılıklarını anlamaktır ve gerekirse bunları güncelleştirir. Platform bağımlılıkları için başlamak için en iyi yöntem, [.net taşınabilirlik Çözümleyicisi](../../standard/analyzers/portability-analyzer.md) 'ni söz konusu derlemede çalıştırmak ve sonra oluşturulan ayrıntılı sonuçlara bakmanız. Aracı, .NET Core 3,1 veya .NET Standard 2,0 gibi bir veya daha fazla hedef platformu belirtecek şekilde yapılandırırsınız. Sonuçlar, hedeflenen her platform için ayrıntılarla birlikte sağlanır. Şekil 3-4, aracın çıkışının bir örneğini gösterir.
 
 ![.NET taşınabilirlik Çözümleyicisi rapor ayrıntıları](./media/Figure3-4.png)
 
@@ -22,9 +22,9 @@ Uygulamanın bireysel projelerinin geçirilmesi gereken diziyi tanımladıktan s
 
 Büyük uygulamalar genellikle birden çok proje içerir ve ASP.NET MVC web projesi dışındaki birçok projenin da sınıf kitaplıkları olması olasıdır. Sınıf kitaplıkları, özellikle de en zor olan (ve genellikle yeniden oluşturulması gereken) ASP.NET projelerle karşılaştırıldığında .NET platformları arasında en kolay bağlantı noktası olma eğilimindedir.
 
-Takımlar, sınıf kitaplıklarını .NET Core 'a geçirmek için [dene-Dönüştür aracını](https://github.com/dotnet/try-convert) kabul edebilir. TRY-Convert aracı bir .NET Framework proje dosyasını analiz eder ve bunu .NET Core proje dosyası biçimine geçirmeye çalışır ve bu işlem, işlemde güvenle gerçekleştirebileceği değişiklikleri yapar. Bu araç bir ASP.NET projesi üzerinde çalışmaz, ancak sınıf kitaplıklarının geçirilmesi sürecini hızlandırmaya yardımcı olabilir.
+Takımlar, sınıf kitaplıklarını .NET Core 'a geçirmek için [TRY-Convert aracını](https://github.com/dotnet/try-convert) veya [.NET Yükseltme Yardımcısı aracını](https://aka.ms/dotnet-upgrade-assistant) ele alabilir. Bu araçlar .NET Framework bir proje dosyasını analiz eder ve bunu .NET Core proje dosyası biçimine geçirmeye çalışır ve bu, işlemde güvenle gerçekleştirebileceği değişiklikleri yapar. Araçlar, ASP.NET projeleriyle çalışmak için bazı el ile yardım gerektirebilir, ancak genellikle sınıf kitaplıklarının geçirilmesi sürecini hızlandırmaya yardımcı olabilir.
 
-TRY-Convert aracı bir .NET Core komut satırı aracı olarak dağıtılır. Yalnızca Windows üzerinde çalışır, çünkü .NET Framework uygulamalarla çalışmak üzere tasarlanmıştır. Komut isteminden aşağıdaki komutu çalıştırarak yükleyebilirsiniz:
+TRY-Convert ve Upgrade Assistant araçları .NET Core komut satırı araçları olarak dağıtılır. Bunlar yalnızca Windows üzerinde çalışır, çünkü .NET Framework uygulamalarla çalışmak üzere tasarlanmıştır. Komut isteminden aşağıdaki komutu çalıştırarak TRY-Convert ' i yükleyebilirsiniz:
 
 ```dotnetcli
 dotnet tool install -g try-convert
@@ -32,9 +32,17 @@ dotnet tool install -g try-convert
 
 Aracı başarıyla yükledikten sonra, `try-convert` sınıf kitaplığının proje dosyasının bulunduğu klasörde çalıştırabilirsiniz.
 
+Aşağıdaki komutla .NET Yükseltme Yardımcısı 'nı (TRY-Convert ' i yükledikten sonra) yükleme:
+
+```dotnetcli
+dotnet tool install -g upgrade-assistant
+```
+
+Aracı, `upgrade-assistant <project>` Proje dosyasının bulunduğu klasörde komutuyla çalıştırın.
+
 ## <a name="update-nuget-package-dependencies"></a>NuGet paket bağımlılıklarını Güncelleştir
 
-Üçüncü taraf NuGet paketlerinin kullanımını çözümleyin ve bunlardan herhangi birinin .NET Standard desteklememesini (ya da yalnızca yeni bir sürümle desteklediğini) öğrenin. [NuGet paketlerini `<PackageReference>` Visual Studio 'nun dönüştürücü aracı kullanılarak sözdizimini kullanacak şekilde güncelleştirmek](https://docs.microsoft.com/nuget/consume-packages/migrate-packages-config-to-package-reference)faydalı olabilir, böylece üst düzey bağımlılıklar görünür olur. Ardından, bu paketlerin geçerli veya sonraki sürümlerinin .NET Core veya .NET Standard destekleyip desteklemediğini denetleyin. Bu bilgiler, her paket için [nuget.org] veya Visual Studio içinde bulunabilir.
+Üçüncü taraf NuGet paketlerinin kullanımını çözümleyin ve bunlardan herhangi birinin .NET Standard desteklememesini (ya da yalnızca yeni bir sürümle desteklediğini) öğrenin. [NuGet paketlerini `<PackageReference>` Visual Studio 'nun dönüştürücü aracı kullanılarak sözdizimini kullanacak şekilde güncelleştirmek](/nuget/consume-packages/migrate-packages-config-to-package-reference)faydalı olabilir, böylece üst düzey bağımlılıklar görünür olur. Ardından, bu paketlerin geçerli veya sonraki sürümlerinin .NET Core veya .NET Standard destekleyip desteklemediğini denetleyin. Bu bilgiler, her paket için [nuget.org] veya Visual Studio içinde bulunabilir.
 
 Uygulamanın Şu anda kullandığı paketin sürümünü kullanarak destek varsa harika! Aksi takdirde, bu paketin daha yeni bir sürümü, yükseltmeye nelerin dahil olduğunu ve araştırmasını nasıl yapacağından, bkz.. Özellikle, paketin ana sürümü şu anda kullandığınız sürüm ve yükseltmekte olduğunuz sürüm arasında değişirse pakette bir çok değişiklik olabilir.
 
@@ -50,6 +58,7 @@ Sonraki bölümde, ASP.NET MVC ve Web API projelerinden ASP.NET Core projelerine
 
 ## <a name="references"></a>Başvurular
 
+- [.NET Yükseltme Yardımcısı aracı](https://aka.ms/dotnet-upgrade-assistant)
 - [dene-Dönüştür aracı](https://github.com/dotnet/try-convert)
 - [apiport aracı](https://github.com/microsoft/dotnet-apiport)
 

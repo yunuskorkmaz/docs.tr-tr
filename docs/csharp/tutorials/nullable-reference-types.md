@@ -4,16 +4,16 @@ description: Bu gelişmiş öğretici, null yapılabilir başvuru türlerine gir
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: bd575b226a2ff61e938719b064ff5ede0cf66013
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 9d332e5331e8c9c7c54078460ec7c31957d7e38d
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91805186"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103692"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Öğretici: tasarım amacınızı null olabilen ve null yapılamayan başvuru türleriyle daha net bir şekilde Ifade edin
 
-C# 8,0, null olabilen değer türlerindeki değer türlerini tamamlayan aynı şekilde başvuru türlerini tamamlayan [null yapılabilir başvuru türlerini](../nullable-references.md)tanıtır. Bir değişkeni türüne ekleyerek **null atanabilir bir başvuru türü** olarak bildirirsiniz `?` . Örneğin, `string?` null yapılabilen bir değeri temsil eder `string` . Tasarım amacınızı daha net bir şekilde ifade etmek için bu yeni türleri kullanabilirsiniz: bazı değişkenlerin *her zaman bir değeri olması gerekir*, bazılarında *bir değer eksik*olabilir.
+C# 8,0, null olabilen değer türlerindeki değer türlerini tamamlayan aynı şekilde başvuru türlerini tamamlayan [null yapılabilir başvuru türlerini](../nullable-references.md)tanıtır. Bir değişkeni türüne ekleyerek **null atanabilir bir başvuru türü** olarak bildirirsiniz `?` . Örneğin, `string?` null yapılabilen bir değeri temsil eder `string` . Tasarım amacınızı daha net bir şekilde ifade etmek için bu yeni türleri kullanabilirsiniz: bazı değişkenlerin *her zaman bir değeri olması gerekir*, bazılarında *bir değer eksik* olabilir.
 
 Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 
@@ -26,7 +26,7 @@ Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-C# 8,0 derleyicisi dahil olmak üzere makinenizi .NET Core çalıştıracak şekilde ayarlamanız gerekir. C# 8,0 derleyicisi, [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)veya [.NET Core 3,0](https://dotnet.microsoft.com/download/dotnet-core/3.0)ile kullanılabilir.
+C# 8,0 derleyicisi dahil olmak üzere makinenizi .NET Core çalıştıracak şekilde ayarlamanız gerekir. C# 8,0 derleyicisi, [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)veya [.NET Core 3,0](https://dotnet.microsoft.com/download/dotnet/3.0)ile kullanılabilir.
 
 Bu öğreticide, Visual Studio veya .NET Core CLI dahil olmak üzere C# ve .NET hakkında bilgi sahibi olduğunuz varsayılır.
 
@@ -38,7 +38,7 @@ Bu örnek için yazdığınız kod, amacı ifade eder ve derleyici bu amacı zor
 
 ## <a name="create-the-application-and-enable-nullable-reference-types"></a>Uygulamayı oluşturun ve null yapılabilir başvuru türlerini etkinleştirin
 
-Visual Studio 'da ya da kullanarak komut satırından yeni bir konsol uygulaması oluşturun `dotnet new console` . Uygulamayı adlandırın `NullableIntroduction` . Uygulamayı oluşturduktan sonra, tüm projenin etkinleştirilmiş bir **null yapılabilir ek açıklama bağlamında**derlendiğini belirtmeniz gerekir. *. Csproj* dosyasını açın ve öğesine bir `Nullable` öğesi ekleyin `PropertyGroup` . Değerini `enable` olarak ayarlayın. C# 8,0 projelerinde bile **null yapılabilir başvuru türleri** özelliğini kabul etmeniz gerekir. Bunun nedeni, özellik açık olduğunda, mevcut başvuru değişkeni bildirimleri **null yapılamayan başvuru türleri**haline gelir. Bu karar, var olan kodun doğru null denetimleri olmayan sorunları bulmaya yardımcı olur, ancak özgün tasarım hedefini doğru bir şekilde yansıtmayabilir:
+Visual Studio 'da ya da kullanarak komut satırından yeni bir konsol uygulaması oluşturun `dotnet new console` . Uygulamayı adlandırın `NullableIntroduction` . Uygulamayı oluşturduktan sonra, tüm projenin etkinleştirilmiş bir **null yapılabilir ek açıklama bağlamında** derlendiğini belirtmeniz gerekir. *. Csproj* dosyasını açın ve öğesine bir `Nullable` öğesi ekleyin `PropertyGroup` . Değerini `enable` olarak ayarlayın. C# 8,0 projelerinde bile **null yapılabilir başvuru türleri** özelliğini kabul etmeniz gerekir. Bunun nedeni, özellik açık olduğunda, mevcut başvuru değişkeni bildirimleri **null yapılamayan başvuru türleri** haline gelir. Bu karar, var olan kodun doğru null denetimleri olmayan sorunları bulmaya yardımcı olur, ancak özgün tasarım hedefini doğru bir şekilde yansıtmayabilir:
 
 ```xml
 <Nullable>enable</Nullable>

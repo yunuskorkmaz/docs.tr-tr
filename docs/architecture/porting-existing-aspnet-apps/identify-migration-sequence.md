@@ -3,12 +3,12 @@ title: Geçirilecek proje dizisini tanımla
 description: Büyük uygulamalar genellikle yeni platformları her seferinde bir kez, ancak daha küçük bir adımda geçirilmez. Bir ASP.NET MVC uygulamasını ASP.NET Core geçirme adımlarını nasıl planlayacağınızı öğrenin.
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 70a2389786456fdf0e2c6d7d4ac768d37f1ce233
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 452898da5839f8979a5e4f9ebf5d4c21b250e1fa
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100488890"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106014"
 ---
 # <a name="identify-sequence-of-projects-to-migrate"></a>Geçirilecek proje dizisini tanımla
 
@@ -20,7 +20,7 @@ ASP.NET uygulamasını geçirilecek ve bağımlı projelerin onunla (ideal bir �
 
 **Şekil 3-1.** Proje bağımlılıkları grafiği.
 
-Bir ASP.NET MVC 5/Web API 2 projesi olan belirli bir ön uç uygulamasını seçin. Çözümünüzde bağımlılıklarını belirleyip, bir liste tamamlanana kadar bağımlılıklarını eşleyin. Şekil 3-1 ' de gösterildiği gibi bir diyagram, Proje bağımlılıklarını eşlerken yararlı olabilir. Visual Studio, kullandığınız sürüme bağlı olarak [çözümünüz için bir bağımlılık diyagramı](https://docs.microsoft.com/visualstudio/modeling/create-layer-diagrams-from-your-code)oluşturabilir. [.Net taşınabilirlik Çözümleyicisi](https://docs.microsoft.com/dotnet/standard/analyzers/portability-analyzer) de bağımlılık diyagramları oluşturabilir.
+Bir ASP.NET MVC 5/Web API 2 projesi olan belirli bir ön uç uygulamasını seçin. Çözümünüzde bağımlılıklarını belirleyip, bir liste tamamlanana kadar bağımlılıklarını eşleyin. Şekil 3-1 ' de gösterildiği gibi bir diyagram, Proje bağımlılıklarını eşlerken yararlı olabilir. Visual Studio, kullandığınız sürüme bağlı olarak [çözümünüz için bir bağımlılık diyagramı](/visualstudio/modeling/create-layer-diagrams-from-your-code)oluşturabilir. [.Net taşınabilirlik Çözümleyicisi](../../standard/analyzers/portability-analyzer.md) de bağımlılık diyagramları oluşturabilir.
 
 Şekil 3-2, [.net taşınabilirlik Çözümleyicisi Visual Studio uzantısı](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)için yükleyiciyi gösterir:
 
@@ -93,8 +93,8 @@ Büyük bir .NET Framework uygulamasını .NET Core 'a taşıma konusunda en iyi
 
 ## <a name="references"></a>Başvurular
 
-- [.NET Framework 'den .NET Core 'a taşıma](https://docs.microsoft.com/dotnet/core/porting/)
-- [.NET taşınabilirlik Çözümleyicisi](https://docs.microsoft.com/dotnet/standard/analyzers/portability-analyzer)
+- [.NET Framework 'den .NET Core 'a taşıma](../../core/porting/index.md)
+- [.NET taşınabilirlik Çözümleyicisi](../../standard/analyzers/portability-analyzer.md)
 - [Channel 9: .NET taşınabilirlik Çözümleyicisi 'ne (video) kısa bir bakış](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer)
 - [2 yıl, 200 uygulama: bir .NET Core geçişi ölçeğe göre (video)](https://www.youtube.com/watch?v=C-2haqb60No)
 

@@ -3,16 +3,16 @@ title: ASP.NET MVC ve ASP.NET Core Razor kullanımını karşılaştırın
 description: ASP.NET MVC ve ASP.NET Core arasında Razor farklı midir?
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 355506364e32283cb86bd21b82d7de672a974829
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: a9f7fa2e6b8c0c6bf61c743cf8c956b1ad09713c
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100488952"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105868"
 ---
 # <a name="compare-razor-usage-in-aspnet-mvc-and-aspnet-core"></a>ASP.NET MVC ve ASP.NET Core Razor kullanımını karşılaştırın
 
-Razor 'nin temel sözdizimi, ASP.NET MVC ve ASP.NET Core arasında önemli ölçüde değişmemiştir. Ancak, geçiş sırasında göz önünde bulundurmanız gereken [Etiket Yardımcıları](https://docs.microsoft.com/aspnet/core/mvc/views/tag-helpers/intro) ve Razor Pages giriş gibi bazı farklılıklar vardır. Uygulamanız özel Razor işlevlerinin ağır kullanımını yapıyorsa, ASP.NET Core 'e geçiş yaparken hangi değişikliklerin gerekli olabileceğini görmek için [ASP.NET Core Razor söz dizimi başvurusuna](https://docs.microsoft.com/aspnet/core/razor-pages) bakın.
+Razor 'nin temel sözdizimi, ASP.NET MVC ve ASP.NET Core arasında önemli ölçüde değişmemiştir. Ancak, geçiş sırasında göz önünde bulundurmanız gereken [Etiket Yardımcıları](/aspnet/core/mvc/views/tag-helpers/intro) ve Razor Pages giriş gibi bazı farklılıklar vardır. Uygulamanız özel Razor işlevlerinin ağır kullanımını yapıyorsa, ASP.NET Core 'e geçiş yaparken hangi değişikliklerin gerekli olabileceğini görmek için [ASP.NET Core Razor söz dizimi başvurusuna](/aspnet/core/razor-pages) bakın.
 
 ## <a name="tag-helpers"></a>Etiket Yardımcıları
 
@@ -24,10 +24,10 @@ Razor Pages, sayfa ve form tabanlı uygulamalara yönelik denetleyiciler, Eyleml
 
 ## <a name="references"></a>Başvurular
 
-- [ASP.NET MVC 'den ASP.NET Core MVC: denetleyiciler ve görünümler 'e geçiş](https://docs.microsoft.com/aspnet/core/migration/mvc#migrate-controllers-and-views)
-- [ASP.NET Core etiket yardımcıları](https://docs.microsoft.com/aspnet/core/mvc/views/tag-helpers/intro)
-- [ASP.NET Core Razor Pages giriş](https://docs.microsoft.com/aspnet/core/razor-pages)
-- [ASP.NET Core için Razor söz dizimi başvurusu](https://docs.microsoft.com/aspnet/core/razor-pages)
+- [ASP.NET MVC 'den ASP.NET Core MVC: denetleyiciler ve görünümler 'e geçiş](/aspnet/core/migration/mvc#migrate-controllers-and-views)
+- [ASP.NET Core etiket yardımcıları](/aspnet/core/mvc/views/tag-helpers/intro)
+- [ASP.NET Core Razor Pages giriş](/aspnet/core/razor-pages)
+- [ASP.NET Core için Razor söz dizimi başvurusu](/aspnet/core/razor-pages)
 
 >[!div class="step-by-step"]
 >[Önceki](controller-differences.md) 

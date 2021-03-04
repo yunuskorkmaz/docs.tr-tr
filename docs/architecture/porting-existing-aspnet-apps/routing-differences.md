@@ -3,12 +3,12 @@ title: ASP.NET MVC ve ASP.NET Core arasındaki yönlendirme farklılıkları
 description: Yönlendirme nasıl tanımlanır ve ASP.NET MVC 'de çalışma zamanında nasıl çalışır? Yönlendirme ASP.NET Core uygulamalarda farklı midir?
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 187cfdbf40bc8021eb886017a234e06df6933e80
-ms.sourcegitcommit: 456b3cd82a87b453fa737b4661295070d1b6d684
+ms.openlocfilehash: d5c18948248f03a19c97461efe3df38a5be9360b
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100639222"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105861"
 ---
 # <a name="routing-differences-between-aspnet-mvc-and-aspnet-core"></a>ASP.NET MVC ve ASP.NET Core arasındaki yönlendirme farklılıkları
 
@@ -87,7 +87,7 @@ AreaRegistration.RegisterAllAreas();
 
 ### <a name="attribute-routing-in-aspnet-web-api-2"></a>ASP.NET Web API 2 ' de öznitelik yönlendirme
 
-[ASP.NET Web API 2 ' de öznitelik yönlendirme](https://docs.microsoft.com/aspnet/web-api/overview/web-api-routing-and-actions/attribute-routing-in-web-api-2) , küçük farklılıklar Ile ASP.NET MVC 5 ' teki yönlendirmeye benzerdir. Web API 2 ' yi yapılandırma genellikle uygulama başlatma sırasında çağrılan kendi sınıfında yapılır. Öznitelik Yönlendirme yapılandırması bu sınıfta işlenir:
+[ASP.NET Web API 2 ' de öznitelik yönlendirme](/aspnet/web-api/overview/web-api-routing-and-actions/attribute-routing-in-web-api-2) , küçük farklılıklar Ile ASP.NET MVC 5 ' teki yönlendirmeye benzerdir. Web API 2 ' yi yapılandırma genellikle uygulama başlatma sırasında çağrılan kendi sınıfında yapılır. Öznitelik Yönlendirme yapılandırması bu sınıfta işlenir:
 
 ```csharp
 public static class WebApiConfig
@@ -109,7 +109,7 @@ public static class WebApiConfig
 
 Önceki kodda gösterildiği gibi, öznitelik yönlendirme Web API uygulamalarında kural tabanlı yönlendirme ile birleştirilebilir.
 
-Öznitelik yönlendirmeye ek olarak, [ASP.NET Web API 'SI](https://docs.microsoft.com/aspnet/web-api/overview/web-api-routing-and-actions/routing-and-action-selection) http yöntemine (ÖRNEĞIN, Get veya post), `{action}` bir yoldaki yer tutucuyu (varsa) ve eylemin parametrelerini temel alarak hangi eylemin çağrılacağını seçer. Çoğu durumda, eylemin adı, ilgili HTTP yöntemiyle eşleşen "Get" veya "Post" ile eylem adının sonuna önek olarak kullanılmasından bağımsız olarak, eşleşip eşleşmediğine yardımcı olur. Alternatif olarak, eylemler gibi uygun bir HTTP yöntemi özniteliğiyle birlikte kullanılabilir ve `[HttpGet]` BIR http yöntemiyle ön eki olmayan eylem adlarının kullanılmasına izin verilir.
+Öznitelik yönlendirmeye ek olarak, [ASP.NET Web API 'SI](/aspnet/web-api/overview/web-api-routing-and-actions/routing-and-action-selection) http yöntemine (ÖRNEĞIN, Get veya post), `{action}` bir yoldaki yer tutucuyu (varsa) ve eylemin parametrelerini temel alarak hangi eylemin çağrılacağını seçer. Çoğu durumda, eylemin adı, ilgili HTTP yöntemiyle eşleşen "Get" veya "Post" ile eylem adının sonuna önek olarak kullanılmasından bağımsız olarak, eşleşip eşleşmediğine yardımcı olur. Alternatif olarak, eylemler gibi uygun bir HTTP yöntemi özniteliğiyle birlikte kullanılabilir ve `[HttpGet]` BIR http yöntemiyle ön eki olmayan eylem adlarının kullanılmasına izin verilir.
 
 ```csharp
 public class ProductsController : ApiController
@@ -179,12 +179,12 @@ Bu özniteliği kullanarak, bu türden devralan sınıflar, denetleyici adı, ey
 
 ## <a name="references"></a>Başvurular
 
-- [ASP.NET MVC yönlendirmeye genel bakış](https://docs.microsoft.com/aspnet/mvc/overview/older-versions-1/controllers-and-routing/asp-net-mvc-routing-overview-cs)
+- [ASP.NET MVC yönlendirmeye genel bakış](/aspnet/mvc/overview/older-versions-1/controllers-and-routing/asp-net-mvc-routing-overview-cs)
 - [ASP.NET MVC 5 içinde öznitelik yönlendirme](https://devblogs.microsoft.com/aspnet/attribute-routing-in-asp-net-mvc-5/)
-- [ASP.NET Web API 2 ' de öznitelik yönlendirme](https://docs.microsoft.com/aspnet/web-api/overview/web-api-routing-and-actions/attribute-routing-in-web-api-2)
-- [ASP.NET Web API 'sinde yönlendirme ve eylem seçimi](https://docs.microsoft.com/aspnet/web-api/overview/web-api-routing-and-actions/routing-and-action-selection)
-- [ASP.NET Core yönlendirme](https://docs.microsoft.com/aspnet/core/fundamentals/routing)
-- [ASP.NET Core MVC 'de denetleyici eylemlerine yönlendirme](https://docs.microsoft.com/aspnet/core/mvc/controllers/routing)
+- [ASP.NET Web API 2 ' de öznitelik yönlendirme](/aspnet/web-api/overview/web-api-routing-and-actions/attribute-routing-in-web-api-2)
+- [ASP.NET Web API 'sinde yönlendirme ve eylem seçimi](/aspnet/web-api/overview/web-api-routing-and-actions/routing-and-action-selection)
+- [ASP.NET Core yönlendirme](/aspnet/core/fundamentals/routing)
+- [ASP.NET Core MVC 'de denetleyici eylemlerine yönlendirme](/aspnet/core/mvc/controllers/routing)
 
 >[!div class="step-by-step"]
 >[Önceki](configuration-differences.md) 
