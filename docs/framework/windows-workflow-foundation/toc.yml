@@ -241,9 +241,8 @@
             - name: İş Akışını Duraklatma ve Sürdürme
               href: pausing-and-resuming-a-workflow.md
         - name: Geçiş Kılavuzu
-          href: wf-migration-guidance.md
           items:
-            - name: Geçiş Kılavuzu
+            - name: Genel Bakış
               href: migration-guidance.md
             - name: .NET Framework 4’te Birlikte Çalışma Etkinliği ile .NET Framework 3.0 WF Etkinlikleri Kullanma
               href: net-framework-3-0-wf-in-net-framework-4-interop.md

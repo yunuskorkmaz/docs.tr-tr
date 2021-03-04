@@ -26,6 +26,8 @@
               items:
                 - name: Null yapılabilir başvuru türü ek açıklamaları değişti
                   href: aspnet-core/6.0/nullable-reference-type-annotations-changed.md
+                - name: Kullanımdan kaldırılmış ve kaldırılan API 'Ler
+                  href: aspnet-core/6.0/obsolete-removed-apis.md
                 - name: 'Blazor: parametre adı, talep Estimagefileasync yönteminde değiştirildi'
                   href: aspnet-core/6.0/blazor-parameter-name-changed-in-method.md
                 - name: 'Kestrel: günlük iletisi öznitelikleri değiştirildi'
@@ -38,6 +40,8 @@
               items:
                 - name: Null olabilme ek açıklama değişiklikleri
                   href: core-libraries/6.0/nullable-ref-type-annotation-changes.md
+                - name: Standart sayısal biçim ayrıştırma duyarlığı
+                  href: core-libraries/6.0/numeric-format-parsing-handles-higher-precision.md
             - name: Windows Forms
               items:
                 - name: API 'Ler bağımsız değişkenler NullException oluşturur
@@ -320,6 +324,8 @@
               items:
                 - name: Null yapılabilir başvuru türü ek açıklamaları değişti
                   href: aspnet-core/6.0/nullable-reference-type-annotations-changed.md
+                - name: Kullanımdan kaldırılmış ve kaldırılan API 'Ler
+                  href: aspnet-core/6.0/obsolete-removed-apis.md
                 - name: 'Blazor: parametre adı, talep Estimagefileasync yönteminde değiştirildi'
                   href: aspnet-core/6.0/blazor-parameter-name-changed-in-method.md
                 - name: 'Kestrel: günlük iletisi öznitelikleri değiştirildi'
@@ -430,6 +436,8 @@
               items:
                 - name: Null olabilme ek açıklama değişiklikleri
                   href: core-libraries/6.0/nullable-ref-type-annotation-changes.md
+                - name: Standart sayısal biçim ayrıştırma duyarlığı
+                  href: core-libraries/6.0/numeric-format-parsing-handles-higher-precision.md
             - name: .NET 5.0
               items:
                 - name: Tek dosya yayımlama için bütünleştirilmiş kodla ilgili API değişiklikleri
@@ -548,7 +556,7 @@
                   href: msbuild/5.0/publishdepsfilepath-behavior-change.md
                 - name: netcoreapp olan TargetFramework net olarak değiştirildi
                   href: msbuild/5.0/targetframework-name-change.md
-            - name: .NET 3.0
+            - name: '.NET Core 2,1-3,1'
               href: msbuild.md
         - name: Ağ
           items:
