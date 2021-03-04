@@ -3,12 +3,12 @@ title: Davpr hizmeti çağırma yapı taşı
 description: Hizmet çağırma oluşturma bloğunun açıklaması, özellikleri, avantajları ve nasıl uygulanacağı
 author: amolenk
 ms.date: 02/07/2021
-ms.openlocfilehash: 1b31496bc40aebeb24716da519ed25d660242035
-ms.sourcegitcommit: 456b3cd82a87b453fa737b4661295070d1b6d684
+ms.openlocfilehash: 2b64aa1e9b079a3fefe120e687cd6d395981c633
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100639269"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106236"
 ---
 # <a name="the-dapr-service-invocation-building-block"></a>Davpr hizmeti çağırma yapı taşı
 
@@ -16,7 +16,7 @@ Dağıtılmış bir sistemde, bir hizmetin genellikle bir iş işlemini tamamlam
 
 ## <a name="what-it-solves"></a>Ne çözdüğü
 
-Dağıtılmış bir uygulamadaki hizmetler arasında çağrı yapmak kolay görünebilir, ancak ilgili birçok zorluk vardır. Örneğin:
+Dağıtılmış bir uygulamadaki hizmetler arasında çağrı yapmak kolay görünebilir, ancak ilgili birçok zorluk vardır. Örnek:
 
 - Diğer hizmetlerin bulunduğu yer.
 - Hizmet adresi verildiğinde hizmeti güvenli bir şekilde çağırma.
@@ -65,7 +65,7 @@ http://localhost:<dapr-port>/v1.0/invoke/<application-id>/method/<method-name>
 ```
 
 - `<dapr-port>` Bapr 'nin dinlediği HTTP bağlantı noktası.
-- `<application-id>` çağrılacak hizmetin uygulama kimliği.
+- `<application-id>` çağrılacak hizmetin uygulama KIMLIĞI.
 - `<method-name>` uzak hizmette çağrılacak yöntemin adı.
 
 Aşağıdaki örnekte,  `catalog/items` öğesinin ' Get ' uç noktası için bir kıvrımlı çağrı yapılır `Service B` :
@@ -96,7 +96,7 @@ var httpClient = DaprClient.CreateHttpClient();
 await httpClient.PostAsJsonAsync("http://orderservice/submit", order);
 ```
 
-Örnekte, `DaprClient.CreateHttpClient` `HttpClient` davpr hizmeti çağrısı yapmak için kullanılan bir örnek döndürür. Döndürülen, `HttpClient` giden Isteklerin URI 'lerini yeniden yazar özel bir Davpr ileti işleyicisi kullanır. Ana bilgisayar adı, çağrılacak hizmetin uygulama kimliği olarak yorumlanır. Aslında Çağrılmakta olan yeniden yazan istek şunlardır:
+Örnekte, `DaprClient.CreateHttpClient` `HttpClient` davpr hizmeti çağrısı yapmak için kullanılan bir örnek döndürür. Döndürülen, `HttpClient` giden Isteklerin URI 'lerini yeniden yazar özel bir Davpr ileti işleyicisi kullanır. Ana bilgisayar adı, çağrılacak hizmetin uygulama KIMLIĞI olarak yorumlanır. Aslında Çağrılmakta olan yeniden yazan istek şunlardır:
 
 ```http
 http://127.0.0.1:3500/v1/invoke/orderservice/method/submit
@@ -110,7 +110,7 @@ Alternatif olarak, çağrısında özel bir uç nokta yapılandırabilirsiniz `D
 var httpClient = DaprClient.CreateHttpClient(daprEndpoint = "localhost:4000");
 ```
 
-Ayrıca, uygulama kimliğini belirterek taban adresini doğrudan ayarlayabilirsiniz. Bu, bir çağrı yaparken göreli URI 'Leri kullanmayı mümkün kılar:
+Ayrıca, uygulama KIMLIĞINI belirterek taban adresini doğrudan ayarlayabilirsiniz. Bu, bir çağrı yaparken göreli URI 'Leri kullanmayı mümkün kılar:
 
 ```csharp
 var httpClient = DaprClient.CreateHttpClient("orderservice");
@@ -235,7 +235,7 @@ Yukarıdaki örnekte, Davprclient, `order` [protoarabelleğe](https://developers
 
 ## <a name="reference-application-eshopondapr"></a>Başvuru uygulaması: Eshopondadpr
 
-Microsoft 'un orijinal [Eshoponcontainers](https://github.com/dotnet-architecture/eShopOnContainers) mikro hizmet başvuru mımarısı, http/REST ve GRPC hizmetlerinin bir karışımını kullandı. GRPC kullanımı, [Toplayıcı hizmeti](../cloud-native/service-to-service-communication.md#service-aggregator-pattern) ile çekirdek arka uç hizmetleri arasındaki iletişim ile sınırlandırılmıştır. Şekil 6-2 mimariyi gösterme:
+Microsoft 'un orijinal [Eshoponcontainers](https://github.com/dotnet-architecture/eShopOnContainers) mikro hizmet başvuru mımarısı, http/REST ve GRPC hizmetlerinin bir karışımını kullandı. GRPC kullanımı, [Toplayıcı hizmeti](../cloud-native/service-to-service-communication.md#service-aggregator-pattern) ve çekirdek arka uç hizmetleri arasındaki iletişim ile sınırlandırılmıştır. Şekil 6-2 mimariyi gösterme:
 
 ![eShopOnContainers 'da gRPC ve HTTP/REST çağrıları](./media/service-invocation/eshop-on-containers.png)
 
@@ -243,7 +243,7 @@ Microsoft 'un orijinal [Eshoponcontainers](https://github.com/dotnet-architectur
 
 Önceki şekildeki adımları göz önünde bulun:
 
-1. Ön uç, HTTP/REST kullanarak [API ağ geçidini](https://docs.microsoft.com/azure/architecture/microservices/design/gateway) çağırır.
+1. Ön uç, HTTP/REST kullanarak [API ağ geçidini](/azure/architecture/microservices/design/gateway) çağırır.
 
 1. API Gateway basit [CRUD](https://www.sumologic.com/glossary/crud/) (oluşturma, okuma, güncelleştirme, silme) isteklerini http/Rest kullanarak doğrudan bir çekirdek arka uç hizmetine iletir.
 
@@ -259,7 +259,7 @@ Son güncellenen Eshopondadpr uygulamasında, hizmet ve API ağ geçidine Davpr 
 
 Önceki şekildeki güncelleştirilmiş adımlara göz önünde edin:
 
-1. Ön uç hala API ağ geçidini çağırmak için HTTP/REST kullanır.
+1. Ön uç yine de API ağ geçidini çağırmak için HTTP/REST kullanır.
 
 1. API Gateway, HTTP isteklerini Davpr sidecar 'e iletir.
 
@@ -302,7 +302,7 @@ Envoy rotalar yapılandırması, gelen istekleri davpr sepet çağrısı olarak 
     cluster: dapr
 ```
 
-Ön uç istemcisinin Katalog öğelerinin bir listesini almak istediği bir senaryo düşünün. Katalog API 'SI, katalog öğelerini almak için bir uç nokta sağlar:
+Ön uç istemcisinin, Katalog öğelerinin listesini almak istediği bir senaryo düşünün. Katalog API 'SI, katalog öğelerini almak için bir uç nokta sağlar:
 
 ``` csharp
 [Route("api/v1/[controller]")]
@@ -338,7 +338,7 @@ GET http://localhost/api/v1/catalog/items?pageSize=20
 
 ### <a name="make-aggregated-service-calls-using-the-net-sdk"></a>.NET SDK kullanarak toplu hizmet çağrıları yapma
 
-EShop ön ucu 'ndan çoğu çağrı basit CRUD çağrılardır. API Gateway, bunları işlenmek üzere tek bir hizmete iletir. Ancak, bazı senaryolar, bir isteği tamamlamaya yönelik birden fazla arka uç hizmetinin birlikte çalışmasını gerektirir. Bu daha karmaşık çağrılar için eShop, iş akışını birden çok hizmet arasında aracılık için Web alışveriş Toplayıcısı hizmetini kullanır. Şekil 6-4, alışveriş sepetinize bir öğe eklemenin işlem dizisini gösterir:
+EShop ön ucundan yapılan çoğu çağrı basit CRUD çağrılardır. API Gateway, bunları işlenmek üzere tek bir hizmete iletir. Ancak, bazı senaryolar, bir isteği tamamlamaya yönelik birden fazla arka uç hizmetinin birlikte çalışmasını gerektirir. Bu daha karmaşık çağrılar için eShop, iş akışını birden çok hizmet arasında aracılık için Web alışveriş Toplayıcısı hizmetini kullanır. Şekil 6-4, alışveriş sepetinize bir öğe eklemenin işlem dizisini gösterir:
 
 ![Sepet sırası diyagramını Güncelleştir](./media/service-invocation/complex-call.png)
 
@@ -396,7 +396,7 @@ public class CatalogService : ICatalogService
     public Task<IEnumerable<CatalogItem>> GetCatalogItemsAsync(IEnumerable<int> ids)
     {
         var requestUri = $"api/v1/catalog/items?ids={string.Join(",", ids)}";
-      
+
         return _httpClient.GetFromJsonAsync<IEnumerable<CatalogItem>>(requestUri);
     }
 
@@ -425,7 +425,7 @@ public class BasketService : IBasketService
             Content = JsonContent.Create(currentBasket)
         };
         request.Headers.Authorization = new AuthenticationHeaderValue(accessToken);
-       
+
         var response = await _httpClient.SendAsync(request);
         response.EnsureSuccessStatusCode();
     }
@@ -434,7 +434,7 @@ public class BasketService : IBasketService
 }
 ```
 
-Bu örnekte, hizmeti çağırmak için yalnızca standart HttpClient işlevselliği kullanılır. Bu, HttpClient 'ı zaten bildiğiniz geliştiricilerin mevcut becerilerini yeniden kullanmasına olanak sağlar. Bu, mevcut HttpClient kodunun hiçbir değişiklik yapmadan PAPR hizmeti çağrısını kullanmasına de olanak sağlar.
+Bu örnekte, hizmeti çağırmak için yalnızca standart HttpClient işlevselliği kullanılır. Bu, HttpClient 'ı zaten bildiğiniz geliştiricilerin mevcut becerilerini yeniden kullanmasına olanak sağlar. Bu, var olan HttpClient kodunun hiçbir değişiklik yapmadan de Davpr hizmeti çağrısını kullanmasına olanak sağlar.
 
 ## <a name="summary"></a>Özet
 

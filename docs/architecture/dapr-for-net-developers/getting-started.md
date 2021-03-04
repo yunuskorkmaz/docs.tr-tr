@@ -3,12 +3,12 @@ title: Davpr ile çalışmaya başlama
 description: Yerel geliştirme ortamınızı hazırlamaya ve ilk .NET uygulamalarınızı Davpr ile oluşturmaya yönelik bir kılavuz.
 author: amolenk
 ms.date: 02/07/2021
-ms.openlocfilehash: 4d984f5f31f00e776fb9d521592ad9dbb4a79339
-ms.sourcegitcommit: b924ade6426cf61a4604c4e2ee54cb3592c29317
+ms.openlocfilehash: 667e3718ff96de2d8181bb3dc79c4ae53adb9bf8
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "101096746"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106357"
 ---
 # <a name="get-started-with-dapr"></a>Davpr ile çalışmaya başlama
 
@@ -27,7 +27,7 @@ Geliştirme bilgisayarınıza Dadpr 'yi yükleyerek başlayacaksınız. Tamamlan
 
 1. [Davpr 'Yi başlatın](https://docs.dapr.io/getting-started/install-dapr/). Bu adım, en son Davpr ikililerini ve kapsayıcı görüntülerini yükleyerek geliştirme ortamınızı ayarlar.
 
-1. .NET Core 3,1 için [.NET Core 3 geliştirme araçları](https://dotnet.microsoft.com/download/dotnet-core/3.1) 'nı yükler.
+1. [.NET Core 3,1 SDK 'sını](https://dotnet.microsoft.com/download/dotnet/3.1)yükler.
 
 Artık, bu, ilk bir Davpr uygulamanızı oluşturmak için gereklidir!
 
@@ -61,7 +61,7 @@ Bu, [Davpr durum yönetimi](state-management.md) yapı taşını tüketen basit 
 
 Daha sonra, programda durum bilgisi olan bir sayaç uygulamak için, Davpr [durum yönetimi yapı taşını](https://docs.dapr.io/developing-applications/building-blocks/state-management/state-management-overview/) kullanacaksınız.
 
-HTTP ve gRPC için, Davpr 'nin yerel desteğini kullanarak herhangi bir geliştirme platformunda, Davpr API 'Leri çağırabilirsiniz. Ancak, .NET geliştiricileri, Davpr .NET SDK 'sını daha doğal ve sezgisel olarak bulacaktır. Bu, Davpr API 'Lerini çağırmak için kesin türü belirtilmiş bir .NET istemcisi sağlar. .NET SDK Ayrıca ASP.NET Core sıkı bir şekilde tümleşir.
+HTTP ve gRPC için, Davpr 'nin yerel desteğini kullanarak herhangi bir geliştirme platformunda, Davpr API 'Leri çağırabilirsiniz. Ancak, .NET geliştiricileri, Davpr .NET SDK 'sını daha doğal ve sezgisel olarak bulacaktır. Bu, Davpr API 'Lerini çağırmak için türü kesin belirlenmiş bir .NET istemcisi sağlar. .NET SDK Ayrıca ASP.NET Core sıkı bir şekilde tümleşir.
 
 1. Terminal penceresinde, `Dapr.Client` NuGet paketini uygulamanıza ekleyin:
 
@@ -209,7 +209,7 @@ spec:
 
 Sonraki örnekte, çok kapsayıcılı bir uygulama oluşturacaksınız. Ayrıca, hizmetler arasında iletişim kurmak için de [Davpr hizmet çağırma](service-invocation.md) yapı taşını kullanacaksınız. Çözüm, Web API 'sinden Hava durumu tahminlerini alan bir Web uygulamasından oluşur. Her biri bir Docker kapsayıcısında çalıştırılır. Kapsayıcıyı yerel olarak çalıştırmak ve hata ayıklama yeteneklerini etkinleştirmek için Docker Compose kullanacaksınız.
 
-Inpr için yerel ortamınızı yapılandırdığınızdan ve [.NET Core 3 geliştirme araçlarının](https://dotnet.microsoft.com/download/dotnet-core/3.1) yüklü olduğundan emin olun (Bu bölümün başında yönergeler mevcuttur).
+Inpr için yerel ortamınızı yapılandırdığınızdan ve [.NET Core 3 geliştirme araçlarının](https://dotnet.microsoft.com/download/dotnet/3.1) yüklü olduğundan emin olun (Bu bölümün başında yönergeler mevcuttur).
 
 Ayrıca, **.NET Core platformlar arası geliştirme** iş yükü yüklü olan [Visual Studio 2019](https://visualstudio.microsoft.com/downloads) kullanarak bu örneği doldurmanız gerekir.
 
@@ -336,7 +336,7 @@ Ayrıca, **.NET Core platformlar arası geliştirme** iş yükü yüklü olan [V
 
 Bu örneğin son bölümünde kapsayıcı desteği ekleyecek ve Docker Compose kullanarak çözümü çalıştıracaksınız.
 
-1. Projeye sağ tıklayın `DaprFrontEnd` ve **> kapsayıcı Orchestrator desteği ekle**' yi seçin. **Kapsayıcı Orchestrator desteği ekle** iletişim kutusu görünür:
+1. Projeye sağ tıklayın `DaprFrontEnd` ve   >  **kapsayıcı Orchestrator desteği** Ekle ' yi seçin. **Kapsayıcı Orchestrator desteği ekle** iletişim kutusu görünür:
 
    ![Kapsayıcı Orchestrator desteği ekleme ekran görüntüsü](./media/getting-started/multicontainer-addorchestrator.png)
 
@@ -368,7 +368,7 @@ Bu örneğin son bölümünde kapsayıcı desteği ekleyecek ve Docker Compose k
 
 1. `DaprBackEnd`Web API projesinde, proje düğümüne sağ tıklayın ve   >  **kapsayıcı Orchestrator desteği** Ekle ' yi seçin. **Docker Compose** öğesini seçin ve ardından hedef işletim sistemi olarak **Linux** ' u yeniden seçin.
 
-   *Docker-Compose. yıml* dosyasını yeniden açın ve içeriğini inceleyin. Visual Studio Docker Compose dosyasını günceletti. Artık her iki hizmet de dahil edilmiştir:
+   *Docker-Compose. yıml* dosyasını yeniden açın ve içeriğini inceleyin. Visual Studio Docker Compose dosyasını güncelleştirmiştir. Artık her iki hizmet de dahil edilmiştir:
 
    ```yaml
    version: '3.4'

@@ -1,7 +1,7 @@
 ---
 title: .NET şifreleme modeli
 description: .NET 'teki olağan şifreleme algoritmalarının uygulamalarını gözden geçirin. Nesne devralmayı, akış tasarımını & yapılandırmayı Genişletilebilir şifreleme modelini öğrenin.
-ms.date: 07/14/2020
+ms.date: 02/26/2021
 dev_langs:
 - csharp
 - vb
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cryptography [.NET], model
 - encryption [.NET], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-ms.openlocfilehash: f9ec08992cb8db8f81f11de661612e1b7d15131c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2208e36ac4521f43cfd2960d92588c8349a119ca
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831123"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106936"
 ---
 # <a name="net-cryptography-model"></a>.NET şifreleme modeli
 
@@ -48,14 +48,14 @@ Windows üzerinde .NET Framework:
 
 Çoğu durumda, gibi bir algoritma uygulama sınıfına doğrudan başvurmanız gerekmez `AesCryptoServiceProvider` . Genellikle ihtiyacınız olan Yöntemler ve Özellikler taban algoritma sınıfında (gibi) `Aes` . Temel algoritma sınıfında bir Factory yöntemi kullanarak varsayılan uygulama sınıfının bir örneğini oluşturun ve temel algoritma sınıfına bakın. Örneğin, aşağıdaki örnekte vurgulanan kod satırına bakın:
 
-:::code language="csharp" source="snippets/encrypting-data/csharp/aes-encrypt.cs" highlight="16":::
-:::code language="vb" source="snippets/encrypting-data/vb/aes-encrypt.vb" highlight="12":::
+:::code language="csharp" source="snippets/encrypting-data/csharp/aes-encrypt.cs" highlight="20":::
+:::code language="vb" source="snippets/encrypting-data/vb/aes-encrypt.vb" highlight="17":::
 
 ## <a name="cryptographic-configuration"></a>Şifreleme yapılandırması
 
 Şifreleme yapılandırması, bir algoritmanın belirli bir uygulamasını bir algoritma adına çözümlemenizi sağlar ve .NET şifreleme sınıflarının genişletilebilirliğini sağlar. Bir algoritmanın kendi donanım veya yazılım uygulamanızı ekleyebilir ve uygulamayı tercih ettiğiniz algoritma adına eşleyebilirsiniz. Yapılandırma dosyasında bir algoritma belirtilmemişse, varsayılan ayarlar kullanılır.
 
-## <a name="choosing-an-algorithm"></a>Algoritma seçme
+## <a name="choose-an-algorithm"></a>Algoritma seçin
 
 Farklı nedenlerle bir algoritma seçebilirsiniz: Örneğin, veri bütünlüğü için, veri gizliliği veya bir anahtar oluşturmak için. Simetrik ve karma algoritmalar, bütünlük nedenleriyle (değişiklikten koruma) veya gizlilik nedenlerinden (görüntülemeden koruma) verileri korumak için tasarlanmıştır. Karma algoritmalar öncelikle veri bütünlüğü için kullanılır.
 

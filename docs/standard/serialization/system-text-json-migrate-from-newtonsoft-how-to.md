@@ -13,18 +13,18 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 3cd8bbb03d1c9a2cfb38c2e6b076fa660690cfea
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: 29aaa239cf28a2a9833bcf8157b82c8fd787258a
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100584175"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106676"
 ---
 # <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>' Den ' a geçiş Newtonsoft.JsonSystem.Text.Json
 
 Bu makalede, ' den ' e nasıl geçiş yapılacağı gösterilmektedir [Newtonsoft.Json](https://www.newtonsoft.com/json) <xref:System.Text.Json> .
 
-`System.Text.Json`Ad alanı, JavaScript nesne gösterimi (JSON) öğesinden serileştirmek ve seri durumdan çıkarmak için işlevsellik sağlar. `System.Text.Json`Kitaplık [.net Core 3,1](https://dotnet.microsoft.com/download/dotnet-core/3.1) ve üzeri sürümler için çalışma zamanına dahildir. Diğer hedef çerçeveler için [System.Text.Json](https://www.nuget.org/packages/System.Text.Json) NuGet paketini yükler. Paket şunları destekler:
+`System.Text.Json`Ad alanı, JavaScript nesne gösterimi (JSON) öğesinden serileştirmek ve seri durumdan çıkarmak için işlevsellik sağlar. `System.Text.Json`Kitaplık [.net Core 3,1](https://dotnet.microsoft.com/download/dotnet/3.1) ve üzeri sürümler için çalışma zamanına dahildir. Diğer hedef çerçeveler için [System.Text.Json](https://www.nuget.org/packages/System.Text.Json) NuGet paketini yükler. Paket şunları destekler:
 
 * .NET Standard 2,0 ve sonraki sürümler
 * .NET Framework 4.7.2 ve sonraki sürümler
@@ -638,7 +638,7 @@ public JsonElement LookAndLoad(JsonElement source)
 
 Yukarıdaki kod, bir özellik içeren bir için bekliyor `JsonElement` `fileName` . JSON dosyasını açar ve bir oluşturur `JsonDocument` . Yöntemi, çağıranın tüm belge ile çalışmak istediğini varsayar, bu yüzden öğesinin öğesini döndürür `Clone` `RootElement` .
 
-Bir alır ve bir `JsonElement` alt öğe döndürüyorsa, alt öğenin bir kısmını döndürmek gerekli değildir `Clone` . Çağıran, `JsonDocument` geçirilen ' ın ait olduğu canlı tutmanın sorumluluğundadır `JsonElement` . Örneğin:
+Bir alır ve bir `JsonElement` alt öğe döndürüyorsa, alt öğenin bir kısmını döndürmek gerekli değildir `Clone` . Çağıran, `JsonDocument` geçirilen ' ın ait olduğu canlı tutmanın sorumluluğundadır `JsonElement` . Örnek:
 
 ```csharp
 public JsonElement ReturnFileName(JsonElement source)

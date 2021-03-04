@@ -3,12 +3,12 @@ title: 20.000 fit üzerinde davpr
 description: Nepr 'nin ne olduğu, ne yaptığı ve nasıl çalıştığı hakkında üst düzey bir genel bakış.
 author: robvet
 ms.date: 02/07/2021
-ms.openlocfilehash: 682491a80d7f3691cdc687e068818fb883541e8d
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: de7997c7c38b696146f2553ef9b723a79b562a1c
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100629385"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106364"
 ---
 # <a name="dapr-at-20000-feet"></a>20.000 fit üzerinde davpr
 
@@ -57,7 +57,7 @@ Yapı taşı, dağıtılmış bir altyapı özelliğini kapsüller. İşlevselli
 
 Aşağıdaki tabloda her bir blok tarafından sunulan altyapı hizmetleri açıklanmaktadır.
 
-| Yapı taşı | Description |
+| Yapı taşı | Açıklama |
 |----------------|-------------|
 | [Durum yönetimi](state-management.md) | Uzun süreli durum bilgisi olan hizmetler için bağlamsal bilgileri destekler. |
 | [Hizmet çağrısı](service-invocation.md) | Platform belirsiz protokollerini ve iyi bilinen uç noktaları kullanarak doğrudan, hizmetten hizmete çağrıları çağırın. |
@@ -105,7 +105,7 @@ Davpr **durum depolama** bileşenini göz önünde bulundurun. CRUD işlemlerind
 
 Her bileşen ortak bir durum yönetimi arabirimi aracılığıyla gerekli uygulamayı sağlar:
 
- ```go
+```go
  type Store interface {
    Init(metadata Metadata) error
    Delete(req *DeleteRequest) error
@@ -139,7 +139,7 @@ Belki de durum depolude Azure Redis Cache başlatabilirsiniz. Aşağıdaki yapı
      value: <bool> # Optional. Allowed: true, false.
    - name: failover
      value: <bool> # Optional. Allowed: true, false.
-```
+ ```
 
 **Spec** bölümünde, davpr 'yi durum yönetimi için Redis Cache kullanacak şekilde yapılandırırsınız. Bölüm bileşene özgü meta verileri de içerir. Bu durumda, ek Redu ayarlarını yapılandırmak için kullanabilirsiniz.
 
@@ -157,11 +157,11 @@ Bu yazma sırasında, aşağıdaki bileşen türleri, Davpr tarafından sağlan�
 | [Gizli depolar](https://github.com/dapr/components-contrib/tree/master/secretstores) | Bulut, kenar, ticari ve açık kaynaklı hizmetler de dahil olmak üzere dış gizli depolarla etkileşim kurmak için tekdüzen arabirimi sağlar. |
 | [Dışarı vericiler izleme](https://github.com/dapr/components-contrib/tree/master/exporters) | Telemetri sarmalayıcıları açmak için tekdüzen arabirimi sağlar. |
 
-Bu işlem, Jet 'in PAPR 'den itibaren tamamlandığından, daha fazla geri dönerek bir kez nasıl bağlandığını görebilirsiniz.
+Bu işlem, Jet 'in Davpr üzerinden tamamlanmasını tamamladıktan sonra bir kez daha görürsünüz ve nasıl birbirine bağlandığını görebilirsiniz.
 
 ### <a name="sidecar-architecture"></a>Sidecar mimarisi
 
-Davpr, bir [sepet mimarisi](https://docs.microsoft.com/azure/architecture/patterns/sidecar)aracılığıyla yapı taşlarını ve bileşenlerini sunar. Bir sepet, DAPR 'nin ayrı bir bellek işleminde veya hizmetinizdeki ayrı kapsayıcıda çalışmasına olanak sağlar. Sidecler, hizmetin bir parçası olmadıkları ve ona bağlı olduğu için yalıtım ve kapsülleme sağlar. Bu ayrım, her birinin kendi çalışma zamanı ortamına sahip olmasını ve farklı programlama platformları üzerinde oluşturulmuş olmasını sağlar. Şekil 2-4, bir sepet deseninin gösterildiği bir araç.
+Davpr, bir [sepet mimarisi](/azure/architecture/patterns/sidecar)aracılığıyla yapı taşlarını ve bileşenlerini sunar. Bir sepet, DAPR 'nin ayrı bir bellek işleminde veya hizmetinizdeki ayrı kapsayıcıda çalışmasına olanak sağlar. Sidecler, hizmetin bir parçası olmadıkları ve ona bağlı olduğu için yalıtım ve kapsülleme sağlar. Bu ayrım, her birinin kendi çalışma zamanı ortamına sahip olmasını ve farklı programlama platformları üzerinde oluşturulmuş olmasını sağlar. Şekil 2-4, bir sepet deseninin gösterildiği bir araç.
 
 ![Sidecar mimarisi](./media/dapr-at-20000-feet/sidecar-generic.png)
 

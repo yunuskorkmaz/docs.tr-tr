@@ -17,12 +17,12 @@ helpviewer_keywords:
 - UShort data type
 - US literal type characters [Visual Basic]
 ms.assetid: 138db892-665d-4ba8-9cae-d8d91c4a8f39
-ms.openlocfilehash: 9c709e2110aef4281c348f697408044a191314c6
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 43c18bad3e24e14c28d2ca3d5d88170d584e55a8
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99774986"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106650"
 ---
 # <a name="ushort-data-type-visual-basic"></a>UShort veri türü (Visual Basic)
 
@@ -49,7 +49,7 @@ Visual Basic 2017 ' den başlayarak, `_` Aşağıdaki örnekte gösterildiği gi
 
 [!code-vb[UShort](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UShortS)]
 
-Visual Basic 15,5 ' den başlayarak, alt çizgi karakterini ( `_` ) ön ek ile onaltılı, ikili veya sekizlik basamaklar arasında önde gelen bir ayırıcı olarak da kullanabilirsiniz. Örneğin:
+Visual Basic 15,5 ' den başlayarak, alt çizgi karakterini ( `_` ) ön ek ile onaltılı, ikili veya sekizlik basamaklar arasında önde gelen bir ayırıcı olarak da kullanabilirsiniz. Örnek:
 
 ```vb
 Dim number As UShort = &H_FF8C
@@ -67,7 +67,7 @@ Dim number = &H_5826us
   
 - **Negatif sayılar.** `UShort`İşaretsiz bir tür olduğundan, negatif bir sayıyı temsil edemez. `-`Türü değerlendirilen bir ifadede birli eksi () işlecini kullanırsanız `UShort` , Visual Basic ifadeyi `Integer` önce dönüştürür.  
   
-- **CLS uyumluluğu.** `UShort`Veri türü [ortak dil belirtiminin](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS) bir parçası değildir, bu nedenle CLS uyumlu kod onu kullanan bir bileşeni tüketmez.
+- **CLS uyumluluğu.** `UShort`Veri türü [ortak dil belirtiminin](https://www.ecma-international.org/publications-and-standards/standards/ecma-335/) (CLS) bir parçası değildir, bu nedenle CLS uyumlu kod onu kullanan bir bileşeni tüketmez.
   
 - **Kan.** Veri türü,,,,, `UShort` `Integer` `UInteger` `Long` `ULong` `Decimal` `Single` , ve `Double` için widens. Bu, `UShort` bir hatayla karşılaşmadan bu türlerden birine dönüştürebileceğiniz anlamına gelir <xref:System.OverflowException?displayProperty=nameWithType> .  
   

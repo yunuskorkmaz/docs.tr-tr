@@ -3,20 +3,20 @@ title: Davpr yayımlama & abonelik oluşturma bloğu
 description: '& abonelik oluşturma-bloğunun ve bu uygulamayı nasıl uygulayacağınız için bir açıklama'
 author: edwinvw
 ms.date: 02/07/2021
-ms.openlocfilehash: 3283abda0322fa2227373a22a0b076eb807d9c28
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: b07350ef19367f843b15ca30f7a913f910c20255
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100629643"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106330"
 ---
 # <a name="the-dapr-publish--subscribe-building-block"></a>Davpr yayımlama & abonelik oluşturma bloğu
 
-[Yayımla-abone ol](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber) (genellikle "pub/Sub" olarak adlandırılır), iyi bilinen ve yaygın olarak kullanılan bir mesajlaşma modelidir. Mimarlar, dağıtılmış uygulamalarda yaygın olarak bu şekilde kullanılır. Ancak, bunu uygulamak için bir sıhhi tesisat karmaşık olabilir. Farklı mesajlaşma ürünleri arasında genellikle hafif özellik farklılıkları vardır. Davpr, yayın/alt işlevleri uygulamayı önemli ölçüde kolaylaştıran bir yapı taşı sunar.
+[Yayımla-abone ol](/azure/architecture/patterns/publisher-subscriber) (genellikle "pub/Sub" olarak adlandırılır), iyi bilinen ve yaygın olarak kullanılan bir mesajlaşma modelidir. Mimarlar, dağıtılmış uygulamalarda yaygın olarak bu şekilde kullanılır. Ancak, bunu uygulamak için bir sıhhi tesisat karmaşık olabilir. Farklı mesajlaşma ürünleri arasında genellikle hafif özellik farklılıkları vardır. Davpr, yayın/alt işlevleri uygulamayı önemli ölçüde kolaylaştıran bir yapı taşı sunar.
 
 ## <a name="what-it-solves"></a>Ne çözdüğü
 
-Publish-Subscribe deseninin birincil avantajı, bazen zamana bağlı [ayırma olarak adlandırılan](https://docs.microsoft.com/azure/architecture/guide/technology-choices/messaging#decoupling) **gevşek** bir modeldir. Model, iletileri ( **aboneler**) kullanan hizmetlerden iletiler ( **yayımcılar**) Gönderen Hizmetleri ayırır. Hem yayımcılar hem de aboneler birbirleriyle uyumlu değildir, her ikisi de iletileri dağıtan merkezi bir **ileti aracısına** bağımlıdır.
+Publish-Subscribe deseninin birincil avantajı, bazen zamana bağlı [ayırma olarak adlandırılan](/azure/architecture/guide/technology-choices/messaging#decoupling) **gevşek** bir modeldir. Model, iletileri ( **aboneler**) kullanan hizmetlerden iletiler ( **yayımcılar**) Gönderen Hizmetleri ayırır. Hem yayımcılar hem de aboneler birbirleriyle uyumlu değildir, her ikisi de iletileri dağıtan merkezi bir **ileti aracısına** bağımlıdır.
 
 Şekil 7-1, pub/Sub deseninin üst düzey mimarisini gösterir.
 
@@ -33,7 +33,7 @@ Publish-Subscribe deseninin birincil avantajı, bazen zamana bağlı [ayırma ol
 
 Çoğu ileti aracıları, alındıktan sonra iletileri kalıcı hale getirebileceği bir sıraya alma mekanizması kapsülleyebilirsiniz. Bu, ileti Aracısı iletiyi depolayarak **dayanıklılığı** güvence altına alır. Bir yayımcı bir ileti gönderdiğinde abonelerin hemen kullanılabilir veya hatta çevrimiçi olması gerekmez. Bir kez varsa, abone iletiyi alır ve işler.  Davpr ileti teslimi için **en az bir kez** semantiğini garanti eder. Bir ileti yayımlandıktan sonra, ilgili aboneye en az bir kez gönderilir.
 
- > Hizmetiniz yalnızca bir iletiyi bir kez işleyebilir, aynı iletinin birden çok kez işlenmemesini sağlamak için bir [Ise denetimi](https://docs.microsoft.com/azure/architecture/microservices/design/api-design#idempotent-operations) sağlamanız gerekir. Böyle bir mantık kodlanırken, Azure Service Bus gibi bazı ileti aracıları yerleşik olarak *yinelenen algılama* mesajlaşma özellikleri sağlar.
+ > Hizmetiniz yalnızca bir iletiyi bir kez işleyebilir, aynı iletinin birden çok kez işlenmemesini sağlamak için bir [Ise denetimi](/azure/architecture/microservices/design/api-design#idempotent-operations) sağlamanız gerekir. Böyle bir mantık kodlanırken, Azure Service Bus gibi bazı ileti aracıları yerleşik olarak *yinelenen algılama* mesajlaşma özellikleri sağlar.
 
 Hem ticari hem de açık kaynaklı çeşitli ileti Aracısı ürünleri mevcuttur. Her birinin avantajları ve dezavantajları vardır. İşiniz, sistem gereksinimlerinizi uygun aracı ile eşleşmedir. Seçildiğinde, uygulamanızı ileti Aracısı sıhhi bir şekilde ayırmak en iyi uygulamadır. Aracıyı bir *soyutlama* içinde sarmalayarak bu işlevselliği elde edersiniz. Soyutlama, ileti sıhhi tesisat düzeyini kapsüller ve kodunuza genel yayın/alt işlemleri sunar. Kodunuz gerçek ileti aracısıdır değil soyutlama ile iletişim kurar. Bir Wise kararı verirken, soyutlamayı ve onun temelindeki uygulamayı yazmanız ve korumanız gerekir. Bu yaklaşım karmaşık, yinelenen ve hataya açık olabilecek özel kod gerektirir.
 
@@ -41,7 +41,7 @@ Davpr Yayımla & abone ol yapı taşı, mesajlaşma soyutlamasını ve kullanım
 
 ## <a name="how-it-works"></a>Nasıl çalışır?
 
-Davpr Publish & Subscribe yapı taşı, ileti göndermek ve almak için platformdan bağımsız bir API altyapısı sağlar. Hizmetleriniz bir adlandırılmış [konuya](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-queues-topics-subscriptions#topics-and-subscriptions)ileti yayımlar. Hizmetleriniz iletileri tüketmek için bir konuya abone olur.
+Davpr Publish & Subscribe yapı taşı, ileti göndermek ve almak için platformdan bağımsız bir API altyapısı sağlar. Hizmetleriniz bir adlandırılmış [konuya](/azure/service-bus-messaging/service-bus-queues-topics-subscriptions#topics-and-subscriptions)ileti yayımlar. Hizmetleriniz iletileri tüketmek için bir konuya abone olur.
 
 Hizmet, Davpr sidecar üzerinde pub/Sub API 'sini çağırır. Sonra sepet, belirli bir ileti Aracısı ürününü kapsülleyen önceden tanımlanmış bir Davpr pub/Sub bileşenine çağrı yapar. Şekil 7-2, Davpr pub/Sub mesajlaşma yığınını gösterir.
 
@@ -123,7 +123,7 @@ JSON yanıtında, uygulamanın konulara ve konuların abone olmak istediğini g�
 }
 ```
 
-Bunlar kullanılabilir `status` değerlerdir:
+Aşağıdaki tabloda kullanılabilir `status` değerler gösterilmektedir:
 
 | Durum           | Eylem                                                       |
 | ---------------- | ------------------------------------------------------------ |
@@ -160,7 +160,7 @@ await daprClient.PublishEventAsync<OrderData>("pubsub", "newOrder", data);
 ```
 
 - İlk bağımsız değişken, `pubsub` ileti Aracısı uygulamasını sağlayan Davpr bileşeninin adıdır. Bu bölümün ilerleyen kısımlarında bileşenleri ele alacağız.
-- İkinci bağımsız değişken `neworder` iletiyi göndermek için konunun adını sağlar.
+- İkinci bağımsız değişken `neworder` iletinin gönderileceği konunun adını sağlar.
 - Üçüncü bağımsız değişken iletinin yüküyle aynıdır.
 - Yönteminin genel tür parametresini kullanarak iletinin .NET türünü belirtebilirsiniz.
 
@@ -268,7 +268,7 @@ spec:
 
 Bu örnekte, bloğunda herhangi bir ileti aracısına özgü yapılandırma belirtebilirsiniz `metadata` . Bu durumda, Kbbitmq dayanıklı kuyruklar oluşturmak için yapılandırılır. Ancak, Kbbitmq bileşeninin daha fazla yapılandırma seçeneği vardır. Her bir bileşenin yapılandırması kendi olası alanları kümesine sahip olur. Her bir [yayın/alt bileşen](https://docs.dapr.io/operations/components/setup-pubsub/supported-pubsub/)belgelerindeki hangi alanların kullanılabilir olduğunu okuyabilirsiniz.
 
-Koddan bir konuya abone olmanın programlama yolunun yanında, Davpr pub/Sub da bir konuya abone olmak için bildirim temelli bir yol sağlar. Bu yaklaşım, uygulama kodundan gelen Davpr bağımlılığını kaldırır. Bu nedenle, var olan bir uygulamanın kodda herhangi bir değişiklik yapmadan konulara abone olma imkanı de sağlar. Aşağıda, bir aboneliği yapılandırmaya yönelik bir Davpr yapılandırma dosyası örneği görülmektedir:
+Koddan bir konuya abone olmanın programlama yolunun yanında, Davpr pub/Sub da bir konuya abone olmak için bildirim temelli bir yol sağlar. Bu yaklaşım, uygulama kodundan gelen Davpr bağımlılığını kaldırır. Bu nedenle, var olan bir uygulamanın kodda herhangi bir değişiklik yapmadan konulara abone olma imkanı de sağlar. Aşağıdaki örnek, bir aboneliği yapılandırmak için bir Davpr yapılandırma dosyası göstermektedir:
 
 ```yaml
 apiVersion: dapr.io/v1alpha1
@@ -356,7 +356,7 @@ public class DaprEventBus : IEventBus
 Kod parçacığında görebileceğiniz gibi, konu adı olay türünün adından türetilir. Tüm eShop Hizmetleri `IEventBus` soyutlama kullandığından, geriye doğru ekleme davpr, ana hat uygulama kodunda *kesinlikle hiçbir değişiklik* gerektirmez.
 
 > [!IMPORTANT]
-> Davpr SDK, `System.Text.Json` iletileri seri hale getirmek/seri durumdan çıkarmak için kullanır. Ancak, `System.Text.Json` türetilmiş sınıfların özelliklerini varsayılan olarak serileştirmez. EShop kodunda, bazen `IntegrationEvent` tümleştirme olayları için temel sınıf olarak açıkça bir olay olarak bildirilmiştir. Bu işlem, somut olay türü çalışma zamanında iş mantığı temel alınarak dinamik olarak belirlendiği için yapılır. Sonuç olarak, olay, türetilmiş sınıf değil, temel sınıfın tür bilgileri kullanılarak serileştirilir. `System.Text.Json`Bu durumda türetilmiş sınıfın tüm özelliklerini Serileştirmeye zorlamak için, kod `object` genel tür parametresi olarak kullanılır. Daha fazla bilgi için bkz. [.net belgeleri](https://docs.microsoft.com/dotnet/standard/serialization/system-text-json-polymorphism).
+> Davpr SDK, `System.Text.Json` iletileri seri hale getirmek/seri durumdan çıkarmak için kullanır. Ancak, `System.Text.Json` türetilmiş sınıfların özelliklerini varsayılan olarak serileştirmez. EShop kodunda, bazen `IntegrationEvent` tümleştirme olayları için temel sınıf olarak açıkça bir olay olarak bildirilmiştir. Bu işlem, somut olay türü iş mantığını temel alan çalışma zamanında dinamik olarak belirlendiği için yapılır. Sonuç olarak, olay, türetilmiş sınıf değil, temel sınıfın tür bilgileri kullanılarak serileştirilir. `System.Text.Json`Bu durumda türetilmiş sınıfın tüm özelliklerini Serileştirmeye zorlamak için, kod `object` genel tür parametresi olarak kullanılır. Daha fazla bilgi için bkz. [.net belgeleri](../../standard/serialization/system-text-json-polymorphism.md).
 
 Davpr ile altyapı kodu **önemli ölçüde basitleştirilmiştir**. Farklı ileti aracıları arasında ayrım yapması gerekmez. Davpr sizin için bu soyutlamayı sağlar. Gerekirse, ileti aracılarını kolayca takas edebilir veya birden çok ileti Aracısı bileşeni yapılandırabilirsiniz.
 

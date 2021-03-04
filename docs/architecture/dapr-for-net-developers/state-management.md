@@ -4,35 +4,32 @@ description: Durum yönetimi oluşturma bloğunun açıklaması, özellikleri, a
 author: amolenk
 ms.date: 02/07/2021
 ms.reviewer: robvet
-ms.openlocfilehash: 9d74d5f5b1648d56063ef8a187b4b73b8e1cf549
-ms.sourcegitcommit: 456b3cd82a87b453fa737b4661295070d1b6d684
+ms.openlocfilehash: 05daf18ece1da377f3d5d6a91c4839f196f14f80
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100639236"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106222"
 ---
 # <a name="the-dapr-state-management-building-block"></a>Davpr durum yönetimi yapı taşı
 
-Dağıtılmış uygulamalar bağımsız hizmetlerden oluşur. Her hizmetin durum bilgisiz olması gerekir, ancak bazı hizmetler iş işlemlerinin tamamlanabilmesi için durumu izlemeli olmalıdır. Bir eCommerce sitesi için bir alışveriş sepeti hizmeti düşünün. Hizmet durumu izleyemiyor, müşteri web sitesini bırakarak alışveriş sepeti içeriğini gevşekerek kayıp satışı ve memnun olmayan müşteri deneyimine neden olur. Bu senaryolar için durumun dağıtılmış bir durum deposuna kalıcı olması gerekir. [Davpr durum yönetimi yapı taşı](https://docs.dapr.io/developing-applications/building-blocks/state-management/) durum izlemeyi basitleştirir ve çeşitli veri depoları arasında gelişmiş özellikler sunar.
-
-> [!NOTE]
-> Durumu bir **dış** veri deposunda depolayarak, bir hizmet **durum bilgisiz** olarak değerlendirilir. **Statefull** Hizmetleri genellikle durumu bellekte veya diskte bulunan tek bir sunucuda yerel olarak depolar. Durum bilgisi içermeyen hizmetler, durum bilgisi olan hizmetlerden daha sık kırmızıdır Belirli bir kullanıcıdan gelen isteklerin aynı hizmet örneği tarafından işlenmesini gerektirmez. Sonuç olarak, durum bilgisi olan hizmetler, istek hacmi arttıkça yatay olarak ölçeklendirebilir.
+Dağıtılmış uygulamalar bağımsız hizmetlerden oluşur. Her hizmetin durum bilgisiz olması gerekir, ancak bazı hizmetler iş işlemlerinin tamamlanabilmesi için durumu izlemeli olmalıdır. E-ticaret sitesi için bir alışveriş sepeti hizmeti düşünün. Hizmet durumu izleyemiyor, müşteri web sitesini bırakarak alışveriş sepeti içeriğini gevşekerek kayıp satışı ve memnun olmayan müşteri deneyimine neden olur. Bu senaryolar için durumun dağıtılmış bir durum deposuna kalıcı olması gerekir. [Davpr durum yönetimi yapı taşı](https://docs.dapr.io/developing-applications/building-blocks/state-management/) durum izlemeyi basitleştirir ve çeşitli veri depoları arasında gelişmiş özellikler sunar.
 
 Durum yönetimi oluşturma bloğunu denemek için, [Bölüm 3 ' teki sayaç uygulaması örneğine](getting-started.md)göz atın.
 
 ## <a name="what-it-solves"></a>Ne çözdüğü
 
-Dağıtılmış bir uygulamadaki izleme durumu zor olabilir. Örneğin:
+Dağıtılmış bir uygulamadaki izleme durumu zor olabilir. Örnek:
 
 - Uygulama farklı türlerde veri depoları gerektirebilir.
 - Verilere erişmek ve verileri güncelleştirmek için farklı tutarlılık düzeyleri gerekebilir.
 - Aynı anda birden çok Kullanıcı, çakışma çözümü gerektiren verileri güncelleştirebilir.
-- Hizmetler, veri deposuyla etkileşim kurarken oluşan kısa süreli [geçici hataları](https://docs.microsoft.com/aspnet/aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/transient-fault-handling) yeniden denemelidir.
+- Hizmetler, veri deposuyla etkileşim kurarken oluşan kısa süreli [geçici hataları](/aspnet/aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/transient-fault-handling) yeniden denemelidir.
 
 Davpr durum yönetimi oluşturma bloğunda bu sorunlar ele alınmaktadır. Bağımlılıklar olmadan izleme durumunu veya üçüncü taraf depolama SDK 'lerinde öğrenme eğrisini kolaylaştırır.
 
 > [!IMPORTANT]
-> Davpr durum yönetimi bir [anahtar/değer](https://docs.microsoft.com/azure/architecture/guide/technology-choices/data-store-overview#keyvalue-stores) API 'si sağlar. Özelliği ilişkisel veya grafik veri depolamayı desteklemez.
+> Davpr durum yönetimi bir [anahtar/değer](/azure/architecture/guide/technology-choices/data-store-overview#keyvalue-stores) API 'si sağlar. Özelliği ilişkisel veya grafik veri depolamayı desteklemez.
 
 ## <a name="how-it-works"></a>Nasıl çalışır?
 
@@ -55,7 +52,7 @@ http://localhost:<dapr-port>/v1.0/state/<store-name>/
 
 Önceki şekildeki adımlara göz önünde edin:
 
-1. Sepet hizmeti, Davpr sidecar 'den durum yönetimi API 'sini çağırır. İsteğin gövdesi birden çok anahtar/değer çifti içerebilen bir JSON dizisi barındırır.
+1. Sepet hizmeti, Davpr sidecar üzerinde durum yönetimi API 'sini çağırır. İsteğin gövdesi birden çok anahtar/değer çifti içerebilen bir JSON dizisi barındırır.
 1. Davpr sepet, bileşen yapılandırma dosyasına göre durum deposunu belirler. Bu durumda, Redsıs cache durum deposudur.
 1. Sepet, verileri redsıs önbelleğine devam ettirir.
 
@@ -91,7 +88,7 @@ Aşağıdaki bölümlerde, durum yönetimi oluşturma bloğunun daha gelişmiş 
 
 Bu, dağıtılmış veri sistemlerinin tutarlılık, kullanılabilirlik ve bölüm toleransı arasında bir denge sunmadığını belirtir. Ve tüm veri deposu, *üç özelliği yalnızca iki özelliği garanti* edebilir:
 
-- *Tutarlılık* (**C**). Kümedeki her düğüm, sistemin tüm çoğaltmalar güncellene kadar isteği engellemeniz gerekir olsa bile en son verilerle yanıt verir. Şu anda güncelleştirilen bir öğe için "tutarlı bir sistem" sorgusu yaparsanız, tüm çoğaltmalar başarıyla güncelleştirilene kadar bir yanıt alırsınız. Ancak, en güncel verileri her zaman alacaksınız.
+- *Tutarlılık* (**C**). Kümedeki her düğüm, sistemin tüm çoğaltmalar güncellene kadar isteği engellemeniz gerekir olsa bile en son verilerle yanıt verir. Şu anda güncelleştirilen bir öğe için "tutarlı bir sistem" sorgusu yaparsanız, tüm çoğaltmalar başarıyla güncelleştirilene kadar bir yanıt almazsınız. Ancak, en güncel verileri her zaman alacaksınız.
 
 - *Kullanılabilirlik* (**A**). Her düğüm, bu yanıt en son veriler olmasa bile anında yanıt döndürür. Güncelleştiren bir öğe için "kullanılabilir sistem" i sorgulayıp, hizmetin bu anda sağlayabilmesini sağlayacak en iyi yanıtı alırsınız.
 
@@ -116,7 +113,7 @@ curl -X POST http://localhost:3500/v1.0/state/<store-name> \
             "consistency": "strong"
           }
         }
-      ]' 
+      ]'
 ```
 
 > [!IMPORTANT]
@@ -162,7 +159,7 @@ curl -X POST http://localhost:3500/v1.0/state/<store-name> \
   -d '[
         { "key": "Key1", "value": "Value1" },
         { "key": "Key2", "value": "Value2" }
-      ]' 
+      ]'
 ```
 
 Yığın işlemleri için, Davpr her anahtar/değer çifti güncelleştirmesini, veri deposuna ayrı bir istek olarak gönderir.
@@ -201,7 +198,7 @@ SDK, verileri toplu olarak alma, verileri silme ve işlemleri yürütme gibi di�
 
 ### <a name="aspnet-core-integration"></a>ASP.NET Core tümleştirme
 
-Davpr, modern bulut tabanlı Web uygulamaları oluşturmaya yönelik platformlar arası bir çatı olan ASP.NET Core da destekler. Davpr SDK, durum yönetimi yeteneklerini doğrudan [ASP.NET Core modeli bağlama](https://docs.microsoft.com/aspnet/core/mvc/models/model-binding) özelliklerine tümleştirir. Yapılandırma basittir. Bir `IMVCBuilder.AddDapr` `.AddDapr` `Startup.cs` sonraki örnekte gösterildiği gibi sınıfınıza Extension metodunu ekleyerek öğesini ekleyin:
+Davpr, modern bulut tabanlı Web uygulamaları oluşturmaya yönelik platformlar arası bir çatı olan ASP.NET Core da destekler. Davpr SDK, durum yönetimi yeteneklerini doğrudan [ASP.NET Core modeli bağlama](/aspnet/core/mvc/models/model-binding) özelliklerine tümleştirir. Yapılandırma basittir. Bir `IMVCBuilder.AddDapr` `.AddDapr` `Startup.cs` sonraki örnekte gösterildiği gibi sınıfınıza Extension metodunu ekleyerek öğesini ekleyin:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -225,7 +222,7 @@ public ActionResult<WeatherForecast> Get([FromState("statestore", "city")] State
 }
 ```
 
-Örnekte, denetleyici, özelliği kullanarak hava durumu tahminini yükler `FromState` . İlk öznitelik parametresi durum deposudur, `statestore` . İkinci öznitelik parametresi, `city` , durum anahtarını almak için [yol şablonu](https://docs.microsoft.com/aspnet/core/mvc/controllers/routing?#route-templates) değişkeninin adıdır. İkinci parametreyi atlarsanız, `forecast` yol şablonu değişkenini aramak için, bağlantılı yöntem parametresi () adı kullanılır.
+Örnekte, denetleyici, özelliği kullanarak hava durumu tahminini yükler `FromState` . İlk öznitelik parametresi durum deposudur, `statestore` . İkinci öznitelik parametresi, `city` , durum anahtarını almak için [yol şablonu](/aspnet/core/mvc/controllers/routing#route-templates) değişkeninin adıdır. İkinci parametreyi atlarsanız, `forecast` yol şablonu değişkenini aramak için, bağlantılı yöntem parametresi () adı kullanılır.
 
 `StateEntry`Sınıfı, tek bir anahtar/değer çifti için alınan tüm bilgilerin özelliklerini içerir: `StoreName` , `Key` , `Value` ve `ETag` . ETag, iyimser eşzamanlılık denetimi (OCC) stratejisi uygulamak için yararlıdır. Sınıfı ayrıca bir örnek gerekmeden alınan anahtar/değer verilerini silmek veya güncelleştirmek için yöntemler sağlar `DaprClient` . Sonraki örnekte `TrySaveAsync` yöntemi, OCC kullanılarak alınan hava durumu tahminini güncelleştirmek için kullanılır.
 
@@ -238,7 +235,7 @@ public async Task Put(WeatherForecast updatedForecast, [FromState("statestore", 
 
     // update state store
     var success = await currentForecast.TrySaveAsync();
-    
+
     // ... check result
 }
 ```
@@ -311,7 +308,7 @@ curl -X POST http://localhost:3500/v1.0/state/statestore \
             { "itemId": "DaprHoodie", "quantity": 1 }
           ]
         }
-     }]' 
+     }]'
 ```
 
 Redsıs konsol aracını kullanarak redsıs durum deposu bileşeninin verileri nasıl kalıcı hale kullandığını görmek için redo önbelleğinin içine bakın:
@@ -327,7 +324,7 @@ Redsıs konsol aracını kullanarak redsıs durum deposu bileşeninin verileri n
 4) "1"
 ```
 
-Çıktı, verilerin tam redin **anahtarını** olarak gösterir `basketservice||basket1` . Varsayılan olarak, Davpr, `application id` `basketservice` anahtar için ön ek olarak, davpr örneğinin () öğesini kullanır. Bu adlandırma kuralı, birden çok Davpr örneğinin, anahtar adı çakışmaları olmadan aynı veri deposunu paylaşmasını sağlar. Geliştirici için her zaman, `application id` uygulamayı Davpr ile çalıştırırken aynı şekilde belirtmeniz önemlidir. Atlanırsa, Davpr benzersiz bir uygulama kimliği oluşturacaktır. Değişiklikler varsa `application id` , uygulama önceki anahtar öneki ile depolanan duruma artık erişemez.
+Çıktı, verilerin tam redin **anahtarını** olarak gösterir `basketservice||basket1` . Varsayılan olarak, Davpr, `application id` `basketservice` anahtar için ön ek olarak, davpr örneğinin () öğesini kullanır. Bu adlandırma kuralı, birden çok Davpr örneğinin, anahtar adı çakışmaları olmadan aynı veri deposunu paylaşmasını sağlar. Geliştirici için her zaman, `application id` uygulamayı Davpr ile çalıştırırken aynı şekilde belirtmeniz önemlidir. Atlanırsa, Davpr benzersiz bir uygulama KIMLIĞI oluşturacaktır. Değişiklikler varsa `application id` , uygulama önceki anahtar öneki ile depolanan duruma artık erişemez.
 
 Yani, durum depolama bileşeni dosyasındaki meta veri alanındaki anahtar öneki için sabit bir *değer* yapılandırmak mümkündür `keyPrefix` . Aşağıdaki örneği inceleyin:
 
@@ -449,7 +446,12 @@ Ayrıca, Davpr uygulamasının temel veri deposunun değiştirilmesini de basitl
 
 ## <a name="summary"></a>Özet
 
-Davpr durum yönetimi yapı taşı, anahtar/değer verilerini çeşitli veri depolarında depolamak için bir API sağlar. API toplu işlemler, güçlü ve nihai tutarlılık, iyimser eşzamanlılık denetimi ve çoklu öğe işlemleri için destek sağlar.
+Davpr durum yönetimi yapı taşı, anahtar/değer verilerini çeşitli veri depolarında depolamak için bir API sağlar. API, için destek sağlar:
+
+- Toplu işlemler
+- Güçlü ve nihai tutarlılık
+- İyimser eşzamanlılık denetimi
+- Çoklu öğe işlemleri
 
 .NET SDK, .NET Core ve ASP.NET Core için dile özgü destek sağlar. Model bağlama tümleştirmesi, ASP.NET Core denetleyicisi eylem yöntemlerinden durum erişimini ve güncelleştirilmesini basitleştirir.
 

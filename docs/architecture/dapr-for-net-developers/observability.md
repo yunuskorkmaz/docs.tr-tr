@@ -4,12 +4,12 @@ description: Observability yapı bloğunun açıklaması, özellikleri, avantajl
 author: edwinvw
 ms.date: 02/07/2021
 ms.reviewer: robvet
-ms.openlocfilehash: 6fc1da7d3266d668f258cfac91f24f30a015f367
-ms.sourcegitcommit: 456b3cd82a87b453fa737b4661295070d1b6d684
+ms.openlocfilehash: c7c941625f5867ad58eee602bfc42183bee87183
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100639350"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106350"
 ---
 # <a name="the-dapr-observability-building-block"></a>Davpr Observability yapı taşı
 
@@ -24,7 +24,7 @@ Observability kazanmak için kullanılan sistem bilgileri **telemetri** olarak a
 1. **Günlüğe kaydetme** , kodun nasıl yürütüldüğü ve hataların oluşma hakkında öngörüler sağlar.
 1. **Sistem durumu** uç noktaları, bir hizmetin kullanılabilirliğine ilişkin öngörüler sağlar.
 
-Telemetri derinliği, bir uygulama platformunun Observability özellikleri tarafından belirlenir. Azure bulutunu göz önünde bulundurun. Telemetri kategorilerinin tümünü içeren zengin bir telemetri deneyimi sağlar. Herhangi bir yapılandırma olmadan, Azure IaaS ve PaaS hizmetlerinin çoğu Azure [Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview) hizmetine telemetri yayar ve yayımlamaktır. Application Insights, yüksek görsel panolarla sistem günlüğü, izleme ve sorun alanı sunar. Hatta, iletişim özelliklerini temel alan hizmetler arasındaki bağımlılıkları gösteren bir diyagramı işleyebilir.
+Telemetri derinliği, bir uygulama platformunun Observability özellikleri tarafından belirlenir. Azure bulutunu göz önünde bulundurun. Telemetri kategorilerinin tümünü içeren zengin bir telemetri deneyimi sağlar. Herhangi bir yapılandırma olmadan, Azure IaaS ve PaaS hizmetlerinin çoğu Azure [Application Insights](/azure/azure-monitor/app/app-insights-overview) hizmetine telemetri yayar ve yayımlamaktır. Application Insights, yüksek görsel panolarla sistem günlüğü, izleme ve sorun alanı sunar. Hatta, iletişim özelliklerini temel alan hizmetler arasındaki bağımlılıkları gösteren bir diyagramı işleyebilir.
 
 Ancak, bir uygulama Azure PaaS ve IaaS kaynaklarını kullanamıyoruz ne olursa? Application Insights zengin telemetri deneyiminden yararlanmak yine de mümkün mü? Yanıt Evet 'tir. Azure olmayan bir uygulama, Azure Application Insights telemetri yaymak için kitaplıkları içeri aktarabilir, yapılandırma ve araç kodu ekleyebilir. Ancak, bu yaklaşım uygulamayı Application Insights sıkı bir şekilde **bağar** . Uygulamayı farklı bir izleme platformuna taşımak, pahalı yeniden düzenleme gerektirebilir. Sıkı bir şekilde Observability mek ve kodun dışından kullanım sağlamak için harika olmaz misiniz?
 
@@ -32,7 +32,7 @@ Davpr ile yapabilirsiniz. Daha sonra, bir Davpr 'nin dağıtılmış uygulamalar
 
 ## <a name="what-it-solves"></a>Ne çözdüğü
 
-Davpr Observability Building bloğu uygulamadan uples Observability ayrışar. Bu, davpr sıdecars ve davpr denetim düzlemi oluşturan Davpr sistem hizmetleri tarafından oluşturulan trafiği otomatik olarak yakalar. Blok, trafiği birden çok hizmete yayılan tek bir işlemden ilişkilendirir. Ayrıca performans ölçümlerini, kaynak kullanımını ve sistemin sistem durumunu gösterir. Telemetri, açık standart biçimlerde yayımlanır ve bu sayede, bilgilerin izleme arka ucunuza eklenmesi sağlanır. Burada bilgiler görselleştirilir, sorgulanabilir ve analiz edilebilir.
+Davpr Observability Building bloğu uygulamadan uples Observability ayrışar. Bu, davpr sıdecars ve davpr denetim düzlemi oluşturan Davpr sistem hizmetleri tarafından oluşturulan trafiği otomatik olarak yakalar. Blok, trafiği birden çok hizmete yayılan tek bir işlemden ilişkilendirir. Ayrıca performans ölçümlerini, kaynak kullanımını ve sistemin sistem durumunu gösterir. Telemetri, açık standart biçimlerde yayımlanır ve bu sayede, bilgilerin izleme arka ucuna eklenmesi sağlanır. Burada bilgiler görselleştirilir, sorgulanabilir ve analiz edilebilir.
 
 Davpr, sıhhi tesisat 'yi uztığından, uygulama Observability nasıl uygulandığının farkında değildir. Kitaplıklara başvurulmasına veya özel izleme kodu uygulamanıza gerek yoktur. Davpr, geliştiricinin Observability tesisat değil iş mantığı oluşturmaya odaklanarak çalışmasına izin verir. Observability, mepr düzeyinde yapılandırılır ve farklı takımlar tarafından oluşturulduğunda bile hizmetler genelinde tutarlıdır ve farklı teknoloji yığınları ile oluşturulur.
 
@@ -77,9 +77,9 @@ Birlikte gelen bir istek ve yanıt kümesine *izleme* denir. Şekil 9-3 bir izle
 
 Şekilde, izlemenin birçok hizmet arasında gerçekleşen benzersiz bir uygulama işlemini nasıl temsil ettiğini unutmayın. İzleme, *yayılmalar* koleksiyonudur. Her yayılma, izleme içinde yapılan tek bir işlem veya iş birimini temsil eder. Yayılmalar, benzersiz işlemi uygulayan hizmetler arasında gönderilen isteklerdir ve yanıtlardır.
 
-Sonraki bölümlerde, izleme arka ucuna yayımlayarak izleme telemetrisini İnceleme hakkında tartışın.
+Sonraki bölümlerde, izleme telemetrisini bir izleme arka ucuna yayımlayarak nasıl inceleyeceğiniz açıklanmaktadır.
 
-#### <a name="use-a-zipkin-monitoring-backend"></a>Bir sıkıştırma izleme arka ucu kullanın
+#### <a name="use-a-zipkin-monitoring-back-end"></a>Bir sıkıştırma arka ucu kullanın
 
 [Zipkabağı](https://zipkin.io/) , açık kaynaklı bir dağıtılmış izleme sistemidir. Telemetri verilerini alabilir ve görselleştirin. Davpr, Ferkaya için varsayılan destek sunar. Aşağıdaki örnek, Davpr telemetrisini görselleştirmek üzere Zipkabağı 'nın nasıl yapılandırılacağını gösterir.
 
@@ -161,7 +161,7 @@ spec:
 
 ```
 
-Dağıtım standart `openzipkin/zipkin-slim` kapsayıcı görüntüsünü kullanır. Sıkıştırma hizmeti, bağlantı noktasındaki Telemetriyi görüntülemek için kullanabileceğiniz, Web ön uç noktasını kullanıma sunar `32411` . Kubernetes CLı ' yı kullanarak Kubernetes kümesine Zipbir bildirim dosyasını uygulayın ve Zipkabağı sunucusunu dağıtın:
+Dağıtım standart `openzipkin/zipkin-slim` kapsayıcı görüntüsünü kullanır. Sıkıştırma hizmeti, bağlantı noktasındaki Telemetriyi görüntülemek için kullanabileceğiniz, Web ön ucu 'nı kullanıma sunar `32411` . Kubernetes CLı ' yı kullanarak Kubernetes kümesine Zipbir bildirim dosyasını uygulayın ve Zipkabağı sunucusunu dağıtın:
 
 ```console
 kubectl apply -f zipkin.yaml
@@ -190,7 +190,7 @@ spec:
         app: simulation
       annotations:
         dapr.io/enabled: "true"
-        dapr.io/app-id: "simulation"
+        dapr.io/app-id: "ordering-api"
         dapr.io/config: "tracing-config"
     spec:
       containers:
@@ -200,7 +200,7 @@ spec:
 
 ##### <a name="inspect-the-telemetry-in-zipkin"></a>Kabağı 'nda Telemetriyi inceleyin
 
-Uygulama başlatıldıktan sonra, Davpr sideckileri, Telemetriyi bir sunucuya yayIr. Bu Telemetriyi incelemek için bir Web tarayıcısının üzerine gelin [http://localhost:32411](http://localhost:32411) . Kabağı Web ön ucu görüntülenir:
+Uygulama başlatıldıktan sonra, Davpr sideckileri, Telemetriyi bir sunucuya yayIr. Bu Telemetriyi incelemek için bir Web tarayıcısının üzerine gelin <http://localhost:32411> . Bir Web ön ucu görürsünüz:
 
 ![Ferkabağı başlangıç sayfası](media/observability/zipkin.png)
 
@@ -216,15 +216,15 @@ Ayrıntılar sayfasındaki her öğe, seçili izlemenin parçası olan bir iste�
 
 ##### <a name="inspect-the-dependencies-between-services"></a>Hizmetler arasındaki bağımlılıkları inceleyin
 
-NPR 'ler arasındaki trafiği işlerken, Ferkabağı hizmetler arasındaki bağımlılıkları tespit etmek için izleme bilgilerini kullanabilir. Bunu işlem içinde görmek için, Ferkabağı Web sayfasındaki *Bağımlılıklar* sekmesine gidin ve Büyüteç Camı ile düğmeye tıklayın. Kabağı, hizmetlere ve bunların bağımlılıklarına genel bir bakış gösterecektir:
+NPR 'ler arasındaki trafiği işlerken, Ferkabağı hizmetler arasındaki bağımlılıkları tespit etmek için izleme bilgilerini kullanabilir. Bunu işlem içinde görmek için, Ferkabağı Web sayfasındaki *Bağımlılıklar* sekmesine gidin ve Büyüteç Camı ile düğmeyi seçin. Kabağı, hizmetlere ve bunların bağımlılıklarına genel bir bakış gösterecektir:
 
 ![Ferkata bir bağımlılık grafiği](media/observability/zipkin-dependencies.png)
 
 Hizmetler arasındaki satırlardaki animasyonlu noktalar istekleri temsil eder ve kaynaktan hedefe taşınır. Kırmızı noktalar başarısız bir isteği gösterir.
 
-#### <a name="use-a-jaeger-or-new-relic-monitoring-backend"></a>Bir Jaeger veya yeni bir relik izleme arka ucu kullanın
+#### <a name="use-a-jaeger-or-new-relic-monitoring-back-end"></a>Bir Jaeger veya yeni bir relik izleme arka ucu kullanın
 
-Aynı zamanda, diğer izleme arka uç yazılımları, kabağı biçimini kullanarak Telemetriyi de destekler. [Jaeger](https://www.jaegertracing.io/) , Uber teknolojileri tarafından oluşturulan açık kaynaklı bir izleme sistemidir. Dağıtılmış hizmetler arasındaki işlemleri izlemek ve karmaşık mikro hizmet ortamlarının sorunlarını gidermek için kullanılır. [New relik](https://newrelic.com/) , bir *tam yığın* Observability platformudur. Bir dağıtılmış uygulamadaki ilgili verileri, sisteminizin tamamına yönelik bir resim ile bağlantılandırır. Denemek için, `endpointAddress` DAPR yapılandırma dosyasında bir Caeger ya da yeni relik sunucusu için bir işaret noktası belirtin. Aşağıda, DAPR 'yi bir Caeger sunucusuna telemetri gönderecek şekilde yapılandıran bir yapılandırma dosyası örneği verilmiştir. Caeger URL 'SI, Ferkabağı URL 'siyle aynıdır. Tek fark sunucunun çalıştığı bağlantı noktasıdır:
+Aynı zamanda, diğer izleme arka uç yazılımları de Zipkabağı biçimini kullanarak Telemetriyi destekler. [Jaeger](https://www.jaegertracing.io/) , Uber teknolojileri tarafından oluşturulan açık kaynaklı bir izleme sistemidir. Dağıtılmış hizmetler arasındaki işlemleri izlemek ve karmaşık mikro hizmet ortamlarının sorunlarını gidermek için kullanılır. [New relik](https://newrelic.com/) , bir *tam yığın* Observability platformudur. Bir dağıtılmış uygulamadaki ilgili verileri, sisteminizin tamamına yönelik bir resim ile bağlantılandırır. Denemek için, `endpointAddress` DAPR yapılandırma dosyasında bir Caeger ya da yeni relik sunucusu için bir işaret noktası belirtin. Aşağıda, DAPR 'yi bir Caeger sunucusuna telemetri gönderecek şekilde yapılandıran bir yapılandırma dosyası örneği verilmiştir. Caeger URL 'SI, Ferkabağı URL 'siyle aynıdır. Tek fark sunucunun çalıştığı bağlantı noktasıdır:
 
  ```yaml
  apiVersion: dapr.io/v1alpha1
@@ -308,7 +308,7 @@ spec:
 
 #### <a name="visualize-dapr-metrics"></a>Davpr ölçümlerini görselleştirin
 
-Prometheus atık oluşturma ve izleme arka ucuna ölçüm yayımlama ile, ham verileri nasıl anladınız? Ölçümleri çözümlemek için popüler bir görselleştirme aracı [Grafana](https://grafana.com/grafana/). Grafana ile, kullanılabilir ölçülerden panolar oluşturabilirsiniz. Aşağıda, Davpr sistem hizmetleri ölçümlerini görüntüleyen bir panoya örnek verilmiştir:
+Prometheus atık oluşturma ve ölçümleri izleme arka ucuna yayımlama konusunda, ham verileri nasıl anladınız? Ölçümleri çözümlemek için popüler bir görselleştirme aracı [Grafana](https://grafana.com/grafana/). Grafana ile, kullanılabilir ölçülerden panolar oluşturabilirsiniz. Aşağıda, Davpr sistem hizmetleri ölçümlerini görüntüleyen bir panoya örnek verilmiştir:
 
 ![Grafana, Davpr sistem hizmetleri ölçümlerini görüntüleyen Pano](media/observability/grafana-sample.png)
 
@@ -381,7 +381,7 @@ helm install dapr dapr/dapr --namespace dapr-system --set global.logAsJson=true
 
 #### <a name="collect-logs"></a>Günlük toplama
 
-Davpr tarafından yayılan Günlükler, analiz için bir izleme arka ucuna eklenebilir. Günlük Toplayıcısı, bir sistemden günlükleri toplayan ve bunları bir izleme arka ucuna gönderen bir bileşendir. Popüler bir günlük toplayıcısı [akıcı Entd](https://www.fluentd.org/). Bkz. [nasıl yapılır: vapr belgelerindeki Kubernetes 'te, akıcı Entd, elastik arama ve kibana ayarlama](https://docs.dapr.io/operations/monitoring/fluentd/) . Bu makale, izleme arka ucu olarak Akıştoplayıcı ve [elk yığınını](https://www.elastic.co/elastic-stack) (elastik arama ve kibana) ayarlamaya yönelik yönergeler içerir.
+Davpr tarafından yayılan Günlükler analiz için bir izleme arka ucuna dağıtılabilir. Günlük Toplayıcısı, bir sistemden günlükleri toplayan ve bunları bir izleme arka ucuna gönderen bir bileşendir. Popüler bir günlük toplayıcısı [akıcı Entd](https://www.fluentd.org/). Bkz. [nasıl yapılır: vapr belgelerindeki Kubernetes 'te, akıcı Entd, elastik arama ve kibana ayarlama](https://docs.dapr.io/operations/monitoring/fluentd/) . Bu makale, izleme arka ucu olarak Akıştoplayıcı ve [elk yığınını](https://www.elastic.co/elastic-stack) (elastik arama ve kibana) ayarlamaya yönelik yönergeler içerir.
 
 ### <a name="health-status"></a>Sistem durumu
 
@@ -474,7 +474,7 @@ Eşlik eden Eshopondadpr başvuru uygulamasındaki Observability, birkaç bölü
 
 ### <a name="custom-health-dashboard"></a>Özel durum panosu
 
-Eshopondadpr 'deki **Webstatus** projesi, eShop hizmetlerinin sistem durumuna ilişkin Öngörüler sağlayan özel bir sistem durumu panosıdır. Bu Pano, Davpr sistem durumu API 'sini kullanmaz, ancak ASP.NET Core yerleşik [durum denetimleri mekanizmasını](https://docs.microsoft.com/aspnet/core/host-and-deploy/health-checks) kullanır. Pano yalnızca hizmetlerin sistem durumunu değil, hizmetlerin bağımlılıklarının durumunu da sağlamaz. Örneğin, bir veritabanı kullanan bir hizmet, aşağıdaki ekran görüntüsünde gösterildiği gibi bu veritabanının sistem durumunu da sağlar:
+Eshopondadpr 'deki **Webstatus** projesi, eShop hizmetlerinin sistem durumuna ilişkin Öngörüler sağlayan özel bir sistem durumu panosıdır. Bu Pano, Davpr sistem durumu API 'sini kullanmaz, ancak ASP.NET Core yerleşik [durum denetimleri mekanizmasını](/aspnet/core/host-and-deploy/health-checks) kullanır. Pano yalnızca hizmetlerin sistem durumunu değil, hizmetlerin bağımlılıklarının durumunu da sağlamaz. Örneğin, bir veritabanı kullanan bir hizmet, aşağıdaki ekran görüntüsünde gösterildiği gibi bu veritabanının sistem durumunu da sağlar:
 
 ![Eshopondadpr özel durum panosu](media/observability/eshop-health-dashboard.png)
 
@@ -486,7 +486,7 @@ Eshopondadpr uygulama hizmetleri, [SeriLog](https://serilog.net/) günlük kitap
 
 ### <a name="application-insights"></a>Application Insights
 
-Eshopondadpr Hizmetleri ayrıca .NET Core için Microsoft Application Insights SDK 'sını kullanarak doğrudan Azure Application Insights telemetri gönderir. Daha fazla bilgi için bkz. Microsoft docs 'taki [ASP.NET Core uygulamalar Için Azure Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/asp-net-core) .
+Eshopondadpr Hizmetleri ayrıca .NET Core için Microsoft Application Insights SDK 'sını kullanarak doğrudan Azure Application Insights telemetri gönderir. Daha fazla bilgi için bkz. Microsoft docs 'taki [ASP.NET Core uygulamalar Için Azure Application Insights](/azure/azure-monitor/app/asp-net-core) .
 
 ## <a name="summary"></a>Özet
 
@@ -496,9 +496,9 @@ Davpr, dağıtılmış izleme, günlüğe kaydetme, ölçümler ve sistem durumu
 
 Davpr yalnızca, Davpr sistem hizmetleri ve sıfları için telemetri üretir. Uygulama kodunuzun telemetrisi otomatik olarak dahil değildir. Ancak, uygulama kodunuzda telemetri göstermek için .NET için Opentelemetri SDK gibi belirli bir SDK 'Yı kullanabilirsiniz.
 
-Davpr telemetrisi, Açık standartlara dayalı bir biçimde üretilerek, büyük bir kullanılabilir izleme araçları kümesiyle gerçekleştirilebilir. Bazı örnekler şunlardır: Zipar, Azure Application Insights, ELK yığını, New relik ve Grafana. Belirli izleme arka uçlarına sahip Davpr uygulamalarınızı izlemeye yönelik öğreticiler için bkz. davpr belgelerindeki [davpr ile uygulamanızı izleme](https://docs.dapr.io/operations/monitoring/) .
+Davpr telemetrisi, Açık standartlara dayalı bir biçimde üretilerek, büyük bir kullanılabilir izleme araçları kümesiyle gerçekleştirilebilir. Bazı örnekler şunlardır: Zipar, Azure Application Insights, ELK yığını, New relik ve Grafana. Belirli izleme arka uçları ile Davpr uygulamalarınızı izlemeye yönelik öğreticiler için bkz. davpr belgelerindeki [davpr ile uygulamanızı izleme](https://docs.dapr.io/operations/monitoring/) .
 
-Bu telests telemetri temelinde bir telemetri atık olması gerekir ve bunu izleme arka ucuna yayımlar.
+Bu telemetri için bir telemetri atık ve izleme arka ucuna yayınlıyor olmanız gerekir.
 
 Davpr yapılandırılmış günlüğe kaydetmeyi yayan yapılandırılabilir. Yapılandırılmış günlüğe kaydetme, arka uç izleme araçlarıyla dizin oluşturulduğundan daha kırmızıdır. Dizini oluşturulmuş günlük kaydı, kullanıcıların günlüğe kaydetme sırasında arama yaparken zengin sorguları yürütmelerine olanak sağlar.
 
@@ -506,7 +506,7 @@ Davpr, Davpr Hizmetleri ve yapılandırması hakkında bilgi sunan bir pano suna
 
 ## <a name="references"></a>Başvurular
 
-- [Azure Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview/)
+- [Azure Application Insights](/azure/azure-monitor/app/app-insights-overview/)
 - [Telemetriyi açın](https://opentelemetry.io/)
 - [Ferkabağı](https://zipkin.io/)
 - [W3C Trace bağlamı](https://www.w3.org/TR/trace-context/)

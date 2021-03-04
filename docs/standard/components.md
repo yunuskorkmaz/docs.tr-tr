@@ -3,12 +3,12 @@ title: .NET mimari bileşenleri
 description: .NET Standard, .NET uygulamaları, .NET çalışma zamanları ve araç araçları gibi .NET mimari bileşenlerini açıklar.
 author: cartermp
 ms.date: 10/05/2020
-ms.openlocfilehash: c5f174034ce0cd0e1cf0b799c7b3f4bff99447a2
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 884deb61ab5cda5054fb54134c3338b4d05599ca
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100423141"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106403"
 ---
 # <a name="net-architectural-components"></a>.NET mimari bileşenleri
 
@@ -99,21 +99,21 @@ Daha fazla bilgi için bkz. [Araçlar ve üretkenlik](../core/introduction.md#to
 
 C# dili ve ortak dil altyapısı (CLı) belirtimleri [Ecma International &reg; ](https://www.ecma-international.org/)aracılığıyla standartlaştırılmıştır. Bu standartların ilk sürümleri, Aralık 2001 ' de ECMA tarafından yayımlanmıştır.
 
-Standartlardaki sonraki düzeltmeler, programlama dilleri Technical komite ([TC49](https://www.ecma-international.org/memento/tc49.htm)) içinde TC49-tg2 (C#) ve TC49-TG3 (CLI) görev grupları tarafından geliştirilmiştir ve ECMA genel derlemesi tarafından ve ardından ISO/ıEC JTC 1 tarafından ISO Fast-Track işlemi aracılığıyla benimsenmiştir.
+Standartlardaki sonraki düzeltmeler, programlama dilleri Technical komite ([TC49](https://www.ecma-international.org/technical-committees/tc49/)) içinde TC49-tg2 (C#) ve TC49-TG3 (CLI) görev grupları tarafından geliştirilmiştir ve ECMA genel derlemesi tarafından ve ardından ISO/ıEC JTC 1 tarafından ISO Fast-Track işlemi aracılığıyla benimsenmiştir.
 
 ### <a name="latest-standards"></a>En son standartlar
 
-Aşağıdaki resmi ECMA belgeleri [C#](http://www.ecma-international.org/publications/standards/Ecma-334.htm) ve [CLI](http://www.ecma-international.org/publications/standards/Ecma-335.htm) ([tr-84](http://www.ecma-international.org/publications/techreports/E-TR-084.htm)) için kullanılabilir:
+Aşağıdaki resmi ECMA belgeleri [C#](https://www.ecma-international.org/publications-and-standards/standards/ecma-334/) ve [CLI](https://www.ecma-international.org/publications-and-standards/standards/ecma-335/) ([tr-84](https://www.ecma-international.org/publications-and-standards/technical-reports/ecma-tr-84/)) için kullanılabilir:
 
-- **C# dil standardı (sürüm 5,0)**: [ECMA-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
-- **Ortak dil altyapısı**: [ECMA-335.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf).
+- **C# dil standardı (sürüm 5,0)**: [ECMA-334.pdf](https://www.ecma-international.org/wp-content/uploads/ECMA-334_5th_edition_december_2017.pdf)
+- **Ortak dil altyapısı**: [ECMA-335.pdf](hhttps://www.ecma-international.org/wp-content/uploads/ECMA-335_6th_edition_june_2012.pdf).
 - **IV XML dosyasından türetilmiş bilgiler**: [ECMA-084.pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) biçimi.
 
 Resmi ISO/ıEC belgeleri ISO/ıEC [genel kullanıma açık standartlar](https://standards.iso.org/ittf/PubliclyAvailableStandards/) sayfasından kullanılabilir. Bu bağlantılar bu sayfadan doğrudan yapılır:
 
 - **Bilgi teknolojisi-programlama dilleri-C#**: [ıso/IEC 23270:2018](https://standards.iso.org/ittf/PubliclyAvailableStandards/c075178_ISO_IEC_23270_2018.zip)
 - **Bilgi teknolojisi — mı Istediğim ortak dil altyapısı (CLI) bölümleri**: [ıso/IEC 23271:2012](https://standards.iso.org/ittf/PubliclyAvailableStandards/c058046_ISO_IEC_23271_2012(E).zip)
-- **Bilgi teknolojisi — ortak dil altyapısı (CLI) — Bölüm IV XML dosyasından türetilen bilgiler hakkında teknik rapor**: [ISO/IEC tr 23272:2011](https://standards.iso.org/ittf/PubliclyAvailableStandards/c057955_ISO_IEC_TR_23272_2011.zip)
+- **Bilgi teknolojisi — ortak dil altyapısı (CLI) — Bölüm IV XML dosyasından türetilen bilgiler hakkında teknik rapor**: [ISO/IEC tr 23272:2011](https://www.ecma-international.org/wp-content/uploads/ECMA_TR-84_6th_edition_june_2012.pdf)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

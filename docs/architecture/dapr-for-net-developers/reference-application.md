@@ -3,12 +3,12 @@ title: Eshopondadpr başvuru uygulamasına giriş
 description: Eshopondadpr başvuru uygulamasına ve geçmişine genel bakış.
 author: amolenk
 ms.date: 02/07/2021
-ms.openlocfilehash: 86b3c329e957446bd13fed850abc4edf0cf56f0f
-ms.sourcegitcommit: 456b3cd82a87b453fa737b4661295070d1b6d684
+ms.openlocfilehash: d05d47399b9be539597778a4f7856e06d3b16a6c
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100639276"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106316"
 ---
 # <a name="dapr-reference-application"></a>Davpr başvuru uygulaması
 
@@ -24,7 +24,7 @@ Birkaç yıl önce, Microsoft, [kapsayıcı olmayan .NET uygulamalarına yöneli
 
 **Şekil 3-1**. .NET mikro hizmetleri: Kapsayıcılı .NET uygulamaları için mimari.
 
-Dağıtılmış uygulamalar oluşturmaya yönelik ilkeler, desenler ve en iyi uygulamalar hakkında daha derin kitap. Mimari kavramların gösterildiği tam özellikli bir mikro hizmet başvuru uygulaması içerir. Eklenen, [Eshoponcontainers](https://github.com/dotnet-architecture/eShopOnContainers), uygulama, giyme ve kahve Mug 'leri dahil olmak üzere çeşitli .net öğelerini satan bir eticaret storefront gösterir.  Yerleşik .NET Core, uygulama platformlar arası ve Linux ya da Windows kapsayıcılarında çalıştırılabilir. Şekil 3-2 orijinal eShop mimarisini gösterir.
+Dağıtılmış uygulamalar oluşturmaya yönelik ilkeler, desenler ve en iyi uygulamalar hakkında daha derin kitap. Mimari kavramların gösterildiği tam özellikli bir mikro hizmet başvuru uygulaması içerir. İlgili, [Eshoponcontainers](https://github.com/dotnet-architecture/eShopOnContainers), uygulama, giyme ve kahve Mug 'ler dahil olmak üzere çeşitli .net öğelerini satan bir e-ticaret storefront gösterir.  Yerleşik .NET Core, uygulama platformlar arası ve Linux ya da Windows kapsayıcılarında çalıştırılabilir. Şekil 3-2 orijinal eShop mimarisini gösterir.
 
 ![eShopOnContainers başvuru uygulama mimarisi.](./media/reference-application/eshop-on-containers.png)
 
@@ -33,7 +33,7 @@ Dağıtılmış uygulamalar oluşturmaya yönelik ilkeler, desenler ve en iyi uy
 Görebileceğiniz gibi eShopOnContainers birçok hareketli parça içerir:
 
 1. Üç farklı ön uç istemcisi.
-1. Arka uçtan ön uca soyutlamak için bir uygulama ağ geçidi.
+1. Ön uçtaki arka ucu soyutlamak için bir uygulama ağ geçidi.
 1. Çeşitli arka uç çekirdek mikro hizmetleri.
 1. Zaman uyumsuz yayın/alt mesajlaşma sağlayan bir olay veri yolu bileşeni.
 
@@ -49,13 +49,13 @@ Bu kitaba eşlik eden eShop uygulamasının alternatif bir sürümü. [Eshoponda
 
 Eshopondadpr başvuru uygulamasının odağı, Davpr üzerinde olduğundan, özgün uygulama güncelleştirilmiştir. Mimari aşağıdakilerden oluşur:
 
-1. Popüler angular SPA çerçevesinde yazılan [tek sayfalı uygulama](https://docs.microsoft.com/archive/msdn-magazine/2013/november/asp-net-single-page-applications-build-modern-responsive-web-apps-with-asp-net) ön ucu. Bir API Gateway mikro hizmetine Kullanıcı istekleri gönderir.
+1. Popüler angular SPA çerçevesinde yazılan [tek sayfalı uygulama](/archive/msdn-magazine/2013/november/asp-net-single-page-applications-build-modern-responsive-web-apps-with-asp-net) ön ucu. Bir API Gateway mikro hizmetine Kullanıcı istekleri gönderir.
 
-1. API ağ geçidi, arka uç çekirdekli mikro hizmetleri ön uç istemcisinden soyutlar. Bu, yüksek performanslı bir hizmet proxy 'si olan [Envoy](https://www.envoyproxy.io/)kullanılarak uygulanır. Envoy, gelen istekleri çeşitli arka uç mikro hizmetlerine yönlendirir. Çoğu istek basit CRUD operasyonlardır (örneğin, katalogdan markalar listesini alır) ve arka uç mikro hizmetine doğrudan çağrısıyla işlenir.
+1. API ağ geçidi, arka uç çekirdek mikro hizmetlerini ön uç istemcisinden soyutlar. Bu, yüksek performanslı bir hizmet proxy 'si olan [Envoy](https://www.envoyproxy.io/)kullanılarak uygulanır. Envoy gelen istekleri çeşitli arka uç mikro hizmetlerine yönlendirir. Çoğu istek basit CRUD operasyonlardır (örneğin, katalogdan markalar listesini alır) ve arka uç mikro hizmetine doğrudan çağrı tarafından işlenir.
 
 1. Diğer istekler mantıksal olarak daha karmaşıktır ve birden fazla mikro hizmetin birlikte çalışmasını gerektirir. Bu durumlarda eShopOnDapr, işlemi gerçekleştirmek için gereken mikro hizmetlerde bir iş akışını düzenleyen bir [toplayıcı mikro hizmeti](../cloud-native/service-to-service-communication.md#service-aggregator-pattern) uygular.
 
-1. Çekirdek arka uç mikro Hizmetleri kümesi, bir eCommerce Mağazası için gereken işlevselliği içerir. Her biri kendi içinde ve diğerlerinden bağımsızdır. Her mikro hizmet, yaygın olarak kabul edilen etki alanı oluşturma desenlerine göre belirli bir *iş kapasitesini* yalıtır:
+1. Çekirdek arka uç mikro Hizmetleri kümesi, bir e-ticaret deposu için gereken işlevselliği içerir. Her biri kendi içinde ve diğerlerinden bağımsızdır. Her mikro hizmet, yaygın olarak kabul edilen etki alanı oluşturma desenlerine göre belirli bir *iş kapasitesini* yalıtır:
 
    - Sepet hizmeti müşterinin alışveriş sepeti deneyimini yönetir.
    - Katalog hizmeti, satışa sunulan ürün öğelerini yönetir.
@@ -83,7 +83,7 @@ Eshopondadpr codebase, eShopOnContainers kod temelinin daha kolay. Davpr oluştu
 
 1. Orijinal eShopOnContainers uygulaması, sipariş hizmetindeki DDD kavramlarını ve desenlerini gösterir. Güncelleştirilmiş Eshopondadpr 'de, sipariş hizmeti *aktör yapı taşını* alternatif bir uygulama olarak kullanır. Aktörlerin çift yönlü erişim modeli, iptal etme desteğiyle durum bilgisi olan bir sıralama işlemini uygulamayı kolaylaştırır.
 1. Sipariş verme hizmeti, [bağlama yapı](bindings.md)taşı kullanarak sipariş onayı e-postaları gönderir.
-1. Arka uç Hizmetleri, [yayımla & abone ol yapı bloğunu](publish-subscribe.md)kullanarak zaman uyumsuz olarak iletişim kurar.
+1. Arka uç Hizmetleri, [yayımla & abonelik oluşturma bloğunu](publish-subscribe.md)kullanarak zaman uyumsuz olarak iletişim kurar.
 1. Gizli dizi yönetimi gizli dizi [Yapı bloğu](secrets.md)tarafından yapılır.
 1. API Gateway ve Web alışveriş toplayıcısı Hizmetleri, arka uç hizmetlerindeki yöntemleri çağırmak için [hizmet çağırma yapı taşını](service-invocation.md) kullanır.
 1. Sepet hizmeti, müşterinin alışveriş sepetinin durumunu depolamak için [durum yönetimi oluşturma bloğunu](state-management.md) kullanır.
@@ -108,7 +108,7 @@ Aşağıda, belirli yapı taşları tarafından sunulan avantajlardan daha fazla
   - HTTP çağrıları olarak hizmete yönlendirilen iletiler, bilgi eklemek için ASP.NET Core ara yazılım kullanımını, yeni kavramlar veya SDK 'lara yönelik SDK 'lara girmeden etkinleştirir.
 
 - **Bağlamalar**
-  - EShopOnContainers çözümü, müşteriye yönelik sipariş onayını e-posta ile göndermek için bir *Yapılacaklar* öğesi içeriyordu. Bu düşünce, sonunda SendGrid gibi bir üçüncü taraf e-posta API 'SI uygulamamıştı. Davpr ile, e-posta bildiriminin uygulanması, kaynak bağlamayı yapılandırma kadar kolaydır. Dış API 'Ler veya SDK 'Ların öğrenbir olması gerekmez.
+  - EShopOnContainers çözümü, müşteriye yönelik sipariş onayını e-posta ile göndermek için bir *Yapılacaklar* öğesi içeriyordu. Bu düşünce sonunda SendGrid gibi bir üçüncü taraf e-posta API 'SI uygulamıştı. Davpr ile, e-posta bildiriminin uygulanması, kaynak bağlamayı yapılandırma kadar kolaydır. Dış API 'Ler veya SDK 'Ların öğrenbir olması gerekmez.
 
 > [!NOTE]
 > Aktör yapı taşı, bu kitabın ilk sürümünde ele alınmıyor. Aktör yapı bloğunda kapsamlı bir bölüm ve Eshopondadpr ile tümleştirmesi 1,1 güncelleştirmesine dahil edilir.

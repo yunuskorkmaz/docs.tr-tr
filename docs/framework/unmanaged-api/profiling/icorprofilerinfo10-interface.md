@@ -4,12 +4,12 @@ title: ICorProfilerInfo10 Arabirimi
 ms.date: 08/06/2019
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: fd24491cb1ca55ad48137522c63e78e6387d33e6
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: f2fa0115f6894ac737696b63c1f0f00a0cb028ec
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99753295"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106910"
 ---
 # <a name="icorprofilerinfo10-interface"></a>ICorProfilerInfo10 Arabirimi
 
@@ -30,7 +30,7 @@ ms.locfileid: "99753295"
 
 **Platformlar:** Bkz. [.NET Core desteklenen işletim sistemleri](../../../core/install/windows.md?pivots=os-windows).  
 **Üst bilgi:** CorProf. IDL, CorProf. h  
-**.NET sürümleri:**[!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**.NET sürümleri:**[!INCLUDE[net_core_30](../../../../includes/net-core-30-md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

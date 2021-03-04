@@ -1,7 +1,7 @@
 ---
 title: Parallel. ForEach kullanarak basit bir paralel program yazın
 description: Bu makalede, .NET 'te veri paralelliğini nasıl etkinleştireceğinizi öğrenin. Herhangi bir IEnumerable veya IEnumerable veri kaynağı üzerinde bir Parallel. ForEach Döngüsü yazın <T> .
-ms.date: 02/14/2019
+ms.date: 02/23/2021
 dev_langs:
 - csharp
 - vb
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach, parallel version
 - parallel programming, foreach
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
-ms.openlocfilehash: e4f67f6fbe5a79e925ecd6aaec3f833704cda38c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 50c60d730fbf930ea369b014e2f8f971e9c1f239
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825422"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106689"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>Nasıl yapılır: basit bir Parallel. ForEach Döngüsü Yazma
 
@@ -25,7 +25,7 @@ Bu örnek, <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=name
 
 ## <a name="example"></a>Örnek
 
-Bu örnek, *C:\users\public\resim\sample resimler* klasöründe birkaç. jpg dosyası olduğunu varsayar ve *değiştirilmiş* adlı yeni bir alt klasör oluşturur. Örneği çalıştırdığınızda, *örnek resimlerde* her. jpg görüntüsünü döndürür ve *Değiştirilecek* şekilde kaydeder. Gerektiğinde iki yolu değiştirebilirsiniz.
+Bu örnek, <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> CPU yoğun işlemlerini gösterir. Örneği çalıştırdığınızda rastgele 2.000.000 sayı üretir ve asal sayılara filtre uygulamayı dener. İlk durum, bir döngü aracılığıyla koleksiyonu yineler `for` . İkinci durum, ile koleksiyonun üzerinde yinelenir <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> . Her yineleme tarafından alınan sonuç süresi, uygulama tamamlandığında görüntülenir.
 
 [!code-csharp[TPL_Parallel#03](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/simpleforeach.cs#03)]
 [!code-vb[TPL_Parallel#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/simpleforeach.vb#03)]
@@ -48,14 +48,6 @@ Kodu, .NET Framework için bir konsol uygulaması olarak veya .NET Core için bi
 Visual Studio 'da, Windows Masaüstü ve .NET Core için Visual Basic ve C# konsol uygulaması şablonları vardır.
 
 Komut satırından .NET Core CLI komutlarını (örneğin, `dotnet new console` veya `dotnet new console -lang vb` ) kullanabilir ya da dosyayı oluşturabilir ve komut satırı derleyicisini .NET Framework bir uygulama için kullanabilirsiniz.
-
-Bir .NET Core projesi için **System. Drawing. Common** NuGet paketine başvurmanız gerekir. Visual Studio 'da, paketi yüklemek için NuGet Paket Yöneticisi ' ni kullanın. Alternatif olarak, \* . csproj veya \* . vbproj dosyanızdaki paketin başvurusunu ekleyebilirsiniz:
-
-```xml
-<ItemGroup>
-     <PackageReference Include="System.Drawing.Common" Version="4.5.1" />
-</ItemGroup>
-```
 
 Bir .NET Core konsol uygulamasını komut satırından çalıştırmak için `dotnet run` uygulamanızı içeren klasörden kullanın.
 

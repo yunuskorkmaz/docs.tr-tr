@@ -13,12 +13,12 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-ms.openlocfilehash: 2208f515bcab5f423b32fabc5364e02ed7230919
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 69fd1a1944987d08a6ce1aee2790d0dbe06b9452
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99713214"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106377"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Dil Bağımsızlığı ve Dilden Bağımsız Bileşenler
 
@@ -27,7 +27,7 @@ ms.locfileid: "99713214"
 > [!NOTE]
 > Bu makalenin ilk bölümü, dilden bağımsız bileşenler (yani, herhangi bir dilde yazılmış uygulamalar tarafından tüketilen bileşenler) oluşturmayı tartışır. Ayrıca, birden çok dilde yazılmış kaynak kodundan tek bir bileşen veya uygulama oluşturabilirsiniz; Bu makalenin ikinci bölümünde [Diller arası birlikte çalışabilirlik](#CrossLang) bölümüne bakın.
 
-Herhangi bir dilde yazılmış diğer nesnelerle tam olarak etkileşimde bulunmak için, nesneler yalnızca tüm diller için ortak olan özellikleri çağıranlar halinde kullanıma sunmalıdır. Bu ortak özellikler kümesi, oluşturulan derlemeler için uygulanan bir dizi kural olan ortak dil belirtimi (CLS) tarafından tanımlanır. Ortak dil belirtimi, [ECMA-335 Standardı: ortak dil altyapısının](https://www.ecma-international.org/publications/standards/Ecma-335.htm), Bölüm ı, yan tümceler 7 ila 11 ' de tanımlanmıştır.
+Herhangi bir dilde yazılmış diğer nesnelerle tam olarak etkileşimde bulunmak için, nesneler yalnızca tüm diller için ortak olan özellikleri çağıranlar halinde kullanıma sunmalıdır. Bu ortak özellikler kümesi, oluşturulan derlemeler için uygulanan bir dizi kural olan ortak dil belirtimi (CLS) tarafından tanımlanır. Ortak dil belirtimi, [ECMA-335 Standardı: ortak dil altyapısının](https://www.ecma-international.org/publications-and-standards/standards/ecma-335/), Bölüm ı, yan tümceler 7 ila 11 ' de tanımlanmıştır.
 
 Bileşeniniz Ortak dil belirtimine uyuyorsa, CLS uyumlu olması garantilenir ve CLS 'yi destekleyen herhangi bir programlama dilinde yazılan derlemelerdeki koddan erişilebilir. Kaynak kodunuza özniteliğini uygulayarak, bileşeninizin derleme zamanında ortak dil belirtimine uygun olup olmadığını belirleyebilirsiniz <xref:System.CLSCompliantAttribute> . Daha fazla bilgi için bkz. [CLSCompliantAttribute özniteliği](#CLSAttribute).
 
@@ -73,7 +73,7 @@ Bu makalede:
 
 ## <a name="cls-compliance-rules"></a>CLS Uyumluluk kuralları
 
-Bu bölümde, CLS uyumlu bir bileşen oluşturmak için kurallar açıklanmaktadır. Kuralların tam bir listesi için, bkz. [ECMA-335 standart: ortak dil altyapısının](https://www.ecma-international.org/publications/standards/Ecma-335.htm)bölüm ı, yan tümcesi 11.
+Bu bölümde, CLS uyumlu bir bileşen oluşturmak için kurallar açıklanmaktadır. Kuralların tam bir listesi için, bkz. [ECMA-335 standart: ortak dil altyapısının](https://www.ecma-international.org/publications-and-standards/standards/ecma-335/)bölüm ı, yan tümcesi 11.
 
 > [!NOTE]
 > Ortak dil belirtimi, tüketiciler (CLS uyumlu bir bileşene programlı olarak erişen geliştiriciler), çerçeveler (CLS uyumlu kitaplıklar oluşturmak için bir dil derleyicisi kullanan geliştiriciler) ve Extender 'lar (bir dil derleyicisi veya CLS uyumlu bileşenler oluşturan bir kod ayrıştırıcısı gibi bir araç oluşturan geliştiriciler) için geçerli olduğu için her bir kuralı CLS uyumluluğu için tartışır. Bu makale, çerçeveler için uygulanan kurallara odaklanır. Ancak, Extender 'lara uygulanan kuralların bazılarının, yansıma. yayma kullanılarak oluşturulan derlemeler için de uygulanabilir olabileceğini unutmayın.
@@ -101,7 +101,7 @@ Kitaplığın ortak arabirimi aşağıdakilerden oluşur:
 
 - Ortak sınıfların ortak yöntemlerinin parametreleri ve dönüş türleri, parametreleri ve türetilmiş sınıflar tarafından erişilebilen yöntemlerin dönüş türleri.
 
-CLS uyumluluğu kuralları aşağıdaki tabloda listelenmiştir. Kuralların metni, telif hakkı 2012 olan [ECMA-335 Standardı: ortak dil altyapısından](https://www.ecma-international.org/publications/standards/Ecma-335.htm)(Ecma International göre) alınır. Bu kurallar hakkında daha ayrıntılı bilgi aşağıdaki bölümlerde bulunur.
+CLS uyumluluğu kuralları aşağıdaki tabloda listelenmiştir. Kuralların metni, telif hakkı 2012 olan [ECMA-335 Standardı: ortak dil altyapısından](https://www.ecma-international.org/publications-and-standards/standards/ecma-335/)(Ecma International göre) alınır. Bu kurallar hakkında daha ayrıntılı bilgi aşağıdaki bölümlerde bulunur.
 
 |Kategori|Bkz.|Kural|Kural numarası|
 |--------------|---------|----------|-----------------|
@@ -172,7 +172,7 @@ Bir yöntemin dönüş türü veya özellik türü de dahil olmak üzere üye im
 
 .NET [ortak tür sistemi](base-types/common-type-system.md) , doğrudan ortak dil çalışma zamanı tarafından desteklenen ve bir derlemenin meta verilerinde özel olarak kodlanmış bir dizi yerleşik tür içerir. Bu iç türlerin, aşağıdaki tabloda listelenen türler CLS uyumludur.
 
-|CLS uyumlu tür|Description|
+|CLS uyumlu tür|Açıklama|
 |-------------------------|-----------------|
 |<xref:System.Byte>|8 bit işaretsiz tamsayı|
 |<xref:System.Int16>|16 bit işaretli tamsayı|
@@ -188,7 +188,7 @@ Bir yöntemin dönüş türü veya özellik türü de dahil olmak üzere üye im
 
 Aşağıdaki tabloda listelenen iç türler CLS uyumlu değildir.
 
-|Uyumlu olmayan tür|Description|CLS uyumlu alternatif|
+|Uyumlu olmayan tür|Açıklama|CLS uyumlu alternatif|
 |-------------------------|-----------------|--------------------------------|
 |<xref:System.SByte>|8 bit işaretli tamsayı veri türü|<xref:System.Int16>|
 |<xref:System.TypedReference>|Bir nesne ve onun çalışma zamanı türü işaretçisi|Yok|

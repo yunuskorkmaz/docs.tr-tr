@@ -425,6 +425,8 @@ items:
                 href: ../core/diagnostics/well-known-event-providers.md
               - name: Dağıtılmış Izleme
                 href: ../core/diagnostics/distributed-tracing.md
+          - name: Simgeleri
+            href: ../core/diagnostics/symbols.md
           - name: Çalıştırma zamanı olayları
             items:
               - name: Genel Bakış
@@ -2291,20 +2293,22 @@ items:
         items:
           - name: .NET Core 2.0’dan 2.1’e geçiş
             href: ../core/migration/20-21.md
-          - name: Project.json’dan geçiş
-            href: ../core/migration/index.md
-          - name: Project.json ile csproj arasında eşleme
-            href: ../core/tools/project-json-to-csproj.md
           - name: AssemblyInfo özniteliklerini özelliklerle eşleme
             href: ../core/migration/assembly-info.md
-          - name: CLI’daki değişikliklere genel bakış
-            href: ../core/tools/cli-msbuild-architecture.md
-          - name: DNX’ten geçiş
-            href: ../core/migration/from-dnx.md
       - name: .NET Framework’ten taşıma
         items:
           - name: Genel Bakış
             href: ../core/porting/index.md
+          - name: .NET Yükseltme Yardımcısı aracı
+            items:
+              - name: Genel Bakış
+                href: ../core/porting/upgrade-assistant-overview.md
+              - name: Windows Presentation Foundation
+                href: ../core/porting/upgrade-assistant-wpf-framework.md
+              - name: Windows Forms
+                href: ../core/porting/upgrade-assistant-winforms-framework.md
+              - name: ASP.NET Core
+                href: ../core/porting/upgrade-assistant-aspnetmvc.md
           - name: Üçüncü taraf bağımlılıklarını çözümleme
             href: ../core/porting/third-party-deps.md
           - name: Taşıma kitaplıkları

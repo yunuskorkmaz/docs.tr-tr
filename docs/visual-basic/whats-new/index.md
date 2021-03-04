@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 56aa88f9e4ca3c50e7fc3704685ae4ac535db12c
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 222c92413bd12e1769376c0f6eef7e34d7d5182e
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100455242"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106572"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic yenilikler
 
@@ -252,7 +252,7 @@ Salt okunur Arabirim özelliklerini bir ReadWrite özelliğini kullanarak uygula
 
 Kodunuzun daha okunaklı olması için artık `TypeOf` ile kullanabilirsiniz `IsNot` .
 
-[#Disable Uyarı \<ID> ve #Enable uyarısı \<ID>](../language-reference/directives/index.md)
+[#Disable Uyarı \<ID> ve #Enable uyarısı \<ID>](../language-reference/directives/disable-enable.md)
 
 Kaynak dosya içindeki bölgeler için belirli uyarıları devre dışı bırakabilir ve etkinleştirebilirsiniz.
 

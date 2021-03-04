@@ -3,12 +3,12 @@ title: Davpr gizli dizi oluşturma bloğu
 description: Gizli dizi oluşturma bloğunun açıklaması, özellikleri, avantajları ve nasıl uygulanacağı
 author: edwinvw
 ms.date: 02/07/2021
-ms.openlocfilehash: a1476abc6b224a525f6bb04c78209da5d1654e66
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: 94942b396af947b2a3e49b918b2b082c15f4bb08
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100629479"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106296"
 ---
 # <a name="the-dapr-secrets-building-block"></a>Davpr gizli dizi oluşturma bloğu
 
@@ -24,7 +24,7 @@ Uzun bir süre önce, uygulama gizli dizilerini uygulama kod temelinin içindeki
 
 Modern dağıtılmış uygulamalar oluşturmak için yaygın olarak kabul edilen bir metodolojide [Twelve-Factor uygulamasıdır](https://12factor.net/). İlke ve en iyi uygulamalar kümesini açıklar. Üçüncü etkeni, *yapılandırma ve parolaların kod tabanının dışında externalized olmasını önerir.*
 
-Bu sorunu gidermek için .NET Core platformu, hassas verileri proje ağacının dışında bir fiziksel klasörde depolayan bir [gizli dizi Yöneticisi](https://docs.microsoft.com/aspnet/core/security/app-secrets#secret-manager) özelliği içerir. Gizlilikler kaynak denetimi dışında olduğundan, bu özellik verileri şifrelemez. Yalnızca **geliştirme amacıyla** tasarlanmıştır.
+Bu sorunu gidermek için .NET Core platformu, hassas verileri proje ağacının dışında bir fiziksel klasörde depolayan bir [gizli dizi Yöneticisi](/aspnet/core/security/app-secrets#secret-manager) özelliği içerir. Gizlilikler kaynak denetimi dışında olduğundan, bu özellik verileri şifrelemez. Yalnızca **geliştirme amacıyla** tasarlanmıştır.
 
 Daha modern ve güvenli bir uygulama, **HashiCorp Kasası** veya **Azure Key Vault** gibi bir gizli dizi yönetim aracında gizli dizileri yalıtmak için kullanılır.  Bu araçlar, gizli dizileri dışarıda depolamanıza, ortamlarda kimlik bilgilerinin çeşitliliğine ve uygulama kodundan bunlara başvurmasına olanak tanır. Ancak, her aracın karmaşıklıkları ve öğrenme eğrisi vardır.
 
@@ -118,7 +118,7 @@ Yöntemi için bağımsız değişkenler `GetSecretAsync` şunları içerir:
 
 Yöntem bir sözlük nesnesi ile yanıt verir ve bir gizli dizi birden çok anahtar/değer çifti içerebilir. Yukarıdaki örnekte, adlı gizli dizinin `customerdb` bir bağlantı dizesi döndürecek şekilde koleksiyondan başvuruluyor.
 
-Davpr .NET SDK 'Sı Ayrıca bir .NET yapılandırma sağlayıcısına de sahiptir. Belirtilen gizli dizileri temel [.NET Core Yapılandırma API](https://docs.microsoft.com/dotnet/core/extensions/configuration)'sine yükler. Çalışan uygulama daha sonra `IConfiguration` ASP.NET Core bağımlılık ekleme ' de kayıtlı sözlükten parolalara başvurabilir.
+Davpr .NET SDK 'Sı Ayrıca bir .NET yapılandırma sağlayıcısına de sahiptir. Belirtilen gizli dizileri temel [.NET Core Yapılandırma API](../../core/extensions/configuration.md)'sine yükler. Çalışan uygulama daha sonra `IConfiguration` ASP.NET Core bağımlılık ekleme ' de kayıtlı sözlükten parolalara başvurabilir.
 
 Gizli dizi yapılandırma sağlayıcısı, [Dapr.Extensions.Configurlama](https://www.nuget.org/packages/Dapr.Extensions.Configuration) NuGet paketinden kullanılabilir. Sağlayıcı, `Program.cs` bir ASP.NET Web API uygulamasında kayıtlı olabilir:  
 
@@ -344,7 +344,7 @@ Bu örneğin çalışması için aşağıdaki önkoşulların karşılanması ge
 
 - Azure aboneliğine yönetici erişimini güvenli hale getirdi.
 - `eshopkv` `redisPassword` Redsıs sunucusuna bağlanmak için parolayı içeren adında bir gizli anahtar tutan adlı bir Azure Key Vault sağladınız.
-- Azure Active Directory ' de [hizmet sorumlusu](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal) oluşturdunuz.
+- Azure Active Directory ' de [hizmet sorumlusu](/azure/active-directory/develop/howto-create-service-principal-portal) oluşturdunuz.
 - Yerel dosya sistemine bu hizmet sorumlusu için bir x509 sertifikası yüklediniz (hem ortak hem de özel anahtar içeren).
 
 > [!NOTE]
@@ -434,7 +434,7 @@ Bu noktada, Kubernetes 'de çalışan bir uygulama, Azure Key Vault redo parolas
 > [!IMPORTANT]
 > Hizmet sorumlusu için x509 sertifika dosyasını güvenli bir yerde tutmanız kritik öneme sahiptir. Bunu, kaynak kodu deposunun dışında iyi bilinen bir klasöre yerleştirmek en iyisidir. Yapılandırma dosyası daha sonra bu iyi bilinen klasörden sertifika dosyasına başvurabilir. Yerel bir geliştirme makinesinde, sertifikayı klasörüne kopyalamaktan sorumlu olursunuz. Otomatik dağıtımlar için, işlem hattı sertifikayı uygulamanın dağıtıldığı makineye kopyalar. Her ortam için farklı bir hizmet sorumlusu kullanmak en iyi uygulamadır. Bunun yapılması, bir GELIŞTIRME ortamından hizmet sorumlusunun bir ÜRETIM ortamındaki gizli dizileri erişimine engel olur.
 
-Azure Kubernetes hizmeti 'nde (AKS) çalışırken, Azure Key Vault kimlik doğrulaması için bir [Azure yönetilen kimliği](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview) kullanılması tercih edilir. Yönetilen kimlikler bu kitabın kapsamı dışındadır, ancak [Azure Key Vault Yönetilen kimlikler](https://docs.dapr.io/operations/components/setup-secret-store/supported-secret-stores/azure-keyvault-managed-identity/) belgeleriyle açıklanmıştır.
+Azure Kubernetes hizmeti 'nde (AKS) çalışırken, Azure Key Vault kimlik doğrulaması için bir [Azure yönetilen kimliği](/azure/active-directory/managed-identities-azure-resources/overview) kullanılması tercih edilir. Yönetilen kimlikler bu kitabın kapsamı dışındadır, ancak [Azure Key Vault Yönetilen kimlikler](https://docs.dapr.io/operations/components/setup-secret-store/supported-secret-stores/azure-keyvault-managed-identity/) belgeleriyle açıklanmıştır.
 
 ### <a name="scope-secrets"></a>Kapsam gizli dizileri
 

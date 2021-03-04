@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: a27b6d90b51254560f25fbadb18ac95fe838ab2b
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: aad66285e9b31558a68b8ccdfc71f103d1772946
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99789027"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106923"
 ---
 # <a name="cor_prf_rejit_flags-enumeration"></a>COR_PRF_REJIT_FLAGS Sabit Listesi
 
@@ -39,7 +39,7 @@ typedef enum
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Description|  
+|Üye|Açıklama|  
 |------------|-----------------|  
 |`COR_PRF_REJIT_BLOCK_INLINING`| Yeniden derlenen yöntemlerin diğer metotlarda satır içine alınmış olması engellenir. |  
 |`COR_PRF_REJIT_INLINING_CALLBACKS`| `GetFunctionParameters`Yeniden derleme yapmak istenen yöntemlerin satır içi yöntemler için geri çağrılar alın. |  
@@ -52,7 +52,7 @@ typedef enum
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:**[!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+ **.NET Framework sürümleri:**[!INCLUDE[net_core_30](../../../../includes/net-core-30-md.md)]
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

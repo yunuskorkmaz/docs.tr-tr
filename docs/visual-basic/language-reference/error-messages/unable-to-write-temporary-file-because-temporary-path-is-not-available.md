@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30698
 ms.assetid: 3b77b7e3-8b17-40de-b4e1-05e4b9b325ad
-ms.openlocfilehash: 0f2f2791db82bcf72fa65f113fc7e3ba8eb559a2
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: f8d77e6c407f94f906cbb8c0600296b8bad6f676
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99674824"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106806"
 ---
 # <a name="bc30698-unable-to-write-temporary-file-because-temporary-path-is-not-available"></a>BC30698: geçici yol kullanılabilir olmadığından geçici dosya yazılamıyor
 
@@ -29,4 +29,4 @@ Visual Basic geçici dosyaların depolandığı yolu belirleyemedi.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Bizimle iletişime geçin](/visualstudio/ide/feedback-options)
+- [Visual Studio geri bildirim seçenekleri](/visualstudio/ide/feedback-options)

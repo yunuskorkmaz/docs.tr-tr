@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30144
 ms.assetid: 67ae276e-80d4-4162-ba00-e546c9294340
-ms.openlocfilehash: 79c4c99dee252ae32837a99378fbf32d7d0d8470
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: fd53cda4040846a8b41573ebbec8f21b656a118a
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99640933"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106845"
 ---
 # <a name="bc30144-unable-to-link-to-resource-file-filename-error-message"></a>BC30144: ' ' kaynak dosyasına bağlanamıyor \<filename> : \<error message>
 
@@ -30,4 +30,4 @@ Visual Basic derleyici, bildirime sahip bir derleme oluşturmak için derleme ba
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
-- [Bizimle iletişime geçin](/visualstudio/ide/feedback-options)
+- [Visual Studio geri bildirim seçenekleri](/visualstudio/ide/feedback-options)
