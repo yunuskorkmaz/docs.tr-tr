@@ -4,42 +4,42 @@ description: ASP.NET Core 6,0 ' deki, null yapılabilir başvuru türü ek açı
 author: scottaddie
 ms.author: scaddie
 ms.date: 02/16/2021
-ms.openlocfilehash: 6277b57e0340d099d11ddf2e955ab1fc969e3270
-ms.sourcegitcommit: 456b3cd82a87b453fa737b4661295070d1b6d684
+ms.openlocfilehash: e2753bc17d2a139560bde6d21c08c04aa1c314e5
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100643602"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105710"
 ---
-# <a name="nullable-reference-type-annotations-changed"></a><span data-ttu-id="5db55-103">Null yapılabilir başvuru türü ek açıklamaları değişti</span><span class="sxs-lookup"><span data-stu-id="5db55-103">Nullable reference type annotations changed</span></span>
+# <a name="nullable-reference-type-annotations-changed"></a><span data-ttu-id="b46bb-103">Null yapılabilir başvuru türü ek açıklamaları değişti</span><span class="sxs-lookup"><span data-stu-id="b46bb-103">Nullable reference type annotations changed</span></span>
 
-<span data-ttu-id="5db55-104">_**Bu sorun devam eden bir çalışmayı temsil eder. Null olabilme ek açıklamalarıyla yapılan tüm önemli değişiklikler bu soruna ASP.NET Core 6,0 üzerinden toplanır.**_</span><span class="sxs-lookup"><span data-stu-id="5db55-104">_**This issue represents a work-in-progress. All breaking changes to nullability annotations will be aggregated into this issue throughout the course of ASP.NET Core 6.0.**_</span></span>
+<span data-ttu-id="b46bb-104">_**Bu sorun devam eden bir çalışmayı temsil eder. Null olabilme ek açıklamalarıyla yapılan tüm önemli değişiklikler bu soruna ASP.NET Core 6,0 üzerinden toplanır.**_</span><span class="sxs-lookup"><span data-stu-id="b46bb-104">_**This issue represents a work-in-progress. All breaking changes to nullability annotations will be aggregated into this issue throughout the course of ASP.NET Core 6.0.**_</span></span>
 
-<span data-ttu-id="5db55-105">ASP.NET Core 5,0 ' den başlayarak, bu kod bölümlerine null olabilme ek açıklamaları uygulandı.</span><span class="sxs-lookup"><span data-stu-id="5db55-105">Starting in ASP.NET Core 5.0, nullability annotations have been applied to parts of the code.</span></span> <span data-ttu-id="5db55-106">Bu çabadan itibaren, bu ek açıklamalarda [hatalar bekleniyordu](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/api-guidelines/nullability.md#breaking-change-guidance) ve düzeltmelerin yapılması gerekir.</span><span class="sxs-lookup"><span data-stu-id="5db55-106">From the outset of this effort, [mistakes were expected](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/api-guidelines/nullability.md#breaking-change-guidance) in these annotations and fixes would need to be made.</span></span> <span data-ttu-id="5db55-107">ASP.NET Core 6,0 ' de, daha önce uygulanan bazı ek açıklamalar güncelleştiriliyor.</span><span class="sxs-lookup"><span data-stu-id="5db55-107">In ASP.NET Core 6.0, some previously applied annotations are being updated.</span></span> <span data-ttu-id="5db55-108">Bu değişikliklerden bazıları kaynak üzerinde değişiklik olarak değerlendirilir.</span><span class="sxs-lookup"><span data-stu-id="5db55-108">Some of these changes are considered source breaking changes.</span></span> <span data-ttu-id="5db55-109">Değişiklikler API 'Lerin uyumsuz veya daha fazla kısıtlayıcı olmasına neden olacak.</span><span class="sxs-lookup"><span data-stu-id="5db55-109">The changes lead to the APIs being incompatible or more restrictive.</span></span> <span data-ttu-id="5db55-110">Güncelleştirilmiş API 'Ler, null yapılabilir başvuru türleri etkinleştirilmiş projelerde kullanıldığında, derleme zamanı uyarılarına neden olabilir.</span><span class="sxs-lookup"><span data-stu-id="5db55-110">The updated APIs may result in build-time warnings when used in projects that have nullable reference types enabled.</span></span>
+<span data-ttu-id="b46bb-105">ASP.NET Core 5,0 ' den başlayarak, bu kod bölümlerine null olabilme ek açıklamaları uygulandı.</span><span class="sxs-lookup"><span data-stu-id="b46bb-105">Starting in ASP.NET Core 5.0, nullability annotations have been applied to parts of the code.</span></span> <span data-ttu-id="b46bb-106">Bu çabadan itibaren, bu ek açıklamalarda [hatalar bekleniyordu](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/api-guidelines/nullability.md#breaking-change-guidance) ve düzeltmelerin yapılması gerekir.</span><span class="sxs-lookup"><span data-stu-id="b46bb-106">From the outset of this effort, [mistakes were expected](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/api-guidelines/nullability.md#breaking-change-guidance) in these annotations and fixes would need to be made.</span></span> <span data-ttu-id="b46bb-107">ASP.NET Core 6,0 ' de, daha önce uygulanan bazı ek açıklamalar güncelleştiriliyor.</span><span class="sxs-lookup"><span data-stu-id="b46bb-107">In ASP.NET Core 6.0, some previously applied annotations are being updated.</span></span> <span data-ttu-id="b46bb-108">Bu değişikliklerden bazıları kaynak üzerinde değişiklik olarak değerlendirilir.</span><span class="sxs-lookup"><span data-stu-id="b46bb-108">Some of these changes are considered source breaking changes.</span></span> <span data-ttu-id="b46bb-109">Değişiklikler API 'Lerin uyumsuz veya daha fazla kısıtlayıcı olmasına neden olacak.</span><span class="sxs-lookup"><span data-stu-id="b46bb-109">The changes lead to the APIs being incompatible or more restrictive.</span></span> <span data-ttu-id="b46bb-110">Güncelleştirilmiş API 'Ler, null yapılabilir başvuru türleri etkinleştirilmiş projelerde kullanıldığında, derleme zamanı uyarılarına neden olabilir.</span><span class="sxs-lookup"><span data-stu-id="b46bb-110">The updated APIs may result in build-time warnings when used in projects that have nullable reference types enabled.</span></span>
 
-<span data-ttu-id="5db55-111">Tartışma için bkz. GitHub sorunu [DotNet/aspnetcore # 27564](https://github.com/dotnet/aspnetcore/issues/27564).</span><span class="sxs-lookup"><span data-stu-id="5db55-111">For discussion, see GitHub issue [dotnet/aspnetcore#27564](https://github.com/dotnet/aspnetcore/issues/27564).</span></span>
+<span data-ttu-id="b46bb-111">Tartışma için bkz. GitHub sorunu [DotNet/aspnetcore # 27564](https://github.com/dotnet/aspnetcore/issues/27564).</span><span class="sxs-lookup"><span data-stu-id="b46bb-111">For discussion, see GitHub issue [dotnet/aspnetcore#27564](https://github.com/dotnet/aspnetcore/issues/27564).</span></span>
 
-## <a name="version-introduced"></a><span data-ttu-id="5db55-112">Sunulan sürüm</span><span class="sxs-lookup"><span data-stu-id="5db55-112">Version introduced</span></span>
+## <a name="version-introduced"></a><span data-ttu-id="b46bb-112">Sunulan sürüm</span><span class="sxs-lookup"><span data-stu-id="b46bb-112">Version introduced</span></span>
 
-<span data-ttu-id="5db55-113">6.0</span><span class="sxs-lookup"><span data-stu-id="5db55-113">6.0</span></span>
+<span data-ttu-id="b46bb-113">6.0</span><span class="sxs-lookup"><span data-stu-id="b46bb-113">6.0</span></span>
 
-## <a name="old-behavior"></a><span data-ttu-id="5db55-114">Eski davranış</span><span class="sxs-lookup"><span data-stu-id="5db55-114">Old behavior</span></span>
+## <a name="old-behavior"></a><span data-ttu-id="b46bb-114">Eski davranış</span><span class="sxs-lookup"><span data-stu-id="b46bb-114">Old behavior</span></span>
 
-<span data-ttu-id="5db55-115">Etkilenen API 'Lerde null yapılabilir başvuru türü ek açıklamaları hatalı.</span><span class="sxs-lookup"><span data-stu-id="5db55-115">The affected APIs have incorrect nullable reference type annotations.</span></span> <span data-ttu-id="5db55-116">Derleme uyarıları yok ya da yanlış.</span><span class="sxs-lookup"><span data-stu-id="5db55-116">Build warnings are either absent or incorrect.</span></span>
+<span data-ttu-id="b46bb-115">Etkilenen API 'Lerde null yapılabilir başvuru türü ek açıklamaları hatalı.</span><span class="sxs-lookup"><span data-stu-id="b46bb-115">The affected APIs have incorrect nullable reference type annotations.</span></span> <span data-ttu-id="b46bb-116">Derleme uyarıları yok ya da yanlış.</span><span class="sxs-lookup"><span data-stu-id="b46bb-116">Build warnings are either absent or incorrect.</span></span>
 
-## <a name="new-behavior"></a><span data-ttu-id="5db55-117">Yeni davranış</span><span class="sxs-lookup"><span data-stu-id="5db55-117">New behavior</span></span>
+## <a name="new-behavior"></a><span data-ttu-id="b46bb-117">Yeni davranış</span><span class="sxs-lookup"><span data-stu-id="b46bb-117">New behavior</span></span>
 
-<span data-ttu-id="5db55-118">Yeni derleme uyarıları oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="5db55-118">New build warnings are produced.</span></span> <span data-ttu-id="5db55-119">Etkilenen API 'Ler için hatalı derleme uyarıları artık üretilmemektedir.</span><span class="sxs-lookup"><span data-stu-id="5db55-119">Incorrect build warnings are no longer produced for the affected APIs.</span></span>
+<span data-ttu-id="b46bb-118">Yeni derleme uyarıları oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="b46bb-118">New build warnings are produced.</span></span> <span data-ttu-id="b46bb-119">Etkilenen API 'Ler için hatalı derleme uyarıları artık üretilmemektedir.</span><span class="sxs-lookup"><span data-stu-id="b46bb-119">Incorrect build warnings are no longer produced for the affected APIs.</span></span>
 
-## <a name="reason-for-change"></a><span data-ttu-id="5db55-120">Değişiklik nedeni</span><span class="sxs-lookup"><span data-stu-id="5db55-120">Reason for change</span></span>
+## <a name="reason-for-change"></a><span data-ttu-id="b46bb-120">Değişiklik nedeni</span><span class="sxs-lookup"><span data-stu-id="b46bb-120">Reason for change</span></span>
 
-<span data-ttu-id="5db55-121">Geri bildirim ve daha fazla test ile, etkilenen API 'Ler için null yapılabilir ek açıklamaların yanlış olduğu belirlendi.</span><span class="sxs-lookup"><span data-stu-id="5db55-121">Through feedback and further testing, the nullable annotations for the affected APIs were determined to be inaccurate.</span></span> <span data-ttu-id="5db55-122">Güncelleştirilmiş ek açıklamalar artık API 'Ler için null değer alabilirlik sözleşmelerini doğru şekilde temsil eder.</span><span class="sxs-lookup"><span data-stu-id="5db55-122">The updated annotations now correctly represent the nullability contracts for the APIs.</span></span>
+<span data-ttu-id="b46bb-121">Geri bildirim ve daha fazla test ile, etkilenen API 'Ler için null yapılabilir ek açıklamaların yanlış olduğu belirlendi.</span><span class="sxs-lookup"><span data-stu-id="b46bb-121">Through feedback and further testing, the nullable annotations for the affected APIs were determined to be inaccurate.</span></span> <span data-ttu-id="b46bb-122">Güncelleştirilmiş ek açıklamalar artık API 'Ler için null değer alabilirlik sözleşmelerini doğru şekilde temsil eder.</span><span class="sxs-lookup"><span data-stu-id="b46bb-122">The updated annotations now correctly represent the nullability contracts for the APIs.</span></span>
 
-## <a name="recommended-action"></a><span data-ttu-id="5db55-123">Önerilen eylem</span><span class="sxs-lookup"><span data-stu-id="5db55-123">Recommended action</span></span>
+## <a name="recommended-action"></a><span data-ttu-id="b46bb-123">Önerilen eylem</span><span class="sxs-lookup"><span data-stu-id="b46bb-123">Recommended action</span></span>
 
-<span data-ttu-id="5db55-124">Düzeltilen null olabilme sözleşmelerini yansıtmak için bu API 'Leri çağıran kodu güncelleştirin.</span><span class="sxs-lookup"><span data-stu-id="5db55-124">Update code calling these APIs to reflect the revised nullability contracts.</span></span>
+<span data-ttu-id="b46bb-124">Düzeltilen null olabilme sözleşmelerini yansıtmak için bu API 'Leri çağıran kodu güncelleştirin.</span><span class="sxs-lookup"><span data-stu-id="b46bb-124">Update code calling these APIs to reflect the revised nullability contracts.</span></span>
 
-## <a name="affected-apis"></a><span data-ttu-id="5db55-125">Etkilenen API’ler</span><span class="sxs-lookup"><span data-stu-id="5db55-125">Affected APIs</span></span>
+## <a name="affected-apis"></a><span data-ttu-id="b46bb-125">Etkilenen API’ler</span><span class="sxs-lookup"><span data-stu-id="b46bb-125">Affected APIs</span></span>
 
 * <xref:Microsoft.AspNetCore.Components.ParameterView.FromDictionary%2A?displayProperty=nameWithType>
 * <xref:Microsoft.AspNetCore.Components.RenderTree.Renderer.DispatchEventAsync%2A?displayProperty=nameWithType>
@@ -100,6 +100,10 @@ ms.locfileid: "100643602"
 * <xref:Microsoft.AspNetCore.Connections.IConnectionListener.AcceptAsync(System.Threading.CancellationToken)?displayProperty=nameWithType>
 * <xref:Microsoft.AspNetCore.Authentication.AuthenticationSchemeOptions.ForwardDefaultSelector?displayProperty=nameWithType>
 * <xref:Microsoft.Net.Http.Headers.RangeConditionHeaderValue.%23ctor(Microsoft.Net.Http.Headers.EntityTagHeaderValue)?displayProperty=nameWithType>
+
+## <a name="see-also"></a><span data-ttu-id="b46bb-126">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b46bb-126">See also</span></span>
+
+- [<span data-ttu-id="b46bb-127">Ana .NET kitaplıklarında null yapılabilir başvuru türü ek açıklaması değişiklikleri</span><span class="sxs-lookup"><span data-stu-id="b46bb-127">Nullable reference type annotation changes in core .NET libraries</span></span>](../../core-libraries/6.0/nullable-ref-type-annotation-changes.md)
 
 <!--
 
