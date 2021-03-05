@@ -2,12 +2,12 @@
 title: F# kod biçimlendirme yönergeleri
 description: 'F # kodunu biçimlendirmeye yönelik yönergeleri öğrenin.'
 ms.date: 08/31/2020
-ms.openlocfilehash: b4b70d86b36f2ba50318cb50e54d65cc6abff450
-ms.sourcegitcommit: f8cd3ef517ee177c99feed944824c27d208cc0d1
+ms.openlocfilehash: 6f1cf8decbaf02aa7d5e202010d4c240c24bdcf9
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2021
-ms.locfileid: "98570235"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103679"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# kod biçimlendirme yönergeleri
 
@@ -501,13 +501,23 @@ type Volume =
 
 ## <a name="formatting-discriminated-unions"></a>Ayırt edici birleşimleri biçimlendirme
 
+Birleşim durumlarını ayırt etmek için parantez içine alınmış/tupled parametrelerinden önce bir boşluk kullanın:
+
+```fsharp
+// OK
+let opt = Some ("A", 1)
+
+// Not OK
+let opt = Some("A", 1)
+```
+
 Birden çok satıra bölünen oluşturulmuş ayrılmış birleşimler, içerilen verileri girintileme ile yeni bir kapsam olarak vermelidir:
 
 ```fsharp
 let tree1 =
     BinaryNode
-        (BinaryNode(BinaryValue 1, BinaryValue 2),
-         BinaryNode(BinaryValue 3, BinaryValue 4))
+        (BinaryNode (BinaryValue 1, BinaryValue 2),
+         BinaryNode (BinaryValue 3, BinaryValue 4))
 ```
 
 Kapanış parantezi de yeni bir satır üzerinde olabilir:
@@ -515,8 +525,8 @@ Kapanış parantezi de yeni bir satır üzerinde olabilir:
 ```fsharp
 let tree1 =
     BinaryNode(
-        BinaryNode(BinaryValue 1, BinaryValue 2),
-        BinaryNode(BinaryValue 3, BinaryValue 4)
+        BinaryNode (BinaryValue 1, BinaryValue 2),
+        BinaryNode (BinaryValue 3, BinaryValue 4)
     )
 ```
 
