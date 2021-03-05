@@ -23,3 +23,5 @@
       href: serverless/
     - name: .NET geliştiricileri için dadpr
       href: dapr-for-net-developers/
+    - name: Mevcut ASP.NET uygulamalarını .NET Core 'a taşıma
+      href: porting-existing-aspnet-apps/

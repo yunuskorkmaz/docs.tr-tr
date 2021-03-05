@@ -3,88 +3,88 @@ title: .NET geliştiricileri için dadpr
 description: .NET geliştiricilerinin Microsoft 'un açık kaynaklı dağıtılmış uygulama çalışma zamanının tam gücünden yararlanmasını ve bu avantajlardan faydalamasını sağlar.
 author: robvet
 ms.date: 02/07/2021
-ms.openlocfilehash: 53d5356c8e010f0c4e168a2186d48dd9af369ff6
-ms.sourcegitcommit: b924ade6426cf61a4604c4e2ee54cb3592c29317
+ms.openlocfilehash: fc38dd1a98570cc4d2b367d272a107e3ad67ead9
+ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "101096734"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102206574"
 ---
-# <a name="dapr-for-net-developers"></a><span data-ttu-id="20d0d-103">.NET geliştiricileri için dadpr</span><span class="sxs-lookup"><span data-stu-id="20d0d-103">Dapr for .NET Developers</span></span>
+# <a name="dapr-for-net-developers"></a><span data-ttu-id="a907a-103">.NET geliştiricileri için dadpr</span><span class="sxs-lookup"><span data-stu-id="a907a-103">Dapr for .NET Developers</span></span>
 
 ![kapak resmi](./media/cover.png)
 
-<span data-ttu-id="20d0d-105">**ÖNIZLEME SÜRÜMÜ**</span><span class="sxs-lookup"><span data-stu-id="20d0d-105">**PREVIEW EDITION**</span></span>
+<span data-ttu-id="a907a-105">**ÖNIZLEME SÜRÜMÜ**</span><span class="sxs-lookup"><span data-stu-id="a907a-105">**PREVIEW EDITION**</span></span>
 
-<span data-ttu-id="20d0d-106">YAYIMLAYAN</span><span class="sxs-lookup"><span data-stu-id="20d0d-106">PUBLISHED BY</span></span>
+<span data-ttu-id="a907a-106">YAYIMLAYAN</span><span class="sxs-lookup"><span data-stu-id="a907a-106">PUBLISHED BY</span></span>
 
-<span data-ttu-id="20d0d-107">Microsoft Geliştirici bölmesi, .NET ve Azure ınubations ekipleri</span><span class="sxs-lookup"><span data-stu-id="20d0d-107">Microsoft Developer Division, .NET, and Azure Incubations teams</span></span>
+<span data-ttu-id="a907a-107">Microsoft Geliştirici bölmesi, .NET ve Azure ınubations ekipleri</span><span class="sxs-lookup"><span data-stu-id="a907a-107">Microsoft Developer Division, .NET, and Azure Incubations teams</span></span>
 
-<span data-ttu-id="20d0d-108">Microsoft Corporation 'ın bir bölümü</span><span class="sxs-lookup"><span data-stu-id="20d0d-108">A division of Microsoft Corporation</span></span>
+<span data-ttu-id="a907a-108">Microsoft Corporation 'ın bir bölümü</span><span class="sxs-lookup"><span data-stu-id="a907a-108">A division of Microsoft Corporation</span></span>
 
-<span data-ttu-id="20d0d-109">One Microsoft Way</span><span class="sxs-lookup"><span data-stu-id="20d0d-109">One Microsoft Way</span></span>
+<span data-ttu-id="a907a-109">One Microsoft Way</span><span class="sxs-lookup"><span data-stu-id="a907a-109">One Microsoft Way</span></span>
 
-<span data-ttu-id="20d0d-110">Redmond, Washington 98052-6399</span><span class="sxs-lookup"><span data-stu-id="20d0d-110">Redmond, Washington 98052-6399</span></span>
+<span data-ttu-id="a907a-110">Redmond, Washington 98052-6399</span><span class="sxs-lookup"><span data-stu-id="a907a-110">Redmond, Washington 98052-6399</span></span>
 
-<span data-ttu-id="20d0d-111">Telif hakkı &copy; 2021 Microsoft Corporation</span><span class="sxs-lookup"><span data-stu-id="20d0d-111">Copyright &copy; 2021 by Microsoft Corporation</span></span>
+<span data-ttu-id="a907a-111">Telif hakkı &copy; 2021 Microsoft Corporation</span><span class="sxs-lookup"><span data-stu-id="a907a-111">Copyright &copy; 2021 by Microsoft Corporation</span></span>
 
-<span data-ttu-id="20d0d-112">All rights reserved.</span><span class="sxs-lookup"><span data-stu-id="20d0d-112">All rights reserved.</span></span> <span data-ttu-id="20d0d-113">Bu kitabın içeriğinin herhangi bir bölümü herhangi bir biçimde veya herhangi bir şekilde veya başka bir şekilde herhangi bir şekilde çoğaltılamaz veya herhangi bir şekilde gönderilebilir.</span><span class="sxs-lookup"><span data-stu-id="20d0d-113">No part of the contents of this book may be reproduced or transmitted in any form or by any means without the written permission of the publisher.</span></span>
+<span data-ttu-id="a907a-112">All rights reserved.</span><span class="sxs-lookup"><span data-stu-id="a907a-112">All rights reserved.</span></span> <span data-ttu-id="a907a-113">Bu kitabın içeriğinin herhangi bir bölümü herhangi bir biçimde veya herhangi bir şekilde veya başka bir şekilde herhangi bir şekilde çoğaltılamaz veya herhangi bir şekilde gönderilebilir.</span><span class="sxs-lookup"><span data-stu-id="a907a-113">No part of the contents of this book may be reproduced or transmitted in any form or by any means without the written permission of the publisher.</span></span>
 
-<span data-ttu-id="20d0d-114">Bu kitap, "olduğu gibi" verilmiştir ve yazarın görünümlerini ve opnons 'yi ifade eder.</span><span class="sxs-lookup"><span data-stu-id="20d0d-114">This book is provided "as-is" and expresses the author's views and opinions.</span></span> <span data-ttu-id="20d0d-115">URL ve diğer Internet Web sitesi başvuruları dahil olmak üzere bu kitapta ifade edilen görünümler, eklentiler ve bilgiler bildirimde bulunmadan değiştirilebilir.</span><span class="sxs-lookup"><span data-stu-id="20d0d-115">The views, opinions, and information expressed in this book, including URL and other Internet website references, may change without notice.</span></span>
+<span data-ttu-id="a907a-114">Bu kitap, "olduğu gibi" verilmiştir ve yazarın görünümlerini ve opnons 'yi ifade eder.</span><span class="sxs-lookup"><span data-stu-id="a907a-114">This book is provided "as-is" and expresses the author's views and opinions.</span></span> <span data-ttu-id="a907a-115">URL ve diğer Internet Web sitesi başvuruları dahil olmak üzere bu kitapta ifade edilen görünümler, eklentiler ve bilgiler bildirimde bulunmadan değiştirilebilir.</span><span class="sxs-lookup"><span data-stu-id="a907a-115">The views, opinions, and information expressed in this book, including URL and other Internet website references, may change without notice.</span></span>
 
-<span data-ttu-id="20d0d-116">Burada tarif edilen bazı örnekler yalnızca açıklama için sağlanmıştır ve kurgusaldır.</span><span class="sxs-lookup"><span data-stu-id="20d0d-116">Some examples depicted herein are provided for illustration only and are fictitious.</span></span> <span data-ttu-id="20d0d-117">Gerçek bir ilişki veya bağlantı amaçlanmamıştır veya böyle bir bağlantı olduğu sonucuna varılmamalıdır.</span><span class="sxs-lookup"><span data-stu-id="20d0d-117">No real association or connection is intended or should be inferred.</span></span>
+<span data-ttu-id="a907a-116">Burada tarif edilen bazı örnekler yalnızca açıklama için sağlanmıştır ve kurgusaldır.</span><span class="sxs-lookup"><span data-stu-id="a907a-116">Some examples depicted herein are provided for illustration only and are fictitious.</span></span> <span data-ttu-id="a907a-117">Gerçek bir ilişki veya bağlantı amaçlanmamıştır veya böyle bir bağlantı olduğu sonucuna varılmamalıdır.</span><span class="sxs-lookup"><span data-stu-id="a907a-117">No real association or connection is intended or should be inferred.</span></span>
 
-<span data-ttu-id="20d0d-118">Microsoft ve <https://www.microsoft.com> "ticari markalar" Web sayfasında listelenen ticari markalar, Microsoft şirketler grubunun ticari markalarıdır.</span><span class="sxs-lookup"><span data-stu-id="20d0d-118">Microsoft and the trademarks listed at <https://www.microsoft.com> on the "Trademarks" webpage are trademarks of the Microsoft group of companies.</span></span>
+<span data-ttu-id="a907a-118">Microsoft ve <https://www.microsoft.com> "ticari markalar" Web sayfasında listelenen ticari markalar, Microsoft şirketler grubunun ticari markalarıdır.</span><span class="sxs-lookup"><span data-stu-id="a907a-118">Microsoft and the trademarks listed at <https://www.microsoft.com> on the "Trademarks" webpage are trademarks of the Microsoft group of companies.</span></span>
 
-<span data-ttu-id="20d0d-119">Mac ve macOS, Apple Inc. ' in ticari markalarıdır.</span><span class="sxs-lookup"><span data-stu-id="20d0d-119">Mac and macOS are trademarks of Apple Inc.</span></span>
+<span data-ttu-id="a907a-119">Mac ve macOS, Apple Inc. ' in ticari markalarıdır.</span><span class="sxs-lookup"><span data-stu-id="a907a-119">Mac and macOS are trademarks of Apple Inc.</span></span>
 
-<span data-ttu-id="20d0d-120">Docker balina logosu,, izin tarafından kullanılan Docker, Inc. ' in tescilli ticari markasıdır.</span><span class="sxs-lookup"><span data-stu-id="20d0d-120">The Docker whale logo is a registered trademark of Docker, Inc. Used by permission.</span></span>
+<span data-ttu-id="a907a-120">Docker balina logosu,, izin tarafından kullanılan Docker, Inc. ' in tescilli ticari markasıdır.</span><span class="sxs-lookup"><span data-stu-id="a907a-120">The Docker whale logo is a registered trademark of Docker, Inc. Used by permission.</span></span>
 
-<span data-ttu-id="20d0d-121">Diğer tüm işaretler ve amblemler kendi sahiplerinin mülkiyetindedir.</span><span class="sxs-lookup"><span data-stu-id="20d0d-121">All other marks and logos are property of their respective owners.</span></span>
+<span data-ttu-id="a907a-121">Diğer tüm işaretler ve amblemler kendi sahiplerinin mülkiyetindedir.</span><span class="sxs-lookup"><span data-stu-id="a907a-121">All other marks and logos are property of their respective owners.</span></span>
 
-<span data-ttu-id="20d0d-122">Düzenliyor</span><span class="sxs-lookup"><span data-stu-id="20d0d-122">Authors:</span></span>
+<span data-ttu-id="a907a-122">Düzenliyor</span><span class="sxs-lookup"><span data-stu-id="a907a-122">Authors:</span></span>
 
-> <span data-ttu-id="20d0d-123">**Ramiz Vettor**, sorumlu bulut çözümü mimarı- [thinkingincloudnative.com](https://thinkingincloudnative.com/about/), Microsoft</span><span class="sxs-lookup"><span data-stu-id="20d0d-123">**Rob Vettor**, Principal Cloud Solution Architect - [thinkingincloudnative.com](https://thinkingincloudnative.com/about/), Microsoft</span></span>
+> <span data-ttu-id="a907a-123">**Ramiz Vettor**, sorumlu bulut çözümü mimarı- [thinkingincloudnative.com](https://thinkingincloudnative.com/about/), Microsoft</span><span class="sxs-lookup"><span data-stu-id="a907a-123">**Rob Vettor**, Principal Cloud Solution Architect - [thinkingincloudnative.com](https://thinkingincloudnative.com/about/), Microsoft</span></span>
 >
-> <span data-ttu-id="20d0d-124">**Sander Molenkamp**, sorumlu bulut mimarı/Microsoft MVP- [Sandermolenkamp.com](https://www.sandermolenkamp.com), [Info desteği](https://www.infosupport.com/en/)</span><span class="sxs-lookup"><span data-stu-id="20d0d-124">**Sander Molenkamp**, Principal Cloud Architect/Microsoft MVP - [sandermolenkamp.com](https://www.sandermolenkamp.com), [Info Support](https://www.infosupport.com/en/)</span></span>
+> <span data-ttu-id="a907a-124">**Sander Molenkamp**, sorumlu bulut mimarı/Microsoft MVP- [Sandermolenkamp.com](https://www.sandermolenkamp.com), [Info desteği](https://www.infosupport.com/en/)</span><span class="sxs-lookup"><span data-stu-id="a907a-124">**Sander Molenkamp**, Principal Cloud Architect/Microsoft MVP - [sandermolenkamp.com](https://www.sandermolenkamp.com), [Info Support](https://www.infosupport.com/en/)</span></span>
 >
-> <span data-ttu-id="20d0d-125">**Edwin Van Wijk**, Principal Solution mimarı/Microsoft MVP- [Defaultconstructor.com](https://defaultconstructor.com), [Info desteği](https://www.infosupport.com/en/)</span><span class="sxs-lookup"><span data-stu-id="20d0d-125">**Edwin van Wijk**, Principal Solution Architect/Microsoft MVP - [defaultconstructor.com](https://defaultconstructor.com), [Info Support](https://www.infosupport.com/en/)</span></span>
+> <span data-ttu-id="a907a-125">**Edwin Van Wijk**, Principal Solution mimarı/Microsoft MVP- [Defaultconstructor.com](https://defaultconstructor.com), [Info desteği](https://www.infosupport.com/en/)</span><span class="sxs-lookup"><span data-stu-id="a907a-125">**Edwin van Wijk**, Principal Solution Architect/Microsoft MVP - [defaultconstructor.com](https://defaultconstructor.com), [Info Support](https://www.infosupport.com/en/)</span></span>
 
-<span data-ttu-id="20d0d-126">Katılımcılar ve gözden geçirenler:</span><span class="sxs-lookup"><span data-stu-id="20d0d-126">Participants and Reviewers:</span></span>
+<span data-ttu-id="a907a-126">Katılımcılar ve gözden geçirenler:</span><span class="sxs-lookup"><span data-stu-id="a907a-126">Participants and Reviewers:</span></span>
 
-> <span data-ttu-id="20d0d-127">**Mark Russinovich**, Azure CTO ve teknik bir, Azure Office CTO, Microsoft</span><span class="sxs-lookup"><span data-stu-id="20d0d-127">**Mark Russinovich**, Azure CTO and Technical Fellow, Azure Office of CTO, Microsoft</span></span>
+> <span data-ttu-id="a907a-127">**Mark Russinovich**, Azure CTO ve teknik bir, Azure Office CTO, Microsoft</span><span class="sxs-lookup"><span data-stu-id="a907a-127">**Mark Russinovich**, Azure CTO and Technical Fellow, Azure Office of CTO, Microsoft</span></span>
 >
-> <span data-ttu-id="20d0d-128">**Hayvan anıl**, üst düzey Program Yöneticisi, .NET ekibi, Microsoft</span><span class="sxs-lookup"><span data-stu-id="20d0d-128">**Nish Anil**, Senior Program Manager, .NET team, Microsoft</span></span>
+> <span data-ttu-id="a907a-128">**Hayvan anıl**, üst düzey Program Yöneticisi, .NET ekibi, Microsoft</span><span class="sxs-lookup"><span data-stu-id="a907a-128">**Nish Anil**, Senior Program Manager, .NET team, Microsoft</span></span>
 >
-> <span data-ttu-id="20d0d-129">**Mark Fussell**, Principal program Manager, Azure ınubations, Microsoft</span><span class="sxs-lookup"><span data-stu-id="20d0d-129">**Mark Fussell**, Principal Program Manager, Azure Incubations, Microsoft</span></span>
+> <span data-ttu-id="a907a-129">**Mark Fussell**, Principal program Manager, Azure ınubations, Microsoft</span><span class="sxs-lookup"><span data-stu-id="a907a-129">**Mark Fussell**, Principal Program Manager, Azure Incubations, Microsoft</span></span>
 >
-> <span data-ttu-id="20d0d-130">**Yaron Schneider**, sorumlu yazılım mühendisi, Azure ınubations, Microsoft</span><span class="sxs-lookup"><span data-stu-id="20d0d-130">**Yaron Schneider**, Principal Software Engineer, Azure Incubations, Microsoft</span></span>
+> <span data-ttu-id="a907a-130">**Yaron Schneider**, sorumlu yazılım mühendisi, Azure ınubations, Microsoft</span><span class="sxs-lookup"><span data-stu-id="a907a-130">**Yaron Schneider**, Principal Software Engineer, Azure Incubations, Microsoft</span></span>
 >
-> <span data-ttu-id="20d0d-131">**Ori Zohar**, üst düzey Program Yöneticisi, Azure ınubations, Microsoft</span><span class="sxs-lookup"><span data-stu-id="20d0d-131">**Ori Zohar**, Senior Program Manager, Azure Incubations, Microsoft</span></span>
+> <span data-ttu-id="a907a-131">**Ori Zohar**, üst düzey Program Yöneticisi, Azure ınubations, Microsoft</span><span class="sxs-lookup"><span data-stu-id="a907a-131">**Ori Zohar**, Senior Program Manager, Azure Incubations, Microsoft</span></span>
 
-<span data-ttu-id="20d0d-132">Edit</span><span class="sxs-lookup"><span data-stu-id="20d0d-132">Editors:</span></span>
+<span data-ttu-id="a907a-132">Edit</span><span class="sxs-lookup"><span data-stu-id="a907a-132">Editors:</span></span>
 
-> <span data-ttu-id="20d0d-133">**David çam**, üst düzey içerik Geliştirici, .NET ekibi, Microsoft</span><span class="sxs-lookup"><span data-stu-id="20d0d-133">**David Pine**, Senior Content Developer, .NET team, Microsoft</span></span>
+> <span data-ttu-id="a907a-133">**David çam**, üst düzey içerik Geliştirici, .NET ekibi, Microsoft</span><span class="sxs-lookup"><span data-stu-id="a907a-133">**David Pine**, Senior Content Developer, .NET team, Microsoft</span></span>
+>
+> <span data-ttu-id="a907a-134">**Maira Wenzel**, Kıdemli Program Yöneticisi, .NET ekibi, Microsoft</span><span class="sxs-lookup"><span data-stu-id="a907a-134">**Maira Wenzel**, Senior Program Manager, .NET team, Microsoft</span></span>
 
-> <span data-ttu-id="20d0d-134">**Maira Wenzel**, Kıdemli Program Yöneticisi, .NET ekibi, Microsoft</span><span class="sxs-lookup"><span data-stu-id="20d0d-134">**Maira Wenzel**, Senior Program Manager, .NET team, Microsoft</span></span>
+## <a name="version"></a><span data-ttu-id="a907a-135">Sürüm</span><span class="sxs-lookup"><span data-stu-id="a907a-135">Version</span></span>
 
-## <a name="version"></a><span data-ttu-id="20d0d-135">Sürüm</span><span class="sxs-lookup"><span data-stu-id="20d0d-135">Version</span></span>
+<span data-ttu-id="a907a-136">Bu kılavuz, **Davpr 1,0** sürümünü kapsayacak şekilde yazılmıştır.</span><span class="sxs-lookup"><span data-stu-id="a907a-136">This guide has been written to cover the **Dapr 1.0** version.</span></span> <span data-ttu-id="a907a-137">.NET Core örnekleri, **.net core 3,1**' i temel alır.</span><span class="sxs-lookup"><span data-stu-id="a907a-137">.NET Core samples are based on **.NET Core 3.1**.</span></span>
 
-<span data-ttu-id="20d0d-136">Bu kılavuz, **Davpr 1,0** sürümünü kapsayacak şekilde yazılmıştır.</span><span class="sxs-lookup"><span data-stu-id="20d0d-136">This guide has been written to cover the **Dapr 1.0** version.</span></span> <span data-ttu-id="20d0d-137">.NET Core örnekleri, **.net core 3,1**' i temel alır.</span><span class="sxs-lookup"><span data-stu-id="20d0d-137">.NET Core samples are based on **.NET Core 3.1**.</span></span>
+## <a name="who-should-use-this-guide"></a><span data-ttu-id="a907a-138">Bu kılavuzu kimler kullanmalıdır?</span><span class="sxs-lookup"><span data-stu-id="a907a-138">Who should use this guide</span></span>
 
-## <a name="who-should-use-this-guide"></a><span data-ttu-id="20d0d-138">Bu kılavuzu kimler kullanmalıdır?</span><span class="sxs-lookup"><span data-stu-id="20d0d-138">Who should use this guide</span></span>
+<span data-ttu-id="a907a-139">Bu kılavuzun hedef kitlesi, bulut için tasarlanan uygulamaları oluşturmayı öğrenmede ilgilenen geliştiriciler, geliştirme liderleri ve mimarilere yöneliktir.</span><span class="sxs-lookup"><span data-stu-id="a907a-139">The audience for this guide is mainly developers, development leads, and architects who are interested in learning how to build applications designed for the cloud.</span></span>
 
-<span data-ttu-id="20d0d-139">Bu kılavuzun hedef kitlesi, bulut için tasarlanan uygulamaları oluşturmayı öğrenmede ilgilenen geliştiriciler, geliştirme liderleri ve mimarilere yöneliktir.</span><span class="sxs-lookup"><span data-stu-id="20d0d-139">The audience for this guide is mainly developers, development leads, and architects who are interested in learning how to build applications designed for the cloud.</span></span>
+<span data-ttu-id="a907a-140">İkincil hedef kitle, bulut Yerel bir yaklaşım kullanarak uygulamalarını oluşturmayı planlayan teknik karar mekanizmalarıdır.</span><span class="sxs-lookup"><span data-stu-id="a907a-140">A secondary audience is technical decision-makers who plan to choose whether to build their applications using a cloud-native approach.</span></span>
 
-<span data-ttu-id="20d0d-140">İkincil hedef kitle, bulut Yerel bir yaklaşım kullanarak uygulamalarını oluşturmayı planlayan teknik karar mekanizmalarıdır.</span><span class="sxs-lookup"><span data-stu-id="20d0d-140">A secondary audience is technical decision-makers who plan to choose whether to build their applications using a cloud-native approach.</span></span>
+## <a name="how-you-can-use-this-guide"></a><span data-ttu-id="a907a-141">Bu Kılavuzu nasıl kullanabileceğiniz</span><span class="sxs-lookup"><span data-stu-id="a907a-141">How you can use this guide</span></span>
 
-## <a name="how-you-can-use-this-guide"></a><span data-ttu-id="20d0d-141">Bu Kılavuzu nasıl kullanabileceğiniz</span><span class="sxs-lookup"><span data-stu-id="20d0d-141">How you can use this guide</span></span>
+<span data-ttu-id="a907a-142">Bu kılavuz hem [PDF](https://aka.ms/dapr-ebook) form hem de çevrimiçi olarak kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="a907a-142">This guide is available both in [PDF](https://aka.ms/dapr-ebook) form and online.</span></span> <span data-ttu-id="a907a-143">Bu konu başlıklarının yaygın olarak anlaşılmasına yardımcı olmak için bu belgeyi veya çevrimiçi sürümünün bağlantısını ekibinize iletmekten çekinmeyin.</span><span class="sxs-lookup"><span data-stu-id="a907a-143">Feel free to forward this document or links to its online version to your team to help ensure common understanding of these topics.</span></span> <span data-ttu-id="a907a-144">Bu konuların çoğu, temel ilkelerin ve desenlerin tutarlı bir şekilde anlaşılmasından ve bu konularla ilgili kararlara dahil olan kararların dengelerinden yararlanır.</span><span class="sxs-lookup"><span data-stu-id="a907a-144">Most of these topics benefit from a consistent understanding of the underlying principles and patterns, as well as the trade-offs involved in decisions related to these topics.</span></span> <span data-ttu-id="a907a-145">Bu belge ile olan amacınız, donatı ekiplerine ve liderlerine, uygulamalarının mimarisine, geliştirmeye ve barındırılmasına yönelik iyi bilinçli kararlar vermek için ihtiyaç duydukları bilgileri sunmaktır.</span><span class="sxs-lookup"><span data-stu-id="a907a-145">Our goal with this document is to equip teams and their leaders with the information they need to make well-informed decisions for their applications' architecture, development, and hosting.</span></span>
 
-<span data-ttu-id="20d0d-142">Bu kılavuz hem [PDF](https://aka.ms/dapr-ebook) form hem de çevrimiçi olarak kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="20d0d-142">This guide is available both in [PDF](https://aka.ms/dapr-ebook) form and online.</span></span> <span data-ttu-id="20d0d-143">Bu konu başlıklarının yaygın olarak anlaşılmasına yardımcı olmak için bu belgeyi veya çevrimiçi sürümünün bağlantısını ekibinize iletmekten çekinmeyin.</span><span class="sxs-lookup"><span data-stu-id="20d0d-143">Feel free to forward this document or links to its online version to your team to help ensure common understanding of these topics.</span></span> <span data-ttu-id="20d0d-144">Bu konuların çoğu, temel ilkelerin ve desenlerin tutarlı bir şekilde anlaşılmasından ve bu konularla ilgili kararlara dahil olan kararların dengelerinden yararlanır.</span><span class="sxs-lookup"><span data-stu-id="20d0d-144">Most of these topics benefit from a consistent understanding of the underlying principles and patterns, as well as the trade-offs involved in decisions related to these topics.</span></span> <span data-ttu-id="20d0d-145">Bu belge ile olan amacınız, donatı ekiplerine ve liderlerine, uygulamalarının mimarisine, geliştirmeye ve barındırılmasına yönelik iyi bilinçli kararlar vermek için ihtiyaç duydukları bilgileri sunmaktır.</span><span class="sxs-lookup"><span data-stu-id="20d0d-145">Our goal with this document is to equip teams and their leaders with the information they need to make well-informed decisions for their applications' architecture, development, and hosting.</span></span>
+## <a name="send-your-feedback"></a><span data-ttu-id="a907a-146">Geri bildiriminizi gönderin</span><span class="sxs-lookup"><span data-stu-id="a907a-146">Send your feedback</span></span>
 
-## <a name="send-your-feedback"></a><span data-ttu-id="20d0d-146">Geri bildiriminizi gönderin</span><span class="sxs-lookup"><span data-stu-id="20d0d-146">Send your feedback</span></span>
-
-<span data-ttu-id="20d0d-147">Bu kitap ve ilgili örnekler sürekli gelişiyor, bu nedenle geri bildiriminiz kullanıma açıldı!</span><span class="sxs-lookup"><span data-stu-id="20d0d-147">This book and related samples are constantly evolving, so your feedback is welcomed!</span></span> <span data-ttu-id="20d0d-148">Bu kitabın nasıl iyileştirilen hakkında açıklamalara sahipseniz, [GitHub sorunları](https://github.com/dotnet/docs/issues)üzerinde oluşturulmuş herhangi bir sayfanın altındaki geri bildirim bölümünü kullanın.</span><span class="sxs-lookup"><span data-stu-id="20d0d-148">If you have comments about how this book can be improved, use the feedback section at the bottom of any page built on [GitHub issues](https://github.com/dotnet/docs/issues).</span></span>
+<span data-ttu-id="a907a-147">Bu kitap ve ilgili örnekler sürekli gelişiyor, bu nedenle geri bildiriminiz kullanıma açıldı!</span><span class="sxs-lookup"><span data-stu-id="a907a-147">This book and related samples are constantly evolving, so your feedback is welcomed!</span></span> <span data-ttu-id="a907a-148">Bu kitabın nasıl iyileştirilen hakkında açıklamalara sahipseniz, [GitHub sorunları](https://github.com/dotnet/docs/issues)üzerinde oluşturulmuş herhangi bir sayfanın altındaki geri bildirim bölümünü kullanın.</span><span class="sxs-lookup"><span data-stu-id="a907a-148">If you have comments about how this book can be improved, use the feedback section at the bottom of any page built on [GitHub issues](https://github.com/dotnet/docs/issues).</span></span>
 
 >[!div class="step-by-step"]
->[<span data-ttu-id="20d0d-149">Sonraki</span><span class="sxs-lookup"><span data-stu-id="20d0d-149">Next</span></span>](foreword.md)
+>[<span data-ttu-id="a907a-149">Sonraki</span><span class="sxs-lookup"><span data-stu-id="a907a-149">Next</span></span>](foreword.md)
