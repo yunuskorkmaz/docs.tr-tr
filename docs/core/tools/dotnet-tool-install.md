@@ -2,12 +2,12 @@
 title: DotNet aracı install komutu
 description: DotNet aracı yükleme komutu, makinenizde belirtilen .NET aracını yükler.
 ms.date: 02/14/2020
-ms.openlocfilehash: 5cdc0e16c964a639ebae25ac5075f186af4a9842
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: b04e7fd24edce5d5da67cdd83fbea797118689b4
+ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102105010"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102206487"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
@@ -73,7 +73,7 @@ Daha fazla bilgi için bkz. [yerel araç yüklemesi](global-tools.md#install-a-l
 
 - **`--add-source <SOURCE>`**
 
-  Yükleme sırasında kullanmak üzere ek bir NuGet paketi kaynağı ekler.
+  Yükleme sırasında kullanmak üzere ek bir NuGet paketi kaynağı ekler. Akışlara, bir öncelik sırasına göre değil, paralel olarak erişilir. Aynı paket ve sürüm birden çok akışda varsa, en hızlı akış kazanır. Daha fazla bilgi için bkz. [bir NuGet paketi yüklendiğinde ne olur?](/nuget/concepts/package-installation-process).
 
 - **`--configfile <FILE>`**
 

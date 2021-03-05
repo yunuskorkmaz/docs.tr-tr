@@ -14,12 +14,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 91519d4fa0e071e4669b046ca2525bfaf5bcf6f7
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: 188ed6a5582f4677eb60963af72036963b5fe821
+ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100583869"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102206680"
 ---
 # <a name="how-to-use-immutable-types-and-non-public-accessors-with-systemtextjson"></a>İle değişmez türleri ve genel olmayan erişimcileri kullanma System.Text.Json
 
@@ -48,7 +48,7 @@ C# 9 ' da kayıtlar aşağıdaki örnekte gösterildiği gibi desteklenir:
 
 :::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/Records.cs":::
 
-Tüm özellik ayarlayıcıları ortak olmadığından, sabit olan türler için, [genel olmayan özellik erişimcileri](#non-public-property-accessors)hakkında aşağıdaki bölüme bakın.
+Tüm özellik ayarlayıcıları ortak olmadığından, sabit olan türler için aşağıdaki bölüme bakın.
 ::: zone-end
 
 ::: zone pivot="dotnet-core-3-1"

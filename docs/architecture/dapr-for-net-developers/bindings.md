@@ -3,12 +3,12 @@ title: Davpr bağlamaları yapı taşı
 description: Bağlama oluşturma bloğunun açıklaması, özellikleri, avantajları ve nasıl uygulanacağı
 author: edwinvw
 ms.date: 02/07/2021
-ms.openlocfilehash: bc9c147e237e3cc27005fbf5bae25213cacfd33f
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: 757d2560016407119fe9244c100a971977852cc5
+ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100629421"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102206514"
 ---
 # <a name="the-dapr-bindings-building-block"></a>Davpr bağlamaları yapı taşı
 
@@ -111,7 +111,7 @@ Yükün (yani, gönderilen mesaj) yapısı, bağlama başına farklılık göste
 
 - oluşturmaya
 - get
-- silme
+- delete
 - list
 
 Bu, bağlamanın desteklediği işlemleri bağlayan bağlamanın yazarına kadar olur. Her bağlamaya yönelik belgeler, kullanılabilir işlemleri ve bunların nasıl çağırılacağını açıklar.
@@ -124,9 +124,9 @@ Davpr .NET SDK, .NET Core geliştiricileri için dile özgü destek sağlar. Aş
 private async Task SendSMSAsync([FromServices] DaprClient daprClient)
 {
     var message = "Welcome to this awesome service";
-    var metadata = new Dictionary<string, string> 
-    { 
-      { "toNumber", "555-3277" } 
+    var metadata = new Dictionary<string, string>
+    {
+      { "toNumber", "555-3277" }
     };
     await daprClient.InvokeBindingAsync("sms", "create", message, metadata);
 }
@@ -225,7 +225,7 @@ public Task Handle(OrderStartedDomainEvent notification, CancellationToken cance
 {
     var string message = CreateEmailBody(notification);
     var metadata = new Dictionary<string, string>
-    { 
+    {
         {"emailFrom", "eShopOn@dapr.io"},
         {"emailTo", notification.UserName},
         {"subject", $"Your eShopOnDapr order #{notification.Order.Id}"}

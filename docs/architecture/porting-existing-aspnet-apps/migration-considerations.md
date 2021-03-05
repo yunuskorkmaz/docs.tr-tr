@@ -3,12 +3,12 @@ title: Geçiş fikirleri
 description: ASP.NET MVC 'den .NET Core 'a geçiş yapılıp yapılmayacağını ve nasıl geçirileceğiyle ilgili doğru kararı vermek için bir takımın bilmeleri gerekir mi?
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 5dba4fd058f66cfc49cbd2161232df85110a28f7
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: efa1efc99cbe46ef289cfd6b53ba83b3bc1b56b1
+ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102105875"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102206752"
 ---
 # <a name="migration-considerations"></a>Geçiş fikirleri
 
@@ -16,7 +16,7 @@ En temel soru ekipleri, uygulamalarının .NET Core 'a taşıma işlemi, her zam
 
 ## <a name="is-migration-to-net-core-appropriate"></a>.NET Core 'a doğru geçiş yapılsın mı?
 
-.NET Core 'a geçmek isteyebileceğiniz bazı nedenlerden biriyle başlayalım. Çok az sayıda var, bu yüzden bu listeyi ayrıntılı olarak değerlendirin.
+.NET Core 'a (veya .NET 5 ' e) geçmek isteyebileceğiniz bazı nedenlerden biriyle başlayalım. Çok az sayıda var, bu yüzden bu listeyi ayrıntılı olarak değerlendirin.
 
 ### <a name="cross-platform-support"></a>Platformlar arası destek
 

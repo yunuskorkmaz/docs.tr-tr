@@ -6,12 +6,12 @@ metadata:
   description: .NET uygulamaları tasarlama, derleme ve geçirmeye yönelik önerilen uygulamaları öğrenin.
   ms.topic: landing-page
   ms.date: 03/19/2020
-  ms.openlocfilehash: aab236c52bf4217567fe76e8c4f9ffcb51ad17f5
-  ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+  ms.openlocfilehash: 68851c514723f6db7017c3000e88242f3fad2592
+  ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 02/17/2021
-  ms.locfileid: "100583102"
+  ms.lasthandoff: 03/05/2021
+  ms.locfileid: "102206706"
 landingContent:
 - title: ASP.NET Core uygulamaları geliştirme
   linkLists:
@@ -23,6 +23,8 @@ landingContent:
       url: blazor-for-web-forms-developers/index.md
     - text: WCF geliştiricileri için ASP.NET Core gRPC
       url: grpc-for-wcf-developers/index.md
+    - text: Mevcut ASP.NET uygulamalarını .NET Core 'a taşıma
+      url: porting-existing-aspnet-apps/index.md
 - title: Azure için bulutta yerel .NET uygulamaları geliştirin
   linkLists:
   - linkListType: concept

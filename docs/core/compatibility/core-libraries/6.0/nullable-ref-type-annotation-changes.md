@@ -2,12 +2,12 @@
 title: 'Son değişiklik: null yapılabilir başvuru türü ek açıklama değişiklikleri'
 description: Bazı null yapılabilir başvuru türü ek açıklamaların değiştiği çekirdek .NET kitaplıklarında .NET 6,0 son değişikliği hakkında bilgi edinin.
 ms.date: 02/11/2021
-ms.openlocfilehash: 105247a9e50d345697d0680edaa9e85b0c3a3762
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 7e3f1cbc5bff7814988ec5d16027838598188e9a
+ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102105669"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102206467"
 ---
 # <a name="changes-to-nullable-reference-type-annotations"></a>Null yapılabilir başvuru türü ek açıklamalarına yapılan değişiklikler
 
@@ -19,7 +19,7 @@ ms.locfileid: "102105669"
 
 Bu değişikliklerin bazıları yeni derleme zamanı uyarılarına yol açacağından, bu değişikliklerden bazıları *kesiliyor* olarak kabul edilir. .NET 6,0 ' e geçirdiğinizde, bu API 'Lere başvuran kodun güncellenmesi gerekecektir.
 
-Bu sayfada, parçalama olarak kabul edilmeyen diğer değişiklikler de belgelenmiştir. Güncelleştirilmiş API 'Lere başvuruda bulunan tüm kodlar, artık gereksiz olmayan işleçlerden veya pragmaların kaldırılmasına yarar olabilir.
+Bu sayfada, parçalama olarak kabul edilmeyen diğer değişiklikler de belgelenmiştir. Güncelleştirilmiş API 'Lere başvuruda bulunan tüm kodlar, artık gerekli olmayan işleçlerin veya pragmaların kaldırılması açısından yarar sağlayabilir.
 
 ## <a name="version-introduced"></a>Sunulan sürüm
 

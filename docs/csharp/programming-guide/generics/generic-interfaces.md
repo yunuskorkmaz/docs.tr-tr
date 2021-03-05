@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, generic interfaces
 - generics [C#], interfaces
 ms.assetid: a8fa49a1-6e78-4a09-87e5-84a0b9f5ffbe
-ms.openlocfilehash: ec86395a41baea75694572b59b2c76cbde24fedf
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6089e14bd2b13268a03d3600ef8bf78f9afa1c6d
+ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91170395"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102206745"
 ---
 # <a name="generic-interfaces-c-programming-guide"></a>Genel Arabirimler (C# Programlama Kılavuzu)
 
@@ -33,7 +33,7 @@ Genel koleksiyon sınıfları için ya da koleksiyondaki öğeleri temsil eden g
   
  [!code-csharp[csProgGuideGenerics#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#32)]  
   
- Genel arabirim değişken karşıtı ise genel arabirimler, genel olmayan arabirimlerden devralınabilir, bu da yalnızca kendi tür parametresini dönüş değeri olarak kullanır. .NET sınıf kitaplığında <xref:System.Collections.Generic.IEnumerable%601> öğesinden devralır <xref:System.Collections.IEnumerable> çünkü <xref:System.Collections.Generic.IEnumerable%601> yalnızca `T` öğesinin dönüş değerinde <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> ve <xref:System.Collections.Generic.IEnumerator%601.Current%2A> özellik alıcısı içinde kullanılır.  
+ Genel arabirimler ortak olmayan arabirimlerden devralınabilir ve bu, genel arabirim covaryant ise, bu, yalnızca kendi tür parametresini bir dönüş değeri olarak kullanacağı anlamına gelir. .NET sınıf kitaplığında <xref:System.Collections.Generic.IEnumerable%601> öğesinden devralır <xref:System.Collections.IEnumerable> çünkü <xref:System.Collections.Generic.IEnumerable%601> yalnızca `T` öğesinin dönüş değerinde <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> ve <xref:System.Collections.Generic.IEnumerator%601.Current%2A> özellik alıcısı içinde kullanılır.  
   
  Somut sınıflar, aşağıdaki gibi kapalı oluşturulmuş arabirimler uygulayabilir:  
   

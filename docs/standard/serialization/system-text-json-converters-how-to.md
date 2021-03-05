@@ -1,7 +1,7 @@
 ---
 title: JSON serileştirme-.NET için özel dönüştürücüler yazma
 description: Ad alanında belirtilen JSON serileştirme sınıfları için özel dönüştürücüler oluşturmayı öğrenin System.Text.Json .
-ms.date: 01/22/2021
+ms.date: 02/25/2021
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: 1a13fe4e4717764130d05131969379de8a913f48
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: 86f99e1156b8f077a7050cb6c0028a561f247df9
+ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100583767"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102206732"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>.NET 'teki JSON serileştirme (sıralama) için özel dönüştürücüler yazma
 
@@ -149,7 +149,7 @@ Gerektiğinde başka özel durumlar da oluşturabilirsiniz, ancak bunlar otomati
 
 ## <a name="registration-sample---converters-collection"></a>Kayıt örneği-dönüştürücüler koleksiyonu
 
-Aşağıda <xref:System.ComponentModel.DateTimeOffsetConverter> , türü özellikler için varsayılan değer sağlayan bir örnek verilmiştir <xref:System.DateTimeOffset> :
+Aşağıda, [DateTimeOffsetJsonConverter](#sample-basic-converter) türü özellikler için varsayılan değer veren bir örnek verilmiştir <xref:System.DateTimeOffset> :
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/RegisterConverterWithConvertersCollection.cs" id="Serialize":::
 

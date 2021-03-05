@@ -3,12 +3,12 @@ title: Ek geçiş kaynakları
 description: Ekipler .NET Framework uygulamalarını .NET Core 'a bağlantı kurduklarında yardımcı olacak kaynakları nerede bulabilirler?
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 88b31d084bdbdd4be84da4a2b02b3ced48c27025
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: c6563f4791d133606cb1818a088bff17a315b1f6
+ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106174"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102206474"
 ---
 # <a name="additional-migration-resources"></a>Ek geçiş kaynakları
 
@@ -59,7 +59,7 @@ YouTube, karşılaşabileceğiniz herhangi bir senaryoyu kapsayan yararlı öğr
 
 - [.NET Framework .NET Core 'a taşıma ile genel bakış](../../core/porting/index.md)
 - [.NET Yükseltme Yardımcısı aracı](https://aka.ms/dotnet-upgrade-assistant)
-- [ASP.NET 'den ASP.NET Core 'e geçiş](/aspnet/core/migration/proper-to-2x)
+- [ASP.NET 'den ASP.NET Core 'e geçiş](../../core/porting/index.md)
 - [.NET Community kaynakları](https://dotnet.microsoft.com/platform/community)
 
 >[!div class="step-by-step"]

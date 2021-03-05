@@ -3,13 +3,13 @@ title: .NET 'teki seçenek kalıbı
 author: IEvangelist
 description: .NET uygulamalarında ilgili ayarların gruplarını temsil etmek için seçenekler deseninin nasıl kullanılacağını öğrenin.
 ms.author: dapine
-ms.date: 01/21/2021
-ms.openlocfilehash: 413f731337a6012bb1e29f1f38c2df6da7525867
-ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
+ms.date: 02/18/2021
+ms.openlocfilehash: df30928cdb1832e94f89abbdf8cc41e1304f8e2e
+ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99216031"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102206614"
 ---
 # <a name="options-pattern-in-net"></a>.NET 'teki seçenek kalıbı
 
@@ -35,11 +35,11 @@ Aşağıdaki sınıfı oluşturun `TransientFaultHandlingOptions` :
 <span id="options-class"></span> Seçenekler deseninin kullanıldığı bir seçenek sınıfı:
 
 - Ortak parametresiz bir oluşturucuya sahip olmayan Özet olmamalıdır
-- Bağlanacak genel okuma-yazma özelliklerini içerir (alanlar * değil _ bağlı **değildir**)
+- Bağlanacak genel okuma-yazma özelliklerini içerir (alanlar bağlı ***değildir*** )
 
 Aşağıdaki kod:
 
-_ Sınıfı bölümüne bağlamak için [Configurationciltçi. Bind](xref:Microsoft.Extensions.Configuration.ConfigurationBinder.Bind%2A) öğesini çağırır `TransientFaultHandlingOptions` `"TransientFaultHandlingOptions"` .
+* Sınıfı bölümüne bağlamak için [Configurationciltçi. Bind](xref:Microsoft.Extensions.Configuration.ConfigurationBinder.Bind%2A) ' i çağırır `TransientFaultHandlingOptions` `"TransientFaultHandlingOptions"` .
 * Yapılandırma verilerini görüntüler.
 
 :::code language="csharp" source="snippets/configuration/console-json/Program.cs" range="31-38":::
@@ -62,7 +62,7 @@ Console.WriteLine($"TransientFaultHandlingOptions.AutoRetryDelay={options.AutoRe
 Yukarıdaki kodda, uygulama başladıktan sonra JSON yapılandırma dosyasında yapılan değişiklikler okundu.
 
 > [!IMPORTANT]
-> <xref:Microsoft.Extensions.Configuration.ConfigurationBinder>Sınıfı, ve gibi çeşitli API 'ler sunar `.Bind(object instance)` `.Get<T>()`  `class` . [Seçenek arabirimlerinden](#options-interfaces)herhangi birini kullanırken, yukarıda bahsedilen [seçenek sınıfı kısıtlamalarına](#options-class)uymalısınız.
+> <xref:Microsoft.Extensions.Configuration.ConfigurationBinder>Sınıfı, `.Bind(object instance)` ve gibi `.Get<T>()` Kısıtlanmış ***olmayan*** çeşitli API 'ler sunar `class` . [Seçenek arabirimlerinden](#options-interfaces)herhangi birini kullanırken, yukarıda bahsedilen [seçenek sınıfı kısıtlamalarına](#options-class)uymalısınız.
 
 Seçenekler deseninin kullanılmasına yönelik alternatif bir yaklaşım, `"TransientFaultHandlingOptions"` bölümü bağlamak ve [bağımlılık ekleme hizmeti kapsayıcısına](dependency-injection.md)eklemektir. Aşağıdaki kodda, `TransientFaultHandlingOptions` ile hizmet kapsayıcısına eklenir <xref:Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure%2A> ve yapılandırmaya bağlanır:
 
@@ -73,19 +73,19 @@ services.Configure<TransientFaultHandlingOptions>(
 ```
 
 > [!TIP]
-> `key`Parametresi, arama yapılacak yapılandırma bölümünün adıdır. Bu, bunu temsil eden türün adı ile eşleşmelidir _not *. Örneğin, adlı bir bölüm olabilir `"FaultHandling"` ve sınıfı tarafından temsil edilebilir `TransientFaultHandlingOptions` . Bu örnekte, `"FaultHandling"` <xref:Microsoft.Extensions.Configuration.IConfiguration.GetSection%2A> bunun yerine işlevine geçiş yapabilirsiniz. `nameof`İşleci, adlandırılmış bölüm öğesine karşılık gelen türle eşleşen bir kolaylık olarak kullanılır.
+> `key`Parametresi, arama yapılacak yapılandırma bölümünün adıdır. Bunu temsil eden türün adıyla *eşleşmesi gerekmez.* Örneğin, adlı bir bölüm olabilir `"FaultHandling"` ve sınıfı tarafından temsil edilebilir `TransientFaultHandlingOptions` . Bu örnekte, `"FaultHandling"` <xref:Microsoft.Extensions.Configuration.IConfiguration.GetSection%2A> bunun yerine işlevine geçiş yapabilirsiniz. `nameof`İşleci, adlandırılmış bölüm öğesine karşılık gelen türle eşleşen bir kolaylık olarak kullanılır.
 
 Önceki kodu kullanarak, aşağıdaki kod konum seçeneklerini okur:
 
 :::code language="csharp" source="snippets/configuration/console-json/ExampleService.cs":::
 
-Yukarıdaki kodda, uygulama başladıktan sonra JSON yapılandırma dosyasında yapılan değişiklikler ***değil** _ okuma ' dir. Uygulama başladıktan sonra değişiklikleri okumak için [ıoptionssnapshot](#use-ioptionssnapshot-to-read-updated-data)kullanın.
+Yukarıdaki kodda, uygulama başladıktan sonra JSON yapılandırma dosyasında yapılan ***değişiklikler okunamaz.*** Uygulama başladıktan sonra değişiklikleri okumak için [ıoptionssnapshot](#use-ioptionssnapshot-to-read-updated-data)kullanın.
 
 ## <a name="options-interfaces"></a>Seçenekler arabirimleri
 
 <xref:Microsoft.Extensions.Options.IOptions%601>:
 
-- Şunları _*_desteklemez:_*_
+- Şunları ***desteklemez:***
   - Uygulama başladıktan sonra yapılandırma verilerinin okunması.
   - [Adlandırılmış seçenekler](#named-options-support-using-iconfigurenamedoptions)
 - [Tek](dependency-injection.md#singleton) bir olarak kaydedilir ve herhangi bir [hizmet ömrüne](dependency-injection.md#service-lifetimes)eklenebilir.
@@ -105,10 +105,18 @@ Yukarıdaki kodda, uygulama başladıktan sonra JSON yapılandırma dosyasında 
   - [Adlandırılmış seçenekler](#named-options-support-using-iconfigurenamedoptions)
   - [Yeniden yüklenebilir yapılandırma](#use-ioptionssnapshot-to-read-updated-data)
   - Seçmeli seçenekler geçersiz kılma ( <xref:Microsoft.Extensions.Options.IOptionsMonitorCache%601> )
-  
+
 <xref:Microsoft.Extensions.Options.IOptionsFactory%601> yeni seçenek örnekleri oluşturmaktan sorumludur. Tek bir metodu vardır <xref:Microsoft.Extensions.Options.IOptionsFactory%601.Create%2A> . Varsayılan uygulama tüm kayıtlı <xref:Microsoft.Extensions.Options.IConfigureOptions%601> ve <xref:Microsoft.Extensions.Options.IPostConfigureOptions%601> sonrasında tüm yapılandırmaları çalıştırır ve sonrasında yapılandırma sonrası. Ve arasında ayrım yapar ve <xref:Microsoft.Extensions.Options.IConfigureNamedOptions%601> <xref:Microsoft.Extensions.Options.IConfigureOptions%601> yalnızca uygun arabirimi çağırır.
 
 <xref:Microsoft.Extensions.Options.IOptionsMonitorCache%601> , <xref:Microsoft.Extensions.Options.IOptionsMonitor%601> örnekleri önbelleğe almak için tarafından kullanılır `TOptions` . , <xref:Microsoft.Extensions.Options.IOptionsMonitorCache%601> Değer yeniden hesaplanabilmesi için izleyici içindeki seçenek örneklerini geçersiz kılar ( <xref:Microsoft.Extensions.Options.IOptionsMonitorCache%601.TryRemove%2A> ). Değerler ile el ile tanıtılamaz <xref:Microsoft.Extensions.Options.IOptionsMonitorCache%601.TryAdd%2A> . <xref:Microsoft.Extensions.Options.IOptionsMonitorCache%601.Clear%2A>Yöntemi, tüm adlandırılmış örneklerin isteğe bağlı olarak yeniden oluşturulması gerektiğinde kullanılır.
+
+### <a name="options-interfaces-benefits"></a>Seçenekler arabirimleri avantajları
+
+Genel bir sarmalayıcı türü kullanmak, bu seçeneğin yaşam süresini dı kapsayıcısından ayırma yeteneği sağlar. <xref:Microsoft.Extensions.Options.IOptions%601.Value?displayProperty=nameWithType>Arabirim, seçenek türlerinizde genel kısıtlamalar da dahil olmak üzere bir soyutlama katmanı sağlar. Bu, aşağıdaki avantajları sağlar:
+
+- Yapılandırma örneğinin değerlendirmesi, `T` eklendiğinde değil, erişimine ertelenir <xref:Microsoft.Extensions.Options.IOptions%601.Value?displayProperty=nameWithType> . Bu, `T` seçeneği çeşitli yerlerden tüketebilmeniz ve ile ilgili herhangi bir şeyi değiştirmeden ömür semantiğini seçebilmeniz açısından önemlidir `T` .
+- Tür seçeneklerini kaydederken `T` , türü açıkça kaydetmeniz gerekmez `T` . Bu, basit varsayılanlara sahip [bir kitaplık yazarken](options-library-authors.md) ve çağıranın belirli bir yaşam süresine sahip olan ayarları dı kapsayıcısına kaydetmesini zorlamak istemediğinizde kolaylık sağlar.
+- API 'nin perspektifinden, tür üzerindeki kısıtlamalara `T` (Bu durumda, `T` bir başvuru türüyle sınırlı olarak) izin verir.
 
 ## <a name="use-ioptionssnapshot-to-read-updated-data"></a>Güncelleştirilmiş verileri okumak için ıoptionssnapshot kullanın
 
@@ -156,7 +164,7 @@ Adlandırılmış seçenekler:
 - Aynı özelliklere birden çok yapılandırma bölümü bağlandığı zaman faydalıdır.
 - Büyük/küçük harfe duyarlıdır.
 
-* Dosyasında aşağıdaki _appsettings.jsgöz önünde bulundurun:
+Dosyasında aşağıdaki *appsettings.js* göz önünde bulundurun:
 
 ```json
 {

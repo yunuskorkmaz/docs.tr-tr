@@ -3,13 +3,13 @@ title: .NET oturumu açma
 author: IEvangelist
 description: Microsoft. Extensions. Logging NuGet paketi tarafından sunulan günlüğe kaydetme çerçevesini nasıl kullanacağınızı öğrenin.
 ms.author: dapine
-ms.date: 09/30/2020
-ms.openlocfilehash: 80695558cabb741bc25e7fe2650d4a99f9c25c1f
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.date: 02/19/2021
+ms.openlocfilehash: 834331b9e103138012bbe91586d0d5a7c08654ce
+ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99505628"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102206759"
 ---
 # <a name="logging-in-net"></a>.NET oturumu açma
 
@@ -92,28 +92,74 @@ Yukarıdaki örnekte:
 
 ### <a name="set-log-level-by-command-line-environment-variables-and-other-configuration"></a>Günlük düzeyini komut satırı, ortam değişkenleri ve diğer yapılandırma ile ayarlama
 
-Günlük düzeyi herhangi bir [yapılandırma sağlayıcısından](configuration-providers.md)ayarlanabilir.
+Günlük düzeyi herhangi bir [yapılandırma sağlayıcısından](configuration-providers.md)ayarlanabilir. Örneğin, bir değeriyle adlı kalıcı bir ortam değişkeni oluşturabilirsiniz `Logging:LogLevel:Microsoft` `Information` .
 
-Aşağıdaki komutlar:
+## <a name="command-line"></a>[Komut satırı](#tab/command-line)
 
-- Ortam anahtarını `Logging:LogLevel:Microsoft` Windows üzerinde bir değeri olarak ayarlayın `Information` .
-- .NET Worker hizmeti şablonlarıyla oluşturulan bir uygulamayı kullanırken ayarları test edin. `dotnet run`Komutun kullanıldıktan sonra proje dizininde çalıştırılması gerekir `set` .
+Günlük düzeyi değeri verildiğinde kalıcı ortam değişkeni oluşturun ve atayın.
 
-```cmd
-set Logging__LogLevel__Microsoft=Information
+```CMD
+:: Assigns the env var to the value
+setx "Logging__LogLevel__Microsoft" "Information" /M
+```
+
+**Komut isteminin** *Yeni* bir örneğinde, ortam değişkenini okuyun.
+
+```CMD
+:: Prints the env var value
+echo %Logging__LogLevel__Microsoft%
+```
+
+## <a name="powershell"></a>[PowerShell](#tab/powershell)
+
+Günlük düzeyi değeri verildiğinde kalıcı ortam değişkeni oluşturun ve atayın.
+
+```powershell
+# Assigns the env var to the value
+[System.Environment]::SetEnvironmentVariable(
+    "Logging__LogLevel__Microsoft", "Information", "Machine")
+```
+
+**PowerShell**'in *Yeni* bir örneğinde, ortam değişkenini okuyun.
+
+```powershell
+# Prints the env var value
+[System.Environment]::GetEnvironmentVariable(
+    "Logging__LogLevel__Microsoft", "Machine")
+```
+
+## <a name="bash"></a>[Bash](#tab/bash)
+
+Günlük düzeyi değeri verildiğinde kalıcı ortam değişkeni oluşturun ve atayın.
+
+```Bash
+# Assigns the env var to the value, persists it across sessions
+echo export Logging__LogLevel__Microsoft="Information" >> ~/.bashrc && source ~/.bashrc
+```
+
+Ortam değişkenini okumak için.
+
+```Bash
+# Prints the env var value
+echo $Logging__LogLevel__Microsoft
+
+# Or use printenv:
+# printenv Logging__LogLevel__Microsoft
+```
+
+> [!NOTE]
+> Ortam değişkenlerini (dönemler) içeren adlarla yapılandırırken `.` , "bir değişkeni noktayla dışarı aktarma (.) göz önünde bulundurun. Bu, **yığın değişimi** ve ilgili [kabul edilen yanıt](https://unix.stackexchange.com/a/93533)üzerinde soru.
+
+---
+
+Önceki ortam ayarı ortamda kalıcıdır. .NET Worker hizmet şablonlarıyla oluşturulan bir uygulamayı kullanırken ayarları test etmek için, `dotnet run` ortam değişkeni atandıktan sonra proje dizinindeki komutunu kullanın.
+
+```dotnetcli
 dotnet run
 ```
 
-Önceki ortam ayarı:
-
-- Yalnızca ' de ayarlanan komut penceresinden başlatılan işlemlerde ayarlanır.
-- Visual Studio ile başlatılan uygulamalar tarafından okunamaz.
-
-Aşağıdaki [Setx](/windows-server/administration/windows-commands/setx) komutu, Windows 'daki ortam anahtarını ve değerini de ayarlar. Farklı olarak `set` , `setx` ayarlar kalıcı hale getirilir. `/M`Anahtar, değişkeni sistem ortamında ayarlar. `/M`Kullanılmazsa, bir kullanıcı ortam değişkeni ayarlanır.
-
-```cmd
-setx Logging__LogLevel__Microsoft=Information /M
-```
+> [!TIP]
+> Bir ortam değişkenini ayarladıktan sonra, yeni eklenen ortam değişkenlerinin kullanılabilir olduğundan emin olmak için tümleşik geliştirme ortamınızı (IDE) yeniden başlatın.
 
 [Azure App Service](https://azure.microsoft.com/services/app-service/), **Ayarlar > yapılandırma** sayfasında **Yeni uygulama ayarı** ' nı seçin. Azure App Service uygulama ayarları şunlardır:
 
@@ -222,7 +268,7 @@ public async Task<T> GetAsync<T>(string id)
 
 Yukarıdaki kodda, ilk `Log{LogLevel}` parametresi `AppLogEvents.Read` [günlük olay kimliğidir](#log-event-id). İkinci parametre, kalan Yöntem parametreleri tarafından belirtilen bağımsız değişken değerleri için yer tutucuları olan bir ileti şablonudur. Yöntem parametreleri bu makalenin ilerleyen kısımlarında bulunan [ileti şablonu](#log-message-template) bölümünde açıklanmaktadır.
 
-Uygun günlük düzeyini yapılandırın ve `Log{LogLevel}` belirli bir depolama ortamına ne kadar günlük çıkışının yazıldığını denetlemek için doğru yöntemleri çağırın. Örneğin:
+Uygun günlük düzeyini yapılandırın ve `Log{LogLevel}` belirli bir depolama ortamına ne kadar günlük çıkışının yazıldığını denetlemek için doğru yöntemleri çağırın. Örnek:
 
 - Üretimde:
   - Veya düzeylerinde günlüğe kaydetme, `Trace` `Information` yüksek hacimli ayrıntılı günlük iletileri oluşturur. Maliyetleri denetlemek ve veri depolama sınırlarını aşmamak için, `Trace` `Information` iletileri yüksek hacimli ve düşük maliyetli bir veri deposuna günlüğe kaydedin. `Trace`Belirli kategorileri ve sınırlamayı değerlendirin `Information` .

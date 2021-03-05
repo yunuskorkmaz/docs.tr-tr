@@ -2,12 +2,12 @@
 title: dotnet-install scripts
 description: .NET SDK ve paylaşılan çalışma zamanı yüklemek için DotNet-install betikleri hakkında bilgi edinin.
 ms.date: 09/22/2020
-ms.openlocfilehash: 1904d0322774de25aeba7e7a53ab36ce135d685d
-ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
+ms.openlocfilehash: 51482ca70d08d86e02a493f1da49b056fed8d11c
+ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "98957889"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102206693"
 ---
 # <a name="dotnet-install-scripts-reference"></a>DotNet-betiklerin başvurusunu yüklemeyi
 
@@ -46,12 +46,15 @@ dotnet-install.sh --help
 
 Bash betiği Ayrıca PowerShell anahtarlarını okur, bu sayede PowerShell anahtarlarını Linux/macOS sistemlerinde betiği ile birlikte kullanabilirsiniz.
 
-## <a name="description"></a>Description
+## <a name="description"></a>Açıklama
 
 `dotnet-install`Betikler .NET SDK 'sının .net CLI ve paylaşılan çalışma zamanını içeren yönetici olmayan bir yüklemesini gerçekleştirir. İki komut dosyası vardır:
 
 * Windows üzerinde çalışacak bir PowerShell betiği.
 * Linux/macOS üzerinde çalışacak bir bash betiği.
+
+> [!NOTE]
+> .NET telemetri verilerini toplar. Daha fazla bilgi edinmek ve devre dışı bırakmak için bkz. [.NET SDK telemetrisi](telemetry.md).
 
 ### <a name="purpose"></a>Amaç
 

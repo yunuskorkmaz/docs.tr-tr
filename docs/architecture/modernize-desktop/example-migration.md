@@ -2,12 +2,12 @@
 title: .NET 5’e geçiş örneği
 description: .NET Framework .NET 5 ' e hedefleme örnek uygulamaların nasıl geçirileceği gösteriliyor.
 ms.date: 01/19/2021
-ms.openlocfilehash: 39ecdfa639f4d68a4a8821da839f014c8de42ab0
-ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
+ms.openlocfilehash: 5b3743c68ee0426efffda6f999dffea788f493e9
+ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99216271"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102206548"
 ---
 # <a name="example-of-migrating-to-net"></a>.NET 'e geçme örneği
 
@@ -72,6 +72,9 @@ Veya
 ```dotnetcli
 try-convert -w "<path to your solution>"
 ```
+
+> [!NOTE]
+> TRY-Convert Aracı, [.NET Yükseltme Yardımcısı aracının](https://aka.ms/dotnet-upgrade-assistant)bir parçası olarak otomatik olarak çalıştırılır. Tam yükseltme yardımcısını çalıştırmayı deneyin ve yalnızca dönüştürmeyi deneyin.
 
 Araç dönüştürmeyi denemeden sonra, çalıştırmak ve test etmek için dosyalarınızı Visual Studio 'da yeniden yükleyin. Dönüştürme işleminin, projenizin özellikleri nedeniyle dönüştürme işlemini gerçekleştiremeyeceği bir olasılık vardır. Bu durumda, aşağıdaki adımlara bakabilirsiniz.
 
@@ -224,7 +227,7 @@ Projeyi yeniden derleyip çalıştırırsanız, ürün görüntülerini görmezs
 string image_name = Environment.CurrentDirectory + "\\..\\..\\Assets\\Images\\Catalog\\" + catalogItems.Picturefilename;
 ```
 
-şöyle değiştirin:
+kullanıcısı
 
 ```csharp
 string image_name = Environment.CurrentDirectory + "\\..\\..\\..\\Assets\\Images\\Catalog\\" + catalogItems.Picturefilename;

@@ -3,12 +3,12 @@ title: 20.000 fit üzerinde davpr
 description: Nepr 'nin ne olduğu, ne yaptığı ve nasıl çalıştığı hakkında üst düzey bir genel bakış.
 author: robvet
 ms.date: 02/07/2021
-ms.openlocfilehash: de7997c7c38b696146f2553ef9b723a79b562a1c
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: c6157d29274df73f6ea1fef44b8e5cd5d0239471
+ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106364"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102206594"
 ---
 # <a name="dapr-at-20000-feet"></a>20.000 fit üzerinde davpr
 
@@ -22,7 +22,7 @@ Bu kitap, bir .NET geliştiricisinin görüş açısından, Davpr 'ye bakar. Bu 
 
 20.000 fit ' te bir Jet 'e uçan düşünün. Pencereyi gözden geçirin ve aşağıdaki dikey pencereyi geniş bir perspektiften görürsünüz. Aynı şekilde, Davpr için de aynı şekilde yapalim. 20.000 fit 'te Davpr üzerinden kendinizi görselleştirin. Ne görüyorsunuz?
 
-## <a name="dapr-and-the-problem-it-solves"></a>Davpr ve sorunu çözümidir?
+## <a name="dapr-and-the-problem-it-solves"></a>Davpr ve çözdüğü sorun
 
 DAPR, modern dağıtılmış uygulamalarda büyük bir sınama ele alınmaktadır: **karmaşıklık**.
 
