@@ -8,27 +8,28 @@ helpviewer_keywords:
 ms.topic: how-to
 ms.custom: contperf-fy21q2
 ms.assetid: fba899b5-fc41-428e-a745-3ebdbf37990a
-ms.openlocfilehash: db26b26ebcc51b57fdbe58ddaf92e5019cb69659
-ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
+ms.openlocfilehash: c61018444dd600d6f33765b104034355d0301667
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98899392"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255242"
 ---
-# <a name="how-to-write-a-copy-constructor-c-programming-guide"></a><span data-ttu-id="6b32d-103">Kopya Oluşturucu yazma (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="6b32d-103">How to write a copy constructor (C# Programming Guide)</span></span>
+# <a name="how-to-write-a-copy-constructor-c-programming-guide"></a><span data-ttu-id="c0691-103">Kopya Oluşturucu yazma (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="c0691-103">How to write a copy constructor (C# Programming Guide)</span></span>
 
-<span data-ttu-id="6b32d-104">C# nesneler için bir kopya Oluşturucu sağlamaz, ancak kendiniz bir tane yazabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="6b32d-104">C# doesn't provide a copy constructor for objects, but you can write one yourself.</span></span>  
+<span data-ttu-id="c0691-104">C# [kayıtları](records.md) nesneler için bir kopya Oluşturucusu sağlar, ancak sınıflar için kendiniz yazmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="c0691-104">C# [records](records.md) provide a copy constructor for objects, but for classes you have to write one yourself.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6b32d-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="6b32d-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="c0691-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="c0691-105">Example</span></span>  
 
- <span data-ttu-id="6b32d-106">Aşağıdaki örnekte `Person` [sınıfı](../../language-reference/keywords/class.md) , bir örneği olan bağımsız değişkeni olarak alan bir kopya Oluşturucu tanımlar `Person` .</span><span class="sxs-lookup"><span data-stu-id="6b32d-106">In the following example, the `Person`[class](../../language-reference/keywords/class.md) defines a copy constructor that takes, as its argument, an instance of `Person`.</span></span> <span data-ttu-id="6b32d-107">Bağımsız değişkeninin özelliklerinin değerleri, yeni örneğinin özelliklerine atanır `Person` .</span><span class="sxs-lookup"><span data-stu-id="6b32d-107">The values of the properties of the argument are assigned to the properties of the new instance of `Person`.</span></span> <span data-ttu-id="6b32d-108">Kod, `Name` `Age` sınıfının örnek oluşturucusuna kopyalamak istediğiniz örneğin ve özelliklerini gönderen alternatif bir kopya Oluşturucu içerir.</span><span class="sxs-lookup"><span data-stu-id="6b32d-108">The code contains an alternative copy constructor that sends the `Name` and `Age` properties of the instance that you want to copy to the instance constructor of the class.</span></span>  
+ <span data-ttu-id="c0691-106">Aşağıdaki örnekte `Person` [sınıfı](../../language-reference/keywords/class.md) , bir örneği olan bağımsız değişkeni olarak alan bir kopya Oluşturucu tanımlar `Person` .</span><span class="sxs-lookup"><span data-stu-id="c0691-106">In the following example, the `Person`[class](../../language-reference/keywords/class.md) defines a copy constructor that takes, as its argument, an instance of `Person`.</span></span> <span data-ttu-id="c0691-107">Bağımsız değişkeninin özelliklerinin değerleri, yeni örneğinin özelliklerine atanır `Person` .</span><span class="sxs-lookup"><span data-stu-id="c0691-107">The values of the properties of the argument are assigned to the properties of the new instance of `Person`.</span></span> <span data-ttu-id="c0691-108">Kod, `Name` `Age` sınıfının örnek oluşturucusuna kopyalamak istediğiniz örneğin ve özelliklerini gönderen alternatif bir kopya Oluşturucu içerir.</span><span class="sxs-lookup"><span data-stu-id="c0691-108">The code contains an alternative copy constructor that sends the `Name` and `Age` properties of the instance that you want to copy to the instance constructor of the class.</span></span>  
   
  [!code-csharp[CopyConstructor](snippets/how-to-write-a-copy-constructor/Program.cs)]
-  
-## <a name="see-also"></a><span data-ttu-id="6b32d-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6b32d-109">See also</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="c0691-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c0691-109">See also</span></span>
 
 - <xref:System.ICloneable>
-- [<span data-ttu-id="6b32d-110">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="6b32d-110">C# Programming Guide</span></span>](../index.md)
-- [<span data-ttu-id="6b32d-111">Sınıflar ve Yapılar</span><span class="sxs-lookup"><span data-stu-id="6b32d-111">Classes and Structs</span></span>](./index.md)
-- [<span data-ttu-id="6b32d-112">Oluşturucular</span><span class="sxs-lookup"><span data-stu-id="6b32d-112">Constructors</span></span>](./constructors.md)
-- [<span data-ttu-id="6b32d-113">Sonlandırıcılar</span><span class="sxs-lookup"><span data-stu-id="6b32d-113">Finalizers</span></span>](./destructors.md)
+- [<span data-ttu-id="c0691-110">Kayıtlar</span><span class="sxs-lookup"><span data-stu-id="c0691-110">Records</span></span>](records.md)
+- [<span data-ttu-id="c0691-111">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="c0691-111">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="c0691-112">Sınıflar ve Yapılar</span><span class="sxs-lookup"><span data-stu-id="c0691-112">Classes and Structs</span></span>](./index.md)
+- [<span data-ttu-id="c0691-113">Oluşturucular</span><span class="sxs-lookup"><span data-stu-id="c0691-113">Constructors</span></span>](./constructors.md)
+- [<span data-ttu-id="c0691-114">Sonlandırıcılar</span><span class="sxs-lookup"><span data-stu-id="c0691-114">Finalizers</span></span>](./destructors.md)

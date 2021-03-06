@@ -345,7 +345,7 @@
           href: language-reference/directives/externalsource-directive.md
         - name: '#If... Sonra... #Else'
           href: language-reference/directives/if-then-else-directives.md
-        - name: '#Bölge'
+        - name: '#Region'
           href: language-reference/directives/region-directive.md
         - name: '#Devre dışı bırak ve #Enable'
           href: language-reference/directives/disable-enable.md
@@ -1419,6 +1419,6 @@
     - name: Dil Belirtimi
       href: reference/language-specification/
 - name: Örnek Uygulamalar
-  href: 'https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic'
+  href: 'https://github.com/dotnet/docs/tree/main/samples/snippets/visualbasic'
 - name: İzlenecek Yollar
   href: walkthroughs.md

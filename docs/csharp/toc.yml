@@ -537,13 +537,15 @@ items:
             href: programming-guide/types/using-type-dynamic.md
           - name: 'İzlenecek yol: Dinamik Nesneler Oluşturma ve Kullanma (C# and Visual Basic)'
             href: programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md
-      - name: Sınıflar ve Yapılar
+      - name: 'Sınıflar, kayıtlar ve yapılar'
         items:
           - name: Genel Bakış
-            displayName: classes
+            displayName: 'classes, records'
             href: programming-guide/classes-and-structs/index.md
           - name: Sınıflar
             href: programming-guide/classes-and-structs/classes.md
+          - name: Kayıtlar
+            href: programming-guide/classes-and-structs/records.md
           - name: Nesneler
             href: programming-guide/classes-and-structs/objects.md
           - name: Devralma

@@ -1,21 +1,21 @@
 ---
 title: "Son değişiklik: çoğu kod erişimi güvenlik API 'Leri artık kullanılmıyor"
-description: .NET 'teki çoğu kod erişim güvenliği (CAS) ile ilgili türler artık uyarı olarak kullanımdan kalkmış olan çekirdek .NET kitaplıklarında .NET 5,0 'in son değişikliği hakkında bilgi edinin.
+description: .NET 'teki çoğu kod erişim güvenliği (CAS) ile ilgili türler artık uyarı olarak kullanımdan kalkmış olan çekirdek .NET kitaplıklarında .NET 5 ' teki son değişiklik hakkında bilgi edinin.
 ms.date: 11/01/2020
-ms.openlocfilehash: e793043e83389730934137d441f7ee776d44540b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cc4be58622e81022e74476cf824a19689ba23ea4
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761565"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257641"
 ---
-# <a name="most-code-access-security-apis-are-obsolete"></a><span data-ttu-id="e46fc-103">Çoğu kod erişimi güvenlik API 'Leri artık kullanılmıyor</span><span class="sxs-lookup"><span data-stu-id="e46fc-103">Most code access security APIs are obsolete</span></span>
+# <a name="most-code-access-security-apis-are-obsolete"></a><span data-ttu-id="b5c3b-103">Çoğu kod erişimi güvenlik API 'Leri artık kullanılmıyor</span><span class="sxs-lookup"><span data-stu-id="b5c3b-103">Most code access security APIs are obsolete</span></span>
 
-<span data-ttu-id="e46fc-104">.NET 'teki çoğu kod erişim güvenliği (CAS) ile ilgili türler artık uyarı olarak kullanımdan kalkmıştır.</span><span class="sxs-lookup"><span data-stu-id="e46fc-104">Most code access security (CAS)-related types in .NET are now obsolete as warning.</span></span> <span data-ttu-id="e46fc-105">Bu,, <xref:System.Security.Permissions.SecurityPermissionAttribute> <xref:System.Net.SocketPermission> <xref:System.Security.Policy.EvidenceBase> -türetilmiş türler ve diğer destekleyici API 'ler gibi CAS ızın nesneleri gibi CAS özniteliklerini içerir.</span><span class="sxs-lookup"><span data-stu-id="e46fc-105">This includes CAS attributes, such as <xref:System.Security.Permissions.SecurityPermissionAttribute>, CAS permission objects, such as <xref:System.Net.SocketPermission>, <xref:System.Security.Policy.EvidenceBase>-derived types, and other supporting APIs.</span></span>
+<span data-ttu-id="b5c3b-104">.NET 'teki çoğu kod erişim güvenliği (CAS) ile ilgili türler artık uyarı olarak kullanımdan kalkmıştır.</span><span class="sxs-lookup"><span data-stu-id="b5c3b-104">Most code access security (CAS)-related types in .NET are now obsolete as warning.</span></span> <span data-ttu-id="b5c3b-105">Bu,, <xref:System.Security.Permissions.SecurityPermissionAttribute> <xref:System.Net.SocketPermission> <xref:System.Security.Policy.EvidenceBase> -türetilmiş türler ve diğer destekleyici API 'ler gibi CAS ızın nesneleri gibi CAS özniteliklerini içerir.</span><span class="sxs-lookup"><span data-stu-id="b5c3b-105">This includes CAS attributes, such as <xref:System.Security.Permissions.SecurityPermissionAttribute>, CAS permission objects, such as <xref:System.Net.SocketPermission>, <xref:System.Security.Policy.EvidenceBase>-derived types, and other supporting APIs.</span></span>
 
-## <a name="change-description"></a><span data-ttu-id="e46fc-106">Açıklamayı Değiştir</span><span class="sxs-lookup"><span data-stu-id="e46fc-106">Change description</span></span>
+## <a name="change-description"></a><span data-ttu-id="b5c3b-106">Açıklamayı Değiştir</span><span class="sxs-lookup"><span data-stu-id="b5c3b-106">Change description</span></span>
 
-<span data-ttu-id="e46fc-107">.NET Framework 2. x-4. x, CAS öznitelikleri ve API 'Leri, CA-talep yığınının başarılı veya başarısız olduğunu sağlamak dahil olmak üzere kod yürütme ile ilgili kursu etkileyebilir.</span><span class="sxs-lookup"><span data-stu-id="e46fc-107">In .NET Framework 2.x - 4.x, CAS attributes and APIs can influence the course of code execution, including ensuring that CAS-demand stack walks succeed or fail.</span></span>
+<span data-ttu-id="b5c3b-107">.NET Framework 2. x-4. x, CAS öznitelikleri ve API 'Leri, CA-talep yığınının başarılı veya başarısız olduğunu sağlamak dahil olmak üzere kod yürütme ile ilgili kursu etkileyebilir.</span><span class="sxs-lookup"><span data-stu-id="b5c3b-107">In .NET Framework 2.x - 4.x, CAS attributes and APIs can influence the course of code execution, including ensuring that CAS-demand stack walks succeed or fail.</span></span>
 
 ```csharp
 // In .NET Framework, the attribute causes CAS stack walks
@@ -27,7 +27,7 @@ public void DoSomething()
 }
 ```
 
-<span data-ttu-id="e46fc-108">.NET Core 2. x-3. x içinde, çalışma zamanı CAS özniteliklerini veya CAS API 'Lerini kabul etmez.</span><span class="sxs-lookup"><span data-stu-id="e46fc-108">In .NET Core 2.x - 3.x, the runtime does not honor CAS attributes or CAS APIs.</span></span> <span data-ttu-id="e46fc-109">Çalışma zamanı Yöntem girişinde öznitelikleri yoksayar ve çoğu programlı API 'Lerin etkisi yoktur.</span><span class="sxs-lookup"><span data-stu-id="e46fc-109">The runtime ignores attributes on method entry, and most programmatic APIs have no effect.</span></span>
+<span data-ttu-id="b5c3b-108">.NET Core 2. x-3. x içinde, çalışma zamanı CAS özniteliklerini veya CAS API 'Lerini kabul etmez.</span><span class="sxs-lookup"><span data-stu-id="b5c3b-108">In .NET Core 2.x - 3.x, the runtime does not honor CAS attributes or CAS APIs.</span></span> <span data-ttu-id="b5c3b-109">Çalışma zamanı Yöntem girişinde öznitelikleri yoksayar ve çoğu programlı API 'Lerin etkisi yoktur.</span><span class="sxs-lookup"><span data-stu-id="b5c3b-109">The runtime ignores attributes on method entry, and most programmatic APIs have no effect.</span></span>
 
 ```csharp
 // The .NET Core runtime ignores the following attribute.
@@ -38,7 +38,7 @@ public void DoSomething()
 }
 ```
 
-<span data-ttu-id="e46fc-110">Ayrıca, expante API 'Ler () için programlı çağrılar `Assert` her zaman başarılı olur, bu da sınırlı API 'lere programlı çağrılar ( `Deny` , `PermitOnly` ) çalışma zamanında her zaman bir özel durum oluşturur.</span><span class="sxs-lookup"><span data-stu-id="e46fc-110">Additionally, programmatic calls to expansive APIs (`Assert`) always succeed, while programmatic calls to restrictive APIs (`Deny`, `PermitOnly`) always throw an exception at run time.</span></span> <span data-ttu-id="e46fc-111">( <xref:System.Security.Permissions.PrincipalPermission> Bu kural için bir özel durumdur.</span><span class="sxs-lookup"><span data-stu-id="e46fc-111">(<xref:System.Security.Permissions.PrincipalPermission> is an exception to this rule.</span></span> <span data-ttu-id="e46fc-112">Aşağıdaki [Önerilen eylem](#cas-action) bölümüne bakın.)</span><span class="sxs-lookup"><span data-stu-id="e46fc-112">See the [Recommended action](#cas-action) section below.)</span></span>
+<span data-ttu-id="b5c3b-110">Ayrıca, expante API 'Ler () için programlı çağrılar `Assert` her zaman başarılı olur, bu da sınırlı API 'lere programlı çağrılar ( `Deny` , `PermitOnly` ) çalışma zamanında her zaman bir özel durum oluşturur.</span><span class="sxs-lookup"><span data-stu-id="b5c3b-110">Additionally, programmatic calls to expansive APIs (`Assert`) always succeed, while programmatic calls to restrictive APIs (`Deny`, `PermitOnly`) always throw an exception at run time.</span></span> <span data-ttu-id="b5c3b-111">( <xref:System.Security.Permissions.PrincipalPermission> Bu kural için bir özel durumdur.</span><span class="sxs-lookup"><span data-stu-id="b5c3b-111">(<xref:System.Security.Permissions.PrincipalPermission> is an exception to this rule.</span></span> <span data-ttu-id="b5c3b-112">Aşağıdaki [Önerilen eylem](#cas-action) bölümüne bakın.)</span><span class="sxs-lookup"><span data-stu-id="b5c3b-112">See the [Recommended action](#cas-action) section below.)</span></span>
 
 ```csharp
 public void DoAssert()
@@ -54,7 +54,7 @@ public void DoDeny()
 }
 ```
 
-<span data-ttu-id="e46fc-113">.NET 5,0 ve sonraki sürümlerinde, CA 'larla ilgili API 'Ler artık kullanılmıyor ve derleme zamanı uyarısı oluşturuyor `SYSLIB0003` .</span><span class="sxs-lookup"><span data-stu-id="e46fc-113">In .NET 5.0 and later versions, most CAS-related APIs are obsolete and produce compile-time warning `SYSLIB0003`.</span></span>
+<span data-ttu-id="b5c3b-113">.NET 5 ve sonraki sürümlerinde, CA 'larla ilgili API 'Ler artık kullanılmıyor ve derleme zamanı uyarısı oluşturuyor `SYSLIB0003` .</span><span class="sxs-lookup"><span data-stu-id="b5c3b-113">In .NET 5 and later versions, most CAS-related APIs are obsolete and produce compile-time warning `SYSLIB0003`.</span></span>
 
 ```csharp
 [SocketPermission(SecurityAction.Assert, Host = "contoso.com", Port = "443")] // warning SYSLIB0003
@@ -65,21 +65,21 @@ public void DoSomething()
 }
 ```
 
-<span data-ttu-id="e46fc-114">Bu yalnızca derleme zamanı değişir.</span><span class="sxs-lookup"><span data-stu-id="e46fc-114">This is a compile-time only change.</span></span> <span data-ttu-id="e46fc-115">.NET Core 'un önceki sürümlerinden çalışma zamanı değişikliği yoktur.</span><span class="sxs-lookup"><span data-stu-id="e46fc-115">There is no run-time change from previous versions of .NET Core.</span></span> <span data-ttu-id="e46fc-116">.NET Core 2. x-3. x içinde hiçbir işlem gerçekleştiren Yöntemler, .NET 5,0 ve sonraki sürümlerde çalışma zamanında hiçbir işlem gerçekleştirmeye devam edecektir.</span><span class="sxs-lookup"><span data-stu-id="e46fc-116">Methods that perform no operation in .NET Core 2.x - 3.x will continue to perform no operation at run time in .NET 5.0 and later.</span></span> <span data-ttu-id="e46fc-117"><xref:System.PlatformNotSupportedException>.NET Core 2. x-3. x ' te oluşturan Yöntemler, <xref:System.PlatformNotSupportedException> .NET 5,0 ve sonraki sürümlerde çalışma zamanında bir işleme devam edecektir.</span><span class="sxs-lookup"><span data-stu-id="e46fc-117">Methods that throw <xref:System.PlatformNotSupportedException> in .NET Core 2.x - 3.x will continue to throw a <xref:System.PlatformNotSupportedException> at run time in .NET 5.0 and later.</span></span>
+<span data-ttu-id="b5c3b-114">Bu yalnızca derleme zamanı değişir.</span><span class="sxs-lookup"><span data-stu-id="b5c3b-114">This is a compile-time only change.</span></span> <span data-ttu-id="b5c3b-115">.NET Core 'un önceki sürümlerinden çalışma zamanı değişikliği yoktur.</span><span class="sxs-lookup"><span data-stu-id="b5c3b-115">There is no run-time change from previous versions of .NET Core.</span></span> <span data-ttu-id="b5c3b-116">.NET Core 2. x-3. x içinde hiçbir işlem gerçekleştiren Yöntemler, .NET 5 ve sonraki sürümlerde çalışma zamanında hiçbir işlem gerçekleştirmeye devam edecektir.</span><span class="sxs-lookup"><span data-stu-id="b5c3b-116">Methods that perform no operation in .NET Core 2.x - 3.x will continue to perform no operation at run time in .NET 5 and later.</span></span> <span data-ttu-id="b5c3b-117"><xref:System.PlatformNotSupportedException>.NET Core 2. x-3. x içinde oluşturan Yöntemler, <xref:System.PlatformNotSupportedException> .NET 5 ve sonraki sürümlerde çalışma zamanında oluşturma işlemine devam eder.</span><span class="sxs-lookup"><span data-stu-id="b5c3b-117">Methods that throw <xref:System.PlatformNotSupportedException> in .NET Core 2.x - 3.x will continue to throw a <xref:System.PlatformNotSupportedException> at run time in .NET 5 and later.</span></span>
 
-## <a name="reason-for-change"></a><span data-ttu-id="e46fc-118">Değişiklik nedeni</span><span class="sxs-lookup"><span data-stu-id="e46fc-118">Reason for change</span></span>
+## <a name="reason-for-change"></a><span data-ttu-id="b5c3b-118">Değişiklik nedeni</span><span class="sxs-lookup"><span data-stu-id="b5c3b-118">Reason for change</span></span>
 
-<span data-ttu-id="e46fc-119">[Kod erişim güvenliği (CAS)](../../../../framework/misc/code-access-security.md) desteklenmeyen eski bir teknolojidir.</span><span class="sxs-lookup"><span data-stu-id="e46fc-119">[Code access security (CAS)](../../../../framework/misc/code-access-security.md) is an unsupported legacy technology.</span></span> <span data-ttu-id="e46fc-120">CA 'yı etkinleştirme altyapısı yalnızca .NET Framework 2. x-4. x içinde bulunur, ancak kullanımdan kaldırılmıştır ve bakım veya güvenlik düzeltmelerinin alınmamasına neden olur.</span><span class="sxs-lookup"><span data-stu-id="e46fc-120">The infrastructure to enable CAS exists only in .NET Framework 2.x - 4.x, but is deprecated and not receiving servicing or security fixes.</span></span>
+<span data-ttu-id="b5c3b-119">[Kod erişim güvenliği (CAS)](../../../../framework/misc/code-access-security.md) desteklenmeyen eski bir teknolojidir.</span><span class="sxs-lookup"><span data-stu-id="b5c3b-119">[Code access security (CAS)](../../../../framework/misc/code-access-security.md) is an unsupported legacy technology.</span></span> <span data-ttu-id="b5c3b-120">CA 'yı etkinleştirme altyapısı yalnızca .NET Framework 2. x-4. x içinde bulunur, ancak kullanımdan kaldırılmıştır ve bakım veya güvenlik düzeltmelerinin alınmamasına neden olur.</span><span class="sxs-lookup"><span data-stu-id="b5c3b-120">The infrastructure to enable CAS exists only in .NET Framework 2.x - 4.x, but is deprecated and not receiving servicing or security fixes.</span></span>
 
-<span data-ttu-id="e46fc-121">CAS 'nin kullanımdan kaldırılması nedeniyle, [destekleyici altyapı .NET Core](../../../porting/net-framework-tech-unavailable.md) veya .NET 5.0 + ' a doğru bir şekilde kurulamadı.</span><span class="sxs-lookup"><span data-stu-id="e46fc-121">Due to CAS's deprecation, the [supporting infrastructure was not brought forward to .NET Core](../../../porting/net-framework-tech-unavailable.md) or .NET 5.0+.</span></span> <span data-ttu-id="e46fc-122">Ancak, API 'Ler, uygulamaların .NET Framework ve .NET Core 'a karşı çapraz derlenmesi için ileriye doğru getirildi.</span><span class="sxs-lookup"><span data-stu-id="e46fc-122">However, the APIs were brought forward so that apps could cross-compile against .NET Framework and .NET Core.</span></span> <span data-ttu-id="e46fc-123">Bu, CA ile ilgili bazı API 'Lerin bulunduğu ve çağrılabilir olmasına karşın çalışma zamanında hiçbir eylemde bulunmamakta olan "başarısız açma" senaryolarına yol açar.</span><span class="sxs-lookup"><span data-stu-id="e46fc-123">This led to "fail open" scenarios, where some CAS-related APIs exist and are callable but perform no action at run time.</span></span> <span data-ttu-id="e46fc-124">Bu, çalışma zamanının CA ile ilgili öznitelikleri veya programlı API çağrılarını kabul etmek isteyen bileşenlere yönelik güvenlik sorunlarına neden olabilir.</span><span class="sxs-lookup"><span data-stu-id="e46fc-124">This can lead to security issues for components that expect the runtime to honor CAS-related attributes or programmatic API calls.</span></span> <span data-ttu-id="e46fc-125">Çalışma zamanının bu özniteliklere veya API 'Lere uygun olmadığı daha iyi iletişim sağlamak için, bu özelliklerin büyük bölümünü .NET 5,0 ' de kullanımdan tik.</span><span class="sxs-lookup"><span data-stu-id="e46fc-125">To better communicate that the runtime doesn't respect these attributes or APIs, we have obsoleted the majority of them in .NET 5.0.</span></span>
+<span data-ttu-id="b5c3b-121">CAS 'nin kullanımdan kaldırılması nedeniyle, [destekleyici altyapı .NET Core](../../../porting/net-framework-tech-unavailable.md) veya .NET 5.0 + ' a doğru bir şekilde kurulamadı.</span><span class="sxs-lookup"><span data-stu-id="b5c3b-121">Due to CAS's deprecation, the [supporting infrastructure was not brought forward to .NET Core](../../../porting/net-framework-tech-unavailable.md) or .NET 5.0+.</span></span> <span data-ttu-id="b5c3b-122">Ancak, API 'Ler, uygulamaların .NET Framework ve .NET Core 'a karşı çapraz derlenmesi için ileriye doğru getirildi.</span><span class="sxs-lookup"><span data-stu-id="b5c3b-122">However, the APIs were brought forward so that apps could cross-compile against .NET Framework and .NET Core.</span></span> <span data-ttu-id="b5c3b-123">Bu, CA ile ilgili bazı API 'Lerin bulunduğu ve çağrılabilir olmasına karşın çalışma zamanında hiçbir eylemde bulunmamakta olan "başarısız açma" senaryolarına yol açar.</span><span class="sxs-lookup"><span data-stu-id="b5c3b-123">This led to "fail open" scenarios, where some CAS-related APIs exist and are callable but perform no action at run time.</span></span> <span data-ttu-id="b5c3b-124">Bu, çalışma zamanının CA ile ilgili öznitelikleri veya programlı API çağrılarını kabul etmek isteyen bileşenlere yönelik güvenlik sorunlarına neden olabilir.</span><span class="sxs-lookup"><span data-stu-id="b5c3b-124">This can lead to security issues for components that expect the runtime to honor CAS-related attributes or programmatic API calls.</span></span> <span data-ttu-id="b5c3b-125">Çalışma zamanının bu özniteliklere veya API 'Lere uygun olmadığı daha iyi iletişim sağlamak için, bu özelliklerin büyük bölümünü .NET 5,0 ' de kullanımdan tik.</span><span class="sxs-lookup"><span data-stu-id="b5c3b-125">To better communicate that the runtime doesn't respect these attributes or APIs, we have obsoleted the majority of them in .NET 5.0.</span></span>
 
-## <a name="version-introduced"></a><span data-ttu-id="e46fc-126">Sunulan sürüm</span><span class="sxs-lookup"><span data-stu-id="e46fc-126">Version introduced</span></span>
+## <a name="version-introduced"></a><span data-ttu-id="b5c3b-126">Sunulan sürüm</span><span class="sxs-lookup"><span data-stu-id="b5c3b-126">Version introduced</span></span>
 
-<span data-ttu-id="e46fc-127">5.0</span><span class="sxs-lookup"><span data-stu-id="e46fc-127">5.0</span></span>
+<span data-ttu-id="b5c3b-127">5.0</span><span class="sxs-lookup"><span data-stu-id="b5c3b-127">5.0</span></span>
 
-## <a name=""></a><span data-ttu-id="e46fc-128"><a id="cas-action">Önerilen eylem</a></span><span class="sxs-lookup"><span data-stu-id="e46fc-128"><a id="cas-action">Recommended action</a></span></span>
+## <a name=""></a><span data-ttu-id="b5c3b-128"><a id="cas-action">Önerilen eylem</a></span><span class="sxs-lookup"><span data-stu-id="b5c3b-128"><a id="cas-action">Recommended action</a></span></span>
 
-- <span data-ttu-id="e46fc-129">Herhangi bir güvenlik iznini onaylıyorsunuz, izni denetleyen özniteliği veya çağrıyı kaldırın.</span><span class="sxs-lookup"><span data-stu-id="e46fc-129">If you're asserting any security permission, remove the attribute or call that asserts the permission.</span></span>
+- <span data-ttu-id="b5c3b-129">Herhangi bir güvenlik iznini onaylıyorsunuz, izni denetleyen özniteliği veya çağrıyı kaldırın.</span><span class="sxs-lookup"><span data-stu-id="b5c3b-129">If you're asserting any security permission, remove the attribute or call that asserts the permission.</span></span>
 
   ```csharp
   // REMOVE the attribute below.
@@ -95,7 +95,7 @@ public void DoSomething()
   }
   ```
 
-- <span data-ttu-id="e46fc-130">Herhangi bir izni reddetme veya kısıtlama (aracılığıyla `PermitOnly` ) yapıyorsanız güvenlik danışmanınıza başvurun.</span><span class="sxs-lookup"><span data-stu-id="e46fc-130">If you're denying or restricting (via `PermitOnly`) any permission, contact your security advisor.</span></span> <span data-ttu-id="e46fc-131">CAS öznitelikleri .NET 5.0 + Runtime tarafından kabul edildiğinden, uygulamanız bu yöntemlere erişimi kısıtlamak için CAS altyapısını yanlış bir şekilde kullanıyorsa uygulamanızın güvenlik deliği olması gerekebilir.</span><span class="sxs-lookup"><span data-stu-id="e46fc-131">Because CAS attributes are not honored by the .NET 5.0+ runtime, your application could have a security hole if it incorrectly relies on the CAS infrastructure to restrict access to these methods.</span></span>
+- <span data-ttu-id="b5c3b-130">Herhangi bir izni reddetme veya kısıtlama (aracılığıyla `PermitOnly` ) yapıyorsanız güvenlik danışmanınıza başvurun.</span><span class="sxs-lookup"><span data-stu-id="b5c3b-130">If you're denying or restricting (via `PermitOnly`) any permission, contact your security advisor.</span></span> <span data-ttu-id="b5c3b-131">CAS öznitelikleri .NET 5.0 + Runtime tarafından kabul edildiğinden, uygulamanız bu yöntemlere erişimi kısıtlamak için CAS altyapısını yanlış bir şekilde kullanıyorsa uygulamanızın güvenlik deliği olması gerekebilir.</span><span class="sxs-lookup"><span data-stu-id="b5c3b-131">Because CAS attributes are not honored by the .NET 5.0+ runtime, your application could have a security hole if it incorrectly relies on the CAS infrastructure to restrict access to these methods.</span></span>
 
   ```csharp
   // REVIEW the attribute below; could indicate security vulnerability.
@@ -111,7 +111,7 @@ public void DoSomething()
   }
   ```
 
-- <span data-ttu-id="e46fc-132">Herhangi bir izin (hariç <xref:System.Security.Permissions.PrincipalPermission> ) istiyorsanız, talebi kaldırın.</span><span class="sxs-lookup"><span data-stu-id="e46fc-132">If you're demanding any permission (except <xref:System.Security.Permissions.PrincipalPermission>), remove the demand.</span></span> <span data-ttu-id="e46fc-133">Çalışma zamanında tüm talepler başarılı olur.</span><span class="sxs-lookup"><span data-stu-id="e46fc-133">All demands will succeed at run time.</span></span>
+- <span data-ttu-id="b5c3b-132">Herhangi bir izin (hariç <xref:System.Security.Permissions.PrincipalPermission> ) istiyorsanız, talebi kaldırın.</span><span class="sxs-lookup"><span data-stu-id="b5c3b-132">If you're demanding any permission (except <xref:System.Security.Permissions.PrincipalPermission>), remove the demand.</span></span> <span data-ttu-id="b5c3b-133">Çalışma zamanında tüm talepler başarılı olur.</span><span class="sxs-lookup"><span data-stu-id="b5c3b-133">All demands will succeed at run time.</span></span>
 
   ```csharp
   // REMOVE the attribute below; it will always succeed.
@@ -127,9 +127,9 @@ public void DoSomething()
   }
   ```
 
-- <span data-ttu-id="e46fc-134">İhtiyaç duymanız durumunda <xref:System.Security.Permissions.PrincipalPermission> , [PrincipalPermissionAttribute kılavuzuna hata olarak artık kullanımdan](principalpermissionattribute-obsolete.md)bakın.</span><span class="sxs-lookup"><span data-stu-id="e46fc-134">If you're demanding <xref:System.Security.Permissions.PrincipalPermission>, consult the guidance for [PrincipalPermissionAttribute is obsolete as error](principalpermissionattribute-obsolete.md).</span></span> <span data-ttu-id="e46fc-135">Bu kılavuz hem hem de için geçerlidir <xref:System.Security.Permissions.PrincipalPermission> <xref:System.Security.Permissions.PrincipalPermissionAttribute> .</span><span class="sxs-lookup"><span data-stu-id="e46fc-135">That guidance applies for both <xref:System.Security.Permissions.PrincipalPermission> and <xref:System.Security.Permissions.PrincipalPermissionAttribute>.</span></span>
+- <span data-ttu-id="b5c3b-134">İhtiyaç duymanız durumunda <xref:System.Security.Permissions.PrincipalPermission> , [PrincipalPermissionAttribute kılavuzuna hata olarak artık kullanımdan](principalpermissionattribute-obsolete.md)bakın.</span><span class="sxs-lookup"><span data-stu-id="b5c3b-134">If you're demanding <xref:System.Security.Permissions.PrincipalPermission>, consult the guidance for [PrincipalPermissionAttribute is obsolete as error](principalpermissionattribute-obsolete.md).</span></span> <span data-ttu-id="b5c3b-135">Bu kılavuz hem hem de için geçerlidir <xref:System.Security.Permissions.PrincipalPermission> <xref:System.Security.Permissions.PrincipalPermissionAttribute> .</span><span class="sxs-lookup"><span data-stu-id="b5c3b-135">That guidance applies for both <xref:System.Security.Permissions.PrincipalPermission> and <xref:System.Security.Permissions.PrincipalPermissionAttribute>.</span></span>
 
-- <span data-ttu-id="e46fc-136">Kesinlikle bu uyarıları devre dışı bırakmanız gerekiyorsa (önerilmez), `SYSLIB0003` koddaki uyarıyı gizleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="e46fc-136">If you absolutely must disable these warnings (which is not recommended), you can suppress the `SYSLIB0003` warning in code.</span></span>
+- <span data-ttu-id="b5c3b-136">Kesinlikle bu uyarıları devre dışı bırakmanız gerekiyorsa (önerilmez), `SYSLIB0003` koddaki uyarıyı gizleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="b5c3b-136">If you absolutely must disable these warnings (which is not recommended), you can suppress the `SYSLIB0003` warning in code.</span></span>
 
   ```csharp
   #pragma warning disable SYSLIB0003 // disable the warning
@@ -147,7 +147,7 @@ public void DoSomething()
   }
   ```
 
-  <span data-ttu-id="e46fc-137">Ayrıca, proje dosyanızdaki uyarıyı de gizleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="e46fc-137">You can also suppress the warning in your project file.</span></span> <span data-ttu-id="e46fc-138">Bunun yapılması, projedeki tüm kaynak dosyaları için uyarıyı devre dışı bırakır.</span><span class="sxs-lookup"><span data-stu-id="e46fc-138">Doing so disables the warning for all source files within the project.</span></span>
+  <span data-ttu-id="b5c3b-137">Ayrıca, proje dosyanızdaki uyarıyı de gizleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="b5c3b-137">You can also suppress the warning in your project file.</span></span> <span data-ttu-id="b5c3b-138">Bunun yapılması, projedeki tüm kaynak dosyaları için uyarıyı devre dışı bırakır.</span><span class="sxs-lookup"><span data-stu-id="b5c3b-138">Doing so disables the warning for all source files within the project.</span></span>
 
   ```xml
   <Project Sdk="Microsoft.NET.Sdk">
@@ -160,10 +160,10 @@ public void DoSomething()
   ```
 
   > [!NOTE]
-  > <span data-ttu-id="e46fc-139">Gizleme `SYSLIB0003` yalnızca CA ile ilgili kullanımdan kaldırma uyarılarını devre dışı bırakır.</span><span class="sxs-lookup"><span data-stu-id="e46fc-139">Suppressing `SYSLIB0003` disables only the CAS-related obsoletion warnings.</span></span> <span data-ttu-id="e46fc-140">Diğer uyarıları devre dışı bırakır veya .NET 5.0 + çalışma zamanının davranışını değiştirmez.</span><span class="sxs-lookup"><span data-stu-id="e46fc-140">It does not disable any other warnings or change the behavior of the .NET 5.0+ runtime.</span></span>
-- <span data-ttu-id="e46fc-141">Güvenlik</span><span class="sxs-lookup"><span data-stu-id="e46fc-141">Security</span></span>
+  > <span data-ttu-id="b5c3b-139">Gizleme `SYSLIB0003` yalnızca CA ile ilgili kullanımdan kaldırma uyarılarını devre dışı bırakır.</span><span class="sxs-lookup"><span data-stu-id="b5c3b-139">Suppressing `SYSLIB0003` disables only the CAS-related obsoletion warnings.</span></span> <span data-ttu-id="b5c3b-140">Diğer uyarıları devre dışı bırakır veya .NET 5.0 + çalışma zamanının davranışını değiştirmez.</span><span class="sxs-lookup"><span data-stu-id="b5c3b-140">It does not disable any other warnings or change the behavior of the .NET 5.0+ runtime.</span></span>
+- <span data-ttu-id="b5c3b-141">Güvenlik</span><span class="sxs-lookup"><span data-stu-id="b5c3b-141">Security</span></span>
 
-## <a name="affected-apis"></a><span data-ttu-id="e46fc-142">Etkilenen API’ler</span><span class="sxs-lookup"><span data-stu-id="e46fc-142">Affected APIs</span></span>
+## <a name="affected-apis"></a><span data-ttu-id="b5c3b-142">Etkilenen API’ler</span><span class="sxs-lookup"><span data-stu-id="b5c3b-142">Affected APIs</span></span>
 
 - <xref:System.AppDomain.PermissionSet?displayProperty=fullName>
 - <xref:System.Configuration.ConfigurationPermission?displayProperty=fullName>
@@ -282,7 +282,7 @@ public void DoSomething()
 - <xref:System.Security.Permissions.WebBrowserPermissionLevel?displayProperty=fullName>
 - <xref:System.Security.Permissions.ZoneIdentityPermission?displayProperty=fullName>
 - <xref:System.Security.Permissions.ZoneIdentityPermissionAttribute?displayProperty=fullName>
-- [<span data-ttu-id="e46fc-143">System. Security. Policy. ApplicationTrust. ApplicationTrust (PermissionSet, IEnumerable \<StrongName> )</span><span class="sxs-lookup"><span data-stu-id="e46fc-143">System.Security.Policy.ApplicationTrust.ApplicationTrust(PermissionSet, IEnumerable\<StrongName>)</span></span>](/dotnet/api/system.security.policy.applicationtrust.-ctor#System_Security_Policy_ApplicationTrust__ctor_System_Security_PermissionSet_System_Collections_Generic_IEnumerable_System_Security_Policy_StrongName__)
+- [<span data-ttu-id="b5c3b-143">System. Security. Policy. ApplicationTrust. ApplicationTrust (PermissionSet, IEnumerable \<StrongName> )</span><span class="sxs-lookup"><span data-stu-id="b5c3b-143">System.Security.Policy.ApplicationTrust.ApplicationTrust(PermissionSet, IEnumerable\<StrongName>)</span></span>](/dotnet/api/system.security.policy.applicationtrust.-ctor#System_Security_Policy_ApplicationTrust__ctor_System_Security_PermissionSet_System_Collections_Generic_IEnumerable_System_Security_Policy_StrongName__)
 - <xref:System.Security.Policy.ApplicationTrust.FullTrustAssemblies?displayProperty=fullName>
 - <xref:System.Security.Policy.FileCodeGroup?displayProperty=fullName>
 - <xref:System.Security.Policy.GacInstalled?displayProperty=fullName>
