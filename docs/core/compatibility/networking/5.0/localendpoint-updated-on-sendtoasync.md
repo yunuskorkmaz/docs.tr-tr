@@ -1,13 +1,13 @@
 ---
 title: 'Son değişiklik: Socket. LocalEndPoint, SendToAsync çağrıldıktan sonra güncellenir'
-description: SendToAsync, artık yerel bitiş noktası özelliğinin değerini yuvanın yerel adresine güncelleştiren .NET 5,0 ' deki kırılmaya karşı değişiklik hakkında bilgi edinin.
+description: .NET 5 ' teki son değişiklik hakkında bilgi edinin. SendToAsync, artık yerel uç nokta özelliğinin değerini yuvanın yerel adresine güncelleştirir.
 ms.date: 10/18/2020
-ms.openlocfilehash: 53d7da350eac6e65832012331044427fd90fe796
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4be62f8bf6596cc3531d59f3e65eda005bff778a
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761442"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256432"
 ---
 # <a name="socketlocalendpoint-is-updated-after-calling-sendtoasync"></a>Socket. LocalEndPoint, SendToAsync çağrıldıktan sonra güncellenir
 
@@ -19,7 +19,7 @@ ms.locfileid: "95761442"
 
 ## <a name="change-description"></a>Açıklamayı Değiştir
 
-Önceki .NET sürümlerinde, <xref:System.Net.Sockets.Socket.SendToAsync(System.Net.Sockets.SocketAsyncEventArgs)?displayProperty=nameWithType> <xref:System.Net.Sockets.Socket.LocalEndPoint?displayProperty=nameWithType> yuva örneğindeki özelliğin değerini değiştirmez. .NET 5,0 ' den başlayarak, <xref:System.Net.Sockets.Socket.SendToAsync(System.Net.Sockets.SocketAsyncEventArgs)> başarıyla tamamlandığında, değeri <xref:System.Net.Sockets.Socket.LocalEndPoint?displayProperty=nameWithType> örtük olarak bağlantılı yuvanın yerel adresidir. Bu yeni davranış, ve davranışları ile tutarlıdır <xref:System.Net.Sockets.Socket.SendTo(System.Byte[],System.Net.EndPoint)> <xref:System.Net.Sockets.Socket.BeginSendTo(System.Byte[],System.Int32,System.Int32,System.Net.Sockets.SocketFlags,System.Net.EndPoint,System.AsyncCallback,System.Object)> / <xref:System.Net.Sockets.Socket.EndSendTo(System.IAsyncResult)> .
+Önceki .NET sürümlerinde, <xref:System.Net.Sockets.Socket.SendToAsync(System.Net.Sockets.SocketAsyncEventArgs)?displayProperty=nameWithType> <xref:System.Net.Sockets.Socket.LocalEndPoint?displayProperty=nameWithType> yuva örneğindeki özelliğin değerini değiştirmez. .NET 5 ' den başlayarak, <xref:System.Net.Sockets.Socket.SendToAsync(System.Net.Sockets.SocketAsyncEventArgs)> başarıyla tamamlandığında, değeri <xref:System.Net.Sockets.Socket.LocalEndPoint?displayProperty=nameWithType> örtük olarak bağlantılı yuvanın yerel adresidir. Bu yeni davranış, ve davranışları ile tutarlıdır <xref:System.Net.Sockets.Socket.SendTo(System.Byte[],System.Net.EndPoint)> <xref:System.Net.Sockets.Socket.BeginSendTo(System.Byte[],System.Int32,System.Int32,System.Net.Sockets.SocketFlags,System.Net.EndPoint,System.AsyncCallback,System.Object)> / <xref:System.Net.Sockets.Socket.EndSendTo(System.IAsyncResult)> .
 
 ## <a name="reason-for-change"></a>Değişiklik nedeni
 

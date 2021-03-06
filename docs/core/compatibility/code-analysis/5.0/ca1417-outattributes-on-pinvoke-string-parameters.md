@@ -1,13 +1,13 @@
 ---
 title: 'Son değişiklik: P/Invoke için dize parametresinde CA1417: OutAttribute'
-description: Kod Analizi kuralı CA1417 'nin etkinleştirilmesi nedeniyle .NET 5,0 'deki Son değişiklik hakkında bilgi edinin.
+description: Kod Analizi kuralı CA1417 'nin etkinleştirilmesi nedeniyle .NET 5 ' teki önemli değişiklik hakkında bilgi edinin.
 ms.date: 09/29/2020
-ms.openlocfilehash: 3316d07108ec7f9da985494413336cba6d560dc9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 74aa6dc867bc1eb62e32dd086dd6b43f62e7f01f
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761337"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257836"
 ---
 # <a name="warning-ca1417-outattribute-on-string-parameter-for-pinvoke"></a>Uyarı CA1417: P/Invoke için dize parametresindeki OutAttribute
 
@@ -15,7 +15,7 @@ ms.locfileid: "95761337"
 
 ## <a name="change-description"></a>Açıklamayı Değiştir
 
-.NET SDK, .NET 5,0 'den başlayarak [.net kaynak kodu Çözümleyicileri](../../../../fundamentals/code-analysis/overview.md)içerir. Bu kuralların bazıları varsayılan olarak [CA1417](/visualstudio/code-quality/ca1417)dahil olmak üzere etkindir. Projeniz bu kuralı ihlal eden ve uyarıları hata olarak işleyecek şekilde yapılandırılan kodu içeriyorsa, bu değişiklik yapınızı bozabilir.
+.NET 5 ' den başlayarak .NET SDK [.net kaynak kodu Çözümleyicileri](../../../../fundamentals/code-analysis/overview.md)içerir. Bu kuralların bazıları varsayılan olarak [CA1417](/visualstudio/code-quality/ca1417)dahil olmak üzere etkindir. Projeniz bu kuralı ihlal eden ve uyarıları hata olarak işleyecek şekilde yapılandırılan kodu içeriyorsa, bu değişiklik yapınızı bozabilir.
 
 Rule CA1417 bayrakları [P/](../../../../standard/native-interop/pinvoke.md) bir <xref:System.String> parametrenin öznitelik ile işaretlendiği <xref:System.Runtime.InteropServices.OutAttribute> ve değer Ile geçirildiği yöntem tanımlarını çağırır. Örnek:
 

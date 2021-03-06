@@ -3,12 +3,12 @@ title: Sınıflar ve nesneler-C# öğreticisine giriş
 description: İlk C# programınızı oluşturun ve nesne yönelimli kavramları keşfedebilirsiniz
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 1b68c6e6636c3157aaeb42aa228158ad913fc491
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 3da445e6c656628fffdb9ef9384fb1a1c556a2cd
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102105557"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255424"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Sınıflar ve nesneler ile nesne odaklı programlamayı keşfet
 
@@ -214,7 +214,7 @@ Sonuçları görmek için programınızı çalıştırın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Çıkdıysanız, Bu öğreticinin kaynağını [GitHub](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/intro-to-csharp/snippets/introduction-to-classes)deponuzda görebilirsiniz.
+Çıkdıysanız, Bu öğreticinin kaynağını [GitHub](https://github.com/dotnet/docs/tree/main/docs/csharp/tutorials/intro-to-csharp/snippets/introduction-to-classes)deponuzda görebilirsiniz.
 
 [Nesne yönelimli programlama](object-oriented-programming.md) öğreticisiyle devam edebilirsiniz.
 

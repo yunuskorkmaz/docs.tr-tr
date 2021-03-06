@@ -1,23 +1,23 @@
 ---
 title: 'Son değişiklik: Thread. Abort artık kullanılmıyor'
-description: Iş parçacığı. Abort API 'Lerinin artık kullanılmayan çekirdek .NET kitaplıklarında .NET 5,0 son değişikliği hakkında bilgi edinin.
+description: Iş parçacığı. Abort API 'Lerinin artık kullanılmayan çekirdek .NET kitaplıklarında .NET 5 ile ilgili son değişiklik hakkında bilgi edinin.
 ms.date: 11/01/2020
-ms.openlocfilehash: 6d7dfce8fda393bfd88c9b4cf0c59d53942cee25
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 29c688250593801bab9b32b9e787911e561ec000
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761385"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257069"
 ---
-# <a name="threadabort-is-obsolete"></a>Thread. Abort artık kullanılmıyor
+# <a name="threadabort-is-obsolete"></a>Thread.Abort kullanımdan kaldırıldı
 
-<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>API 'ler artık kullanılmıyor. .NET 5,0 veya sonraki bir sürümü hedefleyen projeler, bu yöntemler çağrılırsa derleme zamanı uyarısıyla karşılaşacaktır `SYSLIB0006` .
+<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>API 'ler artık kullanılmıyor. .NET 5 veya sonraki bir sürümü hedefleyen projeler, bu yöntemler çağrılırsa derleme zamanı uyarısıyla karşılaşacaktır `SYSLIB0006` .
 
 ## <a name="change-description"></a>Açıklamayı Değiştir
 
 Daha önce, ' <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> a yapılan çağrılar derleme zamanı uyarıları üretmedi, ancak yöntem çalışma zamanında bir oluşturma işlemi gerçekleştiriyordu <xref:System.PlatformNotSupportedException> .
 
-.NET 5,0 ' den itibaren, <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> artık uyarı olarak kullanılmıyor olarak işaretlenir. Bu yöntemin çağrılması derleyici uyarısı oluşturur `SYSLIB0006` . Yönteminin uygulanması değiştirilmez ve bir oluşturma işlemi devam eder <xref:System.PlatformNotSupportedException> .
+.NET 5 ' den başlayarak, <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> uyarı olarak kullanımdan kalkmış olarak işaretlenir. Bu yöntemin çağrılması derleyici uyarısı oluşturur `SYSLIB0006` . Yönteminin uygulanması değiştirilmez ve bir oluşturma işlemi devam eder <xref:System.PlatformNotSupportedException> .
 
 ## <a name="reason-for-change"></a>Değişiklik nedeni
 

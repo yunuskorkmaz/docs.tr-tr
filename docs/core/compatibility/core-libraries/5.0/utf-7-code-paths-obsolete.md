@@ -1,15 +1,15 @@
 ---
 title: 'Son değişiklik: UTF-7 kod yolları artık kullanılmıyor'
-description: UTF7 ve UTF7Encoding oluşturucuların artık kullanılmayan çekirdek .NET kitaplıklarında .NET 5,0 son değişikliği hakkında bilgi edinin.
+description: UTF7 ve UTF7Encoding oluşturucuların kullanım dışı olduğu çekirdek .NET kitaplıklarında .NET 5 ile ilgili son değişiklik hakkında bilgi edinin.
 ms.date: 11/01/2020
-ms.openlocfilehash: d58305f59a30cdf31a525c3789bd6497201c50ba
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7a0ba771e0fac2908ca37f16afb10118e1537161
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761402"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256991"
 ---
-# <a name="utf-7-code-paths-are-obsolete"></a>UTF-7 kod yolları artık kullanılmıyor
+# <a name="utf-7-code-paths-are-obsolete"></a>UTF-7 kod yolları kullanımdan kaldırıldı
 
 UTF-7 kodlaması artık uygulamalar arasında geniş bir kullanım değildir ve birçok adım artık değişim içinde [kullanımını](https://security.stackexchange.com/a/68609/3573) dengeler. Ayrıca, UTF-7 kodlu verilerle karşılaşmayı düşünmeyin uygulamalarda [saldırı vektörü olarak da kullanılır](https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=utf-7) . Microsoft, <xref:System.Text.UTF7Encoding?displayProperty=nameWithType> hata algılaması sağlamadığı için kullanımını uyarır.
 
@@ -26,7 +26,7 @@ Encoding enc2 = Encoding.GetEncoding(65000); // By code page.
 
 Ayrıca, UTF-7 kodlamasını temsil eden bir örnek, <xref:System.Text.Encoding.GetEncodings?displayProperty=nameWithType> , sistemde kayıtlı tüm örnekleri numaralandırır yöntemi tarafından numaralandırılır <xref:System.Text.Encoding> .
 
-.NET 5,0 ' den başlayarak, <xref:System.Text.Encoding.UTF7?displayProperty=nameWithType> özellik ve <xref:System.Text.UTF7Encoding.%23ctor%2A> oluşturucular kullanımdan kalkmıştır ve uyarı `SYSLIB0001` (veya `MSLIB0001` önizleme sürümlerinde) oluşturur. Ancak, bir sınıfı kullanırken çağıranların aldığı uyarı sayısını azaltmak için <xref:System.Text.UTF7Encoding> <xref:System.Text.UTF7Encoding> türün kendisi kullanılmıyor olarak işaretlenmez.
+.NET 5 ' den başlayarak <xref:System.Text.Encoding.UTF7?displayProperty=nameWithType> özellik ve <xref:System.Text.UTF7Encoding.%23ctor%2A> oluşturucular kullanımdan kalkmıştır ve uyarı `SYSLIB0001` (veya `MSLIB0001` önizleme sürümlerinde) oluşturur. Ancak, bir sınıfı kullanırken çağıranların aldığı uyarı sayısını azaltmak için <xref:System.Text.UTF7Encoding> <xref:System.Text.UTF7Encoding> türün kendisi kullanılmıyor olarak işaretlenmez.
 
 ```csharp
 // The next line generates warning SYSLIB0001.

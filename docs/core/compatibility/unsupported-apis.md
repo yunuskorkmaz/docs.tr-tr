@@ -1,18 +1,18 @@
 ---
 title: .NET Core ve .NET 5 + üzerinde desteklenmeyen API 'Ler
 titleSuffix: ''
-description: .NET API 'Lerin hangi .NET Core ve .NET 5,0 ve sonraki sürümlerinde her zaman bir istisna sağladığını öğrenin.
+description: .NET API 'Lerinin her zaman .NET Core ve .NET 5 ve sonraki sürümlerde bir istisna oluşturmasını öğrenin.
 ms.date: 10/13/2020
-ms.openlocfilehash: 1bd41192d0d6752d2b659da9fb6387dac321b2c3
-ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
+ms.openlocfilehash: b0dc425bf5f7d8f2a44f51ffe75ffcb0c8a5a7ae
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97593272"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256263"
 ---
 # <a name="apis-that-always-throw-exceptions-on-net-core-and-net-5"></a>.NET Core ve .NET 5 + ' da her zaman özel durum oluşturan API 'Ler
 
-Aşağıdaki API 'Ler her zaman bir <xref:System.PlatformNotSupportedException> Platform alt kümesi üzerinde .net 5,0 ve sonraki sürümlerinde (.NET Core 'un tüm sürümleri dahil) her zaman oluşturulur.
+Aşağıdaki API 'Ler her zaman bir <xref:System.PlatformNotSupportedException> Platform alt kümesi üzerinde .NET 5 ve sonraki sürümleri (.NET Core 'un tüm sürümleri dahil) üzerinde oluşturulur.
 
 Bu makale, etkilenen API 'Leri ad alanına göre düzenler.
 
@@ -97,7 +97,7 @@ Bu makale, etkilenen API 'Leri ad alanına göre düzenler.
 | <xref:System.Diagnostics.ProcessStartInfo.Domain?displayProperty=nameWithType> | Linux ve macOS |
 | <xref:System.Diagnostics.ProcessStartInfo.LoadUserProfile?displayProperty=nameWithType> | Linux ve macOS |
 | <xref:System.Diagnostics.ProcessThread.BasePriority?displayProperty=nameWithType> (yalnızca set) | Linux ve macOS |
-| <xref:System.Diagnostics.ProcessThread.BasePriority?displayProperty=nameWithType> (yalnızca Get) | macOS |
+| <xref:System.Diagnostics.ProcessThread.BasePriority?displayProperty=nameWithType> (yalnızca Get) | Mac OS |
 | <xref:System.Diagnostics.ProcessThread.ProcessorAffinity?displayProperty=nameWithType> (yalnızca set) | Linux ve macOS |
 
 ## <a name="systemio"></a>System.IO

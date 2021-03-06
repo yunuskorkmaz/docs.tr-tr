@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: d800116137e088a54edb221fb4f81ecd47b0278f
-ms.sourcegitcommit: 2b878d7011306b215dbf3d5dc9c1e78355a6dcd5
+ms.openlocfilehash: 168965a3d7f5c3d2436bfdc25edb6c78cdabbc05
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "98757869"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258344"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Erişim Değiştiricileri (C# Programlama Kılavuzu)
 
@@ -30,19 +30,19 @@ Aşağıdaki örneklerde, bir tür ve üye üzerinde erişim değiştiricilerin 
 
 Tüm erişim değiştiricileri tüm bağlamlardaki tüm türler veya Üyeler için geçerli değildir. Bazı durumlarda, bir tür üyesinin erişilebilirliği, kapsayan türünün erişilebilirliği tarafından kısıtlanıyor.
 
-## <a name="class-and-struct-accessibility"></a>Sınıf ve yapı erişilebilirliği  
+## <a name="class-record-and-struct-accessibility"></a>Sınıf, kayıt ve yapı erişilebilirliği  
 
-Bir ad alanı içinde doğrudan tanımlanmış sınıflar ve yapılar (diğer bir deyişle, diğer sınıfların veya yapıların içinde iç içe olmayan diğer bir deyişle) ya da olabilir `public` `internal` . `internal` , hiçbir erişim değiştiricisi belirtilmemişse varsayılandır.
+Bir ad alanı içinde doğrudan tanımlanmış sınıflar, kayıtlar ve yapılar (diğer bir deyişle, diğer sınıfların veya yapıların içinde olmayan diğer bir deyişle) ya da `public` olabilir `internal` . `internal` , hiçbir erişim değiştiricisi belirtilmemişse varsayılandır.
 
 İç içe sınıflar ve yapılar dahil yapı üyeleri, veya olarak bildirilemez `public` `internal` `private` . İç içe sınıflar ve yapılar dahil olmak üzere sınıf üyeleri,,,, `public` `protected internal` veya olabilir `protected` `internal` `private protected` `private` . İç içe sınıflar ve yapılar dahil olmak üzere sınıf ve yapı üyelerinin `private` Varsayılan olarak erişimi vardır. Özel iç içe türler, kapsayan tür dışından erişilebilir değildir.
 
-Türetilmiş sınıfların temel türlerinden daha fazla erişilebilirliği olamaz. Bir iç sınıftan türeyen ortak bir sınıf bildiremezsiniz `B` `A` . İzin veriliyorsa, `A` tüm `protected` veya `internal` üyeleri `A` türetilmiş sınıftan erişilebilir olduğundan ortak hale getirme etkisi olur.
+Türetilmiş sınıflar ve türetilmiş kayıtlar, temel türlerinden daha fazla erişilebilirliğe sahip olamaz. Bir iç sınıftan türeyen ortak bir sınıf bildiremezsiniz `B` `A` . İzin veriliyorsa, `A` tüm `protected` veya `internal` üyeleri `A` türetilmiş sınıftan erişilebilir olduğundan ortak hale getirme etkisi olur.
 
 Kullanarak iç Türlerinize erişmek için belirli diğer derlemelerin de etkinleştirebilirsiniz `InternalsVisibleToAttribute` . Daha fazla bilgi için bkz. [arkadaş derlemeler](../../../standard/assembly/friend.md).
 
-## <a name="class-and-struct-member-accessibility"></a>Sınıf ve yapı üye erişilebilirliği  
+## <a name="class-record-and-struct-member-accessibility"></a>Sınıf, kayıt ve yapı üye erişilebilirliği  
 
-Sınıf üyeleri (iç içe geçmiş sınıflar ve yapılar dahil) altı erişim türlerinden herhangi biriyle bildirilebilecek. `protected` `protected internal` Yapılar devralma desteklemediğinden, yapı üyeleri, veya olarak bildirilemez `private protected` .
+Sınıf ve kayıt üyeleri (iç içe geçmiş sınıflar, kayıtlar ve yapılar dahil) altı erişim türünden herhangi biri ile bildirilebilecek. `protected` `protected internal` Yapılar devralma desteklemediğinden, yapı üyeleri, veya olarak bildirilemez `private protected` .
 
 Normalde, bir üyenin erişilebilirliği onu içeren tür erişilebilirliğiyle daha büyük değildir. Ancak, `public` üye arabirim yöntemleri uygularsa veya ortak bir temel sınıfta tanımlanan sanal yöntemleri geçersiz kıldığında, iç sınıfın bir üyesine derleme dışından erişilebilir.
 
@@ -52,7 +52,7 @@ Kullanıcı tanımlı işleçler her zaman ve olarak bildirilmelidir `public` `s
 
 Sonlandırıcılar erişilebilirlik değiştiricilerine sahip olamaz.
 
-Bir veya üyesi için erişim düzeyini ayarlamak `class` için `struct` , aşağıdaki örnekte gösterildiği gibi, üye bildirimine uygun anahtar sözcüğü ekleyin.
+Bir, veya üyesi için erişim düzeyini ayarlamak için `class` `record` `struct` , aşağıdaki örnekte gösterildiği gibi, üye bildirimine uygun anahtar sözcüğü ekleyin.
 
 [!code-csharp[MethodAccess](~/samples/snippets/csharp/objectoriented/accessmodifiers.cs#MethodAccess)]
 
@@ -79,6 +79,6 @@ Temsilciler sınıflar ve yapılar gibi davranır. Varsayılan olarak, `internal
 - [protected](../../language-reference/keywords/protected.md)
 - [protected internal](../../language-reference/keywords/protected-internal.md)
 - [private protected](../../language-reference/keywords/private-protected.md)
-- [sınıf](../../language-reference/keywords/class.md)
+- [sınıfı](../../language-reference/keywords/class.md)
 - [sýný](../../language-reference/builtin-types/struct.md)
 - [arayüz](../../language-reference/keywords/interface.md)

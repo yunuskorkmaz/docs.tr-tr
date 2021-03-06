@@ -6,12 +6,12 @@ ms.author: casoper
 ms.date: 11/13/2020
 ms.topic: tutorial
 ms.prod: dotnet
-ms.openlocfilehash: d4c3e373207e23877903491871f4d09e11000c1a
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 005b40a7d9f46b84fcd90541248f5f4fd243e612
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96590053"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255561"
 ---
 <!--markdownlint-disable DOCSMD011 -->
 # <a name="display-text-on-an-lcd"></a>LCD üzerinde metin görüntüleme
@@ -25,14 +25,14 @@ Bu konu başlığında, bir ı2C GPıO Genişleticisi kullanarak bir LCD karakte
 ## <a name="prerequisites"></a>Önkoşullar
 
 - [!INCLUDE [prereq-rpi](../includes/prereq-rpi.md)]
-- [20x4 LCD karakter gösterimi ve I2C arabirim](https://www.bing.com/images/search?q=20x4+lcd+display+with+i2c)<span class="docon docon-navigate-external x-hidden-focus"></span>
+- [20x4 LCD karakter gösterimi ve ı2C arabirim](https://www.bing.com/images/search?q=20x4+lcd+display+with+i2c)
 - Atlatıcı kabloları
 - Enine (isteğe bağlı/önerilen)
 - Raspberry PI GıO ayırıcı pano (isteğe bağlı/önerilen)
 - [!INCLUDE [tutorial-prereq-dotnet](../includes/tutorial-prereq-dotnet.md)]
 
 > [!NOTE]
-> LCD karakter ekranların birçok üreticisi vardır. Çoğu tasarım aynıdır ve üretici, işlevlerle ilgili herhangi bir farklılık yapmamalıdır. Bu öğretici, başvuru için [LCD2004 altında sunkiyle](https://www.sunfounder.com/lcd2004-module.html) geliştirilmiştir <span class="docon docon-navigate-external x-hidden-focus"></span> .
+> LCD karakter ekranların birçok üreticisi vardır. Çoğu tasarım aynıdır ve üretici, işlevlerle ilgili herhangi bir farklılık yapmamalıdır. Bu öğretici, başvuru için [LCD2004 altında sunkiyle](https://www.sunfounder.com/lcd2004-module.html)geliştirilmiştir.
 
 [!INCLUDE [prepare-pi-i2c](../includes/prepare-pi-i2c.md)]
 
@@ -49,7 +49,7 @@ Gerektiğinde aşağıdaki rakamları inceleyin:
 
 | I2C arabirimi (ekran geri) | Raspberry PI GıO |
 |---------------------------------|-------------------|
-| :::image type="content" source="../media/character-display-i2c-thumb.png" alt-text="I2C GPıO genişleticiyi gösteren karakter görüntüsünün geri görüntüsünün bir görüntüsü." lightbox="../media/character-display-i2c.png"::: | :::image type="content" source="../media/gpio-pinout-diagram-thumb.png" alt-text="Raspberry PI GıO üstbilgisinin aşımını gösteren bir diyagram. Image hitap Raspberry PI Foundation." lightbox="../media/gpio-pinout-diagram.png":::<br />[Image hitap Raspberry PI Foundation](https://www.raspberrypi.org/documentation/usage/gpio/) <span class="docon docon-navigate-external x-hidden-focus"></span> .
+| :::image type="content" source="../media/character-display-i2c-thumb.png" alt-text="I2C GPıO genişleticiyi gösteren karakter görüntüsünün geri görüntüsünün bir görüntüsü." lightbox="../media/character-display-i2c.png"::: | :::image type="content" source="../media/gpio-pinout-diagram-thumb.png" alt-text="Raspberry PI GıO üstbilgisinin aşımını gösteren bir diyagram. Image hitap Raspberry PI Foundation." lightbox="../media/gpio-pinout-diagram.png":::<br />[Image hitap Raspberry PI Foundation](https://www.raspberrypi.org/documentation/usage/gpio/).
  |
 
 [!INCLUDE [gpio-breakout](../includes/gpio-breakout.md)]
@@ -104,7 +104,7 @@ Tebrikler! Bir LCD üzerinde bir ı2C ve GıO Genişleticisi kullanarak metin g�
 
 ## <a name="get-the-source-code"></a>Kaynak kodunu alma
 
-Bu öğreticinin kaynağı [GitHub ' da kullanılabilir](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/tutorials/LcdTutorial) <span class="docon docon-navigate-external x-hidden-focus"></span> .
+Bu öğreticinin kaynağı [GitHub ' da kullanılabilir](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/tutorials/LcdTutorial).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

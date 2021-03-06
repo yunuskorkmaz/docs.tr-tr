@@ -1,13 +1,13 @@
 ---
 title: 'Son değişiklik: PrincipalPermissionAttribute hata olarak kullanımdan kalktı'
-description: PrincipalPermissionAttribute oluşturucusunun artık kullanılmayan ve derleme zamanı hatası üreten çekirdek .NET kitaplıklarında .NET 5,0 ile ilgili önemli değişiklik hakkında bilgi edinin.
+description: PrincipalPermissionAttribute oluşturucusunun artık kullanılmayan ve bir derleme zamanı hatası oluşturduğu çekirdek .NET kitaplıklarında .NET 5 ' ün son değişikliği hakkında bilgi edinin.
 ms.date: 11/01/2020
-ms.openlocfilehash: 138bbf25fd493c1bb9c2b3f10b62681c735ea7b3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7568883935633e98b884b553efccf50504448b77
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761505"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257238"
 ---
 # <a name="principalpermissionattribute-is-obsolete-as-error"></a>PrincipalPermissionAttribute hata olarak kullanımdan kalktı
 
@@ -25,13 +25,13 @@ public void MyMethod()
 }
 ```
 
-.NET 5,0 ' den başlayarak <xref:System.Security.Permissions.PrincipalPermissionAttribute> özniteliği bir yönteme uygulayamazsınız. Özniteliği için Oluşturucu artık kullanılmıyor ve derleme zamanı hatası veriyor. Kullanımdan çıkarma uyarılarının aksine, hatayı bastırılamaz.
+.NET 5 ' <xref:System.Security.Permissions.PrincipalPermissionAttribute> ten başlayarak özniteliği bir metoda uygulayamazsınız. Özniteliği için Oluşturucu artık kullanılmıyor ve derleme zamanı hatası veriyor. Kullanımdan çıkarma uyarılarının aksine, hatayı bastırılamaz.
 
 ## <a name="reason-for-change"></a>Değişiklik nedeni
 
-<xref:System.Security.Permissions.PrincipalPermissionAttribute>Türü, alt sınıfını oluşturan diğer türler gibi <xref:System.Security.Permissions.SecurityAttribute> bir parçasıdır. NET 'in kod erişim güvenliği (CAS) altyapısı. .NET Framework 2. x-4. x içinde, çalışma zamanı, <xref:System.Security.Permissions.PrincipalPermissionAttribute> uygulama tam güven senaryosunda çalışıyor olsa bile Yöntem girişinde ek açıklamaları zorlar. .NET Core ve .NET 5,0 ve üzeri CAS özniteliklerini desteklemez ve çalışma zamanı bunları yoksayar.
+<xref:System.Security.Permissions.PrincipalPermissionAttribute>Türü, alt sınıfını oluşturan diğer türler gibi <xref:System.Security.Permissions.SecurityAttribute> bir parçasıdır. NET 'in kod erişim güvenliği (CAS) altyapısı. .NET Framework 2. x-4. x içinde, çalışma zamanı, <xref:System.Security.Permissions.PrincipalPermissionAttribute> uygulama tam güven senaryosunda çalışıyor olsa bile Yöntem girişinde ek açıklamaları zorlar. .NET Core ve .NET 5 ve üzeri CAS özniteliklerini desteklemez ve çalışma zamanı bunları yoksayar.
 
-.NET Framework .NET Core ve .NET 5,0 davranışlarındaki bu fark, erişimin engellenmesi gereken ancak bunun yerine izin verilen bir "başarısız açma" senaryosu oluşmasına neden olabilir. "Başarısız açma" senaryosunu engellemek için artık .NET 5,0 veya üstünü hedefleyen kodda özniteliği uygulayamazsınız.
+.NET Framework .NET Core ve .NET 5 ' e yapılan davranıştaki bu fark, erişimin engellenmesi gereken ancak bunun yerine izin verilen bir "başarısız açma" senaryosu oluşmasına neden olabilir. "Başarısız açma" senaryosunu engellemek için, artık .NET 5 veya üstünü hedefleyen kodda özniteliği uygulayamazsınız.
 
 ## <a name="version-introduced"></a>Sunulan sürüm
 

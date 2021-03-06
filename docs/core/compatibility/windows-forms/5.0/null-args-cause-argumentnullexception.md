@@ -1,13 +1,13 @@
 ---
 title: 'Son değişiklik: WinForms yöntemleri şimdi ArgumentNullException oluşturur'
-description: Bazı Windows Forms yöntemlerinin artık null bağımsız değişkenler için bir ArgumentNullException oluşturanın .NET 5,0 ' deki kırılmaya karşı değişiklik hakkında bilgi edinin.
+description: .NET 5 ' teki son değişiklik hakkında bilgi edinin. bazı Windows Forms yöntemlerinin artık null bağımsız değişkenler için bir bağımsız değişken NullException oluştur
 ms.date: 09/18/2020
-ms.openlocfilehash: 77280827d44b0e58533339a09357d518a0bfe508
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9d72f8e3320430396132de20c252cd5e8759dce3
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761613"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256107"
 ---
 # <a name="winforms-methods-now-throw-argumentnullexception"></a>WinForms yöntemleri şimdi ArgumentNullException oluşturur
 
@@ -15,13 +15,13 @@ Bazı Windows Forms Yöntemler artık <xref:System.ArgumentNullException> , daha
 
 ## <a name="change-description"></a>Açıklamayı Değiştir
 
-Daha önce, belirli Windows Forms Yöntemler, <xref:System.NullReferenceException> null olan bir bağımsız değişken geçirtiyse bir oluşturdu. .NET 5,0 ' den başlayarak, bu yöntemler artık <xref:System.ArgumentNullException> bunun yerine null bağımsız değişkenler oluşturur.
+Daha önce, belirli Windows Forms Yöntemler, <xref:System.NullReferenceException> null olan bir bağımsız değişken geçirtiyse bir oluşturdu. .NET 5 ' den başlayarak, bu yöntemler artık <xref:System.ArgumentNullException> bunun yerine null bağımsız değişkenler oluşturur.
 
 <xref:System.ArgumentNullException>.NET çalışma zamanının davranışına uygun bir şekilde oluşturuluyor. Ayrıca, bir bağımsız değişkenin null ve hangi bağımsız değişkeni olduğunu açıkça bir şekilde iletişim kurarak hata ayıklama deneyimini geliştirir.
 
 ## <a name="version-introduced"></a>Sunulan sürüm
 
-.NET 5,0
+.NET 5.0
 
 ## <a name="recommended-action"></a>Önerilen eylem
 

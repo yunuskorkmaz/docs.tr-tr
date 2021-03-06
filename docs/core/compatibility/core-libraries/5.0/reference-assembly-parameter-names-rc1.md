@@ -1,13 +1,13 @@
 ---
 title: "Son değişiklik: RC2 'de parametre adları değişti"
-description: Bazı başvuru derleme parametresi adlarının, .NET 5,0 ' nin önizleme ve sürüm adayı sürümlerinden değiştiği çekirdek .NET kitaplıklarında .NET 5,0 son değişikliği hakkında bilgi edinin.
+description: Bazı başvuru derleme parametresi adlarının, .NET 5,0 ' un önizleme ve sürüm adayı sürümlerinden değiştiği çekirdek .NET kitaplıklarında .NET 5 ' in son değişikliği hakkında bilgi edinin.
 ms.date: 11/01/2020
-ms.openlocfilehash: 554a4fa9e08fdb504f380465496d7e7e9df85814
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: caca9055bda50174b40d5675c6d34679df61deba
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761502"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257199"
 ---
 # <a name="parameter-names-changed-in-rc2"></a>RC2 'de parametre adları değiştirildi
 
@@ -15,9 +15,9 @@ Bazı başvuru derleme parametresi adları, uygulama derlemelerindeki parametre 
 
 ## <a name="change-description"></a>Açıklamayı Değiştir
 
-Önceki .NET 5,0 Önizleme ve RC sürümlerinde, bazı [Başvuru derleme](../../../../standard/assembly/reference-assemblies.md) parametresi adları, uygulama derlemesinde karşılık gelen parametrelere farklıdır. Bu, adlandırılmış bağımsız değişkenler ve yansıma kullanılırken soruna neden olabilir.
+Önceki .NET 5 Preview ve RC sürümlerinde, bazı [Başvuru derleme](../../../../standard/assembly/reference-assemblies.md) parametresi adları, uygulama derlemesinde karşılık gelen parametrelere farklıdır. Bu, adlandırılmış bağımsız değişkenler ve yansıma kullanılırken soruna neden olabilir.
 
-.NET 5,0 RC2 'de, bu eşleşmeyen parametre adları, başvuru derlemelerinde, uygulama derlemelerindeki karşılık gelen parametre adlarıyla tam olarak eşleşecek şekilde güncelleştirildi.
+.NET 5 RC2 'de, bu eşleşmeyen parametre adları, başvuru derlemelerinde, uygulama derlemelerindeki karşılık gelen parametre adlarıyla tam olarak eşleşecek şekilde güncelleştirildi.
 
 Aşağıdaki tabloda, değiştirilen API 'Ler ve parametre adları gösterilmektedir.
 

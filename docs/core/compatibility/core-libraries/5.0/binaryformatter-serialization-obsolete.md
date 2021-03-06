@@ -1,13 +1,13 @@
 ---
 title: 'Son değişiklik: BinaryFormatter serileştirme yöntemleri artık kullanılmıyor ve ASP.NET uygulamalarında yasaklanmış'
-description: BinaryFormatter, Formatter ve IFormatter 'daki serileştirme ve seri durumdan çıkarma yöntemlerinin artık kullanılmayan çekirdek .NET kitaplıklarında .NET 5,0 'in son değişikliği hakkında bilgi edinin.
+description: BinaryFormatter, Formatter ve IFormatter 'daki serileştirme ve seri durumdan çıkarma yöntemlerinin artık kullanılmayan çekirdek .NET kitaplıklarında .NET 5 ' in son değişikliği hakkında bilgi edinin.
 ms.date: 11/01/2020
-ms.openlocfilehash: 1dca30d33f2aa0a6fe8f05fe728557092f836b2d
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 8c31a95683526ba394101d449b5ae3328f57f3c3
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189850"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257667"
 ---
 # <a name="binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps"></a>BinaryFormatter serileştirme yöntemleri artık kullanılmıyor ve ASP.NET uygulamalarında yasaklanmış
 

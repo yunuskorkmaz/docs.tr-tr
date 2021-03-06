@@ -1,21 +1,21 @@
 ---
 title: 'Son değişiklik: TextFormatFlags. ModifyString artık kullanılmıyor'
-description: .NET 5,0 'deki önemli değişiklik hakkında bilgi edinmek için TextFormatFlags. ModifyString alanının bir uyarı olarak artık kullanılmıyor olduğunu öğrenin.
+description: .NET 5 ' teki önemli değişiklik hakkında bilgi edinmek için TextFormatFlags. ModifyString alanının bir uyarı olarak artık kullanılmıyor olduğunu öğrenin.
 ms.date: 11/05/2020
-ms.openlocfilehash: 83dca65a770ccdcd5ce48bb669f5122dc2d5ad77
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9fe1e04b1ad36070b08af2affdca1e058ec74bb8
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761429"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256172"
 ---
-# <a name="textformatflagsmodifystring-is-obsolete"></a>TextFormatFlags. ModifyString artık kullanılmıyor
+# <a name="textformatflagsmodifystring-is-obsolete"></a>TextFormatFlags.ModifyString kullanımdan kaldırıldı
 
 Bu <xref:System.Windows.Forms.TextFormatFlags.ModifyString?displayProperty=nameWithType> alan, bir uyarı olarak kullanımdan kalkmıştır ve gelecek bir .NET sürümünde kaldırılabilir.
 
 ## <a name="change-description"></a>Açıklamayı Değiştir
 
-Önceki .NET sürümlerinde, <xref:System.Windows.Forms.TextFormatFlags.ModifyString?displayProperty=nameWithType> Enumeration alanı kullanılmıyor olarak işaretlenmemiştir. .NET 5,0 ve sonraki sürümlerinde, uyarı olarak artık kullanılmıyor olarak işaretlenir. Bu alan, gelecekteki bir .NET sürümünde kaldırılabilir.
+Önceki .NET sürümlerinde, <xref:System.Windows.Forms.TextFormatFlags.ModifyString?displayProperty=nameWithType> Enumeration alanı kullanılmıyor olarak işaretlenmemiştir. .NET 5 ve sonraki sürümlerinde, uyarı olarak artık kullanılmıyor olarak işaretlenir. Bu alan, gelecekteki bir .NET sürümünde kaldırılabilir.
 
 ## <a name="reason-for-change"></a>Değişiklik nedeni
 
@@ -23,7 +23,7 @@ Bu <xref:System.Windows.Forms.TextFormatFlags.ModifyString?displayProperty=nameW
 
 ## <a name="version-introduced"></a>Sunulan sürüm
 
-.NET 5,0
+.NET 5.0
 
 ## <a name="recommended-action"></a>Önerilen eylem
 

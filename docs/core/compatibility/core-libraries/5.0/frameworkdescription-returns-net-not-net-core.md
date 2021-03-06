@@ -1,13 +1,13 @@
 ---
 title: "Son değişiklik: .NET Core yerine FrameworkDescription 'un değeri .NET"
-description: RunTimeInformation. FrameworkDescription 'un şimdi ".NET Core" yerine ".NET" döndüğü çekirdek .NET kitaplıklarında .NET 5,0 son değişikliği hakkında bilgi edinin.
+description: RunTimeInformation. FrameworkDescription 'un şimdi ".NET Core" yerine ".NET" döndüğü çekirdek .NET kitaplıklarında .NET 5 ' in son değişikliği hakkında bilgi edinin.
 ms.date: 11/01/2020
-ms.openlocfilehash: 3925fb092135c26291e1e60b99f359974d21553c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 18aa9a30a149b3c38d4bbfe4a0c99446f4372f07
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761558"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257524"
 ---
 # <a name="frameworkdescriptions-value-is-net-instead-of-net-core"></a>FrameworkDescription 'un değeri .NET Core yerine .NET
 
@@ -17,7 +17,7 @@ ms.locfileid: "95761558"
 
 Önceki .NET sürümlerinde, <xref:System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription?displayProperty=nameWithType> Açıklama dizesinin parçası olarak ".NET Core" döndürür. Örneğin, `.NET Core 3.1.1` .
 
-.NET 5,0 ' den başlayarak, <xref:System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription?displayProperty=nameWithType> Açıklama dizesinin parçası olarak ".net" döndürür. Örneğin, `.NET 5.0.0` .
+.NET 5 ' den başlayarak, <xref:System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription?displayProperty=nameWithType> Açıklama dizesinin parçası olarak ".net" döndürür. Örneğin, `.NET 5.0.0` .
 
 ## <a name="reason-for-change"></a>Değişiklik nedeni
 

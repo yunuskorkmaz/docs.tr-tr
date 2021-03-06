@@ -1,13 +1,13 @@
 ---
 title: 'Son değişiklik: WinForms ve WPF uygulamaları Microsoft. NET. SDK kullanır'
-description: Windows Forms ve Windows Presentation Framework uygulamalarının artık .NET Core WinForms ve WPF SDK yerine .NET SDK 'yi kullanacağı .NET 5,0 'deki önemli değişiklik hakkında bilgi edinin.
+description: Windows Forms ve Windows Presentation Framework uygulamalarının artık .NET Core WinForms ve WPF SDK yerine .NET SDK 'yi kullanacağı .NET 5 ' teki önemli değişiklik hakkında bilgi edinin.
 ms.date: 09/18/2020
-ms.openlocfilehash: 5eafed03fbf034f6a6457217a8527a877214e239
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: 408233f6f8801fb3d4e53beab28c26a777a4a3e1
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633825"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256211"
 ---
 # <a name="winforms-and-wpf-apps-use-microsoftnetsdk"></a>WinForms ve WPF uygulamaları Microsoft. NET. SDK kullanır
 
@@ -15,7 +15,7 @@ Windows Forms ve Windows Presentation Framework (WPF) uygulamaları artık `Micr
 
 ## <a name="change-description"></a>Açıklamayı Değiştir
 
-Önceki .NET Core sürümlerinde, WinForms ve WPF uygulamaları ayrı bir [Proje SDK 'sı](../../../project-sdk/overview.md) ( `Microsoft.NET.Sdk.WindowsDesktop` ) kullandı. .NET 5,0 ' den başlayarak, WinForms ve WPF SDK 'Sı .NET SDK () ile birleştirilmiştir `Microsoft.NET.Sdk` . Ayrıca, yeni [hedef çerçeve takma adları (tfd)](../../../../standard/frameworks.md) , `netcoreapp` `netstandard` .NET 5 ' in yerini alır. Aşağıdaki örnekte, .NET 5,0 veya sonraki bir sürümü yeniden hedeflerken WPF proje dosyası için yapmanız gereken değişiklikler gösterilmektedir.
+Önceki .NET Core sürümlerinde, WinForms ve WPF uygulamaları ayrı bir [Proje SDK 'sı](../../../project-sdk/overview.md) ( `Microsoft.NET.Sdk.WindowsDesktop` ) kullandı. .NET 5 ' den başlayarak, WinForms ve WPF SDK 'Sı .NET SDK () ile birleştirilmiştir `Microsoft.NET.Sdk` . Ayrıca, yeni [hedef çerçeve takma adları (tfd)](../../../../standard/frameworks.md) , `netcoreapp` `netstandard` .NET 5 ' in yerini alır. Aşağıdaki örnek, .NET 5 veya sonraki bir sürümünü yeniden hedeflerken WPF proje dosyası için yapmanız gereken değişiklikleri gösterir.
 
 Önceki .NET Core sürümlerinde:
 
@@ -31,7 +31,7 @@ Windows Forms ve Windows Presentation Framework (WPF) uygulamaları artık `Micr
 </Project>
 ```
 
-.NET 5,0 ve sonraki sürümlerde:
+.NET 5 ve sonraki sürümlerde:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">

@@ -1,13 +1,13 @@
 ---
 title: 'Son değişiklik: WinForms özellikleri artık ArgumentOutOfRangeException oluşturur'
-description: Bazı Windows Forms özelliklerinin artık geçersiz bağımsız değişkenler için bir ArgumentOutOfRangeException oluşturması durumunda .NET 5,0 ' deki önemli değişiklik hakkında bilgi edinin.
+description: .NET 5 ' teki son değişiklik hakkında bilgi edinin. bazı Windows Forms özellikleri artık geçersiz bağımsız değişkenler için bir ArgumentOutOfRangeException oluşturur.
 ms.date: 06/18/2020
-ms.openlocfilehash: 94593047d16304ce401b23993ad4ca173c10812b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 493669af1ed5646d93e7c7d2688afd40f3fa731c
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761586"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256159"
 ---
 # <a name="winforms-properties-now-throw-argumentoutofrangeexception"></a>WinForms özellikleri artık ArgumentOutOfRangeException oluşturur
 
@@ -15,13 +15,13 @@ Bazı Windows Forms özellikleri artık <xref:System.ArgumentOutOfRangeException
 
 ## <a name="change-description"></a>Açıklamayı Değiştir
 
-Daha önce, bu özellikler <xref:System.NullReferenceException> <xref:System.IndexOutOfRangeException> <xref:System.ArgumentException> Aralık dışı bağımsız değişkenler geçirildiğinde, veya gibi çeşitli özel durumlar oluşturdu. .NET 5,0 ' den itibaren, bu özellikler artık <xref:System.ArgumentOutOfRangeException> Aralık dışı olan bağımsız değişkenleri geçtiğinde bir oluşturur.
+Daha önce, bu özellikler <xref:System.NullReferenceException> <xref:System.IndexOutOfRangeException> <xref:System.ArgumentException> Aralık dışı bağımsız değişkenler geçirildiğinde, veya gibi çeşitli özel durumlar oluşturdu. .NET 5 ' den itibaren, bu özellikler artık <xref:System.ArgumentOutOfRangeException> Aralık dışı olan bağımsız değişkenleri geçtiğinde bir oluşturur.
 
 <xref:System.ArgumentOutOfRangeException>.NET çalışma zamanının davranışına uygun bir şekilde oluşturuluyor. Ayrıca, hangi bağımsız değişkenin geçersiz olduğu açıkça iletişim kurarak hata ayıklama deneyimini geliştirir.
 
 ## <a name="version-introduced"></a>Sunulan sürüm
 
-.NET 5,0
+.NET 5.0
 
 ## <a name="recommended-action"></a>Önerilen eylem
 

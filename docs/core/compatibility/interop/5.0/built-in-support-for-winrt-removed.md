@@ -1,13 +1,13 @@
 ---
 title: "Son değişiklik: WinRT için yerleşik destek .NET 'ten kaldırılmıştır"
-description: .NET 5,0 ' de birlikte çalışma için yerleşik desteğin .NET 'ten kaldırıldığı hakkında bilgi edinin.
+description: .NET 5 ' teki birlikte çalışma için yerleşik desteğin .NET 'ten kaldırıldığı hakkında bilgi edinin.
 ms.date: 10/13/2020
-ms.openlocfilehash: 61d8e26d06c232a7bfa1891a2159f5232f747b8a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 986b810b74c7e7d7514ec2b734bfab45e29b87fa
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761553"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256692"
 ---
 # <a name="built-in-support-for-winrt-is-removed-from-net"></a>WinRT için yerleşik destek .NET 'ten kaldırılmıştır
 
@@ -19,7 +19,7 @@ ms.locfileid: "95761553"
 
 ## <a name="change-description"></a>Açıklamayı Değiştir
 
-Daha önce CoreCLR, etkin ve WinRT türlerini tüketen [Windows meta verileri (WinMD) dosyalarını](/uwp/winrt-cref/winmd-files) tüketebilir. .NET 5,0 ' den başlayarak CoreCLR artık WinMD dosyalarını doğrudan tüketmez.
+Daha önce CoreCLR, etkin ve WinRT türlerini tüketen [Windows meta verileri (WinMD) dosyalarını](/uwp/winrt-cref/winmd-files) tüketebilir. .NET 5 ' den başlayarak CoreCLR artık WinMD dosyalarını doğrudan tüketmez.
 
 Desteklenmeyen bir derlemeye başvuru yapmaya çalışırsanız, bir ile karşılaşırsınız <xref:System.IO.FileNotFoundException> . Bir WinRT sınıfını etkinleştirirseniz bir ile karşılaşırsınız <xref:System.PlatformNotSupportedException> .
 
@@ -38,7 +38,7 @@ Bu son değişiklik aşağıdaki nedenlerden dolayı yapılmıştır:
   <TargetFramework>net5.0-windows10.0.19041</TargetFramework>
   ```
 
-- .NET 5,0 ve üzeri sürümler için WinRT API 'Leri ve türleri oluşturmak veya özelleştirmek üzere [C#/wınrt](/windows/uwp/csharp-winrt/) araç zincirini kullanın.
+- .NET 5 ve sonraki sürümler için WinRT API 'Leri ve türleri oluşturmak veya özelleştirmek üzere [C#/wınrt](/windows/uwp/csharp-winrt/) araç zincirini kullanın.
 
 ## <a name="affected-apis"></a>Etkilenen API’ler
 

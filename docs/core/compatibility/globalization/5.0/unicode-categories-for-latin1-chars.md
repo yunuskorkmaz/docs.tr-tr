@@ -1,13 +1,13 @@
 ---
 title: 'Son değişiklik: bazı Latin-1 karakterleri için Unicode kategorisi değişti'
-description: .NET 5,0 ' de, Char yöntemlerinin artık Latin-1 aralığındaki karakterler için doğru Unicode kategorisini döndürdüğü net ' de Genelleştirme bölünmesi değişikliği hakkında bilgi edinin.
+description: .NET 5 ' teki Genelleştirme bölünmesi değişikliği hakkında bilgi edinmek için Char yöntemlerinin artık Latin-1 aralığındaki karakterler için doğru Unicode kategorisini döndürdüğü yerde.
 ms.date: 04/07/2020
-ms.openlocfilehash: 8bd093a89857c83921fc0bf987348b529f74ce68
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 03355c488d2bdae78f989e647c9b5b7913d73649
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761705"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256679"
 ---
 # <a name="unicode-category-changed-for-some-latin-1-characters"></a>Bazı Latin-1 karakterleri için Unicode kategorisi değişti
 
@@ -15,11 +15,11 @@ ms.locfileid: "95761705"
 
 ## <a name="change-description"></a>Açıklamayı Değiştir
 
-Önceki .NET sürümlerinde, <xref:System.Char> Yöntemler Latin-1 aralığındaki karakterler için sabit bir Unicode kategori listesi kullandı. Ancak, Unicode standardı Bu API 'lerin uygulandığından bu karakterlerin bazı kategorilerini değiştirmiştir, bu da bir tutarsızlık oluşturuyor. Ayrıca, ve API 'ler arasında bir tutarsızlık vardı <xref:System.Char> <xref:System.Globalization.CharUnicodeInfo> , bu da Unicode standardını izler. .NET 5,0 ve sonraki sürümlerde Yöntemler, <xref:System.Char> tüm karakterler Için Unicode standartınkilerle eşleşen Unicode kategorisini kullanır ve döndürür.
+Önceki .NET sürümlerinde, <xref:System.Char> Yöntemler Latin-1 aralığındaki karakterler için sabit bir Unicode kategori listesi kullandı. Ancak, Unicode standardı Bu API 'lerin uygulandığından bu karakterlerin bazı kategorilerini değiştirmiştir, bu da bir tutarsızlık oluşturuyor. Ayrıca, ve API 'ler arasında bir tutarsızlık vardı <xref:System.Char> <xref:System.Globalization.CharUnicodeInfo> , bu da Unicode standardını izler. .NET 5 ve sonraki sürümlerde Yöntemler, <xref:System.Char> tüm karakterler Için Unicode standardı ile eşleşen Unicode kategorisini kullanır ve döndürür.
 
 Aşağıdaki tabloda, .NET 5,0 ' de Unicode kategorileri değişmiş olan karakterler gösterilmektedir:
 
-| Karakter    | Unicode kategorisi<br>önceki .NET sürümlerinde | Unicode kategorisi<br>.NET 5,0 ve sonraki sürümlerde |
+| Karakter    | Unicode kategorisi<br>önceki .NET sürümlerinde | Unicode kategorisi<br>.NET 5 ve sonraki sürümlerde |
 |:------------:|:---------------------------------------------:|:--------------------------------------------------:|
 | § (\u00a7)   | `OtherSymbol`                                 | `OtherPunctuation`                                 |
 | ª (\u00aa)   | `LowercaseLetter`                             | `OtherLetter`                                      |
@@ -29,7 +29,7 @@ Aşağıdaki tabloda, .NET 5,0 ' de Unicode kategorileri değişmiş olan karakt
 
 ## <a name="version-introduced"></a>Sunulan sürüm
 
-.NET 5,0
+.NET 5.0
 
 ## <a name="recommended-action"></a>Önerilen eylem
 

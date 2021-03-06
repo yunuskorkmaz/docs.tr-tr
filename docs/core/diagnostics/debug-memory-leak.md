@@ -3,12 +3,12 @@ title: Bellek sızıntısı öğreticisinde hata ayıklama
 description: .NET Core 'da Bellek sızıntısını nasıl ayıklayacağınızı öğrenin.
 ms.topic: tutorial
 ms.date: 04/20/2020
-ms.openlocfilehash: 2e96dff7c0d38d918d32113a3a86e8d5129a91fc
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 2cdc6e2f27ac04b6057aca3787564024d084fe63
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102105342"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255678"
 ---
 # <a name="debug-a-memory-leak-in-net-core"></a>.NET Core 'da bellek sızıntısı hatalarını ayıklama
 
@@ -115,7 +115,7 @@ Bellek kullanımını izleyerek belleğin büyüdüğünü veya sızmasını gü
 
 ### <a name="generate-memory-dump"></a>Bellek dökümü oluştur
 
-Olası bellek sızıntılarını analiz edilirken uygulamanın bellek yığınına erişmeniz gerekir. Daha sonra bellek içeriğini çözümleyebilirsiniz. Nesneler arasındaki ilişkilere bakarak belleğin neden serbest bırakılmadığına ilişkin bir kayıt oluşturursunuz. Ortak bir tanılama veri kaynağı, Windows 'da bellek dökümleridir veya Linux üzerinde eşdeğer çekirdek dökümleridir. .NET Core uygulamasının bir dökümünü oluşturmak için [DotNet-dump)](dotnet-dump.md) aracını kullanabilirsiniz.
+Olası bellek sızıntılarını analiz edilirken uygulamanın bellek yığınına erişmeniz gerekir. Daha sonra bellek içeriğini çözümleyebilirsiniz. Nesneler arasındaki ilişkilere bakarak belleğin neden serbest bırakılmadığına ilişkin bir kayıt oluşturursunuz. Ortak bir tanılama veri kaynağı, Windows 'da bellek dökümleridir veya Linux üzerinde eşdeğer çekirdek dökümleridir. .NET Core uygulamasının bir dökümünü oluşturmak için [DotNet-dump](dotnet-dump.md) aracını kullanabilirsiniz.
 
 Önceden başlatılan [örnek hata ayıklama hedefini](/samples/dotnet/samples/diagnostic-scenarios/) kullanarak bir Linux core dökümü oluşturmak için aşağıdaki komutu çalıştırın:
 

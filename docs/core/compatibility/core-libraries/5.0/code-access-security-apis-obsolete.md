@@ -1,13 +1,13 @@
 ---
 title: "Son değişiklik: çoğu kod erişimi güvenlik API 'Leri artık kullanılmıyor"
-description: .NET 'teki çoğu kod erişim güvenliği (CAS) ile ilgili türler artık uyarı olarak kullanımdan kalkmış olan çekirdek .NET kitaplıklarında .NET 5,0 'in son değişikliği hakkında bilgi edinin.
+description: .NET 'teki çoğu kod erişim güvenliği (CAS) ile ilgili türler artık uyarı olarak kullanımdan kalkmış olan çekirdek .NET kitaplıklarında .NET 5 ' teki son değişiklik hakkında bilgi edinin.
 ms.date: 11/01/2020
-ms.openlocfilehash: e793043e83389730934137d441f7ee776d44540b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cc4be58622e81022e74476cf824a19689ba23ea4
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761565"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257641"
 ---
 # <a name="most-code-access-security-apis-are-obsolete"></a>Çoğu kod erişimi güvenlik API 'Leri artık kullanılmıyor
 
@@ -54,7 +54,7 @@ public void DoDeny()
 }
 ```
 
-.NET 5,0 ve sonraki sürümlerinde, CA 'larla ilgili API 'Ler artık kullanılmıyor ve derleme zamanı uyarısı oluşturuyor `SYSLIB0003` .
+.NET 5 ve sonraki sürümlerinde, CA 'larla ilgili API 'Ler artık kullanılmıyor ve derleme zamanı uyarısı oluşturuyor `SYSLIB0003` .
 
 ```csharp
 [SocketPermission(SecurityAction.Assert, Host = "contoso.com", Port = "443")] // warning SYSLIB0003
@@ -65,7 +65,7 @@ public void DoSomething()
 }
 ```
 
-Bu yalnızca derleme zamanı değişir. .NET Core 'un önceki sürümlerinden çalışma zamanı değişikliği yoktur. .NET Core 2. x-3. x içinde hiçbir işlem gerçekleştiren Yöntemler, .NET 5,0 ve sonraki sürümlerde çalışma zamanında hiçbir işlem gerçekleştirmeye devam edecektir. <xref:System.PlatformNotSupportedException>.NET Core 2. x-3. x ' te oluşturan Yöntemler, <xref:System.PlatformNotSupportedException> .NET 5,0 ve sonraki sürümlerde çalışma zamanında bir işleme devam edecektir.
+Bu yalnızca derleme zamanı değişir. .NET Core 'un önceki sürümlerinden çalışma zamanı değişikliği yoktur. .NET Core 2. x-3. x içinde hiçbir işlem gerçekleştiren Yöntemler, .NET 5 ve sonraki sürümlerde çalışma zamanında hiçbir işlem gerçekleştirmeye devam edecektir. <xref:System.PlatformNotSupportedException>.NET Core 2. x-3. x içinde oluşturan Yöntemler, <xref:System.PlatformNotSupportedException> .NET 5 ve sonraki sürümlerde çalışma zamanında oluşturma işlemine devam eder.
 
 ## <a name="reason-for-change"></a>Değişiklik nedeni
 

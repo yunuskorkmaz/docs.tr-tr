@@ -3,12 +3,12 @@ title: Davpr yayımlama & abonelik oluşturma bloğu
 description: '& abonelik oluşturma-bloğunun ve bu uygulamayı nasıl uygulayacağınız için bir açıklama'
 author: edwinvw
 ms.date: 02/07/2021
-ms.openlocfilehash: b07350ef19367f843b15ca30f7a913f910c20255
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 3d00c5a3171dd5a7287d07675f5a3742697e784b
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106330"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258006"
 ---
 # <a name="the-dapr-publish--subscribe-building-block"></a>Davpr yayımlama & abonelik oluşturma bloğu
 
@@ -152,7 +152,7 @@ var data = new OrderData
   orderId = "123456",
   productId = "67890",
   amount = 2
-}
+};
 
 var daprClient = new DaprClientBuilder().Build();
 

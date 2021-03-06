@@ -1,23 +1,23 @@
 ---
 title: 'Son değişiklik: ASP.NET Core uygulamalar tırnaklı sayıların serisini kaldırmada izin veriyor'
-description: ASP.NET Core uygulamaların bir özel durum oluşturmak yerine JSON dizeleri olarak temsil edilen sayıları başarıyla seri durumdan çıkaracağı .NET 5,0 ' deki Son değişiklik hakkında bilgi edinin.
+description: .NET 5 ' teki son değişiklik hakkında bilgi edinin. ASP.NET Core uygulamalar, bir özel durum oluşturmak yerine JSON dizeleri olarak temsil edilen sayıları başarıyla seri durumdan çıkaracaktır.
 ms.date: 10/21/2020
-ms.openlocfilehash: fc8a4c6638be391c22c7cfb2fc7c216c88377f29
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f541af5bf5f0a519fd5205f44d68a9b401569909
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761421"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256315"
 ---
 # <a name="aspnet-core-apps-allow-deserializing-quoted-numbers"></a>ASP.NET Core uygulamalar, tırnak işaretli sayıların serisini kaldırmada izin veriyor
 
-.NET 5,0 ' den başlayarak ASP.NET Core uygulamalar, tarafından belirtilen varsayılan seri kaldırma seçeneklerini kullanır <xref:System.Text.Json.JsonSerializerDefaults.Web?displayProperty=nameWithType> . <xref:System.Text.Json.JsonSerializerDefaults.Web>Seçenek kümesi, ayarı içerir <xref:System.Text.Json.JsonSerializerOptions.NumberHandling> <xref:System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString?displayProperty=nameWithType> . Bu değişiklik, ASP.NET Core uygulamaların özel durum oluşturmak yerine JSON dizeleri olarak temsil edilen sayıları başarıyla seri durumdan çıkaracağı anlamına gelir.
+.NET 5 ' den başlayarak ASP.NET Core uygulamalar, tarafından belirtilen varsayılan seri kaldırma seçeneklerini kullanır <xref:System.Text.Json.JsonSerializerDefaults.Web?displayProperty=nameWithType> . <xref:System.Text.Json.JsonSerializerDefaults.Web>Seçenek kümesi, ayarı içerir <xref:System.Text.Json.JsonSerializerOptions.NumberHandling> <xref:System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString?displayProperty=nameWithType> . Bu değişiklik, ASP.NET Core uygulamaların özel durum oluşturmak yerine JSON dizeleri olarak temsil edilen sayıları başarıyla seri durumdan çıkaracağı anlamına gelir.
 
 ## <a name="change-description"></a>Açıklamayı Değiştir
 
 .NET Core 3,0-3,1 ' de, <xref:System.Text.Json.JsonSerializer> <xref:System.Text.Json.JsonException> JSON yükünde tırnak içine alınmış bir sayıyla karşılaştığında seri kaldırma sırasında bir oluşturur. Tırnak işaretleri nesne grafiklerde sayı özellikleriyle eşleştirmek için kullanılır. .NET Core 3,0-3,1 ' de rakamlar yalnızca <xref:System.Text.Json.JsonTokenType.Number?displayProperty=nameWithType> belirteçlerden okunurdur.
 
-.NET 5,0 ' den başlayarak, JSON yüklere ilişkin tırnak işaretli sayılar, ASP.NET Core uygulamalar için varsayılan olarak geçerli kabul edilir. Tırnak işaretli sayıların serisini kaldırma sırasında hiçbir özel durum oluşturulmaz.
+.NET 5 ' den başlayarak, JSON yüklere ait tırnak işaretleri, ASP.NET Core uygulamalar için varsayılan olarak geçerli kabul edilir. Tırnak işaretli sayıların serisini kaldırma sırasında hiçbir özel durum oluşturulmaz.
 
 > [!TIP]
 >

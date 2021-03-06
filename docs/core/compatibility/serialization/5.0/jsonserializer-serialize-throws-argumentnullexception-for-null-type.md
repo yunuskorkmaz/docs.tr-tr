@@ -1,13 +1,13 @@
 ---
 title: 'Son değişiklik: tür parametresi null olduğunda serileştirme özel durum oluşturur'
-description: Bir tür parametresine sahip JsonSerialize serileştirme yöntemlerinin artık bu parametre için null geçirildiğinde bir özel durum oluşturması için .NET 5,0 ' deki Son değişiklik hakkında bilgi edinin.
+description: .NET 5 ' teki son değişiklik hakkında bilgi edinin. bir tür parametresine sahip JsonSerialize serileştirme yöntemleri artık bu parametre için null geçirildiğinde bir özel durum oluşturur.
 ms.date: 10/18/2020
-ms.openlocfilehash: af2885394418072ad7efec5855490b5b80152fe6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 81b3b754c11599eea435c750f1386fcaa2f0b54d
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761634"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256302"
 ---
 # <a name="jsonserializerserialize-throws-argumentnullexception-when-type-parameter-is-null"></a>JsonSerializer. Serialize, tür parametresi null olduğunda ArgumentNullException oluşturur
 
@@ -15,7 +15,7 @@ ms.locfileid: "95761634"
 
 ## <a name="change-description"></a>Açıklamayı Değiştir
 
-.NET Core 3,1 ' de, <xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProperty=nameWithType> parametresine <xref:System.Text.Json.JsonSerializer.SerializeAsync(System.IO.Stream,System.Object,System.Type,System.Text.Json.JsonSerializerOptions,System.Threading.CancellationToken)?displayProperty=nameWithType> <xref:System.Text.Json.JsonSerializer.SerializeToUtf8Bytes(System.Object,System.Type,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType> sahip olan, ve aşırı yüklemeler <xref:System.Type> <xref:System.ArgumentNullException> `null` parametre için geçirildiğinde `Type inputType` oluşturulur, ancak `Object value` parametresi de değildir `null` . .NET 5,0 ' den başlayarak, bu yöntemler *her zaman* <xref:System.ArgumentNullException> parametresi için bir ne zaman `null` geçirildiğinde oluşturulur <xref:System.Type> .
+.NET Core 3,1 ' de, <xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProperty=nameWithType> parametresine <xref:System.Text.Json.JsonSerializer.SerializeAsync(System.IO.Stream,System.Object,System.Type,System.Text.Json.JsonSerializerOptions,System.Threading.CancellationToken)?displayProperty=nameWithType> <xref:System.Text.Json.JsonSerializer.SerializeToUtf8Bytes(System.Object,System.Type,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType> sahip olan, ve aşırı yüklemeler <xref:System.Type> <xref:System.ArgumentNullException> `null` parametre için geçirildiğinde `Type inputType` oluşturulur, ancak `Object value` parametresi de değildir `null` . .NET 5 ' den başlayarak, bu yöntemler *her zaman* <xref:System.ArgumentNullException> parametresi için bir ne zaman `null` geçirildiğinde oluşturulur <xref:System.Type> .
 
 .NET Core 3,1 davranışı:
 
@@ -27,7 +27,7 @@ JsonSerializer.Serialize(null, null);
 JsonSerializer.SerializeToUtf8Bytes(null, null);
 ```
 
-.NET 5,0 ve üzeri davranış:
+.NET 5 ve üzeri davranış:
 
 ```csharp
 // Throws ArgumentNullException: "Value cannot be null. (Parameter 'inputType')".

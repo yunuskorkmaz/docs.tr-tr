@@ -1,13 +1,13 @@
 ---
 title: 'Son değişiklik: CA2014: Döngülerde stackalloc kullanmayın'
-description: Kod Analizi kuralı CA2014 'nin etkinleştirilmesi nedeniyle .NET 5,0 'deki Son değişiklik hakkında bilgi edinin.
+description: Kod Analizi kuralı CA2014 'nin etkinleştirilmesi nedeniyle .NET 5 ' teki önemli değişiklik hakkında bilgi edinin.
 ms.date: 09/03/2020
-ms.openlocfilehash: 7ad6203c0edd930bbbe43cdb8df0413cba833d8e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ac17c8ee588576947e21618a55c0eea883aa37ad
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761326"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257784"
 ---
 # <a name="warning-ca2014-do-not-use-stackalloc-in-loops"></a>Uyarı CA2014: Döngülerde stackalloc kullanmayın
 
@@ -15,7 +15,7 @@ ms.locfileid: "95761326"
 
 ## <a name="change-description"></a>Açıklamayı Değiştir
 
-.NET SDK, .NET 5,0 'den başlayarak [.net kaynak kodu Çözümleyicileri](../../../../fundamentals/code-analysis/overview.md)içerir. Bu kuralların bazıları varsayılan olarak [CA2014](/visualstudio/code-quality/ca2014)dahil olmak üzere etkindir. Projeniz bu kuralı ihlal eden ve uyarıları hata olarak işleyecek şekilde yapılandırılan kodu içeriyorsa, bu değişiklik yapınızı bozabilir.
+.NET 5 ' den başlayarak .NET SDK [.net kaynak kodu Çözümleyicileri](../../../../fundamentals/code-analysis/overview.md)içerir. Bu kuralların bazıları varsayılan olarak [CA2014](/visualstudio/code-quality/ca2014)dahil olmak üzere etkindir. Projeniz bu kuralı ihlal eden ve uyarıları hata olarak işleyecek şekilde yapılandırılan kodu içeriyorsa, bu değişiklik yapınızı bozabilir.
 
 Rule CA2014, bir [stackalloc ifadesinin](../../../../csharp/language-reference/operators/stackalloc.md) bir döngü Içinde kullanıldığı C# kodunu arar. [stackalloc](../../../../csharp/language-reference/operators/stackalloc.md) , geçerli yığın çerçevesindeki belleği ayırır. Geçerli yöntem çağrısı döndürülünceye kadar bellek serbest bırakılana kadar, yığın taşlarına yol açabilir. Yığın taşması özel durumlarını yakalayamayacak, yığın taşması durumunda uygulama sonlandırılacak.
 

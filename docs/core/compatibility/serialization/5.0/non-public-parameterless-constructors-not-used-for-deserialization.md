@@ -1,13 +1,13 @@
 ---
 title: 'Son değişiklik: genel olmayan, parametresiz oluşturucular seri durumundan çıkarma için kullanılmaz'
-description: Genel olmayan ve parametresiz oluşturucuların artık JsonSerializer ile serisini kaldırma için kullanılmadığından, .NET 5,0 ' deki Son değişiklik hakkında bilgi edinin.
+description: .NET 5 ' teki, genel olmayan ve parametresiz oluşturucuların artık JsonSerializer ile serisini kaldırma için kullanılmayan Son değişiklik hakkında bilgi edinin.
 ms.date: 10/18/2020
-ms.openlocfilehash: a2ea54b6a76692dae7d6e01b06b11218d66b1cd7
-ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
+ms.openlocfilehash: 9781061fa89eb3bffb53a4f08bacbd88f3bc9265
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98794698"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256276"
 ---
 # <a name="non-public-parameterless-constructors-not-used-for-deserialization"></a>Seri durumdan çıkarma için ortak olmayan, parametresiz oluşturucular kullanılmıyor
 
@@ -17,7 +17,7 @@ Tüm desteklenen hedef çerçeve adları (TFMs) genelinde tutarlılık için, ge
 
 .NET Standard 2,0 ve üstünü destekleyen [ NuGet paketlerindeki](https://www.nuget.org/packages/System.Text.Json/) tek başınaSystem.Text.Js, yani 4.6.0-4.7.2 sürümleri, .net Core 3,0 ve 3,1 yerleşik davranışıyla tutarsız şekilde davranır. .NET Core 3. x, iç ve özel oluşturucular seri durumundan çıkarma için kullanılabilir. Tek başına paketlerde ortak olmayan oluşturuculara izin verilmez ve <xref:System.MissingMethodException> Public, parametresiz Oluşturucu tanımlanmadığında oluşturulur.
 
-.NET 5,0 ve System.Text.Js'den başlayarak, bu davranış NuGet paketi ve yerleşik API 'Ler arasında tutarlıdır. Parametresiz oluşturucular da dahil olmak üzere genel olmayan oluşturucular varsayılan olarak serileştirici tarafından yok sayılır. Serileştirici, seri durumdan çıkarmak için aşağıdaki oluşturuculardan birini kullanır:
+.NET 5 ve ' den itibaren, NuGet paketi 5.0.0 üzerinde System.Text.Js, bu davranış NuGet paketi ve yerleşik API 'Ler arasında tutarlıdır. Parametresiz oluşturucular da dahil olmak üzere genel olmayan oluşturucular varsayılan olarak serileştirici tarafından yok sayılır. Serileştirici, seri durumdan çıkarmak için aşağıdaki oluşturuculardan birini kullanır:
 
 - Ortak Oluşturucu ile açıklama eklenir <xref:System.Text.Json.Serialization.JsonConstructorAttribute> .
 - Ortak parametresiz Oluşturucu.

@@ -2,12 +2,12 @@
 title: Object-Oriented programlama (C#)
 description: C#; soyutlama, kapsülleme, devralma ve çok biçimlilik dahil olmak üzere nesne odaklı programlama için tam destek sağlar.
 ms.date: 09/30/2020
-ms.openlocfilehash: 006bdc37a1d70d672db14f352d5572491b403918
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 57f1759edd2dd5f239e81351aed64bf061766b7b
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102105531"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255411"
 ---
 # <a name="object-oriented-programming-c"></a>Object-Oriented programlama (C#)
 
@@ -183,7 +183,7 @@ Programı çalıştırın ve sonuçları denetleyin.
 
 ## <a name="summary"></a>Özet
 
-Çıkdıysanız, Bu öğreticinin kaynağını [GitHub](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/intro-to-csharp/snippets/object-oriented-programming)deponuzda görebilirsiniz.
+Çıkdıysanız, Bu öğreticinin kaynağını [GitHub](https://github.com/dotnet/docs/tree/main/docs/csharp/tutorials/intro-to-csharp/snippets/object-oriented-programming)deponuzda görebilirsiniz.
 
 Bu öğretici Object-Oriented programlamada kullanılan birçok tekniği göstermiştir:
 

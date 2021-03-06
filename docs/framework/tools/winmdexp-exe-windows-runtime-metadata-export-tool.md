@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Runtime Metadata Export Tool
 - Winmdexp.exe
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
-ms.openlocfilehash: 42a57334f9f3e50a4d3c3ec48d57d26357d57510
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: a35577841765f7e6d5d5e8220bf3951f81d65832
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439501"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258708"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows Çalışma Zamanı Meta Veri Dışarı Aktarma Aracı)
 
@@ -19,7 +19,7 @@ Windows Çalışma Zamanı meta veri verme aracı (Winmdexp.exe), .NET Framework
   
  C# için **Windows Mağazası** ve Visual Studio 2013 ya da Visual Studio 2012 Visual Basic içinde bulunan **Windows çalışma zamanı bileşen** şablonunu kullandığınızda, derleyici hedefi bir. winmdobj dosyasıdır ve sonraki derleme adımı,. winmdobj dosyasını bir. winmd dosyasına dışarı aktarmak için Winmdexp.exe çağırır. Bu, bir Windows Çalışma Zamanı bileşeni oluşturmak için önerilen yoldur. Oluşturma süreci üzerinde, Visual Studio'nun sağladığından daha fazla kontrol sahibi olmak istediğinizde doğrudan Winmdexp.exe'yi kullanın.  
   
- Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](developer-command-prompt-for-vs.md).  
+ Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, [geliştiriciler için bir komut satırı kabuğu](/visualstudio/ide/reference/command-prompt-powershell)kullanın.
   
  Komut satırına şunu yazın:  
   

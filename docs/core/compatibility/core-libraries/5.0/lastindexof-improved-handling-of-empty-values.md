@@ -1,13 +1,13 @@
 ---
 title: 'Son değişiklik: LastIndexOf, boş arama dizelerinin geliştirilmiş işlemesini içeriyor'
-description: LastIndexOf ve ilgili API 'Lerin artık sıfır uzunluklu bir alt dizeyi ararken doğru değerleri döndürdüğü çekirdek .NET kitaplıklarında .NET 5,0 kırılmaı değişikliği hakkında bilgi edinin.
+description: LastIndexOf ve ilgili API 'Lerin artık sıfır uzunluklu bir alt dizeyi ararken doğru değerleri döndürdüğü çekirdek .NET kitaplıklarında .NET 5 ' teki son değişiklik hakkında bilgi edinin.
 ms.date: 11/01/2020
-ms.openlocfilehash: 6d1a676eb2b9ed3de6a745db27d53bd43560a32f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9dc34300d867fe1bb9264494b3f2261bad2c1eea
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761378"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257433"
 ---
 # <a name="lastindexof-has-improved-handling-of-empty-search-strings"></a>LastIndexOf, boş arama dizelerinin yönetimini iyileştirmiştir
 
@@ -24,7 +24,7 @@ ReadOnlySpan<char> span = "Hello";
 Console.WriteLine(span.LastIndexOf("")); // prints '0' (incorrect)
 ```
 
-.NET 5,0 ile başlayarak, bu API 'Ler için doğru değeri döndürür `LastIndexOf` .
+.NET 5 ' den itibaren, bu API 'Ler için doğru değeri döndürür `LastIndexOf` .
 
 ```csharp
 Console.WriteLine("Hello".LastIndexOf("")); // prints '5' (correct)
@@ -45,7 +45,7 @@ Bu değişiklik, .NET 5 için dize işlemede oluşan genel hata düzeltme çabal
 
 ## <a name="recommended-action"></a>Önerilen eylem
 
-Herhangi bir işlem yapmanız gerekmez. .NET 5,0 çalışma zamanı, yeni davranışları otomatik olarak sağlar.
+Herhangi bir işlem yapmanız gerekmez. .NET 5 çalışma zamanı, yeni davranışları otomatik olarak sağlar.
 
 Eski davranışı geri yüklemek için bir uyumluluk anahtarı yok.
 

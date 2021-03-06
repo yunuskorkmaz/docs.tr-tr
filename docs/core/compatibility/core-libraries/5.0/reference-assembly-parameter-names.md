@@ -1,13 +1,13 @@
 ---
 title: 'Son değişiklik: başvuru derlemelerindeki parametre adları değişti'
-description: Bazı başvuru derleme parametresi adlarının uygulama derlemelerindeki parametre adlarıyla eşleşecek şekilde değiştiği çekirdek .NET kitaplıklarında .NET 5,0 ile ilgili son değişiklik hakkında bilgi edinin.
+description: Bazı başvuru derleme parametresi adlarının uygulama derlemelerindeki parametre adlarıyla eşleşecek şekilde değiştiği çekirdek .NET kitaplıklarında .NET 5 ile ilgili son değişiklik hakkında bilgi edinin.
 ms.date: 11/01/2020
-ms.openlocfilehash: c111428d0d7c103e01d725b21ff8d97d54ffeb33
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b120fac29d4cc7cc76a29d4e68c94f7dc194c284
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761501"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257186"
 ---
 # <a name="parameter-names-changed-in-reference-assemblies"></a>Başvuru derlemelerindeki parametre adları değiştirildi
 
@@ -17,7 +17,7 @@ Bazı başvuru derleme parametresi adları, uygulama derlemelerindeki parametre 
 
 Önceki .NET sürümlerinde, bazı [Başvuru derleme](../../../../standard/assembly/reference-assemblies.md) parametresi adları, uygulama derlemesinde karşılık gelen parametrelere farklıdır. Bu, adlandırılmış bağımsız değişkenler ve yansıma kullanılırken soruna neden olabilir.
 
-.NET 5,0 ' de, bu eşleşmeyen parametre adları, başvuru derlemelerinde, uygulama derlemelerindeki karşılık gelen parametre adlarıyla tam olarak eşleşecek şekilde güncelleştirildi.
+.NET 5 ' te, bu eşleşmeyen parametre adları, başvuru derlemelerinde, uygulama derlemelerindeki karşılık gelen parametre adlarıyla tam olarak eşleşecek şekilde güncelleştirildi.
 
 Aşağıdaki tabloda, değiştirilen API 'Ler ve parametre adları gösterilmektedir.
 

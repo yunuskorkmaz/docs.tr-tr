@@ -1,13 +1,13 @@
 ---
 title: 'Son değişiklik: standart sayısal biçim ayrıştırma duyarlığı'
-description: Standart sayısal biçim ayrıştırması artık daha yüksek olan ön ekleri işlediği çekirdek .NET kitaplıklarında .NET 6,0 son değişikliği hakkında bilgi edinin.
+description: Standart sayısal biçim ayrıştırma 'nın artık daha yüksek olan ön ekleri işlediği çekirdek .NET kitaplıklarında .NET 6 ' dan fazla değişiklik hakkında bilgi edinin.
 ms.date: 02/26/2021
-ms.openlocfilehash: ba8829cd720d9c31e6e73b31f95279269162b9b1
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: ad1555493bbc6198541365132cc421db7c01a5a2
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102108737"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256926"
 ---
 # <a name="standard-numeric-format-parsing-precision"></a>Standart sayısal biçim ayrıştırma duyarlığı
 

@@ -1,13 +1,13 @@
 ---
 title: 'Son değişiklik: StringInfo ve TextElementEnumerator artık UAX29 uyumlu'
-description: .NET 5,0 ' de, StringInfo ve TextElementEnumerator 'ın, Unicode standardının en son sürümüne göre grafem kümelerine yönelik Genelleştirme kırma değişikliği hakkında bilgi edinin.
+description: .NET 5 ' teki, StringInfo ve TextElementEnumerator 'ın, Unicode standardının en son sürümüne göre grafem kümelerine yönelik Genelleştirme kırma değişikliği hakkında bilgi edinin.
 ms.date: 04/07/2020
-ms.openlocfilehash: cd5ae5a3eb9f2dd9c02bc179a40d454d24101199
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cf770e30bfadf1973bbe018cc9d2783ed6234723
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761373"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256715"
 ---
 # <a name="stringinfo-and-textelementenumerator-are-now-uax29-compliant"></a>StringInfo ve TextElementEnumerator artık UAX29 uyumlu
 
@@ -92,7 +92,7 @@ Bu değişiklikler .net <xref:System.Text.Rune?displayProperty=fullName> Core 3,
 
 ## <a name="version-introduced"></a>Sunulan sürüm
 
-.NET 5,0
+.NET 5.0
 
 ## <a name="recommended-action"></a>Önerilen eylem
 

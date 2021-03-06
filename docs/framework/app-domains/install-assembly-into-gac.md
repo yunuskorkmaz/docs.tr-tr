@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Global Assembly Cache tool
 - windows installer, global assembly cache
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
-ms.openlocfilehash: 08a5475d74327265f28b65676ae56be15afb57d3
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: 581736d27d8b90430838fc78aa192a3efa21cbb5
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85104660"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258305"
 ---
 # <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>Nasıl yapılır: Bir bütünleştirilmiş kodu genel derleme önbelleğine yükleme
 
@@ -46,7 +46,7 @@ gacutil -i <assembly name>
 
 Bu komutta, *\<assembly name>* genel derleme önbelleğine yüklenecek derlemenin adıdır.
 
-*gacutil.exe* sistem yolunuzda yoksa, [vs *\<version>* için geliştirici komut istemi ](../tools/developer-command-prompt-for-vs.md)' ni kullanın.
+*gacutil.exe* sistem yolunuzda yoksa, [geliştiriciler için bir komut satırı kabuğu](/visualstudio/ide/reference/command-prompt-powershell)kullanın.
 
 Aşağıdaki örnek, *hello.dll* dosya adı olan bir derlemeyi genel bütünleştirilmiş kod önbelleğine yüklenir.
 

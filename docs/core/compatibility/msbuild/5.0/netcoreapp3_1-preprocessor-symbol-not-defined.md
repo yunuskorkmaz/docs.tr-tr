@@ -1,17 +1,17 @@
 ---
 title: 'Son değişiklik: NETCOREAPP3_1 ön işlemci sembolü .NET 5 hedeflenirken tanımlanmaz'
-description: .NET 5,0 ' deki Son değişiklik hakkında bilgi edinin. Bu durumda, projeler artık önceki sürümler için önişlemci sembolleri tanımlamaz.
+description: .NET 5 ' teki son değişiklik hakkında bilgi edinin. burada, projeler artık önceki sürümler için önişlemci sembolleri tanımlamaz.
 ms.date: 09/17/2020
-ms.openlocfilehash: 61a5e4fce258d2be3d584318e154bb752b88ebe1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 390c8f5af97510db4652f3f42db577e6de158020
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761453"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256536"
 ---
 # <a name="netcoreapp3_1-preprocessor-symbol-is-not-defined-when-targeting-net-5"></a>NETCOREAPP3_1 Önişlemci sembolü .NET 5 hedeflenirken tanımlanmaz
 
-.NET 5,0 RC2 ve sonraki sürümlerinde, projeler artık önceki sürümler için ön işlemci sembolleri tanımlamıyor, ancak yalnızca hedeflerine ait olan sürüm için. Bu, .NET Core 1,0-3,1 ile aynı davranıştır.
+.NET 5 RC2 ve sonraki sürümlerinde, projeler artık önceki sürümler için ön işlemci sembolleri tanımlamıyor, ancak yalnızca hedeflerine ait olan sürüm için. Bu, .NET Core 1,0-3,1 ile aynı davranıştır.
 
 ## <a name="version-introduced"></a>Sunulan sürüm
 
@@ -19,9 +19,9 @@ ms.locfileid: "95761453"
 
 ## <a name="change-description"></a>Açıklamayı Değiştir
 
-.NET 5,0 Preview 7 ' de RC1 ile, hedeflenen projeler `net5.0` hem hem `NETCOREAPP3_1` de `NET5_0` Önişlemci sembollerini tanımlar. Bu davranış değişikliğinin arkasındaki amaç, .NET 5,0 ile başlayarak koşullu derleme [sembolleri birikimli olur](https://github.com/dotnet/designs/blob/main/accepted/2020/net5/net5.md#preprocessor-symbols).
+.NET 5 Preview 7 ' de RC1 ile, hedeflenen projeler `net5.0` hem hem `NETCOREAPP3_1` de `NET5_0` Önişlemci sembollerini tanımlar. Bu davranış değişikliğinin arkasındaki amaç, .NET 5 ' den itibaren Koşullu derleme [sembolleri birikimli olur](https://github.com/dotnet/designs/blob/main/accepted/2020/net5/net5.md#preprocessor-symbols).
 
-.NET 5,0 RC2 ve üzeri sürümlerde, projeler yalnızca hedef Framework takma adları (tfd) için, daha önceki sürümler için değil, sembolleri tanımlar.
+.NET 5 RC2 ve üzeri sürümlerde, projeler yalnızca hedef Framework takma adları (tfd) için, daha önceki sürümler için değil, sembolleri tanımlar.
 
 ## <a name="reason-for-change"></a>Değişiklik nedeni
 
@@ -43,7 +43,7 @@ Preview 7 ' den değişiklik, müşteri geri bildirimi nedeniyle geri döndürü
 
 ## <a name="affected-apis"></a>Etkilenen API’ler
 
-YOK
+Yok
 
 <!--
 

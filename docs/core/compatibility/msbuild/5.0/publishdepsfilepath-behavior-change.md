@@ -1,13 +1,13 @@
 ---
 title: 'Son değişiklik: PublishDepsFilePath davranış değişikliği'
-description: .NET 5,0 'de, tek dosya uygulamaları için PublishDepsFilePath MSBuild özelliğinin boş olduğu son değişiklik hakkında bilgi edinin.
+description: .NET 5 ' te, tek dosya uygulamalarında PublishDepsFilePath MSBuild özelliğinin boş olduğu son değişiklik hakkında bilgi edinin.
 ms.date: 09/17/2020
-ms.openlocfilehash: 70631beff31aa3388e59f3b79875ef437351451a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3a32f733ceaa2a24eb55d5e89f2eb1791c277f0d
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761735"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256510"
 ---
 # <a name="publishdepsfilepath-behavior-change"></a>PublishDepsFilePath davranış değişikliği
 
@@ -21,7 +21,7 @@ ms.locfileid: "95761735"
 
 Önceki .NET sürümlerinde, `PublishDepsFilePath` MSBuild özelliği, tek dosya olmayan uygulamalar için çıkış dizinindeki dosyanın *deps.js* yolu ve tek dosya uygulamalarına yönelik ara dizindeki bir yoldur.
 
-.NET 5,0 ' den itibaren, `PublishDepsFilePath` tek dosya uygulamaları için boştur ve yeni bir `IntermediateDepsFilePath` özellik ara dizindeki konumdaki *deps.js* belirtir. Ayrıca, tek dosya olmayan uygulamalar için, dosyadaki *deps.js* , `PublishDepsFilePath` derleme içinde daha sonra olana kadar çıkış dizinine (yani, tarafından belirtilen yol) kopyalanmayabilir.
+.NET 5 ' den itibaren, `PublishDepsFilePath` tek dosya uygulamaları için boştur ve yeni bir `IntermediateDepsFilePath` özellik ara dizindeki konumdaki *deps.js* belirtir. Ayrıca, tek dosya olmayan uygulamalar için, dosyadaki *deps.js* , `PublishDepsFilePath` derleme içinde daha sonra olana kadar çıkış dizinine (yani, tarafından belirtilen yol) kopyalanmayabilir.
 
 ## <a name="reason-for-change"></a>Değişiklik nedeni
 
@@ -37,7 +37,7 @@ Dosyayı *deps.js* yeniden yazan hedefler genellikle özelliğini kullanarak bun
 
 ## <a name="affected-apis"></a>Etkilenen API’ler
 
-YOK
+Yok
 
 <!--
 

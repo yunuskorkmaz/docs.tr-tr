@@ -3,13 +3,13 @@ title: .NET 'i Fedora-.NET üzerine yükler
 description: Fedora üzerinde .NET SDK ve .NET çalışma zamanı yüklemenin çeşitli yollarını gösterir.
 author: adegeo
 ms.author: adegeo
-ms.date: 01/06/2021
-ms.openlocfilehash: 9dd8c6264831e2a9382960be505639f1eba95151
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.date: 02/17/2021
+ms.openlocfilehash: efaad4788db2200b1a47f9b4ae2414730588c6ae
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970830"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255769"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-fedora"></a>.NET SDK veya .NET çalışma zamanını Fedora 'ya yükler
 
@@ -17,31 +17,19 @@ ms.locfileid: "97970830"
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
-[!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
+Bir paket yöneticisi olmadan .NET yükleme hakkında daha fazla bilgi için aşağıdaki makalelerden birine bakın:
+
+- [.NET SDK veya .NET çalışma zamanını yaslama ile birlikte yükler.](linux-snap.md)
+- [.NET SDK veya .NET çalışma zamanını bir komut dosyası ile birlikte yükler.](linux-scripted-manual.md#scripted-install)
+- [.NET SDK veya .NET çalışma zamanını el ile yükleyebilirsiniz.](linux-scripted-manual.md#manual-install)
 
 ## <a name="install-net-50"></a>.NET 5,0 'yi yükler
 
-[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
-
-**Fedora 32**
-
-```bash
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/32/prod.repo
-```
-
-**Fedora 33**
-
-```bash
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/33/prod.repo
-```
+Fedora için varsayılan paket depolarında sunulan en son .NET sürümü .NET 5,0 ' dir.
 
 [!INCLUDE [linux-dnf-install-50](includes/linux-install-50-dnf.md)]
 
 ## <a name="install-net-core-31"></a>.NET Core 3,1 'yi yükler
-
-Fedora için varsayılan paket depolarında sunulan en son .NET sürümü .NET Core 3,1 ' dir.
 
 [!INCLUDE [linux-dnf-install-31](includes/linux-install-31-dnf.md)]
 
@@ -61,8 +49,8 @@ Aşağıdaki tabloda, şu anda desteklenen .NET sürümlerinin ve desteklenen Fe
 
 Aşağıdaki .NET sürümleri artık desteklenmemektedir. Bunlara yönelik İndirilenler hala yayımlandı olarak kalmaya devam eder:
 
-- 3,0
-- 2.2
+- 3.0
+- 2,2
 - 2.0
 
 ## <a name="remove-preview-versions"></a>Önizleme sürümlerini Kaldır
@@ -109,7 +97,11 @@ Bu bölüm, .NET veya .NET Core 'u yüklemek için Paket Yöneticisi 'ni kullan�
 
 ### <a name="unable-to-find-package"></a>Paket bulunamadı
 
-[!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
+Bir paket yöneticisi olmadan .NET yükleme hakkında daha fazla bilgi için aşağıdaki makalelerden birine bakın:
+
+- [.NET SDK veya .NET çalışma zamanını yaslama ile birlikte yükler.](linux-snap.md)
+- [.NET SDK veya .NET çalışma zamanını bir komut dosyası ile birlikte yükler.](linux-scripted-manual.md#scripted-install)
+- [.NET SDK veya .NET çalışma zamanını el ile yükleyebilirsiniz.](linux-scripted-manual.md#manual-install)
 
 ### <a name="failed-to-fetch"></a>Getirilemedi
 

@@ -1,17 +1,17 @@
 ---
 title: .NET 5 + ' da kullanımdan kalkmış Özellikler
-description: .NET 5,0 ve sonraki sürümlerde eski olarak işaretlenen ve SYSLIB Derleyici uyarıları üreten API 'Ler hakkında bilgi edinin.
+description: .NET 5 ' te kullanımdan kaldırılmış olarak işaretlenen API 'Ler ve SYSLIB Derleyici uyarıları üreten sürümler hakkında bilgi edinin.
 ms.date: 10/20/2020
-ms.openlocfilehash: 336958c93e3db8f66cfbec89476a666e5e103b70
-ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
+ms.openlocfilehash: d6563f21624456d74801242268ecf72652fc4f88
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97593311"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256289"
 ---
 # <a name="obsolete-features-in-net-5"></a>.NET 5 ' teki kullanımdan kalkmış Özellikler
 
-.NET 5,0 ' den itibaren, yeni olarak eski olarak işaretlenen bazı API 'Ler üzerinde iki yeni özelliği kullanır <xref:System.ObsoleteAttribute> .
+.NET 5 ' den itibaren, yeni olarak eski olarak işaretlenen bazı API 'Ler üzerinde iki yeni özelliği kullanır <xref:System.ObsoleteAttribute> .
 
 - <xref:System.ObsoleteAttribute.DiagnosticId?displayProperty=nameWithType>Özelliği derleyiciye özel bir tanılama kimliği kullanarak derleme uyarıları oluşturmasını söyler. Özel KIMLIK, kullanımdan çıkarma uyarısının özellikle ve birbirinden ayrı bir şekilde gizlenmasını sağlar. .NET 5 + kullanımdan kullanım durumunda, özel tanılama KIMLIĞI için biçim `SYSLIBxxxx` .
 
@@ -23,7 +23,7 @@ Kullanılmayan bir API kullanımı nedeniyle derleme uyarıları veya hatalarıy
 
 Aşağıdaki tabloda, `SYSLIBxxxx` .NET 5 + ' de kullanımdan çıkarılan bir dizin verilmiştir.
 
-| Tanılama KIMLIĞI | Description |
+| Tanılama KIMLIĞI | Açıklama |
 | - | - |
 | [SYSLIB0001](syslib-warnings/syslib0001.md) | UTF-7 kodlaması güvenli değil ve kullanılmamalıdır. Bunun yerine UTF-8 kullanmayı düşünün. |
 | [SYSLIB0002](syslib-warnings/syslib0002.md) | <xref:System.Security.Permissions.PrincipalPermissionAttribute> çalışma zamanı tarafından kabul edilmez ve kullanılmamalıdır. |

@@ -7,22 +7,22 @@ helpviewer_keywords:
 - CorFlags.exe
 - portable executable files, CorFlags section
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
-ms.openlocfilehash: 3f9f2a71a7a33de13264ce60fa7ff6ea5832aace
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4481e6718372fe7b58dbc05ab7cfe35e6d3047ce
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96247193"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258058"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (CorFlags Dönüştürme Aracı)
 
 CorFlags Dönüştürme aracı, taşınabilir çalıştırılabilir bir görüntünün üstbilgisinin CorFlags bölümünü yapılandırmanıza olanak verir.  
   
- Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](developer-command-prompt-for-vs.md).  
+ Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, [geliştiriciler için bir komut satırı kabuğu](/visualstudio/ide/reference/command-prompt-powershell)kullanın.  
   
  Komut satırına şunu yazın:  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```console  
 CorFlags.exe assembly [options]  
@@ -57,4 +57,4 @@ CorFlags.exe assembly [options]
 
 - [Araçlar](index.md)
 - [64 bit Uygulamalar](../64-bit-apps.md)
-- [Komut Istemleri](developer-command-prompt-for-vs.md)
+- [Geliştirici komut satırı kabukları](/visualstudio/ide/reference/command-prompt-powershell)

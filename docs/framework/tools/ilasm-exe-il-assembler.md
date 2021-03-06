@@ -12,18 +12,18 @@ helpviewer_keywords:
 - Ilasm.exe
 - verifying MSIL performance
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
-ms.openlocfilehash: 50dbb0688a75d8588cb6d8679410a4a07abc6b50
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: be654c27af2b3e0e281c734069f2de469b901446
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100584266"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258045"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL Derleyici)
 
 Il Assembler, ara dil (IL) derlemesinden taşınabilir bir çalıştırılabilir (PE) dosyası oluşturur. (Il hakkında daha fazla bilgi için bkz. [yönetilen yürütme işlemi](../../standard/managed-execution-process.md).) Il 'nin beklenen şekilde yapılıp yapılmayacağını anlamak için Il ve gerekli meta verileri içeren elde edilen yürütülebilir dosyayı çalıştırabilirsiniz.
 
-Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](developer-command-prompt-for-vs.md).
+Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, [geliştiriciler için bir komut satırı kabuğu](/visualstudio/ide/reference/command-prompt-powershell)kullanın.
 
 Komut satırına şunu yazın:
 
@@ -35,7 +35,7 @@ ilasm [options] filename [[options]filename...]
 
 ## <a name="parameters"></a>Parametreler
 
-| Bağımsız Değişken | Description |
+| Bağımsız Değişken | Açıklama |
 | -------- | ----------- |
 |`filename`|.il kaynak dosyasının adı. Bu dosya meta veri bildirim yönergeleri ve simgesel IL yönergelerinden oluşur. *Ilasm.exe* ile tek bir PE dosyası oluşturmak için birden çok kaynak dosya bağımsız değişkeni sağlanabilir. **Note:** . Il kaynak dosyasındaki son kod satırının sonunda boşluk veya satır sonu karakteri bulunduğundan emin olun.|
 
@@ -231,4 +231,4 @@ Aşağıdaki IL kod örneği önceki C# kod örneğine karşılık gelir. Bu kod
 - [Araçlar](index.md)
 - [*Ildasm.exe* (Il ayırıcı)](ildasm-exe-il-disassembler.md)
 - [Yönetilen yürütme Işlemi](../../standard/managed-execution-process.md)
-- [Komut Istemleri](developer-command-prompt-for-vs.md)
+- [Geliştirici komut satırı kabukları](/visualstudio/ide/reference/command-prompt-powershell)

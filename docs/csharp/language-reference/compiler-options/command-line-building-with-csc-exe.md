@@ -6,20 +6,20 @@ helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: 9ffd164602862fce7f5e4f0982d3eda7cb403e60
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 3dafb35011a1d3c77ae05baa5d25c69f39681ab8
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "89125936"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258448"
 ---
 # <a name="command-line-build-with-cscexe"></a>csc.exe ile komut satırı oluşturma
 
 Komut istemine yürütülebilir dosyasının adını (*csc.exe*) yazarak C# derleyicisini çağırabilirsiniz.
 
-**Visual Studio için geliştirici komut istemi** kullanıyorsanız, tüm gerekli ortam değişkenleri sizin için ayarlanır. Bu araca erişme hakkında daha fazla bilgi için bkz. [Visual Studio için geliştirici komut istemi](../../../framework/tools/developer-command-prompt-for-vs.md) konusu.
+Visual Studio 'nun yüklediği komut satırı kabukların birini kullanırsanız, gerekli tüm ortam değişkenleri sizin için ayarlanır. Bu kabukların nasıl erişebileceği hakkında bilgi için bkz. [Geliştirici komut satırı kabukları](/visualstudio/ide/reference/command-prompt-powershell).
 
-Standart bir komut Istemi penceresi kullanıyorsanız, bilgisayarınızdaki herhangi bir alt dizinden *csc.exe* çağırabilmeniz için önce yolunu ayarlamanız gerekir. Ayrıca, komut satırı yapılarını desteklemek için uygun ortam değişkenlerini ayarlamak üzere *VsDevCmd.bat* çalıştırmanız gerekir. *VsDevCmd.bat* hakkında daha fazla bilgi edinmek için, bkz. [Visual Studio komut satırı için ortam değişkenlerini ayarlama](./how-to-set-environment-variables-for-the-visual-studio-command-line.md).
+Normal bir komut istemi kullanıyorsanız, bilgisayarınızdaki herhangi bir alt dizinden *csc.exe* çağırabilmeniz için önce yolunu ayarlamanız gerekir. Ayrıca, komut satırı yapılarını desteklemek için uygun ortam değişkenlerini ayarlamak üzere *VsDevCmd.bat* çalıştırmanız gerekir. *VsDevCmd.bat* hakkında daha fazla bilgi edinmek için, bkz. [Visual Studio komut satırı için ortam değişkenlerini ayarlama](./how-to-set-environment-variables-for-the-visual-studio-command-line.md).
 
 Yalnızca Windows yazılım geliştirme seti (SDK) olan bir bilgisayarda çalışıyorsanız, C# derleyicisini **Microsoft .NET Framework SDK** menü seçeneğinden açtığınız **SDK komut istemi**' nde kullanabilirsiniz.
 
@@ -29,14 +29,6 @@ Ayrıca C# programlarını program aracılığıyla oluşturmak için MSBuild'i 
 
 > [!TIP]
 > Visual Studio IDE kullanarak bir proje oluşturduğunuzda, **CSC** komutunu ve ilgili derleyici seçeneklerini **Çıkış** penceresinde görüntüleyebilirsiniz. Bu bilgileri görüntülemek için nasıl yapılır: günlük verilerinin ayrıntı düzeyini **normal** veya **ayrıntılı** olarak değiştirmek üzere [derleme günlüğü dosyalarını görüntüleme, kaydetme ve yapılandırma](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log) konusundaki yönergeleri izleyin. Projenizi yeniden oluşturduktan sonra, C# derleyicisinin çağrılmasını bulmak için **CSC** **Çıkış** penceresinde arama yapın.
-
- **Bu konuda**
-
-- [Komut satırı söz dizimi için kurallar](#rules-for-command-line-syntax-for-the-c-compiler)
-
-- [Örnek komut satırları](#sample-command-lines-for-the-c-compiler)
-
-- [C# derleyicisi ve C++ derleyici çıkışı arasındaki farklılıklar](#differences-between-c-compiler-and-c-compiler-output)
 
 ## <a name="rules-for-command-line-syntax-for-the-c-compiler"></a>C# derleyicisi için komut satırı söz dizimi kuralları
 

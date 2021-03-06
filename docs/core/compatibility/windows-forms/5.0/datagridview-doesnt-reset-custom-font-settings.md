@@ -1,13 +1,13 @@
 ---
 title: 'Son değişiklik: DataGridView artık özelleştirilmiş hücre stilleri için yazı tiplerini sıfırlıyor'
-description: DataGridView 'in, hücre stili yazı tipi özelleştirildiyse, varsayılan hücre stili yazı tiplerini çevresel yazı tipi ile eşleşecek şekilde sıfırlamadiği .NET 5,0 ' deki Son değişiklik hakkında bilgi edinin.
+description: DataGridView 'in, hücre stili yazı tipi özelleştirildiyse artık varsayılan hücre stili yazı tiplerini çevresel yazı tipiyle eşleşecek şekilde sıfırlamalarında, .NET 5 ' teki son değişiklik hakkında bilgi edinin.
 ms.date: 10/18/2020
-ms.openlocfilehash: 708b12ba1305681f5c38eb605861d02e3b2c8eb1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fd28fb5a0b508157289dde1b720522ed49163e31
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761720"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256145"
 ---
 # <a name="datagridview-no-longer-resets-fonts-for-customized-cell-styles"></a>DataGridView artık özelleştirilmiş hücre stilleri için yazı tiplerini sıfırlıyor
 
@@ -17,7 +17,7 @@ Ortam yazı tipi değiştiğinde, <xref:System.Windows.Forms.DataGridViewElement
 
 Önceki .NET sürümlerinde, ortam yazı tipi değişirse <xref:System.Windows.Forms.DataGridViewElement.DataGridView> <xref:System.Windows.Forms.DataGridView.DefaultCellStyle> ,, <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle> ve özelliklerinde Kullanıcı tanımlı yazı tiplerini sıfırlar ve geçersiz kılar <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle> .
 
-.NET 5,0 ' den başlayarak,, veya özelliklerinde yazı tipi ayarlarını yapılandırırsanız, <xref:System.Windows.Forms.DataGridView.DefaultCellStyle> <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle> <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle> ortam yazı tipi değiştiğinde bile bu ayarlar korunur. Yazı tipini özelleştirmezseniz bu özelliklerden herhangi biri, yazı tipi çevresel yazı tipi ayarlarıyla eşleşecek şekilde değişir.
+.NET 5 ' te başlayarak,, veya özelliklerinde yazı tipi ayarlarını yapılandırırsanız, <xref:System.Windows.Forms.DataGridView.DefaultCellStyle> <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle> <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle> ortam yazı tipi değiştiğinde bile bu ayarlar korunur. Yazı tipini özelleştirmezseniz bu özelliklerden herhangi biri, yazı tipi çevresel yazı tipi ayarlarıyla eşleşecek şekilde değişir.
 
 ## <a name="reason-for-change"></a>Değişiklik nedeni
 
@@ -25,7 +25,7 @@ Ortam yazı tipi değiştiğinde, <xref:System.Windows.Forms.DataGridViewElement
 
 ## <a name="version-introduced"></a>Sunulan sürüm
 
-.NET 5,0
+.NET 5.0
 
 ## <a name="recommended-action"></a>Önerilen eylem
 

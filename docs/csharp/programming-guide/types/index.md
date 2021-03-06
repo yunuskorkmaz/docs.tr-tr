@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 6a1a5b230e427a4991162a702245f1a87352784d
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: a592a4236575a6dd2f782142c470ce3945e130b9
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98190253"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255652"
 ---
 # <a name="types-c-programming-guide"></a>Türler (C# Programlama Kılavuzu)
 
@@ -64,14 +64,14 @@ C#, tamsayıları, kayan nokta değerlerini, Boole ifadelerini, metin karakterle
 
 ## <a name="custom-types"></a>Özel türler
 
-Kendi özel türlerinizi oluşturmak için [struct](../../language-reference/builtin-types/struct.md), [Class](../../language-reference/keywords/class.md), [Interface](../../language-reference/keywords/interface.md)ve [enum](../../language-reference/builtin-types/enum.md) yapılarını kullanırsınız. .NET sınıf kitaplığı, Microsoft tarafından kendi uygulamalarınızda kullanabileceğiniz özel türlerin bir koleksiyonudur. Varsayılan olarak, sınıf kitaplığındaki en sık kullanılan türler, herhangi bir C# programında kullanılabilir. Diğerleri yalnızca tanımlandıkları derlemeye açıkça bir proje başvurusu eklediğinizde kullanılabilir hale gelir. Derleyicinin derlemeye bir başvurusu olduktan sonra, kaynak kodda o derlemede belirtilen türlerin değişkenlerini (ve sabitleri) bildirebilirsiniz. Daha fazla bilgi için bkz. [.NET sınıf kitaplığı](../../../standard/class-library-overview.md).
+Kendi özel türlerinizi oluşturmak için [struct](../../language-reference/builtin-types/struct.md), [Class](../../language-reference/keywords/class.md), [Interface](../../language-reference/keywords/interface.md), [enum](../../language-reference/builtin-types/enum.md)ve [Record](../../language-reference/builtin-types/record.md) yapılarını kullanırsınız. .NET sınıf kitaplığı, Microsoft tarafından kendi uygulamalarınızda kullanabileceğiniz özel türlerin bir koleksiyonudur. Varsayılan olarak, sınıf kitaplığındaki en sık kullanılan türler, herhangi bir C# programında kullanılabilir. Diğerleri yalnızca tanımlandıkları derlemeye açıkça bir proje başvurusu eklediğinizde kullanılabilir hale gelir. Derleyicinin derlemeye bir başvurusu olduktan sonra, kaynak kodda o derlemede belirtilen türlerin değişkenlerini (ve sabitleri) bildirebilirsiniz. Daha fazla bilgi için bkz. [.NET sınıf kitaplığı](../../../standard/class-library-overview.md).
 
 ## <a name="the-common-type-system"></a>Ortak tür sistemi
 
 .NET 'teki tür sistemi hakkında iki temel noktayı anlamak önemlidir:
 
 - Devralma ilkesini destekler. Türler, *temel türler* olarak adlandırılan diğer türlerden türetilebilir. Türetilmiş tür, yöntemleri, özellikleri ve temel türün diğer üyelerini devralır (bazı kısıtlamalarla). Temel tür başka bir türden türetebilir, bu durumda türetilmiş tür, devralma hiyerarşisindeki her iki temel türün üyelerini devralır. (C# anahtar sözcüğü: int) gibi yerleşik sayısal türler dahil olmak üzere tüm türler, <xref:System.Int32?displayProperty=nameWithType> sonuçta [](../../language-reference/builtin-types/integral-numeric-types.md) <xref:System.Object?displayProperty=nameWithType> (c# anahtar sözcüğü: [nesnesi](../../language-reference/builtin-types/reference-types.md)) tek bir temel türden türetilir. Bu Birleşik tür hiyerarşisine [ortak tür sistemi](../../../standard/base-types/common-type-system.md) (Cts) denir. C# ' de devralma hakkında daha fazla bilgi için bkz. [Devralma](../classes-and-structs/inheritance.md).
-- CTS içindeki her tür, bir *değer türü* veya bir *başvuru türü* olarak tanımlanır. Bu türler, .NET sınıf kitaplığı 'ndaki tüm özel türleri ve ayrıca kendi Kullanıcı tanımlı türlerinizi içerir. [Struct](../../language-reference/builtin-types/struct.md) anahtar sözcüğünü kullanarak tanımladığınız türler değer türleridir; Tüm yerleşik sayısal türler `structs` . [Sınıf](../../language-reference/keywords/class.md) anahtar sözcüğünü kullanarak tanımladığınız türler başvuru türleridir. Başvuru türleri ve değer türlerinde farklı derleme zamanı kuralları ve farklı çalışma zamanı davranışları vardır.
+- CTS içindeki her tür, bir *değer türü* veya bir *başvuru türü* olarak tanımlanır. Bu türler, .NET sınıf kitaplığı 'ndaki tüm özel türleri ve ayrıca kendi Kullanıcı tanımlı türlerinizi içerir. [Struct](../../language-reference/builtin-types/struct.md) anahtar sözcüğünü kullanarak tanımladığınız türler değer türleridir; Tüm yerleşik sayısal türler `structs` . [Sınıf](../../language-reference/keywords/class.md) veya [kayıt](../../language-reference/builtin-types/record.md) anahtar sözcüğünü kullanarak tanımladığınız türler başvuru türleridir. Başvuru türleri ve değer türlerinde farklı derleme zamanı kuralları ve farklı çalışma zamanı davranışları vardır.
 
 Aşağıdaki çizimde, CTS 'deki değer türleri ve başvuru türleri arasındaki ilişki gösterilmektedir.
 
@@ -112,7 +112,7 @@ Tüm numaralandırmalar öğesinden <xref:System.Enum?displayProperty=nameWithTy
 
 ### <a name="reference-types"></a>Başvuru türleri
 
-[Class](../../language-reference/keywords/class.md), [Delegate](../../language-reference/builtin-types/reference-types.md), array veya [Interface](../../language-reference/keywords/interface.md) olarak tanımlanan bir tür, bir *başvuru türüdür*. Çalışma zamanında, bir başvuru türü değişkeni bildirdiğinizde, [New](../../language-reference/operators/new-operator.md) işlecini kullanarak açıkça bir nesne oluşturana veya onu [](../../language-reference/keywords/null.md) `new` Aşağıdaki örnekte gösterildiği gibi kullanılarak başka bir yerde oluşturulmuş bir nesne atayarak, değişken null değerini içerir:
+[Sınıf](../../language-reference/keywords/class.md), [kayıt](../../language-reference/builtin-types/record.md), [temsilci](../../language-reference/builtin-types/reference-types.md), dizi veya [arabirim](../../language-reference/keywords/interface.md) olarak tanımlanan bir tür, *başvuru türüdür*. Çalışma zamanında, bir başvuru türü değişkeni bildirdiğinizde, [New](../../language-reference/operators/new-operator.md) işlecini kullanarak açıkça bir nesne oluşturana veya onu [](../../language-reference/keywords/null.md) `new` Aşağıdaki örnekte gösterildiği gibi kullanılarak başka bir yerde oluşturulmuş bir nesne atayarak, değişken null değerini içerir:
 
 :::code language="csharp" source="snippets/index/Program.cs" id="DeclarationAndAssignment":::
 

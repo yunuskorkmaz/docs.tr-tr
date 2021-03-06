@@ -1,13 +1,13 @@
 ---
 title: 'Son değişiklik: şifreleme soyut uygulamalarının varsayılan uygulamalarını örnekleme desteklenmiyor'
-description: Şifreleme soyutlamaları üzerinde parametresiz Create () aşırı yüklemelerinin artık kullanılmıyor olması durumunda .NET 5,0 'deki önemli değişiklik hakkında bilgi edinin.
+description: Şifreleme soyutlamaları üzerinde parametresiz Create () aşırı yüklemelerinin artık kullanılmıyor olması durumunda .NET 5 ' teki son değişiklik hakkında bilgi edinin.
 ms.date: 10/16/2020
-ms.openlocfilehash: 8ed7d0b72347ec41ec65ccd9e4004266619c84f7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b75f3568317d1db8ae1bb629f760aaec7e69776a
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761597"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256796"
 ---
 # <a name="instantiating-default-implementations-of-cryptographic-abstractions-is-not-supported"></a>Şifrelenmiş soyutlamalar için varsayılan uygulamaların örneği oluşturma desteklenmiyor
 
@@ -41,7 +41,7 @@ Ayrıca, programlama yoluyla çağırmak gerekmeden varsayılan algoritmayı de�
 HashAlgorithm alg = HashAlgorithm.Create();
 ```
 
-.NET 5,0 ve sonraki sürümlerinde, gibi soyut şifreleme temel fabrikaları <xref:System.Security.Cryptography.HashAlgorithm.Create?displayProperty=nameWithType> kullanılmıyor olarak işaretlenir ve kimliğiyle derleme zamanı uyarısı üretir `SYSLIB0007` . Çalışma zamanında, bu yöntemler bir oluşturma işlemine devam eder <xref:System.PlatformNotSupportedException> .
+.NET 5 ve sonraki sürümlerinde, gibi soyut şifreleme temel fabrikaları <xref:System.Security.Cryptography.HashAlgorithm.Create?displayProperty=nameWithType> kullanılmıyor olarak işaretlenir ve kimliğiyle derleme zamanı uyarısı üretir `SYSLIB0007` . Çalışma zamanında, bu yöntemler bir oluşturma işlemine devam eder <xref:System.PlatformNotSupportedException> .
 
 ```csharp
 // Throws PlatformNotSupportedException.
@@ -71,7 +71,7 @@ Bu yalnızca derleme zamanı değişir. .NET Core 'un önceki sürümlerinden ç
 
 ## <a name="reason-for-change"></a>Değişiklik nedeni
 
-Eski sistem doğru şifreleme çevikliğine izin vermediğinden, .NET Framework 'de bulunan şifreleme yapılandırma sistemi artık .NET Core ve .NET 5.0 + ' da mevcut değildir. .NET 'in geriye dönük uyumluluk gereksinimleri Ayrıca, Framework 'ün şifreleme ile ilgili bazı şifreleme API 'Lerini güncelleştirmesini de yasaklıyor. Örneğin, <xref:System.Security.Cryptography.HashAlgorithm.Create?displayProperty=nameWithType> yöntem .NET Framework 1,0 ' de tanıtılmıştır ve SHA-1 karma algoritması bir grafik durumudur. Yirmi yıl geçti ve artık SHA-1 bozuk kabul edildi, ancak <xref:System.Security.Cryptography.HashAlgorithm.Create?displayProperty=nameWithType> farklı bir algoritma döndürmek için değiştiremedik. Bunun yapılması, uygulama tüketen kabul edilemez bir değişikliği ortaya çıkarabilir.
+Eski sistem doğru şifreleme çevikliğine izin vermediğinden, .NET Framework 'de bulunan şifreleme yapılandırma sistemi artık .NET Core ve .NET 5.0 + ' da mevcut değildir. . NET ' in geri uyumluluk gereksinimleri Ayrıca, Framework 'ün şifreleme ile ilgili bazı şifreleme API 'Lerini güncelleştirmesini sağlar. Örneğin, <xref:System.Security.Cryptography.HashAlgorithm.Create?displayProperty=nameWithType> yöntem .NET Framework 1,0 ' de tanıtılmıştır ve SHA-1 karma algoritması bir grafik durumudur. Yirmi yıl geçti ve artık SHA-1 bozuk kabul edildi, ancak <xref:System.Security.Cryptography.HashAlgorithm.Create?displayProperty=nameWithType> farklı bir algoritma döndürmek için değiştiremedik. Bunun yapılması, uygulama tüketen kabul edilemez bir değişikliği ortaya çıkarabilir.
 
 En iyi yöntem, şifreleme temel öğelerini kullanan kitaplıkların (AES, SHA-* ve RSA gibi) bu temel uygulamaları tüketme konusunda tam denetim altında olması gerektiğini belirler. Gelecekte prova gerektiren uygulamalar, bu temelleri kaydırabilen ve anahtar yönetimi ve şifreleme çevikliği özellikleri ekleyen üst düzey kitaplıkları kullanmalıdır. Bu kitaplıklar genellikle barındırma ortamı tarafından sağlanır. Bir örnek ASP ' dir [. ](/aspnet/core/security/data-protection/)Bu sorunları çağıran uygulama adına IŞLEYEN net 'In veri koruma kitaplığı.
 

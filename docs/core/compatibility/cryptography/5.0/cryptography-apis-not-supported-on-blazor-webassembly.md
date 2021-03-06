@@ -1,13 +1,13 @@
 ---
 title: "Son değişiklik: System. Security. Cryptography API 'Leri Blazor WebAssembly üzerinde desteklenmiyor"
-description: Şifreleme API 'Lerinin bir tarayıcıda çalıştırıldığında bir özel durum oluşturması için .NET 5,0 'deki Son değişiklik hakkında bilgi edinin.
+description: Şifreleme API 'Lerinin bir tarayıcıda çalıştırıldığında bir özel durum oluşturması durumunda .NET 5 ' teki son değişiklik hakkında bilgi edinin.
 ms.date: 09/16/2020
-ms.openlocfilehash: ec10fa777e91f641b5582378830536a0cfa8dd72
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ecbdda4c04642af6b1737e888491eb6565ba7479
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761398"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256887"
 ---
 # <a name="systemsecuritycryptography-apis-not-supported-on-blazor-webassembly"></a>System. Security. Cryptography API 'Leri Blazor WebAssembly üzerinde desteklenmez
 
@@ -15,10 +15,10 @@ ms.locfileid: "95761398"
 
 ## <a name="change-description"></a>Açıklamayı Değiştir
 
-Önceki .NET sürümlerinde API 'lerin çoğu <xref:System.Security.Cryptography> Blazor WebAssembly uygulamalarında kullanılamaz. .NET 5,0 ' den başlayarak, Blazor WebAssembly Apps tam .NET 5 API Surface alanını hedeflemelidir, ancak tüm .NET 5 API 'Leri tarayıcı korumalı alan kısıtlamaları nedeniyle desteklenmez. .NET 5,0 ve sonraki sürümlerinde, desteklenmeyen <xref:System.Security.Cryptography> API 'Ler <xref:System.PlatformNotSupportedException> WebAssembly üzerinde çalışırken bir oluşturur.
+Önceki .NET sürümlerinde API 'lerin çoğu <xref:System.Security.Cryptography> Blazor WebAssembly uygulamalarında kullanılamaz. .NET 5 ' den başlayarak, Blazor WebAssembly Apps tam .NET 5 API Surface alanını hedeflemelidir, ancak tüm .NET 5 API 'Leri tarayıcı korumalı alan kısıtlamaları nedeniyle desteklenmez. .NET 5 ve sonraki sürümlerinde, desteklenmeyen <xref:System.Security.Cryptography> API 'Ler <xref:System.PlatformNotSupportedException> WebAssembly üzerinde çalışırken bir oluşturur.
 
 > [!TIP]
-> [Platform uyumluluk Çözümleyicisi](../../code-analysis/5.0/ca1416-platform-compatibility-analyzer.md) , tarayıcı platformunu destekleyen bir proje oluşturduğunuzda etkilenen API 'lere yapılan tüm çağrıları işaret eder. Bu çözümleyici, .NET 5,0 ve sonraki uygulamalarda varsayılan olarak çalışır.
+> [Platform uyumluluk Çözümleyicisi](../../code-analysis/5.0/ca1416-platform-compatibility-analyzer.md) , tarayıcı platformunu destekleyen bir proje oluşturduğunuzda etkilenen API 'lere yapılan tüm çağrıları işaret eder. Bu çözümleyici, .NET 5 ve sonraki uygulamalarda varsayılan olarak çalışır.
 
 ## <a name="reason-for-change"></a>Değişiklik nedeni
 

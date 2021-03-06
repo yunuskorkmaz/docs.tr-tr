@@ -1,13 +1,13 @@
 ---
 title: 'Son değişiklik: bazı TableLayoutSettings özellikleri ınvalıdenumargumentexception oluşturur'
-description: Bazı TableLayoutSettings API 'Lerinin artık geçersiz bağımsız değişkenler için bir ınvalıdenumargumentexception oluşturandan sonra .NET 6,0 ' deki önemli değişiklik hakkında bilgi edinin.
+description: .NET 6 ' daki Son değişiklik hakkında bilgi edinmek için bazı TableLayoutSettings API 'Lerinin artık geçersiz bağımsız değişkenler için bir ınvalıdenumargumentexception oluşturması.
 ms.date: 01/18/2021
-ms.openlocfilehash: 8397952e4647347718f11597a100c5d764e7186b
-ms.sourcegitcommit: f8cd3ef517ee177c99feed944824c27d208cc0d1
+ms.openlocfilehash: 2da097122b935ec3a60c2bb009cc8ebbcff6468e
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2021
-ms.locfileid: "98570277"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255730"
 ---
 # <a name="selected-tablelayoutsettings-properties-throw-invalidenumargumentexception"></a>Seçili TableLayoutSettings özellikleri throw ınvalıdenumargumentexception
 
@@ -15,7 +15,7 @@ Seçili <xref:System.Windows.Forms.TableLayoutSettings> Özellikler artık <xref
 
 ## <a name="change-description"></a>Açıklamayı Değiştir
 
-Önceki .NET sürümlerinde, <xref:System.ArgumentOutOfRangeException> yanlış bir değer atamaya çalışırsanız bu özellikler bir oluşturur. .NET 6,0 ' den itibaren bu özellikler bu <xref:System.ComponentModel.InvalidEnumArgumentException> tür durumlarda bir oluşturur.
+Önceki .NET sürümlerinde, <xref:System.ArgumentOutOfRangeException> yanlış bir değer atamaya çalışırsanız bu özellikler bir oluşturur. .NET 6 ' dan itibaren, bu özellikler bu <xref:System.ComponentModel.InvalidEnumArgumentException> gibi durumlarda oluşturur.
 
 ## <a name="reason-for-change"></a>Değişiklik nedeni
 
@@ -23,7 +23,7 @@ Seçili <xref:System.Windows.Forms.TableLayoutSettings> Özellikler artık <xref
 
 ## <a name="version-introduced"></a>Sunulan sürüm
 
-.NET 6,0
+.NET 6.0
 
 ## <a name="recommended-action"></a>Önerilen eylem
 

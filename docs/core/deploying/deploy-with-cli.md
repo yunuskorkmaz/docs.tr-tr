@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: af2198360670360f94f7fdf30d2890bc7dfd436d
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: d2695b1f271e57bb44ed3f94acbbe17b830fdd60
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99773868"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255703"
 ---
 # <a name="publish-net-apps-with-the-net-cli"></a>.Net CLı ile .NET uygulamaları yayımlama
 
@@ -137,7 +137,7 @@ Bir FDE yayımlamak, uygulamayı çalıştıran sistemde bulunan en son .NET gü
 
 - `-r <RID>` Bu anahtar, hedef platformu belirtmek için bir tanımlayıcı (RID) kullanır. Çalışma zamanı tanımlayıcılarının listesi için bkz. [Runtime Identifier (RID) Catalog](../rid-catalog.md).
 
-- `--self-contained false` Bu anahtar, .NET Core SDK çalıştırılabilir bir FDE oluşturmasını söyler.
+- `--self-contained false` Bu anahtar, anahtarın varsayılan davranışını devre dışı bırakır, bu, `-r` kendinden bağımsız bir dağıtım (SCD) oluşturmaktır. Bu anahtar bir FDE oluşturur.
 
 | Yayımlama modu                   | SDK Sürümü | Komut                                                     |
 |--------------------------------|-------------|-------------------------------------------------------------|

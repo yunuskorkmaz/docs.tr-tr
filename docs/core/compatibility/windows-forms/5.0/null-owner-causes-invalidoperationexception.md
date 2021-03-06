@@ -1,13 +1,13 @@
 ---
 title: "Son değişiklik: DataGridView ile ilgili API 'Ler InvalidOperationException throw"
-description: DataGridView ile ilgili bazı API 'Lerin bir özel durum oluşturması için nesnenin DataGridViewCellAccessibleObject. Owner değeri null ise, .NET 5,0 'deki önemli değişiklik hakkında bilgi edinin.
+description: DataGridView ile ilgili bazı API 'Lerin bir özel durum oluşturması için nesnenin DataGridViewCellAccessibleObject. Owner değeri null ise, .NET 5 ' teki son değişiklik hakkında bilgi edinin.
 ms.date: 09/18/2020
-ms.openlocfilehash: 927b1c9160700159a45aa1472b8d96f1a9ecfe25
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e49ce0ebecb5a9ab4ed7f0e0d70d994ab751bc58
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761610"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256120"
 ---
 # <a name="datagridview-related-apis-now-throw-invalidoperationexception"></a>DataGridView ile ilgili API 'Ler artık InvalidOperationException 'yi oluşturur
 
@@ -15,13 +15,13 @@ Bundan sonra ilgili bazı API 'Ler, <xref:System.Windows.Forms.DataGridView> nes
 
 ## <a name="change-description"></a>Açıklamayı Değiştir
 
-Önceki .NET sürümlerinde, etkilenen API 'Ler çağrıldığında bir oluşturur <xref:System.NullReferenceException> ve <xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner> değeri şeklindedir `null` . .NET 5,0 ' den başlayarak, bu API 'Ler, <xref:System.InvalidOperationException> çağrıldığında bir yerine bir olarak <xref:System.NullReferenceException> <xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner> oluşturulur `null` .
+Önceki .NET sürümlerinde, etkilenen API 'Ler çağrıldığında bir oluşturur <xref:System.NullReferenceException> ve <xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner> değeri şeklindedir `null` . .NET 5 ' den başlayarak, bu API 'Ler <xref:System.InvalidOperationException> bir yerine bir, <xref:System.NullReferenceException> <xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner> değeri çağrıldığında bir oluşturur `null` .
 
 <xref:System.InvalidOperationException>.NET çalışma zamanının davranışına uygun bir şekilde oluşturuluyor. Ayrıca geçersiz özelliği açıkça iletişim kurarak hata ayıklama deneyimini geliştirir.
 
 ## <a name="version-introduced"></a>Sunulan sürüm
 
-.NET 5,0
+.NET 5.0
 
 ## <a name="recommended-action"></a>Önerilen eylem
 

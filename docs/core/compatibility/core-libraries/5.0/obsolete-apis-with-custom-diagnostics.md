@@ -1,13 +1,13 @@
 ---
 title: 'Son değişiklik: varsayılan olmayan tanılama kimlikleriyle API kullanım dışı meler'
-description: Bazı API 'Lerin özel bir tanılama KIMLIĞIYLE artık kullanılmıyor olarak işaretlendiğinden, çekirdek .NET kitaplıklarında .NET 5,0 'in son değişikliği hakkında bilgi edinin.
+description: Bazı API 'Lerin özel bir tanılama KIMLIĞIYLE artık kullanılmıyor olarak işaretlendiğinden, çekirdek .NET kitaplıklarında .NET 5 ile ilgili son değişiklik hakkında bilgi edinin.
 ms.date: 11/01/2020
-ms.openlocfilehash: 9bd7ce18aed38955f9abc91e0c8b09e827c401d6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9aa4543ae6660f2d2fceac2419340bc6c90f1c54
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761622"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257381"
 ---
 # <a name="api-obsoletions-with-non-default-diagnostic-ids"></a>Varsayılan olmayan tanılama kimlikleri ile API kullanımdan kaldırılmaları
 
@@ -15,7 +15,7 @@ Bazı API 'Ler, .NET 5,0 ' den itibaren eski olarak işaretlendi. Bu son değiş
 
 ## <a name="change-description"></a>Açıklamayı Değiştir
 
-Önceki .NET sürümlerinde, bu API 'Ler herhangi bir derleme uyarısı olmadan kullanılabilir. .NET 5,0 ve sonraki sürümlerinde, bu API 'lerin kullanılması bir derleme zamanı uyarısı veya özel bir tanılama KIMLIĞIYLE hata üretir. Özel tanılama kimliklerinin kullanımı, kullanım dışı bırakılmış uyarıları, kullanımdan kaldırma durumunda olmayan tüm uyarılar yerine tek tek bastırmayı sağlar.
+Önceki .NET sürümlerinde, bu API 'Ler herhangi bir derleme uyarısı olmadan kullanılabilir. .NET 5 ve sonraki sürümlerinde, bu API 'lerin kullanılması bir derleme zamanı uyarısı veya özel bir tanılama KIMLIĞIYLE hata üretir. Özel tanılama kimliklerinin kullanımı, kullanım dışı bırakılmış uyarıları, kullanımdan kaldırma durumunda olmayan tüm uyarılar yerine tek tek bastırmayı sağlar.
 
 Aşağıdaki tabloda, kullanımdan, kullanım dışı bırakılmış API 'Ler için özel tanılama kimlikleri ve bunlara karşılık gelen uyarı iletileri listelenmektedir.
 
@@ -36,7 +36,7 @@ Aşağıdaki tabloda, kullanımdan, kullanım dışı bırakılmış API 'Ler i�
 
 ## <a name="version-introduced"></a>Sunulan sürüm
 
-.NET 5,0
+.NET 5.0
 
 ## <a name="recommended-action"></a>Önerilen eylem
 

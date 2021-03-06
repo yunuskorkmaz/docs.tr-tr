@@ -3,12 +3,12 @@ title: C# dil sürümü oluşturma-C# Kılavuzu
 description: C# dil sürümünün projenize göre nasıl belirlendiği ve bu seçimin arkasındaki nedenler hakkında bilgi edinin. Varsayılanı el ile nasıl geçersiz kılacağınızı öğrenin.
 ms.custom: updateeachrelease
 ms.date: 08/11/2020
-ms.openlocfilehash: 3473ad62bd0c7d5fb98fd14f9697a422702cf156
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: ba6f453123668248b2c65ee6a431cb16dfe74c46
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102104082"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258409"
 ---
 # <a name="c-language-versioning"></a>C# dil sürümü oluşturma
 
@@ -88,7 +88,7 @@ Aşağıdaki tabloda tüm geçerli C# dil sürümleri gösterilmektedir. Daha es
 [!INCLUDE [langversion-table](includes/langversion-table.md)]
 
 > [!TIP]
-> [Visual Studio için geliştirici komut istemi](../../framework/tools/developer-command-prompt-for-vs.md)açın ve makinenizde kullanılabilen dil sürümlerinin listesini görmek için aşağıdaki komutu çalıştırın.
+> Bir [Geliştirici komut satırı kabuğu](/visualstudio/ide/reference/command-prompt-powershell)açın ve makinenizde kullanılabilen dil sürümlerinin listesini görmek için aşağıdaki komutu çalıştırın.
 >
 > ```CMD
 > csc -langversion:?

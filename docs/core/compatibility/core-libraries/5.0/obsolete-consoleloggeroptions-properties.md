@@ -1,13 +1,13 @@
 ---
 title: 'Son değişiklik: ConsoleLoggerOptions üzerinde Kullanımdan kaldırılmış Özellikler'
-description: ConsoleLoggerFormat türünün ve ConsoleLoggerOptions üzerindeki bazı özelliklerin artık kullanım dışı olduğu çekirdek .NET kitaplıklarında .NET 5,0 son değişikliği hakkında bilgi edinin.
+description: ConsoleLoggerFormat türü ve ConsoleLoggerOptions üzerindeki bazı özellikler artık kullanımdan kalkmış olan çekirdek .NET kitaplıklarında .NET 5 ile ilgili önemli değişiklik hakkında bilgi edinin.
 ms.date: 11/01/2020
-ms.openlocfilehash: bd039dfa84ae3399d7fb36f992010a9a3c9f6ddf
-ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
+ms.openlocfilehash: c6ee294f90e304cebd517bd0139c58a6c7a41e0c
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99548399"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257316"
 ---
 # <a name="obsolete-properties-on-consoleloggeroptions"></a>ConsoleLoggerOptions üzerinde kullanımdan kaldırılan özellikler
 
@@ -15,7 +15,7 @@ ms.locfileid: "99548399"
 
 ## <a name="change-description"></a>Açıklamayı Değiştir
 
-.NET 5,0 ' den başlayarak, <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerFormat?displayProperty=nameWithType> türü ve çeşitli özellikleri <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions> artık kullanılmıyor. Artık kullanılmayan özellikler şunlardır:
+.NET 5 ' den başlayarak, <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerFormat?displayProperty=nameWithType> türü ve çeşitli özellikleri <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions> artık kullanılmıyor. Artık kullanılmayan özellikler şunlardır:
 
 - <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.DisableColors?displayProperty=nameWithType>
 - <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.IncludeScopes?displayProperty=nameWithType>
@@ -37,7 +37,7 @@ Kalan özellikler, <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptio
 
 ## <a name="recommended-action"></a>Önerilen eylem
 
-- <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.FormatterName?displayProperty=nameWithType>Özelliği yerine yeni özelliğini kullanın <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.Format?displayProperty=nameWithType> . Örneğin:
+- <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.FormatterName?displayProperty=nameWithType>Özelliği yerine yeni özelliğini kullanın <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.Format?displayProperty=nameWithType> . Örnek:
 
   ```csharp
   loggingBuilder.AddConsole(options =>
@@ -49,7 +49,7 @@ Kalan özellikler, <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptio
   Ve arasında birkaç fark vardır <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.FormatterName> <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.Format> :
 
   - <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.Format> yalnızca iki olası seçeneğe sahiptir: `Default` ve `Systemd` .
-  - <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.FormatterName> büyük/küçük harfe duyarlıdır ve herhangi bir dize olabilir. Ayrılmış, yerleşik adlar `Simple` , `Systemd` ve `Json` (.NET 5,0 ve üzeri).
+  - <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.FormatterName> büyük/küçük harfe duyarlıdır ve herhangi bir dize olabilir. Ayrılmış, yerleşik adlar `Simple` , `Systemd` ve `Json` (.NET 5 ve üzeri).
   - `"Format": "Systemd"` ile eşlenir `"FormatterName": "Systemd"` .
   - `"Format": "Default"` ile eşlenir `"FormatterName": "Simple"` .
 

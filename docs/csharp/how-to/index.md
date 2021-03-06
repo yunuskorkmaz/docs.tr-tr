@@ -2,12 +2,12 @@
 title: Nasıl yapılır makaleleri (C# Kılavuzu)
 description: Hızlı ipuçları ve kısa, odaklanmış kod örnekleri koleksiyonu
 ms.date: 12/20/2017
-ms.openlocfilehash: 26d3931ff3b4ecfcc052c3ace25a09801f84c505
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: dae10bf0019c283f568c4850d3bfa0abad6df85a
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537411"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258201"
 ---
 # <a name="how-to-c"></a>Nasıl yapılır (C#)
 
@@ -24,9 +24,9 @@ Ortak C# Geliştirici uygulamalarından birkaç ipucu ve püf noktası vardır:
 - C# programcıları bile [ `My` Visual Basic ad alanını kullanmak](../programming-guide/namespaces/how-to-use-the-my-namespace.md)isteyebilir.
 - [ `enum` Uzantı yöntemleri kullanarak bir tür için yeni bir yöntem oluşturun](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
 
-### <a name="class-and-struct-members"></a>Sınıf ve yapı üyeleri
+### <a name="class-record-and-struct-members"></a>Sınıf, kayıt ve yapı üyeleri
 
-Programınızı uygulamak için sınıflar ve yapılar oluşturursunuz. Bu teknikler, sınıfları veya yapıları yazarken yaygın olarak kullanılır.
+Programınızı uygulamak için sınıflar, kayıtlar ve yapılar oluşturursunuz. Bu teknikler, sınıfları, kayıtları veya yapıları yazarken yaygın olarak kullanılır.
 
 - [Otomatik uygulanan özellikler bildirin](../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md).
 - [Okuma/yazma özelliklerini bildirin ve kullanın](../programming-guide/classes-and-structs/how-to-declare-and-use-read-write-properties.md).

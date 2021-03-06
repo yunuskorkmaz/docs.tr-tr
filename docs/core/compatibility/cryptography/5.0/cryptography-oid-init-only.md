@@ -1,13 +1,13 @@
 ---
 title: 'Son değişiklik: Cryptography. OID yalnızca işlev olarak init'
-description: Cryptography. OID sınıfındaki Özellik ayarlayıcılarının artık bir değeri değiştirmeye çalışırsanız bir özel durum oluşturması için .NET 5,0 ' deki Son değişiklik hakkında bilgi edinin.
+description: .NET 5 ' teki son değişiklik hakkında bilgi edinin. OID sınıfında özellik ayarlayıcıları artık bir değeri değiştirmeye çalışırsanız bir özel durum oluşturur.
 ms.date: 08/16/2020
-ms.openlocfilehash: a3b5a393e2a84f7c9a60c2a821ecfda9c6acd2e3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: aa1e72adcda61f2292574729e36cdc578bf907d2
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761397"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256874"
 ---
 # <a name="systemsecuritycryptographyoid-is-functionally-init-only"></a>System. Security. Cryptography. OID yalnızca işlev olarak init
 
@@ -17,7 +17,7 @@ ms.locfileid: "95761397"
 
 Önceki sürümlerde özellik ayarlayıcıları, <xref:System.Security.Cryptography.Oid> ve özelliklerinin değerini değiştirmek için kullanılabilir <xref:System.Security.Cryptography.Oid.FriendlyName> <xref:System.Security.Cryptography.Oid.Value> .
 
-.NET 5,0 ve sonraki sürümlerinde, özellik ayarlayıcıları yalnızca değeri başlatmak için kullanılabilir. Özelliğin bir oluşturucudan veya özellik ayarlayıcısına yapılan bir çağrıdan bir değere sahip olması durumunda, Özellik ayarlayıcısı her zaman bir oluşturur <xref:System.PlatformNotSupportedException> .
+.NET 5 ve sonraki sürümlerde özellik ayarlayıcıları yalnızca değeri başlatmak için kullanılabilir. Özelliğin bir oluşturucudan veya özellik ayarlayıcısına yapılan bir çağrıdan bir değere sahip olması durumunda, Özellik ayarlayıcısı her zaman bir oluşturur <xref:System.PlatformNotSupportedException> .
 
 ## <a name="reason-for-change"></a>Değişiklik nedeni
 

@@ -1,15 +1,15 @@
 ---
 title: "Son değişiklik: uzaktan Iletişim API 'Leri artık kullanılmıyor"
-description: Remoting ile ilgili bazı API 'Lerin eski olarak işaretlendikleri ve özel bir tanılama KIMLIĞIYLE uyarı oluşturulduğu çekirdek .NET kitaplıklarında .NET 5,0 'in son değişikliği hakkında bilgi edinin.
+description: Ana .NET kitaplıklarında, uzaktan iletişim ile ilgili bazı API 'Lerin eski olarak işaretlendikleri ve özel bir tanılama KIMLIĞIYLE uyarı oluşturan .NET 5 ' in son değişikliği hakkında bilgi edinin.
 ms.date: 11/01/2020
-ms.openlocfilehash: 5687b1471028b077674cfd31cb77ce95dc51bef5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3c4f7cd200cadd11321da60f2b4a0d191497aae8
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761498"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257182"
 ---
-# <a name="remoting-apis-are-obsolete"></a>Uzaktan iletişim API 'Leri artık kullanılmıyor
+# <a name="remoting-apis-are-obsolete"></a>Uzaktan iletişim API’leri kullanımdan kaldırıldı
 
 Remoting ile ilgili bazı API 'Ler kullanılmıyor olarak işaretlenir ve `SYSLIB0010` derleme zamanında bir uyarı oluşturur. Bu API 'Ler, .NET 'in gelecek bir sürümünde kaldırılabilir.
 
@@ -24,7 +24,7 @@ Aşağıdaki uzaktan iletişim API 'Leri kullanılmıyor olarak işaretlenir.
 
 .NET Framework 2. x-4. x içinde, <xref:System.MarshalByRefObject.GetLifetimeService> ve <xref:System.MarshalByRefObject.InitializeLifetimeService> yöntemleri .NET uzaktan iletişim ile ilgili örneklerin ömrünü denetler. .NET Core 2. x-3. x içinde, bu yöntemler her zaman çalışma zamanında oluşturur <xref:System.PlatformNotSupportedException> .
 
-.NET 5,0 ve sonraki sürümlerinde, <xref:System.MarshalByRefObject.GetLifetimeService> ve <xref:System.MarshalByRefObject.InitializeLifetimeService> yöntemleri uyarı olarak kullanımdan kalkmıştır, ancak çalışma zamanında bir oluşturma işlemine devam eder <xref:System.PlatformNotSupportedException> .
+.NET 5 ve sonraki sürümlerinde, <xref:System.MarshalByRefObject.GetLifetimeService> ve <xref:System.MarshalByRefObject.InitializeLifetimeService> yöntemleri uyarı olarak kullanımdan kalkmıştır, ancak çalışma zamanında bir oluşturma işlemine devam eder <xref:System.PlatformNotSupportedException> .
 
 ```csharp
 // MemoryStream, like all Stream instances, subclasses MarshalByRefObject.
@@ -37,13 +37,13 @@ Bu yalnızca derleme zamanı değişir. .NET Core 'un önceki sürümlerinden ç
 
 ## <a name="reason-for-change"></a>Değişiklik nedeni
 
-[.NET uzaktan iletişim](/previous-versions/dotnet/netframework-1.1/kwdt6w2k(v=vs.71)) , eski bir teknolojidir. Başka bir işlemdeki (potansiyel olarak farklı bir makinede bile) bir nesnenin örneğini oluşturma ve bu nesneyle normal, işlem içi bir .NET nesne örneği gibi etkileşim kurma olanağı sağlar. .NET uzaktan iletişim altyapısı yalnızca .NET Framework 2. x-4. x içinde bulunur. .NET Core ve .NET 5,0 ve üzeri sürümlerde .NET uzaktan iletişim desteği yoktur ve uzaktan iletişim API 'Leri yok ya da bu çalışma zamanları üzerinde her zaman özel durum oluşturmaz.
+[.NET uzaktan iletişim](/previous-versions/dotnet/netframework-1.1/kwdt6w2k(v=vs.71)) , eski bir teknolojidir. Başka bir işlemdeki (potansiyel olarak farklı bir makinede bile) bir nesnenin örneğini oluşturma ve bu nesneyle normal, işlem içi bir .NET nesne örneği gibi etkileşim kurma olanağı sağlar. .NET uzaktan iletişim altyapısı yalnızca .NET Framework 2. x-4. x içinde bulunur. .NET Core ve .NET 5 ve sonraki sürümlerinde .NET uzaktan iletişim desteği yoktur ve uzaktan iletişim API 'Leri yok ya da bu çalışma zamanları üzerinde her zaman özel durum oluşturmaz.
 
 Geliştiricilerin bu API 'lerden uzaklaşmasına yardımcı olmak için, Remoting ile ilgili seçili API 'Leri kullanımdan çıkaracağız. Bu API 'Ler tamamen .NET 'in gelecek bir sürümünde kaldırılabilir.
 
 ## <a name="version-introduced"></a>Sunulan sürüm
 
-.NET 5,0
+.NET 5.0
 
 ## <a name="recommended-action"></a>Önerilen eylem
 

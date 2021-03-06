@@ -6,20 +6,20 @@ helpviewer_keywords:
 - Clrver.exe
 - CLR Version tool
 ms.assetid: cbc2ee86-bdc8-4a65-a8f1-ba23bce3a699
-ms.openlocfilehash: 3a7a585d990051553aa8fdc0e99b2dc206273cf4
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8205b92f3997f6abacc566e2e6f2b37604fbda07
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96247232"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255255"
 ---
 # <a name="clrverexe-clr-version-tool"></a>Clrver.exe (CLR Sürüm Aracı)
 
 CLR Sürüm aracı (Clrver.exe) ortak dil çalışma zamanının (CLR) bilgisayarda yüklü tüm sürümlerini bildirir.  
   
- Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](developer-command-prompt-for-vs.md).  
+ Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, [geliştiriciler için bir komut satırı kabuğu](/visualstudio/ide/reference/command-prompt-powershell)kullanın.  
   
- Komut satırına şunu yazın:  
+ Komut isteminde aşağıdaki komutu girin:  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -61,4 +61,4 @@ clrver [option]
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Araçlar](index.md)
-- [Komut Istemleri](developer-command-prompt-for-vs.md)
+- [Geliştirici komut satırı kabukları](/visualstudio/ide/reference/command-prompt-powershell)

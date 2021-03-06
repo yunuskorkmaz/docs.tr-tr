@@ -7,21 +7,21 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 11/20/2020
-ms.openlocfilehash: 5d80b28642ee1e975d334f89504a1748d13dea8f
-ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
+ms.openlocfilehash: 18258c54cffdc538ddd11ec1393639216f86f85a
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96509786"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255463"
 ---
-# <a name="no-locblazor-app-hosting-models"></a>Blazor uygulama barındırma modelleri
+# <a name="blazor-app-hosting-models"></a>Blazor uygulama barındırma modelleri
 
-Blazor uygulamalar, ASP.NET Web Forms uygulamalar gibi IIS 'de barındırılabilir. Blazor uygulamalar, aşağıdaki yollarla da barındırılabilir:
+Blazor uygulamalar, aşağıdaki yollarla barındırılabilir:
 
 - Üzerinde tarayıcıda istemci tarafı WebAssembly .
 - ASP.NET Core uygulamasında sunucu tarafı.
 
-## <a name="no-locblazor-no-locwebassembly-apps"></a>BlazorWebAssemblyuygulamalar
+## <a name="blazor-webassembly-apps"></a>BlazorWebAssemblyuygulamalar
 
 BlazorWebAssemblyuygulamalar doğrudan tarayıcıda bir WebAssembly tabanlı .NET çalışma zamanı üzerinde yürütülür. BlazorWebAssemblyuygulamalar, angular veya tepki verme gibi ön uç JavaScript çerçeveleri için benzer bir şekilde çalışır. Bununla birlikte, JavaScript yazmak yerine C# yazın. .NET çalışma zamanı, uygulama derlemesi ve gerekli bağımlılıklarla birlikte uygulamayla birlikte indirilir. Tarayıcı eklentileri veya uzantıları gerekli değildir.
 
@@ -35,7 +35,7 @@ BlazorWebAssemblyuygulamalar yalnızca istemci tarafında çalışır. Bu tür u
 
 BlazorVe tam yığın .NET Web geliştirme avantajlarından yararlanmak için Blazor WebAssembly uygulamanızı ASP.NET Core barındırın. Hem istemci hem de sunucuda .NET kullanarak, tutarlı bir dil, çerçeve ve araç kümesi kullanarak kodu kolayca paylaşabilir ve uygulamanızı oluşturabilirsiniz. Blazor hem Blazor uygulama hem de ASP.NET Core bir konak projesi içeren bir çözüm ayarlamak için uygun şablonlar sağlar WebAssembly . Çözüm yapılandırıldığında, uygulamadaki oluşturulan statik dosyalar, Blazor geri dönüş yönlendirme zaten kurulumuyla ASP.NET Core uygulama tarafından barındırılır.
 
-## <a name="no-locblazor-server-apps"></a>Blazor Sunucu uygulamaları
+## <a name="blazor-server-apps"></a>Blazor Sunucu uygulamaları
 
 [ Blazor ](architecture-comparison.md#blazor) Blazor Bileşenlerin çıktılarını, a adlı bir ara soyutlamada işlemesini sağlayan mimari tartışmadan geri çekin `RenderTree` . Daha Blazor sonra Framework, daha önce işlenmiş olan nelerin işlenmiş olduğunu karşılaştırır. Farklar DOM 'a uygulanır. Blazor bileşenler, işlenen çıktısının uygulanma işleminden ayrılır. Sonuç olarak, bileşenlerin kendisi Kullanıcı arabirimini güncelleştiren işlemle aynı işlemde çalışmak zorunda değildir. Aslında, aynı makinede çalışması bile gerekmez.
 
@@ -45,7 +45,7 @@ BlazorSunucu uygulamalarında, bileşenler tarayıcıda istemci tarafı yerine s
 
 BlazorASP.NET AJAX ve denetimini kullandıysanız sunucu barındırma modeli tanıdık gelebilir <xref:System.Web.UI.UpdatePanel> . `UpdatePanel`Denetim, sayfadaki olayları tetiklemeye yönelik kısmi sayfa güncelleştirmelerini uygulamayı işler. Tetiklendiğinde, `UpdatePanel` kısmen bir güncelleştirme ister ve sonra sayfayı yenilemeye gerek kalmadan uygulamayı uygular. Kullanıcı arabiriminin durumu kullanılarak yönetilir `ViewState` . Blazor Sunucu uygulamaları, uygulamanın istemciyle etkin bir bağlantı gerektirdiğinden biraz farklıdır. Ayrıca, tüm Kullanıcı arabirimi durumu sunucuda tutulur. Bu farklılıklardan ayrı olarak, iki model kavramsal olarak benzerdir.
 
-## <a name="how-to-choose-the-right-no-locblazor-hosting-model"></a>Doğru Blazor barındırma modelini seçme
+## <a name="how-to-choose-the-right-blazor-hosting-model"></a>Doğru Blazor barındırma modelini seçme
 
 [ Blazor Barındırma modeli belgeleri](/aspnet/core/blazor/hosting-models)bölümünde açıklandığı gibi, farklı Blazor barındırma modellerinin farklı avantajları vardır.
 

@@ -7,12 +7,12 @@ ms.date: 11/13/2020
 ms.topic: how-to
 ms.prod: dotnet
 zone_pivot_groups: ide-set-one
-ms.openlocfilehash: 7b9872304ee53071452772e3da02081a7def4d80
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 58858384c49a296e0b33d663f3ef930caf9cace6
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "96589974"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258071"
 ---
 # <a name="debug-net-apps-on-raspberry-pi"></a>Raspberry PI üzerinde .NET uygulamalarında hata ayıklama
 
@@ -26,7 +26,7 @@ Visual Studio Code Raspberry Pi üzerinde .NET hatası ayıklama, Raspberry Pi �
 
 ### <a name="enable-ssh-on-the-raspberry-pi"></a>Raspberry PI üzerinde SSH 'yi etkinleştirme
 
-Uzaktan hata ayıklama için SSH gereklidir. SSH 'yi etkinleştirmek için [Raspberry PI BELGELERINDEKI *SSH 'yi etkinleştirme* bölümüne bakın](https://www.raspberrypi.org/documentation/remote-access/ssh/) <span class="docon docon-navigate-external x-hidden-focus"></span> .
+Uzaktan hata ayıklama için SSH gereklidir. SSH 'yi etkinleştirmek için [Raspberry PI BELGELERINDEKI *SSH 'yi etkinleştirme* bölümüne bakın](https://www.raspberrypi.org/documentation/remote-access/ssh/).
 
 ### <a name="install-the-visual-studio-remote-debugger-on-the-raspberry-pi"></a>Visual Studio Uzaktan Hata Ayıklayıcı Raspberry Pi 'ye yükler
 
@@ -46,7 +46,7 @@ Raspberry PI 'deki Bash konsolu içinde (yerel olarak veya SSH aracılığıyla)
 
 1. Visual Studio Code, uzaktan hata ayıklamak için SSH protokolünü kullanır. Güvenlik nedeniyle, `root` Varsayılan olarak SSH aracılığıyla oturum açmasına izin verilmez. `root`SSH aracılığıyla oturum açmaya olanak tanımak için aşağıdaki adımları izleyin:
 
-    1. Nano 'da */etc/ssh/sshd_config* açmak için aşağıdaki komutu yürütün [nano](https://www.nano-editor.org/docs.php) <span class="docon docon-navigate-external x-hidden-focus"></span> .
+    1. [Nano](https://www.nano-editor.org/docs.php)'da */etc/ssh/sshd_config* açmak için aşağıdaki komutu yürütün.
 
         ```bash
         sudo nano /etc/ssh/sshd_config
@@ -110,7 +110,7 @@ Aşağıdakilere dikkat edin:
 - `pipeArgs` , SSH istemcisine geçirilecek parametrelerdir. Parola parametresini ve bu biçimdeki kullanıcıyı da belirttiğinizden emin olun `root` `<user>@<hostname>` .
 
 > [!IMPORTANT]
-> Yukarıdaki örnek, [Putty](https://www.ssh.com/ssh/putty/) SSH istemcisinin bir bileşeni olan *plınk*'i kullanır <span class="docon docon-navigate-external x-hidden-focus"></span> . [OpenSSH](https://www.openssh.com/) <span class="docon docon-navigate-external x-hidden-focus"></span> Windows ve Linux 'un son sürümlerinde bulunan OpenSSH, bunun yerine kullanılabilir. Ancak, OpenSSH, parolaların komut satırı parametresi olarak gönderilmesini desteklemez. OpenSSH kullanmak için, [Raspberry PI 'nizi passwordless SSH erişimi için yapılandırın](https://www.raspberrypi.org/documentation/remote-access/ssh/passwordless.md) <span class="docon docon-navigate-external x-hidden-focus"></span> .
+> Yukarıdaki örnek, [Putty](https://www.ssh.com/ssh/putty/) SSH istemcisinin bir bileşeni olan *plınk*'i kullanır <span class="docon docon-navigate-external x-hidden-focus"></span> . [](https://www.openssh.com/) <span class="docon docon-navigate-external x-hidden-focus"></span> Windows ve Linux 'un son sürümlerinde bulunan OpenSSH, bunun yerine kullanılabilir. Ancak, OpenSSH, parolaların komut satırı parametresi olarak gönderilmesini desteklemez. OpenSSH kullanmak için, [Raspberry PI 'nizi passwordless SSH erişimi için yapılandırın](https://www.raspberrypi.org/documentation/remote-access/ssh/passwordless.md).
 
 ### <a name="deploy-the-app"></a>Uygulamayı dağıtma
 
@@ -122,7 +122,7 @@ Uygulamayı [.NET uygulamalarını Raspberry PI 'ye dağıtma](deployment.md)bö
 
 ## <a name="references"></a>Başvurular
 
-[ARM 'de .NET Core kullanarak Windows üzerinde vs Code uzaktan hata ayıklama](https://www.hanselman.com/blog/remote-debugging-with-vs-code-on-windows-to-a-raspberry-pi-using-net-core-on-arm)<span class="docon docon-navigate-external x-hidden-focus"></span>
+[ARM 'de .NET Core kullanarak Windows üzerinde VS Code uzaktan hata ayıklama](https://www.hanselman.com/blog/remote-debugging-with-vs-code-on-windows-to-a-raspberry-pi-using-net-core-on-arm)
 
 ::: zone-end
 

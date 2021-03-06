@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.custom: devx-track-dotnet
 ms.author: daberry
 author: daberry
-ms.openlocfilehash: a2ff9bbf1e6a8790ddc161a1a1c8d14e8fab6e41
-ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
+ms.openlocfilehash: 2f22f69ec99baf192d1cbdd28f884b7f47867389
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98027276"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257986"
 ---
 # <a name="net-on-azure-development-environment-checklist"></a>Azure geliştirme ortamında .NET denetim listesi
 
@@ -36,7 +36,7 @@ Visual Studio ve Visual Studio Code gibi popüler araçlar, IDE 'nizden Azure il
 
 Azure portal kullanmanın yanı sıra Azure kaynaklarını oluşturmak ve yönetmek için Azure CLı 'yi de yüklemek isteyeceksiniz.
 
-* [Windows Için Azure CLI 'Yı yükler](/cli/azure/install-azure-cli-windows?tabs=azure-cli))
+* [Windows için Azure CLI'yı yükleme](/cli/azure/install-azure-cli-windows?tabs=azure-cli)
 * [macOS için Azure CLI'yı yükleme](/cli/azure/install-azure-cli-macos)
 * [Linux için Azure CLı 'yı yükler](/cli/azure/install-azure-cli-linux)
 

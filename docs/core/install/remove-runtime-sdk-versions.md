@@ -3,14 +3,14 @@ title: .NET çalışma zamanını ve SDK 'Yı kaldırma
 description: Bu makalede, .NET çalışma zamanının ve SDK 'sının hangi sürümlerinin yüklü olduğunu ve sonra Windows, Mac ve Linux 'ta nasıl kaldırılacağını belirleme açıklanmaktadır.
 author: adegeo
 ms.author: adegeo
-ms.date: 11/20/2020
+ms.date: 03/02/2021
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: f07a9acdc5be310d38da18602dde2ebf678e9a1b
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 8ef6ab531d6c3eada5226b1682f19bfe5537bfe4
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031728"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255639"
 ---
 # <a name="how-to-remove-the-net-runtime-and-sdk"></a>.NET çalışma zamanını ve SDK 'sını kaldırma
 
@@ -71,15 +71,15 @@ SDK değil yalnızca çalışma zamanını yükleyen makineler için, paket adı
 
 Bir tarbol kullanarak yüklediyseniz, el ile yöntemini kullanarak .NET 'i kaldırmanız gerekir.
 
-Linux 'ta, sürümlü dizinleri kaldırarak SDK 'Ları ve çalışma zamanlarını ayrı olarak kaldırmanız gerekir. Bunları kaldırmak, SDK ve çalışma zamanını diskten siler. Örneğin, 1.0.1 SDK ve çalışma zamanını kaldırmak için aşağıdaki Bash komutlarını kullanın:
+Linux 'ta, sürümlü dizinleri kaldırarak SDK 'Ları ve çalışma zamanlarını ayrı olarak kaldırmanız gerekir. Bu dizinler, Linux dağıtımına bağlı olarak değişebilir. Bunları kaldırmak, SDK ve çalışma zamanını diskten siler. Örneğin, 1.0.1 SDK ve çalışma zamanını kaldırmak için aşağıdaki Bash komutlarını kullanın:
 
 ```bash
 version="1.0.1"
-sudo rm -rf /usr/local/share/dotnet/sdk/$version
-sudo rm -rf /usr/local/share/dotnet/shared/Microsoft.NETCore.App/$version
-sudo rm -rf /usr/local/share/dotnet/shared/Microsoft.AspNetCore.All/$version
-sudo rm -rf /usr/local/share/dotnet/shared/Microsoft.AspNetCore.App/$version
-sudo rm -rf /usr/local/share/dotnet/host/fxr/$version
+sudo rm -rf /usr/share/dotnet/sdk/$version
+sudo rm -rf /usr/share/dotnet/shared/Microsoft.NETCore.App/$version
+sudo rm -rf /usr/share/dotnet/shared/Microsoft.AspNetCore.All/$version
+sudo rm -rf /usr/share/dotnet/shared/Microsoft.AspNetCore.App/$version
+sudo rm -rf /usr/share/dotnet/host/fxr/$version
 ```
 
 SDK ve çalışma zamanının üst dizinleri, `dotnet --list-sdks` `dotnet --list-runtimes` önceki tabloda gösterildiği gibi, ve komutunun çıktısında listelenir.
@@ -107,6 +107,8 @@ SDK ve çalışma zamanının üst dizinleri, `dotnet --list-sdks` `dotnet --lis
 
 [.Net kaldırma aracı](../additional-tools/uninstall-tool.md) ( `dotnet-core-uninstall` ), bir sistemden .NET SDK 'ları ve çalışma zamanlarını kaldırmanıza imkan sağlar. Hangi sürümlerin kaldırılacağını belirlemek için bir seçenek koleksiyonu kullanılabilir.
 
+::: zone pivot="os-windows"
+
 ## <a name="visual-studio-dependency-on-net-core-sdk-versions"></a>.NET Core SDK sürümlerindeki Visual Studio bağımlılığı
 
 Visual Studio 2019 sürüm 16,3 ' den önce, Visual Studio yükleyicileri tek başına .NET Core SDK yükleyicisini çağırdı. Sonuç olarak, SDK sürümleri Windows **uygulamaları & özellikleri** iletişim kutusunda görünür. Visual Studio tarafından tek başına yükleyici kullanılarak yüklenen .NET Core SDK 'larını kaldırmak, Visual Studio 'Yu bozabilir. SDK 'Ları kaldırdıktan sonra Visual Studio sorunları varsa, Visual Studio 'nun söz konusu sürümünde Onar ' ı çalıştırın. Aşağıdaki tabloda .NET Core SDK sürümlerindeki bazı Visual Studio bağımlılıkları gösterilmektedir:
@@ -120,6 +122,8 @@ Visual Studio 2019 sürüm 16,3 ' den önce, Visual Studio yükleyicileri tek ba
 | Visual Studio 2017 sürüm 15,8 | .NET Core SDK 2.1.4 xx          |
 
 Visual Studio 2019 sürüm 16,3 ' den itibaren, Visual Studio .NET SDK 'sının kendi kopyasına göre ücretlendirilir. Bu nedenle, artık bu SDK sürümlerini **uygulamalar & Özellikler** iletişim kutusunda görmezsiniz.
+
+::: zone-end
 
 ## <a name="remove-the-nuget-fallback-folder"></a>NuGet geri dönüş klasörünü kaldır
 

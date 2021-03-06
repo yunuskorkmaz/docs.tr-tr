@@ -3,16 +3,16 @@ title: SYSLIB0005 uyarısı
 description: Derleme zamanı uyarı SYSLIB0005 üreten kullanımdan çıkarılması hakkında bilgi edinin.
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 1263a4d327c735268f77ed56bdcea6a4cbed4bfa
-ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
+ms.openlocfilehash: 9ed36d247d31bcebc499bd7ed3945490d9d901f9
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97596584"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256380"
 ---
 # <a name="syslib0005-the-global-assembly-cache-gac-is-not-supported"></a>SYSLIB0005: genel bütünleştirilmiş kod önbelleği (GAC) desteklenmiyor
 
-.NET Core ve .NET 5,0 ve sonraki sürümleri, .NET Framework bulunan genel derleme önbelleği (GAC) kavramını ortadan kaldırır. Geliştiricilerin bu API 'lerden uzaklaşmasına yardımcı olmak için GAC ile ilgili bazı API 'Ler .NET 5,0 ' den itibaren kullanılmıyor olarak işaretlenir. Bu API 'Lerin kullanılması, `SYSLIB0005` derleme zamanında uyarı oluşturur.
+.NET Core ve .NET 5 ve sonraki sürümleri, .NET Framework mevcut olan genel derleme önbelleği (GAC) kavramını ortadan kaldırır. Geliştiricilerin bu API 'lerden uzaklaşmasına yardımcı olmak için GAC ile ilgili bazı API 'Ler .NET 5,0 ' den itibaren kullanılmıyor olarak işaretlenir. Bu API 'Lerin kullanılması, `SYSLIB0005` derleme zamanında uyarı oluşturur.
 
 Aşağıdaki GAC ile ilgili API 'Ler artık kullanılmıyor olarak işaretlendi:
 

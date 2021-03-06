@@ -1,17 +1,17 @@
 ---
 title: "Son değişiklik: genel bütünleştirilmiş kod önbelleği API 'Leri artık kullanılmıyor"
-description: GAC ile ilgilenen API 'Lerin başarısız olduğu veya hiçbir işlem gerçekleştirdiği çekirdek .NET kitaplıklarında .NET 5,0 ile ilgili önemli değişiklik hakkında bilgi edinin.
+description: GAC ile ilgilenen API 'Lerin başarısız olduğu veya hiçbir işlem gerçekleştirdiği çekirdek .NET kitaplıklarında .NET 5 ile ilgili son değişiklik hakkında bilgi edinin.
 ms.date: 11/01/2020
-ms.openlocfilehash: 2f74fccc68b7a925d909938d77578df8ebe8d60d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 39c7b092b06754a28723693c0147b7ec3a0b705e
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761557"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257485"
 ---
 # <a name="global-assembly-cache-apis-are-obsolete"></a>Genel bütünleştirilmiş kod önbelleği API 'Leri artık kullanılmıyor
 
-.NET Core ve .NET 5,0 ve sonraki sürümleri, .NET Framework bulunan genel derleme önbelleği (GAC) kavramını ortadan kaldırır. Bu nedenle, GAC ile ilgilenen tüm .NET Core ve .NET 5 + API 'Leri başarısız olur ya da hiçbir işlem gerçekleştirmez.
+.NET Core ve .NET 5 ve sonraki sürümleri, .NET Framework mevcut olan genel derleme önbelleği (GAC) kavramını ortadan kaldırır. Bu nedenle, GAC ile ilgilenen tüm .NET Core ve .NET 5 + API 'Leri başarısız olur ya da hiçbir işlem gerçekleştirmez.
 
 Geliştiricilerin bu API 'lerden uzaklaşmasına yardımcı olmak için GAC ile ilgili bazı API 'Ler eski olarak işaretlenir ve `SYSLIB0005` derleme zamanında bir uyarı oluşturur. Bu API 'Ler, .NET 'in gelecek bir sürümünde kaldırılabilir.
 
@@ -31,7 +31,7 @@ Assembly asm = typeof(object).Assembly;
 Console.WriteLine(asm.GlobalAssemblyCache);
 ```
 
-.NET 5,0 ve sonraki sürümlerinde, <xref:System.Reflection.Assembly.GlobalAssemblyCache> özelliği her zaman döndürülür `false` . Ancak, özellik alıcısı, özelliğe erişmeyi durdurmasına izin veren çağıranlar belirtmek için artık kullanılmıyor olarak işaretlenir. Kitaplıklar ve uygulamalar <xref:System.Reflection.Assembly.GlobalAssemblyCache> , her zaman `false` .NET Core ve .NET 5,0 ve sonraki sürümlerde döndürdüğü için, çalışma zamanı davranışı hakkında belirleyici hale getirmek üzere API 'yi kullanmamalıdır.
+.NET 5 ve sonraki sürümlerde <xref:System.Reflection.Assembly.GlobalAssemblyCache> özelliği her zaman döndürülür `false` . Ancak, özellik alıcısı, özelliğe erişmeyi durdurmasına izin veren çağıranlar belirtmek için artık kullanılmıyor olarak işaretlenir. Kitaplıklar ve uygulamalar <xref:System.Reflection.Assembly.GlobalAssemblyCache> , her zaman `false` .NET Core ve .NET 5 ve sonraki sürümlerde döndürdüğü için, çalışma zamanı davranışı hakkında belirleyici hale getirmek üzere API 'yi kullanmamalıdır.
 
 ```csharp
 Assembly asm = typeof(object).Assembly;
@@ -43,11 +43,11 @@ Bu yalnızca derleme zamanı değişir. .NET Core 'un önceki sürümlerinden ç
 
 ## <a name="reason-for-change"></a>Değişiklik nedeni
 
-Genel bütünleştirilmiş kod önbelleği (GAC), .NET Core ve .NET 5,0 ve sonraki sürümlerde bir kavram olarak mevcut değildir.
+Genel bütünleştirilmiş kod önbelleği (GAC), .NET Core ve .NET 5 ve sonraki sürümlerde bir kavram olarak mevcut değildir.
 
 ## <a name="version-introduced"></a>Sunulan sürüm
 
-.NET 5,0
+.NET 5.0
 
 ## <a name="recommended-action"></a>Önerilen eylem
 

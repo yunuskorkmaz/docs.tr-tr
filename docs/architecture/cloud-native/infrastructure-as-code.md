@@ -2,12 +2,12 @@
 title: Kod olarak altyapı
 description: Bulutta yerel uygulamalarla kod olarak altyapı (IAC)
 ms.date: 05/13/2020
-ms.openlocfilehash: d130705e19e0d3d7a9e15c73f4758a22ee8ecd43
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5a7cd3a0b4906b1a4aec9e1015d6128867ae9963
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91163745"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255450"
 ---
 # <a name="infrastructure-as-code"></a>Kod olarak altyapı
 
@@ -60,7 +60,7 @@ Bu şablon içinde, bir depolama kapsayıcısını kaynaklar bölümünde şöyl
 
 ARM şablonu, dinamik ortam ve yapılandırma bilgileriyle parametrelenebilir. Bunun yapılması, geliştirme, QA veya üretim gibi farklı ortamları tanımlamak için yeniden kullanılmasını sağlar. Normalde, şablon tek bir Azure Kaynak grubu içindeki tüm kaynakları oluşturur. Gerekirse, tek bir Kaynak Yöneticisi şablonunda birden fazla kaynak grubu tanımlamak mümkündür. Kaynak grubunun kendisini silerek, bir ortamdaki tüm kaynakları silebilirsiniz. Maliyet analizi, kaynak grubu düzeyinde de çalıştırılabilir, böylece her bir ortamın maliyetlendirilmesi için hızlı bir hesaplama yapılabilir.
 
-GitHub 'da [Azure hızlı başlangıç şablonları](https://github.com/Azure/azure-quickstart-templates) projesinde birçok örnek veya ARM şablonu mevcuttur. Yeni bir şablon oluşturmayı veya var olan bir şablonu değiştirmeyi hızlandırmaya yardımcı olabilirler.
+GitHub 'daki [Azure hızlı başlangıç şablonları](https://github.com/Azure/azure-quickstart-templates) PROJESINDE birçok ARM şablonu örneği mevcuttur. Yeni bir şablon oluşturmayı veya var olan bir şablonu değiştirmeyi hızlandırmaya yardımcı olabilirler.
 
 Kaynak Yöneticisi şablonlar birçok şekilde çalıştırılabilir. Belki de en kolay yolu Azure portal yapıştırmanız yeterlidir. Deneysel dağıtımlar için bu yöntem hızlı olabilir. Azure DevOps 'da derleme veya yayın sürecinin bir parçası olarak da çalıştırılabilirler. Şablonları çalıştırmak için Azure ile bağlantıları kullanacak görevler vardır. Kaynak Yöneticisi şablonlarındaki değişiklikler artımlı olarak uygulanır, yani yeni bir kaynak eklemek için şablona eklemek yeterlidir. Araç, geçerli kaynaklar ile şablonda tanımlananlar arasındaki farkları uzlaştıracaktır. Daha sonra, kaynaklar şablonda tanımlananla eşleşecek şekilde oluşturulur veya değiştirilir.  
 

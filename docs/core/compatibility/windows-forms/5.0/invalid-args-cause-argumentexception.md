@@ -1,13 +1,13 @@
 ---
 title: 'Son değişiklik: WinForms yöntemleri şimdi ArgumentException oluşturur'
-description: Bazı Windows Forms yöntemlerinin artık geçersiz bağımsız değişkenler için bir ArgumentException oluşturması durumunda .NET 5,0 ' deki Son değişiklik hakkında bilgi edinin.
+description: Bazı Windows Forms yöntemlerinin artık geçersiz bağımsız değişkenler için bir ArgumentException oluşturması durumunda .NET 5 ' teki son değişiklik hakkında bilgi edinin.
 ms.date: 07/18/2020
-ms.openlocfilehash: 892f4d16b80f3e42187480a7fcfb24e81868d07c
-ms.sourcegitcommit: f8cd3ef517ee177c99feed944824c27d208cc0d1
+ms.openlocfilehash: 9823e9162a562081cdd64346a502ca136b51fa75
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2021
-ms.locfileid: "98570222"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256147"
 ---
 # <a name="winforms-methods-now-throw-argumentexception"></a>WinForms yöntemleri artık ArgumentException oluşturur
 
@@ -15,7 +15,7 @@ Bazı Windows Forms Yöntemler artık <xref:System.ArgumentException> , daha ön
 
 ## <a name="change-description"></a>Açıklamayı Değiştir
 
-Daha önce, beklenmeyen veya yanlış bir türün bağımsız değişkenlerini belirli Windows Forms yöntemlerine geçirmek belirsiz bir duruma neden olur. .NET 5,0 ' den başlayarak, bu yöntemler artık <xref:System.ArgumentException> geçersiz bağımsız değişkenler geçirildiğinde bir oluşturur.
+Daha önce, beklenmeyen veya yanlış bir türün bağımsız değişkenlerini belirli Windows Forms yöntemlerine geçirmek belirsiz bir duruma neden olur. .NET 5 ' den başlayarak, bu yöntemler artık <xref:System.ArgumentException> geçersiz bağımsız değişkenler geçirildiğinde bir oluşturur.
 
 <xref:System.ArgumentException>.NET çalışma zamanının davranışına uygun bir şekilde oluşturuluyor. Ayrıca, hangi bağımsız değişkenin geçersiz olduğu açıkça iletişim kurarak hata ayıklama deneyimini geliştirir.
 

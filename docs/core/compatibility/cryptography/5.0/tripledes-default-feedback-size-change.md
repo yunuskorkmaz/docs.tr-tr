@@ -1,23 +1,23 @@
 ---
 title: 'Son değişiklik: TripleDES tarafından oluşturulan örnekler için varsayılan FeedbackSize değeri. oluşturma değiştirildi'
-description: Üç aylık bir deyişle, TripleDES. Create () tarafından döndürülen TripleDES örneğinde bulunan FeedbackSize özelliğinin varsayılan değerinin 64 ' den 8 ' e değiştiği .NET 5,0 ' deki Son değişiklik hakkında bilgi edinin.
+description: .NET 5 ' teki önemli değişiklik hakkında bilgi edinmek için, TripleDES. Create () tarafından döndürülen TripleDES örneğinde bulunan FeedbackSize özelliğinin varsayılan değeri 64 ' den 8 ' e değişmiştir.
 ms.date: 10/16/2020
-ms.openlocfilehash: 4179da17bf2e5cc5fcc7d64d83ba92119f912042
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9d3259da30cce84e83a3f13c610dad5884b445b8
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761601"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256770"
 ---
 # <a name="default-feedbacksize-value-for-instances-created-by-tripledescreate-changed"></a>TripleDES tarafından oluşturulan örnekler için varsayılan FeedbackSize değeri. oluşturma değiştirildi
 
 <xref:System.Security.Cryptography.SymmetricAlgorithm.FeedbackSize?displayProperty=nameWithType>Öğesinden döndürülen örnekteki özelliğin varsayılan değeri, <xref:System.Security.Cryptography.TripleDES> <xref:System.Security.Cryptography.TripleDES.Create?displayProperty=nameWithType> .NET Framework geçişinin daha kolay olması için 64 ' den 8 ' e değişmiştir. Doğrudan çağıran kodda kullanılmadığı takdirde bu özellik yalnızca özelliği olduğunda kullanılır <xref:System.Security.Cryptography.SymmetricAlgorithm.Mode> <xref:System.Security.Cryptography.CipherMode.CFB?displayProperty=nameWithType> .
 
-<xref:System.Security.Cryptography.CipherMode.CFB>Mod desteği ilk olarak 5,0 RC1 sürümü için .net 'e eklenmiştir, bu nedenle yalnızca .net 5,0 RC1 ve .net 5,0 RC2 uygulamalarının bu değişiklikten etkilenmeleri gerekir.
+<xref:System.Security.Cryptography.CipherMode.CFB>Mod desteği ilk olarak 5,0 RC1 sürümü için .net 'e eklenmiştir, bu nedenle yalnızca .NET 5 RC1 ve .NET 5 RC2 uygulamalarının bu değişiklikten etkilenmeleri gerekir.
 
 ## <a name="change-description"></a>Açıklamayı Değiştir
 
-.NET Core ve önceki yayın öncesi sürüm sürümlerinde, .NET 5,0 `TripleDES.Create().FeedbackSize` varsayılan değeri 64 ' dir. .NET 5,0 ' nin RTM sürümünden itibaren `TripleDES.Create().FeedbackSize` varsayılan değer 8 ' i içerir.
+.NET Core ve önceki yayın öncesi sürüm sürümlerinde, .NET 5 ' in `TripleDES.Create().FeedbackSize` varsayılan değeri 64 ' dir. .NET 5 ' in RTM sürümünden itibaren `TripleDES.Create().FeedbackSize` varsayılan değer 8 ' i içerir.
 
 ## <a name="reason-for-change"></a>Değişiklik nedeni
 
@@ -31,7 +31,7 @@ ms.locfileid: "95761601"
 
 ## <a name="recommended-action"></a>Önerilen eylem
 
-.NET 5,0 RC1 veya RC2 sürümlerindeki verileri şifreleyen veya şifresini çözen uygulamalar aşağıdaki koşullar karşılandığında CFB64 ile yapılır:
+.NET 5 ' ün RC1 veya RC2 sürümlerindeki verileri şifreleyen veya şifresini çözen uygulamalar aşağıdaki koşullar karşılandığında CFB64 ile yapılır:
 
 - Bir <xref:System.Security.Cryptography.TripleDES> örneği ile <xref:System.Security.Cryptography.TripleDES.Create?displayProperty=nameWithType> .
 - İçin varsayılan değer kullanılıyor <xref:System.Security.Cryptography.SymmetricAlgorithm.FeedbackSize> .

@@ -1,13 +1,13 @@
 ---
 title: "Son değişiklik: Linux 'ta .NET için varsayılan TLS şifre paketleri"
-description: Linux 'ta .NET 5,0 ' deki önemli değişiklik hakkında bilgi edinmek için, artık TLS/SSL yaparken varsayılan şifre paketleri için OpenSSL yapılandırmasına saygı görürsünüz.
+description: Linux 'ta .NET 5 ' teki önemli değişiklik hakkında bilgi edinin ve artık TLS/SSL yaparken varsayılan şifre paketleri için OpenSSL yapılandırmasına uyar.
 ms.date: 10/16/2020
-ms.openlocfilehash: f1c23517161ac213a9cd7cf6e7da8eebeb91583b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c28207aa5bf4324a7921deb006c57fbd5e1d6f5f
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761321"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256822"
 ---
 # <a name="default-tls-cipher-suites-for-net-on-linux"></a>Linux 'ta .NET için varsayılan TLS şifre paketleri
 
@@ -17,7 +17,7 @@ ms.locfileid: "95761321"
 
 Önceki .NET sürümlerinde, .NET varsayılan şifre paketlerinin sistem yapılandırmasına uymaz. Linux 'ta .NET için varsayılan şifre paketi listesi çok daha fazla izne sahiptir.
 
-.NET 5,0 ' den başlayarak, Linux 'ta .NET, *OpenSSL. cnf* dosyasında belirtildiğinde varsayılan şifre paketleri Için OpenSSL yapılandırmasına uyar. Şifre paketleri açık olarak yapılandırılmamışsa, izin verilen şifre paketleri aşağıdaki gibidir:
+.NET 5 ' ten itibaren, Linux 'ta .NET, *OpenSSL. cnf* içinde belirtildiğinde varsayılan şifre paketleri Için OpenSSL yapılandırmasına uyar. Şifre paketleri açık olarak yapılandırılmamışsa, izin verilen şifre paketleri aşağıdaki gibidir:
 
 - TLS 1,3 şifre paketleri
 - TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
@@ -45,7 +45,7 @@ Linux üzerinde .NET çalıştıran kullanıcılar, varsayılan yapılandırmas�
 
 Yeni varsayılanlar, modern istemcilerle veya sunucularla iletişim kurarken çalışıyor olabilir. Eski istemcileri kabul etmek için (veya eski sunucularla iletişim kurmak için) varsayılan şifre paketi listesini genişletmeniz gerekiyorsa, bir `CipherSuitePolicy` değer belirtin veya OpenSSL yapılandırma dosyasını değiştirin. Birçok Linux dağıtımlarında, OpenSSL yapılandırma dosyası */etc/SSL/OpenSSL.exe. cnf*' de bulunur.
 
-Bu örnek *OpenSSL. cnf* dosyası, Linux üzerinde .NET 5,0 ve üzeri için varsayılan şifre paketleri ilkesi ile eşdeğer olan minimal bir dosyadır. Sistem dosyasını değiştirmek yerine, bu kavramları sisteminizde bulunan dosyayla birleştirin.
+Bu örnek *OpenSSL. cnf* dosyası, Linux üzerinde .NET 5 ve üzeri için varsayılan şifre paketleri ilkesi ile eşdeğer olan minimal bir dosyadır. Sistem dosyasını değiştirmek yerine, bu kavramları sisteminizde bulunan dosyayla birleştirin.
 
 ```ini
 openssl_conf = default_conf

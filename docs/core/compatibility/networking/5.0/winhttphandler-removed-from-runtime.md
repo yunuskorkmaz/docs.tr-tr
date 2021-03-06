@@ -1,15 +1,15 @@
 ---
 title: 'Son değişiklik: WinHttpHandler .NET çalışma zamanından kaldırıldı'
-description: .NET 5,0 ' de WinHttpHandler 'in .NET çalışma zamanından kaldırıldığı Son değişiklik hakkında bilgi edinin.
+description: .NET 5 ' te WinHttpHandler 'in .NET çalışma zamanından kaldırıldığı Son değişiklik hakkında bilgi edinin.
 ms.date: 10/18/2020
-ms.openlocfilehash: f8b9910ade8d459133791a23704d624a91cc5dff
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 95abcfb4d7670be035bd640dbb85458406c1b0e0
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761434"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256419"
 ---
-# <a name="winhttphandler-removed-from-net-runtime"></a>.NET çalışma zamanından WinHttpHandler kaldırıldı
+# <a name="winhttphandler-removed-from-net-runtime"></a>WinHttpHandler .NET çalışma zamanından kaldırıldı
 
 `WinHttpHandler`Sınıf *System.Net.Http.dll* derlemesinden kaldırıldı. Artık yalnızca bant dışı (OOB) [NuGet paketi](https://www.nuget.org/packages/System.Net.Http.WinHttpHandler/)olarak kullanılabilir.
 
@@ -19,7 +19,7 @@ ms.locfileid: "95761434"
 
 ## <a name="change-description"></a>Açıklamayı Değiştir
 
-Önceki .NET sürümlerinde, <xref:System.Net.Http.WinHttpHandler> sınıfı çekirdek .net kitaplıklarının bir parçası olarak kullanılabilir. .NET 5,0 ' den başlayarak, <xref:System.Net.Http.WinHttpHandler> sınıfı yalnızca ayrı yüklenmiş bir [NuGet paketi](https://www.nuget.org/packages/System.Net.Http.WinHttpHandler/)olarak kullanılabilir.
+Önceki .NET sürümlerinde, <xref:System.Net.Http.WinHttpHandler> sınıfı çekirdek .net kitaplıklarının bir parçası olarak kullanılabilir. .NET 5 ' den başlayarak, <xref:System.Net.Http.WinHttpHandler> sınıfı yalnızca ayrı yüklenmiş bir [NuGet paketi](https://www.nuget.org/packages/System.Net.Http.WinHttpHandler/)olarak kullanılabilir.
 
 ## <a name="recommended-action"></a>Önerilen eylem
 

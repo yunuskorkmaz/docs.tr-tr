@@ -1,23 +1,23 @@
 ---
 title: "Son değişiklik: genelleştirme API 'Leri Windows üzerinde ıCU kitaplıklarını kullanır"
-description: ICU kitaplıklarının NLS yerine Genelleştirme işlevselliği için kullanıldığı .NET 5,0 ' de Genelleştirme bölünmesi değişikliği hakkında bilgi edinin.
+description: ICU kitaplıklarının NLS yerine Genelleştirme işlevselliği için kullanıldığı .NET 5 ' teki Genelleştirme kırılmaya ilişkin değişiklik hakkında bilgi edinin.
 ms.date: 05/19/2020
-ms.openlocfilehash: efc20e21969ea4a83c9122e40b262e1dc38e6770
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4b8580fcb3ba3c9b95357a7922e3a3062ccd3728
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761706"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256757"
 ---
 # <a name="globalization-apis-use-icu-libraries-on-windows"></a>Genelleştirme API 'Leri Windows üzerinde ıCU kitaplıklarını kullanır
 
-.NET 5,0 ve sonraki sürümleri, Windows 10 Mayıs 2019 güncelleştirme veya sonrasında çalışırken Genelleştirme işlevselliği için [Unicode (ıCU)](http://site.icu-project.org/home) kitaplıklarını kullanır.
+.NET 5 ve sonraki sürümleri, Windows 10 Mayıs 2019 güncelleştirmesi veya sonraki sürümlerde çalışırken Genelleştirme işlevselliği için [Unicode (ıCU)](http://site.icu-project.org/home) kitaplıklarını kullanır.
 
 ## <a name="change-description"></a>Açıklamayı Değiştir
 
 .NET Core 1,0-3,1 ve .NET Framework 4 ve üzeri sürümlerde, .NET kitaplıkları Windows üzerinde Genelleştirme işlevselliği için [ulusal dil desteği (NLS)](/windows/win32/intl/national-language-support) API 'lerini kullanır. Örneğin, NLS işlevleri dizeleri karşılaştırmak, kültür bilgilerini almak ve uygun kültür içinde dize büyük harfleri gerçekleştirmek için kullanılır.
 
-.NET 5,0 ' den itibaren, bir uygulama Windows 10 Mayıs 2019 veya sonraki sürümlerde çalışıyorsa, .NET kitaplıkları varsayılan olarak [ICU](http://site.icu-project.org/home) genelleştirme API 'lerini kullanır.
+.NET 5 ' te başlayarak, bir uygulama Windows 10 Mayıs 2019 güncelleştirmesi veya sonraki sürümlerde çalışıyorsa, .NET kitaplıkları varsayılan olarak [ICU](http://site.icu-project.org/home) genelleştirme API 'lerini kullanır.
 
 > [!NOTE]
 > Windows 10 Mayıs 2019 güncelleştirmesi ve sonraki sürümleri ıCU yerel kitaplığıyla birlikte sevk. .NET çalışma zamanı ıCU 'yi yükleye, bunun yerine NLS kullanır.
@@ -37,7 +37,7 @@ Console.WriteLine(idx);
 ```
 
 - Önceki .NET sürümlerinde, kod parçacığı yazdırılır `6` .
-- .NET 5,0 ve sonraki sürümlerinde, kod parçacığı yazdırılır `-1` .
+- .NET 5 ve sonraki sürümlerde Windows 19H1 ve sonraki sürümlerinde kod parçacığı yazdırılır `-1` .
 
 Kültüre duyarlı arama yerine bir sıralı arama gerçekleştirerek bu kodu onarmak için, <xref:System.String.IndexOf(System.String,System.StringComparison)> aşırı yüklemeyi çağırın ve <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> bağımsız değişken olarak geçirin.
 
@@ -55,7 +55,7 @@ string text = string.Format("{0:C}", 100);
 ```
 
 - Önceki .NET sürümlerinde, metin değeri `"100,00 €"` .
-- .NET 5,0 ve sonraki sürümlerde Windows 19H1 ve sonraki sürümlerinde, metin değeri, `"100,00 ¤"` Euro yerine uluslararası para birimi sembolünü kullanan olur. ICU 'de tasarım, bir para biriminin bir ülke veya bölgenin bir dil değil bir özelliğidir.
+- .NET 5 ve sonraki sürümlerde Windows 19H1 ve sonraki sürümlerinde, metin değeri, `"100,00 ¤"` Euro yerine uluslararası para birimi sembolünü kullanan olur. ICU 'de tasarım, bir para biriminin bir ülke veya bölgenin bir dil değil bir özelliğidir.
 
 ## <a name="reason-for-change"></a>Değişiklik nedeni
 
@@ -63,7 +63,7 @@ Bu değişiklik, birleştirme için sunulmuştur. Tüm desteklenen işletim sist
 
 ## <a name="version-introduced"></a>Sunulan sürüm
 
-.NET 5,0
+.NET 5.0
 
 ## <a name="recommended-action"></a>Önerilen eylem
 

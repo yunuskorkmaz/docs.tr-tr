@@ -1,13 +1,13 @@
 ---
 title: 'Son değişiklik: WPF ve WinForms uygulamaları için OutputType, WinExe olarak ayarlanmıştır'
 description: Windows Forms uygulamalar için OutputType 'nin otomatik olarak WinExe olarak ayarlandığı .NET SDK 5.0.100 'deki Son değişiklik hakkında bilgi edinin.
-ms.date: 09/18/2020
-ms.openlocfilehash: 38d9b910374f9e44f7e35296808930c6a6d45f0d
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.date: 02/08/2021
+ms.openlocfilehash: 565007e9ce6be289456afc9facbd4c555a1110bd
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100431470"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256197"
 ---
 # <a name="outputtype-set-to-winexe-for-wpf-and-winforms-apps"></a>OutputType WPF ve WinForms uygulamaları için WinExe olarak ayarlandı
 
@@ -15,7 +15,7 @@ ms.locfileid: "100431470"
 
 ## <a name="change-description"></a>Açıklamayı Değiştir
 
-.NET SDK 'sının önceki sürümlerinde, proje dosyasında için belirtilen değer `OutputType` kullanılır. Örneğin:
+.NET SDK 'sının önceki sürümlerinde, proje dosyasında için belirtilen değer `OutputType` kullanılır. Örnek:
 
 ```xml
 <PropertyGroup>

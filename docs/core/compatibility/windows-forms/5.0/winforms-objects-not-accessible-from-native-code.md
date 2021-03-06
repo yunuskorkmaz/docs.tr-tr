@@ -1,21 +1,21 @@
 ---
 title: 'Son değişiklik: WinForms nesnelerine yerel koddan erişilemiyor'
-description: Windows Forms nesnelerine artık yerel koddan erişemeyen .NET 5,0 ' deki Son değişiklik hakkında bilgi edinin.
+description: .NET 5 ' teki son değişiklik hakkında bilgi edinmek için Windows Forms nesneleri yerel koddan artık erişilebilir değil.
 ms.date: 01/29/2021
-ms.openlocfilehash: 53343f3f07817f735fa3b0ee77a352dcc80d4b6c
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: 823d37cb8115b8669b254878325a350809393e79
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99506604"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256106"
 ---
 # <a name="native-code-cant-access-windows-forms-objects"></a>Yerel kod Windows Forms nesnelere erişemiyor
 
-.NET 5,0 ' den başlayarak, artık Windows Forms nesneleri yerel koddan erişemezsiniz.
+.NET 5 ' ten başlayarak, artık Windows Forms nesneleri yerel koddan erişemezsiniz.
 
 ## <a name="change-description"></a>Açıklamayı Değiştir
 
-Önceki .NET sürümlerinde, bazı Windows Forms türler COM birlikte çalışabilirliğine görünür olarak tasarlanmıştı ve bu nedenle yerel kod tarafından erişilebilirdir. .NET 5,0 ' den başlayarak, COM birlikte çalışabilirliğine veya yerel koda erişilebilen Windows Forms API 'SI görünmez. .NET çalışma zamanı artık kutudan çıkan özel tür kitaplıkları oluşturmayı desteklememektedir. Ayrıca, .NET çalışma zamanı .NET Framework için tür kitaplığına bağlı olamaz (Bu, .NET Framework olduğu gibi sınıfların şeklinin sürdürülmesi gerekir).
+Önceki .NET sürümlerinde, bazı Windows Forms türler COM birlikte çalışabilirliğine görünür olarak tasarlanmıştı ve bu nedenle yerel kod tarafından erişilebilirdir. .NET 5 ' den başlayarak, COM birlikte çalışabilirliğine veya yerel koda erişilebilen Windows Forms API 'SI görünmez. .NET çalışma zamanı artık kutudan çıkan özel tür kitaplıkları oluşturmayı desteklememektedir. Ayrıca, .NET çalışma zamanı .NET Framework için tür kitaplığına bağlı olamaz (Bu, .NET Framework olduğu gibi sınıfların şeklinin sürdürülmesi gerekir).
 
 ## <a name="reason-for-change"></a>Değişiklik nedeni
 
@@ -67,7 +67,7 @@ public class Form1 : Form
 }
 ```
 
-Örneğin, .NET 5,0 ve sonraki sürümlerde çalışmayı gerçekleştirmek için iki olası yol vardır:
+.NET 5 ve sonraki sürümlerde örneğin çalışması için iki olası yol vardır:
 
 - `ObjectForScripting`' I destekleyen Kullanıcı tarafından belirtilen bir nesne `IDispatch` (varsayılan olarak, proje düzeyinde değiştirilmedikleri takdirde, varsayılan olarak uygulanır) tanıtın.
 

@@ -1,13 +1,13 @@
 ---
 title: 'Son değişiklik: donanım içi IsSupported denetimleri iç içe türler için farklılık gösterebilir'
-description: X64 'Ün kontrol edildiği çekirdek .NET kitaplıklarında .NET 5,0 son değişikliği hakkında bilgi edinin. Donanım iç öğeleri için desteklenen ısbıg, artık farklı bir sonuç verebilir.
+description: X64 'Ün kontrol edildiği çekirdek .NET kitaplıklarında .NET 5 ile ilgili son değişiklik hakkında bilgi edinin. Donanım iç öğeleri için desteklenen ısbıg, artık farklı bir sonuç verebilir.
 ms.date: 11/01/2020
-ms.openlocfilehash: 9acef15860de76a9743621cb4c5edba5aac3931c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5c6049ad5881c0389870cfd5e1550f8358c67599
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761554"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257459"
 ---
 # <a name="hardware-intrinsic-issupported-checks-may-differ-for-nested-types"></a>Donanım iç tarafından desteklenen denetimler iç içe türler için farklılık gösterebilir
 
@@ -24,7 +24,7 @@ ms.locfileid: "95761554"
 
 .NET 'in önceki sürümlerinde, bazı <xref:System.Runtime.Intrinsics.X86> donanım içi türler, örneğin, <xref:System.Runtime.Intrinsics.X86.Aes?displayProperty=nameWithType> iç içe geçmiş bir `X64` sınıf sunmaz. Bu türler için, bir `<Isa>.X64.IsSupported` `IsSupported` üst sınıfının iç içe sınıfındaki bir özelliğe çözüldü `X64` `<Isa>` . Bu, özelliği `true` döndüğünde bile döndürebilse anlamına gelir `<Isa>.IsSupported` `false` .
 
-.NET 5,0 ve sonraki sürümlerinde, tüm <xref:System.Runtime.Intrinsics.X86> türler, `X64` desteği uygun şekilde raporlayan iç içe bir sınıfı kullanıma sunar. Bu, genel hiyerarşinin doğru kalmasını sağlar ve bu durumda olduğu gibi `<Isa>.X64.IsSupported` `true` `<Isa>.IsSupported` kabul edilebilir `true` .
+.NET 5 ve sonraki sürümlerinde tüm <xref:System.Runtime.Intrinsics.X86> türler, `X64` desteği uygun şekilde raporlayan iç içe bir sınıf kullanıma sunar. Bu, genel hiyerarşinin doğru kalmasını sağlar ve bu durumda olduğu gibi `<Isa>.X64.IsSupported` `true` `<Isa>.IsSupported` kabul edilebilir `true` .
 
 ## <a name="reason-for-change"></a>Değişiklik nedeni
 

@@ -1,15 +1,15 @@
 ---
 title: 'Son değişiklik: UNIX üzerinde UNC yollarının URI tanıması'
-description: URI sınıfının artık UNIX üzerinde UNC yolları olarak iki eğik çizgi ile başlayan dizeleri tanıdığı çekirdek .NET kitaplıklarında .NET 5,0 son değişikliği hakkında bilgi edinin.
+description: URI sınıfının artık UNIX üzerinde UNC yolları olarak iki eğik çizgi ile başlayan dizeleri tanıdığı çekirdek .NET kitaplıklarında .NET 5 ' teki son değişiklik hakkında bilgi edinin.
 ms.date: 11/01/2020
-ms.openlocfilehash: 0d5d9cd8dd869f24e94d15724e5e16eaddf6ed47
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 65baaad5e1be7a8f61e3e62c976fd7e28f48730f
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761386"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257030"
 ---
-# <a name="uri-recognition-of-unc-paths-on-unix"></a>UNIX üzerinde UNC yollarının URI tanıması
+# <a name="uri-recognition-of-unc-paths-on-unix"></a>Unix’te UNC yollarına yönelik URI tanıma
 
 <xref:System.Uri>Sınıfı artık, `//` UNIX işletim sistemlerinde evrensel adlandırma KURALı (UNC) yolları olarak iki eğik çizgi () ile başlayan dizeleri tanır. Bu değişiklik, bu tür dizelerin davranışını tüm platformlarda tutarlı hale getirir.
 
@@ -17,11 +17,11 @@ ms.locfileid: "95761386"
 
 .NET 'in önceki sürümlerinde, <xref:System.Uri> sınıfı iki eğik çizgi ile başlayan dizeleri (örneğin, `//contoso` UNIX işletim sistemlerinde mutlak dosya yolları) tanır. Ancak, Windows 'ta bu tür dizeler UNC yolları olarak tanınır.
 
-.NET 5,0 ' den başlayarak, <xref:System.Uri> sınıfı, UNIX dahil olmak üzere tüm platformlarda UNC yolları olarak iki eğik çizgi ile başlayan dizeleri tanır. Ayrıca, Özellikler UNC semantiklerine göre davranır:
+.NET 5 ' den başlayarak, <xref:System.Uri> sınıfı, UNIX dahil olmak üzere tüm platformlarda UNC yolları olarak iki eğik çizgi ile başlayan dizeleri tanır. Ayrıca, Özellikler UNC semantiklerine göre davranır:
 
 - <xref:System.Uri.IsUnc?displayProperty=nameWithType> döndürür `true` .
 - Yoldaki ters eğik çizgiler eğik çizgiyle değiştirilmiştir. Örneğin, `//first\second` olur `//first/second` .
-- <xref:System.Uri.LocalPath?displayProperty=nameWithType> karakter yüzdesi değil. Örneğin, `//first/\uFFF0` öğesine dönüştürülmez *not* `//first/%EF%BF%B0` .
+- <xref:System.Uri.LocalPath?displayProperty=nameWithType> karakter yüzdesi değil. Örneğin, `//first/\uFFF0` öğesine dönüştürülmez  `//first/%EF%BF%B0` .
 
 ## <a name="version-introduced"></a>Sunulan sürüm
 

@@ -1,13 +1,13 @@
 ---
 title: 'Son değişiklik: Multicastop. Group null bir değer kabul etmez'
-description: Çok kanallı bir değeri artık boş bir değer kabul etmeyen .NET 5,0 ' deki Son değişiklik hakkında bilgi edinin.
+description: .NET 5 ' teki son değişiklik hakkında daha fazla bilgi edinin. Bu, çok küçük bir değeri artık null bir değer kabul etmez.
 ms.date: 08/18/2020
-ms.openlocfilehash: 164ac8c2c8dd14f9e0758017e54eeb377f88a7e5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 09c6415d275361abee8285aabdda13ccd9727043
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761438"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256458"
 ---
 # <a name="multicastoptiongroup-doesnt-accept-a-null-value"></a>Multicastop. Group null bir değer kabul etmez
 
@@ -21,7 +21,7 @@ ms.locfileid: "95761438"
 
 .NET 'in önceki sürümlerinde <xref:System.Net.Sockets.MulticastOption.Group?displayProperty=nameWithType> özelliğini olarak ayarlayabilirsiniz `null` . <xref:System.Net.Sockets.MulticastOption>Daha sonra öğesine geçirilirse <xref:System.Net.Sockets.Socket.SetSocketOption%2A?displayProperty=nameWithType> , çalışma zamanı bir oluşturur <xref:System.NullReferenceException> .
 
-.NET 5,0 ve üzeri sürümlerde, <xref:System.ArgumentNullException> özelliği olarak ayarlarsanız oluşturulur `null` .
+.NET 5 ve sonraki sürümlerde, <xref:System.ArgumentNullException> özelliği olarak ayarlarsanız oluşturulur `null` .
 
 ## <a name="reason-for-change"></a>Değişiklik nedeni
 

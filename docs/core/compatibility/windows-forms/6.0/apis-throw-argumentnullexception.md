@@ -1,13 +1,13 @@
 ---
 title: "Son değişiklik: bazı API 'Ler bağımsız değişkenler NullException oluşturur"
-description: Bazı API 'Lerin bağımsız değişkenleri doğruladığını ve şimdi bir ArgumentNullException oluşturmasını .NET 6,0 'deki Son değişiklik hakkında bilgi edinin.
+description: .NET 6 ' daki Son değişiklik hakkında bilgi edinmek için bazı API 'Lerin bağımsız değişkenleri doğruladığını ve şimdi bir ArgumentNullException oluşturacağı
 ms.date: 01/29/2021
-ms.openlocfilehash: f9d7dc8bb57ed8dc5b4ff41bda9b3bde7db7b880
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: ca7f32739237715657350f52d2523b0ce378364d
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99804168"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255743"
 ---
 # <a name="some-apis-throw-argumentnullexception"></a>Bazı API 'Ler bağımsız değişkenler NullException oluşturur
 
@@ -17,7 +17,7 @@ Bazı API 'Ler artık giriş parametrelerini doğrular ve <xref:System.ArgumentN
 
 Önceki .NET sürümlerinde, etkilenen API 'Ler, bir <xref:System.NullReferenceException> bağımsız değişkenle çağrılırsa bir oluşturur `null` .
 
-.NET 6,0 ' den başlayarak, etkilenen API 'Ler bir <xref:System.ArgumentNullException> bağımsız değişkenle çağrılırsa bir oluşturur `null` .
+.NET 6 ' dan itibaren, etkilenen API 'Ler bir <xref:System.ArgumentNullException> bağımsız değişkenle çağrılırsa bir oluşturur `null` .
 
 ## <a name="reason-for-change"></a>Değişiklik nedeni
 

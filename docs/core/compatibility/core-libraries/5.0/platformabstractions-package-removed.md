@@ -1,15 +1,15 @@
 ---
 title: 'Son değişiklik: Microsoft. DotNet. PlatformAbstractions paketi kaldırıldı'
-description: Microsoft. DotNet. PlatformAbstractions paketinin kaldırıldığı çekirdek .NET kitaplıklarında .NET 5,0 kırılımı değişikliği hakkında bilgi edinin.
+description: Microsoft. DotNet. PlatformAbstractions paketinin kaldırıldığı çekirdek .NET kitaplıklarında .NET 5 ile ilgili son değişiklik hakkında bilgi edinin.
 ms.date: 11/01/2020
-ms.openlocfilehash: 38ffe5e592d01c3bae14fc41becb594283b975a3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: aff7be816815b016e3ce694c4e9a97410538c08d
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761525"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257251"
 ---
-# <a name="microsoftdotnetplatformabstractions-package-removed"></a>Microsoft. DotNet. PlatformAbstractions paketi kaldırıldı
+# <a name="microsoftdotnetplatformabstractions-package-removed"></a>Microsoft.DotNet.PlatformAbstractions paketi kaldırıldı
 
 [Microsoft. DotNet. PlatformAbstractions NuGet paketinin](https://www.nuget.org/packages/Microsoft.DotNet.PlatformAbstractions/) yeni sürümleri üretilmeyecek.
 
@@ -19,7 +19,7 @@ Daha önce, kitaplığın yeni sürümleri <xref:Microsoft.DotNet.PlatformAbstra
 
 <xref:Microsoft.DotNet.PlatformAbstractions?displayProperty=fullName>Kitaplık, System. Namespaces içinde zaten belirlenmiş olan API 'lerle örtüşüyor \* . Ayrıca, bazı <xref:Microsoft.DotNet.PlatformAbstractions> API 'ler, sistemin geri kalanı ile aynı düzeyde scrutine ve uzun süreli desteklenebilirliği ile tasarlanmadı. \* GetVersionEx. Örneğin, <xref:Microsoft.DotNet.PlatformAbstractions> `Platform` geçerli işletim sistemi platformunu anlatmak için sabit listesini kullanır. Bu numaralandırma tasarımı, <xref:System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform(System.Runtime.InteropServices.OSPlatform)?displayProperty=nameWithType> API tasarlandıkça, yeni platformlar ve gelecek esnekliğe izin vermek için açıkça reddedildi.
 
-Kitaplık tarafından etkinleştirilen senaryolar <xref:Microsoft.DotNet.PlatformAbstractions?displayProperty=fullName> artık bu olmadan mümkündür. Mevcut sürümler, .NET 5,0 ve üzeri sürümlerde bile çalışmaya devam eder ve önceki .NET Core sürümleriyle birlikte hizmet alınacaktır. Ancak, kitaplığa yeni işlevler eklenmez. Bunun yerine, diğer kitaplıklara ve API 'lere yeni işlevsellik eklenecektir.
+Kitaplık tarafından etkinleştirilen senaryolar <xref:Microsoft.DotNet.PlatformAbstractions?displayProperty=fullName> artık bu olmadan mümkündür. Mevcut sürümler, .NET 5 ve üzeri sürümlerde bile çalışmaya devam eder ve önceki .NET Core sürümleriyle birlikte hizmet alınacaktır. Ancak, kitaplığa yeni işlevler eklenmez. Bunun yerine, diğer kitaplıklara ve API 'lere yeni işlevsellik eklenecektir.
 
 ## <a name="version-introduced"></a>Sunulan sürüm
 

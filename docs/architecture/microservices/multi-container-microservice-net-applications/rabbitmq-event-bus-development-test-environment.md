@@ -2,12 +2,12 @@
 title: Geliştirme veya test ortamı için RabbitMQ ile bir olay veri yolu uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Geliştirme veya test ortamları için tümleştirme olayları için bir olay veri yolu mesajlaşma uygulamak üzere Kbbitmq kullanın.
 ms.date: 01/13/2021
-ms.openlocfilehash: a1e7d11e376080a03269f202fa6ae24ffeb0f4d2
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: b67b6cf92ac2c29b9eff07c2c9603206e42968a3
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188087"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258084"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Geliştirme veya test ortamı için RabbitMQ ile bir olay veri yolu uygulama
 
@@ -35,7 +35,7 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 
 ## <a name="implementing-a-simple-publish-method-with-rabbitmq"></a>Kbbitmq ile basit bir yayımlama yöntemi uygulama
 
-Aşağıdaki kod, tüm senaryoyu göstermek amacıyla, Kbbitmq için bir Event Bus uygulamasının **_Basitleştirilmiş_* _ sürümüdür. Bu şekilde bağlantıyı gerçekten işlemezsiniz. Tam uygulamayı görmek için, [DotNet-Architecture/eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) deposundaki gerçek koda bakın.
+Aşağıdaki kod, tüm senaryoyu göstermek için, Kbbitmq için bir Event Bus uygulamasının ***Basitleştirilmiş*** bir sürümüdür. Bu şekilde bağlantıyı gerçekten işlemezsiniz. Tam uygulamayı görmek için, [DotNet-Architecture/eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) deposundaki gerçek koda bakın.
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -116,12 +116,14 @@ Yukarıda belirtildiği gibi, eShopOnContainers 'da uygulanan olay veri yolu yal
 
 Kbbitmq desteğiyle üretime Ready bir çözüm.
 
-- _ *Easynetq**-Oybbitmq \ Için açık kaynak .NET API istemcisi
+- **Easynetq** -Kbıbitmq \ Için açık kaynak .NET API istemcisi
   <https://easynetq.com/>
 
 - **Masstransıya** \
   <https://masstransit-project.com/>
   
+- **Rebus** -açık kaynak .NET Service Bus <https://github.com/rebus-org/Rebus>
+
 > [!div class="step-by-step"]
 > [Önceki](integration-event-based-microservice-communications.md) 
 >  [Sonraki](subscribe-events.md)

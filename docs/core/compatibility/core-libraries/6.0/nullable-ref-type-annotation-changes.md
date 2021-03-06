@@ -1,23 +1,23 @@
 ---
 title: 'Son değişiklik: null yapılabilir başvuru türü ek açıklama değişiklikleri'
-description: Bazı null yapılabilir başvuru türü ek açıklamaların değiştiği çekirdek .NET kitaplıklarında .NET 6,0 son değişikliği hakkında bilgi edinin.
+description: Bazı null yapılabilir başvuru türü ek açıklamaların değiştiği çekirdek .NET kitaplıklarında .NET 6 ile ilgili son değişiklik hakkında bilgi edinin.
 ms.date: 02/11/2021
-ms.openlocfilehash: 7e3f1cbc5bff7814988ec5d16027838598188e9a
-ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
+ms.openlocfilehash: fe56fd3006528238713bd08f353b5044092043a2
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102206467"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256939"
 ---
 # <a name="changes-to-nullable-reference-type-annotations"></a>Null yapılabilir başvuru türü ek açıklamalarına yapılan değişiklikler
 
-.NET 6,0 ' de, .NET kitaplıklarında bazı null olabilme ek açıklamaları değişmiştir.
+.NET 6 ' da, .NET kitaplıklarında bazı null olabilme ek açıklamaları değişmiştir.
 
 ## <a name="change-description"></a>Açıklamayı Değiştir
 
-Önceki .NET sürümlerinde, bazı Nullable başvuru türü ek açıklamaları yanlıştır ve derleme uyarıları yok ya da yanlış olabilir. .NET 6,0 ' den başlayarak, daha önce uygulanan bazı ek açıklamalar güncelleştirilmiştir. Yeni derleme uyarıları üretilecektir ve etkilenen API 'Ler için yanlış derleme uyarıları üretilmez.
+Önceki .NET sürümlerinde, bazı Nullable başvuru türü ek açıklamaları yanlıştır ve derleme uyarıları yok ya da yanlış olabilir. .NET 6 ' dan başlayarak, daha önce uygulanan bazı ek açıklamalar güncelleştirilmiştir. Yeni derleme uyarıları üretilecektir ve etkilenen API 'Ler için yanlış derleme uyarıları üretilmez.
 
-Bu değişikliklerin bazıları yeni derleme zamanı uyarılarına yol açacağından, bu değişikliklerden bazıları *kesiliyor* olarak kabul edilir. .NET 6,0 ' e geçirdiğinizde, bu API 'Lere başvuran kodun güncellenmesi gerekecektir.
+Bu değişikliklerin bazıları yeni derleme zamanı uyarılarına yol açacağından, bu değişikliklerden bazıları *kesiliyor* olarak kabul edilir. .NET 6 ' ya geçirdiğinizde, bu API 'Lere başvuran kodun güncellenmesi gerekecektir.
 
 Bu sayfada, parçalama olarak kabul edilmeyen diğer değişiklikler de belgelenmiştir. Güncelleştirilmiş API 'Lere başvuruda bulunan tüm kodlar, artık gerekli olmayan işleçlerin veya pragmaların kaldırılması açısından yarar sağlayabilir.
 

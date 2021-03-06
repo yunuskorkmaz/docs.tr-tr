@@ -1,13 +1,13 @@
 ---
 title: 'Son değişiklik: Directory. Packages. props dosyaları varsayılan olarak içeri aktarılır'
-description: NuGet. props dosyalarının, proje klasöründe bulunursa, dizin. Packages. props adlı bir dosyayı otomatik olarak içeri aktardığından, .NET 5,0 ' deki Son değişiklik hakkında bilgi edinin.
+description: .NET 5 ' teki son değişiklik hakkında bilgi edinmek için NuGet. props dosyalarının, proje klasöründe bulunursa dizin. Packages. props adlı bir dosyayı otomatik olarak içeri aktardığını öğrenin.
 ms.date: 09/17/2020
-ms.openlocfilehash: ee8a2999b801e81750d96a0bc985e3c8169224a9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a031d9b2bd832be06dedb20495c24075d1239b02
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761458"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256588"
 ---
 # <a name="directorypackagesprops-files-is-imported-by-default"></a>Directory. Packages. props dosyaları varsayılan olarak içeri aktarılır
 
@@ -21,7 +21,7 @@ NuGet *. props* dosyaları, proje klasöründe veya üst öğelerinden birinde b
 
 Önceki .NET sürümlerinde, proje dosyanızda *Directory. Packages. props* adlı bir dosyanız olabilir ve derleme zamanında NuGet *. props* dosyası tarafından otomatik olarak içeri aktarılmaz.
 
-.NET 5,0 ' den başlayarak, bu tür bir dosya proje klasöründe veya üst öğelerinden herhangi biri *varsa otomatik olarak içeri aktarılır.* Proje klasörünüzde bu adı taşıyan bir dosyanız varsa, bu otomatik içeri aktarma yapı davranışını değiştirebilir. Örneğin, dosya içeri aktarılır, ancak daha önce değil veya içe aktarıldıysanız içeri aktarma sırası değişebilir.
+.NET 5 ' den başlayarak, bu tür *bir dosya proje* klasöründe veya üst öğelerinden herhangi biri varsa otomatik olarak içeri aktarılır. Proje klasörünüzde bu adı taşıyan bir dosyanız varsa, bu otomatik içeri aktarma yapı davranışını değiştirebilir. Örneğin, dosya içeri aktarılır, ancak daha önce değil veya içe aktarıldıysanız içeri aktarma sırası değişebilir.
 
 ## <a name="reason-for-change"></a>Değişiklik nedeni
 
@@ -33,7 +33,7 @@ Otomatik olarak içeri aktarılmaması gerekiyorsa, var olan *Dizin. Packages. p
 
 ## <a name="affected-apis"></a>Etkilenen API’ler
 
-YOK
+Yok
 
 <!--
 

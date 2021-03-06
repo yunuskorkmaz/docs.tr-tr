@@ -1,15 +1,15 @@
 ---
 title: 'Son değişiklik: Windows dışı platformlarda bir/W soneki yoklama yok'
-description: Windows dışı platformlarda P/Invoke için yoklama sırasında soneklerin artık işlev dışa aktarma adlarına eklenmemiş olduğunu .NET 5,0 ' de birlikte çalışma ile ilgili daha fazla bilgi edinin.
+description: Windows dışı platformlarda P/Invoke için yoklama sırasında son eklerin artık işlev dışa aktarma adlarına eklenmemiş olduğunu .NET 5 ' teki birlikte çalışma son değişikliği hakkında bilgi edinin.
 ms.date: 08/13/2020
-ms.openlocfilehash: a4c612a81796faf80fa257df21232a54f7b95431
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 924cbcb6c432e2f7c52c7218d48a938b61306c9c
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95761550"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256627"
 ---
-# <a name="no-aw-suffix-probing-on-non-windows-platforms"></a>Windows dışı platformlarda bir/W soneki yoklama yok
+# <a name="no-aw-suffix-probing-on-non-windows-platforms"></a>Windows olmayan platformlarda A/W sonek yoklaması yok
 
 .NET çalışma zamanları artık `A` `W` Windows dışı platformlarda P/Invoke için yoklama sırasında dışarı aktarma adlarını işlevine bir veya sonek eklemez.
 
@@ -23,7 +23,7 @@ ms.locfileid: "95761550"
 
 Önceki .NET sürümlerinde CoreCLR ve mono çalışma zamanları, `A` `W` *tüm platformlarda* P/Invoke için dışarı aktarma keşfi sırasında dışarı aktarma adına bir veya son ek ekler.
 
-.NET 5,0 ve sonraki sürümlerinde, `A` `W` *yalnızca Windows üzerinde* dışarı aktarma sırasında dışarı aktarma adına bir veya soneki eklenir. UNIX platformlarında, sonek eklenmez. Windows platformunda her iki çalışma alanının semantiği değişmeden kalır.
+.NET 5 ve sonraki sürümlerinde, `A` `W` *yalnızca Windows üzerinde* dışarı aktarma sırasında dışarı aktarma adına bir veya soneki eklenir. UNIX platformlarında, sonek eklenmez. Windows platformunda her iki çalışma alanının semantiği değişmeden kalır.
 
 ## <a name="reason-for-change"></a>Değişiklik nedeni
 

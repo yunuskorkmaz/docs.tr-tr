@@ -12,18 +12,18 @@ helpviewer_keywords:
 - resx files
 - .resx files
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
-ms.openlocfilehash: 35d1324d5ea7a72ffd5ea594530d1312e717cd7c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 723daa7703828ea6eb103ce3b63164bf787cc10b
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543231"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258669"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Windows kaynak yerelleştirme Düzenleyicisi)
 
 Windows kaynak yerelleştirme Düzenleyicisi Winres.exe, yerelleştirme uzmanlarının formlar tarafından kullanılan Kullanıcı arabirimi (UI) kaynaklarını yerelWindows Forms leştirebilmenizi sağlayan bir görsel düzen aracıdır. Winres.exe için girdi olarak kullanılan .resx veya .resources dosyaları Microsoft Visual Studio gibi bir görsel tasarım ortamı kullanarak oluşturulabilir. .NET Framework uygulamalarında kaynakları dağıtma hakkında daha fazla bilgi için bkz. [Masaüstü uygulamalarındaki kaynaklar](../resources/index.md).
 
-Winres.exe, Visual Studio ile birlikte yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi kullanın. Daha fazla bilgi için bkz. [komut istemleri](developer-command-prompt-for-vs.md).
+Winres.exe, Visual Studio ile birlikte yüklenir. Aracı çalıştırmak için, [geliştiriciler için bir komut satırı kabuğu](/visualstudio/ide/reference/command-prompt-powershell)kullanın.
 
 ## <a name="syntax"></a>Söz dizimi
 
@@ -34,7 +34,7 @@ winres /?
 
 ## <a name="arguments"></a>Bağımsız değişkenler
 
-|Bağımsız Değişken|Description|
+|Bağımsız Değişken|Açıklama|
 |--------------|-----------------|
 |`resourceFile`|Yerelleştirilecek kaynak dosyası. Bu dosya, Visual Studio tasarımcısı tarafından oluşturulan Windows Forms formu .resx veya .resources dosyası olmalıdır. Winres.exe genel .resx veya .resources dosyalarını açamaz.|
 
@@ -96,7 +96,7 @@ Kullanmakta olduğunuz .NET Framework birlikte yayınlanan Winres.exe sürümün
 |Visual Studio 2005|2.0|2.0|
 |Visual Studio 2008|3.0 ve 3.5|3.0 ve 3.5|
 |Visual Studio 2010|4.0|4.0|
-|Visual Studio 2017|4.6|4.6|
+|Visual Studio 2017|4,6|4,6|
 
 > [!NOTE]
 > VSFM'de, Visual Studio ile uyumluluk avantajı bulunuyor olsa da, kaynak dosyaya yalnızca değiştirilmiş değerleri depoladığından, Winres.exe geçerli kaynak dosyanın üst öğelerinin aynı dizinde bulunmasını gerektirir. Örneğin, `TestApp.de-DE.resources` Almanya kaynak dosyasındaki bir Almanca, varsayılan kaynak dosyası, `TestApp.resx` ve muhtemelen kültür bağımsız kaynak dosyası olması gerekir `TestApp.de.resources` .

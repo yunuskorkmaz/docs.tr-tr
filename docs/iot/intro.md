@@ -6,12 +6,12 @@ ms.author: casoper
 ms.date: 11/13/2020
 ms.topic: overview
 ms.prod: dotnet
-ms.openlocfilehash: c3d05ec5b05780f91404c3c27e91bcd602b0faeb
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 13460fdafbfd7ef4e047cb7537e832ae4039c614
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "96589982"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255437"
 ---
 # <a name="develop-apps-for-iot-devices-with-the-net-iot-libraries"></a>.NET IoT kitaplıklarıyla IoT cihazları için uygulama geliştirme
 
@@ -26,12 +26,12 @@ ms.locfileid: "96589982"
 
 .NET IoT kitaplıkları iki NuGet paketini oluşur:
 
-- [System. Device. GIO](https://www.nuget.org/packages/System.Device.Gpio/)<span class="docon docon-navigate-external x-hidden-focus"></span>
-- [IoT. Device. Bindings](https://www.nuget.org/packages/Iot.Device.Bindings/)<span class="docon docon-navigate-external x-hidden-focus"></span>
+- [System. Device. GIO](https://www.nuget.org/packages/System.Device.Gpio/)
+- [IoT. Device. Bindings](https://www.nuget.org/packages/Iot.Device.Bindings/)
 
 ### <a name="systemdevicegpio"></a>System. Device. GIO
 
-`System.Device.Gpio` cihazları denetlemek için düşük düzeyli donanım PIN 'leri ile etkileşim kurmak için çeşitli protokolleri destekler. Bunlar:
+`System.Device.Gpio` cihazları denetlemek için düşük düzeyli donanım PIN 'leri ile etkileşim kurmak için çeşitli protokolleri destekler. Bu modüller şunlardır:
 
 - Genel amaçlı g/ç (GıO)
 - Inter-Integrated devresi (ı2C)
@@ -43,23 +43,23 @@ ms.locfileid: "96589982"
 
 `Iot.Device.Bindings`Paket:
 
-* [device bindings](https://github.com/dotnet/iot/blob/master/src/devices/README.md) <span class="docon docon-navigate-external x-hidden-focus"></span> System. Device. GIO sarmalayarak uygulama geliştirmeyi kolaylaştırmak için cihaz bağlamaları içerir.
+* System. Device. GIO sarmalayarak uygulama geliştirmeyi kolaylaştırmak için [cihaz bağlamaları](https://github.com/dotnet/iot/blob/master/src/devices/README.md) içerir.
 * Topluluk tarafından desteklenir ve sürekli olarak ek bağlamalar eklenir.
 
 Yaygın olarak kullanılan cihaz bağlamaları şunları içerir:
 
-- Karakter [LCD-LCD karakter gösterimi](https://github.com/dotnet/iot/tree/master/src/devices/CharacterLcd)<span class="docon docon-navigate-external x-hidden-focus"></span>
-- [SN74HC595-8 bit kaydırma kaydı](https://github.com/dotnet/iot/tree/master/src/devices/Sn74hc595)<span class="docon docon-navigate-external x-hidden-focus"></span>
-- [BrickPi3](https://github.com/dotnet/iot/tree/master/src/devices/BrickPi3)<span class="docon docon-navigate-external x-hidden-focus"></span>
-- [MAX7219-LED matris sürücüsü](https://github.com/dotnet/iot/tree/master/src/devices/Max7219)<span class="docon docon-navigate-external x-hidden-focus"></span>
-- [Rgbledmatrix-RGB LED matrisi](https://github.com/dotnet/iot/tree/master/src/devices/RGBLedMatrix)<span class="docon docon-navigate-external x-hidden-focus"></span>
+- [Karakter LCD-LCD karakter gösterimi](https://github.com/dotnet/iot/tree/master/src/devices/CharacterLcd)
+- [SN74HC595-8 bit kaydırma kaydı](https://github.com/dotnet/iot/tree/master/src/devices/Sn74hc595)
+- [BrickPi3](https://github.com/dotnet/iot/tree/master/src/devices/BrickPi3)
+- [MAX7219-LED matris sürücüsü](https://github.com/dotnet/iot/tree/master/src/devices/Max7219)
+- [RGBLedMatrix-RGB LED matrisi](https://github.com/dotnet/iot/tree/master/src/devices/RGBLedMatrix)
 
 ## <a name="supported-operating-systems"></a>Desteklenen işletim sistemleri
 
 `System.Device.Gpio` , ARM/ARM64 ve Windows 10 IoT Core 'u destekleyen çoğu Linux sürümünde desteklenir.
 
 > [!TIP]
-> Raspberry PI için, [Raspberry PI OS](https://www.raspberrypi.org/documentation/installation/installing-images/README.md) <span class="docon docon-navigate-external x-hidden-focus"></span> (eski adıyla Raspbian) önerilir.  
+> Raspberry PI için, [Raspberry PI OS](https://www.raspberrypi.org/documentation/installation/installing-images/README.md)  (eski adıyla Raspbian) önerilir.
 
 ## <a name="supported-hardware-platforms"></a>Desteklenen donanım platformları
 
@@ -72,4 +72,4 @@ BILGISAYAR platformları, USB-ZPE/ı2C Köprüsü kullanılarak desteklenir.
 
 ## <a name="resources"></a>Kaynaklar
 
-- [GitHub 'da .net IoT kitaplıkları](https://github.com/dotnet/iot)<span class="docon docon-navigate-external x-hidden-focus"></span>
+- [GitHub 'da .NET IoT kitaplıkları](https://github.com/dotnet/iot)

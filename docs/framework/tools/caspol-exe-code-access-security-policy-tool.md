@@ -16,12 +16,12 @@ helpviewer_keywords:
 - security policy [.NET Framework], modifying
 - manually editing security configuration files
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
-ms.openlocfilehash: 6567a4c738b3d6c8f14d1ab13ba005cb22bb7328
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: d26443d07dd76d8d18e0d21112d1e40de5b83c83
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96247310"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258291"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (Kod Erişimi Güvenliği İlke Aracı)
 
@@ -33,11 +33,11 @@ Kod Erişim Güvenliği (CAS) İlkesi aracı (Caspol.exe) kullanıcıların ve y
 > [!NOTE]
 > 64 bit bilgisayarlarda güvenlik ilkesi 64-bit ve 32-bit sürümleri içerir. İlkenizdeki değişikliklerin 32-bit ve 64-bit sürümlerine uygulandığından emin olmak için Caspol.exe'nin 32-bit ve 64-bit sürümlerinin ikisini de çalıştırın.  
   
- Kod Erişimi Güvenlik İlkesi aracı, .NET Framework ve Visual Studio ile otomatik olarak yüklenir. Caspol.exe, 64 bit sistemlerde%windir%\Microsoft.NET\Framework \\ *sürümünde* 32 bitlik sistemlerde veya%windir%\Microsoft.NET\Framework64 \\ *sürümünde* bulabilirsiniz. (Örneğin, konum, 64 bitlik bir sistemde .NET Framework 4 için% windir% \Microsoft.NET\Framework64\v4.030319\caspol.exe.) Bilgisayarınız .NET Framework birden çok sürümünü yan yana çalıştırıyorsa aracın birden çok sürümü yüklü olabilir. Aracı yükleme dizininden çalıştırabilirsiniz. Ancak, yükleme klasörüne gitmenizi gerektirmeyen [komut istemlerini](developer-command-prompt-for-vs.md)kullanmanızı öneririz.  
+ Kod erişimi güvenlik Ilkesi Aracı, .NET Framework ve Visual Studio ile otomatik olarak yüklenir. Caspol.exe, 64 bit sistemlerde%windir%\Microsoft.NET\Framework \\ *sürümünde* 32 bitlik sistemlerde veya%windir%\Microsoft.NET\Framework64 \\ *sürümünde* bulabilirsiniz. (Örneğin, konum% windir% \Microsoft.NET\Framework64\v4.030319\caspol.exe, 64 bitlik bir sistemde .NET Framework 4 ' dir.) Bilgisayarınız .NET Framework yan yana birden çok sürümünü çalıştırıyorsa aracın birden çok sürümü yüklü olabilir. Aracı yükleme dizininden çalıştırabilirsiniz. Ancak, yükleme klasörüne gitmeniz gerekmeyen [geliştiriciler için bir komut satırı kabuğu](/visualstudio/ide/reference/command-prompt-powershell)kullanmanızı öneririz.  
   
  Komut satırına şunu yazın:  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```console
 caspol [options]  
@@ -88,8 +88,8 @@ caspol [options]
 |**-özel**  *xmlfile*|Özel üyelik koşulu ekler. Zorunlu *xmlfile* bağımsız değişkeni, özel ÜYELIK koşulunun XML serileştirmesini içeren. xml dosyasını belirtir.|  
 |**-hash** *HashAlg* {**-onaltılı** *diyez değeri* &#124; **-Dosya** *Assembly_file* }|Belirtilen derleme karmasına sahip kodu belirtir. Bir karmayı kod grubu üyelik koşulu olarak kullanmak için, karma değerini ya da derleme dosyasını belirtmelisiniz. Bu üyelik koşulu hakkında daha fazla bilgi için bkz <xref:System.Security.Policy.HashMembershipCondition?displayProperty=nameWithType> ..|  
 |**-pub** { **-CERT** *cert_file_name* &#124;<br /><br /> **-dosya** *signed_file_name* &#124; **-onaltılı**  *hex_string* }|Belirtilen yazılım yayıncısına sahip kodu (bir sertifika dosyasıyla, bir dosyadaki imzayla veya bir X 509 sertifikasının onaltılı gösterimiyle sunulduğu şekilde) belirtir. Bu üyelik koşulu hakkında daha fazla bilgi için bkz <xref:System.Security.Policy.PublisherMembershipCondition?displayProperty=nameWithType> ..|  
-|**-site** *Web sitesi*|Belirtilen kaynak siteyi içeren kodu belirtir. Örneğin:<br /><br /> `-site** www.proseware.com`<br /><br /> Bu üyelik koşulu hakkında daha fazla bilgi için bkz <xref:System.Security.Policy.SiteMembershipCondition?displayProperty=nameWithType> ..|  
-|**-strong-file** *file_name* {*Name* &#124; **-noname**} {*Sürüm* &#124; **-noversion**}|Dosya adı, derleme adı ve *birincil* biçimdeki derleme sürümü ile belirlenen belirli bir tanımlayıcı ada sahip kodu belirtir. *küçük*. *oluşturun*. *Düzeltme*. Örneğin:<br /><br /> **-strong-file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> Bu üyelik koşulu hakkında daha fazla bilgi için bkz <xref:System.Security.Policy.StrongNameMembershipCondition?displayProperty=nameWithType> ..|  
+|**-site** *Web sitesi*|Belirtilen kaynak siteyi içeren kodu belirtir. Örnek:<br /><br /> `-site** www.proseware.com`<br /><br /> Bu üyelik koşulu hakkında daha fazla bilgi için bkz <xref:System.Security.Policy.SiteMembershipCondition?displayProperty=nameWithType> ..|  
+|**-strong-file** *file_name* {*Name* &#124; **-noname**} {*Sürüm* &#124; **-noversion**}|Dosya adı, derleme adı ve *birincil* biçimdeki derleme sürümü ile belirlenen belirli bir tanımlayıcı ada sahip kodu belirtir. *küçük*. *oluşturun*. *Düzeltme*. Örnek:<br /><br /> **-strong-file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> Bu üyelik koşulu hakkında daha fazla bilgi için bkz <xref:System.Security.Policy.StrongNameMembershipCondition?displayProperty=nameWithType> ..|  
 |**-URL** *URL 'si*|Belirtilen URL'den kaynaklanan kodu belirtir. URL, veya gibi bir protokol içermelidir `http://` `ftp://` . Ayrıca, \* belirli BIR URL 'den birden çok derleme belirtmek için joker karakteri () kullanılabilir. **Note:**  Bir URL birden çok ad kullanılarak belirlenebildiğinden, üyelik koşulu olarak bir URL kullanılması kodun kimliğini belirlemek için güvenli bir yol değildir. Mümkün olan yerlerde, bir tanımlayıcı ad üyelik koşulu, bir yayımcı üyelik koşulu veya karma üyelik koşulu kullanın. <br /><br /> Bu üyelik koşulu hakkında daha fazla bilgi için bkz <xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType> ..|  
 |**-Zone** *BölgeAdı*|Belirtilen kaynak bölgeyi içeren kodu belirtir. *BölgeAdı* bağımsız değişkeni şu değerlerden biri olabilir: **Bilgisayarım**, **Intranet**, **Güvenilen**, **Internet** veya **Güvenilmeyen**. Bu üyelik koşulu hakkında daha fazla bilgi için, <xref:System.Security.Policy.ZoneMembershipCondition> sınıfına bakın.|  
   
@@ -255,4 +255,4 @@ caspol -all -resolveperm testassembly
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Araçlar](index.md)
-- [Komut Istemleri](developer-command-prompt-for-vs.md)
+- [Geliştirici komut satırı kabukları](/visualstudio/ide/reference/command-prompt-powershell)
