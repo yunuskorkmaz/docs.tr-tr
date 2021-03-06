@@ -14,22 +14,22 @@ helpviewer_keywords:
 - progress information for installation
 - reporting installation progress
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
-ms.openlocfilehash: 042e5f64a7a863173db9c4e601d3152b0df46d97
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 0e03a2a7033d3e210727e2eb080140ad87240dba
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164444"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259947"
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (Yükleme Aracı)
 
 Yükleyici aracı, yükleyici bileşenlerini belirli derlemelerde yürüterek sunucu kaynaklarını yüklemenize ve kaldırmanıza olanak tanıyan bir komut satırı aracıdır. Bu araç, ad alanındaki sınıflarla birlikte çalışmaktadır <xref:System.Configuration.Install> .
 
-Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](developer-command-prompt-for-vs.md).
+Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, [geliştiriciler için bir komut satırı kabuğu](/visualstudio/ide/reference/command-prompt-powershell)kullanın.
 
 Komut satırına şunu yazın:
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```console
 installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
@@ -49,9 +49,9 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 |------------|-----------------|
 |`/h[elp]`<br /><br /> -veya-<br /><br /> `/?`|Araç için komut sözdizimini ve seçenekleri görüntüler.|
 |`/help`*derleme*<br /><br /> -veya-<br /><br /> `/?`*derleme*|InstallUtil.exe'ye ilişkin komut sözdizimi ve seçeneklerin yanı sıra, belirtilen derleme içinde tek tek yükleyiciler tarafından tanınan ek seçenekleri görüntüler. Bu seçenek, her bir yükleyici bileşeninin özelliği tarafından döndürülen metni <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> InstallUtil.exe yardım metnine ekler.|
-|`/AssemblyName`"*AssemblyName*<br /><br /> , Sürüm =*ana. ikincil. derleme. düzeltme*<br /><br /> , Kültür =*yerel ayar*<br /><br /> , PublicKeyToken =*PublicKeyToken*"|Bir derlemenin, genel derleme önbelleğine kaydedilmesi gereken tanımlayıcı adını belirtir. Derleme adı, derlemenin sürüm, kültür ve genel anahtar belirteciyle birlikte belirtilmelidir. Tam olarak belirtilen ad, tırnak işareti içine alınmalıdır.<br /><br /> Örneğin, "myAssembly, Culture=neutral, PublicKeyToken=0038abc9deabfle5, Version=4.0.0.0" tam olaralk belirtilmiş bir derleme adıdır.|
+|`/AssemblyName` "*AssemblyName*<br /><br /> , Sürüm =*ana. ikincil. derleme. düzeltme*<br /><br /> , Kültür =*yerel ayar*<br /><br /> , PublicKeyToken =*PublicKeyToken*"|Bir derlemenin, genel derleme önbelleğine kaydedilmesi gereken tanımlayıcı adını belirtir. Derleme adı, derlemenin sürüm, kültür ve genel anahtar belirteciyle birlikte belirtilmelidir. Tam olarak belirtilen ad, tırnak işareti içine alınmalıdır.<br /><br /> Örneğin, "myAssembly, Culture=neutral, PublicKeyToken=0038abc9deabfle5, Version=4.0.0.0" tam olaralk belirtilmiş bir derleme adıdır.|
 |`/InstallStateDir=[`*DirectoryName*`]`|Derlemeyi yüklemek için kullanılan verileri içeren .InstallState dosyasının dizinini içerir. Varsayılan değer, derlemeyi içeren dizindir.|
-|`/LogFile=`[*dosya adı*]|Yükleme ilerlemesinin kaydedildiği günlük dosyasının adını belirtir. Varsayılan olarak, `/LogFile` seçeneği atlanırsa *AssemblyName*adlı bir günlük dosyası. InstallLog oluşturuldu. *Dosya adı* atlanırsa, günlük dosyası oluşturulmaz.|
+|`/LogFile=`[*dosya adı*]|Yükleme ilerlemesinin kaydedildiği günlük dosyasının adını belirtir. Varsayılan olarak, `/LogFile` seçeneği atlanırsa *AssemblyName* adlı bir günlük dosyası. InstallLog oluşturuldu. *Dosya adı* atlanırsa, günlük dosyası oluşturulmaz.|
 |`/LogToConsole`= { `true`&#124;`false` }|`true`, Çıktıyı konsola görüntüler. `false`(Varsayılan), çıktıyı konsola bastırır.|
 |`/ShowCallStack`|Yükleme sırasında herhangi bir noktada bir özel durum oluşursa, çağrı yığınını günlük dosyana çıkış olarak aktarır.|
 |`/u`[`ninstall`]|Belirtilen derlemeleri kaldırır. Diğer seçeneklerin aksine, `/u` seçeneğin komut satırında göründüğü yere bakılmaksızın tüm derlemeler için geçerlidir.|
@@ -170,4 +170,4 @@ installutil /LogFile=myLog.InstallLog myAssembly.exe /LogFile=myTestLog.InstallL
 
 - <xref:System.Configuration.Install>
 - [Araçlar](index.md)
-- [Komut Istemleri](developer-command-prompt-for-vs.md)
+- [Geliştirici komut satırı kabukları](/visualstudio/ide/reference/command-prompt-powershell)
