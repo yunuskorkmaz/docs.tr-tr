@@ -397,8 +397,6 @@ items:
         href: tools/certmgr-exe-certificate-manager-tool.md
       - name: Clrver.exe (CLR sürüm aracı)
         href: tools/clrver-exe-clr-version-tool.md
-      - name: Komut istemleri
-        href: tools/developer-command-prompt-for-vs.md
       - name: CorFlags.exe (CorFlags dönüştürme aracı)
         href: tools/corflags-exe-corflags-conversion-tool.md
       - name: Fuslogvw.exe (Derleme bağlaması günlük görüntüleyici)
