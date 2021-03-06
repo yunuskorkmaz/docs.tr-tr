@@ -35,6 +35,8 @@
           href: configuration-differences.md
         - name: Yönlendirme farklılıkları
           href: routing-differences.md
+        - name: Günlüğe kaydetme farklılıkları
+          href: logging-differences.md
         - name: Razor Pages ASP.NET MVC ile karşılaştırın
           href: comparing-razor-pages-aspnet-mvc.md
         - name: Web API 'SI farklılıkları
