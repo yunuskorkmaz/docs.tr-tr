@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-ms.openlocfilehash: 0debc2c07f0cecf1ac1ab4e4fad524cd6a114ba0
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 06746347910f62a428d4897693a88b5efe78e86f
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102105544"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258975"
 ---
 # <a name="additional-resources"></a>Ek kaynaklar
 
@@ -32,7 +32,7 @@ Aşağıdaki Web siteleri rehberlik sağlar ve yaygın sorunların yanıtların�
 
 |URL|Açıklama|
 |----------|----------------|
-|[Visual Basic belge örnekleri](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic)|Visual Basic ve .NET belgelerinin tamamında kullanılan örnekleri içerir.|
+|[Visual Basic belge örnekleri](https://github.com/dotnet/docs/tree/main/samples/snippets/visualbasic)|Visual Basic ve .NET belgelerinin tamamında kullanılan örnekleri içerir.|
 |[Örnek tarayıcı](https://docs.microsoft.com/samples/browse/?languages=vb)|Visual Basic yazılan kod örneklerini içerir|
 
 ### <a name="forums"></a>Forumlar

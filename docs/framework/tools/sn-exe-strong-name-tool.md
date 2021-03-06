@@ -11,12 +11,12 @@ helpviewer_keywords:
 - strong-named assemblies, signing files
 - key pairs for signing files
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
-ms.openlocfilehash: bb9640bbb46683a3facf290c8157853007f4407d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 76999ab305f9924bafaa95884b634e2a59251ff0
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238450"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259053"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Tanımlayıcı Ad Aracı)
 
@@ -27,14 +27,14 @@ Tanımlayıcı ad Aracı (Sn.exe), derlemelerin [güçlü adlarla](../../standar
 
  Tanımlayıcı adlandırma ve tanımlayıcı adlı derlemeler hakkında daha fazla bilgi için bkz. Strong [-adlandırılmış derlemeler](../../standard/assembly/strong-named.md) ve [nasıl yapılır: bir derlemeyi güçlü bir adla imzalama](../../standard/assembly/sign-strong-name.md).  
   
- Tanımlayıcı Ad aracı Visual Studio ile birlikte otomatik olarak yüklenir. Aracı başlatmak için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](developer-command-prompt-for-vs.md).  
+ Tanımlayıcı Ad aracı Visual Studio ile birlikte otomatik olarak yüklenir. Aracı başlatmak için, [geliştiriciler için bir komut satırı kabuğu](/visualstudio/ide/reference/command-prompt-powershell)kullanın.  
 
 > [!NOTE]
 > 64 bit bilgisayarlarda, Visual Studio x64 Win64 komut Istemi kullanarak Visual Studio Geliştirici Komut İstemi ve 64 bit sürümünü kullanarak Sn.exe 32 bit sürümünü çalıştırın.
   
  Komut satırına şunu yazın:  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```console  
 sn [-quiet][option [parameter(s)]]  
@@ -131,4 +131,4 @@ sn -d MyContainer
 - [Araçlar](index.md)
 - [Al.exe (bütünleştirilmiş kod bağlayıcı)](al-exe-assembly-linker.md)
 - [Tanımlayıcı adlı derlemeler](../../standard/assembly/strong-named.md)
-- [Komut Istemleri](developer-command-prompt-for-vs.md)
+- [Geliştirici komut satırı kabukları](/visualstudio/ide/reference/command-prompt-powershell)

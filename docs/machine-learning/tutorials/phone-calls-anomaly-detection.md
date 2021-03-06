@@ -4,18 +4,18 @@ description: Zaman serisi verileri için anomali algılama uygulaması oluşturm
 ms.date: 12/04/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: f001cb912bb695a7edb0917f3306ca9bfbe311ac
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 7edb84ae53f1da7903cf4b3f77d215206ffbf1ef
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98187788"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259830"
 ---
 # <a name="tutorial-detect-anomalies-in-time-series-with-mlnet"></a>Öğretici: ML.NET ile zaman serisinde anomali algılama
 
 Zaman serisi verileri için anomali algılama uygulaması oluşturmayı öğrenin. Bu öğretici, Visual Studio 2019 ' de C# kullanarak bir .NET Core konsol uygulaması oluşturur.
 
-Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
+Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > [!div class="checklist"]
 >
 > * Verileri yükleme
@@ -24,7 +24,7 @@ Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 
 Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/PhoneCallsAnomalyDetection) deposunda bulabilirsiniz.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 * [Visual Studio 2019 sürüm 16.7.8 veya üzeri](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ".NET Core platformlar arası geliştirme" iş yükü yüklendi.
 
@@ -32,7 +32,7 @@ Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/sample
 
 ## <a name="create-a-console-application"></a>Konsol uygulaması oluşturma
 
-1. "Productsalesanomalyıdetection" adlı bir **C# .NET Core konsol uygulaması** oluşturun.
+1. "Phonecallsanomalyıdetection" adlı bir **C# .NET Core konsol uygulaması** oluşturun.
 
 2. Veri kümesi dosyalarınızı kaydetmek için projenizde *veri* adlı bir dizin oluşturun.
 

@@ -12,12 +12,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 5192f7f372b9ef7927930c3599aebc6fca9f1f0f
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: f66b21c7b912cdf1b5e77a91cecd38580e495a51
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687652"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259661"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Nasıl yapılır: bir derlemeyi güçlü bir adla Imzalama
 
@@ -38,24 +38,24 @@ Bir derlemeyi katı bir adla imzalamak için çeşitli yollar vardır:
   
 ## <a name="create-and-sign-an-assembly-with-a-strong-name-by-using-visual-studio"></a>Visual Studio 'Yu kullanarak tanımlayıcı ad ile derleme oluşturma ve imzalama  
   
-1. **Çözüm Gezgini** ' de, proje için kısayol menüsünü açın ve ardından **Özellikler** ' i seçin.  
+1. **Çözüm Gezgini**' de, proje için kısayol menüsünü açın ve ardından **Özellikler**' i seçin.  
   
 2. **İmzalama** sekmesini seçin.  
   
 3. **Derlemeyi imzala** kutusunu seçin.  
   
-4. **Tanımlayıcı ad seçin anahtar dosyası** kutusunda, **Araştır** ' ı seçin ve ardından anahtar dosyasına gidin. Yeni bir anahtar dosyası oluşturmak için **Yeni** ' yi seçin ve **tanımlayıcı ad anahtarı oluştur** iletişim kutusuna adını girin.  
+4. **Tanımlayıcı ad seçin anahtar dosyası** kutusunda, **Araştır**' ı seçin ve ardından anahtar dosyasına gidin. Yeni bir anahtar dosyası oluşturmak için **Yeni** ' yi seçin ve **tanımlayıcı ad anahtarı oluştur** iletişim kutusuna adını girin.  
   
 > [!NOTE]
 > [Bir derlemeyi imzalamayı geciktirmek](delay-sign.md)için bir ortak anahtar dosyası seçin.  
   
 ### <a name="create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>Derleme bağlayıcı kullanarak tanımlayıcı ad ile derleme oluşturma ve imzalama  
   
-[Visual Studio için geliştirici komut istemi](../../framework/tools/developer-command-prompt-for-vs.md), aşağıdaki komutu girin:  
+Bir [Geliştirici komut satırı kabuğu](/visualstudio/ide/reference/command-prompt-powershell)açın ve şu komutu girin:  
 
 **Al** **/Out:** \<*assemblyName*> *\<moduleName>* **/keyfile:**\<*keyfileName*>  
 
-Burada:  
+Konum:  
 
 - *AssemblyName* , derleme bağlayıcının Yayladığı, kesin imzalı derlemenin (bir *. dll* veya *. exe* dosyası) adıdır.  
   

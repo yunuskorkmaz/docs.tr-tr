@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, walkthroughs
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
-ms.openlocfilehash: bbf9ab7d06c952aa2e076fc36c71f37f1bb10884
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: b6e4937b71c50f887a7eb784bc9106360a05fdc2
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608393"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259804"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>Öğretici: Windows hizmeti uygulaması oluşturma
 
@@ -24,9 +24,9 @@ Bu makalede, Visual Studio 'da bir olay günlüğüne ileti yazan bir Windows hi
 
 Başlamak için projeyi oluşturun ve hizmetin düzgün çalışması için gereken değerleri ayarlayın.
 
-1. Visual Studio **Dosya** menüsünden **Yeni**  >  **Proje** ' yi seçin (veya **CTRL** + **SHIFT** + **N**tuşlarına basarak) **Yeni proje** penceresini açın.
+1. Visual Studio **Dosya** menüsünden **Yeni**  >  **Proje** ' yi seçin (veya **CTRL** + **SHIFT** + **N** tuşlarına basarak) **Yeni proje** penceresini açın.
 
-2. ' A gidin ve **Windows hizmeti (.NET Framework)** proje şablonunu seçin. Bunu bulmak için, **yüklü** ve **Visual C#** veya **Visual Basic**genişletin, sonra **Windows Masaüstü**' nü seçin. Ya da, sağ üst köşedeki arama kutusuna *Windows hizmeti* girip **ENTER**tuşuna basın.
+2. ' A gidin ve **Windows hizmeti (.NET Framework)** proje şablonunu seçin. Bunu bulmak için, **yüklü** ve **Visual C#** veya **Visual Basic** genişletin, sonra **Windows Masaüstü**' nü seçin. Ya da, sağ üst köşedeki arama kutusuna *Windows hizmeti* girip **ENTER** tuşuna basın.
 
    ![Visual Studio 'da yeni proje iletişim kutusunda Windows hizmet şablonu](./media/new-project-dialog.png)
 
@@ -35,7 +35,7 @@ Başlamak için projeyi oluşturun ve hizmetin düzgün çalışması için gere
    >
    > **Yeni proje** iletişim kutusunda sol alttaki **Visual Studio yükleyicisi aç** ' ı seçin. **.Net masaüstü geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
 
-3. **Ad**için *MyNewService*yazın ve ardından **Tamam**' ı seçin.
+3. **Ad** için *MyNewService* yazın ve ardından **Tamam**' ı seçin.
 
    **Tasarım** sekmesi görünür (**Service1.cs [Design]** veya **Service1. vb [Design]**).
 
@@ -43,17 +43,17 @@ Başlamak için projeyi oluşturun ve hizmetin düzgün çalışması için gere
 
 ## <a name="rename-the-service"></a>Hizmeti yeniden adlandırma
 
-Hizmeti **Service1** iken **MyNewService**olarak yeniden adlandırın.
+Hizmeti **Service1** iken **MyNewService** olarak yeniden adlandırın.
 
-1. **Çözüm Gezgini**' de, **Service1.cs**veya **Service1. vb**öğesini seçin ve kısayol menüsünden **Yeniden Adlandır** ' ı seçin. Dosyayı **MyNewService.cs**veya **MyNewService. vb**olarak yeniden adlandırın ve ardından **ENTER** tuşuna basın
+1. **Çözüm Gezgini**' de, **Service1.cs** veya **Service1. vb** öğesini seçin ve kısayol menüsünden **Yeniden Adlandır** ' ı seçin. Dosyayı **MyNewService.cs** veya **MyNewService. vb** olarak yeniden adlandırın ve ardından **ENTER** tuşuna basın
 
-    Kod öğesi *Service1*için tüm başvuruları yeniden adlandırmak isteyip istemediğinizi soran bir açılır pencere görüntülenir.
+    Kod öğesi *Service1* için tüm başvuruları yeniden adlandırmak isteyip istemediğinizi soran bir açılır pencere görüntülenir.
 
 2. Açılır pencerede **Evet**' i seçin.
 
     ![Yeniden adlandırma istemi](./media/windows-service-rename.png "Windows hizmeti yeniden adlandırma istemi")
 
-3. **Tasarım** sekmesinde, kısayol menüsünden **Özellikler** ' i seçin. **Özellikler** penceresinde **ServiceName** değerini *MyNewService*olarak değiştirin.
+3. **Tasarım** sekmesinde, kısayol menüsünden **Özellikler** ' i seçin. **Özellikler** penceresinde **ServiceName** değerini *MyNewService* olarak değiştirin.
 
     ![Hizmet özellikleri](./media/windows-service-properties.png "Windows hizmeti özellikleri")
 
@@ -65,18 +65,18 @@ Bu bölümde, Windows hizmetine özel bir olay günlüğü eklersiniz. <xref:Sys
 
 ### <a name="add-custom-event-log-functionality"></a>Özel olay günlüğü işlevselliği Ekle
 
-1. **Çözüm Gezgini**, **MyNewService.cs**Için kısayol menüsünden veya **MyNewService. vb**' de **Görünüm Tasarımcısı**' nı seçin.
+1. **Çözüm Gezgini**, **MyNewService.cs** Için kısayol menüsünden veya **MyNewService. vb**' de **Görünüm Tasarımcısı**' nı seçin.
 
 2. **Araç kutusu**' nda **Bileşenler**' i genişletin ve ardından **EventLog** bileşenini **Service1.cs [Design]** veya **Service1. vb [Design]** sekmesine sürükleyin.
 
-3. **Çözüm Gezgini**' de, **MyNewService.cs**veya **MyNewService. vb**kısayol menüsünde **kodu görüntüle**' yi seçin.
+3. **Çözüm Gezgini**' de, **MyNewService.cs** veya **MyNewService. vb** kısayol menüsünde **kodu görüntüle**' yi seçin.
 
 4. Özel bir olay günlüğü tanımlayın. C# için, var olan `MyNewService()` oluşturucuyu düzenleyin; Visual Basic için `New()` oluşturucuyu ekleyin:
 
    [!code-csharp[VbRadconService#2](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#2)]
    [!code-vb[VbRadconService#2](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#2)]
 
-5. `using`Ad alanı için, **MyNewService.cs** (henüz yoksa) veya `Imports` **MyNewService. vb**ifadesini ekleyin <xref:System.Diagnostics?displayProperty=nameWithType> :
+5. `using`Ad alanı için, **MyNewService.cs** (henüz yoksa) veya `Imports` **MyNewService. vb** ifadesini ekleyin <xref:System.Diagnostics?displayProperty=nameWithType> :
 
     ```csharp
     using System.Diagnostics;
@@ -90,7 +90,7 @@ Bu bölümde, Windows hizmetine özel bir olay günlüğü eklersiniz. <xref:Sys
 
 ### <a name="define-what-occurs-when-the-service-starts"></a>Hizmet başladığında ne olduğunu tanımlayın
 
-**MyNewService.cs** veya **MyNewService. vb**için kod düzenleyicisinde, <xref:System.ServiceProcess.ServiceBase.OnStart%2A> yöntemini bulun; Projeyi oluştururken Visual Studio otomatik olarak boş bir yöntem tanımı oluşturdu. Hizmet başladığında bir girişi olay günlüğüne yazan kodu ekleyin:
+**MyNewService.cs** veya **MyNewService. vb** için kod düzenleyicisinde, <xref:System.ServiceProcess.ServiceBase.OnStart%2A> yöntemini bulun; Projeyi oluştururken Visual Studio otomatik olarak boş bir yöntem tanımı oluşturdu. Hizmet başladığında bir girişi olay günlüğüne yazan kodu ekleyin:
 
 [!code-csharp[VbRadconService#3](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#3)]
 [!code-vb[VbRadconService#3](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#3)]
@@ -124,7 +124,7 @@ Basit bir yoklama mekanizması ayarlamak için <xref:System.Timers.Timer?display
    timer.Start()
    ```
 
-2. `using`Ad alanı için **MyNewService.cs**veya bir deyime, `Imports` **MyNewService. vb**öğesine bir ifade ekleyin <xref:System.Timers?displayProperty=nameWithType> :
+2. `using`Ad alanı için **MyNewService.cs** veya bir deyime, `Imports` **MyNewService. vb** öğesine bir ifade ekleyin <xref:System.Timers?displayProperty=nameWithType> :
 
    ```csharp
    using System.Timers;
@@ -188,7 +188,7 @@ Windows [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatu
 
 ### <a name="implement-service-pending-status"></a>Hizmet bekleme durumunu Uygula
 
-1. `using`Ad alanı için **MyNewService.cs**veya bir deyime, `Imports` **MyNewService. vb**öğesine bir ifade ekleyin <xref:System.Runtime.InteropServices?displayProperty=nameWithType> :
+1. `using`Ad alanı için **MyNewService.cs** veya bir deyime, `Imports` **MyNewService. vb** öğesine bir ifade ekleyin <xref:System.Runtime.InteropServices?displayProperty=nameWithType> :
 
     ```csharp
     using System.Runtime.InteropServices;
@@ -198,7 +198,7 @@ Windows [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatu
     Imports System.Runtime.InteropServices
     ```
 
-2. Değerleri bildirmek ve bir platform çağırma çağrısında kullanacağınız durum için bir yapı eklemek üzere **MyNewService.cs**veya **MyNewService. vb**' ye aşağıdaki kodu ekleyin `ServiceState` :
+2. Değerleri bildirmek ve bir platform çağırma çağrısında kullanacağınız durum için bir yapı eklemek üzere **MyNewService.cs** veya **MyNewService. vb**' ye aşağıdaki kodu ekleyin `ServiceState` :
 
     ```csharp
     public enum ServiceState
@@ -296,7 +296,7 @@ Windows [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatu
 
 6. Seçim <xref:System.ServiceProcess.ServiceBase.OnStop%2A> Uzun süre çalışan bir yöntem ise, yöntemi içinde bu yordamı tekrarlayın `OnStop` . SERVICE_STOP_PENDING durumunu uygulayın ve yöntemin uygulamadan önce SERVICE_STOPPED durumunu döndürün `OnStop` .
 
-   Örneğin:
+   Örnek:
 
     ```csharp
     // Update the service state to Stop Pending.
@@ -326,17 +326,17 @@ Windows [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatu
 
 Bir Windows hizmetini çalıştırmadan önce, onu yüklemeniz gerekir, bunu hizmet denetimi Yöneticisi ile kaydeder. Kayıt ayrıntılarını işlemek için projenize yükleyiciler ekleyin.
 
-1. **Çözüm Gezgini**, **MyNewService.cs**Için kısayol menüsünden veya **MyNewService. vb**' de **Görünüm Tasarımcısı**' nı seçin.
+1. **Çözüm Gezgini**, **MyNewService.cs** Için kısayol menüsünden veya **MyNewService. vb**' de **Görünüm Tasarımcısı**' nı seçin.
 
 2. **Tasarım** görünümünde, arka plan alanını seçin, sonra kısayol menüsünden **Yükleyici Ekle** ' yi seçin.
 
      Varsayılan olarak, Visual Studio `ProjectInstaller` projenize iki yükleyici içeren adlı bir bileşen sınıfı ekler. Bu yükleyiciler hizmetinize ve hizmetin ilişkili sürecine yöneliktir.
 
-3. **ProjectInstaller**için **Tasarım** görünümünde, bir Visual C# projesi için **Serviceınstaller1 & lt** veya Visual Basic projesi için **Serviceınstaller1 & lt** ' i seçin, sonra kısayol menüsünden **Özellikler** ' i seçin.
+3. **ProjectInstaller** için **Tasarım** görünümünde, bir Visual C# projesi için **Serviceınstaller1 & lt** veya Visual Basic projesi için **Serviceınstaller1 & lt** ' i seçin, sonra kısayol menüsünden **Özellikler** ' i seçin.
 
-4. **Özellikler** penceresinde, <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> özelliğin **MyNewService**olarak ayarlandığını doğrulayın.
+4. **Özellikler** penceresinde, <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> özelliğin **MyNewService** olarak ayarlandığını doğrulayın.
 
-5. <xref:System.ServiceProcess.ServiceInstaller.Description%2A>Özelliğe *örnek bir hizmet*gibi metin ekleyin.
+5. <xref:System.ServiceProcess.ServiceInstaller.Description%2A>Özelliğe *örnek bir hizmet* gibi metin ekleyin.
 
      Bu metin, **Hizmetler** penceresinin **Açıklama** sütununda görüntülenir ve kullanıcıya hizmeti açıklar.
 
@@ -352,7 +352,7 @@ Bir Windows hizmetini çalıştırmadan önce, onu yüklemeniz gerekir, bunu hiz
 
      ![Windows hizmeti için yükleyici özellikleri](./media/windows-service-installer-properties.png "Windows hizmeti yükleyicisi özellikleri")
 
-9. **ProjectInstaller**için **Tasarım** görünümünde, bir Visual C# projesi için **Serviceprocessınstaller1** veya Visual Basic projesi için **Serviceprocessınstaller1** ' i seçin, sonra kısayol menüsünden **Özellikler** ' i seçin. Özelliğini, <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> <xref:System.ServiceProcess.ServiceAccount.LocalSystem> açılan listeden olarak ayarlayın.
+9. **ProjectInstaller** için **Tasarım** görünümünde, bir Visual C# projesi için **Serviceprocessınstaller1** veya Visual Basic projesi için **Serviceprocessınstaller1** ' i seçin, sonra kısayol menüsünden **Özellikler** ' i seçin. Özelliğini, <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> <xref:System.ServiceProcess.ServiceAccount.LocalSystem> açılan listeden olarak ayarlayın.
 
      Bu ayar hizmeti yükleyip yerel sistem hesabını kullanarak çalıştırır.
 
@@ -368,16 +368,16 @@ Yükleyiciler hakkında daha fazla bilgi için bkz. [nasıl yapılır: hizmet uy
 
 Windows hizmeti komut satırı bağımsız değişkenlerini veya başlangıç parametrelerini kabul edebilir. Başlangıç parametrelerini işlemek için kod eklediğinizde, bir Kullanıcı Hizmeti Özellikler penceresinde kendi özel başlangıç parametreleriyle hizmetinizi başlatabilir. Ancak, bu başlangıç parametreleri hizmetin bir sonraki başlatılışında kalıcı olmaz. Başlangıç parametrelerini kalıcı olarak ayarlamak için kayıt defterinde ayarlayın.
 
-Her bir Windows hizmetinin **HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Services** alt anahtarı altında bir kayıt defteri girişi vardır. Her bir hizmetin alt anahtarı altında, hizmetinizin erişebileceği bilgileri depolamak için **Parameters** alt anahtarını kullanın. Windows hizmeti için uygulama yapılandırma dosyalarını, diğer tür programlar için yaptığınız şekilde kullanabilirsiniz. Örnek kod için bkz <xref:System.Configuration.ConfigurationManager.AppSettings?displayProperty=nameWithType> ..
+Her Windows hizmetinin **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services** alt anahtarı altında bir kayıt defteri girişi vardır. Her bir hizmetin alt anahtarı altında, hizmetinizin erişebileceği bilgileri depolamak için **Parameters** alt anahtarını kullanın. Windows hizmeti için uygulama yapılandırma dosyalarını, diğer tür programlar için yaptığınız şekilde kullanabilirsiniz. Örnek kod için bkz <xref:System.Configuration.ConfigurationManager.AppSettings?displayProperty=nameWithType> ..
 
 ### <a name="to-add-startup-parameters"></a>Başlangıç parametreleri eklemek için
 
-1. **Program.cs**veya **MyNewService. Designer. vb**öğesini seçin, ardından kısayol menüsünde **kodu görüntüle** ' yi seçin. Yönteminde, `Main` bir giriş parametresi eklemek ve onu Service yapıcısına iletmek için kodu değiştirin:
+1. **Program.cs** veya **MyNewService. Designer. vb** öğesini seçin, ardından kısayol menüsünde **kodu görüntüle** ' yi seçin. Yönteminde, `Main` bir giriş parametresi eklemek ve onu Service yapıcısına iletmek için kodu değiştirin:
 
    [!code-csharp[VbRadconService](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/Program-add-parameter.cs?highlight=1,6)]
    [!code-vb[VbRadconService](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.Designer-add-parameter.vb?highlight=1-2)]
 
-2. **MyNewService.cs**veya **MyNewService. vb**' de, `MyNewService` Oluşturucu giriş parametresini aşağıdaki gibi işleyecek şekilde değiştirin:
+2. **MyNewService.cs** veya **MyNewService. vb**' de, `MyNewService` Oluşturucu giriş parametresini aşağıdaki gibi işleyecek şekilde değiştirin:
 
    ```csharp
    using System.Diagnostics;
@@ -435,7 +435,7 @@ Her bir Windows hizmetinin **HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Servic
 
    Bu kod, olay kaynağını ve günlük adını kullanıcının sağladığı başlangıç parametrelerine göre ayarlar. Herhangi bir bağımsız değişken sağlanmadığında, varsayılan değerleri kullanır.
 
-3. Komut satırı bağımsız değişkenlerini belirtmek için, `ProjectInstaller` **ProjectInstaller.cs**veya **ProjectInstaller. vb**dosyasındaki sınıfına aşağıdaki kodu ekleyin:
+3. Komut satırı bağımsız değişkenlerini belirtmek için, `ProjectInstaller` **ProjectInstaller.cs** veya **ProjectInstaller. vb** dosyasındaki sınıfına aşağıdaki kodu ekleyin:
 
    ```csharp
    protected override void OnBeforeInstall(IDictionary savedState)
@@ -462,17 +462,17 @@ Her bir Windows hizmetinin **HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Servic
 
    Projeniz için özellik sayfaları görüntülenir.
 
-2. **Uygulama** sekmesinde, **Başlangıç nesnesi** listesinde, Visual Basic projeler için **MyNewService. program**veya **Sub Main** ' i seçin.
+2. **Uygulama** sekmesinde, **Başlangıç nesnesi** listesinde, Visual Basic projeler için **MyNewService. program** veya **Sub Main** ' i seçin.
 
-3. Projeyi derlemek için, **Çözüm Gezgini**menüsünde, projeniz için kısayol menüsünden **Oluştur** ' u seçin (veya **CTRL** + **+ Shift** + **B**tuşlarına basın).
+3. Projeyi derlemek için, **Çözüm Gezgini** menüsünde, projeniz için kısayol menüsünden **Oluştur** ' u seçin (veya **CTRL** + **+ Shift** + **B** tuşlarına basın).
 
 ## <a name="install-the-service"></a>Hizmeti yükleme
 
 Windows hizmetini oluşturduğunuza göre, artık yükleyebilirsiniz. Bir Windows hizmetini yüklemek için, yüklendiği bilgisayarda yönetici kimlik bilgilerine sahip olmanız gerekir.
 
-1. Yönetim kimlik bilgileriyle [Visual Studio için geliştirici komut istemi](../tools/developer-command-prompt-for-vs.md) açın. Windows **Başlat** menüsünde, Visual Studio klasöründeki **vs 2017 için geliştirici komut istemi** ' **yi seçin ve**ardından  >  kısayol menüsünde**yönetici olarak çalıştır** ' ı seçin.
+1. Yönetim kimlik bilgileriyle [Visual Studio için geliştirici komut istemi](/visualstudio/ide/reference/command-prompt-powershell) açın.
 
-2. **Visual Studio için geliştirici komut istemi** penceresinde, projenizin çıkışını içeren klasöre gidin (varsayılan olarak, projenizin *\Bin\Debug* alt dizininde).
+2. **Visual Studio için geliştirici komut istemi**' de, projenizin çıkışını içeren klasöre gidin (varsayılan olarak, projenizin *\Bin\Debug* alt dizininde).
 
 3. Aşağıdaki komutu girin:
 
@@ -482,7 +482,7 @@ Windows hizmetini oluşturduğunuza göre, artık yükleyebilirsiniz. Bir Window
 
     Hizmet başarıyla yüklerse, komut başarıyı bildirir.
 
-    Sistem *installutil.exe*bulamazsa, bilgisayarınızda bulunduğundan emin olun. Bu araç, *%windir%\Microsoft.NET\Framework [64] \\ &lt; Framework sürümü &gt; *klasörüne .NET Framework yüklenir. Örneğin, 64 bit sürümü için varsayılan yol *% windir% \Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*.
+    Sistem *installutil.exe* bulamazsa, bilgisayarınızda bulunduğundan emin olun. Bu araç, *%windir%\Microsoft.NET\Framework [64] \\ &lt; Framework sürümü &gt;* klasörüne .NET Framework yüklenir. Örneğin, 64 bit sürümü için varsayılan yol *% windir% \Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*.
 
     **installutil.exe** işlemi başarısız olursa, nedenini öğrenmek için yüklemenin günlüğünü denetleyin. Varsayılan olarak, günlük hizmet yürütülebiliri ile aynı klasörsdır. Yükleme şu durumlarda başarısız olabilir:
     - Sınıf <xref:System.ComponentModel.RunInstallerAttribute> `ProjectInstaller` sınıfında yok.
@@ -493,9 +493,9 @@ Daha fazla bilgi için bkz. [nasıl yapılır: Hizmetleri yükleme ve kaldırma]
 
 ## <a name="start-and-run-the-service"></a>Hizmeti başlatma ve çalıştırma
 
-1. Windows 'ta, **Hizmetler** masaüstü uygulamasını açın. **Windows** + **R** tuşuna basarak **Çalıştır** kutusunu açın, *Services. msc*yazın ve ardından **ENTER** tuşuna basın veya **Tamam**' ı seçin.
+1. Windows 'ta, **Hizmetler** masaüstü uygulamasını açın. **Windows** + **R** tuşuna basarak **Çalıştır** kutusunu açın, *Services. msc* yazın ve ardından **ENTER** tuşuna basın veya **Tamam**' ı seçin.
 
-     Hizmetinizi, sizin için ayarladığınız görünen ada göre alfabetik olarak görüntülenen **Hizmetler**bölümünde görmeniz gerekir.
+     Hizmetinizi, sizin için ayarladığınız görünen ada göre alfabetik olarak görüntülenen **Hizmetler** bölümünde görmeniz gerekir.
 
      ![Hizmetler penceresinde MyNewService.](./media/windowsservices-serviceswindow.PNG)
 
@@ -503,7 +503,7 @@ Daha fazla bilgi için bkz. [nasıl yapılır: Hizmetleri yükleme ve kaldırma]
 
 3. Hizmeti durdurmak için hizmetin kısayol menüsünden **Durdur** ' u seçin.
 
-4. Seçim Hizmetinizi başlatmak ve durdurmak için komut satırından **net start &lt; Service Name &gt; ** ve **net stop &lt; hizmet adı &gt; ** komutlarını kullanın.
+4. Seçim Hizmetinizi başlatmak ve durdurmak için komut satırından **net start &lt; Service Name &gt;** ve **net stop &lt; hizmet adı &gt;** komutlarını kullanın.
 
 ### <a name="verify-the-event-log-output-of-your-service"></a>Hizmetinizin olay günlüğü çıkışını doğrulama
 

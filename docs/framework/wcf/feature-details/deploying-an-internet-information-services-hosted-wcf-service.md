@@ -3,12 +3,12 @@ title: Internet Information Services Tarafından Barındırılan Bir WCF Hizmeti
 description: IIS 'de barındırılan bir WCF hizmetini geliştirmek ve dağıtmak için gereken görevler hakkında bilgi edinin ve bileşen yüklemesinin doğrulanması ile başlar
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 5d9a0b80cc75baec2325b778cee7daa68531f2d5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ae01533efbeddba75efd159d187a896e2d97ec1a
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/29/2020
-ms.locfileid: "90557573"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259895"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Internet Information Services Tarafından Barındırılan Bir WCF Hizmeti Dağıtma
 
@@ -34,11 +34,11 @@ IIS tarafından barındırılan WCF hizmetlerinin düzgün çalışması için W
 
 Diğer işletim sistemlerine IIS yükleme yönergeleri [Windows Vista ve Windows 7 ' de IIS yükleme](/iis/install/installing-iis-7/installing-iis-on-windows-vista-and-windows-7) ve [Windows Server 2012 R2 üzerinde IIS 8,5 yükleme](/iis/install/installing-iis-85/installing-iis-85-on-windows-server-2012-r2)' de bulunabilir.
 
-.NET Framework yükleme işlemi, IIS makinede zaten mevcutsa WCF 'yi IIS ile otomatik olarak kaydeder. IIS .NET Framework sonrasında yüklenirse, WCF 'yi IIS ve ASP.NET 'e kaydetmek için ek bir adım gerekir. Bunu, işletim sisteminize bağlı olarak aşağıdaki şekilde yapabilirsiniz:
+.NET Framework yükleme işlemi, IIS makinede zaten mevcutsa WCF 'yi IIS ile otomatik olarak kaydeder. .NET Framework sonrasında IIS yüklenirse, WCF 'yi IIS ve ASP.NET 'e kaydetmek için ek bir adım gerekir. Bunu, işletim sisteminize bağlı olarak aşağıdaki şekilde yapabilirsiniz:
 
-- Windows 7 ve Windows Server 2003: WCF 'yi IIS ile kaydetmek için [ServiceModel Kayıt Aracı (ServiceModelReg.exe)](../servicemodelreg-exe.md) aracını kullanın. Bu aracı kullanmak için, [Visual Studio Geliştirici Komut İstemi](../../tools/developer-command-prompt-for-vs.md) **ServiceModelReg.exe/i/x** yazın.
+- Windows 7 ve Windows Server 2003: WCF 'yi IIS ile kaydetmek için [ServiceModel Kayıt Aracı (ServiceModelReg.exe)](../servicemodelreg-exe.md) aracını kullanın. Bu aracı kullanmak için, `ServiceModelReg.exe /i /x` [Geliştirici komut satırı kabuğu](/visualstudio/ide/reference/command-prompt-powershell)' na girin.
 
-- Windows 7: son olarak, ASP.NET 'in .NET Framework sürüm 4 veya üstünü kullanacak şekilde yapılandırıldığını doğrulamanız gerekir. Bunu, ASPNET_Regiis aracını seçeneğiyle çalıştırarak yapabilirsiniz `–i` . Daha fazla bilgi için bkz. [ASP.NET IIS kayıt aracı](/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90)).
+- Windows 7: son olarak, ASP.NET sürüm 4 veya üstünü .NET Framework kullanacak şekilde yapılandırıldığını doğrulamanız gerekir. Bunu, ASPNET_Regiis aracını seçeneğiyle çalıştırarak yapabilirsiniz `–i` . Daha fazla bilgi için bkz. [ASP.NET IIS kayıt aracı](/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90)).
 
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>Yeni bir IIS uygulaması oluşturun veya var olan bir ASP.NET uygulamasını yeniden kullanın
 

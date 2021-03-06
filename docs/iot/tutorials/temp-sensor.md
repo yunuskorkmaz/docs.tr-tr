@@ -6,12 +6,12 @@ ms.author: casoper
 ms.date: 11/14/2020
 ms.topic: tutorial
 ms.prod: dotnet
-ms.openlocfilehash: 1270e7629e9afc12b1d76d260d4b8b51428f1040
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: bc5c2b9f0876603c152da859547c58b83826969c
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96590065"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259843"
 ---
 # <a name="read-environmental-conditions-from-a-sensor"></a>Sensörden ortam koşullarını okuma
 
@@ -22,7 +22,7 @@ Bu konu başlığında, bir sensörden ortam koşullarını okumak için .NET ku
 ## <a name="prerequisites"></a>Önkoşullar
 
 - [!INCLUDE [prereq-rpi](../includes/prereq-rpi.md)]
-- [BME280](https://learn.adafruit.com/adafruit-bme280-humidity-barometric-pressure-temperature-sensor-breakout) <span class="docon docon-navigate-external x-hidden-focus"></span> nem/barometrik basınç/sıcaklık algılayıcısı
+- [BME280](https://learn.adafruit.com/adafruit-bme280-humidity-barometric-pressure-temperature-sensor-breakout) nem/barometrik basınç/sıcaklık algılayıcısı
 - Atlatıcı kabloları
 - Enine (isteğe bağlı)
 - Raspberry PI GıO ayırıcı panosu (isteğe bağlı)
@@ -102,7 +102,7 @@ Tebrikler! Sıcaklık/nem/barometrik basınç algılayıcısındaki değerleri o
 
 ## <a name="get-the-source-code"></a>Kaynak kodunu alma
 
-Bu öğreticinin kaynağı [GitHub ' da kullanılabilir](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/tutorials/SensorTutorial) <span class="docon docon-navigate-external x-hidden-focus"></span> .
+Bu öğreticinin kaynağı [GitHub ' da kullanılabilir](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/tutorials/SensorTutorial).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

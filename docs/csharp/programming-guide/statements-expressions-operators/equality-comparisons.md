@@ -5,16 +5,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: d10d1851978ef25b7b02503f196cd2a436aab608
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 3bc41e9adeff23dc385d0888163f9edf04772595
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381690"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259634"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Eşitlik karşılaştırmaları (C# Programlama Kılavuzu)
 
-Her zaman eşitlik için iki değeri karşılaştırmak gereklidir. Bazı durumlarda *denklik*olarak da bilinen *değer eşitlik*için test edersiniz, bu da iki değişken tarafından içerilen değerlerin eşit olduğu anlamına gelir. Diğer durumlarda, iki değişkenin bellekteki aynı temel nesneye başvurmadığını belirlemelisiniz. Bu tür bir eşitlik, *başvuru eşitlik*veya *kimlik*olarak adlandırılır. Bu konu, bu iki tür eşitliği açıklar ve daha fazla bilgi için diğer konulara bağlantılar sağlar.  
+Her zaman eşitlik için iki değeri karşılaştırmak gereklidir. Bazı durumlarda *denklik* olarak da bilinen *değer eşitlik* için test edersiniz, bu da iki değişken tarafından içerilen değerlerin eşit olduğu anlamına gelir. Diğer durumlarda, iki değişkenin bellekteki aynı temel nesneye başvurmadığını belirlemelisiniz. Bu tür bir eşitlik, *başvuru eşitlik* veya *kimlik* olarak adlandırılır. Bu konu, bu iki tür eşitliği açıklar ve daha fazla bilgi için diğer konulara bağlantılar sağlar.  
   
 ## <a name="reference-equality"></a>Başvuru eşitliği
 
@@ -41,7 +41,7 @@ if (b == a)
 }  
 ```  
   
- Çoğu diğer tür için, değer eşitlik testi, türün onu nasıl tanımladığını anladığından emin olmanızı gerektirdiğinden daha karmaşıktır. Birden çok alanı veya özelliği olan sınıflar ve yapılar için, değer eşitlik genellikle tüm alanların veya özelliklerin aynı değere sahip olduğu anlamına gelir. Örneğin, `Point` pointA. x, pointB. x ve pointA. y ' ye eşitse, iki nesne eşdeğer olarak tanımlanabilir ve pointB. y 'ye eşittir.  
+ Çoğu diğer tür için, değer eşitlik testi, türün onu nasıl tanımladığını anladığından emin olmanızı gerektirdiğinden daha karmaşıktır. Birden çok alanı veya özelliği olan sınıflar ve yapılar için, değer eşitlik genellikle tüm alanların veya özelliklerin aynı değere sahip olduğu anlamına gelir. Örneğin, `Point` pointA. x, pointB. x ve pointA. y ' ye eşitse, iki nesne eşdeğer olarak tanımlanabilir ve pointB. y 'ye eşittir. Kayıtlar için, değer eşitliği, türlerin eşleşmesi ve tüm özellik ve alan değerleri eşleşiyorsa bir kayıt türünün iki değişkeninin eşit olduğu anlamına gelir.  
   
 Ancak, bir tür içindeki tüm alanları temel alan denklik gereksinimi yoktur. Bir alt kümeyi temel alabilir. Sahip olmadığınız türleri karşılaştırdığınızda, bu tür için denkliğin nasıl tanımlandığını anladığınızdan emin olmalısınız. Kendi sınıflarınızda ve yapılarda değer eşitliğini tanımlama hakkında daha fazla bilgi için, bkz. [bir tür için değer eşitliği tanımlama](./how-to-define-value-equality-for-a-type.md).
   
@@ -52,12 +52,13 @@ Ancak, bir tür içindeki tüm alanları temel alan denklik gereksinimi yoktur. 
 ## <a name="related-topics"></a>İlgili konular  
   
 |Başlık|Açıklama|  
-|-----------|-----------------|  
-|[Başvuru eşitliği testi (kimlik)](./how-to-test-for-reference-equality-identity.md)|İki değişkenin başvuru eşitlik içerip içermediğini nasıl belirleyebileceğinizi açıklar.|  
-|[Tür için değer eşitliği tanımlama](./how-to-define-value-equality-for-a-type.md)|Bir tür için bir özel değer eşitlik tanımı sağlamayı açıklar.|  
-|[C# Programlama Kılavuzu](../index.md)|.NET aracılığıyla C# tarafından kullanılabilen önemli C# dil özellikleri ve özellikleri hakkında ayrıntılı bilgi için bağlantılar sağlar.|  
-|[Türler](../types/index.md)|C# tür sistemi ve ek bilgilerin bağlantıları hakkında bilgi sağlar.|  
-  
+|-----------|-----------------|
+|[Başvuru eşitliği testi (kimlik)](./how-to-test-for-reference-equality-identity.md)|İki değişkenin başvuru eşitlik içerip içermediğini nasıl belirleyebileceğinizi açıklar.|
+|[Tür için değer eşitliği tanımlama](./how-to-define-value-equality-for-a-type.md)|Bir tür için bir özel değer eşitlik tanımı sağlamayı açıklar.|
+|[C# Programlama Kılavuzu](../index.md)|.NET aracılığıyla C# tarafından kullanılabilen önemli C# dil özellikleri ve özellikleri hakkında ayrıntılı bilgi için bağlantılar sağlar.|
+|[Türler](../types/index.md)|C# tür sistemi ve ek bilgilerin bağlantıları hakkında bilgi sağlar.|
+|[Kayıtlar](../classes-and-structs/records.md)|Varsayılan olarak değer eşitlik için test olan kayıt türleri hakkında bilgi sağlar.|
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)

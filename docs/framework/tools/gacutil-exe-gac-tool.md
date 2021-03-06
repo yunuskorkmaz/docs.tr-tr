@@ -18,22 +18,22 @@ helpviewer_keywords:
 - global assembly cache, Gacutil.exe
 - Global Assembly Cache tool
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
-ms.openlocfilehash: 1fe79a09aa99c9d91d8223e7642408a56da20dfe
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 3cdc9e2b07ad176f2a46aa419920d5fa3f47f6e7
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166939"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259258"
 ---
-# <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (Genel Derleme Önbelleği Aracı)
+# <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (genel derleme önbelleği aracı)
 
 Genel Bütünleştirilmiş Kod Önbelleği aracı genel bütünleştirilmiş kod önbelleğinin ve indirme önbelleğinin içeriğini görüntülemenize ve değiştirmenize olanak sağlar.
 
-Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](developer-command-prompt-for-vs.md).
+Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, [geliştiriciler için bir komut satırı kabuğu](/visualstudio/ide/reference/command-prompt-powershell)kullanın.
 
 Komut satırına şunu yazın:
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```console
 gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
@@ -45,7 +45,7 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 |--------------|-----------------|
 |*assemblyName*|Bir derlemenin adı. Gibi kısmen belirtilen bir derleme adı ya da gibi tam olarak `myAssembly` belirtilen bir derleme adı sağlayabilirsiniz `myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5` .|
 |*assemblyPath*|Bir derleme bildirimi içeren dosyanın adı.|
-|*assemblyListFile*|Yüklenecek veya kaldırılacak derlemeleri listeleyen bir ANSI metin dosyasının yolu. Derlemeleri yüklemek üzere metin dosyası kullanmak için, dosyada her derleme için ayrı bir satırda yolu belirtin. Araç, *AssemblyListFile*konumuna göre göreli yolları yorumlar. Derlemeleri kaldırmak üzere bir metin dosyası kullanmak için, dosyada her derleme için ayrı bir satırda tam derleme adını belirtin. Bu konunun ilerleyen kısımlarında *AssemblyListFile* içerik örneklerine bakın.|
+|*assemblyListFile*|Yüklenecek veya kaldırılacak derlemeleri listeleyen bir ANSI metin dosyasının yolu. Derlemeleri yüklemek üzere metin dosyası kullanmak için, dosyada her derleme için ayrı bir satırda yolu belirtin. Araç, *AssemblyListFile* konumuna göre göreli yolları yorumlar. Derlemeleri kaldırmak üzere bir metin dosyası kullanmak için, dosyada her derleme için ayrı bir satırda tam derleme adını belirtin. Bu konunun ilerleyen kısımlarında *AssemblyListFile* içerik örneklerine bakın.|
 
 |Seçenek|Açıklama|
 |------------|-----------------|
@@ -55,18 +55,18 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 |**/I** *assemblyPath*|Genel bütünleştirilmiş kod önbelleğine bir derleme yükler.|
 |**/IF**  *assemblyPath*|Genel bütünleştirilmiş kod önbelleğine bir derleme yükler. Eğer genel bütünleştirilmiş kod önbelleğinde aynı ada sahip bir derleme zaten bulunuyorsa, araç onun üzerine yazar.<br /><br /> Bu seçeneği belirtmek, **/i** ve **/f** seçeneklerini birlikte belirtmeye eşdeğerdir.|
 |**/Il** *AssemblyListFile*|*AssemblyListFile* içinde belirtilen bir veya daha fazla derlemeyi genel bütünleştirilmiş kod önbelleğine yükleme.|
-|**/IR**  *assemblyPath*<br /><br /> *düzen*<br /><br /> *id*<br /><br /> *açıklaması*|Bir derlemeyi genel bütünleştirilmiş kod önbelleğine yükler ve derlemeyi saymak için bir başvuru ekler. Bu seçenekle *assemblyPath*, *Scheme*, *ID*ve *Description* parametrelerini belirtmeniz gerekir. Bu parametreler için belirtebileceğiniz geçerli değerlerin bir açıklaması için **/r** seçeneğine bakın.<br /><br /> Bu seçeneği belirtmek, **/i** ve **/r** seçeneklerini birlikte belirtmeye eşdeğerdir.|
+|**/IR**  *assemblyPath*<br /><br /> *Şemadaki*<br /><br /> *id*<br /><br /> *açıklaması*|Bir derlemeyi genel bütünleştirilmiş kod önbelleğine yükler ve derlemeyi saymak için bir başvuru ekler. Bu seçenekle *assemblyPath*, *Scheme*, *ID* ve *Description* parametrelerini belirtmeniz gerekir. Bu parametreler için belirtebileceğiniz geçerli değerlerin bir açıklaması için **/r** seçeneğine bakın.<br /><br /> Bu seçeneği belirtmek, **/i** ve **/r** seçeneklerini birlikte belirtmeye eşdeğerdir.|
 |**/l** [*AssemblyName*]|Genel bütünleştirilmiş kod önbelleğinin içeriğini listeler. *AssemblyName* parametresini belirtirseniz, araç yalnızca o adla eşleşen derlemeleri listeler.|
 |**/LDL**|İndirilen dosyalar önbelleğinin içeriğini listeler.|
 |**/LR** [*AssemblyName*]|Tüm derlemeleri ve karşılık gelen başvuru sayılarını listeler. *AssemblyName* parametresini belirtirseniz, araç yalnızca o adla eşleşen derlemeleri ve bunlara karşılık gelen başvuru sayılarını listeler.|
 |**/nologo**|Microsoft başlangıç başlığı görüntüsünü bastırır.|
-|**/r** [*AssemblyName &#124; assemblyPath*]<br /><br /> *düzen*<br /><br /> *id*<br /><br /> *açıklaması*|Yüklenecek veya kaldırılacak bir derleme veya derlemeler için izlenen bir başvuru belirtir. **/I**, **/Il**, **/u**veya **/ul** seçenekleriyle bu seçeneği belirtin.<br /><br /> Bir derlemeyi yüklemek için, bu seçenekle *assemblyPath*, *Scheme*, *ID*ve *Description* parametrelerini belirtin. Bir derlemeyi kaldırmak için *AssemblyName*, *Scheme*, *ID*ve *Description* parametrelerini belirtin.<br /><br /> Bir derlemeye yönelik bir başvuruyu kaldırmak için, derleme yüklenirken **/i** ve **/r** (veya **/ir**) seçenekleriyle belirtilen aynı *Düzen*, *kimlik*ve *Açıklama* parametrelerini belirtmeniz gerekir. Eğer bir derlemeyi kaldırıyorsanız, eğer kaldırılacak son başvuruysa ve Windows Installer'ın o derlemeye hiçbir başvurusu yok ise araç derlemeyi genel bütünleştirilmiş kod önbelleğinden de kaldırır.<br /><br /> *Scheme* parametresi, yükleme düzeninin türünü belirtir. Aşağıdaki değerlerden birini belirleyebilirsiniz.<br /><br /> -UNINSTALL_KEY: yükleyici uygulamayı Microsoft Windows 'da Program Ekle/Kaldır 'a eklerse bu değeri belirtin. Uygulamalar HKLM\Software\Microsoft\Windows\CurrentVersion içine bir kayıt defteri anahtarı ekleyerek kendilerini Program Ekle/Kaldır'a ekler.<br />-FILEPATH: yükleyici uygulamayı Program Ekle/Kaldır 'a eklememezse bu değeri belirtin.<br />-DONUK: bir kayıt defteri anahtarı sağlamak veya yükleme senaryonuz için dosya yolu yoksa, bu değeri belirtin. Bu değer, *ID* parametresi için özel bilgi belirtmenize olanak tanır.<br /><br /> *ID* parametresi için belirtme değeri, *Düzen* parametresi için belirtilen değere bağlıdır:<br /><br /> - *Düzen* parametresi için UNINSTALL_KEY belirtirseniz, HKLM\Software\Microsoft\Windows\CurrentVersion kayıt defteri anahtarında ayarlanan uygulamanın adını belirtin. Örneğin, kayıt defteri anahtarı HKLM\Software\Microsoft\Windows\CurrentVersion\MyApp ise *ID* parametresi için MyApp ' i belirtin.<br />- *Düzen* PARAMETRESI için FILEPATH belirtirseniz, derlemeyi *ID* parametresi olarak yükleyen yürütülebilir dosyanın tam yolunu belirtin.<br />- *Düzen* PARAMETRESI için donuk belirtirseniz, herhangi bir veri parçasını *ID* parametresi olarak sağlayabilirsiniz. Belirttiğiniz veri tırnak işaretleri ("") arasına alınmalıdır.<br /><br /> *Description* parametresi, yüklenecek uygulama hakkında açıklayıcı bir metin belirtmenize olanak tanır. Bu bilgi başvurular numaralandığında görüntülenir.|
+|**/r** [*AssemblyName &#124; assemblyPath*]<br /><br /> *Şemadaki*<br /><br /> *id*<br /><br /> *açıklaması*|Yüklenecek veya kaldırılacak bir derleme veya derlemeler için izlenen bir başvuru belirtir. **/I**, **/Il**, **/u** veya **/ul** seçenekleriyle bu seçeneği belirtin.<br /><br /> Bir derlemeyi yüklemek için, bu seçenekle *assemblyPath*, *Scheme*, *ID* ve *Description* parametrelerini belirtin. Bir derlemeyi kaldırmak için *AssemblyName*, *Scheme*, *ID* ve *Description* parametrelerini belirtin.<br /><br /> Bir derlemeye yönelik bir başvuruyu kaldırmak için, derleme yüklenirken **/i** ve **/r** (veya **/ir**) seçenekleriyle belirtilen aynı *Düzen*, *kimlik* ve *Açıklama* parametrelerini belirtmeniz gerekir. Eğer bir derlemeyi kaldırıyorsanız, eğer kaldırılacak son başvuruysa ve Windows Installer'ın o derlemeye hiçbir başvurusu yok ise araç derlemeyi genel bütünleştirilmiş kod önbelleğinden de kaldırır.<br /><br /> *Scheme* parametresi, yükleme düzeninin türünü belirtir. Aşağıdaki değerlerden birini belirleyebilirsiniz.<br /><br /> -UNINSTALL_KEY: yükleyici uygulamayı Microsoft Windows 'da Program Ekle/Kaldır 'a eklerse bu değeri belirtin. Uygulamalar HKLM\Software\Microsoft\Windows\CurrentVersion içine bir kayıt defteri anahtarı ekleyerek kendilerini Program Ekle/Kaldır'a ekler.<br />-FILEPATH: yükleyici uygulamayı Program Ekle/Kaldır 'a eklememezse bu değeri belirtin.<br />-DONUK: bir kayıt defteri anahtarı sağlamak veya yükleme senaryonuz için dosya yolu yoksa, bu değeri belirtin. Bu değer, *ID* parametresi için özel bilgi belirtmenize olanak tanır.<br /><br /> *ID* parametresi için belirtme değeri, *Düzen* parametresi için belirtilen değere bağlıdır:<br /><br /> - *Düzen* parametresi için UNINSTALL_KEY belirtirseniz, HKLM\Software\Microsoft\Windows\CurrentVersion kayıt defteri anahtarında ayarlanan uygulamanın adını belirtin. Örneğin, kayıt defteri anahtarı HKLM\Software\Microsoft\Windows\CurrentVersion\MyApp ise *ID* parametresi için MyApp ' i belirtin.<br />- *Düzen* PARAMETRESI için FILEPATH belirtirseniz, derlemeyi *ID* parametresi olarak yükleyen yürütülebilir dosyanın tam yolunu belirtin.<br />- *Düzen* PARAMETRESI için donuk belirtirseniz, herhangi bir veri parçasını *ID* parametresi olarak sağlayabilirsiniz. Belirttiğiniz veri tırnak işaretleri ("") arasına alınmalıdır.<br /><br /> *Description* parametresi, yüklenecek uygulama hakkında açıklayıcı bir metin belirtmenize olanak tanır. Bu bilgi başvurular numaralandığında görüntülenir.|
 |**/silent**|Tüm çıktıların görüntülenmesini bastırır.|
 |**/U**  *AssemblyName*|Genel bütünleştirilmiş kod önbelleğinden bir derlemeyi kaldırır.|
 |**/UF**  *AssemblyName*|Belirtilen bir derlemenin tüm başvurularını kaldırarak derlemeyi kaldırmaya zorlar.<br /><br /> Bu seçeneği belirtmek, **/u** ve **/f** seçeneklerini birlikte belirtmeye eşdeğerdir. **Note:**  Microsoft Windows Installer kullanılarak yüklenen bir derlemeyi kaldırmak için bu seçeneği kullanamazsınız. Eğer bu işlemi yapmayı denerseniz, araç bir hata iletisi görüntüler.|
 |**/ul** *AssemblyListFile*|*AssemblyListFile* içinde belirtilen bir veya daha fazla derlemeyi genel bütünleştirilmiş kod önbelleğinden kaldırır.|
 |**/u**[**Ngen**] *AssemblyName*|Belirtilen bir derlemeyi genel bütünleştirilmiş kod önbelleğinden kaldırır. Eğer belirtilen derlemenin varolan başvuru sayısı varsa, araç başvuru sayılarını görüntüler ve derlemeyi genel bütünleştirilmiş kod önbelleğinden kaldırmaz. **Note:**  .NET Framework sürüm 2,0 ' de `/ungen` desteklenmez. Bunun yerine, `uninstall` [Ngen.exe (yerel görüntü Oluşturucu)](ngen-exe-native-image-generator.md)komutunu kullanın. <br /><br /> .NET Framework sürüm 1,0 ve 1,1 ' de, **/ungen** belirtme, derlemeyi yerel görüntü önbelleğinden kaldırmak için Gacutil.exe nedenler. Bu önbellek, [Ngen.exe (yerel görüntü Oluşturucu)](ngen-exe-native-image-generator.md)kullanılarak oluşturulan derlemelerin yerel görüntülerini depolar.|
-|**/ur**  *AssemblyName*<br /><br /> *düzen*<br /><br /> *id*<br /><br /> *açıklaması*|Belirtilen bir derleme için genel bütünleştirilmiş kod önbelleğinden bir başvuru kaldırır. Bir derlemeye yönelik bir başvuruyu kaldırmak için, derleme yüklenirken **/i** ve **/r** (veya **/ir)** seçenekleriyle belirtilen aynı *Düzen*, *kimlik*ve *Açıklama* parametrelerini belirtmeniz gerekir. Bu parametreler için belirtebileceğiniz geçerli değerlerin bir açıklaması için **/r** seçeneğine bakın.<br /><br /> Bu seçeneği belirtmek, **/u** ve **/r** seçeneklerini birlikte belirtmeye eşdeğerdir.|
+|**/ur**  *AssemblyName*<br /><br /> *Şemadaki*<br /><br /> *id*<br /><br /> *açıklaması*|Belirtilen bir derleme için genel bütünleştirilmiş kod önbelleğinden bir başvuru kaldırır. Bir derlemeye yönelik bir başvuruyu kaldırmak için, derleme yüklenirken **/i** ve **/r** (veya **/ir)** seçenekleriyle belirtilen aynı *Düzen*, *kimlik* ve *Açıklama* parametrelerini belirtmeniz gerekir. Bu parametreler için belirtebileceğiniz geçerli değerlerin bir açıklaması için **/r** seçeneğine bakın.<br /><br /> Bu seçeneği belirtmek, **/u** ve **/r** seçeneklerini birlikte belirtmeye eşdeğerdir.|
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|
 
 ## <a name="remarks"></a>Açıklamalar
@@ -182,4 +182,4 @@ gacutil /l
 - [Araçlar](index.md)
 - [Genel Derleme Önbelleği](../app-domains/gac.md)
 - [Regasm.exe (derleme kayıt aracı)](regasm-exe-assembly-registration-tool.md)
-- [Komut Istemleri](developer-command-prompt-for-vs.md)
+- [Geliştirici komut satırı kabukları](/visualstudio/ide/reference/command-prompt-powershell)

@@ -3,12 +3,12 @@ description: 'Hakkında daha fazla bilgi edinin: CacheMetadata ile verileri gös
 title: CacheMetadata ile verileri kullanıma sunma
 ms.date: 03/30/2017
 ms.assetid: 34832f23-e93b-40e6-a80b-606a855a00d9
-ms.openlocfilehash: ac4623881ebd76270f773a3b7acfe205ad365118
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: e3f4dc83a0e268ae548c904a714753fa025c77ae
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99742348"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259791"
 ---
 # <a name="exposing-data-with-cachemetadata"></a>CacheMetadata ile verileri kullanıma sunma
 
@@ -60,7 +60,7 @@ protected override void CacheMetadata(NativeActivityMetadata metadata)
 
 Değişkenleri kullanarak bir etkinlik tarafından zamanlanacak alt etkinliklere veri geçirmek için, değişkenleri uygulama değişkenleri olarak eklemek gerekir; ortak değişkenlerin değerleri bu şekilde ayarlanamaz. Bunun nedeni, etkinliklerin (özellikleri olan) kapsüllenmiş sınıflar yerine işlevlerin (parametrelere sahip) uygulamalar olarak daha fazla yürütülmesi amacını taşımaktadır. Ancak, <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A> zamanlanan etkinliğin bir alt etkinliğin olduğu şekilde üst etkinliğin bağımsız değişkenlerine erişimi olmadığından bağımsız değişkenlerin açıkça ayarlanması gerektiği durumlar vardır.
 
-Aşağıdaki kod parçacığı, kullanarak bir bağımsız değişkenin bir yerel etkinlik olarak zamanlanan bir etkinliğe nasıl geçirileceğini gösterir <xref:System.Activities.Activity.CacheMetadata%2A> .
+Aşağıdaki kod parçacığı, kullanarak bir bağımsız değişkenin yerel etkinlikten zamanlanan bir etkinliğe nasıl geçirileceğini gösterir <xref:System.Activities.Activity.CacheMetadata%2A> .
 
 ```csharp
 public sealed class ChildActivity : NativeActivity

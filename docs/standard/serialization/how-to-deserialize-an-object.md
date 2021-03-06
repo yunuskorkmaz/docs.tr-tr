@@ -9,12 +9,12 @@ helpviewer_keywords:
 - deserializing objects
 - objects, deserializing steps
 ms.assetid: 287129c8-035a-4fea-b7b3-4790057ca076
-ms.openlocfilehash: e08ae0d77539219223650fd3bcbd1bcee4df2739
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c0fb5b2206251d880618a68e5cdb2db2b19c57da
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "83379112"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259518"
 ---
 # <a name="how-to-deserialize-an-object-using-xmlserializer"></a>XmlSerializer kullanarak bir nesne serisini kaldırma
 
@@ -31,10 +31,11 @@ Bir nesnenin serisini kaldırdığınızda, aktarım biçimi bir akış veya dos
     ' of object that is being deserialized.
     Dim mySerializer As New XmlSerializer(GetType(MySerializableClass))
     ' To read the file, create a FileStream.
-    Dim myFileStream As New FileStream("myFileName.xml", FileMode.Open)
-    ' Call the Deserialize method and cast to the object type.
-    Dim myObject = CType( _
-    mySerializer.Deserialize(myFileStream), MySerializableClass)
+    Using myFileStream As New FileStream("myFileName.xml", FileMode.Open)
+        ' Call the Deserialize method and cast to the object type.
+        Dim myObject = CType( _
+             mySerializer.Deserialize(myFileStream), MySerializableClass)
+     End Using
     ```
 
     ```csharp
@@ -42,9 +43,9 @@ Bir nesnenin serisini kaldırdığınızda, aktarım biçimi bir akış veya dos
     // of object that is being deserialized.
     var mySerializer = new XmlSerializer(typeof(MySerializableClass));
     // To read the file, create a FileStream.
-    var myFileStream = new FileStream("myFileName.xml", FileMode.Open);
+    using var myFileStream = new FileStream("myFileName.xml", FileMode.Open);
     // Call the Deserialize method and cast to the object type.
-    var myObject = (MySerializableClass) mySerializer.Deserialize(myFileStream)
+    var myObject = (MySerializableClass)mySerializer.Deserialize(myFileStream);
     ```
 
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -6,25 +6,25 @@ helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-ms.openlocfilehash: 46a7453ff7de0329d9cd7f671dcaa0a3e3e0e54c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 6c810a7116f88f2eb7fc25efbfc6f44b60f2768b
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238476"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259131"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (İmza Aracı)
 
 İmza aracı, dosyaları dijital imzalayan, dosyalardaki imzaları doğrulayan ve dosyalara zaman damgası veren bir komut satırı aracıdır.  
   
- Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](developer-command-prompt-for-vs.md).
+ Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, [geliştiriciler için bir komut satırı kabuğu](/visualstudio/ide/reference/command-prompt-powershell)kullanın.
 
 > [!Note]  
 > Windows 10 SDK, Windows 10 HLK, Windows 10 WDK ve Windows 10 ADK **derlemeleri 20236 ve üzeri** bir Özet algoritması belirtilmesini gerektirir. SignTool `sign` komutu, `/fd` sırasıyla imzalama ve zaman damgası oluşturma sırasında **Dosya Özet algoritması** ve `/td` **timestamp Özet algoritması** seçeneğinin belirtilmesini gerektirir. `/fd`İmza sırasında belirtilmemişse ve zaman damgası sırasında belirtilmemişse bir uyarı (hata kodu 0, başlangıçta) oluşturulur `/td` . SignTool 'in sonraki sürümlerinde, uyarı bir hata olur. SHA256 önerilir ve sektör tarafından SHA1 'den daha güvenli olarak değerlendirilir.  
   
  Komut satırına şunu yazın:  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```console  
 signtool [command] [options] [file_name | ...]  
@@ -91,7 +91,7 @@ signtool [command] [options] [file_name | ...]
 |`/n`  *SubjectName*|İmzalayan sertifika konusunun adını belirtir. Bu değer, tam konu adının bir alt dizesi olabilir.|  
 |`/nph`|Destekleniyorsa, yürütülebilir dosyalar için sayfa karmalarını gizler. Varsayılan, wintrust.dll sürümü ve SIGNTOOL_PAGE_HASHES ortam değişkeni tarafından belirlenir. PE olmayan dosyalar için bu seçenek göz ardı edilir.|  
 |`/p`  *Parola*|PFX dosyası açılırken kullanılacak parolayı belirtir. ( `/f` BIR pfx dosyası belirtmek için seçeneğini kullanın.)|  
-|`/p7` *Yol*|Bir Ortak Anahtar Şifreleme Standartları (PKCS) #7 dosyasının belirtilen her içerik dosyası için üretildiğini belirtir. PKCS #7 dosyaları *path* \\ *filename*. P7 olarak adlandırılır.|  
+|`/p7` *Yol*|Bir Ortak Anahtar Şifreleme Standartları (PKCS) #7 dosyasının belirtilen her içerik dosyası için üretildiğini belirtir. PKCS #7 dosyaları  \\ *filename*. P7 olarak adlandırılır.|  
 |`/p7ce` *Değer*|İmzalanmış PKCS #7 içeriği için seçenekleri belirtir. İmzalı içeriği PKCS #7 dosyasına eklemek için *değeri* "Embedded" ya da ayrılmış bir PKCS #7 dosyasının imzalı veri bölümünü üretmek Için "DetachedSignedData" olarak ayarlayın. `/p7ce`Seçenek kullanılmazsa, imzalanmış içerik varsayılan olarak katıştırılır.|  
 |`/p7co` *\<OID>*|İmzalanmış PKCS #7 içeriğini tanımlayan nesne tanımlayıcısını (OID) belirtir.|  
 |`/ph`|Destekleniyorsa, yürütülebilir dosyalar için sayfa karmaları oluşturur.|  
@@ -231,4 +231,4 @@ signtool verify /c MyCatalog.cat SystemFile.dll
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Araçlar](index.md)
-- [Komut Istemleri](developer-command-prompt-for-vs.md)
+- [Geliştirici komut satırı kabukları](/visualstudio/ide/reference/command-prompt-powershell)

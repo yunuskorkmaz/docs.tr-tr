@@ -1,7 +1,7 @@
 ---
 title: Normal İfade Dili - Hızlı Başvuru
 description: Bu hızlı başvuru bölümünde, giriş metnini eşleştirmek için normal ifade desenleri kullanmayı öğrenin. Bir düzende bir veya daha fazla karakter sabit değeri, işleç veya yapı bulunur.
-ms.date: 03/30/2017
+ms.date: 02/03/2021
 ms.topic: reference
 f1_keywords:
 - VS.RegularExpressionBuilder
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - cheat sheet
 - .NET regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-ms.openlocfilehash: f34d52bc2413aaf666c07ff511f3c1beb14519d4
-ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
+ms.openlocfilehash: 6228fc6fa2f21406c151378b50856ec72a6756e9
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98692831"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258924"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Normal İfade Dili - Hızlı Başvuru
 
@@ -37,7 +37,7 @@ Ayrıca, bu bilgileri kolay başvuru için indirebileceğiniz ve yazdırabilece�
 
 Bir normal ifadede ters eğik çizgi karakteri ( \\ ), kendisini izleyen karakterin özel bir karakter olduğunu (aşağıdaki tabloda gösterildiği gibi) veya tam olarak yorumlanması gerektiğini gösterir. Daha fazla bilgi için bkz. [karakter kaçışları](character-escapes-in-regular-expressions.md).
 
-|Kaçan karakter|Description|Desen|Eşleşmeler|
+|Kaçan karakter|Açıklama|Desen|Eşleşmeler|
 |-----------------------|-----------------|-------------|-------------|
 |`\a`|Bir bell karakterle eşleşir, \u0007.|`\a`|`"Error!" + '\u0007'` içinde `"\u0007"`|
 |`\b`|Bir karakter sınıfında, geri al tuşuyla eşleşir, \u0008.|`[\b]{3,}`|`"\b\b\b\b"` içinde `"\b\b\b\b"`|
@@ -57,7 +57,7 @@ Bir normal ifadede ters eğik çizgi karakteri ( \\ ), kendisini izleyen karakte
 
 Bir karakter sınıfı, karakter kümelerinden herhangi biriyle eşleşir. Karakter sınıfları aşağıdaki tabloda listelenen dil öğelerini içerir: Daha fazla bilgi için bkz. [karakter sınıfları](character-classes-in-regular-expressions.md).
 
-|Karakter sınıfı|Description|Desen|Eşleşmeler|
+|Karakter sınıfı|Açıklama|Desen|Eşleşmeler|
 |---------------------|-----------------|-------------|-------------|
 |`[`*character_group*`]`|*Character_group* bir tek karakterle eşleşir. Varsayılan olarak, eşleşme büyük/küçük harf duyarlıdır.|`[ae]`|`"gray"` içinde `"a"`<br /><br /> `"a"``"e"`içinde,`"lane"`|
 |`[^`*character_group*`]`|Değilleme: *character_group* olmayan herhangi bir tek karakterle eşleşir. Varsayılan olarak, *character_group* karakterler büyük/küçük harfe duyarlıdır.|`[^aei]`|`"r"`, `"g"` , `"n"` içinde `"reign"`|
@@ -76,7 +76,7 @@ Bir karakter sınıfı, karakter kümelerinden herhangi biriyle eşleşir. Karak
 
 Yer işaretleri veya atomik sıfır genişlik onayları, dizedeki geçerli konuma bağlı olarak eşleşmenin başarılı veya başarısız olmasına neden olurlar, ancak altyapının dize boyunca ilerlemesine veya karakterleri tüketmesine neden olmazlar. Aşağıdaki tabloda listelenen meta karakterler tutturuculardır. Daha fazla bilgi için bkz. [Tutturucular](anchors-in-regular-expressions.md).
 
-|Onaylama işlemi|Description|Desen|Eşleşmeler|
+|Onaylama işlemi|Açıklama|Desen|Eşleşmeler|
 |---------------|-----------------|-------------|-------------|
 |`^`|Varsayılan olarak, eşleşme dizenin başlangıcında başlatılmalıdır; çok satırlı modda, satırın başlangıcında başlamalıdır.|`^\d{3}`|`"901-333-"` içinde `"901"`|
 |`$`|Varsayılan olarak, eşleşme dizenin sonunda veya dizenin sonundan önce gerçekleşmelidir `\n` ; çok satırlı modda, satırın sonundan önce veya satırın sonundaki öncesinde gerçekleşmelidir `\n` .|`-\d{3}$`|`"-901-333"` içinde `"-333"`|
@@ -91,24 +91,37 @@ Yer işaretleri veya atomik sıfır genişlik onayları, dizedeki geçerli konum
 
 Yapıları gruplandırma, normal bir ifadenin alt ifadelerini açıklar ve tipik olarak bir giriş dizesinin alt dizelerini yakalar. Yapıları gruplandırma aşağıdaki tabloda listelenen dil öğelerini içerir. Daha fazla bilgi için bkz. [yapıları gruplandırma](grouping-constructs-in-regular-expressions.md).
 
-|Yapıyı gruplandırma|Description|Desen|Eşleşmeler|
+|Yapıyı gruplandırma|Açıklama|Desen|Eşleşmeler|
 |------------------------|-----------------|-------------|-------------|
 |`(`alt *ifade*`)`|Eşleşen alt ifadeyi yakalar ve buna bir tabanlı bir sıra numarası atar.|`(\w)\1`|`"deep"` içinde `"ee"`|
 |`(?<`*ad* `>` alt *ifade*`)`<br /> veya <br />`(?'`*ad* `'` alt *ifade*`)`|Eşleşen alt ifadeyi adlandırılmış bir gruba yakalar.|`(?<double>\w)\k<double>`|`"deep"` içinde `"ee"`|
 |`(?<`*name1* `-` *AD2* `>` alt *ifade*`)` <br /> veya <br /> `(?'`*name1* `-` *AD2* `'` alt *ifade*`)`|Bir dengeleme grubu tanımını tanımlar. Daha fazla bilgi için, [gruplandırma yapıları](grouping-constructs-in-regular-expressions.md)Içindeki "Grup tanımı Dengeleme" bölümüne bakın.|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|`"3+2^((1-3)*(3-1))"` içinde `"((1-3)*(3-1))"`|
 |`(?:`alt *ifade*`)`|Yakalama yapmayan grubu tanımlar.|`Write(?:Line)?`|`"Console.WriteLine()"` içinde `"WriteLine"`<br /><br /> `"Console.Write(value)"` içinde `"Write"`|
 |`(?imnsx-imnsx:`alt *ifade*`)`|Alt *ifade* içinde belirtilen seçenekleri uygular veya devre dışı bırakır. Daha fazla bilgi için bkz. [normal Ifade seçenekleri](regular-expression-options.md).|`A\d{2}(?i:\w+)\b`|`"A12xl"``"A12XL"`içinde,`"A12xl A12XL a12xl"`|
-|`(?=`alt *ifade*`)`|Sıfır genişlik pozitif ileriye yönelik onaylar.|`\w+(?=\.)`|`"is"`, `"ran"` , ve `"out"` içinde `"He is. The dog ran. The sun is out."`|
-|`(?!`alt *ifade*`)`|Sıfır genişlik negatif ileriye yönelik onaylar.|`\b(?!un)\w+\b`|`"sure"``"used"`içinde,`"unsure sure unity used"`|
-|`(?<=`alt *ifade*`)`|Sıfır genişlik pozitif geriye yönelik onaylar.|`(?<=19)\d{2}\b`|`"99"`, `"50"` , `"05"` içinde `"1851 1999 1950 1905 2003"`|
-|`(?<!`alt *ifade*`)`|Sıfır genişlik negatif geriye yönelik onaylar.|`(?<!19)\d{2}\b`|`"51"``"03"`içinde,`"1851 1999 1950 1905 2003"`|
-|`(?>`alt *ifade*`)`|Atomik grup.|`[13579](?>A+B+)`|`"1ABB"`, `"3ABB"` , ve `"5AB"` içinde `"1ABB 3ABBC 5AB 5AC"`|
+|`(?=`alt *ifade*`)`|Sıfır genişlik pozitif ileriye yönelik onaylar.|`\b\w+\b(?=.+and.+)`|`"cats"`, `"dogs"`<br/>in<br/>`"cats, dogs and some mice."`|
+|`(?!`alt *ifade*`)`|Sıfır genişlik negatif ileriye yönelik onaylar.|`\b\w+\b(?!.+and.+)`|`"and"`, `"some"`, `"mice"`<br/>in<br/>`"cats, dogs and some mice."`|
+|`(?<=`alt *ifade*`)`|Sıfır genişlik pozitif geriye yönelik onaylar.|`\b\w+\b(?<=.+and.+)`<br/><br/>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;<br/><br/>`\b\w+\b(?<=.+and.*)`|`"some"`, `"mice"`<br/>in<br/>`"cats, dogs and some mice."`<br/>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;<br/>`"and"`, `"some"`, `"mice"`<br/>in<br/>`"cats, dogs and some mice."`|
+|`(?<!`alt *ifade*`)`|Sıfır genişlik negatif geriye yönelik onaylar.|`\b\w+\b(?<!.+and.+)`<br/><br/>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;<br/><br/>`\b\w+\b(?<!.+and.*)`|`"cats"`, `"dogs"`, `"and"`<br/>in<br/>`"cats, dogs and some mice."`<br/>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;<br/>`"cats"`, `"dogs"`<br/>in<br/>`"cats, dogs and some mice."`|
+|`(?>`alt *ifade*`)`|Atomik grup.|`(?>a\|ab)c`|`"ac"` 'ndaki`"ac"`<br/><br/>_hiçbir şey yok_`"abc"`|
+
+### <a name="lookarounds-at-a-glance"></a>Bir bakışta Lookarounds
+
+Normal ifade altyapısı bir **lookaround ifadesi** ile aynı olduğunda, özgün dizenin başlangıç (geriye dönük) veya sonuna (ileri yönlü) kadar geçerli konumdan ulaşan bir alt dize alır ve ardından <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> lookaround modelini kullanarak bu alt dizeden çalışır. Bu alt ifadenin sonucunun başarısı daha sonra pozitif veya negatif bir onaylama olup olmadığına göre belirlenir.
+
+| Lookaround | Name | İşlev |
+| - | - | - |
+`(?=check)` | Pozitif &nbsp; ileri yönlü | Dizedeki geçerli konumun hemen ardında ne olduğunu onaylar "denetle"
+`(?<=check)` | Pozitif &nbsp; geriye yönelik | Dizedeki geçerli konumdan hemen önce gelen her şeyi "denetle" olarak onaylar
+`(?!check)` | Negatif &nbsp; İleri  | Dizedeki geçerli konumun hemen ardında ne olduğunu onaylar "denetle"
+`(?<!check)` | Negatif &nbsp; geriye yönelik | Dizedeki geçerli konumdan hemen önce gelen her şeyi "denetle" olarak onaylama
+
+Eşleştikten sonra, modelin geri kalanı eşleşme nedeniyle başarısız olsa bile **atomik gruplar** yeniden değerlendirilmeyecektir. Bu, atomik grup içinde veya düzenin geri kalanında nicelik belirteçleri oluştuğunda performansı önemli ölçüde iyileştirebilir.
 
 ## <a name="quantifiers"></a>Miktar Niceleyiciler
 
 Niceleyici, önceki öğenin (karakter, grup veya karakter sınıfı olabilir) kaç örneğinin oluşacak eşleme için giriş dizesinde mevcut olması gerektiğini belirtir. Miktar niceleyiciler aşağıdaki tabloda listelenen dil öğelerini içerir. Daha fazla bilgi için bkz. [nicelik belirteçleri](quantifiers-in-regular-expressions.md).
 
-|Miktar Niceleyici|Description|Desen|Eşleşmeler|
+|Miktar Niceleyici|Açıklama|Desen|Eşleşmeler|
 |----------------|-----------------|-------------|-------------|
 |`*`|Önceki öğeyle sıfır kez veya daha fazla eşleşir.|`\d*\.\d`|`".0"`, `"19.9"`, `"219.9"`|
 |`+`|Önceki öğeyle bir kez veya daha fazla eşleşir.|`"be+"`|`"bee"` içinde `"been"` , `"be"` içinde `"bent"`|
@@ -127,7 +140,7 @@ Niceleyici, önceki öğenin (karakter, grup veya karakter sınıfı olabilir) k
 
 Yeniden başvuru, aynı normal ifadede daha sonra tanımlanabilecek alt ifadeyle daha önce eşleşmesine olanak sağlar. Aşağıdaki tabloda, .NET 'teki normal ifadeler tarafından desteklenen geri başvuru yapıları listelenmektedir. Daha fazla bilgi için bkz. [Backreference yapıları](backreference-constructs-in-regular-expressions.md).
 
-|Yeniden başvuru yapısı|Description|Desen|Eşleşmeler|
+|Yeniden başvuru yapısı|Açıklama|Desen|Eşleşmeler|
 |-----------------------------|-----------------|-------------|-------------|
 |`\`*sayı*|Yeniden başvuru. Numaralandırılmış ifadenin değeriyle eşleşir.|`(\w)\1`|`"seek"` içinde `"ee"`|
 |`\k<`*ad*`>`|Adlandırılan yeniden başvuru. Adlandırılmış ifadenin değeriyle eşleşir.|`(?<char>\w)\k<char>`|`"seek"` içinde `"ee"`|
@@ -136,7 +149,7 @@ Yeniden başvuru, aynı normal ifadede daha sonra tanımlanabilecek alt ifadeyle
 
 Değişim yapıları, ve/veya eşleştirmeyi etkinleştirmek üzere bir normal ifadeyi değiştirir. Bu yapılar aşağıdaki tabloda listelenen dil öğelerini içerir. Daha fazla bilgi için bkz. [değişim yapıları](alternation-constructs-in-regular-expressions.md).
 
-|Değişim yapısı|Description|Desen|Eşleşmeler|
+|Değişim yapısı|Açıklama|Desen|Eşleşmeler|
 |---------------------------|-----------------|-------------|-------------|
 |<code>&#124;</code>|Dikey çubuk () karakteriyle ayrılmış herhangi bir öğeyle eşleşir <code>&#124;</code> .|<code>th(e&#124;is&#124;at)</code>|`"the"``"this"`içinde,`"this is the day."`|
 |`(?(`*ifade* `)` *Evet* <code>&#124;</code> *Hayır*`)`|*Expression* ile belirlenen normal ifade deseninin eşleşiyorsa *Evet* ile eşleşir; Aksi takdirde, isteğe bağlı *hiçbir* bölüm ile eşleşir. *ifade* sıfır genişlikli bir onaylama olarak yorumlanır.|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|`"A10"``"910"`içinde,`"A10 C103 910"`|

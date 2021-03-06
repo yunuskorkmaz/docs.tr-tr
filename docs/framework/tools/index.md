@@ -1,5 +1,5 @@
 ---
-title: .NET Framework Araçları
+title: .NET Framework araçları
 description: .NET ' i hedefleyen uygulamalar ve bileşenler oluşturmanızı, dağıtmanızı ve yönetmenizi kolaylaştıran .NET araçları listesini inceleyin.
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - tools [.NET Framework]
 - running .NET Framework tools
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
-ms.openlocfilehash: 96df5a0c8487d3ba344b3aa13ca74b92e428d5aa
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 06311e977619418c5b3fb69be518353de51e6bd5
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556687"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258783"
 ---
-# <a name="net-framework-tools"></a>.NET Framework Araçları
+# <a name="net-framework-tools"></a>.NET Framework araçları
 
 .NET Framework araçları, .NET Framework'ü hedefleyen uygulamaları ve bileşenleri oluşturmayı, dağıtmayı ve yönetmeyi kolaylaştırmayı sağlar.
 
 Bu bölümde açıklanan .NET Framework Araçlarının çoğu Visual Studio ile otomatik olarak yüklenir. Visual Studio 'yu indirmek için [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) sayfasını ziyaret edin.
 
-Komut satırından tüm araçları, derleme önbelleği Görüntüleyicisi (*Shfusion.dll*) dışında bir şekilde çalıştırabilirsiniz. Dosya Gezgini 'nden *Shfusion.dll* erişmeniz gerekir.
+Komut satırından tüm araçları, derleme önbelleği Görüntüleyicisi (*Shfusion.dll*) hariç olacak şekilde çalıştırabilirsiniz. Dosya Gezgini 'nden *Shfusion.dll* erişmeniz gerekir.
   
-Komut satırı araçlarını çalıştırmanın en iyi yolu, Visual Studio için Geliştirici Komut İstemini kullanmaktır. Bu yardımcı programlar, yükleme klasörüne gitmeden araçları kolayca çalıştırmanıza olanak sağlar. Daha fazla bilgi için bkz. [komut istemleri](developer-command-prompt-for-vs.md).
+Komut satırı araçlarını çalıştırmanın en iyi yolu, Visual Studio 'nun yüklediği geliştirici kabukların birini kullanmaktır. Bu yardımcı programlar, yükleme klasörüne gitmek zorunda kalmadan araçları kolayca çalıştırmanıza olanak sağlar. Daha fazla bilgi için bkz. [Geliştirici komut satırı kabukları](/visualstudio/ide/reference/command-prompt-powershell).
 
 > [!NOTE]
 > Bazı araçlar, 32-bit bilgisayarlar veya 64-bit bilgisayarlar için özeldir. Bilgisayarınız için aracın uygun sürümünü çalıştırdığınızdan emin olun.
@@ -47,9 +47,6 @@ Sertifikaları, sertifika güven listelerini (CTL) ve sertifika çağırma liste
 
 - [Clrver.exe (CLR sürüm aracı)](clrver-exe-clr-version-tool.md)  
 Bilgisayardaki ortak dil çalışma zamanının (CLR) yüklü tüm sürümlerini raporlar.
-
-- [Komut Istemleri](developer-command-prompt-for-vs.md)  
-.NET Framework araçlarını daha kolay kullanmanıza olanak sağlar. Bu, belirli ortam değişkenlerini otomatik olarak ayarlayan bir komut istemi.
 
 - [CorFlags.exe (CorFlags dönüştürme aracı)](corflags-exe-corflags-conversion-tool.md)  
 Taşınabilir çalıştırılabilir (PE) görüntüsünün üstbilgisine ait CorFlags bölümünü yapılandırmanıza olanak sağlar.
@@ -76,9 +73,9 @@ Lisanslama bilgilerini içeren metin dosyalarını okur ve kaynak olarak ortak b
 Uygulama ve dağıtım bildirimleri oluşturmanıza, düzenlemenize ve imzalamanıza olanak verir. Bir komut satırı aracı olarak *Mage.exe* , hem toplu betiklerden hem de ASP.NET uygulamaları dahil diğer Windows tabanlı uygulamalardan çalıştırılabilir.
 
 - [MageUI.exe (Bildirim Oluşturma ve Düzenleme Aracı, grafik Istemci)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)  
-Komut satırı aracı Mage.exe ile aynı işlevselliği destekler, ancak Windows tabanlı bir kullanıcı arabirimi (UI) kullanır. , Komut satırı aracı *Mage.exe*aynı işlevleri destekler, ancak Windows tabanlı bir kullanıcı ARABIRIMI (UI) kullanır.
+Komut satırı aracı Mage.exe ile aynı işlevselliği destekler, ancak Windows tabanlı bir kullanıcı arabirimi (UI) kullanır. , Komut satırı aracı *Mage.exe* aynı işlevleri destekler, ancak Windows tabanlı bir kullanıcı ARABIRIMI (UI) kullanır.
 
-- [MDbg.exe (.NET Framework komut satırı hata ayıklayıcı)](mdbg-exe.md)  
+- [MDbg.exe (.NET Framework Command-Line hata ayıklayıcı)](mdbg-exe.md)  
 Araç satıcılarının ve uygulama geliştiricilerin, .NET Framework ortak dil çalışma zamanını hedefleyen programlardaki hataları bulmalarına ve düzeltmelerine yardımcı olur. Bu araç, hata ayıklama hizmetleri sağlamak için çalışma zamanı hata ayıklama API kullanır.
 
 - [Mgmtclassgen.exe (Yönetim türü kesin belirlenmiş sınıf Oluşturucu)](mgmtclassgen-exe.md)  

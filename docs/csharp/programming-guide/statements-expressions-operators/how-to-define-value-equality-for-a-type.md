@@ -1,6 +1,6 @@
 ---
-title: Bir tür için değer eşitliği tanımlama-C# Programlama Kılavuzu
-description: Bir tür için değer eşitliği tanımlama hakkında bilgi edinin. Kod örneklerine bakın ve kullanılabilir ek kaynakları görüntüleyin.
+title: Bir sınıf veya yapı için değer eşitliği tanımlama-C# Programlama Kılavuzu
+description: Bir sınıf veya yapı için değer eşitliği tanımlama hakkında bilgi edinin. Kod örneklerine bakın ve kullanılabilir ek kaynakları görüntüleyin.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - overriding Equals method [C#]
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 9523ba99f877fde7207042ecb8d28548168a68cb
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: a63fd8d11d0241063364e0156ee73a86aaeb7b35
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162732"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259570"
 ---
-# <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Bir tür için değer eşitliği tanımlama (C# Programlama Kılavuzu)
+# <a name="how-to-define-value-equality-for-a-class-or-struct-c-programming-guide"></a>Bir sınıf veya yapı için değer eşitliği tanımlama (C# Programlama Kılavuzu)
 
-Bir sınıf veya yapı tanımladığınızda, türün tür için özel bir değer eşitlik tanımı (veya denklik) oluşturmak mantıklı olup olmadığına karar verirsiniz. Genellikle, tür nesnelerinin bir sıralama koleksiyonuna eklenmesi beklendiğinde veya birincil amaçları bir alan veya özellik kümesini depoladığınızda değer eşitliğini uygulamalısınız. Değer eşitlik tanımınızı, türdeki tüm alanların ve özelliklerin bir karşılaştırmasına dayandırıp veya tanımı bir alt küme üzerinde temel alabilirsiniz.
+Bir [kayıt](../classes-and-structs/records.md)tanımladığınızda, derleyici otomatik olarak değer eşitlik uygular. Bir sınıf veya yapı tanımladığınızda, türün tür için özel bir değer eşitlik tanımı (veya denklik) oluşturmak mantıklı olup olmadığına karar verirsiniz. Genellikle, tür nesnelerinin bir sıralama koleksiyonuna eklenmesi beklendiğinde veya birincil amaçları bir alan veya özellik kümesini depoladığınızda değer eşitliğini uygulamalısınız. Değer eşitlik tanımınızı, türdeki tüm alanların ve özelliklerin bir karşılaştırmasına dayandırıp veya tanımı bir alt küme üzerinde temel alabilirsiniz.
 
 Her iki durumda da, hem sınıflarda hem de yapılarda, uygulamanız beş denklik garantisini izlemelidir (aşağıdaki kurallar Için, `x` `y` ve null olmadığını varsayın `z` ):  
   

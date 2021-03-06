@@ -8,22 +8,22 @@ helpviewer_keywords:
 - Regasm.exe
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
-ms.openlocfilehash: a3af6a0fbc7c9c695e18448da285977f04fd72ef
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 14dbaf0e100204718e78292b038bf016b5607bc8
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517262"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259196"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (Derleme Kayıt Aracı)
 
 Derleme Kayıt aracı, derleme içindeki meta verileri okur ve kayıt defterine gerekli girişleri ekler, bu da COM istemcilerinin şeffaf olarak .NET Framework sınıfları oluşturmalarına izin verir. Sınıf kaydettirildikten sonra, COM istemcileri artık sınıfı bir COM sınıfıymış gibi kullanabilir. Sınıf yalnızca bir defa, derleme yüklenirken kaydettirilir. Derleme içindeki sınıf örnekleri gerçekten kaydettirilene kadar COM'dan oluşturulamaz.
 
-Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi kullanın. Daha fazla bilgi için bkz. [komut istemleri](developer-command-prompt-for-vs.md).
+Aracı çalıştırmak için bir [Geliştirici komut satırı kabuğu](/visualstudio/ide/reference/command-prompt-powershell)kullanın.
 
 Komut satırına şunu yazın:
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```console
 regasm assemblyFile [options]
@@ -44,12 +44,12 @@ regasm assemblyFile [options]
 |**/regfile** [**:** *regfile*]|Gerekli kayıt defteri girdilerini içeren derleme için belirtilen .reg dosyasını oluşturur. Bu seçeneği belirtmek kayıt defterini değiştirmez. Bu seçeneği **/u** veya **/tlb** seçenekleriyle birlikte kullanamazsınız.|
 |**/Silent** veya **/s**|Başarı iletilerinin görüntülenmesini bastırır.|
 |**/tlb** [**:** *TypeLibFile*]|Belirtilen derlemeden, derleme içinde tanımlanmış erişilebilir türlerin tanımlarını içeren bir tür kitaplığı oluşturur.|
-|**/Unregister** veya **/u**|*AssemblyFile*içinde bulunan oluşturulabilir sınıflarının kaydını siler. Bu seçeneği kullanmamak, Regasm.exe'nin derlemedeki oluşturulabilir sınıfları kaydettirmesine neden olur.|
+|**/Unregister** veya **/u**|*AssemblyFile* içinde bulunan oluşturulabilir sınıflarının kaydını siler. Bu seçeneği kullanmamak, Regasm.exe'nin derlemedeki oluşturulabilir sınıfları kaydettirmesine neden olur.|
 |**/verbose**|Ayrıntılı modu belirtir; bir tür kitaplığının oluşturulması gereken, **/tlb** seçeneğiyle belirtildiğinde, başvurulan derlemelerin bir listesini görüntüler.|
 |**/?** veya **/help**|Araç için komut sözdizimini ve seçenekleri görüntüler.|
 
 > [!NOTE]
-> Regasm.exe komut satırı seçenekleri büyük/küçük harfe duyarsızdır. Seçeneğin, yalnızca onu benzersiz şekilde tanımlamaya yetecek kadarını sağlamanız yeterlidir. Örneğin, **/n** , **/nologo** ile eşdeğerdir ve **/t:** *çıkışdosyası. tlb* , **/tlb:** *çıkışdosyası. tlb*ile eşdeğerdir.
+> Regasm.exe komut satırı seçenekleri büyük/küçük harfe duyarsızdır. Seçeneğin, yalnızca onu benzersiz şekilde tanımlamaya yetecek kadarını sağlamanız yeterlidir. Örneğin, **/n** , **/nologo** ile eşdeğerdir ve **/t:** *çıkışdosyası. tlb* , **/tlb:** *çıkışdosyası. tlb* ile eşdeğerdir.
 
 ## <a name="remarks"></a>Açıklamalar
 
@@ -89,4 +89,4 @@ regasm myTest.dll /tlb:myTest.tlb
 - [Tlbexp.exe (tür kitaplığı verme programı)](tlbexp-exe-type-library-exporter.md)
 - [Tlbimp.exe (tür kitaplığı Içeri Aktarıcı)](tlbimp-exe-type-library-importer.md)
 - [Derlemeleri COM ile Kaydetme](../interop/registering-assemblies-with-com.md)
-- [Komut Istemleri](developer-command-prompt-for-vs.md)
+- [Geliştirici komut satırı kabukları](/visualstudio/ide/reference/command-prompt-powershell)

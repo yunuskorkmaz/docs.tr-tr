@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: cc21f76463bd19f8164807bafce2b9aede2eeb87
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 0a8a7c72885932efef201cb8caec5143b06605f2
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "96589877"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259038"
 ---
-Raspberry PI 'larınızın üzerinde SSH 'nin etkinleştirildiğinden emin olun. Gerekirse, [Raspberry PI BELGELERINDE *SSH 'yi etkinleştirme* bölümüne bakın](https://www.raspberrypi.org/documentation/remote-access/ssh/) <span class="docon docon-navigate-external x-hidden-focus"></span> .
+Raspberry PI 'larınızın üzerinde SSH 'nin etkinleştirildiğinden emin olun. Gerekirse, [Raspberry PI BELGELERINDE *SSH 'yi etkinleştirme* bölümüne bakın](https://www.raspberrypi.org/documentation/remote-access/ssh/).

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - BypassNGenAttribute
 - System.Runtime.BypassNGenAttribute
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
-ms.openlocfilehash: 12ef6724a76ec59bd412427a0a353565b1be2c8e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a553be6877af5875692e5c0745b6b9ee766e143e
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558423"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259271"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Yerel Görüntü Oluşturucu)
 
@@ -58,7 +58,7 @@ Ngen.exe ve yerel görüntü hizmetini kullanma hakkında daha fazla bilgi için
 > [!NOTE]
 > .NET Framework 1,0 ve 1,1 sürümleri için Ngen.exe sözdizimi, [Yerel Görüntü Oluşturucu (Ngen.exe) eski sözdiziminde](/previous-versions/dotnet/netframework-4.0/ms165073(v=vs.100))bulunabilir.
 
-Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](developer-command-prompt-for-vs.md).
+Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, [geliştiriciler için bir komut satırı kabuğu](/visualstudio/ide/reference/command-prompt-powershell)kullanın.
 
 Komut satırına şunu yazın:
 
@@ -87,9 +87,9 @@ Aşağıdaki tabloda, her birinin sözdizimi gösterilmektedir `action` . Tek te
 
 <a name="ArgumentTable"></a>
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız değişkenler
 
-|Bağımsız Değişken|Description|
+|Bağımsız Değişken|Açıklama|
 |--------------|-----------------|
 |`assemblyName`|Derlemenin tam görünen adı. Örneğin, `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`. **Note:**  `myAssembly`Ve eylemleri için gibi kısmi bir derleme adı sağlayabilirsiniz `display` `uninstall` . <br /><br /> Her Ngen.exe komut satırında yalnızca bir derleme belirtilebilir.|
 |`assemblyPath`|Derlemenin açık yolu. Tam veya göreli bir yol belirtebilirsiniz.<br /><br /> Eğer bir yol belirtmeden dosya adı belirtilseniz, derleme geçerli dizinde bulunmalıdır.<br /><br /> Her Ngen.exe komut satırında yalnızca bir derleme belirtilebilir.|
@@ -98,7 +98,7 @@ Aşağıdaki tabloda, her birinin sözdizimi gösterilmektedir `action` . Tek te
 
 ## <a name="priority-levels"></a>Öncelik Düzeyleri
 
-|Öncelik|Description|
+|Öncelik|Açıklama|
 |--------------|-----------------|
 |`1`|Yerel görüntüler, boşta kalma süresi beklenmeden hemen oluşturulur ve yüklenir.|
 |`2`|Yerel görüntüler boşta kalma süresi beklenmeden, ancak tüm 1 öncelikli eylemler (ve bağımlılıkları) tamamlandıktan sonra yüklenir.|
@@ -118,7 +118,7 @@ Aşağıdaki tabloda, her birinin sözdizimi gösterilmektedir `action` . Tek te
 
 ## <a name="config"></a>Config
 
-|Yapılandırma|Description|
+|Yapılandırma|Açıklama|
 |-------------------|-----------------|
 |`/ExeConfig:` `exePath`|Belirtilen çalıştırılabilir derlemesinin yapılandırmasını kullan.<br /><br /> Ngen.exe, bağımlılıklara bağlarken yükleyici ile aynı kararları almalıdır. Çalışma zamanında paylaşılan bir bileşen yüklendiğinde, yöntemi kullanılarak, <xref:System.Reflection.Assembly.Load%2A> uygulamanın yapılandırma dosyası paylaşılan bileşen için yüklenen bağımlılıkları belirler — örneğin, yüklenen bir bağımlılığın sürümü. `/ExeConfig`Anahtar, çalışma zamanında hangi bağımlılıkların yüklenebileceğine ilişkin Ngen.exe rehberlik sağlar.|
 |`/AppBase:` `directoryPath`|Bağımlılıkları bulurken, uygulama tabanı olarak belirtilen dizini kullan.|
@@ -587,7 +587,7 @@ Normal olarak, yerel görüntü hizmeti bir uygulama veya güncelleştirme için
 Hizmet el ile Ngen.exe komutuyla da etkileşime girer. El ile gerçekleştirilen komutların arka plan etkinliğine göre önceliği vardır.
 
 > [!NOTE]
-> Windows Vista 'da, yerel görüntü hizmeti için görünen ad "Microsoft.NET Framework NGEN v 2.0.50727_X86" veya "Microsoft.NET Framework NGEN v 2.0.50727_X64" olur. Microsoft Windows 'un önceki tüm sürümlerinde, ad ".NET Runtime Optimization Service v 2.0.50727_X86" veya ".NET Runtime Optimizasyon hizmeti v 2.0.50727_X64" olur.
+> Windows Vista 'da, yerel görüntü hizmeti için görünen ad "Microsoft.NET Framework NGEN v2.0.50727_X86" veya "Microsoft.NET Framework NGEN v2.0.50727_X64". Microsoft Windows 'un önceki tüm sürümlerinde, ad ".NET çalışma zamanı Iyileştirme hizmeti v2.0.50727_X86" veya ".NET Runtime Optimizasyon hizmeti v2.0.50727_X64".
 
 ### <a name="launching-deferred-operations"></a>Ertelenmiş Işlemler başlatılıyor
 
@@ -641,4 +641,4 @@ Seçeneğini içeren bir Ngen.exe komutunun yürütülmesi tarafından başlatı
 - [Araçlar](index.md)
 - [Yönetilen yürütme Işlemi](../../standard/managed-execution-process.md)
 - [Çalışma Zamanının Derlemelerin Konumunu Bulması](../deployment/how-the-runtime-locates-assemblies.md)
-- [Komut Istemleri](developer-command-prompt-for-vs.md)
+- [Geliştirici komut satırı kabukları](/visualstudio/ide/reference/command-prompt-powershell)

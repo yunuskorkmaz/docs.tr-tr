@@ -2,12 +2,12 @@
 title: F# kod biçimlendirme yönergeleri
 description: 'F # kodunu biçimlendirmeye yönelik yönergeleri öğrenin.'
 ms.date: 08/31/2020
-ms.openlocfilehash: 6f1cf8decbaf02aa7d5e202010d4c240c24bdcf9
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 4562242b82b0d7efac19bdcf2c04c29482af11dc
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102103679"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259908"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# kod biçimlendirme yönergeleri
 
@@ -928,6 +928,20 @@ let printListWithOffsetPiped a list1 =
 
 Lambda ifadesinin gövdesi birden çok satır uzunsa, bunu yerel olarak kapsamlı bir işleve yeniden düzenlemeyi göz önünde bulundurmanız gerekir.
 
+İşlev tek bir çok satırlı dizi bağımsız değişkeni aldığınızda, [biçimlendirme oluşturucuları, statik üyeler ve üye etkinleştirmeleri](#formatting-constructors-static-members-and-member-invocations) için aynı kurallar geçerlidir.
+
+```fsharp
+let myFunction (a: int, b: string, c: int, d: bool) =
+    ()
+
+myFunction(
+    478815516,
+    "A very long string making all of this multi-line",
+    1515,
+    false
+)
+```
+
 ### <a name="formatting-infix-operators"></a>Hatalı bir şekilde biçimlendirme işleçleri
 
 İşleçleri boşluklara göre ayırın. Bu kuralın belirgin özel durumları `!` ve `.` işleçleridir.
@@ -1084,6 +1098,26 @@ let untypedRes =
         sourceText,
         parsingOptionsWithDefines
     )
+```
+
+Aynı kurallar yalnızca tek bir çok satırlı bağımsız değişken olsa bile geçerlidir.
+
+```fsharp
+let poemBuilder = StringBuilder()
+poemBuilder.AppendLine(
+    """
+The last train is nearly due
+The Underground is closing soon
+And in the dark, deserted station
+Restless in anticipation
+A man waits in the shadows
+    """
+)
+
+Option.traverse(
+    create
+    >> Result.setError [ invalidHeader "Content-Checksum" ]
+)
 ```
 
 ## <a name="formatting-attributes"></a>Biçimlendirme öznitelikleri

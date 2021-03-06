@@ -13,12 +13,12 @@ helpviewer_keywords:
 - base types, parsing strings
 - DateTime object
 - time strings
-ms.openlocfilehash: 557955b5c47695dea686527fd99653ef2efe19bb
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 04e97ce5628ec2ea7cbc10c0526e6cd1f9b16725
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821936"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259310"
 ---
 # <a name="parse-date-and-time-strings-in-net"></a>.NET 'teki tarih ve saat dizelerini ayrıştırma
 
@@ -55,7 +55,7 @@ Aşağıdaki örnek, ' a <xref:System.DateTime.Parse%2A?displayProperty=nameWith
 > Bu makaledeki tüm C# örnekleri tarayıcınızda çalışır. Çıktıyı görmek için **Çalıştır** düğmesine basın. Ayrıca, kendinizi denemek için de düzenleyebilirsiniz.
 
 > [!NOTE]
-> Bu örnekler, hem [C#](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/conversions) hem de [Visual Basic](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic/how-to/conversions)için GitHub docs deposunda mevcuttur.
+> Bu örnekler, hem [C#](https://github.com/dotnet/docs/tree/main/samples/snippets/csharp/how-to/conversions) hem de [Visual Basic](https://github.com/dotnet/docs/tree/main/samples/snippets/visualbasic/how-to/conversions)için GitHub docs deposunda mevcuttur.
 
 [!code-csharp-interactive[Parsing.DateAndTime#1](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#1)]
 [!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#1)]

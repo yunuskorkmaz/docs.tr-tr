@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30145
 ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
-ms.openlocfilehash: 393571f5b1fab518f379bbd6f4e6f1cb62a74b26
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: fc3b61c80cfd3b40d802c517cdca4085bc274197
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102104789"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259440"
 ---
 # <a name="bc30145-unable-to-emit-assembly-error-message"></a>BC30145: bütünleştirilmiş kod yayılamıyor: \<error message>
 
@@ -37,7 +37,7 @@ Visual Basic derleyici, bildirime sahip bir derleme oluşturmak için derleme ba
 
 2. Projenizden hatayı üreten COM başvurusunu silin.
 
-3. [Visual Studio için geliştirici komut istemi](../../../framework/tools/developer-command-prompt-for-vs.md)açın.
+3. Bir [Geliştirici komut satırı kabuğu](/visualstudio/ide/reference/command-prompt-powershell)açın.
 
 4. Dizinini, derleme sarmalayıcıyı yerleştirmek istediğiniz dizine değiştirin.
 

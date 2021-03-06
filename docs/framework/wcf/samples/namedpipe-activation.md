@@ -3,16 +3,16 @@ description: 'Daha fazla bilgi edinin: NamedPipe etkinleştirme'
 title: NamedPipe Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: 4955511f24d831f4aa9e3aa67fdb3f6a218d7af0
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 32878b08450b6d4d2d88b3d36c019b3e2138625f
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99752236"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259544"
 ---
 # <a name="namedpipe-activation"></a>NamedPipe Etkinleştirme
 
-Bu örnekte, ad kanalları üzerinden iletişim kuran bir hizmeti etkinleştirmek için Windows Işlem etkinleştirme hizmeti (WAS) kullanan bir hizmetin barındırılması gösterilmektedir. Bu örnek [Başlarken](getting-started-sample.md) ' e dayalıdır ve Windows Vista 'nın çalışmasını gerektirir.
+Bu örnekte, adlandırılmış kanallar üzerinden iletişim kuran bir hizmeti etkinleştirmek için Windows Işlem etkinleştirme hizmeti (WAS) kullanan bir hizmetin barındırılması gösterilmektedir. Bu örnek [Başlarken](getting-started-sample.md) ' e dayalıdır ve Windows Vista 'nın çalışmasını gerektirir.
 
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.

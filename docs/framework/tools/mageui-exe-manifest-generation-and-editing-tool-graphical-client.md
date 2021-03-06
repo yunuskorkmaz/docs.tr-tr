@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 28a84814d1df96935f7533fa00f0bb50cf84def8
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3f08c1d8aabae3e698dbf2fcd0a52511136ba899
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96279187"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259921"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Bildirim Üretme ve Düzenleme Aracı, Grafik İstemci)
 
 MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windows tabanlı kullanıcı arabirimi (UI) ile destekler. Bu araçla, dağıtım ve uygulama bildirimleri oluşturabilir, düzenleyebilir ve imzalayabilirsiniz. İle oluşturulan yeni bildirimler, .NET Framework 4 Istemci profilini hedefleyecek MageUI.exe. Önceki .NET Framework sürümlerini hedeflemek için MageUI.exe'nin önceki sürümleri kullanılmalıdır. Bir bildirimden derlemeleri eklerken veya kaldırırken ya da var olan bildirimleri yeniden imzalamada, MageUI.exe bildirimi .NET Framework 4 Istemci profilini hedefleyecek şekilde güncelleştirmez. Daha fazla bilgi için bkz. [Mage.exe (bildirim oluşturma ve düzenleme aracı)](mage-exe-manifest-generation-and-editing-tool.md).
 
- Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](developer-command-prompt-for-vs.md).
+ Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, [geliştiriciler için bir komut satırı kabuğu](/visualstudio/ide/reference/command-prompt-powershell)kullanın.
 
  Mage.exe ve MageUI.exe iki sürümü Visual Studio 'nun bir bileşeni olarak dahil edilmiştir. Sürüm bilgilerini görmek için MageUI.exe çalıştırın, **Yardım**' ı seçin ve **hakkında**' yı seçin. Bu belge Mage.exe ve MageUI.exe'nin 4.0.x.x sürümünü açıklar.
 
@@ -40,7 +40,7 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
 |**Tercihler**|**Dosya**||**Tercihler** iletişim kutusunu açar. Daha fazla bilgi için aşağıdaki bölüme bakın.|  
 |**Çıkış**|**Dosya**|ALT+F4|MageUI.exe'den çıkılır.|  
 |**Kes**|**Düzenle**|CTRL+X|Seçili durumdaki metni uygulamadan kaldırır ve sistem Pano'suna taşır.|  
-|**Kopyala**|**Düzenle**|CTRL+C|Seçili durumdaki metni sistem Pano'suna kopyalar.|  
+|**Kopya**|**Düzenle**|CTRL+C|Seçili durumdaki metni sistem Pano'suna kopyalar.|  
 |**Yapıştır**|**Düzenle**|CTRL+V|Sistem Pano'sundaki metni etkin durumdaki metin öğesinin içine yapıştırır.|  
 |**Silme**|**Düzenle**||Bir listede seçili olan bir öğeyi, **dağıtım bildirimi** sekmesindeki güven lisansı gibi siler.|  
 |**Tümünü Kapat**|**Pencere**||MageUI.exe'de açık durumdaki tüm dosyaları kapatır. Bir veya daha fazla dosyanın kaydedilmesi gerekiyorsa, gereksinimi MageUI.exe sizden onları kaydetmenizi ister. MageUI.exe ayrıca imzalanmamış veya değiştirilmiş her dosya için bir imzalama anahtarı seçmenizi de ister.|  

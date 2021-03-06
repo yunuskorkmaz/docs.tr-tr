@@ -3,12 +3,12 @@ title: XML Serileştiricisi Oluşturma Aracı (Sgen.exe)
 description: XML serileştirici Oluşturucusu, bir derlemedeki türler için bir XML serileştirme derlemesi oluşturur ve bu da XmlSerializer 'ın başlangıç performansını geliştirir.
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: c2f33236e39f61638118f45f0d5ab5385df27ac3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b703f6755a4aab809c28f8009a0b358c2e6962bb
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95676523"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259856"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>XML Serileştiricisi Oluşturma Aracı (Sgen.exe)
 
@@ -67,4 +67,4 @@ sgen Data.dll
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Araçlar](../../framework/tools/index.md)
-- [Komut Istemleri](../../framework/tools/developer-command-prompt-for-vs.md)
+- [Geliştirici komut satırı kabukları](/visualstudio/ide/reference/command-prompt-powershell)

@@ -2,12 +2,12 @@
 title: Sürüm oluşturma ve .NET kitaplıkları
 description: .NET kitaplıklarını sürüm oluşturma için en iyi yöntem önerileri.
 ms.date: 01/26/2021
-ms.openlocfilehash: 1f3a14a7c32091621dda30a2d86724915d629564
-ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
+ms.openlocfilehash: 36518a607d1c375374ed7cda0e3f3484b55aff11
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98794724"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259648"
 ---
 # <a name="versioning"></a>Sürüm Oluşturma
 
@@ -49,7 +49,7 @@ Derleme sürümü, CLR 'nin hangi derleme sürümünü yükleneceğini seçmek i
 <AssemblyVersion>1.0.0.0</AssemblyVersion>
 ```
 
-.NET Framework CLR, tanımlayıcı adlı bir derlemeyi yüklemek için tam bir eşleşme talep ister. Örneğin, `Libary1, Version=1.0.0.0` bir başvurusu ile derlendi `Newtonsoft.Json, Version=11.0.0.0` . .NET Framework bu sürümü yalnızca tam olarak yükler `11.0.0.0` . Çalışma zamanında farklı bir sürüm yüklemek için .NET uygulamasının yapılandırma dosyasına bir bağlama yeniden yönlendirmesi eklenmelidir.
+.NET Framework CLR, tanımlayıcı adlı bir derlemeyi yüklemek için tam bir eşleşme talep ister. Örneğin, `Library1, Version=1.0.0.0` bir başvurusu ile derlendi `Newtonsoft.Json, Version=11.0.0.0` . .NET Framework bu sürümü yalnızca tam olarak yükler `11.0.0.0` . Çalışma zamanında farklı bir sürüm yüklemek için .NET uygulamasının yapılandırma dosyasına bir bağlama yeniden yönlendirmesi eklenmelidir.
 
 Bütünleştirilmiş kod sürümüyle birlikte tanımlayıcı adlandırma [katı derleme sürümü yüklemeye](../assembly/versioning.md)izin vermez. Bir kitaplıkta güçlü adlandırma, bir dizi avantaja sahip olsa da, genellikle bir derlemenin bulunamamasına neden olan çalışma zamanı özel durumları ile sonuçlanır ve ' de veya düzeltilmesi için [bağlama yeniden yönlendirmeleri gerekir](../../framework/configure-apps/redirect-assembly-versions.md) `app.config` `web.config` . .NET Core 'da, derleme yükleme daha gevşek olur. .NET Core çalışma zamanı, derlemeleri çalışma zamanında daha yüksek bir sürümle otomatik olarak yükler.
 

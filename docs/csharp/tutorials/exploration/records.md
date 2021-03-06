@@ -2,12 +2,12 @@
 title: Kayıt türlerini kullanma-C# öğreticisi
 description: Kayıt türlerini kullanma, kayıt hiyerarşileri oluşturma ve sınıflar üzerinde kayıt seçme hakkında bilgi edinin.
 ms.date: 11/12/2020
-ms.openlocfilehash: 8a2cb6966ab4f93432723fd6f82618efa86b26aa
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 33075c4cafc9a91683960daa8101c9f1defaa36a
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688589"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258962"
 ---
 # <a name="create-record-types"></a>Kayıt türleri oluşturma
 
@@ -27,7 +27,7 @@ C# 9,0 veya üzeri derleyicisi dahil olmak üzere makinenizi .NET 5 veya sonraki
 
 ## <a name="characteristics-of-records"></a>Kayıtların özellikleri
 
-*record* `record` Ya da `class` anahtar sözcüğü yerine anahtar sözcüğünü içeren bir tür bildirerek bir kayıt tanımlarsınız `struct` . Kayıt, başvuru türüdür ve değer tabanlı eşitlik semantiğini izler. Değer semantiğini zorlamak için, derleyici kayıt türü için birkaç yöntem üretir:
+ `record` Ya da `class` anahtar sözcüğü yerine anahtar sözcüğünü içeren bir tür bildirerek bir kayıt tanımlarsınız `struct` . Kayıt, başvuru türüdür ve değer tabanlı eşitlik semantiğini izler. Değer semantiğini zorlamak için, derleyici kayıt türü için birkaç yöntem üretir:
 
 - Bir geçersiz kılma <xref:System.Object.Equals(System.Object)?displayProperty=nameWithType> .
 - `Equals`Parametresi kayıt türü olan bir sanal yöntem.
@@ -155,8 +155,8 @@ Sonuçları görmek için tamamlanmış uygulamayı çalıştırın.
 
 ## <a name="summary"></a>Özet
 
-Bu öğretici kayıtların çeşitli yönlerini gösterdi. Kayıtlar, temel kullanım verilerinin depolandığı başvuru türleri için kısa sözdizimi sağlar. Nesne odaklı sınıflar için temel kullanım, sorumlulukları tanımlıyor. Bu öğreticide, bir kaydın yalnızca init özelliklerini bildirmek için kısa bir sözdizimi kullanabileceğiniz *konumsal kayıtlara* odaklanılmıştır. Derleyici, kayıtları kopyalamak ve karşılaştırmak için kaydın birkaç üyesini birleştirir. Kayıt türleriniz için gereken diğer üyeleri ekleyebilirsiniz. Derleyici tarafından oluşturulan üyelerden hiçbirinin durum olarak bilinmediği farkında olmak üzere sabit kayıt türleri oluşturabilirsiniz. Konumsal kayıtlar için `with` ifadeler, yıkıcı olmayan mutasyonu desteklemeyi kolaylaştırır.
+Bu öğretici kayıtların çeşitli yönlerini gösterdi. Kayıtlar, temel kullanım verilerinin depolandığı başvuru türleri için kısa sözdizimi sağlar. Nesne odaklı sınıflar için temel kullanım, sorumlulukları tanımlıyor. Bu öğreticide, bir kaydın yalnızca init özelliklerini bildirmek için kısa bir sözdizimi kullanabileceğiniz *konumsal kayıtlara* odaklanılmıştır. Derleyici, kayıtları kopyalamak ve karşılaştırmak için kaydın birkaç üyesini birleştirir. Kayıt türleriniz için gereken diğer üyeleri ekleyebilirsiniz. Derleyici tarafından oluşturulan üyelerden hiçbirinin durum olarak bilinmediği farkında olmak üzere sabit kayıt türleri oluşturabilirsiniz. Ve `with` ifadeleri, bozucu olmayan mutasyon desteğini desteklemeyi kolaylaştırır.
 
 Kayıtlar, türleri tanımlamaya yönelik başka bir yol ekler. `class`Nesnelerin sorumluluklarına ve davranışına odaklanarak nesne odaklı hiyerarşiler oluşturmak için tanımları kullanırsınız. `struct`Verileri depolayan ve kopyalamaya yetecek kadar az olan veri yapıları için türler oluşturursunuz. Değer tabanlı eşitlik ve karşılaştırma istediğinizde, değerleri kopyalamak istemezsiniz ve başvuru değişkenlerini kullanmak istediğinizde kayıt oluşturursunuz.
 
-[Önerilen kayıt türü belirtimini](~/_csharplang/proposals/csharp-9.0/records.md)okuyarak kayıtların tüm açıklamasını öğrenebilirsiniz.
+Kayıt [türü Için C# dil başvurusu makalesini](../../language-reference/builtin-types/record.md) ve [Önerilen kayıt türü belirtimini](~/_csharplang/proposals/csharp-9.0/records.md)okuyarak kayıtların tüm açıklamasını öğrenebilirsiniz.
