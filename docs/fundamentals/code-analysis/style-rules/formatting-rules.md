@@ -16,12 +16,12 @@ helpviewer_keywords:
 - formatting code style rules [EditorConfig]
 - formatting rules
 - EditorConfig formatting conventions
-ms.openlocfilehash: 61e6f6a6afdc6aaf9710eef3143af8ae700ef612
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 866949692341f65a5b78c7dd5b8eec918873d3b7
+ms.sourcegitcommit: 1d3af230ec30d8d061be7a887f6ba38a530c4ece
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "96589393"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102511807"
 ---
 # <a name="formatting-rules"></a>Biçimlendirme kuralları
 
@@ -1040,7 +1040,7 @@ for (int i = 0; i < x.Length; i++)
 for (int i = 0;i < x.Length;i++)
 ```
 
-##### <a name="csharp_space_before_semicolon_in_for_statement"></a>csharp_space_before_semicolon_in_for_statement
+#### <a name="csharp_space_before_semicolon_in_for_statement"></a>csharp_space_before_semicolon_in_for_statement
 
 |Özellik|Değer|
 |-|-|

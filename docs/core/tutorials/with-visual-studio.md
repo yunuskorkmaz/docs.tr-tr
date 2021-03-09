@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: a3a27c1baaab135108ef475d77c35d607c45fa82
-ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
+ms.openlocfilehash: 3986ef4083b964799be33d2876570ac4cf2082b8
+ms.sourcegitcommit: 1d3af230ec30d8d061be7a887f6ba38a530c4ece
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98794798"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102511859"
 ---
 # <a name="tutorial-create-a-net-console-application-using-visual-studio"></a>Öğretici: Visual Studio kullanarak bir .NET konsol uygulaması oluşturma
 
@@ -46,7 +46,7 @@ Bu öğreticide, Visual Studio 2019 ' de bir .NET konsol uygulamasının nasıl 
    > [!TIP]
    > .NET şablonlarını görmüyorsanız, muhtemelen gerekli iş yükü eksik olabilir. **Aradığınızı bulmuyor musunuz?** iletisi altında, **daha fazla araç ve özellik yüklemeyi** seçin bağlantısına tıklayın. Visual Studio Yükleyicisi açılır. **.NET Core platformlar arası geliştirme** iş yükünün yüklü olduğundan emin olun.
 
-1. **Yeni projenizi yapılandırın** iletişim kutusunda, **Proje adı** kutusuna **HelloWorld** yazın. Ardından **Oluştur**’u seçin.
+1. **Yeni projenizi yapılandırın** iletişim kutusunda, **Proje adı** kutusuna **HelloWorld** yazın. Ardından **İleri**' yi seçin.
 
    :::image type="content" source="./media/with-visual-studio/configure-new-project.png" alt-text="Yeni proje pencerenizi proje adı, konum ve çözüm adı alanlarıyla yapılandırın":::
 
@@ -108,7 +108,7 @@ Kullanıcıya adını istemek ve Tarih ve saat ile birlikte göstermek için uyg
 
    Bu kod, konsol penceresinde bir istem görüntüler ve ardından <kbd>ENTER</kbd> tuşuna basarak Kullanıcı bir dize girene kadar bekler. Bu dizeyi adlı bir değişkende depolar `name` . Ayrıca <xref:System.DateTime.Now?displayProperty=nameWithType> , geçerli yerel saati içeren özelliğinin değerini alır ve bunu adlı bir değişkene `date` ( `currentDate` Visual Basic) atar. Bu değerleri konsol penceresinde görüntüler. Son olarak, konsol penceresinde bir istem görüntüler ve <xref:System.Console.ReadKey(System.Boolean)?displayProperty=nameWithType> Kullanıcı girişini beklemek için yöntemini çağırır.
 
-   `\n`(Veya `vbCrLf` Visual Basic kodundaki) bir yeni satır karakterini temsil eder.
+   <xref:System.Environment.NewLine> , bir satır kesmeyi göstermek için platformdan bağımsız ve dilden bağımsız bir yoldur. Alternatifler `\n` C# ve `vbCrLf` Visual Basic ' de bulunur.
 
    `$`Bir dizenin önünde dolar işareti (), değişken adları gibi ifadeleri dizedeki küme ayraçları içine koymanıza imkan tanır. İfade değeri, ifadenin yerine dizeye eklenir. Bu söz dizimi, [enterpolasyonlu dizeler](../../csharp/language-reference/tokens/interpolated.md)olarak adlandırılır.
 

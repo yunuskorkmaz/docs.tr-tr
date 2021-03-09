@@ -2,12 +2,12 @@
 title: Mac için Visual Studio kullanarak bir .NET konsol uygulaması oluşturma
 description: Mac için Visual Studio kullanarak bir .NET konsol uygulaması oluşturmayı öğrenin.
 ms.date: 11/30/2020
-ms.openlocfilehash: 1351b06eec32cd8d3d9d44926655405fe2246f58
-ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
+ms.openlocfilehash: 4add8309338b8618265a66b9e71dab2df38ca8d0
+ms.sourcegitcommit: 1d3af230ec30d8d061be7a887f6ba38a530c4ece
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96599492"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102511833"
 ---
 # <a name="tutorial-create-a-net-console-application-using-visual-studio-for-mac"></a>Öğretici: Mac için Visual Studio kullanarak bir .NET konsol uygulaması oluşturma
 
@@ -16,8 +16,8 @@ Bu öğreticide, Mac için Visual Studio kullanarak bir .NET konsol uygulamasın
 > [!NOTE]
 > Geri bildiriminiz çok değerli. Mac için Visual Studio üzerinde geliştirme ekibine geri bildirimde bulunmak için kullanabileceğiniz iki yol vardır:
 >
-> * Mac için Visual Studio, **Help**  >  menüden **sorun bildir** veya hoş geldiniz ekranından **sorun** bildir ' i seçerek bir hata raporu dosyalayarak bir pencere açar. Geri bildiriminizi [Geliştirici Topluluğu](https://aka.ms/feedback/report?space=41) portalında izleyebilirsiniz.
-> * Öneride bulunmak için, **Help**  >  menüden **bir öneri sağlayın** veya hoş geldiniz ekranından bir öneri **Provide a Suggestion** sağlayın. Bu işlem sizi [Mac için Visual Studio Geliştirici topluluğu Web sayfasına](https://aka.ms/feedback/suggest?space=41)götürür.
+> * Mac için Visual Studio,   >  menüden **sorun bildir** veya hoş geldiniz ekranından **sorun** bildir ' i seçerek bir hata raporu dosyalayarak bir pencere açar. Geri bildiriminizi [Geliştirici Topluluğu](https://aka.ms/feedback/report?space=41) portalında izleyebilirsiniz.
+> * Öneride bulunmak için,   >  menüden **bir öneri sağlayın** veya hoş geldiniz ekranından bir öneri  sağlayın. Bu işlem sizi [Mac için Visual Studio Geliştirici topluluğu Web sayfasına](https://aka.ms/feedback/suggest?space=41)götürür.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
@@ -68,7 +68,7 @@ namespace HelloWorld
 
 ## <a name="run-the-app"></a>Uygulamayı çalıştırma
 
-1. <kbd>⌥</kbd><kbd>⌘</kbd><kbd>↵</kbd> <kbd>option</kbd> + <kbd>command</kbd> + Uygulamayı hata ayıklamadan çalıştırmak için ⌥ ⌘ ↵ (Option komut<kbd>ENTER</kbd>) tuşuna basın.
+1. <kbd></kbd><kbd></kbd><kbd></kbd> <kbd></kbd> + <kbd></kbd> + Uygulamayı hata ayıklamadan çalıştırmak için ⌥ ⌘ ↵ (Option komut<kbd>ENTER</kbd>) tuşuna basın.
 
    :::image type="content" source="media/with-visual-studio-mac/visual-studio-mac-output.png" alt-text="Terminal Merhaba Dünya gösterir!":::
 
@@ -84,7 +84,7 @@ Kullanıcıya adını istemek ve Tarih ve saat ile birlikte göstermek için uyg
 
    Bu kod, konsol penceresinde bir istem görüntüler ve ardından <kbd>ENTER</kbd> tuşuna basarak Kullanıcı bir dize girene kadar bekler. Bu dizeyi adlı bir değişkende depolar `name` . Ayrıca <xref:System.DateTime.Now?displayProperty=nameWithType> , geçerli yerel saati içeren özelliğinin değerini alır ve bunu adlı bir değişkene atar `date` . Bu değerleri konsol penceresinde görüntüler. Son olarak, konsol penceresinde bir istem görüntüler ve <xref:System.Console.ReadKey(System.Boolean)?displayProperty=nameWithType> Kullanıcı girişini beklemek için yöntemini çağırır.
 
-   `\n`Bir yeni satır karakterini temsil eder.
+   <xref:System.Environment.NewLine> , bir satır kesmeyi göstermek için platformdan bağımsız ve dilden bağımsız bir yoldur. Alternatifler `\n` C# ve `vbCrLf` Visual Basic ' de bulunur.
 
    `$`Bir dizenin önünde dolar işareti (), değişken adları gibi ifadeleri dizedeki küme ayraçları içine koymanıza imkan tanır. İfade değeri, ifadenin yerine dizeye eklenir. Bu söz dizimi, [enterpolasyonlu dizeler](../../csharp/language-reference/tokens/interpolated.md)olarak adlandırılır.
 

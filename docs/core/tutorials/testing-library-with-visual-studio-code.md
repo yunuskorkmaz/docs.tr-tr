@@ -2,12 +2,12 @@
 title: Visual Studio Code kullanarak .NET sınıf kitaplığı test etme
 description: .NET sınıf kitaplığı için bir birim testi projesi oluşturmak ve çalıştırmak üzere Visual Studio Code ve .NET CLı 'yi nasıl kullanacağınızı öğrenin.
 ms.date: 11/17/2020
-ms.openlocfilehash: 4528bd203ae03988a1d1d80a7e904e94e68c1d04
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: bc8741e11504f94e54ccc45a5ad93408a3fe9309
+ms.sourcegitcommit: 1d3af230ec30d8d061be7a887f6ba38a530c4ece
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94915862"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102511820"
 ---
 # <a name="tutorial-test-a-net-class-library-using-visual-studio-code"></a>Öğretici: Visual Studio Code kullanarak .NET sınıf kitaplığı test etme
 
@@ -90,7 +90,7 @@ En yaygın testler, sınıfının üyelerini çağırır <xref:Microsoft.VisualS
 
 Yöntemi test ederken `StringLibrary.StartsWithUpper` , büyük harf karakteriyle başlayan bir dizi dize sağlamak istersiniz. Yöntemi bu durumlarda Return olarak beklediğinizi ve `true` <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue%2A?displayProperty=nameWithType> yöntemi çağırabilirsiniz. Benzer şekilde, büyük harfli bir karakter ile başlayan bir dizi dize sağlamak istersiniz. Yöntemi bu durumlarda Return olarak beklediğinizi ve `false` <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse%2A?displayProperty=nameWithType> yöntemi çağırabilirsiniz.
 
-Kitaplık yönteminiz dizeleri yaptığından, ayrıca [boş bir dizeyi ( `String.Empty` )](xref:System.String.Empty) ve ve bir dizeyi başarılı bir şekilde işlediğinden emin olmak istersiniz `null` . Boş bir dize, karakteri olmayan ve 0 olan bir dizedir <xref:System.String.Length> . Bir `null` dize başlatılmamış bir dizedir. `StartsWithUpper`Doğrudan statik bir yöntem olarak çağırabilir ve tek bir <xref:System.String> bağımsız değişken geçirebilirsiniz. Ya da `StartsWithUpper` öğesine atanan bir değişkende bir genişletme yöntemi olarak çağırabilirsiniz `string` `null` .
+Kitaplık yönteminiz dizeleri yaptığından, ayrıca [boş bir dizeyi ( `String.Empty` )](xref:System.String.Empty) ve bir dizeyi başarılı bir şekilde işleyeceğinden emin olmak istersiniz `null` . Boş bir dize, karakteri olmayan ve 0 olan bir dizedir <xref:System.String.Length> . Bir `null` dize başlatılmamış bir dizedir. `StartsWithUpper`Doğrudan statik bir yöntem olarak çağırabilir ve tek bir <xref:System.String> bağımsız değişken geçirebilirsiniz. Ya da `StartsWithUpper` öğesine atanan bir değişkende bir genişletme yöntemi olarak çağırabilirsiniz `string` `null` .
 
 Her biri <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> bir dize dizisindeki her öğe için bir yöntem çağıran üç yöntem tanımlayacaksınız. Test hatası durumunda görüntülenecek bir hata iletisi belirtmenize imkan tanıyan bir yöntem aşırı yüklemesi çağıracaksınız. İleti, hataya neden olan dizeyi tanımlar.
 

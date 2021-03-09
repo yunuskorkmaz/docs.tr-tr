@@ -2,12 +2,12 @@
 title: Visual Studio Code kullanarak bir .NET konsol uygulaması oluşturma
 description: Visual Studio Code ve .NET CLı kullanarak bir .NET konsol uygulaması oluşturmayı öğrenin.
 ms.date: 11/17/2020
-ms.openlocfilehash: dbbdf88b0c84089249eb7e446c25eddc11543c1a
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: 51e5a897985af7576de03659efdd8520cb8e58e6
+ms.sourcegitcommit: 1d3af230ec30d8d061be7a887f6ba38a530c4ece
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94915875"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102511872"
 ---
 # <a name="tutorial-create-a-net-console-application-using-visual-studio-code"></a>Öğretici: Visual Studio Code kullanarak bir .NET konsol uygulaması oluşturma
 
@@ -24,13 +24,13 @@ Bu öğreticide, Visual Studio Code ve .NET CLı kullanarak bir .NET konsol uygu
 
 1. Visual Studio Code’u başlatın.
 
-1. Ana menüden **Dosya**  >  **açma klasörünü** (**File**  >  MacOS üzerinde dosya **Aç...** ) seçin.
+1. Ana menüden **Dosya**  >  **açma klasörünü** (  >  MacOS üzerinde dosya **Aç...** ) seçin.
 
 1. **Klasörü aç** iletişim kutusunda bir *HelloWorld* klasörü oluşturun ve **Klasör Seç** ' e tıklayın (MacOS üzerinde **açın** ).
 
    Klasör adı, varsayılan olarak proje adı ve ad alanı adı olur. Daha sonra, proje ad alanının olduğunu varsayan öğreticide kod ekleyeceksiniz `HelloWorld` .
 
-1. Ana menüden **Terminal görünümü ' nu** seçerek **View** Visual Studio Code açın  >  **Terminal** .
+1. Ana menüden **Terminal görünümü ' nu** seçerek Visual Studio Code açın  >   .
 
    **Terminal** , *HelloWorld* klasöründe komut istemiyle açılır.
 
@@ -93,7 +93,7 @@ Kullanıcıya adını istemek ve Tarih ve saat ile birlikte göstermek için uyg
 
    Bu kod, konsol penceresinde bir istem görüntüler ve ardından <kbd>ENTER</kbd> tuşuna basarak Kullanıcı bir dize girene kadar bekler. Bu dizeyi adlı bir değişkende depolar `name` . Ayrıca <xref:System.DateTime.Now?displayProperty=nameWithType> , geçerli yerel saati içeren özelliğinin değerini alır ve bunu adlı bir değişkene atar `date` . Bu değerleri konsol penceresinde görüntüler. Son olarak, konsol penceresinde bir istem görüntüler ve <xref:System.Console.ReadKey(System.Boolean)?displayProperty=nameWithType> Kullanıcı girişini beklemek için yöntemini çağırır.
 
-   `\n`Bir yeni satır karakterini temsil eder.
+   <xref:System.Environment.NewLine> , bir satır kesmeyi göstermek için platformdan bağımsız ve dilden bağımsız bir yoldur. Alternatifler `\n` C# ve `vbCrLf` Visual Basic ' de bulunur.
 
    `$`Bir dizenin önünde dolar işareti (), değişken adları gibi ifadeleri dizedeki küme ayraçları içine koymanıza imkan tanır. İfade değeri, ifadenin yerine dizeye eklenir. Bu söz dizimi, [enterpolasyonlu dizeler](../../csharp/language-reference/tokens/interpolated.md)olarak adlandırılır.
 

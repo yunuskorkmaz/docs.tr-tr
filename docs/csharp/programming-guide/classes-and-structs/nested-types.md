@@ -5,16 +5,16 @@ ms.date: 02/08/2020
 helpviewer_keywords:
 - nested types [C#]
 ms.assetid: f2e1b315-e3d1-48ce-977f-7bae0960ba99
-ms.openlocfilehash: 0741ae88103b16ce34fd5a38b789beaf428e734a
-ms.sourcegitcommit: 0014aa4d5cb2da56a70e03fc68f663d64df5247a
+ms.openlocfilehash: 853138beed6ad9ddffa789f0080ca1fd2ba9d700
+ms.sourcegitcommit: 1d3af230ec30d8d061be7a887f6ba38a530c4ece
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96918586"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102511924"
 ---
 # <a name="nested-types-c-programming-guide"></a>İç içe Geçmiş Türler (C# Programlama Kılavuzu)
 
-Bir [sınıf](../../language-reference/keywords/class.md), [Yapı](../../language-reference/builtin-types/struct.md), [temsilci](../../language-reference/builtin-types/reference-types.md#the-delegate-type) veya [arabirim](../../language-reference/keywords/interface.md) içinde tanımlanan bir türe iç içe geçmiş tür denir. Örneğin:
+Bir [sınıf](../../language-reference/keywords/class.md), [Yapı](../../language-reference/builtin-types/struct.md)veya [arabirim](../../language-reference/keywords/interface.md) içinde tanımlanan bir türe iç içe geçmiş tür denir. Örneğin:
 
 [!code-csharp[DeclareNestedClass](~/samples/snippets/csharp/objectoriented/nestedtypes.cs#DeclareNestedClass)]
 
@@ -25,7 +25,9 @@ Ayrıca, iç içe geçmiş bir türün erişilebilirliğini tanımlamak için a�
 - Bir **sınıfın** iç içe geçmiş türleri [ortak](../../language-reference/keywords/public.md), [korumalı](../../language-reference/keywords/protected.md), [dahili](../../language-reference/keywords/internal.md), [korunan iç](../../language-reference/keywords/protected-internal.md), [özel](../../language-reference/keywords/private.md) veya [özel korumalı](../../language-reference/keywords/private-protected.md)olabilir.
 
    Ancak, korumalı bir `protected` `protected internal` `private protected` [sınıf](../../language-reference/keywords/sealed.md) içinde veya iç içe yerleştirilmiş bir sınıf tanımlamak, "korumalı sınıfta belirtilen yeni korunan üye" Derleyici Uyarısı [CS0628](../../misc/cs0628.md)oluşturur.
-  
+
+   Ayrıca, iç içe bir türün dışarıdan görünür hale getirilmesi, kod kalitesi kuralı [CA1034](../../../fundamentals/code-analysis/quality-rules/ca1034.md) "iç içe geçmiş türleri görünür olmamalıdır" olarak ihlal ettiğini unutmayın.
+
 - Bir **yapının** iç içe geçmiş türleri [ortak](../../language-reference/keywords/public.md), [iç](../../language-reference/keywords/internal.md)veya [özel](../../language-reference/keywords/private.md)olabilir.
 
 Aşağıdaki örnek, `Nested` sınıfı genel yapar:
@@ -48,3 +50,4 @@ Aşağıdaki örnek, `Nested` sınıfı genel yapar:
 - [Sınıflar ve Yapılar](./index.md)
 - [Erişim Değiştiricileri](./access-modifiers.md)
 - [Oluşturucular](./constructors.md)
+- [CA1034 kuralı](../../../fundamentals/code-analysis/quality-rules/ca1034.md)

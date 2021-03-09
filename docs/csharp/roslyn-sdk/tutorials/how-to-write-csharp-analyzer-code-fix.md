@@ -1,24 +1,24 @@
 ---
 title: 'Öğretici: ilk çözümleyicinizi ve kod düzeltmesini yazma'
 description: Bu öğretici, .NET derleyici SDK 'sını (Roslyn API 'Ler) kullanarak bir çözümleyici ve kod düzeltmesini oluşturmak için adım adım yönergeler sağlar.
-ms.date: 08/01/2018
+ms.date: 03/02/2021
 ms.custom: mvc
-ms.openlocfilehash: 33c00e90d768021e36a7987be0ddd7daec4cfcec
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 7bc2b66367af5e764e77d44dde45a379d1aba938
+ms.sourcegitcommit: 1d3af230ec30d8d061be7a887f6ba38a530c4ece
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224037"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102511963"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Öğretici: ilk çözümleyicinizi ve kod düzeltmesini yazma
 
-.NET Compiler Platform SDK, C# veya Visual Basic kodunu hedefleyen özel uyarılar oluşturmak için ihtiyacınız olan araçları sağlar. **Çözümleyici** , kuralınızın ihlallerini algılayan kod içerir. **Kod düzeltmenizi** ihlalin giderdiği kodu içerir. Uyguladığınız kurallar, kod yapısından, adlandırma kurallarına ve daha fazlasına yönelik kodlama stiline kadar herhangi bir şey olabilir. .NET Compiler Platform, geliştiricilerin kod yazmakta olduğu ve kodu düzeltmek için tüm Visual Studio Kullanıcı arabirimi özelliklerinin yanı sıra kodu çözmede, Visual Studio Hata Listesi, "ampul" önerilerini oluşturarak ve önerilen düzeltmelerin zengin önizlemesini göstererek, analiz çalıştırma çerçevesini sağlar.
+.NET Compiler Platform SDK 'Sı, C# veya Visual Basic kodunu hedefleyen özel Tanılamalar (çözümleyiciler), kod düzeltmeleri, kod yeniden düzenleme ve tanılama Gizleyiciler oluşturmak için ihtiyacınız olan araçları sağlar. **Çözümleyici** , kuralınızın ihlallerini algılayan kod içerir. **Kod düzeltmenizi** ihlalin giderdiği kodu içerir. Uyguladığınız kurallar, kod yapısından, adlandırma kurallarına ve daha fazlasına yönelik kodlama stiline kadar herhangi bir şey olabilir. .NET Compiler Platform, geliştiricilerin kod yazmakta olduğu ve kodu düzeltmek için tüm Visual Studio Kullanıcı arabirimi özelliklerinin yanı sıra kodu çözmede, Visual Studio Hata Listesi, "ampul" önerilerini oluşturarak ve önerilen düzeltmelerin zengin önizlemesini göstererek, analiz çalıştırma çerçevesini sağlar.
 
-Bu öğreticide, bir **çözümleyici** oluşturmayı ve Roslyn API 'lerini kullanarak bir **kod düzeltmesini** inceleyebilirsiniz. Çözümleyici, kaynak kodu analizini gerçekleştirmek ve kullanıcıya bir sorun bildirmek için bir yoldur. İsteğe bağlı olarak, bir çözümleyici kullanıcının kaynak kodunda bir değişikliği temsil eden bir kod düzeltmesini de sağlayabilir. Bu öğreticide, değiştirici kullanılarak bildirilebilecek ancak olmayan yerel değişken bildirimlerini bulan bir çözümleyici oluşturulur `const` . Eşlik eden kod düzeltilmesi, değiştiriciyi eklemek için bu bildirimleri değiştirir `const` .
+Bu öğreticide, bir **çözümleyici** oluşturmayı ve Roslyn API 'lerini kullanarak bir **kod düzeltmesini** inceleyebilirsiniz. Çözümleyici, kaynak kodu analizini gerçekleştirmek ve kullanıcıya bir sorun bildirmek için bir yoldur. İsteğe bağlı olarak, kullanıcının kaynak kodunda yapılan bir değişikliği göstermek için bir kod onarımı çözümleyici ile ilişkilendirilebilir. Bu öğreticide, değiştirici kullanılarak bildirilebilecek ancak olmayan yerel değişken bildirimlerini bulan bir çözümleyici oluşturulur `const` . Eşlik eden kod düzeltilmesi, değiştiriciyi eklemek için bu bildirimleri değiştirir `const` .
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
-- [Visual Studio 2019](https://www.visualstudio.com/downloads) sürüm 16,7 veya üzeri
+- [Visual Studio 2019](https://www.visualstudio.com/downloads) sürüm 16,8 veya üzeri
 
 **.Net Compiler Platform SDK 'sını** Visual Studio yükleyicisi aracılığıyla yüklemeniz gerekir:
 
@@ -32,9 +32,39 @@ Bu öğreticide, bir **çözümleyici** oluşturmayı ve Roslyn API 'lerini kull
 1. Önerileri kabul etmek için kod düzeltmesini uygulayın.
 1. Birim testler aracılığıyla Analizi geliştirme.
 
+## <a name="create-the-solution"></a>Çözümü oluşturma
+
+- Visual Studio 'da yeni proje iletişim kutusunu göstermek için **dosya > yeni > proje..** . öğesini seçin.
+- **Visual C# > genişletilebilirlik** altında, **kod düzeltmesine sahip çözümleyici 'yi (.NET Standard)** seçin.
+- Projenizi "**Makeconst**" olarak adlandırın ve Tamam ' a tıklayın.
+
 ## <a name="explore-the-analyzer-template"></a>Çözümleyici şablonunu keşfet
 
-Çözümleyici, kullanıcıya yerel sabitlere dönüştürülebileceği herhangi bir yerel değişken bildirimi bildirir. Örneğin, aşağıdaki kodu göz önünde bulundurun:
+Kod düzelme şablonuyla çözümleyici, beş proje oluşturur:
+
+- Çözümleyicisi içeren **Makeconst**.
+- Kod düzeltmesini içeren **Makeconst. Codedüzeltmeleriyle**.
+- Çözümleyici ve kod düzeltilmesi için NuGet paketini üretmek için kullanılan **Makeconst. Package**.
+- Bir birim testi projesi olan **Makeconst. test**.
+- Yeni çözümleyicinizi yükleyen ikinci bir Visual Studio örneğini başlatan varsayılan başlangıç projesi olan **Makeconst. vsix**. VSıX projesini başlatmak için <kbd>F5</kbd> tuşuna basın.
+
+> [!TIP]
+> Çözümleyicinizi çalıştırdığınızda, Visual Studio 'nun ikinci bir kopyasını başlatabilirsiniz. Bu ikinci kopya ayarları depolamak için farklı bir kayıt defteri kovanı kullanır. Bu, Visual Studio 'nun iki kopyasında görsel ayarları ayırt etmenize olanak sağlar. Visual Studio 'nun deneysel çalıştırması için farklı bir tema seçebilirsiniz. Ayrıca, Visual Studio 'nun deneysel çalıştırmasını kullanarak ayarlarınızı dolaşıyor veya Visual Studio hesabınızda oturum açmayın. Bu, ayarları farklı tutar.
+
+Az önce başlattığınız ikinci Visual Studio örneğinde yeni bir C# konsol uygulaması projesi oluşturun (herhangi bir hedef çerçeve, kaynak düzeyinde çalışır.) Simgenin üzerine dalgalı alt çizgiyle gelin ve bir çözümleyici tarafından sunulan uyarı metni görüntülenir.
+
+Şablon, aşağıdaki şekilde gösterildiği gibi tür adında küçük harfler içeren her tür bildiriminde uyarı raporlayan bir çözümleyici oluşturur:
+
+![Çözümleyici raporlama uyarısı](media/how-to-write-csharp-analyzer-code-fix/report-warning.png)
+
+Şablon Ayrıca, küçük harf karakter içeren herhangi bir tür adını tüm büyük harflere değiştiren bir kod düzeltmesini de sağlar. Önerilen değişiklikleri görmek için uyarıyla birlikte görüntülenecek ampule tıklayabilirsiniz. Önerilen değişiklikler kabul edildiğinde, tür adı ve çözümdeki bu türe yapılan tüm başvurular güncelleştirilir. İlk çözümleyici 'yi eylemde gördüğünüze göre, ikinci Visual Studio örneğini kapatın ve çözümleyici projenize geri dönün.
+
+Visual Studio 'nun ikinci bir kopyasını başlatmanız ve çözümleyicinizdeki her değişikliği test etmek için yeni kod oluşturmanız gerekmez. Şablon sizin için bir birim testi projesi de oluşturur. Bu proje iki test içerir. `TestMethod1` Bir tanılamayı tetiklemeden kodu çözümleyen testin tipik biçimini gösterir. `TestMethod2` Bir tanılamayı tetikleyen testin biçimini gösterir ve ardından önerilen bir kod düzeltmesini uygular. Çözümleyicinizi ve kod düzeltmesini oluştururken, çalışmanızı doğrulamak üzere farklı kod yapıları için testler yazacaksınız. Çözümleyiciler için birim testleri, Visual Studio ile etkileşimli olarak test edilmesine kıyasla çok daha hızlıdır.
+
+> [!TIP]
+> Çözümleyici birim testleri, hangi kod yapılarının çözümleyicinizi tetikleyemediğini bildiğiniz ve bu harika bir araçtır. Visual Studio 'nun başka bir kopyasına çözümleyicinizi yüklemek, henüz düşünmemiş olan yapıları keşfetmeye ve bulmaya yönelik harika bir araçtır.
+
+Bu öğreticide, kullanıcıya, yerel sabitlere dönüştürülebilen herhangi bir yerel değişken bildirimini raporlayan bir çözümleyici yazarsınız. Örneğin, aşağıdaki kodu göz önünde bulundurun:
 
 ```csharp
 int x = 0;
@@ -48,36 +78,14 @@ const int x = 0;
 Console.WriteLine(x);
 ```
 
-Bir değişkenin sabit bir şekilde yapılıp yapılmayacağını belirleme, değişken için sözdizimi analizi, başlatıcı ifadesinin sabit Analizi ve değişkenin hiçbir şekilde yazılmaması için veri akışı analizi gerektirir. .NET Compiler Platform, bu çözümlemenin daha kolay hale getirebilmesini sağlayan API 'Ler sağlar. İlk adım, **kod düzeltilme projesi ile** yeni bir C# Çözümleyicisi oluşturmaktır.
-
-- Visual Studio 'da yeni proje iletişim kutusunu göstermek için **dosya > yeni > proje..** . öğesini seçin.
-- **Visual C# > genişletilebilirlik**altında, **kod düzeltmesine sahip çözümleyici 'yi (.NET Standard)** seçin.
-- Projenizi "**Makeconst**" olarak adlandırın ve Tamam ' a tıklayın.
-
-Code düzeltmesini içeren çözümleyici, üç proje oluşturur: biri çözümleyici ve kod düzeltmesini içerir, ikincisi bir birim testi projisidir ve üçüncüsü VSıX projisidir. Varsayılan başlangıç projesi VSıX projem ' dir. VSıX projesini başlatmak için <kbd>F5</kbd> tuşuna basın. Bu, yeni çözümleyicinizi yükleyen ikinci bir Visual Studio örneğini başlatır.
-
-> [!TIP]
-> Çözümleyicinizi çalıştırdığınızda, Visual Studio 'nun ikinci bir kopyasını başlatabilirsiniz. Bu ikinci kopya ayarları depolamak için farklı bir kayıt defteri kovanı kullanır. Bu, Visual Studio 'nun iki kopyasında görsel ayarları ayırt etmenize olanak sağlar. Visual Studio 'nun deneysel çalıştırması için farklı bir tema seçebilirsiniz. Ayrıca, Visual Studio 'nun deneysel çalıştırmasını kullanarak ayarlarınızı dolaşıyor veya Visual Studio hesabınızda oturum açmayın. Bu, ayarları farklı tutar.
-
-Az önce başlattığınız ikinci Visual Studio örneğinde, yeni bir C# konsol uygulaması projesi oluşturun (.NET Core veya .NET Framework Project, kaynak düzeyinde çalışır.) Simgenin üzerine dalgalı alt çizgiyle gelin ve bir çözümleyici tarafından sunulan uyarı metni görüntülenir.
-
-Şablon, aşağıdaki şekilde gösterildiği gibi tür adında küçük harfler içeren her tür bildiriminde uyarı raporlayan bir çözümleyici oluşturur:
-
-![Çözümleyici raporlama uyarısı](media/how-to-write-csharp-analyzer-code-fix/report-warning.png)
-
-Şablon Ayrıca, küçük harf karakter içeren herhangi bir tür adını tüm büyük harflere değiştiren bir kod düzeltmesini de sağlar. Önerilen değişiklikleri görmek için uyarıyla birlikte görüntülenecek ampule tıklayabilirsiniz. Önerilen değişiklikler kabul edildiğinde, tür adı ve çözümdeki bu türe yapılan tüm başvurular güncelleştirilir. İlk çözümleyici 'yi eylemde gördüğünüze göre, ikinci Visual Studio örneğini kapatın ve çözümleyici projenize geri dönün.
-
-Visual Studio 'nun ikinci bir kopyasını başlatmanız ve çözümleyicinizdeki her değişikliği test etmek için yeni kod oluşturmanız gerekmez. Şablon sizin için bir birim testi projesi de oluşturur. Bu proje iki test içerir. `TestMethod1` Bir tanılamayı tetiklemeden kodu çözümleyen testin tipik biçimini gösterir. `TestMethod2` Bir tanılamayı tetikleyen testin biçimini gösterir ve ardından önerilen bir kod düzeltmesini uygular. Çözümleyicinizi ve kod düzeltmesini oluştururken, çalışmanızı doğrulamak üzere farklı kod yapıları için testler yazacaksınız. Çözümleyiciler için birim testleri, Visual Studio ile etkileşimli olarak test edilmesine kıyasla çok daha hızlıdır.
-
-> [!TIP]
-> Çözümleyici birim testleri, hangi kod yapılarının çözümleyicinizi tetikleyemediğini bildiğiniz ve bu harika bir araçtır. Visual Studio 'nun başka bir kopyasına çözümleyicinizi yüklemek, henüz düşünmemiş olan yapıları keşfetmeye ve bulmaya yönelik harika bir araçtır.
+Bir değişkenin sabit bir şekilde yapılıp yapılmayacağını belirleme, değişken için sözdizimi analizi, başlatıcı ifadesinin sabit Analizi ve değişkenin hiçbir şekilde yazılmaması için veri akışı analizi gerektirir. .NET Compiler Platform, bu çözümlemenin daha kolay hale getirebilmesini sağlayan API 'Ler sağlar.
 
 ## <a name="create-analyzer-registrations"></a>Çözümleyici kayıtları oluşturma
 
-Şablon, `DiagnosticAnalyzer` **MakeConstAnalyzer.cs** dosyasında başlangıç sınıfını oluşturur. Bu ilk çözümleyici, her çözümleyici 'nin iki önemli özelliğini gösterir.
+Şablon, `DiagnosticAnalyzer` *MakeConstAnalyzer.cs* dosyasında başlangıç sınıfını oluşturur. Bu ilk çözümleyici, her çözümleyici 'nin iki önemli özelliğini gösterir.
 
 - Her Tanılama Çözümleyicisi `[DiagnosticAnalyzer]` , üzerinde çalıştığı dili açıklayan bir öznitelik sağlamalıdır.
-- Her Tanılama Çözümleyicisi <xref:Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer> sınıfından türetilmelidir.
+- Her Tanılama Çözümleyicisi sınıfından (doğrudan veya dolaylı olarak) türemelidir <xref:Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer> .
 
 Şablon, herhangi bir çözümleyici 'nin parçası olan temel özellikleri de gösterir:
 
@@ -86,17 +94,17 @@ Visual Studio 'nun ikinci bir kopyasını başlatmanız ve çözümleyicinizdeki
 
 Eylemini geçersiz kılmanızda kaydedebilirsiniz <xref:Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer.Initialize(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)?displayProperty=nameWithType> . Bu öğreticide, yerel bildirimleri arayan **sözdizimi düğümlerini** ziyaret edeceğiz ve hangilerinin sabit değerlere sahip olduğunu görürsünüz. Bir bildirim sabitlenebilir, çözümleyici bir tanılama oluşturup rapor eder.
 
-İlk adım, kayıt sabitlerini ve yöntemini güncelleştirmek ve `Initialize` Bu sabitler "const yap" çözümleyicisini göstermek için kullanılır. Dize sabitlerinin çoğu dize kaynak dosyasında tanımlanmıştır. Daha kolay yerelleştirme için bu uygulamayı izlemeniz gerekir. **Makeconst** çözümleyici projesi için **Resources. resx** dosyasını açın. Bu, kaynak düzenleyicisini görüntüler. Dize kaynaklarını aşağıdaki gibi güncelleştirin:
+İlk adım, kayıt sabitlerini ve yöntemini güncelleştirmek ve `Initialize` Bu sabitler "const yap" çözümleyicisini göstermek için kullanılır. Dize sabitlerinin çoğu dize kaynak dosyasında tanımlanmıştır. Daha kolay yerelleştirme için bu uygulamayı izlemeniz gerekir. **Makeconst** çözümleyici projesi için *Resources. resx* dosyasını açın. Bu, kaynak düzenleyicisini görüntüler. Dize kaynaklarını aşağıdaki gibi güncelleştirin:
 
-- `AnalyzerTitle`"Değişken sabit hale getirilebilir" olarak değiştirin.
-- `AnalyzerMessageFormat`"Sabit yapılabilir" olarak değiştirin.
-- `AnalyzerDescription`"Sabit yap" olarak değiştirin.
+- `AnalyzerDescription`"" Olarak değiştirin :::no-loc text="Variables that are not modified should be made constants."::: .
+- `AnalyzerMessageFormat`"" Olarak değiştirin :::no-loc text="Variable '{0}' can be made constant"::: .
+- `AnalyzerTitle`"Olarak değiştirin :::no-loc text="Variable can be made constant"::: .
 
-Ayrıca, **erişim değiştirici** açılan öğesini olarak değiştirin `public` . Bu, birim testlerinde bu sabitleri kullanmayı kolaylaştırır. İşiniz bittiğinde, kaynak Düzenleyicisi aşağıdaki şekilde görünür:
+İşiniz bittiğinde, kaynak Düzenleyicisi aşağıdaki şekilde görünür:
 
 ![Dize kaynaklarını Güncelleştir](media/how-to-write-csharp-analyzer-code-fix/update-string-resources.png)
 
-Geri kalan değişiklikler çözümleyici dosyasıdır. Visual Studio 'da **MakeConstAnalyzer.cs** açın. Semboller üzerinde çalışan bir eylemden, söz dizimi üzerinde davranan bir eylemi değiştirin. `MakeConstAnalyzerAnalyzer.Initialize`Yönteminde, simgeleri üzerinde eylemi kaydeden satırı bulun:
+Geri kalan değişiklikler çözümleyici dosyasıdır. Visual Studio 'da *MakeConstAnalyzer.cs* açın. Semboller üzerinde çalışan bir eylemden, söz dizimi üzerinde davranan bir eylemi değiştirin. `MakeConstAnalyzerAnalyzer.Initialize`Yönteminde, simgeleri üzerinde eylemi kaydeden satırı bulun:
 
 ```csharp
 context.RegisterSymbolAction(AnalyzeSymbol, SymbolKind.NamedType);
@@ -104,7 +112,7 @@ context.RegisterSymbolAction(AnalyzeSymbol, SymbolKind.NamedType);
 
 Aşağıdaki satırla değiştirin:
 
-[!code-csharp[Register the node action](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstAnalyzer.cs#RegisterNodeAction "Register a node action")]
+[!code-csharp[Register the node action](snippets/how-to-write-csharp-analyzer-code-fix/MakeConst/MakeConst/MakeConstAnalyzer.cs#RegisterNodeAction "Register a node action")]
 
 Bu değişiklikten sonra `AnalyzeSymbol` yöntemini silebilirsiniz. Bu çözümleyici <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.LocalDeclarationStatement?displayProperty=nameWithType> , deyimleri inceler <xref:Microsoft.CodeAnalysis.SymbolKind.NamedType?displayProperty=nameWithType> . `AnalyzeNode`Altında Red dalgalı çizgiler olduğuna dikkat edin. Az önce eklediğiniz kod `AnalyzeNode` bildirilmemiş bir yönteme başvurur. Aşağıdaki kodu kullanarak bu yöntemi bildirin:
 
@@ -114,11 +122,9 @@ private void AnalyzeNode(SyntaxNodeAnalysisContext context)
 }
 ```
 
-`Category`Aşağıdaki kodda gösterildiği gibi, **MakeConstAnalyzer.cs** içinde "kullanım" olarak değiştirin:
+`Category` :::no-loc text="Usage"::: Aşağıdaki kodda gösterildiği gibi, *MakeConstAnalyzer.cs* içinde "" olarak değiştirin:
 
-```csharp
-private const string Category = "Usage";
-```
+[!code-csharp[Category constant](snippets/how-to-write-csharp-analyzer-code-fix/MakeConst/MakeConst/MakeConstAnalyzer.cs#Category  "Change category to Usage")]
 
 ## <a name="find-local-declarations-that-could-be-const"></a>Const olabilecek yerel bildirimleri bul
 
@@ -129,21 +135,13 @@ int x = 0;
 Console.WriteLine(x);
 ```
 
-İlk adım, yerel bildirimleri bulledir. Aşağıdaki kodu `AnalyzeNode` **MakeConstAnalyzer.cs**içine ekleyin:
+İlk adım, yerel bildirimleri bulledir. Aşağıdaki kodu `AnalyzeNode` *MakeConstAnalyzer.cs* içine ekleyin:
 
-```csharp
-var localDeclaration = (LocalDeclarationStatementSyntax)context.Node;
-```
+[!code-csharp[localDeclaration variable](snippets/how-to-write-csharp-analyzer-code-fix/MakeConst/MakeConst/MakeConstAnalyzer.cs#LocalDeclaration  "Add localDeclaration variable")]
 
 Bu atama, çözümleyici yerel bildirimlerinizde değişiklikler ve yalnızca yerel bildirimler için kaydedildiği için her zaman başarılı olur. Başka hiçbir düğüm türü, yönteminiz için bir çağrı tetiklemiyor `AnalyzeNode` . Sonra, herhangi bir değiştiricinin bildirimini kontrol edin `const` . Bunları bulursanız anında geri dönün. Aşağıdaki kod, `const` Yerel bildirimde herhangi bir değiştirici arar:
 
-```csharp
-// make sure the declaration isn't already const:
-if (localDeclaration.Modifiers.Any(SyntaxKind.ConstKeyword))
-{
-    return;
-}
-```
+[!code-csharp[bail-out on const keyword](snippets/how-to-write-csharp-analyzer-code-fix/MakeConst/MakeConst/MakeConstAnalyzer.cs#BailOutOnConst  "bail-out on const keyword")]
 
 Son olarak, değişkenin olup olmadığını kontrol etmeniz gerekir `const` . Bu, başlatıldıktan sonra hiçbir şekilde atanmadığından emin olmak anlamına gelir.
 
@@ -151,12 +149,12 @@ Kullanarak bazı semantik analizler gerçekleştirirsiniz <xref:Microsoft.CodeAn
 
 ```csharp
 // Perform data flow analysis on the local declaration.
-var dataFlowAnalysis = context.SemanticModel.AnalyzeDataFlow(localDeclaration);
+DataFlowAnalysis dataFlowAnalysis = context.SemanticModel.AnalyzeDataFlow(localDeclaration);
 
 // Retrieve the local symbol for each variable in the local declaration
 // and ensure that it is not written outside of the data flow analysis region.
-var variable = localDeclaration.Declaration.Variables.Single();
-var variableSymbol = context.SemanticModel.GetDeclaredSymbol(variable);
+VariableDeclaratorSyntax variable = localDeclaration.Declaration.Variables.Single();
+ISymbol variableSymbol = context.SemanticModel.GetDeclaredSymbol(variable, context.CancellationToken);
 if (dataFlowAnalysis.WrittenOutside.Contains(variableSymbol))
 {
     return;
@@ -165,9 +163,7 @@ if (dataFlowAnalysis.WrittenOutside.Contains(variableSymbol))
 
 Yeni eklenen kod, değişkenin değiştirilmediğinden emin olur ve bu nedenle yapılabilir `const` . Tanılamayı yükseltme zamanı. Aşağıdaki kodu içine son satır olarak ekleyin `AnalyzeNode` :
 
-```csharp
-context.ReportDiagnostic(Diagnostic.Create(Rule, context.Node.GetLocation()));
-```
+[!code-csharp[Call ReportDiagnostic](snippets/how-to-write-csharp-analyzer-code-fix/MakeConst/MakeConst/MakeConstAnalyzer.cs#ReportDiagnostic  "Call ReportDiagnostic")]
 
 <kbd>F5</kbd> 'e basarak çözümleyicinizi çalıştırmak için ilerleme durumunu kontrol edebilirsiniz. Daha önce oluşturduğunuz konsol uygulamasını yükleyebilir ve sonra şu test kodunu ekleyebilirsiniz:
 
@@ -182,33 +178,34 @@ Ampul görünmelidir ve çözümleyici 'niz bir tanılama raporlemelidir. Ancak 
 
 Bir çözümleyici, bir veya daha fazla kod düzeltmesi sağlayabilir. Kod onarımı, bildirilen sorunu ele alan bir düzenleme tanımlar. Oluşturduğunuz çözümleyici için, const anahtar sözcüğünü ekleyen bir kod düzeltmesini sağlayabilirsiniz:
 
-```csharp
-const int x = 0;
+```diff
+- int x = 0;
++ const int x = 0;
 Console.WriteLine(x);
 ```
 
 Kullanıcı onu düzenleyicide ampul kullanıcı arabiriminden seçer ve Visual Studio kodu değiştirir.
 
-Şablon tarafından eklenen **MakeConstCodeFixProvider.cs** dosyasını açın.  Bu kod onarımı, tanılama çözümleyici 'niz tarafından üretilen tanılama KIMLIĞI 'ne zaten kablolu, ancak doğru kod dönüşümünü uygulamıyor. Öncelikle bazı şablon kodunu kaldırmalısınız. Başlık dizesini "sabit yap" olarak değiştirin:
+*Codefixresources. resx* dosyasını açın ve `CodeFixTitle` "" olarak değiştirin :::no-loc text="Make constant"::: .
 
-[!code-csharp[Update the CodeFix title](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#CodeFixTitle "Update the CodeFix title")]
+Şablon tarafından eklenen *MakeConstCodeFixProvider.cs* dosyasını açın. Bu kod onarımı, tanılama çözümleyici 'niz tarafından üretilen tanılama KIMLIĞI 'ne zaten kablolu, ancak doğru kod dönüşümünü uygulamıyor.
 
 Sonra, yöntemini silin `MakeUppercaseAsync` . Artık geçerli değildir.
 
 Tüm kod onarma sağlayıcıları öğesinden türetilir <xref:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider> . Bunlar, <xref:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.RegisterCodeFixesAsync(Microsoft.CodeAnalysis.CodeFixes.CodeFixContext)?displayProperty=nameWithType> kullanılabilir kod düzeltmelerini raporlamak için tüm geçersiz kılınır. ' De `RegisterCodeFixesAsync` , <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> tanı ile eşleştirmek için Aradığınız üst düğüm türünü bir olarak değiştirin:
 
-[!code-csharp[Find local declaration node](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#FindDeclarationNode  "Find the local declaration node that raised the diagnostic")]
+[!code-csharp[Find local declaration node](snippets/how-to-write-csharp-analyzer-code-fix/MakeConst/MakeConst.CodeFixes/MakeConstCodeFixProvider.cs#FindDeclarationNode  "Find the local declaration node that raised the diagnostic")]
 
 Sonra, bir kod düzeltmesini kaydetmek için son satırı değiştirin. Bu değişiklik, değiştiricinin mevcut bir bildirime eklenmesinin sonucu olan yeni bir belge oluşturur `const` :
 
-[!code-csharp[Register the new code fix](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#RegisterCodeFix  "Register the new code fix")]
+[!code-csharp[Register the new code fix](snippets/how-to-write-csharp-analyzer-code-fix/MakeConst/MakeConst.CodeFixes/MakeConstCodeFixProvider.cs#RegisterCodeFix  "Register the new code fix")]
 
 Simgenin üzerine yeni eklediğiniz kodda kırmızı dalgalı çizgiler fark edeceksiniz `MakeConstAsync` . `MakeConstAsync`Aşağıdaki kodu beğenmek için bir bildirim ekleyin:
 
 ```csharp
-private async Task<Document> MakeConstAsync(Document document,
-   LocalDeclarationStatementSyntax localDeclaration,
-   CancellationToken cancellationToken)
+private static async Task<Document> MakeConstAsync(Document document,
+    LocalDeclarationStatementSyntax localDeclaration,
+    CancellationToken cancellationToken)
 {
 }
 ```
@@ -217,22 +214,22 @@ Yeni `MakeConstAsync` yönteminiz, <xref:Microsoft.CodeAnalysis.Document> kullan
 
 `const`Bildirim ifadesinin önüne eklemek için yeni bir anahtar sözcük belirteci oluşturursunuz. Önce bildirim bildiriminin ilk belirtecinden önde gelen her türlü boşluğu kaldırmak ve belirtece eklemek konusunda dikkatli olun `const` . `MakeConstAsync` yöntemine aşağıdaki kodu ekleyin:
 
-[!code-csharp[Create a new const keyword token](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#CreateConstToken  "Create the new const keyword token")]
+[!code-csharp[Create a new const keyword token](snippets/how-to-write-csharp-analyzer-code-fix/MakeConst/MakeConst.CodeFixes/MakeConstCodeFixProvider.cs#CreateConstToken  "Create the new const keyword token")]
 
 Ardından, `const` aşağıdaki kodu kullanarak belirteci bildirime ekleyin:
 
 ```csharp
 // Insert the const token into the modifiers list, creating a new modifiers list.
-var newModifiers = trimmedLocal.Modifiers.Insert(0, constToken);
+SyntaxTokenList newModifiers = trimmedLocal.Modifiers.Insert(0, constToken);
 // Produce the new local declaration.
-var newLocal = trimmedLocal
+LocalDeclarationStatementSyntax newLocal = trimmedLocal
     .WithModifiers(newModifiers)
     .WithDeclaration(localDeclaration.Declaration);
 ```
 
 Ardından, yeni bildirimi C# biçimlendirme kurallarıyla eşleşecek şekilde biçimlendirin. Değişikliklerinizi varolan kodla eşleşecek şekilde biçimlendirmek daha iyi bir deneyim oluşturur. Mevcut koddan hemen sonra aşağıdaki ifadeyi ekleyin:
 
-[!code-csharp[Format the new declaration](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#FormatLocal  "Format the new declaration")]
+[!code-csharp[Format the new declaration](snippets/how-to-write-csharp-analyzer-code-fix/MakeConst/MakeConst.CodeFixes/MakeConstCodeFixProvider.cs#FormatLocal  "Format the new declaration")]
 
 Bu kod için yeni bir ad alanı gereklidir. Aşağıdaki `using` yönergeyi dosyanın en üstüne ekleyin:
 
@@ -248,7 +245,7 @@ Son adım, düzenlemenizi yapmak için kullanılır. Bu işlemin üç adımı va
 
 Yönteminin sonuna aşağıdaki kodu ekleyin `MakeConstAsync` :
 
-[!code-csharp[replace the declaration](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#ReplaceDocument  "Generate a new document by replacing the declaration")]
+[!code-csharp[replace the declaration](snippets/how-to-write-csharp-analyzer-code-fix/MakeConst/MakeConst.CodeFixes/MakeConstCodeFixProvider.cs#ReplaceDocument  "Generate a new document by replacing the declaration")]
 
 Kod düzeltmeizin denemeye hazırlanıyor.  Visual Studio 'nun ikinci bir örneğinde çözümleyici projesini çalıştırmak için <kbd>F5</kbd> tuşuna basın. İkinci Visual Studio örneğinde, yeni bir C# konsol uygulaması projesi oluşturun ve Main yöntemine sabit değerlerle başlatılan birkaç yerel değişken bildirimi ekleyin. Bunların uyarı olarak raporlandıklarından aşağıda gösterildiği gibi göreceksiniz.
 
@@ -256,106 +253,51 @@ Kod düzeltmeizin denemeye hazırlanıyor.  Visual Studio 'nun ikinci bir örne�
 
 Çok sayıda ilerleme yaptınız. Bildirimlerin altında dalgalı çizgiler vardır `const` . Ancak yine de devam eden bir iş var. Bu `const` `i` , sonrasında `j` ve son olarak bulunan bildirimlere eklerseniz bu işe yarar `k` . Ancak, `const` değiştiricisini ile başlayarak farklı bir sırada eklerseniz `k` , çözümleyici 'niz hata oluşturuyor: `k` `const` `i` ve ikisi birden olmadığı için bildirilemez `j` `const` . Değişkenlerin bildirilebilecek ve başlatılabileceği farklı yolları işlediğinizden emin olmak için daha fazla analiz yapmanız gerekir.
 
-## <a name="build-data-driven-tests"></a>Veri odaklı testler oluşturun
+## <a name="build-unit-tests"></a>Derleme birimi testleri
 
 Çözümleyici ve kod düzeltmesizin const hale getirilebilir tek bir bildirimin basit bir durumunda çalışır. Bu uygulamanın hata yaptığı çok sayıda olası bildirim deyimi vardır. Şablon tarafından yazılan birim testi kitaplığıyla çalışarak bu durumları ele alacağız. Visual Studio 'nun ikinci bir kopyasını art arda açmadan çok daha hızlıdır.
 
-Birim testi projesinde **MakeConstUnitTests.cs** dosyasını açın. Şablon, bir çözümleyici ve kod düzelme birimi testi için iki ortak deseni izleyen iki test oluşturmuştur. `TestMethod1` çözümleyicinin ne zaman bir tanılama bildirmemesini sağlayan bir testin modelini gösterir. `TestMethod2` Bir tanılamayı raporlamak ve kod düzeltmesini çalıştırmak için bir model gösterir.
+Birim testi projesinde *MakeConstUnitTests.cs* dosyasını açın. Şablon, bir çözümleyici ve kod düzelme birimi testi için iki ortak deseni izleyen iki test oluşturmuştur. `TestMethod1` çözümleyicinin ne zaman bir tanılama bildirmemesini sağlayan bir testin modelini gösterir. `TestMethod2` Bir tanılamayı raporlamak ve kod düzeltmesini çalıştırmak için bir model gösterir.
 
-Çözümleyicinizi neredeyse her test için kod, bu iki desenden birini izler. İlk adımda, bu testlerin veri odaklı testler olarak yeniden kullanılabilir. Daha sonra, farklı test girişlerini temsil etmek için yeni dize sabitleri ekleyerek yeni testlerin oluşturulması kolay olur.
+Şablon, birim testi için [Microsoft. CodeAnalysis. Testing](https://github.com/dotnet/roslyn-sdk/blob/master/src/Microsoft.CodeAnalysis.Testing/README.md) paketlerini kullanır.
 
-Verimlilik için ilk adım, veri odaklı testlerde iki testi yeniden düzenleme. Ardından, her yeni test için yalnızca birkaç dize sabiti tanımlamanız gerekir. Yeniden düzenleme yaparken her iki yöntemi de daha iyi adlarla yeniden adlandırın. `TestMethod1`Herhangi bir tanılama işlemi yapılmasını sağlayan bu testle değiştirin:
+> [!TIP]
+> Sınama kitaplığı, aşağıdakiler de dahil olmak üzere özel bir biçimlendirme söz dizimini destekler:
+>
+> - `[|text|]`: için bir tanılayıcı rapor olduğunu gösterir `text` . Bu form, varsayılan olarak yalnızca tarafından sağlanmış olan Çözümleyicileri test etmek için kullanılabilir `DiagnosticDescriptor` `DiagnosticAnalyzer.SupportedDiagnostics` .
+> - `{|ExpectedDiagnosticId:text|}`: ile bir Tanılamanın rapor olduğunu gösterir <xref:Microsoft.CodeAnalysis.Diagnostic.Id> `ExpectedDiagnosticId` `text` .
 
-```csharp
-[DataTestMethod]
-[DataRow("")]
-public void WhenTestCodeIsValidNoDiagnosticIsTriggered(string testCode)
-{
-    VerifyCSharpDiagnostic(testCode);
-}
-```
+Aşağıdaki test yöntemini `MakeConstUnitTest` sınıfına ekleyin:
 
-Tanılamanın bir uyarı tetiklemesine neden olmaması gereken herhangi bir kod parçasını tanımlayarak, bu test için yeni bir veri satırı oluşturabilirsiniz. `VerifyCSharpDiagnostic`Kaynak kod parçası için hiçbir Tanılama tetikleniyorsa, bu geçiş yükü geçer.
+[!code-csharp[test method for fix test](snippets/how-to-write-csharp-analyzer-code-fix/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#FirstFixTest "test method for fix test")]
 
-Sonra, `TestMethod2` bir Tanılamanın ortaya çıkarılmasını ve kaynak kod parçası için bir kod düzeltmesinin uygulanmasını sağlayan bu testle değiştirin:
-
-```csharp
-[DataTestMethod]
-[DataRow(LocalIntCouldBeConstant, LocalIntCouldBeConstantFixed, 10, 13)]
-public void WhenDiagnosticIsRaisedFixUpdatesCode(
-    string test,
-    string fixTest,
-    int line,
-    int column)
-{
-    var expected = new DiagnosticResult
-    {
-        Id = MakeConstAnalyzer.DiagnosticId,
-        Message = new LocalizableResourceString(nameof(MakeConst.Resources.AnalyzerMessageFormat), MakeConst.Resources.ResourceManager, typeof(MakeConst.Resources)).ToString(),
-        Severity = DiagnosticSeverity.Warning,
-        Locations =
-            new[] {
-                    new DiagnosticResultLocation("Test0.cs", line, column)
-                }
-    };
-
-    VerifyCSharpDiagnostic(test, expected);
-
-    VerifyCSharpFix(test, fixTest);
-}
-```
-
-Yukarıdaki kod ayrıca, beklenen tanılama sonucunu oluşturan kodda birkaç değişiklik yaptı. Çözümleyici 'de kayıtlı olan genel sabitleri kullanır `MakeConst` . Ayrıca, giriş ve sabit kaynak için iki dize sabiti kullanır. Sınıfına aşağıdaki dize sabitlerini ekleyin `UnitTest` :
-
-[!code-csharp[string constants for fix test](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#FirstFixTest "string constants for fix test")]
-
-Geçirdiklerinden emin olmak için bu iki testi çalıştırın. Visual Studio 'da **, test** **Test Explorer**  >  **Windows**  >  **Test Gezgini**' ni seçerek test Gezginini açın. Ardından **Tümünü Çalıştır** bağlantısını seçin.
+Geçirdiklerinden emin olmak için bu iki testi çalıştırın. Visual Studio 'da **, test**   >  **Windows**  >  **Test Gezgini**' ni seçerek test Gezginini açın. Ardından **Tümünü Çalıştır**' ı seçin.
 
 ## <a name="create-tests-for-valid-declarations"></a>Geçerli bildirimler için testler oluşturma
 
-Genel bir kural olarak, çözümleyicilerin olabildiğince çabuk çıkması gerekir ve en az iş yapılır. Visual Studio, Kullanıcı kodu düzenlediği için kayıtlı çözümleyiciler çağırır. Yanıt verme bir anahtar gereksinimidir. Tanılamasını yükseltmemelidir kod için birkaç test çalışması vardır. Çözümleyicisi zaten bu testlerin birini, bir değişkenin başlatıldıktan sonra atandığı durumu işler. Bu durumu göstermek için testlerinize aşağıdaki dize sabitini ekleyin:
+Genel bir kural olarak, çözümleyicilerin olabildiğince çabuk çıkması gerekir ve en az iş yapılır. Visual Studio, Kullanıcı kodu düzenlediği için kayıtlı çözümleyiciler çağırır. Yanıt verme bir anahtar gereksinimidir. Tanılamasını yükseltmemelidir kod için birkaç test çalışması vardır. Çözümleyicisi zaten bu testlerin birini, bir değişkenin başlatıldıktan sonra atandığı durumu işler. Bu durumu göstermek için aşağıdaki test yöntemini ekleyin:
 
-[!code-csharp[variable assigned](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#VariableAssigned "a variable that is assigned after being initialized won't raise the diagnostic")]
+[!code-csharp[variable assigned](snippets/how-to-write-csharp-analyzer-code-fix/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#VariableAssigned "a variable that is assigned after being initialized won't raise the diagnostic")]
 
-Ardından, aşağıdaki kod parçacığında gösterildiği gibi bu test için bir veri satırı ekleyin:
-
-```csharp
-[DataTestMethod]
-[DataRow(""),
- DataRow(VariableAssigned)]
-public void WhenTestCodeIsValidNoDiagnosticIsTriggered(string testCode)
-```
-
-Bu test da geçer. Daha sonra, henüz işlememiş olan koşullar için sabitler ekleyin:
+Bu test da geçer. Daha sonra, henüz işlenmeyen koşullar için test yöntemleri ekleyin:
 
 - Zaten const olduklarından, zaten sabit olan bildirimler `const` :
 
-   [!code-csharp[already const declaration](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#AlreadyConst "a declaration that is already const should not raise the diagnostic")]
+   [!code-csharp[already const declaration](snippets/how-to-write-csharp-analyzer-code-fix/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#AlreadyConst "a declaration that is already const should not raise the diagnostic")]
 
 - Başlatıcısı olmayan bildirimler, kullanılacak bir değer yoktur:
 
-   [!code-csharp[declarations that have no initializer](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#NoInitializer "a declaration that has no initializer should not raise the diagnostic")]
+   [!code-csharp[declarations that have no initializer](snippets/how-to-write-csharp-analyzer-code-fix/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#NoInitializer "a declaration that has no initializer should not raise the diagnostic")]
 
 - Başlatıcıya bir sabit olmadığı ve derleme zamanı sabitleri olmadıkları için bildirim:
 
-   [!code-csharp[declarations where the initializer isn't const](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#InitializerNotConstant "a declaration where the initializer is not a compile-time constant should not raise the diagnostic")]
+   [!code-csharp[declarations where the initializer isn't const](snippets/how-to-write-csharp-analyzer-code-fix/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#InitializerNotConstant "a declaration where the initializer is not a compile-time constant should not raise the diagnostic")]
 
 C# birden çok bildirime tek bir bildirimde Izin verdiğinden daha karmaşık olabilir. Aşağıdaki test çalışması dize sabitini göz önünde bulundurun:
 
-[!code-csharp[multiple initializers](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#MultipleInitializers "A declaration can be made constant only if all variables in that statement can be made constant")]
+[!code-csharp[multiple initializers](snippets/how-to-write-csharp-analyzer-code-fix/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#MultipleInitializers "A declaration can be made constant only if all variables in that statement can be made constant")]
 
-Değişken `i` sabit hale getirilebilir, ancak değişken `j` olamaz. Bu nedenle, bu ifade bir const bildirimi yapılamaz. `DataRow`Tüm bu testler için bildirimleri ekleyin:
-
-```csharp
-[DataTestMethod]
-[DataRow(""),
-    DataRow(VariableAssigned),
-    DataRow(AlreadyConst),
-    DataRow(NoInitializer),
-    DataRow(InitializerNotConstant),
-    DataRow(MultipleInitializers)]
-public void WhenTestCodeIsValidNoDiagnosticIsTriggered(string testCode)
-```
+Değişken `i` sabit hale getirilebilir, ancak değişken `j` olamaz. Bu nedenle, bu ifade bir const bildirimi yapılamaz.
 
 Testlerinizi yeniden çalıştırın ve bu yeni test çalışmalarını başarısız görürsünüz.
 
@@ -371,12 +313,12 @@ Testlerinizi yeniden çalıştırın ve bu yeni test çalışmalarını başarı
 
 ```csharp
 // Perform data flow analysis on the local declaration.
-var dataFlowAnalysis = context.SemanticModel.AnalyzeDataFlow(localDeclaration);
+DataFlowAnalysis dataFlowAnalysis = context.SemanticModel.AnalyzeDataFlow(localDeclaration);
 
 // Retrieve the local symbol for each variable in the local declaration
 // and ensure that it is not written outside of the data flow analysis region.
-var variable = localDeclaration.Declaration.Variables.Single();
-var variableSymbol = context.SemanticModel.GetDeclaredSymbol(variable);
+VariableDeclaratorSyntax variable = localDeclaration.Declaration.Variables.Single();
+ISymbol variableSymbol = context.SemanticModel.GetDeclaredSymbol(variable, context.CancellationToken);
 if (dataFlowAnalysis.WrittenOutside.Contains(variableSymbol))
 {
     return;
@@ -388,15 +330,15 @@ Aşağıdaki kod parçacığı ile:
 ```csharp
 // Ensure that all variables in the local declaration have initializers that
 // are assigned with constant values.
-foreach (var variable in localDeclaration.Declaration.Variables)
+foreach (VariableDeclaratorSyntax variable in localDeclaration.Declaration.Variables)
 {
-    var initializer = variable.Initializer;
+    EqualsValueClauseSyntax initializer = variable.Initializer;
     if (initializer == null)
     {
         return;
     }
 
-    var constantValue = context.SemanticModel.GetConstantValue(initializer.Value);
+    Optional<object> constantValue = context.SemanticModel.GetConstantValue(initializer.Value, context.CancellationToken);
     if (!constantValue.HasValue)
     {
         return;
@@ -404,13 +346,13 @@ foreach (var variable in localDeclaration.Declaration.Variables)
 }
 
 // Perform data flow analysis on the local declaration.
-var dataFlowAnalysis = context.SemanticModel.AnalyzeDataFlow(localDeclaration);
+DataFlowAnalysis dataFlowAnalysis = context.SemanticModel.AnalyzeDataFlow(localDeclaration);
 
-foreach (var variable in localDeclaration.Declaration.Variables)
+foreach (VariableDeclaratorSyntax variable in localDeclaration.Declaration.Variables)
 {
     // Retrieve the local symbol for each variable in the local declaration
     // and ensure that it is not written outside of the data flow analysis region.
-    var variableSymbol = context.SemanticModel.GetDeclaredSymbol(variable);
+    ISymbol variableSymbol = context.SemanticModel.GetDeclaredSymbol(variable, context.CancellationToken);
     if (dataFlowAnalysis.WrittenOutside.Contains(variableSymbol))
     {
         return;
@@ -422,69 +364,37 @@ foreach (var variable in localDeclaration.Declaration.Variables)
 
 ## <a name="add-the-final-polish"></a>Son Lehçe 'ı ekleyin
 
-Neredeyse bitti. Çözümleyicinizi işlemek için birkaç koşul daha vardır. Visual Studio, Kullanıcı kod yazarken Çözümleyicileri çağırır. Bu durum genellikle çözümleyicinizi derlenmeyen kod için çağrılacaktır. Tanılama Çözümleyicisi yöntemi, `AnalyzeNode` sabit değerin değişken türüne dönüştürülebilir olup olmadığını kontrol etmez. Bu nedenle, geçerli uygulama int ı = "abc" ' gibi yanlış bir bildirimi yerel bir sabit 'e dönüştürmelidir. Bu koşul için bir kaynak dize sabiti ekleyin:
+Neredeyse bitti. Çözümleyicinizi işlemek için birkaç koşul daha vardır. Visual Studio, Kullanıcı kod yazarken Çözümleyicileri çağırır. Bu durum genellikle çözümleyicinizi derlenmeyen kod için çağrılacaktır. Tanılama Çözümleyicisi yöntemi, `AnalyzeNode` sabit değerin değişken türüne dönüştürülebilir olup olmadığını kontrol etmez. Bu nedenle, geçerli uygulama int ı = "abc" ' gibi yanlış bir bildirimi yerel bir sabit 'e dönüştürmelidir. Bu durum için bir test yöntemi ekleyin:
 
-[!code-csharp[Mismatched types don't raise diagnostics](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsInvalid "When the variable type and the constant type don't match, there's no diagnostic")]
+[!code-csharp[Mismatched types don't raise diagnostics](snippets/how-to-write-csharp-analyzer-code-fix/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsInvalid "When the variable type and the constant type don't match, there's no diagnostic")]
 
 Ayrıca, başvuru türleri düzgün işlenmez. Bir başvuru türü için izin verilen tek sabit değeri, `null` Bu durum dışında, <xref:System.String?displayProperty=nameWithType> dize değişmezine izin verir. Diğer bir deyişle, geçerlidir `const string s = "abc"` ancak `const object s = "abc"` değildir. Bu kod parçacığı bu durumu doğrular:
 
-[!code-csharp[Reference types don't raise diagnostics](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsntString "When the variable type is a reference type other than string, there's no diagnostic")]
+[!code-csharp[Reference types don't raise diagnostics](snippets/how-to-write-csharp-analyzer-code-fix/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsntString "When the variable type is a reference type other than string, there's no diagnostic")]
 
 Tam olarak, bir dize için sabit bildirim oluşturabilmeniz için başka bir test eklemeniz gerekir. Aşağıdaki kod parçacığı, hem tanılamayı başlatan kodu hem de düzeltilme uygulandıktan sonra kodu tanımlar:
 
-[!code-csharp[string reference types raise diagnostics](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#ConstantIsString "When the variable type is string, it can be constant")]
+[!code-csharp[string reference types raise diagnostics](snippets/how-to-write-csharp-analyzer-code-fix/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#ConstantIsString "When the variable type is string, it can be constant")]
 
 Son olarak, bir değişken `var` anahtar sözcükle bildirilirse, kod düzeltilmesi yanlış şeyi yapar ve `const var` C# dili tarafından desteklenmeyen bir bildirim oluşturur. Bu hatayı onarmak için, kod düzeltmesinin `var` anahtar sözcüğünün çıkarılan türün adıyla yerine gelmelidir:
 
-[!code-csharp[var references need to use the inferred types](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#VarDeclarations "Declarations made using var must have the type replaced with the inferred type")]
-
-Bu değişiklikler her iki test için de veri satırı bildirimlerini güncelleştirir. Aşağıdaki kod, tüm veri satırı öznitelikleriyle bu testleri gösterir:
-
-[!code-csharp[The finished tests](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#FinishedTests "The finished tests for the make const analyzer")]
+[!code-csharp[var references need to use the inferred types](snippets/how-to-write-csharp-analyzer-code-fix/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#VarDeclarations "Declarations made using var must have the type replaced with the inferred type")]
 
 Neyse ki, yukarıdaki hataların tümü, az önce öğrendiğiniz tekniklerin kullanılmasıyla çözülebilir.
 
-İlk hatayı onarmak için önce **DiagnosticAnalyzer.cs** açın ve her bir yerel bildirimin başlatıcılarının her birinin, sabit değerlerle atanmasını sağlamak için her birinin kontrol edildiği foreach döngüsünü bulun. İlk foreach döngüsünden hemen _önce_ , `context.SemanticModel.GetTypeInfo()` Yerel bildirimin belirtilen türü hakkında ayrıntılı bilgi almak için çağırın:
+İlk hatayı onarmak için önce *DiagnosticAnalyzer.cs* açın ve her bir yerel bildirimin başlatıcılarının her birinin, sabit değerlerle atanmasını sağlamak için her birinin kontrol edildiği foreach döngüsünü bulun. İlk foreach döngüsünden hemen _önce_ , `context.SemanticModel.GetTypeInfo()` Yerel bildirimin belirtilen türü hakkında ayrıntılı bilgi almak için çağırın:
 
-```csharp
-var variableTypeName = localDeclaration.Declaration.Type;
-var variableType = context.SemanticModel.GetTypeInfo(variableTypeName).ConvertedType;
-```
+[!code-csharp[Retrieve type information](snippets/how-to-write-csharp-analyzer-code-fix/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#VariableConvertedType "Retrieve type information")]
 
 Sonra, `foreach` döngünüz içinde, değişken türüne dönüştürülebilir olduğundan emin olmak için her başlatıcıyı kontrol edin. Başlatıcının bir sabit olduğundan emin olduktan sonra aşağıdaki denetimi ekleyin:
 
-```csharp
-// Ensure that the initializer value can be converted to the type of the
-// local declaration without a user-defined conversion.
-var conversion = context.SemanticModel.ClassifyConversion(initializer.Value, variableType);
-if (!conversion.Exists || conversion.IsUserDefined)
-{
-    return;
-}
-```
+[!code-csharp[Ensure non-user-defined conversion](snippets/how-to-write-csharp-analyzer-code-fix/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#BailOutOnUserDefinedConversion "Bail-out on user-defined conversion")]
 
 Sonraki değişiklik, son bir üzerinde derleme oluşturur. İlk foreach döngüsünün kapanış küme ayracından önce, sabit bir dize veya null olduğunda yerel bildirimin türünü denetlemek için aşağıdaki kodu ekleyin.
 
-```csharp
-// Special cases:
-//  * If the constant value is a string, the type of the local declaration
-//    must be System.String.
-//  * If the constant value is null, the type of the local declaration must
-//    be a reference type.
-if (constantValue.Value is string)
-{
-    if (variableType.SpecialType != SpecialType.System_String)
-    {
-        return;
-    }
-}
-else if (variableType.IsReferenceType && constantValue.Value != null)
-{
-    return;
-}
-```
+[!code-csharp[Handle special cases](snippets/how-to-write-csharp-analyzer-code-fix/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#HandleSpecialCases "Handle special cases")]
 
-Anahtar sözcüğünü doğru tür adıyla değiştirmek için kod düzeltme sağlayıcınızda bir bit daha daha kod yazmalısınız `var` . **CodeFixProvider.cs**'e geri dönün. Ekleyeceğiniz kod aşağıdaki adımları yapar:
+Anahtar sözcüğünü doğru tür adıyla değiştirmek için kod düzeltme sağlayıcınızda bir bit daha daha kod yazmalısınız `var` . *MakeConstCodeFixProvider.cs*'e geri dönün. Ekleyeceğiniz kod aşağıdaki adımları yapar:
 
 - Bildirimin bir bildirim olup olmadığını `var` ve şu şekilde olduğunu kontrol edin:
 - Çıkarsanan tür için yeni bir tür oluşturun.
@@ -494,7 +404,7 @@ Anahtar sözcüğünü doğru tür adıyla değiştirmek için kod düzeltme sa�
 
 Bu çok fazla kod gibi seslerden oluşur. Bu değildir. Bildiren ve Başlatan satırı `newLocal` aşağıdaki kodla değiştirin. Başlatma işleminden hemen sonra geçer `newModifiers` :
 
-[!code-csharp[Replace Var designations](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#ReplaceVar "Replace a var designation with the explicit type")]
+[!code-csharp[Replace Var designations](snippets/how-to-write-csharp-analyzer-code-fix/MakeConst/MakeConst.CodeFixes/MakeConstCodeFixProvider.cs#ReplaceVar "Replace a var designation with the explicit type")]
 
 `using`Türünü kullanmak için bir yönerge eklemeniz gerekir <xref:Microsoft.CodeAnalysis.Simplification.Simplifier> :
 
@@ -502,7 +412,7 @@ Bu çok fazla kod gibi seslerden oluşur. Bu değildir. Bildiren ve Başlatan sa
 using Microsoft.CodeAnalysis.Simplification;
 ```
 
-Testlerinizi çalıştırın ve hepsi başarılı olmalıdır. Tamamlanmış çözümleyicinizi çalıştırarak kendiniz kutlama yapın. <kbd>Ctrl</kbd> + Visual Studio 'nun ikinci bir örneğinde, Roslyn önizleme uzantısı yüklenmiş olarak çözümleyici projesini çalıştırmak için CTRL<kbd>F5</kbd> tuşuna basın.
+Testlerinizi çalıştırın ve hepsi başarılı olmalıdır. Tamamlanmış çözümleyicinizi çalıştırarak kendiniz kutlama yapın. <kbd></kbd> + Visual Studio 'nun ikinci bir örneğinde, Roslyn önizleme uzantısı yüklenmiş olarak çözümleyici projesini çalıştırmak için CTRL<kbd>F5</kbd> tuşuna basın.
 
 - İkinci Visual Studio örneğinde, yeni bir C# konsol uygulaması projesi oluşturun ve `int x = "abc";` Main yöntemine ekleyin. İlk hata düzelttiğinde, bu yerel değişken bildirimi için hiçbir uyarı bildirilmemelidir (ancak beklenen bir derleyici hatası var).
 - Sonra `object s = "abc";` Main yöntemine ekleyin. İkinci hata düzelttiğinden uyarı bildirilmemelidir.
