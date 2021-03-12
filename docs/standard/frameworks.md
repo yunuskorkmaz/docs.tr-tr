@@ -1,16 +1,16 @@
 ---
 title: SDK stilindeki projelerde hedef çerçeveler-.NET
 description: .NET uygulamaları ve kitaplıkları için hedef çerçeveler hakkında bilgi edinin.
-ms.date: 11/06/2020
+ms.date: 03/03/2021
 ms.prod: dotnet
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 7a3dcd61c330607bacf0d05dbd775c62cfa15b37
-ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
+ms.openlocfilehash: 9e831726a87493b109578a3546a8f29b7b71cb6c
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97765065"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604612"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>SDK stilindeki projelerde hedef çerçeveler
 
@@ -41,7 +41,7 @@ Bir hedef çerçeveye genellikle tfd tarafından başvurulur. Aşağıdaki tablo
 
 | Hedef Çerçeve           | TFM |
 | -------------------------- | --- |
-| .NET 5 (ve .NET Core)     | netcoreapp 1.0<br>netcoreapp 1.1<br>netcoreapp2.0<br>netcoreapp 2.1<br>netcoreapp 2.2<br>netcoreapp 3.0<br>netcoreapp 3.1<br>NET 5.0 * |
+| .NET 5 + (ve .NET Core)    | netcoreapp 1.0<br>netcoreapp 1.1<br>netcoreapp2.0<br>netcoreapp 2.1<br>netcoreapp 2.2<br>netcoreapp 3.0<br>netcoreapp 3.1<br>NET 5.0 *<br> net 6.0* |
 | .NET Standard              | Netstandard 1.0<br>Netstandard 1.1<br>Netstandard 1.2<br>Netstandard 1.3<br>Netstandard 1.4<br>Netstandard 1.5<br>Netstandard 1.6<br>Netstandard 2.0<br>Netstandard 2.1 |
 | .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472<br>net48 |
 | Windows Mağazası              | netcore [netcore45]<br>netcore45 [Win] [Win8]<br>netcore451 [win81] |
@@ -50,50 +50,43 @@ Bir hedef çerçeveye genellikle tfd tarafından başvurulur. Aşağıdaki tablo
 | Windows Phone              | WP [WP7]<br>wp7<br>wp75<br>WP8<br>wp81<br>wpa81 |
 | Evrensel Windows Platformu | UAP [UAP 10.0]<br>UAP 10.0 [win10] [netcore50] |
 
-\* .NET 5,0 ve üzeri TFMs işletim sistemine özgü Çeşitlemeler içerir. Daha fazla bilgi için, bkz. [.NET 5 OS 'e özgü TFMs](#net-5-os-specific-tfms).
+\* .NET 5 ve üzeri TFMs, işletim sistemine özgü bazı Çeşitlemeler içerir. Daha fazla bilgi için, [.NET 5 + OS 'e özgü TFMs](#net-5-os-specific-tfms)bölümüne bakın.
 
-### <a name="net-5-os-specific-tfms"></a>.NET 5 işletim sistemine özgü TFMs
+### <a name="net-5-os-specific-tfms"></a>.NET 5 + işletim sistemine özgü TFMs
 
-Her .NET 5,0 ve üzeri TFı için, örneğin, `net5.0` işletim sistemine özgü bağlamaları IÇEREN TFI çeşitlemeleri vardır. Bu çeşitlemeler aşağıdaki tabloda gösterilmiştir.
+`net5.0`Ve `net6.0` tfms, farklı platformlarda çalışan teknolojiler içerir. İşletim sistemine *özgü TFI* belirtme, uygulamanız için kullanılabilen bir işletim sistemine özgü API 'leri, örneğin Windows Forms veya IOS bağlamalarını belirtir. İşletim sistemine özgü TFMs Ayrıca, her API 'yi kendi temel TFM için de (örneğin, TFM) de devralır `net5.0` .
 
-| İşletim sistemine özgü biçim | Örnek        |
-|--------------------|----------------|
-| \<base-tfm>-Android | NET 5.0-Android |
-| \<base-tfm>-iOS     | NET 5.0-iOS     |
-| \<base-tfm>-MacOS   | NET 5.0-MacOS   |
-| \<base-tfm>-tvOS    | NET 5.0-tvOS    |
-| \<base-tfm>-watchOS | NET 5.0-watchOS |
-| \<base-tfm>-Windows | NET 5.0-Windows |
+.NET 5 `net5.0-windows` , WinForms, WPF ve UWP API 'lerine yönelik Windows 'a özgü bağlamaları içeren, işletim sistemine özgü tfd 'yi kullanıma sunmuştur. .NET 6, işletim sistemine özgü TFMs 'Leri tanıtır.
 
-`net5.0`Tfd yalnızca platformlar arası çalışan teknolojiler içerir. İşletim sistemine özgü TFı belirtme, uygulamanız için kullanılabilen bir işletim sistemine özgü API 'Leri, örneğin Windows Forms veya iOS bağlamalarını BELIRTIR. İşletim sistemine özgü TFMs Ayrıca TFM 'nin kullanabildiği her API 'yi de devralır `net5.0` .
+Aşağıdaki tabloda .NET 5 + TFMs 'nin uyumluluğu gösterilmektedir.
 
-Uygulamanızı farklı platformlarda taşınabilir hale getirmek için, birden çok işletim sistemine özgü TFMs 'yi hedefleyebilir ve önişlemci yönergelerini kullanarak işletim sistemine özgü API çağrılarını kapsayan platform koruyucuları ekleyebilirsiniz `#if` .
+| TFM                | İle uyumlu                                                                                                         |
+|--------------------|-------------------------------------------------------------------------------------------------------------------------|
+| NET 5.0             | net1.. 4 (NU1701 uyarıyla birlikte)<br />netcoreapp1.. 3,1 (WinForms veya WPF 'ye başvurulduğunda uyarı)<br />netstandard1.. 2,1 |
+| NET 5.0-Windows     | netcoreapp1.. 3,1 (artı diğer her şey `net5.0` )                                                         |
+| NET 6.0             | (sonraki sürümü `net5.0` )                                                                                        |
+| NET 6.0-Android     | `xamarin.android` (+ devralınan diğer her şey `net6.0` )                                                            |
+| NET 6.0-iOS         | `xamarin.ios` (+ devralınan diğer her şey `net6.0` )                                                                |
+| NET 6.0-MacOS       | `xamarin.mac` (+ devralınan diğer her şey `net6.0` )                                                                |
+| NET 6.0-maccatalyst | `xamarin.ios` (+ devralınan diğer her şey `net6.0` )                                                                |
+| NET 6.0-tvOS        | `xamarin.tvos` (+ devralınan diğer her şey `net6.0` )                                                               |
+| NET 6.0-Windows     | (sonraki sürümü `net5.0-windows` )                                                                                |
 
-Aşağıdaki tabloda, .NET 5 TFMs 'nin önceki .NET sürümleri için TFMs ile uyumluluğu gösterilmektedir.
-
-| TFM             | İle uyumlu                                            | Notlar |
-|-----------------|------------------------------------------------------------|-|
-| NET 5.0          | net1.. 4 (NU1701 uyarıyla birlikte)<br />netcoreapp1.. 3,1 (WinForms veya WPF 'ye başvurulduğunda uyarı)<br />netstandard1.. 2,1 | |
-| NET 5.0-Android  | Xamarin. Android (artı diğer her şey `net5.0` ) | |
-| NET 5.0-iOS      | Xamarin. iOS (artı diğer her şey `net5.0` ) | |
-| NET 5.0-MacOS    | Xamarin. Mac (artı diğer her şey `net5.0` ) | |
-| NET 5.0-tvOS     | Xamarin. tvOS (artı diğer her şey `net5.0` ) | |
-| NET 5.0-watchOS  | Xamarin. watchOS (artı diğer her şey `net5.0` ) | |
-| NET 5.0-Windows  | netcoreapp1.. 3,1 (artı diğer her şey `net5.0` ) | WinForms, WPF ve UWP API 'Leri içerir.<br />Daha fazla bilgi için bkz. [masaüstü uygulamalarında Windows çalışma zamanı API 'Leri çağırma](/windows/apps/desktop/modernize/desktop-to-uwp-enhance). |
+Uygulamanızı farklı platformlarda taşınabilir hale getirmek, ancak işletim sistemine özgü API 'lere erişim sağlamak için, birden çok işletim sistemine özgü TFMs 'yi hedefleyebilir ve önişlemci yönergelerini kullanarak işletim sistemine özgü API çağrılarını kapsayan platform koruyucuları ekleyebilirsiniz `#if` .
 
 #### <a name="suggested-targets"></a>Önerilen hedefler
 
 Uygulamanızda hangi tfd kullanacağınızı öğrenmek için bu yönergeleri kullanın:
 
-- Birden çok platforma taşınabilir uygulamalar hedeflemelidir `net5.0` . Bu, çoğu kitaplığı içerir, aynı zamanda ASP.NET Core ve Entity Framework.
+- Birden çok platforma taşınabilir uygulamalar, örneğin, bir temel tfd 'yi hedeflemelidir `net5.0` . Bu, çoğu kitaplığı içerir, aynı zamanda ASP.NET Core ve Entity Framework.
 
-- Platforma özgü kitaplıklar platforma özgü türleri hedeflemelidir. Örneğin, WinForms ve WPF projeleri hedeflemelidir `net5.0-windows` .
+- Platforma özgü kitaplıklar platforma özgü türleri hedeflemelidir. Örneğin, WinForms ve WPF projeleri veya ' i hedeflemelidir `net5.0-windows` `net6.0-windows` .
 
-- Platformlar arası uygulama modelleri (Xamarin formları, ASP.NET Core) ve köprü paketleri (Xamarin Essentials) en az hedef almalıdır `net5.0` , ancak daha fazla API veya özellik için ek platforma özgü türleri de hedefleyebilir.
+- Platformlar arası uygulama modelleri (Xamarin Forms, ASP.NET Core) ve köprü paketleri (Xamarin Essentials) en azından temel TFı 'yi hedeflemelidir, örneğin, `net6.0` ancak daha fazla API veya özellik için ek platforma özgü türleri de hedefleyebilir.
 
 #### <a name="os-version-in-tfms"></a>TFMs içindeki işletim sistemi sürümü
 
-Ayrıca, TFı 'nin sonunda, `net5.0-ios13.0` uygulamanızda hangi API 'lerin kullanılabildiğini belirten isteğe bağlı bir işletim sistemi sürümü belirtebilirsiniz. (.NET 5 SDK, yayımlandıklarında daha yeni işletim sistemi sürümleri için destek içerecek şekilde güncelleştirilecektir.) Yeni yayınlanan API 'lere erişim kazanmak için TFM 'deki işletim sistemi sürümünü artırın. Uygulamanızı, daha önceki işletim sistemi sürümleriyle uyumlu hale getirebilirsiniz (ve sonraki sürüm API 'Lerine yapılan çağrılar için), `SupportedOSPlatformVersion` öğeyi proje dosyanıza ekleyerek. `SupportedOSPlatformVersion`Öğesi, uygulamanızı çalıştırmak için gereken en düşük işletim sistemi sürümünü gösterir.
+Ayrıca, TFı 'nin sonunda, `net6.0-ios13.0` uygulamanızda hangi API 'lerin kullanılabildiğini belirten isteğe bağlı bir işletim sistemi sürümü belirtebilirsiniz. (Karşılık gelen .NET SDK, yayımlandıklarında daha yeni işletim sistemi sürümleri için destek içerecek şekilde güncelleştirilecektir.) Yeni yayınlanan API 'lere erişim kazanmak için TFM 'deki işletim sistemi sürümünü artırın. Uygulamanızı, daha önceki işletim sistemi sürümleriyle uyumlu hale getirebilirsiniz (ve sonraki sürüm API 'Lerine yapılan çağrılar için), `SupportedOSPlatformVersion` öğeyi proje dosyanıza ekleyerek. `SupportedOSPlatformVersion`Öğesi, uygulamanızı çalıştırmak için gereken en düşük işletim sistemi sürümünü gösterir.
 
 Örneğin, aşağıdaki proje dosyası alıntısı iOS 14 API 'Lerinin uygulama için kullanılabilir olduğunu, ancak iOS 13 veya üzeri makinelerde çalışacağını belirtir.
 
@@ -101,7 +94,7 @@ Ayrıca, TFı 'nin sonunda, `net5.0-ios13.0` uygulamanızda hangi API 'lerin kul
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0-ios14.0</TargetFramework>
+    <TargetFramework>net6.0-ios14.0</TargetFramework>
     <SupportedOSPlatformVersion>13.0</SupportedOSPlatformVersion> (minimum os platform version)
   </PropertyGroup>
 
@@ -192,6 +185,7 @@ Aşağıdaki hedef çerçeveler kullanım dışıdır. Bu hedef çerçeveleri he
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [.NET 5 ' te hedef çerçeve adları](https://github.com/dotnet/designs/blob/master/accepted/2020/net5/net5.md)
+- [Masaüstü uygulamalarında Windows Çalışma Zamanı API 'Leri çağırma](/windows/apps/desktop/modernize/desktop-to-uwp-enhance)
 - [Platformlar Arası Araçlarla Kitaplık Geliştirme](../core/tutorials/libraries.md)
 - [.NET Standard](net-standard.md)
 - [.NET Core sürümü oluşturma](../core/versions/index.md)

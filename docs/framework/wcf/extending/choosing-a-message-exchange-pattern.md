@@ -3,12 +3,12 @@ description: 'Hakkında daha fazla bilgi edinin: Ileti değişim modelini seçme
 title: Bir İleti Değişim Deseni seçin
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: c452a65e4d4108123deaab93be9bd825127eba70
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: c0849ddb16596ebd6e064bb39f0727ac51642eb7
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99685861"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605366"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Bir İleti Değişim Deseni seçin
 
@@ -30,7 +30,7 @@ ms.locfileid: "99685861"
   
      Çift yönlü MEP, istemci tarafından rastgele sayıda iletinin gönderilmesini ve herhangi bir sırada alınmasını sağlar. Çift yönlü MEP, konuşulan her sözcüğün bir ileti olduğu bir telefon konuşması gibidir. Her iki taraf da bu MEP 'de gönderebildiğinden ve alabileceği için, istemci ve hizmet kanalları tarafından uygulanan arabirim <xref:System.ServiceModel.Channels.IDuplexChannel> .  
   
- ![İleti değişim modelini seçme](./media/wcfc-basicthreemepsc.gif "wcfc_BasicThreeMEPsc")  
+ ![Üç temel ileti değişimi desenini gösteren akış çizelgesi](./media/wcfc-basicthreemepsc.gif)  
 Üç temel ileti değişim deseni. Üstten alta: veri birimi, istek-yanıt ve çift yönlü.  
   
  Bu MEPs 'lerin her biri, *oturumları* da destekleyebilir. Bir oturum (ve türünün uygulanması <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType> <xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType> ), bir kanalda gönderilen ve alınan tüm iletileri ilişkilendirir. İstek ve yanıt bağıntılı olduğundan, istek-yanıt deseninin tek başına iki ileti oturumu vardır. Buna karşılık, oturumları destekleyen istek-yanıt deseninin, o kanaldaki tüm istek/yanıt çiftlerinin birbirleriyle bağıntılı olduğu anlamına gelir. Bu, aralarından seçim yapabileceğiniz toplam altı MEPs sağlar:  
@@ -56,7 +56,7 @@ ms.locfileid: "99685861"
   
  Kanal nesne modelinde her mantıksal oturum, bir oturum kanalının bir örneği olarak bildirimlidir. Bu nedenle, istemci tarafından oluşturulan ve hizmette kabul edilen her yeni oturum, her bir tarafta yeni bir oturumsuz kanala karşılık gelir. Aşağıdaki diyagramda, en üstteki, sessionless kanalların yapısı ve en altta, oturum kanalların yapısı gösterilmektedir.  
   
- ![İleti değişim modelini seçme](./media/wcfc-sessionandsessionlesschannelsc.gif "wcfc_SessionAndSessionlessChannelsc")  
+ ![Oturumsuz ve oturumsuz kanalların yapısını gösteren akış çizelgesi](./media/wcfc-sessionandsessionlesschannelsc.gif)  
   
  İstemci yeni bir oturumsuz kanal oluşturur ve bir ileti gönderir. Hizmet tarafında, kanal dinleyicisi bu iletiyi alır ve yeni bir oturuma ait olduğunu algılar ve yeni bir oturum kanalı oluşturur ve uygulamayı uygulamaya (kanal dinleyicisinde AcceptChannel çağıran uygulamaya yanıt olarak) sahip olur. Daha sonra uygulama bu iletiyi ve sonraki tüm iletileri aynı oturumda, aynı oturumdaki kanal üzerinden gönderilir.  
   

@@ -2,12 +2,12 @@
 title: Bellek içi veritabanları
 ms.date: 12/13/2019
 description: Bellek içi SQLite veritabanlarını nasıl kullanacağınızı öğrenin.
-ms.openlocfilehash: fbda5787d95a9ce462752b985f847af0b0551fa6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8bc96811753e49f740a33a2e78f955483efcf04b
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555373"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190352"
 ---
 # <a name="in-memory-databases"></a>Bellek içi veritabanları
 
@@ -19,7 +19,7 @@ Data Source=:memory:
 
 ## <a name="shareable-in-memory-databases"></a>Paylaşılabilir bellek içi veritabanları
 
-Bellek içi veritabanları `Mode=Memory` , bağlantı dizesinde ve kullanılarak birden çok bağlantı arasında paylaşılabilir `Cache=Shared` . `Data Source`Anahtar sözcüğü, bellek içi veritabanına bir ad vermek için kullanılır. Aynı adı kullanan bağlantı dizeleri aynı bellek içi veritabanına erişir. En az bir bağlantı açık kaldığı sürece veritabanı devam eder. GitHub 'da kullanılabilir olduğunu gösteren bir [örnek](https://github.com/dotnet/docs/blob/master/samples/snippets/standard/data/sqlite/InMemorySample/Program.cs) .
+Bellek içi veritabanları `Mode=Memory` , bağlantı dizesinde ve kullanılarak birden çok bağlantı arasında paylaşılabilir `Cache=Shared` . `Data Source`Anahtar sözcüğü, bellek içi veritabanına bir ad vermek için kullanılır. Aynı adı kullanan bağlantı dizeleri aynı bellek içi veritabanına erişir. En az bir bağlantı açık kaldığı sürece veritabanı devam eder. GitHub 'da kullanılabilir olduğunu gösteren bir [örnek](https://github.com/dotnet/docs/blob/main/samples/snippets/standard/data/sqlite/InMemorySample/Program.cs) .
 
 ```connectionstring
 Data Source=InMemorySample;Mode=Memory;Cache=Shared

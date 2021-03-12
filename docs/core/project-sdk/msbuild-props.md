@@ -4,12 +4,12 @@ description: MSBuild özellikleri ve .NET SDK tarafından anlaşılan öğeler i
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 9cd387a4a8ad7f5b31a797d4d019a53799d926ff
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 18f2be734fa10e2fd4977166ab4334332b120a91
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100432708"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604768"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>.NET SDK projeleri için MSBuild başvurusu
 
@@ -409,6 +409,9 @@ Aşağıdaki tabloda kullanılabilir seçenekler gösterilmektedir.
   <EnableNETAnalyzers>true</EnableNETAnalyzers>
 </PropertyGroup>
 ```
+
+> [!NOTE]
+> Bu özellik özellikle .NET 5 + SDK 'daki yerleşik çözümleyiciler için geçerlidir. Bir NuGet kod analizi paketi yüklediğinizde kullanılmamalıdır.
 
 ### <a name="enforcecodestyleinbuild"></a>Enforcecodestyleınbuild
 

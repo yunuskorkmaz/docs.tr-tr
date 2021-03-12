@@ -4,12 +4,12 @@ description: 'F # kodunu konsolda etkileşimli olarak çalıştırmak veya F # b
 ms.date: 11/29/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: fe48d4d7de92eea800a489b12342e3ae181e8cb1
-ms.sourcegitcommit: 38999dc0ec4f7c4404de5ce0951b64c55997d9ab
+ms.openlocfilehash: 200caf6be5977e4a4d11bda8ba57f276cb4f5ff6
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99426989"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605132"
 ---
 # <a name="interactive-programming-with-f"></a>F ile etkileşimli programlama\#
 
@@ -137,7 +137,7 @@ Bir komut dosyasında istediğiniz sayıda paket başvurusu belirtebilirsiniz.
 > [!NOTE]
 > Şu anda çerçeve başvuruları kullanan betikler için bir sınırlama vardır (ör. `Microsoft.NET.Sdk.Web` veya  `Microsoft.NET.Sdk.WindowsDesktop` ). Sasırasıyla, Giraffe, WinForms gibi paketler kullanılamaz. Bu sorun [#9417](https://github.com/dotnet/fsharp/issues/9417)izleniyor.
 
-Daha fazla bilgi için bkz. [Paket Yönetimi genişletilebilirliği ve diğer uzantılar](https://github.com/dotnet/fsharp/tree/main/src/fsharp/Microsoft.DotNet.DependencyManager).
+Daha fazla bilgi için bkz. [Paket Yönetimi genişletilebilirliği ve diğer uzantılar](https://fsharp.github.io/FSharp.Compiler.Service/reference/Microsoft.DotNet.DependencyManager.html).
 
 ## <a name="referencing-assemblies-on-disk-with-f-interactive"></a>F # Interactive ile disk üzerindeki derlemelere başvurma
 
@@ -226,7 +226,7 @@ fsi
 
 `#r` `#load` Daha önce görülen ve yönergeleri yalnızca F# etkileşimli kullanılabilir. Yalnızca F# Etkileşimli kullanılabilen çeşitli yönergeler vardır:
 
-|Deki|Açıklama|
+|Deki|Description|
 |---------|-----------|
 |`#r "nuget:..."`|NuGet 'ten bir pakete başvurur|
 |`#r "assembly-name.dll"`|Diskteki bir derlemeye başvurur|
@@ -240,7 +240,7 @@ F# Etkileşimli dosya veya yolları belirttiğinizde, bir dize sabit değeri bek
 
 ## <a name="interactive-and-compiled-preprocessor-directives"></a>Etkileşimli ve derlenmiş Önişlemci yönergeleri
 
-Etkileşimli olarak çalıştırdığınız veya bir betiği çalıştırdığınıza bakılmaksızın F# Etkileşimli kod derlerken **etkileşimli** sembol tanımlanmıştır. Derleyicide kod derlerken, **derlenen** sembol tanımlanmıştır. Bu nedenle, kodun derlenmiş ve etkileşimli modlarda farklı olması gerekiyorsa, bu ön işlemci yönergelerini koşullu derleme için kullanabilirsiniz. Örneğin:
+Etkileşimli olarak çalıştırdığınız veya bir betiği çalıştırdığınıza bakılmaksızın F# Etkileşimli kod derlerken **etkileşimli** sembol tanımlanmıştır. Derleyicide kod derlerken, **derlenen** sembol tanımlanmıştır. Bu nedenle, kodun derlenmiş ve etkileşimli modlarda farklı olması gerekiyorsa, bu ön işlemci yönergelerini koşullu derleme için kullanabilirsiniz. Örnek:
 
 ```fsharp
 #if INTERACTIVE

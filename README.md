@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: b90821d0d3495f6006d1d97b3d3377e984c74c5e
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 908ff9a260c862e336c7a4ab4bbe256af75e1e91
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613596"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604482"
 ---
 # <a name="net-docs"></a>.NET belgeleri
 
-![Markdownlint](https://github.com/dotnet/docs/workflows/Markdownlint/badge.svg)
+![Markdownlınt ](https://github.com/dotnet/docs/workflows/Markdownlint/badge.svg) [ ![ hedef desteklenen sürümü](https://github.com/dotnet/docs/actions/workflows/version-sweep.yml/badge.svg)](https://github.com/dotnet/docs/actions/workflows/version-sweep.yml)
 
 Bu depo, .NET kavramsal belgelerini içerir. [.Net belgeleri sitesi](https://docs.microsoft.com/dotnet) buna ek olarak birden çok depodan oluşturulmuştur:
 

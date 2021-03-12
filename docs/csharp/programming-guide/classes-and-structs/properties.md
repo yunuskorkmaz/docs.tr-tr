@@ -8,24 +8,24 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: 231e8e6a11f2655ccdea5489f054910a1ecf2586
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 6079fc5d2611ed1111d39d3f39e4c91817db528f
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86863948"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103189884"
 ---
 # <a name="properties-c-programming-guide"></a>Özellikler (C# Programlama Kılavuzu)
 
-Bir özellik, özel bir alanın değerini okumak, yazmak veya hesaplamak için esnek bir mekanizma sağlayan bir üyesidir. Özellikler, ortak veri üyeleri gibi kullanılabilir, ancak aslında *erişimciler*olarak adlandırılan özel yöntemlerdir. Bu, verilere kolayca erişilmesine olanak sağlar ve yöntemlerin güvenliğini ve esnekliğini yükseltmeye devam eder.  
+Bir özellik, özel bir alanın değerini okumak, yazmak veya hesaplamak için esnek bir mekanizma sağlayan bir üyesidir. Özellikler, ortak veri üyeleri gibi kullanılabilir, ancak aslında *erişimciler* olarak adlandırılan özel yöntemlerdir. Bu, verilere kolayca erişilmesine olanak sağlar ve yöntemlerin güvenliğini ve esnekliğini yükseltmeye devam eder.  
 
 ## <a name="properties-overview"></a>Özelliklere genel bakış  
   
 - Özellikler, uygulama veya doğrulama kodunu gizlerken, değerleri almak ve ayarlamak için bir sınıfın ortak bir yöntemini kullanıma sunar.  
   
-- [Get](../../language-reference/keywords/get.md) Property erişimcisi, özellik değerini döndürmek için kullanılır ve yeni bir değer atamak için bir [set](../../language-reference/keywords/set.md) özellik erişimcisi kullanılır. Bu erişimciler farklı erişim düzeylerine sahip olabilir. Daha fazla bilgi için bkz. [erişimci erişilebilirliğini kısıtlama](./restricting-accessor-accessibility.md).  
+- [Get](../../language-reference/keywords/get.md) Property erişimcisi, özellik değerini döndürmek için kullanılır ve yeni bir değer atamak için bir [set](../../language-reference/keywords/set.md) özellik erişimcisi kullanılır. C# 9 ve sonraki sürümlerinde, yalnızca nesne oluşturma sırasında yeni bir değer atamak için bir [init](../../language-reference/keywords/init.md) özellik erişimcisi kullanılır. Bu erişimciler farklı erişim düzeylerine sahip olabilir. Daha fazla bilgi için bkz. [erişimci erişilebilirliğini kısıtlama](./restricting-accessor-accessibility.md).  
   
-- [Value](../../language-reference/keywords/value.md) anahtar sözcüğü, erişimci tarafından atanan değeri tanımlamak için kullanılır `set` .  
+- [Value](../../language-reference/keywords/value.md) anahtar sözcüğü, veya erişimcisi tarafından atanan değeri tanımlamak için kullanılır `set` `init` .  
 - Özellikler *okuma-yazma* (hem a `get` hem de `set` erişimciye sahiptir), *salt okunurdur* (bir erişimcisi vardır ancak erişimci yoktur `get` `set` ) ya da salt *yazılır* (bir `set` erişimcisi vardır ancak `get` erişimci yok) olabilir. Salt yazılır özellikler nadir ve hassas verilere erişimi kısıtlamak için en yaygın olarak kullanılır.
 
 - Özel erişimci kodu gerektirmeyen basit özellikler, ifade gövde tanımları ya da [Otomatik uygulanan özellikler](./auto-implemented-properties.md)olarak uygulanabilir.
@@ -54,7 +54,7 @@ Aşağıdaki örnekte bu desenler gösterilmektedir. Bu örnekte, `TimePeriod` s
 
 Bazı durumlarda, özellik `get` ve `set` erişimciler, ek bir mantık dahil etmeden bir destek alanından bir değer atar veya bir değer alır. Otomatik uygulanan özellikleri kullanarak, C# derleyicisinin sizin için yedekleme alanını saydam bir şekilde sağlamasına karşın kodunuzu basitleştirebilirsiniz.
 
-Bir özelliğin hem a hem de `get` erişimcisi varsa `set` , her ikisinin de otomatik olarak uygulanması gerekir. `get` `set` Herhangi bir uygulama sağlamadan ve anahtar sözcüklerini kullanarak otomatik uygulanan bir özellik tanımlarsınız. Aşağıdaki örnek, `Name` ve ' nin otomatik olarak uygulanan özellikler olması dışında, önceki birini yinelenir `Price` . Ayrıca, `SaleItem` nesnelerin parametresiz oluşturucuya ve bir [nesne başlatıcısına](object-and-collection-initializers.md)çağrısıyla başlatılmış olması için parametreli oluşturucuyu de kaldırdığına unutmayın.
+Bir özelliğin hem a hem de `get` `set` (ya da a `get` `init` ) erişimcisi varsa, her ikisinin de otomatik olarak uygulanması gerekir. `get` `set` Herhangi bir uygulama sağlamadan ve anahtar sözcüklerini kullanarak otomatik uygulanan bir özellik tanımlarsınız. Aşağıdaki örnek, `Name` ve ' nin otomatik olarak uygulanan özellikler olması dışında, önceki birini yinelenir `Price` . Örnek parametreli oluşturucuyu da kaldırır, böylece `SaleItem` nesneler artık parametresiz oluşturucuya ve bir [nesne başlatıcısına](object-and-collection-initializers.md)çağrı ile başlatılır.
 
   [!code-csharp[Properties#4](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-4.cs)]  
 

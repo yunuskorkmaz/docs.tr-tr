@@ -1,27 +1,39 @@
 ---
-title: Komut satırı bağımsız değişkenleri-C# Programlama Kılavuzu
+title: Command-Line bağımsız değişkenleri-C# Programlama Kılavuzu
 description: Komut satırı bağımsız değişkenleri hakkında bilgi edinin. Konsol uygulamasında komut satırı bağımsız değişkenlerini kullanan bir örneğe bakın.
-ms.date: 07/20/2015
+ms.date: 03/11/2021
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 35ff0425d3f09cf4ad116cf688b943cef3ef02e3
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: f495efb3bc2c76a98f74c173d5b777ebe383edcb
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381924"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190417"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Komut Satırı Bağımsız Değişkenleri (C# Programlama Kılavuzu)
 
 Yöntemi `Main` aşağıdaki yöntemlerden biriyle tanımlayarak yöntemine bağımsız değişkenler gönderebilirsiniz:
 
-[!code-csharp[csProgGuideMain#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#2)]  
+| `Main` Yöntem kodu                 | `Main` imza                             |
+|------------------------------------|----------------------------------------------|
+| Dönüş değeri yok, kullanım yok `await` | `static void Main(string[] args)`            |
+| Dönüş değeri, kullanım yok `await`    | `static int Main(string[] args)`             |
+| Dönüş değeri yok, şunu kullanır `await`      | `static async Task Main(string[] args)`      |
+| Dönüş değeri, kullanımları `await`         | `static async Task<int> Main(string[] args)` |
 
-[!code-csharp[csProgGuideMain#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#3)]
+Bağımsız değişkenler kullanılmazsa, `args` biraz daha basit bir kod için yöntem imzasıyla atlayabilirsiniz:
+
+| `Main` Yöntem kodu                 | `Main` imza                |
+|------------------------------------|---------------------------------|
+| Dönüş değeri yok, kullanım yok `await` | `static void Main()`            |
+| Dönüş değeri, kullanım yok `await`    | `static int Main()`             |
+| Dönüş değeri yok, şunu kullanır `await`      | `static async Task Main()`      |
+| Dönüş değeri, kullanımları `await`         | `static async Task<int> Main()` |
 
 > [!NOTE]
-> Bir Windows Forms uygulamasındaki yönteminde komut satırı bağımsız değişkenlerini etkinleştirmek için `Main` , program.cs içindeki imzasını el ile değiştirmeniz gerekir `Main` . *program.cs* Windows Forms Tasarımcısı tarafından oluşturulan kod, `Main` giriş parametresi olmadan bir oluşturur. Ayrıca <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> , komut satırı bağımsız değişkenlerine konsol veya Windows uygulamasındaki herhangi bir noktadan erişmek için de kullanabilirsiniz.
+> Bir Windows Forms uygulamasındaki yönteminde komut satırı bağımsız değişkenlerini etkinleştirmek için `Main` , program.cs içindeki imzasını el ile değiştirmeniz gerekir `Main` .  Windows Forms Tasarımcısı tarafından oluşturulan kod, `Main` giriş parametresi olmadan bir oluşturur. Ayrıca <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> , komut satırı bağımsız değişkenlerine konsol veya Windows uygulamasındaki herhangi bir noktadan erişmek için de kullanabilirsiniz.
 
 Yönteminin parametresi, `Main` <xref:System.String> komut satırı bağımsız değişkenlerini temsil eden bir dizidir. Genellikle, özelliği test ederek bağımsız değişkenlerin mevcut olup olmadığını belirlersiniz `Length` . Örneğin:
 
@@ -56,7 +68,7 @@ Aşağıdaki örnek, bir konsol uygulamasında komut satırı bağımsız deği�
 
 Uygulamayı bir komut isteminden derlemek ve çalıştırmak için aşağıdaki adımları izleyin:
 
-1. Aşağıdaki kodu herhangi bir metin düzenleyicisine yapıştırın ve sonra dosyayı *Factorial.cs*adlı bir metin dosyası olarak kaydedin.
+1. Aşağıdaki kodu herhangi bir metin düzenleyicisine yapıştırın ve sonra dosyayı *Factorial.cs* adlı bir metin dosyası olarak kaydedin.
 
      [!code-csharp[csProgGuideMain#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#16)]
 
@@ -72,7 +84,7 @@ Uygulamayı bir komut isteminden derlemek ve çalıştırmak için aşağıdaki 
   
      `Factorial 3`  
   
-5. Komut bu çıktıyı üretir:`The factorial of 3 is 6.`
+5. Komut bu çıktıyı üretir: `The factorial of 3 is 6.`
 
 > [!NOTE]
 > Visual Studio 'da bir uygulama çalıştırırken, [hata ayıklama sayfasında, proje Tasarımcısı](/visualstudio/ide/reference/debug-page-project-designer)' nda komut satırı bağımsız değişkenlerini belirtebilirsiniz.
@@ -81,7 +93,7 @@ Uygulamayı bir komut isteminden derlemek ve çalıştırmak için aşağıdaki 
 
 - <xref:System.Environment?displayProperty=nameWithType>
 - [C# Programlama Kılavuzu](../index.md)
-- [Main () ve komut satırı bağımsız değişkenleri](index.md)
+- [Main () ve Command-Line bağımsız değişkenleri](index.md)
 - [Komut satırı bağımsız değişkenlerini görüntüleme](how-to-display-command-line-arguments.md)
 - [Ana() Dönüş Değerleri](main-return-values.md)
 - [Sınıflar](../classes-and-structs/classes.md)

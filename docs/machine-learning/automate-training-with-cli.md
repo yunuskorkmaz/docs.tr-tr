@@ -3,12 +3,12 @@ title: ML.NET CLı ile model eğitimi otomatikleştirin
 description: Komut satırından en iyi modeli otomatik olarak eğiteiçin ML.NET CLı aracının nasıl kullanılacağını öğrenin.
 ms.date: 06/03/2020
 ms.custom: how-to, mlnet-tooling
-ms.openlocfilehash: d7c6102c2257be1daa613fde0edabce83d04b414
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 95e85cdc7b1ca42f086bafaf99d3f3fa29db7aa5
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84589674"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605275"
 ---
 # <a name="automate-model-training-with-the-mlnet-cli"></a>ML.NET CLı ile model eğitimi otomatikleştirin
 
@@ -27,7 +27,7 @@ ML.NET CLı, bir [.NET Core aracıdır](../core/tools/global-tools.md). Yüklend
 
 Aşağıdaki şekilde gösterildiği gibi, bu modeli çalıştırmak/skor için yüksek kaliteli bir ML.NET modeli (serileştirilmiş model. zip dosyası) ve örnek C# kodu oluşturmak kolaydır. Ayrıca, bu modeli oluşturmak/eğitebilmek için C# kodu da oluşturulur. böylece, bu oluşturulan "en iyi model" için kullanılan algoritmayı ve ayarları araştırıp yineleyebilirsiniz.
 
-![image](media/automate-training-with-cli/cli-high-level-process.png "ML.NET CLı içinde çalışan oto ml altyapısı")
+![ML.NET CLı içinde çalışan oto ml altyapısı](media/automate-training-with-cli/cli-high-level-process.png)
 
 Kendi veri kümelerinizde, sizin tarafınızdan kodlamadan bu varlıkları oluşturabilirsiniz. bu sayede, ML.NET zaten tanıyor olsanız bile üretkenliğinizi de artırır.
 
@@ -44,9 +44,9 @@ Kullanım örneği (sınıflandırma senaryosu):
 mlnet classification --dataset "yelp_labelled.txt" --label-col 1 --has-header false --train-time 10
 ```
 
-![image](media/automate-training-with-cli/mlnet-classification-powershell.gif)
+![Komut satırından ML.NET sınıflandırması](media/automate-training-with-cli/mlnet-classification-powershell.gif)
 
-*Windows PowerShell*, *MacOS/Linux Bash*veya *Windows cmd*' de aynı şekilde çalıştırabilirsiniz. Ancak, tablo otomatik tamamlama (parametre önerileri) *WINDOWS cmd*'de çalışmaz.
+*Windows PowerShell*, *MacOS/Linux Bash* veya *Windows cmd*' de aynı şekilde çalıştırabilirsiniz. Ancak, tablo otomatik tamamlama (parametre önerileri) *WINDOWS cmd*'de çalışmaz.
 
 ## <a name="output-assets-generated"></a>Oluşturulan çıkış varlıkları
 
@@ -70,9 +70,9 @@ Burada, otomatik olarak oluşturulan ' en iyi modellerinizin kalitesini anlayabi
 
 ### <a name="metrics-for-classification-models"></a>Sınıflandırma modelleriyle ilgili ölçümler
 
-Aşağıda, CLı tarafından bulunan ilk beş modelin sınıflandırma ölçümleri listesi görüntülenir:
+Aşağıdaki görüntüde, CLı tarafından bulunan ilk beş modelin sınıflandırma ölçümleri listesi görüntülenir:
 
-![image](media/automate-training-with-cli/cli-multiclass-classification-metrics.png)
+![İlk beş model için sınıflandırma ölçümleri](media/automate-training-with-cli/cli-multiclass-classification-metrics.png)
 
  Doğruluk, sınıflandırma sorunları için popüler bir ölçümdür, ancak doğruluk, aşağıdaki başvurularda açıklanacak şekilde en iyi modeli seçmek için her zaman en iyi ölçüm değildir. Ek ölçümler ile modelinizin kalitesini değerlendirmeniz gereken durumlar vardır.
 
@@ -82,9 +82,9 @@ CLı tarafından çıktı olan ölçümleri araştırmak ve anlamak için bkz. [
 
 Gözlemlenen değerler ve modelin öngörülen değerleri arasındaki farklılıklar küçük ve taraflı değilse, regresyon modeli verileri iyi bir şekilde sığdırır. Gerileme, belirli ölçümler ile değerlendirilebilir.
 
-CLı tarafından bulunan en iyi önde gelen beş kalite modeli için aynı ölçüm listesini görürsünüz. Regresyon ML göreviyle ilgili bu durumda:
+CLı tarafından bulunan ilk beş kalite modeli için benzer bir ölçüm listesi görürsünüz, bu durum dışında, ilk beş bir gerileme ML göreviyle ilgilidir:
 
-![image](media/automate-training-with-cli/cli-regression-metrics.png)
+![İlk beş model için regresyon ölçümleri](media/automate-training-with-cli/cli-regression-metrics.png)
 
 CLı tarafından çıktı olan ölçümleri araştırmak ve anlamak için bkz. [gerileme Için değerlendirme ölçümleri](resources/metrics.md#evaluation-metrics-for-regression-and-recommendation).
 

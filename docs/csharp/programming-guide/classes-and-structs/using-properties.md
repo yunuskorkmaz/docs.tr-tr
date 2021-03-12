@@ -7,16 +7,16 @@ helpviewer_keywords:
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: 51ca0a37022c99bfbd9d61f2cc47f529d535e72a
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 16ff0f02db9640ad8cfe41fce9ce954cb75b4e08
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864663"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190339"
 ---
 # <a name="using-properties-c-programming-guide"></a>Özellikleri Kullanma (C# Programlama Kılavuzu)
 
-Özellikler her iki alanın ve yöntemin yönlerini birleştirir. Bir nesnenin kullanıcısına, bir özellik bir alan gibi görünür, özelliğe erişim de aynı sözdizimini gerektirir. Bir sınıfın uygulayıcısı için bir özellik bir veya iki kod blobunun yanı sıra bir [Get](../../language-reference/keywords/get.md) erişimcisini ve/veya [set](../../language-reference/keywords/set.md) erişimcisini temsil eder. Erişimci için kod bloğu, `get` Özellik okuma sırasında yürütülür. erişimci için kod bloğu, `set` özelliğe yeni bir değer atandığında yürütülür. Erişimcisi olmayan bir özellik `set` salt okunurdur. Erişimcisi olmayan bir özellik `get` salt yazılır olarak değerlendirilir. Her iki erişimciyi sahip bir özellik okuma-yazma ' dır.
+Özellikler her iki alanın ve yöntemin yönlerini birleştirir. Bir nesnenin kullanıcısına, bir özellik bir alan gibi görünür, özelliğe erişim de aynı sözdizimini gerektirir. Bir sınıfın uygulayıcısı için bir özellik bir veya iki kod blobunun yanı sıra bir [Get](../../language-reference/keywords/get.md) erişimcisini ve/veya [set](../../language-reference/keywords/set.md) erişimcisini temsil eder. Erişimci için kod bloğu, `get` Özellik okuma sırasında yürütülür. erişimci için kod bloğu, `set` özelliğe yeni bir değer atandığında yürütülür. Erişimcisi olmayan bir özellik `set` salt okunurdur. Erişimcisi olmayan bir özellik `get` salt yazılır olarak değerlendirilir. Her iki erişimciyi sahip bir özellik okuma-yazma ' dır. C# 9 ve üzeri sürümlerde, `init` `set` özelliği salt okunabilir hale getirmek için erişimci yerine bir erişimci kullanabilirsiniz.
 
 Alanların aksine, özellikler değişken olarak sınıflandırılmaz. Bu nedenle, bir özelliği [ref](../../language-reference/keywords/ref.md) veya [Out](../../language-reference/keywords/out-parameter-modifier.md) parametresi olarak geçiremezsiniz.
 
@@ -64,9 +64,13 @@ Erişimciyi kullanarak nesnenin durumunu değiştirmek için hatalı bir program
 
 `value`Bir erişimcinin yerel değişken bildirimi için örtük parametre adını kullanmak hatadır `set` .
 
+## <a name="the-init-accessor"></a>İnit erişimcisi
+
+Erişimci oluşturma kodu, `init` `set` yerine anahtar sözcüğünü kullanmanız dışında bir erişimci oluşturmak için kullanılan kodla aynıdır `init` `set` . Fark, `init` erişimcinin yalnızca oluşturucuda veya bir [nesne Başlatıcısı](object-and-collection-initializers.md)kullanılarak kullanılabileceği bir farklılık olabilir.
+
 ## <a name="remarks"></a>Açıklamalar
 
-Özellikler,,, `public` veya olarak `private` işaretlenebilir `protected` `internal` `protected internal` `private protected` . Bu erişim değiştiricileri, sınıfın kullanıcılarının özelliğe nasıl erişekullanabileceğinizi tanımlar. `get` `set` Aynı özelliğe yönelik ve erişimcileri farklı erişim değiştiricilerine sahip olabilir. Örneğin, `get` `public` türü dışından salt okuma erişimine izin vermek olabilir ve ya da olabilir `set` `private` `protected` . Daha fazla bilgi için bkz. [erişim değiştiricileri](./access-modifiers.md).
+Özellikler,,,, `public` veya olarak işaretlenebilir `private` `protected` `internal` `protected internal` `private protected` . Bu erişim değiştiricileri, sınıfın kullanıcılarının özelliğe nasıl erişekullanabileceğinizi tanımlar. `get` `set` Aynı özelliğe yönelik ve erişimcileri farklı erişim değiştiricilerine sahip olabilir. Örneğin, `get` `public` türü dışından salt okuma erişimine izin vermek olabilir ve ya da olabilir `set` `private` `protected` . Daha fazla bilgi için bkz. [erişim değiştiricileri](./access-modifiers.md).
 
 Özelliği anahtar sözcüğü kullanılarak statik bir özellik olarak bildirilemez `static` . Bu özellik, sınıfın bir örneği mevcut olmasa bile, özelliği herhangi bir zamanda çağıranlar için kullanılabilir hale getirir. Daha fazla bilgi için bkz. [statik sınıflar ve statik sınıf üyeleri](./static-classes-and-static-class-members.md).
 
@@ -77,13 +81,13 @@ Sanal bir özelliği geçersiz kılan bir özellik de [mühürlenebilir](../../l
 > [!NOTE]
 > [Statik](../../language-reference/keywords/static.md) bir özelliğin erişimcisi üzerinde [sanal](../../language-reference/keywords/virtual.md), [Özet](../../language-reference/keywords/abstract.md)veya [geçersiz kılma](../../language-reference/keywords/override.md) değiştiricisi kullanmak hatadır.
 
-## <a name="example"></a>Örnek
+## <a name="examples"></a>Örnekler
 
 Bu örnek örnek, statik ve salt okunurdur özelliklerini gösterir. Klavye üzerinden çalışanın adını kabul eder, `NumberOfEmployees` 1 artırır ve çalışan adını ve numarasını görüntüler.
 
 [!code-csharp[csProgGuideProperties#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#2)]
 
-## <a name="example"></a>Örnek
+## <a name="hidden-property-example"></a>Gizli özellik örneği
 
 Bu örnekte, türetilmiş bir sınıfta aynı ada sahip başka bir özellik tarafından gizlenen bir temel sınıftaki bir özelliğe nasıl erişebileceğiniz gösterilmektedir:
 
@@ -101,7 +105,7 @@ Aşağıda, önceki örnekteki önemli noktaları verilmiştir:
 
      Üyeleri gizleme hakkında daha fazla bilgi için bkz. [Yeni değiştirici](../../language-reference/keywords/new-modifier.md).
 
-## <a name="example"></a>Örnek
+## <a name="override-property-example"></a>Geçersiz kılma özelliği örneği
 
 Bu örnekte, iki sınıf, `Cube` ve `Square` soyut bir sınıfı uygular `Shape` ve soyut özelliğini geçersiz kılar `Area` . Özelliklerde geçersiz kılma değiştiricisinin kullanımını göz önünde [kılarsınız](../../language-reference/keywords/override.md) . Program, yüzü bir giriş olarak kabul eder ve kare ve küpün alanını hesaplar. Ayrıca, alanı bir girdi olarak kabul eder ve kare ve küp için ilgili tarafı hesaplar.
 

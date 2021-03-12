@@ -1,7 +1,7 @@
 ---
 description: -Main (C# derleyici seçenekleri)
 title: -Main (C# derleyici seçenekleri)
-ms.date: 07/20/2015
+ms.date: 03/08/2021
 f1_keywords:
 - /main
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - main compiler option [C#]
 - /main compiler option [C#]
 ms.assetid: 975cf4d5-36ac-4530-826c-4aad0c7f2049
-ms.openlocfilehash: c27898de2a7cc2f3c01c51f8de1122e81b2233b4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 26ce1f48f9f3f88df8e002e5cf23010864f58290
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91194121"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190079"
 ---
 # <a name="-main-c-compiler-options"></a>-Main (C# derleyici seçenekleri)
 
@@ -38,6 +38,9 @@ Derlemeniz bir [ana](../../programming-guide/main-and-command-args/index.md) yö
 
 Bu seçenek bir *. exe* dosyası derlenirken kullanım içindir.
 
+> [!NOTE]
+> Bu seçenek, bu proje bir veya daha fazla yöntem içerse bile, [en üst düzey deyimler](../../programming-guide/main-and-command-args/top-level-statements.md)içeren bir proje için kullanılamaz `Main` .
+
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için
 
 1. Projenin **Özellikler** sayfasını açın.
@@ -50,7 +53,7 @@ Bu seçenek bir *. exe* dosyası derlenirken kullanım içindir.
 
 ### <a name="to-set-this-compiler-option-by-manually-editing-the-csproj-file"></a>Bu derleyici seçeneğini *. csproj* dosyasını el ile düzenleyerek ayarlamak için
 
-Bu seçeneği,. csproj dosyasını düzenleyerek ve bölümünün içine bir öğe ekleyerek ayarlayabilirsiniz `StartupObject` `PropertyGroup` . Örneğin:
+Bu seçeneği,. csproj dosyasını düzenleyerek ve bölümünün içine bir öğe ekleyerek ayarlayabilirsiniz `StartupObject` `PropertyGroup` . Örnek:
 
 ```xml
   <PropertyGroup>

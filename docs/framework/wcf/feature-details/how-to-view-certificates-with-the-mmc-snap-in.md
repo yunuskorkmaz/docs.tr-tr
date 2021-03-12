@@ -5,12 +5,12 @@ ms.date: 02/25/2019
 helpviewer_keywords:
 - certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
-ms.openlocfilehash: 1f20384f16b3b5b898f926258d76a6a2773eaaa1
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 788161db2e38dc942b0c638128f8599b0436c8fd
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96280630"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604586"
 ---
 # <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>Nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüleme
 
@@ -51,7 +51,7 @@ Aşağıdaki yordam, uygun bir sertifikayı bulmak için yerel cihazınızdaki m
   
 6. **Ek bileşen Ekle veya Kaldır** penceresinde **Tamam**' ı seçin.  
   
-    ![Sertifika ek bileşeni ekleme](./media/mmc-certificate-snap-in-selected.png)
+    ![Tamam düğmesi vurgulanmış şekilde ek bileşenler penceresi ekleme veya kaldırma](./media/mmc-certificate-snap-in-selected.png)
 
 7. İsteğe bağlı: **Dosya** menüsünde, daha sonra kullanmak üzere MMC konsol dosyasını kaydetmek için **Kaydet** veya **farklı kaydet** ' i seçin.  
 

@@ -2,20 +2,20 @@
 title: WPF uygulamalarını .NET 5 ' e yükseltme
 description: .NET Framework mevcut bir WPF uygulamasını .NET 5 ' e yükseltmek için .NET Yükseltme Yardımcısı 'nı kullanın. .NET Yükseltme Yardımcısı, bir uygulamayı .NET Framework 'tan .NET 5 ' e geçirmeye yardımcı olan bir CLı aracıdır.
 author: ardalis
-ms.date: 02/25/2021
-ms.openlocfilehash: e71cdc0ef5b72fcb7ae3985a26672e23ed0c1f12
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.date: 03/08/2021
+ms.openlocfilehash: b0c9baa25be6da4e7849f28c875a1d8f5f5a5d07
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102108688"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604846"
 ---
 # <a name="upgrade-a-wpf-app-to-net-5-with-the-net-upgrade-assistant"></a>.NET Yükseltme Yardımcısı ile bir WPF uygulamasını .NET 5 ' e yükseltme
 
 [.NET Yükseltme Yardımcısı](upgrade-assistant-overview.md) , .NET Framework WPF uygulamalarını .NET 5 ' e yükseltmeye yardımcı olabilecek bir komut satırı aracıdır. Bu makalede aşağıdakiler sunulmaktadır:
 
-* .NET Framework WPF uygulamasında aracın nasıl çalıştırılacağını gösteren bir gösterim
-* Sorun giderme ipuçları
+- .NET Framework WPF uygulamasında aracın nasıl çalıştırılacağını gösteren bir gösterim
+- Sorun giderme ipuçları
 
 ## <a name="upgrade-net-framework-wpf-apps"></a>WPF uygulamalarını .NET Framework yükseltme
 
@@ -59,7 +59,7 @@ Araç, yedekleme için özel bir yol ister ve varsayılan olarak, proje yedeklem
 
 Proje biçimi güncelleştirildikten sonra, bir sonraki adım projenin TFı 'sini güncelleştirmedir.
 
-:::image type="content" source="media/upgrade-assistant-wpf-framework/update-tfm.png" alt-text=".NET Yükseltme Yardımcısı projeyi SDK stiline Dönüştür":::
+:::image type="content" source="media/upgrade-assistant-wpf-framework/update-tfm.png" alt-text=".NET Yükseltme Yardımcısı güncelleştirme tfd":::
 
 Ardından araç, projenin NuGet paketlerini güncelleştirir.
 

@@ -1,28 +1,40 @@
 ---
 title: Main () dönüş değerleri-C# Programlama Kılavuzu
 description: Main () dönüş değerleri hakkında bilgi edinin. Bkz. kod örnekleri, derleyici tarafından oluşturulan kod ve kullanılabilir ek kaynakları görüntüleme.
-ms.date: 08/02/2017
+ms.date: 03/11/2021
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 2e1df125d677cd6b845b516173117ef0190a7580
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 6f4001ecd490d5627d3a1ec74ecf7d593451e104
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102104043"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190365"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main () dönüş değerleri (C# Programlama Kılavuzu)
 
-`Main`Yöntemi şu şekilde dönebilir `void` :
+Yöntemini `int` `Main` aşağıdaki yöntemlerden biriyle tanımlayarak yönteminden dönüştürebilirsiniz:
 
- [!code-csharp[csProgGuideMain#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#12)]
+| `Main` Yöntem kodu             | `Main` imza                             |
+|--------------------------------|----------------------------------------------|
+| `args`Veya kullanımı`await`    | `static int Main()`                          |
+| `args`, Kullanımları`await` | `static int Main(string[] args)`             |
+| Kullanım yok `args` , kullanımları `await` | `static async Task<int> Main()`              |
+| `args`Ve kullanır`await`        | `static async Task<int> Main(string[] args)` |
 
-Ayrıca, şunu döndürebilir `int` :
+Dönüş değeri `Main` kullanılmazsa, `void` `Task` biraz daha basit bir kod döndürülmesi veya bu kodun kullanılmasına izin verir.
 
- [!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
+| `Main` Yöntem kodu             | `Main` imza                        |
+|--------------------------------|-----------------------------------------|
+| `args`Veya kullanımı`await`    | `static void Main()`                    |
+| `args`, Kullanımları`await` | `static void Main(string[] args)`       |
+| Kullanım yok `args` , kullanımları `await` | `static async Task Main()`              |
+| `args`Ve kullanır`await`        | `static async Task Main(string[] args)` |
 
-Dönüş değeri `Main` kullanılmazsa, döndürme `void` biraz daha basit bir koda izin verir. Ancak, bir tamsayı döndürmek programın durum bilgilerini yürütülebilir dosyayı çağıran diğer programlarla veya betiklerine iletmesine olanak sağlar. Dönüş değeri, `Main` işlem için çıkış kodu olarak değerlendirilir. `void`Öğesinden döndürülürse `Main` , çıkış kodu örtük olarak açılır `0` . Aşağıdaki örnekte, ' den dönüş değerine nasıl `Main` erişilebileceği gösterilmektedir.
+Ancak, `int` `Task<int>` programın durum bilgilerini yürütülebilir dosyayı çağıran diğer programlarla veya betiklerine iletmesine olanak sağlar.
+
+Aşağıdaki örnek, işlem için çıkış kodunun nasıl erişilebilir olduğunu gösterir.
 
 ## <a name="example"></a>Örnek
 

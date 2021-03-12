@@ -4,12 +4,12 @@ description: Linux 'ta .NET SDK veya .NET çalışma zamanının yaslama ile nas
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 741933b5ca6f01d73b388675fe7f8a43c4efb0f9
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: 0d91f5049c92df240e2c3e26bc67952abe17fedc
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970974"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190105"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-with-snap"></a>.NET SDK veya .NET çalışma zamanını yaslama ile birlikte yükler
 
@@ -26,11 +26,11 @@ Yalnızca desteklenen .NET SDK sürümleri, Snap aracılığıyla kullanılabili
 
 | ✔️ destekleniyor | ❌ Desteklenen |
 |-------------|---------------|
-| 5.0         | 3,0           |
-| 3,1 (LTS)   | 2.2           |
+| 5.0         | 3.0           |
+| 3,1 (LTS)   | 2,2           |
 | 2,1 (LTS)   | 2.0           |
 |             | 1.1           |
-|             | 1,0           |
+|             | 1.0           |
 
 .NET sürümlerinin yaşam döngüsü hakkında daha fazla bilgi için bkz. [.NET Core ve .NET 5 destek ilkesi](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).
 
@@ -70,8 +70,8 @@ Bu komut şöyle biçimlendirilir: `sudo snap alias {package}.{command} {alias}`
 |-------------------|---------------------|
 | 5.0               | `dotnet-runtime-50` |
 | 3,1 (LTS)         | `dotnet-runtime-31` |
-| 3,0               | `dotnet-runtime-30` |
-| 2.2               | `dotnet-runtime-22` |
+| 3.0               | `dotnet-runtime-30` |
+| 2,2               | `dotnet-runtime-22` |
 | 2,1 (LTS)         | `dotnet-runtime-21` |
 
 `snap install`.NET çalışma zamanı Snap paketini yüklemek için komutunu kullanın. Bu örnekte, .NET 5,0 yüklüdür:
@@ -87,6 +87,25 @@ sudo snap alias dotnet-runtime-50.dotnet dotnet
 ```
 
 Komut şöyle biçimlendirilir: `sudo snap alias {package}.{command} {alias}` . İstediğiniz `{alias}` adı seçebilirsiniz. Örneğin, komutunu Snap tarafından yüklenen belirli sürümden sonra yazabilirsiniz `sudo snap alias dotnet-runtime-50.dotnet dotnet50` . Komutunu kullandığınızda `dotnet50` , .net 'in belirli bir sürümünü çağıracaksınız. Ancak farklı bir diğer ad seçmek bir komutun kullanılabilir olmasını bekledikleri için birçok öğretici ve örnek ile uyumsuzdur `dotnet` .
+
+## <a name="export-the-install-location"></a>Yüklemesi konumunu dışarı aktarma
+
+`DOTNET_ROOT`Ortam değişkeni, genellikle .net 'in nerede yükleneceğini belirlemede araçlar tarafından kullanılır. .NET, Snap aracılığıyla yüklendiğinde bu ortam değişkeni yapılandırılmaz. Profilinizde *DOTNET_ROOT* ortam değişkenini yapılandırmalısınız. Yaslama yolu şu biçimi kullanır: `/snap/{package}/current` . Örneğin, yaslama 'yı yüklediyseniz `dotnet-sdk` , ortam değişkenini .NET bulunduğu yere ayarlamak için aşağıdaki komutu kullanın:
+
+```bash
+export DOTNET_ROOT=/snap/dotnet-sdk/current
+```
+
+> [!TIP]
+> Yukarıdaki `export` komut yalnızca çalıştırıldığı terminal oturumu için ortam değişkenini ayarlar.
+>
+> Komutları kalıcı olarak eklemek için kabuk profilinizi düzenleyebilirsiniz. Linux için kullanılabilen birçok farklı kabuk vardır ve her birinin farklı bir profili vardır. Örnek:
+>
+> - **Bash kabuğu**: *~/.bash_profile*, *~/,bashrc*
+> - **Korn kabuğu**: *~/,KSHRC* veya *. Profile*
+> - **Z kabuğu**: *~/,zshrc* veya *. zprofile*
+>
+> Kabuğunuz için uygun kaynak dosyayı düzenleyin ve ekleyin `export DOTNET_ROOT=/snap/dotnet-sdk/current` .
 
 ## <a name="tlsssl-certificate-errors"></a>TLS/SSL sertifikası hataları
 

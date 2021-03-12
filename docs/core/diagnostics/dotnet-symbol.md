@@ -2,12 +2,12 @@
 title: DotNet-symbol Tanılama aracı-.NET CLı
 description: .NET dökümlerinde ve mini dökümlerinde hata ayıklamak için gereken dosyaları indirmek için DotNet-symbol CLı aracını yüklemeyi ve kullanmayı öğrenin.
 ms.date: 11/17/2020
-ms.openlocfilehash: 5cc304a3917921a964ceb61bc2c58e942b0baa85
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 4543bd965c889d93d7dc0b89ff2d6f62c4343e5f
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102105329"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103189910"
 ---
 # <a name="symbol-downloader-dotnet-symbol"></a>Sembol yükleyici (DotNet-Symbol)
 
@@ -27,7 +27,7 @@ dotnet tool install --global dotnet-symbol
 dotnet-symbol [-h|--help] [options] <FILES>
 ```
 
-## <a name="description"></a>Açıklama
+## <a name="description"></a>Description
 
 `dotnet-symbol`Genel araç, çekirdek dökümlerinde ve mini dökümlerinde hata ayıklamak için gereken dosyaları (semboller, dac, modüller vb.) indirir. Bu, başka bir makinede yakalanan dökümlerinin hata ayıklaması sırasında yararlı olabilir. `dotnet-symbol` , dökümünü çözümlemek için gereken modülleri ve sembolleri indirebilir.
 
@@ -102,4 +102,4 @@ dotnet-symbol --host-only --debugging <dump file path>
 ## <a name="see-also"></a>Ayrıca bkz.
 
 * [Semboller ile hata ayıklama](/windows/win32/dxtecharts/debugging-with-symbols)
-* [Taşınabilir pdb 'leri](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md)
+* [Semboller ve taşınabilir pdb 'leri](./symbols.md)

@@ -3,12 +3,12 @@ title: Davpr yayımlama & abonelik oluşturma bloğu
 description: '& abonelik oluşturma-bloğunun ve bu uygulamayı nasıl uygulayacağınız için bir açıklama'
 author: edwinvw
 ms.date: 02/07/2021
-ms.openlocfilehash: 3d00c5a3171dd5a7287d07675f5a3742697e784b
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 4cb249bafc8241eb54153be2605c33d0a3adb619
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258006"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604690"
 ---
 # <a name="the-dapr-publish--subscribe-building-block"></a>Davpr yayımlama & abonelik oluşturma bloğu
 
@@ -293,7 +293,7 @@ Her abonelikle birkaç öğe belirtmeniz gerekir:
 
 ## <a name="reference-application-eshopondapr"></a>Başvuru uygulaması: Eshopondadpr
 
-Eşlik eden [Eshopondadpr](https://github.com/dotnet-architecture/eShopOnDapr) uygulaması, davpr uygulayan bir mikro Hizmetler uygulaması oluşturmak için uçtan uca bir başvuru mimarisi sağlar. Eshopondadpr, çok sayıda yıl önce oluşturulmuş yaygın olarak popüler [Eshoponcontainers](https://github.com/dotnet-architecture/eShopOnContainer) uygulamasının bir evrimi. Her iki sürüm de mikro hizmetler genelinde [tümleştirme olaylarını](https://devblogs.microsoft.com/cesardelatorre/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/#integration-events) iletişim kurmak için yayımlama/alt modelini kullanır. Tümleştirme olayları şunlardır:
+Eşlik eden [Eshopondadpr](https://github.com/dotnet-architecture/eShopOnDapr) uygulaması, davpr uygulayan bir mikro Hizmetler uygulaması oluşturmak için uçtan uca bir başvuru mimarisi sağlar. Eshopondadpr, çok sayıda yıl önce oluşturulmuş yaygın olarak popüler [Eshoponcontainers](https://github.com/dotnet-architecture/eShopOnContainers) uygulamasının bir evrimi. Her iki sürüm de mikro hizmetler genelinde [tümleştirme olaylarını](https://devblogs.microsoft.com/cesardelatorre/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/#integration-events) iletişim kurmak için yayımlama/alt modelini kullanır. Tümleştirme olayları şunlardır:
 
 - Bir Kullanıcı bir alışveriş sepetini denetlediğinde.
 - Bir sipariş için ödeme başarılı olduğunda.

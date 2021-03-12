@@ -2,12 +2,12 @@
 title: eShopOnContainers'ı Azure'a dağıtma
 description: Azure Kubernetes hizmeti, helk ve DevSpaces kullanarak eShopOnContainers uygulamasını dağıtma.
 ms.date: 01/19/2021
-ms.openlocfilehash: 8fc1343eac7f03c984c3a279d5a8c7908e37f0d1
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: da68fa1510841b6cef9117b6d84e7ed30c565698
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99505797"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604573"
 ---
 # <a name="deploying-eshoponcontainers-to-azure"></a>eShopOnContainers'ı Azure'a dağıtma
 
@@ -55,7 +55,7 @@ spec:
 
 EShopOnContainers Held grafiklerini/k8s/Held klasöründe bulabilirsiniz. Şekil 2-6, uygulamanın farklı bileşenlerinin, Held tarafından yönetilen dağıtımlar tanımlamak için kullanılan bir klasör yapısına nasıl düzenlendiğini gösterir.
 
-![eShopOnContainers mimari ](./media/eshoponcontainers-helm-folder.png)
+![EShopOnContainers Held klasörü ](./media/eshoponcontainers-helm-folder.png)
  **Şekil 2-6**. EShopOnContainers Held klasörü.
 
 Her bir bileşen, bir komut kullanılarak yüklenir `helm install` . eShop, ilgili Held grafiklerini kullanarak bileşenleri döngüye sokma ve yükleyen bir "tümünü dağıt" betiği içerir. Sonuç, kaynak denetimindeki uygulamayla sürümlü, ekip üzerindeki herkesin tek satırlık bir betik komutuyla bir AKS kümesine dağıtabileceği, tekrarlanabilir bir işlemdir.
@@ -70,13 +70,13 @@ Geliştiriciler, Kapsayıcılı uygulamanın tamamını içeren bir AKS kümesin
 
 Şekil 2-7 ' de, geliştirici Susie ' nin, Bisiklet mikro hizmetinin güncelleştirilmiş bir sürümünü geliştirme alanına dağıttığdığını görebilirsiniz. Daha sonra kendi alan adı (susie.s.dev.myapp.eus.azds.io) ile başlayan özel bir URL 'YI kullanarak yaptığı değişiklikleri test edebilir.
 
-![eShopOnContainers mimari ](./media/azure-devspaces-one.png)
- **Şekil 2-7**. Geliştirici Susie, Bisiklet mikro hizmetinin kendi sürümünü dağıtır ve test eder.
+![eShopOnContainers mimarisi, Bisiklet mikro hizmeti ](./media/azure-devspaces-one.png)
+ **Şekil 2-7**' i gösteriyor. Geliştirici Susie, Bisiklet mikro hizmetinin kendi sürümünü dağıtır ve test eder.
 
 Aynı zamanda, geliştirici John, rezervasyonlar mikro hizmetini özelleştirip değişiklikleri test etmek için gereklidir. Şekil 2-8 ' de gösterildiği gibi, Susie değişiklikleri ile çakışmadan kendi dev alanındaki değişiklikleri dağıtır. John daha sonra yaptığı kendi URL 'sini kullanarak değişikliklerini test eder (john.s.dev.myapp.eus.azds.io).
 
-![eShopOnContainers mimari ](./media/azure-devspaces-two.png)
- **Şekil 2-8**. Geliştirici John, rezervasyonlar mikro hizmetinin kendi sürümünü dağıtır ve diğer geliştiricilerle çakışmadan test eder.
+![John 'un rezervasyonlar mikro hizmet ](./media/azure-devspaces-two.png)
+ **şekli 2-8** sürümünü gösteren eShopOnContainers mimarisi. Geliştirici John, rezervasyonlar mikro hizmetinin kendi sürümünü dağıtır ve diğer geliştiricilerle çakışmadan test eder.
 
 Azure Dev Spaces kullanarak takımlar, değişiklikleri bağımsız olarak değiştirirken, dağıttığınızda ve test ederken doğrudan AKS ile çalışabilir. Bu yaklaşım, her geliştiricinin kendi AKS ortamları etkin olduğundan, ayrı ayrı barındırılan ortamların gereksinimini azaltır. Geliştiriciler, CLı kullanarak Azure Dev Spaces çalışabilir veya doğrudan Visual Studio 'dan Azure Dev Spaces için uygulamasını başlatabilir. [Azure Dev Spaces nasıl çalıştığı ve yapılandırıldığı hakkında daha fazla bilgi edinin.](/azure/dev-spaces/how-dev-spaces-works)
 

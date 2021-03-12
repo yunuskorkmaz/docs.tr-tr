@@ -4,12 +4,12 @@ description: Azure HDInsight 'ın Jupyıter not defterlerine Apache Spark için 
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: ff6b3a64c01fb9148d3abe3d04579233d11a4f73
-ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
+ms.openlocfilehash: b84d61c29d2b2aa7a9fee20a8af9f3eee23f7e8b
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96599661"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605483"
 ---
 # <a name="install-net-for-apache-spark-on-jupyter-notebooks-on-azure-hdinsight-spark-clusters"></a>Azure HDInsight Spark kümelerinde Jupyıter not defterlerine Apache Spark .NET 'i yükler
 
@@ -38,20 +38,20 @@ Azure portal, önceki adımda oluşturduğunuz **HDInsight Spark kümesini** se�
 
 1. Portalda **genel bakış**' ı seçin ve ardından **ambarı giriş**' i seçin. İstenirse, küme için oturum açma kimlik bilgilerini girin.
 
-   ![Livy sunucusunu durdur](./media/hdinsight-notebook-installation/select-ambari.png)
+   ![Küme panoları altında ambarı giriş ' i seçin](./media/hdinsight-notebook-installation/select-ambari.png)
 
 2. Sol gezinti menüsünden **Spark2** ' i SEÇIN ve **Spark2 Server için Livy**' ı seçin.
 
-   ![Livy sunucusunu durdur](./media/hdinsight-notebook-installation/select-livyserver.png)
+   ![Spark2 sunucusu için Livy seçin](./media/hdinsight-notebook-installation/select-livyserver.png)
 
 3. **Hn0 seç... Ana bilgisayar**.
 
-   ![Livy sunucusunu durdur](./media/hdinsight-notebook-installation/select-host.png)
+   !["Hno..." gösteren konaklar seçildiğinde](./media/hdinsight-notebook-installation/select-host.png)
 
 4. **Spark2 Server Için Livy** ' ın yanındaki üç noktayı seçin ve **Durdur**' u seçin. İstendiğinde, devam etmek için **Tamam** ' ı seçin.
 
    Spark2 Server için Lıvy 'ı durdurun.
-   ![Livy sunucusunu durdur](./media/hdinsight-notebook-installation/stop-server.png)
+   ![Üç noktayı seçin ve ardından Durdur](./media/hdinsight-notebook-installation/stop-server.png)
 
 5. Hn1 için önceki adımları tekrarlayın **... Ana bilgisayar**.
 
@@ -70,7 +70,7 @@ Azure portal, önceki adımda oluşturduğunuz **HDInsight Spark kümesini** se�
    |Özellik  |Açıklama  |
    |---------|---------|
    | Betik türü | Özel |
-   | Ad | *Apache Spark etkileşimli not defteri deneyimi için .NET 'i yükler* |
+   | Name | *Apache Spark etkileşimli not defteri deneyimi için .NET 'i yükler* |
    | Bash betiği URI 'SI | Karşıya yüklediğiniz URI `install-interactive-notebook.sh` . |
    | Düğüm türleri| Baş ve çalışan |
    | Parametreler | Apache Spark sürümü için .NET. [Apache Spark sürümleri için .net](https://github.com/dotnet/spark/releases)'i kontrol edebilirsiniz. Örneğin, Mini-mini DotNet sürüm 1.0.0 yüklemek istiyorsanız, bu durumda olur `1.0.0` .
@@ -87,9 +87,9 @@ Konaklar **hn0** ve **Hn1** Için Spark2 Server Için [Livy](#stop-the-livy-serv
 
 2. **Spark2** ve **configs** öğesini seçin. Ardından, **özel spark2-varsayılanlar**' ı seçin.
 
-   ![Yapılandırmaları ayarla](./media/hdinsight-notebook-installation/spark-configs.png)
+   ![Ambarı 'nda configs sekmesi](./media/hdinsight-notebook-installation/spark-configs.png)
 
-3. Spark varsayılan ayarlarını eklemek için **Özellik Ekle...** öğesini seçin.
+3. Spark varsayılan ayarlarını eklemek için **Özellik Ekle** ' yi seçin.
 
    ![Özellik Ekle](./media/hdinsight-notebook-installation/add-property.png)
 
@@ -109,7 +109,7 @@ Konaklar **hn0** ve **Hn1** Için Spark2 Server Için [Livy](#stop-the-livy-serv
 
    Örneğin, aşağıdaki görüntü, özellik 1 ' i ekleme ayarını yakalar:
 
-   ![Yapılandırmaları ayarla](./media/hdinsight-notebook-installation/add-sparkconfig.png)
+   ![Metin özelliği Ekle](./media/hdinsight-notebook-installation/add-sparkconfig.png)
 
    Üç Özellik eklendikten sonra **Kaydet**' i seçin. Yapılandırma önerilerinin uyarı ekranını görürseniz, **yıne de devam et**' i seçin.
 
@@ -117,7 +117,7 @@ Konaklar **hn0** ve **Hn1** Için Spark2 Server Için [Livy](#stop-the-livy-serv
 
    Yeni özellikleri ekledikten sonra değişikliklerden etkilenen bileşenleri yeniden başlatmanız gerekir. En üstte **Yeniden Başlat**' ı seçin ve ardından açılan listeden **etkilenen tüm ' i yeniden başlatın** .
 
-   ![Yapılandırmaları ayarla](./media/hdinsight-notebook-installation/restart-affected.png)
+   ![Yeniden başlatma > configs sekmesi, etkilenen tüm vurgulanmış vurgulanmış olarak yeniden Başlat](./media/hdinsight-notebook-installation/restart-affected.png)
 
    İstendiğinde, devam etmek için **Tümünü YENIDEN Başlat** ' ı seçin ve ardından **Tamam** ' a tıklayın.
 
@@ -129,7 +129,7 @@ Konaklar **hn0** ve **Hn1** Için Spark2 Server Için [Livy](#stop-the-livy-serv
 
    ![Jupyter Notebook Başlat](./media/hdinsight-notebook-installation/launch-notebook.png)
 
-   Sonra **New**  >  bir not defteri oluşturmak için yeni **.net Spark (C#)** öğesini seçin.
+   Sonra   >  bir not defteri oluşturmak için yeni **.net Spark (C#)** öğesini seçin.
 
    ![Jupyter Notebook](./media/hdinsight-notebook-installation/create-sparkdotnet-notebook.png)
 
@@ -142,7 +142,7 @@ Konaklar **hn0** ve **Hn1** Için Spark2 Server Için [Livy](#stop-the-livy-serv
    df.Show();
    ```
 
-   ![Spark Işi gönder](./media/hdinsight-notebook-installation/create-df.png)
+   ![Komut yürütmeyi gösteren bir DataFrame oluştur](./media/hdinsight-notebook-installation/create-df.png)
 
    Kullanıcı tanımlı bir işlev (UDF) kaydetmek ve UDF 'yi DataFrames ile kullanmak için aşağıdaki kod parçacığını kullanın:
 
@@ -151,7 +151,7 @@ Konaklar **hn0** ve **Hn1** Için Spark2 Server Için [Livy](#stop-the-livy-serv
    df.Select(myawesomeudf(df["id"])).Show();
    ```
 
-   ![Spark Işi gönder](./media/hdinsight-notebook-installation/run-udf.png)
+   ![UDF kaydetme ve kullanma](./media/hdinsight-notebook-installation/run-udf.png)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

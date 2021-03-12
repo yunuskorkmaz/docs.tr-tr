@@ -4,12 +4,12 @@ description: Observability yapı bloğunun açıklaması, özellikleri, avantajl
 author: edwinvw
 ms.date: 02/07/2021
 ms.reviewer: robvet
-ms.openlocfilehash: c7c941625f5867ad58eee602bfc42183bee87183
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 6add36b2030c3061ee522604b2e07f05875b98a9
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106350"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604716"
 ---
 # <a name="the-dapr-observability-building-block"></a>Davpr Observability yapı taşı
 
@@ -40,7 +40,7 @@ Davpr, sıhhi tesisat 'yi uztığından, uygulama Observability nasıl uyguland�
 
 Davpr 'nin [Dışarıdan yükleme mimarisi](dapr-at-20000-feet.md#sidecar-architecture) , yerleşik Observability özellikleri sunar. Hizmetler iletişim kurarken, Davpr 'ler trafiği durdurur ve izleme, ölçümler ve günlüğe kaydetme bilgilerini ayıklar. Telemetri açık bir standartlar biçiminde yayımlanır. Varsayılan olarak, Davpr [Opentelemetri](https://opentelemetry.io/) ve [zipy](https://zipkin.io/)'yi destekler.
 
-Davpr, farklı arka uç izleme araçlarına telemetri yayımlayabilen [toplayıcılar](https://docs.dapr.io/operations/monitoring/open-telemetry-collector/) sağlar. Bu araçlar analiz ve sorgulama için bir Dadpr telemetrisi sunar. Şekil 9-1, Davpr Observability mimarisini gösterir:
+Davpr, farklı arka uç izleme araçlarına telemetri yayımlayabilen [toplayıcılar](https://docs.dapr.io/operations/monitoring/tracing/open-telemetry-collector/) sağlar. Bu araçlar analiz ve sorgulama için bir Dadpr telemetrisi sunar. Şekil 9-1, Davpr Observability mimarisini gösterir:
 
 ![Davpr Observability mimarisi](media/observability/observability-architecture.png)
 
@@ -285,7 +285,7 @@ Davpr, Davpr sistem hizmetleri ve çalışma zamanı için büyük bir ölçüm 
 | dapr_http_server_request_count     | Çalışma Zamanı | HTTP sunucusunda başlatılan HTTP isteklerinin sayısı.           |
 | dapr_http/Client/sent_bytes        | Çalışma Zamanı | Bir HTTP istemcisi tarafından istek gövdesinde (üstbilgiler dahil değil) gönderilen toplam bayt sayısı. |
 
-Kullanılabilir ölçümler hakkında daha fazla bilgi için bkz. [Davpr ölçümleri belgeleri](https://docs.dapr.io/developing-applications/building-blocks/observability/metrics).
+Kullanılabilir ölçümler hakkında daha fazla bilgi için bkz. [Davpr ölçümleri belgeleri](https://docs.dapr.io/operations/monitoring/metrics/).
 
 #### <a name="configure-dapr-metrics"></a>Davpr ölçümlerini yapılandırma
 
@@ -312,7 +312,7 @@ Prometheus atık oluşturma ve ölçümleri izleme arka ucuna yayımlama konusun
 
 ![Grafana, Davpr sistem hizmetleri ölçümlerini görüntüleyen Pano](media/observability/grafana-sample.png)
 
-Davpr belgeleri, [Prometheus ve Grafana yükleme öğreticisini](https://docs.dapr.io/operations/monitoring/grafana/)içerir.
+Davpr belgeleri, [Prometheus ve Grafana yükleme öğreticisini](https://docs.dapr.io/operations/monitoring/metrics/grafana/)içerir.
 
 ### <a name="logging"></a>Günlüğe Kaydetme
 
@@ -381,7 +381,7 @@ helm install dapr dapr/dapr --namespace dapr-system --set global.logAsJson=true
 
 #### <a name="collect-logs"></a>Günlük toplama
 
-Davpr tarafından yayılan Günlükler analiz için bir izleme arka ucuna dağıtılabilir. Günlük Toplayıcısı, bir sistemden günlükleri toplayan ve bunları bir izleme arka ucuna gönderen bir bileşendir. Popüler bir günlük toplayıcısı [akıcı Entd](https://www.fluentd.org/). Bkz. [nasıl yapılır: vapr belgelerindeki Kubernetes 'te, akıcı Entd, elastik arama ve kibana ayarlama](https://docs.dapr.io/operations/monitoring/fluentd/) . Bu makale, izleme arka ucu olarak Akıştoplayıcı ve [elk yığınını](https://www.elastic.co/elastic-stack) (elastik arama ve kibana) ayarlamaya yönelik yönergeler içerir.
+Davpr tarafından yayılan Günlükler analiz için bir izleme arka ucuna dağıtılabilir. Günlük Toplayıcısı, bir sistemden günlükleri toplayan ve bunları bir izleme arka ucuna gönderen bir bileşendir. Popüler bir günlük toplayıcısı [akıcı Entd](https://www.fluentd.org/). Bkz. [nasıl yapılır: vapr belgelerindeki Kubernetes 'te, akıcı Entd, elastik arama ve kibana ayarlama](https://docs.dapr.io/operations/monitoring/logging/fluentd/) . Bu makale, izleme arka ucu olarak Akıştoplayıcı ve [elk yığınını](https://www.elastic.co/elastic-stack) (elastik arama ve kibana) ayarlamaya yönelik yönergeler içerir.
 
 ### <a name="health-status"></a>Sistem durumu
 

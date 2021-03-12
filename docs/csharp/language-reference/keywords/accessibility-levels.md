@@ -6,12 +6,12 @@ helpviewer_keywords:
 - access modifiers [C#], accessibility levels
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
-ms.openlocfilehash: 6e1a5bddc0d40b0b62c7b07dbc6b4134a3447a95
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 509902e9998af421c0afd31070b1be36d64df0f8
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91168796"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604599"
 ---
 # <a name="accessibility-levels-c-reference"></a>Erişilebilirlik Düzeyleri (C# Başvurusu)
 
@@ -38,12 +38,14 @@ ms.locfileid: "91168796"
   
 |Üyeleri|Varsayılan üye erişilebilirliği|Üyenin izin verilen erişilebilirliği|  
 |----------------|----------------------------------|--------------------------------------------------|  
-|`enum`|`public`|Hiçbiri|  
+|`enum`|`public`|Yok|  
 |`class`|`private`|`public`<br /><br /> `protected`<br /><br /> `internal`<br /><br /> `private`<br /><br /> `protected internal` <br /><br />`private protected`|  
-|`interface`|`public`|Hiçbiri|  
+|`interface`|`public`|`public`<br /><br /> `protected`<br /><br /> `internal`<br /><br /> `private`\*<br /><br /> `protected internal` <br /><br />`private protected`|  
 |`struct`|`private`|`public`<br /><br /> `internal`<br /><br /> `private`|  
-  
- İç içe bir türün erişilebilirliği, hem belirtilen üyenin hem de hem de hem de kapsayan türdeki erişilebilirlik etki alanı tarafından belirlenen [erişilebilirlik etki alanına](./accessibility-domain.md)bağlıdır. Ancak, iç içe geçmiş bir türün erişilebilirlik etki alanı, kapsayan türden bu türü aşamaz.  
+
+\*`interface`Erişilebilirliği olan bir üyenin `private` varsayılan bir uygulamasına sahip olması gerekir.
+
+İç içe bir türün erişilebilirliği, hem belirtilen üyenin hem de hem de hem de kapsayan türdeki erişilebilirlik etki alanı tarafından belirlenen [erişilebilirlik etki alanına](./accessibility-domain.md)bağlıdır. Ancak, iç içe geçmiş bir türün erişilebilirlik etki alanı, kapsayan türden bu türü aşamaz.  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
 
@@ -59,6 +61,6 @@ ms.locfileid: "91168796"
 - [Erişilebilirlik Düzeylerinin Kullanılmasındaki Kısıtlamalar](./restrictions-on-using-accessibility-levels.md)
 - [Erişim Değiştiricileri](../../programming-guide/classes-and-structs/access-modifiers.md)
 - [genel](./public.md)
-- [private](./private.md)
+- [özelleştirme](./private.md)
 - [protected](./protected.md)
 - [internal](./internal.md)

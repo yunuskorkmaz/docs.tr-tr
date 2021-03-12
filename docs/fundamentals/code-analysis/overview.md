@@ -8,12 +8,12 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: eb978d6af6695fd2e4b5473ac5c0dc216e726e52
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 9fbeee7475b49a5b6514d4983142ae3be5a2f026
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100459961"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605301"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>.NET kaynak kodu çözümlemesine genel bakış
 
@@ -97,7 +97,10 @@ Varsayılan olarak, .NET SDK 'sının daha yeni sürümlerine yükselttiğinizde
 
   Daha fazla bilgi edinmek ve olası değerlerin bir listesini görmek için bkz. [Analysislevel](../../core/project-sdk/msbuild-props.md#analysislevel).
 
-- .NET SDK güncelleştirmelerinden kural güncelleştirmelerini ayırmak için [Microsoft. CodeAnalysis. Netçözümleyiciler NuGet paketini](https://github.com/dotnet/roslyn-analyzers#microsoftcodeanalysisnetanalyzers) yükler. Paketin yüklenmesi yerleşik SDK Çözümleyicileri kapatır ve SDK, NuGet paketinden daha yeni bir çözümleyici derleme sürümü içeriyorsa derleme uyarısı oluşturur.
+- .NET SDK güncelleştirmelerinden kural güncelleştirmelerini ayırmak için [Microsoft. CodeAnalysis. Netçözümleyiciler NuGet paketini](https://github.com/dotnet/roslyn-analyzers#microsoftcodeanalysisnetanalyzers) yükler. .NET 5 + ' u hedefleyen projeler için, paketi yüklemek yerleşik SDK Çözümleyicileri ' ni kapatır. SDK, NuGet paketinden daha yeni bir çözümleyici derleme sürümü içeriyorsa, derleme uyarısı alırsınız. Uyarıyı devre dışı bırakmak için `_SkipUpgradeNetAnalyzersNuGetWarning` özelliğini olarak ayarlayın `true` .
+
+  > [!NOTE]
+  > Microsoft. CodeAnalysis. Netçözümleyiciler NuGet paketini yüklerseniz, [Enablenetçözümleyiciler](../../core/project-sdk/msbuild-props.md#enablenetanalyzers) özelliğini proje dosyanıza ya da bir *Dizin. Build. props* dosyasına eklememelisiniz. NuGet paketi yüklendiğinde ve `EnableNETAnalyzers` özelliği olarak ayarlandığında `true` , bir derleme uyarısı oluşturulur.
 
 ## <a name="code-style-analysis"></a>Kod stili analiz
 
@@ -119,7 +122,7 @@ Derlemede kod stili analizini etkinleştirmek için şu adımları izleyin:
 
 1. [Enforcecodestyleınbuild](../../core/project-sdk/msbuild-props.md#enforcecodestyleinbuild) MSBuild özelliğini olarak ayarlayın `true` .
 
-1. Bir *. editorconfig* dosyasında, derleme üzerinde çalıştırmak istediğiniz her "IDE" kod stili kuralını bir uyarı veya hata olarak [yapılandırın](configuration-options.md) . Örneğin:
+1. Bir *. editorconfig* dosyasında, derleme üzerinde çalıştırmak istediğiniz her "IDE" kod stili kuralını bir uyarı veya hata olarak [yapılandırın](configuration-options.md) . Örnek:
 
    ```ini
    [*.{cs,vb}]
@@ -127,7 +130,7 @@ Derlemede kod stili analizini etkinleştirmek için şu adımları izleyin:
    dotnet_diagnostic.IDE0040.severity = warning
    ```
 
-   Alternatif olarak, bir kategorinin tamamını bir uyarı veya hata olması için varsayılan olarak yapılandırabilir ve ardından bu kategoride, derlemede çalıştırmak istemediğiniz kuralları seçmeli olarak kapatabilirsiniz. Örneğin:
+   Alternatif olarak, bir kategorinin tamamını bir uyarı veya hata olması için varsayılan olarak yapılandırabilir ve ardından bu kategoride, derlemede çalıştırmak istemediğiniz kuralları seçmeli olarak kapatabilirsiniz. Örnek:
 
    ```ini
    [*.{cs,vb}]
@@ -144,7 +147,7 @@ Derlemede kod stili analizini etkinleştirmek için şu adımları izleyin:
 
 ## <a name="suppress-a-warning"></a>Bir uyarıyı gösterme
 
-Bir kural ihlalini bastırın bir yolu, bu kural KIMLIĞI için önem derecesi seçeneğini `none` bir EditorConfig dosyasında ayarlamaya yöneliktir. Örneğin:
+Bir kural ihlalini bastırın bir yolu, bu kural KIMLIĞI için önem derecesi seçeneğini `none` bir EditorConfig dosyasında ayarlamaya yöneliktir. Örnek:
 
 ```ini
 dotnet_diagnostic.CA1822.severity = none

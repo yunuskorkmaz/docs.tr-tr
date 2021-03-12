@@ -2,20 +2,20 @@
 title: .NET Yükseltme Yardımcısı 'na genel bakış
 description: .NET Framework geçiş ve projelerinizi .NET 5 ' e yükseltmelerine yardımcı olan .NET Yükseltme Yardımcısı aracına giriş.
 author: ardalis
-ms.date: 02/25/2021
-ms.openlocfilehash: bd1c904586d170d93b76ae058914adb334289f89
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.date: 03/08/2021
+ms.openlocfilehash: c667cfce40d4f740bc23606826eb2a058643b7be
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102108685"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604781"
 ---
 # <a name="overview-of-the-net-upgrade-assistant"></a>.NET Yükseltme Yardımcısı 'na genel bakış
 
 Şu anda .NET 5 ' e taşıma konusunda ilgilendiğiniz .NET Framework çalışan uygulamalarınız olabilir. .NET Yükseltme Yardımcısı aracı bu işleme yardımcı olabilir. Bu makalede aşağıdakiler sunulmaktadır:
 
-* .NET Yükseltme Yardımcısı 'na genel bakış.
-* .NET Yükseltme Yardımcısı 'Nı nasıl yükleyeceksiniz.
+- .NET Yükseltme Yardımcısı 'na genel bakış.
+- .NET Yükseltme Yardımcısı 'Nı nasıl yükleyeceksiniz.
 
 ## <a name="what-is-the-net-upgrade-assistant"></a>.NET Yükseltme Yardımcısı nedir?
 
@@ -44,9 +44,17 @@ ms.locfileid: "102108685"
 
 ### <a name="installation-steps"></a>Yükleme adımları
 
-Araç aşağıdakileri çalıştırarak bir .NET CLı aracı olarak yüklenebilir: `dotnet tool install -g upgrade-assistant --add-source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json`
+Araç aşağıdakileri çalıştırarak bir .NET CLı aracı olarak yüklenebilir:
 
-Benzer şekilde, .NET Yükseltme Yardımcısı bir .NET CLı aracı olarak yüklendiği için şu şekilde çalıştırılarak kolayca güncelleştirilebilirler: `https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json`
+```dotnet
+dotnet tool install -g upgrade-assistant
+```
+
+Benzer şekilde, .NET Yükseltme Yardımcısı bir .NET CLı aracı olarak yüklendiği için şu şekilde çalıştırılarak kolayca güncelleştirilebilirler:
+
+```dotnet
+dotnet tool update -g upgrade-assistant
+```
 
 Ayrıntılı yükleme yönergeleri için lütfen projenin [Benioku](https://github.com/dotnet/upgrade-assistant)dosyasına bakın.
 

@@ -3,12 +3,12 @@ title: Visual Studio 'da Roslyn sözdizimi görselleştiricisi ile kodu araştı
 description: Sözdizimi görselleştiricisi .NET Compiler Platform SDK 'nın kod için oluşturduğu modelleri araştırmak için görsel bir araç sağlar.
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: a911a99e78ad5a5f4c6771b91a3c541b1812d67c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 43c69bce93db490fccc3500784623f5736ed935d
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91167580"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605431"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Visual Studio 'da Roslyn sözdizimi görselleştiricisi ile kodu araştırma
 
@@ -20,7 +20,7 @@ Bu makalede, .NET Compiler Platform ("Roslyn") SDK 'sının bir parçası olarak
 
 ## <a name="syntax-visualizer"></a>Syntax Visualizer
 
-**Syntax Visualizer** , VISUAL Studio IDE içindeki geçerli etkin düzenleyici penceresinde C# veya Visual Basic kod dosyası için sözdizimi ağacının incelemesini mümkün. Görselleştirici, **View**  >  **diğer Windows**  >  **Syntax Visualizer**görüntüle ' ye tıklanarak başlatılabilir.  Sağ üst köşedeki **Hızlı başlatma** araç çubuğunu da kullanabilirsiniz. "Sözdizimi" yazın ve **Syntax Visualizer** açmak için komut görünmelidir.
+**Syntax Visualizer** , VISUAL Studio IDE içindeki geçerli etkin düzenleyici penceresinde C# veya Visual Basic kod dosyası için sözdizimi ağacının incelemesini mümkün. Görselleştirici,   >  **diğer Windows**  >  **Syntax Visualizer** görüntüle ' ye tıklanarak başlatılabilir.  Sağ üst köşedeki **Hızlı başlatma** araç çubuğunu da kullanabilirsiniz. "Sözdizimi" yazın ve **Syntax Visualizer** açmak için komut görünmelidir.
 
 Bu komut Syntax Visualizer kayan bir araç penceresi olarak açar. Bir kod Düzenleyicisi penceresi açık değilse, aşağıdaki şekilde gösterildiği gibi görüntü boştur.
 
@@ -44,9 +44,9 @@ Bu araç penceresini, Visual Studio içinde, sol taraftaki gibi uygun bir konuma
 
 Önceki görüntülerde gösterildiği gibi, Görselleştirici araç penceresi üstteki sözdizimi ağacını ve alt kısımdaki bir özellik kılavuzunu görüntüler. Özellik Kılavuzu, öğenin .NET *türü* ve *türü* (ağacın syntaxkind içeren) dahil olmak üzere ağaçta seçili olan öğenin özelliklerini görüntüler.
 
-Sözdizimi ağaçları, *düğüm*, *belirteç*ve *bilgi*olmak üzere üç öğe türünü kapsar. [Söz dizimi Ile çalışma](work-with-syntax.md) makalesinde bu türler hakkında daha fazla bilgi edinebilirsiniz. Her türün öğeleri farklı bir renk kullanılarak temsil edilir. Kullanılan renklere genel bakış için ' gösterge ' düğmesine tıklayın.
+Sözdizimi ağaçları, *düğüm*, *belirteç* ve *bilgi* olmak üzere üç öğe türünü kapsar. [Söz dizimi Ile çalışma](work-with-syntax.md) makalesinde bu türler hakkında daha fazla bilgi edinebilirsiniz. Her türün öğeleri farklı bir renk kullanılarak temsil edilir. Kullanılan renklere genel bakış için ' gösterge ' düğmesine tıklayın.
 
-Ağaçtaki her öğe ayrıca kendi **yayılma alanını**da görüntüler. **Yayılma** , metin dosyasındaki bu düğümün indekslerini (başlangıç ve bitiş konumu).  Önceki C# örneğinde, seçili "Usinganahtar sözcüğü [0.. 5)" belirtecinin, beş karakter genişliğinde, [0.. 5) bir **yayılımı** vardır. "[..)" Gösterimi Başlangıç dizininin yayılma alanının parçası olduğu, ancak bitiş dizininin olmadığı anlamına gelir.
+Ağaçtaki her öğe ayrıca kendi **yayılma alanını** da görüntüler. **Yayılma** , metin dosyasındaki bu düğümün indekslerini (başlangıç ve bitiş konumu).  Önceki C# örneğinde, seçili "Usinganahtar sözcüğü [0.. 5)" belirtecinin, beş karakter genişliğinde, [0.. 5) bir **yayılımı** vardır. "[..)" Gösterimi Başlangıç dizininin yayılma alanının parçası olduğu, ancak bitiş dizininin olmadığı anlamına gelir.
 
 Ağaçta gezinmek için iki yol vardır:
 
@@ -91,9 +91,9 @@ Diğer bir seçenek de, sözdizimi grafik penceresini ikinci bir monitöre bir �
 
 Syntax Visualizer, sembolleri ve anlam bilgilerini ilkel denetlemesini mümkün. `double x = 1 + 1;`C# örneğinde Main () içine yazın. Ardından, `1 + 1` Kod Düzenleyicisi penceresinde ifadeyi seçin. Görselleştirici, görselleştiricide **AddExpression** düğümünü vurgular. Bu **AddExpression** öğesine sağ tıklayın ve **Görünüm simgesine (varsa)** tıklayın. Menü öğelerinin çoğunda "varsa" niteleyicisi olduğuna dikkat edin. Syntax Visualizer, tüm düğümler için mevcut olmayan özellikler de dahil olmak üzere bir düğümün özelliklerini inceler.
 
-Aşağıdaki şekilde gösterildiği gibi görselleştiricisi güncelleştirmelerinde bulunan Özellik Kılavuzu: ifade sembolü, **Kind = yöntemi**Içeren bir **SynthesizedIntrinsicOperatorSymbol** .
+Aşağıdaki şekilde gösterildiği gibi görselleştiricisi güncelleştirmelerinde bulunan Özellik Kılavuzu: ifade sembolü, **Kind = yöntemi** Içeren bir **SynthesizedIntrinsicOperatorSymbol** .
 
-![Sembol özellikleri](media/syntax-visualizer/symbol-properties.png)
+![Syntax Visualizer sembol özellikleri](media/syntax-visualizer/symbol-properties.png)
 
 Aynı **AddExpression** düğümü için **TypeSymbol (varsa) görüntülemeyi** deneyin. Aşağıdaki şekilde gösterildiği gibi, Görselleştirici güncelleştirmelerinde bulunan Özellik Kılavuzu, seçili ifadenin türünün olduğunu gösterir `Int32` .
 
@@ -123,7 +123,7 @@ End Module
 
 Bu kod, dosyanın en üstünde bulunan türle eşleşen adlı bir diğer ad tanıtır `C` `System.Console` ve bu diğer adı içinde kullanır `Main()` . İçindeki bu diğer adın kullanımını, `C` `C.WriteLine()` yöntemi içinde seçin `Main()` . Görselleştiricisi görselleştiricide karşılık gelen **IdentifierName** düğümünü seçer. Bu düğüme sağ tıklayın ve **Görünüm simgesine (varsa)** tıklayın. Özellik Kılavuzu, Bu tanımlayıcının `System.Console` aşağıdaki şekilde gösterildiği gibi türe bağlandığını gösterir:
 
-![Sembol özellikleri](media/syntax-visualizer/symbol-visual-basic.png)
+![Syntax Visualizer ' C ' sembolünün özellikleri](media/syntax-visualizer/symbol-visual-basic.png)
 
 Aynı **IdentifierName** düğümü için **bir diğer simge (varsa) görüntülemeyi** deneyin. Özellik Kılavuzu, tanımlayıcının hedefe bağlanan ada sahip bir diğer ad olduğunu gösterir `C` `System.Console` . Diğer bir deyişle, özellik Kılavuzu tanımlayıcıya karşılık gelen **diğerad simgesiyle** ilgili bilgiler sağlar `C` .
 

@@ -3,13 +3,13 @@ title: .NET 'teki yapılandırma sağlayıcıları
 description: .NET uygulamalarını yapılandırmak için yapılandırma sağlayıcısı API 'sinin nasıl kullanıldığını öğrenin.
 author: IEvangelist
 ms.author: dapine
-ms.date: 12/04/2020
-ms.openlocfilehash: 036eb403318200bc0ae1d93e2c7cf9d074cb0bfb
-ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
+ms.date: 03/08/2021
+ms.openlocfilehash: 5f248c93de1773a8bbe8209f002806fb196bb260
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97899449"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605015"
 ---
 # <a name="configuration-providers-in-net"></a>.NET 'teki yapılandırma sağlayıcıları
 
@@ -57,13 +57,11 @@ JSON ayarları, [ortam değişkenleri yapılandırma sağlayıcısı](#environme
 
 <xref:Microsoft.Extensions.Configuration.IConfigurationBuilder>Örnekten, yapılandırma sağlayıcıları eklendikten sonra <xref:Microsoft.Extensions.Configuration.IConfigurationBuilder.Build?displayProperty=nameWithType> nesneyi almak için öğesini çağırabilirsiniz <xref:Microsoft.Extensions.Configuration.IConfigurationRoot> . Yapılandırma kökü bir yapılandırma hiyerarşisinin kökünü temsil eder. Yapılandırma bölümleri, .NET nesnelerinin örneklerine bağlanabilir ve daha sonra <xref:Microsoft.Extensions.Options.IOptions%601> bağımlılık ekleme yoluyla olarak sağlanmış olur.
 
-`TransientFaultHandlingOptions`Aşağıdaki şekilde tanımlanan kayıt türünü göz önünde bulundurun:
+`TransientFaultHandlingOptions`Aşağıdaki şekilde tanımlanan sınıfı göz önünde bulundurun:
 
 :::code language="csharp" source="snippets/configuration/console-json/TransientFaultHandlingOptions.cs":::
 
-Kayıt türleri hakkında bilgi için bkz. [C# 9 ' da kayıt türleri](../../csharp/whats-new/csharp-9.md#record-types).
-
-Aşağıdaki kod yapılandırma kökünü oluşturur, bir bölümü `TransientFaultHandlingOptions` kayıt türüne bağlar ve bağlı değerleri konsol penceresine yazdırır:
+Aşağıdaki kod yapılandırma kökünü oluşturur, bir bölümü `TransientFaultHandlingOptions` sınıf türüne bağlar ve bağlı değerleri konsol penceresine yazdırır:
 
 :::code language="csharp" source="snippets/configuration/console-json/Program.cs" range="31-38":::
 

@@ -2,20 +2,20 @@
 title: ASP.NET MVC uygulamalarını .NET 5 ' e yükseltme
 description: Mevcut bir .NET Framework ASP.NET MVC uygulamasını .NET 5 ' e yükseltmek için .NET Yükseltme Yardımcısı 'nı kullanın. .NET Yükseltme Yardımcısı, bir uygulamayı .NET Framework 'tan .NET 5 ' e geçirmeye yardımcı olan bir CLı aracıdır.
 author: ardalis
-ms.date: 02/25/2021
-ms.openlocfilehash: 0c9af9e12b78df7c4a2aaed18155f7ee9f02870d
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.date: 03/08/2021
+ms.openlocfilehash: 421d8ce16bc1800451ee39c20c4746ea321fafd0
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102108710"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604963"
 ---
 # <a name="upgrade-an-aspnet-mvc-app-to-net-5-with-the-net-upgrade-assistant"></a>.NET Yükseltme Yardımcısı ile bir ASP.NET MVC uygulamasını .NET 5 ' e yükseltme
 
 [.NET Yükseltme Yardımcısı](upgrade-assistant-overview.md) , .NET Framework ASP.NET MVC uygulamalarını .NET 5 ' e yükseltmeye yardımcı olabilecek bir komut satırı aracıdır. Bu makalede aşağıdakiler sunulmaktadır:
 
-* .NET Framework ASP.NET MVC uygulamasında aracın nasıl çalıştırılacağını gösteren bir gösterim
-* Sorun giderme ipuçları
+- .NET Framework ASP.NET MVC uygulamasında aracın nasıl çalıştırılacağını gösteren bir gösterim
+- Sorun giderme ipuçları
 
 ## <a name="upgrade-net-framework-aspnet-mvc-apps"></a>.NET Framework ASP.NET MVC uygulamalarını yükseltme
 
@@ -63,7 +63,7 @@ Araç, yedekleme için özel bir yol ister ve varsayılan olarak, proje yedeklem
 
 Proje biçimi güncelleştirildikten sonra, bir sonraki adım projenin TFı 'sini güncelleştirmedir.
 
-:::image type="content" source="media/upgrade-assistant-aspnetmvc/update-tfm.png" alt-text=".NET Yükseltme Yardımcısı projeyi SDK stiline Dönüştür":::
+:::image type="content" source="media/upgrade-assistant-aspnetmvc/update-tfm.png" alt-text=".NET Yükseltme Yardımcısı güncelleştirme tfd":::
 
 Ardından araç, projenin NuGet paketlerini güncelleştirir. Birkaç pakete güncelleştirmeler gerekiyor ve yeni bir çözümleyici paketi ekleniyor.
 
@@ -86,7 +86,7 @@ Ardından araç, yapılandırma dosyalarını geçirir. Araç, uygulama ayarlar�
 
 Araç, geçiş yaparak yapılandırma dosyalarının geçişini tamamlar `system.web.webPages.razor/pages/namespaces` .
 
-:::image type="content" source="media/upgrade-assistant-aspnetmvc/migrate-config2.png" alt-text=".NET Yükseltme Yardımcısı geçiş yapılandırması":::
+:::image type="content" source="media/upgrade-assistant-aspnetmvc/migrate-config2.png" alt-text=".NET Yükseltme Yardımcısı geçiş yapılandırması tamamlandı":::
 
 Araç, C# başvurularını yeni karşılıklarına geçirmek için bilinen düzeltmeleri uygular.
 
@@ -113,7 +113,7 @@ Bu işlem tamamlandıktan sonra proje dosyasını açın ve gözden geçirin. Ş
   </ItemGroup>
 ```
 
-Web sunucusu tarafından sunulması gereken statik dosyalar, adlı kök düzeyindeki bir klasör içinde uygun bir klasöre taşınmalıdır `wwwroot` . Ayrıntılar için [ASP.NET Core Içindeki statik dosyalara](/aspnet/core/fundamentals/static-files?view=aspnetcore-5.0) bakın. Dosyalar taşındıktan sonra, `<Content>` Proje dosyasındaki bu dosyalara karşılık gelen öğeler silinebilir. Aslında, tüm `<Content>` öğeler ve kapsayan grupları kaldırılabilir. Ayrıca, `<PackageReference>` veya gibi bir istemci tarafı Kitaplığı `bootstrap` ve `jQuery` kaldırılması gerekir.
+Web sunucusu tarafından sunulması gereken statik dosyalar, adlı kök düzeyindeki bir klasör içinde uygun bir klasöre taşınmalıdır `wwwroot` . Ayrıntılar için [ASP.NET Core Içindeki statik dosyalara](/aspnet/core/fundamentals/static-files?view=aspnetcore-5.0&preserve-view=true) bakın. Dosyalar taşındıktan sonra, `<Content>` Proje dosyasındaki bu dosyalara karşılık gelen öğeler silinebilir. Aslında, tüm `<Content>` öğeler ve kapsayan grupları kaldırılabilir. Ayrıca, `<PackageReference>` veya gibi bir istemci tarafı Kitaplığı `bootstrap` ve `jQuery` kaldırılması gerekir.
 
 Varsayılan olarak, proje bir sınıf kitaplığı olarak dönüştürülür. İlk satırın `Sdk` özniteliğini olarak değiştirin ve öğesini `Microsoft.NET.Sdk.Web` `<TargetFramework>` olarak ayarlayın `net5.0` . Projeyi derleyin. Bu noktada, hata sayısı oldukça küçük olmalıdır. Yeni bir ASP.NET 4.6.1 MVC projesi taşıma sırasında, kalan hatalar klasördeki dosyalara başvurur `App_Start` :
 
@@ -123,7 +123,7 @@ Varsayılan olarak, proje bir sınıf kitaplığı olarak dönüştürülür. İ
 
 Bu dosyalar-ve tüm `App_Start` klasör-silinebilir. Benzer şekilde, `Global.asax` ve `Global.asax.cs` dosyaları da kaldırılabilir.
 
-Bu noktada, kalan tek hata paketleme ile ilgilidir. [ASP.NET Core içinde paketleme ve küçültmeye yönelik çeşitli yollar](/aspnet/core/migration/mvc?view=aspnetcore-5.0#configure-bundling-and-minification)vardır. Projeniz için en mantıklı şeyi seçin.
+Bu noktada, kalan tek hata paketleme ile ilgilidir. [ASP.NET Core içinde paketleme ve küçültmeye yönelik çeşitli yollar](/aspnet/core/migration/mvc?view=aspnetcore-5.0&preserve-view=true#configure-bundling-and-minification)vardır. Projeniz için en mantıklı şeyi seçin.
 
 ## <a name="troubleshooting-tips"></a>Sorun giderme ipuçları
 

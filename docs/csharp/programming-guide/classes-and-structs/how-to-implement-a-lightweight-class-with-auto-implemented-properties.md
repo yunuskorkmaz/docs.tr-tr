@@ -8,23 +8,26 @@ helpviewer_keywords:
 ms.topic: how-to
 ms.custom: contperf-fy21q2
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: 4b28ee17f4be2b933373cce0d3670cbfa9a12895
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: 1d80cb2391a94c21360117c8217ecc4514fd666e
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97513048"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190274"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Otomatik uygulanan özelliklerle hafif bir sınıf uygulama (C# Programlama Kılavuzu)
 
 Bu örnek, yalnızca bir otomatik uygulanan özellikler kümesini kapsüllemek için hizmet veren sabit bir basit sınıfın nasıl oluşturulacağını gösterir. Başvuru türü semantiğini kullanmanız gerektiğinde, yapı yerine bu tür yapıyı kullanın.
 
-Değişmez bir özelliği iki şekilde yapabilirsiniz:
+Değişmez bir özelliği aşağıdaki yöntemlerle yapabilirsiniz:
 
-- [Set](../../language-reference/keywords/set.md) erişimcisinin [Private](../../language-reference/keywords/private.md)olarak bildirilmesini sağlayabilirsiniz.  Özelliği yalnızca tür içinde ayarlanabilir, ancak tüketicilere sabittir.
+- Özelliği türün Oluşturucusu haricinde her yerde sabit hale getiren [Get](../../language-reference/keywords/get.md) erişimcisini bildirin.
+
+- [](../../language-reference/keywords/init.md) `set` Özelliği yalnızca oluşturucuda veya bir [nesne Başlatıcısı](object-and-collection-initializers.md)kullanarak ayarlanabilir hale getiren bir erişimci yerine bir init erişimcisi bildirin.
+
+- [Küme](../../language-reference/keywords/set.md) erişimcisini [özel](../../language-reference/keywords/private.md)olarak bildirin.  Özelliği tür içinde ayarlanabilir, ancak tüketicilere sabittir.
 
   Özel bir `set` erişimci bildirdiğinizde, özelliği başlatmak için bir nesne Başlatıcısı kullanamazsınız. Bir Oluşturucu veya Factory yöntemi kullanmanız gerekir.
-- Yalnızca [Get](../../language-reference/keywords/get.md) erişimcisini bildirebilirsiniz. Bu, özelliği türün Oluşturucusu dışında her yerde sabit hale getirir.
 
 Aşağıdaki örnek, Get ve Private kümesi ile tek bir get erişimcisine sahip bir özelliğin nasıl farklı olduğunu gösterir.
 

@@ -3,12 +3,12 @@ description: 'Hakkında daha fazla bilgi edinin: özel durumları ve hataları I
 title: Özel Durum ve Hataları İşleme
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-ms.openlocfilehash: 9851d63705ba8b28819b11e3893bcd6b019d565d
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 16ae72d54177b664bc41be6e639d0a44867df569
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99735081"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605067"
 ---
 # <a name="handling-exceptions-and-faults"></a>Özel Durum ve Hataları İşleme
 
@@ -49,8 +49,8 @@ ms.locfileid: "99735081"
 
  SOAP 1,1 ve SOAP 1,2 hatalar için belirli bir yapı tanımlar. İki belirtim arasında bazı farklılıklar vardır ancak genel olarak, hata oluşturmak ve kullanmak için Ileti ve MessageFault türleri kullanılır.  
   
- ![Özel durumları ve hataları işleme](./media/wcfc-soap1-1andsoap1-2faultcomparisonc.gif "wcfc_SOAP1-1AndSOAP1-2FaultComparisonc")  
-SOAP 1,2 hatası (sol) ve SOAP 1,1 hatası (sağ). SOAP 1,1 ' de yalnızca hata öğesinin ad alanı nitelikli olduğunu unutmayın.  
+ ![SOAP 1,2 hatası ve SOAP 1,1 hatası](./media/wcfc-soap1-1andsoap1-2faultcomparisonc.gif)  
+SOAP 1,2 hatası (sol) ve SOAP 1,1 hatası (sağ). SOAP 1,1 ' de, yalnızca hata öğesi nitelenmiş bir ad alanıdır.  
   
  SOAP bir hata iletisini yalnızca bir hata öğesi (adı olan bir öğe) alt öğesi olan bir ileti olarak tanımlar `<env:Fault>` `<env:Body>` . Hata öğesinin içeriği, Şekil 1 ' de gösterildiği gibi SOAP 1,1 ve SOAP 1,2 arasında biraz farklılık gösterir. Ancak, <xref:System.ServiceModel.Channels.MessageFault?displayProperty=nameWithType> sınıfı bu farklılıkları bir nesne modeliyle normalleştirir:  
   
@@ -324,7 +324,7 @@ public class MessageFault
   
 - Çekirdek bileşenlerine ek olarak, WCF izlemelerini görüntülemek ve aramak için [hizmet Izleme Görüntüleyicisi aracı 'nı (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) kullanabilirsiniz. Araç, WCF tarafından oluşturulan ve kullanılarak yazılan izleme dosyaları için özel olarak tasarlanmıştır <xref:System.Diagnostics.XmlWriterTraceListener> . Aşağıdaki şekilde, izlemeyle ilgili çeşitli bileşenler gösterilmektedir.  
   
- ![Özel durumları ve hataları işleme](./media/wcfc-tracinginchannelsc.gif "wcfc_TracingInChannelsc")  
+ ![İzleme bileşenleri](./media/wcfc-tracinginchannelsc.gif)  
   
 ### <a name="tracing-from-a-custom-channel"></a>Özel bir kanaldan izleme  
 

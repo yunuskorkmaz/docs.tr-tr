@@ -2,12 +2,12 @@
 title: F# kod biçimlendirme yönergeleri
 description: 'F # kodunu biçimlendirmeye yönelik yönergeleri öğrenin.'
 ms.date: 08/31/2020
-ms.openlocfilehash: 4562242b82b0d7efac19bdcf2c04c29482af11dc
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 74ab483a501dd5135ad5d98fd6dce988cf207ef8
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259908"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605457"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# kod biçimlendirme yönergeleri
 
@@ -621,10 +621,10 @@ type MyRecord =
 let foo a =
     a
     |> Option.map
-        (fun x ->
-            {
-                MyField = x
-            })
+           (fun x ->
+                {
+                    MyField = x
+                })
 ```
 
 Liste ve dizi öğeleri için aynı kurallar geçerlidir.
@@ -836,10 +836,10 @@ Tarafından başlayan anonim işlevlerin örüntüme göre `function` , genellik
 ```fsharp
 lambdaList
 |> List.map
-    (function
-        | Abs(x, body) -> 1 + sizeLambda 0 body
-        | App(lam1, lam2) -> sizeLambda (sizeLambda 0 lam1) lam2
-        | Var v -> 1)
+       (function
+            | Abs(x, body) -> 1 + sizeLambda 0 body
+            | App(lam1, lam2) -> sizeLambda (sizeLambda 0 lam1) lam2
+            | Var v -> 1)
 ```
 
 Ya da tarafından tanımlanan işlevlerde desenler `let` eşleştirmesi `let rec` `let` , `function` anahtar sözcüğünün kullanılsa bile, başlatıldıktan sonra dört boşluk olmalıdır:
@@ -916,17 +916,43 @@ Lambda ifadelerinde, bir lambda ifadesinin gövdesini yeni bir satıra yerleşti
 let printListWithOffset a list1 =
     List.iter
         (fun elem ->
-            printfn $"%d{a + elem}")
+             printfn $"A very long line to format the value: %d{a + elem}")
         list1
 
 let printListWithOffsetPiped a list1 =
     list1
     |> List.iter
-        (fun elem ->
-            printfn $"%d{a + elem}")
+           (fun elem ->
+                printfn $"A very long line to format the value: %d{a + elem}")
 ```
 
 Lambda ifadesinin gövdesi birden çok satır uzunsa, bunu yerel olarak kapsamlı bir işleve yeniden düzenlemeyi göz önünde bulundurmanız gerekir.
+
+`fun` / `function` İşlevin göründüğü bağlamdan bağımsız olarak, parametreler genellikle işlev veya anahtar sözcüğe göre girintilenir:
+
+```fsharp
+// With 4 spaces indentation
+list1
+|> List.fold
+       someLongParam
+       anotherLongParam
+
+list1
+|> List.iter
+       (fun elem ->
+            printfn $"A very long line to format the value: %d{elem}")
+
+// With 2 spaces indentation
+list1
+|> List.fold
+     someLongParam
+     anotherLongParam
+
+list1
+|> List.iter
+       (fun elem ->
+          printfn $"A very long line to format the value: %d{elem}")
+```
 
 İşlev tek bir çok satırlı dizi bağımsız değişkeni aldığınızda, [biçimlendirme oluşturucuları, statik üyeler ve üye etkinleştirmeleri](#formatting-constructors-static-members-and-member-invocations) için aynı kurallar geçerlidir.
 

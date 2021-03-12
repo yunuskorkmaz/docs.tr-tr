@@ -3,12 +3,12 @@ title: .NET mimari bileşenleri
 description: .NET Standard, .NET uygulamaları, .NET çalışma zamanları ve araç araçları gibi .NET mimari bileşenlerini açıklar.
 author: cartermp
 ms.date: 10/05/2020
-ms.openlocfilehash: 884deb61ab5cda5054fb54134c3338b4d05599ca
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: d1780d8f85159c12ef4e11b2ac53091b61629352
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106403"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605327"
 ---
 # <a name="net-architectural-components"></a>.NET mimari bileşenleri
 
@@ -106,7 +106,7 @@ Standartlardaki sonraki düzeltmeler, programlama dilleri Technical komite ([TC4
 Aşağıdaki resmi ECMA belgeleri [C#](https://www.ecma-international.org/publications-and-standards/standards/ecma-334/) ve [CLI](https://www.ecma-international.org/publications-and-standards/standards/ecma-335/) ([tr-84](https://www.ecma-international.org/publications-and-standards/technical-reports/ecma-tr-84/)) için kullanılabilir:
 
 - **C# dil standardı (sürüm 5,0)**: [ECMA-334.pdf](https://www.ecma-international.org/wp-content/uploads/ECMA-334_5th_edition_december_2017.pdf)
-- **Ortak dil altyapısı**: [ECMA-335.pdf](hhttps://www.ecma-international.org/wp-content/uploads/ECMA-335_6th_edition_june_2012.pdf).
+- **Ortak dil altyapısı**: [ECMA-335.pdf](https://www.ecma-international.org/wp-content/uploads/ECMA-335_6th_edition_june_2012.pdf).
 - **IV XML dosyasından türetilmiş bilgiler**: [ECMA-084.pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) biçimi.
 
 Resmi ISO/ıEC belgeleri ISO/ıEC [genel kullanıma açık standartlar](https://standards.iso.org/ittf/PubliclyAvailableStandards/) sayfasından kullanılabilir. Bu bağlantılar bu sayfadan doğrudan yapılır:

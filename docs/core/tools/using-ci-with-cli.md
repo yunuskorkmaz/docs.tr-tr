@@ -2,12 +2,12 @@
 title: .NET SDK ve araçları ile sürekli tümleştirme (CI)
 description: .NET SDK ve araçlarını sürekli tümleştirme ile yapı sunucusunda nasıl kullanacağınızı öğrenin.
 ms.date: 05/18/2017
-ms.openlocfilehash: 6d92bf7250ab4aea33325b1a23e7661a296e9756
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: fd1548f5c2d0a5191dd54c315c90a8ce3f8a5305
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94633824"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190001"
 ---
 # <a name="using-the-net-sdk-and-tools-in-continuous-integration-ci"></a>.NET SDK ve araçları sürekli tümleştirme (CI) ile kullanma
 
@@ -126,7 +126,7 @@ Travis CI hem macOS hem de Linux işlerini, uygulamanızın yapı kombinasyonlar
 
 ### <a name="appveyor"></a>AppVeyor
 
-[AppVeyor](https://www.appveyor.com/) , derleme Worker görüntüsüyle .NET Core 1.0.1 SDK 'sını yüklüyor `Visual Studio 2017` . .NET SDK 'sının farklı sürümlerine sahip diğer derleme görüntüleri mevcuttur. Daha fazla bilgi için AppVeyor docs içindeki [AppVeyor. yıml örneğine](https://github.com/dotnet/docs/blob/master/appveyor.yml) ve [Build Worker Images](https://www.appveyor.com/docs/build-environment/#build-worker-images) makalesine bakın.
+[AppVeyor](https://www.appveyor.com/) , derleme Worker görüntüsüyle .NET Core 1.0.1 SDK 'sını yüklüyor `Visual Studio 2017` . .NET SDK 'sının farklı sürümlerine sahip diğer derleme görüntüleri mevcuttur. Daha fazla bilgi için AppVeyor docs içindeki [AppVeyor. yıml örneğine](https://github.com/dotnet/docs/blob/main/appveyor.yml) ve [Build Worker Images](https://www.appveyor.com/docs/build-environment/#build-worker-images) makalesine bakın.
 
 .NET SDK ikilileri, install betiği kullanılarak bir alt dizinde indirilir ve sıkıştırılırsınız ve ardından `PATH` ortam değişkenine eklenir. .NET SDK 'nın birden çok sürümüyle tümleştirme testlerini çalıştırmak için bir derleme matrisi ekleyin:
 

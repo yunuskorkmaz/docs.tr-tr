@@ -2,18 +2,18 @@
 title: Harmanlama
 ms.date: 12/13/2019
 description: Özel bir harmanlama sırası oluşturmayı öğrenin.
-ms.openlocfilehash: 9879846cc191a62c4cb47a0fbaa47c59153ba61c
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: ab330e798c95fec82892f02f4a1b6b96df6113b3
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242978"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190430"
 ---
 # <a name="collation"></a>Harmanlama
 
 Harmanlama dizileri, sıralama ve eşitlik belirlenmesi için metın değerleri karşılaştırılırken SQLite tarafından kullanılır. SQL sorgularında sütun veya işlem başına oluşturma sırasında hangi harmanlamayı kullanacağınızı belirtebilirsiniz. SQLite varsayılan olarak üç harmanlama dizisi içerir.
 
-| Harmanlama | Açıklama                               |
+| Harmanlama | Description                               |
 | --------- | ----------------------------------------- |
 | RTRIM     | Sondaki boşluğu yoksayar               |
 | NOCASE    | ASCII karakterleri A-Z için büyük/küçük harfe duyarsız |
@@ -21,7 +21,7 @@ Harmanlama dizileri, sıralama ve eşitlik belirlenmesi için metın değerleri 
 
 ## <a name="custom-collation"></a>Özel harmanlama
 
-Ayrıca kendi harmanlama dizlerinizi tanımlayabilir veya kullanarak <xref:Microsoft.Data.Sqlite.SqliteConnection.CreateCollation%2A>yerleşik olanları geçersiz kılabilirsiniz. Aşağıdaki örnekte, Unicode karakterlerini desteklemek için NOCASE harmanlamasının geçersiz kılınması gösterilmektedir. [Tam örnek kod](https://github.com/dotnet/docs/blob/master/samples/snippets/standard/data/sqlite/CollationSample/Program.cs) GitHub ' da kullanılabilir.
+Ayrıca kendi harmanlama dizlerinizi tanımlayabilir veya kullanarak yerleşik olanları geçersiz kılabilirsiniz <xref:Microsoft.Data.Sqlite.SqliteConnection.CreateCollation%2A> . Aşağıdaki örnekte, Unicode karakterlerini desteklemek için NOCASE harmanlamasının geçersiz kılınması gösterilmektedir. [Tam örnek kod](https://github.com/dotnet/docs/blob/main/samples/snippets/standard/data/sqlite/CollationSample/Program.cs) GitHub ' da kullanılabilir.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/CollationSample/Program.cs?name=snippet_Collation)]
 

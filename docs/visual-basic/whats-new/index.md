@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 222c92413bd12e1769376c0f6eef7e34d7d5182e
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 1e5f7dec0476d0b7fbf09fa3b253d3d5dfedf426
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106572"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190378"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic yenilikler
 
@@ -32,17 +32,14 @@ Yeni özellikler için bkz. [Visual Basic 16,9](#visual-basic-169).
 Visual Basic 16,0/Visual Studio 2019 sürüm 16,0 \
 Yeni özellikler için bkz. [Visual Basic 16,0](#visual-basic-160).
 
-Visual Basic 15,8/Visual Studio 2017 sürüm 15,8 \
-Yeni özellikler için bkz. [Visual Basic 15,8](#visual-basic-158).
-
 Visual Basic 15,5/Visual Studio 2017 sürüm 15,5 \
 Yeni özellikler için bkz. [Visual Basic 15,5](#visual-basic-155).
 
 Visual Basic 15,3/Visual Studio 2017 sürüm 15,3 \
 Yeni özellikler için bkz. [Visual Basic 15,3](#visual-basic-153).
 
-Visual Basic 2017/Visual Studio 2017 \
-Yeni özellikler için bkz. [Visual Basic 2017](#visual-basic-2017).
+Visual Basic 15/Visual Studio 2017 \
+Yeni özellikler için bkz. [Visual Basic 2017](#visual-basic-15).
 
 Visual Basic/Visual Studio 2015 \
 Yeni özellikler için bkz. [Visual Basic 14](#visual-basic-14).
@@ -89,8 +86,6 @@ Public Sub Main()
         & "WHERE Publishers.State = 'CA'"
 End Sub
 ```
-
-## <a name="visual-basic-158"></a>Visual Basic 15,8
 
 **En iyileştirilmiş kayan noktalı tamsayı dönüştürme**
 
@@ -166,7 +161,7 @@ Kayıt düzeni öğelerinin değerini değişkenlerden atadığınızda, Visual 
 
 Visual Basic komut satırı derleyicisi artık başvuru derlemelerinin çıkışını denetlemek için [**-refout**](../reference/command-line-compiler/refout-compiler-option.md) ve [**-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) derleyici seçeneklerini desteklemektedir. **-refout** , başvuru derlemesinin çıkış dizinini tanımlar ve **-refonly** yalnızca bir başvuru derlemesinin derleme tarafından çıkış olduğunu belirtir.
 
-## <a name="visual-basic-2017"></a>Visual Basic 2017
+## <a name="visual-basic-15"></a>Visual Basic 15
 
 [**Demetler**](../programming-guide/language-features/data-types/tuples.md)
 

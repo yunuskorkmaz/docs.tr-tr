@@ -1,21 +1,23 @@
 ---
 title: Yöntemler-C# Programlama Kılavuzu
 description: C# içindeki bir yöntem, bir dizi deyim içeren bir kod bloğudur. Program, yöntemini çağırarak ve bağımsız değişkenleri belirterek deyimleri çalıştırır.
-ms.date: 07/20/2015
+ms.date: 03/08/2021
 helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 879e57cfbce82f1aa77f8810e23d6a61a6ea5bc8
-ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
+ms.openlocfilehash: e8fad125167774d69344ebb9045a4ead84706bfb
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98899457"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103189974"
 ---
 # <a name="methods-c-programming-guide"></a>Yöntemler (C# Programlama Kılavuzu)
 
-Yöntemi, bir dizi deyim içeren bir kod bloğudur. Program, metodu çağırarak ve gerekli Yöntem bağımsız değişkenlerini belirterek deyimlerin yürütülmesine neden olur. C# ' de, yürütülen her yönerge bir yöntem bağlamında gerçekleştirilir. `Main`Yöntemi her C# uygulamasının giriş noktasıdır ve program başlatıldığında ortak dil çalışma zamanı (CLR) tarafından çağırılır.
+Yöntemi, bir dizi deyim içeren bir kod bloğudur. Program, metodu çağırarak ve gerekli Yöntem bağımsız değişkenlerini belirterek deyimlerin yürütülmesine neden olur. C# ' de, yürütülen her yönerge bir yöntem bağlamında gerçekleştirilir.
+
+`Main`Yöntemi her C# uygulamasının giriş noktasıdır ve program başlatıldığında ortak dil çalışma zamanı (CLR) tarafından çağırılır. [Üst düzey deyimler](../main-and-command-args/top-level-statements.md)kullanan bir uygulamada, `Main` yöntemi derleyici tarafından oluşturulur ve tüm üst düzey deyimleri içerir.
 
 > [!NOTE]
 > Bu makalede adlandırılmış yöntemler ele alınmaktadır. Anonim işlevler hakkında daha fazla bilgi için bkz. [Anonim işlevler](../statements-expressions-operators/anonymous-functions.md).
@@ -39,7 +41,7 @@ Bir nesne üzerinde bir yöntemi çağırmak, bir alana erişme gibidir. Nesne a
 
 ## <a name="method-parameters-vs-arguments"></a>Yöntem parametreleri ve bağımsız değişkenler
 
-Yöntem tanımı, gerekli parametrelerin adlarını ve türlerini belirtir. Kodu çağırırken yöntemi çağırdığında, her parametre için bağımsız değişkenler olarak adlandırılan somut değerler sağlar. Bağımsız değişkenlerin parametre türüyle uyumlu olması gerekir, ancak çağıran kodda kullanılan bağımsız değişken adı (varsa) yöntemde tanımlanan parametre ile aynı olmalıdır. Örneğin:
+Yöntem tanımı, gerekli parametrelerin adlarını ve türlerini belirtir. Kodu çağırırken yöntemi çağırdığında, her parametre için bağımsız değişkenler olarak adlandırılan somut değerler sağlar. Bağımsız değişkenlerin parametre türüyle uyumlu olması gerekir, ancak çağıran kodda kullanılan bağımsız değişken adı (varsa) yöntemde tanımlanan parametre ile aynı olmalıdır. Örnek:
 
 [!code-csharp[MethodExamples#3](snippets/methods/Program.cs#3)]
 

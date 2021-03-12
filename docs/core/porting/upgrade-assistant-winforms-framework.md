@@ -2,20 +2,20 @@
 title: Windows Forms uygulamalarını .NET 5 ' e yükseltme
 description: Mevcut bir .NET Framework Windows Forms uygulamasını .NET 5 ' e yükseltmek için .NET Yükseltme Yardımcısı 'nı kullanın. .NET Yükseltme Yardımcısı, bir uygulamayı .NET Framework 'tan .NET 5 ' e geçirmeye yardımcı olan bir CLı aracıdır.
 author: ardalis
-ms.date: 02/25/2021
-ms.openlocfilehash: 376b74ae52b12056e7799278933eda0f39781f78
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.date: 03/08/2021
+ms.openlocfilehash: 1ba80964c52cb9b6960efdebbd8d4e8ef33d63e6
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102108695"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604833"
 ---
 # <a name="upgrade-a-windows-forms-app-to-net-5-with-the-net-upgrade-assistant"></a>.NET Yükseltme Yardımcısı ile bir Windows Forms uygulamasını .NET 5 ' e yükseltme
 
 [.NET Yükseltme Yardımcısı](upgrade-assistant-overview.md) , .NET Framework Windows Forms (WinForms) uygulamalarını .NET 5 ' e yükseltmeye yardımcı olabilecek bir komut satırı aracıdır. Bu makalede aşağıdakiler sunulmaktadır:
 
-* Aracının .NET Framework Windows Forms uygulamasına karşı nasıl çalıştırılacağını gösteren bir gösteri
-* Sorun giderme ipuçları
+- Aracının .NET Framework Windows Forms uygulamasına karşı nasıl çalıştırılacağını gösteren bir gösteri
+- Sorun giderme ipuçları
 
 ## <a name="upgrade-net-framework-windows-forms-apps"></a>Uygulamaları Windows Forms .NET Framework yükseltme
 
@@ -59,7 +59,7 @@ Araç, yedekleme için özel bir yol ister ve varsayılan olarak, proje yedeklem
 
 Proje biçimi güncelleştirildikten sonra, bir sonraki adım projenin TFı 'sini güncelleştirmedir.
 
-:::image type="content" source="media/upgrade-assistant-winforms-framework/update-tfm.png" alt-text=".NET Yükseltme Yardımcısı projeyi SDK stiline Dönüştür":::
+:::image type="content" source="media/upgrade-assistant-winforms-framework/update-tfm.png" alt-text=".NET Yükseltme Yardımcısı güncelleştirme tfd":::
 
 Ardından araç, projenin NuGet paketlerini güncelleştirir.
 

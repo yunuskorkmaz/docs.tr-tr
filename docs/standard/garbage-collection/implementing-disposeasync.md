@@ -3,18 +3,18 @@ title: DisposeAsync metodu uygulama
 description: Zaman uyumsuz kaynak Temizleme işlemini gerçekleştirmek için DisposeAsync ve Dispomevsimsynccore yöntemlerini nasıl uygulayacağınızı öğrenin.
 author: IEvangelist
 ms.author: dapine
-ms.date: 12/09/2020
+ms.date: 03/08/2021
 dev_langs:
 - csharp
 helpviewer_keywords:
 - DisposeAsync method
 - garbage collection, DisposeAsync method
-ms.openlocfilehash: d82883198626b3c760b86decab8a7f791fa9b7cf
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: dc858a1ff09c6a12a1a7d6df26d610d37f85991e
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100485191"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605340"
 ---
 # <a name="implement-a-disposeasync-method"></a>DisposeAsync metodu uygulama
 
@@ -123,9 +123,9 @@ Yukarıdaki örnekte, her zaman uyumsuz temizleme işlemi bloğunun altında aç
 
 ### <a name="unacceptable-pattern"></a>Kabul edilemeyen desenler
 
-Oluşturucudan bir özel durum oluşturulursa `AnotherAsyncDisposable` , `objOne` düzgün şekilde atılamaz:
+Aşağıdaki kodda vurgulanan satırlarda "yığılmış kullanımlar" ne anlama geldiğini gösterilmektedir. Oluşturucudan bir özel durum oluşturulursa `AnotherAsyncDisposable` , daha sonra `objOne` düzgün bir şekilde atılamaz.
 
-:::code language="csharp" id="dontdothis" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/stacked-await-usings.cs":::
+:::code language="csharp" id="dontdothis" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/stacked-await-usings.cs" highlight="9-10":::
 
 > [!TIP]
 > Beklenmeyen davranışa yol açacağından bu kalıbı kullanmaktan kaçının.

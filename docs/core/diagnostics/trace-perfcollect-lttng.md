@@ -3,12 +3,12 @@ title: PerfCollect ile .NET uygulamalarını izleme.
 description: .NET ' te PerfCollect ile izleme toplama konusunda size kılavuzluk eden bir öğretici.
 ms.topic: tutorial
 ms.date: 10/23/2020
-ms.openlocfilehash: 53e4584953d2af4e766daadfa757cca752ae7329
-ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
+ms.openlocfilehash: 20e1bf56714fb32b5231d45b0ba35cdfcedaea2e
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97593226"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103189936"
 ---
 # <a name="trace-net-applications-with-perfcollect"></a>PerfCollect ile .NET uygulamalarını izleme
 
@@ -158,6 +158,9 @@ PerfView, izleme dosyasında bulunan verilere göre desteklenen görünümlerin 
 - İhtiyacınız olan bilgiler için bir görünüm yoksa ham olaylar görünümündeki olayları aramaya çalışırsınız.  **Olayları** seçin.
 
 PerfView içindeki görünümleri yorumlama hakkında daha fazla bilgi için bkz. görünümdeki yardım bağlantıları veya PerfView 'daki ana pencereden **Yardım->kullanıcıları Kılavuzu**' nu seçin.
+
+> [!NOTE]
+> API aracılığıyla yazılan olaylar <xref:System.Diagnostics.Tracing.EventSource?displayProperty=nameWithType> (Framework 'ün olayları dahil), sağlayıcı adının altında gösterilmez. Bunun yerine, `EventSourceEvent` sağlayıcı altında olay olarak yazılır `Microsoft-Windows-DotNETRuntime` ve yükleri JSON serileştirilir.
 
 ### <a name="use-tracecompass-to-open-the-trace-file"></a>İzleme dosyasını açmak için Tracepusula kullanma
 

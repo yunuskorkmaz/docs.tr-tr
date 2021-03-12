@@ -1,7 +1,7 @@
 ---
 title: Main () ve komut satırı bağımsız değişkenleri-C# Programlama Kılavuzu
 description: Ana () ve komut satırı bağımsız değişkenleri hakkında bilgi edinin. ' Main ' yöntemi çalıştırılabilir programın giriş noktasıdır.
-ms.date: 08/02/2017
+ms.date: 03/08/2021
 f1_keywords:
 - main_CSharpKeyword
 - Main
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - command line [C#], arguments
 - command-line arguments [C#], Main method
 ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
-ms.openlocfilehash: 611b0c8818f8f800cf1cf5c0f6b2789882939b7b
-ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
+ms.openlocfilehash: 35117642f38885aab08a5c0249d1f65ec76c59f3
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88957544"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190209"
 ---
 # <a name="main-and-command-line-arguments-c-programming-guide"></a>Main () ve komut satırı bağımsız değişkenleri (C# Programlama Kılavuzu)
 
@@ -26,6 +26,12 @@ ms.locfileid: "88957544"
 C# programında yalnızca bir giriş noktası olabilir. Yöntemine sahip birden fazla sınıfınız varsa `Main` , `-main` `Main` giriş noktası olarak hangi yöntemin kullanılacağını belirtmek için programınızı derleyici seçeneğiyle derlemeniz gerekir. Daha fazla bilgi için bkz. [-Main (C# derleyici seçenekleri)](../../language-reference/compiler-options/main-compiler-option.md).
 
 [!code-csharp[csProgGuideMain#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#17)]
+
+C# 9 ' dan başlayarak, `Main` `Main` Aşağıdaki örnekte olduğu gibi yöntemini atlayabilir ve c# deyimlerini yönteminde olduğu gibi yazabilirsiniz:
+
+:::code language="csharp" source="snippets/top-level-statements-1/Program.cs":::
+
+Örtük bir giriş noktası yöntemiyle uygulama kodu yazma hakkında daha fazla bilgi için bkz. [üst düzey deyimler](top-level-statements.md).
 
 ## <a name="overview"></a>Genel Bakış
 

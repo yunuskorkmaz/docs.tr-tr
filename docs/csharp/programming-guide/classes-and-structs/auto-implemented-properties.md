@@ -6,16 +6,16 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: aa55fa97-ccec-431f-b5e9-5ac789fd32b7
-ms.openlocfilehash: 72f774d84266292412be9b954fc206debc8ac55e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ef3e2d6dd5851801ea06d65b87c2274d8e44b4f1
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555906"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190287"
 ---
 # <a name="auto-implemented-properties-c-programming-guide"></a>Otomatik Uygulanan Özellikler (C# Programlama Kılavuzu)
 
-C# 3,0 ve üzeri sürümlerde otomatik uygulanan özellikler, özellik erişimcilerinde ek bir mantık gerekmediği zaman özellik bildirimini daha kısa hale getirir. Ayrıca, istemci kodunun nesne oluşturmasını da sağlar. Aşağıdaki örnekte gösterildiği gibi bir özellik bildirdiğinizde, derleyici yalnızca özelliğin `get` ve Erişimcilerde erişilebilen özel, anonim bir destek alanı oluşturur `set` .
+C# 3,0 ve üzeri sürümlerde otomatik uygulanan özellikler, özellik erişimcilerinde ek bir mantık gerekmediği zaman özellik bildirimini daha kısa hale getirir. Ayrıca, istemci kodunun nesne oluşturmasını da sağlar. Aşağıdaki örnekte gösterildiği gibi bir özellik bildirdiğinizde, derleyici yalnızca özelliğin `get` ve Erişimcilerde erişilebilen özel, anonim bir destek alanı oluşturur `set` . C# 9 ve sonraki sürümlerde, `init` erişimciler otomatik olarak uygulanan özellikler olarak da bildirilebilecek.
   
 ## <a name="example"></a>Örnek
 
@@ -31,7 +31,13 @@ C# 6 ve üzeri sürümlerde, alanlarla aynı şekilde otomatik uygulanan özelli
 public string FirstName { get; set; } = "Jane";  
 ```  
 
-Önceki örnekte gösterilen sınıf değişebilir ' dir. İstemci kodu, oluşturulduktan sonra nesnelerdeki değerleri değiştirebilir. Önemli davranışları (Yöntemler) ve verileri içeren karmaşık sınıflarda, genellikle ortak özelliklerin olması gerekir. Bununla birlikte, yalnızca bir değer kümesini (veri) kapsülleyen ve hiç davranışlarına sahip olan küçük sınıflar veya yapılar için, küme erişimcisini [Private](../../language-reference/keywords/private.md) (Sabit-tüketiciler) olarak bildirerek veya yalnızca bir get erişimcisi bildirerek (Oluşturucu dışında sabit olarak) nesneleri sabit hale getirebilirsiniz.  Daha fazla bilgi için bkz. [Otomatik uygulanan özelliklerle hafif bir sınıf uygulama](./how-to-implement-a-lightweight-class-with-auto-implemented-properties.md).
+Önceki örnekte gösterilen sınıf değişebilir ' dir. İstemci kodu, oluşturulduktan sonra nesnelerdeki değerleri değiştirebilir. Önemli davranışları (Yöntemler) ve verileri içeren karmaşık sınıflarda, genellikle ortak özelliklerin olması gerekir. Ancak, yalnızca bir değer kümesini (veri) kapsülleyen ve çok az davranışlara sahip olan küçük sınıflar veya yapılar için, nesneleri sabit hale getirmek üzere aşağıdaki seçeneklerden birini kullanmanız gerekir:
+
+* Yalnızca bir `get` erişimci bildirin (Oluşturucu dışında her yerde sabit).
+* Bir `get` erişimci ve erişimci bildirin `init` (nesne oluşturma sırasında her yerde sabit).
+* `set`Erişimciyi [özel](../../language-reference/keywords/private.md) olarak bildirin (Sabit-müşteriler).
+
+Daha fazla bilgi için bkz. [Otomatik uygulanan özelliklerle hafif bir sınıf uygulama](./how-to-implement-a-lightweight-class-with-auto-implemented-properties.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

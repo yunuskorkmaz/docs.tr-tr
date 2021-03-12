@@ -3,12 +3,12 @@ title: Üretim zamanında gizli dizileri korumak için Azure Key Vault kullanma
 description: .NET mikro hizmetleri ve Web uygulamalarında güvenlik-Azure Key Vault, yöneticiler tarafından tamamen denetlenen uygulama gizli dizilerini işlemenin mükemmel bir yoludur. Yöneticiler, geliştiricilerin bunları işlemesi gerekmeden geliştirme değerlerini de atayabilir ve iptal edebilir.
 author: mjrousos
 ms.date: 01/30/2020
-ms.openlocfilehash: 5d024894fe1540df04514031bf0b6e0754ddc75c
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: 94243468b35e2db9818ae9afacd5beec0a12075e
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633929"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604625"
 ---
 # <a name="use-azure-key-vault-to-protect-secrets-at-production-time"></a>Üretim zamanında gizli dizileri korumak için Azure Key Vault kullanma
 
@@ -47,9 +47,6 @@ Ortam değişkenleri olarak depolanan veya gizli dizi Yöneticisi aracı tarafı
 
 - **ASP.NET Core veri koruma anahtarı yönetimi ve ömrü** \
   [https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings](/aspnet/core/security/data-protection/configuration/default-settings)
-
-- **Microsoft.Extensions.Configurlama** GitHub deposu. \
-  <https://github.com/dotnet/extensions/tree/master/src/Configuration>
 
 >[!div class="step-by-step"]
 >[Önceki](developer-app-secrets-storage.md) 

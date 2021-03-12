@@ -3,12 +3,12 @@ title: .NET 'teki iyi bilinen EventCounters
 description: .NET çalışma zamanı ve kitaplıkları tarafından yayınlanan EventCounters 'i gözden geçirin.
 ms.topic: reference
 ms.date: 12/17/2020
-ms.openlocfilehash: 8bd14c7caf004cefe73d5b0676b9fa3280840442
-ms.sourcegitcommit: c3093e9d106d8ca87cc86eef1f2ae4ecfb392118
+ms.openlocfilehash: db7417993786eae18c9d7b6cc3bb79284d543dd3
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97737300"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103189949"
 ---
 # <a name="well-known-eventcounters-in-net"></a>.NET 'teki iyi bilinen EventCounters
 
@@ -16,9 +16,9 @@ ms.locfileid: "97737300"
 
 ## <a name="systemruntime-counters"></a>System. Runtime sayaçları
 
-Aşağıdaki sayaçlar .NET çalışma zamanının (CoreCLR) bir parçası olarak yayımlanır ve içinde tutulur [`RuntimeEventSource.cs`](https://github.com/dotnet/coreclr/blob/master/src/System.Private.CoreLib/src/System/Diagnostics/Eventing/RuntimeEventSource.cs) .
+Aşağıdaki sayaçlar .NET çalışma zamanının (CoreCLR) bir parçası olarak yayımlanır ve içinde tutulur [`RuntimeEventSource.cs`](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Private.CoreLib/src/System/Diagnostics/Tracing/RuntimeEventSource.cs) .
 
-| Sayaç | Açıklama |
+| Sayaç | Description |
 |--|--|
 | :::no-loc text="% Time in GC since last GC"::: (`time-in-gc`) | Son GC 'den bu yana GC 'deki sürenin yüzdesi |
 | :::no-loc text="Allocation Rate"::: (`alloc-rate`) | Her güncelleştirme aralığı için ayrılan bayt sayısı |
@@ -48,7 +48,7 @@ Aşağıdaki sayaçlar .NET çalışma zamanının (CoreCLR) bir parçası olara
 
 Aşağıdaki sayaçlar [ASP.NET Core](/aspnet/core) bir parçası olarak yayımlanır ve içinde tutulur [`HostingEventSource.cs`](https://github.com/dotnet/aspnetcore/blob/master/src/Hosting/Hosting/src/Internal/HostingEventSource.cs) .
 
-| Sayaç | Açıklama |
+| Sayaç | Description |
 |--|--|
 | :::no-loc text="Current Requests"::: (`current-requests`) | Başlatılmış ancak henüz durdurulmamış isteklerin toplam sayısı |
 | :::no-loc text="Failed Requests"::: (`failed-requests`) | Uygulamanın ömrü boyunca oluşan başarısız isteklerin toplam sayısı |
@@ -59,7 +59,7 @@ Aşağıdaki sayaçlar [ASP.NET Core](/aspnet/core) bir parçası olarak yayıml
 
 Aşağıdaki sayaçlar [ASP.NET Core SignalR](/aspnet/core/signalr/introduction) 'nin bir parçası olarak yayımlanır ve içinde tutulur [`HttpConnectionsEventSource.cs`](https://github.com/dotnet/aspnetcore/blob/master/src/SignalR/common/Http.Connections/src/Internal/HttpConnectionsEventSource.cs) .
 
-| Sayaç | Açıklama |
+| Sayaç | Description |
 |--|--|
 | :::no-loc text="Average Connection Duration"::: (`connections-duration`) | Bir bağlantının ortalama süresi (milisaniye cinsinden) |
 | :::no-loc text="Current Connections"::: (`current-connections`) | Başlatılmış ancak henüz durdurulmamış etkin bağlantı sayısı |
@@ -71,7 +71,7 @@ Aşağıdaki sayaçlar [ASP.NET Core SignalR](/aspnet/core/signalr/introduction)
 
 Aşağıdaki sayaçlar [ASP.NET Core Kestrel Web sunucusunun](/aspnet/core/fundamentals/servers/kestrel) bir parçası olarak yayımlanır ve içinde tutulur [`KestrelEventSource.cs`](https://github.com/dotnet/aspnetcore/blob/master/src/Servers/Kestrel/Core/src/Internal/Infrastructure/KestrelEventSource.cs) .
 
-| Sayaç | Açıklama |
+| Sayaç | Description |
 |--|--|
 | :::no-loc text="Connection Queue Length"::: (`connection-queue-length`) | Bağlantı sırasının geçerli uzunluğu |
 | :::no-loc text="Connection Rate"::: (`connections-per-second`) | Web sunucusuna güncelleştirme aralığı başına bağlantı sayısı |
@@ -88,7 +88,7 @@ Aşağıdaki sayaçlar [ASP.NET Core Kestrel Web sunucusunun](/aspnet/core/funda
 
 Aşağıdaki sayaçlar HTTP yığını tarafından yayımlanır.  Bu sayaçlar yalnızca .NET 5 ve sonraki sürümlerde kullanılabilir.
 
-| Sayaç | Açıklama |
+| Sayaç | Description |
 |--|--|
 | :::no-loc text="Requests Started"::: (`requests-started`) | İşlemin başlatılmasından bu yana başlatılan istek sayısı |
 | :::no-loc text="Requests Started Rate"::: (`requests-started-rate`) | Güncelleştirme aralığı başına başlatılan istek sayısı |
@@ -104,7 +104,7 @@ Aşağıdaki sayaçlar HTTP yığını tarafından yayımlanır.  Bu sayaçlar y
 
 Aşağıdaki sayaçlar DNS aramalarıyla ilgili ölçümleri izler. Bu sayaçlar yalnızca .NET 5 ve sonraki sürümlerde kullanılabilir.
 
-| Sayaç | Açıklama |
+| Sayaç | Description |
 |--|--|
 | :::no-loc text="DNS Lookups Requested"::: (`dns-lookups-requested`) | İşlemin başlatılmasından bu yana istenen DNS arama sayısı |
 | :::no-loc text="Average DNS Lookup Duration"::: (`dns-lookups-duration`) | Bir DNS araması için geçen ortalama süre |
@@ -113,7 +113,7 @@ Aşağıdaki sayaçlar DNS aramalarıyla ilgili ölçümleri izler. Bu sayaçlar
 
 Aşağıdaki sayaçlar, aktarım katmanı güvenlik protokolü ile ilgili ölçümleri izler.  Bu sayaçlar yalnızca .NET 5 ve sonraki sürümlerde kullanılabilir.
 
-| Sayaç | Açıklama |
+| Sayaç | Description |
 |--|--|
 | :::no-loc text="TLS handshakes completed"::: (`tls-handshake-rate`) | Güncelleştirme aralığı başına tamamlanan TLS el sıkışmaları sayısı |
 | :::no-loc text="Total TLS handshakes completed"::: (`total-tls-handshakes`) | İşlem başladıktan sonra tamamlanan TLS el sıkışmaları toplam sayısı |
@@ -134,7 +134,7 @@ Aşağıdaki sayaçlar, aktarım katmanı güvenlik protokolü ile ilgili ölç�
 
 Aşağıdaki sayaçlar ile ilgili ölçümleri izler <xref:System.Net.Sockets.Socket> .
 
-| Sayaç | Açıklama |
+| Sayaç | Description |
 |--|--|
 | :::no-loc text="Outgoing Connections Established"::: (`outgoing-connections-established`) | İşlemin başlatılmasından bu yana kurulan giden bağlantıların toplam sayısı |
 | :::no-loc text="Incoming Connections Established"::: (`incoming-connections-established`) | İşlemin başlatılmasından bu yana kurulan gelen bağlantıların toplam sayısı |

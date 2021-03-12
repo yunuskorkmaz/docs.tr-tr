@@ -3,12 +3,12 @@ title: Ön uç istemci iletişimi
 description: Ön uç istemcilerinin, bulutta yerel sistemlerle nasıl iletişim kuracağını öğrenin
 author: robvet
 ms.date: 01/19/2021
-ms.openlocfilehash: 089f55f8f6b9320fe552602eb40bb83be28f119b
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: b28fd05aded652057deecd6814199e0360202a07
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99506246"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604521"
 ---
 # <a name="front-end-client-communication"></a>Ön uç istemci iletişimi
 
@@ -43,7 +43,7 @@ Ağ Geçidi, iç hizmet bölümlendirme ve yeniden düzenleme işleminden istemc
 
 API ağ geçidini basit ve hızlı tutmak için dikkatli olunmalıdır. Genellikle, iş mantığı ağ geçidinin dışında tutulur. Karmaşık bir ağ geçidi riski soruna neden oluyor ve sonunda tek bir. Daha büyük sistemler genellikle istemci türüne (mobil, Web, masaüstü) veya arka uç işlevselliğine göre bölünmüş birden çok API ağ geçidi sunar. Ön [uçlar Için arka uç](/azure/architecture/patterns/backends-for-frontends) , birden çok ağ geçidi uygulamaya yönelik bir yön sağlar. Model Şekil 4-4 ' de gösterilmiştir.
 
-![API ağ geçidi kalıbı](./media/backend-for-frontend-pattern.png)
+![Ön uç deseninin arka ucu](./media/backend-for-frontend-pattern.png)
 
 **Şekil 4-4.** Ön uç deseninin arka ucu
 

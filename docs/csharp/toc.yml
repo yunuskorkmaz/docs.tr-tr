@@ -286,6 +286,8 @@ items:
             href: programming-guide/main-and-command-args/how-to-display-command-line-arguments.md
           - name: Ana() Dönüş Değerleri
             href: programming-guide/main-and-command-args/main-return-values.md
+          - name: Üst düzey deyimler
+            href: programming-guide/main-and-command-args/top-level-statements.md
       - name: Programlama kavramları
         items:
           - name: Genel Bakış
@@ -1133,6 +1135,8 @@ items:
                 href: language-reference/keywords/add.md
               - name: get
                 href: language-reference/keywords/get.md
+              - name: init
+                href: language-reference/keywords/init.md
               - name: partial (Tür)
                 href: language-reference/keywords/partial-type.md
               - name: partial (Yöntem)

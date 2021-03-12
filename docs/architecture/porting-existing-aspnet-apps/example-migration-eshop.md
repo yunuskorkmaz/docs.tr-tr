@@ -3,12 +3,12 @@ title: ASP.NET Core için eShop 'ın örnek geçişi
 description: Bir başvuru olarak örnek bir çevrimiçi mağaza uygulaması kullanarak, mevcut bir ASP.NET MVC uygulamasını ASP.NET Core 'e geçirmeye yönelik yönergeler.
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 83110909632e4eb433e1fabaedf3490ce594e12e
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 498eb3b11c44381ff6d261b37caed15a2698b166
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106084"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605262"
 ---
 # <a name="example-migration-of-eshop-to-aspnet-core"></a>ASP.NET Core için eShop 'ın örnek geçişi
 
@@ -26,7 +26,7 @@ Bu bölümde, el ile Yükseltme adımlarının çoğunun nasıl gerçekleştiril
 
 ## <a name="run-apiport-to-identify-problematic-apis"></a>Sorunlu API 'Leri tanımlamak için *Apiport* çalıştırma
 
-Geçirmeye hazırlanın ilk adımı, *Apiport* aracını çalıştırıyordu. Araç, uygulamanın kaç .NET Framework API 'sini ve bunların kaç tane .NET Standard veya .NET Core eşdeğerlerine sahip olduğunu tanımlar. Birincil olarak kendi uygulamanızın mantığına odaklanın, üçüncü taraf bağımlılıklara değil, ve `System.Web` bu yana, bir arada olması gereken bağımlılıklara dikkat edin. ApiPort Aracı, son bölümde [bağımlılıkları anlama ve güncelleştirme](/understand-update-dependencies.md)konusunda sunulmuştur.
+Geçirmeye hazırlanın ilk adımı, *Apiport* aracını çalıştırıyordu. Araç, uygulamanın kaç .NET Framework API 'sini ve bunların kaç tane .NET Standard veya .NET Core eşdeğerlerine sahip olduğunu tanımlar. Birincil olarak kendi uygulamanızın mantığına odaklanın, üçüncü taraf bağımlılıklara değil, ve `System.Web` bu yana, bir arada olması gereken bağımlılıklara dikkat edin. ApiPort Aracı, son bölümde [bağımlılıkları anlama ve güncelleştirme](understand-update-dependencies.md)konusunda sunulmuştur.
 
 [ *Apiport* aracını yükledikten ve yapılandırdıktan](../../standard/analyzers/portability-analyzer.md)sonra, Şekil 4-2 ' de gösterildiği gibi Analizi Visual Studio içinden çalıştırın.
 

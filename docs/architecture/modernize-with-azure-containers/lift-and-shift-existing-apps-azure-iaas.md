@@ -2,12 +2,12 @@
 title: Mevcut .NET uygulamalarını Azure IaaS 'ye yükseltme ve kaydırma (bulut altyapısına hazırlanın)
 description: Azure bulut ve Windows kapsayıcıları Ile mevcut .NET uygulamalarını modernleştirin.
 ms.date: 12/21/2020
-ms.openlocfilehash: fb875c38cac236826007bba217189238b7c00898
-ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
+ms.openlocfilehash: 69e89702b41cd7388ee6c90e77efafc7cd2bebe8
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98025400"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605119"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>Mevcut .NET uygulamalarını Azure IaaS 'ye yükseltme ve kaydırma (bulut altyapısına hazırlanın)
 
@@ -63,7 +63,7 @@ Azure geçişi, iş yüklerinizin işletmeye en az etkiyle geçiş yapma ve Azur
 
 Şekil 2-2, Azure geçişi tarafından gerçekleştirilen tüm sunucu ve uygulama bağlantıları için yerleşik bağımlılık eşlemesini gösterir.
 
-![Cloud Infrastructure-Ready uygulamalarını konumlandırma](./media/image2-2.png)
+![Sunucu ve uygulama bağlantılarının bağımlılıkları](./media/image2-2.png)
 
 **Şekil 2-2.** Cloud Infrastructure-Ready uygulamalarını konumlandırma
 
@@ -75,7 +75,7 @@ Site Recovery Ayrıca, kısmen şirket içinde ve kısmen Azure 'da olan karma o
 
 Şekil 2-3 Azure Site Recovery kullanarak birden çok VM geçişlerinin yürütülmesini gösterir.
 
-![Cloud Infrastructure-Ready uygulamalarını konumlandırma](./media/image2-3.png)
+![Azure Site Recovery kullanarak VM geçişleri](./media/image2-3.png)
 
 **Şekil 2-3.** Cloud Infrastructure-Ready uygulamalarını konumlandırma
 

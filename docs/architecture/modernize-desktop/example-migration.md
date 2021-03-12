@@ -2,12 +2,12 @@
 title: .NET 5’e geçiş örneği
 description: .NET Framework .NET 5 ' e hedefleme örnek uygulamaların nasıl geçirileceği gösteriliyor.
 ms.date: 01/19/2021
-ms.openlocfilehash: 5b3743c68ee0426efffda6f999dffea788f493e9
-ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
+ms.openlocfilehash: 02a45859dfca891598e235e3de1ed968aefb5bf4
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102206548"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605171"
 ---
 # <a name="example-of-migrating-to-net"></a>.NET 'e geçme örneği
 
@@ -189,7 +189,7 @@ Projeyi kaydedin ve yeniden yükleyin. Artık proje dosyasını güncellemeyi ta
 
 Projeyi bu noktada derlerseniz, WCF istemci başvurusuyla ilgili bazı hatalar bulacaksınız. Bu kod otomatik olarak oluşturulduktan sonra, .NET hedeflemek için yeniden oluşturmanız gerekir.
 
-![Visual Studio 'da derleme hatalarının ekran görüntüsü](./media/example-migration-core/winforms-compilation-errors.png)
+![Visual Studio 'da hataları gösteren Hata Listesi](./media/example-migration-core/winforms-compilation-errors.png)
 
 *Reference.cs* dosyasını silin ve yeni bir hizmet istemcisi oluşturun.
 
@@ -260,7 +260,7 @@ Bu durumda, *. csproj* dosyasının tüm içeriğini silin ve aşağıdaki kodla
 
 Projeyi yeniden yükler ve derlerseniz, şu hatayı alırsınız:
 
-![Visual Studio 'da derleme hatalarının ekran görüntüsü](./media/example-migration-core/wpf-compilation-error.png)
+![Visual Studio 'da tek hata CS0234 gösteren Hata Listesi](./media/example-migration-core/wpf-compilation-error.png)
 
 Tüm *. csproj* içeriğini sildiyseniz, eski projede mevcut bir proje başvuru belirtimini kaybettiniz. Proje başvurusunu geri eklemek için bu satırı *. csproj* dosyasına eklemeniz yeterlidir:
 

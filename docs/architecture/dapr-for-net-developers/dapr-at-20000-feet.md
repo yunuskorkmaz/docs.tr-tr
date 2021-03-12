@@ -3,12 +3,12 @@ title: 20.000 fit üzerinde davpr
 description: Nepr 'nin ne olduğu, ne yaptığı ve nasıl çalıştığı hakkında üst düzey bir genel bakış.
 author: robvet
 ms.date: 02/07/2021
-ms.openlocfilehash: c6157d29274df73f6ea1fef44b8e5cd5d0239471
-ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
+ms.openlocfilehash: f0efb4652aaa35961d59979cb561941e5280a575
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102206594"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604755"
 ---
 # <a name="dapr-at-20000-feet"></a>20.000 fit üzerinde davpr
 
@@ -57,7 +57,7 @@ Yapı taşı, dağıtılmış bir altyapı özelliğini kapsüller. İşlevselli
 
 Aşağıdaki tabloda her bir blok tarafından sunulan altyapı hizmetleri açıklanmaktadır.
 
-| Yapı taşı | Açıklama |
+| Yapı taşı | Description |
 |----------------|-------------|
 | [Durum yönetimi](state-management.md) | Uzun süreli durum bilgisi olan hizmetler için bağlamsal bilgileri destekler. |
 | [Hizmet çağrısı](service-invocation.md) | Platform belirsiz protokollerini ve iyi bilinen uç noktaları kullanarak doğrudan, hizmetten hizmete çağrıları çağırın. |
@@ -155,7 +155,6 @@ Bu yazma sırasında, aşağıdaki bileşen türleri, Davpr tarafından sağlan�
 | [Bağlamalar](https://github.com/dapr/components-contrib/tree/master/bindings) | Dış sistemlerden uygulama olaylarını tetiklemek ve isteğe bağlı veri yükleri ile dış sistemleri çağırmak için tekdüzen arabirimi sağlar. |
 | [Ara yazılım](https://github.com/dapr/components-contrib/tree/master/middleware) | Özel ara yazılım, istek işleme ardışık düzenine takılır ve bir istek ya da yanıt üzerinde ek eylemler çağırabilir. |
 | [Gizli depolar](https://github.com/dapr/components-contrib/tree/master/secretstores) | Bulut, kenar, ticari ve açık kaynaklı hizmetler de dahil olmak üzere dış gizli depolarla etkileşim kurmak için tekdüzen arabirimi sağlar. |
-| [Dışarı vericiler izleme](https://github.com/dapr/components-contrib/tree/master/exporters) | Telemetri sarmalayıcıları açmak için tekdüzen arabirimi sağlar. |
 
 Bu işlem, Jet 'in Davpr üzerinden tamamlanmasını tamamladıktan sonra bir kez daha görürsünüz ve nasıl birbirine bağlandığını görebilirsiniz.
 

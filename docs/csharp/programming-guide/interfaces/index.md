@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 4485a9f8e3581aa80ed65221258dc40310b3a695
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 123c3768414ee9a577c49c218acfb7415d83572e
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87303055"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605288"
 ---
 # <a name="interfaces-c-programming-guide"></a>Arabirimler (C# Programlama Kılavuzu)
 
@@ -31,7 +31,7 @@ Tanımı `IEquatable<T>` için bir uygulama sağlamaz `Equals` . Bir sınıf vey
 
 Soyut sınıflar hakkında daha fazla bilgi için bkz. [soyut ve korumalı sınıflar ve sınıf üyeleri](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md).
 
-Arabirimler örnek yöntemler, özellikler, olaylar, Dizin oluşturucular veya bu dört üye türlerinin herhangi bir birleşimini içerebilir. Arabirimler statik oluşturucular, alanlar, sabitler veya işleçler içerebilir. Örneklere bağlantılar için [Ilgili bölümler](./index.md#BKMK_RelatedSections)bölümüne bakın. Arabirim, örnek alanları, örnek oluşturucular veya sonlandırıcılar içeremez. Arabirim üyeleri varsayılan olarak açıktır.
+Arabirimler örnek yöntemler, özellikler, olaylar, Dizin oluşturucular veya bu dört üye türlerinin herhangi bir birleşimini içerebilir. Arabirimler statik oluşturucular, alanlar, sabitler veya işleçler içerebilir. Örneklere bağlantılar için [Ilgili bölümler](./index.md#BKMK_RelatedSections)bölümüne bakın. Arabirim, örnek alanları, örnek oluşturucular veya sonlandırıcılar içeremez. Arabirim üyeleri varsayılan olarak geneldir ve,,,, veya gibi erişilebilirlik değiştiricilerini açıkça belirtebilirsiniz `public` `protected` `internal` `private` `protected internal` `private protected` . `private`Üyenin varsayılan bir uygulamasına sahip olması gerekir.
 
 Bir arabirim üyesini uygulamak için, uygulama sınıfının karşılık gelen üyesi ortak, statik değil olmalıdır ve arabirim üyesiyle aynı ada ve imzaya sahip olmalıdır.
 
@@ -55,12 +55,12 @@ Bir arabirim aşağıdaki özelliklere sahiptir:
 - Arabirim doğrudan başlatılamaz. Üyeleri, arabirimini uygulayan herhangi bir sınıf veya yapı tarafından uygulanır.
 - Bir sınıf veya yapı, birden çok arabirim uygulayabilir. Bir sınıf bir temel sınıfı devralınabilir ve ayrıca bir veya daha fazla arabirim uygulayabilir.
 
-## <a name="related-sections"></a><a name="BKMK_RelatedSections"></a>İlgili bölümler
+## <a name="related-sections"></a><a name="BKMK_RelatedSections"></a> İlgili bölümler
 
 - [Arabirim Özellikleri](../classes-and-structs/interface-properties.md)  
 - [Arabirimlerdeki Dizin Oluşturucular](../indexers/indexers-in-interfaces.md)  
 - [Arabirim olaylarını uygulama](../events/how-to-implement-interface-events.md)
-- [Sınıflar ve yapılar](../classes-and-structs/index.md)  
+- [Sınıflar ve Yapılar](../classes-and-structs/index.md)  
 - [Devralma](../classes-and-structs/inheritance.md)  
 - [Arabirimler](../../language-reference/keywords/interface.md)
 - [Yöntemler](../classes-and-structs/methods.md)  

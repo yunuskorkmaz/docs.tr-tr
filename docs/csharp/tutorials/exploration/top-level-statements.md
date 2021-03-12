@@ -2,12 +2,12 @@
 title: Üst düzey deyimler-C# öğreticisi
 description: Bu öğreticide, fikirlerinizi araştırırken en üst düzey deyimlerinizi deneyip kanıtlarken kavram kanıtlarını nasıl kullanabileceğiniz gösterilmektedir
 ms.date: 10/28/2020
-ms.openlocfilehash: c56a40e7a9715ff0265a897c494b457a32e52df2
-ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
+ms.openlocfilehash: d3cd089c5681e6c06a0c63cbffcc3cf5935fbeef
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99585630"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190300"
 ---
 # <a name="tutorial-explore-ideas-using-top-level-statements-to-build-code-as-you-learn"></a>Öğretici: öğreniniz sırasında kod derlemek için en üst düzey deyimleri kullanarak fikirleri araştırma
 
@@ -52,7 +52,7 @@ using System;
 Console.WriteLine("Hello World!");
 ```
 
-Bu eylem, yeni fikirleri keşfetmeye başlamak için gerekenleri basitleştirir. Komut dosyası senaryoları için en üst düzey deyimleri kullanabilir veya keşfedebilirsiniz. Temel bilgileri aldıktan sonra kodu yeniden düzenlemeye başlayabilir ve derlediğiniz yeniden kullanılabilir bileşenler için yöntemler, sınıflar veya diğer derlemeler oluşturabilirsiniz. Üst düzey deyimler hızlı deneme ve başlangıç öğreticilerini etkinleştirir. Ayrıca, deneme 'den tam programlara sorunsuz bir yol sağlar.
+Bu özellik, yeni fikirleri keşfetmeye başlamak için gerekenleri basitleştirir. Komut dosyası senaryoları için en üst düzey deyimleri kullanabilir veya keşfedebilirsiniz. Temel bilgileri aldıktan sonra kodu yeniden düzenlemeye başlayabilir ve derlediğiniz yeniden kullanılabilir bileşenler için yöntemler, sınıflar veya diğer derlemeler oluşturabilirsiniz. Üst düzey deyimler hızlı deneme ve başlangıç öğreticilerini etkinleştirir. Ayrıca, deneme 'den tam programlara sorunsuz bir yol sağlar.
 
 Üst düzey deyimler dosyada göründükleri sırada yürütülür. En üst düzey deyimler yalnızca uygulamanızdaki tek bir kaynak dosyasında kullanılabilir. Birden çok dosyada kullandığınızda derleyici bir hata oluşturur.
 
@@ -156,7 +156,7 @@ Console.WriteLine();
 
 string[] answers =
 {
-    "It is certain.",       "Reply hazy, try again.",     "Don’t count on it.",
+    "It is certain.",       "Reply hazy, try again.",     "Don't count on it.",
     "It is decidedly so.",  "Ask again later.",           "My reply is no.",
     "Without a doubt.",     "Better not tell you now.",   "My sources say no.",
     "Yes – definitely.",    "Cannot predict now.",        "Outlook not so good.",
@@ -206,7 +206,7 @@ Yukarıdaki kod, ana yönteminizin içinde yerel bir işlev oluşturur. Yine de 
 
 :::code language="csharp" source="snippets/top-level-statements/UtilitiesPassOne.cs" ID="SnippetUtilities":::
 
-En üst düzey deyimler yalnızca bir dosya içinde olabilir ve bu dosya ad alanları veya türler içeremez.
+Üst düzey deyimleri olan bir dosya, üst düzey deyimlerden sonra dosyanın sonundaki ad alanlarını ve türleri de içerebilir. Ancak bu öğreticide, animasyon yöntemini daha kolay yeniden kullanılabilir hale getirmek için ayrı bir dosyaya yerleştirebilirsiniz.
 
 Son olarak, bir yinelemeyi kaldırmak için animasyon kodunu temizleyebilirsiniz:
 
@@ -222,4 +222,4 @@ Bu, çağrısını ekler `Utilities.ShowConsoleAnimation` ve ek bir `using` ifad
 
 En üst düzey deyimler, yeni algoritmaları araştırmak için kullanılmak üzere basit programlar oluşturmayı kolaylaştırır. Farklı kod parçacıkları deneyerek algoritmalarla denemeler yapabilirsiniz. Ne işe yarar olduğunu öğrendikten sonra kodu daha sürdürülebilir olacak şekilde yeniden düzenleyebilirsiniz.
 
-Üst düzey deyimler Konsol uygulamalarını temel alan programları basitleştirir. Bunlar Azure işlevleri, GitHub eylemleri ve diğer küçük yardımcı programları içerir.
+Üst düzey deyimler Konsol uygulamalarını temel alan programları basitleştirir. Bunlar Azure işlevleri, GitHub eylemleri ve diğer küçük yardımcı programları içerir. Daha fazla bilgi için bkz. [üst düzey deyimler (C# Programlama Kılavuzu)](../../programming-guide/main-and-command-args/top-level-statements.md).
