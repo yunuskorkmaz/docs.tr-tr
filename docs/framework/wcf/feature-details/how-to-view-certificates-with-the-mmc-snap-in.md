@@ -5,82 +5,82 @@ ms.date: 02/25/2019
 helpviewer_keywords:
 - certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
-ms.openlocfilehash: 1f20384f16b3b5b898f926258d76a6a2773eaaa1
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 788161db2e38dc942b0c638128f8599b0436c8fd
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96280630"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604586"
 ---
-# <a name="how-to-view-certificates-with-the-mmc-snap-in"></a><span data-ttu-id="343d3-104">Nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüleme</span><span class="sxs-lookup"><span data-stu-id="343d3-104">How to: View certificates with the MMC snap-in</span></span>
+# <a name="how-to-view-certificates-with-the-mmc-snap-in"></a><span data-ttu-id="0e248-104">Nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüleme</span><span class="sxs-lookup"><span data-stu-id="0e248-104">How to: View certificates with the MMC snap-in</span></span>
 
-<span data-ttu-id="343d3-105">Güvenli bir istemci veya hizmet oluşturduğunuzda kimlik bilgisi olarak bir [sertifika](working-with-certificates.md) kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="343d3-105">When you create a secure client or service, you can use a [certificate](working-with-certificates.md) as the credential.</span></span> <span data-ttu-id="343d3-106">Örneğin, ortak bir kimlik bilgisi türü, yöntemiyle oluşturduğunuz X. 509.952 sertifikasıdır <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="343d3-106">For example, a common type of credential is the X.509 certificate, which you create with the <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType> method.</span></span>
+<span data-ttu-id="0e248-105">Güvenli bir istemci veya hizmet oluşturduğunuzda kimlik bilgisi olarak bir [sertifika](working-with-certificates.md) kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="0e248-105">When you create a secure client or service, you can use a [certificate](working-with-certificates.md) as the credential.</span></span> <span data-ttu-id="0e248-106">Örneğin, ortak bir kimlik bilgisi türü, yöntemiyle oluşturduğunuz X. 509.952 sertifikasıdır <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="0e248-106">For example, a common type of credential is the X.509 certificate, which you create with the <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType> method.</span></span>
 
-<span data-ttu-id="343d3-107">Windows sistemlerinde Microsoft Yönetim Konsolu (MMC) ile inceleyebileceğiniz üç farklı türde sertifika deposu vardır:</span><span class="sxs-lookup"><span data-stu-id="343d3-107">There are three different types of certificate stores that you can examine with the Microsoft Management Console (MMC) on Windows systems:</span></span>
+<span data-ttu-id="0e248-107">Windows sistemlerinde Microsoft Yönetim Konsolu (MMC) ile inceleyebileceğiniz üç farklı türde sertifika deposu vardır:</span><span class="sxs-lookup"><span data-stu-id="0e248-107">There are three different types of certificate stores that you can examine with the Microsoft Management Console (MMC) on Windows systems:</span></span>
 
-- <span data-ttu-id="343d3-108">Yerel bilgisayar: mağaza cihaz için yereldir ve cihazdaki tüm kullanıcılar için geneldir.</span><span class="sxs-lookup"><span data-stu-id="343d3-108">Local computer: The store is local to the device and global to all users on the device.</span></span>
+- <span data-ttu-id="0e248-108">Yerel bilgisayar: mağaza cihaz için yereldir ve cihazdaki tüm kullanıcılar için geneldir.</span><span class="sxs-lookup"><span data-stu-id="0e248-108">Local computer: The store is local to the device and global to all users on the device.</span></span>
 
-- <span data-ttu-id="343d3-109">Geçerli Kullanıcı: mağaza, cihazdaki geçerli kullanıcı hesabına yereldir.</span><span class="sxs-lookup"><span data-stu-id="343d3-109">Current user: The store is local to the current user account on the device.</span></span>
+- <span data-ttu-id="0e248-109">Geçerli Kullanıcı: mağaza, cihazdaki geçerli kullanıcı hesabına yereldir.</span><span class="sxs-lookup"><span data-stu-id="0e248-109">Current user: The store is local to the current user account on the device.</span></span>
 
-- <span data-ttu-id="343d3-110">Hizmet hesabı: mağaza, cihazdaki belirli bir hizmette yereldir.</span><span class="sxs-lookup"><span data-stu-id="343d3-110">Service account: The store is local to a particular service on the device.</span></span>
+- <span data-ttu-id="0e248-110">Hizmet hesabı: mağaza, cihazdaki belirli bir hizmette yereldir.</span><span class="sxs-lookup"><span data-stu-id="0e248-110">Service account: The store is local to a particular service on the device.</span></span>
 
-## <a name="view-certificates-in-the-mmc-snap-in"></a><span data-ttu-id="343d3-111">MMC ek bileşenindeki sertifikaları görüntüleme</span><span class="sxs-lookup"><span data-stu-id="343d3-111">View certificates in the MMC snap-in</span></span>
+## <a name="view-certificates-in-the-mmc-snap-in"></a><span data-ttu-id="0e248-111">MMC ek bileşenindeki sertifikaları görüntüleme</span><span class="sxs-lookup"><span data-stu-id="0e248-111">View certificates in the MMC snap-in</span></span>
 
-<span data-ttu-id="343d3-112">Aşağıdaki yordam, uygun bir sertifikayı bulmak için yerel cihazınızdaki mağazaların nasıl inceleneceğini göstermektedir:</span><span class="sxs-lookup"><span data-stu-id="343d3-112">The following procedure demonstrates how to examine the stores on your local device to find an appropriate certificate:</span></span>
+<span data-ttu-id="0e248-112">Aşağıdaki yordam, uygun bir sertifikayı bulmak için yerel cihazınızdaki mağazaların nasıl inceleneceğini göstermektedir:</span><span class="sxs-lookup"><span data-stu-id="0e248-112">The following procedure demonstrates how to examine the stores on your local device to find an appropriate certificate:</span></span>
   
-1. <span data-ttu-id="343d3-113">**Başlat** menüsünden **Çalıştır** ' ı seçin ve ardından *MMC*' yi girin.</span><span class="sxs-lookup"><span data-stu-id="343d3-113">Select **Run** from the **Start** menu, and then enter *mmc*.</span></span>
+1. <span data-ttu-id="0e248-113">**Başlat** menüsünden **Çalıştır** ' ı seçin ve ardından *MMC*' yi girin.</span><span class="sxs-lookup"><span data-stu-id="0e248-113">Select **Run** from the **Start** menu, and then enter *mmc*.</span></span>
 
-    <span data-ttu-id="343d3-114">MMC görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="343d3-114">The MMC appears.</span></span>
+    <span data-ttu-id="0e248-114">MMC görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="0e248-114">The MMC appears.</span></span>
   
-2. <span data-ttu-id="343d3-115">**Dosya** menüsünde, **ek bileşen Ekle/Kaldır**' ı seçin.</span><span class="sxs-lookup"><span data-stu-id="343d3-115">From the **File** menu, select **Add/Remove Snap In**.</span></span>
+2. <span data-ttu-id="0e248-115">**Dosya** menüsünde, **ek bileşen Ekle/Kaldır**' ı seçin.</span><span class="sxs-lookup"><span data-stu-id="0e248-115">From the **File** menu, select **Add/Remove Snap In**.</span></span>
 
-    <span data-ttu-id="343d3-116">**Ek bileşenleri Ekle veya Kaldır** penceresi görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="343d3-116">The **Add or Remove Snap-ins** window appears.</span></span>
+    <span data-ttu-id="0e248-116">**Ek bileşenleri Ekle veya Kaldır** penceresi görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="0e248-116">The **Add or Remove Snap-ins** window appears.</span></span>
   
-3. <span data-ttu-id="343d3-117">**Kullanılabilir ek bileşenler** listesinden **Sertifikalar**' ı seçin ve **Ekle**' yi seçin.</span><span class="sxs-lookup"><span data-stu-id="343d3-117">From the **Available snap-ins** list, choose **Certificates**, then select **Add**.</span></span>  
+3. <span data-ttu-id="0e248-117">**Kullanılabilir ek bileşenler** listesinden **Sertifikalar**' ı seçin ve **Ekle**' yi seçin.</span><span class="sxs-lookup"><span data-stu-id="0e248-117">From the **Available snap-ins** list, choose **Certificates**, then select **Add**.</span></span>  
 
     ![Sertifika ek bileşeni ekleme](./media/mmc-add-certificate-snap-in.png)
   
-4. <span data-ttu-id="343d3-119">**Sertifikalar ek bileşeni** penceresinde **bilgisayar hesabı**' nı seçin ve ardından **İleri**' yi seçin.</span><span class="sxs-lookup"><span data-stu-id="343d3-119">In the **Certificates snap-in** window, select **Computer account**, and then select **Next**.</span></span>
+4. <span data-ttu-id="0e248-119">**Sertifikalar ek bileşeni** penceresinde **bilgisayar hesabı**' nı seçin ve ardından **İleri**' yi seçin.</span><span class="sxs-lookup"><span data-stu-id="0e248-119">In the **Certificates snap-in** window, select **Computer account**, and then select **Next**.</span></span>
   
-    <span data-ttu-id="343d3-120">İsteğe bağlı olarak, belirli bir hizmet için geçerli kullanıcı veya **hizmet hesabı** için **Kullanıcı hesabımı** seçebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="343d3-120">Optionally, you can select **My user account** for the current user or **Service account** for a particular service.</span></span>
+    <span data-ttu-id="0e248-120">İsteğe bağlı olarak, belirli bir hizmet için geçerli kullanıcı veya **hizmet hesabı** için **Kullanıcı hesabımı** seçebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="0e248-120">Optionally, you can select **My user account** for the current user or **Service account** for a particular service.</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="343d3-121">Cihazınız için yönetici değilseniz yalnızca Kullanıcı hesabınız için sertifikaları yönetebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="343d3-121">If you're not an administrator for your device, you can manage certificates only for your user account.</span></span>
+    > <span data-ttu-id="0e248-121">Cihazınız için yönetici değilseniz yalnızca Kullanıcı hesabınız için sertifikaları yönetebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="0e248-121">If you're not an administrator for your device, you can manage certificates only for your user account.</span></span>
   
-5. <span data-ttu-id="343d3-122">**Bilgisayar Seç** penceresinde, **Yerel bilgisayar** seçili bırakın ve **son**' u seçin.</span><span class="sxs-lookup"><span data-stu-id="343d3-122">In the **Select Computer** window, leave **Local computer** selected, and then select **Finish**.</span></span>  
+5. <span data-ttu-id="0e248-122">**Bilgisayar Seç** penceresinde, **Yerel bilgisayar** seçili bırakın ve **son**' u seçin.</span><span class="sxs-lookup"><span data-stu-id="0e248-122">In the **Select Computer** window, leave **Local computer** selected, and then select **Finish**.</span></span>  
   
-6. <span data-ttu-id="343d3-123">**Ek bileşen Ekle veya Kaldır** penceresinde **Tamam**' ı seçin.</span><span class="sxs-lookup"><span data-stu-id="343d3-123">In the **Add or Remove Snap-in** window, select **OK**.</span></span>  
+6. <span data-ttu-id="0e248-123">**Ek bileşen Ekle veya Kaldır** penceresinde **Tamam**' ı seçin.</span><span class="sxs-lookup"><span data-stu-id="0e248-123">In the **Add or Remove Snap-in** window, select **OK**.</span></span>  
   
-    ![Sertifika ek bileşeni ekleme](./media/mmc-certificate-snap-in-selected.png)
+    ![Tamam düğmesi vurgulanmış şekilde ek bileşenler penceresi ekleme veya kaldırma](./media/mmc-certificate-snap-in-selected.png)
 
-7. <span data-ttu-id="343d3-125">İsteğe bağlı: **Dosya** menüsünde, daha sonra kullanmak üzere MMC konsol dosyasını kaydetmek için **Kaydet** veya **farklı kaydet** ' i seçin.</span><span class="sxs-lookup"><span data-stu-id="343d3-125">Optional: From the **File** menu, select **Save** or **Save As** to save the MMC console file for later use.</span></span>  
+7. <span data-ttu-id="0e248-125">İsteğe bağlı: **Dosya** menüsünde, daha sonra kullanmak üzere MMC konsol dosyasını kaydetmek için **Kaydet** veya **farklı kaydet** ' i seçin.</span><span class="sxs-lookup"><span data-stu-id="0e248-125">Optional: From the **File** menu, select **Save** or **Save As** to save the MMC console file for later use.</span></span>  
 
-8. <span data-ttu-id="343d3-126">MMC ek bileşeninde sertifikalarınızı görüntülemek için sol bölmedeki **konsol kökü** ' nü seçin ve ardından **Sertifikalar (yerel bilgisayar)**' ı genişletin.</span><span class="sxs-lookup"><span data-stu-id="343d3-126">To view your certificates in the MMC snap-in, select **Console Root** in the left pane, then expand **Certificates (Local Computer)**.</span></span>
+8. <span data-ttu-id="0e248-126">MMC ek bileşeninde sertifikalarınızı görüntülemek için sol bölmedeki **konsol kökü** ' nü seçin ve ardından **Sertifikalar (yerel bilgisayar)**' ı genişletin.</span><span class="sxs-lookup"><span data-stu-id="0e248-126">To view your certificates in the MMC snap-in, select **Console Root** in the left pane, then expand **Certificates (Local Computer)**.</span></span>
 
-    <span data-ttu-id="343d3-127">Her sertifika türü için dizinlerin listesi görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="343d3-127">A list of directories for each type of certificate appears.</span></span> <span data-ttu-id="343d3-128">Her bir sertifika dizininden sertifikalarını görüntüleyebilir, dışarı aktarabilir, içeri aktarabilir ve silebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="343d3-128">From each certificate directory, you can view, export, import, and delete its certificates.</span></span>
+    <span data-ttu-id="0e248-127">Her sertifika türü için dizinlerin listesi görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="0e248-127">A list of directories for each type of certificate appears.</span></span> <span data-ttu-id="0e248-128">Her bir sertifika dizininden sertifikalarını görüntüleyebilir, dışarı aktarabilir, içeri aktarabilir ve silebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="0e248-128">From each certificate directory, you can view, export, import, and delete its certificates.</span></span>
 
-## <a name="view-certificates-with-the-certificate-manager-tool"></a><span data-ttu-id="343d3-129">Sertifika Yöneticisi aracı ile sertifikaları görüntüleme</span><span class="sxs-lookup"><span data-stu-id="343d3-129">View certificates with the Certificate Manager tool</span></span>
+## <a name="view-certificates-with-the-certificate-manager-tool"></a><span data-ttu-id="0e248-129">Sertifika Yöneticisi aracı ile sertifikaları görüntüleme</span><span class="sxs-lookup"><span data-stu-id="0e248-129">View certificates with the Certificate Manager tool</span></span>
 
-<span data-ttu-id="343d3-130">Sertifikaları, Sertifika Yöneticisi aracını kullanarak da görüntüleyebilir, dışarı aktarabilir, içeri aktarabilir ve silebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="343d3-130">You can also view, export, import, and delete certificates by using the Certificate Manager tool.</span></span>
+<span data-ttu-id="0e248-130">Sertifikaları, Sertifika Yöneticisi aracını kullanarak da görüntüleyebilir, dışarı aktarabilir, içeri aktarabilir ve silebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="0e248-130">You can also view, export, import, and delete certificates by using the Certificate Manager tool.</span></span>
 
-### <a name="to-view-certificates-for-the-local-device"></a><span data-ttu-id="343d3-131">Yerel cihaz için sertifikaları görüntülemek için</span><span class="sxs-lookup"><span data-stu-id="343d3-131">To view certificates for the local device</span></span>
+### <a name="to-view-certificates-for-the-local-device"></a><span data-ttu-id="0e248-131">Yerel cihaz için sertifikaları görüntülemek için</span><span class="sxs-lookup"><span data-stu-id="0e248-131">To view certificates for the local device</span></span>
 
-1. <span data-ttu-id="343d3-132">**Başlat** menüsünden **Çalıştır** ' ı seçin ve ardından *Certlm. msc* yazın.</span><span class="sxs-lookup"><span data-stu-id="343d3-132">Select **Run** from the **Start** menu, and then enter *certlm.msc*.</span></span>
+1. <span data-ttu-id="0e248-132">**Başlat** menüsünden **Çalıştır** ' ı seçin ve ardından *Certlm. msc* yazın.</span><span class="sxs-lookup"><span data-stu-id="0e248-132">Select **Run** from the **Start** menu, and then enter *certlm.msc*.</span></span>
 
-    <span data-ttu-id="343d3-133">Yerel cihaz için Sertifika Yöneticisi aracı görünür.</span><span class="sxs-lookup"><span data-stu-id="343d3-133">The Certificate Manager tool for the local device appears.</span></span>
+    <span data-ttu-id="0e248-133">Yerel cihaz için Sertifika Yöneticisi aracı görünür.</span><span class="sxs-lookup"><span data-stu-id="0e248-133">The Certificate Manager tool for the local device appears.</span></span>
   
-2. <span data-ttu-id="343d3-134">Sertifikalarınızı görüntülemek için, sol bölmedeki **Sertifikalar-Yerel bilgisayar** altında, görüntülemek istediğiniz sertifika türü için dizini genişletin.</span><span class="sxs-lookup"><span data-stu-id="343d3-134">To view your certificates, under **Certificates - Local Computer** in the left pane, expand the directory for the type of certificate you want to view.</span></span>
+2. <span data-ttu-id="0e248-134">Sertifikalarınızı görüntülemek için, sol bölmedeki **Sertifikalar-Yerel bilgisayar** altında, görüntülemek istediğiniz sertifika türü için dizini genişletin.</span><span class="sxs-lookup"><span data-stu-id="0e248-134">To view your certificates, under **Certificates - Local Computer** in the left pane, expand the directory for the type of certificate you want to view.</span></span>
 
-### <a name="to-view-certificates-for-the-current-user"></a><span data-ttu-id="343d3-135">Geçerli kullanıcının sertifikalarını görüntülemek için</span><span class="sxs-lookup"><span data-stu-id="343d3-135">To view certificates for the current user</span></span>
+### <a name="to-view-certificates-for-the-current-user"></a><span data-ttu-id="0e248-135">Geçerli kullanıcının sertifikalarını görüntülemek için</span><span class="sxs-lookup"><span data-stu-id="0e248-135">To view certificates for the current user</span></span>
 
-1. <span data-ttu-id="343d3-136">**Başlat** menüsünden **Çalıştır** ' ı seçin ve ardından *certmgr. msc* yazın.</span><span class="sxs-lookup"><span data-stu-id="343d3-136">Select **Run** from the **Start** menu, and then enter *certmgr.msc*.</span></span>
+1. <span data-ttu-id="0e248-136">**Başlat** menüsünden **Çalıştır** ' ı seçin ve ardından *certmgr. msc* yazın.</span><span class="sxs-lookup"><span data-stu-id="0e248-136">Select **Run** from the **Start** menu, and then enter *certmgr.msc*.</span></span>
 
-    <span data-ttu-id="343d3-137">Geçerli Kullanıcı için Sertifika Yöneticisi aracı görünür.</span><span class="sxs-lookup"><span data-stu-id="343d3-137">The Certificate Manager tool for the current user appears.</span></span>
+    <span data-ttu-id="0e248-137">Geçerli Kullanıcı için Sertifika Yöneticisi aracı görünür.</span><span class="sxs-lookup"><span data-stu-id="0e248-137">The Certificate Manager tool for the current user appears.</span></span>
   
-2. <span data-ttu-id="343d3-138">Sertifikalarınızı görüntülemek için Sertifikalar ' ın altında, sol bölmedeki **Geçerli Kullanıcı** ' nın altında, görüntülemek istediğiniz sertifika türü için dizini genişletin.</span><span class="sxs-lookup"><span data-stu-id="343d3-138">To view your certificates, under **Certificates - Current User** in the left pane, expand the directory for the type of certificate you want to view.</span></span>
+2. <span data-ttu-id="0e248-138">Sertifikalarınızı görüntülemek için Sertifikalar ' ın altında, sol bölmedeki **Geçerli Kullanıcı** ' nın altında, görüntülemek istediğiniz sertifika türü için dizini genişletin.</span><span class="sxs-lookup"><span data-stu-id="0e248-138">To view your certificates, under **Certificates - Current User** in the left pane, expand the directory for the type of certificate you want to view.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="343d3-139">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="343d3-139">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0e248-139">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0e248-139">See also</span></span>
 
-- [<span data-ttu-id="343d3-140">Sertifikalarla çalışma</span><span class="sxs-lookup"><span data-stu-id="343d3-140">Working with certificates</span></span>](working-with-certificates.md)
-- [<span data-ttu-id="343d3-141">Nasıl yapılır: geliştirme sırasında kullanılmak üzere geçici sertifikalar oluşturma</span><span class="sxs-lookup"><span data-stu-id="343d3-141">How to: Create temporary certificates for use during development</span></span>](how-to-create-temporary-certificates-for-use-during-development.md)
-- [<span data-ttu-id="343d3-142">Nasıl yapılır: bir sertifikanın parmak izini alma</span><span class="sxs-lookup"><span data-stu-id="343d3-142">How to: Retrieve the thumbprint of a certificate</span></span>](how-to-retrieve-the-thumbprint-of-a-certificate.md)
+- [<span data-ttu-id="0e248-140">Sertifikalarla çalışma</span><span class="sxs-lookup"><span data-stu-id="0e248-140">Working with certificates</span></span>](working-with-certificates.md)
+- [<span data-ttu-id="0e248-141">Nasıl yapılır: geliştirme sırasında kullanılmak üzere geçici sertifikalar oluşturma</span><span class="sxs-lookup"><span data-stu-id="0e248-141">How to: Create temporary certificates for use during development</span></span>](how-to-create-temporary-certificates-for-use-during-development.md)
+- [<span data-ttu-id="0e248-142">Nasıl yapılır: bir sertifikanın parmak izini alma</span><span class="sxs-lookup"><span data-stu-id="0e248-142">How to: Retrieve the thumbprint of a certificate</span></span>](how-to-retrieve-the-thumbprint-of-a-certificate.md)

@@ -172,7 +172,7 @@ items:
       - name: Genel Bakış
         displayName: 'diagnostics,tools,tooling,productivity,instrumentation'
         href: tools-and-productivity.md
-      - name: .NET Core SDK
+      - name: .NET SDK
         items:
           - name: Genel Bakış
             displayName: '.net sdk,software development kit,software dev kit,tool'
@@ -2288,46 +2288,38 @@ items:
                 href: ../standard/design-guidelines/dependency-properties.md
   - name: Geçiş kılavuzu
     items:
+      - name: Genel Bakış
+        href: ../core/porting/index.md
+      - name: .NET Yükseltme Yardımcısı aracı
+        items:
+          - name: Genel Bakış
+            href: ../core/porting/upgrade-assistant-overview.md
+          - name: Windows Presentation Foundation
+            href: ../core/porting/upgrade-assistant-wpf-framework.md
+          - name: Windows Forms
+            href: ../core/porting/upgrade-assistant-winforms-framework.md
+          - name: ASP.NET Core
+            href: ../core/porting/upgrade-assistant-aspnetmvc.md
       - name: Yeni değişiklikler
         displayName: app compatibility
         href: ../core/compatibility/
-      - name: Geçiş
-        items:
-          - name: .NET Core 2.0’dan 2.1’e geçiş
-            href: ../core/migration/20-21.md
-          - name: AssemblyInfo özniteliklerini özelliklerle eşleme
-            href: ../core/migration/assembly-info.md
-      - name: .NET Framework’ten taşıma
-        items:
-          - name: Genel Bakış
-            href: ../core/porting/index.md
-          - name: .NET Yükseltme Yardımcısı aracı
-            items:
-              - name: Genel Bakış
-                href: ../core/porting/upgrade-assistant-overview.md
-              - name: Windows Presentation Foundation
-                href: ../core/porting/upgrade-assistant-wpf-framework.md
-              - name: Windows Forms
-                href: ../core/porting/upgrade-assistant-winforms-framework.md
-              - name: ASP.NET
-                href: ../core/porting/upgrade-assistant-aspnetmvc.md
-          - name: Üçüncü taraf bağımlılıklarını çözümleme
-            href: ../core/porting/third-party-deps.md
-          - name: Taşıma kitaplıkları
-            href: ../core/porting/libraries.md
-          - name: .NET için projeleri düzenleme
-            href: ../core/porting/project-structure.md
-          - name: Kullanılamayan teknolojiler
-            href: ../core/porting/net-framework-tech-unavailable.md?toc=/dotnet/fundamentals/toc.json&bc=/dotnet/breadcrumb/toc.json
-          - name: Araçlar
-            href: ../core/porting/tools.md
-          - name: Windows Uyumluluk Paketi’ni kullanma
-            href: ../core/porting/windows-compat-pack.md
-          - name: Windows Forms projelerini bağlama
-            href: /dotnet/desktop/winforms/migration/?view=netdesktop-5.0
-          - name: WPF projelerini bağlama
-            href: /dotnet/desktop/wpf/migration/convert-project-from-net-framework
-          - name: C++/CLI projelerini taşıma
-            href: ../core/porting/cpp-cli.md
+      - name: Proje AssemblyInfo özniteliklerini özelliklerle eşle
+        href: ../core/migration/assembly-info.md
+      - name: Üçüncü taraf bağımlılıklarını çözümleme
+        href: ../core/porting/third-party-deps.md
+      - name: Taşıma kitaplıkları
+        href: ../core/porting/libraries.md
+      - name: .NET için projeleri düzenleme
+        href: ../core/porting/project-structure.md
+      - name: Kullanılamayan teknolojiler
+        href: ../core/porting/net-framework-tech-unavailable.md?toc=/dotnet/fundamentals/toc.json&bc=/dotnet/breadcrumb/toc.json
+      - name: Windows Uyumluluk Paketi’ni kullanma
+        href: ../core/porting/windows-compat-pack.md
+      - name: Windows Forms projelerini bağlama
+        href: /dotnet/desktop/winforms/migration/?view=netdesktop-5.0
+      - name: WPF projelerini bağlama
+        href: /dotnet/desktop/wpf/migration/convert-project-from-net-framework?view=netdesktop-5.0
+      - name: C++/CLI projelerini taşıma
+        href: ../core/porting/cpp-cli.md
       - name: Sunucu uygulamaları için .NET 5 ve .NET Framework arasında seçim yapma
         href: ../standard/choosing-core-framework-server.md
