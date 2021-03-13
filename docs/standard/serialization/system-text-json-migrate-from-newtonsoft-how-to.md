@@ -13,12 +13,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 29aaa239cf28a2a9833bcf8157b82c8fd787258a
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 217e45f0479f432d0cc3fb919fed752b497ce7a6
+ms.sourcegitcommit: b27645cb378d4e8137a267e5467ff31409acf6c0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106676"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103231452"
 ---
 # <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>' Den ' a geçiş Newtonsoft.JsonSystem.Text.Json
 
@@ -45,6 +45,7 @@ Aşağıdaki tabloda `Newtonsoft.Json` Özellikler ve eşdeğerleri listelenmekt
 * Desteklenmez, geçici çözüm pratik veya mümkün değildir. Bu özelliklerden yararlandıysanız `Newtonsoft.Json` geçiş önemli değişiklikler yapılmadan mümkün olmayacaktır.
 
 ::: zone pivot="dotnet-5-0"
+
 | Newtonsoft.Json özelliği                               | System.Text.Json değerinin |
 |-------------------------------------------------------|-----------------------------|
 | Varsayılan olarak büyük/küçük harfe duyarsız seri hale           | ✔️ [Propertynamecaseduyarsız genel ayarı](#case-insensitive-deserialization) |
@@ -87,6 +88,7 @@ Aşağıdaki tabloda `Newtonsoft.Json` Özellikler ve eşdeğerleri listelenmekt
 ::: zone-end
 
 ::: zone pivot="dotnet-core-3-1"
+
 | Newtonsoft.Json özelliği                               | System.Text.Json değerinin |
 |-------------------------------------------------------|-----------------------------|
 | Varsayılan olarak büyük/küçük harfe duyarsız seri hale           | ✔️ [Propertynamecaseduyarsız genel ayarı](#case-insensitive-deserialization) |
@@ -372,7 +374,7 @@ Daha fazla bilgi için bkz. [başvuruları koruma ve döngüsel başvuruları i�
 ### <a name="dictionary-with-non-string-key"></a>Dize olmayan anahtarla sözlük
 
 ::: zone pivot="dotnet-5-0"
-Hem hem de `Newtonsoft.Json` `System.Text.Json` türündeki koleksiyonları destekler `Dictionary<TKey, TValue>` .
+Hem hem de `Newtonsoft.Json` `System.Text.Json` türündeki koleksiyonları destekler `Dictionary<TKey, TValue>` . Ancak, içinde `System.Text.Json` , `TKey` özel bir tür değil, temel bir tür olmalıdır. Daha fazla bilgi için bkz. [desteklenen anahtar türleri](system-text-json-supported-collection-types.md#supported-key-types).
 
 > [!CAUTION]
 > Bir WHERE 'nin seri durumundan çıkarma, `Dictionary<TKey, TValue>` `TKey` `string` tüketen uygulamada bir güvenlik açığı ortaya çıkarabilir. Daha fazla bilgi için bkz. [DotNet/Runtime # 4761](https://github.com/dotnet/runtime/issues/4761).

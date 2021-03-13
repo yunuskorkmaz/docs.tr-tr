@@ -2,12 +2,12 @@
 title: Kayıt türlerini kullanma-C# öğreticisi
 description: Kayıt türlerini kullanma, kayıt hiyerarşileri oluşturma ve sınıflar üzerinde kayıt seçme hakkında bilgi edinin.
 ms.date: 11/12/2020
-ms.openlocfilehash: 33075c4cafc9a91683960daa8101c9f1defaa36a
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 301eaf1ddf6d6b7dc1f88ffa4c790e2c2b01862f
+ms.sourcegitcommit: b27645cb378d4e8137a267e5467ff31409acf6c0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258962"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103231439"
 ---
 # <a name="create-record-types"></a>Kayıt türleri oluşturma
 
@@ -45,7 +45,7 @@ Ayrıca, daha kısa bir sözdizimi kullanarak *konumsal kayıtlar* bildirebilirs
 
 ## <a name="build-temperature-data"></a>Sıcaklık verileri oluşturma
 
-Veriler ve istatistikler, kayıtları kullanmak isteyeceğiniz senaryolar arasındadır. Bu öğreticide, farklı kullanımlar için *derece günler* hesaplayan bir uygulama oluşturacaksınız. *Derece günler* , bir gün, hafta veya ay boyunca bir ısı (veya ısı eksikliği) bir ölçüdür. Derece günler enerji kullanımını izleyip tahmin eder. Daha fazla kullanım günü daha fazla hava anlamına gelir ve daha fazla kora günü daha fazla sayıda kullanım anlamına gelir. Derece günler, Tesis popülasyonlarını yönetmeye yardımcı olur. Mevsimler değiştikçe, Tesis artışına göre, derece gün ilişkilendirilmesi. Derece günler, kligayı eşleştirmek için seyahat eden türler için bir hayvan geçişi izlemenize yardımcı olur.
+Veriler ve istatistikler, kayıtları kullanmak isteyeceğiniz senaryolar arasındadır. Bu öğreticide, farklı kullanımlar için *derece günler* hesaplayan bir uygulama oluşturacaksınız. *Derece günler* , bir gün, hafta veya ay boyunca bir ısı (veya ısı eksikliği) bir ölçüdür. Derece günler enerji kullanımını izleyip tahmin eder. Daha fazla kullanım günü daha fazla hava anlamına gelir ve daha fazla kora günü daha fazla sayıda kullanım anlamına gelir. Derece günler, Tesis popülasyonlarını yönetmenize ve mevsimler değiştikçe tesis artışına bağıntılı bir yardım sağlar. Derece günler, kligayı eşleştirmek için seyahat eden türler için bir hayvan geçişi izlemenize yardımcı olur.
 
 Formül, belirli bir gün ve temel sıcaklığa göre ortalama sıcaklığa dayanır. Süreyi zaman içinde hesaplamak için, her gün bir süre için yüksek ve düşük sıcaklık gerekir. Yeni bir uygulama oluşturarak başlayalım. Yeni bir konsol uygulaması oluşturun. "DailyTemperature.cs" adlı yeni bir dosyada yeni bir kayıt türü oluşturun:
 
@@ -77,7 +77,7 @@ DailyTemperature { HighTemp = 80, LowTemp = 60, Mean = 70 }
 DailyTemperature { HighTemp = 85, LowTemp = 66, Mean = 75.5 }
 ```
 
-Yukarıdaki kod, `ToString` derleyici tarafından sentezlenen geçersiz kılmanın çıktısını gösterir. Farklı metin tercih ediyorsanız, kendi sürümünüzü yazabilirsiniz `ToString` . Bu, derleyicinin sizin için bir sürümü birleştirmelerini engeller.
+Yukarıdaki kod, `ToString` derleyici tarafından sentezlenen geçersiz kılmanın çıktısını gösterir. Farklı metin tercih ediyorsanız, `ToString` derleyicinin sizin için bir sürümü birleştirmelerini engelleyen kendi sürümünüzü yazabilirsiniz.
 
 ## <a name="compute-degree-days"></a>İşlem Derecesi Günleri
 
@@ -157,6 +157,6 @@ Sonuçları görmek için tamamlanmış uygulamayı çalıştırın.
 
 Bu öğretici kayıtların çeşitli yönlerini gösterdi. Kayıtlar, temel kullanım verilerinin depolandığı başvuru türleri için kısa sözdizimi sağlar. Nesne odaklı sınıflar için temel kullanım, sorumlulukları tanımlıyor. Bu öğreticide, bir kaydın yalnızca init özelliklerini bildirmek için kısa bir sözdizimi kullanabileceğiniz *konumsal kayıtlara* odaklanılmıştır. Derleyici, kayıtları kopyalamak ve karşılaştırmak için kaydın birkaç üyesini birleştirir. Kayıt türleriniz için gereken diğer üyeleri ekleyebilirsiniz. Derleyici tarafından oluşturulan üyelerden hiçbirinin durum olarak bilinmediği farkında olmak üzere sabit kayıt türleri oluşturabilirsiniz. Ve `with` ifadeleri, bozucu olmayan mutasyon desteğini desteklemeyi kolaylaştırır.
 
-Kayıtlar, türleri tanımlamaya yönelik başka bir yol ekler. `class`Nesnelerin sorumluluklarına ve davranışına odaklanarak nesne odaklı hiyerarşiler oluşturmak için tanımları kullanırsınız. `struct`Verileri depolayan ve kopyalamaya yetecek kadar az olan veri yapıları için türler oluşturursunuz. Değer tabanlı eşitlik ve karşılaştırma istediğinizde, değerleri kopyalamak istemezsiniz ve başvuru değişkenlerini kullanmak istediğinizde kayıt oluşturursunuz.
+Kayıtlar, türleri tanımlamaya yönelik başka bir yol ekler. `class`Nesnelerin sorumluluklarına ve davranışına odaklanarak nesne odaklı hiyerarşiler oluşturmak için tanımları kullanırsınız. `struct`Verileri depolayan ve kopyalamaya yetecek kadar az olan veri yapıları için türler oluşturursunuz. `record`Değer tabanlı eşitlik ve karşılaştırma istediğinizde, değerleri kopyalamak istemezsiniz ve başvuru değişkenlerini kullanmak istiyorsanız türler oluşturabilirsiniz.
 
 Kayıt [türü Için C# dil başvurusu makalesini](../../language-reference/builtin-types/record.md) ve [Önerilen kayıt türü belirtimini](~/_csharplang/proposals/csharp-9.0/records.md)okuyarak kayıtların tüm açıklamasını öğrenebilirsiniz.

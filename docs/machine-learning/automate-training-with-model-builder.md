@@ -3,12 +3,12 @@ title: Model Oluşturucu nedir ve nasıl çalışır?
 description: Makine öğrenimi modelini otomatik olarak eğiteiçin ML.NET model Oluşturucu 'Yu kullanma
 ms.date: 06/01/2020
 ms.custom: overview, mlnet-tooling
-ms.openlocfilehash: da6348fb5dde83827558b66b6115d681f08948db
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: d7566a03f83eb76999d995a39aaae408405db2e1
+ms.sourcegitcommit: b27645cb378d4e8137a267e5467ff31409acf6c0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92161146"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103231426"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>Model Oluşturucu nedir ve nasıl çalışır?
 
@@ -34,6 +34,21 @@ Senaryo, verilerinizi kullanarak yapmak istediğiniz tahmin türünün bir açı
 - Bankacılık işleminin sahte olup olmadığını Algıla
 - Müşteri geri bildirim sorunlarını şirketinizdeki doğru ekibe yönlendirin
 
+Her senaryo, şunları içeren farklı bir Machine Learning göreviyle eşlenir:
+
+- İkili sınıflandırma
+- Birden çok Lass sınıflandırması
+- Regresyon
+- Kümeleme
+- Anormallik algılama
+- Sıralamasına
+- Öneri
+- Tahmin etme
+
+Örneğin, yaklaşımları 'ı pozitif veya negatif olarak sınıflandırmanın senaryosu ikili sınıflandırma görevinin altına düşecek.
+
+ML.NET tarafından desteklenen farklı ML görevleri hakkında daha fazla bilgi için [ml.net Içindeki makine öğrenimi görevleri](resources/tasks.md)bölümüne bakın.
+
 ### <a name="which-machine-learning-scenario-is-right-for-me"></a>Hangi makine öğrenimi senaryosu bana uygun?
 
 Model Oluşturucu 'da bir senaryo seçmeniz gerekir. Senaryonun türü, yapmaya çalıştığınız tahmin türüne bağlıdır.
@@ -48,7 +63,7 @@ Sınıflandırma, verileri kategorilere ayırmak için kullanılır.
 
 #### <a name="value-prediction"></a>Değer tahmini
 
-Regresyon, sayıları tahmin etmek için kullanılır.
+Regresyon görevinin altında olan değer tahmini, sayıları tahmin etmek için kullanılır.
 
 ![Fiyat tahmini, satış tahmini ve tahmine dayalı bakım gibi gerileme örneklerini gösteren diyagram](media/regression-examples.png)
 
@@ -115,7 +130,7 @@ Etiket, bu kare çekimi, yatak odası ve banyo değerleri ve posta kodu satırı
 
 Henüz kendi verileriniz yoksa, bu veri kümelerinden birini deneyin:
 
-|Senaryo|Örnek|Veriler|Etiket|Özellikler|
+|Senaryo|Örnek|Veriler|Etiketle|Özellikler|
 |-|-|-|-|-|
 |Sınıflandırma|Satış anormalilerini tahmin edin|[ürün satış verileri](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Ürün satışları|Ay|
 ||Web sitesi açıklamalarının yaklaşımını tahmin etme|[Web sitesi açıklama verileri](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Etiket (negatif yaklaşım olduğunda 0, pozitif olduğunda 1)|Açıklama, yıl|

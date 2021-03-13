@@ -4,12 +4,12 @@ description: Bu öğretici, .NET Core ve C# dilinde birçok özellik öğretir.
 ms.date: 03/06/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 4c32b08c3e7eeaedce687ea5bc572e6a7bee0d3e
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: fc5e8a929dfe0b7a3f55174e38e596331900edc7
+ms.sourcegitcommit: b27645cb378d4e8137a267e5467ff31409acf6c0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91804900"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103231387"
 ---
 # <a name="console-app"></a>Konsol uygulaması
 
@@ -55,7 +55,7 @@ namespace TeleprompterConsole
 
 ## <a name="reading-and-echoing-the-file"></a>Dosyayı okuma ve Yankılandırın
 
-Eklenecek ilk özellik, bir metin dosyasını okuma ve bu metnin tümünü konsola görüntüleme olanağıdır. İlk olarak bir metin dosyası ekleyelim. Bu [örnek](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter) için GitHub deposundan [sampleQuotes.txt](https://github.com/dotnet/samples/raw/master/csharp/getting-started/console-teleprompter/sampleQuotes.txt) dosyasını proje dizininize kopyalayın. Bu, uygulamanız için komut dosyası olarak görev yapar. Bu konu için örnek uygulamanın nasıl indirileceği hakkında bilgi isterseniz, [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#view-and-download-samples) konusundaki yönergelere bakın.
+Eklenecek ilk özellik, bir metin dosyasını okuma ve bu metnin tümünü konsola görüntüleme olanağıdır. İlk olarak bir metin dosyası ekleyelim. Bu [örnek](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter) için GitHub deposundan [sampleQuotes.txt](https://github.com/dotnet/samples/raw/main/csharp/getting-started/console-teleprompter/sampleQuotes.txt) dosyasını proje dizininize kopyalayın. Bu, uygulamanız için komut dosyası olarak görev yapar. Bu konu için örnek uygulamanın nasıl indirileceği hakkında bilgi isterseniz, [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#view-and-download-samples) konusundaki yönergelere bakın.
 
 Sonra, sınıfınıza aşağıdaki yöntemi ekleyin `Program` (yöntemin altına doğru `Main` ):
 
@@ -82,11 +82,11 @@ using System.IO;
 
 <xref:System.Collections.Generic.IEnumerable%601>Arabirim <xref:System.Collections.Generic> ad alanında tanımlanır. <xref:System.IO.File>Sınıf <xref:System.IO> ad alanında tanımlanır.
 
-Bu yöntem, *yineleyici yöntemi*olarak adlandırılan özel bir C# yöntemi türüdür. Numaralandırıcı yöntemleri değerlendirilen dizileri döndürür geç. Bu, dizideki her öğe, diziyi kullanan kod tarafından istenerek oluşturulduğu anlamına gelir. Numaralandırıcı yöntemleri bir veya daha fazla deyim içeren yöntemlerdir [`yield return`](../language-reference/keywords/yield.md) . Yöntemi tarafından döndürülen nesne, `ReadFrom` dizideki her bir öğeyi oluşturmak için kodu içerir. Bu örnekte, kaynak dosyadaki bir sonraki metin satırını okumayı ve bu dizeyi döndürmeyle ilgilidir. Çağıran kod, sıradaki bir sonraki öğeyi her istediğinde, kod dosyadaki metnin bir sonraki satırını okur ve döndürür. Dosya tamamen okunmadığında, dizi daha fazla öğe olmadığını gösterir.
+Bu yöntem, *yineleyici yöntemi* olarak adlandırılan özel bir C# yöntemi türüdür. Numaralandırıcı yöntemleri değerlendirilen dizileri döndürür geç. Bu, dizideki her öğe, diziyi kullanan kod tarafından istenerek oluşturulduğu anlamına gelir. Numaralandırıcı yöntemleri bir veya daha fazla deyim içeren yöntemlerdir [`yield return`](../language-reference/keywords/yield.md) . Yöntemi tarafından döndürülen nesne, `ReadFrom` dizideki her bir öğeyi oluşturmak için kodu içerir. Bu örnekte, kaynak dosyadaki bir sonraki metin satırını okumayı ve bu dizeyi döndürmeyle ilgilidir. Çağıran kod, sıradaki bir sonraki öğeyi her istediğinde, kod dosyadaki metnin bir sonraki satırını okur ve döndürür. Dosya tamamen okunmadığında, dizi daha fazla öğe olmadığını gösterir.
 
 Sizin için yeni olabilecek iki C# sözdizimi öğesi vardır. [`using`](../language-reference/keywords/using-statement.md)Bu yöntemdeki deyimin kaynağı temizleme işlemini yönetir. İfadesinde başlatılan değişken `using` ( `reader` Bu örnekte) <xref:System.IDisposable> arabirimini uygulamalıdır. Bu arabirim, `Dispose` kaynak yayımlanacaksa çağrılması gereken tek bir yöntemini tanımlar. , Yürütme deyimin kapanış ayracına ulaştığında derleyici bu çağrıyı oluşturur `using` . Derleyici tarafından oluşturulan kod, using ifadesiyle tanımlanan bloktaki koddan bir özel durum oluşsa bile kaynağın serbest bırakılacağını sağlar.
 
-`reader`Değişkeni, anahtar sözcüğü kullanılarak tanımlanır `var` . [`var`](../language-reference/keywords/var.md)*örtük olarak yazılmış bir yerel değişken*tanımlar. Bu, değişkenin türü değişkene atanan nesnenin derleme zamanı türü tarafından belirlendiği anlamına gelir. Burada, <xref:System.IO.File.OpenText(System.String)> bir nesnesi olan yönteminden döndürülen değer <xref:System.IO.StreamReader> .
+`reader`Değişkeni, anahtar sözcüğü kullanılarak tanımlanır `var` . [`var`](../language-reference/keywords/var.md)*örtük olarak yazılmış bir yerel değişken* tanımlar. Bu, değişkenin türü değişkene atanan nesnenin derleme zamanı türü tarafından belirlendiği anlamına gelir. Burada, <xref:System.IO.File.OpenText(System.String)> bir nesnesi olan yönteminden döndürülen değer <xref:System.IO.StreamReader> .
 
 Şimdi, yöntemi içindeki dosyayı okumak için kodu dolduralım `Main` :
 

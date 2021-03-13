@@ -3,12 +3,12 @@ title: ML.NET CLı ile model eğitimi otomatikleştirin
 description: Komut satırından en iyi modeli otomatik olarak eğiteiçin ML.NET CLı aracının nasıl kullanılacağını öğrenin.
 ms.date: 06/03/2020
 ms.custom: how-to, mlnet-tooling
-ms.openlocfilehash: 95e85cdc7b1ca42f086bafaf99d3f3fa29db7aa5
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: 0b230e4a517b6493abdb1ec975776fd286b654e3
+ms.sourcegitcommit: b27645cb378d4e8137a267e5467ff31409acf6c0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102605275"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103231413"
 ---
 # <a name="automate-model-training-with-the-mlnet-cli"></a>ML.NET CLı ile model eğitimi otomatikleştirin
 
@@ -33,10 +33,10 @@ Kendi veri kümelerinizde, sizin tarafınızdan kodlamadan bu varlıkları oluş
 
 Şu anda, ML.NET CLı tarafından desteklenen ML görevleri şunlardır:
 
-- Sınıflandırma (ikili ve çok sınıf)
+- sınıflandırma
 - regresyon
 - Önerilen
-- Gelecekte: görüntü sınıflandırması, derecelendirme, anomali algılama, kümeleme gibi diğer makine öğrenimi görevleri
+- görüntü sınıflandırması
 
 Kullanım örneği (sınıflandırma senaryosu):
 
