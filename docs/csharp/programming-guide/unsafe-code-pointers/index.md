@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, pointers
 - pointers [C#], about pointers
 ms.assetid: b0fcca10-a92d-4f2a-835b-b0ccae6739ee
-ms.openlocfilehash: 4d624bdc8fc4a756f47d66c9dec6eba8c24a9d9a
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: b6f1bb878d44c1f3224edd93681c54598a6ae341
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99782396"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103478634"
 ---
 # <a name="unsafe-code-and-pointers-c-programming-guide"></a>Güvenli olmayan kod ve işaretçiler (C# Programlama Kılavuzu)
 
@@ -37,7 +37,7 @@ Güvenli olmayan kod aşağıdaki özelliklere sahiptir:
 
 - Güvenli olmayan kod kullanmak güvenlik ve kararlılık riskleri sağlar.
 
-- Güvenli olmayan bloklar içeren kodun [-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md) derleyici seçeneğiyle derlenmesi gerekir.
+- Güvenli olmayan bloklar içeren kodun [**AllowUnsafeBlocks**](../../language-reference/compiler-options/language.md#allowunsafeblocks) derleyici seçeneğiyle derlenmesi gerekir.
   
 ## <a name="related-sections"></a>İlgili bölümler
 

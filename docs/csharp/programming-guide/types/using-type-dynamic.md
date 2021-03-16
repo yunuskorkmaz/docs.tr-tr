@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dynamic [C#], about dynamic type
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
-ms.openlocfilehash: 9904f0452feca388704067b1fd5432f74d0df86b
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 68e22f9d25b29784f73fefdf80808f9c2ba5e0f1
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381586"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103478636"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>Tür dinamik kullanma (C# Programlama Kılavuzu)
 
@@ -66,7 +66,7 @@ Dinamik dil çalışma zamanı (DLR), .NET Framework 4 ' te tanıtılan bir API 
 
 C# 4, Office Otomasyonu API 'leri gibi COM API 'Leri ile birlikte çalışma deneyimini geliştiren çeşitli özellikler içerir. Geliştirmeler arasında `dynamic` , türünün ve [adlandırılmış ve isteğe bağlı bağımsız değişkenlerin](../classes-and-structs/named-and-optional-arguments.md)kullanımı vardır.
 
-Birçok COM yöntemi, türleri olarak tanımlayarak bağımsız değişken türlerinde ve dönüş türünde değişimler için izin verir `object` . Bu, C# ' de kesin türü belirtilmiş değişkenlerle koordine etmek için değerlerin açık bir şekilde çevrim kümesini gerektiren bir [-Link (C# derleyici seçenekleri)](../../language-reference/compiler-options/link-compiler-option.md) seçeneğini kullanarak derlerseniz, `dynamic` türün tanıtımı `object` com imzalarındaki tekrarlamalarını, türü gibi kabul etmenizi `dynamic` ve dolayısıyla bu nedenle çok sayıda atamayı önlemeyi sağlar. Örneğin, aşağıdaki deyimler Microsoft Office Excel elektronik tablosundaki bir hücreye türü `dynamic` ve türü olmadan nasıl erişirsiniz `dynamic` .
+Birçok COM yöntemi, türleri olarak tanımlayarak bağımsız değişken türlerinde ve dönüş türünde değişimler için izin verir `object` . Bu, C# ' de kesin türü belirtilmiş değişkenlerle koordine etmek için değerlerin açık bir şekilde çevrim kümesini gerektiren bir [ **EmbedInteropTypes** (C# derleyici seçenekleri)](../../language-reference/compiler-options/inputs.md#embedinteroptypes) seçeneğini kullanarak derlerseniz, türün tanıtımı, `dynamic` `object` com imzalarındaki oluşumlarını, türü gibi kabul etmenizi `dynamic` ve dolayısıyla bu nedenle, atama ' ın büyük bir kısmını önlemenize olanak sağlar. Örneğin, aşağıdaki deyimler Microsoft Office Excel elektronik tablosundaki bir hücreye türü `dynamic` ve türü olmadan nasıl erişirsiniz `dynamic` .
 
 [!code-csharp[csOfficeWalkthrough#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#12)]
 
@@ -76,7 +76,7 @@ Birçok COM yöntemi, türleri olarak tanımlayarak bağımsız değişken türl
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[dinamik](../../language-reference/builtin-types/reference-types.md)|`dynamic`Anahtar sözcüğünün kullanımını açıklar.|
+|[dynamic](../../language-reference/builtin-types/reference-types.md)|`dynamic`Anahtar sözcüğünün kullanımını açıklar.|
 |[Dinamik dil çalışma zamanına genel bakış](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)|Ortak dil çalışma zamanına (CLR) dinamik diller için bir hizmet kümesi ekleyen bir çalışma zamanı ortamı olan DLR 'ye genel bir bakış sağlar.|
 |[İzlenecek yol: dinamik nesneler oluşturma ve kullanma](walkthrough-creating-and-using-dynamic-objects.md)|Özel dinamik nesne oluşturmak ve bir kitaplığa erişen proje oluşturmak için adım adım yönergeler sağlar `IronPython` .|
 |[Visual C# özelliklerini kullanarak Office birlikte çalışma nesnelerine erişim](../interop/how-to-access-office-onterop-objects.md)|Adlandırılmış ve isteğe bağlı bağımsız değişkenleri, `dynamic` türü ve OFFICE API nesnelerine erişimi kolaylaştıran diğer geliştirmeleri kullanan bir projenin nasıl oluşturulacağını gösterir.|

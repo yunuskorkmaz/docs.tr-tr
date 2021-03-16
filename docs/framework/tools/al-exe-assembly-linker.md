@@ -8,19 +8,19 @@ helpviewer_keywords:
 - modules, Assembly Linker
 - assembly manifest, Assembly Linker
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
-ms.openlocfilehash: 2019f113cdf5e854ad966ca616e116743197a24c
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 112e3880e76d4e81ab42cece592fcfd0f4dff312
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259492"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480796"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Derleme Bağlayıcı)
 
 Assembly Linker, modül veya kaynak dosyalar olan bir veya daha fazla dosyadan, derleme bildirimi içeren bir dosya oluşturur. Modül, derleme bildirimi içermeyen bir ara dil (IL) dosyasıdır.
 
 > [!NOTE]
-> Visual Studio 2008 ile başlayarak, C# ve Visual Basic derleyicileri otomatik olarak derlemeye bir Win32 bildirimi katıştırır. Daha fazla bilgi için bkz. [-win32manifest (C# derleyici seçenekleri)](../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md).
+> Visual Studio 2008 ile başlayarak, C# ve Visual Basic derleyicileri otomatik olarak derlemeye bir Win32 bildirimi katıştırır. Daha fazla bilgi için bkz. [-win32manifest (C# derleyici seçenekleri)](../../csharp/language-reference/compiler-options/resources.md#win32manifest).
 
 Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, [geliştiriciler için bir komut satırı kabuğu](/visualstudio/ide/reference/command-prompt-powershell)kullanın.
 
@@ -40,7 +40,7 @@ Aşağıdakilerden birini veya birkaçını belirtebilirsiniz `sources` .
 | ------ | ----------- |
 |`file`[,`target`]|`file`(Bir modül) içeriğini tarafından belirtilen dosya adına kopyalar `target` . Kopyaladıktan sonra, *Al.exe* `target` bir derlemeye derler.|
 |**/embed [kaynak]:** `file` [,`name` [,`private`]]|Tarafından belirtilen kaynağı, `file` derleme bildirimini içeren görüntüde katıştırır; *Al.exe* içeriğini `file` TAŞINABILIR çalıştırılabilir (PE) görüntüye kopyalar.<br /><br /> `name`Parametresi, kaynak için bir iç tanıtıcıdır. Varsayılan olarak, kaynaklar derleme içinde geneldir (başka derlemeler tarafından görülür). Belirtme `private` , kaynağı diğer derlemelere görünmez hale getirir.<br /><br /> , `file` Örneğin, [kaynak dosya oluşturucu (*Resgen.exe*)](resgen-exe-resource-file-generator.md) veya geliştirme ortamında oluşturulmuş bir .NET Framework kaynak dosyası ise, içindeki üyeleriyle erişilebilir <xref:System.Resources> . Daha fazla bilgi için bkz. <xref:System.Resources.ResourceManager>. Diğer tüm kaynaklar için, `GetManifestResource*` <xref:System.Reflection.Assembly> çalışma zamanında kaynağa erişmek için içindeki yöntemleri kullanın.<br /><br /> *Al.exe*'ye yalnızca kaynak dosyaları geçirilirse, çıkış dosyası bir uydu kaynak derlemesidir.|
-|**/Link [kaynak]:** `file` [,`name` [,`target` [,`private`]]]|Kaynak dosyayı bir derlemeye bağlar. Tarafından belirtilen kaynak `file` derlemenin bir parçası haline gelir; dosya kopyalanmaz. `file`Parametresi herhangi bir dosya biçiminde olabilir. Örneğin, parametresi olarak bir yerel DLL belirtebilirsiniz `file` . Bu, yerel DLL'yi derlemenin parçası haline getirir, böylece genel derleme önbelleğine yüklenebilir ve derlemedeki yönetilen koddan erişilebilir. Bunu, **/linkresource** derleyici seçeneğini kullanarak da yapabilirsiniz. Daha fazla bilgi için bkz. [-linkresource (C# derleyici seçenekleri)](../../csharp/language-reference/compiler-options/linkresource-compiler-option.md).<br /><br /> `name`Parametresi, kaynak için bir iç tanıtıcıdır. `target`Parametresi, *Al.exe* kopyalayan yolu ve dosya adını belirtir `file` *.* Kopyaladıktan sonra, *Al.exe* `target` bir derlemeye derler. Varsayılan olarak, kaynaklar derleme içinde geneldir (başka derlemeler tarafından görülür). Belirtme `private` , kaynağı diğer derlemelere görünmez hale getirir.<br /><br /> `file`Kaynak dosya Oluşturucu (*Resgen.exe*) veya geliştirme ortamında oluşturulmuş bir .NET Framework kaynak dosyası ise, <xref:System.Resources> ad alanındaki üyelerle erişilebilir. Daha fazla bilgi için bkz. <xref:System.Resources.ResourceManager>. Diğer tüm kaynaklar için, `GetManifestResource*` <xref:System.Reflection.Assembly> çalışma zamanında kaynağa erişmek üzere sınıfındaki yöntemleri kullanın.<br /><br /> *Al.exe*'ye yalnızca kaynak dosyaları geçirilirse, çıkış dosyası bir uydu kaynak derlemesidir.|
+|**/Link [kaynak]:** `file` [,`name` [,`target` [,`private`]]]|Kaynak dosyayı bir derlemeye bağlar. Tarafından belirtilen kaynak `file` derlemenin bir parçası haline gelir; dosya kopyalanmaz. `file`Parametresi herhangi bir dosya biçiminde olabilir. Örneğin, parametresi olarak bir yerel DLL belirtebilirsiniz `file` . Bu, yerel DLL'yi derlemenin parçası haline getirir, böylece genel derleme önbelleğine yüklenebilir ve derlemedeki yönetilen koddan erişilebilir. Bunu, **/linkresource** derleyici seçeneğini kullanarak da yapabilirsiniz. Daha fazla bilgi için bkz. [-linkresource (C# derleyici seçenekleri)](../../csharp/language-reference/compiler-options/resources.md#linkresources).<br /><br /> `name`Parametresi, kaynak için bir iç tanıtıcıdır. `target`Parametresi, *Al.exe* kopyalayan yolu ve dosya adını belirtir `file` *.* Kopyaladıktan sonra, *Al.exe* `target` bir derlemeye derler. Varsayılan olarak, kaynaklar derleme içinde geneldir (başka derlemeler tarafından görülür). Belirtme `private` , kaynağı diğer derlemelere görünmez hale getirir.<br /><br /> `file`Kaynak dosya Oluşturucu (*Resgen.exe*) veya geliştirme ortamında oluşturulmuş bir .NET Framework kaynak dosyası ise, <xref:System.Resources> ad alanındaki üyelerle erişilebilir. Daha fazla bilgi için bkz. <xref:System.Resources.ResourceManager>. Diğer tüm kaynaklar için, `GetManifestResource*` <xref:System.Reflection.Assembly> çalışma zamanında kaynağa erişmek üzere sınıfındaki yöntemleri kullanın.<br /><br /> *Al.exe*'ye yalnızca kaynak dosyaları geçirilirse, çıkış dosyası bir uydu kaynak derlemesidir.|
 
 Aşağıdakileri belirtebilirsiniz `options` ; **/Out** belirtmeniz gerekir.
 

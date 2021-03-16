@@ -9,12 +9,12 @@ ms.assetid: 51f8ffa3-c253-4201-a3d3-c4fad85ae097
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: cd166068993fb5d1a5164615de3926a06dda8098
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 000abb5846d3ccfc1f422b8a70c4d8573d08de46
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687666"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103479358"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>Ortak dil çalışma zamanında tür iletme
 
@@ -42,7 +42,7 @@ Tür iletme, özgün derlemeyi kullanan uygulamaları yeniden derlemek zorunda k
 
 3. Artık türü içeren derlemeyi derleyin.  
 
-4. Türü içeren derlemeye bir başvuru ile, türü bulunan derlemeyi yeniden derleyin. Örneğin, komut satırından bir C# dosyası derlerken, türü içeren derlemeyi belirtmek için [-Reference (C# derleyici seçenekleri)](../../csharp/language-reference/compiler-options/reference-compiler-option.md) seçeneğini kullanın. C++ ' da, türü içeren derlemeyi belirtmek için kaynak dosyadaki [#using](/cpp/preprocessor/hash-using-directive-cpp) yönergesini kullanın.  
+4. Türü içeren derlemeye bir başvuru ile, türü bulunan derlemeyi yeniden derleyin. Örneğin, komut satırından bir C# dosyası derlerken, türü içeren derlemeyi belirtmek için [ **Başvurular** (c# Derleyici seçenekleri)](../../csharp/language-reference/compiler-options/inputs.md#references) seçeneğini kullanın. C++ ' da, türü içeren derlemeyi belirtmek için kaynak dosyadaki [#using](/cpp/preprocessor/hash-using-directive-cpp) yönergesini kullanın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

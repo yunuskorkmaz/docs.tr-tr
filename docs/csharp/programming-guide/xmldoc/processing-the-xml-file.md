@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: 6f8a278ed842cd9c4176f3efff423ee048f7e9b9
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 5ce0f311ccc16b4eca8d499578c217d93cc93165
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381547"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477866"
 ---
 # <a name="process-the-xml-file-c-programming-guide"></a>XML dosyasını işleme (C# Programlama Kılavuzu)
 
@@ -59,9 +59,9 @@ Derleyici, KIMLIK dizelerini oluşturduğunda aşağıdaki kuralları sunar:
 
   - ELEMENT_TYPE_GENERICARRAY, dizinin öğe türü takip eden "[?]" olarak temsil edilir. C# derleyicisi hiçbir şekilde bunu oluşturmaz.
 
-  - Element_type_array,*lowerbound* `size` virgül sayısının derece-1 olduğu ve bilindiğinde her boyutun alt sınırları ve boyutunun ondalık olarak temsil edildiği [küçük harfe göre:, küçük*harf sınırı*:] olarak temsil edilir `size` . Daha düşük bir sınır veya boyut belirtilmemişse, bu atlanır. Belirli bir boyutun alt sınırı ve boyutu atlanırsa, ': ' de atlanır. Örneğin, alt sınır olarak 1 olan 2 boyutlu bir dizi ve belirtilmemiş boyutlar [1:, 1:].
+  - Element_type_array, `size` virgül sayısının derece-1 olduğu ve bilindiğinde her boyutun alt sınırları ve boyutunun ondalık olarak temsil edildiği [küçük harfe göre:, küçük *harf sınırı*:] olarak temsil edilir `size` . Daha düşük bir sınır veya boyut belirtilmemişse, bu atlanır. Belirli bir boyutun alt sınırı ve boyutu atlanırsa, ': ' de atlanır. Örneğin, alt sınır olarak 1 olan 2 boyutlu bir dizi ve belirtilmemiş boyutlar [1:, 1:].
 
-  - ELEMENT_TYPE_FNPTR, `type` *signature* `type` dönüş türü olduğu ve *imza* YÖNTEMIN bağımsız değişkenlerinin olduğu "= Func: (Signature)" olarak temsil edilir. Bağımsız değişken yoksa, parantezler atlanır. C# derleyicisi hiçbir şekilde bunu oluşturmaz.
+  - ELEMENT_TYPE_FNPTR, `type`  `type` dönüş türü olduğu ve *imza* YÖNTEMIN bağımsız değişkenlerinin olduğu "= Func: (Signature)" olarak temsil edilir. Bağımsız değişken yoksa, parantezler atlanır. C# derleyicisi hiçbir şekilde bunu oluşturmaz.
 
   Aşağıdaki imza bileşenleri, aşırı yüklenmiş yöntemleri ayırt etmek için kullanılmadığından gösterilmemektedir:
 
@@ -73,9 +73,9 @@ Derleyici, KIMLIK dizelerini oluşturduğunda aşağıdaki kuralları sunar:
 
 - Yalnızca dönüştürme işleçleri için ( `op_Implicit` ve `op_Explicit` ), yöntemin dönüş değeri ' ~ ' ve ardından dönüş türü olarak kodlanır.
 
-- Genel türler için, türün adının ardından bir geri değer ve ardından genel tür parametrelerinin sayısını belirten bir sayı gelmelidir. Örneğin:
+- Genel türler için, türün adının ardından bir geri değer ve ardından genel tür parametrelerinin sayısını belirten bir sayı gelmelidir. Örnek:
 
-     ``<member name="T:SampleClass`2">``, olarak tanımlanan bir türün etikettir `public class SampleClass<T, U>` .
+     ``<member name="T:SampleClass`2">`` , olarak tanımlanan bir türün etikettir `public class SampleClass<T, U>` .
 
      Genel tür parametreleri parametre olarak alan yöntemler için, (örneğin \` , 0, 1), genel tür parametreleri birlikte bulunan sayılar olarak belirtilir \` . Her sayı, türün genel parametreleri için sıfır tabanlı dizi gösterimini temsil eder.
 
@@ -88,5 +88,5 @@ Aşağıdaki örneklerde bir sınıf ve üyeleri için KIMLIK dizelerinin nasıl
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# programlama kılavuzu](../index.md)
-- [-Doc (C# derleyici seçenekleri)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [**Belgetationfile** (C# derleyici seçenekleri)](../../language-reference/compiler-options/output.md#documentationfile)
 - [XML belgeleri yorumları](./index.md)

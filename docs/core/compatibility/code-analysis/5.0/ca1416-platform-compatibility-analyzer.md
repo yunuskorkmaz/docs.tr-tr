@@ -2,12 +2,12 @@
 title: 'Son değişiklik: CA1416: platform uyumluluğu'
 description: Kod Analizi kuralı CA1416 'nin etkinleştirilmesi nedeniyle .NET 5 ' teki önemli değişiklik hakkında bilgi edinin.
 ms.date: 09/29/2020
-ms.openlocfilehash: 0464e7bb5a494543c0201efa4630e82897b464c0
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: fa03e1f0bfa8438b3b2899aaf7c97f42533c7c02
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102257862"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477551"
 ---
 # <a name="warning-ca1416-platform-compatibility"></a>Uyarı CA1416: platform uyumluluğu
 
@@ -94,7 +94,7 @@ public void PlayCMajor()
 
 Tüm çağrı sitelerinizi onarmak istemiyorsanız, uyarıyı bastırmak için aşağıdaki seçeneklerden birini belirleyebilirsiniz:
 
-- Rule CA1416 'ı bastırmak için ya da `#pragma` [-nowarn](../../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) derleyici bayrağını kullanarak ya da [kuralın önem derecesini](../../../../fundamentals/code-analysis/configuration-options.md#severity-level) `none` bir. editorconfig dosyasında olarak ayarlayarak yapabilirsiniz.
+- Kural CA1416 ' ı bastırmak için, `#pragma` veya [**disableduyarılar**](../../../../csharp/language-reference/compiler-options/errors-warnings.md#disabledwarnings) derleyici bayrağını kullanarak ya da [kuralın önem derecesini](../../../../fundamentals/code-analysis/configuration-options.md#severity-level) `none` bir. editorconfig dosyasında olarak ayarlayarak yapabilirsiniz.
 
   ```csharp
   public void PlayCMajor()

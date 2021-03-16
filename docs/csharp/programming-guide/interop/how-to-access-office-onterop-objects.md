@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: bc4b5755bf56a013a0deb4efdb821df18db5a18e
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 6c2c49a9fd55c406b69c02586a9b0e4a1d16ccd4
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87303029"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103479930"
 ---
 # <a name="how-to-access-office-interop-objects-c-programming-guide"></a>Office birlikte çalışma nesnelerine erişim (C# Programlama Kılavuzu)
 
@@ -41,9 +41,9 @@ Bu yönergeyi tamamlamak için, bilgisayarınızda yüklü Microsoft Office Exce
 
 6. **Ad** alanına projeniz için bir ad yazın.
 
-7. **Tamam** düğmesine tıklayın.
+7. **Tamam**'a tıklayın.
 
-     Yeni proje **Çözüm Gezgini**görüntülenir.
+     Yeni proje **Çözüm Gezgini** görüntülenir.
 
 ## <a name="to-add-references"></a>Başvuru eklemek için
 
@@ -51,7 +51,7 @@ Bu yönergeyi tamamlamak için, bilgisayarınızda yüklü Microsoft Office Exce
 
 2. **Derlemeler** sayfasında, **bileşen adı** listesinde **Microsoft. Office. Interop. Word** ' ü seçin ve ardından CTRL tuşunu basılı tutarak **Microsoft. Office. Interop. Excel**' i seçin.  Derlemeleri görmüyorsanız bunların yüklendiğinden ve görüntülendiğinden emin olmanız gerekebilir. Bkz. [nasıl yapılır: Office birincil birlikte çalışma derlemelerini yüklemek](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies).
 
-3. **Tamam** düğmesine tıklayın.
+3. **Tamam**'a tıklayın.
 
 ## <a name="to-add-necessary-using-directives"></a>Gerekli yönergeleri kullanarak ekleme
 
@@ -63,7 +63,7 @@ Bu yönergeyi tamamlamak için, bilgisayarınızda yüklü Microsoft Office Exce
 
 ## <a name="to-create-a-list-of-bank-accounts"></a>Banka hesaplarının bir listesini oluşturmak için
 
-1. Aşağıdaki sınıf tanımını sınıfının altına **program.cs**yapıştırın `Program` .
+1. Aşağıdaki sınıf tanımını sınıfının altına **program.cs** yapıştırın `Program` .
 
      [!code-csharp[csProgGuideOfficeHowTo#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#2)]
 
@@ -95,7 +95,7 @@ Bu yönergeyi tamamlamak için, bilgisayarınızda yüklü Microsoft Office Exce
 
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]
 
-     C# 4 ve sonraki sürümleri, `Object` `dynamic` Derleme [-Link](../../language-reference/compiler-options/link-compiler-option.md) derleyici seçeneği tarafından başvuruluyorsa veya equivalently, Excel **birlikte çalışma türleri** özelliği true olarak ayarlandıysa, geri döndürülen öğesini otomatik olarak dönüştürür. True, bu özellik için varsayılan değerdir.
+     C# 4 ve sonraki sürümleri, `Object` `dynamic` Derleme [**EmbedInteropTypes**](../../language-reference/compiler-options/inputs.md#embedinteroptypes) derleyici seçeneği tarafından başvuruluyorsa veya equivalently, Excel **birlikte çalışma türleri** özelliği true olarak ayarlandıysa, döndürülen öğesini otomatik olarak dönüştürür. True, bu özellik için varsayılan değerdir.
 
 ## <a name="to-run-the-project"></a>Projeyi çalıştırmak için
 
@@ -111,7 +111,7 @@ Bu yönergeyi tamamlamak için, bilgisayarınızda yüklü Microsoft Office Exce
 
 1. C# 4 ve sonraki sürümlerin, Office programlama 'yi geliştiren ek yollarını göstermek için aşağıdaki kod bir Word uygulaması açar ve Excel çalışma sayfasına bağlanan bir simge oluşturur.
 
-     `CreateIconInWordDoc`Daha sonra bu adımda sunulan yöntemi `Program` sınıfına yapıştırın. `CreateIconInWordDoc`, ve için metot çağrılarının karmaşıklığını azaltmak için adlandırılmış ve isteğe bağlı bağımsız değişkenleri <xref:Microsoft.Office.Interop.Word.Documents.Add%2A> kullanır <xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A> . Bu çağrılar, C# 4 ' te sunulan ve başvuru parametrelerine sahip COM yöntemlerine yapılan çağrıları kolaylaştıran iki yeni özelliği dahil ediyor. İlk olarak, başvuru parametrelerine bağımsız değişkenleri değer parametreleriniz gibi gönderebilirsiniz. Diğer bir deyişle, her başvuru parametresi için bir değişken oluşturmadan doğrudan değerleri gönderebilirsiniz. Derleyici bağımsız değişken değerlerini tutacak geçici değişkenler oluşturur ve çağrıdan geri döndüğünüzde değişkenleri atar. İkinci olarak, `ref` bağımsız değişken listesindeki anahtar sözcüğü atlayabilirsiniz.
+     `CreateIconInWordDoc`Daha sonra bu adımda sunulan yöntemi `Program` sınıfına yapıştırın. `CreateIconInWordDoc` , ve için metot çağrılarının karmaşıklığını azaltmak için adlandırılmış ve isteğe bağlı bağımsız değişkenleri <xref:Microsoft.Office.Interop.Word.Documents.Add%2A> kullanır <xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A> . Bu çağrılar, C# 4 ' te sunulan ve başvuru parametrelerine sahip COM yöntemlerine yapılan çağrıları kolaylaştıran iki yeni özelliği dahil ediyor. İlk olarak, başvuru parametrelerine bağımsız değişkenleri değer parametreleriniz gibi gönderebilirsiniz. Diğer bir deyişle, her başvuru parametresi için bir değişken oluşturmadan doğrudan değerleri gönderebilirsiniz. Derleyici bağımsız değişken değerlerini tutacak geçici değişkenler oluşturur ve çağrıdan geri döndüğünüzde değişkenleri atar. İkinci olarak, `ref` bağımsız değişken listesindeki anahtar sözcüğü atlayabilirsiniz.
 
      `Add`Yönteminin tümü isteğe bağlı dört başvuru parametresi vardır. C# 4,0 ve sonraki sürümlerinde, varsayılan değerlerini kullanmak istiyorsanız parametrelerin herhangi biri veya tümü için bağımsız değişkenleri atlayabilirsiniz. C# 3,0 ve önceki sürümlerinde, her bir parametre için bir bağımsız değişken sağlanmalı ve parametreler başvuru parametreleri olduğundan bağımsız değişken bir değişken olmalıdır.
 
@@ -145,11 +145,11 @@ Bu yönergeyi tamamlamak için, bilgisayarınızda yüklü Microsoft Office Exce
 
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]
 
-2. Tür bilgilerini gömmek yerine varsayılan değer değiştirmek ve PIA 'leri kullanmak için, **Çözüm Gezgini** ' deki **Başvurular** düğümünü genişletin ve ardından **Microsoft. Office. Interop. Excel** veya **Microsoft. Office. Interop. Word**öğesini seçin.
+2. Tür bilgilerini gömmek yerine varsayılan değer değiştirmek ve PIA 'leri kullanmak için, **Çözüm Gezgini** ' deki **Başvurular** düğümünü genişletin ve ardından **Microsoft. Office. Interop. Excel** veya **Microsoft. Office. Interop. Word** öğesini seçin.
 
-3. **Özellikler** penceresini göremiyorsanız **F4**tuşuna basın.
+3. **Özellikler** penceresini göremiyorsanız **F4** tuşuna basın.
 
-4. Özellik listesine **birlikte çalışma türlerini katıştır** ' ı bulun ve değerini **false**olarak değiştirin. Equivalently, bir komut isteminde [-Link](../../language-reference/compiler-options/link-compiler-option.md) yerine [-Reference](../../language-reference/compiler-options/reference-compiler-option.md) derleyici seçeneğini kullanarak derleyebilirsiniz.
+4. Özellik listesine **birlikte çalışma türlerini katıştır** ' ı bulun ve değerini **false** olarak değiştirin. Equivalently, komut isteminde [**EmbedInteropTypes**](../../language-reference/compiler-options/inputs.md#embedinteroptypes) yerine [**References**](../../language-reference/compiler-options/inputs.md#references) derleyici seçeneğini kullanarak derleyebilirsiniz.
 
 ## <a name="to-add-additional-formatting-to-the-table"></a>Tabloya ek biçimlendirme eklemek için
 
@@ -176,7 +176,7 @@ Aşağıdaki kod, tüm örneği göstermektedir.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Type.Missing?displayProperty=nameWithType>
-- [dinamik](../../language-reference/builtin-types/reference-types.md)
+- [dynamic](../../language-reference/builtin-types/reference-types.md)
 - [Tür dinamiği kullanma](../types/using-type-dynamic.md)
 - [Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler](../classes-and-structs/named-and-optional-arguments.md)
 - [Office programlamada adlandırılmış ve isteğe bağlı bağımsız değişkenleri kullanma](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)

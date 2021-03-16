@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, errors
 - errors [C#]
 ms.assetid: 57262ab1-6c50-4f9c-81ad-9fba48477416
-ms.openlocfilehash: a7c0290c799a7ae4a371578396d2d2d747d00d28
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: ecc040fb0c19ac19b7a4a922702b70ac2d9a426e
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89126248"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103479545"
 ---
 # <a name="c-compiler-errors"></a>C# Derleyici Hataları
 
@@ -33,7 +33,6 @@ Bazı C# derleyici hatalarının hatanın neden oluşturulduğunu ve bazı durum
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# derleyici seçenekleri](../compiler-options/index.md)
-- [Maalesef bu C# hatasıyla ilgili ayrıntı yok](../../misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)
 - [Derleme Sayfası, Proje Tasarımcısı (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)
-- [-warn (C# derleyici seçenekleri)](../compiler-options/warn-compiler-option.md)
-- [-nowarn (C# derleyici seçenekleri)](../compiler-options/nowarn-compiler-option.md)
+- [**WarningLevel** (C# derleyici seçenekleri)](../compiler-options/errors-warnings.md#warninglevel)
+- [**Disableduyarılar** (C# derleyici seçenekleri)](../compiler-options/errors-warnings.md#disabledwarnings)

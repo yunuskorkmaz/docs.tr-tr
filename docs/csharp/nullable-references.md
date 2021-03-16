@@ -3,12 +3,12 @@ title: Boş değer atanabilir başvuru türleri
 description: Bu makalede, C# 8,0 ' ye eklenen null yapılabilir başvuru türlerine ilişkin bir genel bakış sunulmaktadır. Yeni ve mevcut projeler için özelliği, null başvuru özel durumlarına karşı nasıl güvenlik sağladığını öğreneceksiniz.
 ms.technology: csharp-null-safety
 ms.date: 04/21/2020
-ms.openlocfilehash: b4906987ee23f458c1da9754ed7b402621169f63
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: 36078031eebc1890edf04744475c330c2ba31f96
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95099353"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480094"
 ---
 # <a name="nullable-reference-types"></a>Boş değer atanabilir başvuru türleri
 
@@ -218,4 +218,4 @@ public static class Program
 - [Taslak Nullable başvuru türleri belirtimi](~/_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md)
 - [Null yapılabilir başvurular öğreticisine giriş](tutorials/nullable-reference-types.md)
 - [Var olan bir kod temelinin Nullable başvurulara geçirilmesi](tutorials/upgrade-to-nullable-references.md)
-- [-Nullable (C# derleyici seçeneği)](language-reference/compiler-options/nullable-compiler-option.md)
+- [**Nullable** (C# derleyici seçeneği)](language-reference/compiler-options/language.md#nullable)

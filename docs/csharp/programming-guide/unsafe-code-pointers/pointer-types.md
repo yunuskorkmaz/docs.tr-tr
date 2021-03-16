@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 9c62a31f9a4a090fe56fb10ac45fe2f93f1b036e
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 0e384084ef1fbb9139c11880ffa8a79bad23b32e
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87382041"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480575"
 ---
 # <a name="pointer-types-c-programming-guide"></a>İşaretçi türleri (C# Programlama Kılavuzu)
 
@@ -21,11 +21,11 @@ type* identifier;
 void* identifier; //allowed but not recommended
 ```
 
-`*`Bir işaretçi türündeki öğesinden önce belirtilen tür, **başvurulan tür**olarak adlandırılır. Yalnızca [yönetilmeyen bir tür](../../language-reference/builtin-types/unmanaged-types.md) , başvurulan bir tür olabilir.
+`*`Bir işaretçi türündeki öğesinden önce belirtilen tür, **başvurulan tür** olarak adlandırılır. Yalnızca [yönetilmeyen bir tür](../../language-reference/builtin-types/unmanaged-types.md) , başvurulan bir tür olabilir.
 
 İşaretçi türleri [nesneden](../../language-reference/builtin-types/reference-types.md) aktarılmaz ve işaretçi türleri ve arasında dönüştürme yok `object` . Ayrıca, kutulama ve kutudan çıkarma işaretçileri desteklemez. Ancak, farklı işaretçi türleri ve işaretçi türleri ve tamsayı türleri arasında dönüştürme yapabilirsiniz.
 
-Aynı bildirimde birden çok işaretçi bildirdiğinizde, yıldız işareti (*) yalnızca altı çizili türle birlikte yazılır; her bir işaretçi adı için önek olarak kullanılmaz. Örneğin:
+Aynı bildirimde birden çok işaretçi bildirdiğinizde, yıldız işareti (*) yalnızca altı çizili türle birlikte yazılır; her bir işaretçi adı için önek olarak kullanılmaz. Örnek:
 
 ```csharp
 int* p1, p2, p3;   // Ok
@@ -36,13 +36,13 @@ Bir işaretçi, bir işaretçiye işaret eden bir nesne başvurusu atık olarak 
 
 Türündeki işaretçi değişkeninin değeri, `myType*` türünde bir değişkenin adresidir `myType` . Aşağıda, işaretçi türü bildirimi örnekleri verilmiştir:
 
-|Örnek|Description|
+|Örnek|Açıklama|
 |-------------|-----------------|
-|`int* p`|`p`bir tamsayıya yönelik bir işaretçidir.|
-|`int** p`|`p`, tamsayıya yönelik işaretçinin bir işaretçisidir.|
-|`int*[] p`|`p`, tamsayılara yönelik işaretçilerin tek boyutlu bir dizisidir.|
-|`char* p`|`p`, Char için bir işaretçidir.|
-|`void* p`|`p`, bilinmeyen bir türe yönelik bir işaretçidir.|
+|`int* p`|`p` bir tamsayıya yönelik bir işaretçidir.|
+|`int** p`|`p` , tamsayıya yönelik işaretçinin bir işaretçisidir.|
+|`int*[] p`|`p` , tamsayılara yönelik işaretçilerin tek boyutlu bir dizisidir.|
+|`char* p`|`p` , Char için bir işaretçidir.|
+|`void* p`|`p` , bilinmeyen bir türe yönelik bir işaretçidir.|
 
 İşaretçi yöneltme işleci *, işaretçi değişkeninin işaret ettiği yerdeki içeriğe erişebilir. Örneğin, aşağıdaki bildirimi ele alalım:
 
@@ -52,7 +52,7 @@ int* myVariable;
 
 İfade, `*myVariable` içinde bulunan `int` adreste bulunan değişkeni gösterir `myVariable` .
 
-Konular [Sabit bildiriminde](../../language-reference/keywords/fixed-statement.md) ve [işaretçi dönüştürmelerinde birçok işaretçiye](./pointer-conversions.md)örnek vardır. Aşağıdaki örnek, `unsafe` anahtar sözcüğünü ve ifadesini kullanır `fixed` ve iç işaretçinin nasıl artırılacağını gösterir.  Bu kodu çalıştırmak için bir konsolun Ana işlevine yapıştırabilirsiniz. Bu örneklerin [-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md) derleyici seçenek kümesiyle derlenmesi gerekir.
+Konular [Sabit bildiriminde](../../language-reference/keywords/fixed-statement.md) ve [işaretçi dönüştürmelerinde birçok işaretçiye](./pointer-conversions.md)örnek vardır. Aşağıdaki örnek, `unsafe` anahtar sözcüğünü ve ifadesini kullanır `fixed` ve iç işaretçinin nasıl artırılacağını gösterir.  Bu kodu çalıştırmak için bir konsolun Ana işlevine yapıştırabilirsiniz. Bu örneklerin [**AllowUnsafeBlocks**](../../language-reference/compiler-options/language.md#allowunsafeblocks) derleyici seçenek kümesiyle derlenmesi gerekir.
 
 [!code-csharp[Using pointer types](snippets/FixedKeywordExamples.cs#5)]
 
@@ -72,9 +72,9 @@ Aşağıdaki tabloda, güvenli olmayan bir bağlamda işaretçiler üzerinde iş
 |`&`|Bir değişkenin adresini alır.|
 |`++` ve `--`|İşaretçileri artırır ve azaltır.|
 |`+` ve `-`|İşaretçi aritmetiği gerçekleştirir.|
-|`==`, `!=` , `<` , `>` , `<=` ve`>=`|İşaretçileri karşılaştırır.|
+|`==`, `!=` , `<` , `>` , `<=` ve `>=`|İşaretçileri karşılaştırır.|
 |[`stackalloc`](../../language-reference/operators/stackalloc.md)|Yığında bellek ayırır.|
-|[`fixed`Ekstre](../../language-reference/keywords/fixed-statement.md)|Adresinin bulunamaması için bir değişkeni geçici olarak sabitler.|
+|[`fixed` Ekstre](../../language-reference/keywords/fixed-statement.md)|Adresinin bulunamaması için bir değişkeni geçici olarak sabitler.|
 
 İşaretçi ile ilgili işleçler hakkında daha fazla bilgi için bkz. [işaretçi ile ilgili işleçler](../../language-reference/operators/pointer-related-operators.md).
 
@@ -85,7 +85,7 @@ Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md)
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
-- [Güvenli olmayan kod ve Işaretçiler](index.md)
+- [Güvenli Olmayan Kod ve İşaretçiler](index.md)
 - [İşaretçi dönüştürmeleri](pointer-conversions.md)
 - [Başvuru türleri](../../language-reference/keywords/reference-types.md)
 - [Değer türleri](../../language-reference/builtin-types/value-types.md)

@@ -5,12 +5,12 @@ ms.date: 03/08/2021
 helpviewer_keywords:
 - command-line arguments [C#], displaying
 ms.assetid: b8479f2d-9e05-4d38-82da-2e61246e5437
-ms.openlocfilehash: 38122f55e9886c677f6f7189ea6fe45c13c8c13b
-ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
+ms.openlocfilehash: 7c3e8d7f6ad2a599308057e996808509e70b7508
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/11/2021
-ms.locfileid: "103190261"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480266"
 ---
 # <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Komut satırı bağımsız değişkenlerini görüntüleme (C# Programlama Kılavuzu)
 
@@ -34,6 +34,5 @@ Komut satırındaki bir yürütülebilir dosyaya belirtilen bağımsız değişk
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
-- [csc.exe Kullanarak Komut Satırı Derleme](../../language-reference/compiler-options/command-line-building-with-csc-exe.md)
 - [Main () ve Command-Line bağımsız değişkenleri](./index.md)
 - [Ana() Dönüş Değerleri](./main-return-values.md)

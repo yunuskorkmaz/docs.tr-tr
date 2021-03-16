@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: dc3e235db49279691203a0db4d124239fb972c69
-ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
+ms.openlocfilehash: a3f72719ba4ce722aef33bbd5de338d3d06b2aa0
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90065246"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480374"
 ---
 # <a name="if-c-reference"></a>#if (C# Başvurusu)
 
-C# derleyicisi bir `#if` yönergeyle karşılaştığında, sonunda bir [#endif](preprocessor-endif.md) yönergesi ile, yalnızca belirtilen sembol tanımlanmışsa, yönergeler arasındaki kodu derler. C ve C++ ' dan farklı olarak, bir simgeye sayısal değer atayamazsınız. `#if`C# ' deki ifade, Boolean ve yalnızca sembolün tanımlanıp tanımlanmadığını sınar. Örneğin:
+C# derleyicisi bir `#if` yönergeyle karşılaştığında, sonunda bir [#endif](preprocessor-endif.md) yönergesi ile, yalnızca belirtilen sembol tanımlanmışsa, yönergeler arasındaki kodu derler. C ve C++ ' dan farklı olarak, bir simgeye sayısal değer atayamazsınız. `#if`C# ' deki ifade, Boolean ve yalnızca sembolün tanımlanıp tanımlanmadığını sınar. Örnek:
 
 ```csharp
 #if DEBUG
@@ -34,7 +34,7 @@ Yönergeyle başlayan koşullu bir yönerge `#if` , açıkça bir yönergeyle so
 
 `#define` bir sembol tanımlamanızı sağlar. Ardından, simgesini yönergeye geçirilen ifade olarak kullanarak ifade olarak `#if` değerlendirilir `true` .
 
-Ayrıca, [-define](../compiler-options/define-compiler-option.md) derleyici seçeneğiyle bir simge tanımlayabilirsiniz. [#Undef](preprocessor-undef.md)bir simge tanımlayabilirsiniz.
+Ayrıca, [**Definesabitleri**](../compiler-options/language.md#defineconstants) derleyici seçeneğiyle bir simge tanımlayabilirsiniz. [#Undef](preprocessor-undef.md)bir simge tanımlayabilirsiniz.
 
 Veya ile tanımladığınız bir sembol `-define` `#define` aynı ada sahip bir değişkenle çakışmaz. Diğer bir deyişle, bir değişken adı bir Önişlemci yönergesine geçirilmemelidir ve bir sembol yalnızca bir Önişlemci yönergesi tarafından değerlendirilebilmelidir.
 
