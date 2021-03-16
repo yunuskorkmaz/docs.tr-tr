@@ -13,12 +13,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: e72264902a532435c41d933823a5fde3497e2e75
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: b5053ae6be725e82f4389eb1793fc3b5a1028d34
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100584478"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103478855"
 ---
 # <a name="how-to-serialize-properties-of-derived-classes-with-systemtextjson"></a>İle türetilmiş sınıfların özelliklerini serileştirme System.Text.Json
 
@@ -141,7 +141,8 @@ Aşağıdaki örnek, önceki koddan elde edilen JSON 'u göstermektedir:
 }
 ```
 
-Polimorfik **serileştirme** hakkında daha fazla bilgi için ve **serisini kaldırma** hakkında bilgi için, bkz. ' [den Newtonsoft.Json System.Text.Json ' ye geçiş](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization).
+> [!NOTE]
+> Bu makale serileştirilmesi için serileştirme, seri durumdan çıkarma ile ilgilidir. Polimorfik seri kaldırma desteklenmez, ancak geçici bir çözüm olarak, örneğin, çok [biçimli seri kaldırma desteği](system-text-json-converters-how-to.md#support-polymorphic-deserialization)gibi özel bir dönüştürücü yazabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML [C#], tags
 - XML documentation [C#], tags
 ms.assetid: 6e98f7a9-38f4-4d74-b644-1ff1b23320fd
-ms.openlocfilehash: 65bca6f979c5ffd91507b571a4f049377315192d
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 74fd18a09458c399aa135552e5f6f0bca359f09e
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381521"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477838"
 ---
 # <a name="recommended-tags-for-documentation-comments-c-programming-guide"></a>Belge açıklamaları için önerilen Etiketler (C# Programlama Kılavuzu)
 
@@ -48,5 +48,5 @@ Bir belge açıklamasının metninde Açılı ayraçların görünmesini istiyor
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# programlama kılavuzu](../index.md)
-- [-Doc (C# derleyici seçenekleri)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [**Belgetationfile** (C# derleyici seçenekleri)](../../language-reference/compiler-options/output.md#documentationfile)
 - [XML belgeleri yorumları](./index.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Runtime Metadata Export Tool
 - Winmdexp.exe
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
-ms.openlocfilehash: a35577841765f7e6d5d5e8220bf3951f81d65832
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: b9a30076fdd67a90dc3e605a8014ead88141f43b
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258708"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477543"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows Çalışma Zamanı Meta Veri Dışarı Aktarma Aracı)
 
@@ -33,7 +33,7 @@ winmdexp [options] winmdmodule
   
 |Bağımsız değişken veya seçenek|Açıklama|  
 |------------------------|-----------------|  
-|`winmdmodule`|Dışarı aktarılacak modülü (.winmdobj) belirtir. Yalnızca tek bir modüle izin verilir. Bu modülü oluşturmak için, `/target` hedefle birlikte derleyici seçeneğini kullanın `winmdobj` . Bkz: [-target: winmdobj (C# derleyici seçenekleri)](../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md) veya [-target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
+|`winmdmodule`|Dışarı aktarılacak modülü (.winmdobj) belirtir. Yalnızca tek bir modüle izin verilir. Bu modülü oluşturmak için, `/target` hedefle birlikte derleyici seçeneğini kullanın `winmdobj` . Bkz: [-target: winmdobj (C# derleyici seçenekleri)](../../csharp/language-reference/compiler-options/output.md#targettype) veya [-target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
 |`/docfile:` `docfile`<br /><br /> `/d:` `docfile`|Winmdexp.exe'nin üreteceği çıktı XML belgesi dosyasını belirtir. .NET Framework 4,5 ' de, çıkış dosyası aslında giriş XML belge dosyası ile aynıdır.|  
 |`/moduledoc:` `docfile`<br /><br /> `/md:` `docfile`|Derleyicinin ürettiği XML belge dosyasının adını belirtir `winmdmodule` .|  
 |`/modulepdb:` `symbolfile`<br /><br /> `/mp:` `symbolfile`|Sembolleri içeren program veritabanı (PDB) dosyasının adını belirtir `winmdmodule` .|  

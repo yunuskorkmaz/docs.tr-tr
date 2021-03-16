@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, XML code comments
 - XML documentation comments [C#]
 ms.assetid: 803b7f7b-7428-4725-b5db-9a6cff273199
-ms.openlocfilehash: fbdeb53331d9fc63d24a3322ea13863d7c0a3630
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: d784ec58096e44cf010edd279f682555df58a8ef
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381885"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103478391"
 ---
 # <a name="xml-documentation-comments-c-programming-guide"></a>XML belgeleri Yorumları (C# Programlama Kılavuzu)
 
@@ -30,7 +30,7 @@ C# ' de, örneğin, yorumların başvurduğu kod bloğundan hemen önce, kaynak 
 public class MyClass {}
 ```
 
-[-Doc](../../language-reference/compiler-options/doc-compiler-option.md) seçeneğiyle derlerken, derleyici kaynak KODUNDAKI tüm XML etiketlerini arar ve bir XML belge dosyası oluşturur. Derleyici tarafından oluşturulan dosyayı temel alan son belgeleri oluşturmak için özel bir araç oluşturabilir veya [Docfx](https://dotnet.github.io/docfx/) veya [sandrole](https://github.com/EWSoftware/SHFB)gibi bir araç kullanabilirsiniz.
+Belgelerce [**Tationfile**](../../language-reference/compiler-options/output.md#documentationfile) seçeneğiyle derlerken, derleyici kaynak KODUNDAKI tüm XML etiketlerini arar ve bir XML belge dosyası oluşturur. Derleyici tarafından oluşturulan dosyayı temel alan son belgeleri oluşturmak için özel bir araç oluşturabilir veya [Docfx](https://dotnet.github.io/docfx/) veya [sandrole](https://github.com/EWSoftware/SHFB)gibi bir araç kullanabilirsiniz.
 
 XML öğelerine başvurmak için (örneğin, işleviniz bir XML belge açıklamasında açıklama eklemek istediğiniz belirli XML öğelerini işler), standart tırnak işareti mekanizmasını ( `<` ve `>` ) kullanabilirsiniz.  Kod başvurusu () öğelerinde genel tanımlayıcılara başvurmak için `cref` , kaçış karakterlerini (örneğin, `cref="List&lt;T&gt;"` ) veya küme ayracı ( `cref="List{T}"` ) kullanabilirsiniz.  Özel bir durum olarak, derleyici, genel tanımlayıcılara başvururken belge açıklamasının yazar için daha az sıkıcı olması için, derleyici tireleri açılı ayraçlar olarak ayrıştırır.
 
@@ -51,7 +51,7 @@ XML öğelerine başvurmak için (örneğin, işleviniz bir XML belge açıklama
 
 Daha fazla bilgi için bkz.
 
-- [-Doc (Işlem belgeleri açıklamaları)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [**Belgetationfile** (Işlem belgeleri açıklamaları)](../../language-reference/compiler-options/output.md#documentationfile)
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 

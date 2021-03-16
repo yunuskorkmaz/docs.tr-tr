@@ -1,17 +1,17 @@
 ---
-title: Kodunuzu XML açıklamalarıyla belgeleme
+title: C# kodunuzu XML açıklamalarıyla belgeleme
 description: Kodunuzu XML belge açıklamalarıyla belgeleme ve derleme zamanında bir XML belge dosyası oluşturma hakkında bilgi edinin.
 ms.date: 01/21/2020
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 91de11c610ea17999dabff6d0552de9440f532e6
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: cdc3937ba3b641b90aed85a604ca05195ea34fe7
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465305"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103478490"
 ---
-# <a name="document-your-code-with-xml-comments"></a>Kodunuzu XML açıklamalarıyla belgeleme
+# <a name="document-your-c-code-with-xml-comments"></a>C# kodunuzu XML açıklamalarıyla belgeleme
 
 XML belge açıklamaları, Kullanıcı tanımlı herhangi bir tür veya üyenin tanımının üzerine eklenen özel bir açıklama türüdür.
 Bunlar, derleme zamanında bir XML belge dosyası oluşturmak için derleyici tarafından işlenebilecekleri için özeldir.
@@ -33,11 +33,11 @@ XML dosyasını, derleme zamanında aşağıdakilerden birini yaparak oluşturab
    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
    ```
 
-- Visual Studio 'Yu kullanarak bir uygulama geliştiriyorsanız, projeye sağ tıklayıp **Özellikler**' i seçin. Özellikler iletişim kutusunda **derleme** sekmesini seçin ve **XML belge dosyasını**denetleyin. Derleyicinin dosyayı yazdıkları konumu da değiştirebilirsiniz.
+- Visual Studio 'Yu kullanarak bir uygulama geliştiriyorsanız, projeye sağ tıklayıp **Özellikler**' i seçin. Özellikler iletişim kutusunda **derleme** sekmesini seçin ve **XML belge dosyasını** denetleyin. Derleyicinin dosyayı yazdıkları konumu da değiştirebilirsiniz.
 
-- Komut satırından bir .NET uygulaması derlerken, derlerken [-doc derleyici seçeneğini](language-reference/compiler-options/doc-compiler-option.md) ekleyin.  
+- Komut satırından bir .NET uygulaması derlerken, derlerken [ **Belgesıdosya** derleyicisi seçeneğini](language-reference/compiler-options/output.md#documentationfile) ekleyin.  
 
-XML belge açıklamaları Üçlü eğik çizgi ( `///` ) ve XML biçimli bir açıklama gövdesi kullanır. Örneğin:
+XML belge açıklamaları Üçlü eğik çizgi ( `///` ) ve XML biçimli bir açıklama gövdesi kullanır. Örnek:
 
 [!code-csharp[XML Documentation Comment](../../samples/snippets/csharp/concepts/codedoc/xml-comment.cs)]
 

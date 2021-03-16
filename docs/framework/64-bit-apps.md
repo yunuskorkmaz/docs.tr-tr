@@ -7,12 +7,12 @@ helpviewer_keywords:
 - 64-bit applications [C++]
 - 64-bit programming [C++]
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
-ms.openlocfilehash: 2a44d4a7ec9de1747fd8e7321d5c88c2a9e8ac20
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8274fe8f5d32b0f6258e450cc7d649fe3e184d78
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96285089"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477208"
 ---
 # <a name="64-bit-applications"></a>64 bitlik Uygulamalar
 
@@ -56,7 +56,7 @@ Bir uygulamayı derlediğinizde, 64 bitlik bir Windows işletim sisteminde yerel
 |Derleyici|Derleyici seçeneği|  
 |--------------|---------------------|  
 |Visual Basic|[-Platform (Visual Basic)](../visual-basic/reference/command-line-compiler/platform.md)|  
-|Visual C#|[-Platform (C# derleyici seçenekleri)](../csharp/language-reference/compiler-options/platform-compiler-option.md)|  
+|Visual C#|[-Platform (C# derleyici seçenekleri)](../csharp/language-reference/compiler-options/output.md#platformtarget)|  
 |Visual C++|**/Clr: Safe** kullanarak platform belirsiz, Microsoft ara DILI (MSIL) uygulamaları oluşturabilirsiniz. Daha fazla bilgi için bkz. [-clr (ortak dil çalışma zamanı derlemesi)](/cpp/build/reference/clr-common-language-runtime-compilation).<br /><br /> Visual C++, 64 bitlik her bir işletim sistemi için ayrı bir derleyici içerir. 64 bitlik bir Windows işletim sisteminde çalışan yerel uygulamalar oluşturmak için Visual C++ kullanma hakkında daha fazla bilgi için bkz. [64 bit programlama](/cpp/build/configuring-programs-for-64-bit-visual-cpp).|  
   
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>Bir .exe Dosyası veya .dll Dosyasının Durumunu Belirleme  

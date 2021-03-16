@@ -1,5 +1,5 @@
 ---
-title: <see>-C# Programlama Kılavuzu
+title: <see> -C# Programlama Kılavuzu
 description: XML etiketi hakkında bilgi edinin <see> . Bu etiket, örneğin bir cref özniteliği kullanarak metin içinden bir bağlantı belirtmenize olanak tanır.
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - cross-references [C#]
 - see C# XML tag
 ms.assetid: 0200de01-7e2f-45c4-9094-829d61236383
-ms.openlocfilehash: 1cc4982d1ebe9d6896404218a6d200b10cc6503f
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 154feca5e7e4f4d3f5313c4ae05cd991e69e298f
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381937"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477767"
 ---
-# <a name="see-c-programming-guide"></a>\<see>(C# Programlama Kılavuzu)
+# <a name="see-c-programming-guide"></a>\<see> (C# Programlama Kılavuzu)
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```xml
 <see cref="member"/>
@@ -36,7 +36,7 @@ ms.locfileid: "87381937"
 
 `<see>`Etiketi, metnin içinden bir bağlantı belirtmenize olanak tanır. [\<seealso>](./seealso.md)Metnin Ayrıca bkz. bölümüne yerleştirilmesi gerektiğini belirtmek için kullanın. Kod öğeleri için belge sayfalarına iç köprüler oluşturmak üzere [cref özniteliğini](./cref-attribute.md) kullanın. Ayrıca, ``href`` köprü olarak işlev sağlayacak geçerli bir özniteliktir.
 
-Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.
+Belge açıklamalarını bir dosyaya işlemek için [**belgelerimdosyası**](../../language-reference/compiler-options/output.md#documentationfile) ile derleyin.
 
 Aşağıdaki örnek bir `<see>` Özet bölümü içindeki bir etiketi gösterir.
 
