@@ -9,12 +9,12 @@ helpviewer_keywords:
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-ms.openlocfilehash: 5ecafa5a989bc183d7f52ac3d4b4d50a81b36014
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 230e9d7169e8924749f234af2fa411950f68ce78
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203351"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477475"
 ---
 # <a name="extern-alias-c-reference"></a>extern alias (C# Başvurusu)
 
@@ -29,7 +29,7 @@ Aynı tam tür adlarına sahip derlemelerin iki sürümüne başvurmanız gereke
   
  `/r:GridV2=grid20.dll`  
   
- Bu, dış diğer adları oluşturur `GridV1` ve `GridV2` . Bu diğer adları bir program içinden kullanmak için anahtar sözcüğünü kullanarak bunlara başvurun `extern` . Örneğin:  
+ Bu, dış diğer adları oluşturur `GridV1` ve `GridV2` . Bu diğer adları bir program içinden kullanmak için anahtar sözcüğünü kullanarak bunlara başvurun `extern` . Örnek:  
   
  `extern alias GridV1;`  
   
@@ -53,7 +53,7 @@ Bu diğer adları yukarıdaki şekilde kullanın
  extern alias GridV2;  
 ```
 
-Artık *diğer ad yönergesini kullanarak*bir ad alanı veya tür için takma ad oluşturabilirsiniz. Daha fazla bilgi için bkz. [using yönergesi](using-directive.md).
+Artık *diğer ad yönergesini kullanarak* bir ad alanı veya tür için takma ad oluşturabilirsiniz. Daha fazla bilgi için bkz. [using yönergesi](using-directive.md).
 
 ```csharp
 using Class1V1 = GridV1::Namespace.Class1;
@@ -71,4 +71,4 @@ using Class1V2 = GridV2::Namespace.Class1;
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# anahtar sözcükleri](./index.md)
 - [:: İşleci](../operators/namespace-alias-qualifier.md)
-- [-Reference (C# derleyici seçenekleri)](../compiler-options/reference-compiler-option.md)
+- [**Başvurular** (C# derleyici seçenekleri)](../compiler-options/inputs.md#references)

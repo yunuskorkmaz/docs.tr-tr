@@ -9,16 +9,16 @@ helpviewer_keywords:
 - <summary> C# XML tag
 - summary C# XML tag
 ms.assetid: b4c43d92-2067-4eac-a59a-d32f5248c08b
-ms.openlocfilehash: f9243e598aaf0c12dd48b48045f461b4b307c18f
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: e20970971636f13357c165f3065050fcf5914ada
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87380611"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477710"
 ---
-# <a name="summary-c-programming-guide"></a>\<summary>(C# Programlama Kılavuzu)
+# <a name="summary-c-programming-guide"></a>\<summary> (C# Programlama Kılavuzu)
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```xml
 <summary>description</summary>
@@ -36,7 +36,7 @@ ms.locfileid: "87380611"
 
 Etiket metni, `<summary>` IntelliSense 'deki türle ilgili tek bilgi kaynağıdır ve ayrıca nesne tarayıcısı penceresinde de görüntülenir.
 
-Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin. Derleyici tarafından oluşturulan dosyayı temel alan son belgeleri oluşturmak için özel bir araç oluşturabilir veya [Docfx](https://dotnet.github.io/docfx/) veya [sandrole](https://github.com/EWSoftware/SHFB)gibi bir araç kullanabilirsiniz.
+Belge açıklamalarını bir dosyaya işlemek için [**belgelerimdosyası**](../../language-reference/compiler-options/output.md#documentationfile) ile derleyin. Derleyici tarafından oluşturulan dosyayı temel alan son belgeleri oluşturmak için özel bir araç oluşturabilir veya [Docfx](https://dotnet.github.io/docfx/) veya [sandrole](https://github.com/EWSoftware/SHFB)gibi bir araç kullanabilirsiniz.
 
 ## <a name="example"></a>Örnek
 
@@ -67,7 +67,7 @@ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-refere
 </doc>
 ```
 
-## <a name="example"></a>Örnek
+## <a name="cref-example"></a>cref örneği
 
 Aşağıdaki örnek, genel bir türe nasıl başvuru yapılacağını gösterir `cref` .
 

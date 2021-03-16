@@ -13,12 +13,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 364a1a8c0fbaae93a02495aaf2e8c519ffb46451
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f5703377782977bb69815255d04cf1ee5a274c18
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290947"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477229"
 ---
 # <a name="assemblies-in-net"></a>.NET’te bütünleştirilmiş kodlar
 
@@ -64,7 +64,7 @@ Derlemeler statik veya dinamik olabilir. Statik derlemeler, disk üzerinde taş�
 
 Derleme oluşturmak için birçok yol vardır. Visual Studio gibi, *. dll* veya *. exe* dosyaları oluşturabileceğiniz geliştirme araçlarını kullanabilirsiniz. Diğer geliştirme ortamlarındaki modüllerle derlemeler oluşturmak için Windows SDK araçlarını kullanabilirsiniz. Dinamik derlemeler oluşturmak için gibi ortak dil çalışma zamanı API 'Lerini de kullanabilirsiniz <xref:System.Reflection.Emit?displayProperty=nameWithType> .
 
-Derlemeleri Visual Studio 'da oluşturarak, .NET Core komut satırı arabirimi araçlarıyla derleyerek veya komut satırı derleyicisi ile .NET Framework derlemeleri oluştururken derleyin. .NET Core CLI kullanarak derlemeler oluşturma hakkında daha fazla bilgi için bkz. [.NET Core CLI genel bakış](../../core/tools/index.md). Komut satırı derleyicileri ile derleme oluşturmak için, bkz. C# için [CSC. exe Ile komut satırı derleme](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) veya Visual Basic için [komut satırından derleme](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) .
+Derlemeleri Visual Studio 'da oluşturarak, .NET Core komut satırı arabirimi araçlarıyla derleyerek veya komut satırı derleyicisi ile .NET Framework derlemeleri oluştururken derleyin. .NET Core CLI kullanarak derlemeler oluşturma hakkında daha fazla bilgi için bkz. [.NET Core CLI genel bakış](../../core/tools/index.md).
 
 > [!NOTE]
 > Visual Studio 'da derleme oluşturmak için, **Oluştur** menüsünde, **Oluştur**' u seçin.
@@ -77,7 +77,7 @@ Her derlemenin bir *bütünleştirilmiş kod bildirim* dosyası vardır. İçind
 
 - *. Exe* veya *. dll* dosyanızın dayandığı, oluşturduğunuz diğer derlemeler, bit eşlem dosyaları veya Benioku dosyaları gibi, derlemeyi oluşturan diğer tüm dosyaları açıklayan bir dosya tablosu.
 
-- *. Dll*s veya diğer dosyalar gibi tüm dış bağımlılıkların listesi olan bir *derleme başvuru listesi*. Derleme başvuruları hem genel hem de özel nesneler için başvurular içerir. Genel nesneler diğer tüm uygulamalar tarafından kullanılabilir. .NET Core 'da, genel nesneler belirli bir .NET Core çalışma zamanı ile birlikte işlenir. .NET Framework, genel nesneler genel derleme önbelleğinde (GAC) bulunur. *System. IO. dll* GAC 'deki bir derlemeye örnektir. Özel nesneler, uygulamanızın yüklendiği dizinin üzerinde veya altında bir dizin düzeyinde olmalıdır.
+- *. Dll* s veya diğer dosyalar gibi tüm dış bağımlılıkların listesi olan bir *derleme başvuru listesi*. Derleme başvuruları hem genel hem de özel nesneler için başvurular içerir. Genel nesneler diğer tüm uygulamalar tarafından kullanılabilir. .NET Core 'da, genel nesneler belirli bir .NET Core çalışma zamanı ile birlikte işlenir. .NET Framework, genel nesneler genel derleme önbelleğinde (GAC) bulunur. *System.IO.dll* GAC 'deki bir derlemeye bir örnektir. Özel nesneler, uygulamanızın yüklendiği dizinin üzerinde veya altında bir dizin düzeyinde olmalıdır.
 
 Derlemeler içerik, sürüm oluşturma ve Bağımlılıklar hakkında bilgi içerdiğinden, bunları kullanan uygulamalar Windows sistemlerindeki kayıt defteri gibi dış kaynakları değil, düzgün şekilde çalışır. Derlemeler *. dll* çakışmalarını azaltır ve uygulamalarınızın dağıtımını daha güvenilir ve daha kolay hale getirir. Çoğu durumda, bir yükleyebilirsiniz. Yalnızca dosyalarını hedef bilgisayara kopyalayarak NET tabanlı uygulama. Daha fazla bilgi için bkz. [derleme bildirimi](manifest.md).
 
@@ -86,7 +86,7 @@ Derlemeler içerik, sürüm oluşturma ve Bağımlılıklar hakkında bilgi içe
 Bir uygulamada bir derlemeyi kullanmak için buna bir başvuru eklemeniz gerekir. Bir derlemeye başvurulduktan sonra, tüm erişilebilir türler, özellikler, Yöntemler ve ad alanlarının diğer üyeleri, kodu kaynak dosyanızın bir parçası olduğundan, uygulamanız için kullanılabilir.
 
 > [!NOTE]
-> .NET sınıf kitaplığındaki çoğu derlemeye otomatik olarak başvurulur. Bir sistem derlemesine otomatik olarak başvurulmazsa, .NET Core için derlemeyi içeren NuGet paketine bir başvuru ekleyebilirsiniz. Visual Studio 'da NuGet paket yöneticisini kullanın veya [\<PackageReference>](../../core/tools/dependencies.md#the-packagereference-element) *. csproj* veya *. vbproj* projesine derleme için bir öğe ekleyin. .NET Framework, Visual Studio 'da **Başvuru Ekle** iletişim kutusunu kullanarak veya `-reference` [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) veya [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) derleyicileri için komut satırı seçeneğini kullanarak derlemeye bir başvuru ekleyebilirsiniz.
+> .NET sınıf kitaplığındaki çoğu derlemeye otomatik olarak başvurulur. Bir sistem derlemesine otomatik olarak başvurulmazsa, .NET Core için derlemeyi içeren NuGet paketine bir başvuru ekleyebilirsiniz. Visual Studio 'da NuGet paket yöneticisini kullanın veya [\<PackageReference>](../../core/tools/dependencies.md#the-packagereference-element) *. csproj* veya *. vbproj* projesine derleme için bir öğe ekleyin. .NET Framework, Visual Studio 'da **Başvuru Ekle** iletişim kutusunu kullanarak veya `-reference` [C#](../../csharp/language-reference/compiler-options/inputs.md#references) veya [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) derleyicileri için komut satırı seçeneğini kullanarak derlemeye bir başvuru ekleyebilirsiniz.
 
 C# ' de, tek bir uygulamada aynı derlemenin iki sürümünü kullanabilirsiniz. Daha fazla bilgi için bkz. [extern diğer ad](../../csharp/language-reference/keywords/extern-alias.md).
 

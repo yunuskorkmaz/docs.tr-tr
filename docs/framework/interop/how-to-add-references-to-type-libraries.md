@@ -8,12 +8,12 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
-ms.openlocfilehash: 76f616c36d81b8245f77f011b5c2f9b945e6916b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: b5e58c5943eba8db7497b4db56bfbd99b17b1043
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96255110"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477632"
 ---
 # <a name="how-to-add-references-to-type-libraries"></a>Nasıl yapılır: Tür Kitaplıklarına Başvurular Ekleme
 
@@ -42,12 +42,12 @@ Visual Studio, bir tür kitaplığına bir başvuru eklediğinizde meta verileri
   
 1. [Nasıl yapılır: tür kitaplıklarından birlikte çalışma derlemeleri oluşturma](how-to-generate-interop-assemblies-from-type-libraries.md)bölümünde açıklandığı gibi bir birlikte çalışma derlemesi oluşturun.  
   
-2. Çalıştırılabilirlerinizde COM türlerine ilişkin tür bilgilerini eklemek için [-Link (C# derleyici seçenekleri)](../../csharp/language-reference/compiler-options/link-compiler-option.md) veya [-Link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) derleyici seçeneğini birlikte çalışma derleme adıyla birlikte kullanın.  
+2. Çalıştırılabilirlerinizde COM türlerine ilişkin tür bilgilerini eklemek için [-Link (C# derleyici seçenekleri)](../../csharp/language-reference/compiler-options/inputs.md#embedinteroptypes) veya [-Link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) derleyici seçeneğini birlikte çalışma derleme adıyla birlikte kullanın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Tür Kitaplığını Derleme Olarak İçeri Aktarma](importing-a-type-library-as-an-assembly.md)
 - [COM Bileşenlerini .NET Framework'te Gösterme](exposing-com-components.md)
 - [İzlenecek yol: Visual Studio’da Yönetilen Bütünleştirilmiş Kodlardan Türleri Katıştırma](../../standard/assembly/embed-types-visual-studio.md)
-- [-Link (C# derleyici seçenekleri)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
+- [-Link (C# derleyici seçenekleri)](../../csharp/language-reference/compiler-options/inputs.md#embedinteroptypes)
 - [-bağlantı (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)
