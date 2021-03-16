@@ -6,12 +6,12 @@ helpviewer_keywords:
 - supportPortability element
 - <supportPortability> element
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
-ms.openlocfilehash: 5a39f946d5b3841af5f4254cc2f70142aa6c013d
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 932e20c865c151880c1a49517451db71ecd08951
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99754517"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103478898"
 ---
 # <a name="supportportability-element"></a>\<supportPortability> Öğesi
 
@@ -84,5 +84,5 @@ Aşağıdaki örnek, bir uygulamanın hem .NET Framework uygulamasına hem de he
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [-appconfig (C# derleyici seçenekleri)](../../../../csharp/language-reference/compiler-options/appconfig-compiler-option.md)
+- [-appconfig (C# derleyici seçenekleri)](../../../../csharp/language-reference/compiler-options/advanced.md#applicationconfiguration)
 - [.NET Framework derleme birleşme genel bakış](/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))

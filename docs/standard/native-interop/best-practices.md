@@ -2,12 +2,12 @@
 title: Yerel birlikte çalışabilirlik en iyi uygulamaları-.NET
 description: .NET 'teki yerel bileşenlerle arabirimlendirme için en iyi uygulamaları öğrenin.
 ms.date: 01/18/2019
-ms.openlocfilehash: e64aa0aa43a56145bd7636835f507f8433fa3db4
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 7730241ba834d9fcafaaf13055da1a03d359aa1b
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100465255"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103479590"
 ---
 # <a name="native-interoperability-best-practices"></a>Yerel birlikte çalışabilirlik en iyi uygulamaları
 
@@ -212,6 +212,46 @@ Aşağıdaki türler, işaretçiler olması, platformun genişliğini izler. `In
 [Windows veri türleri](/windows/desktop/WinProg/windows-data-types)
 
 [Veri türü aralıkları](/cpp/cpp/data-type-ranges)
+
+### <a name="formerly-built-in-supported-types"></a>Önceden oluşturulmuş desteklenen türler
+
+Bir tür için yerleşik desteğin kaldırıldığı nadir örnekler vardır.
+
+[`UnmanagedType.HString`](xref:System.Runtime.InteropServices.UnmanagedType)Yerleşik sıralama desteği .NET 5 sürümünde kaldırılmıştır. Bu sıralama türünü kullanan ve önceki bir çerçeveyi hedefleyen ikili dosyaları yeniden derlemeniz gerekir. Bu tür sıralaması devam edebilir, ancak aşağıdaki kod örneğinde gösterildiği gibi bunu el ile sıralamamalısınız. Bu kod, ileriye dönük ve önceki çerçevelerle de uyumlu olacak şekilde çalışır.
+
+```csharp
+static class HSTRING
+{
+    public static IntPtr FromString(string s)
+    {
+        Marshal.ThrowExceptionForHR(WindowsCreateString(s, s.Length, out IntPtr h));
+        return h;
+    }
+
+    public static void Delete(IntPtr s)
+    {
+        Marshal.ThrowExceptionForHR(WindowsDeleteString(s));
+    }
+
+    [DllImport("api-ms-win-core-winrt-string-l1-1-0.dll", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
+    private static extern int WindowsCreateString(
+        [MarshalAs(UnmanagedType.LPWStr)] string sourceString, int length, out IntPtr hstring);
+
+    [DllImport("api-ms-win-core-winrt-string-l1-1-0.dll", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
+    private static extern int WindowsDeleteString(IntPtr hstring);
+}
+
+// Usage example
+IntPtr hstring = HSTRING.FromString("HSTRING from .NET to WinRT API");
+try
+{
+    // Pass hstring to WinRT or Win32 API.
+}
+finally
+{
+    HSTRING.Delete(hstring);
+}
+```
 
 ## <a name="structs"></a>Yapılar
 

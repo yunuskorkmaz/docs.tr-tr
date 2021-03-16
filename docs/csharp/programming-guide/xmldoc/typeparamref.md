@@ -1,5 +1,5 @@
 ---
-title: <typeparamref>-C# Programlama Kılavuzu
+title: <typeparamref> -C# Programlama Kılavuzu
 description: XML etiketi hakkında bilgi edinin <typeparamref> . Bu etiket, belge dosyası tüketicilerinin sözcüğü farklı bir şekilde (örneğin, italik) biçimlendirmesini sağlar.
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - typeparamref C# XML tag
 - <typeparamref> C# XML tag
 ms.assetid: 6d8ffc58-12c5-4688-8db6-833a7ded5886
-ms.openlocfilehash: a39e896f1242452c7bcc94faa1e7ef3086ae2149
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 1bb9a73f4122f3b9d521565a7172a9b8f75f7a98
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87380728"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477667"
 ---
-# <a name="typeparamref-c-programming-guide"></a>\<typeparamref>(C# Programlama Kılavuzu)
+# <a name="typeparamref-c-programming-guide"></a>\<typeparamref> (C# Programlama Kılavuzu)
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```xml
 <typeparamref name="name"/>
@@ -35,7 +35,7 @@ Genel türlerde ve yöntemlerde tür parametreleri hakkında daha fazla bilgi i�
 
 Belge dosyasının tüketicilerini farklı bir şekilde (örneğin, italik) biçimlendirmesini sağlamak için bu etiketi kullanın.
 
-Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.
+Belge açıklamalarını bir dosyaya işlemek için [**belgelerimdosyası**](../../language-reference/compiler-options/output.md#documentationfile) ile derleyin.
 
 ## <a name="example"></a>Örnek
 

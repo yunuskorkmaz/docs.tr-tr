@@ -12,18 +12,18 @@ helpviewer_keywords:
 - command line [C#], arguments
 - command-line arguments [C#], Main method
 ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
-ms.openlocfilehash: 35117642f38885aab08a5c0249d1f65ec76c59f3
-ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
+ms.openlocfilehash: 05b2030133ca83cf87de7110f820eaad38fad756
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/11/2021
-ms.locfileid: "103190209"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480192"
 ---
 # <a name="main-and-command-line-arguments-c-programming-guide"></a>Main () ve komut satırı bağımsız değişkenleri (C# Programlama Kılavuzu)
 
 `Main`Yöntemi, bir C# uygulamasının giriş noktasıdır. (Kitaplıklar ve hizmetler bir `Main` giriş noktası olarak bir yöntem gerektirmez.) Uygulama başlatıldığında, `Main` yöntemi çağrılan ilk yöntemdir.
 
-C# programında yalnızca bir giriş noktası olabilir. Yöntemine sahip birden fazla sınıfınız varsa `Main` , `-main` `Main` giriş noktası olarak hangi yöntemin kullanılacağını belirtmek için programınızı derleyici seçeneğiyle derlemeniz gerekir. Daha fazla bilgi için bkz. [-Main (C# derleyici seçenekleri)](../../language-reference/compiler-options/main-compiler-option.md).
+C# programında yalnızca bir giriş noktası olabilir. Yöntemine sahip birden fazla sınıfınız varsa `Main` , giriş noktası olarak hangi yöntemin kullanılacağını belirtmek için programınızı **StartupObject** derleyici seçeneğiyle derlemeniz gerekir `Main` . Daha fazla bilgi için bkz. [ **StartupObject** (C# derleyici seçenekleri)](../../language-reference/compiler-options/advanced.md#mainentrypoint-or-startupobject).
 
 [!code-csharp[csProgGuideMain#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#17)]
 
@@ -64,7 +64,6 @@ Yukarıdaki örneklerin hepsi ortak erişimci değiştiricisini kullanır. Bu ti
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [csc.exe Kullanarak Komut Satırı Derleme](../../language-reference/compiler-options/command-line-building-with-csc-exe.md)
 - [C# Programlama Kılavuzu](../index.md)
 - [Yöntemler](../classes-and-structs/methods.md)
 - [C# programı içinde](../inside-a-program/index.md)
