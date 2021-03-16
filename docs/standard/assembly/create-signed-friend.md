@@ -6,38 +6,38 @@ ms.assetid: bab62063-61e6-453f-905f-77673df9534e
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 4c441501ae0f939f69ac863a990d6e392bd35fc4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 78098aae581ace1a73905835ba27c62bfa914408
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734276"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480868"
 ---
-# <a name="how-to-create-signed-friend-assemblies"></a><span data-ttu-id="101b9-104">Nasıl yapılır: imzalı arkadaş derlemeleri oluşturma</span><span class="sxs-lookup"><span data-stu-id="101b9-104">How to: Create signed friend assemblies</span></span>
+# <a name="how-to-create-signed-friend-assemblies"></a><span data-ttu-id="a9d37-104">Nasıl yapılır: imzalı arkadaş derlemeleri oluşturma</span><span class="sxs-lookup"><span data-stu-id="a9d37-104">How to: Create signed friend assemblies</span></span>
 
-<span data-ttu-id="101b9-105">Bu örnek, friend derlemelerinin tanımlayıcı adlara sahip Derlemelerle nasıl kullanılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="101b9-105">This example shows how to use friend assemblies with assemblies that have strong names.</span></span> <span data-ttu-id="101b9-106">Her iki derlemenin de tanımlayıcı adlandırılmış olması gerekir.</span><span class="sxs-lookup"><span data-stu-id="101b9-106">Both assemblies must be strong named.</span></span> <span data-ttu-id="101b9-107">Bu örnekteki her iki derleme de aynı anahtarları kullanmasına karşın, iki derleme için farklı anahtarlar kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="101b9-107">Although both assemblies in this example use the same keys, you could use different keys for two assemblies.</span></span>  
+<span data-ttu-id="a9d37-105">Bu örnek, friend derlemelerinin tanımlayıcı adlara sahip Derlemelerle nasıl kullanılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="a9d37-105">This example shows how to use friend assemblies with assemblies that have strong names.</span></span> <span data-ttu-id="a9d37-106">Her iki derlemenin de tanımlayıcı adlandırılmış olması gerekir.</span><span class="sxs-lookup"><span data-stu-id="a9d37-106">Both assemblies must be strong named.</span></span> <span data-ttu-id="a9d37-107">Bu örnekteki her iki derleme de aynı anahtarları kullanmasına karşın, iki derleme için farklı anahtarlar kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="a9d37-107">Although both assemblies in this example use the same keys, you could use different keys for two assemblies.</span></span>  
   
-## <a name="create-a-signed-assembly-and-a-friend-assembly"></a><span data-ttu-id="101b9-108">İmzalı derleme ve arkadaş derleme oluşturma</span><span class="sxs-lookup"><span data-stu-id="101b9-108">Create a signed assembly and a friend assembly</span></span>  
+## <a name="create-a-signed-assembly-and-a-friend-assembly"></a><span data-ttu-id="a9d37-108">İmzalı derleme ve arkadaş derleme oluşturma</span><span class="sxs-lookup"><span data-stu-id="a9d37-108">Create a signed assembly and a friend assembly</span></span>  
   
-1. <span data-ttu-id="101b9-109">Bir komut istemi açın.</span><span class="sxs-lookup"><span data-stu-id="101b9-109">Open a command prompt.</span></span>  
+1. <span data-ttu-id="a9d37-109">Bir komut istemi açın.</span><span class="sxs-lookup"><span data-stu-id="a9d37-109">Open a command prompt.</span></span>  
   
-2. <span data-ttu-id="101b9-110">Anahtar oluşturma ve ortak anahtarını görüntüleme için tanımlayıcı ad aracı ile aşağıdaki komut dizisini kullanın.</span><span class="sxs-lookup"><span data-stu-id="101b9-110">Use the following sequence of commands with the Strong Name tool to generate a keyfile and to display its public key.</span></span> <span data-ttu-id="101b9-111">Daha fazla bilgi için bkz. [Sn.exe (tanımlayıcı ad aracı)](../../framework/tools/sn-exe-strong-name-tool.md).</span><span class="sxs-lookup"><span data-stu-id="101b9-111">For more information, see [Sn.exe (Strong Name tool)](../../framework/tools/sn-exe-strong-name-tool.md).</span></span>  
+2. <span data-ttu-id="a9d37-110">Anahtar oluşturma ve ortak anahtarını görüntüleme için tanımlayıcı ad aracı ile aşağıdaki komut dizisini kullanın.</span><span class="sxs-lookup"><span data-stu-id="a9d37-110">Use the following sequence of commands with the Strong Name tool to generate a keyfile and to display its public key.</span></span> <span data-ttu-id="a9d37-111">Daha fazla bilgi için bkz. [Sn.exe (tanımlayıcı ad aracı)](../../framework/tools/sn-exe-strong-name-tool.md).</span><span class="sxs-lookup"><span data-stu-id="a9d37-111">For more information, see [Sn.exe (Strong Name tool)](../../framework/tools/sn-exe-strong-name-tool.md).</span></span>  
   
-    1. <span data-ttu-id="101b9-112">Bu örnek için bir tanımlayıcı ad anahtarı oluşturun ve *FriendAssemblies. snk* dosyasında depolayın:</span><span class="sxs-lookup"><span data-stu-id="101b9-112">Generate a strong-name key for this example and store it in the file *FriendAssemblies.snk*:</span></span>  
+    1. <span data-ttu-id="a9d37-112">Bu örnek için bir tanımlayıcı ad anahtarı oluşturun ve *FriendAssemblies. snk* dosyasında depolayın:</span><span class="sxs-lookup"><span data-stu-id="a9d37-112">Generate a strong-name key for this example and store it in the file *FriendAssemblies.snk*:</span></span>  
   
          `sn -k FriendAssemblies.snk`  
   
-    2. <span data-ttu-id="101b9-113">Ortak anahtarı *FriendAssemblies. snk* konumundan ayıklayın ve *FriendAssemblies. PublicKey* dosyasına yerleştirin:</span><span class="sxs-lookup"><span data-stu-id="101b9-113">Extract the public key from *FriendAssemblies.snk* and put it into *FriendAssemblies.publickey*:</span></span>  
+    2. <span data-ttu-id="a9d37-113">Ortak anahtarı *FriendAssemblies. snk* konumundan ayıklayın ve *FriendAssemblies. PublicKey* dosyasına yerleştirin:</span><span class="sxs-lookup"><span data-stu-id="a9d37-113">Extract the public key from *FriendAssemblies.snk* and put it into *FriendAssemblies.publickey*:</span></span>  
   
          `sn -p FriendAssemblies.snk FriendAssemblies.publickey`  
   
-    3. <span data-ttu-id="101b9-114">*FriendAssemblies. PublicKey* dosyasında depolanan ortak anahtarı görüntüle:</span><span class="sxs-lookup"><span data-stu-id="101b9-114">Display the public key stored in the file *FriendAssemblies.publickey*:</span></span>  
+    3. <span data-ttu-id="a9d37-114">*FriendAssemblies. PublicKey* dosyasında depolanan ortak anahtarı görüntüle:</span><span class="sxs-lookup"><span data-stu-id="a9d37-114">Display the public key stored in the file *FriendAssemblies.publickey*:</span></span>  
   
          `sn -tp FriendAssemblies.publickey`  
   
-3. <span data-ttu-id="101b9-115">Aşağıdaki kodu içeren *friend_signed_A* adlı bir C# veya Visual Basic dosyası oluşturun.</span><span class="sxs-lookup"><span data-stu-id="101b9-115">Create a C# or Visual Basic file named *friend_signed_A* that contains the following code.</span></span> <span data-ttu-id="101b9-116">Kod, <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> *friend_signed_B* bir Friend derlemesi olarak bildirmek için özniteliğini kullanır.</span><span class="sxs-lookup"><span data-stu-id="101b9-116">The code uses the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute to declare *friend_signed_B* as a friend assembly.</span></span>  
+3. <span data-ttu-id="a9d37-115">Aşağıdaki kodu içeren *friend_signed_A* adlı bir C# veya Visual Basic dosyası oluşturun.</span><span class="sxs-lookup"><span data-stu-id="a9d37-115">Create a C# or Visual Basic file named *friend_signed_A* that contains the following code.</span></span> <span data-ttu-id="a9d37-116">Kod, <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> *friend_signed_B* bir Friend derlemesi olarak bildirmek için özniteliğini kullanır.</span><span class="sxs-lookup"><span data-stu-id="a9d37-116">The code uses the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute to declare *friend_signed_B* as a friend assembly.</span></span>  
 
-   <span data-ttu-id="101b9-117">Tanımlayıcı ad aracı her çalıştığında yeni bir ortak anahtar oluşturur.</span><span class="sxs-lookup"><span data-stu-id="101b9-117">The Strong Name tool generates a new public key every time it runs.</span></span> <span data-ttu-id="101b9-118">Bu nedenle, aşağıdaki örnekte gösterildiği gibi aşağıdaki koddaki ortak anahtarı yeni oluşturduğunuz ortak anahtarla değiştirmelisiniz.</span><span class="sxs-lookup"><span data-stu-id="101b9-118">Therefore, you must replace the public key in the following code with the public key you just generated, as shown in the following example.</span></span>  
+   <span data-ttu-id="a9d37-117">Tanımlayıcı ad aracı her çalıştığında yeni bir ortak anahtar oluşturur.</span><span class="sxs-lookup"><span data-stu-id="a9d37-117">The Strong Name tool generates a new public key every time it runs.</span></span> <span data-ttu-id="a9d37-118">Bu nedenle, aşağıdaki örnekte gösterildiği gibi aşağıdaki koddaki ortak anahtarı yeni oluşturduğunuz ortak anahtarla değiştirmelisiniz.</span><span class="sxs-lookup"><span data-stu-id="a9d37-118">Therefore, you must replace the public key in the following code with the public key you just generated, as shown in the following example.</span></span>  
 
    ```csharp  
    // friend_signed_A.cs  
@@ -71,7 +71,7 @@ ms.locfileid: "95734276"
    End Class  
    ```  
 
-4. <span data-ttu-id="101b9-119">Aşağıdaki komutu kullanarak *friend_signed_A* derleyin ve imzalayın.</span><span class="sxs-lookup"><span data-stu-id="101b9-119">Compile and sign *friend_signed_A* by using the following command.</span></span>  
+4. <span data-ttu-id="a9d37-119">Aşağıdaki komutu kullanarak *friend_signed_A* derleyin ve imzalayın.</span><span class="sxs-lookup"><span data-stu-id="a9d37-119">Compile and sign *friend_signed_A* by using the following command.</span></span>  
 
    ```csharp
    csc /target:library /keyfile:FriendAssemblies.snk friend_signed_A.cs  
@@ -81,7 +81,7 @@ ms.locfileid: "95734276"
    Vbc -target:library -keyfile:FriendAssemblies.snk friend_signed_A.vb  
    ```  
 
-5. <span data-ttu-id="101b9-120">Aşağıdaki kodu içeren *friend_signed_B* adlı bir C# veya Visual Basic dosyası oluşturun.</span><span class="sxs-lookup"><span data-stu-id="101b9-120">Create a C# or Visual Basic file named *friend_signed_B* that contains the following code.</span></span> <span data-ttu-id="101b9-121">*Friend_signed_A* bir arkadaş derleme olarak *friend_signed_B* belirttiğinden *friend_signed_B* kodu, `internal` friend_signed_A Visual Basic (C#) veya `Friend` () türlerine ve üyelerine erişebilir. *friend_signed_A*</span><span class="sxs-lookup"><span data-stu-id="101b9-121">Because *friend_signed_A* specifies *friend_signed_B* as a friend assembly, the code in *friend_signed_B* can access `internal` (C#) or `Friend` (Visual Basic) types and members from *friend_signed_A*.</span></span> <span data-ttu-id="101b9-122">Dosya aşağıdaki kodu içerir.</span><span class="sxs-lookup"><span data-stu-id="101b9-122">The file contains the following code.</span></span>  
+5. <span data-ttu-id="a9d37-120">Aşağıdaki kodu içeren *friend_signed_B* adlı bir C# veya Visual Basic dosyası oluşturun.</span><span class="sxs-lookup"><span data-stu-id="a9d37-120">Create a C# or Visual Basic file named *friend_signed_B* that contains the following code.</span></span> <span data-ttu-id="a9d37-121">*Friend_signed_A* bir arkadaş derleme olarak *friend_signed_B* belirttiğinden *friend_signed_B* kodu, `internal` friend_signed_A Visual Basic (C#) veya `Friend` () türlerine ve üyelerine erişebilir. </span><span class="sxs-lookup"><span data-stu-id="a9d37-121">Because *friend_signed_A* specifies *friend_signed_B* as a friend assembly, the code in *friend_signed_B* can access `internal` (C#) or `Friend` (Visual Basic) types and members from *friend_signed_A*.</span></span> <span data-ttu-id="a9d37-122">Dosya aşağıdaki kodu içerir.</span><span class="sxs-lookup"><span data-stu-id="a9d37-122">The file contains the following code.</span></span>  
 
    ```csharp  
    // friend_signed_B.cs  
@@ -109,7 +109,7 @@ ms.locfileid: "95734276"
    End Module  
    ```  
 
-6. <span data-ttu-id="101b9-123">Aşağıdaki komutu kullanarak *friend_signed_B* derleyin ve imzalayın.</span><span class="sxs-lookup"><span data-stu-id="101b9-123">Compile and sign *friend_signed_B* by using the following command.</span></span>  
+6. <span data-ttu-id="a9d37-123">Aşağıdaki komutu kullanarak *friend_signed_B* derleyin ve imzalayın.</span><span class="sxs-lookup"><span data-stu-id="a9d37-123">Compile and sign *friend_signed_B* by using the following command.</span></span>  
 
    ```csharp
    csc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll /out:friend_signed_B.exe friend_signed_B.cs  
@@ -119,25 +119,25 @@ ms.locfileid: "95734276"
    vbc -keyfile:FriendAssemblies.snk -r:friend_signed_A.dll friend_signed_B.vb  
    ```  
 
-   <span data-ttu-id="101b9-124">Derleyici tarafından oluşturulan derlemenin adı özniteliğe geçirilen arkadaş derleme adıyla eşleşmelidir <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> .</span><span class="sxs-lookup"><span data-stu-id="101b9-124">The name of the assembly generated by the compiler must match the friend assembly name passed to the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute.</span></span> <span data-ttu-id="101b9-125">Derleyici seçeneğini kullanarak çıkış derlemesinin adını (*. exe* veya *. dll*) açıkça belirtmeniz gerekir `-out` .</span><span class="sxs-lookup"><span data-stu-id="101b9-125">You must explicitly specify the name of the output assembly (*.exe* or *.dll*) by using the `-out` compiler option.</span></span> <span data-ttu-id="101b9-126">Daha fazla bilgi için bkz. [-Out (C# derleyici seçenekleri)](../../csharp/language-reference/compiler-options/out-compiler-option.md) veya [-Out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).</span><span class="sxs-lookup"><span data-stu-id="101b9-126">For more information, see [-out (C# compiler options)](../../csharp/language-reference/compiler-options/out-compiler-option.md) or [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).</span></span>  
+   <span data-ttu-id="a9d37-124">Derleyici tarafından oluşturulan derlemenin adı özniteliğe geçirilen arkadaş derleme adıyla eşleşmelidir <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> .</span><span class="sxs-lookup"><span data-stu-id="a9d37-124">The name of the assembly generated by the compiler must match the friend assembly name passed to the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute.</span></span> <span data-ttu-id="a9d37-125">Derleyici seçeneğini kullanarak çıkış derlemesinin adını (*. exe* veya *. dll*) açıkça belirtmeniz gerekir `-out` .</span><span class="sxs-lookup"><span data-stu-id="a9d37-125">You must explicitly specify the name of the output assembly (*.exe* or *.dll*) by using the `-out` compiler option.</span></span> <span data-ttu-id="a9d37-126">Daha fazla bilgi için bkz. [ **OutputAssembly** (C# derleyici seçenekleri)](../../csharp/language-reference/compiler-options/output.md#outputassembly) veya [-Out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).</span><span class="sxs-lookup"><span data-stu-id="a9d37-126">For more information, see [**OutputAssembly** (C# compiler options)](../../csharp/language-reference/compiler-options/output.md#outputassembly) or [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).</span></span>  
 
-7. <span data-ttu-id="101b9-127">*friend_signed_B.exe* dosyasını çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="101b9-127">Run the *friend_signed_B.exe* file.</span></span>  
+7. <span data-ttu-id="a9d37-127">*friend_signed_B.exe* dosyasını çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="a9d37-127">Run the *friend_signed_B.exe* file.</span></span>  
 
-   <span data-ttu-id="101b9-128">Program **Class1. test** dizesini çıktı.</span><span class="sxs-lookup"><span data-stu-id="101b9-128">The program outputs the string **Class1.Test**.</span></span>  
+   <span data-ttu-id="a9d37-128">Program **Class1. test** dizesini çıktı.</span><span class="sxs-lookup"><span data-stu-id="a9d37-128">The program outputs the string **Class1.Test**.</span></span>  
   
-## <a name="net-security"></a><span data-ttu-id="101b9-129">.NET güvenliği</span><span class="sxs-lookup"><span data-stu-id="101b9-129">.NET security</span></span>  
+## <a name="net-security"></a><span data-ttu-id="a9d37-129">.NET güvenliği</span><span class="sxs-lookup"><span data-stu-id="a9d37-129">.NET security</span></span>  
 
- <span data-ttu-id="101b9-130">Özniteliği ve sınıfı arasında benzerlikler vardır <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> <xref:System.Security.Permissions.StrongNameIdentityPermission> .</span><span class="sxs-lookup"><span data-stu-id="101b9-130">There are similarities between the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute and the <xref:System.Security.Permissions.StrongNameIdentityPermission> class.</span></span> <span data-ttu-id="101b9-131">Temel fark, <xref:System.Security.Permissions.StrongNameIdentityPermission> kodun belirli bir bölümünü çalıştırmak için güvenlik izinleri talep edebilir, ancak <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> öznitelik `internal` (C#) veya `Friend` (Visual Basic) türlerinin görünürlüğünü ve üyelerini denetler.</span><span class="sxs-lookup"><span data-stu-id="101b9-131">The main difference is that <xref:System.Security.Permissions.StrongNameIdentityPermission> can demand security permissions to run a particular section of code, whereas the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute controls the visibility of `internal` (C#) or `Friend` (Visual Basic) types and members.</span></span>  
+ <span data-ttu-id="a9d37-130">Özniteliği ve sınıfı arasında benzerlikler vardır <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> <xref:System.Security.Permissions.StrongNameIdentityPermission> .</span><span class="sxs-lookup"><span data-stu-id="a9d37-130">There are similarities between the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute and the <xref:System.Security.Permissions.StrongNameIdentityPermission> class.</span></span> <span data-ttu-id="a9d37-131">Temel fark, <xref:System.Security.Permissions.StrongNameIdentityPermission> kodun belirli bir bölümünü çalıştırmak için güvenlik izinleri talep edebilir, ancak <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> öznitelik `internal` (C#) veya `Friend` (Visual Basic) türlerinin görünürlüğünü ve üyelerini denetler.</span><span class="sxs-lookup"><span data-stu-id="a9d37-131">The main difference is that <xref:System.Security.Permissions.StrongNameIdentityPermission> can demand security permissions to run a particular section of code, whereas the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute controls the visibility of `internal` (C#) or `Friend` (Visual Basic) types and members.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="101b9-132">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="101b9-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a9d37-132">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a9d37-132">See also</span></span>
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
-- [<span data-ttu-id="101b9-133">.NET’te bütünleştirilmiş kodlar</span><span class="sxs-lookup"><span data-stu-id="101b9-133">Assemblies in .NET</span></span>](index.md)
-- [<span data-ttu-id="101b9-134">Arkadaş derlemeleri</span><span class="sxs-lookup"><span data-stu-id="101b9-134">Friend assemblies</span></span>](friend.md)
-- [<span data-ttu-id="101b9-135">Nasıl yapılır: imzasız arkadaş derlemeleri oluşturma</span><span class="sxs-lookup"><span data-stu-id="101b9-135">How to: Create unsigned friend assemblies</span></span>](create-unsigned-friend.md)
-- [<span data-ttu-id="101b9-136">-keyfile (C#)</span><span class="sxs-lookup"><span data-stu-id="101b9-136">-keyfile (C#)</span></span>](../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
-- [<span data-ttu-id="101b9-137">-keyfile (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="101b9-137">-keyfile (Visual Basic)</span></span>](../../visual-basic/reference/command-line-compiler/keyfile.md)
-- [<span data-ttu-id="101b9-138">Sn.exe (tanımlayıcı ad aracı)</span><span class="sxs-lookup"><span data-stu-id="101b9-138">Sn.exe (Strong Name tool)</span></span>](../../framework/tools/sn-exe-strong-name-tool.md)
-- [<span data-ttu-id="101b9-139">Tanımlayıcı adlı derlemeler oluşturma ve kullanma</span><span class="sxs-lookup"><span data-stu-id="101b9-139">Create and use strong-named assemblies</span></span>](create-use-strong-named.md)
-- [<span data-ttu-id="101b9-140">C# programlama kılavuzu</span><span class="sxs-lookup"><span data-stu-id="101b9-140">C# programming guide</span></span>](../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="101b9-141">Programlama kavramları (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="101b9-141">Programming concepts (Visual Basic)</span></span>](../../visual-basic/programming-guide/concepts/index.md)
+- [<span data-ttu-id="a9d37-133">.NET’te bütünleştirilmiş kodlar</span><span class="sxs-lookup"><span data-stu-id="a9d37-133">Assemblies in .NET</span></span>](index.md)
+- [<span data-ttu-id="a9d37-134">Arkadaş derlemeleri</span><span class="sxs-lookup"><span data-stu-id="a9d37-134">Friend assemblies</span></span>](friend.md)
+- [<span data-ttu-id="a9d37-135">Nasıl yapılır: imzasız arkadaş derlemeleri oluşturma</span><span class="sxs-lookup"><span data-stu-id="a9d37-135">How to: Create unsigned friend assemblies</span></span>](create-unsigned-friend.md)
+- [<span data-ttu-id="a9d37-136">**Keyfile** (C#)</span><span class="sxs-lookup"><span data-stu-id="a9d37-136">**KeyFile** (C#)</span></span>](../../csharp/language-reference/compiler-options/security.md#keyfile)
+- [<span data-ttu-id="a9d37-137">-keyfile (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a9d37-137">-keyfile (Visual Basic)</span></span>](../../visual-basic/reference/command-line-compiler/keyfile.md)
+- [<span data-ttu-id="a9d37-138">Sn.exe (tanımlayıcı ad aracı)</span><span class="sxs-lookup"><span data-stu-id="a9d37-138">Sn.exe (Strong Name tool)</span></span>](../../framework/tools/sn-exe-strong-name-tool.md)
+- [<span data-ttu-id="a9d37-139">Tanımlayıcı adlı derlemeler oluşturma ve kullanma</span><span class="sxs-lookup"><span data-stu-id="a9d37-139">Create and use strong-named assemblies</span></span>](create-use-strong-named.md)
+- [<span data-ttu-id="a9d37-140">C# programlama kılavuzu</span><span class="sxs-lookup"><span data-stu-id="a9d37-140">C# programming guide</span></span>](../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="a9d37-141">Programlama kavramları (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a9d37-141">Programming concepts (Visual Basic)</span></span>](../../visual-basic/programming-guide/concepts/index.md)
