@@ -3,18 +3,18 @@ title: DotNet NuGet Push komutu
 description: DotNet NuGet Push komutu, bir paketi sunucuya gönderir ve yayınlar.
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: 99e735f7bb18b7af1c12c3ef77fc150a19083542
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: 92e2593633343bda6990ca51d593455ff13f0df7
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970661"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103478187"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 2. x SDK ve sonraki sürümleri
 
-## <a name="name"></a>Ad
+## <a name="name"></a>Name
 
 `dotnet nuget push` -Sunucuya bir paket gönderir ve onu yayımlar.
 
@@ -22,7 +22,7 @@ ms.locfileid: "97970661"
 
 ```dotnetcli
 dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output]
-    [--interactive] [-k|--api-key <API_KEY>] [-n|--no-symbols true]
+    [--interactive] [-k|--api-key <API_KEY>] [-n|--no-symbols]
     [--no-service-endpoint] [-s|--source <SOURCE>] [--skip-duplicate]
     [-sk|--symbol-api-key <API_KEY>] [-ss|--symbol-source <SOURCE>]
     [-t|--timeout <TIMEOUT>]
@@ -36,7 +36,7 @@ dotnet nuget push -h|--help
 
 Komut, var olan bir paketi iter. Paket oluşturmaz. Bir paket oluşturmak için kullanın [`dotnet pack`](dotnet-pack.md) .
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız değişkenler
 
 - **`ROOT`**
 
@@ -64,7 +64,7 @@ Komut, var olan bir paketi iter. Paket oluşturmaz. Bir paket oluşturmak için 
 
   Sunucu için API anahtarı.
 
-- **`-n|--no-symbols true`**
+- **`-n|--no-symbols`**
 
   Sembol (varsa bile) almaz.
 

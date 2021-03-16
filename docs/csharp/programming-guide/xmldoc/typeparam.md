@@ -8,16 +8,16 @@ helpviewer_keywords:
 - <typeparam> C# XML tag
 - typeparam C# XML tag
 ms.assetid: 9b99d400-e911-4e55-99c6-64367c96aa4f
-ms.openlocfilehash: 5e5333e384e8c77b500f74ab7c6038146df6e2c0
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 1b9d5d30c1a507e3bb7938ee0c036cdac3ef2f90
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87380793"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477686"
 ---
-# <a name="typeparam-c-programming-guide"></a>\<typeparam>(C# Programlama Kılavuzu)
+# <a name="typeparam-c-programming-guide"></a>\<typeparam> (C# Programlama Kılavuzu)
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```xml
 <typeparam name="name">description</typeparam>
@@ -41,7 +41,7 @@ Daha fazla bilgi için bkz. [Genel türler](../generics/index.md).
 
 `<typeparam>`Etiketin metni IntelliSense 'de, [nesne tarayıcısı pencere](/visualstudio/ide/viewing-the-structure-of-code#BKMK_ObjectBrowser) kodu açıklama Web raporu ' nda görüntülenir.
 
-Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.
+Belge açıklamalarını bir dosyaya işlemek için [**belgelerimdosyası**](../../language-reference/compiler-options/output.md#documentationfile) ile derleyin.
 
 ## <a name="example"></a>Örnek
 

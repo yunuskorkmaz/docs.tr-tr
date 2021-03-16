@@ -11,12 +11,12 @@ helpviewer_keywords:
 - TRACE directive
 - conditional compilation, tracing code
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
-ms.openlocfilehash: 895e39593b5e84d708392d3d994267b25bc4eeea
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 90c989bcf21e24cf7ccf410c9a18a44cde81233e
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96244177"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103478209"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Nasıl yapılır: İzleme ve Hata Ayıklama ile Koşullu Derleme
 
@@ -67,7 +67,7 @@ Geliştirme sırasında bir uygulamada hata ayıklarken, hem izleme hem de hata 
     |`-d:`|Koşullu derleme sembolünü tanımlar|  
   
     > [!NOTE]
-    > Büyük harflerle TRACE veya DEBUG yazmanız gerekir. Koşullu derleme komutları hakkında daha fazla bilgi için, `vbc /?` komut istemine (Visual Basic için) veya `csc /?` (C# için) girin. Daha fazla bilgi için, bkz. [komut satırından oluşturma](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) (C#) veya [Command-Line derleyicisini çağırma](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) (Visual Basic).  
+    > Büyük harflerle TRACE veya DEBUG yazmanız gerekir. Koşullu derleme komutları hakkında daha fazla bilgi için, `vbc /?` komut istemine (Visual Basic için) veya `csc /?` (C# için) girin. Daha fazla bilgi için, bkz. [komut satırından oluşturma](../../csharp/language-reference/compiler-options/index.md) (C#) veya [Command-Line derleyicisini çağırma](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) (Visual Basic).  
   
 ### <a name="to-perform-conditional-compilation-using-const-or-define"></a>#CONST veya #define kullanarak koşullu derleme gerçekleştirmek için  
   
@@ -102,5 +102,5 @@ Derleyici yönergesini açıklama.
 - [İzleme Anahtarları](trace-switches.md)
 - [İz Dinleyicileri](trace-listeners.md)
 - [Nasıl yapılır: Uygulama Koduna İzleme Deyimleri Ekleme](how-to-add-trace-statements-to-application-code.md)
-- [Visual Studio Komut Satırı için ortam değişkenlerini ayarlama](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [Visual Studio Komut Satırı için ortam değişkenlerini ayarlama](../../csharp/language-reference/compiler-options/index.md)
 - [Nasıl yapılır: Komut Satırı Derleyicisini Çağırma](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

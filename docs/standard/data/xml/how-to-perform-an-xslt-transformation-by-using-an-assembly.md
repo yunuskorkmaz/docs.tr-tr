@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
-ms.openlocfilehash: d080d8690c8a3a94867d7e2cca0a73bd9410c962
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 50094d64ca17a0653963782baddb5df91ca92a2f
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99713812"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103478203"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Nasıl yapılır: Derleme Kullanarak XSLT Dönüşümü Gerçekleştirme
 
@@ -185,4 +185,3 @@ Yukarıdaki örnekte. Assembly. Load yöntemi hakkında daha fazla bilgi için b
 - <xref:System.Xml.Xsl.XslCompiledTransform>
 - [XSLT Derleyicisi (xsltc.exe)](xslt-compiler-xsltc-exe.md)
 - [XSLT Dönüşümleri](xslt-transformations.md)
-- [csc.exe Kullanarak Komut Satırı Derleme](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

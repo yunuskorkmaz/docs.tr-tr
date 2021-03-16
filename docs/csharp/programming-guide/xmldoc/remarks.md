@@ -9,16 +9,16 @@ helpviewer_keywords:
 - remarks C# XML tag
 - <remarks> C# XML tag
 ms.assetid: f8641391-31f3-4735-af7a-c502a5b6a251
-ms.openlocfilehash: d38905d100e24158e7a1412f6be9f01a7ced2382
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 2227dd8bd4d81f5fda8cf529e18c7a613cca6b8e
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381508"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477818"
 ---
-# <a name="remarks-c-programming-guide"></a>\<remarks>(C# Programlama Kılavuzu)
+# <a name="remarks-c-programming-guide"></a>\<remarks> (C# Programlama Kılavuzu)
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Sözdizimi
 
 ```xml
 <remarks>description</remarks>
@@ -34,7 +34,7 @@ ms.locfileid: "87381508"
 
 `<remarks>`Etiketi, ile belirtilen bilgileri kullanarak bir tür hakkında bilgi eklemek için kullanılır [\<summary>](./summary.md) . Bu bilgiler Nesne Tarayıcısı penceresinde görüntülenir.
 
-Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.
+Belge açıklamalarını bir dosyaya işlemek için [**belgelerimdosyası**](../../language-reference/compiler-options/output.md#documentationfile) ile derleyin.
 
 ## <a name="example"></a>Örnek
 
