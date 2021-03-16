@@ -6,12 +6,12 @@ ms.assetid: b65ea7de-0801-477a-a39c-e914c2cc107c
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 105621da2bd418c6294fa2bbec474809599cb6a5
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 249733cf4af8e478927661e61bd3c16b2e6b2ec2
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378928"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103478878"
 ---
 # <a name="friend-assemblies"></a>Arkadaş derlemeleri
 
@@ -26,7 +26,7 @@ ms.locfileid: "83378928"
 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>Belirli bir derleme için bir veya daha fazla Friend derlemesini tanımlamak üzere özniteliğini kullanabilirsiniz. Aşağıdaki örnek, <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> *derleme a* içindeki özniteliğini kullanır ve bir Friend derlemesi olarak bir derlemeyi *AssemblyB* olarak belirtir. Bu, bütünleştirilmiş kod, C# ' de veya Visual Basic olarak işaretlenen *derleme A* 'daki tüm türlere ve üyelere derleme Için *AssemblyB* erişimi sağlar `internal` `Friend` .
 
 > [!NOTE]
-> *Derleme A*gibi başka bir derlemenin iç türlerine veya iç üyelerine erişecek *AssemblyB* gibi bir derlemeyi derlerken, **-Out** derleyici seçeneğini kullanarak çıkış dosyasının (*. exe* veya *. dll*) adını açıkça belirtmeniz gerekir. Bu gereklidir çünkü derleyici, dış başvurulara bağlama sırasında oluşturmakta olduğu derlemenin adını henüz üretmemiştir. Daha fazla bilgi için bkz. [-Out (C#)](../../csharp/language-reference/compiler-options/out-compiler-option.md) veya [-Out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).
+> *Derleme A* gibi başka bir derlemenin iç türlerine veya iç üyelerine erişecek *AssemblyB* gibi bir derlemeyi derlerken, **-Out** derleyici seçeneğini kullanarak çıkış dosyasının (*. exe* veya *. dll*) adını açıkça belirtmeniz gerekir. Bu gereklidir çünkü derleyici, dış başvurulara bağlama sırasında oluşturmakta olduğu derlemenin adını henüz üretmemiştir. Daha fazla bilgi için bkz. [ **OutputAssembly** (C#)](../../csharp/language-reference/compiler-options/output.md#outputassembly) veya [-Out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).
 
 ```csharp
 using System.Runtime.CompilerServices;
@@ -73,11 +73,11 @@ Public Class ClassWithFriendMethod
 End Class
 ```
 
-Yalnızca arkadaş olarak açıkça belirttiğiniz derlemeler `internal` (C#) veya `Friend` (Visual Basic) türlerine ve üyelerine erişebilir. Örneğin, *AssemblyB* , *derleme a* 'Nın arkadaşınız ve *derleme c* , *AssemblyB*'ye başvuruyorsa, *derleme c* 'nin `internal` a derlemesinde (C#) veya `Friend` (Visual Basic) türlerine erişimi yoktur. *Assembly A*
+Yalnızca arkadaş olarak açıkça belirttiğiniz derlemeler `internal` (C#) veya `Friend` (Visual Basic) türlerine ve üyelerine erişebilir. Örneğin, *AssemblyB* , *derleme a* 'Nın arkadaşınız ve *derleme c* , *AssemblyB*'ye başvuruyorsa, *derleme c* 'nin `internal` a derlemesinde (C#) veya `Friend` (Visual Basic) türlerine erişimi yoktur. 
 
 Derleyici, özniteliğe geçirilen arkadaş derleme adının bazı temel doğrulamasını gerçekleştirir <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> . Eğer *derlemesi bir* Friend derlemesi olarak *AssemblyB* bildirirse, doğrulama kuralları aşağıdaki gibidir:
 
-- *Derleme A* tanımlayıcı olarak adlandırılmışsa, *AssemblyB* de tanımlayıcı adlandırılmış olmalıdır. Özniteliğine geçirilen arkadaş derleme adı, *AssemblyB*imzalamak için kullanılan tanımlayıcı ad anahtarının derleme adından ve ortak anahtarından oluşmalıdır.
+- *Derleme A* tanımlayıcı olarak adlandırılmışsa, *AssemblyB* de tanımlayıcı adlandırılmış olmalıdır. Özniteliğine geçirilen arkadaş derleme adı, *AssemblyB* imzalamak için kullanılan tanımlayıcı ad anahtarının derleme adından ve ortak anahtarından oluşmalıdır.
 
      Özniteliğe geçirilen arkadaş derleme adı <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> *AssemblyB*'nin tanımlayıcı adı olamaz. Bütünleştirilmiş kod sürümü, kültür, mimari veya ortak anahtar belirtecini eklemeyin.
 
@@ -87,13 +87,13 @@ Derleyici, özniteliğe geçirilen arkadaş derleme adının bazı temel doğrul
 
  <xref:System.Security.Permissions.StrongNameIdentityPermission>Sınıfı, aşağıdaki farklılıklarla türleri paylaşma özelliği de sağlar:
 
-- <xref:System.Security.Permissions.StrongNameIdentityPermission>tek bir tür için geçerlidir, ancak bir arkadaş derleme tüm derleme için geçerlidir.
+- <xref:System.Security.Permissions.StrongNameIdentityPermission> tek bir tür için geçerlidir, ancak bir arkadaş derleme tüm derleme için geçerlidir.
 
-- *Bir derlemede* *AssemblyB*ile paylaşmak istediğiniz yüzlerce tür varsa, tümüne eklemeniz gerekir <xref:System.Security.Permissions.StrongNameIdentityPermission> . Bir arkadaş derleme kullanıyorsanız, yalnızca bir defa arkadaş ilişki bildirmeniz gerekir.
+- *Bir derlemede* *AssemblyB* ile paylaşmak istediğiniz yüzlerce tür varsa, tümüne eklemeniz gerekir <xref:System.Security.Permissions.StrongNameIdentityPermission> . Bir arkadaş derleme kullanıyorsanız, yalnızca bir defa arkadaş ilişki bildirmeniz gerekir.
 
 - Kullanırsanız <xref:System.Security.Permissions.StrongNameIdentityPermission> , paylaşmak istediğiniz türlerin ortak olarak bildirilmesini gerekir. Bir arkadaş derleme kullanıyorsanız, paylaşılan türler `internal` (C#) veya `Friend` (Visual Basic) olarak belirtilir.
 
-Bir `internal` `Friend` Modül dosyasından ( *. netmodule* uzantılı bir dosya) bir derlemenin (C#) veya (Visual Basic) türlerine ve yöntemlerine erişme hakkında daha fazla bilgi için, bkz: [-moduleassemblyname (c#)](../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md) veya [-moduleassemblyname (Visual Basic)](../../visual-basic/reference/command-line-compiler/moduleassemblyname.md).
+Bir `internal` `Friend` Modül dosyasından ( *. netmodule* uzantılı bir dosya) bir derlemenin (c#) veya (Visual Basic) türlerine ve yöntemlerine erişme hakkında daha fazla bilgi Için bkz. [ **moduleassemblyname** (c#)](../../csharp/language-reference/compiler-options/advanced.md#moduleassemblyname) veya [-moduleassemblyname (Visual Basic)](../../visual-basic/reference/command-line-compiler/moduleassemblyname.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

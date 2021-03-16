@@ -13,12 +13,12 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-ms.openlocfilehash: 69fd1a1944987d08a6ce1aee2790d0dbe06b9452
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 4080cb38ca3b7d79c0ad4291198b13567511093c
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106377"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480837"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Dil Bağımsızlığı ve Dilden Bağımsız Bileşenler
 
@@ -594,8 +594,6 @@ C# kaynak kodunu bir modül olarak derlemek için bu komutu kullanın:
 ```console
 csc /t:module NumberUtil.cs
 ```
-
-C# derleyicisinin komut satırı sözdizimi hakkında daha fazla bilgi için bkz. [csc.exeIle komut satırı oluşturma ](../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).
 
 Daha sonra, iki modülü bir derlemede derlemek için [bağlayıcı seçeneklerini](/cpp/build/reference/linker-options) kullanabilirsiniz:
 

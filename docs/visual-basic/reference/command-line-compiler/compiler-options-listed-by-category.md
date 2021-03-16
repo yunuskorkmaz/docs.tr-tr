@@ -5,12 +5,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: f0535e2aa94cda96610acb0edb24f6d46cc4afa0
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 015be752e5c98ec732e1b95130979446071810f1
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100474180"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103478060"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Kategoriye göre listelenmiş Visual Basic derleyici seçenekleri
 
@@ -26,7 +26,7 @@ Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme or
 |[-utf8output](utf8output.md)|UTF-8 kodlamasını kullanarak derleyici çıkışını görüntüler.|  
 |[-verbose](verbose.md)|Derleme sırasında ek bilgi verir.|  
 |`-modulename:<string>`|Kaynak modülünün adını belirtin|  
-|[-preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|Derleyici çıkışı için bir dil belirtin.|
+|[-preferreduilang](../../../csharp/language-reference/compiler-options/advanced.md#preferreduilang)|Derleyici çıkışı için bir dil belirtin.|
   
 ## <a name="optimization"></a>İyileştirme  
   

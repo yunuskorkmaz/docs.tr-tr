@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 9ad2cfe62c70174eec9020ad4c8ce11608aca36d
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 3a030e07e6f0e48a37c1682ef1d93b33932bbaaa
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87380676"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103478416"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>XML belge özelliklerini kullanma
 
@@ -113,7 +113,7 @@ Aşağıdaki örnek, belgelenen bir türe temel bir genel bakış sağlar.
 
 `csc XMLsample.cs /doc:XMLsample.xml`
 
-Bu komut, tarayıcınızda görüntüleyebileceğiniz veya komutunu kullanarak *XMLsample.xml*XML dosyası oluşturur `TYPE` .
+Bu komut, tarayıcınızda görüntüleyebileceğiniz veya komutunu kullanarak *XMLsample.xml* XML dosyası oluşturur `TYPE` .
 
 ## <a name="robust-programming"></a>Güçlü programlama
 
@@ -135,7 +135,7 @@ XML belgeleri ile başlar `///` . Yeni bir proje oluşturduğunuzda, sihirbazlar
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# programlama kılavuzu](../index.md)
-- [-Doc (C# derleyici seçenekleri)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [**Belgetationfile** (C# derleyici seçenekleri](../../language-reference/compiler-options/output.md#documentationfile)
 - [XML belgeleri yorumları](./index.md)
 - [DocFX belge işlemcisi](https://dotnet.github.io/docfx/)
 - [Sandrole belge işlemcisi](https://github.com/EWSoftware/SHFB)

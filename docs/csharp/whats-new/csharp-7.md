@@ -3,12 +3,12 @@ title: C# 7,0 ' deki yenilikler-C# Kılavuzu
 description: C# dilinin sürüm 7,0 ' deki yeni özelliklere genel bakış alın.
 ms.date: 10/02/2020
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: c238439b0f435e579d932b3b1eb13e9b0061fa5f
-ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
+ms.openlocfilehash: 897729022e45e96d0f54057ef4dad1a4fc0d6799
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97678224"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480856"
 ---
 # <a name="whats-new-in-c-70-through-c-73"></a>C# 7,3 ile c# 7,0 yenilikleri
 
@@ -57,7 +57,7 @@ Bu makalenin geri kalanında her özelliğe bir genel bakış sunulmaktadır. He
 1. [DotNet-TRY](https://github.com/dotnet/try/blob/master/README.md#setup) küresel aracını yükler.
 1. [DotNet/TRY-Samples](https://github.com/dotnet/try-samples) deposunu kopyalayın.
 1. *TRY-Samples* deposu için geçerli dizini *csharp7* alt dizinine ayarlayın.
-1. Şu komutu çalıştırın: `dotnet try`.
+1. `dotnet try` öğesini çalıştırın.
 
 ## <a name="tuples-and-discards"></a>Tanımlama grupları ve atma
 
@@ -522,17 +522,17 @@ Yeni derleyici seçenekleri C# programları için yeni derleme ve DevOps senaryo
 
 ### <a name="reference-assembly-generation"></a>Başvuru derlemesi oluşturma
 
-*Yalnızca başvuru derlemeler* üreten iki yeni derleyici seçeneği vardır: [-refout](../language-reference/compiler-options/refout-compiler-option.md) ve [-refonly](../language-reference/compiler-options/refonly-compiler-option.md).
+*Yalnızca başvuru derlemeler* üreten iki yeni derleyici seçeneği vardır: [**ProduceReferenceAssembly**](../language-reference/compiler-options/output.md#producereferenceassembly) ve [**ProduceOnlyReferenceAssembly**](../language-reference/compiler-options/code-generation.md#produceonlyreferenceassembly).
 Bağlantılı makaleler, bu seçenekleri ve başvuru derlemelerini daha ayrıntılı bir şekilde açıklamaktadır.
 
 ### <a name="public-or-open-source-signing"></a>Ortak veya açık kaynak imzalama
 
-`-publicsign`Derleyici seçeneği derleyiciye ortak anahtar kullanarak derlemeyi imzalamasını söyler. Derleme imzalanmış olarak işaretlenir, ancak imza ortak anahtardan alınır. Bu seçenek, açık kaynaklı projelerden ortak anahtar kullanarak imzalı derlemeler oluşturmanıza olanak sağlar.
+**Publicsign** derleyici seçeneği derleyicinin bir ortak anahtar kullanarak derlemeyi imzalamasını ister. Derleme imzalanmış olarak işaretlenir, ancak imza ortak anahtardan alınır. Bu seçenek, açık kaynaklı projelerden ortak anahtar kullanarak imzalı derlemeler oluşturmanıza olanak sağlar.
 
-Daha fazla bilgi için bkz. [-publicsign derleyici seçeneği](../language-reference/compiler-options/publicsign-compiler-option.md) makalesi.
+Daha fazla bilgi için bkz. [ **publicsign** derleyici seçeneği](../language-reference/compiler-options/security.md#publicsign) makalesi.
 
 ### <a name="pathmap"></a>pathmap
 
-`-pathmap`Derleyici seçeneği, derleyicinin kaynak yollarını eşlenen kaynak yollarla derleme ortamından değiştirmesini söyler. `-pathmap`Seçeneği, derleyici tarafından pdb dosyalarına veya için yazılan kaynak yolunu denetler <xref:System.Runtime.CompilerServices.CallerFilePathAttribute> .
+**Pathmap** derleyici seçeneği, derleyicinin kaynak yollarını, derleme ortamından eşlenen kaynak yollarıyla değiştirmesini söyler. **Pathmap** seçeneği, DERLEYICI tarafından pdb dosyalarına veya için yazılan kaynak yolunu denetler <xref:System.Runtime.CompilerServices.CallerFilePathAttribute> .
 
-Daha fazla bilgi için bkz. [-pathmap derleyici seçeneği](../language-reference/compiler-options/pathmap-compiler-option.md) makalesi.
+Daha fazla bilgi için bkz. [ **pathmap** derleyici seçeneği](../language-reference/compiler-options/advanced.md#pathmap) makalesi.
