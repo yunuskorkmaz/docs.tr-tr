@@ -187,8 +187,6 @@ items:
             href: linq/handle-null-values-in-query-expressions.md
           - name: Sorgu ifadelerinde özel durumları işleme
             href: linq/handle-exceptions-in-query-expressions.md
-      - name: Zaman uyumsuz programlama
-        href: async.md
       - name: Desen Eşleştirme
         href: pattern-matching.md
       - name: 'Güvenli, verimli kod yazma'
@@ -299,6 +297,8 @@ items:
               - name: Genel Bakış
                 displayName: asynchronous programming
                 href: programming-guide/concepts/async/index.md
+              - name: Zaman uyumsuz programlama senaryoları
+                href: async.md
               - name: Zaman uyumsuz görev programlama modeli
                 href: programming-guide/concepts/async/task-asynchronous-programming-model.md
               - name: Zaman uyumsuz dönüş türleri
