@@ -3,12 +3,12 @@ title: Davpr ile çalışmaya başlama
 description: Yerel geliştirme ortamınızı hazırlamaya ve ilk .NET uygulamalarınızı Davpr ile oluşturmaya yönelik bir kılavuz.
 author: amolenk
 ms.date: 02/25/2021
-ms.openlocfilehash: 68b1982c7283e0717ff7e1e254e5f313cd480d7b
-ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
+ms.openlocfilehash: 1b6ecd2cc2bf077375262155f0866cfef2dab708
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102206621"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103623817"
 ---
 # <a name="get-started-with-dapr"></a>Davpr ile çalışmaya başlama
 
@@ -255,7 +255,7 @@ Ayrıca, **.NET Core platformlar arası geliştirme** iş yükü yüklü olan [V
     }
     ```
 
-    ' A çağrı, `AddDapr` `DaprClient` ASP.NET Core bağımlılık ekleme sistemiyle birlikte kaydedilir. Bu `DaprClient` sınıfı daha sonra, Davpr sidecar ile iletişim kurmak için kullanacaksınız.
+    ' A çağrı, `AddDapr` `DaprClient` ASP.NET Core bağımlılık ekleme sistemiyle birlikte kaydedilir. İstemci kayıtlı olduğunda, artık, `DaprClient` vapr sidecar, yapı taşları ve bileşenlerle iletişim kurmak için hizmet kodunuza bir örneğini ekleyebilirsiniz.
 
 1. Projeye *dalgalı tahmin tahmini* adlı yeni bir C# sınıf dosyası ekleyin `DaprFrontEnd` :
 

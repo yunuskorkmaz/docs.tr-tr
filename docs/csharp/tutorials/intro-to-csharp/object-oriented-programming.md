@@ -2,12 +2,12 @@
 title: Object-Oriented programlama (C#)
 description: C#; soyutlama, kapsülleme, devralma ve çok biçimlilik dahil olmak üzere nesne odaklı programlama için tam destek sağlar.
 ms.date: 09/30/2020
-ms.openlocfilehash: 57f1759edd2dd5f239e81351aed64bf061766b7b
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: e6261e9018217094e0c3ce742ff0172b8559deaf
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102255411"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103624220"
 ---
 # <a name="object-oriented-programming-c"></a>Object-Oriented programlama (C#)
 
@@ -187,8 +187,8 @@ Programı çalıştırın ve sonuçları denetleyin.
 
 Bu öğretici Object-Oriented programlamada kullanılan birçok tekniği göstermiştir:
 
-- Her sınıfta çok sayıda ayrıntı sakladığınızda *soyutlama* kullandınız `private` .
-- Farklı hesap türlerinin her biri için sınıflar tanımladığınızda *kapsülleme* kullandınız. Bu sınıflar, bu hesap türünün davranışını açıklandı.
+- Farklı hesap türlerinin her biri için sınıfları tanımladığınızda *Özet* kullandınız. Bu sınıflar, bu hesap türünün davranışını açıklandı.
+- Her sınıfta çok sayıda ayrıntı sakladığınızda *kapsülleme* kullandınız `private` .
 - Kodu kaydetmek için sınıfında önceden oluşturulmuş uygulamayı yararlanılabilir kullandığınızda *devralmayı* kullandınız `BankAccount` .
 -  `virtual` Türetilmiş sınıfların bu hesap türü için belirli davranışlar oluşturmak üzere geçersiz kılabileceği Yöntemler oluşturduğunuzda çok biçimlilik kullandınız.
 

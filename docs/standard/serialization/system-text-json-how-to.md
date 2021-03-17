@@ -15,12 +15,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: fb0866dfad67bfe14a7f1388ec2f52a8dc970233
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: 4fc2686aee58512cbb39f5fb13375f271d255659
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100583225"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103624233"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>.NET içinde JSON ve seri hale getirme (sıralama ve kaldırma)
 
@@ -39,7 +39,7 @@ Kod örnekleri, aşağıdaki sınıfa ve türevlerini ifade eder:
 
 System.Text.JsonVisual Basic tarafından desteklenmeyen [ref yapıları](../../csharp/language-reference/builtin-types/struct.md#ref-struct)kullanma bölümleri. System.Text.JsonVisual Basic ile ref struct API 'leri kullanmayı denerseniz, BC40000 derleyici hataları alırsınız. Hata iletisi, sorunun eski bir API olduğunu gösterir ancak gerçek sorun, derleyicide başvuru yapısı desteğinin olmamasından kaynaklanır. Aşağıdaki bölümleri System.Text.Json Visual Basic kullanılamaz:
 
-* <xref:System.Text.Json.Utf8JsonReader>Sınıfı. <xref:System.Text.Json.Serialization.JsonConverter%601.Read%2A?displayProperty=nameWithType>Yöntem bir `Utf8JsonReader` parametre kullandığından, bu sınırlama özel dönüştürücüler yazmak için Visual Basic kullanma ' yı yazamıyoruz. Bunun için geçici bir çözüm olarak, bir C# Kitaplığı derlemesinde özel dönüştürücüler uygulamanız ve bu derlemeye VB projenizden başvurulamıyor. Bu, Visual Basic ' de her şey, dönüştürücülerin serileştiriciye kaydettirilmekte olduğunu varsayar. `Read`Visual Basic koddan dönüştürücülerin yöntemlerini çağırabilirsiniz.
+* <xref:System.Text.Json.Utf8JsonReader>Sınıfı. <xref:System.Text.Json.Serialization.JsonConverter%601.Read%2A?displayProperty=nameWithType>Yöntem bir `Utf8JsonReader` parametre kullandığından, bu sınırlama özel dönüştürücüler yazmak için Visual Basic kullanamıyoruz anlamına gelir. Bunun için geçici bir çözüm olarak, bir C# Kitaplığı derlemesinde özel dönüştürücüler uygulamanız ve bu derlemeye VB projenizden başvurulamıyor. Bu, Visual Basic ' de her şey, dönüştürücülerin serileştiriciye kaydettirilmekte olduğunu varsayar. `Read`Visual Basic koddan dönüştürücülerin yöntemlerini çağırabilirsiniz.
 * Bir tür içeren diğer API 'lerin aşırı yüklemeleri <xref:System.ReadOnlySpan%601> . Çoğu yöntem yerine kullanan aşırı yüklemeleri içerir `String` `ReadOnlySpan` .
 
 Başvuru yapıları, yalnızca "verileri üzerinden geçirme" sırasında bile dil desteği olmadan güvenli şekilde kullanılamadığından bu kısıtlamalar uygulanır. Bu hatanın gerçekleştirilmesi, belleği bozmaya ve yapılmamalıdır Visual Basic koda neden olur.

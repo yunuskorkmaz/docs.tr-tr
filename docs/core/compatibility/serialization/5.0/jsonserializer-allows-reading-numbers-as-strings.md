@@ -2,12 +2,12 @@
 title: 'Son değişiklik: ASP.NET Core uygulamalar tırnaklı sayıların serisini kaldırmada izin veriyor'
 description: .NET 5 ' teki son değişiklik hakkında bilgi edinin. ASP.NET Core uygulamalar, bir özel durum oluşturmak yerine JSON dizeleri olarak temsil edilen sayıları başarıyla seri durumdan çıkaracaktır.
 ms.date: 10/21/2020
-ms.openlocfilehash: f541af5bf5f0a519fd5205f44d68a9b401569909
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: bc1531bb9b159bfd9e80eafacafb50aa509973cc
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102256315"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103624155"
 ---
 # <a name="aspnet-core-apps-allow-deserializing-quoted-numbers"></a>ASP.NET Core uygulamalar, tırnak işaretli sayıların serisini kaldırmada izin veriyor
 
@@ -41,7 +41,7 @@ ASP.NET Core MVC ve Web API uygulamaları için, aşağıdaki kodu kullanarak se
 
 ```csharp
 services.AddControllers()
-   .AddJsonOptions(options.NumberHandling = JsonNumberHandling.Strict);
+   .AddJsonOptions(options => options.JsonSerializerOptions.NumberHandling = JsonNumberHandling.Strict);
 ```
 
 ## <a name="affected-apis"></a>Etkilenen API’ler

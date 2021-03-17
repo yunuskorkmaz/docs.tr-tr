@@ -2,12 +2,12 @@
 title: DotNet-Trace Tanılama aracı-.NET CLı
 description: .NET EventPipe kullanarak, yerel profil oluşturucu olmadan çalışan bir işlemin .NET izlemelerini toplamak için DotNet-Trace CLı aracını yüklemeyi ve kullanmayı öğrenin.
 ms.date: 11/17/2020
-ms.openlocfilehash: abf98df6e31747ea3e8013fc77b246613a3402ad
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: e4e5bf91a7e6a9bf98e8cb006864b4cbc5ca17a2
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100583005"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103624194"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>DotNet-izleme performansı Analizi yardımcı programı
 
@@ -91,6 +91,9 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
 - **`--buffersize <size>`**
 
   Bellek içi dairesel arabelleğin boyutunu megabayt cinsinden ayarlar. Varsayılan 256 MB.
+
+  > [!NOTE]
+  > Hedef işlem olayları çok sık yazdığında, bu arabelleği taşrabilir ve bazı olaylar bırakılmış olabilir. Çok fazla olay atılıyorsa, bırakılan olayların sayısının azalıp azalmadığına bakmak için arabellek boyutunu artırın. Bırakılan olay sayısı daha büyük bir arabellek boyutuyla azalmadığında, bu durum yavaş bir okuyucu nedeniyle, hedef işlemin arabelleklerinin temizlenmesini engellemiş olabilir.
 
 - **`--clreventlevel <clreventlevel>`**
 

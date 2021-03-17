@@ -3,12 +3,12 @@ title: EventPipe genel bakış
 description: EventPipe hakkında bilgi edinin ve performans sorunlarını tanılamak üzere .NET uygulamalarınızı izlemek için nasıl kullanacağınızı öğrenin.
 ms.date: 11/09/2020
 ms.topic: overview
-ms.openlocfilehash: 213d15e48ac9d50af0c87565738f952295c4f041
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 0b4782306c85590d74b521edd254659fb162b0c2
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102105303"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103624168"
 ---
 # <a name="eventpipe"></a>EventPipe
 
@@ -78,6 +78,9 @@ Ancak, bir uygulamada EventPipe oturumu ayarlamak ve izlemeyi doğrudan bir dosy
 * `COMPlus_EventPipeOutputPath`: Üzerinden çalışacak şekilde yapılandırıldığında çıkış EventPipe izleme dosyasının yolu `COMPlus_EnableEventPipe` . Varsayılan değer `trace.nettrace` , uygulamanın üzerinde çalıştığı aynı dizinde oluşturulacak olur.
 
 * `COMPlus_EventPipeCircularMB`: EventPipe 'ın iç arabelleğinin megabayt cinsinden boyutunu temsil eden onaltılık bir değer. Bu yapılandırma değeri yalnızca EventPipe kullanılarak çalışacak şekilde yapılandırıldığında kullanılır `COMPlus_EnableEventPipe` . Varsayılan arabellek boyutu 10 24 MB 'tır ve bu, bu ortam değişkenine, bu yana ayarlanmış olarak çevrilir `400` `0x400`  ==  `1024` .
+
+  > [!NOTE]
+  > Hedef işlem olayları çok sık yazdığında, bu arabelleği taşrabilir ve bazı olaylar bırakılmış olabilir. Çok fazla olay atılıyorsa, bırakılan olayların sayısının azalıp azalmadığına bakmak için arabellek boyutunu artırın. Bırakılan olay sayısı daha büyük bir arabellek boyutuyla azalmadığında, bu durum yavaş bir okuyucu nedeniyle, hedef işlemin arabelleklerinin temizlenmesini engellemiş olabilir.
 
 * `COMPlus_EventPipeProcNumbers`: `1` EventPipe olay başlıklarında işlemci numaralarının yakalanmasını etkinleştirmek için bunu olarak ayarlayın. `0` varsayılan değerdir.
 

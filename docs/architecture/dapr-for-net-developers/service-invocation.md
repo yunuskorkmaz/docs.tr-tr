@@ -2,13 +2,13 @@
 title: Davpr hizmeti çağırma yapı taşı
 description: Hizmet çağırma oluşturma bloğunun açıklaması, özellikleri, avantajları ve nasıl uygulanacağı
 author: amolenk
-ms.date: 02/07/2021
-ms.openlocfilehash: 2b64aa1e9b079a3fefe120e687cd6d395981c633
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.date: 02/17/2021
+ms.openlocfilehash: f6d5f10ae476d85a9925c4fa387a16d575cacf6a
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106236"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103624103"
 ---
 # <a name="the-dapr-service-invocation-building-block"></a>Davpr hizmeti çağırma yapı taşı
 

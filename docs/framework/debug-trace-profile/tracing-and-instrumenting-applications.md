@@ -14,12 +14,12 @@ helpviewer_keywords:
 - performance monitoring, tracing code
 - Trace class, instrumentation for .NET applications
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
-ms.openlocfilehash: 63fdf49ba688c0b3c4ee6653e1c2960c49f526ce
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e477a474ab850239068246057e94b94c983a99c8
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257125"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103624207"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>İzleme Uygulamaları
 
@@ -33,7 +33,7 @@ ms.locfileid: "96257125"
   
 - **Performans sayaçları** -uygulamanızın performansını izlemenize imkan tanıyan bileşenler. Daha fazla bilgi için bkz. [performans sayaçları](performance-counters.md).  
   
-- **Olay günlükleri** -uygulamanızın yürütülmesinde önemli olayları almanızı ve izlemenizi sağlayan bileşenler. Daha fazla bilgi için, <xref:System.Diagnostics.EventLog> sınıfına bakın.  
+- **Olay günlükleri** -uygulamanızın yürütülmesi sırasında önemli olayları almanızı ve izlemenizi sağlayan bileşenler. Daha fazla bilgi için, <xref:System.Diagnostics.EventLog> sınıfına bakın.  
   
  Kodunuzda stratejik konumlara izleme deyimleri yerleştirerek uygulamanızı denetlemek, dağıtılmış uygulamalar için özellikle yararlıdır. Trace deyimlerini kullanarak, bir uygulamayı yalnızca bir şeyler yanlış olduğunda ve ayrıca uygulamanın ne kadar iyi çalıştığını izlemek için değil, yalnızca bilgileri görüntülemek için Not alabilirsiniz.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "96257125"
   
 ## <a name="code-tracing-and-debugging"></a>Kod Izleme ve hata ayıklama  
 
- Geliştirme sırasında, <xref:System.Diagnostics.Debug> Visual Studio tümleşik geliştirme ortamının (IDE) çıkış penceresinde iletileri göstermek için sınıfının çıkış yöntemlerini kullanabilirsiniz. Örneğin:  
+ Geliştirme sırasında, <xref:System.Diagnostics.Debug> Visual Studio tümleşik geliştirme ortamının (IDE) çıkış penceresinde iletileri göstermek için sınıfının çıkış yöntemlerini kullanabilirsiniz. Örnek:  
   
 ```vb  
 Trace.WriteLine("Hello World!")  
@@ -125,7 +125,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
  <xref:System.Diagnostics.Debug> <xref:System.Diagnostics.Trace> İzleme bilgilerini yazan altı üye ve yöntem aşağıdaki tabloda listelenmiştir.  
   
-|Yöntem|Çıkış|  
+|Yöntem|Çıktı|  
 |------------|------------|  
 |`Assert`|Belirtilen metin; ya da hiçbiri belirtilmemişse, çağrı yığını. Çıktı yalnızca, deyimde bir bağımsız değişken olarak belirtilen koşul `Assert` **false** olduğunda yazılır.|  
 |`Fail`|Belirtilen metin; ya da hiçbiri belirtilmemişse, çağrı yığını.|  

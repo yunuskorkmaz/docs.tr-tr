@@ -2,13 +2,13 @@
 title: 20.000 fit üzerinde davpr
 description: Nepr 'nin ne olduğu, ne yaptığı ve nasıl çalıştığı hakkında üst düzey bir genel bakış.
 author: robvet
-ms.date: 02/07/2021
-ms.openlocfilehash: f0efb4652aaa35961d59979cb561941e5280a575
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.date: 02/17/2021
+ms.openlocfilehash: 9f23e9822fd0d4b5eda648d2fc1359cce14cf59d
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102604755"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103624051"
 ---
 # <a name="dapr-at-20000-feet"></a>20.000 fit üzerinde davpr
 
@@ -26,7 +26,9 @@ Bu kitap, bir .NET geliştiricisinin görüş açısından, Davpr 'ye bakar. Bu 
 
 DAPR, modern dağıtılmış uygulamalarda büyük bir sınama ele alınmaktadır: **karmaşıklık**.
 
-Bir takılabilir bileşenler mimarisi sayesinde, Davpr Dağıtılmış uygulamaların arkasındaki sıhhi tesisat 'yi büyük ölçüde basitleştirir. Bu, uygulamanızı, Davpr çalışma zamanından altyapı özelliklerine bağlayan **dinamik bir birleştirici** sağlar. Örneğin, uygulamanız bir durum deposu gerektirebilir. Redis Cache hedeflemek için özel kod yazabilir ve çalışma zamanında hizmetinize ekleyebilirsiniz. Ancak, Davpr, kullanıma hazır bir önbellek yeteneği sağlayarak deneyiminizi basitleştirir. Hizmetiniz bir Davpr **yapılandırması** aracılığıyla Redis Cache **bileşene** dinamik olarak bağlanan bir davpr **yapı taşı** çağırır. Bu modelde, hizmetiniz sizin adınıza Red. çağıran bir Davpr çağrısını devreder. Hizmetinizin hiçbir SDK, kitaplık veya Redsıs 'e doğrudan başvurusu yok. Redis Cache API 'sine değil, ortak bir Davpr durum yönetimi API 'sine karşı kodlanır.
+Bir takılabilir bileşenler mimarisi sayesinde, Davpr Dağıtılmış uygulamaların arkasındaki sıhhi tesisat 'yi büyük ölçüde basitleştirir. Bu, uygulamanızı, Davpr çalışma zamanından altyapı özelliklerine bağlayan **dinamik bir birleştirici** sağlar.
+
+Hizmetlerinizin birini durum bilgisi olarak oluşturmak için bir gereksinim düşünün mı? Tasarımınız ne olacaktır? Redis Cache gibi bir durum deposunu hedefleyen özel kod yazabilirsiniz. Ancak, Davpr durum yönetimi yeteneklerini kullanıma hazır olarak sunar. Hizmetiniz, bir Davpr **bileşen yapılandırması** YAML dosyası aracılığıyla bir durum depolama **bileşenine** dinamik olarak bağlanan bir davpr durum yönetimi **yapı taşı** çağırır. Davpr, Reddir dahil olmak üzere önceden oluşturulmuş çeşitli durum depolama bileşenleriyle birlikte gelir. Bu modelde, hizmetiniz durum yönetimini Davpr çalışma zamanına devreder. Hizmetinizin SDK, kitaplık veya temel bileşene doğrudan başvurusu yok. Durum depolarını, Redsıs 'den MySQL veya Cassandra 'dan kod değişikliği olmadan da değiştirebilirsiniz.
 
 Şekil 2-1, 20.000 metreden Davpr 'yi gösterir.
 
@@ -208,6 +210,8 @@ gRPC, yaş-eski [uzak yordam çağrısı (RPC) protokolünü gelişten](https://
 - Hem istemci isteklerini hem de sunucu yanıtlarını aynı anda göndermek için çift yönlü tam çift yönlü iletişim.
 - Zaman uyumsuz akış büyük veri kümelerine yönelik istekleri ve yanıtları etkinleştiren yerleşik akış.
 
+Daha fazla bilgi edinmek için, [Azure 'a yönelik Cloud-Native .NET uygulamaları](https://docs.microsoft.com/dotnet/architecture/cloud-native/) mimarlarından [GRPC 'ye genel bakış](https://docs.microsoft.com/dotnet/architecture/cloud-native/grpc#what-is-grpc) konusunu inceleyin.  
+
 ## <a name="dapr-and-service-meshes"></a>Davpr ve hizmet kafesleri
 
 Hizmet kafesi, dağıtılmış uygulamalar için hızlı bir şekilde gelişen bir teknolojidir.
@@ -220,7 +224,7 @@ Hizmet ağı, Service-Service iletişimini, dayanıklılığı, yük dengelemesi
 
 **Şekil 2-8**. Yan otomobil olan hizmet ağı.
 
-Önceki şekilde, iletilerin her bir hizmet ile birlikte çalışan bir ara sunucu tarafından nasıl ele alınacağını gösterir. Her proxy, hizmete özel trafik kurallarıyla yapılandırılabilir. İletileri anlamıştır ve bunları hizmetlerinize ve dış dünyaya yönlendirebilir.
+Önceki şekilde, iletilerin her bir hizmet ile birlikte çalışan bir sepet proxy tarafından nasıl ele alınacağını gösterir. Her proxy, hizmete özel trafik kurallarıyla yapılandırılabilir. İletileri anlamıştır ve bunları hizmetlerinize ve dış dünyaya yönlendirebilir.
 
 Bu nedenle, "bir hizmet ağı KAPR mi?" sorusu haline gelir.
 
@@ -234,7 +238,7 @@ Her biri farklı bir düzeyde çalışır, her ikisi de aynı uygulamada birlikt
 
 **Şekil 2-9**. PAPR ve hizmet ağı birlikte.
 
-Kitapta, Nishi Bai ve Yaron Schneider [öğrenme](https://www.amazon.com/Learning-Dapr-Building-Distributed-Applications/dp/1492072427/ref=sr_1_1?dchild=1&keywords=dapr&qid=1604794794&sr=8-1), davpr ve hizmet ağı tümleştirmesini kapsar.
+[Davpr çevrimiçi belgeleri](https://docs.dapr.io/concepts/faq/#networking-and-service-meshes) , davpr ve hizmet ağı tümleştirmesini kapsar.
 
 ## <a name="summary"></a>Özet
 

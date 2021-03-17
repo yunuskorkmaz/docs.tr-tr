@@ -7,23 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - Protected Friend keyword [Visual Basic]
 - Protected Friend keyword [Visual Basic], syntax
-ms.openlocfilehash: dcc8fd2b1aa99f910f002ac05178d379532fb73d
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: b92f52345d5b4b2b67745da8f142cd1484aec588
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99700981"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103624012"
 ---
 # <a name="protected-friend-visual-basic"></a>Korumalı arkadaş (Visual Basic)
 
 `Protected Friend`Anahtar sözcük birleşimi bir üye erişim değiştiricisidir. Hem [arkadaş](friend.md) erişimi hem de tanımlı öğeler üzerinde [korumalı](protected.md) erişimi, bu nedenle aynı derlemede, kendi sınıflarından ve türetilmiş sınıflardan erişilebilen her yerde erişilebilir hale gelir. `Protected Friend`Yalnızca sınıfların üyelerinde belirtebilirsiniz; `Protected Friend` yapılar devralınamadığı için bir yapının üyelerine uygulayamazsınız.
 
 > [!NOTE]
-> Visual Studio 'da F1 Yardımı ' nı seçmek, `protected friend` [korumalı](protected.md) veya [arkadaş](friend.md)için yardım sağlar. IDE, bileşik sözcük yerine imleç altında tek belirteci seçer.
-
-## <a name="rules"></a>Kurallar
-
-**Bildirim bağlamı.** `Protected Friend`Yalnızca sınıf düzeyinde kullanabilirsiniz. Yani bir öğe için bildirim bağlamı `Protected` bir sınıf olmalıdır ve kaynak dosya, ad alanı, arabirim, modül, yapı veya yordam olamaz.
+> Visual Studio 'da F1 Yardımı ' nı seçmek, `Protected Friend` [korumalı](protected.md) veya [arkadaş](friend.md)için yardım sağlar. IDE, bileşik sözcük yerine imleç altında tek belirteci seçer.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

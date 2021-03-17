@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 05/20/2020
 ms.technology: csharp-async
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: 58f650e7932d4f5862d545429376b3e417bb433c
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: c3fbcdec2bf181a5211e89024855967d687388ff
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97512248"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103623739"
 ---
 # <a name="asynchronous-programming"></a>Zaman uyumsuz programlama
 
@@ -268,5 +268,5 @@ Genel nesnelerin durumuna veya belirli yöntemlerin yürütülmesine bağlı de�
 ## <a name="other-resources"></a>Diğer kaynaklar
 
 * [Zaman uyumsuz kapsamlı,](../standard/async-in-depth.md) görevlerin nasıl çalıştığı hakkında daha fazla bilgi sağlar.
-* [Async ve await ile zaman uyumsuz programlama (C#)](./programming-guide/concepts/async/index.md)
+* [Görev zaman uyumsuz programlama modeli (C#)](./programming-guide/concepts/async/task-asynchronous-programming-model.md)
 * Zaman uyumsuz programlama için Lucian Wıchık 'nin [altı temel ipucu](https://channel9.msdn.com/Series/Three-Essential-Tips-for-Async) , Async programlama için harika bir kaynaktır

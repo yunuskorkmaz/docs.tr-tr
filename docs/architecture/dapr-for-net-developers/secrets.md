@@ -2,13 +2,13 @@
 title: Davpr gizli dizi oluşturma bloğu
 description: Gizli dizi oluşturma bloğunun açıklaması, özellikleri, avantajları ve nasıl uygulanacağı
 author: edwinvw
-ms.date: 02/07/2021
-ms.openlocfilehash: 94942b396af947b2a3e49b918b2b082c15f4bb08
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.date: 02/17/2021
+ms.openlocfilehash: 52b899b4d496aab6762f69bbee99faecfcd23d59
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106296"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103623752"
 ---
 # <a name="the-dapr-secrets-building-block"></a>Davpr gizli dizi oluşturma bloğu
 
