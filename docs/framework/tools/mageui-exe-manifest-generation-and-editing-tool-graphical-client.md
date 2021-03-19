@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 3f08c1d8aabae3e698dbf2fcd0a52511136ba899
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: c3901145e00f1a58f87e5a8925078278f847668e
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259921"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104654004"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Bildirim Üretme ve Düzenleme Aracı, Grafik İstemci)
 
 MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windows tabanlı kullanıcı arabirimi (UI) ile destekler. Bu araçla, dağıtım ve uygulama bildirimleri oluşturabilir, düzenleyebilir ve imzalayabilirsiniz. İle oluşturulan yeni bildirimler, .NET Framework 4 Istemci profilini hedefleyecek MageUI.exe. Önceki .NET Framework sürümlerini hedeflemek için MageUI.exe'nin önceki sürümleri kullanılmalıdır. Bir bildirimden derlemeleri eklerken veya kaldırırken ya da var olan bildirimleri yeniden imzalamada, MageUI.exe bildirimi .NET Framework 4 Istemci profilini hedefleyecek şekilde güncelleştirmez. Daha fazla bilgi için bkz. [Mage.exe (bildirim oluşturma ve düzenleme aracı)](mage-exe-manifest-generation-and-editing-tool.md).
 
- Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, [geliştiriciler için bir komut satırı kabuğu](/visualstudio/ide/reference/command-prompt-powershell)kullanın.
+ Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için [Visual studio Geliştirici komut istemi veya Visual Studio Geliştirici PowerShell](/visualstudio/ide/reference/command-prompt-powershell)kullanın.
 
  Mage.exe ve MageUI.exe iki sürümü Visual Studio 'nun bir bileşeni olarak dahil edilmiştir. Sürüm bilgilerini görmek için MageUI.exe çalıştırın, **Yardım**' ı seçin ve **hakkında**' yı seçin. Bu belge Mage.exe ve MageUI.exe'nin 4.0.x.x sürümünü açıklar.
 
@@ -28,7 +28,7 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
 
  Aşağıdaki tablo, kullanılabilen menü ve araç çubuğu öğelerini listeler.  
   
-|Komut|Menü|Kısayol|Açıklama|  
+|Komut|Menü|Kısayol|Description|  
 |-------------|----------|--------------|-----------------|  
 |**Uygulama bildirimi**|**Dosya, yeni**||Yeni bir uygulama bildirimi oluşturur.|  
 |**Dağıtım bildirimi**|**Dosya, yeni**||Yeni bir dağıtım bildirimi oluşturur.|  
@@ -40,7 +40,7 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
 |**Tercihler**|**Dosya**||**Tercihler** iletişim kutusunu açar. Daha fazla bilgi için aşağıdaki bölüme bakın.|  
 |**Çıkış**|**Dosya**|ALT+F4|MageUI.exe'den çıkılır.|  
 |**Kes**|**Düzenle**|CTRL+X|Seçili durumdaki metni uygulamadan kaldırır ve sistem Pano'suna taşır.|  
-|**Kopya**|**Düzenle**|CTRL+C|Seçili durumdaki metni sistem Pano'suna kopyalar.|  
+|**Kopyala**|**Düzenle**|CTRL+C|Seçili durumdaki metni sistem Pano'suna kopyalar.|  
 |**Yapıştır**|**Düzenle**|CTRL+V|Sistem Pano'sundaki metni etkin durumdaki metin öğesinin içine yapıştırır.|  
 |**Silme**|**Düzenle**||Bir listede seçili olan bir öğeyi, **dağıtım bildirimi** sekmesindeki güven lisansı gibi siler.|  
 |**Tümünü Kapat**|**Pencere**||MageUI.exe'de açık durumdaki tüm dosyaları kapatır. Bir veya daha fazla dosyanın kaydedilmesi gerekiyorsa, gereksinimi MageUI.exe sizden onları kaydetmenizi ister. MageUI.exe ayrıca imzalanmamış veya değiştirilmiş her dosya için bir imzalama anahtarı seçmenizi de ister.|  
@@ -50,7 +50,7 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
 
  **Tercihler** iletişim kutusu aşağıdaki öğeleri içerir.  
   
-|Arabirim Öğesi|Açıklama|  
+|Arabirim Öğesi|Description|  
 |----------------|-----------------|  
 |**Kaydederken oturum aç**|Bir dosyadaki değişikliklerinizi kaydedeceğiniz her zaman dosyayı imzalamanızı ister.|  
 |**Varsayılan imza sertifikasını kullan**|Tüm dosyaları imzalamak için **sertifika dosyası** metin kutusunda girilen anahtarı kullanır. Bu, genellikle bir dosyayı kaydettiğinizde ve **kaydederken oturum** açtığınızda görüntülenen imzalama isteminin seçili olduğunu ortadan kaldırır. Bir anahtar dosyası seçmek için **sertifika dosyası** metin kutusunun yanındaki üç nokta (**...**) düğmesini kullanın.|  
@@ -62,7 +62,7 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
   
  Bu iletişim kutusu aşağıdaki öğeleri içerir.  
   
-|Arabirim Öğesi|Açıklama|  
+|Arabirim Öğesi|Description|  
 |----------------|-----------------|  
 |**Sertifika dosyası ile imzala**|Bildirimi, dosya sisteminde depolanmış bir dijital sertifika ile imzalar.|  
 |**Dosya**|Sertifikayı temsil eden .pfx dosyasının yolunu yazmanız için bir alan sağlar.|  
@@ -107,7 +107,7 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
 
  Bu bilgiler genellikle dağıtım bildirimi içinde sağlanır. Bu alanlar yalnızca **uygulama seçenekleri** sekmesinde **uygulama bildirimi güven bilgileri kullan** onay kutusu seçiliyse değiştirilebilir.  
   
-|Arabirim Öğesi|Açıklama|  
+|Arabirim Öğesi|Description|  
 |----------------|-----------------|  
 |**Publisher**|Uygulamadan sorumlu kişinin veya kuruluşun adı. Bu değer, Başlat menüsü klasör adı olarak kullanılır.|  
 |**Ürün**|Tam ürün adı. Dağıtım bildiriminin **dağıtım seçenekleri** sekmesinde **uygulama türü** öğesi için **yerel olarak yüklemeyi** seçtiyseniz, bu ad, bu uygulama Için **Başlat** menüsü bağlantısında ve **Program Ekle/Kaldır** 'da görünür.|  
@@ -115,14 +115,14 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
   
 ### <a name="application-options-tab"></a>Uygulama seçenekleri sekmesi  
   
-|Arabirim Öğesi|Açıklama|  
+|Arabirim Öğesi|Description|  
 |----------------|-----------------|  
 |**Windows Presentation Foundation tarayıcı uygulaması**|Bu, tarayıcıda bir XAML tarayıcı uygulaması (XBAP) olarak çalışan bir WPF uygulaması olup olmadığını belirtir.|  
 |**Uygulama bildirimi güven bilgilerini kullan**|Bu bildirimin güven bilgileri içerip içermediğini belirtir.|  
   
 ### <a name="files-tab"></a>Dosyalar sekmesi  
   
-|Arabirim Öğesi|Açıklama|  
+|Arabirim Öğesi|Description|  
 |----------------|-----------------|  
 |**Uygulama dizini**|Uygulamanın dosyalarının bulunduğu dizin. Dizini seçmek için üç nokta (**...**) düğmesini kullanın.|  
 |**Veriyle**|Uygulama dizinindeki tüm dosyaları ve alt dizinleri uygulama bildirimine ekler. MageUI.exe dizinde tek bir yürütülebilir dosya bulursa, bunu otomatik olarak giriş noktası olarak işaretler, bu dosya, istemci üzerinde ClickOnce uygulaması başlatıldığında ilk yürütülür.|  
@@ -135,7 +135,7 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
 
  Uygulamanıza varsayılan olarak verilen yerel bilgisayara daha fazla erişim vermeniz gerekiyorsa, **gerekli izinler** sekmesini kullanın. Daha fazla bilgi için bkz. [ClickOnce uygulamalarının güvenliğini sağlama](/visualstudio/deployment/securing-clickonce-applications).  
   
-|Arabirim Öğesi|Açıklama|  
+|Arabirim Öğesi|Description|  
 |----------------|-----------------|  
 |**İzin kümesi türü**|Bu uygulamanın istemcide çalışması için gereken en düşük izin kümesi. Bu izin kümelerinin açıklaması ve ne yaptıkları veya talep verilmeyen izinler için bkz. [adlandırılmış Izin kümeleri](/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).|  
 |**Ayrıntılar**|İzin kümesini temsil etmesi için uygulama bildirimi için oluşturulan XML. Uygulama bildirimi XML biçimi hakkında iyi bir fikir sahibi değilseniz, bu XML 'i el ile düzenlememelisiniz. Daha fazla bilgi için bkz. [ClickOnce uygulama bildirimi](/visualstudio/deployment/clickonce-application-manifest).|  
@@ -166,7 +166,7 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
   
 ### <a name="description-tab"></a>Açıklama sekmesi  
   
-|Arabirim Öğesi|Açıklama|  
+|Arabirim Öğesi|Description|  
 |----------------|-----------------|  
 |**Publisher**|Gereklidir. Uygulamadan sorumlu kişinin veya kuruluşun adı. Bu değer, Başlat menüsü klasör adı olarak kullanılır.|  
 |**Ürün**|Gereklidir. Tam ürün adı. **Dağıtım seçenekleri** sekmesindeki **uygulama türü** öğesi için **yerel olarak yüklemeyi** seçtiyseniz, bu ad, bu uygulama Için **Başlat** menüsü bağlantısında ve **Program Ekle/Kaldır** bölümünde görüntülenmeyecektir.|  
@@ -174,7 +174,7 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
   
 ### <a name="deployment-options-tab"></a>Dağıtım seçenekleri sekmesi  
   
-|Arabirim Öğesi|Açıklama|  
+|Arabirim Öğesi|Description|  
 |----------------|-----------------|  
 |**Uygulama türü**|İsteğe bağlı. Bu uygulamanın kendisini istemci bilgisayara (**yerel olarak yükleme**) yükleyip yüklemediğinden, çevrimiçi (**yalnızca çevrimiçi**) çalışan veya tarayıcıda çalışan bir WPF uygulaması (**WPF tarayıcı uygulaması**) olduğunu belirtir. Varsayılan değer **yerel olarak yüklenir**.|  
 |**Başlangıç konumu**|İsteğe bağlı. Uygulamanın gerçekten başlatılması gereken URL. Kendisini Web 'den güncelleştiren bir CD 'den bir uygulama dağıttığınızda faydalıdır.|  
@@ -187,7 +187,7 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
 
  **Güncelleştirme seçenekleri** sekmesi yalnızca **ad** sekmesindeki **uygulama türü** seçim kutusu **yerel olarak yüklenmek** üzere ayarlandığında burada bahsedilen seçenekleri içerir.  
   
-|Arabirim Öğesi|Açıklama|  
+|Arabirim Öğesi|Description|  
 |----------------|-----------------|  
 |**Bu uygulama güncelleştirmeleri denetlemelidir**|ClickOnce 'ın uygulama güncelleştirmelerini denetleyip denetmeyeceğini belirtir. Bu onay kutusu seçili değilse, ad alanındaki API 'Leri kullanarak program aracılığıyla güncelleştirmediğiniz takdirde, uygulama güncelleştirmeleri denetetmez <xref:System.Deployment.Application> .|  
 |**Uygulamanın güncelleştirmeleri ne zaman denetlemesi gerektiğini seçin**|Güncelleştirme denetimleri için iki seçenek sunar:<br /><br /> -   **Uygulama başlatılmadan önce**. Güncelleştirme denetimi, uygulama yürütmeden önce gerçekleştirilir.<br />-   **Uygulama başladıktan sonra**. Güncelleştirme denetimi, uygulamanın ana formu başlatıldıktan sonra başlar ve uygulama bir sonraki sefer başlatıldığında çalışır.|  
@@ -199,7 +199,7 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
 
  **Uygulama başvurusu** sekmesi, bu konuda daha önce açıklanan **ad** sekmesi ile aynı alanları içerir. Bir özel durum aşağıdaki alandır.  
   
-|Arabirim Öğesi|Açıklama|  
+|Arabirim Öğesi|Description|  
 |----------------|-----------------|  
 |**Bildirim Seç**|Uygulama bildirimini seçmenizi sağlar. Uygulama bildirimini seçtiğinizde, bu sayfadaki diğer tüm alanlar doldurulur.|  
   

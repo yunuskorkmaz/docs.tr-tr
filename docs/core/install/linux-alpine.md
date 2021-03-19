@@ -4,12 +4,12 @@ description: .NET SDK ve .NET çalışma zamanının alp 'ye yüklenmesi için �
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 6adaa905c400b45526ebbc3d8e2606522863eec3
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: 19cae3c6237dc9f1a23087ec654e8f24ca13cd66
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970856"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653445"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-alpine"></a>.NET SDK 'sını veya .NET çalışma zamanını alp 'ye yükler
 
@@ -43,22 +43,36 @@ Aşağıdaki tabloda, şu anda desteklenen .NET sürümlerinin ve ' de desteklen
 
 Aşağıdaki .NET sürümleri artık desteklenmemektedir. Bunlara yönelik İndirilenler hala yayımlandı olarak kalmaya devam eder:
 
-- 3,0
-- 2.2
+- 3.0
+- 2,2
 - 2.0
 
 ## <a name="dependencies"></a>Bağımlılıklar
 
 .NET alp Linux 'ta aşağıdaki bağımlılıkların yüklü olmasını gerektirir:
 
+- bash
 - ICU-libs
 - krb5-libs
 - libgcc
+- libgdiplus (.NET uygulaması *System. Drawing. Common* derlemesini gerektiriyorsa)
 - libintl
 - libssl 1.1 (alp v 3.9 veya üzeri)
 - libssl 1.0 (alp v 3.8 veya Lower)
 - libstdc + +
 - zlib
+
+Gerekli gereksinimleri yüklemek için şu komutu çalıştırın:
+
+```bash
+apk add bash icu-libs krb5-libs libgcc libintl libssl1.1 libstdc++ zlib
+```
+
+**Libgdiplus**'yi yüklemek için bir depo belirtmeniz gerekebilir:
+
+```bash
+apk add libgdiplus --repository https://dl-3.alpinelinux.org/alpine/edge/testing/
+```
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

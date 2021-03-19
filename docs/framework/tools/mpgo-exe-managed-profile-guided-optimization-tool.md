@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Ngen.exe
 - Ngen.exe, profilers and native images
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
-ms.openlocfilehash: 050822d12ef4e0a7dfa752e4789f9861c4894cfa
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 0336c3a98fb93a3b3d3689048e5c313b811630d9
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259388"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653913"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (Yönetilen Profil Temelli İyileştirme Aracı)
 
@@ -24,7 +24,7 @@ Profil destekli en iyi duruma getirme süreci, eğitim senaryolarından veri top
 
 Ara Dil (IL) derlemeleri için başlatma süresi ve çalışma kümesi boyutuyla ilgili performansı sorunlarıyla karşılaştığınızda, just-in-time (JIT) (tam zamanında) derleme maliyetlerini ortadan kaldırmak ve kod paylaşımını kolaylaştırmak için ilk Ngen.exe'yi kullanmanızı öneririz. Ek geliştirmeler gerekiyorsa, uygulamanızı daha ileri düzeyde iyi hale getirmek etmek için Mpgo.exe kullanabilirsiniz. Performans artışlarını değerlendirmek için temel olarak, en iyi duruma getirilmemiş yerel görüntü derlemelerindeki performans verilerini kullanabilirsiniz. Mpgo.exe kullanıldığında soğuk başlangıç sürelerinde kısalma ve çalışma kümesi boyutunda azalma görülebilir. Mpgo.exe, en iyi duruma getirilmiş yerel görüntü derlemeleri oluşturmak için Ngen.exe'yi kullanan IL derlemelerine bilgi ekler. Daha fazla bilgi için bkz. .NET blogda [Masaüstü uygulamalarınız Için başlatma performansını iyileştirme](https://devblogs.microsoft.com/dotnet/improving-launch-performance-for-your-desktop-applications/) girişi.
 
-Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, yönetici kimlik bilgileriyle bir [Geliştirici komut satırı kabuğu](/visualstudio/ide/reference/command-prompt-powershell) kullanın.
+Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için yönetici kimlik bilgileriyle [Geliştirici komut istemi veya geliştirici PowerShell](/visualstudio/ide/reference/command-prompt-powershell) kullanın.
 
 Komut istemine aşağıdaki komutu girin:
 
@@ -47,7 +47,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 > [!NOTE]
 > `–Scenario`Ya da `–Import` gerekli bir komut olarak kullanabilirsiniz, ancak ikisini birden kullanamazsınız. Seçeneğini belirtirseniz gerekli parametrelerin hiçbiri kullanılmaz `–Reset` .
 
-|Gerekli parametre|Açıklama|
+|Gerekli parametre|Description|
 |------------------------|-----------------|
 |`-Scenario` \<*command*><br /><br /> —veya—<br /><br /> `-Scenario` \<*packageName*><br /><br /> -veya-<br /><br /> `-Import` \<*directory*>|Masaüstü uygulamaları için, `–Scenario` komut satırı bağımsız değişkenleri dahil olmak üzere iyileştirmek istediğiniz uygulamayı çalıştırmak için komutunu belirtmek üzere kullanın. Boşluklar içeren bir yol belirtiyorsa *komut* etrafında üç çift tırnak işareti kümesini kullanın; Örneğin: `mpgo.exe -scenario """C:\My App\myapp.exe""" -assemblylist """C:\My App\myapp.exe""" -outdir "C:\optimized files"` . Çift tırnak işareti kullanmayın; *komut* boşluk içeriyorsa, bunlar düzgün çalışmayacaktır.<br /><br /> -veya-<br /><br /> Windows 8. x Mağazası uygulamaları için `–Scenario` profil bilgilerini oluşturmak istediğiniz paketi belirtmek üzere kullanın. Tam paket adı yerine, paketin görünen adını veya paket aile adını belirtirseniz ve yalnızca tek bir eşleşme varsa Mpgo.exe sağladığınız adla eşleşen paketi seçer. Belirtilen adla eşleşen birden çok paket varsa, Mpgo.exe sizden bir paket seçmenizi ister.<br /><br /> —veya—<br /><br /> `-Import`' Deki derlemeleri iyileştirmek için önceden iyileştirilmiş derlemelerin en iyi duruma getirme verilerinin kullanılması gerektiğini belirtmek için kullanın `-AssemblyList` . *Dizin* , önceden iyileştirilmiş dosyaları içeren dizini belirtir. Veya içinde belirtilen derlemeler `–AssemblyList` , `–AssemblyListFile` içeri aktarılan dosyalardaki veriler kullanılarak en iyi duruma getirilecek derlemelerin yeni sürümleridir. Derlemelerin eski sürümlerine ait en iyi duruma getirme verilerini kullanmak, senaryoyu yeniden çalıştırmadan derlemelerin yeni sürümlerini en iyi duruma getirmenizi sağlar.  Ancak, içe aktarılan ve hedef derlemeler önemli ölçüde farklı kodlar içeriyorsa, en iyi duruma getirme verileri etkisiz olur. Veya içinde belirtilen derleme adları `–AssemblyList` , `–AssemblyListFile` Dizin tarafından belirtilen dizinde bulunmalıdır `–Import` . Boşluk içeren bir yol belirtiyorsa *Dizin* etrafında üç çift tırnak işareti kümesini kullanın.<br /><br /> Ya da parametresini belirtmeniz `–Scenario` gerekir `–Import` .|
 |`-OutDir` \<*directory*>|En iyi duruma getirilmiş derlemelerin yerleştirileceği dizin. Çıkış dizini klasöründe bir derleme zaten varsa, yeni bir kopya oluşturulur ve adına bir dizin numarası eklenir; Örneğin: *assemblyname*-1.exe. Boşluk içeren bir yol belirtiyorsa *Dizin* etrafında çift tırnak işareti kullanın.|
@@ -55,7 +55,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 |`-AppID` \<*appId*>|Belirtilen paketteki uygulamanın kimliği. Joker karakteri ( \* ) kullanırsanız, Mpgo.exe paketteki Appıds değerlerini numaralandırmaya çalışır ve geri dönecektir \<*package_family_name*> ! Uygulama başarısız olursa. Başında önek olarak ünlem işareti (!) konmuş bir dize belirtirseniz, Mpgo.exe paket aile adını sağlanan bağımsız değişkenle birleştirir.|
 |`-Timeout` \<*seconds*>|Uygulama gelmeden önce Windows 8. x Mağazası uygulamasının çalışmasına izin verme süresi.|
 
-|İsteğe bağlı parametre|Açıklama|
+|İsteğe bağlı parametre|Description|
 |------------------------|-----------------|
 |`-64bit`|64-bit sistemler için derlemeleri kullanır.  Derlemeniz kendisini 64-bit olarak bildiriyor olsa da 64-bit derlemeler için bu parametreyi belirtmelisiniz.|
 |`-ExeConfig` \<*filename*>|Senaryonuzun sürüm ve yükleyici bilgilerini sağlamak üzere kullandığı yapılandırma dosyasını belirtir.|

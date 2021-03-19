@@ -2,14 +2,14 @@
 title: Yöntemler-C# Kılavuzu
 description: Yöntemlere, yöntem parametrelerine ve yöntem dönüş değerlerine genel bakış
 ms.technology: csharp-fundamentals
-ms.date: 05/21/2018
+ms.date: 03/16/2021
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: ea07553d20ea6c18bac048a2e8d697f665bfb949
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 5d7f654ca268deff4a0c8e69b76e4d636d2f495e
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031682"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104652938"
 ---
 # <a name="methods-in-c"></a>İçindeki Yöntemler (C#)
 
@@ -49,7 +49,7 @@ Yöntemler *örnek* veya *statik* olabilir. Örnek yöntemini çağırmak için 
 
 Bir yöntemi çağırmak, bir alana erişme gibidir. Nesne adından sonra (bir örnek yöntemi arıyorsanız) veya tür adı (bir `static` yöntemi çağırırken), bir nokta, yöntemin adı ve parantez ekleyin. Bağımsız değişkenler parantez içinde listelenir ve virgülle ayrılır.
 
-Yöntem tanımı, gerekli parametrelerin adlarını ve türlerini belirtir. Bir çağıran yöntemini çağırdığında, her bir parametre için bağımsız değişken olarak adlandırılan somut değerler sağlar. Bağımsız değişkenlerin parametre türüyle uyumlu olması gerekir, ancak çağıran kodda bir tane kullanılırsa bağımsız değişken adının, yönteminde tanımlanan parametre ile aynı olması gerekmez. Aşağıdaki örnekte, `Square` yöntemi i adında tek bir parametre içerir `int` . *i* İlk yöntem çağrısı, `Square` yöntemi `int` *num*; ikinci, sayısal bir sabit ve üçüncü, bir ifade adlı bir değişken olarak geçirir.
+Yöntem tanımı, gerekli parametrelerin adlarını ve türlerini belirtir. Bir çağıran yöntemini çağırdığında, her bir parametre için bağımsız değişken olarak adlandırılan somut değerler sağlar. Bağımsız değişkenlerin parametre türüyle uyumlu olması gerekir, ancak çağıran kodda bir tane kullanılırsa bağımsız değişken adının, yönteminde tanımlanan parametre ile aynı olması gerekmez. Aşağıdaki örnekte, `Square` yöntemi i adında tek bir parametre içerir `int` .  İlk yöntem çağrısı, `Square` yöntemi `int` *num*; ikinci, sayısal bir sabit ve üçüncü, bir ifade adlı bir değişken olarak geçirir.
 
 [!code-csharp[csSnippets.Methods#74](../../samples/snippets/csharp/concepts/methods/params74.cs#74)]
 
@@ -246,7 +246,7 @@ Async özelliğini kullanarak, açık geri çağırmaları kullanmadan zaman uyu
 > [!NOTE]
 > Zaman uyumsuz bir yöntem, henüz tamamlanmamış olan ilk beklemiş nesneyle karşılaştığında çağırana döner veya zaman uyumsuz yöntemin sonuna kadar, hangisi önce gerçekleşiyorsa.
 
-Zaman uyumsuz bir yöntem,, veya dönüş türüne sahip olabilir <xref:System.Threading.Tasks.Task%601> <xref:System.Threading.Tasks.Task> `void` . `void`Dönüş türü öncelikle bir dönüş türünün gerekli olduğu olay işleyicilerini tanımlamak için kullanılır `void` . Döndüren zaman uyumsuz bir yöntem beklenemez `void` ve void döndüren bir yöntemi çağıran yöntemin aldığı özel durumları yakalayamaz. C# 7,0 ile başlayarak, zaman uyumsuz bir yöntem [herhangi bir görev benzeri dönüş türüne](./whats-new/csharp-7.md#generalized-async-return-types)sahip olabilir.
+Zaman uyumsuz bir yöntem genellikle, veya dönüş türüne <xref:System.Threading.Tasks.Task%601> sahiptir <xref:System.Threading.Tasks.Task> <xref:System.Collections.Generic.IAsyncEnumerable%601> `void` . `void`Dönüş türü öncelikle bir dönüş türünün gerekli olduğu olay işleyicilerini tanımlamak için kullanılır `void` . Döndüren zaman uyumsuz bir yöntem beklenemez `void` ve void döndüren bir yöntemi çağıran yöntemin aldığı özel durumları yakalayamaz. C# 7,0 ile başlayarak, zaman uyumsuz bir yöntem [herhangi bir görev benzeri dönüş türüne](./whats-new/csharp-7.md#generalized-async-return-types)sahip olabilir.
 
 Aşağıdaki örnekte, `DelayAsync` bir tamsayı döndüren Return ifadesine sahip zaman uyumsuz bir yöntemdir. Zaman uyumsuz bir yöntem olduğundan, metot bildiriminin dönüş türü olmalıdır `Task<int>` . Dönüş türü olduğu için `Task<int>` , `await` içindeki ifadesinin değerlendirmesi, `DoSomethingAsync` aşağıdaki deyimde gösterildiği gibi bir tamsayı oluşturur `int result = await delayTask` .
 
@@ -290,7 +290,7 @@ Daha fazla bilgi için bkz. [yineleyiciler](programming-guide/concepts/iterators
 - [Devralma](programming-guide/classes-and-structs/inheritance.md)
 - [Soyut ve Korumalı Sınıflar ve Sınıf Üyeleri](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
 - [params](language-reference/keywords/params.md)
-- [dışı](language-reference/keywords/out-parameter-modifier.md)
+- [out](language-reference/keywords/out-parameter-modifier.md)
 - [ref](language-reference/keywords/ref.md)
 - ['ndaki](language-reference/keywords/in-parameter-modifier.md)
-- [Parametreleri geçirme](programming-guide/classes-and-structs/passing-parameters.md)
+- [Parametreleri Geçirme](programming-guide/classes-and-structs/passing-parameters.md)

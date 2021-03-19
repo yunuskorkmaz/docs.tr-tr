@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Aximp.exe
 - Windows Forms ActiveX Control Importer
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
-ms.openlocfilehash: 4d3b5b1720f29c70b5276d1c79275d8c057b179a
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: e0ee504f87eba811dab3422a367a60e235b3c51b
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259479"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104652925"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Windows Forms ActiveX Denetim İçeri Aktarıcı)
 
@@ -24,7 +24,7 @@ ActiveX Denetimi Alma Programı, ActiveX denetimi için bir COM tür kitaplığ�
   
  ActiveX denetimini barındırmak için, öğesinden türetilen bir sarmalayıcı denetimi oluşturmanız gerekir <xref:System.Windows.Forms.AxHost> . Bu sarmalayıcı denetimi, arka plandaki ActiveX denetiminin bir örneğini içerir. ActiveX denetimiyle nasıl iletişim kuracağını bilir, fakat bir Windows Formları denetimi olarak görünür. Üretilen bu denetim ActiveX denetimini barındırır ve özelliklerini, yöntemlerini ve olaylarını üretilen denetiminkiler gibi sergiler.  
   
- Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, [geliştiriciler için bir komut satırı kabuğu](/visualstudio/ide/reference/command-prompt-powershell)kullanın.
+ Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için [Visual studio Geliştirici komut istemi veya Visual Studio Geliştirici PowerShell](/visualstudio/ide/reference/command-prompt-powershell)kullanın.
   
  Komut satırına şunu yazın:  
   
@@ -36,7 +36,7 @@ aximp [options]{file.dll | file.ocx}
   
 ## <a name="remarks"></a>Açıklamalar  
   
-|Bağımsız Değişken|Açıklama|  
+|Bağımsız Değişken|Description|  
 |--------------|-----------------|  
 |*dosyasýný*|Dönüştürülecek ActiveX denetimini içeren kaynak dosyanın adı. Dosya bağımsız değişkeni, .dll veya .ocx uzantısına sahip olmalıdır.|  
   

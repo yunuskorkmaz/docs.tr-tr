@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Runtime Metadata Export Tool
 - Winmdexp.exe
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
-ms.openlocfilehash: b9a30076fdd67a90dc3e605a8014ead88141f43b
-ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
+ms.openlocfilehash: 450ecf041d2be0ccc9f8b5ab4f1cb848bb4705c2
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103477543"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104652886"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows Çalışma Zamanı Meta Veri Dışarı Aktarma Aracı)
 
@@ -19,7 +19,7 @@ Windows Çalışma Zamanı meta veri verme aracı (Winmdexp.exe), .NET Framework
   
  C# için **Windows Mağazası** ve Visual Studio 2013 ya da Visual Studio 2012 Visual Basic içinde bulunan **Windows çalışma zamanı bileşen** şablonunu kullandığınızda, derleyici hedefi bir. winmdobj dosyasıdır ve sonraki derleme adımı,. winmdobj dosyasını bir. winmd dosyasına dışarı aktarmak için Winmdexp.exe çağırır. Bu, bir Windows Çalışma Zamanı bileşeni oluşturmak için önerilen yoldur. Oluşturma süreci üzerinde, Visual Studio'nun sağladığından daha fazla kontrol sahibi olmak istediğinizde doğrudan Winmdexp.exe'yi kullanın.  
   
- Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, [geliştiriciler için bir komut satırı kabuğu](/visualstudio/ide/reference/command-prompt-powershell)kullanın.
+ Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için [Visual studio Geliştirici komut istemi veya Visual Studio Geliştirici PowerShell](/visualstudio/ide/reference/command-prompt-powershell)kullanın.
   
  Komut satırına şunu yazın:  
   
@@ -31,7 +31,7 @@ winmdexp [options] winmdmodule
   
 ## <a name="parameters"></a>Parametreler  
   
-|Bağımsız değişken veya seçenek|Açıklama|  
+|Bağımsız değişken veya seçenek|Description|  
 |------------------------|-----------------|  
 |`winmdmodule`|Dışarı aktarılacak modülü (.winmdobj) belirtir. Yalnızca tek bir modüle izin verilir. Bu modülü oluşturmak için, `/target` hedefle birlikte derleyici seçeneğini kullanın `winmdobj` . Bkz: [-target: winmdobj (C# derleyici seçenekleri)](../../csharp/language-reference/compiler-options/output.md#targettype) veya [-target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
 |`/docfile:` `docfile`<br /><br /> `/d:` `docfile`|Winmdexp.exe'nin üreteceği çıktı XML belgesi dosyasını belirtir. .NET Framework 4,5 ' de, çıkış dosyası aslında giriş XML belge dosyası ile aynıdır.|  

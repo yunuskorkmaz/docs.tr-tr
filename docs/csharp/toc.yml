@@ -944,6 +944,8 @@ items:
               - name: Yerleşik başvuru türleri
                 displayName: 'object, delegate, dynamic, string'
                 href: language-reference/builtin-types/reference-types.md
+              - name: kaydet
+                href: language-reference/builtin-types/record.md
               - name: sınıf
                 href: language-reference/keywords/class.md
               - name: arabirim
@@ -1360,7 +1362,7 @@ items:
             displayName: 'ResponseFiles, @, NoLogo, nologo, NoConfig, noconfig'
             href: language-reference/compiler-options/miscellaneous.md
           - name: Gelişmiş seçenekler
-            displayName: 'MainEntryPoint, StartupObject, main, PdbFile, pdb, PathMap, pathmap, ErrorReport, errorreport, ApplicationConfiguration, appconfig, AdditionalLibPaths, lib, GenerateFullPaths, fullpath, PreferredUILang, preferreduilang, BaseAddress, baseaddress, ChecksumAlgorithm, checksumalgorithm, CodePage, codepage, Utf8Output, utf8output, FileAlignment, filealign, ErrorEndLocation, errorendlocation, NoStandardLib, nostdlib, SubsystemVersion, subsystemversion, ModuleAssemblyName, moduleassemblyname'
+            displayName: 'MainEntryPoint, StartupObject, main, PdbFile, pdb, PathMap, pathmap, ApplicationConfiguration, appconfig, AdditionalLibPaths, lib, GenerateFullPaths, fullpath, PreferredUILang, preferreduilang, BaseAddress, baseaddress, ChecksumAlgorithm, checksumalgorithm, CodePage, codepage, Utf8Output, utf8output, FileAlignment, filealign, ErrorEndLocation, errorendlocation, NoStandardLib, nostdlib, SubsystemVersion, subsystemversion, ModuleAssemblyName, moduleassemblyname'
             href: language-reference/compiler-options/advanced.md
       - name: Derleyici hataları
         href: language-reference/compiler-messages/index.md

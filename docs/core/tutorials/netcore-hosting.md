@@ -4,12 +4,12 @@ description: .NET Core çalışma zamanının nasıl çalıştığını denetlem
 author: mjrousos
 ms.topic: how-to
 ms.date: 12/21/2018
-ms.openlocfilehash: db458e9ebb0c6ad930f82e1d67619632a493ae3b
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: d7568c377e09b95fbc863610ec6bdc444f924976
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102604703"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104652717"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>.NET çalışma zamanını yerel kodunuzda denetlemek için özel bir .NET Core ana bilgisayarı yazma
 
@@ -84,7 +84,7 @@ Yerel ana bilgisayar artık yönetilen yöntemi çağırabilir ve istenen parame
 
 Aşağıdaki adımlar, `coreclrhost.h` yerel bir uygulamada .NET Core çalışma zamanını başlatmak ve yönetilen bir statik yönteme çağırmak için API 'nin nasıl kullanılacağını açıklamaktadır. Bu belgedeki kod parçacıkları Windows 'a özgü bazı API 'Ler kullanır, ancak [tam örnek ana bilgisayar](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithCoreClrHost) hem Windows hem de Linux kod yollarını gösterir.
 
-[UNIX CoreRun Host](https://github.com/dotnet/runtime/tree/master/src/coreclr/hosts/unixcorerun) , kullanarak daha karmaşık ve gerçek bir barındırma örneği göstermektedir `coreclrhost.h` .
+[Corerun Host](https://github.com/dotnet/runtime/tree/main/src/coreclr/hosts/corerun) , kullanarak daha karmaşık, gerçek dünyada ve platformlar arası bir örnek gösterir `coreclrhost.h` .
 
 ### <a name="step-1---find-and-load-coreclr"></a>1. adım-CoreCLR bulma ve yükleme
 

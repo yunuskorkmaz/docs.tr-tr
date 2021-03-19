@@ -25,6 +25,8 @@
           href: tutorials/sentiment-analysis-model-builder.md
         - name: Sistem durumu ihlallerini kategorilere ayırma (Model Oluşturucu ve çok sınıflı sınıflandırma)
           href: tutorials/health-violation-classification-model-builder.md
+        - name: Trafik işaretlerini algıla (model Oluşturucu & nesne algılama)
+          href: tutorials/object-detection-model-builder.md
     - name: API
       items:
         - name: Genel Bakış
@@ -115,6 +117,8 @@
               href: how-to-guides/serve-model-web-api-ml-net.md
             - name: Azure Machine Learning ONNX modelini kullanma
               href: /azure/machine-learning/how-to-use-automl-onnx-model-dotnet?toc=/dotnet/machine-learning/how-to-guides/toc.json&bc=/dotnet/machine-learning/how-to-guides/toc.json
+            - name: Apache Spark için .NET kullanarak toplu öngörülere yönelik tahminler yapın
+              href: ../spark/tutorials/ml-sentiment-analysis.md
 - name: Başvuru
   items:
     - name: ML.NET API Başvurusu

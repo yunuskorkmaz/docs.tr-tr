@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: ce3724271663163f26a34b6710b28503f7b0c52e
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: df329d121009e519d2e9efd77dc4d2fbc37d198e
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259934"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104654017"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Bildirim Üretme ve Düzenleme Aracı)
 
@@ -19,7 +19,7 @@ Bildirim Oluşturma ve Düzenleme Aracı (*Mage.exe*), uygulama ve dağıtım bi
 
 Ayrıca, *Mage.exe* yerine bir grafik uygulama *MageUI.exe* de kullanabilirsiniz. Daha fazla bilgi için bkz. [MageUI.exe (bildirim oluşturma ve düzenleme aracı, grafik istemci)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).
 
-Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, [geliştiriciler için bir komut satırı kabuğu](/visualstudio/ide/reference/command-prompt-powershell)kullanın.
+Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için [Visual studio Geliştirici komut istemi veya Visual Studio Geliştirici PowerShell](/visualstudio/ide/reference/command-prompt-powershell)kullanın.
 
 *Mage.exe* ve *MageUI.exe* Iki sürümü Visual Studio 'ya dahildir. Sürüm bilgilerini görmek için *MageUI.exe* çalıştırın, **Yardım**' ı seçin ve **hakkında**' yı seçin. Bu belgelerde, *Mage.exe* ve *MageUI.exe*'ın 4.0. x. x sürümü açıklanmaktadır.
 
@@ -46,7 +46,7 @@ Aşağıdaki tabloda *Mage.exe* tarafından desteklenen komutlar gösterilmekted
 
 Aşağıdaki tablo ve komutları tarafından desteklenen seçenekleri gösterir `-New` `-Update` :
 
-|Seçenekler|Varsayılan değer|Uygulanan Öğe|Açıklama|
+|Seçenekler|Varsayılan değer|Uygulanan Öğe|Description|
 |-------------|-------------------|----------------|-----------------|
 |**-a,-algoritması**|sha1RSA|Uygulama bildirimleri.<br /><br /> Dağıtım bildirimleri.|Bağımlılık özetlerinin oluşturması için kullanılan algoritmayı belirtir. Değer "sha256RSA" veya "sha1RSA" olmalıdır.<br /><br /> "-Update" seçeneğiyle kullanın. Bu seçenek "-Sign" seçeneğini kullanırken yok sayılır.|
 |**-APPC,-AppCodeBase**`manifestReference`||Dağıtım bildirimleri.|Uygulama bildirim dosyasına bir URL veya dosya yolu başvurusu ekler. Bu değer, uygulama bildiriminin tam yolu olmalıdır.|
@@ -77,7 +77,7 @@ Aşağıdaki tablo ve komutları tarafından desteklenen seçenekleri gösterir 
 
 Aşağıdaki tablo `-Sign` , tüm dosya türleri için uygulanan komut tarafından desteklenen seçenekleri gösterir.
 
-|Seçenekler|Açıklama|
+|Seçenekler|Description|
 |-------------|-----------------|
 |**-CF,-SertifikaDosyası**`filePath`|Bildirim imzalamak için bir dijital sertifikanın konumunu belirtir. Sertifika, kişisel bilgi değişimi (PFX) dosyaları için bir parola gerektiriyorsa, bu seçenek **-Password** seçeneğiyle birlikte kullanılabilir. .NET Framework 4,7 ' den başlayarak, dosya bir özel anahtar içermiyorsa, **-CryptoProvider** ve **-keycontainer** seçeneklerinin bir birleşimi gereklidir.<br/><br/>.NET Framework 4.6.2 ile başlayarak, bildirimleri CNG ve CAPı sertifikalarının yanı sıra *Mage.exe* işaretler.|
 |**-ch,-sunucunuzda certhash**`hashSignature`|İstemci bilgisayarın kişisel sertifika deposunda tutulan bir dijital sertifikanın karması. Bu, Windows Sertifikaları Konsolu içinde görüntülenen bir dijital sertifikanın Parmak İzi özelliğine karşılık gelir.<br /><br /> `hashSignature` büyük veya küçük harf olabilir ve tek bir dize olarak ya da her bir parmak Izine ait her sekizli, boşluklarla ve tüm parmak izinin tırnak işareti içine alınmış olarak sağlanabilir.|

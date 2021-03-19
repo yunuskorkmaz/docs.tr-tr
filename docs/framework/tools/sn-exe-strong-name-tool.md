@@ -11,12 +11,12 @@ helpviewer_keywords:
 - strong-named assemblies, signing files
 - key pairs for signing files
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
-ms.openlocfilehash: 76999ab305f9924bafaa95884b634e2a59251ff0
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: ca985d808da4f048376774f413cb779b967f3c2c
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259053"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653783"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Tanımlayıcı Ad Aracı)
 
@@ -27,7 +27,7 @@ Tanımlayıcı ad Aracı (Sn.exe), derlemelerin [güçlü adlarla](../../standar
 
  Tanımlayıcı adlandırma ve tanımlayıcı adlı derlemeler hakkında daha fazla bilgi için bkz. Strong [-adlandırılmış derlemeler](../../standard/assembly/strong-named.md) ve [nasıl yapılır: bir derlemeyi güçlü bir adla imzalama](../../standard/assembly/sign-strong-name.md).  
   
- Tanımlayıcı Ad aracı Visual Studio ile birlikte otomatik olarak yüklenir. Aracı başlatmak için, [geliştiriciler için bir komut satırı kabuğu](/visualstudio/ide/reference/command-prompt-powershell)kullanın.  
+ Tanımlayıcı Ad aracı Visual Studio ile birlikte otomatik olarak yüklenir. Aracı başlatmak için [Visual studio Geliştirici komut istemi veya Visual Studio Geliştirici PowerShell](/visualstudio/ide/reference/command-prompt-powershell)kullanın.  
 
 > [!NOTE]
 > 64 bit bilgisayarlarda, Visual Studio x64 Win64 komut Istemi kullanarak Visual Studio Geliştirici Komut İstemi ve 64 bit sürümünü kullanarak Sn.exe 32 bit sürümünü çalıştırın.

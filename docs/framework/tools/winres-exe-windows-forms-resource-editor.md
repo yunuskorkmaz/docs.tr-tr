@@ -12,18 +12,18 @@ helpviewer_keywords:
 - resx files
 - .resx files
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
-ms.openlocfilehash: 723daa7703828ea6eb103ce3b63164bf787cc10b
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 2d66fd0d395f9d03b34c09304ce01d9c859da532
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258669"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653354"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Windows kaynak yerelleştirme Düzenleyicisi)
 
 Windows kaynak yerelleştirme Düzenleyicisi Winres.exe, yerelleştirme uzmanlarının formlar tarafından kullanılan Kullanıcı arabirimi (UI) kaynaklarını yerelWindows Forms leştirebilmenizi sağlayan bir görsel düzen aracıdır. Winres.exe için girdi olarak kullanılan .resx veya .resources dosyaları Microsoft Visual Studio gibi bir görsel tasarım ortamı kullanarak oluşturulabilir. .NET Framework uygulamalarında kaynakları dağıtma hakkında daha fazla bilgi için bkz. [Masaüstü uygulamalarındaki kaynaklar](../resources/index.md).
 
-Winres.exe, Visual Studio ile birlikte yüklenir. Aracı çalıştırmak için, [geliştiriciler için bir komut satırı kabuğu](/visualstudio/ide/reference/command-prompt-powershell)kullanın.
+Winres.exe, Visual Studio ile birlikte yüklenir. Aracı çalıştırmak için [Visual studio Geliştirici komut istemi veya Visual Studio Geliştirici PowerShell](/visualstudio/ide/reference/command-prompt-powershell)kullanın.
 
 ## <a name="syntax"></a>Söz dizimi
 
@@ -34,7 +34,7 @@ winres /?
 
 ## <a name="arguments"></a>Bağımsız değişkenler
 
-|Bağımsız Değişken|Açıklama|
+|Bağımsız Değişken|Description|
 |--------------|-----------------|
 |`resourceFile`|Yerelleştirilecek kaynak dosyası. Bu dosya, Visual Studio tasarımcısı tarafından oluşturulan Windows Forms formu .resx veya .resources dosyası olmalıdır. Winres.exe genel .resx veya .resources dosyalarını açamaz.|
 

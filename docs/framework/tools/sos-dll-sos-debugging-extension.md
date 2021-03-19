@@ -7,16 +7,16 @@ helpviewer_keywords:
 - SOS debugging extensions
 - SOS.dll
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
-ms.openlocfilehash: 6a145b7de157269cc83ff1375386cff7f2fb30a1
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 33f75003e18abce95778ddea8e3163211e3bfa5c
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258835"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653640"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (SOS hata ayıklama uzantısı)
 
-SOS hata ayıklama uzantısı (SOS.dll), iç ortak dil çalışma zamanı (CLR) ortamı hakkında bilgi sağlayarak Visual Studio 'daki ve Windows hata ayıklayıcıda (WinDbg.exe) yönetilen programların hatalarını ayıklamanıza yardımcı olur. Bu araç, projenizde yönetilmeyen hata ayıklamanın etkin olmasını gerektirir. SOS.dll, .NET Framework ile birlikte otomatik olarak yüklenir. Visual Studio 'da SOS.dll kullanmak için, [Windows Sürücü Seti 'ni (WDK)](/windows-hardware/drivers/download-the-wdk)yüklemelisiniz.
+SOS hata ayıklama uzantısı (SOS.dll), iç ortak dil çalışma zamanı (CLR) ortamı hakkında bilgi sağlayarak Visual Studio 'daki ve Windows hata ayıklayıcıda (WinDbg.exe) yönetilen programların hatalarını ayıklamanıza yardımcı olur. Bu araç, projenizde yönetilmeyen hata ayıklamanın etkin olmasını gerektirir. SOS.dll, .NET Framework otomatik olarak yüklenir. Visual Studio 'da SOS.dll kullanmak için, [Windows Sürücü Seti 'ni (WDK)](/windows-hardware/drivers/download-the-wdk)yüklemelisiniz.
 
 ## <a name="syntax"></a>Syntax
 

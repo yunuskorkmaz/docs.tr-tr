@@ -12,12 +12,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: f66b21c7b912cdf1b5e77a91cecd38580e495a51
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: c01e577737d213c6ed9268133e31e105b5060f86
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259661"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653705"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Nasıl yapılır: bir derlemeyi güçlü bir adla Imzalama
 
@@ -51,7 +51,7 @@ Bir derlemeyi katı bir adla imzalamak için çeşitli yollar vardır:
   
 ### <a name="create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>Derleme bağlayıcı kullanarak tanımlayıcı ad ile derleme oluşturma ve imzalama  
   
-Bir [Geliştirici komut satırı kabuğu](/visualstudio/ide/reference/command-prompt-powershell)açın ve şu komutu girin:  
+[Visual studio Geliştirici komut istemi veya Visual Studio Geliştirici PowerShell](/visualstudio/ide/reference/command-prompt-powershell)'i açın ve aşağıdaki komutu girin:  
 
 **Al** **/Out:** \<*assemblyName*> *\<moduleName>* **/keyfile:**\<*keyfileName*>  
 

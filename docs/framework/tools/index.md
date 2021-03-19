@@ -8,12 +8,12 @@ helpviewer_keywords:
 - tools [.NET Framework]
 - running .NET Framework tools
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
-ms.openlocfilehash: 06311e977619418c5b3fb69be518353de51e6bd5
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 606ead6010ddfd223e4ed38e0271642d36079bcc
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258783"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104654102"
 ---
 # <a name="net-framework-tools"></a>.NET Framework araçları
 
@@ -23,7 +23,7 @@ Bu bölümde açıklanan .NET Framework Araçlarının çoğu Visual Studio ile 
 
 Komut satırından tüm araçları, derleme önbelleği Görüntüleyicisi (*Shfusion.dll*) hariç olacak şekilde çalıştırabilirsiniz. Dosya Gezgini 'nden *Shfusion.dll* erişmeniz gerekir.
   
-Komut satırı araçlarını çalıştırmanın en iyi yolu, Visual Studio 'nun yüklediği geliştirici kabukların birini kullanmaktır. Bu yardımcı programlar, yükleme klasörüne gitmek zorunda kalmadan araçları kolayca çalıştırmanıza olanak sağlar. Daha fazla bilgi için bkz. [Geliştirici komut satırı kabukları](/visualstudio/ide/reference/command-prompt-powershell).
+Komut satırı araçlarını çalıştırmanın en iyi yolu, Visual Studio 'nun yüklediği geliştirici kabukların birini kullanmaktır. Bu yardımcı programlar, yükleme klasörüne gitmek zorunda kalmadan araçları kolayca çalıştırmanıza olanak sağlar. Daha fazla bilgi için bkz. [Geliştirici komut istemi ve geliştirici PowerShell](/visualstudio/ide/reference/command-prompt-powershell).
 
 > [!NOTE]
 > Bazı araçlar, 32-bit bilgisayarlar veya 64-bit bilgisayarlar için özeldir. Bilgisayarınız için aracın uygun sürümünü çalıştırdığınızdan emin olun.

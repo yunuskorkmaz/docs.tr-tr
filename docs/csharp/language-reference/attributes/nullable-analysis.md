@@ -2,12 +2,12 @@
 title: 'C# ayrılmış öznitelikleri: Nullable statik analiz'
 ms.date: 02/02/2021
 description: Bu öznitelikler, null yapılabilir ve null yapılamayan başvuru türleri için daha iyi statik analiz sağlamak üzere derleyici tarafından yorumlanır.
-ms.openlocfilehash: 91bba16506e2e8bbac9fdef2d1c4badcf59c1546
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 50fb987ed5c8200e5418d2ea0211b32626538176
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100432575"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104652691"
 ---
 # <a name="reserved-attributes-contribute-to-the-compilers-null-state-static-analysis"></a>Ayrılmış öznitelikler derleyicinin null durum statik analizine katkıda bulunur
 
@@ -36,12 +36,12 @@ Değişkenlerin null durumu hakkında ek bilgileri ifade etmek için çeşitli �
 
 API 'si senaryosuyla gördüğünüz gibi API 'lerinizin kuralları büyük olasılıkla daha karmaşıktır `TryGetValue` . API 'lerinizin birçoğu, değişkenlerin ne zaman veya ne zaman oluşturulabileceğine ilişkin daha karmaşık kurallara sahiptir `null` . Bu durumlarda, bu kuralları ifade etmek için aşağıdaki özniteliklerden birini kullanacaksınız:
 
-- [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute): null yapılamayan bir giriş bağımsız değişkeni null olabilir.
-- [Disallownull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute): null olabilen bir giriş bağımsız değişkeni hiçbir şekilde null olmamalıdır.
+- [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute): null yapılamayan bir bağımsız değişken null olabilir.
+- [Disallownull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute): null olabilen bir bağımsız değişken asla null olmamalıdır.
 - [MaybeNull](xref:System.Diagnostics.CodeAnalysis.MaybeNullAttribute): null yapılamayan bir dönüş değeri null olabilir.
 - [NotNull](xref:System.Diagnostics.CodeAnalysis.NotNullAttribute): null olabilen bir dönüş değeri hiçbir şekilde null olmaz.
-- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): yöntem belirtilen değeri döndürdüğünde null yapılamayan bir giriş bağımsız değişkeni null olabilir `bool` .
-- [Notnullne zaman](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): yöntem belirtilen değeri döndürdüğünde null yapılabilir giriş bağımsız değişkeni null olmaz `bool` .
+- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): yöntem belirtilen değeri döndürdüğünde null yapılamayan bir bağımsız değişken null olabilir `bool` .
+- [Notnullne zaman](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): yöntem belirtilen değeri döndürdüğünde null yapılabilir bir bağımsız değişken null olmaz `bool` .
 - [Notnullifnotnull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): belirtilen parametrenin bağımsız değişkeni null değilse, dönüş değeri null olamaz.
 - Hayır: bir yöntem hiçbir [şekilde döndürmez.](xref:System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute) Diğer bir deyişle, her zaman bir özel durum oluşturur.
 - Yok [: ilişkili](xref:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute) `bool` parametre belirtilen değere sahipse, bu yöntem hiçbir şekilde döndürmez.
@@ -77,16 +77,16 @@ public string ScreenName
 private string _screenName = GenerateRandomScreenName();
 ```
 
-Bu `using` <xref:System.Diagnostics.CodeAnalysis> makalede ele alınan bu ve diğer özniteliklerin kullanılması için bir yönerge eklemeniz gerekebilir. Özniteliği, erişimciye değil, özelliğine uygulanır `set` . `AllowNull`Öznitelik, *ön koşulları* belirtir ve yalnızca girişler için geçerlidir. `get`Erişimcinin dönüş değeri var, ancak giriş bağımsız değişkeni yok. Bu nedenle, `AllowNull` öznitelik yalnızca erişimci için geçerlidir `set` .
+Bu `using` <xref:System.Diagnostics.CodeAnalysis> makalede ele alınan bu ve diğer özniteliklerin kullanılması için bir yönerge eklemeniz gerekebilir. Özniteliği, erişimciye değil, özelliğine uygulanır `set` . `AllowNull`Öznitelik, *ön koşulları* belirtir ve yalnızca bağımsız değişkenler için geçerlidir. `get`Erişimcinin dönüş değeri vardır, ancak hiçbir parametre yoktur. Bu nedenle, `AllowNull` öznitelik yalnızca erişimci için geçerlidir `set` .
 
 Yukarıdaki örnekte, `AllowNull` bir bağımsız değişkende özniteliği eklenirken ne aranacağı gösterilmektedir:
 
 1. Bu değişken için genel sözleşme bunun olmaması `null` , bu nedenle null atanamaz bir başvuru türü istemeniz gerekir.
-1. Giriş değişkeninin en yaygın kullanımları olmadıkları halde olması için senaryolar vardır `null` .
+1. En yaygın kullanım olmasa da parametre için senaryolar vardır `null` .
 
 Çoğu kez bu özniteliğe özellikler, veya `in` , `out` ve bağımsız değişkenler için ihtiyaç duyarsınız `ref` . `AllowNull`Özniteliği genellikle null olmayan ancak önkoşul olarak izin vermeniz gereken en iyi seçenektir `null` .
 
-Kullanma senaryolarıyla karşıtlık `DisallowNull` : Bu özniteliği, null atanabilir bir başvuru türünün giriş değişkeninin olmaması gerektiğini belirtmek için kullanırsınız `null` . `null`Varsayılan değer olan, ancak istemciler yalnızca null olmayan bir değere ayarlayabileceği bir özelliği düşünün. Aşağıdaki kodu inceleyin:
+Kullanma senaryolarıyla karşıtlık `DisallowNull` : Bu özniteliği, null yapılabilir bir başvuru türü bağımsız değişkeninin olmaması gerektiğini belirtmek için kullanırsınız `null` . `null`Varsayılan değer olan, ancak istemciler yalnızca null olmayan bir değere ayarlayabileceği bir özelliği düşünün. Aşağıdaki kodu inceleyin:
 
 ```csharp
 public string ReviewComment
@@ -118,8 +118,8 @@ Bu durumlar, başlangıçta *null yükümlülüğü* oluşturulan kodda ortaktı
 
 `AllowNull`Ve `DisallowNull` öznitelikleri, değişkenlerde önkoşulların Bu değişkenlerde null yapılabilir ek açıklamalarıyla eşleşmeyebilir belirtmenize olanak tanır. Bunlar, API 'nizin özellikleri hakkında daha ayrıntılı bilgi sağlar. Bu ek bilgiler, arayanların API 'nizi doğru şekilde kullanmasına yardımcı olur. Aşağıdaki öznitelikleri kullanarak önkoşulları belirtdüğünü unutmayın:
 
-- [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute): null yapılamayan bir giriş bağımsız değişkeni null olabilir.
-- [Disallownull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute): null olabilen bir giriş bağımsız değişkeni hiçbir şekilde null olmamalıdır.
+- [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute): null yapılamayan bir bağımsız değişken null olabilir.
+- [Disallownull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute): null olabilen bir bağımsız değişken asla null olmamalıdır.
 
 ## <a name="specify-post-conditions-maybenull-and-notnull"></a>Son koşulları belirtin: `MaybeNull` ve `NotNull`
 
@@ -146,7 +146,7 @@ public T Find<T>(IEnumerable<T> sequence, Func<T, bool> predicate)
 
 Yukarıdaki kod, arayanlara sözleşmenin null yapılamayan bir tür gösterdiği anlamına gelir, ancak *dönüş değeri gerçekten null olabilir.*  `MaybeNull`API 'niz null yapılamayan bir tür olması gerektiği zaman, genellikle genel bir tür parametresi olması durumunda özniteliği kullanın, ancak döndürülecek örnekler olabilir `null` .
 
-Bir dönüş değeri veya `out` ya da `ref` bağımsız değişkenin tür, null değer atanabilir bir başvuru türü olmasına rağmen null olmadığını belirtebilirsiniz. Bir dizinin birçok öğe tutabilecek kadar büyük olmasını sağlayan bir yöntemi düşünün. Giriş bağımsız değişkeninin kapasitesi yoksa, yordam yeni bir dizi ayırır ve var olan tüm öğeleri buna kopyalar. Giriş bağımsız değişkeni ise `null` , yordam yeni depolama alanı ayırır. Yeterli kapasite varsa, yordam hiçbir şey yapmaz:
+Bir dönüş değeri veya `out` ya da `ref` bağımsız değişkenin tür, null değer atanabilir bir başvuru türü olmasına rağmen null olmadığını belirtebilirsiniz. Bir dizinin birçok öğe tutabilecek kadar büyük olmasını sağlayan bir yöntemi düşünün. Bağımsız değişkenin kapasitesi yoksa, yordam yeni bir dizi ayırır ve var olan tüm öğeleri buna kopyalar. Bağımsız değişken ise `null` , yordam yeni depolama alanı ayırır. Yeterli kapasite varsa, yordam hiçbir şey yapmaz:
 
 ```csharp
 public void EnsureCapacity<T>(ref T[] storage, int size)
@@ -182,7 +182,7 @@ Büyük olasılıkla yöntemiyle ilgili bilgi sahibisiniz `string` <xref:System.
 bool IsNullOrEmpty([NotNullWhen(false)] string? value);
 ```
 
-Bu, derleyiciye dönüş değerinin null denetimleri gerektirmeyen herhangi bir kod olduğunu bildirir `false` . Özniteliğin eklenmesi, derleyicinin statik analizini, `IsNullOrEmpty` gerekli null denetimini yerine getiren bildirir: döndüğünde `false` , giriş bağımsız değişkeni değildir `null` .
+Bu, derleyiciye dönüş değerinin null denetimleri gerektirmeyen herhangi bir kod olduğunu bildirir `false` . Özniteliğin eklenmesi, derleyicinin statik analizini, `IsNullOrEmpty` gerekli null denetimini yerine getiren bildirir: döndüğünde `false` bağımsız değişken değildir `null` .
 
 ```csharp
 string? userInput = GetUserInput();
@@ -211,19 +211,19 @@ bool TryGetMessage(string key, [NotNullWhen(true)] out string? message)
 
 Önceki örnekte, değeri `message` döndüğünde null değil olarak bilinir `TryGetMessage` `true` . Kod tabanınızda benzer yöntemlere aynı şekilde açıklama eklenmelidir: bağımsız değişkenler olabilir `null` ve yöntem döndürüldüğünde null olmadığı bilinmektedir `true` .
 
-Ayrıca ihtiyacınız olabilecek bir son öznitelik vardır. Bazen bir dönüş değerinin null durumu, bir veya daha fazla giriş bağımsız değişkenlerinin null durumuna bağlıdır. Bu yöntemler, belirli giriş bağımsız değişkenleri olmadığında null olmayan bir değer döndürür `null` . Bu yöntemlere doğru şekilde açıklama eklemek için özniteliğini kullanırsınız `NotNullIfNotNull` . Aşağıdaki yöntemi göz önünde bulundurun:
+Ayrıca ihtiyacınız olabilecek bir son öznitelik vardır. Bazen bir dönüş değerinin null durumu bir veya daha fazla bağımsız değişkenin null durumuna bağlıdır. Bu yöntemler, belirli bağımsız değişkenler olmadığında null olmayan bir değer döndürür `null` . Bu yöntemlere doğru şekilde açıklama eklemek için özniteliğini kullanırsınız `NotNullIfNotNull` . Aşağıdaki yöntemi göz önünde bulundurun:
 
 ```csharp
 string GetTopLevelDomainFromFullUrl(string url);
 ```
 
-`url`Bağımsız değişken null değilse, çıktı değildir `null` . Null yapılabilir başvurular etkinleştirildikten sonra, bu imza doğru şekilde çalışarak API 'niz hiçbir şekilde null girişi kabul etmez. Ancak, giriş null ise, dönüş değeri de null olabilir. İmzayı şu kodla değiştirebilirsiniz:
+`url`Bağımsız değişken null değilse, çıktı değildir `null` . Null yapılabilir başvurular etkinleştirildikten sonra, bu imza doğru şekilde çalışarak API 'niz hiçbir şekilde null bir bağımsız değişken kabul etmez. Ancak bağımsız değişken null ise, dönüş değeri de null olabilir. İmzayı şu kodla değiştirebilirsiniz:
 
 ```csharp
 string? GetTopLevelDomainFromFullUrl(string? url);
 ```
 
-Bu da çalışır, ancak arayanlara çok fazla denetim uygulamak için zorlayacaktır `null` . Sözleşmenin dönüş değeri `null` yalnızca giriş bağımsız değişkeni olduğunda olacaktır `url` `null` . Bu sözleşmeyi ifade etmek için, aşağıdaki kodda gösterildiği gibi bu yönteme açıklama ekleyebilirsiniz:
+Bu da çalışır, ancak arayanlara çok fazla denetim uygulamak için zorlayacaktır `null` . Sözleşmenin dönüş değeri `null` yalnızca bağımsız değişken olduğunda olacaktır `url` `null` . Bu sözleşmeyi ifade etmek için, aşağıdaki kodda gösterildiği gibi bu yönteme açıklama ekleyebilirsiniz:
 
 ```csharp
 [return: NotNullIfNotNull("url")]
@@ -234,9 +234,9 @@ Dönüş değerine ve bağımsız değişkenine, her iki durumda da olabilecek �
 
 Şu öznitelikleri kullanarak koşullu Sonkoşulları belirtirsiniz:
 
-- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): yöntem belirtilen değeri döndürdüğünde null yapılamayan bir giriş bağımsız değişkeni null olabilir `bool` .
-- [Notnullne zaman](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): yöntem belirtilen değeri döndürdüğünde null yapılabilir giriş bağımsız değişkeni null olmaz `bool` .
-- [Notnullifnotnull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): belirtilen parametrenin giriş bağımsız değişkeni null değilse, dönüş değeri null olamaz.
+- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): yöntem belirtilen değeri döndürdüğünde null yapılamayan bir bağımsız değişken null olabilir `bool` .
+- [Notnullne zaman](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): yöntem belirtilen değeri döndürdüğünde null yapılabilir bir bağımsız değişken null olmaz `bool` .
+- [Notnullifnotnull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): belirtilen parametrenin bağımsız değişkeni null değilse, dönüş değeri null olamaz.
 
 ## <a name="constructor-helper-methods-membernotnull-and-membernotnullwhen"></a>Oluşturucu yardımcı yöntemleri: `MemberNotNull` ve `MemberNotNullWhen`
 
@@ -299,14 +299,14 @@ public void SetState(object containedField)
 
 Null yapılabilir başvuru türleri eklemek, olabilecek değişkenlere yönelik API beklentilerinizi tanımlayan bir başlangıç sözlüğü sağlar `null` . Öznitelikleri, değişkenlerin, ön koşullar ve Postconditions olarak null durumunu açıklamaya yönelik daha zengin bir sözlük sağlar. Bu öznitelikler beklentilerinizi daha net bir şekilde anlatır ve API 'lerinizi kullanan geliştiriciler için daha iyi bir deneyim sağlar.
 
-Bir null yapılabilir bağlam için kitaplıkları güncelleştirdiğinizde, API 'lerinizi kullanıcılarına doğru kullanım için bu öznitelikleri ekleyin. Bu öznitelikler, giriş bağımsız değişkenlerinin ve dönüş değerlerinin Null durumunu tam olarak açıklamanıza yardımcı olur:
+Bir null yapılabilir bağlam için kitaplıkları güncelleştirdiğinizde, API 'lerinizi kullanıcılarına doğru kullanım için bu öznitelikleri ekleyin. Bu öznitelikler, bağımsız değişkenlerin ve dönüş değerlerinin Null durumunu tam olarak açıklamanıza yardımcı olur:
 
-- [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute): null yapılamayan bir giriş bağımsız değişkeni null olabilir.
-- [Disallownull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute): null olabilen bir giriş bağımsız değişkeni hiçbir şekilde null olmamalıdır.
+- [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute): null yapılamayan bir bağımsız değişken null olabilir.
+- [Disallownull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute): null olabilen bir bağımsız değişken asla null olmamalıdır.
 - [MaybeNull](xref:System.Diagnostics.CodeAnalysis.MaybeNullAttribute): null yapılamayan bir dönüş değeri null olabilir.
 - [NotNull](xref:System.Diagnostics.CodeAnalysis.NotNullAttribute): null olabilen bir dönüş değeri hiçbir şekilde null olmaz.
-- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): yöntem belirtilen değeri döndürdüğünde null yapılamayan bir giriş bağımsız değişkeni null olabilir `bool` .
-- [Notnullne zaman](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): yöntem belirtilen değeri döndürdüğünde null yapılabilir giriş bağımsız değişkeni null olmaz `bool` .
-- [Notnullifnotnull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): belirtilen parametrenin giriş bağımsız değişkeni null değilse, dönüş değeri null olamaz.
+- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): yöntem belirtilen değeri döndürdüğünde null yapılamayan bir bağımsız değişken null olabilir `bool` .
+- [Notnullne zaman](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): yöntem belirtilen değeri döndürdüğünde null yapılabilir bir bağımsız değişken null olmaz `bool` .
+- [Notnullifnotnull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): belirtilen parametrenin bağımsız değişkeni null değilse, dönüş değeri null olamaz.
 - Hayır: bir yöntem hiçbir [şekilde döndürmez.](xref:System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute) Diğer bir deyişle, her zaman bir özel durum oluşturur.
 - Yok [: ilişkili](xref:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute) `bool` parametre belirtilen değere sahipse, bu yöntem hiçbir şekilde döndürmez.

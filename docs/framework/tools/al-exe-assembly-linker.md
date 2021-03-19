@@ -8,12 +8,12 @@ helpviewer_keywords:
 - modules, Assembly Linker
 - assembly manifest, Assembly Linker
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
-ms.openlocfilehash: 112e3880e76d4e81ab42cece592fcfd0f4dff312
-ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
+ms.openlocfilehash: dff7ab7ccc6543b1c13cb2b49cbdf712eba301ae
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103480796"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104652964"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Derleme Bağlayıcı)
 
@@ -22,7 +22,7 @@ Assembly Linker, modül veya kaynak dosyalar olan bir veya daha fazla dosyadan, 
 > [!NOTE]
 > Visual Studio 2008 ile başlayarak, C# ve Visual Basic derleyicileri otomatik olarak derlemeye bir Win32 bildirimi katıştırır. Daha fazla bilgi için bkz. [-win32manifest (C# derleyici seçenekleri)](../../csharp/language-reference/compiler-options/resources.md#win32manifest).
 
-Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, [geliştiriciler için bir komut satırı kabuğu](/visualstudio/ide/reference/command-prompt-powershell)kullanın.
+Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için [Visual studio Geliştirici komut istemi veya Visual Studio Geliştirici PowerShell](/visualstudio/ide/reference/command-prompt-powershell)kullanın.
 
 Komut satırına şunu yazın:
 
@@ -155,7 +155,7 @@ Aşağıdaki tabloda *Al.exe* tarafından oluşturulan hatalar listelenmektedir.
 |al1066|' Character ' karakterine komut satırında veya yanıt dosyalarında izin verilmiyor<br /><br /> Komut satırında veya bir dosyada geçersiz bir karakter bulundu.|
 |al1067|' filename ' bir metin dosyası yerine bir ikili dosyadır<br /><br /> Dosya yerine ikili biçimde.|
 |al1068|' ModuleName ' modülü bu derlemede zaten tanımlanmış. Her bağlantılı kaynak ve modülün benzersiz bir dosya adı olmalıdır.<br /><br /> Modül Bu derlemede birden çok kez geçiyor.|
-|al1069|Aynı kısa dosya adına sahip uzun bir dosya adı zaten varken ' filename ' kısa dosya adı oluşturulamıyor<br /><br /> Geçerli dosya, zaten var olan bir dosya adının kısa sürümü olan bir ada sahip. Örneğin, LongFileName.cs derleniyor ve sonra LongFi ~ 1. cs yeniden derlenerek buna benzer bir derleyici hatasına neden olur. Uzun adlara sahip derleyici çıkış dosyaları silinmişse, ancak benzer bağlayıcı dosyaları kaldığı takdirde bu hata oluşabilir.|
+|al1069|Aynı kısa dosya adına sahip uzun bir dosya adı zaten varken ' filename ' kısa dosya adı oluşturulamıyor<br /><br /> Geçerli dosya, zaten var olan bir dosya adının kısa sürümü olan bir ada sahip. Örneğin, LongFileName. cs derleniyor ve sonra LongFi ~ 1 adlı ad ile yeniden derlemeyi yapın. cs buna benzer bir derleyici hatasına neden olur. Uzun adlara sahip derleyici çıkış dosyaları silinmişse, ancak benzer bağlayıcı dosyaları kaldığı takdirde bu hata oluşabilir.|
 |al1070|Agnostic derlemesinde işlemciye özgü bir modül ' Module Name ' olamaz<br /><br /> **/Platform: agnostic** (veya **/Platform** belirtmezseniz) kullanarak oluşturuyorsanız, belirsiz olmayan bir modül ( **/addmodule** kullanarak) eklemeyi denerseniz bir hata oluşturulur. Bu, bir i386 obj dosyasını ia64 obj 'e bağlamayı deniyor gibidir.<br /><br /> Agkıtik olmayan modüllerin ana kaynağı C++ ' dır. Bir C++ modülüyle **/addmodule** kullanıyorsanız, uygun **/Platform** ayarını belirtmek için derleme betiklerinizi değiştirmeniz gerekebilir.|
 |al1072|' Module Name ' bütünleştirilmiş kodu ve modülü farklı işlemcileri hedefleyemez<br /><br /> Bir derlemeyi ve farklı işlemciler için hedeflenen modülü bağlayamazsınız çünkü sonucun tek bir işlemcide çalışması gerekir.|
 |al1073|Başvurulan ' Assembly ' derlemesi farklı bir işlemciyi hedefliyor<br /><br /> Farklı işlemciler için hedeflenen derlemeleri bağlayamazsınız çünkü sonucun tek bir işlemci üzerinde çalışması gerekir.|

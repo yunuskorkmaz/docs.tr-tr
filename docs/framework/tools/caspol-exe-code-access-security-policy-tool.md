@@ -16,12 +16,12 @@ helpviewer_keywords:
 - security policy [.NET Framework], modifying
 - manually editing security configuration files
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
-ms.openlocfilehash: d26443d07dd76d8d18e0d21112d1e40de5b83c83
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 402f9e2c4ca378af4b6ed0cc0c8c39e2d337876d
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258291"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104652899"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (Kod Erişimi Güvenliği İlke Aracı)
 
@@ -33,7 +33,7 @@ Kod Erişim Güvenliği (CAS) İlkesi aracı (Caspol.exe) kullanıcıların ve y
 > [!NOTE]
 > 64 bit bilgisayarlarda güvenlik ilkesi 64-bit ve 32-bit sürümleri içerir. İlkenizdeki değişikliklerin 32-bit ve 64-bit sürümlerine uygulandığından emin olmak için Caspol.exe'nin 32-bit ve 64-bit sürümlerinin ikisini de çalıştırın.  
   
- Kod erişimi güvenlik Ilkesi Aracı, .NET Framework ve Visual Studio ile otomatik olarak yüklenir. Caspol.exe, 64 bit sistemlerde%windir%\Microsoft.NET\Framework \\ *sürümünde* 32 bitlik sistemlerde veya%windir%\Microsoft.NET\Framework64 \\ *sürümünde* bulabilirsiniz. (Örneğin, konum% windir% \Microsoft.NET\Framework64\v4.030319\caspol.exe, 64 bitlik bir sistemde .NET Framework 4 ' dir.) Bilgisayarınız .NET Framework yan yana birden çok sürümünü çalıştırıyorsa aracın birden çok sürümü yüklü olabilir. Aracı yükleme dizininden çalıştırabilirsiniz. Ancak, yükleme klasörüne gitmeniz gerekmeyen [geliştiriciler için bir komut satırı kabuğu](/visualstudio/ide/reference/command-prompt-powershell)kullanmanızı öneririz.  
+ Kod erişimi güvenlik Ilkesi Aracı, .NET Framework ve Visual Studio ile otomatik olarak yüklenir. Caspol.exe, 64 bit sistemlerde%windir%\Microsoft.NET\Framework \\ *sürümünde* 32 bitlik sistemlerde veya%windir%\Microsoft.NET\Framework64 \\ *sürümünde* bulabilirsiniz. (Örneğin, konum% windir% \Microsoft.NET\Framework64\v4.030319\caspol.exe, 64 bitlik bir sistemde .NET Framework 4 ' dir.) Bilgisayarınız .NET Framework yan yana birden çok sürümünü çalıştırıyorsa aracın birden çok sürümü yüklü olabilir. Aracı yükleme dizininden çalıştırabilirsiniz. Ancak, yükleme klasörüne gitmeniz gerekmeyen [Visual studio Geliştirici komut istemi veya Visual Studio Geliştirici PowerShell](/visualstudio/ide/reference/command-prompt-powershell)'i kullanmanızı öneririz.  
   
  Komut satırına şunu yazın:  
   
@@ -81,7 +81,7 @@ caspol [options]
   
  Bir kod grubu için üyelik koşulunu belirten *msevk* bağımsız değişkeni **-addgroup** ve **-chggroup** seçenekleriyle kullanılabilir. Her *msevkıyat* bağımsız değişkeni bir .NET Framework sınıfı olarak uygulanır. *Msevkiyat* belirtmek için aşağıdakilerden birini kullanın.  
   
-|Bağımsız Değişken|Açıklama|  
+|Bağımsız Değişken|Description|  
 |--------------|-----------------|  
 |**-allcode**|Tüm kodu belirtir. Bu üyelik koşulu hakkında daha fazla bilgi için bkz <xref:System.Security.Policy.AllMembershipCondition?displayProperty=nameWithType> ..|  
 |**-Appdir**|Uygulama dizini belirtir. Üyelik koşulu olarak **– Appdir** belirtirseniz, kodun URL kanıtı bu kodun uygulama dizini kanıtını ile karşılaştırılır. Her iki kanıt değeri de aynıysa, bu üyelik koşulu gerçekleşmiş demektir. Bu üyelik koşulu hakkında daha fazla bilgi için bkz <xref:System.Security.Policy.ApplicationDirectoryMembershipCondition?displayProperty=nameWithType> ..|  
@@ -95,7 +95,7 @@ caspol [options]
   
  **– Addgroup** ve **– chggroup** seçenekleriyle kullanılabilecek *Flags* bağımsız değişkeni, aşağıdakilerden biri kullanılarak belirtilir.  
   
-|Bağımsız Değişken|Açıklama|  
+|Bağımsız Değişken|Description|  
 |--------------|-----------------|  
 |**-Açıklama** "*Açıklama*"|**– Addgroup** seçeneğiyle birlikte kullanılırsa, eklenecek bir kod grubunun açıklamasını belirtir. **– Chggroup** seçeneğiyle birlikte kullanılırsa, düzenlenecek bir kod grubunun açıklamasını belirtir. *Açıklama* bağımsız değişkeni çift tırnak içine alınmalıdır.|  
 |**-dışlamalı** {**on**&#124;**off**}|**Açık** olarak ayarlandığında, yalnızca eklediğiniz veya değiştirdiğiniz kod grubuyla ilişkili izin kümesinin, kod grubunun üyelik koşuluna uygun olduğu durumlarda dikkate alındığını gösterir. Bu seçenek **kapalı** olarak ayarlandığında Caspol.exe, ilke düzeyindeki tüm eşleşen kod gruplarının izin kümelerini dikkate alır.|  

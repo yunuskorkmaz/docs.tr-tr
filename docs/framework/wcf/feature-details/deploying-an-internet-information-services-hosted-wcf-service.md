@@ -3,12 +3,12 @@ title: Internet Information Services Tarafından Barındırılan Bir WCF Hizmeti
 description: IIS 'de barındırılan bir WCF hizmetini geliştirmek ve dağıtmak için gereken görevler hakkında bilgi edinin ve bileşen yüklemesinin doğrulanması ile başlar
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: ae01533efbeddba75efd159d187a896e2d97ec1a
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: a51cf09309a5a5c9ac8c8a4cc4fecc0a203b7b3c
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259895"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653484"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Internet Information Services Tarafından Barındırılan Bir WCF Hizmeti Dağıtma
 
@@ -36,7 +36,7 @@ Diğer işletim sistemlerine IIS yükleme yönergeleri [Windows Vista ve Windows
 
 .NET Framework yükleme işlemi, IIS makinede zaten mevcutsa WCF 'yi IIS ile otomatik olarak kaydeder. .NET Framework sonrasında IIS yüklenirse, WCF 'yi IIS ve ASP.NET 'e kaydetmek için ek bir adım gerekir. Bunu, işletim sisteminize bağlı olarak aşağıdaki şekilde yapabilirsiniz:
 
-- Windows 7 ve Windows Server 2003: WCF 'yi IIS ile kaydetmek için [ServiceModel Kayıt Aracı (ServiceModelReg.exe)](../servicemodelreg-exe.md) aracını kullanın. Bu aracı kullanmak için, `ServiceModelReg.exe /i /x` [Geliştirici komut satırı kabuğu](/visualstudio/ide/reference/command-prompt-powershell)' na girin.
+- Windows 7 ve Windows Server 2003: WCF 'yi IIS ile kaydetmek için [ServiceModel Kayıt Aracı (ServiceModelReg.exe)](../servicemodelreg-exe.md) aracını kullanın. Bu aracı kullanmak için `ServiceModelReg.exe /i /x` [visual Studio Geliştirici komut istemi veya Visual Studio Geliştirici PowerShell](/visualstudio/ide/reference/command-prompt-powershell)'e girin.
 
 - Windows 7: son olarak, ASP.NET sürüm 4 veya üstünü .NET Framework kullanacak şekilde yapılandırıldığını doğrulamanız gerekir. Bunu, ASPNET_Regiis aracını seçeneğiyle çalıştırarak yapabilirsiniz `–i` . Daha fazla bilgi için bkz. [ASP.NET IIS kayıt aracı](/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90)).
 

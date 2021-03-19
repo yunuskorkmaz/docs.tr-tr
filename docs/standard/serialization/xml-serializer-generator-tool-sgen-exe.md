@@ -3,12 +3,12 @@ title: XML Serileştiricisi Oluşturma Aracı (Sgen.exe)
 description: XML serileştirici Oluşturucusu, bir derlemedeki türler için bir XML serileştirme derlemesi oluşturur ve bu da XmlSerializer 'ın başlangıç performansını geliştirir.
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: b703f6755a4aab809c28f8009a0b358c2e6962bb
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 259f4cbafbe76d3645940ad425f41afb0b8cd304
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259856"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653822"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>XML Serileştiricisi Oluşturma Aracı (Sgen.exe)
 
@@ -23,7 +23,7 @@ sgen [options]
 ```
   
 > [!TIP]
-> .NET Framework araçlarının düzgün çalışması için,, `Path` `Include` ve `Lib` ortam değişkenlerinizi doğru şekilde ayarlamanız gerekir. Bu ortam değişkenlerini, \Bin dizininde bulunan SDKVars.bat çalıştırarak ayarlayın \<SDK> \\ \<version> . Her komut kabuğu'nu SDKVars.bat yürütülmelidir.
+> .NET Framework araçlarının düzgün çalışması için, [Visual studio Geliştirici komut istemi veya Visual Studio Geliştirici PowerShell](/visualstudio/ide/reference/command-prompt-powershell) 'i kullanmanız ya da `Path` ,, `Include` ve `Lib` ortam değişkenlerini doğru şekilde ayarlamanız gerekir. Bu ortam değişkenlerini ayarlamak için, *\<SDK> \\ \<version> \Bin* dizininde bulunan *SDKVars.bat* çalıştırın.
   
 ## <a name="parameters"></a>Parametreler  
   

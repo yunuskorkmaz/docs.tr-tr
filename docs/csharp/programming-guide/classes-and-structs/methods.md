@@ -6,12 +6,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: e8fad125167774d69344ebb9045a4ead84706bfb
-ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
+ms.openlocfilehash: d503c394e02f6f384e63de4fcd9cc8d2eec43da0
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/11/2021
-ms.locfileid: "103189974"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653510"
 ---
 # <a name="methods-c-programming-guide"></a>Yöntemler (C# Programlama Kılavuzu)
 
@@ -127,7 +127,7 @@ Async özelliğini kullanarak, açık geri çağırmaları kullanmadan zaman uyu
 > [!NOTE]
 > Zaman uyumsuz bir yöntem, henüz tamamlanmamış olan ilk beklemiş nesneyle karşılaştığında çağırana döner veya zaman uyumsuz yöntemin sonuna kadar, hangisi önce gerçekleşiyorsa.
 
-Zaman uyumsuz bir yöntem,, veya void dönüş türüne sahip olabilir <xref:System.Threading.Tasks.Task%601> <xref:System.Threading.Tasks.Task> . Void dönüş türü birincil olarak, bir void dönüş türünün gerekli olduğu olay işleyicilerini tanımlamak için kullanılır. Void döndüren zaman uyumsuz bir yöntem beklenemez ve void döndüren bir yöntemi çağıran yöntemin aldığı özel durumları yakalayamaz.
+Zaman uyumsuz bir yöntem genellikle, veya dönüş türüne <xref:System.Threading.Tasks.Task%601> sahiptir <xref:System.Threading.Tasks.Task> <xref:System.Collections.Generic.IAsyncEnumerable%601> `void` . `void`Dönüş türü öncelikle bir dönüş türünün gerekli olduğu olay işleyicilerini tanımlamak için kullanılır `void` . Döndüren zaman uyumsuz bir yöntem beklenemez `void` ve void döndüren bir yöntemi çağıran yöntemin aldığı özel durumları yakalayamaz. C# 7,0 ile başlayarak, zaman uyumsuz bir yöntem [herhangi bir görev benzeri dönüş türüne](../../whats-new/csharp-7.md#generalized-async-return-types)sahip olabilir.
 
 Aşağıdaki örnekte, `DelayAsync` dönüş türüne sahip bir zaman uyumsuz yöntem <xref:System.Threading.Tasks.Task%601> . `DelayAsync` , `return` bir tamsayı döndüren bir ifadeye sahiptir. Bu nedenle, öğesinin yöntem bildirimi `DelayAsync` bir dönüş türüne sahip olmalıdır `Task<int>` . Dönüş türü olduğu için `Task<int>` , `await` içindeki ifadesinin değerlendirmesi `DoSomethingAsync` aşağıdaki deyim tarafından gösterildiği gibi bir tamsayı oluşturur: `int result = await delayTask` .
 

@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-ms.openlocfilehash: 6c810a7116f88f2eb7fc25efbfc6f44b60f2768b
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 3b4bfa70ed91f98ae49b6df3a5a29f68b30f1e0a
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259131"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653861"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (İmza Aracı)
 
 İmza aracı, dosyaları dijital imzalayan, dosyalardaki imzaları doğrulayan ve dosyalara zaman damgası veren bir komut satırı aracıdır.  
   
- Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, [geliştiriciler için bir komut satırı kabuğu](/visualstudio/ide/reference/command-prompt-powershell)kullanın.
+ Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için [Visual studio Geliştirici komut istemi veya Visual Studio Geliştirici PowerShell](/visualstudio/ide/reference/command-prompt-powershell)kullanın.
 
 > [!Note]  
 > Windows 10 SDK, Windows 10 HLK, Windows 10 WDK ve Windows 10 ADK **derlemeleri 20236 ve üzeri** bir Özet algoritması belirtilmesini gerektirir. SignTool `sign` komutu, `/fd` sırasıyla imzalama ve zaman damgası oluşturma sırasında **Dosya Özet algoritması** ve `/td` **timestamp Özet algoritması** seçeneğinin belirtilmesini gerektirir. `/fd`İmza sırasında belirtilmemişse ve zaman damgası sırasında belirtilmemişse bir uyarı (hata kodu 0, başlangıçta) oluşturulur `/td` . SignTool 'in sonraki sürümlerinde, uyarı bir hata olur. SHA256 önerilir ve sektör tarafından SHA1 'den daha güvenli olarak değerlendirilir.  
@@ -32,7 +32,7 @@ signtool [command] [options] [file_name | ...]
   
 ## <a name="parameters"></a>Parametreler  
   
-|Bağımsız Değişken|Açıklama|  
+|Bağımsız Değişken|Description|  
 |--------------|-----------------|  
 |`command`|`catdb` `sign` `Timestamp` `Verify` Bir dosya üzerinde gerçekleştirilecek bir işlemi belirten dört komuttan biri (,, veya). Her bir komutun açıklaması için sonraki tabloya bakın.|  
 |`options`|Bir komutu değiştiren seçenek. Genel ve seçeneklere ek olarak `/q` `/v` , her komut benzersiz bir seçenek kümesini destekler.|  
@@ -49,7 +49,7 @@ signtool [command] [options] [file_name | ...]
   
  Aşağıdaki seçenekler bütün İmza Aracı komutlarına uygulanır.  
   
-|Genel seçenek|Açıklama|  
+|Genel seçenek|Description|  
 |-------------------|-----------------|  
 |**anahtarın**|Komut başarıyla çalışırsa bir çıktı görüntülemez ve komut başarısız olursa en az çıktı görüntüler.|  
 |**çıktıda**|Komutun başarıyla çalıştırıldığına veya başarısız olduğuna bakılmaksızın ayrıntılı çıktıyı görüntüler ve uyarı iletilerini görüntüler.|  
@@ -61,7 +61,7 @@ signtool [command] [options] [file_name | ...]
 
  Aşağıdaki tabloda, komutuyla kullanılabilecek seçenekler listelenmektedir `catdb` .  
   
-|Catdb seçeneği|Açıklama|  
+|Catdb seçeneği|Description|  
 |------------------|-----------------|  
 |`/d`|Varsayılan katalog veritabanının güncellendiğini belirtir. `/d`Ne ne de `/g` seçenek kullanılırsa, imza aracı sistem bileşenini ve sürücü veritabanını güncelleştirir.|  
 |`/g`*GUID*|Genel benzersiz tanımlayıcı *GUID 'si* tarafından tanımlanan katalog veritabanının güncellenmediğini belirtir.|  
@@ -74,7 +74,7 @@ signtool [command] [options] [file_name | ...]
 
  Aşağıdaki tabloda, komutuyla kullanılabilecek seçenekler listelenmektedir `sign` .  
   
-|imza komut seçenekleri|Açıklama|  
+|imza komut seçenekleri|Description|  
 |-------------------------|-----------------|  
 |`/a`|En iyi imzalama sertifikasını otomatik olarak seçer. İmza Aracı, tüm belirtilen koşulları karşılayan tüm geçerli sertifikaları bulur ve en uzun süre geçerli olanı seçer. Bu seçenek yoksa, İmza Aracı yalnızca geçerli bir imza sertifikası bulmayı bekler.|  
 |`/ac`  *dosyasýný*|*Dosyadan* imza bloğuna ek bir sertifika ekler.|  
@@ -113,7 +113,7 @@ signtool [command] [options] [file_name | ...]
 
  Aşağıdaki tabloda, komutuyla kullanılabilecek seçenekler listelenmektedir `TimeStamp` .  
   
-|Zaman Damgası seçeneği|Açıklama|  
+|Zaman Damgası seçeneği|Description|  
 |----------------------|-----------------|  
 |`/p7`|Zaman damgaları PKCS #7 dosyaları.|  
 |`/t`  *URL*|Zaman damgası sunucusunun URL'sini belirtir. Zaman damgası vurulan dosyanın önceden imzalanmış olması gerekir. Ya da `/t` `/tr` seçeneği gereklidir.|  
@@ -127,7 +127,7 @@ signtool [command] [options] [file_name | ...]
 
 ## <a name="verify-command-options"></a>Komut Seçeneklerini Doğrulama  
   
-|Seçeneği doğrulama|Açıklama|  
+|Seçeneği doğrulama|Description|  
 |-------------------|-----------------|  
 |`/a`|Tüm yöntemlerin dosyayı doğrulamak için kullanılabileceğini belirtir. İlk olarak, dosyanın bir katalogda imzalanmış olup olmadığını belirlemek için katalog veritabanları aranır. Dosya herhangi bir katalogda imzalanmamışsa, İmza Aracı dosyanın katıştırılmış imzasını doğrulamayı dener. Katalogda oturum açmış veya açmamış dosyalar doğrulanırken bu seçenek önerilir. Bu dosyaların örnekleri arasında Windows dosyaları veya sürücüleri yer alır.|  
 |`/ad`|Varsayılan katalog veritabanını kullanarak kataloğu bulur.|  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - list of assemblies in global assembly cache
 - Global Assembly Cache tool
 ms.assetid: c5f786a0-969b-4f14-9f02-e77c3384d9af
-ms.openlocfilehash: a40c371e6f95f6c90ecbfbf28183226632a58e5b
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 56b4750e6b9338a6c136c16505b5da94f51fd72f
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258318"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653601"
 ---
 # <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a>Nasıl yapılır: genel derleme önbelleğinin içeriğini görüntüleme
 
@@ -25,7 +25,7 @@ Genel bütünleştirilmiş kod önbelleğinin (GAC) içeriğini görüntülemek 
 
 ## <a name="view-the-assemblies-in-the-gac"></a>GAC 'de derlemeleri görüntüleme
 
-Genel derleme önbelleğindeki derlemelerin listesini görüntülemek için, [geliştiriciler için bir komut satırı kabuğu](/visualstudio/ide/reference/command-prompt-powershell)açın ve aşağıdaki komutu girin:
+Genel derleme önbelleğindeki derlemelerin listesini görüntülemek için [Visual studio Geliştirici komut istemi veya Visual Studio Geliştirici PowerShell](/visualstudio/ide/reference/command-prompt-powershell)'i açın ve aşağıdaki komutu girin:
 
 ```shell
 gacutil -l

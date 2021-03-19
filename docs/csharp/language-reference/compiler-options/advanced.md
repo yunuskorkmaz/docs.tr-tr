@@ -19,15 +19,14 @@ helpviewer_keywords:
 - PreferredUILang compiler option [C#]
 - SubsystemVersion compiler option [C#]
 - AdditionalLibPaths compiler option [C#]
-- ErrorReport compiler option [C#]
 - ApplicationConfiguration compiler option [C#]
 - ModuleAssemblyName compiler option [C#]
-ms.openlocfilehash: fd65cea6a5524425de5061a2d930181fcd081090
-ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
+ms.openlocfilehash: 47c84968682e056acdb73805807d907c6bb7c7ee
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103482957"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104652769"
 ---
 # <a name="advanced-c-compiler-options"></a>Gelişmiş C# derleyici seçenekleri
 
@@ -36,7 +35,6 @@ Aşağıdaki seçenekler gelişmiş senaryoları destekler. Yeni MSBuild sözdiz
 - **MainEntryPoint**, **StartupObject**  /  `-main` : giriş noktasını içeren türü belirtin.
 - **Pdbdosya**  /  `-pdb` : hata ayıklama bilgi dosyası adını belirtin.
 - **Pathmap**  /  `-pathmap` : derleyici tarafından çıkış kaynak yolu adları için bir eşleme belirtin.
-- **Errorreport**  /  `-errorreport` : iç derleyici hatalarının nasıl işleneceğini belirtin.
 - **ApplicationConfiguration**  /  `-appconfig` : derleme bağlama ayarlarını içeren bir uygulama yapılandırma dosyası belirtin.
 - **Adtionalyobpaths**  /  `-lib` : başvuruların içinde aranacağı ek dizinleri belirtin.
 - **GenerateFullPaths**  /  `-fullpath` : Derleyici tam nitelikli yollar oluşturur.
@@ -93,28 +91,6 @@ Derleyici, kaynak yolunu aşağıdaki nedenlerden dolayı çıktısına yazar:
 1. İsteğe bağlı bir parametreye uygulandığında kaynak yolu bir bağımsız değişken için değiştirilir <xref:System.Runtime.CompilerServices.CallerFilePathAttribute> .
 1. Kaynak yolu bir PDB dosyasına katıştırılır.
 1. PDB dosyasının yolu bir PE (taşınabilir yürütülebilir) dosyasına katıştırılır.
-
-## <a name="errorreport"></a>ErrorReport
-
-Bu seçenek, C# iç derleyici hatasını Microsoft 'a bildirmenin kolay bir yolunu sağlar.
-
-> [!NOTE]
-> Windows Vista ve Windows Server 2008 ' de, Visual Studio için yaptığınız hata raporlama ayarları Windows Hata Bildirimi (WER) ile yapılan ayarları geçersiz kılmaz. WER ayarları her zaman Visual Studio hata raporlama ayarlarından önceliklidir.
-
-```xml
-<ErrorReport>setting</ErrorReport>
-```
-
-Bağımsız değişkeni şunlardan biri olmalıdır:
-
-- **hiçbiri**: iç derleyici hataları hakkında raporlar toplanmayacak veya Microsoft 'a gönderilmez.
-- **istem**: iç derleyici hatası aldığınızda rapor göndermenizi ister. geliştirme ortamında bir uygulama derlerken varsayılan değer, **istem** varsayılandır.
-- **kuyruk**: hata raporunu sıralar. Yönetici kimlik bilgileriyle oturum açtığınızda, son oturum açtığınız zamandan bu yana tüm sorunları bildirebilirsiniz. Her üç günde birden çok kez rapor göndermeniz istenmez. komut satırında bir uygulama derlerken varsayılan **kuyruk** varsayılandır.
-- **Send**: iç derleyici hatalarının raporlarını otomatik olarak Microsoft 'a gönderir. Bu seçeneği etkinleştirmek için öncelikle Microsoft veri toplama ilkesini kabul etmelisiniz. Bir bilgisayarda ilk kez belirttiğinizde `<ErrorReport>send</ErrorReport>` , bir derleyici iletisi sizi Microsoft veri toplama ilkesini içeren bir Web sitesine başvuracaktır.
-
-Derleyici bir kaynak kodu dosyasını işleyeişce bir iç derleyici hatası (ıCE) oluşur. Bir buz gerçekleştiğinde, derleyici bir çıkış dosyası ya da kodunuzu onarmak için kullanabileceğiniz yararlı bir tanılama üretmez.
-
-**Errorreport**'U kullanarak C# EKIBINE Ice bilgileri sağlayabilirsiniz. Hata raporlarınız, gelecekteki derleyici sürümlerinin artırılmasına yardımcı olabilir. Kullanıcının raporları gönderebilme özelliği bilgisayar ve Kullanıcı ilkesi izinlerine bağlıdır.
 
 ## <a name="applicationconfiguration"></a>ApplicationConfiguration
 

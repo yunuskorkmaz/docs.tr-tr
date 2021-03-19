@@ -10,12 +10,12 @@ helpviewer_keywords:
 - locating assemblies
 - Assembly Binding Log Viewer
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
-ms.openlocfilehash: d9c028507c19ef8599e58b38dcdf15af2ede1dee
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 6d6482edd3b8c78ad230cfc34ed84bd5db712fde
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259284"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104654160"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Derleme Bağlaması Günlük Görüntüleyici)
 
@@ -24,7 +24,7 @@ Derleme Bağlama Kayıt Günlüğü Görüntüleyici derleme bağlamalar için a
 > [!IMPORTANT]
 > fuslogvw.exe'yi yönetici ayrıcalıklarıyla çalıştırmalısınız.
 
-Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, yönetici kimlik bilgilerine sahip [geliştiriciler için bir komut satırı kabuğu](/visualstudio/ide/reference/command-prompt-powershell) kullanın.
+Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, yönetici kimlik bilgileriyle [Visual studio Geliştirici komut istemi veya Visual Studio Geliştirici PowerShell](/visualstudio/ide/reference/command-prompt-powershell) kullanın.
 
 Komut isteminde aşağıdaki komutu girin:
 
