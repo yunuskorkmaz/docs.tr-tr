@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 277c3344-d0cb-431e-beae-eb1eeeba8eea
 topic_type:
 - apiref
-ms.openlocfilehash: 573326c05275192a7b324377237ba057fb54bffb
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 9bcebba724f7ebb405bb3d404f028e3ebca3e0d7
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99648746"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759318"
 ---
 # <a name="functionenter3withinfo-function"></a>FunctionEnter3WithInfo İşlevi
 
@@ -36,13 +36,9 @@ void __stdcall FunctionEnter3WithInfo(
   
 ## <a name="parameters"></a>Parametreler
 
-- `functionIDOrClientID`
+`functionIDOrClientID` 'ndaki Denetimin geçirildiği işlevin tanımlayıcısı.
 
-  \[' de] denetimin geçirildiği işlevin tanımlayıcısı.
-
-- `eltInfo`
-
-  \[' de] belirli bir yığın çerçevesi hakkındaki bilgileri temsil eden donuk bir işleyici. Bu tanıtıcı yalnızca geçirildiği geri arama sırasında geçerlidir.
+`eltInfo` 'ndaki Belirli bir yığın çerçevesi hakkındaki bilgileri temsil eden donuk bir tanıtıcı. Bu tanıtıcı yalnızca geçirildiği geri arama sırasında geçerlidir.
 
 ## <a name="remarks"></a>Açıklamalar  
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ea3dc625-5650-4bf4-8e67-01e42be065b1
 topic_type:
 - apiref
-ms.openlocfilehash: 3f0376e01263290596aa722b37f6a796ab919139
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 665684b08ec272f26a468f5635c40cf64ce4981a
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99706038"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760515"
 ---
 # <a name="icorprofilercallbackexceptionunwindfunctionenter-method"></a>ICorProfilerCallback::ExceptionUnwindFunctionEnter Yöntemi
 
@@ -36,9 +36,7 @@ HRESULT ExceptionUnwindFunctionEnter(
   
 ## <a name="parameters"></a>Parametreler
 
-- `functionId`
-
-  \[içinde] bozuk işlevin KIMLIĞI.
+`functionId` 'ndaki Kaçınılmakta olan işlevin KIMLIĞI.
 
 ## <a name="remarks"></a>Açıklamalar  
 

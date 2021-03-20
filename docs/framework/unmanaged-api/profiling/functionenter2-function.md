@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ce7a21f9-0ca3-4b92-bc4b-bb803cae3f51
 topic_type:
 - apiref
-ms.openlocfilehash: 8b8061b213d02efd845e214c1177db4e5351869b
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: f68aeffdd63222cd78d7dc361f09e0b4c3e5af51
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99788988"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759397"
 ---
 # <a name="functionenter2-function"></a>FunctionEnter2 İşlevi
 
@@ -39,25 +39,17 @@ void __stdcall FunctionEnter2 (
   
 ## <a name="parameters"></a>Parametreler
 
-- `funcId`
+`funcId` 'ndaki Denetimin geçirildiği işlevin tanımlayıcısı.
 
-  \[' de] denetimin geçirildiği işlevin tanımlayıcısı.
-
-- `clientData`
-
-  \[' de] profil oluşturucunun daha önce [FunctionIDMapper](functionidmapper-function.md) işlevini kullanarak belirttiği, yeniden eşlenen işlev tanımlayıcısı.
+`clientData` 'ndaki Profil oluşturucunun daha önce [FunctionIDMapper](functionidmapper-function.md) işlevini kullanarak belirttiği, yeniden eşlenen işlev tanımlayıcısı.
   
-- `func`
-
-  \[' de] `COR_PRF_FRAME_INFO` yığın çerçevesi hakkındaki bilgileri gösteren bir değer.
+`func` 'ndaki `COR_PRF_FRAME_INFO` Yığın çerçevesi hakkındaki bilgileri gösteren bir değer.
   
-  Profil Oluşturucu bunu [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) yönteminde yürütme motoruna geri geçirilebilecek donuk bir tanıtıcı olarak kabul etmelidir.  
+Profil Oluşturucu bunu [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) yönteminde yürütme motoruna geri geçirilebilecek donuk bir tanıtıcı olarak kabul etmelidir.  
   
-- `argumentInfo`
+`argumentInfo` 'ndaki İşlevin bağımsız değişkenlerinin belleğindeki konumları belirten [COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md) yapısına yönelik bir işaretçi.
 
-  \[' de] işlevin bağımsız değişkenlerinin belleğindeki konumları belirten [COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md) yapısına yönelik bir işaretçi.
-
-  Bağımsız değişken bilgilerine erişebilmek için `COR_PRF_ENABLE_FUNCTION_ARGS` bayrağın ayarlanması gerekir. Profil Oluşturucu, olay bayraklarını ayarlamak için [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) yöntemini kullanabilir.
+Bağımsız değişken bilgilerine erişebilmek için `COR_PRF_ENABLE_FUNCTION_ARGS` bayrağın ayarlanması gerekir. Profil Oluşturucu, olay bayraklarını ayarlamak için [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) yöntemini kullanabilir.
 
 ## <a name="remarks"></a>Açıklamalar  
 

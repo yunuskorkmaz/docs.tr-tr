@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 67e8209d-a0ca-4118-a6e6-c1ee0abc2221
 topic_type:
 - apiref
-ms.openlocfilehash: f771008b9aed9322f0c5fd279fa9dfb3086755e5
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 19737fc284d49c3690f66e4881450ca5803622e3
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99648025"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760613"
 ---
 # <a name="icorprofilercallbackassemblyloadstarted-method"></a>ICorProfilerCallback::AssemblyLoadStarted Yöntemi
 
@@ -36,9 +36,7 @@ HRESULT AssemblyLoadStarted(
   
 ## <a name="parameters"></a>Parametreler
 
-- `assemblyId`
-
-  \[' de] yüklenmekte olan derlemeyi tanımlar.
+`assemblyId` 'ndaki Yüklenmekte olan derlemeyi tanımlar.
 
 ## <a name="remarks"></a>Açıklamalar  
 

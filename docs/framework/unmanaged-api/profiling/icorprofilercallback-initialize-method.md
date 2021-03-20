@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dc5fab2a-4b45-4b12-8727-b89c9915f23e
 topic_type:
 - apiref
-ms.openlocfilehash: b3ff579dee384b331450aa54aace39890febfe30
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: c7138a1a39a1d32c751c205a86c00e6070a236b3
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99705947"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760424"
 ---
 # <a name="icorprofilercallbackinitialize-method"></a>ICorProfilerCallback::Initialize Yöntemi
 
@@ -36,9 +36,7 @@ HRESULT Initialize(
   
 ## <a name="parameters"></a>Parametreler
 
-- `pICorProfilerInfoUnk`
-
-  \[' in] bir [ICorProfilerInfo](icorprofilerinfo-interface.md) arabirim işaretçisi için sorgu gereken bir [IUnknown](/cpp/atl/iunknown) arabirimine yönelik işaretçi.  
+`pICorProfilerInfoUnk`'ndaki Profil oluşturucunun bir [ICorProfilerInfo](icorprofilerinfo-interface.md) arabirim işaretçisi için sorgulaması gereken bir [IUnknown](/cpp/atl/iunknown) arabirimine yönelik işaretçi.  
 
 ## <a name="remarks"></a>Açıklamalar  
 

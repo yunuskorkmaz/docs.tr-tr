@@ -12,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 96c502dba5b2807f9cd9c3c5cceb6b3b9985a406
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 7dca887f6d0ff5f9360b0edaa1568bc4b1bb42ac
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106962"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759774"
 ---
 # <a name="icorprofilerinfo10getlohobjectsizethreshold-method"></a>ICorProfilerInfo10:: GetLOHObjectSizeThreshold yöntemi
 
@@ -31,9 +31,7 @@ HRESULT GetLOHObjectSizeThreshold( [out] DWORD *pThreshold );
 
 ## <a name="parameters"></a>Parametreler
 
-- `pThreshold`
-
-  \[out] bayt cinsinden büyük nesne yığın eşiği.
+`pThreshold` dışı Bayt cinsinden büyük nesne yığın eşiği.
 
 ## <a name="remarks"></a>Açıklamalar
 

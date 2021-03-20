@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6e47b7e5-0335-4dd3-8c42-d3c07d62b102
 topic_type:
 - apiref
-ms.openlocfilehash: e9c72d481df7242f305b5efa6f747866984b31f7
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 91c0b6a600a1c7c12905a7a9817e6e7e9601c3c0
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99657846"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759475"
 ---
 # <a name="icorprofilercallbackassemblyunloadstarted-method"></a>ICorProfilerCallback::AssemblyUnloadStarted Yöntemi
 
@@ -36,9 +36,7 @@ HRESULT AssemblyUnloadStarted(
   
 ## <a name="parameters"></a>Parametreler
 
-- `assemblyId`
-
-  \[' de], kaldırılmakta olan derlemeyi tanımlar.
+`assemblyId` 'ndaki Kaldırılmakta olan derlemeyi tanımlar.
 
 ## <a name="remarks"></a>Açıklamalar  
 

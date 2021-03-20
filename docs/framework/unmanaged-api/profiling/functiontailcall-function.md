@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 66347e03-9a97-41e8-8f9d-89b80803f7b5
 topic_type:
 - apiref
-ms.openlocfilehash: 8da3efde7d925fdb02232ca98662f8d6a6fd0adf
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: aeb6e7dcbf52fc57ebb7b6dca22331c27cadc186
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99687317"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760034"
 ---
 # <a name="functiontailcall-function"></a>FunctionTailcall İşlevi
 
@@ -39,9 +39,7 @@ void __stdcall FunctionTailcall (
   
 ## <a name="parameters"></a>Parametreler
 
-- `funcID`
-
-  \[' de] Şu anda yürütülmekte olan işlevin bir kuyruk çağrısını yapmak üzere olan tanımlayıcısı.
+`funcID` 'ndaki Bir tail çağrısı yapmak üzere olan şu anda yürütülmekte olan işlevin tanımlayıcısı.
 
 ## <a name="remarks"></a>Açıklamalar  
 

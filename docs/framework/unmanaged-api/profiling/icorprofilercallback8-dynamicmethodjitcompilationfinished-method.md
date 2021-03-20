@@ -9,12 +9,12 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-ms.openlocfilehash: d076307b9e57c27753297cad8eebc1b9aa9433f6
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: d610024af9959790b37a724c2bdbf4dabc89dd20
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99781720"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759826"
 ---
 # <a name="icorprofilercallback8dynamicmethodjitcompilationfinished-method"></a>ICorProfilerCallback8::D ynamicMethodJITCompilationFinished yöntemi
 
@@ -34,13 +34,12 @@ HRESULT DynamicMethodJITCompilationFinished(
   
 ## <a name="parameters"></a>Parametreler  
 
-'ndaki `functionId`  
-JıT derlemesinin başlatıldığı bellek içi işlevin tanımlayıcısı.
+`functionId`  
+'ndaki JıT derlemesinin başlatıldığı bellek içi işlevin tanımlayıcısı.
 
-[in] `hrStatus` JıT derlemesinin başarılı olup olmadığını gösteren bir değer.
+`hrStatus` 'ndaki JıT derlemesinin başarılı olup olmadığını gösteren bir değer.
 
-[in] `fIsSafeToBlock` 
- `true` Bu engellemenin, çalışma zamanının çağıran iş parçacığının bu geri aramadan dönmesini beklemesine neden olabileceğini göstermek için; `false`engellemenin çalışma zamanının işlemini etkilemeyeceğini göstermek için.  
+`fIsSafeToBlock` [in] `true` Bu engellemenin, çalışma zamanının çağıran iş parçacığının bu geri aramadan dönmesini beklemesine neden olabileceğini göstermek için; `false` engellemenin çalışma zamanının işlemini etkilemeyeceğini göstermek için.  
 
 ## <a name="remarks"></a>Açıklamalar  
 

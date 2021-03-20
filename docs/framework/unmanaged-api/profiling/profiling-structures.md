@@ -7,12 +7,12 @@ helpviewer_keywords:
 - unmanaged structures [.NET Framework], profiling
 - structures [.NET Framework profiling]
 ms.assetid: 750385f2-f365-41b1-939f-ca2f2ff9b466
-ms.openlocfilehash: 7a76c49aaa301ba45c41fb2eb3f7770539dcc6c0
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 176830cac519f22864ba004b176cb575d80e50e2
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99798894"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760242"
 ---
 # <a name="profiling-structures"></a>Profil Oluşturma Yapıları
 
@@ -40,6 +40,12 @@ Bu bölümde profil oluşturma API 'sinin kullandığı yönetilmeyen yapılar a
   
  [COR_PRF_GC_GENERATION_RANGE Yapısı](cor-prf-gc-generation-range-structure.md)  
  Çöp toplama işlemi yapılmakta olan belleğin bir aralığını (yani bloğunu) açıklar.  
+
+ [COR_PRF_EVENTPIPE_PROVIDER_CONFIG yapısı](cor-prf-eventpipe-provider-config-structure.md) Bir EventPipe sağlayıcısını yapılandırmak için gereken alanları açıklar.
+
+ [COR_PRF_EVENTPIPE_PARAM_DESC yapısı](cor-prf-eventpipe-param-desc-structure.md) Bir EventPipe olayının parametre adını ve türünü açıklar.
+
+ [COR_PRF_EVENT_DATA yapısı](cor-prf-event-data-structure.md) Yazılan bir EventPipe olayının olay verilerini açıklar.
   
 ## <a name="related-sections"></a>İlgili Bölümler  
 

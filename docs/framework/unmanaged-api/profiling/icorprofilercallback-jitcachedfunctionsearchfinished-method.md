@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3c325c82-cddd-4b00-b3da-e450c36abf62
 topic_type:
 - apiref
-ms.openlocfilehash: b5025a7d33800047bb6244b82308ba2ab158cea7
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 3dc655c2a049a2cac08f6e4856aab98ee690b9df
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99705856"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759982"
 ---
 # <a name="icorprofilercallbackjitcachedfunctionsearchfinished-method"></a>ICorProfilerCallback::JITCachedFunctionSearchFinished Yöntemi
 
@@ -37,13 +37,9 @@ HRESULT JITCachedFunctionSearchFinished(
   
 ## <a name="parameters"></a>Parametreler
 
-- `functionId`
+`functionId` 'ndaki Aramanın gerçekleştirildiği işlevin KIMLIĞI.
 
-  \[' de] aramanın gerçekleştirildiği işlevin KIMLIĞI.
-
-- `result`
-
-  \[içinde] aramanın sonucunu gösteren [COR_PRF_JIT_CACHE](cor-prf-jit-cache-enumeration.md) numaralandırması değeri.
+`result` 'ndaki Aramanın sonucunu gösteren [COR_PRF_JIT_CACHE](cor-prf-jit-cache-enumeration.md) numaralandırması değeri.
 
 ## <a name="remarks"></a>Açıklamalar  
 

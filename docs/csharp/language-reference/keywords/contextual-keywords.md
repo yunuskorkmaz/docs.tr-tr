@@ -5,12 +5,12 @@ ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: 6f3c1e2d4d6a0b8e794863f2c0b4fd947ac12836
-ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
+ms.openlocfilehash: 917932e208851763cc75244e08b081a7acf1f3a7
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/11/2021
-ms.locfileid: "103190092"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759618"
 ---
 # <a name="contextual-keywords-c-reference"></a>Bağlamsal Anahtar Sözcükler (C# Başvurusu)
 
@@ -25,6 +25,8 @@ Bağlam anahtar sözcüğü kodda belirli bir anlamı sağlamak için kullanıl�
 |[Al](./get.md)|Bir özellik veya Dizin Oluşturucu için bir erişimci yöntemi tanımlar.|  
 |[Genel](../operators/namespace-alias-qualifier.md)|Genel ad alanının diğer adı, aksi durumda adlandırılmamış.|  
 |[init](./init.md)|Bir özellik veya Dizin Oluşturucu için bir erişimci yöntemi tanımlar.|  
+|[nint](../builtin-types/nint-nuint.md)|Yerel boyutlu bir tamsayı veri türünü tanımlar.|  
+|[nuınt](../builtin-types/nint-nuint.md)|Yerel boyutlu işaretsiz bir tamsayı veri türü tanımlar.|  
 |[kısmi](./partial-type.md)|Aynı derleme birimi boyunca kısmi sınıfları, yapıları ve arabirimleri tanımlar.|  
 |[temizlenmesine](./remove.md)|İstemci kodu olaydan aboneliği kaldırılırken çağrılan özel bir olay erişimcisi tanımlar.|  
 |[kurmak](./set.md)|Bir özellik veya Dizin Oluşturucu için bir erişimci yöntemi tanımlar.|  

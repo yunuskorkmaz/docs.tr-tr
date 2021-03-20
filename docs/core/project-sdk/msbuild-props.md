@@ -4,12 +4,12 @@ description: MSBuild özellikleri ve .NET SDK tarafından anlaşılan öğeler i
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 18f2be734fa10e2fd4977166ab4334332b120a91
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: f6a49a0040bcb38dbaf433f6ea53bb8aad24c65b
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102604768"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759891"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>.NET SDK projeleri için MSBuild başvurusu
 
@@ -19,6 +19,8 @@ Bu sayfa, MSBuild özelliklerine ve .NET projelerini yapılandırmak için kulla
 > Bu sayfa devam eden bir çalışmadır ve .NET SDK için tüm kullanışlı MSBuild özelliklerini listelemez. Ortak MSBuild özelliklerinin bir listesi için bkz. [Ortak MSBuild özellikleri](/visualstudio/msbuild/common-msbuild-project-properties).
 
 ## <a name="framework-properties"></a>Çerçeve özellikleri
+
+Aşağıdaki MSBuild özellikleri bu bölümde belgelenmiştir:
 
 - [TargetFramework](#targetframework)
 - [Targetçerçeveler](#targetframeworks)
@@ -79,45 +81,18 @@ Daha fazla bilgi için bkz. [SDK stili projelerde hedef çerçeveler](../../stan
 </PropertyGroup>
 ```
 
-## <a name="publish-properties-items-and-metadata"></a>Özellikleri, öğeleri ve meta verileri Yayımla
+## <a name="publish-related-properties"></a>Yayınla ilgili özellikler
+
+Aşağıdaki MSBuild özellikleri bu bölümde belgelenmiştir:
 
 - [Appendruntimeıdentifiertooutputpath](#appendruntimeidentifiertooutputpath)
 - [AppendTargetFrameworkToOutputPath](#appendtargetframeworktooutputpath)
 - [CopyLocalLockFileAssemblies](#copylocallockfileassemblies)
-- [CopyToPublishDirectory](#copytopublishdirectory)
-- [Tabanlarını](#linkbase)
 - [PreserveCompilationContext](#preservecompilationcontext)
 - [PreserveCompilationReferences](#preservecompilationreferences)
 - [Runtimeıdentifier](#runtimeidentifier)
 - [Runtimetanımlayıcıtanımlayıcıları](#runtimeidentifiers)
-- [TrimmerRootAssembly](#trimmerrootassembly)
 - [UseAppHost](#useapphost)
-
-### <a name="copytopublishdirectory"></a>CopyToPublishDirectory
-
-`CopyToPublishDirectory`MSBuild öğesindeki meta veriler, öğe yayımlama dizinine kopyalandığında denetler. İzin verilen değerler `PreserveNewest` , yalnızca değiştirilirse öğeyi kopyalayan, `Always` her zaman öğeyi kopyalayan ve öğeyi `Never` hiçbir zaman kopyalamamış olan değerlerdir. Bir performans açısından, `PreserveNewest` artımlı bir derlemeyi sağladığından tercih edilir.
-
-```xml
-<ItemGroup>
-  <None Update="appsettings.Development.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
-</ItemGroup>
-```
-
-### <a name="linkbase"></a>Tabanlarını
-
-Proje dizini ve alt dizinleri dışında olan bir öğe için, Yayımla hedefi öğenin [bağlantı meta verilerini](/visualstudio/msbuild/common-msbuild-item-metadata) kullanarak öğenin nereye kopyalanacağını tespit edin. `Link` Ayrıca, proje ağacının dışındaki öğelerin Visual Studio 'nun Çözüm Gezgini penceresinde nasıl görüntüleneceğini belirler.
-
-`Link`Proje konisi dışında bir öğe için belirtilmemişse, varsayılan olarak öğesine ayarlanır `%(LinkBase)\%(RecursiveDir)%(Filename)%(Extension)` . `LinkBase` Proje koni dışındaki öğeler için bir senerişilebilir taban klasörü belirtmenizi sağlar. Taban klasörü altındaki klasör hiyerarşisi aracılığıyla korunur `RecursiveDir` . `LinkBase`Belirtilmemişse, `Link` yolundan çıkarılır.
-
-```xml
-<ItemGroup>
-  <Content Include="..\Extras\**\*.cs" LinkBase="Shared"/>
-</ItemGroup>
-```
-
-Aşağıdaki görüntüde, önceki öğe ile eklenen bir dosyanın `Include` Çözüm Gezgini ' de nasıl görüntüleyeceği gösterilmektedir.
-
-:::image type="content" source="media/solution-explorer-linkbase.png" alt-text="Çözüm Gezgini bağlantı tabanının meta verileri içeren öğe gösteriliyor.":::
 
 ### <a name="appendtargetframeworktooutputpath"></a>AppendTargetFrameworkToOutputPath
 
@@ -203,18 +178,6 @@ Daha fazla bilgi için bkz. [Razor SDK özellikleri](/aspnet/core/razor-pages/sd
 </PropertyGroup>
 ```
 
-### <a name="trimmerrootassembly"></a>TrimmerRootAssembly
-
-`TrimmerRootAssembly`Öğe, bir derlemeyi [*kırpmanıza*](../deploying/trim-self-contained.md)dışlamanızı sağlar. Kırpma, çalışma zamanının kullanılmayan parçalarını paketlenmiş bir uygulamadan kaldırma işlemidir. Bazı durumlarda, kırpma gerekli başvuruları yanlış kaldırabilir.
-
-Aşağıdaki XML, `System.Security` derlemeyi kırpmaya dışlar.
-
-```xml
-<ItemGroup>
-  <TrimmerRootAssembly Include="System.Security" />
-</ItemGroup>
-```
-
 ### <a name="useapphost"></a>UseAppHost
 
 `UseAppHost`Özelliği, bir dağıtım için yerel yürütülebilir dosyanın oluşturulup oluşturulmayacağını denetler. Kendi kendine kapsanan dağıtımlar için yerel bir yürütülebilir dosya gereklidir.
@@ -229,14 +192,16 @@ Aşağıdaki XML, `System.Security` derlemeyi kırpmaya dışlar.
 
 Dağıtım hakkında daha fazla bilgi için bkz. [.NET uygulama dağıtımı](../deploying/index.md).
 
-## <a name="compile-properties"></a>Derleme özellikleri
+## <a name="compilation-related-properties"></a>Derlemeden ilgili özellikler
+
+Aşağıdaki MSBuild özellikleri bu bölümde belgelenmiştir:
 
 - [Embeddedresourceusebağımlıtuponconvention](#embeddedresourceusedependentuponconvention)
 - [LangVersion](#langversion)
 
 ### <a name="embeddedresourceusedependentuponconvention"></a>Embeddedresourceusebağımlıtuponconvention
 
-Özelliği, kaynak dosyaları `EmbeddedResourceUseDependentUponConvention` ile birlikte bulunan kaynak dosyalardaki tür bilgilerden kaynak bildirim dosyası adlarının oluşturulup oluşturulmayacağını tanımlar. Örneğin, *Form1. resx* , *Form1.cs* ile aynı klasörssa ve olarak `EmbeddedResourceUseDependentUponConvention` ayarlanırsa `true` , oluşturulan *. resources* dosyası, *Form1.cs* içinde tanımlanan ilk türden alır. Örneğin, `MyNamespace.Form1` *Form1.cs* içinde tanımlanan ilk tür ise, oluşturulan dosya adı *MyNamespace. Form1. resources* olur.
+Özelliği, kaynak dosyaları `EmbeddedResourceUseDependentUponConvention` ile birlikte bulunan kaynak dosyalardaki tür bilgilerden kaynak bildirim dosyası adlarının oluşturulup oluşturulmayacağını tanımlar. Örneğin, *Form1. resx* *Form1. cs* ile aynı klasörssa ve olarak `EmbeddedResourceUseDependentUponConvention` ayarlanırsa `true` , oluşturulan *. resources* dosyası, adını *Form1. cs* dosyasında tanımlanan ilk türden alır. Örneğin, `MyNamespace.Form1` *Form1. cs* içinde tanımlanan ilk tür ise, oluşturulan dosya adı *MyNamespace. Form1. resources* olur.
 
 > [!NOTE]
 > `LogicalName`,, `ManifestResourceName` Veya `DependentUpon` meta veriler bir öğe için belirtilmişse `EmbeddedResource` , bu kaynak dosyası için oluşturulan bildirim dosyası adı bu meta verileri temel alır.
@@ -262,6 +227,8 @@ Varsayılan olarak, yeni bir .NET projesinde, bu özellik olarak ayarlanır `tru
 Daha fazla bilgi için bkz. [C# dil sürümü oluşturma](../../csharp/language-reference/configure-language-version.md#override-a-default).
 
 ## <a name="default-item-inclusion-properties"></a>Varsayılan öğe içerme özellikleri
+
+Aşağıdaki MSBuild özellikleri bu bölümde belgelenmiştir:
 
 - [DefaultExcludesInProjectFolder](#defaultexcludesinprojectfolder)
 - [DefaultItemExcludes](#defaultitemexcludes)
@@ -335,6 +302,8 @@ Bu özellik, `DefaultItemExcludes` yalnızca proje klasöründeki dosya ve klas�
 ```
 
 ## <a name="code-analysis-properties"></a>Kod Analizi özellikleri
+
+Aşağıdaki MSBuild özellikleri bu bölümde belgelenmiştir:
 
 - [AnalysisLevel](#analysislevel)
 - [AnalysisMode](#analysismode)
@@ -532,13 +501,12 @@ Uygulamanın proje dosyasında MSBuild özelliklerini belirterek bazı çalışm
 </PropertyGroup>
 ```
 
-## <a name="reference-properties-and-items"></a>Başvuru özellikleri ve öğeleri
+## <a name="reference-properties"></a>Başvuru özellikleri
+
+Aşağıdaki MSBuild özellikleri bu bölümde belgelenmiştir:
 
 - [AssetTargetFallback](#assettargetfallback)
 - [DisableImplicitFrameworkReferences](#disableimplicitframeworkreferences)
-- [PackageReference](#packagereference)
-- [ProjectReference](#projectreference)
-- [Başvuru](#reference)
 - [Geri yükleme ile ilgili özellikler](#restore-related-properties)
 
 ### <a name="assettargetfallback"></a>AssetTargetFallback
@@ -565,74 +533,6 @@ Uygulamanın proje dosyasında MSBuild özelliklerini belirterek bazı çalışm
 </PropertyGroup>
 ```
 
-### <a name="packagereference"></a>PackageReference
-
-`PackageReference`Öğe, bir NuGet paketine bir başvuru tanımlar.
-
-`Include`Öznitelik, paket kimliğini belirtir. `Version`Öznitelik, sürümü veya sürüm aralığını belirtir. En düşük sürüm, en yüksek sürüm, Aralık veya tam eşleşme belirtme hakkında bilgi için bkz. [Sürüm aralıkları](/nuget/concepts/package-versioning#version-ranges). Ayrıca, bir paket başvurusuna [varlık öznitelikleri](#asset-attributes) ekleyebilirsiniz.
-
-Aşağıdaki örnekteki proje dosyası kod parçacığı [System. Runtime](https://www.nuget.org/packages/System.Runtime/) paketine başvurur.
-
-```xml
-<ItemGroup>
-  <PackageReference Include="System.Runtime" Version="4.3.0" />
-</ItemGroup>
-```
-
-Daha fazla bilgi için bkz. [Proje dosyalarındaki paket başvuruları](/nuget/consume-packages/package-references-in-project-files).
-
-#### <a name="asset-attributes"></a>Varlık öznitelikleri
-
-`IncludeAssets`, `ExcludeAssets` Ve `PrivateAssets` meta veriler bir paket başvurusuna eklenebilir.
-
-| Öznitelik | Açıklama |
-| - | - |
-| `IncludeAssets` | Tarafından belirtilen pakete ait olan varlıkların `<PackageReference>` tüketilmesi gerektiğini belirtir. Varsayılan olarak, tüm paket varlıkları dahil edilmiştir. |
-| `ExcludeAssets`| Tarafından belirtilen pakete ait olan varlıkların `<PackageReference>` tüketilmediğini belirtir. |
-| `PrivateAssets` | Tarafından belirtilen pakete ait olan varlıkların `<PackageReference>` tüketilmesi ancak bir sonraki projeye akolmaması gerektiğini belirtir. `Analyzers` `Build` Bu öznitelik mevcut olmadığında,, ve `ContentFiles` varlıkları varsayılan olarak özeldir. |
-
-Bu öznitelikler, birden fazla listeleniyorsa noktalı virgülle ayırarak aşağıdaki öğelerden birini veya daha fazlasını içerebilir `;` :
-
-- `Compile` – *LIB* klasörünün içeriği, derleme için kullanılabilir.
-- `Runtime` – *çalışma zamanı* klasörünün içeriği dağıtılır.
-- `ContentFiles` – *ContentFiles* klasörünün içeriği kullanılır.
-- `Build` – *Build* klasöründeki props/targets kullanılır.
-- `Native` – Yerel varlıklardan içerik çalışma zamanı için *Çıkış* klasörüne kopyalanır.
-- `Analyzers` – çözümleyiciler kullanılır.
-
-Alternatif olarak, öznitelik şunları içerebilir:
-
-- `None` – varlıkların hiçbiri kullanılmaz.
-- `All` – Tüm varlıklar kullanılır.
-
-### <a name="projectreference"></a>ProjectReference
-
-`ProjectReference`Öğe, başka bir projeye yönelik bir başvuru tanımlar. Başvurulan proje bir NuGet paket bağımlılığı olarak eklenir, diğer bir deyişle, ile aynı şekilde işlenir `PackageReference` .
-
-`Include`Öznitelik, projenin yolunu belirtir. Aşağıdaki meta verileri bir proje başvurusuna de ekleyebilirsiniz: `IncludeAssets` , `ExcludeAssets` , ve `PrivateAssets` .
-
-Aşağıdaki örnekteki proje dosyası kod parçacığı adlı bir projeye başvurur `Project2` .
-
-```xml
-<ItemGroup>
-  <ProjectReference Include="..\Project2.csproj" />
-</ItemGroup>
-```
-
-### <a name="reference"></a>Başvuru
-
-`Reference`Öğe, derleme dosyasına bir başvuru tanımlar.
-
-`Include`Öznitelik, dosyanın adını belirtir ve `HintPath` meta veriler derlemenin yolunu belirtir.
-
-```xml
-<ItemGroup>
-  <Reference Include="MyAssembly">
-    <HintPath>..\..\Assemblies\MyAssembly.dll</HintPath>
-  </Reference>
-</ItemGroup>
-```
-
 ### <a name="restore-related-properties"></a>Geri yükleme ile ilgili özellikler
 
 Başvurulan bir paketin geri yüklenmesi, tüm doğrudan bağımlılıklarını ve bu bağımlılıkların tüm bağımlılıklarını yükler. Ve gibi özellikler belirterek paket geri yüklemesini özelleştirebilirsiniz `RestorePackagesPath` `RestoreIgnoreFailedSources` . Bu ve diğer özellikler hakkında daha fazla bilgi için bkz. [hedefi geri yükleme](/nuget/reference/msbuild-targets#restore-target).
@@ -643,7 +543,7 @@ Başvurulan bir paketin geri yüklenmesi, tüm doğrudan bağımlılıklarını 
 </PropertyGroup>
 ```
 
-## <a name="run-properties"></a>Çalıştırma özellikleri
+## <a name="run-related-properties"></a>Çalışma ile ilgili özellikler
 
 Aşağıdaki özellikler, komutuyla bir uygulama başlatmak için kullanılır [`dotnet run`](../tools/dotnet-run.md) :
 
@@ -673,7 +573,9 @@ Aşağıdaki özellikler, komutuyla bir uygulama başlatmak için kullanılır [
 </PropertyGroup>
 ```
 
-## <a name="hosting-properties"></a>Barındırma özellikleri
+## <a name="hosting-related-properties"></a>Barındırma ile ilgili özellikler
+
+Aşağıdaki MSBuild özellikleri bu bölümde belgelenmiştir:
 
 - [EnableComHosting](#enablecomhosting)
 - [EnableDynamicLoading](#enabledynamicloading)
@@ -703,6 +605,86 @@ Daha fazla bilgi için bkz. [.net BILEŞENLERINI com 'Da kullanıma](../native-i
   <EnableDynamicLoading>true</EnableDynamicLoading>
 </PropertyGroup>
 ```
+
+## <a name="items"></a>Öğeler
+
+[MSBuild öğeleri](/visualstudio/msbuild/msbuild-items) , derleme sistemine giriş oluşturur. Öğeler, öğe adı olan türlerine göre belirtilir. Örneğin, `Compile` ve `Reference` iki [ortak öğe türüdür](/visualstudio/msbuild/common-msbuild-project-items). Aşağıdaki ek öğe türleri .NET SDK tarafından kullanılabilir hale getirilir:
+
+- [PackageReference](#packagereference)
+- [TrimmerRootAssembly](#trimmerrootassembly)
+
+Standart [öğe özniteliklerinden](/visualstudio/msbuild/item-element-msbuild#attributes-and-elements)herhangi birini, örneğin, `Include` ve `Update` , bu öğelerde kullanabilirsiniz. `Include`Yeni bir öğe eklemek ve `Update` var olan bir öğeyi değiştirmek için kullanın. Örneğin, `Update` genellikle .NET SDK 'sı tarafından dolaylı olarak eklenmiş bir öğeyi değiştirmek için kullanılır.
+
+### <a name="packagereference"></a>PackageReference
+
+`PackageReference`Öğe, bir NuGet paketine bir başvuru tanımlar.
+
+`Include`Öznitelik, paket kimliğini belirtir. `Version`Öznitelik, sürümü veya sürüm aralığını belirtir. En düşük sürüm, en yüksek sürüm, Aralık veya tam eşleşme belirtme hakkında bilgi için bkz. [Sürüm aralıkları](/nuget/concepts/package-versioning#version-ranges).
+
+Aşağıdaki örnekteki proje dosyası kod parçacığı [System. Runtime](https://www.nuget.org/packages/System.Runtime/) paketine başvurur.
+
+```xml
+<ItemGroup>
+  <PackageReference Include="System.Runtime" Version="4.3.0" />
+</ItemGroup>
+```
+
+[Bağımlılık varlıklarını](/nuget/consume-packages/package-references-in-project-files#controlling-dependency-assets) , gibi meta verileri kullanarak da denetleyebilirsiniz `PrivateAssets` .
+
+```xml
+<ItemGroup>
+  <PackageReference Include="Contoso.Utility.UsefulStuff" Version="3.6.0">
+    <PrivateAssets>all</PrivateAssets>
+  </PackageReference>
+</ItemGroup>
+```
+
+Daha fazla bilgi için bkz. [Proje dosyalarındaki paket başvuruları](/nuget/consume-packages/package-references-in-project-files).
+
+### <a name="trimmerrootassembly"></a>TrimmerRootAssembly
+
+`TrimmerRootAssembly`Öğe, bir derlemeyi [*kırpmanıza*](../deploying/trim-self-contained.md)dışlamanızı sağlar. Kırpma, çalışma zamanının kullanılmayan parçalarını paketlenmiş bir uygulamadan kaldırma işlemidir. Bazı durumlarda, kırpma gerekli başvuruları yanlış kaldırabilir.
+
+Aşağıdaki XML, `System.Security` derlemeyi kırpmaya dışlar.
+
+```xml
+<ItemGroup>
+  <TrimmerRootAssembly Include="System.Security" />
+</ItemGroup>
+```
+
+## <a name="item-metadata"></a>Öğe meta verileri
+
+Standart [MSBuild öğe özniteliklerine](/visualstudio/msbuild/item-element-msbuild#attributes-and-elements)ek olarak, aşağıdaki öğe meta veri ETIKETLERI .NET SDK tarafından kullanılabilir hale getirilir:
+
+- [CopyToPublishDirectory](#copytopublishdirectory)
+- [Tabanlarını](#linkbase)
+
+### <a name="copytopublishdirectory"></a>CopyToPublishDirectory
+
+`CopyToPublishDirectory`MSBuild öğesindeki meta veriler, öğe yayımlama dizinine kopyalandığında denetler. İzin verilen değerler `PreserveNewest` , yalnızca değiştirilirse öğeyi kopyalayan, `Always` her zaman öğeyi kopyalayan ve öğeyi `Never` hiçbir zaman kopyalamamış olan değerlerdir. Bir performans açısından, `PreserveNewest` artımlı bir derlemeyi sağladığından tercih edilir.
+
+```xml
+<ItemGroup>
+  <None Update="appsettings.Development.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+</ItemGroup>
+```
+
+### <a name="linkbase"></a>Tabanlarını
+
+Proje dizini ve alt dizinleri dışında olan bir öğe için, Yayımla hedefi öğenin [bağlantı meta verilerini](/visualstudio/msbuild/common-msbuild-item-metadata) kullanarak öğenin nereye kopyalanacağını tespit edin. `Link` Ayrıca, proje ağacının dışındaki öğelerin Visual Studio 'nun Çözüm Gezgini penceresinde nasıl görüntüleneceğini belirler.
+
+`Link`Proje konisi dışında bir öğe için belirtilmemişse, varsayılan olarak öğesine ayarlanır `%(LinkBase)\%(RecursiveDir)%(Filename)%(Extension)` . `LinkBase` Proje koni dışındaki öğeler için bir senerişilebilir taban klasörü belirtmenizi sağlar. Taban klasörü altındaki klasör hiyerarşisi aracılığıyla korunur `RecursiveDir` . `LinkBase`Belirtilmemişse, `Link` yolundan çıkarılır.
+
+```xml
+<ItemGroup>
+  <Content Include="..\Extras\**\*.cs" LinkBase="Shared"/>
+</ItemGroup>
+```
+
+Aşağıdaki görüntüde, önceki öğe ile eklenen bir dosyanın `Include` Çözüm Gezgini ' de nasıl görüntüleyeceği gösterilmektedir.
+
+:::image type="content" source="media/solution-explorer-linkbase.png" alt-text="Çözüm Gezgini bağlantı tabanının meta verileri içeren öğe gösteriliyor.":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

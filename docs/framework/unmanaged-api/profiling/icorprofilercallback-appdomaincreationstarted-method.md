@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b2a8240b-07fe-4859-bb2b-7d3adbfa0a9f
 topic_type:
 - apiref
-ms.openlocfilehash: 00ebbe35f6f4446caeee5ebcd56b853d6e6dc80c
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: b783bb652bed3b600c1e4524810620bab68f5f7a
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99648265"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760710"
 ---
 # <a name="icorprofilercallbackappdomaincreationstarted-method"></a>ICorProfilerCallback::AppDomainCreationStarted Yöntemi
 
@@ -36,9 +36,7 @@ HRESULT AppDomainCreationStarted(
   
 ## <a name="parameters"></a>Parametreler
 
-- `appDomainId`
-
-  \[' de] oluşturulmakta olan etki alanını tanımlar.
+`appDomainId` 'ndaki Oluşturulmakta olan etki alanını tanımlar.
   
 ## <a name="remarks"></a>Açıklamalar  
 

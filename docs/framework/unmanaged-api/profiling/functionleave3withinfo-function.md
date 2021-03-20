@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5fa68a67-ced6-41c6-a2c0-467060fd0692
 topic_type:
 - apiref
-ms.openlocfilehash: 6a861f455e827258368764b80547c3b3e9c986cd
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 617ca023f58a180c198751fea9752fe737249331
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99687421"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760086"
 ---
 # <a name="functionleave3withinfo-function"></a>FunctionLeave3WithInfo İşlevi
 
@@ -36,13 +36,9 @@ void __stdcall FunctionLeave3WithInfo(
   
 ## <a name="parameters"></a>Parametreler
 
-- `functionIDOrClientID`
+`functionIDOrClientID` 'ndaki Denetimin döndürüldüğü işlevin tanımlayıcısı.
 
-  \[' de] denetimin döndürüldüğü işlevin tanımlayıcısı.
-
-- `eltInfo`
-
-  \[' de] belirli bir yığın çerçevesi hakkındaki bilgileri temsil eden donuk bir işleyici. Bu tanıtıcı yalnızca geçirildiği geri arama sırasında geçerlidir.
+`eltInfo` 'ndaki Belirli bir yığın çerçevesi hakkındaki bilgileri temsil eden donuk bir tanıtıcı. Bu tanıtıcı yalnızca geçirildiği geri arama sırasında geçerlidir.
 
 ## <a name="remarks"></a>Açıklamalar  
 

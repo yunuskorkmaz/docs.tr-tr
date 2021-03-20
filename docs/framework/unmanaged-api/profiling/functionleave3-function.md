@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5d798088-7992-48a0-ae55-d2a7ee31913f
 topic_type:
 - apiref
-ms.openlocfilehash: 9da68ffa2c54ada1437b3bef8bd6324c0791d610
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 0409a9969fddbbbcb8fcb5d870acccf1ae3a809b
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99687460"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760112"
 ---
 # <a name="functionleave3-function"></a>FunctionLeave3 İşlevi
 
@@ -34,9 +34,7 @@ void __stdcall FunctionLeave3(FunctionOrRemappedID functionOrRemappedID);
   
 ## <a name="parameters"></a>Parametreler  
 
-- `functionOrRemappedID`
-
-  \[' de] denetimin döndürüldüğü işlevin tanımlayıcısı.
+`functionOrRemappedID` 'ndaki Denetimin döndürüldüğü işlevin tanımlayıcısı.
   
 ## <a name="remarks"></a>Açıklamalar  
 

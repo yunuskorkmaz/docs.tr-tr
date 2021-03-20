@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 86d98f39-52e6-4c61-a625-9760f695ff12
 topic_type:
 - apiref
-ms.openlocfilehash: 19c0871808455e64ad8a4eb002806a87030f7882
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: accddef08f3cb76ef2cb1b70993aee24cf83ae50
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99648044"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760680"
 ---
 # <a name="icorprofilercallbackassemblyloadfinished-method"></a>ICorProfilerCallback::AssemblyLoadFinished Yöntemi
 
@@ -37,13 +37,9 @@ HRESULT AssemblyLoadFinished(
   
 ## <a name="parameters"></a>Parametreler
 
-- `assemblyId`
+`assemblyId` 'ndaki Yüklenen derlemeyi tanımlar.
 
-  \[' de], yüklenmiş derlemeyi tanımlar.
-
-- `hrStatus`
-
-  \[içinde] derlemenin başarıyla yüklenip yüklenmediğini belirten bir HRESULT.
+`hrStatus` 'ndaki Derlemenin başarıyla yüklenip yüklenmediğini gösteren bir HRESULT.
 
 ## <a name="remarks"></a>Açıklamalar  
 

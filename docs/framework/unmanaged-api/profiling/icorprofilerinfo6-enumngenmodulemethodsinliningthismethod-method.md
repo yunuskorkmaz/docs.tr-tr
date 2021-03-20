@@ -3,12 +3,12 @@ description: 'Daha fazla bilgi edinin: ıcorprofilerınfo6:: Enumngenmodulemetho
 title: ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod Yöntemi
 ms.date: 03/30/2017
 ms.assetid: b933dfe6-7833-40cb-aad8-40842dc3034f
-ms.openlocfilehash: bd43dcecabe9a75f7ce3a94996727b192574e321
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 236aaa820162dcc1d5c6c8ade1e8da78f5f4acb0
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99737174"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759136"
 ---
 # <a name="icorprofilerinfo6enumngenmodulemethodsinliningthismethod-method"></a>ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod Yöntemi
 
@@ -28,20 +28,15 @@ HRESULT EnumNgenModuleMethodsInliningThisMethod(
 
 ## <a name="parameters"></a>Parametreler
 
-`inlinersModuleId`\
-'ndaki NGen modülünün tanımlayıcısı.
+`inlinersModuleId` 'ndaki NGen modülünün tanımlayıcısı.
 
-`inlineeModuleId`\
-'ndaki Tanımlayan bir modülün tanımlayıcısı `inlineeMethodId` . Daha fazla bilgi için Açıklamalar bölümüne bakın.
+`inlineeModuleId` 'ndaki Tanımlayan bir modülün tanımlayıcısı `inlineeMethodId` . Daha fazla bilgi için Açıklamalar bölümüne bakın.
 
-`inlineeMethodId`\
-'ndaki Satır içine alınan metodun tanımlayıcısı. Daha fazla bilgi için Açıklamalar bölümüne bakın.
+`inlineeMethodId` 'ndaki Satır içine alınan metodun tanımlayıcısı. Daha fazla bilgi için Açıklamalar bölümüne bakın.
 
-`incompleteData`\
-dışı `ppEnum` Tüm yöntemlerin belirli bir yöntemi içerip içermediğini gösteren bir bayrak.  Daha fazla bilgi için Açıklamalar bölümüne bakın.
+`incompleteData` dışı `ppEnum` Tüm yöntemlerin belirli bir yöntemi içerip içermediğini gösteren bir bayrak.  Daha fazla bilgi için Açıklamalar bölümüne bakın.
 
-`ppEnum`\
-dışı Numaralandırıcı adresine yönelik bir işaretçi
+`ppEnum` dışı Numaralandırıcı adresine yönelik bir işaretçi
 
 ## <a name="remarks"></a>Açıklamalar
 

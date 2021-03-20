@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 249f9892-b5a9-41e1-b329-28a925904df6
 topic_type:
 - apiref
-ms.openlocfilehash: 03547537d43a76f26d6946666589f38ca4e02ec4
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: e06c3bde7ad0700de3d7f08b33159032b31eae8a
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99687434"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760073"
 ---
 # <a name="functiontailcall2-function"></a>FunctionTailcall2 İşlevi
 
@@ -38,19 +38,13 @@ void __stdcall FunctionTailcall2 (
   
 ## <a name="parameters"></a>Parametreler
 
-- `funcId`
+`funcId` 'ndaki Bir tail çağrısı yapmak üzere olan şu anda yürütülmekte olan işlevin tanımlayıcısı.
 
-  \[' de] Şu anda yürütülmekte olan işlevin bir kuyruk çağrısını yapmak üzere olan tanımlayıcısı.
-
-- `clientData`
-
-  \[' de] bir kuyruk çağrısını yapmak üzere olan şu anda yürütülmekte olan işlevin [FunctionIDMapper](functionidmapper-function.md)aracılığıyla belirtilen profil oluşturucunun önceden eşlenen işlev tanımlayıcısı.
+`clientData` 'ndaki Önceden oluşturucunun, bir tail çağrısı yapmak üzere olan şu anda yürütülmekte olan işlevin [FunctionIDMapper](functionidmapper-function.md)ile belirttiği, yeniden eşlenen işlev tanımlayıcısı.
   
-- `func`
+`func` 'ndaki `COR_PRF_FRAME_INFO` Yığın çerçevesi hakkındaki bilgileri gösteren bir değer.
 
-  \[' de] `COR_PRF_FRAME_INFO` yığın çerçevesi hakkındaki bilgileri gösteren bir değer.
-
-  Profil Oluşturucu bunu [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) yönteminde yürütme motoruna geri geçirilebilecek donuk bir tanıtıcı olarak kabul etmelidir.
+Profil Oluşturucu bunu [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) yönteminde yürütme motoruna geri geçirilebilecek donuk bir tanıtıcı olarak kabul etmelidir.
 
 ## <a name="remarks"></a>Açıklamalar  
 

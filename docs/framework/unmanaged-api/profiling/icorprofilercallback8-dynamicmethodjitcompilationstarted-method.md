@@ -9,12 +9,12 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-ms.openlocfilehash: 186b41564e0aabb069b06356b8eccbe90296ec4b
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: c03251ab3120fd93cbb8e6c2f1bb62a4527a92bb
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99781707"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759930"
 ---
 # <a name="icorprofilercallback8dynamicmethodjitcompilationstarted-method"></a>ICorProfilerCallback8::D ynamicMethodJITCompilationStarted yöntemi
 
@@ -35,15 +35,14 @@ HRESULT DynamicMethodJITCompilationStarted(
   
 ## <a name="parameters"></a>Parametreler  
 
-'ndaki `functionId`  
-JıT derlemesinin başlatıldığı bellek içi işlevin tanımlayıcısı.
+`functionId`  
+'ndaki JıT derlemesinin başlatıldığı bellek içi işlevin tanımlayıcısı.
 
-[in] `fIsSafeToBlock` 
- `true` Bu engellemenin, çalışma zamanının çağıran iş parçacığının bu geri aramadan dönmesini beklemesine neden olabileceğini göstermek için; `false`engellemenin çalışma zamanının işlemini etkilemeyeceğini göstermek için.  
+`fIsSafeToBlock` [in] `true` Bu engellemenin, çalışma zamanının çağıran iş parçacığının bu geri aramadan dönmesini beklemesine neden olabileceğini göstermek için; `false` engellemenin çalışma zamanının işlemini etkilemeyeceğini göstermek için.  
 
-[in] `pILHeader` Metodun Il üstbilgisinin ilk baytına yönelik bir işaretçi.
+`pILHeader` 'ndaki Metodun Il üstbilgisinin ilk baytına yönelik bir işaretçi.
 
-[in] `cbILHeader` Il üstbilgisindeki bayt sayısı.
+`cbILHeader` 'ndaki Il üstbilgisindeki bayt sayısı.
 
 ## <a name="remarks"></a>Açıklamalar  
 

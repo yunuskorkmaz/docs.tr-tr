@@ -2,12 +2,12 @@
 title: .NET 'teki semboller
 description: .NET 'teki simgelere ve taşınabilir pdb 'leri 'a giriş
 ms.date: 02/08/2021
-ms.openlocfilehash: da59a07166cd1f73160da8d9ac53b5823bf13e7b
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 8f217bf8b62ff12a6ea1dc6a5b14b34d8037dd2d
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102108724"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759904"
 ---
 # <a name="symbols"></a>Simgeleri
 
@@ -21,7 +21,7 @@ Semboller hata ayıklama ve diğer tanılama araçları için faydalıdır. Semb
 
 ### <a name="what-is-a-pdb"></a>PDB nedir?
 
-PDB dosyası, başka araçlar, özellikle hata ayıklayıcılar, ana yürütülebilir dosyada bulunan ve nasıl üretildiği hakkında bilgi sağlamak için derleyici tarafından oluşturulan yardımcı bir dosyadır. Örneğin, bir hata ayıklayıcı foo.cs satırı 12 ' yi doğru yürütülebilir konuma eşlemek için bir PDB okur, böylece bir kesme noktası ayarlayabilmesini sağlar. Windows PDB biçimi uzun bir süredir vardı ve daha da eski olan diğer yerel hata ayıklama sembol biçimlerinden türetilmiştir. Kendi ömrünü yerel (C/C++) programları için bir biçim olarak başlattı. .NET Framework ilk sürümü için Windows PDB biçimi .NET desteği için genişletilmiştir.
+PDB dosyası, başka araçlar, özellikle hata ayıklayıcılar, ana yürütülebilir dosyada bulunan ve nasıl üretildiği hakkında bilgi sağlamak için derleyici tarafından oluşturulan yardımcı bir dosyadır. Örneğin, bir hata ayıklayıcı foo. cs satır 12 ' yi doğru yürütülebilir konuma eşlemek için bir PDB okur, böylece bir kesme noktası ayarlayabilmesini sağlar. Windows PDB biçimi uzun bir süredir vardı ve daha da eski olan diğer yerel hata ayıklama sembol biçimlerinden türetilmiştir. Kendi ömrünü yerel (C/C++) programları için bir biçim olarak başlattı. .NET Framework ilk sürümü için Windows PDB biçimi .NET desteği için genişletilmiştir.
 
 ## <a name="use-the-correct-pdb-format-for-your-scenario"></a>Senaryonuz için doğru PDB biçimini kullanın
 
@@ -39,7 +39,7 @@ Taşınabilir pdb 'leri, herhangi bir işletim sisteminde okunabilir ve yönetil
 
 * Taşınabilir pdb 'leri desteklemeyen eski profil oluşturucular sürümleri olabilir.
 
-Bu dosyaları desteklemeyen araçlar üzerinde taşınabilir pdb 'leri kullanmak için, https://github.com/dotnet/symreader-converter#pdb2pdb Taşınabilir pdb 'leri ve Windows pdb 'leri arasında dönüştürme yapan Pdb2Pdb [] kullanmayı deneyebilirsiniz.
+Bu dosyaları desteklemeyen araçlar üzerinde taşınabilir pdb 'leri kullanmak için taşınabilir pdb 'leri ve Windows pdb 'leri arasında dönüştürme yapan [Pdb2Pdb](https://github.com/dotnet/symreader-converter#pdb2pdb) kullanmayı deneyebilirsiniz.
 
 ### <a name="support-for-windows-pdbs"></a>Windows pdb 'leri için destek
 

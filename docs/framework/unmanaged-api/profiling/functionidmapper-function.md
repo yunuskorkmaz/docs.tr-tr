@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8205b60-1893-4303-8cff-7ac5a00892aa
 topic_type:
 - apiref
-ms.openlocfilehash: dca39d9d5269148fda12c50130f35bdeb10cb19d
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 2db616509bf5dcb5b8aee9cea76a9841369ec49d
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99648655"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759260"
 ---
 # <a name="functionidmapper-function"></a>FunctionIDMapper İşlevi
 
@@ -37,13 +37,9 @@ UINT_PTR __stdcall FunctionIDMapper (
   
 ## <a name="parameters"></a>Parametreler
 
-- `funcId`
+`funcId` 'ndaki Yeniden eşleştirilecek işlev tanımlayıcısı.
 
-  \[' de] yeniden eşleştirilecek işlev tanımlayıcısı.
-
-- `pbHookFunction`
-
-  \[out] profil oluşturucunun `true` ,, ve geri çağırmaları almak istiyorsa bir değere yönelik bir işaretçi `FunctionEnter2` `FunctionLeave2` `FunctionTailcall2` ; Aksi takdirde, bu değeri olarak ayarlar `false` .
+`pbHookFunction` dışı Profil oluşturucunun `true` ,, ve geri çağırmaları almak istiyorsa bir değere işaretçi `FunctionEnter2` `FunctionLeave2` `FunctionTailcall2` ; Aksi takdirde, bu değeri olarak ayarlar `false` .
 
 ## <a name="return-value"></a>Dönüş Değeri  
 

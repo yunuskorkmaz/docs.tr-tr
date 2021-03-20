@@ -10,12 +10,12 @@ api_location:
 api_type:
 - COM
 ms.assetid: f362a896-3247-4894-9727-e48dbbcd2c78
-ms.openlocfilehash: 74adf7edc5269824a924933eb3284a5964e1bac1
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: fa6056beb5685ca9ce9545efea567ca0df6029ce
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99781733"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759865"
 ---
 # <a name="icorprofilercallback7moduleinmemorysymbolsupdated-method"></a>ICorProfilerCallback7:: Moduleınmemorysymbolsupdated yöntemi
 
@@ -33,8 +33,8 @@ HRESULT ModuleInMemorySymbolsUpdated(
   
 ## <a name="parameters"></a>Parametreler  
 
- 'ndaki `moduleId`  
- Sembol akışı güncelleştirilmiş olan bellek içi modülün tanıtıcısı.  
+ `moduleId`  
+ 'ndaki Sembol akışı güncelleştirilmiş olan bellek içi modülün tanıtıcısı.  
   
 ## <a name="remarks"></a>Açıklamalar  
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8cdac941-8b94-4497-b874-4e571785f3fe
 topic_type:
 - apiref
-ms.openlocfilehash: 475def9af448182003ef36782a84d501a9f2661d
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: a9a97b84c70fd50044e8340b6f59fdbefe1d1a60
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99687577"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760151"
 ---
 # <a name="functionleave2-function"></a>FunctionLeave2 İşlevi
 
@@ -39,25 +39,17 @@ void __stdcall FunctionLeave2 (
   
 ## <a name="parameters"></a>Parametreler
 
-- `funcId`
+`funcId` 'ndaki Döndürülen işlevin tanımlayıcısı.
 
-  \[içinde] döndüren işlevin tanımlayıcısı.
+`clientData` 'ndaki Profil oluşturucunun daha önce [FunctionIDMapper](functionidmapper-function.md) işlevi aracılığıyla belirttiği, yeniden eşlenen işlev tanımlayıcısı.
 
-- `clientData`
+`func` 'ndaki `COR_PRF_FRAME_INFO` Yığın çerçevesi hakkındaki bilgileri gösteren bir değer.
 
-  \[' de] profil oluşturucunun daha önce [FunctionIDMapper](functionidmapper-function.md) işlevi aracılığıyla belirttiği yeniden eşlenen işlev tanımlayıcısı.
-
-- `func`
-
-  \[' de] `COR_PRF_FRAME_INFO` yığın çerçevesi hakkındaki bilgileri gösteren bir değer.
-
-  Profil Oluşturucu bunu [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) yönteminde yürütme motoruna geri geçirilebilecek donuk bir tanıtıcı olarak kabul etmelidir.  
+Profil Oluşturucu bunu [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) yönteminde yürütme motoruna geri geçirilebilecek donuk bir tanıtıcı olarak kabul etmelidir.  
   
-- `retvalRange`
+`retvalRange` 'ndaki İşlevin dönüş değerinin bellek konumunu belirten [COR_PRF_FUNCTION_ARGUMENT_RANGE](cor-prf-function-argument-range-structure.md) yapısına yönelik bir işaretçi.
 
-  \[' de] işlevin dönüş değerinin bellek konumunu belirten [COR_PRF_FUNCTION_ARGUMENT_RANGE](cor-prf-function-argument-range-structure.md) yapısına yönelik bir işaretçi.
-
-  Dönüş değeri bilgilerine erişmek için `COR_PRF_ENABLE_FUNCTION_RETVAL` bayrağın ayarlanması gerekir. Profil Oluşturucu, olay bayraklarını ayarlamak için [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) yöntemini kullanabilir.
+Dönüş değeri bilgilerine erişmek için `COR_PRF_ENABLE_FUNCTION_RETVAL` bayrağın ayarlanması gerekir. Profil Oluşturucu, olay bayraklarını ayarlamak için [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) yöntemini kullanabilir.
 
 ## <a name="remarks"></a>Açıklamalar  
 

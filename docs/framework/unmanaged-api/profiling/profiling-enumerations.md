@@ -7,12 +7,12 @@ helpviewer_keywords:
 - enumerations [.NET Framework profiling]
 - unmanaged enumerations [.NET Framework], profiling
 ms.assetid: 8d5f9570-9853-4ce8-8101-df235d5b258e
-ms.openlocfilehash: f202e70dd27654dd39740851549477d4a6bf77a3
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: a4fcd812642698237d32afff5a681a99bf9cf12f
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99736758"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759071"
 ---
 # <a name="profiling-enumerations"></a>Profil Oluşturma Numaralandırmaları
 
@@ -70,6 +70,10 @@ Bu bölümde profil oluşturma API 'sinin kullandığı yönetilmeyen numaraland
   
  [COR_PRF_TRANSITION_REASON Numaralandırması](cor-prf-transition-reason-enumeration.md)  
  Yönetilmesinin yönetilmeyen koda veya tam tersi bir geçişin sebebini gösterir.  
+
+ [COR_PRF_EVENTPIPE_PARAM_TYPE](cor-prf-eventpipe-param-type-enumeration.md) Bir EventPipe parametresinin türünü gösterir.
+
+ [COR_PRF_EVENTPIPE_LEVEL](cor-prf-eventpipe-level-enumeration.md) Bir EventPipe olayının düzeyini ındiklaştırır.
   
 ## <a name="related-sections"></a>İlgili Bölümler  
 

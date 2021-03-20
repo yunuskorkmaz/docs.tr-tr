@@ -12,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 765f3dfee6c56148eb7807b0606e79d4b3a2e7a1
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: c7897e266fbb84d44df719c127e24bd375b560bb
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99783813"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759097"
 ---
 # <a name="icorprofilerinfo9getcodeinfo4-method"></a>ICorProfilerInfo9:: GetCodeInfo4 yöntemi
 
@@ -34,21 +34,13 @@ HRESULT GetCodeInfo4( [in]  UINT_PTR pNativeCodeStartAddress,
 
 ## <a name="parameters"></a>Parametreler
 
-- `pNativeCodeStartAddress`
+`pNativeCodeStartAddress` 'ndaki Yerel bir işlevin başlangıcına yönelik bir işaretçi.
 
-  \[' de] yerel bir işlevin başlangıcına yönelik bir işaretçi.
+`cCodeInfos` 'ndaki `codeInfos` Dizinin boyutu.
 
-- `cCodeInfos`
+`pcCodeInfos` dışı [COR_PRF_CODE_INFO](cor-prf-code-info-structure.md) yapılarının toplam sayısına yönelik bir işaretçi.
 
-  \[içinde] `codeInfos` dizinin boyutu.
-
-- `pcCodeInfos`
-
-  \[out] kullanılabilen toplam [COR_PRF_CODE_INFO](cor-prf-code-info-structure.md) yapısı için bir işaretçi.
-
-- `codeInfos`
-
-  \[out] arayan tarafından sağlanmış bir arabellek. Yöntem çağrıldıktan sonra, `COR_PRF_CODE_INFO` her biri yerel kod bloğunu açıklayan bir yapı dizisi içerir.
+`codeInfos` dışı Arayan tarafından sağlanmış arabellek. Yöntem çağrıldıktan sonra, `COR_PRF_CODE_INFO` her biri yerel kod bloğunu açıklayan bir yapı dizisi içerir.
 
 ## <a name="remarks"></a>Açıklamalar
 
@@ -71,7 +63,7 @@ Alternatif olarak, `GetCodeInfo4` `codeInfos` doğru arabellek boyutunu elde etm
 
 **Kitaplık:** Corguid. lib
 
-**.NET sürümleri:**[!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+**.NET sürümleri:**[!INCLUDE[net_core_21](../../../../includes/net-core-21-md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,7 +1,7 @@
 ---
 description: "C 'deki yerleşik sayısal türler arasında örtük ve açık dönüştürmeler hakkında bilgi edinin #"
 title: Yerleşik sayısal dönüşümler-C# başvurusu
-ms.date: 10/22/2019
+ms.date: 03/17/2021
 helpviewer_keywords:
 - implicit numeric conversions [C#]
 - explicit numeric conversion [C#]
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - numeric conversions [C#], explicit
 - conversions [C#], implicit numeric
 - conversions [C#], explicit numeric
-ms.openlocfilehash: ee5def3b5e0e067919a8c8335db701dbb6dd4d88
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 5ff0289f5365a7d3d334dd0130b3b0efcdf34c60
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89142251"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759696"
 ---
 # <a name="built-in-numeric-conversions-c-reference"></a>Yerleşik sayısal dönüşümler (C# Başvurusu)
 
@@ -26,18 +26,20 @@ Aşağıdaki tabloda, yerleşik sayısal türler arasında önceden tanımlanmı
 
 |Kaynak|Amaç|
 |----------|--------|
-|[SByte](integral-numeric-types.md)|`short`, `int` , `long` , `float` , `double` veya `decimal`|
-|[bayt](integral-numeric-types.md)|`short`, `ushort` , `int` , `uint` , `long` , `ulong` , `float` , `double` veya `decimal`|
-|[short](integral-numeric-types.md)|`int`,,, `long` `float` `double` veya `decimal`|
-|[ushort](integral-numeric-types.md)|`int`, `uint` , `long` , `ulong` , `float` , `double` veya `decimal`|
-|[int](integral-numeric-types.md)|`long`, `float` , `double` veya `decimal`|
-|[uint](integral-numeric-types.md)|`long`,,, `ulong` `float` `double` veya `decimal`|
+|[SByte](integral-numeric-types.md)|`short`, `int` , `long` , `float` , `double` , `decimal` veya `nint`|
+|[bayt](integral-numeric-types.md)|`short`, `ushort` , `int` , `uint` , `long` , `ulong` , `float` , `double` , `decimal` , `nint` , veya `nuint`|
+|[short](integral-numeric-types.md)|`int`,,, `long` `float` `double` , veya `decimal` veya `nint`|
+|[ushort](integral-numeric-types.md)|`int`,,, `uint` `long` `ulong` , `float` , `double` , veya `decimal` , `nint` , veya `nuint`|
+|[int](integral-numeric-types.md)|`long`, `float` , `double` , veya `decimal` , `nint`|
+|[uint](integral-numeric-types.md)|`long`,,, `ulong` `float` `double` , veya `decimal` veya `nuint`|
 |[long](integral-numeric-types.md)|`float`, `double` , veya `decimal`|
 |[ulong](integral-numeric-types.md)|`float`, `double` , veya `decimal`|
 |[float](floating-point-numeric-types.md)|`double`|
+|[nint](nint-nuint.md)|`long`, `float` , `double` veya `decimal`|
+|[nuınt](nint-nuint.md)|`ulong`, `float` , `double` veya `decimal`|
 
 > [!NOTE]
-> `int`,, `uint` `long` , Veya türünden `ulong` `float` ve öğesinden veya türünden örtük dönüştürmeler `long` `ulong` `double` duyarlık kaybına neden olabilir, ancak hiçbir şekilde bir büyüklük kaybı olmaz. Diğer örtük sayısal dönüştürmeler hiçbir bilgiyi hiçbir şekilde kaybetmez.
+> ,,, `int` `uint` `long` ,, Veya türünden ve öğesinden,,, ya da için örtük dönüştürmeler `ulong` `nint` `nuint` `float` `long` `ulong` `nint` `nuint` `double` duyarlık kaybına neden olabilir, ancak hiçbir şekilde bir büyüklük kaybı olmaz. Diğer örtük sayısal dönüştürmeler hiçbir bilgiyi hiçbir şekilde kaybetmez.
 
 Ayrıca,
 
@@ -47,7 +49,7 @@ Ayrıca,
 
 - `decimal`Tür ve veya türleri arasında örtük dönüştürme yok `float` `double` .
 
-- Türünde sabit bir ifadenin değeri `int` (örneğin, bir tamsayı değişmez değeri ile temsil edilen bir değer) örtük olarak,,,, `sbyte` veya, `byte` `short` `ushort` `uint` `ulong` hedef türü aralığı içindeyse,,,, veya öğesine dönüştürülebilir:
+- Türünde sabit bir ifadenin değeri `int` (örneğin, bir tamsayı değişmez değeri ile temsil edilen bir değer) örtük olarak,,,,, `sbyte` , `byte` `short` `ushort` `uint` `ulong` `nint` , veya, `nuint` hedef türü aralığı içindeyse,,,,,, veya olarak dönüştürülebilir:
 
   ```csharp
   byte a = 13;
@@ -62,17 +64,19 @@ Aşağıdaki tabloda, [örtük dönüştürme](#implicit-numeric-conversions)olm
 
 |Kaynak|Amaç|
 |----------|--------|
-|[SByte](integral-numeric-types.md)|`byte`, `ushort` , `uint` veya `ulong`|
+|[SByte](integral-numeric-types.md)|`byte`, `ushort` , `uint` , veya `ulong` veya `nuint`|
 |[bayt](integral-numeric-types.md)|`sbyte`|
-|[short](integral-numeric-types.md)|`sbyte`,,, `byte` `ushort` `uint` veya `ulong`|
+|[short](integral-numeric-types.md)|`sbyte`, `byte` , `ushort` , `uint` , `ulong` veya `nuint`|
 |[ushort](integral-numeric-types.md)|`sbyte`, `byte` , veya `short`|
-|[int](integral-numeric-types.md)|`sbyte`, `byte` , `short` , `ushort` , `uint` veya `ulong`|
+|[int](integral-numeric-types.md)|`sbyte`, `byte` , `short` , `ushort` , `uint` , `ulong` veya `nuint`|
 |[uint](integral-numeric-types.md)|`sbyte`,,, `byte` `short` `ushort` veya `int`|
-|[long](integral-numeric-types.md)|`sbyte`, `byte` , `short` , `ushort` , `int` , `uint` veya `ulong`|
-|[ulong](integral-numeric-types.md)|`sbyte`, `byte` , `short` , `ushort` , `int` , `uint` veya `long`|
-|[float](floating-point-numeric-types.md)|`sbyte`, `byte` , `short` , `ushort` , `int` , `uint` , `long` , `ulong` veya `decimal`|
-|[double](floating-point-numeric-types.md)|`sbyte`, `byte` , `short` , `ushort` , `int` , `uint` , `long` , `ulong` , `float` , veya `decimal`|
-|[decimal](floating-point-numeric-types.md)|`sbyte`, `byte` , `short` , `ushort` , `int` , `uint` , `long` , `ulong` , `float` , veya `double`|
+|[long](integral-numeric-types.md)|`sbyte`, `byte` , `short` , `ushort` , `int` , `uint` , `ulong` , `nint` veya `nuint`|
+|[ulong](integral-numeric-types.md)|`sbyte`, `byte` , `short` , `ushort` , `int` , `uint` , `long` , `nint` veya `nuint`|
+|[float](floating-point-numeric-types.md)|`sbyte`, `byte` , `short` , `ushort` , `int` , `uint` , `long` , `ulong` , `decimal` , `nint` , veya `nuint`|
+|[double](floating-point-numeric-types.md)|`sbyte`,,, `byte` `short` `ushort` , `int` , `uint` , `long` , `ulong` , `float` , `decimal` , `nint` , veya `nuint`|
+|[decimal](floating-point-numeric-types.md)|`sbyte`,,, `byte` `short` `ushort` , `int` , `uint` , `long` , `ulong` , `float` , `double` , `nint` , veya `nuint`|
+|[nint](nint-nuint.md)|`sbyte`, `byte` , `short` , `ushort` , `int` , `uint` , `ulong` veya `nuint`|
+|[nuınt](nint-nuint.md)|`sbyte`, `byte` , `short` , `ushort` , `int` , `uint` , `long` veya `nint`|
 
 > [!NOTE]
 > Açık bir sayısal dönüştürme, veri kaybına neden olabilir veya genellikle bir özel durum oluşturabilir <xref:System.OverflowException> .

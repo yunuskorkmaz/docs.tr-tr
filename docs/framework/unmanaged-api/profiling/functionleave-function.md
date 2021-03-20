@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 18e89f45-e068-426a-be16-9f53a4346860
 topic_type:
 - apiref
-ms.openlocfilehash: cc0db68df8976ce86197cc9b7570b00c6f662cb5
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 619c1ecd92d2cc53512687d542becb3a2636b8af
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99648486"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759501"
 ---
 # <a name="functionleave-function"></a>FunctionLeave İşlevi
 
@@ -39,9 +39,7 @@ void __stdcall FunctionLeave (
   
 ## <a name="parameters"></a>Parametreler
 
-- `funcID`
-
-  \[içinde] döndüren işlevin tanımlayıcısı.
+`funcID` 'ndaki Döndürülen işlevin tanımlayıcısı.
 
 ## <a name="remarks"></a>Açıklamalar  
 

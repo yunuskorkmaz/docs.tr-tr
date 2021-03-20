@@ -12,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 867375d57f9d166ed08bf68ada81fb5cdbb8afe3
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 865545e2352209447b3942da3a62f3733c165b35
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99646523"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759332"
 ---
 # <a name="icorprofilerinfo9getiltonativemapping3-method"></a>ICorProfilerInfo9:: GetILToNativeMapping3 yöntemi
 
@@ -34,21 +34,13 @@ HRESULT GetILToNativeMapping3( [in]  UINT_PTR pNativeCodeStartAddress,
 
 ## <a name="parameters"></a>Parametreler
 
-- `pNativeCodeStartAddress`
+`pNativeCodeStartAddress` 'ndaki Yerel bir işlevin başlangıcına yönelik bir işaretçi.
 
-  \[' de] yerel bir işlevin başlangıcına yönelik bir işaretçi.
+`cMap` 'ndaki Dizinin en büyük boyutu `map` .
 
-- `cMap`
+`pcMap` dışı Kullanılabilir COR_DEBUG_IL_TO_NATIVE_MAP yapılarının toplam sayısı.
 
-  \[' de] dizinin en büyük boyutu `map` .
-
-- `pcMap`
-
-  \[out] kullanılabilir COR_DEBUG_IL_TO_NATIVE_MAP yapılarının toplam sayısı.
-
-- `map`
-
-  \[out] her biri, uzaklıkları belirten [COR_DEBUG_IL_TO_NATIVE_MAP](../debugging/cor-debug-il-to-native-map-structure.md) yapıların bir dizisidir. `GetILToNativeMapping3`Yöntem döndüğünde, `map` yapıların bazılarını veya tümünü içerir `COR_DEBUG_IL_TO_NATIVE_MAP` .
+`map` dışı Her biri uzaklıkları belirten [COR_DEBUG_IL_TO_NATIVE_MAP](../debugging/cor-debug-il-to-native-map-structure.md) yapıları dizisi. `GetILToNativeMapping3`Yöntem döndüğünde, `map` yapıların bazılarını veya tümünü içerir `COR_DEBUG_IL_TO_NATIVE_MAP` .
 
 ## <a name="remarks"></a>Açıklamalar
 
@@ -62,7 +54,7 @@ Katmanlı derleme etkinleştirildiğinde, bir yöntem birden fazla yerel kod gö
 
 **Kitaplık:** Corguid. lib
 
-**.NET Framework sürümleri:**[!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+**.NET Framework sürümleri:**[!INCLUDE[net_core_21](../../../../includes/net-core-21-md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

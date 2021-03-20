@@ -1,17 +1,16 @@
 ---
 title: Yerleşik türler-C# başvurusu
 description: C# yerleşik değer ve başvuru türleri hakkında bilgi edinin
-ms.date: 02/04/2020
+ms.date: 03/15/2021
 helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
-ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: 3366f718cd83a28f475fae9b4e65ce37fe7d8c7b
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: c2b1c736e17e55913ef1c593813717dd33efd6c3
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84803199"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759722"
 ---
 # <a name="built-in-types-c-reference"></a>Yerleşik türler (C# Başvurusu)
 
@@ -28,6 +27,8 @@ Aşağıdaki tabloda C# yerleşik [değer](value-types.md) türleri listelenmekt
 |[`float`](floating-point-numeric-types.md)|<xref:System.Single?displayProperty=nameWithType>|
 |[`int`](integral-numeric-types.md)|<xref:System.Int32?displayProperty=nameWithType>|
 |[`uint`](integral-numeric-types.md)|<xref:System.UInt32?displayProperty=nameWithType>|
+|[`nint`](nint-nuint.md)|<xref:System.IntPtr?displayProperty=nameWithType>|
+|[`nuint`](nint-nuint.md)|<xref:System.UIntPtr?displayProperty=nameWithType>|
 |[`long`](integral-numeric-types.md)|<xref:System.Int64?displayProperty=nameWithType>|
 |[`ulong`](integral-numeric-types.md)|<xref:System.UInt64?displayProperty=nameWithType>|
 |[`short`](integral-numeric-types.md)|<xref:System.Int16?displayProperty=nameWithType>|
@@ -41,12 +42,14 @@ Aşağıdaki tabloda C# yerleşik [başvuru](../keywords/reference-types.md) tü
 |[`string`](reference-types.md#the-string-type)|<xref:System.String?displayProperty=nameWithType>|
 |[`dynamic`](reference-types.md#the-dynamic-type)|<xref:System.Object?displayProperty=nameWithType>|
 
-Yukarıdaki tablolarda, sol sütundaki her C# tür anahtar sözcüğü, karşılık gelen .NET türü için bir diğer addır. Bunlar arasında değiştirilebilir. Örneğin, aşağıdaki bildirimler aynı türdeki değişkenleri bildirir:
+Yukarıdaki tablolarda, sol sütundan ( [nınt ve nuınt](nint-nuint.md)hariç) her C# tür anahtar sözcüğü, karşılık gelen .NET türü için bir diğer addır. Bunlar arasında değiştirilebilir. Örneğin, aşağıdaki bildirimler aynı türdeki değişkenleri bildirir:
 
 ```csharp
 int a = 123;
 System.Int32 b = 123;
 ```
+
+`nint` `nuint` İlk tablonun son iki satırında ve türleri yerel boyutlu tamsayılardır. Bunlar, belirtilen .NET türleri tarafından dahili olarak temsil edilir, ancak her durumda anahtar sözcüğü ve .NET türü birbirini değiştirmez. Derleyici, `nint` ve için ve `nuint` işaretçi türleri için sağlamayan tamsayı türleri olarak işlemler ve dönüştürmeler sağlar `System.IntPtr` `System.UIntPtr` . Daha fazla bilgi için bkz. [ `nint` ve `nuint` türleri](nint-nuint.md).
 
 [`void`](void.md)Anahtar sözcüğü bir türün yokluğunu temsil eder. Değer döndürmeyen bir yöntemin dönüş türü olarak kullanabilirsiniz.
 

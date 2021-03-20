@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 466ad51b-8f0c-41d9-81f7-371aac3374cb
 topic_type:
 - apiref
-ms.openlocfilehash: 1fd6680ffaa7b28e679dc3eaeb9840981ead5c45
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 8d1b2de62e75665de7116b28a4aa68246dda7bbd
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99648577"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759540"
 ---
 # <a name="functionidmapper2-function"></a>FunctionIDMapper2 İşlevi
 
@@ -38,17 +38,11 @@ UINT_PTR __stdcall FunctionIDMapper2 (
   
 ## <a name="parameters"></a>Parametreler
 
-- `funcId`
+`funcId` 'ndaki Yeniden eşleştirilecek işlev tanımlayıcısı.
 
-  \[' de] yeniden eşleştirilecek işlev tanımlayıcısı.
+`clientData` 'ndaki Çalışma zamanları arasında belirsizliği ortadan kaldırmak için kullanılan veriler için bir işaretçi.
 
-- `clientData`
-
-  \[' de] çalışma zamanları arasında belirsizliği ortadan kaldırmak için kullanılan verilerin bir işaretçisi.
-
-- `pbHookFunction`
-
-  \[out] profil oluşturucunun `true` ,, ve, veya, ve geri çağırmaları almak isterse,,,,, ve geri çağırmaları için ayarladığı değere yönelik bir işaretçi `FunctionEnter3` `FunctionLeave3` `FunctionTailcall3` `FunctionEnter3WithInfo` `FunctionLeave3WithInfo` `FunctionTailcall3WithInfo` ; Aksi takdirde, bu değeri olarak ayarlar `false` .
+`pbHookFunction` dışı Profil oluşturucunun,,, `true` , veya, ve geri çağırmaları almak istiyorsa,, ve,, ve geri çağırmaları için ayarladığı değere yönelik bir işaretçi `FunctionEnter3` `FunctionLeave3` `FunctionTailcall3` `FunctionEnter3WithInfo` `FunctionLeave3WithInfo` `FunctionTailcall3WithInfo` ; Aksi takdirde, bu değeri olarak ayarlar `false` .
 
 ## <a name="return-value"></a>Dönüş Değeri  
 

@@ -12,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 8ab942e6919f8029ef0d1c20336917622a1d22ad
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 139edeed3e078668974382f1719c8e03f83e2a09
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99646536"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759084"
 ---
 # <a name="icorprofilerinfo8isfunctiondynamic-method"></a>ICorProfilerInfo8:: ısfunctiondynamic yöntemi
 
@@ -32,13 +32,9 @@ HRESULT IsFunctionDynamic( [in]  FunctionID  functionId,
 
 ## <a name="parameters"></a>Parametreler
 
-- `functionId`
+`functionId` 'ndaki  `FunctionID` Bu işlev, söz konusu işlevi tanımlar.
 
-  \[içinde] `FunctionID` söz konusu işlevi tanımlayan.
-
-- `isDynamic`
-
-  \[out] `BOOL` işlevin bir meta veri içermediğini belirten bir değer içeren bir işaretçisi.
+`isDynamic` dışı İşlevin bir işaretçisi, `BOOL` işlevinin meta veri içermediğini belirten bir değer içerir.
 
 ## <a name="remarks"></a>Açıklamalar
 

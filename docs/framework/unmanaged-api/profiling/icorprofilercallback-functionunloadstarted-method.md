@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d6a5fa8b-09c6-47a5-b60e-6cf2e355df30
 topic_type:
 - apiref
-ms.openlocfilehash: 3dd5d46a224c0c51dfee251cf5d0c6ae9320b630
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: ce3cf406b8d2f91613bce878db8a4f9e0838c052
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99705969"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760437"
 ---
 # <a name="icorprofilercallbackfunctionunloadstarted-method"></a>ICorProfilerCallback::FunctionUnloadStarted Yöntemi
 
@@ -36,9 +36,7 @@ HRESULT FunctionUnloadStarted(
   
 ## <a name="parameters"></a>Parametreler
 
-- `functionId`
-
-  \[' de] kaldırılmakta olan işlevin KIMLIĞI.
+`functionId` 'ndaki Kaldırılmakta olan işlevin KIMLIĞI.
 
 ## <a name="remarks"></a>Açıklamalar  
 

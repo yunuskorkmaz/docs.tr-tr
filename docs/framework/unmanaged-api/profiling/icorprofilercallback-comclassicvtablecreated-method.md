@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6e1834ab-c359-498a-b10b-984ae23cdda4
 topic_type:
 - apiref
-ms.openlocfilehash: 134ca44cbcd7a275e3ad61a3dd4decaa92668b5b
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 04ba37b9c1307539c9fdf299f4667e7026d571be
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99657716"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760580"
 ---
 # <a name="icorprofilercallbackcomclassicvtablecreated-method"></a>ICorProfilerCallback::COMClassicVTableCreated Yöntemi
 
@@ -39,21 +39,13 @@ HRESULT COMClassicVTableCreated(
   
 ## <a name="parameters"></a>Parametreler
 
-- `wrappedClasId`
+`wrappedClasId` 'ndaki Vtable 'ın oluşturulduğu sınıfın KIMLIĞI.
 
-  \[' de] vtable 'ın oluşturulduğu sınıfın KIMLIĞI.
+`implementedIID` 'ndaki Sınıf tarafından uygulanan arabirimin KIMLIĞI. Arabirim yalnızca dahili ise bu değer NULL olabilir.
 
-- `implementedIID`
+`pVTable` 'ndaki Vtable başlangıcına yönelik bir işaretçi.
 
-  \[' de] sınıf tarafından uygulanan arabirimin KIMLIĞI. Arabirim yalnızca dahili ise bu değer NULL olabilir.
-
-- `pVTable`
-
-  \[' de] vtable başlangıcını gösteren bir işaretçidir.
-
-- `cSlots`
-
-  \[' de] vtable 'da olan yuvaların sayısı.
+`cSlots` 'ndaki Vtable 'daki yuva sayısı.
 
 ## <a name="remarks"></a>Açıklamalar  
 

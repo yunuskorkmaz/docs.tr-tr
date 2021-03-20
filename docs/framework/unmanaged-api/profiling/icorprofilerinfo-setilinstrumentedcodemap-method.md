@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bce1dcf8-b4ec-4e73-a917-f2df1ad49c8a
 topic_type:
 - apiref
-ms.openlocfilehash: 0cf3b4ccf31076c2d1ea2df581003e3a07f0e795
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: f9ed01b91f740a8bd95f4ad049076feb02363b8f
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99737356"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760398"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap Yöntemi
 
@@ -42,17 +42,13 @@ HRESULT SetILInstrumentedCodeMap(
 
 ## <a name="parameters"></a>Parametreler
 
-`functionId`\
-'ndaki Kod eşlemesi ayarlanacak işlevin KIMLIĞI.
+`functionId` 'ndaki Kod eşlemesi ayarlanacak işlevin KIMLIĞI.
 
-`fStartJit`\
-'ndaki Yöntemine yapılan çağrının `SetILInstrumentedCodeMap` , belirli bir için ilk değeri olup olmadığını belirten bir Boolean değer `FunctionID` . `fStartJit`Verilen için `true` ilk çağrıda ve daha sonra öğesine ayarlanır `SetILInstrumentedCodeMap` `FunctionID` `false` .
+`fStartJit` 'ndaki Yöntemine yapılan çağrının `SetILInstrumentedCodeMap` , belirli bir için ilk değeri olup olmadığını belirten bir Boolean değer `FunctionID` . `fStartJit`Verilen için `true` ilk çağrıda ve daha sonra öğesine ayarlanır `SetILInstrumentedCodeMap` `FunctionID` `false` .
 
-`cILMapEntries`\
-'ndaki Dizideki öğelerin sayısı `cILMapEntries` .
+`cILMapEntries` 'ndaki Dizideki öğelerin sayısı `cILMapEntries` .
 
-`rgILMapEntries`\
-'ndaki Her biri bir MSIL sapmasını belirten COR_IL_MAP yapıları dizisi.
+`rgILMapEntries` 'ndaki Her biri bir MSIL sapmasını belirten COR_IL_MAP yapıları dizisi.
 
 ## <a name="remarks"></a>Açıklamalar
 

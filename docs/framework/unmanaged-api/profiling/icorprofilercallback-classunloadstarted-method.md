@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bc93bead-f3a9-415c-b919-ddd3ca80facc
 topic_type:
 - apiref
-ms.openlocfilehash: 3dae88d9cbe9ed2a2e234d02420a65c6a9ca003d
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 91de255b2214ad0c6ce6911d9533df593142a191
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99706379"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760684"
 ---
 # <a name="icorprofilercallbackclassunloadstarted-method"></a>ICorProfilerCallback::ClassUnloadStarted Yöntemi
 
@@ -36,9 +36,7 @@ HRESULT ClassUnloadStarted(
   
 ## <a name="parameters"></a>Parametreler
 
-- `classId`
-
-  \[' de], kaldırılmakta olan sınıfı tanımlar.
+`classId` 'ndaki Kaldırılmakta olan sınıfı tanımlar.
 
 ## <a name="remarks"></a>Açıklamalar  
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 29da20ca-bf39-4356-8099-d9c3ac3423a9
 topic_type:
 - apiref
-ms.openlocfilehash: 91ed5bb65d3a64f1f85a09a710b507974f51c79b
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: e8ed6be2519a9f8959ac4f59313f73f13d6c569b
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99706389"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760567"
 ---
 # <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a>ICorProfilerCallback::COMClassicVTableDestroyed Yöntemi
 
@@ -41,17 +41,11 @@ HRESULT COMClassicVTableDestroyed(
   
 ## <a name="parameters"></a>Parametreler
 
-- `wrappedClassId`
+`wrappedClassId` 'ndaki Bu vtable 'ın oluşturulduğu sınıfın KIMLIĞI.
 
-  \[' de] Bu vtable 'ın oluşturulduğu sınıfın KIMLIĞI.
+`implementedIID` 'ndaki Sınıf tarafından uygulanan arabirimin KIMLIĞI. Arabirim yalnızca dahili ise bu değer NULL olabilir.
 
-- `implementedIID`
-
-  \[' de] sınıf tarafından uygulanan arabirimin KIMLIĞI. Arabirim yalnızca dahili ise bu değer NULL olabilir.
-
-- `pVTable`
-
-  \[' de] vtable başlangıcını gösteren bir işaretçidir.
+`pVTable` 'ndaki Vtable başlangıcına yönelik bir işaretçi.
 
 ## <a name="remarks"></a>Açıklamalar  
 

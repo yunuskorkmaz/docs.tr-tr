@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 535a6839-c443-405b-a6f4-e2af90725d5b
 topic_type:
 - apiref
-ms.openlocfilehash: 11b53b39d3332d1f72304352fad525e5881e05a6
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 00ae5ca76462d8800a77c2869ef73703a4f1d980
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99648460"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760775"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>ICLRProfiling::AttachProfiler Yöntemi
 
@@ -41,29 +41,17 @@ HRESULT AttachProfiler(
   
 ## <a name="parameters"></a>Parametreler
 
-- `dwProfileeProcessID`
+`dwProfileeProcessID` 'ndaki Profil oluşturucunun eklendiği işlemin işlem KIMLIĞI. 64 bitlik bir makinede, profili oluşturulan işlemin bit genişliği, çağıran tetikleyici işlemin bit durumuyla aynı olmalıdır `AttachProfiler` . `AttachProfiler`İçinde çağrılan kullanıcı hesabının yönetim ayrıcalıkları varsa, hedef işlem sistemde herhangi bir işlem olabilir. Aksi takdirde, hedef işlem aynı kullanıcı hesabına ait olmalıdır.
 
-  \[içinde] profil oluşturucunun eklendiği işlemin işlem KIMLIĞI. 64 bitlik bir makinede, profili oluşturulan işlemin bit genişliği, çağıran tetikleyici işlemin bit durumuyla aynı olmalıdır `AttachProfiler` . `AttachProfiler`İçinde çağrılan kullanıcı hesabının yönetim ayrıcalıkları varsa, hedef işlem sistemde herhangi bir işlem olabilir. Aksi takdirde, hedef işlem aynı kullanıcı hesabına ait olmalıdır.
-
-- `dwMillisecondsMax`
-
-  \[' de] için milisaniye cinsinden süre `AttachProfiler` . Tetikleme işlemi, belirli bir profil oluşturucunun başlatma işlemini tamamlaması için yeterince bilinen bir zaman aşımı süresi iletmelidir.
+`dwMillisecondsMax` 'ndaki Tamamlanma süresi (milisaniye olarak) `AttachProfiler` . Tetikleme işlemi, belirli bir profil oluşturucunun başlatma işlemini tamamlaması için yeterince bilinen bir zaman aşımı süresi iletmelidir.
   
-- `pClsidProfiler`
+`pClsidProfiler` 'ndaki Yüklenecek profil oluşturucunun CLSID 'sine yönelik bir işaretçi. Tetikleme işlemi, bu belleği döndürbaşladıktan sonra yeniden kullanabilir `AttachProfiler` .
 
-  \[' de] yüklenecek profil oluşturucunun CLSID 'sine yönelik bir işaretçi. Tetikleme işlemi, bu belleği döndürbaşladıktan sonra yeniden kullanabilir `AttachProfiler` .
+`wszProfilerPath` 'ndaki Profil oluşturucunun yüklenecek DLL dosyasının tam yolu. Bu dize, null Sonlandırıcı dahil olmak üzere en fazla 260 karakter içermelidir. `wszProfilerPath`Null veya boş bir dize ise, ortak dil çalışma zamanı (CLR), öğesine işaret eden CLSID için kayıt defterine bakarak profil OLUŞTURUCUNUN dll dosyasının konumunu bulmaya çalışır `pClsidProfiler` .
 
-- `wszProfilerPath`
+`pvClientData` 'ndaki [ICorProfilerCallback3:: InitializeForAttach](icorprofilercallback3-initializeforattach-method.md) yöntemi tarafından Profiler 'a geçirilecek veriye yönelik bir işaretçi. Tetikleme işlemi, bu belleği döndürbaşladıktan sonra yeniden kullanabilir `AttachProfiler` . `pvClientData`Null ise `cbClientData` 0 (sıfır) olmalıdır.
 
-  \[' de] yüklenecek profil oluşturucunun DLL dosyasının tam yolu. Bu dize, null Sonlandırıcı dahil olmak üzere en fazla 260 karakter içermelidir. `wszProfilerPath`Null veya boş bir dize ise, ortak dil çalışma zamanı (CLR), öğesine işaret eden CLSID için kayıt defterine bakarak profil OLUŞTURUCUNUN dll dosyasının konumunu bulmaya çalışır `pClsidProfiler` .
-
-- `pvClientData`
-
-  \[' de] [ICorProfilerCallback3:: InitializeForAttach](icorprofilercallback3-initializeforattach-method.md) yöntemi tarafından Profiler 'a geçirilecek verilerin bir işaretçisi. Tetikleme işlemi, bu belleği döndürbaşladıktan sonra yeniden kullanabilir `AttachProfiler` . `pvClientData`Null ise `cbClientData` 0 (sıfır) olmalıdır.
-
-- `cbClientData`
-
-  \[' de] işaret eden verilerin bayt cinsinden boyutu `pvClientData` .
+`cbClientData` 'ndaki Öğesinin işaret ettiği verilerin bayt cinsinden boyutu `pvClientData` .
 
 ## <a name="return-value"></a>Dönüş Değeri  
 

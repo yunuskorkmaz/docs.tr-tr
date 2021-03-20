@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 46380fcc-0198-43ae-a1f5-2d4939425886
 topic_type:
 - apiref
-ms.openlocfilehash: efa8b2e965ba4a365bbd72db4c5af69db006f6d5
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: d84cac19acb8a1d696030fe372d29c655c5f97a6
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99648512"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760801"
 ---
 # <a name="functiontailcall3withinfo-function"></a>FunctionTailcall3WithInfo İşlevi
 
@@ -36,13 +36,9 @@ void __stdcall FunctionTailcall3WithInfo(
   
 ## <a name="parameters"></a>Parametreler  
 
-- `functionIDOrClientID`
+`functionIDOrClientID` 'ndaki Bir tail çağrısı yapmak üzere olan şu anda yürütülmekte olan işlevin tanımlayıcısı.
 
-  \[' de] Şu anda yürütülmekte olan işlevin bir kuyruk çağrısını yapmak üzere olan tanımlayıcısı.
-
-- `eltInfo`
-
-  \[' de] belirli bir yığın çerçevesi hakkındaki bilgileri temsil eden donuk bir işleyici. Bu tanıtıcı yalnızca geçirildiği geri arama sırasında geçerlidir.
+`eltInfo` 'ndaki Belirli bir yığın çerçevesi hakkındaki bilgileri temsil eden donuk bir tanıtıcı. Bu tanıtıcı yalnızca geçirildiği geri arama sırasında geçerlidir.
 
 ## <a name="remarks"></a>Açıklamalar  
 

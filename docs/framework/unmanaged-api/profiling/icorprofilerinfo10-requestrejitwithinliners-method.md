@@ -12,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 925a61bf2521950cad7fb0dce8f1484198f3f806
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 3d85537030e042d53bb4ff859eb1d2c3a24a45a5
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106520"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760788"
 ---
 # <a name="icorprofilerinfo10requestrejitwithinliners-method"></a>ICorProfilerInfo10:: RequestReJITWithInliners yöntemi
 
@@ -34,21 +34,13 @@ HRESULT RequestReJITWithInliners( [in]                       DWORD       dwRejit
 
 ## <a name="parameters"></a>Parametreler
 
-- `dwRejitFlags`
+`dwRejitFlags` 'ndaki [COR_PRF_REJIT_FLAGS](cor-prf-rejit-flags-enumeration.md)bit maskesi.
 
-  \[içinde] [COR_PRF_REJIT_FLAGS](cor-prf-rejit-flags-enumeration.md)bir bit maskesi.
+`cFunctions` 'ndaki Yeniden derlemek için işlev sayısı.
 
-- `cFunctions`
+`moduleIds` 'ndaki `moduleId` `module` Yeniden `methodDef` derlenecek işlevleri tanımlayan (,) çiftlerinin bölümünü belirtir.
 
-  \[içinde] yeniden derlemek için işlev sayısı.
-
-- `moduleIds`
-
-  \[içinde] `moduleId` `module` yeniden `methodDef` derlenecek işlevleri tanımlayan (,) çiftlerinin bölümünü belirtir.
-
-- `methodIds`
-
-  \[içinde] `methodId` `module` yeniden `methodDef` derlenecek işlevleri tanımlayan (,) çiftlerinin bölümünü belirtir.
+`methodIds` 'ndaki `methodId` `module` Yeniden `methodDef` derlenecek işlevleri tanımlayan (,) çiftlerinin bölümünü belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
 

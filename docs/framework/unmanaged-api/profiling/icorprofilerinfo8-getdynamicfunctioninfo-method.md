@@ -12,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 48c8dbe20ccafb3fb23e9e289f728d5e3370613a
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: b38bd7a4f440edba0a7156176f223ba38c9807cf
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99646588"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759123"
 ---
 # <a name="icorprofilerinfo8getdynamicfunctioninfo-method"></a>ICorProfilerInfo8:: Getdynamicfunctionınfo yöntemi
 
@@ -37,33 +37,19 @@ HRESULT GetDynamicFunctionInfo( [in]  FunctionID              functionId,
 
 ## <a name="parameters"></a>Parametreler
 
-- `functionId`
+`functionId` 'ndaki Bilgi alınacak işlevin KIMLIĞI.
 
-  \[' de] bilgi alınacak işlevin KIMLIĞI.
+`moduleId` 'ndaki İşlevin üst sınıfının tanımlandığı modüle yönelik bir işaretçi.
 
-- `moduleId`
+`ppvSig` dışı İşlev için imzaya yönelik bir işaretçi.
 
-  \[' de] işlevin üst sınıfının tanımlandığı modülün bir işaretçisi.
+`pbSig` dışı İşlev imzası için bayt sayısına yönelik bir işaretçi.
 
-- `ppvSig`
+`cchName` 'ndaki Dizinin en büyük boyutu `wszName` .
 
-  \[out] işlev için imzaya yönelik bir işaretçi.
+`pcchName` dışı Dizideki karakterlerin sayısı `wszName` .
 
-- `pbSig`
-
-  \[out] işlev imzası için bayt sayısına yönelik bir işaretçi.
-
-- `cchName`
-
-  \[' de] dizinin en büyük boyutu `wszName` .
-
-- `pcchName`
-
-  \[out] dizideki karakterlerin sayısı `wszName` .
-
-- `wszName`
-
-  \[out] bir dizi varsa `WCHAR` işlevin adıdır.
+`wszName` dışı Bir dizi, varsa `WCHAR` işlevin adıdır.
 
 ## <a name="remarks"></a>Açıklamalar
 

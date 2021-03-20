@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ef782c53-dae7-4990-b4ad-fddb1e690d4e
 topic_type:
 - apiref
-ms.openlocfilehash: 664b0ca5b40937eaa129e6843e55024802befbb7
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 4726a080157b99c7538fe8a66cf8b26403564ad2
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99648681"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759305"
 ---
 # <a name="functionenter3-function"></a>FunctionEnter3 İşlevi
 
@@ -34,9 +34,7 @@ void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);
   
 ## <a name="parameters"></a>Parametreler
 
-- `functionOrRemappedID`
-
-  \[' de] denetimin geçirildiği işlevin tanımlayıcısı.
+`functionOrRemappedID` 'ndaki Denetimin geçirildiği işlevin tanımlayıcısı.
 
 ## <a name="remarks"></a>Açıklamalar  
 

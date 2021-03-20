@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5cba642c-0d80-48ee-889d-198c5044d821
 topic_type:
 - apiref
-ms.openlocfilehash: 1faaf8fbc1e0fee9ce76850cfedcd4e8cf934371
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 3f384c1a02da1747b28701d2eba994b56a85c18f
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99705778"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759967"
 ---
 # <a name="icorprofilercallbackjitcachedfunctionsearchstarted-method"></a>ICorProfilerCallback::JITCachedFunctionSearchStarted Yöntemi
 
@@ -37,13 +37,9 @@ HRESULT JITCachedFunctionSearchStarted(
   
 ## <a name="parameters"></a>Parametreler
 
-- `functionId`
+`functionId` 'ndaki Aramanın gerçekleştirildiği işlevin KIMLIĞI.
 
-  \[' de] aramanın gerçekleştirildiği işlevin KIMLIĞI.
-
-- `pbUseCachedFunction`
-
-  \[out] `true` yürütme altyapısının bir işlevin önbelleğe alınmış sürümünü kullanması gerekiyorsa (varsa); Aksi takdirde `false` . Değer ise `false` , yürütme ALTYAPıSı JIT-derlenmiş olmayan bir sürümü kullanmak yerine, işlevi derler.
+`pbUseCachedFunction` [out] `true` yürütme altyapısının bir işlevin önbelleğe alınmış sürümünü kullanması gerekiyorsa (varsa); Aksi takdirde `false` . Değer ise `false` , yürütme ALTYAPıSı JIT-derlenmiş olmayan bir sürümü kullanmak yerine, işlevi derler.
 
 ## <a name="remarks"></a>Açıklamalar  
 

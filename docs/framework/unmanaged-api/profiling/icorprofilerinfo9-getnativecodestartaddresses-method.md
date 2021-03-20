@@ -12,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 1ca686cef4a45ebb9e05190fa790ed5300c0d816
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 062aebf6d5bed208ea71b215bd9f857b82483673
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99646497"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759058"
 ---
 # <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9:: Getnativecodestartaadresler yöntemi
 
@@ -35,25 +35,15 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 
 ## <a name="parameters"></a>Parametreler
 
-- `functionId`
+`functionId` 'ndaki Yerel kod başlatma adresleri döndürülecek olan işlevin KIMLIĞI.
 
-  \[' de] yerel kod başlatma adresleri döndürülecek işlevin KIMLIĞI.
+`reJitId` 'ndaki JıT-yeniden derleme işlevinin kimliği.
 
-- `reJitId`
+`cCodeStartAddresses` 'ndaki Dizinin en büyük boyutu `codeStartAddresses` .
 
-  \[içinde] JıT-yeniden derleme işlevinin kimliği.
+`pcCodeStartAddresses` dışı Kullanılabilir adreslerin sayısı.
 
-- `cCodeStartAddresses`
-
-  \[' de] dizinin en büyük boyutu `codeStartAddresses` .
-
-- `pcCodeStartAddresses`
-
-  \[out] kullanılabilir adreslerin sayısı.
-
-- `codeStartAddresses`
-
-  \[out] `UINT_PTR` her biri, belirtilen işlev için yerel gövde başlangıç adresidir.
+`codeStartAddresses` dışı `UINT_PTR`Her birinin, belirtilen işlev için yerel gövde başlangıç adresi olan dizisi.
 
 ## <a name="remarks"></a>Açıklamalar
 
@@ -67,7 +57,7 @@ Katmanlı derleme etkinleştirildiğinde, bir işlevde birden fazla yerel kod g�
 
 **Kitaplık:** Corguid. lib
 
-**.NET sürümleri:**[!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+**.NET sürümleri:**[!INCLUDE[net_core_21](../../../../includes/net-core-21-md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 190f424d-5e37-4163-a191-0895686e9476
 topic_type:
 - apiref
-ms.openlocfilehash: b222e629cbfce2fde27c2d266b3a343466a1419c
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 080e9be61e4f10cbfb60696a5089aca0c3f2843f
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99706324"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759995"
 ---
 # <a name="icorprofilercallbackexceptionsearchcatcherfound-method"></a>ICorProfilerCallback::ExceptionSearchCatcherFound Yöntemi
 
@@ -36,9 +36,7 @@ RESULT ExceptionSearchCatcherFound(
   
 ## <a name="parameters"></a>Parametreler
 
-- `functionId`
-
-  \[' de] özel durum işleyicisini içeren işlevin KIMLIĞI.
+`functionId` 'ndaki Özel durum işleyicisini içeren işlevin KIMLIĞI.
 
 ## <a name="requirements"></a>Gereksinimler  
 

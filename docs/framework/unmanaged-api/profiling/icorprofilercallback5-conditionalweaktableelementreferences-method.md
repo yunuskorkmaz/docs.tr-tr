@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 532c7a02-a9de-4cea-bb2b-7f470da594de
 topic_type:
 - apiref
-ms.openlocfilehash: 40114f6e1d80719eceaf2dbc398b74c1e790c76a
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: ded43da029fe0b4c2a645823e62ca66b480f095c
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99788676"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760281"
 ---
 # <a name="icorprofilercallback5conditionalweaktableelementreferences-method"></a>ICorProfilerCallback5::ConditionalWeakTableElementReferences Yöntemi
 
@@ -40,17 +40,13 @@ HRESULT ConditionalWeakTableElementReferences(
 
 ## <a name="parameters"></a>Parametreler
 
-`cRootRefs`\
-'ndaki `keyRefIds`, `valueRefIds` Ve `rootIds` dizilerindeki öğelerin sayısı.
+`cRootRefs` 'ndaki `keyRefIds`, `valueRefIds` Ve `rootIds` dizilerindeki öğelerin sayısı.
 
-`keyRefIds`\
-'ndaki Her biri `ObjectID` bağımlı tanıtıcı çiftindeki birincil öğe için öğesini içeren bir nesne kimlikleri dizisi.
+`keyRefIds` 'ndaki Her biri `ObjectID` bağımlı tanıtıcı çiftindeki birincil öğe için öğesini içeren bir nesne kimlikleri dizisi.
 
-`valueRefIds`\
-'ndaki Her biri `ObjectID` bağımlı tanıtıcı çiftindeki ikincil öğe için öğesini içeren bir nesne kimlikleri dizisi. ( `keyRefIds[i]` `valueRefIds[i]` canlı tutar.)
+`valueRefIds` 'ndaki Her biri `ObjectID` bağımlı tanıtıcı çiftindeki ikincil öğe için öğesini içeren bir nesne kimlikleri dizisi. ( `keyRefIds[i]` `valueRefIds[i]` canlı tutar.)
 
-`rootIds`\
-'ndaki `GCHandleID` Çöp toplama köküyle ilgili ek bilgiler içeren bir tamsayıyı işaret eden bir değer dizisi.
+`rootIds` 'ndaki `GCHandleID` Çöp toplama köküyle ilgili ek bilgiler içeren bir tamsayıyı işaret eden bir değer dizisi.
 
 `ObjectID` `ConditionalWeakTableElementReferences` Çöp toplayıcı nesneleri eskileri yeni konumlara taşıma sürecinde olabileceğinden, yöntem tarafından döndürülen değerlerden hiçbiri geçerli değildir. Bu nedenle, profil oluşturucular bir çağrı sırasında nesneleri incelemeyi denememelidir `ConditionalWeakTableElementReferences` . `GarbageCollectionFinished`' De, tüm nesneler yeni konumlarına taşınmıştır ve denetleme yapılabilir.
 
