@@ -2,12 +2,12 @@
 title: Linux dökümlerinin hatasını ayıklama
 description: Bu makalede, Linux ortamlarından dökümleri nasıl toplayacağınızı ve analiz edeceğinizi öğreneceksiniz.
 ms.date: 08/27/2020
-ms.openlocfilehash: e6f2eea3af718853ad7365a5209b397a66035dde
-ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
+ms.openlocfilehash: 42038c685c3ad0043c91df140b0133a9ddecec3b
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97753607"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874282"
 ---
 # <a name="debug-linux-dumps"></a>Linux dökümlerinin hatasını ayıklama
 
@@ -26,9 +26,9 @@ Linux üzerinde dökümler toplamanın iki önerilen yolu şunlardır:
 
 ### <a name="core-dumps-with-createdump"></a>İle temel dökümler `createdump`
 
-`dotnet-dump`Yalnızca yönetilen dökümler oluşturan öğesine alternatif olarak, [`createdump`](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md) hem yerel hem de yönetilen bilgileri içeren Linux üzerinde çekirdek dökümler oluşturmaya yönelik önerilen araçtır. GDB veya gcore gibi diğer araçlar da temel dökümler oluşturmak için kullanılabilir ancak yönetilen hata ayıklama için gereken durumu kaçırabilir ve analiz sırasında "BILINMEYEN" tür veya işlev adlarına neden olabilir.
+`dotnet-dump`Yalnızca yönetilen dökümler oluşturan öğesine alternatif olarak, [`createdump`](https://github.com/dotnet/runtime/blob/main/docs/design/coreclr/botr/xplat-minidump-generation.md) hem yerel hem de yönetilen bilgileri içeren Linux üzerinde çekirdek dökümler oluşturmaya yönelik önerilen araçtır. GDB veya gcore gibi diğer araçlar da temel dökümler oluşturmak için kullanılabilir ancak yönetilen hata ayıklama için gereken durumu kaçırabilir ve analiz sırasında "BILINMEYEN" tür veya işlev adlarına neden olabilir.
 
-`createdump`Araç .NET Core çalışma zamanı ile yüklenir ve libcoreclr.so ' nin yanında (genellikle "/usr/share/DotNet/Shared/Microsoft.NETCore.app/[Version]" içinde) bulunabilir. Araç, birincil bağımsız değişkeni olarak döküm toplamak için bir işlem KIMLIĞI alır ve toplanacak döküm türünü belirten isteğe bağlı parametreleri de alabilir (yığın içeren bir mini döküm varsayılandır). Seçenekler arasında şunlar bulunur:
+`createdump`Araç .NET Core çalışma zamanı ile yüklenir ve libcoreclr.so ' nin yanında (genellikle "/usr/share/DotNet/Shared/Microsoft.NETCore.app/[Version]" içinde) bulunabilir. Araç, birincil bağımsız değişkeni olarak döküm toplamak için bir işlem KIMLIĞI alır ve toplanacak döküm türünü belirten isteğe bağlı parametreleri de alabilir (yığın içeren bir mini döküm varsayılandır). Seçeneklere şunlar dahildir:
 
 - **`<input-filename>`**
 
@@ -66,7 +66,7 @@ Linux üzerinde dökümler toplamanın iki önerilen yolu şunlardır:
 
 İle toplanan yönetilen dökümler `dotnet-dump` ve ile toplanan temel dökümler, `createdump` `dotnet-dump` komutu kullanılarak araçla analiz edilebilir `dotnet-dump analyze` . , `dotnet dump` Dökümünü çözümleyen ortamın, dökümün yakalandığı ortamla aynı işletim sistemine ve mimariye sahip olmasını gerektirir.
 
-Alternatif olarak, hem yönetilen hem de yerel çerçevelerin analizine olanak tanıyan Linux üzerinde çekirdek dökümlerini çözümlemek için [Lldb](https://lldb.llvm.org/) kullanılabilir. LLDB, yönetilen kodun hatalarını ayıklamak için SOS uzantısını kullanır. [`dotnet-sos`](dotnet-sos.md)CLI Aracı, yönetilen kodda hata ayıklama için [birçok yararlı komuta](https://github.com/dotnet/diagnostics/blob/master/documentation/sos-debugging-extension.md) sahip sos 'yi yüklemek için kullanılabilir. .NET Core dökümlerini çözümlemek için, LLDB ve SOS, döküm oluşturulan ortamdan aşağıdaki .NET Core ikililerini gerektirir:
+Alternatif olarak, hem yönetilen hem de yerel çerçevelerin analizine olanak tanıyan Linux üzerinde çekirdek dökümlerini çözümlemek için [Lldb](https://lldb.llvm.org/) kullanılabilir. LLDB, yönetilen kodun hatalarını ayıklamak için SOS uzantısını kullanır. [`dotnet-sos`](dotnet-sos.md)CLI Aracı, yönetilen kodda hata ayıklama için [birçok yararlı komuta](https://github.com/dotnet/diagnostics/blob/main/documentation/sos-debugging-extension.md) sahip sos 'yi yüklemek için kullanılabilir. .NET Core dökümlerini çözümlemek için, LLDB ve SOS, döküm oluşturulan ortamdan aşağıdaki .NET Core ikililerini gerektirir:
 
 1. libmscordaccore.so
 2. libcoreclr.so
@@ -82,11 +82,11 @@ lldb --core <dump-file> <host-program>
 
 Yukarıdaki komut satırında, `<dump-file>` analiz edilecek döküm yoludur ve `<host-program>` .NET Core uygulamasını Başlatan yerel programdır. `dotnet`Uygulama kendi kendine dahil olmadığı müddetçe genellikle ikili bir durumdur, bu durumda dll uzantısı olmayan uygulamanın adıdır.
 
-LLDB başladıktan sonra, `setsymbolserver` komutun doğru sembol konumunu işaret etmek için ( `setsymbolserver -ms` Microsoft 'un sembol sunucusunu kullanmak veya `setsymbolserver -directory <path>` yerel bir yol belirtmek için) kullanılması gerekebilir. Yerel semboller çalıştırılarak çalıştırılabilir `loadsymbols` . Bu noktada, dökümünü çözümlemek için [sos komutları](https://github.com/dotnet/diagnostics/blob/master/documentation/sos-debugging-extension.md) kullanılabilir.
+LLDB başladıktan sonra, `setsymbolserver` komutun doğru sembol konumunu işaret etmek için ( `setsymbolserver -ms` Microsoft 'un sembol sunucusunu kullanmak veya `setsymbolserver -directory <path>` yerel bir yol belirtmek için) kullanılması gerekebilir. Yerel semboller çalıştırılarak çalıştırılabilir `loadsymbols` . Bu noktada, dökümünü çözümlemek için [sos komutları](https://github.com/dotnet/diagnostics/blob/main/documentation/sos-debugging-extension.md) kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - , SOS uzantısını yükleme hakkında daha fazla bilgi için [DotNet-sos](dotnet-sos.md) .
 - [DotNet-](dotnet-symbol.md) sembol indirme aracını yükleme ve kullanma hakkında daha fazla ayrıntı için.
-- Yararlı bir SSS dahil olmak üzere hata ayıklama hakkında daha fazla ayrıntı için [.NET Core tanılama deposu](https://github.com/dotnet/diagnostics/blob/master/documentation/) .
-- Lldb 'yi Linux veya Mac 'e yükleme yönergeleri için [yükleme](https://github.com/dotnet/diagnostics/blob/master/documentation/sos.md#getting-lldb) .
+- Yararlı bir SSS dahil olmak üzere hata ayıklama hakkında daha fazla ayrıntı için [.NET Core tanılama deposu](https://github.com/dotnet/diagnostics/blob/main/documentation/) .
+- Lldb 'yi Linux veya Mac 'e yükleme yönergeleri için [yükleme](https://github.com/dotnet/diagnostics/blob/main/documentation/sos.md#getting-lldb) .

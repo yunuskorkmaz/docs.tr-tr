@@ -3,12 +3,12 @@ title: C# 7,0 ' deki yenilikler-C# Kılavuzu
 description: C# dilinin sürüm 7,0 ' deki yeni özelliklere genel bakış alın.
 ms.date: 10/02/2020
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 897729022e45e96d0f54057ef4dad1a4fc0d6799
-ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
+ms.openlocfilehash: 973491044808d7abc58920381ffed57549ee58d3
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103480856"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876064"
 ---
 # <a name="whats-new-in-c-70-through-c-73"></a>C# 7,3 ile c# 7,0 yenilikleri
 
@@ -54,7 +54,7 @@ Son olarak, derleyici yeni seçeneklere sahiptir:
 
 Bu makalenin geri kalanında her özelliğe bir genel bakış sunulmaktadır. Her özellik için, arkasındaki ve söz dizimi hakkında bilgi edineceksiniz. Genel aracı kullanarak ortamınızdaki bu özellikleri keşfedebilirsiniz `dotnet try` :
 
-1. [DotNet-TRY](https://github.com/dotnet/try/blob/master/README.md#setup) küresel aracını yükler.
+1. [DotNet-TRY](https://github.com/dotnet/try/blob/main/DotNetTryLocal.md) küresel aracını yükler.
 1. [DotNet/TRY-Samples](https://github.com/dotnet/try-samples) deposunu kopyalayın.
 1. *TRY-Samples* deposu için geçerli dizini *csharp7* alt dizinine ayarlayın.
 1. `dotnet try` öğesini çalıştırın.

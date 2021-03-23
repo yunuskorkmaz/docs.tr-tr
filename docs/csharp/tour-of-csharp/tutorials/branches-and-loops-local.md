@@ -2,12 +2,12 @@
 title: Dallar ve döngüler-C# öğreticisine giriş
 description: Dallar ve döngüler hakkında bu öğreticide, ifadeleri sürekli olarak yürütmek için koşullu dalları ve döngüleri destekleyen dil sözdizimini araştırmak üzere C# kodu yazarsınız.
 ms.date: 02/05/2021
-ms.openlocfilehash: cc1c5457738ca0f7d4756811adec4a7bd57cb009
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: ae57b370022bfc86200ca20a913d44f64e46d68d
+ms.sourcegitcommit: 5ce37699c2a51ed173171813be68ef7577b1aba5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 03/23/2021
-ms.locfileid: "104872502"
+ms.locfileid: "104881126"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Dal ve döngü deyimleri ile koşullu mantık öğrenin
 
@@ -278,7 +278,7 @@ C# dilinde `if` deyimini ve döngü yapılarını gördüğünüze göre şimdi 
 - `if` deyimi bir sayının toplama dahil edilip edilmemesi gerektiğini görmeniz için size koşulu verir.
 - `for` döngüsü 1 ile 20 arasındaki tüm sayılar için bir dizi adımı yinelemenize yardımcı olur.
 
-Kendiniz deneyin. Daha sonra başarılı olup olmadığınıza bakın. Yanıt için 63 almalısınız. [GitHub 'da tamamlanan kodu görüntüleyerek](https://github.com/dotnet/samples/tree/main/csharp/branches-quickstart/Program.cs#L46-L54)olası bir yanıt görebilirsiniz.
+Kendiniz deneyin. Daha sonra başarılı olup olmadığınıza bakın. Yanıt için 63 almalısınız. [GitHub 'da tamamlanan kodu görüntüleyerek](https://github.com/dotnet/samples/blob/main/csharp/branches-quickstart/Program.cs#L87-L95)olası bir yanıt görebilirsiniz.
 
 "Dallar ve döngüler" öğreticisini tamamladınız.
 

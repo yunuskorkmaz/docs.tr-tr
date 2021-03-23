@@ -2,12 +2,12 @@
 title: Bir Docker uygulaması için dış döngü DevOps iş akışındaki adımlar
 description: DevOps iş akışının "dıştaki döngüsü" adımlarını öğrenin
 ms.date: 01/06/2021
-ms.openlocfilehash: bfac2d2c7866bfd11cd18201a93cb17a72cae588
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: 8bca36d5aa0fef95d684a96a5c6017ec15956358
+ms.sourcegitcommit: 5ce37699c2a51ed173171813be68ef7577b1aba5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970303"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104881100"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Bir Docker uygulaması için dış döngü DevOps iş akışındaki adımlar
 
@@ -77,7 +77,7 @@ Azure Service Fabric, Azure Kubernetes hizmeti ve benzer tekliflerde derleme/tes
 
 Bu Visual Studio Team Services görevlerle, Azure 'da ve tercih ettiğiniz Docker kayıt defterinizde (Azure Container Registry, Docker Hub, özel Docker DTR veya başka bir Docker kayıt defteri) sağlanan bir derleme Linux-Docker Konağı/VM ile Docker CI işlem hattınızı çok tutarlı bir şekilde birleştirebilirsiniz.
 
-**_Gereksinimler:_* _
+***Gereklilik***
 
 - Azure DevOps Services veya şirket içi yüklemeler için, Team Foundation Server 2015 güncelleştirme 3 veya sonraki bir sürümü.
 
@@ -85,7 +85,8 @@ Bu Visual Studio Team Services görevlerle, Azure 'da ve tercih ettiğiniz Docke
 
   Bu aracılardan birini oluşturmanın kolay bir yolu, Azure DevOps Services Agent Docker görüntüsünü temel alan bir kapsayıcı çalıştırmak için Docker kullanmaktır.
 
-> [! BILGI] Azure DevOps Services Docker CI işlem hattı oluşturma ve izlenecek yolları görüntüleme hakkında daha fazla bilgi edinmek Için şu siteleri ziyaret edin:
+> [!TIP]
+> Azure DevOps Services Docker CI işlem hattı oluşturma ve izlenecek yolları görüntüleme hakkında daha fazla bilgi edinmek için şu siteleri ziyaret edin:
 >
 > - Bir Visual Studio Team Services (Şimdi Azure DevOps Services) aracı bir Docker kapsayıcısı olarak çalıştırılıyor: \
 >   <https://hub.docker.com/_/microsoft-azure-pipelines-vsts-agent>
@@ -126,7 +127,7 @@ Genellikle, özel görüntüleriniz için Azure Container Registry veya Docker g
 
 ![Bir kapsayıcı kayıt defterine özel görüntülerin itilini gösteren diyagram.](./media/docker-application-outer-loop-devops-workflow/docker-push-custom-images.png)
 
-_ * Şekil 5-4 * *. Docker kayıt defterine özel görüntüler Yayımlama
+**Şekil 5-4**. Docker kayıt defterine özel görüntüler Yayımlama
 
 Adım 3 ' te, tümleştirme ve test (CI) oluşturmak için, elde edilen Docker görüntülerini özel veya ortak bir kayıt defterine yayımlayabilirsiniz. Azure Container Registry, Amazon Web Services Container Registry, Google Container Registry, Quay kayıt defteri vb. gibi bulut satıcılarından çok sayıda Docker kayıt defteri teklifi vardır.
 
@@ -136,7 +137,8 @@ Docker görevlerini kullanarak, Şekil 5-5 ' de gösterildiği gibi, birden çok
 
 **Şekil 5-5**. Özel görüntüleri bir Docker kayıt defterine yayımlamak için Azure DevOps Services kullanma
 
-> [! BILGI] Azure Container Registry hakkında daha fazla bilgi Için bkz <https://aka.ms/azurecontainerregistry> ..
+> [!TIP]
+> Azure Container Registry hakkında daha fazla bilgi için bkz <https://aka.ms/azurecontainerregistry> ..
 
 ## <a name="step-4-cd-deploy"></a>4. Adım: CD, dağıtma
 
@@ -196,7 +198,8 @@ Başlangıçta, belirli kümelere veya düzenleyicilerine dağıtım yaparken he
 
 **Şekil 5-11**. Docker dağıtım görev tanımı, ACS DC/OS 'ye dağıtılıyor
 
-> [! BILGI] Azure DevOps Services ve Docker ile CD işlem hattı hakkında daha fazla bılgı edinmek Için şu adresi ziyaret edin <https://azure.microsoft.com/services/devops/pipelines>
+> [!TIP]
+> Azure DevOps Services ve Docker ile CD işlem hattı hakkında daha fazla bilgi edinmek için şu adresi ziyaret edin <https://azure.microsoft.com/services/devops/pipelines>
 
 ## <a name="step-5-run-and-manage"></a>5. Adım: çalıştırma ve yönetme
 

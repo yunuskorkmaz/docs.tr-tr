@@ -3,12 +3,12 @@ title: Çalışma zamanı durumuna göre sorgulama (C#)
 description: Kodunuzun, bu yöntemlere geçirilen LINQ Yöntem çağrılarını veya ifade ağaçlarını değiştirerek çalışma zamanı durumuna göre dinamik olarak sorgulamak için kullanabileceği çeşitli teknikler açıklanmaktadır.
 ms.date: 02/11/2021
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
-ms.openlocfilehash: 5e015bbc69b61b783abd7eba9cfcf13c29d5c3be
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: 1a3bbe8c9ba6752c541d69502b7c4ac020fd9708
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100581936"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876727"
 ---
 # <a name="querying-based-on-runtime-state-c"></a>Çalışma zamanı durumuna göre sorgulama (C#)
 
@@ -48,7 +48,7 @@ LINQ sağlayıcısı 'nın onu desteklediğine göre, dinamik olarak sorgu oluş
 
 ## <a name="call-additional-linq-methods"></a>Ek LINQ yöntemlerini çağırın
 
-Genellikle, [YERLEŞIK LINQ yöntemleri](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Linq.Queryable/src/System/Linq/Queryable.cs) <xref:System.Linq.Queryable> iki adım gerçekleştirir:
+Genellikle, [YERLEŞIK LINQ yöntemleri](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Linq.Queryable/src/System/Linq/Queryable.cs) <xref:System.Linq.Queryable> iki adım gerçekleştirir:
 
 * Yöntem çağrısını temsil eden içinde geçerli ifade ağacını sarın <xref:System.Linq.Expressions.MethodCallExpression> .
 * Sarmalanan ifade ağacını sağlayıcıya geri geçirin; Örneğin, sağlayıcının yöntemi aracılığıyla bir değer döndürün <xref:System.Linq.IQueryProvider.Execute%2A?displayProperty=nameWithType> ya da yöntemi aracılığıyla çevrilmiş bir sorgu nesnesi döndürün <xref:System.Linq.IQueryProvider.CreateQuery%2A?displayProperty=nameWithType> .

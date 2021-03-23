@@ -3,12 +3,12 @@ title: .NET 5 + ' da dizeleri karşılaştırırken davranış değişiklikleri
 description: .NET 5 ve sonraki Windows sürümlerindeki dize karşılaştırma davranışı değişiklikleri hakkında bilgi edinin.
 ms.topic: conceptual
 ms.date: 12/07/2020
-ms.openlocfilehash: 0db8477ce4e8c3a7167c719e2a29a32e5346a8e7
-ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
+ms.openlocfilehash: 40b5094cdc098d4772b413c28daaec309abdb265
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98692701"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876766"
 ---
 # <a name="behavior-changes-when-comparing-strings-on-net-5"></a>.NET 5 + ' da dizeleri karşılaştırırken davranış değişiklikleri
 
@@ -241,7 +241,7 @@ Console.WriteLine("endz".EndsWith("z")); // Prints 'True'
 > - Davranış: dilsel ve kültüre duyarlı karşılaştırıcılarla, zaman zaman davranış ayarlamalarını olumsuz şekilde gerçekleştirebilir. Hem ıCU hem de eski Windows NLS özelliği, dünya dillerinin nasıl değişdiklerini hesaba göre güncelleştirilir. Daha fazla bilgi için bkz. Web günlüğü gönderi [yerel ayar (kültür) veri karmaşası](/archive/blogs/shawnste/locale-culture-data-churn). *Sıralı* karşılaştırıcı davranışı, tam bit düzeyinde arama ve karşılaştırma gerçekleştirdiğinden dolayı hiçbir şekilde değişmeyecektir. Bununla birlikte, daha fazla karakter kümesi kapsayacak şekilde Unicode büyüdükçe ve mevcut büyük küçük harf verilerinde da ihmallerinden 'yi düzelterek *OrdinalIgnoreCase* karşılaştırıcı davranışı değişebilir.
 > - Kullanım: karşılaştırıcılarla `StringComparison.InvariantCulture` ve `StringComparison.InvariantCultureIgnoreCase` kültüre duyarlı olmayan dil Karşılaştırıcılar. Diğer bir deyişle, bu Karşılaştırıcılar, birden çok olası temel temsilde sahip olan ve bu tür temsillerin eşit olarak değerlendirilme karakteri gibi kavramları anlamalıdır. Ancak kültüre duyarlı olmayan dil Karşılaştırıcılar \<dz\> \<d\> \<z\> , yukarıda gösterildiği gibi veya ' den farklı olarak özel işleme içermez. Ayrıca, Almanya Eszett (ß) gibi özel durum karakterleri de olmaz.
 
-.NET ayrıca *sabit Genelleştirme modunu* da sunmaktadır. Bu katılım modu, dilsel arama ve karşılaştırma yordamlarına yönelik kod yollarını devre dışı bırakır. Bu modda tüm işlemler,   `CultureInfo` `StringComparison` çağıranın sağladığı veya bağımsız değişkenden bağımsız olarak Ordinal veya OrdinalIgnoreCase davranışları kullanır. Daha fazla bilgi için bkz. Genelleştirme ve [.NET Core Genelleştirme sabit modu](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md) [için çalışma zamanı yapılandırma seçenekleri](../../core/run-time-config/globalization.md) .
+.NET ayrıca *sabit Genelleştirme modunu* da sunmaktadır. Bu katılım modu, dilsel arama ve karşılaştırma yordamlarına yönelik kod yollarını devre dışı bırakır. Bu modda tüm işlemler,   `CultureInfo` `StringComparison` çağıranın sağladığı veya bağımsız değişkenden bağımsız olarak Ordinal veya OrdinalIgnoreCase davranışları kullanır. Daha fazla bilgi için bkz. Genelleştirme ve [.NET Core Genelleştirme sabit modu](https://github.com/dotnet/runtime/blob/main/docs/design/features/globalization-invariant-mode.md) [için çalışma zamanı yapılandırma seçenekleri](../../core/run-time-config/globalization.md) .
 
 Daha fazla bilgi için bkz. [.net 'teki dizeleri karşılaştırmak Için en iyi uygulamalar](best-practices-strings.md).
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-ms.openlocfilehash: 06746347910f62a428d4897693a88b5efe78e86f
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: e666674f1d52ccb0fe1c9ba2f4c8d743549d5086
+ms.sourcegitcommit: 5ce37699c2a51ed173171813be68ef7577b1aba5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258975"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104881151"
 ---
 # <a name="additional-resources"></a>Ek kaynaklar
 
@@ -33,13 +33,13 @@ Aşağıdaki Web siteleri rehberlik sağlar ve yaygın sorunların yanıtların�
 |URL|Açıklama|
 |----------|----------------|
 |[Visual Basic belge örnekleri](https://github.com/dotnet/docs/tree/main/samples/snippets/visualbasic)|Visual Basic ve .NET belgelerinin tamamında kullanılan örnekleri içerir.|
-|[Örnek tarayıcı](https://docs.microsoft.com/samples/browse/?languages=vb)|Visual Basic yazılan kod örneklerini içerir|
+|[Örnek tarayıcı](/samples/browse/?languages=vb)|Visual Basic yazılan kod örneklerini içerir|
 
 ### <a name="forums"></a>Forumlar
 
 |URL|Açıklama|
 |----------|----------------|
-|[Microsoft Soru-Cevap](https://docs.microsoft.com/answers/topics/dotnet-visual-basic.html)|Visual Basic programlama diliyle ilgili teknik sorular.|
+|[Microsoft Soru-Cevap](/answers/topics/dotnet-visual-basic.html)|Visual Basic programlama diliyle ilgili teknik sorular.|
 
 ### <a name="videos-and-webcasts"></a>Videolar ve Web yayınları
 

@@ -4,18 +4,18 @@ description: ASP.NET Core 6,0 ' deki, null yapılabilir başvuru türü ek açı
 author: scottaddie
 ms.author: scaddie
 ms.date: 02/24/2021
-ms.openlocfilehash: d289ee68a10ee6a237e553a9e0ade153add8f608
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: d6a43b4885a7b11669fc0eeb469c740b60d0cd4c
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102257895"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874348"
 ---
 # <a name="nullable-reference-type-annotations-changed"></a>Null yapılabilir başvuru türü ek açıklamaları değişti
 
 _**Bu sorun devam eden bir çalışmayı temsil eder. Null olabilme ek açıklamalarıyla yapılan tüm önemli değişiklikler bu soruna ASP.NET Core 6,0 üzerinden toplanır.**_
 
-ASP.NET Core 5,0 ' den başlayarak, bu kod bölümlerine null olabilme ek açıklamaları uygulandı. Bu çabadan itibaren, bu ek açıklamalarda [hatalar bekleniyordu](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/api-guidelines/nullability.md#breaking-change-guidance) ve düzeltmelerin yapılması gerekir. ASP.NET Core 6,0 ' de, daha önce uygulanan bazı ek açıklamalar güncelleştiriliyor. Bu değişikliklerden bazıları kaynak üzerinde değişiklik olarak değerlendirilir. Değişiklikler API 'Lerin uyumsuz veya daha fazla kısıtlayıcı olmasına neden olacak. Güncelleştirilmiş API 'Ler, null yapılabilir başvuru türleri etkinleştirilmiş projelerde kullanıldığında, derleme zamanı uyarılarına neden olabilir.
+ASP.NET Core 5,0 ' den başlayarak, bu kod bölümlerine null olabilme ek açıklamaları uygulandı. Bu çabadan itibaren, bu ek açıklamalarda [hatalar bekleniyordu](https://github.com/dotnet/runtime/blob/main/docs/coding-guidelines/api-guidelines/nullability.md#breaking-change-guidance) ve düzeltmelerin yapılması gerekir. ASP.NET Core 6,0 ' de, daha önce uygulanan bazı ek açıklamalar güncelleştiriliyor. Bu değişikliklerden bazıları kaynak üzerinde değişiklik olarak değerlendirilir. Değişiklikler API 'Lerin uyumsuz veya daha fazla kısıtlayıcı olmasına neden olacak. Güncelleştirilmiş API 'Ler, null yapılabilir başvuru türleri etkinleştirilmiş projelerde kullanıldığında, derleme zamanı uyarılarına neden olabilir.
 
 Tartışma için bkz. GitHub sorunu [DotNet/aspnetcore # 27564](https://github.com/dotnet/aspnetcore/issues/27564).
 

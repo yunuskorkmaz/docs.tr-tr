@@ -4,12 +4,12 @@ description: C# Dizin oluşturucular ve bunların bir veya daha fazla bağımsı
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 1369740404c500d8b44b4706959bf4640c26aa2d
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 2efd8735587c35be8e89dba7499a0a661796067d
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656117"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875791"
 ---
 # <a name="indexers"></a>Dizin Oluşturucular
 
@@ -46,7 +46,7 @@ Bir öğe kümesindeki bir öğeye başvuruda bulunmak için bağımsız değiş
 API 'sinin, bu koleksiyonun bağımsız değişkenlerini tanımladığınız bazı koleksiyonları modellediğinde, bu *Dizin* oluşturucuyu yazmanız gerekir. Dizin oluşturucular, .NET Core Framework 'ün parçası olan koleksiyon türleri ile doğrudan eşleşmeyebilir veya eşleşmeyebilir. Bir koleksiyonun modellenmesi ek olarak, türü başka sorumluluklara sahip olabilir.
 Dizin oluşturucular, bu soyutlamalarda değerlerinin nasıl depolandığını veya hesaplanmadığını belirten iç ayrıntıları açığa çıkarmadan, türün soyutlamada eşleşen API 'yi sağlamanıza olanak tanır.
 
-*Dizin oluşturucular*kullanmanın bazı yaygın senaryolarından bazılarını inceleyelim. [Dizin oluşturucular için örnek klasöre](https://github.com/dotnet/samples/tree/master/csharp/indexers)erişebilirsiniz. İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../samples-and-tutorials/index.md#view-and-download-samples).
+*Dizin oluşturucular* kullanmanın bazı yaygın senaryolarından bazılarını inceleyelim. [Dizin oluşturucular için örnek klasöre](https://github.com/dotnet/samples/tree/main/csharp/indexers)erişebilirsiniz. İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../samples-and-tutorials/index.md#view-and-download-samples).
 
 ### <a name="arrays-and-vectors"></a>Diziler ve vektörler
 

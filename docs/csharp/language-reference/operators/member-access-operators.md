@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 28d3d9c3261f1a852d16f2637309b21412611c10
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b3ba56c7485d27d2692a589e2a8e5b330ea0de85
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95691246"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873906"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>Üye erişim işleçleri ve ifadeleri (C# Başvurusu)
 
@@ -109,7 +109,7 @@ void TraceMethod() {}
 
 ## <a name="null-conditional-operators--and-"></a>Null koşullu işleçler?. '? []
 
-C# 6 ve üzeri sürümlerde kullanılabilir, null koşullu bir operatör, [member access](#member-access-expression-) `?.` yalnızca o işlenen null olmayan olarak değerlendiriliyorsa işlenene bir üye erişimi, veya [öğe erişimi](#indexer-operator-)uygular `?[]` ; Aksi takdirde, döndürür `null` . Yani
+C# 6 ve üzeri sürümlerde kullanılabilir, null koşullu bir operatör, [](#member-access-expression-) `?.` yalnızca o işlenen null olmayan olarak değerlendiriliyorsa işlenene bir üye erişimi, veya [öğe erişimi](#indexer-operator-)uygular `?[]` ; Aksi takdirde, döndürür `null` . Yani
 
 - `a`Olarak değerlendirilirse `null` , `a?.x` veya `a?[x]` olur `null` .
 - `a`Null olmayan olarak değerlendirilirse, veya sonucu, `a?.x` sırasıyla veya sonucu ile `a?[x]` aynıdır `a.x` `a[x]` .
@@ -182,7 +182,7 @@ C# 8,0 ve üzeri sürümlerde kullanılabilen işleç, `^` öğe konumunun bir d
 
 Yukarıdaki örnekte gösterildiği gibi, ifadesi `^e` <xref:System.Index?displayProperty=nameWithType> türüdür. İfadesinde `^e` , sonucu `e` örtük olarak dönüştürülebilir olmalıdır `int` .
 
-Ayrıca `^` bir dizin aralığı oluşturmak için işleci [Aralık işleciyle](#range-operator-) de kullanabilirsiniz. Daha fazla bilgi için bkz. [Dizinler ve aralıklar](../../tutorials/ranges-indexes.md).
+Ayrıca `^` bir dizin aralığı oluşturmak için işleci [Aralık işleciyle](#range-operator-) de kullanabilirsiniz. Daha fazla bilgi için bkz. [Dizinler ve aralıklar](../../whats-new/tutorials/ranges-indexes.md).
 
 ## <a name="range-operator-"></a>Aralık işleci..
 
@@ -200,7 +200,7 @@ Yukarıdaki örnekte gösterildiği gibi, ifadesi `a..b` <xref:System.Range?disp
 
 [!code-csharp[ranges with omitted operands](snippets/shared/MemberAccessOperators.cs#RangesOptional)]
 
-Daha fazla bilgi için bkz. [Dizinler ve aralıklar](../../tutorials/ranges-indexes.md).
+Daha fazla bilgi için bkz. [Dizinler ve aralıklar](../../whats-new/tutorials/ranges-indexes.md).
 
 ## <a name="operator-overloadability"></a>Operatör overloadability
 

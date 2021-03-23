@@ -4,12 +4,12 @@ description: Apache Spark worker ve Kullanıcı tanımlı işlev ikilileri için
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: c777fdb26045c62317b49259fdde974f43ba5c0d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: d3e86d22a308c7124812f2c11742c2e18803b13d
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96293773"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875544"
 ---
 # <a name="deploy-net-for-apache-spark-worker-and-user-defined-function-binaries"></a>Apache Spark worker ve Kullanıcı tanımlı işlev ikilileri için .NET dağıtma
 
@@ -27,7 +27,7 @@ Yapılandırmalarda, Apache Spark worker ve Kullanıcı tanımlı işlev ikilile
 | :--------------------------- | :----------
 | DOTNET_WORKER_DIR            | <code>Microsoft.Spark.Worker</code>İkilinin oluşturulduğu yol.</br>Spark sürücüsü tarafından kullanılır ve Spark yürüticilerine geçirilir. Bu değişken ayarlanmamışsa, Spark yürüticileri ortam değişkeninde belirtilen yolda arama yapılır <code>PATH</code> .</br>_ör. "C:\bin\Microsoft.Spark.Worker"_
 | DOTNET_ASSEMBLY_SEARCH_PATHS | Derlemeleri yükleyecek olan virgülle ayrılmış yollar <code>Microsoft.Spark.Worker</code> .</br>Bir yol "." ile başlıyorsa, çalışma dizini 'nin önüne getirilir. **Yarn modunda**, "." kapsayıcının çalışma dizinini temsil eder.</br>_ör. "C:\Users \\ &lt; Kullanıcı adı &gt; \\ &lt; mysparkapp &gt; \Bin\Debug \\ &lt; DotNet sürümü &gt; "_
-| DOTNET_WORKER_DEBUG          | <a href="https://github.com/dotnet/spark/blob/master/docs/developer-guide.md#debugging-user-defined-function-udf">UDF hata ayıklaması</a>yapmak istiyorsanız, bu ortam değişkenini <code>1</code> çalıştırılmadan önce olarak ayarlayın <code>spark-submit</code> .
+| DOTNET_WORKER_DEBUG          | <a href="https://github.com/dotnet/spark/blob/main/docs/developer-guide.md#debugging-user-defined-function-udf">UDF hata ayıklaması</a>yapmak istiyorsanız, bu ortam değişkenini <code>1</code> çalıştırılmadan önce olarak ayarlayın <code>spark-submit</code> .
 
 ### <a name="parameter-options"></a>Parametre seçenekleri
 

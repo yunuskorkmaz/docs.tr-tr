@@ -4,16 +4,16 @@ description: C# ve .NET Core 'da birim testi kavramlarını, DotNet test ve xUni
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/21/2020
-ms.openlocfilehash: e1972858be00e8a884efbd66b618ddb9ab77e9ba
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: fb4434fc4eebc009fa0bbe075d4d2290bff3b0bf
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471543"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873477"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>DotNet test ve xUnit kullanarak .NET Core 'Da birim testi C#
 
-Bu öğreticide, birim testi projesi ve kaynak kodu projesi içeren bir çözüm oluşturma gösterilmektedir. Önceden oluşturulmuş bir çözümü kullanarak öğreticiyi izlemek için [örnek kodu görüntüleyin veya indirin](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test/). İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#view-and-download-samples).
+Bu öğreticide, birim testi projesi ve kaynak kodu projesi içeren bir çözüm oluşturma gösterilmektedir. Önceden oluşturulmuş bir çözümü kullanarak öğreticiyi izlemek için [örnek kodu görüntüleyin veya indirin](https://github.com/dotnet/samples/tree/main/core/getting-started/unit-testing-using-dotnet-test/). İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#view-and-download-samples).
 
 ## <a name="create-the-solution"></a>Çözümü oluşturma
 
@@ -48,8 +48,8 @@ Aşağıdaki yönergeler, test çözümünü oluşturmak için gereken adımlar�
   ```
 
    [`dotnet new classlib`](../tools/dotnet-new.md)Komut, *Primeservice* klasöründe yeni bir sınıf kitaplığı projesi oluşturur. Yeni sınıf kitaplığı sınanacak kodu içerecektir.
-* *Class1.cs* *olarak yeniden*adlandırın.
-* *PrimeService.cs* içindeki kodu aşağıdaki kodla değiştirin:
+* *Class1. cs* ' i *primeservice. cs* olarak yeniden adlandırın.
+* *Primeservice. cs* dosyasındaki kodu aşağıdaki kodla değiştirin:
   
   ```csharp
   using System;
@@ -122,7 +122,7 @@ dotnet add ./PrimeService.Tests/PrimeService.Tests.csproj reference ./PrimeServi
 dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 ```
 
-Önceki bölümde " *PrimeService.cs* içindeki kodu aşağıdaki kodla değiştirin" yönergelerini izleyin.
+Önceki bölümde " *Primeservice. cs* içindeki kodu aşağıdaki kodla değiştirin" yönergelerini izleyin.
 
 ## <a name="create-a-test"></a>Test oluşturma
 
@@ -130,7 +130,7 @@ Test odaklı geliştirme (TDD) içinde popüler bir yaklaşım, hedef kodu uygul
 
 *Primeservice. Tests* projesini güncelleştirin:
 
-* *Primeservice. Tests/UnitTest1. cs*öğesini silin.
+* *Primeservice. Tests/UnitTest1. cs* öğesini silin.
 * Bir *Primeservice. Tests/PrimeService_IsPrimeShould. cs*  dosyası oluşturun.
 * *PrimeService_IsPrimeShould. cs* içindeki kodu aşağıdaki kodla değiştirin:
 
@@ -169,7 +169,7 @@ public bool IsPrime(int candidate)
 }
 ```
 
-Şu komutu çalıştırın: `dotnet test`. Test geçirilir.
+`dotnet test` öğesini çalıştırın. Test geçirilir.
 
 ### <a name="add-more-tests"></a>Daha fazla test ekleyin
 
@@ -219,7 +219,7 @@ public bool IsPrime(int candidate)
 }
 ```
 
-TDD yaklaşımını izleyerek, daha fazla başarısız test ekleyin ve ardından hedef kodu güncelleştirin. [Testlerin tamamlanmış sürümüne](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs) ve [kitaplığın tüm uygulamasına](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-dotnet-test/PrimeService/PrimeService.cs)bakın.
+TDD yaklaşımını izleyerek, daha fazla başarısız test ekleyin ve ardından hedef kodu güncelleştirin. [Testlerin tamamlanmış sürümüne](https://github.com/dotnet/samples/blob/main/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs) ve [kitaplığın tüm uygulamasına](https://github.com/dotnet/samples/blob/main/core/getting-started/unit-testing-using-dotnet-test/PrimeService/PrimeService.cs)bakın.
 
 Tamamlanan `IsPrime` Yöntem, test açısından etkili bir algoritma değildir.
 

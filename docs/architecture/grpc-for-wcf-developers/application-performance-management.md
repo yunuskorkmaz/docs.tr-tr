@@ -2,12 +2,12 @@
 title: Uygulama performansı yönetimi-WCF geliştiricileri için gRPC
 description: ASP.NET Core gRPC uygulamaları için günlüğe kaydetme, ölçümler ve izleme.
 ms.date: 12/15/2020
-ms.openlocfilehash: 8a2a89e268e3b2dffdcc945ac71b2de85b4d4964
-ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
+ms.openlocfilehash: 06515762e3e5febf2d11dea14524d5e3f586a760
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97938461"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874556"
 ---
 # <a name="application-performance-management"></a>Uygulama Performansı Yönetimi
 
@@ -51,7 +51,7 @@ Günlük iletilerini ve kullanılabilir günlük havuzları ve hedefleri yazma h
 
 ## <a name="metrics-in-aspnet-core-grpc"></a>ASP.NET Core gRPC 'de ölçümler
 
-.NET Core çalışma zamanı, ölçümleri yayma ve gözlemlemek için bir bileşen kümesi sağlar. Bunlar ve sınıfları gibi API 'Leri <xref:System.Diagnostics.Tracing.EventSource> içerir <xref:System.Diagnostics.Tracing.EventCounter> . Bu API 'Ler, dış süreçler tarafından tüketilen, [DotNet sayaçları genel aracı](../../core/diagnostics/dotnet-counters.md)veya Windows Için olay izleme gibi temel sayısal verileri yayabilir. Kendi kodunuzda kullanma hakkında daha fazla bilgi için `EventCounter` bkz. [EventCounter tanıtımı](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md).
+.NET Core çalışma zamanı, ölçümleri yayma ve gözlemlemek için bir bileşen kümesi sağlar. Bunlar ve sınıfları gibi API 'Leri <xref:System.Diagnostics.Tracing.EventSource> içerir <xref:System.Diagnostics.Tracing.EventCounter> . Bu API 'Ler, dış süreçler tarafından tüketilen, [DotNet sayaçları genel aracı](../../core/diagnostics/dotnet-counters.md)veya Windows Için olay izleme gibi temel sayısal verileri yayabilir. Kendi kodunuzda kullanma hakkında daha fazla bilgi için `EventCounter` bkz. [EventCounter tanıtımı](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md).
 
 Daha gelişmiş ölçümler ve ölçüm verilerini daha geniş veri depolarına yazmak için, [uygulama ölçümleri](https://www.app-metrics.io)adlı açık kaynaklı bir projeyi deneyebilirsiniz. Bu kitaplıklar paketi kodunuzu işaretlemek için kapsamlı bir tür kümesi sağlar. Ayrıca, Prometheus ve ımexdb gibi zaman serisi veritabanlarını içeren farklı türlerdeki hedeflere yönelik ölçümleri yazmak için paketler sağlar ve [Application Insights](/azure/azure-monitor/app/app-insights-overview). [App. ölçümler. AspNetCore. Mvc](https://www.nuget.org/packages/App.Metrics.AspNetCore.Mvc/) NuGet paketi, ASP.NET Core çerçevesi ile tümleştirme aracılığıyla otomatik olarak oluşturulan kapsamlı bir temel ölçümler kümesi ekler. Proje Web sitesi, [Grafana](https://grafana.com/) görselleştirme platformu ile bu ölçümleri görüntülemeye yönelik [Şablonlar](https://www.app-metrics.io/samples/grafana/) sağlar.
 
@@ -120,7 +120,7 @@ Dağıtılmış izleme, tek bir *izlemenin* parçası olan adlandırılmış, za
 
 ### <a name="distributed-tracing-with-diagnosticsource"></a>İle dağıtılmış izleme `DiagnosticSource`
 
-.NET, dağıtılmış izlemeler ve yayılmalar için iyi eşleşen bir iç modüle sahiptir: [Diagnosticsource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#diagnosticsource-users-guide). Ayrıca, bir işlem içinde tanılamayı oluşturmak ve kullanmak için basit bir yol sağlamak için, `DiagnosticSource` modül bir *etkinlik* kavramıdır. Etkinlik etkin bir şekilde dağıtılmış izlemenin veya bir izleme içindeki yayılımın bir uygulamasıdır. Modülün iç işlevleri, tanımlayıcıları ayırmak da dahil olmak üzere üst/alt etkinliklerden yararlanın. Türünü kullanma hakkında daha fazla bilgi için `Activity` bkz. [GitHub 'Da etkinlik Kullanıcı Kılavuzu](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-user-guide).
+.NET, dağıtılmış izlemeler ve yayılmalar için iyi eşleşen bir iç modüle sahiptir: [Diagnosticsource](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#diagnosticsource-users-guide). Ayrıca, bir işlem içinde tanılamayı oluşturmak ve kullanmak için basit bir yol sağlamak için, `DiagnosticSource` modül bir *etkinlik* kavramıdır. Etkinlik etkin bir şekilde dağıtılmış izlemenin veya bir izleme içindeki yayılımın bir uygulamasıdır. Modülün iç işlevleri, tanımlayıcıları ayırmak da dahil olmak üzere üst/alt etkinliklerden yararlanın. Türünü kullanma hakkında daha fazla bilgi için `Activity` bkz. [GitHub 'Da etkinlik Kullanıcı Kılavuzu](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-user-guide).
 
 , `DiagnosticSource` Çekirdek çerçevesinin bir parçası olduğundan ve daha sonra, birden çok çekirdek bileşeni tarafından desteklenir. Bunlar, <xref:System.Net.Http.HttpClient> gRPC çerçevesinde açık destek de dahil olmak üzere, Entity Framework Core ve ASP.NET Core içerir. ASP.NET Core bir istek aldığında, [W3C Trace bağlam](https://www.w3.org/TR/trace-context) standardı ile eşleşen BIR çift http üst bilgisi olup olmadığını denetler. Üstbilgiler bulunursa bir etkinlik, üst bilgilerden kimlik değerleri ve bağlamı kullanılarak başlatılır. Üst bilgi bulunmazsa, standart biçimle eşleşen üretilen kimlik değerleriyle bir etkinlik başlatılır. Bu etkinliğin ömrü boyunca Framework veya uygulama kodu tarafından oluşturulan tüm Tanılamalar, izleme ve span tanımlayıcılarıyla etiketlenebilir. `HttpClient`Destek, her istekte geçerli bir etkinlik olup olmadığını denetleyerek ve izleme üstbilgilerini giden isteğe otomatik olarak ekleyerek bu işlevselliği daha fazla genişletir.
 
@@ -131,7 +131,7 @@ ASP.NET Core gRPC istemcisi ve sunucu kitaplıkları, ve için açık destek iç
 
 ### <a name="add-your-own-diagnosticsource-and-activity"></a>Kendinizinkini ekleyin `DiagnosticSource` ve `Activity`
 
-Kendi tanılamayı eklemek veya uygulama kodunuzda açık yayılma oluşturmak için, bkz. [Diagnosticsource Kullanıcı Kılavuzu](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#instrumenting-with-diagnosticsourcediagnosticlistener) ve [etkinlik Kullanıcı Kılavuzu](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-usage).
+Kendi tanılamayı eklemek veya uygulama kodunuzda açık yayılma oluşturmak için, bkz. [Diagnosticsource Kullanıcı Kılavuzu](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#instrumenting-with-diagnosticsourcediagnosticlistener) ve [etkinlik Kullanıcı Kılavuzu](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-usage).
 
 ### <a name="store-distributed-trace-data"></a>Dağıtılmış izleme verilerini depola
 
@@ -155,7 +155,7 @@ public class Startup
 
 OpenTracing paketi bir Özet katmanıdır ve bu nedenle arka uca özel uygulama gerektirir. OpenTracing API uygulamaları aşağıdaki açık kaynak arka uçları için kullanılabilir.
 
-| Ad | Paket | Web Sitesi |
+| Name | Paket | Web Sitesi |
 | ---- | ------- | -------- |
 | Jaeger | [Jaeger](https://www.nuget.org/packages/Jaeger/) | [jaegertracing.io](https://jaegertracing.io) |
 | Elastik APM | [Elastik. APM. NetCoreAll](https://www.nuget.org/packages/Elastic.Apm.NetCoreAll/) | [elastic.co/products/apm](https://www.elastic.co/products/apm) |

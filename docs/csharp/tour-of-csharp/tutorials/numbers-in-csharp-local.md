@@ -2,12 +2,12 @@
 title: C# dilinde sayılar-C# öğreticisine giriş
 description: Sayısal türleri, kullanımları, özellikleri ve yöntemleri inceleyerek C# hakkında bilgi edinin.
 ms.date: 02/05/2021
-ms.openlocfilehash: e4271d5e7811dcfecf00899b7bb9e750211ddc5b
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: d6546fc8ac2609066a4f9b829749a4091fce7ce6
+ms.sourcegitcommit: 5ce37699c2a51ed173171813be68ef7577b1aba5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 03/23/2021
-ms.locfileid: "104873334"
+ms.locfileid: "104881113"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>C 'de integral ve kayan nokta numaralarını işleme\#
 
@@ -308,7 +308,7 @@ Ondalık türünün kullanıldığı matematikte, ondalık ayırıcının sağ t
 
 Farklı sayısal türleri gördüğünüze göre yarı çapı 2,50 santimetre olan bir dairenin alanını hesaplayan kodu yazın. Bir dairenin alanının, yarı çapın karesinin PI sayısı ile çarpımından elde edildiğini unutmayın. İpucu: .NET, PI sayısı için kullanabileceğiniz <xref:System.Math.PI?displayProperty=nameWithType> sabit değerini içerir. <xref:System.Math.PI?displayProperty=nameWithType>, ad alanında belirtilen tüm sabitler gibi `System.Math` bir `double` değerdir. Bu nedenle, `double` `decimal` Bu zorluk için değer yerine kullanmanız gerekir.
 
-19 ile 20 arasında bir yanıt almanız gerekir. [GitHub 'daki tamamlanmış örnek koda bakarak](https://github.com/dotnet/samples/tree/main/csharp/numbers-quickstart/Program.cs#L104-L106)yanıtınızı kontrol edebilirsiniz.
+19 ile 20 arasında bir yanıt almanız gerekir. [GitHub 'daki tamamlanmış örnek koda bakarak](https://github.com/dotnet/samples/tree/main/csharp/numbers-quickstart/Program.cs#L9-L11)yanıtınızı kontrol edebilirsiniz.
 
 Dilerseniz diğer formüllerden de deneme yapabilirsiniz.
 

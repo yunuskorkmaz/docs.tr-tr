@@ -4,12 +4,12 @@ description: C# dilinde yapılan son geliştirmeler, daha önce güvenli olmayan
 ms.date: 03/17/2020
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: b739a4ce1f723798cbe50ef9eae673494996751c
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 4728ff279d0a14adf239c1e177f7f840ea208e6e
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106624"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872489"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Güvenli ve verimli C# kodu yazma
 
@@ -229,7 +229,7 @@ Bir öğesinin üyelerini çağırdığınızda derleyici daha verimli kod üret
 
 Null yapılabilir bir değer türünü bağımsız değişken olarak geçirmemelisiniz `in` . <xref:System.Nullable%601>Tür salt okunurdur struct olarak bildirilmemiş. Bu, derleyicinin parametre bildiriminde değiştirici kullanılarak bir yönteme geçirilen herhangi bir Nullable değer türü bağımsız değişkeni için savunma kopyaları oluşturması gerektiği anlamına gelir `in` .
 
-GitHub 'daki [örnek depolarımızda](https://github.com/dotnet/samples/tree/master/csharp/safe-efficient-code/benchmark) , [benchmarkdotnet](https://www.nuget.org/packages/BenchmarkDotNet/) kullanarak performans farklarını gösteren bir örnek program görebilirsiniz. Değere ve başvuruya göre değişmez bir struct geçirilerek başvuruya göre kesilebilir bir yapının geçirilmesini karşılaştırır. Değişmez yapının kullanımı ve başvuruya göre Pass en hızlı.
+GitHub 'daki [örnek depolarımızda](https://github.com/dotnet/samples/tree/main/csharp/safe-efficient-code/benchmark) , [benchmarkdotnet](https://www.nuget.org/packages/BenchmarkDotNet/) kullanarak performans farklarını gösteren bir örnek program görebilirsiniz. Değere ve başvuruya göre değişmez bir struct geçirilerek başvuruya göre kesilebilir bir yapının geçirilmesini karşılaştırır. Değişmez yapının kullanımı ve başvuruya göre Pass en hızlı.
 
 ## <a name="use-ref-struct-types-to-work-with-blocks-or-memory-on-a-single-stack-frame"></a>`ref struct`Tek bir yığın çerçevesinde bloklarla veya bellekle çalışmak için türleri kullanma
 

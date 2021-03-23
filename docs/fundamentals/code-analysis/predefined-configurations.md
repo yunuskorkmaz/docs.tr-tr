@@ -3,12 +3,12 @@ title: Önceden tanımlı yapılandırma dosyaları (kod analizi)
 description: Belirli kod analizi türlerini hedeflemek için önceden tanımlanmış editorconfig ve kural kümesi dosyalarını kullanma hakkında bilgi edinin.
 ms.date: 09/24/2020
 ms.topic: conceptual
-ms.openlocfilehash: 4937dcab1183fa3f63be4afc71627a7c7c08c6bd
-ms.sourcegitcommit: 665f8fc55258356f4d2f4a6585b750c974b26675
+ms.openlocfilehash: 748ab8a9ddfcfcadeb33da877769cedac901655a
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "96589330"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876597"
 ---
 # <a name="predefined-configuration-files"></a>Önceden tanımlı yapılandırma dosyaları
 
@@ -50,5 +50,5 @@ Microsoft. CodeAnalysis. Netçözümleyiciler çözümleyici paketi için önced
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çözümleyici yapılandırması](https://github.com/dotnet/roslyn-analyzers/blob/master/docs/Analyzer%20Configuration.md)
+- [Çözümleyici yapılandırması](https://github.com/dotnet/roslyn-analyzers/blob/main/docs/Analyzer%20Configuration.md)
 - [EditorConfig için .NET kod stili kural seçenekleri](code-style-rule-options.md)

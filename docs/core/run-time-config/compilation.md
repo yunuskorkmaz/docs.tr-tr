@@ -3,12 +3,12 @@ title: Derleme yapılandırması ayarları
 description: JıT derleyicisinin .NET Core uygulamaları için nasıl çalıştığını yapılandıran çalışma zamanı ayarları hakkında bilgi edinin.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: e5f9e1245b749864787fb808527d022665197edf
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 1badb063ea6fd7504636d431fbdc7927129239d2
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654848"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873594"
 ---
 # <a name="run-time-configuration-options-for-compilation"></a>Derleme için çalışma zamanı yapılandırma seçenekleri
 
@@ -19,11 +19,11 @@ ms.locfileid: "91654848"
   - İkinci katman arka planda iyileştirilmiş kod üretir ("JıT 'i iyileştirme").
 - .NET Core 3,0 ve üzeri sürümlerde katmanlı derleme varsayılan olarak etkindir.
 - .NET Core 2,1 ve 2,2 ' de katmanlı derleme varsayılan olarak devre dışıdır.
-- Daha fazla bilgi için [katmanlı derleme Kılavuzu](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation.md)' na bakın.
+- Daha fazla bilgi için [katmanlı derleme Kılavuzu](https://github.com/dotnet/runtime/blob/main/docs/design/features/tiered-compilation.md)' na bakın.
 
 | | Ayar adı | Değerler |
 | - | - | - |
-| ** Üzerinderuntimeconfig.js** | `System.Runtime.TieredCompilation` | `true` -etkin<br/>`false` -devre dışı |
+| **Üzerinderuntimeconfig.js** | `System.Runtime.TieredCompilation` | `true` -etkin<br/>`false` -devre dışı |
 | **MSBuild özelliği** | `TieredCompilation` | `true` -etkin<br/>`false` -devre dışı |
 | **Ortam değişkeni** | `COMPlus_TieredCompilation` | `1` -etkin<br/>`0` -devre dışı |
 
@@ -55,7 +55,7 @@ Proje dosyası:
 
 ## <a name="quick-jit"></a>Hızlı JıT
 
-- JıT derleyicisinin *hızlı JIT*kullanıp kullanmadığını yapılandırır. Döngüler içermeyen ve önceden derlenmiş kodun kullanılamadığı yöntemler için, hızlı JıT bunları daha hızlı bir şekilde derler ancak iyileştirmelere gerek kalmaz.
+- JıT derleyicisinin *hızlı JIT* kullanıp kullanmadığını yapılandırır. Döngüler içermeyen ve önceden derlenmiş kodun kullanılamadığı yöntemler için, hızlı JıT bunları daha hızlı bir şekilde derler ancak iyileştirmelere gerek kalmaz.
 - Hızlı JıT başlatma süresini azaltır, ancak performansı düşürülmüş performans özellikleriyle kod üretebilir. Örneğin, kod daha fazla yığın alanı kullanabilir, daha fazla bellek ayırabilir ve daha yavaş çalışabilir.
 - Hızlı JıT devre dışıysa ancak [katmanlı derleme](#tiered-compilation) etkinleştirilirse, yalnızca önceden derlenmiş kod katmanlı derlemeye katılır. Bir yöntem [Readytorun](#readytorun)ile önceden DERLENMIŞSE, JIT davranışı [katmanlı derleme](#tiered-compilation) devre dışı bırakılmışsa aynı olur.
 - .NET Core 3,0 ve üzeri sürümlerde, hızlı JıT varsayılan olarak etkindir.
@@ -63,7 +63,7 @@ Proje dosyası:
 
 | | Ayar adı | Değerler |
 | - | - | - |
-| ** Üzerinderuntimeconfig.js** | `System.Runtime.TieredCompilation.QuickJit` | `true` -etkin<br/>`false` -devre dışı |
+| **Üzerinderuntimeconfig.js** | `System.Runtime.TieredCompilation.QuickJit` | `true` -etkin<br/>`false` -devre dışı |
 | **MSBuild özelliği** | `TieredCompilationQuickJit` | `true` -etkin<br/>`false` -devre dışı |
 | **Ortam değişkeni** | `COMPlus_TC_QuickJit` | `1` -etkin<br/>`0` -devre dışı |
 
@@ -102,7 +102,7 @@ Proje dosyası:
 
 | | Ayar adı | Değerler |
 | - | - | - |
-| ** Üzerinderuntimeconfig.js** | `System.Runtime.TieredCompilation.QuickJitForLoops` | `false` -devre dışı<br/>`true` -etkin |
+| **Üzerinderuntimeconfig.js** | `System.Runtime.TieredCompilation.QuickJitForLoops` | `false` -devre dışı<br/>`true` -etkin |
 | **MSBuild özelliği** | `TieredCompilationQuickJitForLoops` | `false` -devre dışı<br/>`true` -etkin |
 | **Ortam değişkeni** | `COMPlus_TC_QuickJitForLoops` | `0` -devre dışı<br/>`1` -etkin |
 

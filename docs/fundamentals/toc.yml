@@ -1372,6 +1372,11 @@ items:
             href: ../core/docker/build-container.md
           - name: Visual Studio’da kapsayıcı araçları
             href: /visualstudio/containers/overview
+  - name: DevOps
+    items:
+      - name: .NET ile bir GitHub eylemi oluşturma
+        href: ../devops/create-dotnet-github-action.md
+        displayName: 'continuous integration, continuous deployment, ci, cd, ci/cd, github, github action, github actions, lifecycle'
   - name: Temel kodlama bileşenleri
     items:
       - name: Temel türlere genel bakış

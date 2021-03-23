@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Visual C#, keywords
 - '@ keyword'
 ms.custom: updateeachrelease
-ms.openlocfilehash: 9c539574f7a1af15bb0d775ec85a2fd8b2327b95
-ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
+ms.openlocfilehash: 6a48d2e44a9d74bd1a756dd9e6059f57d4aa3d6d
+ms.sourcegitcommit: 5ce37699c2a51ed173171813be68ef7577b1aba5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104759631"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104881034"
 ---
 # <a name="c-keywords"></a>C# Anahtar Sözcükleri
 
@@ -56,14 +56,14 @@ Anahtar sözcükler, derleyiciye özel anlamlara sahip olan önceden tanımlanm�
 |[async](async.md)|[await](../operators/await.md)|[by](by.md)|
 |[descending](descending.md)|[dynamic](../builtin-types/reference-types.md)|[eşittir](equals.md)|
 |[Kaynak](from-clause.md)|[Al](get.md)|[Genel](../operators/namespace-alias-qualifier.md)|
-|[grup](group-clause.md)|[birleştirin](into.md)|[ayrılma](join-clause.md)|
-|[atalım](let-clause.md)|[nameof](../operators/nameof.md)|[nint](../builtin-types/nint-nuint.md)|
-|[NotNull](../../programming-guide/generics/constraints-on-type-parameters.md#notnull-constraint)|[nuınt](../builtin-types/nint-nuint.md)|[dayanır](on.md)|
-|[OrderBy](orderby-clause.md)|[Kısmi (tür)](partial-type.md)|[partial (Yöntem)](partial-method.md)|
-|[temizlenmesine](remove.md)|[seçin](select-clause.md)|[kurmak](set.md)|
-|[yönetilmeyen (genel tür kısıtlaması)](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint)|[değer](value.md)|[l](var.md)|
-|[when (filtre koşulu)](when.md)|[where (genel tür kısıtlaması)](where-generic-type-constraint.md)|[WHERE (sorgu yan tümcesi)](where-clause.md)|
-|[örneklerini şununla değiştirin:](../operators/with-expression.md)|[yield](yield.md)||
+|[grup](group-clause.md)|[init](init.md)|[birleştirin](into.md)|
+|[ayrılma](join-clause.md)|[atalım](let-clause.md)|[nameof](../operators/nameof.md)|
+|[nint](../builtin-types/nint-nuint.md)|[NotNull](../../programming-guide/generics/constraints-on-type-parameters.md#notnull-constraint)|[nuınt](../builtin-types/nint-nuint.md)|
+|[dayanır](on.md)|[OrderBy](orderby-clause.md)|[Kısmi (tür)](partial-type.md)|
+|[partial (Yöntem)](partial-method.md)|[temizlenmesine](remove.md)|[seçin](select-clause.md)|
+|[kurmak](set.md)|[yönetilmeyen (genel tür kısıtlaması)](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint)|[değer](value.md)|
+|[l](var.md)|[when (filtre koşulu)](when.md)|[where (genel tür kısıtlaması)](where-generic-type-constraint.md)|
+|[WHERE (sorgu yan tümcesi)](where-clause.md)|[örneklerini şununla değiştirin:](../operators/with-expression.md)|[yield](yield.md)||
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

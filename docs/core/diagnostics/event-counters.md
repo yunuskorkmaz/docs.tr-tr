@@ -2,12 +2,12 @@
 title: .NET Core 'da EventCounters
 description: Bu makalede, olaylarınızın ne olduğunu, nasıl uygulanacağını ve bunları nasıl kullanacağınızı öğreneceksiniz.
 ms.date: 08/07/2020
-ms.openlocfilehash: 843f1ec645bf7f52fd4f85e30d183e6e21fee5c6
-ms.sourcegitcommit: 78eb25647b0c750cd80354ebd6ce83a60668e22c
+ms.openlocfilehash: 8efa3134e83ba6fdc7563e97ef6422cb5f2099b6
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99065070"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872788"
 ---
 # <a name="eventcounters-in-net-core"></a>.NET Core 'da EventCounters
 
@@ -127,7 +127,7 @@ var monitorContentionCounter = new IncrementingPollingCounter(
 > [!NOTE]
 > , <xref:System.Diagnostics.Tracing.IncrementingPollingCounter.DisplayRateTimeScale> [DotNet sayaçları](dotnet-counters.md)tarafından kullanılmaz ve olay dinleyicileri bunu kullanmak için gerekli değildir. 
 
-[.NET çalışma zamanı](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Private.CoreLib/src/System/Diagnostics/Tracing/RuntimeEventSource.cs) deposunda başvuru olarak kullanılacak daha fazla sayaç uygulaması vardır.
+[.NET çalışma zamanı](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Private.CoreLib/src/System/Diagnostics/Tracing/RuntimeEventSource.cs) deposunda başvuru olarak kullanılacak daha fazla sayaç uygulaması vardır.
 
 ## <a name="concurrency"></a>Eşzamanlılık
 
@@ -159,7 +159,7 @@ _requestRateCounter = new IncrementingPollingCounter("request-rate", this, () =>
 EventCounters, işlem içi veya proc dışı kullanmanın iki birincil yolu vardır. EventCounters 'in tüketimi, çeşitli teknolojilerin üç katmanında ayırt edilebilir.
 
 - Etkinlikleri ETW veya EventPipe aracılığıyla ham akışta taşıma:
-  - ETW API 'Leri, Windows işletim sistemi ile birlikte gelir ve EventPipe bir [.NET API 'si](https://github.com/dotnet/diagnostics/blob/master/documentation/design-docs/diagnostics-client-library.md#1-attaching-to-a-process-and-dumping-out-all-the-runtime-gc-events-in-real-time-to-the-console)veya Diagnostic [IPC Protokolü](https://github.com/dotnet/diagnostics/blob/master/documentation/design-docs/ipc-protocol.md)olarak erişilebilir.
+  - ETW API 'Leri, Windows işletim sistemi ile birlikte gelir ve EventPipe bir [.NET API 'si](https://github.com/dotnet/diagnostics/blob/main/documentation/design-docs/diagnostics-client-library.md#1-attaching-to-a-process-and-dumping-out-all-the-runtime-gc-events-in-real-time-to-the-console)veya Diagnostic [IPC Protokolü](https://github.com/dotnet/diagnostics/blob/main/documentation/design-docs/ipc-protocol.md)olarak erişilebilir.
 - İkili olay akışını olaylara çözme:
   - [TraceEvent kitaplığı](https://www.nuget.org/packages/Microsoft.Diagnostics.Tracing.TraceEvent) hem ETW hem de eventpipe akış biçimlerini işler.
 - Komut satırı ve GUI araçları:

@@ -5,12 +5,12 @@ ms.date: 10/07/2020
 ms.topic: overview
 ms.author: tdykstra
 author: tdykstra
-ms.openlocfilehash: 65c13239f32a0166681d7a731de84a973a627f29
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 7b207811e0dab8c613b0e43a30301a0fb07f632a
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102104190"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875089"
 ---
 # <a name="releases-and-support-for-net-core-and-net-5"></a>.NET Core ve .NET 5 için yayınlar ve destek
 
@@ -105,7 +105,7 @@ Destek sonu, Microsoft 'un bir ürün sürümü için düzeltme, güncelleştirm
 
 Bir işletim sistemi sürümü destek dışında kaldığında, bu sürümü test etmeyi ve bu sürüm için destek sağlamayı durdurduk. Destek almak için kullanıcıların desteklenen bir işletim sistemi sürümüne ilerlememeniz gerekir.
 
-Daha fazla bilgi için bkz. [.net OS yaşam döngüsü ilkesi](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md).
+Daha fazla bilgi için bkz. [.net OS yaşam döngüsü ilkesi](https://github.com/dotnet/core/blob/main/os-lifecycle-policy.md).
 
 ## <a name="get-support"></a>Destek alın
 

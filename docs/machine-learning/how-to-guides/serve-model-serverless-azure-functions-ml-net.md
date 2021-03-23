@@ -5,12 +5,12 @@ ms.date: 02/21/2020
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 74a7a5b941596ba9fffc62ef87a01763937d88c0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 90b52aa295e224eb3744d2576b9a146e4e90dced
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/29/2020
-ms.locfileid: "91608783"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875895"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>Modeli Azure İşlevleri’ne dağıtma
 
@@ -24,11 +24,11 @@ Azure Işlevleri sunucusuz bir ortam aracılığıyla HTTP üzerinden tahmin iç
 - ".NET Core platformlar arası geliştirme" ve "Azure geliştirme" iş yükleri yüklü olan [Visual studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) veya üzeri ya da visual Studio 2017 sürüm 15,6 veya üzeri.
 - [Azure Işlevleri araçları](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
 - PowerShell
-- Önceden eğitilen model. Kendi modelinizi derlemek için [ML.NET yaklaşım Analizi öğreticisini](../tutorials/sentiment-analysis.md) kullanın veya bu [önceden eğitilen yaklaşım Analizi Machine Learning modelini](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip) indirin
+- Önceden eğitilen model. Kendi modelinizi derlemek için [ML.NET yaklaşım Analizi öğreticisini](../tutorials/sentiment-analysis.md) kullanın veya bu [önceden eğitilen yaklaşım Analizi Machine Learning modelini](https://github.com/dotnet/samples/blob/main/machine-learning/models/sentimentanalysis/sentiment_model.zip) indirin
 
 ## <a name="azure-functions-sample-overview"></a>Azure Işlevleri örneğine genel bakış
 
-Bu örnek, metnin yaklaşımını pozitif veya negatif olarak kategorilere ayırmak için önceden eğitilen bir ikili sınıflandırma modeli kullanan bir **C# http tetikleyici Azure işlevleri uygulamasıdır** . Azure Işlevleri, bulutta yönetilen sunucusuz bir ortamda küçük kod parçalarını daha kolay bir şekilde çalıştırmanın kolay bir yolunu sunar. Bu örneğin kodu, GitHub 'daki [DotNet/machinöğrenim-örnekleri](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction) deposunda bulunabilir.
+Bu örnek, metnin yaklaşımını pozitif veya negatif olarak kategorilere ayırmak için önceden eğitilen bir ikili sınıflandırma modeli kullanan bir **C# http tetikleyici Azure işlevleri uygulamasıdır** . Azure Işlevleri, bulutta yönetilen sunucusuz bir ortamda küçük kod parçalarını daha kolay bir şekilde çalıştırmanın kolay bir yolunu sunar. Bu örneğin kodu, GitHub 'daki [DotNet/machinöğrenim-örnekleri](https://github.com/dotnet/machinelearning-samples/tree/main/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction) deposunda bulunabilir.
 
 ## <a name="create-azure-functions-project"></a>Azure Işlevleri projesi oluştur
 
@@ -36,7 +36,7 @@ Bu örnek, metnin yaklaşımını pozitif veya negatif olarak kategorilere ayır
 1. **Yeni proje** iletişim kutusunda, proje seçeneklerinin üzerindeki açılan menüyü açın ve **Azure işlevleri v2 (.NET Core)** seçeneğini belirleyin. Ardından, **http tetikleyicisi** projesini seçin ve **Tamam** düğmesini seçin.
 1. Modelinize kaydetmek için projenizde *Mlmodeller* adlı bir dizin oluşturun:
 
-    **Çözüm Gezgini**, projenize sağ tıklayın ve **Add**  >  **Yeni klasör** Ekle ' yi seçin. "Mlmodeller" yazın ve ENTER tuşuna basın.
+    **Çözüm Gezgini**, projenize sağ tıklayın ve   >  **Yeni klasör** Ekle ' yi seçin. "Mlmodeller" yazın ve ENTER tuşuna basın.
 
 1. **Microsoft.ml NuGet paketi** sürüm **1.3.1**'nı yükler:
 
@@ -63,13 +63,13 @@ Bu örnek, metnin yaklaşımını pozitif veya negatif olarak kategorilere ayır
 
 Yaklaşımı tahmin etmek için bir sınıf oluşturun. Projenize yeni bir sınıf ekleyin:
 
-1. **Çözüm Gezgini**, projeye sağ tıklayın ve ardından **Add**  >  **Yeni öğe** Ekle ' yi seçin.
+1. **Çözüm Gezgini**, projeye sağ tıklayın ve ardından   >  **Yeni öğe** Ekle ' yi seçin.
 
-1. **Yeni öğe Ekle** Iletişim kutusunda **Azure işlevi** ' ni seçin ve **ad** alanını *AnalyzeSentiment.cs* olarak değiştirin. Sonra **Ekle** düğmesini seçin.
+1. **Yeni öğe Ekle** Iletişim kutusunda **Azure işlevi** ' ni seçin ve **ad** alanını *çözümleyiciler. cs* olarak değiştirin. Sonra **Ekle** düğmesini seçin.
 
 1. **Yeni Azure işlevi** Iletişim kutusunda **http tetikleyicisi**' ni seçin. Ardından **Tamam** düğmesini seçin.
 
-    *AnalyzeSentiment.cs* dosyası kod düzenleyicisinde açılır. Aşağıdaki `using` ifadeyi *AnalyzeSentiment.cs* öğesinin en üstüne ekleyin:
+    *Çözümleyiciler. cs* dosyası kod düzenleyicisinde açılır. Aşağıdaki ifadeyi, `using` *çözümleyiciler. cs*' nin üst kısmına ekleyin:
 
     [!code-csharp [AnalyzeUsings](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/AnalyzeSentiment.cs#L1-L11)]
 
@@ -88,22 +88,22 @@ Giriş verileriniz ve tahminlerinizi için bazı sınıflar oluşturmanız gerek
 
 1. Projenizde veri modellerinizi kaydetmek için *datamodeller* adlı bir dizin oluşturun: Çözüm Gezgini, projenize sağ tıklayın ve **> yeni klasör ekle**' yi seçin. "Datamodeller" yazın ve ENTER tuşuna basın.
 2. Çözüm Gezgini, *veri modelleri* dizinine sağ tıklayın ve sonra **> yeni öğe Ekle**' yi seçin.
-3. **Yeni öğe Ekle** Iletişim kutusunda **sınıf** ' ı seçin ve **ad** alanını *SentimentData.cs* olarak değiştirin. Sonra **Ekle** düğmesini seçin.
+3. **Yeni öğe Ekle** Iletişim kutusunda **sınıf** ' ı seçin ve **ad** alanını *sentimentdata. cs* olarak değiştirin. Sonra **Ekle** düğmesini seçin.
 
-    *SentimentData.cs* dosyası kod düzenleyicisinde açılır. Aşağıdaki using ifadesini *SentimentData.cs* öğesinin en üstüne ekleyin:
+    *Sentimentdata. cs* dosyası kod düzenleyicisinde açılır. Aşağıdaki using ifadesini *Sentimentdata. cs*' nin üst kısmına ekleyin:
 
     [!code-csharp [SentimentDataUsings](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/DataModels/SentimentData.cs#L1)]
 
-    Mevcut sınıf tanımını kaldırın ve aşağıdaki kodu *SentimentData.cs* dosyasına ekleyin:
+    Mevcut sınıf tanımını kaldırın ve aşağıdaki kodu *Sentimentdata. cs* dosyasına ekleyin:
 
     [!code-csharp [SentimentData](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/DataModels/SentimentData.cs#L5-L13)]
 
 4. Çözüm Gezgini, *veri modelleri* dizinine sağ tıklayın ve sonra **> yeni öğe Ekle**' yi seçin.
-5. **Yeni öğe Ekle** Iletişim kutusunda **sınıf** ' ı seçin ve **ad** alanını *SentimentPrediction.cs* olarak değiştirin. Sonra **Ekle** düğmesini seçin. *SentimentPrediction.cs* dosyası kod düzenleyicisinde açılır. Aşağıdaki using ifadesini *SentimentPrediction.cs* öğesinin en üstüne ekleyin:
+5. **Yeni öğe Ekle** Iletişim kutusunda **sınıf** ' ı seçin ve **ad** alanını *sentimenttahmine. cs* olarak değiştirin. Sonra **Ekle** düğmesini seçin. *Sentimenttahmine. cs* dosyası kod düzenleyicisinde açılır. Aşağıdaki using ifadesini *Sentimenttahmine. cs*' nin üst kısmına ekleyin:
 
     [!code-csharp [SentimentPredictionUsings](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/DataModels/SentimentPrediction.cs#L1)]
 
-    Mevcut sınıf tanımını kaldırın ve aşağıdaki kodu *SentimentPrediction.cs* dosyasına ekleyin:
+    Mevcut sınıf tanımını kaldırın ve aşağıdaki kodu *Sentimenttahmine. cs* dosyasına ekleyin:
 
     [!code-csharp [SentimentPrediction](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/DataModels/SentimentPrediction.cs#L5-L14)]
 
@@ -115,9 +115,9 @@ Tek bir tahmin yapmak için, oluşturmanız gerekir [`PredictionEngine`](xref:Mi
 
 Aşağıdaki bağlantı, [bağımlılık ekleme](https://en.wikipedia.org/wiki/Dependency_injection)hakkında daha fazla bilgi edinmek istiyorsanız daha fazla bilgi sağlar.
 
-1. **Çözüm Gezgini**, projeye sağ tıklayın ve ardından **Add**  >  **Yeni öğe** Ekle ' yi seçin.
-1. **Yeni öğe Ekle** Iletişim kutusunda **sınıf** ' ı seçin ve **ad** alanını *Startup.cs* olarak değiştirin. Sonra **Ekle** düğmesini seçin.
-1. Aşağıdaki using deyimlerini *Startup.cs* öğesinin en üstüne ekleyin:
+1. **Çözüm Gezgini**, projeye sağ tıklayın ve ardından   >  **Yeni öğe** Ekle ' yi seçin.
+1. **Yeni öğe Ekle** Iletişim kutusunda **sınıf** ' ı seçin ve **ad** alanını *Startup. cs* olarak değiştirin. Sonra **Ekle** düğmesini seçin.
+1. *Başlangıç. cs*' nin en üstüne aşağıdaki using deyimlerini ekleyin:
 
     [!code-csharp [StartupUsings](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/Startup.cs#L1-L6)]
 
@@ -161,7 +161,7 @@ Model parametresi tarafından tanımlanır, `modelName` böylece değişiklik ya
 >builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
 >   .FromUri(
 >       modelName: "SentimentAnalysisModel",
->       uri:"https://github.com/dotnet/samples/raw/master/machine-learning/models/sentimentanalysis/sentiment_model.zip",
+>       uri:"https://github.com/dotnet/samples/raw/main/machine-learning/models/sentimentanalysis/sentiment_model.zip",
 >       period: TimeSpan.FromMinutes(1));
 >```
 

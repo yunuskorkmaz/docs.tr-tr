@@ -5,12 +5,12 @@ author: briacht
 ms.date: 06/30/2020
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 2df774110d3355bf75a14e211555984a12cf7fa4
-ms.sourcegitcommit: b27645cb378d4e8137a267e5467ff31409acf6c0
+ms.openlocfilehash: 9171a6ca073e6296220ebcb874258b6893b2974f
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "103231400"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875362"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorization-with-mlnet"></a>Öğretici: ML.NET ile matris factoru kullanarak bir film öneren oluşturma
 
@@ -25,7 +25,7 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > * Modeli değerlendirme
 > * Bir modeli dağıtma ve kullanma
 
-Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/MovieRecommendation) deposunda bulabilirsiniz.
+Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/MovieRecommendation) deposunda bulabilirsiniz.
 
 ## <a name="machine-learning-workflow"></a>Machine Learning iş akışı
 
@@ -60,7 +60,7 @@ Bir film listesi önermek veya ilgili ürünlerin bir listesini önermek gibi ö
 
     **Çözüm Gezgini**, projeye sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin. Paket kaynağı olarak "nuget.org" öğesini seçin, **Araştır** sekmesini seçin, **Microsoft.ml** için arama yapın, listeden paketi seçin ve sonra da **Install** düğmesini seçin. **Değişiklikleri Önizle** Iletişim kutusunda **Tamam** düğmesini seçin ve ardından listelenen paketlerin lisans koşullarını kabul ediyorsanız **Lisans kabulü** iletişim kutusunda **kabul ediyorum** düğmesini seçin. **Microsoft. ml. öneren** için bu adımları tekrarlayın.
 
-4. `using` *Program.cs* dosyanızın en üstüne aşağıdaki deyimleri ekleyin:
+4. Aşağıdaki `using` deyimlerini *program. cs* dosyanızın üst kısmına ekleyin:
 
     [!code-csharp[UsingStatements](./snippets/movie-recommendation/csharp/Program.cs#UsingStatements "Add necessary usings")]
 
@@ -68,8 +68,8 @@ Bir film listesi önermek veya ilgili ürünlerin bir listesini önermek gibi ö
 
 1. İki veri kümesini indirin ve daha önce oluşturduğunuz *veri* klasörüne kaydedin:
 
-   * [*recommendation-ratings-train.csv*](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/MatrixFactorization_MovieRecommendation/Data/recommendation-ratings-train.csv) sağ tıklayıp "bağlantıyı (veya hedefi) farklı kaydet" i seçin.
-   * [*recommendation-ratings-test.csv*](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/MatrixFactorization_MovieRecommendation/Data/recommendation-ratings-test.csv) sağ tıklayıp "bağlantıyı (veya hedefi) farklı kaydet" i seçin.
+   * [*recommendation-ratings-train.csv*](https://raw.githubusercontent.com/dotnet/machinelearning-samples/main/samples/csharp/getting-started/MatrixFactorization_MovieRecommendation/Data/recommendation-ratings-train.csv) sağ tıklayıp "bağlantıyı (veya hedefi) farklı kaydet" i seçin.
+   * [*recommendation-ratings-test.csv*](https://raw.githubusercontent.com/dotnet/machinelearning-samples/main/samples/csharp/getting-started/MatrixFactorization_MovieRecommendation/Data/recommendation-ratings-test.csv) sağ tıklayıp "bağlantıyı (veya hedefi) farklı kaydet" i seçin.
 
      \*. Csv dosyalarını *veri* klasörüne kaydettiğinizden emin olun veya başka bir yere kaydettikten sonra \* . csv dosyalarını *veri* klasörüne taşıyın.
 
@@ -119,25 +119,25 @@ Projenize yeni bir sınıf ekleyin:
 
 1. **Çözüm Gezgini**, projeye sağ tıklayın ve ardından **> yeni öğe Ekle**' yi seçin.
 
-2. **Yeni öğe Ekle iletişim kutusunda** **sınıf** ' ı seçin ve **ad** alanını *MovieRatingData.cs* olarak değiştirin. Sonra **Ekle** düğmesini seçin.
+2. **Yeni öğe Ekle iletişim kutusunda** **sınıf** ' ı seçin ve **ad** alanını *MovieRatingData. cs* olarak değiştirin. Sonra **Ekle** düğmesini seçin.
 
-*MovieRatingData.cs* dosyası kod düzenleyicisinde açılır. Aşağıdaki `using` ifadeyi *MovieRatingData.cs* öğesinin en üstüne ekleyin:
+*MovieRatingData. cs* dosyası kod düzenleyicisinde açılır. Aşağıdaki `using` Ifadeyi *MovieRatingData. cs*' nin en üstüne ekleyin:
 
 ```csharp
 using Microsoft.ML.Data;
 ```
 
-`MovieRating`Var olan sınıf tanımını kaldırarak ve *MovieRatingData.cs* içinde aşağıdaki kodu ekleyerek adlı bir sınıf oluşturun:
+`MovieRating`Var olan sınıf tanımını kaldırarak ve aşağıdaki kodu *MovieRatingData. cs* içine ekleyerek adlı bir sınıf oluşturun:
 
 [!code-csharp[MovieRatingClass](./snippets/movie-recommendation/csharp/MovieRatingData.cs#MovieRatingClass "Add the Movie Rating class")]
 
 `MovieRating` bir giriş veri sınıfını belirtir. [Loadcolumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) özniteliği, veri kümesindeki hangi sütunların (sütun dizinine göre) yükleneceğini belirtir. `userId`Ve `movieId` sütunları `Features` (modelin tahmin edilmesine izin verilecek girişler `Label` ) ve derecelendirme sütunu, tahmin ettiğiniz ' dir `Label` (modelin çıktısı).
 
-`MovieRatingPrediction` `MovieRating` *MovieRatingData.cs* içindeki sınıftan sonra aşağıdaki kodu ekleyerek tahmin edilen sonuçları temsil eden başka bir sınıf oluşturun:
+`MovieRatingPrediction` `MovieRating` *MovieRatingData. cs* içindeki sınıftan sonra aşağıdaki kodu ekleyerek tahmin edilen sonuçları temsil eden başka bir sınıf oluşturun:
 
 [!code-csharp[PredictionClass](./snippets/movie-recommendation/csharp/MovieRatingData.cs#PredictionClass "Add the Movie Prediction Class")]
 
-*Program.cs*' de, öğesini `Console.WriteLine("Hello World!")` içinde aşağıdaki kodla değiştirin `Main()` :
+*Program. cs*' de, öğesini `Console.WriteLine("Hello World!")` içinde aşağıdaki kodla değiştirin `Main()` :
 
 [!code-csharp[MLContext](./snippets/movie-recommendation/csharp/Program.cs#MLContext "Add MLContext")]
 
@@ -400,7 +400,7 @@ Movie 10 is recommended for user 6
 =============== Saving the model to a file ===============
 ```
 
-Tebrikler! Artık film öneren bir makine öğrenimi modelini başarıyla oluşturdunuz. Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/MovieRecommendation) deposunda bulabilirsiniz.
+Tebrikler! Artık film öneren bir makine öğrenimi modelini başarıyla oluşturdunuz. Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/MovieRecommendation) deposunda bulabilirsiniz.
 
 ## <a name="improve-your-model"></a>Modelinizi geliştirme
 
@@ -445,8 +445,8 @@ Ortak filtreleme ile matris ayırma algoritması, film önerileri gerçekleştir
 
 | Algoritma       | Senaryo           | Örnek  |
 | ------------- |:-------------:| -----:|
-| Bir sınıf matrisi oluşturma | Yalnızca Kullanıcı kimliği ve Movieıd olduğunda bunu kullanın. Bu öneri stili, ortak satın alma senaryosuna veya genellikle birlikte satın alınan ürünlere dayalıdır. Bu, müşterilerin kendi satın alma siparişi geçmişine göre bir ürün kümesi önermesini önermeyeceği anlamına gelir. | [>deneyin](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/MatrixFactorization_ProductRecommendation) |
-| Alan duyarlı bir ayırma makinesi | Kullanıcı kimliği, ProductID ve derecelendirmeden daha fazla özelliğe sahip olduğunuzda (ürün açıklaması veya ürün fiyatı gibi) öneri sağlamak için bunu kullanın. Bu yöntem ayrıca birlikte çalışan bir filtreleme yaklaşımı kullanır. | [>deneyin](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/Recommendation-MovieRecommender) |
+| Bir sınıf matrisi oluşturma | Yalnızca Kullanıcı kimliği ve Movieıd olduğunda bunu kullanın. Bu öneri stili, ortak satın alma senaryosuna veya genellikle birlikte satın alınan ürünlere dayalıdır. Bu, müşterilerin kendi satın alma siparişi geçmişine göre bir ürün kümesi önermesini önermeyeceği anlamına gelir. | [>deneyin](https://github.com/dotnet/machinelearning-samples/tree/main/samples/csharp/getting-started/MatrixFactorization_ProductRecommendation) |
+| Alan duyarlı bir ayırma makinesi | Kullanıcı kimliği, ProductID ve derecelendirmeden daha fazla özelliğe sahip olduğunuzda (ürün açıklaması veya ürün fiyatı gibi) öneri sağlamak için bunu kullanın. Bu yöntem ayrıca birlikte çalışan bir filtreleme yaklaşımı kullanır. | [>deneyin](https://github.com/dotnet/machinelearning-samples/tree/main/samples/csharp/end-to-end-apps/Recommendation-MovieRecommender) |
 
 ### <a name="new-user-scenario"></a>Yeni Kullanıcı senaryosu
 

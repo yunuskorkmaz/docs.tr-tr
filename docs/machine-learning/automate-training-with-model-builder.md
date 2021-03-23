@@ -3,12 +3,12 @@ title: Model Oluşturucu nedir ve nasıl çalışır?
 description: Makine öğrenimi modelini otomatik olarak eğiteiçin ML.NET model Oluşturucu 'Yu kullanma
 ms.date: 06/01/2020
 ms.custom: overview, mlnet-tooling
-ms.openlocfilehash: d7566a03f83eb76999d995a39aaae408405db2e1
-ms.sourcegitcommit: b27645cb378d4e8137a267e5467ff31409acf6c0
+ms.openlocfilehash: 1e40b0da2c17db1c981bc9f796b4e3cb0c87f69e
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "103231426"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104877026"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>Model Oluşturucu nedir ve nasıl çalışır?
 
@@ -132,11 +132,11 @@ Henüz kendi verileriniz yoksa, bu veri kümelerinden birini deneyin:
 
 |Senaryo|Örnek|Veriler|Etiketle|Özellikler|
 |-|-|-|-|-|
-|Sınıflandırma|Satış anormalilerini tahmin edin|[ürün satış verileri](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Ürün satışları|Ay|
-||Web sitesi açıklamalarının yaklaşımını tahmin etme|[Web sitesi açıklama verileri](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Etiket (negatif yaklaşım olduğunda 0, pozitif olduğunda 1)|Açıklama, yıl|
-||Sahte kredi kartı işlemlerini tahmin etme|[kredi kartı verileri](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CCFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Sınıf (sahte olduğunda 1, aksi durumda 0)|Miktar, v1-V28 (anonimleştirilmiş Özellikler)|
-||GitHub deposundaki sorun türünü tahmin etme|[GitHub sorun verileri](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Alan|Başlık, açıklama|
-|Değer tahmini|Taxı tarifeli havayolu fiyatını tahmin etme|[taxı tarifeli havayolu verileri](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|Tarifeli havayolu|Seyahat süresi, uzaklık|
+|Sınıflandırma|Satış anormalilerini tahmin edin|[ürün satış verileri](https://github.com/dotnet/machinelearning-samples/blob/main/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Ürün satışları|Ay|
+||Web sitesi açıklamalarının yaklaşımını tahmin etme|[Web sitesi açıklama verileri](https://raw.githubusercontent.com/dotnet/machinelearning/main/test/data/wikipedia-detox-250-line-data.tsv)|Etiket (negatif yaklaşım olduğunda 0, pozitif olduğunda 1)|Açıklama, yıl|
+||Sahte kredi kartı işlemlerini tahmin etme|[kredi kartı verileri](https://github.com/dotnet/machinelearning-samples/blob/main/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CCFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Sınıf (sahte olduğunda 1, aksi durumda 0)|Miktar, v1-V28 (anonimleştirilmiş Özellikler)|
+||GitHub deposundaki sorun türünü tahmin etme|[GitHub sorun verileri](https://github.com/dotnet/machinelearning-samples/blob/main/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Alan|Başlık, açıklama|
+|Değer tahmini|Taxı tarifeli havayolu fiyatını tahmin etme|[taxı tarifeli havayolu verileri](https://github.com/dotnet/machinelearning-samples/blob/main/datasets/taxi-fare-train.csv)|Tarifeli havayolu|Seyahat süresi, uzaklık|
 |Resimleri sınıflandırma|Çiçek kategorisini tahmin etme |[çiçek görüntüleri](http://download.tensorflow.org/example_images/flower_photos.tgz)|Çiçek türü: da, Dandelion, Roses, sunçiçekler, TULIP 'ler|Görüntü verilerinin kendisi|
 |Öneri|Birisinin beğenolacağı filmleri tahmin edin|[Film derecelendirmeleri](http://files.grouplens.org/datasets/movielens/ml-latest-small.zip)|Kullanıcılar, Filmler|Derecelendirmeler|
 

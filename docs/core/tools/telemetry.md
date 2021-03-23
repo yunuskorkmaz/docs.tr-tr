@@ -3,12 +3,12 @@ title: .NET SDK telemetrisi
 description: Analiz için kullanım bilgilerini toplayan .NET SDK telemetrisi özelliklerini, hangi verilerin toplandığı ve devre dışı bırakılacağını bulun.
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: 137b703dc9369f09fb535af40edf057e4e02117a
-ms.sourcegitcommit: 2b878d7011306b215dbf3d5dc9c1e78355a6dcd5
+ms.openlocfilehash: 1a863fe0c713cb49eca2968464d550eae2c9f36a
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "98757843"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873412"
 ---
 # <a name="net-sdk-telemetry"></a>.NET SDK telemetrisi
 
@@ -142,4 +142,4 @@ Bu nedenle, .NET SDK 'nın özel derlemeleri yol adları kişisel veya hassas bi
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [.NET CLı telemetri verileri](https://dotnet.microsoft.com/platform/telemetry)
-- [Telemetri başvuru kaynağı (DotNet/SDK deposu)](https://github.com/dotnet/sdk/tree/master/src/Cli/dotnet/Telemetry)
+- [Telemetri başvuru kaynağı (DotNet/SDK deposu)](https://github.com/dotnet/sdk/tree/main/src/Cli/dotnet/Telemetry)

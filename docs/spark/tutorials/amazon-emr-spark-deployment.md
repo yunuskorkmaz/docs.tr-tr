@@ -4,18 +4,18 @@ description: Apache Spark uygulamasının bir .NET uygulamasını Amazon EMR Spa
 ms.date: 10/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: dd1cfdf12266b55d9dbc0210479b89ba68c59a38
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: a0904b5b692e1c32ba12a685f2c3a3f7d86c2c58
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688078"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874062"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-amazon-emr-spark"></a>Amazon EMR Spark için bir .NET Apache Spark uygulaması dağıtma
 
 Bu öğreticide, Amazon EMR Spark 'a Apache Spark uygulamasına yönelik bir .NET dağıtımı öğretilir. [Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-what-is-emr.html) , AWS 'de büyük veri çerçevelerini çalıştırmayı kolaylaştıran bir yönetilen küme platformudur.
 
-Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
+Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 
 > [!div class="checklist"]
 >
@@ -32,7 +32,7 @@ Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 Başlamadan önce aşağıdakileri yapın:
 
 * [AWS CLI](https://aws.amazon.com/cli/)'yi indirin.
-* [İnstall-Worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) 'i yerel makinenize indirin. Bu, daha sonra Apache Spark bağımlı dosyaları için .NET 'i Spark kümenizin çalışan düğümlerine kopyalamak için kullandığınız bir yardımcı betiktir.
+* [İnstall-Worker.sh](https://github.com/dotnet/spark/blob/main/deployment/install-worker.sh) 'i yerel makinenize indirin. Bu, daha sonra Apache Spark bağımlı dosyaları için .NET 'i Spark kümenizin çalışan düğümlerine kopyalamak için kullandığınız bir yardımcı betiktir.
 
 ## <a name="prepare-worker-dependencies"></a>Çalışan bağımlılıklarını hazırlama
 
@@ -42,7 +42,7 @@ Başlamadan önce aşağıdakileri yapın:
 
    Örneğin, `.NET for Apache Spark v1.0.0` kullanmak Istiyorsanız `netcoreapp3.1` [Microsoft. spark. Worker. netcoreapp 3.1. Linux-x64-1.0.0. tar. gz](https://github.com/dotnet/spark/releases/download/v1.0.0/Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-1.0.0.tar.gz)dosyasını indirirsiniz.
 
-2. `Microsoft.Spark.Worker.<release>.tar.gz`Kümenizin erişimi olan bir dağıtılmış dosya sistemine (ör. S3) yükleyin ve [install-Worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) .
+2. `Microsoft.Spark.Worker.<release>.tar.gz`Kümenizin erişimi olan bir dağıtılmış dosya sistemine (ör. S3) yükleyin ve [install-Worker.sh](https://github.com/dotnet/spark/blob/main/deployment/install-worker.sh) .
 
 ## <a name="prepare-your-net-for-apache-spark-app"></a>Apache Spark uygulamanızı .NET 'e hazırlama
 
@@ -107,7 +107,7 @@ Bu uygulamayı Amazon EMR Spark: Spark-gönderme ve Amazon EMR adımlarında ça
 
 1. `ssh` Kümedeki düğümlerden birine.
 
-2. `spark-submit` komutunu çalıştırın.
+2. `spark-submit` öğesini çalıştırın.
 
    ```bash
    spark-submit \
@@ -135,4 +135,4 @@ aws emr add-steps \
 Bu öğreticide, Apache Spark için .NET uygulamanızı Amazon EMR Spark 'a dağıttınız. Apache Spark örnek projelerine yönelik .NET için GitHub ' a devam edin.
 
 > [!div class="nextstepaction"]
-> [Apache Spark örnekleri için .NET](https://github.com/dotnet/spark/tree/master/examples)
+> [Apache Spark örnekleri için .NET](https://github.com/dotnet/spark/tree/main/examples)

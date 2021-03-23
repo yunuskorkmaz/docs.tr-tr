@@ -2,12 +2,12 @@
 title: dotnet restore komutu
 description: Dotnet restore komutuyla bağımlılıkları ve projeye özel araçları nasıl geri yükleyeceğinizi öğrenin.
 ms.date: 02/27/2020
-ms.openlocfilehash: dcb68d6c690f2e12b61cfdfa6dc288bd474721c1
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 14bcf65bb78e6d1d96604c8a10a3ba94fab80db8
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634409"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874842"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -65,7 +65,7 @@ Projeye özgü araçlar için, `dotnet restore` önce aracın paketlenmesi gerek
 
 ### <a name="nugetconfig-differences"></a>nuget.config farklar
 
-Komutun davranışı, varsa `dotnet restore` *nuget.config* dosyasındaki ayarlardan etkilenir. Örneğin,nuget.configayarlanması, `globalPackagesFolder` geri *nuget.config* yüklenen NuGet paketlerini belirtilen klasöre koyar. Bu seçenek, komutunda seçeneğini belirtmeye yönelik bir alternatiftir `--packages` `dotnet restore` . Daha fazla bilgi için [nuget.config başvurusuna](/nuget/schema/nuget-config-file)bakın.
+Komutun davranışı, varsa `dotnet restore` *nuget.config* dosyasındaki ayarlardan etkilenir. Örneğin,nuget.configayarlanması, `globalPackagesFolder` geri  yüklenen NuGet paketlerini belirtilen klasöre koyar. Bu seçenek, komutunda seçeneğini belirtmeye yönelik bir alternatiftir `--packages` `dotnet restore` . Daha fazla bilgi için [nuget.config başvurusuna](/nuget/schema/nuget-config-file)bakın.
 
 Yok sayan üç özel ayar vardır `dotnet restore` :
 
@@ -79,9 +79,9 @@ Yok sayan üç özel ayar vardır `dotnet restore` :
 
 - [trustedSigners](/nuget/schema/nuget-config-file#trustedsigners-section)
 
-  NuGet, güvenilen paketlerin [platformlar arası doğrulanmasını henüz desteklemediğinden](https://github.com/NuGet/Home/issues/7939) , bu ayar geçerli değildir.
+  Platformlar arası Paket imza doğrulaması desteği .NET 5.0.100 SDK 'sına eklenmiştir.
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız değişkenler
 
 - **`ROOT`**
 
@@ -91,7 +91,7 @@ Yok sayan üç özel ayar vardır `dotnet restore` :
 
 - **`--configfile <FILE>`**
 
-  Geri yükleme işlemi için kullanılacak NuGet yapılandırma dosyası ( *nuget.config* ).
+  Geri yükleme işlemi için kullanılacak NuGet yapılandırma dosyası (*nuget.config*).
 
 - **`--disable-parallel`**
 

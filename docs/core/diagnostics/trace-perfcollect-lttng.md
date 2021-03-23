@@ -3,12 +3,12 @@ title: PerfCollect ile .NET uygulamalarını izleme.
 description: .NET ' te PerfCollect ile izleme toplama konusunda size kılavuzluk eden bir öğretici.
 ms.topic: tutorial
 ms.date: 10/23/2020
-ms.openlocfilehash: 20e1bf56714fb32b5231d45b0ba35cdfcedaea2e
-ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
+ms.openlocfilehash: d6ee77fea5c419e00e684e8b1472278f752544b0
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/11/2021
-ms.locfileid: "103189936"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874192"
 ---
 # <a name="trace-net-applications-with-perfcollect"></a>PerfCollect ile .NET uygulamalarını izleme
 
@@ -195,7 +195,7 @@ Normalde, bir .NET uygulaması oluşturduğunuzda, Rest için çalışma zamanı
 
 Bu, yeni bir Merhaba Dünya uygulaması oluşturur ve bunu kendi kendine içerilen bir uygulama olarak oluşturur.
 
-Kendi içinde kapsanan uygulamayı oluşturmanın yan etkisi olarak, DotNet Aracı, Runtime. Linux-x64. Microsoft. netcore. app adlı bir NuGet paketini indirir ve ~/.nuget/packages/runtime.linux-x64.microsoft.netcore.app/VERSION dizinine yerleştirirken, sürüm .NET Core çalışma zamanının sürüm numarasıdır (örneğin, 2.1.0). Bu, öğesinin altında bir araçlar dizinidir ve ihtiyacınız olan çapraz genel araç vardır. .NET Core 3,0 ile başlayarak, paket konumu ~/.nuget/packages/microsoft.netcore.app.runtime.linux-x64/VERSION.
+Kendi kendine içerilen uygulamayı oluşturmanın yan etkisi olarak, DotNet aracı runtime.linux-x64.microsoft.netcore.app adlı bir NuGet paketini indirir ve ~/.nuget/packages/runtime.linux-x64.microsoft.netcore.app/VERSION dizinine yerleştirirken, sürüm .NET Core çalışma zamanının sürüm numarasıdır (örneğin, 2.1.0). Bu, öğesinin altında bir araçlar dizinidir ve ihtiyacınız olan çapraz genel araç vardır. .NET Core 3,0 ile başlayarak, paket konumu ~/.nuget/packages/microsoft.netcore.app.runtime.linux-x64/VERSION.
 
 `crossgen`Aracın, uygulamanız tarafından gerçekten kullanılan çalışma zamanının yanına alınması gerekir. Genellikle uygulamanız .NET Core 'un/usr/share/dotnet/shared/Microsoft.NETCore.App/VERSION adresinde yüklü olan paylaşılan sürümünü kullanır; burada sürüm .NET çalışma zamanının sürüm numarasıdır. Bu paylaşılan bir konumdur, bu nedenle değiştirmek için süper kullanıcı olmanız gerekir. SÜRÜM 2.1.0 ise güncelleştirme komutları `crossgen` şöyle olacaktır:
 
@@ -225,7 +225,7 @@ Bu değişiklik ile tüm .NET kodu için sembolleri almanız gerekir.
 
 Çoğu zaman kendi kodunuzla ilgileniyorsunuz. Bu, `perfcollect` Varsayılan olarak çözümlenir. Bazen, .NET DLL 'leri içinde neler olduğunu (son bölümün yaklaşık olarak) görmek yararlıdır, ancak bazen yerel çalışma zamanı dll 'lerinde (genellikle libcoreclr.so) neler olursa olsun.  `perfcollect` , yalnızca bu yerel dll sembolleri varsa (ve bunların kendisi için oldukları kitaplığın yanında ise) sembolleri dönüştürür.
 
-Bunu yapan [DotNet-symbol](https://github.com/dotnet/symstore/blob/master/src/dotnet-symbol/README.md#symbol-downloader-dotnet-cli-extension) adlı bir genel komut vardır. Yerel çalışma zamanı sembolleri almak için DotNet-symbol kullanmak için:
+Bunu yapan [DotNet-symbol](https://github.com/dotnet/symstore/blob/main/src/dotnet-symbol/README.md#symbol-downloader-dotnet-cli-extension) adlı bir genel komut vardır. Yerel çalışma zamanı sembolleri almak için DotNet-symbol kullanmak için:
 
 1. `dotnet-symbol` yükleme:
 

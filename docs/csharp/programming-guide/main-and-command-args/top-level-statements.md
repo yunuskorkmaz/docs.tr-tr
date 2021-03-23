@@ -5,18 +5,18 @@ ms.date: 03/08/2021
 helpviewer_keywords:
 - C# language, top-level statements
 - C# language, Main method
-ms.openlocfilehash: 69ff5fd606f5e12f55bd3e6dfc15fc7e64d8352b
-ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
+ms.openlocfilehash: 31a9d3bba302823015058d59ca79da45754b761f
+ms.sourcegitcommit: 5ce37699c2a51ed173171813be68ef7577b1aba5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/11/2021
-ms.locfileid: "103190477"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104881060"
 ---
 # <a name="top-level-statements-c-programming-guide"></a>Üst düzey deyimler (C# Programlama Kılavuzu)
 
 C# 9 ' dan itibaren bir `Main` konsol uygulaması projesine bir yöntemi açıkça eklemeniz gerekmez. Bunun yerine, *en üst düzey deyimler* özelliğini kullanarak yazmanız gerektiğini kodun en aza indirmenize olanak sağlayabilirsiniz. Bu durumda, derleyici uygulama için bir sınıf ve `Main` Yöntem giriş noktası oluşturur.
 
-C# 9 ' da bir bütün C# programı olan bir *program.cs* dosyası aşağıda verilmiştir:
+C# 9 ' da tüm C# programı olan bir *program. cs* dosyası aşağıda verilmiştir:
 
 :::code language="csharp" source="snippets/top-level-statements-1/Program.cs":::
 
@@ -38,7 +38,7 @@ Bir `Main` yöntemi açıkça yazabilirsiniz, ancak giriş noktası olarak çal�
 
 > CS7022, programın giriş noktası genel koddur; ' Main () ' giriş noktası yoksayılıyor.
 
-Üst düzey deyimler içeren bir projede, proje bir veya daha fazla yöntem içerse bile, giriş noktasını seçmek için [-Main](../../language-reference/compiler-options/main-compiler-option.md) derleyici seçeneğini kullanamazsınız `Main` .
+Üst düzey deyimler içeren bir projede, proje bir veya daha fazla yöntem içerse bile, giriş noktasını seçmek için [-Main](../../language-reference/compiler-options/advanced.md#mainentrypoint-or-startupobject) derleyici seçeneğini kullanamazsınız `Main` .
 
 ## <a name="using-directives"></a>`using` yönergeler
 

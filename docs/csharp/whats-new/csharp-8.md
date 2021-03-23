@@ -2,12 +2,12 @@
 title: C# 8,0 ' deki yenilikler-C# Kılavuzu
 description: C# 8,0 ' de bulunan yeni özelliklere genel bakış alın.
 ms.date: 04/07/2020
-ms.openlocfilehash: 1d6d33a36092ba685247f894375888da278b7e6e
-ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
+ms.openlocfilehash: 7e2e484b4eacf8fdbef61a600409fa561dd34cb3
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92434800"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876077"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 sürümündeki yenilikler
 
@@ -36,10 +36,10 @@ C# 8,0, **.NET Core 3. x** ve **.NET Standard 2,1**' de desteklenir. Daha fazla 
 
 Bu makalenin geri kalanında bu özellikler kısaca açıklanmaktadır. Ayrıntılı makalelerin nerede kullanılabildiği, bu öğreticiler ve genel bakışların bağlantıları sağlanmıştır. Genel aracı kullanarak ortamınızdaki bu özellikleri keşfedebilirsiniz `dotnet try` :
 
-1. [DotNet-TRY](https://github.com/dotnet/try/blob/master/README.md#setup) küresel aracını yükler.
+1. [DotNet-TRY](https://github.com/dotnet/try/blob/main/DotNetTryLocal.md) küresel aracını yükler.
 1. [DotNet/TRY-Samples](https://github.com/dotnet/try-samples) deposunu kopyalayın.
 1. *TRY-Samples* deposu için geçerli dizini *csharp8* alt dizinine ayarlayın.
-1. Şu komutu çalıştırın: `dotnet try`.
+1. `dotnet try` öğesini çalıştırın.
 
 ## <a name="readonly-members"></a>Salt okunur Üyeler
 
@@ -96,7 +96,7 @@ Daha fazla bilgi için [yapı türleri](../language-reference/builtin-types/stru
 
 Artık, arabirimlere Üyeler ekleyebilir ve bu üyeler için bir uygulama sağlayabilirsiniz. Bu dil özelliği, API yazarlarının, bu arabirimin var olan uygulamalarıyla kaynak veya ikili uyumluluğu bozmadan sonraki sürümlerde bir arabirime Yöntemler eklemesine olanak sağlar. Mevcut uygulamalar varsayılan uygulamayı *devralınır* . Bu özellik ayrıca C# ' nin, benzer özellikleri destekleyen Android veya Swift 'Ları hedefleyen API 'lerle birlikte çalışmasını da sağlar. Varsayılan arabirim yöntemleri, "nitelikler" dil özelliğine benzer senaryolar da sağlar.
 
-Varsayılan arabirim yöntemleri birçok senaryoyu ve dil öğelerini etkiler. İlk öğreticimiz [, bir arabirimin varsayılan uygulamalarla güncelleştirilmesini](../tutorials/default-interface-methods-versions.md)kapsamaktadır. Diğer öğreticiler ve başvuru güncelleştirmeleri genel sürüm için zaman içinde geliyor.
+Varsayılan arabirim yöntemleri birçok senaryoyu ve dil öğelerini etkiler. İlk öğreticimiz [, bir arabirimin varsayılan uygulamalarla güncelleştirilmesini](./tutorials/default-interface-methods-versions.md)kapsamaktadır.
 
 ## <a name="more-patterns-in-more-places"></a>Daha fazla yerde daha fazla desen
 
@@ -104,7 +104,7 @@ Varsayılan arabirim yöntemleri birçok senaryoyu ve dil öğelerini etkiler. �
 
 C# 8,0, kodunuzda daha fazla yerde daha fazla model ifadesi kullanabilmeniz için bu sözlüğü genişletir. Verileriniz ve işlevselliklerinizin ayrı olması durumunda bu özellikleri göz önünde bulundurun. Algoritmalarınız nesnenin çalışma zamanı türü dışında bir olgusuna bağımlıysa, model eşleştirmeyi düşünün. Bu teknikler, hızlı tasarımlar için başka bir yol sağlar.
 
-Yeni yerlerdeki yeni desenlere ek olarak C# 8,0 **özyinelemeli desenler**ekler. Herhangi bir model ifadesinin sonucu bir ifadedir. Özyinelemeli bir model, sadece başka bir model ifadesinin çıktısına uygulanan bir model ifadesi olur.
+Yeni yerlerdeki yeni desenlere ek olarak C# 8,0 **özyinelemeli desenler** ekler. Herhangi bir model ifadesinin sonucu bir ifadedir. Özyinelemeli bir model, sadece başka bir model ifadesinin çıktısına uygulanan bir model ifadesi olur.
 
 ### <a name="switch-expressions"></a>Anahtar ifadeleri
 
@@ -194,7 +194,7 @@ Model eşleştirme, bu algoritmayı ifade etmek için kısa bir sözdizimi oluş
 
 ### <a name="tuple-patterns"></a>Demet desenleri
 
-Bazı algoritmalar birden fazla girişe bağımlıdır. **Demet desenleri** , [kayıt düzeni](../language-reference/builtin-types/value-tuples.md)olarak ifade edilen birden çok değere göre geçiş yapmanıza olanak sağlar.  Aşağıdaki kod, oyun *rock, Paper, makas*için bir switch ifadesi gösterir:
+Bazı algoritmalar birden fazla girişe bağımlıdır. **Demet desenleri** , [kayıt düzeni](../language-reference/builtin-types/value-tuples.md)olarak ifade edilen birden çok değere göre geçiş yapmanıza olanak sağlar.  Aşağıdaki kod, oyun *rock, Paper, makas* için bir switch ifadesi gösterir:
 
 ```csharp
 public static string RockPaperScissors(string first, string second)
@@ -321,7 +321,7 @@ Her iki durumda da derleyici çağrısını oluşturur `Dispose()` . Deyimdeki i
 
 `static`Yerel işlevin kapsayan kapsamdaki herhangi bir değişkeni yakalamamasına (başvuru) izin vermek için artık [Yerel işlevlere](../programming-guide/classes-and-structs/local-functions.md) değiştiricisini ekleyebilirsiniz. Bunu yapmak `CS8421` , "statik bir yerel işlev için başvuru içeremez \<variable> ."
 
-Aşağıdaki kodu göz önünde bulundurun. Yerel işlev, `LocalFunction` `y` kapsayan kapsamda (yöntemi) belirtilen değişkenine erişir `M` . Bu nedenle, `LocalFunction` `static` değiştiriciyle bildirilemez:
+Aşağıdaki kodu inceleyin. Yerel işlev, `LocalFunction` `y` kapsayan kapsamda (yöntemi) belirtilen değişkenine erişir `M` . Bu nedenle, `LocalFunction` `static` değiştiriciyle bildirilemez:
 
 ```csharp
 int M()
@@ -353,13 +353,13 @@ int M()
 
 ## <a name="nullable-reference-types"></a>Boş değer atanabilir başvuru türleri
 
-Null olabilen bir ek açıklama bağlamında, başvuru türündeki herhangi bir değişken **null yapılamayan bir başvuru türü**olarak kabul edilir. Bir değişkenin null olabileceğini belirtmek istiyorsanız, değişkeni null olabilen `?` bir **başvuru türü**olarak bildirmek için ile tür adını eklemeniz gerekir.
+Null olabilen bir ek açıklama bağlamında, başvuru türündeki herhangi bir değişken **null yapılamayan bir başvuru türü** olarak kabul edilir. Bir değişkenin null olabileceğini belirtmek istiyorsanız, değişkeni null olabilen `?` bir **başvuru türü** olarak bildirmek için ile tür adını eklemeniz gerekir.
 
 Null yapılamayan başvuru türleri için derleyici, yerel değişkenlerin bildirildiği sırada null olmayan bir değere başlatıldığından emin olmak için akış analizini kullanır. Alanlar oluşturma sırasında başlatılmalıdır. Derleyici, değişken kullanılabilir oluşturuculardan herhangi birine veya bir başlatıcı tarafından ayarlanmamışsa bir uyarı oluşturur. Ayrıca, null olamayan başvuru türlerine null olabilecek bir değer atanamaz.
 
 Null yapılabilir başvuru türleri atanmamış veya null olarak başlatılmamış olduğundan emin olmak için denetlenmez. Ancak, derleyici, null olabilen bir başvuru türü değişkeninin erişilebilir olması veya null yapılamayan bir başvuruya atanmadan önce null olarak denetlendiğinden emin olmak için akış analizini kullanır.
 
-Özelliği hakkında daha fazla bilgiyi [null yapılabilir başvuru türlerine](../nullable-references.md)genel bakış bölümünde bulabilirsiniz. Bu [null yapılabilir başvuru türleri öğreticisindeki](../tutorials/nullable-reference-types.md)yeni bir uygulamada kendiniz deneyin. [Bir uygulamayı, null yapılabilir başvuru türlerini kullanmak için geçirme](../tutorials/upgrade-to-nullable-references.md)bölümünde null yapılabilir başvuru türlerini kullanmak için mevcut bir kod temeli geçirme adımları hakkında bilgi edinin.
+Özelliği hakkında daha fazla bilgiyi [null yapılabilir başvuru türlerine](../nullable-references.md)genel bakış bölümünde bulabilirsiniz. Bu [null yapılabilir başvuru türleri öğreticisindeki](tutorials/nullable-reference-types.md)yeni bir uygulamada kendiniz deneyin. [Bir uygulamayı, null yapılabilir başvuru türlerini kullanmak için geçirme](tutorials/upgrade-to-nullable-references.md)bölümünde null yapılabilir başvuru türlerini kullanmak için mevcut bir kod temeli geçirme adımları hakkında bilgi edinin.
 
 ## <a name="asynchronous-streams"></a>Zaman uyumsuz akışlar
 
@@ -391,7 +391,7 @@ await foreach (var number in GenerateSequence())
 }
 ```
 
-Zaman uyumsuz akışları [oluşturma ve](../tutorials/generate-consume-asynchronous-stream.md)kullanma öğreticimizde, zaman uyumsuz akışları kendiniz deneyebilirsiniz. Akış öğeleri varsayılan olarak yakalanan bağlamda işlenir. Bağlam yakalamayı devre dışı bırakmak istiyorsanız, <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType> genişletme yöntemini kullanın. Eşitleme bağlamları ve geçerli bağlamı yakalama hakkında daha fazla bilgi için [görev tabanlı zaman uyumsuz model](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)kullanma başlıklı makaleye bakın.
+Zaman uyumsuz akışları [oluşturma ve](tutorials/generate-consume-asynchronous-stream.md)kullanma öğreticimizde, zaman uyumsuz akışları kendiniz deneyebilirsiniz. Akış öğeleri varsayılan olarak yakalanan bağlamda işlenir. Bağlam yakalamayı devre dışı bırakmak istiyorsanız, <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType> genişletme yöntemini kullanın. Eşitleme bağlamları ve geçerli bağlamı yakalama hakkında daha fazla bilgi için [görev tabanlı zaman uyumsuz model](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)kullanma başlıklı makaleye bakın.
 
 ## <a name="asynchronous-disposable"></a>Zaman uyumsuz atılabilir
 
@@ -469,9 +469,9 @@ Aralık daha sonra `[` ve karakterleri içinde kullanılabilir `]` :
 var text = words[phrase];
 ```
 
-Yalnızca dizin ve aralıkları destekleyen diziler değil. Ayrıca, veya [dizesiyle](../language-reference/builtin-types/reference-types.md#the-string-type)dizin ve aralıklar da kullanabilirsiniz <xref:System.Span%601> <xref:System.ReadOnlySpan%601> . Daha fazla bilgi için bkz. [Dizinler ve aralıklar için destek türü](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges).
+Yalnızca dizin ve aralıkları destekleyen diziler değil. Ayrıca, veya [dizesiyle](../language-reference/builtin-types/reference-types.md#the-string-type)dizin ve aralıklar da kullanabilirsiniz <xref:System.Span%601> <xref:System.ReadOnlySpan%601> . Daha fazla bilgi için bkz. [Dizinler ve aralıklar için destek türü](tutorials/ranges-indexes.md#type-support-for-indices-and-ranges).
 
-Dizinler ve [aralıklar](../tutorials/ranges-indexes.md)hakkında öğreticide dizinler ve aralıklar hakkında daha fazla bilgi bulabilirsiniz.
+Dizinler ve [aralıklar](tutorials/ranges-indexes.md)hakkında öğreticide dizinler ve aralıklar hakkında daha fazla bilgi bulabilirsiniz.
 
 ## <a name="null-coalescing-assignment"></a>Null birleştirme ataması
 
@@ -530,4 +530,4 @@ Console.WriteLine(ind);  // output: 1
 
 ## <a name="enhancement-of-interpolated-verbatim-strings"></a>Ara değerli tam dizelerin geliştirilmesi
 
-Birlikte bulunan tam `$` `@` dizelerde ve belirteçlerin sırası herhangi biri olabilir: her ikisi de geçerli bir ara tür [interpolated](../language-reference/tokens/interpolated.md) `$@"..."` `@$"..."` dizelerdir. Önceki C# sürümlerinde, `$` belirtecin belirtecin önüne gösterilmesi gerekir `@` .
+Birlikte bulunan tam `$` `@` dizelerde ve belirteçlerin sırası herhangi biri olabilir: her ikisi de geçerli bir ara tür [](../language-reference/tokens/interpolated.md) `$@"..."` `@$"..."` dizelerdir. Önceki C# sürümlerinde, `$` belirtecin belirtecin önüne gösterilmesi gerekir `@` .

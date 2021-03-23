@@ -2,12 +2,12 @@
 title: dotnet-install scripts
 description: .NET SDK ve paylaşılan çalışma zamanı yüklemek için DotNet-install betikleri hakkında bilgi edinin.
 ms.date: 09/22/2020
-ms.openlocfilehash: 51482ca70d08d86e02a493f1da49b056fed8d11c
-ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
+ms.openlocfilehash: 45b5a15bdbaa3f3167dd434e2600e33b69dc9b85
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102206693"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875167"
 ---
 # <a name="dotnet-install-scripts-reference"></a>DotNet-betiklerin başvurusunu yüklemeyi
 
@@ -267,4 +267,4 @@ Install betikleri, Windows 'da kayıt defterini güncelleştirmez. Yalnızca dar
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [.NET yayınları](https://github.com/dotnet/core/releases)
-- [.NET çalışma zamanı ve SDK indirme Arşivi](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)
+- [.NET çalışma zamanı ve SDK indirme Arşivi](https://github.com/dotnet/core/blob/main/release-notes/download-archive.md)

@@ -3,16 +3,16 @@ title: C# ' nin geçmişi-c# Kılavuzu
 description: Dil en eski sürümlerinde ne şekilde görünür ve bu tarihten sonra nasıl gelişmiştir?
 author: erikdietrich
 ms.date: 04/08/2020
-ms.openlocfilehash: 0f6739ba7a2dd0488c52b917c4a60a1b3f04a930
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 0c427563701bd3bff87178022feab19f4dcfc519
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100456425"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104877065"
 ---
 # <a name="the-history-of-c"></a>C geçmişi\#
 
-Bu makalede, C# dilinin her ana sürümünün geçmişi sağlanmaktadır. C# ekibi yenilik yapın 'e devam ediyor ve yeni özellikler ekleyecek. Gelecek sürümler için kabul edilen özellikler dahil olmak üzere ayrıntılı dil özelliği durumu GitHub 'daki [DotNet/Roslyn deposunda](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md) bulunabilir.
+Bu makalede, C# dilinin her ana sürümünün geçmişi sağlanmaktadır. C# ekibi yenilik yapın 'e devam ediyor ve yeni özellikler ekleyecek. Gelecek sürümler için kabul edilen özellikler dahil olmak üzere ayrıntılı dil özelliği durumu GitHub 'daki [DotNet/Roslyn deposunda](https://github.com/dotnet/roslyn/blob/main/docs/Language%20Feature%20Status.md) bulunabilir.
 
 > [!IMPORTANT]
 > C# dili, C# belirtiminin bazı özelliklerden *Standart bir kitaplık* olarak tanımladığı tür ve yöntemlere dayanır. .NET platformu bu türleri ve yöntemleri bir dizi pakete sunar. Özel durum işleme bir örnektir. `throw`Oluşturulan nesnenin türetildiğinden emin olmak için her deyim veya ifade denetlenir <xref:System.Exception> . Benzer şekilde, `catch` yakalanan türün türediğinden emin olmak için her ikisi de denetlenir <xref:System.Exception> . Her sürümde yeni gereksinimler eklenebilir. Eski ortamlarda en son dil özelliklerini kullanmak için, belirli kitaplıkları yüklemeniz gerekebilir. Bu bağımlılıklar, her belirli sürüm için sayfasında belgelenmiştir. Bu bağımlılıkta arka plan için [dil ve kitaplık arasındaki ilişkiler](relationships-between-language-and-library.md) hakkında daha fazla bilgi edinebilirsiniz.

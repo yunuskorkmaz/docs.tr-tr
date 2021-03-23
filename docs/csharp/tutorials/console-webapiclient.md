@@ -3,12 +3,12 @@ title: .NET Core kullanarak REST istemcisi oluşturma
 description: Bu öğreticide, .NET Core ve C# dilinde bazı özellikler öğretilir.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: a8490efbc954ca585a2a0fa9d571191095a4b24c
-ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
+ms.openlocfilehash: 4d36cdafd232de9bbd0fac12e894f905b4808419
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98024983"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876155"
 ---
 # <a name="rest-client"></a>REST istemcisi
 
@@ -25,7 +25,7 @@ GitHub 'da REST hizmetine HTTP Istekleri veren bir uygulama oluşturacaksınız.
 
 Bu öğreticide birçok özellik vardır. Bunları birer birer oluşturalım.
 
-Bu makaleye yönelik [son örnekle](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient) birlikte izlemeyi tercih ediyorsanız, indirebilirsiniz. İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#view-and-download-samples).
+Bu makaleye yönelik [son örnekle](https://github.com/dotnet/samples/tree/main/csharp/getting-started/console-webapiclient) birlikte izlemeyi tercih ediyorsanız, indirebilirsiniz. İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#view-and-download-samples).
 
 ## <a name="prerequisites"></a>Önkoşullar
 
@@ -88,7 +88,7 @@ static async Task Main(string[] args)
 
 Artık hiçbir şey yapmaz ancak zaman uyumsuz olarak bunu yapar. Bunu geliştirelim.
 
-Önce, Web 'den veri alan bir nesne gerekir; <xref:System.Net.Http.HttpClient> bunu yapmak için kullanabilirsiniz. Bu nesne, isteği ve yanıtları işler. `Program` *Program.cs* dosyasının içindeki sınıfta bu türün tek bir örneğini oluşturun.
+Önce, Web 'den veri alan bir nesne gerekir; <xref:System.Net.Http.HttpClient> bunu yapmak için kullanabilirsiniz. Bu nesne, isteği ve yanıtları işler. `Program` *Program. cs* dosyasının içindeki sınıfta bu türün tek bir örneğini oluşturun.
 
 ```csharp
 namespace WebAPIClient
@@ -195,7 +195,7 @@ Uygulamayı derleyin ve çalıştırın. .NET Foundation 'ın parçası olan Dep
 
 ## <a name="controlling-serialization"></a>Serileştirme denetleniyor
 
-Daha fazla özellik eklemeden önce `name` özniteliğini kullanarak özelliği ele alalım `[JsonPropertyName]` . Repo.cs içindeki alanın bildiriminde aşağıdaki değişiklikleri yapın `name` :
+Daha fazla özellik eklemeden önce `name` özniteliğini kullanarak özelliği ele alalım `[JsonPropertyName]` . `name`Depo. cs içindeki alanın bildiriminde aşağıdaki değişiklikleri yapın:
 
 ```csharp
 [JsonPropertyName("name")]
@@ -208,7 +208,7 @@ public string Name { get; set; }
 using System.Text.Json.Serialization;
 ```
 
-Bu değişiklik, program.cs içindeki her deponun adını yazan kodu değiştirmeniz gereken anlamına gelir:
+Bu değişiklik, program. cs dosyasındaki her deponun adını yazan kodu değiştirmeniz gereken anlamına gelir:
 
 ```csharp
 Console.WriteLine(repo.Name);
@@ -304,7 +304,7 @@ Son olarak, konsolda bir çıkış bildirisi daha ekleyin ve bu uygulamayı yeni
 Console.WriteLine(repo.LastPush);
 ```
 
-Sürümünüz artık [tamamlanmış örnekle](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient)eşleşmelidir.
+Sürümünüz artık [tamamlanmış örnekle](https://github.com/dotnet/samples/tree/main/csharp/getting-started/console-webapiclient)eşleşmelidir.
 
 ## <a name="conclusion"></a>Sonuç
 

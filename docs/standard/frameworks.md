@@ -5,12 +5,12 @@ ms.date: 03/03/2021
 ms.prod: dotnet
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 9e831726a87493b109578a3546a8f29b7b71cb6c
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: 51c4a5cf11b16372b9c895f84653e0c28626583c
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102604612"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875310"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>SDK stilindeki projelerde hedef çerçeveler
 
@@ -184,7 +184,7 @@ Aşağıdaki hedef çerçeveler kullanım dışıdır. Bu hedef çerçeveleri he
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET 5 ' te hedef çerçeve adları](https://github.com/dotnet/designs/blob/master/accepted/2020/net5/net5.md)
+- [.NET 5 ' te hedef çerçeve adları](https://github.com/dotnet/designs/blob/main/accepted/2020/net5/net5.md)
 - [Masaüstü uygulamalarında Windows Çalışma Zamanı API 'Leri çağırma](/windows/apps/desktop/modernize/desktop-to-uwp-enhance)
 - [Platformlar Arası Araçlarla Kitaplık Geliştirme](../core/tutorials/libraries.md)
 - [.NET Standard](net-standard.md)

@@ -6,12 +6,12 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 50e631b0c561ebdf081d4c1b7d16bf25abb322e5
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 13898bdbd9522730c8f0cd19bd13d4e6f3a6a10e
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224189"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874075"
 ---
 # <a name="create-user-defined-functions-udf-in-net-for-apache-spark"></a>Apache Spark için .NET 'te Kullanıcı tanımlı işlevler (UDF) oluşturun
 
@@ -27,7 +27,7 @@ Func<Column, Column> udf = Udf<string, string>(
     str => $"{s1} {str}");
 ```
 
-UDF bir `string` [veri çerçevesinin](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Sql/DataFrame.cs#L24) [sütunu](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Sql/Column.cs#L14) olarak bir giriş olarak alır ve `string` `hello` girişin önüne eklenmiş bir ile döndürür.
+UDF bir `string` [veri çerçevesinin](https://github.com/dotnet/spark/blob/main/src/csharp/Microsoft.Spark/Sql/DataFrame.cs#L24) [sütunu](https://github.com/dotnet/spark/blob/main/src/csharp/Microsoft.Spark/Sql/Column.cs#L14) olarak bir giriş olarak alır ve `string` `hello` girişin önüne eklenmiş bir ile döndürür.
 
 Aşağıdaki veri çerçevesi `df` adların bir listesini içerir:
 
@@ -59,11 +59,11 @@ Aşağıdaki DataFrame, `udfResult` udf 'in sonucudur:
 +-------------+
 ```
 
-UDF 'Leri nasıl uygulayacağınızı daha iyi anlamak için, [udf yardımcı işlevlerini](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Sql/Functions.cs#L3616) ve GitHub 'daki [örnekleri](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark.E2ETest/UdfTests/UdfSimpleTypesTests.cs#L49) gözden geçirin.
+UDF 'Leri nasıl uygulayacağınızı daha iyi anlamak için, [udf yardımcı işlevlerini](https://github.com/dotnet/spark/blob/main/src/csharp/Microsoft.Spark/Sql/Functions.cs#L3616) ve GitHub 'daki [örnekleri](https://github.com/dotnet/spark/blob/main/src/csharp/Microsoft.Spark.E2ETest/UdfTests/UdfSimpleTypesTests.cs#L49) gözden geçirin.
 
 ## <a name="udf-serialization"></a>UDF serileştirme
 
-UDF 'ler, çalışanlar üzerinde yürütülmesi gereken işlevler olduğundan, sürücüden yükün bir parçası olarak serileştirilmesi ve çalışanlara gönderilmesi gerekir. Yöntemine bir başvuru olan [temsilcinin](../../csharp/programming-guide/delegates/index.md), geçerli temsilcinin örnek yöntemi çağırdığı sınıf örneği olan hedefinin yanı sıra, [hedefine](xref:System.Delegate.Target%2A)da serileştirilmesi gerekir. UDF serileştirmenin nasıl yapıldığını daha iyi anlamak için [GitHub 'da Bu kod örneğini](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Utils/CommandSerDe.cs#L149) inceleyin.
+UDF 'ler, çalışanlar üzerinde yürütülmesi gereken işlevler olduğundan, sürücüden yükün bir parçası olarak serileştirilmesi ve çalışanlara gönderilmesi gerekir. Yöntemine bir başvuru olan [temsilcinin](../../csharp/programming-guide/delegates/index.md), geçerli temsilcinin örnek yöntemi çağırdığı sınıf örneği olan hedefinin yanı sıra, [hedefine](xref:System.Delegate.Target%2A)da serileştirilmesi gerekir. UDF serileştirmenin nasıl yapıldığını daha iyi anlamak için [GitHub 'da Bu kod örneğini](https://github.com/dotnet/spark/blob/main/src/csharp/Microsoft.Spark/Utils/CommandSerDe.cs#L149) inceleyin.
 
 .NET Apache Spark .NET Core kullanır, bu da temsilcilerin serileştirilmesi desteklenmez. Bunun yerine, temsilcinin tanımlandığı hedefi seri hale getirmek için yansıma kullanılır. Ortak bir kapsamda birden çok temsilci tanımlandığında, serileştirme için yansıma hedefi olan bir paylaşılan kapatılmak olur.
 

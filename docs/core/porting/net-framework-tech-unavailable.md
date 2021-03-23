@@ -4,12 +4,12 @@ titleSuffix: ''
 description: .NET Core ve .NET 5,0 ve sonraki sürümlerde kullanılamayan .NET Framework teknolojileri hakkında bilgi edinin.
 author: cartermp
 ms.date: 03/08/2021
-ms.openlocfilehash: cd273e95c5c889b900cb8ff744e8c49bb1ce69c4
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: d8eccce7e36552e0d5396779936681227cb1e28a
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102604937"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875128"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core-and-net-5"></a>.NET Core ve .NET 5 + üzerinde .NET Framework teknolojileri kullanılamıyor
 
@@ -21,7 +21,7 @@ API uyumluluğu hakkında daha fazla bilgi için bkz. [.net 'Teki son değişikl
 
 Uygulama etki alanları (AppDomain), uygulamaları birbirinden ayırır. AppDomain, çalışma zamanı desteği gerektirir ve kaynak maliyetli bir işlemdir. Daha fazla uygulama etki alanı oluşturulması desteklenmez ve gelecekte bu yeteneği eklemek için herhangi bir plan yoktur. Kod yalıtımı için alternatif olarak ayrı süreçler veya kapsayıcılar kullanın. Derlemeleri dinamik olarak yüklemek için sınıfını kullanın <xref:System.Runtime.Loader.AssemblyLoadContext> .
 
-Kod .NET Framework geçişini daha kolay hale getirmek için .NET 5 +, bazı <xref:System.AppDomain> API yüzeyini kullanıma sunar. API 'lerden bazıları normal olarak çalışır (örneğin, <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType> ), bazı Üyeler hiçbir şey yapmaz (örneğin,) <xref:System.AppDomain.SetCachePath%2A> ve bazıları <xref:System.PlatformNotSupportedException> (örneğin, <xref:System.AppDomain.CreateDomain%2A> ). [DotNet/Runtime GitHub deposundaki](https://github.com/dotnet/runtime) [ `System.AppDomain` başvuru kaynağına](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Private.CoreLib/src/System/AppDomain.cs) karşı kullandığınız türleri kontrol edin. Uygulanan sürümünüzle eşleşen dalı seçtiğinizden emin olun.
+Kod .NET Framework geçişini daha kolay hale getirmek için .NET 5 +, bazı <xref:System.AppDomain> API yüzeyini kullanıma sunar. API 'lerden bazıları normal olarak çalışır (örneğin, <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType> ), bazı Üyeler hiçbir şey yapmaz (örneğin,) <xref:System.AppDomain.SetCachePath%2A> ve bazıları <xref:System.PlatformNotSupportedException> (örneğin, <xref:System.AppDomain.CreateDomain%2A> ). [DotNet/Runtime GitHub deposundaki](https://github.com/dotnet/runtime) [ `System.AppDomain` başvuru kaynağına](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Private.CoreLib/src/System/AppDomain.cs) karşı kullandığınız türleri kontrol edin. Uygulanan sürümünüzle eşleşen dalı seçtiğinizden emin olun.
 
 ## <a name="remoting"></a>Uzaktan iletişim
 

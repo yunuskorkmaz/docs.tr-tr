@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Optimize compiler option [C#]
 - Deterministic compiler option [C#]
 - ProduceOnlyReferenceAssembly compiler option [C#]
-ms.openlocfilehash: 6b66c50b408f9615bc3c63ab4dd46dbc4215c62f
-ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
+ms.openlocfilehash: a846bc515c501ec5a14069dd3b312b5e2df43d25
+ms.sourcegitcommit: 5ce37699c2a51ed173171813be68ef7577b1aba5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103482933"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104881152"
 ---
 # <a name="c-compiler-options-that-control-code-generation"></a>Kod oluşturmayı denetleyen C# derleyici seçenekleri
 
@@ -56,7 +56,7 @@ Visual Studio 'da projeniz için **derleme** Özellikleri sayfasından **en iyil
 Derleyicinin bayt çıkışı, aynı girişlerin derlemeleri arasında özdeş olan bir derleme üretmesine neden olur.
 
 ```xml
-<Deterministic></Deterministic>
+<Deterministic>true</Deterministic>
 ```
 
 Varsayılan olarak, belirli bir giriş kümesinden Derleyici çıktısı benzersizdir, çünkü derleyici bir zaman damgası ve rastgele sayıdan oluşturulan bir MVıD ekliyor. `<Deterministic>`Değer aynı kaldığı sürece, bir *belirleyici derleme* oluşturmak için bu seçeneği kullanın. Böyle bir derlemede, zaman damgası ve MVıD alanları, tüm derleme girişlerinin bir karmasından türetilen değerlerle birlikte değişir. Derleyici, determinronizi etkileyen aşağıdaki girişleri dikkate alır:
@@ -88,7 +88,7 @@ Belirleyici derleme, bir ikilinin güvenilir bir kaynaktan derlenip derlenmediğ
 **ProduceOnlyReferenceAssembly** seçeneği, başvuru derlemesinin birincil çıkış olarak bir uygulama derlemesi yerine çıkış olması gerektiğini gösterir. Başvuru derlemeleri yürütülene kadar **ProduceOnlyReferenceAssembly** parametresi, pdb 'leri çıktısını sessizce devre dışı bırakır.
 
 ```xml
-<ProduceOnlyReferenceAssembly></ProduceOnlyReferenceAssembly>
+<ProduceOnlyReferenceAssembly>true</ProduceOnlyReferenceAssembly>
 ```
 
 Başvuru derlemeleri özel bir derleme türüdür. Başvuru derlemeleri, kitaplığın ortak API yüzeyini göstermek için gereken en az meta veri miktarını içerir. Derleme araçlarındaki bir derlemeye başvururken önemli olan tüm Üyeler için bildirimler içerirler, ancak API sözleşmeleri üzerinde herhangi bir observable etkisi olmayan özel üyelerin tüm üye uygulamalarını ve bildirimlerini hariç tutar. Daha fazla bilgi için bkz. [başvuru derlemeleri](../../../standard/assembly/reference-assemblies.md).

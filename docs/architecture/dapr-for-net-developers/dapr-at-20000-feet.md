@@ -3,12 +3,12 @@ title: 20.000 fit üzerinde davpr
 description: Nepr 'nin ne olduğu, ne yaptığı ve nasıl çalıştığı hakkında üst düzey bir genel bakış.
 author: robvet
 ms.date: 02/17/2021
-ms.openlocfilehash: 9f23e9822fd0d4b5eda648d2fc1359cce14cf59d
-ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
+ms.openlocfilehash: 6e5d73f8c49ecb3eec518986e2af60c68195c0ab
+ms.sourcegitcommit: 5ce37699c2a51ed173171813be68ef7577b1aba5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2021
-ms.locfileid: "103624051"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104881087"
 ---
 # <a name="dapr-at-20000-feet"></a>20.000 fit üzerinde davpr
 
@@ -59,7 +59,7 @@ Yapı taşı, dağıtılmış bir altyapı özelliğini kapsüller. İşlevselli
 
 Aşağıdaki tabloda her bir blok tarafından sunulan altyapı hizmetleri açıklanmaktadır.
 
-| Yapı taşı | Description |
+| Yapı taşı | Açıklama |
 |----------------|-------------|
 | [Durum yönetimi](state-management.md) | Uzun süreli durum bilgisi olan hizmetler için bağlamsal bilgileri destekler. |
 | [Hizmet çağrısı](service-invocation.md) | Platform belirsiz protokollerini ve iyi bilinen uç noktaları kullanarak doğrudan, hizmetten hizmete çağrıları çağırın. |
@@ -210,7 +210,7 @@ gRPC, yaş-eski [uzak yordam çağrısı (RPC) protokolünü gelişten](https://
 - Hem istemci isteklerini hem de sunucu yanıtlarını aynı anda göndermek için çift yönlü tam çift yönlü iletişim.
 - Zaman uyumsuz akış büyük veri kümelerine yönelik istekleri ve yanıtları etkinleştiren yerleşik akış.
 
-Daha fazla bilgi edinmek için, [Azure 'a yönelik Cloud-Native .NET uygulamaları](https://docs.microsoft.com/dotnet/architecture/cloud-native/) mimarlarından [GRPC 'ye genel bakış](https://docs.microsoft.com/dotnet/architecture/cloud-native/grpc#what-is-grpc) konusunu inceleyin.  
+Daha fazla bilgi edinmek için, [Azure 'a yönelik Cloud-Native .NET uygulamaları](../cloud-native/index.md) mimarlarından [GRPC 'ye genel bakış](../cloud-native/grpc.md#what-is-grpc) konusunu inceleyin.  
 
 ## <a name="dapr-and-service-meshes"></a>Davpr ve hizmet kafesleri
 

@@ -2,12 +2,12 @@
 title: dotnet publish komutu
 description: Dotnet publish komutu bir dizine .NET projesi veya çözümü yayımlar.
 ms.date: 02/03/2021
-ms.openlocfilehash: 5391e56a88f782294c3a71c523d0fc27a09e0dd8
-ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
+ms.openlocfilehash: 64f300c415d8810badca99878e4243b37f32d86d
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99585682"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873425"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -32,7 +32,7 @@ dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
 dotnet publish -h|--help
 ```
 
-## <a name="description"></a>Description
+## <a name="description"></a>Açıklama
 
 `dotnet publish` uygulamayı derler, proje dosyasında belirtilen bağımlılıklarını okur ve elde edilen dosya kümesini bir dizine yayınlar. Çıktı aşağıdaki varlıkları içerir:
 
@@ -53,7 +53,7 @@ dotnet publish -h|--help
 
 `dotnet publish`Komut, `-p` özellikleri ayarlama ve bir günlükçü tanımlama gibi MSBuild seçeneklerini kabul eder `-l` . Örneğin, şu biçimi kullanarak bir MSBuild özelliği ayarlayabilirsiniz: `-p:<NAME>=<VALUE>` .
 
-Ayrıca, bir *. pubxml* dosyasına (.net Core 3,1 SDK sürümünden itibaren kullanılabilir) başvurarak, yayınla ilgili özellikleri de ayarlayabilirsiniz. Örneğin:
+Ayrıca, bir *. pubxml* dosyasına (.net Core 3,1 SDK sürümünden itibaren kullanılabilir) başvurarak, yayınla ilgili özellikleri de ayarlayabilirsiniz. Örnek:
 
 ```dotnetcli
 dotnet publish -p:PublishProfile=FolderProfile
@@ -155,7 +155,7 @@ Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 
   Uygulamayı platforma özgü bir tek dosya yürütülebilir dosyasına paketler. Yürütülebilir dosya kendiliğinden ayıklanıyor ve uygulamayı çalıştırmak için gerekli tüm bağımlılıkları (yerel dahil) içerir. Uygulama ilk kez çalıştırıldığında uygulama adı ve derleme tanımlayıcısı temelinde bir dizine çıkarılır. Uygulama yeniden çalıştırıldığında başlatma daha hızlıdır. Yeni bir sürüm kullanılmadığı takdirde uygulamanın kendisi ikinci kez ayıklanmasına gerek yoktur. .NET Core 3,0 SDK 'dan beri kullanılabilir.
 
-  Tek dosya yayınlama hakkında daha fazla bilgi için bkz. [tek dosya paketcisi tasarım belgesi](https://github.com/dotnet/designs/blob/master/accepted/2020/single-file/design.md).
+  Tek dosya yayınlama hakkında daha fazla bilgi için bkz. [tek dosya paketcisi tasarım belgesi](https://github.com/dotnet/designs/blob/main/accepted/2020/single-file/design.md).
 
   Bu seçeneği, komut satırı yerine bir yayımlama profilinde belirtmenizi öneririz. Daha fazla bilgi için bkz. [MSBuild](#msbuild).
 
