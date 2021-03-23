@@ -4,52 +4,52 @@ description: Windows 'da Apache Spark için .NET uygulamanızı nasıl oluştura
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: how-to
-ms.openlocfilehash: d9e1721fbb13d963c3a690ded3e26885f268bc72
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: e3ab62ea8bc493c7e652b66f0e9c7adce7decb56
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106858"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876961"
 ---
-# <a name="learn-how-to-build-your-net-for-apache-spark-application-on-windows"></a><span data-ttu-id="cf547-103">Windows 'da Apache Spark için .NET uygulamanızı nasıl oluşturacağınızı öğrenin</span><span class="sxs-lookup"><span data-stu-id="cf547-103">Learn how to build your .NET for Apache Spark application on Windows</span></span>
+# <a name="learn-how-to-build-your-net-for-apache-spark-application-on-windows"></a><span data-ttu-id="292d6-103">Windows 'da Apache Spark için .NET uygulamanızı nasıl oluşturacağınızı öğrenin</span><span class="sxs-lookup"><span data-stu-id="292d6-103">Learn how to build your .NET for Apache Spark application on Windows</span></span>
 
-<span data-ttu-id="cf547-104">Bu makalede, Windows 'da Apache Spark uygulamalarınızı .NET için nasıl oluşturabileceğiniz öğretilir.</span><span class="sxs-lookup"><span data-stu-id="cf547-104">This article teaches you how to build your .NET for Apache Spark applications on Windows.</span></span>
+<span data-ttu-id="292d6-104">Bu makalede, Windows 'da Apache Spark uygulamalarınızı .NET için nasıl oluşturabileceğiniz öğretilir.</span><span class="sxs-lookup"><span data-stu-id="292d6-104">This article teaches you how to build your .NET for Apache Spark applications on Windows.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="cf547-105">Önkoşullar</span><span class="sxs-lookup"><span data-stu-id="cf547-105">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="292d6-105">Önkoşullar</span><span class="sxs-lookup"><span data-stu-id="292d6-105">Prerequisites</span></span>
 
-<span data-ttu-id="cf547-106">Aşağıdaki önkoşulların tümüne zaten sahipseniz, [derleme](#build) adımlarına atlayın.</span><span class="sxs-lookup"><span data-stu-id="cf547-106">If you already have all of the following prerequisites, skip to the [build](#build) steps.</span></span>
+<span data-ttu-id="292d6-106">Aşağıdaki önkoşulların tümüne zaten sahipseniz, [derleme](#build) adımlarına atlayın.</span><span class="sxs-lookup"><span data-stu-id="292d6-106">If you already have all of the following prerequisites, skip to the [build](#build) steps.</span></span>
 
-  1. <span data-ttu-id="cf547-107">**[.NET Core SDK](https://dotnet.microsoft.com/download/dotnet/3.1)** indirme ve yükleme-SDK 'nın yüklenmesi, `dotnet` toolzincirini yolunuza ekler.</span><span class="sxs-lookup"><span data-stu-id="cf547-107">Download and install the **[.NET Core SDK](https://dotnet.microsoft.com/download/dotnet/3.1)** - installing the SDK will add the `dotnet` toolchain to your path.</span></span> <span data-ttu-id="cf547-108">.NET Core 2,1, 2,2 ve 3,1 desteklenir.</span><span class="sxs-lookup"><span data-stu-id="cf547-108">.NET Core 2.1, 2.2 and 3.1 are supported.</span></span>
-  2. <span data-ttu-id="cf547-109">**[Visual Studio 2019](https://www.visualstudio.com/downloads/)** (sürüm 16,3 veya üzeri) sürümünü yükler.</span><span class="sxs-lookup"><span data-stu-id="cf547-109">Install **[Visual Studio 2019](https://www.visualstudio.com/downloads/)** (Version 16.3 or later).</span></span> <span data-ttu-id="cf547-110">Topluluk sürümü tamamen ücretsizdir.</span><span class="sxs-lookup"><span data-stu-id="cf547-110">The Community version is completely free.</span></span> <span data-ttu-id="cf547-111">Yüklemenizi yapılandırırken bu bileşenleri en düşük düzeyde ekleyin:</span><span class="sxs-lookup"><span data-stu-id="cf547-111">When configuring your installation, include these components at minimum:</span></span>
-     * <span data-ttu-id="cf547-112">.NET masaüstü geliştirme</span><span class="sxs-lookup"><span data-stu-id="cf547-112">.NET desktop development</span></span>
-       * <span data-ttu-id="cf547-113">Tüm gerekli bileşenler</span><span class="sxs-lookup"><span data-stu-id="cf547-113">All Required Components</span></span>
-         * <span data-ttu-id="cf547-114">.NET Framework 4.6.1 geliştirme araçları</span><span class="sxs-lookup"><span data-stu-id="cf547-114">.NET Framework 4.6.1 Development Tools</span></span>
-     * <span data-ttu-id="cf547-115">.NET Core platformlar arası geliştirme</span><span class="sxs-lookup"><span data-stu-id="cf547-115">.NET Core cross-platform development</span></span>
-       * <span data-ttu-id="cf547-116">Tüm gerekli bileşenler</span><span class="sxs-lookup"><span data-stu-id="cf547-116">All Required Components</span></span>
-  3. <span data-ttu-id="cf547-117">**[Java 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)**' i yükler.</span><span class="sxs-lookup"><span data-stu-id="cf547-117">Install **[Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)**.</span></span>
-     - <span data-ttu-id="cf547-118">İşletim sisteminiz için uygun sürümü seçin.</span><span class="sxs-lookup"><span data-stu-id="cf547-118">Select the appropriate version for your operating system.</span></span> <span data-ttu-id="cf547-119">Örneğin, Windows x64 makinesi için *jdk-8u201-windows-x64.exe* .</span><span class="sxs-lookup"><span data-stu-id="cf547-119">For example, *jdk-8u201-windows-x64.exe* for Windows x64 machine.</span></span>
-     - <span data-ttu-id="cf547-120">Yükleyiciyi kullanarak yükleme `java` yapın ve komut satırınızdan çalıştırabildiğinizi doğrulayın.</span><span class="sxs-lookup"><span data-stu-id="cf547-120">Install using the installer and verify you are able to run `java` from your command line.</span></span>
-  4. <span data-ttu-id="cf547-121">**[Apache Maven 3.6.0 +](https://maven.apache.org/download.cgi)**'yi yükler.</span><span class="sxs-lookup"><span data-stu-id="cf547-121">Install **[Apache Maven 3.6.0+](https://maven.apache.org/download.cgi)**.</span></span>
-     - <span data-ttu-id="cf547-122">[Apache Maven 3.6.0](http://mirror.metrocast.net/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.zip)indirin.</span><span class="sxs-lookup"><span data-stu-id="cf547-122">Download [Apache Maven 3.6.0](http://mirror.metrocast.net/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.zip).</span></span>
-     - <span data-ttu-id="cf547-123">Yerel bir dizine ayıklayın.</span><span class="sxs-lookup"><span data-stu-id="cf547-123">Extract to a local directory.</span></span> <span data-ttu-id="cf547-124">Örneğin, \* C:\bin\apache-Maven-3.6.0 \* .</span><span class="sxs-lookup"><span data-stu-id="cf547-124">For example, \*C:\bin\apache-maven-3.6.0\*.</span></span>
-     - <span data-ttu-id="cf547-125">[Yol ortam değişkeninizin](https://www.java.com/en/download/help/path.xml)Apache Maven 'i ekleyin.</span><span class="sxs-lookup"><span data-stu-id="cf547-125">Add Apache Maven to your [PATH environment variable](https://www.java.com/en/download/help/path.xml).</span></span> <span data-ttu-id="cf547-126">Örneğin, *C:\bin\apache-Maven-3.6.0\Bin*.</span><span class="sxs-lookup"><span data-stu-id="cf547-126">For example, *C:\bin\apache-maven-3.6.0\bin*.</span></span>
-     - <span data-ttu-id="cf547-127">Komut satırınızdan çalıştırabildiğinizi doğrulayın `mvn` .</span><span class="sxs-lookup"><span data-stu-id="cf547-127">Verify you are able to run `mvn` from your command-line.</span></span>
-  5. <span data-ttu-id="cf547-128">**[Apache Spark 2.3 +](https://spark.apache.org/downloads.html)**' yı yükler.</span><span class="sxs-lookup"><span data-stu-id="cf547-128">Install **[Apache Spark 2.3+](https://spark.apache.org/downloads.html)**.</span></span>
-     - <span data-ttu-id="cf547-129">[Apache Spark 2.3 +](https://spark.apache.org/downloads.html) indirin ve bu dosyayı yerel bir klasöre (örneğin, *C:\bin\spark-3.0.1-bin-hadoop2.7 \* ) [7-zip](https://www.7-zip.org/)kullanarak ayıklayın. (Desteklenen Spark sürümleri 2,3.*, 2.4.0, 2.4.1, 2.4.3, 2.4.4, 2.4.5, 2.4.6, 2.4.7, 3.0.0 ve 3.0.1)</span><span class="sxs-lookup"><span data-stu-id="cf547-129">Download [Apache Spark 2.3+](https://spark.apache.org/downloads.html) and extract it into a local folder (for example, *C:\bin\spark-3.0.1-bin-hadoop2.7\*) using [7-zip](https://www.7-zip.org/). (The supported spark versions are 2.3.*, 2.4.0, 2.4.1, 2.4.3, 2.4.4, 2.4.5, 2.4.6, 2.4.7, 3.0.0 and 3.0.1)</span></span>
-     - <span data-ttu-id="cf547-130">Yeni bir [ortam değişkeni](https://www.java.com/en/download/help/path.xml) ekleyin `SPARK_HOME` .</span><span class="sxs-lookup"><span data-stu-id="cf547-130">Add a [new environment variable](https://www.java.com/en/download/help/path.xml) `SPARK_HOME`.</span></span> <span data-ttu-id="cf547-131">Örneğin, \* C:\bin\spark-3.0.1-bin-hadoop2.7 \* .</span><span class="sxs-lookup"><span data-stu-id="cf547-131">For example, \*C:\bin\spark-3.0.1-bin-hadoop2.7\*.</span></span>
+  1. <span data-ttu-id="292d6-107">**[.NET Core SDK](https://dotnet.microsoft.com/download/dotnet/3.1)** indirme ve yükleme-SDK 'nın yüklenmesi, `dotnet` toolzincirini yolunuza ekler.</span><span class="sxs-lookup"><span data-stu-id="292d6-107">Download and install the **[.NET Core SDK](https://dotnet.microsoft.com/download/dotnet/3.1)** - installing the SDK will add the `dotnet` toolchain to your path.</span></span> <span data-ttu-id="292d6-108">.NET Core 2,1, 2,2 ve 3,1 desteklenir.</span><span class="sxs-lookup"><span data-stu-id="292d6-108">.NET Core 2.1, 2.2 and 3.1 are supported.</span></span>
+  2. <span data-ttu-id="292d6-109">**[Visual Studio 2019](https://www.visualstudio.com/downloads/)** (sürüm 16,3 veya üzeri) sürümünü yükler.</span><span class="sxs-lookup"><span data-stu-id="292d6-109">Install **[Visual Studio 2019](https://www.visualstudio.com/downloads/)** (Version 16.3 or later).</span></span> <span data-ttu-id="292d6-110">Topluluk sürümü tamamen ücretsizdir.</span><span class="sxs-lookup"><span data-stu-id="292d6-110">The Community version is completely free.</span></span> <span data-ttu-id="292d6-111">Yüklemenizi yapılandırırken bu bileşenleri en düşük düzeyde ekleyin:</span><span class="sxs-lookup"><span data-stu-id="292d6-111">When configuring your installation, include these components at minimum:</span></span>
+     * <span data-ttu-id="292d6-112">.NET masaüstü geliştirme</span><span class="sxs-lookup"><span data-stu-id="292d6-112">.NET desktop development</span></span>
+       * <span data-ttu-id="292d6-113">Tüm gerekli bileşenler</span><span class="sxs-lookup"><span data-stu-id="292d6-113">All Required Components</span></span>
+         * <span data-ttu-id="292d6-114">.NET Framework 4.6.1 geliştirme araçları</span><span class="sxs-lookup"><span data-stu-id="292d6-114">.NET Framework 4.6.1 Development Tools</span></span>
+     * <span data-ttu-id="292d6-115">.NET Core platformlar arası geliştirme</span><span class="sxs-lookup"><span data-stu-id="292d6-115">.NET Core cross-platform development</span></span>
+       * <span data-ttu-id="292d6-116">Tüm gerekli bileşenler</span><span class="sxs-lookup"><span data-stu-id="292d6-116">All Required Components</span></span>
+  3. <span data-ttu-id="292d6-117">**[Java 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)**' i yükler.</span><span class="sxs-lookup"><span data-stu-id="292d6-117">Install **[Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)**.</span></span>
+     - <span data-ttu-id="292d6-118">İşletim sisteminiz için uygun sürümü seçin.</span><span class="sxs-lookup"><span data-stu-id="292d6-118">Select the appropriate version for your operating system.</span></span> <span data-ttu-id="292d6-119">Örneğin, Windows x64 makinesi için *jdk-8u201-windows-x64.exe* .</span><span class="sxs-lookup"><span data-stu-id="292d6-119">For example, *jdk-8u201-windows-x64.exe* for Windows x64 machine.</span></span>
+     - <span data-ttu-id="292d6-120">Yükleyiciyi kullanarak yükleme `java` yapın ve komut satırınızdan çalıştırabildiğinizi doğrulayın.</span><span class="sxs-lookup"><span data-stu-id="292d6-120">Install using the installer and verify you are able to run `java` from your command line.</span></span>
+  4. <span data-ttu-id="292d6-121">**[Apache Maven 3.6.0 +](https://maven.apache.org/download.cgi)**'yi yükler.</span><span class="sxs-lookup"><span data-stu-id="292d6-121">Install **[Apache Maven 3.6.0+](https://maven.apache.org/download.cgi)**.</span></span>
+     - <span data-ttu-id="292d6-122">[Apache Maven 3.6.0](http://mirror.metrocast.net/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.zip)indirin.</span><span class="sxs-lookup"><span data-stu-id="292d6-122">Download [Apache Maven 3.6.0](http://mirror.metrocast.net/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.zip).</span></span>
+     - <span data-ttu-id="292d6-123">Yerel bir dizine ayıklayın.</span><span class="sxs-lookup"><span data-stu-id="292d6-123">Extract to a local directory.</span></span> <span data-ttu-id="292d6-124">Örneğin, \* C:\bin\apache-Maven-3.6.0 \* .</span><span class="sxs-lookup"><span data-stu-id="292d6-124">For example, \*C:\bin\apache-maven-3.6.0\*.</span></span>
+     - <span data-ttu-id="292d6-125">[Yol ortam değişkeninizin](https://www.java.com/en/download/help/path.xml)Apache Maven 'i ekleyin.</span><span class="sxs-lookup"><span data-stu-id="292d6-125">Add Apache Maven to your [PATH environment variable](https://www.java.com/en/download/help/path.xml).</span></span> <span data-ttu-id="292d6-126">Örneğin, *C:\bin\apache-Maven-3.6.0\Bin*.</span><span class="sxs-lookup"><span data-stu-id="292d6-126">For example, *C:\bin\apache-maven-3.6.0\bin*.</span></span>
+     - <span data-ttu-id="292d6-127">Komut satırınızdan çalıştırabildiğinizi doğrulayın `mvn` .</span><span class="sxs-lookup"><span data-stu-id="292d6-127">Verify you are able to run `mvn` from your command-line.</span></span>
+  5. <span data-ttu-id="292d6-128">**[Apache Spark 2.3 +](https://spark.apache.org/downloads.html)**' yı yükler.</span><span class="sxs-lookup"><span data-stu-id="292d6-128">Install **[Apache Spark 2.3+](https://spark.apache.org/downloads.html)**.</span></span>
+     - <span data-ttu-id="292d6-129">[Apache Spark 2.3 +](https://spark.apache.org/downloads.html) indirin ve bu dosyayı yerel bir klasöre (örneğin, *C:\bin\spark-3.0.1-bin-hadoop2.7 \* ) [7-zip](https://www.7-zip.org/)kullanarak ayıklayın. (Desteklenen Spark sürümleri 2,3.*, 2.4.0, 2.4.1, 2.4.3, 2.4.4, 2.4.5, 2.4.6, 2.4.7, 3.0.0 ve 3.0.1)</span><span class="sxs-lookup"><span data-stu-id="292d6-129">Download [Apache Spark 2.3+](https://spark.apache.org/downloads.html) and extract it into a local folder (for example, *C:\bin\spark-3.0.1-bin-hadoop2.7\*) using [7-zip](https://www.7-zip.org/). (The supported spark versions are 2.3.*, 2.4.0, 2.4.1, 2.4.3, 2.4.4, 2.4.5, 2.4.6, 2.4.7, 3.0.0 and 3.0.1)</span></span>
+     - <span data-ttu-id="292d6-130">Yeni bir [ortam değişkeni](https://www.java.com/en/download/help/path.xml) ekleyin `SPARK_HOME` .</span><span class="sxs-lookup"><span data-stu-id="292d6-130">Add a [new environment variable](https://www.java.com/en/download/help/path.xml) `SPARK_HOME`.</span></span> <span data-ttu-id="292d6-131">Örneğin, \* C:\bin\spark-3.0.1-bin-hadoop2.7 \* .</span><span class="sxs-lookup"><span data-stu-id="292d6-131">For example, \*C:\bin\spark-3.0.1-bin-hadoop2.7\*.</span></span>
 
        ```powershell
        set SPARK_HOME=C:\bin\spark-3.0.1-bin-hadoop2.7\
        ```
 
-     - <span data-ttu-id="cf547-132">[Path ortam değişkeninizin](https://www.java.com/en/download/help/path.xml)Apache Spark ekleyin.</span><span class="sxs-lookup"><span data-stu-id="cf547-132">Add Apache Spark to your [PATH environment variable](https://www.java.com/en/download/help/path.xml).</span></span> <span data-ttu-id="cf547-133">Örneğin, *C:\bin\spark-3.0.1-bin-hadoop2.7\bin*.</span><span class="sxs-lookup"><span data-stu-id="cf547-133">For example, *C:\bin\spark-3.0.1-bin-hadoop2.7\bin*.</span></span>
+     - <span data-ttu-id="292d6-132">[Path ortam değişkeninizin](https://www.java.com/en/download/help/path.xml)Apache Spark ekleyin.</span><span class="sxs-lookup"><span data-stu-id="292d6-132">Add Apache Spark to your [PATH environment variable](https://www.java.com/en/download/help/path.xml).</span></span> <span data-ttu-id="292d6-133">Örneğin, *C:\bin\spark-3.0.1-bin-hadoop2.7\bin*.</span><span class="sxs-lookup"><span data-stu-id="292d6-133">For example, *C:\bin\spark-3.0.1-bin-hadoop2.7\bin*.</span></span>
 
        ```powershell
        set PATH=%SPARK_HOME%\bin;%PATH%
        ```
 
-     - <span data-ttu-id="cf547-134">Komut satırınızdan çalıştırabildiğinizi doğrulayın `spark-shell` .</span><span class="sxs-lookup"><span data-stu-id="cf547-134">Verify you are able to run `spark-shell` from your command-line.</span></span>
-        <span data-ttu-id="cf547-135">Örnek konsol çıkışı:</span><span class="sxs-lookup"><span data-stu-id="cf547-135">Sample console output:</span></span>
+     - <span data-ttu-id="292d6-134">Komut satırınızdan çalıştırabildiğinizi doğrulayın `spark-shell` .</span><span class="sxs-lookup"><span data-stu-id="292d6-134">Verify you are able to run `spark-shell` from your command-line.</span></span>
+        <span data-ttu-id="292d6-135">Örnek konsol çıkışı:</span><span class="sxs-lookup"><span data-stu-id="292d6-135">Sample console output:</span></span>
 
         ```output
         Welcome to
@@ -69,58 +69,58 @@ ms.locfileid: "102106858"
 
         </details>
 
-  6. <span data-ttu-id="cf547-136">**[Winutils](https://github.com/steveloughran/winutils)**'i yükler.</span><span class="sxs-lookup"><span data-stu-id="cf547-136">Install **[WinUtils](https://github.com/steveloughran/winutils)**.</span></span>
-     - <span data-ttu-id="cf547-137">`winutils.exe` [Winutils deposundan](https://github.com/steveloughran/winutils)ikili indirin.</span><span class="sxs-lookup"><span data-stu-id="cf547-137">Download `winutils.exe` binary from [WinUtils repository](https://github.com/steveloughran/winutils).</span></span> <span data-ttu-id="cf547-138">Spark dağıtımının derlenmiş olduğu Hadoop sürümünü seçmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="cf547-138">You should select the version of Hadoop the Spark distribution was compiled with.</span></span> <span data-ttu-id="cf547-139">Exammple için, Spark 3.0.1 için Hadoop-2.7.1 kullanın.</span><span class="sxs-lookup"><span data-stu-id="cf547-139">For exammple, use hadoop-2.7.1 for Spark 3.0.1.</span></span>
-     - <span data-ttu-id="cf547-140">`winutils.exe`İkiliyi istediğiniz dizine kaydedin.</span><span class="sxs-lookup"><span data-stu-id="cf547-140">Save `winutils.exe` binary to a directory of your choice.</span></span> <span data-ttu-id="cf547-141">Örneğin, *C:\hadoop\bin*.</span><span class="sxs-lookup"><span data-stu-id="cf547-141">For example, *C:\hadoop\bin*.</span></span>
-     - <span data-ttu-id="cf547-142">`HADOOP_HOME`winutils.exe (bin olmadan) dizini yansıtacak şekilde ayarlanır.</span><span class="sxs-lookup"><span data-stu-id="cf547-142">Set `HADOOP_HOME` to reflect the directory with winutils.exe (without bin).</span></span> <span data-ttu-id="cf547-143">Örneğin, komut satırını kullanarak:</span><span class="sxs-lookup"><span data-stu-id="cf547-143">For instance, using command-line:</span></span>
+  6. <span data-ttu-id="292d6-136">**[Winutils](https://github.com/steveloughran/winutils)**'i yükler.</span><span class="sxs-lookup"><span data-stu-id="292d6-136">Install **[WinUtils](https://github.com/steveloughran/winutils)**.</span></span>
+     - <span data-ttu-id="292d6-137">`winutils.exe` [Winutils deposundan](https://github.com/steveloughran/winutils)ikili indirin.</span><span class="sxs-lookup"><span data-stu-id="292d6-137">Download `winutils.exe` binary from [WinUtils repository](https://github.com/steveloughran/winutils).</span></span> <span data-ttu-id="292d6-138">Spark dağıtımının derlenmiş olduğu Hadoop sürümünü seçmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="292d6-138">You should select the version of Hadoop the Spark distribution was compiled with.</span></span> <span data-ttu-id="292d6-139">Exammple için, Spark 3.0.1 için Hadoop-2.7.1 kullanın.</span><span class="sxs-lookup"><span data-stu-id="292d6-139">For exammple, use hadoop-2.7.1 for Spark 3.0.1.</span></span>
+     - <span data-ttu-id="292d6-140">`winutils.exe`İkiliyi istediğiniz dizine kaydedin.</span><span class="sxs-lookup"><span data-stu-id="292d6-140">Save `winutils.exe` binary to a directory of your choice.</span></span> <span data-ttu-id="292d6-141">Örneğin, *C:\hadoop\bin*.</span><span class="sxs-lookup"><span data-stu-id="292d6-141">For example, *C:\hadoop\bin*.</span></span>
+     - <span data-ttu-id="292d6-142">`HADOOP_HOME`winutils.exe (bin olmadan) dizini yansıtacak şekilde ayarlanır.</span><span class="sxs-lookup"><span data-stu-id="292d6-142">Set `HADOOP_HOME` to reflect the directory with winutils.exe (without bin).</span></span> <span data-ttu-id="292d6-143">Örneğin, komut satırını kullanarak:</span><span class="sxs-lookup"><span data-stu-id="292d6-143">For instance, using command-line:</span></span>
 
        ```powershell
        set HADOOP_HOME=C:\hadoop
        ```
 
-     - <span data-ttu-id="cf547-144">PATH ortam değişkenini içerecek şekilde ayarlayın `%HADOOP_HOME%\bin` .</span><span class="sxs-lookup"><span data-stu-id="cf547-144">Set PATH environment variable to include `%HADOOP_HOME%\bin`.</span></span> <span data-ttu-id="cf547-145">Örneğin, komut satırını kullanarak:</span><span class="sxs-lookup"><span data-stu-id="cf547-145">For instance, using command line:</span></span>
+     - <span data-ttu-id="292d6-144">PATH ortam değişkenini içerecek şekilde ayarlayın `%HADOOP_HOME%\bin` .</span><span class="sxs-lookup"><span data-stu-id="292d6-144">Set PATH environment variable to include `%HADOOP_HOME%\bin`.</span></span> <span data-ttu-id="292d6-145">Örneğin, komut satırını kullanarak:</span><span class="sxs-lookup"><span data-stu-id="292d6-145">For instance, using command line:</span></span>
 
        ```powershell
        set PATH=%HADOOP_HOME%\bin;%PATH%
        ```
 
-<span data-ttu-id="cf547-146">Bir `dotnet` `java` `mvn` `spark-shell` sonraki bölüme geçmeden önce komut satırınızdan,,,,,,,,,, ' i çalıştırabildiğinizden emin olun.</span><span class="sxs-lookup"><span data-stu-id="cf547-146">Make sure you are able to run `dotnet`, `java`, `mvn`, `spark-shell` from your command line before you move to the next section.</span></span> <span data-ttu-id="cf547-147">Daha iyi bir yol var mı?</span><span class="sxs-lookup"><span data-stu-id="cf547-147">Feel there is a better way?</span></span> <span data-ttu-id="cf547-148">[Bir sorun açın](https://github.com/dotnet/spark/issues) ve katkıda bulunmak için ücretsizdir.</span><span class="sxs-lookup"><span data-stu-id="cf547-148">[Open an issue](https://github.com/dotnet/spark/issues) and feel free to contribute.</span></span>
+<span data-ttu-id="292d6-146">Bir `dotnet` `java` `mvn` `spark-shell` sonraki bölüme geçmeden önce komut satırınızdan,,,,,,,,,, ' i çalıştırabildiğinizden emin olun.</span><span class="sxs-lookup"><span data-stu-id="292d6-146">Make sure you are able to run `dotnet`, `java`, `mvn`, `spark-shell` from your command line before you move to the next section.</span></span> <span data-ttu-id="292d6-147">Daha iyi bir yol var mı?</span><span class="sxs-lookup"><span data-stu-id="292d6-147">Feel there is a better way?</span></span> <span data-ttu-id="292d6-148">[Bir sorun açın](https://github.com/dotnet/spark/issues) ve katkıda bulunmak için ücretsizdir.</span><span class="sxs-lookup"><span data-stu-id="292d6-148">[Open an issue](https://github.com/dotnet/spark/issues) and feel free to contribute.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="cf547-149">Bir ortam değişkeni güncelleştirilirse, komut satırının yeni bir örneği gerekli olabilir.</span><span class="sxs-lookup"><span data-stu-id="cf547-149">A new instance of the command line may be required if any environment variables were updated.</span></span>
+> <span data-ttu-id="292d6-149">Bir ortam değişkeni güncelleştirilirse, komut satırının yeni bir örneği gerekli olabilir.</span><span class="sxs-lookup"><span data-stu-id="292d6-149">A new instance of the command line may be required if any environment variables were updated.</span></span>
 
-## <a name="build"></a><span data-ttu-id="cf547-150">Oluşturma</span><span class="sxs-lookup"><span data-stu-id="cf547-150">Build</span></span>
+## <a name="build"></a><span data-ttu-id="292d6-150">Derleme</span><span class="sxs-lookup"><span data-stu-id="292d6-150">Build</span></span>
 
-<span data-ttu-id="cf547-151">Bu kılavuzun geri kalanı için, .NET Apache Spark deposunu makinenize Klonladığınız bir işlem olması gerekir.</span><span class="sxs-lookup"><span data-stu-id="cf547-151">For the remainder of this guide, you will need to have cloned the .NET for Apache Spark repository into your machine.</span></span> <span data-ttu-id="cf547-152">Kopyalanmış depo için herhangi bir konum seçebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="cf547-152">You can choose any location for the cloned repository.</span></span> <span data-ttu-id="cf547-153">Örneğin, \* C:\github\dotnet-Spark \* .</span><span class="sxs-lookup"><span data-stu-id="cf547-153">For example, \*C:\github\dotnet-spark\*.</span></span>
+<span data-ttu-id="292d6-151">Bu kılavuzun geri kalanı için, .NET Apache Spark deposunu makinenize Klonladığınız bir işlem olması gerekir.</span><span class="sxs-lookup"><span data-stu-id="292d6-151">For the remainder of this guide, you will need to have cloned the .NET for Apache Spark repository into your machine.</span></span> <span data-ttu-id="292d6-152">Kopyalanmış depo için herhangi bir konum seçebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="292d6-152">You can choose any location for the cloned repository.</span></span> <span data-ttu-id="292d6-153">Örneğin, \* C:\github\dotnet-Spark \* .</span><span class="sxs-lookup"><span data-stu-id="292d6-153">For example, \*C:\github\dotnet-spark\*.</span></span>
 
 ```bash
 git clone https://github.com/dotnet/spark.git C:\github\dotnet-spark
 ```
 
-### <a name="build-net-for-apache-spark-scala-extensions-layer"></a><span data-ttu-id="cf547-154">Apache Spark Scala uzantıları katmanı için .NET derleme</span><span class="sxs-lookup"><span data-stu-id="cf547-154">Build .NET for Apache Spark Scala extensions layer</span></span>
+### <a name="build-net-for-apache-spark-scala-extensions-layer"></a><span data-ttu-id="292d6-154">Apache Spark Scala uzantıları katmanı için .NET derleme</span><span class="sxs-lookup"><span data-stu-id="292d6-154">Build .NET for Apache Spark Scala extensions layer</span></span>
 
-<span data-ttu-id="cf547-155">Bir .NET uygulaması gönderdiğinizde, Apache Spark için .NET, isteklerinizi nasıl işleyeceğinizi (örneğin, yeni bir Spark oturumu oluşturma isteği, .NET tarafından JVM tarafına veri aktarma isteği vb.) Apache Spark bildiren gerekli mantığa sahiptir.</span><span class="sxs-lookup"><span data-stu-id="cf547-155">When you submit a .NET application, .NET for Apache Spark has the necessary logic written in Scala that informs Apache Spark how to handle your requests (for example, request to create a new Spark Session, request to transfer data from .NET side to JVM side etc.).</span></span> <span data-ttu-id="cf547-156">Bu mantık, [.net Spark Scala kaynak kodunda](https://github.com/dotnet/spark/tree/master/src/scala)bulunabilir.</span><span class="sxs-lookup"><span data-stu-id="cf547-156">This logic can be found in the [.NET for Spark Scala Source Code](https://github.com/dotnet/spark/tree/master/src/scala).</span></span>
+<span data-ttu-id="292d6-155">Bir .NET uygulaması gönderdiğinizde, Apache Spark için .NET, isteklerinizi nasıl işleyeceğinizi (örneğin, yeni bir Spark oturumu oluşturma isteği, .NET tarafından JVM tarafına veri aktarma isteği vb.) Apache Spark bildiren gerekli mantığa sahiptir.</span><span class="sxs-lookup"><span data-stu-id="292d6-155">When you submit a .NET application, .NET for Apache Spark has the necessary logic written in Scala that informs Apache Spark how to handle your requests (for example, request to create a new Spark Session, request to transfer data from .NET side to JVM side etc.).</span></span> <span data-ttu-id="292d6-156">Bu mantık, [.net Spark Scala kaynak kodunda](https://github.com/dotnet/spark/tree/main/src/scala)bulunabilir.</span><span class="sxs-lookup"><span data-stu-id="292d6-156">This logic can be found in the [.NET for Spark Scala Source Code](https://github.com/dotnet/spark/tree/main/src/scala).</span></span>
 
-<span data-ttu-id="cf547-157">.NET Framework veya .NET Core 'u kullanıp kullanmadığına bakılmaksızın, Apache Spark Scala uzantı katmanı için .NET oluşturmanız gerekir:</span><span class="sxs-lookup"><span data-stu-id="cf547-157">Regardless of whether you are using .NET Framework or .NET Core, you will need to build the .NET for Apache Spark Scala extension layer:</span></span>
+<span data-ttu-id="292d6-157">.NET Framework veya .NET Core 'u kullanıp kullanmadığına bakılmaksızın, Apache Spark Scala uzantı katmanı için .NET oluşturmanız gerekir:</span><span class="sxs-lookup"><span data-stu-id="292d6-157">Regardless of whether you are using .NET Framework or .NET Core, you will need to build the .NET for Apache Spark Scala extension layer:</span></span>
 
 ```powershell
 cd src\scala
 mvn clean package
 ```
 
-<span data-ttu-id="cf547-158">Desteklenen Spark sürümleri için oluşturulan JARs ' i görmeniz gerekir:</span><span class="sxs-lookup"><span data-stu-id="cf547-158">You should see JARs created for the supported Spark versions:</span></span>
+<span data-ttu-id="292d6-158">Desteklenen Spark sürümleri için oluşturulan JARs ' i görmeniz gerekir:</span><span class="sxs-lookup"><span data-stu-id="292d6-158">You should see JARs created for the supported Spark versions:</span></span>
 
 * `microsoft-spark-2-3\target\microsoft-spark-2-3_2.11-<spark-dotnet-version>.jar`
 * `microsoft-spark-2-4\target\microsoft-spark-2-4_2.11-<spark-dotnet-version>.jar`
 * `microsoft-spark-3-0\target\microsoft-spark-3-0_2.12-<spark-dotnet-version>.jar`
 
-### <a name="build-the-net-for-spark-sample-applications"></a><span data-ttu-id="cf547-159">Spark örnek uygulamaları için .NET oluşturun</span><span class="sxs-lookup"><span data-stu-id="cf547-159">Build the .NET for Spark sample applications</span></span>
+### <a name="build-the-net-for-spark-sample-applications"></a><span data-ttu-id="292d6-159">Spark örnek uygulamaları için .NET oluşturun</span><span class="sxs-lookup"><span data-stu-id="292d6-159">Build the .NET for Spark sample applications</span></span>
 
-<span data-ttu-id="cf547-160">Bu bölümde, Apache Spark için .NET [örnek uygulamalarının](https://github.com/dotnet/spark/tree/master/examples) nasıl oluşturulacağı açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="cf547-160">This section explains how to build the [sample applications](https://github.com/dotnet/spark/tree/master/examples) for .NET for Apache Spark.</span></span> <span data-ttu-id="cf547-161">Bu adımlar, tüm Spark uygulamaları için tüm .NET oluşturma sürecini kavramaya yardımcı olur.</span><span class="sxs-lookup"><span data-stu-id="cf547-161">These steps will help in understanding the overall building process for any .NET for Spark application.</span></span>
+<span data-ttu-id="292d6-160">Bu bölümde, Apache Spark için .NET [örnek uygulamalarının](https://github.com/dotnet/spark/tree/main/examples) nasıl oluşturulacağı açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="292d6-160">This section explains how to build the [sample applications](https://github.com/dotnet/spark/tree/main/examples) for .NET for Apache Spark.</span></span> <span data-ttu-id="292d6-161">Bu adımlar, tüm Spark uygulamaları için tüm .NET oluşturma sürecini kavramaya yardımcı olur.</span><span class="sxs-lookup"><span data-stu-id="292d6-161">These steps will help in understanding the overall building process for any .NET for Spark application.</span></span>
 
-#### <a name="using-visual-studio-for-net-framework"></a><span data-ttu-id="cf547-162">.NET Framework için Visual Studio 'Yu kullanma</span><span class="sxs-lookup"><span data-stu-id="cf547-162">Using Visual Studio for .NET Framework</span></span>
+#### <a name="using-visual-studio-for-net-framework"></a><span data-ttu-id="292d6-162">.NET Framework için Visual Studio 'Yu kullanma</span><span class="sxs-lookup"><span data-stu-id="292d6-162">Using Visual Studio for .NET Framework</span></span>
 
-  1. <span data-ttu-id="cf547-163">`src\csharp\Microsoft.Spark.sln`Visual Studio 'da açın ve `Microsoft.Spark.CSharp.Examples` projeyi klasörün altında oluşturun `examples` (Bu işlem, .net bağlamaları projesini de oluşturur).</span><span class="sxs-lookup"><span data-stu-id="cf547-163">Open `src\csharp\Microsoft.Spark.sln` in Visual Studio and build the `Microsoft.Spark.CSharp.Examples` project under the `examples` folder (this will in turn build the .NET bindings project as well).</span></span> <span data-ttu-id="cf547-164">İsterseniz, projeye kendi kodunuzu yazabilirsiniz `Microsoft.Spark.Examples` (Bu örnekteki ' input_file.json ', veri çerçevesini oluşturmak istediğiniz verileri içeren bir JSON dosyasıdır):</span><span class="sxs-lookup"><span data-stu-id="cf547-164">If you want, you can write your own code in the `Microsoft.Spark.Examples` project (the 'input_file.json' in this example is a json file with the data you want to create the dataframe with):</span></span>
+  1. <span data-ttu-id="292d6-163">`src\csharp\Microsoft.Spark.sln`Visual Studio 'da açın ve `Microsoft.Spark.CSharp.Examples` projeyi klasörün altında oluşturun `examples` (Bu işlem, .net bağlamaları projesini de oluşturur).</span><span class="sxs-lookup"><span data-stu-id="292d6-163">Open `src\csharp\Microsoft.Spark.sln` in Visual Studio and build the `Microsoft.Spark.CSharp.Examples` project under the `examples` folder (this will in turn build the .NET bindings project as well).</span></span> <span data-ttu-id="292d6-164">İsterseniz, projeye kendi kodunuzu yazabilirsiniz `Microsoft.Spark.Examples` (Bu örnekteki ' input_file.json ', veri çerçevesini oluşturmak istediğiniz verileri içeren bir JSON dosyasıdır):</span><span class="sxs-lookup"><span data-stu-id="292d6-164">If you want, you can write your own code in the `Microsoft.Spark.Examples` project (the 'input_file.json' in this example is a json file with the data you want to create the dataframe with):</span></span>
   
       ```csharp
         // Instantiate a session
@@ -139,8 +139,8 @@ mvn clean package
         df.Filter(df["age"] > 21).Show();
       ```
 
-     <span data-ttu-id="cf547-165">Derleme başarılı olduktan sonra çıktı dizininde oluşturulan uygun ikili dosyaları görürsünüz.</span><span class="sxs-lookup"><span data-stu-id="cf547-165">Once the build is successful, you will see the appropriate binaries produced in the output directory.</span></span>
-     <span data-ttu-id="cf547-166">Örnek konsol çıkışı:</span><span class="sxs-lookup"><span data-stu-id="cf547-166">Sample console output:</span></span>
+     <span data-ttu-id="292d6-165">Derleme başarılı olduktan sonra çıktı dizininde oluşturulan uygun ikili dosyaları görürsünüz.</span><span class="sxs-lookup"><span data-stu-id="292d6-165">Once the build is successful, you will see the appropriate binaries produced in the output directory.</span></span>
+     <span data-ttu-id="292d6-166">Örnek konsol çıkışı:</span><span class="sxs-lookup"><span data-stu-id="292d6-166">Sample console output:</span></span>
 
       ```powershell
             Directory: C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\net461
@@ -162,19 +162,19 @@ mvn clean package
         ------------------------------------------- More framework files -------------------------------------
       ```
 
-#### <a name="using-net-core-cli-for-net-core"></a><span data-ttu-id="cf547-167">.NET Core için .NET Core CLI kullanma</span><span class="sxs-lookup"><span data-stu-id="cf547-167">Using .NET Core CLI for .NET Core</span></span>
+#### <a name="using-net-core-cli-for-net-core"></a><span data-ttu-id="292d6-167">.NET Core için .NET Core CLI kullanma</span><span class="sxs-lookup"><span data-stu-id="292d6-167">Using .NET Core CLI for .NET Core</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="cf547-168">Şu anda spark .NET için .NET Core derlemelerini otomatikleştirmede çalışıyoruz.</span><span class="sxs-lookup"><span data-stu-id="cf547-168">We are currently working on automating .NET Core builds for Spark .NET.</span></span> <span data-ttu-id="cf547-169">Bu süre kadar, bazı adımları el ile gerçekleştirmede size teşekkür ederiz.</span><span class="sxs-lookup"><span data-stu-id="cf547-169">Until then, we appreciate your patience in performing some of the steps manually.</span></span>
+> <span data-ttu-id="292d6-168">Şu anda spark .NET için .NET Core derlemelerini otomatikleştirmede çalışıyoruz.</span><span class="sxs-lookup"><span data-stu-id="292d6-168">We are currently working on automating .NET Core builds for Spark .NET.</span></span> <span data-ttu-id="292d6-169">Bu süre kadar, bazı adımları el ile gerçekleştirmede size teşekkür ederiz.</span><span class="sxs-lookup"><span data-stu-id="292d6-169">Until then, we appreciate your patience in performing some of the steps manually.</span></span>
 
-  1. <span data-ttu-id="cf547-170">Çalışanı oluşturun:</span><span class="sxs-lookup"><span data-stu-id="cf547-170">Build the worker:</span></span>
+  1. <span data-ttu-id="292d6-170">Çalışanı oluşturun:</span><span class="sxs-lookup"><span data-stu-id="292d6-170">Build the worker:</span></span>
 
       ```powershell
       cd C:\github\dotnet-spark\src\csharp\Microsoft.Spark.Worker\
       dotnet publish -f netcoreapp3.1 -r win-x64
       ```
 
-      <span data-ttu-id="cf547-171">Örnek konsol çıkışı:</span><span class="sxs-lookup"><span data-stu-id="cf547-171">Sample console output:</span></span>
+      <span data-ttu-id="292d6-171">Örnek konsol çıkışı:</span><span class="sxs-lookup"><span data-stu-id="292d6-171">Sample console output:</span></span>
 
       ```powershell
       PS C:\github\dotnet-spark\src\csharp\Microsoft.Spark.Worker> dotnet publish -f netcoreapp3.1 -r win-x64
@@ -188,14 +188,14 @@ mvn clean package
         Microsoft.Spark.Worker -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\x64\Debug\netcoreapp3.1\win-x64\publish\
       ```
 
-  2. <span data-ttu-id="cf547-172">Örnekleri oluşturun:</span><span class="sxs-lookup"><span data-stu-id="cf547-172">Build the samples:</span></span>
+  2. <span data-ttu-id="292d6-172">Örnekleri oluşturun:</span><span class="sxs-lookup"><span data-stu-id="292d6-172">Build the samples:</span></span>
 
       ```powershell
       cd C:\github\dotnet-spark\examples\Microsoft.Spark.CSharp.Examples\
       dotnet publish -f netcoreapp3.1 -r win-x64
       ```
 
-      <span data-ttu-id="cf547-173">Örnek konsol çıkışı:</span><span class="sxs-lookup"><span data-stu-id="cf547-173">Sample console output:</span></span>
+      <span data-ttu-id="292d6-173">Örnek konsol çıkışı:</span><span class="sxs-lookup"><span data-stu-id="292d6-173">Sample console output:</span></span>
 
       ```powershell
       PS C:\github\dotnet-spark\examples\Microsoft.Spark.CSharp.Examples> dotnet publish -f netcoreapp3.1 -r win-x64
@@ -209,23 +209,23 @@ mvn clean package
         Microsoft.Spark.CSharp.Examples -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\x64\Debug\netcoreapp3.1\win-x64\publish\
       ```
 
-## <a name="run-the-net-for-spark-sample-applications"></a><span data-ttu-id="cf547-174">Spark örnek uygulamaları için .NET çalıştırın</span><span class="sxs-lookup"><span data-stu-id="cf547-174">Run the .NET for Spark sample applications</span></span>
+## <a name="run-the-net-for-spark-sample-applications"></a><span data-ttu-id="292d6-174">Spark örnek uygulamaları için .NET çalıştırın</span><span class="sxs-lookup"><span data-stu-id="292d6-174">Run the .NET for Spark sample applications</span></span>
 
-<span data-ttu-id="cf547-175">Örnekleri oluşturduktan sonra, `spark-submit` .NET Framework veya .NET Core 'u hedeflemenize bakılmaksızın bunların çalıştırılması gerekir.</span><span class="sxs-lookup"><span data-stu-id="cf547-175">Once you build the samples, running them will be through `spark-submit` regardless of whether you are targeting .NET Framework or .NET Core.</span></span> <span data-ttu-id="cf547-176">[Önkoşul](#prerequisites) bölümünü izlediğinizden ve Apache Spark yüklediğinizden emin olun.</span><span class="sxs-lookup"><span data-stu-id="cf547-176">Make sure you have followed the [prerequisites](#prerequisites) section and installed Apache Spark.</span></span>
+<span data-ttu-id="292d6-175">Örnekleri oluşturduktan sonra, `spark-submit` .NET Framework veya .NET Core 'u hedeflemenize bakılmaksızın bunların çalıştırılması gerekir.</span><span class="sxs-lookup"><span data-stu-id="292d6-175">Once you build the samples, running them will be through `spark-submit` regardless of whether you are targeting .NET Framework or .NET Core.</span></span> <span data-ttu-id="292d6-176">[Önkoşul](#prerequisites) bölümünü izlediğinizden ve Apache Spark yüklediğinizden emin olun.</span><span class="sxs-lookup"><span data-stu-id="292d6-176">Make sure you have followed the [prerequisites](#prerequisites) section and installed Apache Spark.</span></span>
 
-  1. <span data-ttu-id="cf547-177">Ya da `DOTNET_WORKER_DIR` `PATH` ortam değişkenini, ikilinin oluşturulduğu yolu içerecek şekilde ayarlayın `Microsoft.Spark.Worker` (örneğin, *C:\GITHUB\DOTNET\SPARK\ARTIFACTS\BIN\MICROSOFT.spark.WORKER\DEBUG\NET461* for .NET Framework, .NET Core için *C:\github\dotnet-spark\artifacts\bin\Microsoft.spark.Worker\x64\Debug\netcoreapp3.1\win-x64\publish* ):</span><span class="sxs-lookup"><span data-stu-id="cf547-177">Set the `DOTNET_WORKER_DIR` or `PATH` environment variable to include the path where the `Microsoft.Spark.Worker` binary has been generated (for example, *C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.Worker\Debug\net461* for .NET Framework, *C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\x64\Debug\netcoreapp3.1\win-x64\publish* for .NET Core):</span></span>
+  1. <span data-ttu-id="292d6-177">Ya da `DOTNET_WORKER_DIR` `PATH` ortam değişkenini, ikilinin oluşturulduğu yolu içerecek şekilde ayarlayın `Microsoft.Spark.Worker` (örneğin, *C:\GITHUB\DOTNET\SPARK\ARTIFACTS\BIN\MICROSOFT.spark.WORKER\DEBUG\NET461* for .NET Framework, .NET Core için *C:\github\dotnet-spark\artifacts\bin\Microsoft.spark.Worker\x64\Debug\netcoreapp3.1\win-x64\publish* ):</span><span class="sxs-lookup"><span data-stu-id="292d6-177">Set the `DOTNET_WORKER_DIR` or `PATH` environment variable to include the path where the `Microsoft.Spark.Worker` binary has been generated (for example, *C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.Worker\Debug\net461* for .NET Framework, *C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\x64\Debug\netcoreapp3.1\win-x64\publish* for .NET Core):</span></span>
 
       ```powershell
       set DOTNET_WORKER_DIR=C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\x64\Debug\netcoreapp3.1\win-x64\publish
       ```
   
-  2. <span data-ttu-id="cf547-178">PowerShell 'i açın ve uygulama ikilisinin oluşturulduğu dizine gidin (örneğin, .NET Framework için *C:\github\dotnet\spark\artifacts\bin\Microsoft.spark.CSharp.Examples\Debug\net461* , .NET Core için *C:\github\dotnet-spark\artifacts\bin\Microsoft.spark.CSharp.Examples\x64\Debug\netcoreapp3.1\win-x64\publish* ):</span><span class="sxs-lookup"><span data-stu-id="cf547-178">Open PowerShell and go to the directory where your app binary has been generated (for example, *C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\net461* for .NET Framework, *C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\x64\Debug\netcoreapp3.1\win-x64\publish* for .NET Core):</span></span>
+  2. <span data-ttu-id="292d6-178">PowerShell 'i açın ve uygulama ikilisinin oluşturulduğu dizine gidin (örneğin, .NET Framework için *C:\github\dotnet\spark\artifacts\bin\Microsoft.spark.CSharp.Examples\Debug\net461* , .NET Core için *C:\github\dotnet-spark\artifacts\bin\Microsoft.spark.CSharp.Examples\x64\Debug\netcoreapp3.1\win-x64\publish* ):</span><span class="sxs-lookup"><span data-stu-id="292d6-178">Open PowerShell and go to the directory where your app binary has been generated (for example, *C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\net461* for .NET Framework, *C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\x64\Debug\netcoreapp3.1\win-x64\publish* for .NET Core):</span></span>
 
       ```powershell
       cd C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\x64\Debug\netcoreapp3.1\win-x64\publish
       ```
 
-  3. <span data-ttu-id="cf547-179">Uygulamanızı çalıştırmak temel yapıyı izler:</span><span class="sxs-lookup"><span data-stu-id="cf547-179">Running your app follows the basic structure:</span></span>
+  3. <span data-ttu-id="292d6-179">Uygulamanızı çalıştırmak temel yapıyı izler:</span><span class="sxs-lookup"><span data-stu-id="292d6-179">Running your app follows the basic structure:</span></span>
 
      ```powershell
      spark-submit.cmd `
@@ -236,9 +236,9 @@ mvn clean package
        <path-to-your-app-exe> <argument(s)-to-your-app>
      ```
 
-     <span data-ttu-id="cf547-180">Şunları çalıştırabilmeniz için bazı örnekler aşağıda verilmiştir:</span><span class="sxs-lookup"><span data-stu-id="cf547-180">Here are some examples you can run:</span></span>
+     <span data-ttu-id="292d6-180">Şunları çalıştırabilmeniz için bazı örnekler aşağıda verilmiştir:</span><span class="sxs-lookup"><span data-stu-id="292d6-180">Here are some examples you can run:</span></span>
 
-     - <span data-ttu-id="cf547-181">**[Microsoft.Spark.Examples.Sql.Batch. Basit](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Batch/Basic.cs)**</span><span class="sxs-lookup"><span data-stu-id="cf547-181">**[Microsoft.Spark.Examples.Sql.Batch.Basic](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Batch/Basic.cs)**</span></span>
+     - <span data-ttu-id="292d6-181">**[Microsoft.Spark.Examples.Sql.Batch. Basit](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Batch/Basic.cs)**</span><span class="sxs-lookup"><span data-stu-id="292d6-181">**[Microsoft.Spark.Examples.Sql.Batch.Basic](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Batch/Basic.cs)**</span></span>
 
          ```powershell
          spark-submit.cmd `
@@ -248,7 +248,7 @@ mvn clean package
          Microsoft.Spark.CSharp.Examples.exe Sql.Batch.Basic %SPARK_HOME%\examples\src\main\resources\people.json
          ```
 
-     - <span data-ttu-id="cf547-182">**[Microsoft. spark. Examples. Sql. streaming. StructuredNetworkWordCount](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCount.cs)**</span><span class="sxs-lookup"><span data-stu-id="cf547-182">**[Microsoft.Spark.Examples.Sql.Streaming.StructuredNetworkWordCount](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCount.cs)**</span></span>
+     - <span data-ttu-id="292d6-182">**[Microsoft. spark. Examples. Sql. streaming. StructuredNetworkWordCount](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCount.cs)**</span><span class="sxs-lookup"><span data-stu-id="292d6-182">**[Microsoft.Spark.Examples.Sql.Streaming.StructuredNetworkWordCount](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCount.cs)**</span></span>
 
          ```powershell
          spark-submit.cmd `
@@ -258,7 +258,7 @@ mvn clean package
          Microsoft.Spark.CSharp.Examples.exe Sql.Streaming.StructuredNetworkWordCount localhost 9999
          ```
 
-     - <span data-ttu-id="cf547-183">**[Microsoft. spark. Examples. Sql. streaming. StructuredKafkaWordCount (Maven erişilebilir)](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**</span><span class="sxs-lookup"><span data-stu-id="cf547-183">**[Microsoft.Spark.Examples.Sql.Streaming.StructuredKafkaWordCount (maven accessible)](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**</span></span>
+     - <span data-ttu-id="292d6-183">**[Microsoft. spark. Examples. Sql. streaming. StructuredKafkaWordCount (Maven erişilebilir)](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**</span><span class="sxs-lookup"><span data-stu-id="292d6-183">**[Microsoft.Spark.Examples.Sql.Streaming.StructuredKafkaWordCount (maven accessible)](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**</span></span>
 
          ```powershell
          spark-submit.cmd `
@@ -269,7 +269,7 @@ mvn clean package
          Microsoft.Spark.CSharp.Examples.exe Sql.Streaming.StructuredKafkaWordCount localhost:9092 subscribe test
          ```
 
-     - <span data-ttu-id="cf547-184">**[Microsoft. spark. Examples. Sql. streaming. StructuredKafkaWordCount (jars sağlanmış)](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**</span><span class="sxs-lookup"><span data-stu-id="cf547-184">**[Microsoft.Spark.Examples.Sql.Streaming.StructuredKafkaWordCount (jars provided)](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**</span></span>
+     - <span data-ttu-id="292d6-184">**[Microsoft. spark. Examples. Sql. streaming. StructuredKafkaWordCount (jars sağlanmış)](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**</span><span class="sxs-lookup"><span data-stu-id="292d6-184">**[Microsoft.Spark.Examples.Sql.Streaming.StructuredKafkaWordCount (jars provided)](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**</span></span>
 
          ```powershell
          spark-submit.cmd
