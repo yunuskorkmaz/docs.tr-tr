@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, specifications
 - specifications, Visual Basic
 ms.assetid: 42c30017-19d0-442e-87a2-850b66ddc3df
-ms.openlocfilehash: 7f2a55a9859bd5a8811dec5dc933359f4662b7fe
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: d56dde4892039e2a4457404ecd9134aaf8737d67
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100433452"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876181"
 ---
 # <a name="visual-basic-language-specification"></a>Visual Basic dil belirtimi
 
@@ -20,7 +20,7 @@ Visual Basic dil belirtimi, Visual Basic dilbilgisi ve sözdizimi hakkında tüm
   
 Bu belirtim, [Microsoft Indirme merkezi](https://go.microsoft.com/fwlink/?LinkId=188623)' nde kullanılabilir.  
   
-Bu site [Visual Basic 11 belirtimini](../../../../_vblang/spec/introduction.md)içerir. Bu [, DotNet/vblang GitHub deposunda](https://github.com/dotnet/vblang/blob/master/spec/README.md)bulunan Marku dosyalarından oluşturulmuştur.
+Bu site [Visual Basic 11 belirtimini](../../../../_vblang/spec/introduction.md)içerir. Bu [, DotNet/vblang GitHub deposunda](https://github.com/dotnet/vblang/blob/main/spec/README.md)bulunan Marku dosyalarından oluşturulmuştur.
 
 Belirtile ilgili sorunların [DotNet/vblang](https://github.com/dotnet/vblang/issues) deposunda oluşturulması gerekir. Ya da bulduğunuz hataları düzeltmeye ilgileniyorsanız, aynı depoya bir [çekme isteği](https://github.com/dotnet/vblang/pulls) gönderebilirsiniz.
 

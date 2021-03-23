@@ -6,12 +6,12 @@ ms.author: casoper
 ms.date: 11/13/2020
 ms.topic: overview
 ms.prod: dotnet
-ms.openlocfilehash: 13460fdafbfd7ef4e047cb7537e832ae4039c614
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 4d8dffb28b28c999b3d1bf77a65265280a8ae7a1
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102255437"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874790"
 ---
 # <a name="develop-apps-for-iot-devices-with-the-net-iot-libraries"></a>.NET IoT kitaplıklarıyla IoT cihazları için uygulama geliştirme
 
@@ -43,16 +43,16 @@ ms.locfileid: "102255437"
 
 `Iot.Device.Bindings`Paket:
 
-* System. Device. GIO sarmalayarak uygulama geliştirmeyi kolaylaştırmak için [cihaz bağlamaları](https://github.com/dotnet/iot/blob/master/src/devices/README.md) içerir.
+* System. Device. GIO sarmalayarak uygulama geliştirmeyi kolaylaştırmak için [cihaz bağlamaları](https://github.com/dotnet/iot/blob/main/src/devices/README.md) içerir.
 * Topluluk tarafından desteklenir ve sürekli olarak ek bağlamalar eklenir.
 
 Yaygın olarak kullanılan cihaz bağlamaları şunları içerir:
 
-- [Karakter LCD-LCD karakter gösterimi](https://github.com/dotnet/iot/tree/master/src/devices/CharacterLcd)
-- [SN74HC595-8 bit kaydırma kaydı](https://github.com/dotnet/iot/tree/master/src/devices/Sn74hc595)
-- [BrickPi3](https://github.com/dotnet/iot/tree/master/src/devices/BrickPi3)
-- [MAX7219-LED matris sürücüsü](https://github.com/dotnet/iot/tree/master/src/devices/Max7219)
-- [RGBLedMatrix-RGB LED matrisi](https://github.com/dotnet/iot/tree/master/src/devices/RGBLedMatrix)
+- [Karakter LCD-LCD karakter gösterimi](https://github.com/dotnet/iot/tree/main/src/devices/CharacterLcd)
+- [SN74HC595-8 bit kaydırma kaydı](https://github.com/dotnet/iot/tree/main/src/devices/Sn74hc595)
+- [BrickPi3](https://github.com/dotnet/iot/tree/main/src/devices/BrickPi3)
+- [MAX7219-LED matris sürücüsü](https://github.com/dotnet/iot/tree/main/src/devices/Max7219)
+- [RGBLedMatrix-RGB LED matrisi](https://github.com/dotnet/iot/tree/main/src/devices/RGBLedMatrix)
 
 ## <a name="supported-operating-systems"></a>Desteklenen işletim sistemleri
 

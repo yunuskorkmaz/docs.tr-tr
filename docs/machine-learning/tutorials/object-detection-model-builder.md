@@ -6,12 +6,12 @@ ms.author: brachtma
 ms.date: 03/12/2021
 ms.topic: tutorial
 ms.custom: mlnet-tooling
-ms.openlocfilehash: 21b672b84c7f55578a76459fa9f02aca3455d719
-ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
+ms.openlocfilehash: 470849257f2a75bec9e708d8c17905f69c4d0aa7
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104657917"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875401"
 ---
 # <a name="tutorial-detect-stop-signs-in-images-with-model-builder"></a>Öğretici: model Oluşturucu ile görüntülerde durma işaretlerini Algıla
 
@@ -51,7 +51,7 @@ Nesne algılama için bazı kullanım örnekleri şunları içerir:
 - Nesne sayımı
 - Etkinlik tanıma
 
-Bu örnek, model Oluşturucu ile oluşturulmuş bir makine öğrenimi modeli kullanarak görüntülerde durma işaretlerini algılayan bir C# .NET Core konsol uygulaması oluşturur. Bu öğreticinin kaynak kodunu [DotNet/machinöğrenim-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/modelbuilder/ObjectDetection_StopSigns) GitHub deposunda bulabilirsiniz.
+Bu örnek, model Oluşturucu ile oluşturulmuş bir makine öğrenimi modeli kullanarak görüntülerde durma işaretlerini algılayan bir C# .NET Core konsol uygulaması oluşturur. Bu öğreticinin kaynak kodunu [DotNet/machinöğrenim-Samples](https://github.com/dotnet/machinelearning-samples/tree/main/samples/modelbuilder/ObjectDetection_StopSigns) GitHub deposunda bulabilirsiniz.
 
 ## <a name="prepare-and-understand-the-data"></a>Verileri hazırlama ve anlama
 
@@ -160,7 +160,7 @@ Ortamınızı yapılandırmak için:
     Yeni bir çalışma alanı oluşturduğunuzda, aşağıdaki kaynaklar sağlanır:
 
     - Azure Machine Learning çalışma alanı
-    - Azure Storage
+    - Azure Depolama
     - Azure Application Insights
     - Azure Container Registry
     - Azure Key Vault
@@ -257,7 +257,7 @@ Eğitim sürecinin bir sonucu olarak iki proje oluşturulur.
     Top: 89.453415, Left: 481.95343, Right: 724.8073, Bottom: 388.32385, Label: Stop-Sign, Score: 0.99539465
     ```
 
-Tebrikler! Model Oluşturucu 'Yu kullanarak görüntülerde durma işaretlerini algılamaya yönelik bir makine öğrenimi modeli oluşturdunuz. Bu öğreticinin kaynak kodunu [DotNet/machinöğrenim-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/modelbuilder/ObjectDetection_StopSigns) GitHub deposunda bulabilirsiniz.
+Tebrikler! Model Oluşturucu 'Yu kullanarak görüntülerde durma işaretlerini algılamaya yönelik bir makine öğrenimi modeli oluşturdunuz. Bu öğreticinin kaynak kodunu [DotNet/machinöğrenim-Samples](https://github.com/dotnet/machinelearning-samples/tree/main/samples/modelbuilder/ObjectDetection_StopSigns) GitHub deposunda bulabilirsiniz.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 

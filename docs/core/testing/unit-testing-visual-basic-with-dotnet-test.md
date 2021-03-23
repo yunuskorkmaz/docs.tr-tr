@@ -4,16 +4,16 @@ description: .NET Core 'da, DotNet test ve xUnit kullanarak örnek Visual Basic 
 author: billwagner
 ms.author: wiwagn
 ms.date: 05/18/2020
-ms.openlocfilehash: d384bf08f0b6031a519a8430c876eafc05d03a2e
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 67a8ea0520a0e38ff1f62cbecf82fe0b40969414
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656429"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875011"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-xunit"></a>DotNet test ve xUnit kullanarak .NET Core kitaplıkları Visual Basic birim testi
 
-Bu öğreticide, birim testi projesi ve kitaplık projesi içeren bir çözüm oluşturma gösterilmektedir. Önceden oluşturulmuş bir çözümü kullanarak öğreticiyi izlemek için [örnek kodu görüntüleyin veya indirin](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test/). İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#view-and-download-samples).
+Bu öğreticide, birim testi projesi ve kitaplık projesi içeren bir çözüm oluşturma gösterilmektedir. Önceden oluşturulmuş bir çözümü kullanarak öğreticiyi izlemek için [örnek kodu görüntüleyin veya indirin](https://github.com/dotnet/samples/tree/main/core/getting-started/unit-testing-using-dotnet-test/). İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#view-and-download-samples).
 
 ## <a name="create-the-solution"></a>Çözümü oluşturma
 
@@ -48,7 +48,7 @@ Aşağıdaki yönergeler, test çözümünü oluşturmak için gereken adımlar�
   ```
 
    [`dotnet new classlib`](../tools/dotnet-new.md)Komut, *Primeservice* klasöründe yeni bir sınıf kitaplığı projesi oluşturur. Yeni sınıf kitaplığı sınanacak kodu içerecektir.
-* *Class1. vb* ' i *primeservice. vb*olarak yeniden adlandırın.
+* *Class1. vb* ' i *primeservice. vb* olarak yeniden adlandırın.
 * *Primeservice. vb* içindeki kodu aşağıdaki kodla değiştirin:
   
   ```vb
@@ -127,7 +127,7 @@ Test odaklı geliştirme (TDD) içinde popüler bir yaklaşım, hedef kodu uygul
 
 *Primeservice. Tests* projesini güncelleştirin:
 
-* *Primeservice. Tests/UnitTest1. vb*öğesini silin.
+* *Primeservice. Tests/UnitTest1. vb* öğesini silin.
 * Bir *Primeservice. Tests/PrimeService_IsPrimeShould. vb*  dosyası oluşturun.
 * *PrimeService_IsPrimeShould. vb* içindeki kodu aşağıdaki kodla değiştirin:
 
@@ -222,7 +222,7 @@ Public Function IsPrime(candidate As Integer) As Boolean
 End Function
 ```
 
-TDD yaklaşımını izleyerek, daha fazla başarısız test ekleyin ve ardından hedef kodu güncelleştirin. [Testlerin tamamlanmış sürümüne](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.vb) ve [kitaplığın tüm uygulamasına](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-dotnet-test/PrimeService/PrimeService.vb)bakın.
+TDD yaklaşımını izleyerek, daha fazla başarısız test ekleyin ve ardından hedef kodu güncelleştirin. [Testlerin tamamlanmış sürümüne](https://github.com/dotnet/samples/blob/main/core/getting-started/unit-testing-vb-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.vb) ve [kitaplığın tüm uygulamasına](https://github.com/dotnet/samples/blob/main/core/getting-started/unit-testing-vb-dotnet-test/PrimeService/PrimeService.vb)bakın.
 
 Tamamlanan `IsPrime` Yöntem, test açısından etkili bir algoritma değildir.
 

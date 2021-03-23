@@ -8,12 +8,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 8dc85bfeaab12d17af4a3e045559e268b228f736
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 7b5f4147968ec928a768d973c4a8cd4e2e7ed02e
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90536476"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875752"
 ---
 # <a name="await-operator-c-reference"></a>Await işleci (C# Başvurusu)
 
@@ -61,4 +61,4 @@ Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md)
 - [Zaman uyumsuz programlama](../../async.md)
 - [Zaman uyumsuz, derinlemesine](../../../standard/async-in-depth.md)
 - [İzlenecek yol: Async ve await kullanarak Web 'e erişme](../../programming-guide/concepts/async/index.md)
-- [Öğretici: C# 8,0 ve .NET Core 3,0 kullanarak zaman uyumsuz akışlar oluşturma ve kullanma](../../tutorials/generate-consume-asynchronous-stream.md)
+- [Öğretici: C# 8,0 ve .NET Core 3,0 kullanarak zaman uyumsuz akışlar oluşturma ve kullanma](../../whats-new/tutorials/generate-consume-asynchronous-stream.md)

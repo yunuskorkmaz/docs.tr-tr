@@ -4,16 +4,16 @@ description: ".NET Core 'daki F # için birim testi kavramlarını, DotNet test 
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.openlocfilehash: e0f2b6f88a650f412148f51cc0236fa46ed8c618
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 76386097ebe9b0ec6141abd089b219275d989446
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656559"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875037"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-xunit"></a>DotNet test ve xUnit kullanarak .NET Core 'daki birim testi F # kitaplıkları
 
-Bu öğreticide, birim testi kavramlarını öğrenmek için bir örnek çözüm oluşturma adım adım yönergeler sunarak etkileşimli bir deneyim sağlanır. Önceden oluşturulmuş bir çözüm kullanarak öğreticiyi izlemeyi tercih ediyorsanız, başlamadan önce [örnek kodu görüntüleyin veya indirin](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp/) . İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#view-and-download-samples).
+Bu öğreticide, birim testi kavramlarını öğrenmek için bir örnek çözüm oluşturma adım adım yönergeler sunarak etkileşimli bir deneyim sağlanır. Önceden oluşturulmuş bir çözüm kullanarak öğreticiyi izlemeyi tercih ediyorsanız, başlamadan önce [örnek kodu görüntüleyin veya indirin](https://github.com/dotnet/samples/tree/main/core/getting-started/unit-testing-with-fsharp/) . İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#view-and-download-samples).
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
@@ -51,7 +51,7 @@ Sonra, *MathService. Tests* dizinini oluşturun. Aşağıdaki ana hat dizin yap�
     /MathService.Tests
 ```
 
-*MathService. Tests* dizinini geçerli dizin yapın ve kullanarak yeni bir proje oluşturun `dotnet new xunit -lang "F#"` . Bu, test kitaplığı olarak xUnit kullanan bir test projesi oluşturur. Oluşturulan şablon, *MathServiceTests. fsproj*içindeki Test Çalıştırıcısı 'nı yapılandırır:
+*MathService. Tests* dizinini geçerli dizin yapın ve kullanarak yeni bir proje oluşturun `dotnet new xunit -lang "F#"` . Bu, test kitaplığı olarak xUnit kullanan bir test projesi oluşturur. Oluşturulan şablon, *MathServiceTests. fsproj* içindeki Test Çalıştırıcısı 'nı yapılandırır:
 
 ```xml
 <ItemGroup>
@@ -67,7 +67,7 @@ Test projesi, birim testlerini oluşturmak ve çalıştırmak için diğer paket
 dotnet add reference ../MathService/MathService.fsproj
 ```
 
-GitHub 'daki [örnekler deposunda](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-with-fsharp/MathService.Tests/MathService.Tests.fsproj) dosyanın tamamını görebilirsiniz.
+GitHub 'daki [örnekler deposunda](https://github.com/dotnet/samples/blob/main/core/getting-started/unit-testing-with-fsharp/MathService.Tests/MathService.Tests.fsproj) dosyanın tamamını görebilirsiniz.
 
 Aşağıdaki son çözüm düzenine sahipsiniz:
 

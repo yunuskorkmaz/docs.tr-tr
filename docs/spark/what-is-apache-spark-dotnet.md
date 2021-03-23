@@ -4,12 +4,12 @@ description: .NET kodu yazdığınız her yerde Spark alan ücretsiz, açık kay
 author: mamccrea
 ms.topic: overview
 ms.date: 10/09/2020
-ms.openlocfilehash: 533a4d3b497ad499edcf3accf250477c03f98714
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 1fa3ae16334176f0e3e888087078d5b98de9d869
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688039"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873204"
 ---
 # <a name="what-is-net-for-apache-spark"></a>Apache Spark için .NET nedir?
 
@@ -41,11 +41,11 @@ Spark 'a C#/F # dili bağlama, daha kolay genişletilebilirlik sunan yeni bir Sp
 
 [TPC-H kıyaslaması](http://www.tpc.org/tpch/)kullanılarak Python ve Scala karşılaştırıldığında, Apache Spark için .net çoğu durumda en iyi şekilde çalışır ve Kullanıcı tanımlı işlev performansı önemli olduğunda Python 'dan daha hızlıdır. Geliştirme ve kıyaslama performansı için devam eden bir çaba vardır.
 
-Kendi benchişaretlemesini yapmak için, bkz. [Apache Spark GitHub için .net](https://github.com/dotnet/spark/tree/master/benchmark)üzerinde bulunan kıyaslamalar.
+Kendi benchişaretlemesini yapmak için, bkz. [Apache Spark GitHub için .net](https://github.com/dotnet/spark/tree/main/benchmark)üzerinde bulunan kıyaslamalar.
 
 ## <a name="net-for-apache-spark-roadmap"></a>Apache Spark yol haritası için .NET
 
-[Apache Spark yol haritası için resmi .net](https://github.com/dotnet/spark/blob/master/ROADMAP.md)'ten kısa süreli ve uzun süreli planlar hakkında bilgi edinin.
+[Apache Spark yol haritası için resmi .net](https://github.com/dotnet/spark/blob/main/ROADMAP.md)'ten kısa süreli ve uzun süreli planlar hakkında bilgi edinin.
 
 ## <a name="net-foundation"></a>.NET Foundation
 

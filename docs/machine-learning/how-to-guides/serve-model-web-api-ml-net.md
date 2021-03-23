@@ -5,22 +5,22 @@ ms.date: 11/07/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: f588d4681ee277ad15b50d5553473b1c9e84d578
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 1d05bc0ac6a874d539794d81fd742d973724dbef
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608770"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874140"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>ASP.NET Core Web API 'sinde model dağıtma
 
 Bir ASP.NET Core Web API 'SI kullanarak Web 'de önceden eğitilen ML.NET makine öğrenimi modelini nasıl kullanacağınızı öğrenin. Bir Web API 'SI üzerinde bir modele hizmet sunmak, standart HTTP yöntemleri aracılığıyla tahmine dayalı hale getirilmiş.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - [Visual studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) veya üzeri ya da visual Studio 2017 sürüm 15,6 veya üzeri, ".NET Core platformlar arası geliştirme" iş yükü yüklendi.
 - PowerShell.
-- Önceden eğitilen model. Kendi modelinizi derlemek için [ML.NET yaklaşım Analizi öğreticisini](../tutorials/sentiment-analysis.md) kullanın veya bu [önceden eğitilen yaklaşım Analizi Machine Learning modelini](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip) indirin
+- Önceden eğitilen model. Kendi modelinizi derlemek için [ML.NET yaklaşım Analizi öğreticisini](../tutorials/sentiment-analysis.md) kullanın veya bu [önceden eğitilen yaklaşım Analizi Machine Learning modelini](https://github.com/dotnet/samples/blob/main/machine-learning/models/sentimentanalysis/sentiment_model.zip) indirin
 
 ## <a name="create-aspnet-core-web-api-project"></a>ASP.NET Core Web API projesi oluştur
 
@@ -32,13 +32,13 @@ Bir ASP.NET Core Web API 'SI kullanarak Web 'de önceden eğitilen ML.NET makine
 
     Çözüm Gezgini, projenize sağ tıklayın ve > yeni klasör Ekle ' yi seçin. "Mlmodeller" yazın ve ENTER tuşuna basın.
 
-1. **Microsoft.ml NuGet paketini**yükler:
+1. **Microsoft.ml NuGet paketini** yükler:
 
-    Çözüm Gezgini, projenize sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin. Paket kaynağı olarak "nuget.org" öğesini seçin, araştır sekmesini seçin, **Microsoft.ml**için arama yapın, listeden bu paketi seçin ve sonra da Install düğmesini seçin. **Değişiklikleri Önizle** Iletişim kutusunda **Tamam** düğmesini seçin ve ardından listelenen paketlerin lisans koşullarını kabul ediyorsanız Lisans Kabulü iletişim kutusunda **kabul ediyorum** düğmesini seçin.
+    Çözüm Gezgini, projenize sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin. Paket kaynağı olarak "nuget.org" öğesini seçin, araştır sekmesini seçin, **Microsoft.ml** için arama yapın, listeden bu paketi seçin ve sonra da Install düğmesini seçin. **Değişiklikleri Önizle** Iletişim kutusunda **Tamam** düğmesini seçin ve ardından listelenen paketlerin lisans koşullarını kabul ediyorsanız Lisans Kabulü iletişim kutusunda **kabul ediyorum** düğmesini seçin.
 
-1. **Microsoft.Extensions.ml NuGet paketini**yükler:
+1. **Microsoft.Extensions.ml NuGet paketini** yükler:
 
-    Çözüm Gezgini, projenize sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin. Paket kaynağı olarak "nuget.org" öğesini seçin, araştır sekmesini seçin, **Microsoft.Extensions.ml**için arama yapın, listeden bu paketi seçin ve sonra da Install düğmesini seçin. **Değişiklikleri Önizle** Iletişim kutusunda **Tamam** düğmesini seçin ve ardından listelenen paketlerin lisans koşullarını kabul ediyorsanız Lisans Kabulü iletişim kutusunda **kabul ediyorum** düğmesini seçin.
+    Çözüm Gezgini, projenize sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin. Paket kaynağı olarak "nuget.org" öğesini seçin, araştır sekmesini seçin, **Microsoft.Extensions.ml** için arama yapın, listeden bu paketi seçin ve sonra da Install düğmesini seçin. **Değişiklikleri Önizle** Iletişim kutusunda **Tamam** düğmesini seçin ve ardından listelenen paketlerin lisans koşullarını kabul ediyorsanız Lisans Kabulü iletişim kutusunda **kabul ediyorum** düğmesini seçin.
 
 ### <a name="add-model-to-aspnet-core-web-api-project"></a>Modeli ASP.NET Core Web API projesine ekle
 
@@ -51,16 +51,16 @@ Giriş verileriniz ve tahminlerinizi için bazı sınıflar oluşturmanız gerek
 
 1. Veri modellerinizi kaydetmek için projenizde *Datamodeller* adlı bir dizin oluşturun:
 
-    Çözüm Gezgini, projenize sağ tıklayın ve > yeni klasör Ekle ' yi seçin. "Datamodeller" yazın ve **ENTER**tuşuna basın.
+    Çözüm Gezgini, projenize sağ tıklayın ve > yeni klasör Ekle ' yi seçin. "Datamodeller" yazın ve **ENTER** tuşuna basın.
 
 2. Çözüm Gezgini, *veri modelleri* dizinine sağ tıklayın ve sonra > yeni öğe Ekle ' yi seçin.
-3. **Yeni öğe Ekle** Iletişim kutusunda **sınıf** ' ı seçin ve **ad** alanını *SentimentData.cs*olarak değiştirin. Sonra **Ekle** düğmesini seçin. *SentimentData.cs* dosyası kod düzenleyicisinde açılır. Aşağıdaki using ifadesini *SentimentData.cs*öğesinin en üstüne ekleyin:
+3. **Yeni öğe Ekle** Iletişim kutusunda **sınıf** ' ı seçin ve **ad** alanını *sentimentdata. cs* olarak değiştirin. Sonra **Ekle** düğmesini seçin. *Sentimentdata. cs* dosyası kod düzenleyicisinde açılır. Aşağıdaki using ifadesini *Sentimentdata. cs*' nin üst kısmına ekleyin:
 
     ```csharp
     using Microsoft.ML.Data;
     ```
 
-    Mevcut sınıf tanımını kaldırın ve aşağıdaki kodu **SentimentData.cs** dosyasına ekleyin:
+    Mevcut sınıf tanımını kaldırın ve aşağıdaki kodu **Sentimentdata. cs** dosyasına ekleyin:
 
     ```csharp
     public class SentimentData
@@ -75,13 +75,13 @@ Giriş verileriniz ve tahminlerinizi için bazı sınıflar oluşturmanız gerek
     ```
 
 4. Çözüm Gezgini, *veri modelleri* dizinine sağ tıklayın ve sonra **> yeni öğe Ekle**' yi seçin.
-5. **Yeni öğe Ekle** Iletişim kutusunda **sınıf** ' ı seçin ve **ad** alanını *SentimentPrediction.cs*olarak değiştirin. Sonra Ekle düğmesini seçin. *SentimentPrediction.cs* dosyası kod düzenleyicisinde açılır. Aşağıdaki using ifadesini *SentimentPrediction.cs*öğesinin en üstüne ekleyin:
+5. **Yeni öğe Ekle** Iletişim kutusunda **sınıf** ' ı seçin ve **ad** alanını *sentimenttahmine. cs* olarak değiştirin. Sonra Ekle düğmesini seçin. *Sentimenttahmine. cs* dosyası kod düzenleyicisinde açılır. Aşağıdaki using ifadesini *Sentimenttahmine. cs*' nin üst kısmına ekleyin:
 
     ```csharp
     using Microsoft.ML.Data;
     ```
 
-    Mevcut sınıf tanımını kaldırın ve aşağıdaki kodu *SentimentPrediction.cs* dosyasına ekleyin:
+    Mevcut sınıf tanımını kaldırın ve aşağıdaki kodu *Sentimenttahmine. cs* dosyasına ekleyin:
 
     ```csharp
     public class SentimentPrediction : SentimentData
@@ -104,7 +104,7 @@ Tek bir tahmin yapmak için, oluşturmanız gerekir [`PredictionEngine`](xref:Mi
 
 [ASP.NET Core ' de bağımlılık ekleme](/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1)hakkında daha fazla bilgi edinmek istiyorsanız aşağıdaki bağlantıda daha fazla bilgi sağlanmaktadır.
 
-1. *Startup.cs* sınıfını açın ve aşağıdaki using ifadesini dosyanın en üstüne ekleyin:
+1. *Startup. cs* sınıfını açın ve aşağıdaki using ifadesini dosyanın en üstüne ekleyin:
 
     ```csharp
     using Microsoft.AspNetCore.Builder;
@@ -138,7 +138,7 @@ Model parametresi tarafından tanımlanır, `modelName` böylece değişiklik ya
 >services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
 >   .FromUri(
 >       modelName: "SentimentAnalysisModel",
->       uri:"https://github.com/dotnet/samples/raw/master/machine-learning/models/sentimentanalysis/sentiment_model.zip",
+>       uri:"https://github.com/dotnet/samples/raw/main/machine-learning/models/sentimentanalysis/sentiment_model.zip",
 >       period: TimeSpan.FromMinutes(1));
 >```
 
@@ -148,7 +148,7 @@ Gelen HTTP isteklerinizi işlemek için bir denetleyici oluşturun.
 
 1. Çözüm Gezgini, *denetleyiciler* dizinine sağ tıklayın ve sonra **> denetleyicisi Ekle**' yi seçin.
 1. **Yeni öğe Ekle** iletişim kutusunda, **API denetleyicisi boş** ' ı seçin ve **Ekle**' yi seçin.
-1. İstemde, **Denetleyici adı** alanını *PredictController.cs*olarak değiştirin. Sonra Ekle düğmesini seçin. *PredictController.cs* dosyası kod düzenleyicisinde açılır. Aşağıdaki using ifadesini *PredictController.cs*öğesinin en üstüne ekleyin:
+1. İstemde, **Denetleyici adı** alanını *predictcontroller. cs* olarak değiştirin. Sonra Ekle düğmesini seçin. *Predictcontroller. cs* dosyası kod düzenleyicisinde açılır. Aşağıdaki using ifadesini *Predictcontroller. cs*' nin üst kısmına ekleyin:
 
     ```csharp
     using System;
@@ -157,7 +157,7 @@ Gelen HTTP isteklerinizi işlemek için bir denetleyici oluşturun.
     using SentimentAnalysisWebAPI.DataModels;
     ```
 
-    Mevcut sınıf tanımını kaldırın ve aşağıdaki kodu *PredictController.cs* dosyasına ekleyin:
+    Mevcut sınıf tanımını kaldırın ve aşağıdaki kodu *Predictcontroller. cs* dosyasına ekleyin:
 
     ```csharp
     public class PredictController : ControllerBase

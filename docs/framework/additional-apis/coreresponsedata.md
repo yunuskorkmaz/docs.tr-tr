@@ -11,12 +11,12 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: 8248cc20f6528a1c3bc64c9b9339a3a3000d03a0
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 0c787481a57abc755e6f61b1cc96d74b86458b62
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84989806"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873932"
 ---
 # <a name="coreresponsedata-class"></a>CoreResponseData Sınıfı
 
@@ -29,7 +29,7 @@ internal class CoreResponseData
 ```
 
 > [!WARNING]
-> Bu API iç ve doğrudan kodunuzda kullanılması amaçlıyordu. Bunun yerine, <xref:System.Diagnostics.DiagnosticSource> ağ kodunu bağlamak için kullanın. Bkz. [Diagnosticsource Kullanıcı Kılavuzu](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
+> Bu API iç ve doğrudan kodunuzda kullanılması amaçlıyordu. Bunun yerine, <xref:System.Diagnostics.DiagnosticSource> ağ kodunu bağlamak için kullanın. Bkz. [Diagnosticsource Kullanıcı Kılavuzu](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
 >
 > Microsoft, bu sınıfın herhangi bir koşulda bir üretim uygulamasında kullanımını desteklemez.
 

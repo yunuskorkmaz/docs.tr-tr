@@ -4,12 +4,12 @@ description: .NET araçları 'nı yüklemek, kullanmak, güncelleştirmek ve kal
 author: KathleenDollard
 ms.topic: how-to
 ms.date: 02/12/2020
-ms.openlocfilehash: 8839fd4fba72c9f973d906eabb72919306a847dd
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: d4fca6b52b1444cf73efc49a6c50294cc5f6015b
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633890"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874829"
 ---
 # <a name="how-to-manage-net-tools"></a>.NET araçlarını yönetme
 
@@ -40,7 +40,7 @@ Araç bulmak için bazı yollar şunlardır:
 
 * NuGet.org 'e yayınlanan bir araç bulmak için [DotNet aracı arama](dotnet-tool-search.md) komutunu kullanın.
 * ".NET aracı" paket türü filtresini kullanarak [NuGet](https://www.nuget.org) Web sitesinde arama yapın. Daha fazla bilgi için bkz. [paketleri bulma ve seçme](/nuget/consume-packages/finding-and-choosing-packages).
-* [DotNet/aspnetcore GitHub deposunun Araçlar dizininde](https://github.com/dotnet/aspnetcore/tree/master/src/Tools)ASP.NET Core ekibi tarafından oluşturulan araçların kaynak koduna bakın.
+* [DotNet/aspnetcore GitHub deposunun Araçlar dizininde](https://github.com/dotnet/aspnetcore/tree/main/src/Tools)ASP.NET Core ekibi tarafından oluşturulan araçların kaynak koduna bakın.
 * [.Net tanılama araçları](../diagnostics/index.md#net-core-diagnostic-global-tools)'nda tanılama araçları hakkında bilgi edinin.
 
 ## <a name="check-the-author-and-statistics"></a>Yazarı ve istatistikleri denetleme

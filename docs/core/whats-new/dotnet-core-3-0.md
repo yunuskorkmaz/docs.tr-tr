@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: bab14ec385ca6e4d71919ddaebd6d49ee8d002e0
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: f401af3ec7f1fc729e6f3af005acbde2ad61f586
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102104997"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875843"
 ---
 # <a name="whats-new-in-net-core-30"></a>​.NET Core 3.0’daki yenilikler
 
@@ -31,8 +31,8 @@ C# 8,0, [null olabilen başvuru türleri](../../csharp/language-reference/builti
 
 C# 8,0 Dil özellikleriyle ilgili öğreticiler:
 
-- [Öğretici: tasarım amacınızı null olabilen ve null yapılamayan başvuru türleriyle daha net bir şekilde Ifade edin](../../csharp/tutorials/nullable-reference-types.md)
-- [Öğretici: C# 8,0 ve .NET Core 3,0 kullanarak zaman uyumsuz akışlar oluşturma ve kullanma](../../csharp/tutorials/generate-consume-asynchronous-stream.md)
+- [Öğretici: tasarım amacınızı null olabilen ve null yapılamayan başvuru türleriyle daha net bir şekilde Ifade edin](../../csharp/whats-new/tutorials/nullable-reference-types.md)
+- [Öğretici: C# 8,0 ve .NET Core 3,0 kullanarak zaman uyumsuz akışlar oluşturma ve kullanma](../../csharp/whats-new/tutorials/generate-consume-asynchronous-stream.md)
 - [Öğretici: tür odaklı ve veri odaklı algoritmalar oluşturmak için model eşleştirmeyi kullanın](../../csharp/tutorials/pattern-matching.md)
 
 Aşağıda ayrıntılı olarak açıklanan aşağıdaki API özelliklerini desteklemek için dil geliştirmeleri eklenmiştir:
@@ -114,7 +114,7 @@ Tek dosya yürütülebiliri yayımlamak için, `PublishSingleFile` projenizdeki 
 dotnet publish -r win10-x64 -p:PublishSingleFile=true
 ```
 
-Tek dosya yayınlama hakkında daha fazla bilgi için bkz. [tek dosya paketcisi tasarım belgesi](https://github.com/dotnet/designs/blob/master/accepted/2020/single-file/design.md).
+Tek dosya yayınlama hakkında daha fazla bilgi için bkz. [tek dosya paketcisi tasarım belgesi](https://github.com/dotnet/designs/blob/main/accepted/2020/single-file/design.md).
 
 ### <a name="assembly-linking"></a>Bütünleştirilmiş kod bağlama
 
@@ -146,7 +146,7 @@ Il bağlayıcı aracı hakkında daha fazla bilgi için [belgelere](../deploying
 
 ### <a name="tiered-compilation"></a>Katmanlı derleme
 
-[Katmanlı derleme](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation.md) (TC), .net Core 3,0 ile varsayılan olarak açık olur. Bu özellik, çalışma zamanının daha iyi performans elde etmek için tam zamanında (JıT) derleyicisini daha kolay bir şekilde kullanmasına olanak sağlar.
+[Katmanlı derleme](https://github.com/dotnet/runtime/blob/main/docs/design/features/tiered-compilation.md) (TC), .net Core 3,0 ile varsayılan olarak açık olur. Bu özellik, çalışma zamanının daha iyi performans elde etmek için tam zamanında (JıT) derleyicisini daha kolay bir şekilde kullanmasına olanak sağlar.
 
 Katmanlı derlemenin başlıca avantajı, daha düşük kalitede, ancak daha hızlı bir katmanda ya da daha yüksek kalitede, ancak daha yavaş bir katmanda çeşitli yöntemler elde etmenin iki yolunu sağlamaktır. Kalite, yöntemin en iyi duruma getirilmiş olduğunu gösterir. TC, düzenli bir durum aracılığıyla başlangıçtan itibaren çeşitli yürütme aşamalarından geçen bir uygulamanın performansını artırmaya yardımcı olur. Katmanlı derleme devre dışı bırakıldığında, her yöntem, başlangıç performansı üzerinden düzenli durum performansına yol gösteren tek bir şekilde derlenir.
 
@@ -329,11 +329,11 @@ Windows 'ta artık COM çağrılabilir yönetilen bileşenler oluşturabilirsini
 
 *mscoree.dll* com sunucusu olarak kullanıldığı .NET Framework aksine, .NET Core, com bileşenini oluştururken *bin* dizinine yerel bir başlatıcı dll 'si ekler.
 
-COM bileşeni oluşturma ve kullanma hakkında bir örnek için bkz. [com tanıtımı](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo).
+COM bileşeni oluşturma ve kullanma hakkında bir örnek için bkz. [com tanıtımı](https://github.com/dotnet/samples/tree/main/core/extensions/COMServerDemo).
 
 ### <a name="windows-native-interop"></a>Windows yerel birlikte çalışma
 
-Windows, düz C API 'Leri, COM ve WinRT biçiminde zengin bir yerel API sunar. .NET Core **P/Invoke**'ı destekleirken, .net Core 3,0, **com API 'Leri oluşturma** ve **WinRT API 'leri etkinleştirme** özelliğini ekler. Kod örneği için bkz. [Excel tanıtımı](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo).
+Windows, düz C API 'Leri, COM ve WinRT biçiminde zengin bir yerel API sunar. .NET Core **P/Invoke**'ı destekleirken, .net Core 3,0, **com API 'Leri oluşturma** ve **WinRT API 'leri etkinleştirme** özelliğini ekler. Kod örneği için bkz. [Excel tanıtımı](https://github.com/dotnet/samples/tree/main/core/extensions/ExcelDemo).
 
 ### <a name="msix-deployment"></a>MSIX dağıtımı
 
@@ -372,7 +372,7 @@ NuGet 'e GıO programlama için kullanabileceğiniz iki paket yayımlanmıştır
 - [System. Device. GIO](https://www.nuget.org/packages/System.Device.Gpio)
 - [IoT. Device. Bindings](https://www.nuget.org/packages/Iot.Device.Bindings)
 
-GPıO paketleri, *GIO*, *SPI*, *I2C* ve *PWM* cihazları için API 'ler içerir. IoT bağlamaları paketi cihaz bağlamalarını içerir. Daha fazla bilgi için bkz. [cihaz GitHub deposu](https://github.com/dotnet/iot/blob/master/src/devices/).
+GPıO paketleri, *GIO*, *SPI*, *I2C* ve *PWM* cihazları için API 'ler içerir. IoT bağlamaları paketi cihaz bağlamalarını içerir. Daha fazla bilgi için bkz. [cihaz GitHub deposu](https://github.com/dotnet/iot/blob/main/src/devices/).
 
 ### <a name="arm64-linux-support"></a>ARM64 Linux desteği
 
@@ -455,7 +455,7 @@ Ayrıca, <xref:System.Range?displayProperty=nameWithType> `Index` biri başlang�
 var slice = a[i1..i2]; // { 3, 4, 5 }
 ```
 
-Daha fazla bilgi için [aralıklar ve dizinler öğreticisine](../../csharp/tutorials/ranges-indexes.md)bakın.
+Daha fazla bilgi için [aralıklar ve dizinler öğreticisine](../../csharp/whats-new/tutorials/ranges-indexes.md)bakın.
 
 ### <a name="async-streams"></a>Zaman uyumsuz akışlar
 
@@ -475,7 +475,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 `await foreach`Ayrıca, zaman uyumsuz yineleyiciler da oluşturabilirsiniz, örneğin, `IAsyncEnumerable/IAsyncEnumerator` hem hem `await` de içinde kullanabileceğiniz bir yineleyici `yield` . Atılmalıdır, `IAsyncDisposable` ve gibi ÇEŞITLI BCL türlerini uygulayan ' i kullanabilirsiniz `Stream` `Timer` .
 
-Daha fazla bilgi için bkz. [zaman uyumsuz akışlar öğreticisi](../../csharp/tutorials/generate-consume-asynchronous-stream.md).
+Daha fazla bilgi için bkz. [zaman uyumsuz akışlar öğreticisi](../../csharp/whats-new/tutorials/generate-consume-asynchronous-stream.md).
 
 ### <a name="ieee-floating-point"></a>IEEE kayan nokta
 
@@ -516,7 +516,7 @@ Yeni <xref:System.Math?displayProperty=nameWithType> API 'ler şunlardır:
 
 Uygun durumlarda, .NET kitaplıkları performansı artırmak için bu yönergeleri kullanmaya başlamıştır.
 
-Daha fazla bilgi için bkz. [.net Platform-Dependent iç](https://github.com/dotnet/designs/blob/master/accepted/2018/platform-intrinsics.md)bilgileri.
+Daha fazla bilgi için bkz. [.net Platform-Dependent iç](https://github.com/dotnet/designs/blob/main/accepted/2018/platform-intrinsics.md)bilgileri.
 
 ### <a name="improved-net-core-version-apis"></a>Geliştirilmiş .NET Core sürümü API 'Leri
 

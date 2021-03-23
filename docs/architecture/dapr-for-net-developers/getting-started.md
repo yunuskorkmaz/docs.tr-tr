@@ -3,12 +3,12 @@ title: Davpr ile çalışmaya başlama
 description: Yerel geliştirme ortamınızı hazırlamaya ve ilk .NET uygulamalarınızı Davpr ile oluşturmaya yönelik bir kılavuz.
 author: amolenk
 ms.date: 02/25/2021
-ms.openlocfilehash: 1b6ecd2cc2bf077375262155f0866cfef2dab708
-ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
+ms.openlocfilehash: 1c60f731138911d7d22ff871c9a3849704d81dd6
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2021
-ms.locfileid: "103623817"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874387"
 ---
 # <a name="get-started-with-dapr"></a>Davpr ile çalışmaya başlama
 
@@ -244,7 +244,7 @@ Ayrıca, **.NET Core platformlar arası geliştirme** iş yükü yüklü olan [V
     > [!NOTE]
     > Uygulamasının ön sürümde olan bir sürümünü hedefliyorsanız `Dapr.AspNetCore` , bayrağını belirtmeniz gerekir `-Prerelease` .
 
-1. Projesinde, `DaprFrontEnd` *Startup.cs* dosyasını açın ve `ConfigureServices` yöntemi aşağıdaki kodla değiştirin:
+1. `DaprFrontEnd`Projesinde, *Startup. cs* dosyasını açın ve `ConfigureServices` yöntemi aşağıdaki kodla değiştirin:
 
     ```csharp
     // This method gets called by the runtime. Use this method to add services to the container.
@@ -277,7 +277,7 @@ Ayrıca, **.NET Core platformlar arası geliştirme** iş yükü yüklü olan [V
     }
     ```
 
-1. *Sayfalar* klasöründe *Index.cshtml.cs* dosyasını açın ve içeriğini şu kodla değiştirin:
+1. *Sayfalar* klasöründe *Index. cshtml. cs* dosyasını açın ve içeriğini şu kodla değiştirin:
 
     ```csharp
     using System;
@@ -462,7 +462,7 @@ Bu örneğin son bölümünde kapsayıcı desteği ekleyecek ve Docker Compose k
 
     ```yaml
     version: '3.4'
-    
+
     services:
       daprfrontend:
         image: ${DOCKER_REGISTRY-}daprfrontend

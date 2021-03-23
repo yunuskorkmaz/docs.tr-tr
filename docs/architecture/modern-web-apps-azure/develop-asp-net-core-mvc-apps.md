@@ -7,12 +7,12 @@ ms.date: 12/01/2020
 no-loc:
 - Blazor
 - WebAssembly
-ms.openlocfilehash: c0fc92b2dbc25a1a48e0264b64c79fc8631fa8f0
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 494e73bd32ac6793d355b6828408b61bb09ca880
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009670"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873126"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC uygulamaları geliştirin
 
@@ -29,7 +29,7 @@ Yeni bir ASP.NET Core uygulaması oluşturduğunuzda, derlemek istediğiniz uygu
 
 ### <a name="why-razor-pages"></a>Neden Razor Pages?
 
-Razor Pages, Visual Studio 'da yeni Web uygulamaları için varsayılan yaklaşımdır. Razor Pages, SPA olmayan formlar gibi sayfa tabanlı uygulama özelliklerini oluşturmanın daha basit bir yolunu sunar. Denetleyiciler ve görünümleri kullanarak, uygulamaların birçok farklı bağımlılıklarla çalışan çok büyük denetleyicileri olması ve modelleri görüntülemesi ve birçok farklı görünüm döndürdüğünden yaygındır. Bu, daha karmaşıklığa neden olur ve genellikle tek sorumluluk Ilkesini veya açık/kapalı Ilkeleri etkili bir şekilde izleyen denetleyicilerle sonuçlanmıştır. Razor Pages, Razor işaretlemesi ile bir Web uygulamasındaki belirli bir mantıksal "sayfa" için sunucu tarafı mantığını kapsülleyerek bu sorunu giderir. Sunucu tarafı mantığı olmayan bir Razor sayfası yalnızca bir Razor dosyasından (örneğin, "Index. cshtml") yer alabilir. Ancak, önemsiz olmayan Razor Pages ilişkili bir sayfa modeli sınıfına sahip olur. Bu, kurala göre, ". cs" uzantısıyla Razor dosyası ile aynı ada sahiptir (örneğin, "Index.cshtml.cs").
+Razor Pages, Visual Studio 'da yeni Web uygulamaları için varsayılan yaklaşımdır. Razor Pages, SPA olmayan formlar gibi sayfa tabanlı uygulama özelliklerini oluşturmanın daha basit bir yolunu sunar. Denetleyiciler ve görünümleri kullanarak, uygulamaların birçok farklı bağımlılıklarla çalışan çok büyük denetleyicileri olması ve modelleri görüntülemesi ve birçok farklı görünüm döndürdüğünden yaygındır. Bu, daha karmaşıklığa neden olur ve genellikle tek sorumluluk Ilkesini veya açık/kapalı Ilkeleri etkili bir şekilde izleyen denetleyicilerle sonuçlanmıştır. Razor Pages, Razor işaretlemesi ile bir Web uygulamasındaki belirli bir mantıksal "sayfa" için sunucu tarafı mantığını kapsülleyerek bu sorunu giderir. Sunucu tarafı mantığı olmayan bir Razor sayfası yalnızca bir Razor dosyasından (örneğin, "Index. cshtml") yer alabilir. Ancak, önemsiz olmayan Razor Pages ilişkili bir sayfa modeli sınıfına sahip olur. Bu, kurala göre ". cs" uzantısıyla Razor dosyası ile aynı ada sahiptir (örneğin, "Index. cshtml. cs").
 
 Bir Razor sayfasının sayfa modeli, bir MVC denetleyicisinin ve viewmodelinin sorumluluklarını birleştirir. İstekleri denetleyici eylem yöntemleriyle işlemek yerine, "OnGet ()" gibi sayfa modeli işleyicileri, ilişkili sayfaları varsayılan olarak işlenerek yürütülür. Razor Pages, ASP.NET Core MVC 'nin tüm mimari özelliklerini sağlamaya devam ederken, tek tek sayfaları bir ASP.NET Core uygulamasında oluşturma işlemini basitleştirir. Bu, yeni sayfa tabanlı işlevselliği için iyi bir varsayılan seçenektir.
 
@@ -54,7 +54,7 @@ app.UseEndpoints(endpoints =>
 
 Bu örnekte, yönlendirme tablosuna "default" adlı bir yol eklenmiştir. , Ve için yer tutucular içeren bir yol şablonu tanımlar `controller` `action` `id` . `controller`Ve yer `action` tutucuları, varsayılan olarak belirtilmiştir ( `Home` ve `Index` sırasıyla) ve `id` yer tutucusu isteğe bağlıdır (bir "?" öğesinin virtuale tarafından). Burada tanımlanan kural, bir isteğin ilk bölümünün denetleyicinin adına, eylemin ikinci bölümüne karşılık gelmesi ve gerekirse üçüncü bir parçanın bir KIMLIK parametresini temsil etmesi gerektiğini belirtir. Geleneksel yollar, genellikle, sınıfındaki yönteminde olduğu gibi, uygulama için bir yerde tanımlanır `Configure` `Startup` .
 
-Öznitelik yolları, genel olarak belirtitense, denetleyicilere ve eylemlere doğrudan uygulanır. Bu yaklaşım, belirli bir yönteme bakarken bu çok daha keşfedilebilir hale getirme avantajına sahiptir, ancak yönlendirme bilgilerinin uygulamada tek bir yerde tutulmadığından emin olur. Öznitelik rotalarıyla, belirli bir eylem için kolayca birden çok yol belirtebilir ve ayrıca, denetleyiciler ve Eylemler arasındaki yolları birleştirebilirsiniz. Örneğin:
+Öznitelik yolları, genel olarak belirtitense, denetleyicilere ve eylemlere doğrudan uygulanır. Bu yaklaşım, belirli bir yönteme bakarken bu çok daha keşfedilebilir hale getirme avantajına sahiptir, ancak yönlendirme bilgilerinin uygulamada tek bir yerde tutulmadığından emin olur. Öznitelik rotalarıyla, belirli bir eylem için kolayca birden çok yol belirtebilir ve ayrıca, denetleyiciler ve Eylemler arasındaki yolları birleştirebilirsiniz. Örnek:
 
 ```csharp
 [Route("Home")]
@@ -303,7 +303,7 @@ services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 
 ASP.NET Core MVC, görünümleri bulmak için de bir kural kullanır. Görünümlerin Özellik klasörlerinizde bulunması için (yukarıdaki FeatureConvention tarafından sunulan özellik adı kullanılarak) özel bir kural ile geçersiz kılabilirsiniz. Bu yaklaşım hakkında daha fazla bilgi alabilir ve MSDN Magazine makalesinden çalışan bir örnek indirebilirsiniz [ASP.NET Core MVC Için özellik dilimleri](/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc).
 
-### <a name="apis-and-no-locblazor-applications"></a>API 'Ler ve Blazor uygulamalar
+### <a name="apis-and-blazor-applications"></a>API 'Ler ve Blazor uygulamalar
 
 Uygulamanız güvenli olması gereken bir dizi Web API 'si içeriyorsa, bu API 'ler görünüm veya Razor Pages uygulamanızdan ayrı bir proje olarak yapılandırılmalıdır. Sunucu tarafı Web uygulamanızdan API 'Lerin, özellikle ortak API 'lerin ayrılması birçok avantaj sağlar. Bu uygulamalar genellikle benzersiz dağıtım ve yükleme özelliklerine sahip olur. Ayrıca, tanımlama bilgisi tabanlı kimlik doğrulaması ve API 'Lerin en büyük olasılıkla belirteç tabanlı kimlik doğrulaması kullanan API 'lerden yararlanarak standart form tabanlı uygulamalarla güvenlik için farklı mekanizmalar benimseme olasılığı yüksektir.
 
@@ -495,7 +495,7 @@ services.AddAuthentication(config =>
 
 Tek bir proje içinde birden çok farklı kimlik doğrulama düzeni yapılandırmak mümkün olsa da, tek bir varsayılan düzeni yapılandırmak çok basittir. Bu nedenle, eShopOnWeb Reference uygulaması, API 'Lerini, `PublicApi` `Web` uygulamanın görünümlerini ve Razor Pages içeren ana projeden ayrı olarak kendi projesine ayırır.
 
-#### <a name="authentication-in-no-locblazor-apps"></a>Uygulamalarda kimlik doğrulaması Blazor
+#### <a name="authentication-in-blazor-apps"></a>Uygulamalarda kimlik doğrulaması Blazor
 
 Blazor Sunucu uygulamaları, diğer ASP.NET Core uygulamalarla aynı kimlik doğrulama özelliklerinden faydalanabilir. BlazorWebAssemblyuygulamalar, tarayıcıda çalıştırıldıklarından, yerleşik kimlik ve kimlik doğrulama sağlayıcılarını kullanamaz. BlazorWebAssemblyuygulamalar Kullanıcı kimlik doğrulama durumunu yerel olarak saklayabilir ve kullanıcıların gerçekleştirebilecekleri eylemleri belirlemek için taleplere erişebilir. Ancak, Blazor WebAssembly Kullanıcılar uygulamayı kolayca atlayıp API 'lerle doğrudan etkileşime girebileceği için tüm kimlik doğrulama ve yetkilendirme denetimleri, uygulamanın içinde uygulanan mantığa bakılmaksızın sunucuda gerçekleştirilmelidir.
 
@@ -654,7 +654,7 @@ Uygulamalarınızın istemci uygulamalarıyla doğrudan iletişim kurmasına dik
 > ### <a name="references--client-communication"></a>Başvurular – Istemci Iletişimi
 >
 > - **ASP.NET Core SignalR**\
->   <https://github.com/dotnet/aspnetcore/tree/master/src/SignalR>
+>   <https://github.com/dotnet/aspnetcore/tree/main/src/SignalR>
 > - **WebSocket Yöneticisi**\
 >   <https://github.com/radu-matei/websocket-manager>
 

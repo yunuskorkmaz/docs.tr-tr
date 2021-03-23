@@ -3,12 +3,12 @@ title: Profil oluşturma yapılandırması ayarları hata ayıklaması
 description: .NET Core uygulamaları için hata ayıklamayı ve profil oluşturmayı yapılandıran çalışma zamanı ayarları hakkında bilgi edinin.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 5efd0f776da4b7ce6ff7f3bdfda24feec6e00f79
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: dd96862582f13adc19df7572b1865800b18d9954
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761999"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875024"
 ---
 # <a name="run-time-configuration-options-for-debugging-and-profiling"></a>Hata ayıklama ve profil oluşturma için çalışma zamanı yapılandırma seçenekleri
 
@@ -19,8 +19,8 @@ ms.locfileid: "83761999"
 
 | | Ayar adı | Değerler |
 | - | - | - |
-| **runtimeconfig. JSON** | Yok | Yok |
-| **Ortam değişkeni** | `COMPlus_EnableDiagnostics` | `1`-etkin<br/>`0`-devre dışı |
+| **Üzerinderuntimeconfig.js** | Yok | Yok |
+| **Ortam değişkeni** | `COMPlus_EnableDiagnostics` | `1` -etkin<br/>`0` -devre dışı |
 
 ## <a name="enable-profiling"></a>Profil oluşturmayı etkinleştir
 
@@ -29,8 +29,8 @@ ms.locfileid: "83761999"
 
 | | Ayar adı | Değerler |
 | - | - | - |
-| **runtimeconfig. JSON** | Yok | Yok |
-| **Ortam değişkeni** | `CORECLR_ENABLE_PROFILING` | `0`-devre dışı<br/>`1`-etkin |
+| **Üzerinderuntimeconfig.js** | Yok | Yok |
+| **Ortam değişkeni** | `CORECLR_ENABLE_PROFILING` | `0` -devre dışı<br/>`1` -etkin |
 
 ## <a name="profiler-guid"></a>Profil Oluşturucu GUID 'SI
 
@@ -38,14 +38,14 @@ ms.locfileid: "83761999"
 
 | | Ayar adı | Değerler |
 | - | - | - |
-| **runtimeconfig. JSON** | Yok | Yok |
+| **Üzerinderuntimeconfig.js** | Yok | Yok |
 | **Ortam değişkeni** | `CORECLR_PROFILER` | *dize-GUID* |
 
 ## <a name="profiler-location"></a>Profil Oluşturucu konumu
 
 - Şu anda çalışan işleme (veya 32-bit veya 64 bit işlem) yüklenecek profil oluşturucu DLL dosyasının yolunu belirtir.
 - Birden fazla değişken ayarlandıysa, bit genişliğine özgü değişkenler öncelik kazanır. Profil oluşturucunun hangi bit hale getirinin yükleneceğini belirler.
-- Daha fazla bilgi için bkz. [Profil Oluşturucu kitaplığını bulma](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/profiling/Profiler%20Loading.md).
+- Daha fazla bilgi için bkz. [Profil Oluşturucu kitaplığını bulma](https://github.com/dotnet/runtime/blob/main/docs/design/coreclr/profiling/Profiler%20Loading.md).
 
 | | Ayar adı | Değerler |
 | - | - | - |
@@ -60,8 +60,8 @@ ms.locfileid: "83761999"
 
 | | Ayar adı | Değerler |
 | - | - | - |
-| **runtimeconfig. JSON** | Yok | Yok |
-| **Ortam değişkeni** | `COMPlus_PerfMapEnabled` | `0`-devre dışı<br/>`1`-etkin |
+| **Üzerinderuntimeconfig.js** | Yok | Yok |
+| **Ortam değişkeni** | `COMPlus_PerfMapEnabled` | `0` -devre dışı<br/>`1` -etkin |
 
 ## <a name="perf-log-markers"></a>Performans günlüğü işaretçileri
 
@@ -70,8 +70,8 @@ ms.locfileid: "83761999"
 
 | | Ayar adı | Değerler |
 | - | - | - |
-| **runtimeconfig. JSON** | Yok | Yok |
-| **Ortam değişkeni** | `COMPlus_PerfMapIgnoreSignal` | `0`-devre dışı<br/>`1`-etkin |
+| **Üzerinderuntimeconfig.js** | Yok | Yok |
+| **Ortam değişkeni** | `COMPlus_PerfMapIgnoreSignal` | `0` -devre dışı<br/>`1` -etkin |
 
 > [!NOTE]
 > [COMPlus_PerfMapEnabled](#write-perf-map) atlanırsa veya `0` (devre dışı) olarak ayarlandıysa bu ayar yoksayılır.

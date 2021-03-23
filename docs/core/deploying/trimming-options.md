@@ -4,12 +4,12 @@ description: Kendi içindeki uygulamaların kırpılacağını nasıl denetleyec
 author: sbomer
 ms.author: svbomer
 ms.date: 08/25/2020
-ms.openlocfilehash: e36aca3aadb6968f73a439ca985dc410d1bc88d8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 93fee991cf218a52ad1d9a2597b1c9b2d442110a
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95704662"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874257"
 ---
 # <a name="trimming-options"></a>Kırpma seçenekleri
 
@@ -162,4 +162,4 @@ SDK, özelliği kullanarak hata ayıklayıcı desteğini devre dışı bırakmay
 
     Derlemeler için özel durum iletilerini şerit `System.*` . Bir derlemeden bir özel durum oluştuğunda `System.*` , ileti tam ileti yerine basitleştirilmiş kaynak kimliği olur.
 
- Bu özellikler ilgili kodun kırpılmasına neden olur ve ayrıca [runtimeconfig](../run-time-config/index.md) dosyası aracılığıyla özellikleri devre dışı bırakır. İlgili runtimeconfig seçenekleri de dahil olmak üzere bu özellikler hakkında daha fazla bilgi için bkz. [özellik anahtarları](https://github.com/dotnet/runtime/blob/master/docs/workflow/trimming/feature-switches.md). Bazı SDK 'lar bu özellikler için varsayılan değerlere sahip olabilir.
+ Bu özellikler ilgili kodun kırpılmasına neden olur ve ayrıca [runtimeconfig](../run-time-config/index.md) dosyası aracılığıyla özellikleri devre dışı bırakır. İlgili runtimeconfig seçenekleri de dahil olmak üzere bu özellikler hakkında daha fazla bilgi için bkz. [özellik anahtarları](https://github.com/dotnet/runtime/blob/main/docs/workflow/trimming/feature-switches.md). Bazı SDK 'lar bu özellikler için varsayılan değerlere sahip olabilir.

@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 02/09/2021
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 8397a12d179569c2836c43ab3946a2edba3bdba8
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 71d44ca3248d497b3f46d1d93c6505adcfc42021
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100469779"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873308"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>Öğretici: ML.NET görüntü sınıflandırma API 'SI ile aktarım öğrenimini kullanarak otomatikleştirilmiş görsel inceleme
 
@@ -116,17 +116,17 @@ Bu alt dizinlerin her biri, iki ek ön eki içerir:
 
 Bu öğreticide, yalnızca köprü destesi görüntüleri kullanılır.
 
-1. [Veri kümesini](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/assets.zip) indirin ve sıkıştırmayı açın.
+1. [Veri kümesini](https://github.com/dotnet/machinelearning-samples/tree/main/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/assets.zip) indirin ve sıkıştırmayı açın.
 1. Veri kümesi dosyalarınızı kaydetmek için projenizde "varlıklar" adlı bir dizin oluşturun.
 1. Son daraltılmış dizinden *CD* ve *ud* alt dizinlerini *varlıklar* dizinine kopyalayın.
 
 ### <a name="create-input-and-output-classes"></a>Giriş ve çıkış sınıfları oluşturma
 
-1. *Program.cs* dosyasını açın ve `using` dosyanın en üstündeki mevcut deyimlerini aşağıdaki gibi değiştirin:
+1. *Program. cs* dosyasını açın ve `using` dosyanın en üstündeki mevcut deyimlerini aşağıdaki gibi değiştirin:
 
     [!code-csharp [ProgramUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L1-L7)]
 
-1. `Program` *Program.cs* içindeki sınıfının altında adlı bir sınıf oluşturun `ImageData` . Bu sınıf başlangıçta yüklenen verileri temsil etmek için kullanılır.
+1. `Program` *Program. cs*' deki sınıfının altında adlı bir sınıf oluşturun `ImageData` . Bu sınıf başlangıçta yüklenen verileri temsil etmek için kullanılır.
 
     [!code-csharp [ImageDataClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L137-L142)]
 

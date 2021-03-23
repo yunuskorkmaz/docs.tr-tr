@@ -12,17 +12,17 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: c01e577737d213c6ed9268133e31e105b5060f86
-ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
+ms.openlocfilehash: 63a6d350a2c174e3c16e7374e41b551f60f569f9
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104653705"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875323"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Nasıl yapılır: bir derlemeyi güçlü bir adla Imzalama
 
 > [!NOTE]
-> .NET Core, tanımlayıcı adlı derlemeleri desteklese de, .NET Core kitaplığındaki tüm derlemeler imzalansa da, üçüncü taraf derlemelerin çoğunluğunun tanımlayıcı adlara ihtiyacı yoktur. Daha fazla bilgi için bkz. GitHub 'da [tanımlayıcı ad imzalama](https://github.com/dotnet/runtime/blob/master/docs/project/strong-name-signing.md) .
+> .NET Core, tanımlayıcı adlı derlemeleri desteklese de, .NET Core kitaplığındaki tüm derlemeler imzalansa da, üçüncü taraf derlemelerin çoğunluğunun tanımlayıcı adlara ihtiyacı yoktur. Daha fazla bilgi için bkz. GitHub 'da [tanımlayıcı ad imzalama](https://github.com/dotnet/runtime/blob/main/docs/project/strong-name-signing.md) .
 
 Bir derlemeyi katı bir adla imzalamak için çeşitli yollar vardır:  
   

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 370c6eb23a50ed388f0b10a5c5f4779ba2a1b144
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: 49aa98edec8ed1ce35dd501c57aa82e4ca4cf286
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102623555"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104879733"
 ---
 ### <a name="project-tools-now-included-in-sdk"></a>Proje Araçları artık SDK 'ya dahil edilmiştir
 
@@ -19,8 +19,8 @@ Artık .NET Core 2,1 SDK 'ya dahil edilen araçlar:
 | \<DotNetCliToolReference> deeri                   | Araç                                                                                                            |
 |------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
 | `Microsoft.DotNet.Watcher.Tools`               | `dotnet-watch`               |
-| `Microsoft.Extensions.SecretManager.Tools`     | [DotNet-Kullanıcı gizli dizileri](https://github.com/dotnet/aspnetcore/blob/master/src/Tools/dotnet-user-secrets/README.md) |
-| `Microsoft.Extensions.Caching.SqlConfig.Tools` | [DotNet-SQL-Cache](https://github.com/dotnet/aspnetcore/blob/master/src/Tools/dotnet-sql-cache/README.md)       |
+| `Microsoft.Extensions.SecretManager.Tools`     | [DotNet-Kullanıcı gizli dizileri](https://github.com/dotnet/aspnetcore/blob/main/src/Tools/dotnet-user-secrets/README.md) |
+| `Microsoft.Extensions.Caching.SqlConfig.Tools` | [DotNet-SQL-Cache](https://github.com/dotnet/aspnetcore/blob/main/src/Tools/dotnet-sql-cache/README.md)       |
 | `Microsoft.EntityFrameworkCore.Tools.DotNet`   | [DotNet-EF](/ef/core/miscellaneous/cli/dotnet)                                                                  |
 
 #### <a name="version-introduced"></a>Sunulan sürüm

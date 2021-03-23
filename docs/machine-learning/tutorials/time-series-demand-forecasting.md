@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 51041f5a9076ad360a84cc39704aedb50b77d40a
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: aea264036ab4766696699980f464cca3d8229499
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679396"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875596"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>Öğretici: zaman serisi analizi ve ML.NET ile tahmin Bisiklet kiralama hizmeti talebi
 
@@ -33,7 +33,7 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 
 ## <a name="time-series-forecasting-sample-overview"></a>Zaman serisi tahmin örneğine genel bakış
 
-Bu örnek, tekil bir zaman serisi analizi analizi olarak bilinen tek değişkenli bir zaman serisi analiz algoritması kullanarak bisiklet için talebi tahmin eden bir **C# .NET Core konsol uygulamasıdır** . Bu örneğin kodu, GitHub 'daki [DotNet/machinöğrenim-örnekleri](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand) deposunda bulunabilir.
+Bu örnek, tekil bir zaman serisi analizi analizi olarak bilinen tek değişkenli bir zaman serisi analiz algoritması kullanarak bisiklet için talebi tahmin eden bir **C# .NET Core konsol uygulamasıdır** . Bu örneğin kodu, GitHub 'daki [DotNet/machinöğrenim-örnekleri](https://github.com/dotnet/machinelearning-samples/tree/main/samples/csharp/getting-started/Forecasting_BikeSharingDemand) deposunda bulunabilir.
 
 ## <a name="understand-the-problem"></a>Sorunu anlama
 
@@ -51,16 +51,16 @@ Bu öğreticide kullanılan algoritma tekil bir [Spekme analizidir (SSA)](http:/
     [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
     1. Çözüm Gezgini, projenize sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin.
-    1. Paket kaynağı olarak "nuget.org" öğesini seçin, **Gözden** geçirme sekmesini seçin, **Microsoft.ml**için arama yapın.
+    1. Paket kaynağı olarak "nuget.org" öğesini seçin, **Gözden** geçirme sekmesini seçin, **Microsoft.ml** için arama yapın.
     1. **Ön sürümü dahil et** onay kutusunu işaretleyin.
     1. **Install** düğmesini seçin.
     1. **Değişiklikleri Önizle** Iletişim kutusunda **Tamam** düğmesini seçin ve ardından listelenen paketlerin lisans koşullarını kabul ediyorsanız Lisans Kabulü iletişim kutusunda **kabul ediyorum** düğmesini seçin.
-    1. **System. Data. SqlClient** ve **Microsoft. ml. timeseries**için bu adımları tekrarlayın.
+    1. **System. Data. SqlClient** ve **Microsoft. ml. timeseries** için bu adımları tekrarlayın.
 
 ### <a name="prepare-and-understand-the-data"></a>Verileri hazırlama ve anlama
 
-1. *Veri*adlı bir dizin oluşturun.
-1. [ *Dailydemand. mdf* veritabanı dosyasını](https://github.com/dotnet/machinelearning-samples/raw/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Data/DailyDemand.mdf) indirin ve *veri* dizinine kaydedin.
+1. *Veri* adlı bir dizin oluşturun.
+1. [ *Dailydemand. mdf* veritabanı dosyasını](https://github.com/dotnet/machinelearning-samples/raw/main/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Data/DailyDemand.mdf) indirin ve *veri* dizinine kaydedin.
 
 > [!NOTE]
 > Bu öğreticide kullanılan veriler, [UCI bisiklet paylaşımı veri kümesinden](http://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset)gelir. Fanaee-T, hadi ve gama, Joao, ' olay etiketleme birleştirme algılayıcıları ve arka plan bilgisi ', yapay zeka 'da Ilerleme (2013): PP. 1-15, Sprümlberg, [Web bağlantısı](https://link.springer.com/article/10.1007%2Fs13748-013-0040-3).
@@ -83,7 +83,7 @@ CREATE TABLE [Rentals] (
 
 Aşağıda, verilerin bir örneği verilmiştir:
 
-| RentalDate | Year | TotalRentals |
+| RentalDate | Yıl | TotalRentals |
 | --- | --- | --- |
 |1/1/2011|0|985|
 |1/2/2011|0|801|
@@ -91,7 +91,7 @@ Aşağıda, verilerin bir örneği verilmiştir:
 
 ### <a name="create-input-and-output-classes"></a>Giriş ve çıkış sınıfları oluşturma
 
-1. *Program.cs* dosyasını açın ve var olan `using` deyimleri şu şekilde değiştirin:
+1. *Program. cs* dosyasını açın ve var olan `using` deyimleri şu şekilde değiştirin:
 
     [!code-csharp [ProgramUsings](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L1-L8)]
 
@@ -285,7 +285,7 @@ Tahmin edilen değerler tam sayı sayısını tahmin etmez, ancak bir işlemin k
 
 Tebrikler! Artık Bisiklet Kiralama talebini tahmin etmek için bir zaman serisi makine öğrenimi modelini başarıyla oluşturdunuz.
 
-Bu öğreticinin kaynak kodunu [DotNet/machinöğrenim-örnekleri](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand) deposunda bulabilirsiniz.
+Bu öğreticinin kaynak kodunu [DotNet/machinöğrenim-örnekleri](https://github.com/dotnet/machinelearning-samples/tree/main/samples/csharp/getting-started/Forecasting_BikeSharingDemand) deposunda bulabilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

@@ -4,12 +4,12 @@ description: İfade ağaçları oluşturma teknikleri hakkında bilgi edinin.
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.openlocfilehash: c153ca2c75738571c81057364390f489d2decb05
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: f6752879dc01080e056221b00ca5377a6abc20db
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656156"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875817"
 ---
 # <a name="building-expression-trees"></a>Ifade ağaçları oluşturma
 
@@ -164,7 +164,7 @@ BlockExpression body = Expression.Block(
 
 Çarpınımı işlevi için ifade ağacını oluşturmaya yönelik kod çok daha uzun, daha karmaşıktır ve Etiketler ve break deyimleri ve günlük kodlama görevlerimizde kaçınmak istiyoruz.
 
-Bu bölüm için, ziyaretçi kodunu bu ifade ağacındaki her düğümü ziyaret etmek ve bu örnekte oluşturulan düğümlerle ilgili bilgileri yazmak için güncelleştirdim. Örnek kodu DotNet/docs GitHub deposunda [görüntüleyebilir veya indirebilirsiniz](https://github.com/dotnet/samples/tree/master/csharp/expression-trees) . Örnekleri oluşturup çalıştırarak kendiniz için denemeler yapın. İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../samples-and-tutorials/index.md#view-and-download-samples).
+Bu bölüm için, ziyaretçi kodunu bu ifade ağacındaki her düğümü ziyaret etmek ve bu örnekte oluşturulan düğümlerle ilgili bilgileri yazmak için güncelleştirdim. Örnek kodu DotNet/docs GitHub deposunda [görüntüleyebilir veya indirebilirsiniz](https://github.com/dotnet/samples/tree/main/csharp/expression-trees) . Örnekleri oluşturup çalıştırarak kendiniz için denemeler yapın. İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../samples-and-tutorials/index.md#view-and-download-samples).
 
 ## <a name="examining-the-apis"></a>API 'Leri İnceleme
 

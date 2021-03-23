@@ -2,12 +2,12 @@
 title: Koleksiyonlarla çalışma-C# öğreticisine giriş
 description: Bu öğreticide liste koleksiyonunu inceleyerek C# öğrenin.
 ms.date: 02/05/2021
-ms.openlocfilehash: 7a04a983622a6ae36ec5b12d279aa29e52c52a4f
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: 0043372aed65fbc720a022a3d8c69abd25ceca0c
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100626856"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876109"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>Genel liste türünü kullanarak veri koleksiyonlarını yönetmeyi öğrenin
 
@@ -21,7 +21,7 @@ Bu giriş öğreticisi, C# diline ve sınıfının temel bilgilerine bir giriş 
 
 *List-öğreticisi* adlı bir dizin oluşturun. Geçerli dizini oluşturun ve çalıştırın `dotnet new console` .
 
-En sevdiğiniz düzenleyicide *program.cs* açın ve mevcut kodu aşağıdaki kodla değiştirin:
+*Program. cs* ' yi en sevdiğiniz düzenleyicide açın ve mevcut kodu aşağıdaki kodla değiştirin:
 
 ```csharp
 using System;
@@ -207,7 +207,7 @@ Bu ve önceki derslerden bazılarını bir araya getirebilirsiniz. Fibonaccı nu
 
 ## <a name="complete-challenge"></a>Görevi tamamlama
 
-[GitHub 'daki tamamlanmış örnek koda bakarak](https://github.com/dotnet/samples/tree/master/csharp/list-quickstart/Program.cs#L8-L16)örnek bir çözüm görebilirsiniz.
+[GitHub 'daki tamamlanmış örnek koda bakarak](https://github.com/dotnet/samples/tree/main/csharp/list-quickstart/Program.cs#L8-L16)örnek bir çözüm görebilirsiniz.
 
 Döngünün her tekrarında, listedeki son iki tamsayının yerine getiriyorsunuz ve bu değeri listeye ekliyor olursunuz. Döngü, listeye 20 öğe ekleyinceye kadar yinelenir.
 

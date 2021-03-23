@@ -5,12 +5,12 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: c161a0420de9e99478768926e5385dcfda1f9ee7
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 28674c583466bb4873581c9d233b9a508019b045
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688234"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876948"
 ---
 # <a name="tutorial-do-batch-processing-with-net-for-apache-spark"></a>Öğretici: Apache Spark için .NET ile Batch işleme
 
@@ -18,7 +18,7 @@ Bu öğreticide, Apache Spark için .NET kullanarak toplu işleme yapmayı öğr
 
 Toplu işleme genellikle daha fazla analiz için hazırlanması gereken büyük ve düz veri kümelerinde gerçekleştirilir. Günlük işleme ve veri ambarı, yaygın toplu işleme senaryolardır. Bu senaryoda, farklı projelerin kullanıldığı zaman sayısı veya son projelerin güncelleştirildiği süre gibi GitHub projeleri hakkındaki bilgileri analiz edersiniz.
 
-Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
+Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 
 > [!div class="checklist"]
 >
@@ -32,7 +32,7 @@ Apache Spark için .NET 'i ilk kez kullanıyorsanız, ortamınızı nasıl hazı
 
 ## <a name="download-the-sample-data"></a>Örnek verileri indirme
 
-[Ghtorkiralık](http://ghtorrent.org/) , projeler, işlemeler ve izleyicileri hakkında bilgi gibi tüm genel GitHub olaylarını izler ve olayları ve bunların yapısını veritabanlarında depolar. Farklı zaman dilimlerinde toplanan veriler indirilebilir Arşivler olarak kullanılabilir. Döküm dosyaları çok büyük olduğundan, bu kılavuz GitHub 'dan indirilebilen [döküm dosyasının kesilmiş bir sürümünü](https://github.com/dotnet/spark/tree/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Batch/projects_smaller.csv) kullanır.
+[Ghtorkiralık](http://ghtorrent.org/) , projeler, işlemeler ve izleyicileri hakkında bilgi gibi tüm genel GitHub olaylarını izler ve olayları ve bunların yapısını veritabanlarında depolar. Farklı zaman dilimlerinde toplanan veriler indirilebilir Arşivler olarak kullanılabilir. Döküm dosyaları çok büyük olduğundan, bu kılavuz GitHub 'dan indirilebilen [döküm dosyasının kesilmiş bir sürümünü](https://github.com/dotnet/spark/tree/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Batch/projects_smaller.csv) kullanır.
 
 > [!NOTE]
 > Ghtorıo veri kümesi, bir çift lisanslama şeması ([Creative Commons +](https://wiki.creativecommons.org/wiki/CCPlus)) altında dağıtılır. Ticari olmayan kullanımlar için (eğitim, araştırma veya kişisel kullanımları dahil, ancak bunlarla sınırlı olmamak üzere), veri kümesi, [bilgi-SA lisansı](https://creativecommons.org/licenses/by-sa/4.0/)altında dağıtılır.
@@ -56,7 +56,7 @@ Apache Spark için .NET 'i ilk kez kullanıyorsanız, ortamınızı nasıl hazı
 
 ## <a name="create-a-sparksession"></a>Mini oturum oluşturma
 
-1. Aşağıdaki ek `using` deyimlerini *Mymini batchapp*'teki *program.cs* dosyasının en üstüne ekleyin.
+1. Aşağıdaki ek `using` deyimlerini *Mymini batchapp*'teki *program. cs* dosyasının en üstüne ekleyin.
 
    ```csharp
    using System;
@@ -163,7 +163,7 @@ Bu uygulamanın hedefi, GitHub projeleri verileri hakkında bazı öngörülere 
 
 ## <a name="get-the-code"></a>Kodu alma
 
-[Tam çözümü](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Batch/GitHubProjects.cs) GitHub ' da görebilirsiniz.
+[Tam çözümü](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Batch/GitHubProjects.cs) GitHub ' da görebilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

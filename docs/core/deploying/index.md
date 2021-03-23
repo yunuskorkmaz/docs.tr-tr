@@ -2,12 +2,12 @@
 title: Uygulama yayımlama
 description: .NET uygulaması yayımlama yolları hakkında bilgi edinin. .NET, platforma özgü veya platformlar arası uygulamalar yayımlayabilir. Bir uygulamayı, kendi içinde veya Framework 'e bağımlı olarak yayımlayabilirsiniz. Her mod, bir kullanıcının uygulamanızı nasıl yürüttüğünde etkiler.
 ms.date: 02/05/2021
-ms.openlocfilehash: 3f10aae139626bd2b09f71b32eaf2d680890e100
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: ca0fa4ff5e17a3fa4c636604ae81b63ffbbc99f6
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99699785"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874296"
 ---
 # <a name="net-application-publishing-overview"></a>.NET uygulama yayımlamaya genel bakış
 
@@ -129,7 +129,7 @@ Uygulamanızı her platform için yayımlamanız gerektiğinden uygulamanızın 
 Uygulamanız .NET çalışma zamanını ve tüm uygulama bağımlılıklarınızı içerdiğinden, gereken indirme boyutu ve sabit disk alanı, [çerçeveye bağlı](#publish-framework-dependent) bir sürümden daha büyük.
 
   > [!TIP]
-  > Linux sistemlerinde dağıtımınızın boyutunu yaklaşık 28 MB ile, .NET [*Genelleştirme sabit modunu*](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)kullanarak azaltabilirsiniz. Bu, uygulamanızı [sabit kültür](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)gibi tüm kültürleri işleyecek şekilde zorlar.
+  > Linux sistemlerinde dağıtımınızın boyutunu yaklaşık 28 MB ile, .NET [*Genelleştirme sabit modunu*](https://github.com/dotnet/runtime/blob/main/docs/design/features/globalization-invariant-mode.md)kullanarak azaltabilirsiniz. Bu, uygulamanızı [sabit kültür](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)gibi tüm kültürleri işleyecek şekilde zorlar.
 
   > [!TIP]
   > Dağıtımınızın boyutunu daha fazla azalyabilecek bir [Önizleme kırpma özelliği](trim-self-contained.md) vardır.

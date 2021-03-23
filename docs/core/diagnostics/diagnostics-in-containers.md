@@ -2,12 +2,12 @@
 title: Kapsayıcılarda tanılama toplama
 description: Bu makalede, .NET Core tanılama araçları 'nın Docker kapsayıcılarında nasıl kullanılabileceğini öğreneceksiniz.
 ms.date: 09/01/2020
-ms.openlocfilehash: cf4bbdf75e943f093a2202f91303a2eea7125487
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: 1d0c9eadca348dad5c4fc0a395c8b371e3821262
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94916215"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872762"
 ---
 # <a name="collect-diagnostics-in-containers"></a>Kapsayıcılarda tanılama toplama
 
@@ -68,7 +68,7 @@ Farklı bir kapsayıcıdaki işlemlerin tanılanması için .NET Core küresel C
 
 **Bu araç şu şekilde geçerlidir: ✔️** .net Core 2,1 ve sonraki sürümleri
 
-Bir alternatifi `dotnet-dump` , [`createdump`](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md) hem yerel hem de yönetilen bilgileri içeren Linux üzerinde temel dökümler oluşturmak için kullanılabilir. `createdump`Araç .NET Core çalışma zamanı ile yüklenir ve libcoreclr.so ' nin yanında (genellikle "/usr/share/DotNet/Shared/Microsoft.NETCore.app/[Version]" içinde) bulunabilir. Araç, kapsayıcı olmayan Linux ortamlarında aynı şekilde, aracın [ `SYS_PTRACE` özelliği](https://man7.org/linux/man-pages/man7/capabilities.7.html)gerektirdiği tek bir özel durum ile aynı şekilde çalışmaya devam eder, bu nedenle Docker kapsayıcısının [Bu yetenek ile başlatılması](https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities)gerekir.
+Bir alternatifi `dotnet-dump` , [`createdump`](https://github.com/dotnet/runtime/blob/main/docs/design/coreclr/botr/xplat-minidump-generation.md) hem yerel hem de yönetilen bilgileri içeren Linux üzerinde temel dökümler oluşturmak için kullanılabilir. `createdump`Araç .NET Core çalışma zamanı ile yüklenir ve libcoreclr.so ' nin yanında (genellikle "/usr/share/DotNet/Shared/Microsoft.NETCore.app/[Version]" içinde) bulunabilir. Araç, kapsayıcı olmayan Linux ortamlarında aynı şekilde, aracın [ `SYS_PTRACE` özelliği](https://man7.org/linux/man-pages/man7/capabilities.7.html)gerektirdiği tek bir özel durum ile aynı şekilde çalışmaya devam eder, bu nedenle Docker kapsayıcısının [Bu yetenek ile başlatılması](https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities)gerekir.
 
 ### <a name="using-createdump-in-a-sidecar-container"></a>`createdump`Bir sepet kapsayıcısında kullanma
 

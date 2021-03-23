@@ -4,12 +4,12 @@ description: Ürün satış verileri için anomali algılama uygulaması oluştu
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 48a8b26409b20e2a01aa97425153336b34c9b5b7
-ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
+ms.openlocfilehash: 2262f2c5e8e389a13c583073bb2002fcd5da91ee
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97594182"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874660"
 ---
 # <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>Öğretici: ML.NET ile ürün satışlardaki anormallikleri algılama
 
@@ -24,13 +24,13 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > * Değişiklik noktası anomali algılama için bir dönüşüm oluşturun
 > * Dönüşümle değişiklik noktası bozuklularını Algıla
 
-Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/ProductSalesAnomalyDetection) deposunda bulabilirsiniz.
+Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/ProductSalesAnomalyDetection) deposunda bulabilirsiniz.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 * [Visual Studio 2017 sürüm 15,6 veya üzeri](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ".NET Core platformlar arası geliştirme" iş yükü yüklendi.
 
-* [product-sales.csv veri kümesi](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)
+* [product-sales.csv veri kümesi](https://raw.githubusercontent.com/dotnet/machinelearning-samples/main/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)
 
 >[!NOTE]
 > ' Deki veri biçimi, `product-sales.csv` ilk olarak DataMarket 'ten kaynaklıdır ve, ramiz Hyndman tarafından oluşturulan zaman serisi veri kitaplığı (TSDL) tarafından sağlanmış olan "üç yıllık dönem içinde" Shampoo Sales "veri kümesini temel alır.
@@ -48,7 +48,7 @@ Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/sample
 
     Çözüm Gezgini, projenize sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin. Paket kaynağı olarak "nuget.org" öğesini seçin, gözden geçirme sekmesini seçin, **Microsoft.ml** araması yapın ve **yüklemeyi** seçin. **Değişiklikleri Önizle** Iletişim kutusunda **Tamam** düğmesini seçin ve ardından listelenen paketlerin lisans koşullarını kabul ediyorsanız **Lisans kabulü** iletişim kutusunda **kabul ediyorum** düğmesini seçin. **Microsoft. ml. TimeSeries** için bu adımları tekrarlayın.
 
-4. `using` *Program.cs* dosyanızın en üstüne aşağıdaki deyimleri ekleyin:
+4. Aşağıdaki `using` deyimlerini *program. cs* dosyanızın üst kısmına ekleyin:
 
     [!code-csharp[AddUsings](./snippets/sales-anomaly-detection/csharp/Program.cs#AddUsings "Add necessary usings")]
 
@@ -56,7 +56,7 @@ Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/sample
 
 1. Veri kümesini indirin ve daha önce oluşturduğunuz *veri* klasörüne kaydedin:
 
-   * [*product-sales.csv*](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv) sağ tıklayıp "bağlantıyı (veya hedefi) farklı kaydet" i seçin.
+   * [*product-sales.csv*](https://raw.githubusercontent.com/dotnet/machinelearning-samples/main/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv) sağ tıklayıp "bağlantıyı (veya hedefi) farklı kaydet" i seçin.
 
      \*. Csv dosyasını *veri* klasörüne kaydettiğinizden ya da başka bir yere kaydettikten sonra, \* . csv dosyasını *veri* klasörüne taşıdığınızdan emin olun.
 
@@ -80,17 +80,17 @@ Projenize yeni bir sınıf ekleyin:
 
 1. **Çözüm Gezgini**, projeye sağ tıklayın ve ardından **> yeni öğe Ekle**' yi seçin.
 
-2. **Yeni öğe Ekle iletişim kutusunda** **sınıf** ' ı seçin ve **ad** alanını *ProductSalesData.cs* olarak değiştirin. Sonra **Ekle** düğmesini seçin.
+2. **Yeni öğe Ekle iletişim kutusunda** **sınıf** ' ı seçin ve **ad** alanını *productsalesdata. cs* olarak değiştirin. Sonra **Ekle** düğmesini seçin.
 
-   *ProductSalesData.cs* dosyası kod düzenleyicisinde açılır.
+   *Productsalesdata. cs* dosyası kod düzenleyicisinde açılır.
 
-3. Aşağıdaki `using` ifadeyi *ProductSalesData.cs* öğesinin en üstüne ekleyin:
+3. Aşağıdaki `using` Ifadeyi *Productsalesdata. cs*' nin üst kısmına ekleyin:
 
    ```csharp
    using Microsoft.ML.Data;
    ```
 
-4. Mevcut sınıf tanımını kaldırın ve iki sınıfa `ProductSalesData` ve `ProductSalesPrediction` *ProductSalesData.cs* dosyasına sahip olan aşağıdaki kodu ekleyin:
+4. Mevcut sınıf tanımını kaldırın ve iki sınıfa sahip olan aşağıdaki kodu `ProductSalesData` ve `ProductSalesPrediction` *productsalesdata. cs* dosyasına ekleyin:
 
     [!code-csharp[DeclareTypes](./snippets/sales-anomaly-detection/csharp/ProductSalesData.cs#DeclareTypes "Declare data record types")]
 
@@ -371,7 +371,7 @@ Alert   Score   P-Value Martingale value
 
 Tebrikler! Artık, satış verilerinde ani artışları ve değişiklik noktası bozukluklarını algılamak için makine öğrenimi modellerini başarıyla oluşturdunuz.
 
-Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/ProductSalesAnomalyDetection) deposunda bulabilirsiniz.
+Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/ProductSalesAnomalyDetection) deposunda bulabilirsiniz.
 
 Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
 > [!div class="checklist"]
@@ -386,4 +386,4 @@ Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
 
 Bir mevsimsellik veri anomali algılama örneğini araştırmak için Machine Learning örnekleri GitHub deposuna göz atın.
 > [!div class="nextstepaction"]
-> [DotNet/machinöğrenim-Samples GitHub deposu](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/AnomalyDetection_PhoneCalls)
+> [DotNet/machinöğrenim-Samples GitHub deposu](https://github.com/dotnet/machinelearning-samples/tree/main/samples/csharp/getting-started/AnomalyDetection_PhoneCalls)

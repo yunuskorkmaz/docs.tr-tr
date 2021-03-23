@@ -4,18 +4,18 @@ description: HDInsight için bir .NET Apache Spark uygulamasının nasıl dağı
 ms.date: 10/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: f7a3b0c0d972d5cb6dbc6eea818fe794c5060eae
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 0c2b7522e0e6790ded418413ef0f128aae1e0884
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687916"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875349"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>Öğretici: Azure HDInsight 'a Apache Spark uygulaması için .NET dağıtma
 
 Bu öğreticide, Azure HDInsight kümesi aracılığıyla Apache Spark için .NET uygulamanızı buluta nasıl dağıtacağınız öğretilir. HDInsight 'ta Spark kümeleri Azure depolama ve Azure Data Lake Storage uyumlu olduğundan, HDInsight, Azure 'da Spark kümesi oluşturmayı ve yapılandırmayı kolaylaştırır.
 
-Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
+Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 
 > [!div class="checklist"]
 >
@@ -130,7 +130,7 @@ Ardından, aşağıdaki beş dosyayı kümenizin depolaması için seçtiğiniz 
 
 3. *İnstall-Worker.sh* , Apache Spark bağımlı dosyaları için .net ' i kümenizin düğümlerine kopyalamanızı sağlayan bir betiktir.
 
-   Yerel bilgisayarınızda **install-Worker.sh** adlı yeni bir dosya oluşturun ve GitHub 'da bulunan [install-Worker.sh içeriğini](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh) yapıştırın. Sonra, blob kapsayıcınıza *install-Worker.sh* yükleyin.
+   Yerel bilgisayarınızda **install-Worker.sh** adlı yeni bir dosya oluşturun ve GitHub 'da bulunan [install-Worker.sh içeriğini](https://raw.githubusercontent.com/dotnet/spark/main/deployment/install-worker.sh) yapıştırın. Sonra, blob kapsayıcınıza *install-Worker.sh* yükleyin.
 
 4. Kümeniz, uygulamanızın yayımlanan dosyalarını içeren *publish.zip* dosyasına ihtiyaç duyuyor. Yayınlanan klasörünüze gidin, **mySparkApp/bin/Release/netcoreapp 3.1/Ubuntu. 16.04-x64** ve **publish.zip** bulun. Sonra *publish.zip* blob kapsayıcınıza yükleyin.
 

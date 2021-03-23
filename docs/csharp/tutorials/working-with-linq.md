@@ -4,14 +4,14 @@ description: Bu öğreticide LINQ, LINQ sorgularında kullanılmak üzere yazma 
 ms.date: 10/29/2018
 ms.technology: csharp-linq
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 59e86d6412e16728fb03d05f7f4e221a26ec1bb1
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e6c241e90865335707f8d050f4bf8772f945355d
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90536242"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874504"
 ---
-# <a name="work-with-language-integrated-query-linq"></a>Dil ile tümleşik sorgu (LINQ) ile çalışma
+# <a name="work-with-language-integrated-query-linq"></a>Language-Integrated sorgusuyla çalışma (LINQ)
 
 ## <a name="introduction"></a>Giriş
 
@@ -27,7 +27,7 @@ Magicians bu tekniği, her kart her karıştırmadan sonra bilinen bir konumda o
 
 Amacınıza uygun olarak, veri dizilerini işlemek için bir hafif göz atın. Oluşturacağınız uygulama bir kart destesi oluşturur ve sonra sıra sonuna kadar her seferinde bir sıra yazarak bir dizi karışık izler. Ayrıca, güncelleştirilmiş siparişi orijinal siparişle karşılaştırırsınız.
 
-Bu öğreticide birden çok adım vardır. Her adımdan sonra, uygulamayı çalıştırabilir ve ilerleme durumunu görebilirsiniz. Ayrıca, DotNet/Samples GitHub deposunda [Tamamlanan örneği](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq) görebilirsiniz. İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#view-and-download-samples).
+Bu öğreticide birden çok adım vardır. Her adımdan sonra, uygulamayı çalıştırabilir ve ilerleme durumunu görebilirsiniz. Ayrıca, DotNet/Samples GitHub deposunda [Tamamlanan örneği](https://github.com/dotnet/samples/blob/main/csharp/getting-started/console-linq) görebilirsiniz. İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#view-and-download-samples).
 
 ## <a name="prerequisites"></a>Önkoşullar
 
@@ -251,7 +251,7 @@ static void Main(string[] args)
 
 ## <a name="optimizations"></a>İyileştirmeler
 
-Şimdiye kadar derlediğiniz örnek, üst ve alt kartların her çalıştırmada aynı kalacağı *karışık*bir şekilde yürütülür. Tek bir değişiklik yapabiliriz: bunun yerine, tüm 52 kartlar konum değiştiren bir *karışık olarak* kullanacağız. Bir karışık olarak, alt yarısı ilk kartın destedeki ilk kart haline gelmesi için destesi bir kez ayırmada kullanırsınız. Bu, üstteki yarısında son kartın alt kart haline geldiği anlamına gelir. Bu, tekil kod satırında basit bir değişiklik. Ve konumlarını değiştirerek geçerli karıştırma sorgusunu güncelleştirin <xref:System.Linq.Enumerable.Take%2A> <xref:System.Linq.Enumerable.Skip%2A> . Bu, deste 'nın üst ve alt kilitlenme sırasını değiştirir:
+Şimdiye kadar derlediğiniz örnek, üst ve alt kartların her çalıştırmada aynı kalacağı *karışık* bir şekilde yürütülür. Tek bir değişiklik yapabiliriz: bunun yerine, tüm 52 kartlar konum değiştiren bir *karışık olarak* kullanacağız. Bir karışık olarak, alt yarısı ilk kartın destedeki ilk kart haline gelmesi için destesi bir kez ayırmada kullanırsınız. Bu, üstteki yarısında son kartın alt kart haline geldiği anlamına gelir. Bu, tekil kod satırında basit bir değişiklik. Ve konumlarını değiştirerek geçerli karıştırma sorgusunu güncelleştirin <xref:System.Linq.Enumerable.Take%2A> <xref:System.Linq.Enumerable.Skip%2A> . Bu, deste 'nın üst ve alt kilitlenme sırasını değiştirir:
 
 ```csharp
 shuffle = shuffle.Skip(26).InterleaveSequenceWith(shuffle.Take(26));

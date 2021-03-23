@@ -4,12 +4,12 @@ description: Hangi Windows sürümlerini .NET yükleyebileceğinizi öğrenin.
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 7909a94c6384e53569db3ba17047cbcc93e80fe1
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 9b0c5c2ea26546a142029b730dfd38923231bae4
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102105108"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873750"
 ---
 # <a name="install-net-on-windows"></a>Windows 'a .NET yükler
 
@@ -24,7 +24,7 @@ Bu makalede, Windows 'a .NET yüklemeyi öğreneceksiniz. .NET çalışma zaman�
 En son .NET sürümü 5,0 ' dir.
 
 > [!div class="button"]
-> [.NET İndir](https://dotnet.microsoft.com/download/dotnet)
+> [.NET’i indirme](https://dotnet.microsoft.com/download/dotnet)
 
 ## <a name="supported-releases"></a>Desteklenen yayınlar
 
@@ -102,7 +102,7 @@ Aşağıdaki Windows sürümleri .NET 5,0 ile desteklenir:
 | Windows Server çekirdeği | 2012 R2 +      | x64, x86        |
 | Nano Sunucu         | Sürüm 1809 + | x64             |
 
-.NET 5,0 desteklenen işletim sistemleri, dağıtımlar ve yaşam döngüsü ilkesi hakkında daha fazla bilgi için bkz. [.net 5,0 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/5.0/5.0-supported-os.md).
+.NET 5,0 desteklenen işletim sistemleri, dağıtımlar ve yaşam döngüsü ilkesi hakkında daha fazla bilgi için bkz. [.net 5,0 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/main/release-notes/5.0/5.0-supported-os.md).
 
 # <a name="net-core-31"></a>[.NET Core 3.1](#tab/netcore31)
 
@@ -118,7 +118,7 @@ Aşağıdaki Windows sürümleri .NET Core 3,1 ile desteklenir:
 | Windows Server                | 2012 R2 +                       | x64, x86        |
 | Nano Sunucu                   | Sürüm 1803 +                  | x64, ARM32      |
 
-.NET Core 3,1 desteklenen işletim sistemleri, dağıtımlar ve yaşam döngüsü ilkesi hakkında daha fazla bilgi için bkz. [.net core 3,1 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md).
+.NET Core 3,1 desteklenen işletim sistemleri, dağıtımlar ve yaşam döngüsü ilkesi hakkında daha fazla bilgi için bkz. [.net core 3,1 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/main/release-notes/3.1/3.1-supported-os.md).
 
 # <a name="net-core-30"></a>[.NET Core 3.0](#tab/netcore30)
 
@@ -136,7 +136,7 @@ Aşağıdaki Windows sürümleri .NET Core 3,0 ile desteklenir:
 | Windows Server                | 2012 R2 +                       | x64, x86        |
 | Nano Sunucu                   | Sürüm 1803 +                  | x64, ARM32      |
 
-.NET Core 3,0 desteklenen işletim sistemleri, dağıtımlar ve yaşam döngüsü ilkesi hakkında daha fazla bilgi için bkz. [.net core 3,0 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md).
+.NET Core 3,0 desteklenen işletim sistemleri, dağıtımlar ve yaşam döngüsü ilkesi hakkında daha fazla bilgi için bkz. [.net core 3,0 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/main/release-notes/3.0/3.0-supported-os.md).
 
 # <a name="net-core-22"></a>[.NET Core 2.2](#tab/netcore22)
 
@@ -154,7 +154,7 @@ Aşağıdaki Windows sürümleri .NET Core 2,2 ile desteklenir:
 | Windows Server                | 2008 R2 SP1 +                   | x64, x86        |
 | Nano Sunucu                   | Sürüm 1803 +                   | x64, ARM32      |
 
-.NET Core 2,2 desteklenen işletim sistemleri, dağıtımlar ve yaşam döngüsü ilkesi hakkında daha fazla bilgi için bkz. [.net core 2,2 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md).
+.NET Core 2,2 desteklenen işletim sistemleri, dağıtımlar ve yaşam döngüsü ilkesi hakkında daha fazla bilgi için bkz. [.net core 2,2 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/main/release-notes/2.2/2.2-supported-os.md).
 
 # <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
@@ -170,7 +170,7 @@ Aşağıdaki Windows sürümleri .NET Core 2,1 ile desteklenir:
 | Windows Server                | 2008 R2 SP1 +                   | x64, x86        |
 | Nano Sunucu                   | Sürüm 1803 +                  | x64            |
 
-.NET Core 2,1 desteklenen işletim sistemleri, dağıtımlar ve yaşam döngüsü ilkesi hakkında daha fazla bilgi için bkz. [.net core 2,1 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md).
+.NET Core 2,1 desteklenen işletim sistemleri, dağıtımlar ve yaşam döngüsü ilkesi hakkında daha fazla bilgi için bkz. [.net core 2,1 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/main/release-notes/2.1/2.1-supported-os.md).
 
 ### <a name="offline-install-for-windows-7"></a>Windows 7 için çevrimdışı yüklemesi
 
@@ -329,7 +329,7 @@ Kapsayıcılar, uygulamanızı ana bilgisayar sisteminin geri kalanından yalıt
 
 Microsoft, belirli senaryolar için uyarlanmış görüntüler sağlar. Örneğin, [ASP.NET Core deposu](https://hub.docker.com/_/microsoft-dotnet-aspnet) üretimde ASP.NET Core uygulamaları çalıştırmak için oluşturulmuş görüntüler sağlar.
 
-Bir Docker kapsayıcısında .NET kullanımı hakkında daha fazla bilgi için bkz. [.net ve Docker](../docker/introduction.md) ve [örneklere](https://github.com/dotnet/dotnet-docker/blob/master/samples/README.md)giriş.
+Bir Docker kapsayıcısında .NET kullanımı hakkında daha fazla bilgi için bkz. [.net ve Docker](../docker/introduction.md) ve [örneklere](https://github.com/dotnet/dotnet-docker/blob/main/samples/README.md)giriş.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

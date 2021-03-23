@@ -5,12 +5,12 @@ ms.date: 09/24/2020
 ms.topic: conceptual
 no-loc:
 - EditorConfig
-ms.openlocfilehash: 9c09fc381a161a9deea012d98d06ab57f2f7345e
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: c1992b32e5159e9bf7ae4d00b92a5baa7f7c1b8c
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100480550"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876623"
 ---
 # <a name="configuration-options-for-code-analysis"></a>Kod analizi için yapılandırma seçenekleri
 
@@ -67,7 +67,7 @@ Aşağıdaki tabloda, [kod kalitesi](quality-rules/index.md) ve [kod stili](styl
 | `suggestion` | İhlaller derleme *iletileri* olarak ve VISUAL Studio IDE 'de öneri olarak görünür. |
 | `silent` | İhlaller kullanıcıya görünür değil. |
 | `none` | Kural tamamen bastırılır. |
-| `default` | Kuralın varsayılan önem derecesi kullanılır. Her .NET sürümü için varsayılan önem dereceleri, [Roslyn-çözümleyiciler](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)deposunda listelenmiştir. Bu tabloda, "devre dışı" karşılık gelir `none` , "Hidden" öğesine karşılık gelir `silent` ve "bilgi" öğesine karşılık gelir `suggestion` . |
+| `default` | Kuralın varsayılan önem derecesi kullanılır. Her .NET sürümü için varsayılan önem dereceleri, [Roslyn-çözümleyiciler](https://github.com/dotnet/roslyn-analyzers/blob/main/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)deposunda listelenmiştir. Bu tabloda, "devre dışı" karşılık gelir `none` , "Hidden" öğesine karşılık gelir `silent` ve "bilgi" öğesine karşılık gelir `suggestion` . |
 
 > [!TIP]
 > Visual Studio 'da kural oluşturma işlemlerinin nasıl yapılacağı hakkında bilgi için bkz. [önem düzeyleri](/visualstudio/ide/editorconfig-language-conventions#severity-levels).
@@ -93,7 +93,7 @@ dotnet_analyzer_diagnostic.severity = <severity value>
 ```
 
 > [!IMPORTANT]
-> Bir kural *kategorisi* ya da *Tüm* kurallar için tek bir girdiyle birden çok kural için önem düzeyini yapılandırdığınızda, önem derecesi yalnızca [Varsayılan olarak etkinleştirilen](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)kurallar için geçerlidir. Varsayılan olarak devre dışı bırakılan kuralları etkinleştirmek için şunlardan birini yapmanız gerekir:
+> Bir kural *kategorisi* ya da *Tüm* kurallar için tek bir girdiyle birden çok kural için önem düzeyini yapılandırdığınızda, önem derecesi yalnızca [Varsayılan olarak etkinleştirilen](https://github.com/dotnet/roslyn-analyzers/blob/main/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)kurallar için geçerlidir. Varsayılan olarak devre dışı bırakılan kuralları etkinleştirmek için şunlardan birini yapmanız gerekir:
 >
 > - `dotnet_diagnostic.<rule ID>.severity = <severity>`Her kural için bir açık yapılandırma girişi ekleyin.
 > - ' İ ayarlayarak *Tüm* kuralları [\<AnalysisMode>](../../core/project-sdk/msbuild-props.md#analysismode) etkinleştirin `AllEnabledByDefault` .

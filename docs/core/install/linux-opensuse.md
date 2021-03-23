@@ -4,12 +4,12 @@ description: OpenSUSE üzerinde .NET SDK ve .NET çalışma zamanı yüklemek i�
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 7a519f19f708e1f12af1e9715bad4f38a607f9c3
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: d238054a217a7295594db856d5497982572af377
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970817"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873958"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-opensuse"></a>OpenSUSE 'e .NET SDK veya .NET çalışma zamanı yüklemesi
 
@@ -33,8 +33,8 @@ Aşağıdaki tabloda, openSUSE 15 üzerinde şu anda desteklenen .NET sürümler
 
 Aşağıdaki .NET sürümleri artık desteklenmemektedir. Bunlara yönelik İndirilenler hala yayımlandı olarak kalmaya devam eder:
 
-- 3,0
-- 2.2
+- 3.0
+- 2,2
 - 2.0
 
 ## <a name="remove-preview-versions"></a>Önizleme sürümlerini Kaldır
@@ -81,7 +81,7 @@ Bir paket yöneticisi ile yüklediğinizde, bu kitaplıklar sizin için yükleni
 
 Hedef çalışma zamanı ortamının OpenSSL sürümü 1,1 veya daha yeniyse, **COMPAT-openssl10** yüklemeniz gerekir.
 
-Bağımlılıklar hakkında daha fazla bilgi için bkz. [kendi Içindeki Linux uygulamaları](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md).
+Bağımlılıklar hakkında daha fazla bilgi için bkz. [kendi Içindeki Linux uygulamaları](https://github.com/dotnet/core/blob/main/Documentation/self-contained-linux-apps.md).
 
 *System. Drawing. Common* derlemesini kullanan .NET uygulamaları için aşağıdaki bağımlılığa de ihtiyacınız olacaktır:
 

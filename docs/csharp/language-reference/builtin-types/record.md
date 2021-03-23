@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - record keyword [C#]
 - record type [C#]
-ms.openlocfilehash: 10fe7bcc1f3239b7a6bde0abcac41b177467cf0a
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 57474caf0f1106380e52da7fcb7608b62a0f23e5
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102260092"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872658"
 ---
 # <a name="records-c-reference"></a>Kayıtlar (C# Başvurusu)
 
@@ -128,7 +128,7 @@ Kayıt türlerinde <xref:System.Object.ToString%2A> , ortak özelliklerin ve ala
 Başvuru türleri için, özelliğin başvurduğu nesnenin tür adı, özellik değeri yerine görüntülenir. Aşağıdaki örnekte, dizi bir başvuru türüdür, bu nedenle `System.String[]` gerçek dizi öğesi değerleri yerine görüntülenir:
 
 ```
-Person { FirstName = Nancy, LastName = Davolio, ChildNames = System.String[] } 
+Person { FirstName = Nancy, LastName = Davolio, ChildNames = System.String[] }
 ```
 
 Bu özelliği uygulamak için, derleyici sanal bir `PrintMembers` yöntemi ve bir <xref:System.Object.ToString%2A> geçersiz kılmayı birleştirir.

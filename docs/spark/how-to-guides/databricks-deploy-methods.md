@@ -4,12 +4,12 @@ description: Spark-gönder ve ayarla jar kullanarak Databricks 'e yönelik bir .
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 4d37383ccb3c9b311e0fbd0ada195ac20113e505
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 39be961ad67da3f8593cb98e1bad8df354f28893
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688208"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875583"
 ---
 # <a name="submit-a-net-for-apache-spark-job-to-databricks"></a>Databricks 'e Apache Spark iş için .NET gönderme
 
@@ -71,7 +71,7 @@ Alternatif olarak, databricks 'e Apache Spark işleri için .NET göndermek üze
     databricks fs cp <assembly>.dll dbfs:/apps/dependencies
     ```
 
-    [DB-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) ' deki uygulama bağımlılıkları bölümünü açıklama olarak değiştirin ve uygulama bağımlılıkları yolunu işaret edin. Ardından, güncelleştirilmiş *DB-init.sh* , kümenize yükleyin:
+    [DB-init.sh](https://github.com/dotnet/spark/blob/main/deployment/db-init.sh) ' deki uygulama bağımlılıkları bölümünü açıklama olarak değiştirin ve uygulama bağımlılıkları yolunu işaret edin. Ardından, güncelleştirilmiş *DB-init.sh* , kümenize yükleyin:
 
     ```console
     cd <path-to-db-init-and-install-worker>

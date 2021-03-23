@@ -4,12 +4,12 @@ description: .NET Framework projelerine yönelik Hizmet Başvurusu Ekle benzer �
 author: dasetser
 ms.date: 10/29/2019
 ms.custom: mvc
-ms.openlocfilehash: 1f7b1831a956553dbef26f58f4f257c2f3914ede
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: fcb7695c904e80d3fcb5ea68cba7ea198b3905f3
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400610"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872983"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>WCF Web hizmeti başvuru sağlayıcısı aracını kullanma
 
@@ -18,7 +18,7 @@ Yıllarca, birçok Visual Studio geliştiricisi, .NET Framework projeleri Web hi
 > [!IMPORTANT]
 > Yalnızca güvenilir bir kaynaktan hizmetlere başvurmanız gerekir. Güvenilmeyen bir kaynaktan başvuruları eklemek güvenliği tehlikeye atabilir.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - [Visual Studio 2017 sürüm 15,5](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) veya sonraki sürümleri
 
@@ -39,7 +39,7 @@ Yıllarca, birçok Visual Studio geliştiricisi, .NET Framework projeleri Web hi
 
     ![.NET Core için Visual Studio bağlı hizmetler sekmesi](./media/wcf-web-service-reference-guide/wcfcs-ConnectedServicesPage.png)
 
-2. **Bağlı hizmetler** sayfasında, **Microsoft WCF Web Service Reference Provider** ' ye tıklayın. Bu, **WCF Web hizmeti başvurusunu yapılandırma** Sihirbazı 'nı getirir:
+2. **Bağlı hizmetler** sayfasında, **Microsoft WCF Web Service Reference Provider**' ye tıklayın. Bu, **WCF Web hizmeti başvurusunu yapılandırma** Sihirbazı 'nı getirir:
 
     ![.NET Core için Visual Studio hizmeti uç noktası sekmesi](./media/wcf-web-service-reference-guide/wcfcs-ServiceEndpointPage.png)
 
@@ -69,7 +69,7 @@ Yıllarca, birçok Visual Studio geliştiricisi, .NET Framework projeleri Web hi
 İlerleme durumunu görüntülerken araç:
 
 - WCF hizmetinden meta verileri indirir.
-- Hizmet başvuru kodunu *Reference.cs* adlı bir dosyada oluşturur ve **bağlı hizmetler** düğümü altında projenize ekler.
+- , *Başvuru. cs* adlı bir dosyada hizmet başvuru kodunu üretir ve **bağlı hizmetler** düğümü altında projenize ekler.
 - Hedef platformda derlemek ve çalıştırmak için gereken NuGet paket başvuruları ile proje dosyasını (. csproj) güncelleştirir.
 
 ![Visual Studio Ilerleme penceresi](./media/wcf-web-service-reference-guide/wcfcs-ProgressWindow.png)
@@ -80,7 +80,7 @@ Bu işlemler tamamlandığında, oluşturulan WCF istemci türünün bir örneğ
 
 - [Windows Communication Foundation uygulamalarla çalışmaya başlama](../../framework/wcf/getting-started-tutorial.md)
 - [Visual Studio 'da Windows Communication Foundation Hizmetleri ve WCF veri Hizmetleri](/visualstudio/data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio)
-- [.NET Core 'da desteklenen WCF özellikleri](https://github.com/dotnet/wcf/blob/master/release-notes/SupportedFeatures-v2.1.0.md)
+- [.NET Core 'da desteklenen WCF özellikleri](https://github.com/dotnet/wcf/blob/main/release-notes/SupportedFeatures-v2.1.0.md)
 
 ## <a name="feedback--questions"></a>Geri bildirim & soruları
 
@@ -88,4 +88,4 @@ Bu işlemler tamamlandığında, oluşturulan WCF istemci türünün bir örneğ
 
 ## <a name="release-notes"></a>Sürüm notları
 
-- Bilinen sorunlar da dahil olmak üzere, güncelleştirilmiş sürüm bilgileri için [sürüm notlarına](https://github.com/dotnet/wcf/blob/master/release-notes/WCF-Web-Service-Reference-notes.md) bakın.
+- Bilinen sorunlar da dahil olmak üzere, güncelleştirilmiş sürüm bilgileri için [sürüm notlarına](https://github.com/dotnet/wcf/blob/main/release-notes/WCF-Web-Service-Reference-notes.md) bakın.

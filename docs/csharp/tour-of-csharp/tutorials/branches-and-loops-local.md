@@ -2,12 +2,12 @@
 title: Dallar ve döngüler-C# öğreticisine giriş
 description: Dallar ve döngüler hakkında bu öğreticide, ifadeleri sürekli olarak yürütmek için koşullu dalları ve döngüleri destekleyen dil sözdizimini araştırmak üzere C# kodu yazarsınız.
 ms.date: 02/05/2021
-ms.openlocfilehash: c609286f0c60432f9df7c1174f6fda699e2d0fbc
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: cc1c5457738ca0f7d4756811adec4a7bd57cb009
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100626832"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872502"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Dal ve döngü deyimleri ile koşullu mantık öğrenin
 
@@ -25,7 +25,7 @@ Dallar adlı bir dizin oluşturun *-öğretici*. Geçerli dizini yapın ve şu k
 dotnet new console -n BranchesAndLoops -o .
 ```
 
-Bu komut geçerli dizinde yeni bir .NET konsol uygulaması oluşturur. *Program.cs* 'i en sevdiğiniz düzenleyicide açın ve içeriği şu kodla değiştirin:
+Bu komut geçerli dizinde yeni bir .NET konsol uygulaması oluşturur. *Program. cs* ' yi en sevdiğiniz düzenleyicide açın ve içeriği şu kodla değiştirin:
 
 ```csharp
 using System;
@@ -278,7 +278,7 @@ C# dilinde `if` deyimini ve döngü yapılarını gördüğünüze göre şimdi 
 - `if` deyimi bir sayının toplama dahil edilip edilmemesi gerektiğini görmeniz için size koşulu verir.
 - `for` döngüsü 1 ile 20 arasındaki tüm sayılar için bir dizi adımı yinelemenize yardımcı olur.
 
-Kendiniz deneyin. Daha sonra başarılı olup olmadığınıza bakın. Yanıt için 63 almalısınız. [GitHub 'da tamamlanan kodu görüntüleyerek](https://github.com/dotnet/samples/tree/master/csharp/branches-quickstart/Program.cs#L46-L54)olası bir yanıt görebilirsiniz.
+Kendiniz deneyin. Daha sonra başarılı olup olmadığınıza bakın. Yanıt için 63 almalısınız. [GitHub 'da tamamlanan kodu görüntüleyerek](https://github.com/dotnet/samples/tree/main/csharp/branches-quickstart/Program.cs#L46-L54)olası bir yanıt görebilirsiniz.
 
 "Dallar ve döngüler" öğreticisini tamamladınız.
 

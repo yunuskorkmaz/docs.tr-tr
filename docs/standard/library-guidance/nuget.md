@@ -2,12 +2,12 @@
 title: NuGet ve .NET kitaplıkları
 description: .NET kitaplıkları için NuGet ile paketleme için en iyi yöntem önerileri.
 ms.date: 01/15/2019
-ms.openlocfilehash: 14d65ae29a09f98e99b2cabd5d69cfc889df7d5e
-ms.sourcegitcommit: 38999dc0ec4f7c4404de5ce0951b64c55997d9ab
+ms.openlocfilehash: 251e5b10db7eab731133e157dc5ac2c95a6ef317
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99427054"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872450"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -95,7 +95,7 @@ Sembol dosyaları ( `*.pdb` ) derlemelerle birlikte .NET derleyicisi tarafından
 NuGet.org kendi [sembolleri sunucu deposunu](/nuget/create-packages/symbol-packages-snupkg#nugetorg-symbol-server)barındırır. Geliştiriciler, `https://symbols.nuget.org/download/symbols` [Visual Studio 'daki sembol kaynaklarına](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger)ekleyerek NuGet.org symbol sunucusunda yayınlanan sembolleri kullanabilir.
 
 > [!IMPORTANT]
-> NuGet.org symbol sunucusu yalnızca SDK stili projeler tarafından oluşturulan yeni [Taşınabilir sembol dosyalarını](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) ( `*.pdb` ) destekler.
+> NuGet.org symbol sunucusu yalnızca SDK stili projeler tarafından oluşturulan yeni [Taşınabilir sembol dosyalarını](https://github.com/dotnet/core/blob/main/Documentation/diagnostics/portable_pdb.md) ( `*.pdb` ) destekler.
 >
 > .NET kitaplığı 'nda hata ayıklarken NuGet.org symbol sunucusunu kullanmak için, geliştiriciler Visual Studio 2017 sürüm 15,9 veya üzeri bir sürüme sahip olmalıdır.
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - exceptions [.NET]
 - common language runtime, exceptions
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
-ms.openlocfilehash: c18482335947c8d24ba7ed6552bb78c70a0a054f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 3b64b9121cc784db7d76ff5501aedfd125d0002c
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828003"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876480"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>.NET 'te özel durumları işleme ve atma
 
@@ -67,4 +67,4 @@ Aşağıdaki tablo, bazı yaygın özel durumları, bunlara neden olabilecek ör
 - [Nasıl yapılır: Finally Bloklarını Kullanma](how-to-use-finally-blocks.md)
 - [COM Birlikte Çalışması Özel Durumlarını İşleme](handling-com-interop-exceptions.md)
 - [Özel Durumlar için En İyi Yöntemler](best-practices-for-exceptions.md)
-- [Çalışma zamanındaki özel durumları öğrenmek için her dev gerekir](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/exceptions.md)
+- [Çalışma zamanındaki özel durumları öğrenmek için her dev gerekir](https://github.com/dotnet/runtime/blob/main/docs/design/coreclr/botr/exceptions.md)

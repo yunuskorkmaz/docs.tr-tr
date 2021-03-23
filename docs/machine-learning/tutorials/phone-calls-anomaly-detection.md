@@ -4,12 +4,12 @@ description: Zaman serisi verileri için anomali algılama uygulaması oluşturm
 ms.date: 12/04/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 7edb84ae53f1da7903cf4b3f77d215206ffbf1ef
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 52ce0a60c91ef7a82f7ef1a0709701302b9e11d9
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259830"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874777"
 ---
 # <a name="tutorial-detect-anomalies-in-time-series-with-mlnet"></a>Öğretici: ML.NET ile zaman serisinde anomali algılama
 
@@ -22,13 +22,13 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > * Zaman serisi için dönemi algılama
 > * Süreli bir zaman serisi için anomali algılama
 
-Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/PhoneCallsAnomalyDetection) deposunda bulabilirsiniz.
+Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/PhoneCallsAnomalyDetection) deposunda bulabilirsiniz.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
 * [Visual Studio 2019 sürüm 16.7.8 veya üzeri](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ".NET Core platformlar arası geliştirme" iş yükü yüklendi.
 
-* [phone-calls.csv veri kümesi](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_PhoneCalls/SrEntireDetection/Data/phone-calls.csv).
+* [phone-calls.csv veri kümesi](https://github.com/dotnet/machinelearning-samples/blob/main/samples/csharp/getting-started/AnomalyDetection_PhoneCalls/SrEntireDetection/Data/phone-calls.csv).
 
 ## <a name="create-a-console-application"></a>Konsol uygulaması oluşturma
 
@@ -42,7 +42,7 @@ Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/sample
 
     Çözüm Gezgini, projenize sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin. Paket kaynağı olarak "nuget.org" öğesini seçin, gözden geçirme sekmesini seçin, **Microsoft.ml** araması yapın ve **yüklemeyi** seçin. **Değişiklikleri Önizle** Iletişim kutusunda **Tamam** düğmesini seçin ve ardından listelenen paketlerin lisans koşullarını kabul ediyorsanız **Lisans kabulü** iletişim kutusunda **kabul ediyorum** düğmesini seçin. **Microsoft. ml. TimeSeries** için bu adımları tekrarlayın.
 
-4. `using` *Program.cs* dosyanızın en üstüne aşağıdaki deyimleri ekleyin:
+4. Aşağıdaki `using` deyimlerini *program. cs* dosyanızın üst kısmına ekleyin:
 
     [!code-csharp[AddUsings](./snippets/phone-calls-anomaly-detection/csharp/Program.cs#AddUsings "Add necessary usings")]
 
@@ -50,7 +50,7 @@ Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/sample
 
 1. Veri kümesini indirin ve daha önce oluşturduğunuz *veri* klasörüne kaydedin:
 
-    [*phone-calls.csv*](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_PhoneCalls/SrEntireDetection/Data/phone-calls.csv) sağ tıklayıp "bağlantıyı (veya hedefi) farklı kaydet" i seçin.
+    [*phone-calls.csv*](https://raw.githubusercontent.com/dotnet/machinelearning-samples/main/samples/csharp/getting-started/AnomalyDetection_PhoneCalls/SrEntireDetection/Data/phone-calls.csv) sağ tıklayıp "bağlantıyı (veya hedefi) farklı kaydet" i seçin.
 
      \*. Csv dosyasını *veri* klasörüne kaydettiğinizden ya da başka bir yere kaydettikten sonra, \* . csv dosyasını *veri* klasörüne taşıdığınızdan emin olun.
 
@@ -76,17 +76,17 @@ Projenize yeni bir sınıf ekleyin:
 
 1. **Çözüm Gezgini**, projeye sağ tıklayın ve ardından **> yeni öğe Ekle**' yi seçin.
 
-2. **Yeni öğe Ekle iletişim kutusunda** **sınıf** ' ı seçin ve **ad** alanını *PhoneCallsData.cs* olarak değiştirin. Sonra **Ekle** düğmesini seçin.
+2. **Yeni öğe Ekle iletişim kutusunda** **sınıf** ' ı seçin ve **ad** alanını *phonecallsdata. cs* olarak değiştirin. Sonra **Ekle** düğmesini seçin.
 
-   *PhoneCallsData.cs* dosyası kod düzenleyicisinde açılır.
+   *Phonecallsdata. cs* dosyası kod düzenleyicisinde açılır.
 
-3. Aşağıdaki `using` ifadeyi *PhoneCallsData.cs* öğesinin en üstüne ekleyin:
+3. `using` *Phonecallsdata. cs*' nin en üstüne aşağıdaki ifadeyi ekleyin:
 
    ```csharp
    using Microsoft.ML.Data;
    ```
 
-4. Mevcut sınıf tanımını kaldırın ve iki sınıfa `PhoneCallsData` ve `PhoneCallsPrediction` *PhoneCallsData.cs* dosyasına sahip olan aşağıdaki kodu ekleyin:
+4. Mevcut sınıf tanımını kaldırın ve iki sınıfa `PhoneCallsData` ve `PhoneCallsPrediction` *Phonecallsdata. cs* dosyasına sahip olan aşağıdaki kodu ekleyin:
 
     [!code-csharp[DeclareTypes](./snippets/phone-calls-anomaly-detection/csharp/PhoneCallsData.cs#DeclareTypes "Declare data record types")]
 
@@ -249,7 +249,7 @@ Index   Data    Anomaly AnomalyScore    Mag     ExpectedValue   BoundaryUnit    
 
 Tebrikler! Artık bir dönemsel serisinde dönem ve anomali algılama için makine öğrenimi modellerini başarıyla oluşturdunuz.
 
-Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/PhoneCallsAnomalyDetection) deposunda bulabilirsiniz.
+Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/PhoneCallsAnomalyDetection) deposunda bulabilirsiniz.
 
 Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
 > [!div class="checklist"]
@@ -262,4 +262,4 @@ Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
 
 Güç tüketimi anomali algılama örneğini araştırmak için Machine Learning örnekleri GitHub deposuna göz atın.
 > [!div class="nextstepaction"]
-> [DotNet/machinöğrenim-Samples GitHub deposu](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/AnomalyDetection_PowerMeterReadings)
+> [DotNet/machinöğrenim-Samples GitHub deposu](https://github.com/dotnet/machinelearning-samples/tree/main/samples/csharp/getting-started/AnomalyDetection_PowerMeterReadings)

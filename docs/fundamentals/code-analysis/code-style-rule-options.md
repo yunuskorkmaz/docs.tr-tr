@@ -5,12 +5,12 @@ ms.date: 09/25/2020
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 5e4d80ec55f7fbcd01e364bb2b9e2b4f49f820d5
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: dce31e7b8976caecfc7fb1dd50da7f246093b1e4
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "96589826"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876688"
 ---
 # <a name="code-style-rule-options"></a>Kod stili kural seçenekleri
 
@@ -257,5 +257,5 @@ dotnet_naming_style.begins_with_i.capitalization = pascal_case
 - [Derlemede kod stili zorla](overview.md#code-style-analysis)
 - [Visual Studio 'da hızlı eylemler](/visualstudio/ide/quick-actions)
 - [Visual Studio 'da taşınabilir özel düzenleyici seçenekleri oluşturma](/visualstudio/ide/create-portable-custom-editor-options)
-- ["Roslyn". editorconfig dosyası .NET Compiler Platform](https://github.com/dotnet/roslyn/blob/master/.editorconfig)
-- [.NET Compiler Platform Runtime. editorconfig dosyası](https://github.com/dotnet/runtime/blob/master/.editorconfig)
+- ["Roslyn". editorconfig dosyası .NET Compiler Platform](https://github.com/dotnet/roslyn/blob/main/.editorconfig)
+- [.NET Runtime. editorconfig dosyası](https://github.com/dotnet/runtime/blob/main/.editorconfig)

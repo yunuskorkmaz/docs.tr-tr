@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - with expression [C#]
 - with operator [C#]
-ms.openlocfilehash: d7d3758c8c5da7859974b5b50b63d2a5ca16b24d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 24b9fdfcef6fe042204217323bb09c047c58296c
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95702231"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872541"
 ---
 # <a name="with-expression-c-reference"></a>With ifadesi (C# Başvurusu)
 
-C# 9,0 ve üzeri sürümlerde kullanılabilen bir `with` ifade, belirtilen özellikler ve alanlarla birlikte [kayıt](../../whats-new/csharp-9.md#record-types) işleneninin bir kopyasını oluşturur:
+C# 9,0 ve üzeri sürümlerde kullanılabilen bir `with` ifade, belirtilen özellikler ve alanlarla birlikte [kayıt](../builtin-types/record.md) işleneninin bir kopyasını oluşturur:
 
 :::code language="csharp" source="snippets/with-expression/BasicExample.cs" :::
 
@@ -45,3 +45,4 @@ Daha fazla bilgi için, [kayıtlar Özellik teklifi notunun](~/_csharplang/propo
 
 - [C# başvurusu](../index.md)
 - [C# işleçleri ve ifadeleri](index.md)
+- [Kayıtlar](../builtin-types/record.md)

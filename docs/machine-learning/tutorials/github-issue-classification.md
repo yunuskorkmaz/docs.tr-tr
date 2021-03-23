@@ -4,12 +4,12 @@ description: Birden çok Lass sınıflandırma senaryosunda ML.NET kullanarak bu
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: fa00306e80046097c1269533d3a3ca1e85f10288
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: dfc007f72fcd67f31139bc7fcbad93dde39d88fb
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679501"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875635"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-mlnet"></a>Öğretici: ML.NET ile birden çok Lass sınıflandırması kullanarak destek sorunlarını kategorilere ayırma
 
@@ -25,13 +25,13 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > * Eğitilen modelle birlikte tahmin edin
 > * Yüklü bir modelle dağıtım ve tahmin etme
 
-Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/GitHubIssueClassification) deposunda bulabilirsiniz.
+Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/GitHubIssueClassification) deposunda bulabilirsiniz.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
 * [Visual studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) veya üzeri ya da visual Studio 2017 sürüm 15,6 veya üzeri, ".NET Core platformlar arası geliştirme" iş yükü yüklendi.
-* [GitHub sorunları sekmeyle ayrılmış dosya (issues_train. TSV)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv).
-* [GitHub, test sekmeyle ayrılmış dosyası (issues_test. TSV) ile karşılaşır](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv).
+* [GitHub sorunları sekmeyle ayrılmış dosya (issues_train. TSV)](https://raw.githubusercontent.com/dotnet/samples/main/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv).
+* [GitHub, test sekmeyle ayrılmış dosyası (issues_test. TSV) ile karşılaşır](https://raw.githubusercontent.com/dotnet/samples/main/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv).
 
 ## <a name="create-a-console-application"></a>Konsol uygulaması oluşturma
 
@@ -41,13 +41,13 @@ Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/sample
 
 2. Veri kümesi dosyalarınızı kaydetmek için projenizde *veri* adlı bir dizin oluşturun:
 
-    **Çözüm Gezgini**, projenize sağ tıklayın ve **Add**  >  **Yeni klasör**Ekle ' yi seçin. "Data" yazın ve ENTER tuşuna basın.
+    **Çözüm Gezgini**, projenize sağ tıklayın ve   >  **Yeni klasör** Ekle ' yi seçin. "Data" yazın ve ENTER tuşuna basın.
 
 3. Modelinize kaydetmek için projenizde *modeller* adlı bir dizin oluşturun:
 
-    **Çözüm Gezgini**, projenize sağ tıklayın ve **Add**  >  **Yeni klasör**Ekle ' yi seçin. "Modeller" yazın ve ENTER tuşuna basın.
+    **Çözüm Gezgini**, projenize sağ tıklayın ve   >  **Yeni klasör** Ekle ' yi seçin. "Modeller" yazın ve ENTER tuşuna basın.
 
-4. **Microsoft.ml NuGet paketini**yükler:
+4. **Microsoft.ml NuGet paketini** yükler:
 
     [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
@@ -55,13 +55,13 @@ Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/sample
 
 ### <a name="prepare-your-data"></a>Verilerinizi hazırlama
 
-1. [İssues_train. tsv](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv) ve [issues_test. tsv](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv) veri kümelerini indirin ve daha önce oluşturulan *veri* klasörüne kaydedin. Makine öğrenimi modelini ve ikincisini gösteren ilk veri kümesi, modelinizin ne kadar doğru olduğunu değerlendirmek için kullanılabilir.
+1. [İssues_train. tsv](https://raw.githubusercontent.com/dotnet/samples/main/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv) ve [issues_test. tsv](https://raw.githubusercontent.com/dotnet/samples/main/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv) veri kümelerini indirin ve daha önce oluşturulan *veri* klasörüne kaydedin. Makine öğrenimi modelini ve ikincisini gösteren ilk veri kümesi, modelinizin ne kadar doğru olduğunu değerlendirmek için kullanılabilir.
 
-2. Çözüm Gezgini,. tsv dosyalarının her birine sağ tıklayın \* ve **Özellikler**' i seçin. **Gelişmiş**' in altında, **Çıkış Dizinine Kopyala** değerini **daha yeniyse kopyala**olarak değiştirin.
+2. Çözüm Gezgini,. tsv dosyalarının her birine sağ tıklayın \* ve **Özellikler**' i seçin. **Gelişmiş**' in altında, **Çıkış Dizinine Kopyala** değerini **daha yeniyse kopyala** olarak değiştirin.
 
 ### <a name="create-classes-and-define-paths"></a>Sınıf oluşturma ve yollar tanımlama
 
-Aşağıdaki ek `using` deyimlerini *program.cs* dosyasının en üstüne ekleyin:
+Aşağıdaki ek `using` deyimlerini *program. cs* dosyasının en üstüne ekleyin:
 
 [!code-csharp[AddUsings](./snippets/github-issue-classification/csharp/Program.cs#AddUsings)]
 
@@ -80,15 +80,15 @@ Aşağıdaki kodu, `Main` Bu yolları ve diğer değişkenleri belirtmek için y
 
 Giriş verileriniz ve tahminlerinizi için bazı sınıflar oluşturun. Projenize yeni bir sınıf ekleyin:
 
-1. **Çözüm Gezgini**, projeye sağ tıklayın ve ardından **Add**  >  **Yeni öğe**Ekle ' yi seçin.
+1. **Çözüm Gezgini**, projeye sağ tıklayın ve ardından   >  **Yeni öğe** Ekle ' yi seçin.
 
-1. **Yeni öğe Ekle** Iletişim kutusunda **sınıf** ' ı seçin ve **ad** alanını *GitHubIssueData.cs*olarak değiştirin. Sonra **Ekle** düğmesini seçin.
+1. **Yeni öğe Ekle** Iletişim kutusunda **sınıf** ' ı seçin ve **ad** alanını *githubıssuedata. cs* olarak değiştirin. Sonra **Ekle** düğmesini seçin.
 
-    *GitHubIssueData.cs* dosyası kod düzenleyicisinde açılır. Aşağıdaki `using` ifadeyi *GitHubIssueData.cs*öğesinin en üstüne ekleyin:
+    *Githubıssuedata. cs* dosyası kod düzenleyicisinde açılır. `using` *Githubıssuedata. cs*' nin üst kısmına aşağıdaki ifadeyi ekleyin:
 
 [!code-csharp[AddUsings](./snippets/github-issue-classification/csharp/GitHubIssueData.cs#AddUsings)]
 
-Mevcut sınıf tanımını kaldırın ve iki sınıfa `GitHubIssue` ve `IssuePrediction` *GitHubIssueData.cs* dosyasına sahip olan aşağıdaki kodu ekleyin:
+Mevcut sınıf tanımını kaldırın ve iki sınıfa sahip olan aşağıdaki kodu `GitHubIssue` ve `IssuePrediction` *Githubıssuedata. cs* dosyasına ekleyin:
 
 [!code-csharp[DeclareGlobalVariables](./snippets/github-issue-classification/csharp/GitHubIssueData.cs#DeclareTypes)]
 
@@ -267,7 +267,7 @@ Daha önce eğitim veri kümesiyle yaptığınız gibi, yöntemine aşağıdaki 
 
 [Değerlendir ()](xref:Microsoft.ML.MulticlassClassificationCatalog.Evaluate%2A) yöntemi, belirtilen veri kümesini kullanarak model için kalite ölçümlerini hesaplar. <xref:Microsoft.ML.Data.MulticlassClassificationMetrics>Birden çok Lass Classification değerlendiricileri tarafından hesaplanan genel ölçümleri içeren bir nesne döndürür.
 Modelin kalitesini belirleme ölçümlerini göstermek için önce bunları almanız gerekir.
-[Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) `_trainedModel` Özellikleri girmek ve tahmin getirmeleri için Machine Learning genel değişkeninin (bir [ıranseski](xref:Microsoft.ML.ITransformer)) Transform () yönteminin kullanımına dikkat edin. Aşağıdaki kodu `Evaluate` yöntemine sonraki satır olarak ekleyin:
+[](xref:Microsoft.ML.ITransformer.Transform%2A) `_trainedModel` Özellikleri girmek ve tahmin getirmeleri için Machine Learning genel değişkeninin (bir [ıranseski](xref:Microsoft.ML.ITransformer)) Transform () yönteminin kullanımına dikkat edin. Aşağıdaki kodu `Evaluate` yöntemine sonraki satır olarak ekleyin:
 
 [!code-csharp[Evaluate](./snippets/github-issue-classification/csharp/Program.cs#Evaluate)]
 
@@ -373,7 +373,7 @@ Sonuçlarınız aşağıdakine benzer olmalıdır. İşlem hattı sırasında il
 =============== Single Prediction - Result: area-System.Data ===============
 ```
 
-Tebrikler! Artık bir GitHub sorunu için bir alan etiketini sınıflandırmak ve tahmin etmek üzere bir makine öğrenimi modeli oluşturdunuz. Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/GitHubIssueClassification) deposunda bulabilirsiniz.
+Tebrikler! Artık bir GitHub sorunu için bir alan etiketini sınıflandırmak ve tahmin etmek üzere bir makine öğrenimi modeli oluşturdunuz. Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/GitHubIssueClassification) deposunda bulabilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

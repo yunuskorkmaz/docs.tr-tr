@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 15786e6c659a29c5089eee9c8ac365c55b22f7fb
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: c690f2f1dcdee9d34a2a82435c3562fc7dfae04a
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99531565"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104879747"
 ---
 | .NET Standard              | [1.0]  | [1.1]  | [1.2] | [1.3] | [1.4] | [1,5]              | [1.6]              | [2.0]               | [2.1] |
 |----------------------------|--------|--------|-------|-------|-------|--------------------|--------------------|---------------------|---------------------
@@ -18,7 +18,7 @@ ms.locfileid: "99531565"
 | Evrensel Windows Platformu | 10.0   | 10.0   | 10.0  | 10.0  | 10.0  | 10.0.16299         | 10.0.16299         | 10.0.16299          | TBD |
 | Unity                      | 2018,1 | 2018,1 | 2018,1| 2018,1| 2018,1| 2018,1             |  2018,1            | 2018,1              | TBD |
 
-<sup>1 .NET Framework için listelenen sürümler .NET Core 2,0 SDK ve sonraki araç sürümleri için geçerlidir. Daha eski sürümler .NET Standard 1,5 ve üzeri için farklı bir eşleme kullandı. Visual Studio 2017 ' e veya sonraki bir sürüme yükseltirsiniz, [Visual studio 2015 için .NET Core araçları için araç araçlarını indirebilirsiniz](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md) .</sup>
+<sup>1 .NET Framework için listelenen sürümler .NET Core 2,0 SDK ve sonraki araç sürümleri için geçerlidir. Daha eski sürümler .NET Standard 1,5 ve üzeri için farklı bir eşleme kullandı. Visual Studio 2017 ' e veya sonraki bir sürüme yükseltirsiniz, [Visual studio 2015 için .NET Core araçları için araç araçlarını indirebilirsiniz](https://github.com/dotnet/core/blob/main/release-notes/download-archive.md) .</sup>
 
 <sup>2 burada listelenen sürümler, NuGet 'in belirli bir .NET Standard kitaplığının uygulanıp uygulanmadığını belirlemede kullandığı kuralları temsil eder. NuGet, 4.6.1 1,5 ile 2,0 arasındaki destek .NET Standard .NET Framework düşünüyordu. bu sürümler için .NET Framework 4.6.1 projelerinden oluşturulan .NET Standard kitaplıkları kullanan birkaç sorun vardır. Bu tür kitaplıkları kullanması gereken .NET Framework projeleri için, projeyi .NET Framework 4.7.2 veya üstünü hedefleyecek şekilde yükseltmenizi öneririz.</sup>
 

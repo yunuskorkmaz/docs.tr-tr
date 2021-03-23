@@ -2,12 +2,12 @@
 title: DotNet-döküm Tanılama aracı-.NET CLı
 description: Yerel hata ayıklayıcı olmadan Windows ve Linux dökümlerinin toplanması ve çözümlenmesi için DotNet-dump CLı aracını yüklemeyi ve kullanmayı öğrenin.
 ms.date: 11/17/2020
-ms.openlocfilehash: 84b3796f4ee92880e6d432df606a6addfd2471b0
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 6e9edbc8075691784028f3293750c92fe53d3782
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189810"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874179"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>Döküm toplama ve çözümleme yardımcı programı (DotNet-dump)
 
@@ -47,7 +47,7 @@ ms.locfileid: "98189810"
 dotnet-dump [-h|--help] [--version] <command>
 ```
 
-## <a name="description"></a>Description
+## <a name="description"></a>Açıklama
 
 `dotnet-dump`Genel araç, Linux üzerinde yer alan herhangi bir yerel hata ayıklayıcı olmadan Windows ve Linux dökümlerinin toplanması ve çözümlenmesi için bir yoldur `lldb` . Bu araç alp Linux gibi tam olarak çalışan `lldb` kullanılabilir olmayan platformlarda önemlidir. `dotnet-dump`Araç, çökmeleri ve çöp toplayıcıyı (GC) çözümlemek IÇIN sos komutları çalıştırmanızı sağlar, ancak yerel yığın çerçevelerini görüntüleme gibi şeyler desteklenmez.
 
@@ -189,7 +189,7 @@ dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 
 ## <a name="using-dotnet-dump"></a>`dotnet-dump` kullanma
 
-İlk adım bir döküm toplamaktır. Bir temel döküm oluşturulmuşsa bu adım atlanabilir. İşletim sistemi veya .NET Core çalışma zamanının yerleşik [döküm oluşturma özelliği](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md) , her biri çekirdek dökümler oluşturabilir.
+İlk adım bir döküm toplamaktır. Bir temel döküm oluşturulmuşsa bu adım atlanabilir. İşletim sistemi veya .NET Core çalışma zamanının yerleşik [döküm oluşturma özelliği](https://github.com/dotnet/runtime/blob/main/docs/design/coreclr/botr/xplat-minidump-generation.md) , her biri çekirdek dökümler oluşturabilir.
 
 ```console
 $ dotnet-dump collect --process-id 1902

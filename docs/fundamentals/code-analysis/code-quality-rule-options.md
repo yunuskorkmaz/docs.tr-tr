@@ -5,12 +5,12 @@ ms.date: 09/24/2020
 ms.topic: conceptual
 no-loc:
 - EditorConfig
-ms.openlocfilehash: 2721d4e8fda6012b304637477c3618ee0ff2ea18
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 1821cb7daf70a642e3fb35cebae144b097ba115c
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99752073"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876701"
 ---
 # <a name="code-quality-rule-configuration-options"></a>Kod kalitesi kuralı yapılandırma seçenekleri
 
@@ -46,17 +46,17 @@ Her bir iyileştirme seçeneği, kural kategorisi (örneğin, güvenlik veya tas
 
 ## <a name="options"></a>Seçenekler
 
-Bu bölümde, kullanılabilir seçeneklerin bazıları listelenir. Kullanılabilir seçeneklerin tam listesini görmek için bkz. [çözümleyici yapılandırması](https://github.com/dotnet/roslyn-analyzers/blob/master/docs/Analyzer%20Configuration.md).
+Bu bölümde, kullanılabilir seçeneklerin bazıları listelenir. Kullanılabilir seçeneklerin tam listesini görmek için bkz. [çözümleyici yapılandırması](https://github.com/dotnet/roslyn-analyzers/blob/main/docs/Analyzer%20Configuration.md).
 
 ### <a name="api_surface"></a>api_surface
 
-| Description | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
+| Açıklama | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
 | - | - | - | - |
 | API yüzeyinin analiz edileceği bölüm | `public`<br/>`internal` veya `friend`<br/>`private`<br/>`all`<br/><br/>Birden çok değeri virgülle ayırın (,) | `public` | [CA1000](quality-rules/ca1000.md) [CA1003](quality-rules/ca1003.md) [CA1008](quality-rules/ca1008.md) [CA1010](quality-rules/ca1010.md)<br/>[CA1012](quality-rules/ca1012.md) [CA1024](quality-rules/ca1024.md) [CA1027](quality-rules/ca1027.md) [CA1028](quality-rules/ca1028.md)<br/>[CA1030](quality-rules/ca1030.md) [CA1036](quality-rules/ca1036.md) [CA1040](quality-rules/ca1040.md) [CA1041](quality-rules/ca1041.md)<br/>[CA1043](quality-rules/ca1043.md) [CA1044](quality-rules/ca1044.md) [CA1051](quality-rules/ca1051.md) [CA1052](quality-rules/ca1052.md)<br/>[CA1054](quality-rules/ca1054.md) [CA1055](quality-rules/ca1055.md) [CA1056](quality-rules/ca1056.md) [CA1058](quality-rules/ca1058.md)<br/>[CA1063](quality-rules/ca1063.md) [CA1708](quality-rules/ca1708.md) [CA1710](quality-rules/ca1710.md) [CA1711](quality-rules/ca1711.md)<br/>[CA1714](quality-rules/ca1714.md) [CA1715](quality-rules/ca1715.md) [CA1716](quality-rules/ca1716.md) [CA1717](quality-rules/ca1717.md)<br/>[CA1720](quality-rules/ca1720.md) [CA1721](quality-rules/ca1721.md) [CA1725](quality-rules/ca1725.md) [CA1801](quality-rules/ca1801.md)<br/>[CA1802](quality-rules/ca1802.md) [CA1815](quality-rules/ca1815.md) [CA1819](quality-rules/ca1819.md) [CA2217](quality-rules/ca2217.md)<br/>[CA2225](quality-rules/ca2225.md) [CA2226](quality-rules/ca2226.md) [CA2231](quality-rules/ca2231.md) [CA2234](quality-rules/ca2234.md)<br/>|
 
 ### <a name="exclude_async_void_methods"></a>exclude_async_void_methods
 
-| Description | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
+| Açıklama | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
 | - | - | - | - |
 | Değer döndürmeyen zaman uyumsuz yöntemlerin yoksayılıp yoksayılmayacağı | `true`<br/>`false` | `false` | [CA2007](quality-rules/ca2007.md) |
 
@@ -65,7 +65,7 @@ Bu bölümde, kullanılabilir seçeneklerin bazıları listelenir. Kullanılabil
 
 ### <a name="exclude_single_letter_type_parameters"></a>exclude_single_letter_type_parameters
 
-| Description | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
+| Açıklama | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
 | - | - | - | - |
 | Kuraldan tek karakterlik [tür parametrelerinin](../../csharp/programming-guide/generics/generic-type-parameters.md) dışlanıp dışlanmayacağı `S` , örneğin `Collection<S>` | `true`<br/>`false` | `false` | [CA1715](quality-rules/ca1715.md) |
 
@@ -74,13 +74,13 @@ Bu bölümde, kullanılabilir seçeneklerin bazıları listelenir. Kullanılabil
 
 ### <a name="output_kind"></a>output_kind
 
-| Description | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
+| Açıklama | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
 | - | - | - | - |
 | Bu tür derlemeyi üreten bir projedeki kodun analiz edilmesi gerektiğini belirtir | Sabit listesinin bir veya daha fazla alanı <xref:Microsoft.CodeAnalysis.OutputKind><br/><br/>Birden çok değeri virgülle ayırın (,) | Tüm çıktı türleri | [CA2007](quality-rules/ca2007.md) |
 
 ### <a name="required_modifiers"></a>required_modifiers
 
-| Description | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
+| Açıklama | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
 | - | - | - | - |
 | Çözümlenmesi gereken API 'Ler için gerekli değiştiriciler belirtir | Aşağıdaki izin verilen değiştirici tablosundan bir veya daha fazla değer<br/><br/>Birden çok değeri virgülle ayırın (,) | Her kurala bağlıdır | [CA1802](quality-rules/ca1802.md) |
 
@@ -99,36 +99,36 @@ Bu bölümde, kullanılabilir seçeneklerin bazıları listelenir. Kullanılabil
 
 ### <a name="exclude_extension_method_this_parameter"></a>exclude_extension_method_this_parameter
 
-| Description | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
+| Açıklama | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
 | - | - | - | - |
 | Uzantı yöntemlerinin parametresi için analizin atlanıp engellenip engellenmeyeceğini belirtir `this` | `true`<br/>`false` | `false` | [CA1062](quality-rules/ca1062.md) |
 
 ### <a name="null_check_validation_methods"></a>null_check_validation_methods
 
-| Description | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
+| Açıklama | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
 | - | - | - | - |
-| Metoda geçirilen bağımsız değişkenleri doğrulayan null denetim doğrulama yöntemlerinin adları null değil | İzin verilen yöntem adı biçimleri (ile ayrılmış `|` ):<br/> -Yalnızca Yöntem adı (kapsayan tür veya ad alanından bağımsız olarak ada sahip tüm yöntemler dahil)<br/> -Simgenin [belge kimliği biçimindeki](https://github.com/dotnet/csharplang/blob/master/spec/documentation-comments.md#id-string-format), isteğe bağlı bir ön ek olarak nitelenmiş adlar `M:` | Yok | [CA1062](quality-rules/ca1062.md) |
+| Metoda geçirilen bağımsız değişkenleri doğrulayan null denetim doğrulama yöntemlerinin adları null değil | İzin verilen yöntem adı biçimleri (ile ayrılmış `|` ):<br/> -Yalnızca Yöntem adı (kapsayan tür veya ad alanından bağımsız olarak ada sahip tüm yöntemler dahil)<br/> -Simgenin [belge kimliği biçimindeki](https://github.com/dotnet/csharplang/blob/main/spec/documentation-comments.md#id-string-format), isteğe bağlı bir ön ek olarak nitelenmiş adlar `M:` | Yok | [CA1062](quality-rules/ca1062.md) |
 
 ### <a name="additional_string_formatting_methods"></a>additional_string_formatting_methods
 
-| Description | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
+| Açıklama | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
 | - | - | - | - |
 | Ek dize biçimlendirme yöntemlerinin adları | İzin verilen yöntem adı biçimleri (ile ayrılmış `|` ):<br/> -Yalnızca Yöntem adı (kapsayan tür veya ad alanından bağımsız olarak ada sahip tüm yöntemler dahil)<br/> -Simgenin [belge kimliği biçimindeki](/dotnet/csharp/language-reference/language-specification/documentation-comments#id-string-format), isteğe bağlı bir ön ek olarak nitelenmiş adlar `M:` | Yok | [CA2241](quality-rules/ca2241.md) |
 
 ### <a name="excluded_type_names_with_derived_types"></a>excluded_type_names_with_derived_types
 
-| Description | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
+| Açıklama | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
 | - | - | - | - |
 | Tür ve türetilmiş tüm türleri analiz için hariç tutulan türlerin adları | İzin verilen sembol adı biçimleri (ile ayrılmış `|` ):<br/> -Yalnızca tür adı (kapsayan tür veya ad alanından bağımsız olarak ada sahip tüm türleri içerir)<br/> -Simgenin [belge kimliği biçimindeki](/dotnet/csharp/language-reference/language-specification/documentation-comments#id-string-format), isteğe bağlı bir ön ek olarak nitelenmiş adlar `T:` | Yok | [CA1303](quality-rules/ca1303.md) |
 
 ### <a name="excluded_symbol_names"></a>excluded_symbol_names
 
-| Description | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
+| Açıklama | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
 | - | - | - | - |
 | Analiz için dışlanan simgelerin adları | İzin verilen sembol adı biçimleri (ile ayrılmış `|` ):<br/> -Yalnızca sembol adı (kapsayan tür veya ad alanından bağımsız olarak ada sahip tüm semboller dahil)<br/> -Simgenin [belge kimliği biçiminde](/dotnet/csharp/language-reference/language-specification/documentation-comments#id-string-format)tam nitelikli adlar. Her sembol adı, `M:` metotlar için önek, `T:` türlerin öneki ve `N:` ad alanları için önek gibi bir sembol türü öneki gerektirir.<br/> - `.ctor` oluşturucular ve `.cctor` statik oluşturucular için | Yok | [CA1062](quality-rules/ca1062.md) [CA1303](quality-rules/ca1303.md) [CA2000](quality-rules/ca2000.md) [CA2100](quality-rules/ca2100.md) [CA2301](quality-rules/ca2301.md) [CA2302](quality-rules/ca2302.md)<br/>[CA2311](quality-rules/ca2311.md) [CA2312](quality-rules/ca2312.md) [CA2321](quality-rules/ca2321.md) [CA2322](quality-rules/ca2322.md) [CA2327](quality-rules/ca2327.md) [CA2328](quality-rules/ca2328.md)<br/>[CA2329](quality-rules/ca2329.md) [CA2330](quality-rules/ca2330.md) [CA3001](quality-rules/ca3001.md) [CA3002](quality-rules/ca3002.md) [CA3003](quality-rules/ca3003.md) [CA3004](quality-rules/ca3004.md)<br/>[CA3005](quality-rules/ca3005.md) [CA3006](quality-rules/ca3006.md) [CA3007](quality-rules/ca3007.md) [CA3008](quality-rules/ca3008.md) [CA3009](quality-rules/ca3009.md) [CA3010](quality-rules/ca3010.md)<br/>[CA3011](quality-rules/ca3011.md) [CA3012](quality-rules/ca3012.md) [CA5361](quality-rules/ca5361.md) CA5376 CA5377 [CA5378](quality-rules/ca5378.md)<br/>[CA5380](quality-rules/ca5380.md) [CA5381](quality-rules/ca5381.md) CA5382 CA5383 CA5384 CA5387<br/>CA5388 [CA5389](quality-rules/ca5389.md) CA5390 |
 
 ### <a name="disallowed_symbol_names"></a>disallowed_symbol_names
 
-| Description | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
+| Açıklama | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
 | - | - | - | - |
 | Analiz bağlamında izin verilmeyen simgelerin adları | İzin verilen sembol adı biçimleri (ile ayrılmış `|` ):<br/> -Yalnızca sembol adı (kapsayan tür veya ad alanından bağımsız olarak ada sahip tüm semboller dahil)<br/> -Simgenin [belge kimliği biçiminde](/dotnet/csharp/language-reference/language-specification/documentation-comments#id-string-format)tam nitelikli adlar. Her sembol adı, `M:` metotlar için önek, `T:` türlerin öneki ve `N:` ad alanları için önek gibi bir sembol türü öneki gerektirir.<br/> - `.ctor` oluşturucular ve `.cctor` statik oluşturucular için | Yok | [CA1031](quality-rules/ca1031.md) |

@@ -8,12 +8,12 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: 9fbeee7475b49a5b6514d4983142ae3be5a2f026
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: 1a0b31f7aca6415510ed0fcd08e9f9a0f8f39bf5
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102605301"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876610"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>.NET kaynak kodu çözümlemesine genel bakış
 
@@ -53,7 +53,7 @@ Aşağıdaki kurallar, varsayılan olarak, .NET 5,0 ' de etkinleştirilmiştir.
 
 Bu kuralların önem derecesini devre dışı bırakmak veya hatalara yükseltmek için değiştirebilirsiniz. Ayrıca, [daha fazla kural da etkinleştirebilirsiniz](#enable-additional-rules).
 
-- Her .NET SDK sürümünde bulunan kuralların listesi için bkz. [çözümleyici yayınları](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md).
+- Her .NET SDK sürümünde bulunan kuralların listesi için bkz. [çözümleyici yayınları](https://github.com/dotnet/roslyn-analyzers/blob/main/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md).
 - Tüm kod kalitesi kurallarının bir listesi için bkz. [kod kalitesi kuralları](quality-rules/index.md).
 
 ### <a name="enable-additional-rules"></a>Ek kuralları etkinleştir
@@ -66,7 +66,7 @@ Bu kuralların önem derecesini devre dışı bırakmak veya hatalara yükseltme
 | `AllEnabledByDefault` | Bu en agresif moddur. Tüm kurallar derleme uyarıları olarak etkinleştirilir. Bağımsız kuralların devre dışı bırakılacağını seçerek [devre dışı bırakabilirsiniz](configuration-options.md) .<br /><br />`<AnalysisMode>AllEnabledByDefault</AnalysisMode>` |
 | `Default` | Tek bir kuralların uyarı olarak etkinleştirildiği varsayılan mod olan, diğerleri yalnızca ilgili kod düzeltmeleriyle Visual Studio IDE önerileri olarak etkinleştirilir ve REST tamamen devre dışı bırakılır. Onları devre dışı bırakmak için bağımsız kuralların seçmeli olarak [tercih edilebilir veya dışında](configuration-options.md) bırakabilirsiniz.<br /><br />`<AnalysisMode>Default</AnalysisMode>` |
 
-Kullanılabilir her bir kuralın varsayılan önem derecesini bulmak ve kuralın varsayılan analiz modunda etkinleştirilip etkinleştirilmediğini anlamak için [kuralların tam listesine](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)bakın.
+Kullanılabilir her bir kuralın varsayılan önem derecesini bulmak ve kuralın varsayılan analiz modunda etkinleştirilip etkinleştirilmediğini anlamak için [kuralların tam listesine](https://github.com/dotnet/roslyn-analyzers/blob/main/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)bakın.
 
 ### <a name="treat-warnings-as-errors"></a>Uyarıları hata olarak değerlendir
 

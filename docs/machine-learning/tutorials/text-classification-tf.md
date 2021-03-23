@@ -4,12 +4,12 @@ description: Bu öğreticide, Web sitesi açıklamalarında yaklaşımı sınıf
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 9a2e7f72d59e31cfd7db5b89bfad55bccb063cea
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 0c2cfd46375406726913a83d67c45ff922a1085b
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281413"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104877013"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>Öğretici: ML.NET 'de önceden eğitilen bir TensorFlow modeli kullanarak film incelemelerinin yaklaşımını çözümleyin
 
@@ -17,16 +17,16 @@ Bu öğreticide, Web sitesi açıklamalarında yaklaşımı sınıflandırmak i�
 
 Bu öğreticide kullanılan TensorFlow modeli, ıMDB veritabanından Film İncelemeleri kullanılarak eğitildi. Uygulamayı geliştirmeyi bitirdikten sonra, film gözden geçirme metni sağlayabileceksiniz ve uygulama Gözden geçirmedeki pozitif veya negatif bir yaklaşım olup olmadığını söyleyecektir.
 
-Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
+Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > [!div class="checklist"]
 >
 > * Önceden eğitilen bir TensorFlow modeli yükleme
 > * Web sitesi açıklama metnini model için uygun özelliklere Dönüştür
 > * Tahmin yapmak için modeli kullanma
 
-Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TextClassificationTF) deposunda bulabilirsiniz.
+Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/TextClassificationTF) deposunda bulabilirsiniz.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 * [Visual Studio 2017 sürüm 15,6 veya üzeri](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ".NET Core platformlar arası geliştirme" iş yükü yüklendi.
 
@@ -38,18 +38,18 @@ Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/sample
 
 2. Veri kümesi dosyalarınızı kaydetmek için projenizde *veri* adlı bir dizin oluşturun.
 
-3. **Microsoft.ml NuGet paketini**yükler:
+3. **Microsoft.ml NuGet paketini** yükler:
 
     [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
-    Çözüm Gezgini, projenize sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin. Paket kaynağı olarak "nuget.org" öğesini seçin ve sonra da **tarayıcı** sekmesini seçin. **Microsoft.ml**için arama yapın, istediğiniz paketi seçin ve sonra da **Install** düğmesini seçin. Kabul etmiş ile yüklemeye, seçtiğiniz paketin lisans koşullarına devam edin. **Microsoft. ml. TensorFlow**, **Microsoft. ml. Sampleutils** ve **SciSharp. TensorFlow. Redist**için bu adımları tekrarlayın.
+    Çözüm Gezgini, projenize sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin. Paket kaynağı olarak "nuget.org" öğesini seçin ve sonra da **tarayıcı** sekmesini seçin. **Microsoft.ml** için arama yapın, istediğiniz paketi seçin ve ardından **Install** düğmesini seçin. Kabul etmiş ile yüklemeye, seçtiğiniz paketin lisans koşullarına devam edin. **Microsoft. ml. TensorFlow**, **Microsoft. ml. Sampleutils** ve **SciSharp. TensorFlow. Redist** için bu adımları tekrarlayın.
 
 ### <a name="add-the-tensorflow-model-to-the-project"></a>TensorFlow modelini projeye ekleme
 
 > [!NOTE]
-> Bu öğreticinin modeli [DotNet/machinöğrenim-TestData](https://github.com/dotnet/machinelearning-testdata/tree/master/Microsoft.ML.TensorFlow.TestModels/sentiment_model) GitHub deposundan. Model, TensorFlow SavedModel biçimindedir.
+> Bu öğreticinin modeli [DotNet/machinöğrenim-TestData](https://github.com/dotnet/machinelearning-testdata/tree/main/Microsoft.ML.TensorFlow.TestModels/sentiment_model) GitHub deposundan. Model, TensorFlow SavedModel biçimindedir.
 
-1. [Sentiment_model ZIP dosyasını](https://github.com/dotnet/samples/blob/master/machine-learning/models/textclassificationtf/sentiment_model.zip?raw=true)indirin ve sıkıştırmayı açın.
+1. [Sentiment_model ZIP dosyasını](https://github.com/dotnet/samples/blob/main/machine-learning/models/textclassificationtf/sentiment_model.zip?raw=true)indirin ve sıkıştırmayı açın.
 
     ZIP dosyası şunları içerir:
 
@@ -60,11 +60,11 @@ Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/sample
 
    ![Dizin içeriğini sentiment_model](./media/text-classification-tf/sentiment-model-files.png)
 
-3. Çözüm Gezgini, dizin ve alt dizindeki dosyaların her birine sağ tıklayın `sentiment_model` ve **Özellikler**' i seçin. **Gelişmiş**' in altında, **Çıkış Dizinine Kopyala** değerini **daha yeniyse kopyala**olarak değiştirin.
+3. Çözüm Gezgini, dizin ve alt dizindeki dosyaların her birine sağ tıklayın `sentiment_model` ve **Özellikler**' i seçin. **Gelişmiş**' in altında, **Çıkış Dizinine Kopyala** değerini **daha yeniyse kopyala** olarak değiştirin.
 
 ### <a name="add-using-statements-and-global-variables"></a>Using deyimleri ve genel değişkenler ekleme
 
-1. Aşağıdaki ek `using` deyimlerini *program.cs* dosyasının en üstüne ekleyin:
+1. Aşağıdaki ek `using` deyimlerini *program. cs* dosyasının en üstüne ekleyin:
 
    [!code-csharp[AddUsings](./snippets/text-classification-tf/csharp/Program.cs#AddUsings "Add necessary usings")]
 
@@ -72,8 +72,8 @@ Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/sample
 
    [!code-csharp[DeclareGlobalVariables](./snippets/text-classification-tf/csharp/Program.cs#DeclareGlobalVariables "Declare global variables")]
 
-    * `_modelPath`, eğitilen modelin dosya yoludur.
-    * `FeatureLength`, modelin beklediği tamsayı özelliği dizisinin uzunluğudur.
+    * `_modelPath` , eğitilen modelin dosya yoludur.
+    * `FeatureLength` , modelin beklediği tamsayı özelliği dizisinin uzunluğudur.
 
 ### <a name="model-the-data"></a>Verileri modelleme
 
@@ -120,7 +120,7 @@ Değişken uzunluğu özellik dizisi daha sonra sabit 600 uzunluğuna yeniden bo
 
     [!code-csharp[Prediction](./snippets/text-classification-tf/csharp/Program.cs#Prediction "Declare prediction class")]
 
-    `MovieReviewSentimentPrediction`, model eğitiminden sonra kullanılan tahmin sınıfıdır. `MovieReviewSentimentPrediction`tek bir `float` Array ( `Prediction` ) ve bir `VectorType` özniteliğe sahiptir.
+    `MovieReviewSentimentPrediction` , model eğitiminden sonra kullanılan tahmin sınıfıdır. `MovieReviewSentimentPrediction` tek bir `float` Array ( `Prediction` ) ve bir `VectorType` özniteliğe sahiptir.
 
 ### <a name="create-the-mlcontext-lookup-dictionary-and-action-to-resize-features"></a>Özellikleri yeniden boyutlandırmak için MLContext, arama sözlüğü ve eylemi oluşturma
 
@@ -211,10 +211,10 @@ Değişken uzunluğu özellik dizisi daha sonra sabit 600 uzunluğuna yeniden bo
 
     [!code-csharp[CreatePredictionEngine](./snippets/text-classification-tf/csharp/Program.cs#CreatePredictionEngine)]
 
-    [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) , tek bir veri örneğinde tahmin gerçekleştirmenize olanak tanıyan, KULLANıŞLı bir API 'dir. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602), iş parçacığı açısından güvenli değildir. Tek iş parçacıklı veya prototip ortamlarında kullanılması kabul edilebilir. Üretim ortamlarında geliştirilmiş performans ve iş parçacığı güvenliği için, `PredictionEnginePool` [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) uygulamanız genelinde kullanılacak nesneleri oluşturan hizmetini kullanın. [ `PredictionEnginePool` ASP.NET Core Web API 'sinde kullanma](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)hakkında bu kılavuza bakın.
+    [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) , tek bir veri örneğinde tahmin gerçekleştirmenize olanak tanıyan, KULLANıŞLı bir API 'dir. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) , iş parçacığı açısından güvenli değildir. Tek iş parçacıklı veya prototip ortamlarında kullanılması kabul edilebilir. Üretim ortamlarında geliştirilmiş performans ve iş parçacığı güvenliği için, `PredictionEnginePool` [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) uygulamanız genelinde kullanılacak nesneleri oluşturan hizmetini kullanın. [ `PredictionEnginePool` ASP.NET Core Web API 'sinde kullanma](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)hakkında bu kılavuza bakın.
 
     > [!NOTE]
-    > `PredictionEnginePool`Hizmet Uzantısı Şu anda önizleme aşamasındadır.
+    > `PredictionEnginePool` Hizmet Uzantısı Şu anda önizleme aşamasındadır.
 
 1. Bir örneği oluşturarak eğitilen modelin, yöntemi içindeki tahminini test etmek için bir açıklama ekleyin `Predict()` `MovieReview` :
 
@@ -251,7 +251,7 @@ Is sentiment/review positive ? Yes
 
 Tebrikler! Artık ML.NET ' de önceden eğitilen bir modeli yeniden kullandığınızda, iletilerin sınıflandırılmasına ve tahmine yönelik bir makine öğrenimi modelini başarıyla oluşturdunuz `TensorFlow` .
 
-Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TextClassificationTF) deposunda bulabilirsiniz.
+Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/TextClassificationTF) deposunda bulabilirsiniz.
 
 Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
 > [!div class="checklist"]

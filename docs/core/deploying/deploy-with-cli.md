@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: d2695b1f271e57bb44ed3f94acbbe17b830fdd60
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 65c9c4929d9ed8ab4005677fbcb0a3745ed14190
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102255703"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874309"
 ---
 # <a name="publish-net-apps-with-the-net-cli"></a>.Net CLı ile .NET uygulamaları yayımlama
 
@@ -149,11 +149,11 @@ Anahtarı her kullandığınızda `-r` , çıkış klasörü yolu şu şekilde d
 [Örnek uygulamayı](#sample-app)kullanıyorsanız, öğesini çalıştırın `dotnet publish -f net5.0 -r win10-x64 --self-contained false` . Bu komut aşağıdaki yürütülebiliri oluşturur: `./bin/Debug/net5.0/win10-x64/publish/apptest1.exe`
 
 > [!NOTE]
-> **Genelleştirme sabit modunu** etkinleştirerek, dağıtımınızın toplam boyutunu azaltabilirsiniz. Bu mod, genel olarak kullanmayan ve [sabit kültürün](xref:System.Globalization.CultureInfo.InvariantCulture)biçimlendirme kurallarını, büyük/küçük harf kurallarını ve dize karşılaştırma ve sıralama düzenini kullanabilen uygulamalar için yararlıdır. **Genelleştirme sabit modu** ve nasıl etkinleştirileceği hakkında daha fazla bilgi için bkz. [.NET Genelleştirme sabit modu](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md).
+> **Genelleştirme sabit modunu** etkinleştirerek, dağıtımınızın toplam boyutunu azaltabilirsiniz. Bu mod, genel olarak kullanmayan ve [sabit kültürün](xref:System.Globalization.CultureInfo.InvariantCulture)biçimlendirme kurallarını, büyük/küçük harf kurallarını ve dize karşılaştırma ve sıralama düzenini kullanabilen uygulamalar için yararlıdır. **Genelleştirme sabit modu** ve nasıl etkinleştirileceği hakkında daha fazla bilgi için bkz. [.NET Genelleştirme sabit modu](https://github.com/dotnet/runtime/blob/main/docs/design/features/globalization-invariant-mode.md).
 
 ## <a name="self-contained-deployment"></a>Kendi kendine kapsanan dağıtım
 
-Kendi kendine içerilen bir dağıtımı yayımladığınızda (SCD), .NET SDK, platforma özgü bir yürütülebilir dosya oluşturur. Bir SCD yayımlamak, uygulamanızı çalıştırmak için gerekli tüm .NET dosyalarını içerir, ancak bu, [.net 'in yerel bağımlılıklarını](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)içermez. Uygulamanın çalışması için önce bu bağımlılıkların sistemde mevcut olması gerekir.
+Kendi kendine içerilen bir dağıtımı yayımladığınızda (SCD), .NET SDK, platforma özgü bir yürütülebilir dosya oluşturur. Bir SCD yayımlamak, uygulamanızı çalıştırmak için gerekli tüm .NET dosyalarını içerir, ancak bu, [.net 'in yerel bağımlılıklarını](https://github.com/dotnet/core/blob/main/Documentation/prereqs.md)içermez. Uygulamanın çalışması için önce bu bağımlılıkların sistemde mevcut olması gerekir.
 
 Bir SCD yayımlandığında, en son kullanılabilir .NET güvenlik düzeltme ekine geri dönerek bir uygulama oluşturulur. Derleme zamanında sürüm bağlama hakkında daha fazla bilgi için bkz. [kullanılacak .NET sürümünü seçme](../versions/selection.md#self-contained-deployments-include-the-selected-runtime).
 
@@ -170,7 +170,7 @@ Bir SCD yayımlandığında, en son kullanılabilir .NET güvenlik düzeltme eki
 |                                | 5.0         | `dotnet publish -c Release -r <RID> --self-contained true`  |
 
 > [!NOTE]
-> **Genelleştirme sabit modunu** etkinleştirerek, dağıtımınızın toplam boyutunu azaltabilirsiniz. Bu mod, genel olarak kullanmayan ve [sabit kültürün](xref:System.Globalization.CultureInfo.InvariantCulture)biçimlendirme kurallarını, büyük/küçük harf kurallarını ve dize karşılaştırma ve sıralama düzenini kullanabilen uygulamalar için yararlıdır. **Genelleştirme sabit modu** ve nasıl etkinleştirileceği hakkında daha fazla bilgi için bkz. [.NET Core Genelleştirme sabit modu](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md).
+> **Genelleştirme sabit modunu** etkinleştirerek, dağıtımınızın toplam boyutunu azaltabilirsiniz. Bu mod, genel olarak kullanmayan ve [sabit kültürün](xref:System.Globalization.CultureInfo.InvariantCulture)biçimlendirme kurallarını, büyük/küçük harf kurallarını ve dize karşılaştırma ve sıralama düzenini kullanabilen uygulamalar için yararlıdır. **Genelleştirme sabit modu** ve nasıl etkinleştirileceği hakkında daha fazla bilgi için bkz. [.NET Core Genelleştirme sabit modu](https://github.com/dotnet/runtime/blob/main/docs/design/features/globalization-invariant-mode.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

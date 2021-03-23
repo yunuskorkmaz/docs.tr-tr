@@ -6,16 +6,16 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 1c9aba10e27609bdf8e95d844ead60fd0ec0bd2c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4fe2663f7fd428035aaca61e4e47bd2bf2a4f391
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538729"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872918"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Visual Studio ile .NET Core uygulamaları dağıtma
 
-Bir .NET Core uygulamasını, uygulama ikililerini içeren, ancak hedef sistemde .NET Core varlığına ya da hem uygulamanızı hem de .NET Core ikililerini içeren bir *bağımsız dağıtım*olarak, *çerçeveye bağlı bir dağıtım*olarak dağıtabilirsiniz. .NET Core uygulama dağıtımına genel bir bakış için bkz. [.NET Core uygulama dağıtımı](index.md).
+Bir .NET Core uygulamasını, uygulama ikililerini içeren, ancak hedef sistemde .NET Core varlığına ya da hem uygulamanızı hem de .NET Core ikililerini içeren bir *bağımsız dağıtım* olarak, *çerçeveye bağlı bir dağıtım* olarak dağıtabilirsiniz. .NET Core uygulama dağıtımına genel bir bakış için bkz. [.NET Core uygulama dağıtımı](index.md).
 
 Aşağıdaki bölümlerde, aşağıdaki dağıtım türlerini oluşturmak için Microsoft Visual Studio nasıl kullanılacağı gösterilmektedir:
 
@@ -36,14 +36,14 @@ Bir üçüncü taraf bağımlılığı olmadan çerçeveye bağlı bir dağıtı
 
 1. Uygulamanın kaynak kodunu ekleyin.
 
-   Düzenleyicide *program.cs* veya *program. vb* dosyasını açın ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin. Kullanıcıdan metin girmesini ve Kullanıcı tarafından girilen tek tek kelimeleri görüntülediğini ister. `\w+`Giriş metnindeki sözcükleri ayırmak için normal ifadeyi kullanır.
+   Düzenleyicide *program. cs* veya *program. vb* dosyasını açın ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin. Kullanıcıdan metin girmesini ve Kullanıcı tarafından girilen tek tek kelimeleri görüntülediğini ister. `\w+`Giriş metnindeki sözcükleri ayırmak için normal ifadeyi kullanır.
 
    [!code-csharp[deployment#1](./snippets/deploy-with-vs/csharp/deployment-example.cs)]
    [!code-vb[deployment#1](./snippets/deploy-with-vs/vb/deployment-example.vb)]
 
 1. Uygulamanızın hata ayıklama derlemesini oluşturun.
 
-   Yapı **Build**  >  **Yapı çözümünü**seçin. Ayrıca, **hata**ayıklama  >  **başlatma hata ayıklamayı**seçerek uygulamanızın hata ayıklama derlemesini derleyip çalıştırabilirsiniz.
+   Yapı   >  **Yapı çözümünü** seçin. Ayrıca, **hata** ayıklama  >  **başlatma hata ayıklamayı** seçerek uygulamanızın hata ayıklama derlemesini derleyip çalıştırabilirsiniz.
 
 1. Uygulamanızı dağıtın.
 
@@ -55,7 +55,7 @@ Bir üçüncü taraf bağımlılığı olmadan çerçeveye bağlı bir dağıtı
 
       1. **Yayımla** sekmesinde **Yayımla**' yı seçin. Visual Studio, uygulamanızı oluşturan dosyaları yerel dosya sistemine yazar.
 
-      1. **Yayımla** sekmesinde artık tek bir profil, **folderprofile**gösterilmektedir. Profilin yapılandırma ayarları, sekmesinin **Özet** bölümünde gösterilir.
+      1. **Yayımla** sekmesinde artık tek bir profil, **folderprofile** gösterilmektedir. Profilin yapılandırma ayarları, sekmesinin **Özet** bölümünde gösterilir.
 
    Elde edilen dosyalar, `Publish` Windows 'da ve `publish` projenizin *.\bin\release\netcoreapp2.1* alt dizininin bir alt dizininde bulunan UNIX sistemlerinde adlı bir dizine yerleştirilir.
 
@@ -71,7 +71,7 @@ Bir veya daha fazla üçüncü taraf bağımlılığı olan çerçeveye bağlı 
 
 1. Projenize bir NuGet paketine başvuru eklemek için **NuGet paket yöneticisini** kullanın; paket sisteminizde zaten yoksa, uygulamayı da yükleyemezsiniz. Paket Yöneticisi 'ni açmak için **Araçlar**  >  **NuGet Paket Yöneticisi**  >  **çözüm için NuGet Paketlerini Yönet**' i seçin.
 
-1. Üçüncü taraf bağımlılıklarınızın (örneğin, `Newtonsoft.Json` ) sisteminizde yüklü olduğunu ve yoksa, bunları yüklemesini doğrulayın. **Yüklü** sekme, sisteminizde yüklü olan NuGet paketlerini listeler. `Newtonsoft.Json`Orada listelenmemişse, araştır sekmesine tıklayın ve arama **Browse** kutusuna "Newtonsoft.Json" yazın. `Newtonsoft.Json`Sağ bölmedeki ve ' yi seçerek, **yüklemeyi**seçmeden önce projenizi seçin.
+1. Üçüncü taraf bağımlılıklarınızın (örneğin, `Newtonsoft.Json` ) sisteminizde yüklü olduğunu ve yoksa, bunları yüklemesini doğrulayın. **Yüklü** sekme, sisteminizde yüklü olan NuGet paketlerini listeler. `Newtonsoft.Json`Orada listelenmemişse, araştır sekmesine tıklayın ve arama  kutusuna "Newtonsoft.Json" yazın. `Newtonsoft.Json`Sağ bölmedeki ve ' yi seçerek, **yüklemeyi** seçmeden önce projenizi seçin.
 
 1. `Newtonsoft.Json`Zaten sisteminizde yüklüyse, **çözüm Için paketleri Yönet** sekmesinin sağ bölmesinde projenizi seçerek projenize ekleyin.
 
@@ -87,14 +87,14 @@ Bir üçüncü taraf bağımlılığı olmadan kendi içinde bir dağıtımı da
 
 1. Uygulamanın kaynak kodunu ekleyin.
 
-   Düzenleyicinizde *program.cs* veya *program. vb* dosyasını açın ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin. Kullanıcıdan metin girmesini ve Kullanıcı tarafından girilen tek tek kelimeleri görüntülediğini ister. `\w+`Giriş metnindeki sözcükleri ayırmak için normal ifadeyi kullanır.
+   Düzenleyicinizde *program. cs* veya *program. vb* dosyasını açın ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin. Kullanıcıdan metin girmesini ve Kullanıcı tarafından girilen tek tek kelimeleri görüntülediğini ister. `\w+`Giriş metnindeki sözcükleri ayırmak için normal ifadeyi kullanır.
 
    [!code-csharp[deployment#1](./snippets/deploy-with-vs/csharp/deployment-example.cs)]
    [!code-vb[deployment#1](./snippets/deploy-with-vs/vb/deployment-example.vb)]
 
 1. Genelleştirme sabit modunu kullanmak isteyip istemediğinizi belirleme.
 
-   Özellikle uygulamanız Linux hedefliyorsa, [Genelleştirme sabit modundan](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)yararlanarak dağıtımınızın toplam boyutunu azaltabilirsiniz. Genelleştirme sabit modu, genel olarak uyumlu olmayan ve [sabit kültürün](xref:System.Globalization.CultureInfo.InvariantCulture)biçimlendirme kurallarını, büyük/küçük harf kurallarını ve dize karşılaştırmayı ve sıralama düzenini kullanabilen uygulamalar için yararlıdır.
+   Özellikle uygulamanız Linux hedefliyorsa, [Genelleştirme sabit modundan](https://github.com/dotnet/runtime/blob/main/docs/design/features/globalization-invariant-mode.md)yararlanarak dağıtımınızın toplam boyutunu azaltabilirsiniz. Genelleştirme sabit modu, genel olarak uyumlu olmayan ve [sabit kültürün](xref:System.Globalization.CultureInfo.InvariantCulture)biçimlendirme kurallarını, büyük/küçük harf kurallarını ve dize karşılaştırmayı ve sıralama düzenini kullanabilen uygulamalar için yararlıdır.
 
    Sabit modu etkinleştirmek için, **Çözüm Gezgini**' de projenize (çözüm değil) sağ tıklayın ve **scd. csproj Düzenle** ' yi seçin veya **scd. vbproj**' i düzenleyin. Ardından, aşağıdaki vurgulanmış satırları dosyaya ekleyin:
 
@@ -102,7 +102,7 @@ Bir üçüncü taraf bağımlılığı olmadan kendi içinde bir dağıtımı da
 
 1. Uygulamanızın hata ayıklama derlemesini oluşturun.
 
-   Yapı **Build**  >  **Yapı çözümünü**seçin. Ayrıca, **hata**ayıklama  >  **başlatma hata ayıklamayı**seçerek uygulamanızın hata ayıklama derlemesini derleyip çalıştırabilirsiniz. Bu hata ayıklama adımı, ana bilgisayar platformunda çalışırken uygulamanızdaki sorunları belirlemenize olanak sağlar. Yine de hedef Platformlarınızın her birinde test etmeniz gerekir.
+   Yapı   >  **Yapı çözümünü** seçin. Ayrıca, **hata** ayıklama  >  **başlatma hata ayıklamayı** seçerek uygulamanızın hata ayıklama derlemesini derleyip çalıştırabilirsiniz. Bu hata ayıklama adımı, ana bilgisayar platformunda çalışırken uygulamanızdaki sorunları belirlemenize olanak sağlar. Yine de hedef Platformlarınızın her birinde test etmeniz gerekir.
 
    Genelleştirme sabit modunu etkinleştirdiyseniz, özellikle kültüre duyarlı verilerin yokluğunun uygulamanız için uygun olup olmadığını test ettiğinizden emin olun.
 
@@ -144,19 +144,19 @@ Uygulamanızı Visual Studio 'dan yayımlamak için şunları yapın:
 
       1. **Yayımla** sekmesinde **Yayımla**' yı seçin. Visual Studio, uygulamanızı oluşturan dosyaları yerel dosya sistemine yazar.
 
-      1. **Yayımla** sekmesinde artık tek bir profil, **folderprofile**gösterilmektedir. Profilin yapılandırma ayarları, sekmesinin **Özet** bölümünde gösterilir. **hedef çalışma zamanı** hangi çalışma zamanının yayımlandığını tanımlar ve **hedef konum** , kendinden bağımsız dağıtım dosyalarının yazıldığı yeri belirler.
+      1. **Yayımla** sekmesinde artık tek bir profil, **folderprofile** gösterilmektedir. Profilin yapılandırma ayarları, sekmesinin **Özet** bölümünde gösterilir. **hedef çalışma zamanı** hangi çalışma zamanının yayımlandığını tanımlar ve **hedef konum** , kendinden bağımsız dağıtım dosyalarının yazıldığı yeri belirler.
 
       1. Visual Studio varsayılan olarak tüm yayımlanan dosyaları tek bir dizine yazar. Kolaylık olması için, her bir hedef çalışma zamanı için ayrı profiller oluşturmak ve yayımlanan dosyaları platforma özgü bir dizine yerleştirmek en iyisidir. Bu, her hedef platform için ayrı bir yayımlama profili oluşturmayı içerir. Bu nedenle, şimdi aşağıdakileri yaparak her platform için uygulamayı yeniden oluşturun:
 
          1. **Yayımla** iletişim kutusunda **Yeni Profil oluştur** ' u seçin.
 
-         1. **Bir yayımlama hedefi seç** iletişim kutusunda, **klasör seçin** konumunu *Bin\release\publishoutput\win10-x64*olarak değiştirin. **Tamam**’ı seçin.
+         1. **Bir yayımlama hedefi seç** iletişim kutusunda, **klasör seçin** konumunu *Bin\release\publishoutput\win10-x64* olarak değiştirin. **Tamam**’ı seçin.
 
-         1. Profiller listesinden yeni profili (**FolderProfile1**) seçin ve **hedef çalışma zamanının** olduğundan emin olun `win10-x64` . Değilse, **Ayarlar**' ı seçin. **Profil ayarları** Iletişim kutusunda **hedef çalışma zamanını** olarak değiştirip Kaydet ' i `win10-x64` seçin **Save**. Aksi takdirde **iptal**' i seçin.
+         1. Profiller listesinden yeni profili (**FolderProfile1**) seçin ve **hedef çalışma zamanının** olduğundan emin olun `win10-x64` . Değilse, **Ayarlar**' ı seçin. **Profil ayarları** Iletişim kutusunda **hedef çalışma zamanını** olarak değiştirip Kaydet ' i `win10-x64` seçin . Aksi takdirde **iptal**' i seçin.
 
          1. Uygulamanızı 64 bitlik Windows 10 platformları için yayımlamak üzere **Yayımla** ' yı seçin.
 
-         1. Platform için bir profil oluşturmak üzere önceki adımları tekrar izleyin `osx.10.11-x64` . **Hedef konum** *Bin\Release\PublishOutput\osx.10.11-x64*ve **hedef çalışma zamanı** `osx.10.11-x64` . Visual Studio 'Nun bu profile atadığı ad **FolderProfile2**' dir.
+         1. Platform için bir profil oluşturmak üzere önceki adımları tekrar izleyin `osx.10.11-x64` . **Hedef konum** *Bin\Release\PublishOutput\osx.10.11-x64* ve **hedef çalışma zamanı** `osx.10.11-x64` . Visual Studio 'Nun bu profile atadığı ad **FolderProfile2**' dir.
 
       Her hedef konum, uygulamanızı başlatmak için gereken tüm dosya (hem uygulama dosyalarınız hem de tüm .NET Core dosyaları) kümesini içerir.
 
@@ -192,9 +192,9 @@ Uygulamanızın hedeflediği her platform için aşağıdakileri yapın:
 
 1. Visual Studio 'Nun uygulamanızı yayımlayıp konumunu seçin.
 
-   Yalnızca tek bir platforma yayımlıyorsanız, **klasör seçin** metin kutusunda varsayılan değeri kabul edebilirsiniz; Bu, uygulamanızın çerçeveye bağlı dağıtımını * \<project-directory> \Bin\release\netcoreapp2,\publish* dizinine yayınlar.
+   Yalnızca tek bir platforma yayımlıyorsanız, **klasör seçin** metin kutusunda varsayılan değeri kabul edebilirsiniz; Bu, uygulamanızın çerçeveye bağlı dağıtımını *\<project-directory> \Bin\release\netcoreapp2,\publish* dizinine yayınlar.
 
-   Birden fazla platforma yayımlıyorsanız, hedef platformu tanımlayan bir dize ekleyin. Örneğin, "Linux" dizesini dosya yoluna eklerseniz, Visual Studio uygulamanızın çerçeveye bağlı dağıtımını * \<project-directory> \Bin\release\netcoreapp2,\publish\linux* dizinine yayınlar.
+   Birden fazla platforma yayımlıyorsanız, hedef platformu tanımlayan bir dize ekleyin. Örneğin, "Linux" dizesini dosya yoluna eklerseniz, Visual Studio uygulamanızın çerçeveye bağlı dağıtımını *\<project-directory> \Bin\release\netcoreapp2,\publish\linux* dizinine yayınlar.
 
 1. **Yayımla** düğmesinin yanındaki açılan liste simgesini seçerek profili oluşturun ve **Profil oluştur**' a seçin. Sonra profili oluşturmak için **Profil oluştur** düğmesini seçin.
 
@@ -210,7 +210,7 @@ Uygulamanızın hedeflediği her platform için aşağıdakileri yapın:
 
 1. Profilinizi adlandırın.
 
-   1. **Actions**  >  Profilinizi adlandırmak için eylemler**Yeniden Adlandır** ' ı seçin.
+   1.   >  Profilinizi adlandırmak için eylemler **Yeniden Adlandır** ' ı seçin.
 
    2. Profilinize hedef platformu tanımlayan bir ad atayın ve ardından **Kaydet*' i seçin.
 
@@ -268,7 +268,7 @@ Bir veya daha fazla üçüncü taraf bağımlılığı ile kendi içindeki bir d
 
 1. Projenize bir NuGet paketine başvuru eklemek için **NuGet paket yöneticisini** kullanın; paket sisteminizde zaten yoksa, uygulamayı da yükleyemezsiniz. Paket Yöneticisi 'ni açmak için **Araçlar**  >  **NuGet Paket Yöneticisi**  >  **çözüm için NuGet Paketlerini Yönet**' i seçin.
 
-1. Üçüncü taraf bağımlılıklarınızın (örneğin, `Newtonsoft.Json` ) sisteminizde yüklü olduğunu ve yoksa, bunları yüklemesini doğrulayın. **Yüklü** sekme, sisteminizde yüklü olan NuGet paketlerini listeler. `Newtonsoft.Json`Orada listelenmemişse, araştır sekmesine tıklayın ve arama **Browse** kutusuna "Newtonsoft.Json" yazın. `Newtonsoft.Json`Sağ bölmedeki ve ' yi seçerek, **yüklemeyi**seçmeden önce projenizi seçin.
+1. Üçüncü taraf bağımlılıklarınızın (örneğin, `Newtonsoft.Json` ) sisteminizde yüklü olduğunu ve yoksa, bunları yüklemesini doğrulayın. **Yüklü** sekme, sisteminizde yüklü olan NuGet paketlerini listeler. `Newtonsoft.Json`Orada listelenmemişse, araştır sekmesine tıklayın ve arama  kutusuna "Newtonsoft.Json" yazın. `Newtonsoft.Json`Sağ bölmedeki ve ' yi seçerek, **yüklemeyi** seçmeden önce projenizi seçin.
 
 1. `Newtonsoft.Json`Zaten sisteminizde yüklüyse, **çözüm Için paketleri Yönet** sekmesinin sağ bölmesinde projenizi seçerek projenize ekleyin.
 

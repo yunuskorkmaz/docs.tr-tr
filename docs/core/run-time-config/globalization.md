@@ -3,12 +3,12 @@ title: Genelleştirme yapılandırma ayarları
 description: .NET Core uygulamasının Genelleştirme yönlerini yapılandıran çalışma zamanı ayarları hakkında bilgi edinin. Örneğin, Japonca tarihleri nasıl ayrıştırır.
 ms.date: 05/18/2020
 ms.topic: reference
-ms.openlocfilehash: fc98e965093c28b75b9b66e4f1c9f147abd4680e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e8179a7e1421a3ff0ceacf07a2843c1b77af6143
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721925"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873555"
 ---
 # <a name="run-time-configuration-options-for-globalization"></a>Genelleştirme için çalışma zamanı yapılandırma seçenekleri
 
@@ -16,7 +16,7 @@ ms.locfileid: "95721925"
 
 - .NET Core uygulamasının kültüre özgü verilere ve davranışa erişim olmadan Genelleştirme sabit modunda çalışıp çalışmadığını belirler.
 - Bu ayarı atlarsanız, uygulama kültürel verilerine erişimle çalışır. Bu değeri değerine ayarlamaya eşdeğerdir `false` .
-- Daha fazla bilgi için bkz. [.NET Core Genelleştirme sabit modu](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md).
+- Daha fazla bilgi için bkz. [.NET Core Genelleştirme sabit modu](https://github.com/dotnet/runtime/blob/main/docs/design/features/globalization-invariant-mode.md).
 
 | | Ayar adı | Değerler |
 | - | - | - |
@@ -91,5 +91,5 @@ Proje dosyası:
 
 | | Ayar adı | Değerler | Sunulan özellikler |
 | - | - | - | - |
-| **Üzerinderuntimeconfig.js** | `System.Globalization.UseNls` | `false` -ICU genelleştirme API 'Lerini kullanma<br/>`true` -NLS genelleştirme API 'Lerini kullanma | .NET 5,0 |
-| **Ortam değişkeni** | `DOTNET_SYSTEM_GLOBALIZATION_USENLS` | `false` -ICU genelleştirme API 'Lerini kullanma<br/>`true` -NLS genelleştirme API 'Lerini kullanma | .NET 5,0 |
+| **Üzerinderuntimeconfig.js** | `System.Globalization.UseNls` | `false` -ICU genelleştirme API 'Lerini kullanma<br/>`true` -NLS genelleştirme API 'Lerini kullanma | .NET 5.0 |
+| **Ortam değişkeni** | `DOTNET_SYSTEM_GLOBALIZATION_USENLS` | `false` -ICU genelleştirme API 'Lerini kullanma<br/>`true` -NLS genelleştirme API 'Lerini kullanma | .NET 5.0 |

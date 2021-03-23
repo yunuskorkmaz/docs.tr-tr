@@ -3,12 +3,12 @@ title: C# etkileşimli öğreticilerine giriş
 description: Tarayıcınızda C# öğrenin ve kendi geliştirme ortamınızı kullanmaya başlayın
 ms.date: 02/02/2021
 ms.custom: mvc
-ms.openlocfilehash: 3b5da67458d665946b42bf49ceb3799473354567
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: ed869271cd6f4ec13f769f46d41aefae9e1dad8d
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100626817"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872424"
 ---
 # <a name="introduction-to-c"></a>C 'ye giriş\#
 
@@ -50,6 +50,6 @@ Bu öğreticide, C# derslerde [Merhaba Dünya](hello-world.yml) ve [rakamları](
 
 Bu öğreticide, yukarıda listelenen dersleri tamamladığınız varsayılmaktadır.
 
-## <a name="101-linq-samples"></a>[101 LINQ örnekleri](https://github.com/dotnet/try-samples/tree/master/101-linq-samples)
+## <a name="101-linq-samples"></a>[101 LINQ örnekleri](https://github.com/dotnet/try-samples/tree/main/101-linq-samples)
 
 Bu örnek [DotNet-TRY](https://github.com/dotnet/try/blob/main/README.md#setup) küresel aracını gerektirir. Aracı yükledikten ve [TRY-Samples](https://github.com/dotnet/try-samples) deposunu kopyaladıktan sonra, etkileşimli olarak çalıştırabileceğiniz bir dizi 101 örneği aracılığıyla dil Ile tümleşik sorgu (LINQ) hakkında bilgi edinebilirsiniz. Veri dizilerini sorgulamak, araştırmak ve dönüştürmek için kullanabileceğiniz farklı yolları keşfedebilirsiniz.

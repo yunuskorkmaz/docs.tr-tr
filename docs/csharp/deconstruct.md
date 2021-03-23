@@ -2,14 +2,13 @@
 title: Demetleri ve diğer türleri ayrıştırma
 description: Tanımlama gruplarını ve diğer türleri oluşturmayı öğrenin.
 ms.technology: csharp-fundamentals
-ms.date: 11/23/2017
-ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: 5aaf7157b87de4f67f6e4beba18794a6dd13b6d0
-ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
+ms.date: 03/22/2021
+ms.openlocfilehash: acacfb6a9401a3a888f9b8226798c95578f9fa45
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99585357"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875830"
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>Demetleri ve diğer türleri ayrıştırma
 
@@ -65,7 +64,7 @@ Aşağıdaki örnek, atma ile başlıkların kullanımını gösterir. Bu `Query
 
 ## <a name="deconstructing-user-defined-types"></a>Kullanıcı tanımlı türleri kaldırma
 
-C#, kayıt olmayan türler oluşturmak için yerleşik destek sunmaz. Ancak, bir sınıfın yazarı, bir struct veya Interface olarak, bir veya daha fazla yöntem uygulayarak tür örneklerinin çıkarılması için izin verebilirsiniz `Deconstruct` . Yöntemi void döndürür ve kaldırılacak her değer, yöntem imzasında bir [Out](language-reference/keywords/out-parameter-modifier.md) parametresi ile belirtilir. Örneğin, `Deconstruct` bir sınıfın aşağıdaki yöntemi `Person` Birinci, orta ve soyadı döndürür:
+C#, [`record`](#deconstructing-a-record-type) ve [DictionaryEntry](xref:System.Collections.DictionaryEntry.Deconstruct%2A) türleri dışındaki demet olmayan türler oluşturmak için yerleşik destek sunmaz. Ancak, bir sınıfın yazarı, bir struct veya Interface olarak, bir veya daha fazla yöntem uygulayarak tür örneklerinin çıkarılması için izin verebilirsiniz `Deconstruct` . Yöntemi void döndürür ve kaldırılacak her değer, yöntem imzasında bir [Out](language-reference/keywords/out-parameter-modifier.md) parametresi ile belirtilir. Örneğin, `Deconstruct` bir sınıfın aşağıdaki yöntemi `Person` Birinci, orta ve soyadı döndürür:
 
 [!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class1.cs#1)]
 
@@ -98,6 +97,10 @@ Bir sınıf, yapı veya arabirim yazmadıysanız, ilgilendiğiniz değerleri dö
 Aşağıdaki örnek `Deconstruct` , sınıfı için iki genişletme yöntemini tanımlar <xref:System.Reflection.PropertyInfo?displayProperty=nameWithType> . İlki, özelliğin özelliklerini gösteren, türü, statik mi, örnek mi olduğunu, salt okunurdur ve dizine eklenip eklenmeyeceğini içeren bir değerler kümesi döndürür. İkincisi, özelliğin erişilebilirliğini gösterir. Get ve set erişimcilerinin erişilebilirliği farklı olabileceğinden, Boole değerleri özelliğin ayrı Get ve set erişimcilerine sahip olup olmadığını ve varsa aynı erişilebilirliği içerip içermediğini gösterir. Yalnızca bir erişimci varsa veya hem Get hem de set erişimcisinin aynı erişilebilirliği varsa `access` değişkeni, özelliğin erişilebilirliğini bir bütün olarak gösterir. Aksi takdirde, Get ve set erişimcilerinin erişilebilirliği `getAccess` ve değişkenleri tarafından gösterilir `setAccess` .
 
 [!code-csharp[Extension-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-extension1.cs)]
+
+## <a name="deconstructing-a-record-type"></a>Bir türü kaldırma `record`
+
+İki veya daha fazla Konumsal parametre kullanarak bir [kayıt](language-reference/builtin-types/record.md) türü bildirdiğinizde, derleyici, `Deconstruct` `out` bildirimdeki her Konumsal parametre için parametresiyle bir yöntem oluşturur `record` . Daha fazla bilgi için, bkz. [özellik tanımı Için konumsal sözdizimi](language-reference/builtin-types/record.md#positional-syntax-for-property-definition) ve [türetilmiş kayıtlarda Deconstructor davranışı](language-reference/builtin-types/record.md#deconstructor-behavior-in-derived-records).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

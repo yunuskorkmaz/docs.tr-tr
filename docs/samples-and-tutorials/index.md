@@ -4,12 +4,12 @@ description: .NET Core, ASP.NET Core ve .NET hakkında bilgi edinmenize yardımc
 author: BillWagner
 ms.author: wiwagn
 ms.date: 02/01/2021
-ms.openlocfilehash: 35cc5e74e764148b072438eea994905df778c835
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 3ddc83fe0478b2b6bf8db3faf13a1a8edc156aa3
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102103575"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875570"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET örnekleri ve öğreticiler
 
@@ -21,7 +21,7 @@ ms.locfileid: "102103575"
 
 **[DotNet testini kullanarak .NET Core 'da birim testi](../core/testing/unit-testing-with-dotnet-test.md)**
 
-Bu kılavuzda, bir ASP.NET Core Web uygulaması ve ilişkili birim testlerini nasıl oluşturacağınız gösterilmektedir. Basit bir Web hizmeti uygulaması oluşturarak başlar ve ardından testler ekler. Yeni özellikleri uygulamaya yönelik daha fazla test oluşturmaya devam eder. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test) , GitHub 'daki DotNet/Samples deposunda bulunur.
+Bu kılavuzda, bir ASP.NET Core Web uygulaması ve ilişkili birim testlerini nasıl oluşturacağınız gösterilmektedir. Basit bir Web hizmeti uygulaması oluşturarak başlar ve ardından testler ekler. Yeni özellikleri uygulamaya yönelik daha fazla test oluşturmaya devam eder. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/main/core/getting-started/unit-testing-using-dotnet-test) , GitHub 'daki DotNet/Samples deposunda bulunur.
 
 ### <a name="tutorials"></a>Öğreticiler
 
@@ -45,45 +45,45 @@ Daha fazla .NET öğreticilerinde bkz. [.net ve .NET SDK araçları hakkında bi
 
 **[Yineleyiciler](../csharp/iterators.md)**
 
-Bu örnek, C# yineleyiciler oluşturma ve kullanma ile ilgili sözdizimi ve özellikleri gösterir. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/master/csharp/iterators) , GitHub 'daki DotNet/Samples deposunda bulunur.
+Bu örnek, C# yineleyiciler oluşturma ve kullanma ile ilgili sözdizimi ve özellikleri gösterir. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/main/csharp/iterators) , GitHub 'daki DotNet/Samples deposunda bulunur.
 
 **[Dizin Oluşturucular](../csharp/indexers.md)**
 
-Bu örnek, C# dizin oluşturucularının sözdizimini ve özelliklerini gösterir. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/master/csharp/indexers) , GitHub 'daki DotNet/Samples deposunda bulunur.
+Bu örnek, C# dizin oluşturucularının sözdizimini ve özelliklerini gösterir. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/main/csharp/indexers) , GitHub 'daki DotNet/Samples deposunda bulunur.
 
 **[Temsilciler ve olaylar](../csharp/delegates-overview.md)**
 
-Bu örnek, C# temsilcileri ve olayları için sözdizimi ve özellikleri gösterir. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/master/csharp/delegates-and-events) , GitHub 'daki DotNet/Samples deposunda bulunur. Olaylara odaklanan [ikinci bir örnek](https://github.com/dotnet/samples/tree/master/csharp/events) aynı havuzda de bulunur.
+Bu örnek, C# temsilcileri ve olayları için sözdizimi ve özellikleri gösterir. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/main/csharp/delegates-and-events) , GitHub 'daki DotNet/Samples deposunda bulunur. Olaylara odaklanan [ikinci bir örnek](https://github.com/dotnet/samples/tree/main/csharp/events) aynı havuzda de bulunur.
 
 **[İfade ağaçları](../csharp/expression-trees.md)**
 
-Bu örnek, Ifade ağaçları kullanılarak çözülebileceği birçok sorunu gösterir. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/master/csharp/expression-trees) , GitHub 'daki DotNet/Samples deposunda bulunur.
+Bu örnek, Ifade ağaçları kullanılarak çözülebileceği birçok sorunu gösterir. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/main/csharp/expression-trees) , GitHub 'daki DotNet/Samples deposunda bulunur.
 
 **LINQ örnekleri**
 
-Bu örnek serisi, dil ile tümleşik sorgu (LINQ) özelliklerinin çoğunu gösterir. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/master/core/linq/csharp) , GitHub 'daki DotNet/Samples deposunda bulunur.
+Bu örnek serisi, dil ile tümleşik sorgu (LINQ) özelliklerinin çoğunu gösterir. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/main/core/linq/csharp) , GitHub 'daki DotNet/Samples deposunda bulunur.
 
 **Yönetilen COM sunucusu örneği**
 
-[Com Server](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo) örneği, YÖNETILEN bir com sunucusunun oluşturulmasını ve nasıl genel olarak kayıt yapılacağını ve RegFree com aracılığıyla nasıl kullanılabileceğini gösterir.
+[Com Server](https://github.com/dotnet/samples/tree/main/core/extensions/COMServerDemo) örneği, YÖNETILEN bir com sunucusunun oluşturulmasını ve nasıl genel olarak kayıt yapılacağını ve RegFree com aracılığıyla nasıl kullanılabileceğini gösterir.
 
 **Microsoft Office PIA örneği**
 
-[Exceldemo](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo) örneği, .NET Core 'Da [Microsoft Office PIA](/visualstudio/vsto/office-primary-interop-assemblies) 'ların tüketimini gösterir.
+[Exceldemo](https://github.com/dotnet/samples/tree/main/core/extensions/ExcelDemo) örneği, .NET Core 'Da [Microsoft Office PIA](/visualstudio/vsto/office-primary-interop-assemblies) 'ların tüketimini gösterir.
 
 ### <a name="tutorials"></a>Öğreticiler
 
 **[Konsol Uygulaması](../csharp/tutorials/console-teleprompter.md)**
 
-Bu öğreticide konsol g/ç, konsol uygulamasının yapısı ve görev tabanlı zaman uyumsuz programlama modelinin temelleri gösterilmektedir. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter) , GitHub 'daki DotNet/Samples deposunda bulunur.
+Bu öğreticide konsol g/ç, konsol uygulamasının yapısı ve görev tabanlı zaman uyumsuz programlama modelinin temelleri gösterilmektedir. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/main/csharp/getting-started/console-teleprompter) , GitHub 'daki DotNet/Samples deposunda bulunur.
 
 **[REST İstemcisi](../csharp/tutorials/console-webapiclient.md)**
 
-Bu öğreticide, C# dilinin Web iletişimleri, JSON serileştirmesi ve nesne yönelimli özellikleri gösterilmektedir. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient) , GitHub 'daki DotNet/Samples deposunda bulunur.
+Bu öğreticide, C# dilinin Web iletişimleri, JSON serileştirmesi ve nesne yönelimli özellikleri gösterilmektedir. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/main/csharp/getting-started/console-webapiclient) , GitHub 'daki DotNet/Samples deposunda bulunur.
 
 **[LINQ ile çalışma](../csharp/tutorials/working-with-linq.md)**
 
-Bu öğreticide, LINQ özelliklerinin birçoğu ve onu destekleyen dil öğeleri gösterilmektedir. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-linq) , GitHub 'daki DotNet/Samples deposunda bulunur.
+Bu öğreticide, LINQ özelliklerinin birçoğu ve onu destekleyen dil öğeleri gösterilmektedir. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/main/csharp/getting-started/console-linq) , GitHub 'daki DotNet/Samples deposunda bulunur.
 
 **[Öğretici: Mac için Visual Studio kullanarak bir .NET konsol uygulaması oluşturma](../core/tutorials/with-visual-studio-mac.md)**
 
@@ -95,7 +95,7 @@ Bu öğreticide, Mac için Visual Studio kullanarak nasıl .NET sınıf kitaplı
 
 **[Eklentileri destekleyen bir .NET Core uygulaması oluşturma](../core/tutorials/creating-app-with-plugin-support.md)**
 
-Bu öğreticide, .NET Core 'da eklenti mimarisini destekleyen basit bir uygulama oluşturma gösterilmektedir. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin) , GitHub 'daki DotNet/Samples deposunda bulunur.
+Bu öğreticide, .NET Core 'da eklenti mimarisini destekleyen basit bir uygulama oluşturma gösterilmektedir. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/main/core/extensions/AppWithPlugin) , GitHub 'daki DotNet/Samples deposunda bulunur.
 
 ## <a name="deploy-to-containers"></a>Kapsayıcılara dağıt
 
@@ -109,7 +109,7 @@ Birçok konuda, GitHub 'dan görüntülenmek veya indirmek için kullanılabilen
 
 1. Aşağıdaki yordamlardan birini gerçekleştirerek örnek kodu içeren depoyu indirin:
    * Deponun bir ZIP kopyasını yerel sisteminize indirin. Sıkıştırılmış Arşivi ZIP olarak kaldırın.
-   * Depoyu [çatalla](https://help.github.com/articles/fork-a-repo/) ve çatalınızı yerel sisteminize [klonlayın](https://help.github.com/articles/cloning-a-repository/) . Dallama ve kopyalama, Çatalınıza değişiklikler gerçekleştirerek ve sonra resmi docs deposu için bir çekme isteği oluşturarak belgelere katkı sağlar. Daha fazla bilgi için [.net belgelerine katkıda bulunan Kılavuzu](/contribute/dotnet/dotnet-contribute) ve [ASP.NET Core docs katkıda bulunan Kılavuzu](https://github.com/dotnet/AspNetCore.Docs/blob/master/CONTRIBUTING.md)' na bakın.
+   * Depoyu [çatalla](https://help.github.com/articles/fork-a-repo/) ve çatalınızı yerel sisteminize [klonlayın](https://help.github.com/articles/cloning-a-repository/) . Dallama ve kopyalama, Çatalınıza değişiklikler gerçekleştirerek ve sonra resmi docs deposu için bir çekme isteği oluşturarak belgelere katkı sağlar. Daha fazla bilgi için [.net belgelerine katkıda bulunan Kılavuzu](/contribute/dotnet/dotnet-contribute) ve [ASP.NET Core docs katkıda bulunan Kılavuzu](https://github.com/dotnet/AspNetCore.Docs/blob/main/CONTRIBUTING.md)' na bakın.
    * Depoyu yerel olarak kopyalayın. Bir docs deposunu doğrudan yerel sisteminize klonladığınızda, işleme doğrudan resmi depoya karşı, belge katkılarını daha sonra yapamayabilmeniz mümkün olmayacaktır. Daha sonra belgelere katkıda bulunmak için fırsatı korumak istiyorsanız, daha önce açıklanan çatal ve kopyalama yordamını kullanın.
 1. Deponun klasörlerinde örnek konumuna gidin. Örnek konumunun göreli yolu, örneğin bağlantısını izlediğinizde tarayıcınızın adres çubuğunda görüntülenir.
 1. Örnek çalıştırmak için birkaç seçeneğiniz vardır:

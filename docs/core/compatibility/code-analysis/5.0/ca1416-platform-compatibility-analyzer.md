@@ -2,12 +2,12 @@
 title: 'Son değişiklik: CA1416: platform uyumluluğu'
 description: Kod Analizi kuralı CA1416 'nin etkinleştirilmesi nedeniyle .NET 5 ' teki önemli değişiklik hakkında bilgi edinin.
 ms.date: 09/29/2020
-ms.openlocfilehash: fa03e1f0bfa8438b3b2899aaf7c97f42533c7c02
-ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
+ms.openlocfilehash: b1d8c9115d5ad0bc97b6ba68cc058de195d01584
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103477551"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874361"
 ---
 # <a name="warning-ca1416-platform-compatibility"></a>Uyarı CA1416: platform uyumluluğu
 
@@ -111,7 +111,7 @@ Tüm çağrı sitelerinizi onarmak istemiyorsanız, uyarıyı bastırmak için a
 
 Windows platformu için:
 
-- Üzerinde listelenen tüm API 'Ler <https://github.com/dotnet/designs/blob/master/accepted/2020/windows-specific-apis/windows-specific-apis.md> .
+- Üzerinde listelenen tüm API 'Ler <https://github.com/dotnet/designs/blob/main/accepted/2020/windows-specific-apis/windows-specific-apis.md> .
 - <xref:System.Security.Cryptography.DSAOpenSsl?displayProperty=fullName>
 - <xref:System.Security.Cryptography.ECDiffieHellmanOpenSsl?displayProperty=fullName>
 - <xref:System.Security.Cryptography.ECDsaOpenSsl?displayProperty=fullName>

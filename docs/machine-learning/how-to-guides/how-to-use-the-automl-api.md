@@ -3,12 +3,12 @@ title: ML.NET otomatik ML API 'sini kullanma
 description: ML.NET otomatikleştirilen ML API 'SI, model oluşturma işlemini otomatikleştirir ve dağıtım için hazırlamış bir model oluşturur. Otomatik makine öğrenimi görevlerini yapılandırmak için kullanabileceğiniz seçenekleri öğrenin.
 ms.date: 12/18/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: b1ef526301e01e1e75e71e0646f4d11e68215d69
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 31204610d471f13aca177f0d599c1eba5cd7a624
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540738"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876349"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>ML.NET otomatik makine öğrenimi API 'sini kullanma
 
@@ -231,4 +231,4 @@ Her ML görevi için kullanılabilir ölçümler şunlardır:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-Tam kod örnekleri için [DotNet/machinöğrenim-Samples](https://github.com/dotnet/machinelearning-samples/tree/master#automate-mlnet-models-generation-preview-state) GitHub deposunu ziyaret edin.
+Tam kod örnekleri için [DotNet/machinöğrenim-Samples](https://github.com/dotnet/machinelearning-samples/tree/main#automate-mlnet-models-generation-preview-state) GitHub deposunu ziyaret edin.

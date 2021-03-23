@@ -3,16 +3,16 @@ title: DotNet test ve NUnit ile .NET Core 'da birim testi Visual Basic
 description: .NET Core 'daki birim testi kavramlarını, NUnit kullanarak örnek Visual Basic çözüm oluşturma adlı etkileşimli bir deneyim aracılığıyla öğrenin.
 author: rprouse
 ms.date: 10/04/2018
-ms.openlocfilehash: 4b807463d29f271d1a707b6254b7b5e66f745319
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 11334951d41c5cca24fcfb4853569e503cff97c5
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656416"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874907"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>DotNet test ve NUnit kullanarak .NET Core kitaplıkları Visual Basic birim testi
 
-Bu öğreticide, birim testi kavramlarını öğrenmek için bir örnek çözüm oluşturma adım adım yönergeler sunarak etkileşimli bir deneyim sağlanır. Önceden oluşturulmuş bir çözüm kullanarak öğreticiyi izlemeyi tercih ediyorsanız, başlamadan önce [örnek kodu görüntüleyin veya indirin](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-vb-nunit/) . İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#view-and-download-samples).
+Bu öğreticide, birim testi kavramlarını öğrenmek için bir örnek çözüm oluşturma adım adım yönergeler sunarak etkileşimli bir deneyim sağlanır. Önceden oluşturulmuş bir çözüm kullanarak öğreticiyi izlemeyi tercih ediyorsanız, başlamadan önce [örnek kodu görüntüleyin veya indirin](https://github.com/dotnet/samples/tree/main/core/getting-started/unit-testing-vb-nunit/) . İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#view-and-download-samples).
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
@@ -43,7 +43,7 @@ Kaynak projeyi oluşturmak için *Primeservice* 'i geçerli dizin yapın ve şu 
 dotnet new classlib -lang VB
 ```
 
-*Class1. vb* ' i *primeservice. vb*olarak yeniden adlandırın. Sınıfın başarısız bir uygulamasını oluşturursunuz `PrimeService` :
+*Class1. vb* ' i *primeservice. vb* olarak yeniden adlandırın. Sınıfın başarısız bir uygulamasını oluşturursunuz `PrimeService` :
 
 ```vb
 Namespace Prime.Services
@@ -90,7 +90,7 @@ Test projesi, birim testlerini oluşturmak ve çalıştırmak için diğer paket
 dotnet add reference ../PrimeService/PrimeService.vbproj
 ```
 
-GitHub 'daki [örnekler deposunda](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-nunit/PrimeService.Tests/PrimeService.Tests.vbproj) dosyanın tamamını görebilirsiniz.
+GitHub 'daki [örnekler deposunda](https://github.com/dotnet/samples/blob/main/core/getting-started/unit-testing-vb-nunit/PrimeService.Tests/PrimeService.Tests.vbproj) dosyanın tamamını görebilirsiniz.
 
 Aşağıdaki son çözüm düzenine sahipsiniz:
 
@@ -157,12 +157,12 @@ Yeni testler oluşturmak yerine, bu iki özniteliği, en düşük asal sayı ola
 
 [!code-vb[Sample_TestCode](../../../samples/snippets/core/testing/unit-testing-vb-nunit/vb/PrimeService.Tests/PrimeService_IsPrimeShould.vb?name=Sample_TestCode)]
 
-Çalıştır `dotnet test` ve bu testlerin ikisi de başarısız olur. Tüm testlerin geçişini yapmak için `if` `Main` *PrimeServices.cs* dosyasındaki yönteminin başındaki yan tümceyi değiştirin:
+Çalıştır `dotnet test` ve bu testlerin ikisi de başarısız olur. Tüm testlerin geçişini yapmak için, `if` `Main` *primeservices. cs* dosyasındaki yönteminin başındaki yan tümceyi değiştirin:
 
 ```vb
 if candidate < 2
 ```
 
-Ana kitaplıkta daha fazla test, daha fazla yer ve daha fazla kod ekleyerek yinelemek için devam edin. [Testlerin tamamlanmış sürümüne](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.vb) ve [kitaplığın tüm uygulamasına](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-nunit/PrimeService/PrimeService.vb)sahipsiniz.
+Ana kitaplıkta daha fazla test, daha fazla yer ve daha fazla kod ekleyerek yinelemek için devam edin. [Testlerin tamamlanmış sürümüne](https://github.com/dotnet/samples/blob/main/core/getting-started/unit-testing-vb-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.vb) ve [kitaplığın tüm uygulamasına](https://github.com/dotnet/samples/blob/main/core/getting-started/unit-testing-vb-nunit/PrimeService/PrimeService.vb)sahipsiniz.
 
 Bu kitaplık için küçük bir kitaplık ve birim testleri kümesi oluşturdunuz. Çözümü, yeni paket ve test eklemek normal iş akışının bir parçası olacak şekilde öğrendiniz. Uygulamanın hedeflerini çözme konusunda zaman ve çaba harcamanızı en iyi şekilde gördünüz.

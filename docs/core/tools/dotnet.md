@@ -2,12 +2,12 @@
 title: DotNet komutu
 description: DotNet komutu (.NET CLı için genel sürücü) ve kullanımı hakkında bilgi edinin.
 ms.date: 11/11/2020
-ms.openlocfilehash: 7a0c8f2eb7ab407bd725db56cbf31da4689970e4
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 33c5f9d22166b818f5c860c4f4632d359f686919
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634031"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874543"
 ---
 # <a name="dotnet-command"></a>DotNet komutu
 
@@ -118,7 +118,7 @@ Bir uygulama çalıştırıldığında aşağıdaki seçenekler mevcuttur `dotne
 
 - **`--additional-deps <PATH>`**
 
-  Dosyadaki ek *.deps.js* yolu. Dosyadaki bir *deps.js* , derleme çakışmalarını çözmek için kullanılan bağımlılıklar, derleme bağımlılıkları ve sürüm bilgilerinin bir listesini içerir. Daha fazla bilgi için bkz. GitHub 'da [çalışma zamanı yapılandırma dosyaları](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) .
+  Dosyadaki ek *.deps.js* yolu. Dosyadaki bir *deps.js* , derleme çakışmalarını çözmek için kullanılan bağımlılıklar, derleme bağımlılıkları ve sürüm bilgilerinin bir listesini içerir. Daha fazla bilgi için bkz. GitHub 'da [çalışma zamanı yapılandırma dosyaları](https://github.com/dotnet/sdk/blob/main/documentation/specs/runtime-configuration-file.md) .
 
 - **`--depsfile <PATH_TO_DEPSFILE>`**
 
@@ -219,7 +219,7 @@ Komut | İşlev
 --- | ---
 [dotnet tool install](dotnet-tool-install.md) | Makinenize bir araç kurar.
 [dotnet tool list](dotnet-tool-list.md) | Makinenizde yüklü olan tüm genel, araç-yol veya yerel araçları listeler.
-[DotNet aracı araması](dotnet-tool-list.md) | Adında veya meta verilerinde belirtilen arama terimine sahip araçlar için NuGet.org arar.
+[dotnet tool search](dotnet-tool-list.md) | Adında veya meta verilerinde belirtilen arama terimine sahip araçlar için NuGet.org arar.
 [dotnet tool uninstall](dotnet-tool-uninstall.md) | Bir aracı makinenizden kaldırır.
 [dotnet tool update](dotnet-tool-update.md) | Makinenizde yüklü bir aracı güncelleştirir.
 
@@ -345,5 +345,5 @@ dotnet myapp.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma zamanı yapılandırma dosyaları](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)
+- [Çalışma zamanı yapılandırma dosyaları](https://github.com/dotnet/sdk/blob/main/documentation/specs/runtime-configuration-file.md)
 - [.NET çalışma zamanı yapılandırma ayarları](../run-time-config/index.md)

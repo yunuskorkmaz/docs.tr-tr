@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 13c91e5cb6728c5669642d1b5f7bb461efdd44f8
-ms.sourcegitcommit: 78eb25647b0c750cd80354ebd6ce83a60668e22c
+ms.openlocfilehash: 30323113520f3bd148a0f1a6fab9801381a332b3
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99065057"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875154"
 ---
 # <a name="exposing-net-core-components-to-com"></a>.NET Core bileşenlerini COM 'a gösterme
 
@@ -40,7 +40,7 @@ ms.locfileid: "99065057"
 
 2. `Class1.cs` dosyasını açın.
 3. `using System.Runtime.InteropServices;`Dosyanın en üstüne ekleyin.
-4. Adlı bir arabirim oluşturun `IServer` . Örneğin:
+4. Adlı bir arabirim oluşturun `IServer` . Örnek:
 
    ```csharp
    using System;
@@ -87,7 +87,7 @@ Sonuçta elde edilen çıkışın bir dosyası da olacaktır `ProjectName.X.mani
 
 ## <a name="sample"></a>Örnek
 
-GitHub 'daki DotNet/Samples deposunda tam işlevli bir [com sunucusu örneği](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo) vardır.
+GitHub 'daki DotNet/Samples deposunda tam işlevli bir [com sunucusu örneği](https://github.com/dotnet/samples/tree/main/core/extensions/COMServerDemo) vardır.
 
 ## <a name="additional-notes"></a>Ek notlar
 

@@ -3,12 +3,12 @@ title: Hata ayıklama kilitlenmesi-.NET Core
 description: .NET Core 'da kilitleme sorununu ayıklamada size kılavuzluk eden bir öğretici.
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: 0f5862c9acc4c1ae892caf29cea2ca484116cabf
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: a268884740ff38d7975303a5a5e5f2c24f16778d
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102105590"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874283"
 ---
 # <a name="debug-a-deadlock-in-net-core"></a>.NET Core 'da kilitlenmeyle hata ayıklama
 
@@ -267,7 +267,7 @@ OS Thread Id: 0x5634 (28)
 - [DotNet-](dotnet-trace.md) liste işlemlerine izleme
 - [DotNet-](dotnet-counters.md) yönetilen bellek kullanımını denetlemek için sayaçlar
 - [DotNet-](dotnet-dump.md) döküm dosyasını toplamak ve analiz etmek için döküm
-- [DotNet/Diagnostics](https://github.com/dotnet/diagnostics/tree/master/documentation/tutorial)
+- [DotNet/Diagnostics](https://github.com/dotnet/diagnostics/tree/main/documentation/tutorial)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

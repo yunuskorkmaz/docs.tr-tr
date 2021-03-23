@@ -6,12 +6,12 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 17f0ff611e68a5dab2032f78ef75912f314d88a5
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: f85ed5585c8daef0ca9a21275b8de71b2eead360
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688273"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875492"
 ---
 # <a name="call-a-java-udf-from-your-net-for-apache-spark-application"></a>Apache Spark uygulamasında .NET 'ten bir Java UDF çağrısı yapın
 
@@ -45,7 +45,7 @@ Bu makalede, [Apache Spark uygulamasına yönelik .net](https://github.com/dotne
 ## <a name="register-and-call-java-udfs-in-net-for-apache-spark"></a>Apache Spark için .NET 'te Java UDF 'Leri kaydedin ve çağırın
 
 1. [`RegisterJava`](https://github.com/dotnet/spark/blob/8dcdcdc7c60d5f42cba5a90f1346d854ab5bf7bb/src/csharp/Microsoft.Spark/Sql/UDFRegistration.cs#L424)Java UDF 'Nizi Spark SQL 'e kaydetmek için API 'yi kullanın.
-2. `DataFrame`İşlevini kullanarak UDF 'NIZI SQL tablosu olarak çağırmak istediğiniz öğesine kaydolun [`CreateOrReplaceTempView`](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Sql/DataFrame.cs#L982) .
+2. `DataFrame`İşlevini kullanarak UDF 'NIZI SQL tablosu olarak çağırmak istediğiniz öğesine kaydolun [`CreateOrReplaceTempView`](https://github.com/dotnet/spark/blob/main/src/csharp/Microsoft.Spark/Sql/DataFrame.cs#L982) .
 3. `SparkSession.Sql`Spark SQL kullanarak tablo görünümünde UDF 'yi çağırmak için kullanın.
 Yukarıdaki adımları göstermek için temel bir örnek:
 

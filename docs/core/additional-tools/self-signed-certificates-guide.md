@@ -3,20 +3,20 @@ title: Self-Signed sertifikalarına genel bakış oluşturma
 description: .NET Core ve ASP.NET Core projelerine yönelik işlevselliği ve otomatik olarak imzalanan sertifikaları kullanmak için diğer seçenekleri ekleyen Microsoft DotNet dev-CERT aracına genel bakış.
 author: angee
 ms.date: 11/19/2020
-ms.openlocfilehash: d1675abb7d584b72d981f9db739e02269abe662c
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 738af3fc091e415399a53015a40748ad6116a2b4
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189147"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873022"
 ---
 # <a name="generate-self-signed-certificates-with-the-net-cli"></a>.NET CLı ile otomatik olarak imzalanan sertifikalar oluşturma
 
 Otomatik olarak imzalanan sertifikalar kullanılırken geliştirme ve test senaryolarında bunları oluşturmanın ve kullanmanın farklı yolları vardır.  Bu kılavuzda, ile otomatik olarak imzalanan sertifikaları `dotnet dev-certs` ve ve gibi diğer seçenekleri kullanarak kapsayabileceksiniz `PowerShell` `OpenSSL` .
 
-Daha sonra, bir kapsayıcıda barındırılan [ASP.NET Core uygulaması](https://github.com/dotnet/dotnet-docker/blob/master/samples/run-aspnetcore-https-development.md) gibi bir örnek kullanarak sertifikanın yükleneceğini doğrulayabilirsiniz.
+Daha sonra, bir kapsayıcıda barındırılan [ASP.NET Core uygulaması](https://github.com/dotnet/dotnet-docker/blob/main/samples/run-aspnetcore-https-development.md) gibi bir örnek kullanarak sertifikanın yükleneceğini doğrulayabilirsiniz.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Örnekte, .NET Core 3,1 veya .NET 5 ' i kullanabilirsiniz.
 
@@ -46,7 +46,7 @@ Depoya yerel olarak gidin ve çalışma alanını bir düzenleyicide açın.
 
 > [!NOTE]
 > Dağıtımı *kırpmak* için DotNet Publish parametrelerini kullanmak ISTIYORSANıZ, SSL sertifikalarını desteklemek için uygun bağımlılıkların eklendiğinden emin olun.
-Uygun derlemelerin kapsayıcıya eklendiğinden emin olmak için [DotNet-docker\samples\aspnetapp\aspnetapp.csproj](https://github.com/dotnet/dotnet-docker/blob/master/samples/aspnetapp/aspnetapp/aspnetapp.csproj) 'i güncelleştirin. Başvuru için,. csproj dosyasını, kendi içinde olan dağıtımlar için kırpma kullanılırken [SSL sertifikalarını destekleyecek](../deploying/trim-self-contained.md#support-for-ssl-certificates) şekilde güncelleştirmeyi denetleyin.
+Uygun derlemelerin kapsayıcıya eklendiğinden emin olmak için [DotNet-docker\samples\aspnetapp\aspnetapp.csproj](https://github.com/dotnet/dotnet-docker/blob/main/samples/aspnetapp/aspnetapp/aspnetapp.csproj) 'i güncelleştirin. Başvuru için,. csproj dosyasını, kendi içinde olan dağıtımlar için kırpma kullanılırken [SSL sertifikalarını destekleyecek](../deploying/trim-self-contained.md#support-for-ssl-certificates) şekilde güncelleştirmeyi denetleyin.
 
 ' Nin `aspnetapp.csproj` uygun hedef Framework 'ü içerdiğinden emin olun:
 
@@ -101,7 +101,7 @@ docker build -t aspnetapp:my-sample -f Dockerfile .
 
 Bu kılavuzda, [örnek aspnetapp](https://hub.docker.com/_/microsoft-dotnet-samples) .NET 5 için denetlenmelidir.
 
-Örnek uygulama [Dockerfile](https://github.com/dotnet/dotnet-docker/blob/master/samples/aspnetapp/Dockerfile) 'ın .NET 5 kullandığını denetleyin.
+Örnek uygulama [Dockerfile](https://github.com/dotnet/dotnet-docker/blob/main/samples/aspnetapp/Dockerfile) 'ın .NET 5 kullandığını denetleyin.
 
 Ana bilgisayar işletim sistemine bağlı olarak, ASP.NET çalışma zamanının güncellenmesi gerekebilir. Örneğin, `mcr.microsoft.com/dotnet/aspnet:5.0-nanoservercore-2009 AS runtime` `mcr.microsoft.com/dotnet/aspnet:5.0-windowsservercore-ltsc2019 AS runtime` Dockerfile içinde olarak değiştirme, uygun Windows çalışma zamanını hedeflemeye yardımcı olur.
 
@@ -148,7 +148,7 @@ Linux 'ta sertifikaları test etmemiz durumunda mevcut Dockerfile 'ı kullanabil
 
 > [!NOTE]
 > `dotnet publish`Dağıtımı *kırpmak* için parametreleri kullanmak istiyorsanız, SSL sertifikalarını desteklemek için uygun bağımlılıkların eklendiğinden emin olun.
-Uygun derlemelerin kapsayıcıya eklendiğinden emin olmak için [DotNet-docker\samples\aspnetapp\aspnetapp.csproj](https://github.com/dotnet/dotnet-docker/blob/master/samples/aspnetapp/aspnetapp/aspnetapp.csproj) 'i güncelleştirin. Başvuru için,. csproj dosyasını, kendi içinde olan dağıtımlar için kırpma kullanılırken [SSL sertifikalarını destekleyecek](../deploying/trim-self-contained.md#support-for-ssl-certificates) şekilde güncelleştirmeyi denetleyin.
+Uygun derlemelerin kapsayıcıya eklendiğinden emin olmak için [DotNet-docker\samples\aspnetapp\aspnetapp.csproj](https://github.com/dotnet/dotnet-docker/blob/main/samples/aspnetapp/aspnetapp/aspnetapp.csproj) 'i güncelleştirin. Başvuru için,. csproj dosyasını, kendi içinde olan dağıtımlar için kırpma kullanılırken [SSL sertifikalarını destekleyecek](../deploying/trim-self-contained.md#support-for-ssl-certificates) şekilde güncelleştirmeyi denetleyin.
 
 Örnek uygulamaya işaret ettiğinizden emin olun.
 

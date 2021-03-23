@@ -5,18 +5,18 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: 1c2c966a4ff50a9d2f6951e20d909c5c20c75bfb
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: a21b92f910d82cbddd2976adeb292cea5f7bc78b
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688247"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876870"
 ---
 # <a name="tutorial-sentiment-analysis-with-net-for-apache-spark-and-mlnet"></a>Öğretici: Apache Spark ve ML.NET için .NET ile yaklaşım Analizi
 
 Bu öğretici, Apache Spark için ML.NET ve .NET kullanarak çevrimiçi incelemelere ilişkin yaklaşım analizinin nasıl yapılacağını öğretir. [Ml.net](http://dot.net/ml) , ücretsiz, platformlar arası, açık kaynaklı bir makine öğrenimi çerçevesidir. Makine öğrenimi algoritmalarının eğitimini ve tahminini ölçeklendirmek için Apache Spark .NET ile ML.NET kullanabilirsiniz.
 
-Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
+Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 
 > [!div class="checklist"]
 >
@@ -33,11 +33,11 @@ Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 
 * [İndir ve yükle](https://marketplace.visualstudio.com/items?itemName=MLNET.07) ML.NET model Oluşturucu (Önizleme).
 
-* [yelptest.csv](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment/Resources/yelptest.csv) indirin ve sarıp İnceleme veri kümelerini [yelptrain.csv](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment/Resources/yelptrain.csv) .
+* [yelptest.csv](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment/Resources/yelptest.csv) indirin ve sarıp İnceleme veri kümelerini [yelptrain.csv](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment/Resources/yelptrain.csv) .
 
 ## <a name="review-the-data"></a>Verileri gözden geçirin
 
-Yelp İnceleme veri kümesi çeşitli hizmetlerle ilgili çevrimiçi sarık İncelemeleri içerir. [yelptrain.csv](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment/Resources/yelptrain.csv) açın ve verilerin yapısına dikkat edin. İlk sütunda İnceleme metni bulunur ve ikinci sütun, yaklaşım puanlarını içerir. Yaklaşım puanı 1 ise, gözden geçirme pozitif olur ve yaklaşım puanı 0 ise, gözden geçirme negatif olur.
+Yelp İnceleme veri kümesi çeşitli hizmetlerle ilgili çevrimiçi sarık İncelemeleri içerir. [yelptrain.csv](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment/Resources/yelptrain.csv) açın ve verilerin yapısına dikkat edin. İlk sütunda İnceleme metni bulunur ve ikinci sütun, yaklaşım puanlarını içerir. Yaklaşım puanı 1 ise, gözden geçirme pozitif olur ve yaklaşım puanı 0 ise, gözden geçirme negatif olur.
 
 Aşağıdaki tabloda örnek veriler yer almaktadır:
 
@@ -84,9 +84,9 @@ Model Oluşturucu sizin için bir konsol uygulaması oluşturur.
 
 ### <a name="create-a-sparksession"></a>Mini oturum oluşturma
 
-1. **Mlmini Modelml. ConsoleApp** için *program.cs* dosyasını açın. Bu dosya model Oluşturucu tarafından otomatik olarak oluşturuldu. `using`Deyimlerini, Main () yönteminin içeriğini ve `CreateSingleDataSample` bölgesini silin.
+1. **Mlmini Modelml. ConsoleApp** için *program. cs* dosyasını açın. Bu dosya model Oluşturucu tarafından otomatik olarak oluşturuldu. `using`Deyimlerini, Main () yönteminin içeriğini ve `CreateSingleDataSample` bölgesini silin.
 
-1. Aşağıdaki ek `using` deyimlerini *program.cs* üst kısmına ekleyin:
+1. Aşağıdaki ek `using` deyimlerini programın en üstüne ekleyin *. cs*:
 
    ```csharp
    using System;
@@ -157,7 +157,7 @@ spark.Stop();
 
 ### <a name="create-predict-method"></a>Tahmin () yöntemi oluştur
 
-Aşağıdaki kodu yönteminizin önüne ekleyin `Main()` . Bu kod, *ConsumeModel.cs* Içinde model Oluşturucu tarafından üretilme benzer. Bu yöntemin konsoluna taşınması, uygulamanızı her çalıştırışınızda model yüklemeyi yükler.
+Aşağıdaki kodu yönteminizin önüne ekleyin `Main()` . Bu kod, model Oluşturucu tarafından *Tüketimemodel. cs*'de üretilme benzer. Bu yöntemin konsoluna taşınması, uygulamanızı her çalıştırışınızda model yüklemeyi yükler.
 
 ```csharp
 private static readonly PredictionEngine<ModelInput, ModelOutput> _predictionEngine;
@@ -203,7 +203,7 @@ Ardından konsol uygulamasının Yayımla klasörüne gidin ve aşağıdaki `spa
 
 ## <a name="get-the-code"></a>Kodu alma
 
-Bu öğretici, [büyük veri örneği ile yaklaşım Analizi](https://github.com/dotnet/spark/tree/master/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment) kodla benzerdir.
+Bu öğretici, [büyük veri örneği ile yaklaşım Analizi](https://github.com/dotnet/spark/tree/main/examples/Microsoft.Spark.CSharp.Examples/MachineLearning/Sentiment) kodla benzerdir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

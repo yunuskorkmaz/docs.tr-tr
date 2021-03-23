@@ -3,12 +3,12 @@ title: ML.NET Command-Line Interface (CLı) aracını yüklemek
 description: ML.NET Command-Line arabirimi (CLı) aracını yükleme, yükseltme, düşürme ve kaldırma hakkında bilgi edinin.
 ms.date: 06/08/2020
 ms.custom: mlnet-tooling
-ms.openlocfilehash: a99ffa30dcbacba3341125fd0e37e617e0f4cd1e
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: a2fdaa06c1602a2c3986b2f034cd1840e39d16a3
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102103952"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876779"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>ML.NET Command-Line Interface (CLı) aracını yüklemek
 
@@ -108,9 +108,9 @@ Tamamlamayı etkinleştirmek istediğiniz makinede iki şey yapmanız gerekir.
 
 2. Kabuk profilinize uygun dolgu betiğini ekleyin. Bir kabuk profili dosyası oluşturmanız gerekebilir. Dolgu betiği, kabuğunuzun tamamlanma isteklerini `dotnet-suggest` , uygun tabanlı uygulamaya temsilci olan bir araca iletir `System.CommandLine` .
 
-    - Bash için [DotNet-öner-Shim. bash](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.bash) içeriğini ' ye ekleyin `~/.bash_profile` .
+    - Bash için [DotNet-öner-Shim. bash](https://github.com/dotnet/System.CommandLine/blob/main/src/System.CommandLine.Suggest/dotnet-suggest-shim.bash) içeriğini ' ye ekleyin `~/.bash_profile` .
 
-    - PowerShell için [dotnet-suggest-shim.ps1](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.ps1) içeriğini PowerShell profilinize ekleyin. Konsolunda aşağıdaki komutu çalıştırarak, PowerShell profilinize beklenen yolu bulabilirsiniz:
+    - PowerShell için [dotnet-suggest-shim.ps1](https://github.com/dotnet/System.CommandLine/blob/main/src/System.CommandLine.Suggest/dotnet-suggest-shim.ps1) içeriğini PowerShell profilinize ekleyin. Konsolunda aşağıdaki komutu çalıştırarak, PowerShell profilinize beklenen yolu bulabilirsiniz:
 
     ```console
     echo $profile

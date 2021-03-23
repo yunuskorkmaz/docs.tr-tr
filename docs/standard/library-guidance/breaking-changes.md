@@ -2,12 +2,12 @@
 title: Son değişiklikler ve .NET kitaplıkları
 description: .NET kitaplıkları oluştururken önemli değişikliklere gidilme için en iyi yöntem önerileri.
 ms.date: 10/02/2018
-ms.openlocfilehash: 2cbd9e0a818b52aede6c9b1f60fdf52dcbd7b96f
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 673a14e69b166fff81e8af9e9c5bf477fdb36871
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223337"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873984"
 ---
 # <a name="breaking-changes"></a>Yeni değişiklikler
 
@@ -62,7 +62,7 @@ Davranış değişiklikleri en yaygın Son değişiklik türüdür: neredeyse he
 
 Kitaplığınızın genel API 'sini değiştirdiğiniz zaman ikili bir değişiklik gerçekleşir, bu nedenle kitaplığınızın eski sürümlerine göre derlenen derlemeler artık API 'yi çağıramayacak. Örneğin, yeni bir parametre ekleyerek bir yöntemin imzasını değiştirmek, kitaplığın daha eski bir sürümüne karşı derlenen derlemelerin bir oluşturmasına neden olur <xref:System.MissingMethodException> .
 
-İkili bir son değişiklik, **tüm bir derlemeyi**de kesebilir. Bütünleştirilmiş kodun ile yeniden adlandırılması derlemenin `AssemblyName` kimliğini değiştirecek, bu da derlemenin tanımlayıcı adlandırma anahtarını ekler, kaldırır veya değiştirir. Bir derlemenin kimliğinin değişikliği, kendisini kullanan tüm derlenmiş kodları keser.
+İkili bir son değişiklik, **tüm bir derlemeyi** de kesebilir. Bütünleştirilmiş kodun ile yeniden adlandırılması derlemenin `AssemblyName` kimliğini değiştirecek, bu da derlemenin tanımlayıcı adlandırma anahtarını ekler, kaldırır veya değiştirir. Bir derlemenin kimliğinin değişikliği, kendisini kullanan tüm derlenmiş kodları keser.
 
 ❌ Bütünleştirilmiş kod adını değiştirmeyin.
 
@@ -100,7 +100,7 @@ public class Document
 
 - [C# geliştiricileri için sürüm ve güncelleştirme konuları](../../csharp/whats-new/version-update-considerations.md)
 - [.NET 'teki API-kırılmaya yönelik kesin bir kılavuz](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net)
-- [.NET Son değişiklik kuralları](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/breaking-change-rules.md)
+- [.NET Son değişiklik kuralları](https://github.com/dotnet/runtime/blob/main/docs/coding-guidelines/breaking-change-rules.md)
 
 >[!div class="step-by-step"]
 >[Önceki](versioning.md)

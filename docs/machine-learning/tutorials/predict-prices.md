@@ -4,18 +4,18 @@ description: Bu öğreticide, özellikle New York City taksi Fares fiyatlarını
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: beb48c9252b83cd693c351d39882b7ac9d08d882
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: f8f7146241368edaca31afd970af54a098d1aafa
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309722"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874647"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>Öğretici: ML.NET ile gerileme kullanarak fiyatları tahmin etme
 
 Bu öğreticide, özellikle New York City taksi Fares fiyatlarını tahmin etmek için ml.NET kullanarak bir [gerileme modelinin](../resources/glossary.md#regression) nasıl oluşturulacağı gösterilmektedir.
 
-Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
+Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > [!div class="checklist"]
 >
 > * Verileri hazırlama ve anlama
@@ -39,15 +39,15 @@ Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 
     [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
-    **Çözüm Gezgini**, projeye sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin. Paket kaynağı olarak "nuget.org" öğesini seçin, **Araştır** sekmesini seçin, **Microsoft.ml**için arama yapın, listeden paketi seçin ve sonra da **Install** düğmesini seçin. **Değişiklikleri Önizle** Iletişim kutusunda **Tamam** düğmesini seçin ve ardından listelenen paketlerin lisans koşullarını kabul ediyorsanız **Lisans kabulü** iletişim kutusunda **kabul ediyorum** düğmesini seçin. **Microsoft. ml. FastTree** NuGet paketi için de aynısını yapın.
+    **Çözüm Gezgini**, projeye sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin. Paket kaynağı olarak "nuget.org" öğesini seçin, **Araştır** sekmesini seçin, **Microsoft.ml** için arama yapın, listeden paketi seçin ve sonra da **Install** düğmesini seçin. **Değişiklikleri Önizle** Iletişim kutusunda **Tamam** düğmesini seçin ve ardından listelenen paketlerin lisans koşullarını kabul ediyorsanız **Lisans kabulü** iletişim kutusunda **kabul ediyorum** düğmesini seçin. **Microsoft. ml. FastTree** NuGet paketi için de aynısını yapın.
 
 ## <a name="prepare-and-understand-the-data"></a>Verileri hazırlama ve anlama
 
-1. [taxi-fare-train.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-train.csv) ve [taxi-fare-test.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-test.csv) veri kümelerini indirin ve önceki adımda oluşturduğunuz *veri* klasörüne kaydedin. Machine Learning modelini eğitmek için bu veri kümelerini kullanıyoruz ve sonra modelin ne kadar doğru olduğunu değerlendirin. Bu veri kümeleri başlangıçta [NYC TLC TAXI seyahat veri kümesinden](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page)alınır.
+1. [taxi-fare-train.csv](https://github.com/dotnet/machinelearning/blob/main/test/data/taxi-fare-train.csv) ve [taxi-fare-test.csv](https://github.com/dotnet/machinelearning/blob/main/test/data/taxi-fare-test.csv) veri kümelerini indirin ve önceki adımda oluşturduğunuz *veri* klasörüne kaydedin. Machine Learning modelini eğitmek için bu veri kümelerini kullanıyoruz ve sonra modelin ne kadar doğru olduğunu değerlendirin. Bu veri kümeleri başlangıçta [NYC TLC TAXI seyahat veri kümesinden](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page)alınır.
 
-1. **Çözüm Gezgini**,. csv dosyalarının her birine sağ tıklayın \* ve **Özellikler**' i seçin. **Gelişmiş**' in altında, **Çıkış Dizinine Kopyala** değerini **daha yeniyse kopyala**olarak değiştirin.
+1. **Çözüm Gezgini**,. csv dosyalarının her birine sağ tıklayın \* ve **Özellikler**' i seçin. **Gelişmiş**' in altında, **Çıkış Dizinine Kopyala** değerini **daha yeniyse kopyala** olarak değiştirin.
 
-1. **taxi-fare-train.csv** veri kümesini açın ve ilk satırdaki sütun başlıklarına bakın. Her sütuna göz atın. Verileri anlayın ve hangi sütunların **Özellikler** olduğunu ve hangisinin **etiket**olduğunu belirleyin.
+1. **taxi-fare-train.csv** veri kümesini açın ve ilk satırdaki sütun başlıklarına bakın. Her sütuna göz atın. Verileri anlayın ve hangi sütunların **Özellikler** olduğunu ve hangisinin **etiket** olduğunu belirleyin.
 
 `label`Tahmin etmek istediğiniz sütundur. `Features`, Modeli tahmin etmek için size izin verdiğiniz girişlerdir `Label` .
 
@@ -65,17 +65,17 @@ Belirtilen veri kümesi şu sütunları içerir:
 
 Giriş verileri ve tahminleri için sınıflar oluşturun:
 
-1. **Çözüm Gezgini**, projeye sağ tıklayın ve ardından **Add**  >  **Yeni öğe**Ekle ' yi seçin.
-1. **Yeni öğe Ekle** Iletişim kutusunda **sınıf** ' ı seçin ve **ad** alanını *TaxiTrip.cs*olarak değiştirin. Sonra **Ekle** düğmesini seçin.
+1. **Çözüm Gezgini**, projeye sağ tıklayın ve ardından   >  **Yeni öğe** Ekle ' yi seçin.
+1. **Yeni öğe Ekle** Iletişim kutusunda **sınıf** ' ı seçin ve **ad** alanını *taxitrip. cs* olarak değiştirin. Sonra **Ekle** düğmesini seçin.
 1. Aşağıdaki `using` yönergeleri yeni dosyaya ekleyin:
 
    [!code-csharp[AddUsings](./snippets/predict-prices/csharp/TaxiTrip.cs#1 "Add necessary usings")]
 
-Mevcut sınıf tanımını kaldırın ve iki sınıfa `TaxiTrip` ve `TaxiTripFarePrediction` *TaxiTrip.cs* dosyasına sahip olan aşağıdaki kodu ekleyin:
+Mevcut sınıf tanımını kaldırın ve aşağıdaki kodu, iki sınıfa `TaxiTrip` ve `TaxiTripFarePrediction` , *taxitrıp. cs* dosyasına ekleyin:
 
 [!code-csharp[DefineTaxiTrip](./snippets/predict-prices/csharp/TaxiTrip.cs#2 "Define the taxi trip and fare predictions classes")]
 
-`TaxiTrip`, giriş veri sınıfıdır ve veri kümesi sütunlarının her biri için tanımlar içerir. <xref:Microsoft.ML.Data.LoadColumnAttribute>Veri kümesindeki kaynak sütunlarının dizinlerini belirtmek için özniteliğini kullanın.
+`TaxiTrip` , giriş veri sınıfıdır ve veri kümesi sütunlarının her biri için tanımlar içerir. <xref:Microsoft.ML.Data.LoadColumnAttribute>Veri kümesindeki kaynak sütunlarının dizinlerini belirtmek için özniteliğini kullanın.
 
 `TaxiTripFarePrediction`Sınıfı tahmin edilen sonuçları temsil eder. Özniteliği uygulanmış tek bir float alanı vardır `FareAmount` `Score` <xref:Microsoft.ML.Data.ColumnNameAttribute> . Regresyon görevi söz konusu olduğunda, **puan** sütunu tahmin edilen etiket değerlerini içerir.
 
@@ -84,15 +84,15 @@ Mevcut sınıf tanımını kaldırın ve iki sınıfa `TaxiTrip` ve `TaxiTripFar
 
 ### <a name="define-data-and-model-paths"></a>Veri ve model yollarını tanımlama
 
-Aşağıdaki ek `using` deyimlerini *program.cs* dosyasının en üstüne ekleyin:
+Aşağıdaki ek `using` deyimlerini *program. cs* dosyasının en üstüne ekleyin:
 
 [!code-csharp[AddUsings](./snippets/predict-prices/csharp/Program.cs#1 "Add necessary usings")]
 
 Veri kümelerine sahip dosyaların yollarını tutmak için üç alan oluşturmanız ve modelin kaydedileceği dosyanın olması gerekir:
 
-* `_trainDataPath`modeli eğitmek için kullanılan veri kümesiyle dosyanın yolunu içerir.
-* `_testDataPath`modeli değerlendirmek için kullanılan veri kümesiyle dosyanın yolunu içerir.
-* `_modelPath`eğitilen modelin depolandığı dosyanın yolunu içerir.
+* `_trainDataPath` modeli eğitmek için kullanılan veri kümesiyle dosyanın yolunu içerir.
+* `_testDataPath` modeli değerlendirmek için kullanılan veri kümesiyle dosyanın yolunu içerir.
+* `_modelPath` eğitilen modelin depolandığı dosyanın yolunu içerir.
 
 `Main`Bu yolları ve değişkeni belirtmek için yönteminin hemen üstüne aşağıdaki kodu ekleyin `_textLoader` :
 
@@ -128,7 +128,7 @@ public static ITransformer Train(MLContext mlContext, string dataPath)
 
 ## <a name="load-and-transform-data"></a>Verileri yükleme ve dönüştürme
 
-ML.NET, sayısal veya metin tablolu verileri tanımlamaya yönelik esnek ve verimli bir yöntem olarak [ıdataview sınıfını](xref:Microsoft.ML.IDataView) kullanır. `IDataView`metin dosyalarını veya gerçek zamanlı olarak yükleyebilirsiniz (örneğin, SQL veritabanı veya günlük dosyaları). Aşağıdaki kodu yönteminin ilk satırı olarak ekleyin `Train()` :
+ML.NET, sayısal veya metin tablolu verileri tanımlamaya yönelik esnek ve verimli bir yöntem olarak [ıdataview sınıfını](xref:Microsoft.ML.IDataView) kullanır. `IDataView` metin dosyalarını veya gerçek zamanlı olarak yükleyebilirsiniz (örneğin, SQL veritabanı veya günlük dosyaları). Aşağıdaki kodu yönteminin ilk satırı olarak ekleyin `Train()` :
 
 [!code-csharp[LoadTrainData](./snippets/predict-prices/csharp/Program.cs#6 "loading training dataset")]
 
@@ -247,10 +247,10 @@ private static void TestSinglePrediction(MLContext mlContext, ITransformer model
 
 [!code-csharp[MakePredictionEngine](./snippets/predict-prices/csharp/Program.cs#22 "Create the PredictionFunction")]
 
-[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) , tek bir veri örneğinde tahmin gerçekleştirmenize olanak tanıyan, KULLANıŞLı bir API 'dir. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602), iş parçacığı açısından güvenli değildir. Tek iş parçacıklı veya prototip ortamlarında kullanılması kabul edilebilir. Üretim ortamlarında geliştirilmiş performans ve iş parçacığı güvenliği için, `PredictionEnginePool` [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) uygulamanız genelinde kullanılacak nesneleri oluşturan hizmetini kullanın. [ `PredictionEnginePool` ASP.NET Core Web API 'sinde kullanma](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)hakkında bu kılavuza bakın.
+[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) , tek bir veri örneğinde tahmin gerçekleştirmenize olanak tanıyan, KULLANıŞLı bir API 'dir. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) , iş parçacığı açısından güvenli değildir. Tek iş parçacıklı veya prototip ortamlarında kullanılması kabul edilebilir. Üretim ortamlarında geliştirilmiş performans ve iş parçacığı güvenliği için, `PredictionEnginePool` [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) uygulamanız genelinde kullanılacak nesneleri oluşturan hizmetini kullanın. [ `PredictionEnginePool` ASP.NET Core Web API 'sinde kullanma](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)hakkında bu kılavuza bakın.
 
 > [!NOTE]
-> `PredictionEnginePool`Hizmet Uzantısı Şu anda önizleme aşamasındadır.
+> `PredictionEnginePool` Hizmet Uzantısı Şu anda önizleme aşamasındadır.
 
 Bu öğretici, bu sınıf içinde bir test yolculuğu kullanır. Daha sonra, modelle denemeler yapmak için başka senaryolar da ekleyebilirsiniz. Bir örneği oluşturarak eğitilen modelin Maliyet tahminini test etmek için bir seyahat ekleyin `TestSinglePrediction()` `TaxiTrip` :
 
@@ -268,7 +268,7 @@ Belirtilen seyahati için öngörülen tarifeli havayolu 'yi göstermek için a�
 
 Test çalışmanıza yönelik tahmini TAXI tarifeli havayolu görmek için programı çalıştırın.
 
-Tebrikler! Artık TAXI seyahat Fares 'yi tahmin etmek için bir makine öğrenimi modelini başarıyla oluşturdunuz, doğruluğu değerlendirildi ve tahmine dayalı hale getirmek için kullandınız. Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TaxiFarePrediction) GitHub deposunda bulabilirsiniz.
+Tebrikler! Artık TAXI seyahat Fares 'yi tahmin etmek için bir makine öğrenimi modelini başarıyla oluşturdunuz, doğruluğu değerlendirildi ve tahmine dayalı hale getirmek için kullandınız. Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/TaxiFarePrediction) GitHub deposunda bulabilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

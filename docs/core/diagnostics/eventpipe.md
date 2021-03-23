@@ -3,12 +3,12 @@ title: EventPipe genel bakış
 description: EventPipe hakkında bilgi edinin ve performans sorunlarını tanılamak üzere .NET uygulamalarınızı izlemek için nasıl kullanacağınızı öğrenin.
 ms.date: 11/09/2020
 ms.topic: overview
-ms.openlocfilehash: 0b4782306c85590d74b521edd254659fb162b0c2
-ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
+ms.openlocfilehash: de00f448dea9752c3dff2af35977d97c07aec6f3
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2021
-ms.locfileid: "103624168"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874166"
 ---
 # <a name="eventpipe"></a>EventPipe
 
@@ -22,7 +22,7 @@ Bu makale, EventPipe 'ın ne zaman ve nasıl kullanılacağını açıklayan Eve
 
 EventPipe, çalışma zamanı bileşenleri tarafından yayılan olayları toplar-Örneğin, tam zamanında derleyici veya çöp toplayıcı ve kitaplıklarda ve Kullanıcı kodundaki [EventSource](xref:System.Diagnostics.Tracing.EventSource) örneklerinden yazılmış olaylar.
 
-Olaylar daha sonra serileştirilir ve doğrudan bir dosyaya yazılabilir veya bir tanılama bağlantı noktası aracılığıyla bir tanesi tarafından tüketilebilir. Windows 'da tanılama bağlantı noktaları s olarak uygulanır `NamedPipe` . Linux veya macOS gibi Windows dışı platformlarda, Unix etki alanı yuvaları kullanılarak uygulanır. Tanılama bağlantı noktası hakkında daha fazla bilgi ve özel işlem arası iletişim protokolü aracılığıyla bununla etkileşim kurma hakkında daha fazla bilgi için bkz. [Tanılama IPC Protokolü belgeleri](https://github.com/dotnet/diagnostics/blob/master/documentation/design-docs/ipc-protocol.md).
+Olaylar daha sonra serileştirilir ve doğrudan bir dosyaya yazılabilir veya bir tanılama bağlantı noktası aracılığıyla bir tanesi tarafından tüketilebilir. Windows 'da tanılama bağlantı noktaları s olarak uygulanır `NamedPipe` . Linux veya macOS gibi Windows dışı platformlarda, Unix etki alanı yuvaları kullanılarak uygulanır. Tanılama bağlantı noktası hakkında daha fazla bilgi ve özel işlem arası iletişim protokolü aracılığıyla bununla etkileşim kurma hakkında daha fazla bilgi için bkz. [Tanılama IPC Protokolü belgeleri](https://github.com/dotnet/diagnostics/blob/main/documentation/design-docs/ipc-protocol.md).
 
 EventPipe daha sonra seri hale getirilmiş olayları `.nettrace` , tanılama bağlantı noktaları aracılığıyla ya da doğrudan bir dosyaya dosya biçiminde yazar. EventPipe serileştirme biçimi hakkında daha fazla bilgi edinmek için [Eventpipe biçim belgelerine](https://github.com/microsoft/perfview/blob/master/src/TraceEvent/EventPipe/EventPipeFormat.md)bakın.
 
@@ -49,7 +49,7 @@ Aşağıdaki tabloda EventPipe ile ETW/LTTng arasındaki farkların bir özeti v
 
 * EventPipe 'ın üzerine inşa edilen [tanılama araçlarından](#tools-that-use-eventpipe) birini kullanın.
 
-* EventPipe oturumlarını kendiniz yapılandırmak ve başlatmak için kendi aracınızı yazmak üzere [Microsoft. Diagnostics. NETCore. Client](https://github.com/dotnet/diagnostics/blob/master/documentation/diagnostics-client-library-instructions.md) kitaplığını kullanın.
+* EventPipe oturumlarını kendiniz yapılandırmak ve başlatmak için kendi aracınızı yazmak üzere [Microsoft. Diagnostics. NETCore. Client](https://github.com/dotnet/diagnostics/blob/main/documentation/diagnostics-client-library-instructions.md) kitaplığını kullanın.
 
 * EventPipe 'ı başlatmak için [ortam değişkenlerini](#trace-using-environment-variables) kullanın.
 

@@ -4,12 +4,12 @@ description: SLES 'e .NET SDK ve .NET çalışma zamanı yüklemenin çeşitli y
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 80da69616dd1507b809ef56d439645d569a6a805
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: db8773c82417eda0deac04f95cfe8199621d04c4
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970791"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875271"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-sles"></a>.NET SDK veya .NET çalışma zamanını SLES 'e yükler
 
@@ -32,8 +32,8 @@ Aşağıdaki tabloda, hem SLES 12 SP2 hem de SLES 15 üzerinde desteklenen .NET 
 
 Aşağıdaki .NET Core sürümleri artık desteklenmemektedir. Bunlara yönelik İndirilenler hala yayımlandı olarak kalmaya devam eder:
 
-- 3,0
-- 2.2
+- 3.0
+- 2,2
 - 2.0
 
 ## <a name="remove-preview-versions"></a>Önizleme sürümlerini Kaldır
@@ -90,7 +90,7 @@ Bir paket yöneticisi ile yüklediğinizde, bu kitaplıklar sizin için yükleni
 
 Hedef çalışma zamanı ortamının OpenSSL sürümü 1,1 veya daha yeniyse, **COMPAT-openssl10** yüklemeniz gerekir.
 
-Bağımlılıklar hakkında daha fazla bilgi için bkz. [kendi Içindeki Linux uygulamaları](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md).
+Bağımlılıklar hakkında daha fazla bilgi için bkz. [kendi Içindeki Linux uygulamaları](https://github.com/dotnet/core/blob/main/Documentation/self-contained-linux-apps.md).
 
 *System. Drawing. Common* derlemesini kullanan .NET uygulamaları için aşağıdaki bağımlılığa de ihtiyacınız olacaktır:
 

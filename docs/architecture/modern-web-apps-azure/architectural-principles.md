@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın Mima
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/01/2020
-ms.openlocfilehash: f4079e0409c1675e8f8a3e494303683daeef29c1
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: bab860b73f029687873949f1cafed02cfcea7220
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851418"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873074"
 ---
 # <a name="architectural-principles"></a>Mimari ilkeleri
 
@@ -34,7 +34,7 @@ Sınıflarda, sınıfın iç durumuna erişimi dışarıdan kısıtlamak için k
 
 ### <a name="dependency-inversion"></a>Bağımlılık Inversion
 
-Uygulamanın içindeki bağımlılığın yönü, uygulama ayrıntıları değil soyutlama yönünde olmalıdır. Çoğu uygulama, derleme zamanı bağımlılık akışları çalışma zamanı yürütme yönünde yazılır ve doğrudan bağımlılık grafiği üretir. Diğer bir deyişle, A modülü C modülünde bir işlevi çağıran Modül B 'de bir işlev çağırırsa, sonra da şekil 4-1 ' de gösterildiği gibi C 'ye bağlı olan B 'ye bağlı olur.
+Uygulamanın içindeki bağımlılığın yönü, uygulama ayrıntıları değil soyutlama yönünde olmalıdır. Çoğu uygulama, derleme zamanı bağımlılık akışları çalışma zamanı yürütme yönünde yazılır ve doğrudan bağımlılık grafiği üretir. Yani, A sınıfı B sınıfı bir yöntemi çağırırsa ve B sınıfı C sınıfının bir yöntemini çağırıyorsa, derleme zaman sınıfı b sınıfına bağlıdır ve B sınıfı Şekil 4-1 ' de gösterildiği gibi C sınıfına bağlı olur.
 
 ![Doğrudan bağımlılık grafiği](./media/image4-1.png)
 

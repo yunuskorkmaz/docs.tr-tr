@@ -6,12 +6,12 @@ author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc,mlnet-tooling
-ms.openlocfilehash: 7761240055c90ae9c713b1c460e9e83316d256f9
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: cb4f18ad9da2e57ee09598183a1226b20a1d7aec
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/29/2020
-ms.locfileid: "81278957"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874621"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Öğretici: ML.NET model Oluşturucu kullanarak Web uygulamasındaki Web sitesindeki açıklamaları çözümleme
 
@@ -19,7 +19,7 @@ Bir Web uygulamasının içinde gerçek zamanlı açıklamalardan yaklaşımı �
 
 Bu öğreticide, Web sitesi açıklamalarından gerçek zamanlı olarak yaklaşım sınıflandıran bir ASP.NET Core Razor Pages uygulamasının nasıl oluşturulacağı gösterilmektedir.
 
-Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
+Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 
 > [!div class="checklist"]
 >
@@ -54,7 +54,7 @@ Bu öğreticinin kaynak kodunu [DotNet/machinöğrenim-örnekleri](https://githu
 
 ## <a name="prepare-and-understand-the-data"></a>Verileri hazırlama ve anlama
 
-[Vikipedi Detox veri kümesini](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)indirin. Web sayfası açıldığında, sayfaya sağ tıklayın, **farklı kaydet** ' i seçin ve dosyayı bilgisayarınızda herhangi bir yere kaydedin.
+[Vikipedi Detox veri kümesini](https://raw.githubusercontent.com/dotnet/machinelearning/main/test/data/wikipedia-detox-250-line-data.tsv)indirin. Web sayfası açıldığında, sayfaya sağ tıklayın, **farklı kaydet** ' i seçin ve dosyayı bilgisayarınızda herhangi bir yere kaydedin.
 
 *Vivtox-250-Line-Data. tsv* veri kümesindeki her satır, visede bir kullanıcı tarafından bırakılan farklı bir gözden geçirmeyi temsil eder. İlk sütun metnin (0-Toxic, 1 ' in Toxic) yaklaşımını temsil eder ve ikinci sütun Kullanıcı tarafından bırakılan yorumu temsil eder. Sütunlar sekmelerle ayrılır. Veriler aşağıdaki gibi görünür:
 
@@ -70,7 +70,7 @@ Bu öğreticinin kaynak kodunu [DotNet/machinöğrenim-örnekleri](https://githu
 
 Modelinize eğitebilmeniz için, model Oluşturucu tarafından sağlanan kullanılabilir makine öğrenimi senaryoları listesinden seçim yapmanız gerekir.
 
-1. **Çözüm Gezgini**, *SentimentRazor* projesine sağ tıklayın ve Machine Learning Ekle ' yi seçin **Add**  >  **Machine Learning**.
+1. **Çözüm Gezgini**, *SentimentRazor* projesine sağ tıklayın ve Machine Learning Ekle ' yi seçin   >  .
 1. Bu örnek için senaryo, yaklaşım analiziydi. Model Oluşturucu aracının *senaryo* adımında **yaklaşım Analizi** senaryosunu seçin.
 
 ## <a name="load-the-data"></a>Verileri yükleme
@@ -135,7 +135,7 @@ Tek bir tahmin yapmak için, oluşturmanız gerekir <xref:Microsoft.ML.Predictio
     1. **Değişiklikleri Önizle** Iletişim kutusunda **Tamam** düğmesini seçin
     1. Listelenen paketlerin lisans koşullarını kabul ediyorsanız, **Lisans kabulü** Iletişim kutusunda **kabul ediyorum** düğmesini seçin.
 
-1. *SentimentRazor* projesindeki *Startup.cs* dosyasını açın.
+1. *SentimentRazor* projesindeki *Startup. cs* dosyasını açın.
 1. *Microsoft.Extensions.ml* NuGet paketini ve *SentimentRazorML. model* projesine başvurmak için aşağıdaki using deyimlerini ekleyin:
 
     ```csharp
@@ -180,7 +180,7 @@ Tek bir tahmin yapmak için, oluşturmanız gerekir <xref:Microsoft.ML.Predictio
 
 Tahmine dayalı, uygulamanın ana sayfasında yapılır. Bu nedenle, Kullanıcı girişini alan ve `PredictionEnginePool` bir tahmin eklenmesi için kullanması gereken bir yöntem.
 
-1. *Pages* dizininde bulunan *Index.cshtml.cs* dosyasını açın ve aşağıdaki using deyimlerini ekleyin:
+1. *Pages* dizininde bulunan *Index. cshtml. cs* dosyasını açın ve aşağıdaki using deyimlerini ekleyin:
 
     ```csharp
     using Microsoft.Extensions.ML;

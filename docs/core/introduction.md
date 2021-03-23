@@ -4,12 +4,12 @@ description: Birçok tür uygulama oluşturmaya yönelik ücretsiz, açık kayna
 author: tdykstra
 ms.date: 11/16/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 7997346c9b248962b36688592d357247ec0ce6aa
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 78713ee08fadd7a947ee26997b8abe6373ab98d8
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102105095"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875141"
 ---
 # <a name="introduction-to-net"></a>.NET’e giriş
 
@@ -23,7 +23,7 @@ ms.locfileid: "102105095"
   * [Windows WPF](/dotnet/desktop/wpf/)
   * [Windows Forms](/dotnet/desktop/winforms/)
   * [Evrensel Windows Platformu (UWP)](/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
-* [Oynayabilir](https://dotnet.microsoft.com/apps/games)
+* [Oyunlar](https://dotnet.microsoft.com/apps/games)
 * [Nesnelerin İnterneti (IoT)](../iot/index.yml)
 * [Makine öğrenmesi](../machine-learning/index.yml)
 * [Konsol uygulamaları](tutorials/with-visual-studio-code.md)
@@ -54,13 +54,13 @@ Desteklenen İşlemci mimarileri şunları içerir:
 
 .NET, işletim sistemi API 'Leri gibi platforma özgü özellikleri kullanmanıza olanak sağlar. Örnekler, Windows üzerinde Windows Forms ve WPF ve Xamarin 'ten her mobil platforma yönelik yerel bağlamalardır.
 
-Daha fazla bilgi için bkz. [desteklenen işletim sistemi yaşam döngüsü ilkesi](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md) ve [.net RID kataloğu](rid-catalog.md).
+Daha fazla bilgi için bkz. [desteklenen işletim sistemi yaşam döngüsü ilkesi](https://github.com/dotnet/core/blob/main/os-lifecycle-policy.md) ve [.net RID kataloğu](rid-catalog.md).
 
 ## <a name="open-source"></a>Açık kaynak
 
-.NET, [MIT ve Apache 2 lisanslarını](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT)kullanarak açık kaynaktır. .NET, [.net Foundation](https://dotnetfoundation.org/)'ın bir projem.
+.NET, [MIT ve Apache 2 lisanslarını](https://github.com/dotnet/runtime/blob/main/LICENSE.TXT)kullanarak açık kaynaktır. .NET, [.net Foundation](https://dotnetfoundation.org/)'ın bir projem.
 
-Daha fazla bilgi için GitHub.com adresindeki [Proje depoları listesine](https://github.com/dotnet/core/blob/master/Documentation/core-repos.md)bakın.
+Daha fazla bilgi için GitHub.com adresindeki [Proje depoları listesine](https://github.com/dotnet/core/blob/main/Documentation/core-repos.md)bakın.
 
 ## <a name="support"></a>Destek
 
@@ -283,7 +283,7 @@ Daha fazla bilgi için bkz. [.NET uygulama yayımlamaya genel bakış](deploying
 * Ve gibi [serileştirme](../standard/serialization/index.md) yardımcı programı türleri <xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType> <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> .
 * , Ve işlem hatları gibi yüksek performanslı <xref:System.Span%601?displayProperty=nameWithType> türler <xref:System.Numerics.Vector?displayProperty=nameWithType> . [](../standard/io/pipelines.md)
 
-Daha fazla bilgi için bkz. [çalışma zamanı kitaplıklarına genel bakış](../standard/runtime-libraries-overview.md). Kitaplıkların kaynak kodu [GitHub DotNet/Runtime deposundadır](https://github.com/dotnet/runtime/tree/master/src/libraries).
+Daha fazla bilgi için bkz. [çalışma zamanı kitaplıklarına genel bakış](../standard/runtime-libraries-overview.md). Kitaplıkların kaynak kodu [GitHub DotNet/Runtime deposundadır](https://github.com/dotnet/runtime/tree/main/src/libraries).
 
 ### <a name="extensions-to-the-runtime-libraries"></a>Çalışma zamanı kitaplıklarının uzantıları
 
@@ -353,7 +353,7 @@ Aynı sözcük farklı bağlamlarda farklı şekillerde kullanıldığından, .N
   | çerçeveye bağımlı uygulama | Yalnızca [.net indirme sayfasından](https://dotnet.microsoft.com/download/dotnet)çalışma zamanını yüklediğiniz bir makinede çalışabilen bir uygulama. Bu kullanımdaki "Framework", .NET indirme sayfasından indirdiğinizde "çalışma zamanı" ile aynıdır. |
   | çerçeve kitaplıkları | Bazen [çalışma zamanı kitaplıkları](#runtime-libraries)için bir eş anlamlı olarak kullanılır. |
 
-* **'SıNıN**
+* **SDK**
 
   |Bağlam  | "SDK" anlamı |
   |---------|---------------|

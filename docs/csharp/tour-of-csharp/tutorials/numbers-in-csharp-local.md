@@ -2,12 +2,12 @@
 title: C# dilinde sayılar-C# öğreticisine giriş
 description: Sayısal türleri, kullanımları, özellikleri ve yöntemleri inceleyerek C# hakkında bilgi edinin.
 ms.date: 02/05/2021
-ms.openlocfilehash: 5576827cc92842a2cbd5374a691d9a5c560aec25
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: e4271d5e7811dcfecf00899b7bb9e750211ddc5b
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100626806"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873334"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>C 'de integral ve kayan nokta numaralarını işleme\#
 
@@ -25,7 +25,7 @@ Sayı adlı bir dizin oluşturun *-hızlı başlangıç*. Geçerli dizin yapın 
 dotnet new console -n NumbersInCSharp -o .
 ```
 
-En sevdiğiniz düzenleyicide *program.cs* açın ve dosyanın içeriğini aşağıdaki kodla değiştirin:
+En sevdiğiniz düzenleyicide *program. cs* dosyasını açın ve dosyanın içeriğini aşağıdaki kodla değiştirin:
 
 ```csharp
 using System;
@@ -308,7 +308,7 @@ Ondalık türünün kullanıldığı matematikte, ondalık ayırıcının sağ t
 
 Farklı sayısal türleri gördüğünüze göre yarı çapı 2,50 santimetre olan bir dairenin alanını hesaplayan kodu yazın. Bir dairenin alanının, yarı çapın karesinin PI sayısı ile çarpımından elde edildiğini unutmayın. İpucu: .NET, PI sayısı için kullanabileceğiniz <xref:System.Math.PI?displayProperty=nameWithType> sabit değerini içerir. <xref:System.Math.PI?displayProperty=nameWithType>, ad alanında belirtilen tüm sabitler gibi `System.Math` bir `double` değerdir. Bu nedenle, `double` `decimal` Bu zorluk için değer yerine kullanmanız gerekir.
 
-19 ile 20 arasında bir yanıt almanız gerekir. [GitHub 'daki tamamlanmış örnek koda bakarak](https://github.com/dotnet/samples/tree/master/csharp/numbers-quickstart/Program.cs#L104-L106)yanıtınızı kontrol edebilirsiniz.
+19 ile 20 arasında bir yanıt almanız gerekir. [GitHub 'daki tamamlanmış örnek koda bakarak](https://github.com/dotnet/samples/tree/main/csharp/numbers-quickstart/Program.cs#L104-L106)yanıtınızı kontrol edebilirsiniz.
 
 Dilerseniz diğer formüllerden de deneme yapabilirsiniz.
 

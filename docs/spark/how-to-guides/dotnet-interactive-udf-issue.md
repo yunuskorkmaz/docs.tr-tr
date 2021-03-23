@@ -6,12 +6,12 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 8fb729a0b8220d15af641f916383bbd6146e2e33
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: c29c3a9f6269a342d1051d6d979a4e3adb42da02
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94441082"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875557"
 ---
 # <a name="write-and-call-udfs-in-net-for-apache-spark-interactive-environments"></a>Apache Spark etkileşimli ortamlar için .NET 'te UDF 'Leri yazın ve çağırın
 
@@ -69,8 +69,8 @@ Bunlar, Apache Spark etkileşimli deneyimle ( [Azure SYNAPSE Not defterleri](/az
 
     ![Yayın değişkenleri başarısız](./media/dotnet-interactive/broadcast-fails.png)
 
-    Önceki bölümlerde önerildiği gibi, aynı hücrede hem UDF 'yi hem de başvurduğu nesneyi (Bu durumda yayın değişkeni) tanımlayacağız, ancak yine de `SerializationException` `Microsoft.Spark.Sql.Session` seri hale getirilebilir olarak işaretlenmeyen hata şikayetinizi görtik. Bunun nedeni, derleyicinin yayın değişken nesnesini serileştirmek için yaptığı bir `bv` , onun adını, [`SparkSession`](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Sql/SparkSession.cs#L20) `spark` seri hale getirilebilir olarak işaretlenmesi gereken nesne ile sonuna kadar bulur. Bu hücre gönderimi, derlenmiş derleme derlemesinde göz önünde bulundurularak daha kolay bir şekilde gösterilmiştir:
+    Önceki bölümlerde önerildiği gibi, aynı hücrede hem UDF 'yi hem de başvurduğu nesneyi (Bu durumda yayın değişkeni) tanımlayacağız, ancak yine de `SerializationException` `Microsoft.Spark.Sql.Session` seri hale getirilebilir olarak işaretlenmeyen hata şikayetinizi görtik. Bunun nedeni, derleyicinin yayın değişken nesnesini serileştirmek için yaptığı bir `bv` , onun adını, [`SparkSession`](https://github.com/dotnet/spark/blob/main/src/csharp/Microsoft.Spark/Sql/SparkSession.cs#L20) `spark` seri hale getirilebilir olarak işaretlenmesi gereken nesne ile sonuna kadar bulur. Bu hücre gönderimi, derlenmiş derleme derlemesinde göz önünde bulundurularak daha kolay bir şekilde gösterilmiştir:
 
     ![Ayrıştırılmış derleme kodu](./media/dotnet-interactive/decompiledAssembly.png)
 
-    Sınıfı olarak işaretliyoruz, bu özelliği işe sunabiliyoruz, [`SparkSession`](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Sql/SparkSession.cs#L20) `[Serializable]` ancak kullanıcıya bir mini oturum nesnesini seri hale getirme yeteneği vermek istemediğimiz için bu ideal bir çözüm değildir. Bu bilinen bir [sorundur](https://github.com/dotnet/spark/issues/619) ve gelecek sürümlerde çözümlenir.
+    Sınıfı olarak işaretliyoruz, bu özelliği işe sunabiliyoruz, [`SparkSession`](https://github.com/dotnet/spark/blob/main/src/csharp/Microsoft.Spark/Sql/SparkSession.cs#L20) `[Serializable]` ancak kullanıcıya bir mini oturum nesnesini seri hale getirme yeteneği vermek istemediğimiz için bu ideal bir çözüm değildir. Bu bilinen bir [sorundur](https://github.com/dotnet/spark/issues/619) ve gelecek sürümlerde çözümlenir.

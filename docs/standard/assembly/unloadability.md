@@ -4,12 +4,12 @@ description: Yönetilen derlemeleri yüklemek ve kaldırmak için toplanabilir b
 author: janvorli
 ms.author: janvorli
 ms.date: 02/05/2019
-ms.openlocfilehash: 9d1f604816dcbd7a84a3692b3cfd24481532789a
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: fd91bdb6f8f2da6cdcae6039778d2406ffc2cdb6
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865352"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876194"
 ---
 # <a name="how-to-use-and-debug-assembly-unloadability-in-net-core"></a>.NET Core’da kaldırabilme özelliğini kullanma ve hatalarını ayıklama
 
@@ -26,7 +26,7 @@ Uygulama etki alanları kullanarak ve kullanarak kaldırma arasında bir sorun o
 
 ## <a name="use-collectible-assemblyloadcontext"></a>Toplanabilir AssemblyLoadContext kullanın
 
-Bu bölüm, bir .NET Core uygulamasını toplanabilir bir şekilde yüklemek `AssemblyLoadContext` , giriş noktasını yürütmek ve sonra kaldırmak için basit bir yol gösteren ayrıntılı bir adım adım öğretici içerir. ' De tüm bir örnek bulabilirsiniz [https://github.com/dotnet/samples/tree/master/core/tutorials/Unloading](https://github.com/dotnet/samples/tree/master/core/tutorials/Unloading) .
+Bu bölüm, bir .NET Core uygulamasını toplanabilir bir şekilde yüklemek `AssemblyLoadContext` , giriş noktasını yürütmek ve sonra kaldırmak için basit bir yol gösteren ayrıntılı bir adım adım öğretici içerir. ' De tüm bir örnek bulabilirsiniz [https://github.com/dotnet/samples/tree/main/core/tutorials/Unloading](https://github.com/dotnet/samples/tree/main/core/tutorials/Unloading) .
 
 ### <a name="create-a-collectible-assemblyloadcontext"></a>Toplanabilir bir AssemblyLoadContext oluşturma
 
@@ -249,6 +249,6 @@ Aşağıdaki kod, önceki hata ayıklama örneğinde kullanılır.
 
 ## <a name="program-loaded-into-the-testassemblyloadcontext"></a>TestAssemblyLoadContext içine yüklenen program
 
-Aşağıdaki kod, *test.dll* `ExecuteAndUnload` ana test programındaki yöntemine geçirilentest.dlltemsil eder.
+Aşağıdaki kod,  `ExecuteAndUnload` ana test programındaki yöntemine geçirilentest.dlltemsil eder.
 
 [!code-csharp[Program loaded into the TestAssemblyLoadContext](~/samples/snippets/standard/assembly/unloading/unloadability_issues_example_test.cs)]

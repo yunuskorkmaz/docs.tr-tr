@@ -4,12 +4,12 @@ description: Ubuntu 'da Apache Spark için .NET uygulamanızı nasıl oluşturac
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: ae5e0e24ef53b74bd34a2c0100c30a375d8bd71f
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 300c858a76ba31650615bde70c951e383e9e0436
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102103926"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104875336"
 ---
 # <a name="learn-how-to-build-your-net-for-apache-spark-application-on-ubuntu"></a>Ubuntu 'da Apache Spark için .NET uygulamanızı nasıl oluşturacağınızı öğrenin
 
@@ -113,7 +113,7 @@ Aşağıdaki önkoşulların tümüne zaten sahipseniz, [derleme](#build) adıml
 
 Bir `dotnet` `java` `mvn` `spark-shell` sonraki bölüme geçmeden önce komut satırınızdan,,,,,, ' i çalıştırabildiğinizden emin olun. Daha iyi bir yol var mı? Lütfen [bir sorun açıp](https://github.com/dotnet/spark/issues) katkıda bulunmaktan çekinmeyin.
 
-## <a name="build"></a>Oluşturma
+## <a name="build"></a>Derleme
 
 Bu kılavuzun geri kalanında, .NET Apache Spark deposunu makinenize Klonladığınız için, örneğin, `~/dotnet.spark/` .
 
@@ -123,7 +123,7 @@ git clone https://github.com/dotnet/spark.git ~/dotnet.spark
 
 ### <a name="build-net-for-spark-scala-extensions-layer"></a>Spark Scala uzantıları katmanı için .NET derleme
 
-.NET uygulaması gönderdiğinizde, Apache Spark için .NET, isteklerinizi nasıl işleyeceğinizi (örneğin, yeni bir Spark oturumu oluşturma isteği, .NET tarafından JVM 'ye veri aktarma isteği vb.) Apache Spark bildiren gerekli mantığı içerir. Bu mantık, [Apache Spark Scala kaynak kodu için .net](https://github.com/dotnet/spark/tree/master/src/scala)içinde bulunabilir.
+.NET uygulaması gönderdiğinizde, Apache Spark için .NET, isteklerinizi nasıl işleyeceğinizi (örneğin, yeni bir Spark oturumu oluşturma isteği, .NET tarafından JVM 'ye veri aktarma isteği vb.) Apache Spark bildiren gerekli mantığı içerir. Bu mantık, [Apache Spark Scala kaynak kodu için .net](https://github.com/dotnet/spark/tree/main/src/scala)içinde bulunabilir.
 
 Sonraki adım, Apache Spark Scala uzantı katmanını .NET için derlemenize yöneliktir:
 
@@ -140,7 +140,7 @@ Desteklenen Spark sürümleri için oluşturulan JARs ' i görmeniz gerekir:
 
 ### <a name="build-net-sample-applications-using-net-core-cli"></a>.NET Core CLI kullanarak .NET örnek uygulamaları oluşturun
 
-Bu bölümde, Apache Spark için .NET [örnek uygulamalarının](https://github.com/dotnet/spark/tree/master/examples) nasıl oluşturulacağı açıklanmaktadır. Bu adımlar, tüm Spark uygulamaları için tüm .NET oluşturma sürecini kavramaya yardımcı olur.
+Bu bölümde, Apache Spark için .NET [örnek uygulamalarının](https://github.com/dotnet/spark/tree/main/examples) nasıl oluşturulacağı açıklanmaktadır. Bu adımlar, tüm Spark uygulamaları için tüm .NET oluşturma sürecini kavramaya yardımcı olur.
 
 1. Çalışanı oluşturun:
 
@@ -213,7 +213,7 @@ Bu bölümde, Apache Spark için .NET [örnek uygulamalarının](https://github.
 
    Şunları çalıştırabilmeniz için bazı örnekler aşağıda verilmiştir:
 
-   * **[Microsoft.Spark.Examples.Sql.Batch. Basit](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Batch/Basic.cs)**
+   * **[Microsoft.Spark.Examples.Sql.Batch. Basit](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Batch/Basic.cs)**
 
       ```bash
       spark-submit \
@@ -223,7 +223,7 @@ Bu bölümde, Apache Spark için .NET [örnek uygulamalarının](https://github.
       Microsoft.Spark.CSharp.Examples Sql.Batch.Basic $SPARK_HOME/examples/src/main/resources/people.json
       ```
 
-   * **[Microsoft. spark. Examples. Sql. streaming. StructuredNetworkWordCount](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCount.cs)**
+   * **[Microsoft. spark. Examples. Sql. streaming. StructuredNetworkWordCount](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCount.cs)**
 
       ```bash
       spark-submit \
@@ -233,7 +233,7 @@ Bu bölümde, Apache Spark için .NET [örnek uygulamalarının](https://github.
       Microsoft.Spark.CSharp.Examples Sql.Streaming.StructuredNetworkWordCount localhost 9999
       ```
 
-   * **[Microsoft. spark. Examples. Sql. streaming. StructuredKafkaWordCount (Maven erişilebilir)](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**
+   * **[Microsoft. spark. Examples. Sql. streaming. StructuredKafkaWordCount (Maven erişilebilir)](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**
 
       ```bash
       spark-submit \
@@ -244,7 +244,7 @@ Bu bölümde, Apache Spark için .NET [örnek uygulamalarının](https://github.
       Microsoft.Spark.CSharp.Examples Sql.Streaming.StructuredKafkaWordCount localhost:9092 subscribe test
       ```
 
-   * **[Microsoft. spark. Examples. Sql. streaming. StructuredKafkaWordCount (jars sağlanmış)](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**
+   * **[Microsoft. spark. Examples. Sql. streaming. StructuredKafkaWordCount (jars sağlanmış)](https://github.com/dotnet/spark/blob/main/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**
 
       ```bash
       spark-submit \

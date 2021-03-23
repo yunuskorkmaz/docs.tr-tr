@@ -4,12 +4,12 @@ description: .NET Core 'da derleme yükleme bilgilerinin nasıl toplanalınacağ
 author: elinor-fung
 ms.author: elfung
 ms.date: 11/17/2020
-ms.openlocfilehash: b121982995b440ade6d72190f44f9b9d237c8af6
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: 505fc827021fe4d34675b2ef5a7fc5746ada1af6
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99506613"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872944"
 ---
 # <a name="collect-detailed-assembly-loading-information"></a>Ayrıntılı derleme yükleme bilgilerini topla
 
@@ -36,7 +36,7 @@ Toplanan izleme dosyası, Windows 'da [PerfView](https://github.com/microsoft/pe
 
 ## <a name="example-on-windows"></a>Örnek (Windows üzerinde)
 
-Bu örnek, [uzantı noktaları örneğini yükleyen derlemeyi](https://github.com/dotnet/samples/tree/master/core/extensions/AssemblyLoading)kullanır. Uygulama bir derlemeyi yüklemeye çalışır `MyLibrary` -uygulama tarafından başvurulmayan bir derleme ve bu nedenle, bir derlemenin uzantı noktası yükleme yüklemesinin başarıyla yüklenmesi gerekir.
+Bu örnek, [uzantı noktaları örneğini yükleyen derlemeyi](https://docs.microsoft.com/samples/dotnet/samples/assembly-loading-extension-points/)kullanır. Uygulama bir derlemeyi yüklemeye çalışır `MyLibrary` -uygulama tarafından başvurulmayan bir derleme ve bu nedenle, bir derlemenin uzantı noktası yükleme yüklemesinin başarıyla yüklenmesi gerekir.
 
 ### <a name="collect-the-trace"></a>İzlemeyi topla
 
@@ -58,7 +58,7 @@ Bu örnek, [uzantı noktaları örneğini yükleyen derlemeyi](https://github.co
     dotnet-trace ps
     ```
 
-    Çıktı, kullanılabilir işlemlerin listesini listelecektir. Örneğin:
+    Çıktı, kullanılabilir işlemlerin listesini listelecektir. Örnek:
 
     ```console
     35832 AssemblyLoading C:\src\AssemblyLoading\bin\Debug\net5.0\AssemblyLoading.exe

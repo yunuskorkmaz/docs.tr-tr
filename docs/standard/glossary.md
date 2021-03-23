@@ -2,12 +2,12 @@
 title: .NET Sözlüğü
 description: .NET belgelerinde kullanılan seçili koşulların anlamını öğrenin.
 ms.date: 11/16/2020
-ms.openlocfilehash: 77ed506fb1c5bd4018b5fe0c14cc0bf37cb08113
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 009ab0266a4479dfd8a37cb3261ca6fae7c78b8e
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96438185"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873191"
 ---
 # <a name="net-glossary"></a>.NET Sözlüğü
 
@@ -41,7 +41,7 @@ Bazen ASP.NET, ASP.NET Core dahil olmak üzere hem ASP.NET uygulamalarına başv
 
 Bkz. [ASP.net belgeleri](/aspnet/#pivot=aspnet).
 
-## <a name="aspnet-core"></a>ASP.NET Çekirdeği
+## <a name="aspnet-core"></a>ASP.NET Core
 
 ASP.NET 'in platformlar arası, yüksek performanslı, açık kaynaklı bir uygulamasıdır.
 
@@ -49,7 +49,7 @@ ASP.NET 'in platformlar arası, yüksek performanslı, açık kaynaklı bir uygu
 
 ## <a name="assembly"></a>derleme
 
-*.dll* / Uygulamalar veya diğer derlemeler tarafından çağrılabilecek bir API koleksiyonu içerebilen bir. dll *. exe* dosyası.
+ / Uygulamalar veya diğer derlemeler tarafından çağrılabilecek bir API koleksiyonu içerebilen bir. dll *. exe* dosyası.
 
 Bir bütünleştirilmiş kod, arabirimler, sınıflar, yapılar, numaralandırmalar ve temsilciler gibi türler içerebilir. Projenin *bin* klasöründeki derlemeler bazen *ikili dosyalar* olarak adlandırılır. Ayrıca bkz. [kitaplık](#library).
 
@@ -92,7 +92,7 @@ Bkz. [clr](#clr)
 
 [Clr](#clr)'nin aksine corert sanal bir makine değildir, bu da bir [JIT](#jit)içermediğinden kod oluşturma ve çalıştırma tesislerini içermez. Ancak, [GC](#gc) ve çalışma zamanı türü tanımlama (rtti) ve yansıma özelliğini içerir. Ancak, tür sistemi yansıma için meta verilerin gerekli olmaması için tasarlanmıştır. Meta verilerin gerekli olmaması, gereksiz meta verileri bağlayabilen bir [AOT](#aot) araç zinciri olmasını ve (daha önemlisi) uygulamanın kullanmayan kodu belirlemenizi gerektirir. CoreRT geliştirme aşamasındadır.
 
-[.NET Native ve CoreRT Için tanıtım](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)bölümüne bakın.
+[.NET Native ve CoreRT Için tanıtım](https://github.com/dotnet/corert/blob/main/Documentation/intro-to-corert.md)bölümüne bakın.
 
 ## <a name="cross-platform"></a>platformlar arası
 
@@ -219,7 +219,7 @@ Derleme, geliştirici makinesinde C++ derleyicisinin ve bağlayıcının çalı�
 
 UWP, .NET Native tarafından desteklenen ilk uygulama çerçevesidir. Şimdi Windows, macOS ve Linux için yerel konsol uygulamaları oluşturmayı destekliyoruz.
 
-[.NET Native ve CoreRT tanıtımı](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md) konusuna bakın
+[.NET Native ve CoreRT tanıtımı](https://github.com/dotnet/corert/blob/main/Documentation/intro-to-corert.md) konusuna bakın
 
 ## <a name="net-sdk"></a>.NET SDK
 

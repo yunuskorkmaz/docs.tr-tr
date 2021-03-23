@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 123c3768414ee9a577c49c218acfb7415d83572e
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: df96ce4cc2348637b262b7380832dde1e2ee3afb
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102605288"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876350"
 ---
 # <a name="interfaces-c-programming-guide"></a>Arabirimler (C# Programlama Kılavuzu)
 
@@ -51,7 +51,7 @@ Bir temel sınıf, sanal Üyeler kullanarak arabirim üyeleri de uygulayabilir. 
 
 Bir arabirim aşağıdaki özelliklere sahiptir:
 
-- Bir arabirim, genellikle yalnızca soyut üyelere sahip bir soyut temel sınıf gibidir. Arabirimi uygulayan herhangi bir sınıf veya yapının tüm üyelerini uygulaması gerekir. İsteğe bağlı olarak, bir arabirim, üyelerinin bazıları veya tümü için varsayılan uygulamaları tanımlayabilir. Daha fazla bilgi için bkz. [varsayılan arabirim yöntemleri](../../tutorials/default-interface-methods-versions.md).
+- Bir arabirim, genellikle yalnızca soyut üyelere sahip bir soyut temel sınıf gibidir. Arabirimi uygulayan herhangi bir sınıf veya yapının tüm üyelerini uygulaması gerekir. İsteğe bağlı olarak, bir arabirim, üyelerinin bazıları veya tümü için varsayılan uygulamaları tanımlayabilir. Daha fazla bilgi için bkz. [varsayılan arabirim yöntemleri](../../whats-new/tutorials/default-interface-methods-versions.md).
 - Arabirim doğrudan başlatılamaz. Üyeleri, arabirimini uygulayan herhangi bir sınıf veya yapı tarafından uygulanır.
 - Bir sınıf veya yapı, birden çok arabirim uygulayabilir. Bir sınıf bir temel sınıfı devralınabilir ve ayrıca bir veya daha fazla arabirim uygulayabilir.
 

@@ -2,12 +2,12 @@
 title: Docker kapsayıcıları için ne zaman .NET Framework seçilmelidir?
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Docker kapsayıcıları için .NET Framework seçme
 ms.date: 01/13/2021
-ms.openlocfilehash: 476f891a70a220172f84d8168c8492416b8e56bd
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: fa644753c3a39f285052aba7a8524ea96442c842
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188121"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873139"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Docker kapsayıcıları için ne zaman .NET Framework seçilmelidir?
 
@@ -39,7 +39,7 @@ Aşağıdaki listede, .NET 5 ' te kullanılamayan teknolojilerin çoğu gösteri
 
 - İş akışı ile ilgili hizmetler. Windows Workflow Foundation (WF), Iş akışı hizmetleri (tek bir hizmette WCF + WF) ve WCF Veri Hizmetleri (eski adıyla ADO.NET veri Hizmetleri) yalnızca .NET Framework kullanılabilir. Şimdilik .NET 5 ' e getirmek için bir plan yoktur.
 
-Resmi [.NET yol haritasında](https://github.com/dotnet/core/blob/master/roadmap.md)listelenen teknolojilerin yanı sıra, yeni [Birleşik .NET platformunda](https://devblogs.microsoft.com/dotnet/introducing-net-5/)diğer özellikler de olabilir. Sesinizin duyabilmesi için GitHub 'daki tartışmalara katılımını düşünebilirsiniz. Bir şeyin eksik olduğunu düşünüyorsanız, [DotNet/Runtime](https://github.com/dotnet/runtime/issues/new) GitHub deposunda yeni bir sorun verin.
+Resmi [.NET yol haritasında](https://github.com/dotnet/core/blob/main/roadmap.md)listelenen teknolojilerin yanı sıra, yeni [Birleşik .NET platformunda](https://devblogs.microsoft.com/dotnet/introducing-net-5/)diğer özellikler de olabilir. Sesinizin duyabilmesi için GitHub 'daki tartışmalara katılımını düşünebilirsiniz. Bir şeyin eksik olduğunu düşünüyorsanız, [DotNet/Runtime](https://github.com/dotnet/runtime/issues/new) GitHub deposunda yeni bir sorun verin.
 
 ## <a name="using-a-platform-or-api-that-doesnt-support-net-5"></a>.NET 5 desteklemeyen bir platform veya API kullanma
 

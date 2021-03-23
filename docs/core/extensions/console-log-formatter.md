@@ -4,12 +4,12 @@ description: Kullanılabilir konsol günlük biçimlendirmesini kullanmayı veya
 author: IEvangelist
 ms.author: dapine
 ms.date: 12/17/2020
-ms.openlocfilehash: 0ec8fc2018febe4273aa646d1682be197933f925
-ms.sourcegitcommit: 3d6d6595a03915f617349781f455f838a44b0f44
+ms.openlocfilehash: 178c66a99fac4d706156894cacffa5d902cb7901
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2020
-ms.locfileid: "97700821"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872697"
 ---
 # <a name="console-log-formatting"></a>Konsol günlük biçimlendirme
 
@@ -72,7 +72,7 @@ info: Microsoft.Hosting.Lifetime[0]
       Now listening on: https://localhost:5001
 ```
 
-Varsayılan olarak `Simple` konsol günlük biçimlendiricisi varsayılan yapılandırmayla seçilir. Bunu `AddJsonConsole` *program.cs* içinde çağırarak değiştirirsiniz:
+Varsayılan olarak `Simple` konsol günlük biçimlendiricisi varsayılan yapılandırmayla seçilir. Bunu `AddJsonConsole` , *program. cs*' de çağırarak değiştirirsiniz:
 
 :::code language="csharp" source="snippets/logging/console-formatter-json/Program.cs" highlight="17-26":::
 
@@ -85,7 +85,7 @@ Uygulamayı bir daha çalıştırın, yukarıdaki değişiklik ile günlük ilet
 
 ## <a name="set-formatter-with-configuration"></a>Biçimlendirici yapılandırma ile ayarla
 
-Önceki örneklerde, bir biçimlendirici programlı bir şekilde nasıl kaydedileceği gösterilmektedir. Alternatif olarak, bu [yapılandırma](configuration.md)ile yapılabilir. Önceki Web uygulaması örnek kaynak kodunu göz önünde bulundurun, Program.cs dosyasında çağırmak yerine dosyayı *appsettings.js* güncelleştirirseniz `ConfigureLogging` aynı sonucu elde edebilirsiniz  . Güncelleştirilmiş `appsettings.json` Dosya, biçimlendirici şu şekilde yapılandırılır:
+Önceki örneklerde, bir biçimlendirici programlı bir şekilde nasıl kaydedileceği gösterilmektedir. Alternatif olarak, bu [yapılandırma](configuration.md)ile yapılabilir. Önceki Web uygulaması örnek kaynak kodunu düşünün;  `ConfigureLogging` *program. cs* dosyasında çağırmak yerine dosyadakiappsettings.jsgüncelleştirirseniz aynı sonucu elde edebilirsiniz. Güncelleştirilmiş `appsettings.json` Dosya, biçimlendirici şu şekilde yapılandırılır:
 
 :::code language="json" source="snippets/logging/console-formatter-json/appsettings.json" highlight="14-23":::
 
@@ -130,9 +130,9 @@ Yukarıdaki `CustomFormatter.Write<TState>` API, her günlük iletisi etrafında
 
 Biçimlendirmeyi daha fazla özelleştirme konusunda daha fazla bilgi için bkz. ad alanındaki mevcut uygulamalar `Microsoft.Extensions.Logging.Console` :
 
-- [Simpleconsoleformatter](https://github.com/dotnet/runtime/blob/master/src/libraries/Microsoft.Extensions.Logging.Console/src/SimpleConsoleFormatter.cs).
-- [SystemdConsoleFormatter](https://github.com/dotnet/runtime/blob/master/src/libraries/Microsoft.Extensions.Logging.Console/src/SystemdConsoleFormatter.cs)
-- [JsonConsoleFormatter](https://github.com/dotnet/runtime/blob/master/src/libraries/Microsoft.Extensions.Logging.Console/src/JsonConsoleFormatter.cs)
+- [Simpleconsoleformatter](https://github.com/dotnet/runtime/blob/main/src/libraries/Microsoft.Extensions.Logging.Console/src/SimpleConsoleFormatter.cs).
+- [SystemdConsoleFormatter](https://github.com/dotnet/runtime/blob/main/src/libraries/Microsoft.Extensions.Logging.Console/src/SystemdConsoleFormatter.cs)
+- [JsonConsoleFormatter](https://github.com/dotnet/runtime/blob/main/src/libraries/Microsoft.Extensions.Logging.Console/src/JsonConsoleFormatter.cs)
 
 ## <a name="implement-custom-color-formatting"></a>Özel renk biçimlendirmesi Uygula
 

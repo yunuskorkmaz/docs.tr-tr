@@ -3,12 +3,12 @@ title: Platform uyumluluk çözümleyicisi
 description: Platformlar arası uygulamalarda ve kitaplıklarda platform uyumluluk sorunlarını algılamaya yardımcı olabilecek bir Roslyn Çözümleyicisi.
 author: buyaa-n
 ms.date: 09/17/2020
-ms.openlocfilehash: 273fa81965d0c451427df1142f2bf22b753346b5
-ms.sourcegitcommit: 456b3cd82a87b453fa737b4661295070d1b6d684
+ms.openlocfilehash: ce916a771f3fd885b37690183de74919aa01d6fb
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100639363"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874049"
 ---
 # <a name="platform-compatibility-analyzer"></a>Platform uyumluluk çözümleyicisi
 
@@ -43,7 +43,7 @@ Platform uyumluluğu Çözümleyicisi, Roslyn kod kalitesi çözümleyicilerinin
   - Özniteliği farklı platformlarla birden çok kez uygulanabilir, örneğin, `[UnsupportedOSPlatform("iOS"), UnsupportedOSPlatform("Android6.0")]` .
   - Çözümleyici, yalnızca  `platform` çağrı sitesi için geçerli olduğunda bir uyarı oluşturur:
     -  Proje desteklenmeyen platformu hedefliyorsa (ÖRNEĞIN, API ile ilişkilendirilemişse `[UnsupportedOSPlatform("windows")]` ve çağıran site hedefliyorsa `<TargetFramework>net5.0-windows</TargetFramework>` ) uyarır.
-    -  Projenin çoklu hedefli olduğunu ve `platform` varsayılan [ `<SupportedPlatform>` MSBuild](https://github.com/dotnet/sdk/blob/master/src/Tasks/Microsoft.NET.Build.Tasks/targets/Microsoft.NET.SupportedPlatforms.props) öğeleri grubuna dahil edildiğini veya `platform` `MSBuild` \<SupportedPlatform> öğe grubuna el ile dahil edildiğini uyarır:
+    -  Projenin çoklu hedefli olduğunu ve `platform` varsayılan [ `<SupportedPlatform>` MSBuild](https://github.com/dotnet/sdk/blob/main/src/Tasks/Microsoft.NET.Build.Tasks/targets/Microsoft.NET.SupportedPlatforms.props) öğeleri grubuna dahil edildiğini veya `platform` `MSBuild` \<SupportedPlatform> öğe grubuna el ile dahil edildiğini uyarır:
 
       ```XML
       <ItemGroup>
@@ -51,7 +51,7 @@ Platform uyumluluğu Çözümleyicisi, Roslyn kod kalitesi çözümleyicilerinin
       </ItemGroup>
       ```
 
-    - Desteklenmeyen platformu hedeflemeyen veya çok hedefli ve platform varsayılan [ `<SupportedPlatform>` MSBuild](https://github.com/dotnet/sdk/blob/master/src/Tasks/Microsoft.NET.Build.Tasks/targets/Microsoft.NET.SupportedPlatforms.props) öğeleri grubuna dahil edilmeyen bir uygulama oluşturuyorsanız **uyarı vermez** .
+    - Desteklenmeyen platformu hedeflemeyen veya çok hedefli ve platform varsayılan [ `<SupportedPlatform>` MSBuild](https://github.com/dotnet/sdk/blob/main/src/Tasks/Microsoft.NET.Build.Tasks/targets/Microsoft.NET.SupportedPlatforms.props) öğeleri grubuna dahil edilmeyen bir uygulama oluşturuyorsanız **uyarı vermez** .
 - Her iki öznitelik de, platform adının bir parçası olarak sürüm numaraları ile veya bu sayılar olmadan oluşturulabilir.
   - Sürüm numaraları biçimindedir `major.minor[.build[.revision]]` ; `major.minor` gereklidir ve `build` ve `revision` bölümleri isteğe bağlıdır. Örneğin, "Windows 7.0" Windows sürüm 7,0 ' i gösterir, ancak "Windows" Windows 0,0 olarak yorumlanır.
 
@@ -382,8 +382,8 @@ Platform adları çağıran platforma bağımlı API ile eşleşmelidir. Platfor
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET 5 ' te hedef çerçeve adları](https://github.com/dotnet/designs/blob/master/accepted/2020/net5/net5.md)
-- [Platforma özgü API 'Lere açıklama ekleme ve kullanımını algılama](https://github.com/dotnet/designs/blob/master/accepted/2020/platform-checks/platform-checks.md)
-- [API 'Leri belirli platformlarda desteklenmeyen şekilde açıklama ekleme](https://github.com/dotnet/designs/blob/master/accepted/2020/platform-exclusion/platform-exclusion.md)
+- [.NET 5 ' te hedef çerçeve adları](https://github.com/dotnet/designs/blob/main/accepted/2020/net5/net5.md)
+- [Platforma özgü API 'Lere açıklama ekleme ve kullanımını algılama](https://github.com/dotnet/designs/blob/main/accepted/2020/platform-checks/platform-checks.md)
+- [API 'Leri belirli platformlarda desteklenmeyen şekilde açıklama ekleme](https://github.com/dotnet/designs/blob/main/accepted/2020/platform-exclusion/platform-exclusion.md)
 - [CA1416 platform uyumluluğu Çözümleyicisi](../../fundamentals/code-analysis/quality-rules/ca1416.md)
 - [.NET API Çözümleyicisi](../../standard/analyzers/api-analyzer.md)

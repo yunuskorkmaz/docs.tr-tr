@@ -3,12 +3,12 @@ title: Sözdizimi analizini kullanmaya başlama (Roslyn API 'Leri)
 description: Sözdizimi ağaçlarını geçme, sorgulama ve yürüyen bir giriş.
 ms.date: 02/05/2018
 ms.custom: mvc
-ms.openlocfilehash: 8b9dd909a83877755dc1ebafd58aae892e460b93
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 7fea6145ed927ed197295b08ab35dbf177920061
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756162"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872515"
 ---
 # <a name="get-started-with-syntax-analysis"></a>Sözdizimi analizini kullanmaya başlayın
 
@@ -33,13 +33,13 @@ namespace HelloWorld
 }
 ```
 
-Önceki programın metnine bakın. Tanıdık öğeleri tanısınız. Tüm metin, tek bir kaynak dosyasını veya bir **derleme birimini**temsil eder. Bu kaynak dosyanın ilk üç satırı **yönergeleri kullanıyor**. Kalan kaynak, bir **ad alanı bildiriminde**bulunur. Ad alanı bildirimi bir alt **sınıf bildirimi**içerir. Sınıf bildirimi bir **Yöntem bildirimi**içerir.
+Önceki programın metnine bakın. Tanıdık öğeleri tanısınız. Tüm metin, tek bir kaynak dosyasını veya bir **derleme birimini** temsil eder. Bu kaynak dosyanın ilk üç satırı **yönergeleri kullanıyor**. Kalan kaynak, bir **ad alanı bildiriminde** bulunur. Ad alanı bildirimi bir alt **sınıf bildirimi** içerir. Sınıf bildirimi bir **Yöntem bildirimi** içerir.
 
-Sözdizimi API 'SI, derleme birimini temsil eden köke sahip bir ağaç yapısı oluşturur. Ağaçtaki düğümler using yönergelerini, ad alanı bildirimini ve programın diğer tüm öğelerini temsil eder. Ağaç yapısı en düşük düzeylere devam eder: "Merhaba Dünya!" dizesi , bir **bağımsız değişkenin**alt değeri olan **dize sabit değer belirtecidir** . Sözdizimi API 'SI programın yapısına erişim sağlar. Belirli kod uygulamalarını sorgulayabilir, kodu anlamak için ağacın tamamına kılavuzluk edebilir ve var olan ağacı değiştirerek yeni ağaçlar oluşturabilirsiniz.
+Sözdizimi API 'SI, derleme birimini temsil eden köke sahip bir ağaç yapısı oluşturur. Ağaçtaki düğümler using yönergelerini, ad alanı bildirimini ve programın diğer tüm öğelerini temsil eder. Ağaç yapısı en düşük düzeylere devam eder: "Merhaba Dünya!" dizesi , bir **bağımsız değişkenin** alt değeri olan **dize sabit değer belirtecidir** . Sözdizimi API 'SI programın yapısına erişim sağlar. Belirli kod uygulamalarını sorgulayabilir, kodu anlamak için ağacın tamamına kılavuzluk edebilir ve var olan ağacı değiştirerek yeni ağaçlar oluşturabilirsiniz.
 
 Bu kısa açıklama, sözdizimi API 'SI kullanılarak erişilebilen bilgi türüne genel bir bakış sağlar. Sözdizimi API 'SI, C# ' den bildiğiniz tanıdık kod yapılarını açıklayan bir biçimsel API 'den daha fazla şey yapmaz. Tüm yetenekler, kodun satır sonları, boşluk ve girintileme dahil nasıl biçimlendirildiği hakkında bilgiler içerir. Bu bilgileri kullanarak, kodu insan programcıları veya derleyicisi tarafından yazılmış ve okunan şekilde tam olarak temsil edebilirsiniz. Bu yapının kullanılması, kaynak kodla daha anlamlı bir düzeyde etkileşim kurmanıza olanak sağlar. Artık metin dizeleri değildir, ancak bir C# programının yapısını temsil eden veriler.
 
-Başlamak için **.net Compiler Platform SDK 'sını**yüklemeniz gerekir:
+Başlamak için **.net Compiler Platform SDK 'sını** yüklemeniz gerekir:
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
@@ -56,7 +56,7 @@ Sözdizimi ağaçlarının dört birincil yapı taşları şunlardır:
 * <xref:Microsoft.CodeAnalysis.SyntaxToken?displayProperty=nameWithType>Tek bir anahtar sözcük, tanımlayıcı, işleç veya noktalama temsil eden yapı.
 * Ve son <xref:Microsoft.CodeAnalysis.SyntaxTrivia?displayProperty=nameWithType> olarak, belirteçler, ön işleme yönergeleri ve açıklamalar arasındaki boşluk gibi sözdizimsel bilgi bitlerini temsil eden yapı.
 
-Trivia, belirteçler ve düğümler, Visual Basic veya C# kodu parçasındaki her şeyi tamamen temsil eden bir ağaç oluşturmak için hiyerarşik olarak oluşturulur. **Syntax Visualizer** penceresini kullanarak bu yapıyı görebilirsiniz. Visual Studio 'da **View**  >  **diğer Windows**  >  **Syntax Visualizer**görüntüle ' yi seçin. Örneğin, **Syntax Visualizer** kullanılarak Incelenen önceki C# kaynak dosyası aşağıdaki şekilde görünür:
+Trivia, belirteçler ve düğümler, Visual Basic veya C# kodu parçasındaki her şeyi tamamen temsil eden bir ağaç oluşturmak için hiyerarşik olarak oluşturulur. **Syntax Visualizer** penceresini kullanarak bu yapıyı görebilirsiniz. Visual Studio 'da   >  **diğer Windows**  >  **Syntax Visualizer** görüntüle ' yi seçin. Örneğin, **Syntax Visualizer** kullanılarak Incelenen önceki C# kaynak dosyası aşağıdaki şekilde görünür:
 
 **SyntaxNode**: mavi | **SyntaxToken**: yeşil | **SyntaxTrivia**: Red ![ C# kod dosyası](media/walkthrough-csharp-syntax-figure1.png)
 
@@ -70,15 +70,15 @@ Bir sözdizimi ağacındaki düğümleri iki şekilde inceleyebilirsiniz. Her bi
 
 ### <a name="manual-traversal"></a>El ile çapraz geçiş
 
-Bu örnek için tamamlanmış kodu [GitHub depomuza](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SyntaxQuickStart)bakabilirsiniz.
+Bu örnek için tamamlanmış kodu [GitHub depomuza](https://github.com/dotnet/samples/tree/main/csharp/roslyn-sdk/SyntaxQuickStart)bakabilirsiniz.
 
 > [!NOTE]
 > Sözdizimi ağacı türleri, programdaki farklı konumlarda geçerli olan farklı sözdizimi öğelerini anlatmak için devralmayı kullanır. Bu API 'Lerin kullanılması genellikle özellikleri veya koleksiyon üyelerini belirli türetilmiş türlere atama anlamına gelir. Aşağıdaki örneklerde atama ve yayınlar, açıkça belirlenmiş değişkenler kullanılarak ayrı deyimlerdir. API 'nin dönüş türlerini ve döndürülen nesnelerin çalışma zamanı türünü görmek için kodu okuyabilirsiniz. Uygulamada, örtük olarak yazılan değişkenleri kullanmak daha yaygındır ve incelenen nesne türlerini belirtmek için API adlarını kullanır.
 
 Yeni bir C# **tek başına kod analizi araç** projesi oluşturun:
 
-* Visual Studio 'da **File**  >  **New**  >  Yeni proje iletişim kutusunu göstermek için dosya yeni**Proje** ' yi seçin.
-* **Visual C#**  >  **genişletilebilirliği**altında **tek başına Kod Analizi Aracı**' nı seçin.
+* Visual Studio 'da   >    >  Yeni proje iletişim kutusunu göstermek için dosya yeni **Proje** ' yi seçin.
+* **Visual C#**  >  **genişletilebilirliği** altında **tek başına Kod Analizi Aracı**' nı seçin.
 * Projenizi "**SyntaxTreeManualTraversal**" olarak adlandırın ve Tamam ' a tıklayın.
 
 Temel "Merhaba Dünya!" öğesini çözümleyeceğiz Program daha önce gösteriliyor.
@@ -160,7 +160,7 @@ Bu örnek, bir <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> sözdizim
 
 Yeni bir C# **tek başına kod analizi araç** projesi oluşturun; "**SyntaxWalker**" olarak adlandırın.
 
-Bu örnek için tamamlanmış kodu [GitHub depomuza](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SyntaxQuickStart)bakabilirsiniz. GitHub 'daki örnek, bu öğreticide açıklanan her iki projeyi içerir.
+Bu örnek için tamamlanmış kodu [GitHub depomuza](https://github.com/dotnet/samples/tree/main/csharp/roslyn-sdk/SyntaxQuickStart)bakabilirsiniz. GitHub 'daki örnek, bu öğreticide açıklanan her iki projeyi içerir.
 
 Önceki örnekte olduğu gibi, analiz edilecek programın metnini tutmak için bir dize sabiti tanımlayabilirsiniz:
 
@@ -172,7 +172,7 @@ Program metnini tanımladığınıza göre, `SyntaxTree` Bu ağacın kökünü o
 
 [!code-csharp[Create the Syntax tree and access the root](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#2 "Create the Syntax tree and access the root node.")]
 
-Sonra yeni bir sınıf oluşturun. Visual Studio 'da **Proje**  >  **Ekle yeni öğe**' yi seçin. **Yeni öğe Ekle** iletişim kutusunda dosya adı olarak *UsingCollector.cs* yazın.
+Sonra yeni bir sınıf oluşturun. Visual Studio 'da **Proje**  >  **Ekle yeni öğe**' yi seçin. **Yeni öğe Ekle** iletişim kutusunda dosya adı olarak *Collector. cs* yazın.
 
 `using`Ziyaretçi işlevselliğini `UsingCollector` sınıfında uygulamalısınız. `UsingCollector`Sınıfın türemesini sağlayarak başlayın <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> .
 

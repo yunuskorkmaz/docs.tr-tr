@@ -2,12 +2,12 @@
 title: 'İzlenecek yol: C kullanarak bir nesneyi kalıcı hale getirme #'
 description: Bu örnek, C# ' de temel bir kredi nesnesi oluşturur ve verilerini bir dosyaya kalıcı hale getirin ve ardından dosyadaki verilerle yeni bir nesne oluşturur.
 ms.date: 04/26/2018
-ms.openlocfilehash: 9f165addc5b9b0d056936458e8529ec1912c417b
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 0fc733982b7800653a3c8c283bd0af8384d72168
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302769"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876454"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>İzlenecek yol: C kullanarak bir nesneyi kalıcı hale getirme\#
 
@@ -21,7 +21,7 @@ Bu kılavuzda, temel bir `Loan` nesne oluşturacak ve verilerini bir dosyaya kal
 > [!IMPORTANT]
 > Bu örnek, verileri bir ikili biçim dosyasında depolar. Bu biçimler, parolalar veya kredi kartı bilgileri gibi hassas veriler için kullanılmamalıdır.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - Derlemek ve çalıştırmak için [.NET Core SDK](https://dotnet.microsoft.com/download)' yi çalıştırın.
 
@@ -32,7 +32,7 @@ Bu kılavuzda, temel bir `Loan` nesne oluşturacak ve verilerini bir dosyaya kal
 
 - Örnek, C# 7,3 gerektirir. Bkz [. C# dil sürümünü seçme](../../../language-reference/configure-language-version.md)
 
-Örnek kodu, [.NET örnekleri GitHub deposunda](https://github.com/dotnet/samples/tree/master/csharp/serialization)çevrimiçi olarak inceleyebilirsiniz.
+Örnek kodu, [.NET örnekleri GitHub deposunda](https://github.com/dotnet/samples/tree/main/csharp/serialization)çevrimiçi olarak inceleyebilirsiniz.
 
 ## <a name="creating-the-loan-object"></a>Kredi nesnesi oluşturma
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - naming code style rules [EditorConfig]
 - naming rules
 - EditorConfig naming conventions
-ms.openlocfilehash: df2cbc8299d853b5730bc39eb25c6f97b6575655
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: a61d0ca8684134207a11f79e382b6aaf843ba956
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100429214"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873256"
 ---
 # <a name="naming-rules"></a>Adlandırma kuralları
 
@@ -93,7 +93,7 @@ Hangi simgelerin gruba ekleneceğini sınırlamak için sembol grupları için a
 | -- | -- | -- | -- |
 | `applicable_kinds` | Grup <sup>1</sup> ' deki sembol türleri | `*` (tüm sembolleri belirtmek için bu değeri kullanın)<br/>`namespace`<br/>`class`<br/>`struct`<br/>`interface`<br/>`enum`<br/>`property`<br/>`method`<br/>`field`<br/>`event`<br/>`delegate`<br/>`parameter`<br/>`type_parameter`<br/>`local`<br/>`local_function` | Yes |
 | `applicable_accessibilities` | Gruptaki sembollerin erişilebilirlik düzeyleri | `*` (tüm erişilebilirlik düzeylerini belirtmek için bu değeri kullanın)<br/>`public`<br/>`internal` veya `friend`<br/>`private`<br/>`protected`<br/>`protected_internal` veya `protected_friend`<br/>`private_protected`<br/>`local` (bir yöntem içinde tanımlanan semboller için) | Yes |
-| `required_modifiers` | Yalnızca _Tüm_ belirtilen değiştiricilere sahip sembolleri Eşleştir <sup>2</sup> | `abstract` veya `must_inherit`<br/>`async`<br/>`const`<br/>`readonly`<br/>`static` veya `shared` <sup>3</sup> | No |
+| `required_modifiers` | Yalnızca _Tüm_ belirtilen değiştiricilere sahip sembolleri Eşleştir <sup>2</sup> | `abstract` veya `must_inherit`<br/>`async`<br/>`const`<br/>`readonly`<br/>`static` veya `shared` <sup>3</sup> | Hayır |
 
 **Notlar:**
 
@@ -103,7 +103,7 @@ Hangi simgelerin gruba ekleneceğini sınırlamak için sembol grupları için a
 
 ## <a name="naming-style-properties"></a>Adlandırma stili özellikleri
 
-Adlandırma stili, kuralla zorlamak istediğiniz kuralları tanımlar. Örneğin:
+Adlandırma stili, kuralla zorlamak istediğiniz kuralları tanımlar. Örnek:
 
 * Büyük harfe çevir `PascalCase`
 * İle başlar `m_`
@@ -115,9 +115,9 @@ Adlandırma stili için aşağıdaki özellikleri ayarlayabilirsiniz:
 | Özellik | Açıklama | İzin verilen değerler | Gerekli |
 | -- | -- | -- | -- |
 | `capitalization` | Sembol içindeki sözcüklerin büyük küçük harf stili | `pascal_case`<br/>`camel_case`<br/>`first_word_upper`<br/>`all_upper`<br/>`all_lower` | Evet<sup>1</sup> |
-| `required_prefix` | Bu karakterlerle başlaması gerekir | | No |
-| `required_suffix` | Bu karakterlerle bitmelidir | | No |
-| `word_separator` | Simgenin içindeki sözcüklerin bu karakterle ayrılması gerekir | | No |
+| `required_prefix` | Bu karakterlerle başlaması gerekir | | Hayır |
+| `required_suffix` | Bu karakterlerle bitmelidir | | Hayır |
+| `word_separator` | Simgenin içindeki sözcüklerin bu karakterle ayrılması gerekir | | Hayır |
 
 **Notlar:**
 
@@ -176,5 +176,5 @@ dotnet_naming_rule.public_members_must_be_capitalized.severity = suggestion
 
 - [Dil kuralları](language-rules.md)
 - [Biçimlendirme kuralları](formatting-rules.md)
-- [Roslyn adlandırma kuralları](https://github.com/dotnet/roslyn/blob/master/.editorconfig#L63)
+- [Roslyn adlandırma kuralları](https://github.com/dotnet/roslyn/blob/main/.editorconfig#L63)
 - [.NET kod stili kuralları başvurusu](index.md)

@@ -10,18 +10,18 @@ f1_keywords:
 - enumconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: ff2d50b2148ea62e5bef5eceda547a976e4abf02
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 83fb5b562d9e1e4caaef179ca2911adb60fc01fa
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687311"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872632"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (genel tür kısıtlaması) (C# Başvurusu)
 
 `where`Genel tanımda yer alan yan tümce, genel bir tür, metot, temsilci veya yerel işlevde tür parametreleri için bağımsız değişken olarak kullanılan türlerde kısıtlamalar belirtir. Kısıtlamalar, arabirimler, temel sınıflar veya bir genel türün bir başvuru, değer veya yönetilmeyen tür olmasını gerektirebilir. Tür bağımsız değişkeninin sahip olması gereken özellikleri bildirir.
 
-Örneğin, `MyGenericClass` tür parametresi arabirimini uygulayan genel bir sınıf bildirebilirsiniz `T` <xref:System.IComparable%601> :
+Örneğin, `AGenericClass` tür parametresi arabirimini uygulayan genel bir sınıf bildirebilirsiniz `T` <xref:System.IComparable%601> :
 
 [!code-csharp[using an interface constraint](snippets/GenericWhereConstraints.cs#1)]
 
@@ -51,7 +51,7 @@ C# 8,0 ve sonraki sürümlerde null yapılabilir bir bağlamda kısıtlama, `cla
 
 [!code-csharp[using the unmanaged constraint](snippets/GenericWhereConstraints.cs#4)]
 
-`where`Yan tümce bir Oluşturucu kısıtlaması de içerebilir `new()` . Bu kısıtlama işleci kullanarak bir tür parametresinin örneğini oluşturmayı mümkün kılar `new` . [New () kısıtlaması](new-constraint.md) , derleyicinin sağlanan herhangi bir tür bağımsız değişkeninin erişilebilir parametresiz bir oluşturucuya sahip olması gerektiğini bilmesini sağlar. Örneğin:
+`where`Yan tümce bir Oluşturucu kısıtlaması de içerebilir `new()` . Bu kısıtlama işleci kullanarak bir tür parametresinin örneğini oluşturmayı mümkün kılar `new` . [New () kısıtlaması](new-constraint.md) , derleyicinin sağlanan herhangi bir tür bağımsız değişkeninin erişilebilir parametresiz bir oluşturucuya sahip olması gerektiğini bilmesini sağlar. Örnek:
 
 [!code-csharp[using the new constraint](snippets/GenericWhereConstraints.cs#5)]
 

@@ -4,12 +4,12 @@ description: Bu öğreticide, Web sitesi açıklamalarından yaklaşımı sını
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: da972d793570a8dd6b906762640bd6bfe5531a5b
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 3dbcb3cbd4eea2d01638bedc7123f570ff9d64d1
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557170"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874596"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>Öğretici: ML.NET 'de ikili sınıflandırmayla Web sitesi açıklamalarını çözümleyin
 
@@ -26,7 +26,7 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > - Tahmin yapmak için modeli kullanma
 > - Sonuçları görme
 
-Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) deposunda bulabilirsiniz.
+Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/SentimentAnalysis) deposunda bulabilirsiniz.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
@@ -40,11 +40,11 @@ Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/sample
 
 2. Veri kümesi dosyalarınızı kaydetmek için projenizde *veri* adlı bir dizin oluşturun.
 
-3. **Microsoft.ml NuGet paketini**yükler:
+3. **Microsoft.ml NuGet paketini** yükler:
 
     [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
-    Çözüm Gezgini, projenize sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin. Paket kaynağı olarak "nuget.org" öğesini seçin ve sonra da **tarayıcı** sekmesini seçin. **Microsoft.ml**için arama yapın, istediğiniz paketi seçin ve sonra da **Install** düğmesini seçin. Kabul etmiş ile yüklemeye, seçtiğiniz paketin lisans koşullarına devam edin.
+    Çözüm Gezgini, projenize sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin. Paket kaynağı olarak "nuget.org" öğesini seçin ve sonra da **tarayıcı** sekmesini seçin. **Microsoft.ml** için arama yapın, istediğiniz paketi seçin ve ardından **Install** düğmesini seçin. Kabul etmiş ile yüklemeye, seçtiğiniz paketin lisans koşullarına devam edin.
 
 ## <a name="prepare-your-data"></a>Verilerinizi hazırlama
 
@@ -55,11 +55,11 @@ Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/sample
 
 2. `yelp_labelled.txt`Dosyayı oluşturduğunuz *veri* dizinine kopyalayın.
 
-3. Çözüm Gezgini, dosyaya sağ tıklayın `yelp_labeled.txt` ve **Özellikler**' i seçin. **Gelişmiş**' in altında, **Çıkış Dizinine Kopyala** değerini **daha yeniyse kopyala**olarak değiştirin.
+3. Çözüm Gezgini, dosyaya sağ tıklayın `yelp_labeled.txt` ve **Özellikler**' i seçin. **Gelişmiş**' in altında, **Çıkış Dizinine Kopyala** değerini **daha yeniyse kopyala** olarak değiştirin.
 
 ### <a name="create-classes-and-define-paths"></a>Sınıf oluşturma ve yollar tanımlama
 
-1. Aşağıdaki ek `using` deyimlerini *program.cs* dosyasının en üstüne ekleyin:
+1. Aşağıdaki ek `using` deyimlerini *program. cs* dosyasının en üstüne ekleyin:
 
     [!code-csharp[AddUsings](./snippets/sentiment-analysis/csharp/Program.cs#AddUsings "Add necessary usings")]
 
@@ -69,15 +69,15 @@ Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/sample
 
 1. Ardından, giriş verileriniz ve tahminlerinizi için sınıflar oluşturun. Projenize yeni bir sınıf ekleyin:
 
-    - **Çözüm Gezgini**, projeye sağ tıklayın ve ardından **Add**  >  **Yeni öğe**Ekle ' yi seçin.
+    - **Çözüm Gezgini**, projeye sağ tıklayın ve ardından   >  **Yeni öğe** Ekle ' yi seçin.
 
-    - **Yeni öğe Ekle** Iletişim kutusunda **sınıf** ' ı seçin ve **ad** alanını *SentimentData.cs*olarak değiştirin. Sonra **Ekle** düğmesini seçin.
+    - **Yeni öğe Ekle** Iletişim kutusunda **sınıf** ' ı seçin ve **ad** alanını *sentimentdata. cs* olarak değiştirin. Sonra **Ekle** düğmesini seçin.
 
-1. *SentimentData.cs* dosyası kod düzenleyicisinde açılır. Aşağıdaki `using` ifadeyi *SentimentData.cs*öğesinin en üstüne ekleyin:
+1. *Sentimentdata. cs* dosyası kod düzenleyicisinde açılır. Aşağıdaki `using` Ifadeyi *Sentimentdata. cs*' nin üst kısmına ekleyin:
 
     [!code-csharp[AddUsings](./snippets/sentiment-analysis/csharp/SentimentData.cs#AddUsings "Add necessary usings")]
 
-1. Mevcut sınıf tanımını kaldırın ve iki sınıfa `SentimentData` ve `SentimentPrediction` *SentimentData.cs* dosyasına sahip olan aşağıdaki kodu ekleyin:
+1. Mevcut sınıf tanımını kaldırın ve iki sınıfa `SentimentData` ve `SentimentPrediction` , *Sentimentdata. cs* dosyasına sahip olan aşağıdaki kodu ekleyin:
 
     [!code-csharp[DeclareTypes](./snippets/sentiment-analysis/csharp/SentimentData.cs#DeclareTypes "Declare data record types")]
 
@@ -92,7 +92,7 @@ Giriş veri kümesi sınıfı, `SentimentData` bir `string` for User Comments ( 
 |Wow... Bu yere iner.              |    1     |
 |Hizmet çok soriydi.              |    1     |
 
-`SentimentPrediction`, model eğitiminden sonra kullanılan tahmin sınıfıdır. `SentimentData`Girişin `SentimentText` Çıkış tahminiyle birlikte görüntülenebilmesini sağlayacak şekilde öğesinden devralır. `Prediction`Boole değeri, modelin yeni girişle sağlandığı sırada tahmin edilen değerdir `SentimentText` .
+`SentimentPrediction` , model eğitiminden sonra kullanılan tahmin sınıfıdır. `SentimentData`Girişin `SentimentText` Çıkış tahminiyle birlikte görüntülenebilmesini sağlayacak şekilde öğesinden devralır. `Prediction`Boole değeri, modelin yeni girişle sağlandığı sırada tahmin edilen değerdir `SentimentText` .
 
 Çıkış sınıfı, `SentimentPrediction` model tarafından hesaplanan iki diğer özellik içerir: `Score` -model tarafından hesaplanan ham puan ve, `Probability` pozitif yaklaşım olan metnin olasılığına ayarlanmış puan.
 
@@ -100,7 +100,7 @@ Bu öğretici için en önemli özellik ' dir `Prediction` .
 
 ## <a name="load-the-data"></a>Verileri yükleme
 
-ML.NET içindeki veriler [ıdataview sınıfı](xref:Microsoft.ML.IDataView)olarak temsil edilir. `IDataView`, tablo verilerini (sayısal ve metin) tanımlamaya yönelik esnek ve verimli bir yoldur. Veriler bir metin dosyasından veya gerçek zamanlı olarak (örneğin, SQL veritabanı veya günlük dosyaları) bir `IDataView` nesneye yüklenebilir.
+ML.NET içindeki veriler [ıdataview sınıfı](xref:Microsoft.ML.IDataView)olarak temsil edilir. `IDataView` , tablo verilerini (sayısal ve metin) tanımlamaya yönelik esnek ve verimli bir yoldur. Veriler bir metin dosyasından veya gerçek zamanlı olarak (örneğin, SQL veritabanı veya günlük dosyaları) bir `IDataView` nesneye yüklenebilir.
 
 [Mlcontext sınıfı](xref:Microsoft.ML.MLContext) tüm ml.NET işlemleri için bir başlangıç noktasıdır. Başlatma `mlContext` , model oluşturma iş akışı nesneleri genelinde paylaşılabilecek yeni bir ml.net ortamı oluşturur. Entity Framework, kavramsal olarak da benzerdir `DBContext` .
 
@@ -244,7 +244,7 @@ Modelinize eğitim verdikten sonra, modelin performansını doğrulamak için te
 
     [!code-csharp[ComputeMetrics](./snippets/sentiment-analysis/csharp/Program.cs#Evaluate "Compute Metrics")]
 
-Tahmin kümesine () sahip olduktan sonra, tahmini `predictions` değerleri test veri kümesindeki gerçek ile karşılaştıran ve modelin nasıl çalıştığı hakkında bir CalibratedBinaryClassificationMetrics nesnesi döndüren [değerlendir ()](xref:Microsoft.ML.BinaryClassificationCatalog.Evaluate%2A) yöntemi değerlendirir `Labels` . [CalibratedBinaryClassificationMetrics](xref:Microsoft.ML.Data.CalibratedBinaryClassificationMetrics)
+Tahmin kümesine () sahip olduktan sonra, tahmini `predictions` değerleri test veri kümesindeki gerçek ile karşılaştıran ve modelin nasıl çalıştığı hakkında bir CalibratedBinaryClassificationMetrics nesnesi döndüren [değerlendir ()](xref:Microsoft.ML.BinaryClassificationCatalog.Evaluate%2A) yöntemi değerlendirir `Labels` . [](xref:Microsoft.ML.Data.CalibratedBinaryClassificationMetrics)
 
 ### <a name="displaying-the-metrics-for-model-validation"></a>Model doğrulama ölçümlerini görüntüleme
 
@@ -284,10 +284,10 @@ Tahmin kümesine () sahip olduktan sonra, tahmini `predictions` değerleri test 
 
     [!code-csharp[CreatePredictionEngine](./snippets/sentiment-analysis/csharp/Program.cs#CreatePredictionEngine1 "Create the PredictionEngine")]
 
-    [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) , tek bir veri örneğinde tahmin gerçekleştirmenize olanak tanıyan, KULLANıŞLı bir API 'dir. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602), iş parçacığı açısından güvenli değildir. Tek iş parçacıklı veya prototip ortamlarında kullanılması kabul edilebilir. Üretim ortamlarında geliştirilmiş performans ve iş parçacığı güvenliği için, `PredictionEnginePool` [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) uygulamanız genelinde kullanılacak nesneleri oluşturan hizmetini kullanın. [ `PredictionEnginePool` ASP.NET Core Web API 'sinde kullanma](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)hakkında bu kılavuza bakın.
+    [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) , tek bir veri örneğinde tahmin gerçekleştirmenize olanak tanıyan, KULLANıŞLı bir API 'dir. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) , iş parçacığı açısından güvenli değildir. Tek iş parçacıklı veya prototip ortamlarında kullanılması kabul edilebilir. Üretim ortamlarında geliştirilmiş performans ve iş parçacığı güvenliği için, `PredictionEnginePool` [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) uygulamanız genelinde kullanılacak nesneleri oluşturan hizmetini kullanın. [ `PredictionEnginePool` ASP.NET Core Web API 'sinde kullanma](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)hakkında bu kılavuza bakın.
 
     > [!NOTE]
-    > `PredictionEnginePool`Hizmet Uzantısı Şu anda önizleme aşamasındadır.
+    > `PredictionEnginePool` Hizmet Uzantısı Şu anda önizleme aşamasındadır.
 
 4. Bir örneği oluşturarak eğitilen modelin, yöntemi içindeki tahminini test etmek için bir açıklama ekleyin `UseModelWithSingleItem()` `SentimentData` :
 
@@ -380,7 +380,7 @@ Tebrikler! İleti yaklaşımını sınıflandırma ve tahmin etmek için bir mak
 
 Başarılı modellerin oluşturulması, yinelemeli bir işlemdir. Öğretici, hızlı model eğitimi sağlamak için küçük veri kümeleri kullandığından, bu modelin ilk daha düşük kalitesi vardır. Model kalitede memnun kalmıyorsanız, daha büyük eğitim veri kümeleri sağlayarak veya her algoritma için farklı [Hyper-parametreleri](../resources/glossary.md#hyperparameter) ile farklı eğitim algoritmaları seçerek bunu geliştirmeyi deneyebilirsiniz.
 
-Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) deposunda bulabilirsiniz.
+Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/main/machine-learning/tutorials/SentimentAnalysis) deposunda bulabilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

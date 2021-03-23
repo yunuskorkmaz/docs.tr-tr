@@ -4,12 +4,12 @@ description: Eklentileri destekleyen bir .NET Core uygulaması oluşturmayı ö�
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 10/16/2019
-ms.openlocfilehash: d3b532ae72a80eef9603fc6f3ada8c11cae966dd
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: aef91231bd4a32937d6e3cd2cb7204777c6efe96
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98187905"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873386"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Eklentilerle .NET Core uygulaması oluşturma
 
@@ -20,7 +20,7 @@ Bu öğreticide, yükleme eklentilerini bir özel olarak nasıl oluşturacağın
 - <xref:System.Runtime.Loader.AssemblyDependencyResolver?displayProperty=fullName>Eklentilerin bağımlılıklara sahip olmasını sağlamak için türü kullanın.
 - Yalnızca derleme yapıtları kopyalanarak kolayca dağıtılabilecek olan eklentileri yazar.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - [.NET 5 SDK](https://dotnet.microsoft.com/download) veya daha yeni bir sürümünü yükler.
 
@@ -188,7 +188,7 @@ static IEnumerable<ICommand> CreateCommands(Assembly assembly)
 
 ## <a name="load-plugins"></a>Eklentileri yükle
 
-Artık uygulama yüklenen eklenti derlemelerinden komutları doğru bir şekilde yükleyebilir ve örneklendirilecek, ancak hala eklenti derlemelerini yükleyemeyebilir. *Appwithplugin* klasöründe aşağıdaki içeriğe sahip *PluginLoadContext.cs* adlı bir dosya oluşturun:
+Artık uygulama yüklenen eklenti derlemelerinden komutları doğru bir şekilde yükleyebilir ve örneklendirilecek, ancak hala eklenti derlemelerini yükleyemeyebilir. *Appwithplugin* klasöründe aşağıdaki Içeriğe sahip *pluginloadcontext. cs* adlı bir dosya oluşturun:
 
 [!code-csharp[loading-plugins](~/samples/snippets/core/tutorials/creating-app-with-plugin-support/csharp/AppWithPlugin/PluginLoadContext.cs)]
 
@@ -232,7 +232,7 @@ Kök klasöre geri döndüğünüzde şunları yapın:
     dotnet sln add HelloPlugin/HelloPlugin.csproj
     ```
 
-3. *Merhaba Plugin/Class1. cs* dosyasını aşağıdaki içeriklerle *HelloCommand.cs* adlı bir dosyayla değiştirin:
+3. *Merhaba Plugin/SınıfAdı. cs* dosyasını, aşağıdaki Içeriğe sahip *Merhaba komut. cs* adlı bir dosyayla değiştirin:
 
 [!code-csharp[the-hello-plugin](~/samples/snippets/core/tutorials/creating-app-with-plugin-support/csharp/HelloPlugin/HelloCommand.cs)]
 
@@ -272,7 +272,7 @@ Neredeyse tüm eklentiler basit bir "Merhaba Dünya" öğesinden daha karmaşık
 
 ## <a name="other-examples-in-the-sample"></a>Örnekteki diğer örnekler
 
-Bu öğreticinin tüm kaynak kodu [DotNet/Samples deposunda](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin)bulunabilir. Tamamlanan örnek, bazı davranış örneklerini içerir `AssemblyDependencyResolver` . Örneğin, `AssemblyDependencyResolver` nesne yerel kitaplıkları ve NuGet paketlerine dahil edilen yerelleştirilmiş uydu derlemelerini de çözümleyebilir. `UVPlugin` `FrenchPlugin` Örnekler deposunda ve bu senaryolar gösterilmektedir.
+Bu öğreticinin tüm kaynak kodu [DotNet/Samples deposunda](https://github.com/dotnet/samples/tree/main/core/extensions/AppWithPlugin)bulunabilir. Tamamlanan örnek, bazı davranış örneklerini içerir `AssemblyDependencyResolver` . Örneğin, `AssemblyDependencyResolver` nesne yerel kitaplıkları ve NuGet paketlerine dahil edilen yerelleştirilmiş uydu derlemelerini de çözümleyebilir. `UVPlugin` `FrenchPlugin` Örnekler deposunda ve bu senaryolar gösterilmektedir.
 
 ## <a name="reference-a-plugin-interface-from-a-nuget-package"></a>Bir NuGet paketinden eklenti arabirimine başvurma
 
