@@ -6,14 +6,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: f6e95ce58e055f0c745b781c664309e4ef91ffc6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 04c91483587c8976e40584474ced2f5474ab89f4
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554019"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104805772"
 ---
 # <a name="create-the-data-service"></a>Veri hizmetini oluşturma
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 Bu konu başlığında, Northwind örnek veritabanına dayalı açık veri Protokolü (OData) akışını kullanıma sunmak için WCF Veri Hizmetleri kullanan bir örnek veri hizmeti oluşturacaksınız. Görev aşağıdaki temel adımları içerir:
 
@@ -43,9 +45,9 @@ Bu konu başlığında, Northwind örnek veritabanına dayalı açık veri Proto
 
 ## <a name="define-the-data-model"></a>Veri modelini tanımlama
 
-1. **Çözüm Gezgini**, ASP.net projesinin adına sağ tıklayın ve ardından **Add**  >  **Yeni öğe**Ekle ' ye tıklayın.
+1. **Çözüm Gezgini**, ASP.net projesinin adına sağ tıklayın ve ardından   >  **Yeni öğe** Ekle ' ye tıklayın.
 
-2. **Yeni öğe Ekle** Iletişim kutusunda **veri** kategorisini seçin ve ardından **ADO.net varlık veri modeli**öğesini seçin.
+2. **Yeni öğe Ekle** Iletişim kutusunda **veri** kategorisini seçin ve ardından **ADO.net varlık veri modeli** öğesini seçin.
 
 3. Veri modeli adı için girin `Northwind.edmx` .
 
@@ -65,7 +67,7 @@ Bu konu başlığında, Northwind örnek veritabanına dayalı açık veri Proto
 
 ## <a name="create-the-wcf-data-service"></a>WCF veri hizmetini oluşturma
 
-1. **Çözüm Gezgini**, ASP.NET projesine sağ tıklayın ve ardından **Add**  >  **Yeni öğe**Ekle ' yi seçin.
+1. **Çözüm Gezgini**, ASP.NET projesine sağ tıklayın ve ardından   >  **Yeni öğe** Ekle ' yi seçin.
 
 2. **Yeni öğe Ekle** iletişim kutusunda, **Web** kategorisinden **WCF veri hizmeti** öğe şablonunu seçin.
 
@@ -76,7 +78,7 @@ Bu konu başlığında, Northwind örnek veritabanına dayalı açık veri Proto
 
 3. Hizmetin adı için, yazın `Northwind` .
 
-     Visual Studio, yeni hizmet için XML işaretlemesini ve kod dosyalarını oluşturur. Varsayılan olarak, kod Düzenleyicisi penceresi açılır. **Çözüm Gezgini**, hizmet Northwind adına *. svc.cs* veya *. svc. vb*uzantısına sahiptir.
+     Visual Studio, yeni hizmet için XML işaretlemesini ve kod dosyalarını oluşturur. Varsayılan olarak, kod Düzenleyicisi penceresi açılır. **Çözüm Gezgini**, hizmet Northwind adına *. svc. cs* veya *. svc. vb* uzantısına sahiptir.
 
 4. Veri Hizmeti kodunda, veri `/* TODO: put your data source class name here */` hizmetini tanımlayan sınıfın tanımındaki, bu örnekte olduğu gibi veri modelinin varlık kapsayıcısı olan türde olan açıklamayı değiştirin `NorthwindEntities` . Sınıf tanımı aşağıdaki gibi görünmelidir:
 

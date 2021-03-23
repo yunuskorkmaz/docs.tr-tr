@@ -3,14 +3,16 @@ title: Web tarayıcısından hizmete erişme (WCF Veri Hizmetleri hızlı başla
 description: Visual Studio 'da WCF Veri Hizmetleri başlatmayı ve bir tarayıcıda akış okumayı devre dışı bırakmayı öğrenin. Hizmet tanımı belgesini alın ve veri hizmeti kaynaklarına erişin.
 ms.date: 03/30/2017
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
-ms.openlocfilehash: 713436c31bc3f622c4f44a83e33fff3fcbba1c1c
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 27b599b6bf28b2ee0810564a3fb73b14274467ff
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247784"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104805551"
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>Web tarayıcısından hizmete erişme (WCF Veri Hizmetleri hızlı başlangıç)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 Bu, WCF Veri Hizmetleri hızlı başlangıç görevinin ikinci görevidir. Bu görevde, Visual Studio 'dan WCF Veri Hizmetleri başlatır ve isteğe bağlı olarak Web tarayıcısında akış okumayı devre dışı bırakabilirsiniz. Daha sonra, sunulan kaynaklara bir Web tarayıcısı aracılığıyla HTTP GET istekleri göndererek hizmet tanımı belgesini alır ve veri hizmeti kaynaklarına erişebilirsiniz.
 

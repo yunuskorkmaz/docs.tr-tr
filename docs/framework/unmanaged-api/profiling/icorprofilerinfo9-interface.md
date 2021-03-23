@@ -4,12 +4,12 @@ title: ICorProfilerInfo9 Arabirimi
 ms.date: 08/06/2019
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 954cb16d2b789359693f6a8fa3e0f6e19ad19b3e
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 44e3d694b426f87ee4e4bc12181f46322b0d246f
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99736914"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104805681"
 ---
 # <a name="icorprofilerinfo9-interface"></a>ICorProfilerInfo9 Arabirimi
 
@@ -27,7 +27,7 @@ Birden çok yerel kod sürümüne sahip işlevlerle ilgili bilgileri sorgulamak 
 
 **Platformlar:** Bkz. [.NET Core desteklenen işletim sistemleri](../../../core/install/windows.md?pivots=os-windows).  
 **Üst bilgi:** CorProf. IDL, CorProf. h  
-**.NET sürümleri:**[!INCLUDE[net_core](../../../../includes/net-core-22-md.md)]  
+**.NET sürümleri:**[!INCLUDE[net_core](../../../../includes/net-core-21-md.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
