@@ -4,12 +4,12 @@ description: 'F ile Azure hizmetlerini kullanma kılavuzu #'
 author: sylvanc
 ms.date: 07/29/2020
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: 16599aa48776acee05edf8201cdd148a87507cdb
-ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
+ms.openlocfilehash: 406de0cdef67631ddaaa13f686c9b2093ba5d2ff
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98899423"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104873270"
 ---
 # <a name="using-f-on-azure"></a>Azure’da F# Kullanma
 
@@ -60,7 +60,7 @@ Azure depolama Ayrıca, açık API çağrıları yerine bildirim temelli yapıla
 
 [Azure HDInsight için Apache Spark](/azure/hdinsight/spark/apache-spark-overview) , büyük ölçekli veri analizi uygulamalarını çalıştıran bir açık kaynak işleme çerçevesidir. [Azure Databricks](/azure/databricks/scenarios/what-is-azure-databricks), Microsoft Azure bulut hizmetleri platformu için iyileştirilen Apache Spark tabanlı bir analiz platformudur. Azure, dağıtıma Apache Spark kolaylaştırır ve ekonomik hale gelir. Apache Spark için bir dizi .NET bağlaması olan [Apache Spark için .net](../../spark/what-is-apache-spark-dotnet.md)kullanarak Spark uygulamanızı geliştirin.
 
-* [Apache Spark F # örnekleri için .NET](https://github.com/dotnet/spark/tree/master/examples/Microsoft.Spark.FSharp.Examples)
+* [Apache Spark F # örnekleri için .NET](https://github.com/dotnet/spark/tree/main/examples/Microsoft.Spark.FSharp.Examples)
 * [Azure HDInsight 'a .NET etkileşimli Jupyıter not defterlerini yükler](../../spark/how-to-guides/hdinsight-notebook-installation.md)
 * [Azure HDInsight 'a Apache Spark işleri gönderme](../../spark/how-to-guides/hdinsight-deploy-methods.md)
 * [Azure Databricks Apache Spark işleri gönder](../../spark/how-to-guides/databricks-deploy-methods.md)

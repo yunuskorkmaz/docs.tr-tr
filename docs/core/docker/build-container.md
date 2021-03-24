@@ -1,15 +1,15 @@
 ---
 title: Docker öğreticisi ile uygulama Kapsayıcılı hale getirme
 description: Bu öğreticide, Docker ile bir .NET Core uygulamasını kapsayıya kapsayıtabilecek hakkında bilgi edineceksiniz.
-ms.date: 04/27/2020
+ms.date: 03/22/2021
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c92f5823f56f74941afdd28638d30e759b2c51c9
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 0a64743046d31badb10b5240a172b6e47c76d3cc
+ms.sourcegitcommit: 26721a2260deabb3318cc98af8619306711153cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99740762"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "105027902"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Öğretici: bir .NET Core uygulamasını Kapsayıize edin
 
@@ -68,7 +68,7 @@ dotnet run
 Hello World!
 ```
 
-Varsayılan şablon, terminale yazdıran bir uygulama oluşturur ve hemen sonlandırılır. Bu öğretici için süresiz olarak döngü yapan bir uygulama kullanacaksınız. *Program.cs* dosyasını bir metin düzenleyicisinde açın.
+Varsayılan şablon, terminale yazdıran bir uygulama oluşturur ve hemen sonlandırılır. Bu öğretici için süresiz olarak döngü yapan bir uygulama kullanacaksınız. *Program. cs* dosyasını bir metin düzenleyicisinde açın.
 
 > [!TIP]
 > Visual Studio Code kullanıyorsanız, önceki Terminal oturumunda aşağıdaki komutu yazın:
@@ -79,7 +79,7 @@ Varsayılan şablon, terminale yazdıran bir uygulama oluşturur ve hemen sonlan
 >
 > Bu, Visual Studio Code projedeki projeyi içeren *uygulama* klasörünü açar.
 
-*Program.cs* aşağıdaki C# kodu gibi görünmelidir:
+*Program. cs* aşağıdaki C# kodu gibi görünmelidir:
 
 ```csharp
 using System;
@@ -239,6 +239,13 @@ ENTRYPOINT ["dotnet", "NetCore.Docker.dll"]
 `WORKDIR`Komut, kapsayıcının içindeki **geçerli dizini** *uygulama* olarak değiştirir.
 
 Sonraki komut, `ENTRYPOINT` Docker öğesine kapsayıcıyı yürütülebilir olarak çalışacak şekilde yapılandırmasını söyler. Kapsayıcı başladığında, `ENTRYPOINT` komutu çalışır. Bu komut sona erdiğinde kapsayıcı otomatik olarak durur.
+
+> [!TIP]
+> Ek güvenlik için, tanılama işlem hattını devre dışı bırakabilirsiniz. Bunu devre dışı bırakırsanız kapsayıcının ReadOnly olarak çalışmasına izin verir. Bunu yapmak için `COMPlus_EnableDiagnostics` `0` (adımdan hemen önce) bir ortam değişkeni belirtin `ENTRYPOINT` :
+>
+> ```dockerfile
+> ENV COMPlus_EnableDiagnostics=0
+> ```
 
 Terminalinizden `docker build -t counter-image -f Dockerfile .` komutunu çalıştırın ve komut tamamlandığında komutunu çalıştırın `docker images` .
 

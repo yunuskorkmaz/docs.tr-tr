@@ -1,7 +1,7 @@
 ---
-title: Verilerin Şifresini Çözme
+title: Verilerin şifresini çözme
 description: Simetrik bir algoritma veya asimetrik algoritma kullanarak .NET 'teki verilerin şifrelerini çözmeyi öğrenin.
-ms.date: 07/16/2020
+ms.date: 03/22/2021
 dev_langs:
 - csharp
 - vb
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - asymmetric decryption
 - decryption
 ms.assetid: 9b266b6c-a9b2-4d20-afd8-b3a0d8fd48a0
-ms.openlocfilehash: cf286eeca8a9372c6532c56701e4775d5e09d786
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 14d8b6185c1c5b3aaee4f2041f98c500f2d3c313
+ms.sourcegitcommit: 26721a2260deabb3318cc98af8619306711153cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831110"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "105027915"
 ---
-# <a name="decrypting-data"></a>Verilerin Şifresini Çözme
+# <a name="decrypting-data"></a>Verilerin şifresini çözme
 
 Şifre çözme, şifreleme işleminin tersidir. Gizli anahtar şifrelemesi için, verileri şifrelemek için kullanılan anahtarı ve IV 'yi bilmeniz gerekir. Ortak anahtar şifrelemesi için, ortak anahtarı (verileri özel anahtar kullanılarak şifrelendiyse) veya özel anahtarı (verileri ortak anahtar kullanılarak şifrelendiyse) bilmeniz gerekir.
 
@@ -30,12 +30,14 @@ Aşağıdaki örnek, algoritma için varsayılan uygulama sınıfının yeni bir
 
 ```vb
 Dim aes As Aes = Aes.Create()
-Dim cryptStream As New CryptoStream(myStream, aes.CreateDecryptor(key, iv), CryptoStreamMode.Read)
+Dim cryptStream As New CryptoStream(
+    myStream, aes.CreateDecryptor(key, iv), CryptoStreamMode.Read)
 ```
 
 ```csharp
 Aes aes = Aes.Create();
-CryptoStream cryptStream = new CryptoStream(myStream, aes.CreateDecryptor(key, iv), CryptoStreamMode.Read);
+CryptoStream cryptStream = new CryptoStream(
+    myStream, aes.CreateDecryptor(key, iv), CryptoStreamMode.Read);
 ```
 
 Aşağıdaki örnek, bir akış oluşturma, akışın şifresini çözme, akıştan okuma ve akışları kapatma sürecinin tamamını gösterir. *TestData.txt* adlı bir dosyayı okuyan bir dosya akışı nesnesi oluşturulur. Daha sonra **CryptoStream** sınıfı ve **AES** sınıfı kullanılarak dosya akışının şifresi çözülür. Bu örnek, [verileri şifrelemek](encrypting-data.md)için simetrik şifreleme örneğinde kullanılan anahtar değerini belirtir. Bu değerleri şifrelemek ve aktarmak için gereken kodu göstermez.
@@ -79,10 +81,10 @@ symmetricIV = rsa.Decrypt(encryptedSymmetricIV , RSAEncryptionPadding.Pkcs1);
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Şifreleme ve Şifre Çözme için Anahtarlar Oluşturma](generating-keys-for-encryption-and-decryption.md)
-- [Veri Şifreleme](encrypting-data.md)
+- [Şifreleme ve şifre çözme için anahtarlar oluşturma](generating-keys-for-encryption-and-decryption.md)
+- [Verileri şifreleme](encrypting-data.md)
 - [Şifreleme Hizmetleri](cryptographic-services.md)
-- [Şifreleme Modeli](cryptography-model.md)
+- [Şifreleme modeli](cryptography-model.md)
 - [Platformlar arası şifreleme](cross-platform-cryptography.md)
 - [Doldurmayı kullanarak CBC modunda simetrik şifre çözmedeki zamanlama açıkları](vulnerabilities-cbc-mode.md)
 - [ASP.NET Core veri koruma](/aspnet/core/security/data-protection/introduction)

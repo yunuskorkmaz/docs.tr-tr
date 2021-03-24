@@ -2,12 +2,12 @@
 title: F# kod biçimlendirme yönergeleri
 description: 'F # kodunu biçimlendirmeye yönelik yönergeleri öğrenin.'
 ms.date: 08/31/2020
-ms.openlocfilehash: 74ab483a501dd5135ad5d98fd6dce988cf207ef8
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: 22020d69c13fbf8317cbf5e871073a290f8967b7
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102605457"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876363"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# kod biçimlendirme yönergeleri
 
@@ -306,6 +306,17 @@ Satır içi yorumların ilk harfi büyük harfle yazılmalıdır.
 ```fsharp
 let f x = x + 1 // Increment by one.
 ```
+
+## <a name="formatting-string-literals-and-interpolated-strings"></a>Dize değişmezlerini ve enterpolasyonlu dizeleri biçimlendirme
+
+Dize değişmezleri ve enterpolasyonlu dizeler, çizginin ne kadar süreyle olduğuna bakmaksızın yalnızca tek bir satırda bırakılabilir.
+
+```fsharp
+let serviceStorageConnection =
+    $"DefaultEndpointsProtocol=https;AccountName=%s{serviceStorageAccount.Name};AccountKey=%s{serviceStorageAccountKey.Value}"
+```
+
+Çok satırlı enterpolasyonlu ifadeler kesinlikle önerilmez. Bunun yerine, ifade sonucunu bir değere bağlayın ve bunu, enterpolasyonlu dizede kullanın.
 
 ## <a name="naming-conventions"></a>Adlandırma kuralları
 
@@ -1144,6 +1155,50 @@ Option.traverse(
     create
     >> Result.setError [ invalidHeader "Content-Checksum" ]
 )
+```
+
+## <a name="formatting-generic-type-arguments-and-constraints"></a>Genel tür bağımsız değişkenlerini ve kısıtlamalarını biçimlendirme
+
+Aşağıdaki yönergeler hem işlevler, Üyeler ve tür tanımları için geçerlidir.
+
+Çok uzun değilse, genel tür bağımsız değişkenlerini ve kısıtlamalarını tek bir satırda tutun:
+
+```fsharp
+let f<'a, 'b when 'a : equality and 'b : comparison> param =
+    // function body
+```
+
+Hem genel tür bağımsız değişkenleri/kısıtlamaları hem de işlev parametreleri uygun değilse, ancak tür parametreleri/kısıtlamaları tek başına ise, parametreleri yeni satırlara yerleştirin:
+
+```fsharp
+let f<'a, 'b when 'a : equality and 'b : comparison>
+    param
+    =
+    // function body
+```
+
+Tür parametreleri veya kısıtlamaları çok uzunsa, break ve bunları aşağıda gösterildiği gibi hizalayın. Tür parametrelerinin listesini, uzunluğundan bağımsız olarak işlevle aynı satırda tutun. Kısıtlamalar için `when` ilk satıra yerleştirin ve her kısıtlamayı, uzunluğundan bağımsız olarak tek bir satırda tutun. `>`Son satırın sonuna yerleştirin. Kısıtlamaları bir düzey ile girintileyin.
+
+```fsharp
+let inline f< ^a, ^b
+    when ^a : (static member Foo1: unit -> ^b)
+    and ^b : (member Foo2: unit -> int)
+    and ^b : (member Foo3: string -> ^a option)>
+    arg1
+    arg2
+    =
+    // function body
+```
+
+Tür parametreleri/kısıtlamaları bozulur, ancak normal işlev parametreleri yoksa, aşağıdakileri göz `=` önüne alarak yeni bir satıra yerleştirin:
+
+```f#
+let inline f<^a, ^b
+    when ^a : (static member Foo1: unit -> ^b)
+    and ^b : (member Foo2: unit -> int)
+    and ^b : (member Foo3: string -> ^a option)>
+    =
+    // function body
 ```
 
 ## <a name="formatting-attributes"></a>Biçimlendirme öznitelikleri

@@ -5,12 +5,12 @@ ms.date: 09/24/2020
 ms.topic: conceptual
 no-loc:
 - EditorConfig
-ms.openlocfilehash: 1821cb7daf70a642e3fb35cebae144b097ba115c
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: 0be0d094739893dc74e1b5c85e686594c766cbcb
+ms.sourcegitcommit: 26721a2260deabb3318cc98af8619306711153cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104876701"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "105027900"
 ---
 # <a name="code-quality-rule-configuration-options"></a>Kod kalitesi kuralı yapılandırma seçenekleri
 
@@ -107,7 +107,7 @@ Bu bölümde, kullanılabilir seçeneklerin bazıları listelenir. Kullanılabil
 
 | Açıklama | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
 | - | - | - | - |
-| Metoda geçirilen bağımsız değişkenleri doğrulayan null denetim doğrulama yöntemlerinin adları null değil | İzin verilen yöntem adı biçimleri (ile ayrılmış `|` ):<br/> -Yalnızca Yöntem adı (kapsayan tür veya ad alanından bağımsız olarak ada sahip tüm yöntemler dahil)<br/> -Simgenin [belge kimliği biçimindeki](https://github.com/dotnet/csharplang/blob/main/spec/documentation-comments.md#id-string-format), isteğe bağlı bir ön ek olarak nitelenmiş adlar `M:` | Yok | [CA1062](quality-rules/ca1062.md) |
+| Metoda geçirilen bağımsız değişkenleri doğrulayan null denetim doğrulama yöntemlerinin adları null değil | İzin verilen yöntem adı biçimleri (ile ayrılmış `|` ):<br/> -Yalnızca Yöntem adı (kapsayan tür veya ad alanından bağımsız olarak ada sahip tüm yöntemler dahil)<br/> -Simgenin [belge kimliği biçimindeki](/dotnet/csharp/language-reference/language-specification/documentation-comments#id-string-format), isteğe bağlı bir ön ek olarak nitelenmiş adlar `M:` | Yok | [CA1062](quality-rules/ca1062.md) |
 
 ### <a name="additional_string_formatting_methods"></a>additional_string_formatting_methods
 

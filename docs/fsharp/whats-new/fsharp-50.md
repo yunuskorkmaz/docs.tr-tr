@@ -2,12 +2,12 @@
 title: 'F # 5,0-F # kılavuzundaki yenilikler'
 description: "F # 5,0 ' de bulunan yeni özelliklere genel bakış alın."
 ms.date: 11/06/2020
-ms.openlocfilehash: 9b138e4801a3e599db650990acd53c0f956b78b8
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: c686bcf5df18d24ac35bbafb2b2d90f768ef7947
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98190734"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876714"
 ---
 # <a name="whats-new-in-f-50"></a>F # 5,0 ' deki yenilikler
 
@@ -237,12 +237,14 @@ F # 5,0, yerleşik 3B ve 4D dizi türlerinde sabit bir dizinle Dilimleme desteğ
 Bunu göstermek için aşağıdaki 3B diziyi göz önünde bulundurun:
 
 *z = 0*
+
 | x\y   | 0 | 1 |
 |-------|---|---|
 | **0** | 0 | 1 |
 | **1** | 2 | 3 |
 
 *z = 1*
+
 | x\y   | 0 | 1 |
 |-------|---|---|
 | **0** | 4 | 5 |
@@ -366,7 +368,7 @@ Bu özellik [F # RFC FS-1031](https://github.com/fsharp/fslang-design/blob/maste
 
 ## <a name="default-interface-member-consumption"></a>Varsayılan arabirim üyesi tüketimi
 
-F # 5, [arabirimleri varsayılan uygulamalarla](../../csharp/tutorials/default-interface-methods-versions.md)kullanmanıza olanak sağlar.
+F # 5, [arabirimleri varsayılan uygulamalarla](../../csharp/whats-new/tutorials/default-interface-methods-versions.md)kullanmanıza olanak sağlar.
 
 C# ' de tanımlanan bir arabirimi şöyle düşünün:
 
