@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8b6d334677991382d235fd53cd3c98e3a77d650d
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: b75f9ce8e878c935dcc5fd9dc292369720b895e9
+ms.sourcegitcommit: e16315d9f1ff355f55ff8ab84a28915be0a8e42b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96032692"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105152727"
 ---
 ### <a name="http-browser-samesite-changes-impact-authentication"></a>HTTP: Browser SameSite değişikliklerinin etkisi kimlik doğrulaması
 
@@ -26,7 +26,7 @@ Google, geriye doğru uyumlu olmayan yeni bir taslak standardı önerdi. Standar
 
 ASP.NET Core 3,1, yeni davranışı uygulamak için güncelleştirilmiştir `SameSite` . Güncelleştirme, öğesinin davranışını yeniden tanımlar `SameSiteMode.None` `SameSite=None` ve `SameSiteMode.Unspecified` özniteliği atlamak için yeni bir değer ekler `SameSite` . `Unspecified`Tanımlama bilgilerini kullanan bazı bileşenler, OpenID Connect bağıntı ve nonce tanımlama bilgileri gibi senaryolarına daha belirgin bir şekilde değer ayarlamış olsa da, tüm tanımlama bilgisi API 'leri için varsayılan olarak ' i
 
-Bu alandaki diğer son değişiklikler için bkz. [http: bazı tanımlama bilgisi SameSite Varsayılanları None olarak değiştirildi](../../../../docs/core/compatibility/2.2-3.0.md#http-some-cookie-samesite-defaults-changed-to-none). ASP.NET Core 3,0 ' de, çoğu varsayılan <xref:Microsoft.AspNetCore.Http.SameSiteMode.Lax?displayProperty=nameWithType> olarak olarak değiştirilmiştir <xref:Microsoft.AspNetCore.Http.SameSiteMode.None?displayProperty=nameWithType> (ancak yine de önceki standart kullanılarak).
+Bu alandaki diğer son değişiklikler için bkz. [http: bazı tanımlama bilgisi SameSite Varsayılanları None olarak değiştirildi](../../../../docs/core/compatibility/3.0.md#http-some-cookie-samesite-defaults-changed-to-none). ASP.NET Core 3,0 ' de, çoğu varsayılan <xref:Microsoft.AspNetCore.Http.SameSiteMode.Lax?displayProperty=nameWithType> olarak olarak değiştirilmiştir <xref:Microsoft.AspNetCore.Http.SameSiteMode.None?displayProperty=nameWithType> (ancak yine de önceki standart kullanılarak).
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
@@ -78,7 +78,7 @@ Elektron sürümleri, daha eski bir Kmıum sürümlerini içerir. Örneğin, Mic
 
 2016 `SameSite` Standart uygulanan, bilinmeyen değerler değer olarak değerlendirilir `SameSite=Strict` . Sonuç olarak, özgün standardı destekleyen eski tarayıcılar, değeri olan bir özellik görtiklerinde kesintiye uğramayabilir `SameSite` `None` . Web uygulamaları, bu eski tarayıcıları desteklemeyi amaçlarsa tarayıcı algılaması gerçekleştirmelidir. ASP.NET Core, `User-Agent` istek üst bilgisi değerleri son derece kararsız olduğundan ve haftalık olarak değişeceğinden sizin için tarayıcı algılaması uygulamaz. Bunun yerine, tanımlama bilgisi ilkesindeki bir uzantı noktası, özel bir mantığı eklemenize olanak tanır `User-Agent` .
 
-*Startup.cs* içinde aşağıdaki kodu ekleyin:
+*Startup. cs* dosyasında aşağıdaki kodu ekleyin:
 
 ```csharp
 private void CheckSameSite(HttpContext httpContext, CookieOptions options)
