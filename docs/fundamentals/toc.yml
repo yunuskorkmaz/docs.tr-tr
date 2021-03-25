@@ -426,7 +426,15 @@ items:
               - name: İyi bilinen olay sağlayıcılar
                 href: ../core/diagnostics/well-known-event-providers.md
               - name: Dağıtılmış Izleme
-                href: ../core/diagnostics/distributed-tracing.md
+                items:
+                  - name: Genel Bakış
+                    href: ../core/diagnostics/distributed-tracing.md
+                  - name: Kavramlar
+                    href: ../core/diagnostics/distributed-tracing-concepts.md
+                  - name: İzleme
+                    href: ../core/diagnostics/distributed-tracing-instrumentation-walkthroughs.md
+                  - name: Koleksiyon
+                    href: ../core/diagnostics/distributed-tracing-collection-walkthroughs.md
           - name: Simgeleri
             href: ../core/diagnostics/symbols.md
           - name: Çalıştırma zamanı olayları
