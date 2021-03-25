@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: 7b8c634404cf2f214cc4bee5d754443e9302a723
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 14bc4501dfed515e162a6e30137c9def89bb3651
+ms.sourcegitcommit: e16315d9f1ff355f55ff8ab84a28915be0a8e42b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739522"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105111081"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! (null-forverme) işleci (C# Başvurusu)
 
@@ -54,4 +54,4 @@ Daha fazla bilgi için, [Nullable başvuru türleri belirtiminin taslağının](
 
 - [C# başvurusu](../index.md)
 - [C# işleçleri ve ifadeleri](index.md)
-- [Öğretici: null yapılabilir başvuru türleriyle tasarlayın](../../tutorials/nullable-reference-types.md)
+- [Öğretici: null yapılabilir başvuru türleriyle tasarlayın](../../whats-new/tutorials/nullable-reference-types.md)

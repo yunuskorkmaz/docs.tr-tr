@@ -2,12 +2,12 @@
 title: Günlüğe kaydetme ve izleme-.NET Core
 description: .NET Core günlüğe kaydetme ve izlemeye giriş.
 ms.date: 10/12/2020
-ms.openlocfilehash: 70cff297688270d30b9850d123ffc8bb27ef7fbe
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: dfecdad4518c79b605eb4fbe991af07fcba7db1c
+ms.sourcegitcommit: e16315d9f1ff355f55ff8ab84a28915be0a8e42b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100582973"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105111094"
 ---
 # <a name="net-core-logging-and-tracing"></a>.NET Core günlüğe kaydetme ve izleme
 
@@ -72,7 +72,7 @@ Aşağıdaki API 'Ler daha fazla olay yönelimlidir. Basit dizeleri günlüğe k
 
 ## <a name="distributed-tracing"></a>Dağıtılmış Izleme
 
-[Dağıtılmış izleme](./distributed-tracing.md) , dağıtılmış bir sistemde izleme verilerini yayımlama ve gözlemlemeye yönelik bir yoldur.
+[Dağıtılmış izleme](./distributed-tracing.md) , özellikle birden çok makineye veya işleme dağılmış olabilecek uygulamalarda hataları ve performans sorunlarını yerelleştirebilmenizi sağlayan bir tanılama tekniğidir. Bu teknik, farklı uygulama bileşenleri tarafından yapılan bir uygulamayla bir araya geçen ve başka bir iş tarafından, uygulamanın eşzamanlı istekler için yapmakta olabileceği diğer çalışmalardan ayıran istekleri izler.
 
 ## <a name="ilogger-and-logging-frameworks"></a>ILogger ve günlük çerçeveleri
 

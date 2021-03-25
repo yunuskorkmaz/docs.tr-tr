@@ -1,18 +1,18 @@
 ---
 title: Kısmi sınıflar ve yöntemler-C# Programlama Kılavuzu
 description: C# içindeki kısmi sınıflar ve Yöntemler, bir sınıfın tanımını, yapıyı, arabirimi veya iki ya da daha fazla kaynak dosya üzerinde bir yöntemi böler.
-ms.date: 07/20/2015
+ms.date: 03/23/2021
 helpviewer_keywords:
 - partial methods [C#]
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: cfda3b89bfd9dc046274dfa53d62a0789d4d597e
-ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
+ms.openlocfilehash: 2132dd8e729725f0dd9bcb4477a3a604aa7065a0
+ms.sourcegitcommit: e16315d9f1ff355f55ff8ab84a28915be0a8e42b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98899106"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105111055"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Kısmi Sınıflar ve Yöntemler (C# Programlama Kılavuzu)
 
@@ -133,7 +133,7 @@ Aşağıdaki örnek ayrıca kısmi yapılar ve arabirimler geliştirebileceğini
 
 ## <a name="partial-methods"></a>Kısmi Yöntemler
 
-Kısmi bir sınıf veya yapı, kısmi bir yöntem içerebilir. Sınıfın bir kısmı metodun imzasını içerir. İsteğe bağlı bir uygulama aynı bölümde veya başka bir bölümde tanımlanabilir. Uygulama sağlanmazsa, yöntemi ve yöntemine yapılan tüm çağrılar derleme sırasında kaldırılır.
+Kısmi bir sınıf veya yapı, kısmi bir yöntem içerebilir. Sınıfın bir kısmı metodun imzasını içerir. Bir uygulama aynı bölümde veya başka bir bölümde tanımlanabilir. Uygulama sağlanmazsa, yöntemi ve yöntemine yapılan tüm çağrılar derleme sırasında kaldırılır. Uygulama, yöntem imzasına bağlı olarak gerekli olabilir.
 
 Kısmi Yöntemler, bir olaya benzer bir yöntemi tanımlamak için bir sınıfın bir parçasının Uygulayıcısı sağlar. Sınıfının diğer bölümünün uygulayıcısı, yöntemi uygulayıp uygulamamaya karar verebilir. Yöntem uygulanmadığından, derleyici yöntem imzasını ve yönteme yapılan tüm çağrıları kaldırır. Çağrılardaki bağımsız değişkenlerin değerlendirmesinden kaynaklanan sonuçlar da dahil olmak üzere yöntemine yapılan çağrılar, çalışma zamanında hiçbir etkiye sahip değildir. Bu nedenle, kısmi sınıftaki herhangi bir kod, uygulama sağlanmasa bile, kısmi bir yöntemi serbestçe kullanabilir. Yöntem çağrılırsa ancak uygulanmadığında, derleme zamanı veya çalışma zamanı hataları ortaya alınmaz.
 
@@ -143,28 +143,36 @@ Kısmi yöntem bildirimi iki bölümden oluşur: tanım ve uygulama. Bunlar kıs
 
 ```csharp
 // Definition in file1.cs
-partial void onNameChanged();
+partial void OnNameChanged();
 
 // Implementation in file2.cs
-partial void onNameChanged()
+partial void OnNameChanged()
 {
   // method body
 }
 ```
 
-- Kısmi yöntem bildirimleri, bağlamsal anahtar sözcüğüyle [kısmen](../../language-reference/keywords/partial-type.md) başlamalı ve yöntemin [void](../../language-reference/builtin-types/void.md)döndürmesi gerekir.
+- Kısmi yöntem bildirimleri bağlamsal anahtar sözcükle [kısmen](../../language-reference/keywords/partial-type.md)başlamalıdır.
 
-- Kısmi yöntemlerin [içinde](../../language-reference/keywords/in-parameter-modifier.md) veya [ref](../../language-reference/keywords/ref.md) , ancak [Out](../../language-reference/keywords/out-parameter-modifier.md) parametreleri olabilir.
-
-- Kısmi Yöntemler örtük olarak [özeldir](../../language-reference/keywords/private.md)ve bu nedenle [sanal](../../language-reference/keywords/virtual.md)olamaz.
-
-- Gövde varlığı, tanımlama veya uygulama yapılıp yapılmayacağını belirlerse, kısmi Yöntemler [extern](../../language-reference/keywords/extern.md)olamaz.
+- Kısmi türün her iki bölümünde de kısmi yöntem imzaları eşleşmelidir.
 
 - Kısmi yöntemlerin [statik](../../language-reference/keywords/static.md) ve [güvenli olmayan](../../language-reference/keywords/unsafe.md) değiştiriciler olabilir.
 
 - Kısmi yöntemler genel olabilir. Kısıtlamalar, tanımlayıcı kısmi Yöntem bildirimine konur ve isteğe bağlı olarak uygulama bir tane üzerinde yinelenebilir. Parametre ve tür parametre adları, uygulama bildiriminde, tanımlanmasıyla aynı olmak zorunda değildir.
 
 - Tanımlanmış ve uygulanmış, ancak yalnızca tanımlanmış kısmi bir yönteme değil kısmi bir yönteme [temsilci](../../language-reference/builtin-types/reference-types.md) oluşturabilirsiniz.
+
+Kısmi yöntemin aşağıdaki durumlarda uygulanması gerekmez:
+
+- Herhangi bir erişilebilirlik değiştiricilerine (varsayılan [özel](../../language-reference/keywords/private.md)dahil) sahip değildir.
+
+- [Void](../../language-reference/builtin-types/void.md)döndürür.
+
+- [Out](../../language-reference/keywords/out-parameter-modifier.md) parametresi yok.
+
+- Şu değiştiricilerin herhangi birine sahip değildir [sanal](../../language-reference/keywords/virtual.md), [geçersiz kılma](../../language-reference/keywords/override.md), [Sealed](../../language-reference/keywords/sealed.md), [New](../../language-reference/keywords/new-modifier.md)veya [extern](../../language-reference/keywords/extern.md).
+
+Tüm bu kısıtlamalara uymayan herhangi bir Yöntem (örneğin, `public virtual partial void` yöntemi) bir uygulama sağlamalıdır.
 
 ## <a name="c-language-specification"></a>C# Dil Belirtimi
 

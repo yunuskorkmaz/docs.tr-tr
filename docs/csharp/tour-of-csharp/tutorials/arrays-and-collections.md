@@ -2,12 +2,12 @@
 title: Koleksiyonlarla çalışma-C# öğreticisine giriş
 description: Bu öğreticide liste koleksiyonunu inceleyerek C# öğrenin.
 ms.date: 02/05/2021
-ms.openlocfilehash: 0043372aed65fbc720a022a3d8c69abd25ceca0c
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: 0bc2b84964e8fc270fe7e9d635c4c18aa1abb390
+ms.sourcegitcommit: e16315d9f1ff355f55ff8ab84a28915be0a8e42b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104876109"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105111146"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>Genel liste türünü kullanarak veri koleksiyonlarını yönetmeyi öğrenin
 
@@ -211,6 +211,6 @@ Bu ve önceki derslerden bazılarını bir araya getirebilirsiniz. Fibonaccı nu
 
 Döngünün her tekrarında, listedeki son iki tamsayının yerine getiriyorsunuz ve bu değeri listeye ekliyor olursunuz. Döngü, listeye 20 öğe ekleyinceye kadar yinelenir.
 
-Tebrikler, liste öğreticisini tamamladınız. Kendi geliştirme ortamınızda [ek](../../tutorials/index.md) öğreticilerle devam edebilirsiniz.
+Tebrikler, liste öğreticisini tamamladınız. Kendi geliştirme ortamınızda [ek](../../tutorials/intro-to-csharp/introduction-to-classes.md) öğreticilerle devam edebilirsiniz.
 
 `List` [Koleksiyonlar](../../../standard/collections/index.md)üzerinde .net temelleri makalesindeki türle çalışma hakkında daha fazla bilgi edinebilirsiniz. Diğer birçok koleksiyon türünü de öğreneceksiniz.

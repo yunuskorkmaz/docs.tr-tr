@@ -10,12 +10,12 @@ helpviewer_keywords:
 - PlatformTarget compiler option [C#]
 - ProduceReferenceAssembly compiler option [C#]
 - TargetType compiler option [C#]
-ms.openlocfilehash: 2d8b7edbf970875d7300a394ab75756c1316ac9d
-ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
+ms.openlocfilehash: d444b5964edcfbfb9133acd1dea068c52cced32a
+ms.sourcegitcommit: e16315d9f1ff355f55ff8ab84a28915be0a8e42b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103482913"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105111224"
 ---
 # <a name="c-compiler-options-that-control-compiler-output"></a>Derleyici çıkışını denetleyen C# derleyici seçenekleri
 
@@ -144,6 +144,6 @@ Bu seçenek derleyicinin bir derleme bildirimi üretmesine neden olur. Varsayıl
 
 ### <a name="appcontainerexe"></a>appcontainerexe
 
-**Appcontainerexe** derleyici seçeneğini kullanırsanız, derleyici bir uygulama kapsayıcısında çalıştırılması gereken bir Windows çalıştırılabilir (*. exe*) dosyası oluşturur. Bu seçenek [-target: winexe](./target-winexe-compiler-option.md) ile eşdeğerdir, ancak Windows 8. x Mağazası uygulamaları için tasarlanmıştır.
+**Appcontainerexe** derleyici seçeneğini kullanırsanız, derleyici bir uygulama kapsayıcısında çalıştırılması gereken bir Windows çalıştırılabilir (*. exe*) dosyası oluşturur. Bu seçenek [-target: winexe](output.md) ile eşdeğerdir, ancak Windows 8. x Mağazası uygulamaları için tasarlanmıştır.
 
 Uygulamanın bir uygulama kapsayıcısında çalışmasını gerektirmek için, bu seçenek [taşınabilir yürütülebilir](/windows/desktop/Debug/pe-format) (PE) dosyasında bir bit ayarlar. Bu bit ayarlandığında, CreateProcess yöntemi bir uygulama kapsayıcısının dışında yürütülebilir dosyayı başlatmaya çalışırsa bir hata oluşur. [**OutputAssembly**](#outputassembly) seçeneğini kullanmadığınız takdirde, çıkış dosyası adı yöntemi içeren giriş dosyasının adını alır [`Main`](../../programming-guide/main-and-command-args/index.md) .

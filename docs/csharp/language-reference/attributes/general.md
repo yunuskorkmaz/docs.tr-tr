@@ -1,15 +1,15 @@
 ---
-title: 'C# ayrılmış öznitelikleri: koşullu, kullanımdan kalktı, AttributeUsage'
-ms.date: 04/09/2020
-description: Derleyici tarafından oluşturulan kodu etkilemek için bu öznitelikler derleyici tarafından yorumlanır
-ms.openlocfilehash: c6d697dd08233ffc88900949998047137ee170a9
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+title: 'C# ayrılmış öznitelikleri: çeşitli'
+ms.date: 03/18/2021
+description: 'Derleyici tarafından oluşturulan kodu etkileyen öznitelikler hakkında bilgi edinin: koşullu, Kullanımdan kaldırılmış, AttributeUsage, Modulebaşlatıcı ve Skiplocalsinıt öznitelikleri.'
+ms.openlocfilehash: 6b8cda658ec5b3f81a7f903d8cadae0fe30e8ac2
+ms.sourcegitcommit: e16315d9f1ff355f55ff8ab84a28915be0a8e42b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/29/2020
-ms.locfileid: "82021766"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105111328"
 ---
-# <a name="reserved-attributes-conditionalattribute-obsoleteattribute-attributeusageattribute"></a>Ayrılmış öznitelikler: ConditionalAttribute, kullanımdan kaldırma Teattribute, AttributeUsageAttribute
+# <a name="reserved-attributes-miscellaneous"></a>Ayrılmış öznitelikler: çeşitli
 
 Bu öznitelikler, kodunuzdaki öğelere uygulanabilir. Bunlar bu öğelere anlam anlam ekler. Derleyici, kodunuzu kullanarak geliştiricilerin çıktısını değiştirmek ve olası hataları raporlamak için bu anlamsal anlamları kullanır.
 
@@ -90,11 +90,56 @@ C# 7,3 ' den başlayarak, öznitelikler bir otomatik uygulanan özelliğin özel
 
 Bu durumda, `MultiUseAttribute` olarak ayarlandığı için tekrar tekrar uygulanabilir `AllowMultiple` `true` . Birden çok özniteliği uygulamak için gösterilen her iki biçim de geçerlidir.
 
-<xref:System.AttributeUsageAttribute.Inherited>İse `false` öznitelik, öznitelikli bir sınıftan türetilmiş sınıflar tarafından devralınmaz. Örneğin:
+<xref:System.AttributeUsageAttribute.Inherited>İse `false` öznitelik, öznitelikli bir sınıftan türetilmiş sınıflar tarafından devralınmaz. Örnek:
 
 :::code language="csharp" source="snippets/NonInheritedAttribute.cs" id="SnippetNonInherited" :::
 
 Bu durumda `NonInheritedAttribute` devralma aracılığıyla öğesine uygulanmaz `DClass` .
+
+## <a name="moduleinitializer-attribute"></a>`ModuleInitializer` özniteliği
+
+C# 9 ' dan itibaren `ModuleInitializer` öznitelik, derleme yüklendiğinde çalışma zamanının çağırdığı bir yöntemi işaretler. `ModuleInitializer` , için bir diğer addır <xref:System.Runtime.CompilerServices.ModuleInitializerAttribute> .
+
+`ModuleInitializer`Özniteliği yalnızca şu şekilde bir yönteme uygulanabilir:
+
+* Statiktir.
+* Parametresiz.
+* `void` döndürür.
+* ,, Veya içeren modülünden erişilebilir `internal` `public` .
+* Genel bir yöntem değildir.
+* Genel bir sınıfta içerilmiyor.
+* Yerel bir işlev değil.
+
+`ModuleInitializer`Özniteliği birden çok yönteme uygulanabilir. Bu durumda, çalışma zamanının onları çağıran sıra belirleyici olur ancak belirtilmez.
+
+Aşağıdaki örnekte, birden çok modül başlatıcısı yönteminin kullanımı gösterilmektedir. `Init1`Ve `Init2` yöntemleri daha önce çalışır `Main` ve her biri özelliğine bir dize ekler `Text` . Bu nedenle `Main` , özelliği çalıştırıldığında `Text` her iki Başlatıcı yönteminden dizeler zaten vardır.
+
+:::code language="csharp" source="snippets/ModuleInitializerExampleMain.cs" :::
+
+:::code language="csharp" source="snippets/ModuleInitializerExampleModule.cs" :::
+
+Kaynak kodu oluşturanlar bazen başlatma kodu üretmemelidir. Modül başlatıcıları, bu kodun bulunması için standart bir yer sağlar.
+
+## <a name="skiplocalsinit-attribute"></a>`SkipLocalsInit` özniteliği
+
+C# 9 ' dan itibaren `SkipLocalsInit` öznitelik, derleyicinin `.locals init` meta veriye yayırken bayrak değiştirmesini engeller. `SkipLocalsInit`Özniteliği tek kullanılan bir özniteliktir ve bir metoda, özelliğe, bir sınıfa, yapıya, arabirime veya modüle uygulanabilir ancak bir derlemeye uygulanamaz. `SkipLocalsInit` , için bir diğer addır <xref:System.Runtime.CompilerServices.SkipLocalsInitAttribute> .
+
+`.locals init`Bayrak, clr 'nin bir yöntemde belirtilen tüm yerel değişkenleri varsayılan değerlerine başlatmasını sağlar. Derleyici aynı zamanda bir değeri bir değere atamadan önce hiçbir şekilde hiç bir değişken kullandığınızdan emin olduğundan, `.locals init` genellikle gerekli değildir. Ancak, yığın üzerinde bir dizi ayırmak için [stackalloc](../operators/stackalloc.md) kullandığınızda gibi, ek sıfır başlatma bazı senaryolarda ölçülebilir performans etkisine sahip olabilir. Bu durumlarda `SkipLocalsInit` özniteliği ekleyebilirsiniz. Bir yönteme doğrudan uygulanırsa öznitelik, Lambdalar ve yerel işlevler dahil olmak üzere bu yöntemi ve tüm iç içe geçmiş işlevleri etkiler. Bir tür veya modüle uygulanmışsa, içinde iç içe geçmiş tüm yöntemleri etkiler. Bu öznitelik soyut yöntemleri etkilemez, ancak uygulama için oluşturulan kodu etkiler.
+
+Bu öznitelik, [AllowUnsafeBlocks](../compiler-options/language.md#allowunsafeblocks) derleyici seçeneğini gerektiriyor. Bu, bazı durumlarda kod atanmamış belleği (örneğin, başlatılmamış yığına ayrılan bellekten okuma) görüntüleyebileceğinden emin olmak için kullanılır.
+
+Aşağıdaki örnek, `SkipLocalsInit` tarafından kullanılan bir yöntemde özniteliğinin etkisini gösterir `stackalloc` . Bu yöntem, tamsayılar dizisi ayrıldığında bellekte ne olduğunu gösterir.
+
+:::code language="csharp" source="snippets/SkipLocalsInitExample.cs" id="ReadUninitializedMemory":::
+
+Bu kodu kendiniz denemek için `AllowUnsafeBlocks` *. csproj* dosyanızdaki derleyici seçeneğini ayarlayın:
+
+```xml
+<PropertyGroup>
+  ...
+  <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+</PropertyGroup>
+```
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

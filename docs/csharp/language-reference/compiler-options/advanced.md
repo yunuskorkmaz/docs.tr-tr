@@ -21,12 +21,12 @@ helpviewer_keywords:
 - AdditionalLibPaths compiler option [C#]
 - ApplicationConfiguration compiler option [C#]
 - ModuleAssemblyName compiler option [C#]
-ms.openlocfilehash: 47c84968682e056acdb73805807d907c6bb7c7ee
-ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
+ms.openlocfilehash: 5c51a4dd950a33fb51c338dbd1d86bb5b03eb694
+ms.sourcegitcommit: e16315d9f1ff355f55ff8ab84a28915be0a8e42b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104652769"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105111042"
 ---
 # <a name="advanced-c-compiler-options"></a>Gelişmiş C# derleyici seçenekleri
 
@@ -259,9 +259,9 @@ Aşağıdaki tabloda, Windows 'un ortak alt sistem sürümleri listelenmektedir.
 **Alt Systemversion** derleyici seçeneğinin varsayılan değeri aşağıdaki listede yer alan koşullara bağlıdır:
 
 - Aşağıdaki listede herhangi bir derleyici seçeneğinin ayarlanmış olması halinde varsayılan değer 6,02 ' dir:
-  - [-target:appcontainerexe](./target-appcontainerexe-compiler-option.md)
-  - [-target:winmdobj](./target-winmdobj-compiler-option.md)
-  - [-Platform: ARM](./platform-compiler-option.md)
+  - [-target:appcontainerexe](output.md)
+  - [-target:winmdobj](output.md)
+  - [-Platform: ARM](output.md)
 - MSBuild kullanıyorsanız varsayılan değer 6,00 ' dir. .NET Framework 4,5 ' i hedefliyorsanız ve bu listede daha önce belirtilen derleyici seçeneklerinden hiçbirini belirlemediniz.
 - Önceki koşullardan hiçbiri doğru değilse varsayılan değer 4,00 ' dir.
 

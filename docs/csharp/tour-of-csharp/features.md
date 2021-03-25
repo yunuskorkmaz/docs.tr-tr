@@ -2,12 +2,12 @@
 title: C#-ana dil alanlarının turu
 description: C# ' ta yeni misiniz? Dilin temel bilgilerini öğrenin. Bu makale, ana dil özelliklerinin bir anketini içerir.
 ms.date: 08/06/2020
-ms.openlocfilehash: 943701b544dd3495fa2286e804e2566da146cb45
-ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
+ms.openlocfilehash: e62ed4e360fdf3b30142474494ff4f038c77a772
+ms.sourcegitcommit: e16315d9f1ff355f55ff8ab84a28915be0a8e42b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99216661"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105111341"
 ---
 # <a name="major-language-areas"></a>Ana dil alanları
 
@@ -17,26 +17,26 @@ C# ve .NET birçok farklı koleksiyon türü sağlar. Diziler, dil tarafından t
 
 ### <a name="arrays"></a>Diziler
 
-Bir [ * **Array** _](../programming-guide/arrays/index.md) , hesaplanan dizinler aracılığıyla erişilen bir dizi değişkeni içeren bir veri yapısıdır. Dizinin _*_öğeleri_*_ olarak da adlandırılan bir dizide bulunan değişkenler aynı türde. Bu tür, dizinin _*_öğe türü_*_ olarak adlandırılır.
+Bir [ * **Array** _](../programming-guide/arrays/index.md) , hesaplanan dizinler aracılığıyla erişilen bir dizi değişkeni içeren bir veri yapısıdır. Dizinin _*_öğeleri_*_ olarak da adlandırılan bir dizide bulunan değişkenler aynı türde. Bu tür, dizinin _ *_öğe türü_** olarak adlandırılır.
 
-Dizi türleri başvuru türlerdir ve bir dizi değişkeninin bildirimi, bir dizi örneğine yönelik bir başvuru için yalnızca alan ayırın. Gerçek dizi örnekleri, işleci kullanılarak çalışma zamanında dinamik olarak oluşturulur `new` . `new`İşlem, daha sonra örneğin ömrü boyunca düzeltilen yeni dizi örneğinin _*_uzunluğunu_*_ belirtir. Bir dizi öğelerinin ' den ' a kadar olan dizinleri `0` `Length - 1` . `new`İşleci, bir dizinin öğelerini otomatik olarak varsayılan değerlerine başlatır. Bu, örneğin, tüm sayısal türler ve `null` tüm başvuru türleri için sıfırdır.
+Dizi türleri başvuru türlerdir ve bir dizi değişkeninin bildirimi, bir dizi örneğine yönelik bir başvuru için yalnızca alan ayırın. Gerçek dizi örnekleri, işleci kullanılarak çalışma zamanında dinamik olarak oluşturulur `new` . `new`İşlem, daha sonra örneğin ömrü boyunca düzeltilen yeni dizi örneğinin ***uzunluğunu*** belirtir. Bir dizi öğelerinin ' den ' a kadar olan dizinleri `0` `Length - 1` . `new`İşleci, bir dizinin öğelerini otomatik olarak varsayılan değerlerine başlatır. Bu, örneğin, tüm sayısal türler ve `null` tüm başvuru türleri için sıfırdır.
 
 Aşağıdaki örnek, bir dizi öğe oluşturur `int` , diziyi başlatır ve dizinin içeriğini yazdırır.
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="ArraysSample":::
 
-Bu örnek, _*_tek boyutlu bir dizi_*_ üzerinde oluşturur ve çalışır. C#, _*_çok boyutlu dizileri_*_ de destekler. Dizi türünün _*_sırası_*_ olarak da bilinen bir dizi türünün boyutlarının sayısı, dizi türünün köşeli ayraçları arasındaki virgüllerin sayısıdır. Aşağıdaki örnek, sırasıyla tek boyutlu, iki boyutlu ve üç boyutlu bir diziyi ayırır.
+Bu örnek, ***tek boyutlu dizi** _ üzerinde oluşturur ve çalışır. C#, _*_çok boyutlu dizileri_*_ de destekler. Dizi türünün _ *_Rank_** olarak da bilinen bir dizi türünün boyutlarının sayısı, dizi türünün köşeli ayraçları arasındaki virgüllerin sayısıdır. Aşağıdaki örnek, sırasıyla tek boyutlu, iki boyutlu ve üç boyutlu bir diziyi ayırır.
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="DeclareArrays":::
 
 `a1`Dizi 10 öğe içeriyorsa, `a2` dizi 50 (10 × 5) öğesi içerir ve `a3` dizi 100 (10 × 5 × 2) öğesi içerir.
-Bir dizinin öğe türü, bir dizi türü de dahil olmak üzere herhangi bir tür olabilir. Dizi türündeki öğeleri içeren bir dizi, bazen öğe dizilerinin uzunluklarının tümünün aynı olması gerektiğinden _*_pürüzlü dizi_*_ olarak adlandırılır. Aşağıdaki örnek dizi dizilerini ayırır `int` :
+Bir dizinin öğe türü, bir dizi türü de dahil olmak üzere herhangi bir tür olabilir. Dizi türündeki öğeleri içeren bir dizi, bazen öğe dizilerinin uzunluklarının tümünün aynı olması gerektiğinden ***pürüzlü dizi*** olarak adlandırılır. Aşağıdaki örnek dizi dizilerini ayırır `int` :
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="ArrayOfArrays":::
 
 İlk satır, her biri türü `int[]` ve her biri bir başlangıç değeri olan üç öğe içeren bir dizi oluşturur `null` . Sonraki satırlar, Farklı uzunluklardaki ayrı dizi örneklerine yönelik başvuruları olan üç öğeyi başlatır.
 
-`new`İşleci, dizi öğelerinin başlangıç değerlerinin, sınırlayıcılar ve arasında yazılan ifadelerin listesi olan bir _*_dizi başlatıcısı_*_ kullanılarak belirtilmesine izin verir `{` `}` . Aşağıdaki örnek, üç öğesi ile bir ayırır ve başlatır `int[]` .
+`new`İşleci, dizi öğelerinin başlangıç değerlerinin, sınırlayıcılar ve arasında yazılan ifadelerin listesi olan bir ***dizi başlatıcısı*** kullanılarak belirtilmesine izin verir `{` `}` . Aşağıdaki örnek, üç öğesi ile bir ayırır ve başlatır `int[]` .
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="InitializeArray":::
 
@@ -56,19 +56,19 @@ Yukarıdaki örneklerin her ikisi de aşağıdaki koda eşdeğerdir:
 
 ## <a name="string-interpolation"></a>Dize ilişkilendirme
 
-C# [_*_dize ilişkilendirme_*_](../language-reference/tokens/interpolated.md) , sonuçları bir biçim dizesine yerleştirilmiş ifadeler tanımlayarak dizeleri biçimlendirmenize olanak sağlar. Örneğin, aşağıdaki örnek, sıcaklığını belirli bir gün için hava durumu verilerinden yazdırır:
+C# [***dize ilişkilendirme***](../language-reference/tokens/interpolated.md) , sonuçları bir biçim dizesine yerleştirilmiş ifadeler tanımlayarak dizeleri biçimlendirmenize olanak sağlar. Örneğin, aşağıdaki örnek, sıcaklığını belirli bir gün için hava durumu verilerinden yazdırır:
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="StringInterpolation":::
 
-Enterpolasyonlu bir dize, `$` belirteç kullanılarak bildirilmiştir. Dize ilişkilendirme, ve arasındaki ifadeleri `{` değerlendirir `}` , sonra sonucu bir öğesine dönüştürür `string` ve köşeli ayraçlar arasındaki metni ifadenin dize sonucuyla değiştirir. `:`İlk ifadede, `{weatherData.Date:MM-DD-YYYY}` _format dizeyi * belirtir. Yukarıdaki örnekte, tarihin "AA-GG-YYYY" biçiminde yazdırılması gerektiğini belirtir.
+Enterpolasyonlu bir dize, `$` belirteç kullanılarak bildirilmiştir. Dize ilişkilendirme, ve arasındaki ifadeleri `{` değerlendirir `}` , sonra sonucu bir öğesine dönüştürür `string` ve köşeli ayraçlar arasındaki metni ifadenin dize sonucuyla değiştirir. `:`İlk ifadede, `{weatherData.Date:MM-DD-YYYY}` *biçim dizesini* belirtir. Yukarıdaki örnekte, tarihin "AA-GG-YYYY" biçiminde yazdırılması gerektiğini belirtir.
 
 ## <a name="pattern-matching"></a>Desen eşleştirme
 
-C# dili, bir nesnenin durumunu sorgulamak ve bu duruma göre kodu yürütmek için [ * **model ile eşleşen** _](../pattern-matching.md) ifadeleri sağlar. Hangi eylemin gerçekleştirilecek olduğunu belirleyebilmek için türleri ve özellik ve alanların değerlerini inceleyebilirsiniz. `switch`İfade, model eşleştirme için birincil ifadedir.
+C# dili, bir nesnenin durumunu sorgulamak ve bu duruma göre kodu yürütmek için [***kalıp eşleştirme***](../pattern-matching.md) ifadeleri sağlar. Hangi eylemin gerçekleştirilecek olduğunu belirleyebilmek için türleri ve özellik ve alanların değerlerini inceleyebilirsiniz. `switch`İfade, model eşleştirme için birincil ifadedir.
 
 ## <a name="delegates-and-lambda-expressions"></a>Temsilciler ve lambda ifadeleri
 
-Bir [_*_temsilci türü_*_](../delegates-overview.md) , belirli bir parametre listesi ve dönüş türü olan yöntemlere yapılan başvuruları temsil eder. Temsilciler, yöntemleri değişkenlere atanabilecek ve parametre olarak geçirilen varlıklar olarak işleme olanağı tanır. Temsilciler, bazı diğer dillerde bulunan işlev işaretçileri kavramına benzerdir. İşlev işaretçilerinden farklı olarak, temsilciler nesne odaklı ve tür açısından güvenlidir.
+Bir [***temsilci türü***](../delegates-overview.md) , belirli bir parametre listesi ve dönüş türü olan yöntemlere yapılan başvuruları temsil eder. Temsilciler, yöntemleri değişkenlere atanabilecek ve parametre olarak geçirilen varlıklar olarak işleme olanağı tanır. Temsilciler, bazı diğer dillerde bulunan işlev işaretçileri kavramına benzerdir. İşlev işaretçilerinden farklı olarak, temsilciler nesne odaklı ve tür açısından güvenlidir.
 
 Aşağıdaki örnek adlı bir temsilci türü bildirir ve kullanır `Function` .
 
@@ -98,7 +98,7 @@ Bu küçük örnek, zaman uyumsuz programlama için önemli özellikleri göster
 
 ## <a name="attributes"></a>Öznitelikler
 
-Bir C# programındaki türler, Üyeler ve diğer varlıklar, davranışlarının belirli yönlerini denetleyen değiştiricileri destekler. Örneğin, bir yöntemin erişilebilirliği,,, `public` `protected` `internal` ve değiştiricileri kullanılarak denetlenir `private` . C#, bu özelliği, Kullanıcı tanımlı bildirime dayalı bilgi türleri program varlıklarına iliştirilebilecek ve çalışma zamanında alınabilecek şekilde genelleştirir. Programlar [_ *_özniteliklerini_* *](../programming-guide/concepts/attributes/index.md)tanımlayarak ve kullanarak bu ek bildirime dayalı bilgileri belirtir.
+Bir C# programındaki türler, Üyeler ve diğer varlıklar, davranışlarının belirli yönlerini denetleyen değiştiricileri destekler. Örneğin, bir yöntemin erişilebilirliği,,, `public` `protected` `internal` ve değiştiricileri kullanılarak denetlenir `private` . C#, bu özelliği, Kullanıcı tanımlı bildirime dayalı bilgi türleri program varlıklarına iliştirilebilecek ve çalışma zamanında alınabilecek şekilde genelleştirir. Programlar, [***öznitelikleri***](../programming-guide/concepts/attributes/index.md)tanımlayarak ve kullanarak bu ek bildirime dayalı bilgileri belirtir.
 
 Aşağıdaki örnek, `HelpAttribute` ilişkili belgelerinin bağlantılarını sağlamak için program varlıklarına yerleştirilebilecek bir özniteliği bildirir.
 
@@ -116,9 +116,9 @@ Aşağıdaki kod örneği, `HelpAttribute` sınıfıyla ve yöntemiyle ilişkili
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="ReadAttributes":::
 
-## <a name="learn-more"></a>Daha fazlasını öğrenin
+## <a name="learn-more"></a>Daha fazla bilgi edinin
 
-[Öğreticilerimizden](../tutorials/index.md)birini deneyerek C# hakkında daha fazla bilgi bulabilirsiniz.
+[Öğreticilerimizden](../tutorials/intro-to-csharp/introduction-to-classes.md)birini deneyerek C# hakkında daha fazla bilgi bulabilirsiniz.
 
 >[!div class="step-by-step"]
 >[Önceki](program-building-blocks.md)
