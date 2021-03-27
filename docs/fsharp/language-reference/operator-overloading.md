@@ -2,12 +2,12 @@
 title: İşleç Aşırı Yüklemesi
 description: "Aritmetik işleçleri bir sınıf veya kayıt türünde ve F # ' da genel düzeyde aşırı yüklemeyi öğrenin."
 ms.date: 08/15/2020
-ms.openlocfilehash: fb86ceb95101fcc1f157ec9ba17a9d8145b11a91
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 64ff87a8706e6a05754b5328a7d95cd6a2b360c1
+ms.sourcegitcommit: 80f38cb67bd02f51d5722fa13d0ea207e3b14a8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557587"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "105610856"
 ---
 # <a name="operator-overloading"></a>İşleç Aşırı Yüklemesi
 
@@ -39,13 +39,15 @@ Aşağıdaki kod, biri birli eksi ve bir skalar ile çarpma için olmak üzere y
 
 ## <a name="creating-new-operators"></a>Yeni Işleçler oluşturma
 
-Tüm standart işleçleri aşırı yükleyebilirsiniz, ancak belirli karakter dizileri dışında yeni işleçler de oluşturabilirsiniz. İzin verilen işleç karakterleri,,,, `!` `%` `&` `*` `+` , `-` , `.` , `/` , `<` , `=` , `>` , `?` , `@` , `^` , `|` , ve `~` . `~`Karakter, bir işleç birli oluşturma ve işleç karakter sırasının bir parçası olmayan özel anlamdadır. Tüm işleçler birli yapılamaz.
+Tüm standart işleçleri aşırı yükleyebilirsiniz, ancak belirli karakter dizileri dışında yeni işleçler de oluşturabilirsiniz. İzin verilen işleç karakterleri,,,, `!` `$` `%` `&` `*` , `+` , `-` , `.` , `/` , `<` , `=` , `>` , `?` , `@` , `^` , `|` , ve `~` . `~`Karakter, bir işleç birli oluşturma ve işleç karakter sırasının bir parçası olmayan özel anlamdadır. Tüm işleçler birli yapılamaz.
 
 Kullandığınız tam karakter dizisine bağlı olarak, operatörünüzün belirli bir önceliği ve ilişkilendirilebilirliği olur. İlişkilendirilebilirlik, sola veya sağdan sola doğru olabilir ve aynı öncelik düzeyindeki operatörler parantez olmadan sırayla gösterildiğinde kullanılır.
 
 İşleç karakteri `.` önceliği etkilemez, örneğin, normal çarpma ile aynı önceliğe ve ilişkilendirilebilirliği olan kendi çarpma sürümünüzü tanımlamak istiyorsanız gibi işleçler oluşturabilirsiniz `.*` .
 
 Yalnızca işleçler `?` ve `?<-` ile başlayabilir `?` .
+
+`$`Operatör tek başına ve ek semboller olmadan kullanılmalıdır.
 
 F # içindeki tüm işleçlerin önceliğini gösteren bir tablo, [sembol ve Işleç başvurusunda](./symbol-and-operator-reference/index.md)bulunabilir.
 
@@ -99,7 +101,7 @@ Aşağıdaki tabloda, standart işleçler ve bunlara karşılık gelen oluşturu
 
 Burada listelenmeyen işleç karakterlerinin diğer birleşimleri, işleçler olarak kullanılabilir ve aşağıdaki tablodaki tek karakterlerin adlarını birleştirerek oluşturulan adlara sahip olabilir. Örneğin, +! olur `op_PlusBang` .
 
-|İşleç karakteri|Adı|
+|İşleç karakteri|Name|
 |------------------|----|
 |`>`|`Greater`|
 |`<`|`Less`|
@@ -109,6 +111,7 @@ Burada listelenmeyen işleç karakterlerinin diğer birleşimleri, işleçler ol
 |`/`|`Divide`|
 |`=`|`Equals`|
 |`~`|`Twiddle`|
+|`$`|`Dollar`|
 |`%`|`Percent`|
 |`.`|`Dot`|
 |`&`|`Amp`|

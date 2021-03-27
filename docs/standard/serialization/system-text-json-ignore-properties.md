@@ -14,12 +14,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: b2ff4c147e2fac0ba5bf3367f881fc9d8ee8f1af
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: abd5cad5bdf38875204f5e42936fbd2f7ca126c9
+ms.sourcegitcommit: 80f38cb67bd02f51d5722fa13d0ea207e3b14a8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100583912"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "105610830"
 ---
 # <a name="how-to-ignore-properties-with-systemtextjson"></a>İle özellikleri yoksayma System.Text.Json
 
@@ -107,7 +107,7 @@ Tüm null değer özelliklerini yok saymak için, <xref:System.Text.Json.JsonSer
 ::: zone-end
 
 ::: zone pivot="dotnet-core-3-1"
-Serileştirilirken tüm null değer özelliklerini yok saymak için, <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues> `true` Aşağıdaki örnekte gösterildiği gibi özelliğini olarak ayarlayın:
+Serileştirilirken veya seri durumdan çıkarılırken tüm null değer özelliklerini yok saymak için <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues> özelliğini olarak ayarlayın `true` . Aşağıdaki örnek, serileştirme için kullanılan bu seçeneği gösterir:
 
 :::code language="csharp" source="snippets/system-text-json-how-to/csharp/SerializeExcludeNullValueProperties.cs" id="Serialize":::
 :::code language="vb" source="snippets/system-text-json-how-to/vb/SerializeExcludeNullValueProperties.vb" id="Serialize":::

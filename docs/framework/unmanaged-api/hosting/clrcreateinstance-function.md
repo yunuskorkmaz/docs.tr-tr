@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5de13327-96c6-4697-a89e-b8bf40717855
 topic_type:
 - apiref
-ms.openlocfilehash: 3b4dd9f07444f3e7ca68af3b85a7a053fc72b772
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 5d25ca8ea33aacf88a3359335b2b4bbfb91c06eb
+ms.sourcegitcommit: 80f38cb67bd02f51d5722fa13d0ea207e3b14a8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99799947"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "105610882"
 ---
 # <a name="clrcreateinstance-function"></a>CLRCreateInstance İşlevi
 
@@ -84,6 +84,17 @@ hr = CLRCreateInstance (CLSID_CLRMetaHostPolicy, IID_ICLRMetaHostPolicy,
 hr = CLRCreateInstance (CLSID_CLRDebugging, IID_ICLRDebugging,  
                     (LPVOID*)&pCLRDebugging);  
 ```  
+
+`CreateInterface`İşlevin diğer adı `CLRCreateInstance` .  Hem hem de `CLRCreateInstance` `CreateInterface` işlevleri birbirinin yerine kullanılabilir. Örnek:
+
+```cpp
+HMODULE hModule = LoadLibrary(L"mscoree.dll");
+CreateInterfaceFnPtr createInterface = (CreateInterfaceFnPtr)GetProcAddress(hModule, "CreateInterface");
+HRESULT hr;
+hr = createInterface(CLSID_CLRMetaHost, IID_ICLRMetaHost, (LPVOID*)&pMetaHost);
+hr = createInterface (CLSID_CLRMetaHostPolicy, IID_ICLRMetaHostPolicy,  (LPVOID*)&pMetaHostPolicy);  
+hr = createInterface (CLSID_CLRDebugging, IID_ICLRDebugging,  (LPVOID*)&pCLRDebugging); 
+```
   
 ## <a name="requirements"></a>Gereksinimler  
 
@@ -97,4 +108,4 @@ hr = CLRCreateInstance (CLSID_CLRDebugging, IID_ICLRDebugging,
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hosting](index.md)
+- [Barındırma](index.md)

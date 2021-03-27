@@ -2,12 +2,12 @@
 title: Yerel birlikte çalışabilirlik en iyi uygulamaları-.NET
 description: .NET 'teki yerel bileşenlerle arabirimlendirme için en iyi uygulamaları öğrenin.
 ms.date: 01/18/2019
-ms.openlocfilehash: 7730241ba834d9fcafaaf13055da1a03d359aa1b
-ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
+ms.openlocfilehash: b7a5cb3fd38136250be91951bf73b4197df7ad1c
+ms.sourcegitcommit: 80f38cb67bd02f51d5722fa13d0ea207e3b14a8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103479590"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "105610843"
 ---
 # <a name="native-interoperability-best-practices"></a>Yerel birlikte çalışabilirlik en iyi uygulamaları
 
@@ -171,29 +171,29 @@ Aşağıda, Windows API 'Lerinde yaygın olarak kullanılan ve Windows koduna ç
 
 Aşağıdaki türler, adlarına rağmen 32-bit ve 64-bit Windows üzerinde aynı boyutlardır.
 
-| Width | Windows          | C (Windows)          | C#       | Yapıyı                          |
-|:------|:-----------------|:---------------------|:---------|:-------------------------------------|
-| 32    | `BOOL`           | `int`                | `int`    | `bool`                               |
-| 8     | `BOOLEAN`        | `unsigned char`      | `byte`   | `[MarshalAs(UnmanagedType.U1)] bool` |
-| 8     | `BYTE`           | `unsigned char`      | `byte`   |                                      |
-| 8     | `CHAR`           | `char`               | `sbyte`  |                                      |
-| 8     | `UCHAR`          | `unsigned char`      | `byte`   |                                      |
-| 16    | `SHORT`          | `short`              | `short`  |                                      |
-| 16    | `CSHORT`         | `short`              | `short`  |                                      |
-| 16    | `USHORT`         | `unsigned short`     | `ushort` |                                      |
-| 16    | `WORD`           | `unsigned short`     | `ushort` |                                      |
-| 16    | `ATOM`           | `unsigned short`     | `ushort` |                                      |
-| 32    | `INT`            | `int`                | `int`    |                                      |
-| 32    | `LONG`           | `long`               | `int`    |                                      |
-| 32    | `ULONG`          | `unsigned long`      | `uint`   |                                      |
-| 32    | `DWORD`          | `unsigned long`      | `uint`   |                                      |
-| 64    | `QWORD`          | `long long`          | `long`   |                                      |
-| 64    | `LARGE_INTEGER`  | `long long`          | `long`   |                                      |
-| 64    | `LONGLONG`       | `long long`          | `long`   |                                      |
-| 64    | `ULONGLONG`      | `unsigned long long` | `ulong`  |                                      |
-| 64    | `ULARGE_INTEGER` | `unsigned long long` | `ulong`  |                                      |
-| 32    | `HRESULT`        | `long`               | `int`    |                                      |
-| 32    | `NTSTATUS`       | `long`               | `int`    |                                      |
+| Width | Windows          | C#       | Yapıyı                          |
+|:------|:-----------------|:---------|:-------------------------------------|
+| 32    | `BOOL`           | `int`    | `bool`                               |
+| 8     | `BOOLEAN`        | `byte`   | `[MarshalAs(UnmanagedType.U1)] bool` |
+| 8     | `BYTE`           | `byte`   |                                      |
+| 8     | `CHAR`           | `sbyte`  |                                      |
+| 8     | `UCHAR`          | `byte`   |                                      |
+| 16    | `SHORT`          | `short`  |                                      |
+| 16    | `CSHORT`         | `short`  |                                      |
+| 16    | `USHORT`         | `ushort` |                                      |
+| 16    | `WORD`           | `ushort` |                                      |
+| 16    | `ATOM`           | `ushort` |                                      |
+| 32    | `INT`            | `int`    |                                      |
+| 32    | `LONG`           | `int`    |  Bkz. [ `CLong` ve `CULong` ](#cc-long). |
+| 32    | `ULONG`          | `uint`   |  Bkz. [ `CLong` ve `CULong` ](#cc-long). |
+| 32    | `DWORD`          | `uint`   |                                      |
+| 64    | `QWORD`          | `long`   |                                      |
+| 64    | `LARGE_INTEGER`  | `long`   |                                      |
+| 64    | `LONGLONG`       | `long`   |                                      |
+| 64    | `ULONGLONG`      | `ulong`  |                                      |
+| 64    | `ULARGE_INTEGER` | `ulong`  |                                      |
+| 32    | `HRESULT`        | `int`    |                                      |
+| 32    | `NTSTATUS`       | `int`    |                                      |
 
 Aşağıdaki türler, işaretçiler olması, platformun genişliğini izler. `IntPtr` / `UIntPtr` Bunlar için kullanın.
 
@@ -250,6 +250,61 @@ try
 finally
 {
     HSTRING.Delete(hstring);
+}
+```
+
+## <a name="cross-platform-data-type-considerations"></a>Platformlar arası veri türü konuları
+
+C/C++ dilinde, nasıl tanımlandıklarından Enlem olan türler vardır. Platformlar arası birlikte çalışma yazarken, platformlar farklı olduğunda ve göz önünde bulundurulmayan sorunlara neden olabilecek durumlar ortaya çıkabilir.
+
+### <a name="cc-long"></a>C/C++ `long`
+
+C/C++ `long` ve C# `long` aynı türde değildir. `long`C/C++ ile birlikte çalışmak için C# kullanılması `long` neredeyse hiçbir şekilde doğru değildir.
+
+`long`C/C++ ' daki tür ["en az 32"](https://en.cppreference.com/w/c/language/arithmetic_types) bite sahip olacak şekilde tanımlanır. Bu, gereken en az sayıda bit olduğu anlamına gelir, ancak platformlar isteniyorsa daha fazla bit kullanmayı seçebilir. Aşağıdaki tabloda, platformlar arasında C/C++ veri türü için sunulan bit farklılıkları gösterilmektedir `long` .
+
+| Platform    | 32 bit | 64 bit |
+|:------------|:-------|:-------|
+| Windows     | 32     | 32     |
+| macOS/ \* Nix | 32     | 64     |
+
+Bu farklılıklar, yerel işlev tüm platformlarda kullanılmak üzere tanımlandığında, platformlar arası P/Invoke yazma işlemi yapabilir `long` .
+
+.NET 6 ve sonraki sürümlerinde, C/C++ ve veri türleriyle birlikte çalışma için [ `CLong` ve `CULong` ](https://github.com/dotnet/runtime/issues/13788) türlerini `long` kullanın `unsigned long` . Aşağıdaki örnek içindir `CLong` , ancak `CULong` aynı şekilde Özet için kullanabilirsiniz `unsigned long` .
+
+```csharp
+// Cross platform C function
+// long Function(long a);
+[DllImport("NativeLib")]
+extern static CLong Function(CLong a);
+    
+// Usage
+nint result = Function(new CLong(10)).Value;
+```
+
+.NET 5 ve önceki sürümleri hedeflerken, sorunu işlemek için ayrı Windows ve Windows dışı imzalar bildirmeniz gerekir.
+
+```csharp
+static readonly bool IsWindows = RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
+
+// Cross platform C function
+// long Function(long a);
+
+[DllImport("NativeLib", EntryPoint = "Function")]
+extern static int FunctionWindows(int a);
+
+[DllImport("NativeLib", EntryPoint = "Function")]
+extern static nint FunctionUnix(nint a);
+
+// Usage
+nint result;
+if (IsWindows)
+{
+    result = FunctionWindows(10);
+}
+else
+{
+    result = FunctionUnix(10);
 }
 ```
 
