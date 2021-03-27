@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: dfbf7a2548f403bce895d388fe2cd1483e092b2e
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 1e0dff24bb581a27f55b047d5f6351993ba58cdb
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102104069"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105637500"
 ---
 # <a name="c-reference"></a>C# başvurusu
 
@@ -34,7 +34,7 @@ Bu bölümde C# anahtar kelimeleri, işleçler, özel karakterler, Önişlemci y
  [C# özel karakterleri](./tokens/index.md)  
  C# ve kullanımları için özel bağlamsal karakterler hakkında bilgi bağlantıları sağlar.  
 
- [C# Önişlemci yönergeleri](./preprocessor-directives/index.md)  
+ [C# Önişlemci yönergeleri](preprocessor-directives.md)  
  C# kaynak kodunda ekleme için derleyici komutları hakkındaki bilgilere bağlantılar sağlar.  
   
  [C# derleyici seçenekleri](./compiler-options/index.md)  

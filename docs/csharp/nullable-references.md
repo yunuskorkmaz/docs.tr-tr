@@ -3,12 +3,12 @@ title: Boş değer atanabilir başvuru türleri
 description: Bu makalede, C# 8,0 ' ye eklenen null yapılabilir başvuru türlerine ilişkin bir genel bakış sunulmaktadır. Yeni ve mevcut projeler için özelliği, null başvuru özel durumlarına karşı nasıl güvenlik sağladığını öğreneceksiniz.
 ms.technology: csharp-null-safety
 ms.date: 04/21/2020
-ms.openlocfilehash: 85057968a84e8ef8661df840438d00e6d1c6b02c
-ms.sourcegitcommit: e16315d9f1ff355f55ff8ab84a28915be0a8e42b
+ms.openlocfilehash: da3b75b28d7501e8436d29c0c325c550f0a44c93
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105111354"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105637175"
 ---
 # <a name="nullable-reference-types"></a>Boş değer atanabilir başvuru türleri
 
@@ -96,7 +96,7 @@ Ayrıca, aynı bağlamlarını projenizde her yerde ayarlamak için yönergeleri
 > 1. Dosya adını *TemporaryGeneratedFile_* başlatın
 > 1. Dosya adını *. Designer. cs*, *. generated. cs*, *. g. cs* veya *. g. ı. cs* ile sonlandırın.
 >
-> Oluşturucular, Önişlemci yönergesini kullanarak kabul edebilir [`#nullable`](language-reference/preprocessor-directives/preprocessor-nullable.md) .
+> Oluşturucular, Önişlemci yönergesini kullanarak kabul edebilir [`#nullable`](language-reference/preprocessor-directives.md#nullable-context) .
 
 Varsayılan olarak, null yapılabilir ek açıklama ve uyarı bağlamları yeni projeler dahil **devre dışıdır**. Bu, mevcut kodunuzun değişiklik yapılmadan ve yeni bir uyarı oluşturmadan derlendiğini gösterir.
 

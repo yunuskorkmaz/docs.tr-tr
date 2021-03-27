@@ -4,12 +4,12 @@ description: MSBuild özellikleri ve .NET SDK tarafından anlaşılan öğeler i
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: f6a49a0040bcb38dbaf433f6ea53bb8aad24c65b
-ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
+ms.openlocfilehash: effcb704056f553b2986ee4a61f73c0dc58af599
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104759891"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105636772"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>.NET SDK projeleri için MSBuild başvurusu
 
@@ -64,6 +64,174 @@ Daha fazla bilgi için bkz. [SDK stili projelerde hedef çerçeveler](../../stan
 <PropertyGroup>
   <TargetFramework>netstandard1.3</TargetFramework>
   <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
+</PropertyGroup>
+```
+
+## <a name="assembly-info-generation-properties"></a>Derleme bilgileri oluşturma özellikleri
+
+- [GenerateAssemblyCompanyAttribute](#generateassemblycompanyattribute)
+- [GenerateAssemblyConfigurationAttribute](#generateassemblyconfigurationattribute)
+- [GenerateAssemblyCopyrightAttribute](#generateassemblycopyrightattribute)
+- [GenerateAssemblyDescriptionAttribute](#generateassemblydescriptionattribute)
+- [GenerateAssemblyFileVersionAttribute](#generateassemblyfileversionattribute)
+- [Generateassemblyınfo](#generateassemblyinfo)
+- [Generateassemblyformationalversionattribute](#generateassemblyinformationalversionattribute)
+- [GenerateAssemblyProductAttribute](#generateassemblyproductattribute)
+- [Generateassemblytitleözniteliği](#generateassemblytitleattribute)
+- [GenerateAssemblyVersionAttribute](#generateassemblyversionattribute)
+- [GeneratedAssemblyInfoFile](#generatedassemblyinfofile)
+- [GenerateNeutralResourcesLanguageAttribute](#generateneutralresourceslanguageattribute)
+
+### <a name="generateassemblycompanyattribute"></a>GenerateAssemblyCompanyAttribute
+
+Bu özellik, `Company` özelliğinin derleme için oluşturup üretmediğini denetler <xref:System.Reflection.AssemblyCompanyAttribute> . `true` varsayılan değerdir.
+
+```xml
+<PropertyGroup>
+  <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+</PropertyGroup>
+```
+
+### <a name="generateassemblyconfigurationattribute"></a>GenerateAssemblyConfigurationAttribute
+
+Bu özellik, `Configuration` özelliğinin derleme için oluşturup üretmediğini denetler <xref:System.Reflection.AssemblyConfigurationAttribute> . `true` varsayılan değerdir.
+
+```xml
+<PropertyGroup>
+  <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+</PropertyGroup>
+```
+
+### <a name="generateassemblycopyrightattribute"></a>GenerateAssemblyCopyrightAttribute
+
+Bu özellik, `Copyright` özelliğinin derleme için oluşturup üretmediğini denetler <xref:System.Reflection.AssemblyCopyrightAttribute> . `true` varsayılan değerdir.
+
+```xml
+<PropertyGroup>
+  <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
+</PropertyGroup>
+```
+
+### <a name="generateassemblydescriptionattribute"></a>GenerateAssemblyDescriptionAttribute
+
+Bu özellik, `Description` özelliğinin derleme için oluşturup üretmediğini denetler <xref:System.Reflection.AssemblyDescriptionAttribute> . `true` varsayılan değerdir.
+
+```xml
+<PropertyGroup>
+  <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
+</PropertyGroup>
+```
+
+### <a name="generateassemblyfileversionattribute"></a>GenerateAssemblyFileVersionAttribute
+
+Bu özellik, `FileVersion` özelliğinin derleme için oluşturup üretmediğini denetler <xref:System.Reflection.AssemblyFileVersionAttribute> . `true` varsayılan değerdir.
+
+```xml
+<PropertyGroup>
+  <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+</PropertyGroup>
+```
+
+### <a name="generateassemblyinfo"></a>Generateassemblyınfo
+
+`AssemblyInfo`Proje için öznitelik oluşturmayı denetler. `true` varsayılan değerdir. `false`Dosya oluşturmayı devre dışı bırakmak için kullanın:
+
+```xml
+<PropertyGroup>
+  <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+</PropertyGroup>
+```
+
+[Generatedassemblyınfofile](#generatedassemblyinfofile) ayarı oluşturulan dosyanın adını denetler.
+
+Değer olduğunda `GenerateAssemblyInfo` `true` , proje özellikleri `AssemblyInfo` özniteliklere dönüştürülür. Aşağıdaki tabloda, öznitelikleri üreten proje özellikleri ve bu nesli devre dışı bırakasağlayan özellikler listelenmiştir:
+
+| Özellik               | Öznitelik                                                      | Devre dışı bırakılacak Özellik                                                                               |
+|------------------------|----------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
+| `Company`              | <xref:System.Reflection.AssemblyCompanyAttribute>              | [`GenerateAssemblyCompanyAttribute`](#generateassemblycompanyattribute)                           |
+| `Configuration`        | <xref:System.Reflection.AssemblyConfigurationAttribute>        | [`GenerateAssemblyConfigurationAttribute`](#generateassemblyconfigurationattribute)               |
+| `Copyright`            | <xref:System.Reflection.AssemblyCopyrightAttribute>            | [`GenerateAssemblyCopyrightAttribute`](#generateassemblycopyrightattribute)                       |
+| `Description`          | <xref:System.Reflection.AssemblyDescriptionAttribute>          | [`GenerateAssemblyDescriptionAttribute`](#generateassemblydescriptionattribute)                   |
+| `FileVersion`          | <xref:System.Reflection.AssemblyFileVersionAttribute>          | [`GenerateAssemblyFileVersionAttribute`](#generateassemblyfileversionattribute)                   |
+| `InformationalVersion` | <xref:System.Reflection.AssemblyInformationalVersionAttribute> | [`GenerateAssemblyInformationalVersionAttribute`](#generateassemblyinformationalversionattribute) |
+| `Product`              | <xref:System.Reflection.AssemblyProductAttribute>              | [`GenerateAssemblyProductAttribute`](#generateassemblyproductattribute)                           |
+| `AssemblyTitle`        | <xref:System.Reflection.AssemblyTitleAttribute>                | [`GenerateAssemblyTitleAttribute`](#generateassemblytitleattribute)                               |
+| `AssemblyVersion`      | <xref:System.Reflection.AssemblyVersionAttribute>              | [`GenerateAssemblyVersionAttribute`](#generateassemblyversionattribute)                           |
+| `NeutralLanguage`      | <xref:System.Resources.NeutralResourcesLanguageAttribute>      | [`GenerateNeutralResourcesLanguageAttribute`](#generateneutralresourceslanguageattribute)         |
+
+Bu ayarlarla ilgili notlar:
+
+- `AssemblyVersion` ve `FileVersion` sonek olmadan değerine varsayılan değer `$(Version)` . Örneğin, ise, `$(Version)` `1.2.3-beta.4` değer olacaktır `1.2.3` .
+- `InformationalVersion` Varsayılan değer olarak değeridir `$(Version)` .
+- `$(SourceRevisionId)`Özelliği varsa, öğesine eklenir `InformationalVersion` . Kullanarak bu davranışı devre dışı bırakabilirsiniz `IncludeSourceRevisionInInformationalVersion` .
+- `Copyright``Description`Ayrıca, NuGet meta verileri için de Özellikler kullanılır.
+- `Configuration`, varsayılan olarak `Debug` , tüm MSBuild hedefleri ile paylaşılır. Bunu, `--configuration` `dotnet` Örneğin [DotNet Pack](../tools/dotnet-pack.md)gibi komutlar seçeneği aracılığıyla ayarlayabilirsiniz.
+- Bir NuGet paketi oluşturulurken bazı özelliklerden bazıları kullanılır. Daha fazla bilgi için bkz. [paket özellikleri](#package-properties).
+
+#### <a name="migrating-from-net-framework"></a>.NET Framework geçiş
+
+.NET Framework proje şablonları, bu derleme bilgileri öznitelikleri ayarlanmış bir kod dosyası oluşturur. Dosya genellikle *.\Properties\AssemblyInfo.cs* veya *.\Properties\AssemblyInfo.vb* konumunda bulunur. SDK stili projeler, bu dosyayı proje ayarlarına göre sizin için oluşturur. **Her ikisine birden sahip olamaz.** Kodunuzu .NET 5 (ve .NET Core 3,1) veya sonraki bir sürüme taşırken, aşağıdakilerden birini yapın:
+
+- Olarak ayarlayarak derleme bilgisi özniteliklerini içeren geçici kod dosyasının oluşturulmasını devre dışı bırakın `GenerateAssemblyInfo` `false` . Bu, *AssemblyInfo* dosyanızı tutmanıza olanak sağlar.
+- `AssemblyInfo`Dosyadaki ayarları proje dosyasına geçirin ve `AssemblyInfo` dosyayı silin.
+
+### <a name="generateassemblyinformationalversionattribute"></a>Generateassemblyformationalversionattribute
+
+Bu özellik, `InformationalVersion` özelliğinin derleme için oluşturup üretmediğini denetler <xref:System.Reflection.AssemblyInformationalVersionAttribute> . `true` varsayılan değerdir.
+
+```xml
+<PropertyGroup>
+  <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
+</PropertyGroup>
+```
+
+### <a name="generateassemblyproductattribute"></a>GenerateAssemblyProductAttribute
+
+Bu özellik, `Product` özelliğinin derleme için oluşturup üretmediğini denetler <xref:System.Reflection.AssemblyProductAttribute> . `true` varsayılan değerdir.
+
+```xml
+<PropertyGroup>
+  <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+</PropertyGroup>
+```
+
+### <a name="generateassemblytitleattribute"></a>Generateassemblytitleözniteliği
+
+Bu özellik, `AssemblyTitle` özelliğinin derleme için oluşturup üretmediğini denetler <xref:System.Reflection.AssemblyTitleAttribute> . `true` varsayılan değerdir.
+
+```xml
+<PropertyGroup>
+  <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+</PropertyGroup>
+```
+
+### <a name="generateassemblyversionattribute"></a>GenerateAssemblyVersionAttribute
+
+Bu özellik, `AssemblyVersion` özelliğinin derleme için oluşturup üretmediğini denetler <xref:System.Reflection.AssemblyVersionAttribute> . `true` varsayılan değerdir.
+
+```xml
+<PropertyGroup>
+  <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+</PropertyGroup>
+```
+
+### <a name="generatedassemblyinfofile"></a>GeneratedAssemblyInfoFile
+
+Özelliği, oluşturulan derleme bilgi dosyasının göreli veya mutlak yolunu tanımlar. Varsayılan olarak *[proje-adı] adlı bir dosya olarak adlandırılır. AssemblyInfo. [CS | vb]* `$(IntermediateOutputPath)` (genellikle *obj*) dizininde.
+
+```xml
+<PropertyGroup>
+  <GeneratedAssemblyInfoFile>assemblyinfo.cs</GeneratedAssemblyInfoFile>
+</PropertyGroup>
+```
+
+### <a name="generateneutralresourceslanguageattribute"></a>GenerateNeutralResourcesLanguageAttribute
+
+Bu özellik, `NeutralLanguage` özelliğinin derleme için oluşturup üretmediğini denetler <xref:System.Resources.NeutralResourcesLanguageAttribute> . `true` varsayılan değerdir.
+
+```xml
+<PropertyGroup>
+  <GenerateNeutralResourcesLanguageAttribute>false</GenerateNeutralResourcesLanguageAttribute>
 </PropertyGroup>
 ```
 

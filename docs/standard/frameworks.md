@@ -5,12 +5,12 @@ ms.date: 03/03/2021
 ms.prod: dotnet
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 51c4a5cf11b16372b9c895f84653e0c28626583c
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: f0c8c8a61aec2ee3b527d392e5460b9b77a03f26
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104875310"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105637202"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>SDK stilindeki projelerde hedef çerçeveler
 
@@ -143,7 +143,7 @@ Aşağıdaki kitaplık projesi .NET Standard ( `netstandard1.4` ) ve .NET Framew
 </Project>
 ```
 
-Kitaplığınızda veya uygulamanızda, her bir hedef çerçeve için derlemek üzere [önişlemci yönergelerini](../csharp/language-reference/preprocessor-directives/preprocessor-if.md) kullanarak koşullu kod yazarsınız:
+Kitaplığınızda veya uygulamanızda, her bir hedef çerçeve için derlemek üzere [önişlemci yönergelerini](../csharp/language-reference/preprocessor-directives.md#conditional-compilation) kullanarak koşullu kod yazarsınız:
 
 ```csharp
 public class MyClass

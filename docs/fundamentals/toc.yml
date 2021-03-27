@@ -2316,8 +2316,6 @@ items:
       - name: Yeni değişiklikler
         displayName: app compatibility
         href: ../core/compatibility/
-      - name: Proje AssemblyInfo özniteliklerini özelliklerle eşle
-        href: ../core/migration/assembly-info.md
       - name: Üçüncü taraf bağımlılıklarını çözümleme
         href: ../core/porting/third-party-deps.md
       - name: Taşıma kitaplıkları

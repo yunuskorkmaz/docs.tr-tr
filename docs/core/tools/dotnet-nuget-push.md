@@ -3,12 +3,12 @@ title: DotNet NuGet Push komutu
 description: DotNet NuGet Push komutu, bir paketi sunucuya gönderir ve yayınlar.
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: 92e2593633343bda6990ca51d593455ff13f0df7
-ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
+ms.openlocfilehash: 71bc14fa729945b3d1e1508d014287cc5355f8cc
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103478187"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105637565"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -30,7 +30,7 @@ dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output]
 dotnet nuget push -h|--help
 ```
 
-## <a name="description"></a>Açıklama
+## <a name="description"></a>Description
 
 `dotnet nuget push`Komut, bir paketi sunucuya gönderir ve yayınlar. Push komutu, sistemin NuGet yapılandırma dosyasında veya yapılandırma dosyaları zincirinde bulunan sunucu ve kimlik bilgisi ayrıntılarını kullanır. Yapılandırma dosyaları hakkında daha fazla bilgi için bkz. [NuGet davranışını yapılandırma](/nuget/consume-packages/configuring-nuget-behavior). NuGet 'in varsayılan yapılandırması, *% AppData% \NuGet\NuGet.config* (Windows) veya *$Home/PST local/share* (Linux/MacOS) yüklenirken ve sürücü kökünden başlayıp geçerli dizinde sona ermek üzere herhangi bir *nuget.config* veya *.nuget\nuget.config* yükleyerek elde edilir.
 
@@ -92,7 +92,7 @@ Komut, var olan bir paketi iter. Paket oluşturmaz. Bir paket oluşturmak için 
 
 - **`-t|--timeout <TIMEOUT>`**
 
-  Bir sunucuya saniye cinsinden gönderme zaman aşımını belirtir. Varsayılan değer 300 saniyedir (5 dakika). 0 (sıfır saniye) belirtilmesi varsayılan değeri uygular.
+  Bir sunucuya saniye cinsinden gönderme zaman aşımını belirtir. Varsayılan değer 300 saniyedir (5 dakika). 0 belirtildiğinde varsayılan değer geçerlidir.
 
 ## <a name="examples"></a>Örnekler
 

@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - code analysis, suppress warnings
 - suppress code analysis warnings
-ms.openlocfilehash: b08e93089975a59fabfeb0daaf6a2a6454b2c7e8
-ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
+ms.openlocfilehash: a8fdfbddd2393f9c6c8cd882a63a9ecc6cb1dc95
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99217255"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105637045"
 ---
 # <a name="how-to-suppress-code-analysis-warnings"></a>Kod Analizi uyarılarını gösterme
 
@@ -35,7 +35,7 @@ Kural özellikleri hakkında daha fazla bilgi için bkz. [kural önem derecesini
 
 ## <a name="use-a-preprocessor-directive"></a>Önişlemci yönergesi kullanma
 
-Yalnızca belirli bir kod satırı için uyarıyı bastırmak üzere [#pragma warning (C#)](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) veya [Disable (Visual Basic)](../../visual-basic/language-reference/directives/disable-enable.md) yönergesini kullanın.
+Yalnızca belirli bir kod satırı için uyarıyı bastırmak üzere [#pragma warning (C#)](../../csharp/language-reference/preprocessor-directives.md#pragma-warning) veya [Disable (Visual Basic)](../../visual-basic/language-reference/directives/disable-enable.md) yönergesini kullanın.
 
 ```csharp
     try { ... }
@@ -59,7 +59,7 @@ Yalnızca belirli bir kod satırı için uyarıyı bastırmak üzere [#pragma wa
 
 ## <a name="use-the-suppressmessageattribute"></a>SuppressMessageAttribute kullanın
 
-Bir <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> uyarıyı kaynak dosyasında ya da proje için küresel bir gizlemeler dosyasında (*GlobalSuppressions.cs* veya *globalsuppressions. vb*) gizlemek için kullanabilirsiniz. Bu öznitelik, bir uyarıyı yalnızca projenizin veya dosyanızın belirli bölümlerinde bastırmak için bir yol sağlar.
+Bir <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> uyarıyı, kaynak dosyasında ya da proje için küresel bir gizlemeler dosyasında (*globalsuppressions. cs* veya *globalsuppressions. vb*) gizlemek için kullanabilirsiniz. Bu öznitelik, bir uyarıyı yalnızca projenizin veya dosyanızın belirli bölümlerinde bastırmak için bir yol sağlar.
 
 Özniteliği için gereken iki, Konumsal parametre <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> ve kural *kimliği* *kategorisidir* . Aşağıdaki kod parçacığı, `"Usage"` ve `"CA2200:Rethrow to preserve stack details"` Bu parametreleri geçirir.
 

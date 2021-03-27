@@ -3,12 +3,12 @@ title: Kod tabanınızı null yapılabilir başvuru türlerini kullanacak şekil
 description: Kod tabanınızı, null yapılabilir başvuru türlerini kullanacak şekilde yükseltmek için en iyi stratejiyi seçin.
 ms.technology: csharp-null-safety
 ms.date: 07/31/2019
-ms.openlocfilehash: 667b31a79df04b3f5af5883e59729c6eac560352
-ms.sourcegitcommit: e16315d9f1ff355f55ff8ab84a28915be0a8e42b
+ms.openlocfilehash: fff9ce4d053cc2543b0148d70435bdc793ecccd7
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105111327"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105637174"
 ---
 # <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>Kitaplıkları null yapılabilir başvuru türleri kullanacak şekilde güncelleştirme ve arayanlara null olabilecek kuralları iletişim kurma
 
@@ -69,7 +69,7 @@ Seçtiğiniz bu Stratejiler, projenizde ne kadar etkin geliştirme gerçekleşti
 > 1. Dosya adını *TemporaryGeneratedFile_* başlatın
 > 1. Dosya adını *. Designer. cs*, *. generated. cs*, *. g. cs* veya *. g. ı. cs* ile sonlandırın.
 >
-> Oluşturucular, Önişlemci yönergesini kullanarak kabul edebilir [`#nullable`](language-reference/preprocessor-directives/preprocessor-nullable.md) .
+> Oluşturucular, Önişlemci yönergesini kullanarak kabul edebilir [`#nullable`](language-reference/preprocessor-directives.md#nullable-context) .
 
 ## <a name="should-nullable-warnings-introduce-breaking-changes"></a>Null yapılabilir uyarılar, son değişiklikleri mi göstermelidir?
 

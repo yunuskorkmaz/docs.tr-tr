@@ -3,12 +3,12 @@ title: Üretimde çalışırken geçiş stratejileri
 description: ASP.NET MVC 'den büyük bir uygulamayı tek seferde ASP.NET Core geçiremeyebilir. Bir uygulamayı çalışırken ve mevcut kullanıcılar için üretimde ASP.NET Core geçirmek için bazı stratejiler öğrenin.
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 4910984cb281139493aa5424809ba3eedab776e9
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: e9dcdb3594cc431f3fd7e71b16e0d806ab8d1ba6
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102105764"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105637097"
 ---
 # <a name="strategies-for-migrating-while-running-in-production"></a>Üretimde çalışırken geçiş stratejileri
 
@@ -42,7 +42,7 @@ Façlade olduktan sonra, bunun bir kısmını yeni bir ASP.NET Core uygulamasın
 
 ## <a name="multi-targeting-approaches"></a>Çoklu hedefleme yaklaşımları
 
-.NET Framework hedef olan büyük uygulamalar, her bir çerçeve için Çoklu hedefleme ve ayrı kod yolları kullanılarak zaman içinde ASP.NET Core geçirilebilir. Örneğin, her iki ortamda da çalışması gereken kod, farklı işlevler uygulamak veya .NET Framework .NET Core 'da çalıştırıldığında farklı bağımlılıklar kullanmak için [Önişlemci `#if` ](../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) yönergeleri ile değiştirilebilir. Başka bir seçenek de proje dosyalarını, hedeflenen Framework 'ü temel alan farklı dosya kümelerini içerecek şekilde değiştirmektir. Proje dosyaları, `*.core.cs` hedeflenen çerçeveye göre farklı kaynak dosya kümelerini dahil etmek için gibi farklı glob desenleri kullanabilir.
+.NET Framework hedef olan büyük uygulamalar, her bir çerçeve için Çoklu hedefleme ve ayrı kod yolları kullanılarak zaman içinde ASP.NET Core geçirilebilir. Örneğin, her iki ortamda da çalışması gereken kod, farklı işlevler uygulamak veya .NET Framework .NET Core 'da çalıştırıldığında farklı bağımlılıklar kullanmak için [Önişlemci `#if` ](../../csharp/language-reference/preprocessor-directives.md#conditional-compilation) yönergeleri ile değiştirilebilir. Başka bir seçenek de proje dosyalarını, hedeflenen Framework 'ü temel alan farklı dosya kümelerini içerecek şekilde değiştirmektir. Proje dosyaları, `*.core.cs` hedeflenen çerçeveye göre farklı kaynak dosya kümelerini dahil etmek için gibi farklı glob desenleri kullanabilir.
 
 Bu teknikler, tek bir ortak kod temelinin, yeni işlevsellik eklendiğinde ve (bazı parçalar) .NET Core kullanımı dışında tutulmasını sağlar.
 

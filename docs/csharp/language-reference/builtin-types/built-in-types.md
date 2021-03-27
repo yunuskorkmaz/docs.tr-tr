@@ -5,12 +5,12 @@ ms.date: 03/15/2021
 helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
-ms.openlocfilehash: 4ad90f7d751e90ebd27e560557e0fe8f1ab43bde
-ms.sourcegitcommit: 80f38cb67bd02f51d5722fa13d0ea207e3b14a8e
+ms.openlocfilehash: 4b92add8189c6205408ec78c281eaacf04173047
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "105610817"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105637071"
 ---
 # <a name="built-in-types-c-reference"></a>Yerleşik türler (C# Başvurusu)
 
@@ -42,7 +42,7 @@ Aşağıdaki tabloda C# yerleşik [başvuru](../keywords/reference-types.md) tü
 |[`string`](reference-types.md#the-string-type)|<xref:System.String?displayProperty=nameWithType>|
 |[`dynamic`](reference-types.md#the-dynamic-type)|<xref:System.Object?displayProperty=nameWithType>|
 
-Yukarıdaki tablolarda, sol sütundan ( [nint ve nint](nint-nuint.md) ve [Dynamic](using-type-dynamic.md)dışında) her C# tür anahtar sözcüğü, karşılık gelen .NET türü için bir diğer addır. Bunlar arasında değiştirilebilir. Örneğin, aşağıdaki bildirimler aynı türdeki değişkenleri bildirir:
+Yukarıdaki tablolarda, sol sütundan ( [nint ve nint](nint-nuint.md) ve [Dynamic](reference-types.md#the-dynamic-type)dışında) her C# tür anahtar sözcüğü, karşılık gelen .NET türü için bir diğer addır. Bunlar arasında değiştirilebilir. Örneğin, aşağıdaki bildirimler aynı türdeki değişkenleri bildirir:
 
 ```csharp
 int a = 123;

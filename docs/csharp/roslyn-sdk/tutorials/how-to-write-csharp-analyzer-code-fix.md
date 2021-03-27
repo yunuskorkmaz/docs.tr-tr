@@ -3,12 +3,12 @@ title: 'Öğretici: ilk çözümleyicinizi ve kod düzeltmesini yazma'
 description: Bu öğretici, .NET derleyici SDK 'sını (Roslyn API 'Ler) kullanarak bir çözümleyici ve kod düzeltmesini oluşturmak için adım adım yönergeler sağlar.
 ms.date: 03/02/2021
 ms.custom: mvc
-ms.openlocfilehash: ca586874d79e9de5f293e548b1cfd08c694d3479
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: b712cb4df5ab6dae825407212685cb1a08b2d189
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104876168"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105637253"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Öğretici: ilk çözümleyicinizi ve kod düzeltmesini yazma
 
@@ -267,11 +267,11 @@ Birim testi projesinde *MakeConstUnitTests. cs* dosyasını açın. Şablon, bir
 > - `[|text|]`: için bir tanılayıcı rapor olduğunu gösterir `text` . Bu form, varsayılan olarak yalnızca tarafından sağlanmış olan Çözümleyicileri test etmek için kullanılabilir `DiagnosticDescriptor` `DiagnosticAnalyzer.SupportedDiagnostics` .
 > - `{|ExpectedDiagnosticId:text|}`: ile bir Tanılamanın rapor olduğunu gösterir <xref:Microsoft.CodeAnalysis.Diagnostic.Id> `ExpectedDiagnosticId` `text` .
 
-Aşağıdaki test yöntemini `MakeConstUnitTest` sınıfına ekleyin:
+Sınıftaki şablon testlerini `MakeConstUnitTest` Aşağıdaki test yöntemiyle değiştirin:
 
 [!code-csharp[test method for fix test](snippets/how-to-write-csharp-analyzer-code-fix/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#FirstFixTest "test method for fix test")]
 
-Geçirdiklerinden emin olmak için bu iki testi çalıştırın. Visual Studio 'da **, test**   >  **Windows**  >  **Test Gezgini**' ni seçerek test Gezginini açın. Ardından **Tümünü Çalıştır**' ı seçin.
+Başarılı olduğundan emin olmak için bu testi çalıştırın. Visual Studio 'da **, test**   >  **Windows**  >  **Test Gezgini**' ni seçerek test Gezginini açın. Ardından **Tümünü Çalıştır**' ı seçin.
 
 ## <a name="create-tests-for-valid-declarations"></a>Geçerli bildirimler için testler oluşturma
 
@@ -382,7 +382,7 @@ Son olarak, bir değişken `var` anahtar sözcükle bildirilirse, kod düzeltilm
 
 Neyse ki, yukarıdaki hataların tümü, az önce öğrendiğiniz tekniklerin kullanılmasıyla çözülebilir.
 
-İlk hatayı onarmak için öncelikle *Diagnosticanalyzer. cs* ' yi açın ve her bir yerel bildirimin başlatıcılarının her birinin, sabit değerlerle atanmasını sağlamak için her birinin kontrol edildiği foreach döngüsünü bulun. İlk foreach döngüsünden hemen _önce_ , `context.SemanticModel.GetTypeInfo()` Yerel bildirimin belirtilen türü hakkında ayrıntılı bilgi almak için çağırın:
+İlk hatayı onarmak için önce *MakeConstAnalyzer. cs* ' yi açın ve her bir yerel bildirimin başlatıcılarının her birinin, sabit değerlerle atanmasını sağlamak için her birinin kontrol edildiği foreach döngüsünü bulun. İlk foreach döngüsünden hemen _önce_ , `context.SemanticModel.GetTypeInfo()` Yerel bildirimin belirtilen türü hakkında ayrıntılı bilgi almak için çağırın:
 
 [!code-csharp[Retrieve type information](snippets/how-to-write-csharp-analyzer-code-fix/MakeConst/MakeConst/MakeConstAnalyzer.cs#VariableConvertedType "Retrieve type information")]
 

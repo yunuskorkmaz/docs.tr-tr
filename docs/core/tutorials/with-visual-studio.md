@@ -1,17 +1,17 @@
 ---
 title: Visual Studio kullanarak bir .NET konsol uygulaması oluşturma
 description: Visual Studio kullanarak C# veya Visual Basic .NET konsol uygulaması oluşturmayı öğrenin.
-ms.date: 06/08/2020
+ms.date: 03/26/2021
 dev_langs:
 - csharp
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: 3986ef4083b964799be33d2876570ac4cf2082b8
-ms.sourcegitcommit: 1d3af230ec30d8d061be7a887f6ba38a530c4ece
+ms.custom: vs-dotnet,contperf-fy21q3
+ms.openlocfilehash: e55927080ab30e7a24c54656b7f11a94a023bd65
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "102511859"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105636811"
 ---
 # <a name="tutorial-create-a-net-console-application-using-visual-studio"></a>Öğretici: Visual Studio kullanarak bir .NET konsol uygulaması oluşturma
 
@@ -19,7 +19,7 @@ Bu öğreticide, Visual Studio 2019 ' de bir .NET konsol uygulamasının nasıl 
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- **.NET Core platformlar arası geliştirme** iş yükünün yüklü olduğu [Visual Studio 2019 sürüm 16,8 veya sonraki bir sürüm](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) . .NET 5,0 SDK, bu iş yükünü seçtiğinizde otomatik olarak yüklenir.
+- **.NET Core platformlar arası geliştirme** iş yükünün yüklü olduğu [Visual Studio 2019 sürüm 16.9.2 veya sonraki bir sürümü](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) . .NET 5,0 SDK, bu iş yükünü seçtiğinizde otomatik olarak yüklenir.
 
   Daha fazla bilgi için bkz. [Visual Studio ile .NET SDK 'Yı yükler](../install/windows.md#install-with-visual-studio).
 
@@ -28,12 +28,6 @@ Bu öğreticide, Visual Studio 2019 ' de bir .NET konsol uygulamasının nasıl 
 "HelloWorld" adlı bir .NET konsol uygulaması projesi oluşturun.
 
 1. Visual Studio 2019’u başlatın.
-
-1. **Araçlar**  >  **Seçenekler**  >  **ortam**  >  **Önizleme özellikleri**' ni seçin ve ardından **Yeni projede tüm .NET Core şablonlarını göster ' i seçin (yeniden başlatma gerektirir)**.
-
-   :::image type="content" source="media/with-visual-studio/dotnet-options.png" alt-text="Tüm .NET şablonları seçeneğini göster":::
-
-1. Visual Studio 'Yu kapatın ve yeniden açın.
 
 1. Başlangıç sayfasında **Yeni proje oluştur**' u seçin.
 
@@ -101,12 +95,12 @@ Kullanmak istediğiniz dil gösterilmiyorsa sayfanın en üstündeki dil seçici
 
 Kullanıcıya adını istemek ve Tarih ve saat ile birlikte göstermek için uygulamayı geliştirin.
 
-1. *Program.cs* veya *program. vb*' de, yönteminin içeriğini, `Main` çağıran satırı, `Console.WriteLine` aşağıdaki kodla değiştirin:
+1. *Program. cs* veya *program. vb*' de, yönteminin içeriğini, `Main` çağıran satırı, `Console.WriteLine` aşağıdaki kodla değiştirin:
 
    :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="MainMethod":::
    :::code language="vb" source="./snippets/with-visual-studio/vb/Program.vb" id="MainMethod":::
 
-   Bu kod, konsol penceresinde bir istem görüntüler ve ardından <kbd>ENTER</kbd> tuşuna basarak Kullanıcı bir dize girene kadar bekler. Bu dizeyi adlı bir değişkende depolar `name` . Ayrıca <xref:System.DateTime.Now?displayProperty=nameWithType> , geçerli yerel saati içeren özelliğinin değerini alır ve bunu adlı bir değişkene `date` ( `currentDate` Visual Basic) atar. Bu değerleri konsol penceresinde görüntüler. Son olarak, konsol penceresinde bir istem görüntüler ve <xref:System.Console.ReadKey(System.Boolean)?displayProperty=nameWithType> Kullanıcı girişini beklemek için yöntemini çağırır.
+   Bu kod, konsol penceresinde bir istem görüntüler ve ardından <kbd>ENTER</kbd> tuşuna basarak Kullanıcı bir dize girene kadar bekler. Bu dizeyi adlı bir değişkende depolar `name` . Ayrıca <xref:System.DateTime.Now?displayProperty=nameWithType> , geçerli yerel saati içeren özelliğinin değerini alır ve bunu adlı bir değişkene atar `currentDate` . Bu değerleri konsol penceresinde görüntüler. Son olarak, konsol penceresinde bir istem görüntüler ve <xref:System.Console.ReadKey(System.Boolean)?displayProperty=nameWithType> Kullanıcı girişini beklemek için yöntemini çağırır.
 
    <xref:System.Environment.NewLine> , bir satır kesmeyi göstermek için platformdan bağımsız ve dilden bağımsız bir yoldur. Alternatifler `\n` C# ve `vbCrLf` Visual Basic ' de bulunur.
 

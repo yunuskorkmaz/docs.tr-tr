@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 05/20/2020
 ms.technology: csharp-async
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: c3fbcdec2bf181a5211e89024855967d687388ff
-ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
+ms.openlocfilehash: bb333e5eb5dfadb1ff7a1fac64627b74bca8d981
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2021
-ms.locfileid: "103623739"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105637266"
 ---
 # <a name="asynchronous-programming"></a>Zaman uyumsuz programlama
 
@@ -211,62 +211,62 @@ Daha az kod olsa da, LINQ 'i zaman uyumsuz kodla karıştırdığınızda dikkat
 
 ## <a name="important-info-and-advice"></a>Önemli bilgi ve öneriler
 
-Zaman uyumsuz programlama ile, beklenmeyen davranışları engelleyebilen aklınızda bulundurmanız gereken bazı ayrıntılar vardır.
+Zaman uyumsuz programlama ile beklenmedik davranışı önleyebileceğini göz önünde bulundurmanız gereken bazı ayrıntılar vardır.
 
 * `async`**yöntemlerin bir** `await` **anahtar sözcüğü gövdelerinde veya hiçbir şekilde hiçbir sonuç vermez!**
 
   Göz önünde bulundurmanız önemlidir. `await`Bir yöntemin gövdesinde kullanılmazsa `async` , C# derleyicisi bir uyarı oluşturur, ancak kod normal bir yöntem gibi derlenir ve çalışır. Bu, zaman uyumsuz yöntem için C# derleyicisi tarafından oluşturulan durum makinesi herhangi bir şeyi gerçekleştirmediğinden, inanılmaz verimsiz olur.
 
-* **Yazdığınız her zaman uyumsuz yöntem adının soneki olarak "Async" eklemeniz gerekir.**
+* **Yazdığınız her zaman uyumsuz yöntem adının son eki olarak "Async" ekleyin.**
 
-Bu, zaman uyumlu ve zaman uyumsuz yöntemleri daha kolay ayırt etmek için .NET ' te kullanılan kuraldır. Kodunuz tarafından açıkça çağrılmayan bazı Yöntemler (örneğin, olay işleyicileri veya Web denetleyicisi yöntemleri) uygulanabilir değildir. Kodunuz tarafından açıkça çağrılmadığı için, adlandırmaları hakkında açık olması önemli değildir.
+  Bu, zaman uyumlu ve zaman uyumsuz yöntemleri daha kolay ayırt etmek için .NET ' te kullanılan kuraldır. Kodunuz tarafından açıkça çağrılmayan bazı Yöntemler (örneğin, olay işleyicileri veya Web denetleyicisi yöntemleri) uygulanabilir değildir. Kodunuz tarafından açıkça çağrılmadığı için, adlandırmaları hakkında açık olması önemli değildir.
 
 * `async void`**yalnızca olay işleyicileri için kullanılmalıdır.**
 
-`async void` , olaylar dönüş türlerine sahip olmadığından zaman uyumsuz olay işleyicilerinin çalışmasına izin vermek için tek yoldur (Bu nedenle, `Task` ve kullanamaz `Task<T>` ). ' Nin diğer kullanımı, `async void` dokunma modelini uygulamaz ve şu gibi kullanımı zor olabilir:
+  `async void` , olaylar dönüş türlerine sahip olmadığından zaman uyumsuz olay işleyicilerinin çalışmasına izin vermek için tek yoldur (Bu nedenle, `Task` ve kullanamaz `Task<T>` ). ' Nin diğer kullanımı, `async void` dokunma modelini uygulamaz ve şu gibi kullanımı zor olabilir:
 
-* Bir yöntemde oluşturulan özel durumlar, `async void` Bu yöntemin dışında yakalanamıyor.
-* `async void` yöntemler test etmek zordur.
-* `async void` arayan, zaman uyumsuz olmasını beklemiyorsanız, Yöntemler hatalı yan etkilere neden olabilir.
+  * Bir yöntemde oluşturulan özel durumlar, `async void` Bu yöntemin dışında yakalanamıyor.
+  * `async void` yöntemler test etmek zordur.
+  * `async void` arayan, zaman uyumsuz olmasını beklemiyorsanız, Yöntemler hatalı yan etkilere neden olabilir.
 
 * **LINQ ifadelerinde zaman uyumsuz Lambdalar kullanırken Tread dikkatlice**
 
-LINQ kullanım içindeki lambda ifadeleri ertelenmiş yürütme, bu kodun bir kez çalıştırılmasını beklemiyorduk. Bu görevin engellenmesi, doğru yazılmayan bir kilitlenmeye neden olabilir. Ayrıca, bu gibi zaman uyumsuz kodun iç içe geçirilmesi, kodun yürütülmesi ile ilgili nedenlerle da daha zor hale gelir. Async ve LINQ güçlü, ancak mümkün olduğunca dikkatli ve açık olarak kullanılmalıdır.
+  LINQ kullanım içindeki lambda ifadeleri ertelenmiş yürütme, bu kodun bir kez çalıştırılmasını beklemiyorduk. Bu görevin engellenmesi, doğru yazılmayan bir kilitlenmeye neden olabilir. Ayrıca, bu gibi zaman uyumsuz kodun iç içe geçirilmesi, kodun yürütülmesi ile ilgili nedenlerle da daha zor hale gelir. Async ve LINQ güçlü, ancak mümkün olduğunca dikkatli ve açık olarak kullanılmalıdır.
 
 * **Görevleri engellenmeyen bir şekilde beklede bir kod yazın**
 
-Bir işlemin tamamlanmasını beklemek için geçerli iş parçacığını engellemek, `Task` kilitlenmeleri ve engellenen bağlam iş parçacıkları ile sonuçlanabilir ve daha karmaşık hata işleme gerektirebilir. Aşağıdaki tabloda, engellenmeyen bir şekilde görevlerin beklenmesiyle ilgili yönergeler sağlanmaktadır:
+  Bir işlemin tamamlanmasını beklemek için geçerli iş parçacığını engellemek, `Task` kilitlenmeleri ve engellenen bağlam iş parçacıkları ile sonuçlanabilir ve daha karmaşık hata işleme gerektirebilir. Aşağıdaki tabloda, engellenmeyen bir şekilde görevlerin beklenmesiyle ilgili yönergeler sağlanmaktadır:
 
-| Bunu kullanın...          | Bunun yerine...           | Bunu yaparken...                 |
-|----------------------|------------------------------|--------------------------------------------|
-| `await`              | `Task.Wait` veya `Task.Result` | Arka plan görevinin sonucunu alma |
-| `await Task.WhenAny` | `Task.WaitAny`               | Herhangi bir görevin tamamlanması bekleniyor           |
-| `await Task.WhenAll` | `Task.WaitAll`               | Tüm görevlerin tamamlanması bekleniyor          |
-| `await Task.Delay`   | `Thread.Sleep`               | Bir süre bekleniyor               |
+  | Bunu kullanın...          | Bunun yerine...           | Bunu yaparken...                 |
+  |----------------------|------------------------------|--------------------------------------------|
+  | `await`              | `Task.Wait` veya `Task.Result` | Arka plan görevinin sonucunu alma |
+  | `await Task.WhenAny` | `Task.WaitAny`               | Herhangi bir görevin tamamlanması bekleniyor           |
+  | `await Task.WhenAll` | `Task.WaitAll`               | Tüm görevlerin tamamlanması bekleniyor          |
+  | `await Task.Delay`   | `Thread.Sleep`               | Bir süre bekleniyor               |
 
 * **Kullanmayı düşünün** `ValueTask` **mümkün olduğunda**
 
-`Task`Zaman uyumsuz metotlardan bir nesne döndürmek, belirli yollarda performans sorunlarını ortaya çıkarabilir. `Task` bir başvuru türüdür, bu nedenle bu bir nesne ayırma anlamına gelir. Değiştirici ile belirtilen bir yöntemin `async` önbelleğe alınmış bir sonuç döndürdüğü veya zaman uyumlu olarak tamamladığı durumlarda, ek ayırmalar kodun performans açısından kritik bölümlerinde önemli bir zaman maliyeti olabilir. Bu ayırmalar sıkı Döngülerde gerçekleşirse maliyetli hale gelebilir. Daha fazla bilgi için bkz. [Genelleştirilmiş zaman uyumsuz dönüş türleri](whats-new/csharp-7.md#generalized-async-return-types).
+  `Task`Zaman uyumsuz metotlardan bir nesne döndürmek, belirli yollarda performans sorunlarını ortaya çıkarabilir. `Task` bir başvuru türüdür, bu nedenle bu bir nesne ayırma anlamına gelir. Değiştirici ile belirtilen bir yöntemin `async` önbelleğe alınmış bir sonuç döndürdüğü veya zaman uyumlu olarak tamamladığı durumlarda, ek ayırmalar kodun performans açısından kritik bölümlerinde önemli bir zaman maliyeti olabilir. Bu ayırmalar sıkı Döngülerde gerçekleşirse maliyetli hale gelebilir. Daha fazla bilgi için bkz. [Genelleştirilmiş zaman uyumsuz dönüş türleri](whats-new/csharp-7.md#generalized-async-return-types).
 
 * Kullanmayı **düşünün**`ConfigureAwait(false)`
 
-Ortak bir soru, "yöntemi ne zaman kullanmalıyım <xref:System.Threading.Tasks.Task.ConfigureAwait(System.Boolean)?displayProperty=nameWithType> ?" dir. Yöntemi, bir örneğin, `Task` awaiter 'yi yapılandırmasına izin verir. Bu önemli bir noktadır ve yanlış ayarlanmaması, performans etkilerine ve hatta kilitlenmeleri sağlayabilir. Hakkında daha fazla bilgi için `ConfigureAwait` , bkz. [ConfigureAwait SSS](https://devblogs.microsoft.com/dotnet/configureawait-faq).
+  Ortak bir soru, "yöntemi ne zaman kullanmalıyım <xref:System.Threading.Tasks.Task.ConfigureAwait(System.Boolean)?displayProperty=nameWithType> ?" dir. Yöntemi, bir örneğin, `Task` awaiter 'yi yapılandırmasına izin verir. Bu önemli bir noktadır ve yanlış ayarlanmaması, performans etkilerine ve hatta kilitlenmeleri sağlayabilir. Hakkında daha fazla bilgi için `ConfigureAwait` , bkz. [ConfigureAwait SSS](https://devblogs.microsoft.com/dotnet/configureawait-faq).
 
 * **Daha az durum bilgisi olan kod yazma**
 
-Genel nesnelerin durumuna veya belirli yöntemlerin yürütülmesine bağlı değildir. Bunun yerine, yalnızca yöntemlerin dönüş değerlerine göre değişir. Neden?
+  Genel nesnelerin durumuna veya belirli yöntemlerin yürütülmesine bağlı değildir. Bunun yerine, yalnızca yöntemlerin dönüş değerlerine göre değişir. Neden?
 
-* Kodun nedeni daha kolay olacaktır.
-* Kodun test etmek daha kolay olacaktır.
-* Zaman uyumsuz ve zaman uyumlu kodu karıştırma çok basittir.
-* Yarış koşullarından genellikle tamamen kaçınılabilir.
-* Dönüş değerlerine bağlı olarak, zaman uyumsuz kod koordine etme basit hale gelir.
-* (Ödül) bağımlılık ekleme ile oldukça iyi bir şekilde çalışmaktadır.
+  * Kodun nedeni daha kolay olacaktır.
+  * Kodun test etmek daha kolay olacaktır.
+  * Zaman uyumsuz ve zaman uyumlu kodu karıştırma çok basittir.
+  * Yarış koşullarından genellikle tamamen kaçınılabilir.
+  * Dönüş değerlerine bağlı olarak, zaman uyumsuz kod koordine etme basit hale gelir.
+  * (Ödül) bağımlılık ekleme ile oldukça iyi bir şekilde çalışmaktadır.
 
-Önerilen bir amaç, kodunuzda tam veya neredeyse tam bir [bilgi saydamlığı](https://en.wikipedia.org/wiki/Referential_transparency_%28computer_science%29) elde etmek için kullanılır. Bunun yapılması, son derece öngörülebilir, test edilebilir ve sürdürülebilir kod temeli oluşmasına neden olur.
+Önerilen bir amaç, kodunuzda tam veya neredeyse tam bir [bilgi saydamlığı](https://en.wikipedia.org/wiki/Referential_transparency_%28computer_science%29) elde etmek için kullanılır. Bunun yapılması öngörülebilir, test edilebilir ve sürdürülebilir kod temeli ile sonuçlanır.
 
 ## <a name="other-resources"></a>Diğer kaynaklar
 
 * [Zaman uyumsuz kapsamlı,](../standard/async-in-depth.md) görevlerin nasıl çalıştığı hakkında daha fazla bilgi sağlar.
-* [Görev zaman uyumsuz programlama modeli (C#)](./programming-guide/concepts/async/task-asynchronous-programming-model.md)
-* Zaman uyumsuz programlama için Lucian Wıchık 'nin [altı temel ipucu](https://channel9.msdn.com/Series/Three-Essential-Tips-for-Async) , Async programlama için harika bir kaynaktır
+* [Görev zaman uyumsuz programlama modeli (C#)](./programming-guide/concepts/async/task-asynchronous-programming-model.md).
+* Zaman uyumsuz programlama için Lucian Wıchık 'nin [altı temel ipucu](https://channel9.msdn.com/Series/Three-Essential-Tips-for-Async) , zaman uyumsuz programlama için harika bir kaynaktır.

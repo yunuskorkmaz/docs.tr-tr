@@ -2,12 +2,12 @@
 title: Olaylara abone olma
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Tümleştirme olaylarına yayımlama ve aboneliğin ayrıntılarını anlayın.
 ms.date: 01/13/2021
-ms.openlocfilehash: c9146ddbdfbf00e743108c07af1f74d7690a17a8
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: d7b68f5c01c21564724e3a00a048a9fa58bb4fb6
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188731"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105637379"
 ---
 # <a name="subscribing-to-events"></a>Olaylara abone olma
 
@@ -201,9 +201,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem productToUp
            _catalogContext.CatalogItems.Update(catalogItem);
            await _catalogContext.SaveChangesAsync();
 
-           // Save to EventLog only if product price changed
-           if(raiseProductPriceChangedEvent)
-               await _integrationEventLogService.SaveEventAsync(priceChangedEvent);
+           await _integrationEventLogService.SaveEventAsync(priceChangedEvent);
 
            transaction.Commit();
         }

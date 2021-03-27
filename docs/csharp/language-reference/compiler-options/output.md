@@ -10,12 +10,12 @@ helpviewer_keywords:
 - PlatformTarget compiler option [C#]
 - ProduceReferenceAssembly compiler option [C#]
 - TargetType compiler option [C#]
-ms.openlocfilehash: d444b5964edcfbfb9133acd1dea068c52cced32a
-ms.sourcegitcommit: e16315d9f1ff355f55ff8ab84a28915be0a8e42b
+ms.openlocfilehash: 9caa290a7c9b5fea1b0f896e9443075b4b470f7b
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105111224"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105636850"
 ---
 # <a name="c-compiler-options-that-control-compiler-output"></a>Derleyici çıkışını denetleyen C# derleyici seçenekleri
 
@@ -38,7 +38,7 @@ Aşağıdaki seçenekler derleyici çıkış oluşturmayı denetler. Yeni MSBuil
 Ana veya üst düzey deyimler içeren kaynak kodu dosyası ilk olarak XML 'e çıktıdır. Genellikle oluşturulan. xml dosyasını [IntelliSense](/visualstudio/ide/using-intellisense)ile kullanmak isteyeceksiniz. *. Xml* dosya adı, derleme adı ile aynı olmalıdır. *. Xml* dosyası, derlemeyle aynı dizinde olmalıdır. Visual Studio projesinde derlemeye başvuruluyorsa *. xml* dosyası da bulunur. Kod açıklamaları oluşturma hakkında daha fazla bilgi için bkz. [kod açıklamaları sağlama](/visualstudio/ide/reference/generate-xml-documentation-comments). İle derleme yapmadığınız takdirde [`<TargetType:Module>`](#targettype) , `file` `<assembly>` ve `</assembly>` Çıkış dosyası için derleme bildirimini içeren dosyanın adını belirten etiketler içerecektir. Örnekler için bkz. [XML belgeleri özelliklerini kullanma](../../programming-guide/xmldoc/how-to-use-the-xml-documentation-features.md).
 
 > [!NOTE]
-> **Belgetadosyası** seçeneği projedeki tüm dosyalar için geçerlidir. Belirli bir dosyanın veya kod bölümünün belge açıklamalarıyla ilgili uyarıları devre dışı bırakmak için [#pragma uyarı](../preprocessor-directives/preprocessor-pragma-warning.md)kullanın.
+> **Belgetadosyası** seçeneği projedeki tüm dosyalar için geçerlidir. Belirli bir dosyanın veya kod bölümünün belge açıklamalarıyla ilgili uyarıları devre dışı bırakmak için [#pragma uyarı](../preprocessor-directives.md#pragma-warning)kullanın.
 
 ## <a name="outputassembly"></a>OutputAssembly
 

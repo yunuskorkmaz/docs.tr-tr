@@ -3,12 +3,12 @@ title: C# dil sürümü oluşturma-C# Kılavuzu
 description: C# dil sürümünün projenize göre nasıl belirlendiği ve bu seçimin arkasındaki nedenler hakkında bilgi edinin. Varsayılanı el ile nasıl geçersiz kılacağınızı öğrenin.
 ms.custom: updateeachrelease
 ms.date: 08/11/2020
-ms.openlocfilehash: e605979c185c476cd908ef4c7b3808f72ded0067
-ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
+ms.openlocfilehash: b7cb989224b2ed609051b4703ab852437c0774d0
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104652977"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105637526"
 ---
 # <a name="c-language-versioning"></a>C# dil sürümü oluşturma
 
@@ -53,7 +53,7 @@ C# sürümünüzü açık bir şekilde belirtmeniz gerekiyorsa, bunu birkaç şe
 - [ **Langversion** derleyici seçeneğini](compiler-options/language.md#langversion)yapılandırın.
 
 > [!TIP]
-> Kullanmakta olduğunuz dil sürümünü görmek için `#error version` kodunuzda (büyük/küçük harfe duyarlı) koyun. Bu, derleyicinin, kullanılmakta olan derleyici sürümünü ve geçerli seçili dil sürümünü içeren bir ileti ile derleyici hatası (CS8304) rapor etmelerini sağlar. Daha fazla bilgi için bkz. [#error (C# Başvurusu)](preprocessor-directives/preprocessor-error.md) .
+> Kullanmakta olduğunuz dil sürümünü görmek için `#error version` kodunuzda (büyük/küçük harfe duyarlı) koyun. Bu, derleyicinin, kullanılmakta olan derleyici sürümünü ve geçerli seçili dil sürümünü içeren bir ileti ile derleyici hatası (CS8304) rapor etmelerini sağlar. Daha fazla bilgi için bkz. [#error (C# Başvurusu)](preprocessor-directives.md#error-and-warning-information) .
 
 ### <a name="edit-the-project-file"></a>Proje dosyasını düzenleme
 
