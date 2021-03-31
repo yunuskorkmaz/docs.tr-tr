@@ -4,10 +4,10 @@ ms.author: paulming
 ms.date: 05/01/2019
 ms.topic: include
 ms.openlocfilehash: cf944ae9ca200d34a1f0f32e68bf3aee73a9500a
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "96588731"
 ---
 - Mümkünse, bunun yerine güvenli bir serileştirici kullanın ve **bir saldırganın seri durumdan çıkarmak için rastgele bir tür belirtmesini sağlayın**. Bazı güvenli serileştiriciler şunları içerir:

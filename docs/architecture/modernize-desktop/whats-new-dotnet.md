@@ -3,10 +3,10 @@ title: Masaüstü için .NET’teki yenilikler
 description: .Net ve .NET Framework arasındaki farklar ve eklenen yeni özellikler hakkında bilgi edinin.
 ms.date: 12/29/2020
 ms.openlocfilehash: 03dea849ad8a797b917dca953d93be6878d7ec72
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "102106187"
 ---
 # <a name="whats-new-with-net-for-desktop"></a>Masaüstü için .NET’teki yenilikler

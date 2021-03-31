@@ -4,10 +4,10 @@ ms.author: paulming
 ms.date: 04/17/2019
 ms.topic: include
 ms.openlocfilehash: 2b60e0e713745b1887ff148c5b3ef151584eb21d
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "96588726"
 ---
 Şu durumlarda bu kuraldan bir uyarı bastırmak güvenlidir:

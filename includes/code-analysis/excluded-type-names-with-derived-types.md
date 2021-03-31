@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 4125df1d64fe7f3f2eb1eb4a821ed46c8270c95f
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "97531931"
 ---
 ### <a name="exclude-specific-types-and-their-derived-types"></a>Belirli türleri ve bunların türetilmiş türlerini Dışla

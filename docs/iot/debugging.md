@@ -8,10 +8,10 @@ ms.topic: how-to
 ms.prod: dotnet
 zone_pivot_groups: ide-set-one
 ms.openlocfilehash: 58858384c49a296e0b33d663f3ef930caf9cace6
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "102258071"
 ---
 # <a name="debug-net-apps-on-raspberry-pi"></a>Raspberry PI üzerinde .NET uygulamalarında hata ayıklama

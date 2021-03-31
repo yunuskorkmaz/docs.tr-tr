@@ -12,10 +12,10 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 ms.openlocfilehash: fc2ef2b42eeba241b7af66b579a60365ad2b88c7
-ms.sourcegitcommit: 2e4adc490c1d2a705a0592b295d606b10b9f51f1
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "96588820"
 ---
 # <a name="maintainability-rules"></a>Bakım kuralları
@@ -24,7 +24,7 @@ Bakımlama kuralları kitaplığı ve uygulama bakımını destekler.
 
 ## <a name="in-this-section"></a>Bu bölümde
 
-| Kural | Açıklama |
+| Kural | Description |
 |-----------|-----------------------------------|
 | [CA1501: Aşırı devralmadan kaçının](ca1501.md) | Devralma hiyerarşisinde düzeyleri dörtten fazla olan türdür. İç içe yuvalanmış hiyerarşileri izlemek, anlamak ve muhafaza etmek zor olabilir. |
 | [CA1502: Aşırı karmaşıklıktan kaçının](ca1502.md) | Bu kural, sayılarla ve şartlı şubelerle tanımlanan, yönteme giden doğrusal bağımsız yolların sayısını ölçer. |

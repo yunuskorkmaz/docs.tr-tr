@@ -7,10 +7,10 @@ ms.date: 11/13/2020
 ms.topic: how-to
 ms.prod: dotnet
 ms.openlocfilehash: 4da558e2cdfc283d21f2a5497cb71dc746109614
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "96590049"
 ---
 # <a name="deploy-net-apps-to-raspberry-pi"></a>.NET uygulamalarını Raspberry PI 'ye dağıtma

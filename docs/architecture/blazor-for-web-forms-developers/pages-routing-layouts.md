@@ -7,10 +7,10 @@ no-loc:
 - Blazor
 ms.date: 09/19/2019
 ms.openlocfilehash: 714ba0be7c2014895a75250a47e6ce448863eb6c
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "88267795"
 ---
 # <a name="pages-routing-and-layouts"></a>Sayfalar, yönlendirme ve düzenler
@@ -19,7 +19,7 @@ ASP.NET Web Forms uygulamalar *. aspx* dosyalarında tanımlanan sayfalardan olu
 
 ' De Blazor , uygulamadaki her sayfa, genellikle bir *. Razor* dosyasında tanımlanan ve belirtilen bir veya daha fazla yol içeren bir bileşendir. Yönlendirme genellikle belirli bir sunucu isteğiyle birlikte istemci tarafı olur. Tarayıcı önce uygulamanın kök adresine bir istek yapar. `Router` Blazor Daha sonra uygulamadaki bir kök bileşen, gezinme isteklerini ve bunları doğru bileşene göre kesintiye uğratan işler.
 
-Blazor*derin bağlamayı*da destekler. Derin bağlama, tarayıcı uygulama kökü dışında belirli bir rotaya istek yaptığında oluşur. Sunucuya gönderilen derin bağlantı istekleri Blazor uygulamaya yönlendirilir ve ardından istek istemci tarafını doğru bileşene yönlendirir.
+Blazor*derin bağlamayı* da destekler. Derin bağlama, tarayıcı uygulama kökü dışında belirli bir rotaya istek yaptığında oluşur. Sunucuya gönderilen derin bağlantı istekleri Blazor uygulamaya yönlendirilir ve ardından istek istemci tarafını doğru bileşene yönlendirir.
 
 ASP.NET Web Forms basit bir sayfa aşağıdaki biçimlendirmeyi içerebilir:
 
@@ -40,7 +40,7 @@ ASP.NET Web Forms basit bir sayfa aşağıdaki biçimlendirmeyi içerebilir:
 </asp:Content>
 ```
 
-*Name.aspx.cs*
+*Ad. aspx. cs*
 
 ```csharp
 public partial class Name : System.Web.UI.Page
@@ -145,7 +145,7 @@ Tarafından desteklenen yol kısıtlamalarının tam listesi için Blazor bkz. [
 
 ## <a name="navigation"></a>Gezinti
 
-ASP.NET Web Forms ' de, tarayıcıya yeniden yönlendirme yanıtı döndürerek, gezintiyi farklı bir sayfaya tetiklersiniz. Örneğin:
+ASP.NET Web Forms ' de, tarayıcıya yeniden yönlendirme yanıtı döndürerek, gezintiyi farklı bir sayfaya tetiklersiniz. Örnek:
 
 ```csharp
 protected void NavigateButton_Click(object sender, EventArgs e)

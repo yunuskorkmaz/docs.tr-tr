@@ -6,10 +6,10 @@ ms.author: dapine
 ms.date: 10/21/2020
 ms.topic: overview
 ms.openlocfilehash: 07c1a161a0bb429403db6852fe77749d83c19ec0
-ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "96589853"
 ---
 # <a name="tools-and-diagnostics-in-net"></a>.NET 'teki araçlar ve Tanılamalar

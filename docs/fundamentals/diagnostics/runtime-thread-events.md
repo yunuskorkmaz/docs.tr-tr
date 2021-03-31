@@ -7,10 +7,10 @@ helpviewer_keywords:
 - ThreadPool events (CoreCLR)
 - ETW, thread pool events (CoreCLR)
 ms.openlocfilehash: cdd6041c5842d4922c60e33daf6db366f7d35327
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "96590045"
 ---
 # <a name="net-runtime-thread-pool-events"></a>.NET çalışma zamanı iş parçacığı havuzu olayları
@@ -111,7 +111,7 @@ Bu olaylar, ThreadPool içindeki çalışan ve g/ç iş parçacıkları hakkınd
 |-----------------------------------|-----------|-----------|
 |`ThreadingKeyword` (0x10000)|Bilgilendirici (4)|
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`ThreadPoolWorkerThreadStart`|50|Bir çalışan iş parçacığı oluşturulur.|
 
@@ -127,7 +127,7 @@ Bu olaylar, ThreadPool içindeki çalışan ve g/ç iş parçacıkları hakkınd
 |-----------------------------------|-----------|-----------|
 |`ThreadingKeyword` (0x10000)|Bilgilendirici (4)|
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`ThreadPoolWorkerThreadStop`|51|Çalışan iş parçacığı durduruldu.|
 
@@ -143,7 +143,7 @@ Bu olaylar, ThreadPool içindeki çalışan ve g/ç iş parçacıkları hakkınd
 |-----------------------------------|-----------|-----------|
 |`ThreadingKeyword` (0x10000)|Bilgilendirici (4)|
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`ThreadPoolWorkerThreadWait`|57|Çalışan iş parçacığı çalışmaya başlar.|
 
@@ -159,7 +159,7 @@ Bu olaylar, ThreadPool içindeki çalışan ve g/ç iş parçacıkları hakkınd
 |-----------------------------------|-----------|-----------|
 |`ThreadingKeyword` (0x10000)|Bilgilendirici (4)|
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`ThreadPoolWorkerThreadRetirementStart`|52|Bir çalışan iş parçacığı yeniden oluşturma.|
 
@@ -175,7 +175,7 @@ Bu olaylar, ThreadPool içindeki çalışan ve g/ç iş parçacıkları hakkınd
 |-----------------------------------|-----------|-----------|
 |`ThreadingKeyword` (0x10000)|Bilgilendirici (4)|
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`ThreadPoolWorkerThreadRetirementStop`|53|Kullanımdan kaldırılan bir çalışan iş parçacığı yeniden etkin hale gelir.|
 
@@ -195,7 +195,7 @@ Bu olaylar, ThreadPool içindeki çalışan ve g/ç iş parçacıkları hakkınd
 
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`ThreadPoolWorkerThreadAdjustmentSample`|54|Bir örnek için bilgi toplamayı ifade eder; diğer bir deyişle, belirli bir eşzamanlılık düzeyi olan aktarım hızı, zaman içinde bir ölçümdür.|
 
@@ -216,7 +216,7 @@ Bu olaylar, ThreadPool içindeki çalışan ve g/ç iş parçacıkları hakkınd
 
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`ThreadPoolWorkerThreadAdjustmentAdjustment`|55|İş parçacığı ekleme (Hill-climbing) algoritması eşzamanlılık düzeyindeki bir değişikliğin yerinde olduğunu belirlediğinde denetimdeki bir değişikliği kaydeder.|
 
@@ -239,7 +239,7 @@ Bu olaylar, ThreadPool içindeki çalışan ve g/ç iş parçacıkları hakkınd
 
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`ThreadPoolWorkerThreadAdjustmentStats`|56|İş parçacığı havuzundaki verileri toplar.|
 
@@ -269,7 +269,7 @@ Bu olaylar, ThreadPool içindeki çalışan ve g/ç iş parçacıkları hakkınd
 
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`ThreadPoolEnqueue`|61|İş öğesi, iş parçacığı havuzu kuyruğunda sıraya alındı.|
 
@@ -290,7 +290,7 @@ Bu olaylar, ThreadPool içindeki çalışan ve g/ç iş parçacıkları hakkınd
 
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`ThreadPoolDequeue`|62|İş öğesi, iş parçacığı havuzu sırasından kuyruğa alındı.|
 
@@ -311,7 +311,7 @@ Bu olaylar, ThreadPool içindeki çalışan ve g/ç iş parçacıkları hakkınd
 
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`ThreadPoolIOEnqueue`|63|Bir iş parçacığı, zaman uyumsuz GÇ tamamlandıktan sonra bir GÇ tamamlama bildirimini sıraya alır.|
 
@@ -334,7 +334,7 @@ Bu olaylar, ThreadPool içindeki çalışan ve g/ç iş parçacıkları hakkınd
 
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`ThreadPoolIODequeue`|64|Bir iş parçacığı GÇ tamamlama bildirimini kaldırır.|
 
@@ -357,7 +357,7 @@ Bu olaylar, ThreadPool içindeki çalışan ve g/ç iş parçacıkları hakkınd
 
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`ThreadPoolIOPack`|65|İş parçacığı çakışan GÇ paketi çağırılır.|
 
@@ -379,7 +379,7 @@ Bu olaylar, ThreadPool içindeki çalışan ve g/ç iş parçacıkları hakkınd
 
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |----------------|---------------|-----------------|
 |`ThreadCreating`|70|İş parçacığı oluşturuldu.|
 
@@ -400,7 +400,7 @@ Bu olaylar, ThreadPool içindeki çalışan ve g/ç iş parçacıkları hakkınd
 
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |----------------|---------------|-----------------|
 |`ThreadRunning`|71|İş parçacığı çalışmaya başladı.|
 

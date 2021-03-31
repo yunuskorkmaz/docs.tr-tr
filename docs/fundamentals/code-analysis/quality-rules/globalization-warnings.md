@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 ms.openlocfilehash: 83ecc52c5e20e074c6c1aed68204a574494f42d5
-ms.sourcegitcommit: 2e4adc490c1d2a705a0592b295d606b10b9f51f1
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "96589261"
 ---
 # <a name="globalization-rules"></a>Genelleştirme kuralları
@@ -25,7 +25,7 @@ Genelleştirme kuralları, dünyaya yönelik kitaplıkları ve uygulamaları des
 
 ## <a name="in-this-section"></a>Bu bölümde
 
-|Kural|Açıklama|
+|Kural|Description|
 |----------|-----------------|
 |[CA1303: Harfleri yerelleştirilmiş parametreler olarak göndermeyin](ca1303.md)|Dışarıdan görülebilen bir yöntem, bir dize sabit değerini bir .NET oluşturucusuna veya yöntemine parametre olarak geçirir ve bu dize yerelleştirilebilir olmalıdır.|
 |[CA1304: CultureInfo belirt](ca1304.md)|Yöntem veya Oluşturucu System.Globalization.CultureInfo parametre kabul eden aşırı yüklenmiş üye arar ve yöntem veya oluşturucu CultureInfo parametresi aşırı yükleme çağıramaz. Bir CultureInfo veya System.IFormatProvider nesnesi sağlanamadığında, aşırı yüklü üye tarafından sağlanan varsayılan değer, tüm yerel ayarlarda istediğiniz etkiyi vermeyebilir.|

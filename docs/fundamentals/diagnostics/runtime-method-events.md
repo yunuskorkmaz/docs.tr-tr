@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Method events (CoreCLR)
 - ETW, EventPipe, LTTng method events (CoreCLR)
 ms.openlocfilehash: f9d08efa420670cf7a8c863f115ff270998f2dca
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "96589990"
 ---
 # <a name="net-runtime-method-events"></a>.NET çalışma zamanı yöntemi olayları
@@ -26,7 +26,7 @@ Bu olayların v2 sürümleri, reJitId 'yi içerir, v1 sürümleri desteklemez.
 
 Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`MethodLoad_V1`|141|Bir yöntem yüklendiğinde (JıT-yüklü) veya bir NGEN görüntüsünün yüklendiği zaman tetiklenir. Dinamik ve genel yöntemler bu sürümü Yöntem yüklemeleri için kullanmaz. JıT yardımcıları bu sürümü hiçbir şekilde kullanmaz.|
 
@@ -47,7 +47,7 @@ Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
 ## <a name="methodload_v2-event"></a>MethodLoad_V2 olayı
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |----------------|---------------|-----------------|
 |`MethodLoad_V2`|141|Bir yöntem yüklendiğinde (JıT-yüklü) veya bir NGEN görüntüsünün yüklendiği zaman tetiklenir. Dinamik ve genel yöntemler bu sürümü Yöntem yüklemeleri için kullanmaz. JıT yardımcıları bu sürümü hiçbir şekilde kullanmaz.|
 
@@ -69,7 +69,7 @@ Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
 ## <a name="methodunload_v1-event"></a>MethodUnLoad_V1 olayı
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |----------------|---------------|-----------------|
 |`MethodUnLoad_V1`|142|Bir modül kaldırıldığında veya bir uygulama etki alanı yok edildiğinde tetiklenir. Dinamik yöntemler bu sürümü Yöntem kaldırmalar için hiçbir şekilde kullanmaz.|
 
@@ -90,7 +90,7 @@ Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
 ## <a name="methodunload_v2-event"></a>MethodUnLoad_V2 olayı
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |----------------|---------------|-----------------|
 |`MethodUnLoad_V2`|142|Bir modül kaldırıldığında veya bir uygulama etki alanı yok edildiğinde tetiklenir. Dinamik yöntemler bu sürümü Yöntem kaldırmalar için hiçbir şekilde kullanmaz.|
 
@@ -112,7 +112,7 @@ Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
 ## <a name="r2rgetentrypoint-event"></a>R2RGetEntryPoint olayı
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |----------------|---------------|-----------------|
 |`R2RGetEntryPoint`|159|Bir R2R giriş noktası araması sona erdiğinde tetiklenir.|
 
@@ -132,7 +132,7 @@ Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
 ## <a name="r2rgetentrypointstart-event"></a>R2RGetEntryPointStart olayı
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |----------------|---------------|-----------------|
 |`R2RGetEntryPointStart`|160|Bir R2R giriş noktası araması başladığında tetiklenir.|
 
@@ -148,7 +148,7 @@ Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
 ## <a name="methodloadverbose_v1-event"></a>MethodLoadVerbose_V1 olayı
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`MethodLoadVerbose_V1`|143|Bir yöntem JıT olarak yüklendiğinde veya bir NGEN görüntüsü yüklendiğinde tetiklenir. Dinamik ve genel yöntemler her zaman Yöntem yüklemeleri için bu sürümü kullanır. JıT yardımcıları her zaman bu sürümü kullanır.|
 
@@ -172,7 +172,7 @@ Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
 ## <a name="methodloadverbose_v2-event"></a>MethodLoadVerbose_V2 olayı
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`MethodLoadVerbose_V1`|143|Bir yöntem JıT olarak yüklendiğinde veya bir NGEN görüntüsü yüklendiğinde tetiklenir. Dinamik ve genel yöntemler her zaman Yöntem yüklemeleri için bu sürümü kullanır. JıT yardımcıları her zaman bu sürümü kullanır.|
 
@@ -197,7 +197,7 @@ Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
 ## <a name="methodunloadverbose_v1-event"></a>MethodUnLoadVerbose_V1 olayı
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`MethodUnLoadVerbose_V1`|144|Dinamik bir yöntem yok edildiğinde, bir modül kaldırıldığında veya bir uygulama etki alanı yok edildiğinde tetiklenir. Dinamik yöntemler her zaman bu sürümü Yöntem kaldırmalar için kullanır.|
 
@@ -221,7 +221,7 @@ Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
 ## <a name="methodunloadverbose_v2-event"></a>MethodUnLoadVerbose_V2 olayı
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`MethodUnLoadVerbose_V2`|144|Dinamik bir yöntem yok edildiğinde, bir modül kaldırıldığında veya bir uygulama etki alanı yok edildiğinde tetiklenir. Dinamik yöntemler her zaman bu sürümü Yöntem kaldırmalar için kullanır.|
 
@@ -253,7 +253,7 @@ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir:
 |`JITKeyword` 0x10 |Verbose (5)|
 |`NGenKeyword` 0x20 |Verbose (5)|
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`MethodJittingStarted_V1`|145|Bir yöntem JıT olarak derlendiğinde tetiklenir.|
 
@@ -274,7 +274,7 @@ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir:
 |-----------------------------------|-----------|
 |`JITTracingKeyword` (0x1000) |Verbose (5)|
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`MethodJitInliningSucceeded`|185|Bir yöntem JıT derleyicisi tarafından başarıyla satır içine eklendiğinde tetiklenir.|
 
@@ -297,7 +297,7 @@ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir:
 |-----------------------------------|-----------|
 |`JITTracingKeyword` (0x1000) |Verbose (5)|
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`MethodJitInliningFailed`|192|Bir yöntemin JıT derleyicisi tarafından satır içine alınmayacak olması başarısız olduğunda tetiklenir.|
 
@@ -322,7 +322,7 @@ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir:
 |-----------------------------------|-----------|
 |`JITTracingKeyword` (0x1000) |Verbose (5)|
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`MethodJitTailCallSucceeded`|192|Bir yöntem başarıyla tail çağrıldığında JıT derleyicisi tarafından tetiklenir.|
 
@@ -347,7 +347,7 @@ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir:
 |-----------------------------------|-----------|
 |`JITTracingKeyword` (0x1000) |Verbose (5)|
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`MethodJitTailCallFailed`|191|Bir yöntemin kuyruğu çağrıldığında JıT derleyicisi tarafından tetiklenir.|
 
@@ -372,7 +372,7 @@ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir:
 |-----------------------------------|-----------|
 |`JittedMethodILToNativeMapKeyword` (0x20000) |Verbose (5)|
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |----------------|---------------|-----------------|
 |`MethodILToNativeMap`|190|JıT ile derlenen metotlar için IL-yerel eşleme olayını eşler.|
 

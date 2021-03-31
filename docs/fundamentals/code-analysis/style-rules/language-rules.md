@@ -13,10 +13,10 @@ helpviewer_keywords:
 - language rules
 - EditorConfig language conventions
 ms.openlocfilehash: 2aa2261534363f1da6a2109f092e08d210ebd915
-ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2021
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "98957981"
 ---
 # <a name="language-rules"></a>Dil kuralları

@@ -7,13 +7,13 @@ no-loc:
 - Blazor
 ms.date: 09/18/2019
 ms.openlocfilehash: fd560c84c095dffc3718a7709af904d9ba722a18
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "97512775"
 ---
-# <a name="build-reusable-ui-components-with-no-locblazor"></a>İle yeniden kullanılabilir kullanıcı arabirimi bileşenleri oluşturun Blazor
+# <a name="build-reusable-ui-components-with-blazor"></a>İle yeniden kullanılabilir kullanıcı arabirimi bileşenleri oluşturun Blazor
 
 ASP.NET Web Forms hakkındaki harika şeyler, yeniden kullanılabilir kullanıcı arabirimi (UI) kodunun yeniden kullanılabilir kullanıcı arabirimi denetimlerine kapsüllemesini mümkün kılar. Özel Kullanıcı denetimleri, *. ascx* dosyalarını kullanarak biçimlendirme içinde tanımlanabilir. Ayrıca, tam tasarımcı desteğiyle kodda ayrıntılı sunucu denetimleri de oluşturabilirsiniz.
 
@@ -79,13 +79,13 @@ Aşağıdaki tabloda, varsa, içinde kullanılan çeşitli Razor yönergeleri Bl
 
 |Deki    |Açıklama|Örnek|Web Forms eşdeğeri|
 |-------------|-----------|-------|--------------------|
-|`@attribute` |Bileşene bir sınıf düzeyi özniteliği ekler|`@attribute [Authorize]`|Hiçbiri|
+|`@attribute` |Bileşene bir sınıf düzeyi özniteliği ekler|`@attribute [Authorize]`|Yok|
 |`@code`      |Bileşene sınıf üyeleri ekler|`@code { ... }`|`<script runat="server">...</script>`|
 |`@implements`|Belirtilen arabirimi uygular|`@implements IDisposable`|Arka plan kodu kullan|
 |`@inherits`  |Belirtilen taban sınıftan devralır|`@inherits MyComponentBase`|`<%@ Control Inherits="MyUserControlBase" %>`|
-|`@inject`    |Bileşene bir hizmet çıkarır|`@inject IJSRuntime JS`|Hiçbiri|
+|`@inject`    |Bileşene bir hizmet çıkarır|`@inject IJSRuntime JS`|Yok|
 |`@layout`    |Bileşen için bir düzen bileşeni belirtir|`@layout MainLayout`|`<%@ Page MasterPageFile="~/Site.Master" %>`|
-|`@namespace` |Bileşen için ad alanını ayarlar|`@namespace MyNamespace`|Hiçbiri|
+|`@namespace` |Bileşen için ad alanını ayarlar|`@namespace MyNamespace`|Yok|
 |`@page`      |Bileşen için yolu belirtir|`@page "/product/{id}"`|`<%@ Page %>`|
 |`@typeparam` |Bileşen için genel bir tür parametresi belirtir|`@typeparam TItem`|Arka plan kodu kullan|
 |`@using`     |Kapsama getirmek için bir ad alanı belirtir|`@using MyComponentNamespace`|*web.config* ad alanı Ekle|
@@ -206,7 +206,7 @@ Her iki ASP.NET Web Forms ve Blazor Kullanıcı arabirimi olaylarını işlemek 
 <asp:Button ID="ClickMeButton" runat="server" Text="Click me!" OnClick="ClickMeButton_Click" />
 ```
 
-*Counter.ascx.cs*
+*Counter. ascx. cs*
 
 ```csharp
 public partial class Counter : System.Web.UI.UserControl
@@ -420,7 +420,7 @@ public class AppState
 
 ASP.NET Web Forms Framework, modüller, sayfalar ve denetimler için iyi tanımlanmış yaşam döngüsü yöntemlerine sahiptir. Örneğin, aşağıdaki denetim `Init` ,, `Load` ve yaşam döngüsü olayları için olay işleyicilerini uygular `UnLoad` :
 
-*Counter.ascx.cs*
+*Counter. ascx. cs*
 
 ```csharp
 public partial class Counter : System.Web.UI.UserControl
@@ -611,7 +611,7 @@ Bu bileşenin çıktısı şuna benzer:
 
 ## <a name="code-behind"></a>Arka plan kodu
 
-Bir Blazor bileşen genellikle tek bir *. Razor* dosyasında yazılır. Ancak, arka plan kod dosyası kullanarak kodu ve biçimlendirmeyi ayırmak de mümkündür. Bir bileşen dosyası kullanmak için, bileşen dosyasının dosya adıyla eşleşen bir C# dosyası ekleyin *. cs* uzantısı eklenmiştir (*Counter.Razor.cs*). Bileşen için bir temel sınıf tanımlamak üzere C# dosyasını kullanın. Temel sınıfı istediğiniz şekilde adlandırın, ancak sınıfı bileşen sınıfıyla aynı ada, ancak `Base` Uzantısı eklenmiş () olarak adlandırın `CounterBase` . Bileşen tabanlı sınıf de türevi olmalıdır `ComponentBase` . Ardından, Razor bileşen dosyasında, `@inherits` bileşen () için temel sınıfı belirtmek üzere yönergesini ekleyin `@inherits CounterBase` .
+Bir Blazor bileşen genellikle tek bir *. Razor* dosyasında yazılır. Ancak, arka plan kod dosyası kullanarak kodu ve biçimlendirmeyi ayırmak de mümkündür. Bir bileşen dosyası kullanmak için, bileşen dosyasının dosya adıyla eşleşen bir C# dosyası ekleyin *. cs* uzantısı eklenmiş (*Counter. Razor. cs*). Bileşen için bir temel sınıf tanımlamak üzere C# dosyasını kullanın. Temel sınıfı istediğiniz şekilde adlandırın, ancak sınıfı bileşen sınıfıyla aynı ada, ancak `Base` Uzantısı eklenmiş () olarak adlandırın `CounterBase` . Bileşen tabanlı sınıf de türevi olmalıdır `ComponentBase` . Ardından, Razor bileşen dosyasında, `@inherits` bileşen () için temel sınıfı belirtmek üzere yönergesini ekleyin `@inherits CounterBase` .
 
 *Counter. Razor*
 
@@ -625,7 +625,7 @@ Bir Blazor bileşen genellikle tek bir *. Razor* dosyasında yazılır. Ancak, a
 <button @onclick="IncrementCount">Click me</button>
 ```
 
-*Counter.razor.cs*
+*Counter. Razor. cs*
 
 ```csharp
 public class CounterBase : ComponentBase

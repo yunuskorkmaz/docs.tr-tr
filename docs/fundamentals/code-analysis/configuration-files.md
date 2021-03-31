@@ -6,10 +6,10 @@ ms.topic: conceptual
 no-loc:
 - EditorConfig
 ms.openlocfilehash: b98fdd48f2373bd23fcd3273834860a60c682969
-ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2021
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "99216388"
 ---
 # <a name="configuration-files-for-code-analysis-rules"></a>Kod analizi kuralları için yapılandırma dosyaları
@@ -74,7 +74,7 @@ dotnet_diagnostic.CA1000.severity = warning
 
 ### <a name="format"></a>Biçimlendir
 
-EditorConfigİlgili dosya ve klasörleri tanımlamak için gibi bölüm üst bilgileri olması gereken dosyaların aksine, `[*.cs]` genel analiz zerconfig dosyaları bölüm üst bilgilerine sahip değildir. Bunun yerine, `is_global = true` normal dosyalardan ayırt edilebilmesi için formun en üst düzey bir girişi gerekir EditorConfig . Bu, dosyadaki tüm seçeneklerin Projenin tamamına uygulanacağını gösterir. Örneğin:
+EditorConfigİlgili dosya ve klasörleri tanımlamak için gibi bölüm üst bilgileri olması gereken dosyaların aksine, `[*.cs]` genel analiz zerconfig dosyaları bölüm üst bilgilerine sahip değildir. Bunun yerine, `is_global = true` normal dosyalardan ayırt edilebilmesi için formun en üst düzey bir girişi gerekir EditorConfig . Bu, dosyadaki tüm seçeneklerin Projenin tamamına uygulanacağını gösterir. Örnek:
 
 ```ini
 is_global = true

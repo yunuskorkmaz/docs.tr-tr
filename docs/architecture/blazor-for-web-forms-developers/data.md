@@ -7,10 +7,10 @@ no-loc:
 - Blazor
 ms.date: 11/20/2020
 ms.openlocfilehash: 66e6001cbcac612cb556e90fb86fd694ca7d1459
-ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "96509760"
 ---
 # <a name="work-with-data"></a>Verilerle çalışma

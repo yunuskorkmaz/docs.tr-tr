@@ -5,10 +5,10 @@ author: csharpfritz
 ms.author: jefritz
 ms.date: 11/20/2020
 ms.openlocfilehash: d812079f84f67409334d07c4c10c5577446503be
-ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "96509708"
 ---
 # <a name="app-startup"></a>Uygulama başlatma

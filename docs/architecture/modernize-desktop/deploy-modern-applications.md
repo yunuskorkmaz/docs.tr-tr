@@ -3,10 +3,10 @@ title: Modern Masaüstü Uygulamalarını Dağıtma
 description: Modern masaüstü uygulamaları dağıtma hakkında bilmeniz gereken her şey.
 ms.date: 05/12/2020
 ms.openlocfilehash: ba47f09b27adf270734bbfff285fe44dd4175d29
-ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/20/2021
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "98615860"
 ---
 # <a name="deploying-modern-desktop-applications"></a>Modern Masaüstü Uygulamalarını Dağıtma
@@ -117,13 +117,13 @@ MALTıYA ilişkin en az şeylerden biri, xCopy dağıtımı, ClickOnce veya mağ
 
 Masaüstü uygulamanız için bir paket oluşturmak üzere Visual Studio 'da **Windows uygulama paketleme proje** projesini kullanabilirsiniz. Ardından, bu paketi Microsoft Store yayımlayabilir veya bir veya daha fazla bilgisayara yükleyebilirsiniz.
 
-#### <a name="msix-packaging-tool"></a>MSIX paketleme aracı
+#### <a name="msix-packaging-tool"></a>MSIX Paketleme Aracı
 
 MSIX paketleme aracı mevcut Win32 uygulamalarınızı MSIX biçimine yeniden paketlemenize olanak sağlar. Dönüşümler için hem etkileşimli bir kullanıcı arabirimi hem de bir komut satırı sunar ve kaynak kodu olmadan bir uygulamayı dönüştürebilme olanağı sağlar.
 
-![MSIX paketleme aracı](./media/deploy-modern-applications/msix-packaging-tool.png)
+![MSIX Paketleme Aracı](./media/deploy-modern-applications/msix-packaging-tool.png)
 
-#### <a name="package-support-framework"></a>Paket desteği çerçevesi
+#### <a name="package-support-framework"></a>Paket Desteği Çerçevesi
 
 Paket desteği çerçevesi, kaynak koda erişiminiz olmadığında var olan Win32 uygulamanıza düzeltmeler uygulamanıza yardımcı olan bir açık kaynaklı pakettir. Bu, bir MSIX kapsayıcısında çalıştırılabilir. Paket desteği çerçevesi, uygulamanızın modern çalışma zamanı ortamının en iyi yöntemlerini izlemesini sağlar.
 

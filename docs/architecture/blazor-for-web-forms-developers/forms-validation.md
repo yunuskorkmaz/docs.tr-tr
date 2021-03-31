@@ -8,10 +8,10 @@ no-loc:
 - Blazor WebAssembly
 ms.date: 09/19/2019
 ms.openlocfilehash: d2dce23996e996a736b04c9cdd1ccf3b549ff3ff
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "88267561"
 ---
 # <a name="forms-and-validation"></a>Formlar ve doğrulama

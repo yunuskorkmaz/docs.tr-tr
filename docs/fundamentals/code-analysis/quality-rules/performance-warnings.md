@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 ms.openlocfilehash: 4409cc46eb73f13f8e59d7a51899da27035bb6af
-ms.sourcegitcommit: 2e4adc490c1d2a705a0592b295d606b10b9f51f1
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "96588818"
 ---
 # <a name="performance-rules"></a>Performans kuralları
@@ -25,7 +25,7 @@ Performans kuralları yüksek performanslı kitaplıkları ve uygulamaları dest
 
 ## <a name="in-this-section"></a>Bu bölümde
 
-| Kural | Açıklama |
+| Kural | Description |
 | - | - |
 | [CA1802: Uygun yerlerde sabitleri kullanın](ca1802.md) | Bir alan statik ve salt okunur olarak tanımlanır (Visual Basic paylaşılan ve salt okunur) ve derleme zamanında oluşturulabilir bir değer ile başlatılır. Hedeflenen alana atanan değer derleme zamanında oluşturulabilir olduğundan, değeri bir const (const Visual Basic) alanı olarak değiştirin, böylece değer çalışma zamanı yerine derleme zamanında hesaplanır. |
 | [CA1805: Gerekmediği durumlarda başlatmayın](ca1805.md) | .NET çalışma zamanı, oluşturucuyu çalıştırmadan önce, başvuru türlerindeki tüm alanları varsayılan değerlerine başlatır. Çoğu durumda, bir alanı varsayılan değerine açıkça başlatmak, bakım maliyetlerine eklenen ve performansı düşürebilir (örneğin, daha fazla derleme boyutuyla). |

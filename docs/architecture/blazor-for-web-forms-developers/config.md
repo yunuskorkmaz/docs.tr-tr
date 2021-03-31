@@ -7,15 +7,15 @@ no-loc:
 - Blazor
 ms.date: 11/20/2020
 ms.openlocfilehash: 360d9077bc981a2e9875bb1f86b49c0029424d6e
-ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "96509799"
 ---
 # <a name="app-configuration"></a>Uygulama yapılandırması
 
-Web Forms ' de uygulama yapılandırmasını yüklemeye yönelik birincil yol, *web.config* &mdash; sunucuda veya *web.config* tarafından başvurulan ilgili bir yapılandırma dosyasında bulunanweb.configdosyasında yer alan girişlerdir. Statik nesneyi, uygulama `ConfigurationManager` ayarları, veri deposu bağlantı dizeleri ve uygulamaya eklenen diğer genişletilmiş yapılandırma sağlayıcıları ile etkileşim kurmak için kullanabilirsiniz. Aşağıdaki kodda görüldüğü gibi, uygulama yapılandırması ile etkileşimleri görmek normaldir:
+Web Forms ' de uygulama yapılandırmasını yüklemeye yönelik birincil yol,  &mdash; sunucuda veya *web.config* tarafından başvurulan ilgili bir yapılandırma dosyasında bulunanweb.configdosyasında yer alan girişlerdir. Statik nesneyi, uygulama `ConfigurationManager` ayarları, veri deposu bağlantı dizeleri ve uygulamaya eklenen diğer genişletilmiş yapılandırma sağlayıcıları ile etkileşim kurmak için kullanabilirsiniz. Aşağıdaki kodda görüldüğü gibi, uygulama yapılandırması ile etkileşimleri görmek normaldir:
 
 ```csharp
 var configurationValue = ConfigurationManager.AppSettings["ConfigurationSettingName"];

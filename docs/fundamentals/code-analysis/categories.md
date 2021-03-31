@@ -6,10 +6,10 @@ ms.topic: reference
 helpviewer_keywords:
 - code analysis, categories
 ms.openlocfilehash: fdb4662f52a13906a2d9bcb3fd9a90860e394e72
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "100467335"
 ---
 # <a name="rule-categories"></a>Kural kategorileri

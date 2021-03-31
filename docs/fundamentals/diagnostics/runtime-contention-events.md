@@ -7,10 +7,10 @@ helpviewer_keywords:
 - monitor lock contention events (CoreCLR)
 - ETW, EventPipe, LTTng contention events (CoreCLR)
 ms.openlocfilehash: 38e5f493d4b223b4839dbd6f814cf656722189b2
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "96589998"
 ---
 # <a name="net-runtime-contention-events"></a>.NET çalışma zamanı çekişme olayları

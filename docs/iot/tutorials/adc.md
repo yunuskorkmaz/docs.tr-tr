@@ -7,10 +7,10 @@ ms.date: 11/13/2020
 ms.topic: tutorial
 ms.prod: dotnet
 ms.openlocfilehash: 509616e3423fbb83b74bfbb8ecec1a7df49f0a20
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "102259752"
 ---
 <!--markdownlint-disable DOCSMD011 -->

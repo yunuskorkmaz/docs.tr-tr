@@ -3,10 +3,10 @@ title: Windows 10 geçişi
 description: Paketleme ve XAML Adaları gibi Windows 10 özelliklerinde derinlemesine bakış.
 ms.date: 12/29/2020
 ms.openlocfilehash: 139a8f2354803dafeb0178b4dbfb57a95c4ddb34
-ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/20/2021
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "98615951"
 ---
 # <a name="windows-10-migration"></a>Windows 10 geçişi

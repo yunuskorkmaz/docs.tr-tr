@@ -12,10 +12,10 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 ms.openlocfilehash: 548e0eaaa6239a9b9ee6a08677cd720710bb48c2
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "99714137"
 ---
 # <a name="design-rules"></a>Tasarım kuralları

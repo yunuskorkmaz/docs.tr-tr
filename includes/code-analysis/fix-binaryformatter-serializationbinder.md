@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 557d811e2eeaf926cb958471d214fc23c50a25f2
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "96588728"
 ---
 - Bunun yerine güvenli bir serileştirici kullanın ve **bir saldırganın seri durumdan çıkarmak için rastgele bir tür belirtmesini sağlayın**. Daha fazla bilgi için [tercih edilen alternatifleri](/dotnet/standard/serialization/binaryformatter-security-guide#preferred-alternatives)inceleyin.

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - exception handling events (CoreCLR)
 - ETW, EventPipe, LTTng exception events (CoreCLR)
 ms.openlocfilehash: f4f63c8469f9c734b872ddaec8d1d7f7f0427576
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "96590033"
 ---
 # <a name="net-runtime-exception-events"></a>.NET çalışma zamanı özel durum olayları

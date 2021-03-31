@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 ms.openlocfilehash: 861827662a771ec7cc1827cdd8125be6c05bf05c
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "99719727"
 ---
 # <a name="security-rules"></a>Güvenlik kuralları

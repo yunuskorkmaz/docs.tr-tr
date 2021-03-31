@@ -8,13 +8,13 @@ no-loc:
 - WebAssembly
 ms.date: 11/20/2020
 ms.openlocfilehash: ba7113c88db728f30812821deaf7c06a80663d1f
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "98189095"
 ---
-# <a name="project-structure-for-no-locblazor-apps"></a>Uygulamalar için proje yapısı Blazor
+# <a name="project-structure-for-blazor-apps"></a>Uygulamalar için proje yapısı Blazor
 
 Önemli proje yapısı farklılıklarına rağmen, ASP.NET Web Forms ve Blazor birçok benzer kavramı paylaşır. Burada, bir projenin yapısına bakacağız Blazor ve bunu bir ASP.NET Web Forms projesiyle karşılaştıracağız.
 
@@ -66,7 +66,7 @@ Desteklenseler de, bireysel derleme başvuruları .NET projelerinde daha az yayg
 
 ## <a name="entry-point"></a>Giriş noktası
 
-BlazorSunucu uygulamasının giriş noktası, bir konsol uygulamasında gördüğünüz gibi *program.cs* dosyasında tanımlanmıştır. Uygulama yürütüldüğünde Web uygulamalarına özgü varsayılan değerleri kullanarak bir Web ana bilgisayar örneği oluşturur ve çalıştırır. Web ana bilgisayarı, Blazor sunucu uygulamasının yaşam döngüsünü yönetir ve konak düzeyi Hizmetleri ayarlar. Bu hizmetlere örnek olarak yapılandırma, günlüğe kaydetme, bağımlılık ekleme ve HTTP sunucusu verilebilir. Bu kod çoğunlukla ortak olduğundan, genellikle değişmeden kalır.
+BlazorSunucu uygulamasının giriş noktası, bir konsol uygulamasında gördüğünüz gibi *program. cs* dosyasında tanımlanmıştır. Uygulama yürütüldüğünde Web uygulamalarına özgü varsayılan değerleri kullanarak bir Web ana bilgisayar örneği oluşturur ve çalıştırır. Web ana bilgisayarı, Blazor sunucu uygulamasının yaşam döngüsünü yönetir ve konak düzeyi Hizmetleri ayarlar. Bu hizmetlere örnek olarak yapılandırma, günlüğe kaydetme, bağımlılık ekleme ve HTTP sunucusu verilebilir. Bu kod çoğunlukla ortak olduğundan, genellikle değişmeden kalır.
 
 ```csharp
 public class Program
@@ -85,7 +85,7 @@ public class Program
 }
 ```
 
-BlazorWebAssemblyuygulamalar ayrıca *program.cs* içinde bir giriş noktası tanımlar. Kod biraz farklı görünüyor. Kod, uygulamaya aynı ana bilgisayar düzeyi hizmetleri sağlamak için uygulama ana bilgisayarı ayarlamada benzerdir. WebAssemblyAncak, uygulama ana bilgisayarı doğrudan tarayıcıda yürütüldüğü için BIR http sunucusu ayarlama yapmaz.
+BlazorWebAssemblyuygulamalar Ayrıca *program. cs*' de bir giriş noktası tanımlar. Kod biraz farklı görünüyor. Kod, uygulamaya aynı ana bilgisayar düzeyi hizmetleri sağlamak için uygulama ana bilgisayarı ayarlamada benzerdir. WebAssemblyAncak, uygulama ana bilgisayarı doğrudan tarayıcıda yürütüldüğü için BIR http sunucusu ayarlama yapmaz.
 
 Blazor uygulamalar `Startup` , uygulama için başlangıç mantığını tanımlamak üzere *Global. asax* dosyası yerine bir sınıfa sahiptir. `Startup`Sınıfı, uygulamayı ve uygulamaya özgü hizmetleri yapılandırmak için kullanılır. Sunucu uygulamasında Blazor `Startup` sınıfı, Blazor istemci tarayıcıları ve sunucu arasında kullanılan gerçek zamanlı bağlantı için uç noktayı ayarlamak üzere kullanılır. Blazor WebAssembly Uygulamada, `Startup` sınıfı uygulamanın kök bileşenlerini ve bunların oluşturulması gereken yerleri tanımlar. `Startup` [Uygulama başlatma](./app-startup.md) bölümündeki sınıfına daha ayrıntılı bir bakış ekleyeceğiz.
 
@@ -150,7 +150,7 @@ Blazor [Sayfalar, Yönlendirme ve düzenler](./pages-routing-layouts.md) bölüm
 
 ASP.NET Web Forms uygulamalarda, ana sayfalar (*site. Master*) kullanılarak ortak bir sayfa düzeni işlenir. BlazorUygulamalarda, sayfa düzeni Düzen bileşenleri (*paylaşılan/mainlayout. Razor*) kullanılarak işlenir. Düzen bileşenleri [sayfa, Yönlendirme ve düzenler](./pages-routing-layouts.md) bölümünde daha ayrıntılı bir şekilde ele alınacaktır.
 
-## <a name="bootstrap-no-locblazor"></a>Yükleyebilirsiniz Blazor
+## <a name="bootstrap-blazor"></a>Yükleyebilirsiniz Blazor
 
 Önyükleme yapmak için Blazor uygulamanın şunları yapmanız gerekir:
 

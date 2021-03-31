@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Interop events (CoreCLR)
 - ETW, EventPipe, LTTng interop events (CoreCLR)
 ms.openlocfilehash: 5635fb55b3a6ffa3f5611da80cdb2909e226e2ea
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "96589994"
 ---
 # <a name="net-runtime-interop-events"></a>.NET çalışma zamanı birlikte çalışma olayları

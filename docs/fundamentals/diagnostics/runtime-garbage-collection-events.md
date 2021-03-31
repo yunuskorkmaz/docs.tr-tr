@@ -8,10 +8,10 @@ helpviewer_keywords:
 - garbage collection events (CoreCLR)
 - ETW, EventPipe, LTTng garbage collection events (CoreCLR)
 ms.openlocfilehash: 2799a93f351baf23ec7a359b0b4b2be5c216dc4d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "96590001"
 ---
 # <a name="net-runtime-garbage-collection-events"></a>.NET çalışma zamanı atık toplama olayları
@@ -74,7 +74,7 @@ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir:
 
 Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`GCHeapStats_V2`|4|Her çöp toplamanın sonundaki yığın istatistiklerini gösterir.|
 

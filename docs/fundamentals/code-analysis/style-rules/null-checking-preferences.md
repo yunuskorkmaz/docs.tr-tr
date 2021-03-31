@@ -9,10 +9,10 @@ dev_langs:
 - CSharp
 - VB
 ms.openlocfilehash: 86d5f4c9b640c92b11706b56a9d14955d6e24857
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "96589813"
 ---
 # <a name="null-checking-preferences"></a>Null denetleme tercihleri
