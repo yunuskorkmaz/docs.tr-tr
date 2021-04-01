@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: bf7ea8a36b9c36d82b4c00ada890829bf4c2c024
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "97700872"
 ---
 ### <a name="include-specific-api-surfaces"></a>Belirli API yüzeylerini dahil et

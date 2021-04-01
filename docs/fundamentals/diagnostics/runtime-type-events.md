@@ -7,10 +7,10 @@ helpviewer_keywords:
 - type system events (CoreCLR)
 - ETW, EventPipe, LTTng type system events (CoreCLR)
 ms.openlocfilehash: 8eee89cddb0098da2cb449a4be21945adac725e3
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "96589989"
 ---
 # <a name="net-runtime-type-events"></a>.NET çalışma zamanı türü olayları
@@ -23,7 +23,7 @@ Bu olaylar, yükleme türleriyle ilgili bilgiler toplar. Bu olayların tanılama
 |-----------------------------------|-----------|-----------|  
 |`TypeDiagnosticKeyword` (0x8000000000)|Bilgilendirici (4)|  
 
-|Olay|Olay Kimliği|Açıklama|  
+|Olay|Olay Kimliği|Description|  
 |-----------|--------------|-----------------|  
 |`TypeLoadStart`|73|Bir tür yüklemesi başlatıldı.|
 
@@ -38,7 +38,7 @@ Bu olaylar, yükleme türleriyle ilgili bilgiler toplar. Bu olayların tanılama
 |-----------------------------------|-----------|-----------|  
 |`TypeDiagnosticKeyword` (0x8000000000)|Bilgilendirici (4)|  
 
-|Olay|Olay Kimliği|Açıklama|  
+|Olay|Olay Kimliği|Description|  
 |-----------|--------------|-----------------|  
 |`TypeLoadStop`|74|Bir tür yüklemesi tamamlandı.|
 

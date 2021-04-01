@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 83644b9205d650da68c910095dd1d22a14940c44
-ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "97366835"
 ---
 ### <a name="exclude-specific-symbols"></a>Belirli sembolleri Dışla

@@ -7,10 +7,10 @@ ms.date: 11/14/2020
 ms.topic: tutorial
 ms.prod: dotnet
 ms.openlocfilehash: bc5c2b9f0876603c152da859547c58b83826969c
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "102259843"
 ---
 # <a name="read-environmental-conditions-from-a-sensor"></a>Sensörden ortam koşullarını okuma

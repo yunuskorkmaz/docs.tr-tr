@@ -8,13 +8,13 @@ no-loc:
 - WebAssembly
 ms.date: 11/20/2020
 ms.openlocfilehash: 893b6f851681ec540629fe160749b2622b6d5440
-ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "96509838"
 ---
-# <a name="migrate-from-aspnet-web-forms-to-no-locblazor"></a>ASP.NET Web Forms 'den geçiş Blazor
+# <a name="migrate-from-aspnet-web-forms-to-blazor"></a>ASP.NET Web Forms 'den geçiş Blazor
 
 Bir kod tabanının ASP.NET Web Forms ' den geçirilmesi Blazor , planlama gerektiren zaman alan bir görevdir. Bu bölümde işlem özetlenmektedir. Geçişi kolaylaştırmaya yönelik bir şey, uygulamanın, uygulama modelinde (Bu durumda Web Forms) iş mantığındaki bir *N katmanlı* mimariye uyduğundan emin olunması olabilir. Katmanlara yönelik bu mantıksal ayrım, .NET Core 'a ve ne kadar taşınabilmesini temizler Blazor .
 
@@ -39,7 +39,7 @@ Bu veya diğer yeni özellikler yeterince etkileyici ise, uygulamayı geçirmede
 
 Yazma sırasında, sunucu tarafı modeli Web Forms daha yakından benzerdir. Bu bölümün çoğu, üretime hazırsa da sunucu tarafı barındırma modeline odaklanır.
 
-## <a name="create-a-new-project"></a>Yeni bir proje oluşturma
+## <a name="create-a-new-project"></a>Yeni proje oluşturma
 
 Bu ilk geçiş adımı yeni bir proje oluşturmaktır. Bu proje türü, .NET SDK stili projelerini temel alır ve önceki proje biçimlerinde kullanılan ortak alanının çoğunu basitleştirir. Daha fazla ayrıntı için lütfen [Proje yapısındaki](project-structure.md)bölüme bakın.
 
@@ -92,9 +92,9 @@ Web Forms geliştiricilerin ömrünü basitleştiren bir NuGet paketi [Windows U
 
 İçin başlatma işlemi Blazor Web Forms ' dan değişmiştir ve diğer ASP.NET Core Hizmetleri için benzer bir kuruluma uyar. Sunucu tarafında barındırılan Blazor Bileşenler, normal ASP.NET Core uygulamasının bir parçası olarak çalıştırılır. Tarayıcıda barındırıldığında WebAssembly , Blazor Bileşenler benzer bir barındırma modeli kullanır. Bunun farkı, bileşenlerin arka uç işlemlerinden herhangi birinden ayrı bir hizmet olarak çalıştırılmaktır. Her iki durumda da başlatma benzerdir.
 
-*Global.asax.cs* dosyası Web Forms projeler için varsayılan başlangıç sayfasıdır. EShop projesinde, bu dosya denetim (IOC) kapsayıcısının Inversion öğesini yapılandırır ve uygulamanın veya isteğin çeşitli yaşam döngüsü olaylarını işler. Bu olaylardan bazıları ara yazılım (gibi) ile işlenir `Application_BeginRequest` . Diğer olaylar, bağımlılık ekleme (dı) aracılığıyla belirli Hizmetleri geçersiz kılmayı gerektirir.
+*Global. asax. cs* dosyası Web Forms projeler için varsayılan başlangıç sayfasıdır. EShop projesinde, bu dosya denetim (IOC) kapsayıcısının Inversion öğesini yapılandırır ve uygulamanın veya isteğin çeşitli yaşam döngüsü olaylarını işler. Bu olaylardan bazıları ara yazılım (gibi) ile işlenir `Application_BeginRequest` . Diğer olaylar, bağımlılık ekleme (dı) aracılığıyla belirli Hizmetleri geçersiz kılmayı gerektirir.
 
-Örnek olarak, eShop için *Global.asax.cs* dosyası aşağıdaki kodu içerir:
+Örnek olarak, eShop için *Global. asax. cs* dosyası aşağıdaki kodu içerir:
 
 ```csharp
 public class Global : HttpApplication, IContainerProviderAccessor
@@ -256,7 +256,7 @@ Uygulama başlatma hakkında daha fazla bilgi için bkz. [uygulama başlatma](ap
 
 Http modülleri ve işleyicileri, HTTP isteği ardışık düzenini denetlemek için Web Forms içindeki yaygın desenlerdir. `IHttpModule`Veya `IHttpHandler` ' i uygulayan veya gelen istekleri işleyecek sınıflar. *web.config* dosyasında modül ve işleyicileri yapılandırma Web Forms. Web Forms Ayrıca uygulama yaşam döngüsü olay işlemeye bağlıdır. ASP.NET Core bunun yerine ara yazılım kullanır. Ara yazılım, `Configure` sınıfının yöntemine kaydedilir `Startup` . Ara yazılım yürütme sırası, kayıt sırasına göre belirlenir.
 
-[Başlatma Işlemini etkinleştir](#enable-startup-process) bölümünde, yöntemi olarak Web Forms bir yaşam döngüsü olayı tetiklenir `Application_BeginRequest` . Bu olay ASP.NET Core ' de kullanılamaz. Bu davranışı gerçekleştirmenin bir yolu, ara yazılımı *Startup.cs* File örneğinde görüldüğü gibi uygulamaktır. Bu ara yazılım aynı mantığı yapar ve denetimi, ara yazılım ardışık düzeninde bir sonraki işleyiciye aktarır.
+[Başlatma Işlemini etkinleştir](#enable-startup-process) bölümünde, yöntemi olarak Web Forms bir yaşam döngüsü olayı tetiklenir `Application_BeginRequest` . Bu olay ASP.NET Core ' de kullanılamaz. Bu davranışı gerçekleştirmenin bir yolu, *Başlangıç. cs* dosyası örneğinde görüldüğü gibi ara yazılımı uygulamaktır. Bu ara yazılım aynı mantığı yapar ve denetimi, ara yazılım ardışık düzeninde bir sonraki işleyiciye aktarır.
 
 Modül ve işleyicileri geçirme hakkında daha fazla bilgi için bkz. [http işleyicilerini ve modülleri ASP.NET Core ara yazılıma geçirme](/aspnet/core/migration/http-modules).
 
@@ -287,7 +287,7 @@ Paketleme ve küçültmeye yönelik daha fazla bilgi için, bkz. [ASP.NET Core s
 
 Web Forms uygulamasındaki bir sayfa *. aspx* uzantılı bir dosyadır. Bir Web Forms sayfası, genellikle içindeki bir bileşenle eşleştirilebilir Blazor . Bir Blazor bileşen *. Razor* uzantılı bir dosyada yazılır. EShop projesi için beş sayfa Razor sayfasına dönüştürülür.
 
-Örneğin, Ayrıntılar görünümü Web Forms projesindeki üç dosya içerir: *details. aspx*, *details.aspx.cs* ve *details.aspx.Designer.cs*. Blazor' A dönüştürme yaparken, arka plan kodu ve biçimlendirme *details. Razor* içinde birleştirilir. Razor derlemesi ( *. Designer.cs* dosyaları için eşdeğer) *obj* dizininde depolanır ve varsayılan olarak **Çözüm Gezgini** görüntülenebilir. Web Forms sayfası aşağıdaki biçimlendirmeden oluşur:
+Örneğin, Ayrıntılar görünümü Web Forms projedeki üç dosya içerir: *details. aspx*, *details. aspx. cs* ve *details. aspx. Designer. cs*. Blazor' A dönüştürme yaparken, arka plan kodu ve biçimlendirme *details. Razor* içinde birleştirilir. Razor derlemesi ( *. Designer. cs* dosyaları ile eşdeğer) *obj* dizininde depolanır ve varsayılan olarak, **Çözüm Gezgini** görüntülenebilir. Web Forms sayfası aşağıdaki biçimlendirmeden oluşur:
 
 ```aspx-csharp
 <%@ Page Title="Details" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Details.aspx.cs" Inherits="eShopLegacyWebForms.Catalog.Details" %>
@@ -524,7 +524,7 @@ namespace eShopLegacyWebForms.Catalog
 
 Kodun ve biçimlendirmenin aynı dosyada olduğuna dikkat edin. Gerekli hizmetlere, özniteliğiyle erişilebilir hale getirilir `@inject` . `@page`Yönergeye göre, bu sayfaya `Catalog/Details/{id}` rotada erişilebilir. Yolun `{id}` yer tutucusunun değeri bir tamsayı ile kısıtlanıyor. [Yönlendirme](pages-routing-layouts.md) bölümünde açıklandığı gibi, Web Forms aksine bir Razor bileşeni, kendi yolunu ve dahil edilen tüm parametreleri açıkça belirtir. Birçok Web Forms denetimi ' de tam karşılıklarıyla eşleşmeyebilir Blazor . Genellikle aynı amacı sunan eşdeğer bir HTML kod parçacığı vardır. Örneğin, `<asp:Label />` Denetim BIR HTML `<label>` öğesiyle değiştirilebilir.
 
-### <a name="model-validation-in-no-locblazor"></a>İçindeki model doğrulaması Blazor
+### <a name="model-validation-in-blazor"></a>İçindeki model doğrulaması Blazor
 
 Web Forms kodunuz doğrulamayı içeriyorsa, az sayıda değişiklik ile sahip olduğunuz kadarını aktarabilirsiniz. İçinde çalıştırmanın bir avantajı, Blazor aynı doğrulama mantığının özel JavaScript gerekmeden çalıştırılmamasının bir avantajıdır. Veri ek açıklamaları kolay model doğrulamayı etkinleştirir.
 

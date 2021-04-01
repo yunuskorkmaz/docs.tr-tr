@@ -12,10 +12,10 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 ms.openlocfilehash: b05edde3c6faef39aa724dd49d159abe23d049f5
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "102102977"
 ---
 # <a name="usage-rules"></a>Kullanım kuralları
@@ -24,7 +24,7 @@ Kullanım kuralları, .NET 'in uygun kullanımını destekler.
 
 ## <a name="in-this-section"></a>Bu bölümde
 
-|Kural|Açıklama|
+|Kural|Description|
 |----------|-----------------|
 |[CA1801: Kullanılmayan parametreleri gözden geçirin](ca1801.md)|Yöntem imzası, yöntemin gövdesinde kullanılmayan bir parametre içerir.|
 |[CA1816: GC.SuppressFinalize'ı doğru çağırın](ca1816.md)|Dispose uygulamasının bir yöntemi çağırmaz `GC.SuppressFinalize` ; ya da çağrıların uygulanması olmayan bir yöntem `Dispose` `GC.SuppressFinalize` ya da bir yöntem, `GC.SuppressFinalize` `this` (Visual Basic) dışında bir öğe çağırır ve geçirir `Me` .|

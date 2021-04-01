@@ -12,21 +12,21 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 ms.openlocfilehash: a747dd4dcda351a1ddb0f3d069bb7bac895c32f8
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "96589438"
 ---
 # <a name="reliability-rules"></a>Güvenilirlik kuralları
 
 Güvenilirlik kuralları, doğru bellek ve iş parçacığı kullanımı gibi kitaplık ve uygulama güvenilirliğini destekler. Güvenilirlik kuralları şunları içerir:
 
-|Kural|Açıklama|
+|Kural|Description|
 |----------|-----------------|
 |[CA2000: Kapsamı kaybetmeden önce nesneleri bırakın](ca2000.md)|Bir nesnenin sonlandırıcısının çalışmasını engelleyecek olağanüstü bir durum gerçekleşebileceği için, nesne ona olan tüm başvurular kapsam dışına çıkmadan açıkça atılmalıdır.|
 |[CA2002: Zayıf kimliği olan nesneleri kilitlemeyin](ca2002.md)|Bir nesneye uygulama etki alanları arasından erişilebiliyorsa o nesnenin zayıf bir kimliğe sahip olduğu söylenir. Zayıf kimliğe sahip bir nesne üzerinde kilit almayı deneyen iş parçacığı aynı nesne üzerinde bir kilide sahip olan farklı uygulama etki alanı içindeki ikinci iş parçacığı tarafından engellenebilir.|
-|[CA2007: Doğrudan bir Görevi beklemeyin](ca2007.md)|Zaman uyumsuz bir [awaits](../../../csharp/language-reference/operators/await.md) yöntem doğrudan bekler <xref:System.Threading.Tasks.Task> .|
+|[CA2007: Doğrudan bir Görevi beklemeyin](ca2007.md)|Zaman uyumsuz bir [](../../../csharp/language-reference/operators/await.md) yöntem doğrudan bekler <xref:System.Threading.Tasks.Task> .|
 |[CA2008: TaskScheduler geçirmeden görev oluşturmayın](ca2008.md)|Bir görev oluşturma veya devamlılık işlemi, bir parametre belirtmeyen bir yöntem aşırı yüklemesi kullanır <xref:System.Threading.Tasks.TaskScheduler> .|
 |[CA2009: Bir ImmutableCollection değeri üzerinde ToImmutableCollection çağırma](ca2009.md)|`ToImmutable` Yöntem, ad alanından sabit bir koleksiyonda gereksiz şekilde çağrıldı <xref:System.Collections.Immutable> .|
 |[CA2011: Özelliği, ayarlayıcısı içinde atama](ca2011.md) | Bir özelliğe yanlışlıkla kendi [set erişimcisi](../../../csharp/programming-guide/classes-and-structs/using-properties.md#the-set-accessor)içinde bir değer atandı. |

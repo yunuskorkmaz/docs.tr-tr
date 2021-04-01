@@ -8,10 +8,10 @@ no-loc:
 - WebAssembly
 ms.date: 11/20/2020
 ms.openlocfilehash: 18258c54cffdc538ddd11ec1393639216f86f85a
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "102255463"
 ---
 # <a name="blazor-app-hosting-models"></a>Blazor uygulama barındırma modelleri

@@ -7,13 +7,13 @@ no-loc:
 - Blazor
 ms.date: 11/20/2020
 ms.openlocfilehash: afb5d4025b81c2ddef782c462c94d32edc872a21
-ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "96509734"
 ---
-# <a name="architecture-comparison-of-aspnet-web-forms-and-no-locblazor"></a>ASP.NET Web Forms ve mimari karşılaştırması Blazor
+# <a name="architecture-comparison-of-aspnet-web-forms-and-blazor"></a>ASP.NET Web Forms ve mimari karşılaştırması Blazor
 
 ASP.NET Web Forms ve Blazor birçok benzer kavramlara sahip olmakla birlikte, nasıl çalıştıkları konusunda farklılıklar vardır. Bu bölümde, ASP.NET Web Forms ve ve mimarilerinin iç işleyişi ve mimarileri incelenmiştir Blazor .
 
@@ -28,9 +28,9 @@ Sayfalar aşağıdaki bileşenlerden oluşur:
 - Logic ve olay işleme özelliklerini içeren bir arka plan kod sınıfı
 - Denetimler
 
-Denetimler, bir sayfada program aracılığıyla yerleştirilebilen ve bunlarla etkileşim içinde yer alan yeniden kullanılabilir Web Kullanıcı arabirimi birimleridir. Sayfalar, biçimlendirme, denetimler ve bazı kod içeren *. aspx* ile biten dosyalardan oluşur. Arka plan kod sınıfları, kullanılan programlama diline bağlı olarak aynı temel ada ve bir *. aspx.cs* ya da *. aspx. vb* uzantısına sahip dosyalardır. Her zaman, Web sunucusu *. aspx* dosyalarının içeriğini Yorumlar ve her değiştiğinde bunları derler. Web sunucusu zaten çalışıyor olsa bile bu yeniden derleme oluşur.
+Denetimler, bir sayfada program aracılığıyla yerleştirilebilen ve bunlarla etkileşim içinde yer alan yeniden kullanılabilir Web Kullanıcı arabirimi birimleridir. Sayfalar, biçimlendirme, denetimler ve bazı kod içeren *. aspx* ile biten dosyalardan oluşur. Arka plan kod sınıfları, kullanılan programlama diline bağlı olarak aynı temel ada ve. aspx. *CS* veya *. aspx. vb* uzantısına sahip dosyalardır. Her zaman, Web sunucusu *. aspx* dosyalarının içeriğini Yorumlar ve her değiştiğinde bunları derler. Web sunucusu zaten çalışıyor olsa bile bu yeniden derleme oluşur.
 
-Denetimler, biçimlendirme ile oluşturulup Kullanıcı denetimleri olarak teslim edilebilir. Bir kullanıcı denetimi `UserControl` sınıftan türetilir ve sayfada benzer bir yapıya sahiptir. Kullanıcı denetimleri için biçimlendirme bir *. ascx* dosyasında depolanır. Eşlik eden bir arka plan kod sınıfı, bir *. ascx.cs* veya *. ascx. vb* dosyasında bulunur. Denetimler, ya da temel sınıfından devralarak kodla tamamen oluşturulabilir `WebControl` `CompositeControl` .
+Denetimler, biçimlendirme ile oluşturulup Kullanıcı denetimleri olarak teslim edilebilir. Bir kullanıcı denetimi `UserControl` sınıftan türetilir ve sayfada benzer bir yapıya sahiptir. Kullanıcı denetimleri için biçimlendirme bir *. ascx* dosyasında depolanır. Eşlik eden bir arka plan kod sınıfı *. ascx. cs* veya *. ascx. vb* dosyasında bulunur. Denetimler, ya da temel sınıfından devralarak kodla tamamen oluşturulabilir `WebControl` `CompositeControl` .
 
 Sayfaların Ayrıca kapsamlı bir olay yaşam döngüsü vardır. Her sayfa, ASP.NET çalışma zamanı sayfanın kodunu her istek için yürütürken oluşan başlatma, yükleme, PreRender ve kaldırma olayları için olaylar oluşturur.
 

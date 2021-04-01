@@ -12,10 +12,10 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 ms.openlocfilehash: 403d9d48a57c85d1cdf7bd2dfb6cbee1656de733
-ms.sourcegitcommit: 2e4adc490c1d2a705a0592b295d606b10b9f51f1
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "96589282"
 ---
 # <a name="publish-rules"></a>Yayımlama kuralları
@@ -24,7 +24,7 @@ ms.locfileid: "96589282"
 
 ## <a name="in-this-section"></a>Bu bölümde
 
-|Kural|Açıklama|
+|Kural|Description|
 |----------|-----------------|
 |[IL3000 tek bir dosya olarak yayımlarken derleme dosya yoluna erişmeyi önleyin](il3000.md)|Tek bir dosya olarak yayımlarken derleme dosya yoluna erişmemeye özen gösterin|
 |[IL3001 tek bir dosya olarak yayımlarken derleme dosya yoluna erişmeyi önleyin](il3001.md)|Tek bir dosya olarak yayımlarken derleme dosya yoluna erişmemeye özen gösterin|

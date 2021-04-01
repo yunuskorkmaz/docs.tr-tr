@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Assembly Binder events (CoreCLR)
 - ETW, EventPipe, LTTng assembly loader and binder events (CoreCLR)
 ms.openlocfilehash: 2284c580482f6b93a77f44649225ff7e5485666a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "96590037"
 ---
 # <a name="net-runtime-loader-and-binder-events"></a>.NET çalışma zamanı yükleyicisi ve Ciltçi olayları
@@ -22,7 +22,7 @@ Bu olaylar derlemeleri ve modülleri yükleme ve kaldırma ile ilgili bilgiler t
 |-----------------------------------|-----------|-----------|
 |`LoaderKeyword` 0x8|`DomainModuleLoad_V1`|Bilgilendirici (4)|
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`DomainModuleLoad_V1`|151|Bir uygulama etki alanı için bir modül yüklendiğinde tetiklenir.|
 
@@ -32,7 +32,7 @@ Bu olaylar derlemeleri ve modülleri yükleme ve kaldırma ile ilgili bilgiler t
 |-----------------------------------|-----------|-----------|
 |`LoaderKeyword` 0x8|`DomainModuleLoad_V1`|Bilgilendirici (4)|
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`ModuleLoad_V2`|152|Bir işlemin ömrü boyunca bir modül yüklendiğinde tetiklenir.|
 
@@ -58,7 +58,7 @@ Bu olaylar derlemeleri ve modülleri yükleme ve kaldırma ile ilgili bilgiler t
 |-----------------------------------|-----------|-----------|
 |`LoaderKeyword` 0x8|`DomainModuleLoad_V1`|Bilgilendirici (4)|
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`ModuleUnload_V2`|153|Bir işlem süresince bir modül kaldırıldığında tetiklenir.|
 
@@ -84,7 +84,7 @@ Bu olaylar derlemeleri ve modülleri yükleme ve kaldırma ile ilgili bilgiler t
 |-----------------------------------|-----------|-----------|
 |`LoaderKeyword` 0x8|`DomainModuleLoad_V1`|Bilgilendirici (4)
 
-|Olay|Olay Kimliği|Açıklama
+|Olay|Olay Kimliği|Description
 |-----------|--------------|-----------------|
 |`ModuleDCStart_V2`|153|Bir başlangıç Özeti sırasında modülleri numaralandırır.|
 
@@ -110,7 +110,7 @@ Bu olaylar derlemeleri ve modülleri yükleme ve kaldırma ile ilgili bilgiler t
 |-----------------------------------|-----------|-----------|
 |`LoaderKeyword` 0x8|`DomainModuleLoad_V1`|Bilgilendirici (4)|
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`ModuleDCEnd_V2`|154|Bir son özeti sırasında modülleri numaralandırır.|
 
@@ -136,7 +136,7 @@ Bu olaylar derlemeleri ve modülleri yükleme ve kaldırma ile ilgili bilgiler t
 |-----------------------------------|-----------|-----------|
 |`LoaderKeyword` 0x8|`DomainModuleLoad_V1`|Bilgilendirici (4)|
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`AssemblyLoad_V1`|154|Bir derleme yüklendiğinde tetiklenir.|
 
@@ -155,7 +155,7 @@ Bu olaylar derlemeleri ve modülleri yükleme ve kaldırma ile ilgili bilgiler t
 |-----------------------------------|-----------|-----------|
 |`LoaderKeyword` 0x8|`DomainModuleLoad_V1`|Bilgilendirici (4)|
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`FireAssemblyUnload_V1`|155|Bir derleme yüklendiğinde tetiklenir.|
 
@@ -174,7 +174,7 @@ Bu olaylar derlemeleri ve modülleri yükleme ve kaldırma ile ilgili bilgiler t
 |-----------------------------------|-----------|-----------|
 |`LoaderKeyword` 0x8|`DomainModuleLoad_V1`|Bilgilendirici (4)|
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`AssemblyDCStart_V1`|155|Bir başlangıç Özeti sırasında derlemeleri numaralandırır.|
 
@@ -193,7 +193,7 @@ Bu olaylar derlemeleri ve modülleri yükleme ve kaldırma ile ilgili bilgiler t
 |-----------------------------------|-----------|-----------|
 |`Binder` 4,|`AssemblyLoadStart`|Bilgilendirici (4)|
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`AssemblyLoadStart`|290|Derleme yükü istendi.
 
@@ -212,7 +212,7 @@ Bu olaylar derlemeleri ve modülleri yükleme ve kaldırma ile ilgili bilgiler t
 |-----------------------------------|-----------|-----------|
 |`Binder` 4,|`AssemblyLoadStart`|Bilgilendirici (4)|
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`AssemblyLoadStart`|291|Derleme yükü istendi.
 
@@ -235,7 +235,7 @@ Bu olaylar derlemeleri ve modülleri yükleme ve kaldırma ile ilgili bilgiler t
 |-----------------------------------|-----------|-----------|
 |`Binder` 4,|Bilgilendirici (4)|
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`ResolutionAttempted`|292|Derleme yükü istendi.
 
@@ -256,7 +256,7 @@ Bu olaylar derlemeleri ve modülleri yükleme ve kaldırma ile ilgili bilgiler t
 |-----------------------------------|-----------|-----------|
 |`Binder` 4,|Bilgilendirici (4)|
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`AssemblyLoadContextResolvingHandlerInvoked`|293|[Assemblyloadcontext. çözümleniyor](xref:System.Runtime.Loader.AssemblyLoadContext.Resolving) işleyicisi çağrıldı.|
 
@@ -275,7 +275,7 @@ Bu olaylar derlemeleri ve modülleri yükleme ve kaldırma ile ilgili bilgiler t
 |-----------------------------------|-----------|-----------|
 |`Binder` 4,|Bilgilendirici (4)|
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`AppDomainAssemblyResolveHandlerInvoked`|294|Bir <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> işleyici çağrıldı.|
 
@@ -293,7 +293,7 @@ Bu olaylar derlemeleri ve modülleri yükleme ve kaldırma ile ilgili bilgiler t
 |-----------------------------------|-----------|-----------|
 |`Binder` 4,|Bilgilendirici (4)|
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`AssemblyLoadFromResolveHandlerInvoked`|295|Bir <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> işleyici çağrıldı.|
 
@@ -311,7 +311,7 @@ Bu olaylar derlemeleri ve modülleri yükleme ve kaldırma ile ilgili bilgiler t
 |-----------------------------------|-----------|-----------|
 |`Binder` 4,|Bilgilendirici (4)|
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`KnownPathProbed`|296|Bilinen bir yol derleme için araştırılırdı.|
 

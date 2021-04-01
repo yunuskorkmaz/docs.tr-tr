@@ -3,10 +3,10 @@ title: Neden modern masaüstü uygulamalarını seçmelisiniz?
 description: Modern dünyada Windows Forms, WPF ve UWP gibi masaüstü teknolojileri hakkında bilgi edinin.
 ms.date: 12/29/2020
 ms.openlocfilehash: 8489e41c973bb472a23bca38e9374c36e4cdd366
-ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/20/2021
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "98615899"
 ---
 # <a name="why-modern-desktop-applications"></a>Neden modern masaüstü uygulamalarını seçmelisiniz?

@@ -3,10 +3,10 @@ title: Modern masaüstü uygulamalarını geçirme
 description: Modern masaüstü uygulamalarına yönelik geçiş süreci hakkında bilmeniz gereken her şey.
 ms.date: 01/19/2021
 ms.openlocfilehash: b5bea6e601dc040adfd8ed410320a3416cb3372e
-ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/20/2021
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "98615769"
 ---
 # <a name="migrating-modern-desktop-applications"></a>Modern masaüstü uygulamalarını geçirme

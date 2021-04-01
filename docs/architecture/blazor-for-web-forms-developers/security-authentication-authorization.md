@@ -7,13 +7,13 @@ no-loc:
 - Blazor
 ms.date: 11/20/2020
 ms.openlocfilehash: 0344960237a5d9da61eb0d85987c44e136f1be48
-ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "96509851"
 ---
-# <a name="security-authentication-and-authorization-in-aspnet-web-forms-and-no-locblazor"></a>Güvenlik: ASP.NET Web Forms ve üzerinde kimlik doğrulaması ve yetkilendirme Blazor
+# <a name="security-authentication-and-authorization-in-aspnet-web-forms-and-blazor"></a>Güvenlik: ASP.NET Web Forms ve üzerinde kimlik doğrulaması ve yetkilendirme Blazor
 
 Bir ASP.NET Web Forms uygulamasından ' ye geçiş yapmak Blazor , uygulamanın kimlik doğrulaması ile yapılandırıldığını varsayarak kimlik doğrulamanın ve yetkilendirmenin nasıl gerçekleştirileceğini neredeyse tamamen gerektirir. Bu bölümde, ASP.NET Web Forms evrensel sağlayıcı modelinden (üyelik, roller ve Kullanıcı profilleri için) ve uygulamalardan ASP.NET Core kimlik ile nasıl çalışabileceğiniz ele alınacaktır Blazor . Bu bölümde üst düzey adımlar ve önemli noktalar ele alınırken, ayrıntılı adımlar ve betikler başvurulan belgelerde bulunabilir.
 
@@ -266,7 +266,7 @@ Kullanıcılarınıza yeni kimlik tablolarına geçiş yapmak için [belgelerde 
 
 Kullanıcı parolalarının geçirilmesi mümkündür ancak işlem çok daha karmaşıktır. Kullanıcıların, geçiş işleminin bir parçası olarak parolalarını güncelleştirmeleri gerekliliği ve bunları yeni, benzersiz parolalar kullanacak şekilde teşvik, uygulamanın genel güvenliğini artırmaları olasıdır.
 
-### <a name="migrating-security-settings-from-webconfig-to-startupcs"></a>web.config güvenlik ayarlarını Startup.cs 'e geçirme
+### <a name="migrating-security-settings-from-webconfig-to-startupcs"></a>web.config güvenlik ayarlarını başlangıç. cs 'ye geçirme
 
 Yukarıda belirtildiği gibi, ASP.NET üyeliği ve rol sağlayıcıları uygulamanın `web.config` dosyasında yapılandırılır. ASP.NET Core uygulamalar IIS 'ye bağlı olmadığından ve yapılandırma için ayrı bir sistem kullandıklarından, bu ayarların başka bir yerde yapılandırılması gerekir. Çoğu bölüm için, ASP.NET Core kimlik `Startup.cs` dosyada yapılandırılır. Daha önce oluşturulmuş olan Web projesini açın (kimlik tablosu şeması oluşturmak için) ve dosyasını gözden geçirin `Startup.cs` .
 

@@ -1,5 +1,5 @@
 ---
-title: Çalışma zamanı olayları
+title: Çalıştırma zamanı olayları
 description: ETW, LTTng veya EventPipe ile kullanılabilen .NET Runtime (CoreCLR) tarafından yayılan Tanılama olaylarını gözden geçirin.
 ms.date: 11/13/2020
 ms.topic: reference
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - runtime events (CoreCLR)
 - ETW, EventPipe runtime events (CoreCLR)
 ms.openlocfilehash: 33fa7275ce40934ce043b4d0dba5749c37515755
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "96589997"
 ---
 # <a name="net-runtime-events"></a>.NET çalışma zamanı olayları

@@ -5,10 +5,10 @@ ms.date: 02/06/2021
 ms.topic: reference
 author: BartoszKlonowski
 ms.openlocfilehash: 3d8d12af32c2d108109e0671d8a932b07608733e
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2021
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "100457917"
 ---
 # <a name="miscellaneous-rules"></a>Çeşitli kurallar

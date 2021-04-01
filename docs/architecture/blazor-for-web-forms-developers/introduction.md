@@ -8,13 +8,13 @@ no-loc:
 - WebAssembly
 ms.date: 11/20/2020
 ms.openlocfilehash: f1967dac0f46ba7cfefab62c5528dd1db8029514
-ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/02/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "96509721"
 ---
-# <a name="an-introduction-to-no-locblazor-for-aspnet-web-forms-developers"></a>BlazorASP.NET Web Forms geliştiricilere giriş
+# <a name="an-introduction-to-blazor-for-aspnet-web-forms-developers"></a>BlazorASP.NET Web Forms geliştiricilere giriş
 
 ASP.NET Web Forms Framework, ilk olarak 2002 ' de sevk edilen .NET Framework .NET Web geliştirme 'nin bir Zımbalayıcı. Web, hala büyük ölçüde büyük bir süre içinde ASP.NET Web Forms, masaüstü geliştirme için kullanılan desenlerin çoğunu benimseerek Web uygulamalarını basit ve üretken hale getirerek,. ASP.NET Web Forms ' de, Web sayfaları yeniden kullanılabilir kullanıcı arabirimi denetimlerinden hızlı bir şekilde bulunabilir. Kullanıcı etkileşimleri doğal olarak olay olarak işlenir. Microsoft ve denetim satıcıları tarafından sunulan Web Forms Kullanıcı arabirimi denetimlerinin zengin bir ekosistemi vardır. Denetimler veri kaynaklarına bağlanma ve zengin veri görselleştirmeleri görüntüleme çabalarının hızını kolaylaştırır. Görsel olarak, Web Forms Tasarımcısı denetimleri yönetmek için basit bir sürükle ve bırak arabirimi sağlar.
 
@@ -51,13 +51,13 @@ Ancak, tarayıcılar çok yönlü platformlar haline geldi. Kullanıcı makinesi
 
 Ancak iki farklı platform ve ekosisteminin köprülemesi (.NET ve JavaScript) bir maliyetle birlikte gelir. Farklı diller, çerçeveler ve araçlarla iki paralel çalışma LDS 'de uzmanlık gerekir. Kod ve mantık istemci ile sunucu arasında kolayca paylaşılamaz, bu da çoğaltma ve mühendislik yüküne neden olur. Ayrıca, Breakneck hızında gelişen bir geçmişi olan JavaScript ekosistemi ile devam etmek zor olabilir. Ön uç Framework ve derleme aracı tercihleri hızla değişir. Sektör, Grönden Gulp to WebPack 'e kadar ilerlemeyi gözlemlemiştir ve bu şekilde devam eder. JQuery, altını gizleme, angular, tepki verme ve Vue gibi ön uç çerçeveleri ile aynı Restless dalgalanması oluştu. Ancak JavaScript 'in tarayıcı Monopoly 'i, bu konuyla çok az tercih vardı. Diğer bir deyişle, Web topluluğu bir araya gelene ve bir *Miracle* oluşmasına neden olur!
 
-## <a name="no-locwebassembly-fulfills-a-need"></a>WebAssembly ihtiyacı karşılar
+## <a name="webassembly-fulfills-a-need"></a>WebAssembly ihtiyacı karşılar
 
 2015 ' de, ana tarayıcı satıcıları, bir W3C topluluk grubundaki güçleri birleştirilmiş yeni bir açık web standardı oluşturacak şekilde birleştirilir WebAssembly . WebAssembly Web için bir bayt kodudur. Kodunuzu ' a derleyebiliyorsanız WebAssembly , daha sonra herhangi bir platformda her türlü yerel hızda herhangi bir tarayıcıda çalıştırılabilir. C/C++ ' ya odaklanan ilk çabalar. Sonuç, yerel 3B grafik altyapılarını eklentiler olmadan doğrudan tarayıcıda çalıştırmanın çarpıcı bir gösterimiydi. WebAssembly , bu yana tüm büyük tarayıcılarda standartlaştırılmış ve uygulanmıştır.
 
 Üzerinde .NET çalıştıran çalışma WebAssembly , .NET 5 ' ten destek de dahil olmak üzere, geç 2017 ve 2020 ' de yayımlanmıştır. .NET kodu doğrudan tarayıcıda çalıştırma özelliği, .NET ile tam yığın Web geliştirmesini sağlar.
 
-## <a name="no-locblazor-full-stack-web-development-with-net"></a>Blazor: .NET ile tam yığın Web geliştirme
+## <a name="blazor-full-stack-web-development-with-net"></a>Blazor: .NET ile tam yığın Web geliştirme
 
 Kendi başına bir tarayıcıda .NET kodu çalıştırma özelliği, istemci tarafı Web uygulamaları oluşturmak için uçtan uca bir deneyim sağlamaz. Bu noktada Blazor ' de gelir. Blazor JavaScript yerine C# tabanlı bir istemci tarafı Web Kullanıcı arabirimi çerçevesidir. Blazor aracılığıyla doğrudan tarayıcıda çalıştırılabilir WebAssembly . Tarayıcı eklentileri gerekli değildir. Alternatif olarak, Blazor uygulamalar .net üzerinde sunucu tarafı çalıştırabilir ve tarayıcıyla gerçek zamanlı bir bağlantı üzerinden tüm kullanıcı etkileşimlerini işleyebilir.
 
@@ -79,7 +79,7 @@ Bu kitap Blazor , özellikle de ASP.NET Web Forms geliştiricilere yönelik bir 
 - Blazor.NET ile ilgilidir.
 - Mevcut ASP.NET Web Forms uygulamalarını uygun yerlerde geçirmeye yönelik makul stratejiler Blazor .
 
-## <a name="get-started-with-no-locblazor"></a>Kullanmaya başlayın Blazor
+## <a name="get-started-with-blazor"></a>Kullanmaya başlayın Blazor
 
 Kullanmaya başlamak Blazor kolaydır. Adresine gidin <https://blazor.net> ve uygun .NET SDK ve proje şablonlarını yüklemek için bağlantıları izleyin Blazor . Ayrıca, Blazor Visual Studio veya Visual Studio Code araçları ayarlama yönergelerini bulacaksınız.
 

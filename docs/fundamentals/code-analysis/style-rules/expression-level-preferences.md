@@ -9,10 +9,10 @@ dev_langs:
 - CSharp
 - VB
 ms.openlocfilehash: 9933111b1ed76166e5ae86e9bc1a2332c3c77c81
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "96589825"
 ---
 # <a name="expression-level-preferences"></a>İfade düzeyinde tercihler

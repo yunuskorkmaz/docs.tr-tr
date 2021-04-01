@@ -5,10 +5,10 @@ author: csharpfritz
 ms.author: jefritz
 ms.date: 05/15/2020
 ms.openlocfilehash: 2ca811f886c6a245ac16c2bd66a68ff16e5bfc44
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 03/30/2021
 ms.locfileid: "88267730"
 ---
 # <a name="state-management"></a>Durum yönetimi
@@ -19,7 +19,7 @@ Durum yönetimi, Görünüm durumu, oturum durumu, uygulama durumu ve geri gönd
 
 Web Forms uygulamasında durum yönetimi tartışırken birçok geliştirici, ViewState 'in hemen önünde bulunduracaktır. Web Forms, ViewState, tarayıcıda büyük bir kodlanmış metin bloğu göndererek HTTP istekleri arasındaki içeriğin durumunu yönetir. Görünüm durumu alanı, büyük olasılıkla çok sayıda öğe içeren bir sayfadan içerik ile fazla olabilir, bu da boyutu çok fazla olacak şekilde genişletiliyor.
 
-Blazor sunucusu ile, Uygulama sunucuyla devam eden bir bağlantı sağlar. Bağlantı etkin kabul edildiğinde uygulamanın, *devre*olarak adlandırılan durumu sunucu belleğinde tutulur. Durum yalnızca Kullanıcı uygulamadan veya uygulamadaki belirli bir sayfadan uzaklaştığında bırakılacak. Etkin bileşenlerin tüm üyeleri, sunucusuyla etkileşimler arasında kullanılabilir.
+Blazor sunucusu ile, Uygulama sunucuyla devam eden bir bağlantı sağlar. Bağlantı etkin kabul edildiğinde uygulamanın, *devre* olarak adlandırılan durumu sunucu belleğinde tutulur. Durum yalnızca Kullanıcı uygulamadan veya uygulamadaki belirli bir sayfadan uzaklaştığında bırakılacak. Etkin bileşenlerin tüm üyeleri, sunucusuyla etkileşimler arasında kullanılabilir.
 
 Bu özelliğin çeşitli avantajları vardır:
 
