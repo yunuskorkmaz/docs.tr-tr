@@ -6,4 +6,4 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 03/30/2021
 ms.locfileid: "102255557"
 ---
- <span data-ttu-id="ecac9-101">[Raspberry PI OS yüklü](https://www.raspberrypi.org/documentation/installation/installing-images/README.md) Raspberry Pi (2 veya üzeri)</span><span class="sxs-lookup"><span data-stu-id="ecac9-101">Raspberry Pi (2 or greater) with [Raspberry Pi OS installed](https://www.raspberrypi.org/documentation/installation/installing-images/README.md)</span></span>
+ <span data-ttu-id="11ead-101">[Raspberry PI OS yüklü](https://www.raspberrypi.org/documentation/installation/installing-images/README.md) Raspberry Pi (2 veya üzeri)</span><span class="sxs-lookup"><span data-stu-id="11ead-101">Raspberry Pi (2 or greater) with [Raspberry Pi OS installed](https://www.raspberrypi.org/documentation/installation/installing-images/README.md)</span></span>

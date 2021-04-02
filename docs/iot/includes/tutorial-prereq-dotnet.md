@@ -6,4 +6,4 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 03/30/2021
 ms.locfileid: "102255559"
 ---
-<span data-ttu-id="238d5-101">[.NET SDK](https://dotnet.microsoft.com/download) sürüm 5.0.100 RC2 veya üzeri</span><span class="sxs-lookup"><span data-stu-id="238d5-101">[.NET SDK](https://dotnet.microsoft.com/download) version 5.0.100 RC2 or later</span></span>
+<span data-ttu-id="8fae4-101">[.NET SDK](https://dotnet.microsoft.com/download) sürüm 5.0.100 RC2 veya üzeri</span><span class="sxs-lookup"><span data-stu-id="8fae4-101">[.NET SDK](https://dotnet.microsoft.com/download) version 5.0.100 RC2 or later</span></span>

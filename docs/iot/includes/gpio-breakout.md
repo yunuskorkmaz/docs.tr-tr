@@ -7,4 +7,4 @@ ms.lasthandoff: 03/30/2021
 ms.locfileid: "96589890"
 ---
 > [!TIP]
-> <span data-ttu-id="10971-101">GıO üstbilgisiyle bağlantıları kolaylaştırmak için, bir enine tahta ile birlikte bir GıO ayırıcısının kullanılması önerilir.</span><span class="sxs-lookup"><span data-stu-id="10971-101">A GPIO breakout board in conjunction with a breadboard is recommended to streamline connections to the GPIO header.</span></span>
+> <span data-ttu-id="895aa-101">GıO üstbilgisiyle bağlantıları kolaylaştırmak için, bir enine tahta ile birlikte bir GıO ayırıcısının kullanılması önerilir.</span><span class="sxs-lookup"><span data-stu-id="895aa-101">A GPIO breakout board in conjunction with a breadboard is recommended to streamline connections to the GPIO header.</span></span>

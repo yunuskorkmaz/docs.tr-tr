@@ -43,6 +43,8 @@ items:
                 items:
                   - name: Null olabilme ek açıklama değişiklikleri
                     href: core-libraries/6.0/nullable-ref-type-annotation-changes.md
+                  - name: Yeni sorgulanabilir yöntem aşırı yüklemeleri
+                    href: core-libraries/6.0/additional-linq-queryable-method-overloads.md
                   - name: Parametreler Stream ile türetilmiş türlerde yeniden adlandırıldı
                     href: core-libraries/6.0/parameters-renamed-on-stream-derived-types.md
                   - name: Standart sayısal biçim ayrıştırma duyarlığı
@@ -51,6 +53,8 @@ items:
                 items:
                   - name: API 'Ler bağımsız değişkenler NullException oluşturur
                     href: windows-forms/6.0/apis-throw-argumentnullexception.md
+                  - name: DataGridView API’leri InvalidOperationException oluşturuyor
+                    href: windows-forms/6.0/null-owner-causes-invalidoperationexception.md
                   - name: NotifyIcon.Text en fazla metin uzunluğu artırıldı
                     href: windows-forms/6.0/notifyicon-text-max-text-length-increased.md
                   - name: TableLayoutSettings özellikleri InvalidEnumArgumentException oluşturuyor
@@ -443,6 +447,8 @@ items:
                 items:
                   - name: Null olabilme ek açıklama değişiklikleri
                     href: core-libraries/6.0/nullable-ref-type-annotation-changes.md
+                  - name: Yeni sorgulanabilir yöntem aşırı yüklemeleri
+                    href: core-libraries/6.0/additional-linq-queryable-method-overloads.md
                   - name: Parametreler Stream ile türetilmiş türlerde yeniden adlandırıldı
                     href: core-libraries/6.0/parameters-renamed-on-stream-derived-types.md
                   - name: Standart sayısal biçim ayrıştırma duyarlığı
@@ -619,6 +625,8 @@ items:
                 items:
                   - name: API 'Ler bağımsız değişkenler NullException oluşturur
                     href: windows-forms/6.0/apis-throw-argumentnullexception.md
+                  - name: DataGridView API’leri InvalidOperationException oluşturuyor
+                    href: windows-forms/6.0/null-owner-causes-invalidoperationexception.md
                   - name: NotifyIcon.Text en fazla metin uzunluğu artırıldı
                     href: windows-forms/6.0/notifyicon-text-max-text-length-increased.md
                   - name: TableLayoutSettings özellikleri InvalidEnumArgumentException oluşturuyor

@@ -18,13 +18,13 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 03/30/2021
 ms.locfileid: "96589282"
 ---
-# <a name="publish-rules"></a><span data-ttu-id="ba235-103">Yayımlama kuralları</span><span class="sxs-lookup"><span data-stu-id="ba235-103">Publish rules</span></span>
+# <a name="publish-rules"></a><span data-ttu-id="34a4a-103">Yayımlama kuralları</span><span class="sxs-lookup"><span data-stu-id="34a4a-103">Publish rules</span></span>
 
-<span data-ttu-id="ba235-104">.NET için kurallar yayımlayın.</span><span class="sxs-lookup"><span data-stu-id="ba235-104">Publish rules for .NET.</span></span>
+<span data-ttu-id="34a4a-104">.NET için kurallar yayımlayın.</span><span class="sxs-lookup"><span data-stu-id="34a4a-104">Publish rules for .NET.</span></span>
 
-## <a name="in-this-section"></a><span data-ttu-id="ba235-105">Bu bölümde</span><span class="sxs-lookup"><span data-stu-id="ba235-105">In this section</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="34a4a-105">Bu bölümde</span><span class="sxs-lookup"><span data-stu-id="34a4a-105">In this section</span></span>
 
-|<span data-ttu-id="ba235-106">Kural</span><span class="sxs-lookup"><span data-stu-id="ba235-106">Rule</span></span>|<span data-ttu-id="ba235-107">Description</span><span class="sxs-lookup"><span data-stu-id="ba235-107">Description</span></span>|
+|<span data-ttu-id="34a4a-106">Kural</span><span class="sxs-lookup"><span data-stu-id="34a4a-106">Rule</span></span>|<span data-ttu-id="34a4a-107">Description</span><span class="sxs-lookup"><span data-stu-id="34a4a-107">Description</span></span>|
 |----------|-----------------|
-|[<span data-ttu-id="ba235-108">IL3000 tek bir dosya olarak yayımlarken derleme dosya yoluna erişmeyi önleyin</span><span class="sxs-lookup"><span data-stu-id="ba235-108">IL3000 Avoid accessing Assembly file path when publishing as a single file</span></span>](il3000.md)|<span data-ttu-id="ba235-109">Tek bir dosya olarak yayımlarken derleme dosya yoluna erişmemeye özen gösterin</span><span class="sxs-lookup"><span data-stu-id="ba235-109">Avoid accessing Assembly file path when publishing as a single file</span></span>|
-|[<span data-ttu-id="ba235-110">IL3001 tek bir dosya olarak yayımlarken derleme dosya yoluna erişmeyi önleyin</span><span class="sxs-lookup"><span data-stu-id="ba235-110">IL3001 Avoid accessing Assembly file path when publishing as a single file</span></span>](il3001.md)|<span data-ttu-id="ba235-111">Tek bir dosya olarak yayımlarken derleme dosya yoluna erişmemeye özen gösterin</span><span class="sxs-lookup"><span data-stu-id="ba235-111">Avoid accessing Assembly file path when publishing as a single file</span></span>|
+|[<span data-ttu-id="34a4a-108">IL3000 tek bir dosya olarak yayımlarken derleme dosya yoluna erişmeyi önleyin</span><span class="sxs-lookup"><span data-stu-id="34a4a-108">IL3000 Avoid accessing Assembly file path when publishing as a single file</span></span>](il3000.md)|<span data-ttu-id="34a4a-109">Tek bir dosya olarak yayımlarken derleme dosya yoluna erişmemeye özen gösterin</span><span class="sxs-lookup"><span data-stu-id="34a4a-109">Avoid accessing Assembly file path when publishing as a single file</span></span>|
+|[<span data-ttu-id="34a4a-110">IL3001 tek bir dosya olarak yayımlarken derleme dosya yoluna erişmeyi önleyin</span><span class="sxs-lookup"><span data-stu-id="34a4a-110">IL3001 Avoid accessing Assembly file path when publishing as a single file</span></span>](il3001.md)|<span data-ttu-id="34a4a-111">Tek bir dosya olarak yayımlarken derleme dosya yoluna erişmemeye özen gösterin</span><span class="sxs-lookup"><span data-stu-id="34a4a-111">Avoid accessing Assembly file path when publishing as a single file</span></span>|

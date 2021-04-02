@@ -6,4 +6,4 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 03/30/2021
 ms.locfileid: "96588729"
 ---
-<span data-ttu-id="0e61a-101">`BinaryFormatter` güvenli değil ve güvenli hale getirilebilir.</span><span class="sxs-lookup"><span data-stu-id="0e61a-101">`BinaryFormatter` is insecure and can't be made secure.</span></span>
+<span data-ttu-id="e04b9-101">`BinaryFormatter` güvenli değil ve güvenli hale getirilebilir.</span><span class="sxs-lookup"><span data-stu-id="e04b9-101">`BinaryFormatter` is insecure and can't be made secure.</span></span>
