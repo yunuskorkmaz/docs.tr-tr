@@ -3,12 +3,12 @@ title: Bağımlılıkları anlama ve güncelleştirme
 description: Bir .NET Framework projesini .NET Core 'a geçirmek için, onun bağımlılıkları .NET Core ile çalışacak şekilde güncellenmelidir. Bu bölümde, büyük uygulamalar için geçişleri planlamak üzere kullanılabilecek araçlar ve yaklaşımlar incelenir.
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: afad77860099e4737b5270dc32fc20c2025e63dd
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 484691496d3691151fd3ca83ec776dbb31327c09
+ms.sourcegitcommit: b5d2290673e1c91260c9205202dd8b95fbab1a0b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102105750"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106122761"
 ---
 # <a name="understand-and-update-dependencies"></a>Bağımlılıkları anlama ve güncelleştirme
 
@@ -46,7 +46,7 @@ Aracı, `upgrade-assistant <project>` Proje dosyasının bulunduğu klasörde ko
 
 Uygulamanın Şu anda kullandığı paketin sürümünü kullanarak destek varsa harika! Aksi takdirde, bu paketin daha yeni bir sürümü, yükseltmeye nelerin dahil olduğunu ve araştırmasını nasıl yapacağından, bkz.. Özellikle, paketin ana sürümü şu anda kullandığınız sürüm ve yükseltmekte olduğunuz sürüm arasında değişirse pakette bir çok değişiklik olabilir.
 
-Bazı durumlarda, belirli bir paketin sürümü .NET Core ile birlikte kullanılabilir. Bu durumda ekipler birkaç seçeneğe sahiptir. .NET Framework sürümüne bağlı olarak devam edebilirler, ancak bu sınırlamalar vardır. Uygulama yalnızca Windows üzerinde çalışır ve takım, karşılaşılabilecek bir sorun olup olmadığını görmek için paketin ikili dosyalarında taşınabilirlik Çözümleyicisi 'ni çalıştırmak isteyebilir. Tamamen ekip test etmek isteyeceksiniz. Diğer seçenek, farklı bir paket bulmanızdır veya gerekli paketin açık kaynak olması durumunda .NET Standard veya .NET Core 'a yükseltilir.
+Bazı durumlarda, belirli bir paketin sürümü .NET Core ile birlikte kullanılabilir. Bu durumda ekipler birkaç seçeneğe sahiptir. .NET Framework sürümüne bağlı olarak devam edebilirler, ancak bu sınırlamalar vardır. Uygulama yalnızca Windows üzerinde çalışabilir ve takım, karşılaşılabilecek bir sorun olup olmadığını görmek için paketin ikili dosyalarında taşınabilirlik Çözümleyicisi 'ni çalıştırmak isteyebilir. .NET Core 'da bulunmayan başvuru API 'Lerinde .NET Framework paketler kullanılıyorsa, bir çalışma zamanı özel durumu meydana gelir. Diğer seçenek, farklı bir paket bulmanızdır veya gerekli paketin açık kaynak olması durumunda .NET Standard veya .NET Core 'a yükseltilir.
 
 ## <a name="migrate-aspnet-mvc-projects"></a>ASP.NET MVC projelerini geçirme
 

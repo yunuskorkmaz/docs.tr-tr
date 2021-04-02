@@ -3,12 +3,12 @@ title: C# etkileşimli öğreticilerine giriş
 description: Tarayıcınızda C# öğrenin ve kendi geliştirme ortamınızı kullanmaya başlayın
 ms.date: 02/02/2021
 ms.custom: mvc
-ms.openlocfilehash: ed869271cd6f4ec13f769f46d41aefae9e1dad8d
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: 3a215a3a9bb860601d906f6bdb9d7d1e8fec7e46
+ms.sourcegitcommit: 109507b6c16704ed041efe9598c70cd3438a9fbc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104872424"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106079472"
 ---
 # <a name="introduction-to-c"></a>C 'ye giriş\#
 
@@ -23,14 +23,14 @@ Bu öğreticileri farklı ortamlarda deneyebilirsiniz. Öğrentireceğiz kavraml
 
 - [Tarayıcınızda, docs platformunda](hello-world.yml): Bu deneyim, docs sayfalarında bir çalıştırılabilir C# kod penceresi katıştırır. Tarayıcıda C# kodu yazın ve yürütün.
 - [Microsoft Learn deneyimidir](/learn/paths/csharp-first-steps/). Bu öğrenme yolu, C# temel bilgilerini öğreten birkaç modül içerir.
-- [Ciltçide jupi 'de](https://mybinder.org/v2/gh/dotnet/try-samples/master?filepath=hello-csharp%2Fhello-world.ipynb). Ciltçideki bir Jupyter not defterinde C# kodu deneyebilirsiniz.
+- [Ciltçide jupi 'de](https://mybinder.org/v2/gh/dotnet/try-samples/main?filepath=hello-csharp%2Fhello-world.ipynb). Ciltçideki bir Jupyter not defterinde C# kodu deneyebilirsiniz.
 - [Yerel makinenizde](numbers-in-csharp-local.md). Çevrimiçi araştırdıktan sonra, .NET Core SDK [yükleyebilir](https://dotnet.microsoft.com/download) ve makinenizde programları oluşturabilirsiniz.
 
 Merhaba Dünya dersi izleyen tüm giriş öğreticileri, çevrimiçi tarayıcı deneyimi veya [kendi yerel geliştirme ortamınızda](local-environment.md)bulunabilir. Her öğreticinin sonunda, çevrimiçi olarak veya kendi makinenizde bir sonraki ders ile devam etmek istediğinize karar verirsiniz. Ortamınızı ayarlamanıza ve makinenizde bir sonraki öğreticiye devam etmenize yardımcı olacak bağlantılar vardır.
 
 ## <a name="hello-world"></a>[Merhaba Dünya](hello-world.yml)
 
-[Merhaba Dünya](hello-world.yml) öğreticisinde en temel C# programını oluşturacaksınız. `string`Türü ve metinle çalışmayı inceleyebilirsiniz. Ayrıca, bağlayıcı üzerinde [Microsoft Learn](/learn/paths/csharp-first-steps/) veya [Jupyıter](https://mybinder.org/v2/gh/dotnet/try-samples/master?filepath=hello-csharp%2Fhello-world.ipynb)üzerindeki yolu da kullanabilirsiniz.
+[Merhaba Dünya](hello-world.yml) öğreticisinde en temel C# programını oluşturacaksınız. `string`Türü ve metinle çalışmayı inceleyebilirsiniz. Ayrıca, bağlayıcı üzerinde [Microsoft Learn](/learn/paths/csharp-first-steps/) veya [Jupyıter](https://mybinder.org/v2/gh/dotnet/try-samples/main?filepath=hello-csharp%2Fhello-world.ipynb)üzerindeki yolu da kullanabilirsiniz.
 
 ## <a name="numbers-in-c"></a>[C# numaraları](numbers-in-csharp.yml)
 

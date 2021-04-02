@@ -2,12 +2,12 @@
 title: Polly üstel geri alma ile HTTP çağrı yeniden denemelerini uygulama
 description: Polly ve ıhttpclientfactory ile HTTP hatalarının nasıl işleneceğini öğrenin.
 ms.date: 01/13/2021
-ms.openlocfilehash: c2831f73ed38b48fd32fa241f8fe1792b9adf3d4
-ms.sourcegitcommit: 1d3af230ec30d8d061be7a887f6ba38a530c4ece
+ms.openlocfilehash: cd209aa7f2802ffea80e14f0e3e77cc4fc29b6d5
+ms.sourcegitcommit: b5d2290673e1c91260c9205202dd8b95fbab1a0b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "102511794"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106122969"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-ihttpclientfactory-and-polly-policies"></a>Ihttpclientfactory ve Polly ilkeleriyle üstel geri alma ile HTTP çağrı yeniden denemeleri uygulayın
 
@@ -51,20 +51,16 @@ Polly, yeniden deneme sayısı, üstel geri alma yapılandırması ve hatayı g�
 
 ## <a name="add-a-jitter-strategy-to-the-retry-policy"></a>Yeniden deneme ilkesine bir değişim stratejisi ekleyin
 
-Düzenli bir yeniden deneme ilkesi, sisteminizi yüksek eşzamanlılık ve ölçeklenebilirlik durumlarında ve yüksek çekişme kapsamında etkileyebilir. Kısmi kesintiler söz konusu olduğunda birçok istemciden gelen benzer yeniden denemelerin büyük bir bölümünü aşmak için, yeniden deneme algoritmasına/ilkeye bir değişim stratejisi eklemek iyi bir çözümdür. Bu, üstel geri alma 'ya rastgele açıklık ekleyerek uçtan uca sistemin genel performansını iyileştirebilir. Bu, sorunlar ortaya çıktığında ani artışları yayar. İlke aşağıdaki örneğe göre gösterilmiştir:
+Düzenli bir yeniden deneme ilkesi, sisteminizi yüksek eşzamanlılık ve ölçeklenebilirlik durumlarında ve yüksek çekişme kapsamında etkileyebilir. Kısmi kesintilerden çok sayıda istemciden gelen benzer yeniden denemeler için yüksek bir çözüm olmak üzere, yeniden deneme algoritmasına/ilkeye bir değişim stratejisi eklemek iyi bir çözümdür. Bu strateji, uçtan uca sistemin genel performansını iyileştirebilirler. Bir üstel geri alma sırasında düzgün denetlenen bir ortanca ilk yeniden deneme gecikmesi ile uygulanan düzgün ve düzgün şekilde dağıtılmış yeniden deneme aralıklarıyla [uygulanan, doğru](https://github.com/App-vNext/Polly/wiki/Retry-with-jitter)bir değişim stratejisi, daha iyi bir şekilde önerilir. Bu yaklaşım, sorun ortaya çıkarsa ani artışları yaymaya yardımcı olur. İlke aşağıdaki örneğe göre gösterilmiştir:
 
 ```csharp
-Random jitterer = new Random();
-var retryWithJitterPolicy = HttpPolicyExtensions
-    .HandleTransientHttpError()
-    .OrResult(msg => msg.StatusCode == System.Net.HttpStatusCode.NotFound)
-    .WaitAndRetryAsync(6,    // exponential back-off plus some jitter
-        retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))  
-                      + TimeSpan.FromMilliseconds(jitterer.Next(0, 100))
-    );
-```
 
-Polly, proje Web sitesi aracılığıyla üretime hazırlı değişim algoritmaları sağlar.
+var delay = Backoff.DecorrelatedJitterBackoffV2(medianFirstRetryDelay: TimeSpan.FromSeconds(1), retryCount: 5);
+
+var retryPolicy = Policy
+    .Handle<FooException>()
+    .WaitAndRetryAsync(delay);
+```
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 

@@ -3,12 +3,12 @@ title: ASP.NET MVC ve ASP.NET Core arasındaki yapılandırma farklılıkları
 description: Yapılandırma değerleri nasıl depolanır ve ASP.NET ile ASP.NET Core arasında önemli ölçüde değiştirilir. Bu bölüm, ayrıntıları ve ASP.NET 'den ASP.NET Core 'e nasıl geçiş yapılacağını inceler.
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 1e8e4d4ac408862f0216a5744476047186222304
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 3d721c028b1e760a6227855451e2194d9e471a58
+ms.sourcegitcommit: b5d2290673e1c91260c9205202dd8b95fbab1a0b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106070"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106122956"
 ---
 # <a name="configuration-differences-between-aspnet-mvc-and-aspnet-core"></a>ASP.NET MVC ve ASP.NET Core arasındaki yapılandırma farklılıkları
 
@@ -59,7 +59,7 @@ public class TestModel : PageModel
 
 **Şekil 2-2.** İle yapılandırma değerlerine erişme `IConfiguration` .
 
-Seçenekler modelini kullanarak, ayarlar erişimi benzerdir, ancak, Şekil 2-3 gösterdiği gibi, tüketen sınıf tarafından gerek duyulan ayarlara kesin ve daha belirgin bir şekilde yazılır.
+[Seçenekler modelini](/dotnet/core/extensions/options)kullanarak, ayarlar erişimi benzerdir, ancak, Şekil 2-3 gösterdiği gibi, tüketen sınıf tarafından gerek duyulan ayarlara kesin ve daha belirgin bir şekilde yazılır.
 
 ```csharp
 public class PositionOptions
@@ -97,7 +97,7 @@ services.Configure<PositionOptions>(Configuration.GetSection(PositionOptions.Pos
 
 ## <a name="migrate-configuration"></a>Yapılandırmayı geçir
 
-.NET Framework bir uygulamanın yapılandırma ayarlarının .NET Core 'a nasıl bağlantı noktası alınacağını düşünürken, ilk adım kullanılmakta olan tüm yapılandırma ayarlarını belirlemektir. Bunların çoğu, uygulamanın kök klasöründeki *web.config* dosyasında olacaktır, ancak bazı uygulamalar ayarların paylaşılan *machine.config* dosyasında da bulunması beklenir.
+.NET Framework bir uygulamanın yapılandırma ayarlarının .NET Core 'a nasıl bağlantı noktası alınacağını düşünürken, ilk adım kullanılmakta olan tüm yapılandırma ayarlarını belirlemektir. Bunların çoğu, uygulamanın kök klasöründeki *web.config* dosyasında olacaktır, ancak bazı uygulamalar ayarların paylaşılan *machine.config* dosyasında da bulunması beklenir. Bu ayarlar, `appSettings` öğe, `connectionStrings` öğe ve tüm özel yapılandırma öğelerinin öğelerini de içerir. .NET Core 'da bu ayarların tümü, genellikle dosyasında *appsettings.js* depolanır.
 
 Yapılandırma dosyalarındaki tüm ayarlar kataloglandığında, bir sonraki adım, ayarların uygulamanın kendisinde nerede ve nasıl kullanıldığını belirlemek için olmalıdır. Bazı ayarlar kullanılmıyorsa, bu büyük olasılıkla geçişten atlanabilir. Her ayar için, kodu geçirdiğinizde herhangi bir şey kaçırmadığınızdan emin olmak için, kullanılmakta olan tüm yerleri göz önünde bulabilirsiniz.
 

@@ -3,12 +3,12 @@ title: Dağıtım stratejileri
 description: ASP.NET 'den ASP.NET Core 'e geçiş yaparken takımlar hangi dağıtım stratejilerini kullanabilir? Artımlı bir geçiş, .NET Framework ve .NET Core uygulamalarının yan yana dağıtımına izin vererek sorunsuz bir son kullanıcı deneyimi sağlar mi?
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 6691a4878205d6422cf8b6153353abefd9764d18
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 4c69f049611e4995cdb1905c89afe6973994f20d
+ms.sourcegitcommit: b5d2290673e1c91260c9205202dd8b95fbab1a0b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106035"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106122943"
 ---
 # <a name="deployment-strategies"></a>Dağıtım stratejileri
 
@@ -21,7 +21,7 @@ Büyük ASP.NET uygulamanızın geçişini planlarken, yeni uygulamayı nasıl d
 * Kuruluşunuzun altyapısı veya uzmanlığı vardır.
 * Barındırma sağlayıcıları, Linux tabanlı barındırma için etkileyici özellikler veya fiyatlandırma sağlar.
 
-.NET Core, bu seçeneklere yönelik olarak açılır.
+.NET Core, bu seçeneklerin kapısını açar.
 
 ## <a name="cloud-native-development"></a>Bulutta yerel geliştirme
 

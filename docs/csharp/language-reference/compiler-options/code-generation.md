@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Optimize compiler option [C#]
 - Deterministic compiler option [C#]
 - ProduceOnlyReferenceAssembly compiler option [C#]
-ms.openlocfilehash: a846bc515c501ec5a14069dd3b312b5e2df43d25
-ms.sourcegitcommit: 5ce37699c2a51ed173171813be68ef7577b1aba5
+ms.openlocfilehash: 02610c9d0142643bdb553f8b8177d1a4a2237717
+ms.sourcegitcommit: 652f62fc8f3ab6a264681b6eb5211ac7539bd115
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104881152"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "105964799"
 ---
 # <a name="c-compiler-options-that-control-code-generation"></a>Kod oluşturmayı denetleyen C# derleyici seçenekleri
 
@@ -35,8 +35,17 @@ Aşağıdaki seçenekler derleyici tarafından kod oluşturmayı denetler. Yeni 
 
 C# 6,0 ile başlayan tüm derleyici sürümleri için, *pdbonly* ve *Full* arasında bir fark yoktur. *Yalnızca pdbonly* öğesini seçin. *. Pdb* dosyasının konumunu değiştirmek için bkz. [**pdbdosya**](./advanced.md#pdbfile).
 
+Aşağıdaki değerler geçerlidir:
+
+| Değer      | Anlamı                                                                                                 |
+|------------|---------------------------------------------------------------------------------------------------------|
+| `full`     | Geçerli platform için varsayılan biçimi kullanarak hata ayıklama bilgilerini _. pdb_ dosyasına yay:<br>**Windows**: bir Windows pdb dosyası. <br>**Linux/macOS**: [taşınabilir bir PDB](https://github.com/dotnet/core/blob/main/Documentation/diagnostics/portable_pdb.md) dosyası. |
+| `pdbonly`  | Aynı `full` . Daha fazla bilgi için aşağıdaki nota bakın. |
+| `portable` | Platformlar arası [TAŞINABILIR pdb](https://github.com/dotnet/core/blob/main/Documentation/diagnostics/portable_pdb.md) biçimini kullanarak hata ayıklama bilgilerini. pdb dosyasına yayma. |
+| `embedded` | Hata ayıklama bilgilerini [TAŞINABILIR pdb](https://github.com/dotnet/core/blob/main/Documentation/diagnostics/portable_pdb.md) biçimi kullanılarak _. dll/. exe_ ' ye (_. pdb_ dosyası üretilmez) yayma. |
+
 > [!IMPORTANT]
-> Bu bölüm yalnızca C# 6,0 ' den eski derleyiciler için geçerlidir.
+> Aşağıdaki bilgiler yalnızca C# 6,0 ' den eski derleyiciler için geçerlidir.
 > Bu öğenin değeri ya da olabilir `full` `pdbonly` . *Yalnızca pdbbelirtmezseniz* geçerli olan *tam* bağımsız değişken, çalışan programa bir hata ayıklayıcı eklemeye olanak sağlar. Yalnızca program hata ayıklayıcıda başlatıldığında, *pdbyalnızca* kaynak kodu hata ayıklamasına izin verir, ancak çalışan program hata ayıklayıcıya eklendiğinde yalnızca assembler görüntülenir. Hata ayıklama derlemeleri oluşturmak için bu seçeneği kullanın. *Tam*' ı KULLANıRSANıZ, JIT ile iyileştirilmiş kodun hız ve boyutunu ve *tam* olarak kod kalitesiyle ilgili küçük bir etkisi olduğunu unutmayın. Yayın kodu oluşturmak için *yalnızca pdbonly* veya pdb yok önerilir. *Yalnızca pdbonly* ve *Full* arasındaki bir *fark, derleyicinin* <xref:System.Diagnostics.DebuggableAttribute> hata ayıklama bilgilerinin kullanılabilir olduğunu JIT derleyicisine bildirmek için kullanılan bir ' ın yayar. Bu nedenle, tam ' ı <xref:System.Diagnostics.DebuggableAttribute> kullanırsanız kodunuzun yanlış olarak ayarla ' yı içermesi halinde bir hata alırsınız . Bir uygulamanın hata ayıklama performansını yapılandırma hakkında daha fazla bilgi için bkz. [bir görüntüyü hata ayıklamayı kolaylaştırın](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md).
 
 ## <a name="optimize"></a>İyileştirme

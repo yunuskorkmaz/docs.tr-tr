@@ -3,12 +3,12 @@ title: Geçirilecek proje dizisini tanımla
 description: Büyük uygulamalar genellikle yeni platformları her seferinde bir kez, ancak daha küçük bir adımda geçirilmez. Bir ASP.NET MVC uygulamasını ASP.NET Core geçirme adımlarını nasıl planlayacağınızı öğrenin.
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 452898da5839f8979a5e4f9ebf5d4c21b250e1fa
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 34bcfbf4ea3941329419ba64253a2177247df7b8
+ms.sourcegitcommit: b5d2290673e1c91260c9205202dd8b95fbab1a0b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106014"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106122917"
 ---
 # <a name="identify-sequence-of-projects-to-migrate"></a>Geçirilecek proje dizisini tanımla
 
@@ -61,13 +61,13 @@ Bu yaklaşımı [, bu Dotnetconf sunumunda, MasterCard 'Nin lzy Gallagher taraf�
 
 - Üçüncü taraf NuGet bağımlılıklarını geçirme
 - Yeni *. csproj* dosya biçimini kullanmak için uygulamaları geçirin
-- Uygulamaları ASP.NET Core geçirme (.NET Framework hedefleme)
 - .NET Standard için iç NuGet bağımlılıklarını Güncelleştir
+- Uygulamaları ASP.NET Core geçirme (.NET Framework hedefleme)
 - Tüm uygulamaları .NET Core 3,1 ' i hedefleyecek şekilde Güncelleştir
 
 Büyük bir uygulama paketini otomatikleştirmede, tutarlı kodlama kılavuzlarını ve proje organizasyonunu takip ettikleri önemli ölçüde yardımcı olur. Otomasyon çabaları, bu tutarlılığı etkili olacak şekilde kullanır. Proje dosyalarını ayrıştırma ve geçirmeye ek olarak, ortak kod desenleri otomatik olarak geçirilebilir. Bazı kod deseninin örnekleri, denetleyici eylemlerinin nasıl bildirildiği veya sonuçların nasıl döndürdüğü hakkında farklılıklar içerir.
 
-Örneğin, bir geçiş betiği şu desenlerden biriyle eşleşen kod satırları için *Controller.cs* ile eşleşen dosyaları arayabilir:
+Örneğin, bir geçiş betiği, bu desenlerden biriyle eşleşen kod satırları için *Controller. cs* ile eşleşen dosyaları arayabilir:
 
 ```csharp
    return new HttpStatusCodeResult(200);

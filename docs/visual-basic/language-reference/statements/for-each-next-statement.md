@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For Each...Next statements
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
-ms.openlocfilehash: ff7afb5e3b505ebe2326343063a7884dc4f567b1
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 85fb426fdc2d7961603a3ddcc882f9fdce0c70a2
+ms.sourcegitcommit: 109507b6c16704ed041efe9598c70cd3438a9fbc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99769110"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106079628"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next Deyimi (Visual Basic)
 
@@ -67,7 +67,7 @@ Bir `For Each` `Next` koleksiyonun veya dizinin her öğesi için bir deyim küm
 
 Aşağıdaki örnekte, `For Each` ...`Next` ifade, bir liste koleksiyonunun tüm öğeleri boyunca yinelenir.
 
-[!code-vb[VbVbalrStatements#121](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#121)]
+:::code language="vb" source="./snippets/for-each-next-statement/vb/Examples.vb" id="init":::
 
 Daha fazla örnek için bkz. [koleksiyonlar](../../../standard/collections/index.md) ve [diziler](../../programming-guide/language-features/arrays/index.md).
 
@@ -77,7 +77,7 @@ Bir `For Each` döngüyü diğerinin içine yerleştirerek döngüleri iç içe 
 
 Aşağıdaki örnek iç içe geçmiş `For Each` ...`Next` yapıları.
 
-[!code-vb[VbVbalrStatements#122](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#122)]
+:::code language="vb" source="./snippets/for-each-next-statement/vb/Examples.vb" id="nested":::
 
 Döngüleri iç içe aktardığınızda her döngünün benzersiz bir `element` değişkeni olmalıdır.
 
@@ -91,7 +91,7 @@ Ayrıca, farklı türlerde denetim yapılarını birbirleriyle iç içe geçireb
 
 Aşağıdaki örnek, ve deyimlerinin nasıl kullanılacağını göstermektedir `Continue For` `Exit For` .
 
-[!code-vb[VbVbalrStatements#123](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#123)]
+:::code language="vb" source="./snippets/for-each-next-statement/vb/Examples.vb" id="exitcontinue":::
 
 `Exit For`Bir döngüye herhangi bir sayıda deyim yerleştirebilirsiniz `For Each` . İç içe döngüler içinde kullanıldığında `For Each` `Exit For` yürütmenin en içteki döngüden çıkmasına ve denetimi bir sonraki daha yüksek iç içe geçme düzeyine aktarmasına neden olur.
 
@@ -111,7 +111,7 @@ Bir ifadeyi kullanarak bir yineleyici çağırın `For Each...Next` . Döngünü
 
 Aşağıdaki örnek bir yineleyici işlevi kullanır. Yineleyici işlevinin, `Yield` için içindeki bir ifade vardır [... Sonraki](for-next-statement.md) döngü. `ListEvenNumbers`Yönteminde, `For Each` ifade gövdesinin her yinelemesi bir sonraki ifadeye devam eden Yineleyici işlevine bir çağrı oluşturur `Yield` .
 
-[!code-vb[VbVbalrStatements#127](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#127)]
+:::code language="vb" source="./snippets/for-each-next-statement/vb/Examples.vb" id="iterator":::
 
 Daha fazla bilgi için bkz. [yineleyiciler](../../programming-guide/concepts/iterators.md), [yield ekstresi](yield-statement.md)ve [Yineleyici](../modifiers/iterator.md).
 
@@ -141,7 +141,7 @@ Ne zaman `Option Strict` ayarlandığında `On` , daraltma dönüştürmeleri no
 
 Aşağıdaki örnekte, ' `m` `n` `Option Strict` a ' a dönüştürme bir `Long` daraltma dönüştürmesi olduğundan, için başlangıç değeri olarak atama, tarihinde derleme yapmaz `Integer` . Ancak,, öğesine atama, ' den ' e `For Each` `number` aynı dönüştürmeyi gerektirse de, hiçbir derleyici hatası raporlanır `Long` `Integer` . `For Each`Büyük bir sayı içeren ifadede, büyük sayıya uygulandığında bir çalışma zamanı hatası oluşur <xref:Microsoft.VisualBasic.CompilerServices.Conversions.ToInteger%2A> .
 
-[!code-vb[VbVbalrStatements#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class3.vb#89)]
+:::code language="vb" source="./snippets/for-each-next-statement/vb/Program.vb":::
 
 ### <a name="ienumerator-calls"></a>IEnumerator çağrıları
 
@@ -171,7 +171,7 @@ End Sub
 
 Aşağıdaki örnek, C:\ içindeki tüm klasörleri listeler. sınıfını kullanarak Dizin <xref:System.IO.DirectoryInfo> .
 
-[!code-vb[VbVbalrStatements#124](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#124)]
+:::code language="vb" source="./snippets/for-each-next-statement/vb/Examples.vb" id="foreachdir":::
 
 ## <a name="example"></a>Örnek
 
@@ -181,7 +181,7 @@ Yöntemine yapılan her çağrı, <xref:System.IComparable%601.CompareTo%2A> sı
 
 Yönteminde, `ListCars` `cars.Sort()` ifade listeyi sıralar. Öğesinin yöntemine yapılan bu çağrı, <xref:System.Collections.Generic.List%601.Sort%2A> <xref:System.Collections.Generic.List%601> `CompareTo` yönteminin içindeki nesneler için otomatik olarak çağrılmasına neden olur `Car` `List` .
 
-[!code-vb[VbVbalrStatements#125](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#125)]
+:::code language="vb" source="./snippets/for-each-next-statement/vb/Examples.vb" id="sort":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -2,12 +2,12 @@
 title: Kapsayıcı tabanlı uygulamalar için Azure işlem platformları seçme
 description: Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin | Kapsayıcı tabanlı uygulamalar için Azure işlem platformları seçme
 ms.date: 02/18/2020
-ms.openlocfilehash: 9246b8dfb4e1d68fbd965d25e2e9d3272563798c
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: fcb9a0e7277f5ce31309f52aff63d579b0bb9a02
+ms.sourcegitcommit: 109507b6c16704ed041efe9598c70cd3438a9fbc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102257999"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106079615"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Kapsayıcı tabanlı uygulamalar için Azure işlem platformları seçme
 
@@ -38,6 +38,12 @@ Aşağıdaki tabloda, farklı türde uygulamalar ve bunların olası ve önerile
 
 ![Önerilen simge](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) Önerilen
 ![Olası simge](media/choosing-azure-compute-options-for-container-based-applications/possible.png) Üç
+
+### <a name="additional-resources"></a>Ek kaynaklar
+
+- **Uygulamanız için bir Azure işlem hizmeti seçin**
+
+    <https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-decision-tree>
 
 > [!div class="step-by-step"]
 > [Önceki](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md) 

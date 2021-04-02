@@ -2,18 +2,18 @@
 title: DotNet paketi komutu
 description: DotNet Pack komutu .NET projeniz için NuGet paketleri oluşturur.
 ms.date: 04/28/2020
-ms.openlocfilehash: a9a634c358f5de4f28c3de06edc9a2b4d2eb8d57
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 52790b61e8b2d59fa6a8fc68bad6a1e0dc13a97b
+ms.sourcegitcommit: b5d2290673e1c91260c9205202dd8b95fbab1a0b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98190084"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106122645"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 2. x SDK ve sonraki sürümleri
 
-## <a name="name"></a>Ad
+## <a name="name"></a>Name
 
 `dotnet pack` -Kodu bir NuGet paketine paketler.
 
@@ -39,7 +39,7 @@ Hata ayıklama sembollerini içeren bir paket oluşturmak istiyorsanız iki seç
 - `--include-symbols` -Bu, semboller paketini oluşturur.
 - `--include-source` -Bu, `src` kaynak dosyaları içeren içindeki bir klasörü içeren semboller paketini oluşturur.
 
-Paketlenmiş projenin NuGet bağımlılıkları *. nuspec* dosyasına eklenir, bu nedenle paket yüklenirken düzgün şekilde çözülür. Projeden projeye başvurular proje içinde paketlenmemiş. Şu anda, projeden projeye bağımlılıklar varsa proje başına bir pakete sahip olmanız gerekir.
+Paketlenmiş projenin NuGet bağımlılıkları *. nuspec* dosyasına eklenir, bu nedenle paket yüklenirken düzgün şekilde çözülür. Paketlenmiş projenin diğer projelere başvuruları varsa, diğer projeler pakete dahil edilmez. Şu anda, projeden projeye bağımlılıklar varsa proje başına bir pakete sahip olmanız gerekir.
 
 Varsayılan olarak, `dotnet pack` önce projeyi oluşturur. Bu davranışı önlemek istiyorsanız, `--no-build` seçeneğini geçirin. Bu seçenek genellikle kodun daha önce oluşturulduğunu bildiğiniz sürekli tümleştirme (CI) derleme senaryolarında yararlıdır.
 

@@ -3,12 +3,12 @@ title: ASP.NET Core için eShop 'ın örnek geçişi
 description: Bir başvuru olarak örnek bir çevrimiçi mağaza uygulaması kullanarak, mevcut bir ASP.NET MVC uygulamasını ASP.NET Core 'e geçirmeye yönelik yönergeler.
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 498eb3b11c44381ff6d261b37caed15a2698b166
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: 119ba64134813fa17848cf9f5fe02cb1a14f8a5d
+ms.sourcegitcommit: b5d2290673e1c91260c9205202dd8b95fbab1a0b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102605262"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106122982"
 ---
 # <a name="example-migration-of-eshop-to-aspnet-core"></a>ASP.NET Core için eShop 'ın örnek geçişi
 
@@ -58,7 +58,7 @@ Uyumsuz türlerin çoğu, `Controller` ve ASP.NET Core eşdeğerleri olan çeşi
 
 ## <a name="update-project-files-and-nuget-reference-syntax"></a>Proje dosyalarını ve NuGet başvuru sözdizimini Güncelleştir
 
-Daha sonra, eski *. csproj* dosya yapısından .NET Core ile tanıtılan daha yeni, daha basit bir yapıya geçiş yapın. Bunu yaparken, proje dosyasındaki öğeleri kullanmak için NuGet başvuruları için bir *packages.config* dosyası kullanmaktan da geçiş yapabilirsiniz `<PackageReference>` .
+Daha sonra, eski *. csproj* dosya yapısından .NET Core ile tanıtılan daha yeni, daha basit bir yapıya geçiş yapın. Bunu yaparken, proje dosyasındaki öğeleri kullanmak için NuGet başvuruları için bir *packages.config* dosyası kullanmaktan da geçiş yapabilirsiniz `<PackageReference>` . Eski stil proje dosyaları da öğeleri de kullanabilir `<PackageReference>` . bu nedenle, yeni proje dosyası biçimine yükseltmeden önce tüm NuGet paketi başvurularını bu biçime geçirmek mantıklı olur.
 
 Orijinal projenin *Eshoplegacymvc. csproj* dosyası 418 satır uzunluğundadır. Şekil 4-6 ' de proje dosyasının bir örneği gösterilir. Genel boyutunun ve karmaşıklığının bir fikir sunmak için görüntünün sağ tarafı dosyanın tamamının küçük bir görünümünü içerir.
 
@@ -74,7 +74,7 @@ C# proje dosyasına ek olarak, NuGet bağımlılıkları Şekil 4-7 ' de göster
 
 **Şekil 4-7.** *packages.config* dosyası.
 
-Yeni *. csproj* dosya biçimine yükselttikten sonra Visual Studio 'yu kullanarak sınıf kitaplığı projelerinde *packages.config* geçirebilirsiniz. Ancak, bu işlevsellik ASP.NET projeleriyle birlikte çalışmaz. [ *packages.config* `<PackageReference>` Visual Studio 'da ' a geçirme hakkında daha fazla bilgi edinin](/nuget/consume-packages/migrate-packages-config-to-package-reference). Geçirilecek çok sayıda projeniz varsa, [Bu topluluk aracı yardımcı olabilir](https://github.com/MarkKharitonov/NuGetPCToPRMigrator).
+Visual Studio 'Yu kullanarak sınıf kitaplığı projelerinde *packages.config* geçirebilirsiniz. Ancak, bu işlevsellik ASP.NET projeleriyle birlikte çalışmaz. [ *packages.config* `<PackageReference>` Visual Studio 'da ' a geçirme hakkında daha fazla bilgi edinin](/nuget/consume-packages/migrate-packages-config-to-package-reference). Geçirilecek çok sayıda projeniz varsa, [Bu topluluk aracı yardımcı olabilir](https://github.com/MarkKharitonov/NuGetPCToPRMigrator). Proje dosyasını yeni biçime geçirmek için bir araç kullanıyorsanız, tüm NuGet başvurularını kullanmak üzere geçirmeyi bitirdikten sonra bunu yapmanız gerekir `<PackageReverence>` .
 
 ## <a name="create-new-aspnet-core-project"></a>Yeni ASP.NET Core projesi oluştur
 
@@ -127,7 +127,7 @@ Uygulamanın kullandığı, üçüncü taraf betikler ve çerçeveler de dahil o
 * *tiplerini*
 * *Görüntüler*
 * *PICS*
-* *Betikleri*
+* *Betikler*
 
 Önceki adımda kullanılan **boş** proje şablonu, varsayılan olarak bu klasörü veya bunun çalışması için gerekli olan ara yazılımı içermez. Bunları eklemeniz gerekir.
 
@@ -135,7 +135,7 @@ Projenin köküne bir *Wwwroot* klasörü ekleyin.
 
 NuGet paketinin sürüm 2.2.0 ekleyin `Microsoft.AspNetCore.StaticFiles` .
 
-*Startup.cs*' de yöntemine bir çağrı ekleyin `app.UseStaticFiles()` `Configure` :
+*Startup. cs* dosyasında yöntemine bir çağrı ekleyin `app.UseStaticFiles()` `Configure` :
 
 ```csharp
 public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -296,7 +296,7 @@ Son olarak, önyükleme sonrasında `<link>` , `<link>` uygulamanızın kulland�
 <link rel="stylesheet" href="~/Content/Site.css" />
 ```
 
-Öğelerin görünmesi için gereken sırayı öğrenmek için `<link>` , orijinal uygulamanızın IŞLENMIŞ HTML dosyasına bakın. Alternatif olarak, *eShop* örneği için, uygun sırayı belirten bu kodu içeren *BundleConfig.cs* öğesini gözden geçirin:
+Öğelerin görünmesi için gereken sırayı öğrenmek için `<link>` , orijinal uygulamanızın IŞLENMIŞ HTML dosyasına bakın. Alternatif olarak, *eShop* örneği için, uygun sırayı belirten bu kodu Içeren *paketleme liconfig. cs*' yi gözden geçirin:
 
 ```csharp
 bundles.Add(new StyleBundle("~/Content/css").Include(
@@ -312,20 +312,13 @@ Yeniden oluşturma, *oluşturma* ve *düzenleme* görünümlerinde jQuery doğru
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js" integrity="sha512-O/nUTF5mdFkhEoQHFn9N5wmgYyW323JO6v8kr6ltSRKriZyTr/8417taVWeabVS4iONGk2V444QD0P2cwhuTkg==" crossorigin="anonymous"></script>
 ```
 
-Görünümlerde düzeltilmek üzere en son şey `Session` , uygulamanın ne kadar süreyle çalıştığını ve hangi makinede olduğunu göstermek için başvuru içerir. Bu verileri `Startup` statik değişkenler olarak toplayabiliriz ve değişkenleri Düzen sayfasında görüntüleriz. Aşağıdaki özellikleri *Startup.cs* öğesine ekleyin:
-
-```csharp
-public static DateTime StartTime { get; } = DateTime.UtcNow;
-public static string MachineName { get; } = Environment.MachineName;
-```
-
-Sonra, düzen içindeki altbilginin içeriğini aşağıdaki kodla değiştirin:
+Görünümlerde düzeltilmek üzere en son şey `Session` , uygulamanın ne kadar süreyle çalıştığını ve hangi makinede olduğunu göstermek için başvuru içerir. Bu verileri, ve kullanarak doğrudan sitenin *_Layout. cshtml* ' de görüntüleyebilirsiniz `System.Environment.MachineName` `System.Diagnostics.Process.GetCurrentProcess().StartTime` :
 
 ```razor
 <section class="col-sm-6">
     <img class="esh-app-footer-text hidden-xs" src="~/images/main_footer_text.png" width="335" height="26" alt="footer text image" />
     <br />
-<small>@eShopPorted.Startup.MachineName - @eShopPorted.Startup.StartTime.ToString() UTC</small>
+<small>@Environment.MachineName - @System.Diagnostics.Process.GetCurrentProcess().StartTime.ToString() UTC</small>
 </section>
 ```
 
@@ -333,7 +326,7 @@ Bu noktada, daha sonra uygulama başarıyla oluşturulur. Ancak, bunu çalışt�
 
 ## <a name="migrate-app-startup-components"></a>Uygulama başlangıç bileşenlerini geçirme
 
-Son geçiş adımı, uygulama başlangıç görevlerinin *Global. asax* ve çağrı yaptığı sınıflardan sürme ve bunları ASP.NET Core eşdeğerlerine geçirmekte. Bu görevler, MVC 'nin yapılandırmasını, bağımlılık ekleme işlemini ayarlamayı ve yeni yapılandırma sistemiyle çalışmayı içerir. ASP.NET Core, bu görevler *Startup.cs* dosyasında işlenir.
+Son geçiş adımı, uygulama başlangıç görevlerinin *Global. asax* ve çağrı yaptığı sınıflardan sürme ve bunları ASP.NET Core eşdeğerlerine geçirmekte. Bu görevler, MVC 'nin yapılandırmasını, bağımlılık ekleme işlemini ayarlamayı ve yeni yapılandırma sistemiyle çalışmayı içerir. ASP.NET Core, bu görevler *Startup. cs* dosyasında işlenir.
 
 ### <a name="configure-mvc"></a>MVC 'yi yapılandırma
 
@@ -364,7 +357,7 @@ public static void RegisterGlobalFilters(GlobalFilterCollection filters)
 }
 ```
 
-Uygulamaya eklenen tek öznitelik ASP.NET MVC filtresidir `HandleErrorAttribute` . Bu filtre, bir isteğin parçası olarak bir özel durum oluştuğunda, özel durum ayrıntıları yerine varsayılan bir eylem ve görünümün görüntülenmesini sağlar. ASP.NET Core, bu işlevsellik, `UseExceptionHandler` Ara yazılım tarafından gerçekleştirilir. Ayrıntılı hata iletileri varsayılan olarak etkinleştirilmez. Bunlar, ara yazılım kullanılarak yapılandırılmalıdır `UseDeveloperExceptionPage` . Bu davranışı özgün uygulamayla eşleşecek şekilde yapılandırmak için, `Configure` *Startup.cs* içinde yönteminin başlangıcına aşağıdaki kod eklenmelidir:
+Uygulamaya eklenen tek öznitelik ASP.NET MVC filtresidir `HandleErrorAttribute` . Bu filtre, bir isteğin parçası olarak bir özel durum oluştuğunda, özel durum ayrıntıları yerine varsayılan bir eylem ve görünümün görüntülenmesini sağlar. ASP.NET Core, bu işlevsellik, `UseExceptionHandler` Ara yazılım tarafından gerçekleştirilir. Ayrıntılı hata iletileri varsayılan olarak etkinleştirilmez. Bunlar, ara yazılım kullanılarak yapılandırılmalıdır `UseDeveloperExceptionPage` . Bu davranışı özgün uygulamayla eşleşecek şekilde yapılandırmak için, `Configure` *Başlangıç. cs*' de yöntemin başlangıcına aşağıdaki kod eklenmelidir:
 
 ```csharp
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -401,7 +394,7 @@ public static void RegisterRoutes(RouteCollection routes)
 
 Bu kod satırı satır içine alınıyor, ilk satır öznitelik yolları için desteği ayarlar. Bu ASP.NET Core yerleşik olarak bulunur, bu nedenle ayrı olarak yapılandırmak gereksizdir. Benzer şekilde, *{Resource}. axd* dosyaları ASP.NET Core ile kullanılmaz, bu nedenle bu yolların yoksayılmasına gerek yoktur. `MapRoute`Yöntemi, tipik yol şablonunu kullanan MVC için varsayılanı yapılandırır `{controller}/{action}/{id}` . Bu, `CatalogController` varsayılan denetleyicinin kullanıldığı ve `Index` yöntemi varsayılan eylem olduğu gibi, bu şablon için varsayılan değerleri de belirtir. Daha büyük uygulamalar genellikle `MapRoute` ek rotalar ayarlamak için daha fazla çağrı içerecektir.
 
-ASP.NET Core MVC [geleneksel yönlendirme ve öznitelik yönlendirmeyi](/aspnet/core/mvc/controllers/routing?preserve-view=true&view=aspnetcore-2.2)destekler. Geleneksel yönlendirme, yol tablosunun `RegisterRoutes` daha önce listelenen yöntemde nasıl yapılandırıldığına benzer. *EShop* uygulamasında kullanılan gibi varsayılan bir yol ile geleneksel yönlendirmeyi ayarlamak için, `Configure` *Startup.cs* içindeki yönteminin sonuna aşağıdaki kodu ekleyin:
+ASP.NET Core MVC [geleneksel yönlendirme ve öznitelik yönlendirmeyi](/aspnet/core/mvc/controllers/routing?preserve-view=true&view=aspnetcore-2.2)destekler. Geleneksel yönlendirme, yol tablosunun `RegisterRoutes` daha önce listelenen yöntemde nasıl yapılandırıldığına benzer. *EShop* uygulamasında kullanılan gibi varsayılan bir yol ile geleneksel yönlendirmeyi ayarlamak Için, `Configure` *Başlangıç. cs* içindeki yönteminin altına aşağıdaki kodu ekleyin:
 
 ```csharp
 app.UseMvc(routes =>
@@ -447,7 +440,7 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-Yukarıdaki kod, MVC özelliklerinin çalışmasını sağlamak için gereken en düşük yapılandırmadır. Bu çağrıdan yapılandırılanılabilecek birçok ek özellik vardır, ancak şimdilik uygulamayı derlemek yeterli olacaktır. Bunu çalıştırmak artık varsayılan isteği doğru şekilde yönlendirdik, ancak henüz DI 'yi yapılandırdığımız için, henüz bir `CatalogController` uygulama türü sağlanmadığından bir hata oluştu `ICatalogService` . MVC 'yi bir süre sonra yapılandırmak için geri döneceğiz. Şimdilik uygulamanın bağımlılık ekleme işlemini geçirelim.
+Yukarıdaki kod, MVC özelliklerinin çalışmasını sağlamak için gereken en düşük yapılandırmadır. Bu çağrıdan yapılandırılabilen çok sayıda ek özellik vardır (bazıları bu bölümde daha sonra ayrıntılıdır), ancak şimdilik bu, uygulamayı derlemek için yeterli olacaktır. Bunu çalıştırmak artık varsayılan isteği doğru şekilde yönlendirdik, ancak henüz DI 'yi yapılandırdığımız için, henüz bir `CatalogController` uygulama türü sağlanmadığından bir hata oluştu `ICatalogService` . MVC 'yi bir süre sonra yapılandırmak için geri döneceğiz. Şimdilik uygulamanın bağımlılık ekleme işlemini geçirelim.
 
 #### <a name="migrate-dependency-injection-configuration"></a>Bağımlılık ekleme yapılandırmasını geçirme
 
@@ -505,7 +498,7 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
 
 #### <a name="migrate-app-settings"></a>Uygulama ayarlarını geçirme
 
-ASP.NET Core yeni bir [yapılandırma sistemi](/aspnet/core/fundamentals/configuration/?preserve-view=true&view=aspnetcore-2.2)kullanır ve bu, varsayılan olarak dosya *üzerinde birappsettings.js* yararlanır. Program.cs ' `CreateDefaultBuilder` de kullanarak varsayılan yapılandırma uygulamada zaten ayarlanmıştır. Yapılandırmaya erişmek için sınıfların yalnızca kendi kurucusunda istemesi gerekir. `Startup`Sınıf özel durum değildir. İçindeki yapılandırmaya `Startup` ve uygulamanın geri kalanına erişmeye başlamak için oluşturucudan bir örneği isteyin `IConfiguration` :
+ASP.NET Core yeni bir [yapılandırma sistemi](/aspnet/core/fundamentals/configuration/?preserve-view=true&view=aspnetcore-2.2)kullanır ve bu, varsayılan olarak dosya *üzerinde birappsettings.js* yararlanır. `CreateDefaultBuilder` *Program. cs*' de kullanarak varsayılan yapılandırma uygulamada zaten ayarlanmıştır. Yapılandırmaya erişmek için sınıfların yalnızca kendi kurucusunda istemesi gerekir. `Startup`Sınıf özel durum değildir. İçindeki yapılandırmaya `Startup` ve uygulamanın geri kalanına erişmeye başlamak için oluşturucudan bir örneği isteyin `IConfiguration` :
 
 ```csharp
 public Startup(IConfiguration configuration)

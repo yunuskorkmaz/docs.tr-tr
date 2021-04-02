@@ -3,16 +3,16 @@ title: ASP.NET Core 2,1 ' ye geçir
 description: .NET Framework çalışma zamanı hedefleme 'yi desteklemeye yönelik son .NET Core sürümü, .NET Core 2,1 ' ye geçiş, bazı uygulama geçiş planlarında ara adım olarak anlamlı midir?
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 0c478ae194c6d9118bfbca73f8933d7623246e2c
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: e4db85405edc7e7f51ab6f8b422451cf7acc065e
+ms.sourcegitcommit: b5d2290673e1c91260c9205202dd8b95fbab1a0b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102105896"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106122852"
 ---
 # <a name="migrate-to-aspnet-core-21"></a>ASP.NET Core 2,1 ' ye geçir
 
-ASP.NET Core 2,1, hem .NET Core hem de .NET Framework çalışma zamanlarını desteklemek için desteklenen tek .NET Core sürümü olduğu için ilginç bir sürümdür. Bu nedenle, uygulamanın tüm parçalarını aynı anda .NET Core 'a yükseltmeye kıyasla bazı uygulamalar için daha kolay bir yükseltme yolu sunabilir. LTS sürümü olarak, .NET Core 2,1 desteği 2021 Ağustos 'Tan itibaren devam edecektir. .NET Framework üzerinde çalışan ASP.NET Core 2,1 desteği, temeldeki .NET Framework desteklendiği sürece devam eder.
+ASP.NET Core 2,1, hem .NET Core hem de .NET Framework çalışma zamanları desteklemek için desteklenen ASP.NET Core sürümü olduğu için ilginç bir sürümdür. Bu nedenle, uygulamanın tüm parçalarını aynı anda .NET Core 'a yükseltmeye kıyasla bazı uygulamalar için daha kolay bir yükseltme yolu sunabilir. LTS sürümü olarak, .NET Core 2,1 desteği 2021 Ağustos 'Tan itibaren devam edecektir. .NET Framework üzerinde çalışan ASP.NET Core 2,1 desteği, temeldeki .NET Framework desteklendiği sürece devam eder.
 
 ## <a name="should-apps-run-on-net-framework-with-aspnet-core-21"></a>Uygulamalar ASP.NET Core 2,1 ile .NET Framework çalışır olmalıdır
 

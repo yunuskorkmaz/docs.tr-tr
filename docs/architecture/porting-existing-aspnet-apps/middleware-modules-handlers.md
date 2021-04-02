@@ -3,12 +3,12 @@ title: Ara yazılımı modüller ve işleyicilerle karşılaştırın
 description: Bu bölüm, istek işleme ardışık düzenleri için ara yazılımı tanımlayan ASP.NET Core uygulamalarla işleyicileri ve modülleri kullanan ASP.NET uygulamaları için yapı farklarını ele alırlar.
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 040ae49d1307ef4dcc9dbf49b20544e9cd2bc913
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 3bc3c30a1ee988550cca907d7289583161337cb9
+ms.sourcegitcommit: b5d2290673e1c91260c9205202dd8b95fbab1a0b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102105903"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106122878"
 ---
 # <a name="compare-middleware-to-modules-and-handlers"></a>Ara yazılımı modüller ve işleyicilerle karşılaştırın
 
@@ -25,6 +25,63 @@ Uygulamanız özel HTTP modülleri veya HTTP işleyicileri kullanıyorsa, bunlar
 ASP.NET Core her uygulamanın yönteminde bir istek işlem hattı tanımlar `Configure` . Bu istek ardışık düzeni, bir gelen isteğin uygulama tarafından nasıl işlendiğini tanımlar. işlem hattının her bir yöntemi, bir yöntem sonlanana kadar bir sonraki yöntemi çağırır ve *Ara yazılım* zinciri sonlandırıldığında ve yığın geri döndürüyor. Ara yazılım tüm istekleri hedefleyebilir veya yalnızca istenen yola veya diğer faktörlere bağlı olarak belirli isteklere eşlenecek şekilde yapılandırılabilir. `Configure`Uygulama yönteminde tamamen veya ayrı bir sınıfta uygulanan şekilde yapılandırılabilir.
 
 HTTP modüllerini kullanan bir ASP.NET MVC uygulamasındaki davranış, büyük olasılıkla [özel ara yazılım](/aspnet/core/fundamentals/middleware/?preserve-view=true&view=aspnetcore-3.1)için en uygun seçenektir. Özel HTTP işleyicileri, aynı yola yanıt veren özel rotalar veya uç noktalar ile değiştirilebilir.
+
+## <a name="accessing-httpcontext"></a>HttpContext 'e erişme
+
+Birçok .NET uygulaması, geçerli isteğin bağlamına ile başvurur `HttpContext.Current` . Bu statik erişim, bireysel isteklerin dışındaki test ve diğer kod kullanımıyla ilgili yaygın bir sorun kaynağı olabilir. ASP.NET Core uygulamalar oluştururken, geçerli HttpContext 'e erişim, bu örnekte gösterildiği gibi, ara yazılım üzerinde yöntem parametresi olarak sağlanmalıdır:
+
+```csharp
+public class Middleware
+{
+    private readonly RequestDelegate _next;
+
+    public Middleware(RequestDelegate next)
+    {
+        _next = next;
+    }
+
+    public Task Invoke(HttpContext httpContext)
+    {
+        return _next(httpContext);
+    }
+}
+```
+
+Benzer şekilde, ASP.NET Core filtreler, geçerli HttpContext 'in erişebileceği yöntemlerine bir bağlam bağımsız değişkeni iletir:
+
+```csharp
+public class MyActionFilterAttribute : ActionFilterAttribute
+{
+    public override void OnResultExecuting(ResultExecutingContext context)
+    {
+        var headers = context.HttpContext.Request.Headers;
+        // do something based on a header
+
+        base.OnResultExecuting(context);
+    }
+}
+```
+
+Bir statik çağrı kullanmak yerine HttpContext 'e erişim gerektiren bileşenleriniz veya hizmetleriniz varsa, `HttpContext.Current` bunun yerine Oluşturucu bağımlılığı ekleme ve [ıhttpcontextaccessor](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.http.ihttpcontextaccessor) arabirimini kullanmanız gerekir:
+
+```csharp
+public class MyService
+{
+    private readonly IHttpContextAccessor _httpContextAccessor;
+
+    public MyService(IHttpContextAccessor httpContextAccessor)
+    {
+        _httpContextAccessor = httpContextAccessor;
+    }
+
+    public void DoSomething()
+    {
+        var currentContext = _httpContextAccessor.HttpContext;
+    }
+}
+```
+
+Bu yaklaşım, bir şekilde erişim sağlarken, geçerli bağlam için yöntemin statik eşlenmesini ortadan kaldırır.
 
 ## <a name="references"></a>Başvurular
 

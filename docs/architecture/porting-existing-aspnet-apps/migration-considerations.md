@@ -3,12 +3,12 @@ title: Geçiş fikirleri
 description: ASP.NET MVC 'den .NET Core 'a geçiş yapılıp yapılmayacağını ve nasıl geçirileceğiyle ilgili doğru kararı vermek için bir takımın bilmeleri gerekir mi?
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: efa1efc99cbe46ef289cfd6b53ba83b3bc1b56b1
-ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
+ms.openlocfilehash: c669dc477469c92dfa3acda8209ba7a1fdea5ed5
+ms.sourcegitcommit: b5d2290673e1c91260c9205202dd8b95fbab1a0b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102206752"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106122865"
 ---
 # <a name="migration-considerations"></a>Geçiş fikirleri
 
@@ -50,13 +50,15 @@ Modern, etkin şekilde geliştirilmiş bir teknoloji yığınında kalmakta olan
 
 ### <a name="application-domains"></a>Uygulama etki alanları
 
-Uygulama etki alanları (AppDomain), uygulamaları birbirinden ayırır. AppDomain, çalışma zamanı desteği gerektirir ve pahalı olabilir. Ek uygulama etki alanlarının oluşturulması desteklenmez ve gelecekte bu özelliği .NET Core 'a eklemek için herhangi bir plan yoktur. Kod yalıtımı için alternatif olarak ayrı süreçler veya kapsayıcılar kullanın.
+Uygulama etki alanları (AppDomain), uygulamaları birbirinden ayırır. AppDomain, çalışma zamanı desteği gerektirir ve pahalı olabilir. Ek uygulama etki alanlarının oluşturulması desteklenmez ve gelecekte bu özelliği .NET Core 'a eklemek için herhangi bir plan yoktur. Kod yalıtımı için alternatif olarak ayrı süreçler veya kapsayıcılar kullanın. Bazı müşteriler, derlemeleri kaldırma yöntemi olarak AppDomain kullanır. .NET Core [Assemblyloadcontext](https://docs.microsoft.com/dotnet/standard/assembly/unloadability) içinde derlemeleri kaldırmak için alternatif bir yol sağlar.
 
 ### <a name="wcf"></a>WCF
 
 Sunucu tarafı WCF, .NET Core 'da desteklenmez. .NET Core, WCF ana bilgisayarlarını değil, WCF istemcilerini destekler. Bu işlevselliği gerektiren uygulamaların, geçişin bir parçası olarak farklı bir iletişim teknolojisine (gRPC veya REST gibi) yükseltilmesi gerekir.
 
 [.Net Foundation 'da kullanılabilen bir WCF istemci bağlantı noktası](../../core/dotnet-five.md#windows-communication-foundation)vardır. Bu, tamamen açık kaynak, platformlar arası ve Microsoft tarafından desteklenmektedir. Ayrıca *, Microsoft tarafından resmi olarak* desteklenmeyen bir topluluk destekli [corewcf projesi](https://github.com/CoreWCF/CoreWCF) de mevcuttur.
+
+WCF 'den gRPC 'ye geçiş hakkında daha fazla bilgi edinmek için bkz. [WCF geliştiricileri Için GRPC](https://docs.microsoft.com/dotnet/architecture/grpc-for-wcf-developers/) eKitap.
 
 ### <a name="remoting"></a>Uzaktan iletişim
 
