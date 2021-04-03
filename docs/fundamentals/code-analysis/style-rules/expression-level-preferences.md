@@ -15,41 +15,41 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 03/30/2021
 ms.locfileid: "96589825"
 ---
-# <a name="expression-level-preferences"></a><span data-ttu-id="4a554-103">İfade düzeyinde tercihler</span><span class="sxs-lookup"><span data-stu-id="4a554-103">Expression-level preferences</span></span>
+# <a name="expression-level-preferences"></a><span data-ttu-id="40718-103">İfade düzeyinde tercihler</span><span class="sxs-lookup"><span data-stu-id="40718-103">Expression-level preferences</span></span>
 
-## <a name="net-expression-level-preferences"></a><span data-ttu-id="4a554-104">.NET ifade düzeyi tercihleri</span><span class="sxs-lookup"><span data-stu-id="4a554-104">.NET expression-level preferences</span></span>
+## <a name="net-expression-level-preferences"></a><span data-ttu-id="40718-104">.NET ifade düzeyi tercihleri</span><span class="sxs-lookup"><span data-stu-id="40718-104">.NET expression-level preferences</span></span>
 
-<span data-ttu-id="4a554-105">Bu bölümdeki stil kuralları, C# ve Visual Basic ortak olan aşağıdaki ifade düzeyi tercihleri ilgilendirdir:</span><span class="sxs-lookup"><span data-stu-id="4a554-105">The style rules in this section concern the following expression-level preferences that are common to C# and Visual Basic:</span></span>
+<span data-ttu-id="40718-105">Bu bölümdeki stil kuralları, C# ve Visual Basic ortak olan aşağıdaki ifade düzeyi tercihleri ilgilendirdir:</span><span class="sxs-lookup"><span data-stu-id="40718-105">The style rules in this section concern the following expression-level preferences that are common to C# and Visual Basic:</span></span>
 
-- [<span data-ttu-id="4a554-106">Switch ifadesine eksik durum ekleme (IDE0010)</span><span class="sxs-lookup"><span data-stu-id="4a554-106">Add missing cases to switch statement (IDE0010)</span></span>](ide0010.md)
-- [<span data-ttu-id="4a554-107">Nesne başlatıcılarının kullanımı (IDE0017)</span><span class="sxs-lookup"><span data-stu-id="4a554-107">Use object initializers (IDE0017)</span></span>](ide0017.md)
-- [<span data-ttu-id="4a554-108">Koleksiyon Başlatıcıları kullanma (IDE0028)</span><span class="sxs-lookup"><span data-stu-id="4a554-108">Use collection initializers (IDE0028)</span></span>](ide0028.md)
-- [<span data-ttu-id="4a554-109">Auto özelliğini kullan (IDE0032)</span><span class="sxs-lookup"><span data-stu-id="4a554-109">Use auto property (IDE0032)</span></span>](ide0032.md)
-- [<span data-ttu-id="4a554-110">Açık olarak sağlanmış demet adı kullanın (IDE0033)</span><span class="sxs-lookup"><span data-stu-id="4a554-110">Use explicitly provided tuple name (IDE0033)</span></span>](ide0033.md)
-- [<span data-ttu-id="4a554-111">Gösterilen üye adı kullan (IDE0037)</span><span class="sxs-lookup"><span data-stu-id="4a554-111">Use inferred member name (IDE0037)</span></span>](ide0037.md)
-- [<span data-ttu-id="4a554-112">Atama için koşullu ifade kullan (IDE0045)</span><span class="sxs-lookup"><span data-stu-id="4a554-112">Use conditional expression for assignment (IDE0045)</span></span>](ide0045.md)
-- [<span data-ttu-id="4a554-113">Return (IDE0046) için koşullu ifade kullan</span><span class="sxs-lookup"><span data-stu-id="4a554-113">Use conditional expression for return (IDE0046)</span></span>](ide0046.md)
-- [<span data-ttu-id="4a554-114">Anonim türü kayıt türüne Dönüştür (IDE0050)</span><span class="sxs-lookup"><span data-stu-id="4a554-114">Convert anonymous type to tuple (IDE0050)</span></span>](ide0050.md)
-- [<span data-ttu-id="4a554-115">Bileşik atama kullan (IDE0054 ve IDE0074)</span><span class="sxs-lookup"><span data-stu-id="4a554-115">Use compound assignment (IDE0054 and IDE0074)</span></span>](ide0054-ide0074.md)
-- [<span data-ttu-id="4a554-116">' System. HashCode. Birleştir ' kullanın (IDE0070)</span><span class="sxs-lookup"><span data-stu-id="4a554-116">Use 'System.HashCode.Combine' (IDE0070)</span></span>](ide0070.md)
-- [<span data-ttu-id="4a554-117">İlişkilendirmeyi basitleştirme (IDE0071)</span><span class="sxs-lookup"><span data-stu-id="4a554-117">Simplify interpolation (IDE0071)</span></span>](ide0071.md)
-- [<span data-ttu-id="4a554-118">Koşullu ifadeyi basitleştirme (IDE0075)</span><span class="sxs-lookup"><span data-stu-id="4a554-118">Simplify conditional expression (IDE0075)</span></span>](ide0075.md)
-- [<span data-ttu-id="4a554-119">' Typeof ' öğesini ' NameOf ' öğesine Dönüştür (IDE0082)</span><span class="sxs-lookup"><span data-stu-id="4a554-119">Convert 'typeof' to 'nameof' (IDE0082)</span></span>](ide0082.md)
+- [<span data-ttu-id="40718-106">Switch ifadesine eksik durum ekleme (IDE0010)</span><span class="sxs-lookup"><span data-stu-id="40718-106">Add missing cases to switch statement (IDE0010)</span></span>](ide0010.md)
+- [<span data-ttu-id="40718-107">Nesne başlatıcılarının kullanımı (IDE0017)</span><span class="sxs-lookup"><span data-stu-id="40718-107">Use object initializers (IDE0017)</span></span>](ide0017.md)
+- [<span data-ttu-id="40718-108">Koleksiyon Başlatıcıları kullanma (IDE0028)</span><span class="sxs-lookup"><span data-stu-id="40718-108">Use collection initializers (IDE0028)</span></span>](ide0028.md)
+- [<span data-ttu-id="40718-109">Auto özelliğini kullan (IDE0032)</span><span class="sxs-lookup"><span data-stu-id="40718-109">Use auto property (IDE0032)</span></span>](ide0032.md)
+- [<span data-ttu-id="40718-110">Açık olarak sağlanmış demet adı kullanın (IDE0033)</span><span class="sxs-lookup"><span data-stu-id="40718-110">Use explicitly provided tuple name (IDE0033)</span></span>](ide0033.md)
+- [<span data-ttu-id="40718-111">Gösterilen üye adı kullan (IDE0037)</span><span class="sxs-lookup"><span data-stu-id="40718-111">Use inferred member name (IDE0037)</span></span>](ide0037.md)
+- [<span data-ttu-id="40718-112">Atama için koşullu ifade kullan (IDE0045)</span><span class="sxs-lookup"><span data-stu-id="40718-112">Use conditional expression for assignment (IDE0045)</span></span>](ide0045.md)
+- [<span data-ttu-id="40718-113">Return (IDE0046) için koşullu ifade kullan</span><span class="sxs-lookup"><span data-stu-id="40718-113">Use conditional expression for return (IDE0046)</span></span>](ide0046.md)
+- [<span data-ttu-id="40718-114">Anonim türü kayıt türüne Dönüştür (IDE0050)</span><span class="sxs-lookup"><span data-stu-id="40718-114">Convert anonymous type to tuple (IDE0050)</span></span>](ide0050.md)
+- [<span data-ttu-id="40718-115">Bileşik atama kullan (IDE0054 ve IDE0074)</span><span class="sxs-lookup"><span data-stu-id="40718-115">Use compound assignment (IDE0054 and IDE0074)</span></span>](ide0054-ide0074.md)
+- [<span data-ttu-id="40718-116">' System. HashCode. Birleştir ' kullanın (IDE0070)</span><span class="sxs-lookup"><span data-stu-id="40718-116">Use 'System.HashCode.Combine' (IDE0070)</span></span>](ide0070.md)
+- [<span data-ttu-id="40718-117">İlişkilendirmeyi basitleştirme (IDE0071)</span><span class="sxs-lookup"><span data-stu-id="40718-117">Simplify interpolation (IDE0071)</span></span>](ide0071.md)
+- [<span data-ttu-id="40718-118">Koşullu ifadeyi basitleştirme (IDE0075)</span><span class="sxs-lookup"><span data-stu-id="40718-118">Simplify conditional expression (IDE0075)</span></span>](ide0075.md)
+- [<span data-ttu-id="40718-119">' Typeof ' öğesini ' NameOf ' öğesine Dönüştür (IDE0082)</span><span class="sxs-lookup"><span data-stu-id="40718-119">Convert 'typeof' to 'nameof' (IDE0082)</span></span>](ide0082.md)
 
-## <a name="c-expression-level-preferences"></a><span data-ttu-id="4a554-120">C# ifade düzeyi tercihleri</span><span class="sxs-lookup"><span data-stu-id="4a554-120">C# expression-level preferences</span></span>
+## <a name="c-expression-level-preferences"></a><span data-ttu-id="40718-120">C# ifade düzeyi tercihleri</span><span class="sxs-lookup"><span data-stu-id="40718-120">C# expression-level preferences</span></span>
 
-<span data-ttu-id="4a554-121">Bu bölümdeki stil kuralları C# ' ye özgü aşağıdaki ifade düzeyi tercihleri ile ilgilendirin:</span><span class="sxs-lookup"><span data-stu-id="4a554-121">The style rules in this section concern the following expression-level preferences that are specific to C#:</span></span>
+<span data-ttu-id="40718-121">Bu bölümdeki stil kuralları C# ' ye özgü aşağıdaki ifade düzeyi tercihleri ile ilgilendirin:</span><span class="sxs-lookup"><span data-stu-id="40718-121">The style rules in this section concern the following expression-level preferences that are specific to C#:</span></span>
 
-- [<span data-ttu-id="4a554-122">Satır içi değişken bildirimi (IDE0018)</span><span class="sxs-lookup"><span data-stu-id="4a554-122">Inline variable declaration (IDE0018)</span></span>](ide0018.md)
-- [<span data-ttu-id="4a554-123">' Default ' ifadesini Basitleştir (IDE0034)</span><span class="sxs-lookup"><span data-stu-id="4a554-123">Simplify 'default' expression (IDE0034)</span></span>](ide0034.md)
-- [<span data-ttu-id="4a554-124">Lambda yerine yerel işlev kullan (IDE0039)</span><span class="sxs-lookup"><span data-stu-id="4a554-124">Use local function instead of lambda (IDE0039)</span></span>](ide0039.md)
-- [<span data-ttu-id="4a554-125">Değişken bildirimini kaldırma (IDE0042)</span><span class="sxs-lookup"><span data-stu-id="4a554-125">Deconstruct variable declaration (IDE0042)</span></span>](ide0042.md)
-- [<span data-ttu-id="4a554-126">Dizin işleci kullan (IDE0056)</span><span class="sxs-lookup"><span data-stu-id="4a554-126">Use index operator (IDE0056)</span></span>](ide0056.md)
-- [<span data-ttu-id="4a554-127">Range işleci kullan (IDE0057)</span><span class="sxs-lookup"><span data-stu-id="4a554-127">Use range operator (IDE0057)</span></span>](ide0057.md)
-- [<span data-ttu-id="4a554-128">Anahtar ifadesine eksik durum ekleme (IDE0072)</span><span class="sxs-lookup"><span data-stu-id="4a554-128">Add missing cases to switch expression (IDE0072)</span></span>](ide0072.md)
-- [<span data-ttu-id="4a554-129">' New ' ifadesini Basitleştir (IDE0090)</span><span class="sxs-lookup"><span data-stu-id="4a554-129">Simplify 'new' expression (IDE0090)</span></span>](ide0090.md)
+- [<span data-ttu-id="40718-122">Satır içi değişken bildirimi (IDE0018)</span><span class="sxs-lookup"><span data-stu-id="40718-122">Inline variable declaration (IDE0018)</span></span>](ide0018.md)
+- [<span data-ttu-id="40718-123">' Default ' ifadesini Basitleştir (IDE0034)</span><span class="sxs-lookup"><span data-stu-id="40718-123">Simplify 'default' expression (IDE0034)</span></span>](ide0034.md)
+- [<span data-ttu-id="40718-124">Lambda yerine yerel işlev kullan (IDE0039)</span><span class="sxs-lookup"><span data-stu-id="40718-124">Use local function instead of lambda (IDE0039)</span></span>](ide0039.md)
+- [<span data-ttu-id="40718-125">Değişken bildirimini kaldırma (IDE0042)</span><span class="sxs-lookup"><span data-stu-id="40718-125">Deconstruct variable declaration (IDE0042)</span></span>](ide0042.md)
+- [<span data-ttu-id="40718-126">Dizin işleci kullan (IDE0056)</span><span class="sxs-lookup"><span data-stu-id="40718-126">Use index operator (IDE0056)</span></span>](ide0056.md)
+- [<span data-ttu-id="40718-127">Range işleci kullan (IDE0057)</span><span class="sxs-lookup"><span data-stu-id="40718-127">Use range operator (IDE0057)</span></span>](ide0057.md)
+- [<span data-ttu-id="40718-128">Anahtar ifadesine eksik durum ekleme (IDE0072)</span><span class="sxs-lookup"><span data-stu-id="40718-128">Add missing cases to switch expression (IDE0072)</span></span>](ide0072.md)
+- [<span data-ttu-id="40718-129">' New ' ifadesini Basitleştir (IDE0090)</span><span class="sxs-lookup"><span data-stu-id="40718-129">Simplify 'new' expression (IDE0090)</span></span>](ide0090.md)
 
-## <a name="see-also"></a><span data-ttu-id="4a554-130">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4a554-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="40718-130">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="40718-130">See also</span></span>
 
-- [<span data-ttu-id="4a554-131">Kod stili kuralları başvurusu</span><span class="sxs-lookup"><span data-stu-id="4a554-131">Code style rules reference</span></span>](index.md)
-- [<span data-ttu-id="4a554-132">Kod stili dil kuralları</span><span class="sxs-lookup"><span data-stu-id="4a554-132">Code style language rules</span></span>](language-rules.md)
+- [<span data-ttu-id="40718-131">Kod stili kuralları başvurusu</span><span class="sxs-lookup"><span data-stu-id="40718-131">Code style rules reference</span></span>](index.md)
+- [<span data-ttu-id="40718-132">Kod stili dil kuralları</span><span class="sxs-lookup"><span data-stu-id="40718-132">Code style language rules</span></span>](language-rules.md)
