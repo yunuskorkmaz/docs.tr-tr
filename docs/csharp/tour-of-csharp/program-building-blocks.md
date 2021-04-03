@@ -2,12 +2,12 @@
 title: C# programlarının yapı taşları
 description: C# üyeleri, ifadeler ve deyimler hakkında bilgi edinin. Türler yazdığınız üyeleri içerir. Bu Üyeler deyimlerden ve ifadelerden oluşturulur.
 ms.date: 08/06/2020
-ms.openlocfilehash: 79ba391a6c4c6dc453f6c6e07107e4dd831e111d
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: 87410697bbed305c746f1440cca61dcbe53f88a7
+ms.sourcegitcommit: 872ca41d1c26f39d0aef57cc365d09503bac780d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100582958"
+ms.lasthandoff: 04/03/2021
+ms.locfileid: "106288062"
 ---
 # <a name="program-building-blocks"></a>Program yapı taşları
 
@@ -205,7 +205,7 @@ Bir özelliğin erişimcisi sanal olabilir. Bir özellik bildirimi `virtual` ,, 
 
 *Dizin Oluşturucu* , nesnelerin diziyle aynı şekilde dizinlenmesini sağlayan bir üyedir. Bir Dizin Oluşturucu, üyenin adının `this` ardından sınırlayıcılar ve arasında yazılmış bir parametre listesi gelmesi dışında bir özellik gibi bildirilmiştir `[` `]` . Parametreler, dizin oluşturucunun erişimcisinde kullanılabilir. Özelliklere benzer şekilde, Dizin oluşturucular okunabilir-yazılır, salt okunurdur ve salt yazılır olabilir ve bir dizin oluşturucunun erişimcisi sanal olabilir.
 
-`MyList<T>`Sınıfı, bir parametresi alan tek bir okuma-yazma Dizin Oluşturucu bildirir `int` . Dizin Oluşturucu, örneklerin değerleriyle dizin oluşturmanızı mümkün kılar `MyList<T>` `int` . Örneğin:
+`MyList<T>`Sınıfı, bir parametresi alan tek bir okuma-yazma Dizin Oluşturucu bildirir `int` . Dizin Oluşturucu, örneklerin değerleriyle dizin oluşturmanızı mümkün kılar `MyList<T>` `int` . Örnek:
 
 :::code language="csharp" source="./snippets/shared/ClassesObjects.cs" ID="ListAccess":::
 

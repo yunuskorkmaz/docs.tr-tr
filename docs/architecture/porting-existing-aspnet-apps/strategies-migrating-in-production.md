@@ -3,12 +3,12 @@ title: Üretimde çalışırken geçiş stratejileri
 description: ASP.NET MVC 'den büyük bir uygulamayı tek seferde ASP.NET Core geçiremeyebilir. Bir uygulamayı çalışırken ve mevcut kullanıcılar için üretimde ASP.NET Core geçirmek için bazı stratejiler öğrenin.
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: e9dcdb3594cc431f3fd7e71b16e0d806ab8d1ba6
-ms.sourcegitcommit: 05d0087dfca85aac9ca2960f86c5efd218bf833f
+ms.openlocfilehash: 9b5d031165773c4da536bdc5478836a1b00436a1
+ms.sourcegitcommit: b5d2290673e1c91260c9205202dd8b95fbab1a0b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2021
-ms.locfileid: "105637097"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106122735"
 ---
 # <a name="strategies-for-migrating-while-running-in-production"></a>Üretimde çalışırken geçiş stratejileri
 
@@ -16,7 +16,7 @@ Birçok ekibin .NET Core 'a geçirmeyi planlayabilecekleri .NET Framework uygula
 
 ## <a name="refactor-the-net-framework-solution"></a>.NET Framework çözümünü yeniden düzenleme
 
-.NET Core 'a bir .NET Framework uygulamasının bağlantı noktasını, .NET Core ile daha iyi çalışacak şekilde yeniden düzenleme konusunda planladığınız bir başlamak iyi bir yerdir. Bu, tek tek sınıf .NET Standard kitaplıklarının, ASP.NET MVC projelerinizden ve bu sınıf kitaplıklarında çok sayıda mantığa göre güncelleştirilmesi ve bu nesnelerin çok sayıda mantığını güncellemek anlamına gelir. .NET Standard kitaplıklarında bulunan herhangi bir kod, .NET Framework arasında nispeten daha kolay bir şekilde .NET Core 'a taşınmalıdır.
+.NET Core 'a bir .NET Framework uygulamasının bağlantı noktasını, .NET Core ile daha iyi çalışacak şekilde yeniden düzenleme konusunda planladığınız bir başlamak iyi bir yerdir. Bu, tek tek sınıf .NET Standard kitaplıklarının, ASP.NET MVC projelerinizden ve bu sınıf kitaplıklarında çok sayıda mantığa göre güncelleştirilmesi ve bu nesnelerin çok sayıda mantığını güncellemek anlamına gelir. .NET Standard kitaplıklarında bulunan herhangi bir kod, hem .NET Framework hem de .NET Core uygulamalarına (Bu adımın bir geçişin parçası olarak değerli olması) hemen kullanılabilir.
 
 Yeniden düzenleme yaparken, daha iyi yeniden düzenleme temellerini kullandığınızdan emin olun. Örneğin, yeniden düzenlemeye başlamadan önce sistemin ne yaptığını doğrulayan testler oluşturun. Sistemin davranışını değiştirmediğinizi onaylamak için işiniz bittiğinde bu testleri çalıştırın. Güvenebildiğiniz bir otomatik test paketiniz yoksa sisteme karakter seçme testleri eklemeniz gerekebilir.
 
@@ -40,17 +40,17 @@ Büyük ASP.NET MVC uygulamaları, işlevselliğin parçalarını artımlı olar
 
 Façlade olduktan sonra, bunun bir kısmını yeni bir ASP.NET Core uygulamasına yönlendirebilirsiniz. .NET Core 'a özgün .NET Framework uygulamasının daha fazlasını yaptığınızda, façlade katmanını uygun şekilde güncelleştirmeye devam edersiniz ve bu da daha fazla façladem işlevinin yeni sisteme gönderilmesini sağlar. Şekil 3-5, zaman içinde yabangler deseninin ilerlemesini gösterir.
 
-## <a name="multi-targeting-approaches"></a>Çoklu hedefleme yaklaşımları
-
-.NET Framework hedef olan büyük uygulamalar, her bir çerçeve için Çoklu hedefleme ve ayrı kod yolları kullanılarak zaman içinde ASP.NET Core geçirilebilir. Örneğin, her iki ortamda da çalışması gereken kod, farklı işlevler uygulamak veya .NET Framework .NET Core 'da çalıştırıldığında farklı bağımlılıklar kullanmak için [Önişlemci `#if` ](../../csharp/language-reference/preprocessor-directives.md#conditional-compilation) yönergeleri ile değiştirilebilir. Başka bir seçenek de proje dosyalarını, hedeflenen Framework 'ü temel alan farklı dosya kümelerini içerecek şekilde değiştirmektir. Proje dosyaları, `*.core.cs` hedeflenen çerçeveye göre farklı kaynak dosya kümelerini dahil etmek için gibi farklı glob desenleri kullanabilir.
-
-Bu teknikler, tek bir ortak kod temelinin, yeni işlevsellik eklendiğinde ve (bazı parçalar) .NET Core kullanımı dışında tutulmasını sağlar.
-
 ![Şekil 3-5](media/Figure3-5.png)
 
 **Şekil 3-5.** Zaman içinde Yabangler deseninin.
 
 Sonuç olarak, façlade katmanının tamamı yeni, modern uygulamaya karşılık gelir. Bu noktada, hem eski sistem hem de yüz katman devre dışı bırakılabilir.
+
+## <a name="multi-targeting-approaches"></a>Çoklu hedefleme yaklaşımları
+
+.NET Framework hedef olan büyük uygulamalar, her bir çerçeve için Çoklu hedefleme ve ayrı kod yolları kullanılarak zaman içinde ASP.NET Core geçirilebilir. Örneğin, her iki ortamda da çalışması gereken kod, farklı işlevler uygulamak veya .NET Framework .NET Core 'da çalıştırıldığında farklı bağımlılıklar kullanmak için [Önişlemci `#if` ](../../csharp/language-reference/preprocessor-directives.md#conditional-compilation) yönergeleri ile değiştirilebilir. Başka bir seçenek de proje dosyalarını, hedeflenen Framework 'ü temel alan farklı dosya kümelerini içerecek şekilde değiştirmektir. Proje dosyaları, `*.core.cs` hedeflenen çerçeveye göre farklı kaynak dosya kümelerini dahil etmek için gibi farklı glob desenleri kullanabilir. Genellikle yalnızca birden çok Web uygulaması tarafından kullanılacak kitaplıklar için bu yaklaşımı takip edersiniz. Web uygulamalarının kendisi için, iki ayrı projenin olması genellikle daha iyidir.
+
+Bu teknikler, tek bir ortak kod temelinin, yeni işlevsellik eklendiğinde ve (bazı parçalar) .NET Core kullanımı dışında tutulmasını sağlar.
 
 ## <a name="summary"></a>Özet
 

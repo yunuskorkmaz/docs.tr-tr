@@ -2,12 +2,12 @@
 title: "Son değişiklik: bazı API 'Ler bağımsız değişkenler NullException oluşturur"
 description: .NET 6 ' daki Son değişiklik hakkında bilgi edinmek için bazı API 'Lerin bağımsız değişkenleri doğruladığını ve şimdi bir ArgumentNullException oluşturacağı
 ms.date: 01/29/2021
-ms.openlocfilehash: ca7f32739237715657350f52d2523b0ce378364d
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: dd0ee33ca7335bfd6e4ddfefca0e56ab719178eb
+ms.sourcegitcommit: 109507b6c16704ed041efe9598c70cd3438a9fbc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102255743"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106079576"
 ---
 # <a name="some-apis-throw-argumentnullexception"></a>Bazı API 'Ler bağımsız değişkenler NullException oluşturur
 
@@ -34,17 +34,23 @@ Bazı API 'Ler artık giriş parametrelerini doğrular ve <xref:System.ArgumentN
 
 ## <a name="affected-apis"></a>Etkilenen API’ler
 
-Aşağıdaki tabloda etkilenen özellikler listelenmiştir:
+Aşağıdaki tabloda etkilenen API 'Ler ve belirli parametreler listelenmektedir:
 
-| Özellik | Sürüm değişti |
-|-|-|-|-|
-| <xref:System.Windows.Forms.TreeNodeCollection.Item(System.Int32)?displayProperty=fullName> | Önizleme 1 |
+| Metot/Özellik | Parametre adı | Sürüm değişti |
+|-|-|-|
+| <xref:System.Windows.Forms.TreeNodeCollection.Item(System.Int32)?displayProperty=fullName> | `index` | Önizleme 1 |
+| <xref:System.Windows.Forms.DataGridViewRowStateChangedEventArgs.%23ctor(System.Windows.Forms.DataGridViewRow,System.Windows.Forms.DataGridViewElementStates)> | `dataGridViewRow` | Preview 4 |
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [TreeNodeCollection. Item, düğüm başka bir yere atanırsa özel durum oluşturur](treenodecollection-item-throws-argumentexception.md)
 
 <!--
 
 ### Affected APIs
 
 - `P:System.Windows.Forms.TreeNodeCollection.Item(System.Int32)`
+- `M:System.Windows.Forms.DataGridViewRowStateChangedEventArgs.#ctor(System.Windows.Forms.DataGridViewRow,System.Windows.Forms.DataGridViewElementStates)`
 
 ### Category
 

@@ -3,12 +3,12 @@ title: Sözdizimi dönüşümü ile çalışmaya başlama (Roslyn API 'Leri)
 description: Sözdizimi ağaçlarını geçme, sorgulama ve yürüyen bir giriş.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 706e4643ecc81d252a9192dc5e8850024770628f
-ms.sourcegitcommit: 456b3cd82a87b453fa737b4661295070d1b6d684
+ms.openlocfilehash: f12727332256acd9bbe828b9149376080facd156
+ms.sourcegitcommit: 652f62fc8f3ab6a264681b6eb5211ac7539bd115
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100639409"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "105964829"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Sözdizimi dönüşümü ile çalışmaya başlama
 
@@ -28,7 +28,7 @@ Söz dizimi dönüştürmeleri için iki stratejiden birini seçersiniz. **Fabri
 
 ### <a name="create-nodes-with-factory-methods"></a>Fabrika yöntemleriyle düğüm oluşturma
 
-İlk sözdizimi dönüştürmesi, Fabrika yöntemlerini gösterir. Bir `using System.Collections;` ifadeyi bir `using System.Collections.Generic;` ifadesiyle değiştirecek. Bu örnek <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode?displayProperty=nameWithType> , Fabrika yöntemlerini kullanarak nesneleri nasıl oluşturacağınızı gösterir <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> . Her **düğüm**, **belirteç** veya **üç** tür için, bu türün bir örneğini oluşturan bir fabrika yöntemi vardır. Düğümleri aşağıdan yukarıya doğru oluşturarak sözdizimi ağaçları oluşturursunuz. Ardından, var olan programı, oluşturduğunuz yeni ağaç ile varolan düğümleri değiştirmektir.
+İlk sözdizimi dönüştürmesi, Fabrika yöntemlerini gösterir. Bir `using System.Collections;` ifadeyi bir `using System.Collections.Generic;` ifadesiyle değiştirecek. Bu örnek <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode?displayProperty=nameWithType> , Fabrika yöntemlerini kullanarak nesneleri nasıl oluşturacağınızı gösterir <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> . Her **düğüm**, **belirteç** veya **üç** tür için, bu türün bir örneğini oluşturan bir fabrika yöntemi vardır. Düğümleri aşağıdan yukarıya doğru oluşturarak sözdizimi ağaçları oluşturursunuz. Ardından Varolan düğümleri, oluşturduğunuz yeni ağacıyla değiştirerek varolan programı dönüştürüceksiniz.
 
 Visual Studio 'yu başlatın ve yeni bir C# **tek başına kod analizi araç** projesi oluşturun. Visual Studio 'da   >    >  Yeni proje iletişim kutusunu göstermek için dosya yeni **Proje** ' yi seçin. **Visual C#**  >  **genişletilebilirliği** altında **tek başına bir kod Analizi Aracı** seçin. Bu hızlı başlangıçta iki örnek proje bulunur, bu nedenle çözümü **SyntaxTransformationQuickStart** olarak adlandırın ve projeyi **constructioncs** olarak adlandırın. **Tamam**'a tıklayın.
 

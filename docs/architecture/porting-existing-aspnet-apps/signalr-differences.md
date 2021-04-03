@@ -3,12 +3,12 @@ title: ASP.NET SignalR ve ASP.NET Core SignalR karşılaştırması
 description: ASP.NET Core SignalR nasıl öncülü, ASP.NET SignalR 'den farklıdır?
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 89236bd0272c8f20cf9838dddefeb9afee1f3d93
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 4a8680d8a28faaa07687b2c5835ebbf428032fbe
+ms.sourcegitcommit: b5d2290673e1c91260c9205202dd8b95fbab1a0b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102105785"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106122659"
 ---
 # <a name="compare-aspnet-signalr-and-aspnet-core-signalr"></a>ASP.NET SignalR ve ASP.NET Core SignalR karşılaştırması
 
@@ -23,7 +23,7 @@ ASP.NET Core SignalR, ASP.NET SignalR kullanan istemcilerle veya sunucularla uyu
 - ASP.NET Core SignalR, yapışkan oturumlar gerektirir; ASP.NET SignalR değil.
 - ASP.NET Core bağlantı modelini basitleştirir; bağlantılar yalnızca tek bir hub 'a yapılır.
 - ASP.NET Core SignalR, hub 'dan istemciye veri akışını destekler.
-- ASP.NET Core SignalR, istemcilerle hub arasında durum geçirmeyi desteklemez.
+- ASP.NET Core SignalR, istemcilerle hub arasında durum geçirmeyi desteklemez (ancak Yöntem çağrıları, hub 'lar ve istemciler arasında bilgi geçişine hala izin verir).
 - `PersistentConnection`Sınıf ASP.NET Core SignalR içinde yok.
 - ASP.NET SignalR SQL Server ve Redsıs 'yi destekler. ASP.NET Core SignalR, [Azure SignalR](/azure/azure-signalr/) ve redsıs 'yi destekler.
 

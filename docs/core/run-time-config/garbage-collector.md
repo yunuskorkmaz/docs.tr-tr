@@ -3,12 +3,12 @@ title: Çöp toplayıcı yapılandırma ayarları
 description: Çöp toplayıcının .NET Core uygulamaları için belleği nasıl yönettiğini yapılandırmak üzere çalışma zamanı ayarları hakkında bilgi edinin.
 ms.date: 07/10/2020
 ms.topic: reference
-ms.openlocfilehash: c4f55124d9f50146ceac1eea52ce60b0dd77ad1d
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: 1bae00d2fc6e80811986bbb111f38582720f8487
+ms.sourcegitcommit: 872ca41d1c26f39d0aef57cc365d09503bac780d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104875050"
+ms.lasthandoff: 04/03/2021
+ms.locfileid: "106288088"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>Çöp toplama için çalışma zamanı yapılandırma seçenekleri
 
@@ -288,7 +288,7 @@ Bu ayarlardan bazıları hakkında daha fazla bilgi için, bkz. [iş istasyonu v
 - Bu ayar yalnızca 64 bitlik bilgisayarlar için geçerlidir.
 - İşlem belirtilen bellek sınırına sahip bir kapsayıcı içinde çalışıyorsa, yüzde bu bellek sınırının yüzdesi olarak hesaplanır.
 - [Nesne başına yığın sınırları](#per-object-heap-limits) yapılandırılırsa Bu ayar yoksayılır.
-- Yalnızca belirli durumlarda geçerli olan varsayılan değer, kapsayıcıda bellek sınırının 20 MB veya %75 ' si kadar küçüktür. Varsayılan değer şu durumlarda geçerlidir:
+- Yalnızca belirli durumlarda geçerli olan varsayılan değer, kapsayıcıdaki bellek sınırının 20 MB veya %75 ' sinden daha fazladır. Varsayılan değer şu durumlarda geçerlidir:
 
   - İşlem belirtilen bellek sınırına sahip bir kapsayıcı içinde çalışıyor.
   - [System. GC. HeapHardLimit](#heap-limit) ayarlanmadı.

@@ -12,16 +12,16 @@ helpviewer_keywords:
 - event handling [.NET], with multiple events
 - events [.NET], multiple
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
-ms.openlocfilehash: 7484ad06e80e6ce131f48431fbdd1e812ce0bfa0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2f2cd2d17df6d4bbbdaec09be27f8e74367d2bcb
+ms.sourcegitcommit: 652f62fc8f3ab6a264681b6eb5211ac7539bd115
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734328"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "105964786"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>Nasıl yapılır: Olay Özelliklerini Kullanarak Birden Çok Olayı İşleme
 
-Olay özelliklerini kullanmak için olayları oluşturan sınıftaki olay özelliklerini tanımlayın ve ardından olayları işleyen sınıflardaki olay özellikleri için temsilcileri ayarlayın. Bir sınıfta birden çok olay özelliğini uygulamak amacıyla sınıfın, her bir olay için tanımlanan temsilciyi dahili olarak depolaması ve koruması gerekir. Bir olay anahtarı tarafından dizinlenen bir temsilci koleksiyonunun uygulanması tipik bir yaklaşımdır.  
+Olay özelliklerini kullanmak için olayları oluşturan sınıftaki olay özelliklerini tanımlayın ve ardından olayları işleyen sınıflardaki olay özellikleri için temsilcileri ayarlayın. Bir sınıfta birden çok olay özelliği uygulamak için sınıfı, her olay için tanımlanan temsilciyi dahili olarak depolayıp sürdürmelidir. Her alan-benzeri olay için, karşılık gelen bir yedekleme alanı başvuru türü oluşturulur. Bu, olayların sayısı arttıkça gereksiz ayırmaya yol açabilir. Alternatif olarak, <xref:System.ComponentModel.EventHandlerList> olayları anahtara göre depolayan ortak bir yaklaşım vardır.
   
  Her bir olay için temsilcileri depolamak amacıyla <xref:System.ComponentModel.EventHandlerList> sınıfını kullanabilirsiniz ya da kendi koleksiyonunuzu uygulayabilirsiniz. Koleksiyon sınıfı olay anahtarına bağlı olarak ayarlama, erişme ve olay işleyici temsilcisini almak için yöntemler sağlamak zorundadır. Örneğin, bir <xref:System.Collections.Hashtable> sınıfı kullanabilir veya <xref:System.Collections.DictionaryBase> sınıfından özel bir sınıf türetebilirsiniz. Temsilci koleksiyonuna ait uygulama detaylarının sınıfınızın dışında sunulmasına gerek yoktur.  
   
@@ -50,6 +50,6 @@ Olay özelliklerini kullanmak için olayları oluşturan sınıftaki olay özell
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>
-- [Olaylar](index.md)
+- [Ekinlikler](index.md)
 - <xref:System.Web.UI.Control.Events%2A?displayProperty=nameWithType>
 - [Nasıl yapılır: Bellekten Kazanacak Şekilde Özel Olayları Bildirme](../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)

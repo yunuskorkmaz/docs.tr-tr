@@ -2,16 +2,16 @@
 title: Kayıt türlerini kullanma-C# öğreticisi
 description: Kayıt türlerini kullanma, kayıt hiyerarşileri oluşturma ve sınıflar üzerinde kayıt seçme hakkında bilgi edinin.
 ms.date: 11/12/2020
-ms.openlocfilehash: 301eaf1ddf6d6b7dc1f88ffa4c790e2c2b01862f
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: 9c90368bc25225fa2bf1dc4dff75d995e0a53268
+ms.sourcegitcommit: 872ca41d1c26f39d0aef57cc365d09503bac780d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104879121"
+ms.lasthandoff: 04/03/2021
+ms.locfileid: "106288087"
 ---
 # <a name="create-record-types"></a>Kayıt türleri oluşturma
 
-C# 9, sınıflar veya yapılar yerine oluşturabileceğiniz yeni bir başvuru türü olan *kayıtları* tanıtır. Kayıtlar, kayıt türlerindeki sınıflardan farklıdır ve *değer tabanlı eşitlik* kullanır. Kayıt türünün iki değişkeni, kayıt türü tanımları özdeş ise eşittir ve her alan için her iki kayıttaki değerler eşittir. Başvurulan nesneler aynı sınıf türünde ise ve değişkenler aynı nesneye başvurursanız, bir sınıf türünün iki değişkeni eşittir. Değer tabanlı eşitlik, muhtemelen kayıt türlerinde istediğiniz diğer özellikleri gösterir. Derleyici, bir yerine bir tane bildirdiğinizde bu üyelerin birçoğunu üretir `record` `class` .
+C# 9, sınıflar veya yapılar yerine oluşturabileceğiniz yeni bir başvuru türü olan [*kayıtları*](../../language-reference/builtin-types/record.md)tanıtır. Kayıtlar, kayıt türlerindeki sınıflardan farklıdır ve *değer tabanlı eşitlik* kullanır. Kayıt türünün iki değişkeni, kayıt türü tanımları özdeş ise eşittir ve her alan için her iki kayıttaki değerler eşittir. Başvurulan nesneler aynı sınıf türünde ise ve değişkenler aynı nesneye başvurursanız, bir sınıf türünün iki değişkeni eşittir. Değer tabanlı eşitlik, muhtemelen kayıt türlerinde istediğiniz diğer özellikleri gösterir. Derleyici, bir yerine bir tane bildirdiğinizde bu üyelerin birçoğunu üretir `record` `class` .
 
 Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 

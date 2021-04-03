@@ -3,20 +3,28 @@ title: Artımlı geçiş stratejileri
 description: Takım, büyük uygulamaları ASP.NET MVC 'den .NET Core 'a artımlı bir biçimde geçirmeye olanak sağlayacak olan stratejileri benimseyebilirler.
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: dc500fa71188c472f78ef4df95d79434208552c3
-ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
+ms.openlocfilehash: 615d2a853b698bfc752c3baf36f31ab2a4f2bab8
+ms.sourcegitcommit: b5d2290673e1c91260c9205202dd8b95fbab1a0b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102206454"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106122891"
 ---
 # <a name="strategies-for-migrating-incrementally"></a>Artımlı geçiş stratejileri
 
 Büyük bir uygulamayı geçirmeye en büyük zorluk, işlemin daha küçük görevlere nasıl kesilmesini belirliyor. Uygulamayı kullanıcı arabirimi, veri erişimi, iş mantığı gibi yatay katmanlara bölmek veya uygulamayı ayrı, daha küçük uygulamalara bölmek dahil olmak üzere, bu amaçla uygulanabilecek birkaç strateji vardır. Başka bir strateji, uygulamanın bir kısmını veya tamamını, son .NET Core sürümü gibi farklı çerçeve sürümlerine yükseltmelidir. Kullanabileceğiniz bir yaklaşım, tek seferde bir yatay katman geçirmeye çalışmak yerine uygulamanın [Dikey dilimlerini](https://deviq.com/practices/vertical-slices) geçirmekdür. Bu farklı yaklaşımlardan her birini ele alalım.
 
-Büyük bir ASP.NET 4,5 uygulamasını geçirme sınamasını göz önünde bulundurun. Bir yaklaşım, tüm uygulamayı doğrudan .NET Framework 4,5 ' den .NET Core 3,1 ' den geçirmeye yönelik bir yaklaşımdır. Ancak, bu yaklaşım, önemli olan iki çerçeve ve sürüm arasındaki her bir son değişiklik için hesaba sahip olmalıdır.
+## <a name="migrating-slice-by-slice"></a>Dilimi dilimle geçirme
+
+Geçiş için başarılı bir yaklaşım, dikey işlevlerin düşey dilimlerinin tanımlanması ve bunları hedef platforma tek tek geçirkullanmaktır. İlk adım, yeni bir ASP.NET Core 3,1 veya 5 uygulaması oluşturmaktır. Sonra, önce geçirilecek tek sayfayı veya API uç noktasını bir kez daha belirlemelisiniz. ASP.NET Core uygulamasında bu yolu desteklemek için yalnızca gerekli işlevleri oluşturun. Daha sonra, bu sayfalara veya uç noktalara yönelik istekleri ASP.NET uygulaması yerine yeni uygulamaya göndermeye başlamak için HTTP yeniden yazma ve/veya ters proxy kullanın. Bu yaklaşım, API projelerine uygundur, ancak pek çok MVC uygulaması için de çalışabilir.
+
+Dilimi dilime geçirirken, tek tek API uç noktası veya istenen yolun tüm yığını yeni proje veya çözümde yeniden oluşturulur. Genellikle çok sayıda projenin oluşturulması ve veri erişimi ve çözüm organizasyonu hakkında kararlar olması gerektiğinden, bu dilim genellikle en fazla çaba gerektirir. İlk dilimin işlevselliği mevcut uygulamayı yansıtdıktan sonra dağıtılabilir ve var olan uygulama buna yönlendirebilir ya da yalnızca kaldırılabilir. Bu yaklaşım daha sonra tüm uygulama yeni yapıya alınana kadar yinelenir.
+
+Bu stratejiyi IIS kullanarak izlemeye yönelik bazı özel yönergeler [, Bölüm 5, dağıtım senaryolarında](deployment-scenarios.md)ele alınmıştır.
 
 ## <a name="migrating-layer-by-layer"></a>Katmana göre katman geçirme
+
+Büyük bir ASP.NET 4,5 uygulamasını geçirme sınamasını göz önünde bulundurun. Bir yaklaşım, tüm uygulamayı doğrudan .NET Framework 4,5 ' den .NET Core 3,1 ' den geçirmeye yönelik bir yaklaşımdır. Ancak, bu yaklaşım, önemli olan iki çerçeve ve sürüm arasındaki her bir son değişiklik için hesaba sahip olmalıdır. Aynı anda tek bir projede bu çalışmanın gerçekleştirilmesi, tüm çözümün aynı anda taşınması gerekmemesi için bir dizi Adımlama sağlar.
 
 .NET ekosistemine, farklı .NET çerçeveleri arasında birlikte çalışabilirliğine yardımcı olan bir son ekleme [.NET Standard](https://dotnet.microsoft.com/platform/dotnet-standard). .NET Standard, kitaplıkların ortak API 'Ler kümesi üzerinde anlaşmaya varılmış olarak derlenmesini sağlar ve bu sayede herhangi bir .NET uygulamasında kullanılabilir. .NET Standard 2,0, en .NET Framework ve .NET Core uygulamaları tarafından kullanılan temel sınıf kitaplığı işlevlerinin çoğunu kapsadığından önemli. Ne yazık ki, .NET 'in .NET Standard 2,0 desteği olan en eski sürümü .NET Framework 4.6.1 ve bu, .NET Framework 4,8 ' de ilk yükseltmelere yönelik etkileyici bir seçim yapan birkaç güncelleştirme vardır.
 
@@ -29,12 +37,6 @@ Uygulamanın .NET Core 3,1 ' de çalıştırıldığı zamana göre, geçerli .N
 Bir "alt yukarı" yaklaşımı yerine, başka bir alternatif de Web uygulamasıyla (veya tüm çözümle birlikte) başlamak ve yükseltmeye yardımcı olması için otomatikleştirilmiş bir araç kullanmaktır. [.NET Yükseltme Yardımcısı aracı](https://aka.ms/dotnet-upgrade-assistant) , .NET Framework uygulamalarını .NET Core/.NET 5 ' e yükseltmeye yardımcı olmak için kullanılabilir. Proje dosyası biçimini değiştirme, uygun hedef çerçeveleri ayarlama, NuGet bağımlılıklarını güncelleştirme ve daha fazlası gibi uygulamaları yükseltmeyle ilgili birçok ortak görevi otomatikleştirir.
 
 Bir "alt yukarı" yaklaşımı yerine, başka bir alternatif de Web uygulamasıyla (veya tüm çözümle birlikte) başlamak ve yükseltmeye yardımcı olması için otomatikleştirilmiş bir araç kullanmaktır. [.NET Yükseltme Yardımcısı aracı](https://aka.ms/dotnet-upgrade-assistant) , .NET Framework uygulamalarını .NET Core/.NET 5 ' e yükseltmeye yardımcı olmak için kullanılabilir. Proje dosyası biçimini değiştirme, uygun hedef çerçeveleri ayarlama, NuGet bağımlılıklarını güncelleştirme ve daha fazlası gibi uygulamaları yükseltmeyle ilgili birçok ortak görevi otomatikleştirir.
-
-## <a name="migrating-slice-by-slice"></a>Dilimi dilimle geçirme
-
-Geçişe yönelik başka bir yaklaşım ise dikey işlev dilimlerini tanımlamak ve bunları hedef platforma tek tek geçirmek olacaktır. İlk adım, yeni bir ASP.NET Core 3,1 veya 5 uygulaması oluşturmaktır. Sonra, önce geçirilecek tek sayfayı veya API uç noktasını bir kez daha belirlemelisiniz. ASP.NET Core uygulamasında bu yolu desteklemek için yalnızca gerekli işlevleri oluşturun. Daha sonra, bu sayfalara veya uç noktalara yönelik istekleri ASP.NET uygulaması yerine yeni uygulamaya göndermeye başlamak için HTTP yeniden yazma ve/veya ters proxy kullanın.
-
-Bu stratejiyi IIS kullanarak izlemeye yönelik bazı özel yönergeler [, Bölüm 5, dağıtım senaryolarında](deployment-scenarios.md)ele alınmıştır.
 
 ## <a name="references"></a>Başvurular
 

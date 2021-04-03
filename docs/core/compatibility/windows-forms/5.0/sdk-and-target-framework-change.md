@@ -2,12 +2,12 @@
 title: 'Son değişiklik: WinForms ve WPF uygulamaları Microsoft. NET. SDK kullanır'
 description: Windows Forms ve Windows Presentation Framework uygulamalarının artık .NET Core WinForms ve WPF SDK yerine .NET SDK 'yi kullanacağı .NET 5 ' teki önemli değişiklik hakkında bilgi edinin.
 ms.date: 09/18/2020
-ms.openlocfilehash: 408233f6f8801fb3d4e53beab28c26a777a4a3e1
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: ebd4f51d5436cec2f0463558e99a85cb261ae682
+ms.sourcegitcommit: 109507b6c16704ed041efe9598c70cd3438a9fbc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102256211"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106079498"
 ---
 # <a name="winforms-and-wpf-apps-use-microsoftnetsdk"></a>WinForms ve WPF uygulamaları Microsoft. NET. SDK kullanır
 
@@ -58,7 +58,7 @@ WPF veya Windows Forms proje dosyasında:
 
 ## <a name="affected-apis"></a>Etkilenen API’ler
 
-API analizi aracılığıyla algılanamaz.
+Yok.
 
 <!--
 

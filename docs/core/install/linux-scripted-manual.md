@@ -4,12 +4,12 @@ description: Linux üzerinde bir paket yöneticisi olmadan .NET SDK ve .NET çal
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 6840814627be0124d7b3855f08a433eab76eac4a
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: 9176f7477cf80c26ef0b5b7c438c47afcb423799
+ms.sourcegitcommit: 44af69720863bd09bd7a4509bf1ec119466ba6e8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104873919"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106231303"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-manually"></a>.NET SDK veya .NET çalışma zamanını el ile yükleyebilirsiniz
 
@@ -81,6 +81,8 @@ Dağıtım daha önce listelenmediyse ve temel alıyorsa, Aşağıdaki bağıml�
 ## <a name="scripted-install"></a>Komut dosyalı yüklemesi
 
 [DotNet yükleme betikleri](../tools/dotnet-install-script.md) , **SDK** ve **çalışma zamanının** Otomasyon ve yönetici olmayan yüklemeleri için kullanılır. Betiği konumundan indirebilirsiniz <https://dot.net/v1/dotnet-install.sh> .
+
+> ! ÖNEMLI Komut dosyasını çalıştırmak için bash gereklidir.
 
 Komut dosyası, .NET Core 3,1 olan en son SDK [uzun süreli destek (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sürümünü yüklemek için varsayılan olarak kullanılır. (LTS) sürümü olmayan geçerli sürümü yüklemek için `-c Current` parametresini kullanın.
 

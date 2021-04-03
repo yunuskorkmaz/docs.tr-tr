@@ -4,12 +4,12 @@ description: .NET SDK ve .NET çalışma zamanının alp 'ye yüklenmesi için �
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: ece9a253cc11195c67e79c89747efe462a71632d
-ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
+ms.openlocfilehash: 6cd36fa6329d3c1a5835d4c202ac0024ffa41892
+ms.sourcegitcommit: 109507b6c16704ed041efe9598c70cd3438a9fbc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104873763"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106079511"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-alpine"></a>.NET SDK 'sını veya .NET çalışma zamanını alp 'ye yükler
 
@@ -52,7 +52,6 @@ Aşağıdaki .NET sürümleri artık desteklenmemektedir. Bunlara yönelik İndi
 
 .NET alp Linux 'ta aşağıdaki bağımlılıkların yüklü olmasını gerektirir:
 
-- bash
 - ICU-libs
 - krb5-libs
 - libgcc

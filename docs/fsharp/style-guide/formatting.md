@@ -2,12 +2,12 @@
 title: F# kod biçimlendirme yönergeleri
 description: 'F # kodunu biçimlendirmeye yönelik yönergeleri öğrenin.'
 ms.date: 08/31/2020
-ms.openlocfilehash: 5c5ba972bcd91120b129efb944a028889294f048
-ms.sourcegitcommit: 652f62fc8f3ab6a264681b6eb5211ac7539bd115
+ms.openlocfilehash: 36e8ddaf360604777ce193c69dcb5cba7168c023
+ms.sourcegitcommit: 44af69720863bd09bd7a4509bf1ec119466ba6e8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "105964838"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106231146"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# kod biçimlendirme yönergeleri
 
@@ -908,7 +908,7 @@ lambdaList
 Ya da tarafından tanımlanan işlevlerde desenler `let` eşleştirmesi `let rec` `let` , `function` anahtar sözcüğünün kullanılsa bile, başlatıldıktan sonra dört boşluk olmalıdır:
 
 ```fsharp
-let rec sizeLambda acc = 
+let rec sizeLambda acc =
     function
     | Abs(x, body) -> sizeLambda (succ acc) body
     | App(lam1, lam2) -> sizeLambda (sizeLambda acc lam1) lam2
