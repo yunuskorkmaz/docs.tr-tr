@@ -916,7 +916,7 @@ Benzer bir şekilde, bunları işlerken komutlara uygulamak istediğiniz ek yön
 - **MediatR.** GitHub deposu. \
   <https://github.com/jbogard/MediatR>
 
-- **MediatR ve Automaber ile CQRS** \
+- **MediatR ve AutoMapper ile CQRS** \
   <https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/>
 
 - **Denetleyicilerinizi bir diet: gönderi ve komutlara yerleştirin.** \
@@ -939,7 +939,7 @@ Benzer bir şekilde, bunları işlerken komutlara uygulamak istediğiniz ek yön
 
 ##### <a name="fluent-validation"></a>Akıcı doğrulama
 
-- **Jeremy SKINNER. Floentvalidation.** GitHub deposu. \
+- **Jeremy SKINNER. FluentValidation.** GitHub deposu. \
   <https://github.com/JeremySkinner/FluentValidation>
 
 > [!div class="step-by-step"]
